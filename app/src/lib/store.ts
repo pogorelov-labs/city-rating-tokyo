@@ -20,6 +20,10 @@ interface AppState {
   setHeatmapMode: (v: boolean) => void;
   heatmapDimension: string;
   setHeatmapDimension: (v: string) => void;
+  compareStations: string[];
+  addCompareStation: (slug: string) => void;
+  removeCompareStation: (slug: string) => void;
+  clearCompareStations: () => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -40,4 +44,13 @@ export const useAppStore = create<AppState>((set) => ({
   setHeatmapMode: (heatmapMode) => set({ heatmapMode }),
   heatmapDimension: 'composite',
   setHeatmapDimension: (heatmapDimension) => set({ heatmapDimension }),
+  compareStations: [],
+  addCompareStation: (slug) =>
+    set((state) => {
+      if (state.compareStations.length >= 3 || state.compareStations.includes(slug)) return state;
+      return { compareStations: [...state.compareStations, slug] };
+    }),
+  removeCompareStation: (slug) =>
+    set((state) => ({ compareStations: state.compareStations.filter((s) => s !== slug) })),
+  clearCompareStations: () => set({ compareStations: [] }),
 }));

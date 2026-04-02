@@ -35,6 +35,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
+  const compareStations = useAppStore((s) => s.compareStations);
+  const addCompareStation = useAppStore((s) => s.addCompareStation);
+  const removeCompareStation = useAppStore((s) => s.removeCompareStation);
 
   const scoredStations = useMemo(() => {
     return stations.map((s) => ({
@@ -83,6 +86,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
 
         if (heatmapMode && displayValue === null) return null;
 
+        const isCompared = compareStations.includes(station.slug);
+
         return (
           <CircleMarker
             key={station.slug}
@@ -90,9 +95,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             radius={radius}
             pathOptions={{
               fillColor: color,
-              color: heatmapMode ? color : '#374151',
-              weight: heatmapMode ? 0 : 1,
-              opacity: heatmapMode ? 0 : 0.8,
+              color: isCompared ? '#7c3aed' : (heatmapMode ? color : '#374151'),
+              weight: isCompared ? 3 : (heatmapMode ? 0 : 1),
+              opacity: heatmapMode && !isCompared ? 0 : 0.8,
               fillOpacity: heatmapMode ? 0.45 : 0.85,
             }}
             eventHandlers={{
@@ -181,12 +186,30 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                         Rent: ~&yen;{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k/mo
                       </div>
                     )}
-                    <Link
-                      href={`/station/${station.slug}`}
-                      className="text-blue-600 text-xs mt-1 inline-block hover:underline"
-                    >
-                      View details &rarr;
-                    </Link>
+                    <div className="flex items-center gap-3 mt-1">
+                      <Link
+                        href={`/station/${station.slug}`}
+                        className="text-blue-600 text-xs hover:underline"
+                      >
+                        View details &rarr;
+                      </Link>
+                      {isCompared ? (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); removeCompareStation(station.slug); }}
+                          className="text-red-500 text-xs hover:underline"
+                        >
+                          Remove compare
+                        </button>
+                      ) : (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); addCompareStation(station.slug); }}
+                          className="text-purple-600 text-xs hover:underline disabled:opacity-40"
+                          disabled={compareStations.length >= 3}
+                        >
+                          + Compare
+                        </button>
+                      )}
+                    </div>
                   </>
                 ) : (
                   <div className="text-xs text-gray-400">
