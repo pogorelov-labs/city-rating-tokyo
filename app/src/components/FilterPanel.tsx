@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
-import { RATING_LABELS, RATING_TOOLTIPS, WeightConfig, Station } from '@/lib/types';
+import { RATING_LABELS, RATING_TOOLTIPS, PRESET_PROFILES, WeightConfig, Station } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 
 interface FilterPanelProps {
@@ -12,9 +12,11 @@ interface FilterPanelProps {
 export default function FilterPanel({ stations }: FilterPanelProps) {
   const weights = useAppStore((s) => s.weights);
   const setWeight = useAppStore((s) => s.setWeight);
+  const setAllWeights = useAppStore((s) => s.setAllWeights);
   const resetWeights = useAppStore((s) => s.resetWeights);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
   const [search, setSearch] = useState('');
+  const [activePreset, setActivePreset] = useState<string | null>(null);
 
   const ranked = useMemo(() => {
     return stations
@@ -82,6 +84,29 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         )}
       </div>
 
+      {/* Presets */}
+      <div>
+        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Quick Profiles</h2>
+        <div className="flex flex-wrap gap-1.5">
+          {PRESET_PROFILES.map((p) => (
+            <button
+              key={p.id}
+              onClick={() => {
+                setAllWeights(p.weights);
+                setActivePreset(p.id);
+              }}
+              className={`text-xs px-2.5 py-1.5 rounded-full border cursor-pointer transition-colors ${
+                activePreset === p.id
+                  ? 'bg-blue-100 border-blue-400 text-blue-700'
+                  : 'bg-gray-50 border-gray-200 hover:bg-gray-100 text-gray-600'
+              }`}
+            >
+              {p.icon} {p.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Weights */}
       <div>
         <h2 className="text-lg font-bold mb-1">Weights</h2>
@@ -103,7 +128,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   min={0}
                   max={50}
                   value={weights[key]}
-                  onChange={(e) => setWeight(key, Number(e.target.value))}
+                  onChange={(e) => { setWeight(key, Number(e.target.value)); setActivePreset(null); }}
                   className="w-full h-1.5 accent-blue-600 cursor-pointer"
                 />
               </div>
@@ -111,7 +136,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           )}
         </div>
         <button
-          onClick={resetWeights}
+          onClick={() => { resetWeights(); setActivePreset(null); }}
           className="mt-2 text-xs text-blue-600 hover:underline"
         >
           Reset to defaults

@@ -99,6 +99,40 @@ export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
   shinagawa: 'Shinagawa',
 };
 
+export interface PresetProfile {
+  id: string;
+  label: string;
+  icon: string;
+  weights: WeightConfig;
+}
+
+export const PRESET_PROFILES: PresetProfile[] = [
+  {
+    id: 'young-pro',
+    label: 'Young Pro',
+    icon: '💼',
+    weights: { food: 15, nightlife: 20, transport: 30, rent: 20, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+  },
+  {
+    id: 'family',
+    label: 'Family',
+    icon: '👨‍👩‍👧',
+    weights: { food: 0, nightlife: 0, transport: 15, rent: 10, safety: 30, green: 25, gym_sports: 0, vibe: 0, crowd: 20 },
+  },
+  {
+    id: 'foodie-budget',
+    label: 'Foodie Budget',
+    icon: '🍜',
+    weights: { food: 35, nightlife: 15, transport: 0, rent: 35, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+  },
+  {
+    id: 'digital-nomad',
+    label: 'Digital Nomad',
+    icon: '💻',
+    weights: { food: 20, nightlife: 0, transport: 10, rent: 20, safety: 0, green: 0, gym_sports: 10, vibe: 25, crowd: 15 },
+  },
+];
+
 export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
   food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
   nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',
