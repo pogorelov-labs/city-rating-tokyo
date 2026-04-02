@@ -52,9 +52,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       zoom={12}
       className="h-full w-full"
       zoomControl={false}
+      attributionControl={false}
     >
       <TileLayer
-        attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+        attribution=""
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       {flyTarget && <FlyToStation lat={flyTarget.lat} lng={flyTarget.lng} />}

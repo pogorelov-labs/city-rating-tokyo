@@ -33,8 +33,16 @@ export default function Home() {
             BETA
           </span>
         </div>
-        <div className="text-sm text-gray-500">
-          {stations.length} stations
+        <div className="flex items-center gap-3 text-sm text-gray-500">
+          <span>{stations.length} stations</span>
+          <a
+            href="https://github.com/ruspg/city-rating-tokyo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            by @ruspg
+          </a>
         </div>
       </header>
 
