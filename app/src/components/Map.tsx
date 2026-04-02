@@ -115,7 +115,16 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     )}
                   </div>
                   {snippet && (
-                    <div style={{ fontSize: 11, color: '#4b5563', marginTop: 6, lineHeight: 1.4 }}>
+                    <div style={{
+                      fontSize: 11,
+                      color: '#4b5563',
+                      marginTop: 6,
+                      lineHeight: 1.4,
+                      display: '-webkit-box',
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                    }}>
                       {snippet}
                     </div>
                   )}
