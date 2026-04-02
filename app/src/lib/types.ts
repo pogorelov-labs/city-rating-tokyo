@@ -133,6 +133,12 @@ export const PRESET_PROFILES: PresetProfile[] = [
   },
 ];
 
+export const SCATTER_AXIS_OPTIONS: { key: string; label: string }[] = [
+  ...Object.entries(RATING_LABELS).map(([key, label]) => ({ key, label })),
+  { key: 'rent_1k', label: 'Rent (1K-1LDK, yen)' },
+  { key: 'min_transit', label: 'Min Transit (min)' },
+];
+
 export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
   food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
   nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',

@@ -2,6 +2,7 @@ import { getStations } from '@/lib/data';
 import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
 import MobileDrawer from '@/components/MobileDrawer';
+import HeaderActions from '@/components/HeaderActions';
 import stationImages from '@/data/station-images.json';
 
 const imageData = stationImages as Record<string, { url: string; alt: string }[]>;
@@ -34,6 +35,7 @@ export default function Home() {
           </span>
         </div>
         <div className="flex items-center gap-3 text-sm text-gray-500">
+          <HeaderActions stations={stations} />
           <span>{stations.length} stations</span>
           <a
             href="https://github.com/ruspg/city-rating-tokyo"
