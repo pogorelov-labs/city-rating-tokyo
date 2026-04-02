@@ -1,0 +1,464 @@
+{
+  "shinjuku": {
+    "1k_1ldk": 231000,
+    "2ldk": 263000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinjuku"
+  },
+  "tokyo": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "shibuya": {
+    "1k_1ldk": 308000,
+    "2ldk": 343000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shibuya"
+  },
+  "ikebukuro": {
+    "1k_1ldk": 218000,
+    "2ldk": 246000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "toshima"
+  },
+  "ueno": {
+    "1k_1ldk": 196500,
+    "2ldk": 245000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "taito"
+  },
+  "shimbashi": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "kita-senju": {
+    "1k_1ldk": 139000,
+    "2ldk": 161000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "adachi"
+  },
+  "nippori": {
+    "1k_1ldk": 182000,
+    "2ldk": 224000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "arakawa"
+  },
+  "shinagawa": {
+    "1k_1ldk": 214000,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinagawa"
+  },
+  "akabane": {
+    "1k_1ldk": 182000,
+    "2ldk": 217000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "kita"
+  },
+  "akihabara": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "iidabashi": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "nagatacho": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "okachimachi": {
+    "1k_1ldk": 196500,
+    "2ldk": 245000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "taito"
+  },
+  "otemachi": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "ebisu": {
+    "1k_1ldk": 308000,
+    "2ldk": 343000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shibuya"
+  },
+  "kanda": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "meguro": {
+    "1k_1ldk": 249000,
+    "2ldk": 270000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "meguro"
+  },
+  "nerima": {
+    "1k_1ldk": 170000,
+    "2ldk": 178000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "nerima"
+  },
+  "nishi-nippori": {
+    "1k_1ldk": 182000,
+    "2ldk": 224000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "arakawa"
+  },
+  "osaki": {
+    "1k_1ldk": 214000,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinagawa"
+  },
+  "aoyama-itchome": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "asakusa": {
+    "1k_1ldk": 196500,
+    "2ldk": 245000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "taito"
+  },
+  "ginza": {
+    "1k_1ldk": 228000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chuo"
+  },
+  "gotanda": {
+    "1k_1ldk": 214000,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinagawa"
+  },
+  "hamamatsucho": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "harajuku": {
+    "1k_1ldk": 308000,
+    "2ldk": 343000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shibuya"
+  },
+  "jimbocho": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "kamata": {
+    "1k_1ldk": 165000,
+    "2ldk": 216000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "ota"
+  },
+  "kinshicho": {
+    "1k_1ldk": 183500,
+    "2ldk": 228000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "sumida"
+  },
+  "kudanshita": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "mitsukoshimae": {
+    "1k_1ldk": 228000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chuo"
+  },
+  "nakano": {
+    "1k_1ldk": 198000,
+    "2ldk": 238000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "nakano"
+  },
+  "nihonbashi": {
+    "1k_1ldk": 228000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chuo"
+  },
+  "ogikubo": {
+    "1k_1ldk": 175000,
+    "2ldk": 209000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "suginami"
+  },
+  "oji": {
+    "1k_1ldk": 182000,
+    "2ldk": 217000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "kita"
+  },
+  "omotesando": {
+    "1k_1ldk": 308000,
+    "2ldk": 343000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shibuya"
+  },
+  "shinjuku-sanchome": {
+    "1k_1ldk": 231000,
+    "2ldk": 263000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinjuku"
+  },
+  "takadanobaba": {
+    "1k_1ldk": 231000,
+    "2ldk": 263000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinjuku"
+  },
+  "yoyogi": {
+    "1k_1ldk": 308000,
+    "2ldk": 343000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shibuya"
+  },
+  "yurakucho": {
+    "1k_1ldk": 246000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chiyoda"
+  },
+  "asagaya": {
+    "1k_1ldk": 175000,
+    "2ldk": 209000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "suginami"
+  },
+  "azabu-juban": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "jiyugaoka": {
+    "1k_1ldk": 249000,
+    "2ldk": 270000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "meguro"
+  },
+  "kiyosumi-shirakawa": {
+    "1k_1ldk": 200500,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "koto"
+  },
+  "koenji": {
+    "1k_1ldk": 175000,
+    "2ldk": 209000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "suginami"
+  },
+  "komagome": {
+    "1k_1ldk": 218000,
+    "2ldk": 246000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "toshima"
+  },
+  "korakuen": {
+    "1k_1ldk": 207500,
+    "2ldk": 277000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "bunkyo"
+  },
+  "monzen-nakacho": {
+    "1k_1ldk": 200500,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "koto"
+  },
+  "nakameguro": {
+    "1k_1ldk": 249000,
+    "2ldk": 270000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "meguro"
+  },
+  "otsuka": {
+    "1k_1ldk": 218000,
+    "2ldk": 246000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "toshima"
+  },
+  "roppongi": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "sangenjaya": {
+    "1k_1ldk": 170000,
+    "2ldk": 231000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "setagaya"
+  },
+  "shimokitazawa": {
+    "1k_1ldk": 170000,
+    "2ldk": 231000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "setagaya"
+  },
+  "sugamo": {
+    "1k_1ldk": 218000,
+    "2ldk": 246000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "toshima"
+  },
+  "tabata": {
+    "1k_1ldk": 182000,
+    "2ldk": 217000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "kita"
+  },
+  "tamachi": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "toyosu": {
+    "1k_1ldk": 200500,
+    "2ldk": 249000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "koto"
+  },
+  "uguisudani": {
+    "1k_1ldk": 196500,
+    "2ldk": 245000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "taito"
+  },
+  "mejiro": {
+    "1k_1ldk": 218000,
+    "2ldk": 246000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "toshima"
+  },
+  "nezu": {
+    "1k_1ldk": 207500,
+    "2ldk": 277000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "bunkyo"
+  },
+  "roppongi-itchome": {
+    "1k_1ldk": 283000,
+    "2ldk": 315000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "minato"
+  },
+  "sendagi": {
+    "1k_1ldk": 207500,
+    "2ldk": 277000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "bunkyo"
+  },
+  "shin-okubo": {
+    "1k_1ldk": 231000,
+    "2ldk": 263000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "shinjuku"
+  },
+  "tsukiji": {
+    "1k_1ldk": 228000,
+    "2ldk": 259000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "chuo"
+  },
+  "yushima": {
+    "1k_1ldk": 207500,
+    "2ldk": 277000,
+    "source": "suumo",
+    "updated": "2026-04",
+    "ward": "bunkyo"
+  }
+}
