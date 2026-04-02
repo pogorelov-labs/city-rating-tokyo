@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import { Station } from '@/lib/types';
 import MapControls from './MapControls';
+import ComparePanel from './ComparePanel';
 
 const MapView = dynamic(() => import('./Map'), {
   ssr: false,
@@ -24,6 +25,7 @@ export default function MapWrapper({ stations, thumbnails, snippets }: MapWrappe
     <div className="relative h-full w-full">
       <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />
       <MapControls />
+      <ComparePanel stations={stations} />
     </div>
   );
 }
