@@ -1,10 +1,9 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
 import { RATING_LABELS, RATING_TOOLTIPS, WeightConfig, Station } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
-import { useMemo } from 'react';
-import Link from 'next/link';
 
 interface FilterPanelProps {
   stations: Station[];
@@ -15,6 +14,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const setWeight = useAppStore((s) => s.setWeight);
   const resetWeights = useAppStore((s) => s.resetWeights);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const [search, setSearch] = useState('');
 
   const ranked = useMemo(() => {
     return stations
@@ -27,8 +27,62 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       .slice(0, 15);
   }, [stations, weights]);
 
+  const searchResults = useMemo(() => {
+    if (!search || search.length < 2) return [];
+    const q = search.toLowerCase();
+    return stations
+      .filter(
+        (s) =>
+          s.name_en.toLowerCase().includes(q) ||
+          s.name_jp.includes(search)
+      )
+      .slice(0, 8);
+  }, [stations, search]);
+
   return (
     <div className="flex flex-col gap-4 p-4 h-full overflow-y-auto">
+      {/* Search */}
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Search station..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        {search && (
+          <button
+            onClick={() => setSearch('')}
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        )}
+        {searchResults.length > 0 && (
+          <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-hidden">
+            {searchResults.map((s) => (
+              <button
+                key={s.slug}
+                onClick={() => {
+                  setSelectedStation(s.slug);
+                  setSearch('');
+                }}
+                className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-50 last:border-0"
+              >
+                <span>
+                  <span className="font-medium">{s.name_en}</span>
+                  <span className="text-gray-400 ml-1.5 text-xs">{s.name_jp}</span>
+                </span>
+                <span className="text-xs text-gray-400">{s.line_count} lines</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Weights */}
       <div>
         <h2 className="text-lg font-bold mb-1">Weights</h2>
         <p className="text-xs text-gray-500 mb-3">
@@ -66,6 +120,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       <hr className="border-gray-200" />
 
+      {/* Top Ranked */}
       <div>
         <h2 className="text-lg font-bold mb-2">Top Ranked</h2>
         {ranked.length === 0 ? (

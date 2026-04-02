@@ -1,6 +1,7 @@
 import { getStations } from '@/lib/data';
 import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
+import MobileDrawer from '@/components/MobileDrawer';
 
 const stations = getStations();
 
@@ -28,6 +29,7 @@ export default function Home() {
 
         <main className="flex-1 relative">
           <MapWrapper stations={stations} />
+          <MobileDrawer stations={stations} />
         </main>
       </div>
     </div>
