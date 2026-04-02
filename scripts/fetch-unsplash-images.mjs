@@ -26,6 +26,23 @@ const existing = existsSync(outputPath)
 const IMAGES_PER_STATION = 3;
 const RATE_LIMIT_DELAY = 3600; // ms between requests (50/hour = 72s, but we batch)
 
+function extractUnsplashPhotoId(url) {
+  if (!url) return null;
+  const m = url.match(/\/photo-([A-Za-z0-9_-]+)/);
+  return m ? m[1] : null;
+}
+
+function collectUsedPhotoIds(imageMap) {
+  const used = new Set();
+  for (const photos of Object.values(imageMap)) {
+    for (const photo of photos || []) {
+      const id = extractUnsplashPhotoId(photo?.url);
+      if (id) used.add(id);
+    }
+  }
+  return used;
+}
+
 async function searchUnsplash(query, perPage = 3) {
   const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=${perPage}&orientation=landscape`;
   const res = await fetch(url, {
@@ -47,6 +64,7 @@ async function searchUnsplash(query, perPage = 3) {
 
   const data = await res.json();
   return data.results.map((photo) => ({
+    id: photo.id,
     url: photo.urls.regular, // 1080px wide
     alt: photo.description || photo.alt_description || query,
     attribution: `Photo by ${photo.user.name} on Unsplash`,
@@ -66,6 +84,7 @@ console.log(`Fetching Unsplash images for ${toProcess.length} stations...`);
 console.log('(50 requests/hour limit — will process in batches)\n');
 
 const imageMap = { ...existing };
+const usedPhotoIds = collectUsedPhotoIds(imageMap);
 let processed = 0;
 const BATCH_SIZE = 40; // Stay under 50/hour limit
 
@@ -73,16 +92,30 @@ for (const station of toProcess.slice(0, BATCH_SIZE)) {
   const slug = station.slug;
   console.log(`[${++processed}/${Math.min(toProcess.length, BATCH_SIZE)}] ${station.name_en}...`);
 
-  const results = await searchUnsplash(`${station.name_en} Tokyo neighborhood`, IMAGES_PER_STATION);
+  const candidates = await searchUnsplash(`${station.name_en} Tokyo neighborhood`, Math.max(IMAGES_PER_STATION * 3, 9));
+  const selected = candidates
+    .filter((img) => img.id && !usedPhotoIds.has(img.id))
+    .slice(0, IMAGES_PER_STATION);
+  const results = selected.map(({ id, ...rest }) => rest);
 
   if (results.length > 0) {
     imageMap[slug] = results;
+    for (const img of selected) {
+      if (img.id) usedPhotoIds.add(img.id);
+    }
     console.log(`  Found ${results.length} images`);
   } else {
     // Fallback: broader search
-    const fallback = await searchUnsplash(`${station.name_en} Japan`, 2);
+    const fallbackCandidates = await searchUnsplash(`${station.name_en} Japan`, 6);
+    const fallbackSelected = fallbackCandidates
+      .filter((img) => img.id && !usedPhotoIds.has(img.id))
+      .slice(0, 2);
+    const fallback = fallbackSelected.map(({ id, ...rest }) => rest);
     if (fallback.length > 0) {
       imageMap[slug] = fallback;
+      for (const img of fallbackSelected) {
+        if (img.id) usedPhotoIds.add(img.id);
+      }
       console.log(`  Fallback: ${fallback.length} images`);
     } else {
       console.log(`  No images found`);
