@@ -1,0 +1,1444 @@
+{
+  "stationAreaMap": {
+    "shinjuku": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "tokyo": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "yokohama": {
+      "area_key": "yokohama_nishi",
+      "area_code": "14101",
+      "area_name": "横浜市西区"
+    },
+    "shibuya": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "chiba": {
+      "area_key": "chiba",
+      "area_code": "12101",
+      "area_name": "千葉市"
+    },
+    "ikebukuro": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "omiya": {
+      "area_key": "saitama_omiya",
+      "area_code": "11103",
+      "area_name": "さいたま市大宮区"
+    },
+    "ueno": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "shimbashi": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "kita-senju": {
+      "area_key": "arakawa",
+      "area_code": "13118",
+      "area_name": "荒川区"
+    },
+    "musashi-kosugi": {
+      "area_key": "kawasaki_nakahara",
+      "area_code": "14133",
+      "area_name": "川崎市中原区"
+    },
+    "narita": {
+      "area_key": "narita",
+      "area_code": "12211",
+      "area_name": "成田市"
+    },
+    "nippori": {
+      "area_key": "arakawa",
+      "area_code": "13118",
+      "area_name": "荒川区"
+    },
+    "ofuna": {
+      "area_key": "kamakura",
+      "area_code": "14204",
+      "area_name": "鎌倉市"
+    },
+    "shinagawa": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "akabane": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "akihabara": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "hachioji": {
+      "area_key": "hachioji",
+      "area_code": "13201",
+      "area_name": "八王子市"
+    },
+    "iidabashi": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "keisei-takasago": {
+      "area_key": "katsushika",
+      "area_code": "13122",
+      "area_name": "葛飾区"
+    },
+    "kichijoji": {
+      "area_key": "musashino",
+      "area_code": "13203",
+      "area_name": "武蔵野市"
+    },
+    "kokubunji": {
+      "area_key": "kokubunji",
+      "area_code": "13214",
+      "area_name": "国分寺市"
+    },
+    "nagatacho": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "nishi-funabashi": {
+      "area_key": "funabashi",
+      "area_code": "12204",
+      "area_name": "船橋市"
+    },
+    "okachimachi": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "otemachi": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "tachikawa": {
+      "area_key": "tachikawa",
+      "area_code": "13202",
+      "area_name": "立川市"
+    },
+    "totsuka": {
+      "area_key": "yokohama_totsuka",
+      "area_code": "14110",
+      "area_name": "横浜市戸塚区"
+    },
+    "yotsuya": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "ebisu": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "funabashi": {
+      "area_key": "funabashi",
+      "area_code": "12204",
+      "area_name": "船橋市"
+    },
+    "haijima": {
+      "area_key": "fussa",
+      "area_code": "13218",
+      "area_name": "福生市"
+    },
+    "kanda": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "meguro": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "mitaka": {
+      "area_key": "musashino",
+      "area_code": "13203",
+      "area_name": "武蔵野市"
+    },
+    "nerima": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "nishi-nippori": {
+      "area_key": "arakawa",
+      "area_code": "13118",
+      "area_name": "荒川区"
+    },
+    "ochanomizu": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "osaki": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "shin-kamagaya": {
+      "area_key": "kamagaya",
+      "area_code": "12224",
+      "area_name": "鎌ケ谷市"
+    },
+    "takao": {
+      "area_key": "hachioji",
+      "area_code": "13201",
+      "area_name": "八王子市"
+    },
+    "urawa": {
+      "area_key": "saitama_urawa",
+      "area_code": "11107",
+      "area_name": "さいたま市浦和区"
+    },
+    "abiko": {
+      "area_key": "abiko",
+      "area_code": "12222",
+      "area_name": "我孫子市"
+    },
+    "aoyama-itchome": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "asakusa": {
+      "area_key": "sumida",
+      "area_code": "13107",
+      "area_name": "墨田区"
+    },
+    "bakurocho": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "chikatetsu-akatsuka": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "chikatetsu-narimasu": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "fujisawa": {
+      "area_key": "fujisawa",
+      "area_code": "14205",
+      "area_name": "藤沢市"
+    },
+    "ginza": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "gotanda": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "hamamatsucho": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "harajuku": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "hashimoto": {
+      "area_key": "sagamihara",
+      "area_code": "14150",
+      "area_name": "相模原市"
+    },
+    "higashi-kanagawa": {
+      "area_key": "yokohama_kanagawa",
+      "area_code": "14102",
+      "area_name": "横浜市神奈川区"
+    },
+    "higashi-matsudo": {
+      "area_key": "ichikawa",
+      "area_code": "12203",
+      "area_name": "市川市"
+    },
+    "higashi-murayama": {
+      "area_key": "higashimurayama",
+      "area_code": "13213",
+      "area_name": "東村山市"
+    },
+    "hiyoshi": {
+      "area_key": "kawasaki_nakahara",
+      "area_code": "14133",
+      "area_name": "川崎市中原区"
+    },
+    "jimbocho": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "kamata": {
+      "area_key": "ota",
+      "area_code": "13111",
+      "area_name": "大田区"
+    },
+    "kanazawa-hakkei": {
+      "area_key": "yokohama_kanazawa",
+      "area_code": "14108",
+      "area_name": "横浜市金沢区"
+    },
+    "kashiwa": {
+      "area_key": "kashiwa",
+      "area_code": "12217",
+      "area_name": "柏市"
+    },
+    "kawagoe": {
+      "area_key": "kawagoe",
+      "area_code": "11201",
+      "area_name": "川越市"
+    },
+    "kawasaki": {
+      "area_key": "kawasaki_kawasaki",
+      "area_code": "14131",
+      "area_name": "川崎市川崎区"
+    },
+    "kinshicho": {
+      "area_key": "sumida",
+      "area_code": "13107",
+      "area_name": "墨田区"
+    },
+    "kotake-mukaihara": {
+      "area_key": "itabashi",
+      "area_code": "13119",
+      "area_name": "板橋区"
+    },
+    "kudanshita": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "machiya": {
+      "area_key": "arakawa",
+      "area_code": "13118",
+      "area_name": "荒川区"
+    },
+    "matsudo": {
+      "area_key": "matsudo",
+      "area_code": "12207",
+      "area_name": "松戸市"
+    },
+    "mitsukoshimae": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "mizonokuchi": {
+      "area_key": "kawasaki_takatsu",
+      "area_code": "14134",
+      "area_name": "川崎市高津区"
+    },
+    "motoyawata": {
+      "area_key": "ichikawa",
+      "area_code": "12203",
+      "area_name": "市川市"
+    },
+    "nakano": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "nakano-sakaue": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "nihonbashi": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "ogikubo": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "oimachi": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "oji": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "omotesando": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "shin-matsudo": {
+      "area_key": "nagareyama",
+      "area_code": "12220",
+      "area_name": "流山市"
+    },
+    "shinjuku-sanchome": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "soga": {
+      "area_key": "chiba",
+      "area_code": "12101",
+      "area_name": "千葉市"
+    },
+    "takadanobaba": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "takahata-fudo": {
+      "area_key": "hino",
+      "area_code": "13212",
+      "area_name": "日野市"
+    },
+    "tsurumi": {
+      "area_key": "yokohama_tsurumi",
+      "area_code": "14101",
+      "area_name": "横浜市鶴見区"
+    },
+    "wakoshi": {
+      "area_key": "wako",
+      "area_code": "11229",
+      "area_name": "和光市"
+    },
+    "yoyogi": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "yurakucho": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "akabane-iwabuchi": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "asagaya": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "asakusabashi": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "awajicho": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "ayase": {
+      "area_key": "adachi",
+      "area_code": "13121",
+      "area_name": "足立区"
+    },
+    "azabu-juban": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "bubaigawara": {
+      "area_key": "fuchu",
+      "area_code": "13206",
+      "area_name": "府中市"
+    },
+    "chofu": {
+      "area_key": "chofu",
+      "area_code": "13208",
+      "area_name": "調布市"
+    },
+    "daimon": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "denenchofu": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "futako-tamagawa": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "gotokuji": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "hatanodai": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "heiwadai": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "higashi-ikebukuro": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "higashi-nakano": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "higashi-shinjuku": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "hikawadai": {
+      "area_key": "itabashi",
+      "area_code": "13119",
+      "area_name": "板橋区"
+    },
+    "hino": {
+      "area_key": "hino",
+      "area_code": "13212",
+      "area_name": "日野市"
+    },
+    "hongo-sanchome": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "jiyugaoka": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "kameido": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "kanamachi": {
+      "area_key": "katsushika",
+      "area_code": "13122",
+      "area_name": "葛飾区"
+    },
+    "kanamecho": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "kasuga": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "kayabacho": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "kiyosumi-shirakawa": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "kodaira": {
+      "area_key": "kodaira",
+      "area_code": "13211",
+      "area_name": "小平市"
+    },
+    "koenji": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "kokkai-gijidomae": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "komagome": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "korakuen": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "kuramae": {
+      "area_key": "sumida",
+      "area_code": "13107",
+      "area_name": "墨田区"
+    },
+    "kyobashi": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "machida": {
+      "area_key": "machida",
+      "area_code": "13209",
+      "area_name": "町田市"
+    },
+    "meidaimae": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "monzen-nakacho": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "morishita": {
+      "area_key": "sumida",
+      "area_code": "13107",
+      "area_name": "墨田区"
+    },
+    "musashi-sakai": {
+      "area_key": "nishitokyo",
+      "area_code": "13229",
+      "area_name": "西東京市"
+    },
+    "nakai": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "nakameguro": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "ningyocho": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "nishi-hachioji": {
+      "area_key": "hachioji",
+      "area_code": "13201",
+      "area_name": "八王子市"
+    },
+    "nishi-kokubunji": {
+      "area_key": "kokubunji",
+      "area_code": "13214",
+      "area_name": "国分寺市"
+    },
+    "nishi-oi": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "nishiarai": {
+      "area_key": "adachi",
+      "area_code": "13121",
+      "area_name": "足立区"
+    },
+    "otsuka": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "roppongi": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "ryogoku": {
+      "area_key": "sumida",
+      "area_code": "13107",
+      "area_name": "墨田区"
+    },
+    "sangenjaya": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "sasazuka": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "senkawa": {
+      "area_key": "itabashi",
+      "area_code": "13119",
+      "area_name": "板橋区"
+    },
+    "shimokitazawa": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "shimotakaido": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "shin-koiwa": {
+      "area_key": "edogawa",
+      "area_code": "13123",
+      "area_name": "江戸川区"
+    },
+    "shin-okachimachi": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "shiodome": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "shirokane-takanawa": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "shirokanedai": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "sugamo": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "suidobashi": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "sumiyoshi": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "tabata": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "tamachi": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "tameike-sanno": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "tennozu-isle": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "togoshi-ginza": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "toshimaen": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "toyosu": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "toyota": {
+      "area_key": "hino",
+      "area_code": "13212",
+      "area_name": "日野市"
+    },
+    "tsukishima": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "uguisudani": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "yoyogi-uehara": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "zoshigaya": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "akabanebashi": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "akasaka": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "akebonobashi": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "akitsu": {
+      "area_key": "kiyose",
+      "area_code": "13221",
+      "area_name": "清瀬市"
+    },
+    "chitose-funabashi": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "chitose-karasuyama": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "edogawabashi": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "fuchu": {
+      "area_key": "fuchu",
+      "area_code": "13206",
+      "area_name": "府中市"
+    },
+    "fujimigaoka": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "fussa": {
+      "area_key": "fussa",
+      "area_code": "13218",
+      "area_name": "福生市"
+    },
+    "gaiemmae": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "gakugei-daigaku": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "gokokuji": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "hamacho": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "hamura": {
+      "area_key": "hamura",
+      "area_code": "13227",
+      "area_name": "羽村市"
+    },
+    "hana-koganei": {
+      "area_key": "nishitokyo",
+      "area_code": "13229",
+      "area_name": "西東京市"
+    },
+    "hanzomon": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "hibarigaoka": {
+      "area_key": "higashikurume",
+      "area_code": "13222",
+      "area_name": "東久留米市"
+    },
+    "higashi-koenji": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "higashi-koganei": {
+      "area_key": "koganei",
+      "area_code": "13210",
+      "area_name": "小金井市"
+    },
+    "hikarigaoka": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "hiroo": {
+      "area_key": "shibuya",
+      "area_code": "13113",
+      "area_name": "渋谷区"
+    },
+    "hon-komagome": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "honancho": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "hoya": {
+      "area_key": "musashino",
+      "area_code": "13203",
+      "area_name": "武蔵野市"
+    },
+    "inaricho": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "inokashira-koen": {
+      "area_key": "musashino",
+      "area_code": "13203",
+      "area_name": "武蔵野市"
+    },
+    "iriya": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "itabashi": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "iwamotocho": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "izumi-tamagawa": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "jujo": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "kachidoki": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "kameari": {
+      "area_key": "katsushika",
+      "area_code": "13122",
+      "area_name": "葛飾区"
+    },
+    "kasai": {
+      "area_key": "edogawa",
+      "area_code": "13123",
+      "area_name": "江戸川区"
+    },
+    "keio-horinouchi": {
+      "area_key": "hino",
+      "area_code": "13212",
+      "area_name": "日野市"
+    },
+    "kiba": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "kikukawa": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "kita-ayase": {
+      "area_key": "adachi",
+      "area_code": "13121",
+      "area_name": "足立区"
+    },
+    "kita-fuchu": {
+      "area_key": "fuchu",
+      "area_code": "13206",
+      "area_name": "府中市"
+    },
+    "kita-sando": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "kita-shinagawa": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "kitami": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "kiyose": {
+      "area_key": "kiyose",
+      "area_code": "13221",
+      "area_name": "清瀬市"
+    },
+    "koiwa": {
+      "area_key": "edogawa",
+      "area_code": "13123",
+      "area_name": "江戸川区"
+    },
+    "kojimachi": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "kokuritsu-kyogijo": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "komae": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "kugayama": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "kumegawa": {
+      "area_key": "higashimurayama",
+      "area_code": "13213",
+      "area_name": "東村山市"
+    },
+    "kunitachi": {
+      "area_key": "kunitachi",
+      "area_code": "13215",
+      "area_name": "国立市"
+    },
+    "kyodo": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "magome": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "mejiro": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "minami-osawa": {
+      "area_key": "hino",
+      "area_code": "13212",
+      "area_name": "日野市"
+    },
+    "minami-sunamachi": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "minowa": {
+      "area_key": "arakawa",
+      "area_code": "13118",
+      "area_name": "荒川区"
+    },
+    "mitakadai": {
+      "area_key": "mitaka",
+      "area_code": "13204",
+      "area_name": "三鷹市"
+    },
+    "musashi-koganei": {
+      "area_key": "koganei",
+      "area_code": "13210",
+      "area_name": "小金井市"
+    },
+    "musashi-koyama": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "myogadani": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "nerima-kasugacho": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "nezu": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "nishi-kasai": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "nishi-magome": {
+      "area_key": "ota",
+      "area_code": "13111",
+      "area_name": "大田区"
+    },
+    "nishi-shinjuku": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "nishi-shinjuku-gochome": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "nishi-waseda": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "nogizaka": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "ochiai-minami-nagasaki": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "odaiba-kaihinkoen": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "oizumi-gakuen": {
+      "area_key": "musashino",
+      "area_code": "13203",
+      "area_name": "武蔵野市"
+    },
+    "oji-kamiya": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "ome": {
+      "area_key": "ome",
+      "area_code": "13205",
+      "area_name": "青梅市"
+    },
+    "omori": {
+      "area_key": "shinagawa",
+      "area_code": "13109",
+      "area_name": "品川区"
+    },
+    "roppongi-itchome": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "sakuradamon": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "sakurajosui": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "seijo-gakuenmae": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "seiseki-sakuragaoka": {
+      "area_key": "tama",
+      "area_code": "13224",
+      "area_name": "多摩市"
+    },
+    "sendagi": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "sengawa": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "setagaya-daita": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "shakujii-koen": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "shimo": {
+      "area_key": "kita",
+      "area_code": "13117",
+      "area_name": "北区"
+    },
+    "shin-akitsu": {
+      "area_key": "higashimurayama",
+      "area_code": "13213",
+      "area_name": "東村山市"
+    },
+    "shin-egota": {
+      "area_key": "nerima",
+      "area_code": "13120",
+      "area_name": "練馬区"
+    },
+    "shin-koenji": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "shin-nakano": {
+      "area_key": "nakano",
+      "area_code": "13114",
+      "area_name": "中野区"
+    },
+    "shin-okubo": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "shin-otsuka": {
+      "area_key": "toshima",
+      "area_code": "13116",
+      "area_name": "豊島区"
+    },
+    "shin-sakuradai": {
+      "area_key": "itabashi",
+      "area_code": "13119",
+      "area_name": "板橋区"
+    },
+    "shinjuku-gyoenmae": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "shintomicho": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "soshigaya-okura": {
+      "area_key": "komae",
+      "area_code": "13219",
+      "area_name": "狛江市"
+    },
+    "suehirocho": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "suzukakedai": {
+      "area_key": "machida",
+      "area_code": "13209",
+      "area_name": "町田市"
+    },
+    "takaido": {
+      "area_key": "suginami",
+      "area_code": "13115",
+      "area_name": "杉並区"
+    },
+    "takenotsuka": {
+      "area_key": "adachi",
+      "area_code": "13121",
+      "area_name": "足立区"
+    },
+    "tanashi": {
+      "area_key": "nishitokyo",
+      "area_code": "13229",
+      "area_name": "西東京市"
+    },
+    "tochomae": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "todaimae": {
+      "area_key": "bunkyo",
+      "area_code": "13105",
+      "area_name": "文京区"
+    },
+    "toranomon": {
+      "area_key": "minato",
+      "area_code": "13103",
+      "area_name": "港区"
+    },
+    "toritsu-daigaku": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    },
+    "toyocho": {
+      "area_key": "koto",
+      "area_code": "13108",
+      "area_name": "江東区"
+    },
+    "tsukiji": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "tsukiji-shijo": {
+      "area_key": "chuo",
+      "area_code": "13102",
+      "area_name": "中央区"
+    },
+    "umegaoka": {
+      "area_key": "setagaya",
+      "area_code": "13112",
+      "area_name": "世田谷区"
+    },
+    "ushigome-kagurazaka": {
+      "area_key": "chiyoda",
+      "area_code": "13101",
+      "area_name": "千代田区"
+    },
+    "yotsuya-sanchome": {
+      "area_key": "shinjuku",
+      "area_code": "13104",
+      "area_name": "新宿区"
+    },
+    "yushima": {
+      "area_key": "taito",
+      "area_code": "13106",
+      "area_name": "台東区"
+    },
+    "yutenji": {
+      "area_key": "meguro",
+      "area_code": "13110",
+      "area_name": "目黒区"
+    }
+  },
+  "areaCounts": {
+    "shinjuku": 15,
+    "chuo": 14,
+    "yokohama_nishi": 1,
+    "shibuya": 7,
+    "chiba": 2,
+    "toshima": 9,
+    "saitama_omiya": 1,
+    "taito": 12,
+    "minato": 17,
+    "arakawa": 5,
+    "kawasaki_nakahara": 2,
+    "narita": 1,
+    "kamakura": 1,
+    "shinagawa": 11,
+    "kita": 7,
+    "hachioji": 3,
+    "chiyoda": 13,
+    "katsushika": 3,
+    "musashino": 5,
+    "kokubunji": 2,
+    "funabashi": 2,
+    "tachikawa": 1,
+    "yokohama_totsuka": 1,
+    "meguro": 10,
+    "fussa": 2,
+    "nerima": 9,
+    "kamagaya": 1,
+    "saitama_urawa": 1,
+    "abiko": 1,
+    "sumida": 5,
+    "fujisawa": 1,
+    "sagamihara": 1,
+    "yokohama_kanagawa": 1,
+    "ichikawa": 2,
+    "higashimurayama": 3,
+    "ota": 2,
+    "yokohama_kanazawa": 1,
+    "kashiwa": 1,
+    "kawagoe": 1,
+    "kawasaki_kawasaki": 1,
+    "itabashi": 4,
+    "matsudo": 1,
+    "kawasaki_takatsu": 1,
+    "nakano": 6,
+    "suginami": 8,
+    "nagareyama": 1,
+    "hino": 5,
+    "yokohama_tsurumi": 1,
+    "wako": 1,
+    "adachi": 4,
+    "fuchu": 3,
+    "chofu": 1,
+    "setagaya": 12,
+    "bunkyo": 12,
+    "koto": 10,
+    "kodaira": 1,
+    "machida": 2,
+    "nishitokyo": 3,
+    "edogawa": 3,
+    "kiyose": 2,
+    "komae": 7,
+    "hamura": 1,
+    "higashikurume": 1,
+    "koganei": 2,
+    "kunitachi": 1,
+    "mitaka": 1,
+    "ome": 1,
+    "tama": 1
+  }
+}
