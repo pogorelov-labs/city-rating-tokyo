@@ -138,6 +138,7 @@ export default function ImageGallery({ images, stationName }: ImageGalleryProps)
       {hasMore && !showAll && (
         <button
           onClick={() => setShowAll(true)}
+          data-umami-event="show-all-photos"
           className="mt-3 text-sm text-blue-600 hover:underline"
         >
           Show all {images.length} photos

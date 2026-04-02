@@ -101,7 +101,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               fillOpacity: heatmapMode ? 0.45 : 0.85,
             }}
             eventHandlers={{
-              click: () => setSelectedStation(station.slug),
+              click: () => {
+                setSelectedStation(station.slug);
+                window.umami?.track('map-click', { station: station.slug });
+              },
             }}
           >
             {/* Rich hover tooltip */}
@@ -190,6 +193,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       <Link
                         href={`/station/${station.slug}`}
                         className="text-blue-600 text-xs hover:underline"
+                        data-umami-event="view-details"
+                        data-umami-event-station={station.slug}
                       >
                         View details &rarr;
                       </Link>

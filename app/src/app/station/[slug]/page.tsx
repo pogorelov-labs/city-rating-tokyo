@@ -102,6 +102,7 @@ export default async function StationPage({
           <Link
             href="/"
             className="text-sm text-blue-600 hover:underline flex items-center gap-1"
+            data-umami-event="back-to-map"
           >
             &larr; Map
           </Link>
@@ -114,6 +115,8 @@ export default async function StationPage({
             rel="noopener noreferrer"
             className="text-xs text-blue-600 hover:underline flex items-center gap-1"
             title="Open in Google Maps"
+            data-umami-event="open-google-maps"
+            data-umami-event-station={slug}
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />

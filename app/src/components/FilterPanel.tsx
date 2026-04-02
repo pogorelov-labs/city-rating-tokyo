@@ -71,6 +71,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   setSelectedStation(s.slug);
                   setSearch('');
                 }}
+                data-umami-event="search-select"
+                data-umami-event-station={s.slug}
                 className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-50 last:border-0"
               >
                 <span>
@@ -137,6 +139,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         </div>
         <button
           onClick={() => { resetWeights(); setActivePreset(null); }}
+          data-umami-event="reset-weights"
           className="mt-2 text-xs text-blue-600 hover:underline"
         >
           Reset to defaults
@@ -156,6 +159,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               <li key={s.slug}>
                 <button
                   onClick={() => setSelectedStation(s.slug)}
+                  data-umami-event="ranked-select"
+                  data-umami-event-station={s.slug}
                   className="w-full text-left flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors"
                 >
                   <span className="text-xs text-gray-400 w-5 tabular-nums">

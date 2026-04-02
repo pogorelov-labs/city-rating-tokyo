@@ -16,6 +16,7 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(true)}
+        data-umami-event="open-mobile-filters"
         className="md:hidden fixed bottom-4 left-4 z-[1000] bg-white shadow-lg rounded-full px-4 py-2.5 text-sm font-medium border border-gray-200 flex items-center gap-2 active:scale-95 transition-transform"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
