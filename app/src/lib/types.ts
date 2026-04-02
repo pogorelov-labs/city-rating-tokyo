@@ -32,6 +32,14 @@ export interface StationDescription {
   nightlife: string;
 }
 
+export type PlaceCategory = 'gym' | 'mall' | 'park' | 'landmark' | 'cafe' | 'restaurant' | 'bar';
+
+export interface StationPlace {
+  name: string;
+  category: PlaceCategory;
+  google_maps_url: string;
+}
+
 export interface Station {
   slug: string;
   name_en: string;
@@ -103,10 +111,35 @@ export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
   crowd: 'Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)',
 };
 
+export const PLACE_CATEGORY_LABELS: Record<PlaceCategory, string> = {
+  gym: 'Gyms & Fitness',
+  mall: 'Shopping Malls',
+  park: 'Parks & Gardens',
+  landmark: 'Landmarks',
+  cafe: 'Cafes',
+  restaurant: 'Restaurants',
+  bar: 'Bars & Izakaya',
+};
+
+export const PLACE_CATEGORY_SEARCH_TERMS: Record<PlaceCategory, string> = {
+  gym: 'gym fitness',
+  mall: 'shopping mall',
+  park: 'park garden',
+  landmark: 'tourist attraction landmark',
+  cafe: 'cafe coffee',
+  restaurant: 'restaurant',
+  bar: 'bar izakaya',
+};
+
 export function getGoogleMapsUrl(lat: number, lng: number, name: string): string {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${encodeURIComponent(name + ' Station')}`;
 }
 
 export function getGoogleMapsAreaUrl(lat: number, lng: number): string {
   return `https://www.google.com/maps/@${lat},${lng},16z`;
+}
+
+export function getGoogleMapsSearchUrl(lat: number, lng: number, category: PlaceCategory): string {
+  const term = PLACE_CATEGORY_SEARCH_TERMS[category];
+  return `https://www.google.com/maps/search/${encodeURIComponent(term)}/@${lat},${lng},15z`;
 }

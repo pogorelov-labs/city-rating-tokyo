@@ -6,6 +6,7 @@ import {
   TileLayer,
   CircleMarker,
   Popup,
+  Tooltip,
   useMap,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -24,9 +25,11 @@ function FlyToStation({ lat, lng }: { lat: number; lng: number }) {
 
 interface MapViewProps {
   stations: Station[];
+  thumbnails?: Record<string, string>;
+  snippets?: Record<string, string>;
 }
 
-export default function MapView({ stations }: MapViewProps) {
+export default function MapView({ stations, thumbnails = {}, snippets = {} }: MapViewProps) {
   const weights = useAppStore((s) => s.weights);
   const selectedStation = useAppStore((s) => s.selectedStation);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
@@ -59,6 +62,8 @@ export default function MapView({ stations }: MapViewProps) {
         const score = station.score;
         const color = score !== null ? scoreToColor(score) : '#9CA3AF';
         const radius = score !== null ? 6 + score * 0.5 : 5;
+        const thumb = thumbnails[station.slug];
+        const snippet = snippets[station.slug];
 
         return (
           <CircleMarker
@@ -76,6 +81,58 @@ export default function MapView({ stations }: MapViewProps) {
               click: () => setSelectedStation(station.slug),
             }}
           >
+            {/* Rich hover tooltip */}
+            <Tooltip
+              direction="top"
+              offset={[0, -10]}
+              opacity={1}
+              className="station-tooltip"
+            >
+              <div style={{ width: 260 }}>
+                {thumb && (
+                  <img
+                    src={thumb}
+                    alt={station.name_en}
+                    style={{
+                      width: '100%',
+                      height: 100,
+                      objectFit: 'cover',
+                      borderRadius: '6px 6px 0 0',
+                      display: 'block',
+                    }}
+                  />
+                )}
+                <div style={{ padding: '8px 10px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: 14 }}>{station.name_en}</div>
+                      <div style={{ color: '#6b7280', fontSize: 12 }}>{station.name_jp}</div>
+                    </div>
+                    {score !== null && (
+                      <div style={{ fontWeight: 700, fontSize: 18, color }}>
+                        {score.toFixed(1)}
+                      </div>
+                    )}
+                  </div>
+                  {snippet && (
+                    <div style={{ fontSize: 11, color: '#4b5563', marginTop: 6, lineHeight: 1.4 }}>
+                      {snippet}
+                    </div>
+                  )}
+                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
+                    {station.line_count} lines
+                    {station.rent_avg?.['1k_1ldk'] && (
+                      <> · ~¥{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k/mo</>
+                    )}
+                  </div>
+                  <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
+                    Click for details →
+                  </div>
+                </div>
+              </div>
+            </Tooltip>
+
+            {/* Click popup */}
             <Popup>
               <div className="min-w-[180px]">
                 <div className="font-bold text-base">
