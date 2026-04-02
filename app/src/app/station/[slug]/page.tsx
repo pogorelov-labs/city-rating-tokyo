@@ -8,9 +8,16 @@ import type { Metadata } from 'next';
 import StationRadarChart from '@/components/RadarChart';
 import Tooltip from '@/components/Tooltip';
 import ImageGallery from '@/components/ImageGallery';
+import NearbyPlaces from '@/components/NearbyPlaces';
 import stationImages from '@/data/station-images.json';
+import stationImagesUnsplash from '@/data/station-images-unsplash.json';
+import stationPlaces from '@/data/station-places.json';
 
-const imageData = stationImages as Record<string, { url: string; alt: string; attribution?: string }[]>;
+type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: 'wikimedia' | 'unsplash' };
+const imageData = stationImages as Record<string, ImageEntry[]>;
+const unsplashData = stationImagesUnsplash as Record<string, ImageEntry[]>;
+import type { StationPlace } from '@/lib/types';
+const placesData = stationPlaces as Record<string, StationPlace[]>;
 
 export function generateStaticParams() {
   return getStations()
@@ -54,7 +61,10 @@ export default async function StationPage({
     : null;
 
   const mapsUrl = getGoogleMapsAreaUrl(station.lat, station.lng);
-  const images = imageData[slug] || [];
+  const wikiImages = (imageData[slug] || []).map(img => ({ ...img, source: 'wikimedia' as const }));
+  const uImages = (unsplashData[slug] || []).map(img => ({ ...img, source: 'unsplash' as const }));
+  const images = [...wikiImages, ...uImages];
+  const places = placesData[slug] || [];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -231,6 +241,14 @@ export default async function StationPage({
             </div>
           </section>
         )}
+
+        {/* Nearby Places */}
+        <NearbyPlaces
+          places={places}
+          lat={station.lat}
+          lng={station.lng}
+          stationName={station.name_en}
+        />
 
         {/* Description */}
         {station.description ? (

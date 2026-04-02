@@ -19,3 +19,21 @@ body {
   margin: 10px 12px !important;
   font-family: var(--font-inter), system-ui, sans-serif !important;
 }
+
+/* Rich hover tooltip */
+.station-tooltip {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  background: white !important;
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+}
+
+.station-tooltip .leaflet-tooltip-content {
+  margin: 0 !important;
+}
+
+.station-tooltip::before {
+  border-top-color: white !important;
+}

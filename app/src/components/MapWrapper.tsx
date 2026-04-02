@@ -12,6 +12,12 @@ const MapView = dynamic(() => import('./Map'), {
   ),
 });
 
-export default function MapWrapper({ stations }: { stations: Station[] }) {
-  return <MapView stations={stations} />;
+interface MapWrapperProps {
+  stations: Station[];
+  thumbnails?: Record<string, string>;
+  snippets?: Record<string, string>;
+}
+
+export default function MapWrapper({ stations, thumbnails, snippets }: MapWrapperProps) {
+  return <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />;
 }
