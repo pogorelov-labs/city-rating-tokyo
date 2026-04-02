@@ -441,4 +441,115 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     rent_avg: { '1k_1ldk': 110000, '2ldk': 175000, source: 'estimate', updated: '2026-04' },
     description: { atmosphere: "Это прежде всего еда. Внешний рынок кипит с раннего утра.", landmarks: "Внешний рынок Цукидзи, храм Хонгандзи, набережная Харумиудохин.", food: "Мекка: лучшие суши на завтрак, гребешки у ларьков, тамагояки — с 6 утра.", nightlife: "После обеда район затихает. Цукидзи — утренний район, не вечерний." },
   },
+  // === Batch 9: Major hubs ===
+  yokohama: {
+    ratings: { food: 9, nightlife: 8, transport: 10, rent: 6, safety: 8, green: 6, gym_sports: 7, vibe: 9, crowd: 4 },
+    transit_minutes: { shibuya: 30, shinjuku: 35, tokyo: 25, ikebukuro: 45, shinagawa: 15 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': 160000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Второй город Японии: портовый, космополитичный, с уникальной атмосферой.", landmarks: "Китайский квартал (крупнейший в Японии), набережная Ямасита, Landmark Tower.", food: "Кантонская и шанхайская кухня в Чукагае. Yokohama-style ramen.", nightlife: "Барная сцена в Кантай-тё и Исэдзаки-Тё, клубы у набережной." },
+  },
+  omiya: {
+    ratings: { food: 7, nightlife: 6, transport: 9, rent: 7, safety: 8, green: 7, gym_sports: 7, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 40, shinjuku: 30, tokyo: 35, ikebukuro: 22, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 72000, '2ldk': 115000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Главный хаб Сайтамы: деловой и торговый центр к северу от Токио.", landmarks: "Святилище Хикава-дзиндзя, Музей железных дорог, музей бонсай.", food: "Аркада Ichibangai, блюда из свинины Сайтама, фастфуд.", nightlife: "Барный квартал Кита-ку: якитория и изакая для рабочего класса." },
+  },
+  yotsuya: {
+    ratings: { food: 7, nightlife: 5, transport: 9, rent: 4, safety: 9, green: 6, gym_sports: 6, vibe: 7, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 8, tokyo: 12, ikebukuro: 18, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': 210000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Тихий респектабельный район: Университет Дзёти (София), дипломатическая зона.", landmarks: "Sophia University, Акасака Палас, Синдзюку Гёэн рядом.", food: "Кафе и рестораны для студентов. В сторону Акасака выбор шире.", nightlife: "Немного баров для студентов. Ночь — в Синдзюку или Акасака." },
+  },
+  ochanomizu: {
+    ratings: { food: 7, nightlife: 5, transport: 9, rent: 5, safety: 9, green: 5, gym_sports: 8, vibe: 7, crowd: 6 },
+    transit_minutes: { shibuya: 20, shinjuku: 15, tokyo: 8, ikebukuro: 20, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 120000, '2ldk': 195000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Студенческий и культурный район: университеты, музыкальные магазины, букинисты.", landmarks: "Книжный квартал, мост Хидзирибаси с видом на Никорай-до, Акихабара рядом.", food: "Студенческие кафе, рамэн, карри-рестораны Канда-Ясайтё, кисса-тэн.", nightlife: "Скромная: студенческие бары и изакая. Активность — в Акихабаре." },
+  },
+  mitaka: {
+    ratings: { food: 7, nightlife: 4, transport: 7, rent: 7, safety: 9, green: 9, gym_sports: 7, vibe: 8, crowd: 8 },
+    transit_minutes: { shibuya: 30, shinjuku: 18, tokyo: 35, ikebukuro: 30, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 85000, '2ldk': 138000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Тихий город к западу от Токио: семьи, творческие люди, загородная атмосфера.", landmarks: "Музей Гибли в парке Инокасира, дом-музей Осаму Дадзая.", food: "Уютные кафе и пекарни. В сторону Кичидзёдзи — больше выбора.", nightlife: "Практически нет — семейный район. Бары — в соседнем Кичидзёдзи." },
+  },
+  kokubunji: {
+    ratings: { food: 6, nightlife: 4, transport: 7, rent: 8, safety: 9, green: 8, gym_sports: 6, vibe: 7, crowd: 9 },
+    transit_minutes: { shibuya: 38, shinjuku: 25, tokyo: 42, ikebukuro: 35, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 72000, '2ldk': 115000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Спокойный город с студенческим влиянием: независимые магазины, кафе, ретро.", landmarks: "Руины храма Кокубун-дзи (VIII век), река Номикава, рынок выходного дня.", food: "Независимые кафе, вьетнамская и индийская кухня для студентов.", nightlife: "Минимальна — тихие бары для местных. Засыпает к полуночи." },
+  },
+  // === Batch 10: Popular areas ===
+  hiyoshi: {
+    ratings: { food: 7, nightlife: 5, transport: 8, rent: 6, safety: 9, green: 7, gym_sports: 8, vibe: 7, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 28, tokyo: 40, ikebukuro: 38, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 85000, '2ldk': 145000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Студенческий и семейный район: кампус Кэйо, молодёжная энергия.", landmarks: "Кампус Кэйо, стадион Хиёси, прогулочная зона вдоль реки Цурами.", food: "Студенческие кафе, рамэн-ларьки по доступным ценам.", nightlife: "Скромная: бары для студентов. После полуночи — тишина." },
+  },
+  mizonokuchi: {
+    ratings: { food: 8, nightlife: 7, transport: 9, rent: 6, safety: 8, green: 5, gym_sports: 7, vibe: 7, crowd: 5 },
+    transit_minutes: { shibuya: 22, shinjuku: 35, tokyo: 48, ikebukuro: 50, shinagawa: 30 },
+    rent_avg: { '1k_1ldk': 88000, '2ldk': 150000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Оживлённый коммерческий узел западного Кавасаки: молодые семьи, торговля.", landmarks: "Nōca, Takashimaya, парк Икута, пешеходная Миконодайра.", food: "Суши-конвейеры, корейская кухня, семейные кафе — на любой бюджет.", nightlife: "Бары и изакая вдоль торговой улицы. Пятницы/субботы — живее." },
+  },
+  oimachi: {
+    ratings: { food: 8, nightlife: 7, transport: 9, rent: 6, safety: 7, green: 5, gym_sports: 7, vibe: 7, crowd: 4 },
+    transit_minutes: { shibuya: 18, shinjuku: 25, tokyo: 20, ikebukuro: 35, shinagawa: 8 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': 165000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Энергичный смешанный район Синагавы: торговля + жильё.", landmarks: "Atre Oimachi, Oimachi Shotengai — один из крупнейших в Токио.", food: "Якинику, суши, итальянские бистро, уличные ларьки в аркаде.", nightlife: "Несколько баров и изакая — умеренная, стабильная вечерняя жизнь." },
+  },
+  'nakano-sakaue': {
+    ratings: { food: 6, nightlife: 4, transport: 9, rent: 7, safety: 9, green: 5, gym_sports: 5, vibe: 6, crowd: 8 },
+    transit_minutes: { shibuya: 20, shinjuku: 8, tokyo: 22, ikebukuro: 15, shinagawa: 30 },
+    rent_avg: { '1k_1ldk': 90000, '2ldk': 155000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Тихий жилой район без туристов, семьи и пожилые жители.", landmarks: "Небольшой парк, синтоистские святыни, узкие жилые переулки.", food: "Местные ресторанчики: домашняя кухня, суши. Скромнее чем Накано.", nightlife: "Практически нет. За весельем — 8 мин до Синдзюку." },
+  },
+  urawa: {
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 8, safety: 8, green: 7, gym_sports: 7, vibe: 6, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 38, tokyo: 30, ikebukuro: 28, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 72000, '2ldk': 125000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Центр Сайтамы: престижный спальный район для токийских служащих.", landmarks: "Парк Тисю-эн, стадион Urawa Reds, префектуральный музей.", food: "Суши, итальянские кафе, семейные рестораны. Parco и Ito Yokado.", nightlife: "Умеренная: бары и пабы у станции. Для пригорода — развито." },
+  },
+  kashiwa: {
+    ratings: { food: 8, nightlife: 6, transport: 7, rent: 9, safety: 8, green: 6, gym_sports: 7, vibe: 6, crowd: 6 },
+    transit_minutes: { shibuya: 55, shinjuku: 48, tokyo: 40, ikebukuro: 38, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': 110000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Крупный хаб Тибы: самодостаточный, жители редко ездят в Токио.", landmarks: "Sogo Kashiwa, парк Тэнпаку, кампус Тибского университета.", food: "Все ценовые категории: морепродукты Тибы, рамэн, аркады.", nightlife: "Умеренная: бары и изакая у станции. Для пригорода — активна." },
+  },
+  // === Batch 11: More areas ===
+  machiya: {
+    ratings: { food: 7, nightlife: 5, transport: 8, rent: 8, safety: 7, green: 5, gym_sports: 5, vibe: 7, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 30, tokyo: 25, ikebukuro: 20, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': 115000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Типичный ситамати: плотная застройка, старый рабочий район, спокойно.", landmarks: "Трамвай Тодэн Аракава, храм Хоринджи, канал Сумида.", food: "Семейные якитори, рамен, соба. Аркада Матия-гинза — бюджетно.", nightlife: "Скромная: местные изакая. Район рано затихает." },
+  },
+  matsudo: {
+    ratings: { food: 6, nightlife: 4, transport: 7, rent: 9, safety: 7, green: 6, gym_sports: 6, vibe: 5, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 50, tokyo: 30, ikebukuro: 45, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 62000, '2ldk': 95000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Спокойный жилой город Тибы: семьи, работающие в Токио.", landmarks: "Парк вдоль Эдогавы (сакура), замок Мацудо, природный парк Яматано.", food: "Сетевые рестораны и местные закусочные. Рамен-я, суши.", nightlife: "Практически нет. Развлечения — в Токио." },
+  },
+  kawagoe: {
+    ratings: { food: 8, nightlife: 5, transport: 7, rent: 9, safety: 8, green: 7, gym_sports: 6, vibe: 9, crowd: 6 },
+    transit_minutes: { shibuya: 55, shinjuku: 40, tokyo: 65, ikebukuro: 30, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 58000, '2ldk': 88000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "«Маленькое Эдо» Сайтамы: старинные склады, атмосфера прошлых веков.", landmarks: "Улица Кура-дзукури (XVII-XIX вв), пагода Китаин, улица сладостей.", food: "Батат во всём: мороженое, чипсы, пиво. Унаги, соба, уличная еда.", nightlife: "Вечером тихо. Несколько баров у станции Хон-Кавагоэ." },
+  },
+  motoyawata: {
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 8, safety: 7, green: 5, gym_sports: 6, vibe: 6, crowd: 6 },
+    transit_minutes: { shibuya: 50, shinjuku: 40, tokyo: 25, ikebukuro: 45, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 70000, '2ldk': 105000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Транзитный узел на границе Токио/Тибы: удобное расположение.", landmarks: "Святилище Катори-дзиндзя, набережные Эдогавы.", food: "Корейские, китайские, японские заведения. Рынок у станции.", nightlife: "Умеренная: бары и изакая. Живее большинства пригородов." },
+  },
+  funabashi: {
+    ratings: { food: 8, nightlife: 6, transport: 9, rent: 8, safety: 7, green: 5, gym_sports: 7, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 55, shinjuku: 45, tokyo: 30, ikebukuro: 50, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 72000, '2ldk': 108000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Крупный город Тибы: полноценный центр со своей коммерческой жизнью.", landmarks: "LaLaport Токио-Бэй, порт Фунабаси, ипподром.", food: "Свежие морепродукты залива: суши и сасими отличного качества.", nightlife: "Заметная: улицы с барами и клубами. Для пригорода — самодостаточно." },
+  },
+  hachioji: {
+    ratings: { food: 8, nightlife: 7, transport: 8, rent: 9, safety: 7, green: 9, gym_sports: 8, vibe: 7, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 35, tokyo: 55, ikebukuro: 50, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 60000, '2ldk': 90000, source: 'estimate', updated: '2026-04' },
+    description: { atmosphere: "Крупный город западного Токио: студенты, горы Такао, природа + город.", landmarks: "Гора Такао (самая популярная в Японии), замок Хатиодзи, университеты.", food: "Рамен, якинику, этническая кухня — дёшево благодаря студентам. Соба на Такао.", nightlife: "Активная для пригорода: студенческие бары, клубы, живая музыка." },
+  },
 };
