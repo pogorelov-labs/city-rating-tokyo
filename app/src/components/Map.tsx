@@ -33,6 +33,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const weights = useAppStore((s) => s.weights);
   const selectedStation = useAppStore((s) => s.selectedStation);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const heatmapMode = useAppStore((s) => s.heatmapMode);
+  const heatmapDimension = useAppStore((s) => s.heatmapDimension);
 
   const scoredStations = useMemo(() => {
     return stations.map((s) => ({
@@ -61,10 +63,25 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       {flyTarget && <FlyToStation lat={flyTarget.lat} lng={flyTarget.lng} />}
       {scoredStations.map((station) => {
         const score = station.score;
-        const color = score !== null ? scoreToColor(score) : '#9CA3AF';
-        const radius = score !== null ? 6 + score * 0.5 : 5;
         const thumb = thumbnails[station.slug];
         const snippet = snippets[station.slug];
+
+        // Heatmap mode: color by selected dimension
+        let displayValue: number | null = null;
+        if (heatmapMode && station.ratings) {
+          displayValue = heatmapDimension === 'composite'
+            ? score
+            : (station.ratings as Record<string, number>)[heatmapDimension] ?? null;
+        }
+
+        const color = heatmapMode
+          ? (displayValue !== null ? scoreToColor(displayValue) : '#9CA3AF')
+          : (score !== null ? scoreToColor(score) : '#9CA3AF');
+        const radius = heatmapMode
+          ? (displayValue !== null ? 14 + displayValue * 1.2 : 0)
+          : (score !== null ? 6 + score * 0.5 : 5);
+
+        if (heatmapMode && displayValue === null) return null;
 
         return (
           <CircleMarker
@@ -73,10 +90,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             radius={radius}
             pathOptions={{
               fillColor: color,
-              color: '#374151',
-              weight: 1,
-              opacity: 0.8,
-              fillOpacity: 0.85,
+              color: heatmapMode ? color : '#374151',
+              weight: heatmapMode ? 0 : 1,
+              opacity: heatmapMode ? 0 : 0.8,
+              fillOpacity: heatmapMode ? 0.45 : 0.85,
             }}
             eventHandlers={{
               click: () => setSelectedStation(station.slug),

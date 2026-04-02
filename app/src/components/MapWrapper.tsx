@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { Station } from '@/lib/types';
+import MapControls from './MapControls';
 
 const MapView = dynamic(() => import('./Map'), {
   ssr: false,
@@ -19,5 +20,10 @@ interface MapWrapperProps {
 }
 
 export default function MapWrapper({ stations, thumbnails, snippets }: MapWrapperProps) {
-  return <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />;
+  return (
+    <div className="relative h-full w-full">
+      <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />
+      <MapControls />
+    </div>
+  );
 }
