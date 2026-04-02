@@ -1642,4 +1642,6110 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     description: { atmosphere: "Тихий пригород Хатиодзи.", landmarks: "Горные парки Хатиодзи.", food: "Базовые заведения.", nightlife: "Нет." },
   },
 
+  // === Auto-generated heuristic ratings (1221 stations) ===
+  'ichigaya': {
+    ratings: { food: 10, nightlife: 6, transport: 7, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 14, shinjuku: 9, tokyo: 9, ikebukuro: 14, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuukou-daini-biru-daini-ryokyaku-taaminaru': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 190, shinjuku: 188, tokyo: 171, ikebukuro: 184, shinagawa: 182 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naritakuukou-daiichi-ryokyaku-taaminaru': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 188, shinjuku: 187, tokyo: 170, ikebukuro: 183, shinagawa: 181 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'odawara': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 200, shinjuku: 207, tokyo: 218, ikebukuro: 218, shinagawa: 201 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oshiage-sukaitsurii-mae': {
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 35, shinjuku: 31, tokyo: 16, ikebukuro: 28, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aoto': {
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 51, shinjuku: 46, tokyo: 32, ikebukuro: 40, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'choushi': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 306, shinjuku: 306, tokyo: 288, ikebukuro: 302, shinagawa: 297 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ebina': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 115, tokyo: 127, ikebukuro: 127, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hanedakuukou-kokunaisen-taaminaru': {
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 43, shinjuku: 52, tokyo: 44, ikebukuro: 63, shinagawa: 29 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hibiya': {
+    ratings: { food: 10, nightlife: 9, transport: 7, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 8, crowd: 3 },
+    transit_minutes: { shibuya: 17, shinjuku: 17, tokyo: 3, ikebukuro: 23, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashihannou': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 115, tokyo: 132, ikebukuro: 112, shinagawa: 135 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hikifune': {
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 37, shinjuku: 33, tokyo: 18, ikebukuro: 29, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keioutama-sentaa': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 78, tokyo: 95, ikebukuro: 85, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-tsudanuma': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 88, tokyo: 70, ikebukuro: 86, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 120, tokyo: 136, ikebukuro: 115, shinagawa: 141 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamisenju': {
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 37, shinjuku: 31, tokyo: 20, ikebukuro: 24, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagatsuda': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 77, tokyo: 89, ikebukuro: 88, shinagawa: 74 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'saitama-shintoshin': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 70, tokyo: 80, ikebukuro: 59, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinkiba': {
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 34, shinjuku: 37, tokyo: 20, ikebukuro: 42, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shounandai': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 108, shinjuku: 117, tokyo: 125, ikebukuro: 129, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tamagawa': {
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 24, shinjuku: 34, tokyo: 41, ikebukuro: 48, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toubudoubutsukouen': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 112, tokyo: 115, ikebukuro: 99, shinagawa: 132 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yorii': {
+    ratings: { food: 3, nightlife: 2, transport: 7, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 206, shinjuku: 198, tokyo: 213, ikebukuro: 190, shinagawa: 220 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'atsugi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 120, tokyo: 132, ikebukuro: 131, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'awa-kamogawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 223, tokyo: 212, ikebukuro: 233, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'azami-no': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 50, shinjuku: 57, tokyo: 69, ikebukuro: 69, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chiba-minato': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 113, tokyo: 95, ikebukuro: 114, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chiba-nyuutaun-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 118, tokyo: 103, ikebukuro: 112, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chibachuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 116, tokyo: 98, ikebukuro: 118, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chuuourinkan': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 86, shinjuku: 92, tokyo: 105, ikebukuro: 103, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuchuuhonmachi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 61, tokyo: 79, ikebukuro: 67, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'futakoshinchi': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 27, shinjuku: 35, tokyo: 46, ikebukuro: 47, shinagawa: 32 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'futamatagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 88, tokyo: 97, ikebukuro: 101, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'goi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 116, shinjuku: 121, tokyo: 104, ikebukuro: 126, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'goura': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 224, shinjuku: 230, tokyo: 242, ikebukuro: 241, shinagawa: 226 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hagiyama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 63, tokyo: 81, ikebukuro: 63, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hamakawasaki': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 49, shinjuku: 60, tokyo: 59, ikebukuro: 73, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hanedakuukou-kokusaisen-taaminaru': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 42, shinjuku: 52, tokyo: 46, ikebukuro: 64, shinagawa: 29 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hannou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 117, tokyo: 134, ikebukuro: 114, shinagawa: 136 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hanyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 177, shinjuku: 167, tokyo: 175, ikebukuro: 155, shinagawa: 189 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hatagaya': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 9, shinjuku: 8, tokyo: 25, ikebukuro: 20, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hatchoubori': {
+    ratings: { food: 9, nightlife: 8, transport: 6, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 7, crowd: 3 },
+    transit_minutes: { shibuya: 21, shinjuku: 22, tokyo: 4, ikebukuro: 26, shinagawa: 19 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hatchounawate': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 45, shinjuku: 56, tokyo: 57, ikebukuro: 69, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-fuchuu': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 56, shinjuku: 56, tokyo: 74, ikebukuro: 62, shinagawa: 67 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiginza': {
+    ratings: { food: 9, nightlife: 8, transport: 6, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 7, crowd: 3 },
+    transit_minutes: { shibuya: 18, shinjuku: 19, tokyo: 4, ikebukuro: 25, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashikawaguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 63, tokyo: 65, ikebukuro: 49, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashinarita': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 189, shinjuku: 188, tokyo: 171, ikebukuro: 184, shinagawa: 182 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashitotsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 86, shinjuku: 95, tokyo: 101, ikebukuro: 108, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ho-tsuchi-ke-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 86, tokyo: 90, ikebukuro: 99, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hokuchou-kasumi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 52, tokyo: 66, ikebukuro: 44, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'honchiba': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 118, tokyo: 100, ikebukuro: 119, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hori-no-nai': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 132, shinjuku: 142, tokyo: 141, ikebukuro: 156, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichikawa': {
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 61, shinjuku: 58, tokyo: 41, ikebukuro: 53, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inage': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 108, tokyo: 89, ikebukuro: 108, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inba-nippon-idai': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 143, shinjuku: 140, tokyo: 123, ikebukuro: 135, shinagawa: 137 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamakura': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 120, shinjuku: 130, tokyo: 134, ikebukuro: 144, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamioooka': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 98, tokyo: 102, ikebukuro: 111, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kasukabe': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 108, shinjuku: 98, tokyo: 100, ikebukuro: 84, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katori': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 239, shinjuku: 236, tokyo: 219, ikebukuro: 229, shinagawa: 233 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katsuta-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 116, tokyo: 98, ikebukuro: 113, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusanakano': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 192, shinjuku: 200, tokyo: 186, ikebukuro: 208, shinagawa: 178 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-kamata': {
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 33, shinjuku: 43, tokyo: 42, ikebukuro: 56, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-kawasaki': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 42, shinjuku: 52, tokyo: 53, ikebukuro: 66, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiou-nagayama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 71, tokyo: 88, ikebukuro: 79, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiseiueno': {
+    ratings: { food: 9, nightlife: 6, transport: 6, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 26, shinjuku: 21, tokyo: 10, ikebukuro: 18, shinagawa: 29 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kikuna': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 63, tokyo: 68, ikebukuro: 77, shinagawa: 49 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kisarazu': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 120, tokyo: 109, ikebukuro: 130, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitanarashino': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 93, tokyo: 76, ikebukuro: 90, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitano': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 95, tokyo: 112, ikebukuro: 101, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kou-no-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 139, tokyo: 145, ikebukuro: 152, shinagawa: 126 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kourai': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 125, tokyo: 142, ikebukuro: 121, shinagawa: 145 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouzu': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 183, shinjuku: 190, tokyo: 201, ikebukuro: 202, shinagawa: 184 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuki': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 136, shinjuku: 126, tokyo: 131, ikebukuro: 113, shinagawa: 147 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kumagaya': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 181, shinjuku: 172, tokyo: 184, ikebukuro: 162, shinagawa: 195 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kumano-mae': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 36, shinjuku: 27, tokyo: 23, ikebukuro: 17, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurihama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 142, shinjuku: 152, tokyo: 151, ikebukuro: 166, shinagawa: 132 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurihashi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 160, shinjuku: 149, tokyo: 153, ikebukuro: 136, shinagawa: 170 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mabashi': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 71, tokyo: 60, ikebukuro: 62, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'makuhari': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 97, tokyo: 79, ikebukuro: 97, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'makuharihongou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 93, tokyo: 75, ikebukuro: 92, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsugishi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 297, shinjuku: 297, tokyo: 279, ikebukuro: 294, shinagawa: 289 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'me-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 135, shinjuku: 144, tokyo: 152, ikebukuro: 156, shinagawa: 134 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamiurawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 64, shinjuku: 53, tokyo: 62, ikebukuro: 41, shinagawa: 76 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mita': {
+    ratings: { food: 9, nightlife: 6, transport: 6, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 13, shinjuku: 19, tokyo: 12, ikebukuro: 29, shinagawa: 7 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'motosumiyoshi': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 33, shinjuku: 43, tokyo: 49, ikebukuro: 57, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-yokote': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 137, shinjuku: 131, tokyo: 148, ikebukuro: 127, shinagawa: 151 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashiurawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 64, shinjuku: 54, tokyo: 64, ikebukuro: 42, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagareyama-ootakano-mori': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 86, tokyo: 77, ikebukuro: 75, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakanobe': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 28, tokyo: 29, ikebukuro: 41, shinagawa: 10 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakayama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 73, tokyo: 83, ikebukuro: 85, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nan-etsu-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 67, tokyo: 65, ikebukuro: 53, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nanryuu-yama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 74, tokyo: 64, ikebukuro: 64, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'narutou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 193, shinjuku: 194, tokyo: 176, ikebukuro: 194, shinagawa: 182 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-tokorozawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 74, tokyo: 92, ikebukuro: 72, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishiogikubo': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 32, shinjuku: 28, tokyo: 46, ikebukuro: 31, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'noborito': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 38, shinjuku: 42, tokyo: 57, ikebukuro: 53, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ogawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 66, tokyo: 84, ikebukuro: 67, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ogawachou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 179, shinjuku: 171, tokyo: 186, ikebukuro: 164, shinagawa: 193 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ogose': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 149, shinjuku: 142, tokyo: 158, ikebukuro: 136, shinagawa: 163 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oku': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 33, shinjuku: 24, tokyo: 22, ikebukuro: 13, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooami': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 171, shinjuku: 175, tokyo: 157, ikebukuro: 177, shinagawa: 159 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oohara': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 231, shinjuku: 238, tokyo: 222, ikebukuro: 244, shinagawa: 217 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oookayama': {
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 17, shinjuku: 28, tokyo: 33, ikebukuro: 41, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagamioono': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 89, tokyo: 102, ikebukuro: 99, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakato': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 122, tokyo: 137, ikebukuro: 115, shinagawa: 144 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakura': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 143, shinjuku: 143, tokyo: 125, ikebukuro: 140, shinagawa: 135 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakuragichou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 82, tokyo: 85, ikebukuro: 95, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sawara': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 229, shinjuku: 225, tokyo: 209, ikebukuro: 219, shinagawa: 223 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibu-yuuenchi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 74, tokyo: 92, ikebukuro: 74, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibukyuujou-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 81, tokyo: 99, ikebukuro: 80, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sekiuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 84, tokyo: 87, ikebukuro: 98, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sengakuji': {
+    ratings: { food: 7, nightlife: 6, transport: 6, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 5 },
+    transit_minutes: { shibuya: 12, shinjuku: 20, tokyo: 16, ikebukuro: 31, shinagawa: 3 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sentaa-kita': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 48, shinjuku: 56, tokyo: 67, ikebukuro: 69, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sentaa-minami': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 51, shinjuku: 59, tokyo: 69, ikebukuro: 72, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-sugita': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 103, tokyo: 106, ikebukuro: 117, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinkawasaki': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 36, shinjuku: 47, tokyo: 50, ikebukuro: 60, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinkoyasu': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 58, shinjuku: 69, tokyo: 72, ikebukuro: 82, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinmaruko': {
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 38, tokyo: 44, ikebukuro: 51, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinpachi-hashira': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 73, tokyo: 59, ikebukuro: 65, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinyokohama': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 65, tokyo: 71, ikebukuro: 78, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinyuri-ke-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 56, shinjuku: 60, tokyo: 75, ikebukuro: 69, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shitte': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 43, shinjuku: 53, tokyo: 55, ikebukuro: 67, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shodai': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 9, shinjuku: 5, tokyo: 22, ikebukuro: 17, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takatsu': {
+    ratings: { food: 5, nightlife: 2, transport: 6, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 29, shinjuku: 37, tokyo: 48, ikebukuro: 49, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama-doubutsu-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 81, tokyo: 99, ikebukuro: 87, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tamagawajousui': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 78, tokyo: 96, ikebukuro: 79, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tenkuu-hashi': {
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 39, shinjuku: 49, tokyo: 44, ikebukuro: 61, shinagawa: 27 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tennoudai': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 111, tokyo: 98, ikebukuro: 101, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tokorozawa': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 75, shinjuku: 69, tokyo: 87, ikebukuro: 67, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tougo-no': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 143, shinjuku: 137, tokyo: 154, ikebukuro: 133, shinagawa: 157 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsudanuma': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 87, shinjuku: 87, tokyo: 69, ikebukuro: 85, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuga': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 123, tokyo: 105, ikebukuro: 123, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ushita': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 42, shinjuku: 35, tokyo: 24, ikebukuro: 28, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ware-no': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 153, shinjuku: 147, tokyo: 165, ikebukuro: 144, shinagawa: 167 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yamato': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 98, tokyo: 109, ikebukuro: 110, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yotsukaidou': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 126, tokyo: 108, ikebukuro: 125, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoyogi-hachiman': {
+    ratings: { food: 7, nightlife: 4, transport: 6, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 5, shinjuku: 7, tokyo: 22, ikebukuro: 21, shinagawa: 19 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yuukari-ga-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 124, tokyo: 106, ikebukuro: 121, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'adachi-odai': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 37, shinjuku: 29, tokyo: 25, ikebukuro: 18, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ageo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 99, tokyo: 109, ikebukuro: 88, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'agui': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 158, shinjuku: 154, tokyo: 139, ikebukuro: 148, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aihara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 104, tokyo: 121, ikebukuro: 111, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aikou-ishida': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 133, tokyo: 145, ikebukuro: 144, shinagawa: 128 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'akigawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 113, tokyo: 131, ikebukuro: 115, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'akira-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 92, tokyo: 110, ikebukuro: 95, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'akiyama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 67, tokyo: 52, ikebukuro: 61, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'an-zen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 63, tokyo: 63, ikebukuro: 77, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'anabe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 203, tokyo: 215, ikebukuro: 214, shinagawa: 198 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'anagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 113, tokyo: 94, ikebukuro: 113, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'anamori-inari': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 38, shinjuku: 48, tokyo: 44, ikebukuro: 61, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ane-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 116, tokyo: 101, ikebukuro: 123, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'anjin-tsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 135, tokyo: 136, ikebukuro: 149, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ao-hori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 127, tokyo: 120, ikebukuro: 139, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aobadai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 63, shinjuku: 70, tokyo: 82, ikebukuro: 81, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aoi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 50, shinjuku: 42, tokyo: 33, ikebukuro: 33, shinagawa: 53 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'aomono-yokochou': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 20, shinjuku: 29, tokyo: 25, ikebukuro: 41, shinagawa: 6 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arai-kusurishi-mae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 12, tokyo: 28, ikebukuro: 11, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'araijuku': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 62, shinjuku: 52, tokyo: 55, ikebukuro: 39, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawa-itchuu-mae': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 35, shinjuku: 28, tokyo: 18, ikebukuro: 21, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawa-nichoume': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 35, shinjuku: 28, tokyo: 20, ikebukuro: 20, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawa-shichi-choume': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 36, shinjuku: 29, tokyo: 21, ikebukuro: 20, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawa-yuuenchi-mae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 34, shinjuku: 26, tokyo: 23, ikebukuro: 15, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawaku-yakusho-mae': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 34, shinjuku: 28, tokyo: 19, ikebukuro: 21, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'arakawashakomae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 34, shinjuku: 25, tokyo: 24, ikebukuro: 13, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'araki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 124, tokyo: 110, ikebukuro: 116, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ariake': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 26, shinjuku: 31, tokyo: 17, ikebukuro: 39, shinagawa: 15 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ariake-tenisu-no-mori': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 24, shinjuku: 29, tokyo: 15, ikebukuro: 37, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'asahi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 259, shinjuku: 259, tokyo: 241, ikebukuro: 256, shinagawa: 250 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'asaka': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 45, tokyo: 59, ikebukuro: 37, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'asano': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 64, tokyo: 64, ikebukuro: 77, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ashi-ke-kubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 186, shinjuku: 180, tokyo: 197, ikebukuro: 176, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ashigara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 197, shinjuku: 204, tokyo: 215, ikebukuro: 215, shinagawa: 198 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'asuka-yama': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 23, tokyo: 24, ikebukuro: 10, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'atago': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 98, tokyo: 94, ikebukuro: 85, shinagawa: 113 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'awa-katsuyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 185, shinjuku: 195, tokyo: 190, ikebukuro: 208, shinagawa: 174 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'awa-kominato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 221, shinjuku: 230, tokyo: 217, ikebukuro: 239, shinagawa: 207 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'awa-tenshin': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 225, tokyo: 213, ikebukuro: 235, shinagawa: 202 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'baigou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 105, shinjuku: 96, tokyo: 90, ikebukuro: 83, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ban-ta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 103, tokyo: 119, ikebukuro: 113, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bandou-hashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 87, tokyo: 90, ikebukuro: 100, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'barakinakayama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 66, tokyo: 48, ikebukuro: 63, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'basha-michi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 82, tokyo: 85, ikebukuro: 95, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'benten-hashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 65, tokyo: 65, ikebukuro: 78, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bushuu-araki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 178, shinjuku: 168, tokyo: 177, ikebukuro: 156, shinagawa: 191 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bushuu-hino': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 209, shinjuku: 204, tokyo: 221, ikebukuro: 201, shinagawa: 222 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bushuu-karasawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 145, shinjuku: 137, tokyo: 153, ikebukuro: 132, shinagawa: 159 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bushuu-nagase': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 139, shinjuku: 132, tokyo: 148, ikebukuro: 126, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'bushuu-nakagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 206, shinjuku: 201, tokyo: 218, ikebukuro: 198, shinagawa: 220 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'busshi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 105, tokyo: 122, ikebukuro: 102, shinagawa: 124 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'byoubu-ura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 102, tokyo: 105, ikebukuro: 115, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chiba-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 116, tokyo: 97, ikebukuro: 116, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chiba-tera': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 119, shinjuku: 122, tokyo: 104, ikebukuro: 123, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chichibu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 202, shinjuku: 196, tokyo: 212, ikebukuro: 191, shinagawa: 215 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chidorichou': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 39, tokyo: 42, ikebukuro: 52, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chihara-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 138, tokyo: 120, ikebukuro: 141, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chiku-sentaa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 124, tokyo: 106, ikebukuro: 120, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chikura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 237, shinjuku: 248, tokyo: 240, ikebukuro: 260, shinagawa: 225 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chitose': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 234, shinjuku: 244, tokyo: 236, ikebukuro: 256, shinagawa: 221 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chou-ura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 113, tokyo: 99, ikebukuro: 121, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chougo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 112, tokyo: 121, ikebukuro: 125, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'choujamachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 222, shinjuku: 228, tokyo: 211, ikebukuro: 233, shinagawa: 208 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'choukoku-no-mori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 224, shinjuku: 230, tokyo: 243, ikebukuro: 241, shinagawa: 226 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chuugakkou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 122, tokyo: 105, ikebukuro: 119, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'chuuoudaigaku-meiseidaigaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 81, tokyo: 98, ikebukuro: 87, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'daiba': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 22, shinjuku: 29, tokyo: 18, ikebukuro: 38, shinagawa: 9 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'daijinguushita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 79, tokyo: 61, ikebukuro: 77, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'daikanyama': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 3, shinjuku: 14, tokyo: 21, ikebukuro: 27, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'daishimae': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 46, shinjuku: 37, tokyo: 33, ikebukuro: 25, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'dokkyoudaigaku-zen-eki-souka-matsubara': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 58, tokyo: 55, ikebukuro: 45, shinagawa: 74 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'doro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 83, tokyo: 91, ikebukuro: 71, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'doubutsu-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 116, tokyo: 98, ikebukuro: 116, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'eda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 52, shinjuku: 60, tokyo: 71, ikebukuro: 72, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'edogawa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 59, shinjuku: 55, tokyo: 40, ikebukuro: 50, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'edogawa-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 90, tokyo: 82, ikebukuro: 78, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ehara-machi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 29, tokyo: 30, ikebukuro: 42, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ehara-nakanobe': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 27, tokyo: 28, ikebukuro: 40, shinagawa: 9 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'eifuku-machi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 17, shinjuku: 16, tokyo: 34, ikebukuro: 26, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ekoda': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 18, tokyo: 32, ikebukuro: 11, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'emi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 221, shinjuku: 231, tokyo: 221, ikebukuro: 242, shinagawa: 208 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'enoto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 159, shinjuku: 159, tokyo: 141, ikebukuro: 157, shinagawa: 150 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'etchuu-shima': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 25, shinjuku: 26, tokyo: 8, ikebukuro: 30, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuchinobe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 92, tokyo: 108, ikebukuro: 101, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuchuu-keiba-seimonmae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 59, shinjuku: 59, tokyo: 77, ikebukuro: 65, shinagawa: 70 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuda': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 42, tokyo: 59, ikebukuro: 51, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fudoumae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 11, shinjuku: 21, tokyo: 23, ikebukuro: 34, shinagawa: 7 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuji-fuirumu-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 197, shinjuku: 203, tokyo: 216, ikebukuro: 213, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fuji-no-ushijima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 99, tokyo: 100, ikebukuro: 86, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujigaoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 68, tokyo: 80, ikebukuro: 79, shinagawa: 64 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujimi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 75, tokyo: 89, ikebukuro: 67, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujimichou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 124, tokyo: 129, ikebukuro: 137, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujimidai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 25, tokyo: 41, ikebukuro: 22, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujino': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 150, shinjuku: 151, tokyo: 168, ikebukuro: 156, shinagawa: 159 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fujisawa-honchou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 120, shinjuku: 129, tokyo: 136, ikebukuro: 142, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fukaya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 211, shinjuku: 202, tokyo: 215, ikebukuro: 193, shinagawa: 225 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fukiage': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 163, shinjuku: 153, tokyo: 164, ikebukuro: 143, shinagawa: 176 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fukudawara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 178, shinjuku: 180, tokyo: 162, ikebukuro: 182, shinagawa: 166 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fukuura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 114, tokyo: 115, ikebukuro: 128, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'funabashi-houten': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 73, tokyo: 57, ikebukuro: 69, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'funabashi-nichidai-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 98, tokyo: 81, ikebukuro: 94, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'funabashikeibajou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 81, tokyo: 63, ikebukuro: 79, shinagawa: 73 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'funabori': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 44, tokyo: 26, ikebukuro: 44, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fune-no-kagakukan': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 23, shinjuku: 30, tokyo: 20, ikebukuro: 40, shinagawa: 10 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'furusato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 158, shinjuku: 154, tokyo: 172, ikebukuro: 154, shinagawa: 171 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'fusa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 129, tokyo: 114, ikebukuro: 121, shinagawa: 130 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'futamata-o': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 140, shinjuku: 137, tokyo: 155, ikebukuro: 136, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'futamata-shinmachi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 71, shinjuku: 70, tokyo: 52, ikebukuro: 69, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'futawa-mukaedai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 90, tokyo: 74, ikebukuro: 85, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gakuen-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 131, tokyo: 114, ikebukuro: 134, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gakushuuin-shita': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 20, shinjuku: 9, tokyo: 19, ikebukuro: 4, shinagawa: 30 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gamou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 64, tokyo: 62, ikebukuro: 51, shinagawa: 81 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'genka-osamu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 109, tokyo: 126, ikebukuro: 106, shinagawa: 128 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gezan-kuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 76, tokyo: 94, ikebukuro: 75, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ginzaitchoume': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 19, shinjuku: 19, tokyo: 3, ikebukuro: 24, shinagawa: 17 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gion': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 120, tokyo: 108, ikebukuro: 130, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gogatsu-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 60, shinjuku: 64, tokyo: 79, ikebukuro: 73, shinagawa: 67 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gohyaku-rakan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 203, tokyo: 214, ikebukuro: 214, shinagawa: 197 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gokou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 80, tokyo: 66, ikebukuro: 73, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gokuraku-tera': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 135, tokyo: 140, ikebukuro: 149, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gotan-no': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 46, shinjuku: 39, tokyo: 30, ikebukuro: 29, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gun-hatake': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 143, shinjuku: 139, tokyo: 157, ikebukuro: 139, shinagawa: 156 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gyouda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 169, shinjuku: 159, tokyo: 170, ikebukuro: 149, shinagawa: 182 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'gyoudashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 175, shinjuku: 165, tokyo: 175, ikebukuro: 154, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hachi-seki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 194, shinjuku: 199, tokyo: 182, ikebukuro: 204, shinagawa: 181 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hachigata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 202, shinjuku: 194, tokyo: 209, ikebukuro: 187, shinagawa: 216 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hachiman-yado': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 125, tokyo: 107, ikebukuro: 128, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hachiouji-minami-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 102, tokyo: 119, ikebukuro: 108, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hadano': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 161, shinjuku: 167, tokyo: 180, ikebukuro: 178, shinagawa: 164 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakkei-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 117, tokyo: 119, ikebukuro: 131, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakone-itabashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 205, shinjuku: 212, tokyo: 223, ikebukuro: 223, shinagawa: 206 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakone-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 100, tokyo: 118, ikebukuro: 100, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakoneyumoto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 222, tokyo: 234, ikebukuro: 234, shinagawa: 217 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakuraku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 60, shinjuku: 70, tokyo: 74, ikebukuro: 83, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hakusan': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 25, shinjuku: 18, tokyo: 14, ikebukuro: 11, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hamadayama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 22, shinjuku: 20, tokyo: 38, ikebukuro: 28, shinagawa: 35 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hamakin-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 167, shinjuku: 177, tokyo: 172, ikebukuro: 190, shinagawa: 155 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hamano': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 126, tokyo: 108, ikebukuro: 129, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hamura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 6, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 125, ikebukuro: 107, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 99500, '2ldk': 67000, source: 'suumo', updated: '2026-04' },
+  },
+  'hanasaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 152, shinjuku: 141, tokyo: 147, ikebukuro: 129, shinagawa: 163 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hane-kan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 119, shinjuku: 109, tokyo: 117, ikebukuro: 97, shinagawa: 131 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hara-touma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 103, tokyo: 118, ikebukuro: 113, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'haraichi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 94, tokyo: 102, ikebukuro: 82, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'haruhi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 66, shinjuku: 68, tokyo: 85, ikebukuro: 76, shinagawa: 74 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hase': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 134, tokyo: 138, ikebukuro: 147, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hasuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 98, tokyo: 105, ikebukuro: 85, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hasunuma': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 42, tokyo: 42, ikebukuro: 55, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hato-ke-tani': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 58, shinjuku: 48, tokyo: 51, ikebukuro: 34, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hato-no-su': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 164, shinjuku: 160, tokyo: 178, ikebukuro: 160, shinagawa: 176 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hatsuishi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 87, tokyo: 79, ikebukuro: 76, shinagawa: 98 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hatsutomi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 86, tokyo: 70, ikebukuro: 80, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hayakawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 206, shinjuku: 213, tokyo: 224, ikebukuro: 225, shinagawa: 207 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hazama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 111, tokyo: 129, ikebukuro: 117, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'heiwa-shima': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 38, tokyo: 35, ikebukuro: 51, shinagawa: 17 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-abiko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 111, tokyo: 98, ikebukuro: 102, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-aki-ryuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 108, shinjuku: 106, tokyo: 124, ikebukuro: 108, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-azuma': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 39, shinjuku: 36, tokyo: 20, ikebukuro: 34, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-funabashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 82, tokyo: 64, ikebukuro: 80, shinagawa: 76 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-iwatsuki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 91, tokyo: 95, ikebukuro: 78, shinagawa: 112 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-matsubara': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 13, shinjuku: 15, tokyo: 31, ikebukuro: 27, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-nami-ken': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 211, shinjuku: 216, tokyo: 200, ikebukuro: 221, shinagawa: 197 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-washimiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 144, shinjuku: 133, tokyo: 138, ikebukuro: 120, shinagawa: 155 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashi-zushi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 133, tokyo: 135, ikebukuro: 147, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashichiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 117, tokyo: 99, ikebukuro: 118, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashifushimi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 44, shinjuku: 39, tokyo: 57, ikebukuro: 40, shinagawa: 58 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashijuujou': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 36, shinjuku: 26, tokyo: 30, ikebukuro: 12, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashikitazawa': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 8, shinjuku: 11, tokyo: 26, ikebukuro: 24, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashikurume': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 51, tokyo: 69, ikebukuro: 49, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashimatsuyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 150, shinjuku: 141, tokyo: 154, ikebukuro: 132, shinagawa: 163 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashimon-mae': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 52, tokyo: 49, ikebukuro: 65, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashimuki-shima': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 39, shinjuku: 34, tokyo: 20, ikebukuro: 29, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashinagasaki': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 25, shinjuku: 14, tokyo: 28, ikebukuro: 7, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashinaka-kami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 87, shinjuku: 86, tokyo: 104, ikebukuro: 89, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashinakayama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 71, shinjuku: 69, tokyo: 51, ikebukuro: 66, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiogu-sanchoume': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 27, tokyo: 22, ikebukuro: 18, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashioume': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 121, tokyo: 139, ikebukuro: 120, shinagawa: 137 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashitokorozawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 68, shinjuku: 61, tokyo: 78, ikebukuro: 58, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiurawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 58, tokyo: 63, ikebukuro: 45, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiyama-kita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 190, shinjuku: 195, tokyo: 209, ikebukuro: 205, shinagawa: 194 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiyama-ta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 43, shinjuku: 52, tokyo: 61, ikebukuro: 65, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higashiyamatoshi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 74, tokyo: 92, ikebukuro: 75, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 245, shinjuku: 245, tokyo: 227, ikebukuro: 242, shinagawa: 236 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'higuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 222, shinjuku: 215, tokyo: 230, ikebukuro: 208, shinagawa: 236 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'himemiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 116, shinjuku: 105, tokyo: 108, ikebukuro: 92, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hinatawada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 135, shinjuku: 132, tokyo: 150, ikebukuro: 132, shinagawa: 148 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hinode': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 16, shinjuku: 21, tokyo: 11, ikebukuro: 30, shinagawa: 9 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hirai': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 41, shinjuku: 39, tokyo: 22, ikebukuro: 36, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hirama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 34, shinjuku: 44, tokyo: 48, ikebukuro: 57, shinagawa: 29 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hiranumabashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 80, tokyo: 84, ikebukuro: 93, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hiratsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 146, shinjuku: 154, tokyo: 164, ikebukuro: 166, shinagawa: 146 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hirayama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 162, shinjuku: 170, tokyo: 158, ikebukuro: 180, shinagawa: 148 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hirayama-joushi-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 87, shinjuku: 88, tokyo: 106, ikebukuro: 94, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hire-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 76, tokyo: 66, ikebukuro: 66, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hiroaki-tera': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 93, tokyo: 97, ikebukuro: 106, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hirose-yachou-no-mori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 188, shinjuku: 179, tokyo: 191, ikebukuro: 169, shinagawa: 202 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hitotsubashi-gakuen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 64, shinjuku: 61, tokyo: 79, ikebukuro: 63, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hiyoshihonchou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 50, tokyo: 57, ikebukuro: 63, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hodokubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 79, tokyo: 97, ikebukuro: 85, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hokudai-miya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 79, tokyo: 88, ikebukuro: 67, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hokuetsu-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 84, shinjuku: 74, tokyo: 74, ikebukuro: 60, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hon-atsugi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 124, tokyo: 136, ikebukuro: 135, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hon-choushi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 311, shinjuku: 311, tokyo: 293, ikebukuro: 308, shinagawa: 302 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hon-nou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 175, shinjuku: 179, tokyo: 161, ikebukuro: 182, shinagawa: 162 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hongoudai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 105, shinjuku: 115, tokyo: 120, ikebukuro: 128, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'honjoazumabashi': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 33, shinjuku: 29, tokyo: 14, ikebukuro: 26, shinagawa: 32 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'honjou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 238, shinjuku: 229, tokyo: 242, ikebukuro: 220, shinagawa: 251 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'honkawa-etsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 95, tokyo: 110, ikebukuro: 87, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'honkugenuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 134, tokyo: 141, ikebukuro: 147, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'horikiri': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 42, shinjuku: 36, tokyo: 25, ikebukuro: 29, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'horikiri-shoubuen': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 39, tokyo: 28, ikebukuro: 32, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hoshikawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 82, tokyo: 88, ikebukuro: 96, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hotaruda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 194, shinjuku: 201, tokyo: 213, ikebukuro: 212, shinagawa: 196 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'hyuuga': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 179, shinjuku: 181, tokyo: 162, ikebukuro: 180, shinagawa: 169 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'i-hosoda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 197, shinjuku: 204, tokyo: 215, ikebukuro: 215, shinagawa: 198 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichi-no-wari': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 93, tokyo: 94, ikebukuro: 80, shinagawa: 112 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichikawa-mama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 62, shinjuku: 59, tokyo: 43, ikebukuro: 54, shinagawa: 58 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichikawa-oono': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 75, shinjuku: 71, tokyo: 56, ikebukuro: 66, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichikawa-shiohama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 60, shinjuku: 61, tokyo: 43, ikebukuro: 61, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ichinoe': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 50, shinjuku: 49, tokyo: 31, ikebukuro: 49, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ido-ke-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 90, tokyo: 94, ikebukuro: 103, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iida-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 203, tokyo: 215, ikebukuro: 214, shinagawa: 199 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iikura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 223, shinjuku: 223, tokyo: 205, ikebukuro: 220, shinagawa: 213 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iioka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 267, shinjuku: 267, tokyo: 249, ikebukuro: 263, shinagawa: 258 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iiyama-man': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 88, tokyo: 70, ikebukuro: 84, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ikegami': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 39, tokyo: 40, ikebukuro: 53, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ikejirioohashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 5, shinjuku: 14, tokyo: 25, ikebukuro: 27, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ikenoue': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 8, shinjuku: 12, tokyo: 26, ikebukuro: 25, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ikuta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 46, shinjuku: 50, tokyo: 65, ikebukuro: 60, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ima-hane': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 90, tokyo: 98, ikebukuro: 78, shinagawa: 112 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ina-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 116, shinjuku: 106, tokyo: 114, ikebukuro: 94, shinagawa: 128 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inadazutsumi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 46, shinjuku: 49, tokyo: 65, ikebukuro: 57, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inage-kaigan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 103, tokyo: 85, ikebukuro: 104, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inagi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 57, tokyo: 74, ikebukuro: 65, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inagi-naganuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 56, tokyo: 73, ikebukuro: 63, shinagawa: 64 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inamura-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 137, tokyo: 142, ikebukuro: 151, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inariyama-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 97, tokyo: 114, ikebukuro: 93, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ino': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 122, tokyo: 105, ikebukuro: 119, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inuboe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 315, shinjuku: 314, tokyo: 296, ikebukuro: 312, shinagawa: 305 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'inzai-maki-no-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 135, shinjuku: 132, tokyo: 116, ikebukuro: 126, shinagawa: 130 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iogi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 26, tokyo: 44, ikebukuro: 26, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ipponmatsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 122, tokyo: 138, ikebukuro: 116, shinagawa: 144 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iriuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 210, shinjuku: 217, tokyo: 229, ikebukuro: 229, shinagawa: 212 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'irumashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 98, tokyo: 115, ikebukuro: 95, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'isehara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 137, shinjuku: 144, tokyo: 156, ikebukuro: 155, shinagawa: 139 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'isezaki-choujamachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 75, shinjuku: 85, tokyo: 88, ikebukuro: 99, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ishigami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 133, tokyo: 139, ikebukuro: 146, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ishigami-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 137, shinjuku: 134, tokyo: 152, ikebukuro: 133, shinagawa: 150 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ishihara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 186, shinjuku: 177, tokyo: 189, ikebukuro: 167, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ishikawachou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 75, shinjuku: 85, tokyo: 88, ikebukuro: 99, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ishikawadai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 31, tokyo: 36, ikebukuro: 45, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'isogo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 99, tokyo: 102, ikebukuro: 113, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'itabashihonchou': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 34, shinjuku: 24, tokyo: 32, ikebukuro: 11, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'itabashikuyakusho-mae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 21, tokyo: 28, ikebukuro: 7, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'itsumi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 137, tokyo: 137, ikebukuro: 151, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iwahara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 203, tokyo: 215, ikebukuro: 214, shinagawa: 199 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iwai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 193, shinjuku: 203, tokyo: 197, ikebukuro: 216, shinagawa: 181 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iwane': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 111, tokyo: 100, ikebukuro: 121, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'iwatsuki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 87, tokyo: 92, ikebukuro: 74, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'izumi-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 108, tokyo: 117, ikebukuro: 121, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'izumi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 103, tokyo: 112, ikebukuro: 116, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'izumi-taiikukan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 77, tokyo: 95, ikebukuro: 79, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'jinbohara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 248, shinjuku: 240, tokyo: 254, ikebukuro: 231, shinagawa: 262 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'jinmu-tera': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 131, tokyo: 134, ikebukuro: 145, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'joshidai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 124, tokyo: 107, ikebukuro: 120, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'jouchou-toro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 207, tokyo: 222, ikebukuro: 201, shinagawa: 228 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'jousei-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 81, tokyo: 87, ikebukuro: 94, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'juuni-hashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 244, shinjuku: 241, tokyo: 225, ikebukuro: 234, shinagawa: 239 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kadosawa-hashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 128, tokyo: 139, ikebukuro: 140, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 138, tokyo: 147, ikebukuro: 150, shinagawa: 129 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kagemori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 201, shinjuku: 195, tokyo: 212, ikebukuro: 192, shinagawa: 215 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kagetsuen-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 64, tokyo: 66, ikebukuro: 77, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kago-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 199, shinjuku: 190, tokyo: 202, ikebukuro: 181, shinagawa: 213 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kagurazaka': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 18, shinjuku: 10, tokyo: 12, ikebukuro: 11, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaihinmakuhari': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 94, tokyo: 75, ikebukuro: 94, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaisei': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 189, shinjuku: 195, tokyo: 208, ikebukuro: 206, shinagawa: 192 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaishi-ariki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 134, tokyo: 118, ikebukuro: 139, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaji-ga-tani': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 34, shinjuku: 41, tokyo: 53, ikebukuro: 53, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kajiwara': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 33, shinjuku: 24, tokyo: 24, ikebukuro: 12, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kakio': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 60, shinjuku: 64, tokyo: 79, ikebukuro: 74, shinagawa: 67 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kama-ke-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 84, tokyo: 68, ikebukuro: 78, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kama-ke-tani-daibutsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 88, tokyo: 72, ikebukuro: 83, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kama-shu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 136, tokyo: 118, ikebukuro: 138, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamakura-koukou-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 139, tokyo: 144, ikebukuro: 152, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kameido-suijin': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 38, shinjuku: 36, tokyo: 19, ikebukuro: 35, shinagawa: 35 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamifukuoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 80, tokyo: 94, ikebukuro: 72, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamihongou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 67, tokyo: 54, ikebukuro: 59, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamiigusa': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 35, shinjuku: 29, tokyo: 47, ikebukuro: 29, shinagawa: 49 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamiishi-kami-i': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 37, shinjuku: 32, tokyo: 50, ikebukuro: 32, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamiitabashi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 36, shinjuku: 25, tokyo: 37, ikebukuro: 15, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamiizumi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 3, shinjuku: 11, tokyo: 21, ikebukuro: 25, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamikita-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 79, tokyo: 98, ikebukuro: 80, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamikitazawa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 22, shinjuku: 22, tokyo: 39, ikebukuro: 31, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaminaka-sato': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 23, tokyo: 23, ikebukuro: 11, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaminoge': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 23, shinjuku: 31, tokyo: 42, ikebukuro: 44, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamiyachou': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 12, shinjuku: 15, tokyo: 9, ikebukuro: 24, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamo-miya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 85, tokyo: 94, ikebukuro: 73, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamoi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 70, tokyo: 79, ikebukuro: 83, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kamonomiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 191, shinjuku: 198, tokyo: 209, ikebukuro: 209, shinagawa: 192 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kanagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 76, tokyo: 80, ikebukuro: 89, shinagawa: 60 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kanagawashinmachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 71, tokyo: 75, ikebukuro: 85, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kanazawa-bunko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 118, tokyo: 120, ikebukuro: 131, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kane-ke-fuchi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 41, shinjuku: 36, tokyo: 23, ikebukuro: 30, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kaneko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 109, tokyo: 126, ikebukuro: 107, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kanno': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 63, shinjuku: 61, tokyo: 44, ikebukuro: 56, shinagawa: 59 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kannon': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 309, shinjuku: 309, tokyo: 291, ikebukuro: 306, shinagawa: 300 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'karakida': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 82, tokyo: 99, ikebukuro: 89, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kasa-hata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 108, tokyo: 123, ikebukuro: 102, shinagawa: 129 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kasa-ue-kuronama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 314, shinjuku: 313, tokyo: 296, ikebukuro: 310, shinagawa: 305 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kasai-rinkai-kouen': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 44, shinjuku: 46, tokyo: 28, ikebukuro: 50, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kashima-ta': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 36, shinjuku: 47, tokyo: 50, ikebukuro: 60, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kashiwa-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 107, tokyo: 119, ikebukuro: 119, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kashiwa-no-ha-kyanpasu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 96, tokyo: 87, ikebukuro: 85, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kashiwa-tanaka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 101, tokyo: 92, ikebukuro: 90, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kasumigaseki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 105, tokyo: 120, ikebukuro: 98, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katakura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 99, tokyo: 116, ikebukuro: 105, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katakurachou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 62, shinjuku: 71, tokyo: 77, ikebukuro: 85, shinagawa: 58 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katase-kou-no-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 140, tokyo: 146, ikebukuro: 153, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katase-yama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 136, tokyo: 142, ikebukuro: 149, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katsu-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 190, shinjuku: 186, tokyo: 170, ikebukuro: 179, shinagawa: 185 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'katsuura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 237, shinjuku: 244, tokyo: 230, ikebukuro: 252, shinagawa: 222 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawa-kan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 103, tokyo: 101, ikebukuro: 90, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawabe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 117, tokyo: 135, ikebukuro: 117, shinagawa: 134 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawagoeshi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 105, shinjuku: 96, tokyo: 110, ikebukuro: 88, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawaguchi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 48, shinjuku: 38, tokyo: 42, ikebukuro: 24, shinagawa: 58 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawaguchi-motogou': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 48, shinjuku: 38, tokyo: 41, ikebukuro: 24, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 154, shinjuku: 151, tokyo: 169, ikebukuro: 151, shinagawa: 167 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawasaki-shinmachi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 57, tokyo: 57, ikebukuro: 71, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawasakidaishi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 52, tokyo: 50, ikebukuro: 65, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawasumi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 127, tokyo: 142, ikebukuro: 121, shinagawa: 148 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kawawachou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 60, shinjuku: 68, tokyo: 78, ikebukuro: 80, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kayama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 191, shinjuku: 197, tokyo: 210, ikebukuro: 208, shinagawa: 194 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazamatsuri': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 208, shinjuku: 214, tokyo: 226, ikebukuro: 226, shinagawa: 209 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 158, shinjuku: 147, tokyo: 154, ikebukuro: 135, shinagawa: 169 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-higashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 219, shinjuku: 226, tokyo: 210, ikebukuro: 232, shinagawa: 205 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-ichinomiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 204, shinjuku: 209, tokyo: 192, ikebukuro: 214, shinagawa: 190 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-kameyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 177, shinjuku: 185, tokyo: 173, ikebukuro: 195, shinagawa: 163 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-kawa-kan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 152, shinjuku: 158, tokyo: 143, ikebukuro: 165, shinagawa: 138 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-kiyokawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 123, tokyo: 111, ikebukuro: 132, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-kubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 157, shinjuku: 164, tokyo: 148, ikebukuro: 171, shinagawa: 143 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-matsuoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 166, shinjuku: 175, tokyo: 163, ikebukuro: 184, shinagawa: 152 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-minato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 153, shinjuku: 163, tokyo: 156, ikebukuro: 175, shinagawa: 140 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-mitsumata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 132, shinjuku: 138, tokyo: 121, ikebukuro: 143, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-murakami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 126, tokyo: 109, ikebukuro: 131, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-nakagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 201, shinjuku: 208, tokyo: 193, ikebukuro: 215, shinagawa: 187 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-okitsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 229, shinjuku: 237, tokyo: 224, ikebukuro: 246, shinagawa: 215 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-ookubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 174, shinjuku: 182, tokyo: 168, ikebukuro: 190, shinagawa: 160 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-tsurumai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 156, shinjuku: 163, tokyo: 147, ikebukuro: 169, shinagawa: 142 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-ushiku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 147, shinjuku: 154, tokyo: 138, ikebukuro: 161, shinagawa: 133 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kazusa-yamada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 140, tokyo: 123, ikebukuro: 145, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-nagasawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 151, shinjuku: 162, tokyo: 161, ikebukuro: 175, shinagawa: 142 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-ootsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 132, shinjuku: 143, tokyo: 141, ikebukuro: 156, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-taura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 131, tokyo: 133, ikebukuro: 145, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keikyuu-tomioka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 109, tokyo: 111, ikebukuro: 123, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiou-katakura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 100, tokyo: 117, ikebukuro: 105, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiou-yomiuri-rando': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 51, shinjuku: 53, tokyo: 70, ikebukuro: 61, shinagawa: 60 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiouhachiouji': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 97, tokyo: 115, ikebukuro: 102, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keiouinadatsutsumi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 50, tokyo: 66, ikebukuro: 58, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keioutama-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 45, shinjuku: 47, tokyo: 64, ikebukuro: 55, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-hikifune': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 38, shinjuku: 34, tokyo: 19, ikebukuro: 30, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-inage': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 106, tokyo: 88, ikebukuro: 106, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-koiwa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 57, shinjuku: 53, tokyo: 38, ikebukuro: 47, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-nakayama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 67, tokyo: 49, ikebukuro: 63, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-nishifuna': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 70, tokyo: 53, ikebukuro: 67, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-ookubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 94, tokyo: 76, ikebukuro: 93, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-oowada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 112, shinjuku: 111, tokyo: 93, ikebukuro: 108, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-sake-kurikaesi-i': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 156, shinjuku: 155, tokyo: 138, ikebukuro: 151, shinagawa: 148 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-sakura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 145, shinjuku: 144, tokyo: 126, ikebukuro: 140, shinagawa: 137 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-tateishi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 48, shinjuku: 43, tokyo: 29, ikebukuro: 37, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'keisei-usui': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 132, shinjuku: 131, tokyo: 113, ikebukuro: 127, shinagawa: 124 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kemigawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 100, tokyo: 82, ikebukuro: 100, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kemigawahama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 99, tokyo: 80, ikebukuro: 99, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kenchoumae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 118, tokyo: 100, ikebukuro: 119, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kenritsudai-gaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 140, tokyo: 139, ikebukuro: 154, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kibou-ke-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 92, tokyo: 101, ikebukuro: 104, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kimitsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 120, shinjuku: 130, tokyo: 121, ikebukuro: 141, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kinoshita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 135, shinjuku: 131, tokyo: 116, ikebukuro: 124, shinagawa: 131 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kinugasa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 145, tokyo: 144, ikebukuro: 158, shinagawa: 126 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kishine-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 59, shinjuku: 68, tokyo: 74, ikebukuro: 82, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-akabane': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 43, shinjuku: 32, tokyo: 39, ikebukuro: 19, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-hatsutomi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 84, tokyo: 68, ikebukuro: 77, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-kashiwa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 100, tokyo: 88, ikebukuro: 89, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-kasukabe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 112, shinjuku: 101, tokyo: 103, ikebukuro: 88, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-kogane': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 79, tokyo: 67, ikebukuro: 69, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-kounosu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 155, shinjuku: 145, tokyo: 156, ikebukuro: 135, shinagawa: 168 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-me-ke-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 141, tokyo: 150, ikebukuro: 154, shinagawa: 132 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kita-yono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 70, tokyo: 79, ikebukuro: 58, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitado-ta': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 47, tokyo: 56, ikebukuro: 35, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitaguni-fun': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 63, tokyo: 48, ikebukuro: 56, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitahachi-ouji': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 92, tokyo: 109, ikebukuro: 96, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitaike-fukuro': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 18, tokyo: 24, ikebukuro: 4, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitakamakura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 125, tokyo: 130, ikebukuro: 138, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitakami-o': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 104, tokyo: 114, ikebukuro: 93, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitakurihama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 136, shinjuku: 147, tokyo: 146, ikebukuro: 160, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitamatsudo': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 68, tokyo: 56, ikebukuro: 59, shinagawa: 74 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitamoto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 123, tokyo: 133, ikebukuro: 112, shinagawa: 146 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitasaka-ko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 125, tokyo: 139, ikebukuro: 117, shinagawa: 147 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitasenzoku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 17, shinjuku: 28, tokyo: 32, ikebukuro: 41, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitashin-yokohama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 52, shinjuku: 62, tokyo: 68, ikebukuro: 75, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitaurawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 63, tokyo: 72, ikebukuro: 51, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kitayamata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 44, shinjuku: 52, tokyo: 62, ikebukuro: 65, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ko-fuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 84, shinjuku: 88, tokyo: 103, ikebukuro: 98, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kobayashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 145, shinjuku: 141, tokyo: 126, ikebukuro: 135, shinagawa: 140 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kodama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 235, shinjuku: 227, tokyo: 241, ikebukuro: 219, shinagawa: 249 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kodenmachou': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 24, shinjuku: 21, tokyo: 4, ikebukuro: 22, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kodomono-kuni': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 73, tokyo: 86, ikebukuro: 83, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kogane-joushi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 76, tokyo: 66, ikebukuro: 66, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koganechou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 86, tokyo: 90, ikebukuro: 100, shinagawa: 70 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kohoku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 118, tokyo: 105, ikebukuro: 109, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koigakubo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 64, tokyo: 83, ikebukuro: 67, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kojima-nitta': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 43, shinjuku: 53, tokyo: 49, ikebukuro: 66, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokonoe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 228, shinjuku: 238, tokyo: 231, ikebukuro: 250, shinagawa: 216 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokorozashi-kyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 103, tokyo: 111, ikebukuro: 90, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokudou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 63, tokyo: 65, ikebukuro: 77, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokuga': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 205, shinjuku: 210, tokyo: 224, ikebukuro: 219, shinagawa: 209 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokuryou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 39, shinjuku: 41, tokyo: 58, ikebukuro: 49, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokusai-tenjijou': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 26, shinjuku: 31, tokyo: 17, ikebukuro: 39, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kokusai-tenjijou-seimon': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 26, shinjuku: 32, tokyo: 18, ikebukuro: 40, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komabatoudaimae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 5, shinjuku: 11, tokyo: 24, ikebukuro: 25, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komazawa-daigaku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 14, shinjuku: 22, tokyo: 33, ikebukuro: 35, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 90, tokyo: 108, ikebukuro: 94, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komura-i': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 38, shinjuku: 35, tokyo: 19, ikebukuro: 32, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'komuro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 91, ikebukuro: 101, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koremasa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 58, shinjuku: 58, tokyo: 76, ikebukuro: 65, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koshigaya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 70, tokyo: 69, ikebukuro: 57, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koshigaya-reikutaun': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 70, tokyo: 67, ikebukuro: 57, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koshigoe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 130, shinjuku: 139, tokyo: 145, ikebukuro: 152, shinagawa: 126 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kosuge': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 38, tokyo: 29, ikebukuro: 29, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kotesashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 86, shinjuku: 80, tokyo: 98, ikebukuro: 78, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kou-kawara': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 30, shinjuku: 40, tokyo: 45, ikebukuro: 54, shinagawa: 27 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kou-tsu-no-mori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 164, shinjuku: 163, tokyo: 145, ikebukuro: 158, shinagawa: 157 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 124, tokyo: 106, ikebukuro: 120, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouen-shita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 224, shinjuku: 231, tokyo: 243, ikebukuro: 241, shinagawa: 227 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouen-ue': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 225, shinjuku: 231, tokyo: 244, ikebukuro: 242, shinagawa: 227 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koufuu-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 140, tokyo: 124, ikebukuro: 146, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouhoku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 43, shinjuku: 34, tokyo: 31, ikebukuro: 22, shinagawa: 49 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koujiya': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 46, tokyo: 43, ikebukuro: 59, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koukuu-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 73, tokyo: 90, ikebukuro: 70, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kounan-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 101, tokyo: 105, ikebukuro: 114, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kounandai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 110, tokyo: 114, ikebukuro: 124, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kounodai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 61, shinjuku: 57, tokyo: 41, ikebukuro: 52, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kounosu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 144, shinjuku: 134, tokyo: 144, ikebukuro: 123, shinagawa: 156 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koushin-tsuka': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 18, tokyo: 22, ikebukuro: 6, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koushuukaidou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 79, tokyo: 97, ikebukuro: 83, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kouza-shibuya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 107, tokyo: 117, ikebukuro: 119, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kowakudani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 225, shinjuku: 231, tokyo: 243, ikebukuro: 242, shinagawa: 227 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'koyasu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 60, shinjuku: 70, tokyo: 73, ikebukuro: 84, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kozukue': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 66, tokyo: 73, ikebukuro: 80, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuga-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 201, shinjuku: 209, tokyo: 194, ikebukuro: 216, shinagawa: 187 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kugayama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 2, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 30, shinjuku: 27, tokyo: 46, ikebukuro: 33, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 175000, '2ldk': 209000, source: 'suumo', updated: '2026-04' },
+  },
+  'kugenuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 136, tokyo: 143, ikebukuro: 150, shinagawa: 124 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kugenuma-kaigan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 138, tokyo: 145, ikebukuro: 151, shinagawa: 126 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuhonbutsu': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 30, tokyo: 38, ikebukuro: 44, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuji': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 34, shinjuku: 39, tokyo: 53, ikebukuro: 51, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kujuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 182, shinjuku: 179, tokyo: 163, ikebukuro: 173, shinagawa: 176 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kumakawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 100, tokyo: 118, ikebukuro: 102, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kun-ke-hama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 315, shinjuku: 314, tokyo: 296, ikebukuro: 311, shinagawa: 305 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kuniyoshi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 209, shinjuku: 215, tokyo: 200, ikebukuro: 222, shinagawa: 195 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kunugi-yama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 81, tokyo: 66, ikebukuro: 74, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurahashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 276, shinjuku: 275, tokyo: 257, ikebukuro: 272, shinagawa: 267 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 132, tokyo: 142, ikebukuro: 143, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurihira': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 62, shinjuku: 66, tokyo: 81, ikebukuro: 75, shinagawa: 70 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kurokawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 64, shinjuku: 67, tokyo: 83, ikebukuro: 76, shinagawa: 73 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kururi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 158, shinjuku: 166, tokyo: 153, ikebukuro: 175, shinagawa: 144 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kyouteijou-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 56, tokyo: 73, ikebukuro: 62, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kyuu-ga-hara': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 27, shinjuku: 37, tokyo: 40, ikebukuro: 51, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'kyuumei': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 190, shinjuku: 192, tokyo: 174, ikebukuro: 192, shinagawa: 179 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'machiya-nichoume': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 27, tokyo: 21, ikebukuro: 18, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'maehara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 89, tokyo: 71, ikebukuro: 86, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'maihama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 50, shinjuku: 53, tokyo: 35, ikebukuro: 56, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'maioka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 104, tokyo: 110, ikebukuro: 117, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'makita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 90, tokyo: 94, ikebukuro: 104, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'makuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 137, shinjuku: 145, tokyo: 131, ikebukuro: 153, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'man-gan-tera': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 76, tokyo: 94, ikebukuro: 81, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'manatsuru': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 228, shinjuku: 236, tokyo: 246, ikebukuro: 247, shinagawa: 228 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'maruyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 99, tokyo: 107, ikebukuro: 87, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mashio': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 88, tokyo: 75, ikebukuro: 79, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matoba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 104, tokyo: 119, ikebukuro: 97, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsu-ga-tani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 78, tokyo: 95, ikebukuro: 85, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsu-tobidai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 75, tokyo: 60, ikebukuro: 69, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsubara': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 19, tokyo: 35, ikebukuro: 30, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 185, shinjuku: 191, tokyo: 204, ikebukuro: 201, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsudo-nitta': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 69, tokyo: 56, ikebukuro: 61, shinagawa: 74 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsuhisa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 222, shinjuku: 214, tokyo: 228, ikebukuro: 206, shinagawa: 236 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'matsuo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 205, shinjuku: 206, tokyo: 188, ikebukuro: 205, shinagawa: 195 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mei-ko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 194, shinjuku: 185, tokyo: 199, ikebukuro: 176, shinagawa: 208 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mejiro-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 107, tokyo: 125, ikebukuro: 113, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mejiro-yamashita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 138, tokyo: 144, ikebukuro: 151, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'meshi-kyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 164, shinjuku: 172, tokyo: 158, ikebukuro: 180, shinagawa: 150 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mibu-kuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 220, shinjuku: 215, tokyo: 233, ikebukuro: 212, shinagawa: 234 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'midori-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 108, shinjuku: 110, tokyo: 91, ikebukuro: 110, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'midorigaoka': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 28, tokyo: 34, ikebukuro: 42, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'midorimachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 199, shinjuku: 206, tokyo: 217, ikebukuro: 217, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mikado': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 225, shinjuku: 232, tokyo: 216, ikebukuro: 238, shinagawa: 212 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mikawa-shima': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 32, shinjuku: 25, tokyo: 18, ikebukuro: 18, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mimomi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 100, shinjuku: 100, tokyo: 82, ikebukuro: 98, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-asa-ke-tani': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 23, shinjuku: 18, tokyo: 36, ikebukuro: 23, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-banki-ga-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 92, tokyo: 100, ikebukuro: 105, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-furuya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 96, shinjuku: 87, tokyo: 100, ikebukuro: 78, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-hanyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 169, shinjuku: 158, tokyo: 166, ikebukuro: 146, shinagawa: 181 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-hato-ke-tani': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 43, tokyo: 46, ikebukuro: 30, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-kashiwa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 86, tokyo: 74, ikebukuro: 76, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-kurihashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 152, shinjuku: 141, tokyo: 145, ikebukuro: 128, shinagawa: 162 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-oota': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 88, tokyo: 92, ikebukuro: 101, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-sake-kurikaesi-i': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 154, shinjuku: 154, tokyo: 136, ikebukuro: 151, shinagawa: 146 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-sakurai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 101, tokyo: 100, ikebukuro: 88, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-shinjuku': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 9, shinjuku: 3, tokyo: 19, ikebukuro: 16, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-taira': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 84, shinjuku: 84, tokyo: 102, ikebukuro: 90, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minami-yono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 62, tokyo: 72, ikebukuro: 51, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamifunabashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 80, tokyo: 62, ikebukuro: 79, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamimachida': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 86, tokyo: 98, ikebukuro: 98, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamiootsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 94, tokyo: 110, ikebukuro: 88, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamirinkan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 94, tokyo: 106, ikebukuro: 106, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamitama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 59, tokyo: 76, ikebukuro: 66, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minamiyuki-toku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 55, shinjuku: 55, tokyo: 37, ikebukuro: 55, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minano': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 207, tokyo: 223, ikebukuro: 201, shinagawa: 228 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minatomachi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 52, tokyo: 51, ikebukuro: 65, shinagawa: 32 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minatomirai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 79, tokyo: 83, ikebukuro: 93, shinagawa: 64 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minori-dai': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 70, tokyo: 57, ikebukuro: 62, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'minuma-dai-shinsui-kouen': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 55, shinjuku: 46, tokyo: 44, ikebukuro: 33, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'misaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 91, tokyo: 74, ikebukuro: 86, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'misakiguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 161, shinjuku: 172, tokyo: 172, ikebukuro: 185, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'misato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 72, tokyo: 63, ikebukuro: 61, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'misato-chuuou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 66, tokyo: 57, ikebukuro: 55, shinagawa: 76 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mitsuwa-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 118, shinjuku: 119, tokyo: 101, ikebukuro: 119, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miurakaigan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 157, shinjuku: 168, tokyo: 167, ikebukuro: 181, shinagawa: 149 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miya-no-mae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 27, tokyo: 23, ikebukuro: 16, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miya-no-saka': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 21, tokyo: 35, ikebukuro: 33, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miya-no-shita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 222, shinjuku: 229, tokyo: 241, ikebukuro: 240, shinagawa: 224 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miya-no-taira': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 130, tokyo: 148, ikebukuro: 130, shinagawa: 146 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miyahara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 87, tokyo: 96, ikebukuro: 75, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miyamaedaira': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 47, tokyo: 60, ikebukuro: 60, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miyayama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 135, tokyo: 145, ikebukuro: 147, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'miyazakidai': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 38, shinjuku: 45, tokyo: 57, ikebukuro: 57, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mizue': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 54, shinjuku: 53, tokyo: 36, ikebukuro: 52, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mizuho-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 64, tokyo: 79, ikebukuro: 57, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mobara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 181, shinjuku: 186, tokyo: 169, ikebukuro: 190, shinagawa: 168 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mochida': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 175, shinjuku: 165, tokyo: 176, ikebukuro: 154, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mogusa-sono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 74, tokyo: 91, ikebukuro: 79, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'monoi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 135, shinjuku: 135, tokyo: 117, ikebukuro: 133, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'moro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 142, shinjuku: 135, tokyo: 151, ikebukuro: 129, shinagawa: 156 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'motohasunuma': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 37, shinjuku: 26, tokyo: 34, ikebukuro: 13, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'motomachi-chuukagai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 84, tokyo: 86, ikebukuro: 97, shinagawa: 67 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'motoyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 86, shinjuku: 82, tokyo: 67, ikebukuro: 75, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mukaihara': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 24, shinjuku: 15, tokyo: 20, ikebukuro: 4, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mukougaokayuuen': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 40, shinjuku: 44, tokyo: 59, ikebukuro: 55, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'murakami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 114, tokyo: 96, ikebukuro: 110, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-arashiyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 164, shinjuku: 155, tokyo: 169, ikebukuro: 147, shinagawa: 178 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-fujisawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 89, tokyo: 107, ikebukuro: 86, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-hikita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 119, shinjuku: 117, tokyo: 136, ikebukuro: 119, shinagawa: 131 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-masuto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 121, tokyo: 139, ikebukuro: 123, shinagawa: 135 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-nitta': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 30, shinjuku: 41, tokyo: 43, ikebukuro: 54, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-shiroishi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 52, shinjuku: 63, tokyo: 62, ikebukuro: 76, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-sunagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 87, shinjuku: 84, tokyo: 103, ikebukuro: 86, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashi-takahagi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 121, shinjuku: 114, tokyo: 130, ikebukuro: 108, shinagawa: 135 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashidai-wa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 73, tokyo: 91, ikebukuro: 73, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashiitsukaichi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 129, tokyo: 147, ikebukuro: 131, shinagawa: 143 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashinakahara': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 30, shinjuku: 40, tokyo: 48, ikebukuro: 53, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashino-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 52, shinjuku: 52, tokyo: 70, ikebukuro: 58, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashiseki': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 36, tokyo: 54, ikebukuro: 36, shinagawa: 55 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'musashishinjou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 31, shinjuku: 39, tokyo: 49, ikebukuro: 52, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mutsuai-nichidai-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 120, tokyo: 128, ikebukuro: 132, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'mutsuura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 114, shinjuku: 125, tokyo: 127, ikebukuro: 138, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'myouden': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 61, shinjuku: 61, tokyo: 43, ikebukuro: 59, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'myougaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 160, shinjuku: 153, tokyo: 168, ikebukuro: 146, shinagawa: 175 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'myourenji': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 56, shinjuku: 66, tokyo: 71, ikebukuro: 80, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagahara': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 19, shinjuku: 29, tokyo: 32, ikebukuro: 43, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naganuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 92, tokyo: 110, ikebukuro: 98, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagareyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 78, tokyo: 69, ikebukuro: 67, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagareyama-sentorarupaaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 87, shinjuku: 80, tokyo: 70, ikebukuro: 69, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 173, shinjuku: 177, tokyo: 159, ikebukuro: 179, shinagawa: 161 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nagatoro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 209, tokyo: 225, ikebukuro: 203, shinagawa: 230 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nai-yado': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 112, tokyo: 120, ikebukuro: 100, shinagawa: 134 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naka-goura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 226, shinjuku: 232, tokyo: 245, ikebukuro: 243, shinagawa: 228 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naka-no-machi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 308, shinjuku: 307, tokyo: 289, ikebukuro: 304, shinagawa: 299 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 106, tokyo: 114, ikebukuro: 119, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakagami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 90, shinjuku: 88, tokyo: 106, ikebukuro: 91, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 48, shinjuku: 55, tokyo: 66, ikebukuro: 67, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakagawara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 66, shinjuku: 67, tokyo: 84, ikebukuro: 72, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakaitabashi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 33, shinjuku: 22, tokyo: 32, ikebukuro: 10, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakamachidai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 51, shinjuku: 60, tokyo: 68, ikebukuro: 73, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakamura-hashi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 23, tokyo: 40, ikebukuro: 20, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakano-fujimichou': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 14, shinjuku: 9, tokyo: 27, ikebukuro: 18, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakano-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 42, shinjuku: 45, tokyo: 61, ikebukuro: 55, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakano-shinbashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 14, shinjuku: 7, tokyo: 25, ikebukuro: 16, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nakaura-wa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 68, shinjuku: 57, tokyo: 67, ikebukuro: 46, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nako-funagata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 224, tokyo: 219, ikebukuro: 237, shinagawa: 202 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'namamugi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 65, tokyo: 68, ikebukuro: 79, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'namekawa-airando': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 230, shinjuku: 238, tokyo: 226, ikebukuro: 247, shinagawa: 216 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nami-kure': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 215, shinjuku: 207, tokyo: 222, ikebukuro: 200, shinagawa: 229 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'namiki-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 109, tokyo: 111, ikebukuro: 123, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'namiki-kita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 107, tokyo: 109, ikebukuro: 121, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nanahikari-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 112, shinjuku: 102, tokyo: 99, ikebukuro: 89, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nanbu-shijou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 105, tokyo: 107, ikebukuro: 118, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naniwa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 235, shinjuku: 241, tokyo: 226, ikebukuro: 248, shinagawa: 221 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nankyou-hon': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 101, tokyo: 117, ikebukuro: 109, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nansan-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 226, shinjuku: 236, tokyo: 228, ikebukuro: 247, shinagawa: 213 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'narashino': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 93, tokyo: 76, ikebukuro: 90, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'narita-yukawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 167, shinjuku: 164, tokyo: 147, ikebukuro: 159, shinagawa: 160 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'naruse': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 80, tokyo: 93, ikebukuro: 91, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nebukawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 223, tokyo: 234, ikebukuro: 235, shinagawa: 216 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'negishi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 93, tokyo: 95, ikebukuro: 107, shinagawa: 76 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nerima-kouyadai': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 36, shinjuku: 28, tokyo: 45, ikebukuro: 26, shinagawa: 50 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nichi-no-demachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 84, tokyo: 87, ikebukuro: 97, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nihondai-touri': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 83, tokyo: 85, ikebukuro: 96, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'niitaka-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 79, tokyo: 82, ikebukuro: 92, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'niitaka-shima-taira': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 46, shinjuku: 36, tokyo: 47, ikebukuro: 25, shinagawa: 59 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'niiza': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 63, shinjuku: 55, tokyo: 70, ikebukuro: 49, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nijuubashimae': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 18, shinjuku: 17, tokyo: 3, ikebukuro: 21, shinagawa: 19 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ninomiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 170, shinjuku: 178, tokyo: 188, ikebukuro: 189, shinagawa: 171 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-chiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 111, tokyo: 93, ikebukuro: 112, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-choufu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 48, tokyo: 65, ikebukuro: 55, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-hanyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 179, shinjuku: 169, tokyo: 178, ikebukuro: 157, shinagawa: 192 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-kamakura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 135, tokyo: 140, ikebukuro: 148, shinagawa: 121 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-ke-hara': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 22, tokyo: 23, ikebukuro: 10, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-ke-hara-shitei-me': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 30, shinjuku: 20, tokyo: 23, ikebukuro: 8, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-noborito': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 110, shinjuku: 112, tokyo: 93, ikebukuro: 113, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-oohara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 227, shinjuku: 233, tokyo: 217, ikebukuro: 239, shinagawa: 213 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-oomiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 84, tokyo: 95, ikebukuro: 73, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-ooshima': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 35, shinjuku: 34, tokyo: 16, ikebukuro: 34, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-ooya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 123, tokyo: 139, ikebukuro: 117, shinagawa: 145 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-oyama': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 14, shinjuku: 25, tokyo: 29, ikebukuro: 38, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-sugamo': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 20, tokyo: 23, ikebukuro: 7, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-tachikawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 83, tokyo: 101, ikebukuro: 86, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-taishidou': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 11, shinjuku: 18, tokyo: 30, ikebukuro: 31, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishi-ware-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 162, shinjuku: 156, tokyo: 173, ikebukuro: 153, shinagawa: 176 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishiarai-taishi-nishi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 36, tokyo: 33, ikebukuro: 24, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishidai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 44, shinjuku: 33, tokyo: 43, ikebukuro: 22, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishihata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 195, shinjuku: 203, tokyo: 188, ikebukuro: 210, shinagawa: 181 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishikawa-etsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 100, tokyo: 115, ikebukuro: 93, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishikawa-kuchi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 42, tokyo: 48, ikebukuro: 29, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishikoku-ritsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 76, shinjuku: 75, tokyo: 93, ikebukuro: 79, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishikou-shima-taira': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 37, tokyo: 49, ikebukuro: 27, shinagawa: 60 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishinaga-fuku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 19, shinjuku: 18, tokyo: 36, ikebukuro: 27, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishishirai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 95, tokyo: 79, ikebukuro: 89, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishitani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 79, tokyo: 87, ikebukuro: 93, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishiura-wa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 55, tokyo: 66, ikebukuro: 44, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nishiyokohama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 83, tokyo: 87, ikebukuro: 96, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nisshin': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 85, tokyo: 94, ikebukuro: 73, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nitta': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 61, tokyo: 58, ikebukuro: 47, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nittano': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 213, shinjuku: 219, tokyo: 204, ikebukuro: 226, shinagawa: 199 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nodashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 96, tokyo: 92, ikebukuro: 83, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nogami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 220, shinjuku: 213, tokyo: 228, ikebukuro: 206, shinagawa: 234 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nogata': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 24, shinjuku: 16, tokyo: 34, ikebukuro: 16, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nojima-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 121, tokyo: 123, ikebukuro: 135, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'noukendai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 111, tokyo: 113, ikebukuro: 125, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'numabe': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 26, shinjuku: 37, tokyo: 42, ikebukuro: 50, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'numabukuro': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 23, shinjuku: 14, tokyo: 31, ikebukuro: 13, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'nyuu-so': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 88, tokyo: 105, ikebukuro: 84, shinagawa: 108 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'o-hanacha-ya': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 48, shinjuku: 42, tokyo: 30, ikebukuro: 35, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'o-hanahata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 201, shinjuku: 195, tokyo: 212, ikebukuro: 191, shinagawa: 215 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'obitsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 147, shinjuku: 155, tokyo: 142, ikebukuro: 164, shinagawa: 133 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'obusuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 188, tokyo: 202, ikebukuro: 180, shinagawa: 210 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ochiai': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 8, tokyo: 24, ikebukuro: 9, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oda-sakae': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 48, shinjuku: 58, tokyo: 58, ikebukuro: 72, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'odai': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 35, shinjuku: 26, tokyo: 23, ikebukuro: 15, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'odakyuu-sagamihara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 89, shinjuku: 95, tokyo: 109, ikebukuro: 106, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'odoriba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 107, tokyo: 114, ikebukuro: 120, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ogura-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 129, tokyo: 111, ikebukuro: 129, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'okabe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 222, shinjuku: 213, tokyo: 226, ikebukuro: 204, shinagawa: 235 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'okegawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 119, shinjuku: 109, tokyo: 119, ikebukuro: 98, shinagawa: 132 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'okusawa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 20, shinjuku: 30, tokyo: 36, ikebukuro: 43, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'okutama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 171, shinjuku: 168, tokyo: 186, ikebukuro: 168, shinagawa: 184 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'omaeda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 204, shinjuku: 195, tokyo: 210, ikebukuro: 188, shinagawa: 218 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'omigawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 253, shinjuku: 250, tokyo: 234, ikebukuro: 245, shinagawa: 246 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'omokage-hashi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 19, shinjuku: 9, tokyo: 18, ikebukuro: 6, shinagawa: 29 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'onarimon': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 14, shinjuku: 17, tokyo: 8, ikebukuro: 25, shinagawa: 11 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'onda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 68, shinjuku: 74, tokyo: 87, ikebukuro: 85, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'onigori': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 48, ikebukuro: 62, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'onjuku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 236, shinjuku: 244, tokyo: 229, ikebukuro: 251, shinagawa: 222 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ontake': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 148, shinjuku: 145, tokyo: 163, ikebukuro: 145, shinagawa: 161 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ontake-yama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 25, shinjuku: 35, tokyo: 39, ikebukuro: 49, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooasou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 191, shinjuku: 182, tokyo: 194, ikebukuro: 172, shinagawa: 204 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oobukuro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 81, tokyo: 81, ikebukuro: 67, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 67, tokyo: 71, ikebukuro: 81, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oohiradai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 221, shinjuku: 227, tokyo: 239, ikebukuro: 238, shinagawa: 223 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooikeiba-ba-mae': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 24, shinjuku: 34, tokyo: 29, ikebukuro: 46, shinagawa: 11 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooiso': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 157, shinjuku: 164, tokyo: 174, ikebukuro: 176, shinagawa: 157 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ookawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 65, tokyo: 64, ikebukuro: 78, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ookubo': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 14, shinjuku: 4, tokyo: 20, ikebukuro: 10, shinagawa: 27 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ookurayama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 49, shinjuku: 59, tokyo: 65, ikebukuro: 72, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oomachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 79, tokyo: 64, ikebukuro: 73, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oomiya-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 91, shinjuku: 80, tokyo: 89, ikebukuro: 68, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oomori-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 124, shinjuku: 127, tokyo: 109, ikebukuro: 128, shinagawa: 112 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oomori-kaigan': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 25, shinjuku: 35, tokyo: 32, ikebukuro: 48, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oomori-machi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 30, shinjuku: 40, tokyo: 38, ikebukuro: 53, shinagawa: 19 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oonohara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 204, shinjuku: 197, tokyo: 214, ikebukuro: 193, shinagawa: 218 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oonuki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 139, tokyo: 132, ikebukuro: 151, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oosaki-hirokouji': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 13, shinjuku: 23, tokyo: 23, ikebukuro: 36, shinagawa: 5 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooshima': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 38, shinjuku: 37, tokyo: 19, ikebukuro: 36, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ootaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 193, shinjuku: 200, tokyo: 185, ikebukuro: 207, shinagawa: 178 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 219, shinjuku: 216, tokyo: 199, ikebukuro: 209, shinagawa: 213 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ootorii': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 37, shinjuku: 47, tokyo: 44, ikebukuro: 60, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ootsuka-teikyoudaigaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 79, tokyo: 96, ikebukuro: 86, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oowada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 81, tokyo: 89, ikebukuro: 69, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ooyama': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 30, shinjuku: 20, tokyo: 28, ikebukuro: 7, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oppama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 116, shinjuku: 127, tokyo: 128, ikebukuro: 140, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'orihara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 200, shinjuku: 192, tokyo: 208, ikebukuro: 185, shinagawa: 214 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ougi-oohashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 40, shinjuku: 31, tokyo: 28, ikebukuro: 20, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ougimachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 63, tokyo: 61, ikebukuro: 76, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oumekaidou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 66, shinjuku: 62, tokyo: 80, ikebukuro: 63, shinagawa: 79 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oya-hana': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 213, shinjuku: 206, tokyo: 222, ikebukuro: 200, shinagawa: 227 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oyama-dai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 30, tokyo: 39, ikebukuro: 44, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oyamatsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 198, shinjuku: 205, tokyo: 190, ikebukuro: 212, shinagawa: 184 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'oyumi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 135, tokyo: 117, ikebukuro: 137, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ozaku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 112, tokyo: 130, ikebukuro: 112, shinagawa: 128 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'renkon': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 43, shinjuku: 32, tokyo: 42, ikebukuro: 20, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'roka-kouen': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 26, shinjuku: 26, tokyo: 43, ikebukuro: 34, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'roku-machi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 53, shinjuku: 46, tokyo: 38, ikebukuro: 35, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'roku-mi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 88, tokyo: 73, ikebukuro: 81, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'rokugou-dote': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 39, shinjuku: 50, tokyo: 50, ikebukuro: 63, shinagawa: 30 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ryokuen-toshi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 97, tokyo: 105, ikebukuro: 109, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ryuutsuu-sentaa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 38, tokyo: 34, ikebukuro: 50, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sachiura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 112, tokyo: 113, ikebukuro: 125, shinagawa: 94 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagami-kaneko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 185, shinjuku: 191, tokyo: 204, ikebukuro: 201, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagami-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 104, tokyo: 115, ikebukuro: 115, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagami-numata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 197, shinjuku: 203, tokyo: 215, ikebukuro: 214, shinagawa: 199 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagamihara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 96, tokyo: 112, ikebukuro: 105, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagamiko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 140, shinjuku: 141, tokyo: 158, ikebukuro: 146, shinagawa: 149 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagamiootsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 101, tokyo: 113, ikebukuro: 113, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sagi-no-miya': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 27, shinjuku: 20, tokyo: 37, ikebukuro: 20, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'saginuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 43, shinjuku: 50, tokyo: 63, ikebukuro: 62, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'saikai-kashima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 315, shinjuku: 314, tokyo: 296, ikebukuro: 311, shinagawa: 306 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakaemachi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 33, shinjuku: 23, tokyo: 24, ikebukuro: 11, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakasai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 89, tokyo: 75, ikebukuro: 80, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sake-kurikaesi-i': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 157, shinjuku: 156, tokyo: 139, ikebukuro: 153, shinagawa: 149 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'saku-kusa-bu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 113, shinjuku: 114, tokyo: 96, ikebukuro: 115, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakura-kaidou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 82, shinjuku: 79, tokyo: 97, ikebukuro: 80, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakuradai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 19, tokyo: 34, ikebukuro: 13, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakuragaoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 102, tokyo: 112, ikebukuro: 114, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakuragi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 126, tokyo: 108, ikebukuro: 126, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakurashinmachi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 25, tokyo: 37, ikebukuro: 37, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sakurazawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 206, shinjuku: 198, tokyo: 213, ikebukuro: 190, shinagawa: 220 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'samezu': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 30, tokyo: 26, ikebukuro: 42, shinagawa: 8 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'samukawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 137, tokyo: 147, ikebukuro: 149, shinagawa: 129 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'san-no-wa-hashi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 35, shinjuku: 28, tokyo: 18, ikebukuro: 22, shinagawa: 37 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'san-tsu-sakai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 91, tokyo: 101, ikebukuro: 104, shinagawa: 84 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'san-tsu-sawa-shitamachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 75, tokyo: 80, ikebukuro: 88, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'san-tsu-sawakami-machi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 66, shinjuku: 76, tokyo: 81, ikebukuro: 89, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sanguu-hashi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 7, shinjuku: 4, tokyo: 20, ikebukuro: 18, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sangyou-shinkou-sentaa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 113, tokyo: 114, ikebukuro: 127, shinagawa: 95 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sangyoudouro': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 42, shinjuku: 52, tokyo: 49, ikebukuro: 65, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sanpoku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 201, tokyo: 215, ikebukuro: 211, shinagawa: 200 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sanuki-machi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 141, shinjuku: 151, tokyo: 144, ikebukuro: 163, shinagawa: 128 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'saruta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 282, shinjuku: 281, tokyo: 264, ikebukuro: 278, shinagawa: 273 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sasagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 265, shinjuku: 263, tokyo: 246, ikebukuro: 258, shinagawa: 258 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'satomi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 161, shinjuku: 169, tokyo: 154, ikebukuro: 176, shinagawa: 147 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'satte': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 139, shinjuku: 128, tokyo: 132, ikebukuro: 115, shinagawa: 149 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sawai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 146, shinjuku: 143, tokyo: 161, ikebukuro: 142, shinagawa: 159 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sayama-ke-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 87, tokyo: 104, ikebukuro: 84, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sayamashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 96, tokyo: 112, ikebukuro: 91, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibi-ba': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 37, shinjuku: 47, tokyo: 42, ikebukuro: 59, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibu-chichibu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 201, shinjuku: 195, tokyo: 212, ikebukuro: 191, shinagawa: 214 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibu-tachikawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 90, tokyo: 109, ikebukuro: 92, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibu-yanagisawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 42, tokyo: 60, ikebukuro: 43, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibuen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 73, tokyo: 91, ikebukuro: 72, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seibushinjuku': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 13, shinjuku: 3, tokyo: 19, ikebukuro: 11, shinagawa: 25 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seifu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 66, shinjuku: 66, tokyo: 84, ikebukuro: 71, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seikai': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 24, shinjuku: 31, tokyo: 19, ikebukuro: 40, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sen-da-ke-tani': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 8, shinjuku: 4, tokyo: 15, ikebukuro: 16, shinagawa: 19 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sen-shiro-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 134, tokyo: 116, ikebukuro: 134, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sen-shiro-taihoku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 132, tokyo: 114, ikebukuro: 132, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sengen-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 85, tokyo: 85, ikebukuro: 71, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sengoku': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 26, shinjuku: 18, tokyo: 17, ikebukuro: 9, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'senju-oohashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 38, shinjuku: 31, tokyo: 22, ikebukuro: 24, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sensoku': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 26, tokyo: 31, ikebukuro: 40, shinagawa: 13 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'senzokuike': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 20, shinjuku: 30, tokyo: 34, ikebukuro: 44, shinagawa: 16 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'setagaya': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 15, shinjuku: 20, tokyo: 34, ikebukuro: 33, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'seya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 86, shinjuku: 94, tokyo: 104, ikebukuro: 106, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shake': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 118, shinjuku: 126, tokyo: 137, ikebukuro: 137, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shakudo-shougakkou-mae': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 34, shinjuku: 26, tokyo: 20, ikebukuro: 16, shinagawa: 39 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shi-ga-o': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 56, shinjuku: 63, tokyo: 75, ikebukuro: 75, shinagawa: 59 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shi-tsu-ki': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 44, shinjuku: 39, tokyo: 25, ikebukuro: 34, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibakouen': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 13, shinjuku: 18, tokyo: 10, ikebukuro: 27, shinagawa: 9 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibamata': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 57, shinjuku: 52, tokyo: 39, ikebukuro: 45, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibasaki': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 37, shinjuku: 38, tokyo: 55, ikebukuro: 47, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibasaki-taiikukan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 79, tokyo: 97, ikebukuro: 83, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibaura-fu-atama': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 16, shinjuku: 22, tokyo: 13, ikebukuro: 32, shinagawa: 7 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibayama-chiyoda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 192, shinjuku: 190, tokyo: 173, ikebukuro: 187, shinagawa: 184 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shibusawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 169, shinjuku: 175, tokyo: 188, ikebukuro: 186, shinagawa: 173 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shichiri': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 83, tokyo: 89, ikebukuro: 70, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shichiri-ke-hama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 138, tokyo: 143, ikebukuro: 151, shinagawa: 124 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shidai-igakubu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 116, tokyo: 117, ikebukuro: 130, shinagawa: 98 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiinamachi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 23, shinjuku: 12, tokyo: 25, ikebukuro: 5, shinagawa: 35 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiishiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 289, shinjuku: 288, tokyo: 270, ikebukuro: 284, shinagawa: 280 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shijou-mae': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 23, shinjuku: 27, tokyo: 13, ikebukuro: 35, shinagawa: 14 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 56, tokyo: 70, ikebukuro: 48, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimizu-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 100, tokyo: 96, ikebukuro: 87, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimogoori': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 139, shinjuku: 147, tokyo: 134, ikebukuro: 156, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimoigusa': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 30, shinjuku: 23, tokyo: 41, ikebukuro: 23, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimomaruko': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 40, tokyo: 43, ikebukuro: 53, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimomizo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 104, tokyo: 118, ikebukuro: 114, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimoochiai': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 19, shinjuku: 9, tokyo: 23, ikebukuro: 6, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimousa-kanzaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 208, shinjuku: 204, tokyo: 188, ikebukuro: 197, shinagawa: 202 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimousa-matsuzaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 164, shinjuku: 161, tokyo: 144, ikebukuro: 156, shinagawa: 158 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimousa-nakayama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 68, shinjuku: 66, tokyo: 49, ikebukuro: 63, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimousa-tachibana': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 276, shinjuku: 275, tokyo: 257, ikebukuro: 270, shinagawa: 269 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimousa-toyosato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 280, shinjuku: 278, tokyo: 261, ikebukuro: 274, shinagawa: 272 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimura-sakaue': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 39, shinjuku: 29, tokyo: 37, ikebukuro: 16, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shimura-sanchoume': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 40, shinjuku: 30, tokyo: 39, ikebukuro: 17, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-itabashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 20, tokyo: 26, ikebukuro: 7, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-urayasu': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 57, shinjuku: 59, tokyo: 41, ikebukuro: 61, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-chiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 114, tokyo: 95, ikebukuro: 115, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-hane': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 50, shinjuku: 59, tokyo: 66, ikebukuro: 72, shinagawa: 48 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-kashi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 87, tokyo: 101, ikebukuro: 79, shinagawa: 109 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-kashiwa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 87, tokyo: 75, ikebukuro: 78, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-kodaira': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 64, tokyo: 82, ikebukuro: 65, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-koganei': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 49, shinjuku: 47, tokyo: 65, ikebukuro: 51, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-koushin-tsuka': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 19, tokyo: 22, ikebukuro: 7, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-mobara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 177, shinjuku: 181, tokyo: 164, ikebukuro: 185, shinagawa: 164 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-sayama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 95, tokyo: 111, ikebukuro: 89, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-seibi-ba': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 45, shinjuku: 54, tokyo: 46, ikebukuro: 66, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-shibamata': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 57, shinjuku: 53, tokyo: 38, ikebukuro: 46, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-shibaura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 55, shinjuku: 66, tokyo: 66, ikebukuro: 79, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-shiraoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 117, tokyo: 122, ikebukuro: 104, shinagawa: 138 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-shirota': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 11, shinjuku: 14, tokyo: 30, ikebukuro: 26, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shin-toyosu': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 24, shinjuku: 28, tokyo: 12, ikebukuro: 34, shinagawa: 15 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinagawa-shiisaido': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 30, tokyo: 25, ikebukuro: 42, shinagawa: 7 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinanochou': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 9, shinjuku: 6, tokyo: 13, ikebukuro: 17, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinbaba': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 17, shinjuku: 26, tokyo: 22, ikebukuro: 38, shinagawa: 4 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shindai-tsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 134, shinjuku: 144, tokyo: 143, ikebukuro: 158, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shingou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 179, shinjuku: 169, tokyo: 178, ikebukuro: 157, shinagawa: 191 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinjukunishiguchi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 12, shinjuku: 3, tokyo: 19, ikebukuro: 12, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinkemi-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 102, tokyo: 83, ikebukuro: 101, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinko-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 178, shinjuku: 168, tokyo: 172, ikebukuro: 155, shinagawa: 189 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinmatsuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 185, shinjuku: 191, tokyo: 204, ikebukuro: 201, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinnarashino': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 84, shinjuku: 85, tokyo: 67, ikebukuro: 84, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinonome': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 28, shinjuku: 33, tokyo: 17, ikebukuro: 39, shinagawa: 18 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinozaki': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 57, shinjuku: 55, tokyo: 38, ikebukuro: 53, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinrinkouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 156, shinjuku: 148, tokyo: 161, ikebukuro: 139, shinagawa: 170 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinsen-hashi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 76, tokyo: 58, ikebukuro: 73, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shintokorozawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 76, tokyo: 94, ikebukuro: 73, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shintsudanuma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 88, tokyo: 70, ikebukuro: 86, shinagawa: 80 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinzou-kawashima': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 33, shinjuku: 25, tokyo: 19, ikebukuro: 17, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinzou-sato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 81, shinjuku: 73, tokyo: 65, ikebukuro: 61, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shinzushi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 136, tokyo: 139, ikebukuro: 149, shinagawa: 120 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shioiri': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 126, shinjuku: 137, tokyo: 137, ikebukuro: 150, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiomi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 31, shinjuku: 33, tokyo: 16, ikebukuro: 37, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shirai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 101, tokyo: 85, ikebukuro: 95, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiraitodai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 52, shinjuku: 52, tokyo: 70, ikebukuro: 58, shinagawa: 63 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiraoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 120, shinjuku: 110, tokyo: 115, ikebukuro: 97, shinagawa: 131 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiroku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 211, tokyo: 229, ikebukuro: 209, shinagawa: 230 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiromaru': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 167, shinjuku: 164, tokyo: 182, ikebukuro: 164, shinagawa: 180 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiromi-ke-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 193, shinjuku: 200, tokyo: 185, ikebukuro: 207, shinagawa: 179 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shirota-hashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 12, shinjuku: 13, tokyo: 29, ikebukuro: 24, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shita-iida': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 112, tokyo: 120, ikebukuro: 125, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shita-jinmei': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 18, shinjuku: 28, tokyo: 27, ikebukuro: 41, shinagawa: 7 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shita-nagatani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 103, tokyo: 109, ikebukuro: 117, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shita-soga': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 184, shinjuku: 191, tokyo: 202, ikebukuro: 202, shinagawa: 186 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shitaita-hashi': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 29, shinjuku: 19, tokyo: 26, ikebukuro: 6, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shiyakushomae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 114, tokyo: 96, ikebukuro: 115, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shizu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 121, tokyo: 103, ikebukuro: 118, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shouin-jinja-mae': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 13, shinjuku: 20, tokyo: 33, ikebukuro: 32, shinagawa: 23 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shoumaru': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 169, shinjuku: 163, tokyo: 180, ikebukuro: 159, shinagawa: 183 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shounan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 96, tokyo: 104, ikebukuro: 84, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shounan-fukazawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 119, shinjuku: 129, tokyo: 134, ikebukuro: 142, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shounan-kaigan-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 129, shinjuku: 138, tokyo: 144, ikebukuro: 151, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shounan-machiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 127, tokyo: 132, ikebukuro: 140, shinagawa: 113 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shouwa': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 51, shinjuku: 61, tokyo: 59, ikebukuro: 74, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shouwa-shima': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 42, tokyo: 37, ikebukuro: 54, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'shukugawara': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 36, shinjuku: 41, tokyo: 55, ikebukuro: 52, shinagawa: 43 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sode-ke-ura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 111, tokyo: 98, ikebukuro: 120, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'soshio-ryuutsuu-sentaa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 176, shinjuku: 167, tokyo: 178, ikebukuro: 156, shinagawa: 190 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sou-moto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 202, shinjuku: 210, tokyo: 195, ikebukuro: 217, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'soubudai-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 96, shinjuku: 102, tokyo: 115, ikebukuro: 112, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'soubudai-shita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 108, tokyo: 121, ikebukuro: 118, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sougo-sandou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 160, shinjuku: 159, tokyo: 141, ikebukuro: 155, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'souka': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 63, shinjuku: 54, tokyo: 50, ikebukuro: 41, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'souun-yama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 227, shinjuku: 233, tokyo: 246, ikebukuro: 244, shinagawa: 230 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sugamo-nitta': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 27, shinjuku: 17, tokyo: 21, ikebukuro: 5, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sugita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 105, tokyo: 107, ikebukuro: 118, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sugito-kouyadai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 131, shinjuku: 121, tokyo: 124, ikebukuro: 107, shinagawa: 141 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'suigou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 247, shinjuku: 244, tokyo: 228, ikebukuro: 238, shinagawa: 241 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'suitenguumae': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 24, shinjuku: 23, tokyo: 5, ikebukuro: 26, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'sunagawa-shichi-ban': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 77, tokyo: 96, ikebukuro: 79, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'supootsusentaa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 112, shinjuku: 114, tokyo: 95, ikebukuro: 114, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'suzukichou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 41, shinjuku: 52, tokyo: 50, ikebukuro: 65, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ta-na': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 74, tokyo: 86, ikebukuro: 85, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ta-umi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 220, shinjuku: 230, tokyo: 219, ikebukuro: 240, shinagawa: 207 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tachiaigawa': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 22, shinjuku: 32, tokyo: 29, ikebukuro: 44, shinagawa: 10 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tachiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 107, tokyo: 115, ikebukuro: 120, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tachihi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 77, tokyo: 95, ikebukuro: 80, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tachikawa-kita': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 78, tokyo: 96, ikebukuro: 81, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tachikawa-minami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 78, tokyo: 96, ikebukuro: 82, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taisa-kura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 151, shinjuku: 150, tokyo: 132, ikebukuro: 146, shinagawa: 143 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taitou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 216, shinjuku: 222, tokyo: 206, ikebukuro: 228, shinagawa: 203 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taiyuu-yama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 198, shinjuku: 204, tokyo: 217, ikebukuro: 214, shinagawa: 201 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taka-no-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 66, tokyo: 84, ikebukuro: 68, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taka-taki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 159, shinjuku: 166, tokyo: 151, ikebukuro: 173, shinagawa: 145 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takada': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 42, shinjuku: 52, tokyo: 59, ikebukuro: 65, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takamatsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 78, tokyo: 96, ikebukuro: 81, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takanawa-dai': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 12, shinjuku: 21, tokyo: 19, ikebukuro: 33, shinagawa: 3 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takane-kido': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 91, tokyo: 74, ikebukuro: 88, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takane-koudan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 90, tokyo: 73, ikebukuro: 86, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takano': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 41, shinjuku: 32, tokyo: 29, ikebukuro: 21, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takaosanguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 117, shinjuku: 118, tokyo: 136, ikebukuro: 124, shinagawa: 127 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takasaka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 141, shinjuku: 133, tokyo: 147, ikebukuro: 124, shinagawa: 155 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takashima-machi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 80, tokyo: 84, ikebukuro: 93, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takashima-taira': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 45, shinjuku: 35, tokyo: 46, ikebukuro: 24, shinagawa: 58 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takayanagi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 90, tokyo: 76, ikebukuro: 82, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takebashi': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 19, shinjuku: 15, tokyo: 4, ikebukuro: 18, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takekawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 197, shinjuku: 189, tokyo: 202, ikebukuro: 180, shinagawa: 211 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takeoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 158, shinjuku: 168, tokyo: 162, ikebukuro: 180, shinagawa: 146 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takesato': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 99, shinjuku: 89, tokyo: 89, ikebukuro: 75, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takeshiba': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 16, shinjuku: 20, tokyo: 9, ikebukuro: 29, shinagawa: 11 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takezawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 189, shinjuku: 181, tokyo: 196, ikebukuro: 174, shinagawa: 203 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taki-fudou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 90, tokyo: 73, ikebukuro: 85, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'takinogawa-itchoume': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 21, tokyo: 24, ikebukuro: 9, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 50, shinjuku: 50, tokyo: 68, ikebukuro: 55, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama-puraaza': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 54, tokyo: 66, ikebukuro: 65, shinagawa: 52 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama-reien': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 54, tokyo: 72, ikebukuro: 60, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama-sakai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 95, tokyo: 112, ikebukuro: 102, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tama-yodo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 205, shinjuku: 196, tokyo: 211, ikebukuro: 189, shinagawa: 219 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tamagawagakuen-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 77, tokyo: 91, ikebukuro: 87, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tan-sou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 247, shinjuku: 239, tokyo: 253, ikebukuro: 231, shinagawa: 261 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tani-zaike': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 47, shinjuku: 38, tokyo: 36, ikebukuro: 25, shinagawa: 54 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tanmachi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 75, tokyo: 79, ikebukuro: 88, shinagawa: 60 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tateyama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 225, shinjuku: 236, tokyo: 230, ikebukuro: 248, shinagawa: 214 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tatsumi': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 30, shinjuku: 33, tokyo: 17, ikebukuro: 39, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'taura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 134, tokyo: 134, ikebukuro: 147, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tawarada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 151, shinjuku: 159, tokyo: 146, ikebukuro: 168, shinagawa: 137 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tawaramachi': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 30, shinjuku: 25, tokyo: 12, ikebukuro: 23, shinagawa: 31 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tendai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 112, shinjuku: 113, tokyo: 95, ikebukuro: 114, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tennouchou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 83, tokyo: 88, ikebukuro: 96, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'terekomusentaa': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 25, shinjuku: 32, tokyo: 21, ikebukuro: 42, shinagawa: 12 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tetsudouhakubutsukan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 90, shinjuku: 80, tokyo: 89, ikebukuro: 68, shinagawa: 103 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tobe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 71, shinjuku: 81, tokyo: 85, ikebukuro: 94, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tobitakyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 48, shinjuku: 49, tokyo: 66, ikebukuro: 56, shinagawa: 59 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toda': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 44, tokyo: 53, ikebukuro: 31, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'todakouen': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 50, shinjuku: 40, tokyo: 49, ikebukuro: 28, shinagawa: 62 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toden-zatsu-tsukasa-ke-tani': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 23, shinjuku: 12, tokyo: 20, ikebukuro: 3, shinagawa: 32 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'todoroki': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 22, shinjuku: 31, tokyo: 40, ikebukuro: 44, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'togawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 313, shinjuku: 313, tokyo: 295, ikebukuro: 311, shinagawa: 304 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tokiwa-dai': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 34, shinjuku: 23, tokyo: 33, ikebukuro: 11, shinagawa: 46 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tokiwadaira': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 77, tokyo: 64, ikebukuro: 69, shinagawa: 82 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tokoshikouen': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 17, shinjuku: 27, tokyo: 28, ikebukuro: 40, shinagawa: 9 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tomi-mizu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 193, shinjuku: 200, tokyo: 212, ikebukuro: 211, shinagawa: 196 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tomiura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 207, shinjuku: 218, tokyo: 213, ikebukuro: 231, shinagawa: 196 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toneri': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 53, shinjuku: 43, tokyo: 42, ikebukuro: 30, shinagawa: 60 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toneri-kouen': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 50, shinjuku: 40, tokyo: 38, ikebukuro: 27, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tookaichiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 67, shinjuku: 74, tokyo: 85, ikebukuro: 86, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'torihama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 105, tokyo: 107, ikebukuro: 119, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toritsukasei': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 26, shinjuku: 19, tokyo: 36, ikebukuro: 18, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'totsuka-angyou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 68, shinjuku: 58, tokyo: 59, ikebukuro: 45, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tou-no-sawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 217, shinjuku: 224, tokyo: 236, ikebukuro: 235, shinagawa: 219 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toubu-nerima': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 38, shinjuku: 28, tokyo: 41, ikebukuro: 19, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toubu-takezawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 187, shinjuku: 179, tokyo: 194, ikebukuro: 172, shinagawa: 201 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toudai-miya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 88, tokyo: 96, ikebukuro: 76, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toudai-shima': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 41, shinjuku: 39, tokyo: 22, ikebukuro: 39, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toufuku-nama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 100, tokyo: 119, ikebukuro: 102, shinagawa: 116 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tougane': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 183, shinjuku: 185, tokyo: 167, ikebukuro: 186, shinagawa: 171 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'touguu-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 87, tokyo: 96, ikebukuro: 75, shinagawa: 110 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'touhaku-raku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 61, shinjuku: 71, tokyo: 76, ikebukuro: 85, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toukai-kami': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 76, tokyo: 58, ikebukuro: 73, shinagawa: 70 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toukaidaigakumae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 151, shinjuku: 157, tokyo: 169, ikebukuro: 168, shinagawa: 153 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toukou-ta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 175, shinjuku: 165, tokyo: 175, ikebukuro: 154, shinagawa: 188 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toukyou-sukaitsurii': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 34, shinjuku: 30, tokyo: 15, ikebukuro: 27, shinagawa: 33 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toukyou-terepooto': {
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 5, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 23, shinjuku: 30, tokyo: 18, ikebukuro: 39, shinagawa: 11 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toumou-ro': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 142, shinjuku: 135, tokyo: 151, ikebukuro: 129, shinagawa: 156 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tourin-kan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 85, shinjuku: 91, tokyo: 104, ikebukuro: 101, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toushin-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 118, shinjuku: 126, tokyo: 114, ikebukuro: 136, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tousou-moto': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 199, shinjuku: 207, tokyo: 192, ikebukuro: 214, shinagawa: 185 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'touyoko-ta': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 128, shinjuku: 136, tokyo: 123, ikebukuro: 145, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'toyoharu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 104, shinjuku: 93, tokyo: 96, ikebukuro: 80, shinagawa: 113 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuchike': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 160, shinjuku: 163, tokyo: 145, ikebukuro: 165, shinagawa: 148 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuda-yama': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 33, shinjuku: 39, tokyo: 52, ikebukuro: 51, shinagawa: 38 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsujidou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 136, tokyo: 144, ikebukuro: 149, shinagawa: 125 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 77, tokyo: 60, ikebukuro: 74, shinagawa: 73 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukahara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 203, tokyo: 215, ikebukuro: 213, shinagawa: 199 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukimi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 82, shinjuku: 89, tokyo: 101, ikebukuro: 100, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukinowa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 161, shinjuku: 152, tokyo: 166, ikebukuro: 144, shinagawa: 175 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukisaki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 168, shinjuku: 176, tokyo: 162, ikebukuro: 184, shinagawa: 154 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukuihama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 154, shinjuku: 164, tokyo: 163, ikebukuro: 178, shinagawa: 145 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsukushi-no': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 73, shinjuku: 80, tokyo: 92, ikebukuro: 91, shinagawa: 77 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsunashima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 44, shinjuku: 54, tokyo: 60, ikebukuro: 67, shinagawa: 42 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuru-ke-shima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 120, shinjuku: 111, tokyo: 126, ikebukuro: 104, shinagawa: 134 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsurugamine': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 82, tokyo: 91, ikebukuro: 95, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsurukawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 65, shinjuku: 69, tokyo: 84, ikebukuro: 79, shinagawa: 71 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuruma': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 88, shinjuku: 95, tokyo: 107, ikebukuro: 106, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsurumakionsen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 148, shinjuku: 154, tokyo: 166, ikebukuro: 165, shinagawa: 150 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsurumi-ono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 54, shinjuku: 64, tokyo: 66, ikebukuro: 78, shinagawa: 47 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsurumi-shijou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 47, shinjuku: 58, tokyo: 59, ikebukuro: 71, shinagawa: 40 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuruse': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 68, tokyo: 83, ikebukuro: 60, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsutsuji-ke-oka': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 34, shinjuku: 36, tokyo: 53, ikebukuro: 44, shinagawa: 45 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'tsuzuki-fureaino-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 56, shinjuku: 64, tokyo: 74, ikebukuro: 76, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'u-no-ki': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 28, shinjuku: 38, tokyo: 42, ikebukuro: 52, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'uchisaiwaichou': {
+    ratings: { food: 8, nightlife: 7, transport: 4, rent: 3, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 3 },
+    transit_minutes: { shibuya: 15, shinjuku: 16, tokyo: 5, ikebukuro: 23, shinagawa: 15 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ue-goura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 226, shinjuku: 233, tokyo: 245, ikebukuro: 243, shinagawa: 229 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ue-kumagaya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 183, shinjuku: 174, tokyo: 186, ikebukuro: 164, shinagawa: 197 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ue-nagatani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 92, shinjuku: 102, tokyo: 107, ikebukuro: 116, shinagawa: 88 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ue-ooi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 184, shinjuku: 191, tokyo: 203, ikebukuro: 201, shinagawa: 187 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'uemachi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 16, shinjuku: 21, tokyo: 35, ikebukuro: 34, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'uhara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 233, shinjuku: 241, tokyo: 228, ikebukuro: 250, shinagawa: 219 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ukima-funato': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 45, shinjuku: 34, tokyo: 42, ikebukuro: 21, shinagawa: 56 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umagome-sawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 84, shinjuku: 81, tokyo: 64, ikebukuro: 76, shinagawa: 78 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umahori-kaigan': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 133, shinjuku: 143, tokyo: 142, ikebukuro: 157, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umatate': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 137, shinjuku: 143, tokyo: 128, ikebukuro: 150, shinagawa: 123 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umeshima': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 46, shinjuku: 38, tokyo: 32, ikebukuro: 28, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umeyashiki': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 31, shinjuku: 42, tokyo: 40, ikebukuro: 54, shinagawa: 21 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umi-kashima': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 315, shinjuku: 315, tokyo: 297, ikebukuro: 312, shinagawa: 306 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umi-no-kouen-minamiguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 109, shinjuku: 119, tokyo: 120, ikebukuro: 133, shinagawa: 101 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umi-no-kouen-shiba-kuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 117, tokyo: 119, ikebukuro: 131, shinagawa: 100 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umi-shibaura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 68, tokyo: 68, ikebukuro: 81, shinagawa: 49 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'umigami': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 75, shinjuku: 74, tokyo: 56, ikebukuro: 71, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'unga': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 93, tokyo: 86, ikebukuro: 81, shinagawa: 106 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'uraga': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 136, shinjuku: 146, tokyo: 144, ikebukuro: 160, shinagawa: 126 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'urawa-misono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 68, tokyo: 72, ikebukuro: 55, shinagawa: 89 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'urayama-kuchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 202, shinjuku: 196, tokyo: 214, ikebukuro: 193, shinagawa: 215 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'urayasu': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 52, shinjuku: 53, tokyo: 35, ikebukuro: 54, shinagawa: 44 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ushigome-yanagimachi': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 15, shinjuku: 7, tokyo: 13, ikebukuro: 11, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'ushihama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 100, tokyo: 119, ikebukuro: 102, shinagawa: 115 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'uwamizo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 98, shinjuku: 102, tokyo: 117, ikebukuro: 110, shinagawa: 105 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wa-ko': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 117, tokyo: 121, ikebukuro: 103, shinagawa: 138 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wada-kawara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 195, shinjuku: 201, tokyo: 214, ikebukuro: 212, shinagawa: 198 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wada-machi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 72, shinjuku: 81, tokyo: 88, ikebukuro: 95, shinagawa: 69 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wada-tsuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 122, shinjuku: 132, tokyo: 137, ikebukuro: 146, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wada-ura': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 223, shinjuku: 233, tokyo: 224, ikebukuro: 244, shinagawa: 210 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wadou-kurotani': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 208, shinjuku: 201, tokyo: 217, ikebukuro: 196, shinagawa: 222 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wakaba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 117, tokyo: 132, ikebukuro: 110, shinagawa: 139 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wakabadai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 64, shinjuku: 66, tokyo: 83, ikebukuro: 74, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wakabayashi': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 12, shinjuku: 18, tokyo: 31, ikebukuro: 31, shinagawa: 22 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'wakamatsu-kawata': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 14, shinjuku: 6, tokyo: 15, ikebukuro: 10, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'warabi': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 57, shinjuku: 46, tokyo: 53, ikebukuro: 33, shinagawa: 68 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'waseda': {
+    ratings: { food: 8, nightlife: 5, transport: 4, rent: 3, safety: 7, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    transit_minutes: { shibuya: 17, shinjuku: 8, tokyo: 15, ikebukuro: 8, shinagawa: 26 },
+    rent_avg: { '1k_1ldk': 130000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'washimiya': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 147, shinjuku: 136, tokyo: 142, ikebukuro: 123, shinagawa: 158 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'y-r-p-nobi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 149, shinjuku: 159, tokyo: 158, ikebukuro: 173, shinagawa: 140 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yabe': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 90, shinjuku: 94, tokyo: 109, ikebukuro: 102, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yachimata': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 167, shinjuku: 167, tokyo: 149, ikebukuro: 166, shinagawa: 157 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yachiyo-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 111, shinjuku: 110, tokyo: 92, ikebukuro: 106, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yachiyo-midorigaoka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 102, tokyo: 84, ikebukuro: 98, shinagawa: 97 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yachiyodai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 106, shinjuku: 106, tokyo: 88, ikebukuro: 103, shinagawa: 99 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yagawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 74, shinjuku: 73, tokyo: 91, ikebukuro: 77, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yagi-saki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 107, shinjuku: 97, tokyo: 99, ikebukuro: 83, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yagiri': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 63, shinjuku: 59, tokyo: 44, ikebukuro: 52, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yaguchi-watari': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 32, shinjuku: 42, tokyo: 44, ikebukuro: 56, shinagawa: 24 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yagyuu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 183, shinjuku: 173, tokyo: 178, ikebukuro: 160, shinagawa: 194 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yahatayama': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 24, shinjuku: 24, tokyo: 41, ikebukuro: 33, shinagawa: 36 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yahiro': {
+    ratings: { food: 6, nightlife: 4, transport: 4, rent: 5, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 42, shinjuku: 37, tokyo: 23, ikebukuro: 32, shinagawa: 41 },
+    rent_avg: { '1k_1ldk': 95000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yaho': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 69, tokyo: 87, ikebukuro: 73, shinagawa: 81 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yakou': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 40, shinjuku: 50, tokyo: 53, ikebukuro: 64, shinagawa: 34 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yakuen-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 92, tokyo: 74, ikebukuro: 89, shinagawa: 85 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yamada': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 104, tokyo: 122, ikebukuro: 109, shinagawa: 113 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yamate': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 79, shinjuku: 89, tokyo: 91, ikebukuro: 102, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yanagikouji': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 134, tokyo: 141, ikebukuro: 147, shinagawa: 122 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yanase-kawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 69, shinjuku: 60, tokyo: 75, ikebukuro: 53, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yanoguchi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 49, shinjuku: 51, tokyo: 68, ikebukuro: 59, shinagawa: 59 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yasaka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 70, shinjuku: 66, tokyo: 84, ikebukuro: 66, shinagawa: 83 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yashio': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 63, shinjuku: 56, tokyo: 47, ikebukuro: 45, shinagawa: 66 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yasuda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 176, shinjuku: 187, tokyo: 181, ikebukuro: 199, shinagawa: 165 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yatsu': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 83, shinjuku: 83, tokyo: 65, ikebukuro: 82, shinagawa: 75 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yatsuka': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 59, shinjuku: 50, tokyo: 46, ikebukuro: 38, shinagawa: 65 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yayoi-dai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 93, shinjuku: 101, tokyo: 110, ikebukuro: 114, shinagawa: 91 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoda': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 144, shinjuku: 147, tokyo: 129, ikebukuro: 149, shinagawa: 132 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yokose': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 196, shinjuku: 191, tokyo: 208, ikebukuro: 186, shinagawa: 210 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yokoshiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 214, tokyo: 196, ikebukuro: 212, shinagawa: 204 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yokosuka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 136, tokyo: 136, ikebukuro: 149, shinagawa: 117 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yokosuka-chuuou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 127, shinjuku: 137, tokyo: 137, ikebukuro: 151, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yokota': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 133, tokyo: 120, ikebukuro: 142, shinagawa: 111 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yomiurirando-mae': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 49, shinjuku: 53, tokyo: 69, ikebukuro: 63, shinagawa: 57 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yono': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 67, tokyo: 76, ikebukuro: 55, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yono-honchou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 77, shinjuku: 67, tokyo: 77, ikebukuro: 55, shinagawa: 90 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoshi-kawa-kouen': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 115, shinjuku: 117, tokyo: 99, ikebukuro: 118, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoshikawa': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 82, shinjuku: 73, tokyo: 68, ikebukuro: 61, shinagawa: 87 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoshikawa-bi-minami': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 82, shinjuku: 73, tokyo: 67, ikebukuro: 61, shinagawa: 86 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoshino-hara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 102, shinjuku: 92, tokyo: 100, ikebukuro: 80, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yoshinochou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 78, shinjuku: 88, tokyo: 91, ikebukuro: 101, shinagawa: 72 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'youdo': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 214, shinjuku: 205, tokyo: 220, ikebukuro: 198, shinagawa: 228 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'youga': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 21, shinjuku: 28, tokyo: 40, ikebukuro: 40, shinagawa: 28 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'youkaichiba': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 231, shinjuku: 231, tokyo: 213, ikebukuro: 228, shinagawa: 222 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'youkoudai': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 97, shinjuku: 107, tokyo: 111, ikebukuro: 121, shinagawa: 92 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yourou-keikoku': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 180, shinjuku: 188, tokyo: 175, ikebukuro: 197, shinagawa: 166 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yubi-ougi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 94, shinjuku: 84, tokyo: 96, ikebukuro: 74, shinagawa: 107 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yugawara': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 236, shinjuku: 244, tokyo: 254, ikebukuro: 255, shinagawa: 236 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yui-ke-hama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 123, shinjuku: 133, tokyo: 137, ikebukuro: 146, shinagawa: 118 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yuki-ga-taniootsuka': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 23, shinjuku: 33, tokyo: 38, ikebukuro: 47, shinagawa: 20 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yukinori': {
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 7 },
+    transit_minutes: { shibuya: 58, shinjuku: 58, tokyo: 40, ikebukuro: 57, shinagawa: 51 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yumega-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 103, shinjuku: 112, tokyo: 120, ikebukuro: 125, shinagawa: 102 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yuri-ke-oka': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 53, shinjuku: 57, tokyo: 72, ikebukuro: 66, shinagawa: 61 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yutaka-shiki': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 95, shinjuku: 88, tokyo: 77, ikebukuro: 77, shinagawa: 96 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'yuuenchi-nishi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 80, shinjuku: 75, tokyo: 93, ikebukuro: 74, shinagawa: 93 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'zama': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 101, shinjuku: 107, tokyo: 120, ikebukuro: 118, shinagawa: 104 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'zenkou': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 116, shinjuku: 125, tokyo: 133, ikebukuro: 138, shinagawa: 114 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'zoushiki': {
+    ratings: { food: 5, nightlife: 2, transport: 4, rent: 7, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 36, shinjuku: 47, tokyo: 46, ikebukuro: 60, shinagawa: 27 },
+    rent_avg: { '1k_1ldk': 75000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
+  'zushi': {
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 8, green: 7, gym_sports: 4, vibe: 4, crowd: 8 },
+    transit_minutes: { shibuya: 125, shinjuku: 135, tokyo: 138, ikebukuro: 149, shinagawa: 119 },
+    rent_avg: { '1k_1ldk': 65000, '2ldk': null, source: 'estimate', updated: '2026-04' },
+  },
 };
