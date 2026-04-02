@@ -5,6 +5,7 @@ import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import StationRadarChart from '@/components/RadarChart';
 
 export function generateStaticParams() {
   return getStations()
@@ -20,9 +21,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const station = getStation(slug);
   if (!station) return { title: 'Station Not Found' };
+  const desc = station.description?.atmosphere
+    ? station.description.atmosphere.slice(0, 155)
+    : `Neighborhood guide for ${station.name_en} station area in Tokyo.`;
   return {
     title: `${station.name_en} (${station.name_jp}) - Tokyo Neighborhood Explorer`,
-    description: `Neighborhood guide for ${station.name_en} station area. Ratings, rent prices, transit times, and more.`,
+    description: `${station.name_en} station area: ratings, rent prices, transit times. ${desc}`,
+    openGraph: {
+      title: `${station.name_en} - Tokyo Neighborhood Explorer`,
+      description: desc,
+      type: 'article',
+    },
   };
 }
 
@@ -39,8 +48,32 @@ export default async function StationPage({
     ? calculateWeightedScore(station.ratings, DEFAULT_WEIGHTS)
     : null;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: `${station.name_en} Station Area`,
+    alternateName: station.name_jp,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: station.lat,
+      longitude: station.lng,
+    },
+    ...(score !== null && {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: score,
+        bestRating: 10,
+        worstRating: 1,
+      },
+    }),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-4">
@@ -95,11 +128,16 @@ export default async function StationPage({
           )}
         </div>
 
-        {/* Ratings breakdown */}
+        {/* Radar chart + Ratings breakdown */}
         {station.ratings && (
-          <section className="bg-white rounded-lg border border-gray-200 p-5">
-            <h2 className="font-bold text-lg mb-4">Ratings</h2>
-            <div className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section className="bg-white rounded-lg border border-gray-200 p-5">
+              <h2 className="font-bold text-lg mb-2">Overview</h2>
+              <StationRadarChart ratings={station.ratings} />
+            </section>
+            <section className="bg-white rounded-lg border border-gray-200 p-5">
+              <h2 className="font-bold text-lg mb-4">Ratings</h2>
+              <div className="space-y-3">
               {(
                 Object.entries(station.ratings) as [
                   keyof StationRatings,
@@ -126,6 +164,7 @@ export default async function StationPage({
               ))}
             </div>
           </section>
+          </div>
         )}
 
         {/* Transit times */}
