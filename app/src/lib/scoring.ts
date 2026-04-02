@@ -34,6 +34,16 @@ export function scoreToColor(score: number): string {
   return `rgb(${r}, ${g}, 50)`;
 }
 
+export function getAxisValue(station: Station, axis: string): number | null {
+  if (axis === 'rent_1k') return station.rent_avg?.['1k_1ldk'] ?? null;
+  if (axis === 'min_transit') {
+    if (!station.transit_minutes) return null;
+    const vals = Object.values(station.transit_minutes).filter((v) => v > 0);
+    return vals.length > 0 ? Math.min(...vals) : null;
+  }
+  return (station.ratings as Record<string, number> | null)?.[axis] ?? null;
+}
+
 export function filterStations(
   stations: Station[],
   weights: WeightConfig,
