@@ -1,11 +1,16 @@
 import { getStation, getStations } from '@/lib/data';
-import { RATING_LABELS, HUB_LABELS, StationRatings } from '@/lib/types';
+import { RATING_LABELS, RATING_TOOLTIPS, HUB_LABELS, StationRatings, getGoogleMapsAreaUrl } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import StationRadarChart from '@/components/RadarChart';
+import Tooltip from '@/components/Tooltip';
+import ImageGallery from '@/components/ImageGallery';
+import stationImages from '@/data/station-images.json';
+
+const imageData = stationImages as Record<string, { url: string; alt: string; attribution?: string }[]>;
 
 export function generateStaticParams() {
   return getStations()
@@ -48,6 +53,9 @@ export default async function StationPage({
     ? calculateWeightedScore(station.ratings, DEFAULT_WEIGHTS)
     : null;
 
+  const mapsUrl = getGoogleMapsAreaUrl(station.lat, station.lng);
+  const images = imageData[slug] || [];
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Place',
@@ -74,6 +82,7 @@ export default async function StationPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-4">
@@ -86,6 +95,19 @@ export default async function StationPage({
           <span className="text-gray-300">|</span>
           <span className="font-bold text-lg">{station.name_en}</span>
           <span className="text-gray-400">{station.name_jp}</span>
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-blue-600 hover:underline flex items-center gap-1"
+            title="Open in Google Maps"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Maps
+          </a>
           {score !== null && (
             <span
               className="ml-auto text-2xl font-bold"
@@ -138,39 +160,56 @@ export default async function StationPage({
             <section className="bg-white rounded-lg border border-gray-200 p-5">
               <h2 className="font-bold text-lg mb-4">Ratings</h2>
               <div className="space-y-3">
-              {(
-                Object.entries(station.ratings) as [
-                  keyof StationRatings,
-                  number,
-                ][]
-              ).map(([key, val]) => (
-                <div key={key} className="flex items-center gap-3">
-                  <span className="text-sm w-36 text-gray-600">
-                    {RATING_LABELS[key]}
-                  </span>
-                  <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
-                    <div
-                      className="h-full rounded-full transition-all"
-                      style={{
-                        width: `${val * 10}%`,
-                        backgroundColor: scoreToColor(val),
-                      }}
-                    />
+                {(
+                  Object.entries(station.ratings) as [
+                    keyof StationRatings,
+                    number,
+                  ][]
+                ).map(([key, val]) => (
+                  <div key={key} className="flex items-center gap-3">
+                    <Tooltip text={RATING_TOOLTIPS[key]}>
+                      <span className="text-sm w-32 text-gray-600">
+                        {RATING_LABELS[key]}
+                      </span>
+                    </Tooltip>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
+                      <div
+                        className="h-full rounded-full transition-all"
+                        style={{
+                          width: `${val * 10}%`,
+                          backgroundColor: scoreToColor(val),
+                        }}
+                      />
+                    </div>
+                    <span className="text-sm font-bold tabular-nums w-8 text-right">
+                      {val}
+                    </span>
                   </div>
-                  <span className="text-sm font-bold tabular-nums w-8 text-right">
-                    {val}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
           </div>
         )}
 
-        {/* Transit times */}
+        {/* Image gallery */}
+        {images.length > 0 && (
+          <ImageGallery images={images} stationName={station.name_en} />
+        )}
+
+        {/* Transit times + Google Maps link */}
         {station.transit_minutes && (
           <section className="bg-white rounded-lg border border-gray-200 p-5">
-            <h2 className="font-bold text-lg mb-4">Transit Times</h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-bold text-lg">Transit Times</h2>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-blue-600 hover:underline"
+              >
+                View on Google Maps &rarr;
+              </a>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {(
                 Object.entries(station.transit_minutes) as [
@@ -193,7 +232,7 @@ export default async function StationPage({
           </section>
         )}
 
-        {/* Description placeholder */}
+        {/* Description */}
         {station.description ? (
           <section className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
             <h2 className="font-bold text-lg">About this area</h2>

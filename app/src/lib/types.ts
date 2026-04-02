@@ -90,3 +90,23 @@ export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
   ikebukuro: 'Ikebukuro',
   shinagawa: 'Shinagawa',
 };
+
+export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
+  food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
+  nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',
+  transport: 'Number of train lines, frequency, connections to major hubs, and overall commute convenience',
+  rent: 'Affordability of rent (inverted: 10 = cheapest ~\u00a570-80k/mo, 1 = most expensive ~\u00a5170k+)',
+  safety: 'Overall neighborhood safety: crime rates, street lighting, family-friendliness, late-night comfort',
+  green: 'Parks, gardens, riverside walks, green spaces, and nature within 15 min walk',
+  gym_sports: 'Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby',
+  vibe: 'Overall character and charm: cultural identity, street life, local community, architectural interest',
+  crowd: 'Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)',
+};
+
+export function getGoogleMapsUrl(lat: number, lng: number, name: string): string {
+  return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${encodeURIComponent(name + ' Station')}`;
+}
+
+export function getGoogleMapsAreaUrl(lat: number, lng: number): string {
+  return `https://www.google.com/maps/@${lat},${lng},16z`;
+}

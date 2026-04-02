@@ -1,0 +1,968 @@
+{
+  "shinjuku": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/330px-Skyscrapers_of_Shinjuku_2009_January.jpg",
+      "alt": "Shinjuku - Shinjuku",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/JRE_Shinjuku-STA_South.jpg/330px-JRE_Shinjuku-STA_South.jpg",
+      "alt": "Shinjuku Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "tokyo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Tokyo-STA%20Marunouchi-Entrance%202023.jpg",
+      "alt": "Tokyo station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/330px-Skyscrapers_of_Shinjuku_2009_January.jpg",
+      "alt": "Tokyo - Tokyo",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "yokohama": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Yokohama-STA%20East-2023.jpg",
+      "alt": "Yokohama station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Minato_Mirai_In_Blue.jpg/330px-Minato_Mirai_In_Blue.jpg",
+      "alt": "Yokohama - Yokohama",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "shibuya": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E6%B8%8B%E8%B0%B7%E9%A7%8520200525.jpg",
+      "alt": "Shibuya station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E6%B8%8B%E8%B0%B7%E9%A7%8520200525.jpg",
+      "alt": "Shibuya station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/IBA-shibuya-20210325.jpg",
+      "alt": "Shibuya station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "chiba": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Chiba%20Station%202024.jpg",
+      "alt": "Chiba station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Chiba%20Station%202024.jpg",
+      "alt": "Chiba station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "ikebukuro": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sunshine_60_Observatory_%40_Sunshine_Building_%40_Ikebukuro_%2811547419543%29.jpg/330px-Sunshine_60_Observatory_%40_Sunshine_Building_%40_Ikebukuro_%2811547419543%29.jpg",
+      "alt": "Ikebukuro - Ikebukuro",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ikebukuro-STA_East.jpg/330px-Ikebukuro-STA_East.jpg",
+      "alt": "Ikebukuro Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "ueno": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ueno_park.jpg/330px-Ueno_park.jpg",
+      "alt": "Ueno - Ueno",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/JRE-Ueno-STA.jpg/330px-JRE-Ueno-STA.jpg",
+      "alt": "Ueno Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "shimbashi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/JR%20Shimbashi%20Station%20(2019-05-04)%2002.jpg",
+      "alt": "Shimbashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Dentsu.jpg/330px-Dentsu.jpg",
+      "alt": "Shimbashi - Shinbashi",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kita-senju": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/170824%20Kita-Senju%20Station%20Tokyo%20Japan01s3.jpg",
+      "alt": "Kita-Senju station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Chiyoda-line-Kitasenjustation-platforms-2019-6-4.jpg",
+      "alt": "Kita-Senju station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "musashi-kosugi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/JR%20Musashi%20Kosugi%20sta%20001.jpg",
+      "alt": "Musashi-Kosugi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/JR%20Musashi%20Kosugi%20sta%20001.jpg",
+      "alt": "Musashi-Kosugi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/JR%20Musashi%20Kosugi%20sta%20001.jpg",
+      "alt": "Musashi-Kosugi station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "narita": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/JR%20Narita-Line%20Narita%20Station%20Platform%202%E3%83%BB3.jpg",
+      "alt": "Narita station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/JR%20Narita-Line%20Narita%20Station%20Platform%202%E3%83%BB3.jpg",
+      "alt": "Narita station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "nippori": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keisei-Nippori-STA%20Home-2.jpg",
+      "alt": "Nippori station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nippori_Station.jpg/330px-Nippori_Station.jpg",
+      "alt": "Nippori Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "ofuna": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/JRofunastation.png/330px-JRofunastation.png",
+      "alt": "Ofuna Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "shinagawa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/JRE-Shinagawa-STA%20Takanawa-entrance.jpg",
+      "alt": "Shinagawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Shinagawa-STA%20East.jpg",
+      "alt": "Shinagawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Meguro-gawa%2C_%C5%8Csaki_01.jpg/330px-Meguro-gawa%2C_%C5%8Csaki_01.jpg",
+      "alt": "Shinagawa - Shinagawa",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "akabane": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/JRE%20Akabane-STA%20Platform3-4.jpg",
+      "alt": "Akabane station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Akabane-Sta-East.JPG/330px-Akabane-Sta-East.JPG",
+      "alt": "Akabane Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "akihabara": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/JRAkihabara%20station.jpg",
+      "alt": "Akihabara station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png/330px-Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png",
+      "alt": "Akihabara - Akihabara",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "hachioji": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Hachioji_montage.JPG/330px-Hachioji_montage.JPG",
+      "alt": "Hachioji - Hachiōji",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hachioji_Station_North_2014.jpg/330px-Hachioji_Station_North_2014.jpg",
+      "alt": "Hachioji Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "iidabashi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Iidabashi%20Station%20200719a.jpg",
+      "alt": "Iidabashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Iidabashi_-01.jpg/330px-Iidabashi_-01.jpg",
+      "alt": "Iidabashi - Iidabashi",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "keisei-takasago": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Keisei-Takasago-Sta-N.JPG",
+      "alt": "Keisei-Takasago station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "kichijoji": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kichijoji_-_panoramio_-_kcomiida.jpg/330px-Kichijoji_-_panoramio_-_kcomiida.jpg",
+      "alt": "Kichijoji - Kichijōji",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kichijoji_Station_north_exit_-_2022_feb_19_various_13_07_02_403000.jpeg/330px-Kichijoji_Station_north_exit_-_2022_feb_19_various_13_07_02_403000.jpeg",
+      "alt": "Kichijoji Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kokubunji": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E5%9B%BD%E5%88%86%E5%AF%BA20180315.jpg",
+      "alt": "Kokubunji station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E5%9B%BD%E5%88%86%E5%AF%BA20180315.jpg",
+      "alt": "Kokubunji station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "nagatacho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/National_Diet_Building_02.jpg/330px-National_Diet_Building_02.jpg",
+      "alt": "Nagatacho - Nagatachō",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Nagatach%C5%8D_Station_Entrance.JPG/330px-Nagatach%C5%8D_Station_Entrance.JPG",
+      "alt": "Nagatacho Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "nishi-funabashi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Nishi-Funabashi%20Station%20North%20Exit(cropped).jpg",
+      "alt": "Nishi-Funabashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Nishi-Funabashi%20Station%20North%20Exit(cropped).jpg",
+      "alt": "Nishi-Funabashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Nishi-Funabashi%20Station%20North%20Exit(cropped).jpg",
+      "alt": "Nishi-Funabashi station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "okachimachi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/JROkachimachiStation-northexit-2018-3-11.jpg",
+      "alt": "Okachimachi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Okachimachi-sta-S.JPG/330px-Okachimachi-sta-S.JPG",
+      "alt": "Okachimachi Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "otemachi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Tokyo_Otemachi_1-chome_Redevelopment_Bldgs_20100618-001.jpg/330px-Tokyo_Otemachi_1-chome_Redevelopment_Bldgs_20100618-001.jpg",
+      "alt": "Otemachi - Ōtemachi",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "tachikawa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tachikawa-Sta-S.JPG",
+      "alt": "Tachikawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tachikawa-Sta-S.JPG",
+      "alt": "Tachikawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Tama_Intercity_Monorail_viewed_from_Green_Springs.jpg/330px-Tama_Intercity_Monorail_viewed_from_Green_Springs.jpg",
+      "alt": "Tachikawa - Tachikawa, Tokyo",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "totsuka": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Totsuka-Sta-East.JPG",
+      "alt": "Totsuka station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/JR_Totsuka_station_east_exit_-_2024_May_23_various_15_13_54_842000.jpeg/330px-JR_Totsuka_station_east_exit_-_2024_May_23_various_15_13_54_842000.jpeg",
+      "alt": "Totsuka Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "yotsuya": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/JR%E5%9B%9B%E3%83%84%E8%B0%B7%E9%A7%85%E4%BB%98%E8%BF%91.jpg",
+      "alt": "Yotsuya station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/JR%E5%9B%9B%E3%83%84%E8%B0%B7%E9%A7%85%E4%BB%98%E8%BF%91.jpg",
+      "alt": "Yotsuya station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Yotsuya-Sta-Akasaka.JPG/330px-Yotsuya-Sta-Akasaka.JPG",
+      "alt": "Yotsuya - Yotsuya",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "ebisu": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ebisu-STA%20atre.jpg",
+      "alt": "Ebisu station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/JRE-Ebisu-STA%20Home1-2.jpg",
+      "alt": "Ebisu station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "funabashi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Funabashi%20Station%20Near%20South%20Exit.jpg",
+      "alt": "Funabashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Funabashi%20Station%20Near%20South%20Exit.jpg",
+      "alt": "Funabashi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Funabashi_montage.jpg/330px-Funabashi_montage.jpg",
+      "alt": "Funabashi - Funabashi",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "haijima": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Haijima-Station-north-2009-0803.jpg",
+      "alt": "Haijima station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Haijima_sta_S_R030424.jpg/330px-Haijima_sta_S_R030424.jpg",
+      "alt": "Haijima Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kanda": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/JR%20Kanda%20Station%20-%20North%20exit%20-%20May%2030%202021%20various%2018%2027%2016%20704000.jpeg",
+      "alt": "Kanda station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Platform%20of%20Kanda%20Station%20(Nippo%20Main%20Line)%202.jpg",
+      "alt": "Kanda station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "meguro": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Cherry_Blossoms_in_Meguro_River_Park_-_Lanterns_along_the_River_%2840844860114%29.jpg/330px-Cherry_Blossoms_in_Meguro_River_Park_-_Lanterns_along_the_River_%2840844860114%29.jpg",
+      "alt": "Meguro - Meguro",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Meguro_Station-1.jpg/330px-Meguro_Station-1.jpg",
+      "alt": "Meguro Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "mitaka": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/JR%20Chuo-Main-Line%20Mitaka%20Station%20Platform%203%E3%83%BB4.jpg",
+      "alt": "Mitaka station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/JR%20Chuo-Main-Line%20Mitaka%20Station%20Platform%203%E3%83%BB4.jpg",
+      "alt": "Mitaka station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "nerima": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/%E4%B8%89%E5%AE%9D%E5%AF%BA%E6%B1%A0%E3%81%A8%E5%8E%B3%E5%B3%B6%E7%A5%9E%E7%A4%BE%EF%BC%882021%E5%B9%B45%E6%9C%88%EF%BC%89.jpg/330px-%E4%B8%89%E5%AE%9D%E5%AF%BA%E6%B1%A0%E3%81%A8%E5%8E%B3%E5%B3%B6%E7%A5%9E%E7%A4%BE%EF%BC%882021%E5%B9%B45%E6%9C%88%EF%BC%89.jpg",
+      "alt": "Nerima - Nerima",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Seibu_Nerima-STA_Central-north-Entrance.jpg/330px-Seibu_Nerima-STA_Central-north-Entrance.jpg",
+      "alt": "Nerima Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "nishi-nippori": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tokyo-sumida-river-from-suijin-bridge.jpg/330px-Tokyo-sumida-river-from-suijin-bridge.jpg",
+      "alt": "Nishi-Nippori - Arakawa, Tokyo",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Nishi-Nippori_Station_2024_Sept_10_various_13_21_02_618000.jpeg/330px-Nishi-Nippori_Station_2024_Sept_10_various_13_21_02_618000.jpeg",
+      "alt": "Nishi-Nippori Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "ochanomizu": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/JRE-Chuo-Line-Ochanomizu-Sta-Hijiribashi%202025.jpg",
+      "alt": "Ochanomizu station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ochanomizu_hijiribashi01.jpg/330px-Ochanomizu_hijiribashi01.jpg",
+      "alt": "Ochanomizu - Ochanomizu",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "osaki": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Masasumi_Osaki.jpg/330px-Masasumi_Osaki.jpg",
+      "alt": "Osaki - Osaki",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Osaki-Sta-W.JPG/330px-Osaki-Sta-W.JPG",
+      "alt": "Osaki Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "shin-kamagaya": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Shin-Kamagaya%20station%20east%20entrance%2020160318%20110455.jpg",
+      "alt": "Shin-Kamagaya station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Shin-Kamagaya%20station%20east%20entrance%2020160318%20110455.jpg",
+      "alt": "Shin-Kamagaya station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "urawa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/JR_Urawa_Station_Platform_1%E3%83%BB2.jpg/330px-JR_Urawa_Station_Platform_1%E3%83%BB2.jpg",
+      "alt": "Urawa Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "abiko": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/JR%20Joban-Line%E3%83%BBNarita-Line%20Abiko%20Station%20Platform%204%E3%83%BB5.jpg",
+      "alt": "Abiko station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "asakusa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Tobu-Asakusa-station-2018.jpg",
+      "alt": "Asakusa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Tobu-Asakusa-station-2018.jpg",
+      "alt": "Asakusa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Day2-2_%2840909714314%29.jpg/330px-Day2-2_%2840909714314%29.jpg",
+      "alt": "Asakusa - Asakusa",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "bakurocho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/JR_East_Bakurocho_Station_Gate.jpg/330px-JR_East_Bakurocho_Station_Gate.jpg",
+      "alt": "Bakurocho Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "chikatetsu-akatsuka": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Chikatetsu-Akatsuka%20Station%2020080614.jpg",
+      "alt": "Chikatetsu-Akatsuka station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Chikatetsu-Akatsuka_Station_20080614.jpg/330px-Chikatetsu-Akatsuka_Station_20080614.jpg",
+      "alt": "Chikatetsu-Akatsuka Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "chikatetsu-narimasu": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chikatetsunarimasu-Sta-4.JPG",
+      "alt": "Chikatetsu-Narimasu station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "fujisawa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujisawa%20Station%20North%20Entrance%202023.jpg",
+      "alt": "Fujisawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujisawa%20Station%20North%20Entrance%202023.jpg",
+      "alt": "Fujisawa station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "ginza": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ginza-WAKO_at_night.jpg/330px-Ginza-WAKO_at_night.jpg",
+      "alt": "Ginza - Ginza",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ginza-station-ExitA3-after-renewal.jpg/330px-Ginza-station-ExitA3-after-renewal.jpg",
+      "alt": "Ginza Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "gotanda": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gotanda_District.jpg/330px-Gotanda_District.jpg",
+      "alt": "Gotanda - Gotanda",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gotanda_Station_-_east_exit_2025_Oct_3_various_05.jpg/330px-Gotanda_Station_-_east_exit_2025_Oct_3_various_05.jpg",
+      "alt": "Gotanda Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "hamamatsucho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2_Chome_Hamamatsuch%C5%8D%2C_Minato-ku%2C_T%C5%8Dky%C5%8D-to_105-0013%2C_Japan_-_panoramio_%289%29.jpg/330px-2_Chome_Hamamatsuch%C5%8D%2C_Minato-ku%2C_T%C5%8Dky%C5%8D-to_105-0013%2C_Japan_-_panoramio_%289%29.jpg",
+      "alt": "Hamamatsucho - Hamamatsuchō",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MonoHama.JPG/330px-MonoHama.JPG",
+      "alt": "Hamamatsucho Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "harajuku": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Harajuku%20Station%20200321a2.jpg",
+      "alt": "Harajuku station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/JRE-Harajuku-Station-07.jpg/330px-JRE-Harajuku-Station-07.jpg",
+      "alt": "Harajuku - Harajuku",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "hashimoto": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/JR%20Yokohama-Line%E3%83%BBSagami-Line%20Hashimoto%20Station%20Gates.jpg",
+      "alt": "Hashimoto station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/JR%20Yokohama-Line%E3%83%BBSagami-Line%20Hashimoto%20Station%20Gates.jpg",
+      "alt": "Hashimoto station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/JR%20Yokohama-Line%E3%83%BBSagami-Line%20Hashimoto%20Station%20Gates.jpg",
+      "alt": "Hashimoto station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "higashi-kanagawa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Higashi-Kanagawa-STA%20Platform3-4.jpg",
+      "alt": "Higashi-Kanagawa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Higashi-Kanagawa-STA%20Platform3-4.jpg",
+      "alt": "Higashi-Kanagawa station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "higashi-matsudo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Higashi-Matsudo_station_20120929.jpg/330px-Higashi-Matsudo_station_20120929.jpg",
+      "alt": "Higashi-Matsudo Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "higashi-murayama": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Higashimurayama_city_hall.JPG/330px-Higashimurayama_city_hall.JPG",
+      "alt": "Higashi-Murayama - Higashimurayama, Tokyo",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Higashimurayama-Sta-E.JPG/330px-Higashimurayama-Sta-E.JPG",
+      "alt": "Higashi-Murayama Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "hiyoshi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Tokyu%20hiyoshi%20station%20keio%20university%20side.jpg",
+      "alt": "Hiyoshi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Jrwest%20Hiyoshi-Station.jpg",
+      "alt": "Hiyoshi station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "jimbocho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Jimbocho-Sta-A3.JPG",
+      "alt": "Jimbocho station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Kanda-Jimbocho_2021.jpg/330px-Kanda-Jimbocho_2021.jpg",
+      "alt": "Jimbocho - Kanda-Jinbōchō",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kamata": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokyu%20Kamata%20sta%20001.jpg",
+      "alt": "Kamata station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokyu%20Kamata%20sta%20001.jpg",
+      "alt": "Kamata station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tokyu%20Kamata%20sta%20001.jpg",
+      "alt": "Kamata station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "kanazawa-hakkei": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Keikyu_Kanazawa-Hakkei_Station.JPG/330px-Keikyu_Kanazawa-Hakkei_Station.JPG",
+      "alt": "Kanazawa-Hakkei Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kashiwa": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/JR%20J%C5%8Dban%20Line%20Kashiwa%20Station%20Platform%201%E3%83%BB2.jpg",
+      "alt": "Kashiwa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/JR%20J%C5%8Dban%20Line%20Kashiwa%20Station%20Platform%201%E3%83%BB2.jpg",
+      "alt": "Kashiwa station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kashiwa_montage.jpg/330px-Kashiwa_montage.jpg",
+      "alt": "Kashiwa - Kashiwa",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kawagoe": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Kawagoe-STA%20West.jpg",
+      "alt": "Kawagoe station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Kawagoe-STA%20West.jpg",
+      "alt": "Kawagoe station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "kawasaki": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/JRE%20Kawasaki-STA%20Platform5-6.jpg",
+      "alt": "Kawasaki station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/JRE%20Kawasaki-STA%20Platform5-6.jpg",
+      "alt": "Kawasaki station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "kinshicho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E9%8C%A6%E7%B3%B8%E7%94%BA%E9%A7%85%E5%8D%97%E5%8F%A3%28TERMINA%29.jpg/330px-%E9%8C%A6%E7%B3%B8%E7%94%BA%E9%A7%85%E5%8D%97%E5%8F%A3%28TERMINA%29.jpg",
+      "alt": "Kinshicho Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kotake-mukaihara": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Kotake-mukaihara-station-Exit2.jpg/330px-Kotake-mukaihara-station-Exit2.jpg",
+      "alt": "Kotake-Mukaihara - Kotake-mukaihara Station",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Kotake-mukaihara-station-Exit2.jpg/330px-Kotake-mukaihara-station-Exit2.jpg",
+      "alt": "Kotake-Mukaihara Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "kudanshita": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Kudanshita-Sta-4.JPG",
+      "alt": "Kudanshita station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "machiya": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E6%9D%B1%E6%9D%BE%E5%AE%B6%E4%BD%8F%E5%AE%85_%282%29.jpg/330px-%E6%9D%B1%E6%9D%BE%E5%AE%B6%E4%BD%8F%E5%AE%85_%282%29.jpg",
+      "alt": "Machiya - Machiya",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "matsudo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/JR%20Matsudo%20station%202012.jpg",
+      "alt": "Matsudo station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/JR%20Matsudo%20station%202012.jpg",
+      "alt": "Matsudo station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/JR%20Matsudo%20station%202012.jpg",
+      "alt": "Matsudo station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "mitsukoshimae": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mitsukoshimae_Station_Ginza_Line_concourse_2015.jpg/330px-Mitsukoshimae_Station_Ginza_Line_concourse_2015.jpg",
+      "alt": "Mitsukoshimae Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "mizonokuchi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mizonokuchi-Sta-N-1.JPG/330px-Mizonokuchi-Sta-N-1.JPG",
+      "alt": "Mizonokuchi Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "motoyawata": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/JR%20Sobu-Main-Line%20Moto-Yawata%20Station%20Platform.jpg",
+      "alt": "Motoyawata station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/JR_Sobu-Main-Line_Moto-Yawata_Station_South_Exit.jpg/330px-JR_Sobu-Main-Line_Moto-Yawata_Station_South_Exit.jpg",
+      "alt": "Motoyawata Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "nakano": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/JR%20Chuo-Main-Line%E3%83%BBTokyo%20Metro%20Tozai-Line%20Nakano%20Station%20Platform%203%E3%83%BB4%20(20210418).jpg",
+      "alt": "Nakano station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "nakano-sakaue": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Nakano-Sakaue_Station_A1_entrance_20110319.jpg/330px-Nakano-Sakaue_Station_A1_entrance_20110319.jpg",
+      "alt": "Nakano-Sakaue Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "nihonbashi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Chuo-dori_from_Nihonbashi.jpg/330px-Chuo-dori_from_Nihonbashi.jpg",
+      "alt": "Nihonbashi - Nihonbashi",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Tokyo-Metro-Nihombashi-ExitB7.jpg/330px-Tokyo-Metro-Nihombashi-ExitB7.jpg",
+      "alt": "Nihonbashi Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "ogikubo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/JRE%20Ogikubo-STA%20Platform3-4.jpg",
+      "alt": "Ogikubo station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ogikubo_Station_-_2024_July_9_various_00_47_06_970000.jpeg/330px-Ogikubo_Station_-_2024_July_9_various_00_47_06_970000.jpeg",
+      "alt": "Ogikubo Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "oimachi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Oimachi_Station_-_2026_feb_14_various_15.jpg/330px-Oimachi_Station_-_2026_feb_14_various_15.jpg",
+      "alt": "Oimachi Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "omotesando": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Omotesando_Tokyo_spring_2012.JPG/330px-Omotesando_Tokyo_spring_2012.JPG",
+      "alt": "Omotesando - Omotesandō",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Tokyo-Metro-Omotesando-Station-01.jpg/330px-Tokyo-Metro-Omotesando-Station-01.jpg",
+      "alt": "Omotesando Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "shin-matsudo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Shin-Matsudo-Sta.2022.jpg",
+      "alt": "Shin-Matsudo station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "soga": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/JR%20Soga%20Station%20Platform%205%E3%83%BB6.jpg",
+      "alt": "Soga station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/JR%20Soga%20Station%20Platform%205%E3%83%BB6.jpg",
+      "alt": "Soga station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "takadanobaba": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/JRE%20Takadanobaba-STA%20Platform1-2.jpg",
+      "alt": "Takadanobaba station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/JRE%20Takadanobaba-STA%20Waseda-Gate.jpg",
+      "alt": "Takadanobaba station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Street_in_Takadanobaba%2C_Japan.JPG/330px-Street_in_Takadanobaba%2C_Japan.JPG",
+      "alt": "Takadanobaba - Takadanobaba",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "takahata-fudo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Keio-Takahata-fudo-Station.jpg/330px-Keio-Takahata-fudo-Station.jpg",
+      "alt": "Takahata-Fudo Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "tsurumi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/JRE%20Tsurumi-STA%20East%20CIAL.jpg",
+      "alt": "Tsurumi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/JRE%20Tsurumi-STA%20East%20CIAL.jpg",
+      "alt": "Tsurumi station area",
+      "attribution": "Wikimedia Commons"
+    }
+  ],
+  "wakoshi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wako_Shiyakusyo.jpg/330px-Wako_Shiyakusyo.jpg",
+      "alt": "Wakoshi - Wakō, Saitama",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Wakoshi-st-S2008.jpg/330px-Wakoshi-st-S2008.jpg",
+      "alt": "Wakoshi Station",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "yoyogi": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Yoyogi-Station-01.jpg",
+      "alt": "Yoyogi station area",
+      "attribution": "Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Yoyogi_%2840791987145%29.jpg/330px-Yoyogi_%2840791987145%29.jpg",
+      "alt": "Yoyogi - Yoyogi",
+      "attribution": "Wikipedia"
+    }
+  ],
+  "yurakucho": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/The_Peninsula_Tokyo.jpg/330px-The_Peninsula_Tokyo.jpg",
+      "alt": "Yurakucho - Yūrakuchō",
+      "attribution": "Wikipedia"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/JR_yurakucho_station_-_outside_-_may_10_2017.jpg/330px-JR_yurakucho_station_-_outside_-_may_10_2017.jpg",
+      "alt": "Yurakucho Station",
+      "attribution": "Wikipedia"
+    }
+  ]
+}
