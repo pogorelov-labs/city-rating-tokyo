@@ -314,7 +314,55 @@ https://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&ta=13&sc={ward_code}&ek={
 
 **Не включено в v1:**
 - Японский язык (v2)
-- Фото районов (v2)
 - Пользовательские отзывы (v2)
 - Сравнение районов side-by-side (v2)
-- Полное покрытие 200-300 станций (постепенное расширение)
+
+---
+
+## 11. v1.1 — Nearby Places, Rich Images, Map Hover (апрель 2026)
+
+### 11.1 Google Maps ссылки для POI
+
+Каждая страница станции показывает секцию "Nearby Places" с:
+- **Конкретные заведения:** Реальные спортзалы, ТЦ, парки, кафе с прямыми ссылками на Google Maps
+- **Поиск по категории:** Ссылки типа "Find more gyms on Google Maps →" для каждой категории
+
+**Структура данных:**
+```json
+{
+  "shinjuku": [
+    {
+      "name": "Gold's Gym Shinjuku",
+      "category": "gym",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gold's+Gym+Shinjuku"
+    }
+  ]
+}
+```
+
+**Категории:** `gym`, `mall`, `park`, `landmark`, `cafe`, `restaurant`, `bar`
+
+**Генерация:** Скрипт `scripts/generate-places.mjs` через Claude API (haiku) генерирует 6-10 мест на станцию.
+
+### 11.2 Расширенная галерея изображений
+
+**Источники:**
+1. Wikimedia Commons — расширено до 5-6 фото на станцию (скрипт `fetch-wiki-images-expanded.mjs`)
+2. Unsplash API — 3-4 фото на станцию (скрипт `fetch-unsplash-images.mjs`, нужен API-ключ)
+
+**Улучшения UI:**
+- Lightbox при клике на фото (навигация стрелками)
+- "Show all X photos" кнопка (показывает первые 6, раскрывает остальные)
+- Поддержка Unsplash attribution (имя фотографа + ссылка)
+
+### 11.3 Rich Map Hover Tooltip
+
+При наведении на маркер на карте показывается tooltip с:
+- Фото района (thumbnail из галереи)
+- Название станции (EN + JP)
+- Weighted score (цветной)
+- Краткое описание атмосферы (~120 символов)
+- Аренда и количество линий
+- "Click for details →"
+
+**Реализация:** Leaflet `<Tooltip>` компонент с кастомным HTML. Данные thumbnail/snippet передаются через props из `page.tsx`.

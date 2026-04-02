@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 interface GalleryImage {
   url: string;
   alt: string;
   attribution?: string;
+  photographer?: string;
+  photographer_url?: string;
+  source?: 'wikimedia' | 'unsplash';
 }
 
 interface ImageGalleryProps {
@@ -13,13 +16,22 @@ interface ImageGalleryProps {
   stationName: string;
 }
 
-function GalleryImage({ image }: { image: GalleryImage }) {
+function GalleryImageCard({
+  image,
+  onClick,
+}: {
+  image: GalleryImage;
+  onClick: () => void;
+}) {
   const [failed, setFailed] = useState(false);
 
   if (failed) return null;
 
   return (
-    <div className="relative group overflow-hidden rounded-lg bg-gray-100 aspect-[4/3]">
+    <div
+      className="relative group overflow-hidden rounded-lg bg-gray-100 aspect-[4/3] cursor-pointer"
+      onClick={onClick}
+    >
       <img
         src={image.url}
         alt={image.alt}
@@ -27,20 +39,91 @@ function GalleryImage({ image }: { image: GalleryImage }) {
         onError={() => setFailed(true)}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
-      {image.attribution && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 py-1">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 py-1">
+        {image.source === 'unsplash' && image.photographer ? (
+          <a
+            href={image.photographer_url || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] text-white/80 hover:text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Photo by {image.photographer} on Unsplash
+          </a>
+        ) : image.attribution ? (
           <span className="text-[10px] text-white/80">{image.attribution}</span>
-        </div>
-      )}
+        ) : null}
+      </div>
     </div>
   );
 }
 
-export default function ImageGallery({ images, stationName }: ImageGalleryProps) {
-  const [visibleCount, setVisibleCount] = useState(0);
+function Lightbox({
+  image,
+  onClose,
+  onPrev,
+  onNext,
+}: {
+  image: GalleryImage;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+      onClick={onClose}
+    >
+      <button
+        className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10"
+        onClick={onClose}
+      >
+        &times;
+      </button>
+      <button
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 p-2"
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+      >
+        &#8249;
+      </button>
+      <button
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 p-2"
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
+      >
+        &#8250;
+      </button>
+      <img
+        src={image.url}
+        alt={image.alt}
+        className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
+        onClick={(e) => e.stopPropagation()}
+      />
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+        {image.alt}
+      </div>
+    </div>
+  );
+}
 
-  // Track how many actually loaded
-  const handleLoad = () => setVisibleCount((c) => c + 1);
+const INITIAL_SHOW = 6;
+
+export default function ImageGallery({ images, stationName }: ImageGalleryProps) {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleImages = showAll ? images : images.slice(0, INITIAL_SHOW);
+  const hasMore = images.length > INITIAL_SHOW;
+
+  const openLightbox = useCallback((i: number) => setLightboxIndex(i), []);
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const prevImage = useCallback(
+    () => setLightboxIndex((i) => (i !== null ? (i - 1 + images.length) % images.length : null)),
+    [images.length]
+  );
+  const nextImage = useCallback(
+    () => setLightboxIndex((i) => (i !== null ? (i + 1) % images.length : null)),
+    [images.length]
+  );
 
   if (images.length === 0) return null;
 
@@ -48,13 +131,30 @@ export default function ImageGallery({ images, stationName }: ImageGalleryProps)
     <section className="bg-white rounded-lg border border-gray-200 p-5">
       <h2 className="font-bold text-lg mb-3">Gallery</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-        {images.map((img, i) => (
-          <GalleryImage key={i} image={img} />
+        {visibleImages.map((img, i) => (
+          <GalleryImageCard key={i} image={img} onClick={() => openLightbox(i)} />
         ))}
       </div>
+      {hasMore && !showAll && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-3 text-sm text-blue-600 hover:underline"
+        >
+          Show all {images.length} photos
+        </button>
+      )}
       <p className="text-[10px] text-gray-400 mt-2">
-        Images via Wikimedia Commons (CC-BY-SA)
+        Images via Wikimedia Commons (CC-BY-SA) & Unsplash
       </p>
+
+      {lightboxIndex !== null && images[lightboxIndex] && (
+        <Lightbox
+          image={images[lightboxIndex]}
+          onClose={closeLightbox}
+          onPrev={prevImage}
+          onNext={nextImage}
+        />
+      )}
     </section>
   );
 }

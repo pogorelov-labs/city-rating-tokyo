@@ -1,0 +1,44 @@
+{
+  "shinjuku": [
+    { "name": "Gold's Gym Shinjuku", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gold's+Gym+Shinjuku" },
+    { "name": "Anytime Fitness Shinjuku", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Shinjuku" },
+    { "name": "Lumine Shinjuku", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lumine+Shinjuku" },
+    { "name": "NEWoMan Shinjuku", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=NEWoMan+Shinjuku" },
+    { "name": "Shinjuku Gyoen", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Gyoen+National+Garden" },
+    { "name": "Shinjuku Central Park", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Central+Park" },
+    { "name": "Tokyo Metropolitan Government Building", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Government+Building" },
+    { "name": "Omoide Yokocho", "category": "restaurant", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Omoide+Yokocho+Shinjuku" },
+    { "name": "Golden Gai", "category": "bar", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Golden+Gai+Shinjuku" }
+  ],
+  "shibuya": [
+    { "name": "Tipness Shibuya", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tipness+Shibuya" },
+    { "name": "Anytime Fitness Shibuya", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Shibuya" },
+    { "name": "Shibuya 109", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shibuya+109" },
+    { "name": "Shibuya Hikarie", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shibuya+Hikarie" },
+    { "name": "Miyashita Park", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Miyashita+Park+Shibuya" },
+    { "name": "Yoyogi Park", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yoyogi+Park" },
+    { "name": "Hachiko Statue", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hachiko+Statue+Shibuya" },
+    { "name": "Shibuya Crossing", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" },
+    { "name": "Nonbei Yokocho", "category": "bar", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nonbei+Yokocho+Shibuya" }
+  ],
+  "ikebukuro": [
+    { "name": "Konami Sports Club Ikebukuro", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Konami+Sports+Club+Ikebukuro" },
+    { "name": "Sunshine City", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sunshine+City+Ikebukuro" },
+    { "name": "Tobu Department Store", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tobu+Department+Store+Ikebukuro" },
+    { "name": "Sunshine 60 Observatory", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sunshine+60+Observatory+Ikebukuro" },
+    { "name": "Nishi-Ikebukuro Park", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nishi-Ikebukuro+Park" }
+  ],
+  "kichijoji": [
+    { "name": "Anytime Fitness Kichijoji", "category": "gym", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Kichijoji" },
+    { "name": "Coppice Kichijoji", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Coppice+Kichijoji" },
+    { "name": "Inokashira Park", "category": "park", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Inokashira+Park" },
+    { "name": "Ghibli Museum", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ghibli+Museum+Mitaka" },
+    { "name": "Harmonica Yokocho", "category": "restaurant", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Harmonica+Yokocho+Kichijoji" }
+  ],
+  "shimokitazawa": [
+    { "name": "Shimokitazawa Cage", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shimokitazawa+Cage" },
+    { "name": "Bonus Track", "category": "cafe", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bonus+Track+Shimokitazawa" },
+    { "name": "Shimokitazawa Tollywood", "category": "landmark", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tollywood+Shimokitazawa" },
+    { "name": "reload Shimokitazawa", "category": "mall", "google_maps_url": "https://www.google.com/maps/search/?api=1&query=reload+Shimokitazawa" }
+  ]
+}
