@@ -1,7 +1,7 @@
 'use client';
 
 import { useAppStore } from '@/lib/store';
-import { RATING_LABELS, WeightConfig, Station } from '@/lib/types';
+import { RATING_LABELS, RATING_TOOLTIPS, WeightConfig, Station } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { useMemo } from 'react';
 import Link from 'next/link';
@@ -39,7 +39,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             (key) => (
               <div key={key}>
                 <div className="flex justify-between text-xs mb-0.5">
-                  <span>{RATING_LABELS[key]}</span>
+                  <span title={RATING_TOOLTIPS[key]}>{RATING_LABELS[key]}</span>
                   <span className="text-gray-400 tabular-nums">
                     {weights[key]}%
                   </span>
