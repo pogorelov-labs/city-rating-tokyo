@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Station } from '@/lib/types';
+import { useAppStore } from '@/lib/store';
+import { buildShareUrl } from '@/lib/url-state';
 import ScatterPlotExplorer from './ScatterPlotExplorer';
 
 interface Props {
@@ -10,6 +12,15 @@ interface Props {
 
 export default function HeaderActions({ stations }: Props) {
   const [scatterOpen, setScatterOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = async () => {
+    const state = useAppStore.getState();
+    const url = buildShareUrl(state);
+    await navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <>
@@ -18,6 +29,13 @@ export default function HeaderActions({ stations }: Props) {
         className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
       >
         Scatter Plot
+      </button>
+
+      <button
+        onClick={handleShare}
+        className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
+      >
+        {copied ? 'Copied!' : 'Share'}
       </button>
 
       {scatterOpen && (

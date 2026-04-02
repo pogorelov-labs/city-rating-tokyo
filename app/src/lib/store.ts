@@ -24,6 +24,13 @@ interface AppState {
   addCompareStation: (slug: string) => void;
   removeCompareStation: (slug: string) => void;
   clearCompareStations: () => void;
+  hydrateFromUrl: (partial: {
+    weights?: WeightConfig;
+    selectedStation?: string;
+    compareStations?: string[];
+    heatmapMode?: boolean;
+    heatmapDimension?: string;
+  }) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -53,4 +60,11 @@ export const useAppStore = create<AppState>((set) => ({
   removeCompareStation: (slug) =>
     set((state) => ({ compareStations: state.compareStations.filter((s) => s !== slug) })),
   clearCompareStations: () => set({ compareStations: [] }),
+  hydrateFromUrl: (partial) => set((state) => ({
+    ...(partial.weights ? { weights: partial.weights } : {}),
+    ...(partial.selectedStation ? { selectedStation: partial.selectedStation } : {}),
+    ...(partial.compareStations ? { compareStations: partial.compareStations } : {}),
+    ...(partial.heatmapMode !== undefined ? { heatmapMode: partial.heatmapMode } : {}),
+    ...(partial.heatmapDimension ? { heatmapDimension: partial.heatmapDimension } : {}),
+  })),
 }));
