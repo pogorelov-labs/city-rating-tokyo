@@ -3,6 +3,7 @@ import { RATING_LABELS, RATING_TOOLTIPS, HUB_LABELS, StationRatings, getGoogleMa
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
+import FeedbackWidget from '@/components/FeedbackWidget';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import StationRadarChart from '@/components/RadarChart';
@@ -303,6 +304,8 @@ export default async function StationPage({
             </p>
           </section>
         )}
+
+        <FeedbackWidget stationSlug={slug} source="station_page" />
       </main>
     </div>
   );
