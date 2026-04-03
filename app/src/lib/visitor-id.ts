@@ -11,7 +11,6 @@ export function getVisitorId(): string {
     }
     return id;
   } catch {
-    window.umami?.track('error', { category: 'storage', key: STORAGE_KEY });
     return crypto.randomUUID();
   }
 }
