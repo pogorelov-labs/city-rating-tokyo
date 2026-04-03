@@ -209,7 +209,7 @@ export default async function StationPage({
         )}
 
         {/* Feedback */}
-        <FeedbackWidget stationSlug={slug} source="station_page" />
+        <FeedbackWidget stationSlug={slug} stationName={station.name_en} source="station_page" />
 
         {/* Image gallery */}
         {images.length > 0 && (
