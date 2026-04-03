@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://tokyo.ruslan.dev',
+  siteUrl: process.env.SITE_URL || 'https://city-rating.pogorelov.dev',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'weekly',
