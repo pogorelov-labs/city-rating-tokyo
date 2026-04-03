@@ -9,7 +9,7 @@ interface GalleryImage {
   attribution?: string;
   photographer?: string;
   photographer_url?: string;
-  source?: 'wikimedia' | 'unsplash';
+  source?: 'wikimedia' | 'unsplash' | 'flickr';
 }
 
 interface ImageGalleryProps {

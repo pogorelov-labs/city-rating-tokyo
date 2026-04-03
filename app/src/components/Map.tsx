@@ -74,7 +74,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         if (heatmapMode && station.ratings) {
           displayValue = heatmapDimension === 'composite'
             ? score
-            : (station.ratings as Record<string, number>)[heatmapDimension] ?? null;
+            : (station.ratings as unknown as Record<string, number>)[heatmapDimension] ?? null;
         }
 
         const color = heatmapMode
