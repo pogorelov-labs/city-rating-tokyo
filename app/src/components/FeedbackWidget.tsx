@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { getVisitorId } from '@/lib/visitor-id';
+import { trackError } from '@/lib/track-error';
 
 interface FeedbackWidgetProps {
   stationSlug?: string;
@@ -47,9 +48,11 @@ export default function FeedbackWidget({ stationSlug, source }: FeedbackWidgetPr
         localStorage.setItem(storageKey(stationSlug), '1');
         setPhase('done');
       } else {
+        trackError('fetch', { endpoint: '/api/feedback', status: String(res.status) });
         setPhase('error');
       }
     } catch {
+      trackError('fetch', { endpoint: '/api/feedback', status: 'network' });
       setPhase('error');
     }
   }, [stationSlug, source]);

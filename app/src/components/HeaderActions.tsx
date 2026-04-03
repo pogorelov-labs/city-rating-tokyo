@@ -19,9 +19,13 @@ export default function HeaderActions({ stations }: Props) {
   const handleShare = async () => {
     const state = useAppStore.getState();
     const url = buildShareUrl(state);
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.umami?.track('error', { category: 'clipboard' });
+    }
   };
 
   return (
