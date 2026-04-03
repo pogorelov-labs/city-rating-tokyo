@@ -2,7 +2,7 @@
 
 Interactive map-based tool that helps expats and foreign residents find the perfect neighborhood in Greater Tokyo. Explore **274 train stations** rated across 9 dimensions — from food and nightlife to safety and commute times.
 
-**Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev)
+**Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)
 
 ## What It Does
 
