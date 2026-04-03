@@ -25,16 +25,16 @@ for (const s of stations) {
 export default function Home() {
   return (
     <div className="flex flex-col h-screen">
-      <header className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-white shrink-0">
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">
+      <header className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-white shrink-0 min-w-0">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="text-xl font-bold tracking-tight truncate">
             Tokyo Neighborhood Explorer
           </span>
-          <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
+          <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium shrink-0">
             BETA
           </span>
         </div>
-        <div className="flex items-center gap-3 text-sm text-gray-500">
+        <div className="flex items-center gap-3 text-sm text-gray-500 shrink-0">
           <HeaderActions stations={stations} />
           <span>{stations.length} stations</span>
           <a
