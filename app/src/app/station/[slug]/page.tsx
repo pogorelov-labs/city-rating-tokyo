@@ -3,6 +3,7 @@ import { RATING_LABELS, RATING_TOOLTIPS, HUB_LABELS, StationRatings, getGoogleMa
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
+import FeedbackWidget from '@/components/FeedbackWidget';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
@@ -11,11 +12,13 @@ import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import stationImages from '@/data/station-images.json';
 import stationImagesUnsplash from '@/data/station-images-unsplash.json';
+import stationImagesFlickr from '@/data/station-images-flickr.json';
 import stationPlaces from '@/data/station-places.json';
 
-type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: 'wikimedia' | 'unsplash' };
+type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: 'wikimedia' | 'unsplash' | 'flickr' };
 const imageData = stationImages as Record<string, ImageEntry[]>;
 const unsplashData = stationImagesUnsplash as Record<string, ImageEntry[]>;
+const flickrData = stationImagesFlickr as Record<string, ImageEntry[]>;
 import type { StationPlace } from '@/lib/types';
 const placesData = stationPlaces as Record<string, StationPlace[]>;
 
@@ -63,7 +66,8 @@ export default async function StationPage({
   const mapsUrl = getGoogleMapsAreaUrl(station.lat, station.lng);
   const wikiImages = (imageData[slug] || []).map(img => ({ ...img, source: 'wikimedia' as const }));
   const uImages = (unsplashData[slug] || []).map(img => ({ ...img, source: 'unsplash' as const }));
-  const images = [...wikiImages, ...uImages];
+  const fImages = (flickrData[slug] || []).map(img => ({ ...img, source: 'flickr' as const }));
+  const images = [...fImages, ...uImages, ...wikiImages];
   const places = placesData[slug] || [];
 
   const jsonLd = {
@@ -99,6 +103,7 @@ export default async function StationPage({
           <Link
             href="/"
             className="text-sm text-blue-600 hover:underline flex items-center gap-1"
+            data-umami-event="back-to-map"
           >
             &larr; Map
           </Link>
@@ -111,6 +116,8 @@ export default async function StationPage({
             rel="noopener noreferrer"
             className="text-xs text-blue-600 hover:underline flex items-center gap-1"
             title="Open in Google Maps"
+            data-umami-event="open-google-maps"
+            data-umami-event-station={slug}
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -200,6 +207,9 @@ export default async function StationPage({
             </section>
           </div>
         )}
+
+        {/* Feedback */}
+        <FeedbackWidget stationSlug={slug} stationName={station.name_en} source="station_page" />
 
         {/* Image gallery */}
         {images.length > 0 && (
@@ -297,6 +307,7 @@ export default async function StationPage({
             </p>
           </section>
         )}
+
       </main>
     </div>
   );
