@@ -55,6 +55,18 @@ export interface Station {
   description?: StationDescription | null;
 }
 
+/** Lightweight station data for the homepage map & filter panel */
+export interface MapStation {
+  slug: string;
+  name_en: string;
+  name_jp: string;
+  lat: number;
+  lng: number;
+  line_count: number;
+  ratings: StationRatings | null;
+  rent_1k: number | null;
+}
+
 export interface WeightConfig {
   food: number;
   nightlife: number;

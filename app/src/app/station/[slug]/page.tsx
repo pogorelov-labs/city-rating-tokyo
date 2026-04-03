@@ -5,7 +5,7 @@ import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import StationRadarChart from '@/components/RadarChart';
+import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
@@ -165,7 +165,7 @@ export default async function StationPage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <section className="bg-white rounded-lg border border-gray-200 p-5">
               <h2 className="font-bold text-lg mb-2">Overview</h2>
-              <StationRadarChart ratings={station.ratings} />
+              <RadarChartWrapper ratings={station.ratings} />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">
               <h2 className="font-bold text-lg mb-4">Ratings</h2>

@@ -10,7 +10,7 @@ import {
   useMap,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Station, WeightConfig } from '@/lib/types';
+import { MapStation, WeightConfig } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import Link from 'next/link';
@@ -24,7 +24,7 @@ function FlyToStation({ lat, lng }: { lat: number; lng: number }) {
 }
 
 interface MapViewProps {
-  stations: Station[];
+  stations: MapStation[];
   thumbnails?: Record<string, string>;
   snippets?: Record<string, string>;
 }
@@ -131,8 +131,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                   )}
                   <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
                     {station.line_count} lines
-                    {station.rent_avg?.['1k_1ldk'] && (
-                      <> · ~¥{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k/mo</>
+                    {station.rent_1k && (
+                      <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
                     )}
                   </div>
                   <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
@@ -159,9 +159,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     <div className="text-xs text-gray-500 mb-2">
                       {station.line_count} lines
                     </div>
-                    {station.rent_avg?.['1k_1ldk'] && (
+                    {station.rent_1k && (
                       <div className="text-xs">
-                        Rent: ~&yen;{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k/mo
+                        Rent: ~&yen;{(station.rent_1k / 1000).toFixed(0)}k/mo
                       </div>
                     )}
                     <Link

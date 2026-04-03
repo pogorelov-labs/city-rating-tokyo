@@ -1,25 +1,11 @@
-import { getStations } from '@/lib/data';
+import { getMapStations, getThumbnails, getSnippets } from '@/lib/data';
 import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
 import MobileDrawer from '@/components/MobileDrawer';
-import stationImages from '@/data/station-images.json';
 
-const imageData = stationImages as Record<string, { url: string; alt: string }[]>;
-
-const stations = getStations();
-
-// Pre-compute thumbnail URLs and atmosphere snippets for map hover
-const stationThumbnails: Record<string, string> = {};
-const stationSnippets: Record<string, string> = {};
-for (const s of stations) {
-  const imgs = imageData[s.slug];
-  if (imgs?.[0]) stationThumbnails[s.slug] = imgs[0].url;
-  if (s.description?.atmosphere) {
-    stationSnippets[s.slug] = s.description.atmosphere.length > 120
-      ? s.description.atmosphere.slice(0, 120) + '...'
-      : s.description.atmosphere;
-  }
-}
+const stations = getMapStations();
+const thumbnails = getThumbnails();
+const snippets = getSnippets();
 
 export default function Home() {
   return (
@@ -54,8 +40,8 @@ export default function Home() {
         <main className="flex-1 relative">
           <MapWrapper
             stations={stations}
-            thumbnails={stationThumbnails}
-            snippets={stationSnippets}
+            thumbnails={thumbnails}
+            snippets={snippets}
           />
           <MobileDrawer stations={stations} />
         </main>

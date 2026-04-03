@@ -2,11 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
-import { RATING_LABELS, RATING_TOOLTIPS, WeightConfig, Station } from '@/lib/types';
+import { RATING_LABELS, RATING_TOOLTIPS, WeightConfig, MapStation } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 
 interface FilterPanelProps {
-  stations: Station[];
+  stations: MapStation[];
 }
 
 export default function FilterPanel({ stations }: FilterPanelProps) {
