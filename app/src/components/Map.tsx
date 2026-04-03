@@ -119,6 +119,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                   <img
                     src={thumb}
                     alt={station.name_en}
+                    onError={() => window.umami?.track('error', { category: 'image', station: station.slug, context: 'tooltip' })}
                     style={{
                       width: '100%',
                       height: 100,

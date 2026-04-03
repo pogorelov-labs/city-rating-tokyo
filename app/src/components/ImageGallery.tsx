@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { trackError } from '@/lib/track-error';
 
 interface GalleryImage {
   url: string;
@@ -36,7 +37,7 @@ function GalleryImageCard({
         src={image.url}
         alt={image.alt}
         loading="lazy"
-        onError={() => setFailed(true)}
+        onError={() => { setFailed(true); trackError('image', { src: image.url, context: 'gallery' }); }}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 py-1">
@@ -97,6 +98,7 @@ function Lightbox({
         alt={image.alt}
         className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
         onClick={(e) => e.stopPropagation()}
+        onError={() => trackError('image', { src: image.url, context: 'lightbox' })}
       />
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
         {image.alt}
