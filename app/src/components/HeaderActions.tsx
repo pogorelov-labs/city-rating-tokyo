@@ -54,7 +54,7 @@ export default function HeaderActions({ stations }: Props) {
       </button>
 
       {feedbackOpen && createPortal(
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
           <div
             className="absolute inset-0 bg-black/40"
             onClick={() => setFeedbackOpen(false)}
@@ -78,7 +78,7 @@ export default function HeaderActions({ stations }: Props) {
       )}
 
       {scatterOpen && createPortal(
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
           <div
             className="absolute inset-0 bg-black/40"
             onClick={() => setScatterOpen(false)}
