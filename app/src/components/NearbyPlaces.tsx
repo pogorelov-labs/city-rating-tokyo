@@ -66,6 +66,8 @@ export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPl
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-blue-600 hover:underline"
+                        data-umami-event="open-place"
+                        data-umami-event-category={category}
                       >
                         {place.name}
                       </a>
@@ -78,6 +80,8 @@ export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPl
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-7 text-xs text-gray-500 hover:text-blue-600 hover:underline inline-flex items-center gap-1"
+                data-umami-event="find-more"
+                data-umami-event-category={category}
               >
                 Find more on Google Maps
                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

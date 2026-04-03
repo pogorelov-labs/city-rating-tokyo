@@ -1,4 +1,4 @@
-import { Station, StationRatings, WeightConfig } from './types';
+import { Station, MapStation, StationRatings, WeightConfig } from './types';
 
 export function calculateWeightedScore(
   ratings: StationRatings,
@@ -32,6 +32,12 @@ export function scoreToColor(score: number): string {
   const r = Math.round(220 - (t - 0.5) * 2 * 170);
   const g = Math.round(200 + (t - 0.5) * 2 * 40);
   return `rgb(${r}, ${g}, 50)`;
+}
+
+export function getAxisValue(station: MapStation, axis: string): number | null {
+  if (axis === 'rent_1k') return station.rent_1k;
+  if (axis === 'min_transit') return station.min_transit;
+  return (station.ratings as Record<string, number> | null)?.[axis] ?? null;
 }
 
 export function filterStations(
