@@ -2,14 +2,14 @@
 
 import { useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
-import { Station, RATING_LABELS, WeightConfig } from '@/lib/types';
+import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
 
 interface Props {
-  stations: Station[];
+  stations: MapStation[];
 }
 
 export default function ComparePanel({ stations }: Props) {
@@ -21,7 +21,7 @@ export default function ComparePanel({ stations }: Props) {
   const compared = useMemo(() => {
     return compareStations
       .map((slug) => stations.find((s) => s.slug === slug))
-      .filter((s): s is Station => s !== undefined && s.ratings !== null);
+      .filter((s): s is MapStation => s !== undefined && s.ratings !== null);
   }, [compareStations, stations]);
 
   if (compared.length < 2) return null;
@@ -115,7 +115,7 @@ export default function ComparePanel({ stations }: Props) {
                   <td className="py-1 pr-2 text-gray-500">Rent (1K)</td>
                   {compared.map((s, i) => (
                     <td key={i} className="text-right py-1 px-2 tabular-nums">
-                      {s.rent_avg?.['1k_1ldk'] ? `¥${(s.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k` : '-'}
+                      {s.rent_1k ? `¥${(s.rent_1k / 1000).toFixed(0)}k` : '-'}
                     </td>
                   ))}
                 </tr>

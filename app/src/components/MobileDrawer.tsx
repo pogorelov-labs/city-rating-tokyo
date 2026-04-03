@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Station } from '@/lib/types';
+import { MapStation } from '@/lib/types';
 import FilterPanel from './FilterPanel';
 
 interface MobileDrawerProps {
-  stations: Station[];
+  stations: MapStation[];
 }
 
 export default function MobileDrawer({ stations }: MobileDrawerProps) {

@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { Station } from '@/lib/types';
+import { MapStation } from '@/lib/types';
 import MapControls from './MapControls';
 import ComparePanel from './ComparePanel';
 import UrlSync from './UrlSync';
@@ -16,7 +16,7 @@ const MapView = dynamic(() => import('./Map'), {
 });
 
 interface MapWrapperProps {
-  stations: Station[];
+  stations: MapStation[];
   thumbnails?: Record<string, string>;
   snippets?: Record<string, string>;
 }

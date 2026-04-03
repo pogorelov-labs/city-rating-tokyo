@@ -10,12 +10,12 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { Station, SCATTER_AXIS_OPTIONS } from '@/lib/types';
+import { MapStation, SCATTER_AXIS_OPTIONS } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { calculateWeightedScore, scoreToColor, getAxisValue } from '@/lib/scoring';
 
 interface Props {
-  stations: Station[];
+  stations: MapStation[];
 }
 
 export default function ScatterPlotExplorer({ stations }: Props) {
