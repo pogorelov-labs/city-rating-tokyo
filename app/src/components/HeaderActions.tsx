@@ -2,14 +2,14 @@
 
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Station } from '@/lib/types';
+import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { buildShareUrl } from '@/lib/url-state';
 import ScatterPlotExplorer from './ScatterPlotExplorer';
 import FeedbackWidget from './FeedbackWidget';
 
 interface Props {
-  stations: Station[];
+  stations: MapStation[];
 }
 
 export default function HeaderActions({ stations }: Props) {
