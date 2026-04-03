@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Station } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { buildShareUrl } from '@/lib/url-state';
@@ -52,7 +53,7 @@ export default function HeaderActions({ stations }: Props) {
         Feedback
       </button>
 
-      {feedbackOpen && (
+      {feedbackOpen && createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div
             className="absolute inset-0 bg-black/40"
@@ -72,10 +73,11 @@ export default function HeaderActions({ stations }: Props) {
             </div>
             <FeedbackWidget source="general" />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
-      {scatterOpen && (
+      {scatterOpen && createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div
             className="absolute inset-0 bg-black/40"
@@ -95,7 +97,8 @@ export default function HeaderActions({ stations }: Props) {
             </div>
             <ScatterPlotExplorer stations={stations} />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
