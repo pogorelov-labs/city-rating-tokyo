@@ -9,7 +9,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Cell,
 } from 'recharts';
 import { Station, SCATTER_AXIS_OPTIONS } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
@@ -88,11 +87,7 @@ export default function ScatterPlotExplorer({ stations }: Props) {
               );
             }}
           />
-          <Scatter data={data} fill="#3b82f6">
-            {data.map((entry, i) => (
-              <Cell key={i} fill={entry.fill} fillOpacity={0.7} />
-            ))}
-          </Scatter>
+          <Scatter data={data} fillOpacity={0.7} />
         </ScatterChart>
       </ResponsiveContainer>
     </div>
