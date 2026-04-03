@@ -3,6 +3,7 @@ import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
 import MobileDrawer from '@/components/MobileDrawer';
 import HeaderActions from '@/components/HeaderActions';
+import FeedbackWidget from '@/components/FeedbackWidget';
 
 const stations = getMapStations();
 const thumbnails = getThumbnails();
@@ -37,6 +38,9 @@ export default function Home() {
       <div className="flex flex-1 overflow-hidden">
         <aside className="hidden md:block w-72 border-r border-gray-200 bg-white overflow-y-auto shrink-0">
           <FilterPanel stations={stations} />
+          <div className="p-3 border-t border-gray-200">
+            <FeedbackWidget source="general" />
+          </div>
         </aside>
 
         <main className="flex-1 relative">
