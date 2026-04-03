@@ -10,6 +10,7 @@ import StationRadarChart from '@/components/RadarChart';
 import Tooltip from '@/components/Tooltip';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
+import FeedbackForm from '@/components/FeedbackForm';
 import stationImages from '@/data/station-images.json';
 import stationImagesUnsplash from '@/data/station-images-unsplash.json';
 import stationImagesFlickr from '@/data/station-images-flickr.json';
@@ -207,6 +208,9 @@ export default async function StationPage({
             </section>
           </div>
         )}
+
+        {/* Feedback form */}
+        <FeedbackForm stationName={station.name_en} />
 
         {/* Image gallery */}
         {images.length > 0 && (
