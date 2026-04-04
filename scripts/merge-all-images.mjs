@@ -36,7 +36,6 @@ function loadJson(path) {
 // Load all sources (priority order: first = highest)
 const sources = [
   { name: 'flickr-existing', data: loadJson(new URL('../app/src/data/station-images-flickr.json', import.meta.url)) },
-  { name: 'flickr-search', data: loadJson('/tmp/station-images-flickr-search.json') },
   { name: 'wiki-selfhosted', data: loadJson('/tmp/station-images-wiki-selfhosted.json') },
   { name: 'wiki-geo', data: loadJson('/tmp/station-images-wiki-geo.json') },
 ];

@@ -20,11 +20,12 @@ import { createWriteStream } from 'fs';
 
 const IMAGE_DIR = process.env.IMAGE_DIR || '/tmp/station-images-download';
 const IMAGE_HOST = process.env.IMAGE_HOST || 'https://img.pogorelov.dev';
-const MIN_IMAGES = parseInt(process.env.MIN_IMAGES || '3', 10);
-const DELAY_MS = 150;
+const MIN_IMAGES = parseInt(process.env.MIN_IMAGES || '0', 10); // 0 = search ALL stations
+const DELAY_MS = 500; // Wikimedia rate limits, be respectful
+const BACKOFF_MS = 5000;
 const CHECKPOINT_EVERY = 50;
 const TARGET_PER_STATION = 6;
-const SEARCH_RADIUS = 1000; // meters
+const SEARCH_RADIUS = 1500; // meters — wider radius for better coverage
 
 const UA = 'CityRatingTokyo/1.0 (https://github.com/ruspg/city-rating)';
 
@@ -81,6 +82,14 @@ async function geoSearch(lat, lng) {
     `&gsnamespace=6&gslimit=50&format=json`;
 
   const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (res.status === 429) {
+    console.log(`    [429 rate limited, backing off ${BACKOFF_MS}ms]`);
+    await new Promise(r => setTimeout(r, BACKOFF_MS));
+    const retry = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (!retry.ok) return [];
+    const data = await retry.json();
+    return data.query?.geosearch || [];
+  }
   if (!res.ok) return [];
   const data = await res.json();
   return data.query?.geosearch || [];
@@ -95,7 +104,11 @@ async function getImageInfo(titles) {
     `&prop=imageinfo&iiprop=url|size|extmetadata|mime` +
     `&iiurlwidth=1280&format=json`;
 
-  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  let res = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (res.status === 429) {
+    await new Promise(r => setTimeout(r, BACKOFF_MS));
+    res = await fetch(url, { headers: { 'User-Agent': UA } });
+  }
   if (!res.ok) return [];
   const data = await res.json();
   const pages = data.query?.pages || {};

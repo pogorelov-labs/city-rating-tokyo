@@ -29,18 +29,8 @@ echo "=== Phase 1: Wikimedia download ==="
 node scripts/download-wiki-to-vps.mjs
 echo ""
 
-# Phase 2: Flickr API search (requires FLICKR_API_KEY)
-if [ -n "${FLICKR_API_KEY:-}" ]; then
-  echo "=== Phase 2: Flickr geo search ==="
-  node scripts/flickr-geo-search.mjs
-  echo ""
-else
-  echo "=== Phase 2: SKIPPED (no FLICKR_API_KEY) ==="
-  echo ""
-fi
-
-# Phase 3: Wikimedia geo search (fill gaps)
-echo "=== Phase 3: Wikimedia geo search ==="
+# Phase 2: Wikimedia geo search (main coverage source — all 1,493 stations)
+echo "=== Phase 2: Wikimedia geo search ==="
 node scripts/fetch-wiki-geo.mjs
 echo ""
 
@@ -49,10 +39,6 @@ echo "=== Moving images to nginx volume ==="
 if [ -d "$IMAGE_DIR/wiki" ]; then
   rsync -a "$IMAGE_DIR/wiki/" "$NGINX_VOLUME/wiki/"
   echo "  wiki/ synced"
-fi
-if [ -d "$IMAGE_DIR/flickr-search" ]; then
-  rsync -a "$IMAGE_DIR/flickr-search/" "$NGINX_VOLUME/flickr-search/"
-  echo "  flickr-search/ synced"
 fi
 if [ -d "$IMAGE_DIR/wiki-geo" ]; then
   rsync -a "$IMAGE_DIR/wiki-geo/" "$NGINX_VOLUME/wiki-geo/"
