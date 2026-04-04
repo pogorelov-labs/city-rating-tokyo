@@ -21,8 +21,8 @@ import { createWriteStream } from 'fs';
 const IMAGE_DIR = process.env.IMAGE_DIR || '/tmp/station-images-download';
 const IMAGE_HOST = process.env.IMAGE_HOST || 'https://img.pogorelov.dev';
 const MIN_IMAGES = parseInt(process.env.MIN_IMAGES || '0', 10); // 0 = search ALL stations
-const DELAY_MS = 500; // Wikimedia rate limits, be respectful
-const BACKOFF_MS = 5000;
+const DELAY_MS = 1000; // Wikimedia rate limits, be respectful
+const BACKOFF_MS = 10000;
 const CHECKPOINT_EVERY = 50;
 const TARGET_PER_STATION = 6;
 const SEARCH_RADIUS = 1500; // meters — wider radius for better coverage
@@ -57,15 +57,17 @@ const metadata = existsSync(outputMetaPath)
   : {};
 
 function countImages(slug) {
-  return (existingWiki[slug]?.length || 0) +
-    (existingFlickr[slug]?.length || 0) +
+  // Only count self-hosted images (not external URLs from existingWiki)
+  return (existingFlickr[slug]?.length || 0) +
     (wikiSelfhosted[slug]?.length || 0) +
     (flickrSearch[slug]?.length || 0) +
     (metadata[slug]?.length || 0);
 }
 
-// Find stations that still need images
-const pendingStations = stations.filter(s => countImages(s.slug) < MIN_IMAGES);
+// Find stations that still need images (MIN_IMAGES=0 means search ALL)
+const pendingStations = MIN_IMAGES === 0
+  ? stations
+  : stations.filter(s => countImages(s.slug) < MIN_IMAGES);
 
 console.log(`Total stations: ${stations.length}`);
 console.log(`Stations with < ${MIN_IMAGES} images: ${pendingStations.length}`);

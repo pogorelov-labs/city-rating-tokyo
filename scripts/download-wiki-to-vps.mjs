@@ -20,8 +20,8 @@ import { createWriteStream } from 'fs';
 const IMAGE_DIR = process.env.IMAGE_DIR || '/tmp/station-images-download';
 const IMAGE_HOST = process.env.IMAGE_HOST || 'https://img.pogorelov.dev';
 const CHECKPOINT_EVERY = 50;
-const DELAY_MS = 500; // Wikimedia rate limits aggressively, be respectful
-const BACKOFF_MS = 5000; // Wait on 429
+const DELAY_MS = 1000; // Wikimedia rate limits aggressively, be respectful
+const BACKOFF_MS = 10000; // Wait on 429
 
 const wikiImagesPath = new URL('../app/src/data/station-images.json', import.meta.url);
 const outputMetaPath = '/tmp/station-images-wiki-selfhosted.json';
@@ -118,32 +118,13 @@ for (const slug of pendingSlugs) {
       continue;
     }
 
-    // Quick HEAD check on original URL first to skip broken URLs fast
-    let urlValid = false;
-    try {
-      const headRes = await fetch(img.url, {
-        method: 'HEAD',
-        headers: { 'User-Agent': 'CityRatingTokyo/1.0 (https://github.com/ruspg/city-rating; contact@pogorelov.dev)' },
-        redirect: 'follow',
-      });
-      urlValid = headRes.ok;
-      if (headRes.status === 429) {
-        await new Promise(r => setTimeout(r, BACKOFF_MS));
-        urlValid = true; // Assume valid, let download retry
-      }
-    } catch { /* skip */ }
-
-    if (!urlValid) {
-      errors++;
-      continue;
-    }
-
+    // Skip HEAD check — just try downloading directly to reduce request count
     const urlsToTry = getLargerUrls(img.url);
     let ok = false;
     for (const tryUrl of urlsToTry) {
       ok = await downloadImage(tryUrl, destFile);
       if (ok) break;
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, DELAY_MS));
     }
 
     if (ok) {
