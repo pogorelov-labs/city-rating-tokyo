@@ -156,7 +156,7 @@ export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
   food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
   nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',
   transport: 'Number of train lines, frequency, connections to major hubs, and overall commute convenience',
-  rent: 'Affordability of rent (inverted: 10 = cheapest ~\u00a570-80k/mo, 1 = most expensive ~\u00a5170k+)',
+  rent: 'Affordability based on actual rent data (1K-1LDK). 10 = cheapest (~\u00a570k/mo), 1 = most expensive (~\u00a5300k+)',
   safety: 'Overall neighborhood safety: crime rates, street lighting, family-friendliness, late-night comfort',
   green: 'Parks, gardens, riverside walks, green spaces, and nature within 15 min walk',
   gym_sports: 'Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby',

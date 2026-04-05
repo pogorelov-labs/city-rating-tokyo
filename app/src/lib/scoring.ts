@@ -1,4 +1,19 @@
-import { Station, MapStation, StationRatings, WeightConfig } from './types';
+import { Station, MapStation, StationRatings, WeightConfig, RentAvg } from './types';
+
+const RENT_FLOOR = 70_000;
+const RENT_CEILING = 300_000;
+
+/**
+ * Derive Affordability score (1-10) from actual rent data.
+ * Inverted scale: cheapest → 10, most expensive → 1.
+ * Uses 1K-1LDK as primary, falls back to 2LDK.
+ */
+export function rentToAffordability(rentAvg: RentAvg): number | null {
+  const rent = rentAvg['1k_1ldk'] ?? rentAvg['2ldk'];
+  if (rent == null) return null;
+  const t = Math.max(0, Math.min(1, (rent - RENT_FLOOR) / (RENT_CEILING - RENT_FLOOR)));
+  return Math.round(10 - 9 * t);
+}
 
 export function calculateWeightedScore(
   ratings: StationRatings,

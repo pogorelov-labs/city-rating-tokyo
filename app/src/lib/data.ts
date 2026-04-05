@@ -3,6 +3,7 @@ import { DEMO_RATINGS } from '@/data/demo-ratings';
 import rentData from '@/data/rent-averages.json';
 import stationImagesData from '@/data/station-images.json';
 import { Station, MapStation, RentAvg } from './types';
+import { rentToAffordability } from './scoring';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
 const imageData = stationImagesData as Record<string, { url: string; alt: string }[]>;
@@ -17,10 +18,16 @@ export function getStations(): Station[] {
       ? { '1k_1ldk': rent['1k_1ldk'], '2ldk': rent['2ldk'], source: 'suumo', updated: rent.updated }
       : demo?.rent_avg || null;
 
+    // Derive affordability score from real rent data when available
+    const computedRent = rentAvg ? rentToAffordability(rentAvg) : null;
+
     if (demo) {
+      const ratings = computedRent != null
+        ? { ...demo.ratings, rent: computedRent }
+        : demo.ratings;
       return {
         ...s,
-        ratings: demo.ratings,
+        ratings,
         transit_minutes: demo.transit_minutes,
         rent_avg: rentAvg,
         description: demo.description || null,
