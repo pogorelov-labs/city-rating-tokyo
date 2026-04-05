@@ -1,0 +1,283 @@
+# Vision: Data-Driven Transparent Ratings
+
+## Philosophy
+
+Три слоя, снизу вверх:
+
+```
+┌─────────────────────────────────────────────┐
+│  3. UI: Transparency & Trust                │  ← объясняем пользователю
+│     Tooltips, confidence badges, data        │
+│     sources, "why this score" explanations   │
+├─────────────────────────────────────────────┤
+│  2. Logic: Formulas over Data               │  ← нормализуем, взвешиваем
+│     log-percentile, crime weights,           │
+│     composite signals, minimal heuristics    │
+├─────────────────────────────────────────────┤
+│  1. Data: Real, Scraped, Verifiable         │  ← собираем побольше
+│     HotPepper API, OSM Overpass, Keishicho  │
+│     ArcGIS, MLIT, Nominatim, Suumo         │
+└─────────────────────────────────────────────┘
+```
+
+**Принцип**: Rating настолько хорош, насколько хороши данные под ним. Если данных нет — честно показать пользователю, а не спрятать за красивой цифрой.
+
+---
+
+## Layer 1: Data — побольше и из первоисточников
+
+### Текущее состояние данных
+
+| Категория | Источники | Записей | Покрытие | Реальные данные? |
+|-----------|----------|---------|----------|-----------------|
+| food | HotPepper API + OSM Overpass | 1493 + 1398 | 100% | ✅ Да |
+| nightlife | HP izakaya/bar/midnight + OSM bar/pub/karaoke | 1493 + building | 100% | ✅ Да |
+| transport | line_count + MLIT passengers | 1493 + 1409 | 100% | ✅ Да |
+| rent | Suumo scrape | 274 | 18% | ⚠️ Частично |
+| safety | Keishicho ArcGIS (Tokyo), ward-level (others) | 615 + 91 ward | ~45% | ⚠️ Частично |
+| green | OSM park count (area = 0 пока) | 1398 | 94% | ⚠️ Count без площади |
+| gym | OSM fitness/sports/pool | 1398 | 94% | ✅ Да |
+| vibe | OSM cultural venues (building) | building | 0%→100% | 🔄 Строится |
+| crowd | MLIT + hardcoded | 1409 | 94% | ✅ Да |
+
+### Принцип "Data First"
+
+Каждый рейтинг ДОЛЖЕН опираться на конкретные, проверяемые данные:
+
+- **Не**: "Shinjuku food = 9 потому что мы так решили"
+- **Да**: "Shinjuku food = 9 потому что в радиусе 800м: 794 ресторана в OSM + 2099 заведений на HotPepper, это top 0.3% из 1493 станций"
+
+### Что ещё нужно собрать
+
+| Что | Зачем | Источник | Приоритет | Ссылка |
+|-----|-------|----------|-----------|--------|
+| HP midnight_count | Nightlife: заведения после 23:00 | HotPepper API `midnight=1` | 🔴 high | [research/01-nightlife.md] |
+| OSM karaoke + cultural venues | Nightlife + Vibe | Overpass extended tags | 🔴 high | [research/01-nightlife.md], [research/06-vibe.md] |
+| Green area (sqm) | Green: площадь > count | Overpass `out geom` | 🔴 high | [research/04-green.md] |
+| LIFULL HOME'S rent | Rent: 18% → 80%+ | homes.co.jp/chintai/ | 🟡 medium | [research/05-rent.md] |
+| Nominatim ward mapping | Safety/Rent fallback для всех | Nominatim reverse geocode | 🟡 medium | [research/05-rent.md] |
+| Kanagawa/Saitama/Chiba crime | Safety для не-Токио | Prefectural police CSV | 🟡 medium | [research/02-safety.md] |
+| OSM green extended tags | Green: храмы, леса, реки | `landuse=religious\|forest` | 🟢 low | [research/04-green.md] |
+
+---
+
+## Layer 2: Logic — формулы поверх данных
+
+### Принципы нормализации
+
+1. **log-then-percentile** — для всех категорий с экстремально скошенным распределением (food, nightlife, crowd). Без log: медианная станция (24 ресторана) получает 5/10, а нужно 3-4.
+
+2. **Inverted для "меньше = лучше"** — rent (дешевле = выше), safety (меньше преступлений = выше), crowd (тише = выше).
+
+3. **Weighted crime score** — не все преступления одинаковы. Грабёж ×3, кража велосипеда ×0.3, мошенничество ×0.2. Подробности: [research/02-safety.md].
+
+4. **Daytime population adjustment** — Chiyoda-ku имеет 68k жителей ночью и 820k днём. Без коррекции rate = 711/10k (самый "опасный" район), с коррекцией = 59/10k (нормально). Применяем для commercial wards.
+
+5. **Множественные источники с весами** — food = 60% HotPepper + 40% OSM. Не один источник, а перекрёстная валидация. Корреляция HP↔OSM = 0.855.
+
+### Формулы по категориям
+
+См. [CLAUDE.md] — секция "Rating Formulas (v2, research-backed)" — полные формулы для всех 9 категорий.
+
+### Где остаются эвристики (и это нормально)
+
+| Место | Эвристика | Почему допустимо |
+|-------|----------|-----------------|
+| Transport | line_count как primary signal | Прямое измерение связности. Данные 100% точные. |
+| Rent fallback | ward_average для 82% станций | Внутри-ward дисперсия ~10% CV, приемлемо |
+| Crowd fallback | HP_total × 300 + line_count × 10000 | Только для 6% станций без MLIT данных |
+| Vibe | Composite из cultural venues + cafes + ped streets | Vibe субъективен. Cultural venue density — лучший из доступных proxy (25:1 дифференциация) |
+
+---
+
+## Layer 3: UI — прозрачность и доверие
+
+### Проблема сейчас
+
+Текущий UI показывает число 1-10 и цветную полоску. Пользователь не знает:
+- Откуда это число?
+- Насколько ему доверять?
+- Что за данные стоят за ним?
+- Когда обновлялись?
+
+Tooltip есть, но он описывает категорию ("Variety and quality of restaurants..."), а не данные ("794 restaurants in OSM + 2099 on HotPepper").
+
+### Предлагаемые улучшения
+
+#### 3.1 Confidence Badge на каждом рейтинге
+
+Рядом с числом — маленький индикатор уверенности:
+
+```
+Food & Dining     ████████░░  8   🟢
+Nightlife         ██████░░░░  6   🟡
+Safety            ████░░░░░░  4   🟡
+Vibe              ██████░░░░  6   ⚪ (no data for this station)
+```
+
+Три уровня:
+- 🟢 **Strong** — 2+ реальных источника, данные свежие (food, transport, gym для большинства)
+- 🟡 **Moderate** — 1 источник или ward-level данные (safety для не-Токио, rent с fallback)
+- ⚪ **Estimate** — нет прямых данных, используется формула/среднее (vibe для не-AI станций, rent для unmapped)
+
+#### 3.2 Data Tooltip — "Почему этот score?"
+
+При наведении на рейтинг или клике на "?" — не абстрактное описание, а конкретные данные:
+
+**Пример для food=8 (Nakano):**
+```
+Food & Dining: 8/10
+━━━━━━━━━━━━━━━━━━━━━━
+📊 Based on real data:
+   • 287 restaurants on HotPepper (top 15%)
+   • 143 food places in OpenStreetMap
+   • Percentile: better than 82% of stations
+
+📅 Data: April 2026
+📁 Sources: HotPepper Gourmet API, OpenStreetMap
+```
+
+**Пример для safety=7 (Suginami station):**
+```
+Safety: 7/10
+━━━━━━━━━━━━━━━━━━━━━━
+📊 Based on police data:
+   • Neighborhood: 杉並区阿佐谷南三丁目
+   • 75 crimes/year (weighted: 12 serious)
+   • Crime rate: 15.0 per 10k residents
+   • Safer than 74% of stations
+
+📅 Data: 2024 (Keishicho annual report)
+📁 Source: Tokyo Metropolitan Police ArcGIS
+🟢 Neighborhood-level data (high confidence)
+```
+
+**Пример для safety=5 (suburban Kanagawa, ward-level only):**
+```
+Safety: 5/10
+━━━━━━━━━━━━━━━━━━━━━━
+📊 Based on ward-level data:
+   • Ward: 横浜市中区
+   • Ward crime rate: 205.7 per 10k
+   • Average for 80% of stations
+
+⚠️ Ward-level only — actual neighborhood may differ
+📅 Data: 2024
+📁 Source: Kanagawa Prefectural Police
+🟡 Ward-level data (moderate confidence)
+```
+
+#### 3.3 Station Page — "How are ratings calculated?" section
+
+Отдельный раздел под рейтингами — раскрывающийся блок:
+
+```
+▸ How are ratings calculated?
+
+  All ratings are computed from real data: restaurant databases,
+  crime statistics, transit authorities, and OpenStreetMap.
+
+  We collect data from 6+ sources, normalize using statistical
+  percentiles across all 1,493 stations in Greater Tokyo, and
+  combine multiple signals per category.
+
+  Stations with hand-researched descriptions (like this one)
+  have human-verified ratings. Others are purely data-driven.
+
+  [See methodology →]
+```
+
+#### 3.4 Methodology Page (новая страница)
+
+`/methodology` — объясняет весь подход:
+
+- Data sources с ссылками (HotPepper, OSM, MLIT, Keishicho)
+- Формулы (упрощённо, без кода)
+- Confidence levels
+- Update frequency
+- Known limitations
+- Changelog
+
+#### 3.5 "This station is AI-researched" badge
+
+Для 272 станций с description — badge "Researched" или "Verified":
+```
+🔍 This station has been individually researched with detailed
+   neighborhood descriptions and verified ratings.
+```
+
+Для остальных — "Data-driven":
+```
+📊 Ratings computed from public data sources.
+   No individual review.
+```
+
+#### 3.6 Data freshness indicator
+
+На странице станции — мелким текстом:
+```
+Data updated: April 2026 · Sources: 6 · Confidence: high
+```
+
+#### 3.7 Radar Chart enhancement
+
+Сейчас radar chart одноцветный (синий). Можно:
+- Сделать оси разного цвета по confidence (strong = solid, estimate = dashed)
+- Или добавить second ring с "city average" для сравнения
+
+---
+
+## Roadmap: от данных к UI
+
+### Sprint 1: Data completion [текущий]
+**Задачи (Phase A-C из плана):**
+1. ~~HP midnight scrape~~ 🔄 running
+2. ~~OSM extended (karaoke, cultural, hostel)~~ 🔄 running
+3. ~~ArcGIS crime data~~ ✅ done (615 Tokyo stations)
+4. ~~MLIT passengers~~ ✅ done (1409 records)
+5. ~~Nominatim ward mapping~~ 🔄 running
+6. OSM green area re-scrape
+7. LIFULL HOME'S rent scrape
+8. Kanagawa/Saitama/Chiba crime CSV
+
+### Sprint 2: Compute pipeline rewrite [Phase D]
+**Задачи:**
+1. Rewrite compute-ratings.py с log-percentile + новыми формулами
+2. Include per-station metadata: sources used, data freshness, confidence level
+3. Export to demo-ratings.ts
+4. Spot-check + distribution validation
+
+### Sprint 3: UI transparency [Phase E+]
+**Задачи по категориям:**
+1. Confidence badge component
+2. Data-source tooltip (replace current generic tooltips)
+3. "How ratings work" expandable section on station page
+4. /methodology page
+5. AI-researched vs data-driven badge
+6. Data freshness indicator
+7. Radar chart confidence overlay (optional)
+
+---
+
+## Plane Issues to Create
+
+### Per-category data issues:
+- `MACWO-xxx` Nightlife: add HP midnight_count + karaoke OSM tags
+- `MACWO-xxx` Safety: integrate ArcGIS neighborhood crime + daytime population fix
+- `MACWO-xxx` Crowd: integrate MLIT S12 passenger data (done, needs compute)
+- `MACWO-xxx` Green: re-scrape with area calculation + extended tags
+- `MACWO-xxx` Rent: expand via LIFULL HOME'S + Nominatim ward mapping
+- `MACWO-xxx` Vibe: integrate cultural venue density from OSM
+
+### Compute pipeline issues:
+- `MACWO-xxx` Rewrite compute-ratings.py with log-percentile normalization
+- `MACWO-xxx` Add per-station confidence metadata to computed_ratings
+- `MACWO-xxx` Export with confidence + source metadata
+
+### UI issues:
+- `MACWO-xxx` Add confidence badges (🟢🟡⚪) next to each rating
+- `MACWO-xxx` Replace generic tooltips with data-source tooltips
+- `MACWO-xxx` Add "How ratings work" expandable section on station page
+- `MACWO-xxx` Create /methodology page with data sources + formulas
+- `MACWO-xxx` Add AI-researched vs data-driven station badge
+- `MACWO-xxx` Show data freshness on station page
