@@ -86,6 +86,41 @@ def format_ratings_entry(slug, data, rent_data=None):
 
     safe_slug = f"'{slug}'" if '-' in slug else slug
 
+    # Parse confidence and sources from JSON strings (stored in NocoDB)
+    conf = {}
+    srcs = {}
+    data_date = r.get("data_date", "2026-04")
+    if isinstance(r.get("confidence"), str):
+        try:
+            conf = json.loads(r["confidence"])
+        except (json.JSONDecodeError, TypeError):
+            pass
+    elif isinstance(r.get("confidence"), dict):
+        conf = r["confidence"]
+    if isinstance(r.get("sources"), str):
+        try:
+            srcs = json.loads(r["sources"])
+        except (json.JSONDecodeError, TypeError):
+            pass
+    elif isinstance(r.get("sources"), dict):
+        srcs = r["sources"]
+
+    # Format confidence object
+    cats = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]
+    conf_parts = [f"{c}: '{conf.get(c, 'estimate')}'" for c in cats]
+    conf_str = "{ " + ", ".join(conf_parts) + " }"
+
+    # Format sources object
+    srcs_parts = []
+    for c in cats:
+        s = srcs.get(c, [])
+        if isinstance(s, list):
+            arr = "[" + ", ".join(f"'{x}'" for x in s) + "]"
+        else:
+            arr = "[]"
+        srcs_parts.append(f"{c}: {arr}")
+    srcs_str = "{ " + ", ".join(srcs_parts) + " }"
+
     return (
         f"  {safe_slug}: {{\n"
         f"    ratings: {{ food: {r['food']}, nightlife: {r['nightlife']}, transport: {r['transport']}, "
@@ -94,6 +129,9 @@ def format_ratings_entry(slug, data, rent_data=None):
         f"    transit_minutes: {transit},\n"
         f"    rent_avg: {{ '1k_1ldk': {rent_1k}, '2ldk': {rent_2ldk}, "
         f"source: '{rent_source}', updated: '{rent_updated}' }},\n"
+        f"    confidence: {conf_str},\n"
+        f"    sources: {srcs_str},\n"
+        f"    data_date: '{data_date}',\n"
         f"  }},"
     )
 
@@ -163,12 +201,15 @@ def main():
     missing_count = 0
 
     parts = []
-    parts.append("import { StationRatings, TransitMinutes, RentAvg } from '@/lib/types';")
+    parts.append("import { StationRatings, TransitMinutes, RentAvg, StationConfidence, StationSources } from '@/lib/types';")
     parts.append("")
     parts.append("interface DemoData {")
     parts.append("  ratings: StationRatings;")
     parts.append("  transit_minutes: TransitMinutes;")
     parts.append("  rent_avg: RentAvg;")
+    parts.append("  confidence?: StationConfidence;")
+    parts.append("  sources?: StationSources;")
+    parts.append("  data_date?: string;")
     parts.append("  description?: {")
     parts.append("    atmosphere: string;")
     parts.append("    landmarks: string;")

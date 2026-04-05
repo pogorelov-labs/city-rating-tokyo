@@ -32,6 +32,32 @@ export interface StationDescription {
   nightlife: string;
 }
 
+export type ConfidenceLevel = 'strong' | 'moderate' | 'estimate';
+
+export interface StationConfidence {
+  food: ConfidenceLevel;
+  nightlife: ConfidenceLevel;
+  transport: ConfidenceLevel;
+  rent: ConfidenceLevel;
+  safety: ConfidenceLevel;
+  green: ConfidenceLevel;
+  gym_sports: ConfidenceLevel;
+  vibe: ConfidenceLevel;
+  crowd: ConfidenceLevel;
+}
+
+export interface StationSources {
+  food: string[];
+  nightlife: string[];
+  transport: string[];
+  rent: string[];
+  safety: string[];
+  green: string[];
+  gym_sports: string[];
+  vibe: string[];
+  crowd: string[];
+}
+
 export type PlaceCategory = 'gym' | 'mall' | 'park' | 'landmark' | 'cafe' | 'restaurant' | 'bar';
 
 export interface StationPlace {
@@ -53,6 +79,9 @@ export interface Station {
   rent_avg: RentAvg | null;
   transit_minutes: TransitMinutes | null;
   description?: StationDescription | null;
+  confidence?: StationConfidence | null;
+  sources?: StationSources | null;
+  data_date?: string | null;
 }
 
 /** Lightweight station data for the homepage map & filter panel */
