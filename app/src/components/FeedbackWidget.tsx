@@ -53,6 +53,7 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          vote: 'up',
           comment: comment.trim(),
           station_slug: stationSlug || undefined,
           page_url: window.location.pathname,
