@@ -146,20 +146,20 @@ export default async function StationPage({
           {station.rent_avg?.['1k_1ldk'] ? (
             <StatCard label="Rent">
               <div className="flex items-baseline gap-1">
-                <span className="text-xl font-bold">{'\u00a5'}{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k</span>
+                <span className="text-xl font-bold">¥{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k</span>
                 {station.rent_avg?.['2ldk'] && (
                   <>
-                    <span className="text-xs text-gray-400">{'\u2013'}</span>
+                    <span className="text-xs text-gray-400">–</span>
                     <span className="text-xl font-bold">{(station.rent_avg['2ldk'] / 1000).toFixed(0)}k</span>
                   </>
                 )}
               </div>
               <div className="text-xs text-gray-400">
-                {station.rent_avg?.['2ldk'] ? '1K\u20131LDK \u2192 2LDK / mo' : '1K\u20131LDK / mo'}
+                {station.rent_avg?.['2ldk'] ? '1K–1LDK → 2LDK / mo' : '1K–1LDK / mo'}
               </div>
             </StatCard>
           ) : (
-            <StatCard label="Rent" value="\u2014" sub="no data yet" />
+            <StatCard label="Rent" value="—" sub="no data yet" />
           )}
 
           {/* Avg to Center */}
@@ -170,11 +170,11 @@ export default async function StationPage({
               sub="to 5 major hubs"
             />
           ) : (
-            <StatCard label="Avg to Center" value="\u2014" sub="no data yet" />
+            <StatCard label="Avg to Center" value="—" sub="no data yet" />
           )}
 
           {/* Last Train — placeholder for Wave 4 */}
-          <StatCard label="Last Train" value="\u2014" sub="coming soon" />
+          <StatCard label="Last Train" value="—" sub="coming soon" />
         </div>
 
         {/* Hub breakdown strip */}
