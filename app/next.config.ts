@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' https://*.pogorelov.dev",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org",
+              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev",
               "connect-src 'self' https://*.pogorelov.dev",
               "font-src 'self'",
               "frame-ancestors 'none'",
