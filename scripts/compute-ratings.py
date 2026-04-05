@@ -356,6 +356,7 @@ def main():
 
     # ===== Build results =====
     categories = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]
+    data_date = date.today().strftime("%Y-%m")
     results = {}
     for slug in all_slugs:
         results[slug] = {
@@ -369,6 +370,9 @@ def main():
             "gym_sports": gym_ratings.get(slug, 5),
             "vibe": vibe_ratings.get(slug, 5),
             "crowd": crowd_ratings.get(slug, 5),
+            "confidence": json.dumps(confidence.get(slug, {})),
+            "sources": json.dumps(sources_used.get(slug, {})),
+            "data_date": data_date,
             "source": "computed_v2",
             "computed_at": date.today().isoformat(),
         }

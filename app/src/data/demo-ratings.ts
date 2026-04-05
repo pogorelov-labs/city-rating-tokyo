@@ -1,9 +1,12 @@
-import { StationRatings, TransitMinutes, RentAvg } from '@/lib/types';
+import { StationRatings, TransitMinutes, RentAvg, StationConfidence, StationSources } from '@/lib/types';
 
 interface DemoData {
   ratings: StationRatings;
   transit_minutes: TransitMinutes;
   rent_avg: RentAvg;
+  confidence?: StationConfidence;
+  sources?: StationSources;
+  data_date?: string;
   description?: {
     atmosphere: string;
     landmarks: string;
