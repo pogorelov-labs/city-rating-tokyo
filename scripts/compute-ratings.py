@@ -429,16 +429,16 @@ def main():
     db = NocoDB("computed_ratings")
 
     # Clear existing
-    existing = db.get_all_records(fields=["slug"])
+    existing = db.get_all_records(fields=["Id"])
     if existing:
         import requests as req
         for i in range(0, len(existing), 100):
             batch = existing[i:i + 100]
-            ids = [{"id": r.get("Id") or r.get("id")} for r in batch if r.get("Id") or r.get("id")]
+            ids = [{"Id": r["Id"]} for r in batch if r.get("Id")]
             if ids:
                 req.delete(f"{db.base_url}/records", headers=db.headers, json=ids)
 
-    # Insert
+    # Insert (includes confidence, sources, data_date columns)
     records = list(results.values())
     db.bulk_insert(records)
     print(f"Done! Wrote {len(records)} records.")
