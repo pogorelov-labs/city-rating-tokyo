@@ -1,5 +1,5 @@
 import { getStation, getStations } from '@/lib/data';
-import { RATING_LABELS, RATING_TOOLTIPS, HUB_LABELS, StationRatings, getGoogleMapsAreaUrl } from '@/lib/types';
+import { RATING_LABELS, RATING_TOOLTIPS, StationRatings, getGoogleMapsAreaUrl } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
@@ -10,6 +10,8 @@ import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
+import StatCard from '@/components/StatCard';
+import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
 import stationPlaces from '@/data/station-places.json';
 
@@ -131,34 +133,54 @@ export default async function StationPage({
 
       <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
         {/* Quick stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard
-            label="Lines"
-            value={`${station.line_count}`}
-            sub="train lines"
-          />
-          {station.rent_avg?.['1k_1ldk'] && (
-            <StatCard
-              label="Rent (1K-1LDK)"
-              value={`\u00a5${(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k`}
-              sub="per month"
-            />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {/* Transit card — lines + express placeholder */}
+          <StatCard label="Transit" sub="train lines">
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-xl font-bold">{station.line_count}</span>
+              <span className="text-sm text-gray-500">{station.line_count === 1 ? 'line' : 'lines'}</span>
+            </div>
+          </StatCard>
+
+          {/* Merged rent card */}
+          {station.rent_avg?.['1k_1ldk'] ? (
+            <StatCard label="Rent">
+              <div className="flex items-baseline gap-1">
+                <span className="text-xl font-bold">{'\u00a5'}{(station.rent_avg['1k_1ldk'] / 1000).toFixed(0)}k</span>
+                {station.rent_avg?.['2ldk'] && (
+                  <>
+                    <span className="text-xs text-gray-400">{'\u2013'}</span>
+                    <span className="text-xl font-bold">{(station.rent_avg['2ldk'] / 1000).toFixed(0)}k</span>
+                  </>
+                )}
+              </div>
+              <div className="text-xs text-gray-400">
+                {station.rent_avg?.['2ldk'] ? '1K\u20131LDK \u2192 2LDK / mo' : '1K\u20131LDK / mo'}
+              </div>
+            </StatCard>
+          ) : (
+            <StatCard label="Rent" value="\u2014" sub="no data yet" />
           )}
-          {station.rent_avg?.['2ldk'] && (
+
+          {/* Avg to Center */}
+          {station.transit_minutes ? (
             <StatCard
-              label="Rent (2LDK)"
-              value={`\u00a5${(station.rent_avg['2ldk']! / 1000).toFixed(0)}k`}
-              sub="per month"
+              label="Avg to Center"
+              value={`${Math.round(Object.values(station.transit_minutes).reduce((a, b) => a + b, 0) / Object.values(station.transit_minutes).length)} min`}
+              sub="to 5 major hubs"
             />
+          ) : (
+            <StatCard label="Avg to Center" value="\u2014" sub="no data yet" />
           )}
-          {station.transit_minutes && (
-            <StatCard
-              label="To Shinjuku"
-              value={`${station.transit_minutes.shinjuku} min`}
-              sub="by train"
-            />
-          )}
+
+          {/* Last Train — placeholder for Wave 4 */}
+          <StatCard label="Last Train" value="\u2014" sub="coming soon" />
         </div>
+
+        {/* Hub breakdown strip */}
+        {station.transit_minutes && (
+          <HubStrip transitMinutes={station.transit_minutes} mapsUrl={mapsUrl} />
+        )}
 
         {/* Radar chart + Ratings breakdown */}
         {station.ratings && (
@@ -209,41 +231,6 @@ export default async function StationPage({
           <ImageGallery images={images} stationName={station.name_en} />
         )}
 
-        {/* Transit times + Google Maps link */}
-        {station.transit_minutes && (
-          <section className="bg-white rounded-lg border border-gray-200 p-5">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="font-bold text-lg">Transit Times</h2>
-              <a
-                href={mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 hover:underline"
-              >
-                View on Google Maps &rarr;
-              </a>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-              {(
-                Object.entries(station.transit_minutes) as [
-                  keyof typeof station.transit_minutes,
-                  number,
-                ][]
-              ).map(([hub, minutes]) => (
-                <div
-                  key={hub}
-                  className="text-center p-3 bg-gray-50 rounded-lg"
-                >
-                  <div className="text-2xl font-bold">{minutes}</div>
-                  <div className="text-xs text-gray-500">min</div>
-                  <div className="text-sm font-medium mt-1">
-                    {HUB_LABELS[hub]}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
 
         {/* Nearby Places */}
         <NearbyPlaces
@@ -306,20 +293,3 @@ export default async function StationPage({
   );
 }
 
-function StatCard({
-  label,
-  value,
-  sub,
-}: {
-  label: string;
-  value: string;
-  sub: string;
-}) {
-  return (
-    <div className="bg-white rounded-lg border border-gray-200 p-4">
-      <div className="text-xs text-gray-500 mb-1">{label}</div>
-      <div className="text-xl font-bold">{value}</div>
-      <div className="text-xs text-gray-400">{sub}</div>
-    </div>
-  );
-}
