@@ -165,22 +165,6 @@
   ],
   "yokohama": [
     {
-      "url": "https://img.pogorelov.dev/wiki/yokohama/844d632b64c3.jpg",
-      "alt": "Yokohama - Yokohama",
-      "attribution": "Wikipedia",
-      "source": "wikimedia",
-      "license": "CC BY-SA",
-      "local_path": "wiki/yokohama/844d632b64c3.jpg"
-    },
-    {
-      "url": "https://img.pogorelov.dev/wiki/yokohama/50dca9dde178.jpg",
-      "alt": "Yokohama Station",
-      "attribution": "Wikipedia",
-      "source": "wikimedia",
-      "license": "CC BY-SA",
-      "local_path": "wiki/yokohama/50dca9dde178.jpg"
-    },
-    {
       "url": "https://img.pogorelov.dev/wiki-geo/yokohama/a57b1f77c978.jpg",
       "alt": "Driver's cab of Keikyu 1041 at Yokohama station",
       "attribution": "Hahifuheho\n\n This photo was taken with KDDI Sony Ericsson W64S",
@@ -5089,14 +5073,6 @@
       "local_path": "kinshicho/4148144220.jpg",
       "photographer": "indiepopclub",
       "flickr_url": "http://www.flickr.com/photos/44422292@N02/4148144220/"
-    },
-    {
-      "url": "https://img.pogorelov.dev/wiki/kinshicho/bd6ad1c89c2c.jpg",
-      "alt": "Kinshicho Station",
-      "attribution": "Wikipedia",
-      "source": "wikimedia",
-      "license": "CC BY-SA",
-      "local_path": "wiki/kinshicho/bd6ad1c89c2c.jpg"
     }
   ],
   "komagawa": [
@@ -5579,25 +5555,9 @@
       "local_path": "mizonokuchi/3122907692.jpg",
       "photographer": "teikan",
       "flickr_url": "http://www.flickr.com/photos/36866065@N00/3122907692/"
-    },
-    {
-      "url": "https://img.pogorelov.dev/wiki/mizonokuchi/2f5502b6bc12.jpg",
-      "alt": "Mizonokuchi area",
-      "attribution": "Wikimedia Commons",
-      "source": "wikimedia",
-      "license": "CC BY-SA",
-      "local_path": "wiki/mizonokuchi/2f5502b6bc12.jpg"
     }
   ],
   "motoyawata": [
-    {
-      "url": "https://img.pogorelov.dev/wiki/motoyawata/550aa213705e.jpg",
-      "alt": "Motoyawata Station",
-      "attribution": "Wikipedia",
-      "source": "wikimedia",
-      "license": "CC BY-SA",
-      "local_path": "wiki/motoyawata/550aa213705e.jpg"
-    },
     {
       "url": "https://img.pogorelov.dev/wiki-geo/motoyawata/e40057580c1b.jpg",
       "alt": "葛飾八幡宮（千葉県市川市）、お祭りで賑わう参道",
