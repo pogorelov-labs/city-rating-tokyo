@@ -86,24 +86,19 @@ def format_ratings_entry(slug, data, rent_data=None):
 
     safe_slug = f"'{slug}'" if '-' in slug else slug
 
-    # Parse confidence and sources from JSON strings (stored in NocoDB)
+    # Parse confidence and sources from NocoDB JSON string columns
     conf = {}
     srcs = {}
     data_date = r.get("data_date", "2026-04")
-    if isinstance(r.get("confidence"), str):
-        try:
-            conf = json.loads(r["confidence"])
-        except (json.JSONDecodeError, TypeError):
-            pass
-    elif isinstance(r.get("confidence"), dict):
-        conf = r["confidence"]
-    if isinstance(r.get("sources"), str):
-        try:
-            srcs = json.loads(r["sources"])
-        except (json.JSONDecodeError, TypeError):
-            pass
-    elif isinstance(r.get("sources"), dict):
-        srcs = r["sources"]
+    for field, target in [("confidence", conf), ("sources", srcs)]:
+        val = r.get(field)
+        if isinstance(val, str):
+            try:
+                target.update(json.loads(val))
+            except (json.JSONDecodeError, TypeError):
+                pass
+        elif isinstance(val, dict):
+            target.update(val)
 
     # Format confidence object
     cats = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]
