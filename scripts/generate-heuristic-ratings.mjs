@@ -99,19 +99,14 @@ for (const s of stations) {
     7
   );
 
-  // Rent affordability: based on actual rent data or distance
+  // Rent affordability: continuous linear interpolation matching scoring.ts rentToAffordability()
+  const RENT_FLOOR = 70000;
+  const RENT_CEILING = 300000;
   let rentRating;
-  if (rent && rent['1k_1ldk']) {
-    const r = rent['1k_1ldk'];
-    rentRating = clamp(
-      r > 150000 ? 2 :
-      r > 120000 ? 3 :
-      r > 100000 ? 4 :
-      r > 85000 ? 6 :
-      r > 70000 ? 7 :
-      r > 60000 ? 8 :
-      9
-    );
+  const rentVal = rent?.['1k_1ldk'] ?? rent?.['2ldk'] ?? null;
+  if (rentVal != null) {
+    const t = Math.max(0, Math.min(1, (rentVal - RENT_FLOOR) / (RENT_CEILING - RENT_FLOOR)));
+    rentRating = Math.round(10 - 9 * t);
   } else {
     rentRating = clamp(
       distFromCenter < 5 ? 3 :

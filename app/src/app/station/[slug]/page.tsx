@@ -12,15 +12,11 @@ import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
-import stationImages from '@/data/station-images.json';
-import stationImagesUnsplash from '@/data/station-images-unsplash.json';
-import stationImagesFlickr from '@/data/station-images-flickr.json';
+import stationImages from '@/data/station-images-all.json';
 import stationPlaces from '@/data/station-places.json';
 
-type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: 'wikimedia' | 'unsplash' | 'flickr' };
+type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: string; license?: string };
 const imageData = stationImages as Record<string, ImageEntry[]>;
-const unsplashData = stationImagesUnsplash as Record<string, ImageEntry[]>;
-const flickrData = stationImagesFlickr as Record<string, ImageEntry[]>;
 import type { StationPlace } from '@/lib/types';
 const placesData = stationPlaces as Record<string, StationPlace[]>;
 
@@ -66,10 +62,7 @@ export default async function StationPage({
     : null;
 
   const mapsUrl = getGoogleMapsAreaUrl(station.lat, station.lng);
-  const wikiImages = (imageData[slug] || []).map(img => ({ ...img, source: 'wikimedia' as const }));
-  const uImages = (unsplashData[slug] || []).map(img => ({ ...img, source: 'unsplash' as const }));
-  const fImages = (flickrData[slug] || []).map(img => ({ ...img, source: 'flickr' as const }));
-  const images = [...fImages, ...uImages, ...wikiImages];
+  const images = imageData[slug] || [];
   const places = placesData[slug] || [];
 
   const jsonLd = {
