@@ -230,10 +230,10 @@ export default async function StationPage({
               {station.confidence && (
                 <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-3 text-[10px] text-gray-400">
                   <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-[#22c55e]" /> strong
+                    <span className="w-2 h-2 rounded-full bg-[#22c55e]" /> measured
                   </span>
                   <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-[#eab308]" /> moderate
+                    <span className="w-2 h-2 rounded-full bg-[#eab308]" /> partial
                   </span>
                   <span className="flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-[#9ca3af]" /> estimate

@@ -20,7 +20,14 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif !important;
 }
 
-/* Rich hover tooltip */
+/* Rich hover tooltip with a 400ms enter delay.
+
+   Leaflet sets the tooltip's inline `opacity` via setOpacity(), so a CSS
+   opacity transition would be overridden. Instead we use an animation on
+   `visibility` with `animation-fill-mode: both`, which applies the `from`
+   keyframe during the pre-animation delay period — so the tooltip stays
+   hidden until 400ms have passed. If the user mouses out before 400ms,
+   Leaflet removes the element entirely and nothing ever showed. CRTKY-67. */
 .station-tooltip {
   padding: 0 !important;
   border: none !important;
@@ -28,6 +35,12 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
   background: white !important;
   font-family: var(--font-inter), system-ui, sans-serif !important;
+  animation: station-tooltip-appear 1ms linear 400ms both;
+}
+
+@keyframes station-tooltip-appear {
+  from { visibility: hidden; }
+  to { visibility: visible; }
 }
 
 .station-tooltip .leaflet-tooltip-content {
