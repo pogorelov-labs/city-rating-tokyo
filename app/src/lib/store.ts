@@ -16,6 +16,8 @@ interface AppState {
   setMinScore: (v: number) => void;
   selectedStation: string | null;
   setSelectedStation: (slug: string | null) => void;
+  hoveredStation: string | null;
+  setHoveredStation: (slug: string | null) => void;
   heatmapMode: boolean;
   setHeatmapMode: (v: boolean) => void;
   heatmapDimension: string;
@@ -47,6 +49,8 @@ export const useAppStore = create<AppState>((set) => ({
   setMinScore: (minScore) => set({ minScore }),
   selectedStation: null,
   setSelectedStation: (selectedStation) => set({ selectedStation }),
+  hoveredStation: null,
+  setHoveredStation: (hoveredStation) => set({ hoveredStation }),
   heatmapMode: false,
   setHeatmapMode: (heatmapMode) => set({ heatmapMode }),
   heatmapDimension: 'composite',

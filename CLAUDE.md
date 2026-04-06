@@ -135,8 +135,10 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 |------|---------|
 | `app/src/data/demo-ratings.ts` | All ratings (AI + computed). ~7700 lines. |
 | `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
+| `app/src/data/station-images.json` | Wikimedia photos per station — **623/1493 coverage (42%)**. Missing stations fall back to a gradient placeholder in the map tooltip. |
 | `app/src/lib/data.ts` | Merges stations + ratings + rent at build time |
 | `app/src/lib/types.ts` | TypeScript interfaces (StationRatings, etc.) |
+| `app/src/lib/store.ts` | Zustand store: weights, filters, `selectedStation`, `hoveredStation`, compare list, heatmap |
 | `data/stations.json` | Master station list (1493 entries) |
 | `scripts/station-area-codes.json` | Station → ward code mapping (274 entries) |
 | `scripts/scrapers/utils.py` | Shared NocoDB client, rate limiter, station loader |
@@ -146,6 +148,7 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 | `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date) |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
 | `app/src/components/ConfidenceBadge.tsx` | 🟢🟡⚪ badge component with source tooltip |
+| `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`) |
 
 ## Running Scrapers on VPS
 
