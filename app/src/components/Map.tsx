@@ -11,7 +11,7 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapStation, WeightConfig } from '@/lib/types';
-import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
+import { calculateWeightedScore, scoreToColor, ColorDimension } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import Link from 'next/link';
 
@@ -86,7 +86,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         }
 
         const color = heatmapMode
-          ? (displayValue !== null ? scoreToColor(displayValue) : '#9CA3AF')
+          ? (displayValue !== null
+              ? scoreToColor(displayValue, heatmapDimension as ColorDimension)
+              : '#9CA3AF')
           : (score !== null ? scoreToColor(score) : '#9CA3AF');
         const radius = heatmapMode
           ? (displayValue !== null ? 14 + displayValue * 1.2 : 0)

@@ -139,6 +139,7 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 | `app/src/lib/data.ts` | Merges stations + ratings + rent at build time |
 | `app/src/lib/types.ts` | TypeScript interfaces (StationRatings, etc.) |
 | `app/src/lib/store.ts` | Zustand store: weights, filters, `selectedStation`, `hoveredStation`, compare list, heatmap |
+| `app/src/lib/scoring.ts` | Weighted score, affordability, **magma + category-hue palettes** via `scoreToColor(score, dimension?)` — composite = magma, heatmap passes the dimension for category-specific hues |
 | `data/stations.json` | Master station list (1493 entries) |
 | `scripts/station-area-codes.json` | Station → ward code mapping (274 entries) |
 | `scripts/scrapers/utils.py` | Shared NocoDB client, rate limiter, station loader |
