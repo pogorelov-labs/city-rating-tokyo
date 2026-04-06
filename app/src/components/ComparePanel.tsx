@@ -3,7 +3,11 @@
 import { useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
-import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
+import {
+  calculateWeightedScore,
+  compositeToColor,
+  computeCompositeAnchors,
+} from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
 import ConfidenceBadge from './ConfidenceBadge';
 
@@ -24,6 +28,11 @@ export default function ComparePanel({ stations }: Props) {
       .map((slug) => stations.find((s) => s.slug === slug))
       .filter((s): s is MapStation => s !== undefined && s.ratings !== null);
   }, [compareStations, stations]);
+
+  const compositeAnchors = useMemo(
+    () => computeCompositeAnchors(stations, weights),
+    [stations, weights],
+  );
 
   if (compared.length < 2) return null;
 
@@ -112,7 +121,7 @@ export default function ComparePanel({ stations }: Props) {
                   {compared.map((s, i) => {
                     const score = calculateWeightedScore(s.ratings!, weights);
                     return (
-                      <td key={i} className="text-right py-1 px-2 font-bold tabular-nums" style={{ color: scoreToColor(score) }}>
+                      <td key={i} className="text-right py-1 px-2 font-bold tabular-nums" style={{ color: compositeToColor(score, compositeAnchors) }}>
                         {score.toFixed(1)}
                       </td>
                     );
