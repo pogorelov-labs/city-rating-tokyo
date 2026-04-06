@@ -9,21 +9,25 @@ interface Props {
   size?: 'sm' | 'md';
 }
 
+// Labels describe HOW the rating was derived, so they read correctly even
+// without the word "confidence" in front of them. The ConfidenceLevel type
+// keys in the data pipeline stay as strong|moderate|estimate; only the
+// displayed strings change. CRTKY-67.
 const LEVEL_META: Record<ConfidenceLevel, { color: string; label: string; description: string }> = {
   strong: {
     color: '#22c55e',
-    label: 'Strong',
-    description: 'Based on 2+ verified data sources',
+    label: 'Measured',
+    description: 'Direct count from 2+ verified sources',
   },
   moderate: {
     color: '#eab308',
-    label: 'Moderate',
-    description: 'Based on 1 source or ward-level fallback',
+    label: 'Partial',
+    description: 'Single source or aggregated fallback',
   },
   estimate: {
     color: '#9ca3af',
     label: 'Estimate',
-    description: 'Computed from formula — no direct data',
+    description: 'Modeled from formula, not observed',
   },
 };
 
@@ -52,9 +56,13 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
 
   const handleEnter = () => {
     clearTimeout(timeoutRef.current);
-    setShow(true);
+    // 400ms enter delay so briefly brushing the badge during scroll/pan
+    // doesn't trigger a tooltip flash. Leave delay stays at 150ms so the
+    // tooltip doesn't vanish mid-click.
+    timeoutRef.current = setTimeout(() => setShow(true), 400);
   };
   const handleLeave = () => {
+    clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setShow(false), 150);
   };
 
@@ -73,7 +81,7 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
       <span
         className={`${dotSize} rounded-full cursor-help inline-block`}
         style={{ backgroundColor: meta.color }}
-        aria-label={`Confidence: ${meta.label}`}
+        aria-label={`Data source: ${meta.label}`}
       />
       {show && (
         <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1.5 z-50 w-56 px-2.5 py-1.5 text-xs text-white bg-gray-800 rounded-md shadow-lg leading-relaxed pointer-events-none">
