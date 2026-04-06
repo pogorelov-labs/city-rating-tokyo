@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useDeferredValue } from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -10,7 +10,7 @@ import {
   useMap,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MapStation, WeightConfig } from '@/lib/types';
+import { MapStation } from '@/lib/types';
 import {
   calculateWeightedScore,
   compositeToColor,
@@ -60,19 +60,29 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const addCompareStation = useAppStore((s) => s.addCompareStation);
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
 
+  // Scoring 1493 stations on every drag frame is expensive. Use a deferred
+  // copy of the weights so React can skip stale recomputes while the user
+  // is still dragging. The slider UI itself (in FilterPanel) reads the live
+  // value so the handle stays glued to the pointer.
+  const deferredWeights = useDeferredValue(weights);
+
   const scoredStations = useMemo(() => {
     return stations.map((s) => ({
       ...s,
-      score: s.ratings ? calculateWeightedScore(s.ratings, weights) : null,
+      score: s.ratings ? calculateWeightedScore(s.ratings, deferredWeights) : null,
     }));
-  }, [stations, weights]);
+  }, [stations, deferredWeights]);
 
   // Percentile anchors for the diverging composite palette. Recomputed
   // as the user changes weights so the akane↔kon range always stretches
   // across the actual observed distribution, not a fixed 1-10.
+  // Use deferredWeights so the (expensive) sort over 1493 scores stays
+  // in lockstep with the deferred score map above — otherwise colors
+  // would be computed against anchors that disagree with the scores
+  // they color, producing a brief mid-drag flash.
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, weights),
-    [stations, weights],
+    () => computeCompositeAnchors(stations, deferredWeights),
+    [stations, deferredWeights],
   );
 
   const flyTarget = useMemo(() => {

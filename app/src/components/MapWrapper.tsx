@@ -2,8 +2,8 @@
 
 import dynamic from 'next/dynamic';
 import { MapStation } from '@/lib/types';
+import { useAppStore } from '@/lib/store';
 import MapControls from './MapControls';
-import ComparePanel from './ComparePanel';
 import UrlSync from './UrlSync';
 
 const MapView = dynamic(() => import('./Map'), {
@@ -15,6 +15,12 @@ const MapView = dynamic(() => import('./Map'), {
   ),
 });
 
+// ComparePanel imports recharts (CompareRadarChart). Load it only when the
+// user has actually queued 2+ stations for comparison.
+const ComparePanel = dynamic(() => import('./ComparePanel'), {
+  ssr: false,
+});
+
 interface MapWrapperProps {
   stations: MapStation[];
   thumbnails?: Record<string, string>;
@@ -22,11 +28,15 @@ interface MapWrapperProps {
 }
 
 export default function MapWrapper({ stations, thumbnails, snippets }: MapWrapperProps) {
+  // Gate ComparePanel behind the store so the recharts chunk is never
+  // downloaded unless the user actively compares something.
+  const hasCompareTarget = useAppStore((s) => s.compareStations.length >= 2);
+
   return (
     <div className="relative h-full w-full">
       <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />
       <MapControls />
-      <ComparePanel stations={stations} />
+      {hasCompareTarget && <ComparePanel stations={stations} />}
       <UrlSync />
     </div>
   );

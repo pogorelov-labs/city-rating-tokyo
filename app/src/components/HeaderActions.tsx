@@ -2,11 +2,21 @@
 
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+import dynamic from 'next/dynamic';
 import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { buildShareUrl } from '@/lib/url-state';
-import ScatterPlotExplorer from './ScatterPlotExplorer';
 import FeedbackWidget from './FeedbackWidget';
+
+// recharts is heavy (~350 KB). Only load when the scatter modal opens.
+const ScatterPlotExplorer = dynamic(() => import('./ScatterPlotExplorer'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[400px] flex items-center justify-center text-gray-400 text-sm">
+      Loading chart…
+    </div>
+  ),
+});
 
 interface Props {
   stations: MapStation[];
