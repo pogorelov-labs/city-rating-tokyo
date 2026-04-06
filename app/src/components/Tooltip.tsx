@@ -13,10 +13,13 @@ export default function Tooltip({ text, children }: TooltipProps) {
 
   const handleEnter = () => {
     clearTimeout(timeoutRef.current);
-    setShow(true);
+    // 400ms enter delay so briefly brushing the `?` icon during scroll
+    // doesn't trigger a tooltip flash. CRTKY-67.
+    timeoutRef.current = setTimeout(() => setShow(true), 400);
   };
 
   const handleLeave = () => {
+    clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setShow(false), 150);
   };
 
