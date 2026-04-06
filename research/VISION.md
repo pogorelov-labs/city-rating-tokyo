@@ -242,10 +242,17 @@ Data updated: April 2026 · Sources: 6 · Confidence: high
 
 ### Sprint 2: Compute pipeline rewrite [Phase D]
 **Задачи:**
-1. Rewrite compute-ratings.py с log-percentile + новыми формулами
-2. Include per-station metadata: sources used, data freshness, confidence level
-3. Export to demo-ratings.ts
-4. Spot-check + distribution validation
+1. ✅ Rewrite compute-ratings.py с log-percentile + новыми формулами (CRTKY-45, v2)
+2. ✅ Include per-station metadata: sources used, data freshness, confidence level (CRTKY-46)
+3. ✅ Export to demo-ratings.ts (CRTKY-46)
+4. ✅ Spot-check + distribution validation
+5. ✅ **Formula v3** — absolute caps + log-linear rent regression (CRTKY-63)
+
+**Formula v3 outcome:** "top 10" was meaningless under pure log-percentile (top 5.6% auto-rounded to 10). Added `ABSOLUTE_CAPS` gating the 8/9/10 tiers by raw value (e.g. transport=10 requires ≥5 train lines). Also replaced the broken `distance_estimate` rent fallback (507 fake ¥50k stations) with a log-linear regression fitted on 273 real Suumo points. Top-10 counts dropped from ~83 per category to 15–64 (5 for rent).
+
+**Known follow-ups:**
+- CRTKY-64 — fix lumpy safety distribution (0 stations at rating 4 due to tri-modal fallback)
+- CRTKY-65 — fix gym distribution (0 stations at rating 2 due to log(0) zero-clustering)
 
 ### Sprint 3: UI transparency [Phase E+]
 **Задачи по категориям:**
@@ -265,7 +272,11 @@ Prerequisite (done):
 ## Plane Issues (City Rating Tokyo — CRTKY)
 
 Sprint 2 (compute pipeline) — **done**:
+- ✅ `CRTKY-45` Compute-ratings.py v2 rewrite (log-percentile + research formulas)
 - ✅ `CRTKY-46` Per-station confidence metadata (compute → NocoDB columns → demo-ratings.ts)
+- ✅ `CRTKY-63` Formula v3 — absolute caps + rent log-linear regression
+- `CRTKY-64` Fix lumpy safety distribution (0 stations at rating 4) — backlog
+- `CRTKY-65` Fix gym distribution (0 stations at rating 2) — backlog
 
 Sprint 3 (UI transparency):
 - ✅ `CRTKY-47` Confidence badges (🟢🟡⚪) next to each rating
