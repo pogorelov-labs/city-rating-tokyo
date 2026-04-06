@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useDeferredValue } from 'react';
 import { useAppStore } from '@/lib/store';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import {
@@ -9,7 +9,6 @@ import {
   computeCompositeAnchors,
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
-import ConfidenceBadge from './ConfidenceBadge';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
 
@@ -22,6 +21,9 @@ export default function ComparePanel({ stations }: Props) {
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
   const clearCompareStations = useAppStore((s) => s.clearCompareStations);
   const weights = useAppStore((s) => s.weights);
+  // Defer weights so the (expensive) percentile sort over 1493 scores
+  // doesn't fire on every drag frame while the user is adjusting sliders.
+  const deferredWeights = useDeferredValue(weights);
 
   const compared = useMemo(() => {
     return compareStations
@@ -30,8 +32,8 @@ export default function ComparePanel({ stations }: Props) {
   }, [compareStations, stations]);
 
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, weights),
-    [stations, weights],
+    () => computeCompositeAnchors(stations, deferredWeights),
+    [stations, deferredWeights],
   );
 
   if (compared.length < 2) return null;
@@ -99,16 +101,15 @@ export default function ComparePanel({ stations }: Props) {
                       <td className="py-1 pr-2 text-gray-500">{RATING_LABELS[key]}</td>
                       {compared.map((s, i) => {
                         const v = s.ratings![key];
-                        const conf = s.confidence?.[key];
+                        // Confidence badges are rendered on the station
+                        // detail page (see Station.confidence). They were
+                        // dropped from MapStation to shrink the RSC payload.
                         return (
                           <td
                             key={i}
                             className={`text-right py-1 px-2 tabular-nums ${v === maxVal ? 'font-bold text-green-600' : ''}`}
                           >
-                            <span className="inline-flex items-center gap-1 justify-end">
-                              {v}
-                              {conf && <ConfidenceBadge level={conf} />}
-                            </span>
+                            {v}
                           </td>
                         );
                       })}
@@ -119,7 +120,7 @@ export default function ComparePanel({ stations }: Props) {
                 <tr className="border-t border-gray-200">
                   <td className="py-1 pr-2 font-semibold text-gray-700">Score</td>
                   {compared.map((s, i) => {
-                    const score = calculateWeightedScore(s.ratings!, weights);
+                    const score = calculateWeightedScore(s.ratings!, deferredWeights);
                     return (
                       <td key={i} className="text-right py-1 px-2 font-bold tabular-nums" style={{ color: compositeToColor(score, compositeAnchors) }}>
                         {score.toFixed(1)}

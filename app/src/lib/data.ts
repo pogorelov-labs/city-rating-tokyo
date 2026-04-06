@@ -40,7 +40,7 @@ export function getStations(): Station[] {
   });
 }
 
-/** Lightweight station list for homepage — drops description, transit, lines, prefecture */
+/** Lightweight station list for homepage — drops description, transit, lines, prefecture, confidence */
 export function getMapStations(): MapStation[] {
   return getStations().map((s) => {
     let minTransit: number | null = null;
@@ -58,7 +58,6 @@ export function getMapStations(): MapStation[] {
       ratings: s.ratings,
       rent_1k: s.rent_avg?.['1k_1ldk'] ?? null,
       min_transit: minTransit,
-      confidence: s.confidence ?? null,
     };
   });
 }

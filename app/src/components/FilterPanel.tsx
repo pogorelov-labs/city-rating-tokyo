@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useDeferredValue } from 'react';
 import { useAppStore } from '@/lib/store';
 import { RATING_LABELS, RATING_TOOLTIPS, PRESET_PROFILES, WeightConfig, MapStation } from '@/lib/types';
 import {
@@ -23,22 +23,30 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
+  // Re-ranking all 1493 stations is the other expensive path that fires
+  // on every slider frame. Defer it so the slider thumb stays responsive
+  // while React catches up in the background.
+  const deferredWeights = useDeferredValue(weights);
+
   const ranked = useMemo(() => {
     return stations
       .filter((s) => s.ratings !== null)
       .map((s) => ({
         ...s,
-        score: calculateWeightedScore(s.ratings!, weights),
+        score: calculateWeightedScore(s.ratings!, deferredWeights),
       }))
       .sort((a, b) => b.score - a.score)
       .slice(0, 15);
-  }, [stations, weights]);
+  }, [stations, deferredWeights]);
 
   // Mirror Map.tsx: percentile anchors for the diverging composite palette
   // so the ranked list numbers paint on the same scale as the map markers.
+  // Use deferredWeights to keep anchors in lockstep with the deferred
+  // ranked list above (otherwise mid-drag the score numbers would paint
+  // against an anchor range that disagrees with the underlying scores).
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, weights),
-    [stations, weights],
+    () => computeCompositeAnchors(stations, deferredWeights),
+    [stations, deferredWeights],
   );
 
   const searchResults = useMemo(() => {
