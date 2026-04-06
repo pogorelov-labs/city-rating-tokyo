@@ -23,6 +23,20 @@ function FlyToStation({ lat, lng }: { lat: number; lng: number }) {
   return null;
 }
 
+/**
+ * Return a darker variant of an `rgb(r, g, b)` string produced by `scoreToColor`.
+ * Used for the fallback gradient header so we can't accidentally produce invalid
+ * CSS like `${rgbString}cc` (which would be silently dropped by the browser).
+ */
+function darkenRgb(rgb: string, factor = 0.7): string {
+  const match = rgb.match(/rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/);
+  if (!match) return rgb;
+  const r = Math.round(Number(match[1]) * factor);
+  const g = Math.round(Number(match[2]) * factor);
+  const b = Math.round(Number(match[3]) * factor);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 interface MapViewProps {
   stations: MapStation[];
   thumbnails?: Record<string, string>;
@@ -169,8 +183,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     style={{
                       width: '100%',
                       height: 60,
-                      background: score !== null
-                        ? `linear-gradient(135deg, ${color}, ${color}cc)`
+                      backgroundImage: score !== null
+                        ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
                         : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
                       borderRadius: '6px 6px 0 0',
                       display: 'flex',
@@ -285,19 +299,25 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           </CircleMarker>
         );
       })}
-      {/* Pulsating halo ring under the currently selected/hovered station */}
+      {/* Pulsating halo ring under the currently selected/hovered station.
+          `className` must be a top-level prop — react-leaflet forwards top-level
+          props to Leaflet's CircleMarker constructor, but className inside
+          `pathOptions` gets dropped by Leaflet's setStyle() which only updates
+          stroke/fill attributes. With className set at the constructor level,
+          Leaflet's _initPath applies it to the SVG path and the CSS keyframes
+          animation can run. */}
       {highlightedStation && (
         <CircleMarker
           key={`halo-${highlightedStation.slug}`}
           center={[highlightedStation.lat, highlightedStation.lng]}
           radius={18}
           interactive={false}
+          className="station-halo"
           pathOptions={{
             color: '#2563eb',
             weight: 2,
             fillColor: '#2563eb',
             fillOpacity: 0.15,
-            className: 'station-halo',
           }}
         />
       )}
