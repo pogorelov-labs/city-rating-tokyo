@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useDeferredValue } from 'react';
 import { useAppStore } from '@/lib/store';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import {
@@ -21,6 +21,9 @@ export default function ComparePanel({ stations }: Props) {
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
   const clearCompareStations = useAppStore((s) => s.clearCompareStations);
   const weights = useAppStore((s) => s.weights);
+  // Defer weights so the (expensive) percentile sort over 1493 scores
+  // doesn't fire on every drag frame while the user is adjusting sliders.
+  const deferredWeights = useDeferredValue(weights);
 
   const compared = useMemo(() => {
     return compareStations
@@ -29,8 +32,8 @@ export default function ComparePanel({ stations }: Props) {
   }, [compareStations, stations]);
 
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, weights),
-    [stations, weights],
+    () => computeCompositeAnchors(stations, deferredWeights),
+    [stations, deferredWeights],
   );
 
   if (compared.length < 2) return null;
@@ -117,7 +120,7 @@ export default function ComparePanel({ stations }: Props) {
                 <tr className="border-t border-gray-200">
                   <td className="py-1 pr-2 font-semibold text-gray-700">Score</td>
                   {compared.map((s, i) => {
-                    const score = calculateWeightedScore(s.ratings!, weights);
+                    const score = calculateWeightedScore(s.ratings!, deferredWeights);
                     return (
                       <td key={i} className="text-right py-1 px-2 font-bold tabular-nums" style={{ color: compositeToColor(score, compositeAnchors) }}>
                         {score.toFixed(1)}
