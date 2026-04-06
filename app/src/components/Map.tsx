@@ -33,6 +33,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const weights = useAppStore((s) => s.weights);
   const selectedStation = useAppStore((s) => s.selectedStation);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const hoveredStation = useAppStore((s) => s.hoveredStation);
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
   const compareStations = useAppStore((s) => s.compareStations);
@@ -50,6 +51,13 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     if (!selectedStation) return null;
     return scoredStations.find((s) => s.slug === selectedStation);
   }, [selectedStation, scoredStations]);
+
+  // Station to highlight with halo: selected (from click/search) or hovered (from list)
+  const highlightedSlug = selectedStation || hoveredStation;
+  const highlightedStation = useMemo(() => {
+    if (!highlightedSlug) return null;
+    return scoredStations.find((s) => s.slug === highlightedSlug);
+  }, [highlightedSlug, scoredStations]);
 
   return (
     <MapContainer
@@ -87,18 +95,42 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         if (heatmapMode && displayValue === null) return null;
 
         const isCompared = compareStations.includes(station.slug);
+        const isSelected = station.slug === selectedStation;
+        const isHovered = station.slug === hoveredStation;
+        const isHighlighted = isSelected || isHovered;
+
+        // Selected/hovered stations: bigger, bolder stroke in brand blue
+        const effectiveRadius = isHighlighted ? radius + 3 : radius;
+        const strokeColor = isSelected
+          ? '#1d4ed8'
+          : isHovered
+            ? '#2563eb'
+            : isCompared
+              ? '#7c3aed'
+              : heatmapMode
+                ? color
+                : '#374151';
+        const strokeWeight = isSelected
+          ? 3.5
+          : isHovered
+            ? 2.5
+            : isCompared
+              ? 3
+              : heatmapMode
+                ? 0
+                : 1;
 
         return (
           <CircleMarker
             key={station.slug}
             center={[station.lat, station.lng]}
-            radius={radius}
+            radius={effectiveRadius}
             pathOptions={{
               fillColor: color,
-              color: isCompared ? '#7c3aed' : (heatmapMode ? color : '#374151'),
-              weight: isCompared ? 3 : (heatmapMode ? 0 : 1),
-              opacity: heatmapMode && !isCompared ? 0 : 0.8,
-              fillOpacity: heatmapMode ? 0.45 : 0.85,
+              color: strokeColor,
+              weight: strokeWeight,
+              opacity: heatmapMode && !isHighlighted && !isCompared ? 0 : 0.9,
+              fillOpacity: isHighlighted ? 1 : (heatmapMode ? 0.45 : 0.85),
             }}
             eventHandlers={{
               click: () => {
@@ -115,10 +147,11 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               className="station-tooltip"
             >
               <div style={{ width: 260 }}>
-                {thumb && (
+                {thumb ? (
                   <img
                     src={thumb}
                     alt={station.name_en}
+                    loading="lazy"
                     onError={() => window.umami?.track('error', { category: 'image', station: station.slug, context: 'tooltip' })}
                     style={{
                       width: '100%',
@@ -128,6 +161,29 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       display: 'block',
                     }}
                   />
+                ) : (
+                  <div
+                    aria-hidden
+                    style={{
+                      width: '100%',
+                      height: 60,
+                      background: score !== null
+                        ? `linear-gradient(135deg, ${color}, ${color}cc)`
+                        : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
+                      borderRadius: '6px 6px 0 0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontFamily: 'serif',
+                      fontWeight: 700,
+                      fontSize: 26,
+                      letterSpacing: 2,
+                      textShadow: '0 1px 3px rgba(0,0,0,0.25)',
+                    }}
+                  >
+                    {station.name_jp}
+                  </div>
                 )}
                 <div style={{ padding: '8px 10px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
@@ -227,6 +283,22 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           </CircleMarker>
         );
       })}
+      {/* Pulsating halo ring under the currently selected/hovered station */}
+      {highlightedStation && (
+        <CircleMarker
+          key={`halo-${highlightedStation.slug}`}
+          center={[highlightedStation.lat, highlightedStation.lng]}
+          radius={18}
+          interactive={false}
+          pathOptions={{
+            color: '#2563eb',
+            weight: 2,
+            fillColor: '#2563eb',
+            fillOpacity: 0.15,
+            className: 'station-halo',
+          }}
+        />
+      )}
     </MapContainer>
   );
 }

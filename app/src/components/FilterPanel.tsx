@@ -15,6 +15,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const setAllWeights = useAppStore((s) => s.setAllWeights);
   const resetWeights = useAppStore((s) => s.resetWeights);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const setHoveredStation = useAppStore((s) => s.setHoveredStation);
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
@@ -69,8 +70,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 key={s.slug}
                 onClick={() => {
                   setSelectedStation(s.slug);
+                  setHoveredStation(null);
                   setSearch('');
                 }}
+                onMouseEnter={() => setHoveredStation(s.slug)}
+                onMouseLeave={() => setHoveredStation(null)}
                 data-umami-event="search-select"
                 data-umami-event-station={s.slug}
                 className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-50 last:border-0"
@@ -159,6 +163,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               <li key={s.slug}>
                 <button
                   onClick={() => setSelectedStation(s.slug)}
+                  onMouseEnter={() => setHoveredStation(s.slug)}
+                  onMouseLeave={() => setHoveredStation(null)}
+                  onFocus={() => setHoveredStation(s.slug)}
+                  onBlur={() => setHoveredStation(null)}
                   data-umami-event="ranked-select"
                   data-umami-event-station={s.slug}
                   className="w-full text-left flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors"

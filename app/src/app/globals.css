@@ -37,3 +37,29 @@ body {
 .station-tooltip::before {
   border-top-color: white !important;
 }
+
+/* Smooth marker transitions on hover/selection */
+.leaflet-interactive {
+  transition: r 150ms ease-out, stroke-width 150ms ease-out, fill-opacity 150ms ease-out;
+}
+
+/* Pulsating halo ring for the selected/hovered station.
+   Uses stroke-width + opacity (not transform) so it works reliably on
+   Leaflet SVG paths across all browsers without transform-box quirks. */
+@keyframes station-halo-pulse {
+  0%, 100% {
+    stroke-width: 1.5;
+    stroke-opacity: 0.35;
+    fill-opacity: 0.08;
+  }
+  50% {
+    stroke-width: 5;
+    stroke-opacity: 0.85;
+    fill-opacity: 0.18;
+  }
+}
+
+.station-halo {
+  animation: station-halo-pulse 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
