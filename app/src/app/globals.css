@@ -43,6 +43,13 @@ body {
   transition: r 150ms ease-out, stroke-width 150ms ease-out, fill-opacity 150ms ease-out;
 }
 
+/* Subtle drop-shadow for all map markers so circles pop on the light Carto
+   basemap. Applied once to the overlay SVG pane (not per-path) so the
+   browser composites a single shadow pass across all 1493+ markers. */
+.leaflet-overlay-pane svg {
+  filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.25));
+}
+
 /* Pulsating halo ring for the selected/hovered station.
    Uses stroke-width + opacity (not transform) so it works reliably on
    Leaflet SVG paths across all browsers without transform-box quirks. */

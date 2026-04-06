@@ -213,7 +213,7 @@ export default async function StationPage({
                           className="h-full rounded-full transition-all"
                           style={{
                             width: `${val * 10}%`,
-                            backgroundColor: scoreToColor(val),
+                            backgroundColor: scoreToColor(val, key),
                           }}
                         />
                       </div>
