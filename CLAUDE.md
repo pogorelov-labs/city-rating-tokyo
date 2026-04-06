@@ -60,9 +60,23 @@ Docs: https://webservice.recruit.co.jp/doc/hotpepper/reference.html
 Important param: midnight=1 (returns places open after 23:00)
 ```
 
-## Rating Formulas (v2, research-backed)
+## Rating Formulas (v3, absolute caps + rent regression)
 
-All categories use **log-then-percentile** normalization across 1493 stations.
+All categories use **log-then-percentile** normalization across 1493 stations, then pass through **absolute caps** that gate the 8/9/10 tiers by raw value. The cap only decreases ratings, never increases.
+
+### Absolute caps (`ABSOLUTE_CAPS` in `scripts/compute-ratings.py`)
+
+| Category | Raw signal | 8 requires | 9 requires | 10 requires |
+|---|---|---|---|---|
+| food | hp_total + osm_food | ≥100 | ≥400 | ≥1000 |
+| nightlife | hp_midnight | ≥20 | ≥100 | ≥300 |
+| transport | line_count | ≥2 | ≥3 | **≥5** |
+| green | green_count | ≥25 | ≥50 | ≥80 |
+| gym_sports | gym_count | ≥7 | ≥12 | ≥20 |
+| vibe | cultural_venue_count | ≥8 | ≥20 | ≥50 |
+| rent | source quality (2=suumo, 1=ward, 0=regression) | — | ≥1 | ≥2 |
+
+Effect: "10" means something specific and explainable. Before v3, top 5.6% of every category (~83 stations) auto-rounded to 10. After v3, top-10 count dropped to 15–64 per category (5 for rent).
 
 ### food (15% default weight)
 ```
@@ -86,9 +100,14 @@ Sources: station line_count (100%), MLIT S12 passengers (94%).
 
 ### rent (20%, inverted: cheaper = higher)
 ```
-raw = suumo_1k || lifull_1k || ward_average || prefecture_estimate
+raw = suumo_1k                                             # real (273 stations)
+    || ward_average                                         # Nominatim-matched (713 more)
+    || exp(12.394 - 0.02453 * distance_km)                  # log-linear regression (rest)
+rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80k
 ```
-Sources: Suumo (18%), ward averages via Nominatim mapping, distance fallback.
+Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`.
+
+Regression replaced the broken `max(50000, 160000 - dist*15000)` which produced ¥50k for every station beyond 7.3km — a value below any real Tokyo rent, creating 507 fake rating-10 entries.
 
 ### safety (10%, inverted: safer = higher)
 ```
