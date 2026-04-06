@@ -249,35 +249,30 @@ Data updated: April 2026 · Sources: 6 · Confidence: high
 
 ### Sprint 3: UI transparency [Phase E+]
 **Задачи по категориям:**
-1. Confidence badge component
-2. Data-source tooltip (replace current generic tooltips)
-3. "How ratings work" expandable section on station page
-4. /methodology page
-5. AI-researched vs data-driven badge
-6. Data freshness indicator
+1. ✅ Confidence badge component (CRTKY-47, merged)
+2. Data-source tooltip (replace current generic tooltips) — CRTKY-48
+3. "How ratings work" expandable section on station page — CRTKY-49
+4. /methodology page — CRTKY-50
+5. AI-researched vs data-driven badge — CRTKY-52
+6. Data freshness indicator — CRTKY-51
 7. Radar chart confidence overlay (optional)
+
+Prerequisite (done):
+- ✅ CRTKY-46 — per-station confidence metadata pipeline (compute → NocoDB columns → demo-ratings.ts → Station objects)
 
 ---
 
-## Plane Issues to Create
+## Plane Issues (City Rating Tokyo — CRTKY)
 
-### Per-category data issues:
-- `MACWO-xxx` Nightlife: add HP midnight_count + karaoke OSM tags
-- `MACWO-xxx` Safety: integrate ArcGIS neighborhood crime + daytime population fix
-- `MACWO-xxx` Crowd: integrate MLIT S12 passenger data (done, needs compute)
-- `MACWO-xxx` Green: re-scrape with area calculation + extended tags
-- `MACWO-xxx` Rent: expand via LIFULL HOME'S + Nominatim ward mapping
-- `MACWO-xxx` Vibe: integrate cultural venue density from OSM
+Sprint 2 (compute pipeline) — **done**:
+- ✅ `CRTKY-46` Per-station confidence metadata (compute → NocoDB columns → demo-ratings.ts)
 
-### Compute pipeline issues:
-- `MACWO-xxx` Rewrite compute-ratings.py with log-percentile normalization
-- `MACWO-xxx` Add per-station confidence metadata to computed_ratings
-- `MACWO-xxx` Export with confidence + source metadata
+Sprint 3 (UI transparency):
+- ✅ `CRTKY-47` Confidence badges (🟢🟡⚪) next to each rating
+- `CRTKY-48` Replace generic tooltips with data-source tooltips
+- `CRTKY-49` "How ratings work" expandable section on station page
+- `CRTKY-50` /methodology page with data sources + formulas
+- `CRTKY-51` Data freshness indicator (uses `data_date` from metadata)
+- `CRTKY-52` AI-researched vs data-driven station badge
 
-### UI issues:
-- `MACWO-xxx` Add confidence badges (🟢🟡⚪) next to each rating
-- `MACWO-xxx` Replace generic tooltips with data-source tooltips
-- `MACWO-xxx` Add "How ratings work" expandable section on station page
-- `MACWO-xxx` Create /methodology page with data sources + formulas
-- `MACWO-xxx` Add AI-researched vs data-driven station badge
-- `MACWO-xxx` Show data freshness on station page
+Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.

@@ -36,8 +36,15 @@ app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
 | passenger_counts | m36bbxcv8t0asur | ~1409 | MLIT S12 GeoJSON + hardcoded |
 | station_wards | m74rdmspn3trrqc | building | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | Overpass (test) |
-| computed_ratings | mkp046vo42kj55w | — | Output of compute-ratings.py |
+| computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
 | feedback | mwuwwlko3278wrk | — | User feedback from site |
+
+`computed_ratings` has 3 metadata columns alongside the 9 rating numbers:
+- `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`
+- `sources` (LongText) — JSON: `{"food":["hotpepper","osm"],...}`
+- `data_date` (SingleLineText) — e.g. `2026-04`
+
+These feed the `ConfidenceBadge` UI component. NocoDB API token is data-only — schema changes (new columns) must be done manually in the NocoDB UI.
 
 ### NocoDB Access
 ```
@@ -135,8 +142,10 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 | `scripts/scrapers/utils.py` | Shared NocoDB client, rate limiter, station loader |
 | `scripts/scrapers/scrape-osm-pois.py` | OSM POI scraper (food, nightlife, green, gym) |
 | `scripts/scrapers/scrape-hotpepper.py` | HotPepper restaurant/izakaya/bar scraper |
-| `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings |
-| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts |
+| `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
+| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date) |
+| `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
+| `app/src/components/ConfidenceBadge.tsx` | 🟢🟡⚪ badge component with source tooltip |
 
 ## Running Scrapers on VPS
 
@@ -181,3 +190,18 @@ Detailed data source research in `research/`:
 cd app && npm run build  # Verify after export-ratings.py
 git push origin main     # Coolify auto-deploys
 ```
+
+## Refreshing ratings data
+
+Use the one-command script instead of running compute/export/build manually:
+
+```bash
+scripts/refresh-ratings.sh              # interactive: prompts before commit
+scripts/refresh-ratings.sh --auto --push  # hands-off on a feature branch
+scripts/refresh-ratings.sh --dry-run    # preview without writes
+scripts/refresh-ratings.sh --no-build   # skip build verification
+```
+
+Safety: the script refuses to run with unrelated dirty files and refuses to push directly to main without `--force-main`. Never uses `--amend` or force push.
+
+**Note:** the frontend bakes ratings into static HTML at build time. Re-running scrapers alone does NOT update the live site — you must also run the refresh chain so `demo-ratings.ts` gets rewritten and committed.
