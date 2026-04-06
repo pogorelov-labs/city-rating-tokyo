@@ -5,6 +5,7 @@ import { useAppStore } from '@/lib/store';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
+import ConfidenceBadge from './ConfidenceBadge';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
 
@@ -87,14 +88,21 @@ export default function ComparePanel({ stations }: Props) {
                   return (
                     <tr key={key} className="border-b border-gray-50">
                       <td className="py-1 pr-2 text-gray-500">{RATING_LABELS[key]}</td>
-                      {values.map((v, i) => (
-                        <td
-                          key={i}
-                          className={`text-right py-1 px-2 tabular-nums ${v === maxVal ? 'font-bold text-green-600' : ''}`}
-                        >
-                          {v}
-                        </td>
-                      ))}
+                      {compared.map((s, i) => {
+                        const v = s.ratings![key];
+                        const conf = s.confidence?.[key];
+                        return (
+                          <td
+                            key={i}
+                            className={`text-right py-1 px-2 tabular-nums ${v === maxVal ? 'font-bold text-green-600' : ''}`}
+                          >
+                            <span className="inline-flex items-center gap-1 justify-end">
+                              {v}
+                              {conf && <ConfidenceBadge level={conf} />}
+                            </span>
+                          </td>
+                        );
+                      })}
                     </tr>
                   );
                 })}

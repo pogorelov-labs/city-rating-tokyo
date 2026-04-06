@@ -58,6 +58,7 @@ export function getMapStations(): MapStation[] {
       ratings: s.ratings,
       rent_1k: s.rent_avg?.['1k_1ldk'] ?? null,
       min_transit: minTransit,
+      confidence: s.confidence ?? null,
     };
   });
 }

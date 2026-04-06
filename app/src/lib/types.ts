@@ -95,6 +95,7 @@ export interface MapStation {
   ratings: StationRatings | null;
   rent_1k: number | null;
   min_transit: number | null;
+  confidence?: StationConfidence | null;
 }
 
 export interface WeightConfig {

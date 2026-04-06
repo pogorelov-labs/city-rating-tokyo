@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
+import ConfidenceBadge from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import StatCard from '@/components/StatCard';
@@ -197,28 +198,48 @@ export default async function StationPage({
                     keyof StationRatings,
                     number,
                   ][]
-                ).map(([key, val]) => (
-                  <div key={key} className="flex items-center gap-3">
-                    <Tooltip text={RATING_TOOLTIPS[key]}>
-                      <span className="text-sm w-32 text-gray-600">
-                        {RATING_LABELS[key]}
+                ).map(([key, val]) => {
+                  const conf = station.confidence?.[key];
+                  const srcs = station.sources?.[key];
+                  return (
+                    <div key={key} className="flex items-center gap-3">
+                      <Tooltip text={RATING_TOOLTIPS[key]}>
+                        <span className="text-sm w-32 text-gray-600">
+                          {RATING_LABELS[key]}
+                        </span>
+                      </Tooltip>
+                      <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
+                        <div
+                          className="h-full rounded-full transition-all"
+                          style={{
+                            width: `${val * 10}%`,
+                            backgroundColor: scoreToColor(val),
+                          }}
+                        />
+                      </div>
+                      <span className="text-sm font-bold tabular-nums w-6 text-right">
+                        {val}
                       </span>
-                    </Tooltip>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all"
-                        style={{
-                          width: `${val * 10}%`,
-                          backgroundColor: scoreToColor(val),
-                        }}
-                      />
+                      <span className="w-3 flex justify-center">
+                        {conf && <ConfidenceBadge level={conf} sources={srcs} />}
+                      </span>
                     </div>
-                    <span className="text-sm font-bold tabular-nums w-8 text-right">
-                      {val}
-                    </span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
+              {station.confidence && (
+                <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-3 text-[10px] text-gray-400">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-[#22c55e]" /> strong
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-[#eab308]" /> moderate
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-[#9ca3af]" /> estimate
+                  </span>
+                </div>
+              )}
             </section>
           </div>
         )}
