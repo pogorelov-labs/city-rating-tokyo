@@ -3,7 +3,11 @@
 import { useState, useMemo } from 'react';
 import { useAppStore } from '@/lib/store';
 import { RATING_LABELS, RATING_TOOLTIPS, PRESET_PROFILES, WeightConfig, MapStation } from '@/lib/types';
-import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
+import {
+  calculateWeightedScore,
+  compositeToColor,
+  computeCompositeAnchors,
+} from '@/lib/scoring';
 
 interface FilterPanelProps {
   stations: MapStation[];
@@ -29,6 +33,13 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       .sort((a, b) => b.score - a.score)
       .slice(0, 15);
   }, [stations, weights]);
+
+  // Mirror Map.tsx: percentile anchors for the diverging composite palette
+  // so the ranked list numbers paint on the same scale as the map markers.
+  const compositeAnchors = useMemo(
+    () => computeCompositeAnchors(stations, weights),
+    [stations, weights],
+  );
 
   const searchResults = useMemo(() => {
     if (!search || search.length < 2) return [];
@@ -179,7 +190,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   </span>
                   <span
                     className="text-sm font-bold tabular-nums"
-                    style={{ color: scoreToColor(s.score) }}
+                    style={{ color: compositeToColor(s.score, compositeAnchors) }}
                   >
                     {s.score.toFixed(1)}
                   </span>

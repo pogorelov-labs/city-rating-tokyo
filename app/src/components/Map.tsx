@@ -11,7 +11,13 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapStation, WeightConfig } from '@/lib/types';
-import { calculateWeightedScore, scoreToColor, ColorDimension } from '@/lib/scoring';
+import {
+  calculateWeightedScore,
+  compositeToColor,
+  computeCompositeAnchors,
+  scoreToColor,
+  ColorDimension,
+} from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import Link from 'next/link';
 
@@ -61,6 +67,14 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     }));
   }, [stations, weights]);
 
+  // Percentile anchors for the diverging composite palette. Recomputed
+  // as the user changes weights so the akane↔kon range always stretches
+  // across the actual observed distribution, not a fixed 1-10.
+  const compositeAnchors = useMemo(
+    () => computeCompositeAnchors(stations, weights),
+    [stations, weights],
+  );
+
   const flyTarget = useMemo(() => {
     if (!selectedStation) return null;
     return scoredStations.find((s) => s.slug === selectedStation);
@@ -103,7 +117,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           ? (displayValue !== null
               ? scoreToColor(displayValue, heatmapDimension as ColorDimension)
               : '#9CA3AF')
-          : (score !== null ? scoreToColor(score) : '#9CA3AF');
+          : (score !== null ? compositeToColor(score, compositeAnchors) : '#9CA3AF');
         const radius = heatmapMode
           ? (displayValue !== null ? 14 + displayValue * 1.2 : 0)
           : (score !== null ? 6 + score * 0.5 : 5);
@@ -208,7 +222,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       <div style={{ color: '#6b7280', fontSize: 12 }}>{station.name_jp}</div>
                     </div>
                     {score !== null && (
-                      <div style={{ fontWeight: 700, fontSize: 18, color }}>
+                      <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>
                         {score.toFixed(1)}
                       </div>
                     )}
@@ -251,7 +265,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                 </div>
                 {score !== null ? (
                   <>
-                    <div className="text-lg font-bold" style={{ color }}>
+                    <div className="text-lg font-bold text-slate-800">
                       {score.toFixed(1)} / 10
                     </div>
                     <div className="text-xs text-gray-500 mb-2">
