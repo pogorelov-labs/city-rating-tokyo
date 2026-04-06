@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useDeferredValue } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -25,15 +25,19 @@ interface Props {
 
 export default function ScatterPlotExplorer({ stations }: Props) {
   const weights = useAppStore((s) => s.weights);
+  const deferredWeights = useDeferredValue(weights);
   const [xAxis, setXAxis] = useState('rent');
   const [yAxis, setYAxis] = useState('food');
 
   const xLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === xAxis)?.label ?? xAxis;
   const yLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === yAxis)?.label ?? yAxis;
 
+  // Defer the anchors too — sorting 1493 scores fires on every weight
+  // change and should track the deferred score computation below so
+  // colors and points stay in sync mid-drag.
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, weights),
-    [stations, weights],
+    () => computeCompositeAnchors(stations, deferredWeights),
+    [stations, deferredWeights],
   );
 
   const data = useMemo(() => {
@@ -43,11 +47,11 @@ export default function ScatterPlotExplorer({ stations }: Props) {
         const x = getAxisValue(s, xAxis);
         const y = getAxisValue(s, yAxis);
         if (x === null || y === null) return null;
-        const score = calculateWeightedScore(s.ratings!, weights);
+        const score = calculateWeightedScore(s.ratings!, deferredWeights);
         return { name: s.name_en, x, y, score, fill: compositeToColor(score, compositeAnchors) };
       })
       .filter(Boolean) as { name: string; x: number; y: number; score: number; fill: string }[];
-  }, [stations, weights, xAxis, yAxis, compositeAnchors]);
+  }, [stations, deferredWeights, xAxis, yAxis, compositeAnchors]);
 
   return (
     <div>
