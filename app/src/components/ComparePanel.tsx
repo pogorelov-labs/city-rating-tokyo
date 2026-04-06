@@ -9,7 +9,6 @@ import {
   computeCompositeAnchors,
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
-import ConfidenceBadge from './ConfidenceBadge';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
 
@@ -99,16 +98,15 @@ export default function ComparePanel({ stations }: Props) {
                       <td className="py-1 pr-2 text-gray-500">{RATING_LABELS[key]}</td>
                       {compared.map((s, i) => {
                         const v = s.ratings![key];
-                        const conf = s.confidence?.[key];
+                        // Confidence badges are rendered on the station
+                        // detail page (see Station.confidence). They were
+                        // dropped from MapStation to shrink the RSC payload.
                         return (
                           <td
                             key={i}
                             className={`text-right py-1 px-2 tabular-nums ${v === maxVal ? 'font-bold text-green-600' : ''}`}
                           >
-                            <span className="inline-flex items-center gap-1 justify-end">
-                              {v}
-                              {conf && <ConfidenceBadge level={conf} />}
-                            </span>
+                            {v}
                           </td>
                         );
                       })}
