@@ -33,9 +33,33 @@ from utils import NocoDB, load_stations
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Rent linear interpolation (aligned with frontend rentToAffordability from PR #28)
-RENT_FLOOR = 70_000   # ¥70k → rating 10
+# Rent linear interpolation (aligned with frontend rentToAffordability in app/src/lib/scoring.ts)
+# Floor raised from ¥70k → ¥80k because no real Suumo station is below ¥83,500;
+# the old floor only existed to absorb the broken distance_estimate fake prices.
+# MUST stay in sync with app/src/lib/scoring.ts RENT_FLOOR.
+RENT_FLOOR = 80_000   # ¥80k → rating 10
 RENT_CEILING = 300_000  # ¥300k → rating 1
+
+# Tokyo Station coordinates (used as reference point for rent regression)
+TOKYO_STATION_LAT = 35.6812
+TOKYO_STATION_LNG = 139.7671
+
+# Absolute caps for rating tiers (CRTKY formula v3).
+# Format: (min_rating, threshold) — "to score min_rating or higher, raw value must be >= threshold".
+# Applied AFTER log-percentile normalization, so cap can only decrease a rating, never increase it.
+# Purpose: prevent "top 5.6%" from automatically meaning "10" when the raw value isn't exceptional.
+ABSOLUTE_CAPS = {
+    "food":       [(8, 100), (9, 400),  (10, 1000)],  # hp_total + osm_food
+    "nightlife":  [(8, 20),  (9, 100),  (10, 300)],   # hp_midnight
+    "transport":  [(8, 2),   (9, 3),    (10, 5)],     # line_count (5+ lines for a 10)
+    "green":      [(8, 25),  (9, 50),   (10, 80)],    # green_count (area_sqm not scraped yet)
+    "gym_sports": [(8, 7),   (9, 12),   (10, 20)],    # gym_count
+    "vibe":       [(8, 8),   (9, 20),   (10, 50)],    # cultural_venue_count
+    # Rent uses SOURCE QUALITY as the cap dimension (not raw price):
+    # 2 = Suumo real data, 1 = ward average, 0 = distance regression estimate.
+    # Ensures regression fallbacks can never surface as "exceptional affordability".
+    "rent":       [(9, 1),   (10, 2)],
+}
 
 
 def log_percentile_normalize(values, invert=False):
@@ -103,6 +127,56 @@ def load_rent_data():
     return {}
 
 
+def fit_rent_regression(rent_data, station_map):
+    """
+    Fit log-linear regression: log(rent) = a + b * distance_km.
+    Uses real Suumo data as training set. Returns (intercept, slope, n_samples).
+    Housing prices decay exponentially with distance, so log-linear fits well.
+
+    Replaces the broken `max(50000, 160000 - dist*15000)` formula that was
+    producing fake ¥50k rents for 507 stations (rating 10/10 for "affordability"
+    when real Suumo data shows the cheapest actual rent in Greater Tokyo is ~¥83k).
+    """
+    xs, ys = [], []
+    for slug, rd in rent_data.items():
+        price = rd.get("1k_1ldk") if isinstance(rd, dict) else None
+        if not price or price <= 0 or slug not in station_map:
+            continue
+        s = station_map[slug]
+        dist = haversine(s["lat"], s["lng"], TOKYO_STATION_LAT, TOKYO_STATION_LNG)
+        xs.append(dist)
+        ys.append(math.log(price))
+
+    if len(xs) < 10:
+        # Not enough data — fall back to reasonable defaults
+        return (math.log(230_000), -0.025, 0)
+
+    n = len(xs)
+    x_mean = sum(xs) / n
+    y_mean = sum(ys) / n
+    num = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, ys))
+    den = sum((x - x_mean) ** 2 for x in xs)
+    if den == 0:
+        return (y_mean, 0.0, n)
+    slope = num / den
+    intercept = y_mean - slope * x_mean
+    return (intercept, slope, n)
+
+
+def apply_absolute_cap(rating, raw_value, caps):
+    """
+    Apply absolute caps to a rating.
+    caps is a list of (min_rating, required_raw) — "to score >= min_rating, raw must be >= required".
+    Returns the minimum of the original rating and the strictest applicable cap.
+    Only decreases ratings; never increases.
+    """
+    max_allowed = 10
+    for min_rating, required in sorted(caps, reverse=True):
+        if raw_value < required:
+            max_allowed = min(max_allowed, min_rating - 1)
+    return min(rating, max_allowed)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Compute data-driven ratings v2")
     parser.add_argument("--dry-run", action="store_true")
@@ -140,6 +214,18 @@ def main():
     rent_data = load_rent_data()
     print(f"  rent (Suumo):     {len(rent_data)} stations")
 
+    # Fit log-linear rent regression from real Suumo data.
+    # Used as fallback for stations without Suumo data AND without ward average.
+    # Replaces the broken `max(50000, 160000 - dist*15000)` formula that gave
+    # 507 stations a fake 10/10 affordability rating.
+    rent_intercept, rent_slope, rent_n = fit_rent_regression(rent_data, station_map)
+    print(f"  rent regression:  log(rent) = {rent_intercept:.3f} + {rent_slope:.5f} * km  (fit on n={rent_n})")
+    if rent_n > 0:
+        # Sanity-check predictions at 0, 20, 40 km
+        for d in [0, 10, 20, 30, 40]:
+            pred = math.exp(rent_intercept + rent_slope * d)
+            print(f"                    at {d:2d} km → ¥{pred:>7,.0f}")
+
     # Compute ward-average rents for fallback
     ward_rents = defaultdict(list)
     for slug, rd in rent_data.items():
@@ -161,6 +247,10 @@ def main():
     ]}
     confidence = {}  # slug -> {category: 'strong'|'moderate'|'estimate'}
     sources_used = {}  # slug -> {category: [source_names]}
+    # Track raw "cap values" per category per station for ABSOLUTE_CAPS check.
+    # These are the actual user-facing counts (restaurants, lines, etc.) used to
+    # gate the 8/9/10 tiers, separate from the weighted/log signals used for ranking.
+    cap_raw = {cat: {} for cat in ABSOLUTE_CAPS.keys()}
 
     for slug in all_slugs:
         st = station_map[slug]
@@ -180,6 +270,7 @@ def main():
         food_hp = h.get("total_count", 0) or 0
         food_osm = o.get("food_count", 0) or 0
         raw["food"][slug] = math.log1p(food_hp) * 0.6 + math.log1p(food_osm) * 0.4
+        cap_raw["food"][slug] = food_hp + food_osm  # total restaurants for cap check
         if food_hp > 0 and food_osm > 0:
             conf["food"] = "strong"
             srcs["food"] = ["hotpepper", "osm"]
@@ -207,6 +298,7 @@ def main():
             math.log1p(karaoke * 5) * 0.08 +
             math.log1p(hostel * 10) * 0.07
         )
+        cap_raw["nightlife"][slug] = midnight  # late-night venue count for cap check
         night_sources = []
         if midnight > 0: night_sources.append("hotpepper_midnight")
         if izakaya > 0: night_sources.append("hotpepper")
@@ -218,6 +310,7 @@ def main():
         # --- TRANSPORT: line_count * 2 + log(passengers) * 0.5 ---
         daily_pax = p.get("daily_passengers", 0) or 0
         raw["transport"][slug] = line_count * 2 + math.log1p(daily_pax) * 0.5
+        cap_raw["transport"][slug] = line_count  # number of train lines for cap check
         conf["transport"] = "strong" if daily_pax > 0 else "moderate"
         srcs["transport"] = ["line_count"] + (["mlit_s12"] if daily_pax > 0 else [])
 
@@ -227,6 +320,7 @@ def main():
             raw["rent"][slug] = rent_price
             conf["rent"] = "strong"
             srcs["rent"] = ["suumo"]
+            cap_raw["rent"][slug] = 2  # real Suumo data → up to 10 allowed
         else:
             # Fallback: ward average
             ward_name = w.get("city_name", "") or w.get("ward_name", "")
@@ -235,12 +329,16 @@ def main():
                 raw["rent"][slug] = avg
                 conf["rent"] = "moderate"
                 srcs["rent"] = ["ward_average"]
+                cap_raw["rent"][slug] = 1  # ward average → capped at 9
             else:
-                # Distance-based estimate
-                dist = haversine(st["lat"], st["lng"], 35.6812, 139.7671)
-                raw["rent"][slug] = max(50000, 160000 - dist * 15000)
+                # Log-linear regression fit on real Suumo data: log(rent) = a + b * distance
+                # Replaces broken max(50000, 160000 - dist*15000) which produced ¥50k
+                # for every station beyond 7km — a floor below what any real Tokyo rent touches.
+                dist = haversine(st["lat"], st["lng"], TOKYO_STATION_LAT, TOKYO_STATION_LNG)
+                raw["rent"][slug] = math.exp(rent_intercept + rent_slope * dist)
                 conf["rent"] = "estimate"
-                srcs["rent"] = ["distance_estimate"]
+                srcs["rent"] = ["distance_regression"]
+                cap_raw["rent"][slug] = 0  # regression estimate → capped at 8
 
         # --- SAFETY: weighted crime from ArcGIS (Tokyo) or ward-level (others) ---
         if cr and cr.get("weighted_crime_score") is not None:
@@ -291,12 +389,14 @@ def main():
             raw["green"][slug] = green_count  # count-only fallback
         conf["green"] = "strong" if green_area > 0 else ("moderate" if green_count > 0 else "estimate")
         srcs["green"] = ["osm"] if green_count > 0 else []
+        cap_raw["green"][slug] = green_count  # park count for cap check
 
         # --- GYM: OSM gym_count ---
         gym = o.get("gym_count", 0) or 0
         raw["gym"][slug] = gym
         conf["gym_sports"] = "strong" if gym > 0 else "estimate"
         srcs["gym_sports"] = ["osm"] if gym > 0 else []
+        cap_raw["gym_sports"][slug] = gym  # gym count for cap check
 
         # --- VIBE: cultural venues + pedestrian streets + cafes ---
         cultural = e.get("cultural_venue_count", 0) or 0
@@ -317,6 +417,7 @@ def main():
             raw["vibe"][slug] = math.log1p(cafe) * 0.4 + math.log1p(convenience) * 0.3 + math.log1p(green_count) * 0.3
             conf["vibe"] = "estimate"
             srcs["vibe"] = ["composite_fallback"]
+        cap_raw["vibe"][slug] = cultural  # cultural venue count for cap check
 
         # --- CROWD: MLIT passengers (inverted) ---
         if daily_pax > 0:
@@ -353,6 +454,35 @@ def main():
         price = raw["rent"].get(slug)
         r = rent_to_affordability(price)
         rent_ratings[slug] = r if r else 5
+
+    # ===== Apply absolute caps (Proposal B) =====
+    # After log-percentile normalization, apply raw-value caps so that reaching a 10
+    # requires hitting an absolute bar (e.g. 5+ train lines for transport=10),
+    # not just being in the top 5.6% of a skewed distribution.
+    print("\nApplying absolute caps...")
+    rating_dicts = {
+        "food": food_ratings,
+        "nightlife": nightlife_ratings,
+        "transport": transport_ratings,
+        "green": green_ratings,
+        "gym_sports": gym_ratings,
+        "vibe": vibe_ratings,
+        "rent": rent_ratings,
+    }
+    for cat, caps in ABSOLUTE_CAPS.items():
+        rd = rating_dicts[cat]
+        capped_count = 0
+        before_top = sum(1 for v in rd.values() if v == 10)
+        for slug in all_slugs:
+            raw_val = cap_raw[cat].get(slug, 0)
+            old = rd.get(slug, 5)
+            new = apply_absolute_cap(old, raw_val, caps)
+            if new < old:
+                capped_count += 1
+            rd[slug] = new
+        after_top = sum(1 for v in rd.values() if v == 10)
+        thresh_str = ", ".join(f"{r}≥{t}" for r, t in caps)
+        print(f"  {cat:12s}: {capped_count:>4} stations capped  ·  top-10 count {before_top} → {after_top}  ·  thresholds: {thresh_str}")
 
     # ===== Build results =====
     categories = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]

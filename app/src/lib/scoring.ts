@@ -1,6 +1,10 @@
 import { Station, MapStation, StationRatings, WeightConfig, RentAvg } from './types';
 
-const RENT_FLOOR = 70_000;
+// Raised from ¥70k → ¥80k in formula v3. The old ¥70k floor was only reachable
+// via the broken distance_estimate fallback which no longer exists. The cheapest
+// real Suumo rent in Greater Tokyo is ¥83,500 (Kawagoe). MUST match
+// scripts/compute-ratings.py RENT_FLOOR.
+const RENT_FLOOR = 80_000;
 const RENT_CEILING = 300_000;
 
 /**
