@@ -1,6 +1,12 @@
 import { getStation, getStations } from '@/lib/data';
 import { RATING_LABELS, RATING_TOOLTIPS, StationRatings, getGoogleMapsAreaUrl } from '@/lib/types';
-import { calculateWeightedScore, scoreToColor } from '@/lib/scoring';
+import {
+  calculateWeightedScore,
+  compositeToColor,
+  categoryDeviationColor,
+  CITY_MEDIANS,
+  DEFAULT_COMPOSITE_ANCHORS,
+} from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
 import FeedbackWidget from '@/components/FeedbackWidget';
@@ -124,7 +130,7 @@ export default async function StationPage({
           {score !== null && (
             <span
               className="ml-auto text-2xl font-bold"
-              style={{ color: scoreToColor(score) }}
+              style={{ color: compositeToColor(score, DEFAULT_COMPOSITE_ANCHORS) }}
             >
               {score.toFixed(1)}
             </span>
@@ -213,7 +219,7 @@ export default async function StationPage({
                           className="h-full rounded-full transition-all"
                           style={{
                             width: `${val * 10}%`,
-                            backgroundColor: scoreToColor(val, key),
+                            backgroundColor: categoryDeviationColor(val, CITY_MEDIANS[key]),
                           }}
                         />
                       </div>

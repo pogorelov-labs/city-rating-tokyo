@@ -12,7 +12,12 @@ import {
 } from 'recharts';
 import { MapStation, SCATTER_AXIS_OPTIONS } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
-import { calculateWeightedScore, scoreToColor, getAxisValue } from '@/lib/scoring';
+import {
+  calculateWeightedScore,
+  compositeToColor,
+  computeCompositeAnchors,
+  getAxisValue,
+} from '@/lib/scoring';
 
 interface Props {
   stations: MapStation[];
@@ -26,6 +31,11 @@ export default function ScatterPlotExplorer({ stations }: Props) {
   const xLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === xAxis)?.label ?? xAxis;
   const yLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === yAxis)?.label ?? yAxis;
 
+  const compositeAnchors = useMemo(
+    () => computeCompositeAnchors(stations, weights),
+    [stations, weights],
+  );
+
   const data = useMemo(() => {
     return stations
       .filter((s) => s.ratings)
@@ -34,10 +44,10 @@ export default function ScatterPlotExplorer({ stations }: Props) {
         const y = getAxisValue(s, yAxis);
         if (x === null || y === null) return null;
         const score = calculateWeightedScore(s.ratings!, weights);
-        return { name: s.name_en, x, y, score, fill: scoreToColor(score) };
+        return { name: s.name_en, x, y, score, fill: compositeToColor(score, compositeAnchors) };
       })
       .filter(Boolean) as { name: string; x: number; y: number; score: number; fill: string }[];
-  }, [stations, weights, xAxis, yAxis]);
+  }, [stations, weights, xAxis, yAxis, compositeAnchors]);
 
   return (
     <div>
