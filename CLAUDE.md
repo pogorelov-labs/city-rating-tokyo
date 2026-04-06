@@ -28,14 +28,14 @@ app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
 
 | Table | ID | Records | Source |
 |-------|----|---------|--------|
-| osm_pois | mnnuqtldvt4jxlj | ~1398 | Overpass API |
-| hotpepper | mfk9j2qoj2bkeoo | 1493 | HotPepper Gourmet API |
-| osm_extended | mrpqu8o796e6xzk | building | Overpass (karaoke, cultural, hostel) |
-| station_crime | mxwixub7d0q5i00 | 615 | Keishicho ArcGIS FeatureServer |
-| crime_stats | mxitpnomlom3j3q | 91 | Hardcoded ward-level (legacy) |
-| passenger_counts | m36bbxcv8t0asur | ~1409 | MLIT S12 GeoJSON + hardcoded |
-| station_wards | m74rdmspn3trrqc | building | Nominatim reverse geocoding |
-| hostels | ms9awzjv9j6suh7 | 3 | Overpass (test) |
+| osm_pois | mnnuqtldvt4jxlj | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
+| hotpepper | mfk9j2qoj2bkeoo | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
+| osm_extended | mrpqu8o796e6xzk | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
+| station_crime | mxwixub7d0q5i00 | 615 | Keishicho ArcGIS FeatureServer (Tokyo neighborhood-level) |
+| crime_stats | mxitpnomlom3j3q | 91 | Hardcoded ward-level (legacy fallback for non-Tokyo) |
+| passenger_counts | m36bbxcv8t0asur | 1409 | MLIT S12 GeoJSON (94% coverage, was 6%) |
+| station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
+| hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
 | feedback | mwuwwlko3278wrk | — | User feedback from site |
 
