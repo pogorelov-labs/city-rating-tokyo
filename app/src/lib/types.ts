@@ -95,7 +95,10 @@ export interface MapStation {
   ratings: StationRatings | null;
   rent_1k: number | null;
   min_transit: number | null;
-  confidence?: StationConfidence | null;
+  // confidence is NOT included here on purpose: it was ~226 KB of the RSC
+  // payload with 1493 stations and is only needed on the station detail page
+  // (which uses the full Station type via getStation). If compare-panel
+  // badges are needed again, lazy-load them from a separate data file.
 }
 
 export interface WeightConfig {
