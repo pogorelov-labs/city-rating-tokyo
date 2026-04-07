@@ -121,7 +121,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 setAllWeights(p.weights);
                 setActivePreset(p.id);
               }}
-              className={`text-xs px-2.5 py-1.5 rounded-full border cursor-pointer transition-colors ${
+              className={`text-xs px-2.5 py-1.5 rounded-full border cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 ${
                 activePreset === p.id
                   ? 'bg-blue-100 border-blue-400 text-blue-700'
                   : 'bg-gray-50 border-gray-200 hover:bg-gray-100 text-gray-600'
@@ -157,7 +157,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   max={50}
                   value={weights[key]}
                   onChange={(e) => { setWeight(key, Number(e.target.value)); setActivePreset(null); }}
-                  className="w-full h-1.5 accent-blue-600 cursor-pointer"
+                  className="w-full h-1.5 accent-blue-600 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:rounded-full"
                 />
               </div>
             )
@@ -191,7 +191,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   onBlur={() => setHoveredStation(null)}
                   data-umami-event="ranked-select"
                   data-umami-event-station={s.slug}
-                  className="w-full text-left flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors"
+                  className="w-full text-left flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-inset"
                 >
                   <span className="text-xs text-gray-400 w-5 tabular-nums">
                     {i + 1}.
