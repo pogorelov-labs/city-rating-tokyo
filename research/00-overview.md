@@ -58,6 +58,8 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | G5 | /methodology page | ⏳ pending | — (CRTKY-50) |
 | G6 | AI vs data-driven station badge + freshness | ⏳ pending | — (CRTKY-51) |
 
+**Транспорт / быт (не в таблице фаз A–G):** время до хабов в UI есть, но для большинства станций в экспорте стоит **заглушка 30m** (см. `scripts/export-ratings.py`); реальные минуты в основном у AI-станций. **Last train** — только placeholder в UI. Расширение **rent** (LIFULL, больше Suumo-зон и т.д.) — `research/05-rent.md`. Полный роадмап блока: **`research/VISION.md`** → раздел *Roadmap: транспорт, хабы, аренда, «последний поезд»*.
+
 ## Production Status (2026-04-06)
 
 **Live at https://city-rating.pogorelov.dev** — HTTP 200, 1493 station pages.
