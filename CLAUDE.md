@@ -162,6 +162,14 @@ Five traditional Japanese pigments on a diverging scale, used in two ways:
 
 **Key insight:** the bar color encodes *deviation from the Tokyo median for that category*, NOT raw value. A long bar does not mean a blue bar — e.g. Affordability `8 / 10` when `CITY_MEDIANS.rent = 8` paints kinari cream, not blue, because the station is exactly average for rent.
 
+**Data-quality dots (separate channel):** per-category confidence uses muted pigments in `CONFIDENCE_DOT_COLORS` (`ConfidenceBadge.tsx`), not the diverging scale above:
+
+| UI label | Level key | Pigment | Hex |
+|---|---|---|---|
+| Measured | `strong` | 苔色 koke-iro | `#6A8059` |
+| Partial | `moderate` | 山吹 yamabuki | `#C9A227` |
+| Estimate | `estimate` | 鈍色 nibi-iro | `#828A8C` |
+
 ### Why two APIs
 
 - **`compositeToColor(score, anchors)`** — map markers and ranked list. Uses `computeCompositeAnchors(stations, weights)` to percentile-stretch across the current weighted distribution (`p5 / p50 / p95`). This is recomputed as the user drags weight sliders so the palette always spans the actual data range. Homepage call sites defer it via `useDeferredValue` to keep INP low.
@@ -215,7 +223,8 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `app/src/components/FilterPanel.tsx` | Weight sliders + presets + search + Top Ranked. Category help uses shared `<Tooltip content={…}>` (CRTKY-77 / PR #49), same API as station page. Deferred ranking + `computeCompositeAnchors` with `useDeferredValue(weights)` (CRTKY-61). Preset chips, range inputs, and Top Ranked rows use **`focus-visible`** rings for keyboard affordance (CRTKY-73 partial). |
 | `app/src/components/RadarChart.tsx` | Single-station recharts radar: median ghost + station polygon + micro-legend (CRTKY-76). |
 | `app/src/components/RadarChartWrapper.tsx` | `next/dynamic` for `RadarChart` with `ssr: false` on station detail only — avoids SSR/hydration issues with recharts (same lazy pattern as other chart entry points). |
-| `app/src/components/FeedbackWidget.tsx` | Station/general feedback form. Prior-submit state comes from **`useSyncExternalStore`** reading `localStorage` (server snapshot `false`); same-tab updates use a tiny `window` event (`city-rating-feedback-ls-sync`) because `storage` events do not fire in the active tab. Avoids `useEffect`+`setState` for initial hydrate (eslint `react-hooks/set-state-in-effect`). |
+| `app/src/components/FeedbackWidget.tsx` | Station/general feedback form. Prior-submit state comes from **`useSyncExternalStore`** reading `localStorage` (server snapshot `false`); same-tab updates use a tiny `window` event (`city-rating-feedback-ls-sync`) because `storage` events do not fire in the active tab. Avoids `useEffect`+`setState` for initial hydrate (eslint `react-hooks/set-state-in-effect`). Surfaces **`error` JSON** from `/api/feedback` (e.g. 429 rate limit) instead of a single generic line. |
+| `app/src/app/api/feedback/route.ts` | POST → NocoDB `feedback` table. **IP rate limit:** minimum **2.5s** between requests per IP (was 10s and blocked legitimate “Add another tip”). Returns **429** + `Retry-After` + `{ error }` when under cooldown. |
 
 ## Recent UI (post–CRTKY-68)
 
