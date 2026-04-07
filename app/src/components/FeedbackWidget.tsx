@@ -1,7 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { getVisitorId } from '@/lib/visitor-id';
+
+const FEEDBACK_LS_SYNC = 'city-rating-feedback-ls-sync';
+
+function subscribeFeedbackStorage(key: string, onChange: () => void) {
+  if (typeof window === 'undefined') return () => {};
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === key || e.key === null) onChange();
+  };
+  const onSync = () => onChange();
+  window.addEventListener('storage', onStorage);
+  window.addEventListener(FEEDBACK_LS_SYNC, onSync);
+  return () => {
+    window.removeEventListener('storage', onStorage);
+    window.removeEventListener(FEEDBACK_LS_SYNC, onSync);
+  };
+}
+
+function notifyFeedbackStorageSync() {
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new Event(FEEDBACK_LS_SYNC));
+  }
+}
 
 interface FeedbackWidgetProps {
   stationSlug?: string;
@@ -36,14 +58,15 @@ const COPY = {
 
 export default function FeedbackWidget({ stationSlug, stationName, source }: FeedbackWidgetProps) {
   const [comment, setComment] = useState('');
-  const [phase, setPhase] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
+  const [phase, setPhase] = useState<'idle' | 'submitting' | 'error'>('idle');
   const copy = COPY[source];
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem(storageKey(stationSlug))) {
-      setPhase('done');
-    }
-  }, [stationSlug]);
+  const lsKey = storageKey(stationSlug);
+  const alreadySent = useSyncExternalStore(
+    (onChange) => subscribeFeedbackStorage(lsKey, onChange),
+    () => (typeof window !== 'undefined' ? !!localStorage.getItem(lsKey) : false),
+    () => false,
+  );
 
   const handleSubmit = async () => {
     if (!comment.trim()) return;
@@ -63,7 +86,8 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
       });
       if (res.ok) {
         localStorage.setItem(storageKey(stationSlug), '1');
-        setPhase('done');
+        notifyFeedbackStorageSync();
+        setPhase('idle');
       } else {
         setPhase('error');
       }
@@ -72,13 +96,14 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
     }
   };
 
-  if (phase === 'done') {
+  if (alreadySent) {
     return (
       <div className="bg-green-50 rounded-lg border border-green-200 p-4 text-center">
         <p className="text-green-700 font-medium text-sm">{copy.thanks}</p>
         <button
           onClick={() => {
             localStorage.removeItem(storageKey(stationSlug));
+            notifyFeedbackStorageSync();
             setPhase('idle');
             setComment('');
           }}
