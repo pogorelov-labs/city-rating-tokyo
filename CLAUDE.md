@@ -46,6 +46,8 @@ app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
 
 These feed the `ConfidenceBadge` UI component. NocoDB API token is data-only — schema changes (new columns) must be done manually in the NocoDB UI.
 
+**AI-researched stations vs pipeline `confidence`:** ~272 slugs in `demo-ratings.ts` have `description` (and integer ratings) but **no** `confidence` / `sources` from `export-ratings.py` — computed metadata is not merged for them while ratings remain AI-priority (see Override Hierarchy). `/station/[slug]` shows no per-row dots or chip legend in that case; bar-vs-median copy still applies. **Do not fake this in the UI by defaulting every category to `estimate`:** in the pipeline, `estimate` means formula/proxy (e.g. rent regression), not “human-curated score,” so conflating the two blurs the legend. A proper fix is data-side: merge non-overridden computed `confidence` for those slugs, add a dedicated level (e.g. editorial/researched), or document an explicit mapping policy — then export + types.
+
 ### NocoDB Access
 ```
 URL: https://nocodb.pogorelov.dev
