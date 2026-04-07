@@ -98,12 +98,14 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
       <span
         className={`${dotSize} rounded-full cursor-help inline-block`}
         style={{ backgroundColor: meta.color, opacity: 0.9 }}
-        aria-label={`Data source: ${meta.label}`}
+        aria-label={`Confidence: ${meta.label}`}
       />
       {show && (
         <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1.5 z-50 w-56 px-2.5 py-1.5 text-xs text-white bg-gray-800 rounded-md shadow-lg leading-relaxed pointer-events-none">
-          <span className="font-semibold">{meta.label}</span>
-          <span className="block text-gray-300">{meta.description}</span>
+          <span className="block font-semibold">
+            <span className="text-gray-200">Confidence:</span> {meta.label}
+          </span>
+          <span className="block text-gray-300 mt-0.5">{meta.description}</span>
           {sourceList && (
             <span className="block mt-1 text-gray-300">
               <span className="text-gray-400">Sources: </span>
