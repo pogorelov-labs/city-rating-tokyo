@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useDeferredValue, useState } from 'react';
+import { useEffect, useMemo, useDeferredValue, useRef, useState } from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -42,6 +42,9 @@ function darkenRgb(rgb: string, factor = 0.7): string {
   const b = Math.round(Number(match[3]) * factor);
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+/** ~+40 % radius when selected or hovered (list or map) — CRTKY-59. */
+const HIGHLIGHT_RADIUS_FACTOR = 1.4;
 
 /** Tooltip header: Wikimedia thumb, or score-colored gradient with Japanese name. */
 function StationTooltipHero({
@@ -123,6 +126,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const selectedStation = useAppStore((s) => s.selectedStation);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
   const hoveredStation = useAppStore((s) => s.hoveredStation);
+  const setHoveredStation = useAppStore((s) => s.setHoveredStation);
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
   const compareStations = useAppStore((s) => s.compareStations);
@@ -134,6 +138,13 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   // is still dragging. The slider UI itself (in FilterPanel) reads the live
   // value so the handle stays glued to the pointer.
   const deferredWeights = useDeferredValue(weights);
+
+  // Delay clearing hover when the pointer leaves the circle so moving toward
+  // the Leaflet tooltip (above the marker) does not flicker the highlight.
+  const mapHoverClearRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  useEffect(() => {
+    return () => clearTimeout(mapHoverClearRef.current);
+  }, []);
 
   const scoredStations = useMemo(() => {
     return stations.map((s) => ({
@@ -208,8 +219,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         const isHovered = station.slug === hoveredStation;
         const isHighlighted = isSelected || isHovered;
 
-        // Selected/hovered stations: bigger, bolder stroke in brand blue
-        const effectiveRadius = isHighlighted ? radius + 3 : radius;
+        // Selected/hovered stations: ~+40 % radius (CRTKY-59), bolder stroke
+        const effectiveRadius = isHighlighted ? radius * HIGHLIGHT_RADIUS_FACTOR : radius;
         const strokeColor = isSelected
           ? '#1d4ed8'
           : isHovered
@@ -245,6 +256,16 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               click: () => {
                 setSelectedStation(station.slug);
                 window.umami?.track('map-click', { station: station.slug });
+              },
+              mouseover: () => {
+                clearTimeout(mapHoverClearRef.current);
+                setHoveredStation(station.slug);
+              },
+              mouseout: () => {
+                mapHoverClearRef.current = setTimeout(() => {
+                  const { hoveredStation: h, setHoveredStation: clear } = useAppStore.getState();
+                  if (h === station.slug) clear(null);
+                }, 150);
               },
             }}
           >
