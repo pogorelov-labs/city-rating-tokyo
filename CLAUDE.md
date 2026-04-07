@@ -148,6 +148,43 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 2. **Computed data-driven** — from NocoDB pipeline
 3. **Heuristic fallback** — only where real data unavailable
 
+## Color System (akane↔kon diverging palette)
+
+Five traditional Japanese pigments on a diverging scale, used in two ways:
+
+| Pigment | Hex | Role in composite (map, ranked list) | Role in per-category bar (station card) |
+|---|---|---|---|
+| 茜 akane | `#8C2926` | `score ≤ p5` (strongly below) | `value − median ≤ −4` |
+| 珊瑚 sango | `#B3574E` | `p5 .. p50` | `−4 .. −2` |
+| 生成り kinari | `#D9C9A8` | `p50` (neutral pivot) | `deviation = 0` |
+| 浅葱 asagi | `#6A8999` | `p50 .. p95` | `+2 .. +4` |
+| 紺 kon | `#2C4A5F` | `score ≥ p95` (strongly above) | `deviation ≥ +4` |
+
+**Key insight:** the bar color encodes *deviation from the Tokyo median for that category*, NOT raw value. A long bar does not mean a blue bar — e.g. Affordability `8 / 10` when `CITY_MEDIANS.rent = 8` paints kinari cream, not blue, because the station is exactly average for rent.
+
+### Why two APIs
+
+- **`compositeToColor(score, anchors)`** — map markers and ranked list. Uses `computeCompositeAnchors(stations, weights)` to percentile-stretch across the current weighted distribution (`p5 / p50 / p95`). This is recomputed as the user drags weight sliders so the palette always spans the actual data range. Homepage call sites defer it via `useDeferredValue` to keep INP low.
+- **`categoryDeviationColor(value, median)`** — per-category bars on the station detail page. Uses the hardcoded `CITY_MEDIANS` constant — no sort needed, no weights needed. Deviation maps linearly from `[−5, +5]` onto the 5 palette stops.
+
+`pigmentName(deviation)` returns `{ jp, en, tone }` for microcopy on the bar hover tooltip ("Painted in 浅葱 asagi (pale blue-green)").
+
+### Color literacy affordances (CRTKY-68)
+
+The station Ratings card teaches the "deviation, not value" rule through five visual affordances, no words required:
+
+1. **Median tick** — 1 px `slate-300` hairline at `median * 10%` on every bar (Tufte reference line)
+2. **Two-tone empty track** — warm `#F5F1EC` cream left of median, cool `#EFF2F4` slate right
+3. **Direction arrow** — `↑ / ↓ / −` after the value in the bar color at 65 % opacity
+4. **Pigment confidence dots** — `CONFIDENCE_DOT_COLORS.strong / moderate / estimate` → 苔色 koke-iro / 山吹 yamabuki / 鈍色 nibi-iro instead of Tailwind traffic lights
+5. **Plain `?` glyph** — no grey pill, just `text-gray-300` character
+
+Plus three tooltips: bar hover (3 lines with pigment name), `?` hover (description + median block), and an italic disambiguation line under the legend explaining "bar colors show deviation, these dots show how the rating was derived."
+
+### Heatmap layer (unchanged)
+
+The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-dimension 2-stop palettes (food → amber/orange, nightlife → lavender/purple, etc). That layer's job is *orientation* ("which dimension am I viewing"), not insight, so category hues still serve it. Explicitly out of scope for CRTKY-66.
+
 ## Key Files
 
 | File | Purpose |
@@ -158,7 +195,7 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 | `app/src/lib/data.ts` | Merges stations + ratings + rent at build time |
 | `app/src/lib/types.ts` | TypeScript interfaces (StationRatings, etc.) |
 | `app/src/lib/store.ts` | Zustand store: weights, filters, `selectedStation`, `hoveredStation`, compare list, heatmap |
-| `app/src/lib/scoring.ts` | Weighted score, affordability, **magma + category-hue palettes** via `scoreToColor(score, dimension?)` — composite = magma, heatmap passes the dimension for category-specific hues |
+| `app/src/lib/scoring.ts` | Weighted score, affordability, **diverging akane↔kon Japanese palette** (CRTKY-66). APIs: `compositeToColor(score, anchors)` for weighted-score surfaces with percentile-stretched anchors; `categoryDeviationColor(value, median)` for per-category bars via `CITY_MEDIANS`; `pigmentName(dev)` returning `{jp, en, tone}` for microcopy; `scoreToColor(score, dim)` is a thin heatmap-only shim. Five stops: 茜 akane / 珊瑚 sango / 生成り kinari / 浅葱 asagi / 紺 kon |
 | `data/stations.json` | Master station list (1493 entries) |
 | `scripts/station-area-codes.json` | Station → ward code mapping (274 entries) |
 | `scripts/scrapers/utils.py` | Shared NocoDB client, rate limiter, station loader |
@@ -167,8 +204,10 @@ Sources: MLIT S12 (94%), HotPepper total as fallback.
 | `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
 | `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date) |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
-| `app/src/components/ConfidenceBadge.tsx` | 🟢🟡⚪ badge component with source tooltip |
-| `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`) |
+| `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate" (CRTKY-67) |
+| `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
+| `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. 400 ms enter delay + 150 ms leave delay. Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68) |
+| `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` so weight sliders don't jank (CRTKY-61) |
 
 ## Running Scrapers on VPS
 
@@ -228,3 +267,13 @@ scripts/refresh-ratings.sh --no-build   # skip build verification
 Safety: the script refuses to run with unrelated dirty files and refuses to push directly to main without `--force-main`. Never uses `--amend` or force push.
 
 **Note:** the frontend bakes ratings into static HTML at build time. Re-running scrapers alone does NOT update the live site — you must also run the refresh chain so `demo-ratings.ts` gets rewritten and committed.
+
+## Homepage performance (CRTKY-61 — PR #44)
+
+Three optimizations landed in the homepage initial-load path. If you touch these call sites, preserve the patterns below or the gains regress:
+
+1. **Lazy chunks for `recharts` consumers.** `ScatterPlotExplorer` (in `HeaderActions.tsx`) and `ComparePanel` (in `MapWrapper.tsx`) are loaded via `next/dynamic({ ssr: false })`. `ComparePanel` is additionally gated on `compareStations.length >= 2` so its ~450 KB chunk never downloads until the user compares. Don't static-import `recharts` anywhere else or the chunk lands in the initial bundle.
+2. **`MapStation.confidence` dropped from the RSC payload.** `getMapStations()` in `lib/data.ts` does NOT copy `confidence` — it shipped 226 KB of repetitive metadata into every homepage load for zero UI benefit. Confidence lives only on `Station` (via `getStation()`), which is used by `/station/[slug]` pages. If you need confidence metadata on a homepage surface, lazy-fetch a `confidence-by-slug.json` from inside the component, don't put it back on `MapStation`.
+3. **`useDeferredValue(weights)` in Map, FilterPanel, ComparePanel, ScatterPlotExplorer.** Scoring 1493 stations + sorting percentile anchors on every slider frame was a 2× INP regression. Defer BOTH `scoredStations` AND `computeCompositeAnchors` calls so the palette range stays coherent with the (also deferred) score values mid-drag. The slider itself still reads live `weights` so the thumb never detaches from the pointer.
+
+Baseline → after: initial JS 1086 → 642 KB (−41 %), HTML 895 → 616 KB (−31 %), RSC flight 755 → 523 KB (−31 %).
