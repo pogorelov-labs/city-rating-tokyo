@@ -108,19 +108,19 @@ Tooltip есть, но он описывает категорию ("Variety and 
 
 #### 3.1 Confidence Badge на каждом рейтинге
 
-Рядом с числом — маленький индикатор уверенности:
+Рядом с категорией или значением — маленькая **точка** (не светофор): цвета из `CONFIDENCE_DOT_COLORS` в коде — 苔色 `#6A8059`, 山吹 `#C9A227`, 鈍色 `#828A8C` (см. `CLAUDE.md`, Color System). В UI подписи: **Measured / Partial / Estimate**.
 
 ```
-Food & Dining     ████████░░  8   🟢
-Nightlife         ██████░░░░  6   🟡
-Safety            ████░░░░░░  4   🟡
-Vibe              ██████░░░░  6   ⚪ (no data for this station)
+Food & Dining  ●  ████████░░  8   ↑
+Nightlife      ●  ██████░░░░  6   ↑
 ```
 
-Три уровня:
-- 🟢 **Strong** — 2+ реальных источника, данные свежие (food, transport, gym для большинства)
-- 🟡 **Moderate** — 1 источник или ward-level данные (safety для не-Токио, rent с fallback)
-- ⚪ **Estimate** — нет прямых данных, используется формула/среднее (vibe для не-AI станций, rent для unmapped)
+Три уровня (ключи в данных: `strong` / `moderate` / `estimate`):
+- **Measured** — 2+ согласованных источника по конвейеру (типично food, transport, gym у computed-станций)
+- **Partial** — один источник или агрегированный fallback (ward-level rent/safety и т.п.)
+- **Estimate** — модель/регрессия/прокси без прямого наблюдения (часть vibe/crowd/rent)
+
+Станции только с AI-описанием без блока `confidence` в данных — бейджи не показываются (ожидаемо до отдельной задачи на метаданные)
 
 #### 3.2 Data Tooltip — "Почему этот score?"
 
