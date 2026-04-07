@@ -184,6 +184,33 @@ export function categoryDeviationColor(value: number, median: number): string {
   return samplePalette(t, DIVERGING_STOPS);
 }
 
+/** One of the five traditional Japanese pigments on the diverging scale. */
+export interface PigmentName {
+  /** Original Japanese characters, e.g. "浅葱". */
+  jp: string;
+  /** Romaji, e.g. "asagi". */
+  en: string;
+  /** Short colour descriptor in English, e.g. "pale blue-green". */
+  tone: string;
+}
+
+/**
+ * Given a per-category deviation `value − city median`, return the
+ * traditional Japanese pigment name that `categoryDeviationColor` will
+ * paint at that deviation. Used by the station Ratings card's bar hover
+ * tooltip so users learn the pigment vocabulary in context.
+ *
+ * Thresholds are aligned with the 5 stops in `DIVERGING_STOPS` so the
+ * name always matches what the eye sees on the bar.
+ */
+export function pigmentName(deviation: number): PigmentName {
+  if (deviation <= -4) return { jp: '茜',     en: 'akane',  tone: 'deep madder red' };
+  if (deviation <= -2) return { jp: '珊瑚',   en: 'sango',  tone: 'coral clay' };
+  if (deviation >=  4) return { jp: '紺',     en: 'kon',    tone: 'deep indigo' };
+  if (deviation >=  2) return { jp: '浅葱',   en: 'asagi',  tone: 'pale blue-green' };
+  return                       { jp: '生成り', en: 'kinari', tone: 'cream' };
+}
+
 /**
  * Compute p5/p50/p95 composite-score anchors from a station set and
  * a weight configuration. O(n log n) sort; cheap on 1500 stations.
