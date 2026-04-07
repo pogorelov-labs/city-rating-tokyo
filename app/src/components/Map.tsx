@@ -61,10 +61,6 @@ function StationTooltipHero({
 }) {
   const [imgFailed, setImgFailed] = useState(false);
 
-  useEffect(() => {
-    setImgFailed(false);
-  }, [thumb]);
-
   const gradientBase = {
     width: '100%',
     backgroundImage:
@@ -261,6 +257,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             >
               <div style={{ width: 260 }}>
                 <StationTooltipHero
+                  key={`${station.slug}-${thumb ?? ''}`}
                   slug={station.slug}
                   thumb={thumb}
                   nameEn={station.name_en}

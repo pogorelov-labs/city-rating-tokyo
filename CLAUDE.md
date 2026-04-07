@@ -5,7 +5,7 @@
 Interactive map of Greater Tokyo (1493 stations) with data-driven neighborhood ratings. Users filter by food, nightlife, transport, rent, safety, green, gym, vibe, crowd with adjustable weights.
 
 **Live**: https://city-rating.pogorelov.dev
-**Stack**: Next.js 14 (App Router) + Leaflet + Tailwind. Static JSON data, no DB at runtime.
+**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand. Static JSON data, no DB at runtime.
 **Deploy**: Coolify on VPS (217.196.61.98), GitHub App auto-deploy from `main`.
 
 ## Architecture
@@ -181,6 +181,10 @@ The station Ratings card teaches the "deviation, not value" rule through five vi
 
 Plus three tooltips: bar hover (3 lines with pigment name), `?` hover (description + median block), and an italic disambiguation line under the legend explaining "bar colors show deviation, these dots show how the rating was derived."
 
+### Station Overview radar vs Tokyo median (CRTKY-76, PR #51)
+
+The single-station `RadarChart` (lazy-loaded via `RadarChartWrapper`) draws **two polygons**: a faint slate **Tokyo median** reference from `CITY_MEDIANS` (drawn first, `dot={false}`) and **this station** in blue on top, plus a micro-legend under the chart and the default recharts hover tooltip. Same deviation story as the rating bars, without per-axis pigment splits (recharts `Radar` is one stroke per series). The compare radar (`CompareRadarChart`) does not add the median overlay yet — avoids clutter with 2–3 station polygons.
+
 ### Heatmap layer (unchanged)
 
 The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-dimension 2-stop palettes (food → amber/orange, nightlife → lavender/purple, etc). That layer's job is *orientation* ("which dimension am I viewing"), not insight, so category hues still serve it. Explicitly out of scope for CRTKY-66.
@@ -191,7 +195,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 |------|---------|
 | `app/src/data/demo-ratings.ts` | All ratings (AI + computed). ~7700 lines. |
 | `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
-| `app/src/data/station-images.json` | Wikimedia photos per station — **623/1493 coverage (42%)**. Missing stations fall back to a gradient placeholder in the map tooltip. |
+| `app/src/data/station-images.json` | Wikimedia photos per station — **623/1493 coverage (42%)**. Missing URL → gradient header in map tooltip; **broken URL** → same gradient via `StationTooltipHero` `onError` (PR #50). |
 | `app/src/lib/data.ts` | Merges stations + ratings + rent at build time |
 | `app/src/lib/types.ts` | TypeScript interfaces (StationRatings, etc.) |
 | `app/src/lib/store.ts` | Zustand store: weights, filters, `selectedStation`, `hoveredStation`, compare list, heatmap |
@@ -207,7 +211,18 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate" (CRTKY-67) |
 | `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
 | `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. 400 ms enter delay + 150 ms leave delay. Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68) |
-| `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` so weight sliders don't jank (CRTKY-61) |
+| `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). Hover tooltip header: `StationTooltipHero` (thumb, gradient + `name_jp`, or gradient after image error). Failed-thumb state resets by remounting the hero when the thumbnail URL changes (`key` combines `station.slug` and `thumb`), avoiding `useEffect` + `setState` (eslint `react-hooks/set-state-in-effect`). |
+| `app/src/components/FilterPanel.tsx` | Weight sliders + presets + search + Top Ranked. Category help uses shared `<Tooltip content={…}>` (CRTKY-77 / PR #49), same API as station page. Deferred ranking + `computeCompositeAnchors` with `useDeferredValue(weights)` (CRTKY-61). |
+| `app/src/components/RadarChart.tsx` | Single-station recharts radar: median ghost + station polygon + micro-legend (CRTKY-76). |
+| `app/src/components/RadarChartWrapper.tsx` | `next/dynamic` for `RadarChart` with `ssr: false` on station detail only — avoids SSR/hydration issues with recharts (same lazy pattern as other chart entry points). |
+
+## Recent UI (post–CRTKY-68)
+
+| PR | Plane | What shipped |
+|----|-------|----------------|
+| #49 | CRTKY-77 | FilterPanel: `Tooltip` with `content` prop; confidence legend chips + `Confidence:` prefix on badges (`ConfidenceBadge` + station page). |
+| #50 | CRTKY-71 | Map tooltip: `StationTooltipHero` falls back to score gradient when Wikimedia `img` fires `onError` (Umami retained). |
+| #51 | CRTKY-76 | Station Overview radar: `CITY_MEDIANS` slate ghost under blue station shape + legend + tooltip. |
 
 ## Running Scrapers on VPS
 
