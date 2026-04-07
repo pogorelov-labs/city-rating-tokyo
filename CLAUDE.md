@@ -22,6 +22,21 @@ scripts/export-ratings.py → app/src/data/demo-ratings.ts
 app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
 ```
 
+## Data readiness & coverage honesty (maintainers)
+
+Do **not** equate “every station has a number” with “every number is equally grounded.” This section is the project’s **anti–false-precision** memory.
+
+1. **“100%” / full rows:** Often means **all 1493 slugs participate** in normalization, not that each category uses the same spatial granularity or primary data quality everywhere (Tokyo safety polygons vs ward/prefecture outside Tokyo; rent Suumo vs ward vs regression).
+2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use ward average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`.
+3. **Safety:** Keishicho ArcGIS is **neighborhood-level** for Tokyo; other prefectures may be **municipality/ward** or legacy tables until **CRTKY-82** lands — see `research/02-safety.md`.
+4. **Green / vibe:** OSM signals can exist while **pipeline `confidence` still shows no `strong`** for that category (check `research/00-overview.md` snapshot counts) — strong/moderate/estimate reflect **source rules in compute**, not “map looks green.”
+5. **`transit_minutes` stub:** `scripts/export-ratings.py` emits a **fixed 30 min** to all five hubs for **computed** (non–AI-preserved) rows. **Hubs UI is not routing truth** until **CRTKY-81**. AI-researched entries keep hand-authored times.
+6. **Missing confidence keys in export:** `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong.
+7. **AI-researched slugs (~272):** Integer ratings and `description` are **editorial**; pipeline `confidence`/`sources` are **not** merged today — see **CRTKY-83** and `CLAUDE.md` NocoDB note on AI-only gap.
+8. **HotPepper API** is a **single-vendor** dependency for food/nightlife signals; no automated fallback is implemented.
+
+**Docs to keep aligned:** `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, this file, **Plane CRTKY-80** subtree (81–84).
+
 ## Data Pipeline
 
 ### NocoDB Tables (city-rating-db, base ID: ph4flgay4kmcgk4)
@@ -203,6 +218,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 
 | File | Purpose |
 |------|---------|
+| `README.md` | Public repo intro: 1493 stations, real stack, data sources, **honesty** pointers (hub stub CRTKY-81, CLAUDE Data readiness, Plane CRTKY-80–84) |
 | `app/src/data/demo-ratings.ts` | All ratings (AI + computed). ~7700 lines. |
 | `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
 | `app/src/data/station-images.json` | Wikimedia photos per station — **623/1493 coverage (42%)**. Missing URL → gradient header in map tooltip; **broken URL** → same gradient via `StationTooltipHero` `onError` (PR #50). |
@@ -216,7 +232,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `scripts/scrapers/scrape-osm-pois.py` | OSM POI scraper (food, nightlife, green, gym) |
 | `scripts/scrapers/scrape-hotpepper.py` | HotPepper restaurant/izakaya/bar scraper |
 | `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
-| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date) |
+| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date). **Computed rows:** fixed `transit_minutes` **30m×5 hubs** stub until CRTKY-81; missing per-category confidence keys default to **`estimate`** in generated TS |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
 | `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width dot column (`w-6`), `ConfidenceBadge` before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Caption always explains bars; dot clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
 | `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate" (CRTKY-67) |

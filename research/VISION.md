@@ -40,6 +40,13 @@
 | vibe | OSM cultural venues (building) | building | 0%→100% | 🔄 Строится |
 | crowd | MLIT + hardcoded | 1409 | 94% | ✅ Да |
 
+### Критическая оценка готовности (2026-04)
+
+- **«100%» / полное покрытие строк** в таблице выше = у **каждой** из 1493 станций есть значение в конвейере, **не** то, что все категории одинаково «измерены» (аренда: Suumo vs ward vs регрессия; безопасность: полигоны Токио vs ward вне Токио).
+- **Confidence `strong`:** для **green** и **vibe** в снимках метаданных часто **0** при живом OSM — уровень отражает **правила compute**, а не «карта выглядит хорошо»; см. `research/00-overview.md`.
+- **Hub commute:** у computed-экспорта **заглушка 30m** до пяти хабов (`export-ratings.py`) — UI **не** эквивалентен маршрутизации до **CRTKY-81**.
+- **~272 AI-станции:** рейтинги и текст **редакционные**; `confidence` из NocoDB **не** мерджится в export до **CRTKY-83** (не подменять всё на `estimate` в UI — см. CLAUDE + §3.1).
+
 ### Принцип "Data First"
 
 Каждый рейтинг ДОЛЖЕН опираться на конкретные, проверяемые данные:
@@ -47,17 +54,28 @@
 - **Не**: "Shinjuku food = 9 потому что мы так решили"
 - **Да**: "Shinjuku food = 9 потому что в радиусе 800м: 794 ресторана в OSM + 2099 заведений на HotPepper, это top 0.3% из 1493 станций"
 
-### Что ещё нужно собрать
+### Данные: сделано vs остаётся (актуализация 2026-04)
 
-| Что | Зачем | Источник | Приоритет | Ссылка |
-|-----|-------|----------|-----------|--------|
-| HP midnight_count | Nightlife: заведения после 23:00 | HotPepper API `midnight=1` | 🔴 high | [research/01-nightlife.md] |
-| OSM karaoke + cultural venues | Nightlife + Vibe | Overpass extended tags | 🔴 high | [research/01-nightlife.md], [research/06-vibe.md] |
-| Green area (sqm) | Green: площадь > count | Overpass `out geom` | 🔴 high | [research/04-green.md] |
-| LIFULL HOME'S rent | Rent: 18% → 80%+ | homes.co.jp/chintai/ | 🟡 medium | [research/05-rent.md] |
-| Nominatim ward mapping | Safety/Rent fallback для всех | Nominatim reverse geocode | 🟡 medium | [research/05-rent.md] |
-| Kanagawa/Saitama/Chiba crime | Safety для не-Токио | Prefectural police CSV | 🟡 medium | [research/02-safety.md] |
-| OSM green extended tags | Green: храмы, леса, реки | `landuse=religious\|forest` | 🟢 low | [research/04-green.md] |
+Раньше таблица ниже смешивала **уже закрытые** пункты с бэклогом; это давало завышенное ощущение долга по nightlife.
+
+**Уже в конвейере (не держать как «нужно собрать»):**
+
+| Что | Статус | Где |
+|-----|--------|-----|
+| HP `midnight_count` | ✅ | Phase A1 / `hotpepper` — см. [research/01-nightlife.md] |
+| OSM karaoke + cultural + extended | ✅ | Phase A2 / `osm_extended` — см. [research/01-nightlife.md], [research/06-vibe.md] |
+| Nominatim ward mapping (1493) | ✅ | Phase B3 / `station_wards` — см. [research/05-rent.md] |
+
+**Остаётся (бэклог / Plane):**
+
+| Что | Зачем | Источник | Приоритет | Тикет / ссылка |
+|-----|-------|----------|-----------|----------------|
+| Green area (sqm) + geom | Честный strong для green | Overpass `out geom` | 🔴 high | **CRTKY-42**, [research/04-green.md] |
+| LIFULL / расширение Suumo-зон | Больше station-level аренды | homes.co.jp, suumo.jp | 🟡 medium | **CRTKY-43**, [research/05-rent.md] |
+| Kanagawa/Saitama/Chiba crime | Safety вне полигонов Токио | Prefectural police open data | 🟡 medium | **CRTKY-82**, [research/02-safety.md] |
+| Реальные `transit_minutes` | Убрать заглушку 30m в export | ODPT / GTFS-JP / routing | 🔴 high | **CRTKY-81** |
+| MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
+| OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
 
 ---
 
@@ -233,16 +251,16 @@ Data updated: April 2026 · Sources: 6 · Confidence: high
 
 ## Roadmap: от данных к UI
 
-### Sprint 1: Data completion [текущий]
+### Sprint 1: Data completion [частично закрыт]
 **Задачи (Phase A-C из плана):**
-1. ~~HP midnight scrape~~ 🔄 running
-2. ~~OSM extended (karaoke, cultural, hostel)~~ 🔄 running
+1. ~~HP midnight scrape~~ ✅ done (см. A1 / `hotpepper`)
+2. ~~OSM extended (karaoke, cultural, hostel)~~ ✅ done (A2 / `osm_extended`)
 3. ~~ArcGIS crime data~~ ✅ done (615 Tokyo stations)
-4. ~~MLIT passengers~~ ✅ done (1409 records)
-5. ~~Nominatim ward mapping~~ 🔄 running
-6. OSM green area re-scrape
-7. LIFULL HOME'S rent scrape
-8. Kanagawa/Saitama/Chiba crime CSV
+4. ~~MLIT passengers~~ ✅ done (1409 records) — **ongoing:** свежий FY + хвост `crowd: estimate` → **CRTKY-84**
+5. ~~Nominatim ward mapping~~ ✅ done (1493 / `station_wards`)
+6. OSM green area re-scrape — **CRTKY-42**
+7. LIFULL HOME'S rent scrape — **CRTKY-43**
+8. Kanagawa/Saitama/Chiba crime CSV — **CRTKY-82**
 
 ### Sprint 2: Compute pipeline rewrite [Phase D]
 **Задачи:**
@@ -292,7 +310,7 @@ Sprint 3 (UI transparency):
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
-**Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella (роадмап + ссылки на этот документ); дочерние **`CRTKY-81`** реальные `transit_minutes` вместо заглушки в `export-ratings.py`, **`CRTKY-82`** криминал префектур (Kanagawa/Saitama/Chiba), **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs. У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** в Plane добавлены комментарии *Spec packet* (доки, приёмка, качество).
+**Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella; дочерние **`CRTKY-81`** реальные `transit_minutes`, **`CRTKY-82`** криминал префектур, **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs, **`CRTKY-84`** обновление MLIT S12 / закрытие хвоста пассажиров (crowd). У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** — комментарии *Spec packet*. **Док-синхронизация готовности:** `CLAUDE.md` §Data readiness, этот файл §Критическая оценка, `README.md`, `00-overview.md` (2026-04-07).
 
 ---
 

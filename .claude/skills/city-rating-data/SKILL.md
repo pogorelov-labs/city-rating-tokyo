@@ -73,6 +73,14 @@ aggregate_single(feedback_id, [
 ], { where: "(station_slug,eq,shibuya)" })
 ```
 
+## Maintainer context (coverage vs quality)
+
+NocoDB row counts and `computed_ratings` integers are **not** uniform “ground truth” per station. Before drawing product conclusions from aggregates:
+
+1. Read repo **`CLAUDE.md`** → **Data readiness & coverage honesty**.
+2. Read **`research/00-overview.md`** → **Critical readiness** + confidence snapshot.
+3. **Plane:** epic **CRTKY-80** (children **81–84**) tracks commute stub removal, prefectural crime, AI confidence merge, MLIT/crowd tail.
+
 ## API integration
 
 The feedback form writes to NocoDB via `/api/feedback` route in the Next.js app.

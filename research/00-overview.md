@@ -1,6 +1,6 @@
 # Rating Data Research — Overview
 
-Last updated: 2026-04-05
+Last updated: 2026-04-07
 
 ## Goal
 Replace heuristic ratings (distance-from-center formula) with data-driven scores backed by real scraped data for 1493 Greater Tokyo stations.
@@ -58,9 +58,16 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | G5 | /methodology page | ⏳ pending | — (CRTKY-50) |
 | G6 | AI vs data-driven station badge + freshness | ⏳ pending | — (CRTKY-51) |
 
-**Транспорт / быт (не в таблице фаз A–G):** время до хабов в UI есть, но для большинства станций в экспорте стоит **заглушка 30m** (см. `scripts/export-ratings.py`); реальные минуты в основном у AI-станций. **Last train** — только placeholder в UI. Расширение **rent** (LIFULL, больше Suumo-зон и т.д.) — `research/05-rent.md`. Полный роадмап блока: **`research/VISION.md`** → раздел *Roadmap: транспорт, хабы, аренда, «последний поезд»*.
+**Транспорт / быт (не в таблице фаз A–G):** время до хабов в UI есть, но для большинства станций в экспорте стоит **заглушка 30m** (см. `scripts/export-ratings.py`); реальные минуты в основном у AI-станций. **Plane: CRTKY-81.** **Last train** — только placeholder в UI (**CRTKY-56**). Расширение **rent** — **CRTKY-43** + `research/05-rent.md`. Хвост пассажиров / обновление MLIT FY — **CRTKY-84**. Полный роадмап: **`research/VISION.md`**.
 
-## Production Status (2026-04-06)
+## Critical readiness (do not overstate)
+
+- **Row coverage ≠ signal quality:** all 1493 slugs get scores, but rent/safety/crowd use different geographic and source depth (see `CLAUDE.md` **Data readiness & coverage honesty**).
+- **`strong` counts:** green and vibe can show **0 strong** while OSM data exists — confidence reflects **compute rules**, not “plenty of parks on the map.”
+- **Hub minutes:** until **CRTKY-81**, treat **Hubs** chips as **non-routing** for data-driven rows.
+- **AI slugs (~272 with `description`):** ratings are editorial; pipeline `confidence` merge is **CRTKY-83** — see `CLAUDE.md` + `VISION.md` §3.1 gap text.
+
+## Production Status (2026-04-07)
 
 **Live at https://city-rating.pogorelov.dev** — HTTP 200, 1493 station pages.
 
@@ -78,7 +85,7 @@ Confidence metadata:
 ## Architecture Context
 - All scraped data → NocoDB tables (nocodb.pogorelov.dev)
 - `scripts/compute-ratings.py` reads NocoDB → log-percentile normalize → writes computed_ratings (with confidence/sources/data_date)
-- `scripts/export-ratings.py` merges with AI-researched (252 stations) → demo-ratings.ts
+- `scripts/export-ratings.py` merges with AI-researched entries (~272 slugs with `description`) → demo-ratings.ts
 - `scripts/refresh-ratings.sh` chains compute → export → build → commit → push
 - Scrapers run as Docker containers on VPS (python:3.11-slim), incremental
 - Confidence badges live on station page + ComparePanel

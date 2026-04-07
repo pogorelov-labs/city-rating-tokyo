@@ -1,65 +1,49 @@
-# Tokyo Neighborhood Explorer
+# City Rating Tokyo
 
-Interactive map-based tool that helps expats and foreign residents find the perfect neighborhood in Greater Tokyo. Explore **274 train stations** rated across 9 dimensions — from food and nightlife to safety and commute times.
+Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across nine categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
 
-**Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)
+**Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
+**Repo / issues:** [github.com/ruspg/city-rating-tokyo](https://github.com/ruspg/city-rating-tokyo)
 
-## What It Does
+## What it does
 
-- **Interactive map** — color-coded markers (red to green) show how each station scores based on your priorities
-- **Adjustable weights** — drag sliders to emphasize what matters to you (cheap rent? great food? short commute?)
-- **Smart filters** — filter by budget, max commute time, or minimum score
-- **Station profiles** — dedicated page for each station with radar chart, rent data, transit times, and neighborhood description
-- **Real rent data** — scraped from Suumo for accuracy, shown in JPY for 1K/1LDK and 2LDK apartments
+- **Map** — weighted composite score; heatmap by category; compare and explore modes (see app for current UX).
+- **Filters** — presets, search, max commute (uses `transit_minutes` where present), rent band, min score.
+- **Station pages (SSG)** — stats, hub strip, radar vs Tokyo median, nine rating bars with confidence dots when pipeline metadata exists, feedback widget.
 
-## Rating Categories
+## Rating categories (default weights)
 
-| Category | Default Weight | Description |
-|----------|---------------|-------------|
-| Transport | 20% | Train access, line count, commute to major hubs |
-| Affordability | 20% | Rent levels (lower = better score) |
-| Food & Dining | 15% | Restaurant variety and quality |
-| Nightlife | 10% | Bars, izakayas, late-night options |
-| Safety | 10% | Crime rates, street lighting, general feel |
-| Parks & Green | 10% | Green spaces and nature access |
-| Gym & Sports | 5% | Fitness facilities availability |
-| Vibe | 5% | Neighborhood character and atmosphere |
-| Low Crowds | 5% | Quietness (less crowded = better) |
+| Category | Weight | Notes |
+|----------|--------|--------|
+| Transport | 20% | Line count + passenger volume (MLIT S12 where available) |
+| Affordability | 20% | Rent model: Suumo where scraped, else ward / regression |
+| Food & Dining | 15% | HotPepper + OpenStreetMap |
+| Nightlife | 10% | HotPepper + OSM extended |
+| Safety | 10% | Tokyo: police ArcGIS polygons; others: ward/prefecture fallbacks (improving) |
+| Parks & Green | 10% | OSM (area scrape pending — **CRTKY-42**) |
+| Gym & Sports | 5% | OSM |
+| Vibe | 5% | OSM cultural / pedestrian signals + AI overrides |
+| Low Crowds | 5% | Passengers + fallbacks |
 
-## Tech Stack
+## Tech stack
 
-- **Next.js 16** (App Router, SSG) + **React 19** + **TypeScript**
-- **Leaflet** + react-leaflet for mapping
-- **Recharts** for radar chart visualization
-- **Zustand** for state management
-- **Tailwind CSS 4** for styling
-- **next-sitemap** for SEO
+- **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript**, **Tailwind 4**
+- **Leaflet**, **recharts** (lazy-loaded on relevant surfaces), **Zustand**
+- Static data at build time (no runtime DB)
 
-## Project Structure
+## Project layout (short)
 
 ```
-app/                          # Next.js application
-  src/
-    app/
-      page.tsx                # Home — map + filter panel
-      station/[slug]/page.tsx # Station detail page (SSG)
-    components/
-      Map.tsx                 # Leaflet map with 274 markers
-      FilterPanel.tsx         # Weight sliders, filters, top-15 ranking
-      RadarChart.tsx          # 9-axis radar chart
-      MobileDrawer.tsx        # Mobile filter UI
-    lib/
-      scoring.ts              # Weighted score calculation
-      store.ts                # Zustand state (weights, filters, selection)
-      data.ts                 # Data loading & merging
-    data/
-      demo-ratings.ts         # AI-researched ratings for 50+ stations
-data/
-  stations.json               # 274 stations (coords, lines, prefecture)
-  rent/rent-averages.json     # Suumo-scraped rent data
+data/stations.json              # 1493 stations — master list
+app/src/data/demo-ratings.ts    # Merged AI + computed ratings export
+app/src/data/rent-averages.json # Suumo-backed rent where scraped
+app/src/app/                    # Routes: /, /station/[slug], /api/feedback
+scripts/                        # Scrapers, compute-ratings.py, export-ratings.py
+research/                       # Source research + VISION roadmap
+CLAUDE.md                       # Pipeline IDs, formulas, data-readiness caveats
 ```
 
-## Getting Started
+## Getting started
 
 ```bash
 cd app
@@ -71,26 +55,26 @@ Open [localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Dockerized multi-stage build with standalone Next.js output. See `app/Dockerfile`.
+Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify** on a VPS with Traefik and TLS.
 
-```bash
-cd app
-docker build -t city-rating .
-docker run -p 3000:3000 city-rating
-```
+## Data sources (high level)
 
-Currently deployed on Coolify VPS with Traefik reverse proxy and Let's Encrypt TLS.
+- **Stations / lines** — based on open railway-station datasets (see `SPEC.md` / `data/stations.json` provenance).
+- **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB.
+- **Food / nightlife counts** — **HotPepper** API + OSM.
+- **Passengers** — **MLIT** 国土数値情報 S12 (+ operator disclosures; see `research/03-crowd.md`).
+- **Crime (Tokyo)** — **Keishicho** ArcGIS / open data (see `research/02-safety.md`).
+- **Rent** — **Suumo** scrape to `rent-averages.json`; ward and model fallbacks in compute (see `research/05-rent.md`).
+- **~272 “AI-researched” stations** — human-reviewed text + integer ratings preserved in export; pipeline confidence merge for those slugs is **CRTKY-83**.
 
-## Data Sources
+**Honesty:** “Every station has scores” does not mean every score uses the same evidence density. **Hub commute minutes** are a **placeholder (30m × 5)** for most exported computed rows until **CRTKY-81**. See **`CLAUDE.md` → Data readiness & coverage honesty** and **`research/VISION.md`** (critical readiness + backlog tables).
 
-- **Station coordinates:** [piuccio/open-data-jp-railway-stations](https://github.com/piuccio/open-data-jp-railway-stations)
-- **Rent data:** Suumo.jp (custom scraper)
-- **Ratings & descriptions:** AI-researched via Claude, human-reviewed
-- **Transit times:** Estimated based on Tokyo rail network
+## Maintainer docs & task tracking
 
-## Status
-
-Early beta. ~50 stations fully researched with ratings, descriptions, and verified rent data. 274 stations mapped with coordinates and line information.
+- **`CLAUDE.md`** — NocoDB table IDs, formulas, perf invariants, **data readiness** section.
+- **`research/00-overview.md`** — pipeline phase checklist + confidence snapshot.
+- **`research/VISION.md`** — product roadmap + Plane cross-links (**CRTKY-80** … **CRTKY-84**).
+- **Plane** project **City Rating Tokyo (CRTKY)** — implementation tickets; epic **CRTKY-80** groups commute, crime export merge, crowd tail.
 
 ## License
 
