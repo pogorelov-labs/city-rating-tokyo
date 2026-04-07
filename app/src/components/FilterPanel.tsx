@@ -8,6 +8,7 @@ import {
   compositeToColor,
   computeCompositeAnchors,
 } from '@/lib/scoring';
+import Tooltip from '@/components/Tooltip';
 
 interface FilterPanelProps {
   stations: MapStation[];
@@ -142,9 +143,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           {(Object.keys(RATING_LABELS) as (keyof WeightConfig)[]).map(
             (key) => (
               <div key={key}>
-                <div className="flex justify-between text-xs mb-0.5">
-                  <span title={RATING_TOOLTIPS[key]}>{RATING_LABELS[key]}</span>
-                  <span className="text-gray-400 tabular-nums">
+                <div className="flex justify-between text-xs mb-0.5 items-center gap-2">
+                  <Tooltip content={RATING_TOOLTIPS[key]}>
+                    <span className="text-gray-700">{RATING_LABELS[key]}</span>
+                  </Tooltip>
+                  <span className="text-gray-400 tabular-nums shrink-0">
                     {weights[key]}%
                   </span>
                 </div>

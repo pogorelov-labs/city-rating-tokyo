@@ -286,28 +286,26 @@ export default async function StationPage({
               </div>
               {station.confidence && (
                 <>
-                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-3 text-[10px] text-gray-400">
-                    <span className="flex items-center gap-1">
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-[10px] text-gray-600">
+                    {(
+                      [
+                        ['Measured', CONFIDENCE_DOT_COLORS.strong] as const,
+                        ['Partial', CONFIDENCE_DOT_COLORS.moderate] as const,
+                        ['Estimate', CONFIDENCE_DOT_COLORS.estimate] as const,
+                      ] as const
+                    ).map(([label, color]) => (
                       <span
-                        className="w-1.5 h-1.5 rounded-full"
-                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.strong, opacity: 0.9 }}
-                      />
-                      measured
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span
-                        className="w-1.5 h-1.5 rounded-full"
-                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.moderate, opacity: 0.9 }}
-                      />
-                      partial
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span
-                        className="w-1.5 h-1.5 rounded-full"
-                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.estimate, opacity: 0.9 }}
-                      />
-                      estimate
-                    </span>
+                        key={label}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5"
+                      >
+                        <span
+                          className="h-1.5 w-1.5 shrink-0 rounded-full"
+                          style={{ backgroundColor: color, opacity: 0.9 }}
+                          aria-hidden
+                        />
+                        {label}
+                      </span>
+                    ))}
                   </div>
                   <p className="mt-2 text-[10px] text-gray-400 italic leading-relaxed">
                     Bar colors show how this station compares to typical Tokyo. These dots show how the rating was derived.
