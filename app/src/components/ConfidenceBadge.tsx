@@ -9,23 +9,38 @@ interface Props {
   size?: 'sm' | 'md';
 }
 
+/**
+ * Pigment dot colors for the three data-quality states, chosen to live
+ * in the same muted palette universe as the diverging akane↔kon bar
+ * colors. Replaces the Tailwind traffic-light triad (#22c55e/#eab308/
+ * #9ca3af) which clashed with the bar palette after CRTKY-66. CRTKY-68.
+ *
+ * Exported so the legend at the bottom of the station Ratings card can
+ * re-use the same hex values without drift.
+ */
+export const CONFIDENCE_DOT_COLORS: Record<ConfidenceLevel, string> = {
+  strong: '#6A8059',   // 苔色 koke-iro (moss green)
+  moderate: '#C9A227', // 山吹 yamabuki (mountain-rose gold)
+  estimate: '#828A8C', // 鈍色 nibi-iro (muted grey)
+};
+
 // Labels describe HOW the rating was derived, so they read correctly even
 // without the word "confidence" in front of them. The ConfidenceLevel type
 // keys in the data pipeline stay as strong|moderate|estimate; only the
 // displayed strings change. CRTKY-67.
 const LEVEL_META: Record<ConfidenceLevel, { color: string; label: string; description: string }> = {
   strong: {
-    color: '#22c55e',
+    color: CONFIDENCE_DOT_COLORS.strong,
     label: 'Measured',
     description: 'Direct count from 2+ verified sources',
   },
   moderate: {
-    color: '#eab308',
+    color: CONFIDENCE_DOT_COLORS.moderate,
     label: 'Partial',
     description: 'Single source or aggregated fallback',
   },
   estimate: {
-    color: '#9ca3af',
+    color: CONFIDENCE_DOT_COLORS.estimate,
     label: 'Estimate',
     description: 'Modeled from formula, not observed',
   },
@@ -67,7 +82,9 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
   };
 
   const meta = LEVEL_META[level];
-  const dotSize = size === 'md' ? 'w-2.5 h-2.5' : 'w-2 h-2';
+  // Shrunk from w-2/w-2.5 to w-1.5/w-2 in CRTKY-68 so the dots recede
+  // visually behind the bar and number (metadata below data-ink).
+  const dotSize = size === 'md' ? 'w-2 h-2' : 'w-1.5 h-1.5';
   const sourceList = sources && sources.length > 0
     ? sources.map((s) => SOURCE_LABELS[s] || s).join(', ')
     : null;
@@ -80,7 +97,7 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
     >
       <span
         className={`${dotSize} rounded-full cursor-help inline-block`}
-        style={{ backgroundColor: meta.color }}
+        style={{ backgroundColor: meta.color, opacity: 0.9 }}
         aria-label={`Data source: ${meta.label}`}
       />
       {show && (
