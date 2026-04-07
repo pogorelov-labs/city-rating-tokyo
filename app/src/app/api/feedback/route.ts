@@ -3,7 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const SLUG_RE = /^[a-z0-9-]+$/;
 
+/** Last submit time per IP — only blocks rapid repeat (double-click / instant re-submit). */
 const rateLimit = new Map<string, number>();
+
+/** Min ms between posts from the same IP. Keep low so “Add another tip” works; anti-spam is NocoDB + moderation. */
+const MIN_SUBMIT_INTERVAL_MS = 2500;
 
 function getClientIP(req: NextRequest): string {
   return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
@@ -64,12 +68,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'source must be "station_page" or "general"' }, { status: 400 });
   }
 
-  // Rate limit by IP
+  // Rate limit by IP (short gap only — 10s broke legitimate “Add another tip” within one session)
   const clientIP = getClientIP(req);
   const now = Date.now();
   const lastSubmit = rateLimit.get(clientIP);
-  if (lastSubmit && now - lastSubmit < 10_000) {
-    return NextResponse.json({ error: 'Please wait before submitting again' }, { status: 429 });
+  if (lastSubmit && now - lastSubmit < MIN_SUBMIT_INTERVAL_MS) {
+    const retrySec = Math.max(1, Math.ceil((MIN_SUBMIT_INTERVAL_MS - (now - lastSubmit)) / 1000));
+    return NextResponse.json(
+      { error: `Please wait ${retrySec}s before sending again (rate limit).` },
+      { status: 429, headers: { 'Retry-After': String(retrySec) } },
+    );
   }
   rateLimit.set(clientIP, now);
 

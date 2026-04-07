@@ -59,6 +59,7 @@ const COPY = {
 export default function FeedbackWidget({ stationSlug, stationName, source }: FeedbackWidgetProps) {
   const [comment, setComment] = useState('');
   const [phase, setPhase] = useState<'idle' | 'submitting' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const copy = COPY[source];
 
   const lsKey = storageKey(stationSlug);
@@ -70,6 +71,7 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
 
   const handleSubmit = async () => {
     if (!comment.trim()) return;
+    setSubmitError(null);
     setPhase('submitting');
     try {
       const res = await fetch('/api/feedback', {
@@ -84,15 +86,24 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
           source,
         }),
       });
+      const data: { error?: string } = await res.json().catch(() => ({}));
       if (res.ok) {
         localStorage.setItem(storageKey(stationSlug), '1');
         notifyFeedbackStorageSync();
         setPhase('idle');
       } else {
         setPhase('error');
+        setSubmitError(
+          typeof data.error === 'string'
+            ? data.error
+            : res.status === 429
+              ? 'Please wait a few seconds before sending again.'
+              : 'Could not send. Please try again.',
+        );
       }
     } catch {
       setPhase('error');
+      setSubmitError('Could not send. Please try again.');
     }
   };
 
@@ -105,6 +116,7 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
             localStorage.removeItem(storageKey(stationSlug));
             notifyFeedbackStorageSync();
             setPhase('idle');
+            setSubmitError(null);
             setComment('');
           }}
           className="text-xs text-green-600 hover:underline mt-1"
@@ -129,8 +141,8 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
         maxLength={1000}
         className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent resize-none"
       />
-      {phase === 'error' && (
-        <p className="text-xs text-red-600 mt-1">Could not send. Please try again.</p>
+      {phase === 'error' && submitError && (
+        <p className="text-xs text-red-600 mt-1">{submitError}</p>
       )}
       <div className="flex items-center justify-between mt-2">
         <span className="text-xs text-gray-400">{comment.length}/1000</span>
