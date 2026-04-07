@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useDeferredValue } from 'react';
+import { useEffect, useMemo, useDeferredValue, useState } from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -41,6 +41,79 @@ function darkenRgb(rgb: string, factor = 0.7): string {
   const g = Math.round(Number(match[2]) * factor);
   const b = Math.round(Number(match[3]) * factor);
   return `rgb(${r}, ${g}, ${b})`;
+}
+
+/** Tooltip header: Wikimedia thumb, or score-colored gradient with Japanese name. */
+function StationTooltipHero({
+  slug,
+  thumb,
+  nameEn,
+  nameJp,
+  score,
+  color,
+}: {
+  slug: string;
+  thumb: string | undefined;
+  nameEn: string;
+  nameJp: string;
+  score: number | null;
+  color: string;
+}) {
+  const [imgFailed, setImgFailed] = useState(false);
+
+  useEffect(() => {
+    setImgFailed(false);
+  }, [thumb]);
+
+  const gradientBase = {
+    width: '100%',
+    backgroundImage:
+      score !== null
+        ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
+        : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
+    borderRadius: '6px 6px 0 0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    fontFamily: 'serif',
+    fontWeight: 700,
+    fontSize: 26,
+    letterSpacing: 2,
+    textShadow: '0 1px 3px rgba(0,0,0,0.25)',
+  } as const;
+
+  if (!thumb || imgFailed) {
+    const height = thumb && imgFailed ? 100 : 60;
+    return (
+      <div aria-hidden style={{ ...gradientBase, height }}>
+        {nameJp}
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={thumb}
+      alt={nameEn}
+      loading="lazy"
+      onError={() => {
+        window.umami?.track('error', {
+          category: 'image',
+          station: slug,
+          context: 'tooltip',
+        });
+        setImgFailed(true);
+      }}
+      style={{
+        width: '100%',
+        height: 100,
+        objectFit: 'cover',
+        borderRadius: '6px 6px 0 0',
+        display: 'block',
+      }}
+    />
+  );
 }
 
 interface MapViewProps {
@@ -187,44 +260,14 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               className="station-tooltip"
             >
               <div style={{ width: 260 }}>
-                {thumb ? (
-                  <img
-                    src={thumb}
-                    alt={station.name_en}
-                    loading="lazy"
-                    onError={() => window.umami?.track('error', { category: 'image', station: station.slug, context: 'tooltip' })}
-                    style={{
-                      width: '100%',
-                      height: 100,
-                      objectFit: 'cover',
-                      borderRadius: '6px 6px 0 0',
-                      display: 'block',
-                    }}
-                  />
-                ) : (
-                  <div
-                    aria-hidden
-                    style={{
-                      width: '100%',
-                      height: 60,
-                      backgroundImage: score !== null
-                        ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
-                        : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
-                      borderRadius: '6px 6px 0 0',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'white',
-                      fontFamily: 'serif',
-                      fontWeight: 700,
-                      fontSize: 26,
-                      letterSpacing: 2,
-                      textShadow: '0 1px 3px rgba(0,0,0,0.25)',
-                    }}
-                  >
-                    {station.name_jp}
-                  </div>
-                )}
+                <StationTooltipHero
+                  slug={station.slug}
+                  thumb={thumb}
+                  nameEn={station.name_en}
+                  nameJp={station.name_jp}
+                  score={score}
+                  color={color}
+                />
                 <div style={{ padding: '8px 10px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                     <div>
