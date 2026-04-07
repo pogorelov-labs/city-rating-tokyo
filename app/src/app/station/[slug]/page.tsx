@@ -199,19 +199,19 @@ export default async function StationPage({
               <RadarChartWrapper ratings={station.ratings} />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">
-              <h2
-                className={`font-bold text-lg ${station.confidence ? 'mb-2' : 'mb-4'}`}
-              >
-                Ratings
-              </h2>
-              {station.confidence && (
-                <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">
-                  Dots on the left show how each score was derived (Measured /
-                  Partial / Estimate — hover for sources). Bar fill shows where
-                  this station sits versus the Tokyo median for that category
-                  (hover the bar for pigment detail).
-                </p>
-              )}
+              <h2 className="font-bold text-lg mb-2">Ratings</h2>
+              <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">
+                Bar fill compares this station to the Tokyo median for that row
+                — hover the bar for pigment detail, the category name for what
+                it measures.
+                {station.confidence ? (
+                  <>
+                    {' '}
+                    Where a colored dot appears, it shows how firm that score is
+                    (hover for sources); hues match the key below.
+                  </>
+                ) : null}
+              </p>
               <div className="space-y-3">
                 {(
                   Object.entries(station.ratings) as [
@@ -299,33 +299,27 @@ export default async function StationPage({
                 })}
               </div>
               {station.confidence && (
-                <>
-                  <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-[10px] text-gray-600">
-                    {(
-                      [
-                        ['Measured', CONFIDENCE_DOT_COLORS.strong] as const,
-                        ['Partial', CONFIDENCE_DOT_COLORS.moderate] as const,
-                        ['Estimate', CONFIDENCE_DOT_COLORS.estimate] as const,
-                      ] as const
-                    ).map(([label, color]) => (
+                <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-[10px] text-gray-600">
+                  {(
+                    [
+                      ['Measured', CONFIDENCE_DOT_COLORS.strong] as const,
+                      ['Partial', CONFIDENCE_DOT_COLORS.moderate] as const,
+                      ['Estimate', CONFIDENCE_DOT_COLORS.estimate] as const,
+                    ] as const
+                  ).map(([label, color]) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5"
+                    >
                       <span
-                        key={label}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5"
-                      >
-                        <span
-                          className="h-1.5 w-1.5 shrink-0 rounded-full"
-                          style={{ backgroundColor: color, opacity: 0.9 }}
-                          aria-hidden
-                        />
-                        {label}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="mt-2 text-[10px] text-gray-400 italic leading-relaxed">
-                    Chip colors match the dots at the start of each row; hover
-                    category names for full definitions.
-                  </p>
-                </>
+                        className="h-1.5 w-1.5 shrink-0 rounded-full"
+                        style={{ backgroundColor: color, opacity: 0.9 }}
+                        aria-hidden
+                      />
+                      {label}
+                    </span>
+                  ))}
+                </div>
               )}
             </section>
           </div>
