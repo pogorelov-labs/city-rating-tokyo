@@ -199,7 +199,19 @@ export default async function StationPage({
               <RadarChartWrapper ratings={station.ratings} />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">
-              <h2 className="font-bold text-lg mb-4">Ratings</h2>
+              <h2
+                className={`font-bold text-lg ${station.confidence ? 'mb-2' : 'mb-4'}`}
+              >
+                Ratings
+              </h2>
+              {station.confidence && (
+                <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">
+                  Dots on the left show how each score was derived (Measured /
+                  Partial / Estimate — hover for sources). Bar fill shows where
+                  this station sits versus the Tokyo median for that category
+                  (hover the bar for pigment detail).
+                </p>
+              )}
               <div className="space-y-3">
                 {(
                   Object.entries(station.ratings) as [
@@ -226,8 +238,16 @@ export default async function StationPage({
 
                   return (
                     <div key={key} className="flex items-center gap-3">
-                      {/* Label with extended ? tooltip */}
+                      {/* Fixed-width column: rows without confidence keep bars aligned */}
+                      <div className="w-6 shrink-0 flex justify-center items-center">
+                        {conf ? (
+                          <ConfidenceBadge level={conf} sources={srcs} />
+                        ) : null}
+                      </div>
+
+                      {/* Category help: hover label text only (no ?); separate from dot + bar tooltips */}
                       <Tooltip
+                        showHelpIcon={false}
                         content={
                           <>
                             <span>{RATING_TOOLTIPS[key]}</span>
@@ -239,12 +259,11 @@ export default async function StationPage({
                           </>
                         }
                       >
-                        <span className="text-sm w-32 text-gray-600">
+                        <span className="text-sm w-32 text-gray-600 cursor-help">
                           {RATING_LABELS[key]}
                         </span>
                       </Tooltip>
 
-                      {/* Bar with its own rich hover tooltip */}
                       <Tooltip
                         wrapper="div"
                         showHelpIcon={false}
@@ -268,17 +287,12 @@ export default async function StationPage({
                         {val}
                       </span>
 
-                      {/* Direction arrow — colored with the bar hue at 65 % opacity */}
                       <span
                         className="w-3 text-center text-sm font-medium leading-none tabular-nums"
                         style={{ color: barColor, opacity: 0.65 }}
                         aria-hidden
                       >
                         {dev > 0 ? '↑' : dev < 0 ? '↓' : '−'}
-                      </span>
-
-                      <span className="w-3 flex justify-center">
-                        {conf && <ConfidenceBadge level={conf} sources={srcs} />}
                       </span>
                     </div>
                   );
@@ -308,7 +322,8 @@ export default async function StationPage({
                     ))}
                   </div>
                   <p className="mt-2 text-[10px] text-gray-400 italic leading-relaxed">
-                    Bar colors show how this station compares to typical Tokyo. These dots show how the rating was derived.
+                    Chip colors match the dots at the start of each row; hover
+                    category names for full definitions.
                   </p>
                 </>
               )}

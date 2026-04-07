@@ -185,9 +185,9 @@ The station Ratings card teaches the "deviation, not value" rule through five vi
 2. **Two-tone empty track** — warm `#F5F1EC` cream left of median, cool `#EFF2F4` slate right
 3. **Direction arrow** — `↑ / ↓ / −` after the value in the bar color at 65 % opacity
 4. **Pigment confidence dots** — `CONFIDENCE_DOT_COLORS.strong / moderate / estimate` → 苔色 koke-iro / 山吹 yamabuki / 鈍色 nibi-iro instead of Tailwind traffic lights
-5. **Plain `?` glyph** — no grey pill, just `text-gray-300` character
+5. **Optional `?` on `Tooltip`** — default is a plain `text-gray-300` `?` (no grey pill) when `showHelpIcon` is true. On `/station/[slug]` Ratings, category labels use `showHelpIcon={false}` and `cursor-help` on the text so hover opens the same definition + median block without a second glyph (CRTKY-79).
 
-Plus three tooltips: bar hover (3 lines with pigment name), `?` hover (description + median block), and an italic disambiguation line under the legend explaining "bar colors show deviation, these dots show how the rating was derived."
+Tooltips on the Ratings card: **dot** hover (Measured / Partial / Estimate + sources), **category label** hover (category copy + median vs this station), **bar** hover (score + deviation + pigment line). A muted caption under the title (when `station.confidence`) and a short italic line under the chip legend cross-reference dot vs bar roles without repeating the same sentence twice.
 
 ### Station Overview radar vs Tokyo median (CRTKY-76, PR #51)
 
@@ -216,9 +216,10 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
 | `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date) |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
+| `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width dot column (`w-6`), `ConfidenceBadge` before label, category `Tooltip` with `showHelpIcon={false}` (hover label for help), bar `Tooltip` with `wrapper="div"` + `flex-1` (CRTKY-79) |
 | `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate" (CRTKY-67) |
 | `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
-| `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. 400 ms enter delay + 150 ms leave delay. Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68) |
+| `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. 400 ms enter delay + 150 ms leave delay. Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68); station Ratings labels opt out (CRTKY-79) |
 | `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). **Map `mouseover`/`mouseout`** call `setHoveredStation` (150ms debounced clear on `mouseout`) so list↔map hover stays linked (CRTKY-59). Highlighted marker radius **×1.4** vs base (was +3px). Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). Hover tooltip: `StationTooltipHero`; failed-thumb reset via `key` on slug+thumb URL. |
 | `app/src/components/FilterPanel.tsx` | Weight sliders + presets + search + Top Ranked. Category help uses shared `<Tooltip content={…}>` (CRTKY-77 / PR #49), same API as station page. Deferred ranking + `computeCompositeAnchors` with `useDeferredValue(weights)` (CRTKY-61). Preset chips, range inputs, and Top Ranked rows use **`focus-visible`** rings for keyboard affordance (CRTKY-73 partial). |
 | `app/src/components/RadarChart.tsx` | Single-station recharts radar: median ghost + station polygon + micro-legend (CRTKY-76). |
