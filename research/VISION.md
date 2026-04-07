@@ -292,6 +292,8 @@ Sprint 3 (UI transparency):
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
+**Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella (роадмап + ссылки на этот документ); дочерние **`CRTKY-81`** реальные `transit_minutes` вместо заглушки в `export-ratings.py`, **`CRTKY-82`** криминал префектур (Kanagawa/Saitama/Chiba), **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs. У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** в Plane добавлены комментарии *Spec packet* (доки, приёмка, качество).
+
 ---
 
 ## Roadmap: транспорт, хабы, аренда, «последний поезд»
