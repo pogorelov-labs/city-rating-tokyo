@@ -6,6 +6,7 @@ import {
   categoryDeviationColor,
   CITY_MEDIANS,
   DEFAULT_COMPOSITE_ANCHORS,
+  pigmentName,
 } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import Link from 'next/link';
@@ -14,7 +15,8 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
-import ConfidenceBadge from '@/components/ConfidenceBadge';
+import RatingBar from '@/components/RatingBar';
+import ConfidenceBadge, { CONFIDENCE_DOT_COLORS } from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import StatCard from '@/components/StatCard';
@@ -207,25 +209,74 @@ export default async function StationPage({
                 ).map(([key, val]) => {
                   const conf = station.confidence?.[key];
                   const srcs = station.sources?.[key];
+                  const median = CITY_MEDIANS[key];
+                  const dev = val - median;
+                  const barColor = categoryDeviationColor(val, median);
+                  const pigment = pigmentName(dev);
+
+                  // Microcopy: three lines for the bar tooltip.
+                  const devPhrase = dev === 0
+                    ? `Tokyo norm is ${median} — this station is exactly average.`
+                    : `Tokyo norm is ${median} — this station is ${Math.abs(dev)} ${dev > 0 ? 'above' : 'below'} norm.`;
+                  // Unsigned number + directional word, so the phrase doesn't
+                  // double-negate as "−3 below norm".
+                  const labelDevSummary = dev === 0
+                    ? 'exactly average'
+                    : `${Math.abs(dev)} ${dev > 0 ? 'above' : 'below'} norm`;
+
                   return (
                     <div key={key} className="flex items-center gap-3">
-                      <Tooltip text={RATING_TOOLTIPS[key]}>
+                      {/* Label with extended ? tooltip */}
+                      <Tooltip
+                        content={
+                          <>
+                            <span>{RATING_TOOLTIPS[key]}</span>
+                            <span className="block mt-2 pt-2 border-t border-gray-600/40 tabular-nums">
+                              Tokyo median: {median}
+                              <br />
+                              This station: {val} ({labelDevSummary})
+                            </span>
+                          </>
+                        }
+                      >
                         <span className="text-sm w-32 text-gray-600">
                           {RATING_LABELS[key]}
                         </span>
                       </Tooltip>
-                      <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
-                        <div
-                          className="h-full rounded-full transition-all"
-                          style={{
-                            width: `${val * 10}%`,
-                            backgroundColor: categoryDeviationColor(val, CITY_MEDIANS[key]),
-                          }}
-                        />
-                      </div>
+
+                      {/* Bar with its own rich hover tooltip */}
+                      <Tooltip
+                        wrapper="div"
+                        showHelpIcon={false}
+                        className="flex-1"
+                        content={
+                          <>
+                            <span className="font-semibold">
+                              {RATING_LABELS[key]}: {val} / 10
+                            </span>
+                            <span className="block mt-1">{devPhrase}</span>
+                            <span className="block mt-1 italic text-gray-400">
+                              Painted in {pigment.jp} {pigment.en} ({pigment.tone}).
+                            </span>
+                          </>
+                        }
+                      >
+                        <RatingBar value={val} median={median} fillColor={barColor} />
+                      </Tooltip>
+
                       <span className="text-sm font-bold tabular-nums w-6 text-right">
                         {val}
                       </span>
+
+                      {/* Direction arrow — colored with the bar hue at 65 % opacity */}
+                      <span
+                        className="w-3 text-center text-sm font-medium leading-none tabular-nums"
+                        style={{ color: barColor, opacity: 0.65 }}
+                        aria-hidden
+                      >
+                        {dev > 0 ? '↑' : dev < 0 ? '↓' : '−'}
+                      </span>
+
                       <span className="w-3 flex justify-center">
                         {conf && <ConfidenceBadge level={conf} sources={srcs} />}
                       </span>
@@ -234,17 +285,34 @@ export default async function StationPage({
                 })}
               </div>
               {station.confidence && (
-                <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-3 text-[10px] text-gray-400">
-                  <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-[#22c55e]" /> measured
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-[#eab308]" /> partial
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-[#9ca3af]" /> estimate
-                  </span>
-                </div>
+                <>
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-3 text-[10px] text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.strong, opacity: 0.9 }}
+                      />
+                      measured
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.moderate, opacity: 0.9 }}
+                      />
+                      partial
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: CONFIDENCE_DOT_COLORS.estimate, opacity: 0.9 }}
+                      />
+                      estimate
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[10px] text-gray-400 italic leading-relaxed">
+                    Bar colors show how this station compares to typical Tokyo. These dots show how the rating was derived.
+                  </p>
+                </>
               )}
             </section>
           </div>
