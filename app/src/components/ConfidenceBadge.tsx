@@ -52,7 +52,7 @@ const LEVEL_META: Record<ConfidenceLevel, { color: string; label: string; descri
   },
 };
 
-const SOURCE_LABELS: Record<string, string> = {
+export const SOURCE_LABELS: Record<string, string> = {
   hotpepper: 'HotPepper',
   hotpepper_midnight: 'HotPepper (late-night)',
   osm: 'OpenStreetMap',

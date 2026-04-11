@@ -71,6 +71,11 @@ def log_percentile_normalize(values, invert=False):
 
     This separates true zeroes from low-but-nonzero while compressing mega-peaks.
     Example for food: 0→1, 5→3, 25→5, 100→7, 500→9, 2000→10
+
+    Uses midpoint rank for ties (CRTKY-64/65): when N stations share the
+    same value, each gets the average of the lowest and highest rank in the
+    group instead of all getting the lowest rank. This spreads tied clusters
+    across the rating boundary instead of lumping them at one integer.
     """
     if not values:
         return {}
@@ -78,15 +83,24 @@ def log_percentile_normalize(values, invert=False):
     # Step 1: log transform
     log_values = {slug: math.log1p(v) for slug, v in values.items()}
 
-    # Step 2: percentile ranking
-    slugs = list(log_values.keys())
+    # Step 2: percentile ranking with midpoint for ties
     sorted_vals = sorted(log_values.values())
     n = len(sorted_vals)
 
+    # Build value → midpoint rank mapping (average of first and last occurrence)
+    from bisect import bisect_right
+    midpoint_rank = {}
+    i = 0
+    while i < n:
+        val = sorted_vals[i]
+        j = bisect_right(sorted_vals, val)  # one past last occurrence
+        mid = (i + j - 1) / 2.0
+        midpoint_rank[val] = mid
+        i = j
+
     result = {}
-    for slug in slugs:
-        val = log_values[slug]
-        rank = bisect_left(sorted_vals, val)
+    for slug, val in log_values.items():
+        rank = midpoint_rank[val]
         percentile = rank / max(n - 1, 1)
         if invert:
             percentile = 1.0 - percentile
@@ -373,10 +387,17 @@ def main():
                 conf["safety"] = "moderate"
                 srcs["safety"] = ["ward_crime_stats"]
             else:
-                # Prefecture average fallback
+                # Prefecture average fallback.
+                # CRTKY-64: add distance-based jitter to avoid 4 fixed values
+                # creating gaps in the distribution. Suburban stations (farther
+                # from Tokyo Station) tend slightly safer → lower rate.
                 pref = st.get("prefecture", "13")
                 pref_avgs = {"13": 120, "14": 65, "11": 60, "12": 55}
-                raw["safety"][slug] = pref_avgs.get(pref, 80)
+                base = pref_avgs.get(pref, 80)
+                dist = haversine(st["lat"], st["lng"], TOKYO_STATION_LAT, TOKYO_STATION_LNG)
+                # ±15% jitter scaled by distance (30km = ~15% less crime)
+                jitter_factor = 1.0 - min(0.15, dist * 0.005)
+                raw["safety"][slug] = base * jitter_factor
                 conf["safety"] = "estimate"
                 srcs["safety"] = ["prefecture_average"]
 
@@ -392,8 +413,16 @@ def main():
         cap_raw["green"][slug] = green_count  # park count for cap check
 
         # --- GYM: OSM gym_count ---
+        # CRTKY-65: for gym=0 stations, add a small tie-breaking jitter
+        # from general walkability (food+transport). This spreads the large
+        # cluster of zeros into ratings 1-2 instead of lumping all at 1.
         gym = o.get("gym_count", 0) or 0
-        raw["gym"][slug] = gym
+        if gym > 0:
+            raw["gym"][slug] = gym
+        else:
+            # Micro-jitter: 0 .. 0.5 based on surrounding activity density
+            activity = math.log1p(food_hp + food_osm) / 20.0
+            raw["gym"][slug] = min(0.5, activity)
         conf["gym_sports"] = "strong" if gym > 0 else "estimate"
         srcs["gym_sports"] = ["osm"] if gym > 0 else []
         cap_raw["gym_sports"][slug] = gym  # gym count for cap check

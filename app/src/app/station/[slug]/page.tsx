@@ -16,7 +16,7 @@ import type { Metadata } from 'next';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
 import RatingBar from '@/components/RatingBar';
-import ConfidenceBadge, { CONFIDENCE_DOT_COLORS } from '@/components/ConfidenceBadge';
+import ConfidenceBadge, { CONFIDENCE_DOT_COLORS, SOURCE_LABELS } from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import StatCard from '@/components/StatCard';
@@ -251,11 +251,21 @@ export default async function StationPage({
                         content={
                           <>
                             <span>{RATING_TOOLTIPS[key]}</span>
-                            <span className="block mt-2 pt-2 border-t border-gray-600/40 tabular-nums">
+                            {srcs && srcs.length > 0 && (
+                              <span className="block mt-1.5 text-gray-400">
+                                Sources: {srcs.map(s => SOURCE_LABELS[s] || s).join(', ')}
+                              </span>
+                            )}
+                            <span className="block mt-1.5 pt-1.5 border-t border-gray-600/40 tabular-nums">
                               Tokyo median: {median}
                               <br />
                               This station: {val} ({labelDevSummary})
                             </span>
+                            {station.data_date && (
+                              <span className="block mt-1 text-gray-500 text-[10px]">
+                                Data: {station.data_date}
+                              </span>
+                            )}
                           </>
                         }
                       >

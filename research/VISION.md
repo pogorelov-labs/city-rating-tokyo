@@ -44,8 +44,9 @@
 
 - **«100%» / полное покрытие строк** в таблице выше = у **каждой** из 1493 станций есть значение в конвейере, **не** то, что все категории одинаково «измерены» (аренда: Suumo vs ward vs регрессия; безопасность: полигоны Токио vs ward вне Токио).
 - **Confidence `strong`:** для **green** и **vibe** в снимках метаданных часто **0** при живом OSM — уровень отражает **правила compute**, а не «карта выглядит хорошо»; см. `research/00-overview.md`.
-- **Hub commute:** у computed-экспорта **заглушка 30m** до пяти хабов (`export-ratings.py`) — UI **не** эквивалентен маршрутизации до **CRTKY-81**.
-- **~272 AI-станции:** рейтинги и текст **редакционные**; `confidence` из NocoDB **не** мерджится в export до **CRTKY-83** (не подменять всё на `estimate` в UI — см. CLAUDE + §3.1).
+- ~~**Hub commute:** заглушка 30m~~ ✅ **CRTKY-81 done:** калиброванная модель (MAE 5.5 мин, 85% within 10 min), все 1493 уникальны.
+- ~~**AI-станции без confidence**~~ ✅ **CRTKY-83 done:** per-category merge + `editorial` уровень, 252 AI-станции показывают dots.
+- ✅ **CRTKY-64/65 done:** safety gap at rating 4 и gym gap at rating 2 исправлены (midpoint rank + jitter).
 
 ### Принцип "Data First"
 
@@ -73,7 +74,7 @@
 | Green area (sqm) + geom | Честный strong для green | Overpass `out geom` | 🔴 high | **CRTKY-42**, [research/04-green.md] |
 | LIFULL / расширение Suumo-зон | Больше station-level аренды | homes.co.jp, suumo.jp | 🟡 medium | **CRTKY-43**, [research/05-rent.md] |
 | Kanagawa/Saitama/Chiba crime | Safety вне полигонов Токио | Prefectural police open data | 🟡 medium | **CRTKY-82**, [research/02-safety.md] |
-| Реальные `transit_minutes` | Убрать заглушку 30m в export | ODPT / GTFS-JP / routing | 🔴 high | **CRTKY-81** |
+| ~~Реальные `transit_minutes`~~ | ✅ Done — калиброванная модель | Geographic + line connectivity | ~~🔴 high~~ ✅ | **CRTKY-81** ✅ |
 | MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
 | OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
 
@@ -297,12 +298,12 @@ Sprint 2 (compute pipeline) — **done**:
 - ✅ `CRTKY-45` Compute-ratings.py v2 rewrite (log-percentile + research formulas)
 - ✅ `CRTKY-46` Per-station confidence metadata (compute → NocoDB columns → demo-ratings.ts)
 - ✅ `CRTKY-63` Formula v3 — absolute caps + rent log-linear regression
-- `CRTKY-64` Fix lumpy safety distribution (0 stations at rating 4) — backlog
-- `CRTKY-65` Fix gym distribution (0 stations at rating 2) — backlog
+- ✅ `CRTKY-64` Fix lumpy safety distribution (midpoint rank + distance jitter)
+- ✅ `CRTKY-65` Fix gym distribution (tie-breaking jitter for gym=0)
 
 Sprint 3 (UI transparency):
 - ✅ `CRTKY-47` Confidence badges (🟢🟡⚪) next to each rating
-- `CRTKY-48` Replace generic tooltips with data-source tooltips
+- ✅ `CRTKY-48` Data-source tooltips (sources + data_date in category hover)
 - `CRTKY-49` "How ratings work" expandable section on station page
 - `CRTKY-50` /methodology page with data sources + formulas
 - `CRTKY-51` Data freshness indicator (uses `data_date` from metadata)
@@ -324,11 +325,9 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 |--------|--------|---------------|-------------------|
 | UI: полоса **Hubs** (`HubStrip`), 5 хабов, ссылка в Google Maps | ✅ на странице станции, если есть `transit_minutes` | UI **100%** | — |
 | Фильтр **max commute** на карте (по минимуму из хабов) | ✅ в `scoring.ts` | **100%** | — |
-| Качество данных | ⚠️ смешанное | **~20%** по смыслу | **L** |
+| Качество данных | ✅ калибровано | **~80%** | **M** (upgrade to GTFS) |
 
-**Важно:** в `scripts/export-ratings.py` для **computed**-станций (без AI `description`) в экспорт подставляется **одинаковая заглушка** `transit_minutes`: 30 мин до Shibuya / Shinjuku / Tokyo / Ikebukuro / Shinagawa. Реальные минуты остаются у **~272 AI-станций**, где поле заполнялось вручную при исследовании. Итог: карточка «выглядит заполненной», но для большинства станций цифры **не маршрутные**. Нормальное закрытие — отдельный пайплайн: ODPT / Navitime / Hyperdia / предрасчёт матрицы станция→хаб (с кэшем и датой снимка), затем замена заглушки в экспорте.
-
-**Задачи (оценка):** (1) выбор API или офлайн GTFS+рouting, (2) скрейп/ETL в NocoDB или JSON, (3) правка `export-ratings.py`, (4) подсказка в UI про источник и дату. **~4** крупных шага, текущая **честная** готовность данных **≈15–25%** (только AI + осознанная заглушка).
+✅ **CRTKY-81 (done, PR #56):** Географическая модель (Haversine + line connectivity), калибрована grid search по 252 AI ground truth. MAE 5.5 мин, 85% within 10 min. Spot-checked vs Google Maps. Output: `data/transit-times.json`, потребляется `export-ratings.py`. **Upgrade path:** TokyoGTFS + RAPTOR для timetable-based routing.
 
 ### Last train (終電)
 
@@ -363,8 +362,8 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 
 | Направление | Крупных задач (оценка) | ~готовность | Остаток |
 |-------------|-------------------------|-------------|---------|
-| Hubs UI + фильтр | 2 | **~90%** | Полировка копирайта / tooltips |
-| Hubs **реальные минуты** | 4 | **~15–25%** | Маршрутизация + экспорт |
+| Hubs UI + фильтр | 2 | **~95%** | Методология tooltip |
+| Hubs **реальные минуты** | 4 | **~80%** ✅ CRTKY-81 | Upgrade: GTFS+RAPTOR |
 | Last train | 3–5 | **~0%** | Расписания + UI |
 | Rent expansion | 5–7 | **~20–45%** по цели | Скрейп + маппинг + этика нагрузки |
 
