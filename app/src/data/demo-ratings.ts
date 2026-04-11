@@ -2288,7 +2288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
 
   // === Data-driven computed ratings ===
   shinjuku: {
-    ratings: { food: 10, nightlife: 10, transport: 10, rent: 4, safety: 1, green: 4, gym_sports: 5, vibe: 10, crowd: 1 },
+    ratings: { food: 10, nightlife: 10, transport: 10, rent: 4, safety: 1, green: 4, gym_sports: 6, vibe: 10, crowd: 1 },
     transit_minutes: { shibuya: 10, shinjuku: 0, tokyo: 16, ikebukuro: 13, shinagawa: 20 },
     rent_avg: { '1k_1ldk': 231000, '2ldk': 263000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2312,7 +2312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ikebukuro: {
-    ratings: { food: 10, nightlife: 10, transport: 10, rent: 4, safety: 1, green: 8, gym_sports: 6, vibe: 9, crowd: 1 },
+    ratings: { food: 10, nightlife: 10, transport: 10, rent: 4, safety: 1, green: 8, gym_sports: 7, vibe: 9, crowd: 1 },
     transit_minutes: { shibuya: 21, shinjuku: 13, tokyo: 19, ikebukuro: 0, shinagawa: 30 },
     rent_avg: { '1k_1ldk': 218000, '2ldk': 246000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2328,7 +2328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nippori: {
-    ratings: { food: 8, nightlife: 8, transport: 10, rent: 6, safety: 6, green: 8, gym_sports: 5, vibe: 7, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 10, rent: 6, safety: 5, green: 8, gym_sports: 6, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 26, shinjuku: 20, tokyo: 14, ikebukuro: 14, shinagawa: 30 },
     rent_avg: { '1k_1ldk': 182000, '2ldk': 224000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2360,7 +2360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ebisu: {
-    ratings: { food: 9, nightlife: 10, transport: 9, rent: 3, safety: 8, green: 9, gym_sports: 6, vibe: 7, crowd: 1 },
+    ratings: { food: 9, nightlife: 10, transport: 9, rent: 3, safety: 8, green: 9, gym_sports: 7, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 4, shinjuku: 14, tokyo: 17, ikebukuro: 24, shinagawa: 9 },
     rent_avg: { '1k_1ldk': 249000, '2ldk': 270000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2376,7 +2376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kuukou-daini-biru-daini-ryokyaku-taaminaru': {
-    ratings: { food: 5, nightlife: 3, transport: 9, rent: 9, safety: 6, green: 3, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 5, nightlife: 3, transport: 9, rent: 9, safety: 6, green: 3, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 95, shinjuku: 94, tokyo: 86, ikebukuro: 92, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -2456,7 +2456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hanedakuukou-kokunaisen-taaminaru': {
-    ratings: { food: 5, nightlife: 3, transport: 9, rent: 5, safety: 9, green: 1, gym_sports: 1, vibe: 4, crowd: 2 },
+    ratings: { food: 5, nightlife: 3, transport: 9, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 4, crowd: 2 },
     transit_minutes: { shibuya: 43, shinjuku: 37, tokyo: 44, ikebukuro: 44, shinagawa: 31 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -2472,7 +2472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashihannou: {
-    ratings: { food: 7, nightlife: 7, transport: 9, rent: 8, safety: 5, green: 4, gym_sports: 6, vibe: 7, crowd: 7 },
+    ratings: { food: 7, nightlife: 7, transport: 9, rent: 8, safety: 4, green: 5, gym_sports: 6, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 66, shinjuku: 64, tokyo: 72, ikebukuro: 56, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2488,7 +2488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keioutama-sentaa': {
-    ratings: { food: 7, nightlife: 7, transport: 9, rent: 9, safety: 5, green: 8, gym_sports: 5, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 9, rent: 9, safety: 2, green: 8, gym_sports: 5, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 57, shinjuku: 52, tokyo: 68, ikebukuro: 62, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2496,7 +2496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-tsudanuma': {
-    ratings: { food: 7, nightlife: 7, transport: 9, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 5, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 9, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 58, shinjuku: 58, tokyo: 47, ikebukuro: 57, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2504,7 +2504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   komagawa: {
-    ratings: { food: 4, nightlife: 5, transport: 9, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 5, crowd: 8 },
+    ratings: { food: 4, nightlife: 5, transport: 9, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 69, shinjuku: 66, tokyo: 74, ikebukuro: 64, shinagawa: 76 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2520,7 +2520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nagatsuda: {
-    ratings: { food: 6, nightlife: 5, transport: 9, rent: 8, safety: 3, green: 7, gym_sports: 7, vibe: 7, crowd: 1 },
+    ratings: { food: 6, nightlife: 5, transport: 9, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 42, shinjuku: 51, tokyo: 59, ikebukuro: 58, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2536,7 +2536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'saitama-shintoshin': {
-    ratings: { food: 8, nightlife: 7, transport: 9, rent: 7, safety: 5, green: 5, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 9, rent: 7, safety: 4, green: 5, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 54, shinjuku: 48, tokyo: 47, ikebukuro: 41, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2560,7 +2560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tamagawa: {
-    ratings: { food: 5, nightlife: 5, transport: 9, rent: 5, safety: 9, green: 4, gym_sports: 7, vibe: 3, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 9, rent: 5, safety: 9, green: 4, gym_sports: 8, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 21, shinjuku: 36, tokyo: 41, ikebukuro: 35, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -2568,7 +2568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   toubudoubutsukouen: {
-    ratings: { food: 5, nightlife: 6, transport: 9, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 6, crowd: 4 },
+    ratings: { food: 5, nightlife: 6, transport: 9, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 67, shinjuku: 68, tokyo: 69, ikebukuro: 70, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2576,7 +2576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yorii: {
-    ratings: { food: 3, nightlife: 3, transport: 9, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 9, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 109, shinjuku: 105, tokyo: 112, ikebukuro: 95, shinagawa: 116 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2600,7 +2600,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'azami-no': {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 3, green: 6, gym_sports: 9, vibe: 7, crowd: 1 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 2, green: 6, gym_sports: 9, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 30, shinjuku: 40, tokyo: 47, ikebukuro: 47, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2608,7 +2608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'chiba-minato': {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 6, green: 7, gym_sports: 5, vibe: 3, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 4, green: 7, gym_sports: 5, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 61, shinjuku: 62, tokyo: 56, ikebukuro: 63, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -2624,7 +2624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chibachuuou: {
-    ratings: { food: 9, nightlife: 9, transport: 8, rent: 9, safety: 6, green: 8, gym_sports: 5, vibe: 8, crowd: 5 },
+    ratings: { food: 9, nightlife: 9, transport: 8, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 8, crowd: 5 },
     transit_minutes: { shibuya: 63, shinjuku: 64, tokyo: 64, ikebukuro: 65, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2640,7 +2640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fuchuuhonmachi: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 6, green: 5, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 4, green: 5, gym_sports: 8, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 42, shinjuku: 42, tokyo: 52, ikebukuro: 46, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2648,7 +2648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   futakoshinchi: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 4, gym_sports: 8, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 4, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 24, shinjuku: 36, tokyo: 33, ikebukuro: 34, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2680,7 +2680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hagiyama: {
-    ratings: { food: 4, nightlife: 4, transport: 8, rent: 9, safety: 9, green: 4, gym_sports: 5, vibe: 1, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 8, rent: 9, safety: 9, green: 4, gym_sports: 5, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 45, shinjuku: 43, tokyo: 54, ikebukuro: 44, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -2688,7 +2688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hamakawasaki: {
-    ratings: { food: 4, nightlife: 5, transport: 2, rent: 7, safety: 3, green: 6, gym_sports: 5, vibe: 5, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 2, rent: 7, safety: 2, green: 6, gym_sports: 6, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 35, shinjuku: 41, tokyo: 41, ikebukuro: 49, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -2696,7 +2696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hanedakuukou-kokusaisen-taaminaru': {
-    ratings: { food: 4, nightlife: 4, transport: 8, rent: 5, safety: 9, green: 2, gym_sports: 1, vibe: 5, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 8, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 43, shinjuku: 37, tokyo: 33, ikebukuro: 44, shinagawa: 31 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -2704,7 +2704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hannou: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 5, green: 6, gym_sports: 7, vibe: 6, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 4, green: 6, gym_sports: 7, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 67, shinjuku: 64, tokyo: 73, ikebukuro: 57, shinagawa: 74 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2712,7 +2712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hanyuu: {
-    ratings: { food: 4, nightlife: 6, transport: 8, rent: 8, safety: 5, green: 4, gym_sports: 5, vibe: 6, crowd: 6 },
+    ratings: { food: 4, nightlife: 6, transport: 8, rent: 8, safety: 4, green: 4, gym_sports: 6, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 94, shinjuku: 95, tokyo: 99, ikebukuro: 83, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2728,7 +2728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hatchoubori: {
-    ratings: { food: 10, nightlife: 9, transport: 8, rent: 4, safety: 7, green: 9, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 10, nightlife: 9, transport: 8, rent: 4, safety: 7, green: 9, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 25, shinjuku: 25, tokyo: 4, ikebukuro: 28, shinagawa: 22 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -2736,7 +2736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hatchounawate: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 10, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 10, gym_sports: 7, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 33, shinjuku: 39, tokyo: 39, ikebukuro: 47, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2752,7 +2752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashiginza: {
-    ratings: { food: 10, nightlife: 10, transport: 8, rent: 4, safety: 5, green: 9, gym_sports: 4, vibe: 9, crowd: 2 },
+    ratings: { food: 10, nightlife: 10, transport: 8, rent: 4, safety: 2, green: 9, gym_sports: 4, vibe: 9, crowd: 2 },
     transit_minutes: { shibuya: 22, shinjuku: 23, tokyo: 10, ikebukuro: 28, shinagawa: 20 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2760,7 +2760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashikawaguchi: {
-    ratings: { food: 6, nightlife: 7, transport: 8, rent: 7, safety: 5, green: 4, gym_sports: 4, vibe: 5, crowd: 2 },
+    ratings: { food: 6, nightlife: 7, transport: 8, rent: 7, safety: 2, green: 5, gym_sports: 4, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 49, shinjuku: 43, tokyo: 44, ikebukuro: 35, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2768,7 +2768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashinarita: {
-    ratings: { food: 5, nightlife: 3, transport: 8, rent: 9, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 9 },
+    ratings: { food: 5, nightlife: 3, transport: 8, rent: 9, safety: 6, green: 3, gym_sports: 2, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 101, shinjuku: 100, tokyo: 91, ikebukuro: 98, shinagawa: 97 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -2792,7 +2792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hokuchou-kasumi': {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 1 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 4, crowd: 1 },
     transit_minutes: { shibuya: 42, shinjuku: 37, tokyo: 45, ikebukuro: 38, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2800,7 +2800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   honchiba: {
-    ratings: { food: 8, nightlife: 9, transport: 8, rent: 9, safety: 6, green: 8, gym_sports: 6, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 9, transport: 8, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 64, shinjuku: 65, tokyo: 65, ikebukuro: 66, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2816,7 +2816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ichikawa: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 7, green: 3, gym_sports: 5, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 7, green: 3, gym_sports: 6, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 42, shinjuku: 34, tokyo: 36, ikebukuro: 38, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2824,7 +2824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   inage: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 9, safety: 6, green: 9, gym_sports: 5, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 9, safety: 4, green: 9, gym_sports: 6, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 59, shinjuku: 54, tokyo: 53, ikebukuro: 60, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2832,7 +2832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'inba-nippon-idai': {
-    ratings: { food: 2, nightlife: 1, transport: 8, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 8, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 77, shinjuku: 76, tokyo: 68, ikebukuro: 73, shinagawa: 74 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -2840,7 +2840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   jiyugaoka: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 3, safety: 1, green: 3, gym_sports: 7, vibe: 7, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 3, safety: 1, green: 4, gym_sports: 7, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 17, shinjuku: 31, tokyo: 37, ikebukuro: 43, shinagawa: 24 },
     rent_avg: { '1k_1ldk': 249000, '2ldk': 270000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2848,7 +2848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamakura: {
-    ratings: { food: 8, nightlife: 6, transport: 8, rent: 8, safety: 3, green: 5, gym_sports: 3, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 6, transport: 8, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 66, shinjuku: 71, tokyo: 67, ikebukuro: 78, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2864,7 +2864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kasukabe: {
-    ratings: { food: 8, nightlife: 7, transport: 8, rent: 8, safety: 5, green: 7, gym_sports: 5, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 8, rent: 8, safety: 4, green: 7, gym_sports: 6, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 60, shinjuku: 64, tokyo: 65, ikebukuro: 56, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2872,7 +2872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   katori: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 5 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 125, shinjuku: 124, tokyo: 116, ikebukuro: 121, shinagawa: 122 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -2880,7 +2880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'katsuta-dai': {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 7, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 64, shinjuku: 64, tokyo: 64, ikebukuro: 62, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -2888,7 +2888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kazusanakano: {
-    ratings: { food: 1, nightlife: 1, transport: 4, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 108, shinjuku: 112, tokyo: 105, ikebukuro: 116, shinagawa: 101 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -2904,7 +2904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keikyuu-kawasaki': {
-    ratings: { food: 9, nightlife: 9, transport: 8, rent: 7, safety: 3, green: 8, gym_sports: 9, vibe: 8, crowd: 1 },
+    ratings: { food: 9, nightlife: 9, transport: 8, rent: 7, safety: 2, green: 8, gym_sports: 9, vibe: 8, crowd: 1 },
     transit_minutes: { shibuya: 42, shinjuku: 37, tokyo: 37, ikebukuro: 45, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2920,7 +2920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   keiseiueno: {
-    ratings: { food: 10, nightlife: 10, transport: 8, rent: 5, safety: 5, green: 6, gym_sports: 10, vibe: 9, crowd: 3 },
+    ratings: { food: 10, nightlife: 10, transport: 8, rent: 5, safety: 2, green: 7, gym_sports: 10, vibe: 9, crowd: 3 },
     transit_minutes: { shibuya: 29, shinjuku: 24, tokyo: 15, ikebukuro: 22, shinagawa: 31 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2928,7 +2928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kikuna: {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 7, crowd: 1 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 32, shinjuku: 43, tokyo: 46, ikebukuro: 51, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2944,7 +2944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitanarashino: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 7, green: 6, gym_sports: 3, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 7, green: 6, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 68, shinjuku: 61, tokyo: 51, ikebukuro: 65, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2952,7 +2952,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitano: {
-    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 9, green: 5, gym_sports: 6, vibe: 6, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 9, green: 5, gym_sports: 7, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 62, shinjuku: 56, tokyo: 62, ikebukuro: 66, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2976,7 +2976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kourai: {
-    ratings: { food: 3, nightlife: 1, transport: 8, rent: 8, safety: 5, green: 5, gym_sports: 3, vibe: 5, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 8, rent: 8, safety: 4, green: 5, gym_sports: 3, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 71, shinjuku: 68, tokyo: 77, ikebukuro: 61, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -2992,7 +2992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kuki: {
-    ratings: { food: 5, nightlife: 6, transport: 8, rent: 8, safety: 5, green: 5, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 5, nightlife: 6, transport: 8, rent: 8, safety: 4, green: 6, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 74, shinjuku: 69, tokyo: 71, ikebukuro: 62, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3000,7 +3000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kumagaya: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 5, green: 5, gym_sports: 4, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 4, green: 5, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 97, shinjuku: 92, tokyo: 98, ikebukuro: 87, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3008,7 +3008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kumano-mae': {
-    ratings: { food: 7, nightlife: 6, transport: 8, rent: 6, safety: 8, green: 9, gym_sports: 6, vibe: 6, crowd: 7 },
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 6, safety: 8, green: 9, gym_sports: 7, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 37, shinjuku: 30, tokyo: 26, ikebukuro: 21, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3024,7 +3024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kurihashi: {
-    ratings: { food: 2, nightlife: 4, transport: 8, rent: 8, safety: 5, green: 10, gym_sports: 5, vibe: 2, crowd: 5 },
+    ratings: { food: 2, nightlife: 4, transport: 8, rent: 8, safety: 4, green: 10, gym_sports: 5, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 86, shinjuku: 81, tokyo: 83, ikebukuro: 74, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3032,7 +3032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mabashi: {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 6, green: 4, gym_sports: 6, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 5, green: 4, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 52, shinjuku: 48, tokyo: 41, ikebukuro: 43, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3040,7 +3040,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   makuhari: {
-    ratings: { food: 6, nightlife: 5, transport: 8, rent: 9, safety: 6, green: 5, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 8, rent: 9, safety: 4, green: 5, gym_sports: 6, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 63, shinjuku: 58, tokyo: 53, ikebukuro: 63, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3048,7 +3048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   makuharihongou: {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 6, green: 6, gym_sports: 5, vibe: 5, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 9, safety: 4, green: 6, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 61, shinjuku: 55, tokyo: 50, ikebukuro: 60, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3056,7 +3056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   matsugishi: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 3, crowd: 5 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 155, shinjuku: 154, tokyo: 140, ikebukuro: 153, shinagawa: 150 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -3064,7 +3064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'me-ke-saki': {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 3, green: 4, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 74, shinjuku: 78, tokyo: 76, ikebukuro: 84, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -3072,7 +3072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minamiurawa: {
-    ratings: { food: 7, nightlife: 6, transport: 8, rent: 7, safety: 5, green: 7, gym_sports: 4, vibe: 6, crowd: 2 },
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 7, safety: 4, green: 7, gym_sports: 4, vibe: 6, crowd: 2 },
     transit_minutes: { shibuya: 44, shinjuku: 38, tokyo: 36, ikebukuro: 41, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3088,7 +3088,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   motosumiyoshi: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 8, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 8, gym_sports: 8, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 29, shinjuku: 43, tokyo: 35, ikebukuro: 40, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3096,7 +3096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-yokote': {
-    ratings: { food: 1, nightlife: 1, transport: 5, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 74, shinjuku: 71, tokyo: 80, ikebukuro: 64, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3104,7 +3104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   musashiurawa: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 7, safety: 5, green: 4, gym_sports: 5, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 7, safety: 4, green: 4, gym_sports: 6, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 38, shinjuku: 32, tokyo: 44, ikebukuro: 37, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3112,7 +3112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nagareyama-ootakano-mori': {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 6, green: 8, gym_sports: 8, vibe: 8, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 5, green: 8, gym_sports: 8, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 61, shinjuku: 57, tokyo: 51, ikebukuro: 50, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3136,7 +3136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nakayama: {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 44, shinjuku: 49, tokyo: 55, ikebukuro: 57, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3144,7 +3144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nan-etsu-tani': {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 6, green: 3, gym_sports: 1, vibe: 2, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 6, green: 3, gym_sports: 2, vibe: 2, crowd: 1 },
     transit_minutes: { shibuya: 51, shinjuku: 45, tokyo: 45, ikebukuro: 37, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3152,7 +3152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nanryuu-yama': {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 7, safety: 6, green: 7, gym_sports: 9, vibe: 6, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 7, safety: 5, green: 8, gym_sports: 9, vibe: 6, crowd: 2 },
     transit_minutes: { shibuya: 54, shinjuku: 50, tokyo: 44, ikebukuro: 43, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3160,7 +3160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   narutou: {
-    ratings: { food: 3, nightlife: 3, transport: 8, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 8, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 102, shinjuku: 103, tokyo: 88, ikebukuro: 103, shinagawa: 97 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3168,7 +3168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-tokorozawa': {
-    ratings: { food: 6, nightlife: 5, transport: 8, rent: 8, safety: 7, green: 4, gym_sports: 5, vibe: 7, crowd: 5 },
+    ratings: { food: 6, nightlife: 5, transport: 8, rent: 8, safety: 7, green: 4, gym_sports: 6, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 53, shinjuku: 50, tokyo: 60, ikebukuro: 42, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3176,7 +3176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nishiogikubo: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 6, safety: 1, green: 5, gym_sports: 6, vibe: 8, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 6, safety: 1, green: 5, gym_sports: 7, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 33, shinjuku: 24, tokyo: 27, ikebukuro: 33, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3184,7 +3184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   noborito: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 6, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 6, gym_sports: 8, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 39, shinjuku: 37, tokyo: 40, ikebukuro: 37, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3200,7 +3200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ogawachou: {
-    ratings: { food: 3, nightlife: 4, transport: 8, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 8, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 95, shinjuku: 92, tokyo: 99, ikebukuro: 82, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3208,7 +3208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ogose: {
-    ratings: { food: 2, nightlife: 3, transport: 8, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 8, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 86, shinjuku: 83, tokyo: 91, ikebukuro: 74, shinagawa: 93 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3216,7 +3216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oku: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 6, safety: 9, green: 9, gym_sports: 7, vibe: 3, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 6, safety: 9, green: 9, gym_sports: 8, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 34, shinjuku: 27, tokyo: 25, ikebukuro: 18, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3224,7 +3224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooami: {
-    ratings: { food: 4, nightlife: 4, transport: 8, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 2, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 8, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 92, shinjuku: 93, tokyo: 85, ikebukuro: 94, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3264,7 +3264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sakato: {
-    ratings: { food: 6, nightlife: 5, transport: 8, rent: 8, safety: 5, green: 7, gym_sports: 4, vibe: 6, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 8, rent: 8, safety: 4, green: 7, gym_sports: 4, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 71, shinjuku: 67, tokyo: 74, ikebukuro: 57, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3272,7 +3272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sakura: {
-    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 6, green: 8, gym_sports: 3, vibe: 7, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 8, rent: 8, safety: 6, green: 8, gym_sports: 4, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 78, shinjuku: 77, tokyo: 63, ikebukuro: 76, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3280,7 +3280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sakuragichou: {
-    ratings: { food: 10, nightlife: 10, transport: 8, rent: 8, safety: 3, green: 9, gym_sports: 6, vibe: 8, crowd: 1 },
+    ratings: { food: 10, nightlife: 10, transport: 8, rent: 8, safety: 2, green: 9, gym_sports: 6, vibe: 8, crowd: 1 },
     transit_minutes: { shibuya: 48, shinjuku: 54, tokyo: 56, ikebukuro: 63, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3304,7 +3304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'seibu-yuuenchi': {
-    ratings: { food: 2, nightlife: 1, transport: 8, rent: 9, safety: 8, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 8, rent: 9, safety: 8, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 52, shinjuku: 50, tokyo: 60, ikebukuro: 49, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3312,7 +3312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'seibukyuujou-mae': {
-    ratings: { food: 3, nightlife: 3, transport: 8, rent: 8, safety: 7, green: 1, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 8, rent: 8, safety: 7, green: 2, gym_sports: 3, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 60, tokyo: 70, ikebukuro: 53, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3320,7 +3320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sekiuchi: {
-    ratings: { food: 10, nightlife: 10, transport: 8, rent: 8, safety: 3, green: 9, gym_sports: 7, vibe: 8, crowd: 2 },
+    ratings: { food: 10, nightlife: 10, transport: 8, rent: 8, safety: 2, green: 9, gym_sports: 7, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 50, shinjuku: 56, tokyo: 57, ikebukuro: 64, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3328,7 +3328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sengakuji: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 2, safety: 8, green: 9, gym_sports: 5, vibe: 4, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 2, safety: 8, green: 9, gym_sports: 6, vibe: 4, crowd: 1 },
     transit_minutes: { shibuya: 18, shinjuku: 23, tokyo: 20, ikebukuro: 33, shinagawa: 3 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3336,7 +3336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sentaa-kita': {
-    ratings: { food: 7, nightlife: 6, transport: 8, rent: 8, safety: 3, green: 5, gym_sports: 8, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 8, safety: 2, green: 5, gym_sports: 8, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 35, shinjuku: 39, tokyo: 45, ikebukuro: 47, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3344,7 +3344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sentaa-minami': {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 3, green: 6, gym_sports: 9, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 8, safety: 2, green: 6, gym_sports: 9, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 36, shinjuku: 41, tokyo: 47, ikebukuro: 49, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3352,7 +3352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shimokitazawa: {
-    ratings: { food: 9, nightlife: 9, transport: 8, rent: 6, safety: 1, green: 7, gym_sports: 6, vibe: 9, crowd: 2 },
+    ratings: { food: 9, nightlife: 9, transport: 8, rent: 6, safety: 1, green: 7, gym_sports: 7, vibe: 9, crowd: 2 },
     transit_minutes: { shibuya: 9, shinjuku: 12, tokyo: 30, ikebukuro: 28, shinagawa: 25 },
     rent_avg: { '1k_1ldk': 170000, '2ldk': 231000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3360,7 +3360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-sugita': {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 61, shinjuku: 67, tokyo: 59, ikebukuro: 65, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3368,7 +3368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinkawasaki: {
-    ratings: { food: 7, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 4, gym_sports: 8, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 4, gym_sports: 8, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 32, shinjuku: 28, tokyo: 30, ikebukuro: 36, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3376,7 +3376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinkoyasu: {
-    ratings: { food: 6, nightlife: 7, transport: 8, rent: 8, safety: 3, green: 5, gym_sports: 1, vibe: 3, crowd: 8 },
+    ratings: { food: 6, nightlife: 7, transport: 8, rent: 8, safety: 2, green: 5, gym_sports: 2, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 41, shinjuku: 47, tokyo: 42, ikebukuro: 55, shinagawa: 31 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3384,7 +3384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinmaruko: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 8, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 8, gym_sports: 7, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 24, shinjuku: 39, tokyo: 44, ikebukuro: 37, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3392,7 +3392,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinpachi-hashira': {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 9, safety: 6, green: 3, gym_sports: 7, vibe: 3, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 9, safety: 5, green: 4, gym_sports: 8, vibe: 3, crowd: 3 },
     transit_minutes: { shibuya: 52, shinjuku: 49, tokyo: 41, ikebukuro: 44, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3400,7 +3400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinyokohama: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 3, green: 5, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 2, green: 5, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 39, shinjuku: 44, tokyo: 48, ikebukuro: 53, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3408,7 +3408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinyuri-ke-oka': {
-    ratings: { food: 7, nightlife: 6, transport: 8, rent: 7, safety: 3, green: 7, gym_sports: 9, vibe: 8, crowd: 2 },
+    ratings: { food: 7, nightlife: 6, transport: 8, rent: 7, safety: 2, green: 7, gym_sports: 9, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 39, shinjuku: 35, tokyo: 50, ikebukuro: 47, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3416,7 +3416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shitte: {
-    ratings: { food: 7, nightlife: 7, transport: 8, rent: 7, safety: 3, green: 6, gym_sports: 6, vibe: 3, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 8, rent: 7, safety: 2, green: 6, gym_sports: 6, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 43, shinjuku: 37, tokyo: 38, ikebukuro: 46, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3432,7 +3432,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takatsu: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 3, green: 4, gym_sports: 10, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 7, safety: 2, green: 4, gym_sports: 10, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 26, shinjuku: 38, tokyo: 34, ikebukuro: 35, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3440,7 +3440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tama-doubutsu-kouen': {
-    ratings: { food: 2, nightlife: 2, transport: 8, rent: 9, safety: 8, green: 3, gym_sports: 1, vibe: 5, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 8, rent: 9, safety: 8, green: 3, gym_sports: 2, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 60, shinjuku: 54, tokyo: 70, ikebukuro: 64, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3464,7 +3464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tennoudai: {
-    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 6, green: 7, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 6, green: 8, gym_sports: 5, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 64, shinjuku: 61, tokyo: 64, ikebukuro: 66, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3472,7 +3472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tokorozawa: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 7, green: 4, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 7, green: 4, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 50, shinjuku: 47, tokyo: 57, ikebukuro: 40, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3480,7 +3480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tougo-no': {
-    ratings: { food: 1, nightlife: 1, transport: 6, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 6, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 77, shinjuku: 74, tokyo: 83, ikebukuro: 67, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3488,7 +3488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsudanuma: {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 6, green: 6, gym_sports: 3, vibe: 7, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 8, safety: 5, green: 6, gym_sports: 4, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 57, shinjuku: 51, tokyo: 41, ikebukuro: 56, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3496,7 +3496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsuga: {
-    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 6, green: 8, gym_sports: 5, vibe: 4, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 8, rent: 9, safety: 4, green: 8, gym_sports: 5, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 67, shinjuku: 67, tokyo: 62, ikebukuro: 67, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3512,7 +3512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ware-no': {
-    ratings: { food: 2, nightlife: 1, transport: 7, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 7, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 83, shinjuku: 80, tokyo: 88, ikebukuro: 72, shinagawa: 90 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3536,7 +3536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yoyogi-hachiman': {
-    ratings: { food: 8, nightlife: 8, transport: 8, rent: 2, safety: 9, green: 5, gym_sports: 8, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 8, rent: 2, safety: 9, green: 6, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 11, shinjuku: 7, tokyo: 24, ikebukuro: 24, shinagawa: 23 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3544,7 +3544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yuukari-ga-oka': {
-    ratings: { food: 5, nightlife: 4, transport: 8, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 7, crowd: 5 },
+    ratings: { food: 5, nightlife: 4, transport: 8, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 69, shinjuku: 68, tokyo: 59, ikebukuro: 66, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3552,7 +3552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'adachi-odai': {
-    ratings: { food: 4, nightlife: 5, transport: 3, rent: 7, safety: 9, green: 8, gym_sports: 5, vibe: 2, crowd: 9 },
+    ratings: { food: 4, nightlife: 5, transport: 3, rent: 7, safety: 9, green: 8, gym_sports: 6, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 38, shinjuku: 31, tokyo: 27, ikebukuro: 22, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3560,7 +3560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ageo: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 5, green: 10, gym_sports: 5, vibe: 3, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 4, green: 10, gym_sports: 5, vibe: 3, crowd: 2 },
     transit_minutes: { shibuya: 61, shinjuku: 65, tokyo: 60, ikebukuro: 58, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3568,7 +3568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   agui: {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 85, shinjuku: 83, tokyo: 75, ikebukuro: 80, shinagawa: 82 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -3576,7 +3576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   aihara: {
-    ratings: { food: 3, nightlife: 4, transport: 5, rent: 9, safety: 8, green: 3, gym_sports: 7, vibe: 2, crowd: 5 },
+    ratings: { food: 3, nightlife: 4, transport: 5, rent: 9, safety: 8, green: 3, gym_sports: 8, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 67, tokyo: 66, ikebukuro: 61, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3608,7 +3608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   akiyama: {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 6, green: 3, gym_sports: 7, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 5, green: 3, gym_sports: 8, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 54, shinjuku: 52, tokyo: 43, ikebukuro: 48, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3616,7 +3616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'an-zen': {
-    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 3, green: 3, gym_sports: 5, vibe: 2, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 2, green: 3, gym_sports: 5, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 43, shinjuku: 49, tokyo: 43, ikebukuro: 57, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -3632,7 +3632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   anagawa: {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 9, safety: 6, green: 7, gym_sports: 5, vibe: 1, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 62, tokyo: 62, ikebukuro: 62, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3640,7 +3640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'anamori-inari': {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 5, safety: 10, green: 4, gym_sports: 9, vibe: 4, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 5, safety: 10, green: 5, gym_sports: 9, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 45, shinjuku: 40, tokyo: 50, ikebukuro: 48, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3648,7 +3648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ane-ke-saki': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 5, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 64, tokyo: 66, ikebukuro: 67, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3672,7 +3672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   aobadai: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 10, vibe: 8, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 2, green: 7, gym_sports: 10, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 37, shinjuku: 47, tokyo: 54, ikebukuro: 54, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3680,7 +3680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   aoi: {
-    ratings: { food: 5, nightlife: 6, transport: 5, rent: 7, safety: 8, green: 7, gym_sports: 9, vibe: 6, crowd: 6 },
+    ratings: { food: 5, nightlife: 6, transport: 5, rent: 7, safety: 8, green: 8, gym_sports: 9, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 35, shinjuku: 43, tokyo: 35, ikebukuro: 34, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3696,7 +3696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'arai-kusurishi-mae': {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 5, safety: 8, green: 7, gym_sports: 8, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 5, safety: 8, green: 8, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 24, shinjuku: 17, tokyo: 30, ikebukuro: 17, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3704,7 +3704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   araijuku: {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 7, safety: 5, green: 3, gym_sports: 5, vibe: 4, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 7, safety: 2, green: 3, gym_sports: 5, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 49, shinjuku: 43, tokyo: 44, ikebukuro: 45, shinagawa: 54 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3736,7 +3736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'arakawa-yuuenchi-mae': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 6, vibe: 7, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 7, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 36, shinjuku: 28, tokyo: 26, ikebukuro: 19, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3752,7 +3752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   arakawashakomae: {
-    ratings: { food: 7, nightlife: 6, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 7, vibe: 3, crowd: 9 },
+    ratings: { food: 7, nightlife: 6, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 8, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 35, shinjuku: 28, tokyo: 26, ikebukuro: 18, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3760,7 +3760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   araki: {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 9, safety: 6, green: 5, gym_sports: 1, vibe: 1, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 9, safety: 6, green: 5, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 71, shinjuku: 68, tokyo: 61, ikebukuro: 64, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3768,7 +3768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ariake: {
-    ratings: { food: 7, nightlife: 4, transport: 3, rent: 5, safety: 7, green: 9, gym_sports: 5, vibe: 7, crowd: 8 },
+    ratings: { food: 7, nightlife: 4, transport: 3, rent: 5, safety: 7, green: 9, gym_sports: 6, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 29, shinjuku: 33, tokyo: 21, ikebukuro: 40, shinagawa: 20 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3784,7 +3784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   asahi: {
-    ratings: { food: 5, nightlife: 5, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 5, vibe: 5, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 136, shinjuku: 135, tokyo: 121, ikebukuro: 134, shinagawa: 131 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -3792,7 +3792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   asaka: {
-    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 3, gym_sports: 7, vibe: 4, crowd: 2 },
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 3, gym_sports: 8, vibe: 4, crowd: 2 },
     transit_minutes: { shibuya: 38, shinjuku: 45, tokyo: 41, ikebukuro: 32, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3800,7 +3800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   asano: {
-    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 2, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 2, green: 4, gym_sports: 5, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 44, shinjuku: 50, tokyo: 44, ikebukuro: 58, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -3808,7 +3808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ashi-ke-kubo': {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 105, shinjuku: 102, tokyo: 110, ikebukuro: 94, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3816,7 +3816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ashigara: {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 6, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 104, shinjuku: 102, tokyo: 114, ikebukuro: 114, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3840,7 +3840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'awa-katsuyama': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 99, shinjuku: 104, tokyo: 101, ikebukuro: 110, shinagawa: 93 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3848,7 +3848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'awa-kominato': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 117, shinjuku: 121, tokyo: 115, ikebukuro: 126, shinagawa: 110 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3856,7 +3856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'awa-tenshin': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 114, shinjuku: 119, tokyo: 113, ikebukuro: 124, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3872,7 +3872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ban-ta': {
-    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 71, shinjuku: 67, tokyo: 65, ikebukuro: 68, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -3888,7 +3888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   barakinakayama: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 6, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 46, shinjuku: 45, tokyo: 34, ikebukuro: 43, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3896,7 +3896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'basha-michi': {
-    ratings: { food: 10, nightlife: 10, transport: 7, rent: 8, safety: 3, green: 10, gym_sports: 5, vibe: 8, crowd: 4 },
+    ratings: { food: 10, nightlife: 10, transport: 7, rent: 8, safety: 2, green: 10, gym_sports: 5, vibe: 8, crowd: 4 },
     transit_minutes: { shibuya: 48, shinjuku: 54, tokyo: 56, ikebukuro: 63, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3904,7 +3904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'benten-hashi': {
-    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 1, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 1, rent: 8, safety: 2, green: 5, gym_sports: 5, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 44, shinjuku: 50, tokyo: 45, ikebukuro: 58, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -3912,7 +3912,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'bushuu-araki': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 101, shinjuku: 96, tokyo: 101, ikebukuro: 84, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -3920,7 +3920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'bushuu-hino': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 116, shinjuku: 114, tokyo: 122, ikebukuro: 106, shinagawa: 123 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3928,7 +3928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'bushuu-karasawa': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 84, shinjuku: 81, tokyo: 89, ikebukuro: 72, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3936,7 +3936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'bushuu-nagase': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 81, shinjuku: 78, tokyo: 86, ikebukuro: 69, shinagawa: 89 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3944,7 +3944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'bushuu-nakagawa': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 115, shinjuku: 112, tokyo: 121, ikebukuro: 105, shinagawa: 122 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3952,7 +3952,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   busshi: {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 5, green: 3, gym_sports: 6, vibe: 6, crowd: 7 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 4, green: 3, gym_sports: 6, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 61, shinjuku: 68, tokyo: 67, ikebukuro: 60, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3960,7 +3960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'byoubu-ura': {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 5, vibe: 2, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 60, shinjuku: 66, tokyo: 68, ikebukuro: 64, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -3968,7 +3968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'chiba-kouen': {
-    ratings: { food: 8, nightlife: 8, transport: 2, rent: 9, safety: 6, green: 6, gym_sports: 7, vibe: 7, crowd: 9 },
+    ratings: { food: 8, nightlife: 8, transport: 2, rent: 9, safety: 4, green: 6, gym_sports: 7, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 63, shinjuku: 64, tokyo: 64, ikebukuro: 64, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3976,7 +3976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'chiba-tera': {
-    ratings: { food: 5, nightlife: 4, transport: 3, rent: 9, safety: 6, green: 7, gym_sports: 5, vibe: 4, crowd: 8 },
+    ratings: { food: 5, nightlife: 4, transport: 3, rent: 9, safety: 4, green: 7, gym_sports: 5, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 72, shinjuku: 73, tokyo: 73, ikebukuro: 74, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -3984,7 +3984,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chichibu: {
-    ratings: { food: 6, nightlife: 6, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 6, crowd: 9 },
+    ratings: { food: 6, nightlife: 6, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 113, shinjuku: 110, tokyo: 118, ikebukuro: 102, shinagawa: 120 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -3992,7 +3992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chidorichou: {
-    ratings: { food: 6, nightlife: 7, transport: 5, rent: 5, safety: 9, green: 5, gym_sports: 7, vibe: 4, crowd: 6 },
+    ratings: { food: 6, nightlife: 7, transport: 5, rent: 5, safety: 9, green: 5, gym_sports: 8, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 31, shinjuku: 40, tokyo: 42, ikebukuro: 37, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4000,7 +4000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'chihara-dai': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 79, shinjuku: 81, tokyo: 72, ikebukuro: 82, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4008,7 +4008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'chiku-sentaa': {
-    ratings: { food: 5, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 7, crowd: 10 },
+    ratings: { food: 5, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 7, crowd: 10 },
     transit_minutes: { shibuya: 74, shinjuku: 74, tokyo: 65, ikebukuro: 72, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4016,7 +4016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chikura: {
-    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 125, shinjuku: 130, tokyo: 126, ikebukuro: 136, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -4024,7 +4024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chitose: {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 6 },
     transit_minutes: { shibuya: 123, shinjuku: 128, tokyo: 124, ikebukuro: 134, shinagawa: 117 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -4048,7 +4048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   choujamachi: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 117, shinjuku: 120, tokyo: 112, ikebukuro: 123, shinagawa: 110 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4056,7 +4056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'choukoku-no-mori': {
-    ratings: { food: 6, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 5, crowd: 9 },
+    ratings: { food: 6, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 4, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 124, shinjuku: 121, tokyo: 127, ikebukuro: 133, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4064,7 +4064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   chuugakkou: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 2, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 74, shinjuku: 73, tokyo: 65, ikebukuro: 71, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4080,7 +4080,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   daiba: {
-    ratings: { food: 7, nightlife: 6, transport: 4, rent: 2, safety: 1, green: 5, gym_sports: 3, vibe: 7, crowd: 7 },
+    ratings: { food: 7, nightlife: 6, transport: 4, rent: 2, safety: 1, green: 5, gym_sports: 4, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 25, shinjuku: 31, tokyo: 22, ikebukuro: 39, shinagawa: 14 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4096,7 +4096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   daikanyama: {
-    ratings: { food: 10, nightlife: 10, transport: 6, rent: 2, safety: 8, green: 8, gym_sports: 7, vibe: 8, crowd: 4 },
+    ratings: { food: 10, nightlife: 10, transport: 6, rent: 2, safety: 8, green: 8, gym_sports: 8, vibe: 8, crowd: 4 },
     transit_minutes: { shibuya: 3, shinjuku: 19, tokyo: 24, ikebukuro: 30, shinagawa: 17 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4112,7 +4112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'dokkyoudaigaku-zen-eki-souka-matsubara': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 6, green: 4, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 6, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 46, shinjuku: 46, tokyo: 44, ikebukuro: 51, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4120,7 +4120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   doro: {
-    ratings: { food: 3, nightlife: 3, transport: 7, rent: 7, safety: 5, green: 6, gym_sports: 6, vibe: 5, crowd: 4 },
+    ratings: { food: 3, nightlife: 3, transport: 7, rent: 7, safety: 4, green: 6, gym_sports: 6, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 61, shinjuku: 55, tokyo: 60, ikebukuro: 48, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4128,7 +4128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'doubutsu-kouen': {
-    ratings: { food: 3, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 6, gym_sports: 6, vibe: 3, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 9, safety: 4, green: 6, gym_sports: 6, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 64, shinjuku: 64, tokyo: 64, ikebukuro: 64, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4136,7 +4136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   eda: {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 6, crowd: 4 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 2, green: 8, gym_sports: 7, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 31, shinjuku: 41, tokyo: 48, ikebukuro: 48, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4144,7 +4144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   edogawa: {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 7, safety: 8, green: 5, gym_sports: 6, vibe: 2, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 7, safety: 8, green: 5, gym_sports: 7, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 41, shinjuku: 39, tokyo: 41, ikebukuro: 36, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4152,7 +4152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'edogawa-dai': {
-    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 6, green: 10, gym_sports: 7, vibe: 4, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 5, green: 10, gym_sports: 8, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 64, shinjuku: 59, tokyo: 54, ikebukuro: 52, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4176,7 +4176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'eifuku-machi': {
-    ratings: { food: 7, nightlife: 6, transport: 7, rent: 6, safety: 9, green: 8, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 6, safety: 9, green: 8, gym_sports: 8, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 15, shinjuku: 20, tokyo: 35, ikebukuro: 28, shinagawa: 32 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4192,7 +4192,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   emi: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 117, shinjuku: 122, tokyo: 117, ikebukuro: 127, shinagawa: 110 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4200,7 +4200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   enoto: {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 86, shinjuku: 86, tokyo: 71, ikebukuro: 85, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4208,7 +4208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'etchuu-shima': {
-    ratings: { food: 8, nightlife: 9, transport: 4, rent: 5, safety: 10, green: 10, gym_sports: 7, vibe: 7, crowd: 7 },
+    ratings: { food: 8, nightlife: 9, transport: 4, rent: 5, safety: 10, green: 10, gym_sports: 8, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 28, shinjuku: 29, tokyo: 8, ikebukuro: 32, shinagawa: 23 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4216,7 +4216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fuchinobe: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 5, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 6, gym_sports: 8, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 58, shinjuku: 60, tokyo: 60, ikebukuro: 66, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4224,7 +4224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fuchuu-keiba-seimonmae': {
-    ratings: { food: 8, nightlife: 8, transport: 2, rent: 8, safety: 8, green: 5, gym_sports: 7, vibe: 7, crowd: 9 },
+    ratings: { food: 8, nightlife: 8, transport: 2, rent: 8, safety: 8, green: 6, gym_sports: 8, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 47, shinjuku: 41, tokyo: 57, ikebukuro: 50, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4240,7 +4240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fudoumae: {
-    ratings: { food: 9, nightlife: 9, transport: 7, rent: 4, safety: 10, green: 9, gym_sports: 6, vibe: 7, crowd: 4 },
+    ratings: { food: 9, nightlife: 9, transport: 7, rent: 4, safety: 10, green: 9, gym_sports: 7, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 17, shinjuku: 25, tokyo: 26, ikebukuro: 36, shinagawa: 12 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4248,7 +4248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fuji-fuirumu-mae': {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 114, ikebukuro: 119, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -4256,7 +4256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fuji-no-ushijima': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 4, gym_sports: 1, vibe: 6, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 4, gym_sports: 2, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 61, shinjuku: 65, tokyo: 65, ikebukuro: 56, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4264,7 +4264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fujigaoka: {
-    ratings: { food: 6, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 9, vibe: 2, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 6, rent: 8, safety: 2, green: 7, gym_sports: 9, vibe: 2, crowd: 4 },
     transit_minutes: { shibuya: 36, shinjuku: 46, tokyo: 53, ikebukuro: 53, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4272,7 +4272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fujimi-no': {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 9, safety: 5, green: 6, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 9, safety: 4, green: 6, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 55, shinjuku: 50, tokyo: 59, ikebukuro: 40, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4280,7 +4280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fujimichou: {
-    ratings: { food: 8, nightlife: 8, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 9, vibe: 7, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 9, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 63, shinjuku: 68, tokyo: 71, ikebukuro: 75, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4296,7 +4296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fujino: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 7, green: 1, gym_sports: 4, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 7, green: 2, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 81, shinjuku: 75, tokyo: 84, ikebukuro: 84, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4304,7 +4304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fujisawa-honchou': {
-    ratings: { food: 6, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 5, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 6, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 6, gym_sports: 6, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 71, tokyo: 74, ikebukuro: 83, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4312,7 +4312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fukaya: {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 5, green: 6, gym_sports: 6, vibe: 3, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 4, green: 6, gym_sports: 6, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 111, shinjuku: 107, tokyo: 113, ikebukuro: 102, shinagawa: 118 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4320,7 +4320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fukiage: {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 5, green: 6, gym_sports: 3, vibe: 3, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 4, green: 6, gym_sports: 3, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 87, shinjuku: 83, tokyo: 88, ikebukuro: 77, shinagawa: 94 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4328,7 +4328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fukudawara: {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 101, shinjuku: 102, tokyo: 87, ikebukuro: 103, shinagawa: 95 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -4336,7 +4336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   fukuura: {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 74, shinjuku: 69, tokyo: 70, ikebukuro: 76, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4368,7 +4368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   funabori: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 8, green: 7, gym_sports: 5, vibe: 5, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 8, green: 7, gym_sports: 6, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 45, shinjuku: 38, tokyo: 29, ikebukuro: 44, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4376,7 +4376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'fune-no-kagakukan': {
-    ratings: { food: 7, nightlife: 6, transport: 3, rent: 5, safety: 10, green: 5, gym_sports: 3, vibe: 7, crowd: 9 },
+    ratings: { food: 7, nightlife: 6, transport: 3, rent: 5, safety: 10, green: 5, gym_sports: 4, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 26, shinjuku: 32, tokyo: 23, ikebukuro: 41, shinagawa: 15 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4384,7 +4384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   furusato: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 8, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 8, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 85, shinjuku: 83, tokyo: 92, ikebukuro: 83, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -4400,7 +4400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'futamata-o': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 3, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 76, shinjuku: 74, tokyo: 83, ikebukuro: 74, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -4408,7 +4408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'futamata-shinmachi': {
-    ratings: { food: 1, nightlife: 1, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 48, shinjuku: 47, tokyo: 31, ikebukuro: 46, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4416,7 +4416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'futawa-mukaedai': {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 7, green: 9, gym_sports: 3, vibe: 3, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 7, green: 9, gym_sports: 4, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 56, ikebukuro: 62, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4424,7 +4424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gakuen-mae': {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 9, safety: 6, green: 4, gym_sports: 6, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 9, safety: 4, green: 4, gym_sports: 6, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 76, shinjuku: 78, tokyo: 69, ikebukuro: 79, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4440,7 +4440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   gamou: {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 7, safety: 6, green: 3, gym_sports: 1, vibe: 2, crowd: 6 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 7, safety: 6, green: 3, gym_sports: 2, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 49, shinjuku: 50, tokyo: 49, ikebukuro: 42, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4448,7 +4448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'genka-osamu': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 3, gym_sports: 5, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 3, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 63, shinjuku: 60, tokyo: 69, ikebukuro: 53, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4456,7 +4456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gezan-kuchi': {
-    ratings: { food: 3, nightlife: 1, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 7, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 60, shinjuku: 57, tokyo: 67, ikebukuro: 50, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4480,7 +4480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gogatsu-dai': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 7, safety: 3, green: 5, gym_sports: 6, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 7, safety: 2, green: 5, gym_sports: 7, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 47, shinjuku: 44, tokyo: 59, ikebukuro: 55, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4488,7 +4488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gohyaku-rakan': {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 5, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 113, ikebukuro: 119, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4496,7 +4496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   gokou: {
-    ratings: { food: 7, nightlife: 7, transport: 6, rent: 9, safety: 6, green: 5, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 6, rent: 9, safety: 5, green: 5, gym_sports: 7, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 59, tokyo: 51, ikebukuro: 55, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4504,7 +4504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gokuraku-tera': {
-    ratings: { food: 7, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 6, gym_sports: 5, vibe: 4, crowd: 9 },
+    ratings: { food: 7, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 75, shinjuku: 80, tokyo: 76, ikebukuro: 86, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4512,7 +4512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gotan-no': {
-    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 8, green: 8, gym_sports: 7, vibe: 4, crowd: 4 },
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 8, green: 8, gym_sports: 8, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 33, shinjuku: 46, tokyo: 38, ikebukuro: 37, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4520,7 +4520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'gun-hatake': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 77, shinjuku: 76, tokyo: 84, ikebukuro: 75, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -4528,7 +4528,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   gyouda: {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 4, gym_sports: 1, vibe: 5, crowd: 7 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 4, gym_sports: 2, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 90, shinjuku: 85, tokyo: 91, ikebukuro: 80, shinagawa: 97 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -4536,7 +4536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   gyoudashi: {
-    ratings: { food: 5, nightlife: 6, transport: 2, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 6, crowd: 9 },
+    ratings: { food: 5, nightlife: 6, transport: 2, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 99, shinjuku: 94, tokyo: 100, ikebukuro: 83, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4544,7 +4544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hachi-seki': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 103, shinjuku: 106, tokyo: 97, ikebukuro: 108, shinagawa: 96 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4552,7 +4552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hachigata: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 107, shinjuku: 103, tokyo: 110, ikebukuro: 93, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4560,7 +4560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hachiman-yado': {
-    ratings: { food: 5, nightlife: 7, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 1, crowd: 5 },
+    ratings: { food: 5, nightlife: 7, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 68, tokyo: 60, ikebukuro: 70, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4576,7 +4576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hadano: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 5, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 87, shinjuku: 84, tokyo: 96, ikebukuro: 95, shinagawa: 88 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4584,7 +4584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hakkei-shima': {
-    ratings: { food: 4, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 4, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 66, shinjuku: 71, tokyo: 71, ikebukuro: 78, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4608,7 +4608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hakoneyumoto: {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 1, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 120, shinjuku: 117, tokyo: 123, ikebukuro: 129, shinagawa: 115 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4616,7 +4616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hakuraku: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 3, green: 5, gym_sports: 7, vibe: 8, crowd: 3 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 2, green: 6, gym_sports: 8, vibe: 8, crowd: 3 },
     transit_minutes: { shibuya: 35, shinjuku: 47, tokyo: 50, ikebukuro: 55, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4632,7 +4632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hamadayama: {
-    ratings: { food: 7, nightlife: 6, transport: 6, rent: 6, safety: 9, green: 8, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 7, nightlife: 6, transport: 6, rent: 6, safety: 9, green: 8, gym_sports: 6, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 19, shinjuku: 23, tokyo: 39, ikebukuro: 30, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4648,7 +4648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hamano: {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 9, safety: 6, green: 7, gym_sports: 3, vibe: 6, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 9, safety: 4, green: 7, gym_sports: 4, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 69, tokyo: 60, ikebukuro: 70, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4664,7 +4664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hanasaki: {
-    ratings: { food: 2, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 82, shinjuku: 83, tokyo: 86, ikebukuro: 76, shinagawa: 94 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4672,7 +4672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hane-kan': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 6, vibe: 7, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 7, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 65, shinjuku: 60, tokyo: 64, ikebukuro: 63, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4680,7 +4680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hara-touma': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 70, shinjuku: 67, tokyo: 65, ikebukuro: 69, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4688,7 +4688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   haraichi: {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 9, gym_sports: 5, vibe: 7, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 4, green: 9, gym_sports: 6, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 67, shinjuku: 61, tokyo: 66, ikebukuro: 54, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4696,7 +4696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'haruhi-no': {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 7, safety: 3, green: 5, gym_sports: 5, vibe: 2, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 7, safety: 2, green: 5, gym_sports: 6, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 51, shinjuku: 46, tokyo: 62, ikebukuro: 57, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4712,7 +4712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hasuda: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 5, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 60, shinjuku: 64, tokyo: 68, ikebukuro: 56, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4720,7 +4720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hasunuma: {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 5, safety: 9, green: 4, gym_sports: 8, vibe: 6, crowd: 8 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 5, safety: 9, green: 5, gym_sports: 8, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 33, shinjuku: 42, tokyo: 42, ikebukuro: 39, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4728,7 +4728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hato-ke-tani': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 3, gym_sports: 5, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 2, green: 3, gym_sports: 5, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 46, shinjuku: 40, tokyo: 42, ikebukuro: 42, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4736,7 +4736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hato-no-su': {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 10, green: 1, gym_sports: 1, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 10, green: 2, gym_sports: 2, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 88, shinjuku: 86, tokyo: 95, ikebukuro: 86, shinagawa: 94 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -4744,7 +4744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hatsuishi: {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 6, green: 10, gym_sports: 8, vibe: 2, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 5, green: 10, gym_sports: 8, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 62, shinjuku: 58, tokyo: 53, ikebukuro: 51, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4752,7 +4752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hatsutomi: {
-    ratings: { food: 6, nightlife: 5, transport: 3, rent: 9, safety: 6, green: 9, gym_sports: 5, vibe: 4, crowd: 8 },
+    ratings: { food: 6, nightlife: 5, transport: 3, rent: 9, safety: 5, green: 9, gym_sports: 5, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 65, shinjuku: 63, tokyo: 54, ikebukuro: 59, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4768,7 +4768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hazama: {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 9, safety: 10, green: 5, gym_sports: 6, vibe: 4, crowd: 8 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 9, safety: 10, green: 5, gym_sports: 7, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 61, shinjuku: 62, tokyo: 70, ikebukuro: 64, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4792,7 +4792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashi-aki-ryuu': {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 9, green: 3, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 9, green: 3, gym_sports: 4, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 66, shinjuku: 65, tokyo: 74, ikebukuro: 66, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4816,7 +4816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashi-iwatsuki': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 5, gym_sports: 3, vibe: 7, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 4, green: 5, gym_sports: 3, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 60, tokyo: 62, ikebukuro: 52, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4832,7 +4832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashi-nami-ken': {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 111, shinjuku: 114, tokyo: 106, ikebukuro: 117, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -4840,7 +4840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashi-washimiya': {
-    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 5, crowd: 5 },
+    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 78, shinjuku: 73, tokyo: 75, ikebukuro: 66, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -4848,7 +4848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashi-zushi': {
-    ratings: { food: 2, nightlife: 1, transport: 4, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 6, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 68, shinjuku: 73, tokyo: 68, ikebukuro: 79, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4856,7 +4856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashichiba: {
-    ratings: { food: 8, nightlife: 9, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 7, vibe: 7, crowd: 8 },
+    ratings: { food: 8, nightlife: 9, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 7, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 63, shinjuku: 64, tokyo: 58, ikebukuro: 65, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4864,7 +4864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashifushimi: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 8, green: 8, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 8, green: 8, gym_sports: 7, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 44, shinjuku: 40, tokyo: 40, ikebukuro: 41, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4880,7 +4880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashikitazawa: {
-    ratings: { food: 6, nightlife: 9, transport: 4, rent: 7, safety: 7, green: 1, gym_sports: 1, vibe: 9, crowd: 8 },
+    ratings: { food: 6, nightlife: 9, transport: 4, rent: 7, safety: 7, green: 2, gym_sports: 2, vibe: 9, crowd: 8 },
     transit_minutes: { shibuya: 13, shinjuku: 10, tokyo: 28, ikebukuro: 27, shinagawa: 25 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -4896,7 +4896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashimatsuyama: {
-    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 5, green: 7, gym_sports: 8, vibe: 6, crowd: 4 },
+    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 4, green: 7, gym_sports: 8, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 81, shinjuku: 76, tokyo: 83, ikebukuro: 66, shinagawa: 88 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4904,7 +4904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashimon-mae': {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 7, safety: 3, green: 6, gym_sports: 7, vibe: 3, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 7, safety: 2, green: 6, gym_sports: 8, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 48, shinjuku: 43, tokyo: 41, ikebukuro: 50, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4936,7 +4936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashinakayama: {
-    ratings: { food: 8, nightlife: 8, transport: 4, rent: 8, safety: 7, green: 8, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 4, rent: 8, safety: 7, green: 8, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 48, shinjuku: 47, tokyo: 37, ikebukuro: 45, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4952,7 +4952,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashioume: {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 9, safety: 8, green: 5, gym_sports: 5, vibe: 7, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 9, safety: 8, green: 6, gym_sports: 6, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 68, shinjuku: 66, tokyo: 75, ikebukuro: 66, shinagawa: 75 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4960,7 +4960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashitokorozawa: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 7, green: 5, gym_sports: 4, vibe: 6, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 7, green: 6, gym_sports: 4, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 46, shinjuku: 42, tokyo: 52, ikebukuro: 40, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4968,7 +4968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashiurawa: {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 5, green: 5, gym_sports: 5, vibe: 4, crowd: 3 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 4, green: 6, gym_sports: 5, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 46, shinjuku: 40, tokyo: 43, ikebukuro: 45, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -4976,7 +4976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashiyama-kita': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 107, shinjuku: 110, tokyo: 110, ikebukuro: 115, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -4984,7 +4984,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'higashiyama-ta': {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 3, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 2, green: 4, gym_sports: 6, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 44, shinjuku: 43, tokyo: 48, ikebukuro: 51, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -4992,7 +4992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higashiyamatoshi: {
-    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 9, green: 6, gym_sports: 4, vibe: 3, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 9, green: 7, gym_sports: 4, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 57, shinjuku: 55, tokyo: 66, ikebukuro: 56, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5000,7 +5000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higata: {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 129, shinjuku: 128, tokyo: 114, ikebukuro: 127, shinagawa: 124 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -5008,7 +5008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   higuchi: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 123, shinjuku: 119, tokyo: 127, ikebukuro: 110, shinagawa: 130 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5016,7 +5016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   himemiya: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 64, shinjuku: 65, tokyo: 66, ikebukuro: 66, shinagawa: 75 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5024,7 +5024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hinatawada: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 9, safety: 10, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 9, safety: 10, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 73, shinjuku: 72, tokyo: 81, ikebukuro: 72, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -5048,7 +5048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hirama: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 7, safety: 3, green: 5, gym_sports: 7, vibe: 2, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 7, safety: 2, green: 5, gym_sports: 8, vibe: 2, crowd: 4 },
     transit_minutes: { shibuya: 35, shinjuku: 44, tokyo: 34, ikebukuro: 40, shinagawa: 31 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5056,7 +5056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hiranumabashi: {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 8, crowd: 7 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 2, green: 8, gym_sports: 8, vibe: 8, crowd: 7 },
     transit_minutes: { shibuya: 47, shinjuku: 53, tokyo: 56, ikebukuro: 61, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5072,7 +5072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hirayama: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 93, shinjuku: 97, tokyo: 91, ikebukuro: 102, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -5080,7 +5080,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hirayama-joushi-kouen': {
-    ratings: { food: 2, nightlife: 1, transport: 4, rent: 9, safety: 8, green: 1, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 9, safety: 8, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 58, shinjuku: 52, tokyo: 59, ikebukuro: 61, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5088,7 +5088,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hire-ke-saki': {
-    ratings: { food: 6, nightlife: 6, transport: 2, rent: 8, safety: 6, green: 7, gym_sports: 9, vibe: 3, crowd: 9 },
+    ratings: { food: 6, nightlife: 6, transport: 2, rent: 8, safety: 5, green: 7, gym_sports: 9, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 61, shinjuku: 57, tokyo: 51, ikebukuro: 51, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5104,7 +5104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hirose-yachou-no-mori': {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 106, shinjuku: 102, tokyo: 108, ikebukuro: 91, shinagawa: 113 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5120,7 +5120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hiyoshihonchou: {
-    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 7, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 41, shinjuku: 42, tokyo: 46, ikebukuro: 50, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5128,7 +5128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hodokubo: {
-    ratings: { food: 5, nightlife: 6, transport: 2, rent: 9, safety: 1, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 5, nightlife: 6, transport: 2, rent: 9, safety: 1, green: 3, gym_sports: 2, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 59, shinjuku: 53, tokyo: 69, ikebukuro: 62, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5136,7 +5136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hokudai-miya': {
-    ratings: { food: 7, nightlife: 8, transport: 4, rent: 7, safety: 5, green: 7, gym_sports: 8, vibe: 5, crowd: 8 },
+    ratings: { food: 7, nightlife: 8, transport: 4, rent: 7, safety: 4, green: 7, gym_sports: 8, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 58, shinjuku: 52, tokyo: 58, ikebukuro: 45, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5144,7 +5144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hokuetsu-tani': {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 4, gym_sports: 6, vibe: 5, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 4, gym_sports: 7, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 56, shinjuku: 56, tokyo: 55, ikebukuro: 48, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5168,7 +5168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'hon-nou': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 93, shinjuku: 95, tokyo: 87, ikebukuro: 97, shinagawa: 87 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5176,7 +5176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hongoudai: {
-    ratings: { food: 4, nightlife: 3, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 8, vibe: 5, crowd: 3 },
+    ratings: { food: 4, nightlife: 3, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 59, shinjuku: 63, tokyo: 66, ikebukuro: 70, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5192,7 +5192,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   honjou: {
-    ratings: { food: 5, nightlife: 6, transport: 5, rent: 8, safety: 5, green: 4, gym_sports: 1, vibe: 5, crowd: 6 },
+    ratings: { food: 5, nightlife: 6, transport: 5, rent: 8, safety: 4, green: 5, gym_sports: 2, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 125, shinjuku: 120, tokyo: 127, ikebukuro: 116, shinagawa: 132 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -5200,7 +5200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'honkawa-etsu': {
-    ratings: { food: 9, nightlife: 9, transport: 7, rent: 8, safety: 6, green: 7, gym_sports: 6, vibe: 7, crowd: 3 },
+    ratings: { food: 9, nightlife: 9, transport: 7, rent: 8, safety: 5, green: 7, gym_sports: 6, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 67, shinjuku: 62, tokyo: 61, ikebukuro: 58, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5216,7 +5216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   horikiri: {
-    ratings: { food: 5, nightlife: 6, transport: 3, rent: 7, safety: 8, green: 8, gym_sports: 6, vibe: 2, crowd: 8 },
+    ratings: { food: 5, nightlife: 6, transport: 3, rent: 7, safety: 8, green: 8, gym_sports: 7, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 43, shinjuku: 44, tokyo: 34, ikebukuro: 37, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5224,7 +5224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'horikiri-shoubuen': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 1, gym_sports: 1, vibe: 7, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 2, gym_sports: 2, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 33, shinjuku: 40, tokyo: 30, ikebukuro: 34, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -5232,7 +5232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hoshikawa: {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 9, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 2, green: 8, gym_sports: 9, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 49, shinjuku: 55, tokyo: 58, ikebukuro: 63, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5240,7 +5240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hotaruda: {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 5, gym_sports: 5, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 103, shinjuku: 101, tokyo: 112, ikebukuro: 112, shinagawa: 104 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5248,7 +5248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   hyuuga: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 96, shinjuku: 96, tokyo: 81, ikebukuro: 96, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5256,7 +5256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'i-hosoda': {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 5, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 108, tokyo: 114, ikebukuro: 120, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5264,7 +5264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ichi-no-wari': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 5, green: 6, gym_sports: 3, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 4, green: 6, gym_sports: 4, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 67, tokyo: 68, ikebukuro: 59, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5312,7 +5312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'iida-oka': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 3, green: 4, gym_sports: 4, vibe: 5, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 4, gym_sports: 4, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 108, tokyo: 114, ikebukuro: 119, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5320,7 +5320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iikura: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 117, shinjuku: 117, tokyo: 102, ikebukuro: 116, shinagawa: 113 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -5328,7 +5328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iioka: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 4, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 140, shinjuku: 139, tokyo: 125, ikebukuro: 138, shinagawa: 135 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -5336,7 +5336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'iiyama-man': {
-    ratings: { food: 2, nightlife: 1, transport: 6, rent: 8, safety: 7, green: 4, gym_sports: 1, vibe: 2, crowd: 5 },
+    ratings: { food: 2, nightlife: 2, transport: 6, rent: 8, safety: 7, green: 5, gym_sports: 2, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 65, shinjuku: 58, tokyo: 48, ikebukuro: 62, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5344,7 +5344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ikegami: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 5, safety: 7, green: 5, gym_sports: 7, vibe: 4, crowd: 4 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 5, safety: 7, green: 5, gym_sports: 8, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 31, shinjuku: 40, tokyo: 41, ikebukuro: 37, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5360,7 +5360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ikenoue: {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 7, safety: 8, green: 8, gym_sports: 6, vibe: 9, crowd: 7 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 7, safety: 8, green: 8, gym_sports: 7, vibe: 9, crowd: 7 },
     transit_minutes: { shibuya: 7, shinjuku: 17, tokyo: 29, ikebukuro: 28, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5368,7 +5368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ikuta: {
-    ratings: { food: 3, nightlife: 5, transport: 7, rent: 7, safety: 3, green: 1, gym_sports: 1, vibe: 4, crowd: 3 },
+    ratings: { food: 3, nightlife: 5, transport: 7, rent: 7, safety: 2, green: 2, gym_sports: 2, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 33, shinjuku: 29, tokyo: 44, ikebukuro: 41, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -5376,7 +5376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ima-hane': {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 7, safety: 5, green: 9, gym_sports: 6, vibe: 7, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 7, safety: 4, green: 9, gym_sports: 7, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 65, shinjuku: 59, tokyo: 64, ikebukuro: 52, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5384,7 +5384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ina-chuuou': {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 64, shinjuku: 59, tokyo: 63, ikebukuro: 61, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5392,7 +5392,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   inadazutsumi: {
-    ratings: { food: 6, nightlife: 7, transport: 7, rent: 7, safety: 3, green: 5, gym_sports: 5, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 7, transport: 7, rent: 7, safety: 2, green: 5, gym_sports: 5, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 33, shinjuku: 35, tokyo: 44, ikebukuro: 40, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5400,7 +5400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'inage-kaigan': {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 6, green: 7, gym_sports: 10, vibe: 7, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 4, green: 7, gym_sports: 10, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 66, shinjuku: 67, tokyo: 50, ikebukuro: 67, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5408,7 +5408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   inagi: {
-    ratings: { food: 5, nightlife: 4, transport: 6, rent: 8, safety: 10, green: 6, gym_sports: 7, vibe: 3, crowd: 5 },
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 8, safety: 10, green: 6, gym_sports: 8, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 44, shinjuku: 40, tokyo: 55, ikebukuro: 50, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5416,7 +5416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'inagi-naganuma': {
-    ratings: { food: 5, nightlife: 4, transport: 5, rent: 8, safety: 10, green: 7, gym_sports: 9, vibe: 6, crowd: 6 },
+    ratings: { food: 5, nightlife: 4, transport: 5, rent: 8, safety: 10, green: 8, gym_sports: 9, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 38, shinjuku: 39, tokyo: 49, ikebukuro: 43, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5424,7 +5424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'inamura-ke-saki': {
-    ratings: { food: 4, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 3, gym_sports: 6, vibe: 2, crowd: 8 },
+    ratings: { food: 4, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 3, gym_sports: 7, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 76, shinjuku: 81, tokyo: 77, ikebukuro: 88, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5432,7 +5432,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'inariyama-kouen': {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 4, gym_sports: 6, vibe: 2, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 4, gym_sports: 7, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 67, shinjuku: 63, tokyo: 63, ikebukuro: 55, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5464,7 +5464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iogi: {
-    ratings: { food: 5, nightlife: 6, transport: 5, rent: 6, safety: 8, green: 8, gym_sports: 6, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 5, rent: 6, safety: 8, green: 8, gym_sports: 7, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 34, shinjuku: 28, tokyo: 44, ikebukuro: 29, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5472,7 +5472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ipponmatsu: {
-    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 77, shinjuku: 73, tokyo: 81, ikebukuro: 64, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5480,7 +5480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iriuda: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 4, gym_sports: 1, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 4, gym_sports: 2, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 117, shinjuku: 115, tokyo: 120, ikebukuro: 126, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5488,7 +5488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   irumashi: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 6, gym_sports: 9, vibe: 4, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 6, gym_sports: 9, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 68, shinjuku: 64, tokyo: 64, ikebukuro: 56, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5504,7 +5504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'isezaki-choujamachi': {
-    ratings: { food: 10, nightlife: 10, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 9, crowd: 6 },
+    ratings: { food: 10, nightlife: 10, transport: 5, rent: 8, safety: 2, green: 8, gym_sports: 8, vibe: 9, crowd: 6 },
     transit_minutes: { shibuya: 50, shinjuku: 56, tokyo: 58, ikebukuro: 64, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5512,7 +5512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ishigami: {
-    ratings: { food: 8, nightlife: 9, transport: 2, rent: 8, safety: 7, green: 6, gym_sports: 5, vibe: 7, crowd: 9 },
+    ratings: { food: 8, nightlife: 9, transport: 2, rent: 8, safety: 7, green: 6, gym_sports: 6, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 74, shinjuku: 78, tokyo: 76, ikebukuro: 85, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5520,7 +5520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ishigami-mae': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 3, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 74, shinjuku: 73, tokyo: 82, ikebukuro: 73, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -5528,7 +5528,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ishihara: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 7, vibe: 5, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 7, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 105, shinjuku: 101, tokyo: 106, ikebukuro: 90, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5536,7 +5536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ishikawachou: {
-    ratings: { food: 9, nightlife: 9, transport: 7, rent: 8, safety: 3, green: 10, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 9, nightlife: 9, transport: 7, rent: 8, safety: 2, green: 10, gym_sports: 6, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 50, shinjuku: 56, tokyo: 58, ikebukuro: 64, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5584,7 +5584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iwahara: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 114, ikebukuro: 119, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5592,7 +5592,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iwai: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 10 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 103, shinjuku: 108, tokyo: 105, ikebukuro: 114, shinagawa: 97 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5608,7 +5608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   iwatsuki: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 3, gym_sports: 3, vibe: 7, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 4, gym_sports: 3, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 63, shinjuku: 57, tokyo: 60, ikebukuro: 49, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5624,7 +5624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'izumi-no': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 5, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 68, shinjuku: 73, tokyo: 68, ikebukuro: 70, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5640,7 +5640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   jinbohara: {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 130, shinjuku: 126, tokyo: 133, ikebukuro: 122, shinagawa: 137 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5648,7 +5648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'jinmu-tera': {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 73, shinjuku: 78, tokyo: 79, ikebukuro: 85, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5656,7 +5656,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   joshidai: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 75, shinjuku: 74, tokyo: 66, ikebukuro: 72, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5664,7 +5664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'jouchou-toro': {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 4, crowd: 10 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 119, shinjuku: 115, tokyo: 123, ikebukuro: 106, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5672,7 +5672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'jousei-kawa': {
-    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 2, green: 6, gym_sports: 7, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 48, shinjuku: 54, tokyo: 58, ikebukuro: 62, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5680,7 +5680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'juuni-hashi': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 134, shinjuku: 132, tokyo: 125, ikebukuro: 129, shinagawa: 131 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -5688,7 +5688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kadosawa-hashi': {
-    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 1, rent: 8, safety: 3, green: 3, gym_sports: 4, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 73, shinjuku: 70, tokyo: 76, ikebukuro: 82, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -5696,7 +5696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kagawa: {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 77, shinjuku: 75, tokyo: 80, ikebukuro: 87, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -5704,7 +5704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kagemori: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 112, shinjuku: 110, tokyo: 118, ikebukuro: 102, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5712,7 +5712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kagetsuen-mae': {
-    ratings: { food: 6, nightlife: 7, transport: 4, rent: 8, safety: 3, green: 5, gym_sports: 5, vibe: 5, crowd: 8 },
+    ratings: { food: 6, nightlife: 7, transport: 4, rent: 8, safety: 2, green: 5, gym_sports: 6, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 38, shinjuku: 44, tokyo: 45, ikebukuro: 52, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5720,7 +5720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kago-hara': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 3, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 106, shinjuku: 101, tokyo: 107, ikebukuro: 96, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5736,7 +5736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kaihinmakuhari: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 9, safety: 6, green: 5, gym_sports: 8, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 9, safety: 4, green: 5, gym_sports: 8, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 61, shinjuku: 61, tokyo: 45, ikebukuro: 61, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5744,7 +5744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kaisei: {
-    ratings: { food: 2, nightlife: 1, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 101, shinjuku: 98, tokyo: 110, ikebukuro: 109, shinagawa: 102 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5760,7 +5760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kaji-ga-tani': {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 3, green: 5, gym_sports: 8, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 2, green: 5, gym_sports: 8, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 29, shinjuku: 42, tokyo: 37, ikebukuro: 38, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5776,7 +5776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kakio: {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 3, green: 4, gym_sports: 5, vibe: 4, crowd: 4 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 2, green: 4, gym_sports: 6, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 41, shinjuku: 38, tokyo: 53, ikebukuro: 50, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5784,7 +5784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kama-ke-tani': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 9, safety: 6, green: 9, gym_sports: 6, vibe: 4, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 9, safety: 5, green: 9, gym_sports: 6, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 58, shinjuku: 56, tokyo: 46, ikebukuro: 52, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5792,7 +5792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kama-ke-tani-daibutsu': {
-    ratings: { food: 7, nightlife: 6, transport: 5, rent: 9, safety: 6, green: 9, gym_sports: 6, vibe: 5, crowd: 6 },
+    ratings: { food: 7, nightlife: 6, transport: 5, rent: 9, safety: 5, green: 9, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 66, shinjuku: 64, tokyo: 54, ikebukuro: 61, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5800,7 +5800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kama-shu': {
-    ratings: { food: 4, nightlife: 4, transport: 7, rent: 9, safety: 6, green: 6, gym_sports: 5, vibe: 2, crowd: 3 },
+    ratings: { food: 4, nightlife: 4, transport: 7, rent: 9, safety: 4, green: 6, gym_sports: 6, vibe: 2, crowd: 3 },
     transit_minutes: { shibuya: 73, shinjuku: 74, tokyo: 65, ikebukuro: 75, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5808,7 +5808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kamakura-koukou-mae': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 77, shinjuku: 81, tokyo: 78, ikebukuro: 88, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5816,7 +5816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kameido-suijin': {
-    ratings: { food: 8, nightlife: 8, transport: 3, rent: 5, safety: 10, green: 8, gym_sports: 7, vibe: 5, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 3, rent: 5, safety: 10, green: 8, gym_sports: 8, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 45, shinjuku: 37, tokyo: 29, ikebukuro: 42, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5824,7 +5824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamifukuoka: {
-    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 5, green: 4, gym_sports: 5, vibe: 5, crowd: 3 },
+    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 4, green: 5, gym_sports: 6, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 58, shinjuku: 53, tokyo: 62, ikebukuro: 43, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5832,7 +5832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamihongou: {
-    ratings: { food: 6, nightlife: 6, transport: 4, rent: 9, safety: 6, green: 3, gym_sports: 7, vibe: 6, crowd: 8 },
+    ratings: { food: 6, nightlife: 6, transport: 4, rent: 9, safety: 5, green: 3, gym_sports: 7, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 55, shinjuku: 52, tokyo: 44, ikebukuro: 47, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5856,7 +5856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamiitabashi: {
-    ratings: { food: 4, nightlife: 6, transport: 7, rent: 6, safety: 8, green: 1, gym_sports: 1, vibe: 4, crowd: 3 },
+    ratings: { food: 4, nightlife: 6, transport: 7, rent: 6, safety: 8, green: 2, gym_sports: 2, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 37, shinjuku: 28, tokyo: 38, ikebukuro: 14, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -5872,7 +5872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kamikita-dai': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 10, green: 5, gym_sports: 4, vibe: 4, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 10, green: 6, gym_sports: 4, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 61, shinjuku: 53, tokyo: 69, ikebukuro: 59, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5896,7 +5896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kaminoge: {
-    ratings: { food: 6, nightlife: 5, transport: 6, rent: 7, safety: 9, green: 4, gym_sports: 7, vibe: 3, crowd: 5 },
+    ratings: { food: 6, nightlife: 5, transport: 6, rent: 7, safety: 9, green: 5, gym_sports: 7, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 26, shinjuku: 39, tokyo: 42, ikebukuro: 50, shinagawa: 30 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5912,7 +5912,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kamo-miya': {
-    ratings: { food: 7, nightlife: 6, transport: 4, rent: 7, safety: 5, green: 7, gym_sports: 8, vibe: 7, crowd: 8 },
+    ratings: { food: 7, nightlife: 6, transport: 4, rent: 7, safety: 4, green: 8, gym_sports: 8, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 56, tokyo: 62, ikebukuro: 49, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5920,7 +5920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamoi: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 2, green: 6, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 42, shinjuku: 47, tokyo: 52, ikebukuro: 55, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5928,7 +5928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kamonomiya: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 6, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 101, shinjuku: 105, tokyo: 104, ikebukuro: 111, shinagawa: 96 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5936,7 +5936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kanagawa: {
-    ratings: { food: 9, nightlife: 9, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 5, vibe: 8, crowd: 8 },
+    ratings: { food: 9, nightlife: 9, transport: 3, rent: 8, safety: 2, green: 8, gym_sports: 6, vibe: 8, crowd: 8 },
     transit_minutes: { shibuya: 45, shinjuku: 51, tokyo: 53, ikebukuro: 59, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5944,7 +5944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kanagawashinmachi: {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 3, green: 5, gym_sports: 3, vibe: 4, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 2, green: 5, gym_sports: 3, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 42, shinjuku: 48, tokyo: 50, ikebukuro: 56, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -5968,7 +5968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kaneko: {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 62, shinjuku: 60, tokyo: 69, ikebukuro: 59, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -5976,7 +5976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kanno: {
-    ratings: { food: 6, nightlife: 7, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 5, vibe: 6, crowd: 8 },
+    ratings: { food: 6, nightlife: 7, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 6, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 44, shinjuku: 42, tokyo: 44, ikebukuro: 39, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -5992,7 +5992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   karakida: {
-    ratings: { food: 2, nightlife: 2, transport: 5, rent: 9, safety: 9, green: 5, gym_sports: 6, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 2, transport: 5, rent: 9, safety: 9, green: 5, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 59, shinjuku: 54, tokyo: 70, ikebukuro: 65, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6000,7 +6000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kasa-hata': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 6, green: 6, gym_sports: 3, vibe: 5, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 6, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 64, shinjuku: 60, tokyo: 68, ikebukuro: 66, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6016,7 +6016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kasai-rinkai-kouen': {
-    ratings: { food: 2, nightlife: 2, transport: 6, rent: 7, safety: 10, green: 4, gym_sports: 5, vibe: 2, crowd: 4 },
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 7, safety: 10, green: 4, gym_sports: 6, vibe: 2, crowd: 4 },
     transit_minutes: { shibuya: 44, shinjuku: 33, tokyo: 25, ikebukuro: 35, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6024,7 +6024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kashima-ta': {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 3, green: 6, gym_sports: 6, vibe: 6, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 2, green: 6, gym_sports: 7, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 38, shinjuku: 34, tokyo: 35, ikebukuro: 42, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6032,7 +6032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kashiwa-dai': {
-    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 3, crowd: 5 },
+    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 65, shinjuku: 60, tokyo: 65, ikebukuro: 65, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6048,7 +6048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kashiwa-tanaka': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 9, safety: 7, green: 7, gym_sports: 6, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 9, safety: 7, green: 8, gym_sports: 6, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 60, shinjuku: 66, tokyo: 61, ikebukuro: 59, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6056,7 +6056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kasumigaseki: {
-    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 7, gym_sports: 4, vibe: 7, crowd: 1 },
+    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 8, gym_sports: 4, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 63, shinjuku: 59, tokyo: 66, ikebukuro: 58, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6064,7 +6064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   katakura: {
-    ratings: { food: 2, nightlife: 2, transport: 4, rent: 9, safety: 10, green: 4, gym_sports: 4, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 9, safety: 10, green: 4, gym_sports: 4, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 64, shinjuku: 64, tokyo: 64, ikebukuro: 68, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6072,7 +6072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   katakurachou: {
-    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 5, crowd: 5 },
+    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 2, green: 6, gym_sports: 7, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 43, shinjuku: 48, tokyo: 52, ikebukuro: 56, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6096,7 +6096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'katsu-kawa': {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 101, shinjuku: 99, tokyo: 91, ikebukuro: 96, shinagawa: 98 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6104,7 +6104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   katsuura: {
-    ratings: { food: 4, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 124, shinjuku: 128, tokyo: 121, ikebukuro: 132, shinagawa: 117 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6128,7 +6128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawagoeshi: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 6, green: 4, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 5, green: 5, gym_sports: 6, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 68, shinjuku: 63, tokyo: 61, ikebukuro: 52, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6136,7 +6136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawaguchi: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 6, safety: 5, green: 5, gym_sports: 6, vibe: 7, crowd: 1 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 6, safety: 2, green: 5, gym_sports: 6, vibe: 7, crowd: 1 },
     transit_minutes: { shibuya: 34, shinjuku: 39, tokyo: 37, ikebukuro: 27, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6144,7 +6144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kawaguchi-motogou': {
-    ratings: { food: 5, nightlife: 6, transport: 6, rent: 6, safety: 5, green: 5, gym_sports: 5, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 6, rent: 6, safety: 2, green: 6, gym_sports: 6, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 40, shinjuku: 45, tokyo: 47, ikebukuro: 33, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6152,7 +6152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawai: {
-    ratings: { food: 1, nightlife: 3, transport: 1, rent: 8, safety: 10, green: 1, gym_sports: 3, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 10, green: 2, gym_sports: 3, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 83, shinjuku: 81, tokyo: 90, ikebukuro: 81, shinagawa: 90 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -6160,7 +6160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kawasaki-shinmachi': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 7, safety: 3, green: 10, gym_sports: 7, vibe: 4, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 7, safety: 2, green: 10, gym_sports: 8, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 34, shinjuku: 40, tokyo: 40, ikebukuro: 48, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6168,7 +6168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawasakidaishi: {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 7, safety: 3, green: 5, gym_sports: 7, vibe: 5, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 7, safety: 2, green: 5, gym_sports: 7, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 48, shinjuku: 43, tokyo: 41, ikebukuro: 50, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6176,7 +6176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawasumi: {
-    ratings: { food: 2, nightlife: 1, transport: 5, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 4, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 79, shinjuku: 75, tokyo: 83, ikebukuro: 66, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6184,7 +6184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kawawachou: {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 2, green: 6, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 42, shinjuku: 52, tokyo: 58, ikebukuro: 60, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6192,7 +6192,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kayama: {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 1, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 3, gym_sports: 4, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 102, shinjuku: 99, tokyo: 111, ikebukuro: 110, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6208,7 +6208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kazo: {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 85, shinjuku: 86, tokyo: 89, ikebukuro: 79, shinagawa: 97 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6216,7 +6216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-higashi': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 122, shinjuku: 125, tokyo: 117, ikebukuro: 128, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6232,7 +6232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-kameyama': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 100, shinjuku: 105, tokyo: 99, ikebukuro: 110, shinagawa: 93 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -6240,7 +6240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-kawa-kan': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 88, shinjuku: 91, tokyo: 84, ikebukuro: 95, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6248,7 +6248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-kiyokawa': {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 69, shinjuku: 73, tokyo: 67, ikebukuro: 78, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -6256,7 +6256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-kubo': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 90, shinjuku: 94, tokyo: 86, ikebukuro: 97, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6264,7 +6264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-matsuoka': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 95, shinjuku: 99, tokyo: 93, ikebukuro: 104, shinagawa: 88 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -6272,7 +6272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-minato': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 82, shinjuku: 87, tokyo: 84, ikebukuro: 94, shinagawa: 76 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6280,7 +6280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-mitsumata': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 78, shinjuku: 81, tokyo: 73, ikebukuro: 84, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6288,7 +6288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-murakami': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 4, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 73, shinjuku: 75, tokyo: 67, ikebukuro: 78, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6296,7 +6296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-nakagawa': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 113, shinjuku: 116, tokyo: 108, ikebukuro: 119, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6304,7 +6304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-okitsu': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 121, shinjuku: 125, tokyo: 118, ikebukuro: 129, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6312,7 +6312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-ookubo': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 99, shinjuku: 103, tokyo: 96, ikebukuro: 107, shinagawa: 92 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6320,7 +6320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-tsurumai': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 90, shinjuku: 93, tokyo: 86, ikebukuro: 97, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6328,7 +6328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-ushiku': {
-    ratings: { food: 3, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 10 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 5, crowd: 10 },
     transit_minutes: { shibuya: 86, shinjuku: 89, tokyo: 81, ikebukuro: 92, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6336,7 +6336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kazusa-yamada': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 79, shinjuku: 82, tokyo: 74, ikebukuro: 85, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6344,7 +6344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keikyuu-nagasawa': {
-    ratings: { food: 2, nightlife: 1, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 88, shinjuku: 93, tokyo: 86, ikebukuro: 100, shinagawa: 77 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6352,7 +6352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keikyuu-ootsu': {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 72, shinjuku: 78, tokyo: 77, ikebukuro: 84, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6368,7 +6368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keikyuu-tomioka': {
-    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 8, gym_sports: 6, vibe: 6, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 65, shinjuku: 61, tokyo: 62, ikebukuro: 68, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6376,7 +6376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keiou-katakura': {
-    ratings: { food: 4, nightlife: 3, transport: 3, rent: 9, safety: 10, green: 4, gym_sports: 5, vibe: 2, crowd: 8 },
+    ratings: { food: 4, nightlife: 3, transport: 3, rent: 9, safety: 10, green: 4, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 64, shinjuku: 65, tokyo: 64, ikebukuro: 59, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6384,7 +6384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keiou-yomiuri-rando': {
-    ratings: { food: 2, nightlife: 4, transport: 5, rent: 8, safety: 10, green: 1, gym_sports: 1, vibe: 4, crowd: 6 },
+    ratings: { food: 2, nightlife: 4, transport: 5, rent: 8, safety: 10, green: 2, gym_sports: 2, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 42, shinjuku: 37, tokyo: 53, ikebukuro: 48, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6392,7 +6392,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   keiouhachiouji: {
-    ratings: { food: 6, nightlife: 9, transport: 7, rent: 9, safety: 7, green: 1, gym_sports: 1, vibe: 8, crowd: 3 },
+    ratings: { food: 6, nightlife: 9, transport: 7, rent: 9, safety: 7, green: 2, gym_sports: 2, vibe: 8, crowd: 3 },
     transit_minutes: { shibuya: 63, shinjuku: 57, tokyo: 63, ikebukuro: 67, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6400,7 +6400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   keiouinadatsutsumi: {
-    ratings: { food: 6, nightlife: 7, transport: 7, rent: 7, safety: 3, green: 6, gym_sports: 5, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 7, transport: 7, rent: 7, safety: 2, green: 6, gym_sports: 6, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 40, shinjuku: 35, tokyo: 51, ikebukuro: 47, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6408,7 +6408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keioutama-kawa': {
-    ratings: { food: 3, nightlife: 5, transport: 5, rent: 8, safety: 8, green: 1, gym_sports: 1, vibe: 4, crowd: 6 },
+    ratings: { food: 3, nightlife: 5, transport: 5, rent: 8, safety: 8, green: 2, gym_sports: 2, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 51, shinjuku: 34, tokyo: 49, ikebukuro: 45, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6424,7 +6424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-inage': {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 6, green: 8, gym_sports: 8, vibe: 6, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 4, green: 8, gym_sports: 8, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 68, shinjuku: 59, tokyo: 58, ikebukuro: 59, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6440,7 +6440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-nakayama': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 8, safety: 7, green: 8, gym_sports: 6, vibe: 7, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 8, safety: 7, green: 8, gym_sports: 7, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 47, shinjuku: 45, tokyo: 35, ikebukuro: 43, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6456,7 +6456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-ookubo': {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 8, gym_sports: 5, vibe: 4, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 8, gym_sports: 6, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 62, tokyo: 51, ikebukuro: 61, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6464,7 +6464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-oowada': {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 5, gym_sports: 3, vibe: 7, crowd: 7 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 5, gym_sports: 4, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 62, shinjuku: 61, tokyo: 61, ikebukuro: 60, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6472,7 +6472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-sake-kurikaesi-i': {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 84, shinjuku: 84, tokyo: 75, ikebukuro: 82, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6488,7 +6488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-tateishi': {
-    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 9, green: 7, gym_sports: 9, vibe: 5, crowd: 4 },
+    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 9, green: 8, gym_sports: 9, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 34, shinjuku: 49, tokyo: 37, ikebukuro: 44, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6496,7 +6496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'keisei-usui': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 72, shinjuku: 71, tokyo: 63, ikebukuro: 70, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6504,7 +6504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kemigawa: {
-    ratings: { food: 5, nightlife: 5, transport: 3, rent: 9, safety: 6, green: 5, gym_sports: 5, vibe: 6, crowd: 8 },
+    ratings: { food: 5, nightlife: 5, transport: 3, rent: 9, safety: 4, green: 5, gym_sports: 6, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 65, shinjuku: 65, tokyo: 54, ikebukuro: 65, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6512,7 +6512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kemigawahama: {
-    ratings: { food: 2, nightlife: 3, transport: 7, rent: 9, safety: 6, green: 1, gym_sports: 1, vibe: 5, crowd: 4 },
+    ratings: { food: 2, nightlife: 3, transport: 7, rent: 9, safety: 4, green: 2, gym_sports: 2, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 63, shinjuku: 64, tokyo: 48, ikebukuro: 65, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6520,7 +6520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kenchoumae: {
-    ratings: { food: 9, nightlife: 9, transport: 2, rent: 9, safety: 6, green: 8, gym_sports: 7, vibe: 7, crowd: 9 },
+    ratings: { food: 9, nightlife: 9, transport: 2, rent: 9, safety: 4, green: 8, gym_sports: 7, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 64, shinjuku: 65, tokyo: 65, ikebukuro: 66, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6528,7 +6528,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kenritsudai-gaku': {
-    ratings: { food: 5, nightlife: 6, transport: 4, rent: 8, safety: 3, green: 9, gym_sports: 3, vibe: 6, crowd: 7 },
+    ratings: { food: 5, nightlife: 6, transport: 4, rent: 8, safety: 3, green: 9, gym_sports: 4, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 71, shinjuku: 76, tokyo: 76, ikebukuro: 83, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6544,7 +6544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kimitsu: {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 6, green: 7, gym_sports: 6, vibe: 5, crowd: 6 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 6, green: 8, gym_sports: 7, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 66, shinjuku: 71, tokyo: 67, ikebukuro: 77, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6552,7 +6552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kinoshita: {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 74, shinjuku: 71, tokyo: 64, ikebukuro: 68, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6560,7 +6560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kinugasa: {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 5, vibe: 4, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 6, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 73, shinjuku: 78, tokyo: 72, ikebukuro: 85, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6568,7 +6568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kishine-kouen': {
-    ratings: { food: 4, nightlife: 1, transport: 4, rent: 8, safety: 3, green: 5, gym_sports: 9, vibe: 3, crowd: 7 },
+    ratings: { food: 4, nightlife: 2, transport: 4, rent: 8, safety: 2, green: 5, gym_sports: 9, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 41, shinjuku: 46, tokyo: 50, ikebukuro: 55, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6584,7 +6584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-hatsutomi': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 5, green: 8, gym_sports: 3, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 64, shinjuku: 61, tokyo: 52, ikebukuro: 58, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6592,7 +6592,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-kashiwa': {
-    ratings: { food: 4, nightlife: 4, transport: 7, rent: 9, safety: 7, green: 4, gym_sports: 3, vibe: 7, crowd: 3 },
+    ratings: { food: 4, nightlife: 4, transport: 7, rent: 9, safety: 7, green: 4, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 59, shinjuku: 65, tokyo: 58, ikebukuro: 59, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6600,7 +6600,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-kasukabe': {
-    ratings: { food: 2, nightlife: 1, transport: 4, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 62, shinjuku: 72, tokyo: 73, ikebukuro: 64, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6608,7 +6608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-kogane': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 6, green: 9, gym_sports: 7, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 5, green: 9, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 56, shinjuku: 53, tokyo: 46, ikebukuro: 47, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6616,7 +6616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-kounosu': {
-    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 83, shinjuku: 79, tokyo: 84, ikebukuro: 73, shinagawa: 90 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6624,7 +6624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-me-ke-saki': {
-    ratings: { food: 6, nightlife: 7, transport: 3, rent: 8, safety: 3, green: 5, gym_sports: 3, vibe: 6, crowd: 8 },
+    ratings: { food: 6, nightlife: 7, transport: 3, rent: 8, safety: 3, green: 5, gym_sports: 4, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 79, shinjuku: 77, tokyo: 81, ikebukuro: 89, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6632,7 +6632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kita-yono': {
-    ratings: { food: 8, nightlife: 7, transport: 6, rent: 7, safety: 5, green: 6, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 7, transport: 6, rent: 7, safety: 4, green: 6, gym_sports: 7, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 47, shinjuku: 41, tokyo: 53, ikebukuro: 34, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6640,7 +6640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kitado-ta': {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 4, vibe: 5, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 4, green: 4, gym_sports: 4, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 34, shinjuku: 28, tokyo: 39, ikebukuro: 30, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6672,7 +6672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitakamakura: {
-    ratings: { food: 5, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 5, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 64, shinjuku: 68, tokyo: 65, ikebukuro: 75, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6680,7 +6680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kitakami-o': {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 10, gym_sports: 4, vibe: 7, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 10, gym_sports: 4, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 63, shinjuku: 68, tokyo: 63, ikebukuro: 61, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6688,7 +6688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitakurihama: {
-    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 5, gym_sports: 5, vibe: 3, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 80, shinjuku: 85, tokyo: 79, ikebukuro: 92, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6696,7 +6696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitamatsudo: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 9, safety: 6, green: 3, gym_sports: 6, vibe: 3, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 9, safety: 5, green: 3, gym_sports: 6, vibe: 3, crowd: 3 },
     transit_minutes: { shibuya: 50, shinjuku: 46, tokyo: 39, ikebukuro: 41, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6704,7 +6704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitamoto: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 6, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 72, shinjuku: 67, tokyo: 72, ikebukuro: 62, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6712,7 +6712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kitasaka-ko': {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 5, green: 5, gym_sports: 6, vibe: 3, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 4, green: 5, gym_sports: 6, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 73, shinjuku: 68, tokyo: 76, ikebukuro: 59, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6728,7 +6728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kitashin-yokohama': {
-    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 2, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 2, green: 5, gym_sports: 7, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 37, shinjuku: 42, tokyo: 46, ikebukuro: 50, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6736,7 +6736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitaurawa: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 7, safety: 5, green: 5, gym_sports: 5, vibe: 5, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 7, safety: 4, green: 5, gym_sports: 5, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 49, shinjuku: 43, tokyo: 42, ikebukuro: 36, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6744,7 +6744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kitayamata: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 9, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 2, green: 6, gym_sports: 9, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 44, shinjuku: 43, tokyo: 49, ikebukuro: 50, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6760,7 +6760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kobayashi: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 78, shinjuku: 77, tokyo: 69, ikebukuro: 73, shinagawa: 76 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6768,7 +6768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kodama: {
-    ratings: { food: 3, nightlife: 4, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 4, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 129, shinjuku: 125, tokyo: 132, ikebukuro: 115, shinagawa: 136 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6776,7 +6776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kodenmachou: {
-    ratings: { food: 10, nightlife: 10, transport: 7, rent: 4, safety: 5, green: 7, gym_sports: 8, vibe: 9, crowd: 4 },
+    ratings: { food: 10, nightlife: 10, transport: 7, rent: 4, safety: 2, green: 8, gym_sports: 8, vibe: 9, crowd: 4 },
     transit_minutes: { shibuya: 26, shinjuku: 24, tokyo: 10, ikebukuro: 26, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6784,7 +6784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kodomono-kuni': {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 6, gym_sports: 9, vibe: 4, crowd: 7 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 2, green: 6, gym_sports: 9, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 46, shinjuku: 55, tokyo: 63, ikebukuro: 61, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6792,7 +6792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kogane-joushi': {
-    ratings: { food: 6, nightlife: 6, transport: 2, rent: 9, safety: 6, green: 6, gym_sports: 9, vibe: 5, crowd: 9 },
+    ratings: { food: 6, nightlife: 6, transport: 2, rent: 9, safety: 5, green: 6, gym_sports: 9, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 61, shinjuku: 57, tokyo: 51, ikebukuro: 51, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6800,7 +6800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koganechou: {
-    ratings: { food: 9, nightlife: 9, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 8, vibe: 9, crowd: 5 },
+    ratings: { food: 9, nightlife: 9, transport: 6, rent: 8, safety: 2, green: 7, gym_sports: 8, vibe: 9, crowd: 5 },
     transit_minutes: { shibuya: 51, shinjuku: 57, tokyo: 59, ikebukuro: 65, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6808,7 +6808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kohoku: {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 6, green: 5, gym_sports: 5, vibe: 5, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 6, green: 5, gym_sports: 6, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 68, shinjuku: 65, tokyo: 68, ikebukuro: 61, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6816,7 +6816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koigakubo: {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 7, safety: 8, green: 5, gym_sports: 5, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 7, safety: 8, green: 5, gym_sports: 6, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 45, shinjuku: 44, tokyo: 55, ikebukuro: 46, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6824,7 +6824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kojima-nitta': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 7, safety: 3, green: 4, gym_sports: 5, vibe: 2, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 7, safety: 2, green: 5, gym_sports: 5, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 49, shinjuku: 43, tokyo: 41, ikebukuro: 51, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6832,7 +6832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kokonoe: {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 120, shinjuku: 125, tokyo: 122, ikebukuro: 131, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -6840,7 +6840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kokorozashi-kyuu': {
-    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 1, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 62, shinjuku: 67, tokyo: 61, ikebukuro: 59, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6848,7 +6848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kokudou: {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 3, green: 6, gym_sports: 5, vibe: 5, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 2, green: 6, gym_sports: 5, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 43, shinjuku: 49, tokyo: 44, ikebukuro: 58, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6856,7 +6856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kokuga: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 114, shinjuku: 117, tokyo: 118, ikebukuro: 122, shinagawa: 111 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6864,7 +6864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kokuryou: {
-    ratings: { food: 4, nightlife: 6, transport: 7, rent: 8, safety: 9, green: 1, gym_sports: 1, vibe: 6, crowd: 4 },
+    ratings: { food: 4, nightlife: 6, transport: 7, rent: 8, safety: 9, green: 2, gym_sports: 2, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 40, shinjuku: 35, tokyo: 40, ikebukuro: 35, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6872,7 +6872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kokusai-tenjijou': {
-    ratings: { food: 7, nightlife: 4, transport: 7, rent: 5, safety: 7, green: 9, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 4, transport: 7, rent: 5, safety: 7, green: 9, gym_sports: 6, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 28, shinjuku: 33, tokyo: 21, ikebukuro: 40, shinagawa: 19 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6880,7 +6880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kokusai-tenjijou-seimon': {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 5, safety: 7, green: 1, gym_sports: 1, vibe: 7, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 5, safety: 7, green: 2, gym_sports: 2, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 29, shinjuku: 33, tokyo: 22, ikebukuro: 41, shinagawa: 19 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6896,7 +6896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'komazawa-daigaku': {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 8, green: 6, gym_sports: 9, vibe: 7, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 8, green: 7, gym_sports: 9, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 13, shinjuku: 25, tokyo: 34, ikebukuro: 36, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6904,7 +6904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   komiya: {
-    ratings: { food: 4, nightlife: 1, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 5, vibe: 1, crowd: 8 },
+    ratings: { food: 4, nightlife: 2, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 5, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 60, shinjuku: 59, tokyo: 60, ikebukuro: 62, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6912,7 +6912,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'komura-i': {
-    ratings: { food: 6, nightlife: 6, transport: 4, rent: 6, safety: 9, green: 8, gym_sports: 5, vibe: 7, crowd: 7 },
+    ratings: { food: 6, nightlife: 6, transport: 4, rent: 6, safety: 9, green: 8, gym_sports: 6, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 45, shinjuku: 36, tokyo: 29, ikebukuro: 40, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6920,7 +6920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   komuro: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 1, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 2, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 66, ikebukuro: 71, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6928,7 +6928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koremasa: {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 10, green: 4, gym_sports: 5, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 10, green: 4, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 46, shinjuku: 41, tokyo: 51, ikebukuro: 50, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -6936,7 +6936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koshigaya: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 53, shinjuku: 53, tokyo: 53, ikebukuro: 45, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -6944,7 +6944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'koshigaya-reikutaun': {
-    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 7, crowd: 3 },
+    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 53, shinjuku: 47, tokyo: 45, ikebukuro: 40, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -6968,7 +6968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kotesashi: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 7, green: 9, gym_sports: 7, vibe: 7, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 7, green: 9, gym_sports: 8, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 57, shinjuku: 53, tokyo: 64, ikebukuro: 46, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6976,7 +6976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kou-kawara': {
-    ratings: { food: 8, nightlife: 8, transport: 5, rent: 7, safety: 3, green: 8, gym_sports: 6, vibe: 7, crowd: 6 },
+    ratings: { food: 8, nightlife: 8, transport: 5, rent: 7, safety: 2, green: 8, gym_sports: 6, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 32, shinjuku: 41, tokyo: 33, ikebukuro: 38, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -6992,7 +6992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kouen: {
-    ratings: { food: 3, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 3, crowd: 10 },
+    ratings: { food: 3, nightlife: 4, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 3, crowd: 10 },
     transit_minutes: { shibuya: 74, shinjuku: 74, tokyo: 65, ikebukuro: 72, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7016,7 +7016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'koufuu-dai': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 4, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 79, shinjuku: 82, tokyo: 74, ikebukuro: 85, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7024,7 +7024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kouhoku: {
-    ratings: { food: 3, nightlife: 5, transport: 5, rent: 7, safety: 9, green: 1, gym_sports: 1, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 5, transport: 5, rent: 7, safety: 9, green: 2, gym_sports: 2, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 43, shinjuku: 35, tokyo: 33, ikebukuro: 25, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7032,7 +7032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koujiya: {
-    ratings: { food: 7, nightlife: 7, transport: 6, rent: 5, safety: 9, green: 5, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 6, rent: 5, safety: 9, green: 6, gym_sports: 8, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 43, shinjuku: 39, tokyo: 50, ikebukuro: 47, shinagawa: 28 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7040,7 +7040,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'koukuu-kouen': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 1, gym_sports: 1, vibe: 6, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 2, gym_sports: 2, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 53, shinjuku: 49, tokyo: 59, ikebukuro: 47, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7048,7 +7048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kounan-chuuou': {
-    ratings: { food: 7, nightlife: 7, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 5, vibe: 6, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 60, shinjuku: 66, tokyo: 68, ikebukuro: 63, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7056,7 +7056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kounandai: {
-    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 65, shinjuku: 61, tokyo: 63, ikebukuro: 68, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7072,7 +7072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kounosu: {
-    ratings: { food: 5, nightlife: 6, transport: 7, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 3 },
+    ratings: { food: 5, nightlife: 6, transport: 7, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 78, shinjuku: 73, tokyo: 78, ikebukuro: 67, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7080,7 +7080,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'koushin-tsuka': {
-    ratings: { food: 6, nightlife: 8, transport: 3, rent: 5, safety: 9, green: 1, gym_sports: 1, vibe: 7, crowd: 9 },
+    ratings: { food: 6, nightlife: 8, transport: 3, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 30, shinjuku: 22, tokyo: 25, ikebukuro: 12, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7088,7 +7088,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koushuukaidou: {
-    ratings: { food: 2, nightlife: 3, transport: 4, rent: 9, safety: 9, green: 1, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 4, rent: 9, safety: 9, green: 2, gym_sports: 1, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 59, shinjuku: 53, tokyo: 69, ikebukuro: 61, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7096,7 +7096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kouza-shibuya': {
-    ratings: { food: 5, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 7, crowd: 5 },
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 65, shinjuku: 60, tokyo: 64, ikebukuro: 72, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7112,7 +7112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   koyasu: {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 2, green: 6, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 42, shinjuku: 47, tokyo: 49, ikebukuro: 56, shinagawa: 32 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7120,7 +7120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kozukue: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 4, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 2, green: 4, gym_sports: 5, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 40, shinjuku: 45, tokyo: 49, ikebukuro: 53, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7128,7 +7128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kuga-hara': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 113, shinjuku: 116, tokyo: 109, ikebukuro: 120, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7136,7 +7136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kugayama: {
-    ratings: { food: 5, nightlife: 6, transport: 7, rent: 6, safety: 9, green: 7, gym_sports: 6, vibe: 6, crowd: 3 },
+    ratings: { food: 5, nightlife: 6, transport: 7, rent: 6, safety: 9, green: 7, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 25, shinjuku: 30, tokyo: 33, ikebukuro: 35, shinagawa: 43 },
     rent_avg: { '1k_1ldk': 175000, '2ldk': 209000, source: 'suumo', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'strong', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7168,7 +7168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kuji: {
-    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 3, green: 4, gym_sports: 1, vibe: 4, crowd: 4 },
+    ratings: { food: 5, nightlife: 4, transport: 6, rent: 7, safety: 2, green: 4, gym_sports: 2, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 35, shinjuku: 40, tokyo: 37, ikebukuro: 36, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7176,7 +7176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kujuu: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 9, safety: 6, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 9, safety: 6, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 97, shinjuku: 96, tokyo: 88, ikebukuro: 93, shinagawa: 94 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -7184,7 +7184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kumakawa: {
-    ratings: { food: 5, nightlife: 6, transport: 1, rent: 9, safety: 8, green: 6, gym_sports: 5, vibe: 4, crowd: 5 },
+    ratings: { food: 5, nightlife: 6, transport: 1, rent: 9, safety: 8, green: 6, gym_sports: 6, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 72, shinjuku: 71, tokyo: 71, ikebukuro: 72, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -7192,7 +7192,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kun-ke-hama': {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 169, shinjuku: 169, tokyo: 154, ikebukuro: 168, shinagawa: 165 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -7200,7 +7200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kuniyoshi: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 116, shinjuku: 120, tokyo: 112, ikebukuro: 123, shinagawa: 109 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7208,7 +7208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kunugi-yama': {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 6, green: 5, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 5, green: 5, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 60, tokyo: 51, ikebukuro: 56, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7216,7 +7216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kurahashi: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 144, shinjuku: 143, tokyo: 129, ikebukuro: 142, shinagawa: 139 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -7232,7 +7232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kurihira: {
-    ratings: { food: 3, nightlife: 4, transport: 6, rent: 7, safety: 3, green: 5, gym_sports: 5, vibe: 5, crowd: 5 },
+    ratings: { food: 3, nightlife: 4, transport: 6, rent: 7, safety: 2, green: 5, gym_sports: 5, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 49, shinjuku: 45, tokyo: 60, ikebukuro: 56, shinagawa: 54 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7240,7 +7240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kurokawa: {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 7, safety: 3, green: 4, gym_sports: 5, vibe: 2, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 7, safety: 2, green: 4, gym_sports: 6, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 50, shinjuku: 46, tokyo: 61, ikebukuro: 57, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7248,7 +7248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kururi: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 5, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 91, shinjuku: 95, tokyo: 89, ikebukuro: 100, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7264,7 +7264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'kyuu-ga-hara': {
-    ratings: { food: 6, nightlife: 5, transport: 5, rent: 5, safety: 9, green: 5, gym_sports: 7, vibe: 3, crowd: 6 },
+    ratings: { food: 6, nightlife: 5, transport: 5, rent: 5, safety: 9, green: 5, gym_sports: 8, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 29, shinjuku: 38, tokyo: 41, ikebukuro: 36, shinagawa: 25 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7272,7 +7272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   kyuumei: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 107, shinjuku: 108, tokyo: 93, ikebukuro: 108, shinagawa: 102 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7296,7 +7296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   maihama: {
-    ratings: { food: 7, nightlife: 4, transport: 7, rent: 6, safety: 7, green: 10, gym_sports: 7, vibe: 8, crowd: 2 },
+    ratings: { food: 7, nightlife: 4, transport: 7, rent: 6, safety: 7, green: 10, gym_sports: 8, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 36, shinjuku: 37, tokyo: 31, ikebukuro: 39, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7304,7 +7304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   maioka: {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 6, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 67, tokyo: 61, ikebukuro: 65, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7320,7 +7320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   makuda: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 81, shinjuku: 85, tokyo: 78, ikebukuro: 89, shinagawa: 74 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7328,7 +7328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'man-gan-tera': {
-    ratings: { food: 3, nightlife: 1, transport: 4, rent: 9, safety: 8, green: 5, gym_sports: 4, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 9, safety: 8, green: 6, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 57, shinjuku: 51, tokyo: 67, ikebukuro: 60, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7336,7 +7336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   manatsuru: {
-    ratings: { food: 4, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 5, crowd: 8 },
+    ratings: { food: 4, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 120, shinjuku: 124, tokyo: 123, ikebukuro: 130, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7344,7 +7344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   maruyama: {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 5, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 61, shinjuku: 64, tokyo: 59, ikebukuro: 57, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7352,7 +7352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mashio: {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 9, safety: 7, green: 7, gym_sports: 3, vibe: 7, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 9, safety: 7, green: 7, gym_sports: 4, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 61, shinjuku: 58, tokyo: 51, ikebukuro: 53, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7360,7 +7360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   matoba: {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 6, green: 7, gym_sports: 1, vibe: 5, crowd: 8 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 5, green: 7, gym_sports: 2, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 68, tokyo: 66, ikebukuro: 63, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7368,7 +7368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'matsu-ga-tani': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 9, safety: 8, green: 5, gym_sports: 5, vibe: 6, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 9, safety: 8, green: 6, gym_sports: 5, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 57, shinjuku: 52, tokyo: 68, ikebukuro: 62, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7376,7 +7376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'matsu-tobidai': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 6, green: 4, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 5, green: 4, gym_sports: 3, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 59, shinjuku: 56, tokyo: 48, ikebukuro: 52, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7392,7 +7392,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   matsuda: {
-    ratings: { food: 5, nightlife: 5, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 5, crowd: 8 },
+    ratings: { food: 5, nightlife: 5, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 105, shinjuku: 107, tokyo: 108, ikebukuro: 113, shinagawa: 100 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7400,7 +7400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'matsudo-nitta': {
-    ratings: { food: 7, nightlife: 6, transport: 4, rent: 9, safety: 6, green: 3, gym_sports: 9, vibe: 6, crowd: 8 },
+    ratings: { food: 7, nightlife: 6, transport: 4, rent: 9, safety: 5, green: 4, gym_sports: 9, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 56, shinjuku: 53, tokyo: 45, ikebukuro: 48, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7408,7 +7408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   matsuhisa: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 123, shinjuku: 119, tokyo: 126, ikebukuro: 109, shinagawa: 130 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -7416,7 +7416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   matsuo: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 3, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 109, shinjuku: 109, tokyo: 94, ikebukuro: 108, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7424,7 +7424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mei-ko': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 109, shinjuku: 105, tokyo: 111, ikebukuro: 94, shinagawa: 116 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7440,7 +7440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mejiro-yamashita': {
-    ratings: { food: 7, nightlife: 6, transport: 2, rent: 8, safety: 7, green: 7, gym_sports: 5, vibe: 3, crowd: 10 },
+    ratings: { food: 7, nightlife: 6, transport: 2, rent: 8, safety: 7, green: 7, gym_sports: 6, vibe: 3, crowd: 10 },
     transit_minutes: { shibuya: 70, shinjuku: 75, tokyo: 78, ikebukuro: 82, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7448,7 +7448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'meshi-kyuu': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 94, shinjuku: 98, tokyo: 91, ikebukuro: 102, shinagawa: 87 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7456,7 +7456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mibu-kuchi': {
-    ratings: { food: 1, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 1, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 122, shinjuku: 120, tokyo: 128, ikebukuro: 112, shinagawa: 129 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7464,7 +7464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'midori-dai': {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 6, green: 8, gym_sports: 7, vibe: 6, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 4, green: 8, gym_sports: 8, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 60, shinjuku: 61, tokyo: 60, ikebukuro: 61, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7488,7 +7488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mikado: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 6 },
     transit_minutes: { shibuya: 119, shinjuku: 122, tokyo: 114, ikebukuro: 125, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -7504,7 +7504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mimomi: {
-    ratings: { food: 3, nightlife: 5, transport: 6, rent: 8, safety: 6, green: 6, gym_sports: 3, vibe: 2, crowd: 5 },
+    ratings: { food: 3, nightlife: 5, transport: 6, rent: 8, safety: 5, green: 6, gym_sports: 3, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 65, shinjuku: 65, tokyo: 54, ikebukuro: 64, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7512,7 +7512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-asa-ke-tani': {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 6, safety: 8, green: 6, gym_sports: 8, vibe: 8, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 6, safety: 8, green: 7, gym_sports: 8, vibe: 8, crowd: 4 },
     transit_minutes: { shibuya: 25, shinjuku: 15, tokyo: 31, ikebukuro: 20, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7520,7 +7520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-banki-ga-hara': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 5, vibe: 4, crowd: 7 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 61, shinjuku: 66, tokyo: 71, ikebukuro: 65, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7528,7 +7528,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-furuya': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 3, gym_sports: 5, vibe: 4, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 5, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 62, shinjuku: 57, tokyo: 65, ikebukuro: 52, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7536,7 +7536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-hanyuu': {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 90, shinjuku: 91, tokyo: 95, ikebukuro: 85, shinagawa: 102 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7544,7 +7544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-hato-ke-tani': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 6, safety: 5, green: 5, gym_sports: 5, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 6, safety: 2, green: 5, gym_sports: 5, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 44, shinjuku: 50, tokyo: 39, ikebukuro: 38, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7552,7 +7552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-kashiwa': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 7, green: 6, gym_sports: 3, vibe: 7, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 7, green: 7, gym_sports: 4, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 61, shinjuku: 57, tokyo: 50, ikebukuro: 51, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7560,7 +7560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-kurihashi': {
-    ratings: { food: 1, nightlife: 1, transport: 4, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 1, nightlife: 2, transport: 4, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 88, shinjuku: 83, tokyo: 84, ikebukuro: 76, shinagawa: 93 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7576,7 +7576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-sake-kurikaesi-i': {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 83, shinjuku: 83, tokyo: 68, ikebukuro: 82, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -7584,7 +7584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-sakurai': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 62, shinjuku: 66, tokyo: 65, ikebukuro: 58, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7608,7 +7608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minami-yono': {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 7, safety: 4, green: 4, gym_sports: 5, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 43, shinjuku: 37, tokyo: 49, ikebukuro: 30, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7616,7 +7616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minamifunabashi: {
-    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 7, green: 1, gym_sports: 1, vibe: 7, crowd: 3 },
+    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 7, green: 2, gym_sports: 2, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 53, shinjuku: 53, tokyo: 37, ikebukuro: 53, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7632,7 +7632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minamiootsuka: {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 66, shinjuku: 62, tokyo: 61, ikebukuro: 58, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7656,7 +7656,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minamiyuki-toku': {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 9, gym_sports: 6, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 9, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 38, shinjuku: 38, tokyo: 38, ikebukuro: 39, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7664,7 +7664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minano: {
-    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 119, shinjuku: 116, tokyo: 123, ikebukuro: 107, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7672,7 +7672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minatomachi: {
-    ratings: { food: 6, nightlife: 6, transport: 4, rent: 7, safety: 3, green: 6, gym_sports: 8, vibe: 7, crowd: 8 },
+    ratings: { food: 6, nightlife: 6, transport: 4, rent: 7, safety: 2, green: 6, gym_sports: 8, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 48, shinjuku: 43, tokyo: 42, ikebukuro: 50, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7680,7 +7680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   minatomirai: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 9, gym_sports: 4, vibe: 8, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 2, green: 9, gym_sports: 4, vibe: 8, crowd: 2 },
     transit_minutes: { shibuya: 47, shinjuku: 53, tokyo: 55, ikebukuro: 61, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7688,7 +7688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minori-dai': {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 6, green: 4, gym_sports: 9, vibe: 4, crowd: 7 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 9, safety: 5, green: 4, gym_sports: 9, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 57, shinjuku: 54, tokyo: 46, ikebukuro: 49, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7696,7 +7696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'minuma-dai-shinsui-kouen': {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 7, safety: 8, green: 6, gym_sports: 5, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 7, safety: 8, green: 7, gym_sports: 5, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 39, shinjuku: 33, tokyo: 45, ikebukuro: 34, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7712,7 +7712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   misakiguchi: {
-    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 4, crowd: 6 },
+    ratings: { food: 2, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 2, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 93, shinjuku: 98, tokyo: 92, ikebukuro: 105, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7720,7 +7720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   misato: {
-    ratings: { food: 6, nightlife: 7, transport: 6, rent: 7, safety: 5, green: 5, gym_sports: 8, vibe: 6, crowd: 4 },
+    ratings: { food: 6, nightlife: 7, transport: 6, rent: 7, safety: 4, green: 5, gym_sports: 8, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 53, shinjuku: 49, tokyo: 44, ikebukuro: 42, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7728,7 +7728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'misato-chuuou': {
-    ratings: { food: 4, nightlife: 4, transport: 7, rent: 7, safety: 5, green: 3, gym_sports: 3, vibe: 1, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 7, rent: 7, safety: 4, green: 4, gym_sports: 3, vibe: 2, crowd: 4 },
     transit_minutes: { shibuya: 49, shinjuku: 45, tokyo: 39, ikebukuro: 39, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7736,7 +7736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mitsuwa-dai': {
-    ratings: { food: 4, nightlife: 2, transport: 3, rent: 9, safety: 6, green: 6, gym_sports: 5, vibe: 7, crowd: 9 },
+    ratings: { food: 4, nightlife: 2, transport: 3, rent: 9, safety: 4, green: 6, gym_sports: 6, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 65, shinjuku: 65, tokyo: 66, ikebukuro: 65, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7744,7 +7744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   miurakaigan: {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 91, shinjuku: 96, tokyo: 90, ikebukuro: 103, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -7752,7 +7752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'miya-no-mae': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 6, vibe: 6, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 6, safety: 9, green: 9, gym_sports: 7, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 36, shinjuku: 29, tokyo: 26, ikebukuro: 20, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7760,7 +7760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'miya-no-saka': {
-    ratings: { food: 8, nightlife: 8, transport: 3, rent: 7, safety: 10, green: 5, gym_sports: 8, vibe: 8, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 3, rent: 7, safety: 10, green: 6, gym_sports: 8, vibe: 8, crowd: 8 },
     transit_minutes: { shibuya: 20, shinjuku: 24, tokyo: 42, ikebukuro: 41, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7776,7 +7776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'miya-no-taira': {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 9, safety: 10, green: 4, gym_sports: 1, vibe: 5, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 9, safety: 10, green: 4, gym_sports: 1, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 72, shinjuku: 71, tokyo: 80, ikebukuro: 71, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -7784,7 +7784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   miyahara: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 7, gym_sports: 6, vibe: 7, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 7, gym_sports: 7, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 63, shinjuku: 57, tokyo: 63, ikebukuro: 50, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7792,7 +7792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   miyamaedaira: {
-    ratings: { food: 5, nightlife: 6, transport: 7, rent: 7, safety: 3, green: 6, gym_sports: 8, vibe: 5, crowd: 3 },
+    ratings: { food: 5, nightlife: 6, transport: 7, rent: 7, safety: 2, green: 6, gym_sports: 8, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 35, shinjuku: 34, tokyo: 41, ikebukuro: 41, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7808,7 +7808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   miyazakidai: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 7, safety: 3, green: 5, gym_sports: 8, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 7, safety: 2, green: 5, gym_sports: 8, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 33, shinjuku: 33, tokyo: 40, ikebukuro: 40, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7816,7 +7816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mizue: {
-    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 3, green: 8, gym_sports: 7, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 6, transport: 7, rent: 7, safety: 2, green: 8, gym_sports: 8, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 38, shinjuku: 32, tokyo: 37, ikebukuro: 37, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7824,7 +7824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mizuho-dai': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 5, green: 8, gym_sports: 6, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 49, shinjuku: 44, tokyo: 52, ikebukuro: 33, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7840,7 +7840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mochida: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 3, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 99, shinjuku: 94, tokyo: 100, ikebukuro: 83, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7848,7 +7848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mogusa-sono': {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 9, safety: 9, green: 4, gym_sports: 3, vibe: 6, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 9, safety: 9, green: 4, gym_sports: 4, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 49, shinjuku: 44, tokyo: 60, ikebukuro: 53, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7864,7 +7864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   moro: {
-    ratings: { food: 4, nightlife: 5, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
+    ratings: { food: 4, nightlife: 5, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 83, shinjuku: 79, tokyo: 87, ikebukuro: 71, shinagawa: 90 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7880,7 +7880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'motomachi-chuukagai': {
-    ratings: { food: 9, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 10, gym_sports: 4, vibe: 7, crowd: 3 },
+    ratings: { food: 9, nightlife: 8, transport: 7, rent: 8, safety: 2, green: 10, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 49, shinjuku: 55, tokyo: 57, ikebukuro: 64, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7888,7 +7888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   motoyama: {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 9, safety: 6, green: 7, gym_sports: 5, vibe: 6, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 9, safety: 5, green: 7, gym_sports: 5, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 63, shinjuku: 60, tokyo: 52, ikebukuro: 56, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7904,7 +7904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   mukougaokayuuen: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 3, green: 4, gym_sports: 7, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 2, green: 4, gym_sports: 7, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 40, shinjuku: 38, tokyo: 41, ikebukuro: 38, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7912,7 +7912,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   murakami: {
-    ratings: { food: 4, nightlife: 1, transport: 4, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 6, crowd: 8 },
+    ratings: { food: 4, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 70, shinjuku: 63, tokyo: 63, ikebukuro: 67, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7920,7 +7920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-arashiyama': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 5, green: 3, gym_sports: 4, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 88, shinjuku: 84, tokyo: 91, ikebukuro: 74, shinagawa: 95 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7928,7 +7928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-fujisawa': {
-    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 5, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 62, shinjuku: 59, tokyo: 59, ikebukuro: 51, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7936,7 +7936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-hikita': {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 8, safety: 8, green: 10, gym_sports: 3, vibe: 5, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 8, green: 10, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 72, shinjuku: 71, tokyo: 80, ikebukuro: 72, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -7944,7 +7944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-masuto': {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 9, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 8, safety: 9, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 73, shinjuku: 73, tokyo: 82, ikebukuro: 74, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7960,7 +7960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-shiroishi': {
-    ratings: { food: 3, nightlife: 5, transport: 1, rent: 7, safety: 3, green: 3, gym_sports: 3, vibe: 1, crowd: 6 },
+    ratings: { food: 3, nightlife: 5, transport: 1, rent: 7, safety: 2, green: 3, gym_sports: 4, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 43, shinjuku: 49, tokyo: 43, ikebukuro: 57, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -7976,7 +7976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashi-takahagi': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 66, shinjuku: 63, tokyo: 71, ikebukuro: 60, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -7984,7 +7984,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashidai-wa': {
-    ratings: { food: 1, nightlife: 2, transport: 4, rent: 9, safety: 10, green: 3, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 9, safety: 10, green: 3, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 51, shinjuku: 49, tokyo: 60, ikebukuro: 49, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -7992,7 +7992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   musashiitsukaichi: {
-    ratings: { food: 3, nightlife: 1, transport: 4, rent: 8, safety: 10, green: 3, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 10, green: 3, gym_sports: 4, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 77, shinjuku: 76, tokyo: 85, ikebukuro: 77, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8000,7 +8000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   musashinakahara: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 3, green: 6, gym_sports: 9, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 2, green: 6, gym_sports: 9, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 33, shinjuku: 40, tokyo: 34, ikebukuro: 37, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8008,7 +8008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'musashino-dai': {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 6, gym_sports: 7, vibe: 4, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 6, gym_sports: 8, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 36, shinjuku: 31, tokyo: 47, ikebukuro: 41, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8016,7 +8016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   musashiseki: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 7, safety: 9, green: 8, gym_sports: 7, vibe: 6, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 7, safety: 9, green: 8, gym_sports: 8, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 41, shinjuku: 37, tokyo: 38, ikebukuro: 38, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8024,7 +8024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   musashishinjou: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 3, green: 8, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 2, green: 8, gym_sports: 8, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 33, shinjuku: 40, tokyo: 35, ikebukuro: 37, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8032,7 +8032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'mutsuai-nichidai-mae': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 7, green: 4, gym_sports: 3, vibe: 6, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 7, green: 4, gym_sports: 4, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 66, tokyo: 70, ikebukuro: 78, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8048,7 +8048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   myouden: {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 7, green: 8, gym_sports: 6, vibe: 6, crowd: 3 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 7, green: 8, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 42, shinjuku: 42, tokyo: 43, ikebukuro: 41, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8056,7 +8056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   myougaku: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 92, shinjuku: 88, tokyo: 96, ikebukuro: 79, shinagawa: 99 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -8064,7 +8064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   myourenji: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 33, shinjuku: 45, tokyo: 48, ikebukuro: 53, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8072,7 +8072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nagahara: {
-    ratings: { food: 7, nightlife: 6, transport: 5, rent: 5, safety: 9, green: 6, gym_sports: 7, vibe: 4, crowd: 6 },
+    ratings: { food: 7, nightlife: 6, transport: 5, rent: 5, safety: 9, green: 6, gym_sports: 8, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 22, shinjuku: 31, tokyo: 34, ikebukuro: 43, shinagawa: 19 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8080,7 +8080,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   naganuma: {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 5, vibe: 1, crowd: 8 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 60, shinjuku: 54, tokyo: 61, ikebukuro: 64, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8088,7 +8088,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nagareyama: {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 9, gym_sports: 7, vibe: 2, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 9, gym_sports: 7, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 62, shinjuku: 58, tokyo: 53, ikebukuro: 51, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8096,7 +8096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nagareyama-sentorarupaaku': {
-    ratings: { food: 2, nightlife: 1, transport: 4, rent: 8, safety: 6, green: 8, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 5, green: 8, gym_sports: 4, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 58, shinjuku: 53, tokyo: 48, ikebukuro: 47, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8104,7 +8104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nagata: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 93, shinjuku: 94, tokyo: 86, ikebukuro: 96, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8112,7 +8112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nagatoro: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 120, shinjuku: 116, tokyo: 124, ikebukuro: 107, shinagawa: 127 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8120,7 +8120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nai-yado': {
-    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 67, shinjuku: 62, tokyo: 66, ikebukuro: 65, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8136,7 +8136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'naka-no-machi': {
-    ratings: { food: 6, nightlife: 6, transport: 1, rent: 8, safety: 6, green: 8, gym_sports: 3, vibe: 2, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 1, rent: 8, safety: 6, green: 8, gym_sports: 4, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 166, shinjuku: 166, tokyo: 151, ikebukuro: 164, shinagawa: 161 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -8160,7 +8160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nakagawa: {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 7, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 2, green: 8, gym_sports: 8, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 34, shinjuku: 39, tokyo: 45, ikebukuro: 46, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8184,7 +8184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nakamachidai: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 4, gym_sports: 8, vibe: 5, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 2, green: 5, gym_sports: 8, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 36, shinjuku: 41, tokyo: 46, ikebukuro: 49, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8208,7 +8208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nakano-shima': {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 7, safety: 3, green: 4, gym_sports: 4, vibe: 5, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 7, safety: 2, green: 5, gym_sports: 4, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 42, shinjuku: 33, tokyo: 42, ikebukuro: 38, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8224,7 +8224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nakaura-wa': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 4, gym_sports: 3, vibe: 7, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 4, green: 4, gym_sports: 4, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 40, shinjuku: 34, tokyo: 46, ikebukuro: 27, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8232,7 +8232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nako-funagata': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 3, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 3, crowd: 10 },
     transit_minutes: { shibuya: 113, shinjuku: 118, tokyo: 115, ikebukuro: 125, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8240,7 +8240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   namamugi: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 4, gym_sports: 6, vibe: 2, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 2, green: 5, gym_sports: 7, vibe: 2, crowd: 4 },
     transit_minutes: { shibuya: 39, shinjuku: 45, tokyo: 46, ikebukuro: 53, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8248,7 +8248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'namekawa-airando': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 121, shinjuku: 125, tokyo: 119, ikebukuro: 130, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -8256,7 +8256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nami-kure': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 119, shinjuku: 115, tokyo: 123, ikebukuro: 106, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8272,7 +8272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'namiki-kita': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 5, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 69, shinjuku: 66, tokyo: 66, ikebukuro: 72, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8280,7 +8280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nanahikari-dai': {
-    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 3, gym_sports: 5, vibe: 6, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 3, gym_sports: 6, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 67, tokyo: 65, ikebukuro: 59, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8288,7 +8288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nanbu-shijou': {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 7, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 68, shinjuku: 74, tokyo: 65, ikebukuro: 71, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8296,7 +8296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   naniwa: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 123, shinjuku: 127, tokyo: 119, ikebukuro: 130, shinagawa: 116 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -8304,7 +8304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nankyou-hon': {
-    ratings: { food: 5, nightlife: 5, transport: 4, rent: 8, safety: 7, green: 4, gym_sports: 3, vibe: 6, crowd: 7 },
+    ratings: { food: 5, nightlife: 5, transport: 4, rent: 8, safety: 7, green: 4, gym_sports: 4, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 70, shinjuku: 66, tokyo: 65, ikebukuro: 67, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8312,7 +8312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nansan-hara': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 3, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 119, shinjuku: 124, tokyo: 120, ikebukuro: 130, shinagawa: 112 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8320,7 +8320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   narashino: {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 6, gym_sports: 3, vibe: 5, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 6, gym_sports: 4, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 68, shinjuku: 67, tokyo: 57, ikebukuro: 65, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8328,7 +8328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'narita-yukawa': {
-    ratings: { food: 3, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 3, gym_sports: 4, vibe: 7, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 4, gym_sports: 4, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 89, shinjuku: 88, tokyo: 80, ikebukuro: 85, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8344,7 +8344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nebukawa: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 2, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 114, shinjuku: 118, tokyo: 117, ikebukuro: 123, shinagawa: 108 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -8368,7 +8368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nichi-no-demachi': {
-    ratings: { food: 10, nightlife: 10, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 8, vibe: 9, crowd: 4 },
+    ratings: { food: 10, nightlife: 10, transport: 6, rent: 8, safety: 2, green: 7, gym_sports: 8, vibe: 9, crowd: 4 },
     transit_minutes: { shibuya: 50, shinjuku: 56, tokyo: 58, ikebukuro: 64, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8376,7 +8376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nihondai-touri': {
-    ratings: { food: 9, nightlife: 9, transport: 6, rent: 8, safety: 3, green: 10, gym_sports: 5, vibe: 7, crowd: 5 },
+    ratings: { food: 9, nightlife: 9, transport: 6, rent: 8, safety: 2, green: 10, gym_sports: 5, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 49, shinjuku: 55, tokyo: 56, ikebukuro: 63, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8384,7 +8384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'niitaka-shima': {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 6, vibe: 8, crowd: 8 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 2, green: 8, gym_sports: 7, vibe: 8, crowd: 8 },
     transit_minutes: { shibuya: 47, shinjuku: 52, tokyo: 55, ikebukuro: 61, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8400,7 +8400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   niiza: {
-    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 3, gym_sports: 4, vibe: 3, crowd: 3 },
+    ratings: { food: 4, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 3, crowd: 3 },
     transit_minutes: { shibuya: 43, shinjuku: 38, tokyo: 47, ikebukuro: 35, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8424,7 +8424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-chiba': {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 9, safety: 6, green: 7, gym_sports: 8, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 9, safety: 4, green: 7, gym_sports: 8, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 61, shinjuku: 56, tokyo: 61, ikebukuro: 62, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8432,7 +8432,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-choufu': {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 9, green: 4, gym_sports: 9, vibe: 7, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 9, green: 5, gym_sports: 9, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 33, shinjuku: 28, tokyo: 44, ikebukuro: 38, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8440,7 +8440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-hanyuu': {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 102, shinjuku: 97, tokyo: 101, ikebukuro: 85, shinagawa: 108 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8448,7 +8448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-kamakura': {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 3, vibe: 7, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 4, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 69, shinjuku: 73, tokyo: 76, ikebukuro: 80, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8472,7 +8472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-noborito': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 9, safety: 6, green: 7, gym_sports: 6, vibe: 6, crowd: 9 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 9, safety: 4, green: 7, gym_sports: 7, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 61, shinjuku: 62, tokyo: 61, ikebukuro: 62, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8480,7 +8480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-oohara': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 125, shinjuku: 129, tokyo: 121, ikebukuro: 132, shinagawa: 118 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8488,7 +8488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-oomiya': {
-    ratings: { food: 3, nightlife: 1, transport: 6, rent: 7, safety: 5, green: 7, gym_sports: 3, vibe: 1, crowd: 5 },
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 7, safety: 4, green: 7, gym_sports: 3, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 56, tokyo: 62, ikebukuro: 49, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8504,7 +8504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-ooya': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 77, shinjuku: 74, tokyo: 81, ikebukuro: 65, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8544,7 +8544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishi-ware-no': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 93, shinjuku: 90, tokyo: 99, ikebukuro: 82, shinagawa: 100 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8568,7 +8568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nishihata: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 110, shinjuku: 113, tokyo: 106, ikebukuro: 117, shinagawa: 102 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8576,7 +8576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishikawa-etsu': {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 60, shinjuku: 65, tokyo: 63, ikebukuro: 61, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8584,7 +8584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishikawa-kuchi': {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 5, green: 8, gym_sports: 7, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 7, safety: 2, green: 8, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 37, shinjuku: 42, tokyo: 28, ikebukuro: 31, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8616,7 +8616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nishishirai: {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 6, green: 8, gym_sports: 5, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 5, green: 8, gym_sports: 5, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 70, shinjuku: 68, tokyo: 59, ikebukuro: 64, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8624,7 +8624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nishitani: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 5, vibe: 3, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 2, green: 6, gym_sports: 6, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 48, shinjuku: 53, tokyo: 57, ikebukuro: 61, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8632,7 +8632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nishiura-wa': {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 5, green: 3, gym_sports: 3, vibe: 7, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 4, green: 3, gym_sports: 3, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 44, shinjuku: 39, tokyo: 45, ikebukuro: 44, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8640,7 +8640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nishiyokohama: {
-    ratings: { food: 8, nightlife: 8, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 9, vibe: 7, crowd: 6 },
+    ratings: { food: 8, nightlife: 8, transport: 5, rent: 8, safety: 2, green: 8, gym_sports: 9, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 49, shinjuku: 55, tokyo: 58, ikebukuro: 63, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8648,7 +8648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nisshin: {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 7, safety: 5, green: 8, gym_sports: 5, vibe: 3, crowd: 4 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 7, safety: 4, green: 8, gym_sports: 6, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 56, tokyo: 62, ikebukuro: 49, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8656,7 +8656,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nitta: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 6, green: 4, gym_sports: 3, vibe: 5, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 4, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 47, shinjuku: 48, tokyo: 46, ikebukuro: 40, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8664,7 +8664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nittano: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 118, shinjuku: 122, tokyo: 114, ikebukuro: 125, shinagawa: 111 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8672,7 +8672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nodashi: {
-    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 59, shinjuku: 63, tokyo: 60, ikebukuro: 55, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8680,7 +8680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   nogami: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 122, shinjuku: 118, tokyo: 126, ikebukuro: 109, shinagawa: 129 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8704,7 +8704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   noukendai: {
-    ratings: { food: 5, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 5, vibe: 4, crowd: 4 },
+    ratings: { food: 5, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 6, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 66, shinjuku: 62, tokyo: 63, ikebukuro: 69, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8712,7 +8712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   numabe: {
-    ratings: { food: 5, nightlife: 5, transport: 4, rent: 5, safety: 9, green: 5, gym_sports: 7, vibe: 1, crowd: 7 },
+    ratings: { food: 5, nightlife: 5, transport: 4, rent: 5, safety: 9, green: 5, gym_sports: 7, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 29, shinjuku: 44, tokyo: 42, ikebukuro: 42, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8720,7 +8720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   numabukuro: {
-    ratings: { food: 7, nightlife: 8, transport: 5, rent: 5, safety: 9, green: 7, gym_sports: 7, vibe: 7, crowd: 5 },
+    ratings: { food: 7, nightlife: 8, transport: 5, rent: 5, safety: 9, green: 7, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 26, shinjuku: 19, tokyo: 32, ikebukuro: 18, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8728,7 +8728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'nyuu-so': {
-    ratings: { food: 3, nightlife: 5, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 6, vibe: 5, crowd: 6 },
+    ratings: { food: 3, nightlife: 5, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 6, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 62, shinjuku: 58, tokyo: 68, ikebukuro: 56, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8744,7 +8744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'o-hanahata': {
-    ratings: { food: 6, nightlife: 6, transport: 3, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 7, crowd: 9 },
+    ratings: { food: 6, nightlife: 6, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 112, shinjuku: 109, tokyo: 118, ikebukuro: 101, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -8752,7 +8752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   obitsu: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 86, shinjuku: 90, tokyo: 83, ikebukuro: 94, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -8760,7 +8760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   obusuma: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 100, tokyo: 107, ikebukuro: 90, shinagawa: 111 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8768,7 +8768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ochiai: {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 5, safety: 9, green: 8, gym_sports: 7, vibe: 8, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 5, safety: 9, green: 8, gym_sports: 8, vibe: 8, crowd: 5 },
     transit_minutes: { shibuya: 21, shinjuku: 13, tokyo: 26, ikebukuro: 14, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8776,7 +8776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oda-sakae': {
-    ratings: { food: 6, nightlife: 6, transport: 1, rent: 7, safety: 3, green: 7, gym_sports: 7, vibe: 5, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 1, rent: 7, safety: 2, green: 7, gym_sports: 7, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 34, shinjuku: 41, tokyo: 40, ikebukuro: 49, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -8792,7 +8792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'odakyuu-sagamihara': {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 7, green: 5, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 7, green: 6, gym_sports: 6, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 59, shinjuku: 56, tokyo: 60, ikebukuro: 59, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8800,7 +8800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   odoriba: {
-    ratings: { food: 4, nightlife: 2, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 7, crowd: 5 },
+    ratings: { food: 4, nightlife: 2, transport: 5, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 64, shinjuku: 59, tokyo: 63, ikebukuro: 66, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8808,7 +8808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ogura-dai': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 4, vibe: 1, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 70, shinjuku: 71, tokyo: 62, ikebukuro: 71, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8816,7 +8816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   okabe: {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 1, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 117, shinjuku: 112, tokyo: 119, ikebukuro: 108, shinagawa: 124 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8824,7 +8824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   okegawa: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 6, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 66, shinjuku: 61, tokyo: 65, ikebukuro: 64, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8840,7 +8840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   okutama: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 9, green: 1, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 9, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 92, shinjuku: 90, tokyo: 99, ikebukuro: 90, shinagawa: 98 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8848,7 +8848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   omaeda: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 1, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 114, shinjuku: 110, tokyo: 117, ikebukuro: 100, shinagawa: 121 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8856,7 +8856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   omigawa: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 132, shinjuku: 131, tokyo: 123, ikebukuro: 129, shinagawa: 129 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -8880,7 +8880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   onda: {
-    ratings: { food: 3, nightlife: 1, transport: 2, rent: 8, safety: 3, green: 5, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 2, green: 6, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 46, shinjuku: 56, tokyo: 63, ikebukuro: 63, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8888,7 +8888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   onigori: {
-    ratings: { food: 8, nightlife: 8, transport: 3, rent: 8, safety: 7, green: 7, gym_sports: 6, vibe: 7, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 3, rent: 8, safety: 7, green: 7, gym_sports: 7, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 46, shinjuku: 44, tokyo: 35, ikebukuro: 42, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8896,7 +8896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   onjuku: {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 124, shinjuku: 128, tokyo: 121, ikebukuro: 132, shinagawa: 117 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8904,7 +8904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ontake: {
-    ratings: { food: 3, nightlife: 3, transport: 1, rent: 9, safety: 10, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 2, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 80, shinjuku: 79, tokyo: 87, ikebukuro: 79, shinagawa: 87 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -8920,7 +8920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooasou: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 107, shinjuku: 103, tokyo: 109, ikebukuro: 92, shinagawa: 114 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8936,7 +8936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooguchi: {
-    ratings: { food: 6, nightlife: 7, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 4, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 7, transport: 7, rent: 8, safety: 2, green: 8, gym_sports: 4, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 40, shinjuku: 46, tokyo: 48, ikebukuro: 54, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8944,7 +8944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oohiradai: {
-    ratings: { food: 1, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 3, crowd: 10 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 122, shinjuku: 120, tokyo: 126, ikebukuro: 131, shinagawa: 117 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -8960,7 +8960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooiso: {
-    ratings: { food: 4, nightlife: 1, transport: 5, rent: 8, safety: 3, green: 4, gym_sports: 4, vibe: 7, crowd: 6 },
+    ratings: { food: 4, nightlife: 2, transport: 5, rent: 8, safety: 3, green: 4, gym_sports: 4, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 84, shinjuku: 88, tokyo: 87, ikebukuro: 94, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -8968,7 +8968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ookawa: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 7, safety: 3, green: 3, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 7, safety: 2, green: 3, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 44, shinjuku: 50, tokyo: 44, ikebukuro: 58, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -8984,7 +8984,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ookurayama: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 2, green: 8, gym_sports: 5, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 29, shinjuku: 41, tokyo: 44, ikebukuro: 49, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -8992,7 +8992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oomachi: {
-    ratings: { food: 3, nightlife: 1, transport: 2, rent: 8, safety: 7, green: 5, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 7, green: 5, gym_sports: 2, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 61, shinjuku: 59, tokyo: 50, ikebukuro: 55, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9000,7 +9000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oomiya-kouen': {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 5, green: 6, gym_sports: 8, vibe: 5, crowd: 7 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 4, green: 6, gym_sports: 8, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 59, shinjuku: 53, tokyo: 58, ikebukuro: 46, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9008,7 +9008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oomori-dai': {
-    ratings: { food: 2, nightlife: 2, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 5, vibe: 1, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 5, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 74, shinjuku: 75, tokyo: 66, ikebukuro: 76, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9032,7 +9032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oonohara: {
-    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 114, shinjuku: 111, tokyo: 119, ikebukuro: 102, shinagawa: 121 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9040,7 +9040,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oonuki: {
-    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 71, shinjuku: 76, tokyo: 72, ikebukuro: 82, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9048,7 +9048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oosaki-hirokouji': {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 4, safety: 7, green: 9, gym_sports: 7, vibe: 7, crowd: 8 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 4, safety: 7, green: 9, gym_sports: 8, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 19, shinjuku: 26, tokyo: 26, ikebukuro: 37, shinagawa: 11 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9064,7 +9064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ootaki: {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 108, shinjuku: 112, tokyo: 104, ikebukuro: 115, shinagawa: 101 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9072,7 +9072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooto: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 3, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 4, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 115, shinjuku: 114, tokyo: 106, ikebukuro: 110, shinagawa: 113 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9096,7 +9096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oowada: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 4, green: 4, gym_sports: 6, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 60, shinjuku: 54, tokyo: 58, ikebukuro: 46, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9104,7 +9104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ooyama: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 6, safety: 6, green: 6, gym_sports: 9, vibe: 7, crowd: 3 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 6, safety: 5, green: 7, gym_sports: 9, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 32, shinjuku: 23, tokyo: 30, ikebukuro: 6, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9112,7 +9112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oppama: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 3, green: 10, gym_sports: 6, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 3, green: 10, gym_sports: 7, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 64, shinjuku: 69, tokyo: 70, ikebukuro: 76, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9120,7 +9120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   orihara: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 112, shinjuku: 108, tokyo: 116, ikebukuro: 99, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9128,7 +9128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ougi-oohashi': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 7, safety: 9, green: 8, gym_sports: 5, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 7, safety: 9, green: 8, gym_sports: 6, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 40, shinjuku: 33, tokyo: 30, ikebukuro: 23, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9136,7 +9136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ougimachi: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 7, safety: 3, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 7, safety: 2, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 43, shinjuku: 49, tokyo: 42, ikebukuro: 57, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9144,7 +9144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oumekaidou: {
-    ratings: { food: 6, nightlife: 5, transport: 4, rent: 9, safety: 10, green: 5, gym_sports: 5, vibe: 7, crowd: 8 },
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 9, safety: 10, green: 5, gym_sports: 6, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 45, shinjuku: 43, tokyo: 53, ikebukuro: 44, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9152,7 +9152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oya-hana': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 119, shinjuku: 115, tokyo: 123, ikebukuro: 106, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -9168,7 +9168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   oyamatsu: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 111, shinjuku: 115, tokyo: 107, ikebukuro: 118, shinagawa: 104 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -9176,7 +9176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'oyumi-no': {
-    ratings: { food: 4, nightlife: 3, transport: 3, rent: 9, safety: 6, green: 5, gym_sports: 7, vibe: 7, crowd: 8 },
+    ratings: { food: 4, nightlife: 3, transport: 3, rent: 9, safety: 4, green: 5, gym_sports: 7, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 78, shinjuku: 79, tokyo: 71, ikebukuro: 81, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9184,7 +9184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ozaku: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 9, safety: 10, green: 7, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 9, safety: 10, green: 8, gym_sports: 6, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 63, shinjuku: 62, tokyo: 71, ikebukuro: 62, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9200,7 +9200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'roka-kouen': {
-    ratings: { food: 8, nightlife: 8, transport: 5, rent: 7, safety: 9, green: 8, gym_sports: 5, vibe: 7, crowd: 6 },
+    ratings: { food: 8, nightlife: 8, transport: 5, rent: 7, safety: 9, green: 8, gym_sports: 6, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 28, shinjuku: 22, tokyo: 43, ikebukuro: 36, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9216,7 +9216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'roku-mi': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 9, safety: 6, green: 6, gym_sports: 7, vibe: 5, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 9, safety: 5, green: 6, gym_sports: 8, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 61, shinjuku: 58, tokyo: 49, ikebukuro: 54, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9224,7 +9224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'rokugou-dote': {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 5, safety: 10, green: 4, gym_sports: 6, vibe: 3, crowd: 6 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 5, safety: 10, green: 5, gym_sports: 7, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 40, shinjuku: 35, tokyo: 35, ikebukuro: 43, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9232,7 +9232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ryokuen-toshi': {
-    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 3, green: 5, gym_sports: 5, vibe: 6, crowd: 5 },
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 64, shinjuku: 69, tokyo: 74, ikebukuro: 67, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9240,7 +9240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ryuutsuu-sentaa': {
-    ratings: { food: 2, nightlife: 1, transport: 5, rent: 5, safety: 10, green: 5, gym_sports: 6, vibe: 3, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 5, safety: 10, green: 5, gym_sports: 7, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 31, shinjuku: 39, tokyo: 35, ikebukuro: 36, shinagawa: 20 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9256,7 +9256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sagami-kaneko': {
-    ratings: { food: 4, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 7, crowd: 9 },
+    ratings: { food: 4, nightlife: 2, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 2, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 107, tokyo: 108, ikebukuro: 113, shinagawa: 100 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9272,7 +9272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sagami-numata': {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 108, tokyo: 114, ikebukuro: 119, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9280,7 +9280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sagamihara: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 5, gym_sports: 4, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 6, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 61, shinjuku: 63, tokyo: 62, ikebukuro: 68, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9288,7 +9288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sagamiko: {
-    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 76, shinjuku: 70, tokyo: 79, ikebukuro: 79, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9312,7 +9312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   saginuma: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 3, green: 7, gym_sports: 7, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 2, green: 7, gym_sports: 7, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 38, shinjuku: 36, tokyo: 43, ikebukuro: 43, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9320,7 +9320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'saikai-kashima': {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 6, crowd: 6 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 169, shinjuku: 169, tokyo: 154, ikebukuro: 168, shinagawa: 165 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9344,7 +9344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sake-kurikaesi-i': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 6, green: 5, gym_sports: 1, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 6, green: 5, gym_sports: 2, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 85, shinjuku: 84, tokyo: 75, ikebukuro: 82, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9352,7 +9352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'saku-kusa-bu': {
-    ratings: { food: 5, nightlife: 5, transport: 3, rent: 9, safety: 6, green: 5, gym_sports: 8, vibe: 7, crowd: 8 },
+    ratings: { food: 5, nightlife: 5, transport: 3, rent: 9, safety: 4, green: 5, gym_sports: 8, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 63, tokyo: 63, ikebukuro: 63, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9384,7 +9384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sakuragi: {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 3, vibe: 7, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 4, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 68, shinjuku: 69, tokyo: 60, ikebukuro: 69, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9400,7 +9400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sakurazawa: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 5, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 5, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 115, shinjuku: 111, tokyo: 118, ikebukuro: 101, shinagawa: 122 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9408,7 +9408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   samezu: {
-    ratings: { food: 8, nightlife: 8, transport: 4, rent: 4, safety: 9, green: 5, gym_sports: 9, vibe: 6, crowd: 7 },
+    ratings: { food: 8, nightlife: 8, transport: 4, rent: 4, safety: 9, green: 6, gym_sports: 9, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 24, shinjuku: 32, tokyo: 29, ikebukuro: 43, shinagawa: 7 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9440,7 +9440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'san-tsu-sawa-shitamachi': {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 2, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 2, green: 7, gym_sports: 6, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 45, shinjuku: 50, tokyo: 53, ikebukuro: 58, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9448,7 +9448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'san-tsu-sawakami-machi': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 2, green: 6, gym_sports: 6, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 45, shinjuku: 51, tokyo: 54, ikebukuro: 59, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9456,7 +9456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sanguu-hashi': {
-    ratings: { food: 8, nightlife: 8, transport: 4, rent: 2, safety: 9, green: 6, gym_sports: 5, vibe: 4, crowd: 7 },
+    ratings: { food: 8, nightlife: 8, transport: 4, rent: 2, safety: 9, green: 6, gym_sports: 6, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 12, shinjuku: 4, tokyo: 23, ikebukuro: 21, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9464,7 +9464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sangyou-shinkou-sentaa': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 73, shinjuku: 69, tokyo: 69, ikebukuro: 75, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9472,7 +9472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sangyoudouro: {
-    ratings: { food: 6, nightlife: 5, transport: 4, rent: 7, safety: 3, green: 7, gym_sports: 6, vibe: 3, crowd: 7 },
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 7, safety: 2, green: 7, gym_sports: 6, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 49, shinjuku: 43, tokyo: 41, ikebukuro: 50, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9480,7 +9480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sanpoku: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 112, tokyo: 113, ikebukuro: 117, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9496,7 +9496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   saruta: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 147, shinjuku: 147, tokyo: 132, ikebukuro: 145, shinagawa: 143 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9504,7 +9504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sasagawa: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 139, shinjuku: 138, tokyo: 129, ikebukuro: 135, shinagawa: 135 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9512,7 +9512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   satomi: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 93, shinjuku: 96, tokyo: 89, ikebukuro: 100, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -9520,7 +9520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   satte: {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 81, shinjuku: 76, tokyo: 78, ikebukuro: 69, shinagawa: 86 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9536,7 +9536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sayama-ke-oka': {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 3, gym_sports: 1, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 7, green: 3, gym_sports: 2, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 60, shinjuku: 57, tokyo: 67, ikebukuro: 50, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -9544,7 +9544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sayamashi: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 66, shinjuku: 63, tokyo: 62, ikebukuro: 60, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9552,7 +9552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'seibi-ba': {
-    ratings: { food: 5, nightlife: 6, transport: 2, rent: 5, safety: 10, green: 5, gym_sports: 5, vibe: 4, crowd: 9 },
+    ratings: { food: 5, nightlife: 6, transport: 2, rent: 5, safety: 10, green: 5, gym_sports: 6, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 38, shinjuku: 34, tokyo: 43, ikebukuro: 41, shinagawa: 28 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9560,7 +9560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'seibu-chichibu': {
-    ratings: { food: 6, nightlife: 5, transport: 3, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 6, crowd: 8 },
+    ratings: { food: 6, nightlife: 5, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 112, shinjuku: 109, tokyo: 118, ikebukuro: 101, shinagawa: 119 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9568,7 +9568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'seibu-tachikawa': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 9, green: 6, gym_sports: 1, vibe: 3, crowd: 7 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 9, green: 6, gym_sports: 2, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 66, ikebukuro: 67, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9584,7 +9584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   seibuen: {
-    ratings: { food: 3, nightlife: 1, transport: 3, rent: 9, safety: 8, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 3, rent: 9, safety: 8, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 58, shinjuku: 55, tokyo: 66, ikebukuro: 55, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9592,7 +9592,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   seibushinjuku: {
-    ratings: { food: 10, nightlife: 10, transport: 7, rent: 4, safety: 1, green: 4, gym_sports: 6, vibe: 10, crowd: 1 },
+    ratings: { food: 10, nightlife: 10, transport: 7, rent: 4, safety: 1, green: 5, gym_sports: 6, vibe: 10, crowd: 1 },
     transit_minutes: { shibuya: 18, shinjuku: 8, tokyo: 22, ikebukuro: 17, shinagawa: 28 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9600,7 +9600,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   seifu: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 9, green: 5, gym_sports: 9, vibe: 1, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 9, green: 5, gym_sports: 9, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 45, shinjuku: 45, tokyo: 55, ikebukuro: 48, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9616,7 +9616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sen-da-ke-tani': {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 2, safety: 10, green: 6, gym_sports: 7, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 2, safety: 10, green: 6, gym_sports: 8, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 13, shinjuku: 4, tokyo: 20, ikebukuro: 20, shinagawa: 22 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9624,7 +9624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sen-shiro-dai': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 6, green: 7, gym_sports: 7, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 9, safety: 4, green: 8, gym_sports: 8, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 72, shinjuku: 73, tokyo: 64, ikebukuro: 73, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9632,7 +9632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sen-shiro-taihoku': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 6, green: 6, gym_sports: 5, vibe: 3, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 4, green: 6, gym_sports: 6, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 71, shinjuku: 72, tokyo: 63, ikebukuro: 72, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9640,7 +9640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sengen-dai': {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 5, gym_sports: 3, vibe: 5, crowd: 3 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 6, gym_sports: 4, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 62, shinjuku: 62, tokyo: 62, ikebukuro: 54, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9680,7 +9680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   setagaya: {
-    ratings: { food: 7, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 5, gym_sports: 7, vibe: 7, crowd: 7 },
+    ratings: { food: 7, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 5, gym_sports: 8, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 20, shinjuku: 24, tokyo: 41, ikebukuro: 41, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9696,7 +9696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shake: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 71, shinjuku: 69, tokyo: 74, ikebukuro: 81, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9712,7 +9712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shi-ga-o': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 6, gym_sports: 9, vibe: 4, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 8, safety: 2, green: 6, gym_sports: 9, vibe: 4, crowd: 3 },
     transit_minutes: { shibuya: 33, shinjuku: 43, tokyo: 50, ikebukuro: 50, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9720,7 +9720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shi-tsu-ki': {
-    ratings: { food: 5, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 7, gym_sports: 8, vibe: 2, crowd: 6 },
+    ratings: { food: 5, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 8, gym_sports: 8, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 44, shinjuku: 46, tokyo: 34, ikebukuro: 41, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9744,7 +9744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shibasaki: {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 8, green: 5, gym_sports: 6, vibe: 7, crowd: 6 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 8, safety: 8, green: 5, gym_sports: 7, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 38, shinjuku: 33, tokyo: 38, ikebukuro: 34, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9752,7 +9752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shibasaki-taiikukan': {
-    ratings: { food: 8, nightlife: 8, transport: 3, rent: 9, safety: 10, green: 6, gym_sports: 5, vibe: 7, crowd: 8 },
+    ratings: { food: 8, nightlife: 8, transport: 3, rent: 9, safety: 10, green: 6, gym_sports: 6, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 59, shinjuku: 53, tokyo: 69, ikebukuro: 61, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9760,7 +9760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shibaura-fu-atama': {
-    ratings: { food: 7, nightlife: 7, transport: 3, rent: 2, safety: 7, green: 4, gym_sports: 5, vibe: 3, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 3, rent: 2, safety: 7, green: 4, gym_sports: 6, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 20, shinjuku: 25, tokyo: 18, ikebukuro: 34, shinagawa: 12 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9768,7 +9768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shibayama-chiyoda': {
-    ratings: { food: 1, nightlife: 3, transport: 2, rent: 9, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 9, safety: 6, green: 2, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 108, shinjuku: 107, tokyo: 99, ikebukuro: 105, shinagawa: 104 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9784,7 +9784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shichiri: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 4, gym_sports: 3, vibe: 7, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 4, green: 4, gym_sports: 4, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 55, tokyo: 59, ikebukuro: 47, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9792,7 +9792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shichiri-ke-hama': {
-    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 5, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 76, shinjuku: 81, tokyo: 78, ikebukuro: 88, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9816,7 +9816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiishiba: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 150, shinjuku: 150, tokyo: 141, ikebukuro: 148, shinagawa: 146 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9832,7 +9832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiki: {
-    ratings: { food: 5, nightlife: 7, transport: 7, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 5, nightlife: 7, transport: 7, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 44, shinjuku: 39, tokyo: 47, ikebukuro: 28, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -9848,7 +9848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shimogoori: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 6 },
     transit_minutes: { shibuya: 82, shinjuku: 86, tokyo: 79, ikebukuro: 90, shinagawa: 75 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -9856,7 +9856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shimoigusa: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 6, safety: 9, green: 7, gym_sports: 7, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 6, safety: 9, green: 7, gym_sports: 8, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 32, shinjuku: 26, tokyo: 41, ikebukuro: 26, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9864,7 +9864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shimomaruko: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 5, safety: 8, green: 6, gym_sports: 6, vibe: 3, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 5, safety: 8, green: 7, gym_sports: 6, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 32, shinjuku: 46, tokyo: 43, ikebukuro: 44, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9872,7 +9872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shimomizo: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 70, shinjuku: 67, tokyo: 65, ikebukuro: 69, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9888,7 +9888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shimousa-kanzaki': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 108, tokyo: 100, ikebukuro: 105, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9896,7 +9896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shimousa-matsuzaki': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 9, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 9, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 88, shinjuku: 87, tokyo: 78, ikebukuro: 84, shinagawa: 85 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9912,7 +9912,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shimousa-tachibana': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 144, shinjuku: 143, tokyo: 135, ikebukuro: 141, shinagawa: 140 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9920,7 +9920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shimousa-toyosato': {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 3, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 146, shinjuku: 145, tokyo: 137, ikebukuro: 143, shinagawa: 142 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -9960,7 +9960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-chiba': {
-    ratings: { food: 8, nightlife: 9, transport: 3, rent: 9, safety: 6, green: 7, gym_sports: 6, vibe: 7, crowd: 9 },
+    ratings: { food: 8, nightlife: 9, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 62, shinjuku: 63, tokyo: 63, ikebukuro: 63, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -9968,7 +9968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-hane': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 2, green: 4, gym_sports: 6, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 36, shinjuku: 41, tokyo: 45, ikebukuro: 49, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9976,7 +9976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-kashi': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 6, green: 3, gym_sports: 4, vibe: 6, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 5, green: 3, gym_sports: 4, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 57, tokyo: 66, ikebukuro: 47, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -9984,7 +9984,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-kashiwa': {
-    ratings: { food: 3, nightlife: 4, transport: 6, rent: 9, safety: 7, green: 6, gym_sports: 1, vibe: 7, crowd: 5 },
+    ratings: { food: 3, nightlife: 4, transport: 6, rent: 9, safety: 7, green: 6, gym_sports: 2, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 58, tokyo: 51, ikebukuro: 52, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -9992,7 +9992,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-kodaira': {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 9, safety: 10, green: 5, gym_sports: 6, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 9, safety: 10, green: 6, gym_sports: 6, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 46, shinjuku: 44, tokyo: 54, ikebukuro: 44, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10000,7 +10000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-koganei': {
-    ratings: { food: 6, nightlife: 6, transport: 3, rent: 8, safety: 9, green: 7, gym_sports: 5, vibe: 2, crowd: 9 },
+    ratings: { food: 6, nightlife: 6, transport: 3, rent: 8, safety: 9, green: 7, gym_sports: 6, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 41, shinjuku: 34, tokyo: 44, ikebukuro: 42, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10016,7 +10016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-mobara': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 4, gym_sports: 1, vibe: 4, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 5, gym_sports: 2, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 94, shinjuku: 97, tokyo: 88, ikebukuro: 99, shinagawa: 88 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10024,7 +10024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-sayama': {
-    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 6, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 5, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 62, tokyo: 61, ikebukuro: 59, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10032,7 +10032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-seibi-ba': {
-    ratings: { food: 5, nightlife: 3, transport: 3, rent: 5, safety: 9, green: 2, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 5, nightlife: 3, transport: 3, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 33, shinjuku: 38, tokyo: 34, ikebukuro: 45, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10048,7 +10048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-shibaura': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 2, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 45, shinjuku: 51, tokyo: 45, ikebukuro: 59, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10056,7 +10056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-shiraoka': {
-    ratings: { food: 1, nightlife: 2, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 4, crowd: 6 },
+    ratings: { food: 1, nightlife: 2, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 69, shinjuku: 64, tokyo: 67, ikebukuro: 67, shinagawa: 75 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10072,7 +10072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shin-toyosu': {
-    ratings: { food: 7, nightlife: 6, transport: 3, rent: 5, safety: 7, green: 7, gym_sports: 5, vibe: 7, crowd: 8 },
+    ratings: { food: 7, nightlife: 6, transport: 3, rent: 5, safety: 7, green: 7, gym_sports: 6, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 27, shinjuku: 30, tokyo: 18, ikebukuro: 36, shinagawa: 19 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10104,7 +10104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shindai-tsu': {
-    ratings: { food: 4, nightlife: 6, transport: 4, rent: 8, safety: 3, green: 5, gym_sports: 5, vibe: 7, crowd: 8 },
+    ratings: { food: 4, nightlife: 6, transport: 4, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 79, shinjuku: 84, tokyo: 78, ikebukuro: 91, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10112,7 +10112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shingou: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 3, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 4, crowd: 10 },
     transit_minutes: { shibuya: 101, shinjuku: 96, tokyo: 101, ikebukuro: 84, shinagawa: 108 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10128,7 +10128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinkemi-kawa': {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 6, green: 5, gym_sports: 5, vibe: 6, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 4, green: 5, gym_sports: 5, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 66, shinjuku: 60, tokyo: 55, ikebukuro: 66, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10136,7 +10136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinko-kawa': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 101, shinjuku: 96, tokyo: 98, ikebukuro: 89, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10144,7 +10144,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinmatsuda: {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 8, safety: 3, green: 3, gym_sports: 2, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 98, shinjuku: 95, tokyo: 108, ikebukuro: 107, shinagawa: 100 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10152,7 +10152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinnarashino: {
-    ratings: { food: 3, nightlife: 3, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 5, vibe: 4, crowd: 5 },
+    ratings: { food: 3, nightlife: 3, transport: 6, rent: 8, safety: 5, green: 4, gym_sports: 6, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 56, shinjuku: 56, tokyo: 40, ikebukuro: 56, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10160,7 +10160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinonome: {
-    ratings: { food: 4, nightlife: 3, transport: 5, rent: 5, safety: 9, green: 4, gym_sports: 6, vibe: 6, crowd: 6 },
+    ratings: { food: 4, nightlife: 3, transport: 5, rent: 5, safety: 9, green: 4, gym_sports: 7, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 31, shinjuku: 34, tokyo: 21, ikebukuro: 40, shinagawa: 22 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10176,7 +10176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinrinkouen: {
-    ratings: { food: 2, nightlife: 1, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 84, shinjuku: 80, tokyo: 86, ikebukuro: 69, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10184,7 +10184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinsen-hashi': {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 7, gym_sports: 5, vibe: 4, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 7, green: 7, gym_sports: 6, vibe: 4, crowd: 6 },
     transit_minutes: { shibuya: 52, shinjuku: 51, tokyo: 41, ikebukuro: 49, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10200,7 +10200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shintsudanuma: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 6, green: 5, gym_sports: 3, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 5, green: 6, gym_sports: 3, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 64, shinjuku: 64, tokyo: 53, ikebukuro: 63, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10216,7 +10216,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shinzou-sato': {
-    ratings: { food: 4, nightlife: 4, transport: 7, rent: 7, safety: 5, green: 3, gym_sports: 5, vibe: 5, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 7, rent: 7, safety: 4, green: 3, gym_sports: 5, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 54, shinjuku: 49, tokyo: 45, ikebukuro: 42, shinagawa: 56 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10224,7 +10224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shinzushi: {
-    ratings: { food: 4, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 4, crowd: 5 },
+    ratings: { food: 4, nightlife: 6, transport: 6, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 75, shinjuku: 80, tokyo: 81, ikebukuro: 87, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10232,7 +10232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shioiri: {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 3, green: 9, gym_sports: 5, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 3, green: 9, gym_sports: 6, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 69, shinjuku: 74, tokyo: 74, ikebukuro: 81, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10240,7 +10240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiomi: {
-    ratings: { food: 3, nightlife: 4, transport: 6, rent: 5, safety: 9, green: 1, gym_sports: 1, vibe: 3, crowd: 4 },
+    ratings: { food: 3, nightlife: 4, transport: 6, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 33, shinjuku: 35, tokyo: 14, ikebukuro: 38, shinagawa: 26 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10248,7 +10248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shirai: {
-    ratings: { food: 2, nightlife: 3, transport: 4, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 4, rent: 8, safety: 5, green: 2, gym_sports: 2, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 74, shinjuku: 72, tokyo: 62, ikebukuro: 68, shinagawa: 71 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10256,7 +10256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiraitodai: {
-    ratings: { food: 3, nightlife: 5, transport: 4, rent: 8, safety: 9, green: 1, gym_sports: 1, vibe: 4, crowd: 8 },
+    ratings: { food: 3, nightlife: 5, transport: 4, rent: 8, safety: 9, green: 2, gym_sports: 2, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 43, shinjuku: 37, tokyo: 47, ikebukuro: 47, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10264,7 +10264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiraoka: {
-    ratings: { food: 3, nightlife: 4, transport: 6, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 2, crowd: 5 },
+    ratings: { food: 3, nightlife: 4, transport: 6, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 61, tokyo: 64, ikebukuro: 63, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10272,7 +10272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiroku: {
-    ratings: { food: 1, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 120, shinjuku: 118, tokyo: 126, ikebukuro: 110, shinagawa: 127 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10280,7 +10280,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiromaru: {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 10, green: 1, gym_sports: 1, vibe: 3, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 10, green: 2, gym_sports: 1, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 89, shinjuku: 88, tokyo: 97, ikebukuro: 88, shinagawa: 96 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10288,7 +10288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shiromi-ke-oka': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 109, shinjuku: 112, tokyo: 105, ikebukuro: 116, shinagawa: 102 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10296,7 +10296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shirota-hashi': {
-    ratings: { food: 5, nightlife: 8, transport: 5, rent: 7, safety: 5, green: 1, gym_sports: 1, vibe: 3, crowd: 5 },
+    ratings: { food: 5, nightlife: 8, transport: 5, rent: 7, safety: 2, green: 2, gym_sports: 2, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 17, shinjuku: 12, tokyo: 31, ikebukuro: 27, shinagawa: 28 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10304,7 +10304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shita-iida': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 5, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 67, shinjuku: 62, tokyo: 66, ikebukuro: 69, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10312,7 +10312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shita-jinmei': {
-    ratings: { food: 6, nightlife: 8, transport: 4, rent: 4, safety: 8, green: 1, gym_sports: 1, vibe: 6, crowd: 7 },
+    ratings: { food: 6, nightlife: 8, transport: 4, rent: 4, safety: 8, green: 2, gym_sports: 2, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 22, shinjuku: 36, tokyo: 29, ikebukuro: 47, shinagawa: 13 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10320,7 +10320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shita-nagatani': {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 1, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 61, shinjuku: 67, tokyo: 60, ikebukuro: 64, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10328,7 +10328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shita-soga': {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 107, tokyo: 107, ikebukuro: 113, shinagawa: 99 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10344,7 +10344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shiyakushomae: {
-    ratings: { food: 6, nightlife: 8, transport: 3, rent: 9, safety: 6, green: 1, gym_sports: 1, vibe: 7, crowd: 8 },
+    ratings: { food: 6, nightlife: 8, transport: 3, rent: 9, safety: 4, green: 2, gym_sports: 2, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 63, tokyo: 63, ikebukuro: 64, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10352,7 +10352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shizu: {
-    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 66, tokyo: 67, ikebukuro: 65, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10360,7 +10360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shouin-jinja-mae': {
-    ratings: { food: 4, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 1, gym_sports: 1, vibe: 8, crowd: 7 },
+    ratings: { food: 4, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 2, gym_sports: 2, vibe: 8, crowd: 7 },
     transit_minutes: { shibuya: 18, shinjuku: 23, tokyo: 40, ikebukuro: 40, shinagawa: 32 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10368,7 +10368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shoumaru: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 96, shinjuku: 94, tokyo: 102, ikebukuro: 86, shinagawa: 103 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10376,7 +10376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shounan: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 59, shinjuku: 63, tokyo: 67, ikebukuro: 56, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10400,7 +10400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shounan-machiya': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 3, vibe: 7, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 4, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 65, shinjuku: 69, tokyo: 72, ikebukuro: 76, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10408,7 +10408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shouwa: {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 7, safety: 3, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 7, safety: 2, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 42, shinjuku: 48, tokyo: 41, ikebukuro: 56, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10416,7 +10416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'shouwa-shima': {
-    ratings: { food: 1, nightlife: 3, transport: 4, rent: 5, safety: 10, green: 1, gym_sports: 1, vibe: 1, crowd: 8 },
+    ratings: { food: 1, nightlife: 3, transport: 4, rent: 5, safety: 10, green: 2, gym_sports: 1, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 34, shinjuku: 42, tokyo: 38, ikebukuro: 38, shinagawa: 23 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10424,7 +10424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   shukugawara: {
-    ratings: { food: 3, nightlife: 5, transport: 5, rent: 7, safety: 3, green: 1, gym_sports: 1, vibe: 3, crowd: 6 },
+    ratings: { food: 3, nightlife: 5, transport: 5, rent: 7, safety: 2, green: 2, gym_sports: 2, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 37, shinjuku: 42, tokyo: 39, ikebukuro: 37, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10432,7 +10432,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sode-ke-ura': {
-    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 6, green: 3, gym_sports: 2, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 67, shinjuku: 61, tokyo: 64, ikebukuro: 66, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10440,7 +10440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'soshio-ryuutsuu-sentaa': {
-    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 3, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 100, shinjuku: 95, tokyo: 101, ikebukuro: 84, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10448,7 +10448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sou-moto': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 113, shinjuku: 117, tokyo: 110, ikebukuro: 121, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10456,7 +10456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'soubudai-mae': {
-    ratings: { food: 3, nightlife: 5, transport: 7, rent: 5, safety: 3, green: 1, gym_sports: 1, vibe: 1, crowd: 3 },
+    ratings: { food: 3, nightlife: 5, transport: 7, rent: 5, safety: 3, green: 2, gym_sports: 2, vibe: 1, crowd: 3 },
     transit_minutes: { shibuya: 62, shinjuku: 60, tokyo: 63, ikebukuro: 62, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10464,7 +10464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'soubudai-shita': {
-    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 7, green: 1, gym_sports: 1, vibe: 1, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 7, green: 2, gym_sports: 2, vibe: 1, crowd: 6 },
     transit_minutes: { shibuya: 72, shinjuku: 60, tokyo: 66, ikebukuro: 71, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'moderate', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10472,7 +10472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sougo-sandou': {
-    ratings: { food: 1, nightlife: 1, transport: 3, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 86, shinjuku: 85, tokyo: 77, ikebukuro: 83, shinagawa: 82 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10480,7 +10480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   souka: {
-    ratings: { food: 5, nightlife: 7, transport: 7, rent: 7, safety: 6, green: 1, gym_sports: 1, vibe: 7, crowd: 2 },
+    ratings: { food: 5, nightlife: 7, transport: 7, rent: 7, safety: 5, green: 2, gym_sports: 2, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 43, shinjuku: 44, tokyo: 42, ikebukuro: 48, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10488,7 +10488,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'souun-yama': {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 126, shinjuku: 129, tokyo: 135, ikebukuro: 134, shinagawa: 127 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10504,7 +10504,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   sugita: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 5, vibe: 7, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 6, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 62, shinjuku: 68, tokyo: 60, ikebukuro: 65, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10512,7 +10512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'sugito-kouyadai': {
-    ratings: { food: 2, nightlife: 3, transport: 4, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 4, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 78, shinjuku: 72, tokyo: 74, ikebukuro: 66, shinagawa: 83 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10520,7 +10520,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   suigou: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 130, shinjuku: 128, tokyo: 120, ikebukuro: 125, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -10528,7 +10528,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   suitenguumae: {
-    ratings: { food: 9, nightlife: 9, transport: 7, rent: 4, safety: 8, green: 9, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 9, nightlife: 9, transport: 7, rent: 4, safety: 8, green: 9, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 21, shinjuku: 26, tokyo: 11, ikebukuro: 28, shinagawa: 25 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10544,7 +10544,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   supootsusentaa: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 9, safety: 6, green: 1, gym_sports: 1, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 9, safety: 4, green: 2, gym_sports: 2, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 63, tokyo: 63, ikebukuro: 63, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10552,7 +10552,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   suzukichou: {
-    ratings: { food: 3, nightlife: 5, transport: 4, rent: 7, safety: 3, green: 1, gym_sports: 1, vibe: 6, crowd: 7 },
+    ratings: { food: 3, nightlife: 5, transport: 4, rent: 7, safety: 2, green: 2, gym_sports: 2, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 48, shinjuku: 43, tokyo: 42, ikebukuro: 50, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10560,7 +10560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ta-na': {
-    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 4, crowd: 7 },
+    ratings: { food: 3, nightlife: 4, transport: 4, rent: 8, safety: 2, green: 2, gym_sports: 2, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 40, shinjuku: 50, tokyo: 57, ikebukuro: 57, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10568,7 +10568,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ta-umi': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 116, shinjuku: 121, tokyo: 116, ikebukuro: 126, shinagawa: 109 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10576,7 +10576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tachiaigawa: {
-    ratings: { food: 7, nightlife: 7, transport: 5, rent: 4, safety: 8, green: 6, gym_sports: 7, vibe: 3, crowd: 6 },
+    ratings: { food: 7, nightlife: 7, transport: 5, rent: 4, safety: 8, green: 6, gym_sports: 8, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 26, shinjuku: 34, tokyo: 31, ikebukuro: 45, shinagawa: 9 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10584,7 +10584,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tachiba: {
-    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 3, green: 6, gym_sports: 7, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 64, shinjuku: 59, tokyo: 63, ikebukuro: 66, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10592,7 +10592,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tachihi: {
-    ratings: { food: 5, nightlife: 4, transport: 5, rent: 9, safety: 6, green: 3, gym_sports: 3, vibe: 7, crowd: 6 },
+    ratings: { food: 5, nightlife: 4, transport: 5, rent: 9, safety: 5, green: 3, gym_sports: 3, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 59, shinjuku: 52, tokyo: 68, ikebukuro: 59, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10608,7 +10608,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tachikawa-minami': {
-    ratings: { food: 7, nightlife: 9, transport: 7, rent: 9, safety: 1, green: 1, gym_sports: 1, vibe: 8, crowd: 4 },
+    ratings: { food: 7, nightlife: 9, transport: 7, rent: 9, safety: 1, green: 2, gym_sports: 2, vibe: 8, crowd: 4 },
     transit_minutes: { shibuya: 59, shinjuku: 52, tokyo: 69, ikebukuro: 60, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10616,7 +10616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'taisa-kura': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 81, shinjuku: 81, tokyo: 72, ikebukuro: 79, shinagawa: 77 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10624,7 +10624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   taitou: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 114, shinjuku: 117, tokyo: 109, ikebukuro: 120, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10632,7 +10632,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'taiyuu-yama': {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 5, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 111, shinjuku: 108, tokyo: 114, ikebukuro: 119, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10648,7 +10648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'taka-taki': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 91, shinjuku: 95, tokyo: 88, ikebukuro: 99, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10656,7 +10656,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takada: {
-    ratings: { food: 4, nightlife: 3, transport: 5, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 7, crowd: 6 },
+    ratings: { food: 4, nightlife: 3, transport: 5, rent: 8, safety: 2, green: 7, gym_sports: 4, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 43, shinjuku: 42, tokyo: 47, ikebukuro: 50, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10664,7 +10664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takamatsu: {
-    ratings: { food: 6, nightlife: 5, transport: 4, rent: 9, safety: 3, green: 3, gym_sports: 1, vibe: 7, crowd: 8 },
+    ratings: { food: 6, nightlife: 5, transport: 4, rent: 9, safety: 2, green: 3, gym_sports: 2, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 59, shinjuku: 52, tokyo: 69, ikebukuro: 60, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10672,7 +10672,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'takanawa-dai': {
-    ratings: { food: 6, nightlife: 8, transport: 5, rent: 2, safety: 8, green: 1, gym_sports: 1, vibe: 7, crowd: 6 },
+    ratings: { food: 6, nightlife: 8, transport: 5, rent: 2, safety: 8, green: 2, gym_sports: 2, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 17, shinjuku: 24, tokyo: 23, ikebukuro: 35, shinagawa: 8 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10680,7 +10680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'takane-kido': {
-    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 7, green: 6, gym_sports: 3, vibe: 7, crowd: 8 },
+    ratings: { food: 7, nightlife: 7, transport: 4, rent: 8, safety: 7, green: 6, gym_sports: 4, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 67, shinjuku: 66, tokyo: 56, ikebukuro: 64, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10688,7 +10688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'takane-koudan': {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 7, green: 1, gym_sports: 1, vibe: 7, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 7, green: 2, gym_sports: 2, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 66, shinjuku: 65, tokyo: 55, ikebukuro: 63, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10704,7 +10704,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takaosanguchi: {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 9, safety: 5, green: 3, gym_sports: 1, vibe: 6, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 9, safety: 2, green: 3, gym_sports: 2, vibe: 6, crowd: 7 },
     transit_minutes: { shibuya: 65, shinjuku: 65, tokyo: 74, ikebukuro: 68, shinagawa: 70 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10712,7 +10712,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takasaka: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 5, green: 6, gym_sports: 5, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 4, green: 7, gym_sports: 5, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 77, shinjuku: 72, tokyo: 79, ikebukuro: 62, shinagawa: 84 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10720,7 +10720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'takashima-machi': {
-    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 8, crowd: 7 },
+    ratings: { food: 9, nightlife: 9, transport: 4, rent: 8, safety: 2, green: 8, gym_sports: 8, vibe: 8, crowd: 7 },
     transit_minutes: { shibuya: 47, shinjuku: 53, tokyo: 55, ikebukuro: 61, shinagawa: 44 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10744,7 +10744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takebashi: {
-    ratings: { food: 7, nightlife: 8, transport: 7, rent: 3, safety: 10, green: 1, gym_sports: 1, vibe: 10, crowd: 3 },
+    ratings: { food: 7, nightlife: 8, transport: 7, rent: 3, safety: 10, green: 2, gym_sports: 2, vibe: 10, crowd: 3 },
     transit_minutes: { shibuya: 22, shinjuku: 19, tokyo: 10, ikebukuro: 22, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10752,7 +10752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takekawa: {
-    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 1, vibe: 3, crowd: 9 },
+    ratings: { food: 2, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 111, shinjuku: 106, tokyo: 113, ikebukuro: 96, shinagawa: 118 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10760,7 +10760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takeoka: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 85, shinjuku: 90, tokyo: 87, ikebukuro: 96, shinagawa: 79 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10768,7 +10768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takesato: {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 3, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 4, green: 4, gym_sports: 3, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 64, shinjuku: 64, tokyo: 65, ikebukuro: 56, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10776,7 +10776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takeshiba: {
-    ratings: { food: 6, nightlife: 8, transport: 3, rent: 2, safety: 1, green: 1, gym_sports: 1, vibe: 7, crowd: 9 },
+    ratings: { food: 6, nightlife: 8, transport: 3, rent: 2, safety: 1, green: 2, gym_sports: 2, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 20, shinjuku: 24, tokyo: 15, ikebukuro: 31, shinagawa: 16 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10784,7 +10784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   takezawa: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 106, shinjuku: 102, tokyo: 110, ikebukuro: 93, shinagawa: 113 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -10792,7 +10792,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'taki-fudou': {
-    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 7, green: 7, gym_sports: 3, vibe: 3, crowd: 8 },
+    ratings: { food: 4, nightlife: 5, transport: 4, rent: 8, safety: 7, green: 8, gym_sports: 3, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 66, shinjuku: 65, tokyo: 55, ikebukuro: 62, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10816,7 +10816,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tama-puraaza': {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 9, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 8, safety: 2, green: 7, gym_sports: 9, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 28, shinjuku: 38, tokyo: 45, ikebukuro: 45, shinagawa: 37 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10824,7 +10824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tama-reien': {
-    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 8, green: 4, gym_sports: 9, vibe: 3, crowd: 6 },
+    ratings: { food: 6, nightlife: 6, transport: 5, rent: 8, safety: 8, green: 5, gym_sports: 9, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 38, shinjuku: 32, tokyo: 48, ikebukuro: 42, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10832,7 +10832,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tama-sakai': {
-    ratings: { food: 2, nightlife: 1, transport: 6, rent: 9, safety: 9, green: 1, gym_sports: 1, vibe: 5, crowd: 5 },
+    ratings: { food: 2, nightlife: 2, transport: 6, rent: 9, safety: 9, green: 2, gym_sports: 2, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 67, shinjuku: 62, tokyo: 68, ikebukuro: 73, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10840,7 +10840,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tama-yodo': {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 3, crowd: 10 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 3, crowd: 10 },
     transit_minutes: { shibuya: 108, shinjuku: 104, tokyo: 111, ikebukuro: 94, shinagawa: 115 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10848,7 +10848,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tamagawagakuen-mae': {
-    ratings: { food: 3, nightlife: 4, transport: 7, rent: 9, safety: 10, green: 1, gym_sports: 1, vibe: 5, crowd: 3 },
+    ratings: { food: 3, nightlife: 4, transport: 7, rent: 9, safety: 10, green: 2, gym_sports: 2, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 49, shinjuku: 45, tokyo: 60, ikebukuro: 58, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10856,7 +10856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tan-sou': {
-    ratings: { food: 2, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 2, crowd: 7 },
+    ratings: { food: 2, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 135, shinjuku: 131, tokyo: 139, ikebukuro: 121, shinagawa: 142 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -10864,7 +10864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tani-zaike': {
-    ratings: { food: 5, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 8, gym_sports: 7, vibe: 3, crowd: 7 },
+    ratings: { food: 5, nightlife: 6, transport: 4, rent: 7, safety: 8, green: 8, gym_sports: 8, vibe: 3, crowd: 7 },
     transit_minutes: { shibuya: 34, shinjuku: 39, tokyo: 37, ikebukuro: 28, shinagawa: 38 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10872,7 +10872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tanmachi: {
-    ratings: { food: 8, nightlife: 9, transport: 5, rent: 8, safety: 3, green: 6, gym_sports: 6, vibe: 7, crowd: 6 },
+    ratings: { food: 8, nightlife: 9, transport: 5, rent: 8, safety: 2, green: 7, gym_sports: 6, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 38, shinjuku: 50, tokyo: 53, ikebukuro: 58, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10880,7 +10880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tateyama: {
-    ratings: { food: 7, nightlife: 7, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 6, vibe: 5, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 1, rent: 8, safety: 6, green: 4, gym_sports: 6, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 119, shinjuku: 124, tokyo: 121, ikebukuro: 130, shinagawa: 113 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'estimate' },
@@ -10888,7 +10888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tatsumi: {
-    ratings: { food: 2, nightlife: 2, transport: 6, rent: 5, safety: 9, green: 1, gym_sports: 1, vibe: 6, crowd: 4 },
+    ratings: { food: 2, nightlife: 2, transport: 6, rent: 5, safety: 9, green: 2, gym_sports: 2, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 32, shinjuku: 35, tokyo: 21, ikebukuro: 34, shinagawa: 23 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10896,7 +10896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   taura: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 3, gym_sports: 4, vibe: 5, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 3, green: 4, gym_sports: 4, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 68, shinjuku: 73, tokyo: 67, ikebukuro: 80, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -10904,7 +10904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tawarada: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 87, shinjuku: 91, tokyo: 85, ikebukuro: 96, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -10920,7 +10920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tendai: {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 9, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 9, safety: 4, green: 2, gym_sports: 2, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 62, shinjuku: 63, tokyo: 62, ikebukuro: 63, shinagawa: 66 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10928,7 +10928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tennouchou: {
-    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 3, green: 8, gym_sports: 9, vibe: 7, crowd: 5 },
+    ratings: { food: 8, nightlife: 8, transport: 6, rent: 8, safety: 2, green: 8, gym_sports: 9, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 49, shinjuku: 55, tokyo: 58, ikebukuro: 63, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10936,7 +10936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   terekomusentaa: {
-    ratings: { food: 4, nightlife: 3, transport: 4, rent: 5, safety: 1, green: 4, gym_sports: 3, vibe: 5, crowd: 7 },
+    ratings: { food: 4, nightlife: 3, transport: 4, rent: 5, safety: 1, green: 5, gym_sports: 4, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 28, shinjuku: 34, tokyo: 25, ikebukuro: 42, shinagawa: 17 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10944,7 +10944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tetsudouhakubutsukan: {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 5, green: 8, gym_sports: 8, vibe: 7, crowd: 7 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 4, green: 8, gym_sports: 8, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 59, shinjuku: 53, tokyo: 59, ikebukuro: 46, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10952,7 +10952,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tobe: {
-    ratings: { food: 6, nightlife: 9, transport: 5, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 8, crowd: 6 },
+    ratings: { food: 6, nightlife: 9, transport: 5, rent: 8, safety: 2, green: 2, gym_sports: 2, vibe: 8, crowd: 6 },
     transit_minutes: { shibuya: 48, shinjuku: 54, tokyo: 56, ikebukuro: 62, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -10960,7 +10960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tobitakyuu: {
-    ratings: { food: 3, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 1, gym_sports: 1, vibe: 4, crowd: 5 },
+    ratings: { food: 3, nightlife: 5, transport: 6, rent: 8, safety: 9, green: 2, gym_sports: 2, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 34, shinjuku: 29, tokyo: 45, ikebukuro: 39, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -10968,7 +10968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   toda: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 3, vibe: 5, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 4, gym_sports: 4, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 32, shinjuku: 38, tokyo: 37, ikebukuro: 27, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -10976,7 +10976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   todakouen: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 8, gym_sports: 4, vibe: 3, crowd: 2 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 8, gym_sports: 4, vibe: 3, crowd: 2 },
     transit_minutes: { shibuya: 30, shinjuku: 35, tokyo: 35, ikebukuro: 24, shinagawa: 43 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11008,7 +11008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tokiwa-dai': {
-    ratings: { food: 5, nightlife: 7, transport: 7, rent: 6, safety: 9, green: 1, gym_sports: 1, vibe: 6, crowd: 3 },
+    ratings: { food: 5, nightlife: 7, transport: 7, rent: 6, safety: 9, green: 2, gym_sports: 2, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 35, shinjuku: 26, tokyo: 35, ikebukuro: 10, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11016,7 +11016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tokiwadaira: {
-    ratings: { food: 5, nightlife: 3, transport: 5, rent: 9, safety: 6, green: 3, gym_sports: 8, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 3, transport: 5, rent: 9, safety: 5, green: 3, gym_sports: 8, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 58, tokyo: 50, ikebukuro: 53, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11040,7 +11040,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tomiura: {
-    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 110, shinjuku: 115, tokyo: 112, ikebukuro: 121, shinagawa: 104 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11064,7 +11064,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tookaichiba: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 6, vibe: 5, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 2, green: 7, gym_sports: 6, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 45, shinjuku: 50, tokyo: 56, ikebukuro: 57, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11088,7 +11088,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'totsuka-angyou': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 7, safety: 5, green: 5, gym_sports: 5, vibe: 2, crowd: 6 },
+    ratings: { food: 5, nightlife: 4, transport: 5, rent: 7, safety: 2, green: 6, gym_sports: 6, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 52, shinjuku: 46, tokyo: 47, ikebukuro: 51, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11096,7 +11096,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tou-no-sawa': {
-    ratings: { food: 5, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 1, gym_sports: 3, vibe: 2, crowd: 10 },
+    ratings: { food: 5, nightlife: 4, transport: 2, rent: 8, safety: 3, green: 2, gym_sports: 3, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 121, shinjuku: 118, tokyo: 124, ikebukuro: 130, shinagawa: 116 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11104,7 +11104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toubu-nerima': {
-    ratings: { food: 4, nightlife: 7, transport: 7, rent: 6, safety: 8, green: 1, gym_sports: 1, vibe: 6, crowd: 3 },
+    ratings: { food: 4, nightlife: 7, transport: 7, rent: 6, safety: 8, green: 2, gym_sports: 2, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 39, shinjuku: 31, tokyo: 41, ikebukuro: 16, shinagawa: 36 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11112,7 +11112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toubu-takezawa': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 3, crowd: 9 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 100, shinjuku: 96, tokyo: 103, ikebukuro: 86, shinagawa: 107 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11120,7 +11120,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toudai-miya': {
-    ratings: { food: 4, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 1, gym_sports: 1, vibe: 6, crowd: 2 },
+    ratings: { food: 4, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 2, gym_sports: 2, vibe: 6, crowd: 2 },
     transit_minutes: { shibuya: 64, shinjuku: 58, tokyo: 62, ikebukuro: 51, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11136,7 +11136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toufuku-nama': {
-    ratings: { food: 4, nightlife: 6, transport: 1, rent: 9, safety: 10, green: 1, gym_sports: 1, vibe: 4, crowd: 4 },
+    ratings: { food: 4, nightlife: 6, transport: 1, rent: 9, safety: 10, green: 2, gym_sports: 2, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 65, ikebukuro: 66, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'estimate' },
@@ -11152,7 +11152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'touguu-hara': {
-    ratings: { food: 6, nightlife: 6, transport: 3, rent: 7, safety: 5, green: 8, gym_sports: 8, vibe: 7, crowd: 8 },
+    ratings: { food: 6, nightlife: 6, transport: 3, rent: 7, safety: 4, green: 8, gym_sports: 8, vibe: 7, crowd: 8 },
     transit_minutes: { shibuya: 63, shinjuku: 58, tokyo: 63, ikebukuro: 50, shinagawa: 61 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11160,7 +11160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'touhaku-raku': {
-    ratings: { food: 8, nightlife: 8, transport: 5, rent: 8, safety: 3, green: 6, gym_sports: 7, vibe: 7, crowd: 6 },
+    ratings: { food: 8, nightlife: 8, transport: 5, rent: 8, safety: 2, green: 6, gym_sports: 8, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 36, shinjuku: 48, tokyo: 51, ikebukuro: 56, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11168,7 +11168,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toukai-kami': {
-    ratings: { food: 6, nightlife: 8, transport: 4, rent: 8, safety: 7, green: 1, gym_sports: 1, vibe: 7, crowd: 7 },
+    ratings: { food: 6, nightlife: 8, transport: 4, rent: 8, safety: 7, green: 2, gym_sports: 2, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 58, shinjuku: 51, tokyo: 41, ikebukuro: 55, shinagawa: 54 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11184,7 +11184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toukou-ta': {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 3, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 3, crowd: 9 },
     transit_minutes: { shibuya: 99, shinjuku: 95, tokyo: 99, ikebukuro: 83, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11208,7 +11208,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toumou-ro': {
-    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 5, green: 4, gym_sports: 5, vibe: 5, crowd: 8 },
+    ratings: { food: 3, nightlife: 4, transport: 3, rent: 8, safety: 4, green: 4, gym_sports: 5, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 83, shinjuku: 79, tokyo: 87, ikebukuro: 71, shinagawa: 90 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11224,7 +11224,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'toushin-kawa': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 71, shinjuku: 75, tokyo: 69, ikebukuro: 80, shinagawa: 74 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -11232,7 +11232,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tousou-moto': {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 112, shinjuku: 115, tokyo: 108, ikebukuro: 119, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11240,7 +11240,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'touyoko-ta': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 76, shinjuku: 80, tokyo: 73, ikebukuro: 84, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -11248,7 +11248,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   toyoharu: {
-    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 1, vibe: 6, crowd: 6 },
+    ratings: { food: 3, nightlife: 4, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 2, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 61, tokyo: 63, ikebukuro: 53, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11256,7 +11256,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsuchike: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 9, safety: 6, green: 6, gym_sports: 4, vibe: 6, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 9, safety: 4, green: 6, gym_sports: 4, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 86, shinjuku: 88, tokyo: 79, ikebukuro: 89, shinagawa: 80 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11264,7 +11264,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsuda-yama': {
-    ratings: { food: 5, nightlife: 6, transport: 4, rent: 7, safety: 3, green: 4, gym_sports: 5, vibe: 4, crowd: 8 },
+    ratings: { food: 5, nightlife: 6, transport: 4, rent: 7, safety: 2, green: 4, gym_sports: 5, vibe: 4, crowd: 8 },
     transit_minutes: { shibuya: 35, shinjuku: 40, tokyo: 37, ikebukuro: 37, shinagawa: 39 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11272,7 +11272,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsujidou: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 4, gym_sports: 5, vibe: 6, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 7, green: 4, gym_sports: 6, vibe: 6, crowd: 2 },
     transit_minutes: { shibuya: 70, shinjuku: 74, tokyo: 72, ikebukuro: 81, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11288,7 +11288,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsukahara: {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 114, ikebukuro: 119, shinagawa: 106 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11296,7 +11296,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsukimi-no': {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 6, vibe: 5, crowd: 7 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 49, shinjuku: 58, tokyo: 66, ikebukuro: 65, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11304,7 +11304,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsukinowa: {
-    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 5, crowd: 8 },
+    ratings: { food: 2, nightlife: 3, transport: 3, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 5, crowd: 8 },
     transit_minutes: { shibuya: 86, shinjuku: 82, tokyo: 89, ikebukuro: 72, shinagawa: 93 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11312,7 +11312,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsukisaki: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 1, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 96, shinjuku: 100, tokyo: 93, ikebukuro: 104, shinagawa: 89 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11320,7 +11320,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsukuihama: {
-    ratings: { food: 3, nightlife: 1, transport: 4, rent: 8, safety: 3, green: 1, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 8, safety: 3, green: 2, gym_sports: 3, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 89, shinjuku: 94, tokyo: 88, ikebukuro: 101, shinagawa: 78 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11328,7 +11328,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsukushi-no': {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 8, green: 5, gym_sports: 7, vibe: 5, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 9, safety: 8, green: 6, gym_sports: 7, vibe: 5, crowd: 7 },
     transit_minutes: { shibuya: 43, shinjuku: 53, tokyo: 60, ikebukuro: 60, shinagawa: 51 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11336,7 +11336,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsunashima: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 5, gym_sports: 6, vibe: 5, crowd: 2 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 2, green: 5, gym_sports: 6, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 39, shinjuku: 38, tokyo: 41, ikebukuro: 46, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11344,7 +11344,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsuru-ke-shima': {
-    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 5, vibe: 5, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 6, rent: 8, safety: 5, green: 4, gym_sports: 6, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 66, shinjuku: 62, tokyo: 69, ikebukuro: 61, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11352,7 +11352,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsurugamine: {
-    ratings: { food: 4, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 7, crowd: 3 },
+    ratings: { food: 4, nightlife: 6, transport: 7, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 50, shinjuku: 55, tokyo: 59, ikebukuro: 63, shinagawa: 49 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11360,7 +11360,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsurukawa: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 1, green: 3, gym_sports: 5, vibe: 5, crowd: 2 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 9, safety: 1, green: 4, gym_sports: 6, vibe: 5, crowd: 2 },
     transit_minutes: { shibuya: 44, shinjuku: 41, tokyo: 56, ikebukuro: 53, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11368,7 +11368,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsuruma: {
-    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 8, crowd: 4 },
+    ratings: { food: 8, nightlife: 8, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 8, crowd: 4 },
     transit_minutes: { shibuya: 58, shinjuku: 62, tokyo: 59, ikebukuro: 65, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11376,7 +11376,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsurumakionsen: {
-    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 3, crowd: 6 },
+    ratings: { food: 4, nightlife: 5, transport: 5, rent: 8, safety: 3, green: 4, gym_sports: 6, vibe: 3, crowd: 6 },
     transit_minutes: { shibuya: 80, shinjuku: 77, tokyo: 89, ikebukuro: 89, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11384,7 +11384,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsurumi-ono': {
-    ratings: { food: 4, nightlife: 5, transport: 1, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 1, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 1, rent: 8, safety: 2, green: 6, gym_sports: 4, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 44, shinjuku: 50, tokyo: 45, ikebukuro: 58, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'estimate' },
@@ -11392,7 +11392,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsurumi-shijou': {
-    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 3, green: 10, gym_sports: 8, vibe: 5, crowd: 5 },
+    ratings: { food: 6, nightlife: 7, transport: 6, rent: 8, safety: 2, green: 10, gym_sports: 8, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 34, shinjuku: 40, tokyo: 41, ikebukuro: 48, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11400,7 +11400,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   tsuruse: {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 5, green: 6, gym_sports: 5, vibe: 7, crowd: 3 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 9, safety: 4, green: 6, gym_sports: 5, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 51, shinjuku: 46, tokyo: 55, ikebukuro: 36, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11408,7 +11408,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsutsuji-ke-oka': {
-    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 9, green: 6, gym_sports: 6, vibe: 6, crowd: 3 },
+    ratings: { food: 7, nightlife: 8, transport: 7, rent: 8, safety: 9, green: 6, gym_sports: 7, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 36, shinjuku: 31, tokyo: 37, ikebukuro: 44, shinagawa: 33 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11416,7 +11416,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'tsuzuki-fureaino-oka': {
-    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 3, green: 7, gym_sports: 7, vibe: 4, crowd: 5 },
+    ratings: { food: 4, nightlife: 3, transport: 6, rent: 8, safety: 2, green: 7, gym_sports: 7, vibe: 4, crowd: 5 },
     transit_minutes: { shibuya: 39, shinjuku: 50, tokyo: 55, ikebukuro: 57, shinagawa: 46 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11424,7 +11424,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'u-no-ki': {
-    ratings: { food: 5, nightlife: 5, transport: 6, rent: 5, safety: 9, green: 6, gym_sports: 6, vibe: 5, crowd: 5 },
+    ratings: { food: 5, nightlife: 5, transport: 6, rent: 5, safety: 9, green: 6, gym_sports: 7, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 31, shinjuku: 45, tokyo: 43, ikebukuro: 43, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11432,7 +11432,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   uchisaiwaichou: {
-    ratings: { food: 10, nightlife: 10, transport: 7, rent: 3, safety: 10, green: 5, gym_sports: 6, vibe: 9, crowd: 4 },
+    ratings: { food: 10, nightlife: 10, transport: 7, rent: 3, safety: 10, green: 5, gym_sports: 7, vibe: 9, crowd: 4 },
     transit_minutes: { shibuya: 19, shinjuku: 20, tokyo: 10, ikebukuro: 26, shinagawa: 19 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11440,7 +11440,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ue-goura': {
-    ratings: { food: 4, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 4, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 125, shinjuku: 128, tokyo: 135, ikebukuro: 134, shinagawa: 127 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11448,7 +11448,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ue-kumagaya': {
-    ratings: { food: 7, nightlife: 8, transport: 2, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 6, crowd: 9 },
+    ratings: { food: 7, nightlife: 8, transport: 2, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 99, tokyo: 105, ikebukuro: 88, shinagawa: 110 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11456,7 +11456,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ue-nagatani': {
-    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 1, gym_sports: 1, vibe: 6, crowd: 3 },
+    ratings: { food: 3, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 2, gym_sports: 2, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 61, shinjuku: 66, tokyo: 60, ikebukuro: 64, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11464,7 +11464,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ue-ooi': {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 3, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 107, tokyo: 107, ikebukuro: 113, shinagawa: 99 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11472,7 +11472,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   uemachi: {
-    ratings: { food: 4, nightlife: 6, transport: 4, rent: 7, safety: 9, green: 1, gym_sports: 1, vibe: 7, crowd: 7 },
+    ratings: { food: 4, nightlife: 6, transport: 4, rent: 7, safety: 9, green: 2, gym_sports: 2, vibe: 7, crowd: 7 },
     transit_minutes: { shibuya: 20, shinjuku: 24, tokyo: 42, ikebukuro: 41, shinagawa: 34 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11480,7 +11480,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   uhara: {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 123, shinjuku: 127, tokyo: 120, ikebukuro: 131, shinagawa: 116 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -11496,7 +11496,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'umagome-sawa': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 7, green: 8, gym_sports: 1, vibe: 3, crowd: 4 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 7, green: 8, gym_sports: 2, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 55, shinjuku: 54, tokyo: 44, ikebukuro: 51, shinagawa: 52 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -11512,7 +11512,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   umatate: {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 80, shinjuku: 84, tokyo: 76, ikebukuro: 87, shinagawa: 73 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11536,7 +11536,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'umi-kashima': {
-    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 3, gym_sports: 1, vibe: 5, crowd: 6 },
+    ratings: { food: 2, nightlife: 3, transport: 1, rent: 8, safety: 6, green: 4, gym_sports: 2, vibe: 5, crowd: 6 },
     transit_minutes: { shibuya: 170, shinjuku: 170, tokyo: 155, ikebukuro: 168, shinagawa: 165 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -11560,7 +11560,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'umi-shibaura': {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 3, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 2, green: 2, gym_sports: 1, vibe: 2, crowd: 7 },
     transit_minutes: { shibuya: 46, shinjuku: 52, tokyo: 46, ikebukuro: 60, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -11576,7 +11576,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   unga: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 6, green: 10, gym_sports: 5, vibe: 6, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 5, green: 10, gym_sports: 5, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 61, tokyo: 57, ikebukuro: 54, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11592,7 +11592,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'urawa-misono': {
-    ratings: { food: 4, nightlife: 3, transport: 6, rent: 7, safety: 5, green: 4, gym_sports: 4, vibe: 2, crowd: 5 },
+    ratings: { food: 4, nightlife: 3, transport: 6, rent: 7, safety: 4, green: 4, gym_sports: 4, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 58, shinjuku: 52, tokyo: 54, ikebukuro: 44, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11600,7 +11600,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'urayama-kuchi': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 3, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 3, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 113, shinjuku: 110, tokyo: 119, ikebukuro: 102, shinagawa: 120 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11616,7 +11616,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'ushigome-yanagimachi': {
-    ratings: { food: 8, nightlife: 7, transport: 6, rent: 4, safety: 6, green: 5, gym_sports: 8, vibe: 6, crowd: 5 },
+    ratings: { food: 8, nightlife: 7, transport: 6, rent: 4, safety: 4, green: 5, gym_sports: 8, vibe: 6, crowd: 5 },
     transit_minutes: { shibuya: 19, shinjuku: 7, tokyo: 18, ikebukuro: 16, shinagawa: 27 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11624,7 +11624,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   ushihama: {
-    ratings: { food: 7, nightlife: 8, transport: 4, rent: 9, safety: 9, green: 6, gym_sports: 5, vibe: 6, crowd: 8 },
+    ratings: { food: 7, nightlife: 8, transport: 4, rent: 9, safety: 9, green: 7, gym_sports: 5, vibe: 6, crowd: 8 },
     transit_minutes: { shibuya: 67, shinjuku: 65, tokyo: 65, ikebukuro: 66, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11640,7 +11640,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'wa-ko': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 9 },
     transit_minutes: { shibuya: 69, shinjuku: 70, tokyo: 72, ikebukuro: 73, shinagawa: 81 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11648,7 +11648,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'wada-kawara': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 3, vibe: 5, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 2, gym_sports: 4, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 113, ikebukuro: 118, shinagawa: 105 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11656,7 +11656,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'wada-machi': {
-    ratings: { food: 6, nightlife: 7, transport: 5, rent: 8, safety: 3, green: 5, gym_sports: 8, vibe: 7, crowd: 6 },
+    ratings: { food: 6, nightlife: 7, transport: 5, rent: 8, safety: 2, green: 6, gym_sports: 8, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 49, shinjuku: 54, tokyo: 58, ikebukuro: 62, shinagawa: 47 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11664,7 +11664,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'wada-tsuka': {
-    ratings: { food: 8, nightlife: 7, transport: 2, rent: 8, safety: 3, green: 6, gym_sports: 3, vibe: 7, crowd: 9 },
+    ratings: { food: 8, nightlife: 7, transport: 2, rent: 8, safety: 3, green: 6, gym_sports: 4, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 73, shinjuku: 78, tokyo: 74, ikebukuro: 85, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11680,7 +11680,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'wadou-kurotani': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 2, vibe: 1, crowd: 10 },
     transit_minutes: { shibuya: 116, shinjuku: 112, tokyo: 121, ikebukuro: 104, shinagawa: 123 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11688,7 +11688,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   wakaba: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 7, gym_sports: 7, vibe: 5, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 7, gym_sports: 7, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 68, shinjuku: 65, tokyo: 72, ikebukuro: 55, shinagawa: 76 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11696,7 +11696,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   wakabadai: {
-    ratings: { food: 4, nightlife: 3, transport: 6, rent: 7, safety: 3, green: 4, gym_sports: 7, vibe: 5, crowd: 5 },
+    ratings: { food: 4, nightlife: 3, transport: 6, rent: 7, safety: 2, green: 5, gym_sports: 8, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 50, shinjuku: 45, tokyo: 61, ikebukuro: 56, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11720,7 +11720,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   warabi: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 5, green: 7, gym_sports: 6, vibe: 4, crowd: 2 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 4, green: 7, gym_sports: 6, vibe: 4, crowd: 2 },
     transit_minutes: { shibuya: 39, shinjuku: 33, tokyo: 31, ikebukuro: 35, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11728,7 +11728,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   waseda: {
-    ratings: { food: 8, nightlife: 7, transport: 7, rent: 4, safety: 8, green: 7, gym_sports: 6, vibe: 7, crowd: 2 },
+    ratings: { food: 8, nightlife: 7, transport: 7, rent: 4, safety: 8, green: 7, gym_sports: 7, vibe: 7, crowd: 2 },
     transit_minutes: { shibuya: 20, shinjuku: 13, tokyo: 20, ikebukuro: 14, shinagawa: 29 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11736,7 +11736,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   washimiya: {
-    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 5, green: 3, gym_sports: 5, vibe: 3, crowd: 8 },
+    ratings: { food: 2, nightlife: 2, transport: 4, rent: 8, safety: 4, green: 4, gym_sports: 5, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 79, shinjuku: 80, tokyo: 83, ikebukuro: 73, shinagawa: 91 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11744,7 +11744,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'y-r-p-nobi': {
-    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 5, vibe: 6, crowd: 6 },
+    ratings: { food: 4, nightlife: 4, transport: 5, rent: 8, safety: 3, green: 3, gym_sports: 6, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 87, shinjuku: 92, tokyo: 85, ikebukuro: 98, shinagawa: 76 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11752,7 +11752,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yabe: {
-    ratings: { food: 7, nightlife: 7, transport: 6, rent: 8, safety: 7, green: 4, gym_sports: 6, vibe: 7, crowd: 5 },
+    ratings: { food: 7, nightlife: 7, transport: 6, rent: 8, safety: 7, green: 5, gym_sports: 6, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 59, shinjuku: 61, tokyo: 61, ikebukuro: 67, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11760,7 +11760,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yachimata: {
-    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 6, green: 2, gym_sports: 5, vibe: 4, crowd: 7 },
+    ratings: { food: 4, nightlife: 4, transport: 4, rent: 8, safety: 6, green: 2, gym_sports: 6, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 89, shinjuku: 90, tokyo: 75, ikebukuro: 89, shinagawa: 85 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11768,7 +11768,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yachiyo-chuuou': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 6, green: 4, gym_sports: 3, vibe: 7, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 8, safety: 6, green: 5, gym_sports: 3, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 68, shinjuku: 61, tokyo: 61, ikebukuro: 65, shinagawa: 74 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11776,7 +11776,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yachiyo-midorigaoka': {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 6, green: 4, gym_sports: 4, vibe: 6, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 4, gym_sports: 4, vibe: 6, crowd: 3 },
     transit_minutes: { shibuya: 73, shinjuku: 66, tokyo: 56, ikebukuro: 70, shinagawa: 69 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11784,7 +11784,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yachiyodai: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 6, green: 5, gym_sports: 7, vibe: 7, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 8, safety: 5, green: 6, gym_sports: 7, vibe: 7, crowd: 3 },
     transit_minutes: { shibuya: 59, shinjuku: 59, tokyo: 58, ikebukuro: 67, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11800,7 +11800,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yagi-saki': {
-    ratings: { food: 6, nightlife: 7, transport: 4, rent: 8, safety: 5, green: 7, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 6, nightlife: 7, transport: 4, rent: 8, safety: 4, green: 7, gym_sports: 4, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 60, shinjuku: 63, tokyo: 65, ikebukuro: 55, shinagawa: 64 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11808,7 +11808,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yagiri: {
-    ratings: { food: 3, nightlife: 2, transport: 4, rent: 9, safety: 6, green: 4, gym_sports: 3, vibe: 2, crowd: 8 },
+    ratings: { food: 3, nightlife: 2, transport: 4, rent: 9, safety: 5, green: 4, gym_sports: 3, vibe: 2, crowd: 8 },
     transit_minutes: { shibuya: 49, shinjuku: 47, tokyo: 50, ikebukuro: 43, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11824,7 +11824,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yagyuu: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 5, green: 2, gym_sports: 3, vibe: 2, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 4, green: 2, gym_sports: 4, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 104, shinjuku: 98, tokyo: 101, ikebukuro: 92, shinagawa: 109 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11856,7 +11856,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yakou: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 3, green: 7, gym_sports: 4, vibe: 3, crowd: 4 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 8, safety: 2, green: 8, gym_sports: 4, vibe: 3, crowd: 4 },
     transit_minutes: { shibuya: 41, shinjuku: 36, tokyo: 37, ikebukuro: 44, shinagawa: 35 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11864,7 +11864,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yakuen-dai': {
-    ratings: { food: 4, nightlife: 2, transport: 5, rent: 8, safety: 7, green: 5, gym_sports: 3, vibe: 2, crowd: 6 },
+    ratings: { food: 4, nightlife: 2, transport: 5, rent: 8, safety: 7, green: 5, gym_sports: 4, vibe: 2, crowd: 6 },
     transit_minutes: { shibuya: 67, shinjuku: 66, tokyo: 56, ikebukuro: 64, shinagawa: 62 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11872,7 +11872,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yamada: {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 6, vibe: 3, crowd: 8 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 9, safety: 9, green: 4, gym_sports: 7, vibe: 3, crowd: 8 },
     transit_minutes: { shibuya: 67, shinjuku: 67, tokyo: 67, ikebukuro: 61, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11880,7 +11880,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yamate: {
-    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 7, vibe: 5, crowd: 4 },
+    ratings: { food: 5, nightlife: 4, transport: 7, rent: 8, safety: 3, green: 8, gym_sports: 8, vibe: 5, crowd: 4 },
     transit_minutes: { shibuya: 53, shinjuku: 59, tokyo: 60, ikebukuro: 67, shinagawa: 48 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11888,7 +11888,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yanagikouji: {
-    ratings: { food: 4, nightlife: 5, transport: 3, rent: 8, safety: 7, green: 7, gym_sports: 5, vibe: 2, crowd: 9 },
+    ratings: { food: 4, nightlife: 5, transport: 3, rent: 8, safety: 7, green: 7, gym_sports: 6, vibe: 2, crowd: 9 },
     transit_minutes: { shibuya: 75, shinjuku: 79, tokyo: 76, ikebukuro: 86, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11896,7 +11896,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yanase-kawa': {
-    ratings: { food: 3, nightlife: 2, transport: 6, rent: 9, safety: 5, green: 8, gym_sports: 7, vibe: 7, crowd: 5 },
+    ratings: { food: 3, nightlife: 2, transport: 6, rent: 9, safety: 4, green: 8, gym_sports: 8, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 47, shinjuku: 42, tokyo: 50, ikebukuro: 31, shinagawa: 55 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11904,7 +11904,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yanoguchi: {
-    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 10, green: 4, gym_sports: 5, vibe: 5, crowd: 5 },
+    ratings: { food: 4, nightlife: 5, transport: 6, rent: 8, safety: 10, green: 4, gym_sports: 6, vibe: 5, crowd: 5 },
     transit_minutes: { shibuya: 35, shinjuku: 36, tokyo: 46, ikebukuro: 41, shinagawa: 41 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -11920,7 +11920,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yashio: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 5, green: 8, gym_sports: 8, vibe: 2, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 7, safety: 2, green: 8, gym_sports: 8, vibe: 2, crowd: 3 },
     transit_minutes: { shibuya: 43, shinjuku: 39, tokyo: 34, ikebukuro: 45, shinagawa: 45 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11928,7 +11928,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yasuda: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 1, crowd: 10 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 94, shinjuku: 99, tokyo: 97, ikebukuro: 106, shinagawa: 88 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -11936,7 +11936,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yatsu: {
-    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 6, green: 5, gym_sports: 3, vibe: 4, crowd: 7 },
+    ratings: { food: 5, nightlife: 4, transport: 4, rent: 7, safety: 5, green: 6, gym_sports: 4, vibe: 4, crowd: 7 },
     transit_minutes: { shibuya: 55, shinjuku: 55, tokyo: 45, ikebukuro: 54, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11944,7 +11944,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yatsuka: {
-    ratings: { food: 5, nightlife: 5, transport: 7, rent: 6, safety: 6, green: 5, gym_sports: 6, vibe: 3, crowd: 3 },
+    ratings: { food: 5, nightlife: 5, transport: 7, rent: 6, safety: 5, green: 5, gym_sports: 7, vibe: 3, crowd: 3 },
     transit_minutes: { shibuya: 41, shinjuku: 41, tokyo: 39, ikebukuro: 44, shinagawa: 50 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11960,7 +11960,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yoda: {
-    ratings: { food: 2, nightlife: 1, transport: 5, rent: 9, safety: 6, green: 8, gym_sports: 3, vibe: 7, crowd: 6 },
+    ratings: { food: 2, nightlife: 2, transport: 5, rent: 9, safety: 4, green: 8, gym_sports: 4, vibe: 7, crowd: 6 },
     transit_minutes: { shibuya: 78, shinjuku: 80, tokyo: 71, ikebukuro: 81, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11968,7 +11968,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yokose: {
-    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 5, green: 4, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 2, rent: 8, safety: 4, green: 4, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 110, shinjuku: 107, tokyo: 116, ikebukuro: 99, shinagawa: 117 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'moderate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -11976,7 +11976,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yokoshiba: {
-    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 6, crowd: 9 },
+    ratings: { food: 4, nightlife: 4, transport: 3, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 113, shinjuku: 113, tokyo: 98, ikebukuro: 112, shinagawa: 108 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -12000,7 +12000,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yokota: {
-    ratings: { food: 1, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 1, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 75, shinjuku: 79, tokyo: 72, ikebukuro: 83, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -12008,7 +12008,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yomiurirando-mae': {
-    ratings: { food: 3, nightlife: 5, transport: 7, rent: 7, safety: 3, green: 1, gym_sports: 1, vibe: 4, crowd: 4 },
+    ratings: { food: 3, nightlife: 5, transport: 7, rent: 7, safety: 2, green: 2, gym_sports: 2, vibe: 4, crowd: 4 },
     transit_minutes: { shibuya: 35, shinjuku: 31, tokyo: 46, ikebukuro: 43, shinagawa: 40 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'moderate', crowd: 'strong' },
@@ -12016,7 +12016,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yono: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 5, green: 5, gym_sports: 8, vibe: 5, crowd: 3 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 7, safety: 4, green: 5, gym_sports: 8, vibe: 5, crowd: 3 },
     transit_minutes: { shibuya: 52, shinjuku: 46, tokyo: 45, ikebukuro: 38, shinagawa: 53 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12024,7 +12024,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yono-honchou': {
-    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 5, green: 4, gym_sports: 6, vibe: 6, crowd: 4 },
+    ratings: { food: 6, nightlife: 6, transport: 7, rent: 7, safety: 4, green: 5, gym_sports: 7, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 45, shinjuku: 40, tokyo: 51, ikebukuro: 33, shinagawa: 59 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12032,7 +12032,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yoshi-kawa-kouen': {
-    ratings: { food: 9, nightlife: 9, transport: 3, rent: 9, safety: 6, green: 8, gym_sports: 5, vibe: 8, crowd: 9 },
+    ratings: { food: 9, nightlife: 9, transport: 3, rent: 9, safety: 4, green: 8, gym_sports: 6, vibe: 8, crowd: 9 },
     transit_minutes: { shibuya: 63, shinjuku: 64, tokyo: 65, ikebukuro: 65, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12040,7 +12040,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   yoshikawa: {
-    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 7, crowd: 4 },
+    ratings: { food: 6, nightlife: 5, transport: 7, rent: 8, safety: 4, green: 3, gym_sports: 4, vibe: 7, crowd: 4 },
     transit_minutes: { shibuya: 55, shinjuku: 49, tokyo: 46, ikebukuro: 42, shinagawa: 58 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12048,7 +12048,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yoshikawa-bi-minami': {
-    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 5, green: 3, gym_sports: 3, vibe: 6, crowd: 6 },
+    ratings: { food: 3, nightlife: 3, transport: 5, rent: 8, safety: 4, green: 3, gym_sports: 3, vibe: 6, crowd: 6 },
     transit_minutes: { shibuya: 54, shinjuku: 49, tokyo: 46, ikebukuro: 42, shinagawa: 57 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12056,7 +12056,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yoshino-hara': {
-    ratings: { food: 3, nightlife: 3, transport: 3, rent: 7, safety: 5, green: 9, gym_sports: 5, vibe: 7, crowd: 9 },
+    ratings: { food: 3, nightlife: 3, transport: 3, rent: 7, safety: 4, green: 9, gym_sports: 6, vibe: 7, crowd: 9 },
     transit_minutes: { shibuya: 66, shinjuku: 60, tokyo: 65, ikebukuro: 53, shinagawa: 63 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12072,7 +12072,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   youdo: {
-    ratings: { food: 1, nightlife: 1, transport: 1, rent: 8, safety: 5, green: 1, gym_sports: 1, vibe: 1, crowd: 7 },
+    ratings: { food: 1, nightlife: 2, transport: 1, rent: 8, safety: 4, green: 2, gym_sports: 1, vibe: 1, crowd: 7 },
     transit_minutes: { shibuya: 119, shinjuku: 115, tokyo: 122, ikebukuro: 105, shinagawa: 126 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'moderate', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'estimate' },
@@ -12104,7 +12104,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yourou-keikoku': {
-    ratings: { food: 2, nightlife: 1, transport: 2, rent: 8, safety: 6, green: 1, gym_sports: 1, vibe: 2, crowd: 10 },
+    ratings: { food: 2, nightlife: 2, transport: 2, rent: 8, safety: 6, green: 2, gym_sports: 2, vibe: 2, crowd: 10 },
     transit_minutes: { shibuya: 102, shinjuku: 106, tokyo: 99, ikebukuro: 110, shinagawa: 95 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'estimate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'estimate', green: 'estimate', gym_sports: 'estimate', vibe: 'estimate', crowd: 'strong' },
@@ -12112,7 +12112,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yubi-ougi': {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 5, green: 6, gym_sports: 3, vibe: 2, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 7, safety: 4, green: 6, gym_sports: 3, vibe: 2, crowd: 5 },
     transit_minutes: { shibuya: 61, shinjuku: 56, tokyo: 62, ikebukuro: 50, shinagawa: 60 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12128,7 +12128,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yui-ke-hama': {
-    ratings: { food: 8, nightlife: 6, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 3, vibe: 6, crowd: 9 },
+    ratings: { food: 8, nightlife: 6, transport: 3, rent: 8, safety: 3, green: 8, gym_sports: 4, vibe: 6, crowd: 9 },
     transit_minutes: { shibuya: 74, shinjuku: 78, tokyo: 75, ikebukuro: 85, shinagawa: 65 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12136,7 +12136,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yuki-ga-taniootsuka': {
-    ratings: { food: 6, nightlife: 5, transport: 6, rent: 5, safety: 8, green: 4, gym_sports: 9, vibe: 7, crowd: 5 },
+    ratings: { food: 6, nightlife: 5, transport: 6, rent: 5, safety: 8, green: 5, gym_sports: 9, vibe: 7, crowd: 5 },
     transit_minutes: { shibuya: 26, shinjuku: 35, tokyo: 39, ikebukuro: 34, shinagawa: 23 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12152,7 +12152,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yumega-oka': {
-    ratings: { food: 4, nightlife: 1, transport: 3, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 5, crowd: 9 },
+    ratings: { food: 4, nightlife: 2, transport: 3, rent: 8, safety: 3, green: 4, gym_sports: 5, vibe: 5, crowd: 9 },
     transit_minutes: { shibuya: 73, shinjuku: 68, tokyo: 72, ikebukuro: 74, shinagawa: 72 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'estimate', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12160,7 +12160,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yuri-ke-oka': {
-    ratings: { food: 6, nightlife: 6, transport: 6, rent: 7, safety: 3, green: 7, gym_sports: 8, vibe: 3, crowd: 5 },
+    ratings: { food: 6, nightlife: 6, transport: 6, rent: 7, safety: 2, green: 7, gym_sports: 8, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 37, shinjuku: 34, tokyo: 49, ikebukuro: 45, shinagawa: 42 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12176,7 +12176,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   'yuuenchi-nishi': {
-    ratings: { food: 2, nightlife: 1, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 3, vibe: 4, crowd: 9 },
+    ratings: { food: 2, nightlife: 2, transport: 3, rent: 8, safety: 7, green: 3, gym_sports: 4, vibe: 4, crowd: 9 },
     transit_minutes: { shibuya: 59, shinjuku: 56, tokyo: 67, ikebukuro: 56, shinagawa: 67 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'moderate', nightlife: 'estimate', transport: 'strong', rent: 'estimate', safety: 'moderate', green: 'moderate', gym_sports: 'strong', vibe: 'estimate', crowd: 'strong' },
@@ -12184,7 +12184,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   zama: {
-    ratings: { food: 4, nightlife: 4, transport: 6, rent: 5, safety: 3, green: 4, gym_sports: 5, vibe: 3, crowd: 5 },
+    ratings: { food: 4, nightlife: 4, transport: 6, rent: 5, safety: 3, green: 4, gym_sports: 6, vibe: 3, crowd: 5 },
     transit_minutes: { shibuya: 66, shinjuku: 54, tokyo: 66, ikebukuro: 65, shinagawa: 68 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'estimate', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },
@@ -12200,7 +12200,7 @@ export const DEMO_RATINGS: Record<string, DemoData> = {
     data_date: '2026-04',
   },
   zoushiki: {
-    ratings: { food: 7, nightlife: 7, transport: 7, rent: 5, safety: 8, green: 5, gym_sports: 7, vibe: 6, crowd: 4 },
+    ratings: { food: 7, nightlife: 7, transport: 7, rent: 5, safety: 8, green: 6, gym_sports: 8, vibe: 6, crowd: 4 },
     transit_minutes: { shibuya: 38, shinjuku: 34, tokyo: 33, ikebukuro: 42, shinagawa: 24 },
     rent_avg: { '1k_1ldk': null, '2ldk': null, source: 'computed', updated: '2026-04' },
     confidence: { food: 'strong', nightlife: 'strong', transport: 'strong', rent: 'moderate', safety: 'strong', green: 'moderate', gym_sports: 'strong', vibe: 'moderate', crowd: 'strong' },

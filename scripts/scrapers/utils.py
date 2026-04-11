@@ -96,6 +96,16 @@ class NocoDB:
             resp.raise_for_status()
         return len(records)
 
+    def update_record(self, record_id: int, fields: dict):
+        """Update an existing record by its NocoDB Id."""
+        resp = requests.patch(
+            f"{self.base_url}/records",
+            headers=self.headers,
+            json=[{"Id": record_id, **fields}],
+        )
+        resp.raise_for_status()
+        return resp.json()
+
     def get_all_records(self, fields: Optional[List[str]] = None) -> List[Dict]:
         """Fetch all records from the table."""
         all_rows = []
