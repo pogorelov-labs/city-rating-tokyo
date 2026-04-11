@@ -70,7 +70,80 @@ def parse_existing_ai_entries(ts_path):
     return ai_entries
 
 
-def format_ratings_entry(slug, data, rent_data=None):
+def parse_ai_ratings(entry_text):
+    """Extract the 9 rating integers from a raw TS AI entry string."""
+    m = re.search(r'ratings:\s*\{([^}]+)\}', entry_text)
+    if not m:
+        return {}
+    inner = m.group(1)
+    ratings = {}
+    for pair in re.findall(r'(\w+)\s*:\s*(\d+)', inner):
+        ratings[pair[0]] = int(pair[1])
+    return ratings
+
+
+def merge_ai_confidence(entry_text, ai_ratings, computed_row):
+    """
+    Build merged confidence/sources for an AI-researched entry.
+
+    Policy (CRTKY-83):
+    - For each category, if the AI rating == computed rating → inherit
+      computed confidence + sources (data backs the researcher's judgment).
+    - If they differ → 'editorial' confidence, sources ['ai_research']
+      (human researcher chose a different value than data alone suggests).
+    - If no computed data exists → all categories get 'editorial'.
+    """
+    cats = ["food", "nightlife", "transport", "rent", "safety",
+            "green", "gym_sports", "vibe", "crowd"]
+
+    # Parse computed confidence/sources from NocoDB JSON strings
+    comp_conf = {}
+    comp_srcs = {}
+    if computed_row:
+        for field, target in [("confidence", comp_conf), ("sources", comp_srcs)]:
+            val = computed_row.get(field)
+            if isinstance(val, str):
+                try:
+                    target.update(json.loads(val))
+                except (json.JSONDecodeError, TypeError):
+                    pass
+            elif isinstance(val, dict):
+                target.update(val)
+
+    merged_conf = {}
+    merged_srcs = {}
+    for cat in cats:
+        ai_val = ai_ratings.get(cat)
+        comp_val = computed_row.get(cat) if computed_row else None
+
+        # Compare: if both exist and match, inherit computed metadata
+        if comp_val is not None and ai_val is not None and int(ai_val) == int(comp_val):
+            merged_conf[cat] = comp_conf.get(cat, 'estimate')
+            merged_srcs[cat] = comp_srcs.get(cat, [])
+        else:
+            merged_conf[cat] = 'editorial'
+            merged_srcs[cat] = ['ai_research']
+
+    data_date = computed_row.get("data_date", "2026-04") if computed_row else "2026-04"
+
+    # Format as TS object strings
+    conf_parts = [f"{c}: '{merged_conf[c]}'" for c in cats]
+    conf_str = "{ " + ", ".join(conf_parts) + " }"
+
+    srcs_parts = []
+    for c in cats:
+        s = merged_srcs[c]
+        if isinstance(s, list):
+            arr = "[" + ", ".join(f"'{x}'" for x in s) + "]"
+        else:
+            arr = "[]"
+        srcs_parts.append(f"{c}: {arr}")
+    srcs_str = "{ " + ", ".join(srcs_parts) + " }"
+
+    return conf_str, srcs_str, data_date
+
+
+def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
     """Format a computed rating entry as TypeScript."""
     r = data
     rent = rent_data or {}
@@ -80,9 +153,11 @@ def format_ratings_entry(slug, data, rent_data=None):
     rent_source = rent.get("source", "computed")
     rent_updated = rent.get("updated", "2026-04")
 
-    # Estimate transit minutes from coordinates (rough)
-    # These are kept from existing data or computed
-    transit = "{ shibuya: 30, shinjuku: 30, tokyo: 30, ikebukuro: 30, shinagawa: 30 }"
+    # Transit minutes from pre-computed transit-times.json (CRTKY-81)
+    t = transit_data or {}
+    transit = ("{ shibuya: %d, shinjuku: %d, tokyo: %d, ikebukuro: %d, shinagawa: %d }"
+               % (t.get("shibuya", 30), t.get("shinjuku", 30), t.get("tokyo", 30),
+                  t.get("ikebukuro", 30), t.get("shinagawa", 30)))
 
     safe_slug = f"'{slug}'" if '-' in slug else slug
 
@@ -169,26 +244,13 @@ def main():
             rent_data = json.loads(path.read_text())
     print(f"  Rent data: {len(rent_data)} stations")
 
-    # 4. Load existing transit_minutes from demo-ratings (parse for computed entries)
-    existing_transit = {}
-    if output_path.exists():
-        content = output_path.read_text()
-        # Quick parse transit_minutes for all entries
-        for match in re.finditer(
-            r"'?([a-z0-9-]+)'?\s*:\s*\{[^}]*transit_minutes:\s*(\{[^}]+\})",
-            content
-        ):
-            slug = match.group(1)
-            transit_str = match.group(2)
-            # Parse the transit object
-            try:
-                # Convert JS object to JSON
-                json_str = transit_str.replace("'", '"')
-                transit = json.loads(json_str)
-                existing_transit[slug] = transit
-            except Exception:
-                pass
-    print(f"  Existing transit data: {len(existing_transit)} stations")
+    # 4. Load transit times from transit-times.json (CRTKY-81)
+    transit_times = {}
+    transit_path = ROOT / "data" / "transit-times.json"
+    if transit_path.exists():
+        transit_raw = json.loads(transit_path.read_text())
+        transit_times = transit_raw.get("transit_times", {})
+    print(f"  Transit times: {len(transit_times)} stations")
 
     # 5. Build output
     ai_count = 0
@@ -215,11 +277,34 @@ def main():
     parts.append("")
     parts.append("export const DEMO_RATINGS: Record<string, DemoData> = {")
 
-    # First: AI-researched entries (preserved as-is)
-    parts.append("  // === AI-researched ratings (preserved) ===")
+    # First: AI-researched entries (ratings preserved, confidence merged)
+    parts.append("  // === AI-researched ratings (preserved, confidence merged) ===")
+    ai_conf_merged = 0
     for slug in sorted(ai_entries.keys()):
         if slug in all_slugs:
-            parts.append(ai_entries[slug])
+            entry_text = ai_entries[slug]
+            # Merge confidence metadata from computed pipeline (CRTKY-83)
+            has_confidence = 'confidence:' in entry_text
+            if not has_confidence:
+                ai_ratings = parse_ai_ratings(entry_text)
+                comp_row = computed.get(slug)
+                conf_str, srcs_str, data_date = merge_ai_confidence(
+                    entry_text, ai_ratings, comp_row
+                )
+                # Insert confidence/sources/data_date before the closing '},'
+                # Find the last '},' and insert before it
+                last_brace = entry_text.rstrip().rstrip(',')
+                indent = "    "
+                inject = (
+                    f"\n{indent}confidence: {conf_str},"
+                    f"\n{indent}sources: {srcs_str},"
+                    f"\n{indent}data_date: '{data_date}',"
+                    f"\n  }},"
+                )
+                # Replace the final '},\n' or '},' with injected block
+                entry_text = re.sub(r'\s*\},?\s*$', inject, entry_text)
+                ai_conf_merged += 1
+            parts.append(entry_text)
             ai_count += 1
 
     parts.append("")
@@ -233,21 +318,8 @@ def main():
 
         if slug in computed:
             rent = rent_data.get(slug, {})
-            entry = format_ratings_entry(slug, computed[slug], rent)
-
-            # Replace transit_minutes with existing data if available
-            if slug in existing_transit:
-                t = existing_transit[slug]
-                transit_str = (f"{{ shibuya: {t.get('shibuya', 30)}, "
-                             f"shinjuku: {t.get('shinjuku', 30)}, "
-                             f"tokyo: {t.get('tokyo', 30)}, "
-                             f"ikebukuro: {t.get('ikebukuro', 30)}, "
-                             f"shinagawa: {t.get('shinagawa', 30)} }}")
-                entry = entry.replace(
-                    "transit_minutes: { shibuya: 30, shinjuku: 30, tokyo: 30, ikebukuro: 30, shinagawa: 30 }",
-                    f"transit_minutes: {transit_str}"
-                )
-
+            transit = transit_times.get(slug, {})
+            entry = format_ratings_entry(slug, computed[slug], rent, transit)
             parts.append(entry)
             computed_count += 1
         else:
@@ -260,6 +332,7 @@ def main():
 
     print(f"\nSummary:")
     print(f"  AI-researched (preserved): {ai_count}")
+    print(f"    confidence merged:       {ai_conf_merged}")
     print(f"  Computed (data-driven):    {computed_count}")
     print(f"  Missing (no data):         {missing_count}")
     print(f"  Total entries:             {ai_count + computed_count}")

@@ -30,9 +30,9 @@ Do **not** equate “every station has a number” with “every number is equal
 2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use ward average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`.
 3. **Safety:** Keishicho ArcGIS is **neighborhood-level** for Tokyo; other prefectures may be **municipality/ward** or legacy tables until **CRTKY-82** lands — see `research/02-safety.md`.
 4. **Green / vibe:** OSM signals can exist while **pipeline `confidence` still shows no `strong`** for that category (check `research/00-overview.md` snapshot counts) — strong/moderate/estimate reflect **source rules in compute**, not “map looks green.”
-5. **`transit_minutes` stub:** `scripts/export-ratings.py` emits a **fixed 30 min** to all five hubs for **computed** (non–AI-preserved) rows. **Hubs UI is not routing truth** until **CRTKY-81**. AI-researched entries keep hand-authored times.
+5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates per-station travel times using geographic distance + line connectivity, calibrated against 252 AI-researched ground-truth values (MAE 5.5 min, 85% within 10 min). AI-researched entries keep hand-authored times. Computed entries use the calibrated model. Output in `data/transit-times.json`, consumed by `export-ratings.py`. **Upgrade path:** replace with GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
 6. **Missing confidence keys in export:** `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong.
-7. **AI-researched slugs (~272):** Integer ratings and `description` are **editorial**; pipeline `confidence`/`sources` are **not** merged today — see **CRTKY-83** and `CLAUDE.md` NocoDB note on AI-only gap.
+7. **AI-researched slugs (~252):** Integer ratings and `description` are editorial. Since **CRTKY-83**, `export-ratings.py` merges per-category confidence via comparison: matching categories inherit computed metadata, differing ones get `editorial` level. See NocoDB section for full merge policy.
 8. **HotPepper API** is a **single-vendor** dependency for food/nightlife signals; no automated fallback is implemented.
 
 **Docs to keep aligned:** `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, this file, **Plane CRTKY-80** subtree (81–84).
@@ -61,7 +61,13 @@ Do **not** equate “every station has a number” with “every number is equal
 
 These feed the `ConfidenceBadge` UI component. NocoDB API token is data-only — schema changes (new columns) must be done manually in the NocoDB UI.
 
-**AI-researched stations vs pipeline `confidence`:** ~272 slugs in `demo-ratings.ts` have `description` (and integer ratings) but **no** `confidence` / `sources` from `export-ratings.py` — computed metadata is not merged for them while ratings remain AI-priority (see Override Hierarchy). `/station/[slug]` shows no per-row dots or chip legend in that case; bar-vs-median copy still applies. **Do not fake this in the UI by defaulting every category to `estimate`:** in the pipeline, `estimate` means formula/proxy (e.g. rent regression), not “human-curated score,” so conflating the two blurs the legend. A proper fix is data-side: merge non-overridden computed `confidence` for those slugs, add a dedicated level (e.g. editorial/researched), or document an explicit mapping policy — then export + types.
+**AI-researched stations — confidence merge policy (CRTKY-83):** ~252 slugs in `demo-ratings.ts` have `description` (and integer ratings) from human researchers. Since CRTKY-83, `export-ratings.py` merges confidence metadata for these entries using a per-category comparison:
+
+- **Category rating matches computed** → inherits pipeline `confidence` + `sources` (data backs the researcher's judgment). E.g. Gakugei-Daigaku food:8 matches computed → `strong` with `['hotpepper','osm']`.
+- **Category rating differs from computed** → `editorial` level, sources `['ai_research']` (human chose a different value than data alone suggests). E.g. Mitaka food:7 differs from computed → `editorial`.
+- **No computed data for slug** → all categories get `editorial`.
+
+The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI label: **”Curated”** with 藤色 fuji-iro (`#8B6DB0`) dot. Types: `ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial'`. All 252 AI-researched stations now show confidence dots and the chip legend.
 
 ### NocoDB Access
 ```
@@ -186,6 +192,7 @@ Five traditional Japanese pigments on a diverging scale, used in two ways:
 | Measured | `strong` | 苔色 koke-iro | `#6A8059` |
 | Partial | `moderate` | 山吹 yamabuki | `#C9A227` |
 | Estimate | `estimate` | 鈍色 nibi-iro | `#828A8C` |
+| Curated | `editorial` | 藤色 fuji-iro | `#8B6DB0` |
 
 ### Why two APIs
 
@@ -232,10 +239,12 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `scripts/scrapers/scrape-osm-pois.py` | OSM POI scraper (food, nightlife, green, gym) |
 | `scripts/scrapers/scrape-hotpepper.py` | HotPepper restaurant/izakaya/bar scraper |
 | `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
-| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date). **Computed rows:** fixed `transit_minutes` **30m×5 hubs** stub until CRTKY-81; missing per-category confidence keys default to **`estimate`** in generated TS |
+| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date). Transit times from `data/transit-times.json` (CRTKY-81); missing per-category confidence keys default to **`estimate`** in generated TS |
+| `scripts/compute-transit-times.py` | Geographic transit estimation: Haversine + line connectivity + calibration against 252 AI ground truth. Output: `data/transit-times.json`. Run with `--calibrate` for grid search. (CRTKY-81) |
+| `data/transit-times.json` | Pre-computed transit times for 1493 stations to 5 hubs. Generated by `compute-transit-times.py`. |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
 | `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width dot column (`w-6`), `ConfidenceBadge` before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Caption always explains bars; dot clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
-| `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate" (CRTKY-67) |
+| `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro / fuji-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay (CRTKY-67). Label wording is "Measured / Partial / Estimate / Curated" (CRTKY-67 + CRTKY-83) |
 | `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
 | `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. 400 ms enter delay + 150 ms leave delay. Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68); station Ratings labels opt out (CRTKY-79) |
 | `app/src/components/Map.tsx` | Leaflet map; highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). **Map `mouseover`/`mouseout`** call `setHoveredStation` (150ms debounced clear on `mouseout`) so list↔map hover stays linked (CRTKY-59). Highlighted marker radius **×1.4** vs base (was +3px). Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). Hover tooltip: `StationTooltipHero`; failed-thumb reset via `key` on slug+thumb URL. |

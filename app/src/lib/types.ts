@@ -32,7 +32,7 @@ export interface StationDescription {
   nightlife: string;
 }
 
-export type ConfidenceLevel = 'strong' | 'moderate' | 'estimate';
+export type ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial';
 
 export interface StationConfidence {
   food: ConfidenceLevel;
