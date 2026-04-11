@@ -305,6 +305,7 @@ export default async function StationPage({
                       ['Measured', CONFIDENCE_DOT_COLORS.strong] as const,
                       ['Partial', CONFIDENCE_DOT_COLORS.moderate] as const,
                       ['Estimate', CONFIDENCE_DOT_COLORS.estimate] as const,
+                      ['Curated', CONFIDENCE_DOT_COLORS.editorial] as const,
                     ] as const
                   ).map(([label, color]) => (
                     <span

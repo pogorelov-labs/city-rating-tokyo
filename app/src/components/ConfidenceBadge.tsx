@@ -22,6 +22,7 @@ export const CONFIDENCE_DOT_COLORS: Record<ConfidenceLevel, string> = {
   strong: '#6A8059',   // 苔色 koke-iro (moss green)
   moderate: '#C9A227', // 山吹 yamabuki (mountain-rose gold)
   estimate: '#828A8C', // 鈍色 nibi-iro (muted grey)
+  editorial: '#8B6DB0', // 藤色 fuji-iro (wisteria purple)
 };
 
 // Labels describe HOW the rating was derived, so they read correctly even
@@ -44,6 +45,11 @@ const LEVEL_META: Record<ConfidenceLevel, { color: string; label: string; descri
     label: 'Estimate',
     description: 'Modeled from formula, not observed',
   },
+  editorial: {
+    color: CONFIDENCE_DOT_COLORS.editorial,
+    label: 'Curated',
+    description: 'Set by human researcher, may differ from data',
+  },
 };
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -63,6 +69,7 @@ const SOURCE_LABELS: Record<string, string> = {
   prefecture_average: 'Prefecture average',
   composite_fallback: 'Composite fallback',
   hp_proxy: 'HotPepper proxy',
+  ai_research: 'AI researcher',
 };
 
 export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) {
