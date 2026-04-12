@@ -9,7 +9,9 @@ interface AppState {
   setAllWeights: (weights: WeightConfig) => void;
   resetWeights: () => void;
   filters: FilterState;
+  setMinRent: (v: number) => void;
   setMaxRent: (v: number) => void;
+  setMinCommute: (v: number) => void;
   setMaxCommute: (v: number) => void;
   setCategoryMin: (key: keyof StationRatings, value: number | null) => void;
   setFilters: (filters: FilterState) => void;
@@ -47,8 +49,12 @@ export const useAppStore = create<AppState>((set) => ({
   setAllWeights: (weights) => set({ weights: { ...weights } }),
   resetWeights: () => set({ weights: { ...DEFAULT_WEIGHTS } }),
   filters: { ...DEFAULT_FILTERS, categoryMins: {} },
+  setMinRent: (minRent) =>
+    set((state) => ({ filters: { ...state.filters, minRent } })),
   setMaxRent: (maxRent) =>
     set((state) => ({ filters: { ...state.filters, maxRent } })),
+  setMinCommute: (minCommute) =>
+    set((state) => ({ filters: { ...state.filters, minCommute } })),
   setMaxCommute: (maxCommute) =>
     set((state) => ({ filters: { ...state.filters, maxCommute } })),
   setCategoryMin: (key, value) =>

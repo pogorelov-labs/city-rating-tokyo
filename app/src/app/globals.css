@@ -83,3 +83,23 @@ body {
   animation: station-halo-pulse 1.6s ease-in-out infinite;
   pointer-events: none;
 }
+
+/* Barely visible pulse for top-5 ranked stations — same color as their
+   marker stroke, much subtler than the selected-station halo. */
+@keyframes top-ranked-pulse {
+  0%, 100% {
+    stroke-width: 0.5;
+    stroke-opacity: 0.15;
+    fill-opacity: 0.03;
+  }
+  50% {
+    stroke-width: 2;
+    stroke-opacity: 0.35;
+    fill-opacity: 0.08;
+  }
+}
+
+.top-ranked-pulse {
+  animation: top-ranked-pulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}

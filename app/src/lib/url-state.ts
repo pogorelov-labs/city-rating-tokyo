@@ -19,8 +19,14 @@ export function encodeStateToParams(state: {
   }
 
   // Filters: only encode when non-default
+  if (state.filters.minRent > DEFAULT_FILTERS.minRent) {
+    params.set('nr', String(state.filters.minRent));
+  }
   if (state.filters.maxRent < DEFAULT_FILTERS.maxRent) {
     params.set('mr', String(state.filters.maxRent));
+  }
+  if (state.filters.minCommute > DEFAULT_FILTERS.minCommute) {
+    params.set('nc', String(state.filters.minCommute));
   }
   if (state.filters.maxCommute < DEFAULT_FILTERS.maxCommute) {
     params.set('mc', String(state.filters.maxCommute));
@@ -62,11 +68,29 @@ export function decodeParamsToState(params: URLSearchParams): {
   const filterPatch: Partial<FilterState> = {};
   let hasFilter = false;
 
+  const nr = params.get('nr');
+  if (nr) {
+    const v = Number(nr);
+    if (!isNaN(v) && v >= 80000 && v <= 300000) {
+      filterPatch.minRent = v;
+      hasFilter = true;
+    }
+  }
+
   const mr = params.get('mr');
   if (mr) {
     const v = Number(mr);
     if (!isNaN(v) && v >= 80000 && v <= 300000) {
       filterPatch.maxRent = v;
+      hasFilter = true;
+    }
+  }
+
+  const nc = params.get('nc');
+  if (nc) {
+    const v = Number(nc);
+    if (!isNaN(v) && v >= 10 && v <= 60) {
+      filterPatch.minCommute = v;
       hasFilter = true;
     }
   }
