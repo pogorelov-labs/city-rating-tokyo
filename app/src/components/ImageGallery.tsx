@@ -45,7 +45,9 @@ function GalleryImageCard({
           style={{ filter: 'blur(20px)', transform: 'scale(1.1)' }}
         />
       )}
-      {/* Full-res image — fades in over LQIP */}
+      {/* Full-res image — fades in over LQIP.
+          Use opacity 0.01 (not 0) while loading: Chrome skips lazy-loading
+          for fully transparent images. The LQIP hides the near-invisible img. */}
       <img
         src={image.url}
         alt={image.alt}
@@ -54,7 +56,7 @@ function GalleryImageCard({
         onError={() => { setFailed(true); trackError('image', { src: image.url, context: 'gallery' }); }}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         style={{
-          opacity: loaded ? 1 : 0,
+          opacity: loaded ? 1 : 0.01,
           transition: 'opacity 200ms ease-in, transform 300ms',
         }}
       />
