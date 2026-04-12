@@ -400,11 +400,19 @@ Three optimizations landed in the homepage initial-load path. If you touch these
 
 Baseline → after: initial JS 1086 → 642 KB (−41 %), HTML 895 → 616 KB (−31 %), RSC flight 755 → 523 KB (−31 %).
 
-### Map flyTo optimization (PR #67)
+### Map flyTo optimization (PR #68)
 
 Four runtime optimizations for the station-select fly animation:
 
-1. **Canvas renderer** (`preferCanvas` on `MapContainer`). All 1493 CircleMarkers render on a single `<canvas>` element instead of 1493 individual SVG `<path>` elements. Eliminates SVG layout thrashing during flyTo. Animated overlays (station-halo, top-5 pulse) forced to SVG via `renderer={getSvgRenderer()}` so CSS keyframe animations still work.
+1. **Canvas renderer** (`preferCanvas` on `MapContainer`). All 1493 CircleMarkers render on a single `<canvas>` element inside `leaflet-overlay-pane` instead of 1493 individual SVG `<path>` elements. Eliminates SVG layout thrashing during flyTo. Animated overlays (station-halo, top-5 pulse) forced to SVG via `renderer={getSvgRenderer()}` so CSS keyframe animations still work.
 2. **Smart flyTo** in `FlyToStation`. Adapts zoom target (no zoom change when ≥13 → cheaper pan-only), uses `setView` for very close hops (<0.01°), and adaptive duration (0.4s close, 0.6s far) with `easeLinearity: 0.4` to minimize time at intermediate zoom levels where tiles aren't cached.
 3. **Tile prefetch on hover** — `prefetchTilesAroundStation()` fires `<link rel="prefetch">` for a 3×3 grid of z14 Carto tiles around the hovered station. By click time (400ms tooltip delay + decision time), tiles are warm in browser cache.
 4. **`isFlying` ref** — set during flyTo, cleared on `moveend`. Guard for suppressing non-critical work during animation.
+
+**Production perf test (2026-04-12):** Default zoom 12 → Akihabara (ranked list click). MessageChannel-based 83kHz sampling:
+- 315,020 samples, **p95 interval 0.1ms** — butter-smooth after React commit
+- 3 jank frames >50ms (142ms max) — all during React's initial state commit (`setSelectedStation` → `flyTarget` memo → `FlyToStation` render → `useEffect`)
+- 24 busy samples >5ms out of 315,020 (0.008%)
+- Canvas renderer confirmed: 0 SVG marker paths, 5 SVG overlay paths (halo + pulse)
+
+Use `.claude/skills/perf-capture/` to reproduce these measurements.
