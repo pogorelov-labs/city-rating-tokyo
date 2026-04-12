@@ -10,6 +10,7 @@ interface GalleryImage {
   photographer?: string;
   photographer_url?: string;
   source?: string;
+  lqip?: string;
 }
 
 interface ImageGalleryProps {
@@ -24,6 +25,7 @@ function GalleryImageCard({
   image: GalleryImage;
   onClick: () => void;
 }) {
+  const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
 
   if (failed) return null;
@@ -33,12 +35,28 @@ function GalleryImageCard({
       className="relative group overflow-hidden rounded-lg bg-gray-100 aspect-[4/3] cursor-pointer"
       onClick={onClick}
     >
+      {/* LQIP blur layer — shown until full image loads */}
+      {image.lqip && !loaded && (
+        <img
+          src={image.lqip}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'blur(20px)', transform: 'scale(1.1)' }}
+        />
+      )}
+      {/* Full-res image — fades in over LQIP */}
       <img
         src={image.url}
         alt={image.alt}
         loading="lazy"
+        onLoad={() => setLoaded(true)}
         onError={() => { setFailed(true); trackError('image', { src: image.url, context: 'gallery' }); }}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 200ms ease-in, transform 300ms',
+        }}
       />
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 py-1">
         {image.source === 'unsplash' && image.photographer ? (
