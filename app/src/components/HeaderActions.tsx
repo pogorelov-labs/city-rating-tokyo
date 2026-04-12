@@ -43,22 +43,30 @@ export default function HeaderActions({ stations }: Props) {
     <>
       <button
         onClick={() => setScatterOpen(true)}
-        className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
+        className="hidden md:inline-flex text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
       >
         Scatter Plot
       </button>
 
       <button
         onClick={handleShare}
-        className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
+        className="text-xs rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors md:px-3 md:py-1.5 p-1.5"
+        aria-label="Share"
       >
-        {copied ? 'Copied!' : 'Share'}
+        {/* Icon on mobile, text on desktop */}
+        <svg className="w-4 h-4 md:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+          <polyline points="16 6 12 2 8 6" />
+          <line x1="12" y1="2" x2="12" y2="15" />
+        </svg>
+        <span className="hidden md:inline">{copied ? 'Copied!' : 'Share'}</span>
+        {copied && <span className="md:hidden text-[10px] text-green-600 font-medium">✓</span>}
       </button>
 
       <button
         onClick={() => setFeedbackOpen(true)}
         data-umami-event="open-feedback-modal"
-        className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
+        className="hidden md:inline-flex text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
       >
         Feedback
       </button>
