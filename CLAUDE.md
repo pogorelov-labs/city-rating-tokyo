@@ -268,7 +268,7 @@ Scrapers run as detached Docker containers on VPS to avoid laptop sleep issues:
 
 ```bash
 # SSH to VPS (use Coolify localhost key)
-ssh -i /tmp/coolify_key root@217.196.61.98
+ssh -i ~/.ssh/coolify_vps root@217.196.61.98
 
 # Launch a scraper
 docker run -d --name SCRAPER_NAME --restart=no \
