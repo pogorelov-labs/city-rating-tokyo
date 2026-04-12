@@ -1,4 +1,4 @@
-import { Station, MapStation, StationRatings, WeightConfig, RentAvg } from './types';
+import { Station, MapStation, StationRatings, WeightConfig, RentAvg, FilterState, DEFAULT_FILTERS } from './types';
 
 // Raised from ¥70k → ¥80k in formula v3. The old ¥70k floor was only reachable
 // via the broken distance_estimate fallback which no longer exists. The cheapest
@@ -304,4 +304,48 @@ export function filterStations(
       return true;
     })
     .sort((a, b) => b.score - a.score);
+}
+
+export interface FilteredMapStation extends MapStation {
+  score: number | null;
+  rentUnknown?: boolean;
+}
+
+/**
+ * Apply hard dealbreaker filters to scored MapStations.
+ * - Rent: null → pass (marked rentUnknown), over limit → fail
+ * - Commute: null → pass, over limit → fail
+ * - Category mins: null ratings → pass, below min → fail
+ * - Environment: flood/seismic filters applied inline
+ */
+export function applyDealbreakers(
+  stations: (MapStation & { score: number | null })[],
+  filters: FilterState,
+  hideFloodRisk: boolean,
+  hideHighSeismic: boolean,
+): FilteredMapStation[] {
+  const rentActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
+  const commuteActive = filters.maxCommute < DEFAULT_FILTERS.maxCommute;
+  const catKeys = Object.keys(filters.categoryMins) as (keyof StationRatings)[];
+
+  return stations
+    .filter((s) => {
+      // Rent filter: known and over limit → fail
+      if (rentActive && s.rent_1k !== null && s.rent_1k > filters.maxRent) return false;
+      // Commute filter: known and over limit → fail
+      if (commuteActive && s.min_transit !== null && s.min_transit > filters.maxCommute) return false;
+      // Category minimums
+      for (const key of catKeys) {
+        const min = filters.categoryMins[key];
+        if (min != null && s.ratings !== null && s.ratings[key] < min) return false;
+      }
+      // Environment safety (moved from Map.tsx visibleStations)
+      if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
+      if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
+      return true;
+    })
+    .map((s) => ({
+      ...s,
+      rentUnknown: rentActive && s.rent_1k === null,
+    }));
 }
