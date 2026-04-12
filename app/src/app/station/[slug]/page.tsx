@@ -16,7 +16,7 @@ import type { Metadata } from 'next';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
 import RatingBar from '@/components/RatingBar';
-import ConfidenceBadge, { CONFIDENCE_DOT_COLORS, SOURCE_LABELS } from '@/components/ConfidenceBadge';
+import ConfidenceBadge, { ConfidenceIcon, CONFIDENCE_DOT_COLORS, SOURCE_LABELS } from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import { NaturalEnvironment } from '@/components/NaturalEnvironment';
@@ -313,21 +313,17 @@ export default async function StationPage({
                 <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-[10px] text-gray-600">
                   {(
                     [
-                      ['Measured', CONFIDENCE_DOT_COLORS.strong] as const,
-                      ['Partial', CONFIDENCE_DOT_COLORS.moderate] as const,
-                      ['Estimate', CONFIDENCE_DOT_COLORS.estimate] as const,
-                      ['Curated', CONFIDENCE_DOT_COLORS.editorial] as const,
+                      ['Measured', 'strong'] as const,
+                      ['Partial', 'moderate'] as const,
+                      ['Estimate', 'estimate'] as const,
+                      ['Curated', 'editorial'] as const,
                     ] as const
-                  ).map(([label, color]) => (
+                  ).map(([label, level]) => (
                     <span
                       key={label}
                       className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5"
                     >
-                      <span
-                        className="h-1.5 w-1.5 shrink-0 rounded-full"
-                        style={{ backgroundColor: color, opacity: 0.9 }}
-                        aria-hidden
-                      />
+                      <ConfidenceIcon level={level} size={10} />
                       {label}
                     </span>
                   ))}

@@ -73,6 +73,47 @@ export const SOURCE_LABELS: Record<string, string> = {
   ai_research: 'AI researcher',
 };
 
+/**
+ * Inline SVG icon for a confidence level. Shape encodes the level so the
+ * system is readable without color alone:
+ *
+ *   strong   → bullseye (filled dot + outer ring) — maximum visual weight
+ *   moderate → solid filled circle — medium weight
+ *   estimate → open dashed circle (stroke only) — lightest
+ *   editorial → filled diamond (菱形 hishigata) — different shape = different provenance
+ *
+ * All shapes share a 14×14 viewBox; `size` controls the rendered px.
+ */
+export function ConfidenceIcon({ level, size = 12 }: { level: ConfidenceLevel; size?: number }) {
+  const color = CONFIDENCE_DOT_COLORS[level];
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 14 14"
+      className="shrink-0 inline-block"
+      aria-hidden
+    >
+      {level === 'strong' && (
+        <>
+          <circle cx="7" cy="7" r="5.5" fill="none" stroke={color} strokeWidth="1.5" opacity="0.9" />
+          <circle cx="7" cy="7" r="2.5" fill={color} opacity="0.9" />
+        </>
+      )}
+      {level === 'moderate' && (
+        <circle cx="7" cy="7" r="4" fill={color} opacity="0.9" />
+      )}
+      {level === 'estimate' && (
+        <circle cx="7" cy="7" r="4.5" fill="none" stroke={color} strokeWidth="1.5" strokeDasharray="2.5 2" opacity="0.9" />
+      )}
+      {level === 'editorial' && (
+        <rect x="3" y="3" width="8" height="8" rx="1" fill={color} opacity="0.9" transform="rotate(45 7 7)" />
+      )}
+    </svg>
+  );
+}
+
 export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) {
   const [show, setShow] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -115,10 +156,8 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
   }, [isTouch, show]);
 
   const meta = LEVEL_META[level];
-  // Shrunk from w-2/w-2.5 to w-1.5/w-2 in CRTKY-68 so the dots recede
-  // visually behind the bar and number (metadata below data-ink).
-  const dotSize = size === 'md' ? 'w-2 h-2' : 'w-1.5 h-1.5';
-  // On touch, dot tap target must be at least 44×44px — use padding
+  const iconSize = size === 'md' ? 14 : 12;
+  // On touch, tap target must be at least 44×44px — use padding
   const touchPad = isTouch ? 'p-3 -m-3' : '';
   const sourceList = sources && sources.length > 0
     ? sources.map((s) => SOURCE_LABELS[s] || s).join(', ')
@@ -127,16 +166,13 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
   return (
     <span
       ref={containerRef}
-      className={`relative inline-flex items-center shrink-0 ${touchPad}`}
+      className={`relative inline-flex items-center shrink-0 cursor-help ${touchPad}`}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       onClick={handleClick}
+      aria-label={`Confidence: ${meta.label}`}
     >
-      <span
-        className={`${dotSize} rounded-full cursor-help inline-block`}
-        style={{ backgroundColor: meta.color, opacity: 0.9 }}
-        aria-label={`Confidence: ${meta.label}`}
-      />
+      <ConfidenceIcon level={level} size={iconSize} />
       {show && (
         <span className="absolute left-0 bottom-full mb-1.5 z-50 w-56 px-2.5 py-1.5 text-xs text-white bg-gray-800 rounded-md shadow-lg leading-relaxed pointer-events-none">
           <span className="block font-semibold">
