@@ -1,13 +1,13 @@
 import rawStations from '@/data/stations.json';
 import { DEMO_RATINGS } from '@/data/demo-ratings';
 import rentData from '@/data/rent-averages.json';
-import stationImagesData from '@/data/station-images.json';
+import stationThumbData from '@/data/station-thumbnails.json';
 import environmentData from '@/data/environment-data.json';
 import { Station, MapStation, RentAvg, EnvironmentData } from './types';
 import { rentToAffordability } from './scoring';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
-const imageData = stationImagesData as Record<string, { url: string; alt: string }[]>;
+const thumbData = stationThumbData as Record<string, { thumb: string; lqip: string }>;
 const envData = environmentData as Record<string, EnvironmentData>;
 
 export function getStations(): Station[] {
@@ -69,13 +69,9 @@ export function getMapStations(): MapStation[] {
   });
 }
 
-/** Pre-computed thumbnail URL per station (first wikimedia image) */
-export function getThumbnails(): Record<string, string> {
-  const thumbnails: Record<string, string> = {};
-  for (const [slug, imgs] of Object.entries(imageData)) {
-    if (imgs?.[0]) thumbnails[slug] = imgs[0].url;
-  }
-  return thumbnails;
+/** Pre-computed thumbnail URL + LQIP base64 per station */
+export function getThumbnails(): Record<string, { thumb: string; lqip: string }> {
+  return thumbData;
 }
 
 /** Pre-computed short atmosphere snippets */

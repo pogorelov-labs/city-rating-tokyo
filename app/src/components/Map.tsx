@@ -46,10 +46,58 @@ function darkenRgb(rgb: string, factor = 0.7): string {
 /** ~+40 % radius when selected or hovered (list or map) — CRTKY-59. */
 const HIGHLIGHT_RADIUS_FACTOR = 1.4;
 
-/** Tooltip header: Wikimedia thumb, or score-colored gradient with Japanese name. */
+/** Score-colored gradient fallback when no imagery is available. */
+function GradientHeader({
+  nameJp,
+  score,
+  color,
+  height,
+}: {
+  nameJp: string;
+  score: number | null;
+  color: string;
+  height: number;
+}) {
+  return (
+    <div
+      aria-hidden
+      style={{
+        width: '100%',
+        height,
+        backgroundImage:
+          score !== null
+            ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
+            : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
+        borderRadius: '6px 6px 0 0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        fontFamily: 'serif',
+        fontWeight: 700,
+        fontSize: 26,
+        letterSpacing: 2,
+        textShadow: '0 1px 3px rgba(0,0,0,0.25)',
+      }}
+    >
+      {nameJp}
+    </div>
+  );
+}
+
+/**
+ * Tooltip header: three-tier image loading.
+ * 1. LQIP base64 shown instantly (blurred, zero network)
+ * 2. VPS thumbnail (320px, ~20 KB) crossfades in over LQIP
+ * 3. Gradient fallback if no imagery at all
+ *
+ * The tooltip has a 400ms CSS show delay. If the thumbnail loads within
+ * that window the user never sees the LQIP blur.
+ */
 function StationTooltipHero({
   slug,
   thumb,
+  lqip,
   nameEn,
   nameJp,
   score,
@@ -57,67 +105,82 @@ function StationTooltipHero({
 }: {
   slug: string;
   thumb: string | undefined;
+  lqip: string | undefined;
   nameEn: string;
   nameJp: string;
   score: number | null;
   color: string;
 }) {
-  const [imgFailed, setImgFailed] = useState(false);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [thumbFailed, setThumbFailed] = useState(false);
 
-  const gradientBase = {
-    width: '100%',
-    backgroundImage:
-      score !== null
-        ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
-        : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
-    borderRadius: '6px 6px 0 0',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
-    fontFamily: 'serif',
-    fontWeight: 700,
-    fontSize: 26,
-    letterSpacing: 2,
-    textShadow: '0 1px 3px rgba(0,0,0,0.25)',
-  } as const;
+  // No imagery at all → compact gradient
+  if (!thumb && !lqip) {
+    return <GradientHeader nameJp={nameJp} score={score} color={color} height={60} />;
+  }
 
-  if (!thumb || imgFailed) {
-    const height = thumb && imgFailed ? 100 : 60;
-    return (
-      <div aria-hidden style={{ ...gradientBase, height }}>
-        {nameJp}
-      </div>
-    );
+  // Thumb failed and no LQIP → gradient at image height
+  if (thumbFailed && !lqip) {
+    return <GradientHeader nameJp={nameJp} score={score} color={color} height={100} />;
   }
 
   return (
-    <img
-      src={thumb}
-      alt={nameEn}
-      loading="lazy"
-      onError={() => {
-        window.umami?.track('error', {
-          category: 'image',
-          station: slug,
-          context: 'tooltip',
-        });
-        setImgFailed(true);
-      }}
+    <div
       style={{
+        position: 'relative',
         width: '100%',
         height: 100,
-        objectFit: 'cover',
+        overflow: 'hidden',
         borderRadius: '6px 6px 0 0',
-        display: 'block',
       }}
-    />
+    >
+      {/* Base layer: LQIP (inline data URL, instant, blurred) */}
+      {lqip && !thumbLoaded && (
+        <img
+          src={lqip}
+          alt=""
+          aria-hidden
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'blur(20px)',
+            transform: 'scale(1.1)',
+          }}
+        />
+      )}
+      {/* Top layer: sharp thumbnail, fades in over LQIP */}
+      {thumb && !thumbFailed && (
+        <img
+          src={thumb}
+          alt={nameEn}
+          onLoad={() => setThumbLoaded(true)}
+          onError={() => {
+            setThumbFailed(true);
+            window.umami?.track('error', {
+              category: 'image',
+              station: slug,
+              context: 'tooltip',
+            });
+          }}
+          style={{
+            position: lqip ? 'absolute' : 'relative',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: thumbLoaded ? 1 : 0,
+            transition: 'opacity 200ms ease-in',
+          }}
+        />
+      )}
+    </div>
   );
 }
 
 interface MapViewProps {
   stations: MapStation[];
-  thumbnails?: Record<string, string>;
+  thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
 }
 
@@ -204,7 +267,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       {flyTarget && <FlyToStation lat={flyTarget.lat} lng={flyTarget.lng} />}
       {visibleStations.map((station) => {
         const score = station.score;
-        const thumb = thumbnails[station.slug];
+        const thumbEntry = thumbnails[station.slug];
         const snippet = snippets[station.slug];
 
         // Heatmap mode: color by selected dimension
@@ -272,6 +335,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               mouseover: () => {
                 clearTimeout(mapHoverClearRef.current);
                 setHoveredStation(station.slug);
+                // Prefetch thumbnail into browser cache during 400ms tooltip delay
+                if (thumbEntry?.thumb) { const i = new Image(); i.src = thumbEntry.thumb; }
               },
               mouseout: () => {
                 mapHoverClearRef.current = setTimeout(() => {
@@ -290,9 +355,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             >
               <div style={{ width: 260 }}>
                 <StationTooltipHero
-                  key={`${station.slug}-${thumb ?? ''}`}
+                  key={`${station.slug}-${thumbEntry?.thumb ?? ''}`}
                   slug={station.slug}
-                  thumb={thumb}
+                  thumb={thumbEntry?.thumb}
+                  lqip={thumbEntry?.lqip}
                   nameEn={station.name_en}
                   nameJp={station.name_jp}
                   score={score}
