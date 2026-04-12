@@ -25,7 +25,7 @@ import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
 import stationPlaces from '@/data/station-places.json';
 
-type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: string; license?: string };
+type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: string; license?: string; lqip?: string };
 const imageData = stationImages as Record<string, ImageEntry[]>;
 import type { StationPlace } from '@/lib/types';
 const placesData = stationPlaces as Record<string, StationPlace[]>;
