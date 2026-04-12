@@ -231,8 +231,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
   return (
     <div className="flex flex-col gap-4 p-4 h-full overflow-y-auto">
-      {/* Search */}
-      <div className="relative">
+      {/* Search — hidden on mobile where MobileSearchPill takes over */}
+      <div className="relative hidden md:block">
         <input
           type="search"
           inputMode="search"
