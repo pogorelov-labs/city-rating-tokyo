@@ -128,13 +128,17 @@ export interface WeightConfig {
 }
 
 export interface FilterState {
+  minRent: number;
   maxRent: number;
+  minCommute: number;
   maxCommute: number;
   categoryMins: Partial<Record<keyof StationRatings, number>>;
 }
 
 export const DEFAULT_FILTERS: FilterState = {
+  minRent: 80000,
   maxRent: 300000,
+  minCommute: 10,
   maxCommute: 60,
   categoryMins: {},
 };
@@ -160,7 +164,7 @@ export const RATING_LABELS: Record<keyof StationRatings, string> = {
   green: 'Parks & Green',
   gym_sports: 'Gym & Sports',
   vibe: 'Vibe & Atmosphere',
-  crowd: 'Low Crowds',
+  crowd: 'Quietness',
 };
 
 export const HUB_LABELS: Record<keyof TransitMinutes, string> = {

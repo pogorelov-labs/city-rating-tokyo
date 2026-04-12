@@ -31,14 +31,107 @@ const COMMUTE_MAX = 60;
 const COMMUTE_STEP = 5;
 const CATEGORY_MIN_OPTIONS = [5, 6, 7, 8] as const;
 
-function formatRent(v: number): string {
-  if (v >= RENT_MAX) return 'No limit';
-  return `\u00a5${(v / 1000).toFixed(0)}k/mo`;
+/** Short label for category min buttons — avoids confusing truncation */
+const CATEGORY_SHORT_LABELS: Record<keyof StationRatings, string> = {
+  food: 'Food',
+  nightlife: 'Nightlife',
+  transport: 'Transport',
+  rent: 'Afford.',
+  safety: 'Safety',
+  green: 'Green',
+  gym_sports: 'Gym',
+  vibe: 'Vibe',
+  crowd: 'Quietness',
+};
+
+function formatRent(v: number, isMin: boolean): string {
+  if (isMin && v <= RENT_MIN) return '\u00a580k';
+  if (!isMin && v >= RENT_MAX) return 'No limit';
+  return `\u00a5${(v / 1000).toFixed(0)}k`;
 }
 
-function formatCommute(v: number): string {
-  if (v >= COMMUTE_MAX) return 'No limit';
+function formatCommute(v: number, isMin: boolean): string {
+  if (isMin && v <= COMMUTE_MIN) return '10 min';
+  if (!isMin && v >= COMMUTE_MAX) return 'No limit';
   return `${v} min`;
+}
+
+/** Dual-range slider: two thumbs on a single track */
+function DualRange({
+  min,
+  max,
+  step,
+  valueLow,
+  valueHigh,
+  onLowChange,
+  onHighChange,
+  formatLow,
+  formatHigh,
+  label,
+  umamiEvent,
+}: {
+  min: number;
+  max: number;
+  step: number;
+  valueLow: number;
+  valueHigh: number;
+  onLowChange: (v: number) => void;
+  onHighChange: (v: number) => void;
+  formatLow: string;
+  formatHigh: string;
+  label: string;
+  umamiEvent: string;
+}) {
+  const pctLow = ((valueLow - min) / (max - min)) * 100;
+  const pctHigh = ((valueHigh - min) / (max - min)) * 100;
+
+  return (
+    <div>
+      <div className="flex justify-between text-xs mb-0.5">
+        <span className="text-gray-700">{label}</span>
+        <span className="text-gray-500 tabular-nums">{formatLow} – {formatHigh}</span>
+      </div>
+      <div className="relative h-4 flex items-center">
+        {/* Track background */}
+        <div className="absolute inset-x-0 h-1.5 rounded-full bg-gray-200" />
+        {/* Active range highlight */}
+        <div
+          className="absolute h-1.5 rounded-full bg-blue-200"
+          style={{ left: `${pctLow}%`, right: `${100 - pctHigh}%` }}
+        />
+        {/* Low thumb */}
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={valueLow}
+          onChange={(e) => {
+            const v = Number(e.target.value);
+            onLowChange(Math.min(v, valueHigh - step));
+          }}
+          data-umami-event={umamiEvent}
+          className="absolute inset-x-0 w-full h-1.5 appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:shadow-sm [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-600 [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:shadow-sm [&::-moz-range-thumb]:cursor-pointer"
+          style={{ zIndex: valueLow > min + (max - min) * 0.5 ? 3 : 1 }}
+        />
+        {/* High thumb */}
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={valueHigh}
+          onChange={(e) => {
+            const v = Number(e.target.value);
+            onHighChange(Math.max(v, valueLow + step));
+          }}
+          data-umami-event={umamiEvent}
+          className="absolute inset-x-0 w-full h-1.5 appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:shadow-sm [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-600 [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:shadow-sm [&::-moz-range-thumb]:cursor-pointer"
+          style={{ zIndex: 2 }}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default function FilterPanel({ stations }: FilterPanelProps) {
@@ -47,7 +140,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const setAllWeights = useAppStore((s) => s.setAllWeights);
   const resetWeights = useAppStore((s) => s.resetWeights);
   const filters = useAppStore((s) => s.filters);
+  const setMinRent = useAppStore((s) => s.setMinRent);
   const setMaxRent = useAppStore((s) => s.setMaxRent);
+  const setMinCommute = useAppStore((s) => s.setMinCommute);
   const setMaxCommute = useAppStore((s) => s.setMaxCommute);
   const setCategoryMin = useAppStore((s) => s.setCategoryMin);
   const setFilters = useAppStore((s) => s.setFilters);
@@ -64,7 +159,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const deferredWeights = useDeferredValue(weights);
 
   const filtersActive =
+    filters.minRent > DEFAULT_FILTERS.minRent ||
     filters.maxRent < DEFAULT_FILTERS.maxRent ||
+    filters.minCommute > DEFAULT_FILTERS.minCommute ||
     filters.maxCommute < DEFAULT_FILTERS.maxCommute ||
     Object.keys(filters.categoryMins).length > 0 ||
     hideFloodRisk ||
@@ -221,49 +318,35 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         </div>
 
         <div className="space-y-3">
-          {/* Max Rent */}
-          <div>
-            <div className="flex justify-between text-xs mb-0.5">
-              <span className="text-gray-700">Max Rent</span>
-              <span className="text-gray-500 tabular-nums">{formatRent(filters.maxRent)}</span>
-            </div>
-            <input
-              type="range"
-              min={RENT_MIN}
-              max={RENT_MAX}
-              step={RENT_STEP}
-              value={filters.maxRent}
-              onChange={(e) => { setMaxRent(Number(e.target.value)); setActivePreset(null); }}
-              data-umami-event="filter-rent"
-              className="w-full h-1.5 accent-blue-600 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:rounded-full"
-            />
-            <div className="flex justify-between text-[10px] text-gray-400 -mt-0.5">
-              <span>{'\u00a5'}80k</span>
-              <span>{'\u00a5'}300k</span>
-            </div>
-          </div>
+          {/* Rent range */}
+          <DualRange
+            min={RENT_MIN}
+            max={RENT_MAX}
+            step={RENT_STEP}
+            valueLow={filters.minRent}
+            valueHigh={filters.maxRent}
+            onLowChange={(v) => { setMinRent(v); setActivePreset(null); }}
+            onHighChange={(v) => { setMaxRent(v); setActivePreset(null); }}
+            formatLow={formatRent(filters.minRent, true)}
+            formatHigh={formatRent(filters.maxRent, false)}
+            label="Rent"
+            umamiEvent="filter-rent"
+          />
 
-          {/* Max Commute */}
-          <div>
-            <div className="flex justify-between text-xs mb-0.5">
-              <span className="text-gray-700">Max Commute</span>
-              <span className="text-gray-500 tabular-nums">{formatCommute(filters.maxCommute)}</span>
-            </div>
-            <input
-              type="range"
-              min={COMMUTE_MIN}
-              max={COMMUTE_MAX}
-              step={COMMUTE_STEP}
-              value={filters.maxCommute}
-              onChange={(e) => { setMaxCommute(Number(e.target.value)); setActivePreset(null); }}
-              data-umami-event="filter-commute"
-              className="w-full h-1.5 accent-blue-600 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:rounded-full"
-            />
-            <div className="flex justify-between text-[10px] text-gray-400 -mt-0.5">
-              <span>10 min</span>
-              <span>60 min</span>
-            </div>
-          </div>
+          {/* Commute range */}
+          <DualRange
+            min={COMMUTE_MIN}
+            max={COMMUTE_MAX}
+            step={COMMUTE_STEP}
+            valueLow={filters.minCommute}
+            valueHigh={filters.maxCommute}
+            onLowChange={(v) => { setMinCommute(v); setActivePreset(null); }}
+            onHighChange={(v) => { setMaxCommute(v); setActivePreset(null); }}
+            formatLow={formatCommute(filters.minCommute, true)}
+            formatHigh={formatCommute(filters.maxCommute, false)}
+            label="Commute"
+            umamiEvent="filter-commute"
+          />
 
           {/* Category Minimums */}
           <details className="group">
@@ -286,7 +369,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 return (
                   <div key={key} className="flex items-center gap-1.5">
                     <span className="text-[11px] text-gray-600 w-16 truncate shrink-0" title={RATING_LABELS[key]}>
-                      {RATING_LABELS[key].split(' ')[0]}
+                      {CATEGORY_SHORT_LABELS[key]}
                     </span>
                     <div className="flex gap-0.5">
                       <button

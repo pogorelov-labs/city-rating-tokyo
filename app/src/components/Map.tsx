@@ -233,17 +233,27 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   );
 
   // Dealbreaker filters: rent, commute, category mins, environment safety
-  const rentFilterActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
   const visibleStations = useMemo(() => {
     const noFilters =
       !hideFloodRisk &&
       !hideHighSeismic &&
+      filters.minRent <= DEFAULT_FILTERS.minRent &&
       filters.maxRent >= DEFAULT_FILTERS.maxRent &&
+      filters.minCommute <= DEFAULT_FILTERS.minCommute &&
       filters.maxCommute >= DEFAULT_FILTERS.maxCommute &&
       Object.keys(filters.categoryMins).length === 0;
     if (noFilters) return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
     return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic);
   }, [scoredStations, filters, hideFloodRisk, hideHighSeismic]);
+
+  // Top-5 ranked slugs for subtle pulse effect on map
+  const top5Slugs = useMemo(() => {
+    const sorted = [...visibleStations]
+      .filter((s) => s.score !== null)
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+      .slice(0, 5);
+    return new Set(sorted.map((s) => s.slug));
+  }, [visibleStations]);
 
   const flyTarget = useMemo(() => {
     if (!selectedStation) return null;
@@ -474,6 +484,27 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           stroke/fill attributes. With className set at the constructor level,
           Leaflet's _initPath applies it to the SVG path and the CSS keyframes
           animation can run. */}
+      {/* Top-5 ranked: barely visible pulse in their composite color */}
+      {!heatmapMode && visibleStations
+        .filter((s) => top5Slugs.has(s.slug) && s.slug !== highlightedSlug)
+        .map((s) => {
+          const c = s.score !== null ? compositeToColor(s.score, compositeAnchors) : '#374151';
+          return (
+            <CircleMarker
+              key={`top5-${s.slug}`}
+              center={[s.lat, s.lng]}
+              radius={14}
+              interactive={false}
+              className="top-ranked-pulse"
+              pathOptions={{
+                color: c,
+                weight: 1,
+                fillColor: c,
+                fillOpacity: 0.05,
+              }}
+            />
+          );
+        })}
       {highlightedStation && (
         <CircleMarker
           key={`halo-${highlightedStation.slug}`}

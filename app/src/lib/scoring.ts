@@ -324,16 +324,21 @@ export function applyDealbreakers(
   hideFloodRisk: boolean,
   hideHighSeismic: boolean,
 ): FilteredMapStation[] {
-  const rentActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
-  const commuteActive = filters.maxCommute < DEFAULT_FILTERS.maxCommute;
+  const rentMaxActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
+  const rentMinActive = filters.minRent > DEFAULT_FILTERS.minRent;
+  const rentActive = rentMaxActive || rentMinActive;
+  const commuteMaxActive = filters.maxCommute < DEFAULT_FILTERS.maxCommute;
+  const commuteMinActive = filters.minCommute > DEFAULT_FILTERS.minCommute;
   const catKeys = Object.keys(filters.categoryMins) as (keyof StationRatings)[];
 
   return stations
     .filter((s) => {
-      // Rent filter: known and over limit → fail
-      if (rentActive && s.rent_1k !== null && s.rent_1k > filters.maxRent) return false;
-      // Commute filter: known and over limit → fail
-      if (commuteActive && s.min_transit !== null && s.min_transit > filters.maxCommute) return false;
+      // Rent filter: known and outside range → fail
+      if (rentMaxActive && s.rent_1k !== null && s.rent_1k > filters.maxRent) return false;
+      if (rentMinActive && s.rent_1k !== null && s.rent_1k < filters.minRent) return false;
+      // Commute filter: known and outside range → fail
+      if (commuteMaxActive && s.min_transit !== null && s.min_transit > filters.maxCommute) return false;
+      if (commuteMinActive && s.min_transit !== null && s.min_transit < filters.minCommute) return false;
       // Category minimums
       for (const key of catKeys) {
         const min = filters.categoryMins[key];
