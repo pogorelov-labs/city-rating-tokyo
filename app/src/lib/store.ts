@@ -1,19 +1,19 @@
 'use client';
 
 import { create } from 'zustand';
-import { WeightConfig, DEFAULT_WEIGHTS } from './types';
+import { WeightConfig, DEFAULT_WEIGHTS, FilterState, DEFAULT_FILTERS, StationRatings } from './types';
 
 interface AppState {
   weights: WeightConfig;
   setWeight: (key: keyof WeightConfig, value: number) => void;
   setAllWeights: (weights: WeightConfig) => void;
   resetWeights: () => void;
-  maxRent: number;
+  filters: FilterState;
   setMaxRent: (v: number) => void;
-  maxCommute: number;
   setMaxCommute: (v: number) => void;
-  minScore: number;
-  setMinScore: (v: number) => void;
+  setCategoryMin: (key: keyof StationRatings, value: number | null) => void;
+  setFilters: (filters: FilterState) => void;
+  resetFilters: () => void;
   selectedStation: string | null;
   setSelectedStation: (slug: string | null) => void;
   hoveredStation: string | null;
@@ -32,6 +32,7 @@ interface AppState {
   clearCompareStations: () => void;
   hydrateFromUrl: (partial: {
     weights?: WeightConfig;
+    filters?: Partial<FilterState>;
     selectedStation?: string;
     compareStations?: string[];
     heatmapMode?: boolean;
@@ -45,12 +46,23 @@ export const useAppStore = create<AppState>((set) => ({
     set((state) => ({ weights: { ...state.weights, [key]: value } })),
   setAllWeights: (weights) => set({ weights: { ...weights } }),
   resetWeights: () => set({ weights: { ...DEFAULT_WEIGHTS } }),
-  maxRent: 300000,
-  setMaxRent: (maxRent) => set({ maxRent }),
-  maxCommute: 60,
-  setMaxCommute: (maxCommute) => set({ maxCommute }),
-  minScore: 0,
-  setMinScore: (minScore) => set({ minScore }),
+  filters: { ...DEFAULT_FILTERS, categoryMins: {} },
+  setMaxRent: (maxRent) =>
+    set((state) => ({ filters: { ...state.filters, maxRent } })),
+  setMaxCommute: (maxCommute) =>
+    set((state) => ({ filters: { ...state.filters, maxCommute } })),
+  setCategoryMin: (key, value) =>
+    set((state) => {
+      const categoryMins = { ...state.filters.categoryMins };
+      if (value === null) {
+        delete categoryMins[key];
+      } else {
+        categoryMins[key] = value;
+      }
+      return { filters: { ...state.filters, categoryMins } };
+    }),
+  setFilters: (filters) => set({ filters: { ...filters, categoryMins: { ...filters.categoryMins } } }),
+  resetFilters: () => set({ filters: { ...DEFAULT_FILTERS, categoryMins: {} } }),
   selectedStation: null,
   setSelectedStation: (selectedStation) => set({ selectedStation }),
   hoveredStation: null,
@@ -72,11 +84,20 @@ export const useAppStore = create<AppState>((set) => ({
   removeCompareStation: (slug) =>
     set((state) => ({ compareStations: state.compareStations.filter((s) => s !== slug) })),
   clearCompareStations: () => set({ compareStations: [] }),
-  hydrateFromUrl: (partial) => set((state) => ({
-    ...(partial.weights ? { weights: partial.weights } : {}),
-    ...(partial.selectedStation ? { selectedStation: partial.selectedStation } : {}),
-    ...(partial.compareStations ? { compareStations: partial.compareStations } : {}),
-    ...(partial.heatmapMode !== undefined ? { heatmapMode: partial.heatmapMode } : {}),
-    ...(partial.heatmapDimension ? { heatmapDimension: partial.heatmapDimension } : {}),
-  })),
+  hydrateFromUrl: (partial) => set((state) => {
+    const updates: Partial<AppState> = {};
+    if (partial.weights) updates.weights = partial.weights;
+    if (partial.selectedStation) updates.selectedStation = partial.selectedStation;
+    if (partial.compareStations) updates.compareStations = partial.compareStations;
+    if (partial.heatmapMode !== undefined) updates.heatmapMode = partial.heatmapMode;
+    if (partial.heatmapDimension) updates.heatmapDimension = partial.heatmapDimension;
+    if (partial.filters) {
+      updates.filters = {
+        ...state.filters,
+        ...partial.filters,
+        categoryMins: { ...state.filters.categoryMins, ...partial.filters.categoryMins },
+      };
+    }
+    return updates;
+  }),
 }));

@@ -127,6 +127,18 @@ export interface WeightConfig {
   crowd: number;
 }
 
+export interface FilterState {
+  maxRent: number;
+  maxCommute: number;
+  categoryMins: Partial<Record<keyof StationRatings, number>>;
+}
+
+export const DEFAULT_FILTERS: FilterState = {
+  maxRent: 300000,
+  maxCommute: 60,
+  categoryMins: {},
+};
+
 export const DEFAULT_WEIGHTS: WeightConfig = {
   food: 15,
   nightlife: 10,
@@ -164,6 +176,7 @@ export interface PresetProfile {
   label: string;
   icon: string;
   weights: WeightConfig;
+  filters?: Partial<FilterState>;
 }
 
 export const PRESET_PROFILES: PresetProfile[] = [
@@ -172,24 +185,28 @@ export const PRESET_PROFILES: PresetProfile[] = [
     label: 'Young Pro',
     icon: '💼',
     weights: { food: 15, nightlife: 20, transport: 30, rent: 20, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+    filters: { maxRent: 150000, maxCommute: 30 },
   },
   {
     id: 'family',
     label: 'Family',
     icon: '👨‍👩‍👧',
     weights: { food: 0, nightlife: 0, transport: 15, rent: 10, safety: 30, green: 25, gym_sports: 0, vibe: 0, crowd: 20 },
+    filters: { maxCommute: 40, categoryMins: { safety: 7 } },
   },
   {
     id: 'foodie-budget',
     label: 'Foodie Budget',
     icon: '🍜',
     weights: { food: 35, nightlife: 15, transport: 0, rent: 35, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+    filters: { maxRent: 120000 },
   },
   {
     id: 'digital-nomad',
     label: 'Digital Nomad',
     icon: '💻',
     weights: { food: 20, nightlife: 0, transport: 10, rent: 20, safety: 0, green: 0, gym_sports: 10, vibe: 25, crowd: 15 },
+    filters: { maxRent: 130000 },
   },
 ];
 

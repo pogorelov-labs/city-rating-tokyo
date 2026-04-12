@@ -10,13 +10,14 @@ import {
   useMap,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MapStation } from '@/lib/types';
+import { MapStation, DEFAULT_FILTERS } from '@/lib/types';
 import {
   calculateWeightedScore,
   compositeToColor,
   computeCompositeAnchors,
   scoreToColor,
   ColorDimension,
+  applyDealbreakers,
 } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import Link from 'next/link';
@@ -195,6 +196,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const compareStations = useAppStore((s) => s.compareStations);
   const addCompareStation = useAppStore((s) => s.addCompareStation);
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
+  const filters = useAppStore((s) => s.filters);
   const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
   const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
 
@@ -230,15 +232,18 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     [stations, deferredWeights],
   );
 
-  // Binary environment safety filters — exclude flood-risk / high-seismic stations
+  // Dealbreaker filters: rent, commute, category mins, environment safety
+  const rentFilterActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
   const visibleStations = useMemo(() => {
-    if (!hideFloodRisk && !hideHighSeismic) return scoredStations;
-    return scoredStations.filter((s) => {
-      if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
-      if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
-      return true;
-    });
-  }, [scoredStations, hideFloodRisk, hideHighSeismic]);
+    const noFilters =
+      !hideFloodRisk &&
+      !hideHighSeismic &&
+      filters.maxRent >= DEFAULT_FILTERS.maxRent &&
+      filters.maxCommute >= DEFAULT_FILTERS.maxCommute &&
+      Object.keys(filters.categoryMins).length === 0;
+    if (noFilters) return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
+    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic);
+  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic]);
 
   const flyTarget = useMemo(() => {
     if (!selectedStation) return null;
@@ -325,7 +330,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               color: strokeColor,
               weight: strokeWeight,
               opacity: heatmapMode && !isHighlighted && !isCompared ? 0 : 0.9,
-              fillOpacity: isHighlighted ? 1 : (heatmapMode ? 0.45 : 0.85),
+              fillOpacity: isHighlighted ? 1 : (heatmapMode ? 0.45 : (station.rentUnknown ? 0.35 : 0.85)),
             }}
             eventHandlers={{
               click: () => {
