@@ -51,15 +51,21 @@ body {
   border-top-color: white !important;
 }
 
-/* Smooth marker transitions on hover/selection */
+/* Smooth marker transitions on hover/selection.
+   With preferCanvas=true the main markers are on <canvas>, so these
+   transitions only apply to SVG overlay elements (halo, top-5 pulse). */
 .leaflet-interactive {
   transition: r 150ms ease-out, stroke-width 150ms ease-out, fill-opacity 150ms ease-out;
 }
 
-/* Subtle drop-shadow for all map markers so circles pop on the light Carto
-   basemap. Applied once to the overlay SVG pane (not per-path) so the
-   browser composites a single shadow pass across all 1493+ markers. */
+/* Subtle drop-shadow for map overlay elements (halo, pulse rings).
+   With Canvas renderer, the main 1493 markers are on <canvas> and don't
+   benefit from SVG filters; the canvas pane gets its own subtle shadow. */
 .leaflet-overlay-pane svg {
+  filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.25));
+}
+
+.leaflet-canvas-pane canvas {
   filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.25));
 }
 
