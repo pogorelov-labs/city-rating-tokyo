@@ -319,6 +319,9 @@ Sprint 3 (UI transparency):
 - `CRTKY-51` Data freshness indicator (uses `data_date` from metadata)
 - `CRTKY-52` AI-researched vs data-driven station badge
 
+Sprint 4 (filter system):
+- ✅ `CRTKY-88` Dealbreaker filters — hard constraints (rent, commute, per-category mins) + preset integration + URL serialization (PR #60)
+
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
 **Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella; дочерние **`CRTKY-81`** реальные `transit_minutes`, **`CRTKY-82`** криминал префектур, **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs, **`CRTKY-84`** обновление MLIT S12 / закрытие хвоста пассажиров (crowd). У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** — комментарии *Spec packet*. **Док-синхронизация готовности:** `CLAUDE.md` §Data readiness, этот файл §Критическая оценка, `README.md`, `00-overview.md` (2026-04-07).
@@ -334,7 +337,7 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 | Аспект | Статус | ~% готовности | Сложность довести |
 |--------|--------|---------------|-------------------|
 | UI: полоса **Hubs** (`HubStrip`), 5 хабов, ссылка в Google Maps | ✅ на странице станции, если есть `transit_minutes` | UI **100%** | — |
-| Фильтр **max commute** на карте (по минимуму из хабов) | ✅ в `scoring.ts` | **100%** | — |
+| Фильтр **max commute** на карте (по минимуму из хабов) | ✅ в `scoring.ts` + **UI подключен** (PR #60) | **100%** | — |
 | Качество данных | ✅ калибровано | **~80%** | **M** (upgrade to GTFS) |
 
 ✅ **CRTKY-81 (done, PR #56):** Географическая модель (Haversine + line connectivity), калибрована grid search по 252 AI ground truth. MAE 5.5 мин, 85% within 10 min. Spot-checked vs Google Maps. Output: `data/transit-times.json`, потребляется `export-ratings.py`. **Upgrade path:** TokyoGTFS + RAPTOR для timetable-based routing.
