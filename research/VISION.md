@@ -290,7 +290,7 @@ Data updated: April 2026 · Sources: 6 · Confidence: high
 ### Sprint 3: UI transparency [Phase E+]
 **Задачи по категориям:**
 1. ✅ Confidence badge component (CRTKY-47, merged)
-2. Data-source tooltip (replace current generic tooltips) — CRTKY-48
+2. ✅ Data-source tooltip (replace current generic tooltips) — CRTKY-48 (merged in PR #57)
 3. "How ratings work" expandable section on station page — CRTKY-49
 4. /methodology page — CRTKY-50
 5. AI-researched vs data-driven badge — CRTKY-52
@@ -322,6 +322,11 @@ Sprint 3 (UI transparency):
 Sprint 4 (filter system):
 - ✅ `CRTKY-88` Dealbreaker filters — hard constraints (rent, commute, per-category mins) + preset integration + URL serialization (PR #60)
 - ✅ `CRTKY-89` UX polish — dual-range sliders (min+max), "Quietness" label, top-5 map pulse (PR #61)
+
+Sprint 5 (mobile / performance):
+- ✅ `CRTKY-91` Canvas renderer + smart flyTo + tile prefetch (PR #67)
+- ✅ `CRTKY-90` Map z-order by rating + unknown-data border fade (PR #64)
+- ✅ Mobile touch UX — viewport meta, tap-to-toggle tooltips, enriched Popup on touch, map marker +4px, zoom buttons, gallery swipe+keyboard, slider thumbs 24px, search hints, safe-area-inset (PR #69)
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
