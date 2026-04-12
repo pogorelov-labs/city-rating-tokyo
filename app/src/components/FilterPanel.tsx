@@ -234,7 +234,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       {/* Search */}
       <div className="relative">
         <input
-          type="text"
+          type="search"
+          inputMode="search"
+          enterKeyHint="search"
+          autoComplete="off"
+          spellCheck={false}
           placeholder="Search station..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}

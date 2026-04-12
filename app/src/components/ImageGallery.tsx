@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { trackError } from '@/lib/track-error';
 
 interface GalleryImage {
@@ -83,32 +83,72 @@ function Lightbox({
   onClose,
   onPrev,
   onNext,
+  index,
+  total,
 }: {
   image: GalleryImage;
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
+  index: number;
+  total: number;
 }) {
+  const touchStartX = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Keyboard navigation: arrow keys + escape
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') onPrev();
+      else if (e.key === 'ArrowRight') onNext();
+      else if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [onPrev, onNext, onClose]);
+
+  // Touch swipe detection
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) onPrev();
+      else onNext();
+    }
+  }, [onPrev, onNext]);
+
   return (
     <div
+      ref={containerRef}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
       onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      style={{ touchAction: 'pan-y' }}
     >
       <button
-        className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10"
+        className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
         onClick={onClose}
+        aria-label="Close lightbox"
       >
         &times;
       </button>
       <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 p-2"
+        className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        aria-label="Previous image"
       >
         &#8249;
       </button>
       <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 p-2"
+        className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gray-300 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
         onClick={(e) => { e.stopPropagation(); onNext(); }}
+        aria-label="Next image"
       >
         &#8250;
       </button>
@@ -119,8 +159,9 @@ function Lightbox({
         onClick={(e) => e.stopPropagation()}
         onError={() => trackError('image', { src: image.url, context: 'lightbox' })}
       />
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-        {image.alt}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center">
+        <div className="text-white/70 text-sm">{image.alt}</div>
+        <div className="text-white/40 text-xs mt-1">{index + 1} / {total}</div>
       </div>
     </div>
   );
@@ -175,6 +216,8 @@ export default function ImageGallery({ images, stationName }: ImageGalleryProps)
           onClose={closeLightbox}
           onPrev={prevImage}
           onNext={nextImage}
+          index={lightboxIndex}
+          total={images.length}
         />
       )}
     </section>

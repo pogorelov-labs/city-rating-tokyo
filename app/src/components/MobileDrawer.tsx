@@ -17,7 +17,8 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
       <button
         onClick={() => setOpen(true)}
         data-umami-event="open-mobile-filters"
-        className="md:hidden fixed bottom-4 left-4 z-[1000] bg-white shadow-lg rounded-full px-4 py-2.5 text-sm font-medium border border-gray-200 flex items-center gap-2 active:scale-95 transition-transform"
+        className="md:hidden fixed left-4 z-[1000] bg-white shadow-lg rounded-full px-4 py-2.5 text-sm font-medium border border-gray-200 flex items-center gap-2 active:scale-95 transition-transform"
+        style={{ bottom: 'max(16px, env(safe-area-inset-bottom, 16px))' }}
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
@@ -59,7 +60,7 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto" style={{ maxHeight: 'calc(80vh - 60px)' }}>
+        <div className="overflow-y-auto" style={{ maxHeight: 'calc(80vh - 60px)', paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
           <FilterPanel stations={stations} />
         </div>
       </div>

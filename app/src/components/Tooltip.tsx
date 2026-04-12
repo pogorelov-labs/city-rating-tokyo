@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { useIsTouch } from '@/lib/use-is-touch';
 
 interface TooltipProps {
   /** Tooltip body. Accepts any ReactNode so callers can render rich multi-line layouts. */
@@ -38,18 +39,44 @@ export default function Tooltip({
 }: TooltipProps) {
   const [show, setShow] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const wrapperRef = useRef<HTMLElement>(null);
+  const isTouch = useIsTouch();
 
+  // Desktop: hover handlers
   const handleEnter = () => {
+    if (isTouch) return;
     clearTimeout(timeoutRef.current);
-    // 400ms enter delay so briefly brushing the `?` icon during scroll
-    // doesn't trigger a tooltip flash. CRTKY-67.
     timeoutRef.current = setTimeout(() => setShow(true), 400);
   };
 
   const handleLeave = () => {
+    if (isTouch) return;
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setShow(false), 150);
   };
+
+  // Touch: tap to toggle
+  const handleClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isTouch) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setShow((prev) => !prev);
+    },
+    [isTouch],
+  );
+
+  // Touch: close on tap outside
+  useEffect(() => {
+    if (!isTouch || !show) return;
+    const handleOutside = (e: PointerEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setShow(false);
+      }
+    };
+    document.addEventListener('pointerdown', handleOutside);
+    return () => document.removeEventListener('pointerdown', handleOutside);
+  }, [isTouch, show]);
 
   const Wrapper = wrapper;
   const baseClass = wrapper === 'div'
@@ -59,9 +86,11 @@ export default function Tooltip({
 
   return (
     <Wrapper
+      ref={wrapperRef as React.Ref<HTMLDivElement & HTMLSpanElement>}
       className={wrapperClass}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
+      onClick={handleClick}
     >
       {children}
       {showHelpIcon && (

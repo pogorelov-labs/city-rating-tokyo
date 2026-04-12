@@ -41,7 +41,7 @@ export default function ComparePanel({ stations }: Props) {
   const keys = Object.keys(RATING_LABELS) as (keyof WeightConfig)[];
 
   return (
-    <div className="absolute bottom-0 left-0 md:left-72 right-0 z-[900] bg-white rounded-t-xl shadow-2xl border-t border-gray-200 max-h-[50vh] overflow-y-auto">
+    <div className="absolute bottom-0 left-0 md:left-72 right-0 z-[900] bg-white rounded-t-xl shadow-2xl border-t border-gray-200 max-h-[50vh] overflow-y-auto" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
       <div className="p-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-3">

@@ -21,6 +21,7 @@ import {
   applyDealbreakers,
 } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
+import { useIsTouch } from '@/lib/use-is-touch';
 import Link from 'next/link';
 
 /**
@@ -86,6 +87,34 @@ function FlyToStation({
     };
   }, [map, lat, lng, onFlyStart, onFlyEnd]);
   return null;
+}
+
+/** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
+function TouchZoomControls() {
+  const map = useMap();
+  return (
+    <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
+      <div
+        className="leaflet-control flex flex-col gap-1"
+        style={{ pointerEvents: 'auto', marginBottom: 80, marginRight: 10 }}
+      >
+        <button
+          onClick={() => map.zoomIn()}
+          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          aria-label="Zoom in"
+        >
+          +
+        </button>
+        <button
+          onClick={() => map.zoomOut()}
+          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          aria-label="Zoom out"
+        >
+          −
+        </button>
+      </div>
+    </div>
+  );
 }
 
 /**
@@ -305,6 +334,11 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
   const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
 
+  const isTouch = useIsTouch();
+
+  // Touch radius bump — meets WCAG 44px minimum at zoom 12+
+  const TOUCH_RADIUS_BUMP = 4;
+
   // Scoring 1493 stations on every drag frame is expensive. Use a deferred
   // copy of the weights so React can skip stale recomputes while the user
   // is still dragging. The slider UI itself (in FilterPanel) reads the live
@@ -397,6 +431,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           onFlyEnd={onFlyEnd}
         />
       )}
+      {isTouch && <TouchZoomControls />}
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
@@ -415,9 +450,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               ? scoreToColor(displayValue, heatmapDimension as ColorDimension)
               : '#9CA3AF')
           : (score !== null ? compositeToColor(score, compositeAnchors) : '#9CA3AF');
-        const radius = heatmapMode
+        const baseRadius = heatmapMode
           ? (displayValue !== null ? 14 + displayValue * 1.2 : 0)
           : (score !== null ? 6 + score * 0.5 : 5);
+        const radius = isTouch ? baseRadius + TOUCH_RADIUS_BUMP : baseRadius;
 
         if (heatmapMode && displayValue === null) return null;
 
@@ -480,66 +516,83 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               },
             }}
           >
-            {/* Rich hover tooltip */}
-            <Tooltip
-              direction="top"
-              offset={[0, -10]}
-              opacity={1}
-              className="station-tooltip"
-            >
-              <div style={{ width: 260 }}>
-                <StationTooltipHero
-                  key={`${station.slug}-${thumbEntry?.thumb ?? ''}`}
-                  slug={station.slug}
-                  thumb={thumbEntry?.thumb}
-                  lqip={thumbEntry?.lqip}
-                  nameEn={station.name_en}
-                  nameJp={station.name_jp}
-                  score={score}
-                  color={color}
-                />
-                <div style={{ padding: '8px 10px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: 14 }}>{station.name_en}</div>
-                      <div style={{ color: '#6b7280', fontSize: 12 }}>{station.name_jp}</div>
+            {/* Rich hover tooltip — desktop only (touch users get enriched Popup) */}
+            {!isTouch && (
+              <Tooltip
+                direction="top"
+                offset={[0, -10]}
+                opacity={1}
+                className="station-tooltip"
+              >
+                <div style={{ width: 260 }}>
+                  <StationTooltipHero
+                    key={`${station.slug}-${thumbEntry?.thumb ?? ''}`}
+                    slug={station.slug}
+                    thumb={thumbEntry?.thumb}
+                    lqip={thumbEntry?.lqip}
+                    nameEn={station.name_en}
+                    nameJp={station.name_jp}
+                    score={score}
+                    color={color}
+                  />
+                  <div style={{ padding: '8px 10px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 14 }}>{station.name_en}</div>
+                        <div style={{ color: '#6b7280', fontSize: 12 }}>{station.name_jp}</div>
+                      </div>
+                      {score !== null && (
+                        <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>
+                          {score.toFixed(1)}
+                        </div>
+                      )}
                     </div>
-                    {score !== null && (
-                      <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>
-                        {score.toFixed(1)}
+                    {snippet && (
+                      <div style={{
+                        fontSize: 11,
+                        color: '#4b5563',
+                        marginTop: 6,
+                        lineHeight: 1.4,
+                        display: '-webkit-box',
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                      }}>
+                        {snippet}
                       </div>
                     )}
-                  </div>
-                  {snippet && (
-                    <div style={{
-                      fontSize: 11,
-                      color: '#4b5563',
-                      marginTop: 6,
-                      lineHeight: 1.4,
-                      display: '-webkit-box',
-                      WebkitLineClamp: 3,
-                      WebkitBoxOrient: 'vertical',
-                      overflow: 'hidden',
-                    }}>
-                      {snippet}
+                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
+                      {station.line_count} lines
+                      {station.rent_1k && (
+                        <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
+                      )}
                     </div>
-                  )}
-                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
-                    {station.line_count} lines
-                    {station.rent_1k && (
-                      <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
-                    Click for details →
+                    <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
+                      Click for details →
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Tooltip>
+              </Tooltip>
+            )}
 
-            {/* Click popup */}
+            {/* Click popup — enriched on touch with image + snippet */}
             <Popup>
               <div className="min-w-[180px]">
+                {/* Touch: show thumbnail header (same as desktop tooltip) */}
+                {isTouch && (thumbEntry?.thumb || thumbEntry?.lqip) && (
+                  <div style={{ margin: '-10px -12px 8px', overflow: 'hidden', borderRadius: '8px 8px 0 0' }}>
+                    <StationTooltipHero
+                      key={`popup-${station.slug}`}
+                      slug={station.slug}
+                      thumb={thumbEntry?.thumb}
+                      lqip={thumbEntry?.lqip}
+                      nameEn={station.name_en}
+                      nameJp={station.name_jp}
+                      score={score}
+                      color={color}
+                    />
+                  </div>
+                )}
                 <div className="font-bold text-base">
                   {station.name_en}
                 </div>
@@ -553,10 +606,14 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     </div>
                     <div className="text-xs text-gray-500 mb-2">
                       {station.line_count} lines
+                      {station.rent_1k && (
+                        <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
+                      )}
                     </div>
-                    {station.rent_1k && (
-                      <div className="text-xs">
-                        Rent: ~&yen;{(station.rent_1k / 1000).toFixed(0)}k/mo
+                    {/* Touch: show snippet in popup */}
+                    {isTouch && snippet && (
+                      <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">
+                        {snippet}
                       </div>
                     )}
                     <div className="flex items-center gap-3 mt-1">

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { ConfidenceLevel } from '@/lib/types';
+import { useIsTouch } from '@/lib/use-is-touch';
 
 interface Props {
   level: ConfidenceLevel;
@@ -75,32 +76,61 @@ export const SOURCE_LABELS: Record<string, string> = {
 export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) {
   const [show, setShow] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const isTouch = useIsTouch();
 
+  // Desktop: hover handlers
   const handleEnter = () => {
+    if (isTouch) return;
     clearTimeout(timeoutRef.current);
-    // 400ms enter delay so briefly brushing the badge during scroll/pan
-    // doesn't trigger a tooltip flash. Leave delay stays at 150ms so the
-    // tooltip doesn't vanish mid-click.
     timeoutRef.current = setTimeout(() => setShow(true), 400);
   };
   const handleLeave = () => {
+    if (isTouch) return;
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setShow(false), 150);
   };
+
+  // Touch: tap to toggle
+  const handleClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isTouch) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setShow((prev) => !prev);
+    },
+    [isTouch],
+  );
+
+  // Touch: close on tap outside
+  useEffect(() => {
+    if (!isTouch || !show) return;
+    const handleOutside = (e: PointerEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setShow(false);
+      }
+    };
+    document.addEventListener('pointerdown', handleOutside);
+    return () => document.removeEventListener('pointerdown', handleOutside);
+  }, [isTouch, show]);
 
   const meta = LEVEL_META[level];
   // Shrunk from w-2/w-2.5 to w-1.5/w-2 in CRTKY-68 so the dots recede
   // visually behind the bar and number (metadata below data-ink).
   const dotSize = size === 'md' ? 'w-2 h-2' : 'w-1.5 h-1.5';
+  // On touch, dot tap target must be at least 44×44px — use padding
+  const touchPad = isTouch ? 'p-3 -m-3' : '';
   const sourceList = sources && sources.length > 0
     ? sources.map((s) => SOURCE_LABELS[s] || s).join(', ')
     : null;
 
   return (
     <span
-      className="relative inline-flex items-center shrink-0"
+      ref={containerRef}
+      className={`relative inline-flex items-center shrink-0 ${touchPad}`}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
+      onClick={handleClick}
     >
       <span
         className={`${dotSize} rounded-full cursor-help inline-block`}

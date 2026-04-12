@@ -109,3 +109,37 @@ body {
   animation: top-ranked-pulse 2.4s ease-in-out infinite;
   pointer-events: none;
 }
+
+/* ─── Touch / mobile adaptations ─── */
+
+/* Bigger slider thumbs on touch devices (14px → 24px) */
+@media (pointer: coarse) {
+  input[type="range"]::-webkit-slider-thumb {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  /* Taller track hit area for easier grabbing */
+  input[type="range"] {
+    height: 12px !important;
+  }
+}
+
+/* Suppress cursor-help on touch — no cursor exists */
+@media (hover: none) {
+  .cursor-help {
+    cursor: default;
+  }
+}
+
+/* Disable the 400ms tooltip-appear delay on touch — tap-triggered tooltips
+   should show immediately (the delay exists to ignore hover-brush). */
+@media (hover: none) {
+  .station-tooltip {
+    animation: none;
+    visibility: visible;
+  }
+}
