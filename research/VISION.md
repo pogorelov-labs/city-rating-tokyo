@@ -66,6 +66,9 @@
 | HP `midnight_count` | ✅ | Phase A1 / `hotpepper` — см. [research/01-nightlife.md] |
 | OSM karaoke + cultural + extended | ✅ | Phase A2 / `osm_extended` — см. [research/01-nightlife.md], [research/06-vibe.md] |
 | Nominatim ward mapping (1493) | ✅ | Phase B3 / `station_wards` — см. [research/05-rent.md] |
+| Station elevation (1493) | ✅ | Open-Elevation API → `station_elevation` — **CRTKY-85** |
+| Seismic hazard (1493) | ✅ | J-SHIS Y2024 → `station_seismic` — **CRTKY-86** |
+| Environment UI (info + filters) | ✅ | `NaturalEnvironment.tsx` + safety filters on map — commit `e165ff9` |
 
 **Остаётся (бэклог / Plane):**
 
@@ -77,6 +80,7 @@
 | ~~Реальные `transit_minutes`~~ | ✅ Done — калиброванная модель | Geographic + line connectivity | ~~🔴 high~~ ✅ | **CRTKY-81** ✅ |
 | MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
 | OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
+| Daily essentials (10th category) | Supermarket, pharmacy, clinic и т.д. | Overpass → `osm_livability` (scraping) | 🔴 high | **CRTKY-87** |
 
 ### Phase 0 — открытые источники до коммерции (дисциплина бэклога)
 

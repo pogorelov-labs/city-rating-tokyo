@@ -1,6 +1,6 @@
 ---
 name: city-rating-data
-description: Query and manage city-rating NocoDB data — feedback, POIs, ratings, crime stats, hostels, passenger counts
+description: Query and manage city-rating NocoDB data — feedback, POIs, ratings, crime stats, elevation, seismic, livability, passenger counts
 ---
 
 # City Rating Data Skill
@@ -26,6 +26,12 @@ Known tables (IDs may change):
 | `crime_stats` | (discover schema) | Crime statistics by area |
 | `passenger_counts` | (discover schema) | Station passenger volume |
 | `computed_ratings` | slug, food, nightlife, transport, rent, safety, green, gym_sports, vibe, crowd, source | Calculated ratings per station |
+| `osm_extended` | slug, karaoke_count, nightclub_count, cultural_venue_count, pedestrian_street_count, hostel_count | Extended OSM tags |
+| `station_wards` | slug, city_name, ward_name, prefecture | Nominatim reverse geocoding |
+| `station_crime` | slug + ArcGIS crime fields | Keishicho neighborhood-level crime (Tokyo) |
+| `station_elevation` | slug, elevation_m, lat, lng | Open-Elevation API (1493 stations, -2m to 741m) |
+| `station_seismic` | slug, prob_i60_30yr, prob_i55_30yr, intensity_50yr_p10, meshcode | J-SHIS Y2024 seismic hazard |
+| `osm_livability` | slug, supermarket_count, pharmacy_count, clinic_count, school_count, kindergarten_count, post_office_count, bank_count, laundry_count, dentist_count | Daily essentials (scraping) |
 
 ## Common operations
 
