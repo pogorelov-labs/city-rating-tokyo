@@ -23,7 +23,7 @@ const ComparePanel = dynamic(() => import('./ComparePanel'), {
 
 interface MapWrapperProps {
   stations: MapStation[];
-  thumbnails?: Record<string, string>;
+  thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
 }
 
