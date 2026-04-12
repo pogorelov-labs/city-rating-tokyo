@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import { trackError } from '@/lib/track-error';
 
 interface GalleryImage {
@@ -25,27 +25,11 @@ function GalleryImageCard({
   image: GalleryImage;
   onClick: () => void;
 }) {
-  const [inView, setInView] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Manual IntersectionObserver replaces loading="lazy" which Chrome
-  // refuses to trigger for opacity:0 images behind an LQIP layer.
-  useEffect(() => {
-    const el = cardRef.current;
-    if (!el || inView) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setInView(true); obs.disconnect(); } },
-      { rootMargin: '200px' },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [inView]);
 
   return (
     <div
-      ref={cardRef}
       className="relative group overflow-hidden rounded-lg bg-gray-100 aspect-[4/3] cursor-pointer"
       onClick={failed ? undefined : onClick}
     >
@@ -59,8 +43,10 @@ function GalleryImageCard({
           style={{ filter: 'blur(20px)', transform: 'scale(1.1)' }}
         />
       )}
-      {/* Full-res image — src set only after card enters viewport */}
-      {inView && !failed && (
+      {/* Full-res image — eager load, LQIP covers the opacity:0 state.
+          Gallery shows max 6 images; eager loading ~1 MB total is acceptable
+          and avoids Chrome lazy-loading bugs with opacity:0 behind LQIP. */}
+      {!failed && (
         <img
           src={image.url}
           alt={image.alt}
