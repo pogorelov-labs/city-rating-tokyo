@@ -55,6 +55,10 @@ function FlyToStation({
     // Already looking at this station (within ~200m at zoom 14)
     if (roughDist < 0.003 && currentZoom >= 13) return;
 
+    // Close any open popup before flying — prevents the popup card from
+    // flying around the screen during zoom animation (especially on mobile
+    // where tap auto-opens the popup).
+    map.closePopup();
     onFlyStart?.();
 
     // Smart zoom: don't force zoom 14 if already zoomed in
@@ -327,10 +331,12 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
   const filters = useAppStore((s) => s.filters);
 
-  // Guard: suppress tooltip renders + non-critical work during flyTo animation
-  const isFlyingRef = useRef(false);
-  const onFlyStart = useCallback(() => { isFlyingRef.current = true; }, []);
-  const onFlyEnd = useCallback(() => { isFlyingRef.current = false; }, []);
+  // Guard: hide SVG overlays (halo, top-5 pulse) during flyTo to prevent
+  // dual-renderer desync — the SVG layer's coordinate transform lags behind
+  // Canvas during zoom animation, causing a giant misplaced halo ring.
+  const [isFlying, setIsFlying] = useState(false);
+  const onFlyStart = useCallback(() => { setIsFlying(true); }, []);
+  const onFlyEnd = useCallback(() => { setIsFlying(false); }, []);
   const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
   const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
 
@@ -576,7 +582,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             )}
 
             {/* Click popup — enriched on touch with image + snippet */}
-            <Popup>
+            <Popup autoPan={false}>
               <div className="min-w-[180px]">
                 {/* Touch: show thumbnail header (same as desktop tooltip) */}
                 {isTouch && (thumbEntry?.thumb || thumbEntry?.lqip) && (
@@ -663,8 +669,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           `renderer={getSvgRenderer()}` forces these onto an SVG layer so CSS
           animations work even though the map uses preferCanvas for the main
           1493 markers. */}
-      {/* Top-5 ranked: barely visible pulse in their composite color */}
-      {!heatmapMode && visibleStations
+      {/* Top-5 ranked: barely visible pulse in their composite color.
+          Hidden during flyTo to avoid SVG/Canvas renderer desync. */}
+      {!heatmapMode && !isFlying && visibleStations
         .filter((s) => top5Slugs.has(s.slug) && s.slug !== highlightedSlug)
         .map((s) => {
           const c = s.score !== null ? compositeToColor(s.score, compositeAnchors) : '#374151';
@@ -685,7 +692,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             />
           );
         })}
-      {highlightedStation && (
+      {highlightedStation && !isFlying && (
         <CircleMarker
           key={`halo-${highlightedStation.slug}`}
           center={[highlightedStation.lat, highlightedStation.lng]}

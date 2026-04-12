@@ -188,14 +188,14 @@ Five traditional Japanese pigments on a diverging scale, used in two ways:
 
 **Key insight:** the bar color encodes *deviation from the Tokyo median for that category*, NOT raw value. A long bar does not mean a blue bar — e.g. Affordability `8 / 10` when `CITY_MEDIANS.rent = 8` paints kinari cream, not blue, because the station is exactly average for rent.
 
-**Data-quality dots (separate channel):** per-category confidence uses muted pigments in `CONFIDENCE_DOT_COLORS` (`ConfidenceBadge.tsx`), not the diverging scale above:
+**Data-quality icons (separate channel):** per-category confidence uses "Data Depth" SVG icons (`ConfidenceIcon` in `ConfidenceBadge.tsx`) where **shape encodes level** (readable without color). Muted Japanese pigments from `CONFIDENCE_DOT_COLORS` add a second redundant channel:
 
-| UI label | Level key | Pigment | Hex |
-|---|---|---|---|
-| Measured | `strong` | 苔色 koke-iro | `#6A8059` |
-| Partial | `moderate` | 山吹 yamabuki | `#C9A227` |
-| Estimate | `estimate` | 鈍色 nibi-iro | `#828A8C` |
-| Curated | `editorial` | 藤色 fuji-iro | `#8B6DB0` |
+| UI label | Level key | Shape | Pigment | Hex |
+|---|---|---|---|---|
+| Measured | `strong` | ◉ bullseye (dot + ring) | 苔色 koke-iro | `#6A8059` |
+| Partial | `moderate` | ● solid circle | 山吹 yamabuki | `#C9A227` |
+| Estimate | `estimate` | ○ dashed circle | 鈍色 nibi-iro | `#828A8C` |
+| Curated | `editorial` | ◆ diamond (菱形 hishigata) | 藤色 fuji-iro | `#8B6DB0` |
 
 ### Why two APIs
 
@@ -211,7 +211,7 @@ The station Ratings card teaches the "deviation, not value" rule through five vi
 1. **Median tick** — 1 px `slate-300` hairline at `median * 10%` on every bar (Tufte reference line)
 2. **Two-tone empty track** — warm `#F5F1EC` cream left of median, cool `#EFF2F4` slate right
 3. **Direction arrow** — `↑ / ↓ / −` after the value in the bar color at 65 % opacity
-4. **Pigment confidence dots** — `CONFIDENCE_DOT_COLORS.strong / moderate / estimate` → 苔色 koke-iro / 山吹 yamabuki / 鈍色 nibi-iro instead of Tailwind traffic lights
+4. **Confidence shape icons** — `ConfidenceIcon` SVG: bullseye (Measured) / solid circle (Partial) / dashed circle (Estimate) / diamond (Curated). Shape encodes level; color (koke-iro / yamabuki / nibi-iro / fuji-iro) adds redundant channel
 5. **Optional `?` on `Tooltip`** — default is a plain `text-gray-300` `?` (no grey pill) when `showHelpIcon` is true. On `/station/[slug]` Ratings, category labels use `showHelpIcon={false}` and `cursor-help` on the text so hover opens the same definition + median block without a second glyph (CRTKY-79).
 
 Tooltips on the Ratings card: **dot** hover (Measured / Partial / Estimate + sources), **category label** hover (category copy + median vs this station), **bar** hover (score + deviation + pigment line). A single muted caption under the title for every station with ratings (bar vs median + hover hints); if `station.confidence` exists, one extra clause points to dots and the chip key below — no second italic footer (avoids duplicating Uchisaiwaichō-style copy). AI-only rows without pipeline metadata have empty dot slots but the same bar explanation as computed stations.
@@ -253,8 +253,8 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `scripts/scrapers/scrape-seismic.py` | J-SHIS Y2024 seismic hazard scraper (1 req/sec, ~25 min) |
 | `scripts/scrapers/check-image-urls.py` | Bulk HEAD check of image URLs (concurrent, VPS-friendly) |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
-| `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width dot column (`w-6`), `ConfidenceBadge` before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Caption always explains bars; dot clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
-| `app/src/components/ConfidenceBadge.tsx` | Muted pigment dot (koke-iro / yamabuki / nibi-iro / fuji-iro) with source tooltip. Exports `CONFIDENCE_DOT_COLORS` for legend re-use. 400 ms enter delay on desktop (CRTKY-67); **tap-to-toggle on touch** via `useIsTouch()` with enlarged tap target (p-3 padding). Label wording is "Measured / Partial / Estimate / Curated" (CRTKY-67 + CRTKY-83) |
+| `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width icon column (`w-6`), `ConfidenceBadge` (SVG shape icons) before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Legend chips use `ConfidenceIcon` at 10px. Caption always explains bars; icon clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
+| `app/src/components/ConfidenceBadge.tsx` | **"Data Depth" SVG icons** — shape encodes confidence level (bullseye = Measured, solid circle = Partial, dashed circle = Estimate, diamond 菱形 = Curated). Colors unchanged (koke-iro / yamabuki / nibi-iro / fuji-iro). Exports `ConfidenceIcon` (reusable SVG, 14×14 viewBox) + `CONFIDENCE_DOT_COLORS` + `SOURCE_LABELS`. 400 ms enter delay on desktop (CRTKY-67); **tap-to-toggle on touch** via `useIsTouch()` with enlarged tap target (p-3 padding). Label wording is "Measured / Partial / Estimate / Curated" (CRTKY-67 + CRTKY-83) |
 | `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
 | `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. **Desktop:** 400 ms enter delay + 150 ms leave delay (hover). **Touch:** tap-to-toggle via `useIsTouch()`, tap-outside closes (pointerdown listener). Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68); station Ratings labels opt out (CRTKY-79) |
 | `app/src/lib/use-is-touch.ts` | `useIsTouch()` hook — `useSyncExternalStore` + `matchMedia('(hover: none)')`. SSR-safe (returns false on server). Used by Tooltip, ConfidenceBadge, Map for touch-specific behavior branching. |
@@ -283,6 +283,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | #64 | CRTKY-90 | **Map z-order + unknown fade:** high-rated stations paint on top (ascending score sort); `rentUnknown` stations fade border (opacity 0.3, weight 0.5) not just fill. |
 | #67 | — | **FlyTo UX optimization:** Canvas renderer (`preferCanvas`) for 1493 markers, smart flyTo (adaptive zoom + 0.4–0.6s duration + easeLinearity), tile prefetch on hover (3×3 z14 grid via `<link rel="prefetch">`), SVG override for animated overlays (halo + top-5 pulse). |
 | #69 | — | **Mobile touch UX:** viewport meta, `useIsTouch()` hook, tap-to-toggle tooltips (Tooltip + ConfidenceBadge), map markers +4px on touch, enriched Popup with image+snippet on touch, mobile zoom +/− buttons, gallery swipe+keyboard, slider thumbs 24px on `(pointer: coarse)`, search input hints, safe-area-inset, touch-aware CSS. |
+| #70 | CRTKY-93 | **Confidence "Data Depth" SVG icons:** replace colored dots with shape-encoded icons — bullseye (Measured), solid circle (Partial), dashed circle (Estimate), diamond 菱形 (Curated). Shape readable without color (accessibility). `ConfidenceIcon` exported for legend chip reuse. |
 
 ## Dealbreaker Filters (PR #60, #61)
 
@@ -399,11 +400,19 @@ Three optimizations landed in the homepage initial-load path. If you touch these
 
 Baseline → after: initial JS 1086 → 642 KB (−41 %), HTML 895 → 616 KB (−31 %), RSC flight 755 → 523 KB (−31 %).
 
-### Map flyTo optimization (PR #67)
+### Map flyTo optimization (PR #68)
 
 Four runtime optimizations for the station-select fly animation:
 
-1. **Canvas renderer** (`preferCanvas` on `MapContainer`). All 1493 CircleMarkers render on a single `<canvas>` element instead of 1493 individual SVG `<path>` elements. Eliminates SVG layout thrashing during flyTo. Animated overlays (station-halo, top-5 pulse) forced to SVG via `renderer={getSvgRenderer()}` so CSS keyframe animations still work.
+1. **Canvas renderer** (`preferCanvas` on `MapContainer`). All 1493 CircleMarkers render on a single `<canvas>` element inside `leaflet-overlay-pane` instead of 1493 individual SVG `<path>` elements. Eliminates SVG layout thrashing during flyTo. Animated overlays (station-halo, top-5 pulse) forced to SVG via `renderer={getSvgRenderer()}` so CSS keyframe animations still work.
 2. **Smart flyTo** in `FlyToStation`. Adapts zoom target (no zoom change when ≥13 → cheaper pan-only), uses `setView` for very close hops (<0.01°), and adaptive duration (0.4s close, 0.6s far) with `easeLinearity: 0.4` to minimize time at intermediate zoom levels where tiles aren't cached.
 3. **Tile prefetch on hover** — `prefetchTilesAroundStation()` fires `<link rel="prefetch">` for a 3×3 grid of z14 Carto tiles around the hovered station. By click time (400ms tooltip delay + decision time), tiles are warm in browser cache.
 4. **`isFlying` ref** — set during flyTo, cleared on `moveend`. Guard for suppressing non-critical work during animation.
+
+**Production perf test (2026-04-12):** Default zoom 12 → Akihabara (ranked list click). MessageChannel-based 83kHz sampling:
+- 315,020 samples, **p95 interval 0.1ms** — butter-smooth after React commit
+- 3 jank frames >50ms (142ms max) — all during React's initial state commit (`setSelectedStation` → `flyTarget` memo → `FlyToStation` render → `useEffect`)
+- 24 busy samples >5ms out of 315,020 (0.008%)
+- Canvas renderer confirmed: 0 SVG marker paths, 5 SVG overlay paths (halo + pulse)
+
+Use `.claude/skills/perf-capture/` to reproduce these measurements.
