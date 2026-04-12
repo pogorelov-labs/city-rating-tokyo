@@ -19,6 +19,7 @@ import RatingBar from '@/components/RatingBar';
 import ConfidenceBadge, { CONFIDENCE_DOT_COLORS, SOURCE_LABELS } from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
+import { NaturalEnvironment } from '@/components/NaturalEnvironment';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
@@ -334,6 +335,11 @@ export default async function StationPage({
               )}
             </section>
           </div>
+        )}
+
+        {/* Natural Environment (elevation + seismic risk) */}
+        {station.environment && (
+          <NaturalEnvironment environment={station.environment} />
         )}
 
         {/* Feedback */}

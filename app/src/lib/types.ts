@@ -66,6 +66,17 @@ export interface StationPlace {
   google_maps_url: string;
 }
 
+export type SeismicRiskTier = 'low' | 'moderate' | 'high' | 'very_high' | 'unknown';
+export type ElevationTier = 'very_low' | 'low' | 'moderate' | 'elevated' | 'high' | 'mountain' | 'unknown';
+
+export interface EnvironmentData {
+  elevation_m?: number;
+  elevation_tier?: ElevationTier;
+  seismic_prob_i60?: number;
+  seismic_prob_i55?: number;
+  seismic_risk_tier?: SeismicRiskTier;
+}
+
 export interface Station {
   slug: string;
   name_en: string;
@@ -82,6 +93,7 @@ export interface Station {
   confidence?: StationConfidence | null;
   sources?: StationSources | null;
   data_date?: string | null;
+  environment?: EnvironmentData | null;
 }
 
 /** Lightweight station data for the homepage map & filter panel */
@@ -95,6 +107,8 @@ export interface MapStation {
   ratings: StationRatings | null;
   rent_1k: number | null;
   min_transit: number | null;
+  elevation_m: number | null;
+  seismic_risk_tier: SeismicRiskTier | null;
   // confidence is NOT included here on purpose: it was ~226 KB of the RSC
   // payload with 1493 stations and is only needed on the station detail page
   // (which uses the full Station type via getStation). If compare-panel

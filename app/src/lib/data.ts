@@ -2,11 +2,13 @@ import rawStations from '@/data/stations.json';
 import { DEMO_RATINGS } from '@/data/demo-ratings';
 import rentData from '@/data/rent-averages.json';
 import stationImagesData from '@/data/station-images.json';
-import { Station, MapStation, RentAvg } from './types';
+import environmentData from '@/data/environment-data.json';
+import { Station, MapStation, RentAvg, EnvironmentData } from './types';
 import { rentToAffordability } from './scoring';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
 const imageData = stationImagesData as Record<string, { url: string; alt: string }[]>;
+const envData = environmentData as Record<string, EnvironmentData>;
 
 export function getStations(): Station[] {
   return (rawStations as Station[]).map((s) => {
@@ -21,6 +23,8 @@ export function getStations(): Station[] {
     // Derive affordability score from real rent data when available
     const computedRent = rentAvg ? rentToAffordability(rentAvg) : null;
 
+    const env = envData[s.slug] || null;
+
     if (demo) {
       const ratings = computedRent != null
         ? { ...demo.ratings, rent: computedRent }
@@ -34,9 +38,10 @@ export function getStations(): Station[] {
         confidence: demo.confidence || null,
         sources: demo.sources || null,
         data_date: demo.data_date || null,
+        environment: env,
       };
     }
-    return { ...s, rent_avg: rentAvg };
+    return { ...s, rent_avg: rentAvg, environment: env };
   });
 }
 
@@ -58,6 +63,8 @@ export function getMapStations(): MapStation[] {
       ratings: s.ratings,
       rent_1k: s.rent_avg?.['1k_1ldk'] ?? null,
       min_transit: minTransit,
+      elevation_m: s.environment?.elevation_m ?? null,
+      seismic_risk_tier: s.environment?.seismic_risk_tier ?? null,
     };
   });
 }

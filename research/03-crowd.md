@@ -8,6 +8,8 @@
 
 ## 1. Passenger Data Sources
 
+**Operations (2026-04):** MLIT S12 refresh and closing the remaining `crowd: estimate` tail are tracked as **CRTKY-84** in Plane; start from this **section 1** for ingest, matching, and tail. Commute / timetable Phase 0 tickets (**CRTKY-81**, **CRTKY-56**) may reference **subsection 1b** below for ODPT passenger overlap.
+
 ### 1a. MLIT National Land Numerical Information (Best Single Source)
 
 **Dataset:** 国土数値情報 駅別乗降客数データ (S12)

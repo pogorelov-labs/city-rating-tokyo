@@ -22,6 +22,10 @@ interface AppState {
   setHeatmapMode: (v: boolean) => void;
   heatmapDimension: string;
   setHeatmapDimension: (v: string) => void;
+  hideFloodRisk: boolean;
+  setHideFloodRisk: (v: boolean) => void;
+  hideHighSeismic: boolean;
+  setHideHighSeismic: (v: boolean) => void;
   compareStations: string[];
   addCompareStation: (slug: string) => void;
   removeCompareStation: (slug: string) => void;
@@ -55,6 +59,10 @@ export const useAppStore = create<AppState>((set) => ({
   setHeatmapMode: (heatmapMode) => set({ heatmapMode }),
   heatmapDimension: 'composite',
   setHeatmapDimension: (heatmapDimension) => set({ heatmapDimension }),
+  hideFloodRisk: false,
+  setHideFloodRisk: (hideFloodRisk) => set({ hideFloodRisk }),
+  hideHighSeismic: false,
+  setHideHighSeismic: (hideHighSeismic) => set({ hideHighSeismic }),
   compareStations: [],
   addCompareStation: (slug) =>
     set((state) => {

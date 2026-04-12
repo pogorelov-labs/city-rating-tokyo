@@ -21,7 +21,7 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 - **transport**: line_count, 100% coverage ✅
 - **gym_sports**: OSM gym_count, 89% coverage ✅
 
-## Data in NocoDB (city-rating-db) — as of 2026-04-05
+## Data in NocoDB (city-rating-db) — as of 2026-04-12
 
 | Table | ID | Records | Coverage | Source |
 |-------|----|---------|----------|--------|
@@ -34,6 +34,9 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | station_wards | m74rdmspn3trrqc | 1493 | 100% | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | test | Overpass (superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | 100% | Output of compute-ratings.py + confidence/sources/data_date |
+| osm_livability | m3vasnsm4y09xez | ~547→ | 37%→ | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
+| station_elevation | mkrugzx8z62hli4 | 1493 | **100%** | Open-Elevation API (bulk POST). Range: -2m to 741m |
+| station_seismic | mhtnqvmi1kwbth9 | ~scraping | → | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
 | rent (file) | — | 274 | 18% | Suumo scrape (app/src/data/rent-averages.json) |
 
 ## Implementation Progress
@@ -58,7 +61,21 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | G5 | /methodology page | ⏳ pending | — (CRTKY-50) |
 | G6 | AI vs data-driven station badge + freshness | ⏳ pending | — (CRTKY-51) |
 
+### New data directions (2026-04-12)
+
+| Phase | Description | Status | Source |
+|-------|-------------|--------|--------|
+| H1 | Station elevation (flood risk signal) | ✅ done (1493/1493) | Open-Elevation API, CRTKY-85 |
+| H2 | Seismic hazard (earthquake risk) | 🔄 running (~200/1493) | J-SHIS Y2024, CRTKY-86 |
+| H3 | Daily essentials (livability) | 🔄 running (~547/1493) | Overpass (9 categories), CRTKY-87 |
+| H4 | Station images (health check) | ✅ done (0 broken / 8963 URLs) | img.pogorelov.dev HEAD check |
+| H5 | Green area (sqm geometry) | ⏳ queued (after H3) | Overpass `out geom`, CRTKY-42 |
+
 **Транспорт / быт (не в таблице фаз A–G):** время до хабов в UI есть, но для большинства станций в экспорте стоит **заглушка 30m** (см. `scripts/export-ratings.py`); реальные минуты в основном у AI-станций. **Plane: CRTKY-81.** **Last train** — только placeholder в UI (**CRTKY-56**). Расширение **rent** — **CRTKY-43** + `research/05-rent.md`. Хвост пассажиров / обновление MLIT FY — **CRTKY-84**. Полный роадмап: **`research/VISION.md`**.
+
+## Sourcing discipline (Phase 0)
+
+Before betting on **commercial** transit or rent APIs: inventory **ODPT**, **GTFS-JP** / National Open Data Challenge, and **MLIT** rail/passenger disclosures; document **licenses** and weekday/season assumptions (**CRTKY-81**, **CRTKY-56**, **CRTKY-84** — see `research/03-crowd.md` section 1 / subsection 1b). For rent work, **e-Stat** / municipal open aggregates are **ward/prefecture validation only**, not station-level rent in the product (**CRTKY-43**). **Canonical wording** lives in each issue’s Plane **description**; child map and conflict rule (description beats comments) on epic **CRTKY-80**.
 
 ## Critical readiness (do not overstate)
 

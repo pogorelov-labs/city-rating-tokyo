@@ -29,6 +29,9 @@ TABLE_IDS = {
     "osm_extended": "mrpqu8o796e6xzk",
     "station_wards": "m74rdmspn3trrqc",
     "station_crime": "mxwixub7d0q5i00",
+    "osm_livability": "m3vasnsm4y09xez",
+    "station_elevation": "mkrugzx8z62hli4",
+    "station_seismic": "mhtnqvmi1kwbth9",
 }
 
 

@@ -132,6 +132,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const compareStations = useAppStore((s) => s.compareStations);
   const addCompareStation = useAppStore((s) => s.addCompareStation);
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
+  const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
+  const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
 
   // Scoring 1493 stations on every drag frame is expensive. Use a deferred
   // copy of the weights so React can skip stale recomputes while the user
@@ -165,6 +167,16 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     [stations, deferredWeights],
   );
 
+  // Binary environment safety filters — exclude flood-risk / high-seismic stations
+  const visibleStations = useMemo(() => {
+    if (!hideFloodRisk && !hideHighSeismic) return scoredStations;
+    return scoredStations.filter((s) => {
+      if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
+      if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
+      return true;
+    });
+  }, [scoredStations, hideFloodRisk, hideHighSeismic]);
+
   const flyTarget = useMemo(() => {
     if (!selectedStation) return null;
     return scoredStations.find((s) => s.slug === selectedStation);
@@ -190,7 +202,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       {flyTarget && <FlyToStation lat={flyTarget.lat} lng={flyTarget.lng} />}
-      {scoredStations.map((station) => {
+      {visibleStations.map((station) => {
         const score = station.score;
         const thumb = thumbnails[station.slug];
         const snippet = snippets[station.slug];

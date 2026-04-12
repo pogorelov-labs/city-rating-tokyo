@@ -6,6 +6,8 @@
 
 ## 1. Coverage Expansion Options
 
+> **Phase 0 (Plane CRTKY-43):** **e-Stat** / municipal open aggregates — только валидация и sanity на уровне **ward / prefecture**; не позиционировать и не экспортировать как **station-level** аренду в продукте или в текстах confidence. Канонический чеклист — **description** задачи в Plane.
+
 ### 1A. Reverse Geocode All 1493 Stations via Nominatim (QUICK WIN)
 
 **Effort**: Low (1-2 hours scripting, ~25 min API time at 1 req/sec)

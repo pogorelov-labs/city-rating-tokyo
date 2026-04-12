@@ -78,6 +78,12 @@
 | MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
 | OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
 
+### Phase 0 — открытые источники до коммерции (дисциплина бэклога)
+
+Перед внедрением маршрутизации и платных API: зафиксировать **ODPT**, **GTFS-JP** / National Open Data Challenge, **MLIT 鉄道** там, где уместно; сравнить **лицензии** и допущения (будни, сезон, календарь). Коммерция (Navitime, Hyperdia и т.п.) — только после явно описанных пробелов. Чеклисты в **описаниях** Plane: **CRTKY-81**, **CRTKY-56**; пассажиры / S12 / хвост `crowd: estimate` — **CRTKY-84** + [research/03-crowd.md] (раздел 1); ODPT как пересечение с commute — подраздел 1b того же файла.
+
+**Аренда:** **e-Stat** и муниципальная опендата — только **ward/prefecture** sanity и валидация рядов LIFULL/Suumo; **не** подмена station-level в UI или confidence (**CRTKY-43**, [research/05-rent.md]). Каноническая формулировка — описание задачи в Plane; эпик **CRTKY-80** дублирует карту детей.
+
 ---
 
 ## Layer 2: Logic — формулы поверх данных

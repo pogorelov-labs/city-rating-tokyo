@@ -21,6 +21,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const resetWeights = useAppStore((s) => s.resetWeights);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
   const setHoveredStation = useAppStore((s) => s.setHoveredStation);
+  const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
+  const setHideFloodRisk = useAppStore((s) => s.setHideFloodRisk);
+  const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
+  const setHideHighSeismic = useAppStore((s) => s.setHideHighSeismic);
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
@@ -32,13 +36,18 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const ranked = useMemo(() => {
     return stations
       .filter((s) => s.ratings !== null)
+      .filter((s) => {
+        if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
+        if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
+        return true;
+      })
       .map((s) => ({
         ...s,
         score: calculateWeightedScore(s.ratings!, deferredWeights),
       }))
       .sort((a, b) => b.score - a.score)
       .slice(0, 15);
-  }, [stations, deferredWeights]);
+  }, [stations, deferredWeights, hideFloodRisk, hideHighSeismic]);
 
   // Mirror Map.tsx: percentile anchors for the diverging composite palette
   // so the ranked list numbers paint on the same scale as the map markers.
@@ -170,6 +179,37 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         >
           Reset to defaults
         </button>
+      </div>
+
+      {/* Environment Safety Filters */}
+      <div>
+        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Safety Filters</h2>
+        <div className="space-y-2">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hideFloodRisk}
+              onChange={(e) => setHideFloodRisk(e.target.checked)}
+              className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
+            />
+            <span className="text-xs text-gray-600">
+              Hide flood-risk areas
+              <span className="text-gray-400 ml-1">(below 5m)</span>
+            </span>
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hideHighSeismic}
+              onChange={(e) => setHideHighSeismic(e.target.checked)}
+              className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
+            />
+            <span className="text-xs text-gray-600">
+              Hide high seismic risk
+              <span className="text-gray-400 ml-1">({'>'}26% intensity 6+)</span>
+            </span>
+          </label>
+        </div>
       </div>
 
       <hr className="border-gray-200" />
