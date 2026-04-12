@@ -277,8 +277,10 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | #57 | CRTKY-64/65, 48, 42 | Distribution fixes (safety/gym gaps) + data-source tooltips + green area scraper. |
 | — | CRTKY-85, 86 | Natural hazard data: elevation + seismic info layer (`NaturalEnvironment.tsx`) + binary safety filters on map/ranked list. Commit `e165ff9`. |
 | #60 | CRTKY-88 | **Dealbreaker filters:** hard constraints (max rent, max commute, per-category minimums) independent of soft weights. Presets set both weights + filters. URL-serialized (`mr`/`mc`/`cm`). Rent-unknown stations pass but render dimmed. Match counter. |
+| #61 | CRTKY-89 | **UX polish:** dual-range sliders (min+max) for rent & commute, "Low Crowds" → "Quietness" label, top-5 ranked stations get subtle pulse on map (`top-ranked-pulse` CSS, 2.4s, composite color). |
+| #62 | — | Gallery LQIP blur-up on station detail `ImageGallery` (inline base64 → sharp crossfade). `generate-gallery-lqip.py`. |
 
-## Dealbreaker Filters (PR #60)
+## Dealbreaker Filters (PR #60, #61)
 
 The sidebar now has two independent control axes:
 - **Weights** (soft) — "what matters more" → affects ranking order
@@ -286,7 +288,7 @@ The sidebar now has two independent control axes:
 
 ### Architecture
 
-`FilterState` in `types.ts`: `{ maxRent, maxCommute, categoryMins }` with `DEFAULT_FILTERS` (all wide open).
+`FilterState` in `types.ts`: `{ minRent, maxRent, minCommute, maxCommute, categoryMins }` with `DEFAULT_FILTERS` (all wide open). PR #61 added min endpoints for dual-range sliders.
 
 Filter chain in Map.tsx + FilterPanel.tsx:
 ```
@@ -308,9 +310,19 @@ stations → scoredStations (useMemo, deferredWeights) → filteredStations (app
 ### URL params
 
 Filter state serialized alongside weights for shareable links:
+- `nr=100000` — min rent (only if raised above ¥80k)
 - `mr=130000` — max rent
+- `nc=20` — min commute (only if raised above 10)
 - `mc=30` — max commute (minutes)
 - `cm=safety:7,green:6` — category minimums
+
+### Top-5 map pulse (PR #61)
+
+Top-5 ranked visible stations get a subtle `top-ranked-pulse` CSS animation in their composite color. 2.4s period, max stroke-opacity 0.35 (much subtler than the 1.6s selected-station halo). Hidden in heatmap mode, suppressed when station is already highlighted.
+
+### Label: "Low Crowds" → "Quietness" (PR #61)
+
+`RATING_LABELS.crowd = 'Quietness'` (was "Low Crowds"). Category min buttons use `CATEGORY_SHORT_LABELS` map for compact unambiguous labels.
 
 ## Running Scrapers on VPS
 
@@ -355,6 +367,8 @@ Detailed data source research in `research/`:
 cd app && npm run build  # Verify after export-ratings.py
 git push origin main     # Coolify auto-deploys
 ```
+
+**Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
 ## Refreshing ratings data
 

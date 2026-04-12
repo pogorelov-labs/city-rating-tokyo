@@ -321,6 +321,7 @@ Sprint 3 (UI transparency):
 
 Sprint 4 (filter system):
 - ✅ `CRTKY-88` Dealbreaker filters — hard constraints (rent, commute, per-category mins) + preset integration + URL serialization (PR #60)
+- ✅ `CRTKY-89` UX polish — dual-range sliders (min+max), "Quietness" label, top-5 map pulse (PR #61)
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
