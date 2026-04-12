@@ -246,14 +246,18 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic);
   }, [scoredStations, filters, hideFloodRisk, hideHighSeismic]);
 
+  // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
+  // Also used (reversed) for top-5 pulse — one sort instead of two.
+  const sortedForRender = useMemo(
+    () => [...visibleStations].sort((a, b) => (a.score ?? 0) - (b.score ?? 0)),
+    [visibleStations],
+  );
+
   // Top-5 ranked slugs for subtle pulse effect on map
   const top5Slugs = useMemo(() => {
-    const sorted = [...visibleStations]
-      .filter((s) => s.score !== null)
-      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
-      .slice(0, 5);
-    return new Set(sorted.map((s) => s.slug));
-  }, [visibleStations]);
+    const withScore = sortedForRender.filter((s) => s.score !== null);
+    return new Set(withScore.slice(-5).map((s) => s.slug));
+  }, [sortedForRender]);
 
   const flyTarget = useMemo(() => {
     if (!selectedStation) return null;
@@ -280,7 +284,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       {flyTarget && <FlyToStation lat={flyTarget.lat} lng={flyTarget.lng} />}
-      {visibleStations.map((station) => {
+      {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
         const snippet = snippets[station.slug];
@@ -328,7 +332,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               ? 3
               : heatmapMode
                 ? 0
-                : 1;
+                : (station.rentUnknown ? 0.5 : 1);
 
         return (
           <CircleMarker
@@ -339,7 +343,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               fillColor: color,
               color: strokeColor,
               weight: strokeWeight,
-              opacity: heatmapMode && !isHighlighted && !isCompared ? 0 : 0.9,
+              opacity: heatmapMode && !isHighlighted && !isCompared ? 0 : (station.rentUnknown && !isHighlighted && !isCompared ? 0.3 : 0.9),
               fillOpacity: isHighlighted ? 1 : (heatmapMode ? 0.45 : (station.rentUnknown ? 0.35 : 0.85)),
             }}
             eventHandlers={{
