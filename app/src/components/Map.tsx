@@ -120,8 +120,8 @@ function StationTooltipHero({
     return <GradientHeader nameJp={nameJp} score={score} color={color} height={60} />;
   }
 
-  // Thumb failed and no LQIP → gradient at image height
-  if (thumbFailed && !lqip) {
+  // Thumb failed → degrade to gradient (even if LQIP exists — permanent blur is worse)
+  if (thumbFailed) {
     return <GradientHeader nameJp={nameJp} score={score} color={color} height={100} />;
   }
 
