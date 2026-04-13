@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 
 export const metadata: Metadata = {
   title: 'Methodology - Tokyo Neighborhood Explorer',
@@ -80,6 +81,13 @@ const DATA_SOURCES = [
     confidence: 'strong',
     note: 'Inverted: fewer passengers = higher rating.',
   },
+  {
+    category: 'Daily Essentials',
+    sources: ['OpenStreetMap (supermarkets, pharmacies, clinics, dentists, banks, laundry, post offices, schools, kindergartens)'],
+    coverage: '100%',
+    confidence: 'strong',
+    note: '9 subcategories weighted by daily-life importance. 1491 stations from direct OSM data, 2 from proxy.',
+  },
 ];
 
 const CONFIDENCE_LEVELS = [
@@ -109,7 +117,13 @@ const CONFIDENCE_LEVELS = [
   },
 ];
 
-export default function MethodologyPage() {
+export default async function MethodologyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200">
