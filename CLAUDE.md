@@ -94,31 +94,19 @@ All categories use **log-then-percentile** normalization across 1493 stations, t
 
 | Category | Raw signal | 8 requires | 9 requires | 10 requires |
 |---|---|---|---|---|
-| food | hp_total + osm_food | ≥100 | ≥400 | ≥1000 |
-| nightlife | hp_midnight | ≥20 | ≥100 | ≥300 |
 | transport | line_count | ≥2 | ≥3 | **≥5** |
+| rent | source quality (2=suumo, 1=ward, 0=regression) | — | ≥1 | ≥2 |
+| food | hp_total + osm_food | ≥100 | ≥400 | ≥1000 |
 | green | green_count | ≥25 | ≥50 | ≥80 |
 | gym_sports | gym_count | ≥7 | ≥12 | ≥20 |
 | vibe | cultural_venue_count | ≥8 | ≥20 | ≥50 |
-| rent | source quality (2=suumo, 1=ward, 0=regression) | — | ≥1 | ≥2 |
+| nightlife | hp_midnight | ≥20 | ≥100 | ≥300 |
 
 Effect: "10" means something specific and explainable. Before v3, top 5.6% of every category (~83 stations) auto-rounded to 10. After v3, top-10 count dropped to 15–64 per category (5 for rent).
 
-### food (12% default weight)
-```
-raw = log(1 + HP_total) * 0.6 + log(1 + OSM_food) * 0.4
-```
-Sources: HotPepper total_count (100%), OSM food_count (94%). Correlation r=0.855.
+Categories listed in **life-first UI order** (transport → rent → essentials → safety → food → green → gym → vibe → nightlife → crowd):
 
-### nightlife (8%)
-```
-raw = log(1 + HP_midnight) * 0.25 + log(1 + HP_izak) * 0.2
-    + log(1 + HP_bar*3) * 0.15 + log(1 + OSM_night) * 0.2
-    + log(1 + karaoke*5) * 0.1 + log(1 + hostel*10) * 0.1
-```
-Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; hostel count.
-
-### transport (18%)
+### transport (18% default weight)
 ```
 raw = line_count * 2 + log(1 + daily_passengers) * 0.5
 ```
@@ -133,7 +121,14 @@ rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80
 ```
 Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`.
 
-Regression replaced the broken `max(50000, 160000 - dist*15000)` which produced ¥50k for every station beyond 7.3km — a value below any real Tokyo rent, creating 507 fake rating-10 entries.
+### daily_essentials (14%)
+```
+raw = log(1 + supermarket) * 0.25 + log(1 + pharmacy) * 0.15
+    + log(1 + clinic + dentist) * 0.20 + log(1 + bank) * 0.10
+    + log(1 + laundry) * 0.10 + log(1 + post_office) * 0.05
+    + log(1 + school + kindergarten) * 0.15
+```
+Sources: OSM osm_livability table (1493/1493 stations, 9 subcategories). Fallback: convenience_store_count proxy.
 
 ### safety (10%, inverted: safer = higher)
 ```
@@ -142,6 +137,12 @@ weighted_crimes = violent*3 + assault*2 + burglary*2 + purse_snatch*2
 rate = weighted_crimes / adjusted_population * 10000
 ```
 Sources: Keishicho ArcGIS neighborhood polygons (Tokyo, 615 stations), prefectural police (others). Daytime population adjustment for commercial wards (Chiyoda ÷12, Chuo ÷4, Minato ÷3.6).
+
+### food (12%)
+```
+raw = log(1 + HP_total) * 0.6 + log(1 + OSM_food) * 0.4
+```
+Sources: HotPepper total_count (100%), OSM food_count (94%). Correlation r=0.855.
 
 ### green (8%)
 ```
@@ -163,20 +164,19 @@ raw = log(1 + cultural_venues) * 0.6 + log(1 + pedestrian_streets) * 0.15
 ```
 Sources: OSM theatre|cinema|arts_centre + shop=books|music|art|vintage; pedestrian streets. AI-researched override for 272 stations.
 
+### nightlife (8%)
+```
+raw = log(1 + HP_midnight) * 0.25 + log(1 + HP_izak) * 0.2
+    + log(1 + HP_bar*3) * 0.15 + log(1 + OSM_night) * 0.2
+    + log(1 + karaoke*5) * 0.1 + log(1 + hostel*10) * 0.1
+```
+Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; hostel count.
+
 ### crowd (4%, inverted: fewer = higher)
 ```
 raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
 ```
 Sources: MLIT S12 (94%), HotPepper total as fallback.
-
-### daily_essentials (14%)
-```
-raw = log(1 + supermarket) * 0.25 + log(1 + pharmacy) * 0.15
-    + log(1 + clinic + dentist) * 0.20 + log(1 + bank) * 0.10
-    + log(1 + laundry) * 0.10 + log(1 + post_office) * 0.05
-    + log(1 + school + kindergarten) * 0.15
-```
-Sources: OSM osm_livability table (1493/1493 stations, 9 subcategories). Fallback: convenience_store_count proxy for missing stations. Confidence: 1202 strong, 221 moderate, 70 estimate.
 
 ## Override Hierarchy
 1. **AI-researched** (272 stations with `description` field in demo-ratings.ts) — never overwritten
