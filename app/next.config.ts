@@ -1,11 +1,20 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import slugRedirects from "../data/slug-redirects.json";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  async redirects() {
+    // 301 redirects for renamed station slugs (wapuro→Hepburn romanization fix)
+    return Object.entries(slugRedirects).map(([oldSlug, newSlug]) => ({
+      source: `/station/${oldSlug}`,
+      destination: `/station/${newSlug}`,
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

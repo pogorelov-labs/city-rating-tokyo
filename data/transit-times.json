@@ -253,7 +253,7 @@
       "ikebukuro": 18,
       "shinagawa": 20
     },
-    "kuukou-daini-biru-daini-ryokyaku-taaminaru": {
+    "kuko-daini-biru-daini-ryokyaku-taaminaru": {
       "shibuya": 95,
       "shinjuku": 94,
       "tokyo": 86,
@@ -274,7 +274,7 @@
       "ikebukuro": 36,
       "shinagawa": 32
     },
-    "naritakuukou-daiichi-ryokyaku-taaminaru": {
+    "naritakuko-daiichi-ryokyaku-taaminaru": {
       "shibuya": 94,
       "shinjuku": 93,
       "tokyo": 85,
@@ -393,7 +393,7 @@
       "ikebukuro": 23,
       "shinagawa": 40
     },
-    "choushi": {
+    "choshi": {
       "shibuya": 159,
       "shinjuku": 159,
       "tokyo": 144,
@@ -435,7 +435,7 @@
       "ikebukuro": 24,
       "shinagawa": 9
     },
-    "hanedakuukou-kokunaisen-taaminaru": {
+    "hanedakuko-kokunaisen-taaminaru": {
       "shibuya": 43,
       "shinjuku": 37,
       "tokyo": 44,
@@ -484,7 +484,7 @@
       "ikebukuro": 46,
       "shinagawa": 57
     },
-    "higashihannou": {
+    "higashihanno": {
       "shibuya": 66,
       "shinjuku": 64,
       "tokyo": 72,
@@ -547,7 +547,7 @@
       "ikebukuro": 45,
       "shinagawa": 30
     },
-    "keioutama-sentaa": {
+    "keiotama-sentaa": {
       "shibuya": 57,
       "shinjuku": 52,
       "tokyo": 68,
@@ -715,7 +715,7 @@
       "ikebukuro": 37,
       "shinagawa": 27
     },
-    "shounandai": {
+    "shonandai": {
       "shibuya": 60,
       "shinjuku": 64,
       "tokyo": 69,
@@ -750,7 +750,7 @@
       "ikebukuro": 35,
       "shinagawa": 26
     },
-    "toubudoubutsukouen": {
+    "tobudobutsukoen": {
       "shibuya": 67,
       "shinjuku": 68,
       "tokyo": 69,
@@ -869,14 +869,14 @@
       "ikebukuro": 63,
       "shinagawa": 65
     },
-    "chiba-nyuutaun-chuuou": {
+    "chiba-nyutaun-chuo": {
       "shibuya": 67,
       "shinjuku": 65,
       "tokyo": 67,
       "ikebukuro": 62,
       "shinagawa": 65
     },
-    "chibachuuou": {
+    "chibachuo": {
       "shibuya": 63,
       "shinjuku": 64,
       "tokyo": 64,
@@ -890,7 +890,7 @@
       "ikebukuro": 37,
       "shinagawa": 38
     },
-    "chuuourinkan": {
+    "chuorinkan": {
       "shibuya": 51,
       "shinjuku": 61,
       "tokyo": 68,
@@ -911,7 +911,7 @@
       "ikebukuro": 33,
       "shinagawa": 25
     },
-    "fuchuuhonmachi": {
+    "fuchuhonmachi": {
       "shibuya": 42,
       "shinjuku": 42,
       "tokyo": 52,
@@ -953,7 +953,7 @@
       "ikebukuro": 33,
       "shinagawa": 29
     },
-    "goura": {
+    "gora": {
       "shibuya": 124,
       "shinjuku": 121,
       "tokyo": 127,
@@ -974,21 +974,21 @@
       "ikebukuro": 49,
       "shinagawa": 41
     },
-    "hanedakuukou-kokusaisen-taaminaru": {
+    "hanedakuko-kokusaisen-taaminaru": {
       "shibuya": 43,
       "shinjuku": 37,
       "tokyo": 33,
       "ikebukuro": 44,
       "shinagawa": 31
     },
-    "hannou": {
+    "hanno": {
       "shibuya": 67,
       "shinjuku": 64,
       "tokyo": 73,
       "ikebukuro": 57,
       "shinagawa": 74
     },
-    "hanyuu": {
+    "hanyu": {
       "shibuya": 94,
       "shinjuku": 95,
       "tokyo": 99,
@@ -1009,14 +1009,14 @@
       "ikebukuro": 42,
       "shinagawa": 18
     },
-    "hatchoubori": {
+    "hatchobori": {
       "shibuya": 25,
       "shinjuku": 25,
       "tokyo": 4,
       "ikebukuro": 28,
       "shinagawa": 22
     },
-    "hatchounawate": {
+    "hatchonawate": {
       "shibuya": 33,
       "shinjuku": 39,
       "tokyo": 39,
@@ -1030,7 +1030,7 @@
       "ikebukuro": 16,
       "shinagawa": 35
     },
-    "higashi-fuchuu": {
+    "higashi-fuchu": {
       "shibuya": 39,
       "shinjuku": 33,
       "tokyo": 49,
@@ -1107,7 +1107,7 @@
       "ikebukuro": 59,
       "shinagawa": 42
     },
-    "hokuchou-kasumi": {
+    "hokucho-kasumi": {
       "shibuya": 42,
       "shinjuku": 37,
       "tokyo": 45,
@@ -1177,7 +1177,7 @@
       "ikebukuro": 35,
       "shinagawa": 35
     },
-    "kamioooka": {
+    "kamiooka": {
       "shibuya": 58,
       "shinjuku": 64,
       "tokyo": 66,
@@ -1240,21 +1240,21 @@
       "ikebukuro": 116,
       "shinagawa": 101
     },
-    "keikyuu-kamata": {
+    "keikyu-kamata": {
       "shibuya": 35,
       "shinjuku": 44,
       "tokyo": 42,
       "ikebukuro": 39,
       "shinagawa": 20
     },
-    "keikyuu-kawasaki": {
+    "keikyu-kawasaki": {
       "shibuya": 42,
       "shinjuku": 37,
       "tokyo": 37,
       "ikebukuro": 45,
       "shinagawa": 29
     },
-    "keiou-nagayama": {
+    "keio-nagayama": {
       "shibuya": 53,
       "shinjuku": 48,
       "tokyo": 64,
@@ -1338,21 +1338,21 @@
       "ikebukuro": 12,
       "shinagawa": 29
     },
-    "kou-no-shima": {
+    "ko-no-shima": {
       "shibuya": 71,
       "shinjuku": 75,
       "tokyo": 78,
       "ikebukuro": 82,
       "shinagawa": 69
     },
-    "kourai": {
+    "korai": {
       "shibuya": 71,
       "shinjuku": 68,
       "tokyo": 77,
       "ikebukuro": 61,
       "shinagawa": 78
     },
-    "kouzu": {
+    "kozu": {
       "shibuya": 98,
       "shinjuku": 101,
       "tokyo": 101,
@@ -1429,7 +1429,7 @@
       "ikebukuro": 63,
       "shinagawa": 57
     },
-    "makuharihongou": {
+    "makuharihongo": {
       "shibuya": 61,
       "shinjuku": 55,
       "tokyo": 50,
@@ -1513,7 +1513,7 @@
       "ikebukuro": 37,
       "shinagawa": 51
     },
-    "nagareyama-ootakano-mori": {
+    "nagareyama-otakano-mori": {
       "shibuya": 61,
       "shinjuku": 57,
       "tokyo": 51,
@@ -1555,14 +1555,14 @@
       "ikebukuro": 37,
       "shinagawa": 55
     },
-    "nanryuu-yama": {
+    "nanryu-yama": {
       "shibuya": 54,
       "shinjuku": 50,
       "tokyo": 44,
       "ikebukuro": 43,
       "shinagawa": 55
     },
-    "narutou": {
+    "naruto": {
       "shibuya": 102,
       "shinjuku": 103,
       "tokyo": 88,
@@ -1632,7 +1632,7 @@
       "ikebukuro": 46,
       "shinagawa": 55
     },
-    "ogawachou": {
+    "ogawacho": {
       "shibuya": 95,
       "shinjuku": 92,
       "tokyo": 99,
@@ -1653,21 +1653,21 @@
       "ikebukuro": 18,
       "shinagawa": 40
     },
-    "ooami": {
+    "oami": {
       "shibuya": 92,
       "shinjuku": 93,
       "tokyo": 85,
       "ikebukuro": 94,
       "shinagawa": 86
     },
-    "oohara": {
+    "ohara": {
       "shibuya": 122,
       "shinjuku": 125,
       "tokyo": 117,
       "ikebukuro": 128,
       "shinagawa": 115
     },
-    "oookayama": {
+    "ookayama": {
       "shibuya": 21,
       "shinjuku": 30,
       "tokyo": 34,
@@ -1695,7 +1695,7 @@
       "ikebukuro": 28,
       "shinagawa": 29
     },
-    "sagamioono": {
+    "sagamiono": {
       "shibuya": 55,
       "shinjuku": 52,
       "tokyo": 66,
@@ -1716,7 +1716,7 @@
       "ikebukuro": 76,
       "shinagawa": 73
     },
-    "sakuragichou": {
+    "sakuragicho": {
       "shibuya": 48,
       "shinjuku": 54,
       "tokyo": 56,
@@ -1744,14 +1744,14 @@
       "ikebukuro": 115,
       "shinagawa": 117
     },
-    "seibu-yuuenchi": {
+    "seibu-yuenchi": {
       "shibuya": 52,
       "shinjuku": 50,
       "tokyo": 60,
       "ikebukuro": 49,
       "shinagawa": 61
     },
-    "seibukyuujou-mae": {
+    "seibukyujo-mae": {
       "shibuya": 62,
       "shinjuku": 60,
       "tokyo": 70,
@@ -1940,7 +1940,7 @@
       "ikebukuro": 35,
       "shinagawa": 36
     },
-    "tama-doubutsu-kouen": {
+    "tama-dobutsu-koen": {
       "shibuya": 60,
       "shinjuku": 54,
       "tokyo": 70,
@@ -1954,7 +1954,7 @@
       "ikebukuro": 26,
       "shinagawa": 6
     },
-    "tamagawajousui": {
+    "tamagawajosui": {
       "shibuya": 59,
       "shinjuku": 52,
       "tokyo": 69,
@@ -1968,14 +1968,14 @@
       "ikebukuro": 24,
       "shinagawa": 20
     },
-    "tenkuu-hashi": {
+    "tenku-hashi": {
       "shibuya": 40,
       "shinjuku": 35,
       "tokyo": 44,
       "ikebukuro": 42,
       "shinagawa": 29
     },
-    "tennoudai": {
+    "tennodai": {
       "shibuya": 64,
       "shinjuku": 61,
       "tokyo": 64,
@@ -2010,7 +2010,7 @@
       "ikebukuro": 21,
       "shinagawa": 33
     },
-    "tougo-no": {
+    "togo-no": {
       "shibuya": 77,
       "shinjuku": 74,
       "tokyo": 83,
@@ -2080,7 +2080,7 @@
       "ikebukuro": 61,
       "shinagawa": 60
     },
-    "yotsukaidou": {
+    "yotsukaido": {
       "shibuya": 63,
       "shinjuku": 63,
       "tokyo": 54,
@@ -2101,7 +2101,7 @@
       "ikebukuro": 25,
       "shinagawa": 24
     },
-    "yuukari-ga-oka": {
+    "yukari-ga-oka": {
       "shibuya": 69,
       "shinjuku": 68,
       "tokyo": 59,
@@ -2143,7 +2143,7 @@
       "ikebukuro": 61,
       "shinagawa": 61
     },
-    "aikou-ishida": {
+    "aiko-ishida": {
       "shibuya": 69,
       "shinjuku": 66,
       "tokyo": 78,
@@ -2262,7 +2262,7 @@
       "ikebukuro": 34,
       "shinagawa": 37
     },
-    "aomono-yokochou": {
+    "aomono-yokocho": {
       "shibuya": 23,
       "shinjuku": 31,
       "tokyo": 28,
@@ -2283,28 +2283,28 @@
       "ikebukuro": 45,
       "shinagawa": 54
     },
-    "arakawa-itchuu-mae": {
+    "arakawa-itchu-mae": {
       "shibuya": 36,
       "shinjuku": 30,
       "tokyo": 22,
       "ikebukuro": 24,
       "shinagawa": 39
     },
-    "arakawa-nichoume": {
+    "arakawa-nichome": {
       "shibuya": 36,
       "shinjuku": 30,
       "tokyo": 23,
       "ikebukuro": 23,
       "shinagawa": 40
     },
-    "arakawa-shichi-choume": {
+    "arakawa-shichi-chome": {
       "shibuya": 37,
       "shinjuku": 31,
       "tokyo": 24,
       "ikebukuro": 23,
       "shinagawa": 40
     },
-    "arakawa-yuuenchi-mae": {
+    "arakawa-yuenchi-mae": {
       "shibuya": 36,
       "shinjuku": 28,
       "tokyo": 26,
@@ -2416,7 +2416,7 @@
       "ikebukuro": 124,
       "shinagawa": 107
     },
-    "baigou": {
+    "baigo": {
       "shibuya": 68,
       "shinjuku": 63,
       "tokyo": 59,
@@ -2430,7 +2430,7 @@
       "ikebukuro": 68,
       "shinagawa": 59
     },
-    "bandou-hashi": {
+    "bando-hashi": {
       "shibuya": 51,
       "shinjuku": 57,
       "tokyo": 59,
@@ -2458,35 +2458,35 @@
       "ikebukuro": 58,
       "shinagawa": 33
     },
-    "bushuu-araki": {
+    "bushu-araki": {
       "shibuya": 101,
       "shinjuku": 96,
       "tokyo": 101,
       "ikebukuro": 84,
       "shinagawa": 107
     },
-    "bushuu-hino": {
+    "bushu-hino": {
       "shibuya": 116,
       "shinjuku": 114,
       "tokyo": 122,
       "ikebukuro": 106,
       "shinagawa": 123
     },
-    "bushuu-karasawa": {
+    "bushu-karasawa": {
       "shibuya": 84,
       "shinjuku": 81,
       "tokyo": 89,
       "ikebukuro": 72,
       "shinagawa": 91
     },
-    "bushuu-nagase": {
+    "bushu-nagase": {
       "shibuya": 81,
       "shinjuku": 78,
       "tokyo": 86,
       "ikebukuro": 69,
       "shinagawa": 89
     },
-    "bushuu-nakagawa": {
+    "bushu-nakagawa": {
       "shibuya": 115,
       "shinjuku": 112,
       "tokyo": 121,
@@ -2500,14 +2500,14 @@
       "ikebukuro": 60,
       "shinagawa": 68
     },
-    "byoubu-ura": {
+    "byobu-ura": {
       "shibuya": 60,
       "shinjuku": 66,
       "tokyo": 68,
       "ikebukuro": 64,
       "shinagawa": 51
     },
-    "chiba-kouen": {
+    "chiba-koen": {
       "shibuya": 63,
       "shinjuku": 64,
       "tokyo": 64,
@@ -2528,7 +2528,7 @@
       "ikebukuro": 102,
       "shinagawa": 120
     },
-    "chidorichou": {
+    "chidoricho": {
       "shibuya": 31,
       "shinjuku": 40,
       "tokyo": 42,
@@ -2577,42 +2577,42 @@
       "ikebukuro": 38,
       "shinagawa": 40
     },
-    "chou-ura": {
+    "cho-ura": {
       "shibuya": 59,
       "shinjuku": 63,
       "tokyo": 65,
       "ikebukuro": 67,
       "shinagawa": 60
     },
-    "chougo": {
+    "chogo": {
       "shibuya": 68,
       "shinjuku": 62,
       "tokyo": 67,
       "ikebukuro": 75,
       "shinagawa": 67
     },
-    "choujamachi": {
+    "chojamachi": {
       "shibuya": 117,
       "shinjuku": 120,
       "tokyo": 112,
       "ikebukuro": 123,
       "shinagawa": 110
     },
-    "choukoku-no-mori": {
+    "chokoku-no-mori": {
       "shibuya": 124,
       "shinjuku": 121,
       "tokyo": 127,
       "ikebukuro": 133,
       "shinagawa": 119
     },
-    "chuugakkou": {
+    "chugakko": {
       "shibuya": 74,
       "shinjuku": 73,
       "tokyo": 65,
       "ikebukuro": 71,
       "shinagawa": 70
     },
-    "chuuoudaigaku-meiseidaigaku": {
+    "chuodaigaku-meiseidaigaku": {
       "shibuya": 59,
       "shinjuku": 54,
       "tokyo": 70,
@@ -2626,7 +2626,7 @@
       "ikebukuro": 39,
       "shinagawa": 14
     },
-    "daijinguushita": {
+    "daijingushita": {
       "shibuya": 53,
       "shinjuku": 53,
       "tokyo": 42,
@@ -2647,7 +2647,7 @@
       "ikebukuro": 34,
       "shinagawa": 42
     },
-    "dokkyoudaigaku-zen-eki-souka-matsubara": {
+    "dokkyodaigaku-zen-eki-soka-matsubara": {
       "shibuya": 46,
       "shinjuku": 46,
       "tokyo": 44,
@@ -2661,7 +2661,7 @@
       "ikebukuro": 48,
       "shinagawa": 59
     },
-    "doubutsu-kouen": {
+    "dobutsu-koen": {
       "shibuya": 64,
       "shinjuku": 64,
       "tokyo": 64,
@@ -2738,7 +2738,7 @@
       "ikebukuro": 85,
       "shinagawa": 81
     },
-    "etchuu-shima": {
+    "etchu-shima": {
       "shibuya": 28,
       "shinjuku": 29,
       "tokyo": 8,
@@ -2759,7 +2759,7 @@
       "ikebukuro": 45,
       "shinagawa": 48
     },
-    "fuchuu-keiba-seimonmae": {
+    "fuchu-keiba-seimonmae": {
       "shibuya": 47,
       "shinjuku": 41,
       "tokyo": 57,
@@ -2773,7 +2773,7 @@
       "ikebukuro": 36,
       "shinagawa": 36
     },
-    "fudoumae": {
+    "fudomae": {
       "shibuya": 17,
       "shinjuku": 25,
       "tokyo": 26,
@@ -2808,7 +2808,7 @@
       "ikebukuro": 40,
       "shinagawa": 63
     },
-    "fujimichou": {
+    "fujimicho": {
       "shibuya": 63,
       "shinjuku": 68,
       "tokyo": 71,
@@ -2836,7 +2836,7 @@
       "ikebukuro": 84,
       "shinagawa": 86
     },
-    "fujisawa-honchou": {
+    "fujisawa-honcho": {
       "shibuya": 66,
       "shinjuku": 71,
       "tokyo": 74,
@@ -2871,7 +2871,7 @@
       "ikebukuro": 76,
       "shinagawa": 63
     },
-    "funabashi-houten": {
+    "funabashi-hoten": {
       "shibuya": 51,
       "shinjuku": 49,
       "tokyo": 40,
@@ -2885,7 +2885,7 @@
       "ikebukuro": 68,
       "shinagawa": 67
     },
-    "funabashikeibajou": {
+    "funabashikeibajo": {
       "shibuya": 54,
       "shinjuku": 54,
       "tokyo": 43,
@@ -2969,14 +2969,14 @@
       "ikebukuro": 36,
       "shinagawa": 20
     },
-    "gakushuuin-shita": {
+    "gakushuin-shita": {
       "shibuya": 23,
       "shinjuku": 15,
       "tokyo": 22,
       "ikebukuro": 10,
       "shinagawa": 32
     },
-    "gamou": {
+    "gamo": {
       "shibuya": 49,
       "shinjuku": 50,
       "tokyo": 49,
@@ -2997,7 +2997,7 @@
       "ikebukuro": 50,
       "shinagawa": 68
     },
-    "ginzaitchoume": {
+    "ginzaitchome": {
       "shibuya": 22,
       "shinjuku": 22,
       "tokyo": 8,
@@ -3032,7 +3032,7 @@
       "ikebukuro": 5,
       "shinagawa": 32
     },
-    "gokou": {
+    "goko": {
       "shibuya": 62,
       "shinjuku": 59,
       "tokyo": 51,
@@ -3060,14 +3060,14 @@
       "ikebukuro": 75,
       "shinagawa": 84
     },
-    "gyouda": {
+    "gyoda": {
       "shibuya": 90,
       "shinjuku": 85,
       "tokyo": 91,
       "ikebukuro": 80,
       "shinagawa": 97
     },
-    "gyoudashi": {
+    "gyodashi": {
       "shibuya": 99,
       "shinjuku": 94,
       "tokyo": 100,
@@ -3095,7 +3095,7 @@
       "ikebukuro": 70,
       "shinagawa": 60
     },
-    "hachiouji-minami-no": {
+    "hachioji-minami-no": {
       "shibuya": 66,
       "shinjuku": 66,
       "tokyo": 66,
@@ -3214,7 +3214,7 @@
       "ikebukuro": 21,
       "shinagawa": 22
     },
-    "hara-touma": {
+    "hara-toma": {
       "shibuya": 70,
       "shinjuku": 67,
       "tokyo": 65,
@@ -3319,7 +3319,7 @@
       "ikebukuro": 66,
       "shinagawa": 64
     },
-    "higashi-aki-ryuu": {
+    "higashi-aki-ryu": {
       "shibuya": 66,
       "shinjuku": 65,
       "tokyo": 74,
@@ -3403,7 +3403,7 @@
       "ikebukuro": 41,
       "shinagawa": 40
     },
-    "higashijuujou": {
+    "higashijujo": {
       "shibuya": 37,
       "shinjuku": 28,
       "tokyo": 26,
@@ -3466,14 +3466,14 @@
       "ikebukuro": 45,
       "shinagawa": 44
     },
-    "higashiogu-sanchoume": {
+    "higashiogu-sanchome": {
       "shibuya": 36,
       "shinjuku": 30,
       "tokyo": 25,
       "ikebukuro": 21,
       "shinagawa": 41
     },
-    "higashioume": {
+    "higashiome": {
       "shibuya": 68,
       "shinjuku": 66,
       "tokyo": 75,
@@ -3592,7 +3592,7 @@
       "ikebukuro": 102,
       "shinagawa": 86
     },
-    "hirayama-joushi-kouen": {
+    "hirayama-joshi-koen": {
       "shibuya": 58,
       "shinjuku": 52,
       "tokyo": 59,
@@ -3620,7 +3620,7 @@
       "ikebukuro": 29,
       "shinagawa": 14
     },
-    "hirose-yachou-no-mori": {
+    "hirose-yacho-no-mori": {
       "shibuya": 106,
       "shinjuku": 102,
       "tokyo": 108,
@@ -3634,7 +3634,7 @@
       "ikebukuro": 43,
       "shinagawa": 51
     },
-    "hiyoshihonchou": {
+    "hiyoshihoncho": {
       "shibuya": 41,
       "shinjuku": 42,
       "tokyo": 46,
@@ -3669,7 +3669,7 @@
       "ikebukuro": 74,
       "shinagawa": 66
     },
-    "hon-choushi": {
+    "hon-choshi": {
       "shibuya": 168,
       "shinjuku": 168,
       "tokyo": 153,
@@ -3683,7 +3683,7 @@
       "ikebukuro": 17,
       "shinagawa": 34
     },
-    "hon-nou": {
+    "hon-no": {
       "shibuya": 93,
       "shinjuku": 95,
       "tokyo": 87,
@@ -3697,7 +3697,7 @@
       "ikebukuro": 19,
       "shinagawa": 31
     },
-    "hongoudai": {
+    "hongodai": {
       "shibuya": 59,
       "shinjuku": 63,
       "tokyo": 66,
@@ -3711,7 +3711,7 @@
       "ikebukuro": 29,
       "shinagawa": 34
     },
-    "honjou": {
+    "honjo": {
       "shibuya": 125,
       "shinjuku": 120,
       "tokyo": 127,
@@ -3739,7 +3739,7 @@
       "ikebukuro": 37,
       "shinagawa": 50
     },
-    "horikiri-shoubuen": {
+    "horikiri-shobuen": {
       "shibuya": 33,
       "shinjuku": 40,
       "tokyo": 30,
@@ -3767,7 +3767,7 @@
       "ikebukuro": 34,
       "shinagawa": 42
     },
-    "hyuuga": {
+    "hyuga": {
       "shibuya": 96,
       "shinjuku": 96,
       "tokyo": 81,
@@ -3795,7 +3795,7 @@
       "ikebukuro": 38,
       "shinagawa": 40
     },
-    "ichikawa-oono": {
+    "ichikawa-ono": {
       "shibuya": 50,
       "shinjuku": 48,
       "tokyo": 39,
@@ -3858,14 +3858,14 @@
       "ikebukuro": 37,
       "shinagawa": 24
     },
-    "ikejirioohashi": {
+    "ikejiriohashi": {
       "shibuya": 5,
       "shinjuku": 19,
       "tokyo": 27,
       "ikebukuro": 30,
       "shinagawa": 20
     },
-    "ikenoue": {
+    "ikenoe": {
       "shibuya": 7,
       "shinjuku": 17,
       "tokyo": 29,
@@ -3886,7 +3886,7 @@
       "ikebukuro": 52,
       "shinagawa": 62
     },
-    "ina-chuuou": {
+    "ina-chuo": {
       "shibuya": 64,
       "shinjuku": 59,
       "tokyo": 63,
@@ -3935,7 +3935,7 @@
       "ikebukuro": 24,
       "shinagawa": 32
     },
-    "inariyama-kouen": {
+    "inariyama-koen": {
       "shibuya": 67,
       "shinjuku": 63,
       "tokyo": 63,
@@ -4012,7 +4012,7 @@
       "ikebukuro": 84,
       "shinagawa": 76
     },
-    "isezaki-choujamachi": {
+    "isezaki-chojamachi": {
       "shibuya": 50,
       "shinjuku": 56,
       "tokyo": 58,
@@ -4040,7 +4040,7 @@
       "ikebukuro": 90,
       "shinagawa": 112
     },
-    "ishikawachou": {
+    "ishikawacho": {
       "shibuya": 50,
       "shinjuku": 56,
       "tokyo": 58,
@@ -4068,7 +4068,7 @@
       "ikebukuro": 5,
       "shinagawa": 40
     },
-    "itabashihonchou": {
+    "itabashihoncho": {
       "shibuya": 36,
       "shinjuku": 27,
       "tokyo": 33,
@@ -4124,7 +4124,7 @@
       "ikebukuro": 49,
       "shinagawa": 60
     },
-    "izumi-chuuou": {
+    "izumi-chuo": {
       "shibuya": 71,
       "shinjuku": 66,
       "tokyo": 70,
@@ -4173,14 +4173,14 @@
       "ikebukuro": 72,
       "shinagawa": 71
     },
-    "jouchou-toro": {
+    "jocho-toro": {
       "shibuya": 119,
       "shinjuku": 115,
       "tokyo": 123,
       "ikebukuro": 106,
       "shinagawa": 126
     },
-    "jousei-kawa": {
+    "josei-kawa": {
       "shibuya": 48,
       "shinjuku": 54,
       "tokyo": 58,
@@ -4194,7 +4194,7 @@
       "ikebukuro": 10,
       "shinagawa": 44
     },
-    "juuni-hashi": {
+    "juni-hashi": {
       "shibuya": 134,
       "shinjuku": 132,
       "tokyo": 125,
@@ -4313,7 +4313,7 @@
       "ikebukuro": 75,
       "shinagawa": 67
     },
-    "kamakura-koukou-mae": {
+    "kamakura-koko-mae": {
       "shibuya": 77,
       "shinjuku": 81,
       "tokyo": 78,
@@ -4341,7 +4341,7 @@
       "ikebukuro": 43,
       "shinagawa": 66
     },
-    "kamihongou": {
+    "kamihongo": {
       "shibuya": 55,
       "shinjuku": 52,
       "tokyo": 44,
@@ -4404,7 +4404,7 @@
       "ikebukuro": 50,
       "shinagawa": 30
     },
-    "kamiyachou": {
+    "kamiyacho": {
       "shibuya": 17,
       "shinjuku": 19,
       "tokyo": 14,
@@ -4509,7 +4509,7 @@
       "ikebukuro": 35,
       "shinagawa": 39
     },
-    "kasai-rinkai-kouen": {
+    "kasai-rinkai-koen": {
       "shibuya": 44,
       "shinjuku": 33,
       "tokyo": 25,
@@ -4558,14 +4558,14 @@
       "ikebukuro": 68,
       "shinagawa": 60
     },
-    "katakurachou": {
+    "katakuracho": {
       "shibuya": 43,
       "shinjuku": 48,
       "tokyo": 52,
       "ikebukuro": 56,
       "shinagawa": 41
     },
-    "katase-kou-no-shima": {
+    "katase-ko-no-shima": {
       "shibuya": 71,
       "shinjuku": 76,
       "tokyo": 79,
@@ -4621,7 +4621,7 @@
       "ikebukuro": 27,
       "shinagawa": 34
     },
-    "kawaguchi-motogou": {
+    "kawaguchi-motogo": {
       "shibuya": 40,
       "shinjuku": 45,
       "tokyo": 47,
@@ -4656,7 +4656,7 @@
       "ikebukuro": 66,
       "shinagawa": 86
     },
-    "kawawachou": {
+    "kawawacho": {
       "shibuya": 42,
       "shinjuku": 52,
       "tokyo": 58,
@@ -4768,7 +4768,7 @@
       "ikebukuro": 129,
       "shinagawa": 114
     },
-    "kazusa-ookubo": {
+    "kazusa-okubo": {
       "shibuya": 99,
       "shinjuku": 103,
       "tokyo": 96,
@@ -4796,70 +4796,70 @@
       "ikebukuro": 85,
       "shinagawa": 72
     },
-    "keikyuu-nagasawa": {
+    "keikyu-nagasawa": {
       "shibuya": 88,
       "shinjuku": 93,
       "tokyo": 86,
       "ikebukuro": 100,
       "shinagawa": 77
     },
-    "keikyuu-ootsu": {
+    "keikyu-otsu": {
       "shibuya": 72,
       "shinjuku": 78,
       "tokyo": 77,
       "ikebukuro": 84,
       "shinagawa": 62
     },
-    "keikyuu-taura": {
+    "keikyu-taura": {
       "shibuya": 67,
       "shinjuku": 72,
       "tokyo": 72,
       "ikebukuro": 79,
       "shinagawa": 57
     },
-    "keikyuu-tomioka": {
+    "keikyu-tomioka": {
       "shibuya": 65,
       "shinjuku": 61,
       "tokyo": 62,
       "ikebukuro": 68,
       "shinagawa": 55
     },
-    "keio-horinouchi": {
+    "keio-horinochi": {
       "shibuya": 61,
       "shinjuku": 56,
       "tokyo": 72,
       "ikebukuro": 66,
       "shinagawa": 66
     },
-    "keiou-katakura": {
+    "keio-katakura": {
       "shibuya": 64,
       "shinjuku": 65,
       "tokyo": 64,
       "ikebukuro": 59,
       "shinagawa": 61
     },
-    "keiou-yomiuri-rando": {
+    "keio-yomiuri-rando": {
       "shibuya": 42,
       "shinjuku": 37,
       "tokyo": 53,
       "ikebukuro": 48,
       "shinagawa": 47
     },
-    "keiouhachiouji": {
+    "keiohachioji": {
       "shibuya": 63,
       "shinjuku": 57,
       "tokyo": 63,
       "ikebukuro": 67,
       "shinagawa": 60
     },
-    "keiouinadatsutsumi": {
+    "keioinadatsutsumi": {
       "shibuya": 40,
       "shinjuku": 35,
       "tokyo": 51,
       "ikebukuro": 47,
       "shinagawa": 45
     },
-    "keioutama-kawa": {
+    "keiotama-kawa": {
       "shibuya": 51,
       "shinjuku": 34,
       "tokyo": 49,
@@ -4901,14 +4901,14 @@
       "ikebukuro": 46,
       "shinagawa": 45
     },
-    "keisei-ookubo": {
+    "keisei-okubo": {
       "shibuya": 62,
       "shinjuku": 62,
       "tokyo": 51,
       "ikebukuro": 61,
       "shinagawa": 57
     },
-    "keisei-oowada": {
+    "keisei-owada": {
       "shibuya": 62,
       "shinjuku": 61,
       "tokyo": 61,
@@ -4957,7 +4957,7 @@
       "ikebukuro": 65,
       "shinagawa": 57
     },
-    "kenchoumae": {
+    "kenchomae": {
       "shibuya": 64,
       "shinjuku": 65,
       "tokyo": 65,
@@ -4978,7 +4978,7 @@
       "ikebukuro": 35,
       "shinagawa": 26
     },
-    "kibou-ke-oka": {
+    "kibo-ke-oka": {
       "shibuya": 55,
       "shinjuku": 60,
       "tokyo": 65,
@@ -5013,7 +5013,7 @@
       "ikebukuro": 85,
       "shinagawa": 63
     },
-    "kishine-kouen": {
+    "kishine-koen": {
       "shibuya": 41,
       "shinjuku": 46,
       "tokyo": 50,
@@ -5069,7 +5069,7 @@
       "ikebukuro": 47,
       "shinagawa": 57
     },
-    "kita-kounosu": {
+    "kita-konosu": {
       "shibuya": 83,
       "shinjuku": 79,
       "tokyo": 84,
@@ -5118,7 +5118,7 @@
       "ikebukuro": 45,
       "shinagawa": 51
     },
-    "kitahachi-ouji": {
+    "kitahachi-oji": {
       "shibuya": 60,
       "shinjuku": 60,
       "tokyo": 61,
@@ -5237,7 +5237,7 @@
       "ikebukuro": 115,
       "shinagawa": 136
     },
-    "kodenmachou": {
+    "kodenmacho": {
       "shibuya": 26,
       "shinjuku": 24,
       "tokyo": 10,
@@ -5251,21 +5251,21 @@
       "ikebukuro": 61,
       "shinagawa": 55
     },
-    "kogane-joushi": {
+    "kogane-joshi": {
       "shibuya": 61,
       "shinjuku": 57,
       "tokyo": 51,
       "ikebukuro": 51,
       "shinagawa": 62
     },
-    "koganechou": {
+    "koganecho": {
       "shibuya": 51,
       "shinjuku": 57,
       "tokyo": 59,
       "ikebukuro": 65,
       "shinagawa": 42
     },
-    "kohoku": {
+    "kohoku-abiko": {
       "shibuya": 68,
       "shinjuku": 65,
       "tokyo": 68,
@@ -5307,14 +5307,14 @@
       "ikebukuro": 131,
       "shinagawa": 114
     },
-    "kokorozashi-kyuu": {
+    "kokorozashi-kyu": {
       "shibuya": 62,
       "shinjuku": 67,
       "tokyo": 61,
       "ikebukuro": 59,
       "shinagawa": 68
     },
-    "kokudou": {
+    "kokudo": {
       "shibuya": 43,
       "shinjuku": 49,
       "tokyo": 44,
@@ -5335,28 +5335,28 @@
       "ikebukuro": 21,
       "shinagawa": 22
     },
-    "kokuryou": {
+    "kokuryo": {
       "shibuya": 40,
       "shinjuku": 35,
       "tokyo": 40,
       "ikebukuro": 35,
       "shinagawa": 35
     },
-    "kokusai-tenjijou": {
+    "kokusai-tenjijo": {
       "shibuya": 28,
       "shinjuku": 33,
       "tokyo": 21,
       "ikebukuro": 40,
       "shinagawa": 19
     },
-    "kokusai-tenjijou-seimon": {
+    "kokusai-tenjijo-seimon": {
       "shibuya": 29,
       "shinjuku": 33,
       "tokyo": 22,
       "ikebukuro": 41,
       "shinagawa": 19
     },
-    "komabatoudaimae": {
+    "komabatodaimae": {
       "shibuya": 4,
       "shinjuku": 16,
       "tokyo": 26,
@@ -5440,112 +5440,112 @@
       "ikebukuro": 46,
       "shinagawa": 65
     },
-    "kou-kawara": {
+    "ko-kawara": {
       "shibuya": 32,
       "shinjuku": 41,
       "tokyo": 33,
       "ikebukuro": 38,
       "shinagawa": 29
     },
-    "kou-tsu-no-mori": {
+    "ko-tsu-no-mori": {
       "shibuya": 88,
       "shinjuku": 87,
       "tokyo": 79,
       "ikebukuro": 85,
       "shinagawa": 84
     },
-    "kouen": {
+    "koen": {
       "shibuya": 74,
       "shinjuku": 74,
       "tokyo": 65,
       "ikebukuro": 72,
       "shinagawa": 71
     },
-    "kouen-shita": {
+    "koen-shita": {
       "shibuya": 124,
       "shinjuku": 127,
       "tokyo": 133,
       "ikebukuro": 133,
       "shinagawa": 125
     },
-    "kouen-ue": {
+    "koen-ue": {
       "shibuya": 125,
       "shinjuku": 128,
       "tokyo": 134,
       "ikebukuro": 133,
       "shinagawa": 126
     },
-    "koufuu-dai": {
+    "kofu-dai": {
       "shibuya": 79,
       "shinjuku": 82,
       "tokyo": 74,
       "ikebukuro": 85,
       "shinagawa": 72
     },
-    "kouhoku": {
+    "kohoku-adachi": {
       "shibuya": 43,
       "shinjuku": 35,
       "tokyo": 33,
       "ikebukuro": 25,
       "shinagawa": 35
     },
-    "koujiya": {
+    "kojiya": {
       "shibuya": 43,
       "shinjuku": 39,
       "tokyo": 50,
       "ikebukuro": 47,
       "shinagawa": 28
     },
-    "koukuu-kouen": {
+    "koku-koen": {
       "shibuya": 53,
       "shinjuku": 49,
       "tokyo": 59,
       "ikebukuro": 47,
       "shinagawa": 61
     },
-    "kounan-chuuou": {
+    "konan-chuo": {
       "shibuya": 60,
       "shinjuku": 66,
       "tokyo": 68,
       "ikebukuro": 63,
       "shinagawa": 57
     },
-    "kounandai": {
+    "konandai": {
       "shibuya": 65,
       "shinjuku": 61,
       "tokyo": 63,
       "ikebukuro": 68,
       "shinagawa": 62
     },
-    "kounodai": {
+    "konodai": {
       "shibuya": 42,
       "shinjuku": 40,
       "tokyo": 42,
       "ikebukuro": 37,
       "shinagawa": 40
     },
-    "kounosu": {
+    "konosu": {
       "shibuya": 78,
       "shinjuku": 73,
       "tokyo": 78,
       "ikebukuro": 67,
       "shinagawa": 84
     },
-    "koushin-tsuka": {
+    "koshin-tsuka": {
       "shibuya": 30,
       "shinjuku": 22,
       "tokyo": 25,
       "ikebukuro": 12,
       "shinagawa": 38
     },
-    "koushuukaidou": {
+    "koshukaido": {
       "shibuya": 59,
       "shinjuku": 53,
       "tokyo": 69,
       "ikebukuro": 61,
       "shinagawa": 66
     },
-    "kouza-shibuya": {
+    "koza-shibuya": {
       "shibuya": 65,
       "shinjuku": 60,
       "tokyo": 64,
@@ -5615,7 +5615,7 @@
       "ikebukuro": 36,
       "shinagawa": 41
     },
-    "kujuu": {
+    "kuju": {
       "shibuya": 97,
       "shinjuku": 96,
       "tokyo": 88,
@@ -5706,28 +5706,28 @@
       "ikebukuro": 35,
       "shinagawa": 31
     },
-    "kyouteijou-mae": {
+    "kyoteijo-mae": {
       "shibuya": 44,
       "shinjuku": 39,
       "tokyo": 49,
       "ikebukuro": 49,
       "shinagawa": 51
     },
-    "kyuu-ga-hara": {
+    "kyu-ga-hara": {
       "shibuya": 29,
       "shinjuku": 38,
       "tokyo": 41,
       "ikebukuro": 36,
       "shinagawa": 25
     },
-    "kyuumei": {
+    "kyumei": {
       "shibuya": 107,
       "shinjuku": 108,
       "tokyo": 93,
       "ikebukuro": 108,
       "shinagawa": 102
     },
-    "machiya-nichoume": {
+    "machiya-nichome": {
       "shibuya": 36,
       "shinjuku": 30,
       "tokyo": 24,
@@ -5888,7 +5888,7 @@
       "ikebukuro": 82,
       "shinagawa": 68
     },
-    "meshi-kyuu": {
+    "meshi-kyu": {
       "shibuya": 94,
       "shinjuku": 98,
       "tokyo": 91,
@@ -5965,7 +5965,7 @@
       "ikebukuro": 52,
       "shinagawa": 61
     },
-    "minami-hanyuu": {
+    "minami-hanyu": {
       "shibuya": 90,
       "shinjuku": 91,
       "tokyo": 95,
@@ -5993,7 +5993,7 @@
       "ikebukuro": 76,
       "shinagawa": 93
     },
-    "minami-oota": {
+    "minami-ota": {
       "shibuya": 52,
       "shinjuku": 58,
       "tokyo": 60,
@@ -6063,7 +6063,7 @@
       "ikebukuro": 64,
       "shinagawa": 55
     },
-    "minamiootsuka": {
+    "minamiotsuka": {
       "shibuya": 66,
       "shinjuku": 62,
       "tokyo": 61,
@@ -6126,7 +6126,7 @@
       "ikebukuro": 25,
       "shinagawa": 38
     },
-    "minuma-dai-shinsui-kouen": {
+    "minuma-dai-shinsui-koen": {
       "shibuya": 39,
       "shinjuku": 33,
       "tokyo": 45,
@@ -6154,7 +6154,7 @@
       "ikebukuro": 42,
       "shinagawa": 55
     },
-    "misato-chuuou": {
+    "misato-chuo": {
       "shibuya": 49,
       "shinjuku": 45,
       "tokyo": 39,
@@ -6294,7 +6294,7 @@
       "ikebukuro": 18,
       "shinagawa": 34
     },
-    "motomachi-chuukagai": {
+    "motomachi-chukagai": {
       "shibuya": 49,
       "shinjuku": 55,
       "tokyo": 57,
@@ -6315,7 +6315,7 @@
       "ikebukuro": 9,
       "shinagawa": 35
     },
-    "mukougaokayuuen": {
+    "mukogaokayuen": {
       "shibuya": 40,
       "shinjuku": 38,
       "tokyo": 41,
@@ -6434,7 +6434,7 @@
       "ikebukuro": 38,
       "shinagawa": 39
     },
-    "musashishinjou": {
+    "musashishinjo": {
       "shibuya": 33,
       "shinjuku": 40,
       "tokyo": 35,
@@ -6448,7 +6448,7 @@
       "ikebukuro": 78,
       "shinagawa": 61
     },
-    "mutsuura": {
+    "mutsura": {
       "shibuya": 69,
       "shinjuku": 74,
       "tokyo": 75,
@@ -6462,21 +6462,21 @@
       "ikebukuro": 8,
       "shinagawa": 32
     },
-    "myouden": {
+    "myoden": {
       "shibuya": 42,
       "shinjuku": 42,
       "tokyo": 43,
       "ikebukuro": 41,
       "shinagawa": 38
     },
-    "myougaku": {
+    "myogaku": {
       "shibuya": 92,
       "shinjuku": 88,
       "tokyo": 96,
       "ikebukuro": 79,
       "shinagawa": 99
     },
-    "myourenji": {
+    "myorenji": {
       "shibuya": 33,
       "shinjuku": 45,
       "tokyo": 48,
@@ -6532,7 +6532,7 @@
       "ikebukuro": 65,
       "shinagawa": 73
     },
-    "naka-goura": {
+    "naka-gora": {
       "shibuya": 125,
       "shinjuku": 128,
       "tokyo": 134,
@@ -6595,7 +6595,7 @@
       "ikebukuro": 17,
       "shinagawa": 33
     },
-    "nakano-fujimichou": {
+    "nakano-fujimicho": {
       "shibuya": 19,
       "shinjuku": 8,
       "tokyo": 23,
@@ -6651,7 +6651,7 @@
       "ikebukuro": 106,
       "shinagawa": 126
     },
-    "namiki-chuuou": {
+    "namiki-chuo": {
       "shibuya": 71,
       "shinjuku": 67,
       "tokyo": 67,
@@ -6672,7 +6672,7 @@
       "ikebukuro": 59,
       "shinagawa": 65
     },
-    "nanbu-shijou": {
+    "nanbu-shijo": {
       "shibuya": 68,
       "shinjuku": 74,
       "tokyo": 65,
@@ -6686,7 +6686,7 @@
       "ikebukuro": 130,
       "shinagawa": 116
     },
-    "nankyou-hon": {
+    "nankyo-hon": {
       "shibuya": 70,
       "shinjuku": 66,
       "tokyo": 65,
@@ -6742,7 +6742,7 @@
       "ikebukuro": 24,
       "shinagawa": 35
     },
-    "nerima-kouyadai": {
+    "nerima-koyadai": {
       "shibuya": 37,
       "shinjuku": 31,
       "tokyo": 33,
@@ -6763,7 +6763,7 @@
       "ikebukuro": 64,
       "shinagawa": 40
     },
-    "nihondai-touri": {
+    "nihondai-tori": {
       "shibuya": 49,
       "shinjuku": 55,
       "tokyo": 56,
@@ -6791,7 +6791,7 @@
       "ikebukuro": 35,
       "shinagawa": 51
     },
-    "nijuubashimae": {
+    "nijubashimae": {
       "shibuya": 22,
       "shinjuku": 21,
       "tokyo": 7,
@@ -6812,14 +6812,14 @@
       "ikebukuro": 62,
       "shinagawa": 64
     },
-    "nishi-choufu": {
+    "nishi-chofu": {
       "shibuya": 33,
       "shinjuku": 28,
       "tokyo": 44,
       "ikebukuro": 38,
       "shinagawa": 40
     },
-    "nishi-hanyuu": {
+    "nishi-hanyu": {
       "shibuya": 102,
       "shinjuku": 97,
       "tokyo": 101,
@@ -6868,28 +6868,28 @@
       "ikebukuro": 62,
       "shinagawa": 64
     },
-    "nishi-oohara": {
+    "nishi-ohara": {
       "shibuya": 125,
       "shinjuku": 129,
       "tokyo": 121,
       "ikebukuro": 132,
       "shinagawa": 118
     },
-    "nishi-oomiya": {
+    "nishi-omiya": {
       "shibuya": 61,
       "shinjuku": 56,
       "tokyo": 62,
       "ikebukuro": 49,
       "shinagawa": 59
     },
-    "nishi-ooshima": {
+    "nishi-ojima": {
       "shibuya": 37,
       "shinjuku": 30,
       "tokyo": 20,
       "ikebukuro": 35,
       "shinagawa": 33
     },
-    "nishi-ooya": {
+    "nishi-oya": {
       "shibuya": 77,
       "shinjuku": 74,
       "tokyo": 81,
@@ -6931,7 +6931,7 @@
       "ikebukuro": 57,
       "shinagawa": 63
     },
-    "nishi-taishidou": {
+    "nishi-taishido": {
       "shibuya": 16,
       "shinjuku": 21,
       "tokyo": 38,
@@ -6994,7 +6994,7 @@
       "ikebukuro": 53,
       "shinagawa": 58
     },
-    "nishikou-shima-taira": {
+    "nishiko-shima-taira": {
       "shibuya": 34,
       "shinjuku": 38,
       "tokyo": 35,
@@ -7085,14 +7085,14 @@
       "ikebukuro": 25,
       "shinagawa": 18
     },
-    "nojima-kouen": {
+    "nojima-koen": {
       "shibuya": 68,
       "shinjuku": 73,
       "tokyo": 73,
       "ikebukuro": 80,
       "shinagawa": 67
     },
-    "noukendai": {
+    "nokendai": {
       "shibuya": 66,
       "shinjuku": 62,
       "tokyo": 63,
@@ -7113,7 +7113,7 @@
       "ikebukuro": 18,
       "shinagawa": 38
     },
-    "nyuu-so": {
+    "nyu-so": {
       "shibuya": 62,
       "shinjuku": 58,
       "tokyo": 68,
@@ -7183,7 +7183,7 @@
       "ikebukuro": 39,
       "shinagawa": 16
     },
-    "odakyuu-sagamihara": {
+    "odakyu-sagamihara": {
       "shibuya": 59,
       "shinjuku": 56,
       "tokyo": 60,
@@ -7323,168 +7323,168 @@
       "ikebukuro": 35,
       "shinagawa": 24
     },
-    "ooasou": {
+    "oaso": {
       "shibuya": 107,
       "shinjuku": 103,
       "tokyo": 109,
       "ikebukuro": 92,
       "shinagawa": 114
     },
-    "oobukuro": {
+    "obukuro": {
       "shibuya": 60,
       "shinjuku": 60,
       "tokyo": 60,
       "ikebukuro": 52,
       "shinagawa": 71
     },
-    "ooguchi": {
+    "oguchi": {
       "shibuya": 40,
       "shinjuku": 46,
       "tokyo": 48,
       "ikebukuro": 54,
       "shinagawa": 37
     },
-    "oohiradai": {
+    "ohiradai": {
       "shibuya": 122,
       "shinjuku": 120,
       "tokyo": 126,
       "ikebukuro": 131,
       "shinagawa": 117
     },
-    "ooikeiba-ba-mae": {
+    "oikeiba-ba-mae": {
       "shibuya": 27,
       "shinjuku": 35,
       "tokyo": 31,
       "ikebukuro": 33,
       "shinagawa": 17
     },
-    "ooiso": {
+    "oiso": {
       "shibuya": 84,
       "shinjuku": 88,
       "tokyo": 87,
       "ikebukuro": 94,
       "shinagawa": 78
     },
-    "ookawa": {
+    "okawa": {
       "shibuya": 44,
       "shinjuku": 50,
       "tokyo": 44,
       "ikebukuro": 58,
       "shinagawa": 33
     },
-    "ookubo": {
+    "okubo": {
       "shibuya": 19,
       "shinjuku": 4,
       "tokyo": 23,
       "ikebukuro": 16,
       "shinagawa": 29
     },
-    "ookurayama": {
+    "okurayama": {
       "shibuya": 29,
       "shinjuku": 41,
       "tokyo": 44,
       "ikebukuro": 49,
       "shinagawa": 33
     },
-    "oomachi": {
+    "omachi": {
       "shibuya": 61,
       "shinjuku": 59,
       "tokyo": 50,
       "ikebukuro": 55,
       "shinagawa": 59
     },
-    "oomiya-kouen": {
+    "omiya-koen": {
       "shibuya": 59,
       "shinjuku": 53,
       "tokyo": 58,
       "ikebukuro": 46,
       "shinagawa": 67
     },
-    "oomori-dai": {
+    "omori-dai": {
       "shibuya": 74,
       "shinjuku": 75,
       "tokyo": 66,
       "ikebukuro": 76,
       "shinagawa": 68
     },
-    "oomori-kaigan": {
+    "omori-kaigan": {
       "shibuya": 28,
       "shinjuku": 37,
       "tokyo": 34,
       "ikebukuro": 34,
       "shinagawa": 13
     },
-    "oomori-machi": {
+    "omori-machi": {
       "shibuya": 32,
       "shinjuku": 41,
       "tokyo": 39,
       "ikebukuro": 37,
       "shinagawa": 16
     },
-    "oonohara": {
+    "onohara": {
       "shibuya": 114,
       "shinjuku": 111,
       "tokyo": 119,
       "ikebukuro": 102,
       "shinagawa": 121
     },
-    "oonuki": {
+    "onuki": {
       "shibuya": 71,
       "shinjuku": 76,
       "tokyo": 72,
       "ikebukuro": 82,
       "shinagawa": 64
     },
-    "oosaki-hirokouji": {
+    "osaki-hirokoji": {
       "shibuya": 19,
       "shinjuku": 26,
       "tokyo": 26,
       "ikebukuro": 37,
       "shinagawa": 11
     },
-    "ooshima": {
+    "ojima": {
       "shibuya": 39,
       "shinjuku": 32,
       "tokyo": 23,
       "ikebukuro": 37,
       "shinagawa": 35
     },
-    "ootaki": {
+    "otaki": {
       "shibuya": 108,
       "shinjuku": 112,
       "tokyo": 104,
       "ikebukuro": 115,
       "shinagawa": 101
     },
-    "ooto": {
+    "oto": {
       "shibuya": 115,
       "shinjuku": 114,
       "tokyo": 106,
       "ikebukuro": 110,
       "shinagawa": 113
     },
-    "ootorii": {
+    "otorii": {
       "shibuya": 44,
       "shinjuku": 40,
       "tokyo": 50,
       "ikebukuro": 47,
       "shinagawa": 28
     },
-    "ootsuka-teikyoudaigaku": {
+    "otsuka-teikyodaigaku": {
       "shibuya": 58,
       "shinjuku": 53,
       "tokyo": 69,
       "ikebukuro": 63,
       "shinagawa": 64
     },
-    "oowada": {
+    "owada": {
       "shibuya": 60,
       "shinjuku": 54,
       "tokyo": 58,
       "ikebukuro": 46,
       "shinagawa": 67
     },
-    "ooyama": {
+    "oyama": {
       "shibuya": 32,
       "shinjuku": 23,
       "tokyo": 30,
@@ -7505,21 +7505,21 @@
       "ikebukuro": 99,
       "shinagawa": 119
     },
-    "ougi-oohashi": {
+    "ogi-ohashi": {
       "shibuya": 40,
       "shinjuku": 33,
       "tokyo": 30,
       "ikebukuro": 23,
       "shinagawa": 33
     },
-    "ougimachi": {
+    "ogimachi": {
       "shibuya": 43,
       "shinjuku": 49,
       "tokyo": 42,
       "ikebukuro": 57,
       "shinagawa": 43
     },
-    "oumekaidou": {
+    "omekaido": {
       "shibuya": 45,
       "shinjuku": 43,
       "tokyo": 53,
@@ -7568,7 +7568,7 @@
       "ikebukuro": 23,
       "shinagawa": 38
     },
-    "roka-kouen": {
+    "roka-koen": {
       "shibuya": 28,
       "shinjuku": 22,
       "tokyo": 43,
@@ -7589,7 +7589,7 @@
       "ikebukuro": 54,
       "shinagawa": 59
     },
-    "rokugou-dote": {
+    "rokugo-dote": {
       "shibuya": 40,
       "shinjuku": 35,
       "tokyo": 35,
@@ -7610,7 +7610,7 @@
       "ikebukuro": 67,
       "shinagawa": 63
     },
-    "ryuutsuu-sentaa": {
+    "ryutsu-sentaa": {
       "shibuya": 31,
       "shinjuku": 39,
       "tokyo": 35,
@@ -7659,7 +7659,7 @@
       "ikebukuro": 79,
       "shinagawa": 81
     },
-    "sagamiootsuka": {
+    "sagamiotsuka": {
       "shibuya": 62,
       "shinjuku": 66,
       "tokyo": 62,
@@ -7715,7 +7715,7 @@
       "ikebukuro": 63,
       "shinagawa": 66
     },
-    "sakura-kaidou": {
+    "sakura-kaido": {
       "shibuya": 60,
       "shinjuku": 52,
       "tokyo": 69,
@@ -7813,21 +7813,21 @@
       "ikebukuro": 59,
       "shinagawa": 43
     },
-    "sanguu-hashi": {
+    "sangu-hashi": {
       "shibuya": 12,
       "shinjuku": 4,
       "tokyo": 23,
       "ikebukuro": 21,
       "shinagawa": 24
     },
-    "sangyou-shinkou-sentaa": {
+    "sangyo-shinko-sentaa": {
       "shibuya": 73,
       "shinjuku": 69,
       "tokyo": 69,
       "ikebukuro": 75,
       "shinagawa": 62
     },
-    "sangyoudouro": {
+    "sangyodoro": {
       "shibuya": 49,
       "shinjuku": 43,
       "tokyo": 41,
@@ -8016,7 +8016,7 @@
       "ikebukuro": 15,
       "shinagawa": 35
     },
-    "senju-oohashi": {
+    "senju-ohashi": {
       "shibuya": 39,
       "shinjuku": 33,
       "tokyo": 25,
@@ -8065,7 +8065,7 @@
       "ikebukuro": 81,
       "shinagawa": 66
     },
-    "shakudo-shougakkou-mae": {
+    "shakudo-shogakko-mae": {
       "shibuya": 35,
       "shinjuku": 28,
       "tokyo": 24,
@@ -8093,7 +8093,7 @@
       "ikebukuro": 41,
       "shinagawa": 49
     },
-    "shibakouen": {
+    "shibakoen": {
       "shibuya": 18,
       "shinjuku": 22,
       "tokyo": 15,
@@ -8177,7 +8177,7 @@
       "ikebukuro": 148,
       "shinagawa": 146
     },
-    "shijou-mae": {
+    "shijo-mae": {
       "shibuya": 26,
       "shinjuku": 30,
       "tokyo": 18,
@@ -8191,7 +8191,7 @@
       "ikebukuro": 28,
       "shinagawa": 52
     },
-    "shimizu-kouen": {
+    "shimizu-koen": {
       "shibuya": 61,
       "shinjuku": 65,
       "tokyo": 63,
@@ -8205,7 +8205,7 @@
       "ikebukuro": 21,
       "shinagawa": 35
     },
-    "shimogoori": {
+    "shimogori": {
       "shibuya": 82,
       "shinjuku": 86,
       "tokyo": 79,
@@ -8233,42 +8233,42 @@
       "ikebukuro": 69,
       "shinagawa": 67
     },
-    "shimoochiai": {
+    "shimo-ochiai": {
       "shibuya": 23,
       "shinjuku": 14,
       "tokyo": 25,
       "ikebukuro": 12,
       "shinagawa": 33
     },
-    "shimousa-kanzaki": {
+    "shimosa-kanzaki": {
       "shibuya": 110,
       "shinjuku": 108,
       "tokyo": 100,
       "ikebukuro": 105,
       "shinagawa": 107
     },
-    "shimousa-matsuzaki": {
+    "shimosa-matsuzaki": {
       "shibuya": 88,
       "shinjuku": 87,
       "tokyo": 78,
       "ikebukuro": 84,
       "shinagawa": 85
     },
-    "shimousa-nakayama": {
+    "shimosa-nakayama": {
       "shibuya": 46,
       "shinjuku": 39,
       "tokyo": 35,
       "ikebukuro": 43,
       "shinagawa": 43
     },
-    "shimousa-tachibana": {
+    "shimosa-tachibana": {
       "shibuya": 144,
       "shinjuku": 143,
       "tokyo": 135,
       "ikebukuro": 141,
       "shinagawa": 140
     },
-    "shimousa-toyosato": {
+    "shimosa-toyosato": {
       "shibuya": 146,
       "shinjuku": 145,
       "tokyo": 137,
@@ -8282,7 +8282,7 @@
       "ikebukuro": 20,
       "shinagawa": 36
     },
-    "shimura-sanchoume": {
+    "shimura-sanchome": {
       "shibuya": 40,
       "shinjuku": 32,
       "tokyo": 40,
@@ -8366,7 +8366,7 @@
       "ikebukuro": 42,
       "shinagawa": 49
     },
-    "shin-koushin-tsuka": {
+    "shin-koshin-tsuka": {
       "shibuya": 31,
       "shinjuku": 23,
       "tokyo": 25,
@@ -8464,7 +8464,7 @@
       "ikebukuro": 42,
       "shinagawa": 13
     },
-    "shinanochou": {
+    "shinanocho": {
       "shibuya": 14,
       "shinjuku": 6,
       "tokyo": 17,
@@ -8485,7 +8485,7 @@
       "ikebukuro": 91,
       "shinagawa": 68
     },
-    "shingou": {
+    "shingo": {
       "shibuya": 101,
       "shinjuku": 96,
       "tokyo": 101,
@@ -8548,7 +8548,7 @@
       "ikebukuro": 37,
       "shinagawa": 36
     },
-    "shinrinkouen": {
+    "shinrinkoen": {
       "shibuya": 84,
       "shinjuku": 80,
       "tokyo": 86,
@@ -8583,14 +8583,14 @@
       "ikebukuro": 63,
       "shinagawa": 59
     },
-    "shinzou-kawashima": {
+    "shinzo-kawashima": {
       "shibuya": 34,
       "shinjuku": 28,
       "tokyo": 22,
       "ikebukuro": 21,
       "shinagawa": 38
     },
-    "shinzou-sato": {
+    "shinzo-sato": {
       "shibuya": 54,
       "shinjuku": 49,
       "tokyo": 45,
@@ -8716,56 +8716,56 @@
       "ikebukuro": 65,
       "shinagawa": 63
     },
-    "shouin-jinja-mae": {
+    "shoin-jinja-mae": {
       "shibuya": 18,
       "shinjuku": 23,
       "tokyo": 40,
       "ikebukuro": 40,
       "shinagawa": 32
     },
-    "shoumaru": {
+    "shomaru": {
       "shibuya": 96,
       "shinjuku": 94,
       "tokyo": 102,
       "ikebukuro": 86,
       "shinagawa": 103
     },
-    "shounan": {
+    "shonan": {
       "shibuya": 59,
       "shinjuku": 63,
       "tokyo": 67,
       "ikebukuro": 56,
       "shinagawa": 65
     },
-    "shounan-fukazawa": {
+    "shonan-fukazawa": {
       "shibuya": 66,
       "shinjuku": 70,
       "tokyo": 73,
       "ikebukuro": 77,
       "shinagawa": 64
     },
-    "shounan-kaigan-kouen": {
+    "shonan-kaigan-koen": {
       "shibuya": 77,
       "shinjuku": 81,
       "tokyo": 78,
       "ikebukuro": 88,
       "shinagawa": 69
     },
-    "shounan-machiya": {
+    "shonan-machiya": {
       "shibuya": 65,
       "shinjuku": 69,
       "tokyo": 72,
       "ikebukuro": 76,
       "shinagawa": 63
     },
-    "shouwa": {
+    "showa": {
       "shibuya": 42,
       "shinjuku": 48,
       "tokyo": 41,
       "ikebukuro": 56,
       "shinagawa": 41
     },
-    "shouwa-shima": {
+    "showa-shima": {
       "shibuya": 34,
       "shinjuku": 42,
       "tokyo": 38,
@@ -8793,49 +8793,49 @@
       "ikebukuro": 41,
       "shinagawa": 37
     },
-    "soshio-ryuutsuu-sentaa": {
+    "soshio-ryutsu-sentaa": {
       "shibuya": 100,
       "shinjuku": 95,
       "tokyo": 101,
       "ikebukuro": 84,
       "shinagawa": 107
     },
-    "sou-moto": {
+    "so-moto": {
       "shibuya": 113,
       "shinjuku": 117,
       "tokyo": 110,
       "ikebukuro": 121,
       "shinagawa": 106
     },
-    "soubudai-mae": {
+    "sobudai-mae": {
       "shibuya": 62,
       "shinjuku": 60,
       "tokyo": 63,
       "ikebukuro": 62,
       "shinagawa": 65
     },
-    "soubudai-shita": {
+    "sobudai-shita": {
       "shibuya": 72,
       "shinjuku": 60,
       "tokyo": 66,
       "ikebukuro": 71,
       "shinagawa": 59
     },
-    "sougo-sandou": {
+    "sogo-sando": {
       "shibuya": 86,
       "shinjuku": 85,
       "tokyo": 77,
       "ikebukuro": 83,
       "shinagawa": 82
     },
-    "souka": {
+    "soka": {
       "shibuya": 43,
       "shinjuku": 44,
       "tokyo": 42,
       "ikebukuro": 48,
       "shinagawa": 53
     },
-    "souun-yama": {
+    "soun-yama": {
       "shibuya": 126,
       "shinjuku": 129,
       "tokyo": 135,
@@ -8863,21 +8863,21 @@
       "ikebukuro": 65,
       "shinagawa": 52
     },
-    "sugito-kouyadai": {
+    "sugito-koyadai": {
       "shibuya": 78,
       "shinjuku": 72,
       "tokyo": 74,
       "ikebukuro": 66,
       "shinagawa": 83
     },
-    "suigou": {
+    "suigo": {
       "shibuya": 130,
       "shinjuku": 128,
       "tokyo": 120,
       "ikebukuro": 125,
       "shinagawa": 126
     },
-    "suitenguumae": {
+    "suitengumae": {
       "shibuya": 21,
       "shinjuku": 26,
       "tokyo": 11,
@@ -8891,7 +8891,7 @@
       "ikebukuro": 59,
       "shinagawa": 67
     },
-    "supootsusentaa": {
+    "sports-center": {
       "shibuya": 62,
       "shinjuku": 63,
       "tokyo": 63,
@@ -8905,7 +8905,7 @@
       "ikebukuro": 62,
       "shinagawa": 53
     },
-    "suzukichou": {
+    "suzukicho": {
       "shibuya": 48,
       "shinjuku": 43,
       "tokyo": 42,
@@ -8968,14 +8968,14 @@
       "ikebukuro": 79,
       "shinagawa": 77
     },
-    "taitou": {
+    "taito": {
       "shibuya": 114,
       "shinjuku": 117,
       "tokyo": 109,
       "ikebukuro": 120,
       "shinagawa": 107
     },
-    "taiyuu-yama": {
+    "taiyu-yama": {
       "shibuya": 111,
       "shinjuku": 108,
       "tokyo": 114,
@@ -9031,7 +9031,7 @@
       "ikebukuro": 64,
       "shinagawa": 63
     },
-    "takane-koudan": {
+    "takane-kodan": {
       "shibuya": 66,
       "shinjuku": 65,
       "tokyo": 55,
@@ -9129,14 +9129,14 @@
       "ikebukuro": 93,
       "shinagawa": 113
     },
-    "taki-fudou": {
+    "taki-fudo": {
       "shibuya": 66,
       "shinjuku": 65,
       "tokyo": 55,
       "ikebukuro": 62,
       "shinagawa": 63
     },
-    "takinogawa-itchoume": {
+    "takinogawa-itchome": {
       "shibuya": 33,
       "shinjuku": 25,
       "tokyo": 26,
@@ -9185,7 +9185,7 @@
       "ikebukuro": 58,
       "shinagawa": 52
     },
-    "tan-sou": {
+    "tan-so": {
       "shibuya": 135,
       "shinjuku": 131,
       "tokyo": 139,
@@ -9255,7 +9255,7 @@
       "ikebukuro": 63,
       "shinagawa": 66
     },
-    "tennouchou": {
+    "tennocho": {
       "shibuya": 49,
       "shinjuku": 55,
       "tokyo": 58,
@@ -9269,7 +9269,7 @@
       "ikebukuro": 42,
       "shinagawa": 17
     },
-    "tetsudouhakubutsukan": {
+    "tetsudohakubutsukan": {
       "shibuya": 59,
       "shinjuku": 53,
       "tokyo": 59,
@@ -9283,7 +9283,7 @@
       "ikebukuro": 62,
       "shinagawa": 39
     },
-    "tobitakyuu": {
+    "tobitakyu": {
       "shibuya": 34,
       "shinjuku": 29,
       "tokyo": 45,
@@ -9311,7 +9311,7 @@
       "ikebukuro": 18,
       "shinagawa": 32
     },
-    "todakouen": {
+    "todakoen": {
       "shibuya": 30,
       "shinjuku": 35,
       "tokyo": 35,
@@ -9353,7 +9353,7 @@
       "ikebukuro": 53,
       "shinagawa": 60
     },
-    "tokoshikouen": {
+    "tokoshikoen": {
       "shibuya": 21,
       "shinjuku": 36,
       "tokyo": 30,
@@ -9381,14 +9381,14 @@
       "ikebukuro": 32,
       "shinagawa": 41
     },
-    "toneri-kouen": {
+    "toneri-koen": {
       "shibuya": 35,
       "shinjuku": 41,
       "tokyo": 39,
       "ikebukuro": 30,
       "shinagawa": 39
     },
-    "tookaichiba": {
+    "tokaichiba": {
       "shibuya": 45,
       "shinjuku": 50,
       "tokyo": 56,
@@ -9423,140 +9423,140 @@
       "ikebukuro": 22,
       "shinagawa": 41
     },
-    "totsuka-angyou": {
+    "totsuka-angyo": {
       "shibuya": 52,
       "shinjuku": 46,
       "tokyo": 47,
       "ikebukuro": 51,
       "shinagawa": 57
     },
-    "tou-no-sawa": {
+    "to-no-sawa": {
       "shibuya": 121,
       "shinjuku": 118,
       "tokyo": 124,
       "ikebukuro": 130,
       "shinagawa": 116
     },
-    "toubu-nerima": {
+    "tobu-nerima": {
       "shibuya": 39,
       "shinjuku": 31,
       "tokyo": 41,
       "ikebukuro": 16,
       "shinagawa": 36
     },
-    "toubu-takezawa": {
+    "tobu-takezawa": {
       "shibuya": 100,
       "shinjuku": 96,
       "tokyo": 103,
       "ikebukuro": 86,
       "shinagawa": 107
     },
-    "toudai-miya": {
+    "todai-miya": {
       "shibuya": 64,
       "shinjuku": 58,
       "tokyo": 62,
       "ikebukuro": 51,
       "shinagawa": 61
     },
-    "toudai-shima": {
+    "todai-shima": {
       "shibuya": 41,
       "shinjuku": 34,
       "tokyo": 25,
       "ikebukuro": 40,
       "shinagawa": 37
     },
-    "toufuku-nama": {
+    "tofuku-nama": {
       "shibuya": 67,
       "shinjuku": 65,
       "tokyo": 65,
       "ikebukuro": 66,
       "shinagawa": 64
     },
-    "tougane": {
+    "togane": {
       "shibuya": 103,
       "shinjuku": 104,
       "tokyo": 90,
       "ikebukuro": 105,
       "shinagawa": 98
     },
-    "touguu-hara": {
+    "togu-hara": {
       "shibuya": 63,
       "shinjuku": 58,
       "tokyo": 63,
       "ikebukuro": 50,
       "shinagawa": 61
     },
-    "touhaku-raku": {
+    "tohaku-raku": {
       "shibuya": 36,
       "shinjuku": 48,
       "tokyo": 51,
       "ikebukuro": 56,
       "shinagawa": 40
     },
-    "toukai-kami": {
+    "tokai-kami": {
       "shibuya": 58,
       "shinjuku": 51,
       "tokyo": 41,
       "ikebukuro": 55,
       "shinagawa": 54
     },
-    "toukaidaigakumae": {
+    "tokaidaigakumae": {
       "shibuya": 81,
       "shinjuku": 79,
       "tokyo": 91,
       "ikebukuro": 90,
       "shinagawa": 82
     },
-    "toukou-ta": {
+    "toko-ta": {
       "shibuya": 99,
       "shinjuku": 95,
       "tokyo": 99,
       "ikebukuro": 83,
       "shinagawa": 106
     },
-    "toukyou-sukaitsurii": {
+    "tokyo-sukaitsurii": {
       "shibuya": 35,
       "shinjuku": 38,
       "tokyo": 25,
       "ikebukuro": 36,
       "shinagawa": 41
     },
-    "toukyou-terepooto": {
+    "tokyo-teleport": {
       "shibuya": 26,
       "shinjuku": 32,
       "tokyo": 22,
       "ikebukuro": 40,
       "shinagawa": 16
     },
-    "toumou-ro": {
+    "tomo-ro": {
       "shibuya": 83,
       "shinjuku": 79,
       "tokyo": 87,
       "ikebukuro": 71,
       "shinagawa": 90
     },
-    "tourin-kan": {
+    "torin-kan": {
       "shibuya": 56,
       "shinjuku": 60,
       "tokyo": 67,
       "ikebukuro": 72,
       "shinagawa": 59
     },
-    "toushin-kawa": {
+    "toshin-kawa": {
       "shibuya": 71,
       "shinjuku": 75,
       "tokyo": 69,
       "ikebukuro": 80,
       "shinagawa": 74
     },
-    "tousou-moto": {
+    "toso-moto": {
       "shibuya": 112,
       "shinjuku": 115,
       "tokyo": 108,
       "ikebukuro": 119,
       "shinagawa": 105
     },
-    "touyoko-ta": {
+    "toyoko-ta": {
       "shibuya": 76,
       "shinjuku": 80,
       "tokyo": 73,
@@ -9591,7 +9591,7 @@
       "ikebukuro": 37,
       "shinagawa": 39
     },
-    "tsujidou": {
+    "tsujido": {
       "shibuya": 70,
       "shinjuku": 74,
       "tokyo": 72,
@@ -9710,7 +9710,7 @@
       "ikebukuro": 58,
       "shinagawa": 34
     },
-    "tsurumi-shijou": {
+    "tsurumi-shijo": {
       "shibuya": 34,
       "shinjuku": 40,
       "tokyo": 41,
@@ -9745,14 +9745,14 @@
       "ikebukuro": 43,
       "shinagawa": 27
     },
-    "uchisaiwaichou": {
+    "uchisaiwaicho": {
       "shibuya": 19,
       "shinjuku": 20,
       "tokyo": 10,
       "ikebukuro": 26,
       "shinagawa": 19
     },
-    "ue-goura": {
+    "ue-gora": {
       "shibuya": 125,
       "shinjuku": 128,
       "tokyo": 135,
@@ -9773,7 +9773,7 @@
       "ikebukuro": 64,
       "shinagawa": 58
     },
-    "ue-ooi": {
+    "ue-oi": {
       "shibuya": 104,
       "shinjuku": 107,
       "tokyo": 107,
@@ -9850,14 +9850,14 @@
       "ikebukuro": 168,
       "shinagawa": 165
     },
-    "umi-no-kouen-minamiguchi": {
+    "umi-no-koen-minamiguchi": {
       "shibuya": 66,
       "shinjuku": 72,
       "tokyo": 72,
       "ikebukuro": 78,
       "shinagawa": 66
     },
-    "umi-no-kouen-shiba-kuchi": {
+    "umi-no-koen-shiba-kuchi": {
       "shibuya": 66,
       "shinjuku": 71,
       "tokyo": 71,
@@ -9976,7 +9976,7 @@
       "ikebukuro": 128,
       "shinagawa": 111
     },
-    "wadou-kurotani": {
+    "wado-kurotani": {
       "shibuya": 116,
       "shinjuku": 112,
       "tokyo": 121,
@@ -10053,7 +10053,7 @@
       "ikebukuro": 89,
       "shinagawa": 85
     },
-    "yachiyo-chuuou": {
+    "yachiyo-chuo": {
       "shibuya": 68,
       "shinjuku": 61,
       "tokyo": 61,
@@ -10102,7 +10102,7 @@
       "ikebukuro": 45,
       "shinagawa": 27
     },
-    "yagyuu": {
+    "yagyu": {
       "shibuya": 104,
       "shinjuku": 98,
       "tokyo": 101,
@@ -10130,7 +10130,7 @@
       "ikebukuro": 49,
       "shinagawa": 54
     },
-    "yakou": {
+    "yako": {
       "shibuya": 41,
       "shinjuku": 36,
       "tokyo": 37,
@@ -10158,7 +10158,7 @@
       "ikebukuro": 67,
       "shinagawa": 48
     },
-    "yanagikouji": {
+    "yanagikoji": {
       "shibuya": 75,
       "shinjuku": 79,
       "tokyo": 76,
@@ -10249,7 +10249,7 @@
       "ikebukuro": 81,
       "shinagawa": 59
     },
-    "yokosuka-chuuou": {
+    "yokosuka-chuo": {
       "shibuya": 70,
       "shinjuku": 75,
       "tokyo": 74,
@@ -10277,14 +10277,14 @@
       "ikebukuro": 38,
       "shinagawa": 53
     },
-    "yono-honchou": {
+    "yono-honcho": {
       "shibuya": 45,
       "shinjuku": 40,
       "tokyo": 51,
       "ikebukuro": 33,
       "shinagawa": 59
     },
-    "yoshi-kawa-kouen": {
+    "yoshi-kawa-koen": {
       "shibuya": 63,
       "shinjuku": 64,
       "tokyo": 65,
@@ -10312,7 +10312,7 @@
       "ikebukuro": 53,
       "shinagawa": 63
     },
-    "yoshinochou": {
+    "yoshinocho": {
       "shibuya": 52,
       "shinjuku": 58,
       "tokyo": 60,
@@ -10326,42 +10326,42 @@
       "ikebukuro": 13,
       "shinagawa": 24
     },
-    "youdo": {
+    "yodo": {
       "shibuya": 119,
       "shinjuku": 115,
       "tokyo": 122,
       "ikebukuro": 105,
       "shinagawa": 126
     },
-    "youga": {
+    "yoga": {
       "shibuya": 18,
       "shinjuku": 30,
       "tokyo": 41,
       "ikebukuro": 41,
       "shinagawa": 31
     },
-    "youkaichiba": {
+    "yokaichiba": {
       "shibuya": 122,
       "shinjuku": 121,
       "tokyo": 107,
       "ikebukuro": 120,
       "shinagawa": 117
     },
-    "youkoudai": {
+    "yokodai": {
       "shibuya": 64,
       "shinjuku": 60,
       "tokyo": 61,
       "ikebukuro": 67,
       "shinagawa": 60
     },
-    "yourou-keikoku": {
+    "yoro-keikoku": {
       "shibuya": 102,
       "shinjuku": 106,
       "tokyo": 99,
       "ikebukuro": 110,
       "shinagawa": 95
     },
-    "yubi-ougi": {
+    "yubi-ogi": {
       "shibuya": 61,
       "shinjuku": 56,
       "tokyo": 62,
@@ -10382,7 +10382,7 @@
       "ikebukuro": 85,
       "shinagawa": 65
     },
-    "yuki-ga-taniootsuka": {
+    "yuki-ga-taniotsuka": {
       "shibuya": 26,
       "shinjuku": 35,
       "tokyo": 39,
@@ -10431,7 +10431,7 @@
       "ikebukuro": 33,
       "shinagawa": 18
     },
-    "yuuenchi-nishi": {
+    "yuenchi-nishi": {
       "shibuya": 59,
       "shinjuku": 56,
       "tokyo": 67,
@@ -10445,14 +10445,14 @@
       "ikebukuro": 65,
       "shinagawa": 68
     },
-    "zenkou": {
+    "zenko": {
       "shibuya": 64,
       "shinjuku": 69,
       "tokyo": 72,
       "ikebukuro": 81,
       "shinagawa": 63
     },
-    "zoushiki": {
+    "zoshiki": {
       "shibuya": 38,
       "shinjuku": 34,
       "tokyo": 33,
