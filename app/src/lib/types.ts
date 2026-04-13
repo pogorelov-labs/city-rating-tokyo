@@ -8,6 +8,7 @@ export interface StationRatings {
   gym_sports: number;
   vibe: number;
   crowd: number;
+  daily_essentials: number; // Added in 10th-category sprint; default 5 until pipeline runs
 }
 
 export interface RentAvg {
@@ -44,6 +45,7 @@ export interface StationConfidence {
   gym_sports: ConfidenceLevel;
   vibe: ConfidenceLevel;
   crowd: ConfidenceLevel;
+  daily_essentials?: ConfidenceLevel; // optional until pipeline regenerates all entries
 }
 
 export interface StationSources {
@@ -56,6 +58,7 @@ export interface StationSources {
   gym_sports: string[];
   vibe: string[];
   crowd: string[];
+  daily_essentials?: string[]; // optional until pipeline regenerates all entries
 }
 
 export type PlaceCategory = 'gym' | 'mall' | 'park' | 'landmark' | 'cafe' | 'restaurant' | 'bar';
@@ -125,6 +128,7 @@ export interface WeightConfig {
   gym_sports: number;
   vibe: number;
   crowd: number;
+  daily_essentials: number;
 }
 
 export interface FilterState {
@@ -144,15 +148,16 @@ export const DEFAULT_FILTERS: FilterState = {
 };
 
 export const DEFAULT_WEIGHTS: WeightConfig = {
-  food: 15,
-  nightlife: 10,
-  transport: 20,
-  rent: 20,
+  food: 12,
+  nightlife: 8,
+  transport: 18,
+  rent: 18,
   safety: 10,
-  green: 10,
-  gym_sports: 5,
-  vibe: 5,
-  crowd: 5,
+  green: 8,
+  gym_sports: 4,
+  vibe: 4,
+  crowd: 4,
+  daily_essentials: 14,
 };
 
 export const RATING_LABELS: Record<keyof StationRatings, string> = {
@@ -165,6 +170,7 @@ export const RATING_LABELS: Record<keyof StationRatings, string> = {
   gym_sports: 'Gym & Sports',
   vibe: 'Vibe & Atmosphere',
   crowd: 'Quietness',
+  daily_essentials: 'Daily Essentials',
 };
 
 export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
@@ -188,28 +194,28 @@ export const PRESET_PROFILES: PresetProfile[] = [
     id: 'young-pro',
     label: 'Young Pro',
     icon: '💼',
-    weights: { food: 15, nightlife: 20, transport: 30, rent: 20, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+    weights: { food: 12, nightlife: 18, transport: 28, rent: 18, safety: 0, green: 0, gym_sports: 0, vibe: 12, crowd: 0, daily_essentials: 12 },
     filters: { maxRent: 150000, maxCommute: 30 },
   },
   {
     id: 'family',
     label: 'Family',
     icon: '👨‍👩‍👧',
-    weights: { food: 0, nightlife: 0, transport: 15, rent: 10, safety: 30, green: 25, gym_sports: 0, vibe: 0, crowd: 20 },
+    weights: { food: 0, nightlife: 0, transport: 12, rent: 8, safety: 25, green: 20, gym_sports: 0, vibe: 0, crowd: 15, daily_essentials: 20 },
     filters: { maxCommute: 40, categoryMins: { safety: 7 } },
   },
   {
     id: 'foodie-budget',
     label: 'Foodie Budget',
     icon: '🍜',
-    weights: { food: 35, nightlife: 15, transport: 0, rent: 35, safety: 0, green: 0, gym_sports: 0, vibe: 15, crowd: 0 },
+    weights: { food: 30, nightlife: 13, transport: 0, rent: 30, safety: 0, green: 0, gym_sports: 0, vibe: 13, crowd: 0, daily_essentials: 14 },
     filters: { maxRent: 120000 },
   },
   {
     id: 'digital-nomad',
     label: 'Digital Nomad',
     icon: '💻',
-    weights: { food: 20, nightlife: 0, transport: 10, rent: 20, safety: 0, green: 0, gym_sports: 10, vibe: 25, crowd: 15 },
+    weights: { food: 17, nightlife: 0, transport: 8, rent: 17, safety: 0, green: 0, gym_sports: 8, vibe: 22, crowd: 13, daily_essentials: 15 },
     filters: { maxRent: 130000 },
   },
 ];
@@ -230,6 +236,7 @@ export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
   gym_sports: 'Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby',
   vibe: 'Overall character and charm: cultural identity, street life, local community, architectural interest',
   crowd: 'Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)',
+  daily_essentials: 'Supermarkets, pharmacies, clinics, banks, laundry, dentists, and other daily necessities within walking distance',
 };
 
 export const PLACE_CATEGORY_LABELS: Record<PlaceCategory, string> = {

@@ -42,6 +42,7 @@ const CATEGORY_SHORT_LABELS: Record<keyof StationRatings, string> = {
   gym_sports: 'Gym',
   vibe: 'Vibe',
   crowd: 'Quietness',
+  daily_essentials: 'Essentials',
 };
 
 function formatRent(v: number, isMin: boolean): string {

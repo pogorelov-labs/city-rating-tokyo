@@ -23,10 +23,12 @@ import { NaturalEnvironment } from '@/components/NaturalEnvironment';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
+import stationThumbs from '@/data/station-thumbnails.json';
 import stationPlaces from '@/data/station-places.json';
 
 type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: string; license?: string; lqip?: string };
 const imageData = stationImages as Record<string, ImageEntry[]>;
+const thumbData = stationThumbs as Record<string, { thumb: string; lqip: string }>;
 import type { StationPlace } from '@/lib/types';
 const placesData = stationPlaces as Record<string, StationPlace[]>;
 
@@ -47,6 +49,7 @@ export async function generateMetadata({
   const desc = station.description?.atmosphere
     ? station.description.atmosphere.slice(0, 155)
     : `Neighborhood guide for ${station.name_en} station area in Tokyo.`;
+  const ogImage = thumbData[slug]?.thumb;
   return {
     title: `${station.name_en} (${station.name_jp}) - Tokyo Neighborhood Explorer`,
     description: `${station.name_en} station area: ratings, rent prices, transit times. ${desc}`,
@@ -54,6 +57,9 @@ export async function generateMetadata({
       title: `${station.name_en} - Tokyo Neighborhood Explorer`,
       description: desc,
       type: 'article',
+      ...(ogImage && {
+        images: [{ url: ogImage, width: 320, height: 213, alt: `${station.name_en} station area` }],
+      }),
     },
   };
 }

@@ -61,6 +61,7 @@ export const CITY_MEDIANS: Record<keyof StationRatings, number> = {
   gym_sports: 5,
   vibe: 5,
   crowd: 7,
+  daily_essentials: 5,
 };
 
 /**
@@ -79,6 +80,7 @@ const CATEGORY_PALETTES: Record<keyof StationRatings, readonly [RGB, RGB]> = {
   gym_sports: [[254, 205, 211], [190, 18, 60]],    // rose → crimson
   vibe:       [[252, 231, 243], [190, 24, 93]],    // pink → magenta
   crowd:      [[226, 232, 240], [30, 41, 59]],     // slate → dark slate
+  daily_essentials: [[254, 240, 199], [180, 83, 9]], // warm cream → burnt sienna
 };
 
 function lerpColor(a: RGB, b: RGB, t: number): string {
