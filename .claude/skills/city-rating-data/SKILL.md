@@ -25,13 +25,13 @@ Known tables (IDs may change):
 | `hostels` | (discover schema) | Hostel/accommodation data |
 | `crime_stats` | (discover schema) | Crime statistics by area |
 | `passenger_counts` | (discover schema) | Station passenger volume |
-| `computed_ratings` | slug, food, nightlife, transport, rent, safety, green, gym_sports, vibe, crowd, source | Calculated ratings per station |
+| `computed_ratings` | slug, food, nightlife, transport, rent, safety, green, gym_sports, vibe, crowd, daily_essentials, confidence, sources, data_date | 10 rating categories per station |
 | `osm_extended` | slug, karaoke_count, nightclub_count, cultural_venue_count, pedestrian_street_count, hostel_count | Extended OSM tags |
 | `station_wards` | slug, city_name, ward_name, prefecture | Nominatim reverse geocoding |
 | `station_crime` | slug + ArcGIS crime fields | Keishicho neighborhood-level crime (Tokyo) |
 | `station_elevation` | slug, elevation_m, lat, lng | Open-Elevation API (1493 stations, -2m to 741m) |
 | `station_seismic` | slug, prob_i60_30yr, prob_i55_30yr, intensity_50yr_p10, meshcode | J-SHIS Y2024 seismic hazard |
-| `osm_livability` | slug, supermarket_count, pharmacy_count, clinic_count, school_count, kindergarten_count, post_office_count, bank_count, laundry_count, dentist_count | Daily essentials (scraping) |
+| `osm_livability` | slug, supermarket_count, pharmacy_count, clinic_count, school_count, kindergarten_count, post_office_count, bank_count, laundry_count, dentist_count | Daily essentials (1493/1493 complete) |
 
 ## Common operations
 

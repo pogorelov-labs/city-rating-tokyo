@@ -34,7 +34,7 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | station_wards | m74rdmspn3trrqc | 1493 | 100% | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | test | Overpass (superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | 100% | Output of compute-ratings.py + confidence/sources/data_date |
-| osm_livability | m3vasnsm4y09xez | 1470 | **98%** | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
+| osm_livability | m3vasnsm4y09xez | 1493 | **100%** | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
 | station_elevation | mkrugzx8z62hli4 | 1493 | **100%** | Open-Elevation API (bulk POST). Range: -2m to 741m |
 | station_seismic | mhtnqvmi1kwbth9 | 1493 | **100%** | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
 | rent (file) | — | 274 | 18% | Suumo scrape (app/src/data/rent-averages.json) |
@@ -67,7 +67,7 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 |-------|-------------|--------|--------|
 | H1 | Station elevation (flood risk signal) | ✅ done (1493/1493) | Open-Elevation API, CRTKY-85 |
 | H2 | Seismic hazard (earthquake risk) | ✅ done (1493/1493) | J-SHIS Y2024, CRTKY-86 |
-| H3 | Daily essentials (livability) | 🔄 near done (1470/1493) | Overpass (9 categories), CRTKY-87 |
+| H3 | Daily essentials (livability) | ✅ done (1493/1493) | Overpass (9 categories), CRTKY-87 |
 | H4 | Station images (health check) | ✅ done (0 broken / 8963 URLs) | img.pogorelov.dev HEAD check |
 | H5 | Green area (sqm geometry) | ⏳ queued (after H3) | Overpass `out geom`, CRTKY-42 |
 

@@ -2,10 +2,10 @@
 
 ## Project Overview
 
-Interactive map of Greater Tokyo (1493 stations) with data-driven neighborhood ratings. Users set **hard dealbreaker filters** (max rent, max commute, per-category minimums) and **soft weight preferences** (food, nightlife, transport, rent, safety, green, gym, vibe, crowd) independently.
+Interactive map of Greater Tokyo (1493 stations) with data-driven neighborhood ratings across **10 categories**. Users set **hard dealbreaker filters** (max rent, max commute, per-category minimums) and **soft weight preferences** (food, nightlife, transport, rent, safety, green, gym, vibe, crowd, daily_essentials) independently. **Three languages:** EN/JA/RU via next-intl v4.
 
 **Live**: https://city-rating.pogorelov.dev
-**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl (EN/JA/RU). Static JSON data, no DB at runtime.
+**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl v4 (EN/JA/RU). Static JSON data, no DB at runtime.
 **Deploy**: Coolify on VPS (217.196.61.98), GitHub App auto-deploy from `main`.
 
 ## Architecture
@@ -52,12 +52,12 @@ Do **not** equate “every station has a number” with “every number is equal
 | station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
-| osm_livability | m3vasnsm4y09xez | 1493* | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist). *Scraping |
+| osm_livability | m3vasnsm4y09xez | 1493 | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
 | station_elevation | mkrugzx8z62hli4 | 1493 | Open-Elevation API bulk POST. Range: -2m to 741m, avg 43m |
 | station_seismic | mhtnqvmi1kwbth9 | 1493 | J-SHIS Y2024 probabilistic seismic hazard (prob_i60_30yr, prob_i55_30yr, intensity, ground velocity) |
 | feedback | mwuwwlko3278wrk | — | User feedback from site |
 
-`computed_ratings` has 3 metadata columns alongside the 9 rating numbers:
+`computed_ratings` has 3 metadata columns alongside the 10 rating numbers:
 - `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`
 - `sources` (LongText) — JSON: `{"food":["hotpepper","osm"],...}`
 - `data_date` (SingleLineText) — e.g. `2026-04`
@@ -104,13 +104,13 @@ All categories use **log-then-percentile** normalization across 1493 stations, t
 
 Effect: "10" means something specific and explainable. Before v3, top 5.6% of every category (~83 stations) auto-rounded to 10. After v3, top-10 count dropped to 15–64 per category (5 for rent).
 
-### food (15% default weight)
+### food (12% default weight)
 ```
 raw = log(1 + HP_total) * 0.6 + log(1 + OSM_food) * 0.4
 ```
 Sources: HotPepper total_count (100%), OSM food_count (94%). Correlation r=0.855.
 
-### nightlife (10%)
+### nightlife (8%)
 ```
 raw = log(1 + HP_midnight) * 0.25 + log(1 + HP_izak) * 0.2
     + log(1 + HP_bar*3) * 0.15 + log(1 + OSM_night) * 0.2
@@ -118,13 +118,13 @@ raw = log(1 + HP_midnight) * 0.25 + log(1 + HP_izak) * 0.2
 ```
 Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; hostel count.
 
-### transport (20%)
+### transport (18%)
 ```
 raw = line_count * 2 + log(1 + daily_passengers) * 0.5
 ```
 Sources: station line_count (100%), MLIT S12 passengers (94%).
 
-### rent (20%, inverted: cheaper = higher)
+### rent (18%, inverted: cheaper = higher)
 ```
 raw = suumo_1k                                             # real (273 stations)
     || ward_average                                         # Nominatim-matched (713 more)
@@ -143,31 +143,40 @@ rate = weighted_crimes / adjusted_population * 10000
 ```
 Sources: Keishicho ArcGIS neighborhood polygons (Tokyo, 615 stations), prefectural police (others). Daytime population adjustment for commercial wards (Chiyoda ÷12, Chuo ÷4, Minato ÷3.6).
 
-### green (10%)
+### green (8%)
 ```
 raw = log(1 + green_area_sqm) * 0.55 + green_count * 0.25
     + large_park_bonus * 0.1 + water_proximity * 0.1
 ```
 Sources: OSM leisure=park|garden|nature_reserve + landuse=religious|forest + natural=wood. Area calculation from polygon geometry.
 
-### gym_sports (5%)
+### gym_sports (4%)
 ```
 raw = OSM gym_count
 ```
 Sources: OSM leisure=fitness_centre|sports_centre|swimming_pool.
 
-### vibe (5%)
+### vibe (4%)
 ```
 raw = log(1 + cultural_venues) * 0.6 + log(1 + pedestrian_streets) * 0.15
     + log(1 + cafe_count) * 0.15 + cultural_shop_ratio * 0.1
 ```
 Sources: OSM theatre|cinema|arts_centre + shop=books|music|art|vintage; pedestrian streets. AI-researched override for 272 stations.
 
-### crowd (5%, inverted: fewer = higher)
+### crowd (4%, inverted: fewer = higher)
 ```
 raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
 ```
 Sources: MLIT S12 (94%), HotPepper total as fallback.
+
+### daily_essentials (14%)
+```
+raw = log(1 + supermarket) * 0.25 + log(1 + pharmacy) * 0.15
+    + log(1 + clinic + dentist) * 0.20 + log(1 + bank) * 0.10
+    + log(1 + laundry) * 0.10 + log(1 + post_office) * 0.05
+    + log(1 + school + kindergarten) * 0.15
+```
+Sources: OSM osm_livability table (1493/1493 stations, 9 subcategories). Fallback: convenience_store_count proxy for missing stations. Confidence: 1202 strong, 221 moderate, 70 estimate.
 
 ## Override Hierarchy
 1. **AI-researched** (272 stations with `description` field in demo-ratings.ts) — never overwritten
@@ -252,7 +261,14 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `scripts/scrapers/scrape-elevation.py` | Open-Elevation bulk POST scraper (all 1493 in 3 requests) |
 | `scripts/scrapers/scrape-seismic.py` | J-SHIS Y2024 seismic hazard scraper (1 req/sec, ~25 min) |
 | `scripts/scrapers/check-image-urls.py` | Bulk HEAD check of image URLs (concurrent, VPS-friendly) |
+| `scripts/scrapers/scrape-osm-livability.py` | Daily essentials scraper (9 categories). Incremental. 1493/1493 complete. |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
+| `app/src/app/[locale]/methodology/page.tsx` | `/methodology` page: data sources, pipeline, confidence, color system, limitations |
+| `app/src/i18n/routing.ts` | next-intl v4 locale config: `['en', 'ja', 'ru']`, default `'en'` |
+| `app/src/i18n/navigation.ts` | Locale-aware `Link`, `redirect`, `usePathname`, `useRouter` |
+| `app/src/lib/station-name.ts` | `stationDisplayName(station, locale)` → `{primary, secondary}`, `stationPrimaryName()` → single string. EN: name_en/name_jp, JA: name_jp/name_en, RU: name_ru\|\|name_en/name_jp |
+| `app/src/messages/{en,ja,ru}/common.json` | 190+ key dictionaries per locale. All UI strings, rating labels, tooltips, confidence, feedback, station page |
+| `app/src/components/LocaleSwitcher.tsx` | EN/JA/RU toggle button group in header |
 | `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width icon column (`w-6`), `ConfidenceBadge` (SVG shape icons) before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Legend chips use `ConfidenceIcon` at 10px. Caption always explains bars; icon clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
 | `app/src/components/ConfidenceBadge.tsx` | **"Data Depth" SVG icons** — shape encodes confidence level (bullseye = Measured, solid circle = Partial, dashed circle = Estimate, diamond 菱形 = Curated). Colors unchanged (koke-iro / yamabuki / nibi-iro / fuji-iro). Exports `ConfidenceIcon` (reusable SVG, 14×14 viewBox) + `CONFIDENCE_DOT_COLORS` + `SOURCE_LABELS`. 400 ms enter delay on desktop (CRTKY-67); **tap-to-toggle on touch** via `useIsTouch()` with enlarged tap target (p-3 padding). Label wording is "Measured / Partial / Estimate / Curated" (CRTKY-67 + CRTKY-83) |
 | `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
@@ -366,7 +382,10 @@ Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji
 | #76 | CRTKY-95 | **iOS Safari fixes:** search input `text-base` (16px) prevents auto-zoom, search pill `right-24` clears Heatmap button, root `overflow-x-hidden`, zoom buttons safe-area-aware `calc(80px + env(safe-area-inset-bottom))`. |
 | #78 | CRTKY-96 | **Safari 26 Liquid Glass hardening:** `h-screen` → `h-dvh` (dynamic viewport tracks toolbar), `html` background-color for toolbar tint, MobileDrawer `display:none` when closed (two-phase rAF open/transitionend close), Heatmap button 44px touch target gated by `@media (pointer: coarse)`, ComparePanel mobile-only bottom spacer for dynamic toolbar clearance. |
 | #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + VPS disk. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
-| — | CRTKY-98 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries (full JA+RU translations), 15 components migrated to `t()` calls, `LocaleSwitcher` toggle in both headers, hreflang sitemap, Cyrillic+JP font stack. 4486 static pages in 9s. Remaining: CRTKY-111 (locale-aware station naming), CRTKY-107 (name_ru data), CRTKY-109 (data-driven description generation pipeline). |
+| #80 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. |
+| #81 | CRTKY-87, 50 | **Daily Essentials (10th category)** end-to-end: `scrape-osm-livability.py` (1493/1493), compute + export pipeline, frontend types/weights/presets rebalanced, `/methodology` page, OG images on 1488 station pages. Docs refresh (00-overview, VISION). Plane triage: 14 stale issues closed. |
+| #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4486 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
+| #83 | CRTKY-34, 106 | **GDPR privacy footer** (desktop-only, cookie-free analytics notice in EN/JA/RU). **Methodology page** moved under `[locale]` routing (was 404). Livability scraper 1493/1493 complete (last 2 retried). |
 
 ## Dealbreaker Filters (PR #60, #61)
 
