@@ -689,8 +689,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kuukou-daini-biru-daini-ryokyaku-taaminaru",
-    "name_en": "Kuukou-Daini-Biru-(-Daini-Ryokyaku-Taaminaru-)",
+    "slug": "kuko-daini-biru-daini-ryokyaku-taaminaru",
+    "name_en": "Kuko-Daini-Biru-(-Daini-Ryokyaku-Taaminaru-)",
     "name_jp": "空港第２ビル（第２旅客ターミナル）",
     "lat": 35.773327,
     "lng": 140.387871,
@@ -743,8 +743,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "naritakuukou-daiichi-ryokyaku-taaminaru",
-    "name_en": "Naritakuukou-(-Daiichi-Ryokyaku-Taaminaru-)",
+    "slug": "naritakuko-daiichi-ryokyaku-taaminaru",
+    "name_en": "Naritakuko-(-Daiichi-Ryokyaku-Taaminaru-)",
     "name_jp": "成田空港（第１旅客ターミナル）",
     "lat": 35.763983,
     "lng": 140.384644,
@@ -1042,8 +1042,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "choushi",
-    "name_en": "Choushi",
+    "slug": "choshi",
+    "name_en": "Choshi",
     "name_jp": "銚子",
     "lat": 35.729449,
     "lng": 140.827557,
@@ -1144,8 +1144,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hanedakuukou-kokunaisen-taaminaru",
-    "name_en": "Hanedakuukou-Kokunaisen-Taaminaru",
+    "slug": "hanedakuko-kokunaisen-taaminaru",
+    "name_en": "Hanedakuko-Kokunaisen-Taaminaru",
     "name_jp": "羽田空港国内線ターミナル",
     "lat": 35.549809,
     "lng": 139.785962,
@@ -1263,8 +1263,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashihannou",
-    "name_en": "Higashihannou",
+    "slug": "higashihanno",
+    "name_en": "Higashihanno",
     "name_jp": "東飯能",
     "lat": 35.852928,
     "lng": 139.325965,
@@ -1416,8 +1416,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keioutama-sentaa",
-    "name_en": "Keioutama-Sentaa",
+    "slug": "keiotama-sentaa",
+    "name_en": "Keiotama-Sentaa",
     "name_jp": "京王多摩センター",
     "lat": 35.62518,
     "lng": 139.42402,
@@ -1824,8 +1824,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shounandai",
-    "name_en": "Shounandai",
+    "slug": "shonandai",
+    "name_en": "Shonandai",
     "name_jp": "湘南台",
     "lat": 35.396488,
     "lng": 139.466451,
@@ -1909,8 +1909,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toubudoubutsukouen",
-    "name_en": "Toubudoubutsukouen",
+    "slug": "tobudobutsukoen",
+    "name_en": "Tobudobutsukoen",
     "name_jp": "東武動物公園",
     "lat": 36.024604,
     "lng": 139.726901,
@@ -2187,8 +2187,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chiba-nyuutaun-chuuou",
-    "name_en": "Chiba-Nyuutaun-Chuuou",
+    "slug": "chiba-nyutaun-chuo",
+    "name_en": "Chiba-Nyutaun-Chuo",
     "name_jp": "千葉ニュータウン中央",
     "lat": 35.800175,
     "lng": 140.116159,
@@ -2203,8 +2203,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chibachuuou",
-    "name_en": "Chibachuuou",
+    "slug": "chibachuo",
+    "name_en": "Chibachuo",
     "name_jp": "千葉中央",
     "lat": 35.607354,
     "lng": 140.117809,
@@ -2235,8 +2235,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chuuourinkan",
-    "name_en": "Chuuourinkan",
+    "slug": "chuorinkan",
+    "name_en": "Chuorinkan",
     "name_jp": "中央林間",
     "lat": 35.508066,
     "lng": 139.444105,
@@ -2283,8 +2283,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "fuchuuhonmachi",
-    "name_en": "Fuchuuhonmachi",
+    "slug": "fuchuhonmachi",
+    "name_en": "Fuchuhonmachi",
     "name_jp": "府中本町",
     "lat": 35.665766,
     "lng": 139.477142,
@@ -2379,8 +2379,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "goura",
-    "name_en": "Goura",
+    "slug": "gora",
+    "name_en": "Gora",
     "name_jp": "強羅",
     "lat": 35.25085,
     "lng": 139.048162,
@@ -2427,8 +2427,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hanedakuukou-kokusaisen-taaminaru",
-    "name_en": "Hanedakuukou-Kokusaisen-Taaminaru",
+    "slug": "hanedakuko-kokusaisen-taaminaru",
+    "name_en": "Hanedakuko-Kokusaisen-Taaminaru",
     "name_jp": "羽田空港国際線ターミナル",
     "lat": 35.544676,
     "lng": 139.768968,
@@ -2443,8 +2443,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hannou",
-    "name_en": "Hannou",
+    "slug": "hanno",
+    "name_en": "Hanno",
     "name_jp": "飯能",
     "lat": 35.851189,
     "lng": 139.318824,
@@ -2459,8 +2459,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hanyuu",
-    "name_en": "Hanyuu",
+    "slug": "hanyu",
+    "name_en": "Hanyu",
     "name_jp": "羽生",
     "lat": 36.170345,
     "lng": 139.533949,
@@ -2507,8 +2507,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hatchoubori",
-    "name_en": "Hatchoubori",
+    "slug": "hatchobori",
+    "name_en": "Hatchobori",
     "name_jp": "八丁堀",
     "lat": 35.674617,
     "lng": 139.777705,
@@ -2523,8 +2523,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hatchounawate",
-    "name_en": "Hatchounawate",
+    "slug": "hatchonawate",
+    "name_en": "Hatchonawate",
     "name_jp": "八丁畷",
     "lat": 35.523071,
     "lng": 139.691446,
@@ -2555,8 +2555,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashi-fuchuu",
-    "name_en": "Higashi-Fuchuu",
+    "slug": "higashi-fuchu",
+    "name_en": "Higashi-Fuchu",
     "name_jp": "東府中",
     "lat": 35.668766,
     "lng": 139.495257,
@@ -2731,8 +2731,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hokuchou-kasumi",
-    "name_en": "Hokuchou-Kasumi",
+    "slug": "hokucho-kasumi",
+    "name_en": "Hokucho-Kasumi",
     "name_jp": "北朝霞",
     "lat": 35.815475,
     "lng": 139.587322,
@@ -2891,8 +2891,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kamioooka",
-    "name_en": "Kamioooka",
+    "slug": "kamiooka",
+    "name_en": "Kamiooka",
     "name_jp": "上大岡",
     "lat": 35.409418,
     "lng": 139.596552,
@@ -3035,8 +3035,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-kamata",
-    "name_en": "Keikyuu-Kamata",
+    "slug": "keikyu-kamata",
+    "name_en": "Keikyu-Kamata",
     "name_jp": "京急蒲田",
     "lat": 35.560796,
     "lng": 139.723681,
@@ -3051,8 +3051,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-kawasaki",
-    "name_en": "Keikyuu-Kawasaki",
+    "slug": "keikyu-kawasaki",
+    "name_en": "Keikyu-Kawasaki",
     "name_jp": "京急川崎",
     "lat": 35.53285,
     "lng": 139.700893,
@@ -3067,8 +3067,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keiou-nagayama",
-    "name_en": "Keiou-Nagayama",
+    "slug": "keio-nagayama",
+    "name_en": "Keio-Nagayama",
     "name_jp": "京王永山",
     "lat": 35.630102,
     "lng": 139.448204,
@@ -3259,8 +3259,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kou-no-shima",
-    "name_en": "Kou-No-Shima",
+    "slug": "ko-no-shima",
+    "name_en": "Ko-No-Shima",
     "name_jp": "江ノ島",
     "lat": 35.311003,
     "lng": 139.487581,
@@ -3275,8 +3275,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kourai",
-    "name_en": "Kourai",
+    "slug": "korai",
+    "name_en": "Korai",
     "name_jp": "高麗",
     "lat": 35.881982,
     "lng": 139.304414,
@@ -3291,8 +3291,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouzu",
-    "name_en": "Kouzu",
+    "slug": "kozu",
+    "name_en": "Kozu",
     "name_jp": "国府津",
     "lat": 35.280832,
     "lng": 139.212932,
@@ -3467,8 +3467,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "makuharihongou",
-    "name_en": "Makuharihongou",
+    "slug": "makuharihongo",
+    "name_en": "Makuharihongo",
     "name_jp": "幕張本郷",
     "lat": 35.672664,
     "lng": 140.042241,
@@ -3659,8 +3659,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nagareyama-ootakano-mori",
-    "name_en": "Nagareyama-Ootakano-Mori",
+    "slug": "nagareyama-otakano-mori",
+    "name_en": "Nagareyama-Otakano-Mori",
     "name_jp": "流山おおたかの森",
     "lat": 35.872051,
     "lng": 139.925898,
@@ -3755,8 +3755,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nanryuu-yama",
-    "name_en": "Nanryuu-Yama",
+    "slug": "nanryu-yama",
+    "name_en": "Nanryu-Yama",
     "name_jp": "南流山",
     "lat": 35.838035,
     "lng": 139.903865,
@@ -3771,8 +3771,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "narutou",
-    "name_en": "Narutou",
+    "slug": "naruto",
+    "name_en": "Naruto",
     "name_jp": "成東",
     "lat": 35.608513,
     "lng": 140.410109,
@@ -3931,8 +3931,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ogawachou",
-    "name_en": "Ogawachou",
+    "slug": "ogawacho",
+    "name_en": "Ogawacho",
     "name_jp": "小川町",
     "lat": 36.05903,
     "lng": 139.260412,
@@ -3979,8 +3979,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooami",
-    "name_en": "Ooami",
+    "slug": "oami",
+    "name_en": "Oami",
     "name_jp": "大網",
     "lat": 35.522427,
     "lng": 140.311111,
@@ -3995,8 +3995,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oohara",
-    "name_en": "Oohara",
+    "slug": "ohara",
+    "name_en": "Ohara",
     "name_jp": "大原",
     "lat": 35.251097,
     "lng": 140.390864,
@@ -4011,8 +4011,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oookayama",
-    "name_en": "Oookayama",
+    "slug": "ookayama",
+    "name_en": "Ookayama",
     "name_jp": "大岡山",
     "lat": 35.607456,
     "lng": 139.685909,
@@ -4075,8 +4075,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sagamioono",
-    "name_en": "Sagamioono",
+    "slug": "sagamiono",
+    "name_en": "Sagamiono",
     "name_jp": "相模大野",
     "lat": 35.532208,
     "lng": 139.437836,
@@ -4123,8 +4123,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sakuragichou",
-    "name_en": "Sakuragichou",
+    "slug": "sakuragicho",
+    "name_en": "Sakuragicho",
     "name_jp": "桜木町",
     "lat": 35.451112,
     "lng": 139.630881,
@@ -4187,8 +4187,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "seibu-yuuenchi",
-    "name_en": "Seibu-Yuuenchi",
+    "slug": "seibu-yuenchi",
+    "name_en": "Seibu-Yuenchi",
     "name_jp": "西武遊園地",
     "lat": 35.765881,
     "lng": 139.442747,
@@ -4203,8 +4203,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "seibukyuujou-mae",
-    "name_en": "Seibukyuujou-Mae",
+    "slug": "seibukyujo-mae",
+    "name_en": "Seibukyujo-Mae",
     "name_jp": "西武球場前",
     "lat": 35.77093,
     "lng": 139.41966,
@@ -4635,8 +4635,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tama-doubutsu-kouen",
-    "name_en": "Tama-Doubutsu-Kouen",
+    "slug": "tama-dobutsu-koen",
+    "name_en": "Tama-Dobutsu-Koen",
     "name_jp": "多摩動物公園",
     "lat": 35.649215,
     "lng": 139.404627,
@@ -4667,8 +4667,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tamagawajousui",
-    "name_en": "Tamagawajousui",
+    "slug": "tamagawajosui",
+    "name_en": "Tamagawajosui",
     "name_jp": "玉川上水",
     "lat": 35.731751,
     "lng": 139.418435,
@@ -4699,8 +4699,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tenkuu-hashi",
-    "name_en": "Tenkuu-Hashi",
+    "slug": "tenku-hashi",
+    "name_en": "Tenku-Hashi",
     "name_jp": "天空橋",
     "lat": 35.548908,
     "lng": 139.75423,
@@ -4715,8 +4715,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tennoudai",
-    "name_en": "Tennoudai",
+    "slug": "tennodai",
+    "name_en": "Tennodai",
     "name_jp": "天王台",
     "lat": 35.872558,
     "lng": 140.04121,
@@ -4795,8 +4795,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tougo-no",
-    "name_en": "Tougo-No",
+    "slug": "togo-no",
+    "name_en": "Togo-No",
     "name_jp": "東吾野",
     "lat": 35.892439,
     "lng": 139.260281,
@@ -4955,8 +4955,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yotsukaidou",
-    "name_en": "Yotsukaidou",
+    "slug": "yotsukaido",
+    "name_en": "Yotsukaido",
     "name_jp": "四街道",
     "lat": 35.662756,
     "lng": 140.165023,
@@ -5003,8 +5003,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yuukari-ga-oka",
-    "name_en": "Yuukari-Ga-Oka",
+    "slug": "yukari-ga-oka",
+    "name_en": "Yukari-Ga-Oka",
     "name_jp": "ユーカリが丘",
     "lat": 35.721801,
     "lng": 140.156354,
@@ -5095,8 +5095,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "aikou-ishida",
-    "name_en": "Aikou-Ishida",
+    "slug": "aiko-ishida",
+    "name_en": "Aiko-Ishida",
     "name_jp": "愛甲石田",
     "lat": 35.417634,
     "lng": 139.344098,
@@ -5350,8 +5350,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "aomono-yokochou",
-    "name_en": "Aomono-Yokochou",
+    "slug": "aomono-yokocho",
+    "name_en": "Aomono-Yokocho",
     "name_jp": "青物横丁",
     "lat": 35.609351,
     "lng": 139.742958,
@@ -5395,8 +5395,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "arakawa-itchuu-mae",
-    "name_en": "Arakawa-Itchuu-Mae",
+    "slug": "arakawa-itchu-mae",
+    "name_en": "Arakawa-Itchu-Mae",
     "name_jp": "荒川一中前",
     "lat": 35.733659,
     "lng": 139.788988,
@@ -5410,8 +5410,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "arakawa-nichoume",
-    "name_en": "Arakawa-Nichoume",
+    "slug": "arakawa-nichome",
+    "name_en": "Arakawa-Nichome",
     "name_jp": "荒川二丁目",
     "lat": 35.738623,
     "lng": 139.784696,
@@ -5425,8 +5425,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "arakawa-shichi-choume",
-    "name_en": "Arakawa-Shichi-Choume",
+    "slug": "arakawa-shichi-chome",
+    "name_en": "Arakawa-Shichi-Chome",
     "name_jp": "荒川七丁目",
     "lat": 35.741975,
     "lng": 139.78417,
@@ -5440,8 +5440,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "arakawa-yuuenchi-mae",
-    "name_en": "Arakawa-Yuuenchi-Mae",
+    "slug": "arakawa-yuenchi-mae",
+    "name_en": "Arakawa-Yuenchi-Mae",
     "name_jp": "荒川遊園地前",
     "lat": 35.750744,
     "lng": 139.757767,
@@ -5680,8 +5680,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "baigou",
-    "name_en": "Baigou",
+    "slug": "baigo",
+    "name_en": "Baigo",
     "name_jp": "梅郷",
     "lat": 35.931575,
     "lng": 139.891086,
@@ -5710,8 +5710,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bandou-hashi",
-    "name_en": "Bandou-Hashi",
+    "slug": "bando-hashi",
+    "name_en": "Bando-Hashi",
     "name_jp": "阪東橋",
     "lat": 35.437434,
     "lng": 139.624843,
@@ -5770,8 +5770,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bushuu-araki",
-    "name_en": "Bushuu-Araki",
+    "slug": "bushu-araki",
+    "name_en": "Bushu-Araki",
     "name_jp": "武州荒木",
     "lat": 36.162614,
     "lng": 139.488569,
@@ -5785,8 +5785,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bushuu-hino",
-    "name_en": "Bushuu-Hino",
+    "slug": "bushu-hino",
+    "name_en": "Bushu-Hino",
     "name_jp": "武州日野",
     "lat": 35.953867,
     "lng": 139.021888,
@@ -5800,8 +5800,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bushuu-karasawa",
-    "name_en": "Bushuu-Karasawa",
+    "slug": "bushu-karasawa",
+    "name_en": "Bushu-Karasawa",
     "name_jp": "武州唐沢",
     "lat": 35.952127,
     "lng": 139.30912,
@@ -5815,8 +5815,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bushuu-nagase",
-    "name_en": "Bushuu-Nagase",
+    "slug": "bushu-nagase",
+    "name_en": "Bushu-Nagase",
     "name_jp": "武州長瀬",
     "lat": 35.942023,
     "lng": 139.325561,
@@ -5830,8 +5830,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "bushuu-nakagawa",
-    "name_en": "Bushuu-Nakagawa",
+    "slug": "bushu-nakagawa",
+    "name_en": "Bushu-Nakagawa",
     "name_jp": "武州中川",
     "lat": 35.958347,
     "lng": 139.035439,
@@ -5860,8 +5860,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "byoubu-ura",
-    "name_en": "Byoubu-Ura",
+    "slug": "byobu-ura",
+    "name_en": "Byobu-Ura",
     "name_jp": "屏風浦",
     "lat": 35.394176,
     "lng": 139.610387,
@@ -5875,8 +5875,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chiba-kouen",
-    "name_en": "Chiba-Kouen",
+    "slug": "chiba-koen",
+    "name_en": "Chiba-Koen",
     "name_jp": "千葉公園",
     "lat": 35.619774,
     "lng": 140.117944,
@@ -5920,8 +5920,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chidorichou",
-    "name_en": "Chidorichou",
+    "slug": "chidoricho",
+    "name_en": "Chidoricho",
     "name_jp": "千鳥町",
     "lat": 35.572983,
     "lng": 139.69142,
@@ -6025,8 +6025,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chou-ura",
-    "name_en": "Chou-Ura",
+    "slug": "cho-ura",
+    "name_en": "Cho-Ura",
     "name_jp": "長浦",
     "lat": 35.450234,
     "lng": 139.995478,
@@ -6040,8 +6040,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chougo",
-    "name_en": "Chougo",
+    "slug": "chogo",
+    "name_en": "Chogo",
     "name_jp": "長後",
     "lat": 35.41261,
     "lng": 139.465307,
@@ -6055,8 +6055,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "choujamachi",
-    "name_en": "Choujamachi",
+    "slug": "chojamachi",
+    "name_en": "Chojamachi",
     "name_jp": "長者町",
     "lat": 35.295839,
     "lng": 140.385021,
@@ -6070,8 +6070,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "choukoku-no-mori",
-    "name_en": "Choukoku-No-Mori",
+    "slug": "chokoku-no-mori",
+    "name_en": "Chokoku-No-Mori",
     "name_jp": "彫刻の森",
     "lat": 35.246529,
     "lng": 139.050856,
@@ -6085,8 +6085,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chuugakkou",
-    "name_en": "Chuugakkou",
+    "slug": "chugakko",
+    "name_en": "Chugakko",
     "name_jp": "中学校",
     "lat": 35.740123,
     "lng": 140.14841,
@@ -6100,8 +6100,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "chuuoudaigaku-meiseidaigaku",
-    "name_en": "Chuuoudaigaku-・-Meiseidaigaku",
+    "slug": "chuodaigaku-meiseidaigaku",
+    "name_en": "Chuodaigaku-・-Meiseidaigaku",
     "name_jp": "中央大学・明星大学",
     "lat": 35.64197,
     "lng": 139.408672,
@@ -6130,8 +6130,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "daijinguushita",
-    "name_en": "Daijinguushita",
+    "slug": "daijingushita",
+    "name_en": "Daijingushita",
     "name_jp": "大神宮下",
     "lat": 35.693945,
     "lng": 139.991431,
@@ -6175,8 +6175,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "dokkyoudaigaku-zen-eki-souka-matsubara",
-    "name_en": "Dokkyoudaigaku-Zen'eki-<-Souka-Matsubara->",
+    "slug": "dokkyodaigaku-zen-eki-soka-matsubara",
+    "name_en": "Dokkyodaigaku-Zen'eki-<-Soka-Matsubara->",
     "name_jp": "獨協大学前駅〈草加松原〉",
     "lat": 35.84333,
     "lng": 139.800622,
@@ -6205,8 +6205,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "doubutsu-kouen",
-    "name_en": "Doubutsu-Kouen",
+    "slug": "dobutsu-koen",
+    "name_en": "Dobutsu-Koen",
     "name_jp": "動物公園",
     "lat": 35.642585,
     "lng": 140.125437,
@@ -6370,8 +6370,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "etchuu-shima",
-    "name_en": "Etchuu-Shima",
+    "slug": "etchu-shima",
+    "name_en": "Etchu-Shima",
     "name_jp": "越中島",
     "lat": 35.667946,
     "lng": 139.792713,
@@ -6415,8 +6415,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "fuchuu-keiba-seimonmae",
-    "name_en": "Fuchuu-Keiba-Seimonmae",
+    "slug": "fuchu-keiba-seimonmae",
+    "name_en": "Fuchu-Keiba-Seimonmae",
     "name_jp": "府中競馬正門前",
     "lat": 35.668288,
     "lng": 139.485019,
@@ -6445,8 +6445,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "fudoumae",
-    "name_en": "Fudoumae",
+    "slug": "fudomae",
+    "name_en": "Fudomae",
     "name_jp": "不動前",
     "lat": 35.626526,
     "lng": 139.71469,
@@ -6520,8 +6520,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "fujimichou",
-    "name_en": "Fujimichou",
+    "slug": "fujimicho",
+    "name_en": "Fujimicho",
     "name_jp": "富士見町",
     "lat": 35.345389,
     "lng": 139.529277,
@@ -6580,8 +6580,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "fujisawa-honchou",
-    "name_en": "Fujisawa-Honchou",
+    "slug": "fujisawa-honcho",
+    "name_en": "Fujisawa-Honcho",
     "name_jp": "藤沢本町",
     "lat": 35.348188,
     "lng": 139.476046,
@@ -6655,8 +6655,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "funabashi-houten",
-    "name_en": "Funabashi-Houten",
+    "slug": "funabashi-hoten",
+    "name_en": "Funabashi-Hoten",
     "name_jp": "船橋法典",
     "lat": 35.730435,
     "lng": 139.966771,
@@ -6685,8 +6685,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "funabashikeibajou",
-    "name_en": "Funabashikeibajou",
+    "slug": "funabashikeibajo",
+    "name_en": "Funabashikeibajo",
     "name_jp": "船橋競馬場",
     "lat": 35.689606,
     "lng": 139.997998,
@@ -6865,8 +6865,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "gakushuuin-shita",
-    "name_en": "Gakushuuin-Shita",
+    "slug": "gakushuin-shita",
+    "name_en": "Gakushuin-Shita",
     "name_jp": "学習院下",
     "lat": 35.716248,
     "lng": 139.71247,
@@ -6880,8 +6880,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "gamou",
-    "name_en": "Gamou",
+    "slug": "gamo",
+    "name_en": "Gamo",
     "name_jp": "蒲生",
     "lat": 35.866851,
     "lng": 139.791686,
@@ -6925,8 +6925,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ginzaitchoume",
-    "name_en": "Ginzaitchoume",
+    "slug": "ginzaitchome",
+    "name_en": "Ginzaitchome",
     "name_jp": "銀座一丁目",
     "lat": 35.67435,
     "lng": 139.767045,
@@ -7000,8 +7000,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "gokou",
-    "name_en": "Gokou",
+    "slug": "goko",
+    "name_en": "Goko",
     "name_jp": "五香",
     "lat": 35.797281,
     "lng": 139.965796,
@@ -7060,8 +7060,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "gyouda",
-    "name_en": "Gyouda",
+    "slug": "gyoda",
+    "name_en": "Gyoda",
     "name_jp": "行田",
     "lat": 36.113879,
     "lng": 139.432103,
@@ -7075,8 +7075,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "gyoudashi",
-    "name_en": "Gyoudashi",
+    "slug": "gyodashi",
+    "name_en": "Gyodashi",
     "name_jp": "行田市",
     "lat": 36.143759,
     "lng": 139.458851,
@@ -7135,8 +7135,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hachiouji-minami-no",
-    "name_en": "Hachiouji-Minami-No",
+    "slug": "hachioji-minami-no",
+    "name_en": "Hachioji-Minami-No",
     "name_jp": "八王子みなみ野",
     "lat": 35.630664,
     "lng": 139.330678,
@@ -7390,8 +7390,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hara-touma",
-    "name_en": "Hara-Touma",
+    "slug": "hara-toma",
+    "name_en": "Hara-Toma",
     "name_jp": "原当麻",
     "lat": 35.528978,
     "lng": 139.375355,
@@ -7615,8 +7615,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashi-aki-ryuu",
-    "name_en": "Higashi-Aki-Ryuu",
+    "slug": "higashi-aki-ryu",
+    "name_en": "Higashi-Aki-Ryu",
     "name_jp": "東秋留",
     "lat": 35.725904,
     "lng": 139.311665,
@@ -7795,8 +7795,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashijuujou",
-    "name_en": "Higashijuujou",
+    "slug": "higashijujo",
+    "name_en": "Higashijujo",
     "name_jp": "東十条",
     "lat": 35.763803,
     "lng": 139.726858,
@@ -7930,8 +7930,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashiogu-sanchoume",
-    "name_en": "Higashiogu-Sanchoume",
+    "slug": "higashiogu-sanchome",
+    "name_en": "Higashiogu-Sanchome",
     "name_jp": "東尾久三丁目",
     "lat": 35.745398,
     "lng": 139.774386,
@@ -7945,8 +7945,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "higashioume",
-    "name_en": "Higashioume",
+    "slug": "higashiome",
+    "name_en": "Higashiome",
     "name_jp": "東青梅",
     "lat": 35.789768,
     "lng": 139.272841,
@@ -8200,8 +8200,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hirayama-joushi-kouen",
-    "name_en": "Hirayama-Joushi-Kouen",
+    "slug": "hirayama-joshi-koen",
+    "name_en": "Hirayama-Joshi-Koen",
     "name_jp": "平山城址公園",
     "lat": 35.647371,
     "lng": 139.379926,
@@ -8260,8 +8260,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hirose-yachou-no-mori",
-    "name_en": "Hirose-Yachou-No-Mori",
+    "slug": "hirose-yacho-no-mori",
+    "name_en": "Hirose-Yacho-No-Mori",
     "name_jp": "ひろせ野鳥の森",
     "lat": 36.146242,
     "lng": 139.352086,
@@ -8290,8 +8290,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hiyoshihonchou",
-    "name_en": "Hiyoshihonchou",
+    "slug": "hiyoshihoncho",
+    "name_en": "Hiyoshihoncho",
     "name_jp": "日吉本町",
     "lat": 35.549883,
     "lng": 139.633554,
@@ -8365,8 +8365,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hon-choushi",
-    "name_en": "Hon-Choushi",
+    "slug": "hon-choshi",
+    "name_en": "Hon-Choshi",
     "name_jp": "本銚子",
     "lat": 35.731055,
     "lng": 140.847844,
@@ -8395,8 +8395,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hon-nou",
-    "name_en": "Hon-Nou",
+    "slug": "hon-no",
+    "name_en": "Hon-No",
     "name_jp": "本納",
     "lat": 35.48227,
     "lng": 140.30758,
@@ -8425,8 +8425,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hongoudai",
-    "name_en": "Hongoudai",
+    "slug": "hongodai",
+    "name_en": "Hongodai",
     "name_jp": "本郷台",
     "lat": 35.36787,
     "lng": 139.550159,
@@ -8455,8 +8455,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "honjou",
-    "name_en": "Honjou",
+    "slug": "honjo",
+    "name_en": "Honjo",
     "name_jp": "本庄",
     "lat": 36.236229,
     "lng": 139.188299,
@@ -8515,8 +8515,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "horikiri-shoubuen",
-    "name_en": "Horikiri-Shoubuen",
+    "slug": "horikiri-shobuen",
+    "name_en": "Horikiri-Shobuen",
     "name_jp": "堀切菖蒲園",
     "lat": 35.747649,
     "lng": 139.827545,
@@ -8575,8 +8575,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "hyuuga",
-    "name_en": "Hyuuga",
+    "slug": "hyuga",
+    "name_en": "Hyuga",
     "name_jp": "日向",
     "lat": 35.628402,
     "lng": 140.362447,
@@ -8635,8 +8635,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ichikawa-oono",
-    "name_en": "Ichikawa-Oono",
+    "slug": "ichikawa-ono",
+    "name_en": "Ichikawa-Ono",
     "name_jp": "市川大野",
     "lat": 35.755432,
     "lng": 139.951227,
@@ -8770,8 +8770,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ikejirioohashi",
-    "name_en": "Ikejirioohashi",
+    "slug": "ikejiriohashi",
+    "name_en": "Ikejiriohashi",
     "name_jp": "池尻大橋",
     "lat": 35.650603,
     "lng": 139.684319,
@@ -8785,8 +8785,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ikenoue",
-    "name_en": "Ikenoue",
+    "slug": "ikenoe",
+    "name_en": "Ikenoe",
     "name_jp": "池ノ上",
     "lat": 35.660402,
     "lng": 139.67344,
@@ -8830,8 +8830,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ina-chuuou",
-    "name_en": "Ina-Chuuou",
+    "slug": "ina-chuo",
+    "name_en": "Ina-Chuo",
     "name_jp": "伊奈中央",
     "lat": 35.999537,
     "lng": 139.617094,
@@ -8935,8 +8935,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "inariyama-kouen",
-    "name_en": "Inariyama-Kouen",
+    "slug": "inariyama-koen",
+    "name_en": "Inariyama-Koen",
     "name_jp": "稲荷山公園",
     "lat": 35.845112,
     "lng": 139.39842,
@@ -9100,8 +9100,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "isezaki-choujamachi",
-    "name_en": "Isezaki-Choujamachi",
+    "slug": "isezaki-chojamachi",
+    "name_en": "Isezaki-Chojamachi",
     "name_jp": "伊勢佐木長者町",
     "lat": 35.441044,
     "lng": 139.633176,
@@ -9160,8 +9160,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ishikawachou",
-    "name_en": "Ishikawachou",
+    "slug": "ishikawacho",
+    "name_en": "Ishikawacho",
     "name_jp": "石川町",
     "lat": 35.438808,
     "lng": 139.642934,
@@ -9220,8 +9220,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "itabashihonchou",
-    "name_en": "Itabashihonchou",
+    "slug": "itabashihoncho",
+    "name_en": "Itabashihoncho",
     "name_jp": "板橋本町",
     "lat": 35.761339,
     "lng": 139.705535,
@@ -9340,8 +9340,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "izumi-chuuou",
-    "name_en": "Izumi-Chuuou",
+    "slug": "izumi-chuo",
+    "name_en": "Izumi-Chuo",
     "name_jp": "いずみ中央",
     "lat": 35.415385,
     "lng": 139.48727,
@@ -9445,8 +9445,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "jouchou-toro",
-    "name_en": "Jouchou-Toro",
+    "slug": "jocho-toro",
+    "name_en": "Jocho-Toro",
     "name_jp": "上長瀞",
     "lat": 36.086169,
     "lng": 139.11319,
@@ -9460,8 +9460,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "jousei-kawa",
-    "name_en": "Jousei-Kawa",
+    "slug": "josei-kawa",
+    "name_en": "Josei-Kawa",
     "name_jp": "上星川",
     "lat": 35.467694,
     "lng": 139.580078,
@@ -9490,8 +9490,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "juuni-hashi",
-    "name_en": "Juuni-Hashi",
+    "slug": "juni-hashi",
+    "name_en": "Juni-Hashi",
     "name_jp": "十二橋",
     "lat": 35.916984,
     "lng": 140.545707,
@@ -9745,8 +9745,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kamakura-koukou-mae",
-    "name_en": "Kamakura-Koukou-Mae",
+    "slug": "kamakura-koko-mae",
+    "name_en": "Kamakura-Koko-Mae",
     "name_jp": "鎌倉高校前",
     "lat": 35.306698,
     "lng": 139.500535,
@@ -9805,8 +9805,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kamihongou",
-    "name_en": "Kamihongou",
+    "slug": "kamihongo",
+    "name_en": "Kamihongo",
     "name_jp": "上本郷",
     "lat": 35.789524,
     "lng": 139.916031,
@@ -9940,8 +9940,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kamiyachou",
-    "name_en": "Kamiyachou",
+    "slug": "kamiyacho",
+    "name_en": "Kamiyacho",
     "name_jp": "神谷町",
     "lat": 35.662978,
     "lng": 139.745069,
@@ -10165,8 +10165,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kasai-rinkai-kouen",
-    "name_en": "Kasai-Rinkai-Kouen",
+    "slug": "kasai-rinkai-koen",
+    "name_en": "Kasai-Rinkai-Koen",
     "name_jp": "葛西臨海公園",
     "lat": 35.644392,
     "lng": 139.861529,
@@ -10270,8 +10270,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "katakurachou",
-    "name_en": "Katakurachou",
+    "slug": "katakuracho",
+    "name_en": "Katakuracho",
     "name_jp": "片倉町",
     "lat": 35.490205,
     "lng": 139.606511,
@@ -10285,8 +10285,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "katase-kou-no-shima",
-    "name_en": "Katase-Kou-No-Shima",
+    "slug": "katase-ko-no-shima",
+    "name_en": "Katase-Ko-No-Shima",
     "name_jp": "片瀬江ノ島",
     "lat": 35.309345,
     "lng": 139.482934,
@@ -10405,8 +10405,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kawaguchi-motogou",
-    "name_en": "Kawaguchi-Motogou",
+    "slug": "kawaguchi-motogo",
+    "name_en": "Kawaguchi-Motogo",
     "name_jp": "川口元郷",
     "lat": 35.800187,
     "lng": 139.730043,
@@ -10480,8 +10480,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kawawachou",
-    "name_en": "Kawawachou",
+    "slug": "kawawacho",
+    "name_en": "Kawawacho",
     "name_jp": "川和町",
     "lat": 35.52802,
     "lng": 139.548745,
@@ -10720,8 +10720,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kazusa-ookubo",
-    "name_en": "Kazusa-Ookubo",
+    "slug": "kazusa-okubo",
+    "name_en": "Kazusa-Okubo",
     "name_jp": "上総大久保",
     "lat": 35.283367,
     "lng": 140.145924,
@@ -10780,8 +10780,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-nagasawa",
-    "name_en": "Keikyuu-Nagasawa",
+    "slug": "keikyu-nagasawa",
+    "name_en": "Keikyu-Nagasawa",
     "name_jp": "京急長沢",
     "lat": 35.20548,
     "lng": 139.674048,
@@ -10795,8 +10795,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-ootsu",
-    "name_en": "Keikyuu-Ootsu",
+    "slug": "keikyu-otsu",
+    "name_en": "Keikyu-Otsu",
     "name_jp": "京急大津",
     "lat": 35.261068,
     "lng": 139.695334,
@@ -10810,8 +10810,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-taura",
-    "name_en": "Keikyuu-Taura",
+    "slug": "keikyu-taura",
+    "name_en": "Keikyu-Taura",
     "name_jp": "京急田浦",
     "lat": 35.300892,
     "lng": 139.625252,
@@ -10825,8 +10825,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keikyuu-tomioka",
-    "name_en": "Keikyuu-Tomioka",
+    "slug": "keikyu-tomioka",
+    "name_en": "Keikyu-Tomioka",
     "name_jp": "京急富岡",
     "lat": 35.366743,
     "lng": 139.629772,
@@ -10840,8 +10840,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keio-horinouchi",
-    "name_en": "Keio-Horinouchi",
+    "slug": "keio-horinochi",
+    "name_en": "Keio-Horinochi",
     "name_jp": "京王堀之内",
     "lat": 35.624438,
     "lng": 139.400314,
@@ -10855,8 +10855,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keiou-katakura",
-    "name_en": "Keiou-Katakura",
+    "slug": "keio-katakura",
+    "name_en": "Keio-Katakura",
     "name_jp": "京王片倉",
     "lat": 35.644343,
     "lng": 139.337035,
@@ -10870,8 +10870,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keiou-yomiuri-rando",
-    "name_en": "Keiou-Yomiuri-Rando",
+    "slug": "keio-yomiuri-rando",
+    "name_en": "Keio-Yomiuri-Rando",
     "name_jp": "京王よみうりランド",
     "lat": 35.632934,
     "lng": 139.517597,
@@ -10885,8 +10885,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keiouhachiouji",
-    "name_en": "Keiouhachiouji",
+    "slug": "keiohachioji",
+    "name_en": "Keiohachioji",
     "name_jp": "京王八王子",
     "lat": 35.657416,
     "lng": 139.343851,
@@ -10900,8 +10900,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keiouinadatsutsumi",
-    "name_en": "Keiouinadatsutsumi",
+    "slug": "keioinadatsutsumi",
+    "name_en": "Keioinadatsutsumi",
     "name_jp": "京王稲田堤",
     "lat": 35.633895,
     "lng": 139.531099,
@@ -10915,8 +10915,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keioutama-kawa",
-    "name_en": "Keioutama-Kawa",
+    "slug": "keiotama-kawa",
+    "name_en": "Keiotama-Kawa",
     "name_jp": "京王多摩川",
     "lat": 35.644499,
     "lng": 139.536606,
@@ -11005,8 +11005,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keisei-ookubo",
-    "name_en": "Keisei-Ookubo",
+    "slug": "keisei-okubo",
+    "name_en": "Keisei-Okubo",
     "name_jp": "京成大久保",
     "lat": 35.686016,
     "lng": 140.048629,
@@ -11020,8 +11020,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "keisei-oowada",
-    "name_en": "Keisei-Oowada",
+    "slug": "keisei-owada",
+    "name_en": "Keisei-Owada",
     "name_jp": "京成大和田",
     "lat": 35.712309,
     "lng": 140.108578,
@@ -11125,8 +11125,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kenchoumae",
-    "name_en": "Kenchoumae",
+    "slug": "kenchomae",
+    "name_en": "Kenchomae",
     "name_jp": "県庁前",
     "lat": 35.603958,
     "lng": 140.12222,
@@ -11170,8 +11170,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kibou-ke-oka",
-    "name_en": "Kibou-Ke-Oka",
+    "slug": "kibo-ke-oka",
+    "name_en": "Kibo-Ke-Oka",
     "name_jp": "希望ヶ丘",
     "lat": 35.460399,
     "lng": 139.5143,
@@ -11245,8 +11245,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kishine-kouen",
-    "name_en": "Kishine-Kouen",
+    "slug": "kishine-koen",
+    "name_en": "Kishine-Koen",
     "name_jp": "岸根公園",
     "lat": 35.496038,
     "lng": 139.617065,
@@ -11365,8 +11365,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kita-kounosu",
-    "name_en": "Kita-Kounosu",
+    "slug": "kita-konosu",
+    "name_en": "Kita-Konosu",
     "name_jp": "北鴻巣",
     "lat": 36.085529,
     "lng": 139.476894,
@@ -11470,8 +11470,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kitahachi-ouji",
-    "name_en": "Kitahachi-Ouji",
+    "slug": "kitahachi-oji",
+    "name_en": "Kitahachi-Oji",
     "name_jp": "北八王子",
     "lat": 35.669232,
     "lng": 139.363348,
@@ -11725,8 +11725,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kodenmachou",
-    "name_en": "Kodenmachou",
+    "slug": "kodenmacho",
+    "name_en": "Kodenmacho",
     "name_jp": "小伝馬町",
     "lat": 35.690737,
     "lng": 139.778433,
@@ -11755,8 +11755,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kogane-joushi",
-    "name_en": "Kogane-Joushi",
+    "slug": "kogane-joshi",
+    "name_en": "Kogane-Joshi",
     "name_jp": "小金城趾",
     "lat": 35.83601,
     "lng": 139.916887,
@@ -11770,8 +11770,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koganechou",
-    "name_en": "Koganechou",
+    "slug": "koganecho",
+    "name_en": "Koganecho",
     "name_jp": "黄金町",
     "lat": 35.439694,
     "lng": 139.62246,
@@ -11785,7 +11785,7 @@
     "transit_minutes": null
   },
   {
-    "slug": "kohoku",
+    "slug": "kohoku-abiko",
     "name_en": "Kohoku",
     "name_jp": "湖北",
     "lat": 35.867165,
@@ -11875,8 +11875,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kokorozashi-kyuu",
-    "name_en": "Kokorozashi-Kyuu",
+    "slug": "kokorozashi-kyu",
+    "name_en": "Kokorozashi-Kyu",
     "name_jp": "志久",
     "lat": 35.991099,
     "lng": 139.62228,
@@ -11890,8 +11890,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kokudou",
-    "name_en": "Kokudou",
+    "slug": "kokudo",
+    "name_en": "Kokudo",
     "name_jp": "国道",
     "lat": 35.50083,
     "lng": 139.675599,
@@ -11935,8 +11935,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kokuryou",
-    "name_en": "Kokuryou",
+    "slug": "kokuryo",
+    "name_en": "Kokuryo",
     "name_jp": "国領",
     "lat": 35.650087,
     "lng": 139.558036,
@@ -11950,8 +11950,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kokusai-tenjijou",
-    "name_en": "Kokusai-Tenjijou",
+    "slug": "kokusai-tenjijo",
+    "name_en": "Kokusai-Tenjijo",
     "name_jp": "国際展示場",
     "lat": 35.63441,
     "lng": 139.791617,
@@ -11965,8 +11965,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kokusai-tenjijou-seimon",
-    "name_en": "Kokusai-Tenjijou-Seimon",
+    "slug": "kokusai-tenjijo-seimon",
+    "name_en": "Kokusai-Tenjijo-Seimon",
     "name_jp": "国際展示場正門",
     "lat": 35.630158,
     "lng": 139.791228,
@@ -11980,8 +11980,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "komabatoudaimae",
-    "name_en": "Komabatoudaimae",
+    "slug": "komabatodaimae",
+    "name_en": "Komabatodaimae",
     "name_jp": "駒場東大前",
     "lat": 35.65868,
     "lng": 139.684308,
@@ -12160,8 +12160,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kou-kawara",
-    "name_en": "Kou-Kawara",
+    "slug": "ko-kawara",
+    "name_en": "Ko-Kawara",
     "name_jp": "向河原",
     "lat": 35.572891,
     "lng": 139.66725,
@@ -12175,8 +12175,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kou-tsu-no-mori",
-    "name_en": "Kou-Tsu-No-Mori",
+    "slug": "ko-tsu-no-mori",
+    "name_en": "Ko-Tsu-No-Mori",
     "name_jp": "公津の杜",
     "lat": 35.760446,
     "lng": 140.294904,
@@ -12190,8 +12190,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouen",
-    "name_en": "Kouen",
+    "slug": "koen",
+    "name_en": "Koen",
     "name_jp": "公園",
     "lat": 35.730758,
     "lng": 140.153755,
@@ -12205,8 +12205,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouen-shita",
-    "name_en": "Kouen-Shita",
+    "slug": "koen-shita",
+    "name_en": "Koen-Shita",
     "name_jp": "公園下",
     "lat": 35.249944,
     "lng": 139.045639,
@@ -12220,8 +12220,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouen-ue",
-    "name_en": "Kouen-Ue",
+    "slug": "koen-ue",
+    "name_en": "Koen-Ue",
     "name_jp": "公園上",
     "lat": 35.249083,
     "lng": 139.043167,
@@ -12235,8 +12235,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koufuu-dai",
-    "name_en": "Koufuu-Dai",
+    "slug": "kofu-dai",
+    "name_en": "Kofu-Dai",
     "name_jp": "光風台",
     "lat": 35.439662,
     "lng": 140.114174,
@@ -12250,8 +12250,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouhoku",
-    "name_en": "Kouhoku",
+    "slug": "kohoku-adachi",
+    "name_en": "Kohoku",
     "name_jp": "江北",
     "lat": 35.774021,
     "lng": 139.770306,
@@ -12265,8 +12265,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koujiya",
-    "name_en": "Koujiya",
+    "slug": "kojiya",
+    "name_en": "Kojiya",
     "name_jp": "糀谷",
     "lat": 35.5545,
     "lng": 139.72962,
@@ -12280,8 +12280,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koukuu-kouen",
-    "name_en": "Koukuu-Kouen",
+    "slug": "koku-koen",
+    "name_en": "Koku-Koen",
     "name_jp": "航空公園",
     "lat": 35.798272,
     "lng": 139.465641,
@@ -12295,8 +12295,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kounan-chuuou",
-    "name_en": "Kounan-Chuuou",
+    "slug": "konan-chuo",
+    "name_en": "Konan-Chuo",
     "name_jp": "港南中央",
     "lat": 35.401049,
     "lng": 139.590958,
@@ -12310,8 +12310,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kounandai",
-    "name_en": "Kounandai",
+    "slug": "konandai",
+    "name_en": "Konandai",
     "name_jp": "港南台",
     "lat": 35.375183,
     "lng": 139.576243,
@@ -12325,8 +12325,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kounodai",
-    "name_en": "Kounodai",
+    "slug": "konodai",
+    "name_en": "Konodai",
     "name_jp": "国府台",
     "lat": 35.736301,
     "lng": 139.90322,
@@ -12340,8 +12340,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kounosu",
-    "name_en": "Kounosu",
+    "slug": "konosu",
+    "name_en": "Konosu",
     "name_jp": "鴻巣",
     "lat": 36.0592,
     "lng": 139.509552,
@@ -12355,8 +12355,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koushin-tsuka",
-    "name_en": "Koushin-Tsuka",
+    "slug": "koshin-tsuka",
+    "name_en": "Koshin-Tsuka",
     "name_jp": "庚申塚",
     "lat": 35.739563,
     "lng": 139.729743,
@@ -12370,8 +12370,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "koushuukaidou",
-    "name_en": "Koushuukaidou",
+    "slug": "koshukaido",
+    "name_en": "Koshukaido",
     "name_jp": "甲州街道",
     "lat": 35.678262,
     "lng": 139.409191,
@@ -12385,8 +12385,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kouza-shibuya",
-    "name_en": "Kouza-Shibuya",
+    "slug": "koza-shibuya",
+    "name_en": "Koza-Shibuya",
     "name_jp": "高座渋谷",
     "lat": 35.432519,
     "lng": 139.464854,
@@ -12535,8 +12535,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kujuu",
-    "name_en": "Kujuu",
+    "slug": "kuju",
+    "name_en": "Kuju",
     "name_jp": "久住",
     "lat": 35.832232,
     "lng": 140.338929,
@@ -12730,8 +12730,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kyouteijou-mae",
-    "name_en": "Kyouteijou-Mae",
+    "slug": "kyoteijo-mae",
+    "name_en": "Kyoteijo-Mae",
     "name_jp": "競艇場前",
     "lat": 35.656232,
     "lng": 139.499721,
@@ -12745,8 +12745,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kyuu-ga-hara",
-    "name_en": "Kyuu-Ga-Hara",
+    "slug": "kyu-ga-hara",
+    "name_en": "Kyu-Ga-Hara",
     "name_jp": "久が原",
     "lat": 35.579499,
     "lng": 139.685678,
@@ -12760,8 +12760,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "kyuumei",
-    "name_en": "Kyuumei",
+    "slug": "kyumei",
+    "name_en": "Kyumei",
     "name_jp": "求名",
     "lat": 35.579947,
     "lng": 140.39626,
@@ -12775,8 +12775,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "machiya-nichoume",
-    "name_en": "Machiya-Nichoume",
+    "slug": "machiya-nichome",
+    "name_en": "Machiya-Nichome",
     "name_jp": "町屋二丁目",
     "lat": 35.743837,
     "lng": 139.776625,
@@ -13120,8 +13120,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "meshi-kyuu",
-    "name_en": "Meshi-Kyuu",
+    "slug": "meshi-kyu",
+    "name_en": "Meshi-Kyu",
     "name_jp": "飯給",
     "lat": 35.320512,
     "lng": 140.142358,
@@ -13285,8 +13285,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "minami-hanyuu",
-    "name_en": "Minami-Hanyuu",
+    "slug": "minami-hanyu",
+    "name_en": "Minami-Hanyu",
     "name_jp": "南羽生",
     "lat": 36.14959,
     "lng": 139.55696,
@@ -13345,8 +13345,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "minami-oota",
-    "name_en": "Minami-Oota",
+    "slug": "minami-ota",
+    "name_en": "Minami-Ota",
     "name_jp": "南太田",
     "lat": 35.436923,
     "lng": 139.613408,
@@ -13495,8 +13495,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "minamiootsuka",
-    "name_en": "Minamiootsuka",
+    "slug": "minamiotsuka",
+    "name_en": "Minamiotsuka",
     "name_jp": "南大塚",
     "lat": 35.889663,
     "lng": 139.454189,
@@ -13630,8 +13630,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "minuma-dai-shinsui-kouen",
-    "name_en": "Minuma-Dai-Shinsui-Kouen",
+    "slug": "minuma-dai-shinsui-koen",
+    "name_en": "Minuma-Dai-Shinsui-Koen",
     "name_jp": "見沼代親水公園",
     "lat": 35.814544,
     "lng": 139.770719,
@@ -13690,8 +13690,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "misato-chuuou",
-    "name_en": "Misato-Chuuou",
+    "slug": "misato-chuo",
+    "name_en": "Misato-Chuo",
     "name_jp": "三郷中央",
     "lat": 35.824514,
     "lng": 139.878344,
@@ -13990,8 +13990,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "motomachi-chuukagai",
-    "name_en": "Motomachi-・-Chuukagai",
+    "slug": "motomachi-chukagai",
+    "name_en": "Motomachi-・-Chukagai",
     "name_jp": "元町・中華街",
     "lat": 35.44243,
     "lng": 139.650446,
@@ -14035,8 +14035,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "mukougaokayuuen",
-    "name_en": "Mukougaokayuuen",
+    "slug": "mukogaokayuen",
+    "name_en": "Mukogaokayuen",
     "name_jp": "向ヶ丘遊園",
     "lat": 35.617273,
     "lng": 139.564719,
@@ -14290,8 +14290,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "musashishinjou",
-    "name_en": "Musashishinjou",
+    "slug": "musashishinjo",
+    "name_en": "Musashishinjo",
     "name_jp": "武蔵新城",
     "lat": 35.587369,
     "lng": 139.629419,
@@ -14320,8 +14320,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "mutsuura",
-    "name_en": "Mutsuura",
+    "slug": "mutsura",
+    "name_en": "Mutsura",
     "name_jp": "六浦",
     "lat": 35.32269,
     "lng": 139.611532,
@@ -14350,8 +14350,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "myouden",
-    "name_en": "Myouden",
+    "slug": "myoden",
+    "name_en": "Myoden",
     "name_jp": "妙典",
     "lat": 35.690935,
     "lng": 139.924209,
@@ -14365,8 +14365,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "myougaku",
-    "name_en": "Myougaku",
+    "slug": "myogaku",
+    "name_en": "Myogaku",
     "name_jp": "明覚",
     "lat": 36.003309,
     "lng": 139.288789,
@@ -14380,8 +14380,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "myourenji",
-    "name_en": "Myourenji",
+    "slug": "myorenji",
+    "name_en": "Myorenji",
     "name_jp": "妙蓮寺",
     "lat": 35.498779,
     "lng": 139.633194,
@@ -14500,8 +14500,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "naka-goura",
-    "name_en": "Naka-Goura",
+    "slug": "naka-gora",
+    "name_en": "Naka-Gora",
     "name_jp": "中強羅",
     "lat": 35.248167,
     "lng": 139.040556,
@@ -14635,8 +14635,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nakano-fujimichou",
-    "name_en": "Nakano-Fujimichou",
+    "slug": "nakano-fujimicho",
+    "name_en": "Nakano-Fujimicho",
     "name_jp": "中野富士見町",
     "lat": 35.690514,
     "lng": 139.666933,
@@ -14755,8 +14755,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "namiki-chuuou",
-    "name_en": "Namiki-Chuuou",
+    "slug": "namiki-chuo",
+    "name_en": "Namiki-Chuo",
     "name_jp": "並木中央",
     "lat": 35.365505,
     "lng": 139.642945,
@@ -14800,8 +14800,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nanbu-shijou",
-    "name_en": "Nanbu-Shijou",
+    "slug": "nanbu-shijo",
+    "name_en": "Nanbu-Shijo",
     "name_jp": "南部市場",
     "lat": 35.380192,
     "lng": 139.633163,
@@ -14830,8 +14830,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nankyou-hon",
-    "name_en": "Nankyou-Hon",
+    "slug": "nankyo-hon",
+    "name_en": "Nankyo-Hon",
     "name_jp": "南橋本",
     "lat": 35.58042,
     "lng": 139.352484,
@@ -14950,8 +14950,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nerima-kouyadai",
-    "name_en": "Nerima-Kouyadai",
+    "slug": "nerima-koyadai",
+    "name_en": "Nerima-Koyadai",
     "name_jp": "練馬高野台",
     "lat": 35.740622,
     "lng": 139.616749,
@@ -14995,8 +14995,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nihondai-touri",
-    "name_en": "Nihondai-Touri",
+    "slug": "nihondai-tori",
+    "name_en": "Nihondai-Tori",
     "name_jp": "日本大通り",
     "lat": 35.446821,
     "lng": 139.642608,
@@ -15055,8 +15055,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nijuubashimae",
-    "name_en": "Nijuubashimae",
+    "slug": "nijubashimae",
+    "name_en": "Nijubashimae",
     "name_jp": "二重橋前",
     "lat": 35.681071,
     "lng": 139.761948,
@@ -15100,8 +15100,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-choufu",
-    "name_en": "Nishi-Choufu",
+    "slug": "nishi-chofu",
+    "name_en": "Nishi-Chofu",
     "name_jp": "西調布",
     "lat": 35.657169,
     "lng": 139.529822,
@@ -15115,8 +15115,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-hanyuu",
-    "name_en": "Nishi-Hanyuu",
+    "slug": "nishi-hanyu",
+    "name_en": "Nishi-Hanyu",
     "name_jp": "西羽生",
     "lat": 36.17635,
     "lng": 139.523986,
@@ -15220,8 +15220,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-oohara",
-    "name_en": "Nishi-Oohara",
+    "slug": "nishi-ohara",
+    "name_en": "Nishi-Ohara",
     "name_jp": "西大原",
     "lat": 35.260407,
     "lng": 140.378029,
@@ -15235,8 +15235,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-oomiya",
-    "name_en": "Nishi-Oomiya",
+    "slug": "nishi-omiya",
+    "name_en": "Nishi-Omiya",
     "name_jp": "西大宮",
     "lat": 35.922281333698294,
     "lng": 139.57979679107666,
@@ -15250,8 +15250,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-ooshima",
-    "name_en": "Nishi-Ooshima",
+    "slug": "nishi-ojima",
+    "name_en": "Nishi-Ojima",
     "name_jp": "西大島",
     "lat": 35.689349,
     "lng": 139.826206,
@@ -15265,8 +15265,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-ooya",
-    "name_en": "Nishi-Ooya",
+    "slug": "nishi-oya",
+    "name_en": "Nishi-Oya",
     "name_jp": "西大家",
     "lat": 35.931698,
     "lng": 139.356321,
@@ -15355,8 +15355,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishi-taishidou",
-    "name_en": "Nishi-Taishidou",
+    "slug": "nishi-taishido",
+    "name_en": "Nishi-Taishido",
     "name_jp": "西太子堂",
     "lat": 35.644545,
     "lng": 139.666382,
@@ -15490,8 +15490,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nishikou-shima-taira",
-    "name_en": "Nishikou-Shima-Taira",
+    "slug": "nishiko-shima-taira",
+    "name_en": "Nishiko-Shima-Taira",
     "name_jp": "西高島平",
     "lat": 35.791833,
     "lng": 139.64594,
@@ -15685,8 +15685,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nojima-kouen",
-    "name_en": "Nojima-Kouen",
+    "slug": "nojima-koen",
+    "name_en": "Nojima-Koen",
     "name_jp": "野島公園",
     "lat": 35.330559,
     "lng": 139.631524,
@@ -15700,8 +15700,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "noukendai",
-    "name_en": "Noukendai",
+    "slug": "nokendai",
+    "name_en": "Nokendai",
     "name_jp": "能見台",
     "lat": 35.360528,
     "lng": 139.629233,
@@ -15745,8 +15745,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "nyuu-so",
-    "name_en": "Nyuu-So",
+    "slug": "nyu-so",
+    "name_en": "Nyu-So",
     "name_jp": "入曽",
     "lat": 35.832481,
     "lng": 139.427304,
@@ -15895,8 +15895,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "odakyuu-sagamihara",
-    "name_en": "Odakyuu-Sagamihara",
+    "slug": "odakyu-sagamihara",
+    "name_en": "Odakyu-Sagamihara",
     "name_jp": "小田急相模原",
     "lat": 35.515134,
     "lng": 139.422571,
@@ -16195,8 +16195,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooasou",
-    "name_en": "Ooasou",
+    "slug": "oaso",
+    "name_en": "Oaso",
     "name_jp": "大麻生",
     "lat": 36.144612,
     "lng": 139.331859,
@@ -16210,8 +16210,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oobukuro",
-    "name_en": "Oobukuro",
+    "slug": "obukuro",
+    "name_en": "Obukuro",
     "name_jp": "大袋",
     "lat": 35.92437,
     "lng": 139.777868,
@@ -16225,8 +16225,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooguchi",
-    "name_en": "Ooguchi",
+    "slug": "oguchi",
+    "name_en": "Oguchi",
     "name_jp": "大口",
     "lat": 35.492375,
     "lng": 139.646288,
@@ -16240,8 +16240,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oohiradai",
-    "name_en": "Oohiradai",
+    "slug": "ohiradai",
+    "name_en": "Ohiradai",
     "name_jp": "大平台",
     "lat": 35.238664,
     "lng": 139.073849,
@@ -16255,8 +16255,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooikeiba-ba-mae",
-    "name_en": "Ooikeiba-Ba-Mae",
+    "slug": "oikeiba-ba-mae",
+    "name_en": "Oikeiba-Ba-Mae",
     "name_jp": "大井競馬場前",
     "lat": 35.595006,
     "lng": 139.74708,
@@ -16270,8 +16270,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooiso",
-    "name_en": "Ooiso",
+    "slug": "oiso",
+    "name_en": "Oiso",
     "name_jp": "大磯",
     "lat": 35.311299,
     "lng": 139.313388,
@@ -16285,8 +16285,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ookawa",
-    "name_en": "Ookawa",
+    "slug": "okawa",
+    "name_en": "Okawa",
     "name_jp": "大川",
     "lat": 35.495646,
     "lng": 139.711038,
@@ -16300,8 +16300,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ookubo",
-    "name_en": "Ookubo",
+    "slug": "okubo",
+    "name_en": "Okubo",
     "name_jp": "大久保",
     "lat": 35.700784,
     "lng": 139.69732,
@@ -16315,8 +16315,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ookurayama",
-    "name_en": "Ookurayama",
+    "slug": "okurayama",
+    "name_en": "Okurayama",
     "name_jp": "大倉山",
     "lat": 35.52243,
     "lng": 139.629808,
@@ -16330,8 +16330,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oomachi",
-    "name_en": "Oomachi",
+    "slug": "omachi",
+    "name_en": "Omachi",
     "name_jp": "大町",
     "lat": 35.775103,
     "lng": 139.973567,
@@ -16345,8 +16345,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oomiya-kouen",
-    "name_en": "Oomiya-Kouen",
+    "slug": "omiya-koen",
+    "name_en": "Omiya-Koen",
     "name_jp": "大宮公園",
     "lat": 35.92374,
     "lng": 139.632903,
@@ -16360,8 +16360,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oomori-dai",
-    "name_en": "Oomori-Dai",
+    "slug": "omori-dai",
+    "name_en": "Omori-Dai",
     "name_jp": "大森台",
     "lat": 35.584126,
     "lng": 140.149398,
@@ -16375,8 +16375,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oomori-kaigan",
-    "name_en": "Oomori-Kaigan",
+    "slug": "omori-kaigan",
+    "name_en": "Omori-Kaigan",
     "name_jp": "大森海岸",
     "lat": 35.587576,
     "lng": 139.73544,
@@ -16390,8 +16390,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oomori-machi",
-    "name_en": "Oomori-Machi",
+    "slug": "omori-machi",
+    "name_en": "Omori-Machi",
     "name_jp": "大森町",
     "lat": 35.572431,
     "lng": 139.732027,
@@ -16405,8 +16405,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oonohara",
-    "name_en": "Oonohara",
+    "slug": "onohara",
+    "name_en": "Onohara",
     "name_jp": "大野原",
     "lat": 36.018586,
     "lng": 139.094071,
@@ -16420,8 +16420,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oonuki",
-    "name_en": "Oonuki",
+    "slug": "onuki",
+    "name_en": "Onuki",
     "name_jp": "大貫",
     "lat": 35.291661,
     "lng": 139.855541,
@@ -16435,8 +16435,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oosaki-hirokouji",
-    "name_en": "Oosaki-Hirokouji",
+    "slug": "osaki-hirokoji",
+    "name_en": "Osaki-Hirokoji",
     "name_jp": "大崎広小路",
     "lat": 35.622244,
     "lng": 139.722339,
@@ -16450,8 +16450,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooshima",
-    "name_en": "Ooshima",
+    "slug": "ojima",
+    "name_en": "Ojima",
     "name_jp": "大島",
     "lat": 35.689905,
     "lng": 139.83565,
@@ -16465,8 +16465,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ootaki",
-    "name_en": "Ootaki",
+    "slug": "otaki",
+    "name_en": "Otaki",
     "name_jp": "大多喜",
     "lat": 35.286466,
     "lng": 140.243833,
@@ -16480,8 +16480,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooto",
-    "name_en": "Ooto",
+    "slug": "oto",
+    "name_en": "Oto",
     "name_jp": "大戸",
     "lat": 35.890004,
     "lng": 140.457828,
@@ -16495,8 +16495,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ootorii",
-    "name_en": "Ootorii",
+    "slug": "otorii",
+    "name_en": "Otorii",
     "name_jp": "大鳥居",
     "lat": 35.552531,
     "lng": 139.739356,
@@ -16510,8 +16510,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ootsuka-teikyoudaigaku",
-    "name_en": "Ootsuka-・-Teikyoudaigaku",
+    "slug": "otsuka-teikyodaigaku",
+    "name_en": "Otsuka-・-Teikyodaigaku",
     "name_jp": "大塚・帝京大学",
     "lat": 35.636878,
     "lng": 139.416461,
@@ -16525,8 +16525,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oowada",
-    "name_en": "Oowada",
+    "slug": "owada",
+    "name_en": "Owada",
     "name_jp": "大和田",
     "lat": 35.929359,
     "lng": 139.65051,
@@ -16540,8 +16540,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ooyama",
-    "name_en": "Ooyama",
+    "slug": "oyama",
+    "name_en": "Oyama",
     "name_jp": "大山",
     "lat": 35.748398,
     "lng": 139.702589,
@@ -16585,8 +16585,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ougi-oohashi",
-    "name_en": "Ougi-Oohashi",
+    "slug": "ogi-ohashi",
+    "name_en": "Ogi-Ohashi",
     "name_jp": "扇大橋",
     "lat": 35.763897,
     "lng": 139.770808,
@@ -16600,8 +16600,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ougimachi",
-    "name_en": "Ougimachi",
+    "slug": "ogimachi",
+    "name_en": "Ogimachi",
     "name_jp": "扇町",
     "lat": 35.501452,
     "lng": 139.722147,
@@ -16615,8 +16615,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "oumekaidou",
-    "name_en": "Oumekaidou",
+    "slug": "omekaido",
+    "name_en": "Omekaido",
     "name_jp": "青梅街道",
     "lat": 35.73098,
     "lng": 139.476628,
@@ -16720,8 +16720,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "roka-kouen",
-    "name_en": "Roka-Kouen",
+    "slug": "roka-koen",
+    "name_en": "Roka-Koen",
     "name_jp": "芦花公園",
     "lat": 35.670479,
     "lng": 139.608247,
@@ -16765,8 +16765,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "rokugou-dote",
-    "name_en": "Rokugou-Dote",
+    "slug": "rokugo-dote",
+    "name_en": "Rokugo-Dote",
     "name_jp": "六郷土手",
     "lat": 35.540577,
     "lng": 139.7076,
@@ -16810,8 +16810,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ryuutsuu-sentaa",
-    "name_en": "Ryuutsuu-Sentaa",
+    "slug": "ryutsu-sentaa",
+    "name_en": "Ryutsu-Sentaa",
     "name_jp": "流通センター",
     "lat": 35.58186,
     "lng": 139.748964,
@@ -16915,8 +16915,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sagamiootsuka",
-    "name_en": "Sagamiootsuka",
+    "slug": "sagamiotsuka",
+    "name_en": "Sagamiotsuka",
     "name_jp": "相模大塚",
     "lat": 35.470666,
     "lng": 139.441232,
@@ -17035,8 +17035,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sakura-kaidou",
-    "name_en": "Sakura-Kaidou",
+    "slug": "sakura-kaido",
+    "name_en": "Sakura-Kaido",
     "name_jp": "桜街道",
     "lat": 35.739,
     "lng": 139.416653,
@@ -17245,8 +17245,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sanguu-hashi",
-    "name_en": "Sanguu-Hashi",
+    "slug": "sangu-hashi",
+    "name_en": "Sangu-Hashi",
     "name_jp": "参宮橋",
     "lat": 35.678586,
     "lng": 139.693568,
@@ -17260,8 +17260,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sangyou-shinkou-sentaa",
-    "name_en": "Sangyou-Shinkou-Sentaa",
+    "slug": "sangyo-shinko-sentaa",
+    "name_en": "Sangyo-Shinko-Sentaa",
     "name_jp": "産業振興センター",
     "lat": 35.35339,
     "lng": 139.646326,
@@ -17275,8 +17275,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sangyoudouro",
-    "name_en": "Sangyoudouro",
+    "slug": "sangyodoro",
+    "name_en": "Sangyodoro",
     "name_jp": "産業道路",
     "lat": 35.536611,
     "lng": 139.740381,
@@ -17680,8 +17680,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "senju-oohashi",
-    "name_en": "Senju-Oohashi",
+    "slug": "senju-ohashi",
+    "name_en": "Senju-Ohashi",
     "name_jp": "千住大橋",
     "lat": 35.74243,
     "lng": 139.796934,
@@ -17785,8 +17785,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shakudo-shougakkou-mae",
-    "name_en": "Shakudo-Shougakkou-Mae",
+    "slug": "shakudo-shogakko-mae",
+    "name_en": "Shakudo-Shogakko-Mae",
     "name_jp": "赤土小学校前",
     "lat": 35.742454,
     "lng": 139.768989,
@@ -17845,8 +17845,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shibakouen",
-    "name_en": "Shibakouen",
+    "slug": "shibakoen",
+    "name_en": "Shibakoen",
     "name_jp": "芝公園",
     "lat": 35.654074,
     "lng": 139.749824,
@@ -18025,8 +18025,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shijou-mae",
-    "name_en": "Shijou-Mae",
+    "slug": "shijo-mae",
+    "name_en": "Shijo-Mae",
     "name_jp": "市場前",
     "lat": 35.645684,
     "lng": 139.78564,
@@ -18055,8 +18055,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimizu-kouen",
-    "name_en": "Shimizu-Kouen",
+    "slug": "shimizu-koen",
+    "name_en": "Shimizu-Koen",
     "name_jp": "清水公園",
     "lat": 35.959364,
     "lng": 139.85967,
@@ -18085,8 +18085,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimogoori",
-    "name_en": "Shimogoori",
+    "slug": "shimogori",
+    "name_en": "Shimogori",
     "name_jp": "下郡",
     "lat": 35.355018,
     "lng": 140.055372,
@@ -18145,8 +18145,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimoochiai",
-    "name_en": "Shimoochiai",
+    "slug": "shimo-ochiai",
+    "name_en": "Shimo-Ochiai",
     "name_jp": "下落合",
     "lat": 35.715846,
     "lng": 139.695391,
@@ -18160,8 +18160,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimousa-kanzaki",
-    "name_en": "Shimousa-Kanzaki",
+    "slug": "shimosa-kanzaki",
+    "name_en": "Shimosa-Kanzaki",
     "name_jp": "下総神崎",
     "lat": 35.8948,
     "lng": 140.410657,
@@ -18175,8 +18175,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimousa-matsuzaki",
-    "name_en": "Shimousa-Matsuzaki",
+    "slug": "shimosa-matsuzaki",
+    "name_en": "Shimosa-Matsuzaki",
     "name_jp": "下総松崎",
     "lat": 35.807806,
     "lng": 140.27749,
@@ -18190,8 +18190,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimousa-nakayama",
-    "name_en": "Shimousa-Nakayama",
+    "slug": "shimosa-nakayama",
+    "name_en": "Shimosa-Nakayama",
     "name_jp": "下総中山",
     "lat": 35.714276,
     "lng": 139.943092,
@@ -18205,8 +18205,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimousa-tachibana",
-    "name_en": "Shimousa-Tachibana",
+    "slug": "shimosa-tachibana",
+    "name_en": "Shimosa-Tachibana",
     "name_jp": "下総橘",
     "lat": 35.818673,
     "lng": 140.702273,
@@ -18220,8 +18220,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimousa-toyosato",
-    "name_en": "Shimousa-Toyosato",
+    "slug": "shimosa-toyosato",
+    "name_en": "Shimosa-Toyosato",
     "name_jp": "下総豊里",
     "lat": 35.792899,
     "lng": 140.721011,
@@ -18250,8 +18250,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shimura-sanchoume",
-    "name_en": "Shimura-Sanchoume",
+    "slug": "shimura-sanchome",
+    "name_en": "Shimura-Sanchome",
     "name_jp": "志村三丁目",
     "lat": 35.777391,
     "lng": 139.685937,
@@ -18430,8 +18430,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shin-koushin-tsuka",
-    "name_en": "Shin-Koushin-Tsuka",
+    "slug": "shin-koshin-tsuka",
+    "name_en": "Shin-Koshin-Tsuka",
     "name_jp": "新庚申塚",
     "lat": 35.741348,
     "lng": 139.730451,
@@ -18640,8 +18640,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shinanochou",
-    "name_en": "Shinanochou",
+    "slug": "shinanocho",
+    "name_en": "Shinanocho",
     "name_jp": "信濃町",
     "lat": 35.680031,
     "lng": 139.720729,
@@ -18685,8 +18685,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shingou",
-    "name_en": "Shingou",
+    "slug": "shingo",
+    "name_en": "Shingo",
     "name_jp": "新郷",
     "lat": 36.171317,
     "lng": 139.510474,
@@ -18820,8 +18820,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shinrinkouen",
-    "name_en": "Shinrinkouen",
+    "slug": "shinrinkoen",
+    "name_en": "Shinrinkoen",
     "name_jp": "森林公園",
     "lat": 36.045239,
     "lng": 139.374947,
@@ -18895,8 +18895,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shinzou-kawashima",
-    "name_en": "Shinzou-Kawashima",
+    "slug": "shinzo-kawashima",
+    "name_en": "Shinzo-Kawashima",
     "name_jp": "新三河島",
     "lat": 35.73714,
     "lng": 139.773834,
@@ -18910,8 +18910,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shinzou-sato",
-    "name_en": "Shinzou-Sato",
+    "slug": "shinzo-sato",
+    "name_en": "Shinzo-Sato",
     "name_jp": "新三郷",
     "lat": 35.858667,
     "lng": 139.869341,
@@ -19180,8 +19180,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shouin-jinja-mae",
-    "name_en": "Shouin-Jinja-Mae",
+    "slug": "shoin-jinja-mae",
+    "name_en": "Shoin-Jinja-Mae",
     "name_jp": "松陰神社前",
     "lat": 35.643947,
     "lng": 139.655211,
@@ -19195,8 +19195,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shoumaru",
-    "name_en": "Shoumaru",
+    "slug": "shomaru",
+    "name_en": "Shomaru",
     "name_jp": "正丸",
     "lat": 35.938324,
     "lng": 139.181521,
@@ -19210,8 +19210,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shounan",
-    "name_en": "Shounan",
+    "slug": "shonan",
+    "name_en": "Shonan",
     "name_jp": "沼南",
     "lat": 35.971165,
     "lng": 139.623481,
@@ -19225,8 +19225,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shounan-fukazawa",
-    "name_en": "Shounan-Fukazawa",
+    "slug": "shonan-fukazawa",
+    "name_en": "Shonan-Fukazawa",
     "name_jp": "湘南深沢",
     "lat": 35.332865,
     "lng": 139.518903,
@@ -19240,8 +19240,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shounan-kaigan-kouen",
-    "name_en": "Shounan-Kaigan-Kouen",
+    "slug": "shonan-kaigan-koen",
+    "name_en": "Shonan-Kaigan-Koen",
     "name_jp": "湘南海岸公園",
     "lat": 35.315203,
     "lng": 139.4833,
@@ -19255,8 +19255,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shounan-machiya",
-    "name_en": "Shounan-Machiya",
+    "slug": "shonan-machiya",
+    "name_en": "Shonan-Machiya",
     "name_jp": "湘南町屋",
     "lat": 35.337832,
     "lng": 139.522666,
@@ -19270,8 +19270,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shouwa",
-    "name_en": "Shouwa",
+    "slug": "showa",
+    "name_en": "Showa",
     "name_jp": "昭和",
     "lat": 35.506836,
     "lng": 139.723897,
@@ -19285,8 +19285,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "shouwa-shima",
-    "name_en": "Shouwa-Shima",
+    "slug": "showa-shima",
+    "name_en": "Showa-Shima",
     "name_jp": "昭和島",
     "lat": 35.570656,
     "lng": 139.749918,
@@ -19345,8 +19345,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "soshio-ryuutsuu-sentaa",
-    "name_en": "Soshio-Ryuutsuu-Sentaa",
+    "slug": "soshio-ryutsu-sentaa",
+    "name_en": "Soshio-Ryutsu-Sentaa",
     "name_jp": "ソシオ流通センター",
     "lat": 36.1365,
     "lng": 139.424333,
@@ -19360,8 +19360,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sou-moto",
-    "name_en": "Sou-Moto",
+    "slug": "so-moto",
+    "name_en": "So-Moto",
     "name_jp": "総元",
     "lat": 35.240588,
     "lng": 140.240413,
@@ -19375,8 +19375,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "soubudai-mae",
-    "name_en": "Soubudai-Mae",
+    "slug": "sobudai-mae",
+    "name_en": "Sobudai-Mae",
     "name_jp": "相武台前",
     "lat": 35.499294,
     "lng": 139.408509,
@@ -19390,8 +19390,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "soubudai-shita",
-    "name_en": "Soubudai-Shita",
+    "slug": "sobudai-shita",
+    "name_en": "Sobudai-Shita",
     "name_jp": "相武台下",
     "lat": 35.492734,
     "lng": 139.386297,
@@ -19405,8 +19405,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sougo-sandou",
-    "name_en": "Sougo-Sandou",
+    "slug": "sogo-sando",
+    "name_en": "Sogo-Sando",
     "name_jp": "宗吾参道",
     "lat": 35.752669,
     "lng": 140.280975,
@@ -19420,8 +19420,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "souka",
-    "name_en": "Souka",
+    "slug": "soka",
+    "name_en": "Soka",
     "name_jp": "草加",
     "lat": 35.828476,
     "lng": 139.803397,
@@ -19435,8 +19435,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "souun-yama",
-    "name_en": "Souun-Yama",
+    "slug": "soun-yama",
+    "name_en": "Soun-Yama",
     "name_jp": "早雲山",
     "lat": 35.246444,
     "lng": 139.035611,
@@ -19495,8 +19495,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "sugito-kouyadai",
-    "name_en": "Sugito-Kouyadai",
+    "slug": "sugito-koyadai",
+    "name_en": "Sugito-Koyadai",
     "name_jp": "杉戸高野台",
     "lat": 36.051536,
     "lng": 139.714582,
@@ -19510,8 +19510,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "suigou",
-    "name_en": "Suigou",
+    "slug": "suigo",
+    "name_en": "Suigo",
     "name_jp": "水郷",
     "lat": 35.885508,
     "lng": 140.570181,
@@ -19525,8 +19525,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "suitenguumae",
-    "name_en": "Suitenguumae",
+    "slug": "suitengumae",
+    "name_en": "Suitengumae",
     "name_jp": "水天宮前",
     "lat": 35.682683,
     "lng": 139.785377,
@@ -19555,8 +19555,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "supootsusentaa",
-    "name_en": "Supootsusentaa",
+    "slug": "sports-center",
+    "name_en": "Sports-Center",
     "name_jp": "スポーツセンター",
     "lat": 35.643164,
     "lng": 140.11611,
@@ -19585,8 +19585,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "suzukichou",
-    "name_en": "Suzukichou",
+    "slug": "suzukicho",
+    "name_en": "Suzukicho",
     "name_jp": "鈴木町",
     "lat": 35.53535,
     "lng": 139.720655,
@@ -19720,8 +19720,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "taitou",
-    "name_en": "Taitou",
+    "slug": "taito",
+    "name_en": "Taito",
     "name_jp": "太東",
     "lat": 35.319942,
     "lng": 140.381184,
@@ -19735,8 +19735,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "taiyuu-yama",
-    "name_en": "Taiyuu-Yama",
+    "slug": "taiyu-yama",
+    "name_en": "Taiyu-Yama",
     "name_jp": "大雄山",
     "lat": 35.319046,
     "lng": 139.10365,
@@ -19855,8 +19855,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "takane-koudan",
-    "name_en": "Takane-Koudan",
+    "slug": "takane-kodan",
+    "name_en": "Takane-Kodan",
     "name_jp": "高根公団",
     "lat": 35.730436,
     "lng": 140.029382,
@@ -20065,8 +20065,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "taki-fudou",
-    "name_en": "Taki-Fudou",
+    "slug": "taki-fudo",
+    "name_en": "Taki-Fudo",
     "name_jp": "滝不動",
     "lat": 35.737957,
     "lng": 140.02622,
@@ -20080,8 +20080,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "takinogawa-itchoume",
-    "name_en": "Takinogawa-Itchoume",
+    "slug": "takinogawa-itchome",
+    "name_en": "Takinogawa-Itchome",
     "name_jp": "滝野川一丁目",
     "lat": 35.747374,
     "lng": 139.735376,
@@ -20185,8 +20185,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tan-sou",
-    "name_en": "Tan-Sou",
+    "slug": "tan-so",
+    "name_en": "Tan-So",
     "name_jp": "丹荘",
     "lat": 36.216668,
     "lng": 139.102306,
@@ -20335,8 +20335,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tennouchou",
-    "name_en": "Tennouchou",
+    "slug": "tennocho",
+    "name_en": "Tennocho",
     "name_jp": "天王町",
     "lat": 35.453984,
     "lng": 139.602554,
@@ -20365,8 +20365,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tetsudouhakubutsukan",
-    "name_en": "Tetsudouhakubutsukan",
+    "slug": "tetsudohakubutsukan",
+    "name_en": "Tetsudohakubutsukan",
     "name_jp": "鉄道博物館",
     "lat": 35.920271,
     "lng": 139.617796,
@@ -20395,8 +20395,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tobitakyuu",
-    "name_en": "Tobitakyuu",
+    "slug": "tobitakyu",
+    "name_en": "Tobitakyu",
     "name_jp": "飛田給",
     "lat": 35.660121,
     "lng": 139.523666,
@@ -20455,8 +20455,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "todakouen",
-    "name_en": "Todakouen",
+    "slug": "todakoen",
+    "name_en": "Todakoen",
     "name_jp": "戸田公園",
     "lat": 35.807906,
     "lng": 139.678203,
@@ -20545,8 +20545,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tokoshikouen",
-    "name_en": "Tokoshikouen",
+    "slug": "tokoshikoen",
+    "name_en": "Tokoshikoen",
     "name_jp": "戸越公園",
     "lat": 35.608856,
     "lng": 139.718159,
@@ -20605,8 +20605,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toneri-kouen",
-    "name_en": "Toneri-Kouen",
+    "slug": "toneri-koen",
+    "name_en": "Toneri-Koen",
     "name_jp": "舎人公園",
     "lat": 35.79623,
     "lng": 139.770183,
@@ -20620,8 +20620,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tookaichiba",
-    "name_en": "Tookaichiba",
+    "slug": "tokaichiba",
+    "name_en": "Tokaichiba",
     "name_jp": "十日市場",
     "lat": 35.526254,
     "lng": 139.51669,
@@ -20695,8 +20695,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "totsuka-angyou",
-    "name_en": "Totsuka-Angyou",
+    "slug": "totsuka-angyo",
+    "name_en": "Totsuka-Angyo",
     "name_jp": "戸塚安行",
     "lat": 35.858873,
     "lng": 139.753689,
@@ -20710,8 +20710,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tou-no-sawa",
-    "name_en": "Tou-No-Sawa",
+    "slug": "to-no-sawa",
+    "name_en": "To-No-Sawa",
     "name_jp": "塔ノ沢",
     "lat": 35.234521,
     "lng": 139.094016,
@@ -20725,8 +20725,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toubu-nerima",
-    "name_en": "Toubu-Nerima",
+    "slug": "tobu-nerima",
+    "name_en": "Tobu-Nerima",
     "name_jp": "東武練馬",
     "lat": 35.768698,
     "lng": 139.661964,
@@ -20740,8 +20740,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toubu-takezawa",
-    "name_en": "Toubu-Takezawa",
+    "slug": "tobu-takezawa",
+    "name_en": "Tobu-Takezawa",
     "name_jp": "東武竹沢",
     "lat": 36.0754,
     "lng": 139.237591,
@@ -20755,8 +20755,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toudai-miya",
-    "name_en": "Toudai-Miya",
+    "slug": "todai-miya",
+    "name_en": "Todai-Miya",
     "name_jp": "東大宮",
     "lat": 35.948751,
     "lng": 139.640291,
@@ -20770,8 +20770,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toudai-shima",
-    "name_en": "Toudai-Shima",
+    "slug": "todai-shima",
+    "name_en": "Todai-Shima",
     "name_jp": "東大島",
     "lat": 35.690355,
     "lng": 139.845963,
@@ -20785,8 +20785,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toufuku-nama",
-    "name_en": "Toufuku-Nama",
+    "slug": "tofuku-nama",
+    "name_en": "Tofuku-Nama",
     "name_jp": "東福生",
     "lat": 35.745811,
     "lng": 139.33594,
@@ -20800,8 +20800,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tougane",
-    "name_en": "Tougane",
+    "slug": "togane",
+    "name_en": "Togane",
     "name_jp": "東金",
     "lat": 35.560172,
     "lng": 140.363743,
@@ -20815,8 +20815,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "touguu-hara",
-    "name_en": "Touguu-Hara",
+    "slug": "togu-hara",
+    "name_en": "Togu-Hara",
     "name_jp": "東宮原",
     "lat": 35.94262,
     "lng": 139.618054,
@@ -20830,8 +20830,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "touhaku-raku",
-    "name_en": "Touhaku-Raku",
+    "slug": "tohaku-raku",
+    "name_en": "Tohaku-Raku",
     "name_jp": "東白楽",
     "lat": 35.483523,
     "lng": 139.629364,
@@ -20845,8 +20845,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toukai-kami",
-    "name_en": "Toukai-Kami",
+    "slug": "tokai-kami",
+    "name_en": "Tokai-Kami",
     "name_jp": "東海神",
     "lat": 35.705888,
     "lng": 139.980343,
@@ -20860,8 +20860,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toukaidaigakumae",
-    "name_en": "Toukaidaigakumae",
+    "slug": "tokaidaigakumae",
+    "name_en": "Tokaidaigakumae",
     "name_jp": "東海大学前",
     "lat": 35.373151,
     "lng": 139.271236,
@@ -20875,8 +20875,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toukou-ta",
-    "name_en": "Toukou-Ta",
+    "slug": "toko-ta",
+    "name_en": "Toko-Ta",
     "name_jp": "東行田",
     "lat": 36.147265,
     "lng": 139.468394,
@@ -20890,8 +20890,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toukyou-sukaitsurii",
-    "name_en": "Toukyou-Sukaitsurii",
+    "slug": "tokyo-sukaitsurii",
+    "name_en": "Tokyo-Sukaitsurii",
     "name_jp": "とうきょうスカイツリー",
     "lat": 35.71043,
     "lng": 139.809332,
@@ -20905,8 +20905,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toukyou-terepooto",
-    "name_en": "Toukyou-Terepooto",
+    "slug": "tokyo-teleport",
+    "name_en": "Tokyo-Teleport",
     "name_jp": "東京テレポート",
     "lat": 35.62753,
     "lng": 139.778896,
@@ -20920,8 +20920,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toumou-ro",
-    "name_en": "Toumou-Ro",
+    "slug": "tomo-ro",
+    "name_en": "Tomo-Ro",
     "name_jp": "東毛呂",
     "lat": 35.947058,
     "lng": 139.315303,
@@ -20935,8 +20935,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tourin-kan",
-    "name_en": "Tourin-Kan",
+    "slug": "torin-kan",
+    "name_en": "Torin-Kan",
     "name_jp": "東林間",
     "lat": 35.520541,
     "lng": 139.438883,
@@ -20950,8 +20950,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "toushin-kawa",
-    "name_en": "Toushin-Kawa",
+    "slug": "toshin-kawa",
+    "name_en": "Toshin-Kawa",
     "name_jp": "東清川",
     "lat": 35.390017,
     "lng": 139.985847,
@@ -20965,8 +20965,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tousou-moto",
-    "name_en": "Tousou-Moto",
+    "slug": "toso-moto",
+    "name_en": "Toso-Moto",
     "name_jp": "東総元",
     "lat": 35.259314,
     "lng": 140.247381,
@@ -20980,8 +20980,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "touyoko-ta",
-    "name_en": "Touyoko-Ta",
+    "slug": "toyoko-ta",
+    "name_en": "Toyoko-Ta",
     "name_jp": "東横田",
     "lat": 35.386185,
     "lng": 140.035995,
@@ -21055,8 +21055,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tsujidou",
-    "name_en": "Tsujidou",
+    "slug": "tsujido",
+    "name_en": "Tsujido",
     "name_jp": "辻堂",
     "lat": 35.336847,
     "lng": 139.447106,
@@ -21310,8 +21310,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "tsurumi-shijou",
-    "name_en": "Tsurumi-Shijou",
+    "slug": "tsurumi-shijo",
+    "name_en": "Tsurumi-Shijo",
     "name_jp": "鶴見市場",
     "lat": 35.517594,
     "lng": 139.68642,
@@ -21385,8 +21385,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "uchisaiwaichou",
-    "name_en": "Uchisaiwaichou",
+    "slug": "uchisaiwaicho",
+    "name_en": "Uchisaiwaicho",
     "name_jp": "内幸町",
     "lat": 35.66975,
     "lng": 139.75561,
@@ -21400,8 +21400,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ue-goura",
-    "name_en": "Ue-Goura",
+    "slug": "ue-gora",
+    "name_en": "Ue-Gora",
     "name_jp": "上強羅",
     "lat": 35.247306,
     "lng": 139.038056,
@@ -21445,8 +21445,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "ue-ooi",
-    "name_en": "Ue-Ooi",
+    "slug": "ue-oi",
+    "name_en": "Ue-Oi",
     "name_jp": "上大井",
     "lat": 35.321883,
     "lng": 139.163508,
@@ -21610,8 +21610,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "umi-no-kouen-minamiguchi",
-    "name_en": "Umi-No-Kouen-Minamiguchi",
+    "slug": "umi-no-koen-minamiguchi",
+    "name_en": "Umi-No-Koen-Minamiguchi",
     "name_jp": "海の公園南口",
     "lat": 35.337225,
     "lng": 139.632096,
@@ -21625,8 +21625,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "umi-no-kouen-shiba-kuchi",
-    "name_en": "Umi-No-Kouen-Shiba-Kuchi",
+    "slug": "umi-no-koen-shiba-kuchi",
+    "name_en": "Umi-No-Koen-Shiba-Kuchi",
     "name_jp": "海の公園柴口",
     "lat": 35.342086,
     "lng": 139.635846,
@@ -21880,8 +21880,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "wadou-kurotani",
-    "name_en": "Wadou-Kurotani",
+    "slug": "wado-kurotani",
+    "name_en": "Wado-Kurotani",
     "name_jp": "和銅黒谷",
     "lat": 36.046671,
     "lng": 139.101666,
@@ -22045,8 +22045,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yachiyo-chuuou",
-    "name_en": "Yachiyo-Chuuou",
+    "slug": "yachiyo-chuo",
+    "name_en": "Yachiyo-Chuo",
     "name_jp": "八千代中央",
     "lat": 35.727807,
     "lng": 140.103713,
@@ -22150,8 +22150,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yagyuu",
-    "name_en": "Yagyuu",
+    "slug": "yagyu",
+    "name_en": "Yagyu",
     "name_jp": "柳生",
     "lat": 36.206756,
     "lng": 139.659645,
@@ -22210,8 +22210,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yakou",
-    "name_en": "Yakou",
+    "slug": "yako",
+    "name_en": "Yako",
     "name_jp": "矢向",
     "lat": 35.539408,
     "lng": 139.68055,
@@ -22270,8 +22270,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yanagikouji",
-    "name_en": "Yanagikouji",
+    "slug": "yanagikoji",
+    "name_en": "Yanagikoji",
     "name_jp": "柳小路",
     "lat": 35.327352,
     "lng": 139.485189,
@@ -22465,8 +22465,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yokosuka-chuuou",
-    "name_en": "Yokosuka-Chuuou",
+    "slug": "yokosuka-chuo",
+    "name_en": "Yokosuka-Chuo",
     "name_jp": "横須賀中央",
     "lat": 35.27858,
     "lng": 139.670217,
@@ -22525,8 +22525,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yono-honchou",
-    "name_en": "Yono-Honchou",
+    "slug": "yono-honcho",
+    "name_en": "Yono-Honcho",
     "name_jp": "与野本町",
     "lat": 35.880968,
     "lng": 139.626075,
@@ -22540,8 +22540,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yoshi-kawa-kouen",
-    "name_en": "Yoshi-Kawa-Kouen",
+    "slug": "yoshi-kawa-koen",
+    "name_en": "Yoshi-Kawa-Koen",
     "name_jp": "葭川公園",
     "lat": 35.608551,
     "lng": 140.120142,
@@ -22600,8 +22600,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yoshinochou",
-    "name_en": "Yoshinochou",
+    "slug": "yoshinocho",
+    "name_en": "Yoshinocho",
     "name_jp": "吉野町",
     "lat": 35.435489,
     "lng": 139.618455,
@@ -22630,8 +22630,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "youdo",
-    "name_en": "Youdo",
+    "slug": "yodo",
+    "name_en": "Yodo",
     "name_jp": "用土",
     "lat": 36.153858,
     "lng": 139.200758,
@@ -22645,8 +22645,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "youga",
-    "name_en": "Youga",
+    "slug": "yoga",
+    "name_en": "Yoga",
     "name_jp": "用賀",
     "lat": 35.626436,
     "lng": 139.633928,
@@ -22660,8 +22660,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "youkaichiba",
-    "name_en": "Youkaichiba",
+    "slug": "yokaichiba",
+    "name_en": "Yokaichiba",
     "name_jp": "八日市場",
     "lat": 35.699317,
     "lng": 140.552419,
@@ -22675,8 +22675,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "youkoudai",
-    "name_en": "Youkoudai",
+    "slug": "yokodai",
+    "name_en": "Yokodai",
     "name_jp": "洋光台",
     "lat": 35.378785,
     "lng": 139.596852,
@@ -22690,8 +22690,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yourou-keikoku",
-    "name_en": "Yourou-Keikoku",
+    "slug": "yoro-keikoku",
+    "name_en": "Yoro-Keikoku",
     "name_jp": "養老渓谷",
     "lat": 35.266409,
     "lng": 140.159382,
@@ -22705,8 +22705,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yubi-ougi",
-    "name_en": "Yubi-Ougi",
+    "slug": "yubi-ogi",
+    "name_en": "Yubi-Ogi",
     "name_jp": "指扇",
     "lat": 35.917023,
     "lng": 139.564951,
@@ -22750,8 +22750,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yuki-ga-taniootsuka",
-    "name_en": "Yuki-Ga-Taniootsuka",
+    "slug": "yuki-ga-taniotsuka",
+    "name_en": "Yuki-Ga-Taniotsuka",
     "name_jp": "雪が谷大塚",
     "lat": 35.592038,
     "lng": 139.681083,
@@ -22855,8 +22855,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "yuuenchi-nishi",
-    "name_en": "Yuuenchi-Nishi",
+    "slug": "yuenchi-nishi",
+    "name_en": "Yuenchi-Nishi",
     "name_jp": "遊園地西",
     "lat": 35.769042,
     "lng": 139.440166,
@@ -22885,8 +22885,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "zenkou",
-    "name_en": "Zenkou",
+    "slug": "zenko",
+    "name_en": "Zenko",
     "name_jp": "善行",
     "lat": 35.36285,
     "lng": 139.473199,
@@ -22900,8 +22900,8 @@
     "transit_minutes": null
   },
   {
-    "slug": "zoushiki",
-    "name_en": "Zoushiki",
+    "slug": "zoshiki",
+    "name_en": "Zoshiki",
     "name_jp": "雑色",
     "lat": 35.549725,
     "lng": 139.715005,

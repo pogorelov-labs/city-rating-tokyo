@@ -135,10 +135,12 @@ def main():
         print(f"\n[DRY RUN] No files written.")
         return
 
-    # Write updated stations
-    with open(STATIONS_FILE, "w") as f:
-        json.dump(updated_stations, f, indent=2, ensure_ascii=False)
-    print(f"\n✓ Updated {STATIONS_FILE}")
+    # Write updated stations (both copies: data/ for scripts, app/src/data/ for Next.js)
+    app_stations_file = Path(__file__).resolve().parent.parent / "app" / "src" / "data" / "stations.json"
+    for fpath in [STATIONS_FILE, app_stations_file]:
+        with open(fpath, "w") as f:
+            json.dump(updated_stations, f, indent=2, ensure_ascii=False)
+        print(f"\n✓ Updated {fpath}")
 
     # Write slug redirect map (for Next.js redirects or proxy rules)
     redirect_file = DATA_DIR / "slug-redirects.json"
