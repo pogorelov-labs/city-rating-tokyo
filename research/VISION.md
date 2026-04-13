@@ -327,6 +327,9 @@ Sprint 5 (mobile / performance):
 - ✅ `CRTKY-91` Canvas renderer + smart flyTo + tile prefetch (PR #67)
 - ✅ `CRTKY-90` Map z-order by rating + unknown-data border fade (PR #64)
 - ✅ Mobile touch UX — viewport meta, tap-to-toggle tooltips, enriched Popup on touch, map marker +4px, zoom buttons, gallery swipe+keyboard, slider thumbs 24px, search hints, safe-area-inset (PR #69)
+- ✅ `CRTKY-93` "Data Depth" SVG icons — shape-encoded confidence (bullseye/circle/dashed/diamond) (PR #71)
+- ✅ `CRTKY-94` Responsive mobile header ("Tokyo Explorer") + floating `MobileSearchPill` (PR #72)
+- ✅ Hide halo + close popup during flyTo (PR #73)
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
