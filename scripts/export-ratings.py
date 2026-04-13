@@ -93,8 +93,8 @@ def merge_ai_confidence(entry_text, ai_ratings, computed_row):
       (human researcher chose a different value than data alone suggests).
     - If no computed data exists → all categories get 'editorial'.
     """
-    cats = ["food", "nightlife", "transport", "rent", "safety",
-            "green", "gym_sports", "vibe", "crowd", "daily_essentials"]
+    cats = ["transport", "rent", "daily_essentials", "safety", "food",
+            "green", "gym_sports", "vibe", "nightlife", "crowd"]
 
     # Parse computed confidence/sources from NocoDB JSON strings
     comp_conf = {}
@@ -176,7 +176,8 @@ def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
             target.update(val)
 
     # Format confidence object
-    cats = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]
+    cats = ["transport", "rent", "daily_essentials", "safety", "food",
+            "green", "gym_sports", "vibe", "nightlife", "crowd"]
     conf_parts = [f"{c}: '{conf.get(c, 'estimate')}'" for c in cats]
     conf_str = "{ " + ", ".join(conf_parts) + " }"
 
@@ -193,10 +194,10 @@ def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
 
     return (
         f"  {safe_slug}: {{\n"
-        f"    ratings: {{ food: {r['food']}, nightlife: {r['nightlife']}, transport: {r['transport']}, "
-        f"rent: {r['rent']}, safety: {r['safety']}, green: {r['green']}, "
-        f"gym_sports: {r['gym_sports']}, vibe: {r['vibe']}, crowd: {r['crowd']}, "
-        f"daily_essentials: {r.get('daily_essentials', 5)} }},\n"
+        f"    ratings: {{ transport: {r['transport']}, rent: {r['rent']}, "
+        f"daily_essentials: {r.get('daily_essentials', 5)}, safety: {r['safety']}, "
+        f"food: {r['food']}, green: {r['green']}, gym_sports: {r['gym_sports']}, "
+        f"vibe: {r['vibe']}, nightlife: {r['nightlife']}, crowd: {r['crowd']} }},\n"
         f"    transit_minutes: {transit},\n"
         f"    rent_avg: {{ '1k_1ldk': {rent_1k}, '2ldk': {rent_2ldk}, "
         f"source: '{rent_source}', updated: '{rent_updated}' }},\n"

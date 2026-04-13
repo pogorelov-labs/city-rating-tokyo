@@ -52,16 +52,16 @@ const DIVERGING_STOPS: readonly RGB[] = [
  * rereading percentiles; see scripts/compute-ratings.py.
  */
 export const CITY_MEDIANS: Record<keyof StationRatings, number> = {
-  food: 5,
-  nightlife: 5,
   transport: 6,
   rent: 8,
+  daily_essentials: 5,
   safety: 6,
+  food: 5,
   green: 5,
   gym_sports: 5,
   vibe: 5,
+  nightlife: 5,
   crowd: 7,
-  daily_essentials: 5,
 };
 
 /**
@@ -71,16 +71,16 @@ export const CITY_MEDIANS: Record<keyof StationRatings, number> = {
  * Unchanged in CRTKY-66 per the design review.
  */
 const CATEGORY_PALETTES: Record<keyof StationRatings, readonly [RGB, RGB]> = {
-  food:       [[254, 243, 199], [234, 88, 12]],    // amber → orange
-  nightlife:  [[233, 213, 255], [126, 34, 206]],   // lavender → deep purple
   transport:  [[219, 234, 254], [29, 78, 216]],    // light blue → royal blue
   rent:       [[254, 249, 195], [202, 138, 4]],    // pale yellow → darker amber
+  daily_essentials: [[254, 240, 199], [180, 83, 9]], // warm cream → burnt sienna
   safety:     [[204, 251, 241], [15, 118, 110]],   // light teal → deep teal
+  food:       [[254, 243, 199], [234, 88, 12]],    // amber → orange
   green:      [[220, 252, 231], [21, 128, 61]],    // light green → forest
   gym_sports: [[254, 205, 211], [190, 18, 60]],    // rose → crimson
   vibe:       [[252, 231, 243], [190, 24, 93]],    // pink → magenta
+  nightlife:  [[233, 213, 255], [126, 34, 206]],   // lavender → deep purple
   crowd:      [[226, 232, 240], [30, 41, 59]],     // slate → dark slate
-  daily_essentials: [[254, 240, 199], [180, 83, 9]], // warm cream → burnt sienna
 };
 
 function lerpColor(a: RGB, b: RGB, t: number): string {
