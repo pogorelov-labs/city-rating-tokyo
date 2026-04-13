@@ -57,9 +57,12 @@ export function decodeParamsToState(params: URLSearchParams): {
   const w = params.get('w');
   if (w) {
     const values = w.split(',').map(Number);
-    if (values.length === WEIGHT_KEYS.length && values.every((v) => !isNaN(v))) {
-      const weights = {} as WeightConfig;
-      WEIGHT_KEYS.forEach((k, i) => { weights[k] = values[i]; });
+    // Accept old 9-weight URLs (pre-daily_essentials) by defaulting the 10th
+    if (values.length >= WEIGHT_KEYS.length - 1 && values.every((v) => !isNaN(v))) {
+      const weights = { ...DEFAULT_WEIGHTS } as WeightConfig;
+      WEIGHT_KEYS.forEach((k, i) => {
+        if (i < values.length) weights[k] = values[i];
+      });
       result.weights = weights;
     }
   }

@@ -261,8 +261,11 @@ def main():
     parts = []
     parts.append("import { StationRatings, TransitMinutes, RentAvg, StationConfidence, StationSources } from '@/lib/types';")
     parts.append("")
+    parts.append("// daily_essentials is optional for AI-researched entries until they are re-exported")
+    parts.append("type DemoRatings = Omit<StationRatings, 'daily_essentials'> & { daily_essentials?: number };")
+    parts.append("")
     parts.append("interface DemoData {")
-    parts.append("  ratings: StationRatings;")
+    parts.append("  ratings: DemoRatings;")
     parts.append("  transit_minutes: TransitMinutes;")
     parts.append("  rent_avg: RentAvg;")
     parts.append("  confidence?: StationConfidence;")
