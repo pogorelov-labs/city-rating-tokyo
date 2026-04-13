@@ -1,7 +1,10 @@
 import { StationRatings, TransitMinutes, RentAvg, StationConfidence, StationSources } from '@/lib/types';
 
+// daily_essentials is optional until the pipeline regenerates all entries
+type DemoRatings = Omit<StationRatings, 'daily_essentials'> & { daily_essentials?: number };
+
 interface DemoData {
-  ratings: StationRatings;
+  ratings: DemoRatings;
   transit_minutes: TransitMinutes;
   rent_avg: RentAvg;
   confidence?: StationConfidence;
