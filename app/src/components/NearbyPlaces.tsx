@@ -1,9 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import {
   StationPlace,
   PlaceCategory,
-  PLACE_CATEGORY_LABELS,
   getGoogleMapsSearchUrl,
 } from '@/lib/types';
 
@@ -27,6 +27,7 @@ interface NearbyPlacesProps {
 }
 
 export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPlacesProps) {
+  const t = useTranslations();
   const grouped = new Map<PlaceCategory, StationPlace[]>();
   for (const p of places) {
     const list = grouped.get(p.category) || [];
@@ -43,7 +44,7 @@ export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPl
 
   return (
     <section className="bg-white rounded-lg border border-gray-200 p-5">
-      <h2 className="font-bold text-lg mb-4">Nearby Places</h2>
+      <h2 className="font-bold text-lg mb-4">{t('station.nearbyPlaces')}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {allCategories.map((category) => {
           const categoryPlaces = grouped.get(category) || [];
@@ -54,7 +55,7 @@ export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPl
               <div className="flex items-center gap-2">
                 <span>{CATEGORY_ICONS[category]}</span>
                 <span className="font-medium text-sm">
-                  {PLACE_CATEGORY_LABELS[category]}
+                  {t(`placeCategories.${category}`)}
                 </span>
               </div>
               {categoryPlaces.length > 0 && (
@@ -83,7 +84,7 @@ export default function NearbyPlaces({ places, lat, lng, stationName }: NearbyPl
                 data-umami-event="find-more"
                 data-umami-event-category={category}
               >
-                Find more on Google Maps
+                {t('station.findMoreOnMaps')}
                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>

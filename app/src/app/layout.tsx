@@ -1,23 +1,10 @@
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import Script from 'next/script';
-import './globals.css';
+import type { Viewport } from 'next';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
-
+// Root layout is a thin shell — locale-specific rendering is in [locale]/layout.tsx
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-};
-
-export const metadata: Metadata = {
-  title: 'Tokyo Neighborhood Explorer - Find Your Perfect Area',
-  description:
-    'Interactive map of Tokyo neighborhoods rated by food, nightlife, transport, rent, safety, parks, and more. Find the best area to live in Greater Tokyo.',
 };
 
 export default function RootLayout({
@@ -25,18 +12,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="h-full font-sans antialiased">
-        {children}
-        {process.env.NEXT_PUBLIC_UMAMI_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
-          <Script
-            src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-            strategy="afterInteractive"
-          />
-        )}
-      </body>
-    </html>
-  );
+  return children;
 }

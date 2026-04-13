@@ -340,6 +340,21 @@ Sprint 6 (data expansion):
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
+**i18n — CRTKY-98 (2026-04-13):**
+- ✅ `CRTKY-99` next-intl v4 + `[locale]` routing + proxy.ts
+- ✅ `CRTKY-100` EN dictionary extraction (~190 keys)
+- ✅ `CRTKY-101` Cyrillic + JP system font stack
+- ✅ `CRTKY-102` Per-locale sitemap + hreflang
+- ✅ `CRTKY-103` Migrate 15 component files to t() calls
+- ✅ `CRTKY-104` JA + RU translation dictionaries (full)
+- ✅ `CRTKY-105` Language switcher component
+- ✅ `CRTKY-108` Translate structured content (hubs, presets, tooltips)
+- ✅ `CRTKY-110` Build time (4486 pages in 9s, no optimization needed)
+- `CRTKY-111` Locale-aware station naming (stationDisplayName helper, ~15 call sites)
+- `CRTKY-107` Generate name_ru for 1493 stations (Polivanov + Wikipedia top 100)
+- `CRTKY-106` Text overflow QA (post-merge, visual in browser)
+- `CRTKY-109` **Data-driven multilingual description pipeline** — NocoDB datamart (11 tables) → prompt rules → LLM batch generation → review. All 1493 stations, EN/JA/RU, score-desc order. Existing 252 RU preserved + translated; 1241 new generated from data. Phases: research rules → build datamart → prompt engineering → batch generate → review + merge.
+
 **Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella; дочерние **`CRTKY-81`** реальные `transit_minutes`, **`CRTKY-82`** криминал префектур, **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs, **`CRTKY-84`** обновление MLIT S12 / закрытие хвоста пассажиров (crowd). У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** — комментарии *Spec packet*. **Док-синхронизация готовности:** `CLAUDE.md` §Data readiness, этот файл §Критическая оценка, `README.md`, `00-overview.md` (2026-04-07).
 
 ---

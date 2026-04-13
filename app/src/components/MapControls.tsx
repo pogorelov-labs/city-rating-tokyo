@@ -1,9 +1,11 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useAppStore } from '@/lib/store';
 import { RATING_LABELS, WeightConfig } from '@/lib/types';
 
 export default function MapControls() {
+  const t = useTranslations();
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const setHeatmapMode = useAppStore((s) => s.setHeatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
@@ -19,7 +21,7 @@ export default function MapControls() {
             : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
         }`}
       >
-        Heatmap
+        {t('map.heatmap')}
       </button>
       {heatmapMode && (
         <select
@@ -27,10 +29,10 @@ export default function MapControls() {
           onChange={(e) => setHeatmapDimension(e.target.value)}
           className="map-control-btn text-xs px-2 py-1.5 rounded-lg border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="composite">Composite Score</option>
+          <option value="composite">{t('map.compositeScore')}</option>
           {(Object.keys(RATING_LABELS) as (keyof WeightConfig)[]).map((key) => (
             <option key={key} value={key}>
-              {RATING_LABELS[key]}
+              {t(`ratings.${key}`)}
             </option>
           ))}
         </select>
