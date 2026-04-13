@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useDeferredValue, useRef, useState, useCallback } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useDeferredValue, useRef, useState, useCallback } from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -43,11 +43,13 @@ function FlyToStation({
   onFlyEnd?: () => void;
 }) {
   const map = useMap();
-  useEffect(() => {
+  // useLayoutEffect so onFlyStart (→ setIsFlying(true)) fires BEFORE the
+  // browser paints. This hides SVG overlays (halo, pulse) before the zoom
+  // animation CSS-transforms them into giant circles.
+  useLayoutEffect(() => {
     const currentZoom = map.getZoom();
     const currentCenter = map.getCenter();
 
-    // Distance in degrees (rough) to decide animation strategy
     const dLat = Math.abs(currentCenter.lat - lat);
     const dLng = Math.abs(currentCenter.lng - lng);
     const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
@@ -56,38 +58,48 @@ function FlyToStation({
     if (roughDist < 0.003 && currentZoom >= 13) return;
 
     // Close any open popup before flying — prevents the popup card from
-    // flying around the screen during zoom animation (especially on mobile
-    // where tap auto-opens the popup).
+    // flying around the screen during zoom animation (mobile tap auto-opens).
     map.closePopup();
     onFlyStart?.();
 
-    // Smart zoom: don't force zoom 14 if already zoomed in
     const targetZoom = currentZoom >= 13 ? currentZoom : 14;
 
-    // Very close pan — instant setView, no animation needed
-    if (roughDist < 0.01 && Math.abs(currentZoom - targetZoom) < 1) {
+    // Fade canvas markers during flyTo to hide CSS-scaling artifact.
+    // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
+    // animation (by design, #6050/#6409). The .map-flying class sets
+    // canvas opacity to 0 via CSS transition; tiles stay visible since
+    // they're in a separate pane. Markers fade back in after moveend.
+    const container = map.getContainer();
+    const needsFade = Math.abs(currentZoom - targetZoom) >= 1;
+    if (needsFade) container.classList.add('map-flying');
+
+    // Very close pan — short animated setView
+    if (roughDist < 0.01 && currentZoom === targetZoom) {
       map.setView([lat, lng], targetZoom, { animate: true, duration: 0.25 });
-      // Short timeout to match the brief pan
-      setTimeout(() => onFlyEnd?.(), 300);
-      return;
+      const timer = setTimeout(() => {
+        container.classList.remove('map-flying');
+        onFlyEnd?.();
+      }, 300);
+      return () => clearTimeout(timer);
     }
 
     // Adaptive duration: shorter for close pans, longer for far jumps
     const duration = roughDist > 0.1 ? 0.6 : 0.4;
-
     map.flyTo([lat, lng], targetZoom, {
       duration,
-      easeLinearity: 0.4, // spend less time at intermediate zooms
+      easeLinearity: 0.4,
     });
 
     const handleMoveEnd = () => {
       map.off('moveend', handleMoveEnd);
+      container.classList.remove('map-flying');
       onFlyEnd?.();
     };
     map.on('moveend', handleMoveEnd);
 
     return () => {
       map.off('moveend', handleMoveEnd);
+      container.classList.remove('map-flying');
     };
   }, [map, lat, lng, onFlyStart, onFlyEnd]);
   return null;

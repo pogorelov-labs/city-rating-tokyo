@@ -58,15 +58,23 @@ body {
   transition: r 150ms ease-out, stroke-width 150ms ease-out, fill-opacity 150ms ease-out;
 }
 
-/* Subtle drop-shadow for map overlay elements (halo, pulse rings).
-   With Canvas renderer, the main 1493 markers are on <canvas> and don't
-   benefit from SVG filters; the canvas pane gets its own subtle shadow. */
-.leaflet-overlay-pane svg {
+/* Subtle drop-shadow for map overlay elements. */
+.leaflet-overlay-pane svg,
+.leaflet-overlay-pane canvas {
   filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.25));
 }
 
-.leaflet-canvas-pane canvas {
-  filter: drop-shadow(0 1px 1.5px rgba(15, 23, 42, 0.25));
+/* Fade canvas markers during flyTo zoom animation.
+   Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
+   animation (by design, #6050). Zoom 12→14 = 4× scale, making every
+   CircleMarker appear enormous. The .map-flying class (toggled by
+   FlyToStation) fades the canvas to 0; tiles stay visible since they're
+   in a separate pane. Markers fade back in after moveend. */
+.leaflet-overlay-pane canvas {
+  transition: opacity 0.15s ease-out;
+}
+.map-flying .leaflet-overlay-pane canvas {
+  opacity: 0;
 }
 
 /* Pulsating halo ring for the selected/hovered station.
