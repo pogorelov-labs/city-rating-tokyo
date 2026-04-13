@@ -10,9 +10,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@swc/helpers": "^0.5.21",
     "@types/leaflet": "^1.9.21",
     "leaflet": "^1.9.4",
     "next": "^16.2.3",
+    "next-intl": "^4.9.1",
     "next-sitemap": "^4.2.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",

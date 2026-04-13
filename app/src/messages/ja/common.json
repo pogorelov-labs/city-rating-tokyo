@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "title": "東京エリアガイド — あなたにぴったりの街を見つけよう",
+    "description": "グルメ、ナイトライフ、交通、家賃、治安、公園など多角的に評価された東京の街のインタラクティブマップ。首都圏で最適なエリアを見つけましょう。"
+  },
+  "nav": {
+    "backToMap": "マップ",
+    "share": "共有",
+    "copied": "コピー済み！",
+    "feedback": "フィードバック",
+    "scatterPlot": "散布図",
+    "scatterPlotExplorer": "散布図エクスプローラー"
+  },
+  "header": {
+    "titleShort": "東京ガイド",
+    "titleFull": "東京エリアガイド",
+    "beta": "ベータ",
+    "stationCount": "{count}駅",
+    "byline": "by @ruspg"
+  },
+  "ratings": {
+    "food": "グルメ",
+    "nightlife": "ナイトライフ",
+    "transport": "交通",
+    "rent": "家賃の手頃さ",
+    "safety": "治安",
+    "green": "公園・緑地",
+    "gym_sports": "ジム・スポーツ",
+    "vibe": "雰囲気",
+    "crowd": "静けさ",
+    "daily_essentials": "生活利便性"
+  },
+  "ratingTooltips": {
+    "food": "徒歩10〜15分圏内のレストラン、カフェ、屋台、専門店の種類と質",
+    "nightlife": "バー、居酒屋、クラブ、ライブハウス、深夜のエンターテイメント",
+    "transport": "路線数、運行頻度、主要ターミナルへの接続、通勤の利便性",
+    "rent": "実際の家賃データに基づく手頃さ（1K〜1LDK）。10=最も安い（〜7万円/月）、1=最も高い（〜30万円+）",
+    "safety": "街の総合的な安全性：犯罪率、街灯、ファミリー向け度、夜間の安心感",
+    "green": "徒歩15分圏内の公園、庭園、河川敷、緑地、自然",
+    "gym_sports": "フィットネスセンター、ジム、スポーツ施設、ランニングコース、スポーツ設備",
+    "vibe": "街全体の個性と魅力：文化的アイデンティティ、ストリートライフ、地域コミュニティ、建築的な魅力",
+    "crowd": "静けさレベル（反転：10=非常に静かで空いている、1=極めて混雑）",
+    "daily_essentials": "スーパー、薬局、クリニック、銀行、ランドリー、歯科医など、徒歩圏内の日常生活施設"
+  },
+  "shortLabels": {
+    "food": "グルメ",
+    "nightlife": "夜遊び",
+    "transport": "交通",
+    "rent": "家賃",
+    "safety": "治安",
+    "green": "緑地",
+    "gym_sports": "ジム",
+    "vibe": "雰囲気",
+    "crowd": "静けさ",
+    "daily_essentials": "生活"
+  },
+  "hubs": {
+    "shibuya": "渋谷",
+    "shinjuku": "新宿",
+    "tokyo": "東京",
+    "ikebukuro": "池袋",
+    "shinagawa": "品川"
+  },
+  "presets": {
+    "young-pro": "若手プロ",
+    "family": "ファミリー",
+    "foodie-budget": "グルメ節約派",
+    "digital-nomad": "デジタルノマド"
+  },
+  "confidence": {
+    "strong": {
+      "label": "実測",
+      "description": "2つ以上の検証済みソースからの直接カウント"
+    },
+    "moderate": {
+      "label": "部分的",
+      "description": "単一ソースまたは集約フォールバック"
+    },
+    "estimate": {
+      "label": "推定",
+      "description": "計算式によるモデル値、実測ではない"
+    },
+    "editorial": {
+      "label": "キュレーション",
+      "description": "研究者が設定、データと異なる場合あり"
+    }
+  },
+  "sources": {
+    "hotpepper": "HotPepper",
+    "hotpepper_midnight": "HotPepper（深夜）",
+    "osm": "OpenStreetMap",
+    "osm_karaoke": "OSM（カラオケ）",
+    "osm_cultural": "OSM（文化施設）",
+    "osm_pedestrian": "OSM（歩行者）",
+    "line_count": "鉄道路線",
+    "mlit_s12": "国交省乗降客数",
+    "suumo": "SUUMO",
+    "ward_average": "区平均",
+    "distance_estimate": "距離推定",
+    "keishicho_arcgis": "警視庁",
+    "ward_crime_stats": "区犯罪統計",
+    "prefecture_average": "都道府県平均",
+    "composite_fallback": "複合フォールバック",
+    "hp_proxy": "HotPepperプロキシ",
+    "ai_research": "AI調査"
+  },
+  "placeCategories": {
+    "gym": "ジム・フィットネス",
+    "mall": "ショッピングモール",
+    "park": "公園・庭園",
+    "landmark": "ランドマーク",
+    "cafe": "カフェ",
+    "restaurant": "レストラン",
+    "bar": "バー・居酒屋"
+  },
+  "scatterAxes": {
+    "rent_1k": "家賃（1K〜1LDK、円）",
+    "min_transit": "最短所要時間（分）"
+  },
+  "loading": {
+    "chart": "チャート読み込み中…",
+    "map": "マップ読み込み中…"
+  },
+  "filter": {
+    "quickProfiles": "プロフィール",
+    "dealbreakers": "必須条件",
+    "clearAll": "リセット",
+    "weights": "重み",
+    "weightsDescription": "あなたにとって何が大切か調整しましょう",
+    "resetDefaults": "デフォルトに戻す",
+    "topRanked": "トップランキング",
+    "searchPlaceholder": "駅を検索…",
+    "minRatings": "最低評価",
+    "nSet": "{count}件設定",
+    "off": "なし",
+    "rent": "家賃",
+    "commute": "通勤",
+    "noLimit": "上限なし",
+    "min": "{value}分",
+    "yenK": "¥{value}k",
+    "hideFloodRisk": "浸水リスクエリアを非表示",
+    "belowXm": "（5m未満）",
+    "hideHighSeismic": "高い地震リスクを非表示",
+    "seismicThreshold": "（>26% 震度6+）",
+    "stationCount": "{count}駅",
+    "matchCount": "{total}駅中<bold>{filtered}</bold>駅が該当",
+    "noMatch": "該当する駅がありません — フィルターを緩めてみてください",
+    "noMatchFilters": "該当する駅がありません",
+    "noRatedYet": "評価済みの駅はまだありません",
+    "stationsMapped": "マップ上に{count}駅",
+    "withRatings": "{count}駅が評価済み",
+    "rentUnconfirmed": "（家賃未確認）",
+    "lines": "{count}路線"
+  },
+  "map": {
+    "clickForDetails": "詳細を見る →",
+    "viewDetails": "詳細を見る →",
+    "compare": "+ 比較",
+    "removeCompare": "比較から外す",
+    "dataComingSoon": "データ準備中",
+    "heatmap": "ヒートマップ",
+    "compositeScore": "総合スコア"
+  },
+  "compare": {
+    "clearAll": "クリア",
+    "dimension": "カテゴリ",
+    "score": "スコア",
+    "rent1k": "家賃（1K）"
+  },
+  "drawer": {
+    "filters": "フィルター",
+    "filtersAndRanking": "フィルター＆ランキング"
+  },
+  "feedback": {
+    "station": {
+      "title": "このエリアをご存知ですか？",
+      "description": "{name}周辺の暮らしについて教えてください。あなたのヒントが他の人の参考になります。",
+      "placeholder": "雰囲気は？おすすめスポットは？注意点は？",
+      "button": "ヒントを共有",
+      "thanks": "ありがとうございます！",
+      "again": "もう一つ追加"
+    },
+    "general": {
+      "title": "フィードバックはありますか？",
+      "description": "このサイトをもっと便利にするアイデアを教えてください — 足りない機能、間違ったデータ、新しいアイデアなど。",
+      "placeholder": "このサイトをより良くするには？",
+      "button": "送信",
+      "thanks": "フィードバックありがとうございます！",
+      "again": "追加で送信"
+    },
+    "sending": "送信中…",
+    "rateLimitError": "数秒お待ちください。",
+    "genericError": "送信できませんでした。もう一度お試しください。",
+    "charCount": "{count}/1000"
+  },
+  "station": {
+    "metaTitle": "{name}（{nameJp}）— 東京エリアガイド",
+    "metaDescription": "{name}駅エリア：評価、家賃、所要時間。{description}",
+    "metaDescriptionFallback": "東京の{name}駅エリアガイド。",
+    "overview": "概要",
+    "ratingsTitle": "評価",
+    "ratingsCaption": "バーの長さは東京全体の中央値との比較を表しています。バーにカーソルを合わせると詳細が、カテゴリ名にカーソルを合わせると説明が表示されます。",
+    "ratingsCaptionWithConfidence": "カラードットがある場合、そのスコアの確実性を示しています（カーソルを合わせるとソースが表示されます）。色は下のキーに対応しています。",
+    "barTooltipScore": "{label}: {value} / 10",
+    "barTooltipDev": "東京の基準値は{median} — この駅は基準より{dev}{direction}です。",
+    "barTooltipDevExact": "東京の基準値は{median} — この駅はちょうど平均です。",
+    "barTooltipPigment": "{jp} {en}（{tone}）で着色。",
+    "devAbove": "上",
+    "devBelow": "下",
+    "labelDevAbove": "基準より{dev}上",
+    "labelDevBelow": "基準より{dev}下",
+    "labelDevExact": "ちょうど平均",
+    "tokyoMedian": "東京中央値: {value}",
+    "thisStation": "この駅: {value}",
+    "dataDate": "データ: {date}",
+    "transit": "交通",
+    "trainLines": "鉄道路線",
+    "linesSingular": "路線",
+    "linesPlural": "路線",
+    "rentLabel": "家賃",
+    "rentRange": "1K〜1LDK → 2LDK / 月",
+    "rentSingle": "1K〜1LDK / 月",
+    "avgToCenter": "都心への平均",
+    "toMajorHubs": "主要5ターミナルへ",
+    "lastTrain": "終電",
+    "comingSoon": "近日公開",
+    "noDataYet": "データ未取得",
+    "hubsLabel": "ターミナル",
+    "googleMaps": "Google Maps →",
+    "mapsLink": "地図",
+    "aboutArea": "このエリアについて",
+    "atmosphere": "雰囲気",
+    "landmarks": "ランドマーク・散歩道",
+    "foodAndCafes": "グルメ＆カフェ",
+    "barsAndNightlife": "バー＆ナイトライフ",
+    "descriptionComingSoon": "詳細な説明は近日公開予定です。",
+    "descriptionInProgress": "この駅のAI調査が進行中です。",
+    "gallery": "ギャラリー",
+    "showAllPhotos": "全{count}枚を表示",
+    "imageAttribution": "画像: Wikimedia Commons (CC-BY-SA) & Unsplash",
+    "photoBy": "撮影: {photographer}（Unsplash）",
+    "nearbyPlaces": "周辺スポット",
+    "findMoreOnMaps": "Google Mapsでもっと見る",
+    "radarMedianLabel": "東京の標準（中央値）",
+    "radarStationLabel": "この駅",
+    "naturalEnvironment": "自然環境",
+    "elevation": "標高: {value}m",
+    "floodRisk": "浸水リスク",
+    "seismicRisk": "地震リスク:",
+    "seismicProbability": "今後30年間で震度6.0以上の確率",
+    "sourceElevation": "出典: Open-Elevation API（SRTMデータ）",
+    "sourceSeismic": "出典: J-SHIS 2024（防災科学技術研究所）"
+  },
+  "seismicTiers": {
+    "low": {
+      "label": "低い",
+      "description": "3%未満"
+    },
+    "moderate": {
+      "label": "中程度",
+      "description": "3〜15%"
+    },
+    "high": {
+      "label": "高い",
+      "description": "15〜30%"
+    },
+    "very_high": {
+      "label": "非常に高い",
+      "description": "30%以上"
+    },
+    "unknown": {
+      "label": "不明",
+      "description": "データなし"
+    }
+  },
+  "elevationTiers": {
+    "very_low": "非常に低い — 浸水ハザードマップを確認",
+    "low": "低地エリア",
+    "moderate": "やや低い標高",
+    "elevated": "中程度の標高",
+    "high": "高台エリア",
+    "mountain": "丘陵・山間部",
+    "unknown": "標高不明"
+  },
+  "elevationTooltips": {
+    "belowSea": "海面下 — この地域は浸水リスクが高い地帯です。江東区・江戸川区の低地や荒川氾濫原は、台風や高潮時に最もリスクが高くなります。",
+    "veryLow": "非常に低い標高 — 海面付近またはそれ以下。豪雨、台風、高潮時に浸水しやすい地域です。東京都/各都道府県の浸水ハザードマップをご確認ください。",
+    "low": "低地エリア。極端な気象時に一部浸水リスクあり。適切な備えがあれば概ね対応可能。",
+    "moderate": "中〜高標高。河川・沿岸部からの浸水リスクは低い。"
+  },
+  "seismicTooltips": {
+    "veryHigh": "この地域は著しくリスクが高く、軟弱な沖積地盤や埋立地が地震波を増幅させることが多いです。",
+    "high": "比較的リスクの高い地域。建物の耐震性と防災への備えが重要な検討事項です。",
+    "moderate": "中程度のリスク。標準的な地震対策が推奨されます。",
+    "low": "リスクの低い地域、通常は堅固な岩盤上。標準的な注意事項は引き続き適用されます。"
+  },
+  "error": {
+    "somethingWentWrong": "エラーが発生しました",
+    "unexpectedError": "予期しないエラーが発生しました。",
+    "tryAgain": "再試行",
+    "stationNotFound": "駅が見つかりません"
+  }
+}

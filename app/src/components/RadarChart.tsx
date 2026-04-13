@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts';
+import { useTranslations } from 'next-intl';
 import { StationRatings, RATING_LABELS } from '@/lib/types';
 import { CITY_MEDIANS } from '@/lib/scoring';
 
@@ -22,10 +23,11 @@ const STATION_STROKE = '#2563eb';
 const STATION_FILL = '#2563eb';
 
 export default function StationRadarChart({ ratings }: Props) {
+  const t = useTranslations();
   const keys = Object.keys(RATING_LABELS) as (keyof StationRatings)[];
 
   const data = keys.map((key) => ({
-    category: RATING_LABELS[key].replace(' & ', '\n& '),
+    category: t(`ratings.${key}`).replace(' & ', '\n& '),
     station: ratings[key],
     median: CITY_MEDIANS[key],
     fullMark: 10,
@@ -49,7 +51,7 @@ export default function StationRadarChart({ ratings }: Props) {
           <Tooltip contentStyle={{ fontSize: 12 }} />
           {/* Draw median first so the station polygon reads on top (CRTKY-76). */}
           <Radar
-            name="Tokyo median"
+            name={t('station.radarMedianLabel')}
             dataKey="median"
             stroke={MEDIAN_STROKE}
             fill={MEDIAN_FILL}
@@ -58,7 +60,7 @@ export default function StationRadarChart({ ratings }: Props) {
             dot={false}
           />
           <Radar
-            name="This station"
+            name={t('station.radarStationLabel')}
             dataKey="station"
             stroke={STATION_STROKE}
             fill={STATION_FILL}
@@ -70,12 +72,12 @@ export default function StationRadarChart({ ratings }: Props) {
       <p className="mt-2 text-center text-[10px] text-gray-400 leading-relaxed px-1">
         <span className="inline-flex items-center gap-1">
           <span className="h-2 w-2 shrink-0 rounded-sm" style={{ backgroundColor: MEDIAN_STROKE, opacity: 0.85 }} />
-          Typical Tokyo (median)
+          {t('station.radarMedianLabel')}
         </span>
         <span className="mx-2 text-gray-300">·</span>
         <span className="inline-flex items-center gap-1">
           <span className="h-2 w-2 shrink-0 rounded-sm" style={{ backgroundColor: STATION_STROKE, opacity: 0.9 }} />
-          This station
+          {t('station.radarStationLabel')}
         </span>
       </p>
     </div>
