@@ -141,6 +141,8 @@ export default function ComparePanel({ stations }: Props) {
             </table>
           </div>
         </div>
+        {/* Extra clearance for Safari's dynamic toolbar on mobile */}
+        <div className="h-4 md:hidden" />
       </div>
     </div>
   );

@@ -4,6 +4,10 @@
   --font-sans: var(--font-inter);
 }
 
+html {
+  background-color: #ffffff;
+}
+
 body {
   background: #ffffff;
   color: #171717;
@@ -133,6 +137,14 @@ body {
   /* Taller track hit area for easier grabbing */
   input[type="range"] {
     height: 12px !important;
+  }
+}
+
+/* 44px touch targets for map controls (WCAG 2.5.5) */
+@media (pointer: coarse) {
+  .map-control-btn {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
