@@ -330,6 +330,7 @@ Sprint 5 (mobile / performance):
 - ✅ `CRTKY-93` "Data Depth" SVG icons — shape-encoded confidence (bullseye/circle/dashed/diamond) (PR #71)
 - ✅ `CRTKY-94` Responsive mobile header ("Tokyo Explorer") + floating `MobileSearchPill` (PR #72)
 - ✅ Hide halo + close popup during flyTo (PR #73)
+- ✅ iOS Safari fixes — input 16px prevents auto-zoom, search pill clears Heatmap, overflow-x-hidden, safe-area zoom buttons (PR #76)
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
