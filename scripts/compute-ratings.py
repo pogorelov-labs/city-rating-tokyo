@@ -207,6 +207,9 @@ def main():
     osm = {r["slug"]: r for r in NocoDB("osm_pois").get_all_records() if r.get("slug")}
     print(f"  osm_pois:         {len(osm)} stations")
 
+    livability = {r["slug"]: r for r in NocoDB("osm_livability").get_all_records() if r.get("slug")}
+    print(f"  osm_livability:   {len(livability)} stations")
+
     hp = {r["slug"]: r for r in NocoDB("hotpepper").get_all_records() if r.get("slug")}
     print(f"  hotpepper:        {len(hp)} stations")
 
@@ -257,7 +260,7 @@ def main():
 
     raw = {cat: {} for cat in [
         "food", "nightlife", "transport", "rent", "safety",
-        "green", "gym", "vibe", "crowd"
+        "green", "gym", "vibe", "crowd", "daily_essentials"
     ]}
     confidence = {}  # slug -> {category: 'strong'|'moderate'|'estimate'}
     sources_used = {}  # slug -> {category: [source_names]}
@@ -459,6 +462,38 @@ def main():
             conf["crowd"] = "estimate"
             srcs["crowd"] = ["hp_proxy"]
 
+        # --- DAILY ESSENTIALS: supermarket + pharmacy + clinic + bank + laundry + dentist + post_office ---
+        liv = livability.get(slug, {})
+        supermarket = liv.get("supermarket_count", 0) or 0
+        pharmacy = liv.get("pharmacy_count", 0) or 0
+        clinic = liv.get("clinic_count", 0) or 0
+        bank = liv.get("bank_count", 0) or 0
+        laundry_cnt = liv.get("laundry_count", 0) or 0
+        dentist = liv.get("dentist_count", 0) or 0
+        post_office = liv.get("post_office_count", 0) or 0
+        school = liv.get("school_count", 0) or 0
+        kindergarten = liv.get("kindergarten_count", 0) or 0
+        essentials_total = supermarket + pharmacy + clinic + bank + laundry_cnt + dentist + post_office
+        if slug in livability:
+            # Weighted: supermarket and pharmacy most important for daily life
+            raw["daily_essentials"][slug] = (
+                math.log1p(supermarket) * 0.25 +
+                math.log1p(pharmacy) * 0.15 +
+                math.log1p(clinic + dentist) * 0.20 +
+                math.log1p(bank) * 0.10 +
+                math.log1p(laundry_cnt) * 0.10 +
+                math.log1p(post_office) * 0.05 +
+                math.log1p(school + kindergarten) * 0.15
+            )
+            conf["daily_essentials"] = "strong" if essentials_total >= 5 else ("moderate" if essentials_total > 0 else "estimate")
+            srcs["daily_essentials"] = ["osm_livability"]
+        else:
+            # Fallback: use convenience store count as proxy
+            convenience = o.get("convenience_store_count", 0) or 0
+            raw["daily_essentials"][slug] = math.log1p(convenience) * 0.5
+            conf["daily_essentials"] = "estimate"
+            srcs["daily_essentials"] = ["convenience_proxy"]
+
         confidence[slug] = conf
         sources_used[slug] = srcs
 
@@ -472,6 +507,8 @@ def main():
     gym_ratings = log_percentile_normalize(raw["gym"])
     transport_ratings = log_percentile_normalize(raw["transport"])
     vibe_ratings = log_percentile_normalize(raw["vibe"])
+
+    daily_essentials_ratings = log_percentile_normalize(raw["daily_essentials"])
 
     # crowd, safety: inverted (lower = higher rating)
     crowd_ratings = log_percentile_normalize(raw["crowd"], invert=True)
@@ -514,7 +551,7 @@ def main():
         print(f"  {cat:12s}: {capped_count:>4} stations capped  ·  top-10 count {before_top} → {after_top}  ·  thresholds: {thresh_str}")
 
     # ===== Build results =====
-    categories = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"]
+    categories = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd", "daily_essentials"]
     data_date = date.today().strftime("%Y-%m")
     results = {}
     for slug in all_slugs:
@@ -529,6 +566,7 @@ def main():
             "gym_sports": gym_ratings.get(slug, 5),
             "vibe": vibe_ratings.get(slug, 5),
             "crowd": crowd_ratings.get(slug, 5),
+            "daily_essentials": daily_essentials_ratings.get(slug, 5),
             "confidence": json.dumps(confidence.get(slug, {})),
             "sources": json.dumps(sources_used.get(slug, {})),
             "data_date": data_date,

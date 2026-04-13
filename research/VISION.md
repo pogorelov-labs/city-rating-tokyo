@@ -35,9 +35,9 @@
 | transport | line_count + MLIT passengers | 1493 + 1409 | 100% | ✅ Да |
 | rent | Suumo scrape | 274 | 18% | ⚠️ Частично |
 | safety | Keishicho ArcGIS (Tokyo), ward-level (others) | 615 + 91 ward | ~45% | ⚠️ Частично |
-| green | OSM park count (area = 0 пока) | 1398 | 94% | ⚠️ Count без площади |
+| green | OSM park count (area scraper ready, CRTKY-42) | 1398 | 94% | ⚠️ Count без площади (0 strong) |
 | gym | OSM fitness/sports/pool | 1398 | 94% | ✅ Да |
-| vibe | OSM cultural venues (building) | building | 0%→100% | 🔄 Строится |
+| vibe | OSM cultural venues + pedestrian streets | 1467 | 98% | ✅ Да (62%+ data-driven since PR #57) |
 | crowd | MLIT + hardcoded | 1409 | 94% | ✅ Да |
 
 ### Критическая оценка готовности (2026-04)
@@ -80,7 +80,7 @@
 | ~~Реальные `transit_minutes`~~ | ✅ Done — калиброванная модель | Geographic + line connectivity | ~~🔴 high~~ ✅ | **CRTKY-81** ✅ |
 | MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
 | OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
-| Daily essentials (10th category) | Supermarket, pharmacy, clinic и т.д. | Overpass → `osm_livability` (scraping) | 🔴 high | **CRTKY-87** |
+| Daily essentials (10th category) | Supermarket, pharmacy, clinic и т.д. | Overpass → `osm_livability` (**1470/1493, 98%**) | 🔴 high | **CRTKY-87** |
 
 ### Phase 0 — открытые источники до коммерции (дисциплина бэклога)
 
@@ -291,7 +291,7 @@ Data updated: April 2026 · Sources: 6 · Confidence: high
 **Задачи по категориям:**
 1. ✅ Confidence badge component (CRTKY-47, merged)
 2. ✅ Data-source tooltip (replace current generic tooltips) — CRTKY-48 (merged in PR #57)
-3. "How ratings work" expandable section on station page — CRTKY-49
+3. "How ratings work" expandable section on station page — CRTKY-49 (backlog)
 4. /methodology page — CRTKY-50
 5. AI-researched vs data-driven badge — CRTKY-52
 6. Data freshness indicator — CRTKY-51
@@ -331,6 +331,12 @@ Sprint 5 (mobile / performance):
 - ✅ `CRTKY-94` Responsive mobile header ("Tokyo Explorer") + floating `MobileSearchPill` (PR #72)
 - ✅ Hide halo + close popup during flyTo (PR #73)
 - ✅ iOS Safari fixes — input 16px prevents auto-zoom, search pill clears Heatmap, overflow-x-hidden, safe-area zoom buttons (PR #76)
+
+Sprint 6 (data expansion):
+- 🔄 `CRTKY-87` Daily essentials (osm_livability) — **1470/1493 (98%)**, 23 stations remaining. Unlocks 10th category.
+- 🔄 `CRTKY-42` Green area re-scrape — In Progress. Scraper exists, needs VPS Docker run. Unlocks `strong` confidence for green.
+- 🔲 `CRTKY-43` Rent coverage expansion (HOMES scraping) — Backlog. 18% station-level → target 60-70%.
+- ✅ `CRTKY-97` Face/portrait image removal — Done (PR #79). 136 images removed across 101 stations.
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 

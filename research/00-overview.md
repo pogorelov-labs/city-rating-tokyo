@@ -1,6 +1,6 @@
 # Rating Data Research — Overview
 
-Last updated: 2026-04-07
+Last updated: 2026-04-13
 
 ## Goal
 Replace heuristic ratings (distance-from-center formula) with data-driven scores backed by real scraped data for 1493 Greater Tokyo stations.
@@ -34,9 +34,9 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | station_wards | m74rdmspn3trrqc | 1493 | 100% | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | test | Overpass (superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | 100% | Output of compute-ratings.py + confidence/sources/data_date |
-| osm_livability | m3vasnsm4y09xez | ~547→ | 37%→ | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
+| osm_livability | m3vasnsm4y09xez | 1470 | **98%** | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
 | station_elevation | mkrugzx8z62hli4 | 1493 | **100%** | Open-Elevation API (bulk POST). Range: -2m to 741m |
-| station_seismic | mhtnqvmi1kwbth9 | ~scraping | → | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
+| station_seismic | mhtnqvmi1kwbth9 | 1493 | **100%** | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
 | rent (file) | — | 274 | 18% | Suumo scrape (app/src/data/rent-averages.json) |
 
 ## Implementation Progress
@@ -56,7 +56,7 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | F | Re-run pipeline after OSM extended completed | ✅ done (vibe 62% data-driven) | #35 |
 | G1 | Refresh-ratings.sh one-command script | ✅ done | #36 |
 | G2 | Confidence badges UI (🟢🟡⚪) on station page | ✅ done | #34 (CRTKY-47) |
-| G3 | Replace generic tooltips with data-source tooltips | ⏳ pending | — (CRTKY-48) |
+| G3 | Replace generic tooltips with data-source tooltips | ✅ done | PR #57 (CRTKY-48) |
 | G4 | "How ratings work" section on station page | ⏳ pending | — (CRTKY-49) |
 | G5 | /methodology page | ⏳ pending | — (CRTKY-50) |
 | G6 | AI vs data-driven station badge + freshness | ⏳ pending | — (CRTKY-51) |
@@ -66,12 +66,12 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | Phase | Description | Status | Source |
 |-------|-------------|--------|--------|
 | H1 | Station elevation (flood risk signal) | ✅ done (1493/1493) | Open-Elevation API, CRTKY-85 |
-| H2 | Seismic hazard (earthquake risk) | 🔄 running (~200/1493) | J-SHIS Y2024, CRTKY-86 |
-| H3 | Daily essentials (livability) | 🔄 running (~547/1493) | Overpass (9 categories), CRTKY-87 |
+| H2 | Seismic hazard (earthquake risk) | ✅ done (1493/1493) | J-SHIS Y2024, CRTKY-86 |
+| H3 | Daily essentials (livability) | 🔄 near done (1470/1493) | Overpass (9 categories), CRTKY-87 |
 | H4 | Station images (health check) | ✅ done (0 broken / 8963 URLs) | img.pogorelov.dev HEAD check |
 | H5 | Green area (sqm geometry) | ⏳ queued (after H3) | Overpass `out geom`, CRTKY-42 |
 
-**Транспорт / быт (не в таблице фаз A–G):** время до хабов в UI есть, но для большинства станций в экспорте стоит **заглушка 30m** (см. `scripts/export-ratings.py`); реальные минуты в основном у AI-станций. **Plane: CRTKY-81.** **Last train** — только placeholder в UI (**CRTKY-56**). Расширение **rent** — **CRTKY-43** + `research/05-rent.md`. Хвост пассажиров / обновление MLIT FY — **CRTKY-84**. Полный роадмап: **`research/VISION.md`**.
+**Транспорт / быт (не в таблице фаз A–G):** ✅ **CRTKY-81 done** — калиброванная модель (MAE 5.5 мин) для всех 1493 станций, `data/transit-times.json`. **Last train** — только placeholder в UI (**CRTKY-56**). Расширение **rent** — **CRTKY-43** + `research/05-rent.md`. Хвост пассажиров / обновление MLIT FY — **CRTKY-84**. Полный роадмап: **`research/VISION.md`**.
 
 ## Sourcing discipline (Phase 0)
 
