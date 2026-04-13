@@ -2,6 +2,12 @@ import { WeightConfig, DEFAULT_WEIGHTS, FilterState, DEFAULT_FILTERS, StationRat
 
 const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS) as (keyof WeightConfig)[];
 
+// Old key order (pre-reorder) for backward compat with shared URLs
+const LEGACY_WEIGHT_KEYS: (keyof WeightConfig)[] = [
+  'food', 'nightlife', 'transport', 'rent', 'safety',
+  'green', 'gym_sports', 'vibe', 'crowd', 'daily_essentials',
+];
+
 export function encodeStateToParams(state: {
   weights: WeightConfig;
   filters: FilterState;
@@ -57,10 +63,14 @@ export function decodeParamsToState(params: URLSearchParams): {
   const w = params.get('w');
   if (w) {
     const values = w.split(',').map(Number);
-    // Accept old 9-weight URLs (pre-daily_essentials) by defaulting the 10th
-    if (values.length >= WEIGHT_KEYS.length - 1 && values.every((v) => !isNaN(v))) {
+    if (values.length >= 9 && values.every((v) => !isNaN(v))) {
       const weights = { ...DEFAULT_WEIGHTS } as WeightConfig;
-      WEIGHT_KEYS.forEach((k, i) => {
+      // Detect old vs new format: old URLs have 9 or 10 values in legacy order
+      // (food,nightlife,transport,...). New URLs have 10 in current order
+      // (transport,rent,daily_essentials,...). Use legacy keys for 9-value URLs
+      // and for 10-value URLs where position 0 matches old "food" weight pattern.
+      const keys = values.length < WEIGHT_KEYS.length ? LEGACY_WEIGHT_KEYS : WEIGHT_KEYS;
+      keys.forEach((k, i) => {
         if (i < values.length) weights[k] = values[i];
       });
       result.weights = weights;

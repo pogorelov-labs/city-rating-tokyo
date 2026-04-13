@@ -26,7 +26,7 @@ export function getStations(): Station[] {
     const env = envData[s.slug] || null;
 
     if (demo) {
-      const baseRatings = { daily_essentials: 5, ...demo.ratings };
+      const baseRatings = { ...demo.ratings, daily_essentials: demo.ratings.daily_essentials ?? 5 };
       const ratings = computedRent != null
         ? { ...baseRatings, rent: computedRent }
         : baseRatings;

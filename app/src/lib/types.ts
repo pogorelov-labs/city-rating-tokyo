@@ -1,14 +1,14 @@
 export interface StationRatings {
-  food: number;
-  nightlife: number;
   transport: number;
   rent: number;
+  daily_essentials: number;
   safety: number;
+  food: number;
   green: number;
   gym_sports: number;
   vibe: number;
+  nightlife: number;
   crowd: number;
-  daily_essentials: number; // Added in 10th-category sprint; default 5 until pipeline runs
 }
 
 export interface RentAvg {
@@ -121,16 +121,16 @@ export interface MapStation {
 }
 
 export interface WeightConfig {
-  food: number;
-  nightlife: number;
   transport: number;
   rent: number;
+  daily_essentials: number;
   safety: number;
+  food: number;
   green: number;
   gym_sports: number;
   vibe: number;
+  nightlife: number;
   crowd: number;
-  daily_essentials: number;
 }
 
 export interface FilterState {
@@ -150,29 +150,29 @@ export const DEFAULT_FILTERS: FilterState = {
 };
 
 export const DEFAULT_WEIGHTS: WeightConfig = {
-  food: 12,
-  nightlife: 8,
   transport: 18,
   rent: 18,
+  daily_essentials: 14,
   safety: 10,
+  food: 12,
   green: 8,
   gym_sports: 4,
   vibe: 4,
+  nightlife: 8,
   crowd: 4,
-  daily_essentials: 14,
 };
 
 export const RATING_LABELS: Record<keyof StationRatings, string> = {
-  food: 'Food & Dining',
-  nightlife: 'Nightlife',
   transport: 'Transport',
   rent: 'Affordability',
+  daily_essentials: 'Daily Essentials',
   safety: 'Safety',
+  food: 'Food & Dining',
   green: 'Parks & Green',
   gym_sports: 'Gym & Sports',
   vibe: 'Vibe & Atmosphere',
+  nightlife: 'Nightlife',
   crowd: 'Quietness',
-  daily_essentials: 'Daily Essentials',
 };
 
 export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
@@ -196,28 +196,28 @@ export const PRESET_PROFILES: PresetProfile[] = [
     id: 'young-pro',
     label: 'Young Pro',
     icon: '💼',
-    weights: { food: 12, nightlife: 18, transport: 28, rent: 18, safety: 0, green: 0, gym_sports: 0, vibe: 12, crowd: 0, daily_essentials: 12 },
+    weights: { transport: 28, rent: 18, daily_essentials: 12, safety: 0, food: 12, green: 0, gym_sports: 0, vibe: 12, nightlife: 18, crowd: 0 },
     filters: { maxRent: 150000, maxCommute: 30 },
   },
   {
     id: 'family',
     label: 'Family',
     icon: '👨‍👩‍👧',
-    weights: { food: 0, nightlife: 0, transport: 12, rent: 8, safety: 25, green: 20, gym_sports: 0, vibe: 0, crowd: 15, daily_essentials: 20 },
+    weights: { transport: 12, rent: 8, daily_essentials: 20, safety: 25, food: 0, green: 20, gym_sports: 0, vibe: 0, nightlife: 0, crowd: 15 },
     filters: { maxCommute: 40, categoryMins: { safety: 7 } },
   },
   {
     id: 'foodie-budget',
     label: 'Foodie Budget',
     icon: '🍜',
-    weights: { food: 30, nightlife: 13, transport: 0, rent: 30, safety: 0, green: 0, gym_sports: 0, vibe: 13, crowd: 0, daily_essentials: 14 },
+    weights: { transport: 0, rent: 30, daily_essentials: 14, safety: 0, food: 30, green: 0, gym_sports: 0, vibe: 13, nightlife: 13, crowd: 0 },
     filters: { maxRent: 120000 },
   },
   {
     id: 'digital-nomad',
     label: 'Digital Nomad',
     icon: '💻',
-    weights: { food: 17, nightlife: 0, transport: 8, rent: 17, safety: 0, green: 0, gym_sports: 8, vibe: 22, crowd: 13, daily_essentials: 15 },
+    weights: { transport: 8, rent: 17, daily_essentials: 15, safety: 0, food: 17, green: 0, gym_sports: 8, vibe: 22, nightlife: 0, crowd: 13 },
     filters: { maxRent: 130000 },
   },
 ];
@@ -229,16 +229,16 @@ export const SCATTER_AXIS_OPTIONS: { key: string; label: string }[] = [
 ];
 
 export const RATING_TOOLTIPS: Record<keyof StationRatings, string> = {
-  food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
-  nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',
   transport: 'Number of train lines, frequency, connections to major hubs, and overall commute convenience',
   rent: 'Affordability based on actual rent data (1K-1LDK). 10 = cheapest (~\u00a570k/mo), 1 = most expensive (~\u00a5300k+)',
+  daily_essentials: 'Supermarkets, pharmacies, clinics, banks, laundry, dentists, and other daily necessities within walking distance',
   safety: 'Overall neighborhood safety: crime rates, street lighting, family-friendliness, late-night comfort',
+  food: 'Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk',
   green: 'Parks, gardens, riverside walks, green spaces, and nature within 15 min walk',
   gym_sports: 'Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby',
   vibe: 'Overall character and charm: cultural identity, street life, local community, architectural interest',
+  nightlife: 'Bars, izakaya, clubs, live music venues, and late-night entertainment options',
   crowd: 'Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)',
-  daily_essentials: 'Supermarkets, pharmacies, clinics, banks, laundry, dentists, and other daily necessities within walking distance',
 };
 
 export const PLACE_CATEGORY_LABELS: Record<PlaceCategory, string> = {
