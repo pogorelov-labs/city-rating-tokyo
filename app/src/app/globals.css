@@ -4,6 +4,10 @@
   --font-sans: var(--font-inter);
 }
 
+html {
+  background-color: #ffffff;
+}
+
 body {
   background: #ffffff;
   color: #171717;
