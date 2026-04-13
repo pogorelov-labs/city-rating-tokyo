@@ -46,6 +46,12 @@ function FlyToStation({
   // useLayoutEffect so onFlyStart (→ setIsFlying(true)) fires BEFORE the
   // browser paints. This hides SVG overlays (halo, pulse) before the zoom
   // animation CSS-transforms them into giant circles.
+  //
+  // Deps: [map, lat, lng] only. onFlyStart/onFlyEnd are stable useCallback
+  // refs but listing them would cause the effect to re-run when the parent
+  // re-renders from setIsFlying(true) — the cleanup would detach the
+  // moveend listener mid-animation, leaving .map-flying stuck forever.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
     const currentZoom = map.getZoom();
     const currentCenter = map.getCenter();
@@ -101,7 +107,7 @@ function FlyToStation({
       map.off('moveend', handleMoveEnd);
       container.classList.remove('map-flying');
     };
-  }, [map, lat, lng, onFlyStart, onFlyEnd]);
+  }, [map, lat, lng]);
   return null;
 }
 
