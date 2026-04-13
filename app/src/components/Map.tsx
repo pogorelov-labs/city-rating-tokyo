@@ -100,7 +100,7 @@ function TouchZoomControls() {
     <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
       <div
         className="leaflet-control flex flex-col gap-1"
-        style={{ pointerEvents: 'auto', marginBottom: 80, marginRight: 10 }}
+        style={{ pointerEvents: 'auto', marginBottom: 'calc(80px + env(safe-area-inset-bottom, 0px))', marginRight: 10 }}
       >
         <button
           onClick={() => map.zoomIn()}

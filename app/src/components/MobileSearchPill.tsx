@@ -51,7 +51,7 @@ export default function MobileSearchPill({ stations }: Props) {
   return (
     <div
       ref={containerRef}
-      className="md:hidden absolute top-2 left-3 right-3 z-[999]"
+      className="md:hidden absolute top-2 left-3 right-24 z-[999]"
     >
       {/* Pill */}
       <div className="flex items-center bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 gap-2">
@@ -79,7 +79,7 @@ export default function MobileSearchPill({ stations }: Props) {
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
-          className="flex-1 text-sm bg-transparent outline-none placeholder:text-gray-400"
+          className="flex-1 text-base bg-transparent outline-none placeholder:text-gray-400"
         />
         {search && (
           <button
