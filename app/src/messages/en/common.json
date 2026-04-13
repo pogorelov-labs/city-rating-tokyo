@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "title": "Tokyo Neighborhood Explorer - Find Your Perfect Area",
+    "description": "Interactive map of Tokyo neighborhoods rated by food, nightlife, transport, rent, safety, parks, and more. Find the best area to live in Greater Tokyo."
+  },
+  "nav": {
+    "backToMap": "Map",
+    "share": "Share",
+    "copied": "Copied!",
+    "feedback": "Feedback",
+    "scatterPlot": "Scatter Plot",
+    "scatterPlotExplorer": "Scatter Plot Explorer"
+  },
+  "header": {
+    "titleShort": "Tokyo Explorer",
+    "titleFull": "Tokyo Neighborhood Explorer",
+    "beta": "BETA",
+    "stationCount": "{count} stations",
+    "byline": "by @ruspg"
+  },
+  "ratings": {
+    "food": "Food & Dining",
+    "nightlife": "Nightlife",
+    "transport": "Transport",
+    "rent": "Affordability",
+    "safety": "Safety",
+    "green": "Parks & Green",
+    "gym_sports": "Gym & Sports",
+    "vibe": "Vibe & Atmosphere",
+    "crowd": "Quietness",
+    "daily_essentials": "Daily Essentials"
+  },
+  "ratingTooltips": {
+    "food": "Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk",
+    "nightlife": "Bars, izakaya, clubs, live music venues, and late-night entertainment options",
+    "transport": "Number of train lines, frequency, connections to major hubs, and overall commute convenience",
+    "rent": "Affordability based on actual rent data (1K-1LDK). 10 = cheapest (~¥70k/mo), 1 = most expensive (~¥300k+)",
+    "safety": "Overall neighborhood safety: crime rates, street lighting, family-friendliness, late-night comfort",
+    "green": "Parks, gardens, riverside walks, green spaces, and nature within 15 min walk",
+    "gym_sports": "Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby",
+    "vibe": "Overall character and charm: cultural identity, street life, local community, architectural interest",
+    "crowd": "Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)",
+    "daily_essentials": "Supermarkets, pharmacies, clinics, banks, laundry, dentists, and other daily necessities within walking distance"
+  },
+  "shortLabels": {
+    "food": "Food",
+    "nightlife": "Nightlife",
+    "transport": "Transport",
+    "rent": "Afford.",
+    "safety": "Safety",
+    "green": "Green",
+    "gym_sports": "Gym",
+    "vibe": "Vibe",
+    "crowd": "Quietness",
+    "daily_essentials": "Essentials"
+  },
+  "hubs": {
+    "shibuya": "Shibuya",
+    "shinjuku": "Shinjuku",
+    "tokyo": "Tokyo",
+    "ikebukuro": "Ikebukuro",
+    "shinagawa": "Shinagawa"
+  },
+  "presets": {
+    "young-pro": "Young Pro",
+    "family": "Family",
+    "foodie-budget": "Foodie Budget",
+    "digital-nomad": "Digital Nomad"
+  },
+  "confidence": {
+    "strong": {
+      "label": "Measured",
+      "description": "Direct count from 2+ verified sources"
+    },
+    "moderate": {
+      "label": "Partial",
+      "description": "Single source or aggregated fallback"
+    },
+    "estimate": {
+      "label": "Estimate",
+      "description": "Modeled from formula, not observed"
+    },
+    "editorial": {
+      "label": "Curated",
+      "description": "Set by human researcher, may differ from data"
+    }
+  },
+  "sources": {
+    "hotpepper": "HotPepper",
+    "hotpepper_midnight": "HotPepper (late-night)",
+    "osm": "OpenStreetMap",
+    "osm_karaoke": "OSM (karaoke)",
+    "osm_cultural": "OSM (cultural)",
+    "osm_pedestrian": "OSM (pedestrian)",
+    "line_count": "Train lines",
+    "mlit_s12": "MLIT passengers",
+    "suumo": "Suumo",
+    "ward_average": "Ward average",
+    "distance_estimate": "Distance estimate",
+    "keishicho_arcgis": "Tokyo Police",
+    "ward_crime_stats": "Ward crime stats",
+    "prefecture_average": "Prefecture average",
+    "composite_fallback": "Composite fallback",
+    "hp_proxy": "HotPepper proxy",
+    "ai_research": "AI researcher"
+  },
+  "placeCategories": {
+    "gym": "Gyms & Fitness",
+    "mall": "Shopping Malls",
+    "park": "Parks & Gardens",
+    "landmark": "Landmarks",
+    "cafe": "Cafes",
+    "restaurant": "Restaurants",
+    "bar": "Bars & Izakaya"
+  },
+  "scatterAxes": {
+    "rent_1k": "Rent (1K-1LDK, yen)",
+    "min_transit": "Min Transit (min)"
+  },
+  "loading": {
+    "chart": "Loading chart…",
+    "map": "Loading map…"
+  },
+  "filter": {
+    "quickProfiles": "Quick Profiles",
+    "dealbreakers": "Dealbreakers",
+    "clearAll": "Clear all",
+    "weights": "Weights",
+    "weightsDescription": "Adjust what matters most to you",
+    "resetDefaults": "Reset to defaults",
+    "topRanked": "Top Ranked",
+    "searchPlaceholder": "Search station…",
+    "minRatings": "Min Ratings",
+    "nSet": "{count} set",
+    "off": "off",
+    "rent": "Rent",
+    "commute": "Commute",
+    "noLimit": "No limit",
+    "min": "{value} min",
+    "yenK": "¥{value}k",
+    "hideFloodRisk": "Hide flood-risk areas",
+    "belowXm": "(below 5m)",
+    "hideHighSeismic": "Hide high seismic risk",
+    "seismicThreshold": "(>26% intensity 6+)",
+    "stationCount": "{count} stations",
+    "matchCount": "<bold>{filtered}</bold> of {total} stations match",
+    "noMatch": "No stations match — try relaxing filters",
+    "noMatchFilters": "No stations match your filters",
+    "noRatedYet": "No rated stations yet",
+    "stationsMapped": "{count} stations mapped",
+    "withRatings": "{count} with ratings",
+    "rentUnconfirmed": "(rent unconfirmed)",
+    "lines": "{count, plural, one {# line} other {# lines}}"
+  },
+  "map": {
+    "clickForDetails": "Click for details →",
+    "viewDetails": "View details →",
+    "compare": "+ Compare",
+    "removeCompare": "Remove compare",
+    "dataComingSoon": "Data coming soon",
+    "heatmap": "Heatmap",
+    "compositeScore": "Composite Score"
+  },
+  "compare": {
+    "clearAll": "Clear all",
+    "dimension": "Dimension",
+    "score": "Score",
+    "rent1k": "Rent (1K)"
+  },
+  "drawer": {
+    "filters": "Filters",
+    "filtersAndRanking": "Filters & Ranking"
+  },
+  "feedback": {
+    "station": {
+      "title": "Know this area?",
+      "description": "Share what it's like living near {name} — your tips help others choose.",
+      "placeholder": "What's the vibe? Best spots? Anything to watch out for?",
+      "button": "Share Tip",
+      "thanks": "Thanks for sharing!",
+      "again": "Add another tip"
+    },
+    "general": {
+      "title": "Got feedback?",
+      "description": "Tell us how we can make this site more useful — missing features, wrong data, new ideas.",
+      "placeholder": "What would make this site better for you?",
+      "button": "Send Feedback",
+      "thanks": "Thanks for your feedback!",
+      "again": "Send more"
+    },
+    "sending": "Sending…",
+    "rateLimitError": "Please wait a few seconds before sending again.",
+    "genericError": "Could not send. Please try again.",
+    "charCount": "{count}/1000"
+  },
+  "station": {
+    "metaTitle": "{name} ({nameJp}) - Tokyo Neighborhood Explorer",
+    "metaDescription": "{name} station area: ratings, rent prices, transit times. {description}",
+    "metaDescriptionFallback": "Neighborhood guide for {name} station area in Tokyo.",
+    "overview": "Overview",
+    "ratingsTitle": "Ratings",
+    "ratingsCaption": "Bar fill compares this station to the Tokyo median for that row — hover the bar for pigment detail, the category name for what it measures.",
+    "ratingsCaptionWithConfidence": " Where a colored dot appears, it shows how firm that score is (hover for sources); hues match the key below.",
+    "barTooltipScore": "{label}: {value} / 10",
+    "barTooltipDev": "Tokyo norm is {median} — this station is {dev} {direction} norm.",
+    "barTooltipDevExact": "Tokyo norm is {median} — this station is exactly average.",
+    "barTooltipPigment": "Painted in {jp} {en} ({tone}).",
+    "devAbove": "above",
+    "devBelow": "below",
+    "labelDevAbove": "{dev} above norm",
+    "labelDevBelow": "{dev} below norm",
+    "labelDevExact": "exactly average",
+    "tokyoMedian": "Tokyo median: {value}",
+    "thisStation": "This station: {value}",
+    "dataDate": "Data: {date}",
+    "transit": "Transit",
+    "trainLines": "train lines",
+    "linesSingular": "line",
+    "linesPlural": "lines",
+    "rentLabel": "Rent",
+    "rentRange": "1K–1LDK → 2LDK / mo",
+    "rentSingle": "1K–1LDK / mo",
+    "avgToCenter": "Avg to Center",
+    "toMajorHubs": "to 5 major hubs",
+    "lastTrain": "Last Train",
+    "comingSoon": "coming soon",
+    "noDataYet": "no data yet",
+    "hubsLabel": "Hubs",
+    "googleMaps": "Google Maps →",
+    "mapsLink": "Maps",
+    "aboutArea": "About this area",
+    "atmosphere": "Atmosphere",
+    "landmarks": "Landmarks & Walks",
+    "foodAndCafes": "Food & Cafes",
+    "barsAndNightlife": "Bars & Nightlife",
+    "descriptionComingSoon": "Detailed description coming soon.",
+    "descriptionInProgress": "AI research for this station is in progress.",
+    "gallery": "Gallery",
+    "showAllPhotos": "Show all {count} photos",
+    "imageAttribution": "Images via Wikimedia Commons (CC-BY-SA) & Unsplash",
+    "photoBy": "Photo by {photographer} on Unsplash",
+    "nearbyPlaces": "Nearby Places",
+    "findMoreOnMaps": "Find more on Google Maps",
+    "radarMedianLabel": "Typical Tokyo (median)",
+    "radarStationLabel": "This station",
+    "naturalEnvironment": "Natural Environment",
+    "elevation": "Elevation: {value}m",
+    "floodRisk": "Flood risk",
+    "seismicRisk": "Seismic Risk:",
+    "seismicProbability": "Probability of JMA intensity ≥6.0 in 30 years",
+    "sourceElevation": "Source: Open-Elevation API (SRTM data)",
+    "sourceSeismic": "Source: J-SHIS 2024 (National Research Institute for Earth Science and Disaster Resilience)"
+  },
+  "seismicTiers": {
+    "low": { "label": "Low", "description": "Below 3% probability" },
+    "moderate": { "label": "Moderate", "description": "3–15% probability" },
+    "high": { "label": "High", "description": "15–30% probability" },
+    "very_high": { "label": "Very High", "description": "Above 30% probability" },
+    "unknown": { "label": "Unknown", "description": "No data available" }
+  },
+  "elevationTiers": {
+    "very_low": "Very low — check flood hazard maps",
+    "low": "Low-lying area",
+    "moderate": "Low to moderate elevation",
+    "elevated": "Moderate elevation",
+    "high": "Elevated area",
+    "mountain": "Hill / mountain area",
+    "unknown": "Elevation unknown"
+  },
+  "elevationTooltips": {
+    "belowSea": "Below sea level — this area is in a known flood-prone zone. The Koto/Edogawa lowlands and Arakawa floodplain are at highest risk during typhoons and storm surges.",
+    "veryLow": "Very low elevation — near or below sea level. These areas are susceptible to flooding during heavy rainfall, typhoons, and storm surges. Check Tokyo/prefecture flood hazard maps.",
+    "low": "Low-lying area. Some flood risk during extreme weather events. Generally manageable with proper preparation.",
+    "moderate": "Moderate to high elevation. Lower flood risk from river/coastal flooding."
+  },
+  "seismicTooltips": {
+    "veryHigh": "This area has significantly higher risk, often due to soft alluvial soil or reclaimed land that amplifies seismic waves.",
+    "high": "This is a relatively high-risk area. Building earthquake resistance and emergency preparedness are important considerations.",
+    "moderate": "Moderate risk. Standard earthquake preparedness measures are recommended.",
+    "low": "Lower risk area, typically on firmer bedrock. Standard precautions still apply."
+  },
+  "error": {
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedError": "An unexpected error occurred.",
+    "tryAgain": "Try again",
+    "stationNotFound": "Station Not Found"
+  }
+}

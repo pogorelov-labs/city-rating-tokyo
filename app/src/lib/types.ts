@@ -84,6 +84,7 @@ export interface Station {
   slug: string;
   name_en: string;
   name_jp: string;
+  name_ru?: string;
   lat: number;
   lng: number;
   lines: string[];
@@ -104,6 +105,7 @@ export interface MapStation {
   slug: string;
   name_en: string;
   name_jp: string;
+  name_ru?: string;
   lat: number;
   lng: number;
   line_count: number;

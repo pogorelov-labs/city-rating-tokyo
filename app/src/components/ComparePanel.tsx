@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useDeferredValue } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAppStore } from '@/lib/store';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import {
@@ -9,6 +10,8 @@ import {
   computeCompositeAnchors,
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
+import { stationPrimaryName } from '@/lib/station-name';
+import type { Locale } from '@/i18n/routing';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
 
@@ -17,6 +20,8 @@ interface Props {
 }
 
 export default function ComparePanel({ stations }: Props) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
   const compareStations = useAppStore((s) => s.compareStations);
   const removeCompareStation = useAppStore((s) => s.removeCompareStation);
   const clearCompareStations = useAppStore((s) => s.clearCompareStations);
@@ -52,7 +57,7 @@ export default function ComparePanel({ stations }: Props) {
                 className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border"
                 style={{ borderColor: COLORS[i], color: COLORS[i] }}
               >
-                {s.name_en}
+                {stationPrimaryName(s, locale)}
                 <button
                   onClick={() => removeCompareStation(s.slug)}
                   className="hover:opacity-60 ml-0.5"
@@ -66,7 +71,7 @@ export default function ComparePanel({ stations }: Props) {
             onClick={clearCompareStations}
             className="text-xs text-gray-400 hover:text-gray-600"
           >
-            Clear all
+            {t('compare.clearAll')}
           </button>
         </div>
 
@@ -74,7 +79,7 @@ export default function ComparePanel({ stations }: Props) {
           {/* Radar */}
           <CompareRadarChart
             series={compared.map((s) => ({
-              label: s.name_en,
+              label: stationPrimaryName(s, locale),
               ratings: s.ratings!,
             }))}
           />
@@ -84,10 +89,10 @@ export default function ComparePanel({ stations }: Props) {
             <table className="w-full text-xs">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left py-1 pr-2 text-gray-500 font-normal">Dimension</th>
+                  <th className="text-left py-1 pr-2 text-gray-500 font-normal">{t('compare.dimension')}</th>
                   {compared.map((s, i) => (
                     <th key={s.slug} className="text-right py-1 px-2 font-semibold" style={{ color: COLORS[i] }}>
-                      {s.name_en}
+                      {stationPrimaryName(s, locale)}
                     </th>
                   ))}
                 </tr>
@@ -98,12 +103,9 @@ export default function ComparePanel({ stations }: Props) {
                   const maxVal = Math.max(...values);
                   return (
                     <tr key={key} className="border-b border-gray-50">
-                      <td className="py-1 pr-2 text-gray-500">{RATING_LABELS[key]}</td>
+                      <td className="py-1 pr-2 text-gray-500">{t(`ratings.${key}`)}</td>
                       {compared.map((s, i) => {
                         const v = s.ratings![key];
-                        // Confidence badges are rendered on the station
-                        // detail page (see Station.confidence). They were
-                        // dropped from MapStation to shrink the RSC payload.
                         return (
                           <td
                             key={i}
@@ -118,7 +120,7 @@ export default function ComparePanel({ stations }: Props) {
                 })}
                 {/* Composite score */}
                 <tr className="border-t border-gray-200">
-                  <td className="py-1 pr-2 font-semibold text-gray-700">Score</td>
+                  <td className="py-1 pr-2 font-semibold text-gray-700">{t('compare.score')}</td>
                   {compared.map((s, i) => {
                     const score = calculateWeightedScore(s.ratings!, deferredWeights);
                     return (
@@ -130,7 +132,7 @@ export default function ComparePanel({ stations }: Props) {
                 </tr>
                 {/* Rent */}
                 <tr>
-                  <td className="py-1 pr-2 text-gray-500">Rent (1K)</td>
+                  <td className="py-1 pr-2 text-gray-500">{t('compare.rent1k')}</td>
                   {compared.map((s, i) => (
                     <td key={i} className="text-right py-1 px-2 tabular-nums">
                       {s.rent_1k ? `¥${(s.rent_1k / 1000).toFixed(0)}k` : '-'}

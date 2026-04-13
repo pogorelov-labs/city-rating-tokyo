@@ -1,14 +1,19 @@
 'use client';
 
 import { useState, useMemo, useRef, useEffect } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
+import { stationDisplayName } from '@/lib/station-name';
+import type { Locale } from '@/i18n/routing';
 
 interface Props {
   stations: MapStation[];
 }
 
 export default function MobileSearchPill({ stations }: Props) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
   const [search, setSearch] = useState('');
   const [open, setOpen] = useState(false);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
@@ -23,7 +28,8 @@ export default function MobileSearchPill({ stations }: Props) {
       .filter(
         (s) =>
           s.name_en.toLowerCase().includes(q) ||
-          s.name_jp.includes(search),
+          s.name_jp.includes(search) ||
+          (s.name_ru && s.name_ru.toLowerCase().includes(q)),
       )
       .slice(0, 6);
   }, [stations, search]);
@@ -72,7 +78,7 @@ export default function MobileSearchPill({ stations }: Props) {
           enterKeyHint="search"
           autoComplete="off"
           spellCheck={false}
-          placeholder="Search station..."
+          placeholder={t('filter.searchPlaceholder')}
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
@@ -108,10 +114,10 @@ export default function MobileSearchPill({ stations }: Props) {
               className="w-full text-left px-3 py-2.5 text-sm hover:bg-gray-50 active:bg-gray-100 flex items-center justify-between border-b border-gray-50 last:border-0"
             >
               <span>
-                <span className="font-medium">{s.name_en}</span>
-                <span className="text-gray-400 ml-1.5 text-xs">{s.name_jp}</span>
+                <span className="font-medium">{stationDisplayName(s, locale).primary}</span>
+                <span className="text-gray-400 ml-1.5 text-xs">{stationDisplayName(s, locale).secondary}</span>
               </span>
-              <span className="text-xs text-gray-400">{s.line_count} lines</span>
+              <span className="text-xs text-gray-400">{t('filter.lines', { count: s.line_count })}</span>
             </button>
           ))}
         </div>

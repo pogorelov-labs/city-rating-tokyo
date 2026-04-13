@@ -1,38 +1,49 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getMapStations, getThumbnails, getSnippets } from '@/lib/data';
 import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
 import MobileDrawer from '@/components/MobileDrawer';
 import MobileSearchPill from '@/components/MobileSearchPill';
 import HeaderActions from '@/components/HeaderActions';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 import FeedbackWidget from '@/components/FeedbackWidget';
 
 const stations = getMapStations();
 const thumbnails = getThumbnails();
 const snippets = getSnippets();
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('header');
+
   return (
     <div className="flex flex-col h-dvh overflow-x-hidden">
       <header className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-white shrink-0 min-w-0">
         <div className="flex items-center gap-2 min-w-0">
           <span className="text-xl font-bold tracking-tight truncate">
-            <span className="md:hidden">Tokyo Explorer</span>
-            <span className="hidden md:inline">Tokyo Neighborhood Explorer</span>
+            <span className="md:hidden">{t('titleShort')}</span>
+            <span className="hidden md:inline">{t('titleFull')}</span>
           </span>
           <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium shrink-0">
-            BETA
+            {t('beta')}
           </span>
         </div>
         <div className="flex items-center gap-3 text-sm text-gray-500 shrink-0">
           <HeaderActions stations={stations} />
-          <span className="hidden md:inline">{stations.length} stations</span>
+          <LocaleSwitcher />
+          <span className="hidden md:inline">{t('stationCount', { count: stations.length })}</span>
           <a
             href="https://github.com/ruspg/city-rating-tokyo"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline text-gray-400 hover:text-gray-600 transition-colors"
           >
-            by @ruspg
+            {t('byline')}
           </a>
         </div>
       </header>

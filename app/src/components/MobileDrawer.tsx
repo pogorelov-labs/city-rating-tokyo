@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import FilterPanel from './FilterPanel';
 
@@ -9,6 +10,7 @@ interface MobileDrawerProps {
 }
 
 export default function MobileDrawer({ stations }: MobileDrawerProps) {
+  const t = useTranslations('drawer');
   const [open, setOpen] = useState(false);
   // Drawer is display:none when fully closed to prevent Safari 26 Liquid Glass
   // tinting from scanning its fixed white background behind the toolbar.
@@ -57,7 +59,7 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
         </svg>
-        Filters
+        {t('filters')}
       </button>
 
       {/* Backdrop */}
@@ -84,7 +86,7 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
 
         {/* Close button */}
         <div className="flex justify-between items-center px-4 pb-2">
-          <span className="font-bold text-base">Filters & Ranking</span>
+          <span className="font-bold text-base">{t('filtersAndRanking')}</span>
           <button
             onClick={handleClose}
             className="text-gray-400 hover:text-gray-600 p-1"

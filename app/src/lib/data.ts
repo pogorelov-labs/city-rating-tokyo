@@ -58,6 +58,7 @@ export function getMapStations(): MapStation[] {
       slug: s.slug,
       name_en: s.name_en,
       name_jp: s.name_jp,
+      ...(s.name_ru && { name_ru: s.name_ru }),
       lat: s.lat,
       lng: s.lng,
       line_count: s.line_count,

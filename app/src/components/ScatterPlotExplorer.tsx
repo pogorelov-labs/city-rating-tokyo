@@ -10,7 +10,10 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { MapStation, SCATTER_AXIS_OPTIONS } from '@/lib/types';
+import { useTranslations, useLocale } from 'next-intl';
+import { MapStation, RATING_LABELS } from '@/lib/types';
+import { stationPrimaryName } from '@/lib/station-name';
+import type { Locale } from '@/i18n/routing';
 import { useAppStore } from '@/lib/store';
 import {
   calculateWeightedScore,
@@ -23,14 +26,29 @@ interface Props {
   stations: MapStation[];
 }
 
+/** Axis options: rating keys + rent + transit */
+const AXIS_KEYS = [
+  ...Object.keys(RATING_LABELS),
+  'rent_1k',
+  'min_transit',
+] as const;
+
 export default function ScatterPlotExplorer({ stations }: Props) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
   const weights = useAppStore((s) => s.weights);
   const deferredWeights = useDeferredValue(weights);
   const [xAxis, setXAxis] = useState('rent');
   const [yAxis, setYAxis] = useState('food');
 
-  const xLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === xAxis)?.label ?? xAxis;
-  const yLabel = SCATTER_AXIS_OPTIONS.find((o) => o.key === yAxis)?.label ?? yAxis;
+  function axisLabel(key: string): string {
+    if (key === 'rent_1k') return t('scatterAxes.rent_1k');
+    if (key === 'min_transit') return t('scatterAxes.min_transit');
+    return t(`ratings.${key}`);
+  }
+
+  const xLabel = axisLabel(xAxis);
+  const yLabel = axisLabel(yAxis);
 
   // Defer the anchors too — sorting 1493 scores fires on every weight
   // change and should track the deferred score computation below so
@@ -48,7 +66,7 @@ export default function ScatterPlotExplorer({ stations }: Props) {
         const y = getAxisValue(s, yAxis);
         if (x === null || y === null) return null;
         const score = calculateWeightedScore(s.ratings!, deferredWeights);
-        return { name: s.name_en, x, y, score, fill: compositeToColor(score, compositeAnchors) };
+        return { name: stationPrimaryName(s, locale), x, y, score, fill: compositeToColor(score, compositeAnchors) };
       })
       .filter(Boolean) as { name: string; x: number; y: number; score: number; fill: string }[];
   }, [stations, deferredWeights, xAxis, yAxis, compositeAnchors]);
@@ -63,8 +81,8 @@ export default function ScatterPlotExplorer({ stations }: Props) {
             onChange={(e) => setXAxis(e.target.value)}
             className="text-sm border border-gray-200 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            {SCATTER_AXIS_OPTIONS.map((o) => (
-              <option key={o.key} value={o.key}>{o.label}</option>
+            {AXIS_KEYS.map((key) => (
+              <option key={key} value={key}>{axisLabel(key)}</option>
             ))}
           </select>
         </label>
@@ -75,12 +93,12 @@ export default function ScatterPlotExplorer({ stations }: Props) {
             onChange={(e) => setYAxis(e.target.value)}
             className="text-sm border border-gray-200 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            {SCATTER_AXIS_OPTIONS.map((o) => (
-              <option key={o.key} value={o.key}>{o.label}</option>
+            {AXIS_KEYS.map((key) => (
+              <option key={key} value={key}>{axisLabel(key)}</option>
             ))}
           </select>
         </label>
-        <span className="text-xs text-gray-400">{data.length} stations</span>
+        <span className="text-xs text-gray-400">{t('filter.stationCount', { count: data.length })}</span>
       </div>
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
@@ -96,7 +114,7 @@ export default function ScatterPlotExplorer({ stations }: Props) {
                   <div className="font-bold">{d.name}</div>
                   <div className="text-gray-500">{xLabel}: {d.x.toLocaleString()}</div>
                   <div className="text-gray-500">{yLabel}: {d.y.toLocaleString()}</div>
-                  <div className="text-gray-500">Score: {d.score.toFixed(1)}</div>
+                  <div className="text-gray-500">{t('compare.score')}: {d.score.toFixed(1)}</div>
                 </div>
               );
             }}

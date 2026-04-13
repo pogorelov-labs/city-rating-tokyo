@@ -5,7 +5,7 @@
 Interactive map of Greater Tokyo (1493 stations) with data-driven neighborhood ratings. Users set **hard dealbreaker filters** (max rent, max commute, per-category minimums) and **soft weight preferences** (food, nightlife, transport, rent, safety, green, gym, vibe, crowd) independently.
 
 **Live**: https://city-rating.pogorelov.dev
-**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand. Static JSON data, no DB at runtime.
+**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl (EN/JA/RU). Static JSON data, no DB at runtime.
 **Deploy**: Coolify on VPS (217.196.61.98), GitHub App auto-deploy from `main`.
 
 ## Architecture
@@ -271,6 +271,77 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `app/src/components/RadarChartWrapper.tsx` | `next/dynamic` for `RadarChart` with `ssr: false` on station detail only — avoids SSR/hydration issues with recharts (same lazy pattern as other chart entry points). |
 | `app/src/components/FeedbackWidget.tsx` | Station/general feedback form. Prior-submit state comes from **`useSyncExternalStore`** reading `localStorage` (server snapshot `false`); same-tab updates use a tiny `window` event (`city-rating-feedback-ls-sync`) because `storage` events do not fire in the active tab. Avoids `useEffect`+`setState` for initial hydrate (eslint `react-hooks/set-state-in-effect`). Surfaces **`error` JSON** from `/api/feedback` (e.g. 429 rate limit) instead of a single generic line. |
 | `app/src/app/api/feedback/route.ts` | POST → NocoDB `feedback` table. **IP rate limit:** minimum **2.5s** between requests per IP (was 10s and blocked legitimate “Add another tip”). Returns **429** + `Retry-After` + `{ error }` when under cooldown. |
+| `app/src/i18n/routing.ts` | Locale config: `['en','ja','ru']`, default `en`. Exports `Locale` type. |
+| `app/src/i18n/request.ts` | Server-side `getRequestConfig` — loads `messages/{locale}/common.json` per request. |
+| `app/src/i18n/navigation.ts` | Locale-aware `Link`, `redirect`, `usePathname`, `useRouter`. **All internal links must use this, not `next/link`.** |
+| `app/src/proxy.ts` | next-intl middleware (Next.js 16 convention). Accept-Language detection, NEXT_LOCALE cookie, locale redirect. API routes excluded. |
+| `app/src/messages/{en,ja,ru}/common.json` | Translation dictionaries (~190 keys each). Single file per locale. EN is source of truth. |
+| `app/src/components/LocaleSwitcher.tsx` | EN/JA/RU toggle button group. Uses `useRouter().replace()` from i18n/navigation. In homepage + station detail headers. |
+
+## i18n (CRTKY-98 epic)
+
+Three locales: **English** (default, no URL prefix), **Japanese** (`/ja/`), **Russian** (`/ru/`).
+
+### Stack
+- **Library:** `next-intl` v4.9.1 (App Router native)
+- **Proxy:** `src/proxy.ts` (Next.js 16 renamed middleware → proxy)
+- **Config:** `src/i18n/routing.ts` (locale list), `src/i18n/request.ts` (message loading), `src/i18n/navigation.ts` (locale-aware Link/router)
+- **Dictionaries:** `src/messages/{en,ja,ru}/common.json` (~190 keys per locale, single file)
+- **Plugin:** `next.config.ts` wrapped with `createNextIntlPlugin`
+
+### Route structure
+```
+app/src/app/
+  layout.tsx                    → Root shell (no <html>, no locale)
+  [locale]/
+    layout.tsx                  → <html lang={locale}>, NextIntlClientProvider, fonts, Umami
+    page.tsx                    → /{locale} homepage
+    station/[slug]/page.tsx     → /{locale}/station/:slug
+    error.tsx                   → Error boundary
+  api/feedback/route.ts         → POST /api/feedback (no locale)
+  global-error.tsx              → Global fallback (no locale)
+```
+
+### Translation patterns
+
+| Context | API | Example |
+|---------|-----|---------|
+| Server component | `const t = await getTranslations()` | Station detail page |
+| Client component | `const t = useTranslations()` | FilterPanel, Map, ConfidenceBadge |
+| Namespaced | `useTranslations('feedback')` | FeedbackWidget |
+| Dynamic keys | `t(\`ratings.${key}\`)` | Rating labels, hub labels |
+| ICU plurals (RU) | `{count, plural, one {# линия} few {# линии} many {# линий}}` | Station count, lines |
+| Rich text styling | `t.rich('key', { bold: (c) => <span>{c}</span> })` | Match counter bold number |
+| Internal links | `import { Link } from '@/i18n/navigation'` | **NOT** `next/link` — preserves locale |
+
+### Fonts
+- Inter: `subsets: ['latin', 'cyrillic']` (~20 KB addition for Cyrillic)
+- JP: system font stack in `--font-sans`: `'Hiragino Sans', 'Yu Gothic', 'Meiryo', system-ui` (zero load cost)
+
+### SEO
+- `next-sitemap.config.js` generates hreflang alternates for all 3 locales on every URL
+- `<html lang={locale}>` set per locale
+- JSON-LD includes `inLanguage` field
+- Default locale (EN) has no URL prefix — existing indexed URLs unchanged
+
+### Build: 4486 pages in ~9s (7 workers)
+
+### Station naming convention (CRTKY-111, not yet implemented)
+
+Current: `name_en` hardcoded as primary everywhere. Correct pattern:
+
+| Locale | Primary (bold) | Secondary (gray) | Notes |
+|--------|---------------|-------------------|-------|
+| EN | name_en | name_jp | Current behavior |
+| JA | name_jp | name_en | Kanji primary, romaji helper |
+| RU | name_ru | name_jp | Cyrillic primary, kanji for context |
+
+Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji on station signs. `name_ru` requires CRTKY-107 (Polivanov transliteration + Wikipedia override for top 100).
+
+### Known limitations
+- `dynamic()` loading callbacks ("Loading map...") can't use hooks — left as EN
+- Snippets (`description.atmosphere`) are Russian-only — shown in all locales until CRTKY-109 generates multilingual descriptions. CRTKY-111 gates display to RU-only as interim fix.
+- `RATING_LABELS` / `RATING_TOOLTIPS` constants still exported from `types.ts` for key iteration — display strings come from `t()`, but the Record objects remain for `Object.keys()` loops
 
 ## Recent UI (post–CRTKY-68)
 
@@ -295,6 +366,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | #76 | CRTKY-95 | **iOS Safari fixes:** search input `text-base` (16px) prevents auto-zoom, search pill `right-24` clears Heatmap button, root `overflow-x-hidden`, zoom buttons safe-area-aware `calc(80px + env(safe-area-inset-bottom))`. |
 | #78 | CRTKY-96 | **Safari 26 Liquid Glass hardening:** `h-screen` → `h-dvh` (dynamic viewport tracks toolbar), `html` background-color for toolbar tint, MobileDrawer `display:none` when closed (two-phase rAF open/transitionend close), Heatmap button 44px touch target gated by `@media (pointer: coarse)`, ComparePanel mobile-only bottom spacer for dynamic toolbar clearance. |
 | #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + VPS disk. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
+| — | CRTKY-98 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries (full JA+RU translations), 15 components migrated to `t()` calls, `LocaleSwitcher` toggle in both headers, hreflang sitemap, Cyrillic+JP font stack. 4486 static pages in 9s. Remaining: CRTKY-111 (locale-aware station naming), CRTKY-107 (name_ru data), CRTKY-109 (data-driven description generation pipeline). |
 
 ## Dealbreaker Filters (PR #60, #61)
 

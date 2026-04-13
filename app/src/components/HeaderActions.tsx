@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import dynamic from 'next/dynamic';
+import { useTranslations } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { buildShareUrl } from '@/lib/url-state';
@@ -23,6 +24,7 @@ interface Props {
 }
 
 export default function HeaderActions({ stations }: Props) {
+  const t = useTranslations('nav');
   const [scatterOpen, setScatterOpen] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -45,13 +47,13 @@ export default function HeaderActions({ stations }: Props) {
         onClick={() => setScatterOpen(true)}
         className="hidden md:inline-flex text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
       >
-        Scatter Plot
+        {t('scatterPlot')}
       </button>
 
       <button
         onClick={handleShare}
         className="text-xs rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors md:px-3 md:py-1.5 p-1.5"
-        aria-label="Share"
+        aria-label={t('share')}
       >
         {/* Icon on mobile, text on desktop */}
         <svg className="w-4 h-4 md:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -59,7 +61,7 @@ export default function HeaderActions({ stations }: Props) {
           <polyline points="16 6 12 2 8 6" />
           <line x1="12" y1="2" x2="12" y2="15" />
         </svg>
-        <span className="hidden md:inline">{copied ? 'Copied!' : 'Share'}</span>
+        <span className="hidden md:inline">{copied ? t('copied') : t('share')}</span>
         {copied && <span className="md:hidden text-[10px] text-green-600 font-medium">✓</span>}
       </button>
 
@@ -68,7 +70,7 @@ export default function HeaderActions({ stations }: Props) {
         data-umami-event="open-feedback-modal"
         className="hidden md:inline-flex text-xs px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 transition-colors"
       >
-        Feedback
+        {t('feedback')}
       </button>
 
       {feedbackOpen && createPortal(
@@ -79,7 +81,7 @@ export default function HeaderActions({ stations }: Props) {
           />
           <div className="relative bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-bold">Feedback</h2>
+              <h2 className="text-lg font-bold">{t('feedback')}</h2>
               <button
                 onClick={() => setFeedbackOpen(false)}
                 className="text-gray-400 hover:text-gray-600 p-1"
@@ -103,7 +105,7 @@ export default function HeaderActions({ stations }: Props) {
           />
           <div className="relative bg-white rounded-xl shadow-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-bold">Scatter Plot Explorer</h2>
+              <h2 className="text-lg font-bold">{t('scatterPlotExplorer')}</h2>
               <button
                 onClick={() => setScatterOpen(false)}
                 className="text-gray-400 hover:text-gray-600 p-1"

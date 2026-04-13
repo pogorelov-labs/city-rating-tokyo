@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useMemo, useDeferredValue } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAppStore } from '@/lib/store';
 import {
   RATING_LABELS,
-  RATING_TOOLTIPS,
   PRESET_PROFILES,
   DEFAULT_FILTERS,
   WeightConfig,
@@ -18,6 +18,8 @@ import {
   applyDealbreakers,
 } from '@/lib/scoring';
 import Tooltip from '@/components/Tooltip';
+import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
+import type { Locale } from '@/i18n/routing';
 
 interface FilterPanelProps {
   stations: MapStation[];
@@ -31,29 +33,15 @@ const COMMUTE_MAX = 60;
 const COMMUTE_STEP = 5;
 const CATEGORY_MIN_OPTIONS = [5, 6, 7, 8] as const;
 
-/** Short label for category min buttons — avoids confusing truncation */
-const CATEGORY_SHORT_LABELS: Record<keyof StationRatings, string> = {
-  food: 'Food',
-  nightlife: 'Nightlife',
-  transport: 'Transport',
-  rent: 'Afford.',
-  safety: 'Safety',
-  green: 'Green',
-  gym_sports: 'Gym',
-  vibe: 'Vibe',
-  crowd: 'Quietness',
-  daily_essentials: 'Essentials',
-};
-
-function formatRent(v: number, isMin: boolean): string {
-  if (isMin && v <= RENT_MIN) return '\u00a580k';
-  if (!isMin && v >= RENT_MAX) return 'No limit';
-  return `\u00a5${(v / 1000).toFixed(0)}k`;
+function formatRent(v: number, isMin: boolean, noLimit: string): string {
+  if (isMin && v <= RENT_MIN) return '¥80k';
+  if (!isMin && v >= RENT_MAX) return noLimit;
+  return `¥${(v / 1000).toFixed(0)}k`;
 }
 
-function formatCommute(v: number, isMin: boolean): string {
+function formatCommute(v: number, isMin: boolean, noLimit: string): string {
   if (isMin && v <= COMMUTE_MIN) return '10 min';
-  if (!isMin && v >= COMMUTE_MAX) return 'No limit';
+  if (!isMin && v >= COMMUTE_MAX) return noLimit;
   return `${v} min`;
 }
 
@@ -136,6 +124,8 @@ function DualRange({
 }
 
 export default function FilterPanel({ stations }: FilterPanelProps) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
   const weights = useAppStore((s) => s.weights);
   const setWeight = useAppStore((s) => s.setWeight);
   const setAllWeights = useAppStore((s) => s.setAllWeights);
@@ -158,6 +148,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
   const deferredWeights = useDeferredValue(weights);
+  const noLimit = t('filter.noLimit');
 
   const filtersActive =
     filters.minRent > DEFAULT_FILTERS.minRent ||
@@ -205,7 +196,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       .filter(
         (s) =>
           s.name_en.toLowerCase().includes(q) ||
-          s.name_jp.includes(search)
+          s.name_jp.includes(search) ||
+          (s.name_ru && s.name_ru.toLowerCase().includes(q))
       )
       .slice(0, 8);
   }, [stations, search]);
@@ -240,7 +232,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           enterKeyHint="search"
           autoComplete="off"
           spellCheck={false}
-          placeholder="Search station..."
+          placeholder={t('filter.searchPlaceholder')}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -272,10 +264,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-50 last:border-0"
               >
                 <span>
-                  <span className="font-medium">{s.name_en}</span>
-                  <span className="text-gray-400 ml-1.5 text-xs">{s.name_jp}</span>
+                  <span className="font-medium">{stationDisplayName(s, locale).primary}</span>
+                  <span className="text-gray-400 ml-1.5 text-xs">{stationDisplayName(s, locale).secondary}</span>
                 </span>
-                <span className="text-xs text-gray-400">{s.line_count} lines</span>
+                <span className="text-xs text-gray-400">{t('filter.lines', { count: s.line_count })}</span>
               </button>
             ))}
           </div>
@@ -284,7 +276,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       {/* Presets */}
       <div>
-        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Quick Profiles</h2>
+        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">{t('filter.quickProfiles')}</h2>
         <div className="flex flex-wrap gap-1.5">
           {PRESET_PROFILES.map((p) => (
             <button
@@ -296,7 +288,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   : 'bg-gray-50 border-gray-200 hover:bg-gray-100 text-gray-600'
               }`}
             >
-              {p.icon} {p.label}
+              {p.icon} {t(`presets.${p.id}`)}
             </button>
           ))}
         </div>
@@ -305,7 +297,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       {/* Dealbreakers */}
       <div>
         <div className="flex items-center justify-between mb-2">
-          <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Dealbreakers</h2>
+          <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{t('filter.dealbreakers')}</h2>
           {filtersActive && (
             <button
               onClick={() => {
@@ -317,7 +309,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               data-umami-event="clear-filters"
               className="text-xs text-blue-600 hover:underline"
             >
-              Clear all
+              {t('filter.clearAll')}
             </button>
           )}
         </div>
@@ -332,9 +324,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             valueHigh={filters.maxRent}
             onLowChange={(v) => { setMinRent(v); setActivePreset(null); }}
             onHighChange={(v) => { setMaxRent(v); setActivePreset(null); }}
-            formatLow={formatRent(filters.minRent, true)}
-            formatHigh={formatRent(filters.maxRent, false)}
-            label="Rent"
+            formatLow={formatRent(filters.minRent, true, noLimit)}
+            formatHigh={formatRent(filters.maxRent, false, noLimit)}
+            label={t('filter.rent')}
             umamiEvent="filter-rent"
           />
 
@@ -347,9 +339,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             valueHigh={filters.maxCommute}
             onLowChange={(v) => { setMinCommute(v); setActivePreset(null); }}
             onHighChange={(v) => { setMaxCommute(v); setActivePreset(null); }}
-            formatLow={formatCommute(filters.minCommute, true)}
-            formatHigh={formatCommute(filters.maxCommute, false)}
-            label="Commute"
+            formatLow={formatCommute(filters.minCommute, true, noLimit)}
+            formatHigh={formatCommute(filters.maxCommute, false, noLimit)}
+            label={t('filter.commute')}
             umamiEvent="filter-commute"
           />
 
@@ -360,11 +352,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 <svg className="w-3 h-3 text-gray-400 transition-transform group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 18l6-6-6-6" />
                 </svg>
-                Min Ratings
+                {t('filter.minRatings')}
               </span>
               {catMinCount > 0 && (
                 <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full tabular-nums">
-                  {catMinCount} set
+                  {t('filter.nSet', { count: catMinCount })}
                 </span>
               )}
             </summary>
@@ -373,8 +365,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 const current = filters.categoryMins[key] ?? null;
                 return (
                   <div key={key} className="flex items-center gap-1.5">
-                    <span className="text-[11px] text-gray-600 w-16 truncate shrink-0" title={RATING_LABELS[key]}>
-                      {CATEGORY_SHORT_LABELS[key]}
+                    <span className="text-[11px] text-gray-600 w-16 truncate shrink-0" title={t(`ratings.${key}`)}>
+                      {t(`shortLabels.${key}`)}
                     </span>
                     <div className="flex gap-0.5">
                       <button
@@ -388,7 +380,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                             : 'bg-white border-gray-200 text-gray-400 hover:bg-gray-50'
                         }`}
                       >
-                        off
+                        {t('filter.off')}
                       </button>
                       {CATEGORY_MIN_OPTIONS.map((v) => (
                         <button
@@ -423,8 +415,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
               />
               <span className="text-xs text-gray-600">
-                Hide flood-risk areas
-                <span className="text-gray-400 ml-1">(below 5m)</span>
+                {t('filter.hideFloodRisk')}
+                <span className="text-gray-400 ml-1">{t('filter.belowXm')}</span>
               </span>
             </label>
             <label className="flex items-center gap-2 cursor-pointer">
@@ -435,8 +427,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
               />
               <span className="text-xs text-gray-600">
-                Hide high seismic risk
-                <span className="text-gray-400 ml-1">({'>'}26% intensity 6+)</span>
+                {t('filter.hideHighSeismic')}
+                <span className="text-gray-400 ml-1">{t('filter.seismicThreshold')}</span>
               </span>
             </label>
           </div>
@@ -445,12 +437,16 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         {/* Match counter */}
         <div className="mt-3 text-xs tabular-nums">
           {filtered.length === totalWithRatings ? (
-            <span className="text-gray-400">{totalWithRatings} stations</span>
+            <span className="text-gray-400">{t('filter.stationCount', { count: totalWithRatings })}</span>
           ) : filtered.length === 0 ? (
-            <span className="text-amber-600">No stations match — try relaxing filters</span>
+            <span className="text-amber-600">{t('filter.noMatch')}</span>
           ) : (
             <span className="text-gray-500">
-              <span className="font-medium text-gray-700">{filtered.length}</span> of {totalWithRatings} stations match
+              {t.rich('filter.matchCount', {
+                filtered: filtered.length,
+                total: totalWithRatings,
+                bold: (chunks) => <span className="font-medium text-gray-700">{chunks}</span>,
+              })}
             </span>
           )}
         </div>
@@ -460,17 +456,17 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       {/* Weights */}
       <div>
-        <h2 className="text-lg font-bold mb-1">Weights</h2>
+        <h2 className="text-lg font-bold mb-1">{t('filter.weights')}</h2>
         <p className="text-xs text-gray-500 mb-3">
-          Adjust what matters most to you
+          {t('filter.weightsDescription')}
         </p>
         <div className="space-y-2">
           {(Object.keys(RATING_LABELS) as (keyof WeightConfig)[]).map(
             (key) => (
               <div key={key}>
                 <div className="flex justify-between text-xs mb-0.5 items-center gap-2">
-                  <Tooltip content={RATING_TOOLTIPS[key]}>
-                    <span className="text-gray-700">{RATING_LABELS[key]}</span>
+                  <Tooltip content={t(`ratingTooltips.${key}`)}>
+                    <span className="text-gray-700">{t(`ratings.${key}`)}</span>
                   </Tooltip>
                   <span className="text-gray-400 tabular-nums shrink-0">
                     {weights[key]}%
@@ -493,7 +489,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           data-umami-event="reset-weights"
           className="mt-2 text-xs text-blue-600 hover:underline"
         >
-          Reset to defaults
+          {t('filter.resetDefaults')}
         </button>
       </div>
 
@@ -501,10 +497,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       {/* Top Ranked */}
       <div>
-        <h2 className="text-lg font-bold mb-2">Top Ranked</h2>
+        <h2 className="text-lg font-bold mb-2">{t('filter.topRanked')}</h2>
         {ranked.length === 0 ? (
           <p className="text-sm text-gray-400">
-            {filtersActive ? 'No stations match your filters' : 'No rated stations yet'}
+            {filtersActive ? t('filter.noMatchFilters') : t('filter.noRatedYet')}
           </p>
         ) : (
           <ol className="space-y-1">
@@ -524,9 +520,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                     {i + 1}.
                   </span>
                   <span className="flex-1 text-sm font-medium truncate">
-                    {s.name_en}
+                    {stationPrimaryName(s, locale)}
                     {s.rentUnknown && (
-                      <span className="text-[10px] text-gray-400 ml-1 font-normal">(rent unconfirmed)</span>
+                      <span className="text-[10px] text-gray-400 ml-1 font-normal">{t('filter.rentUnconfirmed')}</span>
                     )}
                   </span>
                   <span
@@ -545,8 +541,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       <hr className="border-gray-200" />
 
       <div className="text-xs text-gray-400">
-        <p>{stations.length} stations mapped</p>
-        <p>{totalWithRatings} with ratings</p>
+        <p>{t('filter.stationsMapped', { count: stations.length })}</p>
+        <p>{t('filter.withRatings', { count: totalWithRatings })}</p>
       </div>
     </div>
   );

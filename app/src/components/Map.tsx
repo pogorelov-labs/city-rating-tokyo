@@ -11,7 +11,10 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { useTranslations, useLocale } from 'next-intl';
 import { MapStation, DEFAULT_FILTERS } from '@/lib/types';
+import { stationDisplayName } from '@/lib/station-name';
+import type { Locale } from '@/i18n/routing';
 import {
   calculateWeightedScore,
   compositeToColor,
@@ -22,7 +25,7 @@ import {
 } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import { useIsTouch } from '@/lib/use-is-touch';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 /**
  * Smart flyTo: adapts zoom target and animation based on current map state.
@@ -337,6 +340,8 @@ interface MapViewProps {
 }
 
 export default function MapView({ stations, thumbnails = {}, snippets = {} }: MapViewProps) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
   const weights = useAppStore((s) => s.weights);
   const selectedStation = useAppStore((s) => s.selectedStation);
   const setSelectedStation = useAppStore((s) => s.setSelectedStation);
@@ -459,7 +464,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
-        const snippet = snippets[station.slug];
+        // Snippets are Russian-only until CRTKY-109 provides multilingual descriptions
+        const snippet = locale === 'ru' ? snippets[station.slug] : undefined;
 
         // Heatmap mode: color by selected dimension
         let displayValue: number | null = null;
@@ -554,16 +560,16 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     slug={station.slug}
                     thumb={thumbEntry?.thumb}
                     lqip={thumbEntry?.lqip}
-                    nameEn={station.name_en}
-                    nameJp={station.name_jp}
+                    nameEn={stationDisplayName(station, locale).primary}
+                    nameJp={stationDisplayName(station, locale).secondary}
                     score={score}
                     color={color}
                   />
                   <div style={{ padding: '8px 10px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                       <div>
-                        <div style={{ fontWeight: 700, fontSize: 14 }}>{station.name_en}</div>
-                        <div style={{ color: '#6b7280', fontSize: 12 }}>{station.name_jp}</div>
+                        <div style={{ fontWeight: 700, fontSize: 14 }}>{stationDisplayName(station, locale).primary}</div>
+                        <div style={{ color: '#6b7280', fontSize: 12 }}>{stationDisplayName(station, locale).secondary}</div>
                       </div>
                       {score !== null && (
                         <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>
@@ -586,13 +592,13 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       </div>
                     )}
                     <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
-                      {station.line_count} lines
+                      {t('filter.lines', { count: station.line_count })}
                       {station.rent_1k && (
                         <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
                       )}
                     </div>
                     <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
-                      Click for details →
+                      {t('map.clickForDetails')}
                     </div>
                   </div>
                 </div>
@@ -610,18 +616,18 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       slug={station.slug}
                       thumb={thumbEntry?.thumb}
                       lqip={thumbEntry?.lqip}
-                      nameEn={station.name_en}
-                      nameJp={station.name_jp}
+                      nameEn={stationDisplayName(station, locale).primary}
+                      nameJp={stationDisplayName(station, locale).secondary}
                       score={score}
                       color={color}
                     />
                   </div>
                 )}
                 <div className="font-bold text-base">
-                  {station.name_en}
+                  {stationDisplayName(station, locale).primary}
                 </div>
                 <div className="text-gray-500 text-sm mb-1">
-                  {station.name_jp}
+                  {stationDisplayName(station, locale).secondary}
                 </div>
                 {score !== null ? (
                   <>
@@ -629,7 +635,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                       {score.toFixed(1)} / 10
                     </div>
                     <div className="text-xs text-gray-500 mb-2">
-                      {station.line_count} lines
+                      {t('filter.lines', { count: station.line_count })}
                       {station.rent_1k && (
                         <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
                       )}
@@ -647,14 +653,14 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                         data-umami-event="view-details"
                         data-umami-event-station={station.slug}
                       >
-                        View details &rarr;
+                        {t('map.viewDetails')}
                       </Link>
                       {isCompared ? (
                         <button
                           onClick={(e) => { e.stopPropagation(); removeCompareStation(station.slug); }}
                           className="text-red-500 text-xs hover:underline"
                         >
-                          Remove compare
+                          {t('map.removeCompare')}
                         </button>
                       ) : (
                         <button
@@ -662,14 +668,14 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                           className="text-purple-600 text-xs hover:underline disabled:opacity-40"
                           disabled={compareStations.length >= 3}
                         >
-                          + Compare
+                          {t('map.compare')}
                         </button>
                       )}
                     </div>
                   </>
                 ) : (
                   <div className="text-xs text-gray-400">
-                    {station.line_count} lines &middot; Data coming soon
+                    {t('filter.lines', { count: station.line_count })} &middot; {t('map.dataComingSoon')}
                   </div>
                 )}
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { trackError } from '@/lib/track-error';
 
 interface GalleryImage {
@@ -21,9 +22,11 @@ interface ImageGalleryProps {
 function GalleryImageCard({
   image,
   onClick,
+  photoByLabel,
 }: {
   image: GalleryImage;
   onClick: () => void;
+  photoByLabel: string;
 }) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -43,9 +46,6 @@ function GalleryImageCard({
           style={{ filter: 'blur(20px)', transform: 'scale(1.1)' }}
         />
       )}
-      {/* Full-res image — eager load, LQIP covers the opacity:0 state.
-          Gallery shows max 6 images; eager loading ~1 MB total is acceptable
-          and avoids Chrome lazy-loading bugs with opacity:0 behind LQIP. */}
       {!failed && (
         <img
           src={image.url}
@@ -68,7 +68,7 @@ function GalleryImageCard({
             className="text-[10px] text-white/80 hover:text-white"
             onClick={(e) => e.stopPropagation()}
           >
-            Photo by {image.photographer} on Unsplash
+            {photoByLabel}
           </a>
         ) : image.attribution ? (
           <span className="text-[10px] text-white/80">{image.attribution}</span>
@@ -170,6 +170,7 @@ function Lightbox({
 const INITIAL_SHOW = 6;
 
 export default function ImageGallery({ images, stationName }: ImageGalleryProps) {
+  const t = useTranslations('station');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
@@ -191,10 +192,15 @@ export default function ImageGallery({ images, stationName }: ImageGalleryProps)
 
   return (
     <section className="bg-white rounded-lg border border-gray-200 p-5">
-      <h2 className="font-bold text-lg mb-3">Gallery</h2>
+      <h2 className="font-bold text-lg mb-3">{t('gallery')}</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {visibleImages.map((img, i) => (
-          <GalleryImageCard key={img.url} image={img} onClick={() => openLightbox(i)} />
+          <GalleryImageCard
+            key={img.url}
+            image={img}
+            onClick={() => openLightbox(i)}
+            photoByLabel={img.photographer ? t('photoBy', { photographer: img.photographer }) : ''}
+          />
         ))}
       </div>
       {hasMore && !showAll && (
@@ -203,11 +209,11 @@ export default function ImageGallery({ images, stationName }: ImageGalleryProps)
           data-umami-event="show-all-photos"
           className="mt-3 text-sm text-blue-600 hover:underline"
         >
-          Show all {images.length} photos
+          {t('showAllPhotos', { count: images.length })}
         </button>
       )}
       <p className="text-[10px] text-gray-400 mt-2">
-        Images via Wikimedia Commons (CC-BY-SA) & Unsplash
+        {t('imageAttribution')}
       </p>
 
       {lightboxIndex !== null && images[lightboxIndex] && (
