@@ -80,7 +80,7 @@
 | ~~Реальные `transit_minutes`~~ | ✅ Done — калиброванная модель | Geographic + line connectivity | ~~🔴 high~~ ✅ | **CRTKY-81** ✅ |
 | MLIT S12 refresh + хвост crowd | Закрыть `crowd: estimate` где возможно | MLIT S12, см. [research/03-crowd.md] | 🟡 medium | **CRTKY-84** |
 | OSM green extended tags | Доп. сигнал к площади | `landuse`, `natural` | 🟢 low | Внутри **CRTKY-42** / [research/04-green.md] |
-| Daily essentials (10th category) | Supermarket, pharmacy, clinic и т.д. | Overpass → `osm_livability` (**1470/1493, 98%**) | 🔴 high | **CRTKY-87** |
+| ~~Daily essentials (10th category)~~ | ✅ Done — shipped as 10th category in PR #81 | Overpass → `osm_livability` (**1493/1493**) | ~~🔴 high~~ ✅ | **CRTKY-87** ✅ |
 
 ### Phase 0 — открытые источники до коммерции (дисциплина бэклога)
 
@@ -332,11 +332,16 @@ Sprint 5 (mobile / performance):
 - ✅ Hide halo + close popup during flyTo (PR #73)
 - ✅ iOS Safari fixes — input 16px prevents auto-zoom, search pill clears Heatmap, overflow-x-hidden, safe-area zoom buttons (PR #76)
 
-Sprint 6 (data expansion):
-- 🔄 `CRTKY-87` Daily essentials (osm_livability) — **1470/1493 (98%)**, 23 stations remaining. Unlocks 10th category.
-- 🔄 `CRTKY-42` Green area re-scrape — In Progress. Scraper exists, needs VPS Docker run. Unlocks `strong` confidence for green.
+Sprint 6 (data expansion + i18n):
+- ✅ `CRTKY-87` Daily essentials — **Done** (PR #81). 10th category shipped. 1493/1493 scraped, pipeline run, frontend integrated.
+- ✅ `CRTKY-98` i18n EN/JA/RU — **Done** (PR #82). next-intl v4, 190+ keys, 15 components, LocaleSwitcher, hreflang sitemap, 4486 pages.
+- ✅ `CRTKY-111` Locale-aware station naming — **Done** (PR #82). `stationDisplayName()` helper, all 15 display sites migrated.
+- ✅ `CRTKY-50` /methodology page — **Done** (PR #81, fixed in PR #83 for locale routing).
+- ✅ `CRTKY-34` GDPR privacy notice — **Done** (PR #83). Cookie-free analytics footer in 3 locales.
+- ✅ `CRTKY-18` SEO — **Done**. robots.txt, sitemap, JSON-LD, OG images all in place.
+- 🔄 `CRTKY-42` Green area re-scrape — In Progress. 583/1398 have area data. Needs VPS Docker run for remaining.
 - 🔲 `CRTKY-43` Rent coverage expansion (HOMES scraping) — Backlog. 18% station-level → target 60-70%.
-- ✅ `CRTKY-97` Face/portrait image removal — Done (PR #79). 136 images removed across 101 stations.
+- ✅ `CRTKY-97` Face/portrait image removal — Done (PR #79/80).
 
 Sprint 1 (data completion) issues were tracked separately and scrapers are all running. See `research/00-overview.md` for data source status.
 
