@@ -279,6 +279,16 @@
     "moderate": "Moderate risk. Standard earthquake preparedness measures are recommended.",
     "low": "Lower risk area, typically on firmer bedrock. Standard precautions still apply."
   },
+  "transport": {
+    "title": "Transport & Location",
+    "moreLines": "+{count} more",
+    "showFewer": "Show fewer",
+    "typeGeneral": "Rail",
+    "typeSubway": "Subway",
+    "typeMonorail": "Monorail",
+    "typeTram": "Tram",
+    "typeOther": "Other"
+  },
   "privacy": {
     "notice": "Cookie-free analytics \u00b7 your data stays anonymous"
   },

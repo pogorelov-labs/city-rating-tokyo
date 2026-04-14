@@ -21,6 +21,7 @@ import ConfidenceBadge, { ConfidenceIcon } from '@/components/ConfidenceBadge';
 import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import { NaturalEnvironment } from '@/components/NaturalEnvironment';
+import TransportLines from '@/components/TransportLines';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
@@ -205,6 +206,13 @@ export default async function StationPage({
         {station.transit_minutes && (
           <HubStrip transitMinutes={station.transit_minutes} mapsUrl={mapsUrl} />
         )}
+
+        {/* Transport lines + ward/city */}
+        <TransportLines
+          lines={station.lines}
+          ward={station.ward ?? null}
+          locale={loc}
+        />
 
         {/* Radar chart + Ratings breakdown */}
         {station.ratings && (

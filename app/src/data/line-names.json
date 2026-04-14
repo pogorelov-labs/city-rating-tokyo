@@ -1,0 +1,1018 @@
+{
+  "11301": {
+    "name_ja": "東海道線",
+    "name_en": "Tokaido Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F68B1E",
+    "type": "general"
+  },
+  "11302": {
+    "name_ja": "山手線",
+    "name_en": "Yamanote Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#80C342",
+    "type": "general"
+  },
+  "11303": {
+    "name_ja": "南武線",
+    "name_en": "Nambu Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F2D01F",
+    "type": "general"
+  },
+  "11304": {
+    "name_ja": "鶴見線",
+    "name_en": "Tsurumi Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F2D01F",
+    "type": "general"
+  },
+  "11305": {
+    "name_ja": "武蔵野線",
+    "name_en": "Musashino Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#EB5A28",
+    "type": "general"
+  },
+  "11306": {
+    "name_ja": "横浜線",
+    "name_en": "Yokohama Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#B1CB39",
+    "type": "general"
+  },
+  "11307": {
+    "name_ja": "根岸線",
+    "name_en": "Negishi Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#1DAED1",
+    "type": "general"
+  },
+  "11308": {
+    "name_ja": "横須賀線",
+    "name_en": "Yokosuka Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#007AC1",
+    "type": "general"
+  },
+  "11309": {
+    "name_ja": "相模線",
+    "name_en": "Sagami Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00898B",
+    "type": "general"
+  },
+  "11311": {
+    "name_ja": "中央本線",
+    "name_en": "Chuo Main Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#0074BE",
+    "type": "general"
+  },
+  "11312": {
+    "name_ja": "中央線快速",
+    "name_en": "Chuo Line (Rapid)",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F15A22",
+    "type": "general"
+  },
+  "11313": {
+    "name_ja": "中央・総武線各駅停車",
+    "name_en": "Chuo-Sobu Line (Local)",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#FFD400",
+    "type": "general"
+  },
+  "11314": {
+    "name_ja": "総武本線",
+    "name_en": "Sobu Main Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#D4C200",
+    "type": "general"
+  },
+  "11315": {
+    "name_ja": "青梅線",
+    "name_en": "Ome Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#DD6935",
+    "type": "general"
+  },
+  "11316": {
+    "name_ja": "五日市線",
+    "name_en": "Itsukaichi Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#DD6935",
+    "type": "general"
+  },
+  "11317": {
+    "name_ja": "八高線",
+    "name_en": "Hachiko Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#A09D94",
+    "type": "general"
+  },
+  "11318": {
+    "name_ja": "八高線",
+    "name_en": "Hachiko Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#A09D94",
+    "type": "general"
+  },
+  "11319": {
+    "name_ja": "宇都宮線",
+    "name_en": "Utsunomiya Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F68B1E",
+    "type": "general"
+  },
+  "11320": {
+    "name_ja": "常磐線",
+    "name_en": "Joban Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#1DAF7E",
+    "type": "general"
+  },
+  "11321": {
+    "name_ja": "埼京線",
+    "name_en": "Saikyo Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00B48D",
+    "type": "general"
+  },
+  "11322": {
+    "name_ja": "川越線",
+    "name_en": "Kawagoe Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#009E60",
+    "type": "general"
+  },
+  "11323": {
+    "name_ja": "高崎線",
+    "name_en": "Takasaki Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F18E41",
+    "type": "general"
+  },
+  "11324": {
+    "name_ja": "外房線",
+    "name_en": "Sotobo Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#FF4500",
+    "type": "general"
+  },
+  "11325": {
+    "name_ja": "内房線",
+    "name_en": "Uchibo Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00BFFF",
+    "type": "general"
+  },
+  "11326": {
+    "name_ja": "京葉線",
+    "name_en": "Keiyo Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#C9252F",
+    "type": "general"
+  },
+  "11327": {
+    "name_ja": "成田線",
+    "name_en": "Narita Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00BA6E",
+    "type": "general"
+  },
+  "11328": {
+    "name_ja": "成田エクスプレス",
+    "name_en": "Narita Express",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#DB2027",
+    "type": "general"
+  },
+  "11329": {
+    "name_ja": "鹿島線",
+    "name_en": "Kashima Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#B15D00",
+    "type": "general"
+  },
+  "11330": {
+    "name_ja": "久留里線",
+    "name_en": "Kururi Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00C9AA",
+    "type": "general"
+  },
+  "11331": {
+    "name_ja": "東金線",
+    "name_en": "Togane Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#F15A22",
+    "type": "general"
+  },
+  "11332": {
+    "name_ja": "京浜東北線",
+    "name_en": "Keihin-Tohoku Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#00B2E5",
+    "type": "general"
+  },
+  "11333": {
+    "name_ja": "湘南新宿ライン",
+    "name_en": "Shonan-Shinjuku Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#E31F26",
+    "type": "general"
+  },
+  "11343": {
+    "name_ja": "上野東京ライン",
+    "name_en": "Ueno-Tokyo Line",
+    "operator_ja": "JR東日本",
+    "operator_en": "JR East",
+    "color": "#91278F",
+    "type": "general"
+  },
+  "11505": {
+    "name_ja": "御殿場線",
+    "name_en": "Gotemba Line",
+    "operator_ja": "JR東海",
+    "operator_en": "JR Central",
+    "color": "#477543",
+    "type": "general"
+  },
+  "21001": {
+    "name_ja": "東武東上線",
+    "name_en": "Tobu Tojo Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#004098",
+    "type": "general"
+  },
+  "21002": {
+    "name_ja": "東武伊勢崎線",
+    "name_en": "Tobu Skytree Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "21003": {
+    "name_ja": "東武日光線",
+    "name_en": "Tobu Nikko Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#FFA500",
+    "type": "general"
+  },
+  "21004": {
+    "name_ja": "東武アーバンパークライン",
+    "name_en": "Tobu Urban Park Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#00BFFF",
+    "type": "general"
+  },
+  "21005": {
+    "name_ja": "東武亀戸線",
+    "name_en": "Tobu Kameido Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "21006": {
+    "name_ja": "東武大師線",
+    "name_en": "Tobu Daishi Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "21007": {
+    "name_ja": "東武越生線",
+    "name_en": "Tobu Ogose Line",
+    "operator_ja": "東武鉄道",
+    "operator_en": "Tobu Railway",
+    "color": "#004098",
+    "type": "general"
+  },
+  "22001": {
+    "name_ja": "西武池袋線",
+    "name_en": "Seibu Ikebukuro Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "22002": {
+    "name_ja": "西武秩父線",
+    "name_en": "Seibu Chichibu Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "22003": {
+    "name_ja": "西武有楽町線",
+    "name_en": "Seibu Yurakucho Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "22004": {
+    "name_ja": "西武豊島線",
+    "name_en": "Seibu Toshima Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "22005": {
+    "name_ja": "西武狭山線",
+    "name_en": "Seibu Sayama Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "22006": {
+    "name_ja": "西武山口線",
+    "name_en": "Seibu Yamaguchi Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#EF473D",
+    "type": "monorail"
+  },
+  "22007": {
+    "name_ja": "西武新宿線",
+    "name_en": "Seibu Shinjuku Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#00A6BF",
+    "type": "general"
+  },
+  "22008": {
+    "name_ja": "西武拝島線",
+    "name_en": "Seibu Haijima Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#00A6BF",
+    "type": "general"
+  },
+  "22009": {
+    "name_ja": "西武西武園線",
+    "name_en": "Seibu Seibuen Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#34B559",
+    "type": "general"
+  },
+  "22010": {
+    "name_ja": "西武国分寺線",
+    "name_en": "Seibu Kokubunji Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#34B559",
+    "type": "general"
+  },
+  "22011": {
+    "name_ja": "西武多摩湖線",
+    "name_en": "Seibu Tamako Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#FAAA27",
+    "type": "general"
+  },
+  "22012": {
+    "name_ja": "西武多摩川線",
+    "name_en": "Seibu Tamagawa Line",
+    "operator_ja": "西武鉄道",
+    "operator_en": "Seibu Railway",
+    "color": "#ED772D",
+    "type": "general"
+  },
+  "23001": {
+    "name_ja": "京成本線",
+    "name_en": "Keisei Main Line",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "23002": {
+    "name_ja": "京成押上線",
+    "name_en": "Keisei Oshiage Line",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "23003": {
+    "name_ja": "京成金町線",
+    "name_en": "Keisei Kanamachi Line",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "23004": {
+    "name_ja": "京成千葉線",
+    "name_en": "Keisei Chiba Line",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "23005": {
+    "name_ja": "京成千原線",
+    "name_en": "Keisei Chihara Line",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#005AAA",
+    "type": "general"
+  },
+  "23006": {
+    "name_ja": "成田スカイアクセス",
+    "name_en": "Narita Sky Access",
+    "operator_ja": "京成電鉄",
+    "operator_en": "Keisei Electric Railway",
+    "color": "#FF8620",
+    "type": "general"
+  },
+  "24001": {
+    "name_ja": "京王線",
+    "name_en": "Keio Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "24002": {
+    "name_ja": "京王相模原線",
+    "name_en": "Keio Sagamihara Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "24003": {
+    "name_ja": "京王高尾線",
+    "name_en": "Keio Takao Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "24004": {
+    "name_ja": "京王競馬場線",
+    "name_en": "Keio Racecourse Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "24005": {
+    "name_ja": "京王動物園線",
+    "name_en": "Keio Zoo Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "24006": {
+    "name_ja": "京王井の頭線",
+    "name_en": "Keio Inokashira Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#1A407B",
+    "type": "general"
+  },
+  "24007": {
+    "name_ja": "京王新線",
+    "name_en": "Keio New Line",
+    "operator_ja": "京王電鉄",
+    "operator_en": "Keio Corporation",
+    "color": "#E3379F",
+    "type": "general"
+  },
+  "25001": {
+    "name_ja": "小田急小田原線",
+    "name_en": "Odakyu Odawara Line",
+    "operator_ja": "小田急電鉄",
+    "operator_en": "Odakyu Electric Railway",
+    "color": "#2683CE",
+    "type": "general"
+  },
+  "25002": {
+    "name_ja": "小田急江ノ島線",
+    "name_en": "Odakyu Enoshima Line",
+    "operator_ja": "小田急電鉄",
+    "operator_en": "Odakyu Electric Railway",
+    "color": "#2683CE",
+    "type": "general"
+  },
+  "25003": {
+    "name_ja": "小田急多摩線",
+    "name_en": "Odakyu Tama Line",
+    "operator_ja": "小田急電鉄",
+    "operator_en": "Odakyu Electric Railway",
+    "color": "#2683CE",
+    "type": "general"
+  },
+  "26001": {
+    "name_ja": "東急東横線",
+    "name_en": "Tokyu Toyoko Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#DA0442",
+    "type": "general"
+  },
+  "26002": {
+    "name_ja": "東急目黒線",
+    "name_en": "Tokyu Meguro Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#009CD2",
+    "type": "general"
+  },
+  "26003": {
+    "name_ja": "東急田園都市線",
+    "name_en": "Tokyu Den-en-toshi Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#20A288",
+    "type": "general"
+  },
+  "26004": {
+    "name_ja": "東急大井町線",
+    "name_en": "Tokyu Oimachi Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#F18C43",
+    "type": "general"
+  },
+  "26005": {
+    "name_ja": "東急池上線",
+    "name_en": "Tokyu Ikegami Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#EE86A7",
+    "type": "general"
+  },
+  "26006": {
+    "name_ja": "東急多摩川線",
+    "name_en": "Tokyu Tamagawa Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#AE0378",
+    "type": "general"
+  },
+  "26007": {
+    "name_ja": "東急世田谷線",
+    "name_en": "Tokyu Setagaya Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#FCC70D",
+    "type": "tram"
+  },
+  "26008": {
+    "name_ja": "東急こどもの国線",
+    "name_en": "Tokyu Kodomonokuni Line",
+    "operator_ja": "東急電鉄",
+    "operator_en": "Tokyu Corporation",
+    "color": "#0068B7",
+    "type": "general"
+  },
+  "27001": {
+    "name_ja": "京急本線",
+    "name_en": "Keikyu Main Line",
+    "operator_ja": "京急電鉄",
+    "operator_en": "Keikyu Corporation",
+    "color": "#32CAE2",
+    "type": "general"
+  },
+  "27002": {
+    "name_ja": "京急空港線",
+    "name_en": "Keikyu Airport Line",
+    "operator_ja": "京急電鉄",
+    "operator_en": "Keikyu Corporation",
+    "color": "#32CAE2",
+    "type": "general"
+  },
+  "27003": {
+    "name_ja": "京急大師線",
+    "name_en": "Keikyu Daishi Line",
+    "operator_ja": "京急電鉄",
+    "operator_en": "Keikyu Corporation",
+    "color": "#32CAE2",
+    "type": "general"
+  },
+  "27004": {
+    "name_ja": "京急逗子線",
+    "name_en": "Keikyu Zushi Line",
+    "operator_ja": "京急電鉄",
+    "operator_en": "Keikyu Corporation",
+    "color": "#32CAE2",
+    "type": "general"
+  },
+  "27005": {
+    "name_ja": "京急久里浜線",
+    "name_en": "Keikyu Kurihama Line",
+    "operator_ja": "京急電鉄",
+    "operator_en": "Keikyu Corporation",
+    "color": "#32CAE2",
+    "type": "general"
+  },
+  "28001": {
+    "name_ja": "東京メトロ銀座線",
+    "name_en": "Tokyo Metro Ginza Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#FF9500",
+    "type": "subway"
+  },
+  "28002": {
+    "name_ja": "東京メトロ丸ノ内線",
+    "name_en": "Tokyo Metro Marunouchi Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#F62E36",
+    "type": "subway"
+  },
+  "28003": {
+    "name_ja": "東京メトロ日比谷線",
+    "name_en": "Tokyo Metro Hibiya Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#B5B5AC",
+    "type": "subway"
+  },
+  "28004": {
+    "name_ja": "東京メトロ東西線",
+    "name_en": "Tokyo Metro Tozai Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#009BBF",
+    "type": "subway"
+  },
+  "28005": {
+    "name_ja": "東京メトロ千代田線",
+    "name_en": "Tokyo Metro Chiyoda Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#00BB85",
+    "type": "subway"
+  },
+  "28006": {
+    "name_ja": "東京メトロ有楽町線",
+    "name_en": "Tokyo Metro Yurakucho Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#C1A470",
+    "type": "subway"
+  },
+  "28008": {
+    "name_ja": "東京メトロ半蔵門線",
+    "name_en": "Tokyo Metro Hanzomon Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#8F76D6",
+    "type": "subway"
+  },
+  "28009": {
+    "name_ja": "東京メトロ南北線",
+    "name_en": "Tokyo Metro Namboku Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#00AC9B",
+    "type": "subway"
+  },
+  "28010": {
+    "name_ja": "東京メトロ副都心線",
+    "name_en": "Tokyo Metro Fukutoshin Line",
+    "operator_ja": "東京メトロ",
+    "operator_en": "Tokyo Metro",
+    "color": "#9C5E31",
+    "type": "subway"
+  },
+  "29001": {
+    "name_ja": "相鉄本線",
+    "name_en": "Sotetsu Main Line",
+    "operator_ja": "相模鉄道",
+    "operator_en": "Sagami Railway",
+    "color": "#2561A7",
+    "type": "general"
+  },
+  "29002": {
+    "name_ja": "相鉄いずみ野線",
+    "name_en": "Sotetsu Izumino Line",
+    "operator_ja": "相模鉄道",
+    "operator_en": "Sagami Railway",
+    "color": "#2561A7",
+    "type": "general"
+  },
+  "99301": {
+    "name_ja": "都営大江戸線",
+    "name_en": "Oedo Line",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#CE045B",
+    "type": "subway"
+  },
+  "99302": {
+    "name_ja": "都営浅草線",
+    "name_en": "Asakusa Line",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#EC6E65",
+    "type": "subway"
+  },
+  "99303": {
+    "name_ja": "都営三田線",
+    "name_en": "Mita Line",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#006CB6",
+    "type": "subway"
+  },
+  "99304": {
+    "name_ja": "都営新宿線",
+    "name_en": "Shinjuku Line",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#B0C124",
+    "type": "subway"
+  },
+  "99305": {
+    "name_ja": "都電荒川線",
+    "name_en": "Tokyo Sakura Tram",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#EE86A7",
+    "type": "tram"
+  },
+  "99306": {
+    "name_ja": "秩父鉄道秩父本線",
+    "name_en": "Chichibu Main Line",
+    "operator_ja": "秩父鉄道",
+    "operator_en": "Chichibu Railway",
+    "color": "#1E90FF",
+    "type": "general"
+  },
+  "99307": {
+    "name_ja": "埼玉高速鉄道線",
+    "name_en": "Saitama Railway Line",
+    "operator_ja": "埼玉高速鉄道",
+    "operator_en": "Saitama Railway",
+    "color": "#345CAA",
+    "type": "subway"
+  },
+  "99308": {
+    "name_ja": "いすみ線",
+    "name_en": "Isumi Line",
+    "operator_ja": "いすみ鉄道",
+    "operator_en": "Isumi Railway",
+    "color": "#D7C447",
+    "type": "general"
+  },
+  "99309": {
+    "name_ja": "つくばエクスプレス",
+    "name_en": "Tsukuba Express",
+    "operator_ja": "首都圏新都市鉄道",
+    "operator_en": "Metropolitan Intercity Railway",
+    "color": "#000084",
+    "type": "general"
+  },
+  "99310": {
+    "name_ja": "みなとみらい線",
+    "name_en": "Minatomirai Line",
+    "operator_ja": "横浜高速鉄道",
+    "operator_en": "Yokohama Minatomirai Railway",
+    "color": "#00008B",
+    "type": "subway"
+  },
+  "99311": {
+    "name_ja": "ゆりかもめ",
+    "name_en": "Yurikamome",
+    "operator_ja": "ゆりかもめ",
+    "operator_en": "Yurikamome",
+    "color": "#0065A6",
+    "type": "other"
+  },
+  "99313": {
+    "name_ja": "山万ユーカリが丘線",
+    "name_en": "Yamaman Yukarigaoka Line",
+    "operator_ja": "山万",
+    "operator_en": "Yamaman",
+    "color": "#2E8B57",
+    "type": "other"
+  },
+  "99314": {
+    "name_ja": "伊豆箱根鉄道大雄山線",
+    "name_en": "Daiyuzan Line",
+    "operator_ja": "伊豆箱根鉄道",
+    "operator_en": "Izuhakone Railway",
+    "color": "#E44D2E",
+    "type": "general"
+  },
+  "99316": {
+    "name_ja": "横浜市営地下鉄ブルーライン",
+    "name_en": "Blue Line",
+    "operator_ja": "横浜市交通局",
+    "operator_en": "Yokohama Municipal Subway",
+    "color": "#0000FF",
+    "type": "subway"
+  },
+  "99317": {
+    "name_ja": "金沢シーサイドライン",
+    "name_en": "Kanazawa Seaside Line",
+    "operator_ja": "横浜シーサイドライン",
+    "operator_en": "Yokohama Seaside Line",
+    "color": "#004EA2",
+    "type": "other"
+  },
+  "99320": {
+    "name_ja": "江ノ島電鉄線",
+    "name_en": "Enoshima Electric Railway",
+    "operator_ja": "江ノ島電鉄",
+    "operator_en": "Enoden",
+    "color": "#005C3F",
+    "type": "tram"
+  },
+  "99321": {
+    "name_ja": "埼玉新都市交通伊奈線",
+    "name_en": "New Shuttle",
+    "operator_ja": "埼玉新都市交通",
+    "operator_en": "Saitama New Urban Transit",
+    "color": "#10A899",
+    "type": "other"
+  },
+  "99324": {
+    "name_ja": "芝山鉄道線",
+    "name_en": "Shibayama Railway Line",
+    "operator_ja": "芝山鉄道",
+    "operator_en": "Shibayama Railway",
+    "color": "#008459",
+    "type": "general"
+  },
+  "99325": {
+    "name_ja": "小湊鉄道線",
+    "name_en": "Kominato Railway Line",
+    "operator_ja": "小湊鉄道",
+    "operator_en": "Kominato Railway",
+    "color": "#D32F2F",
+    "type": "general"
+  },
+  "99326": {
+    "name_ja": "湘南モノレール江の島線",
+    "name_en": "Shonan Monorail",
+    "operator_ja": "湘南モノレール",
+    "operator_en": "Shonan Monorail",
+    "color": "#1D2088",
+    "type": "monorail"
+  },
+  "99329": {
+    "name_ja": "新京成線",
+    "name_en": "Shin-Keisei Line",
+    "operator_ja": "新京成電鉄",
+    "operator_en": "Shin-Keisei Electric Railway",
+    "color": "#FF69B4",
+    "type": "general"
+  },
+  "99331": {
+    "name_ja": "千葉都市モノレール1号線",
+    "name_en": "Chiba Monorail Line 1",
+    "operator_ja": "千葉都市モノレール",
+    "operator_en": "Chiba Urban Monorail",
+    "color": "#0072BC",
+    "type": "monorail"
+  },
+  "99332": {
+    "name_ja": "千葉都市モノレール2号線",
+    "name_en": "Chiba Monorail Line 2",
+    "operator_ja": "千葉都市モノレール",
+    "operator_en": "Chiba Urban Monorail",
+    "color": "#0072BC",
+    "type": "monorail"
+  },
+  "99333": {
+    "name_ja": "流鉄流山線",
+    "name_en": "Ryutetsu Nagareyama Line",
+    "operator_ja": "流鉄",
+    "operator_en": "Ryutetsu",
+    "color": "#F39800",
+    "type": "general"
+  },
+  "99334": {
+    "name_ja": "多摩都市モノレール線",
+    "name_en": "Tama Monorail",
+    "operator_ja": "多摩都市モノレール",
+    "operator_en": "Tama Urban Monorail",
+    "color": "#E97119",
+    "type": "monorail"
+  },
+  "99335": {
+    "name_ja": "銚子電鉄線",
+    "name_en": "Choshi Electric Railway",
+    "operator_ja": "銚子電気鉄道",
+    "operator_en": "Choshi Electric Railway",
+    "color": "#B5121B",
+    "type": "general"
+  },
+  "99336": {
+    "name_ja": "東京モノレール羽田空港線",
+    "name_en": "Tokyo Monorail",
+    "operator_ja": "東京モノレール",
+    "operator_en": "Tokyo Monorail",
+    "color": "#000080",
+    "type": "monorail"
+  },
+  "99337": {
+    "name_ja": "りんかい線",
+    "name_en": "Rinkai Line",
+    "operator_ja": "東京臨海高速鉄道",
+    "operator_en": "Tokyo Waterfront Area Rapid Transit",
+    "color": "#00B48D",
+    "type": "general"
+  },
+  "99338": {
+    "name_ja": "東葉高速線",
+    "name_en": "Toyo Rapid Line",
+    "operator_ja": "東葉高速鉄道",
+    "operator_en": "Toyo Rapid Railway",
+    "color": "#0AAA3C",
+    "type": "general"
+  },
+  "99339": {
+    "name_ja": "箱根登山鉄道鉄道線",
+    "name_en": "Hakone Tozan Railway",
+    "operator_ja": "箱根登山鉄道",
+    "operator_en": "Hakone Tozan Railway",
+    "color": "#E44D2E",
+    "type": "general"
+  },
+  "99340": {
+    "name_ja": "北総鉄道北総線",
+    "name_en": "Hokuso Line",
+    "operator_ja": "北総鉄道",
+    "operator_en": "Hokuso Railway",
+    "color": "#00BFFF",
+    "type": "general"
+  },
+  "99342": {
+    "name_ja": "日暮里・舎人ライナー",
+    "name_en": "Nippori-Toneri Liner",
+    "operator_ja": "東京都交通局",
+    "operator_en": "Toei",
+    "color": "#FF69B4",
+    "type": "other"
+  },
+  "99343": {
+    "name_ja": "横浜市営地下鉄グリーンライン",
+    "name_en": "Green Line",
+    "operator_ja": "横浜市交通局",
+    "operator_en": "Yokohama Municipal Subway",
+    "color": "#048D58",
+    "type": "subway"
+  },
+  "99344": {
+    "name_ja": "箱根登山ケーブルカー",
+    "name_en": "Hakone Tozan Cable Car",
+    "operator_ja": "箱根登山鉄道",
+    "operator_en": "Hakone Tozan Railway",
+    "color": "#E44D2E",
+    "type": "other"
+  }
+}

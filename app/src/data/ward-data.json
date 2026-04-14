@@ -1,0 +1,7467 @@
+{
+  "shinjuku": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tokyo": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yokohama": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "shibuya": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chiba": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "ikebukuro": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "omiya": {
+    "city_name": "さいたま市",
+    "ward_name": "大宮区",
+    "prefecture_name": "埼玉県"
+  },
+  "ueno": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimbashi": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kita-senju": {
+    "city_name": "足立区",
+    "ward_name": "千住旭町",
+    "prefecture_name": ""
+  },
+  "musashi-kosugi": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "narita": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nippori": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ofuna": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shinagawa": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akabane": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akihabara": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hachioji": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "iidabashi": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-takasago": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kichijoji": {
+    "city_name": "武蔵野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kokubunji": {
+    "city_name": "国分寺市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nagatacho": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-funabashi": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "okachimachi": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "otemachi": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tachikawa": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "totsuka": {
+    "city_name": "横浜市",
+    "ward_name": "戸塚区",
+    "prefecture_name": "神奈川県"
+  },
+  "yotsuya": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ebisu": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "funabashi": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "haijima": {
+    "city_name": "昭島市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ichigaya": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kanda": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kuukou-daini-biru-daini-ryokyaku-taaminaru": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "meguro": {
+    "city_name": "品川区",
+    "ward_name": "上大崎",
+    "prefecture_name": ""
+  },
+  "mitaka": {
+    "city_name": "三鷹市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "naritakuukou-daiichi-ryokyaku-taaminaru": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nerima": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-nippori": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ochanomizu": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "odawara": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "osaki": {
+    "city_name": "品川区",
+    "ward_name": "大崎",
+    "prefecture_name": ""
+  },
+  "oshiage-sukaitsurii-mae": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-kamagaya": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takao": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "urawa": {
+    "city_name": "さいたま市",
+    "ward_name": "浦和区",
+    "prefecture_name": "埼玉県"
+  },
+  "abiko": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "aoto": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "aoyama-itchome": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "asakusa": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "bakurocho": {
+    "city_name": "中央区",
+    "ward_name": "日本橋馬喰町",
+    "prefecture_name": ""
+  },
+  "chikatetsu-akatsuka": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chikatetsu-narimasu": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "choushi": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ebina": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "fujisawa": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ginza": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gotanda": {
+    "city_name": "品川区",
+    "ward_name": "東五反田",
+    "prefecture_name": ""
+  },
+  "hamamatsucho": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hanedakuukou-kokunaisen-taaminaru": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "harajuku": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hashimoto": {
+    "city_name": "相模原市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "hibiya": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-kanagawa": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "higashi-matsudo": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashi-murayama": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashihannou": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hikifune": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hiyoshi": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "jimbocho": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamata": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kanazawa-hakkei": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "kashiwa": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kawagoe": {
+    "city_name": "志木市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kawasaki": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "keioutama-sentaa": {
+    "city_name": "多摩市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-tsudanuma": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kinshicho": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komagawa": {
+    "city_name": "日高市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kotake-mukaihara": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kudanshita": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "machiya": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "matsudo": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minamisenju": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mitsukoshimae": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mizonokuchi": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "motoyawata": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nagatsuda": {
+    "city_name": "横浜市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "nakano": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakano-sakaue": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nihonbashi": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ogikubo": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oimachi": {
+    "city_name": "品川区",
+    "ward_name": "大井",
+    "prefecture_name": ""
+  },
+  "oji": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "omotesando": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "saitama-shintoshin": {
+    "city_name": "さいたま市",
+    "ward_name": "中央区",
+    "prefecture_name": "埼玉県"
+  },
+  "shin-matsudo": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shinjuku-sanchome": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinkiba": {
+    "city_name": "江東区",
+    "ward_name": "新木場",
+    "prefecture_name": ""
+  },
+  "shounandai": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "soga": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "takadanobaba": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takahata-fudo": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tamagawa": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toubudoubutsukouen": {
+    "city_name": "宮代町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tsurumi": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "wakoshi": {
+    "city_name": "和光市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yorii": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yoyogi": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yurakucho": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akabane-iwabuchi": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "asagaya": {
+    "city_name": "杉並区",
+    "ward_name": "高円寺",
+    "prefecture_name": ""
+  },
+  "asakusabashi": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "atsugi": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "awa-kamogawa": {
+    "city_name": "鴨川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "awajicho": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ayase": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "azabu-juban": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "azami-no": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "bubaigawara": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chiba-minato": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "chiba-nyuutaun-chuuou": {
+    "city_name": "印西市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chibachuuou": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "chofu": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chuuourinkan": {
+    "city_name": "大和市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "daimon": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "denenchofu": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fuchuuhonmachi": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "futako-tamagawa": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "futakoshinchi": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "futamatagawa": {
+    "city_name": "横浜市",
+    "ward_name": "旭区",
+    "prefecture_name": "神奈川県"
+  },
+  "goi": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "gotokuji": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "goura": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hagiyama": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hamakawasaki": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "hanedakuukou-kokusaisen-taaminaru": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hannou": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hanyuu": {
+    "city_name": "羽生市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hatagaya": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hatanodai": {
+    "city_name": "品川区",
+    "ward_name": "旗の台",
+    "prefecture_name": ""
+  },
+  "hatchoubori": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hatchounawate": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "heiwadai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-fuchuu": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-ikebukuro": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-nakano": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-shinjuku": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashiginza": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashikawaguchi": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "higashinarita": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashitotsuka": {
+    "city_name": "横浜市",
+    "ward_name": "戸塚区",
+    "prefecture_name": "神奈川県"
+  },
+  "hikawadai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hino": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ho-tsuchi-ke-tani": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "hokuchou-kasumi": {
+    "city_name": "朝霞市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "honchiba": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "hongo-sanchome": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hori-no-nai": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ichikawa": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "inage": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "inba-nippon-idai": {
+    "city_name": "印西市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "jiyugaoka": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamakura": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kameido": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamioooka": {
+    "city_name": "横浜市",
+    "ward_name": "港南区",
+    "prefecture_name": "神奈川県"
+  },
+  "kanamachi": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kanamecho": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kasuga": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kasukabe": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "katori": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "katsuta-dai": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kayabacho": {
+    "city_name": "中央区",
+    "ward_name": "日本橋茅場町",
+    "prefecture_name": ""
+  },
+  "kazusanakano": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keikyuu-kamata": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keikyuu-kawasaki": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "keiou-nagayama": {
+    "city_name": "多摩市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keiseiueno": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kikuna": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "kisarazu": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kitanarashino": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kitano": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kiyosumi-shirakawa": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kodaira": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koenji": {
+    "city_name": "杉並区",
+    "ward_name": "高円寺",
+    "prefecture_name": ""
+  },
+  "kokkai-gijidomae": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komagome": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "korakuen": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kou-no-shima": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kourai": {
+    "city_name": "日高市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kouzu": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kuki": {
+    "city_name": "久喜市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kumagaya": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kumano-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kuramae": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kurihama": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kurihashi": {
+    "city_name": "久喜市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kyobashi": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mabashi": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "machida": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "makuhari": {
+    "city_name": "千葉市",
+    "ward_name": "花見川区",
+    "prefecture_name": "千葉県"
+  },
+  "makuharihongou": {
+    "city_name": "千葉市",
+    "ward_name": "花見川区",
+    "prefecture_name": "千葉県"
+  },
+  "matsugishi": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "me-ke-saki": {
+    "city_name": "茅ヶ崎市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "meidaimae": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minamiurawa": {
+    "city_name": "さいたま市",
+    "ward_name": "南区",
+    "prefecture_name": "埼玉県"
+  },
+  "mita": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "monzen-nakacho": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "morishita": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "motosumiyoshi": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "musashi-sakai": {
+    "city_name": "武蔵野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-yokote": {
+    "city_name": "日高市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "musashiurawa": {
+    "city_name": "さいたま市",
+    "ward_name": "南区",
+    "prefecture_name": "埼玉県"
+  },
+  "nagareyama-ootakano-mori": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nakai": {
+    "city_name": "新宿区",
+    "ward_name": "中落合",
+    "prefecture_name": ""
+  },
+  "nakameguro": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakanobe": {
+    "city_name": "品川区",
+    "ward_name": "中延",
+    "prefecture_name": ""
+  },
+  "nakayama": {
+    "city_name": "横浜市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "nan-etsu-tani": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nanryuu-yama": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "narutou": {
+    "city_name": "山武市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ningyocho": {
+    "city_name": "中央区",
+    "ward_name": "日本橋人形町",
+    "prefecture_name": ""
+  },
+  "nishi-hachioji": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-kokubunji": {
+    "city_name": "国分寺市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-oi": {
+    "city_name": "品川区",
+    "ward_name": "西大井",
+    "prefecture_name": ""
+  },
+  "nishi-tokorozawa": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishiarai": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishiogikubo": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "noborito": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "ogawa": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ogawachou": {
+    "city_name": "小川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ogose": {
+    "city_name": "越生町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "oku": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ooami": {
+    "city_name": "大網白里市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "oohara": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "oookayama": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "otsuka": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "roppongi": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ryogoku": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sagamioono": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "sakato": {
+    "city_name": "坂戸市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sakura": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "sakuragichou": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "sangenjaya": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sasazuka": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sawara": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "seibu-yuuenchi": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seibukyuujou-mae": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sekiuchi": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "sengakuji": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "senkawa": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sentaa-kita": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "sentaa-minami": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "shimokitazawa": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimotakaido": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-koiwa": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-okachimachi": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-sugita": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "shinkawasaki": {
+    "city_name": "川崎市",
+    "ward_name": "幸区",
+    "prefecture_name": "神奈川県"
+  },
+  "shinkoyasu": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "shinmaruko": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "shinpachi-hashira": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shinyokohama": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "shinyuri-ke-oka": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "shiodome": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shirokane-takanawa": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shirokanedai": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shitte": {
+    "city_name": "川崎市",
+    "ward_name": "幸区",
+    "prefecture_name": "神奈川県"
+  },
+  "shodai": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sugamo": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "suidobashi": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sumiyoshi": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tabata": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takatsu": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "tama-doubutsu-kouen": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tamachi": {
+    "city_name": "港区",
+    "ward_name": "芝浦",
+    "prefecture_name": ""
+  },
+  "tamagawajousui": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tameike-sanno": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tenkuu-hashi": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tennoudai": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tennozu-isle": {
+    "city_name": "品川区",
+    "ward_name": "東品川",
+    "prefecture_name": ""
+  },
+  "togoshi-ginza": {
+    "city_name": "品川区",
+    "ward_name": "平塚",
+    "prefecture_name": ""
+  },
+  "tokorozawa": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "toshimaen": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tougo-no": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "toyosu": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toyota": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsudanuma": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tsuga": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "tsukishima": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "uguisudani": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ushita": {
+    "city_name": "足立区",
+    "ward_name": "千住曙町",
+    "prefecture_name": ""
+  },
+  "ware-no": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yamato": {
+    "city_name": "大和市",
+    "ward_name": "中央",
+    "prefecture_name": "神奈川県"
+  },
+  "yotsukaidou": {
+    "city_name": "四街道市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yoyogi-hachiman": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yoyogi-uehara": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yuukari-ga-oka": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "zoshigaya": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "adachi-odai": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ageo": {
+    "city_name": "上尾市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "agui": {
+    "city_name": "栄町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "aihara": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "aikou-ishida": {
+    "city_name": "厚木市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "akabanebashi": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akasaka": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akebonobashi": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akigawa": {
+    "city_name": "あきる野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akira-shima": {
+    "city_name": "昭島市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akitsu": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "akiyama": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "an-zen": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "anabe": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "anagawa": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "anamori-inari": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ane-ke-saki": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "anjin-tsuka": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ao-hori": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "aobadai": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "aoi": {
+    "city_name": "足立区",
+    "ward_name": "青井三丁目",
+    "prefecture_name": ""
+  },
+  "aomono-yokochou": {
+    "city_name": "品川区",
+    "ward_name": "南品川",
+    "prefecture_name": ""
+  },
+  "arai-kusurishi-mae": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "araijuku": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "arakawa-itchuu-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "arakawa-nichoume": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "arakawa-shichi-choume": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "arakawa-yuuenchi-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "arakawaku-yakusho-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "arakawashakomae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "araki": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ariake": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ariake-tenisu-no-mori": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "asahi": {
+    "city_name": "旭市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "asaka": {
+    "city_name": "朝霞市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "asano": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "ashi-ke-kubo": {
+    "city_name": "横瀬町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ashigara": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "asuka-yama": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "atago": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "awa-katsuyama": {
+    "city_name": "鋸南町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "awa-kominato": {
+    "city_name": "鴨川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "awa-tenshin": {
+    "city_name": "鴨川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "baigou": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ban-ta": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "bandou-hashi": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "barakinakayama": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "basha-michi": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "benten-hashi": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "bushuu-araki": {
+    "city_name": "行田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "bushuu-hino": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "bushuu-karasawa": {
+    "city_name": "越生町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "bushuu-nagase": {
+    "city_name": "毛呂山町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "bushuu-nakagawa": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "busshi": {
+    "city_name": "入間市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "byoubu-ura": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "chiba-kouen": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "chiba-tera": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "chichibu": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "chidorichou": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chihara-dai": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chiku-sentaa": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chikura": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chitose": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chitose-funabashi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chitose-karasuyama": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "chou-ura": {
+    "city_name": "袖ケ浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chougo": {
+    "city_name": "藤沢市",
+    "ward_name": "長後地区",
+    "prefecture_name": "神奈川県"
+  },
+  "choujamachi": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "choukoku-no-mori": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "chuugakkou": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "chuuoudaigaku-meiseidaigaku": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "daiba": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "daijinguushita": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "daikanyama": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "daishimae": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "dokkyoudaigaku-zen-eki-souka-matsubara": {
+    "city_name": "草加市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "doro": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "doubutsu-kouen": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "eda": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "edogawa": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "edogawa-dai": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "edogawabashi": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ehara-machi": {
+    "city_name": "品川区",
+    "ward_name": "中延",
+    "prefecture_name": ""
+  },
+  "ehara-nakanobe": {
+    "city_name": "品川区",
+    "ward_name": "東中延",
+    "prefecture_name": ""
+  },
+  "eifuku-machi": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ekoda": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "emi": {
+    "city_name": "鴨川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "enoto": {
+    "city_name": "八街市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "etchuu-shima": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fuchinobe": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "fuchu": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fuchuu-keiba-seimonmae": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fuda": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fudoumae": {
+    "city_name": "品川区",
+    "ward_name": "西五反田",
+    "prefecture_name": ""
+  },
+  "fuji-fuirumu-mae": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "fuji-no-ushijima": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "fujigaoka": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "fujimi-no": {
+    "city_name": "志木市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "fujimichou": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "fujimidai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fujimigaoka": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fujino": {
+    "city_name": "相模原市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "fujisawa-honchou": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "fukaya": {
+    "city_name": "深谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "fukiage": {
+    "city_name": "鴻巣市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "fukudawara": {
+    "city_name": "東金市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "fukuura": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "funabashi-houten": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "funabashi-nichidai-mae": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "funabashikeibajou": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "funabori": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "fune-no-kagakukan": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "furusato": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "fusa": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "fussa": {
+    "city_name": "福生市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "futamata-o": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "futamata-shinmachi": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "futawa-mukaedai": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "gaiemmae": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gakuen-mae": {
+    "city_name": "千葉市",
+    "ward_name": "緑区",
+    "prefecture_name": "千葉県"
+  },
+  "gakugei-daigaku": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gakushuuin-shita": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gamou": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "genka-osamu": {
+    "city_name": "入間市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "gezan-kuchi": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ginzaitchoume": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gion": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "gogatsu-dai": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "gohyaku-rakan": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "gokokuji": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gokou": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "gokuraku-tera": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "gotan-no": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gun-hatake": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "gyouda": {
+    "city_name": "行田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "gyoudashi": {
+    "city_name": "行田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hachi-seki": {
+    "city_name": "",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hachigata": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hachiman-yado": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hachiouji-minami-no": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hadano": {
+    "city_name": "秦野市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hakkei-shima": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "hakone-itabashi": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hakone-ke-saki": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "hakoneyumoto": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hakuraku": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "hakusan": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hamacho": {
+    "city_name": "中央区",
+    "ward_name": "日本橋浜町",
+    "prefecture_name": ""
+  },
+  "hamadayama": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hamakin-tani": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hamano": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "hamura": {
+    "city_name": "羽村市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hana-koganei": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hanasaki": {
+    "city_name": "加須市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hane-kan": {
+    "city_name": "伊奈町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hanzomon": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hara-touma": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "haraichi": {
+    "city_name": "上尾市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "haruhi-no": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "hase": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hasuda": {
+    "city_name": "蓮田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hasunuma": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hato-ke-tani": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hato-no-su": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "hatsuishi": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hatsutomi": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hayakawa": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hazama": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "heiwa-shima": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hibarigaoka": {
+    "city_name": "西東京市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-abiko": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashi-aki-ryuu": {
+    "city_name": "あきる野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-azuma": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-funabashi": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashi-iwatsuki": {
+    "city_name": "さいたま市",
+    "ward_name": "岩槻区",
+    "prefecture_name": "埼玉県"
+  },
+  "higashi-koenji": {
+    "city_name": "杉並区",
+    "ward_name": "高円寺",
+    "prefecture_name": ""
+  },
+  "higashi-koganei": {
+    "city_name": "小金井市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-matsubara": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashi-nami-ken": {
+    "city_name": "一宮町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashi-washimiya": {
+    "city_name": "久喜市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "higashi-zushi": {
+    "city_name": "逗子市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "higashichiba": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "higashifushimi": {
+    "city_name": "西東京市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashijuujou": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashikitazawa": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashikurume": {
+    "city_name": "東久留米市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashimatsuyama": {
+    "city_name": "東松山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "higashimon-mae": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "higashimuki-shima": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashinagasaki": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashinaka-kami": {
+    "city_name": "昭島市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashinakayama": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higashiogu-sanchoume": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashioume": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higashitokorozawa": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "higashiurawa": {
+    "city_name": "さいたま市",
+    "ward_name": "緑区",
+    "prefecture_name": "埼玉県"
+  },
+  "higashiyama-kita": {
+    "city_name": "山北町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "higashiyama-ta": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "higashiyamatoshi": {
+    "city_name": "東大和市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "higata": {
+    "city_name": "旭市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "higuchi": {
+    "city_name": "長瀞町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hikarigaoka": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "himemiya": {
+    "city_name": "宮代町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hinatawada": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hinode": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hirai": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hirama": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "hiranumabashi": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "hiratsuka": {
+    "city_name": "平塚市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hirayama": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hirayama-joushi-kouen": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hire-ke-saki": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hiroaki-tera": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "hiroo": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hirose-yachou-no-mori": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hitotsubashi-gakuen": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hiyoshihonchou": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "hodokubo": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hokudai-miya": {
+    "city_name": "さいたま市",
+    "ward_name": "大宮区",
+    "prefecture_name": "埼玉県"
+  },
+  "hokuetsu-tani": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "hon-atsugi": {
+    "city_name": "厚木市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hon-choushi": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "hon-komagome": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hon-nou": {
+    "city_name": "茂原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "honancho": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hongoudai": {
+    "city_name": "横浜市",
+    "ward_name": "栄区",
+    "prefecture_name": "神奈川県"
+  },
+  "honjoazumabashi": {
+    "city_name": "墨田区",
+    "ward_name": "吾妻橋",
+    "prefecture_name": ""
+  },
+  "honjou": {
+    "city_name": "本庄市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "honkawa-etsu": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "honkugenuma": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "horikiri": {
+    "city_name": "足立区",
+    "ward_name": "千住曙町",
+    "prefecture_name": ""
+  },
+  "horikiri-shoubuen": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hoshikawa": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "hotaruda": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "hoya": {
+    "city_name": "西東京市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "hyuuga": {
+    "city_name": "山武市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "i-hosoda": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ichi-no-wari": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ichikawa-mama": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ichikawa-oono": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ichikawa-shiohama": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ichinoe": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ido-ke-tani": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "iida-oka": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "iikura": {
+    "city_name": "匝瑳市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "iioka": {
+    "city_name": "旭市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "iiyama-man": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ikegami": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ikejirioohashi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ikenoue": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ikuta": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "ima-hane": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "ina-chuuou": {
+    "city_name": "伊奈町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "inadazutsumi": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "inage-kaigan": {
+    "city_name": "千葉市",
+    "ward_name": "美浜区",
+    "prefecture_name": "千葉県"
+  },
+  "inagi": {
+    "city_name": "稲城市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "inagi-naganuma": {
+    "city_name": "稲城市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "inamura-ke-saki": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "inaricho": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "inariyama-kouen": {
+    "city_name": "狭山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ino": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "inokashira-koen": {
+    "city_name": "三鷹市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "inuboe": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "inzai-maki-no-hara": {
+    "city_name": "印西市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "iogi": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ipponmatsu": {
+    "city_name": "鶴ヶ島市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "iriuda": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "iriya": {
+    "city_name": "座間市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "irumashi": {
+    "city_name": "入間市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "isehara": {
+    "city_name": "伊勢原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "isezaki-choujamachi": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "ishigami": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ishigami-mae": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ishihara": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ishikawachou": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "ishikawadai": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "isogo": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "itabashi": {
+    "city_name": "板橋区",
+    "ward_name": "板橋",
+    "prefecture_name": ""
+  },
+  "itabashihonchou": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "itabashikuyakusho-mae": {
+    "city_name": "板橋区",
+    "ward_name": "板橋",
+    "prefecture_name": ""
+  },
+  "itsumi": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "iwahara": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "iwai": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "iwamotocho": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "iwane": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "iwatsuki": {
+    "city_name": "さいたま市",
+    "ward_name": "岩槻区",
+    "prefecture_name": "埼玉県"
+  },
+  "izumi-chuuou": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "izumi-no": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "izumi-taiikukan": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "izumi-tamagawa": {
+    "city_name": "狛江市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "jinbohara": {
+    "city_name": "上里町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "jinmu-tera": {
+    "city_name": "逗子市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "joshidai": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "jouchou-toro": {
+    "city_name": "長瀞町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "jousei-kawa": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "jujo": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "juuni-hashi": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kachidoki": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kadosawa-hashi": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kagawa": {
+    "city_name": "茅ヶ崎市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kagemori": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kagetsuen-mae": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "kago-hara": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kagurazaka": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kaihinmakuhari": {
+    "city_name": "千葉市",
+    "ward_name": "美浜区",
+    "prefecture_name": "千葉県"
+  },
+  "kaisei": {
+    "city_name": "開成町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kaishi-ariki": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kaji-ga-tani": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "kajiwara": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kakio": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "kama-ke-tani": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kama-ke-tani-daibutsu": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kama-shu": {
+    "city_name": "千葉市",
+    "ward_name": "緑区",
+    "prefecture_name": "千葉県"
+  },
+  "kamakura-koukou-mae": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kameari": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kameido-suijin": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamifukuoka": {
+    "city_name": "ふじみ野市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kamihongou": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kamiigusa": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamiishi-kami-i": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamiitabashi": {
+    "city_name": "板橋区",
+    "ward_name": "上板橋",
+    "prefecture_name": ""
+  },
+  "kamiizumi": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamikita-dai": {
+    "city_name": "東大和市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamikitazawa": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kaminaka-sato": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kaminoge": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamiyachou": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kamo-miya": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "kamoi": {
+    "city_name": "横浜市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "kamonomiya": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kanagawa": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "kanagawashinmachi": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "kanazawa-bunko": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "kane-ke-fuchi": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kaneko": {
+    "city_name": "入間市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kanno": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kannon": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "karakida": {
+    "city_name": "多摩市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kasa-hata": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kasa-ue-kuronama": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kasai": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kasai-rinkai-kouen": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kashima-ta": {
+    "city_name": "川崎市",
+    "ward_name": "幸区",
+    "prefecture_name": "神奈川県"
+  },
+  "kashiwa-dai": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kashiwa-no-ha-kyanpasu": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kashiwa-tanaka": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kasumigaseki": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "katakura": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "katakurachou": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "katase-kou-no-shima": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "katase-yama": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "katsu-kawa": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "katsuura": {
+    "city_name": "勝浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kawa-kan": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kawabe": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kawagoeshi": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kawaguchi": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kawaguchi-motogou": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kawai": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "kawasaki-shinmachi": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "kawasakidaishi": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "kawasumi": {
+    "city_name": "毛呂山町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kawawachou": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "kayama": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kazamatsuri": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kazo": {
+    "city_name": "加須市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kazusa-higashi": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-ichinomiya": {
+    "city_name": "一宮町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-kameyama": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-kawa-kan": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-kiyokawa": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-kubo": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-matsuoka": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-minato": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-mitsumata": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-murakami": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-nakagawa": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-okitsu": {
+    "city_name": "勝浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-ookubo": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-tsurumai": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-ushiku": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kazusa-yamada": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keikyuu-nagasawa": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "keikyuu-ootsu": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "keikyuu-taura": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "keikyuu-tomioka": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "keio-horinouchi": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keiou-katakura": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keiou-yomiuri-rando": {
+    "city_name": "稲城市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keiouhachiouji": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keiouinadatsutsumi": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "keioutama-kawa": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-hikifune": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-inage": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-koiwa": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-nakayama": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-nishifuna": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-ookubo": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-oowada": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-sake-kurikaesi-i": {
+    "city_name": "酒々井町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-sakura": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "keisei-tateishi": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "keisei-usui": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kemigawa": {
+    "city_name": "千葉市",
+    "ward_name": "花見川区",
+    "prefecture_name": "千葉県"
+  },
+  "kemigawahama": {
+    "city_name": "千葉市",
+    "ward_name": "美浜区",
+    "prefecture_name": "千葉県"
+  },
+  "kenchoumae": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "kenritsudai-gaku": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kiba": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kibou-ke-oka": {
+    "city_name": "横浜市",
+    "ward_name": "旭区",
+    "prefecture_name": "神奈川県"
+  },
+  "kikukawa": {
+    "city_name": "墨田区",
+    "ward_name": "菊川",
+    "prefecture_name": ""
+  },
+  "kimitsu": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kinoshita": {
+    "city_name": "印西市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kinugasa": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kishine-kouen": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "kita-akabane": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kita-ayase": {
+    "city_name": "足立区",
+    "ward_name": "谷中",
+    "prefecture_name": ""
+  },
+  "kita-fuchu": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kita-hatsutomi": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kita-kashiwa": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kita-kasukabe": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kita-kogane": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kita-kounosu": {
+    "city_name": "鴻巣市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kita-me-ke-saki": {
+    "city_name": "茅ヶ崎市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kita-sando": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kita-shinagawa": {
+    "city_name": "品川区",
+    "ward_name": "北品川",
+    "prefecture_name": ""
+  },
+  "kita-yono": {
+    "city_name": "さいたま市",
+    "ward_name": "中央区",
+    "prefecture_name": "埼玉県"
+  },
+  "kitado-ta": {
+    "city_name": "戸田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kitaguni-fun": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kitahachi-ouji": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kitaike-fukuro": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kitakamakura": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kitakami-o": {
+    "city_name": "上尾市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kitakurihama": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kitamatsudo": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kitami": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kitamoto": {
+    "city_name": "北本市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kitasaka-ko": {
+    "city_name": "坂戸市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kitasenzoku": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kitashin-yokohama": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "kitaurawa": {
+    "city_name": "さいたま市",
+    "ward_name": "浦和区",
+    "prefecture_name": "埼玉県"
+  },
+  "kitayamata": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "kiyose": {
+    "city_name": "清瀬市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ko-fuchi": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "kobayashi": {
+    "city_name": "印西市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kodama": {
+    "city_name": "本庄市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kodenmachou": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kodomono-kuni": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "kogane-joushi": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "koganechou": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "kohoku": {
+    "city_name": "我孫子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "koigakubo": {
+    "city_name": "国分寺市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koiwa": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kojima-nitta": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "kojimachi": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kokonoe": {
+    "city_name": "館山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kokorozashi-kyuu": {
+    "city_name": "伊奈町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kokudou": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "kokuga": {
+    "city_name": "山北町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kokuritsu-kyogijo": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kokuryou": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kokusai-tenjijou": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kokusai-tenjijou-seimon": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komabatoudaimae": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komae": {
+    "city_name": "狛江市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komazawa-daigaku": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komiya": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komura-i": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "komuro": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "koremasa": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koshigaya": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "koshigaya-reikutaun": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "koshigoe": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kosuge": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kotesashi": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kou-kawara": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "kou-tsu-no-mori": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kouen": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kouen-shita": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kouen-ue": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "koufuu-dai": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kouhoku": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koujiya": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koukuu-kouen": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "kounan-chuuou": {
+    "city_name": "横浜市",
+    "ward_name": "港南区",
+    "prefecture_name": "神奈川県"
+  },
+  "kounandai": {
+    "city_name": "横浜市",
+    "ward_name": "港南区",
+    "prefecture_name": "神奈川県"
+  },
+  "kounodai": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kounosu": {
+    "city_name": "鴻巣市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "koushin-tsuka": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "koushuukaidou": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kouza-shibuya": {
+    "city_name": "大和市",
+    "ward_name": "福田",
+    "prefecture_name": "神奈川県"
+  },
+  "kowakudani": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "koyasu": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "kozukue": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "kuga-hara": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kugayama": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kugenuma": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kugenuma-kaigan": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kuhonbutsu": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kuji": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "kujuu": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kumakawa": {
+    "city_name": "福生市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kumegawa": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kun-ke-hama": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kunitachi": {
+    "city_name": "国立市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kuniyoshi": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kunugi-yama": {
+    "city_name": "鎌ケ谷市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kurahashi": {
+    "city_name": "旭市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kurami": {
+    "city_name": "寒川町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "kurihira": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "kurokawa": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "kururi": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "kyodo": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kyouteijou-mae": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kyuu-ga-hara": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "kyuumei": {
+    "city_name": "東金市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "machiya-nichoume": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "maehara": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "magome": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "maihama": {
+    "city_name": "浦安市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "maioka": {
+    "city_name": "横浜市",
+    "ward_name": "戸塚区",
+    "prefecture_name": "神奈川県"
+  },
+  "makita": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "makuda": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "man-gan-tera": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "manatsuru": {
+    "city_name": "真鶴町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "maruyama": {
+    "city_name": "伊奈町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "mashio": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "matoba": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "matsu-ga-tani": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "matsu-tobidai": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "matsubara": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "matsuda": {
+    "city_name": "松田町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "matsudo-nitta": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "matsuhisa": {
+    "city_name": "美里町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "matsuo": {
+    "city_name": "山武市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "mei-ko": {
+    "city_name": "深谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "mejiro": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mejiro-dai": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mejiro-yamashita": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "meshi-kyuu": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "mibu-kuchi": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "midori-dai": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "midorigaoka": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "midorimachi": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "mikado": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "mikawa-shima": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mimomi": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minami-asa-ke-tani": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minami-banki-ga-hara": {
+    "city_name": "横浜市",
+    "ward_name": "旭区",
+    "prefecture_name": "神奈川県"
+  },
+  "minami-furuya": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minami-hanyuu": {
+    "city_name": "羽生市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minami-hato-ke-tani": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minami-kashiwa": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minami-kurihashi": {
+    "city_name": "久喜市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minami-oota": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "minami-osawa": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minami-sake-kurikaesi-i": {
+    "city_name": "酒々井町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minami-sakurai": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minami-shinjuku": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minami-sunamachi": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minami-taira": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minami-yono": {
+    "city_name": "さいたま市",
+    "ward_name": "中央区",
+    "prefecture_name": "埼玉県"
+  },
+  "minamifunabashi": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minamimachida": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minamiootsuka": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minamirinkan": {
+    "city_name": "大和市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "minamitama": {
+    "city_name": "稲城市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minamiyuki-toku": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minano": {
+    "city_name": "皆野町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "minatomachi": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "minatomirai": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "minori-dai": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "minowa": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "minuma-dai-shinsui-kouen": {
+    "city_name": "足立区",
+    "ward_name": "舎人",
+    "prefecture_name": ""
+  },
+  "misaki": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "misakiguchi": {
+    "city_name": "三浦市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "misato": {
+    "city_name": "三郷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "misato-chuuou": {
+    "city_name": "三郷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "mitakadai": {
+    "city_name": "三鷹市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mitsuwa-dai": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "miurakaigan": {
+    "city_name": "三浦市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "miya-no-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "miya-no-saka": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "miya-no-shita": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "miya-no-taira": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "miyahara": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "miyamaedaira": {
+    "city_name": "川崎市",
+    "ward_name": "宮前区",
+    "prefecture_name": "神奈川県"
+  },
+  "miyayama": {
+    "city_name": "寒川町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "miyazakidai": {
+    "city_name": "川崎市",
+    "ward_name": "宮前区",
+    "prefecture_name": "神奈川県"
+  },
+  "mizue": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mizuho-dai": {
+    "city_name": "志木市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "mobara": {
+    "city_name": "茂原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "mochida": {
+    "city_name": "行田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "mogusa-sono": {
+    "city_name": "日野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "monoi": {
+    "city_name": "四街道市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "moro": {
+    "city_name": "毛呂山町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "motohasunuma": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "motomachi-chuukagai": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "motoyama": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "mukaihara": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "mukougaokayuuen": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "murakami": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "musashi-arashiyama": {
+    "city_name": "嵐山町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "musashi-fujisawa": {
+    "city_name": "入間市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "musashi-hikita": {
+    "city_name": "あきる野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-koganei": {
+    "city_name": "小金井市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-koyama": {
+    "city_name": "品川区",
+    "ward_name": "小山",
+    "prefecture_name": ""
+  },
+  "musashi-masuto": {
+    "city_name": "あきる野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-nitta": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-shiroishi": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "musashi-sunagawa": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashi-takahagi": {
+    "city_name": "日高市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "musashidai-wa": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashiitsukaichi": {
+    "city_name": "あきる野市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashinakahara": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "musashino-dai": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashiseki": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "musashishinjou": {
+    "city_name": "川崎市",
+    "ward_name": "中原区",
+    "prefecture_name": "神奈川県"
+  },
+  "mutsuai-nichidai-mae": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "mutsuura": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "myogadani": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "myouden": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "myougaku": {
+    "city_name": "ときがわ町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "myourenji": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "nagahara": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "naganuma": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nagareyama": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nagareyama-sentorarupaaku": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nagata": {
+    "city_name": "大網白里市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nagatoro": {
+    "city_name": "長瀞町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nai-yado": {
+    "city_name": "伊奈町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "naka-goura": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "naka-no-machi": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nakada": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "nakagami": {
+    "city_name": "昭島市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakagawa": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "nakagawara": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakaitabashi": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakamachidai": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "nakamura-hashi": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakano-fujimichou": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakano-shima": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "nakano-shinbashi": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nakaura-wa": {
+    "city_name": "さいたま市",
+    "ward_name": "南区",
+    "prefecture_name": "埼玉県"
+  },
+  "nako-funagata": {
+    "city_name": "館山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "namamugi": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "namekawa-airando": {
+    "city_name": "勝浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nami-kure": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "namiki-chuuou": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "namiki-kita": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "nanahikari-dai": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nanbu-shijou": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "naniwa": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nankyou-hon": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "nansan-hara": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "narashino": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "narita-yukawa": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "naruse": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nebukawa": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "negishi": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "nerima-kasugacho": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nerima-kouyadai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nezu": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nichi-no-demachi": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "nihondai-touri": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "niitaka-shima": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "niitaka-shima-taira": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "niiza": {
+    "city_name": "新座市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nijuubashimae": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ninomiya": {
+    "city_name": "二宮町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "nishi-chiba": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "nishi-choufu": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-hanyuu": {
+    "city_name": "羽生市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishi-kamakura": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "nishi-kasai": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-ke-hara": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-ke-hara-shitei-me": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-magome": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-noborito": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "nishi-oohara": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nishi-oomiya": {
+    "city_name": "さいたま市",
+    "ward_name": "西区",
+    "prefecture_name": "埼玉県"
+  },
+  "nishi-ooshima": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-ooya": {
+    "city_name": "坂戸市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishi-oyama": {
+    "city_name": "品川区",
+    "ward_name": "小山",
+    "prefecture_name": ""
+  },
+  "nishi-shinjuku": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-shinjuku-gochome": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-sugamo": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-tachikawa": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-taishidou": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishi-ware-no": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishi-waseda": {
+    "city_name": "新宿区",
+    "ward_name": "西早稲田",
+    "prefecture_name": ""
+  },
+  "nishiarai-taishi-nishi": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishidai": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishihata": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nishikawa-etsu": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishikawa-kuchi": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nishikoku-ritsu": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishikou-shima-taira": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishinaga-fuku": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nishishirai": {
+    "city_name": "白井市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nishitani": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "nishiura-wa": {
+    "city_name": "さいたま市",
+    "ward_name": "桜区",
+    "prefecture_name": "埼玉県"
+  },
+  "nishiyokohama": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "nisshin": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "nitta": {
+    "city_name": "草加市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nittano": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nodashi": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "nogami": {
+    "city_name": "長瀞町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "nogata": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nogizaka": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nojima-kouen": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "noukendai": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "numabe": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "numabukuro": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "nyuu-so": {
+    "city_name": "狭山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "o-hanacha-ya": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "o-hanahata": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "obitsu": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "obusuma": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ochiai": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ochiai-minami-nagasaki": {
+    "city_name": "新宿区",
+    "ward_name": "西落合",
+    "prefecture_name": ""
+  },
+  "oda-sakae": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "odai": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "odaiba-kaihinkoen": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "odakyuu-sagamihara": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "odoriba": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "ogura-dai": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "oizumi-gakuen": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oji-kamiya": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "okabe": {
+    "city_name": "深谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "okegawa": {
+    "city_name": "桶川市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "okusawa": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "okutama": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "omaeda": {
+    "city_name": "深谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ome": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "omigawa": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "omokage-hashi": {
+    "city_name": "新宿区",
+    "ward_name": "西早稲田",
+    "prefecture_name": ""
+  },
+  "omori": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "onarimon": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "onda": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "onigori": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "onjuku": {
+    "city_name": "御宿町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ontake": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ontake-yama": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ooasou": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "oobukuro": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ooguchi": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "oohiradai": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ooikeiba-ba-mae": {
+    "city_name": "品川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ooiso": {
+    "city_name": "大磯町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ookawa": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "ookubo": {
+    "city_name": "新宿区",
+    "ward_name": "百人町",
+    "prefecture_name": ""
+  },
+  "ookurayama": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "oomachi": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "oomiya-kouen": {
+    "city_name": "さいたま市",
+    "ward_name": "大宮区",
+    "prefecture_name": "埼玉県"
+  },
+  "oomori-dai": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "oomori-kaigan": {
+    "city_name": "品川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oomori-machi": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oonohara": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "oonuki": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "oosaki-hirokouji": {
+    "city_name": "品川区",
+    "ward_name": "大崎",
+    "prefecture_name": ""
+  },
+  "ooshima": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ootaki": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ooto": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ootorii": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ootsuka-teikyoudaigaku": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oowada": {
+    "city_name": "さいたま市",
+    "ward_name": "見沼区",
+    "prefecture_name": "埼玉県"
+  },
+  "ooyama": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oppama": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "orihara": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ougi-oohashi": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ougimachi": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "oumekaidou": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oya-hana": {
+    "city_name": "皆野町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "oyama-dai": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "oyamatsu": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "oyumi-no": {
+    "city_name": "千葉市",
+    "ward_name": "緑区",
+    "prefecture_name": "千葉県"
+  },
+  "ozaku": {
+    "city_name": "羽村市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "renkon": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "roka-kouen": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "roku-machi": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "roku-mi": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "rokugou-dote": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "roppongi-itchome": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ryokuen-toshi": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "ryuutsuu-sentaa": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sachiura": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "sagami-kaneko": {
+    "city_name": "大井町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "sagami-no": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "sagami-numata": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "sagamihara": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "sagamiko": {
+    "city_name": "相模原市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "sagamiootsuka": {
+    "city_name": "大和市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "sagi-no-miya": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "saginuma": {
+    "city_name": "川崎市",
+    "ward_name": "宮前区",
+    "prefecture_name": "神奈川県"
+  },
+  "saikai-kashima": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "sakaemachi": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakasai": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "sake-kurikaesi-i": {
+    "city_name": "酒々井町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "saku-kusa-bu": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "sakura-kaidou": {
+    "city_name": "東大和市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakuradai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakuradamon": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakuragaoka": {
+    "city_name": "大和市",
+    "ward_name": "福田",
+    "prefecture_name": "神奈川県"
+  },
+  "sakuragi": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "sakurajosui": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakurashinmachi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sakurazawa": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "samezu": {
+    "city_name": "品川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "samukawa": {
+    "city_name": "寒川町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "san-no-wa-hashi": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "san-tsu-sakai": {
+    "city_name": "横浜市",
+    "ward_name": "瀬谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "san-tsu-sawa-shitamachi": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "san-tsu-sawakami-machi": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "sanguu-hashi": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sangyou-shinkou-sentaa": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "sangyoudouro": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "sanpoku": {
+    "city_name": "山北町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "sanuki-machi": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "saruta": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "sasagawa": {
+    "city_name": "東庄町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "satomi": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "satte": {
+    "city_name": "幸手市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sawai": {
+    "city_name": "青梅市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sayama-ke-oka": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sayamashi": {
+    "city_name": "狭山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "seibi-ba": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seibu-chichibu": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "seibu-tachikawa": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seibu-yanagisawa": {
+    "city_name": "西東京市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seibuen": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seibushinjuku": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seifu": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seijo-gakuenmae": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seikai": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seiseki-sakuragaoka": {
+    "city_name": "多摩市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sen-da-ke-tani": {
+    "city_name": "渋谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sen-shiro-dai": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "sen-shiro-taihoku": {
+    "city_name": "千葉市",
+    "ward_name": "若葉区",
+    "prefecture_name": "千葉県"
+  },
+  "sendagi": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sengawa": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sengen-dai": {
+    "city_name": "越谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sengoku": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "senju-oohashi": {
+    "city_name": "足立区",
+    "ward_name": "千住橋戸町",
+    "prefecture_name": ""
+  },
+  "sensoku": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "senzokuike": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "setagaya": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "setagaya-daita": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "seya": {
+    "city_name": "横浜市",
+    "ward_name": "瀬谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "shake": {
+    "city_name": "海老名市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shakudo-shougakkou-mae": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shakujii-koen": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shi-ga-o": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "shi-tsu-ki": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibakouen": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibamata": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibasaki": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibasaki-taiikukan": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibaura-fu-atama": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shibayama-chiyoda": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shibusawa": {
+    "city_name": "秦野市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shichiri": {
+    "city_name": "さいたま市",
+    "ward_name": "見沼区",
+    "prefecture_name": "埼玉県"
+  },
+  "shichiri-ke-hama": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shidai-igakubu": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "shiinamachi": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shiishiba": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shijou-mae": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shiki": {
+    "city_name": "新座市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shimizu-kouen": {
+    "city_name": "野田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimo": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimogoori": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimoigusa": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimomaruko": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimomizo": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "shimoochiai": {
+    "city_name": "新宿区",
+    "ward_name": "下落合",
+    "prefecture_name": ""
+  },
+  "shimousa-kanzaki": {
+    "city_name": "神崎町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimousa-matsuzaki": {
+    "city_name": "成田市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimousa-nakayama": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimousa-tachibana": {
+    "city_name": "東庄町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimousa-toyosato": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shimura-sakaue": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shimura-sanchoume": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-itabashi": {
+    "city_name": "板橋区",
+    "ward_name": "板橋",
+    "prefecture_name": ""
+  },
+  "shin-urayasu": {
+    "city_name": "浦安市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shin-akitsu": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-chiba": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "shin-egota": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-hane": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "shin-kashi": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shin-kashiwa": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shin-kodaira": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-koenji": {
+    "city_name": "杉並区",
+    "ward_name": "高円寺",
+    "prefecture_name": ""
+  },
+  "shin-koganei": {
+    "city_name": "小金井市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-koushin-tsuka": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-mobara": {
+    "city_name": "茂原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shin-nakano": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-okubo": {
+    "city_name": "新宿区",
+    "ward_name": "百人町",
+    "prefecture_name": ""
+  },
+  "shin-otsuka": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-sakuradai": {
+    "city_name": "練馬区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-sayama": {
+    "city_name": "狭山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shin-seibi-ba": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-shibamata": {
+    "city_name": "葛飾区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-shibaura": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "shin-shiraoka": {
+    "city_name": "白岡市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shin-shirota": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shin-toyosu": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinagawa-shiisaido": {
+    "city_name": "品川区",
+    "ward_name": "東品川",
+    "prefecture_name": ""
+  },
+  "shinanochou": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinbaba": {
+    "city_name": "品川区",
+    "ward_name": "北品川",
+    "prefecture_name": ""
+  },
+  "shindai-tsu": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shingou": {
+    "city_name": "羽生市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shinjuku-gyoenmae": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinjukunishiguchi": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinkemi-kawa": {
+    "city_name": "千葉市",
+    "ward_name": "花見川区",
+    "prefecture_name": "千葉県"
+  },
+  "shinko-kawa": {
+    "city_name": "加須市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shinmatsuda": {
+    "city_name": "松田町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shinnarashino": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shinonome": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinozaki": {
+    "city_name": "江戸川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinrinkouen": {
+    "city_name": "滑川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shinsen-hashi": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shintokorozawa": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shintomicho": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shintsudanuma": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shinzou-kawashima": {
+    "city_name": "荒川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shinzou-sato": {
+    "city_name": "三郷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shinzushi": {
+    "city_name": "逗子市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shioiri": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shiomi": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shirai": {
+    "city_name": "白井市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shiraitodai": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shiraoka": {
+    "city_name": "白岡市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shiroku": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shiromaru": {
+    "city_name": "東京都",
+    "ward_name": "西多摩郡",
+    "prefecture_name": ""
+  },
+  "shiromi-ke-oka": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shirota-hashi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shita-iida": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "shita-jinmei": {
+    "city_name": "品川区",
+    "ward_name": "西品川",
+    "prefecture_name": ""
+  },
+  "shita-nagatani": {
+    "city_name": "横浜市",
+    "ward_name": "港南区",
+    "prefecture_name": "神奈川県"
+  },
+  "shita-soga": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shitaita-hashi": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shiyakushomae": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "shizu": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "shouin-jinja-mae": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shoumaru": {
+    "city_name": "飯能市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shounan": {
+    "city_name": "上尾市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "shounan-fukazawa": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shounan-kaigan-kouen": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shounan-machiya": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "shouwa": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "shouwa-shima": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "shukugawara": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "sode-ke-ura": {
+    "city_name": "袖ケ浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "soshigaya-okura": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "soshio-ryuutsuu-sentaa": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "sou-moto": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "soubudai-mae": {
+    "city_name": "座間市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "soubudai-shita": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "sougo-sandou": {
+    "city_name": "酒々井町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "souka": {
+    "city_name": "草加市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "souun-yama": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "suehirocho": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sugamo-nitta": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "sugita": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "sugito-kouyadai": {
+    "city_name": "杉戸町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "suigou": {
+    "city_name": "香取市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "suitenguumae": {
+    "city_name": "中央区",
+    "ward_name": "日本橋蛎殻町",
+    "prefecture_name": ""
+  },
+  "sunagawa-shichi-ban": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "supootsusentaa": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "suzukakedai": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "suzukichou": {
+    "city_name": "川崎市",
+    "ward_name": "川崎区",
+    "prefecture_name": "神奈川県"
+  },
+  "ta-na": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "ta-umi": {
+    "city_name": "鴨川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tachiaigawa": {
+    "city_name": "品川区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tachiba": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "tachihi": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tachikawa-kita": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tachikawa-minami": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "taisa-kura": {
+    "city_name": "佐倉市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "taitou": {
+    "city_name": "いすみ市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "taiyuu-yama": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "taka-no-dai": {
+    "city_name": "小平市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "taka-taki": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takada": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "takaido": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takamatsu": {
+    "city_name": "立川市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takanawa-dai": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takane-kido": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takane-koudan": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takano": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takaosanguchi": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takasaka": {
+    "city_name": "東松山市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "takashima-machi": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "takashima-taira": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takayanagi": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takebashi": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takekawa": {
+    "city_name": "深谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "takenotsuka": {
+    "city_name": "足立区",
+    "ward_name": "西竹の塚",
+    "prefecture_name": ""
+  },
+  "takeoka": {
+    "city_name": "富津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takesato": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "takeshiba": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "takezawa": {
+    "city_name": "小川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "taki-fudou": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "takinogawa-itchoume": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tama": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tama-puraaza": {
+    "city_name": "横浜市",
+    "ward_name": "青葉区",
+    "prefecture_name": "神奈川県"
+  },
+  "tama-reien": {
+    "city_name": "府中市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tama-sakai": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tama-yodo": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tamagawagakuen-mae": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tan-sou": {
+    "city_name": "神川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tanashi": {
+    "city_name": "西東京市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tani-zaike": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tanmachi": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "tateyama": {
+    "city_name": "館山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tatsumi": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "taura": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tawarada": {
+    "city_name": "君津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tawaramachi": {
+    "city_name": "台東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tendai": {
+    "city_name": "千葉市",
+    "ward_name": "稲毛区",
+    "prefecture_name": "千葉県"
+  },
+  "tennouchou": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "terekomusentaa": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tetsudouhakubutsukan": {
+    "city_name": "さいたま市",
+    "ward_name": "大宮区",
+    "prefecture_name": "埼玉県"
+  },
+  "tobe": {
+    "city_name": "横浜市",
+    "ward_name": "西区",
+    "prefecture_name": "神奈川県"
+  },
+  "tobitakyuu": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tochomae": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toda": {
+    "city_name": "戸田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "todaimae": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "todakouen": {
+    "city_name": "戸田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "toden-zatsu-tsukasa-ke-tani": {
+    "city_name": "豊島区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "todoroki": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "togawa": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tokiwa-dai": {
+    "city_name": "板橋区",
+    "ward_name": "南常盤台",
+    "prefecture_name": ""
+  },
+  "tokiwadaira": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tokoshikouen": {
+    "city_name": "品川区",
+    "ward_name": "戸越",
+    "prefecture_name": ""
+  },
+  "tomi-mizu": {
+    "city_name": "小田原市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tomiura": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "toneri": {
+    "city_name": "足立区",
+    "ward_name": "舎人",
+    "prefecture_name": ""
+  },
+  "toneri-kouen": {
+    "city_name": "足立区",
+    "ward_name": "古千谷",
+    "prefecture_name": ""
+  },
+  "tookaichiba": {
+    "city_name": "横浜市",
+    "ward_name": "緑区",
+    "prefecture_name": "神奈川県"
+  },
+  "toranomon": {
+    "city_name": "港区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "torihama": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "toritsu-daigaku": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toritsukasei": {
+    "city_name": "中野区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "totsuka-angyou": {
+    "city_name": "川口市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tou-no-sawa": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "toubu-nerima": {
+    "city_name": "板橋区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toubu-takezawa": {
+    "city_name": "小川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "toudai-miya": {
+    "city_name": "さいたま市",
+    "ward_name": "見沼区",
+    "prefecture_name": "埼玉県"
+  },
+  "toudai-shima": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toufuku-nama": {
+    "city_name": "福生市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tougane": {
+    "city_name": "東金市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "touguu-hara": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "touhaku-raku": {
+    "city_name": "横浜市",
+    "ward_name": "神奈川区",
+    "prefecture_name": "神奈川県"
+  },
+  "toukai-kami": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "toukaidaigakumae": {
+    "city_name": "秦野市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "toukou-ta": {
+    "city_name": "行田市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "toukyou-sukaitsurii": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toukyou-terepooto": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toumou-ro": {
+    "city_name": "毛呂山町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tourin-kan": {
+    "city_name": "相模原市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "toushin-kawa": {
+    "city_name": "木更津市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tousou-moto": {
+    "city_name": "大多喜町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "touyoko-ta": {
+    "city_name": "袖ケ浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "toyocho": {
+    "city_name": "江東区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "toyoharu": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tsuchike": {
+    "city_name": "千葉市",
+    "ward_name": "緑区",
+    "prefecture_name": "千葉県"
+  },
+  "tsuda-yama": {
+    "city_name": "川崎市",
+    "ward_name": "高津区",
+    "prefecture_name": "神奈川県"
+  },
+  "tsujidou": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsukada": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tsukahara": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsukiji": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsukiji-shijo": {
+    "city_name": "中央区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsukimi-no": {
+    "city_name": "大和市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsukinowa": {
+    "city_name": "滑川町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tsukisaki": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "tsukuihama": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsukushi-no": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsunashima": {
+    "city_name": "横浜市",
+    "ward_name": "港北区",
+    "prefecture_name": "神奈川県"
+  },
+  "tsuru-ke-shima": {
+    "city_name": "川越市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tsurugamine": {
+    "city_name": "横浜市",
+    "ward_name": "旭区",
+    "prefecture_name": "神奈川県"
+  },
+  "tsurukawa": {
+    "city_name": "町田市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsuruma": {
+    "city_name": "大和市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsurumakionsen": {
+    "city_name": "秦野市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "tsurumi-ono": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "tsurumi-shijou": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "tsuruse": {
+    "city_name": "志木市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "tsutsuji-ke-oka": {
+    "city_name": "調布市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "tsuzuki-fureaino-oka": {
+    "city_name": "横浜市",
+    "ward_name": "都筑区",
+    "prefecture_name": "神奈川県"
+  },
+  "u-no-ki": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "uchisaiwaichou": {
+    "city_name": "千代田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ue-goura": {
+    "city_name": "箱根町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "ue-kumagaya": {
+    "city_name": "熊谷市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "ue-nagatani": {
+    "city_name": "横浜市",
+    "ward_name": "港南区",
+    "prefecture_name": "神奈川県"
+  },
+  "ue-ooi": {
+    "city_name": "大井町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "uemachi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "uhara": {
+    "city_name": "勝浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ukima-funato": {
+    "city_name": "北区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "umagome-sawa": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "umahori-kaigan": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "umatate": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "umegaoka": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "umeshima": {
+    "city_name": "足立区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "umeyashiki": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "umi-kashima": {
+    "city_name": "銚子市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "umi-no-kouen-minamiguchi": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "umi-no-kouen-shiba-kuchi": {
+    "city_name": "横浜市",
+    "ward_name": "金沢区",
+    "prefecture_name": "神奈川県"
+  },
+  "umi-shibaura": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "umigami": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "unga": {
+    "city_name": "流山市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "uraga": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "urawa-misono": {
+    "city_name": "さいたま市",
+    "ward_name": "緑区",
+    "prefecture_name": "埼玉県"
+  },
+  "urayama-kuchi": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "urayasu": {
+    "city_name": "浦安市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "ushigome-kagurazaka": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "ushigome-yanagimachi": {
+    "city_name": "新宿区",
+    "ward_name": "原町",
+    "prefecture_name": ""
+  },
+  "ushihama": {
+    "city_name": "福生市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "uwamizo": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "wa-ko": {
+    "city_name": "宮代町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "wada-kawara": {
+    "city_name": "南足柄市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "wada-machi": {
+    "city_name": "横浜市",
+    "ward_name": "保土ヶ谷区",
+    "prefecture_name": "神奈川県"
+  },
+  "wada-tsuka": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "wada-ura": {
+    "city_name": "南房総市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "wadou-kurotani": {
+    "city_name": "秩父市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "wakaba": {
+    "city_name": "坂戸市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "wakabadai": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "wakabayashi": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "wakamatsu-kawata": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "warabi": {
+    "city_name": "蕨市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "waseda": {
+    "city_name": "新宿区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "washimiya": {
+    "city_name": "久喜市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "y-r-p-nobi": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yabe": {
+    "city_name": "相模原市",
+    "ward_name": "中央区",
+    "prefecture_name": "神奈川県"
+  },
+  "yachimata": {
+    "city_name": "八街市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yachiyo-chuuou": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yachiyo-midorigaoka": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yachiyodai": {
+    "city_name": "八千代市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yagawa": {
+    "city_name": "国立市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yagi-saki": {
+    "city_name": "春日部市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yagiri": {
+    "city_name": "松戸市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yaguchi-watari": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yagyuu": {
+    "city_name": "加須市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yahatayama": {
+    "city_name": "杉並区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yahiro": {
+    "city_name": "墨田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yaho": {
+    "city_name": "国立市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yakou": {
+    "city_name": "横浜市",
+    "ward_name": "鶴見区",
+    "prefecture_name": "神奈川県"
+  },
+  "yakuen-dai": {
+    "city_name": "船橋市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yamada": {
+    "city_name": "八王子市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yamate": {
+    "city_name": "横浜市",
+    "ward_name": "中区",
+    "prefecture_name": "神奈川県"
+  },
+  "yanagikouji": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yanase-kawa": {
+    "city_name": "志木市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yanoguchi": {
+    "city_name": "稲城市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yasaka": {
+    "city_name": "東村山市",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yashio": {
+    "city_name": "八潮市",
+    "ward_name": "大瀬",
+    "prefecture_name": "埼玉県"
+  },
+  "yasuda": {
+    "city_name": "鋸南町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yatsu": {
+    "city_name": "習志野市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yatsuka": {
+    "city_name": "草加市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yayoi-dai": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "yoda": {
+    "city_name": "千葉市",
+    "ward_name": "緑区",
+    "prefecture_name": "千葉県"
+  },
+  "yokose": {
+    "city_name": "横瀬町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yokoshiba": {
+    "city_name": "横芝光町",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yokosuka": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yokosuka-chuuou": {
+    "city_name": "横須賀市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yokota": {
+    "city_name": "袖ケ浦市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yomiurirando-mae": {
+    "city_name": "川崎市",
+    "ward_name": "多摩区",
+    "prefecture_name": "神奈川県"
+  },
+  "yono": {
+    "city_name": "さいたま市",
+    "ward_name": "浦和区",
+    "prefecture_name": "埼玉県"
+  },
+  "yono-honchou": {
+    "city_name": "さいたま市",
+    "ward_name": "中央区",
+    "prefecture_name": "埼玉県"
+  },
+  "yoshi-kawa-kouen": {
+    "city_name": "千葉市",
+    "ward_name": "中央区",
+    "prefecture_name": "千葉県"
+  },
+  "yoshikawa": {
+    "city_name": "吉川市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yoshikawa-bi-minami": {
+    "city_name": "吉川市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "yoshino-hara": {
+    "city_name": "さいたま市",
+    "ward_name": "北区",
+    "prefecture_name": "埼玉県"
+  },
+  "yoshinochou": {
+    "city_name": "横浜市",
+    "ward_name": "南区",
+    "prefecture_name": "神奈川県"
+  },
+  "yotsuya-sanchome": {
+    "city_name": "新宿区",
+    "ward_name": "四谷",
+    "prefecture_name": ""
+  },
+  "youdo": {
+    "city_name": "寄居町",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "youga": {
+    "city_name": "世田谷区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "youkaichiba": {
+    "city_name": "匝瑳市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "youkoudai": {
+    "city_name": "横浜市",
+    "ward_name": "磯子区",
+    "prefecture_name": "神奈川県"
+  },
+  "yourou-keikoku": {
+    "city_name": "市原市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yubi-ougi": {
+    "city_name": "さいたま市",
+    "ward_name": "西区",
+    "prefecture_name": "埼玉県"
+  },
+  "yugawara": {
+    "city_name": "湯河原町",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yui-ke-hama": {
+    "city_name": "鎌倉市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "yuki-ga-taniootsuka": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yukinori": {
+    "city_name": "市川市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yumega-oka": {
+    "city_name": "横浜市",
+    "ward_name": "泉区",
+    "prefecture_name": "神奈川県"
+  },
+  "yuri-ke-oka": {
+    "city_name": "川崎市",
+    "ward_name": "麻生区",
+    "prefecture_name": "神奈川県"
+  },
+  "yushima": {
+    "city_name": "文京区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yutaka-shiki": {
+    "city_name": "柏市",
+    "ward_name": "",
+    "prefecture_name": "千葉県"
+  },
+  "yutenji": {
+    "city_name": "目黒区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "yuuenchi-nishi": {
+    "city_name": "所沢市",
+    "ward_name": "",
+    "prefecture_name": "埼玉県"
+  },
+  "zama": {
+    "city_name": "座間市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "zenkou": {
+    "city_name": "藤沢市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  },
+  "zoushiki": {
+    "city_name": "大田区",
+    "ward_name": "",
+    "prefecture_name": ""
+  },
+  "zushi": {
+    "city_name": "逗子市",
+    "ward_name": "",
+    "prefecture_name": "神奈川県"
+  }
+}
