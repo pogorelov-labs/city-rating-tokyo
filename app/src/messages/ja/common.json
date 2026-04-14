@@ -294,6 +294,18 @@
     "moderate": "中程度のリスク。標準的な地震対策が推奨されます。",
     "low": "リスクの低い地域、通常は堅固な岩盤上。標準的な注意事項は引き続き適用されます。"
   },
+  "transport": {
+    "title": "交通・所在地",
+    "linesAtStation": "乗り入れ路線",
+    "moreLines": "他{count}路線",
+    "showAll": "全{count}路線を表示",
+    "showFewer": "折りたたむ",
+    "typeGeneral": "鉄道",
+    "typeSubway": "地下鉄",
+    "typeMonorail": "モノレール",
+    "typeTram": "路面電車",
+    "typeOther": "その他"
+  },
   "privacy": {
     "notice": "Cookieフリーの分析 \u00b7 データは匿名のまま"
   },

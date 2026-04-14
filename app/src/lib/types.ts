@@ -80,6 +80,24 @@ export interface EnvironmentData {
   seismic_risk_tier?: SeismicRiskTier;
 }
 
+export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';
+
+export interface LineInfo {
+  id: string;
+  name_ja: string;
+  name_en: string;
+  operator_ja: string;
+  operator_en: string;
+  color: string;
+  type: LineType;
+}
+
+export interface WardInfo {
+  city_name: string;
+  ward_name: string;
+  prefecture_name: string;
+}
+
 export interface Station {
   slug: string;
   name_en: string;
@@ -87,7 +105,7 @@ export interface Station {
   name_ru?: string;
   lat: number;
   lng: number;
-  lines: string[];
+  lines: LineInfo[];
   line_count: number;
   prefecture: string;
   ratings: StationRatings | null;
@@ -98,6 +116,7 @@ export interface Station {
   sources?: StationSources | null;
   data_date?: string | null;
   environment?: EnvironmentData | null;
+  ward?: WardInfo | null;
 }
 
 /** Lightweight station data for the homepage map & filter panel */
