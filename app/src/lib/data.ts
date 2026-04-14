@@ -3,17 +3,31 @@ import { DEMO_RATINGS } from '@/data/demo-ratings';
 import rentData from '@/data/rent-averages.json';
 import stationThumbData from '@/data/station-thumbnails.json';
 import environmentData from '@/data/environment-data.json';
-import { Station, MapStation, RentAvg, EnvironmentData } from './types';
+import lineNamesData from '@/data/line-names.json';
+import wardData from '@/data/ward-data.json';
+import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo } from './types';
 import { rentToAffordability } from './scoring';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
 const thumbData = stationThumbData as Record<string, { thumb: string; lqip: string }>;
 const envData = environmentData as Record<string, EnvironmentData>;
+const lineNames = lineNamesData as Record<string, Omit<LineInfo, 'id'>>;
+const wards = wardData as Record<string, WardInfo>;
 
 export function getStations(): Station[] {
-  return (rawStations as Station[]).map((s) => {
+  return (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
     const demo = DEMO_RATINGS[s.slug];
     const rent = suumoRent[s.slug];
+
+    // Resolve line IDs to LineInfo objects
+    const resolvedLines: LineInfo[] = s.lines
+      .map((id) => {
+        const info = lineNames[id];
+        return info ? { id, ...info } : null;
+      })
+      .filter((l): l is LineInfo => l !== null);
+
+    const ward = wards[s.slug] || null;
 
     // Suumo real data takes priority over AI estimates
     const rentAvg: RentAvg | null = rent
@@ -32,6 +46,8 @@ export function getStations(): Station[] {
         : baseRatings;
       return {
         ...s,
+        lines: resolvedLines,
+        ward,
         ratings,
         transit_minutes: demo.transit_minutes,
         rent_avg: rentAvg,
@@ -46,7 +62,7 @@ export function getStations(): Station[] {
         environment: env,
       };
     }
-    return { ...s, rent_avg: rentAvg, environment: env };
+    return { ...s, lines: resolvedLines, ward, rent_avg: rentAvg, environment: env };
   });
 }
 
