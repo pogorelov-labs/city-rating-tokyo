@@ -296,9 +296,7 @@
   },
   "transport": {
     "title": "交通・所在地",
-    "linesAtStation": "乗り入れ路線",
     "moreLines": "他{count}路線",
-    "showAll": "全{count}路線を表示",
     "showFewer": "折りたたむ",
     "typeGeneral": "鉄道",
     "typeSubway": "地下鉄",

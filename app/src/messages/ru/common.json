@@ -296,9 +296,7 @@
   },
   "transport": {
     "title": "Транспорт и расположение",
-    "linesAtStation": "Линии на станции",
     "moreLines": "ещё {count}",
-    "showAll": "Показать все {count} линий",
     "showFewer": "Свернуть",
     "typeGeneral": "Ж/д",
     "typeSubway": "Метро",

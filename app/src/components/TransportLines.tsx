@@ -1,11 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import type { LineInfo, LineType, WardInfo } from '@/lib/types';
 
-const COLLAPSE_THRESHOLD = 6;
+const COLLAPSE_THRESHOLD = 8;
 const INITIAL_SHOW = 5;
+
+/** Fixed representative colors per line type (avoids misleading arbitrary first-line color) */
+const TYPE_COLORS: Record<LineType, string> = {
+  subway: '#006CB6',
+  general: '#F15A22',
+  monorail: '#E97119',
+  tram: '#EE86A7',
+  other: '#828A8C',
+};
+
+const TYPE_LABEL_KEYS: Record<LineType, string> = {
+  general: 'typeGeneral',
+  subway: 'typeSubway',
+  monorail: 'typeMonorail',
+  tram: 'typeTram',
+  other: 'typeOther',
+};
 
 /** Sort priority: subway → JR → private railway; alphabetical within group */
 function lineSortKey(line: LineInfo, locale: string): string {
@@ -30,36 +47,34 @@ function formatWard(ward: WardInfo): string {
 
 interface Props {
   lines: LineInfo[];
-  lineCount: number;
   ward: WardInfo | null;
   locale: string;
 }
 
-export default function TransportLines({ lines, lineCount, ward, locale }: Props) {
+export default function TransportLines({ lines, ward, locale }: Props) {
   const t = useTranslations('transport');
   const [expanded, setExpanded] = useState(false);
 
-  if (lines.length === 0 && !ward) return null;
+  // Deduplicate lines with identical name_en (e.g. Hachiko Line segments 11317/11318)
+  const sorted = useMemo(() => {
+    const seen = new Set<string>();
+    const deduped = lines.filter((l) => {
+      if (seen.has(l.name_en)) return false;
+      seen.add(l.name_en);
+      return true;
+    });
+    return deduped.sort((a, b) =>
+      lineSortKey(a, locale).localeCompare(lineSortKey(b, locale)),
+    );
+  }, [lines, locale]);
 
-  const sorted = [...lines].sort((a, b) =>
-    lineSortKey(a, locale).localeCompare(lineSortKey(b, locale)),
-  );
+  if (sorted.length === 0 && !ward) return null;
 
   const needsCollapse = sorted.length >= COLLAPSE_THRESHOLD;
   const visible = needsCollapse && !expanded ? sorted.slice(0, INITIAL_SHOW) : sorted;
-  const hiddenCount = sorted.length - INITIAL_SHOW;
+  const hiddenCount = needsCollapse ? sorted.length - INITIAL_SHOW : 0;
 
   const distinctTypes = [...new Set(sorted.map((l) => l.type))];
-
-  const typeLabel = (type: LineType) => {
-    const key = `type${type.charAt(0).toUpperCase()}${type.slice(1)}` as
-      | 'typeGeneral'
-      | 'typeSubway'
-      | 'typeMonorail'
-      | 'typeTram'
-      | 'typeOther';
-    return t(key);
-  };
 
   return (
     <section className="bg-white rounded-lg border border-gray-200 p-5">
@@ -119,19 +134,16 @@ export default function TransportLines({ lines, lineCount, ward, locale }: Props
       {/* Type legend — only when 2+ distinct types */}
       {distinctTypes.length >= 2 && (
         <div className="mt-3 pt-2 border-t border-gray-100 flex flex-wrap gap-3 text-xs text-gray-400">
-          {distinctTypes.map((type) => {
-            const sample = sorted.find((l) => l.type === type);
-            return (
-              <span key={type} className="flex items-center gap-1">
-                <span
-                  className="h-1.5 w-1.5 rounded-full"
-                  style={{ backgroundColor: sample?.color ?? '#999' }}
-                  aria-hidden
-                />
-                {typeLabel(type)}
-              </span>
-            );
-          })}
+          {distinctTypes.map((type) => (
+            <span key={type} className="flex items-center gap-1">
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: TYPE_COLORS[type] }}
+                aria-hidden
+              />
+              {t(TYPE_LABEL_KEYS[type])}
+            </span>
+          ))}
         </div>
       )}
     </section>

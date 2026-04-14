@@ -281,9 +281,7 @@
   },
   "transport": {
     "title": "Transport & Location",
-    "linesAtStation": "Lines at this station",
     "moreLines": "+{count} more",
-    "showAll": "Show all {count} lines",
     "showFewer": "Show fewer",
     "typeGeneral": "Rail",
     "typeSubway": "Subway",

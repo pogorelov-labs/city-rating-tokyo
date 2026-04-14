@@ -210,7 +210,6 @@ export default async function StationPage({
         {/* Transport lines + ward/city */}
         <TransportLines
           lines={station.lines}
-          lineCount={station.line_count}
           ward={station.ward ?? null}
           locale={loc}
         />
