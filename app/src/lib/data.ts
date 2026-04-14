@@ -36,8 +36,12 @@ export function getStations(): Station[] {
         transit_minutes: demo.transit_minutes,
         rent_avg: rentAvg,
         description: demo.description || null,
-        confidence: demo.confidence || null,
-        sources: demo.sources || null,
+        confidence: demo.confidence
+          ? { ...demo.confidence, daily_essentials: demo.confidence.daily_essentials ?? 'estimate' as const }
+          : null,
+        sources: demo.sources
+          ? { ...demo.sources, daily_essentials: demo.sources.daily_essentials ?? [] }
+          : null,
         data_date: demo.data_date || null,
         environment: env,
       };
