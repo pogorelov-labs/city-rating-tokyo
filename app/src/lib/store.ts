@@ -28,6 +28,8 @@ interface AppState {
   setHideFloodRisk: (v: boolean) => void;
   hideHighSeismic: boolean;
   setHideHighSeismic: (v: boolean) => void;
+  isFlying: boolean;
+  setIsFlying: (v: boolean) => void;
   compareStations: string[];
   addCompareStation: (slug: string) => void;
   removeCompareStation: (slug: string) => void;
@@ -81,6 +83,8 @@ export const useAppStore = create<AppState>((set) => ({
   setHideFloodRisk: (hideFloodRisk) => set({ hideFloodRisk }),
   hideHighSeismic: false,
   setHideHighSeismic: (hideHighSeismic) => set({ hideHighSeismic }),
+  isFlying: false,
+  setIsFlying: (isFlying) => set({ isFlying }),
   compareStations: [],
   addCompareStation: (slug) =>
     set((state) => {

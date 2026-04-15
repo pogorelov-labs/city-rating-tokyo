@@ -21,6 +21,11 @@ const ComparePanel = dynamic(() => import('./ComparePanel'), {
   ssr: false,
 });
 
+// MobileStationCard is touch-only; lazy-load so desktop doesn't ship it.
+const MobileStationCard = dynamic(() => import('./MobileStationCard'), {
+  ssr: false,
+});
+
 interface MapWrapperProps {
   stations: MapStation[];
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
@@ -37,6 +42,7 @@ export default function MapWrapper({ stations, thumbnails, snippets }: MapWrappe
       <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />
       <MapControls />
       {hasCompareTarget && <ComparePanel stations={stations} />}
+      <MobileStationCard stations={stations} thumbnails={thumbnails} snippets={snippets} />
       <UrlSync />
     </div>
   );

@@ -154,6 +154,7 @@
   },
   "map": {
     "clickForDetails": "詳細を見る →",
+    "closeCard": "カードを閉じる",
     "viewDetails": "詳細を見る →",
     "compare": "+ 比較",
     "removeCompare": "比較から外す",
