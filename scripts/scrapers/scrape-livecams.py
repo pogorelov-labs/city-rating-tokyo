@@ -106,7 +106,12 @@ def build_record(cam: dict, distance_m: float, data_date: str) -> Optional[dict]
     hasn't refreshed to a valid currently-live stream.
 
     Output uses:
-      - embed_url: youtube-nocookie.com/embed/{VIDEO_ID} (matches GDPR footer)
+      - embed_url: youtube.com/embed/{VIDEO_ID} — matches what MT3D's own
+        plugin embeds, maximizing compatibility. We tried the stricter
+        youtube-nocookie.com domain but some video owners disallow embeds
+        there while allowing them on youtube.com. Privacy is preserved by
+        the click-to-load facade + GDPR footer (no cookies until the user
+        explicitly clicks play).
       - watch_url: youtube.com/watch?v={VIDEO_ID} (exact video, not channel)
       - thumbnail: YouTube's video thumbnail URL (displayed on the facade)
 
@@ -132,7 +137,7 @@ def build_record(cam: dict, distance_m: float, data_date: str) -> Optional[dict]
         "name_ja": name_ja,
         "video_id": video_id,
         "channel_id": channel_id,
-        "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}?autoplay=1&mute=1&playsinline=1",
+        "embed_url": f"https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&playsinline=1",
         "watch_url": f"https://www.youtube.com/watch?v={video_id}",
         "thumbnail": thumbnail,
         "distance_m": round(distance_m),
