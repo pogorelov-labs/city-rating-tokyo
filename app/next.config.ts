@@ -26,9 +26,14 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' https://*.pogorelov.dev",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev",
+              // i.ytimg.com: YouTube thumbnail hosts (livecam facade previews)
+              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
               "connect-src 'self' https://*.pogorelov.dev",
               "font-src 'self'",
+              // frame-src: YouTube live camera embeds (CRTKY-116).
+              // Without this, CSP falls back to default-src 'self' and all
+              // cross-origin iframes (including YouTube) are blocked.
+              "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
               "frame-ancestors 'none'",
             ].join("; "),
           },
