@@ -88,19 +88,31 @@ export default function LiveCameras({ livecams, locale }: Props) {
           <button
             type="button"
             onClick={() => setIsPlaying(true)}
-            className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-white group hover:from-slate-700 hover:to-slate-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
+            className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-white group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
             aria-label={t('station.liveCamsPlay')}
             data-umami-event="livecam-play"
             data-umami-event-station={active.id}
           >
-            <div className="flex flex-col items-center gap-3 px-4">
-              <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
+            {/* Real video thumbnail from YouTube. If image fails (channel/video
+                removed), the gradient behind shows through naturally. */}
+            <img
+              src={active.thumbnail}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
+            {/* Dark gradient overlay so play icon + label stay readable on any thumb */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" aria-hidden />
+            <div className="relative flex flex-col items-center gap-3 px-4">
+              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <svg viewBox="0 0 24 24" className="w-8 h-8 ml-1 fill-white" aria-hidden>
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
-              <div className="text-sm font-medium">{t('station.liveCamsPlay')}</div>
-              <div className="text-xs text-white/70 text-center line-clamp-2">{pickName(active)}</div>
+              <div className="text-sm font-medium drop-shadow">{t('station.liveCamsPlay')}</div>
+              <div className="text-xs text-white/90 text-center line-clamp-2 drop-shadow">{pickName(active)}</div>
             </div>
           </button>
         ) : (
