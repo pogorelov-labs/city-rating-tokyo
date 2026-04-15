@@ -118,9 +118,11 @@ export interface LiveCamera {
   id: string;            // MT3D camera ID, stable across scrapes (e.g. "Akabane")
   name_en: string;       // English display name
   name_ja: string;       // Japanese display name (falls back to name_en when absent in source)
-  channel_id: string;    // YouTube channel ID
-  embed_url: string;     // youtube-nocookie.com/embed/live_stream?channel=...
-  watch_url: string;     // youtube.com/channel/.../live (deep-link)
+  video_id: string;      // YouTube video ID of the currently-embedded live stream. Goes stale when the stream ends — re-scrape required. Extracted from MT3D's `html` field iframe src.
+  channel_id: string;    // YouTube channel ID (metadata; embed uses video_id)
+  embed_url: string;     // youtube-nocookie.com/embed/{video_id}?autoplay=1&mute=1&playsinline=1
+  watch_url: string;     // youtube.com/watch?v={video_id} — points to the exact video MT3D embeds
+  thumbnail: string;     // i.ytimg.com/vi/{video_id}/hqdefault.jpg (unsigned, permanent)
   distance_m: number;    // meters from station centroid (for debug / sort)
   source: string;        // origin of the record, currently always "mini-tokyo-3d"
   data_date: string;     // ISO date the livecam endpoint was scraped
