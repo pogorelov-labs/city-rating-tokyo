@@ -296,6 +296,10 @@ export default async function MethodologyPage({
               <span className="text-amber-500 mt-0.5">&#9888;</span>
               <span><strong>Food data:</strong> HotPepper API is the primary source. Small independent restaurants without HotPepper listings may be undercounted, especially in rural areas.</span>
             </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Last train:</strong> Sourced from <a href="https://github.com/nagix/mini-tokyo-3d" className="underline">mini-tokyo-3d</a> (MIT licensed). We show the latest boardable departure in any direction. Weekday vs Sat/Holiday are split; Saturday and Sunday/Holiday timetables are combined in the source. Post-midnight times appear as 00:xx (no 24:00+ convention).</span>
+            </li>
           </ul>
         </section>
 
