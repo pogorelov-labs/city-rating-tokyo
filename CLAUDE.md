@@ -59,6 +59,25 @@ Do **not** equate “every station has a number” with “every number is equal
 | station_seismic | mhtnqvmi1kwbth9 | 1493 | J-SHIS Y2024 probabilistic seismic hazard (prob_i60_30yr, prob_i55_30yr, intensity, ground velocity) |
 | feedback | mwuwwlko3278wrk | — | User feedback from site |
 
+### Local JSON data files (non-NocoDB)
+
+| File | Records | Source | Purpose |
+|------|---------|--------|---------|
+| `app/src/data/stations.json` | 1493 | ekidata | Master station list (slug, name_en, name_jp, lines[], lat/lng, prefecture). Mirrored to `data/stations.json` for scripts. |
+| `app/src/data/line-names.json` | 127 | ekidata lookup | `{line_id: {name_ja, name_en, operator_ja, operator_en, color, type}}` — PR #90 |
+| `app/src/data/ward-data.json` | 1493 | NocoDB export | `{slug: {city_name, ward_name, prefecture_name}}` for station detail page — PR #90 |
+| `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
+| `app/src/data/rent-averages.json` | 1100 | Suumo + e-Stat | 274 real Suumo listings + 826 e-Stat govt averages — PR #91 |
+| `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
+| `app/src/data/station-thumbnails.json` | 1155 | VPS-generated | 320px thumb URL + LQIP base64 per station |
+| `app/src/data/station-images-all.json` | 1155 | Wikimedia + Unsplash | Gallery full-res images |
+| `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
+| `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
+| `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
+| `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
+
+**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`.
+
 `computed_ratings` has 3 metadata columns alongside the 10 rating numbers:
 - `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`
 - `sources` (LongText) — JSON: `{"food":["hotpepper","osm"],...}`
@@ -400,7 +419,54 @@ Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji
 | #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4486 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
 | #83 | CRTKY-34, 106 | **GDPR privacy footer** (desktop-only, cookie-free analytics notice in EN/JA/RU). **Methodology page** moved under `[locale]` routing (was 404). Livability scraper 1493/1493 complete (last 2 retried). |
 | #90 | CRTKY-54, 52, 112 | **Transport lines + ward/city on station pages.** 127 ekidata line IDs → name/operator/color mapping (`line-names.json`). 1493 ward records from NocoDB (`ward-data.json`). `TransportLines` component: color dots, locale-aware names, collapse at 6+ lines, type legend. `Station.lines` resolved from `string[]` to `LineInfo[]` at build time. `MapStation` unchanged. |
-| #? | CRTKY-116/117/118/119 | **Live YouTube camera streams on station pages.** Scraper (`scrape-livecams.py`) fetches 64 MT3D livecams, Haversine-matches at 300m → 29 stations / 32 rows. `LiveCamera` type + `Station.livecams`. `LiveCameras.tsx` component: click-to-load facade, 16:9, tab strip for multi-cam (shinjukunishiguchi gets 3), ✕ dismiss overlay, `youtube-nocookie.com` embed with `autoplay=1&mute=1`, `role="tabpanel"` ARIA. 📹 badge on map tooltip + touch popup (emoji-only, no palette overload). `FilterState.hasLiveCamera` dealbreaker + `hasLiveCamera?: boolean` on `MapStation` (optional-spread so no-cam stations add zero bytes). URL param `lc=1`. i18n in en/ja/ru. |
+| #91 | CRTKY-43 | **Rent expansion 274 → 1100 (18% → 74%)** via e-Stat govt statistics. `scripts/scrapers/scrape-estat-rent.py` + `merge-estat-rent.py`. Suumo actual listings keep priority; e-Stat fills ward-average fallback. `source` field: `suumo` \| `estat` \| old `ward_average` retired. |
+| #92 | — | **Ratings refresh (2026-04-14)** — green area scraper completion unlocks 428 more stations at `strong` confidence. `computed_at: 2026-04-15` in NocoDB `computed_ratings`. |
+| #93 | CRTKY-115 | **Last train times.** Scraped from mini-tokyo-3d (1483/1493 = 99.3%). `last-trains.json`: `{weekday, holiday, sources, data_date}`. 4th StatCard on station detail with tooltip caveat. Disambiguated weekday/holiday separately. Translated tooltip prose in EN/JA/RU. |
+| #94 | CRTKY-114 | **Map interaction UX overhaul.** Auto-open popup on desktop marker click, mobile bottom-card pattern (`MobileStationCard`), removed dead-end interactions. Design doc: `.claude/design-map-interaction-ux.md`. |
+| #95 | CRTKY-116/117/118/119 | **Live YouTube camera streams on station pages.** Scraper (`scrape-livecams.py`) fetches 64 MT3D livecams, Haversine-matches at 300m → 29 stations / 32 rows. `LiveCamera` type + `Station.livecams`. `LiveCameras.tsx` component: click-to-load facade, 16:9, tab strip for multi-cam (shinjukunishiguchi gets 3), ✕ dismiss overlay, `youtube-nocookie.com` embed with `autoplay=1&mute=1`, `role="tabpanel"` ARIA. 📹 badge on map tooltip + touch popup (emoji-only, no palette overload). `FilterState.hasLiveCamera` dealbreaker + `hasLiveCamera?: boolean` on `MapStation` (optional-spread so no-cam stations add zero bytes). URL param `lc=1`. i18n in en/ja/ru. |
+
+## Description Generation Pipeline (CRTKY-109, in progress)
+
+Data-driven LLM pipeline to produce 4-field descriptions (atmosphere / landmarks / food / nightlife) for all 1493 stations in EN/JA/RU.
+
+### Artifacts
+- `HANDOFF.md` (repo root) — runbook for parallel LLM agents (Claude Code, Codex, Cursor). Self-contained; each agent picks slugs via filesystem-claim.
+- `research/description-generation-rules.md` — voice rules, signal→prose mapping, confidence awareness, what NOT to say
+- `scripts/build-datamart.py` — joins 10 NocoDB tables + 7 local JSON into `data/station-datamart.json` (15 MB, gitignored). Run: `python3 scripts/build-datamart.py` (~60s).
+- `scripts/build-prompts-dir.py` — generates one self-contained `data/prompts/<slug>.md` per station (1486 files, gitignored). Re-run safely; `--all` forces regeneration.
+- `scripts/queue-status.py` — progress dashboard. Flags: `--next N` for next slugs, `--failed` for broken outputs.
+- `scripts/merge-descriptions.py` — merges all `data/descriptions/*.json` → `data/generated-descriptions.json` with validation.
+- `data/descriptions/<slug>.json` — **committed** per-station output. Shape: `{en:{atmosphere,landmarks,food,nightlife}, ja:{...}, ru:{...}}`
+- `data/generated-descriptions.json` — **committed** merged result for frontend integration.
+
+### Pipeline
+```
+NocoDB (10 tables) + local JSON (7 files)
+    ↓  build-datamart.py
+data/station-datamart.json (1493 stations, score-desc order, with `generation_order` field)
+    ↓  build-prompts-dir.py
+data/prompts/<slug>.md (1486 self-contained prompt files — voice + few-shot + data)
+    ↓  LLM agents (Claude Code, Codex, Cursor) in parallel, filesystem-claim
+data/descriptions/<slug>.json (one per station)
+    ↓  merge-descriptions.py
+data/generated-descriptions.json (merged, validated)
+    ↓  Phase 6 — separate integration PR
+app/src/data/demo-ratings.ts schema change: description becomes {en,ja,ru} × 4 fields
+```
+
+### Status (2026-04-15)
+- Phase 1 (research): ✅ rules doc
+- Phase 2 (datamart): ✅ builder runs, pulls all 17 sources
+- Phase 3 (prompt engineering): ✅ validated with 8 pilot stations (haiku ~7s/station, quality good)
+- Phase 4 (batch generation): 🚧 scaffolding merged, run via UI agents against main per `HANDOFF.md`
+- Phase 5 (merge + validate): pending (after Phase 4)
+- Phase 6 (frontend integration): **separate PR** — schema change + component wiring
+
+### Generation order
+Composite score descending (from `datamart["generation_order"]`). **All 1493 stations are regenerated** — including the ~252 that previously had a single-field RU editorial `description`. Scope reversal on 2026-04-15: single consistent voice across the whole dataset beats preserving legacy 1-field text, and the output structure is different (4 fields × 3 locales vs 1 field × 1 locale). `has_existing_description` flag stays in the datamart as metadata only; no script branches on it.
+
+### Running (paths are always relative to repo root)
+Scripts use `Path(__file__).resolve().parent.parent` → work from any cwd. For UI agents: open the editor **in the repo/worktree root** so Read/Write tool calls resolve relative paths. See `HANDOFF.md` → Block 1 for the paste-in prompt for UI agents.
 
 ## Dealbreaker Filters (PR #60, #61)
 
