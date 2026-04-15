@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shitamachi tram town, postwar residential charm. Narrow streets, corner shops, few tourists.",
+    "landmarks": "Oji Shrine nearby. Five pedestrian shopping streets. Modest local temples.",
+    "food": "28 izakayas packed into one station. Cheap, lively dinner scene. Yakitori, ramen joints.",
+    "nightlife": "Izakaya-driven. 22 places open late. Karaoke minimal but vibe strong."
+  },
+  "ja": {
+    "atmosphere": "下町情緒の路面電車町。戦後の古い民家、地元客中心。観光客ほぼなし。",
+    "landmarks": "王子神社に隣接。商店街5本。小ぶりな寺院散在。",
+    "food": "居酒屋28軒。安くて繁盛。焼き鳥、ラーメン店が主力。",
+    "nightlife": "居酒屋メイン。深夜営業22軒。カラオケは少数派。"
+  },
+  "ru": {
+    "atmosphere": "Трамвайный город эпохи Сёва. Узкие улицы, старые магазины. Туристов почти нет.",
+    "landmarks": "Рядом храм Ōдзи. Пять торговых улиц. Небольшие местные святилища.",
+    "food": "28 изакай в одной станции. Дёшево, оживлённо. Якитори, рамен.",
+    "nightlife": "Изакайный центр. 22 места работают ночью. Караоке редко."
+  }
+}

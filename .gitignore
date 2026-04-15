@@ -7,3 +7,10 @@ out/
 __pycache__/
 *.pyc
 .venv/
+
+# CRTKY-109 generation pipeline intermediate files
+# Regenerate with: scripts/build-datamart.py, scripts/build-prompts-dir.py
+data/station-datamart.json
+data/prompts/
+# data/descriptions/ IS committed — that's the output we want to keep
+# data/generated-descriptions.json IS committed — that's the merged result

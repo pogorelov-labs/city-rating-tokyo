@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Otaku pilgrimage site, wall-to-wall arcades and maid cafes. Tourist-mobbed, especially weekends.",
+    "landmarks": "Yodobashi Camera, UDX tower, Radio Kaikan. Electric Town pedestrian zone packed 24/7.",
+    "food": "Izakaya dominates (527 spots). Ramen alleys, standing sushi, chain gyudon. Quality varies wildly.",
+    "nightlife": "Karaoke sparse (4), clubs minimal (4). Izakayas run late. Midnight culture fades fast after 11pm."
+  },
+  "ja": {
+    "atmosphere": "オタク聖地、アーケードとメイド喫茶の密集地帯。特に週末は観光客で身動き取れず。",
+    "landmarks": "ヨドバシカメラ、UDXタワー、ラジオ会館。電気街歩行者天国は終日混雑。",
+    "food": "居酒屋が圧倒的（527件）。ラーメン横丁、立ち寿司、チェーン牛丼。質はまちまち。",
+    "nightlife": "カラオケ稀少（4件）、クラブほぼなし（4件）。居酒屋は遅くまで。夜中の文化は11時以降急速に萎縮。"
+  },
+  "ru": {
+    "atmosphere": "Мекка отаку, стена-к-стене аркады и мейд-кафе. Туристический хаос, особо в выходные.",
+    "landmarks": "Yodobashi Camera, башня UDX, Radio Kaikan. Пешеходная зона электротехники переполнена 24/7.",
+    "food": "Изакая доминирует (527 мест). Лапша, стоячие суши, чэйн гюдон. Качество прыгает.",
+    "nightlife": "Караоке редко (4), клубы минимальны (4). Изакаи работают подольше. После 23:00 почти мертво."
+  }
+}
