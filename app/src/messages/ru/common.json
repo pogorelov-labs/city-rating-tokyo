@@ -154,6 +154,7 @@
   },
   "map": {
     "clickForDetails": "Подробности →",
+    "closeCard": "Закрыть карточку",
     "viewDetails": "Подробности →",
     "compare": "+ Сравнить",
     "removeCompare": "Убрать из сравнения",

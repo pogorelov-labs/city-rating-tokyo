@@ -8,6 +8,7 @@ import {
   Popup,
   Tooltip,
   useMap,
+  useMapEvents,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -140,6 +141,25 @@ function TouchZoomControls() {
       </div>
     </div>
   );
+}
+
+/**
+ * Background-click dismiss: clicking the map (not a marker) clears the selected
+ * station so the halo, popup, and MobileStationCard all vanish. The
+ * `.leaflet-interactive` check filters out marker clicks — markers bubble a
+ * click event to the map layer, but they are wrapped in this class by Leaflet.
+ */
+function MapClickHandler() {
+  const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  useMapEvents({
+    click: (e) => {
+      const target = e.originalEvent?.target as HTMLElement | null;
+      if (!target?.closest('.leaflet-interactive')) {
+        setSelectedStation(null);
+      }
+    },
+  });
+  return null;
 }
 
 /**
@@ -357,9 +377,20 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   // Guard: hide SVG overlays (halo, top-5 pulse) during flyTo to prevent
   // dual-renderer desync — the SVG layer's coordinate transform lags behind
   // Canvas during zoom animation, causing a giant misplaced halo ring.
-  const [isFlying, setIsFlying] = useState(false);
-  const onFlyStart = useCallback(() => { setIsFlying(true); }, []);
-  const onFlyEnd = useCallback(() => { setIsFlying(false); }, []);
+  // isFlying is in the store (not local state) so MobileStationCard can read it.
+  const isFlying = useAppStore((s) => s.isFlying);
+  const setIsFlying = useAppStore((s) => s.setIsFlying);
+  const selectedMarkerRef = useRef<L.CircleMarker | null>(null);
+  // Tracks which station's popup is currently open, so we can suppress the
+  // tooltip on that same marker (avoids tooltip+popup overlap on one target).
+  const [openPopupSlug, setOpenPopupSlug] = useState<string | null>(null);
+  const onFlyStart = useCallback(() => { setIsFlying(true); }, [setIsFlying]);
+  const onFlyEnd = useCallback(() => {
+    setIsFlying(false);
+    // Auto-open popup after flyTo lands (desktop only — touch has no bound popup).
+    // 50ms delay lets the canvas opacity fade-in complete before the popup renders.
+    setTimeout(() => { selectedMarkerRef.current?.openPopup(); }, 50);
+  }, [setIsFlying]);
   const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
   const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
 
@@ -461,6 +492,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         />
       )}
       {isTouch && <TouchZoomControls />}
+      <MapClickHandler />
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
@@ -516,6 +548,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         return (
           <CircleMarker
             key={station.slug}
+            ref={station.slug === selectedStation ? selectedMarkerRef : undefined}
             center={[station.lat, station.lng]}
             radius={effectiveRadius}
             pathOptions={{
@@ -546,8 +579,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               },
             }}
           >
-            {/* Rich hover tooltip — desktop only (touch users get enriched Popup) */}
-            {!isTouch && (
+            {/* Rich hover tooltip — desktop only, suppressed when this marker's popup is open */}
+            {!isTouch && openPopupSlug !== station.slug && (
               <Tooltip
                 direction="top"
                 offset={[0, -10]}
@@ -597,19 +630,23 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                         <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
                       )}
                     </div>
-                    <div style={{ fontSize: 11, color: '#2563eb', marginTop: 4 }}>
-                      {t('map.clickForDetails')}
-                    </div>
                   </div>
                 </div>
               </Tooltip>
             )}
 
-            {/* Click popup — enriched on touch with image + snippet */}
-            <Popup autoPan={false}>
+            {/* Click popup — desktop only. Touch uses MobileStationCard (bottom-docked). */}
+            {!isTouch && (
+            <Popup
+              autoPan={false}
+              eventHandlers={{
+                add: () => setOpenPopupSlug(station.slug),
+                remove: () => setOpenPopupSlug((prev) => (prev === station.slug ? null : prev)),
+              }}
+            >
               <div className="min-w-[180px]">
-                {/* Touch: show thumbnail header (same as desktop tooltip) */}
-                {isTouch && (thumbEntry?.thumb || thumbEntry?.lqip) && (
+                {/* Thumbnail header — shown on all platforms now (click ≥ hover) */}
+                {(thumbEntry?.thumb || thumbEntry?.lqip) && (
                   <div style={{ margin: '-10px -12px 8px', overflow: 'hidden', borderRadius: '8px 8px 0 0' }}>
                     <StationTooltipHero
                       key={`popup-${station.slug}`}
@@ -640,8 +677,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                         <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
                       )}
                     </div>
-                    {/* Touch: show snippet in popup */}
-                    {isTouch && snippet && (
+                    {/* Snippet: shown on all platforms for full click-context */}
+                    {snippet && (
                       <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">
                         {snippet}
                       </div>
@@ -680,6 +717,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                 )}
               </div>
             </Popup>
+            )}
           </CircleMarker>
         );
       })}
