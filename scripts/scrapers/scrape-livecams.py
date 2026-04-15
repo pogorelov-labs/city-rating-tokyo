@@ -26,12 +26,24 @@ Usage:
 import argparse
 import json
 import math
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import requests
+
+
+# Extract YouTube video ID from the MT3D `html` field, which looks like:
+#   <iframe ... src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&..." ...>
+# This is the primary playable reference — MT3D's endpoint refreshes these
+# periodically as live streams end. Video IDs go stale; re-scrape is required.
+EMBED_RE = re.compile(r"/embed/([A-Za-z0-9_-]{11})")
+
+# Extract video ID from a thumbnail URL like:
+#   https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg?...
+THUMB_RE = re.compile(r"/vi/([A-Za-z0-9_-]{11})/")
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 LIVECAM_URL = "https://mini-tokyo.appspot.com/livecam"
@@ -69,25 +81,60 @@ def load_livecams(cache_dir: Optional[Path]) -> List[dict]:
     return data
 
 
-def build_record(cam: dict, distance_m: float, data_date: str) -> dict:
+def extract_video_id(cam: dict) -> Optional[str]:
+    """Extract the live-stream video ID from the MT3D cam record.
+
+    Tries `html` first (the iframe src), then `thumbnail` URL as a fallback.
+    Returns None if neither yields a valid 11-char YouTube video ID.
+    """
+    html = cam.get("html") or ""
+    m = EMBED_RE.search(html)
+    if m:
+        return m.group(1)
+    thumbnail = cam.get("thumbnail") or ""
+    m = THUMB_RE.search(thumbnail)
+    if m:
+        return m.group(1)
+    return None
+
+
+def build_record(cam: dict, distance_m: float, data_date: str) -> Optional[dict]:
     """Construct the slim per-station record shape.
 
-    We store youtube-nocookie.com for the embed (matches our GDPR footer)
-    and regular youtube.com for the watch-through link. Per-video IDs are
-    not available from the source — channel-live URLs resolve at view time
-    to whatever is currently live (or show YouTube's 'offline' placeholder).
+    Returns None (skipping the cam) if no video ID can be extracted — without
+    it, the embed can't be built reliably. This filters out entries that MT3D
+    hasn't refreshed to a valid currently-live stream.
+
+    Output uses:
+      - embed_url: youtube-nocookie.com/embed/{VIDEO_ID} (matches GDPR footer)
+      - watch_url: youtube.com/watch?v={VIDEO_ID} (exact video, not channel)
+      - thumbnail: YouTube's video thumbnail URL (displayed on the facade)
+
+    Channel ID is retained as metadata only — it's not used for the embed
+    because the `embed/live_stream?channel=` pattern is deprecated and
+    unreliable. The video ID pattern is what MT3D's own plugin embeds.
     """
-    channel_id = cam["channel"]
+    video_id = extract_video_id(cam)
+    if not video_id:
+        return None
+
+    channel_id = cam.get("channel") or ""
     name = cam.get("name") or {}
     name_en = name.get("en") or cam.get("id") or "Live Camera"
     name_ja = name.get("ja") or name_en
+    # MT3D's thumbnail URL includes short-lived signed query params; always
+    # use the unsigned permanent form to avoid link rot between re-scrapes.
+    thumbnail = f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+
     return {
         "id": cam["id"],
         "name_en": name_en,
         "name_ja": name_ja,
+        "video_id": video_id,
         "channel_id": channel_id,
-        "embed_url": f"https://www.youtube-nocookie.com/embed/live_stream?channel={channel_id}",
-        "watch_url": f"https://www.youtube.com/channel/{channel_id}/live",
+        "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}?autoplay=1&mute=1&playsinline=1",
+        "watch_url": f"https://www.youtube.com/watch?v={video_id}",
+        "thumbnail": thumbnail,
         "distance_m": round(distance_m),
         "source": "mini-tokyo-3d",
         "data_date": data_date,
@@ -142,7 +189,9 @@ def main():
             continue
         # Sort nearest first
         matches.sort(key=lambda t: t[0])
-        records = [build_record(cam, d, data_date) for d, cam in matches]
+        records = [r for r in (build_record(cam, d, data_date) for d, cam in matches) if r is not None]
+        if not records:
+            continue  # cam had no extractable video_id
         output[slug] = records
         if args.debug:
             names = ", ".join(f"{r['name_en']} ({r['distance_m']}m)" for r in records)
