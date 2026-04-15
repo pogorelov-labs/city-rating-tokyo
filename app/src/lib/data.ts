@@ -5,7 +5,8 @@ import stationThumbData from '@/data/station-thumbnails.json';
 import environmentData from '@/data/environment-data.json';
 import lineNamesData from '@/data/line-names.json';
 import wardData from '@/data/ward-data.json';
-import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo } from './types';
+import lastTrainsData from '@/data/last-trains.json';
+import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo, LastTrainInfo } from './types';
 import { rentToAffordability } from './scoring';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
@@ -13,6 +14,7 @@ const thumbData = stationThumbData as Record<string, { thumb: string; lqip: stri
 const envData = environmentData as Record<string, EnvironmentData>;
 const lineNames = lineNamesData as Record<string, Omit<LineInfo, 'id'>>;
 const wards = wardData as Record<string, WardInfo>;
+const lastTrains = lastTrainsData as Record<string, LastTrainInfo>;
 
 export function getStations(): Station[] {
   return (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
@@ -28,6 +30,7 @@ export function getStations(): Station[] {
       .filter((l): l is LineInfo => l !== null);
 
     const ward = wards[s.slug] || null;
+    const last_train = lastTrains[s.slug] || null;
 
     // Suumo real data takes priority over AI estimates
     const rentAvg: RentAvg | null = rent
@@ -48,6 +51,7 @@ export function getStations(): Station[] {
         ...s,
         lines: resolvedLines,
         ward,
+        last_train,
         ratings,
         transit_minutes: demo.transit_minutes,
         rent_avg: rentAvg,
@@ -62,7 +66,7 @@ export function getStations(): Station[] {
         environment: env,
       };
     }
-    return { ...s, lines: resolvedLines, ward, rent_avg: rentAvg, environment: env };
+    return { ...s, lines: resolvedLines, ward, last_train, rent_avg: rentAvg, environment: env };
   });
 }
 

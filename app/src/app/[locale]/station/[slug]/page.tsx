@@ -199,7 +199,37 @@ export default async function StationPage({
             <StatCard label={t('station.avgToCenter')} value="—" sub={t('station.noDataYet')} />
           )}
 
-          <StatCard label={t('station.lastTrain')} value="—" sub={t('station.comingSoon')} />
+          {station.last_train?.weekday ? (
+            <Tooltip
+              wrapper="div"
+              showHelpIcon={false}
+              content={
+                <div className="text-xs space-y-0.5">
+                  <div>
+                    <span className="text-gray-300">{t('station.weekdayFull')}: </span>
+                    <span className="font-medium">{station.last_train.weekday}</span>
+                  </div>
+                  {station.last_train.holiday && (
+                    <div>
+                      <span className="text-gray-300">{t('station.holidayFull')}: </span>
+                      <span className="font-medium">{station.last_train.holiday}</span>
+                    </div>
+                  )}
+                  <div className="text-gray-400 pt-1 border-t border-gray-700 mt-1 leading-snug">
+                    {t('station.lastTrainCaveat')}
+                  </div>
+                </div>
+              }
+            >
+              <StatCard
+                label={t('station.lastTrain')}
+                value={station.last_train.weekday}
+                sub={t('station.weekday')}
+              />
+            </Tooltip>
+          ) : (
+            <StatCard label={t('station.lastTrain')} value="—" sub={t('station.noDataYet')} />
+          )}
         </div>
 
         {/* Hub breakdown strip */}

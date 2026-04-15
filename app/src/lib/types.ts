@@ -98,6 +98,13 @@ export interface WardInfo {
   prefecture_name: string;
 }
 
+export interface LastTrainInfo {
+  weekday?: string;      // "HH:MM" in 24-hour clock (may include 00:xx for post-midnight)
+  holiday?: string;      // "HH:MM" — Saturday/Sunday/Holiday combined per source data
+  sources?: string[];    // mini-tokyo-3d station IDs (e.g. "TokyoMetro.Ginza.Shibuya")
+  data_date?: string;    // ISO date the mini-tokyo-3d snapshot was scraped
+}
+
 export interface Station {
   slug: string;
   name_en: string;
@@ -117,6 +124,7 @@ export interface Station {
   data_date?: string | null;
   environment?: EnvironmentData | null;
   ward?: WardInfo | null;
+  last_train?: LastTrainInfo | null;
 }
 
 /** Lightweight station data for the homepage map & filter panel */
