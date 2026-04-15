@@ -41,6 +41,9 @@ export function encodeStateToParams(state: {
   if (catEntries.length > 0) {
     params.set('cm', catEntries.map(([k, v]) => `${k}:${v}`).join(','));
   }
+  if (state.filters.hasLiveCamera) {
+    params.set('lc', '1');
+  }
 
   if (state.selectedStation) params.set('s', state.selectedStation);
   if (state.compareStations.length > 0) params.set('c', state.compareStations.join(','));
@@ -134,6 +137,11 @@ export function decodeParamsToState(params: URLSearchParams): {
       filterPatch.categoryMins = categoryMins;
       hasFilter = true;
     }
+  }
+
+  if (params.get('lc') === '1') {
+    filterPatch.hasLiveCamera = true;
+    hasFilter = true;
   }
 
   if (hasFilter) result.filters = filterPatch;

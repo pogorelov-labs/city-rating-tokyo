@@ -105,6 +105,27 @@ export interface LastTrainInfo {
   data_date?: string;    // ISO date the mini-tokyo-3d snapshot was scraped
 }
 
+/**
+ * Live camera feed near the station (YouTube channel-live stream).
+ * Source: mini-tokyo-3d's mt3d-plugin-livecam (MIT). Only a subset of
+ * stations (currently ~29 / 1493) have a camera within 300m of the slug.
+ *
+ * The embed URL uses youtube-nocookie.com to match our GDPR footer. No
+ * per-video ID exists in the source — channel-live resolves at view time
+ * to whatever is currently streaming, or YouTube's own offline placeholder.
+ */
+export interface LiveCamera {
+  id: string;            // MT3D camera ID, stable across scrapes (e.g. "Akabane")
+  name_en: string;       // English display name
+  name_ja: string;       // Japanese display name (falls back to name_en when absent in source)
+  channel_id: string;    // YouTube channel ID
+  embed_url: string;     // youtube-nocookie.com/embed/live_stream?channel=...
+  watch_url: string;     // youtube.com/channel/.../live (deep-link)
+  distance_m: number;    // meters from station centroid (for debug / sort)
+  source: string;        // origin of the record, currently always "mini-tokyo-3d"
+  data_date: string;     // ISO date the livecam endpoint was scraped
+}
+
 export interface Station {
   slug: string;
   name_en: string;
@@ -125,6 +146,7 @@ export interface Station {
   environment?: EnvironmentData | null;
   ward?: WardInfo | null;
   last_train?: LastTrainInfo | null;
+  livecams?: LiveCamera[] | null;
 }
 
 /** Lightweight station data for the homepage map & filter panel */
@@ -141,6 +163,10 @@ export interface MapStation {
   min_transit: number | null;
   elevation_m: number | null;
   seismic_risk_tier: SeismicRiskTier | null;
+  /** Derived boolean for map filter + tooltip badge. Full `livecams[]` only
+   *  lives on the detail-page `Station` — this boolean keeps the RSC payload
+   *  to 1 bit per station (~30 stations flagged today out of 1493). */
+  hasLiveCamera?: boolean;
   // confidence is NOT included here on purpose: it was ~226 KB of the RSC
   // payload with 1493 stations and is only needed on the station detail page
   // (which uses the full Station type via getStation). If compare-panel
@@ -166,6 +192,8 @@ export interface FilterState {
   minCommute: number;
   maxCommute: number;
   categoryMins: Partial<Record<keyof StationRatings, number>>;
+  /** Dealbreaker: require station to have at least one live camera within 300m. */
+  hasLiveCamera: boolean;
 }
 
 export const DEFAULT_FILTERS: FilterState = {
@@ -174,6 +202,7 @@ export const DEFAULT_FILTERS: FilterState = {
   minCommute: 10,
   maxCommute: 60,
   categoryMins: {},
+  hasLiveCamera: false,
 };
 
 export const DEFAULT_WEIGHTS: WeightConfig = {

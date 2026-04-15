@@ -22,6 +22,7 @@ import ImageGallery from '@/components/ImageGallery';
 import NearbyPlaces from '@/components/NearbyPlaces';
 import { NaturalEnvironment } from '@/components/NaturalEnvironment';
 import TransportLines from '@/components/TransportLines';
+import LiveCameras from '@/components/LiveCameras';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
 import stationImages from '@/data/station-images-all.json';
@@ -386,6 +387,11 @@ export default async function StationPage({
         {/* Image gallery */}
         {images.length > 0 && (
           <ImageGallery images={images} stationName={displayName} />
+        )}
+
+        {/* Live camera feeds (if any match within 300m) */}
+        {station.livecams && station.livecams.length > 0 && (
+          <LiveCameras livecams={station.livecams} locale={loc} />
         )}
 
         {/* Nearby Places */}

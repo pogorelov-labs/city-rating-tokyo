@@ -142,6 +142,7 @@
     "belowXm": "（5m未満）",
     "hideHighSeismic": "高い地震リスクを非表示",
     "seismicThreshold": "（>26% 震度6+）",
+    "hasLiveCamera": "周辺にライブカメラあり",
     "stationCount": "{count}駅",
     "matchCount": "{total}駅中<bold>{filtered}</bold>駅が該当",
     "noMatch": "該当する駅がありません — フィルターを緩めてみてください",
@@ -254,7 +255,12 @@
     "seismicRisk": "地震リスク:",
     "seismicProbability": "今後30年間で震度6.0以上の確率",
     "sourceElevation": "出典: Open-Elevation API（SRTMデータ）",
-    "sourceSeismic": "出典: J-SHIS 2024（防災科学技術研究所）"
+    "sourceSeismic": "出典: J-SHIS 2024（防災科学技術研究所）",
+    "liveCamsTitle": "周辺のライブカメラ",
+    "liveCamsPlay": "ライブ配信を再生",
+    "liveCamsClose": "停止して閉じる",
+    "liveCamsOpenYoutube": "YouTubeで見る",
+    "liveCamsAttribution": "ライブ配信は mini-tokyo-3d (MIT) 経由"
   },
   "seismicTiers": {
     "low": {

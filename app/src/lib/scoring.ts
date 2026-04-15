@@ -349,6 +349,8 @@ export function applyDealbreakers(
       // Environment safety (moved from Map.tsx visibleStations)
       if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
       if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
+      // Live camera dealbreaker
+      if (filters.hasLiveCamera && !s.hasLiveCamera) return false;
       return true;
     })
     .map((s) => ({

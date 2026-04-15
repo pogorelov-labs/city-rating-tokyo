@@ -142,6 +142,7 @@
     "belowXm": "(below 5m)",
     "hideHighSeismic": "Hide high seismic risk",
     "seismicThreshold": "(>26% intensity 6+)",
+    "hasLiveCamera": "Has live camera nearby",
     "stationCount": "{count} stations",
     "matchCount": "<bold>{filtered}</bold> of {total} stations match",
     "noMatch": "No stations match — try relaxing filters",
@@ -254,7 +255,12 @@
     "seismicRisk": "Seismic Risk:",
     "seismicProbability": "Probability of JMA intensity ≥6.0 in 30 years",
     "sourceElevation": "Source: Open-Elevation API (SRTM data)",
-    "sourceSeismic": "Source: J-SHIS 2024 (National Research Institute for Earth Science and Disaster Resilience)"
+    "sourceSeismic": "Source: J-SHIS 2024 (National Research Institute for Earth Science and Disaster Resilience)",
+    "liveCamsTitle": "Live Cameras Nearby",
+    "liveCamsPlay": "Play live feed",
+    "liveCamsClose": "Stop and close",
+    "liveCamsOpenYoutube": "Watch on YouTube",
+    "liveCamsAttribution": "Live feeds via mini-tokyo-3d (MIT)"
   },
   "seismicTiers": {
     "low": { "label": "Low", "description": "Below 3% probability" },

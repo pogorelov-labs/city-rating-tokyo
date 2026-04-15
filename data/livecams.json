@@ -1,0 +1,412 @@
+{
+  "akihabara": [
+    {
+      "id": "Akihabara-1",
+      "name_en": "Akihabara Live Camera 1",
+      "name_ja": "秋葉原ライブカメラ1",
+      "channel_id": "UChRQpufaxclkezElsQ04VXw",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UChRQpufaxclkezElsQ04VXw",
+      "watch_url": "https://www.youtube.com/channel/UChRQpufaxclkezElsQ04VXw/live",
+      "distance_m": 173,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "chibachuo": [
+    {
+      "id": "Yoshikawa-Koen",
+      "name_en": "Yoshikawa-Koen Live Camera",
+      "name_ja": "葭川公園ライブカメラ",
+      "channel_id": "UCHNESdkRxtCe9pN-tuhOiHA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCHNESdkRxtCe9pN-tuhOiHA",
+      "watch_url": "https://www.youtube.com/channel/UCHNESdkRxtCe9pN-tuhOiHA/live",
+      "distance_m": 263,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "ebisu": [
+    {
+      "id": "Ebisu",
+      "name_en": "Ebisu Live Camera",
+      "name_ja": "恵比寿ライブカメラ",
+      "channel_id": "UCblxymfdtaQOxPQrdlP4GPQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCblxymfdtaQOxPQrdlP4GPQ",
+      "watch_url": "https://www.youtube.com/channel/UCblxymfdtaQOxPQrdlP4GPQ/live",
+      "distance_m": 136,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "gotan-no": [
+    {
+      "id": "Gotanno",
+      "name_en": "Gotanno Live Camera",
+      "name_ja": "五反野ライブカメラ",
+      "channel_id": "UCnrY_H_5Sj76AXRidAUnxdA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCnrY_H_5Sj76AXRidAUnxdA",
+      "watch_url": "https://www.youtube.com/channel/UCnrY_H_5Sj76AXRidAUnxdA/live",
+      "distance_m": 15,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "hakoneyumoto": [
+    {
+      "id": "Hakone-Yumoto",
+      "name_en": "Hakone-Yumoto Live Camera",
+      "name_ja": "箱根湯本ライブカメラ",
+      "channel_id": "UCMvoqnZFzcPubp4zErbDYlQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCMvoqnZFzcPubp4zErbDYlQ",
+      "watch_url": "https://www.youtube.com/channel/UCMvoqnZFzcPubp4zErbDYlQ/live",
+      "distance_m": 79,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "hoya": [
+    {
+      "id": "Hoya",
+      "name_en": "Hoya Live Camera",
+      "name_ja": "保谷ライブカメラ",
+      "channel_id": "UCAPMlxH-TQVQNzKgD9V_JEw",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCAPMlxH-TQVQNzKgD9V_JEw",
+      "watch_url": "https://www.youtube.com/channel/UCAPMlxH-TQVQNzKgD9V_JEw/live",
+      "distance_m": 231,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "kama-ke-tani": [
+    {
+      "id": "Kamagaya",
+      "name_en": "Kamagaya Live Camera",
+      "name_ja": "鎌ヶ谷ライブカメラ",
+      "channel_id": "UCkE1JbngfWjKngmTSujg_wA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCkE1JbngfWjKngmTSujg_wA",
+      "watch_url": "https://www.youtube.com/channel/UCkE1JbngfWjKngmTSujg_wA/live",
+      "distance_m": 53,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "kanda": [
+    {
+      "id": "Kanda",
+      "name_en": "Kanda Live Camera",
+      "name_ja": "神田ライブカメラ",
+      "channel_id": "UCu76uqpelv-VALL5d6zsljg",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCu76uqpelv-VALL5d6zsljg",
+      "watch_url": "https://www.youtube.com/channel/UCu76uqpelv-VALL5d6zsljg/live",
+      "distance_m": 241,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "motoyawata": [
+    {
+      "id": "MotoYawata",
+      "name_en": "Moto-Yawata Live Camera",
+      "name_ja": "本八幡ライブカメラ",
+      "channel_id": "UCkE1JbngfWjKngmTSujg_wA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCkE1JbngfWjKngmTSujg_wA",
+      "watch_url": "https://www.youtube.com/channel/UCkE1JbngfWjKngmTSujg_wA/live",
+      "distance_m": 83,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "musashi-kosugi": [
+    {
+      "id": "Musashi-kosugi-2",
+      "name_en": "Musashi-kosugi Live Camera 2",
+      "name_ja": "武蔵小杉ライブカメラ2",
+      "channel_id": "UCjx0xW1_iYhQVsOkvQCGaOg",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCjx0xW1_iYhQVsOkvQCGaOg",
+      "watch_url": "https://www.youtube.com/channel/UCjx0xW1_iYhQVsOkvQCGaOg/live",
+      "distance_m": 16,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "nippori": [
+    {
+      "id": "Nippori",
+      "name_en": "Nippori Live Camera",
+      "name_ja": "日暮里ライブカメラ",
+      "channel_id": "UCDyC7xeQxsihyZj8SoICLEw",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCDyC7xeQxsihyZj8SoICLEw",
+      "watch_url": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/live",
+      "distance_m": 195,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "odawara": [
+    {
+      "id": "Odawara",
+      "name_en": "Odawara Live Camera",
+      "name_ja": "小田原ライブカメラ",
+      "channel_id": "UC9yuSASu1r3dKOvEmZwnptQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC9yuSASu1r3dKOvEmZwnptQ",
+      "watch_url": "https://www.youtube.com/channel/UC9yuSASu1r3dKOvEmZwnptQ/live",
+      "distance_m": 101,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "oku": [
+    {
+      "id": "Oku",
+      "name_en": "Oku Live Camera",
+      "name_ja": "尾久ライブカメラ",
+      "channel_id": "UCCTGl8U-2OSKzNA1Ek7fMdQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCCTGl8U-2OSKzNA1Ek7fMdQ",
+      "watch_url": "https://www.youtube.com/channel/UCCTGl8U-2OSKzNA1Ek7fMdQ/live",
+      "distance_m": 45,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "okutama": [
+    {
+      "id": "Okutama",
+      "name_en": "Okutama Live Camera",
+      "name_ja": "奥多摩ライブカメラ",
+      "channel_id": "UC_eA6kJqCVCL2Yds7--WHgQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC_eA6kJqCVCL2Yds7--WHgQ",
+      "watch_url": "https://www.youtube.com/channel/UC_eA6kJqCVCL2Yds7--WHgQ/live",
+      "distance_m": 6,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "omigawa": [
+    {
+      "id": "Omigawa",
+      "name_en": "Omigawa Live Camera",
+      "name_ja": "小見川ライブカメラ",
+      "channel_id": "UCEDo3_OID6nf7he9wiCRX_w",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCEDo3_OID6nf7he9wiCRX_w",
+      "watch_url": "https://www.youtube.com/channel/UCEDo3_OID6nf7he9wiCRX_w/live",
+      "distance_m": 176,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "omokage-hashi": [
+    {
+      "id": "Omokagebashi",
+      "name_en": "Omokagebashi Live Camera",
+      "name_ja": "面影橋ライブカメラ",
+      "channel_id": "UCc8drmhoXjMpgO5xq12w0KA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCc8drmhoXjMpgO5xq12w0KA",
+      "watch_url": "https://www.youtube.com/channel/UCc8drmhoXjMpgO5xq12w0KA/live",
+      "distance_m": 71,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "ryogoku": [
+    {
+      "id": "Ryogoku",
+      "name_en": "Ryogoku Live Camera",
+      "name_ja": "両国ライブカメラ",
+      "channel_id": "UCkAB51Lbgor6SW8aE4S3zuQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCkAB51Lbgor6SW8aE4S3zuQ",
+      "watch_url": "https://www.youtube.com/channel/UCkAB51Lbgor6SW8aE4S3zuQ/live",
+      "distance_m": 134,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "seibushinjuku": [
+    {
+      "id": "Seibu-Shinjuku",
+      "name_en": "Seibu-Shinjuku Live Camera",
+      "name_ja": "西武新宿ライブカメラ",
+      "channel_id": "UC5tScs1xEO1wqNmLCeWr99w",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC5tScs1xEO1wqNmLCeWr99w",
+      "watch_url": "https://www.youtube.com/channel/UC5tScs1xEO1wqNmLCeWr99w/live",
+      "distance_m": 160,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "shibuya": [
+    {
+      "id": "Shibuya-1",
+      "name_en": "Shibuya Live Camera 1",
+      "name_ja": "渋谷ライブカメラ1",
+      "channel_id": "UCGCZAYq5Xxojl_tSXcVJhiQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCGCZAYq5Xxojl_tSXcVJhiQ",
+      "watch_url": "https://www.youtube.com/channel/UCGCZAYq5Xxojl_tSXcVJhiQ/live",
+      "distance_m": 66,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    },
+    {
+      "id": "Shibuya-2",
+      "name_en": "Shibuya Live Camera 2",
+      "name_ja": "渋谷ライブカメラ2",
+      "channel_id": "UCfvMaqBPqsHXSbmmKzpDvow",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCfvMaqBPqsHXSbmmKzpDvow",
+      "watch_url": "https://www.youtube.com/channel/UCfvMaqBPqsHXSbmmKzpDvow/live",
+      "distance_m": 126,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "shichiri-ke-hama": [
+    {
+      "id": "Shichirigahama-1",
+      "name_en": "Shichirigahama Live Camera 1",
+      "name_ja": "七里ヶ浜ライブカメラ1",
+      "channel_id": "UC_9dgNP8GvfhUURELouR3Dg",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC_9dgNP8GvfhUURELouR3Dg",
+      "watch_url": "https://www.youtube.com/channel/UC_9dgNP8GvfhUURELouR3Dg/live",
+      "distance_m": 225,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "shimbashi": [
+    {
+      "id": "Shimbashi",
+      "name_en": "Shimbashi Live Camera",
+      "name_ja": "新橋ライブカメラ",
+      "channel_id": "UCOLVB0iYK8ahQ0mFn-lF-8g",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCOLVB0iYK8ahQ0mFn-lF-8g",
+      "watch_url": "https://www.youtube.com/channel/UCOLVB0iYK8ahQ0mFn-lF-8g/live",
+      "distance_m": 164,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "shinjukunishiguchi": [
+    {
+      "id": "Shinjuku-2",
+      "name_en": "Shinjuku Live Camera 2",
+      "name_ja": "新宿ライブカメラ2",
+      "channel_id": "UC1kDVgEX2DsE295Bkum_K9Q",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC1kDVgEX2DsE295Bkum_K9Q",
+      "watch_url": "https://www.youtube.com/channel/UC1kDVgEX2DsE295Bkum_K9Q/live",
+      "distance_m": 76,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    },
+    {
+      "id": "Shinjuku-3",
+      "name_en": "Shinjuku Live Camera 3",
+      "name_ja": "新宿ライブカメラ3",
+      "channel_id": "UC56apcbc2pLZ9xyBizbD1Dg",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC56apcbc2pLZ9xyBizbD1Dg",
+      "watch_url": "https://www.youtube.com/channel/UC56apcbc2pLZ9xyBizbD1Dg/live",
+      "distance_m": 99,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    },
+    {
+      "id": "Seibu-Shinjuku",
+      "name_en": "Seibu-Shinjuku Live Camera",
+      "name_ja": "西武新宿ライブカメラ",
+      "channel_id": "UC5tScs1xEO1wqNmLCeWr99w",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC5tScs1xEO1wqNmLCeWr99w",
+      "watch_url": "https://www.youtube.com/channel/UC5tScs1xEO1wqNmLCeWr99w/live",
+      "distance_m": 178,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "suehirocho": [
+    {
+      "id": "Akihabara-2",
+      "name_en": "Akihabara Live Camera 2",
+      "name_ja": "秋葉原ライブカメラ2",
+      "channel_id": "UCQZvctelm9hPKKkP0RpvFyQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCQZvctelm9hPKKkP0RpvFyQ",
+      "watch_url": "https://www.youtube.com/channel/UCQZvctelm9hPKKkP0RpvFyQ/live",
+      "distance_m": 246,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "takao": [
+    {
+      "id": "Takao",
+      "name_en": "Takao Live Camera",
+      "name_ja": "高尾ライブカメラ",
+      "channel_id": "UC3XaMdKWwInRZABct7gKwFA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC3XaMdKWwInRZABct7gKwFA",
+      "watch_url": "https://www.youtube.com/channel/UC3XaMdKWwInRZABct7gKwFA/live",
+      "distance_m": 258,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "takaosanguchi": [
+    {
+      "id": "Takaosanguchi",
+      "name_en": "Takaosanguchi Live Camera",
+      "name_ja": "高尾山口ライブカメラ",
+      "channel_id": "UCsyGt_KORXUTXdrmaTYkJPQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCsyGt_KORXUTXdrmaTYkJPQ",
+      "watch_url": "https://www.youtube.com/channel/UCsyGt_KORXUTXdrmaTYkJPQ/live",
+      "distance_m": 135,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "tani-zaike": [
+    {
+      "id": "Yazaike",
+      "name_en": "Yazaike Live Camera",
+      "name_ja": "谷在家ライブカメラ",
+      "channel_id": "UCPsjdwVy2etWVaz1m2mcyxQ",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCPsjdwVy2etWVaz1m2mcyxQ",
+      "watch_url": "https://www.youtube.com/channel/UCPsjdwVy2etWVaz1m2mcyxQ/live",
+      "distance_m": 135,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "tokyo": [
+    {
+      "id": "Tokyo",
+      "name_en": "Tokyo Live Camera",
+      "name_ja": "東京ライブカメラ",
+      "channel_id": "UCLizOnUQUuR0FW58PP-ZACA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCLizOnUQUuR0FW58PP-ZACA",
+      "watch_url": "https://www.youtube.com/channel/UCLizOnUQUuR0FW58PP-ZACA/live",
+      "distance_m": 252,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "yoshi-kawa-koen": [
+    {
+      "id": "Yoshikawa-Koen",
+      "name_en": "Yoshikawa-Koen Live Camera",
+      "name_ja": "葭川公園ライブカメラ",
+      "channel_id": "UCHNESdkRxtCe9pN-tuhOiHA",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UCHNESdkRxtCe9pN-tuhOiHA",
+      "watch_url": "https://www.youtube.com/channel/UCHNESdkRxtCe9pN-tuhOiHA/live",
+      "distance_m": 136,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ],
+  "yurakucho": [
+    {
+      "id": "Yurakucho",
+      "name_en": "Yurakucho Live Camera",
+      "name_ja": "有楽町ライブカメラ",
+      "channel_id": "UC6Ljvl0Kghy9Fhe6SXViTPw",
+      "embed_url": "https://www.youtube-nocookie.com/embed/live_stream?channel=UC6Ljvl0Kghy9Fhe6SXViTPw",
+      "watch_url": "https://www.youtube.com/channel/UC6Ljvl0Kghy9Fhe6SXViTPw/live",
+      "distance_m": 189,
+      "source": "mini-tokyo-3d",
+      "data_date": "2026-04-15"
+    }
+  ]
+}

@@ -174,7 +174,19 @@ export default function MobileStationCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline justify-between gap-2">
             <div className="min-w-0">
-              <div className="font-bold text-base truncate">{names.primary}</div>
+              <div className="font-bold text-base truncate flex items-center gap-1.5">
+                <span className="truncate">{names.primary}</span>
+                {station.hasLiveCamera && (
+                  <span
+                    role="img"
+                    aria-label={t('filter.hasLiveCamera')}
+                    title={t('filter.hasLiveCamera')}
+                    className="text-base leading-none shrink-0"
+                  >
+                    📹
+                  </span>
+                )}
+              </div>
               {names.secondary && (
                 <div className="text-gray-500 text-xs truncate">{names.secondary}</div>
               )}

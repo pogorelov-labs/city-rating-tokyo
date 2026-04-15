@@ -600,8 +600,20 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                   />
                   <div style={{ padding: '8px 10px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                      <div>
-                        <div style={{ fontWeight: 700, fontSize: 14 }}>{stationDisplayName(station, locale).primary}</div>
+                      <div style={{ minWidth: 0 }}>
+                        <div style={{ fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
+                          <span>{stationDisplayName(station, locale).primary}</span>
+                          {station.hasLiveCamera && (
+                            <span
+                              role="img"
+                              aria-label={t('filter.hasLiveCamera')}
+                              title={t('filter.hasLiveCamera')}
+                              style={{ fontSize: 14, lineHeight: 1 }}
+                            >
+                              📹
+                            </span>
+                          )}
+                        </div>
                         <div style={{ color: '#6b7280', fontSize: 12 }}>{stationDisplayName(station, locale).secondary}</div>
                       </div>
                       {score !== null && (
@@ -660,8 +672,18 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     />
                   </div>
                 )}
-                <div className="font-bold text-base">
-                  {stationDisplayName(station, locale).primary}
+                <div className="font-bold text-base flex items-center gap-1.5">
+                  <span>{stationDisplayName(station, locale).primary}</span>
+                  {station.hasLiveCamera && (
+                    <span
+                      role="img"
+                      aria-label={t('filter.hasLiveCamera')}
+                      title={t('filter.hasLiveCamera')}
+                      className="text-base leading-none"
+                    >
+                      📹
+                    </span>
+                  )}
                 </div>
                 <div className="text-gray-500 text-sm mb-1">
                   {stationDisplayName(station, locale).secondary}
