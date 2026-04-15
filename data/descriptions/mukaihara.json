@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet residential pocket. Tram-only access keeps foot traffic low; cheap rent, local vibe.",
+    "landmarks": "Arakawa tram line, small parks, 6 pedestrian alleys with shops.",
+    "food": "85 restaurants—mostly izakaya (38), cafes, casual. Strong local scene.",
+    "nightlife": "32 late spots + 2 karaoke. Lively for size, but no clubs."
+  },
+  "ja": {
+    "atmosphere": "静かな住宅地。路面電車だけのアクセスで人通り少ない。家賃安い。",
+    "landmarks": "荒川線、小公園、商店街6本。",
+    "food": "85軒—居酒屋38中心。ローカル色強い。",
+    "nightlife": "深夜32軒、カラオケ2。規模の割に活気あり。"
+  },
+  "ru": {
+    "atmosphere": "Тихий жилой район. Только трамвай—мало людей, дешевая аренда.",
+    "landmarks": "Трамвайная линия Arakawa, малые парки, 6 пешеходных улиц.",
+    "food": "85 мест—в основном изакая (38). Локальная сцена.",
+    "nightlife": "32 ночных места, 2 караоке. Живо для района, но без клубов."
+  }
+}

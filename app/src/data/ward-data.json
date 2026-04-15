@@ -169,7 +169,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kuukou-daini-biru-daini-ryokyaku-taaminaru": {
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
     "city_name": "成田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -184,7 +184,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "naritakuukou-daiichi-ryokyaku-taaminaru": {
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
     "city_name": "成田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -269,7 +269,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "choushi": {
+  "choshi": {
     "city_name": "銚子市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -299,7 +299,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hanedakuukou-kokunaisen-taaminaru": {
+  "hanedakuko-kokunaisen-taaminaru": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -334,7 +334,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "higashihannou": {
+  "higashihanno": {
     "city_name": "飯能市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -379,7 +379,7 @@
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "keioutama-sentaa": {
+  "keiotama-sentaa": {
     "city_name": "多摩市",
     "ward_name": "",
     "prefecture_name": ""
@@ -499,7 +499,7 @@
     "ward_name": "新木場",
     "prefecture_name": ""
   },
-  "shounandai": {
+  "shonandai": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -524,7 +524,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "toubudoubutsukouen": {
+  "tobudobutsukoen": {
     "city_name": "宮代町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -609,12 +609,12 @@
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
   },
-  "chiba-nyuutaun-chuuou": {
+  "chiba-nyutaun-chuo": {
     "city_name": "印西市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "chibachuuou": {
+  "chibachuo": {
     "city_name": "千葉市",
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
@@ -624,7 +624,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "chuuourinkan": {
+  "chuorinkan": {
     "city_name": "大和市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -639,7 +639,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "fuchuuhonmachi": {
+  "fuchuhonmachi": {
     "city_name": "府中市",
     "ward_name": "",
     "prefecture_name": ""
@@ -669,7 +669,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "goura": {
+  "gora": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -684,17 +684,17 @@
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "hanedakuukou-kokusaisen-taaminaru": {
+  "hanedakuko-kokusaisen-taaminaru": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hannou": {
+  "hanno": {
     "city_name": "飯能市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "hanyuu": {
+  "hanyu": {
     "city_name": "羽生市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -709,12 +709,12 @@
     "ward_name": "旗の台",
     "prefecture_name": ""
   },
-  "hatchoubori": {
+  "hatchobori": {
     "city_name": "中央区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hatchounawate": {
+  "hatchonawate": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
@@ -724,7 +724,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "higashi-fuchuu": {
+  "higashi-fuchu": {
     "city_name": "府中市",
     "ward_name": "",
     "prefecture_name": ""
@@ -779,7 +779,7 @@
     "ward_name": "保土ヶ谷区",
     "prefecture_name": "神奈川県"
   },
-  "hokuchou-kasumi": {
+  "hokucho-kasumi": {
     "city_name": "朝霞市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -829,7 +829,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kamioooka": {
+  "kamiooka": {
     "city_name": "横浜市",
     "ward_name": "港南区",
     "prefecture_name": "神奈川県"
@@ -874,17 +874,17 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "keikyuu-kamata": {
+  "keikyu-kamata": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "keikyuu-kawasaki": {
+  "keikyu-kawasaki": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "keiou-nagayama": {
+  "keio-nagayama": {
     "city_name": "多摩市",
     "ward_name": "",
     "prefecture_name": ""
@@ -944,17 +944,17 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kou-no-shima": {
+  "ko-no-shima": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "kourai": {
+  "korai": {
     "city_name": "日高市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kouzu": {
+  "kozu": {
     "city_name": "小田原市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -1009,7 +1009,7 @@
     "ward_name": "花見川区",
     "prefecture_name": "千葉県"
   },
-  "makuharihongou": {
+  "makuharihongo": {
     "city_name": "千葉市",
     "ward_name": "花見川区",
     "prefecture_name": "千葉県"
@@ -1069,7 +1069,7 @@
     "ward_name": "南区",
     "prefecture_name": "埼玉県"
   },
-  "nagareyama-ootakano-mori": {
+  "nagareyama-otakano-mori": {
     "city_name": "流山市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1099,12 +1099,12 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "nanryuu-yama": {
+  "nanryu-yama": {
     "city_name": "流山市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "narutou": {
+  "naruto": {
     "city_name": "山武市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1154,7 +1154,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ogawachou": {
+  "ogawacho": {
     "city_name": "小川町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -1169,17 +1169,17 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ooami": {
+  "oami": {
     "city_name": "大網白里市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "oohara": {
+  "ohara": {
     "city_name": "いすみ市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "oookayama": {
+  "ookayama": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -1199,7 +1199,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "sagamioono": {
+  "sagamiono": {
     "city_name": "相模原市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
@@ -1214,7 +1214,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "sakuragichou": {
+  "sakuragicho": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -1234,12 +1234,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "seibu-yuuenchi": {
+  "seibu-yuenchi": {
     "city_name": "東村山市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "seibukyuujou-mae": {
+  "seibukyujo-mae": {
     "city_name": "所沢市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -1374,7 +1374,7 @@
     "ward_name": "高津区",
     "prefecture_name": "神奈川県"
   },
-  "tama-doubutsu-kouen": {
+  "tama-dobutsu-koen": {
     "city_name": "日野市",
     "ward_name": "",
     "prefecture_name": ""
@@ -1384,7 +1384,7 @@
     "ward_name": "芝浦",
     "prefecture_name": ""
   },
-  "tamagawajousui": {
+  "tamagawajosui": {
     "city_name": "立川市",
     "ward_name": "",
     "prefecture_name": ""
@@ -1394,12 +1394,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tenkuu-hashi": {
+  "tenku-hashi": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tennoudai": {
+  "tennodai": {
     "city_name": "我孫子市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1424,7 +1424,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tougo-no": {
+  "togo-no": {
     "city_name": "飯能市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -1474,7 +1474,7 @@
     "ward_name": "中央",
     "prefecture_name": "神奈川県"
   },
-  "yotsukaidou": {
+  "yotsukaido": {
     "city_name": "四街道市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1489,7 +1489,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "yuukari-ga-oka": {
+  "yukari-ga-oka": {
     "city_name": "佐倉市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1519,7 +1519,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "aikou-ishida": {
+  "aiko-ishida": {
     "city_name": "厚木市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -1604,7 +1604,7 @@
     "ward_name": "青井三丁目",
     "prefecture_name": ""
   },
-  "aomono-yokochou": {
+  "aomono-yokocho": {
     "city_name": "品川区",
     "ward_name": "南品川",
     "prefecture_name": ""
@@ -1619,22 +1619,22 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "arakawa-itchuu-mae": {
+  "arakawa-itchu-mae": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "arakawa-nichoume": {
+  "arakawa-nichome": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "arakawa-shichi-choume": {
+  "arakawa-shichi-chome": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "arakawa-yuuenchi-mae": {
+  "arakawa-yuenchi-mae": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
@@ -1714,7 +1714,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "baigou": {
+  "baigo": {
     "city_name": "野田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1724,7 +1724,7 @@
     "ward_name": "中央区",
     "prefecture_name": "神奈川県"
   },
-  "bandou-hashi": {
+  "bando-hashi": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -1744,27 +1744,27 @@
     "ward_name": "鶴見区",
     "prefecture_name": "神奈川県"
   },
-  "bushuu-araki": {
+  "bushu-araki": {
     "city_name": "行田市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "bushuu-hino": {
+  "bushu-hino": {
     "city_name": "秩父市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "bushuu-karasawa": {
+  "bushu-karasawa": {
     "city_name": "越生町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "bushuu-nagase": {
+  "bushu-nagase": {
     "city_name": "毛呂山町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "bushuu-nakagawa": {
+  "bushu-nakagawa": {
     "city_name": "秩父市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -1774,12 +1774,12 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "byoubu-ura": {
+  "byobu-ura": {
     "city_name": "横浜市",
     "ward_name": "磯子区",
     "prefecture_name": "神奈川県"
   },
-  "chiba-kouen": {
+  "chiba-koen": {
     "city_name": "千葉市",
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
@@ -1794,7 +1794,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "chidorichou": {
+  "chidoricho": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -1829,32 +1829,32 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "chou-ura": {
+  "cho-ura": {
     "city_name": "袖ケ浦市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "chougo": {
+  "chogo": {
     "city_name": "藤沢市",
     "ward_name": "長後地区",
     "prefecture_name": "神奈川県"
   },
-  "choujamachi": {
+  "chojamachi": {
     "city_name": "いすみ市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "choukoku-no-mori": {
+  "chokoku-no-mori": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "chuugakkou": {
+  "chugakko": {
     "city_name": "佐倉市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "chuuoudaigaku-meiseidaigaku": {
+  "chuodaigaku-meiseidaigaku": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
@@ -1864,7 +1864,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "daijinguushita": {
+  "daijingushita": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -1879,7 +1879,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "dokkyoudaigaku-zen-eki-souka-matsubara": {
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
     "city_name": "草加市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -1889,7 +1889,7 @@
     "ward_name": "北区",
     "prefecture_name": "埼玉県"
   },
-  "doubutsu-kouen": {
+  "dobutsu-koen": {
     "city_name": "千葉市",
     "ward_name": "稲毛区",
     "prefecture_name": "千葉県"
@@ -1944,7 +1944,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "etchuu-shima": {
+  "etchu-shima": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
@@ -1959,7 +1959,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "fuchuu-keiba-seimonmae": {
+  "fuchu-keiba-seimonmae": {
     "city_name": "府中市",
     "ward_name": "",
     "prefecture_name": ""
@@ -1969,7 +1969,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "fudoumae": {
+  "fudomae": {
     "city_name": "品川区",
     "ward_name": "西五反田",
     "prefecture_name": ""
@@ -1994,7 +1994,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "fujimichou": {
+  "fujimicho": {
     "city_name": "鎌倉市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -2014,7 +2014,7 @@
     "ward_name": "緑区",
     "prefecture_name": "神奈川県"
   },
-  "fujisawa-honchou": {
+  "fujisawa-honcho": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -2039,7 +2039,7 @@
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
   },
-  "funabashi-houten": {
+  "funabashi-hoten": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2049,7 +2049,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "funabashikeibajou": {
+  "funabashikeibajo": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2109,12 +2109,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "gakushuuin-shita": {
+  "gakushuin-shita": {
     "city_name": "豊島区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "gamou": {
+  "gamo": {
     "city_name": "越谷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2129,7 +2129,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "ginzaitchoume": {
+  "ginzaitchome": {
     "city_name": "中央区",
     "ward_name": "",
     "prefecture_name": ""
@@ -2154,7 +2154,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "gokou": {
+  "goko": {
     "city_name": "松戸市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2174,12 +2174,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "gyouda": {
+  "gyoda": {
     "city_name": "行田市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "gyoudashi": {
+  "gyodashi": {
     "city_name": "行田市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2199,7 +2199,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "hachiouji-minami-no": {
+  "hachioji-minami-no": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
@@ -2284,7 +2284,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hara-touma": {
+  "hara-toma": {
     "city_name": "相模原市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
@@ -2359,7 +2359,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "higashi-aki-ryuu": {
+  "higashi-aki-ryu": {
     "city_name": "あきる野市",
     "ward_name": "",
     "prefecture_name": ""
@@ -2419,7 +2419,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "higashijuujou": {
+  "higashijujo": {
     "city_name": "北区",
     "ward_name": "",
     "prefecture_name": ""
@@ -2464,12 +2464,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "higashiogu-sanchoume": {
+  "higashiogu-sanchome": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "higashioume": {
+  "higashiome": {
     "city_name": "青梅市",
     "ward_name": "",
     "prefecture_name": ""
@@ -2554,7 +2554,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "hirayama-joushi-kouen": {
+  "hirayama-joshi-koen": {
     "city_name": "日野市",
     "ward_name": "",
     "prefecture_name": ""
@@ -2574,7 +2574,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hirose-yachou-no-mori": {
+  "hirose-yacho-no-mori": {
     "city_name": "熊谷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2584,7 +2584,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hiyoshihonchou": {
+  "hiyoshihoncho": {
     "city_name": "横浜市",
     "ward_name": "港北区",
     "prefecture_name": "神奈川県"
@@ -2609,7 +2609,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "hon-choushi": {
+  "hon-choshi": {
     "city_name": "銚子市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2619,7 +2619,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hon-nou": {
+  "hon-no": {
     "city_name": "茂原市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2629,7 +2629,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hongoudai": {
+  "hongodai": {
     "city_name": "横浜市",
     "ward_name": "栄区",
     "prefecture_name": "神奈川県"
@@ -2639,7 +2639,7 @@
     "ward_name": "吾妻橋",
     "prefecture_name": ""
   },
-  "honjou": {
+  "honjo": {
     "city_name": "本庄市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2659,7 +2659,7 @@
     "ward_name": "千住曙町",
     "prefecture_name": ""
   },
-  "horikiri-shoubuen": {
+  "horikiri-shobuen": {
     "city_name": "葛飾区",
     "ward_name": "",
     "prefecture_name": ""
@@ -2679,7 +2679,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "hyuuga": {
+  "hyuga": {
     "city_name": "山武市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2699,7 +2699,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "ichikawa-oono": {
+  "ichikawa-ono": {
     "city_name": "市川市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -2744,12 +2744,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ikejirioohashi": {
+  "ikejiriohashi": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ikenoue": {
+  "ikenoe": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
@@ -2764,7 +2764,7 @@
     "ward_name": "北区",
     "prefecture_name": "埼玉県"
   },
-  "ina-chuuou": {
+  "ina-chuo": {
     "city_name": "伊奈町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2799,7 +2799,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "inariyama-kouen": {
+  "inariyama-koen": {
     "city_name": "狭山市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -2854,7 +2854,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "isezaki-choujamachi": {
+  "isezaki-chojamachi": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -2874,7 +2874,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "ishikawachou": {
+  "ishikawacho": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -2894,7 +2894,7 @@
     "ward_name": "板橋",
     "prefecture_name": ""
   },
-  "itabashihonchou": {
+  "itabashihoncho": {
     "city_name": "板橋区",
     "ward_name": "",
     "prefecture_name": ""
@@ -2934,7 +2934,7 @@
     "ward_name": "岩槻区",
     "prefecture_name": "埼玉県"
   },
-  "izumi-chuuou": {
+  "izumi-chuo": {
     "city_name": "横浜市",
     "ward_name": "泉区",
     "prefecture_name": "神奈川県"
@@ -2969,12 +2969,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "jouchou-toro": {
+  "jocho-toro": {
     "city_name": "長瀞町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "jousei-kawa": {
+  "josei-kawa": {
     "city_name": "横浜市",
     "ward_name": "保土ヶ谷区",
     "prefecture_name": "神奈川県"
@@ -2984,7 +2984,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "juuni-hashi": {
+  "juni-hashi": {
     "city_name": "香取市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -3069,7 +3069,7 @@
     "ward_name": "緑区",
     "prefecture_name": "千葉県"
   },
-  "kamakura-koukou-mae": {
+  "kamakura-koko-mae": {
     "city_name": "鎌倉市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -3089,7 +3089,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kamihongou": {
+  "kamihongo": {
     "city_name": "松戸市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -3134,7 +3134,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kamiyachou": {
+  "kamiyacho": {
     "city_name": "港区",
     "ward_name": "",
     "prefecture_name": ""
@@ -3209,7 +3209,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kasai-rinkai-kouen": {
+  "kasai-rinkai-koen": {
     "city_name": "江戸川区",
     "ward_name": "",
     "prefecture_name": ""
@@ -3244,12 +3244,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "katakurachou": {
+  "katakuracho": {
     "city_name": "横浜市",
     "ward_name": "神奈川区",
     "prefecture_name": "神奈川県"
   },
-  "katase-kou-no-shima": {
+  "katase-ko-no-shima": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -3289,7 +3289,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kawaguchi-motogou": {
+  "kawaguchi-motogo": {
     "city_name": "川口市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -3314,7 +3314,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kawawachou": {
+  "kawawacho": {
     "city_name": "横浜市",
     "ward_name": "都筑区",
     "prefecture_name": "神奈川県"
@@ -3394,7 +3394,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kazusa-ookubo": {
+  "kazusa-okubo": {
     "city_name": "市原市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -3414,52 +3414,52 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "keikyuu-nagasawa": {
+  "keikyu-nagasawa": {
     "city_name": "横須賀市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "keikyuu-ootsu": {
+  "keikyu-otsu": {
     "city_name": "横須賀市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "keikyuu-taura": {
+  "keikyu-taura": {
     "city_name": "横須賀市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "keikyuu-tomioka": {
+  "keikyu-tomioka": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
   },
-  "keio-horinouchi": {
+  "keio-horinochi": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "keiou-katakura": {
+  "keio-katakura": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "keiou-yomiuri-rando": {
+  "keio-yomiuri-rando": {
     "city_name": "稲城市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "keiouhachiouji": {
+  "keiohachioji": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "keiouinadatsutsumi": {
+  "keioinadatsutsumi": {
     "city_name": "川崎市",
     "ward_name": "多摩区",
     "prefecture_name": "神奈川県"
   },
-  "keioutama-kawa": {
+  "keiotama-kawa": {
     "city_name": "調布市",
     "ward_name": "",
     "prefecture_name": ""
@@ -3489,12 +3489,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "keisei-ookubo": {
+  "keisei-okubo": {
     "city_name": "習志野市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "keisei-oowada": {
+  "keisei-owada": {
     "city_name": "八千代市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -3529,7 +3529,7 @@
     "ward_name": "美浜区",
     "prefecture_name": "千葉県"
   },
-  "kenchoumae": {
+  "kenchomae": {
     "city_name": "千葉市",
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
@@ -3544,7 +3544,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kibou-ke-oka": {
+  "kibo-ke-oka": {
     "city_name": "横浜市",
     "ward_name": "旭区",
     "prefecture_name": "神奈川県"
@@ -3569,7 +3569,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "kishine-kouen": {
+  "kishine-koen": {
     "city_name": "横浜市",
     "ward_name": "港北区",
     "prefecture_name": "神奈川県"
@@ -3609,7 +3609,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kita-kounosu": {
+  "kita-konosu": {
     "city_name": "鴻巣市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -3644,7 +3644,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kitahachi-ouji": {
+  "kitahachi-oji": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
@@ -3729,7 +3729,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kodenmachou": {
+  "kodenmacho": {
     "city_name": "中央区",
     "ward_name": "",
     "prefecture_name": ""
@@ -3739,17 +3739,17 @@
     "ward_name": "青葉区",
     "prefecture_name": "神奈川県"
   },
-  "kogane-joushi": {
+  "kogane-joshi": {
     "city_name": "松戸市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "koganechou": {
+  "koganecho": {
     "city_name": "横浜市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
   },
-  "kohoku": {
+  "kohoku-abiko": {
     "city_name": "我孫子市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -3779,12 +3779,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kokorozashi-kyuu": {
+  "kokorozashi-kyu": {
     "city_name": "伊奈町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kokudou": {
+  "kokudo": {
     "city_name": "横浜市",
     "ward_name": "鶴見区",
     "prefecture_name": "神奈川県"
@@ -3799,22 +3799,22 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kokuryou": {
+  "kokuryo": {
     "city_name": "調布市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kokusai-tenjijou": {
+  "kokusai-tenjijo": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kokusai-tenjijou-seimon": {
+  "kokusai-tenjijo-seimon": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "komabatoudaimae": {
+  "komabatodaimae": {
     "city_name": "目黒区",
     "ward_name": "",
     "prefecture_name": ""
@@ -3874,82 +3874,82 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kou-kawara": {
+  "ko-kawara": {
     "city_name": "川崎市",
     "ward_name": "中原区",
     "prefecture_name": "神奈川県"
   },
-  "kou-tsu-no-mori": {
+  "ko-tsu-no-mori": {
     "city_name": "成田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kouen": {
+  "koen": {
     "city_name": "佐倉市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kouen-shita": {
+  "koen-shita": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "kouen-ue": {
+  "koen-ue": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "koufuu-dai": {
+  "kofu-dai": {
     "city_name": "市原市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kouhoku": {
+  "kohoku-adachi": {
     "city_name": "足立区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "koujiya": {
+  "kojiya": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "koukuu-kouen": {
+  "koku-koen": {
     "city_name": "所沢市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "kounan-chuuou": {
+  "konan-chuo": {
     "city_name": "横浜市",
     "ward_name": "港南区",
     "prefecture_name": "神奈川県"
   },
-  "kounandai": {
+  "konandai": {
     "city_name": "横浜市",
     "ward_name": "港南区",
     "prefecture_name": "神奈川県"
   },
-  "kounodai": {
+  "konodai": {
     "city_name": "市川市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "kounosu": {
+  "konosu": {
     "city_name": "鴻巣市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "koushin-tsuka": {
+  "koshin-tsuka": {
     "city_name": "豊島区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "koushuukaidou": {
+  "koshukaido": {
     "city_name": "日野市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kouza-shibuya": {
+  "koza-shibuya": {
     "city_name": "大和市",
     "ward_name": "福田",
     "prefecture_name": "神奈川県"
@@ -3999,7 +3999,7 @@
     "ward_name": "高津区",
     "prefecture_name": "神奈川県"
   },
-  "kujuu": {
+  "kuju": {
     "city_name": "成田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -4064,22 +4064,22 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kyouteijou-mae": {
+  "kyoteijo-mae": {
     "city_name": "府中市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kyuu-ga-hara": {
+  "kyu-ga-hara": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "kyuumei": {
+  "kyumei": {
     "city_name": "東金市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "machiya-nichoume": {
+  "machiya-nichome": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
@@ -4194,7 +4194,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "meshi-kyuu": {
+  "meshi-kyu": {
     "city_name": "市原市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -4249,7 +4249,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "minami-hanyuu": {
+  "minami-hanyu": {
     "city_name": "羽生市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -4269,7 +4269,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "minami-oota": {
+  "minami-ota": {
     "city_name": "横浜市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
@@ -4319,7 +4319,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "minamiootsuka": {
+  "minamiotsuka": {
     "city_name": "川越市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -4364,7 +4364,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "minuma-dai-shinsui-kouen": {
+  "minuma-dai-shinsui-koen": {
     "city_name": "足立区",
     "ward_name": "舎人",
     "prefecture_name": ""
@@ -4384,7 +4384,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "misato-chuuou": {
+  "misato-chuo": {
     "city_name": "三郷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -4484,7 +4484,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "motomachi-chuukagai": {
+  "motomachi-chukagai": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -4499,7 +4499,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "mukougaokayuuen": {
+  "mukogaokayuen": {
     "city_name": "川崎市",
     "ward_name": "多摩区",
     "prefecture_name": "神奈川県"
@@ -4584,7 +4584,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "musashishinjou": {
+  "musashishinjo": {
     "city_name": "川崎市",
     "ward_name": "中原区",
     "prefecture_name": "神奈川県"
@@ -4594,7 +4594,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "mutsuura": {
+  "mutsura": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
@@ -4604,17 +4604,17 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "myouden": {
+  "myoden": {
     "city_name": "市川市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "myougaku": {
+  "myogaku": {
     "city_name": "ときがわ町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "myourenji": {
+  "myorenji": {
     "city_name": "横浜市",
     "ward_name": "港北区",
     "prefecture_name": "神奈川県"
@@ -4654,7 +4654,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "naka-goura": {
+  "naka-gora": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -4699,7 +4699,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nakano-fujimichou": {
+  "nakano-fujimicho": {
     "city_name": "中野区",
     "ward_name": "",
     "prefecture_name": ""
@@ -4739,7 +4739,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "namiki-chuuou": {
+  "namiki-chuo": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
@@ -4754,7 +4754,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "nanbu-shijou": {
+  "nanbu-shijo": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
@@ -4764,7 +4764,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "nankyou-hon": {
+  "nankyo-hon": {
     "city_name": "相模原市",
     "ward_name": "中央区",
     "prefecture_name": "神奈川県"
@@ -4804,7 +4804,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nerima-kouyadai": {
+  "nerima-koyadai": {
     "city_name": "練馬区",
     "ward_name": "",
     "prefecture_name": ""
@@ -4819,7 +4819,7 @@
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
   },
-  "nihondai-touri": {
+  "nihondai-tori": {
     "city_name": "横浜市",
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
@@ -4839,7 +4839,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "nijuubashimae": {
+  "nijubashimae": {
     "city_name": "千代田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -4854,12 +4854,12 @@
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
   },
-  "nishi-choufu": {
+  "nishi-chofu": {
     "city_name": "調布市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nishi-hanyuu": {
+  "nishi-hanyu": {
     "city_name": "羽生市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -4894,22 +4894,22 @@
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
   },
-  "nishi-oohara": {
+  "nishi-ohara": {
     "city_name": "いすみ市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "nishi-oomiya": {
+  "nishi-omiya": {
     "city_name": "さいたま市",
     "ward_name": "西区",
     "prefecture_name": "埼玉県"
   },
-  "nishi-ooshima": {
+  "nishi-ojima": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nishi-ooya": {
+  "nishi-oya": {
     "city_name": "坂戸市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -4939,7 +4939,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nishi-taishidou": {
+  "nishi-taishido": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
@@ -4984,7 +4984,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nishikou-shima-taira": {
+  "nishiko-shima-taira": {
     "city_name": "板橋区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5049,12 +5049,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nojima-kouen": {
+  "nojima-koen": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
   },
-  "noukendai": {
+  "nokendai": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
@@ -5069,7 +5069,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "nyuu-so": {
+  "nyu-so": {
     "city_name": "狭山市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -5119,7 +5119,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "odakyuu-sagamihara": {
+  "odakyu-sagamihara": {
     "city_name": "相模原市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
@@ -5219,122 +5219,122 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ooasou": {
+  "oaso": {
     "city_name": "熊谷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "oobukuro": {
+  "obukuro": {
     "city_name": "越谷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "ooguchi": {
+  "oguchi": {
     "city_name": "横浜市",
     "ward_name": "神奈川区",
     "prefecture_name": "神奈川県"
   },
-  "oohiradai": {
+  "ohiradai": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "ooikeiba-ba-mae": {
+  "oikeiba-ba-mae": {
     "city_name": "品川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ooiso": {
+  "oiso": {
     "city_name": "大磯町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "ookawa": {
+  "okawa": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "ookubo": {
+  "okubo": {
     "city_name": "新宿区",
     "ward_name": "百人町",
     "prefecture_name": ""
   },
-  "ookurayama": {
+  "okurayama": {
     "city_name": "横浜市",
     "ward_name": "港北区",
     "prefecture_name": "神奈川県"
   },
-  "oomachi": {
+  "omachi": {
     "city_name": "市川市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "oomiya-kouen": {
+  "omiya-koen": {
     "city_name": "さいたま市",
     "ward_name": "大宮区",
     "prefecture_name": "埼玉県"
   },
-  "oomori-dai": {
+  "omori-dai": {
     "city_name": "千葉市",
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
   },
-  "oomori-kaigan": {
+  "omori-kaigan": {
     "city_name": "品川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "oomori-machi": {
+  "omori-machi": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "oonohara": {
+  "onohara": {
     "city_name": "秩父市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "oonuki": {
+  "onuki": {
     "city_name": "富津市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "oosaki-hirokouji": {
+  "osaki-hirokoji": {
     "city_name": "品川区",
     "ward_name": "大崎",
     "prefecture_name": ""
   },
-  "ooshima": {
+  "ojima": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ootaki": {
+  "otaki": {
     "city_name": "大多喜町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "ooto": {
+  "oto": {
     "city_name": "香取市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "ootorii": {
+  "otorii": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ootsuka-teikyoudaigaku": {
+  "otsuka-teikyodaigaku": {
     "city_name": "八王子市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "oowada": {
+  "owada": {
     "city_name": "さいたま市",
     "ward_name": "見沼区",
     "prefecture_name": "埼玉県"
   },
-  "ooyama": {
+  "oyama": {
     "city_name": "板橋区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5349,17 +5349,17 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "ougi-oohashi": {
+  "ogi-ohashi": {
     "city_name": "足立区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ougimachi": {
+  "ogimachi": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "oumekaidou": {
+  "omekaido": {
     "city_name": "小平市",
     "ward_name": "",
     "prefecture_name": ""
@@ -5394,7 +5394,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "roka-kouen": {
+  "roka-koen": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5409,7 +5409,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "rokugou-dote": {
+  "rokugo-dote": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5424,7 +5424,7 @@
     "ward_name": "泉区",
     "prefecture_name": "神奈川県"
   },
-  "ryuutsuu-sentaa": {
+  "ryutsu-sentaa": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5459,7 +5459,7 @@
     "ward_name": "緑区",
     "prefecture_name": "神奈川県"
   },
-  "sagamiootsuka": {
+  "sagamiotsuka": {
     "city_name": "大和市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -5499,7 +5499,7 @@
     "ward_name": "稲毛区",
     "prefecture_name": "千葉県"
   },
-  "sakura-kaidou": {
+  "sakura-kaido": {
     "city_name": "東大和市",
     "ward_name": "",
     "prefecture_name": ""
@@ -5569,17 +5569,17 @@
     "ward_name": "神奈川区",
     "prefecture_name": "神奈川県"
   },
-  "sanguu-hashi": {
+  "sangu-hashi": {
     "city_name": "渋谷区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "sangyou-shinkou-sentaa": {
+  "sangyo-shinko-sentaa": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
   },
-  "sangyoudouro": {
+  "sangyodoro": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
@@ -5714,7 +5714,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "senju-oohashi": {
+  "senju-ohashi": {
     "city_name": "足立区",
     "ward_name": "千住橋戸町",
     "prefecture_name": ""
@@ -5749,7 +5749,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "shakudo-shougakkou-mae": {
+  "shakudo-shogakko-mae": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5769,7 +5769,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shibakouen": {
+  "shibakoen": {
     "city_name": "港区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5829,7 +5829,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shijou-mae": {
+  "shijo-mae": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5839,7 +5839,7 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "shimizu-kouen": {
+  "shimizu-koen": {
     "city_name": "野田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -5849,7 +5849,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shimogoori": {
+  "shimogori": {
     "city_name": "君津市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -5869,32 +5869,32 @@
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
   },
-  "shimoochiai": {
+  "shimo-ochiai": {
     "city_name": "新宿区",
     "ward_name": "下落合",
     "prefecture_name": ""
   },
-  "shimousa-kanzaki": {
+  "shimosa-kanzaki": {
     "city_name": "神崎町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shimousa-matsuzaki": {
+  "shimosa-matsuzaki": {
     "city_name": "成田市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shimousa-nakayama": {
+  "shimosa-nakayama": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shimousa-tachibana": {
+  "shimosa-tachibana": {
     "city_name": "東庄町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shimousa-toyosato": {
+  "shimosa-toyosato": {
     "city_name": "銚子市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -5904,7 +5904,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shimura-sanchoume": {
+  "shimura-sanchome": {
     "city_name": "板橋区",
     "ward_name": "",
     "prefecture_name": ""
@@ -5964,7 +5964,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shin-koushin-tsuka": {
+  "shin-koshin-tsuka": {
     "city_name": "豊島区",
     "ward_name": "",
     "prefecture_name": ""
@@ -6034,7 +6034,7 @@
     "ward_name": "東品川",
     "prefecture_name": ""
   },
-  "shinanochou": {
+  "shinanocho": {
     "city_name": "新宿区",
     "ward_name": "",
     "prefecture_name": ""
@@ -6049,7 +6049,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "shingou": {
+  "shingo": {
     "city_name": "羽生市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -6094,7 +6094,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shinrinkouen": {
+  "shinrinkoen": {
     "city_name": "滑川町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -6119,12 +6119,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shinzou-kawashima": {
+  "shinzo-kawashima": {
     "city_name": "荒川区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shinzou-sato": {
+  "shinzo-sato": {
     "city_name": "三郷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -6214,42 +6214,42 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "shouin-jinja-mae": {
+  "shoin-jinja-mae": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "shoumaru": {
+  "shomaru": {
     "city_name": "飯能市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "shounan": {
+  "shonan": {
     "city_name": "上尾市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "shounan-fukazawa": {
+  "shonan-fukazawa": {
     "city_name": "鎌倉市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "shounan-kaigan-kouen": {
+  "shonan-kaigan-koen": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "shounan-machiya": {
+  "shonan-machiya": {
     "city_name": "鎌倉市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "shouwa": {
+  "showa": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
   },
-  "shouwa-shima": {
+  "showa-shima": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -6269,37 +6269,37 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "soshio-ryuutsuu-sentaa": {
+  "soshio-ryutsu-sentaa": {
     "city_name": "熊谷市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "sou-moto": {
+  "so-moto": {
     "city_name": "大多喜町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "soubudai-mae": {
+  "sobudai-mae": {
     "city_name": "座間市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "soubudai-shita": {
+  "sobudai-shita": {
     "city_name": "相模原市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
   },
-  "sougo-sandou": {
+  "sogo-sando": {
     "city_name": "酒々井町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "souka": {
+  "soka": {
     "city_name": "草加市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "souun-yama": {
+  "soun-yama": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -6319,17 +6319,17 @@
     "ward_name": "磯子区",
     "prefecture_name": "神奈川県"
   },
-  "sugito-kouyadai": {
+  "sugito-koyadai": {
     "city_name": "杉戸町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "suigou": {
+  "suigo": {
     "city_name": "香取市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "suitenguumae": {
+  "suitengumae": {
     "city_name": "中央区",
     "ward_name": "日本橋蛎殻町",
     "prefecture_name": ""
@@ -6339,7 +6339,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "supootsusentaa": {
+  "sports-center": {
     "city_name": "千葉市",
     "ward_name": "稲毛区",
     "prefecture_name": "千葉県"
@@ -6349,7 +6349,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "suzukichou": {
+  "suzukicho": {
     "city_name": "川崎市",
     "ward_name": "川崎区",
     "prefecture_name": "神奈川県"
@@ -6394,12 +6394,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "taitou": {
+  "taito": {
     "city_name": "いすみ市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "taiyuu-yama": {
+  "taiyu-yama": {
     "city_name": "南足柄市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -6439,7 +6439,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "takane-koudan": {
+  "takane-kodan": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -6509,12 +6509,12 @@
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "taki-fudou": {
+  "taki-fudo": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "takinogawa-itchoume": {
+  "takinogawa-itchome": {
     "city_name": "北区",
     "ward_name": "",
     "prefecture_name": ""
@@ -6549,7 +6549,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tan-sou": {
+  "tan-so": {
     "city_name": "神川町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -6599,7 +6599,7 @@
     "ward_name": "稲毛区",
     "prefecture_name": "千葉県"
   },
-  "tennouchou": {
+  "tennocho": {
     "city_name": "横浜市",
     "ward_name": "保土ヶ谷区",
     "prefecture_name": "神奈川県"
@@ -6609,7 +6609,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tetsudouhakubutsukan": {
+  "tetsudohakubutsukan": {
     "city_name": "さいたま市",
     "ward_name": "大宮区",
     "prefecture_name": "埼玉県"
@@ -6619,7 +6619,7 @@
     "ward_name": "西区",
     "prefecture_name": "神奈川県"
   },
-  "tobitakyuu": {
+  "tobitakyu": {
     "city_name": "調布市",
     "ward_name": "",
     "prefecture_name": ""
@@ -6639,7 +6639,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "todakouen": {
+  "todakoen": {
     "city_name": "戸田市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -6669,7 +6669,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "tokoshikouen": {
+  "tokoshikoen": {
     "city_name": "品川区",
     "ward_name": "戸越",
     "prefecture_name": ""
@@ -6689,12 +6689,12 @@
     "ward_name": "舎人",
     "prefecture_name": ""
   },
-  "toneri-kouen": {
+  "toneri-koen": {
     "city_name": "足立区",
     "ward_name": "古千谷",
     "prefecture_name": ""
   },
-  "tookaichiba": {
+  "tokaichiba": {
     "city_name": "横浜市",
     "ward_name": "緑区",
     "prefecture_name": "神奈川県"
@@ -6719,102 +6719,102 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "totsuka-angyou": {
+  "totsuka-angyo": {
     "city_name": "川口市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "tou-no-sawa": {
+  "to-no-sawa": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "toubu-nerima": {
+  "tobu-nerima": {
     "city_name": "板橋区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "toubu-takezawa": {
+  "tobu-takezawa": {
     "city_name": "小川町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "toudai-miya": {
+  "todai-miya": {
     "city_name": "さいたま市",
     "ward_name": "見沼区",
     "prefecture_name": "埼玉県"
   },
-  "toudai-shima": {
+  "todai-shima": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "toufuku-nama": {
+  "tofuku-nama": {
     "city_name": "福生市",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "tougane": {
+  "togane": {
     "city_name": "東金市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "touguu-hara": {
+  "togu-hara": {
     "city_name": "さいたま市",
     "ward_name": "北区",
     "prefecture_name": "埼玉県"
   },
-  "touhaku-raku": {
+  "tohaku-raku": {
     "city_name": "横浜市",
     "ward_name": "神奈川区",
     "prefecture_name": "神奈川県"
   },
-  "toukai-kami": {
+  "tokai-kami": {
     "city_name": "船橋市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "toukaidaigakumae": {
+  "tokaidaigakumae": {
     "city_name": "秦野市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "toukou-ta": {
+  "toko-ta": {
     "city_name": "行田市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "toukyou-sukaitsurii": {
+  "tokyo-sukaitsurii": {
     "city_name": "墨田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "toukyou-terepooto": {
+  "tokyo-teleport": {
     "city_name": "江東区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "toumou-ro": {
+  "tomo-ro": {
     "city_name": "毛呂山町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "tourin-kan": {
+  "torin-kan": {
     "city_name": "相模原市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
   },
-  "toushin-kawa": {
+  "toshin-kawa": {
     "city_name": "木更津市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "tousou-moto": {
+  "toso-moto": {
     "city_name": "大多喜町",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "touyoko-ta": {
+  "toyoko-ta": {
     "city_name": "袖ケ浦市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -6839,7 +6839,7 @@
     "ward_name": "高津区",
     "prefecture_name": "神奈川県"
   },
-  "tsujidou": {
+  "tsujido": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -6924,7 +6924,7 @@
     "ward_name": "鶴見区",
     "prefecture_name": "神奈川県"
   },
-  "tsurumi-shijou": {
+  "tsurumi-shijo": {
     "city_name": "横浜市",
     "ward_name": "鶴見区",
     "prefecture_name": "神奈川県"
@@ -6949,12 +6949,12 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "uchisaiwaichou": {
+  "uchisaiwaicho": {
     "city_name": "千代田区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "ue-goura": {
+  "ue-gora": {
     "city_name": "箱根町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -6969,7 +6969,7 @@
     "ward_name": "港南区",
     "prefecture_name": "神奈川県"
   },
-  "ue-ooi": {
+  "ue-oi": {
     "city_name": "大井町",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -7024,12 +7024,12 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "umi-no-kouen-minamiguchi": {
+  "umi-no-koen-minamiguchi": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
   },
-  "umi-no-kouen-shiba-kuchi": {
+  "umi-no-koen-shiba-kuchi": {
     "city_name": "横浜市",
     "ward_name": "金沢区",
     "prefecture_name": "神奈川県"
@@ -7114,7 +7114,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "wadou-kurotani": {
+  "wado-kurotani": {
     "city_name": "秩父市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -7169,7 +7169,7 @@
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "yachiyo-chuuou": {
+  "yachiyo-chuo": {
     "city_name": "八千代市",
     "ward_name": "",
     "prefecture_name": "千葉県"
@@ -7204,7 +7204,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "yagyuu": {
+  "yagyu": {
     "city_name": "加須市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -7224,7 +7224,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "yakou": {
+  "yako": {
     "city_name": "横浜市",
     "ward_name": "鶴見区",
     "prefecture_name": "神奈川県"
@@ -7244,7 +7244,7 @@
     "ward_name": "中区",
     "prefecture_name": "神奈川県"
   },
-  "yanagikouji": {
+  "yanagikoji": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -7309,7 +7309,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "yokosuka-chuuou": {
+  "yokosuka-chuo": {
     "city_name": "横須賀市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
@@ -7329,12 +7329,12 @@
     "ward_name": "浦和区",
     "prefecture_name": "埼玉県"
   },
-  "yono-honchou": {
+  "yono-honcho": {
     "city_name": "さいたま市",
     "ward_name": "中央区",
     "prefecture_name": "埼玉県"
   },
-  "yoshi-kawa-kouen": {
+  "yoshi-kawa-koen": {
     "city_name": "千葉市",
     "ward_name": "中央区",
     "prefecture_name": "千葉県"
@@ -7354,7 +7354,7 @@
     "ward_name": "北区",
     "prefecture_name": "埼玉県"
   },
-  "yoshinochou": {
+  "yoshinocho": {
     "city_name": "横浜市",
     "ward_name": "南区",
     "prefecture_name": "神奈川県"
@@ -7364,32 +7364,32 @@
     "ward_name": "四谷",
     "prefecture_name": ""
   },
-  "youdo": {
+  "yodo": {
     "city_name": "寄居町",
     "ward_name": "",
     "prefecture_name": "埼玉県"
   },
-  "youga": {
+  "yoga": {
     "city_name": "世田谷区",
     "ward_name": "",
     "prefecture_name": ""
   },
-  "youkaichiba": {
+  "yokaichiba": {
     "city_name": "匝瑳市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "youkoudai": {
+  "yokodai": {
     "city_name": "横浜市",
     "ward_name": "磯子区",
     "prefecture_name": "神奈川県"
   },
-  "yourou-keikoku": {
+  "yoro-keikoku": {
     "city_name": "市原市",
     "ward_name": "",
     "prefecture_name": "千葉県"
   },
-  "yubi-ougi": {
+  "yubi-ogi": {
     "city_name": "さいたま市",
     "ward_name": "西区",
     "prefecture_name": "埼玉県"
@@ -7404,7 +7404,7 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "yuki-ga-taniootsuka": {
+  "yuki-ga-taniotsuka": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""
@@ -7439,7 +7439,7 @@
     "ward_name": "",
     "prefecture_name": ""
   },
-  "yuuenchi-nishi": {
+  "yuenchi-nishi": {
     "city_name": "所沢市",
     "ward_name": "",
     "prefecture_name": "埼玉県"
@@ -7449,12 +7449,12 @@
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "zenkou": {
+  "zenko": {
     "city_name": "藤沢市",
     "ward_name": "",
     "prefecture_name": "神奈川県"
   },
-  "zoushiki": {
+  "zoshiki": {
     "city_name": "大田区",
     "ward_name": "",
     "prefecture_name": ""

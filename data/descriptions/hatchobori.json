@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet office corridor near Tokyo Station. Daytime buzz, evening ghost town.",
+    "landmarks": "Chuo-ku administrative hub. Riverfront walks along Sumida. Low-key.",
+    "food": "Data limited — scrapers missed this area. Scattered lunch spots, minimal nightlife venues.",
+    "nightlife": "Minimal. Office workers head elsewhere after 6pm."
+  },
+  "ja": {
+    "atmosphere": "東京駅近い事務所街。昼は人通り多い、夜は静か。",
+    "landmarks": "中央区役所エリア。隅田川沿いの散歩道。地味だが落ち着いた。",
+    "food": "データ限定 — スクレイパーの網目粗い。昼食スポット散在、夜の店ほぼなし。",
+    "nightlife": "ほぼ皆無。サラリーマンは別の場所へ。"
+  },
+  "ru": {
+    "atmosphere": "Тихий офисный коридор у Токийского вокзала. День — толпа, вечер — пусто.",
+    "landmarks": "Администрация Тюо-ку. Набережная Сумида. Скромно, но спокойно.",
+    "food": "Данные неполные — скреперы пропустили район. Обеденные места разреженно, ночных заведений нет.",
+    "nightlife": "Практически нет. Офисные работники разбегаются в 18:00."
+  }
+}

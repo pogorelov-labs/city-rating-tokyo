@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shitamachi survivor—old wooden shops, tram tracks, zero pretense. Seismic risk and flood-prone (12m elevation), but cheap rent keeps locals rooted.",
+    "landmarks": "Arakawa ward office anchors a quiet grid. Tram museum vibes, modest shrines, Sanya proximity—gritty Tokyo that hasn't gentrified.",
+    "food": "68 restaurants, heavy on izakaya (32). Working-class joints, no frills. Ramen, tonkatsu, standing bars—genuine cheap eats.",
+    "nightlife": "Karaoke sparse (1 box). 25 late-night spots but low-key—salarymen bars, not scenes. Feels safer than it looks (rate 7.8/10k)."
+  },
+  "ja": {
+    "atmosphere": "下町の生き残り—木造店舗、都電の音、見栄なし。地震・浸水リスク（標高12m）あるが、安家賃で地元民が定着。",
+    "landmarks": "荒川区役所が中心。都電資料館の雰囲気、小さな社、山谷隣接—ジェントリフィケーションされないリアル東京。",
+    "food": "居酒屋32軒。職人気質、飾りなし。ラーメン、トンカツ、立ち飲み—本物の安飯。",
+    "nightlife": "カラオケ1軒。深夜25軒だが地味—サラリーマン酒場、シーンなし。見た目より治安良好（犯罪率7.8/万人）。"
+  },
+  "ru": {
+    "atmosphere": "Пережившая старая Эдо—деревянные лавки, трамвайные рельсы, без претензий. Сейсмический риск и наводнения (12м), но дешёвая аренда держит местных.",
+    "landmarks": "Администрация Араквы в центре. Атмосфера музея трамвая, скромные святилища, рядом Сання—неджентрифицированный реальный Токио.",
+    "food": "68 ресторанов, много идзакай (32). Рабочие закусочные без фишек. Рамэн, тонкацу, стойки—аутентичная дёшева еда.",
+    "nightlife": "Карачки редко (1 бокс). 25 мест поздно, но тихо—бары для зарплатников, без сцены. Безопаснее, чем выглядит (7.8/10k)."
+  }
+}

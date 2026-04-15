@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shibuya's quieter cousin—tree-lined lanes, love hotels mixed with galleries, never crowded.",
+    "landmarks": "Bunkamura cultural complex, Shoto residential uphill, narrow pedestrian streets everywhere.",
+    "food": "1127 restaurants, mostly izakaya (431) and late-night bars. Density rivals Shibuya center.",
+    "nightlife": "559 places open past 11pm, 15 clubs. Still vibey at 2am, less chaos than main Shibuya."
+  },
+  "ja": {
+    "atmosphere": "渋谷の静かな裏側。緑の多い路地、ラブホと画廊が混在。人混みなし。",
+    "landmarks": "Bunkamura、松涛の高級住宅地、歩行者天国のような細い路地が39本。",
+    "food": "飲食店1127軒、居酒屋431軒が主役。夜中でも選り取り見取り。",
+    "nightlife": "夜11時以降も559軒営業、クラブ15。渋谷センターより落ち着いてる。"
+  },
+  "ru": {
+    "atmosphere": "Тихая сторона Сибуи—зелёные переулки, отели любви соседствуют с галереями.",
+    "landmarks": "Bunkamura, элитный Сётo, 39 пешеходных улиц, ничего туристического.",
+    "food": "1127 ресторанов, 431 изакая. Плотность как в центре, но спокойнее.",
+    "nightlife": "559 мест после 23:00, 15 клубов. В 2 ночи оживлено, без толп Сибуи."
+  }
+}
