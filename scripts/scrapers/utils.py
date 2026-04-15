@@ -32,6 +32,8 @@ TABLE_IDS = {
     "osm_livability": "m3vasnsm4y09xez",
     "station_elevation": "mkrugzx8z62hli4",
     "station_seismic": "mhtnqvmi1kwbth9",
+    # estat_rent: created by scrape-estat-rent.py on first run
+    # "estat_rent": "<TABLE_ID>",
 }
 
 

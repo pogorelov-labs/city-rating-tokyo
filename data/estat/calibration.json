@@ -1,0 +1,7 @@
+{
+  "calibration_factor": 2.2556,
+  "mean_ratio": 2.2955,
+  "mape_percent": 129.6,
+  "spearman_rank_correlation": 0.94,
+  "matched_count": 66
+}

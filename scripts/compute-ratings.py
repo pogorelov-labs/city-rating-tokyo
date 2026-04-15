@@ -333,11 +333,21 @@ def main():
 
         # --- RENT: linear interpolation ¥70k→10, ¥300k→1 (matches frontend PR #28) ---
         rent_price = rent.get("1k_1ldk") or rent.get("2ldk")
+        rent_source = rent.get("source", "suumo") if isinstance(rent, dict) else "suumo"
         if rent_price and rent_price > 0:
             raw["rent"][slug] = rent_price
-            conf["rent"] = "strong"
-            srcs["rent"] = ["suumo"]
-            cap_raw["rent"][slug] = 2  # real Suumo data → up to 10 allowed
+            if rent_source in ("suumo", "homes"):
+                conf["rent"] = "strong"
+                srcs["rent"] = [rent_source]
+                cap_raw["rent"][slug] = 2  # real scraped data → up to 10
+            elif rent_source == "estat":
+                conf["rent"] = "moderate"
+                srcs["rent"] = ["estat"]
+                cap_raw["rent"][slug] = 1  # govt survey municipality avg → capped at 9
+            else:
+                conf["rent"] = "moderate"
+                srcs["rent"] = [rent_source]
+                cap_raw["rent"][slug] = 1
         else:
             # Fallback: ward average
             ward_name = w.get("city_name", "") or w.get("ward_name", "")

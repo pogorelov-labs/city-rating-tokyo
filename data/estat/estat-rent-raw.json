@@ -1,0 +1,1554 @@
+{
+  "11000": {
+    "area_code": "11000",
+    "area_name": "埼玉県",
+    "prefecture_code": "11",
+    "avg_rent_total": 63128,
+    "avg_rent_1k": 52020,
+    "avg_rent_2ldk": 58182
+  },
+  "11100": {
+    "area_code": "11100",
+    "area_name": "さいたま市",
+    "prefecture_code": "11",
+    "avg_rent_total": 68904,
+    "avg_rent_1k": 54774,
+    "avg_rent_2ldk": 62696
+  },
+  "11101": {
+    "area_code": "11101",
+    "area_name": "西区",
+    "prefecture_code": "11",
+    "avg_rent_total": 63996,
+    "avg_rent_1k": 57544,
+    "avg_rent_2ldk": 63511
+  },
+  "11102": {
+    "area_code": "11102",
+    "area_name": "北区",
+    "prefecture_code": "11",
+    "avg_rent_total": 66894,
+    "avg_rent_1k": 53041,
+    "avg_rent_2ldk": 59683
+  },
+  "11103": {
+    "area_code": "11103",
+    "area_name": "大宮区",
+    "prefecture_code": "11",
+    "avg_rent_total": 75867,
+    "avg_rent_1k": 61120,
+    "avg_rent_2ldk": 74337
+  },
+  "11104": {
+    "area_code": "11104",
+    "area_name": "見沼区",
+    "prefecture_code": "11",
+    "avg_rent_total": 59769,
+    "avg_rent_1k": 45492,
+    "avg_rent_2ldk": 51699
+  },
+  "11105": {
+    "area_code": "11105",
+    "area_name": "中央区",
+    "prefecture_code": "11",
+    "avg_rent_total": 72029,
+    "avg_rent_1k": 57772,
+    "avg_rent_2ldk": 65356
+  },
+  "11106": {
+    "area_code": "11106",
+    "area_name": "桜区",
+    "prefecture_code": "11",
+    "avg_rent_total": 59026,
+    "avg_rent_1k": 50665,
+    "avg_rent_2ldk": 55188
+  },
+  "11107": {
+    "area_code": "11107",
+    "area_name": "浦和区",
+    "prefecture_code": "11",
+    "avg_rent_total": 76128,
+    "avg_rent_1k": 61181,
+    "avg_rent_2ldk": 74144
+  },
+  "11108": {
+    "area_code": "11108",
+    "area_name": "南区",
+    "prefecture_code": "11",
+    "avg_rent_total": 76007,
+    "avg_rent_1k": 53728,
+    "avg_rent_2ldk": 70328
+  },
+  "11109": {
+    "area_code": "11109",
+    "area_name": "緑区",
+    "prefecture_code": "11",
+    "avg_rent_total": 70819,
+    "avg_rent_1k": 51210,
+    "avg_rent_2ldk": 68605
+  },
+  "11110": {
+    "area_code": "11110",
+    "area_name": "岩槻区",
+    "prefecture_code": "11",
+    "avg_rent_total": 53946,
+    "avg_rent_1k": 44295,
+    "avg_rent_2ldk": 40414
+  },
+  "11201": {
+    "area_code": "11201",
+    "area_name": "川越市",
+    "prefecture_code": "11",
+    "avg_rent_total": 58989,
+    "avg_rent_1k": 48621,
+    "avg_rent_2ldk": 59400
+  },
+  "11202": {
+    "area_code": "11202",
+    "area_name": "熊谷市",
+    "prefecture_code": "11",
+    "avg_rent_total": 50713,
+    "avg_rent_1k": 41414,
+    "avg_rent_2ldk": 47776
+  },
+  "11203": {
+    "area_code": "11203",
+    "area_name": "川口市",
+    "prefecture_code": "11",
+    "avg_rent_total": 71158,
+    "avg_rent_1k": 59404,
+    "avg_rent_2ldk": 65988
+  },
+  "11206": {
+    "area_code": "11206",
+    "area_name": "行田市",
+    "prefecture_code": "11",
+    "avg_rent_total": 47913,
+    "avg_rent_1k": 40731,
+    "avg_rent_2ldk": 44840
+  },
+  "11207": {
+    "area_code": "11207",
+    "area_name": "秩父市",
+    "prefecture_code": "11",
+    "avg_rent_total": 42249,
+    "avg_rent_1k": 37054,
+    "avg_rent_2ldk": 36567
+  },
+  "11208": {
+    "area_code": "11208",
+    "area_name": "所沢市",
+    "prefecture_code": "11",
+    "avg_rent_total": 63942,
+    "avg_rent_1k": 51065,
+    "avg_rent_2ldk": 61426
+  },
+  "11209": {
+    "area_code": "11209",
+    "area_name": "飯能市",
+    "prefecture_code": "11",
+    "avg_rent_total": 55364,
+    "avg_rent_1k": 47192,
+    "avg_rent_2ldk": 50345
+  },
+  "11210": {
+    "area_code": "11210",
+    "area_name": "加須市",
+    "prefecture_code": "11",
+    "avg_rent_total": 49132,
+    "avg_rent_1k": 41541,
+    "avg_rent_2ldk": 47471
+  },
+  "11211": {
+    "area_code": "11211",
+    "area_name": "本庄市",
+    "prefecture_code": "11",
+    "avg_rent_total": 45955,
+    "avg_rent_1k": 37886,
+    "avg_rent_2ldk": 43911
+  },
+  "11212": {
+    "area_code": "11212",
+    "area_name": "東松山市",
+    "prefecture_code": "11",
+    "avg_rent_total": 49692,
+    "avg_rent_1k": 41884,
+    "avg_rent_2ldk": 50802
+  },
+  "11214": {
+    "area_code": "11214",
+    "area_name": "春日部市",
+    "prefecture_code": "11",
+    "avg_rent_total": 55365,
+    "avg_rent_1k": 46745,
+    "avg_rent_2ldk": 52520
+  },
+  "11215": {
+    "area_code": "11215",
+    "area_name": "狭山市",
+    "prefecture_code": "11",
+    "avg_rent_total": 50539,
+    "avg_rent_1k": 41032,
+    "avg_rent_2ldk": 45205
+  },
+  "11216": {
+    "area_code": "11216",
+    "area_name": "羽生市",
+    "prefecture_code": "11",
+    "avg_rent_total": 46175,
+    "avg_rent_1k": 37570,
+    "avg_rent_2ldk": 46807
+  },
+  "11217": {
+    "area_code": "11217",
+    "area_name": "鴻巣市",
+    "prefecture_code": "11",
+    "avg_rent_total": 51295,
+    "avg_rent_1k": 40395,
+    "avg_rent_2ldk": 47277
+  },
+  "11218": {
+    "area_code": "11218",
+    "area_name": "深谷市",
+    "prefecture_code": "11",
+    "avg_rent_total": 50861,
+    "avg_rent_1k": 41175,
+    "avg_rent_2ldk": 45532
+  },
+  "11219": {
+    "area_code": "11219",
+    "area_name": "上尾市",
+    "prefecture_code": "11",
+    "avg_rent_total": 55574,
+    "avg_rent_1k": 47526,
+    "avg_rent_2ldk": 51080
+  },
+  "11221": {
+    "area_code": "11221",
+    "area_name": "草加市",
+    "prefecture_code": "11",
+    "avg_rent_total": 66165,
+    "avg_rent_1k": 53633,
+    "avg_rent_2ldk": 61398
+  },
+  "11222": {
+    "area_code": "11222",
+    "area_name": "越谷市",
+    "prefecture_code": "11",
+    "avg_rent_total": 63059,
+    "avg_rent_1k": 48973,
+    "avg_rent_2ldk": 58950
+  },
+  "11223": {
+    "area_code": "11223",
+    "area_name": "蕨市",
+    "prefecture_code": "11",
+    "avg_rent_total": 64659,
+    "avg_rent_1k": 55345,
+    "avg_rent_2ldk": 66605
+  },
+  "11224": {
+    "area_code": "11224",
+    "area_name": "戸田市",
+    "prefecture_code": "11",
+    "avg_rent_total": 73793,
+    "avg_rent_1k": 54416,
+    "avg_rent_2ldk": 75217
+  },
+  "11225": {
+    "area_code": "11225",
+    "area_name": "入間市",
+    "prefecture_code": "11",
+    "avg_rent_total": 53929,
+    "avg_rent_1k": 45804,
+    "avg_rent_2ldk": 51109
+  },
+  "11227": {
+    "area_code": "11227",
+    "area_name": "朝霞市",
+    "prefecture_code": "11",
+    "avg_rent_total": 76237,
+    "avg_rent_1k": 56683,
+    "avg_rent_2ldk": 72319
+  },
+  "11228": {
+    "area_code": "11228",
+    "area_name": "志木市",
+    "prefecture_code": "11",
+    "avg_rent_total": 68205,
+    "avg_rent_1k": 51051,
+    "avg_rent_2ldk": 70719
+  },
+  "11229": {
+    "area_code": "11229",
+    "area_name": "和光市",
+    "prefecture_code": "11",
+    "avg_rent_total": 75339,
+    "avg_rent_1k": 61429,
+    "avg_rent_2ldk": 67070
+  },
+  "11230": {
+    "area_code": "11230",
+    "area_name": "新座市",
+    "prefecture_code": "11",
+    "avg_rent_total": 64770,
+    "avg_rent_1k": 52499,
+    "avg_rent_2ldk": 60309
+  },
+  "11231": {
+    "area_code": "11231",
+    "area_name": "桶川市",
+    "prefecture_code": "11",
+    "avg_rent_total": 57617,
+    "avg_rent_1k": 47770,
+    "avg_rent_2ldk": 51332
+  },
+  "11232": {
+    "area_code": "11232",
+    "area_name": "久喜市",
+    "prefecture_code": "11",
+    "avg_rent_total": 52715,
+    "avg_rent_1k": 45485,
+    "avg_rent_2ldk": 46827
+  },
+  "11233": {
+    "area_code": "11233",
+    "area_name": "北本市",
+    "prefecture_code": "11",
+    "avg_rent_total": 52508,
+    "avg_rent_1k": 44003,
+    "avg_rent_2ldk": 47118
+  },
+  "11234": {
+    "area_code": "11234",
+    "area_name": "八潮市",
+    "prefecture_code": "11",
+    "avg_rent_total": 67014,
+    "avg_rent_1k": 60440,
+    "avg_rent_2ldk": 60868
+  },
+  "11235": {
+    "area_code": "11235",
+    "area_name": "富士見市",
+    "prefecture_code": "11",
+    "avg_rent_total": 63496,
+    "avg_rent_1k": 54343,
+    "avg_rent_2ldk": 62421
+  },
+  "11237": {
+    "area_code": "11237",
+    "area_name": "三郷市",
+    "prefecture_code": "11",
+    "avg_rent_total": 61611,
+    "avg_rent_1k": 51768,
+    "avg_rent_2ldk": 54656
+  },
+  "11238": {
+    "area_code": "11238",
+    "area_name": "蓮田市",
+    "prefecture_code": "11",
+    "avg_rent_total": 60691,
+    "avg_rent_1k": 48977,
+    "avg_rent_2ldk": 55727
+  },
+  "11239": {
+    "area_code": "11239",
+    "area_name": "坂戸市",
+    "prefecture_code": "11",
+    "avg_rent_total": 49432,
+    "avg_rent_1k": 40035,
+    "avg_rent_2ldk": 47763
+  },
+  "11240": {
+    "area_code": "11240",
+    "area_name": "幸手市",
+    "prefecture_code": "11",
+    "avg_rent_total": 47768,
+    "avg_rent_1k": 44972,
+    "avg_rent_2ldk": 43551
+  },
+  "11241": {
+    "area_code": "11241",
+    "area_name": "鶴ヶ島市",
+    "prefecture_code": "11",
+    "avg_rent_total": 57096,
+    "avg_rent_1k": 39588,
+    "avg_rent_2ldk": 55010
+  },
+  "11242": {
+    "area_code": "11242",
+    "area_name": "日高市",
+    "prefecture_code": "11",
+    "avg_rent_total": 46282,
+    "avg_rent_1k": 47884,
+    "avg_rent_2ldk": 40304
+  },
+  "11243": {
+    "area_code": "11243",
+    "area_name": "吉川市",
+    "prefecture_code": "11",
+    "avg_rent_total": 60232,
+    "avg_rent_1k": 49203,
+    "avg_rent_2ldk": 53914
+  },
+  "11245": {
+    "area_code": "11245",
+    "area_name": "ふじみ野市",
+    "prefecture_code": "11",
+    "avg_rent_total": 63555,
+    "avg_rent_1k": 45174,
+    "avg_rent_2ldk": 66226
+  },
+  "11246": {
+    "area_code": "11246",
+    "area_name": "白岡市",
+    "prefecture_code": "11",
+    "avg_rent_total": 63191,
+    "avg_rent_1k": 57161,
+    "avg_rent_2ldk": 55623
+  },
+  "12000": {
+    "area_code": "12000",
+    "area_name": "千葉県",
+    "prefecture_code": "12",
+    "avg_rent_total": 62187,
+    "avg_rent_1k": 51778,
+    "avg_rent_2ldk": 56928
+  },
+  "12100": {
+    "area_code": "12100",
+    "area_name": "千葉市",
+    "prefecture_code": "12",
+    "avg_rent_total": 59757,
+    "avg_rent_1k": 50643,
+    "avg_rent_2ldk": 54184
+  },
+  "12101": {
+    "area_code": "12101",
+    "area_name": "中央区",
+    "prefecture_code": "12",
+    "avg_rent_total": 61787,
+    "avg_rent_1k": 53267,
+    "avg_rent_2ldk": 62400
+  },
+  "12102": {
+    "area_code": "12102",
+    "area_name": "花見川区",
+    "prefecture_code": "12",
+    "avg_rent_total": 62821,
+    "avg_rent_1k": 53599,
+    "avg_rent_2ldk": 53883
+  },
+  "12103": {
+    "area_code": "12103",
+    "area_name": "稲毛区",
+    "prefecture_code": "12",
+    "avg_rent_total": 53215,
+    "avg_rent_1k": 44915,
+    "avg_rent_2ldk": 48335
+  },
+  "12104": {
+    "area_code": "12104",
+    "area_name": "若葉区",
+    "prefecture_code": "12",
+    "avg_rent_total": 52930,
+    "avg_rent_1k": 45062,
+    "avg_rent_2ldk": 45100
+  },
+  "12105": {
+    "area_code": "12105",
+    "area_name": "緑区",
+    "prefecture_code": "12",
+    "avg_rent_total": 59375,
+    "avg_rent_1k": 42955,
+    "avg_rent_2ldk": 55413
+  },
+  "12106": {
+    "area_code": "12106",
+    "area_name": "美浜区",
+    "prefecture_code": "12",
+    "avg_rent_total": 64627,
+    "avg_rent_1k": 52446,
+    "avg_rent_2ldk": 52998
+  },
+  "12202": {
+    "area_code": "12202",
+    "area_name": "銚子市",
+    "prefecture_code": "12",
+    "avg_rent_total": 38117,
+    "avg_rent_1k": 33462,
+    "avg_rent_2ldk": 32994
+  },
+  "12203": {
+    "area_code": "12203",
+    "area_name": "市川市",
+    "prefecture_code": "12",
+    "avg_rent_total": 72904,
+    "avg_rent_1k": 56809,
+    "avg_rent_2ldk": 69115
+  },
+  "12204": {
+    "area_code": "12204",
+    "area_name": "船橋市",
+    "prefecture_code": "12",
+    "avg_rent_total": 68011,
+    "avg_rent_1k": 57821,
+    "avg_rent_2ldk": 67641
+  },
+  "12205": {
+    "area_code": "12205",
+    "area_name": "館山市",
+    "prefecture_code": "12",
+    "avg_rent_total": 48933,
+    "avg_rent_1k": 41769,
+    "avg_rent_2ldk": 40488
+  },
+  "12206": {
+    "area_code": "12206",
+    "area_name": "木更津市",
+    "prefecture_code": "12",
+    "avg_rent_total": 50987,
+    "avg_rent_1k": 41637,
+    "avg_rent_2ldk": 45810
+  },
+  "12207": {
+    "area_code": "12207",
+    "area_name": "松戸市",
+    "prefecture_code": "12",
+    "avg_rent_total": 61653,
+    "avg_rent_1k": 50771,
+    "avg_rent_2ldk": 56687
+  },
+  "12208": {
+    "area_code": "12208",
+    "area_name": "野田市",
+    "prefecture_code": "12",
+    "avg_rent_total": 47110,
+    "avg_rent_1k": 39608,
+    "avg_rent_2ldk": 46670
+  },
+  "12210": {
+    "area_code": "12210",
+    "area_name": "茂原市",
+    "prefecture_code": "12",
+    "avg_rent_total": 49965,
+    "avg_rent_1k": 36609,
+    "avg_rent_2ldk": 46260
+  },
+  "12211": {
+    "area_code": "12211",
+    "area_name": "成田市",
+    "prefecture_code": "12",
+    "avg_rent_total": 50738,
+    "avg_rent_1k": 44240,
+    "avg_rent_2ldk": 48540
+  },
+  "12212": {
+    "area_code": "12212",
+    "area_name": "佐倉市",
+    "prefecture_code": "12",
+    "avg_rent_total": 55327,
+    "avg_rent_1k": 41828,
+    "avg_rent_2ldk": 49348
+  },
+  "12213": {
+    "area_code": "12213",
+    "area_name": "東金市",
+    "prefecture_code": "12",
+    "avg_rent_total": 45816,
+    "avg_rent_1k": 40633,
+    "avg_rent_2ldk": 41350
+  },
+  "12215": {
+    "area_code": "12215",
+    "area_name": "旭市",
+    "prefecture_code": "12",
+    "avg_rent_total": 48263,
+    "avg_rent_1k": 45421,
+    "avg_rent_2ldk": 40396
+  },
+  "12216": {
+    "area_code": "12216",
+    "area_name": "習志野市",
+    "prefecture_code": "12",
+    "avg_rent_total": 62733,
+    "avg_rent_1k": 52182,
+    "avg_rent_2ldk": 61173
+  },
+  "12217": {
+    "area_code": "12217",
+    "area_name": "柏市",
+    "prefecture_code": "12",
+    "avg_rent_total": 66396,
+    "avg_rent_1k": 52475,
+    "avg_rent_2ldk": 60341
+  },
+  "12218": {
+    "area_code": "12218",
+    "area_name": "勝浦市",
+    "prefecture_code": "12",
+    "avg_rent_total": 37948,
+    "avg_rent_1k": 33222,
+    "avg_rent_2ldk": 29933
+  },
+  "12219": {
+    "area_code": "12219",
+    "area_name": "市原市",
+    "prefecture_code": "12",
+    "avg_rent_total": 50292,
+    "avg_rent_1k": 45027,
+    "avg_rent_2ldk": 43462
+  },
+  "12220": {
+    "area_code": "12220",
+    "area_name": "流山市",
+    "prefecture_code": "12",
+    "avg_rent_total": 73853,
+    "avg_rent_1k": 51374,
+    "avg_rent_2ldk": 68437
+  },
+  "12221": {
+    "area_code": "12221",
+    "area_name": "八千代市",
+    "prefecture_code": "12",
+    "avg_rent_total": 58315,
+    "avg_rent_1k": 45860,
+    "avg_rent_2ldk": 52341
+  },
+  "12222": {
+    "area_code": "12222",
+    "area_name": "我孫子市",
+    "prefecture_code": "12",
+    "avg_rent_total": 56276,
+    "avg_rent_1k": 46175,
+    "avg_rent_2ldk": 47209
+  },
+  "12223": {
+    "area_code": "12223",
+    "area_name": "鴨川市",
+    "prefecture_code": "12",
+    "avg_rent_total": 41997,
+    "avg_rent_1k": 34372,
+    "avg_rent_2ldk": 35398
+  },
+  "12224": {
+    "area_code": "12224",
+    "area_name": "鎌ケ谷市",
+    "prefecture_code": "12",
+    "avg_rent_total": 61156,
+    "avg_rent_1k": 45474,
+    "avg_rent_2ldk": 55440
+  },
+  "12225": {
+    "area_code": "12225",
+    "area_name": "君津市",
+    "prefecture_code": "12",
+    "avg_rent_total": 37629,
+    "avg_rent_1k": 35553,
+    "avg_rent_2ldk": 34844
+  },
+  "12226": {
+    "area_code": "12226",
+    "area_name": "富津市",
+    "prefecture_code": "12",
+    "avg_rent_total": 46046,
+    "avg_rent_1k": 31255,
+    "avg_rent_2ldk": 44968
+  },
+  "12227": {
+    "area_code": "12227",
+    "area_name": "浦安市",
+    "prefecture_code": "12",
+    "avg_rent_total": 78055,
+    "avg_rent_1k": 60700,
+    "avg_rent_2ldk": 76923
+  },
+  "12228": {
+    "area_code": "12228",
+    "area_name": "四街道市",
+    "prefecture_code": "12",
+    "avg_rent_total": 55867,
+    "avg_rent_1k": 41305,
+    "avg_rent_2ldk": 49820
+  },
+  "12229": {
+    "area_code": "12229",
+    "area_name": "袖ケ浦市",
+    "prefecture_code": "12",
+    "avg_rent_total": 54915,
+    "avg_rent_1k": 47258,
+    "avg_rent_2ldk": 50476
+  },
+  "12230": {
+    "area_code": "12230",
+    "area_name": "八街市",
+    "prefecture_code": "12",
+    "avg_rent_total": 47284,
+    "avg_rent_1k": 41007,
+    "avg_rent_2ldk": 47001
+  },
+  "12231": {
+    "area_code": "12231",
+    "area_name": "印西市",
+    "prefecture_code": "12",
+    "avg_rent_total": 66889,
+    "avg_rent_1k": 43825,
+    "avg_rent_2ldk": 57817
+  },
+  "12232": {
+    "area_code": "12232",
+    "area_name": "白井市",
+    "prefecture_code": "12",
+    "avg_rent_total": 68107,
+    "avg_rent_1k": 50022,
+    "avg_rent_2ldk": 52091
+  },
+  "12233": {
+    "area_code": "12233",
+    "area_name": "富里市",
+    "prefecture_code": "12",
+    "avg_rent_total": 53869,
+    "avg_rent_1k": 48081,
+    "avg_rent_2ldk": 48608
+  },
+  "12234": {
+    "area_code": "12234",
+    "area_name": "南房総市",
+    "prefecture_code": "12",
+    "avg_rent_total": 42049,
+    "avg_rent_1k": 32356,
+    "avg_rent_2ldk": 39862
+  },
+  "12235": {
+    "area_code": "12235",
+    "area_name": "匝瑳市",
+    "prefecture_code": "12",
+    "avg_rent_total": 39255,
+    "avg_rent_1k": 43168,
+    "avg_rent_2ldk": 29727
+  },
+  "12236": {
+    "area_code": "12236",
+    "area_name": "香取市",
+    "prefecture_code": "12",
+    "avg_rent_total": 48375,
+    "avg_rent_1k": 43336,
+    "avg_rent_2ldk": 45851
+  },
+  "12237": {
+    "area_code": "12237",
+    "area_name": "山武市",
+    "prefecture_code": "12",
+    "avg_rent_total": 46302,
+    "avg_rent_1k": 36310,
+    "avg_rent_2ldk": 42959
+  },
+  "12238": {
+    "area_code": "12238",
+    "area_name": "いすみ市",
+    "prefecture_code": "12",
+    "avg_rent_total": 43617,
+    "avg_rent_1k": 37593,
+    "avg_rent_2ldk": 37276
+  },
+  "12239": {
+    "area_code": "12239",
+    "area_name": "大網白里市",
+    "prefecture_code": "12",
+    "avg_rent_total": 56265,
+    "avg_rent_1k": 46943,
+    "avg_rent_2ldk": 50263
+  },
+  "13000": {
+    "area_code": "13000",
+    "area_name": "東京都",
+    "prefecture_code": "13",
+    "avg_rent_total": 88266,
+    "avg_rent_1k": 69337,
+    "avg_rent_2ldk": 84099
+  },
+  "13100": {
+    "area_code": "13100",
+    "area_name": "特別区部",
+    "prefecture_code": "13",
+    "avg_rent_total": 94853,
+    "avg_rent_1k": 73036,
+    "avg_rent_2ldk": 90812
+  },
+  "13101": {
+    "area_code": "13101",
+    "area_name": "千代田区",
+    "prefecture_code": "13",
+    "avg_rent_total": 151637,
+    "avg_rent_1k": 104436,
+    "avg_rent_2ldk": 129687
+  },
+  "13102": {
+    "area_code": "13102",
+    "area_name": "中央区",
+    "prefecture_code": "13",
+    "avg_rent_total": 145610,
+    "avg_rent_1k": 103284,
+    "avg_rent_2ldk": 140957
+  },
+  "13103": {
+    "area_code": "13103",
+    "area_name": "港区",
+    "prefecture_code": "13",
+    "avg_rent_total": 196160,
+    "avg_rent_1k": 102182,
+    "avg_rent_2ldk": 138325
+  },
+  "13104": {
+    "area_code": "13104",
+    "area_name": "新宿区",
+    "prefecture_code": "13",
+    "avg_rent_total": 112012,
+    "avg_rent_1k": 84636,
+    "avg_rent_2ldk": 108550
+  },
+  "13105": {
+    "area_code": "13105",
+    "area_name": "文京区",
+    "prefecture_code": "13",
+    "avg_rent_total": 112934,
+    "avg_rent_1k": 79542,
+    "avg_rent_2ldk": 111038
+  },
+  "13106": {
+    "area_code": "13106",
+    "area_name": "台東区",
+    "prefecture_code": "13",
+    "avg_rent_total": 109874,
+    "avg_rent_1k": 89344,
+    "avg_rent_2ldk": 114319
+  },
+  "13107": {
+    "area_code": "13107",
+    "area_name": "墨田区",
+    "prefecture_code": "13",
+    "avg_rent_total": 91777,
+    "avg_rent_1k": 76619,
+    "avg_rent_2ldk": 96116
+  },
+  "13108": {
+    "area_code": "13108",
+    "area_name": "江東区",
+    "prefecture_code": "13",
+    "avg_rent_total": 87224,
+    "avg_rent_1k": 69971,
+    "avg_rent_2ldk": 77188
+  },
+  "13109": {
+    "area_code": "13109",
+    "area_name": "品川区",
+    "prefecture_code": "13",
+    "avg_rent_total": 102811,
+    "avg_rent_1k": 81527,
+    "avg_rent_2ldk": 107082
+  },
+  "13110": {
+    "area_code": "13110",
+    "area_name": "目黒区",
+    "prefecture_code": "13",
+    "avg_rent_total": 129690,
+    "avg_rent_1k": 87623,
+    "avg_rent_2ldk": 120343
+  },
+  "13111": {
+    "area_code": "13111",
+    "area_name": "大田区",
+    "prefecture_code": "13",
+    "avg_rent_total": 84489,
+    "avg_rent_1k": 67300,
+    "avg_rent_2ldk": 84130
+  },
+  "13112": {
+    "area_code": "13112",
+    "area_name": "世田谷区",
+    "prefecture_code": "13",
+    "avg_rent_total": 100331,
+    "avg_rent_1k": 74932,
+    "avg_rent_2ldk": 97314
+  },
+  "13113": {
+    "area_code": "13113",
+    "area_name": "渋谷区",
+    "prefecture_code": "13",
+    "avg_rent_total": 130960,
+    "avg_rent_1k": 89066,
+    "avg_rent_2ldk": 122178
+  },
+  "13114": {
+    "area_code": "13114",
+    "area_name": "中野区",
+    "prefecture_code": "13",
+    "avg_rent_total": 86553,
+    "avg_rent_1k": 72027,
+    "avg_rent_2ldk": 93352
+  },
+  "13115": {
+    "area_code": "13115",
+    "area_name": "杉並区",
+    "prefecture_code": "13",
+    "avg_rent_total": 88047,
+    "avg_rent_1k": 68552,
+    "avg_rent_2ldk": 93152
+  },
+  "13116": {
+    "area_code": "13116",
+    "area_name": "豊島区",
+    "prefecture_code": "13",
+    "avg_rent_total": 91320,
+    "avg_rent_1k": 73914,
+    "avg_rent_2ldk": 99433
+  },
+  "13117": {
+    "area_code": "13117",
+    "area_name": "北区",
+    "prefecture_code": "13",
+    "avg_rent_total": 78963,
+    "avg_rent_1k": 67677,
+    "avg_rent_2ldk": 74212
+  },
+  "13118": {
+    "area_code": "13118",
+    "area_name": "荒川区",
+    "prefecture_code": "13",
+    "avg_rent_total": 86757,
+    "avg_rent_1k": 68478,
+    "avg_rent_2ldk": 80621
+  },
+  "13119": {
+    "area_code": "13119",
+    "area_name": "板橋区",
+    "prefecture_code": "13",
+    "avg_rent_total": 74657,
+    "avg_rent_1k": 64318,
+    "avg_rent_2ldk": 73972
+  },
+  "13120": {
+    "area_code": "13120",
+    "area_name": "練馬区",
+    "prefecture_code": "13",
+    "avg_rent_total": 84766,
+    "avg_rent_1k": 65628,
+    "avg_rent_2ldk": 78502
+  },
+  "13121": {
+    "area_code": "13121",
+    "area_name": "足立区",
+    "prefecture_code": "13",
+    "avg_rent_total": 67017,
+    "avg_rent_1k": 57510,
+    "avg_rent_2ldk": 57822
+  },
+  "13122": {
+    "area_code": "13122",
+    "area_name": "葛飾区",
+    "prefecture_code": "13",
+    "avg_rent_total": 69004,
+    "avg_rent_1k": 58323,
+    "avg_rent_2ldk": 65835
+  },
+  "13123": {
+    "area_code": "13123",
+    "area_name": "江戸川区",
+    "prefecture_code": "13",
+    "avg_rent_total": 76659,
+    "avg_rent_1k": 61454,
+    "avg_rent_2ldk": 70016
+  },
+  "13201": {
+    "area_code": "13201",
+    "area_name": "八王子市",
+    "prefecture_code": "13",
+    "avg_rent_total": 59280,
+    "avg_rent_1k": 50760,
+    "avg_rent_2ldk": 56956
+  },
+  "13202": {
+    "area_code": "13202",
+    "area_name": "立川市",
+    "prefecture_code": "13",
+    "avg_rent_total": 67909,
+    "avg_rent_1k": 53209,
+    "avg_rent_2ldk": 63309
+  },
+  "13203": {
+    "area_code": "13203",
+    "area_name": "武蔵野市",
+    "prefecture_code": "13",
+    "avg_rent_total": 91615,
+    "avg_rent_1k": 67481,
+    "avg_rent_2ldk": 87234
+  },
+  "13204": {
+    "area_code": "13204",
+    "area_name": "三鷹市",
+    "prefecture_code": "13",
+    "avg_rent_total": 83639,
+    "avg_rent_1k": 63462,
+    "avg_rent_2ldk": 78737
+  },
+  "13205": {
+    "area_code": "13205",
+    "area_name": "青梅市",
+    "prefecture_code": "13",
+    "avg_rent_total": 51075,
+    "avg_rent_1k": 40080,
+    "avg_rent_2ldk": 44446
+  },
+  "13206": {
+    "area_code": "13206",
+    "area_name": "府中市",
+    "prefecture_code": "13",
+    "avg_rent_total": 72650,
+    "avg_rent_1k": 58609,
+    "avg_rent_2ldk": 69924
+  },
+  "13207": {
+    "area_code": "13207",
+    "area_name": "昭島市",
+    "prefecture_code": "13",
+    "avg_rent_total": 57877,
+    "avg_rent_1k": 46606,
+    "avg_rent_2ldk": 55283
+  },
+  "13208": {
+    "area_code": "13208",
+    "area_name": "調布市",
+    "prefecture_code": "13",
+    "avg_rent_total": 78792,
+    "avg_rent_1k": 62254,
+    "avg_rent_2ldk": 81481
+  },
+  "13209": {
+    "area_code": "13209",
+    "area_name": "町田市",
+    "prefecture_code": "13",
+    "avg_rent_total": 61154,
+    "avg_rent_1k": 51496,
+    "avg_rent_2ldk": 52052
+  },
+  "13210": {
+    "area_code": "13210",
+    "area_name": "小金井市",
+    "prefecture_code": "13",
+    "avg_rent_total": 71845,
+    "avg_rent_1k": 57160,
+    "avg_rent_2ldk": 69744
+  },
+  "13211": {
+    "area_code": "13211",
+    "area_name": "小平市",
+    "prefecture_code": "13",
+    "avg_rent_total": 62381,
+    "avg_rent_1k": 53257,
+    "avg_rent_2ldk": 58053
+  },
+  "13212": {
+    "area_code": "13212",
+    "area_name": "日野市",
+    "prefecture_code": "13",
+    "avg_rent_total": 64199,
+    "avg_rent_1k": 50570,
+    "avg_rent_2ldk": 56351
+  },
+  "13213": {
+    "area_code": "13213",
+    "area_name": "東村山市",
+    "prefecture_code": "13",
+    "avg_rent_total": 60281,
+    "avg_rent_1k": 54132,
+    "avg_rent_2ldk": 51546
+  },
+  "13214": {
+    "area_code": "13214",
+    "area_name": "国分寺市",
+    "prefecture_code": "13",
+    "avg_rent_total": 78179,
+    "avg_rent_1k": 57943,
+    "avg_rent_2ldk": 78141
+  },
+  "13215": {
+    "area_code": "13215",
+    "area_name": "国立市",
+    "prefecture_code": "13",
+    "avg_rent_total": 66451,
+    "avg_rent_1k": 50180,
+    "avg_rent_2ldk": 63120
+  },
+  "13218": {
+    "area_code": "13218",
+    "area_name": "福生市",
+    "prefecture_code": "13",
+    "avg_rent_total": 52426,
+    "avg_rent_1k": 41502,
+    "avg_rent_2ldk": 50615
+  },
+  "13219": {
+    "area_code": "13219",
+    "area_name": "狛江市",
+    "prefecture_code": "13",
+    "avg_rent_total": 68428,
+    "avg_rent_1k": 56445,
+    "avg_rent_2ldk": 55795
+  },
+  "13220": {
+    "area_code": "13220",
+    "area_name": "東大和市",
+    "prefecture_code": "13",
+    "avg_rent_total": 51466,
+    "avg_rent_1k": 43503,
+    "avg_rent_2ldk": 42201
+  },
+  "13221": {
+    "area_code": "13221",
+    "area_name": "清瀬市",
+    "prefecture_code": "13",
+    "avg_rent_total": 52738,
+    "avg_rent_1k": 46448,
+    "avg_rent_2ldk": 44035
+  },
+  "13222": {
+    "area_code": "13222",
+    "area_name": "東久留米市",
+    "prefecture_code": "13",
+    "avg_rent_total": 64652,
+    "avg_rent_1k": 50056,
+    "avg_rent_2ldk": 55545
+  },
+  "13223": {
+    "area_code": "13223",
+    "area_name": "武蔵村山市",
+    "prefecture_code": "13",
+    "avg_rent_total": 48261,
+    "avg_rent_1k": 35012,
+    "avg_rent_2ldk": 47965
+  },
+  "13224": {
+    "area_code": "13224",
+    "area_name": "多摩市",
+    "prefecture_code": "13",
+    "avg_rent_total": 57919,
+    "avg_rent_1k": 51110,
+    "avg_rent_2ldk": 52989
+  },
+  "13225": {
+    "area_code": "13225",
+    "area_name": "稲城市",
+    "prefecture_code": "13",
+    "avg_rent_total": 69722,
+    "avg_rent_1k": 52694,
+    "avg_rent_2ldk": 60040
+  },
+  "13227": {
+    "area_code": "13227",
+    "area_name": "羽村市",
+    "prefecture_code": "13",
+    "avg_rent_total": 57645,
+    "avg_rent_1k": 43857,
+    "avg_rent_2ldk": 55839
+  },
+  "13228": {
+    "area_code": "13228",
+    "area_name": "あきる野市",
+    "prefecture_code": "13",
+    "avg_rent_total": 59246,
+    "avg_rent_1k": 50224,
+    "avg_rent_2ldk": 57072
+  },
+  "13229": {
+    "area_code": "13229",
+    "area_name": "西東京市",
+    "prefecture_code": "13",
+    "avg_rent_total": 71019,
+    "avg_rent_1k": 57943,
+    "avg_rent_2ldk": 63451
+  },
+  "14000": {
+    "area_code": "14000",
+    "area_name": "神奈川県",
+    "prefecture_code": "14",
+    "avg_rent_total": 71892,
+    "avg_rent_1k": 57648,
+    "avg_rent_2ldk": 67381
+  },
+  "14100": {
+    "area_code": "14100",
+    "area_name": "横浜市",
+    "prefecture_code": "14",
+    "avg_rent_total": 75381,
+    "avg_rent_1k": 59493,
+    "avg_rent_2ldk": 70383
+  },
+  "14101": {
+    "area_code": "14101",
+    "area_name": "鶴見区",
+    "prefecture_code": "14",
+    "avg_rent_total": 72998,
+    "avg_rent_1k": 60456,
+    "avg_rent_2ldk": 74544
+  },
+  "14102": {
+    "area_code": "14102",
+    "area_name": "神奈川区",
+    "prefecture_code": "14",
+    "avg_rent_total": 73914,
+    "avg_rent_1k": 59899,
+    "avg_rent_2ldk": 74158
+  },
+  "14103": {
+    "area_code": "14103",
+    "area_name": "西区",
+    "prefecture_code": "14",
+    "avg_rent_total": 82439,
+    "avg_rent_1k": 67269,
+    "avg_rent_2ldk": 93277
+  },
+  "14104": {
+    "area_code": "14104",
+    "area_name": "中区",
+    "prefecture_code": "14",
+    "avg_rent_total": 91874,
+    "avg_rent_1k": 71231,
+    "avg_rent_2ldk": 93298
+  },
+  "14105": {
+    "area_code": "14105",
+    "area_name": "南区",
+    "prefecture_code": "14",
+    "avg_rent_total": 61784,
+    "avg_rent_1k": 50540,
+    "avg_rent_2ldk": 68942
+  },
+  "14106": {
+    "area_code": "14106",
+    "area_name": "保土ケ谷区",
+    "prefecture_code": "14",
+    "avg_rent_total": 66498,
+    "avg_rent_1k": 57462,
+    "avg_rent_2ldk": 61034
+  },
+  "14107": {
+    "area_code": "14107",
+    "area_name": "磯子区",
+    "prefecture_code": "14",
+    "avg_rent_total": 65388,
+    "avg_rent_1k": 51267,
+    "avg_rent_2ldk": 58986
+  },
+  "14108": {
+    "area_code": "14108",
+    "area_name": "金沢区",
+    "prefecture_code": "14",
+    "avg_rent_total": 66626,
+    "avg_rent_1k": 52253,
+    "avg_rent_2ldk": 60727
+  },
+  "14109": {
+    "area_code": "14109",
+    "area_name": "港北区",
+    "prefecture_code": "14",
+    "avg_rent_total": 85469,
+    "avg_rent_1k": 67110,
+    "avg_rent_2ldk": 84255
+  },
+  "14110": {
+    "area_code": "14110",
+    "area_name": "戸塚区",
+    "prefecture_code": "14",
+    "avg_rent_total": 68804,
+    "avg_rent_1k": 48549,
+    "avg_rent_2ldk": 58962
+  },
+  "14111": {
+    "area_code": "14111",
+    "area_name": "港南区",
+    "prefecture_code": "14",
+    "avg_rent_total": 67325,
+    "avg_rent_1k": 59179,
+    "avg_rent_2ldk": 57072
+  },
+  "14112": {
+    "area_code": "14112",
+    "area_name": "旭区",
+    "prefecture_code": "14",
+    "avg_rent_total": 64337,
+    "avg_rent_1k": 51680,
+    "avg_rent_2ldk": 58805
+  },
+  "14113": {
+    "area_code": "14113",
+    "area_name": "緑区",
+    "prefecture_code": "14",
+    "avg_rent_total": 69651,
+    "avg_rent_1k": 56533,
+    "avg_rent_2ldk": 66486
+  },
+  "14114": {
+    "area_code": "14114",
+    "area_name": "瀬谷区",
+    "prefecture_code": "14",
+    "avg_rent_total": 60572,
+    "avg_rent_1k": 50339,
+    "avg_rent_2ldk": 55999
+  },
+  "14115": {
+    "area_code": "14115",
+    "area_name": "栄区",
+    "prefecture_code": "14",
+    "avg_rent_total": 69865,
+    "avg_rent_1k": 50742,
+    "avg_rent_2ldk": 70563
+  },
+  "14116": {
+    "area_code": "14116",
+    "area_name": "泉区",
+    "prefecture_code": "14",
+    "avg_rent_total": 68400,
+    "avg_rent_1k": 55504,
+    "avg_rent_2ldk": 47689
+  },
+  "14117": {
+    "area_code": "14117",
+    "area_name": "青葉区",
+    "prefecture_code": "14",
+    "avg_rent_total": 88246,
+    "avg_rent_1k": 60530,
+    "avg_rent_2ldk": 74260
+  },
+  "14118": {
+    "area_code": "14118",
+    "area_name": "都筑区",
+    "prefecture_code": "14",
+    "avg_rent_total": 102065,
+    "avg_rent_1k": 65046,
+    "avg_rent_2ldk": 88010
+  },
+  "14130": {
+    "area_code": "14130",
+    "area_name": "川崎市",
+    "prefecture_code": "14",
+    "avg_rent_total": 79273,
+    "avg_rent_1k": 62828,
+    "avg_rent_2ldk": 76267
+  },
+  "14131": {
+    "area_code": "14131",
+    "area_name": "川崎区",
+    "prefecture_code": "14",
+    "avg_rent_total": 73248,
+    "avg_rent_1k": 61892,
+    "avg_rent_2ldk": 78454
+  },
+  "14132": {
+    "area_code": "14132",
+    "area_name": "幸区",
+    "prefecture_code": "14",
+    "avg_rent_total": 76644,
+    "avg_rent_1k": 64135,
+    "avg_rent_2ldk": 77736
+  },
+  "14133": {
+    "area_code": "14133",
+    "area_name": "中原区",
+    "prefecture_code": "14",
+    "avg_rent_total": 89747,
+    "avg_rent_1k": 71106,
+    "avg_rent_2ldk": 89467
+  },
+  "14134": {
+    "area_code": "14134",
+    "area_name": "高津区",
+    "prefecture_code": "14",
+    "avg_rent_total": 81593,
+    "avg_rent_1k": 64564,
+    "avg_rent_2ldk": 74728
+  },
+  "14135": {
+    "area_code": "14135",
+    "area_name": "多摩区",
+    "prefecture_code": "14",
+    "avg_rent_total": 74107,
+    "avg_rent_1k": 57037,
+    "avg_rent_2ldk": 72590
+  },
+  "14136": {
+    "area_code": "14136",
+    "area_name": "宮前区",
+    "prefecture_code": "14",
+    "avg_rent_total": 76847,
+    "avg_rent_1k": 55580,
+    "avg_rent_2ldk": 63025
+  },
+  "14137": {
+    "area_code": "14137",
+    "area_name": "麻生区",
+    "prefecture_code": "14",
+    "avg_rent_total": 78359,
+    "avg_rent_1k": 54288,
+    "avg_rent_2ldk": 67961
+  },
+  "14150": {
+    "area_code": "14150",
+    "area_name": "相模原市",
+    "prefecture_code": "14",
+    "avg_rent_total": 62466,
+    "avg_rent_1k": 50114,
+    "avg_rent_2ldk": 61281
+  },
+  "14151": {
+    "area_code": "14151",
+    "area_name": "緑区",
+    "prefecture_code": "14",
+    "avg_rent_total": 61682,
+    "avg_rent_1k": 49383,
+    "avg_rent_2ldk": 60796
+  },
+  "14152": {
+    "area_code": "14152",
+    "area_name": "中央区",
+    "prefecture_code": "14",
+    "avg_rent_total": 57073,
+    "avg_rent_1k": 47419,
+    "avg_rent_2ldk": 57967
+  },
+  "14153": {
+    "area_code": "14153",
+    "area_name": "南区",
+    "prefecture_code": "14",
+    "avg_rent_total": 66990,
+    "avg_rent_1k": 52720,
+    "avg_rent_2ldk": 63635
+  },
+  "14201": {
+    "area_code": "14201",
+    "area_name": "横須賀市",
+    "prefecture_code": "14",
+    "avg_rent_total": 55645,
+    "avg_rent_1k": 50128,
+    "avg_rent_2ldk": 45749
+  },
+  "14203": {
+    "area_code": "14203",
+    "area_name": "平塚市",
+    "prefecture_code": "14",
+    "avg_rent_total": 57358,
+    "avg_rent_1k": 46937,
+    "avg_rent_2ldk": 51230
+  },
+  "14204": {
+    "area_code": "14204",
+    "area_name": "鎌倉市",
+    "prefecture_code": "14",
+    "avg_rent_total": 82979,
+    "avg_rent_1k": 62786,
+    "avg_rent_2ldk": 75114
+  },
+  "14205": {
+    "area_code": "14205",
+    "area_name": "藤沢市",
+    "prefecture_code": "14",
+    "avg_rent_total": 71044,
+    "avg_rent_1k": 55290,
+    "avg_rent_2ldk": 67876
+  },
+  "14206": {
+    "area_code": "14206",
+    "area_name": "小田原市",
+    "prefecture_code": "14",
+    "avg_rent_total": 56684,
+    "avg_rent_1k": 45352,
+    "avg_rent_2ldk": 52013
+  },
+  "14207": {
+    "area_code": "14207",
+    "area_name": "茅ヶ崎市",
+    "prefecture_code": "14",
+    "avg_rent_total": 68964,
+    "avg_rent_1k": 51046,
+    "avg_rent_2ldk": 62327
+  },
+  "14208": {
+    "area_code": "14208",
+    "area_name": "逗子市",
+    "prefecture_code": "14",
+    "avg_rent_total": 82061,
+    "avg_rent_1k": 62663,
+    "avg_rent_2ldk": 72270
+  },
+  "14210": {
+    "area_code": "14210",
+    "area_name": "三浦市",
+    "prefecture_code": "14",
+    "avg_rent_total": 65325,
+    "avg_rent_1k": 65112,
+    "avg_rent_2ldk": 86513
+  },
+  "14211": {
+    "area_code": "14211",
+    "area_name": "秦野市",
+    "prefecture_code": "14",
+    "avg_rent_total": 50799,
+    "avg_rent_1k": 42854,
+    "avg_rent_2ldk": 47677
+  },
+  "14212": {
+    "area_code": "14212",
+    "area_name": "厚木市",
+    "prefecture_code": "14",
+    "avg_rent_total": 56932,
+    "avg_rent_1k": 46396,
+    "avg_rent_2ldk": 52597
+  },
+  "14213": {
+    "area_code": "14213",
+    "area_name": "大和市",
+    "prefecture_code": "14",
+    "avg_rent_total": 64239,
+    "avg_rent_1k": 51923,
+    "avg_rent_2ldk": 57985
+  },
+  "14214": {
+    "area_code": "14214",
+    "area_name": "伊勢原市",
+    "prefecture_code": "14",
+    "avg_rent_total": 56927,
+    "avg_rent_1k": 51326,
+    "avg_rent_2ldk": 55612
+  },
+  "14215": {
+    "area_code": "14215",
+    "area_name": "海老名市",
+    "prefecture_code": "14",
+    "avg_rent_total": 68737,
+    "avg_rent_1k": 54989,
+    "avg_rent_2ldk": 65090
+  },
+  "14216": {
+    "area_code": "14216",
+    "area_name": "座間市",
+    "prefecture_code": "14",
+    "avg_rent_total": 56394,
+    "avg_rent_1k": 46336,
+    "avg_rent_2ldk": 54710
+  },
+  "14217": {
+    "area_code": "14217",
+    "area_name": "南足柄市",
+    "prefecture_code": "14",
+    "avg_rent_total": 49462,
+    "avg_rent_1k": 44003,
+    "avg_rent_2ldk": 46211
+  },
+  "14218": {
+    "area_code": "14218",
+    "area_name": "綾瀬市",
+    "prefecture_code": "14",
+    "avg_rent_total": 59678,
+    "avg_rent_1k": 44418,
+    "avg_rent_2ldk": 52179
+  }
+}
