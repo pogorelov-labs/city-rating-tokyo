@@ -14,6 +14,7 @@ interface AppState {
   setMinCommute: (v: number) => void;
   setMaxCommute: (v: number) => void;
   setCategoryMin: (key: keyof StationRatings, value: number | null) => void;
+  setHasLiveCamera: (v: boolean) => void;
   setFilters: (filters: FilterState) => void;
   resetFilters: () => void;
   selectedStation: string | null;
@@ -69,6 +70,8 @@ export const useAppStore = create<AppState>((set) => ({
       }
       return { filters: { ...state.filters, categoryMins } };
     }),
+  setHasLiveCamera: (hasLiveCamera) =>
+    set((state) => ({ filters: { ...state.filters, hasLiveCamera } })),
   setFilters: (filters) => set({ filters: { ...filters, categoryMins: { ...filters.categoryMins } } }),
   resetFilters: () => set({ filters: { ...DEFAULT_FILTERS, categoryMins: {} } }),
   selectedStation: null,

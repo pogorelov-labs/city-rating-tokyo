@@ -382,10 +382,21 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 
 | Аспект | Статус | ~% | Сложность |
 |--------|--------|-----|-----------|
-| UI на странице станции | Заглушка «coming soon» / «—» | **0%** | — |
-| Данные | Нет в NocoDB и в `demo-ratings.ts` | **0%** | **L** |
+| UI на странице станции | ✅ реальные минуты + Sat/Hol в tooltip | **100%** | — |
+| Данные | ✅ 1483/1493 (99.3%) из mini-tokyo-3d (MIT) | **~99%** | — |
 
-Зависит от расписаний по линиям/дням недели (GTFS-JP, ODPT, ручная курировка для 1493 станций не масштабируется). Минимальный MVP: одна «типичная пятница» + ветка последнего поезда по **главной линии** станции; полноценно — мультилинейные пересадки и выходы. **~3–5** задач (исследование прав, ETL, модель «какую линию показываем», UI, дисклеймер).
+✅ **CRTKY-115 (done, PR #93):** Скрейпер `scripts/scrapers/scrape-last-trains.py` тянет 174 timetable JSON-а из `nagix/mini-tokyo-3d`, матчит MT3D station_id → наш slug по координатам (<200м), вычисляет `MAX(departure)` на (station, day_type). Output: `data/last-trains.json` + `app/src/data/last-trains.json`. Caveats: Sat/Hol — комбинированный day type (нет separate Sunday); пост-полночные времена видны как 00:xx без 24:00+ конвенции; 10 станций без покрытия (Hakone cable, Toden Arakawa tram, edge collisions).
+
+### Live camera streams (📹 YouTube)
+
+| Аспект | Статус | ~% | Сложность |
+|--------|--------|-----|-----------|
+| Источник | ✅ `mt3d-plugin-livecam`, MIT, endpoint возвращает 64 камеры (колеблется) | **100%** | — |
+| Скрейпер + storage | ✅ CRTKY-117 (300m Haversine, 29 слагов / 32 строки) | **100%** | — |
+| UI на странице станции | ✅ CRTKY-118 (click-to-load facade, tab strip, ✕ dismiss) | **100%** | — |
+| Map surfaces (badge + filter chip) | ✅ CRTKY-119 (📹 badge + `hasLiveCamera` фильтр) | **100%** | — |
+
+✅ **CRTKY-116 (done):** Нативное продолжение CRTKY-115 на той же MT3D экосистеме. `scripts/scrapers/scrape-livecams.py` тянет endpoint, Haversine матч 300м даёт 29 станций / 32 camera rows. `LiveCameras.tsx` — click-to-load facade, iframe с `youtube-nocookie.com/embed/live_stream?channel=...&autoplay=1&mute=1` монтируется только при клике. Мульти-cam: tab strip с правильным ARIA (`role="tabpanel"` + `aria-labelledby`), ✕ overlay для dismiss. Map surface: 📹 emoji badge на tooltip + touch popup (emoji-only, без pill — чтобы не конфликтовать с семантикой палитры); `FilterState.hasLiveCamera` + `MapStation.hasLiveCamera?: boolean` (optional-spread → станции без камер весят 0 байт дополнительно); URL `lc=1`. i18n en/ja/ru полный, RU fallback на EN имена (нет RU в источнике). **Caveats:** streams third-party YouTube (не MT3D — embed+attribution only); endpoint без thumbnails/video IDs; нет автомонитора dead channels (рассмотреть `check-livecams.py` если начнёт деградировать); backlog — livecam.asia/cametan.com augment, YouTube Data API для real-time live badge и thumbnails, dedicated `/livecams` index.
 
 ### Rent: больше данных и точность
 
@@ -413,7 +424,8 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 |-------------|-------------------------|-------------|---------|
 | Hubs UI + фильтр | 2 | **~95%** | Методология tooltip |
 | Hubs **реальные минуты** | 4 | **~80%** ✅ CRTKY-81 | Upgrade: GTFS+RAPTOR |
-| Last train | 3–5 | **~0%** | Расписания + UI |
+| Last train | 3–5 | **~99%** ✅ CRTKY-115 | Sat/Sun split, 24:00+ convention |
+| Live camera streams (📹) | 3 (CRTKY-117/118/119) | **~100%** ✅ CRTKY-116 | Augmentation (livecam.asia) + live-status API |
 | Rent expansion | 5–7 | **~20–45%** по цели | Скрейп + маппинг + этика нагрузки |
 
 Этот блок **ортогонален** Sprint 1–3 (рейтинги из POI/crime/passengers): его можно вести параллельными эпиками в Plane без блокировки CRTKY-48/50.
