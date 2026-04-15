@@ -154,6 +154,7 @@
   },
   "map": {
     "clickForDetails": "Click for details →",
+    "closeCard": "Close station card",
     "viewDetails": "View details →",
     "compare": "+ Compare",
     "removeCompare": "Remove compare",
