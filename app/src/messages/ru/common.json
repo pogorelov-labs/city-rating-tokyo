@@ -142,6 +142,7 @@
     "belowXm": "(ниже 5 м)",
     "hideHighSeismic": "Скрыть высокий сейсм. риск",
     "seismicThreshold": "(>26% интенсивность 6+)",
+    "hasLiveCamera": "Есть камера рядом",
     "stationCount": "{count, plural, one {# станция} few {# станции} many {# станций} other {# станций}}",
     "matchCount": "<bold>{filtered}</bold> из {total} подходят",
     "noMatch": "Ни одна станция не подходит — попробуйте ослабить фильтры",
@@ -254,7 +255,12 @@
     "seismicRisk": "Сейсмический риск:",
     "seismicProbability": "Вероятность толчков интенсивностью ≥6.0 за 30 лет",
     "sourceElevation": "Источник: Open-Elevation API (данные SRTM)",
-    "sourceSeismic": "Источник: J-SHIS 2024 (Национальный институт наук о Земле и предотвращению стихийных бедствий)"
+    "sourceSeismic": "Источник: J-SHIS 2024 (Национальный институт наук о Земле и предотвращению стихийных бедствий)",
+    "liveCamsTitle": "Камеры рядом со станцией",
+    "liveCamsPlay": "Запустить трансляцию",
+    "liveCamsClose": "Остановить и закрыть",
+    "liveCamsOpenYoutube": "Смотреть на YouTube",
+    "liveCamsAttribution": "Трансляции через mini-tokyo-3d (MIT)"
   },
   "seismicTiers": {
     "low": {

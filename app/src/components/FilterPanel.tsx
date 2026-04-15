@@ -144,6 +144,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const setHideFloodRisk = useAppStore((s) => s.setHideFloodRisk);
   const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
   const setHideHighSeismic = useAppStore((s) => s.setHideHighSeismic);
+  const setHasLiveCamera = useAppStore((s) => s.setHasLiveCamera);
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
@@ -156,6 +157,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
     filters.minCommute > DEFAULT_FILTERS.minCommute ||
     filters.maxCommute < DEFAULT_FILTERS.maxCommute ||
     Object.keys(filters.categoryMins).length > 0 ||
+    filters.hasLiveCamera ||
     hideFloodRisk ||
     hideHighSeismic;
 
@@ -213,6 +215,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
     if (p.filters) {
       if (p.filters.maxRent != null) setMaxRent(p.filters.maxRent);
       if (p.filters.maxCommute != null) setMaxCommute(p.filters.maxCommute);
+      if (p.filters.hasLiveCamera != null) setHasLiveCamera(p.filters.hasLiveCamera);
       if (p.filters.categoryMins) {
         for (const [k, v] of Object.entries(p.filters.categoryMins)) {
           setCategoryMin(k as keyof StationRatings, v);
@@ -429,6 +432,18 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               <span className="text-xs text-gray-600">
                 {t('filter.hideHighSeismic')}
                 <span className="text-gray-400 ml-1">{t('filter.seismicThreshold')}</span>
+              </span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={filters.hasLiveCamera}
+                onChange={(e) => { setHasLiveCamera(e.target.checked); setActivePreset(null); }}
+                className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
+              />
+              <span className="text-xs text-gray-600">
+                <span aria-hidden className="mr-1">📹</span>
+                {t('filter.hasLiveCamera')}
               </span>
             </label>
           </div>
