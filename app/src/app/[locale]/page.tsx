@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getMapStations, getThumbnails, getSnippets } from '@/lib/data';
+import type { Locale } from '@/i18n/routing';
 import FilterPanel from '@/components/FilterPanel';
 import MapWrapper from '@/components/MapWrapper';
 import MobileDrawer from '@/components/MobileDrawer';
@@ -8,9 +9,9 @@ import HeaderActions from '@/components/HeaderActions';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import FeedbackWidget from '@/components/FeedbackWidget';
 
+// Locale-agnostic data — computed once at module load
 const stations = getMapStations();
 const thumbnails = getThumbnails();
-const snippets = getSnippets();
 
 export default async function Home({
   params,
@@ -20,6 +21,10 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('header');
+
+  // Snippets are locale-specific — each locale's homepage renders its own
+  // multilingual atmosphere snippet (from the CRTKY-109 pipeline).
+  const snippets = getSnippets(locale as Locale);
 
   return (
     <div className="flex flex-col h-dvh overflow-x-hidden">

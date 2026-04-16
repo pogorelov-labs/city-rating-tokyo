@@ -55,8 +55,9 @@ export async function generateMetadata({
   const station = getStation(slug);
   if (!station) return { title: 'Station Not Found' };
   const { primary } = stationDisplayName(station, locale as Locale);
-  const desc = station.description?.atmosphere && locale === 'ru'
-    ? station.description.atmosphere.slice(0, 155)
+  const atmosphere = station.description?.[locale as Locale]?.atmosphere;
+  const desc = atmosphere
+    ? atmosphere.slice(0, 155)
     : t('metaDescriptionFallback', { name: primary });
   return {
     title: t('metaTitle', { name: primary, nameJp: station.name_jp }),
@@ -402,53 +403,57 @@ export default async function StationPage({
           stationName={displayName}
         />
 
-        {/* Description — currently Russian-only; gate to RU locale until CRTKY-109 provides multilingual */}
-        {station.description && loc === 'ru' ? (
-          <section className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
-            <h2 className="font-bold text-lg">{t('station.aboutArea')}</h2>
-            {station.description.atmosphere && (
-              <div>
-                <h3 className="font-medium text-sm text-gray-500 mb-1">
-                  {t('station.atmosphere')}
-                </h3>
-                <p className="text-gray-700">{station.description.atmosphere}</p>
-              </div>
-            )}
-            {station.description.landmarks && (
-              <div>
-                <h3 className="font-medium text-sm text-gray-500 mb-1">
-                  {t('station.landmarks')}
-                </h3>
-                <p className="text-gray-700">{station.description.landmarks}</p>
-              </div>
-            )}
-            {station.description.food && (
-              <div>
-                <h3 className="font-medium text-sm text-gray-500 mb-1">
-                  {t('station.foodAndCafes')}
-                </h3>
-                <p className="text-gray-700">{station.description.food}</p>
-              </div>
-            )}
-            {station.description.nightlife && (
-              <div>
-                <h3 className="font-medium text-sm text-gray-500 mb-1">
-                  {t('station.barsAndNightlife')}
-                </h3>
-                <p className="text-gray-700">
-                  {station.description.nightlife}
+        {/* Description — multilingual via CRTKY-109 pipeline (EN/JA/RU × 4 fields per station) */}
+        {(() => {
+          const desc = station.description?.[loc];
+          if (!desc) {
+            return (
+              <section className="bg-white rounded-lg border border-gray-200 p-5 text-center text-gray-400">
+                <p>{t('station.descriptionComingSoon')}</p>
+                <p className="text-sm mt-1">
+                  {t('station.descriptionInProgress')}
                 </p>
-              </div>
-            )}
-          </section>
-        ) : (
-          <section className="bg-white rounded-lg border border-gray-200 p-5 text-center text-gray-400">
-            <p>{t('station.descriptionComingSoon')}</p>
-            <p className="text-sm mt-1">
-              {t('station.descriptionInProgress')}
-            </p>
-          </section>
-        )}
+              </section>
+            );
+          }
+          return (
+            <section className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
+              <h2 className="font-bold text-lg">{t('station.aboutArea')}</h2>
+              {desc.atmosphere && (
+                <div>
+                  <h3 className="font-medium text-sm text-gray-500 mb-1">
+                    {t('station.atmosphere')}
+                  </h3>
+                  <p className="text-gray-700">{desc.atmosphere}</p>
+                </div>
+              )}
+              {desc.landmarks && (
+                <div>
+                  <h3 className="font-medium text-sm text-gray-500 mb-1">
+                    {t('station.landmarks')}
+                  </h3>
+                  <p className="text-gray-700">{desc.landmarks}</p>
+                </div>
+              )}
+              {desc.food && (
+                <div>
+                  <h3 className="font-medium text-sm text-gray-500 mb-1">
+                    {t('station.foodAndCafes')}
+                  </h3>
+                  <p className="text-gray-700">{desc.food}</p>
+                </div>
+              )}
+              {desc.nightlife && (
+                <div>
+                  <h3 className="font-medium text-sm text-gray-500 mb-1">
+                    {t('station.barsAndNightlife')}
+                  </h3>
+                  <p className="text-gray-700">{desc.nightlife}</p>
+                </div>
+              )}
+            </section>
+          );
+        })()}
 
       </main>
     </div>
