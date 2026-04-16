@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suginami branch-line pocket, close to Shinjuku but still residential. Calm wins.",
+    "landmarks": "Marunouchi branch terminus, local shotengai, Myohoji side streets. Human scale.",
+    "food": "30 restaurants, 14 izakayas, 2 cafes. Solid daily food, not a date-night magnet.",
+    "nightlife": "11 late spots, no karaoke. Small izakayas, early local rhythm."
+  },
+  "ja": {
+    "atmosphere": "杉並の支線ポケット、新宿に近いのに住宅地感が残る。落ち着き勝ち。",
+    "landmarks": "丸ノ内線支線の終点、地元商店街、妙法寺側の路地。人間サイズ。",
+    "food": "飲食30軒、居酒屋14軒、カフェ2軒。普段飯は堅い、デート目的地ではない。",
+    "nightlife": "深夜11軒、カラオケなし。小さな居酒屋、早めの地元リズム。"
+  },
+  "ru": {
+    "atmosphere": "Карман Сугинами на ветке метро, Синдзюку близко, но район жилой. Тишина побеждает.",
+    "landmarks": "Конец ветки Marunouchi, местная сётэнгай, улочки у Myohoji. Человеческий масштаб.",
+    "food": "30 ресторанов, 14 изакая, 2 кафе. Еда на каждый день крепкая, для свиданий слабее.",
+    "nightlife": "11 поздних мест, караоке нет. Малые изакаи, ранний местный ритм."
+  }
+}

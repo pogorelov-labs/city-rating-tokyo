@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Single-line terminus. Bedroom community with 32,150 daily riders.",
+    "landmarks": "Large green space (279k sqm). Walking trails, parks.",
+    "food": "Izakaya-centric (63 spots). Lively evenings, salaryman density.",
+    "nightlife": "Active izakaya scene (64 late spots). Karaoke sparse."
+  },
+  "ja": {
+    "atmosphere": "終点駅。客32,150人/日。寝床街。",
+    "landmarks": "大きな公園（279k㎡）。緑の散歩道。",
+    "food": "居酒屋中心（63軒）。夜は賑やか。",
+    "nightlife": "深夜営業64軒。居酒屋主体。カラオケ0軒。"
+  },
+  "ru": {
+    "atmosphere": "Конечная станция (32,150 пассажиров/день). Коммунальный район.",
+    "landmarks": "Большой парк (279k кв.м). Тропы, зелень.",
+    "food": "Изакая-центр (63 мест). Вечером оживлено.",
+    "nightlife": "Поздние батоны 64. Изакаи. Караоке 0."
+  }
+}

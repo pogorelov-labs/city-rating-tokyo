@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kamagaya suburb, cheap and green, one Tobu line. Commute is the tax.",
+    "landmarks": "Local ramen belt around Michinobe Honcho, small parks, city-center backstreets.",
+    "food": "15 restaurants, 6 izakayas, 2 cafes. Ramen does the work; bars basically absent.",
+    "nightlife": "Eight late spots, no karaoke, no clubs. Quiet after the last Tobu run."
+  },
+  "ja": {
+    "atmosphere": "鎌ヶ谷の郊外感、安くて緑多め、東武1本。都心通勤が代償。",
+    "landmarks": "道野辺本町のラーメン店、小公園、市街地の細い裏道。",
+    "food": "飲食15軒、居酒屋6軒、カフェ2軒。ラーメン頼み、バーはほぼなし。",
+    "nightlife": "深夜8軒、カラオケなし、クラブなし。終電後は一気に静か。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Камагайи, дешево и зелено, одна линия Tobu. Налог — долгий коммьют.",
+    "landmarks": "Рамен-пояс у Michinobe Honcho, мелкие парки, тихие улицы центра.",
+    "food": "15 ресторанов, 6 изакай, 2 кафе. Рамен тащит район, баров почти нет.",
+    "nightlife": "8 поздних мест, без караоке и клубов. После последнего Tobu быстро глохнет."
+  }
+}

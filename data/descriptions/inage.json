@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba commuter hub, affordable and green. Useful daily life, center-Tokyo commute is long.",
+    "landmarks": "Inage Sengen Shrine, old seaside villa area, broad residential streets toward the coast.",
+    "food": "60 restaurants, 28 izakayas, 4 cafes. Station meals are fine; destination dining is limited.",
+    "nightlife": "16 late spots, 1 karaoke, no clubs. Local drinking, quiet finish."
+  },
+  "ja": {
+    "atmosphere": "千葉の通勤拠点。安めで緑多い。日常は便利、都心通勤は長い。",
+    "landmarks": "稲毛浅間神社、旧別荘地の名残、海側へ伸びる広い住宅街。",
+    "food": "飲食60件、居酒屋28件、カフェ4件。駅前飯は十分、目的地グルメは限定的。",
+    "nightlife": "深夜営業16件、カラオケ1件、クラブなし。地元飲み、静かに終了。"
+  },
+  "ru": {
+    "atmosphere": "Коммьютерский узел Тибы, доступно и зелено. Быт удобен, до центра Токио долго.",
+    "landmarks": "Inage Sengen Shrine, следы старой морской дачи, широкие жилые улицы к побережью.",
+    "food": "60 мест, 28 изакая, 4 кафе. У станции нормально, гастро-поездка ограничена.",
+    "nightlife": "16 поздних мест, 1 караоке, клубов нет. Локальная выпивка, тихий финал."
+  }
+}

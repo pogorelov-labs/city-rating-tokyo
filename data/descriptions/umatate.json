@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep Chiba rural station, Kominato Line. Tiny town (145 daily), zero shops after 9pm. Elevation 22m, very high seismic. Cheap rent (¥102k) only upside.",
+    "landmarks": "Countryside, sparse essentials (1 clinic only). One food entry, nothing else.",
+    "food": "3 entries, zero restaurants. Bring your own lunch.",
+    "nightlife": "Closed. Dead quiet after dark."
+  },
+  "ja": {
+    "atmosphere": "千葉深部、小湊線。村（145日）。9時で店なし。22m、超high seismic。安い（¥102k）が唯一の利点。",
+    "landmarks": "農村、clinic1のみ。食1、他なし。",
+    "food": "3。レストランゼロ。弁当持参。",
+    "nightlife": "夜間ゼロ。暗い。"
+  },
+  "ru": {
+    "atmosphere": "Глубокая сельская Chiba, линия Kominato. Крошечный город (145 в день), ноль магазинов после 21:00. 22м, очень высокий seismic. Дешёво (¥102k) — единственный плюс.",
+    "landmarks": "Деревня, только 1 клиника. Один -пункт еды, всё.",
+    "food": "3 записи. Нет ресторанов. Бэнто из дома.",
+    "nightlife": "Закрыто. Мёртвая тишина ночью."
+  }
+}

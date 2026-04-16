@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tsukuba Express suburb, new blocks and Adachi quiet. Cheap, green, still thin on street life.",
+    "landmarks": "Redevelopment plazas, canals, pocket parks. Functional townscape, not a sightseeing stop.",
+    "food": "23 restaurants, 9 izakayas. Daily basics only; cafes and destination food are scarce.",
+    "nightlife": "6 late spots. Minimal, plus 2m elevation and very-high seismic risk."
+  },
+  "ja": {
+    "atmosphere": "つくばエクスプレス沿いの新しい足立住宅地。安くて緑あり、街の厚みはまだ薄い。",
+    "landmarks": "再開発の駅前広場、水路、小公園。実用的な街並み、観光地ではない。",
+    "food": "飲食23軒、居酒屋9軒。日常の最低限、カフェや目的地飯は少ない。",
+    "nightlife": "深夜6軒。ほぼ最小限、標高2mと地震リスク非常に高め。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Tsukuba Express, новые кварталы и тихий Адачи. Дешево, зелено, уличная жизнь тонкая.",
+    "landmarks": "Площади редевелопмента, каналы, карманные парки. Практичный пейзаж, не для прогулочного вау.",
+    "food": "23 ресторана, 9 изакая. Только ежедневная база; кафе и еда-цель редки.",
+    "nightlife": "6 поздних мест. Минимально, плюс 2 м высоты и очень высокий сейсмориск."
+  }
+}

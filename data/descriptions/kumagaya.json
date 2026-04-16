@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Regional Saitama hub, hotter than Tokyo and much farther out. Big-station utility, small-city pace.",
+    "landmarks": "Takasaki Line and Chichibu Railway split here; Arakawa side and rugby-town identity nearby.",
+    "food": "103 restaurants, 46 izakayas, 5 bars. Proper local crawl, but not Tokyo-level density.",
+    "nightlife": "54 late-night spots and 1 club. Surprisingly alive, still regional."
+  },
+  "ja": {
+    "atmosphere": "埼玉北部の地域ハブ。東京より暑く、都心からかなり遠い。駅力は大きい、速度は地方都市。",
+    "landmarks": "高崎線と秩父鉄道の分岐点。荒川側、ラグビーの街の気配も近い。",
+    "food": "飲食103軒、居酒屋46軒、バー5軒。地元飲みは十分、東京密度ではない。",
+    "nightlife": "深夜営業54軒、クラブ1軒。意外に生きているが、あくまで地域ハブ。"
+  },
+  "ru": {
+    "atmosphere": "Региональный хаб Сайтамы, жарче Токио и намного дальше. Большая станция, темп малого города.",
+    "landmarks": "Здесь расходятся Takasaki Line и Chichibu Railway; рядом Аракава и регбийная идентичность.",
+    "food": "103 ресторана, 46 изакая, 5 баров. Нормальный локальный обход, но не токийская плотность.",
+    "nightlife": "54 поздних места и 1 клуб. Неожиданно живо, но всё ещё регионально."
+  }
+}

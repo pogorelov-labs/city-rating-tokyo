@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Kamakura-side rail hub, cheaper than its access suggests. Soft-ground seismic flag, real crowds.",
+    "landmarks": "Ofuna Kannon, Shonan Monorail, Kamakura and Enoshima routes. Gateway energy.",
+    "food": "160 restaurants, 78 izakayas, 12 bars. Strong station dining, practical and loud.",
+    "nightlife": "60 late spots, 4 karaoke rooms, no clubs. Commuter drinking hub."
+  },
+  "ja": {
+    "atmosphere": "鎌倉側の大きな鉄道ハブ、アクセスの割に安め。軟弱地盤リスクあり、人は多い。",
+    "landmarks": "大船観音、湘南モノレール、鎌倉と江ノ島方面。玄関口の熱気。",
+    "food": "飲食160軒、居酒屋78軒、バー12軒。駅前飯は強い、実用的で賑やか。",
+    "nightlife": "深夜営業60軒、カラオケ4軒、クラブなし。通勤者の飲みハブ。"
+  },
+  "ru": {
+    "atmosphere": "Большой хаб со стороны Kamakura, дешевле чем доступ обещает. Мягкий грунт, толпы реальные.",
+    "landmarks": "Ofuna Kannon, Shonan Monorail, маршруты к Kamakura и Enoshima. Энергия ворот.",
+    "food": "160 ресторанов, 78 изакая, 12 баров. Сильная станционная еда, практично и шумно.",
+    "nightlife": "60 поздних мест, 4 караоке, клубов нет. Хаб комьютерской выпивки."
+  }
+}

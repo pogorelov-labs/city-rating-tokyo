@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Monorail edge town, 60 min from center. Quiet, safe residential, zero cultural buzz. Feels removed.",
+    "landmarks": "Mansory temple at station. Clinics cluster (5). Empty streets, low density.",
+    "food": "Minimal — 2 listings, 7. Lunch options only. No nightlife culture.",
+    "nightlife": "Nonexistent — 0 midnight spots. Town sleeps before 9pm."
+  },
+  "ja": {
+    "atmosphere": "モノレール終端、都心60分。静か、安全、文化ゼロ。取り残された感。",
+    "landmarks": "万願寺が駅前。クリニック密集（5軒）。閑散。",
+    "food": "ほぼなし — 2 listings + 7 。昼食のみ。",
+    "nightlife": "無し。21時で消灯。"
+  },
+  "ru": {
+    "atmosphere": "Край монорельса, 60 минут от центра. Спокойно, безопасно, культуры нет. Забыто.",
+    "landmarks": "Храм Мангантэра у станции. Клиники (5). Вымершие улицы.",
+    "food": "Минимум — 2 listings, 7. Обед. Ночной жизни нет.",
+    "nightlife": "Ноль. Ночь начинается в 21:00."
+  }
+}

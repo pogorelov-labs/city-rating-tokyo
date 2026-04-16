@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "North Saitama commuter belt, calmer than Omiya. Affordable, useful, a bit plain.",
+    "landmarks": "One Takasaki Line stop from Omiya energy. Local shopping streets and small parks.",
+    "food": "39 restaurants, 22 izakayas, 1 bar. Solid weekday dinners, little cafe culture.",
+    "nightlife": "17 late spots, no karaoke, no clubs. Neighborhood drinks, not a crawl."
+  },
+  "ja": {
+    "atmosphere": "大宮より落ち着いた北さいたま通勤圏。手頃で実用的、少し地味。",
+    "landmarks": "高崎線で大宮の勢いがすぐ隣。地元商店街と小さな公園。",
+    "food": "飲食39軒、居酒屋22軒、バー1軒。平日の夕食は堅い、カフェ文化は薄い。",
+    "nightlife": "深夜営業17軒、カラオケなし、クラブなし。近所飲みで、はしご向きではない。"
+  },
+  "ru": {
+    "atmosphere": "Северный пояс комьютеров Сайтамы, спокойнее Омии. Доступно, удобно, немного плоско.",
+    "landmarks": "Омия рядом по Takasaki Line. Локальные торговые улицы и небольшие парки.",
+    "food": "39 ресторанов, 22 изакая, 1 бар. Надёжные будничные ужины, кафе-культуры мало.",
+    "nightlife": "17 поздних точек, без караоке и клубов. Районная выпивка, не бар-хоппинг."
+  }
+}

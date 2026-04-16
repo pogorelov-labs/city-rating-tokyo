@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo Line residential stop, student-adjacent, calm but not sleepy. Safe, slightly pricey.",
+    "landmarks": "Koganei Park orbit, quiet shotengai, cycling streets toward Musashino.",
+    "food": "24 restaurants plus local counters; 11 izakayas. Practical meals, not a food crawl.",
+    "nightlife": "8 late spots, no karaoke. Chuo Line drinks stay modest."
+  },
+  "ja": {
+    "atmosphere": "中央線の住宅駅、学生気配あり。落ち着くが眠すぎない、安全で少し高い。",
+    "landmarks": "小金井公園圏内、静かな商店街、武蔵野へ続く自転車道。",
+    "food": "飲食24軒と地元カウンター。居酒屋11軒、日常食中心で食べ歩き向きではない。",
+    "nightlife": "深夜営業8軒、カラオケなし。中央線飲みも控えめ。"
+  },
+  "ru": {
+    "atmosphere": "Жилая станция на Тюо, рядом студенческий воздух. Спокойно, но не сонно.",
+    "landmarks": "Окрестность парка Коганэй, тихая сётэнгай, велоулочки в сторону Мусасино.",
+    "food": "24 ресторана плюс местные стойки, 11 изакая. Практично, не гастро-маршрут.",
+    "nightlife": "8 поздних мест, караоке нет. Выпивка на линии Тюо здесь сдержанная."
+  }
+}

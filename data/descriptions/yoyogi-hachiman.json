@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yoyogi-Uehara edge, leafy, tasteful, expensive. Calm streets, excellent access.",
+    "landmarks": "Yoyogi Hachimangu, Yoyogi Park edge, Tomigaya cafes. Shibuya feels close but muted.",
+    "food": "118 restaurants, 39 izakayas, 9 cafes. Good local dining, small and selective.",
+    "nightlife": "41 late spots, no karaoke or clubs. Quiet bars, late trains carry the rest."
+  },
+  "ja": {
+    "atmosphere": "代々木上原寄りの緑ある上品な街、高め。道は静か、アクセスは強い。",
+    "landmarks": "代々木八幡宮、代々木公園の端、富ヶ谷カフェ。渋谷は近いが音量低め。",
+    "food": "飲食118軒、居酒屋39軒、カフェ9軒。地元食は良い、小さく選ばれた感じ。",
+    "nightlife": "深夜営業41軒、カラオケもクラブもなし。静かなバー、残りは終電で外へ。"
+  },
+  "ru": {
+    "atmosphere": "Край Yoyogi-Uehara, зелено, со вкусом, дорого. Спокойные улицы, отличный доступ.",
+    "landmarks": "Yoyogi Hachimangu, край Yoyogi Park, кафе Tomigaya. Shibuya близко, но приглушённо.",
+    "food": "118 ресторанов, 39 изакая, 9 кафе. Хорошая локальная еда, мало и избирательно.",
+    "nightlife": "41 позднее место, без караоке и клубов. Тихие бары, остальное увозят поезда."
+  }
+}

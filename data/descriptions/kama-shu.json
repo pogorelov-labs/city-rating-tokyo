@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sotobo line commuter belt in Chiba, 71 min east. Planned suburban sprawl, quiet daytime, empty after sunset.",
+    "landmarks": "Green zone (4.8m sqm, 24 parks), pedestrian streets (4). Nature-lite feeling, zero nightlife attractions.",
+    "food": "9 restaurants, 5 izakayas, light data. Suburban chains, family-safe. Low culinary personality.",
+    "nightlife": "Sparse. 3 late-night spots, 0 karaoke. Empty after 9pm. Families only."
+  },
+  "ja": {
+    "atmosphere": "外房線の通勤地帯、千葉東。71分。計画的郊外、静か。日没後は無人。",
+    "landmarks": "緑地（480万平方メートル、公園24個）、歩行者天国4本。ライト・ネイチャー、夜ランドマークなし。",
+    "food": "飲食店9軒、居酒屋5軒。郊外チェーン、ファミリー向け。個性薄い。",
+    "nightlife": "薄い。夜営業3軒、カラオケなし。21時で無人。ファミリーのみ。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный пояс линии Sotobo в Chiba, 71 мин на восток. Планомерная трава, днём тихо, вечер пусто.",
+    "landmarks": "Зелень (4.8 млн кв.м, 24 парка), пешеходные улицы (4). Облегчённая природа, ночных тяг нет.",
+    "food": "9 ресторанов, 5 изакая. Цепочки, семейные. Без кулинарной личности.",
+    "nightlife": "Редко. 3 поздних места, 0 караоке. После 21:00 пусто. Семьи только."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "One stop from Ikebukuro, but still old Toshima. Practical, compact, quietly manga-adjacent.",
+    "landmarks": "Tokiwa-so walking route, Nagasaki Shrine lanes, Seibu Ikebukuro backstreets.",
+    "food": "49 restaurants, 16 izakayas, 4 bars. Enough variety without Ikebukuro noise.",
+    "nightlife": "14 late spots, no clubs. Small bars, then last train home."
+  },
+  "ja": {
+    "atmosphere": "池袋一駅なのに古い豊島感が残る。実用的で小さく、漫画文化の影もある。",
+    "landmarks": "トキワ荘散歩動線、長崎神社の路地、西武池袋線の裏道。",
+    "food": "飲食49軒、居酒屋16軒、バー4軒。池袋の騒音なしで選択肢は足りる。",
+    "nightlife": "深夜営業14軒、クラブなし。小さなバー、あとは終電帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Одна остановка от Икэбукуро, но всё ещё старая Тосима. Практично, компактно, с тенью манги.",
+    "landmarks": "Маршрут Tokiwa-so, переулки Nagasaki Shrine, задние улицы Seibu Ikebukuro.",
+    "food": "49 ресторанов, 16 изакай, 4 бара. Выбора хватает без шума Икэбукуро.",
+    "nightlife": "14 поздних мест, клубов нет. Маленькие бары, потом домой последним поездом."
+  }
+}

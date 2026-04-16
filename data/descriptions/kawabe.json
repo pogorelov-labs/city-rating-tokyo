@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ome Line suburb, mountain air and cheap rent. Tokyo commute is the tax.",
+    "landmarks": "Tama River side, Ome foothills, Kawabe Onsen Ume-no-yu. Practical rather than cute.",
+    "food": "24 restaurants, 13 izakayas. Daily food works; destination eating is scarce.",
+    "nightlife": "8 late-night spots. Minimal. Local izakayas, no karaoke, no clubs."
+  },
+  "ja": {
+    "atmosphere": "青梅線の郊外。山の空気と安い家賃。都心通勤がその代償。",
+    "landmarks": "多摩川側、青梅の山裾、河辺温泉梅の湯。かわいいより実用。",
+    "food": "飲食24軒、居酒屋13軒。普段飯は回るが、目的地になる食は少ない。",
+    "nightlife": "深夜営業8軒。ほぼ最小限。地元居酒屋、カラオケなし、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Ome Line, горный воздух и дешёвая аренда. Комьют до Токио — налог.",
+    "landmarks": "Сторона Tama River, предгорья Оме, Kawabe Onsen Ume-no-yu. Практично, не мило.",
+    "food": "24 ресторана, 13 изакая. На каждый день работает; ехать ради еды почти некуда.",
+    "nightlife": "8 поздних мест. Минимально. Локальные изакая, без караоке, без клубов."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sotetsu transfer suburb, hilly Yokohama edge. Cheapish, useful, a long ride to core Tokyo.",
+    "landmarks": "Joinus Terrace, driver license center buses, wooded slopes. Local errands beat sightseeing.",
+    "food": "39 restaurants, 20 izakayas. Station-front basics, ramen, chain dinners; not a food hunt.",
+    "nightlife": "15 late spots, 2 karaoke. Neighborhood drinking, no club energy."
+  },
+  "ja": {
+    "atmosphere": "相鉄の乗換郊外、横浜の丘陵端。安めで実用的、都心までは長い。",
+    "landmarks": "ジョイナステラス、免許センター行きバス、緑の斜面。観光より生活用。",
+    "food": "飲食39軒、居酒屋20軒。駅前の定番、ラーメン、チェーン飯。食べ歩き向きではない。",
+    "nightlife": "深夜15軒、カラオケ2軒。近所飲みレベル、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Пересадочный пригород Sotetsu, холмы на краю Йокогамы. Дешевле, полезно, но до центра долго.",
+    "landmarks": "Joinus Terrace, автобусы к центру прав, лесистые склоны. Больше быт, чем прогулка.",
+    "food": "39 ресторанов, 20 изакая. Станционные основы, рамен, сетевые ужины; не гастро-охота.",
+    "nightlife": "15 поздних мест, 2 караоке. Соседские выпивки, клубной энергии нет."
+  }
+}

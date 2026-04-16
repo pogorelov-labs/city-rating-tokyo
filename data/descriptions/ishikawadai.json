@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Ikegami-line pocket, residential Ota with small shops. Safe, calm, slightly sleepy.",
+    "landmarks": "Senzokuike side nearby, low-rise streets, local clinics and markets. No big station drama.",
+    "food": "29 restaurants, 7 izakayas. Small counters and family places; cafes exist but stay modest.",
+    "nightlife": "8 late spots. No karaoke, no clubs. Neighborhood night only."
+  },
+  "ja": {
+    "atmosphere": "池上線の静かな住宅ポケット。大田区の小商店と低層街。安全で穏やか、少し眠い。",
+    "landmarks": "洗足池方面、低層の道、地元クリニックと市場。大きな駅前感はない。",
+    "food": "飲食29軒、居酒屋7軒。小さなカウンターと家族向け。カフェはあるが控えめ。",
+    "nightlife": "深夜8軒。カラオケなし、クラブなし。近所の夜だけ。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман линии Ikegami, жилой Ота с маленькими лавками. Безопасно, спокойно, сонно.",
+    "landmarks": "Сторона Senzokuike рядом, низкие улицы, местные клиники и рынки. Большой станционной драмы нет.",
+    "food": "29 ресторанов, 7 изакая. Малые стойки и семейные места; кафе есть, но скромно.",
+    "nightlife": "8 поздних мест. Караоке нет, клубов нет. Только соседская ночь."
+  }
+}

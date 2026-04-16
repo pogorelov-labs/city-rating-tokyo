@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hakone mountain town, cable car district. 124 min from Tokyo. Remote, scenic, weekender haunt. 393m elevation, moderate seismic risk.",
+    "landmarks": "Hakone Tozan Railway station. Massive adjacent park (26M sqm). Tourist-facing infrastructure. Hostels (5) cater to hikers.",
+    "food": "6 listings + 8. 1 izakaya, 2 cafes. Spa-town cuisine, not nightlife. Expensive.",
+    "nightlife": "1 midnight spot, zero karaoke. Tourist area dies after 9pm. Hikers retreat."
+  },
+  "ja": {
+    "atmosphere": "箱根山麓、ケーブルカー駅。東京から124分。秘境、景色、ハイカー向け。393m、地震中程度。",
+    "landmarks": "箱根登山鉄道。隣接大公園（26M平方m）。観光向けインフラ。ホステル5軒。",
+    "food": "6+8。居酒屋1、カフェ2。温泉町の食事、高い。",
+    "nightlife": "深夜1軒、カラオケなし。観光地は9時に沈黙。ハイカー帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Город у подножия Хаконе, кабельная дорога. 124 мин от Токио. Уединённо, живописно, выходные туристы. 393м, умеренный сейсмориск.",
+    "landmarks": "Станция линии Хаконе Тозан. Огромный соседний парк (26M кв.м). Туристическая инфраструктура. Хостели (5) для туристов.",
+    "food": "6 listings + 8. 1 изакая, 2 кафе. Курортная кухня, не ночная жизнь. Дорого.",
+    "nightlife": "1 ночное место, нет караоке. Туристический район умирает после 21:00."
+  }
+}

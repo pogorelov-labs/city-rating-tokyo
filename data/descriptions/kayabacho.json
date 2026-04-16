@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Broker-office grid by Nihonbashi. Suit-heavy by day, izakaya spillover after market hours.",
+    "landmarks": "Tokyo Stock Exchange, Nihonbashi bridges, river walks toward Sumida. Finance Tokyo, not postcard Tokyo.",
+    "food": "898 restaurants, 395 izakayas, 41 bars. Brutal lunch choice, salaryman dinners, little romance.",
+    "nightlife": "173 late spots, 4 karaoke, no clubs. Drinks run late, mostly office gravity."
+  },
+  "ja": {
+    "atmosphere": "日本橋寄りの証券・オフィス格子。昼はスーツ濃度高め、市場後は居酒屋に流れる。",
+    "landmarks": "東京証券取引所、日本橋の橋群、隅田川方面の水辺歩き。絵葉書ではなく金融の東京。",
+    "food": "飲食898軒、居酒屋395軒、バー41軒。ランチ選択肢は凶暴、夜はサラリーマン飯。",
+    "nightlife": "深夜営業173軒、カラオケ4軒、クラブなし。遅くまで飲めるが、基本は会社の重力。"
+  },
+  "ru": {
+    "atmosphere": "Офисно-брокерская сетка у Nihonbashi. Днём костюмы, после рынка перелив в изакаи.",
+    "landmarks": "Tokyo Stock Exchange, мосты Nihonbashi, прогулки к Sumida. Финансовый Токио, не открытка.",
+    "food": "898 ресторанов, 395 изакая, 41 бар. Жёсткий выбор на ланч, ужины salaryman, мало романтики.",
+    "nightlife": "173 поздних места, 4 караоке, клубов нет. Пить можно долго, но всё держит офисная гравитация."
+  }
+}

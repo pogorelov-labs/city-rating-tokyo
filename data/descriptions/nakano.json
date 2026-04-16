@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo-line density, otaku spillover, office towers, alleys. Brilliant, crowded, rough.",
+    "landmarks": "Nakano Broadway, Sun Mall, Shiki no Mori Park. Pop culture beside redevelopment.",
+    "food": "309 spots, 120 izakayas, 31 bars. Ramen, yakitori, basement snacks, strong late eats.",
+    "nightlife": "147 midnight spots. Bars and izakayas run late; clubs barely matter."
+  },
+  "ja": {
+    "atmosphere": "中央線の密度、オタクの余波、オフィス塔、路地。面白い、混む、荒さもある。",
+    "landmarks": "中野ブロードウェイ、サンモール、四季の森公園。ポップ文化と再開発が隣同士。",
+    "food": "飲食309軒、居酒屋120軒、バー31軒。ラーメン、焼鳥、地下の軽食、深夜飯強い。",
+    "nightlife": "深夜営業147軒。バーと居酒屋が遅くまで、クラブはほぼ関係なし。"
+  },
+  "ru": {
+    "atmosphere": "Плотность Chuo Line, отаку-шлейф, офисные башни, переулки. Сильно, людно, грубовато.",
+    "landmarks": "Nakano Broadway, Sun Mall, Shiki no Mori Park. Поп-культура рядом с редевелопментом.",
+    "food": "309 мест, 120 изакая, 31 бар. Рамен, якитори, подвальные снеки, сильная поздняя еда.",
+    "nightlife": "147 ночных точек. Бары и изакая работают поздно; клубы почти не важны."
+  }
+}

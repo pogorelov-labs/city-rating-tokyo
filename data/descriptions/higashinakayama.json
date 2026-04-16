@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Keisei stop hiding racecourse spillover. Quiet weekdays, rowdy pockets on event days.",
+    "landmarks": "Nakayama Racecourse and Hokekyoji orbit nearby; station itself stays modest.",
+    "food": "Izakaya concentration is the story, plenty late. Better eating than the platform suggests.",
+    "nightlife": "Late izakayas, some bars, one karaoke. Event-night energy."
+  },
+  "ja": {
+    "atmosphere": "競馬場の余波を隠す小さな京成駅。平日は静か、開催日は局地的に騒がしい。",
+    "landmarks": "中山競馬場と法華経寺が近い圏内。駅そのものは控えめ。",
+    "food": "居酒屋密度が主役、遅い店も多い。ホームの見た目より食べられる。",
+    "nightlife": "遅い居酒屋、バー少し、カラオケ1軒。開催日の夜に熱が出る。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая Keisei-станция с отблеском ипподрома. Будни тихие, в дни событий шумные карманы.",
+    "landmarks": "Nakayama Racecourse и Hokekyoji рядом по орбите; сама станция скромная.",
+    "food": "Главное тут плотность изакай, много поздних. Еда лучше, чем обещает платформа.",
+    "nightlife": "Поздние изакаи, немного баров, одно караоке. Энергия event-night."
+  }
+}

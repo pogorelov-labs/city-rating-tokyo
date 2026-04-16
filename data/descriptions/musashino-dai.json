@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Fuchu residential pocket on the Keio Line. Cheapish, safe, but center feels far.",
+    "landmarks": "Local shotengai, Tama-side suburbs, Ajinomoto Stadium within bike range. No tourist pull.",
+    "food": "Small spread: 15 listed spots plus local noodles and family restaurants. Useful, not destination food.",
+    "nightlife": "Five late spots, no karaoke. A beer near the station, then home."
+  },
+  "ja": {
+    "atmosphere": "京王線沿いの府中住宅地。安めで安全、ただし都心は遠く感じる。",
+    "landmarks": "小さな商店街、多摩寄りの郊外感。味スタは自転車圏、観光地感は薄い。",
+    "food": "掲載15軒、地元の麺類とファミレス中心。便利だが目的地グルメではない。",
+    "nightlife": "深夜営業5軒、カラオケなし。駅前で一杯、すぐ帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Тихий жилой карман Футю на Keio. Дешевле и спокойно, но центр уже далеко.",
+    "landmarks": "Маленькая сётэнгай, пригороды у Тама. До Ajinomoto Stadium можно на велосипеде.",
+    "food": "15 мест в базе, локальная лапша и семейные рестораны. Удобно, не гастро-цель.",
+    "nightlife": "Пять поздних точек, караоке нет. Пиво у станции, потом домой."
+  }
+}

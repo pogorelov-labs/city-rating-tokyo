@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Inokashira-line suburb, green and gentle. Good daily base, low nightlife voltage.",
+    "landmarks": "Zenpukuji River green belt, Suginami lanes, Eifukucho nearby. Calm wins.",
+    "food": "49 restaurants, 12 izakayas, 2 cafes. Practical local food, not much destination pull.",
+    "nightlife": "16 late spots, no karaoke or clubs. Small izakaya night."
+  },
+  "ja": {
+    "atmosphere": "井の頭線の静かな郊外、緑があり穏やか。日常拠点は良い、夜の電圧は低い。",
+    "landmarks": "善福寺川の緑地帯、杉並の路地、近い永福町。静けさが勝つ。",
+    "food": "飲食49軒、居酒屋12軒、カフェ2軒。実用的な地元飯、遠征する力は弱い。",
+    "nightlife": "深夜営業16軒、カラオケもクラブもなし。小さな居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригород Inokashira Line, зелено и мягко. Хорошая база, низкое ночное напряжение.",
+    "landmarks": "Зелёный пояс Zenpukuji River, переулки Suginami, Eifukucho рядом. Побеждает тишина.",
+    "food": "49 ресторанов, 12 изакая, 2 кафе. Практичная локальная еда, мало притяжения.",
+    "nightlife": "16 поздних мест, без караоке и клубов. Малая изакая-ночь."
+  }
+}

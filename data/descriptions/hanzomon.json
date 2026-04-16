@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy-office calm beside the Imperial Palace. Central, expensive, sterile after work.",
+    "landmarks": "Hanzomon Gate, palace moat, National Theatre area, British Embassy nearby.",
+    "food": "Lunch density, soba, curry, polished izakaya. Useful for workdays, not romantic.",
+    "nightlife": "Late izakaya survives, clubs absent. Go to Akasaka or Yotsuya for noise."
+  },
+  "ja": {
+    "atmosphere": "皇居横の大使館とオフィスの静けさ。都心、高い、仕事後は無機質。",
+    "landmarks": "半蔵門、皇居のお堀、国立劇場周辺、英国大使館が近い。",
+    "food": "昼飯密度高め、蕎麦、カレー、整った居酒屋。平日向き、色気は薄い。",
+    "nightlife": "遅い居酒屋は残る、クラブなし。騒ぐなら赤坂か四ツ谷へ。"
+  },
+  "ru": {
+    "atmosphere": "Тишина посольств и офисов у Императорского дворца. Центр, дорого, после работы стерильно.",
+    "landmarks": "Ворота Хандзомон, дворцовый ров, район National Theatre, рядом британское посольство.",
+    "food": "Плотные ланчи, соба, карри, аккуратные изакаи. Удобно в будни, не романтично.",
+    "nightlife": "Поздняя изакая выживает, клубов нет. За шумом в Акасака или Ёцуя."
+  }
+}

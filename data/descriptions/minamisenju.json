@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Three-line north-east hub, practical and historically rough-edged. Lowland soft-ground flag.",
+    "landmarks": "Sumida River, LaLa Terrace, old Sanya edges, Kozukappara history nearby.",
+    "food": "72 restaurants, 24 izakayas, 4 cafes. Enough local food, not a destination spread.",
+    "nightlife": "18 late spots, no karaoke or clubs. Quiet after the trains thin."
+  },
+  "ja": {
+    "atmosphere": "北東側の3路線ハブ、実用的で歴史のザラつきも残る。低地の軟弱地盤あり。",
+    "landmarks": "隅田川、LaLaテラス、山谷の端、小塚原の歴史が近い。",
+    "food": "飲食72軒、居酒屋24軒、カフェ4軒。地元飯は足りるが、目的地級の広がりはない。",
+    "nightlife": "深夜営業18軒、カラオケもクラブもなし。電車が減ると静か。"
+  },
+  "ru": {
+    "atmosphere": "Северо-восточный хаб трёх линий, практичный и исторически шершавый. Низина, мягкий грунт.",
+    "landmarks": "Sumida River, LaLa Terrace, края старой Sanya, история Kozukappara рядом.",
+    "food": "72 ресторана, 24 изакая, 4 кафе. Локальной еды хватает, но не destination spread.",
+    "nightlife": "18 поздних мест, без караоке и клубов. Тихо, когда редеют поезда."
+  }
+}

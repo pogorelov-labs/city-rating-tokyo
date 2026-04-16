@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain resort gateway, 117 min from Tokyo. Hakone Tozan railway village, 1,329 daily riders. Alpine atmosphere, scenic vibe (estimated).",
+    "landmarks": "Hakone Tozan mountain tram. 86M sqm parkland (Hakone national park access). Hiking hub.",
+    "food": "2 listings, 1 cafe, 9 food. Tourist-only restaurants, no nightlife infrastructure.",
+    "nightlife": "Minimal. Village shuts at 22:00, hikers sleep early."
+  },
+  "ja": {
+    "atmosphere": "箱根の登山口、観光地気分。1329人/日のハイカー。",
+    "landmarks": "箱根登山鉄道の拠点。86百万平方メートル公園。歩道整備。",
+    "food": "観光地定食2軒、カフェ1。ハイカー向け。",
+    "nightlife": "ほぼなし。22時で町消灯。"
+  },
+  "ru": {
+    "atmosphere": "Ворота гор Хаконэ, 117 мин от Токио. Туристская деревня, горная атмосфера.",
+    "landmarks": "Фуникулёр Хаконэ Тодзан. 86 млн кв.м парка (нац. парк Хаконэ). Тропы.",
+    "food": "2 места, 1 кафе. Туристы только. Ничего для ночи.",
+    "nightlife": "Нет. Село спит в 22:00."
+  }
+}

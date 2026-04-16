@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Toyoko/Meguro Line sweet spot, shotengai energy without Shibuya chaos. Popular, not cheap.",
+    "landmarks": "Bremen-dori and Oz-dori shopping streets, Sumiyoshi Shrine side, small parks nearby.",
+    "food": "102 restaurants, 37 izakayas, lots of casual depth. Excellent daily eating, not luxury.",
+    "nightlife": "34 midnight spots, 3 hostels, no clubs. Lively bars, early-neighborhood ceiling."
+  },
+  "ja": {
+    "atmosphere": "東横・目黒線のちょうどいい街。渋谷の混沌なしで商店街の熱量。人気、安くはない。",
+    "landmarks": "ブレーメン通りとオズ通り商店街、住吉神社側、小さな公園も近い。",
+    "food": "飲食102軒、居酒屋37軒、カジュアルの層が厚い。日常飯は優秀、高級ではない。",
+    "nightlife": "深夜営業34軒、ホステル3件、クラブなし。飲み屋は元気、でも近所の上限。"
+  },
+  "ru": {
+    "atmosphere": "Удачная точка Toyoko/Meguro Line, энергия сётэнгай без хаоса Сибуи. Популярно, не дёшево.",
+    "landmarks": "Торговые улицы Bremen-dori и Oz-dori, сторона Sumiyoshi Shrine, маленькие парки рядом.",
+    "food": "102 ресторана, 37 изакая, много casual-глубины. Отличная ежедневная еда, не люкс.",
+    "nightlife": "34 ночных места, 3 хостела, клубов нет. Бары живые, но потолок соседский."
+  }
+}

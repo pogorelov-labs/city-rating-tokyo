@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ueno-Asakusa in-between, dense, useful and rougher than it looks. Food everywhere.",
+    "landmarks": "Kappabashi nearby, Ueno edge, temple-side backstreets. Wholesale Tokyo texture.",
+    "food": "875 restaurants, 386 izakayas, 51 bars. Huge range, cheap counters and tourist spillover.",
+    "nightlife": "326 late spots, karaoke, no clubs. Izakaya-heavy, gritty after dark."
+  },
+  "ja": {
+    "atmosphere": "上野と浅草の間、密度高く便利で見た目よりザラつく。飯はどこにでもある。",
+    "landmarks": "近いかっぱ橋、上野の端、寺町の裏道。問屋街の東京感。",
+    "food": "飲食875軒、居酒屋386軒、バー51軒。幅巨大、安いカウンターと観光のこぼれ。",
+    "nightlife": "深夜営業326軒、カラオケあり、クラブなし。居酒屋濃いめ、夜は荒め。"
+  },
+  "ru": {
+    "atmosphere": "Между Ueno и Asakusa, плотно, удобно и грубее чем кажется. Еда везде.",
+    "landmarks": "Kappabashi рядом, край Ueno, храмовые закоулки. Текстура оптового Токио.",
+    "food": "875 ресторанов, 386 изакая, 51 бар. Огромный диапазон, дешёвые стойки и турпоток.",
+    "nightlife": "326 поздних мест, караоке есть, клубов нет. Много изакая, ночью шершаво."
+  }
+}

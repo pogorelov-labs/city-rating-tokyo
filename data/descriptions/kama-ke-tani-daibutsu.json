@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba suburb named after a very small Great Buddha. Cheap, low-key, far from center.",
+    "landmarks": "Kamagaya Daibutsu statue, Shin-Keisei strip, quiet houses and parks.",
+    "food": "Izakaya and family eateries around the station; more useful than stylish.",
+    "nightlife": "Late izakayas plus one karaoke. No clubs."
+  },
+  "ja": {
+    "atmosphere": "小さな大仏の名を持つ千葉郊外。安くて地味、都心は遠い。",
+    "landmarks": "鎌ヶ谷大仏、シンケイセイ沿いの商店、静かな住宅と公園。",
+    "food": "駅前は居酒屋と家族向け食堂。洒落てはいないが使える。",
+    "nightlife": "遅い居酒屋とカラオケ1軒。クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Тибы, названный в честь очень маленького Великого Будды. Дешево, тихо, центр далеко.",
+    "landmarks": "Статуя Kamagaya Daibutsu, полоса Shin-Keisei, тихие дома и парки.",
+    "food": "Изакаи и семейные едальни у станции; больше полезно, чем стильно.",
+    "nightlife": "Поздние изакаи плюс одно караоке. Клубов нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned Mihama seaside suburb, breezy and functional. One Keiyo Line, reclaimed-coast feel.",
+    "landmarks": "Inage Seaside Park, Mihama ward blocks, coastal sports spaces. Wide roads, low drama.",
+    "food": "15 restaurants, 7 izakayas, 3 cafes. Everyday mall-and-station food, not a food hunt.",
+    "nightlife": "4 late spots, no karaoke, no clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "美浜の計画的な海沿い住宅地。風が抜けて実用的、京葉線1本、埋立地感あり。",
+    "landmarks": "稲毛海浜公園、美浜区の街区、海沿いのスポーツ空間。道は広く、波乱少ない。",
+    "food": "飲食15件、居酒屋7件、カフェ3件。モールと駅前の日常飯、食べ歩き向きではない。",
+    "nightlife": "深夜営業4件、カラオケなし、クラブなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Плановый морской пригород Mihama, продуваемо и функционально. Одна Keiyo Line, намывной берег.",
+    "landmarks": "Inage Seaside Park, кварталы Mihama, прибрежные спорт-зоны. Широкие дороги, мало драмы.",
+    "food": "15 мест, 7 изакая, 3 кафе. Еда ТЦ и станции на каждый день, не гастро-охота.",
+    "nightlife": "4 поздних места, без караоке и клубов. Практически нет."
+  }
+}

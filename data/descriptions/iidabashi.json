@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Five-line central interchange, efficient and expensive. Kagurazaka charm, commuter crush.",
+    "landmarks": "Kagurazaka slopes, Tokyo Daijingu, Sotobori moat, Canal Cafe. Culture packed tight.",
+    "food": "632 restaurants, 250 izakayas, 31 bars. Excellent range, but office crowds set the rhythm.",
+    "nightlife": "182 late spots, almost no clubs. Bars and izakaya, polished but crowded."
+  },
+  "ja": {
+    "atmosphere": "5路線の都心結節点。効率的で高い。神楽坂の色気と通勤混雑が同居。",
+    "landmarks": "神楽坂の坂、東京大神宮、外濠、Canal Cafe。文化密度が高い。",
+    "food": "飲食632件、居酒屋250件、バー31件。選択肢は圧倒的、リズムは会社員中心。",
+    "nightlife": "深夜営業182件、クラブほぼなし。バーと居酒屋、上品だが混む。"
+  },
+  "ru": {
+    "atmosphere": "Пять линий в центре, эффективно и дорого. Шарм Kagurazaka плюс давка коммьютеров.",
+    "landmarks": "Склоны Kagurazaka, Tokyo Daijingu, ров Sotobori, Canal Cafe. Культура плотно упакована.",
+    "food": "632 места, 250 изакая, 31 бар. Диапазон отличный, но ритм задают офисные толпы.",
+    "nightlife": "182 поздних места, клубов почти нет. Бары и изакая, гладко, но людно."
+  }
+}

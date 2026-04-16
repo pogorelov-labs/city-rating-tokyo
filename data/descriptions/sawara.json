@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Little-Edo canal town, pretty and very far. Cheap rent, early nights, soft-ground risk.",
+    "landmarks": "Ono River old townscape, Ino Tadataka residence, Katori Shrine trips. Slow tourism.",
+    "food": "18 listed spots plus old merchant-town eateries. Soba, eel, cafes missed by data.",
+    "nightlife": "4 late spots, one bar, no karaoke. Minimal after tourists leave."
+  },
+  "ja": {
+    "atmosphere": "小江戸の水郷町。きれいだが都心は遠い。家賃安め、夜早い、軟弱地盤注意。",
+    "landmarks": "小野川の町並み、伊能忠敬旧宅、香取神宮方面。ゆっくり観光の街。",
+    "food": "飲食18件、古い商家系の食事処あり。蕎麦、鰻、カフェはデータ外も多そう。",
+    "nightlife": "深夜4件、バー1件、カラオケなし。観光客が帰ると最小限。"
+  },
+  "ru": {
+    "atmosphere": "Канальный Little Edo, красиво и очень далеко. Аренда низкая, ночи ранние, мягкий грунт.",
+    "landmarks": "Старые улицы у Ono River, дом Ино Тадатаки, поездки к Katori Shrine. Медленный туризм.",
+    "food": "18 мест плюс старые купеческие едальни. Соба, унаги, кафе данные ловят не полностью.",
+    "nightlife": "4 поздних места, один бар, без караоке. После туристов почти ноль."
+  }
+}

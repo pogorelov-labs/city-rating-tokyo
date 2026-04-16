@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo backstreet calm, students and older apartments. Close to center, quieter than it should be.",
+    "landmarks": "Hakusan Shrine, Toyo University, Koishikawa greenery nearby. Hills make short walks sweaty.",
+    "food": "46 restaurants, 12 izakayas. Student lunches, soba, small cafes; decent, not destination food.",
+    "nightlife": "7 late spots, 5 hostels. Quiet drinks, no karaoke, no club scene."
+  },
+  "ja": {
+    "atmosphere": "文京の裏通り感、学生と古めの住宅。都心近いのに妙に静か。",
+    "landmarks": "白山神社、東洋大学、小石川方面の緑。坂が多く、短距離でも汗をかく。",
+    "food": "飲食46軒、居酒屋12軒。学生ランチ、蕎麦、小さなカフェ。悪くないが目的地ではない。",
+    "nightlife": "深夜7軒、ホステル5軒。静かな飲み、カラオケなし、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Тихие задние улицы Бункё, студенты и старые дома. Близко к центру, тише чем ожидаешь.",
+    "landmarks": "Святилище Hakusan, Toyo University, зелень Коисикавы рядом. Холмы быстро утомляют.",
+    "food": "46 ресторанов, 12 изакая. Студенческие обеды, соба, маленькие кафе; нормально, не пункт назначения.",
+    "nightlife": "7 поздних мест, 5 хостелов. Тихие бары, караоке нет, клубной сцены нет."
+  }
+}

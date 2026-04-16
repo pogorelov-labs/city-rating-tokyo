@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keikyu Yokohama edge, cheap and lived-in. Far from center, but not dead.",
+    "landmarks": "Sugita shopping streets, Isogo slopes, bayside Yokohama within reach.",
+    "food": "63 restaurants, 26 izakayas, 4 bars. Local meals, late drinks, no destination dining.",
+    "nightlife": "28 late spots, 1 karaoke. Neighborhood drinking, early last energy."
+  },
+  "ja": {
+    "atmosphere": "京急沿いの横浜外縁、安くて生活感濃い。中心は遠いが死んでない。",
+    "landmarks": "杉田商店街、磯子の坂、湾岸横浜が近い。観光地ではなく暮らす街。",
+    "food": "飲食63軒、居酒屋26軒、バー4軒。地元飯と遅い酒、目的地グルメではない。",
+    "nightlife": "深夜28軒、カラオケ1軒。近所飲み中心、熱量は早めに切れる。"
+  },
+  "ru": {
+    "atmosphere": "Край Йокогамы на Keikyu, недорого и обжито. До центра далеко, но район не спит.",
+    "landmarks": "Торговые улицы Сугиты, склоны Исого, йокогамская бухта в досягаемости.",
+    "food": "63 ресторана, 26 изакая, 4 бара. Местная еда и поздние стаканы, не гастро-точка.",
+    "nightlife": "28 поздних мест, 1 караоке. Соседская выпивка, энергия гаснет рано."
+  }
+}

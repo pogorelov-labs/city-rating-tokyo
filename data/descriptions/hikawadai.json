@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima residential pocket with two metro lines. Calm, practical, not much glamour.",
+    "landmarks": "Shakujii River walks, Johoku Chuo Park nearby, small local shopping streets.",
+    "food": "7 restaurants, 3 izakayas; supermarket-home dinner territory, not a dining zone.",
+    "nightlife": "3 late spots, no karaoke. Minimal after 9pm."
+  },
+  "ja": {
+    "atmosphere": "地下鉄2路線の練馬住宅地。静かで実用的、華やかさは少ない。",
+    "landmarks": "石神井川沿いの散歩道、城北中央公園、小さな地元商店街。",
+    "food": "飲食7軒、居酒屋3軒。スーパーで買って家で食べる街、外食地帯ではない。",
+    "nightlife": "深夜営業3軒、カラオケなし。21時以降はかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман Нэримы с двумя линиями метро. Спокойно, практично, без глянца.",
+    "landmarks": "Прогулки вдоль Сякузии, рядом Johoku Chuo Park, мелкие торговые улицы.",
+    "food": "7 ресторанов, 3 изакая. Скорее ужин из супермаркета дома, не район для еды.",
+    "nightlife": "3 поздних места, караоке нет. После 21:00 почти тишина."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nagareyama suburb on the Tobu line, green and cheap. Commute is long, pace is slow.",
+    "landmarks": "Residential lanes toward Otakanomori, pocket parks, tree belts. Mostly family infrastructure.",
+    "food": "9 restaurants, 5 izakayas, no cafes listed. Convenience meals over destination dining.",
+    "nightlife": "4 late spots, no karaoke, no clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "東武線の流山住宅地。緑が濃く安い、通勤は長く、街の速度は遅い。",
+    "landmarks": "おおたかの森方面の住宅路地、小公園、緑地帯。家族向けインフラ中心。",
+    "food": "飲食9件、居酒屋5件、カフェ登録なし。目的地飯より日常の簡便飯。",
+    "nightlife": "深夜営業4件、カラオケなし、クラブなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Nagareyama на Tobu, зелено и дешево. Коммьют долгий, темп медленный.",
+    "landmarks": "Жилые улицы к Otakanomori, малые парки, зеленые полосы. В основном семейная база.",
+    "food": "9 мест, 5 изакая, кафе не найдено. Еда для быта, не для поездки специально.",
+    "nightlife": "4 поздних места, без караоке и клубов. Практически нет."
+  }
+}

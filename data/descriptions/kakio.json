@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Growing Odawara line suburb, 30k riders, 45 min to Shinjuku. Family zone with food + parks. Quiet strip, not touristy.",
+    "landmarks": "15 parks (1.2M sqm). Elevation 35m. Medical hub (8 pharmacies, 11 clinics). Moderate seismic risk.",
+    "food": "13 listings, 21, 3 izakaya, 3 cafes. Solid casual dining.",
+    "nightlife": "3 midnight spots. After-work bars, no scene."
+  },
+  "ja": {
+    "atmosphere": "小田原線の成長中郊外。3万人超。新宿45分。ファミリー向け。",
+    "landmarks": "15公園、125万sqm。標高35m。医療充実（薬8軒、診療11軒）。",
+    "food": "13件、21件、居酒屋3軒。カジュアルで充実。",
+    "nightlife": "夜間営業3軒。仕事帰りの寄り道レベル。"
+  },
+  "ru": {
+    "atmosphere": "Растущий пригород на линии Одавара. 30 тыс пассажиров, 45 мин до Синдзюку. Семейный район.",
+    "landmarks": "15 парков, 1.2 млн кв.м. Высота 35м. Медицинский хаб (8 аптек, 11 клиник).",
+    "food": "13 мест, 21 на карте, 3 изакая, 3 кафе. Хорошая повседневная еда.",
+    "nightlife": "3 поздних места. Перекус после работы, сцены нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Marunouchi-Line Nakano edge, dense and convenient. Pricey, safe, no nonsense.",
+    "landmarks": "Aoki shopping street, Nabeya-Yokocho, quick hop to Nakano and Shinjuku.",
+    "food": "184 restaurants, 75 izakayas, 10 bars. Everyday Tokyo food with good depth.",
+    "nightlife": "80 late spots, no karaoke or clubs. Drinking streets, not dance floors."
+  },
+  "ja": {
+    "atmosphere": "丸ノ内線の中野端、密で便利。高め、安全、無駄なし。",
+    "landmarks": "青梅街道沿い、鍋屋横丁、中野と新宿へすぐ。生活の濃い場所。",
+    "food": "飲食184件、居酒屋75件、バー10件。日常飯の層が厚い。",
+    "nightlife": "深夜80件、カラオケもクラブもなし。飲み屋はある、踊る街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Край Накано на Marunouchi Line, плотно и удобно. Дорого, безопасно, без лишней романтики.",
+    "landmarks": "Aoki shopping street, Nabeya-Yokocho, быстрый рывок к Nakano и Shinjuku.",
+    "food": "184 ресторана, 75 изакай, 10 баров. Повседневная токийская еда с хорошей глубиной.",
+    "nightlife": "80 поздних мест, без караоке и клубов. Улицы для питья, не танцполы."
+  }
+}

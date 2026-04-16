@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Low river-edge Tokyo, quiet and cheap-ish. Flood and soft-ground risk is the catch.",
+    "landmarks": "Arakawa banks dominate; Horikiri iris-garden orbit nearby, station itself barebones.",
+    "food": "Old-school local eateries and ten izakayas. Useful, not a destination.",
+    "nightlife": "Minimal late food, no karaoke or clubs. River gets quieter."
+  },
+  "ja": {
+    "atmosphere": "川沿い低地の東京、静かでやや安い。洪水と軟弱地盤が落とし穴。",
+    "landmarks": "荒川の土手が主役。堀切菖蒲園方面は近いが、駅自体は簡素。",
+    "food": "昔ながらの地元食堂と居酒屋10軒。便利だが目的地ではない。",
+    "nightlife": "遅い食事は最小限、カラオケとクラブなし。川沿いはさらに静か。"
+  },
+  "ru": {
+    "atmosphere": "Низкий токийский край у реки, тихо и сравнительно дешево. Риск паводка и мягкого грунта.",
+    "landmarks": "Доминируют берега Arakawa; Horikiri iris garden рядом по району, сама станция простая.",
+    "food": "Старые местные едальни и десять изакай. Удобно, но не destination.",
+    "nightlife": "Поздней еды минимум, без караоке и клубов. У реки еще тише."
+  }
+}

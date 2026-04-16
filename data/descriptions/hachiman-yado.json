@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sleep suburb 60km from Tokyo. Quiet residential enclave, rush-hour crush, ghost town by evening.",
+    "landmarks": "Uchibo Line local stop. Ichihara industrial hinterland. No attractions.",
+    "food": "Basic local food scene, 23 listings spots, mostly chain standbys. Forgettable but serviceable.",
+    "nightlife": "9 midnight bars, 1 karaoke. Salary-drain destination, drinks wrap early."
+  },
+  "ja": {
+    "atmosphere": "東京から60km離れた睡眠区。昼は会社員で混雑、夜は静寂。",
+    "landmarks": "内房線のローカル駅。市原市の外れ。名所なし。",
+    "food": "地元の食堂23軒、チェーン主流。つまみ食い程度。",
+    "nightlife": "夜間営業9軒、カラオケ1軒。早仕舞い傾向。"
+  },
+  "ru": {
+    "atmosphere": "Спальный пригород, 60 км от Токио. Тихие жилые улицы, утром давка, вечером пусто.",
+    "landmarks": "Локальная станция Ути́бо. Окраина Ичихары. Достопримечательности отсутствуют.",
+    "food": "Базовая локальная еда — 23 места, в основном сетевые. Скромно, но рабочее.",
+    "nightlife": "9 поздних баров, 1 караоке. Конец смены к 22:00."
+  }
+}

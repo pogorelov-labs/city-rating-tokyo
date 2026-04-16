@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama suburb, expanding new area. Green, spacious, car-dependent.",
+    "landmarks": "Residential parks, local shopping. Suburban calm, zero landmarks.",
+    "food": "6 venues + 14 spots. Scattered, no standout clusters.",
+    "nightlife": "Minimal. One late-night spot, then done."
+  },
+  "ja": {
+    "atmosphere": "横浜郊外、新興地区。緑多い、広々。",
+    "landmarks": "住宅地の公園。郊外の落ち着き。",
+    "food": "飲食6軒、14件。散在。",
+    "nightlife": "ほぼなし。夜遅い店1軒。"
+  },
+  "ru": {
+    "atmosphere": "Иокогамский пригород, растущий район. Зелень, просторно, нужна машина.",
+    "landmarks": "Парки, торговый центр. Пригородная тишь.",
+    "food": "6 мест + 14. Разреженно.",
+    "nightlife": "Почти нет. Один поздний бар."
+  }
+}

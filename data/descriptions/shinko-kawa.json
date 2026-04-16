@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Tobu Nikko outpost. Barely 1,200 daily riders. Rural Saitama. 3 pedestrian streets for local vibe. Green space (390k sqm park).",
+    "landmarks": "Tobu Nikko Line, small-town character. Minimalist station, fields beyond.",
+    "food": "Sparse — data limited. Couple of spots. No food culture.",
+    "nightlife": "None. 24:00 last train doesn't mean nightlife."
+  },
+  "ja": {
+    "atmosphere": "東武日光線の辺境駅。乗客わずか1200人/日。埼玉田舎。歩行者街路3本で地域の和。緑地39万平米。",
+    "landmarks": "東武日光線。小さな駅舎。向こうは畑。",
+    "food": "乏しい。数軒。食の文化なし。",
+    "nightlife": "皆無。23:57最終便も夜遊び意味なし。"
+  },
+  "ru": {
+    "atmosphere": "Захолустная станция Tobu Nikko. 1200 пассажиров день. Сельская Сайтама. 3 пешеходные улицы для уюта. Парк (390k кв.м).",
+    "landmarks": "Однопутная Tobu Nikko. Маленькая станция, дальше поля.",
+    "food": "Редко — данные неполные. Пара мест. Нет кухни.",
+    "nightlife": "Нет. Последний поезд в 23:57 не спасает."
+  }
+}

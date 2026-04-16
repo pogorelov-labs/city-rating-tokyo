@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student-town Nerima, cheap energy and tiny venues. Messier than the rent map suggests.",
+    "landmarks": "University blocks, music-school streets, Ekoda market lanes. Ikebukuro within easy reach.",
+    "food": "92 restaurants, 33 izakayas, 10 bars. Student meals, curry, ramen, scrappy good value.",
+    "nightlife": "39 late spots, karaoke and one tiny club. Local, young, unpolished."
+  },
+  "ja": {
+    "atmosphere": "学生街の練馬、安い熱と小箱の街。家賃表より少し雑で面白い。",
+    "landmarks": "大学の周辺、音大っぽい通り、江古田市場の路地。池袋も近い。",
+    "food": "飲食92軒、居酒屋33軒、バー10軒。学生飯、カレー、ラーメン、雑だが安旨。",
+    "nightlife": "深夜営業39軒、カラオケと小さなクラブ1軒。地元で若く、磨かれていない。"
+  },
+  "ru": {
+    "atmosphere": "Студенческая Nerima, дешёвая энергия и малые площадки. Грязнее, чем карта аренды намекает.",
+    "landmarks": "Университетские кварталы, музыкальные улицы, рыночные переулки Ekoda. Ikebukuro близко.",
+    "food": "92 ресторана, 33 изакая, 10 баров. Студенческая еда, карри, рамен, грубо и выгодно.",
+    "nightlife": "39 поздних мест, караоке и один крошечный клуб. Локально, молодо, без лоска."
+  }
+}

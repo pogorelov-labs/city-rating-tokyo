@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku-adjacent but backstage, not neon. Office towers, theatres, steep rent.",
+    "landmarks": "Tokyo Opera City, New National Theatre, Shinjuku one stop away. Urban but controlled.",
+    "food": "129 restaurants, 38 izakayas; theatre dinners, office lunches, plenty of quick ramen.",
+    "nightlife": "38 late spots, no clubs or karaoke. Drinks exist, nightlife stays tidy."
+  },
+  "ja": {
+    "atmosphere": "新宿の隣だがネオンではなく舞台裏。オフィス塔、劇場、家賃は重い。",
+    "landmarks": "東京オペラシティ、新国立劇場、新宿まで一駅。都会的だが整いすぎ。",
+    "food": "飲食129軒、居酒屋38軒。観劇前後の飯、オフィス昼食、早いラーメン多数。",
+    "nightlife": "深夜営業38軒、クラブもカラオケもなし。飲めるが夜遊びは上品止まり。"
+  },
+  "ru": {
+    "atmosphere": "Рядом с Синдзюку, но это закулисье, не неон. Офисы, театры, тяжёлая аренда.",
+    "landmarks": "Tokyo Opera City, New National Theatre, Синдзюку в одной остановке. Город, но под контролем.",
+    "food": "129 ресторанов, 38 изакая. Ужины при театрах, офисные обеды, много быстрого рамена.",
+    "nightlife": "38 поздних мест, без клубов и караоке. Выпить можно, но ночь аккуратная."
+  }
+}

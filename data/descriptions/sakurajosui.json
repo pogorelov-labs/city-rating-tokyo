@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio residential calm, high ground and good daily services. Comfortable, but culturally sleepy.",
+    "landmarks": "Tamagawa Josui name, school streets, quiet Setagaya blocks. Green pockets over big sights.",
+    "food": "41 restaurants, 16 izakayas, 3 cafes. Solid local rotation, not a destination crawl.",
+    "nightlife": "22 late spots, no karaoke. Modest izakaya nights, early mood."
+  },
+  "ja": {
+    "atmosphere": "京王線沿いの住宅地、高台で生活機能は強い。快適だが文化的には眠い。",
+    "landmarks": "玉川上水の名、学校の多い通り、静かな世田谷の区画。大名所より緑の点在。",
+    "food": "飲食41軒、居酒屋16軒、カフェ3軒。地元ローテは堅い、目的地巡りではない。",
+    "nightlife": "深夜22軒、カラオケなし。控えめな居酒屋夜、早めの空気。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная жилая зона Keio, высокая земля и сильные сервисы. Комфортно, но культурно сонно.",
+    "landmarks": "Имя Tamagawa Josui, школьные улицы, тихие кварталы Сетагаи. Зеленые карманы вместо больших видов.",
+    "food": "41 ресторан, 16 изакая, 3 кафе. Надежная локальная ротация, не гастромаршрут.",
+    "nightlife": "22 поздних места, караоке нет. Скромные изакая-вечера, раннее настроение."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiyoda Line edge, family blocks and warehouses. Lowland, flood-prone, soft-ground risk.",
+    "landmarks": "Shobu-numa Park, Higashi-Ayase green belt, canal-side Adachi streets. Practical, not pretty.",
+    "food": "15 listed restaurants plus 28 local spots. Supermarkets and clinics do more work than cafes.",
+    "nightlife": "Three late spots, no bars or karaoke. Last train is early; evenings fade fast."
+  },
+  "ja": {
+    "atmosphere": "千代田線の端、家族住宅と倉庫の街。低地で浸水注意、地盤も柔らかい。",
+    "landmarks": "しょうぶ沼公園、東綾瀬の緑地、用水沿いの足立区道。実用的で、派手さなし。",
+    "food": "飲食15軒＋地元店28件。カフェよりスーパーとクリニックの存在感が強い。",
+    "nightlife": "深夜3軒、バーもカラオケもなし。終電早め、夜はすぐ静まる。"
+  },
+  "ru": {
+    "atmosphere": "Край линии Chiyoda: семейные кварталы и склады. Низина, риск подтопления и мягкий грунт.",
+    "landmarks": "Shobu-numa Park, зелёная полоса Higashi-Ayase, каналы Адачи. Практично, не красиво.",
+    "food": "15 ресторанов плюс 28 локальных точек. Супермаркеты и клиники важнее кафе.",
+    "nightlife": "Три поздних места, без баров и караоке. Последний поезд рано, вечер быстро тухнет."
+  }
+}

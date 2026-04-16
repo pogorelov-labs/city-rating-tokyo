@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Back door of Shinjuku/Yoyogi: tiny station, huge city around it. Great walking access, rent bites.",
+    "landmarks": "Yoyogi, Southern Terrace, Takashimaya, Meiji Shrine/Yoyogi Park edge. Concrete plus big green.",
+    "food": "709 restaurants, 329 izakayas, 38 bars. Choice overload; quality swings from chain to excellent.",
+    "nightlife": "279 midnight spots, but clubs thin. Shinjuku spillover, noisy after dark."
+  },
+  "ja": {
+    "atmosphere": "新宿・代々木の裏口。駅は小さい、周囲は巨大都市。徒歩アクセス抜群、家賃は刺さる。",
+    "landmarks": "代々木、サザンテラス、タカシマヤ、明治神宮・代々木公園の端。コンクリと大緑地。",
+    "food": "飲食709軒、居酒屋329軒、バー38軒。選択肢過多、チェーンから名店まで振れ幅大。",
+    "nightlife": "深夜営業279軒、でもクラブは薄い。新宿の余波、夜は騒がしい。"
+  },
+  "ru": {
+    "atmosphere": "Задняя дверь Синдзюку/Ёёги: станция крошечная, город вокруг огромный. Пешком удобно, аренда кусается.",
+    "landmarks": "Ёёги, Southern Terrace, Takashimaya, край Meiji Shrine/Yoyogi Park. Бетон плюс большая зелень.",
+    "food": "709 ресторанов, 329 изакая, 38 баров. Перегруз выбором; качество от сетей до отлично.",
+    "nightlife": "279 ночных мест, но клубов мало. Перелив Синдзюку, шумно после темноты."
+  }
+}

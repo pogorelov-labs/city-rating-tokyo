@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain village terminus, 110 min ride, almost no nightlife. Escape from everything, pure nature isolation.",
+    "landmarks": "Alpine trails, forested hills (246m elevation), virtually empty. Authentic wilderness.",
+    "food": "Almost no restaurants (1 + 9 total). Bring groceries or cook yourself.",
+    "nightlife": "None. Last train 23:55. This is a hiking base, not a town."
+  },
+  "ja": {
+    "atmosphere": "山村終点、110分乗車、夜遊びほぼなし。すべてから逃げる、純粋な自然孤立。",
+    "landmarks": "アルペン・トレイル、森林の丘（246m標高）、ほぼ空。本物の野生。",
+    "food": "ほぼ食堂なし（1＋9合計）。食料品を持ってくるか自炊。",
+    "nightlife": "ゼロ。最終23:55。ハイキングベースであって町ではない。"
+  },
+  "ru": {
+    "atmosphere": "Горная деревушка-конечная, 110 минут езды, почти нет ночной жизни. Побег от всего, чистая природная изоляция.",
+    "landmarks": "Альпийские тропинки, лесистые холмы (246м высота), практически пусто. Подлинная дикая природа.",
+    "food": "Почти нет ресторанов (1 + 9 всего). Привезите продукты или готовьте сами.",
+    "nightlife": "Ничего. Последний поезд 23:55. Это база для походов, а не город."
+  }
+}

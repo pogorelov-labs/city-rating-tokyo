@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama green suburb, 28k riders. Aoba Ward calm, family-oriented.",
+    "landmarks": "Tsurumi River walks, local parks. No sight-seeing draw.",
+    "food": "10 listings, 30, mostly cafes. Minimal nightlife appeal. Convenience-focused.",
+    "nightlife": "1 midnight spot, 1 hostel. Dead after 9pm. Drive to Shibuya for scenes."
+  },
+  "ja": {
+    "atmosphere": "横浜の緑郊外、毎日28000人。青葉区の静けさ。ファミリー向け。",
+    "landmarks": "鶴見川沿い、地元公園。観光地価値なし。",
+    "food": "10軒、30軒。カフェが多い。夜向きではない。便利重視。",
+    "nightlife": "深夜営業1軒、ホステル1軒。夜9時で死ぬ。渋谷へ。"
+  },
+  "ru": {
+    "atmosphere": "Зелёный пригород Йокохамы, 28 тыс. пассажиров. Тишь Aoba Ward, ориентирован на семьи.",
+    "landmarks": "Прогулки по реке Цуруми, местные парки. Нет туристического притяжения.",
+    "food": "10 listings, 30, в основном кафе. Минимальное ночное очарование. Ориентирован на удобство.",
+    "nightlife": "1 полночное место, 1 хостел. Мертво после 21:00. Поезжай в Сибую за сценой."
+  }
+}

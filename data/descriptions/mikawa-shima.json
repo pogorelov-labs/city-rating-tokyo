@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Arakawa working neighborhood on the Joban Line. Korean groceries, old apartments, very lived-in.",
+    "landmarks": "Mikawashima Korean-town traces, Nippori direction nearby, Arakawa backstreets and small parks.",
+    "food": "158 restaurants, 58 izakayas. Korean grills, ramen, cheap set meals, better than it looks.",
+    "nightlife": "67 late spots, 1 karaoke. Local izakayas and hostel spillover, not a party zone."
+  },
+  "ja": {
+    "atmosphere": "常磐線沿いの荒川生活圏。韓国系食材店、古い集合住宅、生活感かなり濃い。",
+    "landmarks": "三河島のコリアンタウンの名残、日暮里方面、荒川の裏道と小公園。",
+    "food": "飲食158軒、居酒屋58軒。韓国焼肉、ラーメン、安定食、見た目より強い。",
+    "nightlife": "深夜67軒、カラオケ1軒。地元居酒屋とホステル客の余波、遊び場ではない。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая Arakawa на Joban Line. Корейские лавки, старые дома, очень жилой ритм.",
+    "landmarks": "Следы корейского квартала Mikawashima, направление Nippori, переулки Arakawa и малые парки.",
+    "food": "158 ресторанов, 58 изакая. Корейский гриль, рамэн, дешевые сеты, сильнее чем выглядит.",
+    "nightlife": "67 поздних мест, 1 караоке. Местные изакая и хостельный спилловер, не зона вечеринок."
+  }
+}

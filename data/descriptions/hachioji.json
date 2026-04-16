@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big western Tokyo hub, student grit and commuter sprawl. Cheap, useful, rough around the edges.",
+    "landmarks": "JR Hachioji core, Keio side nearby, buses toward Takao. Mountain gateway, not downtown chic.",
+    "food": "352 restaurants, 177 izakayas. Ramen, cheap chains, student drinking; plenty, uneven quality.",
+    "nightlife": "158 late spots, 3 clubs. Real late-night town, but can feel messy."
+  },
+  "ja": {
+    "atmosphere": "東京西端の大きな拠点。学生感と通勤圏の広がり。安く便利、少し荒い。",
+    "landmarks": "JR八王子中心、京王側も近い、高尾方面バス。山の入口で、都心の洒落ではない。",
+    "food": "飲食352軒、居酒屋177軒。ラーメン、安いチェーン、学生飲み。量は多いが質は揺れる。",
+    "nightlife": "深夜158軒、クラブ3軒。夜は本物に動くが、雑さも出る。"
+  },
+  "ru": {
+    "atmosphere": "Большой западный узел Токио, студенческая шероховатость и спальный размах. Дешево, удобно, грубовато.",
+    "landmarks": "Центр JR Hachioji, сторона Keio рядом, автобусы к Такао. Ворота к горам, не городской шик.",
+    "food": "352 ресторана, 177 изакая. Рамен, дешевые сети, студенческие выпивки; много, качество скачет.",
+    "nightlife": "158 поздних мест, 3 клуба. Настоящая ночная зона, но местами грязновато."
+  }
+}

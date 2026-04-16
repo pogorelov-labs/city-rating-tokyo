@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Budget northwest commuter node, busy transfer foot traffic, everyday shopping.",
+    "landmarks": "Akitsu-Shin-Akitsu transfer lane, small bars, Higashimurayama backstreets.",
+    "food": "32 restaurants, 17 izakayas; commuter snacks and cheap local counters.",
+    "nightlife": "14 late spots, 2 karaoke. Small transfer-town drinking."
+  },
+  "ja": {
+    "atmosphere": "北西側の安い通勤ノード、乗換客の足音と普段使いの買い物。",
+    "landmarks": "秋津と新秋津の乗換路地、小さな飲み屋、東村山の裏道。",
+    "food": "飲食32軒、居酒屋17軒。乗換ついでの軽食と安い地元カウンター。",
+    "nightlife": "深夜営業14軒、カラオケ2軒。小さな乗換町の飲み。"
+  },
+  "ru": {
+    "atmosphere": "Бюджетный северо-западный узел, поток пересадок, повседневные покупки.",
+    "landmarks": "Переход Akitsu-Shin-Akitsu, малые бары, закоулки Хигасимураямы.",
+    "food": "32 ресторана, 17 изакая. Перекусы на пересадке и дешёвые местные стойки.",
+    "nightlife": "14 поздних мест, 2 караоке. Маленькая выпивка пересадочного городка."
+  }
+}

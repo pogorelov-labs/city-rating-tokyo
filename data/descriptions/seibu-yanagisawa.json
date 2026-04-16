@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Nishi-Tokyo stop on Seibu Shinjuku. Safe, affordable, suburban to the bone.",
+    "landmarks": "Neighborhood shops, pocket parks, low residential streets. Bigger fun sits in Tanashi or Kichijoji.",
+    "food": "23 restaurants, 8 izakayas, one bar. Enough for locals, thin for variety.",
+    "nightlife": "12 late spots, no karaoke or clubs. Modest after-work drinks."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線の静かな西東京駅。安全、安め、骨まで郊外。",
+    "landmarks": "近所の商店、小公園、低層住宅街。遊びは田無か吉祥寺へ。",
+    "food": "飲食23件、居酒屋8件、バー1件。地元には足りるが選択肢は細い。",
+    "nightlife": "深夜12件、カラオケもクラブもなし。控えめな仕事帰り飲み。"
+  },
+  "ru": {
+    "atmosphere": "Тихая остановка Nishi-Tokyo на Seibu Shinjuku. Безопасно, доступнее, пригород до костей.",
+    "landmarks": "Соседские магазины, карманные парки, низкие жилые улицы. Веселье в Tanashi или Kichijoji.",
+    "food": "23 ресторана, 8 изакай, один бар. Местным хватает, разнообразие тонкое.",
+    "nightlife": "12 поздних мест, без караоке и клубов. Скромные напитки после работы."
+  }
+}

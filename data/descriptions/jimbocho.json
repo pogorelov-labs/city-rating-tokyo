@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Book-town density, students, publishers, curry queues. Brilliant but cramped and pricey.",
+    "landmarks": "Used-book streets, Jimbocho Theater, sports-shop blocks. Kanda brainy, not glossy.",
+    "food": "621 spots, 284 izakayas, curry everywhere. Great lunches, uneven late-night quality.",
+    "nightlife": "156 midnight spots. Izakaya and bars run late; clubs basically absent."
+  },
+  "ja": {
+    "atmosphere": "古書街の密度、学生、出版社、カレー行列。面白いが狭くて高い。",
+    "landmarks": "古書店街、神保町シアター、スポーツ用品街。知的な神田、派手さなし。",
+    "food": "飲食621軒、居酒屋284軒、カレーだらけ。昼は強い、深夜の質は波あり。",
+    "nightlife": "深夜営業156軒。居酒屋とバーは遅い、クラブ文化はほぼない。"
+  },
+  "ru": {
+    "atmosphere": "Книжная плотность, студенты, издатели, очереди за карри. Умно, тесно, дорого.",
+    "landmarks": "Улицы букинистов, Jimbocho Theater, кварталы спортмагазинов. Канда без глянца.",
+    "food": "621 место, 284 изакая, карри на каждом шагу. Обеды сильные, ночь неровная.",
+    "nightlife": "156 поздних точек. Изакая и бары тянут ночь; клубов почти нет."
+  }
+}

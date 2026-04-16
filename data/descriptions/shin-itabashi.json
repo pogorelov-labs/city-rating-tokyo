@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Itabashi triangle: Mita Line, JR nearby, daily-life density. Useful, plain, safe.",
+    "landmarks": "Itabashi Station walk, Nakasendo traces, local shotengai. Ikebukuro close by bike.",
+    "food": "90 restaurants, 36 izakayas. Practical dinners, not destination dining.",
+    "nightlife": "30 late-night spots, no karaoke. Low-key local drinking."
+  },
+  "ja": {
+    "atmosphere": "板橋の三角地帯。三田線、JR近め、生活密度高い。便利、地味、安全。",
+    "landmarks": "板橋駅へ徒歩、中山道の名残、地元商店街。池袋は自転車圏。",
+    "food": "飲食90軒、居酒屋36軒。実用的な夕食、目的地グルメではない。",
+    "nightlife": "深夜営業30軒、カラオケなし。控えめな地元飲み。"
+  },
+  "ru": {
+    "atmosphere": "Треугольник Итабаши: Mita Line, JR рядом, плотная бытовая жизнь. Удобно, просто, безопасно.",
+    "landmarks": "Пешком до Itabashi Station, следы Nakasendo, локальный shotengai. До Икэбукуро на велосипеде.",
+    "food": "90 ресторанов, 36 изакая. Практичные ужины, не гастро-направление.",
+    "nightlife": "30 поздних мест, караоке нет. Спокойная локальная выпивка."
+  }
+}

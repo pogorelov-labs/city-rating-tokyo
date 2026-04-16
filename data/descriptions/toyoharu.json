@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kasukabe Urban Park Line outpost, 61 min commute. Quiet, sparse amenities. Single-line dependency.",
+    "landmarks": "Small Tobu station. Parks nearby but underdeveloped. Shrines, no major landmarks.",
+    "food": "10 restaurants, 6 izakaya, 0 —limited diversity. Chains dominant.",
+    "nightlife": "5 midnight venues. Mostly izakaya, fades early. Seismic risk high (high tier)."
+  },
+  "ja": {
+    "atmosphere": "春日部市・豊春。東武アーバンパークライン。中心まで61分。静か。施設少。",
+    "landmarks": "小ぶりな東武駅。周辺に公園。社寺。大型施設なし。",
+    "food": "飲食店10軒、居酒屋6軒、0。多様性限定的。チェーン主体。",
+    "nightlife": "深夜営業5軒。居酒屋中心、早期終了。地震リスク高い。"
+  },
+  "ru": {
+    "atmosphere": "Станция Urban Park Line Kasukabe, 61 мин commute. Тихо, редкие удобства. Одна-линия зависимость.",
+    "landmarks": "Маленькая станция Tobu. Парки рядом, но неразвиты. Храмы, нет главных ориентиров.",
+    "food": "10 ресторанов, 6 изакая, 0 —ограниченное разнообразие. Чейны доминируют.",
+    "nightlife": "5 полуночных. Изакая-сосредоточены, ранний конец. Высокий сейсмориск."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo hillside, schools and quiet money. Clean, safe, expensive, more studious than fun.",
+    "landmarks": "Koishikawa Botanical Garden, Ochanomizu University, leafy temple slopes. Academic Tokyo, not neon.",
+    "food": "63 restaurants, 31 izakayas, 3 cafes. Solid weekday meals, little destination swagger.",
+    "nightlife": "16 late spots, no karaoke or clubs. Drinks are restrained and local."
+  },
+  "ja": {
+    "atmosphere": "文京の坂上、学校と静かな富裕感。清潔、安全、高め、遊びより勉強の街。",
+    "landmarks": "小石川植物園、お茶の水女子大、寺の多い緑の坂。ネオンではなく学術の東京。",
+    "food": "飲食63軒、居酒屋31軒、カフェ3軒。平日の食事は堅いが、目的地感は弱い。",
+    "nightlife": "深夜16軒、カラオケもクラブもなし。飲みは控えめで地元向き。"
+  },
+  "ru": {
+    "atmosphere": "Холмы Bunkyo, школы и тихие деньги. Чисто, безопасно, дорого, больше учёба, чем веселье.",
+    "landmarks": "Koishikawa Botanical Garden, Ochanomizu University, зелёные храмовые склоны. Академический Токио, не неон.",
+    "food": "63 ресторана, 31 изакая, 3 кафе. Будничная еда крепкая, destination-эффект слабый.",
+    "nightlife": "16 поздних мест, без караоке и клубов. Выпивка сдержанная и местная."
+  }
+}

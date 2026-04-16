@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odakyu Odawara corridor town, planned suburban feel. Parks and green, moderate crowds. Calm residential.",
+    "landmarks": "Parks cluster (14 count, 1.8M sqm). Suburban Odakyu aesthetic. Modest character, low tourism.",
+    "food": "Light (4 hp + 15 osm). One izakaya, one bar. pockets suggest local gathering spots.",
+    "nightlife": "Minimal. Two midnight spots. Neighborhood vibe, no clubs. 64 min commute, balance area."
+  },
+  "ja": {
+    "atmosphere": "小田急小田原線沿線、計画的な郊外。公園と緑。人通り適度。静か。",
+    "landmarks": "公園が集中（14個、180万sqm）。小田急郊外らしさ。個性は控えめ、観光客少ない。",
+    "food": "軽い（hp4+osm15）。居酒屋1軒、バー1軒。地元の集まりのポケット。",
+    "nightlife": "ほぼ皆無。夜間営業2軒。近所の文化。クラブなし。通勤64分。"
+  },
+  "ru": {
+    "atmosphere": "Коридор линии Одакю-Одавара, плановый пригородный вид. Парки и зелень, умеренно людно. Спокойный.",
+    "landmarks": "Парки сосредоточены (14 штук, 1.8M sqm). Пригородная эстетика Одакю. Скромный характер, туристов нет.",
+    "food": "Лёгкая (4 hp + 15 osm). Одна изакая, один бар. Локальные места разреженно.",
+    "nightlife": "Практически нет. Два ночных места. Соседский уровень, клубов нет. 64 мин до центра."
+  }
+}

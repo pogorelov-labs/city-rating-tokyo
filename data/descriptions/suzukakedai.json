@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Campus-edge Den-en-toshi suburb, quiet hills, cheap rent. 55 min to center.",
+    "landmarks": "Science Tokyo Suzukakedai campus, green slopes, Route 246. Academic, not lively.",
+    "food": "5 restaurants, 1 izakaya. Bring groceries or ride to Nagatsuta, Machida, Minami-Machida.",
+    "nightlife": "Minimal. One izakaya, no karaoke, no clubs."
+  },
+  "ja": {
+    "atmosphere": "田園都市線の大学端っこ住宅地。丘が静か、家賃は軽い。都心まで55分。",
+    "landmarks": "Science Tokyoすずかけ台キャンパス、緑の斜面、246号。学生感はあるが賑わいは薄い。",
+    "food": "飲食5軒、居酒屋1軒。自炊か、長津田・町田・南町田へ出る前提。",
+    "nightlife": "ほぼ皆無。居酒屋1軒、カラオケもクラブもなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Den-en-toshi у кампуса, тихие холмы, дешевая аренда. 55 минут до центра.",
+    "landmarks": "Кампус Science Tokyo Suzukakedai, зеленые склоны, Route 246. Академично, не шумно.",
+    "food": "5 ресторанов, 1 изакая. Готовь дома или едь в Нагатсуту, Матида, Minami-Machida.",
+    "nightlife": "Минимум. Одна изакая, без караоке и клубов."
+  }
+}

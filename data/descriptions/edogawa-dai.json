@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Leafy Nagareyama suburb, cheap and calm. One line, long haul to central Tokyo.",
+    "landmarks": "Tobu Urban Park Line, school-zone streets, many parks. Big sights are scarce.",
+    "food": "Local izakaya and everyday diners, not destination eating. Enough for weeknights.",
+    "nightlife": "A few late izakayas, no karaoke or clubs. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "流山の緑多い郊外。安くて静か、都心までは長い。",
+    "landmarks": "東武アーバンパークライン沿い、住宅街と公園が主役。派手な名所は少ない。",
+    "food": "地元食堂と居酒屋中心。遠征する味ではないが、平日は困らない。",
+    "nightlife": "深夜営業は少し、カラオケとクラブなし。夜は早い。"
+  },
+  "ru": {
+    "atmosphere": "Зеленый пригород Нагарэямы, дешево и спокойно. Одна линия, центр далеко.",
+    "landmarks": "Tobu Urban Park Line, школьные улицы, много парков. Больших приманок мало.",
+    "food": "Локальные изакаи и простые столовые. Не гастро-точка, но будни закрывает.",
+    "nightlife": "Пара поздних изакай, без караоке и клубов. После ужина тихо."
+  }
+}

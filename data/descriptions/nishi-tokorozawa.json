@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Low-rise Tokorozawa edge, cheaper and calmer than the city. Useful, not exciting.",
+    "landmarks": "Seibu Sayama Line spur toward the stadium; local shops around the transfer.",
+    "food": "21 listed spots, 5 izakayas, 3 cafes plus fillers. Dinner exists, not destination food.",
+    "nightlife": "4 late spots, 1 karaoke. Quiet after last trains."
+  },
+  "ja": {
+    "atmosphere": "所沢の低層住宅地。都心より安くて静か。便利だが刺激は少ない。",
+    "landmarks": "西武狭山線の分岐駅、球場方面への足。駅前は地元商店中心。",
+    "food": "掲載21軒、居酒屋5軒、カフェ3軒。外食はあるが目的地感は薄い。",
+    "nightlife": "深夜営業4軒、カラオケ1軒。終電後はかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Низкая окраина Токородзавы, дешевле и спокойнее центра. Практично, без искры.",
+    "landmarks": "Ветка Seibu Sayama к стадиону; у пересадки в основном местные лавки.",
+    "food": "21 место, 5 изакая, 3 кафе плюс -мелочь. Ужин есть, гастро-поездки нет.",
+    "nightlife": "4 поздних места, 1 караоке. После последних поездов тихо."
+  }
+}

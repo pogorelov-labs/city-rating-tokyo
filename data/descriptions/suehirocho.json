@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Akihabara's north edge, less cosplay, more parts shops and salaryman drinking. Dense, not soft.",
+    "landmarks": "Electric Town, Kanda Myojin, Ueno-Hirokoji within reach. Tiny station, huge orbit.",
+    "food": "1224 restaurants, 544 izakayas, 80 bars. Ramen, curry, beer, quick counter meals.",
+    "nightlife": "459 late spots, 11 karaoke, 38 clubs. Fun, cramped, not restful."
+  },
+  "ja": {
+    "atmosphere": "秋葉原の北端。コスプレより部品屋と会社員飲み。密度高く、柔らかさなし。",
+    "landmarks": "電気街、神田明神、上野広小路も圏内。小さな駅だが周辺の引力が大きい。",
+    "food": "飲食1224軒、居酒屋544軒、バー80軒。ラーメン、カレー、ビール、立ち食い系。",
+    "nightlife": "深夜459軒、カラオケ11、クラブ38。楽しいが狭い、休まらない。"
+  },
+  "ru": {
+    "atmosphere": "Северный край Акихабары: меньше косплея, больше радиодеталей и офисной выпивки. Плотно, жестко.",
+    "landmarks": "Electric Town, Kanda Myojin, Ueno-Hirokoji рядом. Станция крошечная, орбита огромная.",
+    "food": "1224 ресторана, 544 изакая, 80 баров. Рамен, карри, пиво, быстрые стойки.",
+    "nightlife": "459 поздних мест, 11 караоке, 38 клубов. Весело, тесно, не для отдыха."
+  }
+}

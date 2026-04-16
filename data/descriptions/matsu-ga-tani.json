@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tama monorail suburb, cheap and airy. Safe, quiet, but central Tokyo feels far.",
+    "landmarks": "Tama New Town edges, monorail viaducts, Hachioji hills. Open, planned, sleepy.",
+    "food": "52 restaurants, 33 izakayas, 1 cafe. Surprisingly drinkable, thin daytime cafe life.",
+    "nightlife": "22 late spots, no bars, karaoke or clubs. Izakaya only."
+  },
+  "ja": {
+    "atmosphere": "多摩モノレール沿いの郊外、安くて空が広い。安全で静か、都心は遠い。",
+    "landmarks": "多摩ニュータウンの端、モノレール高架、八王子の丘。開けて計画的で眠い。",
+    "food": "飲食52軒、居酒屋33軒、カフェ1軒。意外に飲めるが、昼のカフェ感は薄い。",
+    "nightlife": "深夜営業22軒、バーもカラオケもクラブもなし。居酒屋だけ。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Tama Monorail, дёшево и просторно. Безопасно, тихо, но центр далеко.",
+    "landmarks": "Края Tama New Town, эстакады монорельса, холмы Hachioji. Открыто, планово, сонно.",
+    "food": "52 ресторана, 33 изакая, 1 кафе. Неожиданно можно пить, дневных кафе мало.",
+    "nightlife": "22 поздних места, без баров, караоке и клубов. Только изакая."
+  }
+}

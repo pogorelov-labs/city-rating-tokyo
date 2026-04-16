@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Practical Itabashi stop near Takashimadaira. Mita Line useful, mood plain, parks help.",
+    "landmarks": "Arakawa-side greenery, Daiei Nishidai, housing blocks. Everyday Tokyo, no postcard.",
+    "food": "32 restaurants, 9 izakayas, 4 bars. Enough for locals, weak for food chasing.",
+    "nightlife": "10 late spots, no karaoke or clubs. Quiet neighborhood drinking."
+  },
+  "ja": {
+    "atmosphere": "高島平寄りの実用的な板橋駅。三田線は便利、雰囲気は地味、公園が救い。",
+    "landmarks": "荒川方面の緑、ダイエー西台、団地群。絵葉書ではない日常東京。",
+    "food": "飲食32件、居酒屋9件、バー4件。住むには足りる、食べ歩きは弱い。",
+    "nightlife": "深夜10件、カラオケもクラブもなし。静かな近所飲み。"
+  },
+  "ru": {
+    "atmosphere": "Практичная станция Итабаши у Такасимадайры. Mita Line удобна, настроение простое, парки спасают.",
+    "landmarks": "Зелень к Arakawa, Daiei Nishidai, жилые блоки. Повседневный Токио, не открытка.",
+    "food": "32 ресторана, 9 изакай, 4 бара. Местным хватит, гастро-охота слабая.",
+    "nightlife": "10 поздних мест, без караоке и клубов. Тихие соседские напитки."
+  }
+}

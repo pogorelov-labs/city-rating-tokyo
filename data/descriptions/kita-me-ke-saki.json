@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Inland Chigasaki, not the beach postcard. Cheap and calm, but 80 min to core Tokyo.",
+    "landmarks": "Low-rise streets, pocket parks, Sagami Line rails. Local life sits north of the surf image.",
+    "food": "62 restaurants, 23 izakayas, a few cafes. Solid neighborhood meals, not a destination crawl.",
+    "nightlife": "19 late-night spots, no karaoke or clubs. Izakaya-level only."
+  },
+  "ja": {
+    "atmosphere": "茅ヶ崎の内陸側、海の絵葉書感は薄い。安く静か、でも都心はかなり遠い。",
+    "landmarks": "低層住宅、ポケット公園、相模線の線路。サーフ感より生活感が強い。",
+    "food": "飲食62軒、居酒屋23軒、カフェ少し。近所飯は強いが、食べ歩き目的ではない。",
+    "nightlife": "深夜営業19軒、カラオケとクラブなし。居酒屋止まり。"
+  },
+  "ru": {
+    "atmosphere": "Внутренний Тигасаки, не пляжная открытка. Дёшево и спокойно, но до центра около 80 минут.",
+    "landmarks": "Малоэтажные улицы, маленькие парки, рельсы Sagami Line. Больше быт, чем сёрф-вайб.",
+    "food": "62 ресторана, 23 изакая, немного кафе. Нормальная соседская еда, не гастро-маршрут.",
+    "nightlife": "19 поздних мест, без караоке и клубов. Только уровень изакая."
+  }
+}

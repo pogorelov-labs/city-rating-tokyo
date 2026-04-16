@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kawasaki working-class zone on Nambu Line. 14k daily passengers, mixed residential-light industrial. Good transit access (40 min), but safety data is sparse.",
+    "landmarks": "Multi-family homes, local clinics and pharmacies (4 each). Pedestrian shopping street. Functional, not scenic.",
+    "food": "20 listings, 11 izakaya. Working-class izakaya belt, heavy izakaya culture. Decent if you like old-school cheap eats.",
+    "nightlife": "11 midnight spots, 2 hostels nearby. Quiet neighborhood bars, not clubby."
+  },
+  "ja": {
+    "atmosphere": "川崎の労働者街、南武線。1日1.4万人。混在地域。40分で中心。安全データ限定。",
+    "landmarks": "多世帯住宅、診療所×4、薬局×4。歩行者商店街。実用的。",
+    "food": "20軒、居酒屋11軒。昭和の労働者居酒屋文化。",
+    "nightlife": "深夜営業11軒、ホステル2軒。近所の飲み屋。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая окраина Кавасаки на Намбу-лайне. 14к пассажиров. Смешанная жилая-промышленная. 40 мин до центра, данные о безопасности скудные.",
+    "landmarks": "Многоэтажки, 4 клиники и аптеки. Пешеходная торговая улица. Функционально.",
+    "food": "20, 11 изакай. Рабочая культура, дешевые закуски.",
+    "nightlife": "11 ночных мест, 2 хостела. Соседские бары, не клубы."
+  }
+}

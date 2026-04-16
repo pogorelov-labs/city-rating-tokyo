@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Backside Ikebukuro access without Ikebukuro noise. Dense, residential, quietly useful.",
+    "landmarks": "Tobu Tojo Line, Itabashi Station nearby, old Nakasendo blocks. Small-street Tokyo.",
+    "food": "120 restaurants, 47 izakayas. Everyday food is strong; cafes and bars stay modest.",
+    "nightlife": "40 late-night spots, no karaoke. Local drinks, early fade."
+  },
+  "ja": {
+    "atmosphere": "池袋の裏口アクセス、池袋の騒音なし。密度高め、住宅地、静かに便利。",
+    "landmarks": "東武東上線、板橋駅近く、旧中山道の街区。小道の東京。",
+    "food": "飲食120軒、居酒屋47軒。普段飯は強いが、カフェとバーは控えめ。",
+    "nightlife": "深夜営業40軒、カラオケなし。地元飲み、早めに薄くなる。"
+  },
+  "ru": {
+    "atmosphere": "Задний доступ к Икэбукуро без шума Икэбукуро. Плотно, жилое, тихо удобно.",
+    "landmarks": "Tobu Tojo Line, рядом Itabashi Station, кварталы старого Nakasendo. Токио малых улиц.",
+    "food": "120 ресторанов, 47 изакая. Еда на каждый день сильная; кафе и бары скромные.",
+    "nightlife": "40 поздних мест, караоке нет. Локальные напитки, раннее затухание."
+  }
+}

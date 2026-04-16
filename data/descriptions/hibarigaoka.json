@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Northwest suburb with danchi memory, green buffers and Seibu commute. Affordable, ordinary, livable.",
+    "landmarks": "Station shopping streets, postwar housing blocks, neighborhood parks. No trophy sight, real daily Tokyo.",
+    "food": "52 restaurants, 25 izakayas. Family chains, ramen counters, local grills; enough, not exciting.",
+    "nightlife": "20 late spots, no karaoke or clubs. Drink near the station, then home."
+  },
+  "ja": {
+    "atmosphere": "団地の記憶が残る西北郊外。緑の余白と西武通勤。安く、普通で、住みやすい。",
+    "landmarks": "駅前商店街、戦後住宅地、近所の公園群。名所狙いではなく生活の東京。",
+    "food": "飲食52軒、居酒屋25軒。ファミレス、ラーメン、地元焼き物。足りるが派手ではない。",
+    "nightlife": "深夜営業20軒、カラオケもクラブもなし。駅前で飲んで帰る町。"
+  },
+  "ru": {
+    "atmosphere": "Северо-западный пригород с памятью данти, зелёными буферами и Seibu-коммьютом. Доступно, обычно, жилое.",
+    "landmarks": "Станционные торговые улицы, послевоенные жилые блоки, районные парки. Не трофей, а ежедневный Токио.",
+    "food": "52 ресторана, 25 изакая. Семейные сети, рамен-стойки, местный гриль; хватает, но не возбуждает.",
+    "nightlife": "20 поздних мест, без караоке и клубов. Выпил у станции и домой."
+  }
+}

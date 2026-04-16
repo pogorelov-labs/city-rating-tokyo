@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny coastal rail terminus, 220 daily riders, 2 hours from Tokyo. Ultra-remote, minimal infrastructure.",
+    "landmarks": "Fishing village setting. Ocean views if you leave the station. Dead quiet.",
+    "food": "Almost nothing. 1 entry listed, zero restaurants recorded.",
+    "nightlife": "Nonexistent. Close by 9pm."
+  },
+  "ja": {
+    "atmosphere": "房総半島の先端、ほぼ秘境。220人が毎日、東京から2時間。",
+    "landmarks": "漁村の雰囲気。駅から出れば海が見える。寂しい。",
+    "food": "ほぼなし。1件のみ。食堂なし。",
+    "nightlife": "皆無。夜は真っ暗。"
+  },
+  "ru": {
+    "atmosphere": "Рыбацкий посёлок на краю полуострова Босо. 2 часа от Токио, 220 пассажиров в день.",
+    "landmarks": "Морской пейзаж за пределами вокзала. Заброшенное ощущение.",
+    "food": "Практически нет. 1 запись, кафе не видно.",
+    "nightlife": "Абсолютно ничего. Закрывается в 21:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Waterfront office-residential strip. Clean, convenient, low-lying flood risk.",
+    "landmarks": "Shinagawa Seaside Forest, canals, offices, Aeon mall. Polished, corporate.",
+    "food": "52 restaurants, 27 izakayas, almost no bars. Lunch is easy; evenings thin out.",
+    "nightlife": "13 late spots, no karaoke. Office drinks, then shutters."
+  },
+  "ja": {
+    "atmosphere": "りんかい線の湾岸オフィス住宅帯。清潔で便利、標高3mで浸水リスクあり。",
+    "landmarks": "品川シーサイドフォレスト、運河、大型オフィス、イオン。整っているが企業色強め。",
+    "food": "飲食52軒、居酒屋27軒、バーほぼなし。昼は楽、夜は薄くなる。",
+    "nightlife": "深夜13軒、カラオケなし。会社帰りの一杯、その後は閉まる。"
+  },
+  "ru": {
+    "atmosphere": "Офисно-жилая полоса у воды на Rinkai Line. Чисто, удобно, но 3 метра высоты — риск подтопления.",
+    "landmarks": "Shinagawa Seaside Forest, каналы, крупные офисы, Aeon mall. Вылизано, корпоративно.",
+    "food": "52 ресторана, 27 изакая, баров почти нет. Обед легко, вечером район редеет.",
+    "nightlife": "13 поздних мест, караоке нет. Офисные напитки, потом ставни."
+  }
+}

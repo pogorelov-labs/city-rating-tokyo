@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi edge on the Toneri Liner. Cheap, green, low-key; soft-ground risk is real.",
+    "landmarks": "Toneri-side parks, warehouse roads, residential canals. Practical, not charming.",
+    "food": "16 restaurants, 8 izakayas, one bar. Basic local food, little cafe life.",
+    "nightlife": "7 late spots, no karaoke or clubs. Minimal, mostly neighborhood counters."
+  },
+  "ja": {
+    "atmosphere": "日暮里・舎人ライナーの足立端。安め、緑あり、地味。軟弱地盤リスクは意識。",
+    "landmarks": "舎人方面の公園、倉庫道、住宅地の水路。実用的で、愛嬌は少ない。",
+    "food": "飲食16件、居酒屋8件、バー1件。基本の地元飯、カフェ文化は薄い。",
+    "nightlife": "深夜7件、カラオケもクラブもなし。ほぼ近所のカウンター。"
+  },
+  "ru": {
+    "atmosphere": "Край Адачи на Toneri Liner. Дешевле, зелено, тихо; мягкий грунт реальный риск.",
+    "landmarks": "Парки к Toneri, складские дороги, жилые каналы. Практично, не обаятельно.",
+    "food": "16 ресторанов, 8 изакай, один бар. Базовая локальная еда, кафе-жизни мало.",
+    "nightlife": "7 поздних мест, без караоке и клубов. Минимально, соседские стойки."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Funabashi suburb on Shin-Keisei. Cheap, calm, but central Tokyo is a haul.",
+    "landmarks": "Local shopping strips, clinics, pocket parks. No headline sights, daily-life territory.",
+    "food": "56 restaurants, 18 izakayas, a few cafes. Good neighborhood spread, not a destination.",
+    "nightlife": "20 late spots, no karaoke or clubs. Drinks stay local, last train ends early."
+  },
+  "ja": {
+    "atmosphere": "新京成沿いの静かな船橋郊外。安く落ち着くが、都心通勤は長め。",
+    "landmarks": "近所の商店街、クリニック、小公園。名所より生活圏そのもの。",
+    "food": "飲食56件、居酒屋18件、カフェ少数。日常使いは十分、遠征先ではない。",
+    "nightlife": "深夜20件、カラオケもクラブもなし。地元飲み中心、終電も早い。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригород Фунабаси на Shin-Keisei. Дёшево и спокойно, но до центра долго.",
+    "landmarks": "Локальные торговые ряды, клиники, маленькие парки. Не достоприм, а зона быта.",
+    "food": "56 ресторанов, 18 изакая, пара кафе. Для района крепко, специально ехать не нужно.",
+    "nightlife": "20 поздних мест, без караоке и клубов. Пьют по-соседски, последний поезд рано."
+  }
+}

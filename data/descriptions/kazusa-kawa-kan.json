@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ultra-remote heritage railway, 42 daily riders, last train 7:46pm. Completely isolated village station.",
+    "landmarks": "Kominato Railway heritage line through forests. No urban features. Utter tranquility.",
+    "food": "1 restaurant. Bring supplies.",
+    "nightlife": "Dead. Line closes at dusk."
+  },
+  "ja": {
+    "atmosphere": "超遠い保存鉄道。1日42人。終電19時46分。完全な隔絶。",
+    "landmarks": "小湊鉄道ヘリテージ路線。森のみ。",
+    "food": "飲食店1軒、1軒。弁当必須。",
+    "nightlife": "皆無。日暮れで営業終了。"
+  },
+  "ru": {
+    "atmosphere": "Ультра-удалённая наследие-железная дорога, 42 пассажира в день, последний поезд 19:46. Полная изоляция.",
+    "landmarks": "Kominato Railway через лес. Ноль городских объектов. Абсолютная тишина.",
+    "food": "1 ресторан, 1. Берите припасы.",
+    "nightlife": "Мертво. Линия закрывается с закатом."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Togane Line remote station in Chiba countryside. Very high seismic risk (soft ground area). Last train 23:15—very early cutoff. 98 min commute to central Tokyo.",
+    "landmarks": "Rural Chiba setting. Minimal infrastructure beyond station. Countryside walking only.",
+    "food": "1 listings, 2 venues. Extremely limited. Depend on convenience stores.",
+    "nightlife": "Minimal. 1 midnight spot only."
+  },
+  "ja": {
+    "atmosphere": "東金線の辺地駅。地震リスク高い（軟弱地盤）。23時15分最終。98分通勤。",
+    "landmarks": "千葉の田舎。駅以外ほぼなし。",
+    "food": "1軒、2軒。極限定。",
+    "nightlife": "1軒のみ。"
+  },
+  "ru": {
+    "atmosphere": "Удаленная станция Тогане-лайна в Чиба. Очень высокий сейсмический риск (мягкий грунт). 23:15 последний поезд. 98 мин до центра.",
+    "landmarks": "Сельская Чиба. Минимум инфраструктуры.",
+    "food": "1, 2. Критически мало.",
+    "nightlife": "1 место только."
+  }
+}

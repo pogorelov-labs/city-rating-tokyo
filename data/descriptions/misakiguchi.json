@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Miura Peninsula terminus. Fishing village charm with 2.9M sqm of parkland. Windy coastal footpaths, quiet escapes.",
+    "landmarks": "Peninsula endpoint, marine reserve feel. Hiking access to coastal cliffs. Spa towns nearby.",
+    "food": "Seafood-forward (4 spots ). Single izakaya. Quality over quantity.",
+    "nightlife": "Sparse late-night options. Bars close early for fishermen's schedules."
+  },
+  "ja": {
+    "atmosphere": "三浦半島の終着駅。漁村の趣き、大規模緑地（293万平米）。風が強く散策向き。",
+    "landmarks": "半島の突端。海洋保護区感。崖の散歩道、ハイキング。温泉地が近い。",
+    "food": "海の幸中心（4軒）。居酒屋1軒。質で勝負。",
+    "nightlife": "深夜営業ほぼなし。漁師の生活リズム優先。"
+  },
+  "ru": {
+    "atmosphere": "Конечная станция полуострова Миура. Рыбацкая деревня, 2.9 млн кв.м зелени. Ветреные прибрежные тропы.",
+    "landmarks": "Край полуострова. Морской заповедник. Пешие маршруты вдоль скал, спа-町近い.",
+    "food": "Морепродукты (4 мест). 1 изакая. Качество выше количества.",
+    "nightlife": "Ночных мест почти нет. Ритм рыбаков."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Omiya-side local stop, cheap and low-pressure. Safety picture is fuzzier here.",
+    "landmarks": "Omiya Park nearby, Tobu Urban Park tracks, Hikawa Shrine side trips.",
+    "food": "88 restaurants, 42 izakayas, 5 cafes. Omiya spillover, casual local food.",
+    "nightlife": "38 late spots, no karaoke or clubs. Izakaya only, center is elsewhere."
+  },
+  "ja": {
+    "atmosphere": "大宮側の静かなローカル駅、安くて圧が低い。安全感はやや読みづらい。",
+    "landmarks": "近い大宮公園、東武アーバンパークライン、氷川神社方面。",
+    "food": "飲食88軒、居酒屋42軒、カフェ5軒。大宮のこぼれ、気軽な地元飯。",
+    "nightlife": "深夜営業38軒、カラオケもクラブもなし。居酒屋だけ、中心は別。"
+  },
+  "ru": {
+    "atmosphere": "Тихая локальная остановка у Omiya, дёшево и без давления. Safety картина мутнее.",
+    "landmarks": "Omiya Park рядом, пути Tobu Urban Park, вылазки к Hikawa Shrine.",
+    "food": "88 ресторанов, 42 изакая, 5 кафе. Перелив Omiya, простая локальная еда.",
+    "nightlife": "38 поздних мест, без караоке и клубов. Только изакая, центр в другом месте."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet seam between Sugamo and Itabashi. Clean commuter streets, old-Tokyo residue.",
+    "landmarks": "Taisho University, Koshinzuka tram stop, old Nakasendo traces. Useful, not flashy.",
+    "food": "81 restaurants, 36 izakayas, 6 bars. Everyday noodles and counters, few cafe hangouts.",
+    "nightlife": "28 late spots, no clubs. Izakaya spillover, then home."
+  },
+  "ja": {
+    "atmosphere": "巣鴨と板橋の間の静かな通勤地帯。清潔、地味、昔の東京が少し残る。",
+    "landmarks": "大正大学、庚申塚停留場、旧中山道の気配。便利だが派手さなし。",
+    "food": "飲食81軒、居酒屋36軒、バー6軒。日常の麺と定食、長居カフェは少ない。",
+    "nightlife": "深夜営業28軒、クラブなし。居酒屋で少し飲んで帰る街。"
+  },
+  "ru": {
+    "atmosphere": "Тихий стык Sugamo и Itabashi. Аккуратные улицы для комьютеров, остатки старого Токио.",
+    "landmarks": "Taisho University, трамвай Koshinzuka, следы старой Nakasendo. Практично, не ярко.",
+    "food": "81 ресторан, 36 изакая, 6 баров. Повседневная лапша и стойки, мало кафе для зависания.",
+    "nightlife": "28 поздних мест, клубов нет. Изакая-перелив, потом домой."
+  }
+}

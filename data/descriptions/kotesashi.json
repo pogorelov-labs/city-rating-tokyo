@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokorozawa suburb with terminus energy. Roomy, green, cheap-ish; Tokyo feels far.",
+    "landmarks": "Kotesashi rail yard, mall blocks, Sayama-side parks. Functional, not pretty.",
+    "food": "21 listed spots, 11 izakayas, many local eateries. Solid daily food, few cafes.",
+    "nightlife": "5 late spots, no bars counted. Minimal after the last commuter rush."
+  },
+  "ja": {
+    "atmosphere": "所沢の郊外、始発駅っぽい余裕。広め、緑多め、都心は遠い。",
+    "landmarks": "小手指車両基地、団地と商業施設、狭山方面の公園。実用寄り。",
+    "food": "飲食21件、居酒屋11件、地元食堂多め。日常飯は強い、カフェ少ない。",
+    "nightlife": "深夜5件、バー計上なし。終電前の通勤波が引くと静か。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Токородзавы с настроением конечной. Просторно, зелено, дешевле; Токио далеко.",
+    "landmarks": "Депо Kotesashi, моллы у домов, парки к Саяме. Практично, не красиво.",
+    "food": "21 место, 11 изакай, много локальных столовых. На каждый день хорошо, кафе мало.",
+    "nightlife": "5 поздних мест, баров не видно. После вечерней волны почти пусто."
+  }
+}

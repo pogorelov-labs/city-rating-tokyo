@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Seibu stop in Higashimurayama, calm and affordable. Green edges, slow commute.",
+    "landmarks": "Residential lanes, nearby parks, Kumegawa next door. Local errands over sightseeing.",
+    "food": "62 restaurants, 26 izakayas, 4 bars. Decent neighborhood spread, cafes sparse.",
+    "nightlife": "24 late spots, no karaoke or clubs. Local drinks, not a night-out station."
+  },
+  "ja": {
+    "atmosphere": "東村山の小さな西武駅。静かで手頃、緑も近いが通勤は遅め。",
+    "landmarks": "住宅路地、近隣公園、隣の久米川。観光より地元の用事。",
+    "food": "飲食62件、居酒屋26件、バー4件。近所使いは十分、カフェは少なめ。",
+    "nightlife": "深夜24件、カラオケもクラブもなし。地元飲み、夜遊び駅ではない。"
+  },
+  "ru": {
+    "atmosphere": "Малая станция Seibu в Хигасимураяме, спокойно и доступно. Зелёные края, медленная дорога.",
+    "landmarks": "Жилые переулки, парки рядом, Kumegawa по соседству. Бытовые дела, не туризм.",
+    "food": "62 ресторана, 26 изакая, 4 бара. Нормальный районный выбор, кафе мало.",
+    "nightlife": "24 поздних места, без караоке и клубов. Локальные напитки, не станция для вылазки."
+  }
+}

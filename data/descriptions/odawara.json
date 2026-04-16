@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Castle-town hub, half commuter base, half Hakone gateway. Cheap, Tokyo is far.",
+    "landmarks": "Odawara Castle, Hakone Tozan, old shopping streets. Sea air, tourist trickle.",
+    "food": "120 restaurants, 45 izakayas, seafood and station lunches. Solid, not flashy.",
+    "nightlife": "35 late spots, 3 karaoke. Local izakayas, early travelers."
+  },
+  "ja": {
+    "atmosphere": "城下町の交通ハブ、通勤拠点と箱根玄関口の半々。安いが都心は遠い。",
+    "landmarks": "小田原城、箱根登山への接続、古い商店街。海風と観光客が少し。",
+    "food": "飲食120軒、居酒屋45軒。海鮮と駅前ランチ。派手さより堅実。",
+    "nightlife": "深夜35軒、カラオケ3軒。地元居酒屋中心、旅行者は早めに消える。"
+  },
+  "ru": {
+    "atmosphere": "Замковый транспортный узел, наполовину база для коммьютеров, наполовину ворота в Hakone. Дёшево, но Токио далеко.",
+    "landmarks": "Odawara Castle, доступ к Hakone Tozan, старые торговые улицы. Морской воздух, немного туристов.",
+    "food": "120 ресторанов, 45 изакая, рыба и вокзальные обеды. Надёжнее, чем ярко.",
+    "nightlife": "35 поздних мест, 3 караоке. Локальные изакаи, путешественники исчезают рано."
+  }
+}

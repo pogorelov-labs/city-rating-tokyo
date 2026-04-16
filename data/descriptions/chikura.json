@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal Minami-Boso town, Uchibo Line. Sparse (no passenger count). Cheap (¥73k), 2 hours from center.",
+    "landmarks": "7 million sqm green space, ocean access. Rural, minimal development. Seismic high, elevation 25m.",
+    "food": "7 listings spots, 2 izakaya. Light coastal fare.",
+    "nightlife": "Minimal. Last train 21:51, few options."
+  },
+  "ja": {
+    "atmosphere": "南房総沿岸、内房線。疎（乗客数不明）。安い（73k）。センター2時間。",
+    "landmarks": "700万平米の緑、海アクセス。田舎、開発少ない。地震高、標高25m。",
+    "food": "ホットペッパー7店、居酒屋2軒。軽い海辺飯。",
+    "nightlife": "ほぼなし。終電21:51。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный город Минами-Босо, линия Учибо. Редко населённо (нет данных). Дёшево (73k йен), 2 часа из центра.",
+    "landmarks": "7 млн кв.м зелени, доступ к морю. Сельское, малоразвитое. Сейсморизк высокий, высота 25 м.",
+    "food": "7 мест listings, 2 изакаи. Лёгкая прибрежная еда.",
+    "nightlife": "Минимум. Последний поезд 21:51, опций мало."
+  }
+}

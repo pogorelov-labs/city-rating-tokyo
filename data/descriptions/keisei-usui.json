@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban commuter town, 14.6k daily riders, 69 min east. Sakura farming hinterland, safe but generic (estimate).",
+    "landmarks": "Keisei Main Line. 3 cultural venues (local museum, shrine). Park walks, minimal nightlife draw.",
+    "food": "14 listings, 7 izakaya, 1 cafe, 8. Family-dinner focus, nothing for solo nightlife.",
+    "nightlife": "5 midnight spots, 0 karaoke. Salary men with families flee by 21:00."
+  },
+  "ja": {
+    "atmosphere": "郊外通勤町、14600人/日。佐倉市、昭和の雰囲気（推定）。",
+    "landmarks": "京成本線。文化施設3。公園散歩。",
+    "food": "ホットペッパー14軒、居酒屋7軒。家族向け。",
+    "nightlife": "深夜5軒、カラオケなし。21時に消滅。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный коммьютер-город, 14.6k пассажиров/день, 69 мин на восток. Фермерские земли.",
+    "landmarks": "Keisеi главная линия. 3 культурных объекта (музей, храм). Парки.",
+    "food": "14 мест, 7 изакай, 1 кафе. Семейные ужины. Никакой ночной жизни.",
+    "nightlife": "5 мест, нет клубов. Офисники с семьями уходят к 21:00."
+  }
+}

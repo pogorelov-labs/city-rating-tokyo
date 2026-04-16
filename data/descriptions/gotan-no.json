@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Adachi lowland, modest shops and narrow streets. Cheap, grounded, but flood and soft-ground risk.",
+    "landmarks": "Tobu Skytree Line stop, small shotengai pockets, Arakawa lowland nearby. No trophy sights.",
+    "food": "39 restaurants, 14 izakayas. Local ramen, teishoku, cheap counters; cafes stay minor.",
+    "nightlife": "16 late spots. No karaoke, no clubs. Drinking is small and local."
+  },
+  "ja": {
+    "atmosphere": "足立の低地、商店と細道の生活圏。安くて地に足つくが、浸水と軟弱地盤は注意。",
+    "landmarks": "東武スカイツリーラインの一駅、小さな商店街、荒川低地が近い。名所感は薄い。",
+    "food": "飲食39軒、居酒屋14軒。地元ラーメン、定食、安いカウンター。カフェは少ない。",
+    "nightlife": "深夜16軒。カラオケなし、クラブなし。飲みは小さく近所向け。"
+  },
+  "ru": {
+    "atmosphere": "Старая низина Адачи, скромные лавки и узкие улицы. Дешево, бытово, но риск воды и мягкого грунта.",
+    "landmarks": "Остановка Tobu Skytree Line, карманы сётэнгай, низина Аракавы рядом. Больших видов нет.",
+    "food": "39 ресторанов, 14 изакая. Местный рамен, тэйсёку, дешевые стойки; кафе второстепенны.",
+    "nightlife": "16 поздних мест. Караоке нет, клубов нет. Выпивка маленькая, районная."
+  }
+}

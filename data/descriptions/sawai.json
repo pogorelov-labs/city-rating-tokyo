@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain town west of Tokyo (49M sqm forest), zero crime, elevation 224m. Ome Line terminus (23:52). Hikers only.",
+    "landmarks": "Ome Line scenic route. Forest access, hiking trails, outdoor rock climbing. Station is barely a shelter.",
+    "food": "1 restaurant + 4 spots. Zero izakayas. Expect ryokans or self-catering.",
+    "nightlife": "None. Last train 23:52, trains sparse. Close to Tokyo but feels remote."
+  },
+  "ja": {
+    "atmosphere": "奥多摩山頂（49M森林）。治安10点満点。23時52分で終電。ハイカーのみ。",
+    "landmarks": "青梅線景観。森、トレイル、クライミング。駅は風避けのみ。",
+    "food": "飲食1軒、4軒。旅館か自炊。",
+    "nightlife": "皆無。23時52分で終電。"
+  },
+  "ru": {
+    "atmosphere": "Горный город к западу от Токио (49M кв.м лес), преступность 0, высота 224м. Ome Line тупик (23:52).",
+    "landmarks": "Ome Line пейзажи, лес, тропы, скалолазание. Станция — просто беседка.",
+    "food": "1 ресторан, 4 места. Рёканы или самоприготовление.",
+    "nightlife": "Нет. Последний поезд 23:52. Редкие поезда."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shimokitazawa spillover without the crush. Low houses, live-house energy, Inokashira convenience.",
+    "landmarks": "Hanegi Park, Shimokita backstreets, tiny Inokashira platform. Setagaya residential edge.",
+    "food": "268 restaurants, 79 izakayas, 29 bars. Indie cafes and late bites, less polished than Shibuya.",
+    "nightlife": "129 late spots, 2 clubs. Bar-hopping nearby, but karaoke is basically absent."
+  },
+  "ja": {
+    "atmosphere": "下北沢の余波、でも混雑は薄め。低層住宅、ライブハウス気配、井の頭線の便利さ。",
+    "landmarks": "羽根木公園、下北の裏道、小さな井の頭線ホーム。世田谷住宅地の端。",
+    "food": "飲食268軒、居酒屋79軒、バー29軒。インディー系カフェと深夜飯、渋谷ほど整ってない。",
+    "nightlife": "深夜129軒、クラブ2軒。近場で飲み歩けるが、カラオケはほぼ不在。"
+  },
+  "ru": {
+    "atmosphere": "Отголосок Shimokitazawa без мясорубки. Низкие дома, лайв-хаусы, удобная Inokashira Line.",
+    "landmarks": "Hanegi Park, задние улицы Shimokita, крошечная платформа Inokashira. Жилой край Setagaya.",
+    "food": "268 ресторанов, 79 изакая, 29 баров. Инди-кафе и поздняя еда, грубее чем Shibuya.",
+    "nightlife": "129 поздних мест, 2 клуба. Бары рядом, но караоке почти нет."
+  }
+}

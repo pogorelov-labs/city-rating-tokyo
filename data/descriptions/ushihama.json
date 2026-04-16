@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Tokyo by Yokota, cheap and open. Commute is long, seismic risk low.",
+    "landmarks": "Yokota Air Base edge, Fussa streets, Tama River side trips. Suburban border mood.",
+    "food": "45 restaurants, 26 izakayas, 6 bars. More drinking than dining, American-base echo.",
+    "nightlife": "23 late spots, 2 karaoke rooms. Local bars, no clubs."
+  },
+  "ja": {
+    "atmosphere": "横田基地近くの東京西端、安くて空が広い。通勤は長い、地震リスクは低め。",
+    "landmarks": "横田基地の端、福生の通り、多摩川方面。郊外の境界感。",
+    "food": "飲食45軒、居酒屋26軒、バー6軒。食事より飲み寄り、基地の余韻あり。",
+    "nightlife": "深夜営業23軒、カラオケ2軒。地元バー、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Токио у Yokota, дёшево и просторно. Комьют долгий, seismic risk низкий.",
+    "landmarks": "Край Yokota Air Base, улицы Fussa, вылазки к Tama River. Пригородная граница.",
+    "food": "45 ресторанов, 26 изакая, 6 баров. Больше выпивки чем еды, эхо американской базы.",
+    "nightlife": "23 поздних места, 2 караоке. Локальные бары, клубов нет."
+  }
+}

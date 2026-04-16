@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Grandma Harajuku with Yamanote utility. Busy, old-school, greener than the joke suggests.",
+    "landmarks": "Jizo-dori, Togenuki Jizo Koganji, Rikugien within reach. Red underwear shops included.",
+    "food": "219 restaurants, 71 izakayas, 16 cafes. Sweets, noodles, old counters; not trendy.",
+    "nightlife": "80 late spots, 1 karaoke, no clubs. Drinks exist, party does not."
+  },
+  "ja": {
+    "atmosphere": "おばあちゃんの原宿、でも山手線の実用性あり。混む、古い、意外に緑もある。",
+    "landmarks": "地蔵通り、とげぬき地蔵高岩寺、近い六義園。赤パンツ店も込み。",
+    "food": "飲食219軒、居酒屋71軒、カフェ16軒。甘味、麺、古いカウンター。流行ではない。",
+    "nightlife": "深夜営業80軒、カラオケ1軒、クラブなし。飲めるが、遊ぶ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Бабушкин Harajuku с практичностью Yamanote. Людно, старомодно, зеленее шутки.",
+    "landmarks": "Jizo-dori, Togenuki Jizo Koganji, рядом Rikugien. Магазины красного белья прилагаются.",
+    "food": "219 ресторанов, 71 изакая, 16 кафе. Сладости, лапша, старые стойки; не модно.",
+    "nightlife": "80 поздних мест, 1 караоке, клубов нет. Выпить можно, тусовки нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "River-and-springwater suburb, family practical, not polished. Cheap, green, slightly far.",
+    "landmarks": "Ochiai River walks, Minamisawa springs, Fuji-view station deck on clear days.",
+    "food": "Izakaya-heavy station cluster, few cafes. Good for dinner, weak for lounging.",
+    "nightlife": "Some late izakayas and one karaoke. No club scene."
+  },
+  "ja": {
+    "atmosphere": "川と湧水の郊外、実用的な家族エリア。安くて緑多いが、少し遠い。",
+    "landmarks": "落合川の散歩道、南沢湧水、晴れた日の富士見テラス。",
+    "food": "駅前は居酒屋寄り、カフェは少ない。夕食は強い、長居は弱い。",
+    "nightlife": "遅い居酒屋が少し、カラオケ1軒。クラブ感はない。"
+  },
+  "ru": {
+    "atmosphere": "Пригород рек и родников, семейно и практично, не глянцево. Дешево, зелено, далековато.",
+    "landmarks": "Прогулки вдоль Ochiai River, родники Minamisawa, вид на Фудзи с террасы в ясный день.",
+    "food": "У станции много изакай, кафе мало. Для ужина хорошо, для зависания слабо.",
+    "nightlife": "Есть поздние изакаи и одно караоке. Клубной сцены нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Transit beast with old-Tokyo edges. Fabric shoppers, airport bags, Yanaka walkers collide.",
+    "landmarks": "Nippori Fabric Town, Yanaka Cemetery, Keisei Skyliner gate to Narita. Slopes everywhere.",
+    "food": "208 restaurants, 76 izakayas, lots of no-frills ramen and set meals. Practical, rarely polished.",
+    "nightlife": "74 late spots and hostels. Izakaya crawl, not clubbing; last trains keep it moving."
+  },
+  "ja": {
+    "atmosphere": "乗換の怪物、でも下町の端。布問屋客、空港客、谷中散歩組が混ざる。",
+    "landmarks": "日暮里繊維街、谷中霊園、成田へ向かうスカイライナー口。坂道多め。",
+    "food": "飲食208軒、居酒屋76軒。ラーメンと定食が強い。実用的、洒落感は控えめ。",
+    "nightlife": "深夜74軒、ホステル多め。居酒屋巡り向き、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Транспортный зверь с краями старого Токио. Ткани, чемоданы в Нариту, прогулки в Янака.",
+    "landmarks": "Nippori Fabric Town, кладбище Янака, Skyliner в Нариту. Много склонов.",
+    "food": "208 ресторанов, 76 изакая. Рамэн, тэйсёку, простые места. Практично, без глянца.",
+    "nightlife": "74 поздних места и хостелы. Изакая-маршрут, не клубная ночь."
+  }
+}

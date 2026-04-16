@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mall-and-park suburb on Den-en-toshi. Safe, roomy, family-coded, but far from the core.",
+    "landmarks": "Grandberry Park, Snoopy Museum, Tsuruma Park. Everything revolves around the outlet campus.",
+    "food": "17 restaurants, 5 izakayas, 2 cafes. Mall food dominates; side-street texture is thin.",
+    "nightlife": "Six late spots, no bars or karaoke. After the mall closes, it gets quiet."
+  },
+  "ja": {
+    "atmosphere": "田園都市線のモール公園郊外。安全、広め、家族向き。ただし都心は遠い。",
+    "landmarks": "グランベリーパーク、スヌーピーミュージアム、鶴間公園。街の重心はアウトレット側。",
+    "food": "飲食17軒、居酒屋5軒、カフェ2軒。モール飯中心、路地の厚みは薄い。",
+    "nightlife": "深夜6軒、バーもカラオケもなし。モールが閉まると一気に静か。"
+  },
+  "ru": {
+    "atmosphere": "Пригород торгового центра и парка на Den-en-toshi. Безопасно, просторно, семейно, но далеко.",
+    "landmarks": "Grandberry Park, Snoopy Museum, Tsuruma Park. Весь район крутится вокруг outlet-campus.",
+    "food": "17 ресторанов, 5 изакая, 2 кафе. Еда торгового центра доминирует, улицы тонкие.",
+    "nightlife": "Шесть поздних мест, без баров и караоке. После закрытия молла тихо."
+  }
+}

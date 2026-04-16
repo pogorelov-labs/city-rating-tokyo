@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy-office Roppongi without the messy station-front feel. Glossy, useful, painfully expensive.",
+    "landmarks": "Ark Hills, Izumi Garden, Suntory Hall, embassies and tower blocks.",
+    "food": "904 restaurants, 239 izakayas, 95 bars. Strong lunches, polished dinners, wallet damage.",
+    "nightlife": "367 late spots, 6 clubs. Real late-night scene, less cozy than loud."
+  },
+  "ja": {
+    "atmosphere": "六本木の大使館・オフィス側。駅前の雑さは薄い。上品で便利、家賃は痛い。",
+    "landmarks": "アークヒルズ、泉ガーデン、サントリーホール、大使館と高層ビル群。",
+    "food": "飲食904軒、居酒屋239軒、バー95軒。ランチ強い、夜は洒落るが財布に厳しい。",
+    "nightlife": "深夜367軒、クラブ6軒。夜遊びは本物、ただし親密より派手。"
+  },
+  "ru": {
+    "atmosphere": "Посольско-офисная сторона Роппонги, без грязной привокзальной каши. Глянец, польза, больная аренда.",
+    "landmarks": "Ark Hills, Izumi Garden, Suntory Hall, посольства и башни.",
+    "food": "904 ресторана, 239 изакая, 95 баров. Сильные ланчи, гладкие ужины, удар по кошельку.",
+    "nightlife": "367 поздних мест, 6 клубов. Настоящая ночь, скорее громко, чем уютно."
+  }
+}

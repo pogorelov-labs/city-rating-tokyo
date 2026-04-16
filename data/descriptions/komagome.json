@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Yamanote calm with garden-town bones. Convenient, green, pricey, not especially relaxed at night.",
+    "landmarks": "Rikugien, Kyu-Furukawa Gardens, Somei cherry history. Hills and quiet lanes hide behind the station.",
+    "food": "150 restaurants, 55 izakayas, 10 cafes. Strong local spread, less flashy than Ikebukuro.",
+    "nightlife": "58 late spots, 7 bars, 2 karaoke. Neighborhood drinking, not a party district."
+  },
+  "ja": {
+    "atmosphere": "山手線の古い落ち着き、庭園町の骨格。便利で緑多いが高く、夜は案外ざわつく。",
+    "landmarks": "六義園、旧古河庭園、染井吉野の歴史。駅裏に坂と静かな路地。",
+    "food": "飲食150軒、居酒屋55軒、カフェ10軒。地元の層は厚い、池袋ほど派手ではない。",
+    "nightlife": "深夜58軒、バー7軒、カラオケ2軒。近所飲みで、パーティー街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Старое спокойствие Yamanote, город садов. Удобно, зелено, дорого, ночью не так уж тихо.",
+    "landmarks": "Rikugien, Kyu-Furukawa Gardens, история сакуры Somei. За станцией холмы и тихие переулки.",
+    "food": "150 ресторанов, 55 изакая, 10 кафе. Хороший районный слой, без блеска Ikebukuro.",
+    "nightlife": "58 поздних мест, 7 баров, 2 караоке. Соседская выпивка, не party district."
+  }
+}

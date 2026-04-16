@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Odakyu stop between Shimokita and Yoyogi-Uehara. Quiet doorstep, loud neighbors.",
+    "landmarks": "Kitazawa backstreets, indie theaters nearby, Uehara cafes a short walk away.",
+    "food": "306 nearby restaurants, 99 izakayas, 25 bars; much is Shimokita spillover.",
+    "nightlife": "133 late spots, 2 clubs. You walk out for the noise."
+  },
+  "ja": {
+    "atmosphere": "下北沢と代々木上原の間の小さな小田急駅。玄関は静か、隣が騒がしい。",
+    "landmarks": "北沢の裏道、近隣の小劇場、上原カフェも徒歩圏。",
+    "food": "周辺に飲食306軒、居酒屋99軒、バー25軒。下北沢のにじみ出しが大きい。",
+    "nightlife": "深夜営業133軒、クラブ2軒。騒ぎたいなら少し歩く。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Odakyu-станция между Симокитой и Ёёги-Уэхарой. Дверь тихая, соседи шумные.",
+    "landmarks": "Закоулки Китадзавы, малые театры рядом, кафе Уэхары в короткой прогулке.",
+    "food": "306 мест рядом, 99 изакая, 25 баров; многое перетекает из Симокиты.",
+    "nightlife": "133 поздних места, 2 клуба. За шумом просто выходишь пешком."
+  }
+}

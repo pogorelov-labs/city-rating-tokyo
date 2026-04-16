@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Transit oddball between tram and Toneri Liner. Low-key Arakawa, useful but not central, soft ground.",
+    "landmarks": "Ogu Hachiman Shrine, Arakawa tram streets, Sumida and Arakawa river walks nearby.",
+    "food": "31 restaurants, 8 izakayas; tiny local set-meal scene. Cafes almost absent.",
+    "nightlife": "9 late spots, no bar strip or karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "都電と舎人ライナーの変わり種乗換。地味な荒川、便利だが中心ではない、地盤リスクあり。",
+    "landmarks": "尾久八幡神社、都電沿いの街並み、隅田川と荒川の散歩圏。",
+    "food": "飲食31軒、居酒屋8軒。小さな定食圏。カフェはほぼない。",
+    "nightlife": "深夜9軒、バー街もカラオケもなし。最小限。"
+  },
+  "ru": {
+    "atmosphere": "Странная пересадка между трамваем и Toneri Liner. Тихая Аракава, полезно, но не центр, мягкий грунт.",
+    "landmarks": "Ogu Hachiman Shrine, улицы вдоль трамвая, прогулки к Sumida и Arakawa рядом.",
+    "food": "31 ресторан, 8 изакая; крошечная сцена тэйсёку. Кафе почти нет.",
+    "nightlife": "9 поздних мест, без барной полосы и караоке. Минимум."
+  }
+}

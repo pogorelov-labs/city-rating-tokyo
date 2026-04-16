@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu Ikebukuro commuter town with hospitals, clinics, and space. Cheap, useful, not glamorous.",
+    "landmarks": "Medical campuses, small shopping streets, Musashino greenery. Ikebukuro is the anchor.",
+    "food": "35 listed spots plus many small eateries; izakayas modest, everyday food stronger.",
+    "nightlife": "14 late-night spots, 2 karaoke. Neighborhood drinks, not party fuel."
+  },
+  "ja": {
+    "atmosphere": "西武池袋線の通勤町。病院、クリニック、余白が多い。安く実用的、華は少ない。",
+    "landmarks": "医療系キャンパス、小さな商店街、武蔵野の緑。軸は池袋方面。",
+    "food": "掲載35軒に加えて小店多め。居酒屋は控えめ、普段飯の方が強い。",
+    "nightlife": "深夜営業14軒、カラオケ2軒。近所飲みで、遊び倒す街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Коммьютерский город на Seibu Ikebukuro: больницы, клиники, воздух. Дёшево, полезно, без глянца.",
+    "landmarks": "Медицинские кампусы, маленькие торговые улицы, зелень Мусасино. Главная ось — Икэбукуро.",
+    "food": "35 заведений плюс много мелкой еды. Изакаи скромные, повседневная кухня сильнее.",
+    "nightlife": "14 поздних мест, 2 караоке. Соседские напитки, не вечеринка."
+  }
+}

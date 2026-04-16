@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student district (Nihon University hub). Young crowd, university bars. Cheaper side of Tokyo. Safe, lively until midnight, quiet by 1am.",
+    "landmarks": "Fukutoshin Line. University campus nearby. Shopping streets.",
+    "food": "43 listings, 21 izakaya. Student-friendly, cheap.",
+    "nightlife": "22 late-night spots. Uni bars, karaoke. Packed 8-11pm, empty after."
+  },
+  "ja": {
+    "atmosphere": "学生街（日本大学中心）。若者向け、安い。安全、夜中まで賑やか。",
+    "landmarks": "副都心線。大学キャンパス。商店街。",
+    "food": "飲食店43軒、居酒屋21軒、41件。学生向け、安い。",
+    "nightlife": "深夜営業22軒。大学バー、カラオケ。20-23時賑やか。"
+  },
+  "ru": {
+    "atmosphere": "Студ.район (Nihon Univ hub). Молодёжь, дёшево. Безопасно, живо до полуночи.",
+    "landmarks": "Линия Fukutoshin. Кампус. Торговые улицы.",
+    "food": "43 listings, 21 изакая, 41. Студенч., дёшево.",
+    "nightlife": "22 ночных места. Ун-бары, караоке. 20-23ч живо."
+  }
+}

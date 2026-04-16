@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama Line stop in Kohoku-ku. Compact, workable residential area. 45-min commute to central Tokyo, affordable but distant.",
+    "landmarks": "Pedestrian strips (16 streets), small parks. Neighborhood-scale infrastructure. Yokohama outskirts charm.",
+    "food": "4 spots, 1 bar, 2 cafes. Small but diverse menu. Quality varies.",
+    "nightlife": "2 late-night spots. Neighborhood bars, not nightclubs. Low-key drinks."
+  },
+  "ja": {
+    "atmosphere": "横浜線、港北区。コンパクト、実用的。都心45分、手ごろだが遠い。",
+    "landmarks": "歩行者天国16本、小公園。近所スケール。横浜郊外の魅力。",
+    "food": "4件、バー1、カフェ2、14。小規模だが選択肢あり。質まちまち。",
+    "nightlife": "夜間営業2件。近所飲み屋。クラブなし。静か。"
+  },
+  "ru": {
+    "atmosphere": "Станция на линии Йокохама, район Кохоку. Компактно, удобно. 45 минут до центра, дешево, но далеко.",
+    "landmarks": "Пешеходные полосы (16 шт), небольшие парки. Соседский масштаб. Окраина Йокохамы.",
+    "food": "4 места, 1 бар, 2 кафе, 14. Выбор есть. Качество скачет.",
+    "nightlife": "2 позднобара. Соседский уровень. Спокойно пьют."
+  }
+}

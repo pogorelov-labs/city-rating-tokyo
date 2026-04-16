@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Nihonbashi in office clothes. Excellent food, high rent, calm after workers leave.",
+    "landmarks": "Suitengu, Amazake Yokocho, Meijiza, tiny Edo-era lanes. History without museum glass.",
+    "food": "681 restaurants, 257 izakayas, 34 bars. Ningyo-yaki sweets, sushi, serious lunches.",
+    "nightlife": "118 late spots, many izakayas, no clubs. Polished drinking, not dancing."
+  },
+  "ja": {
+    "atmosphere": "オフィス服を着た古い日本橋。食は強い、家賃高い、退勤後は落ち着く。",
+    "landmarks": "水天宮、甘酒横丁、明治座、江戸の細道。博物館っぽくない歴史。",
+    "food": "飲食681件、居酒屋257件、バー34件。人形焼、寿司、本気の昼飯。",
+    "nightlife": "深夜118件、居酒屋多め、クラブなし。踊らず、きれいに飲む街。"
+  },
+  "ru": {
+    "atmosphere": "Старый Нихомбаси в офисной одежде. Еда отличная, аренда высокая, после работы тише.",
+    "landmarks": "Suitengu, Amazake Yokocho, Meijiza, узкие эдо-переулки. История без музейного стекла.",
+    "food": "681 ресторан, 257 изакай, 34 бара. Нингё-яки, суши, серьёзные ланчи.",
+    "nightlife": "118 поздних мест, много изакай, клубов нет. Пьют аккуратно, не танцуют."
+  }
+}

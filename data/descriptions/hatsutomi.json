@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Kamagaya suburb on a small private line. Cheap, green, and very far from central Tokyo.",
+    "landmarks": "Shin-Keisei local stop, low houses, pocket parks. Everyday errands, not a weekend magnet.",
+    "food": "24 restaurants, 5 izakayas. Cafes and family spots scattered thinly; dinner choices run out.",
+    "nightlife": "8 late spots. No karaoke, no clubs. Minimal after 9pm."
+  },
+  "ja": {
+    "atmosphere": "鎌ケ谷の静かな郊外、小さな私鉄沿線。安く緑多め、都心からはかなり遠い。",
+    "landmarks": "新京成のローカル駅、低層住宅、小公園。生活用で、週末の目的地ではない。",
+    "food": "飲食24軒、居酒屋5軒。カフェとファミリー系が薄く散る。夕食の選択肢は早く尽きる。",
+    "nightlife": "深夜8軒。カラオケなし、クラブなし。21時以降はかなり薄い。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригород Камагайи на маленькой частной линии. Дешево, зелено, очень далеко от центра.",
+    "landmarks": "Локальная станция Shin-Keisei, низкие дома, маленькие парки. Быт, не точка выходного дня.",
+    "food": "24 ресторана, 5 изакая. Кафе и семейные места редкой сеткой; ужин быстро заканчивается.",
+    "nightlife": "8 поздних мест. Караоке нет, клубов нет. После 21:00 почти пусто."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big west-Tokyo civic hub, cheaper than central and very practical. Commute is the tax.",
+    "landmarks": "Okunitama Shrine, Keyaki Namiki, racecourse side trips. Old Musashi pride.",
+    "food": "154 restaurants, 71 izakayas, 14 cafes. Solid station food, local drinking, no hype.",
+    "nightlife": "40 late spots, no karaoke or clubs. Izakaya after work, then quiet."
+  },
+  "ja": {
+    "atmosphere": "西東京の大きな行政ハブ、都心より安く実用的。通勤時間が代金。",
+    "landmarks": "大國魂神社、けやき並木、競馬場方面。古い武蔵の誇り。",
+    "food": "飲食154軒、居酒屋71軒、カフェ14軒。駅前飯は堅い、地元飲み、派手さなし。",
+    "nightlife": "深夜営業40軒、カラオケもクラブもなし。仕事帰りの居酒屋、その後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Большой civic-хаб западного Токио, дешевле центра и очень практичен. Комьют - налог.",
+    "landmarks": "Okunitama Shrine, Keyaki Namiki, вылазки к ипподрому. Старая гордость Musashi.",
+    "food": "154 ресторана, 71 изакая, 14 кафе. Крепкая станционная еда, локальная выпивка, без хайпа.",
+    "nightlife": "40 поздних мест, без караоке и клубов. Изакая после работы, потом тихо."
+  }
+}

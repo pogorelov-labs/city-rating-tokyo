@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba border hub with real trains and cheaper rent. Useful, busy, not polished.",
+    "landmarks": "Edogawa river edge, Matsudo Shrine, station-front shopping streets. Tokyo starts to loosen.",
+    "food": "122 restaurants, 48 izakayas, 9 cafes. Practical hub food, ramen and chain comfort.",
+    "nightlife": "59 late spots, 6 karaoke rooms, no clubs. Local drinking, commuter finish."
+  },
+  "ja": {
+    "atmosphere": "千葉側の境界ハブ、鉄道は強く家賃は安い。便利で混むが、磨かれてはいない。",
+    "landmarks": "江戸川沿い、松戸神社、駅前商店街。東京の緊張が少しほどける。",
+    "food": "飲食122軒、居酒屋48軒、カフェ9軒。実用的なハブ飯、ラーメンとチェーンの安心。",
+    "nightlife": "深夜営業59軒、カラオケ6軒、クラブなし。地元飲み、通勤者の終点。"
+  },
+  "ru": {
+    "atmosphere": "Пограничный хаб Chiba с настоящими поездами и дешёвой арендой. Удобно, людно, не гладко.",
+    "landmarks": "Край Edogawa, Matsudo Shrine, торговые улицы у станции. Токио начинает расслабляться.",
+    "food": "122 ресторана, 48 изакая, 9 кафе. Практичная хаб-еда, рамен и сетевой комфорт.",
+    "nightlife": "59 поздних мест, 6 караоке, клубов нет. Локальная выпивка, финал комьютера."
+  }
+}

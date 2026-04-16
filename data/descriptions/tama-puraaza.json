@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Aoba-ku suburb, leafy and gym-heavy. Comfortable, but station crowds are real.",
+    "landmarks": "Tama Plaza Terrace, Utsukushigaoka slopes, tidy shopping decks. Very planned.",
+    "food": "82 restaurants, 17 izakayas, 15 cafes. Family dining beats serious bar-hopping.",
+    "nightlife": "20 late spots, 1 karaoke, no clubs. Suburban drinks, early reset."
+  },
+  "ja": {
+    "atmosphere": "磨かれた青葉区 suburb。緑とジムが多い。快適だが駅の混雑は本物。",
+    "landmarks": "たまプラーザテラス、美しが丘の坂、整った商業デッキ。かなり計画都市。",
+    "food": "飲食82軒、居酒屋17軒、カフェ15軒。家族向け外食が強く、飲み歩きは弱め。",
+    "nightlife": "深夜20軒、カラオケ1、クラブなし。郊外の一杯、早めにリセット。"
+  },
+  "ru": {
+    "atmosphere": "Вылизанный пригород Аоба-ку, зелень и спортзалы. Комфортно, но толпы у станции настоящие.",
+    "landmarks": "Tama Plaza Terrace, склоны Utsukushigaoka, аккуратные торговые деки. Очень спланировано.",
+    "food": "82 ресторана, 17 изакая, 15 кафе. Семейная еда сильнее бар-хоппинга.",
+    "nightlife": "20 поздних мест, 1 караоке, без клубов. Пригородные напитки, ранний отбой."
+  }
+}

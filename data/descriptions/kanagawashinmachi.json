@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hardworking Yokohama riverside neighborhood. 43 listings, 18 izakaya, working-class energy. Safety data sparse (estimate).",
+    "landmarks": "Keikyu gateway to Kanagawa-ku. 12 pedestrian streets, rowdy after work, quiet Sundays.",
+    "food": "43 places + 29 food count. Izakaya-heavy, blue-collar joints, bulk > quality.",
+    "nightlife": "17 midnight spots, 1 hostel. Day-laborer drinking culture, drinks until 23:00 then exodus."
+  },
+  "ja": {
+    "atmosphere": "横浜の労働者町。19時から活気、日曜静か。",
+    "landmarks": "京急・神奈川新町。歩行者街12。川沿い散歩可。",
+    "food": "居酒屋18軒、ホットペッパー43軒。力仕事の食堂。",
+    "nightlife": "夜間営業17軒。労働者酒場、23時に解散。"
+  },
+  "ru": {
+    "atmosphere": "Трудовой квартал Йокохамы. 43 места, 18 изакай. Рабочий класс, после работы оживлено.",
+    "landmarks": "Keikyu к Канагава-ку. 12 пешеходных улиц. Набережная Йокохамы.",
+    "food": "43 ресторана, 18 изакай. Рабочая еда, объём > качество.",
+    "nightlife": "17 поздних баров, 1 хостел. Рабочий класс пьёт до 23:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet family suburb, extremely safe (crime rate 0). Far from center (59 min). Suburban calm, zero nightlife.",
+    "landmarks": "Keio Line. Big green belt (2.4M sqm forest). Serene, boring.",
+    "food": "3 listings, 1 izakaya. Practically nothing. Bring a bento or eat in Hachioji.",
+    "nightlife": "Minimal. Dead after 6pm."
+  },
+  "ja": {
+    "atmosphere": "静かなファミリー郊外。超安全（犯罪率0）。中心部まで59分。郊外的な落ち着き。",
+    "landmarks": "京王線。大規模緑地帯（240万平方メートル）。静寂。",
+    "food": "飲食店3軒、居酒屋1軒。ほぼない。弁当持参か八王子で食べる。",
+    "nightlife": "ほぼ皆無。18時以降シャット。"
+  },
+  "ru": {
+    "atmosphere": "Тихая семейная окраина, супер-безопасно (0 преступлений). 59 мин до центра. Очень скучно.",
+    "landmarks": "Линия Keio. Большой лесной массив (2.4М кв.м). Буколическое.",
+    "food": "3 listings, 1 изакая. Практически ничего. Бэнто или в Хатиоджи.",
+    "nightlife": "Минимум. Мертво после 18:00."
+  }
+}

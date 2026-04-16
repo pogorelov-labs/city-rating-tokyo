@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama suburb with two transit lines. Family-friendly residential area, very walkable pedestrian-oriented streets.",
+    "landmarks": "21 pedestrian shopping streets. Yokohama Line connection to central city. Low-key park culture.",
+    "food": "30 restaurants + 11 izakayas + 39 food spots. Mix of chain and local joints. Quality uneven but decent breadth.",
+    "nightlife": "7 late-night spots, zero karaoke. Quiet after 10pm. Neighborhood bars, not clubs."
+  },
+  "ja": {
+    "atmosphere": "横浜郊外、2路線利用可。ファミリー向け住宅地。歩行者天国がたくさん。",
+    "landmarks": "商店街21本。横浜線で都心直結。落ち着いた公園文化。",
+    "food": "飲食店30軒+居酒屋11+39。チェーンと地元が混在。質は様々。",
+    "nightlife": "夜間営業7軒、カラオケゼロ。22時以降は静か。近所のバー。"
+  },
+  "ru": {
+    "atmosphere": "Префектурный пригород Йокогамы с 2 линиями. Семейный жилой район, пешеходные улицы.",
+    "landmarks": "21 пешеходная торговая зона. Линия Йокогамы к центру. Парковая культура.",
+    "food": "30 ресторанов + 11 изакай + 39 мест. Цепи и локальные. Качество варьируется.",
+    "nightlife": "7 поздних мест, нет караоке. Тихо после 22:00. Соседские бары."
+  }
+}

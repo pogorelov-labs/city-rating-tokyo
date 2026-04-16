@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Sumida lowland, Skytree Line rhythm. Local, affordable-ish, flood and soft-ground risk.",
+    "landmarks": "Tobu Museum, Mukojima Hyakkaen, Sumida backstreets. Showa texture without polish.",
+    "food": "85 restaurants, 35 izakayas; soba, ramen, neighborhood counters. Cafes stay modest.",
+    "nightlife": "25 late spots, no karaoke or clubs. Local drinks, early last train."
+  },
+  "ja": {
+    "atmosphere": "墨田の古い低地、スカイツリーラインの生活リズム。地元感、安め、浸水と地盤リスクあり。",
+    "landmarks": "東武博物館、向島百花園、墨田の裏道。磨かれていない昭和感。",
+    "food": "飲食85軒、居酒屋35軒。そば、ラーメン、近所のカウンター。カフェは控えめ。",
+    "nightlife": "深夜25軒、カラオケもクラブもなし。地元飲み、終電も早め。"
+  },
+  "ru": {
+    "atmosphere": "Старая низина Сумиды, ритм Skytree Line. Локально, сравнительно дешево, риск воды и мягкого грунта.",
+    "landmarks": "Tobu Museum, Mukojima Hyakkaen, задние улицы Сумиды. Сёва без полировки.",
+    "food": "85 ресторанов, 35 изакая; соба, рамен, соседские стойки. Кафе скромные.",
+    "nightlife": "25 поздних мест, без караоке и клубов. Местные напитки, последний поезд рано."
+  }
+}

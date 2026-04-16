@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Tobu lowland stop between Sumida blocks and river parks. Quiet, soft-ground risk.",
+    "landmarks": "Kyu-Nakagawa riverside, Kameido Line, local shotengai. Skytree feels nearby, not here.",
+    "food": "74 restaurants, 33 izakayas, 5 bars. Better drinking density than the station suggests.",
+    "nightlife": "26 late spots, no karaoke. Izakaya crawl, not clubbing."
+  },
+  "ja": {
+    "atmosphere": "墨田の低地と河川公園に挟まれた東武の小駅。静かだが地盤は要注意。",
+    "landmarks": "旧中川沿い、亀戸線、地元商店街。スカイツリーは近く感じるがここではない。",
+    "food": "飲食74軒、居酒屋33軒、バー5軒。駅の小ささより飲み密度は高い。",
+    "nightlife": "深夜26軒、カラオケなし。居酒屋はしご向き、クラブではない。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая Tobu-станция в низине Сумиды, рядом речные парки. Тихо, грунт мягкий.",
+    "landmarks": "Берег Kyu-Nakagawa, линия Kameido, местная сётэнгай. Skytree рядом, но не здесь.",
+    "food": "74 ресторана, 33 изакая, 5 баров. Плотность выпивки выше, чем кажется у станции.",
+    "nightlife": "26 поздних мест, караоке нет. Маршрут по изакая, не клубы."
+  }
+}

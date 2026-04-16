@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Isolated Choshi station on single tram (Choshi Electric). No passenger data. Cheap (¥75k). Sea edge.",
+    "landmarks": "Coastal marshland, 9 green zones, 2 million sqm green. Minimal urban infrastructure. Seismic high.",
+    "food": "2 listings only, 1 cafe. Barely populated, fishing village vibe.",
+    "nightlife": "Minimal. Last train 21:23 — village closes early."
+  },
+  "ja": {
+    "atmosphere": "銚子の奥地、電気鉄道の単線。乗客データなし。安い（75k）。海の端。",
+    "landmarks": "沿岸湿地、緑地9カ所、200万平米。都市基盤最小。地震高。",
+    "food": "2店のみ、カフェ1軒。人口疎、漁村気分。",
+    "nightlife": "ほぼなし。終電21:23 — 村は早く寝る。"
+  },
+  "ru": {
+    "atmosphere": "Изолированная станция в Чоши на одной трамвайной линии. Данные пассажиров отсутствуют. Дёшево (75k йен). На краю моря.",
+    "landmarks": "Прибрежные болота, 9 зелёных зон, 2 млн кв.м зелени. Минимум городской инфраструктуры.",
+    "food": "Всего 2 места, 1 кафе. Малонаселённо, рыбацкий колорит.",
+    "nightlife": "Практически нет. Последний поезд 21:23 — деревня рано спит."
+  }
+}

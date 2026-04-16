@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "A subway junction hiding in plain residential Nerima. Brilliant links, street life thin.",
+    "landmarks": "Yurakucho and Fukutoshin split here; otherwise low blocks, schools, pocket parks.",
+    "food": "78 restaurants, 28 izakayas. Useful after work, but no food-district pull.",
+    "nightlife": "30 late spots and one karaoke; mostly commuter drinks, no club scene."
+  },
+  "ja": {
+    "atmosphere": "住宅地に埋もれた地下鉄ジャンクション。接続は強い、街の主張は薄い。",
+    "landmarks": "有楽町線と副都心線の分岐点。外は低層住宅、学校、小公園。",
+    "food": "飲食78件、居酒屋28件。仕事帰りには十分、食の街ではない。",
+    "nightlife": "深夜30件、カラオケ1件。通勤客の一杯、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Метро-узел, спрятанный в жилой Нэриме. Связи отличные, уличной жизни мало.",
+    "landmarks": "Здесь расходятся Yurakucho и Fukutoshin. Снаружи низкие дома, школы, карманные парки.",
+    "food": "78 ресторанов, 28 изакай. После работы хватает, но это не гастро-точка.",
+    "nightlife": "30 поздних мест и одно караоке; в основном напитки для комьютеров, без клубов."
+  }
+}

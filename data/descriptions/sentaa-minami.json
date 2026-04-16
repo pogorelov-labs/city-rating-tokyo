@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kohoku New Town family hub, wide decks and mall life. Clean, convenient, slightly sterile.",
+    "landmarks": "Blue and Green Line crossing, shopping centers, pedestrian decks, clinic-heavy blocks.",
+    "food": "51 restaurants, 24 izakayas, 3 cafes. Mall food plus family dinners, not gritty.",
+    "nightlife": "19 late spots, 1 karaoke, no clubs. Suburban drinks fade early."
+  },
+  "ja": {
+    "atmosphere": "港北ニュータウンの家族向け中心地。広いデッキとモール生活。清潔で便利、少し無菌。",
+    "landmarks": "ブルーラインとグリーンラインの交差、商業施設、歩行者デッキ、医院多めの街区。",
+    "food": "飲食51軒、居酒屋24軒、カフェ3軒。モール飯と家族夕食、泥臭さはない。",
+    "nightlife": "深夜19軒、カラオケ1軒、クラブなし。郊外の飲みは早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Семейный центр Kohoku New Town, широкие деки и жизнь в моллах. Чисто, удобно, чуть стерильно.",
+    "landmarks": "Пересечение Blue и Green Line, ТЦ, пешеходные деки, кварталы с клиниками.",
+    "food": "51 ресторан, 24 изакая, 3 кафе. Молл-еда и семейные ужины, без грязной харизмы.",
+    "nightlife": "19 поздних мест, 1 караоке, клубов нет. Пригородная выпивка рано гаснет."
+  }
+}

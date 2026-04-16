@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "New Kashiwa suburb on Tsukuba Express. Planned development, green surroundings (513k sqm parks). Quiet, few food spots. 62 min to Tokyo.",
+    "landmarks": "Tanaka New Town, local green belt. TX line spokes out. Residential corridor, no cultural anchors.",
+    "food": "Minimal. 2 listings, 1 izakaya, 4 venues. Kashiwa station 5 min away for real food. Food is a weakness.",
+    "nightlife": "Sparse. 5 rating, quiet vibe. Office park atmosphere after hours."
+  },
+  "ja": {
+    "atmosphere": "柏の新興住宅地、つくばエクスプレス。計画開発、緑多い（513k㎡公園）。静か、食い物スポット少。都心62分。",
+    "landmarks": "田中ニュータウン、緑のベルト。TX線が放射状。住宅廊下、文化拠点なし。",
+    "food": "ほぼなし。ホットペッパー2軒、居酒屋1軒、4軒。柏駅が5分先でマジ食事。食は弱み。",
+    "nightlife": "少数。5評価、静か。オフィスパークの夜。"
+  },
+  "ru": {
+    "atmosphere": "Новый жилой район Кашивы, линия Цукуба Экспресс. Плановая застройка, зелень (513k кв.м парков). Тихо, немного еды. 62 мин до центра.",
+    "landmarks": "Новый город Танака, зелёный пояс. Спицы линии TX. Жилой коридор, культурных якорей нет.",
+    "food": "Минимум. 2 listings, 1 изакая, 4. Станция Кашива в 5 мин для нормальной еды. Еда — слабость.",
+    "nightlife": "Разреженно. Рейтинг 5, спокойно. Атмосфера офис-парка после часов."
+  }
+}

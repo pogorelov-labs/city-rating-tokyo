@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Matsudo bedroom suburb with a useful rail switch. Cheap, clinic-heavy, low on style.",
+    "landmarks": "Musashino and Shin-Keisei interchange, Yabashira side streets, big parkland nearby.",
+    "food": "40 restaurants, 18 izakayas, 3 cafes. Everyday meals, family chains, little edge.",
+    "nightlife": "15 late spots, 1 karaoke, no clubs. Local only."
+  },
+  "ja": {
+    "atmosphere": "松戸のベッドタウン、乗換は便利。安く、医院多め、洒落感は低い。",
+    "landmarks": "武蔵野線と新京成の接続、八柱の生活道路、大きな公園エリアも近い。",
+    "food": "飲食40軒、居酒屋18軒、カフェ3軒。日常飯と家族チェーン、尖りは少ない。",
+    "nightlife": "深夜15軒、カラオケ1軒、クラブなし。完全に地元向け。"
+  },
+  "ru": {
+    "atmosphere": "Спальный Мацудо с полезной пересадкой. Дешево, много клиник, мало стиля.",
+    "landmarks": "Связка Musashino и Shin-Keisei, улицы Yabashira, крупная парковая зона рядом.",
+    "food": "40 ресторанов, 18 изакая, 3 кафе. Повседневная еда, семейные чейны, мало характера.",
+    "nightlife": "15 поздних мест, 1 караоке, клубов нет. Только местное."
+  }
+}

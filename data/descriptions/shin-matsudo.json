@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Matsudo transfer town, busy and practical. Cheap rent, real trains, weaker safety feel.",
+    "landmarks": "Musashino-Joban interchange, Ryutetsu Nagareyama Line, broad Chiba suburbs.",
+    "food": "73 restaurants, 32 izakayas. Daily food is fine; station scale beats restaurant charm.",
+    "nightlife": "27 late-night spots, 3 karaoke. Enough after work, not a scene."
+  },
+  "ja": {
+    "atmosphere": "松戸の乗換町。忙しくて実用的。家賃安め、路線は強い、安全感はやや弱い。",
+    "landmarks": "武蔵野線と常磐線の交差、流鉄流山線、広い千葉郊外。",
+    "food": "飲食73軒、居酒屋32軒。日常飯は足りるが、駅の規模ほど食の魅力はない。",
+    "nightlife": "深夜営業27軒、カラオケ3軒。仕事後には足りる、シーンではない。"
+  },
+  "ru": {
+    "atmosphere": "Пересадочный город Мацудо: занято и практично. Аренда дешёвая, поезда сильные, безопасность слабее.",
+    "landmarks": "Узел Musashino-Joban, Ryutetsu Nagareyama Line, широкая пригородная Тиба.",
+    "food": "73 ресторана, 32 изакая. На каждый день нормально; масштаб станции ярче еды.",
+    "nightlife": "27 поздних мест, 3 караоке. После работы хватит, сцены нет."
+  }
+}

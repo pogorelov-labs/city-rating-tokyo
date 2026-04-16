@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama green suburb (6.3M sqm park), 739 daily passengers. Quiet tree-lined station area. Kids and dogs everywhere.",
+    "landmarks": "Tokyu Kodomonokuni Line (children's theme park). Parks (20), nature walking paths. Family-first, zero nightlife.",
+    "food": "2 restaurants + 12 spots. Cafe culture, minimal izakayas. Self-catering common.",
+    "nightlife": "Dead. Minimal nightlife rating. Families leave at 6pm. Lights out early."
+  },
+  "ja": {
+    "atmosphere": "横浜青葉の緑区（6.3M公園）。739人、並木道。子どもと犬だらけ。",
+    "landmarks": "こどもの国線。公園20個、散歩道。家族向け、夜なし。",
+    "food": "飲食2軒。カフェ文化。居酒屋ほぼなし。",
+    "nightlife": "皆無。18時で親たちは帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Зеленый пригород Йокохамы (6.3M кв.м парк), 739 пассажиров. Тихие деревья везде. Дети и собаки.",
+    "landmarks": "Линия Tokyu Kodomonokuni (парк), 20 парков, тропы.",
+    "food": "2 ресторана, 12 мест. Кафе, минимум изакай.",
+    "nightlife": "Мертво. Семьи в 18:00 домой."
+  }
+}

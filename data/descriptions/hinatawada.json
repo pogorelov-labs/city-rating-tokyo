@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural mountain outpost on the Ome line, 76 min from Tokyo. Pristine, isolate, boring.",
+    "landmarks": "Dense cedar forest (107 sqm green area). Hiking trails. Pure nature, zero infrastructure.",
+    "food": "Almost no restaurants (2 spots). Bring lunch. Nearest town is far.",
+    "nightlife": "Nil. Last train 23:43. No bars, no clubs, no nightlife concept."
+  },
+  "ja": {
+    "atmosphere": "青梅線の山村駅。東京から76分。自然豊か、孤立、退屈。",
+    "landmarks": "杉林密集（107万平方メートル）。ハイキングコース。自然そのもの。",
+    "food": "飲食店ほぼなし。弁当持参必須。町は遠い。",
+    "nightlife": "ゼロ。23:43終電。居酒屋なし。夜文化存在せず。"
+  },
+  "ru": {
+    "atmosphere": "Горная деревня на линии Омэ, 76 мин от центра. Девственная природа, изолирована, скучновато.",
+    "landmarks": "Плотный кедровый лес (107 млн кв.м зелени). Пешеходные маршруты. Чистая природа.",
+    "food": "Почти нет ресторанов (2 точки). Еду берите с собой. Город далеко.",
+    "nightlife": "Ничего. Последний поезд 23:43. Барах нет, клубов нет."
+  }
+}

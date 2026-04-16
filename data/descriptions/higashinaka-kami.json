@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ome Line suburb, roomy and practical. Cheap rent, long ride to the core.",
+    "landmarks": "Showa-side parks, Tamagawa cycling routes, low-rise Akishima streets.",
+    "food": "20 restaurants, 8 izakayas; station meals and family spots, not destination dining.",
+    "nightlife": "8 late spots. Local drinks, early last-train mindset."
+  },
+  "ja": {
+    "atmosphere": "青梅線の郊外、広くて実用的。家賃は安い、都心までは遠い。",
+    "landmarks": "昭和エリアの公園、多摩川方面の自転車道、低層の昭島住宅街。",
+    "food": "飲食20軒、居酒屋8軒。駅前飯と家族向け、目的地グルメではない。",
+    "nightlife": "深夜営業8軒。地元飲み、終電を気にする夜。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на линии Ome, просторно и практично. Дешево, но до центра долго.",
+    "landmarks": "Парки со стороны Сёва, веломаршруты к Тамагаве, низкая Акисима.",
+    "food": "20 ресторанов, 8 изакая. Еда у станции и семейные места, не гастро-цель.",
+    "nightlife": "8 поздних мест. Местная выпивка, голова всегда на последнем поезде."
+  }
+}

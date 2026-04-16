@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba transfer town, useful and cheap, but 65 min from central Tokyo. Low elevation, flood risk.",
+    "landmarks": "Fukuda Denshi Arena, Soga Sports Park, bay-side industrial edges. Not cute, functional.",
+    "food": "34 restaurants, 15 izakayas. Station-front chains and locals, thin cafe culture.",
+    "nightlife": "13 late spots, no karaoke or clubs. After-work drinks, early fade."
+  },
+  "ja": {
+    "atmosphere": "千葉の乗換実用街。安くて便利、でも都心まで65分。標高3mで浸水リスクあり。",
+    "landmarks": "フクダ電子アリーナ、蘇我スポーツ公園、湾岸の工業地帯。可愛いより機能的。",
+    "food": "飲食34軒、居酒屋15軒。駅前チェーンと地元店、カフェ文化は薄い。",
+    "nightlife": "深夜13軒、カラオケとクラブなし。仕事帰りの一杯、早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Пересадочный город Тибы: практично и дешево, но 65 минут до центра. 3 м над морем, риск подтопления.",
+    "landmarks": "Fukuda Denshi Arena, Soga Sports Park, промзона у залива. Не мило, зато работает.",
+    "food": "34 ресторана, 15 изакая. Сетевые точки у станции и местные, кафе почти нет.",
+    "nightlife": "13 поздних мест, без караоке и клубов. Выпить после работы, потом тишина."
+  }
+}

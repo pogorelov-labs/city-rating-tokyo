@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba suburban pocket. Quiet residential, 11k passengers. Feels like you left Tokyo.",
+    "landmarks": "Tobu Urban Park Line alone. Green—834k sqm parks. Nature escape, not destination.",
+    "food": "Sparse. 7 listings spots, 2 izakaya. You eat at home or head to Matsudo.",
+    "nightlife": "Dead after dark. 2 late spots. Zero nightlife here—accept it."
+  },
+  "ja": {
+    "atmosphere": "千葉郊外の小規模駅。住宅地11k乗降。東京を脱出した感じ。",
+    "landmarks": "東武アーバンパークライン単独。緑834k平方米。自然逃げ場で目的地にあらず。",
+    "food": "限定的。listings",
+    "nightlife": "夜は死んでる。深夜2軒。ナイトライフなし—諦めろ。"
+  },
+  "ru": {
+    "atmosphere": "Чиба пригород. Тихая жилая зона, 11k пассажиров. Ощущение выхода из Токио.",
+    "landmarks": "Одна линия Tobu Urban Park. Зелень 834k кв м парков. Природный оазис, не достопримечательность.",
+    "food": "Редко. 7 ресторанов, 2 изакаи. Едите дома или едете в Мацудо.",
+    "nightlife": "Мёртво после темноты. 2 поздних места. Ночной жизни нет—примите это."
+  }
+}

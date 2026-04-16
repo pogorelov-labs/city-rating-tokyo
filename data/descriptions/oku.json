@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odd JR pocket between Oji and Tabata. Cheap, quiet, more rail-yard than nightlife.",
+    "landmarks": "Oku rail yard, Arakawa tram nearby, north Tokyo backstreets. Green pockets save it.",
+    "food": "46 restaurants, 14 izakayas, 4 cafes. Everyday food, little destination pull.",
+    "nightlife": "12 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "王子と田端の間の少し変なJRポケット。安く静か、夜遊びより車両基地感。",
+    "landmarks": "尾久車両センター、近い都電、北東京の裏道。緑の逃げ場が救い。",
+    "food": "飲食46軒、居酒屋14軒、カフェ4軒。日常飯、遠征する力は弱い。",
+    "nightlife": "深夜営業12軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Странный JR-карман между Oji и Tabata. Дёшево, тихо, больше депо чем ночная жизнь.",
+    "landmarks": "Oku rail yard, рядом трамвай Arakawa, задние улицы северного Токио. Зелень спасает.",
+    "food": "46 ресторанов, 14 изакая, 4 кафе. Еда на каждый день, мало притяжения.",
+    "nightlife": "12 поздних мест, без караоке и клубов. Минимально."
+  }
+}

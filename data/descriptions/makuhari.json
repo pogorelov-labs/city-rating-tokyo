@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba commuter hub with 2 lines. Business-oriented with some urban sprawl feel. 59 min to central Tokyo.",
+    "landmarks": "3 cultural venues, 8 pedestrian streets. 902k sqm parks nearby. Functional, not scenic.",
+    "food": "23 restaurants, 4 izakayas, 4 cafes. Decent variety for commuter town. Mix of chain and local.",
+    "nightlife": "10 midnight spots, zero karaoke, zero clubs. Quiet after 10pm. Office workers head home."
+  },
+  "ja": {
+    "atmosphere": "千葉の通勤ハブ、2路線。ビジネス向け。スプロール気味。59分都心着。",
+    "landmarks": "文化施設3、商店街8。公園902k平方m。機能的、景観なし。",
+    "food": "飲食店23軒、居酒屋4、カフェ4、22。通勤町の割に多様。チェーンと地元混在。",
+    "nightlife": "深夜営業10軒。カラオケ・クラブなし。22時以降静か。オフィスワーカーは帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Коммутерный хаб Чибы, 2 линии. Бизнес-ориентир, разрастание. 59 мин центр.",
+    "landmarks": "3 культурных места, 8 пешеходных улиц. 902k кв.м парков. Функционально, не сценично.",
+    "food": "23 ресторана, 4 изакаи, 4 кафе, 22. Разнообразно для комметртауна. Цепи и локальное.",
+    "nightlife": "10 поздних мест, нет караоке. Тихо после 22:00. Офисные спешат домой."
+  }
+}

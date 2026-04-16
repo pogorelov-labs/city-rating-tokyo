@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Akihabara fringe in office clothes, dense food blocks and weekday grit. Central, pricey, intense.",
+    "landmarks": "Walk to Akihabara, Kanda, old textile streets. Under-the-radar base, not a plaza town.",
+    "food": "1166 restaurants, 556 izakayas. Ramen, curry, sushi, salaryman counters; choice overload.",
+    "nightlife": "354 late spots, 49 bars, 5 clubs. Runs late, but hard-edged."
+  },
+  "ja": {
+    "atmosphere": "秋葉原の端、オフィス服を着た濃い飲食街。中心部で高く、密度が強い。",
+    "landmarks": "秋葉原、神田へ徒歩圏。昔の繊維街の名残。広場の街ではなく裏拠点。",
+    "food": "飲食1166軒、居酒屋556軒。ラーメン、カレー、寿司、会社員カウンター。選択肢過多。",
+    "nightlife": "深夜354軒、バー49軒、クラブ5軒。遅くまで動くが、硬めの夜。"
+  },
+  "ru": {
+    "atmosphere": "Край Акихабары в офисной одежде, плотные кварталы еды и будничная грубость. Центр, дорого, интенсивно.",
+    "landmarks": "Пешком до Акихабары и Канды, старые текстильные улицы. Скрытая база, не площадь.",
+    "food": "1166 ресторанов, 556 изакая. Рамен, карри, суши, стойки для офисных; перегруз выбора.",
+    "nightlife": "354 поздних места, 49 баров, 5 клубов. Работает долго, но с жестким краем."
+  }
+}

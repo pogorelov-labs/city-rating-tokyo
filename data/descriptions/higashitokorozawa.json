@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Musashino Line edge town, quiet blocks with a pop-culture spike. Affordable, but far.",
+    "landmarks": "Tokorozawa Sakura Town, Kadokawa Culture Museum, wide suburban streets.",
+    "food": "13 restaurants plus 27 local food pins; a few izakayas, cafe scraps, limited depth.",
+    "nightlife": "2 midnight spots, 2 karaoke. Last train before midnight bites."
+  },
+  "ja": {
+    "atmosphere": "武蔵野線の外縁住宅地。静かな街にポップカルチャーの棘、安いが遠い。",
+    "landmarks": "ところざわサクラタウン、角川武蔵野ミュージアム、広い郊外道路。",
+    "food": "飲食13軒と地元店少々。居酒屋わずか、カフェも薄い、厚みはない。",
+    "nightlife": "深夜営業2軒、カラオケ2軒。終電が早めで刺さる。"
+  },
+  "ru": {
+    "atmosphere": "Край Musashino Line, тихие кварталы и внезапный поп-культурный шип. Дешево, но далеко.",
+    "landmarks": "Tokorozawa Sakura Town, музей Kadokawa Culture, широкие пригородные улицы.",
+    "food": "13 ресторанов и немного локальных точек. Пара изакая, крошки кафе, глубины мало.",
+    "nightlife": "2 полуночных места, 2 караоке. Последний поезд до полуночи кусается."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku-adjacent backstreets, calmer than Nakano. Branch-line convenience, residential mood.",
+    "landmarks": "Kanda River bends, Nakano-Sakaue nearby, low-rise alleys. Not postcard Tokyo.",
+    "food": "128 restaurants, 55 izakayas, few cafes. Strong after-work food, light on destination dining.",
+    "nightlife": "48 late spots, mostly izakaya. No clubs, no karaoke scene."
+  },
+  "ja": {
+    "atmosphere": "新宿近い裏通り、でも中野より静か。支線駅の便利さ、住宅街の空気。",
+    "landmarks": "神田川の曲がり、近い中野坂上、低層の路地。絵葉書の東京ではない。",
+    "food": "飲食128軒、居酒屋55軒、カフェ少なめ。仕事帰りの飯は強い、遠征向きではない。",
+    "nightlife": "深夜営業48軒、ほぼ居酒屋。クラブもカラオケ文化もなし。"
+  },
+  "ru": {
+    "atmosphere": "Закоулки рядом с Синдзюку, тише чем Накано. Удобная ветка метро, жилой тон.",
+    "landmarks": "Изгибы реки Kanda, рядом Nakano-Sakaue, низкие переулки. Не открыточный Токио.",
+    "food": "128 ресторанов, 55 изакая, кафе мало. Сильно для ужина после работы, не гастро-паломничество.",
+    "nightlife": "48 поздних мест, в основном изакаи. Клубов и караоке-сцены нет."
+  }
+}

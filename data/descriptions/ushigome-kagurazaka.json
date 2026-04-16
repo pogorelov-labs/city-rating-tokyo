@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kagurazaka back-hill calm, polished but not sterile. Expensive, tasteful, slightly hidden.",
+    "landmarks": "Stone alleys, Akagi Shrine side streets, Kagurazaka restaurants downhill. Grown-up Tokyo.",
+    "food": "452 restaurants, 150 izakayas, 21 bars. Serious dining, French-Japanese mix, prices climb.",
+    "nightlife": "122 late spots, no clubs. Wine, izakaya, quiet adult nights."
+  },
+  "ja": {
+    "atmosphere": "神楽坂の裏丘、落ち着いて上品だが無菌ではない。高い、趣味良い、少し隠れる。",
+    "landmarks": "石畳の路地、赤城神社周辺、坂下の神楽坂飲食街。大人の東京。",
+    "food": "飲食452軒、居酒屋150軒、バー21軒。本気の食、仏日ミックス、値段は上がる。",
+    "nightlife": "深夜営業122軒、クラブなし。ワイン、居酒屋、静かな大人の夜。"
+  },
+  "ru": {
+    "atmosphere": "Спокойный задний холм Kagurazaka, отполировано, но не стерильно. Дорого, вкусно, скрытно.",
+    "landmarks": "Каменные переулки, улицы у Akagi Shrine, рестораны Kagurazaka ниже по склону. Взрослый Токио.",
+    "food": "452 ресторана, 150 изакая, 21 бар. Серьёзная еда, франко-японский микс, цены растут.",
+    "nightlife": "122 поздних места, клубов нет. Вино, изакая, тихие взрослые ночи."
+  }
+}

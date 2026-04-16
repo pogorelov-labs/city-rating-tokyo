@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya local calm, plum-blossom weekends, family errands. Pleasant, not cheap.",
+    "landmarks": "Hanegi Park plum grove, small Odakyu shopping streets. Shimokitazawa one stop away.",
+    "food": "44 restaurants; bakeries, ramen, neighborhood izakayas.",
+    "nightlife": "21 late spots, no karaoke or clubs. Quiet drinks, early mood."
+  },
+  "ja": {
+    "atmosphere": "世田谷の地元感、梅の週末、家族の用事。住みやすいが安くはない。",
+    "landmarks": "羽根木公園の梅林、小さな小田急沿線商店街。下北沢は一駅。",
+    "food": "飲食44軒、77件。ベーカリー、ラーメン、近所の居酒屋。",
+    "nightlife": "深夜営業21軒、カラオケもクラブもなし。静かな一杯、早めの空気。"
+  },
+  "ru": {
+    "atmosphere": "Локальное спокойствие Сэтагаи, слива по выходным, семейные дела. Приятно, не дёшево.",
+    "landmarks": "Сливы в парке Hanegi, малые улицы Odakyu. Симокитадзава в одной остановке.",
+    "food": "44 ресторана и 77 точек. Пекарни, рамен, соседские изакая.",
+    "nightlife": "21 позднее место, без караоке и клубов. Тихие напитки, ранний настрой."
+  }
+}

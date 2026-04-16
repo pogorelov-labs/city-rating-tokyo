@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Minato Mirai back door, glossy but wind-swept. Food overload, few residents, flood risk.",
+    "landmarks": "K-Arena, Anpanman Museum, Nissan HQ, bay promenades. Yokohama Station is walkable.",
+    "food": "715 restaurants, 334 izakayas, 38 cafes. Corporate lunch and arena crowds dominate.",
+    "nightlife": "237 late spots, 5 karaoke, 4 clubs. Busy, commercial, not intimate."
+  },
+  "ja": {
+    "atmosphere": "みなとみらいの裏口、綺麗だが風が強い。飲食過多、住民少なめ、浸水注意。",
+    "landmarks": "Kアリーナ、アンパンマンミュージアム、日産本社、湾岸プロムナード。横浜駅も徒歩圏。",
+    "food": "飲食715件、居酒屋334件、カフェ38件。企業ランチとイベント客が主役。",
+    "nightlife": "深夜237件、カラオケ5件、クラブ4件。賑やかだが商業的。"
+  },
+  "ru": {
+    "atmosphere": "Задняя дверь Minato Mirai, глянец и ветер. Еды с избытком, жителей мало, риск подтопления.",
+    "landmarks": "K-Arena, Anpanman Museum, штаб Nissan, набережные. До Yokohama Station можно пешком.",
+    "food": "715 ресторанов, 334 изакая, 38 кафе. Корпоративные обеды и толпы арен рулят.",
+    "nightlife": "237 поздних мест, 5 караоке, 4 клуба. Шумно, коммерчески, не камерно."
+  }
+}

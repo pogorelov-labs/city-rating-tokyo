@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Setagaya money near Jiyugaoka. Safe, polished, low on park space.",
+    "landmarks": "Okusawa Shrine, Jiyugaoka backstreets, small Meguro Line station plaza.",
+    "food": "215 restaurants, 53 izakayas, 22 cafes. Brunch and date meals are easy.",
+    "nightlife": "63 late spots, 13 bars. Refined drinks, no club scene."
+  },
+  "ja": {
+    "atmosphere": "自由が丘近くの静かな世田谷マネー。安全で整うが、公園余白は少ない。",
+    "landmarks": "奥沢神社、自由が丘の裏道、小さな目黒線駅前。",
+    "food": "飲食215軒、居酒屋53軒、カフェ22軒。ブランチもデート飯も簡単。",
+    "nightlife": "深夜営業63軒、バー13軒。上品に飲む街、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Тихие деньги Сэтагаи у Дзюгаоки. Безопасно, прилизано, парков мало.",
+    "landmarks": "Okusawa Shrine, задние улицы Jiyugaoka, маленькая площадь Meguro Line.",
+    "food": "215 ресторанов, 53 изакаи, 22 кафе. Бранч и свидание закрываются легко.",
+    "nightlife": "63 поздних места, 13 баров. Аккуратные напитки, клубной сцены нет."
+  }
+}

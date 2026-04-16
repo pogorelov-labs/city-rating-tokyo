@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Remote Sotobo Line coastal station in Chiba. Elevation 40m. No market, pharmacy, or clinic. 111 min commute. Quiet beach-country feel.",
+    "landmarks": "Coastal hill location. No urban landmarks. Walking trails, pastoral setting.",
+    "food": "Extremely limited—1 listings, 1 bar. Expect to cook or rely on convenience stores.",
+    "nightlife": "Minimal. Practically dead after 9pm."
+  },
+  "ja": {
+    "atmosphere": "千葉の外房線、海辺の駅。海抜40m。市場・薬局・診療所なし。111分通勤。",
+    "landmarks": "海の丘。都市的なものなし。散歩道のみ。",
+    "food": "極限定 — 1軒、バー1軒。コンビニ依存。",
+    "nightlife": "皆無。"
+  },
+  "ru": {
+    "atmosphere": "Сотобо-лайн у берега Чиба. 40м над морем. Нет магазина, аптеки, клиники. 111 мин. Береговая тишина.",
+    "landmarks": "Приморский холм. Никаких городских достопримечательностей.",
+    "food": "Критически редко — 1, 1 бар. Готовьте сами или магазин.",
+    "nightlife": "Практически нет."
+  }
+}

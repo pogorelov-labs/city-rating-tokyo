@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned bay city, malls, offices, event crowds. Reclaimed soft ground is the catch.",
+    "landmarks": "Makuhari Messe, ZOZO Marine, outlet malls. Wide decks, sea wind, corporate grid.",
+    "food": "113 spots, 60 izakayas, only 2 bars. Good during events, thin on normal nights.",
+    "nightlife": "28 late spots, no karaoke or clubs. Convention crowd, then silence."
+  },
+  "ja": {
+    "atmosphere": "計画された湾岸都市。モール、オフィス、イベント客。埋立地の軟弱地盤が弱点。",
+    "landmarks": "幕張メッセ、ZOZOマリン、アウトレット。広いデッキ、海風、企業街区。",
+    "food": "飲食113軒、居酒屋60軒、バー2軒だけ。イベント日は強い、平常夜は薄い。",
+    "nightlife": "深夜営業28軒、カラオケもクラブもなし。催事客が消えると静か。"
+  },
+  "ru": {
+    "atmosphere": "Плановый город у залива: моллы, офисы, толпы на ивентах. Минус — мягкий намывной грунт.",
+    "landmarks": "Makuhari Messe, ZOZO Marine, аутлеты. Широкие деки, морской ветер, корпоративная сетка.",
+    "food": "113 мест, 60 изакая, всего 2 бара. Сильно в дни событий, жидко обычными вечерами.",
+    "nightlife": "28 поздних мест, без караоке и клубов. Конвенция ушла — тишина."
+  }
+}

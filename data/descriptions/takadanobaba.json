@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student party hub packed with izakayas, karaoke, and late-night chaos. Yamanote line chaos, constant foot traffic. Great green nearby but cramped urban feel.",
+    "landmarks": "Waseda University dominates the vibe. Yotsuya-Hachiman Shrine, 48 parks within walking distance. Student-oriented cultural venues.",
+    "food": "289 listings spots (119 izakaya) + cafes. Ramen alleys, gyudon chains, standing sushi. Quality varies; crowded lunch hours.",
+    "nightlife": "118 midnight venues, 2 karaoke, 1 club. Izakaya-centric. After midnight scene thins fast; mostly student bars."
+  },
+  "ja": {
+    "atmosphere": "学生の夜遊びスポット、居酒屋とカラオケ林立。山手線沿い、常に混雑。緑多いが都市圏のような息苦しさ。",
+    "landmarks": "早稲田大学が街の顔。四谷八幡神社、徒歩圏内に48の公園。学生向け文化施設散在。",
+    "food": "居酒屋289軒（うち119が居酒屋）、カフェ充実。ラーメン横丁、牛丼チェーン、立ち寿司。昼間は満席。",
+    "nightlife": "深夜営業118軒、カラオケ2軒、クラブ1軒。居酒屋中心。深夜0時以降は人気低下、学生バーばかり。"
+  },
+  "ru": {
+    "atmosphere": "Студенческий парти-центр с изакаями и карао на каждом углу. Хаос на линии Яманото, вечная толпа. Много парков, но душно.",
+    "landmarks": "Университет Васэда задаёт тон. Святилище Ёцуя-Хатиман, 48 парков в пешеходности. Студенческие культурные центры.",
+    "food": "289 ресторанов (119 изакай), кафе. Лапша, гюдон, стоячие суши. Качество скачет, полдни ломятся от народа.",
+    "nightlife": "118 поздних баров, 2 караоке, 1 клуб. Изакаи-ориентированный. После полуночи — вымирает."
+  }
+}

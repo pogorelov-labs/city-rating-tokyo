@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Museum-side Minato polish, quiet until Roppongi leaks in. Beautiful, expensive, not cozy.",
+    "landmarks": "National Art Center, Aoyama Cemetery, Tokyo Midtown nearby. Culture with embassy calm.",
+    "food": "640 restaurants, 114 izakayas, 75 bars. Excellent dining, lounge-heavy, bill shock likely.",
+    "nightlife": "306 late spots, a few clubs. Roppongi-adjacent, polished and pricey."
+  },
+  "ja": {
+    "atmosphere": "美術館側の港区らしい磨き、六本木が漏れるまでは静か。美しい、高い、居心地は硬い。",
+    "landmarks": "国立新美術館、青山霊園、近い東京ミッドタウン。大使館的な静けさと文化。",
+    "food": "飲食640軒、居酒屋114軒、バー75軒。食は強い、ラウンジ多め、会計は重い。",
+    "nightlife": "深夜営業306軒、クラブ少々。六本木隣接、磨かれて高い。"
+  },
+  "ru": {
+    "atmosphere": "Минато-лоск у музеев, тихо пока не просочится Roppongi. Красиво, дорого, не уютно.",
+    "landmarks": "National Art Center, Aoyama Cemetery, Tokyo Midtown рядом. Культура с посольским спокойствием.",
+    "food": "640 ресторанов, 114 изакая, 75 баров. Отличная еда, много лаунжей, счёт бьёт.",
+    "nightlife": "306 поздних мест, несколько клубов. Рядом Roppongi, гладко и дорого."
+  }
+}

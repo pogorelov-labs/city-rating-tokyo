@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Choshi Electric Railway stop at the southern Chiba coast. 165-min commute to center. Isolated but charming seaside mood.",
+    "landmarks": "Fishing town. 4 pharmacies (medical hub), few other services. Coastal hamlet.",
+    "food": "2, 1 cafe, 2. Seafood-centric. Very sparse selection.",
+    "nightlife": "Minimal. Last train 21:24 (earliest closure). Evening options are gone by 10pm."
+  },
+  "ja": {
+    "atmosphere": "銚子電気鉄道の秘境駅。千葉最南端。都心165分。孤立した漁村情緒。",
+    "landmarks": "漁師町。薬局4（医療拠点）。他サービス僅少。",
+    "food": "2、カフェ1、2。海の幸中心。極稀。",
+    "nightlife": "ほぼなし。21時24分で最終（最早）。夜は事実上終了。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная станция электричес. Чоши, юг Чибы. 165 минут до центра. Изолированный рыбацкий быт.",
+    "landmarks": "Рыбная деревня. Аптеки 4 (медицинский центр). Услуг мало.",
+    "food": ": 2, кафе: 1, : 2. Морепродукты. Крайне редко.",
+    "nightlife": "Нет. Последний поезд 21:24 (самый ранний). К 22:00 — мертво."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odawara exurb, small Odakyu town. Sparse, quiet, coastal adjacent. 106-minute slog to Tokyo.",
+    "landmarks": "Minimal urban structure. Seaside vicinity, but town itself is residential dead zone. No essentials mapped.",
+    "food": "Barely stocked: 4 listings, 0, 1 izakaya, 1 cafe. Train food, nothing else. Tiny footprint.",
+    "nightlife": "Minimal. 2 midnight venues. Quiet seaside retirement zone. Sleepy by 10pm."
+  },
+  "ja": {
+    "atmosphere": "小田原郊外、小田急の小駅。疎ら、静寂。海辺隣接。都心106分。",
+    "landmarks": "都市構造ほぼなし。海辺隣接だが町はリタイア地。",
+    "food": "最小限：4、0、居酒屋1、カフェ1。駅弁食、以上なし。",
+    "nightlife": "ほぼ無。深夜営業2軒。海辺リタイア地。22時に消灯。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Одавара, малая Одакю-станция. Редко, тихо, около моря. 106 минут до Токио.",
+    "landmarks": "Урбана минус. Морской край, но сам город — спальня. Ничего нет.",
+    "food": "Скудно: 4, 0, 1 изакая, 1 кафе. Вокзальная еда. Больше ничего.",
+    "nightlife": "Минимум. 2 ночных места. Морская пенсионная зона. Спит к 22:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai office-residential mix, canals and parks. Useful, crowded, not cheap.",
+    "landmarks": "Kiba Park, Museum of Contemporary Art, old lumber district, Fukagawa Gatharia.",
+    "food": "246 restaurants, 106 izakayas, 23 bars. Lunch crowds, salaryman dinners, real choice.",
+    "nightlife": "82 late spots. Izakaya-heavy, bars present, clubs basically absent."
+  },
+  "ja": {
+    "atmosphere": "東西線の職住ミックス、水路と公園。便利だが混む、家賃も軽くない。",
+    "landmarks": "木場公園、東京都現代美術館、木材の街跡、深川ギャザリア。",
+    "food": "飲食246軒、居酒屋106軒、バー23軒。昼も夜も選択肢は本物。",
+    "nightlife": "深夜82軒。居酒屋中心、バーあり、クラブはほぼなし。"
+  },
+  "ru": {
+    "atmosphere": "Офисно-жилой микс на Tozai, каналы и парки. Удобно, людно, недешево.",
+    "landmarks": "Kiba Park, музей современного искусства, старый лесной район, Fukagawa Gatharia.",
+    "food": "246 ресторанов, 106 изакай, 23 бара. Обеды толпой, ужины офисников, выбор есть.",
+    "nightlife": "82 поздних места. Изакая-центрично, бары есть, клубов почти нет."
+  }
+}

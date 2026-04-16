@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sobu-line lowland town, lived-in and affordable. Convenient, but soft-ground risk.",
+    "landmarks": "Arakawa riverbank, old shotengai, Sobu local platform. Everyday east Tokyo.",
+    "food": "60 restaurants, 25 izakayas, 6 cafes. Solid local spread, no destination glamour.",
+    "nightlife": "26 late spots, no karaoke. Izakayas stay useful, clubs absent."
+  },
+  "ja": {
+    "atmosphere": "総武線の低地住宅街、生活感あり安め。便利だが地盤は柔らかい。",
+    "landmarks": "荒川河川敷、古い商店街、総武線各停ホーム。日常の東東京。",
+    "food": "飲食60軒、居酒屋25軒、カフェ6軒。地元の幅は十分、遠征感はない。",
+    "nightlife": "深夜26軒、カラオケなし。居酒屋は使える、クラブはない。"
+  },
+  "ru": {
+    "atmosphere": "Низинный городок на Sobu, обжитой и недорогой. Удобно, но мягкий грунт.",
+    "landmarks": "Набережная Аракавы, старая сётэнгай, локальная Sobu-платформа. Бытовой восток.",
+    "food": "60 ресторанов, 25 изакая, 6 кафе. Местный набор крепкий, без вау-гастрономии.",
+    "nightlife": "26 поздних мест, караоке нет. Изакаи выручают, клубов нет."
+  }
+}

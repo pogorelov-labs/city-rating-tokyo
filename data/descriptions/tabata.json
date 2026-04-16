@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yamanote access without Yamanote glamour. Hills, rail yards, quiet residential edges.",
+    "landmarks": "Tabata Writers and Artists Memorial, railway overlooks, Yanaka and Nippori within reach.",
+    "food": "94 restaurants, 36 izakayas; noodle shops and commuter counters, not a food crawl.",
+    "nightlife": "33 late spots, 6 bars. Enough for locals, not a destination."
+  },
+  "ja": {
+    "atmosphere": "山手線なのに派手さなし。坂、線路、静かな住宅地の縁。",
+    "landmarks": "田端文士村記念館、線路を見下ろす坂、谷中と日暮里も射程内。",
+    "food": "飲食94軒、居酒屋36軒。麺類と通勤客向けカウンター、食べ歩き街ではない。",
+    "nightlife": "深夜営業33軒、バー6軒。地元には十分、遠征先ではない。"
+  },
+  "ru": {
+    "atmosphere": "Доступ к Яманотэ без яманотэ-гламура. Холмы, рельсы, тихие жилые края.",
+    "landmarks": "Мемориал писателей Табаты, виды на пути, Янака и Ниппори рядом.",
+    "food": "94 ресторана, 36 изакая. Лапша и стойки для комьютеров, не гастро-прогулка.",
+    "nightlife": "33 поздних места, 6 баров. Местным хватает, ехать специально не надо."
+  }
+}

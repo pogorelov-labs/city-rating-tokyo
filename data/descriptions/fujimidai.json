@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima family belt, safe and uneventful. Good daily base, low cultural voltage.",
+    "landmarks": "Fujimidai shotengai, Seibu Ikebukuro local streets, small green pockets. Quiet by design.",
+    "food": "42 restaurants, 15 izakayas, 3 cafes. Practical local meals, limited range.",
+    "nightlife": "13 late spots, no karaoke or clubs. Minimal after dinner."
+  },
+  "ja": {
+    "atmosphere": "練馬の家族向けベルト、安全で事件少なめ。日常拠点には良い、文化の電圧は低い。",
+    "landmarks": "富士見台商店街、西武池袋線沿いの生活道路、小さな緑。静けさが売り。",
+    "food": "飲食42軒、居酒屋15軒、カフェ3軒。実用的な地元飯、幅は狭い。",
+    "nightlife": "深夜営業13軒、カラオケもクラブもなし。夕飯後はかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Семейный пояс Nerima, безопасно и без событий. Хорошая база, низкое культурное напряжение.",
+    "landmarks": "Fujimidai shotengai, улицы Seibu Ikebukuro, малые зелёные карманы. Тишина как функция.",
+    "food": "42 ресторана, 15 изакая, 3 кафе. Практичная локальная еда, диапазон узкий.",
+    "nightlife": "13 поздних мест, без караоке и клубов. После ужина почти пусто."
+  }
+}

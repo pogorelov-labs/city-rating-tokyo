@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama suburbs (Kawaguchi), 44 min to center. Mixed industrial-residential. Soft ground, very high seismic risk below 5m elevation.",
+    "landmarks": "Saitama Railway line. 18 parks, cultural venues (2). Industrial feel masks residential core. Flood hazard — elevation 4m.",
+    "food": "13 listings + 9, decent for exurb. 3 izakaya, no bars. Nightlife still weak.",
+    "nightlife": "3 midnight spots, 1 karaoke. Most people flee to Kawagoe or Oomiya after 10pm."
+  },
+  "ja": {
+    "atmosphere": "埼玉郊外（川口市）、44分。工業×住宅混在。地盤軟い、地震リスク非常に高い。標高4m、洪水危険。",
+    "landmarks": "埼玉鉄道線。公園18、文化施設2。工業地、住宅潜む。",
+    "food": "13+9、郊外では上出来。居酒屋3、バーなし。夜は弱い。",
+    "nightlife": "深夜3軒、カラオケ1軒。夜10時すぎ、川越やおみやへ流出。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Сайтамы (Кавагути), 44 мин до центра. Смешанные промышленно-жилые. Мягкий грунт, очень высокий сейсмориск. 4м, наводнение.",
+    "landmarks": "Линия Сайтамской железной дороги. 18 парков, культурные площадки (2). Промышленный облик скрывает жилую основу.",
+    "food": "13 listings + 9, хорошо для пригорода. 3 изакаи, нет баров. Ночная жизнь слаба.",
+    "nightlife": "3 ночных места, 1 караоке. Большинство уходит в Кавагоэ после 22:00."
+  }
+}

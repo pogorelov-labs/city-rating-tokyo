@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Arakawa tram terminus, stubbornly local. Cheap, gritty, soft-ground risk, early last tram.",
+    "landmarks": "Joyful Minowa arcade, Toden tram loop, Sanya edge, old shotengai texture everywhere.",
+    "food": "87 restaurants, 32 izakayas. Cheap set meals, ramen, market snacks, zero polish.",
+    "nightlife": "27 late spots, no karaoke. Low-key bars and hostel spillover; the tram quits at 23:14."
+  },
+  "ja": {
+    "atmosphere": "荒川の古い都電終点、しぶとい地元感。安い、ざらつく、地盤リスク、終電早い。",
+    "landmarks": "ジョイフル三の輪商店街、都電の折返し、山谷の端、古い商店街の質感。",
+    "food": "飲食87軒、居酒屋32軒。安定食、ラーメン、市場系つまみ、磨かれてない。",
+    "nightlife": "深夜27軒、カラオケなし。地味なバーとホステル客の余波、都電は23:14で終わる。"
+  },
+  "ru": {
+    "atmosphere": "Старый трамвайный конец Arakawa, упрямо локальный. Дешево, шероховато, мягкий грунт, ранний трамвай.",
+    "landmarks": "Аркада Joyful Minowa, разворот Toden, край Sanya, фактура старого shotengai везде.",
+    "food": "87 ресторанов, 32 изакая. Дешевые сеты, рамэн, рыночные закуски, без полировки.",
+    "nightlife": "27 поздних мест, караоке нет. Тихие бары и хостельный спилловер; трамвай кончает в 23:14."
+  }
+}

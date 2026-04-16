@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small-town Odawara line stop, 5k riders, 106-min commute. Quiet, green, cheap. Dead remote.",
+    "landmarks": "17 small parks (1M sqm total). Elevated (17m), low risk infrastructure.",
+    "food": "3 listings, 1 cafe. Sparse dining culture.",
+    "nightlife": "Dead. Trains stop by 1am."
+  },
+  "ja": {
+    "atmosphere": "小田原線の小ぶりな駅。5000人/日。106分かかる。緑だが辺鄙。",
+    "landmarks": "17の小公園、計1百万平方m。安全な高さ。地震も低い。",
+    "food": "3件、カフェ1軒。食べ物なし。",
+    "nightlife": "完全に寝ている町。夜中の電車なし。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая остановка на линии Одавара. 5 тыс пассажиров, 106 мин в пути. Зелень, цены низкие, очень скучно.",
+    "landmarks": "17 скромных парков, 1 млн кв.м. Возвышенность 17м, низкий риск.",
+    "food": "3 места, 1 кафе. Еда редко.",
+    "nightlife": "Город спит. После 01:00 поездов нет."
+  }
+}

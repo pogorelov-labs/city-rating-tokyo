@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Sakura Tram stop between quiet Toshima and old Kita edges. Slow, green, very local.",
+    "landmarks": "Toden streetcar tracks, Nishigahara slopes, small parks and residential lanes. Not a destination stop.",
+    "food": "44 restaurants, 14 izakayas, 2 cafes. Modest local food, enough for residents.",
+    "nightlife": "8 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "静かな豊島と古い北区端の間、小さな都電停留場。遅く、緑が多く、完全に地元。",
+    "landmarks": "都電の線路、西ヶ原の坂、小公園と住宅路地。目的地型の停留場ではない。",
+    "food": "飲食44軒、居酒屋14軒、カフェ2軒。控えめな地元飯、住民には足りる。",
+    "nightlife": "深夜営業8軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Sakura Tram между тихой Toshima и старым краем Kita. Медленно, зелено, очень местно.",
+    "landmarks": "Рельсы Toden, склоны Nishigahara, маленькие парки и жилые переулки. Не остановка-цель.",
+    "food": "44 ресторана, 14 изакая, 2 кафе. Скромная местная еда, жителям хватает.",
+    "nightlife": "8 поздних мест, без караоке и клубов. Практически нет."
+  }
+}

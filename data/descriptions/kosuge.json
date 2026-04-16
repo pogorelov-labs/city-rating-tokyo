@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Adachi lowland beside the detention center. Cheap, odd, not charming.",
+    "landmarks": "Tokyo Detention House, Arakawa river space, Tobu Skytree Line tracks.",
+    "food": "Surprisingly many izakayas and late meals for a tiny stop. Cafes are thin.",
+    "nightlife": "Late izakayas, no karaoke or clubs. Soft-ground risk is real."
+  },
+  "ja": {
+    "atmosphere": "拘置所そばの静かな足立低地。安めで独特、可愛さはない。",
+    "landmarks": "東京拘置所、荒川の河川空間、東武スカイツリーラインの線路。",
+    "food": "小駅にしては居酒屋と遅い飯が多い。カフェは薄い。",
+    "nightlife": "遅い居酒屋あり、カラオケとクラブなし。軟弱地盤は現実的な注意点。"
+  },
+  "ru": {
+    "atmosphere": "Тихая низина Адати у detention center. Недорого, странно, не мило.",
+    "landmarks": "Tokyo Detention House, пространство Arakawa, пути Tobu Skytree Line.",
+    "food": "Для крошечной станции удивительно много изакай и поздней еды. Кафе мало.",
+    "nightlife": "Поздние изакаи, без караоке и клубов. Риск мягкого грунта реальный."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Funabashi residential hub, 59 minutes to center. 16k daily riders, green pocket zones, underrated suburbs.",
+    "landmarks": "Toyo Rapid Line junction. 422k sqm green (parks + riverside). Commuter town charm.",
+    "food": "1 restaurant, 6 food spots. Casual, neighbourhood-level only.",
+    "nightlife": "Minimal. Families head home by 9pm."
+  },
+  "ja": {
+    "atmosphere": "船橋の住宅地ハブ。中心まで59分。1.6万人が利用。緑地が充実。",
+    "landmarks": "東葉高速線沿線。422k平方メートルの公園。",
+    "food": "飲食店1軒＋スポット6軒。ご近所レベル。",
+    "nightlife": "ほぼなし。家族は9時には帰る。"
+  },
+  "ru": {
+    "atmosphere": "Жилой хаб Funabashi. 59 минут до центра. 16k пассажиров. Зелёные зоны.",
+    "landmarks": "Линия Toyo Rapid. 422k кв.м парков. Спальня со своим характером.",
+    "food": "1 ресторан + 6 точек. Соседский уровень.",
+    "nightlife": "Практически нет. Семьи разбегаются к 21:00."
+  }
+}

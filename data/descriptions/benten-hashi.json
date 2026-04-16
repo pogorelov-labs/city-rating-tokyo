@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tsurumi Line micro-station, Yokohama waterfront. Elevation 4m (flood risk area). Parks nearby (238k sqm), sports facilities strong. Last train 23:43, plan ahead.",
+    "landmarks": "Park system with 16 parks, riverside access. Athletic venues. Sports-first location.",
+    "food": "11 listings spots, 2 izakaya, 2 bars. Limited selection, working-class joints. No big name chains.",
+    "nightlife": "5 midnight venues, but no essentials (market/pharmacy/clinic). Early-finish area."
+  },
+  "ja": {
+    "atmosphere": "鶴見線の小駅、横浜川沿い。海抜4m（浸水危険）。近い公園、スポーツ施設充実。23時43分最終。",
+    "landmarks": "16の公園、川へのアクセス。スポーツ施設。体力重視。",
+    "food": "11軒、居酒屋2軒、バー2軒。限定的。",
+    "nightlife": "深夜営業5軒。ただし生活店舗なし。"
+  },
+  "ru": {
+    "atmosphere": "Мини-станция Цурумиской линии, Йокохама. 4м над морем (паводок). Парки (238к кв.м), спортсооружения. 23:43 последний.",
+    "landmarks": "16 парков, берег. Спортсоооружения. Спорт-ориентированная.",
+    "food": "11, 2 изакаи, 2 бара. Рабочие места.",
+    "nightlife": "5 ночных. Без аптек/магазинов."
+  }
+}

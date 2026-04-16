@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hardcore central-office grid between Kanda, Jimbocho, Ochanomizu. Fast, useful, expensive.",
+    "landmarks": "Kanda Myojin, Nikolai-do, Jimbocho book district. Subway exits feel endless.",
+    "food": "565 izakayas around Kanda and Jimbocho; curry, soba, salaryman lunches everywhere.",
+    "nightlife": "347 late spots, 50 bars. Heavy after-work drinking, thin club culture."
+  },
+  "ja": {
+    "atmosphere": "神田、神保町、御茶ノ水の間の本気の都心事務所街。速い、便利、高い。",
+    "landmarks": "神田明神、ニコライ堂、神保町の古書街。地下鉄出口が果てしない。",
+    "food": "神田と神保町周辺に居酒屋565軒。カレー、そば、サラリーマン昼飯だらけ。",
+    "nightlife": "深夜347軒、バー50軒。仕事帰りの飲みは濃い、クラブ文化は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Жесткая офисная сетка между Кандой, Дзимботё и Отяномидзу. Быстро, удобно, дорого.",
+    "landmarks": "Kanda Myojin, Nikolai-do, книжный район Jimbocho. Выходы метро кажутся бесконечными.",
+    "food": "565 изакая вокруг Kanda и Jimbocho; карри, соба, ланчи для офисных везде.",
+    "nightlife": "347 поздних мест, 50 баров. Сильное питье после работы, клубов мало."
+  }
+}

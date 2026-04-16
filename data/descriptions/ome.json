@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Tokyo, river air and old-town grit. Cheap, roomy, punishing commute.",
+    "landmarks": "Tama River, Ome-juku traces, hiking routes toward Mitake and the mountains.",
+    "food": "10 restaurants, 4 izakayas, 2 cafes. Enough for locals, thin for choice.",
+    "nightlife": "Three late spots, no bars. Last train before midnight says it all."
+  },
+  "ja": {
+    "atmosphere": "東京最西寄り、川の空気と古い街の渋さ。安く広い、通勤は重い。",
+    "landmarks": "多摩川、青梅宿の名残、御岳方面へ向かうハイキング動線。",
+    "food": "飲食10軒、居酒屋4軒、カフェ2軒。地元用には足りる、選択肢は細い。",
+    "nightlife": "深夜営業3軒、バーなし。終電が23時台、それが答え。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Токио, речной воздух и старая шершавость. Дёшево, просторно, ехать тяжело.",
+    "landmarks": "Tama River, следы Ome-juku, маршруты к Mitake и горам.",
+    "food": "10 ресторанов, 4 изакаи, 2 кафе. Местным хватит, выбора мало.",
+    "nightlife": "3 поздних места, баров нет. Последний поезд до полуночи всё объясняет."
+  }
+}

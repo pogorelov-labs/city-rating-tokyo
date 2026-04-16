@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keisei stop riding Chiba Station's gravity. Quiet platform, big nightlife nearby.",
+    "landmarks": "Chiba Station fringe, port-side parks, office blocks. More useful than scenic.",
+    "food": "292 restaurants, 159 izakayas, 18 bars. Chiba-center overflow does the work.",
+    "nightlife": "118 late spots, one karaoke, no clubs. Lively nearby, not on the platform."
+  },
+  "ja": {
+    "atmosphere": "千葉駅の重力圏にある小さな京成駅。ホームは静か、周辺の夜は強い。",
+    "landmarks": "千葉駅の外縁、港側の公園、オフィス街。景色より実用。",
+    "food": "飲食292件、居酒屋159件、バー18件。千葉中心部の余波が効く。",
+    "nightlife": "深夜118件、カラオケ1件、クラブなし。駅前より周辺が賑やか。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Keisei-станция в гравитации Chiba Station. Платформа тихая, ночная жизнь рядом.",
+    "landmarks": "Край Chiba Station, парки к порту, офисные блоки. Полезнее, чем живописно.",
+    "food": "292 ресторана, 159 изакай, 18 баров. Работает перелив центра Тибы.",
+    "nightlife": "118 поздних мест, одно караоке, без клубов. Живо рядом, не на платформе."
+  }
+}

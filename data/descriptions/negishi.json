@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bay-side Yokohama, industrial edges and residential slopes. 1m elevation means flood risk.",
+    "landmarks": "Negishi Line, harbor roads, Negishi Forest Park uphill. Green nearby, station-side basics sparse.",
+    "food": "13 restaurants, 6 izakayas, 1 bar. Thin station food; daily errands stay practical.",
+    "nightlife": "5 late-night spots, no karaoke or clubs. Quiet, except the late train."
+  },
+  "ja": {
+    "atmosphere": "湾岸寄りの横浜。工業の縁と住宅の坂。標高1mで浸水リスクは無視できない。",
+    "landmarks": "根岸線、港湾道路、坂上の根岸森林公園。緑は近いが駅前機能は薄い。",
+    "food": "飲食13軒、居酒屋6軒、バー1軒。駅前飯は薄い、用事は実用寄り。",
+    "nightlife": "深夜営業5軒、カラオケとクラブなし。終電は遅いが街は静か。"
+  },
+  "ru": {
+    "atmosphere": "Йокогама у залива: индустриальные края и жилые склоны. 1 м высоты — риск подтопления.",
+    "landmarks": "Negishi Line, портовые дороги, Negishi Forest Park наверху. Зелень рядом, станционный быт редкий.",
+    "food": "13 ресторанов, 6 изакая, 1 бар. Еды у станции мало; повседневные дела чисто практичные.",
+    "nightlife": "5 поздних мест, без караоке и клубов. Тихо, разве что поезд поздний."
+  }
+}

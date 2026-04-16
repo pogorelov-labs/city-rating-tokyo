@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Interchange chaos — 3 lines converge, 34k daily passengers. Corporate commuter hub, zero character, 46 min to center.",
+    "landmarks": "Musashino/Narita/Hokuso triple-lock. Shopping mall nexus, parking lot urban grid.",
+    "food": "6 listings, 3 izakaya, minimal depth. Commuter fuel stations only.",
+    "nightlife": "2 midnight spots, 0 karaoke, 0 clubs. Salary men vanish by 21:00."
+  },
+  "ja": {
+    "atmosphere": "3路線の乗り換え地獄。34000人/日、会社員ハブ、個性なし。",
+    "landmarks": "武蔵野線・成田スカイアクセス・北総。駅ビルと駐車場。",
+    "food": "ホットペッパー6軒、居酒屋3。コンビニ補給地。",
+    "nightlife": "深夜2軒、カラオケなし。21時に消滅。"
+  },
+  "ru": {
+    "atmosphere": "Узел трёх линий, давка в часы пик (34k пассажиров). Офисный коридор, 46 мин до центра.",
+    "landmarks": "Пересечение 3 линий. Торговый центр и паркинг.",
+    "food": "6 мест, 3 изакаи. Рабочие перекусы.",
+    "nightlife": "2 поздних бара, нет клубов. Офисники уходят в 21:00."
+  }
+}

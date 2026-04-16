@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Skytree-side shitamachi, tourist edges and calm residential blocks. River breeze helps.",
+    "landmarks": "Asahi Beer Hall, Sumida River, Tokyo Skytree, Sensoji over the bridge.",
+    "food": "280 restaurants, 68 izakayas, 30 cafes. Good cafe spread, tourist pricing near the river.",
+    "nightlife": "51 late-night spots, 4 karaoke. Hostel bars, light drinking, early fade."
+  },
+  "ja": {
+    "atmosphere": "スカイツリー側の下町。観光の端と静かな住宅街が混ざる。川風が救い。",
+    "landmarks": "アサヒビール本社、隅田川、東京スカイツリー、橋を渡れば浅草寺。",
+    "food": "飲食280軒、居酒屋68軒、カフェ30軒。カフェ強め、川沿いは観光価格。",
+    "nightlife": "深夜営業51軒、カラオケ4軒。ホステルバーと軽い飲み、早めに薄くなる。"
+  },
+  "ru": {
+    "atmosphere": "Ситамати у Skytree: туристические края и спокойные жилые кварталы. Речной ветер спасает.",
+    "landmarks": "Asahi Beer Hall, река Sumida, Tokyo Skytree, Sensoji через мост.",
+    "food": "280 ресторанов, 68 изакая, 30 кафе. Кафе сильные, у реки цены туристические.",
+    "nightlife": "51 позднее место, 4 караоке. Хостел-бары, лёгкая выпивка, раннее затухание."
+  }
+}

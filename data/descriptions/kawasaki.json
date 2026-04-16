@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big rough-edged hub between Tokyo and Yokohama. Convenient, loud, not delicate.",
+    "landmarks": "Lazona, Cinecitta, Azalea underground, industrial Kawasaki orbit beyond.",
+    "food": "Massive izakaya field, ramen, yakiniku, bars. Quality swings with the crowd.",
+    "nightlife": "Late izakayas everywhere, bars plenty, karaoke sparse. Grit stays after midnight."
+  },
+  "ja": {
+    "atmosphere": "東京と横浜の間の大きな荒削りハブ。便利で騒がしい、繊細ではない。",
+    "landmarks": "ラゾーナ、チネチッタ、アゼリア地下街、その先に工業地帯の川崎。",
+    "food": "巨大な居酒屋密度、ラーメン、焼肉、バー。客層と一緒に質も揺れる。",
+    "nightlife": "遅い居酒屋だらけ、バーも多い、カラオケは少なめ。深夜は荒さが残る。"
+  },
+  "ru": {
+    "atmosphere": "Большой шершавый хаб между Токио и Йокогамой. Удобно, громко, не деликатно.",
+    "landmarks": "Lazona, Cinecitta, подземная Azalea, дальше индустриальная орбита Kawasaki.",
+    "food": "Огромное поле изакай, рамэн, yakiniku, бары. Качество скачет вместе с толпой.",
+    "nightlife": "Поздние изакаи везде, баров много, караоке мало. После полуночи остается grit."
+  }
+}

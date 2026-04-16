@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal town on Sotobo Line, southern Chiba. Tiny station (652 daily riders). Flood risk: elevation 2m. Seaside quietude.",
+    "landmarks": "Fishing village scale. One supermarket. Ocean-side charm, low-rise everywhere.",
+    "food": "2 spots, 0 bars, 0 cafes, 0. Extremely sparse. Seafood stalls dominate street food.",
+    "nightlife": "Minimal. Last train 23:57. Sunrise people, not party people."
+  },
+  "ja": {
+    "atmosphere": "房総線南端、御宿の海沿い村。駅乗客652人/日。高さ2m、洪水リスク。寂しい海岸。",
+    "landmarks": "漁師町。スーパー1。海辺の雰囲気、平屋ばかり。",
+    "food": "2件、バーなし、カフェなし、なし。本当に稀。街頭は海産物。",
+    "nightlife": "最小。23時57分が最終。朝型タウン。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный город на линии Сотобо, юг Чибы. Крошечная станция (652 пассажира/день). Риск наводнения: 2м. Морская тишь.",
+    "landmarks": "Рыбацкая деревня. Супермаркет 1. Приморский быт, одноэтажки.",
+    "food": "2 места, барчиков: 0, кафе: 0, : 0. По-настоящему редко. Морепродукты — основа.",
+    "nightlife": "Минимально. Последний поезд 23:57. Рано встают, поздно спят."
+  }
+}

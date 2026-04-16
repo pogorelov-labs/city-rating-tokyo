@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Vertical suburb and transfer machine. Extremely connected, crowded, polished, not cozy.",
+    "landmarks": "Tower blocks, Grand Tree, Tama River side. Family convenience over old-town character.",
+    "food": "204 spots, 110 izakayas, 6 cafes. Plenty of dinner options, few memorable bars.",
+    "nightlife": "68 late spots, 3 karaoke, no clubs. After-work drinks, then tower elevators."
+  },
+  "ja": {
+    "atmosphere": "縦型郊外と乗換マシン。接続は強烈、混む、整っている、温かみは薄い。",
+    "landmarks": "タワマン群、グランツリー、多摩川側。昔の街情緒より家族の便利さ。",
+    "food": "飲食204軒、居酒屋110軒、カフェ6軒。夕食の選択肢は多い、記憶に残るバーは少ない。",
+    "nightlife": "深夜営業68軒、カラオケ3軒、クラブなし。仕事帰りに飲んで、タワマンへ戻る。"
+  },
+  "ru": {
+    "atmosphere": "Вертикальный пригород и машина пересадок. Связность бешеная, толпы, гладко, неуютно.",
+    "landmarks": "Башни, Grand Tree, сторона реки Tama. Семейное удобство сильнее старого характера.",
+    "food": "204 места, 110 изакая, 6 кафе. Ужин выбрать легко, запоминающихся баров мало.",
+    "nightlife": "68 поздних точек, 3 караоке, без клубов. Выпил после работы — и обратно в лифт."
+  }
+}

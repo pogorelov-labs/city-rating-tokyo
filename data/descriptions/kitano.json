@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hachioji edge suburb with Keio split-line utility. Cheap, safe, green, far from central Tokyo.",
+    "landmarks": "Keio Takao gateway, low hills, residential riverside pockets. Quiet base before mountain country.",
+    "food": "11 restaurants, 4 izakayas, no bars or cafes. Daily basics only, bring expectations down.",
+    "nightlife": "3 late spots, no karaoke, no clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "八王子端の郊外、京王分岐の実用駅。安く安全で緑あり、都心からは遠い。",
+    "landmarks": "京王高尾方面の入口、低い丘、住宅地の川沿い。山側に入る前の静かな拠点。",
+    "food": "飲食11軒、居酒屋4軒、バーもカフェもなし。日常の最低限、期待値は下げる。",
+    "nightlife": "深夜営業3軒、カラオケなし、クラブなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на краю Hachioji, полезная развилка Keio. Дёшево, спокойно, зелено, далеко от центра.",
+    "landmarks": "Вход к Keio Takao, низкие холмы, жилые карманы у реки. Тихая база перед горной зоной.",
+    "food": "11 ресторанов, 4 изакая, без баров и кафе. Только ежедневный минимум, ожидания ниже.",
+    "nightlife": "3 поздних места, без караоке, без клубов. Практически нет."
+  }
+}

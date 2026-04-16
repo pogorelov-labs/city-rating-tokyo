@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Theater district meets Marunouchi polish. Central, grand, crowded, almost impossible as home.",
+    "landmarks": "Hibiya Park, Tokyo Midtown Hibiya, Imperial Hotel, theaters stacked around Yurakucho.",
+    "food": "1941 restaurants, 635 izakayas, 190 bars. Elite choice, expense-account gravity.",
+    "nightlife": "640 late spots, cocktail bars and izakayas. Polished, pricey, not scrappy."
+  },
+  "ja": {
+    "atmosphere": "劇場街と丸の内の磨きが交差。中心、壮大、混む、住む場所としてはほぼ無理。",
+    "landmarks": "日比谷公園、東京ミッドタウン日比谷、帝国ホテル、有楽町周辺の劇場群。",
+    "food": "飲食1941軒、居酒屋635軒、バー190軒。選択肢は一流、経費の重力が強い。",
+    "nightlife": "深夜営業640軒、カクテルバーと居酒屋。磨かれて高い、雑さはない。"
+  },
+  "ru": {
+    "atmosphere": "Театральный район встречает лоск Marunouchi. Центр, масштаб, толпа, почти не дом.",
+    "landmarks": "Hibiya Park, Tokyo Midtown Hibiya, Imperial Hotel, театры вокруг Yurakucho.",
+    "food": "1941 ресторан, 635 изакая, 190 баров. Элитный выбор, гравитация expense account.",
+    "nightlife": "640 поздних мест, коктейль-бары и изакая. Гладко, дорого, не шершаво."
+  }
+}

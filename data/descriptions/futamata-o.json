@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain backwater on Ome Line. Massive green (78M sqm). Virtually zero crime. Isolate escape.",
+    "landmarks": "Futamata-O, 229m elevation. 1 cultural venue. Forest surrounds. Seismic low (rare).",
+    "food": "1 spot. Nature supplies dinner.",
+    "nightlife": "None. Last train 23:47."
+  },
+  "ja": {
+    "atmosphere": "青梅線の山奥。巨大な緑地（7844万平方メートル）。犯罪ほぼゼロ。隔離逃亡。",
+    "landmarks": "二俣尾、標高229m。文化施設1軒。森に包囲。地震リスク低い（稀）。",
+    "food": "1軒。自然が夜食を供給。",
+    "nightlife": "なし。最終電車23:47。"
+  },
+  "ru": {
+    "atmosphere": "Горная глушь на линии Омэ. Колоссальная зелень (78M кв.м). Практически нулевая преступность. Изолированное бегство.",
+    "landmarks": "Футамата-О, высота 229м. 1 культурное заведение. Лес окружает. Сейсмический низкий (редко).",
+    "food": "1 место. Природа поставляет ужин.",
+    "nightlife": "Нет. Последний поезд 23:47."
+  }
+}

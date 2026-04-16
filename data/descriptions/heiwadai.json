@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima residential calm with two metro lines. Green and safe, but socially sleepy.",
+    "landmarks": "Kanpachi backstreets, small parks, low-rise blocks. Useful base, not a destination.",
+    "food": "11 restaurants, 7 izakayas. Super-local meals; for variety, ride toward Ikebukuro.",
+    "nightlife": "4 late spots, no karaoke. Local drinks only, no reason to cross town."
+  },
+  "ja": {
+    "atmosphere": "地下鉄2路線の練馬住宅地。緑が多く安全、ただし社交は眠い。",
+    "landmarks": "環八裏道、小公園、低層住宅街。拠点として便利、目的地ではない。",
+    "food": "飲食11軒、居酒屋7軒。超ローカル飯。選択肢は池袋方面へ。",
+    "nightlife": "深夜4軒、カラオケなし。近所飲みだけ、わざわざ来る夜ではない。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная Нэрима с двумя метро. Зелено и безопасно, но социально сонно.",
+    "landmarks": "Закоулки Kanpachi, малые парки, низкая застройка. Удобная база, не цель.",
+    "food": "11 ресторанов, 7 изакая. Сверхлокальная еда; за выбором лучше к Икэбукуро.",
+    "nightlife": "4 поздних места, караоке нет. Только местные напитки, ехать ради ночи незачем."
+  }
+}

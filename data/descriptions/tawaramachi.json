@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Asakusa spillover, kitchenware shops and tourists. Delicious, walkable, crime stats ugly.",
+    "landmarks": "Kappabashi Kitchen Town, Senso-ji within reach, Ginza Line at the door. Hostel belt nearby.",
+    "food": "567 spots plus 508 pins. Izakaya, cafes, old soba, tourist traps; choose carefully.",
+    "nightlife": "132 late spots, six karaoke, 55 hostels. Busy drinking, not club-heavy."
+  },
+  "ja": {
+    "atmosphere": "浅草の余波、合羽橋と観光客。食は強い、歩ける、治安データは悪い。",
+    "landmarks": "合羽橋道具街、浅草寺も徒歩圏、銀座線すぐ。ホステル帯が近い。",
+    "food": "掲載567軒、508件。居酒屋、カフェ、老舗そば、観光客向けも混在。",
+    "nightlife": "深夜132軒、カラオケ6、ホステル55。飲みは強い、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Эхо Асакусы, Kappabashi и туристы. Вкусно, пешком удобно, статистика crime неприятная.",
+    "landmarks": "Kappabashi Kitchen Town, Senso-ji рядом, Ginza Line у двери. Вокруг пояс хостелов.",
+    "food": "567 мест плюс 508 точек. Изакая, кафе, старая соба, туристические ловушки; выбирать аккуратно.",
+    "nightlife": "132 поздних места, шесть караоке, 55 хостелов. Пить активно, клубов мало."
+  }
+}

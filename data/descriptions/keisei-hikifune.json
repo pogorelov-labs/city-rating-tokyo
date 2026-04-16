@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sumida shitamachi under Skytree's edge. Practical, low-rise, soft-ground flag at river level.",
+    "landmarks": "Hikifune lanes, Keisei Oshiage tracks, Skytree skyline nearby. Old shops survive.",
+    "food": "119 restaurants, 41 izakayas, 13 cafes. Local comfort food, modest bars.",
+    "nightlife": "26 late spots, no karaoke or clubs. Quiet izakaya night."
+  },
+  "ja": {
+    "atmosphere": "スカイツリー端の墨田下町。実用的で低層、川沿いの軟弱地盤リスクあり。",
+    "landmarks": "曳舟の路地、京成押上線、近いスカイツリーの空。古い店も残る。",
+    "food": "飲食119軒、居酒屋41軒、カフェ13軒。地元の安心飯、バーは控えめ。",
+    "nightlife": "深夜営業26軒、カラオケもクラブもなし。静かな居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Sumida shitamachi у края Skytree. Практично, низко, мягкий грунт на речном уровне.",
+    "landmarks": "Переулки Hikifune, пути Keisei Oshiage, силуэт Skytree рядом. Старые лавки живы.",
+    "food": "119 ресторанов, 41 изакая, 13 кафе. Локальная comfort food, бары скромные.",
+    "nightlife": "26 поздних мест, без караоке и клубов. Тихая изакая-ночь."
+  }
+}

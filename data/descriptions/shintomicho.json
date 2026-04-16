@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo-ku backstreet office-residential mix, Ginza-adjacent prices, weekday pulse.",
+    "landmarks": "Yurakucho Line stop, river-grid blocks, Tsukiji and Ginza within easy reach.",
+    "food": "1020 restaurants, 277 izakayas, 64 bars. Lunch power, dinner options, rent hurts.",
+    "nightlife": "174 late spots. Bar-heavy for Chuo, but still office-toned."
+  },
+  "ja": {
+    "atmosphere": "中央区の裏通り、職住混在。銀座圏の値段、平日の脈拍が強い。",
+    "landmarks": "有楽町線の小駅、川沿いの格子街区、築地と銀座がすぐ近い。",
+    "food": "飲食1020軒、居酒屋277軒、バー64軒。昼も夜も強いが家賃は痛い。",
+    "nightlife": "深夜174軒。中央区ではバー多め、でも空気はまだ事務所街。"
+  },
+  "ru": {
+    "atmosphere": "Закоулки Тюо-ку, офисы вперемешку с жильём. Почти Гиндза, цены соответствуют.",
+    "landmarks": "Станция Yurakucho Line, речная сетка кварталов, Цукидзи и Гиндза под боком.",
+    "food": "1020 ресторанов, 277 изакая, 64 бара. Обеды сильные, ужинов море, аренда кусается.",
+    "nightlife": "174 поздних места. Много баров для Тюо, но вайб всё ещё офисный."
+  }
+}

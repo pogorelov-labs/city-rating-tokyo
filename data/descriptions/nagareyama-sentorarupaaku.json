@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tsukuba Express suburb, 53 min, planned new town. Sprawling parks (1.1M sqm), sparse living. Soulless efficiency.",
+    "landmarks": "Central Park dominates — 41 green spaces. Shopping mall. Designed from nothing.",
+    "food": "Scarce — 3 listings, 1 + 2 cafes. No izakaya. Town too young for character.",
+    "nightlife": "Minimal — none listed. Sleepy suburb, train ends 00:24."
+  },
+  "ja": {
+    "atmosphere": "筑波急行郊外、53分、計画都市。巨大公園（1.1M平米）、人気なし。人工的。",
+    "landmarks": "セントラルパーク（41箇所）。モール。無から設計。",
+    "food": "稀少 — 3 listings + 1 。新興地すぎて個性なし。",
+    "nightlife": "ほぼなし。終電00:24。"
+  },
+  "ru": {
+    "atmosphere": "Цукуба-Экспресс пригород, 53 мин, плановый город. Огромные парки (1.1M кв.м), пусто, роботизированно.",
+    "landmarks": "Центральный парк (41 участок). Молл. Построено с нуля.",
+    "food": "Редко — 3 listings, 1 + кафе. Новый город, нет характера.",
+    "nightlife": "Нет. Последний поезд в 00:24."
+  }
+}

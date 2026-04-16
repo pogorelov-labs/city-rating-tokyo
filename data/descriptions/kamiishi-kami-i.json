@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kamishakujii is Nerima suburbia done right. Practical, leafy, sleepy after dinner.",
+    "landmarks": "Shakujii-side parks and low shopping streets. One Seibu line keeps ambitions modest.",
+    "food": "35 restaurants, 15 izakayas, 1 bar. Reliable neighborhood meals, little destination pull.",
+    "nightlife": "16 late spots, no karaoke, no clubs. Local beers, early last orders."
+  },
+  "ja": {
+    "atmosphere": "上石神井は練馬郊外の優等生。実用的で緑あり、夕食後は眠い。",
+    "landmarks": "石神井側の公園と低い商店街。西武一本で背伸びしない街。",
+    "food": "飲食35軒、居酒屋15軒、バー1軒。近所飯は堅い、遠征するほどではない。",
+    "nightlife": "深夜営業16軒、カラオケなし、クラブなし。地元ビール、早めのラスト。"
+  },
+  "ru": {
+    "atmosphere": "Kamishakujii — правильная Нэрима-субурбия. Удобно, зелено, сонно после ужина.",
+    "landmarks": "Парки в сторону Shakujii и низкие торговые улицы. Одна Seibu-линия держит амбиции скромно.",
+    "food": "35 ресторанов, 15 изакая, 1 бар. Надёжная районная еда, слабый повод ехать специально.",
+    "nightlife": "16 поздних точек, без караоке и клубов. Местное пиво, ранний last order."
+  }
+}

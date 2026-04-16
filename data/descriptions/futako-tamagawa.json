@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished riverside Setagaya, stroller traffic and pricey calm. Pretty, curated, not cheap.",
+    "landmarks": "Tamagawa riverbank, Rise complex, Rakuten towers. Weekend terraces fill fast.",
+    "food": "91 restaurants, 31 izakayas. Better cafes and mall dining than backstreet grit.",
+    "nightlife": "20 late spots, 2 karaoke. Drinks exist, but the river sleeps early."
+  },
+  "ja": {
+    "atmosphere": "多摩川沿いの磨かれた世田谷。ベビーカー多め、高めで穏やか。綺麗だが安くない。",
+    "landmarks": "多摩川河川敷、ライズ、楽天ビル群。週末のテラス席はすぐ埋まる。",
+    "food": "飲食91軒、居酒屋31軒。路地の荒さより、カフェとモール飯が強い。",
+    "nightlife": "深夜20軒、カラオケ2軒。飲めるが、川沿いの夜は早く終わる。"
+  },
+  "ru": {
+    "atmosphere": "Вычишенный берег Сэтагаи, коляски и дорогой покой. Красиво, аккуратно, не дешево.",
+    "landmarks": "Набережная Тамагавы, Rise, башни Rakuten. В выходные террасы забиваются быстро.",
+    "food": "91 ресторан, 31 изакая. Кафе и молл-еда сильнее, чем уличная шероховатость.",
+    "nightlife": "20 поздних мест, 2 караоке. Выпить можно, но речной район засыпает рано."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima daily-life station, practical and family-leaning. Busy enough, not scene-y.",
+    "landmarks": "Nerima Art Museum nearby, Chihiro Art Museum side trips, Seibu local streets.",
+    "food": "40 restaurants, 13 izakayas, 3 cafes. Useful local meals, not much variety.",
+    "nightlife": "11 late spots, no karaoke or clubs. Minimal after dinner."
+  },
+  "ja": {
+    "atmosphere": "練馬の日常駅、実用的で家族寄り。そこそこ混むが、尖った街ではない。",
+    "landmarks": "練馬区立美術館近く、ちひろ美術館方面、西武線沿いの生活道路。",
+    "food": "飲食40軒、居酒屋13軒、カフェ3軒。地元飯は使えるが、幅は狭い。",
+    "nightlife": "深夜営業11軒、カラオケもクラブもなし。夕飯後はかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Станция повседневной Nerima, практично и семейно. Людно достаточно, сцены мало.",
+    "landmarks": "Рядом Nerima Art Museum, вылазки к Chihiro Art Museum, локальные улицы Seibu.",
+    "food": "40 ресторанов, 13 изакая, 3 кафе. Полезная локальная еда, разнообразия немного.",
+    "nightlife": "11 поздних мест, без караоке и клубов. После ужина почти пусто."
+  }
+}

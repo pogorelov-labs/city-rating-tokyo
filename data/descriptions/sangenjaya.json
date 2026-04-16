@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya cool-kid hub, messy alleys, commuter crush. Fun, not calm.",
+    "landmarks": "Carrot Tower, Setagaya tram, Sankaku Chitai lanes. Dense, lived-in.",
+    "food": "284 restaurants, 97 izakayas, 35 bars. Counters, ramen, wine, late snacks.",
+    "nightlife": "153 late spots, 3 karaoke. Strong bar crawl, few clubs."
+  },
+  "ja": {
+    "atmosphere": "世田谷の遊び慣れた人の街、雑な路地と通勤混雑。楽しいが静かではない。",
+    "landmarks": "キャロットタワー、世田谷線、三角地帯の飲み屋路地。密で生活感あり。",
+    "food": "飲食284軒、居酒屋97軒、バー35軒。小さなカウンター、ラーメン、ワインバー、夜食。",
+    "nightlife": "深夜153軒、カラオケ3軒。飲み歩き強い、クラブの重力は弱い。"
+  },
+  "ru": {
+    "atmosphere": "Хаб сетагайских cool kids, кривые переулки и давка коммьютеров. Весело, но не спокойно.",
+    "landmarks": "Carrot Tower, трамвай Setagaya Line, питейные переулки Sankaku Chitai. Плотно, обжито.",
+    "food": "284 ресторана, 97 изакая, 35 баров. Крошечные стойки, рамен, винные бары, ночные закуски.",
+    "nightlife": "153 поздних места, 3 караоке. Сильный бар-хоппинг, без клубной гравитации."
+  }
+}

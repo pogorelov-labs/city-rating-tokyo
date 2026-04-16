@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Arakawa hub, tram bells and Chiyoda commuters. Useful, unpolished, soft-ground risk.",
+    "landmarks": "Sunpop Machiya, Arakawa Natural Park, Sakura Tram stops. Daily-life Tokyo, not sightseeing.",
+    "food": "91 restaurants, 37 izakayas; ramen and family spots beat cafes. Good everyday density.",
+    "nightlife": "32 late-night spots, 1 karaoke. Izakaya after-work scene, no clubs."
+  },
+  "ja": {
+    "atmosphere": "荒川の古い乗換拠点。都電の音、千代田線通勤。便利だが粗い、地盤リスクあり。",
+    "landmarks": "サンポップ町屋、荒川自然公園、都電停留場。観光地より生活の東京。",
+    "food": "飲食91軒、居酒屋37軒。ラーメンと家族向けが強い、カフェは控えめ。",
+    "nightlife": "深夜営業32軒、カラオケ1軒。仕事帰りの居酒屋中心、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Старый узел Аракавы, звон трамвая и поток Chiyoda. Практично, шероховато, мягкий грунт.",
+    "landmarks": "Sunpop Machiya, парк Arakawa Natural, остановки Sakura Tram. Токио для быта, не открыток.",
+    "food": "91 ресторан, 37 изакая; рамен и семейные места сильнее кафе. Хорошо на каждый день.",
+    "nightlife": "32 поздних места, 1 караоке. Изакая после работы, клубов нет."
+  }
+}

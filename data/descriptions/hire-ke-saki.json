@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Ryutetsu stop, almost village-scale. Cheap, quiet, awkward for commuting.",
+    "landmarks": "Nagareyama Line nostalgia, low houses, small parks. No big landmark.",
+    "food": "Surprisingly usable izakaya strip for a tiny station. Cafes thin, basics OK.",
+    "nightlife": "A few late izakayas and one karaoke. No clubs."
+  },
+  "ja": {
+    "atmosphere": "流鉄の小さな駅、ほぼ村サイズ。安くて静か、通勤は扱いにくい。",
+    "landmarks": "流山線のレトロ感、低層住宅、小さな公園。大きな名所はない。",
+    "food": "小駅にしては使える居酒屋筋。カフェは薄い、基本は足りる。",
+    "nightlife": "遅い居酒屋が少し、カラオケ1軒。クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Ryutetsu, почти деревенский масштаб. Дешево, тихо, commute неловкий.",
+    "landmarks": "Ностальгия Nagareyama Line, низкие дома, малые парки. Большого ориентира нет.",
+    "food": "Для такой станции неожиданно рабочая полоса изакай. Кафе мало, база есть.",
+    "nightlife": "Несколько поздних изакай и одно караоке. Клубов нет."
+  }
+}

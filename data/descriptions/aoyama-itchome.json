@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy-polished junction, green and extremely expensive. Convenient, immaculate, low warmth.",
+    "landmarks": "Meiji Jingu Gaien, Akasaka Palace edge, Aoyama Cemetery nearby. Wide roads, old trees.",
+    "food": "195 restaurants, 40 izakayas, 13 bars. Quality over chaos, office and design crowd.",
+    "nightlife": "45 late spots, no karaoke or clubs. Quiet drinks, Roppongi elsewhere."
+  },
+  "ja": {
+    "atmosphere": "大使館的に磨かれた交差点、緑が多く超高い。便利で清潔、温度は低め。",
+    "landmarks": "明治神宮外苑、赤坂御用地の端、近い青山霊園。広い道と古い木。",
+    "food": "飲食195軒、居酒屋40軒、バー13軒。混沌より質、オフィスとデザイン人種。",
+    "nightlife": "深夜営業45軒、カラオケもクラブもなし。静かな飲み、六本木は別場所。"
+  },
+  "ru": {
+    "atmosphere": "Посольски отполированный узел, зелено и очень дорого. Удобно, идеально, мало тепла.",
+    "landmarks": "Meiji Jingu Gaien, край Akasaka Palace, Aoyama Cemetery рядом. Широкие дороги, старые деревья.",
+    "food": "195 ресторанов, 40 изакая, 13 баров. Качество вместо хаоса, офисная и design-толпа.",
+    "nightlife": "45 поздних мест, без караоке и клубов. Тихие напитки, Roppongi в другом месте."
+  }
+}

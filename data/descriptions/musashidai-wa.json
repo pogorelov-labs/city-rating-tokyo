@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Safe haven: crime zero, low seismic (91m hill). Seibu Tamako exurb, isolated. Family exile.",
+    "landmarks": "9.4 sqm green (forests), hiking trails. Rural.",
+    "food": "0 listings, 1. Bring your own.",
+    "nightlife": "None. Convenience store at 11pm."
+  },
+  "ja": {
+    "atmosphere": "安全地帯：犯罪ゼロ。地震低い(91m丘)。武蔵野台和、孤立。家族移住先。",
+    "landmarks": "9.4k平米緑地(林)、山道。田舎。",
+    "food": "0軒、1軒。持参推奨。",
+    "nightlife": "皆無。コンビニのみ23時。"
+  },
+  "ru": {
+    "atmosphere": "Оазис безопасности: преступность ноль, низкий сейсм риск (91м). Сэйбу, изолирован. Семейная ссылка.",
+    "landmarks": "9.4k кв.м лесов, туристические тропы. Сельская.",
+    "food": "0, 1. Приносите свои.",
+    "nightlife": "Нет. Удобный магазин в 23:00."
+  }
+}

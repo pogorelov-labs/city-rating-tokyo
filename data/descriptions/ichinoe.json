@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Flat Edogawa suburb on the Shinjuku Line. Practical and green, with flood and soft-ground risk.",
+    "landmarks": "Ichinoe Nanushi Yashiki, Shinkawa walks, broad lowland parks.",
+    "food": "Everyday ramen, family spots, a few izakayas. Useful, not a night-out magnet.",
+    "nightlife": "Four late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "新宿線沿いの平坦な江戸川住宅地。実用的で緑あり、洪水と軟弱地盤は注意。",
+    "landmarks": "一之江名主屋敷、新川沿いの散歩道、低地の広い公園。",
+    "food": "日常のラーメン、ファミリー店、居酒屋少し。便利だが夜遊び目的ではない。",
+    "nightlife": "遅い店4軒、カラオケとクラブなし。最小限。"
+  },
+  "ru": {
+    "atmosphere": "Плоский пригород Эдогавы на Shinjuku Line. Практично и зелено, но паводок и мягкий грунт.",
+    "landmarks": "Ichinoe Nanushi Yashiki, прогулки Shinkawa, широкие низинные парки.",
+    "food": "Будничный рамэн, семейные места, немного изакай. Удобно, не магнит для ночи.",
+    "nightlife": "Четыре поздних места, без караоке и клубов. Минимально."
+  }
+}

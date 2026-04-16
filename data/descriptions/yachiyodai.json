@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keisei bedroom town with real foot traffic. Affordable, useful, far from inner Tokyo.",
+    "landmarks": "Yachiyodai station shops, green pockets, residential grids. Old suburban new-town feel.",
+    "food": "41 restaurants in listings, 17 izakayas, shows many extras. Everyday food is fine.",
+    "nightlife": "15 late spots, 6 karaoke, 2 clubs. Small but louder than expected."
+  },
+  "ja": {
+    "atmosphere": "京成沿いのベッドタウン、駅前は意外と人が多い。安く便利、都心は遠い。",
+    "landmarks": "八千代台駅前商店、小さな緑地、住宅街の格子。古いニュータウン感。",
+    "food": "登録飲食41件、居酒屋17件、では小店多め。日常飯は十分。",
+    "nightlife": "深夜15件、カラオケ6件、クラブ2件。小さいが思ったより音がある。"
+  },
+  "ru": {
+    "atmosphere": "Спальный город Keisei с настоящим потоком у станции. Доступно, полезно, до центра далеко.",
+    "landmarks": "Магазины Yachiyodai Station, зелёные карманы, жилые сетки. Старый new-town вайб.",
+    "food": "41 ресторан в списках, 17 изакая, видит ещё мелкие места. На каждый день нормально.",
+    "nightlife": "15 поздних мест, 6 караоке, 2 клуба. Маленько, но громче ожидаемого."
+  }
+}

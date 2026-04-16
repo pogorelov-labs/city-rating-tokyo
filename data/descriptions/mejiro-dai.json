@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hachioji hill suburb, very safe, cheap, slow to center. High, dry, sleepy.",
+    "landmarks": "Keio Takao-line terraces, Mejirodai danchi blocks, small parks, quiet slopes.",
+    "food": "9 restaurants, 2 izakayas, no cafes. Daily basics only.",
+    "nightlife": "One late spot, no bars, no karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "八王子の丘陵住宅地、かなり安全で安い、都心は遠い。高台で乾いて眠い。",
+    "landmarks": "京王高尾線沿いの段丘、めじろ台団地、小公園、静かな坂道。",
+    "food": "飲食9軒、居酒屋2軒、カフェなし。日常最低限だけ。",
+    "nightlife": "深夜1軒、バーなし、カラオケなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Холмистый пригород Хатиодзи, очень безопасно, дешево, до центра медленно.",
+    "landmarks": "Террасы Keio Takao Line, кварталы Mejirodai danchi, маленькие парки, тихие склоны.",
+    "food": "9 ресторанов, 2 изакаи, кафе нет. Только будничный минимум.",
+    "nightlife": "1 позднее место, без баров и караоке. Минимально."
+  }
+}
