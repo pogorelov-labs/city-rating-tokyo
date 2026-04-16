@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyu Tamagawa local stop, safe and neighborly. Compact streets, river access, limited buzz.",
+    "landmarks": "Nitta Shrine, Musashi-Nitta shopping street, Tama River green belt. Small-scale Ota-ku.",
+    "food": "54 restaurants, 23 izakayas, barely any cafes. Good for dinner basics, weak for lingering.",
+    "nightlife": "22 late spots, no karaoke, no clubs. Local drinks only; last train hits hard."
+  },
+  "ja": {
+    "atmosphere": "東急多摩川線のローカル駅、安全で近所感強い。小さな通り、多摩川近い、刺激は少ない。",
+    "landmarks": "新田神社、武蔵新田商店街、多摩川緑地。小規模な大田区。",
+    "food": "飲食54軒、居酒屋23軒、カフェはほぼなし。晩飯の基本は強い、長居は弱い。",
+    "nightlife": "深夜22軒、カラオケなし、クラブなし。地元飲みだけ、終電はシビア。"
+  },
+  "ru": {
+    "atmosphere": "Локальная остановка Tokyu Tamagawa, безопасно и по-соседски. Узкие улицы, река рядом, мало драйва.",
+    "landmarks": "Nitta Shrine, торговая улица Musashi-Nitta, зелень Tama River. Малый масштаб Ota-ku.",
+    "food": "54 ресторана, 23 изакая, кафе почти нет. Базовый ужин сильный, зависать негде.",
+    "nightlife": "22 поздних места, без караоке и клубов. Только локальные напитки; последний поезд жёсткий."
+  }
+}

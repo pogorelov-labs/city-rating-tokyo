@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Suginami on Seibu Shinjuku, safe and green. Sleepy, not stylish.",
+    "landmarks": "Gundam statue by the station, old Sunrise orbit, residential lanes and pocket parks.",
+    "food": "Small izakaya and local diner set. Enough for dinner, weak for cafes.",
+    "nightlife": "Late izakayas, no karaoke or clubs. Neighborhood-only."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線の静かな杉並。安全で緑あり、ただし眠い。",
+    "landmarks": "駅前のガンダム像、旧サンライズ周辺、住宅街と小さな公園。",
+    "food": "小さな居酒屋と地元食堂のセット。夕食は足りる、カフェは弱い。",
+    "nightlife": "遅い居酒屋はある、カラオケとクラブなし。完全に近所用。"
+  },
+  "ru": {
+    "atmosphere": "Тихий Сугинами на Seibu Shinjuku, безопасно и зелено. Сонно, не стильно.",
+    "landmarks": "Статуя Gundam у станции, орбита старой Sunrise, жилые улицы и малые парки.",
+    "food": "Малый набор изакай и местных столовых. На ужин хватит, кафе слабые.",
+    "nightlife": "Поздние изакаи, без караоке и клубов. Только районный формат."
+  }
+}

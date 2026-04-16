@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet temple-side stop between Funabashi and Ichikawa. Cheap, green, slow to center.",
+    "landmarks": "Hokekyo-ji approach, old shopping lanes, leafy temple grounds. No big-city gloss.",
+    "food": "38 listed spots plus backstreet finds; izakaya over cafes. Local, not destination dining.",
+    "nightlife": "9 late spots, 2 bars, no karaoke. Soft local drinking only."
+  },
+  "ja": {
+    "atmosphere": "法華経寺の参道に寄る静かな京成駅。安め、緑多め、都心は遠い。",
+    "landmarks": "法華経寺参道、古い商店街、寺の緑。大都市の艶はない。",
+    "food": "飲食38件、裏通りにも店あり。カフェより居酒屋、地元向け。",
+    "nightlife": "深夜9件、バー2件、カラオケなし。近所飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Тихая остановка у храмового подхода, между Фунабаси и Итикавой. Дешевле, зелено, до центра долго.",
+    "landmarks": "Подход к Hokekyo-ji, старые торговые ряды, храмовая зелень. Без большого лоска.",
+    "food": "38 мест плюс мелкие закоулки; изакая важнее кафе. Еда локальная, не ради поездки.",
+    "nightlife": "9 поздних мест, 2 бара, без караоке. Только мягкий соседский алкоголь."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain station on Ome Line, far west of Tokyo. Zero crime, pristine. Very remote.",
+    "landmarks": "29 pedestrian streets (small commercial lanes), mountain views, zero culture spots.",
+    "food": "One restaurant, zero food data. Provisions sparse.",
+    "nightlife": "Minimal. High elevation (311m), seismic low but 2 hours from center."
+  },
+  "ja": {
+    "atmosphere": "青梅線の山奥。治安完璧、観光客ゼロ。遠い。",
+    "landmarks": "商店街29、山景色。文化施設なし。",
+    "food": "食堂1軒、データなし。食の選択肢限定。",
+    "nightlife": "ほぼなし。標高311m、地震低いが東京まで2時間。"
+  },
+  "ru": {
+    "atmosphere": "Горная станция на линии Оме, западный край. Нулевая преступность, девственно. Очень удалённо.",
+    "landmarks": "29 пешеходных улиц, горные виды, нет культурных мест.",
+    "food": "Один ресторан, данных нет. Запасы редки.",
+    "nightlife": "Практически нет. Высота 311м, сейсм низкий, но 2 часа от центра."
+  }
+}

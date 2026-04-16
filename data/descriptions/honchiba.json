@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Backside of central Chiba, government offices and cheaper urban grit. Useful, not polished.",
+    "landmarks": "Chiba Castle, prefectural offices, old moat edges. Low-lying station area, watch heavy rain.",
+    "food": "240 restaurants, 109 izakayas, 27 bars. Strong Chiba-city eating without Tokyo prices.",
+    "nightlife": "115 late spots, 2 karaoke, no clubs. Izakaya-heavy, local, slightly rough."
+  },
+  "ja": {
+    "atmosphere": "千葉中心部の裏側。県庁まわりと安めの都市感。便利だが磨かれてはいない。",
+    "landmarks": "千葉城、県庁、古い堀の周辺。駅周辺は低め、強い雨は意識したい。",
+    "food": "飲食240軒、居酒屋109軒、バー27軒。東京価格なしで千葉市の食はかなり強い。",
+    "nightlife": "深夜営業115軒、カラオケ2軒、クラブなし。居酒屋寄り、地元感強め、少し粗い。"
+  },
+  "ru": {
+    "atmosphere": "Задняя сторона центральной Chiba: гософисы и более дешёвая городская шероховатость. Удобно, не вылизано.",
+    "landmarks": "Chiba Castle, префектурные офисы, края старого рва. Район низкий, сильный дождь стоит учитывать.",
+    "food": "240 ресторанов, 109 изакая, 27 баров. Сильная еда Chiba без токийских цен.",
+    "nightlife": "115 поздних мест, 2 караоке, клубов нет. Изакая-тяжело, местно, чуть грубо."
+  }
+}

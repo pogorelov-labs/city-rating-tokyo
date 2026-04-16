@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama harbor district, affordable, moderate food. Industrial waterfront. Quiet nights.",
+    "landmarks": "Keihin Kyuko Line. Industrial piers. Waterfront parks.",
+    "food": "48 listings, 18 izakaya. Mixed quality, worker-oriented.",
+    "nightlife": "18 late-night spots. Workman bars, not clubs. Early close."
+  },
+  "ja": {
+    "atmosphere": "横浜湾岸地区、手ごろ、飯はまあまあ。工業地帯。静かな夜。",
+    "landmarks": "京急本線。工業岸壁。ウォーターフロント。",
+    "food": "飲食店48軒、居酒屋18軒、47件。混合質、労働者向け。",
+    "nightlife": "深夜営業18軒。労働者居酒屋。早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Йокохамский портовой район, доступно, еда норм. Промышленный. Тихие ночи.",
+    "landmarks": "Линия Keihin Kyuko. Причалы. Набережные.",
+    "food": "48 listings, 18 изакай, 47. Смешанное, рабочее.",
+    "nightlife": "18 ночных мест. Рабочие бары. Закрывается рано."
+  }
+}

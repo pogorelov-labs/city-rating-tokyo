@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keisei stop between Inage and university streets. Quiet, student-adjacent, inexpensive.",
+    "landmarks": "Chiba University nearby, Inage residential lanes, small parks. High seismic risk, otherwise calm.",
+    "food": "40 restaurants, 13 izakayas, 2 cafes. Student meals and local counters, limited depth.",
+    "nightlife": "11 late spots, no karaoke, 1 club signal. Mostly quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "稲毛と大学街の間の小さな京成駅。静かで学生圏、家賃は軽め。",
+    "landmarks": "千葉大学近く、稲毛の住宅路地、小公園。地震リスクは高め、それ以外は穏やか。",
+    "food": "飲食40軒、居酒屋13軒、カフェ2軒。学生飯と地元カウンター、厚みは限定的。",
+    "nightlife": "深夜営業11軒、カラオケなし、クラブ信号1件。夕食後はだいたい静か。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Keisei-остановка между Inage и университетскими улицами. Тихо, рядом студенты, недорого.",
+    "landmarks": "Рядом Chiba University, жилые переулки Inage, малые парки. Сейсмориск высокий, в остальном спокойно.",
+    "food": "40 ресторанов, 13 изакая, 2 кафе. Студенческая еда и местные стойки, глубина ограничена.",
+    "nightlife": "11 поздних мест, без караоке, 1 клубный сигнал. После ужина в основном тихо."
+  }
+}

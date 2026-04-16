@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple-town Adachi on a one-stop branch line. Cheap, local, green, soft-ground risk underneath.",
+    "landmarks": "Nishiarai Daishi dominates the map. Pilgrim streets, small parks, Tobu spur-line oddity.",
+    "food": "77 restaurants, 25 izakayas. Soba, sweets, family joints around the temple gates.",
+    "nightlife": "33 late spots, 3 karaoke. Local drinking only, no club pulse."
+  },
+  "ja": {
+    "atmosphere": "一駅支線の足立寺町。安い、地元感強い、緑多いが地盤リスクは重い。",
+    "landmarks": "西新井大師が主役。参道、小公園、東武支線の変わった終点感。",
+    "food": "飲食77軒、居酒屋25軒。そば、甘味、家族食堂が山門周辺に集まる。",
+    "nightlife": "深夜33軒、カラオケ3軒。地元飲みだけ、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Храмовая Adachi на одностанционной ветке. Дешево, локально, зелено, но мягкий грунт.",
+    "landmarks": "Nishiarai Daishi держит район. Паломнические улочки, парки, странная тупиковая ветка Tobu.",
+    "food": "77 ресторанов, 25 изакая. Соба, сладости, семейные забегаловки у храмовых ворот.",
+    "nightlife": "33 поздних места, 3 караоке. Только местная выпивка, клубного пульса нет."
+  }
+}

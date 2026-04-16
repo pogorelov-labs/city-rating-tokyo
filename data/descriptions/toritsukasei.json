@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Seibu stop with shotengai comfort. Quiet, practical, less cool than nearby Nakano.",
+    "landmarks": "Toritsukasei shopping street, Kannana backroads, low-rise Nakano blocks. Local scale only.",
+    "food": "68 restaurants, 27 izakayas, almost no cafes. Daily meals and counters, not destination dining.",
+    "nightlife": "30 late spots, 1 karaoke, no clubs. Neighborhood drinks, early fade."
+  },
+  "ja": {
+    "atmosphere": "商店街の安心感がある小さな西武駅。静かで実用的、中野ほど尖っていない。",
+    "landmarks": "都立家政商店街、環七の裏道、低層の中野住宅地。完全に地元スケール。",
+    "food": "飲食68軒、居酒屋27軒、カフェほぼなし。日常飯とカウンター、遠征向きではない。",
+    "nightlife": "深夜営業30軒、カラオケ1軒、クラブなし。近所飲み、早めに薄まる。"
+  },
+  "ru": {
+    "atmosphere": "Малая станция Seibu с уютом shotengai. Тихо, практично, менее модно чем Nakano.",
+    "landmarks": "Toritsukasei shopping street, задние дороги Kannana, низкие кварталы Nakano. Только местный масштаб.",
+    "food": "68 ресторанов, 27 изакая, кафе почти нет. Еда на каждый день, не гастро-точка.",
+    "nightlife": "30 поздних мест, 1 караоке, клубов нет. Районные напитки, раннее затухание."
+  }
+}

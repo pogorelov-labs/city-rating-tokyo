@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Power-Tokyo bunker: Diet, ministries, police boxes. Fast commute, brutal rent, little softness.",
+    "landmarks": "National Diet, Prime Minister's Office, Hie Shrine, Kasumigaseki blocks. Security-heavy streets.",
+    "food": "769 restaurants spill toward Akasaka and ministries. Lunch is sharp; expense-account dinners abound.",
+    "nightlife": "258 late spots nearby. Political izakayas and bars, very little dance-floor energy."
+  },
+  "ja": {
+    "atmosphere": "権力の東京、国会・省庁・交番だらけ。移動は速い、家賃は重い、柔らかさ少なめ。",
+    "landmarks": "国会議事堂、首相官邸、日枝神社、霞が関ブロック。警備の濃い通り。",
+    "food": "飲食769軒、赤坂と官庁街に広がる。昼は強い、接待ディナーも多い。",
+    "nightlife": "深夜258軒。政治家向け居酒屋とバー中心、踊る街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Бункер властного Токио: парламент, министерства, полицейские будки. Быстро, дорого, жёстко.",
+    "landmarks": "National Diet, офис премьера, Hie Shrine, кварталы Kasumigaseki. Улицы под охраной.",
+    "food": "769 ресторанов тянутся к Akasaka и министерствам. Обеды сильные, ужины на корпоративный счёт.",
+    "nightlife": "258 поздних мест рядом. Политические изакая и бары, танцпола почти нет."
+  }
+}

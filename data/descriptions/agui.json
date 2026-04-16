@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural station, farmland station. Barely a town, almost no foot traffic.",
+    "landmarks": "Rice paddies, quiet roads. Nothing tourist-facing.",
+    "food": "Minimal — 1 listings, 1 izakaya, 2. Dead simple.",
+    "nightlife": "Nonexistent. Farming town closes by 9pm."
+  },
+  "ja": {
+    "atmosphere": "農村駅。人気なし。",
+    "landmarks": "田んぼ。観光地なし。",
+    "food": "ほぼなし — 1軒、居酒屋1軒。",
+    "nightlife": "皆無。夜9時で終わり。"
+  },
+  "ru": {
+    "atmosphere": "Сельская станция, рисовые поля. Почти нет людей.",
+    "landmarks": "Рисовые поля, тихие дороги. Ничего туристического.",
+    "food": "Минимально — 1, 1 изакая, 2.",
+    "nightlife": "Нет. Закрыто в 21:00."
+  }
+}

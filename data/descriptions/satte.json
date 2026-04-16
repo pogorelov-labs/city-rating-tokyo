@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sleepy suburban station, 10k daily commuters. Seismic very_high, elevation 12m risk.",
+    "landmarks": "Tobu Nikko Line junction. Cultural venue one. Sakura season draws visitors.",
+    "food": "6 restaurants. Sparse but functional for weekday lunch.",
+    "nightlife": "4 late-night, karaoke absent. Modest bar scene, drinks wrap by 11pm."
+  },
+  "ja": {
+    "atmosphere": "郊外駅、毎日1万人。地震リスク非常に高い、標高12m。",
+    "landmarks": "東武日光線。文化施設1軒。",
+    "food": "飲食6軒。",
+    "nightlife": "深夜営業4軒。カラオケなし。"
+  },
+  "ru": {
+    "atmosphere": "Сонная пригородная станция, 10k пассажиров/день. Очень высокий сейсм. риск, высота 12м.",
+    "landmarks": "Узел линии Tobu Nikko. Одно культурное учреждение.",
+    "food": "6 ресторанов, 2. Функционально.",
+    "nightlife": "4 поздних заведения. Скромные бары, ночи короткие."
+  }
+}

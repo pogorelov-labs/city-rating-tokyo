@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Lake Town mall suburb, 20 pedestrian streets. Safe. Seismic risk (very_high, 4m elevation). Dead quiet.",
+    "landmarks": "Lakefront shopping complex, no character.",
+    "food": "35 listings, 9 izakaya. Mall food court standard.",
+    "nightlife": "7 midnight spots, all mall-adjacent. Families go home by 9pm."
+  },
+  "ja": {
+    "atmosphere": "レイクタウンモール。商店街20本、安全。地震リスク高い(4m)。静か。",
+    "landmarks": "レイクフロント、個性なし。",
+    "food": "35軒、居酒屋9軒。モール基準。",
+    "nightlife": "深夜営業7軒。21時消滅。"
+  },
+  "ru": {
+    "atmosphere": "Lake Town, торговый комплекс, 20 улиц. Безопасно. Высокий сейсмический риск (4м). Мёртвая тишь.",
+    "landmarks": "Озёрный торговый центр. Без характера.",
+    "food": "35, 9 изакай. Фуд-корт уровня.",
+    "nightlife": "7 ночных мест при моллах. Семьи спят в 21:00."
+  }
+}

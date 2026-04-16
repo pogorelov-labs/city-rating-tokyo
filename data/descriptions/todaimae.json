@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Academic Bunkyo hill, students, clinics, old houses. Calm, expensive, quietly dense.",
+    "landmarks": "University of Tokyo, Yayoi Gate, Nezu Shrine nearby. Hongo bookish backstreets.",
+    "food": "113 restaurants; cafes, student lunches, restrained izakayas.",
+    "nightlife": "15 late spots, no karaoke or clubs. Study-town drinking."
+  },
+  "ja": {
+    "atmosphere": "文京の学術丘陵、学生、病院、古い家。静かだが高く、密度はある。",
+    "landmarks": "東京大学、弥生門、根津神社も近い。本郷らしい本と坂の裏道。",
+    "food": "飲食113軒、191件。カフェ、学生昼飯、控えめな居酒屋。",
+    "nightlife": "深夜営業15軒、カラオケもクラブもなし。勉強街の飲み。"
+  },
+  "ru": {
+    "atmosphere": "Академический холм Бункё, студенты, клиники, старые дома. Тихо, дорого, плотно.",
+    "landmarks": "Токийский университет, ворота Yayoi, храм Nezu рядом. Книжные закоулки Хонго.",
+    "food": "113 ресторанов и 191 точка. Кафе, студенческие обеды, сдержанные изакая.",
+    "nightlife": "15 поздних мест, без караоке и клубов. Выпивка учебного района."
+  }
+}

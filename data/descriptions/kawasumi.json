@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama hill town, 78 minutes out, 2.4 million sqm green (forest preservation). Quiet, accessible, nature-first.",
+    "landmarks": "Tobu Ogese Line, forest parks, low seismic risk, elevation 48m safe.",
+    "food": "4 spots, no listings. Village-level dining.",
+    "nightlife": "Minimal. Weekend bar culture only."
+  },
+  "ja": {
+    "atmosphere": "埼玉の丘陵地。78分。242万平方メートルの森。静か、アクセス可。",
+    "landmarks": "東武越生線沿線。森の公園。低地震リスク。",
+    "food": "スポット4軒のみ。村のレベル。",
+    "nightlife": "ほぼなし。週末だけ。"
+  },
+  "ru": {
+    "atmosphere": "Холмы Сайтамы, 78 минут, 2.4 млн кв.м лес. Тихо, доступно, природа главное.",
+    "landmarks": "Линия Tobu Ogese. Лесные парки. Низкий сейсм.риск.",
+    "food": "4 точки. Деревенское питание.",
+    "nightlife": "Практически нет. Только выходные."
+  }
+}

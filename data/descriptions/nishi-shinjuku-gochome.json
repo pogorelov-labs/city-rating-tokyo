@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Backside of Shinjuku towers, quieter than skyline. Office edge, homes.",
+    "landmarks": "Metro Gov side streets, Shinjuku Central Park nearby. Concrete, trees, walks.",
+    "food": "247 restaurants, 84 izakayas, 11 bars. Office lunches, hotel spillover.",
+    "nightlife": "54 late spots, no karaoke. Kabukicho steals the chaos."
+  },
+  "ja": {
+    "atmosphere": "新宿高層ビル群の裏側、見た目より静か。オフィスの端と住宅ポケットが混ざる。",
+    "landmarks": "都庁裏の路地、新宿中央公園が近い。コンクリート、木陰、短い徒歩圏。",
+    "food": "飲食247軒、居酒屋84軒、バー11軒。昼は会社員、夜はホテル客が流れる。",
+    "nightlife": "深夜54軒、カラオケなし。飲めるが、混沌は歌舞伎町に吸われる。"
+  },
+  "ru": {
+    "atmosphere": "Задняя сторона небоскрёбов Синдзюку, тише, чем обещает силуэт. Офисы по краю, жилые карманы.",
+    "landmarks": "Улицы за Tokyo Metropolitan Government, рядом Shinjuku Central Park. Бетон, деревья, короткие пешие связи.",
+    "food": "247 ресторанов, 84 изакая, 11 баров. Днём офисный обед, ночью перелив из отелей.",
+    "nightlife": "54 поздних места, караоке нет. Выпить можно, но хаос забирает Кабуки-тё."
+  }
+}

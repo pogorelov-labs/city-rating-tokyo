@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama commuter hub, 43 min to center. Efficient, forgettable, safe. Pharmacy-dense, family-heavy.",
+    "landmarks": "Medical megablock (9 pharmacies, 8 clinics). Prefectural government zone. No landmarks.",
+    "food": "Decent coverage — 9 listings + 20, 3 izakaya, 1 cafe. Lunch culture dominates.",
+    "nightlife": "Quiet — 3 midnight spots. Izakayas run late, but no clubs."
+  },
+  "ja": {
+    "atmosphere": "埼玉通勤地、都心43分。効率的、忘れやすい、安全。薬局多い。",
+    "landmarks": "医療ビッグブロック — 薬局9、クリニック8。県庁エリア。名所なし。",
+    "food": "及第点 — 9 listings + 20 。居酒屋3軒。昼食文化。",
+    "nightlife": "おとなしい — 3軒のみ。居酒屋は遅くまで。"
+  },
+  "ru": {
+    "atmosphere": "Сайтама-коммьютер, 43 минуты до центра. Эффективно, безлико, безопасно. Аптеки везде.",
+    "landmarks": "Медицинский мегаблок — 9 аптек, 8 клиник. Префектурный округ. Достопримечательностей нет.",
+    "food": "Нормально — 9 listings + 20, 3 изакаи, 1 кафе. Обеденная культура.",
+    "nightlife": "Спокойно — 3 ночных места. Изакаи работают дольше."
+  }
+}

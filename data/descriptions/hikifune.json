@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Sumida under Skytree's shadow. Useful Tobu junction, rebuilt blocks, shitamachi still visible.",
+    "landmarks": "Mukojima lanes, Skytree in view, Keisei-Hikifune next door. Low ground, very high seismic risk.",
+    "food": "126 restaurants, 43 izakayas. Everyday noodles, grills, local bars, not destination dining.",
+    "nightlife": "29 late spots, no karaoke. Neighborhood drinking, quiet after the last Tobu trains."
+  },
+  "ja": {
+    "atmosphere": "スカイツリーの影にある昔の墨田。東武の実用的な結節点、再開発と下町が同居。",
+    "landmarks": "向島の路地、見えるスカイツリー、隣の京成曳舟。低地で地震リスクかなり高い。",
+    "food": "飲食126軒、居酒屋43軒。麺、焼き物、地元酒場。目的地グルメではない。",
+    "nightlife": "深夜29軒、カラオケなし。近所飲み中心、東武の終電後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Старая Sumida в тени Skytree. Удобный узел Tobu, новые кварталы, ситамати еще видно.",
+    "landmarks": "Переулки Mukojima, вид на Skytree, Keisei-Hikifune рядом. Низина, очень высокий сейсмориск.",
+    "food": "126 ресторанов, 43 изакая. Лапша, гриль, местные бары, не гастро-точка.",
+    "nightlife": "29 поздних мест, караоке нет. Соседская выпивка, после последних Tobu тихо."
+  }
+}

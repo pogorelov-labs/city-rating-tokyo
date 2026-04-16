@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Waterfront industrial zone, low-key residential. Nearby refinery facilities, quiet evenings.",
+    "landmarks": "Very minimal — mostly warehouses and parking lots. Riverfront walks possible but sparse landmarks.",
+    "food": "Scarce. One listings spot, one izakaya. Long commute to actual dining.",
+    "nightlife": "Minimal. Industrial area clears out after dark."
+  },
+  "ja": {
+    "atmosphere": "河口沿い、工業用地。静かな住宅地、あたりは倉庫ばかり。",
+    "landmarks": "目立つ施設なし — 駐車場と工場。散歩道はあるが特筆すべき場所なし。",
+    "food": "食べ物ほぼなし。1、居酒屋1。飯は遠くへ。",
+    "nightlife": "夜はゴーストタウン。"
+  },
+  "ru": {
+    "atmosphere": "Портовая промышленная зона. Тихое место, молчаливая днём и вечером.",
+    "landmarks": "Практически нет достопримечательностей — склады, паркинги, портовая инфраструктура.",
+    "food": "Еда отсутствует. 1 место в listings, 1 изакая. Придётся искать дальше.",
+    "nightlife": "После 18:00 пусто."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Arakawa tram pocket, leafy and low-rise. Soft-ground seismic flag, last tram early.",
+    "landmarks": "Ogu Hachiman shrine, Tokyo Sakura Tram, small local parks. Quiet north-side Tokyo.",
+    "food": "39 restaurants, 12 izakayas, barely any cafes. Solid neighborhood meals, not a destination.",
+    "nightlife": "10 late spots, almost no bars. Local drinks only, early finish."
+  },
+  "ja": {
+    "atmosphere": "荒川線沿いの古い低層住宅地。緑は多いが、地盤リスクは重め、終電も早い。",
+    "landmarks": "尾久八幡神社、東京さくらトラム、小さな公園群。北東京の静かな端。",
+    "food": "飲食39軒、居酒屋12軒、カフェほぼなし。普段使いの食事、目的地ではない。",
+    "nightlife": "深夜営業10軒、バーほぼなし。近所飲みだけ、早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Старый карман вдоль трамвая Arakawa, зелено и низко. Мягкий грунт, последний трамвай рано.",
+    "landmarks": "Святилище Ogu Hachiman, Tokyo Sakura Tram, мелкие парки. Тихий северный Токио.",
+    "food": "39 заведений, 12 изакая, кафе почти нет. Еда для района, не гастро-точка.",
+    "nightlife": "10 поздних мест, баров почти нет. Только соседские напитки, ранний финал."
+  }
+}

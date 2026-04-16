@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Major Yamanote hub, polished and useful, brutally expensive and crowded.",
+    "landmarks": "Meguro River, Atre, Institute for Nature Study, Parasitological Museum.",
+    "food": "263 restaurants, 97 izakayas, 19 bars. Strong dinners, chains, polished date spots.",
+    "nightlife": "98 late spots, bars present, clubs absent. Grown-up drinks, not chaos."
+  },
+  "ja": {
+    "atmosphere": "山手線の主要ハブ、整って便利、ただ家賃と混雑は容赦ない。",
+    "landmarks": "目黒川、アトレ、自然教育園、寄生虫館。駅前だけで終わらない。",
+    "food": "飲食263軒、居酒屋97軒、バー19軒。夕飯、チェーン、デート飯まで強い。",
+    "nightlife": "深夜98軒、バーあり、クラブなし。大人の飲み、混沌ではない。"
+  },
+  "ru": {
+    "atmosphere": "Крупный узел Yamanote, вылизано и удобно, но адски дорого и людно.",
+    "landmarks": "Meguro River, Atre, Institute for Nature Study, музей паразитологии.",
+    "food": "263 ресторана, 97 изакай, 19 баров. Сильные ужины, сети, аккуратные свидания.",
+    "nightlife": "98 поздних мест, бары есть, клубов нет. Взрослые напитки, не хаос."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nakano backstreet living without JR chaos. Modest, safe, slightly scruffy in a good way.",
+    "landmarks": "Nogata shopping streets, Kannana traffic, Seibu Shinjuku local rhythm. No big monuments.",
+    "food": "64 listed restaurants plus 68 local POIs. Izakaya, ramen, counters; cafes stay thin.",
+    "nightlife": "34 late spots, no karaoke or clubs. Neighborhood drinks, not nightlife."
+  },
+  "ja": {
+    "atmosphere": "JR中野の混沌なし、裏中野の暮らし。地味、安全、少しだけ良い意味で雑。",
+    "landmarks": "野方商店街、環七の交通、Seibu Shinjukuの各停リズム。大名所はない。",
+    "food": "飲食64軒と地元POI68件。居酒屋、ラーメン、カウンター中心。カフェは薄い。",
+    "nightlife": "深夜営業34軒、カラオケもクラブもなし。近所飲み、夜遊びではない。"
+  },
+  "ru": {
+    "atmosphere": "Жизнь в закоулках Nakano без JR-хаоса. Скромно, безопасно, чуть потёрто и приятно.",
+    "landmarks": "Торговые улицы Nogata, трафик Kannana, локальный ритм Seibu Shinjuku. Больших икон нет.",
+    "food": "64 ресторана плюс 68 локальных POI. Изакая, рамен, стойки; кафе слабовато.",
+    "nightlife": "34 поздних места, без караоке и клубов. Районная выпивка, не ночная сцена."
+  }
+}

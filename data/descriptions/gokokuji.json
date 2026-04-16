@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo temple-side calm, expensive and orderly. Close to center, but not lively.",
+    "landmarks": "Gokokuji Temple, Otowa slopes, Kodansha offices nearby. Old stone, trees, quiet roads.",
+    "food": "61 restaurants, 23 izakayas. Good lunches and restrained dinners; cafes are sparse.",
+    "nightlife": "13 late spots, no karaoke, no clubs. Quiet drinks, then silence."
+  },
+  "ja": {
+    "atmosphere": "文京の寺町寄り、静かで整った空気。都心近いが、賑わいは控えめ。",
+    "landmarks": "護国寺、音羽の坂、講談社周辺。石垣、緑、静かな道。",
+    "food": "飲食61件、居酒屋23件。昼飯と落ち着いた夕食は強い、カフェは少なめ。",
+    "nightlife": "深夜営業13件、カラオケなし、クラブなし。静かに飲んで終わり。"
+  },
+  "ru": {
+    "atmosphere": "Спокойный храмовый Бункё, дорого и аккуратно. Центр рядом, но район не живой.",
+    "landmarks": "Храм Gokokuji, склоны Otowa, офисы Kodansha рядом. Камень, деревья, тихие дороги.",
+    "food": "61 место, 23 изакая. Хорошие обеды и сдержанные ужины; кафе редкие.",
+    "nightlife": "13 поздних мест, без караоке и клубов. Тихо выпил, и тишина."
+  }
+}

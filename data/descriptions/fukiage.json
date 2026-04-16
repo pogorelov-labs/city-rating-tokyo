@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama rail junction, remote commuter station. Cheap, safe-ish. 86-min grind to center.",
+    "landmarks": "Takasaki line, rural outskirts, minimal landmarks.",
+    "food": "21 venues, mostly picks. Sparse food landscape.",
+    "nightlife": "Dead. 1 midnight spot max. Early sleepers only."
+  },
+  "ja": {
+    "atmosphere": "埼玉線. 遠い。家賃安い。中央まで86分。",
+    "landmarks": "高崎線。郊外。建造物ほぼなし。",
+    "food": "食堂21軒。頼り。選択肢少ない。",
+    "nightlife": "ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Линия Такасаки, пригород, дешево, 86 мин до центра.",
+    "landmarks": "Линия Такасаки, сельская местность.",
+    "food": "21 заведение, -зависимо. Редко.",
+    "nightlife": "Практически нет."
+  }
+}

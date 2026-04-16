@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio hub, Chofu. Strong food & vibe (117, 15 venues), but crime rate 81/10k (Tokyo high). 2-line interchange, 40 min to center.",
+    "landmarks": "5 pedestrian streets. 15 cultural venues, cinemas. 20 parks. Film festival town (indie cinema culture).",
+    "food": "117 restaurants, 61 izakaya, high diversity. 47 late-night. Quality ranges indie ramen to chains.",
+    "nightlife": "47 late-night, 1 karaoke. Izakayas dominate, few clubs. Crime caveat — stay aware after 11pm."
+  },
+  "ja": {
+    "atmosphere": "京王ハブ、調布。食&雰囲気強い（117HP、文化施設15）だが犯罪率81/10k。2線乗入、中心部40分。",
+    "landmarks": "商店街5本。文化施設15軒、映画館。映画祭の町（インディ映画文化）。",
+    "food": "食堂117軒、居酒屋61軒、多様性高し。深夜47軒。ラーメン屋から大型チェーンまで。",
+    "nightlife": "深夜47軒、カラオケ1軒。居酒屋支配、クラブほぼなし。犯罪注意 — 23時以降は気をつけ。"
+  },
+  "ru": {
+    "atmosphere": "Кейо-хаб Чофу. Еда & вайб сильны (117, 15 культ. мест), но преступность 81/10k (высоко). 2 линии, центр 40 мин.",
+    "landmarks": "5 пешеходных улиц. 15 культурных мест, кинотеатры. Кинофестивальный город (инди-кино культура).",
+    "food": "117 ресторанов, 61 изакая, разнообразие. 47 ночных. От инди-рамена до сетей.",
+    "nightlife": "47 ночных, 1 караоке. Изакаи доминируют, клубы редки. Преступность — осторожнее после 23:00."
+  }
+}

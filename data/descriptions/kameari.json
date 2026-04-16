@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Katsushika everyday hub, busy but unpretentious. Cheap rent, lowland soft-ground flag.",
+    "landmarks": "Kochikame statues, Ario mall, old shotengai lanes. Pure east-side Tokyo.",
+    "food": "136 restaurants, 55 izakayas, 10 bars. Strong local food, ramen and family chains.",
+    "nightlife": "55 late spots, no clubs. Izakaya and station bars, not a party zone."
+  },
+  "ja": {
+    "atmosphere": "葛飾の日常ハブ、忙しいが気取らない。家賃は安い、低地の軟弱地盤リスクあり。",
+    "landmarks": "こち亀像、アリオ、古い商店街の路地。東側の生活東京そのもの。",
+    "food": "飲食136軒、居酒屋55軒、バー10軒。地元飯は強い、ラーメンとファミリー系。",
+    "nightlife": "深夜営業55軒、クラブなし。居酒屋と駅前バー、遊び場ではない。"
+  },
+  "ru": {
+    "atmosphere": "Повседневный узел Katsushika, людно и без позы. Аренда дёшева, низина и мягкий грунт.",
+    "landmarks": "Статуи Kochikame, Ario mall, старые shotengai-переулки. Чистый восточный Токио.",
+    "food": "136 ресторанов, 55 изакая, 10 баров. Сильная локальная еда, рамен и семейные сети.",
+    "nightlife": "55 поздних мест, клубов нет. Изакая и станции-бары, не зона тусовки."
+  }
+}

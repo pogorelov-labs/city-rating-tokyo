@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama's loud hub, train nerd heaven and commuter crush. Convenient, crowded, rougher edges.",
+    "landmarks": "Hikawa Shrine, Omiya Park, Sonic City, Railway Museum nearby. Big-node energy.",
+    "food": "491 restaurants, 271 izakayas, 23 cafes. Station-front volume, quality uneven.",
+    "nightlife": "217 late spots, 11 karaoke, no clubs counted. Big drinking zone, not subtle."
+  },
+  "ja": {
+    "atmosphere": "埼玉の大ハブ、鉄道好きの聖地、通勤の圧。便利だが荒さもある。",
+    "landmarks": "氷川神社、大宮公園、ソニックシティ、鉄道博物館近く。巨大結節点の空気。",
+    "food": "飲食491件、居酒屋271件、カフェ23件。駅前の量は強い、質は揺れる。",
+    "nightlife": "深夜217件、カラオケ11件、クラブ計上なし。大きい飲み場、繊細ではない。"
+  },
+  "ru": {
+    "atmosphere": "Громкий хаб Сайтамы, рай для rail nerds и давка комьютеров. Удобно, людно, края грубее.",
+    "landmarks": "Hikawa Shrine, Omiya Park, Sonic City, рядом Railway Museum. Энергия большого узла.",
+    "food": "491 ресторан, 271 изакая, 23 кафе. Масштаб у станции огромный, качество скачет.",
+    "nightlife": "217 поздних мест, 11 караоке, клубов не поймано. Большая зона выпивки, не тонко."
+  }
+}

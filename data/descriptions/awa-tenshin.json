@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Another Bosso Line rural outpost, 264 riders daily, 2-hour commute from center. Pastoral, sparse.",
+    "landmarks": "Countryside stations with minimal amenities. Green fields nearby but no draw.",
+    "food": "1 listings, 0. Data sparse for food culture here.",
+    "nightlife": "Minimal. Night trains disappear after midnight."
+  },
+  "ja": {
+    "atmosphere": "房総線の農村駅。264人/日、都心から2時間弱。田舎の雰囲気。",
+    "landmarks": "何もない駅。周囲は畑と林。素通りする客が多い。",
+    "food": "1件のみ。食べ物の選択肢なし。",
+    "nightlife": "ほぼ皆無。電車も夜は少ない。"
+  },
+  "ru": {
+    "atmosphere": "Сельская остановка на линии Босо. 264 пассажира, 2 часа до центра. Поля, тишина.",
+    "landmarks": "Минимальная инфраструктура вокзала. За его пределами — аграрная местность.",
+    "food": "1 место на listings, 0 на карте. Очень скудно.",
+    "nightlife": "Почти ничего. Вечера короткие."
+  }
+}

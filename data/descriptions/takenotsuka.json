@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "North Adachi suburb, cheap rent and real daily life. Long ride in, soft-ground risk.",
+    "landmarks": "Takenotsuka center streets, Toneri Park by bike. Low-rise sprawl, no trophy sights.",
+    "food": "78 restaurants, 30 izakayas; family chains and local counters. Better than it looks.",
+    "nightlife": "38 late spots, 1 karaoke. Izakaya nights, no club culture."
+  },
+  "ja": {
+    "atmosphere": "足立北部の生活圏、家賃は軽い。都心は遠め、軟弱地盤リスクあり。",
+    "landmarks": "竹ノ塚駅前の商店街、舎人公園は自転車圏。低層スプロール、名所感なし。",
+    "food": "飲食78軒、居酒屋30軒。ファミレス系と地元カウンター。見た目より使える。",
+    "nightlife": "深夜営業38軒、カラオケ1軒。居酒屋の夜、クラブ文化はない。"
+  },
+  "ru": {
+    "atmosphere": "Север Адачи, дешёвая аренда и настоящая бытовуха. Долго ехать, мягкий грунт.",
+    "landmarks": "Улицы у центра Такэноцуки, парк Тонэри на велосипеде. Низкая застройка, без трофейных видов.",
+    "food": "78 ресторанов, 30 изакая. Семейные сети и местные стойки. Лучше, чем выглядит.",
+    "nightlife": "38 поздних мест, 1 караоке. Ночи изакая, клубной культуры нет."
+  }
+}

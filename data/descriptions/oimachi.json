@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinagawa workhorse hub, practical and crowded. Shopping blocks, backstreet drinking, no softness.",
+    "landmarks": "Atre, Hankyu Oimachi Garden, Higashikoji alleys. Rinkai Line makes Odaiba easy.",
+    "food": "224 restaurants, 110 izakayas, 13 bars. Strong salaryman food, smoky alleys, late ramen.",
+    "nightlife": "85 late spots, no karaoke. Izakaya crawl, not club culture."
+  },
+  "ja": {
+    "atmosphere": "品川区の実用ハブ、便利で混む。商業ビル、裏路地飲み、柔らかさは少ない。",
+    "landmarks": "アトレ、阪急大井町ガーデン、東小路の路地。りんかい線でお台場も近い。",
+    "food": "飲食224軒、居酒屋110軒、バー13軒。サラリーマン飯、煙たい路地、締めラーメンが強い。",
+    "nightlife": "深夜85軒、カラオケなし。居酒屋はしご向き、クラブ文化ではない。"
+  },
+  "ru": {
+    "atmosphere": "Рабочий хаб Синагавы, практичный и людный. Торговые блоки, закоулки для выпивки, без мягкости.",
+    "landmarks": "Atre, Hankyu Oimachi Garden, переулки Higashikoji. Rinkai Line быстро ведет к Odaiba.",
+    "food": "224 ресторана, 110 изакая, 13 баров. Сильная еда для офисных, дымные улочки, поздний рамен.",
+    "nightlife": "85 поздних мест, караоке нет. Изакая-маршрут, не клубная сцена."
+  }
+}

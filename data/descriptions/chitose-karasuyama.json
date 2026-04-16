@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio-line Setagaya workhorse, busy and useful. Rent still sane, streets feel lived-in.",
+    "landmarks": "Karasuyama shopping streets, temple-town pockets, dense clinic-and-pharmacy grid.",
+    "food": "71 spots plus 95 pins. Izakaya strong, everyday restaurants deep, cafes modest.",
+    "nightlife": "29 late spots, no karaoke or clubs. Solid local drinking, not a night-out hub."
+  },
+  "ja": {
+    "atmosphere": "京王線の世田谷実用品、忙しくて便利。家賃はまだ現実的、生活感が濃い。",
+    "landmarks": "烏山の商店街、寺町の小さな固まり、医院と薬局の密な網。",
+    "food": "掲載71軒、95件。居酒屋強め、日常飯は厚い、カフェは控えめ。",
+    "nightlife": "深夜29軒、カラオケもクラブもなし。地元飲みは堅い、夜遊び拠点ではない。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая лошадка Keio в Сетагайе, busy и полезно. Аренда ещё живая, улицы обжитые.",
+    "landmarks": "Торговые улицы Karasuyama, карманы храмового квартала, плотная сетка клиник и аптек.",
+    "food": "71 место плюс 95 точек. Изакая сильны, будничной еды много, кафе скромно.",
+    "nightlife": "29 поздних мест, без караоке и клубов. Крепкая локальная выпивка, не ночной хаб."
+  }
+}

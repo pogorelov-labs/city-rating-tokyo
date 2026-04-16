@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu suburb with shrine and college-sport energy. Quiet blocks, decent paths, center not close.",
+    "landmarks": "Higashi-Fushimi Inari Shrine, ice arena, Waseda sports fields nearby.",
+    "food": "Small izakaya and cafe set, more utilitarian than fun. Eat local, then move on.",
+    "nightlife": "Four late places, no karaoke or clubs. Very neighborhood."
+  },
+  "ja": {
+    "atmosphere": "神社と学生スポーツ感のある西武沿線。静かな区画、道は歩きやすい、都心は遠め。",
+    "landmarks": "東伏見稲荷神社、アイスアリーナ、早稲田の運動施設が近い。",
+    "food": "小さな居酒屋とカフェのセット。楽しいより実用的。地元で食べて移動。",
+    "nightlife": "遅い店4軒、カラオケとクラブなし。完全に近所向け。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Seibu с храмом и студенческим спортом. Тихие кварталы, центр не близко.",
+    "landmarks": "Higashi-Fushimi Inari Shrine, ледовая арена, спортивные поля Waseda рядом.",
+    "food": "Небольшой набор изакай и кафе, больше утилитарно, чем весело. Поел и поехал дальше.",
+    "nightlife": "Четыре поздних места, без караоке и клубов. Очень районно."
+  }
+}

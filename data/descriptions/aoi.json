@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi lowland on the Tsukuba Express. Cheap, quiet, but flood and soft-ground flags are real.",
+    "landmarks": "Aoi backstreets, small parks, Tsukuba Express viaduct mood. Pure residential Tokyo.",
+    "food": "24 restaurants, 10 izakayas, 2 cafes. Enough for locals, thin for choice.",
+    "nightlife": "6 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "つくばエクスプレス沿いの足立低地。安く静か、ただし浸水と軟弱地盤リスクは本物。",
+    "landmarks": "青井の裏道、小公園、TX高架の空気。完全に住宅地の東京。",
+    "food": "飲食24軒、居酒屋10軒、カフェ2軒。地元には足りるが、選択肢は薄い。",
+    "nightlife": "深夜営業6軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Низина Адачи на Tsukuba Express. Дёшево и тихо, но риск затопления и мягкий грунт реальные.",
+    "landmarks": "Закоулки Aoi, малые парки, настроение эстакады Tsukuba Express. Чисто жилой Токио.",
+    "food": "24 ресторана, 10 изакая, 2 кафе. Местным хватит, выбора мало.",
+    "nightlife": "6 поздних мест, без караоке и клубов. Минимально."
+  }
+}

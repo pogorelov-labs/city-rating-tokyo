@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain outpost, ultra-safe (zero crime), 85-minute commute, elevation 252m. Hiking culture, nearly food-free.",
+    "landmarks": "Ome Line terminus zone. Mountain railway nostalgia. Zero urban anchors.",
+    "food": "1 spot. This is not a food destination.",
+    "nightlife": "Minimal. Local bars close by 10pm. Come for the peace."
+  },
+  "ja": {
+    "atmosphere": "西多摩の山奥。犯罪ゼロで最安全。標高252m。登山文化。",
+    "landmarks": "青梅線沿線。山の鉄道ノスタルジア。都会的ランドマークなし。",
+    "food": "1軒のみ。食べ物の場所ではない。",
+    "nightlife": "ほぼなし。地元の居酒屋は22時に閉店。平和が目的。"
+  },
+  "ru": {
+    "atmosphere": "Горная застава, нулевая преступность, 85 минут, 252м высоты. Трекинг, почти нет еды.",
+    "landmarks": "Линия Ome. Ностальгия горных железных дорог.",
+    "food": "1 точка. Не место для еды.",
+    "nightlife": "Практически нет. Закрываются в 22:00. Приезжайте за спокойствием."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba monorail outpost, 2.2m sqm green expanse. Quiet, family-oriented. Extremely isolated (63 min commute).",
+    "landmarks": "Chiba University Museum, monorail landmark. Rural feel.",
+    "food": "12 venues only. 7 hits. Data-sparse, locals know hidden spots.",
+    "nightlife": "Practically zero. Families go to bed early."
+  },
+  "ja": {
+    "atmosphere": "千葉モノレール駅。公園2.2百万平米。静か。家族向け。通勤63分。",
+    "landmarks": "千葉大学博物館。モノレール。田舎の景色。",
+    "food": "飲食店12軒。数えるほど。昼食のみ。",
+    "nightlife": "ほぼ皆無。ファミリー向け。"
+  },
+  "ru": {
+    "atmosphere": "Станция монорельса Чиба, 2.2 млн м² парка, тихо, семьи, 63 мин в центр.",
+    "landmarks": "Музей университета Чиба, монорельс, сельский вид.",
+    "food": "12 заведений. Почти нет. Только обед, локальные тайные места.",
+    "nightlife": "Практически нет. Семьи спят рано."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama waterfront zone on 1-line Tsurumi terminus. 394k sqm parks, green rolling area. Last train 23:45 so plan early. 46 min commute, good balance.",
+    "landmarks": "Large park system (21 parks), riverside walks. Athletic facilities abundant. Green-forward location.",
+    "food": "18 listings spots, 3 izakaya. Decent restaurant cluster. Gyudon chains and family spots.",
+    "nightlife": "Only 3 midnight venues, karaoke absent. Quiet after 11pm."
+  },
+  "ja": {
+    "atmosphere": "横浜、鶴見線の1線終点。39万㎡の公園。緑豊か。23時45分最終便。46分通勤。",
+    "landmarks": "21の公園、川沿い散歩。スポーツ施設充実。緑重視。",
+    "food": "18軒、居酒屋3軒。まとも。牛丼チェーンと家族向け。",
+    "nightlife": "深夜営業3軒のみ。11時以降静か。"
+  },
+  "ru": {
+    "atmosphere": "Йокохама на Цурумиской линии (конец маршрута). 394к кв.м парков. 23:45 последний поезд. 46 мин. Хороший баланс.",
+    "landmarks": "21 парк, набережные. Спортсооружения. Зелёный приоритет.",
+    "food": "18, 3 изакаи. Нормальные места. Гюдон и семейные.",
+    "nightlife": "3 ночных места. 11 вечера — спит."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple-town shrine charm, Fukutsu shrine pilgrimage hub. Classic old Tokyo, narrow lanes, izakaya alleys. But VERY soft ground (seismic very_high, elevation 9m). Gritty at night (crime rate 236/10k — highest tiers).",
+    "landmarks": "Fukutsu Shrine, Nakamise street (temple souvenir lane). Tozai & Oedo lines intersect. 2M sqm green (park + shrine grounds).",
+    "food": "259 listings, 109 izakaya, 95 midnight spots, 27 bars, 79. Izakaya-heavy. Quality mixed — tourist traps + gems.",
+    "nightlife": "Izakaya crawl heaven. Late-night energy but sketchy edges."
+  },
+  "ja": {
+    "atmosphere": "門前町の情緒。福徳神社参拝地。昔の東京、狭い路地、居酒屋横丁。だが地盤超軟弱（very_high地震、標高9m）。夜は危ない（犯罪率236/10k）。",
+    "landmarks": "福徳神社、仲見世（参拝客向け土産）。東西線・大江戸線交差。200万平方メートル緑地。",
+    "food": "飲食店259軒、居酒屋109軒、深夜営業95軒、バー27軒。居酒屋天国。質はまちまち。",
+    "nightlife": "居酒屋クローリング天国。夜間エネルギー高いが危ない辺縁。"
+  },
+  "ru": {
+    "atmosphere": "Святилище Fukutsu, паломничество. Старый Токио, узкие переулки, барная улица. Но ОЧЕНЬ мягкий грунт (very_high землетрясение, 9м). Ночью опасно (236/10k преступлений).",
+    "landmarks": "Храм Fukutsu, Nakamise (сувенир-улица). Пересечение двух линий. 2М кв.м зелени.",
+    "food": "259 listings, 109 изакай, 95 ночных, 27 баров. Изакая-доминант. Качество смешанное.",
+    "nightlife": "Рай для обхода изакай. Ночной траффик, опасные края."
+  }
+}

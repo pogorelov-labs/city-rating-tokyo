@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Disney orbit, bay hotels, stroller traffic. Green and clean, soft-ground quake risk.",
+    "landmarks": "Tokyo Disney Resort, Ikspiari, hotel belt. Everything points toward the resort gates.",
+    "food": "Tourist chains, hotel dining, 3 izakayas. Better for groups than everyday cheap meals.",
+    "nightlife": "Mostly post-Disney drinks. Local bars are thin."
+  },
+  "ja": {
+    "atmosphere": "ディズニー圏、湾岸ホテル、ベビーカー渋滞。緑は多いが軟弱地盤リスクあり。",
+    "landmarks": "東京ディズニーリゾート、イクスピアリ、ホテル街。街の重心は完全にゲート側。",
+    "food": "観光客向けチェーンとホテル飯中心。居酒屋3軒、日常の安飯は弱い。",
+    "nightlife": "ディズニー帰りの一杯程度。地元のバーは薄い。"
+  },
+  "ru": {
+    "atmosphere": "Орбита Disney, отели у залива, поток колясок. Чисто и зелено, но мягкий грунт.",
+    "landmarks": "Tokyo Disney Resort, Ikspiari, гостиничный пояс. Всё тянет к воротам парка.",
+    "food": "Туристические сети и гостиничная еда, всего 3 изакаи. Для групп норм, для быта слабее.",
+    "nightlife": "Выпить после Disney, не больше. Местных баров мало."
+  }
+}

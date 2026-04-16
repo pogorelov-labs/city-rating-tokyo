@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "New-town micro-stop on the Yamaman loop. Cheap and quiet, but 70 min from center.",
+    "landmarks": "Yukarigaoka Line, district-center blocks, huge green belts. Errands, not sightseeing.",
+    "food": "18 restaurants, 4 izakayas, a few cafes. Practical local meals, thin after dinner.",
+    "nightlife": "2 late spots, 1 karaoke. Basically asleep after 9pm."
+  },
+  "ja": {
+    "atmosphere": "山万ループのニュータウン小駅。安くて静か、都心までは遠い。",
+    "landmarks": "ユーカリが丘線、地区センター街区、大きな緑地帯。観光より生活用。",
+    "food": "飲食18軒、居酒屋4軒、カフェ少々。普段飯は足りる、夕食後は薄い。",
+    "nightlife": "深夜2軒、カラオケ1軒。9時以降はほぼ寝る街。"
+  },
+  "ru": {
+    "atmosphere": "Микростанция нового района на петле Yamaman. Дешево и тихо, но центр далеко.",
+    "landmarks": "Yukarigaoka Line, кварталы district center, большие зеленые пояса. Быт, не прогулочный хит.",
+    "food": "18 ресторанов, 4 изакая, пара кафе. Обычная местная еда, после ужина пустеет.",
+    "nightlife": "2 поздних места, 1 караоке. После 21:00 почти сон."
+  }
+}

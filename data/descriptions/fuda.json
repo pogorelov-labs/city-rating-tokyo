@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chofu-adjacent Keio stop, compact and useful. Food stronger than the greenery.",
+    "landmarks": "Chofu center nearby, local Keio backstreets, Fuda Tenjin side lanes.",
+    "food": "127 restaurants, 67 izakayas, 4 cafes. Surprisingly strong, casual and local.",
+    "nightlife": "53 late spots, 2 karaoke rooms, no clubs. Izakaya-heavy night."
+  },
+  "ja": {
+    "atmosphere": "調布隣の京王駅、コンパクトで使いやすい。緑より食の方が強い。",
+    "landmarks": "近い調布中心部、京王沿いの裏道、布多天神側の路地。",
+    "food": "飲食127軒、居酒屋67軒、カフェ4軒。意外に強い、気軽な地元店中心。",
+    "nightlife": "深夜営業53軒、カラオケ2軒、クラブなし。居酒屋濃いめの夜。"
+  },
+  "ru": {
+    "atmosphere": "Keio-станция рядом с Chofu, компактно и полезно. Еда сильнее зелени.",
+    "landmarks": "Центр Chofu рядом, задние улицы Keio, переулки у Fuda Tenjin.",
+    "food": "127 ресторанов, 67 изакая, 4 кафе. Неожиданно сильно, просто и локально.",
+    "nightlife": "53 поздних места, 2 караоке, клубов нет. Ночь с перевесом изакая."
+  }
+}

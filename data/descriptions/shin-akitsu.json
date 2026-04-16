@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Transfer-town suburb with a scruffy shopping strip. Cheap rent, heavy foot traffic, local mood.",
+    "landmarks": "The Akitsu transfer walk defines it. Shotengai snacks, Musashino Line commuters, no glamour.",
+    "food": "32 restaurants, 17 izakayas. Quick meals and commuter drinking.",
+    "nightlife": "14 late spots, 2 karaoke. Useful after-transfer drinking, not a night out."
+  },
+  "ja": {
+    "atmosphere": "乗換で成り立つ郊外駅。少し雑な商店街、安い家賃、人通り多め。",
+    "landmarks": "秋津への乗換歩きが街の軸。商店街スナック、武蔵野線通勤客、洒落感なし。",
+    "food": "飲食32軒＋46件、居酒屋17軒。早飯と乗換飲みに強い。",
+    "nightlife": "深夜14軒、カラオケ2軒。乗換後の一杯には便利、夜遊び目的ではない。"
+  },
+  "ru": {
+    "atmosphere": "Пригород-пересадка с грубоватой торговой полосой. Дёшево, много проходящего потока.",
+    "landmarks": "Пешая пересадка к Akitsu — главная ось. Сётэнгай, коммьютеры Musashino, без гламура.",
+    "food": "32 ресторана плюс 46 точек, 17 изакая. Быстрая еда и выпивка после пересадки.",
+    "nightlife": "14 поздних мест, 2 караоке. Удобно выпить, но не ночная цель."
+  }
+}

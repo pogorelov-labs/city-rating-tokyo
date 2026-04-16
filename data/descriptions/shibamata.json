@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Tokyo postcard, temple street and river air. Lovely, slow, weak for commuting.",
+    "landmarks": "Taishakuten temple, Tora-san Museum, Edo River bank. Tourist daytime, local evening.",
+    "food": "22 restaurants, 7 izakayas. Dango and soba mood; daily options stay thin.",
+    "nightlife": "4 late-night spots. Minimal. Last train before midnight bites."
+  },
+  "ja": {
+    "atmosphere": "古い東京の絵葉書。参道と川風。美しいが遅い、通勤力は弱い。",
+    "landmarks": "柴又帝釈天、寅さん記念館、江戸川土手。昼は観光、夜は地元。",
+    "food": "飲食22軒、居酒屋7軒。団子と蕎麦の気分。日常の選択肢は薄い。",
+    "nightlife": "深夜営業4軒。ほぼ皆無。終電が24時前で痛い。"
+  },
+  "ru": {
+    "atmosphere": "Открытка старого Токио: храмовая улица и речной воздух. Красиво, медленно, комьют слабый.",
+    "landmarks": "Taishakuten temple, Tora-san Museum, берег Edo River. Днём туристы, вечером локально.",
+    "food": "22 ресторана, 7 изакая. Данго и соба-настроение; повседневный выбор тонкий.",
+    "nightlife": "4 поздних места. Практически нет. Последний поезд до полуночи кусается."
+  }
+}

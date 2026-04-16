@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo residential calm with garden depth. Conservative, green, not built for chaos.",
+    "landmarks": "Rikugien nearby, Koishikawa Botanical Garden side trips, quiet Mita Line streets.",
+    "food": "122 restaurants, 46 izakayas, 11 cafes. Reliable local food, low on destination hype.",
+    "nightlife": "46 late spots, 7 bars, no clubs. Civilized drinks, early train home."
+  },
+  "ja": {
+    "atmosphere": "文京の住宅地らしい落ち着き、庭園の厚み。保守的で緑多め、混沌向きではない。",
+    "landmarks": "近い六義園、小石川植物園方面、静かな三田線の通り。",
+    "food": "飲食122軒、居酒屋46軒、カフェ11軒。地元飯は安定、遠征する派手さは低い。",
+    "nightlife": "深夜営業46軒、バー7軒、クラブなし。上品に少し飲んで帰る。"
+  },
+  "ru": {
+    "atmosphere": "Жилое спокойствие Bunkyo с глубиной садов. Консервативно, зелено, не для хаоса.",
+    "landmarks": "Рядом Rikugien, вылазки к Koishikawa Botanical Garden, тихие улицы Mita Line.",
+    "food": "122 ресторана, 46 изакая, 11 кафе. Надёжная локальная еда, мало хайпа назначения.",
+    "nightlife": "46 поздних мест, 7 баров, клубов нет. Цивилизованные напитки и домой."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Choshi harbor town, 2 lines (Sobu/Narita), 150min commute. Seafaring grit.",
+    "landmarks": "Harbor, fishing docks. Coastal atmosphere. Industrial edge.",
+    "food": "4 restaurants, 1 cafe. Minimal, fish-focused expected.",
+    "nightlife": "2 midnight spots only. Working harbor town sleeps early."
+  },
+  "ja": {
+    "atmosphere": "銚子漁港、2路線。150分通勤。漁師町の風情。",
+    "landmarks": "港、漁師岸壁。海の空気。",
+    "food": "食堂4軒、カフェ1軒、8軒。少ない。",
+    "nightlife": "夜間営業2軒。港町は早寝。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный порт Чоши, 2 линии (Собу/Нарита), 150 мин поездка. Морской рабочий дух.",
+    "landmarks": "Гавань, рыболовные доки. Прибрежная атмосфера. Индустриальная окраина.",
+    "food": "4 ресторана, 1 кафе, 8 точек. Минимум, рыбный фокус.",
+    "nightlife": "Только 2 позних места. Портовый город спит рано."
+  }
+}

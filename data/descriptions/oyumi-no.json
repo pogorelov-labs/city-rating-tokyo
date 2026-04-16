@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned Chiba suburb, green and slow. Cheap, quiet, very far from center.",
+    "landmarks": "Keisei Chihara Line suburbia, parks and housing belts, little landmark drama.",
+    "food": "Only 3 listed restaurants, 1 cafe; sees more daily food. Cook-at-home area.",
+    "nightlife": "Minimal. One late spot, no bar or izakaya signal."
+  },
+  "ja": {
+    "atmosphere": "千葉の計画住宅地。緑多めでゆっくり。安くて静か、都心はかなり遠い。",
+    "landmarks": "京成千原線沿いの住宅街、公園と団地の帯。派手な名所は少ない。",
+    "food": "掲載飲食3軒、カフェ1軒。日常店あり。自炊寄りの街。",
+    "nightlife": "ほぼ皆無。深夜1軒、バーや居酒屋の気配は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Плановый пригород Тибы, зеленый и медленный. Дешево, тихо, до центра очень далеко.",
+    "landmarks": "Субурбия Keisei Chihara Line, парки и жилые пояса, без ярких магнитов.",
+    "food": "Всего 3 ресторана в списке, 1 кафе; видит бытовую еду. Район для готовки дома.",
+    "nightlife": "Минимально. Одно позднее место, баров и изакая почти не видно."
+  }
+}

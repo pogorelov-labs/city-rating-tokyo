@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saikyo Line spillover from Saitama-Shintoshin. Towers, clinics, errands, commute.",
+    "landmarks": "Arusa shopping mall, Saitama Media Wave, City Tower, Super Arena within reach.",
+    "food": "93 restaurants, 39 izakayas, 8 cafes. Mall-adjacent meals beat backstreet romance.",
+    "nightlife": "12 late spots, one bar, no karaoke. Functional, not rowdy."
+  },
+  "ja": {
+    "atmosphere": "さいたま新都心の余波を受ける埼京線駅。タワー、病院、用事、通勤。",
+    "landmarks": "アルーサ、さいたまメディアウェーブ、シティタワー、スーパーアリーナ圏。",
+    "food": "飲食93軒、居酒屋39軒、カフェ8軒。路地情緒よりモール周辺飯。",
+    "nightlife": "深夜12軒、バー1軒、カラオケなし。実用的、荒れない。"
+  },
+  "ru": {
+    "atmosphere": "Хвост Saitama-Shintoshin на Saikyo Line. Башни, клиники, дела, коммьют.",
+    "landmarks": "Arusa mall, Saitama Media Wave, City Tower, Super Arena рядом.",
+    "food": "93 ресторана, 39 изакай, 8 кафе. Еда у молла надежнее романтики переулков.",
+    "nightlife": "12 поздних мест, один бар, без караоке. Функционально, не шумно."
+  }
+}

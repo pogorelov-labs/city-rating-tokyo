@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mega-terminal with bay-city swagger. Incredible access, endless crowds, easier rent than Tokyo core.",
+    "landmarks": "Sogo, Joinus, Bay Quarter, Minato Mirai walk. Everything starts underground.",
+    "food": "670 restaurants, 338 izakayas, 34 cafes. Department-store polish and alley drinking.",
+    "nightlife": "243 late spots, 8 karaoke, 4 clubs. Big, busy, commercial."
+  },
+  "ja": {
+    "atmosphere": "湾岸都市の見栄を持つ巨大ターミナル。接続最強、人多すぎ、都心より家賃は楽。",
+    "landmarks": "そごう、ジョイナス、ベイクォーター、みなとみらい散歩。全部地下から始まる。",
+    "food": "飲食670件、居酒屋338件、カフェ34件。百貨店の綺麗さと路地飲みの混合。",
+    "nightlife": "深夜243件、カラオケ8件、クラブ4件。大きく、忙しく、商業的。"
+  },
+  "ru": {
+    "atmosphere": "Мега-терминал с самоуверенностью портового города. Доступ фантастический, толпы бесконечны, аренда мягче центра Токио.",
+    "landmarks": "Sogo, Joinus, Bay Quarter, прогулка к Minato Mirai. Всё начинается под землёй.",
+    "food": "670 ресторанов, 338 изакай, 34 кафе. Универмажный глянец и алкоголь в переулках.",
+    "nightlife": "243 поздних места, 8 караоке, 4 клуба. Большое, шумное, коммерческое."
+  }
+}

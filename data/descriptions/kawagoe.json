@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Little Edo brand outside, commuter hub at the station. Cheap, lively, a full hour from Tokyo.",
+    "landmarks": "Kurazukuri old town and Toki no Kane are the draw, but not right at the platform.",
+    "food": "224 restaurants, 127 izakayas, 11 bars. Station-side chains, eel-town pride, solid drinking.",
+    "nightlife": "103 late spots, 5 karaoke, 1 club. Active for Saitama, not central Tokyo."
+  },
+  "ja": {
+    "atmosphere": "外側は小江戸ブランド、駅前は通勤ハブ。安くて賑やか、東京まではしっかり遠い。",
+    "landmarks": "蔵造りの町並みと時の鐘が本命。ただしホーム前ではなく少し離れる。",
+    "food": "飲食224軒、居酒屋127軒、バー11軒。駅前チェーン、うなぎの町の意地、飲みは強い。",
+    "nightlife": "深夜営業103軒、カラオケ5軒、クラブ1軒。埼玉では活発、都心ほどではない。"
+  },
+  "ru": {
+    "atmosphere": "Снаружи бренд Little Edo, у станции коммьютерский хаб. Дёшево, живо, до Токио полноценный час.",
+    "landmarks": "Старый Kurazukuri и Toki no Kane главный магнит, но не прямо у платформы.",
+    "food": "224 ресторана, 127 изакая, 11 баров. Станционные сети, гордость угря, крепкая выпивка.",
+    "nightlife": "103 поздних места, 5 караоке, 1 клуб. Активно для Saitama, не центр Токио."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "East-Tokyo workhorse: malls, pachinko, love hotels, families. Convenient, gritty, soft-ground risk.",
+    "landmarks": "Kinshi Park, Sumida Triphony Hall, Olinas, PARCO. Skytree visible, not serene.",
+    "food": "469 restaurants, 198 izakayas; yakiniku, ramen, Chinese, quick drinking. Strong but uneven.",
+    "nightlife": "216 late spots, 8 karaoke, 4 clubs. Lively, rougher south side."
+  },
+  "ja": {
+    "atmosphere": "東東京の働き者。モール、パチンコ、ラブホ、家族連れ。便利で粗い、地盤リスクあり。",
+    "landmarks": "錦糸公園、すみだトリフォニーホール、オリナス、PARCO。スカイツリーは見えるが静かではない。",
+    "food": "飲食469軒、居酒屋198軒。焼肉、ラーメン、中華、早い飲み。強いがムラあり。",
+    "nightlife": "深夜216軒、カラオケ8軒、クラブ4軒。賑やか、南口は少し荒い。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая лошадь восточного Токио: моллы, пачинко, лав-отели, семьи. Удобно, грубо, мягкий грунт.",
+    "landmarks": "Kinshi Park, Sumida Triphony Hall, Olinas, PARCO. Skytree видно, но тишины нет.",
+    "food": "469 ресторанов, 198 изакая; якинику, рамен, китайская, быстрые выпивки. Сильно, но неровно.",
+    "nightlife": "216 поздних мест, 8 караоке, 4 клуба. Живо, южная сторона грубее."
+  }
+}

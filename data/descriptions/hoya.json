@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Green oasis, single-line suburb. 50k daily, quiet zone. Parks dominate. 38 min to center.",
+    "landmarks": "42 parks, green pockets everywhere. Cultural venues sparse but present. Suburban refuge.",
+    "food": "17 listings, 7 izakaya, 3 cafes. Local joints, casual scene. Modest but steady.",
+    "nightlife": "8 midnight bars, 1 karaoke. Neighborhood drinks, early close."
+  },
+  "ja": {
+    "atmosphere": "緑のオアシス、単線の郊外。1日5万人、静かなエリア。公園が優位。中心まで38分。",
+    "landmarks": "42公園、いたるところに緑地帯。文化施設は少ないが存在。郊外の避難地。",
+    "food": "ホットペッパー17軒、居酒屋7軒、カフェ3軒。地元の飲食店、カジュアルな場面。控えめだが安定。",
+    "nightlife": "深夜営業8軒、カラオケ1軒。近所の飲み。早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Зелёный оазис, однолинейный пригород. 50k ежедневно, тихая зона. Парки везде. 38 минут до центра.",
+    "landmarks": "42 парка, зеленые карманы везде. Культурные площадки редки, но присутствуют. Пригородное убежище.",
+    "food": "17 listings, 7 изакая, 3 кафе. Местные заведения, casual сцена. Скромная, но стабильная.",
+    "nightlife": "8 поздних баров, 1 караоке. Соседские напитки, рано закрываются."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Low-key Keisei pocket between Funabashi streets. Quiet, cheap, useful, not polished.",
+    "landmarks": "Residential lanes, small parks, clinics and pharmacies. Funabashi’s bigger draw is nearby.",
+    "food": "9 listed restaurants, 2 izakayas, more small spots. Local, limited, unshowy.",
+    "nightlife": "4 late spots, 1 karaoke, no clubs. Barely there after dinner."
+  },
+  "ja": {
+    "atmosphere": "船橋の間にある京成の小さな住宅地。静かで安い、便利だが磨かれてはいない。",
+    "landmarks": "住宅路地、小公園、薬局とクリニック。大きな用事は船橋側へ。",
+    "food": "登録飲食9件、居酒屋2件、小店は点在。地元向けで少なめ、派手さなし。",
+    "nightlife": "深夜4件、カラオケ1件、クラブなし。夕食後はほぼ静か。"
+  },
+  "ru": {
+    "atmosphere": "Скромный карман Keisei между улицами Фунабаси. Тихо, дёшево, полезно, без лоска.",
+    "landmarks": "Жилые переулки, малые парки, клиники и аптеки. Большой Фунабаси рядом.",
+    "food": "9 ресторанов в списке, 2 изакая, мелкие точки вокруг. Локально, ограниченно, без шоу.",
+    "nightlife": "4 поздних места, 1 караоке, клубов нет. После ужина почти пусто."
+  }
+}

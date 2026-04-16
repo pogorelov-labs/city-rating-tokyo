@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Village edge, 63 min from Tokyo. Cheap rent, zero nightlife. Silence and nature only.",
+    "landmarks": "Tamagawa Line terminus. Mountain nearby. Rural.",
+    "food": "Data limited. 1 listings, sparse. Bring groceries.",
+    "nightlife": "Minimal to none."
+  },
+  "ja": {
+    "atmosphere": "村の端、中心部まで63分。家賃激安、夜間営業ゼロ。静寂のみ。",
+    "landmarks": "多摩川線終点。山。田舎。",
+    "food": "データ限定。飲食店1軒。買い置き推奨。",
+    "nightlife": "ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Деревенский край, 63 мин. Супер-дешёвая квартира, ночи нет. Только тишина.",
+    "landmarks": "Конец линии Tamagawa. Гора. Деревня.",
+    "food": "Данные неполные. 1 listings. Покупайте припасы.",
+    "nightlife": "Практически нет."
+  }
+}

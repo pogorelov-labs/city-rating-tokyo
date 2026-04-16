@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Toyoko Line student town, scruffy and social. Cheap enough for Yokohama, not polished.",
+    "landmarks": "Rokkakubashi shopping street, Kanagawa University slopes, narrow alleys off the station.",
+    "food": "57 listed spots plus strong density. Izakaya, ramen, cheap student meals, 8 bars.",
+    "nightlife": "25 late spots, no clubs. Bar-hopping is local and small-scale."
+  },
+  "ja": {
+    "atmosphere": "東横線の学生街。少し雑で社交的、横浜では安め、洗練は期待しない。",
+    "landmarks": "六角橋商店街、神奈川大学への坂、駅裏の細い路地。",
+    "food": "飲食57件、密度も強い。居酒屋、ラーメン、学生飯、バー8件。",
+    "nightlife": "深夜営業25件、クラブなし。小さな地元バー巡り。"
+  },
+  "ru": {
+    "atmosphere": "Студенческий городок на Toyoko Line, потертый и общительный. Для Йокогамы недорого.",
+    "landmarks": "Торговая улица Rokkakubashi, склоны к Kanagawa University, узкие переулки у станции.",
+    "food": "57 мест и плотный. Изакая, рамен, дешевая студенческая еда, 8 баров.",
+    "nightlife": "25 поздних мест, клубов нет. Бар-хоппинг локальный и маленький."
+  }
+}

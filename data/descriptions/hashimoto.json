@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Sagamihara terminal, cheap for the access. Crowded, practical, far from central Tokyo.",
+    "landmarks": "Keio and JR junction, Ario mall, Tanzawa-side horizon. Terminal-town energy.",
+    "food": "101 restaurants, 64 izakayas, 3 cafes. Station meals and drinking, light on charm.",
+    "nightlife": "43 late spots, 4 karaoke rooms, no clubs. Commuter hub night."
+  },
+  "ja": {
+    "atmosphere": "相模原の大きなターミナル、アクセスの割に安い。混む、実用的、都心は遠い。",
+    "landmarks": "京王とJRの接続、アリオ、丹沢方面の空。ターミナル街の熱。",
+    "food": "飲食101軒、居酒屋64軒、カフェ3軒。駅前飯と飲み、雰囲気はやや薄い。",
+    "nightlife": "深夜営業43軒、カラオケ4軒、クラブなし。通勤ハブの夜。"
+  },
+  "ru": {
+    "atmosphere": "Большой терминал Sagamihara, дёшево для такого доступа. Людно, практично, далеко от центра.",
+    "landmarks": "Узел Keio и JR, Ario mall, горизонт Tanzawa. Энергия терминального города.",
+    "food": "101 ресторан, 64 изакая, 3 кафе. Станционная еда и выпивка, шарма мало.",
+    "nightlife": "43 поздних места, 4 караоке, клубов нет. Ночь комьютерского хаба."
+  }
+}

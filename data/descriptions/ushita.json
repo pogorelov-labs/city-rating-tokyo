@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Senju riverside pocket, cheap-ish and connected. Low ground, flood risk baked in.",
+    "landmarks": "Keisei Sekiya transfer, Arakawa embankment, old Senju lanes. Skytree Line pragmatism.",
+    "food": "187 restaurants, 96 izakayas. Kitasenju spillover, working-class counters, few cafes.",
+    "nightlife": "82 late-night spots, no karaoke. Izakaya nights, not party nights."
+  },
+  "ja": {
+    "atmosphere": "千住の川沿いポケット。やや安く、接続は便利。低地なので水害リスク込み。",
+    "landmarks": "京成関屋乗換、荒川土手、千住の古い路地。スカイツリーラインの実用性。",
+    "food": "飲食187軒、居酒屋96軒。北千住の余波、労働者向けカウンター、カフェ少なめ。",
+    "nightlife": "深夜営業82軒、カラオケなし。居酒屋の夜で、パーティー向きではない。"
+  },
+  "ru": {
+    "atmosphere": "Речной карман Сэндзю, относительно дёшево и связно. Низина, риск паводка встроен.",
+    "landmarks": "Пересадка Keisei Sekiya, дамба Аракавы, старые переулки Сэндзю. Практичная Skytree Line.",
+    "food": "187 ресторанов, 96 изакая. Эхо Китасэндзю, рабочие стойки, кафе немного.",
+    "nightlife": "82 поздних места, караоке нет. Изакая-ночи, не вечериночные ночи."
+  }
+}

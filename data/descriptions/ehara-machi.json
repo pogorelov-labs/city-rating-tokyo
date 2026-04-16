@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Oimachi-line residential pocket, tidy and local. Shinagawa prices, calm streets.",
+    "landmarks": "Nakanobu shotengai, Hatanodai nearby, small shrine-and-clinic grid. Very everyday.",
+    "food": "119 restaurants, 37 izakayas. Solid neighborhood meals; cafes stay sparse.",
+    "nightlife": "42 late-night spots, no karaoke. Quiet drinks, no scene."
+  },
+  "ja": {
+    "atmosphere": "大井町線の住宅ポケット。整っていて地元向け。品川価格、道は静か。",
+    "landmarks": "中延商店街、旗の台近く、小さな神社と医院の格子。かなり日常。",
+    "food": "飲食119軒、居酒屋37軒。近所飯は堅いが、カフェは少なめ。",
+    "nightlife": "深夜営業42軒、カラオケなし。静かな飲み、シーンなし。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман Oimachi Line, аккуратно и локально. Цены Синагавы, спокойные улицы.",
+    "landmarks": "Nakanobu shotengai, рядом Hatanodai, сетка малых храмов и клиник. Очень повседневно.",
+    "food": "119 ресторанов, 37 изакая. Крепкая соседская еда; кафе мало.",
+    "nightlife": "42 поздних места, караоке нет. Тихая выпивка, сцены нет."
+  }
+}

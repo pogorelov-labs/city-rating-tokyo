@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Wholesale craft town between Akihabara and Ryogoku. Busy by day, gritty by the tracks after dark.",
+    "landmarks": "Doll and bead wholesalers, Kanda River bridges, Sumida-side walks. Old Edo commerce mood.",
+    "food": "545 restaurants, 237 izakayas, 40 cafes. Lunch is easy; quality jumps block by block.",
+    "nightlife": "155 late spots and many hostels. Izakaya-heavy, not a club zone."
+  },
+  "ja": {
+    "atmosphere": "秋葉原と両国の間の問屋街。昼は忙しい、夜は線路沿いに少し荒い。",
+    "landmarks": "人形・ビーズ問屋、神田川の橋、隅田川寄りの散歩道。江戸商いの名残。",
+    "food": "飲食545件、居酒屋237件、カフェ40件。昼飯は楽、質は通りごとに揺れる。",
+    "nightlife": "深夜営業155件、ホステル多め。居酒屋中心、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Оптовый район ремесла между Акихабарой и Рёгоку. Днем деловой, у путей вечером шершавый.",
+    "landmarks": "Кукольные и бисерные оптовики, мосты Kanda River, прогулки к Сумиде. Старый торговый Эдо.",
+    "food": "545 мест, 237 изакая, 40 кафе. С обедом легко, качество прыгает от квартала к кварталу.",
+    "nightlife": "155 поздних мест и много хостелов. Изакая, не клубная сцена."
+  }
+}

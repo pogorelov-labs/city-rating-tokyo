@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Nihonbashi residential pocket by the river. Expensive, calm, one-line awkward.",
+    "landmarks": "Hamacho Park, Meijiza Theatre, Sumida riverside, Ningyocho close by. Old Tokyo in suits.",
+    "food": "507 restaurants nearby; Ningyocho carries yakitori, sushi, cafes. Quality high, rent higher.",
+    "nightlife": "121 late spots, 29 bars. Refined drinking, no karaoke or clubs."
+  },
+  "ja": {
+    "atmosphere": "川沿いの日本橋住宅ポケット。上品で静か、高い、一路線だけは少し不便。",
+    "landmarks": "浜町公園、明治座、隅田川沿い、人形町も近い。スーツを着た古東京。",
+    "food": "周辺507軒。人形町側に焼き鳥、寿司、カフェ。質は高い、家賃も高い。",
+    "nightlife": "深夜121軒、バー29軒。上品な飲み、カラオケもクラブもなし。"
+  },
+  "ru": {
+    "atmosphere": "Вычищенный жилой карман Нихомбаси у реки. Дорого, спокойно, одна линия неудобна.",
+    "landmarks": "Hamacho Park, театр Meijiza, набережная Sumida, рядом Ningyocho. Старый Токио в костюме.",
+    "food": "507 мест рядом; Ningyocho дает якитори, суши, кафе. Качество высокое, аренда выше.",
+    "nightlife": "121 позднее место, 29 баров. Аккуратное питье, без караоке и клубов."
+  }
+}

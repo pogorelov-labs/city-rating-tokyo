@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Inokashira stop between Shimokita noise and Meidaimae utility. Safe, pricey, small.",
+    "landmarks": "Hanegi Park nearby, plum blossoms, narrow Setagaya lanes. Local calm wins.",
+    "food": "94 restaurants, 31 izakayas, 11 bars. Better than it looks, mostly small local rooms.",
+    "nightlife": "41 late spots, no karaoke or clubs. Low-key bars, early neighbors."
+  },
+  "ja": {
+    "atmosphere": "下北の騒ぎと明大前の実用性の間にある静かな井の頭線駅。安全、高め、小さい。",
+    "landmarks": "近い羽根木公園、梅、世田谷の細い路地。地元の静けさが勝つ。",
+    "food": "飲食94軒、居酒屋31軒、バー11軒。見た目より食える、小さな地元店中心。",
+    "nightlife": "深夜営業41軒、カラオケもクラブもなし。控えめなバー、近所は早い。"
+  },
+  "ru": {
+    "atmosphere": "Тихая Inokashira-станция между шумом Shimokita и пользой Meidaimae. Безопасно, дорого, мало.",
+    "landmarks": "Рядом Hanegi Park, сливы, узкие переулки Setagaya. Побеждает локальная тишина.",
+    "food": "94 ресторана, 31 изакая, 11 баров. Лучше, чем выглядит, в основном малые местные комнаты.",
+    "nightlife": "41 позднее место, без караоке и клубов. Тихие бары, ранние соседи."
+  }
+}

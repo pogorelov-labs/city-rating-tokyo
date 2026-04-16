@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Monster transfer hub with old shitamachi grit. Convenient, loud, crowded, rough around the edges.",
+    "landmarks": "Lumine, Marui, Tokyo Denki University, Arakawa riverbank. Shopping streets sprawl in every direction.",
+    "food": "293 restaurants, 138 izakayas, ramen and cheap counters everywhere. Great range, uneven polish.",
+    "nightlife": "115 late spots, 17 bars, 3 karaoke. Izakaya-heavy, lively, not clubby."
+  },
+  "ja": {
+    "atmosphere": "巨大乗換駅、下町の荒さも残る。便利、騒がしい、混む、少し雑。",
+    "landmarks": "ルミネ、マルイ、東京電機大学、荒川河川敷。商店街が全方向に伸びる。",
+    "food": "飲食293軒、居酒屋138軒。ラーメンと安いカウンター多い。幅広いが洗練度はばらつく。",
+    "nightlife": "深夜115軒、バー17軒、カラオケ3軒。居酒屋濃厚、賑やか、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Огромная пересадка с шитамати-грубостью. Удобно, шумно, тесно, края неровные.",
+    "landmarks": "Lumine, Marui, Tokyo Denki University, берег Аракавы. Торговые улицы лезут во все стороны.",
+    "food": "293 ресторана, 138 изакая, рамен и дешёвые стойки повсюду. Выбор сильный, лоск скачет.",
+    "nightlife": "115 поздних мест, 17 баров, 3 караоке. Много изакая, живо, но не клубно."
+  }
+}

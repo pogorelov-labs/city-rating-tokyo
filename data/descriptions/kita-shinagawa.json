@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Tokaido pocket under Shinagawa's shadow. Quiet lanes, high rent, airport-line convenience.",
+    "landmarks": "Kita-Shinagawa shopping street, old Tokaido traces, Tennozu and Shinagawa within a walk.",
+    "food": "315 restaurants nearby, 178 izakayas; much of the weight comes from Shinagawa spillover.",
+    "nightlife": "68 late spots, 2 karaoke. After-work drinking nearby, local streets stay calm."
+  },
+  "ja": {
+    "atmosphere": "品川の影にある旧東海道ポケット。静かな路地、高い家賃、空港線の便利さ。",
+    "landmarks": "北品川商店街、旧東海道の名残、天王洲と品川も徒歩圏。",
+    "food": "周辺315軒、居酒屋178軒。数字の多くは品川側のにじみ出し。",
+    "nightlife": "深夜68軒、カラオケ2軒。仕事帰り飲みは近いが、地元通りは静か。"
+  },
+  "ru": {
+    "atmosphere": "Карман старого Tokaido в тени Синагавы. Тихие переулки, высокая аренда, удобно к аэропорту.",
+    "landmarks": "Kita-Shinagawa shotengai, следы старого Tokaido, Tennozu и Shinagawa пешком.",
+    "food": "315 мест рядом, 178 изакая; большая часть веса приходит переливом из Синагавы.",
+    "nightlife": "68 поздних мест, 2 караоке. Питье после работы рядом, местные улицы спокойны."
+  }
+}

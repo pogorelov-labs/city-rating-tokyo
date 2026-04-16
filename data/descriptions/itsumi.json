@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keikyu stop above Yokosuka, hillside and port air. Cheap, quiet, remote.",
+    "landmarks": "Verny Park and Yokosuka harbor are close. Green hills sit right behind town.",
+    "food": "26 restaurants, 9 izakayas, 5 bars. More sailor-town leftovers than polished dining.",
+    "nightlife": "6 late spots, no karaoke or clubs. Drinks stay local and finish early."
+  },
+  "ja": {
+    "atmosphere": "横須賀の上にある小さな京急駅。坂と港の空気。安い、静か、遠い。",
+    "landmarks": "ヴェルニー公園と横須賀港が近い。背後はすぐ緑の丘。",
+    "food": "飲食26軒、居酒屋9軒、バー5軒。洗練より港町の残り香。",
+    "nightlife": "深夜営業6軒、カラオケもクラブもなし。地元飲みで早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Keikyu-точка над Йокосукой, склоны и портовый воздух. Дешево, тихо, далеко.",
+    "landmarks": "Verny Park и гавань Йокосуки рядом. За кварталами сразу зелёные холмы.",
+    "food": "26 ресторанов, 9 изакая, 5 баров. Больше портовой памяти, чем вылизанного ужина.",
+    "nightlife": "6 поздних мест, без караоке и клубов. Местные напитки, ранний финиш."
+  }
+}

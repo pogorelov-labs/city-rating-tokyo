@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Tokaido backstreet mood south of Shinagawa. Low-rise, practical, not glossy.",
+    "landmarks": "Kita-Shinagawa shotengai, old Tokaido, Meguro River edge. Shinagawa walkable.",
+    "food": "137 restaurants, 66 izakayas; salaryman lunches and local counters. Bar scene thin.",
+    "nightlife": "19 late spots, no karaoke or clubs. Drinking is izakaya-led."
+  },
+  "ja": {
+    "atmosphere": "品川の南、旧東海道の裏町感。低層で実用的、天王洲ほど洒落てない。",
+    "landmarks": "北品川商店街、旧東海道、目黒川沿い。品川駅まで歩ける距離。",
+    "food": "飲食137軒、居酒屋66軒。サラリーマン昼飯と地元カウンター。バーは薄い。",
+    "nightlife": "深夜営業19軒、カラオケもクラブもなし。飲みは居酒屋主導。"
+  },
+  "ru": {
+    "atmosphere": "Закоулки старого Токайдо к югу от Синагавы. Низко, практично, без глянца.",
+    "landmarks": "Кита-Синагава shotengai, старый Токайдо, край Мэгуро. До Синагавы пешком.",
+    "food": "137 ресторанов, 66 изакая. Обеды для офисных и местные стойки. Баров мало.",
+    "nightlife": "19 поздних мест, без караоке и клубов. Ночь держится на изакая."
+  }
+}

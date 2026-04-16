@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned Nerima estate, wide paths and park air. Safe, green, but the last train taps out early.",
+    "landmarks": "Hikarigaoka Park, IMA mall, broad pedestrian decks. Big-scale public-housing Tokyo.",
+    "food": "15 restaurants, 4 izakayas. Mall basics, family meals, few independent surprises.",
+    "nightlife": "2 late spots. Minimal. The area is asleep before midnight."
+  },
+  "ja": {
+    "atmosphere": "練馬の計画団地、広い歩道と公園の空気。安全で緑濃いが、終電は早い。",
+    "landmarks": "光が丘公園、IMA、広い歩行者デッキ。大規模団地の東京。",
+    "food": "飲食15軒、居酒屋4軒。モールの基本、家族向け飯、個人店の驚きは少ない。",
+    "nightlife": "深夜2軒。ほぼ皆無。日付が変わる前に街は寝る。"
+  },
+  "ru": {
+    "atmosphere": "Плановый район Нэримы, широкие дорожки и парковый воздух. Безопасно, зелено, но последний поезд ранний.",
+    "landmarks": "Парк Hikarigaoka, IMA mall, широкие пешеходные деки. Токио больших жилмассивов.",
+    "food": "15 ресторанов, 4 изакая. Молл-основа, семейная еда, мало независимых сюрпризов.",
+    "nightlife": "2 поздних места. Практически нет. Район спит до полуночи."
+  }
+}

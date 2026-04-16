@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai Line residential Koto: mall life, canals, wide roads. Very-high seismic soft-ground caveat.",
+    "landmarks": "SUNAMO, Kitasuna side, big parks and canal walks. Practical east-side Tokyo.",
+    "food": "35 restaurants, 10 izakayas, no bars. Family meals and lunch, not date-night depth.",
+    "nightlife": "7 late-night spots, no karaoke or clubs. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "東西線の江東住宅地。モール生活、運河、広い道路。地盤・地震リスクは要注意。",
+    "landmarks": "SUNAMO、北砂方面、大きな公園と運河沿い散歩。実用的な東東京。",
+    "food": "飲食35軒、居酒屋10軒、バーなし。家族飯と昼食向き、デート夜の厚みはない。",
+    "nightlife": "深夜営業7軒、カラオケとクラブなし。夕食後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Жилой Кото на Tozai Line: моллы, каналы, широкие дороги. Мягкий грунт и сейсмика — реальный минус.",
+    "landmarks": "SUNAMO, сторона Китасуна, большие парки и прогулки вдоль каналов. Практичный восток Токио.",
+    "food": "35 ресторанов, 10 изакая, баров нет. Семейная еда и обеды, не вечер для свиданий.",
+    "nightlife": "7 поздних мест, без караоке и клубов. После ужина тихо."
+  }
+}

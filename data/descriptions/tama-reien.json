@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio-side Fuchu calm, cemetery-adjacent and residential. Safe, green-ish, not lively.",
+    "landmarks": "Tama Cemetery namesake nearby, small parks, local gyms. More errands than sightseeing.",
+    "food": "31 restaurants plus 10 izakayas. Simple station food, sparse cafes, no foodie buzz.",
+    "nightlife": "12 late spots, no karaoke or clubs. Quiet beers, then shutters."
+  },
+  "ja": {
+    "atmosphere": "京王線の府中住宅地。多磨霊園そばで静か、安全寄り、賑わいは薄い。",
+    "landmarks": "名前通り多磨霊園が近い。小公園とジム多め、観光より用事の街。",
+    "food": "飲食31件、居酒屋10件。駅前の普通飯、カフェ少なめ、美食感はない。",
+    "nightlife": "深夜12件、カラオケもクラブもなし。軽く飲んで、早めに閉まる。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная Футю на линии Keio, рядом кладбище, жильё и тишина. Без городской искры.",
+    "landmarks": "Tama Cemetery по соседству, малые парки, много локальных залов. Дела, не туризм.",
+    "food": "31 ресторан и 10 изакая. Обычная еда у станции, кафе мало, гастро-шума нет.",
+    "nightlife": "12 поздних мест, без караоке и клубов. Тихое пиво, потом ставни вниз."
+  }
+}

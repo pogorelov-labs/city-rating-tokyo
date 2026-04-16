@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bay-side Chiba hub, cheap and car-friendly. Tokyo access exists, but it is far.",
+    "landmarks": "Kisarazu port, old shopping streets, Aqua-Line bus orbit, Kururi Line gateway.",
+    "food": "Seafood, izakaya, local diners, some late spots. Stronger than the green score.",
+    "nightlife": "Late izakayas and one karaoke, no clubs. Provincial but alive."
+  },
+  "ja": {
+    "atmosphere": "湾岸の千葉ハブ。安くて車向き、東京には出られるが遠い。",
+    "landmarks": "木更津港、古い商店街、アクアラインバス圏、久留里線の入口。",
+    "food": "海鮮、居酒屋、地元食堂、遅い店も少し。緑より食の方が強い。",
+    "nightlife": "遅い居酒屋とカラオケ1軒、クラブなし。地方感はあるが生きている。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный хаб Тибы, дешево и удобно с машиной. До Токио можно, но далеко.",
+    "landmarks": "Порт Kisarazu, старые торговые улицы, орбита Aqua-Line bus, ворота Kururi Line.",
+    "food": "Seafood, изакаи, местные дайнеры, немного поздних мест. Еда сильнее зелени.",
+    "nightlife": "Поздние изакаи и одно караоке, без клубов. Провинциально, но живо."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Western rail junction at Tokyo's edge. Cheap, useful, safe; far from city-core mood.",
+    "landmarks": "Four-line transfer, Tama River side, road-side suburbs. Hills and air, not neon.",
+    "food": "24 restaurants, 16 izakayas. Station-front staples, little cafe culture, honest prices.",
+    "nightlife": "11 late spots, no karaoke. Small izakaya nights, early last-call feel."
+  },
+  "ja": {
+    "atmosphere": "東京西端の乗換拠点。安くて実用的、安全。都心の空気からは遠い。",
+    "landmarks": "4路線の乗換、多摩川側、ロードサイド郊外。ネオンより丘と空気。",
+    "food": "飲食24軒、居酒屋16軒。駅前の定番飯、カフェ文化は薄い、価格は正直。",
+    "nightlife": "深夜11軒、カラオケなし。小さな居酒屋の夜、早仕舞い感。"
+  },
+  "ru": {
+    "atmosphere": "Западный пересадочный узел на краю Токио. Дешево, удобно, безопасно; центр далеко.",
+    "landmarks": "Пересадка 4 линий, сторона Тамы, придорожные пригороды. Холмы и воздух вместо неона.",
+    "food": "24 ресторана, 16 изакая. Еда у станции, кафе-культуры мало, цены честные.",
+    "nightlife": "11 поздних мест, караоке нет. Маленькие изакаи, ощущение раннего финала."
+  }
+}

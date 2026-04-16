@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama's rough fun edge: Noge, Isezakicho, river nights. Great energy, gritty after dark.",
+    "landmarks": "Noge bars, Koganecho art pockets, Ooka River walks. Central Yokohama chaos nearby.",
+    "food": "750 restaurants, 287 izakayas, 73 bars. Dense, cheap, loud; quality swings hard.",
+    "nightlife": "360 late spots, karaoke and clubs. Real nightlife, with real edge."
+  },
+  "ja": {
+    "atmosphere": "野毛・伊勢佐木町の荒い楽しさ。夜の川沿いは濃い、面白いが少しザラつく。",
+    "landmarks": "野毛の飲み屋街、黄金町のアート、小さな大岡川散歩。横浜中心部の混沌が近い。",
+    "food": "飲食750軒、居酒屋287軒、バー73軒。密度高い、安い、騒がしい。質は振れる。",
+    "nightlife": "深夜営業360軒、カラオケとクラブあり。本物の夜遊び、本物のクセ。"
+  },
+  "ru": {
+    "atmosphere": "Грубая весёлая грань Йокогамы: Noge, Isezakicho, ночная река. Живо, но шершаво.",
+    "landmarks": "Бары Noge, арт-карманы Koganecho, прогулки вдоль Ooka. Центр Йокогамы шумит рядом.",
+    "food": "750 ресторанов, 287 изакая, 73 бара. Плотно, недорого, громко; качество скачет.",
+    "nightlife": "360 поздних мест, караоке и клубы. Настоящая ночь, с настоящим краем."
+  }
+}

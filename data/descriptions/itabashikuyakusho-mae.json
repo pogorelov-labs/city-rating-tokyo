@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Practical Itabashi core, ward-office errands and old shopping streets. High ground, unglamorous, useful.",
+    "landmarks": "Itabashi ward office, old Nakasendo traces, Oyama shopping streets within reach.",
+    "food": "146 restaurants, 63 izakayas. Teishoku, ramen, cheap beer, very local after work.",
+    "nightlife": "51 late spots, no karaoke. Salaryman bars and izakayas, not a scene."
+  },
+  "ja": {
+    "atmosphere": "板橋の実用中心。区役所用事と古い商店街。高台、派手さなし、便利。",
+    "landmarks": "板橋区役所、旧中山道の名残、大山商店街も徒歩圏。",
+    "food": "飲食146軒、居酒屋63軒。定食、ラーメン、安いビール、仕事帰りの地元感。",
+    "nightlife": "深夜51軒、カラオケなし。サラリーマン酒場と居酒屋、シーンではない。"
+  },
+  "ru": {
+    "atmosphere": "Практичное ядро Itabashi: мэрия, дела, старые торговые улицы. Высоко, буднично, удобно.",
+    "landmarks": "Itabashi ward office, следы старого Nakasendo, торговые улицы Oyama в досягаемости.",
+    "food": "146 ресторанов, 63 изакая. Тэйсёку, рамэн, дешевое пиво, очень местно после работы.",
+    "nightlife": "51 позднее место, караоке нет. Бары для зарплатников и изакая, не сцена."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Kameido side pocket on a tiny Tobu line. Low-rise, local, weak transit beyond the spur.",
+    "landmarks": "Kameido Suijin shrine, Kameido Chuo Park, river-flat streets. Very high seismic risk.",
+    "food": "220 restaurants, 89 izakayas. The Kameido cluster carries it; cafes are strangely scarce.",
+    "nightlife": "90 late spots, no karaoke. Izakaya spillover, not a standalone night district."
+  },
+  "ja": {
+    "atmosphere": "小さな東武線沿いの亀戸の脇ポケット。低層、地元、支線以外の移動は弱い。",
+    "landmarks": "亀戸水神、亀戸中央公園、川沿いの平地。地震リスクはかなり高い。",
+    "food": "飲食220軒、居酒屋89軒。亀戸側の集積で強い。カフェは妙に少ない。",
+    "nightlife": "深夜90軒、カラオケなし。居酒屋の波及、単独の夜遊び地区ではない。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман Kameido на маленькой ветке Tobu. Низко, локально, транспорт слабый вне ветки.",
+    "landmarks": "Святилище Kameido Suijin, Kameido Chuo Park, плоские речные улицы. Очень высокий сейсмориск.",
+    "food": "220 ресторанов, 89 изакая. Кластер Kameido вытягивает район; кафе странно мало.",
+    "nightlife": "90 поздних мест, караоке нет. Изакая-спилловер, не самостоятельный ночной район."
+  }
+}

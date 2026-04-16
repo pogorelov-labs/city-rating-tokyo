@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Residential back gate to Ikebukuro. Quiet homes, cheap-ish rent, big-city mess one stop away.",
+    "landmarks": "Ikebukuro reachable on foot, small local parks, Tobu Tojo backstreets. Not scenic.",
+    "food": "160 restaurants, 64 izakayas; local joints plus Ikebukuro overflow. Cafes are thin.",
+    "nightlife": "64 late spots, 17 bars. Nearby drinking, but the station itself stays muted."
+  },
+  "ja": {
+    "atmosphere": "池袋の住宅裏口。家の周りは静か、家賃はやや安め、一駅先は大都市の混沌。",
+    "landmarks": "池袋は徒歩圏、小さな公園、東武東上線の裏道。景色の街ではない。",
+    "food": "飲食160軒、居酒屋64軒。地元店と池袋の余波。カフェは薄い。",
+    "nightlife": "深夜64軒、バー17軒。近くで飲めるが、駅前自体は控えめ。"
+  },
+  "ru": {
+    "atmosphere": "Жилой задний вход к Икэбукуро. Дома тихие, аренда терпимее, хаос большого города в одной остановке.",
+    "landmarks": "Ikebukuro пешком, малые местные парки, задние улицы Tobu Tojo. Не живописно.",
+    "food": "160 ресторанов, 64 изакая; местные места плюс перелив Икэбукуро. Кафе мало.",
+    "nightlife": "64 поздних места, 17 баров. Питье рядом, сама станция приглушенная."
+  }
+}

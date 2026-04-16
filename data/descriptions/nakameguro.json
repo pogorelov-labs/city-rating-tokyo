@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Canal-side cool Tokyo, design offices, dates and cherry blossom mobs. Beautiful, expensive, crowded.",
+    "landmarks": "Meguro River, Nakameguro Koukashita, Daikanyama side streets. Best outside peak sakura chaos.",
+    "food": "564 restaurants, 167 izakayas, 63 bars. Bistros, ramen, natural wine, lines everywhere.",
+    "nightlife": "272 late spots, 3 karaoke, 1 club. Bars run deep, clubbing stays secondary."
+  },
+  "ja": {
+    "atmosphere": "目黒川沿いのクール東京。デザイン事務所、デート、桜の大混雑。美しいが高く混む。",
+    "landmarks": "目黒川、中目黒高架下、代官山方面の裏道。桜ピーク外のほうが本領。",
+    "food": "飲食564軒、居酒屋167軒、バー63軒。ビストロ、ラーメン、ナチュラルワイン、行列だらけ。",
+    "nightlife": "深夜営業272軒、カラオケ3軒、クラブ1軒。バーは深い、クラブは脇役。"
+  },
+  "ru": {
+    "atmosphere": "Крутой Токио вдоль канала: дизайн-офисы, свидания, толпы на сакуру. Красиво, дорого, людно.",
+    "landmarks": "Meguro River, Nakameguro Koukashita, переулки к Daikanyama. Лучше вне пика сакуры.",
+    "food": "564 ресторана, 167 изакая, 63 бара. Бистро, рамен, natural wine, очереди повсюду.",
+    "nightlife": "272 поздних места, 3 караоке, 1 клуб. Баров много, клубы вторичны."
+  }
+}

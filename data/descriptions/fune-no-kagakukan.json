@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odaiba museum-side emptiness, bay views and wide roads. Useful for events, thin for living.",
+    "landmarks": "Museum of Maritime Science, Tokyo Bay decks, Yurikamome views. Big water, little street.",
+    "food": "79 restaurants, 17 izakayas, 8 cafes. Mall and waterfront food, weak daily texture.",
+    "nightlife": "7 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "お台場の博物館側の空白、湾の景色と広い道路。イベントには便利、生活は薄い。",
+    "landmarks": "船の科学館、東京湾のデッキ、ゆりかもめの眺め。水は大きい、街路は薄い。",
+    "food": "飲食79軒、居酒屋17軒、カフェ8軒。モールと湾岸飯、日常の質感は弱い。",
+    "nightlife": "深夜営業7軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пустота Odaiba у музея, виды залива и широкие дороги. Для событий удобно, жить тонко.",
+    "landmarks": "Museum of Maritime Science, деки Tokyo Bay, виды Yurikamome. Много воды, мало улицы.",
+    "food": "79 ресторанов, 17 изакая, 8 кафе. Молл и waterfront food, слабая повседневность.",
+    "nightlife": "7 поздних мест, без караоке и клубов. Минимально."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Toshima pocket on Seibu Ikebukuro. Low-rise, safe-feeling, close enough to the city.",
+    "landmarks": "Tokiwaso manga trail nearby, local shotengai, small parks. Neighborhood scale, no spectacle.",
+    "food": "46 restaurants, 12 izakayas, 4 bars. Ramen, curry, tiny counters; modest but usable.",
+    "nightlife": "14 late spots, no karaoke or clubs. Soft local drinking, then last train."
+  },
+  "ja": {
+    "atmosphere": "西武池袋線の静かな豊島ポケット。低層で安全感あり、都心にも近い。",
+    "landmarks": "トキワ荘マンガ散歩圏、地元商店街、小さな公園。近所サイズで、見せ場は控えめ。",
+    "food": "飲食46軒、居酒屋12軒、バー4軒。ラーメン、カレー、小さなカウンター。地味だが使える。",
+    "nightlife": "深夜営業14軒、カラオケもクラブもなし。柔らかい地元飲み、終電で帰る。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман Toshima на Seibu Ikebukuro. Низкая застройка, спокойно, до города достаточно близко.",
+    "landmarks": "Рядом манга-маршрут Tokiwaso, местный shotengai, маленькие парки. Масштаб соседский, без спектакля.",
+    "food": "46 ресторанов, 12 изакая, 4 бара. Рамен, карри, маленькие стойки; скромно, но работает.",
+    "nightlife": "14 поздних мест, без караоке и клубов. Мягкая местная выпивка, потом последний поезд."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo civic hub under Tokyo Dome's shadow. Convenient, dense, surprisingly orderly.",
+    "landmarks": "Bunkyo Civic Center, Koishikawa Korakuen, Tokyo Dome next door. Hills and offices.",
+    "food": "253 restaurants, 119 izakayas, 10 cafes. Office lunches, Dome crowds, solid local range.",
+    "nightlife": "78 late spots, no clubs. Izakaya after events, then quiet streets."
+  },
+  "ja": {
+    "atmosphere": "東京ドームの影にある文京区の行政ハブ。便利で密度高いが、意外に整っている。",
+    "landmarks": "文京シビックセンター、小石川後楽園、隣の東京ドーム。坂とオフィス。",
+    "food": "飲食253軒、居酒屋119軒、カフェ10軒。昼飯、ドーム客、地元飯まで幅あり。",
+    "nightlife": "深夜営業78軒、クラブなし。イベント後の居酒屋、その後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Гражданский узел Bunkyo в тени Tokyo Dome. Удобно, плотно, неожиданно orderly.",
+    "landmarks": "Bunkyo Civic Center, Koishikawa Korakuen, Tokyo Dome рядом. Холмы и офисы.",
+    "food": "253 ресторана, 119 изакая, 10 кафе. Офисные ланчи, толпы Dome, крепкий локальный диапазон.",
+    "nightlife": "78 поздних мест, клубов нет. Изакая после событий, потом тихие улицы."
+  }
+}

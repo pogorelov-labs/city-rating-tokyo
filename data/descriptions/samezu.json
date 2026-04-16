@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keikyu backwater in Shinagawa, low-key and convenient. Canal-side, not polished.",
+    "landmarks": "Samezu driver license center, old Tokaido edge, Oimachi within reach.",
+    "food": "208 restaurants, 102 izakayas. Oimachi spillover helps; cafes stay modest.",
+    "nightlife": "82 late-night spots, no karaoke. Izakaya-heavy, no club scene."
+  },
+  "ja": {
+    "atmosphere": "品川の京急ローカル。地味だが便利。運河側で、磨かれた街ではない。",
+    "landmarks": "鮫洲運転免許試験場、旧東海道の端、大井町も近い。",
+    "food": "飲食208軒、居酒屋102軒。大井町の余波で食えるが、カフェは控えめ。",
+    "nightlife": "深夜営業82軒、カラオケなし。居酒屋寄り、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Локальная Keikyu в Синагаве, скромно и удобно. Канальная сторона, не глянец.",
+    "landmarks": "Samezu driver license center, край старого Tokaido, Oimachi рядом.",
+    "food": "208 ресторанов, 102 изакая. Оймати помогает выбором; кафе скромные.",
+    "nightlife": "82 поздних места, караоке нет. Изакая-тяжело, клубной сцены нет."
+  }
+}

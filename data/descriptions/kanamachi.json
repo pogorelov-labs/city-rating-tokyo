@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Katsushika river-edge hub, old Tokyo feel with commuter density. Affordable, busy, not polished.",
+    "landmarks": "Mizumoto Park buses, Keisei spur, Edo River side nearby. Local shopping streets carry the area.",
+    "food": "82 restaurants, 29 izakayas. Ramen, Chinese, neighborhood bars; more honest than stylish.",
+    "nightlife": "32 late spots, 3 karaoke. Active for Katsushika, still no club scene."
+  },
+  "ja": {
+    "atmosphere": "葛飾の川沿い拠点、古い東京感と通勤密度。手頃で賑やか、洗練ではない。",
+    "landmarks": "水元公園行きバス、京成金町線、江戸川方面。商店街が街を支える。",
+    "food": "飲食82軒、居酒屋29軒。ラーメン、中華、近所バー。洒落より正直。",
+    "nightlife": "深夜32軒、カラオケ3軒。葛飾では動く方、でもクラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Узел Кацусики у реки, старотокийский вкус и commuter-плотность. Доступно, шумно, не отполировано.",
+    "landmarks": "Автобусы к Mizumoto Park, ветка Keisei, сторона Эдогавы рядом. Район держат торговые улицы.",
+    "food": "82 ресторана, 29 изакая. Рамен, китайская еда, районные бары; честнее, чем стильно.",
+    "nightlife": "32 поздних места, 3 караоке. Для Кацусики живо, но клубной сцены нет."
+  }
+}

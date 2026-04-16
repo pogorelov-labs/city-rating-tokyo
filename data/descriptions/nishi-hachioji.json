@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "West Hachioji commuter base, cheap rents and mountain-edge air. Practical, distant, more relaxed.",
+    "landmarks": "Chuo Line local streets, hills toward Takao, small shopping strips. High elevation, calmer ground.",
+    "food": "40 restaurants, 18 izakayas, 4 cafes. Local noodles, set meals, simple station drinking.",
+    "nightlife": "12 late spots, 1 karaoke, no clubs. Enough for locals, not a night out."
+  },
+  "ja": {
+    "atmosphere": "八王子西側の通勤拠点。安い家賃と山側の空気。実用的で遠いが、ゆったり。",
+    "landmarks": "中央線沿いの地元通り、高尾方面の丘、小さな商店筋。標高高めで地盤感は落ち着く。",
+    "food": "飲食40軒、居酒屋18軒、カフェ4軒。地元麺、定食、駅前の軽い飲み。",
+    "nightlife": "深夜営業12軒、カラオケ1軒、クラブなし。地元には足りる、夜遊び目的ではない。"
+  },
+  "ru": {
+    "atmosphere": "Коммьютерская база западного Hachioji, дешёвая аренда и воздух у гор. Практично, далеко, спокойнее.",
+    "landmarks": "Локальные улицы Chuo Line, холмы к Takao, малые торговые полосы. Высокая отметка, спокойнее грунт.",
+    "food": "40 ресторанов, 18 изакая, 4 кафе. Местная лапша, сет-меню, простая выпивка у станции.",
+    "nightlife": "12 поздних мест, 1 караоке, клубов нет. Местным хватает, не ночной выезд."
+  }
+}

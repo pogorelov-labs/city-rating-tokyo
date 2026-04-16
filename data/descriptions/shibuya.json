@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo's dopamine engine: crossings, screens, youth mobs. Brutal rent, rough.",
+    "landmarks": "Scramble Crossing, Hachiko, Center-gai, Miyashita Park. Motion, queues.",
+    "food": "1284 restaurants, 476 izakayas, 106 bars. Everything exists; choose carefully.",
+    "nightlife": "591 late spots, 15 karaoke, 21 clubs. Exhausting fast."
+  },
+  "ja": {
+    "atmosphere": "東京のドーパミン装置、交差点、巨大スクリーン、若者の波。アクセス最高、家賃と治安は厳しい。",
+    "landmarks": "スクランブル交差点、ハチ公、センター街、ミヤシタパーク。常に動き、常に行列。",
+    "food": "飲食1284軒、居酒屋476軒、バー106軒。何でもある、質の見極めは自己責任。",
+    "nightlife": "深夜591軒、カラオケ15軒、クラブ21軒。東京の夜の機械、すぐ疲れる。"
+  },
+  "ru": {
+    "atmosphere": "Дофаминовый двигатель Токио: переходы, экраны, толпы молодёжи. Доступ блестящий, аренда и безопасность жесткие.",
+    "landmarks": "Scramble Crossing, Hachiko, Center-gai, Miyashita Park. Вечное движение, вечные очереди.",
+    "food": "1284 ресторана, 476 изакая, 106 баров. Есть всё; контроль качества на тебе.",
+    "nightlife": "591 позднее место, 15 караоке, 21 клуб. Ночная машина Токио, быстро выматывает."
+  }
+}

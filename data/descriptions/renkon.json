@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Low-key Itabashi on the Mita Line. Safe, green, affordable enough; little style.",
+    "landmarks": "Arakawa-side parks, housing blocks, local shopping streets. Everyday north Tokyo.",
+    "food": "41 restaurants, 12 izakayas, 4 bars. Practical dinner map, not a food hunt.",
+    "nightlife": "11 late spots, no karaoke or clubs. Quiet local drinking."
+  },
+  "ja": {
+    "atmosphere": "三田線の地味な板橋住宅地。安全、緑あり、家賃もほどほど。洒落感は薄い。",
+    "landmarks": "荒川方面の公園、団地、地元商店街。北東京の日常そのもの。",
+    "food": "飲食41件、居酒屋12件、バー4件。夕飯には実用的、食べ歩き向きではない。",
+    "nightlife": "深夜11件、カラオケもクラブもなし。静かな近所飲み。"
+  },
+  "ru": {
+    "atmosphere": "Сдержанный Итабаши на Mita Line. Безопасно, зелено, аренда терпимая; стиля мало.",
+    "landmarks": "Парки к Arakawa, жилые блоки, локальные торговые улицы. Повседневный северный Токио.",
+    "food": "41 ресторан, 12 изакай, 4 бара. Практичная карта ужина, не гастро-охота.",
+    "nightlife": "11 поздних мест, без караоке и клубов. Тихие соседские напитки."
+  }
+}

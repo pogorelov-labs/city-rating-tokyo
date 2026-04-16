@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Yokosuka suburb, residential and calm. Small station, low daily traffic. Feels far from center (80 min).",
+    "landmarks": "Yokosuka park nearby, coastal proximity. Sleeping town vibe, little tourism.",
+    "food": "42 restaurants, modest mix. Izakaya-focused, limited variety, sparse records.",
+    "nightlife": "15 late spots, no karaoke. Neighborhood bars, decent for a suburb. Early last train (23:50)."
+  },
+  "ja": {
+    "atmosphere": "静かな横須賀の郊外。駅小さい、人通り少ない。中心まで80分。",
+    "landmarks": "横須賀の公園、海の近さ。眠たい街、観光なし。",
+    "food": "飲食店42軒、居酒屋多い。バリエーション限定。",
+    "nightlife": "深夜営業15軒。近所の飲み屋。末電車23:50と早い。"
+  },
+  "ru": {
+    "atmosphere": "Тихая Йокосука, жилой и спокойный пригород. Маленькая станция, редкие люди. 80 мин до центра.",
+    "landmarks": "Парк Йокосука рядом, близ море. Спящий посёлок, туризма нет.",
+    "food": "42 ресторана, скромный микс. Изакая в основном, выбор узкий.",
+    "nightlife": "15 поздних мест, караоке нет. Соседские барчики.末поезд 23:50."
+  }
+}

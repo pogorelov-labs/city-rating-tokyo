@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama-side backdoor, quiet platform near a giant food zone. Convenient but safety data is weak.",
+    "landmarks": "Yokohama Station walks, Sotetsu tracks, river-edge backstreets. The hub is next door.",
+    "food": "505 restaurants, 241 izakayas, 31 cafes. Yokohama spillover, big choice without station crush.",
+    "nightlife": "182 late spots, karaoke and clubs nearby. Real Yokohama night, not sleepy."
+  },
+  "ja": {
+    "atmosphere": "横浜駅裏口のような静かな相鉄駅。巨大な飲食圏が近いが、安全データは弱め。",
+    "landmarks": "横浜駅徒歩圏、相鉄の線路、川沿いの裏道。大ハブが隣にある。",
+    "food": "飲食505軒、居酒屋241軒、カフェ31軒。横浜のこぼれ、駅前の圧なしで選択肢大。",
+    "nightlife": "深夜営業182軒、カラオケとクラブも近い。眠くない横浜の夜。"
+  },
+  "ru": {
+    "atmosphere": "Задняя дверь Йокогамы, тихая платформа рядом с огромной едой. Удобно, но safety data слабая.",
+    "landmarks": "Пешком до Yokohama Station, пути Sotetsu, задние улицы у реки. Большой хаб за углом.",
+    "food": "505 ресторанов, 241 изакая, 31 кафе. Перелив Йокогамы, большой выбор без давки станции.",
+    "nightlife": "182 поздних места, караоке и клубы рядом. Настоящая йокогамская ночь."
+  }
+}

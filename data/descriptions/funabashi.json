@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Chiba transfer beast, cheap for the access. Crowded platforms, long ride to central Tokyo.",
+    "landmarks": "FACE tower, Shapo, old shopping streets, port-side errands. More regional hub than cute town.",
+    "food": "301 restaurants, 164 izakayas; ramen, chains, seafood, quick drinks. Strong, busy, uneven.",
+    "nightlife": "147 late spots, 3 karaoke. Lively station drinking, no real club scene."
+  },
+  "ja": {
+    "atmosphere": "千葉の大型乗換拠点、アクセスの割に安い。ホームは混む、都心までは長い。",
+    "landmarks": "FACEビル、シャポー、古い商店街、港側の用事。可愛い街より地域ハブ。",
+    "food": "飲食301軒、居酒屋164軒。ラーメン、チェーン、海鮮、早い飲み。強いが混む。",
+    "nightlife": "深夜147軒、カラオケ3軒。駅前飲みは活発、クラブ感は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Большой пересадочный зверь Тибы, дешево за такой доступ. Платформы забиты, до центра долго.",
+    "landmarks": "FACE tower, Shapo, старые торговые улицы, портовые дела. Скорее региональный узел, не милый район.",
+    "food": "301 ресторан, 164 изакая; рамен, сети, морепродукты, быстрые выпивки. Сильно, шумно, неровно.",
+    "nightlife": "147 поздних мест, 3 караоке. Живое станционное питье, клубной сцены нет."
+  }
+}

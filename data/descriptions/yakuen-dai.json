@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Funabashi suburb on Shin-Keisei line. Residential, quiet, green. Safe, family-friendly vibe.",
+    "landmarks": "Shin-Keisei line charm. Parks and green corridors. Unremarkable but pleasant.",
+    "food": "Light options (5 hp + 11 osm). One izakaya, one cafe. pockets with local food.",
+    "nightlife": "Minimal. Four midnight spots. Neighborhood bar culture, drinks end early."
+  },
+  "ja": {
+    "atmosphere": "船橋郊外、新京成線沿線。住宅地、静か、緑多い。安全、ファミリー向け。",
+    "landmarks": "新京成線らしさ。公園と緑の散歩道。地味だが心地よい。",
+    "food": "軽い選択肢（hp5+osm11）。居酒屋1軒、カフェ1軒。地元食のポケット。",
+    "nightlife": "ほぼ皆無。夜間営業4軒。近所の飲み屋。酒は早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Фунабаши на линии Син-Кейсэй. Жилой, спокойный, зелёный. Безопасно, семьи.",
+    "landmarks": "Шарм линии Син-Кейсэй. Парки и зелёные коридоры. Незатейливо но приятно.",
+    "food": "Лёгкие опции (5 hp + 11 osm). Одна изакая, одно кафе. Локальная еда разреженно.",
+    "nightlife": "Практически нет. Четыре ночных места. Соседский бар, ночи коротки."
+  }
+}

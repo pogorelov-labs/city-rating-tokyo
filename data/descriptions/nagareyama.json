@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Ryutetsu town, old Chiba tempo. Cheap, green, slow; commute patience required.",
+    "landmarks": "Edogawa river walks, old Nagareyama streets, mirin-town traces. Very local.",
+    "food": "8 listed spots and 15 local POIs. One izakaya, no cafe scene, dinner is sparse.",
+    "nightlife": "1 late spot and 1 karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "流鉄の小さな町、昔の千葉の速度。安い、緑多い、遅い。通勤は忍耐。",
+    "landmarks": "江戸川散歩、流山本町、みりんの町の名残。かなりローカル。",
+    "food": "掲載8軒、周辺POI15件。居酒屋1軒、カフェ感なし、夕食は少ない。",
+    "nightlife": "深夜営業1軒、カラオケ1軒。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Крошечный городок Ryutetsu, старая скорость Тибы. Дёшево, зелено, медленно; нужна терпеливость.",
+    "landmarks": "Прогулки у Edogawa, старые улицы Nagareyama, следы города мирина. Очень локально.",
+    "food": "8 мест в списке и 15 локальных точек. Одна изакая, кафе-сцены нет, ужин скудный.",
+    "nightlife": "1 позднее место и 1 караоке. Почти ноль."
+  }
+}

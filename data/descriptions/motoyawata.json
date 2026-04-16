@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ichikawa workhorse hub: three lines, real food, real crowds. Practical, not leafy.",
+    "landmarks": "Katsushika Hachimangu, Nikke Colton Plaza, city-hall zone. Keisei and JR sides feel different.",
+    "food": "150 restaurants, 75 izakayas, 9 bars. Strong after-work strip, more functional than fancy.",
+    "nightlife": "76 late spots, one karaoke. Izakaya-heavy, useful, rarely glamorous."
+  },
+  "ja": {
+    "atmosphere": "市川の実用ハブ、三路線・飲食強め・混雑も本物。便利だが緑は薄い。",
+    "landmarks": "葛飾八幡宮、ニッケコルトンプラザ、市役所周辺。京成側とJR側で空気が違う。",
+    "food": "飲食150軒、居酒屋75軒、バー9軒。仕事帰りの帯が強い、洒落より実用。",
+    "nightlife": "深夜76軒、カラオケ1軒。居酒屋中心で便利、華やかさは控えめ。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая лошадка Ichikawa: три линии, еда, толпы. Практично, но не зелено.",
+    "landmarks": "Katsushika Hachimangu, Nikke Colton Plaza, район мэрии. Стороны Keisei и JR разные.",
+    "food": "150 ресторанов, 75 изакая, 9 баров. Сильная полоса после работы, функционально, не шик.",
+    "nightlife": "76 поздних мест, одно караоке. Много изакая, удобно, редко гламурно."
+  }
+}

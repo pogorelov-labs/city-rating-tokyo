@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama commuter suburb, 75 min from center. Affordable, quiet, low density.",
+    "landmarks": "Dense woodlands (1.3M sqm). 11 shopping streets. Suburban pedestrian calm.",
+    "food": "Sparse (7 restaurants). picks up some local spots. Chains dominate.",
+    "nightlife": "Minimal. 2 late-night spots only. Plan your drinks elsewhere."
+  },
+  "ja": {
+    "atmosphere": "埼玉県の郊外。駅の森（130万平米）が特徴。引っ越し街。",
+    "landmarks": "広大な雑木林エリア。商店街11本。のどかな歩行者天国。",
+    "food": "飲食少ない（7軒）。地元の食堂散在。大手チェーン中心。",
+    "nightlife": "ほぼ皆無。深夜営業たった2軒。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Сайтамы, 75 мин от центра. Дешево, спокойно, редко застроено.",
+    "landmarks": "Лесной массив 1.3M кв.м. 11 торговых улиц. Деревенская атмосфера.",
+    "food": "Редко (7 мест). Локальные еды рассеяны. Чейны везут.",
+    "nightlife": "Почти нет. 2 ночных бара. Пей в центре."
+  }
+}

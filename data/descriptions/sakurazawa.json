@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama mountain town on Chichibu Main Line. Elevation 103m, huge forest park (10.7M sqm). Quiet, rural, 113 min from center.",
+    "landmarks": "Forested hillside. One market. Chichibu region charm, zero tourism infrastructure.",
+    "food": "1 location, 1. Extremely minimal. No bars or cafes. Bring meals.",
+    "nightlife": "None. Last train 23:38. Mountain town sleeps early."
+  },
+  "ja": {
+    "atmosphere": "埼玉、秩父本線の山町。高さ103m、森1070万平米。静か、田舎、都心113分。",
+    "landmarks": "山林地帯。市場1。秩父情緒、観光設備0。",
+    "food": "1、1。本当に稀。バーなし、カフェなし。食べ物持参。",
+    "nightlife": "皆無。23時38分が最終。山は早寝。"
+  },
+  "ru": {
+    "atmosphere": "Горный город Сайтамы на линии Титибу. 103м высоты, парк-лес 10.7М кв.м. Тихо, отдалённо, 113 мин до центра.",
+    "landmarks": "Лесистый холм. Рынок 1. Дух Титибу, туристики нет.",
+    "food": ": 1, : 1. Крайне редко. Баров нет, кафе нет. Припасы с собой.",
+    "nightlife": "Совсем нет. Последний поезд 23:38. Гора спит рано."
+  }
+}

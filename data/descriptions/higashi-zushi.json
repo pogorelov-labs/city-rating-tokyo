@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Beach town edge, Yokosuka Line, 69min from Tokyo. Quiet but lively weekends.",
+    "landmarks": "Coastal access, 6.2M sqm green. Marine parks, hiking trails nearby.",
+    "food": "Minimal food data. 2 markers only. Bring provisions or hike to Zushi proper.",
+    "nightlife": "Dead. Plan elsewhere."
+  },
+  "ja": {
+    "atmosphere": "逗子の海辺へアクセス、横須賀線。周末は活気。",
+    "landmarks": "海へのアクセス、620万平米の公園。ハイキング道。",
+    "food": "食堂データ少ない。マーカー2つだけ。",
+    "nightlife": "夜間営業なし。余所で飲む。"
+  },
+  "ru": {
+    "atmosphere": "Морской край, линия Йокосука, 69 мин от Токио. Тихо, но живо в выходные.",
+    "landmarks": "Доступ к морю, 6.2М кв.м зелени. Морские парки, тропы.",
+    "food": "Пищевые данные минимальны. Только 2 маркера. Провизию из города.",
+    "nightlife": "Мертво. Ищите в Дзуши."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Adachi liner stop, low-rise and cheap-feeling. Safe, uncrowded, thin on culture.",
+    "landmarks": "Elevated Nippori-Toneri tracks, local canals, Arakawa by bike. No big landmark pull.",
+    "food": "10 listed spots, 11 pins. Enough for basics, not for picky eaters.",
+    "nightlife": "Minimal. Four late spots, one bar, no karaoke. Very-high seismic risk is the real flag."
+  },
+  "ja": {
+    "atmosphere": "足立の静かなライナー駅、低層で安めの空気。安全、人少なめ、文化は薄い。",
+    "landmarks": "日暮里・舎人ライナーの高架、地元の水路、自転車で荒川。大物名所なし。",
+    "food": "掲載10軒、11件。基本は足りる、こだわる人には弱い。",
+    "nightlife": "最小限。深夜4軒、バー1、カラオケなし。最大の注意点は地震リスク高め。"
+  },
+  "ru": {
+    "atmosphere": "Тихая остановка лайнера в Адачи, низкая застройка, бюджетный тон. Без толпы, культуры мало.",
+    "landmarks": "Эстакада Nippori-Toneri, местные каналы, до Arakawa на велосипеде. Большого магнита нет.",
+    "food": "10 мест в выдаче, 11 точек. Базу закрывает, гурманам скучно.",
+    "nightlife": "Минимум. Четыре поздних места, один бар, караоке нет. Главный флаг — очень высокий сейсмориск."
+  }
+}

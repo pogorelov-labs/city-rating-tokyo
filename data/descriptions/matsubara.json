@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya tram calm, low-rise and very safe. Sweet daily base, weak on big-city speed.",
+    "landmarks": "Setagaya Line tracks, local shopping lanes, Hanegi and Gotokuji within reach.",
+    "food": "54 restaurants, 21 izakayas, 6 cafes. Small but useful, mostly neighborhood meals.",
+    "nightlife": "26 late spots, no karaoke or clubs. Low-key izakaya, early streets."
+  },
+  "ja": {
+    "atmosphere": "世田谷線の穏やかな低層住宅地、とても安全。日常拠点は甘いが、都市速度は弱い。",
+    "landmarks": "世田谷線の線路、地元商店街、届く羽根木と豪徳寺方面。",
+    "food": "飲食54軒、居酒屋21軒、カフェ6軒。小さいが使える、近所飯中心。",
+    "nightlife": "深夜営業26軒、カラオケもクラブもなし。控えめな居酒屋、道は早く静か。"
+  },
+  "ru": {
+    "atmosphere": "Спокойствие трамвая Setagaya, низко и очень безопасно. Милая база, слабая городская скорость.",
+    "landmarks": "Пути Setagaya Line, локальные торговые улицы, рядом Hanegi и Gotokuji.",
+    "food": "54 ресторана, 21 изакая, 6 кафе. Мало, но полезно, в основном соседская еда.",
+    "nightlife": "26 поздних мест, без караоке и клубов. Тихая изакая, ранние улицы."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ikegami Line pocket between bigger names. Quiet, stocked with clinics, not flashy.",
+    "landmarks": "Senzokuike side walks, Hatanodai backstreets, low-rise Ota-ku grid.",
+    "food": "82 restaurants, 26 izakayas, 3 cafes. Strong dinner basics, weak cafe culture.",
+    "nightlife": "21 late spots, one bar. Izakaya glow, then home."
+  },
+  "ja": {
+    "atmosphere": "池上線の小さな生活圏。大きな街の間、静かで医療多め、派手さなし。",
+    "landmarks": "洗足池方面の散歩、旗の台の裏道、大田区の低層住宅地。",
+    "food": "飲食82軒、居酒屋26軒、カフェ3軒。夕飯は強い、カフェ文化は薄い。",
+    "nightlife": "深夜営業21軒、バー1軒。居酒屋の灯り、あとは帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Карман Ikegami Line между более громкими местами. Тихо, много клиник, без блеска.",
+    "landmarks": "Прогулки к Senzokuike, задние улицы Hatanodai, низкая сетка Ота-ку.",
+    "food": "82 ресторана, 26 изакай, 3 кафе. Сильная база для ужина, кафе-культура слабая.",
+    "nightlife": "21 позднее место, 1 бар. Свет изакай, потом домой."
+  }
+}

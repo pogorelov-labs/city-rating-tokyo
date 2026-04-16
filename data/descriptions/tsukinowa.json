@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama deep-exurb, Tobu Tojo Line. 84 min commute. Rural, quiet, low-density housing. Seismic risk low (rare).",
+    "landmarks": "Tiny station in forest. Hiking trails start here. One izakaya bar. Minimal infrastructure.",
+    "food": "Only 1 listings + 1 izakaya. Functionally foodless. Supply is neighborhood scale.",
+    "nightlife": "1 midnight venue. Virtually no nightlife. A genuine sleep town."
+  },
+  "ja": {
+    "atmosphere": "埼玉・滑川町。東武東上線奥地。中心まで84分。田舎。低層密。地震リスク低い。",
+    "landmarks": "森の中の小駅。登山道。酒場1軒。インフラ最小限。",
+    "food": "listings 1軒、居酒屋1軒。機能的に食事選肢なし。地元規模。",
+    "nightlife": "深夜営業1軒。ほぼ皆無。本当の寝坊の町。"
+  },
+  "ru": {
+    "atmosphere": "Глубокий пригород Сайтамы, Tobu Tojo Line. 84 мин commute. Деревенское, тихо, редкие жилые. Сейсмориск низкий (редко).",
+    "landmarks": "Крошечная станция в лесу. Тропы для пеших прогулок. Один бар изакая. Минимальная инфра.",
+    "food": "Только 1 listings + 1 изакая. Функционально без еды. Предложение на уровне района.",
+    "nightlife": "1 полуночное. Практически нет ночной жизни. Настоящий спящий город."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Machida hub on Odakyu Odawara Line, 48 min to center. Medium-density residential, reasonable walkability.",
+    "landmarks": "Odakyu shopping district with 12 restaurants. Pedestrian streets limited (1 reported). Parks nearby.",
+    "food": "12 listings, 5 izakaya, local spots (22). Solid mid-range.",
+    "nightlife": "6 midnight venues. Izakaya-focused, local scene. 92 crime per 10k (modest)."
+  },
+  "ja": {
+    "atmosphere": "町田・鶴川。小田急の重要駅。中規模住宅地。中心まで48分。",
+    "landmarks": "小田急商圏。12軒のレストラン。歩行者路は限定的。公園複数。",
+    "food": "listings 12軒、居酒屋5軒、地点22。良好な中程度。",
+    "nightlife": "深夜営業6軒。地元居酒屋文化。犯罪率は10万人当たり92。"
+  },
+  "ru": {
+    "atmosphere": "Machida hub на Odakyu Odawara Line, 48 мин в центр. Средняя жилая плотность, разумная ходьба.",
+    "landmarks": "Odakyu торговая зона с 12 ресторанами. Пешеходные улицы ограничены (1 reported). Парки рядом.",
+    "food": "12 listings, 5 изакая, местные (22). Солидная середина.",
+    "nightlife": "6 полуночных. Изакая-сосредоточены, местная сцена. 92 преступлений на 10k."
+  }
+}

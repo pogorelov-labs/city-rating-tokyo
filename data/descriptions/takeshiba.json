@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odaiba Yurikamome terminus, gritty waterfront hub. 3k riders, packed 82 midnight venues. High crime (45/10k).",
+    "landmarks": "Cyber-mall Decks Tokyo, boardwalk walks. Isolated peninsula, no organic streets. Elevation 15m, seismic high.",
+    "food": "285 listings entries, 139 izakaya. Dense, loud bars. Quality varies widely.",
+    "nightlife": "82 midnight spots, 4 hostels, clubs minimal. Party vibe but pricey (¥231k rent)."
+  },
+  "ja": {
+    "atmosphere": "ゆりかもめ終点、御台場グリッティな港。3k人/日、深夜82店。犯罪率高（45/10k）。",
+    "landmarks": "Decks Tokyo Beach、ボードウォーク。孤立半島、有機的な街路ゼロ。標高15m、地震高。",
+    "food": "285店、居酒屋139軒。密集、うるさい。質はバラバラ。",
+    "nightlife": "深夜82店、ホステル4軒。パーティ気分だが家賃高い（231k）。"
+  },
+  "ru": {
+    "atmosphere": "Конечная Юрикамоме в Одайба, хмурая водная гавань. 3k пассажиров, 82 ночных места. Преступность высокая (45/10k).",
+    "landmarks": "Decks Tokyo Beach, набережные прогулки. Изолированный полуостров, без оригинальных улиц. Высота 15 м, сейсморизк высокий.",
+    "food": "285 мест listings, 139 изакай. Плотно, шумно. Качество колеблется.",
+    "nightlife": "82 ночных заведения, 4 хостела. Вечеринки, но дорого (231k йен аренда)."
+  }
+}

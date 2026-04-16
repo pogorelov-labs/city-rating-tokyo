@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Working Kawasaki town with decent food and nightlife but sketchy safety rep. 24,604 daily passengers. Industrial past, residential now.",
+    "landmarks": "Nambu Line to central Tokyo (38 min). Small riverside parks, pedestrian streets (4). No major sights.",
+    "food": "12 restaurants + 18 spots. 4 izakayas, local feel. Nightlife (6/10) driven by 4 midnight bars, 2 hostels.",
+    "nightlife": "4 late-night bars, 2 hostels. Friendly neighborhood vibe. Clubs absent."
+  },
+  "ja": {
+    "atmosphere": "川崎稼働地区、食と夜があるが治安微妙。24604人。工業地帯の過去。",
+    "landmarks": "南武線で都心38分。小公園、歩行街4本。名所なし。",
+    "food": "飲食12軒、居酒屋4軒。ローカル感。",
+    "nightlife": "夜間営業4軒、ホステル2軒。居酒屋の雰囲気。"
+  },
+  "ru": {
+    "atmosphere": "Рабочий Кавасаки с едой и ночной жизнью, но безопасность опасна. 24604 пассажира.",
+    "landmarks": "Линия Nambu, 38 мин в центр Токио. Речные парки, 4 пешехода.",
+    "food": "12 ресторанов, 18 мест. 4 изакаи, локальный стиль.",
+    "nightlife": "4 поздних бара, 2 хостела. Соседский уровень, клубов нет."
+  }
+}

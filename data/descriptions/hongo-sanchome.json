@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bookish Bunkyo with university gravity. Fast central access, pricey rent, serious weekday rhythm.",
+    "landmarks": "University of Tokyo Akamon, Hongo campus, medical buildings, old slope streets toward Yushima.",
+    "food": "426 restaurants, 173 izakayas. Student meals, professor lunches, hospital-worker ramen.",
+    "nightlife": "142 late spots, 1 karaoke. Izakaya-heavy, intellectual drinking, no club scene."
+  },
+  "ja": {
+    "atmosphere": "大学の重力が強い文京の知的エリア。都心アクセス速い、家賃高い、平日が本番。",
+    "landmarks": "東大赤門、本郷キャンパス、医療系ビル、湯島へ下る古い坂道。",
+    "food": "飲食426軒、居酒屋173軒。学生飯、教授ランチ、病院職員のラーメン。",
+    "nightlife": "深夜142軒、カラオケ1軒。居酒屋濃厚、知的な飲み、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Книжная Bunkyo под гравитацией университета. Центр близко, аренда высокая, будни главные.",
+    "landmarks": "Akamon и кампус Todai, медицинские корпуса, старые склоны к Yushima.",
+    "food": "426 ресторанов, 173 изакая. Студенческая еда, профессорские ланчи, рамэн для медиков.",
+    "nightlife": "142 поздних места, 1 караоке. Изакая-доминирование, умная выпивка, клубов нет."
+  }
+}

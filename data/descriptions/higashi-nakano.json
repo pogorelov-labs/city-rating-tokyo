@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Between Nakano and Shinjuku, residential but not sleepy. Great access, prices follow.",
+    "landmarks": "Kanda River, cinema pockets, Nakano-Sakaue side streets. Small creative residue.",
+    "food": "101 restaurants, 38 izakayas, 7 bars. Reliable local food, ramen and after-work drinks.",
+    "nightlife": "48 late spots, one small club, no karaoke. Low-key, not dull."
+  },
+  "ja": {
+    "atmosphere": "中野と新宿の間、住宅地だが眠くはない。アクセス強い、家賃もついてくる。",
+    "landmarks": "神田川、映画館の気配、中野坂上側の路地。小さな創作感が残る。",
+    "food": "飲食101軒、居酒屋38軒、バー7軒。地元飯は安定、ラーメンと仕事後飲み。",
+    "nightlife": "深夜営業48軒、小さなクラブ1軒、カラオケなし。控えめだが退屈ではない。"
+  },
+  "ru": {
+    "atmosphere": "Между Nakano и Shinjuku, жилое, но не сонное. Доступ сильный, цены следуют.",
+    "landmarks": "Kanda River, кино-карманы, улицы к Nakano-Sakaue. Малый творческий остаток.",
+    "food": "101 ресторан, 38 изакая, 7 баров. Надёжная локальная еда, рамен и after-work drinks.",
+    "nightlife": "48 поздних мест, один маленький клуб, без караоке. Тихо, но не скучно."
+  }
+}

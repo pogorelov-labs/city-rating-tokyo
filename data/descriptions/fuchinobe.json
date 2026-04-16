@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sagamihara student-commuter town, wide grid and practical rents. Useful, far, unpretentious.",
+    "landmarks": "JAXA Sagamihara Campus, city museum, university edges. More campus orbit than nightlife magnet.",
+    "food": "59 restaurants, 35 izakayas, no real cafe/bar depth. Student meals and station-counter food.",
+    "nightlife": "25 late spots, 1 karaoke, no clubs. Local drinking, not a night out."
+  },
+  "ja": {
+    "atmosphere": "相模原の学生・通勤者の町。広い道路、実用的な家賃。便利、遠い、気取らない。",
+    "landmarks": "JAXA相模原キャンパス、市立博物館、大学の端。夜遊びよりキャンパス圏。",
+    "food": "飲食59軒、居酒屋35軒、カフェとバーの厚みは薄い。学生飯と駅前カウンター中心。",
+    "nightlife": "深夜営業25軒、カラオケ1軒、クラブなし。地元飲みで、夜遊び目的ではない。"
+  },
+  "ru": {
+    "atmosphere": "Студенческо-коммьютерский Sagamihara, широкая сетка улиц и практичная аренда. Удобно, далеко, без понтов.",
+    "landmarks": "Кампус JAXA Sagamihara, городской музей, края университетов. Скорее орбита кампуса, чем ночной магнит.",
+    "food": "59 ресторанов, 35 изакая, без глубины кафе и баров. Студенческая еда и стойки у станции.",
+    "nightlife": "25 поздних мест, 1 караоке, клубов нет. Местная выпивка, не ночной выезд."
+  }
+}

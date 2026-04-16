@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tama-hill suburb on the Keio line. Safe, green, cheap; central Tokyo feels distant.",
+    "landmarks": "Inagi Central Park, Tama hills, pear-town backstreets. More slopes than nightlife.",
+    "food": "9 restaurants, 4 izakayas, 1 cafe. Basic local meals; variety needs a train ride.",
+    "nightlife": "3 late spots, no karaoke. Minimal, home by default."
+  },
+  "ja": {
+    "atmosphere": "京王線沿いの多摩丘陵住宅地。安全、緑多め、安い。都心は遠く感じる。",
+    "landmarks": "稲城中央公園、多摩の丘、梨の街の裏道。夜遊びより坂道。",
+    "food": "飲食9軒、居酒屋4軒、カフェ1軒。基本の地元飯、選択肢は電車で補う。",
+    "nightlife": "深夜3軒、カラオケなし。最小限、基本は帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на холмах Тамы у Keio. Безопасно, зелено, дешево; центр далеко.",
+    "landmarks": "Inagi Central Park, холмы Тамы, улочки грушевого города. Больше склонов, чем ночи.",
+    "food": "9 ресторанов, 4 изакая, 1 кафе. Базовая местная еда; за выбором ехать поездом.",
+    "nightlife": "3 поздних места, караоке нет. Минимум, по умолчанию домой."
+  }
+}

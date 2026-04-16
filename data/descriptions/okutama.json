@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain terminus, 94 min from Tokyo. Silent, safe, no tourism or nightlife. Hiking access only. Early trains (23:00).",
+    "landmarks": "Mountain sanctuary. 343m elevation, low seismic risk. 1 diner, 1 izakaya. Village feel.",
+    "food": "Sparse — 1 listings (izakaya), 3. No choice. Last-resort territory.",
+    "nightlife": "None. Mountain bedtime at 9pm. Town dies."
+  },
+  "ja": {
+    "atmosphere": "山の終駅、東京94分。静寂、安全、観光も夜も無い。登山口のみ。始発23時。",
+    "landmarks": "山聖地。343m高度、地震安全。食堂1、居酒屋1。村落的。",
+    "food": "疎 — 1 listings 。選択肢なし。逃げ場。",
+    "nightlife": "無し。21時で終わり。"
+  },
+  "ru": {
+    "atmosphere": "Горный терминал, 94 минуты от Токио. Тишина, безопасность, туризма нет, ночной жизни нет. Только пешком. Поезда в 23:00.",
+    "landmarks": "Горное святилище. 343м высота, низкий сейсмический риск. 1 закуска, 1 изакая. Деревенское.",
+    "food": "Редко — 1 listings (изакая), 3. Выбора нет.",
+    "nightlife": "Нет. Спать в 21:00. Город умирает."
+  }
+}

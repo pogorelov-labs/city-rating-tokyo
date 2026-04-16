@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo address with Otsuka spillover. Calm streets, expensive rent, food close by.",
+    "landmarks": "Gokokuji side streets, Otsuka tram edge, quiet schools and clinics around.",
+    "food": "209 restaurants, 61 izakayas, 25 bars. Otsuka depth without full station chaos.",
+    "nightlife": "75 late spots, 2 karaoke, no clubs. Bar-heavy, controlled, local."
+  },
+  "ja": {
+    "atmosphere": "文京区アドレスに大塚の余波。道は落ち着く、家賃高い、食は近い。",
+    "landmarks": "護国寺方面の路地、大塚の都電端、学校とクリニックの静かな周辺。",
+    "food": "飲食209件、居酒屋61件、バー25件。大塚の厚みを少し静かに使える。",
+    "nightlife": "深夜75件、カラオケ2件、クラブなし。バー多め、荒れにくい。"
+  },
+  "ru": {
+    "atmosphere": "Адрес Bunkyo с переливом Otsuka. Улицы спокойные, аренда высокая, еда близко.",
+    "landmarks": "Переулки к Gokokuji, трамвайный край Otsuka, школы и клиники вокруг.",
+    "food": "209 ресторанов, 61 изакая, 25 баров. Глубина Otsuka без полной вокзальной давки.",
+    "nightlife": "75 поздних мест, 2 караоке, без клубов. Много баров, локально и сдержанно."
+  }
+}

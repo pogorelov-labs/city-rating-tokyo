@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio commuter sweet spot, close to Shinjuku, still residential. Useful.",
+    "landmarks": "Keio tracks, local shotengai, quick Shinjuku jump. Everyday Shibuya-ku.",
+    "food": "99 restaurants, 30 izakayas, 8 bars. Reliable weeknight food, modest cafe life.",
+    "nightlife": "38 late spots, no karaoke. Drinks exist, last train early."
+  },
+  "ja": {
+    "atmosphere": "京王線の便利な住宅地、新宿近いのに生活感あり。使える、気取らない。",
+    "landmarks": "京王の高架、地元商店街、新宿へすぐ。渋谷区の日常側、派手さなし。",
+    "food": "飲食99軒、居酒屋30軒、バー8軒。平日ごはんは安心、カフェは控えめ。",
+    "nightlife": "深夜38軒、カラオケなし。飲めるが、終電は早い。"
+  },
+  "ru": {
+    "atmosphere": "Удобная жилая точка на Keio, близко к Shinjuku, но без витринной позы. Практично.",
+    "landmarks": "Эстакада Keio, локальный shotengai, быстрый прыжок в Shinjuku. Повседневная Shibuya-ku.",
+    "food": "99 ресторанов, 30 изакая, 8 баров. Надёжная еда по будням, кафе скромно.",
+    "nightlife": "38 поздних мест, караоке нет. Выпить можно, но последний поезд ранний."
+  }
+}

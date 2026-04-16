@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Odakyu outer hub, cheap rent and serious crowds. Far commute, safety picture is fuzzy.",
+    "landmarks": "Atsugi central streets, Sagami River side trips, Tanzawa gateway mood.",
+    "food": "249 restaurants, 150 izakayas, 11 cafes. Strong local dining, salaryman-heavy.",
+    "nightlife": "107 late spots, 2 karaoke rooms, 4 clubs. Real outer-city nightlife."
+  },
+  "ja": {
+    "atmosphere": "小田急の外側大ハブ、家賃は安いが人は多い。通勤は遠い、安全感は少し曖昧。",
+    "landmarks": "厚木中心部、相模川方面、丹沢への玄関口感。",
+    "food": "飲食249軒、居酒屋150軒、カフェ11軒。地元飯は強い、会社員寄り。",
+    "nightlife": "深夜営業107軒、カラオケ2軒、クラブ4軒。外側都市の本物の夜。"
+  },
+  "ru": {
+    "atmosphere": "Большой внешний хаб Odakyu, дешёвая аренда и серьёзные толпы. Далеко, safety мутный.",
+    "landmarks": "Центральные улицы Atsugi, вылазки к Sagami River, ворота к Tanzawa.",
+    "food": "249 ресторанов, 150 изакая, 11 кафе. Сильная локальная еда, много salaryman.",
+    "nightlife": "107 поздних мест, 2 караоке, 4 клуба. Настоящая ночь внешнего города."
+  }
+}

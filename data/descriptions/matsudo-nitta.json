@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Low-key Shin-Keisei suburb, cheap and practical. Calm platforms, longish central commute.",
+    "landmarks": "Matsudo Sports Park side streets, local shops, clinic-heavy blocks. No marquee landmark.",
+    "food": "24 restaurants plus a big local layer, 6 izakayas. Daily eating is stronger than the station looks.",
+    "nightlife": "Six late spots, one karaoke. Small-town drinks, not a destination."
+  },
+  "ja": {
+    "atmosphere": "新京成の地味な郊外、安くて実用的。駅は落ち着くが、都心通勤はやや長い。",
+    "landmarks": "松戸運動公園方面の路地、地元商店、クリニック多めの街区。大看板はない。",
+    "food": "飲食24軒＋地元店の厚み、居酒屋6軒。駅の見た目より普段飯は強い。",
+    "nightlife": "深夜6軒、カラオケ1軒。小さな町飲み、目的地ではない。"
+  },
+  "ru": {
+    "atmosphere": "Незаметный пригород Shin-Keisei, дешёвый и практичный. Спокойно, но до центра неблизко.",
+    "landmarks": "Переулки к Matsudo Sports Park, местные лавки, много клиник. Большой вывески нет.",
+    "food": "24 ресторана плюс плотный локальный слой, 6 изакая. Будничная еда сильнее, чем выглядит станция.",
+    "nightlife": "Шесть поздних мест, одно караоке. Малый районный формат, не destination."
+  }
+}

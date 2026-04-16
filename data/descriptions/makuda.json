@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Isolated Kururi Line rural halt in Kisarazu. 278 daily passengers. Barely a town. Seismic very_high risk ground.",
+    "landmarks": "Nothing. Forests and a clinic count as landmarks here. Dead stop.",
+    "food": "2 locations, 0 izakaya, 0 bars, 0 cafes. Zero data. Bring meals.",
+    "nightlife": "Minimal. Last train 23:03. Station is a void after dark."
+  },
+  "ja": {
+    "atmosphere": "木更津、秘境中の秘境。乗客278人/日。街ではなく駅。地盤は液状化リスク。",
+    "landmarks": "なし。森と診療所が「ランドマーク」。駅舎のみ。",
+    "food": "2件、居酒屋ナシ、バーナシ、カフェナシ。データ0。弁当必須。",
+    "nightlife": "皆無。23時03分が最終。夜間は真っ暗。"
+  },
+  "ru": {
+    "atmosphere": "Изолированная платформа на линии Курури (префектура Кисарацу). 278 пассажиров в день. На грани исчезновения. Грунт: очень высокий сейсмический риск.",
+    "landmarks": "Ничего. Лес и амбулатория — вот это да. Пусто.",
+    "food": ": 2 места, изакая: 0, бары: 0, кафе: 0. : молчит. Еду с собой.",
+    "nightlife": "Совсем нет. Последний поезд 23:03. На ночь — мрак."
+  }
+}

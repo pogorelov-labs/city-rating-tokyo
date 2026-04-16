@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Teganuma-side Chiba suburb, cheap space and long commutes. Calm, not central-Tokyo life.",
+    "landmarks": "Lake Teganuma, Abiko city parks, Narita Line junction. Big sky, low-rise streets.",
+    "food": "29 restaurants, 11 izakayas; enough for locals, thin for exploring.",
+    "nightlife": "9 late spots, no karaoke or clubs. Minimal after dinner."
+  },
+  "ja": {
+    "atmosphere": "手賀沼側の千葉郊外、広さと安さはあるが通勤は長い。都心生活ではない。",
+    "landmarks": "手賀沼、我孫子市の公園、成田線の分岐。空が広く、低層の街。",
+    "food": "飲食29軒、居酒屋11軒。地元には足りる、食べ歩きには薄い。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。夕食後は最小限。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Тибы у Тэганумы, дешёвый простор и долгие поездки. Спокойно, не центр Токио.",
+    "landmarks": "Озеро Teganuma, парки Абико, узел Narita Line. Большое небо, низкие улицы.",
+    "food": "29 ресторанов, 11 изакая. Местным хватает, для прогулки слабо.",
+    "nightlife": "9 поздних мест, без караоке и клубов. После ужина почти минимум."
+  }
+}

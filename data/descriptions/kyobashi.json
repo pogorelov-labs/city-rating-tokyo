@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ginza-adjacent office polish, galleries and expense lunches. Central, costly, barely residential.",
+    "landmarks": "Tokyo Station edge, Bridgestone Museum area, Ginza corridors. Corporate art walk.",
+    "food": "1529 restaurants, 549 izakayas, 68 cafes. Excellent choice, office prices, fast turnover.",
+    "nightlife": "287 late spots, karaoke but no clubs. After-work drinks, not messy."
+  },
+  "ja": {
+    "atmosphere": "銀座隣の磨かれたオフィス街、ギャラリーと経費ランチ。中心で高い、生活感は薄い。",
+    "landmarks": "東京駅の端、ブリヂストン美術館周辺、銀座への通路。企業系アート散歩。",
+    "food": "飲食1529軒、居酒屋549軒、カフェ68軒。選択肢は優秀、値段はオフィス仕様、回転早い。",
+    "nightlife": "深夜営業287軒、カラオケあり、クラブなし。仕事後の飲み、荒れない。"
+  },
+  "ru": {
+    "atmosphere": "Офисный лоск рядом с Ginza, галереи и expense lunches. Центр, дорого, почти не жилое.",
+    "landmarks": "Край Tokyo Station, район Bridgestone Museum, коридоры к Ginza. Корпоративная арт-прогулка.",
+    "food": "1529 ресторанов, 549 изакая, 68 кафе. Отличный выбор, офисные цены, быстрый оборот.",
+    "nightlife": "287 поздних мест, караоке есть, клубов нет. Напитки после работы, без грязи."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima residential calm on Seibu Shinjuku. Safe, green, a little sleepy.",
+    "landmarks": "Musashiseki Park, Shakujii River walks, small shopping streets by the tracks.",
+    "food": "16 restaurants plus 35 small spots; 7 izakayas, no bars. Dinner is local-only.",
+    "nightlife": "Nine late spots, no karaoke, no clubs. Minimal after work."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線の練馬住宅地。安全で緑あり、少し眠い。",
+    "landmarks": "武蔵関公園、石神井川沿い、線路脇の小さな商店街。",
+    "food": "飲食16軒と小店35軒、居酒屋7軒、バーなし。夕飯は近所完結。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。仕事帰り程度。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная Нэрима на Seibu Shinjuku. Безопасно, зелено, чуть сонно.",
+    "landmarks": "Musashiseki Park, прогулки вдоль Shakujii River, маленькие улицы у путей.",
+    "food": "16 ресторанов плюс 35 мелких точек, 7 изакай, баров нет. Ужин строго локальный.",
+    "nightlife": "9 поздних мест, без караоке и клубов. После работы минимально."
+  }
+}

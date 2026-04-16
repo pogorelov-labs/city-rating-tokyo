@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tamagawa-side Ota suburb, practical and low-drama. Safe, green, but not fast to everywhere.",
+    "landmarks": "Canon country, Ota civic halls, Tamagawa river walks nearby. Factory-residential mix.",
+    "food": "52 restaurants, 21 izakayas, almost no bars. Good local dinners, thin cafe life.",
+    "nightlife": "19 late spots, no karaoke. Izakaya after work, then quiet streets."
+  },
+  "ja": {
+    "atmosphere": "多摩川寄りの大田区郊外。実用的で波風少ない。安全で緑多め、移動は普通。",
+    "landmarks": "キヤノン周辺、大田区民プラザ、多摩川散歩圏。工場と住宅の混在。",
+    "food": "飲食52軒、居酒屋21軒、バーほぼなし。地元夕飯は強い、カフェは薄い。",
+    "nightlife": "深夜19軒、カラオケなし。仕事帰りの居酒屋、その後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Ота у Тамагава: практично и без драмы. Безопасно, зелено, но не супербыстро.",
+    "landmarks": "Зона Canon, Ota civic halls, прогулки к реке Тамагава. Смесь заводов и жилья.",
+    "food": "52 ресторана, 21 изакая, баров почти нет. Локальные ужины хороши, кафе тонко.",
+    "nightlife": "19 поздних мест, караоке нет. Изакая после работы, потом тихие улицы."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far Uchibo-Line city, cheap and roomy. Tokyo is a long commitment.",
+    "landmarks": "Steel-town edges, local shopping streets, Boso hills and bay trips nearby.",
+    "food": "Izakaya, seafood-leaning diners, simple local restaurants. Better than the commute.",
+    "nightlife": "Late izakayas, one karaoke, one club. Small-city scale."
+  },
+  "ja": {
+    "atmosphere": "内房線の遠い街。安くて広いが、東京通勤は覚悟がいる。",
+    "landmarks": "製鉄の街の端、地元商店街、房総の丘と湾岸への入口。",
+    "food": "居酒屋、海鮮寄りの食堂、素朴な地元店。通勤距離よりは良い。",
+    "nightlife": "遅い居酒屋、カラオケ1軒、クラブ1軒。地方都市サイズ。"
+  },
+  "ru": {
+    "atmosphere": "Далекий город на Uchibo Line, дешево и просторно. Токио — длинное обязательство.",
+    "landmarks": "Кромки steel-town, местные торговые улицы, рядом холмы Босо и поездки к заливу.",
+    "food": "Изакаи, столовые с уклоном в seafood, простые местные рестораны. Лучше, чем commute.",
+    "nightlife": "Поздние изакаи, одно караоке, один клуб. Масштаб малого города."
+  }
+}

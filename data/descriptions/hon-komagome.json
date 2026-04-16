@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Bunkyo calm, temples, schools and expensive quiet. Elegant, reserved, not convenient for chaos.",
+    "landmarks": "Rikugien, Toyo Bunko, Hakusan-side temples and slopes. Green pockets beat the station frontage.",
+    "food": "62 restaurants, 16 izakayas, 13 cafes. Soba, small sushi, calm lunches; not a feast zone.",
+    "nightlife": "10 late spots, 6 hostel signals, no karaoke or clubs. Sleepy after dinner."
+  },
+  "ja": {
+    "atmosphere": "古い文京の静けさ。寺、学校、高めの落ち着き。上品で控えめ、混沌には向かない。",
+    "landmarks": "六義園、東洋文庫、白山寄りの寺と坂。駅前より緑のポケットが魅力。",
+    "food": "飲食62軒、居酒屋16軒、カフェ13軒。そば、小さな寿司、静かな昼飯。食の歓楽街ではない。",
+    "nightlife": "深夜営業10軒、宿泊系シグナル6件、カラオケもクラブもなし。夕食後は眠い。"
+  },
+  "ru": {
+    "atmosphere": "Старое спокойствие Bunkyo: храмы, школы и дорогая тишина. Элегантно, сдержанно, не для хаоса.",
+    "landmarks": "Rikugien, Toyo Bunko, храмы и склоны в сторону Hakusan. Зелёные карманы лучше станционного фасада.",
+    "food": "62 ресторана, 16 изакая, 13 кафе. Соба, маленькие суши, спокойные ланчи; не зона пиршества.",
+    "nightlife": "10 поздних мест, 6 сигналов хостелов, без караоке и клубов. После ужина сонно."
+  }
+}

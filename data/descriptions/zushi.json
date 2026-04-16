@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seaside resort town, surfer-meets-retiree vibe. Coastal charm, not urban.",
+    "landmarks": "Zushi Beach, private clubs, marinas. Quiet seafront walks. Flood-risk (8m elev), very-high seismic.",
+    "food": "59 listings + 14 izakaya. Good seafood, cafe culture. Quality real.",
+    "nightlife": "7 midnight spots, relaxed bars. Beach-town early close, no clubs."
+  },
+  "ja": {
+    "atmosphere": "海辺の保養地。サーファーと年配者の街。",
+    "landmarks": "逗子海岸、プライベートクラブ。洪水注意（8m）、地震リスク高い。",
+    "food": "HPP 59件、居酒屋14軒。本物の海鮮。",
+    "nightlife": "深夜営業7軒。バーは落ち着き。クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Приморский курортный город, серфер-пенсионер. Береговое очарование. НАВОДНЕНИЕ (8м), ОЧЕНЬ ВЫСОКИЙ СЕЙСМ.",
+    "landmarks": "Пляж Зуши, клубы, марины.",
+    "food": "59 listings + 14 изакая. Морепродукты, кафе-культура.",
+    "nightlife": "7 поздних мест, спокойные бары. Закрыто рано."
+  }
+}

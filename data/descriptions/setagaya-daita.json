@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Residential pocket under Shimokitazawa's shadow. Quiet streets, loud options one stop away.",
+    "landmarks": "Bonus Track, Kitazawa Hachiman, Shimokita backstreets within a walk. Low-rise comfort.",
+    "food": "275 restaurants nearby; indie cafes and small bars, while the station core stays calm.",
+    "nightlife": "134 late spots, 28 bars. Shimokita energy nearby, home street stays quiet."
+  },
+  "ja": {
+    "atmosphere": "下北沢の影にある住宅ポケット。通りは静か、一駅先は騒がしい。",
+    "landmarks": "BONUS TRACK、北澤八幡、下北の裏道が徒歩圏。低層で落ち着く。",
+    "food": "周辺275軒。個人カフェと小さなバー、駅前そのものは静か。",
+    "nightlife": "深夜134軒、バー28軒。下北の熱は近いが、家の前は静か。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман в тени Симокитадзавы. Улицы тихие, шумные варианты в одной остановке.",
+    "landmarks": "Bonus Track, Kitazawa Hachiman, задние улицы Shimokita пешком. Низкая, уютная застройка.",
+    "food": "275 мест рядом; инди-кафе и малые бары, но ядро станции спокойное.",
+    "nightlife": "134 поздних места, 28 баров. Энергия Shimokita близко, домашняя улица тихая."
+  }
+}

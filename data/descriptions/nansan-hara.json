@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Remote peninsula village (59M sqm parkland) with bottom-tier food/nightlife. 712 daily, last train 21:57. For nature lovers only.",
+    "landmarks": "Uchibo Line dead-end. Bay coastline, hiking trails. Zero urban amenities.",
+    "food": "Essentially nonexistent (zero spots). A cafe or two. Expect to cook.",
+    "nightlife": "None. Last train departs 21:57. Go to bed early or starve."
+  },
+  "ja": {
+    "atmosphere": "房総半島奥地（59M公園）。食事、夜なし。712人、21時57分で終電。自然好きのみ。",
+    "landmarks": "外房線末端。海岸、ハイク。街施設皆無。",
+    "food": "ほぼなし。カフェ数軒。自炊前提。",
+    "nightlife": "皆無。21時57分で終了。"
+  },
+  "ru": {
+    "atmosphere": "Отдалённый полуостров (59M кв.м парка), еда/ночь отсутствуют. 712 пассажиров, последний поезд 21:57. Только для любителей природы.",
+    "landmarks": "Линия Uchibo (тупик), побережье, тропы. Никаких удобств.",
+    "food": "По сути не существует. Готовить необходимо.",
+    "nightlife": "Нет. Последний поезд 21:57. Спать рано."
+  }
+}

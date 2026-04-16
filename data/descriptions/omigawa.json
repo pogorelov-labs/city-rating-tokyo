@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Narita Line rural stop in Katori (Chiba). Flood-risk zone (4m elevation). Seismic very high — soft ground. Quiet countryside.",
+    "landmarks": "Local shrines, rice paddies. Near Tone River. Rural heritage only.",
+    "food": "1 restaurant scattered. 6 spots around. Seek out family shops.",
+    "nightlife": "Minimal. Villages end by 9pm."
+  },
+  "ja": {
+    "atmosphere": "成田線の香取市駅。洪水リスク（4m）。地盤軟弱（超高リスク）。田舎。",
+    "landmarks": "神社、田んぼ。利根川近い。農村遺産のみ。",
+    "food": "飲食店1軒。周辺OSM6軒。地元の食堂を探す。",
+    "nightlife": "ほぼ無し。村は21時で寝坊。"
+  },
+  "ru": {
+    "atmosphere": "Сельская станция Катори на линии Нарита. Риск наводнения (4м высота). Очень мягкий грунт — плохо для зданий.",
+    "landmarks": "Храмы, рисовые поля. Река Тонэ. Только сельское наследие.",
+    "food": "1 ресторан. Поиск местных забегаловок на 6 -местах.",
+    "nightlife": "Минимум. Деревня спит в 21:00."
+  }
+}

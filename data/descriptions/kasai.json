@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Dense Tozai-Line suburb, practical and multicultural. Commute crowds are brutal.",
+    "landmarks": "Subway Museum, Indian grocery pockets, Arakawa-side lowland streets.",
+    "food": "Strong everyday food: izakaya, ramen, curry, chains. Late options are real.",
+    "nightlife": "Many late izakayas, one karaoke, no clubs. Busy but not glamorous."
+  },
+  "ja": {
+    "atmosphere": "東西線の密な生活エリア。実用的で多国籍、通勤ラッシュはきつい。",
+    "landmarks": "地下鉄博物館、インド食材店の点在、荒川側の低地の街並み。",
+    "food": "日常飯は強い。居酒屋、ラーメン、カレー、チェーン。遅い店も本当にある。",
+    "nightlife": "遅い居酒屋多め、カラオケ1軒、クラブなし。賑やかだが華はない。"
+  },
+  "ru": {
+    "atmosphere": "Плотный пригород Tozai Line, практично и мультикультурно. Давка в commute жесткая.",
+    "landmarks": "Subway Museum, карманы индийских магазинов, низинные улицы у Arakawa.",
+    "food": "Сильная будничная еда: изакаи, рамэн, карри, сети. Поздние места настоящие.",
+    "nightlife": "Много поздних изакай, одно караоке, без клубов. Живо, но не гламурно."
+  }
+}

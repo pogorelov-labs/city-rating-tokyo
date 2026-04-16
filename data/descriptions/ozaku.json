@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hamura/Ome-line suburb, cheap, safe, far. Mountain-side calm over city buzz.",
+    "landmarks": "Ome Line tracks, Hamura industrial edge, Tama River side trips. Practical west-Tokyo base.",
+    "food": "57 restaurants, 29 izakayas. Enough local dinners, little destination food.",
+    "nightlife": "30 late-night spots, no karaoke. Minimal, mostly izakaya."
+  },
+  "ja": {
+    "atmosphere": "羽村の青梅線郊外。安い、安全、遠い。都会の熱気より山側の静けさ。",
+    "landmarks": "青梅線沿い、羽村の工業地帯、多摩川方面の寄り道。実用的な西東京拠点。",
+    "food": "飲食57軒、居酒屋29軒。地元の夕食は足りるが、目的地になる店は少ない。",
+    "nightlife": "深夜営業30軒、カラオケなし。最小限、ほぼ居酒屋。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Хамуры на Ome Line: дёшево, безопасно, далеко. Горное спокойствие вместо городского шума.",
+    "landmarks": "Пути Ome Line, промышленный край Хамуры, выезды к Tama River. Практичная западная база.",
+    "food": "57 ресторанов, 29 изакая. Локальные ужины есть, гастро-поводов мало.",
+    "nightlife": "30 поздних мест, караоке нет. Минимально, в основном изакая."
+  }
+}

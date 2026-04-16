@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sleepy uni-town, single commuter line. Green and safe, zero nightlife infrastructure.",
+    "landmarks": "Kunitachi-city outskirts. 23 green spaces, minimal vibe. Student quiet.",
+    "food": "Only 4 restaurants listed. 9 spots, mostly scattered. Food culture thin.",
+    "nightlife": "1 late-night venue. Essentially none. Students drink at home or elsewhere."
+  },
+  "ja": {
+    "atmosphere": "静かな大学町、単線通勤。緑と安全、夜は完全に空白。",
+    "landmarks": "国立市郊外。緑地23箇所、ビブなし。学生の静かさ。",
+    "food": "レストラン4軒のみ。9軒散在。飲食文化薄い。",
+    "nightlife": "深夜営業1軒のみ。ほぼ無。"
+  },
+  "ru": {
+    "atmosphere": "Сонный университетский город, одна линия. Зелень и безопасность, ноль ночной жизни.",
+    "landmarks": "Окраина города Кунитачи. 23 зелёных пространства, минимальный вибе. Студенческая тишь.",
+    "food": "Всего 4 ресторана. 9 мест разреженно. Пищевая культура тонка.",
+    "nightlife": "1 ночное место. Практически нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Outer Adachi liner suburb, low crowds and cheap rent. Daily errands feel thin.",
+    "landmarks": "Toneri Park dominates, with warehouses and low-rise homes around the liner.",
+    "food": "12 restaurants, 3 izakayas. Noodles, local counters, almost no cafe culture.",
+    "nightlife": "Minimal. Two late spots, no karaoke, no clubs."
+  },
+  "ja": {
+    "atmosphere": "足立外縁の日暮里・舎人ライナー住宅地。人は少なめ、家賃軽め、用事は薄い。",
+    "landmarks": "舎人公園の存在感が大きい。周辺は倉庫と低層住宅、ライナー沿いの生活圏。",
+    "food": "飲食12軒、居酒屋3軒。麺と地元カウンター中心、カフェ文化はほぼなし。",
+    "nightlife": "ほぼ皆無。深夜2軒、カラオケもクラブもなし。"
+  },
+  "ru": {
+    "atmosphere": "Внешний Адачи на Nippori-Toneri Liner: мало людей, аренда мягче. Бытовые опции тонкие.",
+    "landmarks": "Toneri Park главный ориентир, вокруг склады и низкие дома вдоль лайнера.",
+    "food": "12 ресторанов, 3 изакая. Лапша, местные стойки, почти без кафе-культуры.",
+    "nightlife": "Минимум. Два поздних места, без караоке и клубов."
+  }
+}

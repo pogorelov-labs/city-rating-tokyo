@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain outpost, 6.5k riders, Hachiko Line end. Hiking gateway, quiet safety.",
+    "landmarks": "Nature reserve, hiking trails, rural Tokyo edge. Mountain vibe, zero cities.",
+    "food": "2 restaurants, 1 cafe, 11 scattered. Bring supplies or eat elsewhere.",
+    "nightlife": "1 midnight spot. Gone by 10pm. Everything closes with sunset."
+  },
+  "ja": {
+    "atmosphere": "山のアウトポスト、毎日6500人。八高線の終点。ハイキング入口、静かで安全。",
+    "landmarks": "自然保護区、登山道、田舎東京の端。山の雰囲気。",
+    "food": "2軒、カフェ1軒。自給食推奨。外食は別途。",
+    "nightlife": "深夜営業1軒。夜10時に閉じる。全て日没で終わり。"
+  },
+  "ru": {
+    "atmosphere": "Горный аванпост, 6.5 тыс. пассажиров, конец линии Hachiko. Вход для туристов, тихая безопасность.",
+    "landmarks": "Природный заповедник, тропы для пеших прогулок, край сельской Токио. Горная атмосфера, нет городов.",
+    "food": "2 ресторана, 1 кафе, 11 рассредоточено. Бери припасы или ешь в другом месте.",
+    "nightlife": "1 полночное место. Уходит в 22:00. Всё закрывается с закатом."
+  }
+}

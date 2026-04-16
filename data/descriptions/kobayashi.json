@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Narita Line deep exurb, 75 min to center. Agrarian. Bargain rent (99k), isolated.",
+    "landmarks": "Countryside, 4 sqm green. Nothing to see.",
+    "food": "2 listings, 2 izakaya, 2. Scattered farmland eats.",
+    "nightlife": "None. Sleepy by 9pm."
+  },
+  "ja": {
+    "atmosphere": "成田線の奥地。田舎。安い家賃（99k）、孤立。東京まで75分。",
+    "landmarks": "農村、緑地4平方キロ。何もなし。",
+    "food": "2軒、居酒屋2軒。散在。",
+    "nightlife": "皆無。21時寝る。"
+  },
+  "ru": {
+    "atmosphere": "Narita Line, глубокий пригород, 75 мин до центра. Сельское хозяйство. Дёшево (99k ¥).",
+    "landmarks": "Сельская местность, 4 кв.км зелья. Ничего не видно.",
+    "food": "2, 2 изакаи, 2. Редко.",
+    "nightlife": "Нет. Спит в 21:00."
+  }
+}

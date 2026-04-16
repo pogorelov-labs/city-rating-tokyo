@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "West Tokyo capital energy, huge transfer crowds, cheaper rent, rougher safety profile.",
+    "landmarks": "JR hub, monorail-adjacent city core, Showa Kinen Park scale just outside.",
+    "food": "481 restaurants, 262 izakayas, 21 bars. Big-city choice without central Tokyo rent.",
+    "nightlife": "199 late spots. Izakaya-heavy, lively, not clubby."
+  },
+  "ja": {
+    "atmosphere": "西東京の首都感、乗換客が多く安め。ただし治安の粗さは見える。",
+    "landmarks": "JR巨大ハブ、モノレール圏の中心街、外側に昭和記念公園のスケール。",
+    "food": "飲食481軒、居酒屋262軒、バー21軒。都心家賃なしで選択肢は大都市級。",
+    "nightlife": "深夜199軒。居酒屋中心で賑やか、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Столица западного Токио: толпы пересадок, аренда мягче, профиль безопасности грубее.",
+    "landmarks": "Крупный JR-узел, центр у монорельса, рядом масштаб Showa Kinen Park.",
+    "food": "481 ресторан, 262 изакая, 21 бар. Почти большой город без центральной аренды.",
+    "nightlife": "199 поздних мест. Живо, много изакая, но это не клубный район."
+  }
+}

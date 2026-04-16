@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sleepy residential area, weekday mornings quiet, evenings livelier.",
+    "landmarks": "No major landmarks. Small parks interspersed in residential blocks.",
+    "food": "Modest scene (16 places). Ramen-heavy, convenience stores fill gaps.",
+    "nightlife": "Sparse nightlife. Neighborhood bars only. Early closing."
+  },
+  "ja": {
+    "atmosphere": "住宅地。朝は静か、夜少し人出。",
+    "landmarks": "大きな見どころなし。小公園が点在。",
+    "food": "飲食16軒程度。ラーメン多い。",
+    "nightlife": "居酒屋少。10時で閉まる。"
+  },
+  "ru": {
+    "atmosphere": "Спальный район. Утро тихо, вечер оживлённо.",
+    "landmarks": "Нет крупных мест. Маленькие парки между домов.",
+    "food": "Еды 16 мест. Лапша, конбини.",
+    "nightlife": "Батонов мало. Закрываются в 22:00."
+  }
+}

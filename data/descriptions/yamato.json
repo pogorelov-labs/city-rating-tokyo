@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Two-line Kanagawa hub, busy and practical. Cheap enough, far enough, not polished.",
+    "landmarks": "Odakyu-Sotetsu crossing, station malls, central Yamato shopping streets.",
+    "food": "122 restaurants, 82 izakayas, 6 bars. Strong everyday food, little destination gloss.",
+    "nightlife": "62 late spots, 1 karaoke. Izakaya-heavy, no club scene."
+  },
+  "ja": {
+    "atmosphere": "神奈川の二路線ハブ、忙しく実用的。安め、遠め、洗練は少ない。",
+    "landmarks": "小田急と相鉄の交差点、駅ビル、大和中央の商店街。",
+    "food": "飲食122軒、居酒屋82軒、バー6軒。日常飯は強いが、目的地感は薄い。",
+    "nightlife": "深夜62軒、カラオケ1軒。居酒屋中心、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Каналавский узел двух линий, занято и практично. Достаточно дёшево, достаточно далеко.",
+    "landmarks": "Пересечение Odakyu и Sotetsu, станционные моллы, торговые улицы центра Ямато.",
+    "food": "122 ресторана, 82 изакая, 6 баров. Сильная повседневная еда, мало глянца.",
+    "nightlife": "62 поздних места, 1 караоке. Изакая-тяжело, клубной сцены нет."
+  }
+}

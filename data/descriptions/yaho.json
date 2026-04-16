@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kunitachi edge, calmer than Chuo-line Tokyo. Cheap, safe, academic-adjacent, slow commute.",
+    "landmarks": "Yabo Tenmangu, old Nambu Line streets, fields and University Street within cycling reach.",
+    "food": "Nine listed spots, 29 pins. Basics and small locals; serious dinners need Kunitachi.",
+    "nightlife": "Almost none. One late spot, no bars counted, no karaoke."
+  },
+  "ja": {
+    "atmosphere": "国立の端、中央線側より静か。安い、安全、学園都市の外縁、通勤は長い。",
+    "landmarks": "谷保天満宮、南武線の古い道、畑と大学通りは自転車圏。",
+    "food": "掲載9軒、29件。基本と小さな地元店。本気の外食は国立へ。",
+    "nightlife": "ほぼなし。深夜1軒、バー計上なし、カラオケなし。"
+  },
+  "ru": {
+    "atmosphere": "Край Kunitachi, спокойнее токийской Chuo Line. Дёшево, безопасно, академическая окраина.",
+    "landmarks": "Yabo Tenmangu, старые улицы Nambu Line, поля и University Street на велосипеде.",
+    "food": "Девять мест в выдаче, 29 точек. База и мелкие локалки; за ужином лучше в Kunitachi.",
+    "nightlife": "Почти ничего. Одно позднее место, баров в данных нет, караоке нет."
+  }
+}

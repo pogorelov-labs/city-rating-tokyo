@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tachikawa food hub, surprisingly lively. 53 restaurants, 23 izakaya packed into Tama Monorail outpost. Evening buzz.",
+    "landmarks": "6 pedestrian streets, 5 cultural venues. Huge park 4.3m sqm nearby. Urban energy for exurbs.",
+    "food": "Strong scene: 53 listings, 23 izakaya. Ramen, yakitori, casual chains. Quality ranges.",
+    "nightlife": "4 midnight bars. No clubs, but izakayas run deep. Social spot, not hedonist."
+  },
+  "ja": {
+    "atmosphere": "立川の飲食ハブ、意外と賑やか。居酒屋23軒、53軒集中。夜の活気。",
+    "landmarks": "歩行者天国6本、文化施設5。大公園4.3m2近い。郊外では異例の熱気。",
+    "food": "充実：53、居酒屋23。ラーメン、焼き鳥、チェーン多彩。質のばらつきあり。",
+    "nightlife": "深夜営業4軒。クラブなし。居酒屋は夜通し。社交スポット。"
+  },
+  "ru": {
+    "atmosphere": "Пищевой хаб Такиказы, оживлённо неожиданно. 53 listings, 23 изакаи. Вечер шумит.",
+    "landmarks": "6 пешеходных улиц, 5 культур. Парк 4.3m2 рядом. Энергия для пригорода.",
+    "food": "Сильная сцена: 53, 23 изакаи. Рамэн, якитори, чейны. Варьируется качество.",
+    "nightlife": "4 поздних бара. Клубов нет, но изакаи работают. Социальное место."
+  }
+}

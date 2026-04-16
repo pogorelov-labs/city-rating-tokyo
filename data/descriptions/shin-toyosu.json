@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished bayfront, towers and event crowds. Convenient, sterile between shows.",
+    "landmarks": "teamLab Planets, Toyosu Pit, waterfront parks. Toyosu Market is one stop away.",
+    "food": "71 restaurants, 27 izakayas; event and mall eating, not a deep neighborhood kitchen.",
+    "nightlife": "8 late spots, no karaoke or clubs. Event nights spike, otherwise quiet."
+  },
+  "ja": {
+    "atmosphere": "湾岸の新しい街、タワマンとイベント客。便利だが公演の合間は無機質。",
+    "landmarks": "チームラボプラネッツ、豊洲PIT、水辺の公園。豊洲市場は一駅先。",
+    "food": "飲食71軒、居酒屋27軒。イベント飯とモール飯中心、街の台所感は薄い。",
+    "nightlife": "深夜営業8軒、カラオケもクラブもなし。イベント日は跳ねる、普段は静か。"
+  },
+  "ru": {
+    "atmosphere": "Глянцевый бейфронт, башни и толпы на ивентах. Удобно, но между шоу стерильно.",
+    "landmarks": "teamLab Planets, Toyosu Pit, парки у воды. Рынок Тоёсу в одной остановке.",
+    "food": "71 ресторан, 27 изакая. Еда при ивентах и моллах, не глубокая районная кухня.",
+    "nightlife": "8 поздних мест, без караоке и клубов. В дни событий всплеск, обычно тихо."
+  }
+}

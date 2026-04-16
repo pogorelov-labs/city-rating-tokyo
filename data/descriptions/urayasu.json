@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai-line gateway to bay suburbia. Busy, affordable-ish, greener than expected.",
+    "landmarks": "Urayasu old town edges, riverside paths, Disney-bound buses. Practical Chiba-Tokyo fringe.",
+    "food": "91 restaurants, 44 izakayas, 9 bars. Strong local dinners, not resort glamour.",
+    "nightlife": "53 late spots, no karaoke or clubs. Izakaya nights, commuter tempo."
+  },
+  "ja": {
+    "atmosphere": "東西線の湾岸郊外入口。忙しいがまだ手頃、思ったより緑がある。",
+    "landmarks": "浦安旧市街の端、川沿い道、ディズニー方面バス。実用的な千葉東京境目。",
+    "food": "飲食91件、居酒屋44件、バー9件。地元の夕食は強い、リゾート感はない。",
+    "nightlife": "深夜53件、カラオケもクラブもなし。居酒屋中心、通勤客のテンポ。"
+  },
+  "ru": {
+    "atmosphere": "Ворота Tozai Line в прибрежный пригород. Людно, ещё терпимо по цене, зелени больше ожидаемого.",
+    "landmarks": "Край старого Ураясу, дорожки у реки, автобусы к Disney. Практичная граница Тиба-Токио.",
+    "food": "91 ресторан, 44 изакая, 9 баров. Сильные локальные ужины, без курортного блеска.",
+    "nightlife": "53 поздних места, без караоке и клубов. Изакая, ритм коммьютеров."
+  }
+}

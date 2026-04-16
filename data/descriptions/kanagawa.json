@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keikyu stop beside Yokohama's gravity. Quiet platform, big-city food spillover.",
+    "landmarks": "Old Tokaido traces, Kanagawa-shuku slope, Yokohama Station close. Safety data is thin.",
+    "food": "432 restaurants, 203 izakayas, 22 cafes. Yokohama spillover gives real choice.",
+    "nightlife": "137 late spots, 1 karaoke, no clubs. Drinks nearby, station stays calm."
+  },
+  "ja": {
+    "atmosphere": "横浜の重力圏にある小さな京急駅。ホームは静か、飲食だけ大都市のこぼれ。",
+    "landmarks": "旧東海道の気配、神奈川宿の坂、近い横浜駅。安全データは薄め。",
+    "food": "飲食432軒、居酒屋203軒、カフェ22軒。横浜のこぼれで選択肢は本物。",
+    "nightlife": "深夜営業137軒、カラオケ1軒、クラブなし。飲みは近いが駅は静か。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Keikyu-станция в гравитации Йокогамы. Платформа тихая, еда от большого города.",
+    "landmarks": "Следы старой Tokaido, склон Kanagawa-shuku, Yokohama Station рядом. Safety data тонкая.",
+    "food": "432 ресторана, 203 изакая, 22 кафе. Перелив Йокогамы даёт реальный выбор.",
+    "nightlife": "137 поздних мест, 1 караоке, клубов нет. Выпивка рядом, станция спокойная."
+  }
+}

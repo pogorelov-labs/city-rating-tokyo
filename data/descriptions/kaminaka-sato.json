@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Kita-ku hilltop with JR access. Cheap, green, elderly pace, little scene.",
+    "landmarks": "Kyu-Furukawa Gardens, Hiratsuka Shrine, Asukayama close by. Excellent walking country.",
+    "food": "47 restaurants, 11 izakayas; soba, set meals, old-school counters. Lower expectations.",
+    "nightlife": "12 late spots, no karaoke or clubs. Minimal, local beer only."
+  },
+  "ja": {
+    "atmosphere": "北区の静かな高台、JRは使える。安め、緑多め、年配ペース、遊びは少ない。",
+    "landmarks": "旧古河庭園、平塚神社、飛鳥山も近い。散歩にはかなり強い。",
+    "food": "飲食47軒、居酒屋11軒。そば、定食、昔ながらのカウンター。期待は控えめに。",
+    "nightlife": "深夜12軒、カラオケもクラブもなし。最小限、地元の一杯だけ。"
+  },
+  "ru": {
+    "atmosphere": "Тихий холм Кита-ку с JR-доступом. Дешевле, зелено, пожилой темп, мало сцены.",
+    "landmarks": "Kyu-Furukawa Gardens, Hiratsuka Shrine, рядом Asukayama. Отличная зона для ходьбы.",
+    "food": "47 ресторанов, 11 изакая; соба, тэйсёку, старые стойки. Ожидания ниже.",
+    "nightlife": "12 поздних мест, без караоке и клубов. Минимум, только местное пиво."
+  }
+}

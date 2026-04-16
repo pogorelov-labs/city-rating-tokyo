@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sotetsu-side Yokohama, local and rough-edged. Cheap, far from Tokyo.",
+    "landmarks": "Nishi Ward backstreets, green pockets, quick hop to Yokohama. Low-rise city.",
+    "food": "78 restaurants, 20 izakayas, 6 bars. Practical local eating, not destination.",
+    "nightlife": "29 late spots, 15 clubs nearby. Uneven Yokohama edge."
+  },
+  "ja": {
+    "atmosphere": "相鉄側の横浜ローカル、少し荒さもある。家賃は軽め、都心は遠い。",
+    "landmarks": "西区の裏道、緑の小ポケット、横浜へすぐ。低層の日常都市。",
+    "food": "飲食78軒、居酒屋20軒、バー6軒。目的地グルメより、生活の外食。",
+    "nightlife": "深夜29軒、周辺クラブ15件検出。横浜寄り、夜はムラあり。"
+  },
+  "ru": {
+    "atmosphere": "Локальная сторона Yokohama на Sotetsu, чуть шероховатая. Аренда легче, центр Токио далеко.",
+    "landmarks": "Закоулки Nishi Ward, зелёные карманы, быстрый прыжок к Yokohama. Низкая повседневная застройка.",
+    "food": "78 ресторанов, 20 изакая, 6 баров. Еда для района, не гастро-пункт назначения.",
+    "nightlife": "29 поздних мест, 15 клубов поблизости. Около Yokohama, ночью неровно."
+  }
+}

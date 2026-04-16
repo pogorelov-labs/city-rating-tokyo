@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kanagawa suburban dead zone. Single Sagami line, 74-min commute. But affordable (¥124k) and decent green access.",
+    "landmarks": "Sagami line rural stretch. 1 cultural venue, 1 pedestrian street. Minimal urban features. Fields dominate.",
+    "food": "Eight food venues total (1, 7 ). Mostly local, limited options. Not a food destination.",
+    "nightlife": "Four late-night spots. Nothing fancy - izakaya-level stuff. Sleepy after 9pm."
+  },
+  "ja": {
+    "atmosphere": "神奈川の死角。相模線一線。74分かかるが、家賃安い。緑もある。",
+    "landmarks": "相模線の田舎区間。文化施設1つ。ほぼ農地。",
+    "food": "食べ物8軒。地元向け。選択肢少ない。",
+    "nightlife": "4軒。駅周辺イザカヤ程度。"
+  },
+  "ru": {
+    "atmosphere": "Мертвая зона Канагавы. Одна линия Сагами, 74 мин коммут. Но дешево (¥124k) и нормальный доступ к природе.",
+    "landmarks": "Сельский участок линии Сагами. 1 культурная площадка, 1 пешеходная улица. Поля вокруг.",
+    "food": "Восемь мест еды (1, 7 ). Местные, выбор ограничен.",
+    "nightlife": "Четыре поздних места. Ничего особенного. Спит после 21:00."
+  }
+}

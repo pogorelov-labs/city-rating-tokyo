@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tama Monorail suburb near Tachikawa, quiet and spacious. Cheap, but Tokyo feels far.",
+    "landmarks": "Tachikawa Park, municipal gym, Tama River side. Monorail views over low-rise blocks.",
+    "food": "197 restaurants, 103 izakayas. Tachikawa spillover, lots of casual drinking.",
+    "nightlife": "89 late-night spots, no karaoke. Drinks yes, party culture no."
+  },
+  "ja": {
+    "atmosphere": "立川近くの多摩モノレール郊外。静かで広い。安いが東京は遠く感じる。",
+    "landmarks": "立川公園、市民体育館、多摩川方面。低層住宅の上を走るモノレール。",
+    "food": "飲食197軒、居酒屋103軒。立川の余波、気軽な飲みは多い。",
+    "nightlife": "深夜営業89軒、カラオケなし。飲めるが、パーティー文化ではない。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Tama Monorail у Татикавы, тихо и просторно. Дёшево, но Токио далеко.",
+    "landmarks": "Tachikawa Park, городской спортзал, сторона Tama River. Монорельс над малоэтажками.",
+    "food": "197 ресторанов, 103 изакая. Эхо Татикавы, много простой выпивки.",
+    "nightlife": "89 поздних мест, караоке нет. Выпить да, вечеринок нет."
+  }
+}

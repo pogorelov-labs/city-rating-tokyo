@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Glossy office towers over Shimbashi grit. Packed by day, pricey, hollow in pockets.",
+    "landmarks": "Hama-rikyu, Nippon TV Tower, Caretta Shiodome. Yurikamome views, glass-canyon walks.",
+    "food": "Huge choice: 1976 spots, izakaya-heavy. Expense-account lunches, late salaryman dinners.",
+    "nightlife": "803 late spots, bars and clubs nearby. Lively, but corporate more than loose."
+  },
+  "ja": {
+    "atmosphere": "新橋の雑味の上に光る高層オフィス。昼は混雑、家賃は強気、場所により空洞感。",
+    "landmarks": "浜離宮、日テレタワー、カレッタ汐留。ゆりかもめの眺め、ガラス峡谷の散歩。",
+    "food": "飲食は巨大、1976件。居酒屋多め、接待ランチと残業後の夕食が主役。",
+    "nightlife": "深夜営業803件、バーとクラブも近い。賑やかだが、遊び場より会社帰りの夜。"
+  },
+  "ru": {
+    "atmosphere": "Глянец офисных башен над грубым Синбаси. Днём толпа, дорого, местами пустая оболочка.",
+    "landmarks": "Hama-rikyu, Nippon TV Tower, Caretta Shiodome. Виды Yurikamome, прогулки в стеклянном каньоне.",
+    "food": "Выбор огромный: 1976 точек, много изакая. Обеды на корпоративный счёт, поздние ужины офисных.",
+    "nightlife": "803 поздних места, бары и клубы рядом. Живо, но скорее корпоративно, чем свободно."
+  }
+}

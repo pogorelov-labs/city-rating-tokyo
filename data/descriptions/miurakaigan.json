@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal resort town south of Tokyo, beach access. Summer weekends mobbed, winter dead. Quiet weekday mornings.",
+    "landmarks": "Keikyu Kurihama Line. Beach, small parks, seaside walks. Tourist-lite compared to Izu.",
+    "food": "13 restaurants + 14 spots. Izakayas (5), seafood joints. Quality variable, some tourist traps.",
+    "nightlife": "2 late-night bars. Minimal karaoke, no clubs. Beach bars close early."
+  },
+  "ja": {
+    "atmosphere": "三浦海岸、横浜南。夏週末は観光客、冬は地元民のみ。平日朝は静か。",
+    "landmarks": "京葉久里浜線。海岸、小公園、散歩道。",
+    "food": "レストラン13軒。居酒屋5軒、海鮮。観光地価格あり。",
+    "nightlife": "夜間営業2軒。カラオケ稀少。夜は早い。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный курортный город к югу от Токио. Летние выходные переполнены, зима мертва.",
+    "landmarks": "Линия Keikyu Kurihama, пляж, парки, набережная.",
+    "food": "13 ресторанов, 14 мест. Изакаи (5), морепродукты. Цены туристские.",
+    "nightlife": "2 поздних места. Караоке редко, клубов нет. Пляжные бары рано закрываются."
+  }
+}

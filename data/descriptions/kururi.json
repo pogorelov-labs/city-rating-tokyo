@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba far-exurb, 92 min to Tokyo center via local train. Tiny station (576 passengers/day). Countryside isolation.",
+    "landmarks": "Kururi Line endpoint. 37m elevation, high seismic risk. Rural, minimal infrastructure. Last train 21:42 — plan ends early.",
+    "food": "Skeleton crew: 2 listings, 2 cafes, 2. Zero izakaya. Self-cater. Rural areas don't sustain restaurants.",
+    "nightlife": "Minimal. 1 midnight spot total. Zero karaoke. If you're here after 9pm, you're exploring nature."
+  },
+  "ja": {
+    "atmosphere": "千葉奥地、地元線で92分。乗客576人/日。田舎の孤立。",
+    "landmarks": "久留里線終端。37m、地震リスク高。農村、インフラ最小限。21:42最終便。",
+    "food": "2HP、2カフェ、2OSM。居酒屋なし。自炊必須。田舎は飲食店を支えない。",
+    "nightlife": "ほぼなし。深夜1軒。カラオケなし。夜中なら自然探索。"
+  },
+  "ru": {
+    "atmosphere": "Дальний пригород Тиба, 92 мин до центра на местных поездах. 576 пассажиров/день. Деревенская изоляция.",
+    "landmarks": "Конечная станция линии Курури. 37м, высокий сейсмориск. Сельское хозяйство, минимальная инфраструктура. Последний поезд 21:42.",
+    "food": "2 listings, 2 кафе, 2. Ноль изакаи. Самообслуживание. Деревни не поддерживают рестораны.",
+    "nightlife": "Минимально. 1 ночное место. Нет караоке. После 21:00 изучайте природу."
+  }
+}

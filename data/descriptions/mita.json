@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Minato's posh core — finance bros, young professionals. Crowd zero (empty after 10pm). Two lines, premium prices (¥230k rent). Dangerous at night (rate 28/10k), gritty red-light zone vibes.",
+    "landmarks": "Sengoku Roppongi museums, Keio University adjacent. Roppongi Hills nearby.",
+    "food": "435 listings, 214 izakaya, 295. Expensive, polished. Sushi dominates.",
+    "nightlife": "145 midnight spots, 4 karaoke, 1 club. International bars, nightclub strip. Crawl-friendly."
+  },
+  "ja": {
+    "atmosphere": "港区の上質エリア。金融マン、若手プロ。夜間(22時以降)はがら空き。賃貸23万円。犯罪率28/10k — 夜は危ない、赤線風。",
+    "landmarks": "戦国美術館、慶應大学。六本木ヒルズ近い。",
+    "food": "飲食店435軒、居酒屋214軒、295件。高級、磨かれた。寿司が支配的。",
+    "nightlife": "深夜営業145軒、カラオケ4軒、クラブ1軒。国際バー、歓楽街。キャローリング向け。"
+  },
+  "ru": {
+    "atmosphere": "Элитный центр Минато. Финансисты, молодые профи. Толпы нет (пусто после 22:00). ¥230k аренда. Криминал 28/10k — опасно ночью, красные огни.",
+    "landmarks": "Музеи, университет Keio. Близко Roppongi Hills.",
+    "food": "435 listings, 214 изакай, 295. Дорого, изысканно. Суши доминирует.",
+    "nightlife": "145 ночных мест, 4 караоке, 1 клуб. Интерн.бары, ночная зона. Барный краул."
+  }
+}

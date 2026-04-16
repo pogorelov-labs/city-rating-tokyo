@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo's busiest machine: offices, malls, Kabukicho spillover. Useful, overwhelming, crime stats brutal.",
+    "landmarks": "Kabukicho, Omoide Yokocho, Shinjuku Gyoen, west-side skyscrapers.",
+    "food": "2099 restaurants, 923 izakayas, 176 bars. Everything exists; good picks hide in noise.",
+    "nightlife": "1068 late spots, 12 clubs, 13 karaoke. Tokyo after dark, fully weaponized."
+  },
+  "ja": {
+    "atmosphere": "東京最大級の機械。オフィス、百貨店、歌舞伎町のにじみ出し。便利で圧倒的、治安数字は強烈。",
+    "landmarks": "歌舞伎町、思い出横丁、新宿御苑、西口高層ビル群。",
+    "food": "飲食2099軒、居酒屋923軒、バー176軒。何でもあるが、当たりは雑音の中に埋もれる。",
+    "nightlife": "深夜1068軒、クラブ12軒、カラオケ13軒。東京の夜が全開。"
+  },
+  "ru": {
+    "atmosphere": "Самая шумная машина Токио: офисы, моллы, выплеск Кабукитё. Полезно, давит, кримстатистика жесткая.",
+    "landmarks": "Kabukicho, Omoide Yokocho, Shinjuku Gyoen, западные небоскребы.",
+    "food": "2099 ресторанов, 923 изакая, 176 баров. Есть всё; хорошие места прячутся в шуме.",
+    "nightlife": "1068 поздних мест, 12 клубов, 13 караоке. Ночной Токио на полной мощности."
+  }
+}

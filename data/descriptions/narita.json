@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple town pretending to be an airport hub. Cheap, far, touristy on weekends.",
+    "landmarks": "Naritasan Shinsho-ji, Omotesando eel shops, Naritasan Park. Classic day-trip circuit.",
+    "food": "113 restaurants, 55 izakayas, airport spillover. Unagi and beer beat daily variety.",
+    "nightlife": "54 late spots, 3 karaoke, 1 club. Surprisingly alive, but last train is early."
+  },
+  "ja": {
+    "atmosphere": "空港ハブの顔をした門前町。安い、遠い、週末は観光客多め。",
+    "landmarks": "成田山新勝寺、表参道の鰻屋、成田山公園。日帰り観光の王道。",
+    "food": "飲食113件、居酒屋55件、空港客の流れあり。鰻とビールが強い。",
+    "nightlife": "深夜54件、カラオケ3件、クラブ1件。意外に動くが終電は早い。"
+  },
+  "ru": {
+    "atmosphere": "Храмовый город, который притворяется аэропорт-хабом. Дёшево, далеко, по выходным туристы.",
+    "landmarks": "Naritasan Shinsho-ji, унаги на Omotesando, парк Naritasan. Классический day trip.",
+    "food": "113 ресторанов, 55 изакай, поток из аэропорта. Угорь и пиво сильнее будней.",
+    "nightlife": "54 поздних места, 3 караоке, 1 клуб. Живее ожиданий, но последний поезд ранний."
+  }
+}

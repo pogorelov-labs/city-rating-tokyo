@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ota hillside on the Asakusa line, safe and green, but rent bites hard.",
+    "landmarks": "Daini Keihin, Magome Bunshimura traces, bronze station statue, Ikegami Honmonji nearby.",
+    "food": "42 restaurants, 11 izakayas, 2 bars. Enough local meals, little cafe culture.",
+    "nightlife": "14 late spots, no karaoke, no clubs. Quiet drinks only."
+  },
+  "ja": {
+    "atmosphere": "浅草線沿いの大田区の坂町、安全で緑あり、ただ家賃は痛い。",
+    "landmarks": "第二京浜、馬込文士村の痕跡、駅のブロンズ像、池上本門寺が近い。",
+    "food": "飲食42軒、居酒屋11軒、バー2軒。地元飯は足りる、カフェ文化は薄い。",
+    "nightlife": "深夜14軒、カラオケなし、クラブなし。静かに飲むだけ。"
+  },
+  "ru": {
+    "atmosphere": "Холмы Ота на Asakusa Line, безопасно и зелено, но аренда кусается.",
+    "landmarks": "Daini Keihin, следы Magome Bunshimura, бронзовая фигура у станции, Ikegami Honmonji рядом.",
+    "food": "42 ресторана, 11 изакай, 2 бара. Локальной еды хватит, кафе-культуры мало.",
+    "nightlife": "14 поздних мест, без караоке и клубов. Только тихо выпить."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet suburban edge with zero nightlife. Peaceful neighborhood, 57 min to center, but cheap rent.",
+    "landmarks": "Tobu Urban Park Line only. No major sights. Mostly residential.",
+    "food": "Minimal — 8 listings spots, 4 izakaya. Scattered chains, no scene.",
+    "nightlife": "4 late-night venues. Basically closed after 9pm."
+  },
+  "ja": {
+    "atmosphere": "静かな郊外。夜間営業なし。家賃は安い、中心部まで57分。",
+    "landmarks": "東武野田線のみ。目立つ施設なし。住宅地。",
+    "food": "限定的。食堂8軒、居酒屋4軒。チェーン店散在。",
+    "nightlife": "夜間営業4軒。夜は実質シャットダウン。"
+  },
+  "ru": {
+    "atmosphere": "Тихая окраина без ночной жизни. Спокойно, дешёвая квартира, но 57 мин до центра.",
+    "landmarks": "Только линия Tobu Urban Park. Без достопримечательностей. Жилой район.",
+    "food": "Скудное предложение — 8 listings мест, 4 изакаи. Цепные рестораны.",
+    "nightlife": "4 ночных заведения. Фактически закрывается в 21:00."
+  }
+}

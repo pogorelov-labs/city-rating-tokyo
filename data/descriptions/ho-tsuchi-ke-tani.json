@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Yokohama commuter valley, practical and a bit worn. Good access, not much glamour.",
+    "landmarks": "Hodogaya station core, old Tokaido traces, green hills around. Slopes shape daily life.",
+    "food": "57 restaurants, 22 izakayas. Local dinners, ramen, small bars; useful more than exciting.",
+    "nightlife": "19 late spots, 1 karaoke, 1 club. Some drinking, still low-key."
+  },
+  "ja": {
+    "atmosphere": "横浜の古い通勤谷、実用的で少し年季あり。アクセスは良いが華は少ない。",
+    "landmarks": "保土ケ谷駅前、旧東海道の名残、周囲の緑の丘。坂が生活を決める。",
+    "food": "飲食57軒、居酒屋22軒。地元の夕食、ラーメン、小さなバー。刺激より実用。",
+    "nightlife": "深夜19軒、カラオケ1軒、クラブ1軒。飲めるが基本は地味。"
+  },
+  "ru": {
+    "atmosphere": "Старая commuter-долина Йокогамы, практично и чуть потёрто. Доступ хороший, гламура мало.",
+    "landmarks": "Ядро Hodogaya, следы старой Tokaido, зеленые холмы вокруг. Склоны задают быт.",
+    "food": "57 ресторанов, 22 изакая. Местные ужины, рамен, маленькие бары; полезно, не волнительно.",
+    "nightlife": "19 поздних мест, 1 караоке, 1 клуб. Выпить можно, но район тихий."
+  }
+}

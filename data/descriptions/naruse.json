@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Machida suburb on the Yokohama Line. Cheap rent, clinics, parks; no edge.",
+    "landmarks": "Onda River paths, Minami-Naruse shops, low residential slopes. Yokohama and Machida are the escapes.",
+    "food": "27 restaurants, 10 izakayas, no bars or cafes counted. Daily meals, not a date map.",
+    "nightlife": "6 late spots, no karaoke. Minimal, sleep-first neighborhood."
+  },
+  "ja": {
+    "atmosphere": "横浜線の静かな町田郊外。家賃安め、医療と公園あり、尖りはない。",
+    "landmarks": "恩田川沿い、南成瀬の商店、低い住宅の坂道。遊びは町田か横浜へ。",
+    "food": "飲食27件、居酒屋10件、バーとカフェは計上なし。日常飯向き。",
+    "nightlife": "深夜6件、カラオケなし。ほぼ寝るための街。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригород Матида на Yokohama Line. Аренда мягче, клиники и парки есть, характера мало.",
+    "landmarks": "Дорожки у Onda River, магазины Minami-Naruse, жилые склоны. Развлечения в Матиде или Йокогаме.",
+    "food": "27 ресторанов, 10 изакай, баров и кафе не поймано. Еда на каждый день, не для свиданий.",
+    "nightlife": "6 поздних мест, без караоке. Минимально, район для сна."
+  }
+}

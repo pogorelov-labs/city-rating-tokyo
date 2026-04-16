@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Business and nightlife epicenter. 708 restaurants, 262 midnight spots. Chiyoda expensive core, crowded daytime. 1.3M sqm green (Akasaka Palace area).",
+    "landmarks": "Akasaka Palace, government quarter, high-end shopping. 24 pedestrian streets. Business-focused vibe.",
+    "food": "708 listings (242 izakaya, 57 bars), 454 cafes. Corporate dining, Michelin alley. Quality consistent.",
+    "nightlife": "262 midnight bars, 7 karaoke, clubs rare. Salarymen scene. Late trains (00:27) enable all-nighters."
+  },
+  "ja": {
+    "atmosphere": "ビジネス・夜遊び一等地。居酒屋708軒、深夜営業262軒。千代田区最高級エリア、昼間混雑。",
+    "landmarks": "赤坂サカス、政府街、高級ショップ。歩行者天国24。ビジネス向け。",
+    "food": "居酒屋242軒、バー57軒。企業向け食堂、ミシュラン横丁。質は安定。",
+    "nightlife": "深夜営業262軒、カラオケ7軒。サラリーマン文化。終電00:27で夜明かし対応。"
+  },
+  "ru": {
+    "atmosphere": "Бизнес и ночная жизнь премьер-лиги. 708 ресторанов, 262 ночных бара. Дорогой центр Тиёда, днём толпа.",
+    "landmarks": "Дворец Акасака, правительство, премиум-шопинг. 24 пешеходные улицы. Офисная атмосфера.",
+    "food": "708 ресторанов (242 изакай, 57 баров). Корпоративная кухня, переулок звёзд Мишлена. Качество стабильно.",
+    "nightlife": "262 ночных бара, 7 караоке. Офисные работники. Последний поезд в 00:27 — пьянки до утра."
+  }
+}

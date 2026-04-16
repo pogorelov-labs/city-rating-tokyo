@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Power-dining Akasaka: embassies, suits, expense accounts. Excellent food, brutal rent.",
+    "landmarks": "Akasaka Sacas, Hie Shrine, embassy slopes, hotel corridors. Polished but political.",
+    "food": "660 restaurants, 210 izakayas, 55 bars. Korean, sushi, business dinners everywhere.",
+    "nightlife": "259 late spots, 7 karaoke, no clubs. Heavy drinking, corporate, pricey."
+  },
+  "ja": {
+    "atmosphere": "会食の赤坂。大使館、スーツ、経費の街。食は抜群、家賃は容赦ない。",
+    "landmarks": "赤坂サカス、日枝神社、大使館の坂、ホテルの通路。上品だが政治的。",
+    "food": "飲食660件、居酒屋210件、バー55件。韓国料理、寿司、ビジネス夕飯だらけ。",
+    "nightlife": "深夜259件、カラオケ7件、クラブなし。酒は重い、会社寄り、高い。"
+  },
+  "ru": {
+    "atmosphere": "Akasaka для power dining: посольства, костюмы, счета на компанию. Еда отличная, аренда жестокая.",
+    "landmarks": "Akasaka Sacas, Hie Shrine, посольские склоны, гостиничные коридоры. Полировано, но политично.",
+    "food": "660 ресторанов, 210 изакай, 55 баров. Корейская, суши, бизнес-ужины повсюду.",
+    "nightlife": "259 поздних мест, 7 караоке, без клубов. Много алкоголя, корпоративно, дорого."
+  }
+}

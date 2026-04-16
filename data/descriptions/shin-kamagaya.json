@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba interchange, serious rail utility, bargain rent. Functional, not romantic.",
+    "landmarks": "Tobu, Hokuso, Shin-Keisei, Narita access collide. Big roads, green edges.",
+    "food": "21 restaurants, 6 izakayas, no bars. Mall meals, family chains, little depth.",
+    "nightlife": "7 late spots, no karaoke. Minimal. Transfer, then home."
+  },
+  "ja": {
+    "atmosphere": "千葉の乗換タウン、鉄道の実用性と安い家賃が強い。機能的、ロマンは薄い。",
+    "landmarks": "東武、北総、新京成、成田アクセスが交差。大きな道路、緑の縁。",
+    "food": "飲食21軒、居酒屋6軒、バーなし。商業施設ごはん、ファミレス系、深さは少ない。",
+    "nightlife": "深夜7軒、カラオケなし。ほぼ皆無。乗り換えて帰る街。"
+  },
+  "ru": {
+    "atmosphere": "Пересадочный город Чибы, сильная железнодорожная утилита и дешёвая аренда. Функционально, не романтично.",
+    "landmarks": "Tobu, Hokuso, Shin-Keisei и Narita access сходятся здесь. Большие дороги, зелёные края.",
+    "food": "21 ресторан, 6 изакая, баров нет. Еда в торговых центрах, семейные сети, мало глубины.",
+    "nightlife": "7 поздних мест, караоке нет. Минимум. Пересели и домой."
+  }
+}

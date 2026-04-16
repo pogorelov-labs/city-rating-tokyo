@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Den-en-toshi corridor with Mizonokuchi spillover. Dense, useful, greener elsewhere.",
+    "landmarks": "Tokyu Den-en-toshi and Oimachi lines, Tama River side streets, clinic-and-shop blocks.",
+    "food": "162 restaurants, 81 izakayas, 7 cafes. Strong everyday eating, lots of station drinking.",
+    "nightlife": "79 late spots, 5 karaoke, no clubs. Lively, not sleek."
+  },
+  "ja": {
+    "atmosphere": "田園都市線沿い、溝の口のにぎわいが漏れる街。密で便利、緑は少なめ。",
+    "landmarks": "東急田園都市線と大井町線、多摩川側の生活道路、医院と商店の街区。",
+    "food": "飲食162軒、居酒屋81軒、カフェ7軒。普段使い強い、駅飲みも多い。",
+    "nightlife": "深夜79軒、カラオケ5軒、クラブなし。賑やかだが洗練ではない。"
+  },
+  "ru": {
+    "atmosphere": "Коридор Den-en-toshi с переливом Мидзонокути. Плотно, удобно, зелень ищите дальше.",
+    "landmarks": "Tokyu Den-en-toshi и Oimachi, улицы к Тама, кварталы клиник и магазинов.",
+    "food": "162 ресторана, 81 изакая, 7 кафе. Сильная бытовая еда, много привокзальной выпивки.",
+    "nightlife": "79 поздних мест, 5 караоке, клубов нет. Живо, не гладко."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student-heavy Shinjuku edge, green pockets and cheap energy. Rent is not student-friendly.",
+    "landmarks": "Waseda campus walks, Toyama Park, Takadanobaba nearby. Youth and books everywhere.",
+    "food": "399 restaurants, 141 izakayas, 20 bars. Student meals, ramen, curry, plenty late.",
+    "nightlife": "155 late spots, 2 karaoke rooms, no clubs. Baba spillover, not Kabukicho."
+  },
+  "ja": {
+    "atmosphere": "学生の多い新宿の端、緑と安い熱気。ただし家賃は学生向けではない。",
+    "landmarks": "早稲田キャンパス散歩、戸山公園、近い高田馬場。若さと本の気配。",
+    "food": "飲食399軒、居酒屋141軒、バー20軒。学生飯、ラーメン、カレー、遅くまで多い。",
+    "nightlife": "深夜営業155軒、カラオケ2軒、クラブなし。馬場のこぼれ、歌舞伎町ではない。"
+  },
+  "ru": {
+    "atmosphere": "Студенческий край Shinjuku, зелёные карманы и дешёвая энергия. Аренда уже не студенческая.",
+    "landmarks": "Прогулки к Waseda, Toyama Park, Takadanobaba рядом. Молодёжь и книги везде.",
+    "food": "399 ресторанов, 141 изакая, 20 баров. Студенческая еда, рамен, карри, много позднего.",
+    "nightlife": "155 поздних мест, 2 караоке, клубов нет. Перелив Baba, не Kabukicho."
+  }
+}

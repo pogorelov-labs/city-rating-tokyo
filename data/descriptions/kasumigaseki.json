@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Busy Tobu hub, 185k daily riders. Commuter rush, packed trains. Cheap rent (109k), family-oriented. Green belt nearby. 63 min to Tokyo.",
+    "landmarks": "Kasumigaseki Park, small shopping mall. Tojo line spokes to suburbs. Office parks, shopping, no icons.",
+    "food": "6 rating, basic. 18 listings, 10 izakayas, chains. Lunch-driven. Evening depth OK but generic.",
+    "nightlife": "Minimal. 4 late-night, no clubs. Family neighborhood, drinks end early."
+  },
+  "ja": {
+    "atmosphere": "東武ハブ、185千人/日。通勤ラッシュ、混雑した電車。激安家賃（109k）、ファミリー向け。緑地近い。都心63分。",
+    "landmarks": "霞ヶ関公園、小ショッピングモール。東上線が郊外へ。オフィスパーク、買い物、何もない。",
+    "food": "6評価、基本。ホットペッパー18軒、居酒屋10軒、チェーン。ランチ駆動。夜は平凡。",
+    "nightlife": "ほぼなし。深夜営業4軒、クラブなし。ファミリー街、酒は早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Занятый узел Тобу, 185k пассажиров/день. Час пик, переполненные поезда. Дешевая аренда (109k), семейный уровень. Зелёный пояс рядом. 63 мин до центра.",
+    "landmarks": "Парк Касумигасеки, небольшой молл. Ветвь Тодзё в пригороды. Офис-парки, шопинг, достопримечательностей нет.",
+    "food": "Рейтинг 6, базовый. 18 listings, 10 изакай, чейны. Обеды доминируют. Вечер приемлем, но скучен.",
+    "nightlife": "Минимум. 4 ночных, клубов нет. Семейный район, пьют рано."
+  }
+}

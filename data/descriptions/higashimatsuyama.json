@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Outer Saitama Tojo-Line town, cheap and self-contained. Tokyo commute is the tax.",
+    "landmarks": "Old Matsuyama center, peony-park orbit, Tobu Tojo gateway feel.",
+    "food": "Yakiton town reputation, izakaya cluster, cheap local plates. Cafes stay thin.",
+    "nightlife": "Late izakayas and two karaoke spots, not clubs. Works if you live nearby."
+  },
+  "ja": {
+    "atmosphere": "東上線の外側の埼玉タウン。安くて自立しているが、都心通勤が代償。",
+    "landmarks": "旧松山の中心部、ぼたん園方面、東武東上線の玄関口感。",
+    "food": "やきとんの街イメージ、居酒屋多め、安い地元飯。カフェは薄い。",
+    "nightlife": "遅い居酒屋とカラオケ2軒、クラブではない。住んでいれば使える。"
+  },
+  "ru": {
+    "atmosphere": "Внешний сайтомский город на Tojo Line, дешево и самодостаточно. Налогом идет путь до Токио.",
+    "landmarks": "Старый центр Matsuyama, зона пионового парка, ощущение ворот Tobu Tojo.",
+    "food": "Репутация города якитон, кучка изакай, дешевые местные тарелки. Кафе тонко.",
+    "nightlife": "Поздние изакаи и два караоке, не клубы. Работает, если живешь рядом."
+  }
+}

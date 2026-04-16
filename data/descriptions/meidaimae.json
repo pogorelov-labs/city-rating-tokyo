@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Students everywhere, college-town vibe. Food-dense, good gyms. But crime rate 54/10k — gritty after dark.",
+    "landmarks": "Meiji University dominating. Two Keio lines. Parks nearby (Setagaya ward).",
+    "food": "69 listings, 30 izakaya. Cheap eats, student circuit. Quality varies.",
+    "nightlife": "35 late-night spots, 1 karaoke. Student bars, not clubs. Closes early compared to Shinjuku."
+  },
+  "ja": {
+    "atmosphere": "学生ばかり。大学町の雰囲気。飯が豊富、ジム充実。でも犯罪率54/10k — 夜は雑多。",
+    "landmarks": "明治大学が圧倒的。京王線2本。公園点在。",
+    "food": "飲食店69軒、居酒屋30軒、64件。安い飯、学生向け。",
+    "nightlife": "ランドリー35軒、カラオケ1軒。学生向け居酒屋。新宿より閉じるの早い。"
+  },
+  "ru": {
+    "atmosphere": "Студенты везде, колледж-таун. Еда, спорт-залы. Но криминал 54/10k — грязный ночью.",
+    "landmarks": "Университет Мейдзи подавляет. 2 линии Keio. Парки (Сэтагая).",
+    "food": "69 listings, 30 изакай, 64. Дешёвая еда, студенческий контур.",
+    "nightlife": "35 ночных мест, 1 караоке. Студ-бары, не клубы. Закрывается рано."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Beach town on Choshi Railway, 165 minutes from central Tokyo. Seismic very high. Wind-blown and quiet.",
+    "landmarks": "Coastal setting, tram nostalgia. Last train 21:20 — curfew for night owls.",
+    "food": "1 listings. Fishing town basics, fresh seafood likely.",
+    "nightlife": "Minimal. Early closure culture, tram line is heritage not frequent."
+  },
+  "ja": {
+    "atmosphere": "銚子電気鉄道の海沿い。東京まで165分。のんびり浜風。",
+    "landmarks": "海岸線、電車の情緒。最終電車21:20。",
+    "food": "1、2。漁村の食文化。",
+    "nightlife": "早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Пляжный город на линии Чоши, 165 минут от центра Токио. Сейсмика очень высокая. Ветреное, тихое.",
+    "landmarks": "Береговое расположение, трамвайная ностальгия. Последний поезд 21:20.",
+    "food": "1 listings, 2. Рыбацкие основы, свежая рыба вероятна.",
+    "nightlife": "Минимум. Ранние закрытия, ностальгическая трамвайная линия."
+  }
+}

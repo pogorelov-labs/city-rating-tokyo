@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old-school Setagaya market town with tram charm. Handy, lived-in, not glossy.",
+    "landmarks": "Shimotakaido shopping street, Setagaya Line stop, small cinema-and-market feel.",
+    "food": "66 restaurants, 30 izakayas, 5 cafes. Student-friendly, local, better than polished.",
+    "nightlife": "35 late spots, no karaoke or clubs. Izakaya nights, early tram-town mood."
+  },
+  "ja": {
+    "atmosphere": "昔ながらの世田谷商店街と世田谷線の情緒。便利、生活感強め、艶はない。",
+    "landmarks": "下高井戸商店街、世田谷線の駅前、小劇場と市場っぽい空気。",
+    "food": "飲食66件、居酒屋30件、カフェ5件。学生にも優しい地元飯。",
+    "nightlife": "深夜35件、カラオケもクラブもなし。居酒屋の夜、早めの路面電車感。"
+  },
+  "ru": {
+    "atmosphere": "Старая рыночная Сэтагая с трамвайным шармом. Удобно, обжито, без глянца.",
+    "landmarks": "Shimotakaido shopping street, остановка Setagaya Line, настроение маленького кино и рынка.",
+    "food": "66 ресторанов, 30 изакай, 5 кафе. Студенчески дружелюбно, локально, лучше полировки.",
+    "nightlife": "35 поздних мест, без караоке и клубов. Изакая-вечера, ранний трамвайный вайб."
+  }
+}

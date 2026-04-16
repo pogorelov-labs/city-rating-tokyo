@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old-money Nihonbashi, polished office luxury. Hyper-useful, expensive, dead-serious on weekdays.",
+    "landmarks": "Mitsukoshi flagship, Coredo Muromachi, Bank of Japan, Nihonbashi bridge within a short walk.",
+    "food": "1303 restaurants, 621 izakayas. Department-store dining, salaryman lunches, serious after-work food.",
+    "nightlife": "304 late spots, 50 bars. Dense after-work drinking, almost no club identity."
+  },
+  "ja": {
+    "atmosphere": "老舗の日本橋、磨かれたオフィス高級地。超便利、高い、平日は本気。",
+    "landmarks": "三越本店、コレド室町、日本銀行、日本橋まですぐ。",
+    "food": "飲食1303軒、居酒屋621軒。百貨店飯、サラリーマン昼食、仕事帰りの本気飯。",
+    "nightlife": "深夜304軒、バー50軒。仕事帰りの飲みは濃密、クラブ色はほぼない。"
+  },
+  "ru": {
+    "atmosphere": "Старые деньги Nihonbashi, отполированная офисная роскошь. Суперудобно, дорого, будни серьезные.",
+    "landmarks": "Флагман Mitsukoshi, Coredo Muromachi, Bank of Japan, мост Nihonbashi в паре минут.",
+    "food": "1303 ресторана, 621 изакая. Универмажная еда, офисные ланчи, мощная еда после работы.",
+    "nightlife": "304 поздних места, 50 баров. Плотная офисная выпивка, клубной идентичности почти нет."
+  }
+}

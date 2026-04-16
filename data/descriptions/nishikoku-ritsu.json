@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tachikawa spillover on the Nambu Line. Cheaper, looser, far from central Tokyo.",
+    "landmarks": "Tachikawa Park, Negawa greenway, Kunitachi side streets. Local western-Tokyo texture.",
+    "food": "256 restaurants, 134 izakayas, 10 bars. Surprisingly strong, mostly casual and local.",
+    "nightlife": "114 late spots, no clubs. Izakaya-heavy, Tachikawa energy nearby."
+  },
+  "ja": {
+    "atmosphere": "南武線の立川こぼれエリア。安めでゆるい、都心からはかなり遠い。",
+    "landmarks": "立川公園、根川緑道、国立側の住宅路地。西東京の生活感。",
+    "food": "飲食256軒、居酒屋134軒、バー10軒。意外に強い、基本は気軽な地元店。",
+    "nightlife": "深夜営業114軒、クラブなし。居酒屋濃いめ、立川の熱が近い。"
+  },
+  "ru": {
+    "atmosphere": "Перелив Tachikawa на линии Nambu. Дешевле, свободнее, далеко от центра.",
+    "landmarks": "Tachikawa Park, зелёная тропа Negawa, улицы в сторону Kunitachi. Быт западного Токио.",
+    "food": "256 ресторанов, 134 изакая, 10 баров. Неожиданно сильно, в основном просто и локально.",
+    "nightlife": "114 поздних мест, клубов нет. Много изакая, энергия Tachikawa рядом."
+  }
+}

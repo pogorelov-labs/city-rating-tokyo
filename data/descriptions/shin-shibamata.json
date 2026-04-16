@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quieter Shibamata edge on the Hokuso Line. Cheap, calm, thin on urban texture.",
+    "landmarks": "Shibamata Taishakuten nearby, Edo River levee, Kanamachi side trips. Low-key.",
+    "food": "23 restaurants, 9 izakayas. Basic local meals, tourist food is nearer old Shibamata.",
+    "nightlife": "5 late-night spots. Minimal. Last train just after midnight."
+  },
+  "ja": {
+    "atmosphere": "北総線側の静かな柴又端。安くて落ち着くが、街の厚みは薄い。",
+    "landmarks": "柴又帝釈天近く、江戸川土手、金町方面の寄り道。控えめ。",
+    "food": "飲食23軒、居酒屋9軒。地元の基本飯。観光飯は旧柴又側が近い。",
+    "nightlife": "深夜営業5軒。ほぼ最小限。終電は午前0時すぐ。"
+  },
+  "ru": {
+    "atmosphere": "Тихий край Сибаматы на Hokuso Line. Дёшево, спокойно, городской ткани мало.",
+    "landmarks": "Рядом Shibamata Taishakuten, дамба Edo River, выезды к Kanamachi. Низкий профиль.",
+    "food": "23 ресторана, 9 изакая. Базовая локальная еда; туристическая ближе к старой Сибамате.",
+    "nightlife": "5 поздних мест. Минимально. Последний поезд сразу после полуночи."
+  }
+}

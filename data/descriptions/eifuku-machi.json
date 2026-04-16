@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suginami Inokashira stop, green and safe, more residential than cool. Good access west-east.",
+    "landmarks": "Eifukucho shotengai, Zenpukuji River green belt, quiet Suginami lanes.",
+    "food": "29 restaurants, 6 izakayas, 1 cafe. Basics only, eat elsewhere for range.",
+    "nightlife": "12 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "杉並の井の頭線駅、緑があり安全、クールというより住宅地。東西の動きは良い。",
+    "landmarks": "永福町商店街、善福寺川の緑地帯、静かな杉並の路地。",
+    "food": "飲食29軒、居酒屋6軒、カフェ1軒。基本だけ、幅を求めるなら外へ。",
+    "nightlife": "深夜営業12軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Станция Inokashira в Suginami, зелено и безопасно, больше жильё чем cool. Удобно восток-запад.",
+    "landmarks": "Eifukucho shotengai, зелёный пояс Zenpukuji River, тихие переулки Suginami.",
+    "food": "29 ресторанов, 6 изакая, 1 кафе. Только база, за диапазоном ехать.",
+    "nightlife": "12 поздних мест, без караоке и клубов. Минимально."
+  }
+}

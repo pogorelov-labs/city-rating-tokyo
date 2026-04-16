@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama suburban station on Musashino Line, 34,000 daily passengers. Residential, quiet, decent food/nightlife for commuters.",
+    "landmarks": "Musashino Line to Shinjuku (43 min). Small parks, local shopping streets. Standard suburb.",
+    "food": "12 restaurants + 10 spots. 6 izakayas, local chains. Mid-tier quality.",
+    "nightlife": "5 midnight bars, karaoke absent. Neighborhood pubs stay open late. Decent for quick drinks before last train."
+  },
+  "ja": {
+    "atmosphere": "武蔵野線沿線、34000人。住宅地、静かで飲食中程。通勤族向け。",
+    "landmarks": "武蔵野線で新宿43分。公園、買物街。標準郊外。",
+    "food": "飲食12軒、居酒屋6軒。中程の質。",
+    "nightlife": "夜間営業5軒。近所の飲み屋が遅くまで。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Сайтамы на Musashino Line, 34000 пассажиров. Жилые, тихие, еда/ночь приличные для коммютеров.",
+    "landmarks": "Musashino Line в Shinjuku (43 мин). Парки, локальные улицы.",
+    "food": "12 ресторанов, 10 мест. 6 изакай, сетевые цепи.",
+    "nightlife": "5 поздних баров. Районные пабы ночуют. Подходит для быстрых выпивок."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tama River edge, cheap, safe and very local. Quiet base, longish ride to the core.",
+    "landmarks": "Tama River paths, Komae backstreets, Odakyu river crossing views.",
+    "food": "57 restaurants, 26 izakayas, 2 cafes. Local basics, little destination energy.",
+    "nightlife": "22 late spots, no karaoke or clubs. Small izakaya night."
+  },
+  "ja": {
+    "atmosphere": "多摩川沿い、安く安全でかなり地元。静かな拠点、都心まではやや長い。",
+    "landmarks": "多摩川の道、狛江の裏道、小田急の川越えの景色。",
+    "food": "飲食57軒、居酒屋26軒、カフェ2軒。地元の基本、目的地感は薄い。",
+    "nightlife": "深夜営業22軒、カラオケもクラブもなし。小さな居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Край Tama River, дёшево, безопасно и очень локально. Тихая база, до центра ехать.",
+    "landmarks": "Тропы Tama River, закоулки Komae, виды Odakyu через реку.",
+    "food": "57 ресторанов, 26 изакая, 2 кафе. Локальная база, мало энергии назначения.",
+    "nightlife": "22 поздних места, без караоке и клубов. Малая изакая-ночь."
+  }
+}

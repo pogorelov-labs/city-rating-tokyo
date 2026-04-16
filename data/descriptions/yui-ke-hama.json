@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kamakura beach pocket, salty air and low traffic. Dreamy, but 75 min to Tokyo.",
+    "landmarks": "Yuigahama beach, Kamakura Seaside Park, Enoden tracks. Sea first, commute second.",
+    "food": "88 restaurants, 20 cafes, 14 izakayas. Beach lunches, tourist pricing, decent variety.",
+    "nightlife": "2 late spots, 9 hostels. Sunset drinks, then dead."
+  },
+  "ja": {
+    "atmosphere": "鎌倉の海ポケット。潮の匂い、車少なめ。夢はあるが東京まで75分。",
+    "landmarks": "由比ヶ浜、鎌倉海浜公園、江ノ電の線路。まず海、通勤は二の次。",
+    "food": "飲食88軒、カフェ20軒、居酒屋14軒。浜辺ランチ、観光地価格、種類はある。",
+    "nightlife": "深夜2軒、ホステル9。夕焼けの一杯、その後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Пляжный карман Камакуры, соленый воздух и мало трафика. Мечта, но 75 минут до Токио.",
+    "landmarks": "Пляж Yuigahama, Kamakura Seaside Park, пути Enoden. Сначала море, потом коммьют.",
+    "food": "88 ресторанов, 20 кафе, 14 изакая. Пляжные ланчи, туристические цены, выбор есть.",
+    "nightlife": "2 поздних места, 9 хостелов. Напитки на закате, потом пусто."
+  }
+}

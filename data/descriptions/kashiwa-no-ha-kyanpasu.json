@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned Tsukuba Express suburb, clean and campus-coded. Polished, slightly sterile.",
+    "landmarks": "LaLaport, Kashiwanoha Park, university labs and smart-city blocks.",
+    "food": "Mall dining, family spots, a few izakayas. Convenient, not deep.",
+    "nightlife": "Five late places, no karaoke or clubs. Campus suburb goes quiet."
+  },
+  "ja": {
+    "atmosphere": "つくばエクスプレスの計画郊外。清潔でキャンパス感、少し無菌質。",
+    "landmarks": "ららぽーと、柏の葉公園、大学研究施設とスマートシティ街区。",
+    "food": "モール飯、ファミリー店、居酒屋少し。便利だが深さはない。",
+    "nightlife": "遅い店5軒、カラオケとクラブなし。キャンパス郊外は夜静か。"
+  },
+  "ru": {
+    "atmosphere": "Плановый пригород Tsukuba Express, чисто и кампусно. Отполировано, чуть стерильно.",
+    "landmarks": "LaLaport, Kashiwanoha Park, университетские лаборатории и smart-city кварталы.",
+    "food": "Еда в молле, семейные места, немного изакай. Удобно, но неглубоко.",
+    "nightlife": "Пять поздних мест, без караоке и клубов. Кампусный пригород затихает."
+  }
+}

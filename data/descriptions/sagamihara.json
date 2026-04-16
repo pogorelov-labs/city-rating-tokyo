@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Kanagawa suburb with wide roads and depot-side emptiness. Cheap, useful, not romantic.",
+    "landmarks": "JR Yokohama Line, civic-office belt, Sagami depot fences nearby. Car-scale streets.",
+    "food": "73 restaurants, 35 izakayas, few cafes. Solid local dinners, heavy on chains and drinking rooms.",
+    "nightlife": "40 late spots, one karaoke. Local salaryman nightlife, not a destination."
+  },
+  "ja": {
+    "atmosphere": "広い道路と基地脇の空白がある神奈川郊外。安くて実用的、ロマンは薄い。",
+    "landmarks": "JR横浜線、市役所寄りの街並み、相模総合補給廠のフェンス。車サイズの街。",
+    "food": "飲食73軒、居酒屋35軒、カフェ少なめ。地元飯は堅い、チェーンと飲み屋多め。",
+    "nightlife": "深夜40軒、カラオケ1軒。地元サラリーマン向け、目的地ではない。"
+  },
+  "ru": {
+    "atmosphere": "Большой пригород Канагава: широкие дороги, пустоты у военного депо. Дёшево, практично.",
+    "landmarks": "JR Yokohama Line, район городских офисов, заборы Sagami Depot. Масштаб для машин.",
+    "food": "73 ресторана, 35 изакая, кафе мало. Нормальные локальные ужины, много сетей и пивных.",
+    "nightlife": "40 поздних мест, одно караоке. Ночь для местных офисных, не поездка ради неё."
+  }
+}

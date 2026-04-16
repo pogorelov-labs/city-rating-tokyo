@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Wholesale backstreets and hotel conversions. Central, connected, oddly quiet after shutters.",
+    "landmarks": "Textile wholesalers, Higashi-Nihonbashi, Asakusabashi craft streets, Hamacho Park nearby.",
+    "food": "806 restaurants; izakaya and lunch counters for traders, better toward Nihonbashi.",
+    "nightlife": "214 late spots, 36 bars. Hotel-and-izakaya night, not a club strip."
+  },
+  "ja": {
+    "atmosphere": "問屋街の裏通りとホテル化した街。都心で便利、店じまい後は妙に静か。",
+    "landmarks": "繊維問屋、東日本橋、浅草橋の職人街、浜町公園が近い。",
+    "food": "飲食806軒。問屋向けの昼飯と居酒屋、日本橋寄りほど選択肢増える。",
+    "nightlife": "深夜214軒、バー36軒。ホテルと居酒屋の夜、クラブ通りではない。"
+  },
+  "ru": {
+    "atmosphere": "Оптовые задние улицы и переделанные отели. Центр, пересадки, странная тишина после ставней.",
+    "landmarks": "Текстильные оптовики, Higashi-Nihonbashi, ремесленный Asakusabashi, рядом Hamacho Park.",
+    "food": "806 ресторанов; изакаи и обеденные стойки для торговцев, лучше в сторону Nihonbashi.",
+    "nightlife": "214 поздних мест, 36 баров. Ночь отелей и изакая, не клубная полоса."
+  }
+}

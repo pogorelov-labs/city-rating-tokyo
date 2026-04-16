@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep exurb farming town, 86 min ride, early closure (00:22). Cheap rent, total car dependency, zero walkability.",
+    "landmarks": "Agricultural fields, sparse infrastructure. Pure commuter wasteland if you work away.",
+    "food": "Only 7 restaurants. Minimal local dining; chain-reliant.",
+    "nightlife": "Virtually none (3 spots). Farmland silence. This is pure bedroom sprawl."
+  },
+  "ja": {
+    "atmosphere": "深い郊外農業町、通勤86分、早期終了（00:22）。安い家賃、完全自動車依存、歩きやすさゼロ。",
+    "landmarks": "農業地、疎なインフラ。仕事場が別なら純粋な通勤無駄地。",
+    "food": "食堂たった7軒、7件。地元食は最小、チェーン依存。",
+    "nightlife": "ほぼゼロ（3軒）。田舎の静寂。純粋なベッドタウンスプロール。"
+  },
+  "ru": {
+    "atmosphere": "Глубокий экзурб фермерский городок, 86 минут езды, раннее закрытие (00:22). Дешевая аренда, полная автомобильная зависимость, нулевая пешеходность.",
+    "landmarks": "Сельскохозяйственные поля, скудная инфраструктура. Чистая пустыня для коммутеров, если работа в другом месте.",
+    "food": "Всего 7 ресторанов, 7 (). Местная еда минимальна, цепь-зависимость.",
+    "nightlife": "Практически ничего (3 места). Фермерская тишина. Чистое спальное расползание."
+  }
+}

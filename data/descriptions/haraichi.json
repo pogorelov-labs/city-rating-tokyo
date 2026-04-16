@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "New Shuttle suburb, green and cheap. The trade-off is a long ride into Tokyo.",
+    "landmarks": "Ageo fringe, small parks, fields, quiet lanes. Not a sightseeing stop.",
+    "food": "4 restaurants, 1 izakaya, 1 cafe. Daily basics only, bring expectations down.",
+    "nightlife": "Minimal. One late spot, last train around midnight."
+  },
+  "ja": {
+    "atmosphere": "ニューシャトル沿いの郊外。緑多く家賃安い、都心までは長い。",
+    "landmarks": "上尾の外縁、小公園と畑、静かな生活道路。観光地ではない。",
+    "food": "飲食4軒、居酒屋1軒、カフェ1軒。日常の最低限、期待値は低め。",
+    "nightlife": "ほぼ皆無。深夜営業1軒、終電は日付前後。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на New Shuttle, зелено и дешево. Расплата - долгая дорога в Токио.",
+    "landmarks": "Край Агео, мелкие парки, поля, тихие улочки. Не место для прогулочного вау.",
+    "food": "4 ресторана, 1 изакая, 1 кафе. Только бытовой минимум, ожидания лучше снизить.",
+    "nightlife": "Минимум. Одно позднее место, последний поезд около полуночи."
+  }
+}

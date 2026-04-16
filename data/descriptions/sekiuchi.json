@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kannai core: civic Yokohama, baseball crowds, bar streets. Great fun, safety data is thin.",
+    "landmarks": "Yokohama Stadium, Bashamichi, Isezakicho, waterfront parks close by.",
+    "food": "1000 restaurants, 355 izakayas, 91 bars. Huge Yokohama range, from salaryman to splurge.",
+    "nightlife": "409 late spots, karaoke and bars dense. Real nightlife, not sleepy."
+  },
+  "ja": {
+    "atmosphere": "関内中心部、横浜の行政、野球客、飲み屋街。かなり楽しいが、安全データは薄め。",
+    "landmarks": "横浜スタジアム、馬車道、伊勢佐木町、近い湾岸公園。",
+    "food": "飲食1000軒、居酒屋355軒、バー91軒。横浜の幅が巨大、会社員飯から散財まで。",
+    "nightlife": "深夜営業409軒、カラオケとバーが密集。本物の夜、眠くない。"
+  },
+  "ru": {
+    "atmosphere": "Центр Kannai: гражданская Йокогама, бейсбольные толпы, барные улицы. Весело, safety data тонкая.",
+    "landmarks": "Yokohama Stadium, Bashamichi, Isezakicho, парки у воды рядом.",
+    "food": "1000 ресторанов, 355 изакая, 91 бар. Огромный диапазон Йокогамы, от salaryman до splurge.",
+    "nightlife": "409 поздних мест, караоке и бары плотные. Настоящая ночь, не сонно."
+  }
+}

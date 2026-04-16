@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Leafy Den-en-toshi suburb, high and calm. Cheap-ish, safe, but far from center.",
+    "landmarks": "Quiet residential slopes, pocket parks, local clinics. No spectacle, just stable suburbia.",
+    "food": "11 restaurants, 4 izakayas, 1 cafe. Enough for locals, thin for anyone picky.",
+    "nightlife": "1 late spot, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "田園都市線の緑多い住宅地。高台で静か、安めで安全、ただ都心は遠い。",
+    "landmarks": "静かな住宅坂、小公園、地元クリニック。派手さゼロ、安定した郊外。",
+    "food": "飲食11件、居酒屋4件、カフェ1件。地元なら足りる、こだわる人には薄い。",
+    "nightlife": "深夜1件、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Зелёный пригород Den-en-toshi, высоко и тихо. Недорого, безопасно, но центр далеко.",
+    "landmarks": "Спокойные жилые склоны, маленькие парки, локальные клиники. Без зрелищ, чистая стабильность.",
+    "food": "11 ресторанов, 4 изакая, 1 кафе. Местным хватит, привередливым будет тонко.",
+    "nightlife": "1 позднее место, без караоке и клубов. Практически нет."
+  }
+}
