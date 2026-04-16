@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama's signature skyline hub. Modern, polished, hotel-district vibe. Waterfront regeneration — expensive but beautiful. Low crime stats unreliable (less surveilled).",
+    "landmarks": "Red Brick Warehouse, Cosmo Tower, Ferris wheel. Bay promenade, 177 pedestrian streets. All manicured.",
+    "food": "248 listings, 74 izakaya. Upmarket dining, tourist-friendly. Quality consistent.",
+    "nightlife": "28 late-night spots. Cluster bars. High-end izakayas. Feels safe after dark."
+  },
+  "ja": {
+    "atmosphere": "横浜のシンボル。モダン、磨かれた、ホテル地区。ウォーターフロント再生 — 高いが綺麗。",
+    "landmarks": "赤レンガ倉庫、コスモタワー、観覧車。湾岸遊歩道、歩行者天国177。整備済み。",
+    "food": "飲食店248軒、居酒屋74軒、133件。上質、観光向け。質は安定。",
+    "nightlife": "ランドリー28軒。クラスター居酒屋。高級感。夜は安心。"
+  },
+  "ru": {
+    "atmosphere": "Символ Йокохамы. Современно, отполировано, гостиничный район. Регенерация набережной — дорого, но красиво.",
+    "landmarks": "Red Brick Warehouse, башня Cosmo, колесо обозрения. 177 пешеходных зон.",
+    "food": "248 listings, 74 изакаи, 133. Изысканно, туристично. Качество стабильно.",
+    "nightlife": "28 ночных мест. Кластер баров. Высокий класс. Безопасно ночью."
+  }
+}

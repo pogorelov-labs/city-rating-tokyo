@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odaiba futuristic island station on Yurikamome. 29 min to Shinjuku. Art+tech vibe, pedestrian malls (41 streets).",
+    "landmarks": "Telecommunications Center building. Tokyo waterfront. Palette Town mall. Digital signage everywhere.",
+    "food": "12 listings, 2 izakaya, 9 —boutique food scene. Quality higher than quantity.",
+    "nightlife": "1 midnight venue. Mostly izakaya culture fades by 10pm. Low crime (96 per 10k, safest per capita)."
+  },
+  "ja": {
+    "atmosphere": "お台場・テレコムセンター。ゆりかもめ。未来的な都市島。中心まで29分。アート×テック。",
+    "landmarks": "通信タワービル。東京湾岸。パレットタウン。デジタル看板多数。",
+    "food": "listings 12軒、居酒屋2軒、9。質重視。",
+    "nightlife": "深夜営業1軒。居酒屋文化は22時までが主。犯罪少ないエリア。"
+  },
+  "ru": {
+    "atmosphere": "Остров Odaiba, станция Yurikamome. 29 мин в Shinjuku. Арт+технологии, пешеходные аркады (41 улица).",
+    "landmarks": "Здание Telecom Center. Токийский водный фронт. Palette Town. Цифровые вывески везде.",
+    "food": "12 listings, 2 изакая, 9 —буквальная пищевая сцена. Качество > количество.",
+    "nightlife": "1 полуночное. Изакая культура исчезает к 22:00. Низкая преступность (96 на 10k)."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi local stop, affordable and busy enough. Soft-ground east-side trade-off.",
+    "landmarks": "Belmont Park, Arakawa flatlands, Nishiarai one stop away. Everyday suburbia.",
+    "food": "60 restaurants, 28 izakayas. Practical local meals, almost no bar culture.",
+    "nightlife": "24 late-night spots, no karaoke. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "足立のローカル駅。安めで、ほどよく人もいる。東側の軟弱地盤が交換条件。",
+    "landmarks": "ベルモント公園、荒川低地、西新井は一駅。日常型の郊外。",
+    "food": "飲食60軒、居酒屋28軒。実用的な地元飯、バー文化はほぼなし。",
+    "nightlife": "深夜営業24軒、カラオケなし。夕食後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Локальная станция Адачи, доступно и достаточно оживлённо. Компромисс — мягкий восточный грунт.",
+    "landmarks": "Belmont Park, равнины Аракавы, Nishiarai в одной остановке. Повседневный пригород.",
+    "food": "60 ресторанов, 28 изакая. Практичная локальная еда, барной культуры почти нет.",
+    "nightlife": "24 поздних места, караоке нет. После ужина тихо."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Kita-ku residential shelf, gardens over nightlife. Cheap-ish, green, slow.",
+    "landmarks": "Kyu-Furukawa Gardens, Hiratsuka Shrine, Asukayama Park nearby. Better by daylight.",
+    "food": "40 restaurants, 9 izakayas; soba, set meals, small counters. Not a dining crawl.",
+    "nightlife": "12 late spots, 1 bar, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "北区の静かな住宅棚。夜遊びより庭園。安め、緑多め、遅い街。",
+    "landmarks": "旧古河庭園、平塚神社、飛鳥山公園が近い。昼のほうが強い。",
+    "food": "飲食40軒、居酒屋9軒。そば、定食、小さなカウンター。食べ歩きの街ではない。",
+    "nightlife": "深夜12軒、バー1軒、カラオケもクラブもなし。最小限。"
+  },
+  "ru": {
+    "atmosphere": "Тихая жилая полка Кита-ку, сады важнее ночи. Дешевле, зелено, медленно.",
+    "landmarks": "Kyu-Furukawa Gardens, Hiratsuka Shrine, рядом Asukayama Park. Лучше днем.",
+    "food": "40 ресторанов, 9 изакая; соба, тэйсёку, малые стойки. Не район для гастро-прогулки.",
+    "nightlife": "12 поздних мест, 1 бар, без караоке и клубов. Минимум."
+  }
+}

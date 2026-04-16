@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban commuter town, Kanagawa. Quiet, bland development. 65 min from center.",
+    "landmarks": "Sotetsu Line junction. Green area 496k sqm (largest park). Walking trails, nothing else.",
+    "food": "16 restaurants, sparse quality. lists 40 but most are convenience stores.",
+    "nightlife": "Minimal. 7 midnight spots, zero karaoke. Families sleep by 10pm."
+  },
+  "ja": {
+    "atmosphere": "神奈川郊外。静かで地味。中心から65分。",
+    "landmarks": "相鉄線。大公園49.6万㎡。散歩道のみ。",
+    "food": "16軒、質悪い。遅い店7。",
+    "nightlife": "ほぼ無し。夜間営業7軒だが、カラオケなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный город Канагава. Спокойно, безлично. 65 мин от центра.",
+    "landmarks": "Хаб Сотэцу. Парк 496k кв.м (крупнейший). Пешеходные маршруты.",
+    "food": "16 ресторанов разреженно. списывает 40, но вмести их магазины.",
+    "nightlife": "Минимум. 7 ночных мест, нет караоке. Семьи спят к 22:00."
+  }
+}

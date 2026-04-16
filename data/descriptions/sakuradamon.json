@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Imperial moat and ministries, formal to the bone. Beautiful, central, almost no home life.",
+    "landmarks": "Sakuradamon Gate, Imperial Palace moat, police HQ, Kasumigaseki ministries. Power geography.",
+    "food": "260 restaurants, 126 izakayas nearby. Strong weekday lunch and office drinks, weak grocery life.",
+    "nightlife": "55 late spots, no karaoke. Political-office drinking, not neighborhood nightlife."
+  },
+  "ja": {
+    "atmosphere": "皇居の堀と官庁街、徹底してフォーマル。美しく中心的だが生活感はほぼない。",
+    "landmarks": "桜田門、皇居外堀、警視庁、霞が関の省庁。権力の地理そのもの。",
+    "food": "周辺に飲食260軒、居酒屋126軒。平日ランチと官庁飲みは強い、買い物生活は弱い。",
+    "nightlife": "深夜55軒、カラオケなし。官庁・政治系の飲み、近所の夜ではない。"
+  },
+  "ru": {
+    "atmosphere": "Ров Императорского дворца и министерства, формальность до костей. Красиво, центрально, почти без быта.",
+    "landmarks": "Ворота Sakuradamon, дворцовый ров, штаб полиции, министерства Kasumigaseki. География власти.",
+    "food": "260 ресторанов рядом, 126 изакая. Сильные будничные обеды и офисные напитки, слабая продуктовая жизнь.",
+    "nightlife": "55 поздних мест, караоке нет. Чиновничья выпивка, не соседская ночь."
+  }
+}

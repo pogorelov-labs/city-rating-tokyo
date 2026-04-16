@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Manatsuru is a clifftop coastal town on Tokaido Line. Mountain elevation (61m), ocean views, quiet charm. 2 hours from Tokyo.",
+    "landmarks": "Seaside hamlet with fishing heritage. One huge park (39M sqm landuse). Minimal infrastructure otherwise.",
+    "food": "7 restaurants. Seafood-focused, sparse but decent. 1 cafe.",
+    "nightlife": "Minimal. Resort town closes early. Breakfast people, not bar people."
+  },
+  "ja": {
+    "atmosphere": "真鶴は東海道線の海沿い町。高さ61m、景観良。おだやか、遠い。",
+    "landmarks": "漁村スケール。39万平米の巨大公園。後は何もない。",
+    "food": "7件、8件。海の幸中心。選択肢少ないが質良。カフェ1。",
+    "nightlife": "ほぼなし。リゾート気分で早寝。朝型。"
+  },
+  "ru": {
+    "atmosphere": "Манацуру — прибрежный город на склоне (61м) линии Токайдо. Вид на море, спокойствие. Далеко от Центра.",
+    "landmarks": "Рыбацкая деревня. Парк огромный (39М кв.м). Больше ничего.",
+    "food": "7 мест, 8. Морепродукты. Редко, но хорошо. Кафе 1.",
+    "nightlife": "Практически нет. Курортный быт, рано спят."
+  }
+}

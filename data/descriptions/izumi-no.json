@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sotetsu Izumino line terminus in Yokohama, 69 min south. Planned suburban residential, mall-adjacent, quiet mornings, empty nights.",
+    "landmarks": "Station mall, scattered parks, family-friendly but forgettable. Zero nightlife draws.",
+    "food": "3 restaurants, light cafes. Suburban chain restaurants, safe choices. Limited character.",
+    "nightlife": "Minimal. 5 late-night spots, 0 karaoke. Families and retirees, not drinkers. Terminal station means dead ends."
+  },
+  "ja": {
+    "atmosphere": "相鉄いずみの線の終点、横浜泉区。69分。計画的郊外、モール隣接、朝は静か、夜は空き。",
+    "landmarks": "駅ビル、散在する公園。家族向け、地味。夜ランドマークなし。",
+    "food": "飲食店3軒、9点、軽いカフェ。郊外チェーン店、安全。個性なし。",
+    "nightlife": "最小限。夜営業5軒、カラオケなし。ファミリーと老人。終点駅は袋小路。"
+  },
+  "ru": {
+    "atmosphere": "Терминальная станция линии Sotetsu Izumino в Yokohama, 69 мин на юг. Планомерные пригороды, мол-соседство, тихие утра, пустые ночи.",
+    "landmarks": "Торговый центр станции, разреженные парки. Семейные, скучные. Ночных тяг нет.",
+    "food": "3 ресторана, 9 точек, лёгкие кафе. Цепочки, безопасные выборы. Без характера.",
+    "nightlife": "Минимум. 5 поздних мест, 0 караоке. Семьи и пенсионеры. Терминальная станция = тупик."
+  }
+}

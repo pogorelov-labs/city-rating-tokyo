@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Port-town Yokosuka energy, navy-adjacent and a bit rough. Cheap, scenic, far from Tokyo.",
+    "landmarks": "Verny Park, Coaska Bayside Stores, Dobuita Street nearby. Ships in view, hills behind.",
+    "food": "149 spots, 64 izakayas, 28 bars. Yokosuka curry, burgers, drinking streets, uneven quality.",
+    "nightlife": "64 late spots and plenty of bars. More port-town drinking than polished clubs."
+  },
+  "ja": {
+    "atmosphere": "港町横須賀の空気、基地近くで少し荒い。安い、景色あり、東京は遠い。",
+    "landmarks": "ヴェルニー公園、コースカ、どぶ板通り近く。艦船が見えて背後は丘。",
+    "food": "149軒、居酒屋64、バー28。横須賀カレー、バーガー、飲み屋街。質は揺れる。",
+    "nightlife": "深夜64軒、バー多め。洒落たクラブより港町の飲み。"
+  },
+  "ru": {
+    "atmosphere": "Портовая Йокосука, рядом флот и лёгкая грубость. Дёшево, красиво, до Токио далеко.",
+    "landmarks": "Verny Park, Coaska Bayside Stores, рядом Dobuita Street. Корабли спереди, холмы сзади.",
+    "food": "149 мест, 64 изакая, 28 баров. Карри Йокосуки, бургеры, питейные улицы, качество скачет.",
+    "nightlife": "64 поздних места и много баров. Портовые выпивки, не глянцевые клубы."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Vintage, punk, cheap beer, Chuo-line chaos. Fun, loud, petty-crime gritty.",
+    "landmarks": "Pal and Look shotengai, Awa Odori streets, tiny live houses. Anti-gloss Tokyo.",
+    "food": "217 spots, 86 izakayas, 32 bars. Ramen, curry, yakitori, weird basement gems.",
+    "nightlife": "122 late spots. Bars and live houses run deep; clubs are not the point."
+  },
+  "ja": {
+    "atmosphere": "古着、パンク、安酒、中央線の混沌。楽しいが騒がしく、治安の荒さもある。",
+    "landmarks": "パル商店街、ルック商店街、阿波おどりの通り、小さなライブハウス群。",
+    "food": "飲食217軒、居酒屋86軒、バー32軒。ラーメン、カレー、焼鳥、地下の変な名店。",
+    "nightlife": "深夜営業122軒。バーとライブハウスが粘る、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Винтаж, панк, дешёвое пиво, хаос Chuo Line. Весело, шумно, местами мутно.",
+    "landmarks": "Pal и Look shotengai, улицы Awa Odori, крошечные лайвхаусы. Токио без глянца.",
+    "food": "217 мест, 86 изакая, 32 бара. Рамен, карри, якитори, странные подвальные находки.",
+    "nightlife": "122 поздних точки. Бары и лайвхаусы тянут ночь; клубы тут не главное."
+  }
+}

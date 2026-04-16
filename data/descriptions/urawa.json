@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama’s serious old capital, civic and polished. Great trains, high crowd pressure.",
+    "landmarks": "Urawa Station malls, prefectural offices, cultural halls. Red Diamonds mood nearby.",
+    "food": "187 restaurants, 80 izakayas, office and family dining. Reliable, not wild.",
+    "nightlife": "55 late spots, one karaoke, no clubs. Izakaya-heavy, station-focused."
+  },
+  "ja": {
+    "atmosphere": "埼玉の旧都心、きちんとした行政と文教の街。鉄道強いが人圧も強い。",
+    "landmarks": "浦和駅の商業施設、県庁系エリア、文化ホール。レッズ気配も近い。",
+    "food": "飲食187件、居酒屋80件。会社員と家族向けの食事が強い、派手ではない。",
+    "nightlife": "深夜55件、カラオケ1件、クラブなし。駅前居酒屋中心。"
+  },
+  "ru": {
+    "atmosphere": "Старая столица Сайтамы, деловая и прилизанная. Поезда отличные, людей много.",
+    "landmarks": "Моллы Urawa Station, префектурные офисы, культурные залы. Рядом дух Red Diamonds.",
+    "food": "187 ресторанов, 80 изакая, офисная и семейная еда. Надёжно, не дико.",
+    "nightlife": "55 поздних мест, одно караоке, клубов нет. Изакая вокруг станции."
+  }
+}

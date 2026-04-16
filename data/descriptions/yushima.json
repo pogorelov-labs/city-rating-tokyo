@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ueno fringe with temple calm and nightlife grit. Food is huge, safety feel is uneven.",
+    "landmarks": "Yushima Tenjin, Ueno Park edge, Ameyoko nearby. Old scholarship meets bar streets.",
+    "food": "991 restaurants, 426 izakayas, 76 bars. Massive range, gems and tourist traps mixed.",
+    "nightlife": "384 late spots, 34 clubs, karaoke dense. Loud after dark."
+  },
+  "ja": {
+    "atmosphere": "上野の縁、寺社の静けさと夜のザラつきが同居。飯は巨大、安全感はムラあり。",
+    "landmarks": "湯島天神、上野公園の端、近いアメ横。学問の古さと飲み屋街が交差。",
+    "food": "飲食991軒、居酒屋426軒、バー76軒。幅は巨大、名店と観光罠が混ざる。",
+    "nightlife": "深夜営業384軒、クラブ34軒、カラオケ密集。夜はかなり騒がしい。"
+  },
+  "ru": {
+    "atmosphere": "Край Ueno с храмовым спокойствием и ночной шершавостью. Еды море, safety неровный.",
+    "landmarks": "Yushima Tenjin, край Ueno Park, Ameyoko рядом. Старая учёность встречает бары.",
+    "food": "991 ресторан, 426 изакая, 76 баров. Масштаб огромный, находки и ловушки вместе.",
+    "nightlife": "384 поздних места, 34 клуба, плотное караоке. Ночью громко."
+  }
+}

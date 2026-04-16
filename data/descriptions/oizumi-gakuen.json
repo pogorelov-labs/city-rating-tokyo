@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima family suburb with anime fingerprints. Green, clinic-rich, busy but not central.",
+    "landmarks": "Toei Animation Museum, Yumeria, long shopping streets, Oizumi parks. Kids everywhere.",
+    "food": "67 restaurants, 33 izakayas, few cafes. Solid local food, not fashionable.",
+    "nightlife": "26 late spots, one karaoke, no clubs. Salaryman izakaya, early fade."
+  },
+  "ja": {
+    "atmosphere": "アニメの匂いが残る練馬の家族郊外。緑と医療は強い、中心感は薄い。",
+    "landmarks": "東映アニメーションミュージアム、ゆめりあ、長い商店街、大泉の公園。子供多め。",
+    "food": "飲食67件、居酒屋33件、カフェ少なめ。地元飯は安定、流行感なし。",
+    "nightlife": "深夜26件、カラオケ1件、クラブなし。会社員の居酒屋、早めに沈む。"
+  },
+  "ru": {
+    "atmosphere": "Семейный пригород Нэримы с аниме-следом. Зелено, клиник много, но центра нет.",
+    "landmarks": "Toei Animation Museum, Yumeria, длинные торговые улицы, парки Оидзуми. Детей много.",
+    "food": "67 ресторанов, 33 изакая, кафе мало. Локальная еда стабильна, моды нет.",
+    "nightlife": "26 поздних мест, одно караоке, без клубов. Изакая для офисных, рано стихает."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural rail junction in Saitama foothills, 85 minutes commute. Hiking gateway to 50+ sqm green oasis.",
+    "landmarks": "Twin rails (Hachiko + Tobu Ogose lines). Paper-mill heritage town. Seismic low risk.",
+    "food": "Zero restaurants. Eight food markers only — plan accordingly.",
+    "nightlife": "Minimal mountain night life. Nature over nightlife."
+  },
+  "ja": {
+    "atmosphere": "埼玉山麓の田舎駅。通勤85分。5万ヘクタールの緑に囲まれたハイキング入口。",
+    "landmarks": "八高線と東武越生線の二路線。製紙産業の歴史。",
+    "food": "飲食店ゼロ。マーカー8個のみ。弁当持参推奨。",
+    "nightlife": "山里の夜。自然のみ。"
+  },
+  "ru": {
+    "atmosphere": "Сельский узел в предгорьях Сайтамы, 85 минут. Шлюз к 50+ кв км зелени.",
+    "landmarks": "Две линии (Хатико и Тобу Огосе). Бумажная история. Низкий сейсм. риск.",
+    "food": "Ресторанов нет. 8 маркеров только. Берите бенто.",
+    "nightlife": "Горная ночь пуста. Природа всё."
+  }
+}

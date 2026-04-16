@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple-and-office pocket between Takanawa and Shinagawa. Airport access, high rent, calm streets.",
+    "landmarks": "Sengaku-ji temple, 47 ronin graves, Takanawa Gateway nearby.",
+    "food": "137 restaurants, 56 izakayas, 5 bars. Business lunches, tidy dinners, few surprises.",
+    "nightlife": "33 late spots, 1 club, no karaoke. Quiet adult drinking."
+  },
+  "ja": {
+    "atmosphere": "高輪と品川の間、寺とオフィスの小さな街。空港アクセス良い、家賃高い、通りは静か。",
+    "landmarks": "泉岳寺、赤穂浪士の墓、高輪ゲートウェイも近い。",
+    "food": "飲食137軒、居酒屋56軒、バー5軒。ビジネス昼食と整った夕食、驚きは少ない。",
+    "nightlife": "深夜33軒、クラブ1軒、カラオケなし。静かな大人飲み。"
+  },
+  "ru": {
+    "atmosphere": "Карман храмов и офисов между Таканавой и Синагавой. Аэропорт удобно, аренда высокая, улицы спокойные.",
+    "landmarks": "Храм Sengaku-ji, могилы 47 ронинов, Takanawa Gateway рядом.",
+    "food": "137 ресторанов, 56 изакая, 5 баров. Бизнес-ланчи, аккуратные ужины, мало сюрпризов.",
+    "nightlife": "33 поздних места, 1 клуб, караоке нет. Тихая взрослая выпивка."
+  }
+}

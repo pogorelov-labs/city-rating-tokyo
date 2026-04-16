@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Residential Tojo Line stop in Itabashi. Quiet daytime, lively izakaya cluster after work.",
+    "landmarks": "Tobu shopping mall, local parks, nothing touristy.",
+    "food": "62 listings entries, mostly izakaya (24 spots). Casual chains, neighborhood joints. Safe bet.",
+    "nightlife": "19 midnight spots. Dive bars, not clubs. 11pm onwards dies fast."
+  },
+  "ja": {
+    "atmosphere": "Tojo Line沿い住宅地。昼は落ち着き、夜は居酒屋で賑わう。",
+    "landmarks": "東武ショッピング、近所の公園。派手さなし。",
+    "food": "居酒屋24軒、チェーン中心。気軽で安定。",
+    "nightlife": "深夜営業19軒。バーが中心。11時以降は静か。"
+  },
+  "ru": {
+    "atmosphere": "Жилой район вдоль Tojo Line. День спокойный, вечер — оживление в барах.",
+    "landmarks": "Торговый центр Tōbu, соседские парки. Без туристического шика.",
+    "food": "62 заведения, 24 изакаи. Цепочки, местные пивные. Надёжно.",
+    "nightlife": "19 ночных мест. Ноль клубов. После 23:00 спит."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep Saitama town, Kawagoe line local. Tiny station (5k daily), rice fields visible. Ultra-quiet, cheapest rent (109k). 66 min to Tokyo, slow train.",
+    "landmarks": "Rice paddies, small shrines. Kawagoe historic town 10 min away but separate vibe. Pure countryside.",
+    "food": "Minimal. 3 listings, 1 izakaya, 6 food venues. Bring your own groceries. No nightlife data.",
+    "nightlife": "None. Last train 23:50. Darkness at 10pm."
+  },
+  "ja": {
+    "atmosphere": "埼玉の奥地、川越線ローカル。小駅（5千人/日）、田んぼが見える。超静か、激安家賃（109k）。都心66分、遅い電車。",
+    "landmarks": "田んぼ、小社。川越の古い町は10分先だが別世界。純粋な農村。",
+    "food": "ほぼなし。ホットペッパー3軒、居酒屋1軒、6軒。自炊推奨。ナイトライフデータなし。",
+    "nightlife": "皆無。末電23:50。21時で暗闇。"
+  },
+  "ru": {
+    "atmosphere": "Глубина Сайтамы, локальная линия Кавагоэ. Крошечная станция (5k/день), видны рисовые поля. Предельно тихо, дешевейшая аренда (109k). 66 мин до центра, медленный поезд.",
+    "landmarks": "Рисовые поля, малые святилища. Историческая деревня Кавагоэ в 10 мин, но другой мир. Чистая деревня.",
+    "food": "Минимум. 3 listings, 1 изакая, 6. Везите продукты сами. Данных о ночной жизни нет.",
+    "nightlife": "Нет. Последний поезд 23:50. Темнота с 21:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shibuya address with backstreet grit. Fast to Shinjuku, pricier than it feels.",
+    "landmarks": "Rokugo-dori shotengai, Opera City nearby, Koshu Kaido traffic. Useful, slightly worn.",
+    "food": "133 restaurants, 50 izakayas, 6 bars. Solid local eating, late ramen, modest cafes.",
+    "nightlife": "49 late spots, one tiny club, no karaoke. Drinks stay neighborhood-scale."
+  },
+  "ja": {
+    "atmosphere": "渋谷区アドレスだが裏道は少しザラつく。新宿近い、体感より家賃は高い。",
+    "landmarks": "六号通り商店街、近いオペラシティ、甲州街道の交通。便利で少し古い。",
+    "food": "飲食133軒、居酒屋50軒、バー6軒。地元飯は強い、深夜ラーメン、カフェ控えめ。",
+    "nightlife": "深夜営業49軒、小さなクラブ1軒、カラオケなし。飲みは近所サイズ。"
+  },
+  "ru": {
+    "atmosphere": "Адрес Shibuya, но закоулки шершавые. Быстро до Shinjuku, дороже чем ощущается.",
+    "landmarks": "Rokugo-dori shotengai, рядом Opera City, трафик Koshu Kaido. Удобно, слегка потёрто.",
+    "food": "133 ресторана, 50 изакая, 6 баров. Крепкая локальная еда, поздний рамен, скромные кафе.",
+    "nightlife": "49 поздних мест, один крошечный клуб, без караоке. Выпивка районного масштаба."
+  }
+}

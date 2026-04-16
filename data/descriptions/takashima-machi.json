@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama backdoor with Minatomirai spillover. Quiet station, big food gravity nearby.",
+    "landmarks": "Minatomirai edge, old dockside streets, Yokohama Station walks. Safety data is thin.",
+    "food": "545 restaurants, 233 izakayas, 33 cafes. Huge nearby choice without station-front crush.",
+    "nightlife": "165 late spots, karaoke and clubs nearby. Yokohama night within reach."
+  },
+  "ja": {
+    "atmosphere": "みなとみらいのこぼれが届く横浜の裏口。駅は静か、飲食の重力は大きい。",
+    "landmarks": "みなとみらいの端、古い港側の通り、横浜駅徒歩圏。安全データは薄め。",
+    "food": "飲食545軒、居酒屋233軒、カフェ33軒。駅前の圧なしで選択肢は巨大。",
+    "nightlife": "深夜営業165軒、カラオケとクラブも近い。横浜の夜が届く。"
+  },
+  "ru": {
+    "atmosphere": "Задняя дверь Йокогамы с переливом Minatomirai. Станция тихая, еда рядом мощная.",
+    "landmarks": "Край Minatomirai, старые доковые улицы, пешком к Yokohama Station. Safety data тонкая.",
+    "food": "545 ресторанов, 233 изакая, 33 кафе. Огромный выбор рядом без станционной давки.",
+    "nightlife": "165 поздних мест, караоке и клубы рядом. Ночь Йокогамы под рукой."
+  }
+}

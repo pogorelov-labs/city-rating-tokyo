@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old market energy with Ginza money nearby. Tourist mornings, pricey quiet nights.",
+    "landmarks": "Tsukiji Outer Market, Hamarikyu Gardens, Kabuki-za edge. Fish stalls before offices wake.",
+    "food": "1756 restaurants, 555 izakayas, 203 bars. Seafood overload; tourist traps mixed in.",
+    "nightlife": "697 late-night spots. Bars everywhere, but club culture stays elsewhere."
+  },
+  "ja": {
+    "atmosphere": "旧市場の熱気と銀座価格が隣り合う。朝は観光客、夜は高めで静か。",
+    "landmarks": "築地場外市場、浜離宮、歌舞伎座の端。オフィスが起きる前に魚屋が動く。",
+    "food": "飲食1756軒、居酒屋555軒、バー203軒。海鮮過多、観光客向けも混じる。",
+    "nightlife": "深夜営業697軒。バーはそこら中、クラブ文化は別エリア。"
+  },
+  "ru": {
+    "atmosphere": "Энергия старого рынка рядом с деньгами Гиндзы. Утром туристы, ночью дорого и тихо.",
+    "landmarks": "Tsukiji Outer Market, сады Hamarikyu, край Kabuki-za. Рыбные лавки просыпаются первыми.",
+    "food": "1756 ресторанов, 555 изакая, 203 бара. Морепродукты в избытке, туристические ловушки тоже.",
+    "nightlife": "697 поздних мест. Бары везде, но клубная культура живёт в других районах."
+  }
+}

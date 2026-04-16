@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai commuter suburb with Indian-food spine. Busy, practical, soft-ground.",
+    "landmarks": "Kasai Rinkai direction, Edogawa flats, wide family blocks. Not postcard Tokyo.",
+    "food": "99 restaurants, 47 izakayas, curry and casual chains. Stronger than it looks.",
+    "nightlife": "44 late spots, 1 karaoke. Izakaya-heavy, no clubs."
+  },
+  "ja": {
+    "atmosphere": "東西線の実用派ベッドタウン、インド料理の背骨あり。賑やか、生活感強め、軟弱地盤注意。",
+    "landmarks": "葛西臨海方面、江戸川の低地、ファミリー向けの広い街区。絵葉書の東京ではない。",
+    "food": "飲食99軒、居酒屋47軒。カレーと日常チェーン多め。見た目より食は強い。",
+    "nightlife": "深夜44軒、カラオケ1軒。居酒屋中心、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на Tozai Line, практичный и шумный, с индийским гастро-костяком. Грунт мягкий, риск реальный.",
+    "landmarks": "В сторону Kasai Rinkai, равнины Эдогавы, широкие семейные кварталы. Не открытка Токио.",
+    "food": "99 ресторанов, 47 изакая, много карри и повседневных сетей. Сильнее, чем выглядит.",
+    "nightlife": "44 поздних места, 1 караоке. Изакая-сцена, без клубов."
+  }
+}

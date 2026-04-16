@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ikegami Line pocket, calm and very local. Safe, green, not much scene.",
+    "landmarks": "Ontake shrine area, Tama River side within reach, quiet shopping street energy.",
+    "food": "37 restaurants, 11 izakayas, almost no bars. Dinner is local, simple, early.",
+    "nightlife": "14 late spots, no karaoke. Mostly neighborhood izakayas."
+  },
+  "ja": {
+    "atmosphere": "池上線の住宅ポケット、落ち着いた完全ローカル。安全で緑多め、遊びは少ない。",
+    "landmarks": "御嶽神社周辺、多摩川側も射程内、静かな商店街の空気。",
+    "food": "飲食37軒、居酒屋11軒、バーほぼなし。地元の簡単な夕食、早仕舞い。",
+    "nightlife": "深夜14軒、カラオケなし。近所の居酒屋以上はほぼない。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман Ikegami Line, спокойный и совсем локальный. Безопасно, зелено, сцены мало.",
+    "landmarks": "Район храма Ontake, до стороны Tama River можно дотянуться, тихая торговая улица.",
+    "food": "37 ресторанов, 11 изакая, баров почти нет. Ужин локальный, простой, ранний.",
+    "nightlife": "14 поздних мест, караоке нет. Минимум вне соседских изакая."
+  }
+}

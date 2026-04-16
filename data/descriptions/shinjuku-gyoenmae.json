@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Garden-edge Shinjuku, calm veneer over a giant food engine. Pricey, intense.",
+    "landmarks": "Shinjuku Gyoen, Marunouchi Line, Nichome lanes. Green escape, neon nearby.",
+    "food": "1062 restaurants, 411 izakayas, 102 bars. Lunch, ramen, counters, late choice.",
+    "nightlife": "477 late spots, 6 clubs, 8 hostels. Huge nights nearby."
+  },
+  "ja": {
+    "atmosphere": "新宿御苑の縁、静かな皮膜の下に巨大な飲食エンジン。高い、中心、近場は濃い。",
+    "landmarks": "新宿御苑、丸ノ内線、二丁目・三丁目へ続く裏道。緑の逃げ場、すぐネオン。",
+    "food": "飲食1062軒、居酒屋411軒、バー102軒。昼食、ラーメン、小箱、深夜の選択肢強い。",
+    "nightlife": "深夜477軒、クラブ6軒、ホステル8軒。夜は巨大、静かさは期待薄。"
+  },
+  "ru": {
+    "atmosphere": "Край Shinjuku Gyoen, спокойная оболочка над огромным мотором еды и выпивки. Дорого, центрально, рядом интенсивно.",
+    "landmarks": "Shinjuku Gyoen, Marunouchi Line, переулки к Nichome и Sanchome. Зелёный выход, неон рядом.",
+    "food": "1062 ресторана, 411 изакая, 102 бара. Обеды, рамен, крошечные стойки, сильный поздний выбор.",
+    "nightlife": "477 поздних мест, 6 клубов, 8 хостелов. Большие ночи рядом, но не мирно."
+  }
+}

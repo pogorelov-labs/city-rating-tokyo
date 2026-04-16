@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya Odakyu town with student grit and grown-up comfort. Crowded, but useful.",
+    "landmarks": "Nodai-dori, Suzuran-dori, Tokyo University of Agriculture orbit nearby.",
+    "food": "Ramen, bakeries, izakayas, cafes, late meals. One of the better local food strips.",
+    "nightlife": "Late izakayas, bars, three karaoke spots. No clubs, enough noise."
+  },
+  "ja": {
+    "atmosphere": "学生っぽさと大人の便利さが混じる世田谷小田急タウン。混むが使える。",
+    "landmarks": "農大通り、すずらん通り、東京農大方面の生活圏。",
+    "food": "ラーメン、ベーカリー、居酒屋、カフェ、遅い飯。地元食の強い通り。",
+    "nightlife": "遅い居酒屋、バー、カラオケ3軒。クラブなし、でも十分に賑やか。"
+  },
+  "ru": {
+    "atmosphere": "Сетагайский городок Odakyu: студенческий grit плюс взрослая удобность. Людно, но полезно.",
+    "landmarks": "Nodai-dori, Suzuran-dori, рядом орбита Tokyo University of Agriculture.",
+    "food": "Рамэн, пекарни, изакаи, кафе, поздняя еда. Одна из сильных локальных полос.",
+    "nightlife": "Поздние изакаи, бары, три караоке. Клубов нет, шума хватает."
+  }
+}

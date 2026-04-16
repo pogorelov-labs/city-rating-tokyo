@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Enoden halt near Fujisawa, coastal-adjacent but not beachy. Quiet, far from Tokyo.",
+    "landmarks": "Enoden tracks, Sakai River walks, Fujisawa center one stop away. Low-rise Shonan mood.",
+    "food": "247 restaurants, 143 izakayas. Fujisawa spillover feeds it; daily essentials are thin.",
+    "nightlife": "112 late-night spots, 4 karaoke. Drinking yes, clubs no, last train hurts."
+  },
+  "ja": {
+    "atmosphere": "藤沢近くの小さな江ノ電駅。海は近いがビーチ感は薄い。静か、東京は遠い。",
+    "landmarks": "江ノ電の線路、境川散歩、藤沢中心部は一駅。低層の湘南ムード。",
+    "food": "飲食247軒、居酒屋143軒。藤沢の余波で食えるが、日用品は薄い。",
+    "nightlife": "深夜営業112軒、カラオケ4軒。飲める、クラブなし、終電が痛い。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Enoden у Фудзисавы, рядом с побережьем, но не пляж. Тихо, Токио далеко.",
+    "landmarks": "Рельсы Enoden, прогулки вдоль Sakai River, центр Фудзисавы в одной остановке. Низкая Сёнан-среда.",
+    "food": "247 ресторанов, 143 изакая. Фудзисава кормит район; повседневные сервисы тонкие.",
+    "nightlife": "112 поздних мест, 4 караоке. Выпивка есть, клубов нет, последний поезд больной."
+  }
+}

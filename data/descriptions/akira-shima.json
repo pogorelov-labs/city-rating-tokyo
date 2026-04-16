@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Ome Line suburb, cheap and calm. Commute is the tax, roughly an hour to center.",
+    "landmarks": "Mori Town mall, Showa-no-Mori streets, low-rise city blocks. More errands than sightseeing.",
+    "food": "24 listed restaurants, 16 izakayas. Local ramen, family spots, station drinking; cafes are thin.",
+    "nightlife": "6 late spots, 1 karaoke, no clubs. Neighborhood drinks, early fade."
+  },
+  "ja": {
+    "atmosphere": "青梅線の西側住宅地。安くて静か、都心通勤はほぼ1時間の税金。",
+    "landmarks": "モリタウン、昭和の森周辺、低層の市街地。観光より日常用事の街。",
+    "food": "飲食24件、居酒屋16件。地元ラーメン、家族向け、駅前飲み。カフェは薄い。",
+    "nightlife": "深夜営業6件、カラオケ1件、クラブなし。近所飲み、早めに失速。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад на Ome Line, дешево и спокойно. Налог за это, почти час до центра.",
+    "landmarks": "Mori Town, кварталы Showa-no-Mori, низкая застройка. Больше быта, чем достопримов.",
+    "food": "24 места, 16 изакая. Локальный рамен, семейные точки, выпивка у станции. Кафе мало.",
+    "nightlife": "6 поздних мест, 1 караоке, клубов нет. Соседский формат, рано сдувается."
+  }
+}

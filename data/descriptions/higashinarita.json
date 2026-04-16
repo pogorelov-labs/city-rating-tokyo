@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Narita satellite, Keisei Line fringe. Sparse, rural vibe. 97 min to Tokyo. Pass-through station.",
+    "landmarks": "Data limited. Local shrines, farmland beyond. Narita Airport connection only draw.",
+    "food": "6 listings minimal. 32 scattered entries. Data limited — scrapers thin here.",
+    "nightlife": "Practically absent. Station empties post-6pm."
+  },
+  "ja": {
+    "atmosphere": "成田衛星、京成線の端。疎らな景観、田舎の風情。東京まで97分。通過駅。",
+    "landmarks": "データ限定。地元の神社、先は農地。成田空港接続が唯一の吸引力。",
+    "food": "ホットペッパー6軒は最小限。散在32軒。データ限定 — スクレイパー網粗い。",
+    "nightlife": "ほぼ皆無。18時以降は無人。"
+  },
+  "ru": {
+    "atmosphere": "Сателлит Наритa, край линии Keisei. Разреженно, сельская атмосфера. 97 минут до Токио. Сквозная станция.",
+    "landmarks": "Данные неполные. Местные святилища, сельхозугодья дальше. Соединение с аэропортом Нарита — единственная привлекательность.",
+    "food": "6 listings минимум. 32 разреженных записей. Данные неполные — скреперы редки.",
+    "nightlife": "Практически нет. Станция опустевает после 18:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Corporate canyon under Tokyo Station. Hyper-convenient, polished, almost no home feeling.",
+    "landmarks": "Imperial Palace moat, Marunouchi towers, endless underground passages. Power-lunch territory.",
+    "food": "1202 restaurants, 586 izakayas, 33 cafes. Basement dining is strong, prices bite.",
+    "nightlife": "256 late spots, mostly izakaya and hotel bars. Little neighborhood soul."
+  },
+  "ja": {
+    "atmosphere": "東京駅地下に続く企業の谷。超便利で磨かれているが、暮らす感じは薄い。",
+    "landmarks": "皇居のお堀、丸の内の高層ビル、果てない地下通路。権力ランチの街。",
+    "food": "飲食1202軒、居酒屋586軒、カフェ33軒。地下グルメ強い、値段は刺さる。",
+    "nightlife": "深夜営業256軒、主に居酒屋とホテルバー。近所感はほぼない。"
+  },
+  "ru": {
+    "atmosphere": "Корпоративный каньон под Tokyo Station. Сверхудобно, отполировано, почти без домашности.",
+    "landmarks": "Ров Императорского дворца, башни Marunouchi, бесконечные подземные ходы. Территория power lunch.",
+    "food": "1202 ресторана, 586 изакая, 33 кафе. Подземная еда сильная, цены кусаются.",
+    "nightlife": "256 поздних мест, в основном изакая и отельные бары. Районной души мало."
+  }
+}

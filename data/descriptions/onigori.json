@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Keisei stop in Ichikawa, local and cheap-ish. Good calm, weak central access.",
+    "landmarks": "Nikke Colton Plaza, Onigoe Shrine, Motoyawata nearby. Residential lanes dominate.",
+    "food": "110 restaurants, 48 izakayas. Solid neighborhood food; cafes stay thin.",
+    "nightlife": "47 late-night spots, no karaoke. Local drinks, not a night-out magnet."
+  },
+  "ja": {
+    "atmosphere": "市川の静かな京成駅。地元向けでやや安い。落ち着くが都心アクセスは弱め。",
+    "landmarks": "ニッケコルトンプラザ、鬼越神社、本八幡も近い。住宅路地が中心。",
+    "food": "飲食110軒、居酒屋48軒。近所飯は堅いが、カフェは薄い。",
+    "nightlife": "深夜営業47軒、カラオケなし。地元飲み向き、夜遊び目的地ではない。"
+  },
+  "ru": {
+    "atmosphere": "Тихая остановка Keisei в Итикаве, локально и чуть дешевле. Спокойно, до центра слабовато.",
+    "landmarks": "Nikke Colton Plaza, Onigoe Shrine, рядом Motoyawata. Доминируют жилые переулки.",
+    "food": "110 ресторанов, 48 изакая. Крепкая соседская еда; кафе мало.",
+    "nightlife": "47 поздних мест, караоке нет. Локальные напитки, не магнит для ночи."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keikyu pocket in Shinagawa, small-scale and practical. Safer than lively.",
+    "landmarks": "Tachiai River area, low-key shops, quick line down toward Oimachi and Haneda.",
+    "food": "87 restaurants, 39 izakayas, 3 bars. Solid after-work food, limited cafe life.",
+    "nightlife": "30 late spots, no karaoke. Izakayas linger, everything else is thin."
+  },
+  "ja": {
+    "atmosphere": "品川区の京急小駅、実用的で小粒。賑やかさより治安の落ち着き。",
+    "landmarks": "立会川周辺、地味な商店、 大井町・羽田方面へ出やすい京急動線。",
+    "food": "飲食87軒、居酒屋39軒、バー3軒。仕事帰り飯は強い、カフェは薄い。",
+    "nightlife": "深夜30軒、カラオケなし。居酒屋は残るが、それ以外は細い。"
+  },
+  "ru": {
+    "atmosphere": "Малый карман Keikyu в Синагаве, практично и спокойно. Больше безопасности, чем веселья.",
+    "landmarks": "Район реки Тачиай, простые магазины, быстрый ход к Оимати и Ханэде.",
+    "food": "87 ресторанов, 39 изакая, 3 бара. Сильная еда после работы, кафе-сцена тонкая.",
+    "nightlife": "30 поздних мест, без караоке. Изакаи тянутся, остальное слабое."
+  }
+}

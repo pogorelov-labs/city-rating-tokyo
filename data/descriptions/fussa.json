@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Tokyo, Yokota-base edge and cheap rent. Spacious, odd, brutally long commute.",
+    "landmarks": "Yokota Air Base fringe, Route 16 shops, Tama River walks. More border town than suburb.",
+    "food": "68 restaurants, 32 izakayas; American hints, ramen, local bars. Small but distinct.",
+    "nightlife": "30 late spots, 7 bars. Base-town drinking, no karaoke or clubs."
+  },
+  "ja": {
+    "atmosphere": "東京の西端、横田基地の縁と安い家賃。広い、少し変、通勤はかなり長い。",
+    "landmarks": "横田基地の周辺、国道16号の店、多摩川散歩。郊外より境界の街。",
+    "food": "飲食68軒、居酒屋32軒。アメリカ気配、ラーメン、地元バー。小さいが個性あり。",
+    "nightlife": "深夜30軒、バー7軒。基地町の飲み、カラオケもクラブもなし。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Токио, край базы Yokota и дешевая аренда. Просторно, странно, поездка в центр долгая.",
+    "landmarks": "Окраина Yokota Air Base, магазины Route 16, прогулки у Tama River. Скорее пограничный городок.",
+    "food": "68 ресторанов, 32 изакая; американский след, рамен, местные бары. Маленько, но с характером.",
+    "nightlife": "30 поздних мест, 7 баров. Питье у базы, без караоке и клубов."
+  }
+}

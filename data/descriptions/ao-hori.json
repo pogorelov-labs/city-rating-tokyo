@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba dead-end station on Uchibo Line. Last train 23:25. Super cheap rent. 69 min commute. Extreme trade-off.",
+    "landmarks": "Empty. Small market, pharmacy, clinic. Functionally bare.",
+    "food": "Almost none. 2 restaurants, 2 izakayas, few spots. You go hungry or cook.",
+    "nightlife": "One late-night spot. Otherwise go to bed."
+  },
+  "ja": {
+    "atmosphere": "千葉の終点駅。終電23:25。家賃激安。通勤時間地獄。",
+    "landmarks": "何もない。薬局、クリニックのみ。",
+    "food": "ほぼない。飲食店4軒。自炊が必須。",
+    "nightlife": "1軒のみ。寝るしかない。"
+  },
+  "ru": {
+    "atmosphere": "Тупиковая станция Уиибо-линии в Тиба. Последний поезд 23:25. Жить невыносимо. Дешёво — да. Но изолировано.",
+    "landmarks": "Пусто. Аптека, клиника. Ничего больше.",
+    "food": "Практически нет. 4 места еды. Готовить дома необходимо.",
+    "nightlife": "1 поздний бар. Спать идти рано."
+  }
+}

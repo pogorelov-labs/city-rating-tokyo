@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quieter Koenji, bookish and residential. Marunouchi access, fewer drunk crowds.",
+    "landmarks": "Sanshi-no-mori Park, Koenji side streets, small live-house culture. Low-key.",
+    "food": "109 restaurants, 34 izakayas, 15 bars. Indie counters over chain density.",
+    "nightlife": "53 late-night spots, 3 clubs, no karaoke. Small-scene nights, not mass drinking."
+  },
+  "ja": {
+    "atmosphere": "静かな高円寺。少し本好き、住宅地寄り。丸ノ内線便利、酔客は少なめ。",
+    "landmarks": "蚕糸の森公園、高円寺の脇道、小さなライブハウス文化。控えめ。",
+    "food": "飲食109軒、居酒屋34軒、バー15軒。チェーン密度より個人カウンター。",
+    "nightlife": "深夜営業53軒、クラブ3軒、カラオケなし。小さなシーン向き、大宴会ではない。"
+  },
+  "ru": {
+    "atmosphere": "Более тихий Коэндзи, книжный и жилой. Marunouchi удобна, пьяных толп меньше.",
+    "landmarks": "Sanshi-no-mori Park, боковые улицы Коэндзи, малые live-house. Низкий профиль.",
+    "food": "109 ресторанов, 34 изакая, 15 баров. Инди-стойки важнее плотности сетей.",
+    "nightlife": "53 поздних места, 3 клуба, караоке нет. Ночи малой сцены, не массовая пьянка."
+  }
+}

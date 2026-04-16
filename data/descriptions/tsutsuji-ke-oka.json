@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Chofu commuter pocket, practical and safe, a bit sleepy. Keio-only access.",
+    "landmarks": "Station-front shotengai, Nogawa green pockets, Jindaiji by bus. Residential core.",
+    "food": "55 restaurants, 22 izakayas; ramen, family places, commuter dinners.",
+    "nightlife": "23 late spots, 1 karaoke, 1 club. Small local scene."
+  },
+  "ja": {
+    "atmosphere": "調布の静かな通勤住宅地、実用的で治安は軽い。少し眠い、京王一本。",
+    "landmarks": "駅前商店街、野川の緑、深大寺はバス圏。住宅地の芯。",
+    "food": "飲食55軒、居酒屋22軒。ラーメン、家族向け、通勤帰りの夕飯。",
+    "nightlife": "深夜営業23軒、カラオケ1軒、クラブ1軒。小さな地元シーン。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман Тёфу для комьютеров, практично и спокойно, чуть сонно. Только Keio.",
+    "landmarks": "Shotengai у станции, зелень Ногавы, Дзиндайдзи на автобусе. Жилое ядро.",
+    "food": "55 ресторанов, 22 изакая. Рамен, семейные места, ужины после работы.",
+    "nightlife": "23 поздних места, 1 караоке, 1 клуб. Маленькая местная сцена."
+  }
+}

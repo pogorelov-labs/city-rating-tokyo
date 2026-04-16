@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Odakyu city, residential and calm. Safe, livable, but one line keeps it modest.",
+    "landmarks": "Tama River paths, Izumi-Tamagawa side, compact city-hall core. More daily life than spectacle.",
+    "food": "35 restaurants, 10 izakayas, 3 bars. Neighborhood rotation is fine; destination dining is rare.",
+    "nightlife": "Seven late spots, no karaoke or clubs. Quiet drinks, early reset."
+  },
+  "ja": {
+    "atmosphere": "小さな小田急の街、住宅地で落ち着く。安全で暮らしやすいが、一路線で控えめ。",
+    "landmarks": "多摩川の散歩道、和泉多摩川側、市役所周辺の小さな中心。観光より生活。",
+    "food": "飲食35軒、居酒屋10軒、バー3軒。近所使いは十分、目的地級は少ない。",
+    "nightlife": "深夜7軒、カラオケもクラブもなし。静かに飲んで早めに帰る街。"
+  },
+  "ru": {
+    "atmosphere": "Маленький город на Odakyu, жилой и спокойный. Безопасно и удобно, но одна линия сдерживает.",
+    "landmarks": "Дорожки вдоль Tama River, сторона Izumi-Tamagawa, компактный центр у мэрии. Больше быт, чем шоу.",
+    "food": "35 ресторанов, 10 изакая, 3 бара. Для района нормально, ради еды сюда редко едут.",
+    "nightlife": "Семь поздних мест, без караоке и клубов. Тихие напитки, ранний сброс."
+  }
+}

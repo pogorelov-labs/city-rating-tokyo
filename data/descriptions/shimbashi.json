@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Salaryman pressure cooker beside Ginza. Brilliantly connected, loud, expensive, crime-skewed.",
+    "landmarks": "SL Plaza, Karasumori bars, Hibiya and Ginza edges. Office towers by day, smoke by night.",
+    "food": "2089 restaurants, 804 izakayas, 219 bars. Endless choice; tourist traps and gems intermix.",
+    "nightlife": "825 late spots. Serious drinking town, karaoke and clubs secondary."
+  },
+  "ja": {
+    "atmosphere": "銀座横のサラリーマン圧力鍋。交通最強、騒がしい、高い、治安数字は荒い。",
+    "landmarks": "SL広場、烏森の飲み屋、日比谷と銀座の端。昼はオフィス、夜は煙。",
+    "food": "飲食2089軒、居酒屋804軒、バー219軒。選択肢無限、当たり外れも無限。",
+    "nightlife": "深夜825軒。本気の飲み街、カラオケとクラブは脇役。"
+  },
+  "ru": {
+    "atmosphere": "Саларимэн-скороварка у Гиндзы. Связность топ, шумно, дорого, криминальная статистика злая.",
+    "landmarks": "SL Plaza, бары Karasumori, края Hibiya и Ginza. Днём офисы, ночью дым.",
+    "food": "2089 ресторанов, 804 изакая, 219 баров. Выбор бесконечный; ловушки и жемчуг рядом.",
+    "nightlife": "825 поздних мест. Серьёзный город выпивки, караоке и клубы вторичны."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Central, polished, expensive, oddly calm between offices and schools. Commute cheat code.",
+    "landmarks": "Sophia University, Sotobori, Akasaka Palace nearby, station bridges over the moat.",
+    "food": "410 restaurants, 155 izakayas, 22 bars. Business lunches, proper dinners, few bargains.",
+    "nightlife": "102 late spots, 2 karaoke, no clubs. Grown-up drinks, not chaos."
+  },
+  "ja": {
+    "atmosphere": "中心で上品、高い、オフィスと学校の間で意外に静か。通勤は反則級。",
+    "landmarks": "上智大学、外濠、迎賓館方面、濠を渡る駅の橋。都心の隙間。",
+    "food": "飲食410件、居酒屋155件、バー22件。ビジネス昼食とちゃんとした夕飯、安さは少ない。",
+    "nightlife": "深夜102件、カラオケ2件、クラブなし。大人の飲み、混沌ではない。"
+  },
+  "ru": {
+    "atmosphere": "Центр, полировка, дорого, странно спокойно между офисами и школами. Чит-код для поездок.",
+    "landmarks": "Sophia University, Sotobori, рядом Akasaka Palace, мосты станции над рвом.",
+    "food": "410 ресторанов, 155 изакай, 22 бара. Бизнес-ланчи, нормальные ужины, мало дешёвого.",
+    "nightlife": "102 поздних места, 2 караоке, без клубов. Взрослые напитки, не хаос."
+  }
+}

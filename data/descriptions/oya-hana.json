@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny rural station, 318 daily riders. Chichibu Line spur, 2 hours from Tokyo. Remote but scenic.",
+    "landmarks": "Mountain foothills, Chichibu National Park nearby. Zero urban density, steep elevation (158m).",
+    "food": "Minimal. 4 food markers only. No restaurants or bars within walking distance.",
+    "nightlife": "None. Last train 23:18."
+  },
+  "ja": {
+    "atmosphere": "極小駅、318人/日。秩父線の先端。遠く、景色はいい。",
+    "landmarks": "丘陵地、秩父国立公園が近い。街らしきものなし、標高158m。",
+    "food": "ほぼなし。マーカーわずか4つ。飲食店ゼロ。",
+    "nightlife": "皆無。終電23:18。"
+  },
+  "ru": {
+    "atmosphere": "Крохотная станция в сельской глубинке. Линия Тиччибу, 2 часа из Токио. Дикая, но красивая.",
+    "landmarks": "Предгорья, рядом национальный парк Тиччибу. Людей и зданий почти нет, высота 158 м.",
+    "food": "Минимум. 4 точки еды только по OpenStreetMap. Никаких ресторанов в радиусе.",
+    "nightlife": "Ничего. Последний поезд 23:18."
+  }
+}

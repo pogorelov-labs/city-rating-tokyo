@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keikyu suburban, wealthy Yokohama pocket. Huge parks (3.9M sqm). 54k daily, quiet zone. Beach 15min.",
+    "landmarks": "Kanazawa Bunko museum, temple clusters, coastal forest. Elegant residential. Seafront walks.",
+    "food": "65 listings (26 izakaya), 30. Good density, family-focused. Seasonal seafood.",
+    "nightlife": "31 midnight spots, no karaoke. Quieter than peers. Beach town rhythm."
+  },
+  "ja": {
+    "atmosphere": "京急郊外、横浜の富裕地区。巨大公園（390万平方メートル）。1日5万4千人、静かなエリア。海まで15分。",
+    "landmarks": "金沢文庫博物館、寺院群、沿岸林。上品な住宅地。海沿い散歩。",
+    "food": "ホットペッパー65軒（居酒屋26軒）、30軒。密度良好、家族向け。季節の海鮮。",
+    "nightlife": "深夜営業31軒、カラオケなし。同等駅より静か。ビーチタウンのリズム。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Keikyu, богатый район Йокогамы. Огромные парки (3.9M кв.м). 54k ежедневно, тихая зона. Пляж 15 минут.",
+    "landmarks": "Музей Канадзава Бункэ, кластеры храмов, приморский лес. Элегантный жилой. Приморские прогулки.",
+    "food": "65 listings (26 изакая), 30. Хорошая плотность, семейный фокус. Сезонные морепродукты.",
+    "nightlife": "31 полуночное место, караоке нет. Тише ровесников. Ритм пляжного города."
+  }
+}

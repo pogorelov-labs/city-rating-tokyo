@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya student-residential mix, sporty and cafe-literate. Den-en-toshi crowds bite.",
+    "landmarks": "Komazawa Olympic Park, university streets, wide cycling and dog-walk routes.",
+    "food": "Cafes, ramen, izakaya, small bars. Polished but not cheap.",
+    "nightlife": "Late izakayas and bars, no clubs. Drinks stay civilized."
+  },
+  "ja": {
+    "atmosphere": "世田谷の学生と住宅の混合地。スポーティでカフェ慣れ、田園都市線の混雑は痛い。",
+    "landmarks": "駒沢オリンピック公園、大学周辺の通り、自転車と犬散歩の広い動線。",
+    "food": "カフェ、ラーメン、居酒屋、小さなバー。整っているが安くはない。",
+    "nightlife": "遅い居酒屋とバー、クラブなし。飲みは上品に終わる。"
+  },
+  "ru": {
+    "atmosphere": "Сетагайская смесь студентов и жилья, спортивно и с кафе-грамотностью. Den-en-toshi давит.",
+    "landmarks": "Komazawa Olympic Park, университетские улицы, широкие маршруты для вело и собак.",
+    "food": "Кафе, рамэн, изакаи, малые бары. Аккуратно, но не дешево.",
+    "nightlife": "Поздние изакаи и бары, без клубов. Напитки остаются цивильными."
+  }
+}

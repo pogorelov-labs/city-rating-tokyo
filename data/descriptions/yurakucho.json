@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ginza-Hibiya pressure cooker, salarymen under tracks, tourists above ground. Brilliant, exhausting.",
+    "landmarks": "Tokyo International Forum, Hibiya, Ginza, Yurakucho gado-shita. Everything is walkable.",
+    "food": "1824 spots, 534 izakayas, 172 bars. From smoky yakitori arches to expense-account sushi.",
+    "nightlife": "519 late spots, two clubs. Drinks everywhere; crowds are the tax."
+  },
+  "ja": {
+    "atmosphere": "銀座・日比谷の圧力鍋、高架下は会社員、地上は観光客。最高だが疲れる。",
+    "landmarks": "東京国際フォーラム、日比谷、銀座、有楽町ガード下。全部徒歩圏。",
+    "food": "1824軒、居酒屋534、バー172。煙い焼き鳥高架下から接待寿司まで。",
+    "nightlife": "深夜519軒、クラブ2。酒はどこにでもある、代償は人混み。"
+  },
+  "ru": {
+    "atmosphere": "Пресс Ginza-Hibiya: под путями офисные пьянки, наверху туристы. Блестяще, изматывает.",
+    "landmarks": "Tokyo International Forum, Hibiya, Ginza, gado-shita Yurakucho. Почти всё пешком.",
+    "food": "1824 места, 534 изакая, 172 бара. От дымных якитори под рельсами до суши за счёт фирмы.",
+    "nightlife": "519 поздних мест, два клуба. Выпивка везде; налог — толпа."
+  }
+}

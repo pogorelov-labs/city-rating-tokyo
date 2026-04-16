@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Seibu connector near Ekoda, quiet but foodier than it looks. Last train is early.",
+    "landmarks": "Ekoda student streets nearby, Sakuradai backroads, Seibu Yurakucho cut-through.",
+    "food": "99 restaurants, 36 izakayas, 10 bars. Small-town feel with decent late counters.",
+    "nightlife": "41 late spots, 2 karaoke rooms, 1 tiny club. Local, not polished."
+  },
+  "ja": {
+    "atmosphere": "江古田近くの小さな西武接続駅、静かだが見た目より食える。終電は早め。",
+    "landmarks": "近い江古田の学生街、桜台の裏道、西武有楽町線の抜け道。",
+    "food": "飲食99軒、居酒屋36軒、バー10軒。小さな街感だが深夜カウンターは意外にある。",
+    "nightlife": "深夜営業41軒、カラオケ2軒、小さなクラブ1軒。地元感、磨かれてはいない。"
+  },
+  "ru": {
+    "atmosphere": "Крошечный Seibu-коннектор у Ekoda, тихо, но еды больше чем кажется. Последний поезд рано.",
+    "landmarks": "Студенческие улицы Ekoda рядом, задние дороги Sakuradai, проход Seibu Yurakucho.",
+    "food": "99 ресторанов, 36 изакая, 10 баров. Малый городок, но поздние стойки есть.",
+    "nightlife": "41 позднее место, 2 караоке, 1 крошечный клуб. Локально, без лоска."
+  }
+}

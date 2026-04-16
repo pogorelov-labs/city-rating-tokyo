@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Medical university shuttle station east of Chiba, 2 lines, strong transit but desolate surroundings. Daytime student buzz, evening ghost zone.",
+    "landmarks": "Nippon Medical University campus. Vast surrounding farmland (6.9m sqm green). Urban-rural hybrid, cold.",
+    "food": "Barely exists. 2 restaurants only, zero food. Vending machines are your dining option.",
+    "nightlife": "Nonexistent. High seismic area, low civilization. Student town without nightlife."
+  },
+  "ja": {
+    "atmosphere": "千葉東部の医科大学シャトル駅。2路線接続。動員多いが周囲は砂漠。",
+    "landmarks": "日本医科大キャンパス。周辺農地広い（690万平方メートル）。都市と田舎の違和感。",
+    "food": "ほぼない。飲食店2軒のみ、その他ゼロ。自販機が食事。",
+    "nightlife": "完全にない。高地震帯、文明低い。学生街だが夜文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Маятниковая станция медуниверситета у Чибы, 2 линии, хороший транзит но пустошь. День — студенты, ночь — пусто.",
+    "landmarks": "Университетский кампус. Обширные поля (6.9 млн кв.м). Гибрид город-село, холодно.",
+    "food": "Практически нет. 2 ресторана только, нулевой. Автоматы — ужин.",
+    "nightlife": "Ничего. Высокая сейсмическая зона, низкая цивилизация."
+  }
+}

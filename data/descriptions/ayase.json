@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi transfer knot, practical and crowded. Cheap-ish, busy, with soft-ground seismic risk.",
+    "landmarks": "Tokyo Budokan, Higashi-Ayase Park, Chiyoda Line yards. Big everyday infrastructure.",
+    "food": "89 restaurants, 36 izakayas, only a few cafes. Ramen, teishoku, commuter drinking.",
+    "nightlife": "43 late spots, 2 karaoke, no clubs. Local drinking, last train feels early."
+  },
+  "ja": {
+    "atmosphere": "足立の乗換拠点、実用的で混む。安めだが人波多く、軟弱地盤リスクあり。",
+    "landmarks": "東京武道館、東綾瀬公園、千代田線の車両基地。日常インフラが大きい。",
+    "food": "飲食89件、居酒屋36件、カフェ少数。ラーメン、定食、通勤客の一杯。",
+    "nightlife": "深夜営業43件、カラオケ2件、クラブなし。地元飲み、終電は早く感じる。"
+  },
+  "ru": {
+    "atmosphere": "Пересадочный узел Адати, практично и людно. Относительно дешево, но мягкий грунт.",
+    "landmarks": "Tokyo Budokan, Higashi-Ayase Park, депо Chiyoda Line. Большая бытовая инфраструктура.",
+    "food": "89 мест, 36 изакая, кафе мало. Рамен, тэйсёку, выпивка для пассажиров.",
+    "nightlife": "43 поздних места, 2 караоке, клубов нет. Локально, последняя электричка рано."
+  }
+}

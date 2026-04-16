@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku edge, but village-scale. Two lines, narrow river lanes, rent bites.",
+    "landmarks": "Myoshoji River, dyeing-craft backstreets, Hayashi Fumiko Memorial nearby.",
+    "food": "80 restaurants, 25 izakayas, 6 bars. Small, dense, better than the station looks.",
+    "nightlife": "32 late spots, one karaoke, one club. Drinks stay local, not wild."
+  },
+  "ja": {
+    "atmosphere": "新宿区の端なのに村サイズ。2路線、妙正寺川の細道、家賃は痛い。",
+    "landmarks": "妙正寺川、染め物の路地、林芙美子記念館が近い。派手さなし。",
+    "food": "飲食80件、居酒屋25件、バー6件。小さい駅のわりに密度高い。",
+    "nightlife": "深夜32件、カラオケ1件、クラブ1件。地元飲み中心、荒れない。"
+  },
+  "ru": {
+    "atmosphere": "Край Синдзюку, но масштаб деревни. Две линии, узкие улицы у реки, аренда кусается.",
+    "landmarks": "Myoshoji River, ремесленные красильные переулки, рядом мемориал Фумико Хаяси. Без блеска.",
+    "food": "80 ресторанов, 25 изакай, 6 баров. Маленько, плотно, лучше вида станции.",
+    "nightlife": "32 поздних места, одно караоке, один клуб. Локально, не дико."
+  }
+}

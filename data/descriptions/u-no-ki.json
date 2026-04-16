@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Tokyu Tamagawa stop, calm low-rise Ota. Better for routines than buzz.",
+    "landmarks": "Tamagawa riverbank, Unoki shopping street, Shimomaruko nearby. Quiet local grid.",
+    "food": "34 restaurants, 13 izakayas. Local dinner options, but no bar or cafe depth.",
+    "nightlife": "9 late spots, no karaoke or clubs. Quiet drinks, early finish."
+  },
+  "ja": {
+    "atmosphere": "東急多摩川線の小さな駅。低層の大田区、落ち着く。刺激より日常向き。",
+    "landmarks": "多摩川河川敷、鵜の木商店街、下丸子も近い。静かな地元グリッド。",
+    "food": "飲食34軒、居酒屋13軒。夕飯は困らないが、バーやカフェの厚みはない。",
+    "nightlife": "深夜9軒、カラオケとクラブなし。静かに飲んで早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая остановка Tokyu Tamagawa, спокойная низкая Ота. Лучше для рутины, чем для драйва.",
+    "landmarks": "Берег Тамагава, торговая улица Unoki, рядом Shimomaruko. Тихая местная сетка.",
+    "food": "34 ресторана, 13 изакая. Ужин найдется, но баров и кафе мало.",
+    "nightlife": "9 поздних мест, без караоке и клубов. Тихо выпить, ранний финиш."
+  }
+}

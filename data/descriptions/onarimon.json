@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Minato office grid under Tokyo Tower. Superb access, brutal rent, crime stats ugly.",
+    "landmarks": "Zojo-ji, Shiba Park, Tokyo Tower, big hotels and offices pressed together.",
+    "food": "1260 restaurants, 638 izakayas, 75 bars. Expense-account lunches, late salaryman dinners.",
+    "nightlife": "498 late spots, 3 clubs. Corporate drinking, not cozy."
+  },
+  "ja": {
+    "atmosphere": "東京タワー下の港区オフィス街。アクセス抜群、家賃は重い、治安数字は悪い。",
+    "landmarks": "増上寺、芝公園、東京タワー。大型ホテルとオフィスが密集。",
+    "food": "飲食1260軒、居酒屋638軒、バー75軒。接待ランチと残業後の夕食地帯。",
+    "nightlife": "深夜498軒、クラブ3軒。会社飲み中心、親密さは少ない。"
+  },
+  "ru": {
+    "atmosphere": "Глянцевая офисная сетка Минато под Tokyo Tower. Доступ отличный, аренда жесткая, кримстатистика злая.",
+    "landmarks": "Zojo-ji, Shiba Park, Tokyo Tower, крупные отели и офисы вплотную.",
+    "food": "1260 ресторанов, 638 изакая, 75 баров. Обеды за счет фирмы, поздние ужины офисных.",
+    "nightlife": "498 поздних мест, 3 клуба. Корпоративная выпивка, не уют."
+  }
+}

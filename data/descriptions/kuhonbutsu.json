@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Setagaya temple pocket beside Jiyugaoka spillover. Elegant, pricey, calm.",
+    "landmarks": "Kuhonbutsu Joshinji temple, shaded lanes, Jiyugaoka shopping within walking range.",
+    "food": "Jiyugaoka bleed gives cafes, izakayas, bars, late dining. Local streets stay sleepy.",
+    "nightlife": "Late bars and izakayas nearby, no clubs. Refined, not rowdy."
+  },
+  "ja": {
+    "atmosphere": "自由が丘の波及を受ける静かな世田谷の寺町。上品、高め、落ち着く。",
+    "landmarks": "九品仏浄真寺、木陰の道、徒歩圏に自由が丘の買い物街。",
+    "food": "自由が丘の波でカフェ、居酒屋、バー、遅い食事あり。地元道は眠い。",
+    "nightlife": "近くに遅いバーと居酒屋、クラブなし。上品で騒がしくない。"
+  },
+  "ru": {
+    "atmosphere": "Тихий храмовый карман Сетагайи рядом с переливом Jiyugaoka. Элегантно, дорого, спокойно.",
+    "landmarks": "Kuhonbutsu Joshinji, тенистые улицы, шопинг Jiyugaoka пешком.",
+    "food": "Перелив Jiyugaoka дает кафе, изакаи, бары, позднюю еду. Локальные улицы сонные.",
+    "nightlife": "Поздние бары и изакаи рядом, без клубов. Изысканно, не буйно."
+  }
+}

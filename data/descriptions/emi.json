@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal village at Uchibo Line end. 106 passengers/day. Isolation is the point.",
+    "landmarks": "Kamogawa seacoast station. Virtually no amenities. Empty.",
+    "food": "1 spot. Assume seasonal fish. Data gap is real.",
+    "nightlife": "None. Last train 22:07."
+  },
+  "ja": {
+    "atmosphere": "内房線終端の海辺村。1日106人。孤立が目的。",
+    "landmarks": "鴨川海岸駅。設備ほぼなし。空っぽ。",
+    "food": "1軒。季節魚と推測。データギャップ本物。",
+    "nightlife": "なし。最終電車22:07。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежная деревня в конце линии Учибо. 106 пассажиров/день. Изоляция это смысл.",
+    "landmarks": "Прибрежная станция Камогава. Практически нет удобств. Пусто.",
+    "food": "1 место. Предположим сезонную рыбу. Пробел в данных реален.",
+    "nightlife": "Нет. Последний поезд 22:07."
+  }
+}

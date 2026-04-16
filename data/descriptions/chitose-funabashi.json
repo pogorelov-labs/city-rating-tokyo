@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya daily-life station, crowded but not flashy. Safe, convenient, green is thin.",
+    "landmarks": "Odakyu shopping streets, Baji Koen within reach, clinic-heavy residential blocks.",
+    "food": "56 spots, 23 izakayas, four bars. Reliable weeknight eating, little destination sparkle.",
+    "nightlife": "18 late spots, one karaoke, no clubs. Local drinking only."
+  },
+  "ja": {
+    "atmosphere": "世田谷の日常駅、混むが派手ではない。安全で便利、緑は薄め。",
+    "landmarks": "小田急沿いの商店街、馬事公苑も圏内、医院多めの住宅街。",
+    "food": "56軒、居酒屋23、バー4。平日夜の食は安定、目的地感は弱い。",
+    "nightlife": "深夜18軒、カラオケ1、クラブなし。地元飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Сетагайская станция для быта, людно, но без блеска. Безопасно, удобно, зелени мало.",
+    "landmarks": "Торговые улицы Odakyu, Baji Koen в доступе, жилые кварталы с множеством клиник.",
+    "food": "56 мест, 23 изакая, четыре бара. Надёжная еда на будни, мало искры.",
+    "nightlife": "18 поздних мест, одно караоке, клубов нет. Только местные выпивки."
+  }
+}

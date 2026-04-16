@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep Yokosuka, Keikyu-adjacent. Quiet port town, aging but livable. Far from center.",
+    "landmarks": "Historic port heritage. Waterfront walks. Residential and laid-back, minimal tourist draw.",
+    "food": "Sparse (3 hp + 10 osm). One izakaya, one cafe. Light casual dining. food pockets exist.",
+    "nightlife": "Minimal. Rare bars, no clubs. Neighborhood winds down early after dinner."
+  },
+  "ja": {
+    "atmosphere": "横須賀の奥深い町。京急沿線、静か。港町の雰囲気。中心から遠い。",
+    "landmarks": "歴史ある港。臨海の散歩道。住宅地、観光客ほぼなし。",
+    "food": "飲食少ない（hp3+osm10）。居酒屋1軒、カフェ1軒。素朴な食事。",
+    "nightlife": "ほぼ皆無。バーも稀。夜は食後すぐに静か。"
+  },
+  "ru": {
+    "atmosphere": "Глубокий Йокосука, рядом с Кейкю. Тихий портовый городок, старый но живой. Далеко от центра.",
+    "landmarks": "Историческое портовое наследие. Набережная. Жилой и спокойный, туристов нет.",
+    "food": "Рестораны редко (3 hp + 10 osm). Одна изакая, одно кафе. Лёгкая еда.",
+    "nightlife": "Практически нет. Бары редкие, клубов нет. Район вымирает после ужина."
+  }
+}

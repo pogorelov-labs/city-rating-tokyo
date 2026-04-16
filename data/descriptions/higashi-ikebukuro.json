@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ikebukuro's quieter east edge, towers and backstreets. Pricey, but livable.",
+    "landmarks": "Sunshine City, aquarium, Sakura Tram stop. Big-city pull, local exits.",
+    "food": "682 restaurants, 250 izakayas. Lunch chains, ramen, late bites; quality swings.",
+    "nightlife": "226 late spots, karaoke, a few clubs. Ikebukuro spillover."
+  },
+  "ja": {
+    "atmosphere": "池袋東口の少し静かな端。高層と路地、家賃は重いが住みやすい。",
+    "landmarks": "サンシャインシティ、水族館、さくらトラム。大都会の集客、出口はローカル。",
+    "food": "飲食682軒、居酒屋250軒。ランチ、ラーメン、深夜飯。質は上下する。",
+    "nightlife": "深夜226軒、カラオケ7、クラブ4。池袋の余波で夜も動く。"
+  },
+  "ru": {
+    "atmosphere": "Тихий восточный край Икэбукуро: башни, переулки. Аренда кусается, жить удобно.",
+    "landmarks": "Sunshine City, аквариум, Sakura Tram. Большой город рядом, выходы уже локальные.",
+    "food": "682 места, 250 изакая. Ланчи, рамен, поздняя еда; качество скачет.",
+    "nightlife": "226 ночных точек, караоке и несколько клубов. Отголосок Икэбукуро."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "New Shuttle suburb north of Omiya, cheap and quiet. Useful, but central Tokyo is far.",
+    "landmarks": "New Shuttle viaduct, Saitama local streets, Omiya side trips for bigger life.",
+    "food": "47 restaurants, 23 izakayas, 4 cafes. Local basics, modest choice.",
+    "nightlife": "19 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "大宮北側のニューシャトル郊外、安くて静か。使えるが、都心は遠い。",
+    "landmarks": "ニューシャトル高架、さいたまの生活道路、大きな用事は大宮へ。",
+    "food": "飲食47軒、居酒屋23軒、カフェ4軒。地元の基本、選択肢は控えめ。",
+    "nightlife": "深夜営業19軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пригород New Shuttle к северу от Omiya, дёшево и тихо. Полезно, но центр далеко.",
+    "landmarks": "Эстакада New Shuttle, локальные улицы Saitama, за большей жизнью в Omiya.",
+    "food": "47 ресторанов, 23 изакая, 4 кафе. Локальная база, выбор скромный.",
+    "nightlife": "19 поздних мест, без караоке и клубов. Минимально."
+  }
+}

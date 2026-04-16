@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "JR port station, quieter than Yokosuka-Chuo. Bay views, cheap rent, Tokyo is a slog.",
+    "landmarks": "Verny Park, naval port views, old brick warehouses nearby. Low elevation means flood risk.",
+    "food": "32 spots, 10 izakayas, 10 bars. Naval-town flavors, but the bigger scene sits by Chuo.",
+    "nightlife": "10 late spots, no karaoke or clubs. Drink nearby, then go home."
+  },
+  "ja": {
+    "atmosphere": "JR側の港駅、横須賀中央より静か。海景色、家賃安め、東京通勤は重い。",
+    "landmarks": "ヴェルニー公園、軍港の眺め、古い倉庫群。標高2mで水害注意。",
+    "food": "32軒、居酒屋10、バー10。軍港町の味はあるが本体は中央側。",
+    "nightlife": "深夜10軒、カラオケもクラブもなし。近場で飲んで帰る街。"
+  },
+  "ru": {
+    "atmosphere": "JR-станция у порта, тише Yokosuka-Chuo. Вид на бухту, аренда ниже, до Токио тяжело.",
+    "landmarks": "Verny Park, виды на военно-морской порт, старые кирпичные склады. Высота 2 м — риск подтопления.",
+    "food": "32 места, 10 изакая, 10 баров. Портовый вкус есть, но большая сцена у Chuo.",
+    "nightlife": "10 поздних мест, без караоке и клубов. Выпил рядом — домой."
+  }
+}

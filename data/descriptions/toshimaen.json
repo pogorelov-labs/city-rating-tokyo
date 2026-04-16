@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Former amusement-park town turned Harry Potter stop. Family calm, late trains surprisingly good.",
+    "landmarks": "Warner Bros. Studio Tour Tokyo, Niwa-no-yu, the old Toshimaen grounds. Weekend surges.",
+    "food": "135 restaurants, 57 izakayas; family diners and post-park meals, not destination dining.",
+    "nightlife": "61 late spots, no karaoke or clubs. Drinking exists, party scene does not."
+  },
+  "ja": {
+    "atmosphere": "遊園地跡からハリポタ目的地へ。家族向けで穏やか、終電は意外に強い。",
+    "landmarks": "ワーナー ブラザース スタジオツアー東京、庭の湯、旧としまえん跡。週末は波あり。",
+    "food": "飲食135軒、居酒屋57軒。家族飯と帰りの一杯、食の目的地ではない。",
+    "nightlife": "深夜61軒、カラオケもクラブもなし。飲めるが、遊ぶ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Бывший городок аттракционов, теперь остановка Гарри Поттера. Семейно, спокойно, поздние поезда хороши.",
+    "landmarks": "Warner Bros. Studio Tour Tokyo, Niwa-no-yu, старые земли Toshimaen. В выходные волны людей.",
+    "food": "135 ресторанов, 57 изакая; семейная еда и ужин после парка, не гастро-точка.",
+    "nightlife": "61 позднее место, без караоке и клубов. Выпить можно, тусовки нет."
+  }
+}

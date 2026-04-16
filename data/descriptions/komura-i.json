@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Sumida lowland, small Tobu line, workshop-and-housing texture. Quiet, local, flood-prone.",
+    "landmarks": "Kameido Line backstreets, small shrines, Tokyo Skytree in the wider skyline. Very high seismic risk.",
+    "food": "47 restaurants, 14 izakayas, 8 cafes. Neighborhood counters, simple lunches, no big food scene.",
+    "nightlife": "9 late spots, no karaoke or clubs. Minimal, with a few local bars."
+  },
+  "ja": {
+    "atmosphere": "古い墨田の低地、東武小線の町工場と住宅の質感。静かで地元色強め、水害注意。",
+    "landmarks": "亀戸線の裏道、小さな神社、遠景にスカイツリー。地震リスクはかなり高い。",
+    "food": "飲食47軒、居酒屋14軒、カフェ8軒。近所のカウンターと簡単な昼飯、大きな食の街ではない。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。ほぼ最小限、地元バー少し。"
+  },
+  "ru": {
+    "atmosphere": "Старая низина Sumida, малая линия Tobu, мастерские и жильё. Тихо, локально, риск паводка.",
+    "landmarks": "Закоулки Kameido Line, маленькие святилища, Skytree в дальнем силуэте. Сейсмориск очень высокий.",
+    "food": "47 ресторанов, 14 изакая, 8 кафе. Соседские стойки, простые ланчи, без большой гастро-сцены.",
+    "nightlife": "9 поздних мест, без караоке и клубов. Минимум, пара местных баров."
+  }
+}

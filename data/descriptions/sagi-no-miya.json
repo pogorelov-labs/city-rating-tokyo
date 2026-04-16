@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nakano residential stop with Seibu rhythm. Safe, stocked, not trying to be cool.",
+    "landmarks": "Saginomiya Hachiman, Myoshoji River pockets, small station-front shops.",
+    "food": "24 restaurants plus 59 small spots; 13 izakayas, no bars. Solid weekday meals.",
+    "nightlife": "Six late spots and one karaoke. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "西武リズムの中野住宅地。安全で生活施設多め、格好つけない。",
+    "landmarks": "鷺宮八幡、妙正寺川まわり、小さな駅前商店。",
+    "food": "飲食24軒と小店59軒、居酒屋13軒、バーなし。平日の飯は堅い。",
+    "nightlife": "深夜営業6軒、カラオケ1軒。夕飯後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Жилая Накано с ритмом Seibu. Безопасно, всё под рукой, без попытки быть модной.",
+    "landmarks": "Saginomiya Hachiman, карманы Myoshoji River, маленькие магазины у станции.",
+    "food": "24 ресторана плюс 59 мелких мест, 13 изакай, баров нет. Будничная еда крепкая.",
+    "nightlife": "6 поздних мест и 1 караоке. После ужина тихо."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kinshicho-adjacent, practical, dense, a little rough-edged. Two-line commute beats the street mood.",
+    "landmarks": "Sarue Onshi Park, Yokojikken River, Kinshicho on foot. Soft-ground east Tokyo caveat.",
+    "food": "349 restaurants, 151 izakayas. Strong after-work food; not polished, very usable.",
+    "nightlife": "171 late-night spots, 8 karaoke. Drinking is plentiful, clubs incidental."
+  },
+  "ja": {
+    "atmosphere": "錦糸町の隣、実用的で密度高め、少し荒い。街の雰囲気より2路線の通勤力。",
+    "landmarks": "猿江恩賜公園、横十間川、錦糸町も徒歩圏。東京東側の軟弱地盤は注意。",
+    "food": "飲食349軒、居酒屋151軒。仕事帰りの飯は強い。洗練より使いやすさ。",
+    "nightlife": "深夜営業171軒、カラオケ8軒。飲み場は多い、クラブはおまけ程度。"
+  },
+  "ru": {
+    "atmosphere": "Рядом с Кинситё, практично, плотно, чуть грубо. Две линии важнее уличного шарма.",
+    "landmarks": "Sarue Onshi Park, река Yokojikken, Кинситё пешком. Мягкий грунт восточного Токио.",
+    "food": "349 ресторанов, 151 изакая. Сильная еда после работы; не глянец, зато удобно.",
+    "nightlife": "171 позднее место, 8 караоке. Выпивки много, клубы второстепенны."
+  }
+}

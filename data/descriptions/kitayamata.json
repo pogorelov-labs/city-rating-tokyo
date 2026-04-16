@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban, car-dependent hub on a single line. Quiet mornings, family-oriented vibe, zero nightlife.",
+    "landmarks": "Playground-heavy residential zone. Parks (23 green spaces, 674k sqm). Nakada Shrine nearby.",
+    "food": "Limited — 8 listings spots + 14 entries. Mostly chains. Izakaya options: 4.",
+    "nightlife": "Virtually absent — 2 late spots max. Train ends 00:02."
+  },
+  "ja": {
+    "atmosphere": "横浜郊外、単線の暮らし。朝は静か、家族向け、夜は音がしない。",
+    "landmarks": "児童公園多数。23の緑地、674k平米。中田神社。",
+    "food": "限定的 — チェーン中心、選択肢乏しい。居酒屋4軒。",
+    "nightlife": "ほぼ無し。0時過ぎ終電。"
+  },
+  "ru": {
+    "atmosphere": "Окраина Йокогамы, однолинейная жизнь. Молчание утра, семейный уклон, ночью звука нет.",
+    "landmarks": "Игровые площадки, парки (674 км², 23 участка), святилище Накада.",
+    "food": "Ограничено — 8 listings + 14, цепочки. Изакаи: 4.",
+    "nightlife": "Практически нет. Последний поезд в 00:02."
+  }
+}

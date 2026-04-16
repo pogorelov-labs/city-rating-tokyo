@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyu crossroad in Shinagawa, compact and safe. Practical, expensive, not much scene.",
+    "landmarks": "Showa University area, Hatanodai shotengai, Oimachi and Ikegami line crossings.",
+    "food": "110 restaurants, 36 izakayas, 4 cafes. Solid local food, thin cafe culture.",
+    "nightlife": "32 late spots, no karaoke or clubs. Quiet izakaya night."
+  },
+  "ja": {
+    "atmosphere": "品川の東急交差点、コンパクトで安全。実用的で高め、街の熱は控えめ。",
+    "landmarks": "昭和大学周辺、旗の台商店街、大井町線と池上線の交差。",
+    "food": "飲食110軒、居酒屋36軒、カフェ4軒。地元飯は堅い、カフェ文化は薄い。",
+    "nightlife": "深夜営業32軒、カラオケもクラブもなし。静かな居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Перекрёсток Tokyu в Shinagawa, компактно и безопасно. Практично, дорого, сцены мало.",
+    "landmarks": "Район Showa University, Hatanodai shotengai, пересечение Oimachi и Ikegami.",
+    "food": "110 ресторанов, 36 изакая, 4 кафе. Крепкая локальная еда, кафе-культура тонкая.",
+    "nightlife": "32 поздних места, без караоке и клубов. Тихая изакая-ночь."
+  }
+}

@@ -33,6 +33,17 @@ export interface StationDescription {
   nightlife: string;
 }
 
+/**
+ * Multilingual station description — produced by the CRTKY-109 LLM pipeline.
+ * Every station has descriptions in all three locales after the content PR.
+ * Use via `description[locale]` where locale = 'en' | 'ja' | 'ru'.
+ */
+export interface MultilingualDescription {
+  en: StationDescription;
+  ja: StationDescription;
+  ru: StationDescription;
+}
+
 export type ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial';
 
 export interface StationConfidence {
@@ -141,7 +152,7 @@ export interface Station {
   ratings: StationRatings | null;
   rent_avg: RentAvg | null;
   transit_minutes: TransitMinutes | null;
-  description?: StationDescription | null;
+  description?: MultilingualDescription | null;
   confidence?: StationConfidence | null;
   sources?: StationSources | null;
   data_date?: string | null;

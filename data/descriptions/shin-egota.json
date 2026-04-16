@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Oedo-line pocket between Ekoda and Nakano. Calm, green, student-ish, not a hub.",
+    "landmarks": "Egota-no-Mori Park, Tokyo General Hospital, Ekoda side streets. Quiet residential grid.",
+    "food": "80 restaurants, 31 izakayas. Solid local ramen and bars; center-city variety missing.",
+    "nightlife": "35 late-night spots, 2 karaoke. Neighborhood drinks, not a destination."
+  },
+  "ja": {
+    "atmosphere": "江古田と中野の間、大江戸線の静かなポケット。緑多め、学生感あり、ハブではない。",
+    "landmarks": "江古田の森公園、東京総合病院、江古田側の路地。住宅地の格子が静か。",
+    "food": "飲食80軒、居酒屋31軒。地元ラーメンとバーは堅いが、都心級の幅はない。",
+    "nightlife": "深夜営業35軒、カラオケ2軒。近所飲み向き、目的地にはならない。"
+  },
+  "ru": {
+    "atmosphere": "Карман линии Oedo между Экодой и Накано. Тихо, зелено, студенчески, не хаб.",
+    "landmarks": "Egota-no-Mori Park, Tokyo General Hospital, переулки Экоды. Спокойная жилая сетка.",
+    "food": "80 ресторанов, 31 изакая. Нормальная раменная база и бары; широты центра нет.",
+    "nightlife": "35 поздних мест, 2 караоке. Соседские напитки, не ночная точка назначения."
+  }
+}

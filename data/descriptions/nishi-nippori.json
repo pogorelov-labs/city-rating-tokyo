@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yamanote access with Arakawa grit. Old Tokyo edges, useful chaos, safety is the weak point.",
+    "landmarks": "Yanaka side streets, Suwa Shrine, Nippori-Toneri Liner. Cemetery walks one stop away.",
+    "food": "183 restaurants, 68 izakayas, 19 cafes. Good everyday eating, cheap counters, hostel spillover.",
+    "nightlife": "63 late spots and 8 hostels. Lively, scruffy, not polished."
+  },
+  "ja": {
+    "atmosphere": "山手線の便利さに荒川の雑味。古い東京の端、実用的な混沌、安全面は弱い。",
+    "landmarks": "谷中方面の路地、諏方神社、日暮里舎人ライナー。墓地散歩も一駅先。",
+    "food": "飲食183軒、居酒屋68軒、カフェ19軒。日常飯、安いカウンター、宿泊客の流れあり。",
+    "nightlife": "深夜63軒、ホステル8軒。賑やかでざらつく、上品ではない。"
+  },
+  "ru": {
+    "atmosphere": "Доступ к Yamanote с аракавской шероховатостью. Старый Токио, полезный хаос, безопасность проседает.",
+    "landmarks": "Улочки к Yanaka, Suwa Shrine, Nippori-Toneri Liner. Кладбищенские прогулки в одной остановке.",
+    "food": "183 ресторана, 68 изакая, 19 кафе. Ежедневная еда сильная, дешевые стойки, поток хостелов.",
+    "nightlife": "63 поздних места и 8 хостелов. Живо, шершаво, не глянец."
+  }
+}

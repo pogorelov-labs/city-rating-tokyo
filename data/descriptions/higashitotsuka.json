@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Commuter Yokohama plateau, malls and apartment towers. Practical, green, but far from Tokyo core.",
+    "landmarks": "Aurora City, Seibu side, wooded slopes around Totsuka. Station area does most errands.",
+    "food": "37 restaurants, 18 izakayas. Mall meals and local counters; cafes are oddly thin.",
+    "nightlife": "8 late spots, 3 karaoke. Enough for locals, not a night out."
+  },
+  "ja": {
+    "atmosphere": "横浜の通勤台地、モールとマンション群。実用的で緑多いが、都心は遠い。",
+    "landmarks": "オーロラシティ、西武側、戸塚周辺の緑の斜面。駅前で用事はだいたい済む。",
+    "food": "飲食37軒、居酒屋18軒。モール飯と地元カウンター。カフェは妙に薄い。",
+    "nightlife": "深夜8軒、カラオケ3軒。地元には足りるが、夜遊び目的ではない。"
+  },
+  "ru": {
+    "atmosphere": "Йокогамское плато для коммьютеров, моллы и жилые башни. Практично, зелено, но до Токио далеко.",
+    "landmarks": "Aurora City, сторона Seibu, лесистые склоны Тоцуки. Станция закрывает почти все дела.",
+    "food": "37 ресторанов, 18 изакая. Молл-еда и местные стойки; кафе странно мало.",
+    "nightlife": "8 поздних мест, 3 караоке. Для местных хватает, для ночи нет."
+  }
+}

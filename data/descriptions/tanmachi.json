@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Toyoko-side Yokohama pocket, residential but close to the action. High seismic risk, hillside feel.",
+    "landmarks": "One stop from Yokohama, local shopping lanes, Kanagawa-ku slopes and backstreets.",
+    "food": "311 restaurants, 152 izakayas, 11 bars. Strong spillover from Yokohama, not sleepy.",
+    "nightlife": "118 late spots. Drinks run late, clubs do not."
+  },
+  "ja": {
+    "atmosphere": "東横沿いの横浜ポケット、住宅地だが動きは近い。地震リスク高め、坂の街。",
+    "landmarks": "横浜一駅圏、地元商店筋、神奈川区の坂と裏道。派手さは隣駅任せ。",
+    "food": "飲食311軒、居酒屋152軒、バー11軒。横浜の余波が強く、眠い街ではない。",
+    "nightlife": "深夜118軒。酒は遅くまで、クラブ文化はない。"
+  },
+  "ru": {
+    "atmosphere": "Карман Toyoko у Йокогамы, жилой, но близко к движению. Сейсмориск высокий, много склонов.",
+    "landmarks": "Одна остановка до Йокогамы, местные торговые улочки, склоны Канагавы-ку.",
+    "food": "311 ресторанов, 152 изакая, 11 баров. Сильный йокогамский перелив, не сонно.",
+    "nightlife": "118 поздних мест. Пьют допоздна, клубов нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Backstreet Taito base between Ueno and Kuramae. Dense food grid, less neon than Okachimachi.",
+    "landmarks": "Satake Shotengai, Torigoe Shrine, Kappabashi fringe. Good wandering, not postcard Tokyo.",
+    "food": "937 restaurants, 423 izakayas; ramen, yakitori, cheap lunches everywhere. Rent bites.",
+    "nightlife": "353 midnight spots, 60 bars. Late, hostel-heavy, more drinking than clubbing."
+  },
+  "ja": {
+    "atmosphere": "上野と蔵前の間の台東裏通り拠点。食の密度は濃い、御徒町ほどネオンなし。",
+    "landmarks": "佐竹商店街、鳥越神社、合羽橋の端。散歩向き、絵葉書の東京ではない。",
+    "food": "飲食937軒、居酒屋423軒。ラーメン、焼き鳥、安い昼飯だらけ。家賃は痛い。",
+    "nightlife": "深夜353軒、バー60軒。宿多め、遅くまで飲めるがクラブ感は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Задние улицы Тайто между Уэно и Курамаэ. Еды плотно, неона меньше, чем в Окачимати.",
+    "landmarks": "Satake Shotengai, храм Torigoe, край Kappabashi. Для прогулок, не открыточный Токио.",
+    "food": "937 ресторанов, 423 изакая; рамен, якитори, дешевые ланчи везде. Аренда кусается.",
+    "nightlife": "353 поздних места, 60 баров. Много хостелов, питье важнее клубов."
+  }
+}

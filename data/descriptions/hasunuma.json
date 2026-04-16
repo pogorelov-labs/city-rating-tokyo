@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kamata-adjacent local stop, cheap energy without the station-front chaos. Soft-ground caveat.",
+    "landmarks": "Tokyu Ikegami Line, Hasunuma Onsen, Nishikamata backstreets. Tiny-stop feel.",
+    "food": "379 restaurants, 184 izakayas. Kamata spillover: dumplings, ramen, loud counters.",
+    "nightlife": "195 late-night spots, 4 karaoke. Drinks run late; clubs barely matter."
+  },
+  "ja": {
+    "atmosphere": "蒲田隣のローカル駅。安い熱気はあるが駅前カオスは薄い。軟弱地盤は注意。",
+    "landmarks": "東急池上線、はすぬま温泉、西蒲田の裏道。小駅らしい距離感。",
+    "food": "飲食379軒、居酒屋184軒。蒲田の余波、餃子、ラーメン、騒がしいカウンター。",
+    "nightlife": "深夜営業195軒、カラオケ4軒。飲みは遅くまで、クラブはほぼ関係ない。"
+  },
+  "ru": {
+    "atmosphere": "Локальная остановка рядом с Камата: дешёвая энергия без вокзального хаоса. Мягкий грунт.",
+    "landmarks": "Tokyu Ikegami Line, Hasunuma Onsen, закоулки Nishikamata. Ощущение крошечной станции.",
+    "food": "379 ресторанов, 184 изакая. Эхо Каматы: гёдза, рамен, шумные стойки.",
+    "nightlife": "195 поздних мест, 4 караоке. Пьют допоздна; клубы почти не важны."
+  }
+}

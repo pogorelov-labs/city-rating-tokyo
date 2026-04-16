@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy-neighbor old shopping street, polished and pricey. International, calm, never cheap.",
+    "landmarks": "Azabu-Juban shotengai, Naniwaya taiyaki, Roppongi and Arisugawa close by.",
+    "food": "397 restaurants, 68 izakayas, 55 bars. Excellent dining, expat polish, bill shock likely.",
+    "nightlife": "169 late spots, a few bars and lounges. Stylish, not wild."
+  },
+  "ja": {
+    "atmosphere": "大使館近くの古い商店街、磨かれて高い。国際的で落ち着くが、安くはない。",
+    "landmarks": "麻布十番商店街、浪花家のたい焼き、近い六本木と有栖川方面。",
+    "food": "飲食397軒、居酒屋68軒、バー55軒。食はかなり強い、外資感あり、会計は重い。",
+    "nightlife": "深夜営業169軒、バーとラウンジ少々。洒落ているが暴れない。"
+  },
+  "ru": {
+    "atmosphere": "Старая shopping street рядом с посольствами, отполировано и дорого. Международно, спокойно, не дёшево.",
+    "landmarks": "Azabu-Juban shotengai, taiyaki Naniwaya, рядом Roppongi и Arisugawa.",
+    "food": "397 ресторанов, 68 изакая, 55 баров. Отличная еда, expat-лоск, счёт может ударить.",
+    "nightlife": "169 поздних мест, бары и лаунжи. Стильно, не дико."
+  }
+}

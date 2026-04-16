@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tachikawa exurb, Tama Monorail town (trains end 23:59). Casual vibe, young crowd. Mixed dining scene.",
+    "landmarks": "5 cultural venues, pedestrian strip. Modest mid-tier charm. Elevated 97m, no flood risk.",
+    "food": "20, 3 izakaya, 7 cafes. Decent casual variety. Stops running early though.",
+    "nightlife": "3 midnight spots. Karaoke absent. Neighborhood bars, close by midnight."
+  },
+  "ja": {
+    "atmosphere": "立川郊外、多摩モノレール町（終電23:59）。カジュアル、若々しい。飲食多彩。",
+    "landmarks": "文化施設5軒、遊歩道。雑多だが親しみやすい。",
+    "food": "20、居酒屋3、カフェ7。カジュアル充実。早めに終わる。",
+    "nightlife": "深夜営業3軒。カラオケなし。町の飲み屋、真夜中に消灯。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Такиказы, монорельсовый город (последний поезд 23:59). Молодёж, casual vibe, еда разная.",
+    "landmarks": "5 культурных мест, улица. Скромная хореография.",
+    "food": "20, 3 изакаи, 7 кафе. Casual хорошо. Рано закрывается.",
+    "nightlife": "3 поздних места. Караоке нет. Соседские бары, полночь — конец."
+  }
+}

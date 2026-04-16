@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Commuter suburb, 58 min to center. Affordable housing. Quiet, unremarkable.",
+    "landmarks": "Shin-Keisei Line only. Parks nearby. Suburban standard.",
+    "food": "14 listings, 6 izakaya. Minimal. Chains only.",
+    "nightlife": "2 midnight spots. Dead after 9pm."
+  },
+  "ja": {
+    "atmosphere": "通勤郊外、中心部まで58分。住宅地。手ごろ。退屈。",
+    "landmarks": "新京成線のみ。公園点在。郊外標準。",
+    "food": "飲食店14軒、居酒屋6軒、15件。最小限。チェーン店。",
+    "nightlife": "深夜営業2軒。9時以降シャット。"
+  },
+  "ru": {
+    "atmosphere": "Commuter suburb, 58 мин до центра. Доступно. Тихо, скучно.",
+    "landmarks": "Только линия Shin-Keisei. Парки. Стандартная окраина.",
+    "food": "14 listings, 6 изакай, 15. Минимум. Цепи.",
+    "nightlife": "2 ночных места. Мертво после 21:00."
+  }
+}

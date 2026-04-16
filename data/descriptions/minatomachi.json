@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Daishi Line riverside stop near Kawasaki, calmer than the name suggests. Cheap-ish, safety caveat.",
+    "landmarks": "Tama River, Kawasaki Racecourse, Daishi Line one-stop rhythm. Green space beats food depth.",
+    "food": "30 restaurants, 11 izakayas, 2 bars. Enough for locals, thin for wandering.",
+    "nightlife": "6 midnight spots, 5 hostels, no clubs. Last train before midnight hurts."
+  },
+  "ja": {
+    "atmosphere": "川崎近くの大師線リバーサイド駅。名前ほど港っぽくない。安め、治安は注意。",
+    "landmarks": "多摩川、川崎競馬場、大師線の各停リズム。飲食より緑の余白が勝つ。",
+    "food": "飲食30軒、居酒屋11軒、バー2軒。地元には足りる、歩き回るには薄い。",
+    "nightlife": "深夜営業6軒、ホステル5件、クラブなし。終電が23時台なのが痛い。"
+  },
+  "ru": {
+    "atmosphere": "Речной стоп Daishi Line у Кавасаки, спокойнее, чем звучит. Относительно дёшево, безопасность с оговоркой.",
+    "landmarks": "Тамагава, Kawasaki Racecourse, ритм короткой Daishi Line. Зелени больше, чем еды.",
+    "food": "30 ресторанов, 11 изакая, 2 бара. Местным хватит, для прогулочного выбора тонко.",
+    "nightlife": "6 ночных мест, 5 хостелов, клубов нет. Последний поезд до полуночи — боль."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Imperial-moat office zone with event-day surges. Elegant, expensive, crowded, surprisingly cultural.",
+    "landmarks": "Nippon Budokan, Yasukuni Shrine, Chidorigafuchi, publishers and campuses. Heavy Tokyo symbolism.",
+    "food": "571 restaurants, 265 izakayas, 22 cafes. Lunch crush, post-event dinners, plenty of salaryman fuel.",
+    "nightlife": "165 late spots and 4 karaoke. Busy after Budokan shows, otherwise office-drink energy."
+  },
+  "ja": {
+    "atmosphere": "皇居堀沿いのオフィス街、イベント日は一気に混む。上品、高い、混雑、文化濃い。",
+    "landmarks": "日本武道館、靖国神社、千鳥ヶ淵、出版社と大学。東京の象徴が重い。",
+    "food": "飲食571軒、居酒屋265軒、カフェ22軒。昼は激混み、イベント後の飯も強い。",
+    "nightlife": "深夜165軒、カラオケ4軒。武道館後は賑わうが、基本は会社飲み。"
+  },
+  "ru": {
+    "atmosphere": "Офисная зона у императорского рва, всплески в дни событий. Элегантно, дорого, людно, культурно.",
+    "landmarks": "Nippon Budokan, Yasukuni Shrine, Chidorigafuchi, издательства и кампусы. Символики Токио много.",
+    "food": "571 ресторан, 265 изакая, 22 кафе. Обеденный напор, ужины после событий, топливо для офисных.",
+    "nightlife": "165 поздних мест и 4 караоке. После Budokan живо, обычно офисная выпивка."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Inokashira-line residential calm, green and sleepy. Pleasant base, not much street heat.",
+    "landmarks": "Kanda River paths, Fujimigaoka depot mood, quiet Suginami lanes. Kichijoji is the escape.",
+    "food": "22 restaurants, 3 izakayas, 1 cafe. Basic local coverage, thin choice.",
+    "nightlife": "7 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "井の頭線の静かな住宅地、緑多めで眠い。住むには良い、街の熱は少ない。",
+    "landmarks": "神田川沿い、富士見ヶ丘車庫の気配、杉並の静かな路地。吉祥寺が逃げ場。",
+    "food": "飲食22軒、居酒屋3軒、カフェ1軒。地元の最低限、選択肢は薄い。",
+    "nightlife": "深夜営業7軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Жилое спокойствие линии Inokashira, зелено и сонно. Приятная база, мало уличного жара.",
+    "landmarks": "Тропы Kanda River, настроение депо Fujimigaoka, тихие переулки Suginami. Kichijoji как выход.",
+    "food": "22 ресторана, 3 изакая, 1 кафе. Базовое локальное покрытие, выбор тонкий.",
+    "nightlife": "7 поздних мест, без караоке и клубов. Минимально."
+  }
+}

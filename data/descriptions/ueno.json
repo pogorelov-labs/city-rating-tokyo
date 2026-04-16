@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Museum-and-market chaos, commuters, tourists, bargain hunters. Rough edges after dark.",
+    "landmarks": "Ueno Park, Ameyoko, Tokyo National Museum, zoo. Pedestrian alleys never really empty.",
+    "food": "879 restaurants, 401 izakayas; ramen, yakitori, Korean, standing bars. Quality swings hard.",
+    "nightlife": "377 late spots, 67 bars, 28 clubs. Loud, messy, not subtle."
+  },
+  "ja": {
+    "atmosphere": "博物館と市場の混沌、通勤客、観光客、安売り客。夜は荒さが出る。",
+    "landmarks": "上野公園、アメ横、東京国立博物館、動物園。路地はほぼ常時混雑。",
+    "food": "飲食879軒、居酒屋401軒。ラーメン、焼鳥、韓国、立ち飲み。質は大きく振れる。",
+    "nightlife": "深夜営業377軒、バー67軒、クラブ28軒。大声で雑、繊細さはない。"
+  },
+  "ru": {
+    "atmosphere": "Хаос музеев и рынка, комьютеры, туристы, охотники за скидками. Ночью шершаво.",
+    "landmarks": "Парк Уэно, Ameyoko, Tokyo National Museum, зоопарк. Пешеходные переулки почти не пустеют.",
+    "food": "879 ресторанов, 401 изакая. Рамен, якитори, корейская еда, стоячие бары. Качество скачет.",
+    "nightlife": "377 поздних мест, 67 баров, 28 клубов. Громко, грязновато, без тонкости."
+  }
+}

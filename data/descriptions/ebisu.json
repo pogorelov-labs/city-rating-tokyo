@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished west-side hub, date-night Tokyo with office money. Great access, expensive everything.",
+    "landmarks": "Ebisu Garden Place, Yebisu Brewery Museum, Ebisu Yokocho. Clean plazas, tight backstreets.",
+    "food": "729 restaurants, 192 izakayas, 75 bars. Serious choice, serious wallet damage.",
+    "nightlife": "319 late spots. Wine bars and izakayas thrive; clubs are barely the point."
+  },
+  "ja": {
+    "atmosphere": "西側の洗練ハブ。デート向け東京とオフィス資本。アクセス抜群、何でも高い。",
+    "landmarks": "恵比寿ガーデンプレイス、ヱビスビール記念館、恵比寿横丁。広場は綺麗、裏道は濃い。",
+    "food": "飲食729軒、居酒屋192軒、バー75軒。選択肢は本気、財布への打撃も本気。",
+    "nightlife": "深夜営業319軒。ワインバーと居酒屋が強い、クラブは主役ではない。"
+  },
+  "ru": {
+    "atmosphere": "Отполированный западный хаб, Токио для свиданий и офисных денег. Доступ отличный, всё дорого.",
+    "landmarks": "Ebisu Garden Place, музей пива Yebisu, Ebisu Yokocho. Чистые площади, плотные задние улицы.",
+    "food": "729 ресторанов, 192 изакая, 75 баров. Выбор серьёзный, удар по кошельку тоже.",
+    "nightlife": "319 поздних мест. Винные бары и изакаи живут долго; клубы здесь не главное."
+  }
+}

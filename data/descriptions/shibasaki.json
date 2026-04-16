@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Keio suburb in Chofu, calm and cheap-ish. Safe, but not central or lush.",
+    "landmarks": "Residential Chofu blocks, tiny shops, local parks. Nothing screams.",
+    "food": "33 restaurants, 14 izakayas, 3 bars. Local dinners, few cafes.",
+    "nightlife": "17 late spots, 1 karaoke. Sleepy neighborhood drinks."
+  },
+  "ja": {
+    "atmosphere": "調布の小さな京王線住宅地、静かで家賃も軽め。安全、でも都心感と緑は薄い。",
+    "landmarks": "調布の住宅街、小さな商店列、近所の公園。目立つ名所はない。",
+    "food": "飲食33軒、居酒屋14軒、バー3軒。地元夕食、カフェ少なめ、発見は少ない。",
+    "nightlife": "深夜17軒、カラオケ1軒。眠い街、近所飲みが少し。"
+  },
+  "ru": {
+    "atmosphere": "Малый пригород Keio в Chofu, спокойно и относительно дёшево. Безопасно, но не центр и не сад.",
+    "landmarks": "Жилые кварталы Chofu, крошечные торговые полосы, локальные парки. Ничего не кричит.",
+    "food": "33 ресторана, 14 изакая, 3 бара. Локальные ужины, мало кафе, низкая ценность для открытий.",
+    "nightlife": "17 поздних мест, 1 караоке. Сонно, пара соседских напитков."
+  }
+}

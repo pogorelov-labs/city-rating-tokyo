@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kawaguchi edge with old entertainment-district grit. Cheap, lively, useful, not polished.",
+    "landmarks": "Station shopping streets and Chinese food blocks. The former red-light reputation still shadows it.",
+    "food": "107 restaurants, 37 izakayas. Strong late Chinese and casual counters; cafes are scarce.",
+    "nightlife": "57 late spots, 2 hostels. Drinks run late; soft-ground seismic risk is real."
+  },
+  "ja": {
+    "atmosphere": "川口の端、旧歓楽街のざらつき。安くて活気あり、便利だが磨かれてはいない。",
+    "landmarks": "駅前商店街と中華系の店の固まり。昔の歓楽街イメージはまだ残る。",
+    "food": "飲食107軒、居酒屋37軒。遅くまで中華と気軽な店が強い、カフェは少なめ。",
+    "nightlife": "深夜57軒、ホステル2軒。夜は長いが、軟弱地盤の地震リスクあり。"
+  },
+  "ru": {
+    "atmosphere": "Край Кавагути с шершавым прошлым квартала развлечений. Дешево, живо, практично, не отполировано.",
+    "landmarks": "Привокзальные торговые улицы и китайские кварталы еды. Старая репутация красных фонарей еще тянется.",
+    "food": "107 ресторанов, 37 изакая. Сильная поздняя китайская еда и простые стойки; кафе мало.",
+    "nightlife": "57 поздних мест, 2 хостела. Ночь живая; риск мягкого грунта настоящий."
+  }
+}

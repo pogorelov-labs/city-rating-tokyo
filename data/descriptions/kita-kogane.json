@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Joban-Line suburb with temple greenery. Affordable, calm, commute-heavy.",
+    "landmarks": "Hondoji hydrangea temple nearby, Tozenji lanes, green Matsudo backstreets.",
+    "food": "Everyday station food, a few izakayas, some cafes. Not a dining hub.",
+    "nightlife": "Six late places, no karaoke or clubs. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "寺と緑のある古い常磐線郊外。手頃で落ち着くが通勤は重い。",
+    "landmarks": "本土寺の紫陽花、東漸寺周辺、松戸の緑ある裏道。",
+    "food": "駅前の日常飯、居酒屋少し、カフェ少し。食の拠点ではない。",
+    "nightlife": "遅い店6軒、カラオケとクラブなし。夕食後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Старый пригород Joban Line с храмовой зеленью. Доступно, спокойно, commute тяжелый.",
+    "landmarks": "Храм Hondoji с гортензиями рядом, улочки Tozenji, зеленые закоулки Matsudo.",
+    "food": "Будничная еда у станции, немного изакай, немного кафе. Не dining hub.",
+    "nightlife": "Шесть поздних мест, без караоке и клубов. После ужина тихо."
+  }
+}

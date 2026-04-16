@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Outer-west commuter town, cheap, safe, self-contained. Not central, not sleepy either.",
+    "landmarks": "Asta/LIVIN by the station, Tanashi Shrine, Sky Tower West Tokyo on the horizon.",
+    "food": "59 restaurants, 20 izakayas. Enough daily food, thin on destination dining.",
+    "nightlife": "25 late-night spots, 1 karaoke. Local beers, little else."
+  },
+  "ja": {
+    "atmosphere": "西東京の通勤町。安め、安全、自給自足。都心ではないが、寝るだけの町でもない。",
+    "landmarks": "駅前のASTA/LIVIN、田無神社、遠くにスカイタワー西東京。",
+    "food": "飲食59軒、居酒屋20軒。普段飯は足りるが、わざわざ行く店は薄い。",
+    "nightlife": "深夜営業25軒、カラオケ1軒。地元ビール、それ以上は少ない。"
+  },
+  "ru": {
+    "atmosphere": "Западный пригород для комьютеров: дешевле, безопасно, самодостаточно. Не центр, но не сонное поле.",
+    "landmarks": "Asta/LIVIN у станции, Tanashi Shrine, Sky Tower West Tokyo на горизонте.",
+    "food": "59 ресторанов, 20 изакая. На каждый день хватает, гастро-повода ехать мало.",
+    "nightlife": "25 поздних мест, 1 караоке. Локальное пиво, дальше почти пусто."
+  }
+}

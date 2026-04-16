@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama suburb on Den-en-toshi line. Low seismic risk (rare for Tokyo area). Quiet, garden-like, family-first.",
+    "landmarks": "Parks scattered around. 2 pedestrian streets. Zero commercial landmarks. Residential focus.",
+    "food": "21 restaurants, 7 izakayas. Sparse but decent variety via (43 food points). One bar—eating at home is the norm.",
+    "nightlife": "5 late spots. Practically nonexistent. Workers go elsewhere for drinks."
+  },
+  "ja": {
+    "atmosphere": "横浜田園都市線沿い。低い地震リスク（東京圏では珍しい）。静か、庭園的、ファミリー第一。",
+    "landmarks": "公園散在。歩行者街2。ランドマークなし。住宅中心。",
+    "food": "食堂21、居酒屋7。少ないが種多い。バー1。家で食べるのが標準。",
+    "nightlife": "夜間5軒。事実上なし。皆別の場所へ。"
+  },
+  "ru": {
+    "atmosphere": "Йокогамский Den-en-toshi. Низкий сейсмический риск (редко для Токио). Сад, семейный.",
+    "landmarks": "Парки. 2 пешходные улицы. Никаких достопримечательностей. Жилая.",
+    "food": "21 ресторан, 7 изакай. Мало, но разнообразно. 1 бар. Дома едят.",
+    "nightlife": "5 позних мест. Практически нет."
+  }
+}

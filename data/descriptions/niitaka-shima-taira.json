@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Northern Itabashi tower-block edge, Mita Line utility and big green buffers. Quiet, plain, affordable.",
+    "landmarks": "Akatsuka Park side, Takashimadaira estates, wide roads. Low elevation, high seismic risk.",
+    "food": "20 restaurants, 9 izakayas, no bars or cafes. Functional meals, little wandering pleasure.",
+    "nightlife": "5 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "板橋北端の団地エリア、三田線の実用駅と大きな緑。静かで素朴、家賃は軽め。",
+    "landmarks": "赤塚公園方面、高島平団地、広い道路。標高低めで地震リスク高め。",
+    "food": "飲食20軒、居酒屋9軒、バーもカフェもなし。機能的な食事、歩き回る楽しさは薄い。",
+    "nightlife": "深夜営業5軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Северный край Itabashi с башенными домами, полезная Mita Line и большие зелёные буферы. Тихо, просто, доступно.",
+    "landmarks": "Сторона Akatsuka Park, массивы Takashimadaira, широкие дороги. Низкая высота, высокий сейсмориск.",
+    "food": "20 ресторанов, 9 изакая, без баров и кафе. Функциональная еда, мало радости для прогулок.",
+    "nightlife": "5 поздних мест, без караоке и клубов. Практически нет."
+  }
+}

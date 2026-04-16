@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet old-Tokyo enclave beside Ikebukuro. Leafy, pricey, strangely hidden.",
+    "landmarks": "Kishimojin, Zoshigaya Cemetery, Sakura Tram. Ikebukuro is close but mood flips fast.",
+    "food": "250 restaurants, 100 izakayas. Good options near Ikebukuro edge; local streets stay modest.",
+    "nightlife": "91 late-night spots, 1 karaoke. Drinks nearby, clubs basically absent."
+  },
+  "ja": {
+    "atmosphere": "池袋の隣に残る静かな古東京。緑あり、高め、妙に隠れている。",
+    "landmarks": "鬼子母神、雑司ヶ谷霊園、さくらトラム。池袋は近いが空気は急に変わる。",
+    "food": "飲食250軒、居酒屋100軒。池袋寄りは選択肢多い、住宅側は控えめ。",
+    "nightlife": "深夜営業91軒、カラオケ1軒。飲み場は近い、クラブはほぼなし。"
+  },
+  "ru": {
+    "atmosphere": "Тихий анклав старого Токио рядом с Икэбукуро. Зелено, дорого, странно спрятано.",
+    "landmarks": "Kishimojin, кладбище Zoshigaya, Sakura Tram. Икэбукуро близко, но настроение резко иное.",
+    "food": "250 ресторанов, 100 изакая. У края Икэбукуро выбор хороший; локальные улицы скромнее.",
+    "nightlife": "91 позднее место, 1 караоке. Выпить рядом можно, клубов почти нет."
+  }
+}

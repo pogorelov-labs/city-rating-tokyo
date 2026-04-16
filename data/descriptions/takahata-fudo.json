@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple town with real transfer utility. Cheap, safe, far; weekends bring pilgrim traffic.",
+    "landmarks": "Takahata Fudoson, hydrangea slopes, Keio lines and Tama Monorail junction.",
+    "food": "25 restaurants, 14 izakayas, 1 cafe. Soba, casual dinners, nothing flashy.",
+    "nightlife": "9 late spots, 1 karaoke. Local izakaya, last train early."
+  },
+  "ja": {
+    "atmosphere": "寺町だが乗換力もある。安くて安全、都心は遠い。週末は参拝客が増える。",
+    "landmarks": "高幡不動尊、あじさいの坂、京王線と多摩モノレールの結節点。",
+    "food": "飲食25軒、居酒屋14軒、カフェ1軒。蕎麦と普段の夕食、派手さなし。",
+    "nightlife": "深夜9軒、カラオケ1軒。地元居酒屋中心、終電は早め。"
+  },
+  "ru": {
+    "atmosphere": "Храмовый городок с настоящей пересадочной пользой. Дешево, спокойно, далеко; в выходные паломники.",
+    "landmarks": "Takahata Fudoson, склоны с гортензиями, узел Keio и Tama Monorail.",
+    "food": "25 ресторанов, 14 изакая, 1 кафе. Соба, простые ужины, без блеска.",
+    "nightlife": "9 поздних мест, 1 караоке. Местные изакая, последний поезд рано."
+  }
+}

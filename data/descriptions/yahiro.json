@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Sumida edge, quiet and working-class. Soft-ground seismic risk is the catch.",
+    "landmarks": "Keisei Oshiage Line, low-rise blocks, river-side green space without polish.",
+    "food": "39 restaurants, 20 izakayas, 1 bar. Small local circuit, not much cafe culture.",
+    "nightlife": "11 late spots, no karaoke. Minimal, mostly neighborhood counters."
+  },
+  "ja": {
+    "atmosphere": "墨田の古い外縁、静かで下町寄り。軟弱地盤の地震リスクが引っかかる。",
+    "landmarks": "京成押上線、低層の街区、川沿いの緑。磨かれた街ではない。",
+    "food": "飲食39軒、居酒屋20軒、バー1軒。小さな地元回路、カフェ文化は薄い。",
+    "nightlife": "深夜11軒、カラオケなし。ほぼ最小限、近所のカウンター中心。"
+  },
+  "ru": {
+    "atmosphere": "Старая окраина Сумиды, тихо и рабоче. Главный минус — мягкий грунт и сейсмориск.",
+    "landmarks": "Keisei Oshiage Line, низкие кварталы, зелень у реки без глянца.",
+    "food": "39 ресторанов, 20 изакая, 1 бар. Малый местный круг, кафе-культуры почти нет.",
+    "nightlife": "11 поздних мест, без караоке. Минимум, в основном соседские стойки."
+  }
+}

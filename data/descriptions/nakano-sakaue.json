@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku-adjacent slope town, office towers over small apartments. Fast, pricey, useful.",
+    "landmarks": "Marunouchi and Oedo junction, Kanda River slopes, Shinjuku skyline close by.",
+    "food": "162 restaurants, 66 izakayas, 9 bars. Office lunches and late ramen both work.",
+    "nightlife": "56 late spots, no clubs. Drinking is practical, not glamorous."
+  },
+  "ja": {
+    "atmosphere": "新宿隣の坂の街。オフィス塔と小さなマンション、速いが家賃高め。",
+    "landmarks": "丸ノ内線と大江戸線の結節点、神田川の坂、新宿高層ビルが近い。",
+    "food": "飲食162軒、居酒屋66軒、バー9軒。昼飯も深夜ラーメンも成立。",
+    "nightlife": "深夜営業56軒、クラブなし。実用的な飲み、華やかさは薄い。"
+  },
+  "ru": {
+    "atmosphere": "Склон рядом с Синдзюку, офисные башни над мелкими квартирами. Быстро, дорого, удобно.",
+    "landmarks": "Узел Marunouchi и Oedo, склоны Kanda River, небоскрёбы Синдзюку рядом.",
+    "food": "162 ресторана, 66 изакай, 9 баров. Работает и офисный ланч, и поздний рамен.",
+    "nightlife": "56 поздних мест, клубов нет. Выпивка практичная, не гламурная."
+  }
+}

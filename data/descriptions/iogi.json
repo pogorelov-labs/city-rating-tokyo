@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Suginami stop on Seibu Shinjuku, safe and green. Good errands, weak excitement.",
+    "landmarks": "Myoshoji River side streets, pocket parks, low-rise residential blocks west of Ogikubo.",
+    "food": "20 restaurants, 7 izakayas, 1 bar, 1 cafe. Neighborhood staples, not a dining scene.",
+    "nightlife": "7 late spots, no karaoke, no clubs. Minimal, mostly local counters."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線の静かな杉並駅。安全で緑あり、用事は済むが刺激は弱い。",
+    "landmarks": "妙正寺川沿いの道、小公園、荻窪西側の低層住宅地。",
+    "food": "飲食20件、居酒屋7件、バー1件、カフェ1件。近所の定番、食の目的地ではない。",
+    "nightlife": "深夜営業7件、カラオケなし、クラブなし。ほぼ地元カウンター。"
+  },
+  "ru": {
+    "atmosphere": "Тихая станция Suginami на Seibu Shinjuku, безопасно и зелено. Быт хорош, драйва мало.",
+    "landmarks": "Улицы вдоль Myoshoji River, малые парки, низкие жилые кварталы западнее Ogikubo.",
+    "food": "20 мест, 7 изакая, 1 бар, 1 кафе. Соседская база, не ресторанная сцена.",
+    "nightlife": "7 поздних мест, без караоке и клубов. Минимум, в основном локальные стойки."
+  }
+}

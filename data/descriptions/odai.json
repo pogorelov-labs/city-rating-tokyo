@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old tram-stop Tokyo, quiet lanes and tiny shops. Soft-ground risk, last train early.",
+    "landmarks": "Tokyo Sakura Tram, Arakawa riverside, Ogu shopping streets. Local, not sightseeing.",
+    "food": "45 restaurants plus 14 izakayas; small diners and family spots. Not destination eating.",
+    "nightlife": "13 late spots, no karaoke or clubs. Tram-town drinks, early finish."
+  },
+  "ja": {
+    "atmosphere": "昔の都電沿線、静かな路地と小さな店。軟弱地盤リスク、終電も早い。",
+    "landmarks": "東京さくらトラム、荒川沿い、尾久の商店街。観光地ではなく生活圏。",
+    "food": "飲食45軒、居酒屋14軒。小食堂と家族向けの店中心。遠征する味ではない。",
+    "nightlife": "深夜営業13軒、カラオケもクラブもなし。都電町の一杯、早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Старый трамвайный Токио, тихие переулки и мелкие лавки. Мягкий грунт, ранний последний поезд.",
+    "landmarks": "Tokyo Sakura Tram, набережная Аракавы, торговые улицы Огу. Жизнь, не туризм.",
+    "food": "45 ресторанов и 14 изакая. Малые столовые, семейные места. Не гастро-точка.",
+    "nightlife": "13 поздних мест, без караоке и клубов. Трамвайные посиделки, ранний финиш."
+  }
+}

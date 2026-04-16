@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokosuka waterfront quiet, Yokosuka Line exurb. Naval town, sparse residential. Bare essentials. 69-minute commute.",
+    "landmarks": "Bay views, minimal urban character. Port area, not tourist-mapped. Green space 24m sqm nearby.",
+    "food": "Ghost town dining: 1 listings, 2, 1 izakaya. No clinics or pharmacies. Survival shopping only.",
+    "nightlife": "Minimal. One midnight venue. Industrial waterfront, not scene. Early sleepers."
+  },
+  "ja": {
+    "atmosphere": "横須賀湾沿い静寂地。横須賀線の終焉。軍港町、住居疎ら。基本最小限。",
+    "landmarks": "湾の眺め、都市らしさなし。港町、観光マップなし。緑地24m2近い。",
+    "food": "ゴーストタウン：1、2、居酒屋1。医療施設なし。生存食のみ。",
+    "nightlife": "ほぼ無。深夜営業1軒。工業港湾。早寝の町。"
+  },
+  "ru": {
+    "atmosphere": "Йокосука портовая тишь, конец линии. Военный город, редко жилой. 69 минут до центра.",
+    "landmarks": "Вид на залив, урбана минус. Портовая зона, не туристическая.",
+    "food": "Вымирающие рестораны: 1, 2, 1 изакая. Без клиник. Выживание.",
+    "nightlife": "Минимум. 1 поздний бар. Индустриальный порт, не сцена."
+  }
+}

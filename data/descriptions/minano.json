@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain town in Saitama, dead quiet at 780 daily passengers. Remote, slow train frequency, hiking access.",
+    "landmarks": "Chichibu Main Line terminus. Gorge trails, hiking hub. Rock climbing destination nearly. Very basic station.",
+    "food": "Minimal (1 restaurant + 7 spots). Local convenience stores. Expect to cook or travel.",
+    "nightlife": "Virtually none. Last train 23:21. Lights out early."
+  },
+  "ja": {
+    "atmosphere": "埼玉奥地の登山拠点。1日780人、列車少なめ。閉ざされた雰囲気。",
+    "landmarks": "秩父本線。峡谷ハイク、クライミング。小さな駅。",
+    "food": "飲食店ほぼなし。コンビニで食べるか自炊必須。",
+    "nightlife": "皆無。23時で街は寝る。"
+  },
+  "ru": {
+    "atmosphere": "Горный район Сайтамы, 780 пассажиров в день. Отдалённо, редкие поезда, доступ к пешеходным маршрутам.",
+    "landmarks": "Линия Chichibu Main, ущелья, скалолазание. Простая станция.",
+    "food": "Почти ничего (1 ресторан, 7 мест на карте). Коляк автолавок.",
+    "nightlife": "Практически нет. Последний поезд 23:21."
+  }
+}

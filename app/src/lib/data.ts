@@ -7,8 +7,10 @@ import lineNamesData from '@/data/line-names.json';
 import wardData from '@/data/ward-data.json';
 import lastTrainsData from '@/data/last-trains.json';
 import livecamsData from '@/data/livecams.json';
-import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo, LastTrainInfo, LiveCamera } from './types';
+import generatedDescriptionsData from '@/data/generated-descriptions.json';
+import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo, LastTrainInfo, LiveCamera, MultilingualDescription } from './types';
 import { rentToAffordability } from './scoring';
+import type { Locale } from '@/i18n/routing';
 
 const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
 const thumbData = stationThumbData as Record<string, { thumb: string; lqip: string }>;
@@ -17,6 +19,16 @@ const lineNames = lineNamesData as Record<string, Omit<LineInfo, 'id'>>;
 const wards = wardData as Record<string, WardInfo>;
 const lastTrains = lastTrainsData as Record<string, LastTrainInfo>;
 const livecams = livecamsData as Record<string, LiveCamera[]>;
+
+/**
+ * Multilingual descriptions from the CRTKY-109 pipeline.
+ * The `_metadata` key is stripped — we only index per-slug entries.
+ */
+const generatedDescriptions = Object.fromEntries(
+  Object.entries(generatedDescriptionsData as Record<string, unknown>).filter(
+    ([key]) => !key.startsWith('_')
+  )
+) as Record<string, MultilingualDescription>;
 
 export function getStations(): Station[] {
   return (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
@@ -45,6 +57,11 @@ export function getStations(): Station[] {
 
     const env = envData[s.slug] || null;
 
+    // Description from CRTKY-109 pipeline — covers all 1493 stations in EN/JA/RU.
+    // Legacy `demo.description` (RU-only editorial, ~252 stations) is ignored; new
+    // multilingual content supersedes it for a consistent voice across the dataset.
+    const description = generatedDescriptions[s.slug] || null;
+
     if (demo) {
       const baseRatings = { ...demo.ratings, daily_essentials: demo.ratings.daily_essentials ?? 5 };
       const ratings = computedRent != null
@@ -59,7 +76,7 @@ export function getStations(): Station[] {
         ratings,
         transit_minutes: demo.transit_minutes,
         rent_avg: rentAvg,
-        description: demo.description || null,
+        description,
         confidence: demo.confidence
           ? { ...demo.confidence, daily_essentials: demo.confidence.daily_essentials ?? 'estimate' as const }
           : null,
@@ -70,7 +87,7 @@ export function getStations(): Station[] {
         environment: env,
       };
     }
-    return { ...s, lines: resolvedLines, ward, last_train, livecams: livecam_list, rent_avg: rentAvg, environment: env };
+    return { ...s, lines: resolvedLines, ward, last_train, livecams: livecam_list, rent_avg: rentAvg, description, environment: env };
   });
 }
 
@@ -105,11 +122,15 @@ export function getThumbnails(): Record<string, { thumb: string; lqip: string }>
   return thumbData;
 }
 
-/** Pre-computed short atmosphere snippets */
-export function getSnippets(): Record<string, string> {
+/**
+ * Pre-computed short atmosphere snippets for the homepage map tooltip.
+ * Scoped to a single locale — each locale renders its own homepage, so the
+ * RSC payload stays 1493 × ~120 chars regardless of total locale count.
+ */
+export function getSnippets(locale: Locale): Record<string, string> {
   const snippets: Record<string, string> = {};
-  for (const [slug, demo] of Object.entries(DEMO_RATINGS)) {
-    const atmo = demo.description?.atmosphere;
+  for (const [slug, desc] of Object.entries(generatedDescriptions)) {
+    const atmo = desc[locale]?.atmosphere;
     if (atmo) {
       snippets[slug] = atmo.length > 120 ? atmo.slice(0, 120) + '...' : atmo;
     }

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Shonan Monorail hillside stop. Quiet, green, far from Tokyo by design.",
+    "landmarks": "Fujisawa slopes, monorail viaducts, Enoshima side trips. Low-rise and local.",
+    "food": "58 spots, 10 izakayas, 8 cafes. Surprisingly usable, not a dining destination.",
+    "nightlife": "Three late spots, one bar. Hostels add noise, not nightlife."
+  },
+  "ja": {
+    "atmosphere": "湘南モノレールの小さな丘駅。静かで緑多め、東京からはかなり遠い。",
+    "landmarks": "藤沢の坂道、モノレール高架、江ノ島方面の寄り道。低層で地元感強い。",
+    "food": "飲食58軒、居酒屋10軒、カフェ8軒。意外に使えるが目的地感は薄い。",
+    "nightlife": "深夜営業3軒、バー1軒。宿はあるが夜遊びの街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная станция Shonan Monorail на холмах. Тихо, зелено, до Токио далеко.",
+    "landmarks": "Склоны Фудзисавы, эстакады монорельса, выезды к Эносиме. Низкая местная застройка.",
+    "food": "58 мест, 10 изакай, 8 кафе. Неожиданно удобно, но не гастро-точка.",
+    "nightlife": "3 поздних места, 1 бар. Хостелы дают шум, не ночную жизнь."
+  }
+}

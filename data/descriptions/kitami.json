@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Setagaya on the Odakyu line, safe, green, village-scale. Not much buzz.",
+    "landmarks": "Nogawa bridge, Kitami Fudo Hall, Keigen-ji steps, small shopping street.",
+    "food": "22 restaurants, 4 izakayas, 2 cafes. Soba and local counters, not a food crawl.",
+    "nightlife": "Two late spots, no bars, no karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "小田急沿いの静かな世田谷、安全で緑多め、村サイズ。賑わいは薄い。",
+    "landmarks": "野川の橋、喜多見不動堂、慶元寺の石段、小さな商店街。",
+    "food": "飲食22軒、居酒屋4軒、カフェ2軒。蕎麦と地元カウンター、食べ歩き街ではない。",
+    "nightlife": "深夜2軒、バーなし、カラオケなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Тихая Сэтагая на Odakyu, безопасно, зелено, почти деревня. Движения мало.",
+    "landmarks": "Мост через Nogawa, Kitami Fudo Hall, ступени Keigen-ji, маленькая торговая улица.",
+    "food": "22 ресторана, 4 изакаи, 2 кафе. Соба и местные стойки, не гастро-прогулка.",
+    "nightlife": "2 поздних места, без баров и караоке. Минимально."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tram depot pocket, old Arakawa and very quiet. Green helps, soft-ground flag matters.",
+    "landmarks": "Arakawa tram depot, Sakura Tram tracks, small north-Tokyo parks. Rail nerd charm.",
+    "food": "31 restaurants, 10 izakayas, 4 cafes. Local basics only, not a dining stop.",
+    "nightlife": "8 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "都電車庫の近く、古い荒川でかなり静か。緑はあるが、軟弱地盤リスクは大きい。",
+    "landmarks": "荒川車庫、さくらトラムの線路、小さな北東京の公園。鉄道好き向き。",
+    "food": "飲食31軒、居酒屋10軒、カフェ4軒。地元の基本だけ、食の目的地ではない。",
+    "nightlife": "深夜営業8軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Карман трамвайного депо, старая Arakawa и очень тихо. Зелень помогает, мягкий грунт важен.",
+    "landmarks": "Arakawa tram depot, пути Sakura Tram, малые парки северного Токио. Шарм для rail nerds.",
+    "food": "31 ресторан, 10 изакая, 4 кафе. Только локальная база, не food stop.",
+    "nightlife": "8 поздних мест, без караоке и клубов. Минимально."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Busy Tama River transfer town, student energy and family blocks. Convenient, rough-edged.",
+    "landmarks": "Tama River paths, Fujiko F. Fujio Museum side trips, Odakyu-Nambu transfer churn.",
+    "food": "105 restaurants, 43 izakayas. Strong everyday eating, ramen and chains near exits.",
+    "nightlife": "43 late spots, 2 karaoke, no clubs. Drinks stay local."
+  },
+  "ja": {
+    "atmosphere": "多摩川沿いの乗換街。学生感と住宅街が混ざる。便利だが少し荒い。",
+    "landmarks": "多摩川の散歩道、藤子・F・不二雄ミュージアム方面、小田急と南武線の乗換。",
+    "food": "飲食105軒、居酒屋43軒。駅前にラーメン、チェーン、普段使いの店が強い。",
+    "nightlife": "深夜43軒、カラオケ2軒、クラブなし。飲みは地元で完結。"
+  },
+  "ru": {
+    "atmosphere": "Шумный пересадочный городок у Тама, студенты плюс семейные кварталы. Удобно, шероховато.",
+    "landmarks": "Дорожки вдоль Тама, вылазки к музею Fujiko F. Fujio, суета Odakyu-Nambu.",
+    "food": "105 ресторанов, 43 изакая. Сильная повседневная еда, рамен и чейны у выходов.",
+    "nightlife": "43 поздних места, 2 караоке, клубов нет. Пьют по-соседски."
+  }
+}

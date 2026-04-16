@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo-line culture without Koenji chaos. Literary, lived-in, crowded on commute hours.",
+    "landmarks": "Pearl Center, Star Road bars, Asagaya Shinmeigu. Tanabata energy, everyday scale.",
+    "food": "153 restaurants, 60 izakayas, 10 bars. Strong local dining, ramen, yakitori, small rooms.",
+    "nightlife": "69 late spots, 2 karaoke rooms. Bars yes, clubs no."
+  },
+  "ja": {
+    "atmosphere": "高円寺ほど荒れない中央線文化。文系、生活感あり、通勤時間はしっかり混む。",
+    "landmarks": "パールセンター、スターロード、阿佐ヶ谷神明宮。七夕の熱、普段は生活サイズ。",
+    "food": "飲食153軒、居酒屋60軒、バー10軒。地元飯強い、ラーメン、焼鳥、小箱。",
+    "nightlife": "深夜営業69軒、カラオケ2軒。バーはある、クラブはない。"
+  },
+  "ru": {
+    "atmosphere": "Культура Chuo Line без хаоса Koenji. Литературно, обжито, в часы комьюта тесно.",
+    "landmarks": "Pearl Center, бары Star Road, Asagaya Shinmeigu. Энергия Tanabata, бытовой масштаб.",
+    "food": "153 ресторана, 60 изакая, 10 баров. Сильная локальная еда, рамен, якитори, малые комнаты.",
+    "nightlife": "69 поздних мест, 2 караоке. Бары да, клубы нет."
+  }
+}

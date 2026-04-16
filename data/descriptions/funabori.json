@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Flat Edogawa commuter town, practical and calm. One line, family pace, little glamour.",
+    "landmarks": "Tower Hall Funabori, Shinkawa canals, broad river parks. Low-key east-side living.",
+    "food": "28 restaurants, 13 izakayas. Local ramen and set meals; useful, not destination dining.",
+    "nightlife": "14 late spots, 1 karaoke. Neighborhood drinks, no club energy."
+  },
+  "ja": {
+    "atmosphere": "平坦な江戸川の通勤街。実用的で落ち着く。一路線、家族ペース、華は少ない。",
+    "landmarks": "タワーホール船堀、新川の水辺、広い河川敷。東側の地味な暮らし。",
+    "food": "飲食28軒、居酒屋13軒。地元ラーメンと定食。便利だが遠征先ではない。",
+    "nightlife": "深夜14軒、カラオケ1軒。近所飲み中心、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Плоский спальный Эдогава, спокойно и практично. Одна линия, семейный темп, мало блеска.",
+    "landmarks": "Tower Hall Funabori, каналы Shinkawa, широкие речные парки. Негромкая восточная жизнь.",
+    "food": "28 ресторанов, 13 изакая. Местный рамен и тэйсёку; удобно, но не гастроцель.",
+    "nightlife": "14 поздних мест, 1 караоке. Соседские напитки, клубной энергии нет."
+  }
+}

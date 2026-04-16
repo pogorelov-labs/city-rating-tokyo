@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Akiruno edge town, fields, retail boxes, and real green. Cheap, safe, very far from central Tokyo.",
+    "landmarks": "Itsukaichi Line stop by Hinode/Akiruno greenery. 120 green spots, hills start to show.",
+    "food": "Only 3 listed restaurants and 4 small food spots. Bring expectations down, cook at home.",
+    "nightlife": "Minimal. No izakaya, bars, karaoke, or clubs around the station."
+  },
+  "ja": {
+    "atmosphere": "あきる野の端っこ。畑、郊外店、本物の緑。安く安全、都心からはかなり遠い。",
+    "landmarks": "五日市線の駅、日の出・あきる野の緑の入口。緑スポット120、丘の気配あり。",
+    "food": "掲載飲食は3軒、小さな食事処4件程度。期待値は下げる、家で食べる街。",
+    "nightlife": "最小限。駅周辺に居酒屋、バー、カラオケ、クラブはほぼなし。"
+  },
+  "ru": {
+    "atmosphere": "Край Акируно: поля, коробки ритейла и настоящая зелень. Дёшево, безопасно, очень далеко от центра.",
+    "landmarks": "Остановка Itsukaichi Line у зелени Hinode/Akiruno. 120 зелёных точек, уже чувствуются холмы.",
+    "food": "Всего 3 ресторана и 4 маленькие точки еды. Ожидания вниз, лучше готовить дома.",
+    "nightlife": "Минимально. У станции почти нет изакая, баров, караоке и клубов."
+  }
+}

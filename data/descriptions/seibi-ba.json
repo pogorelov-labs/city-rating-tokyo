@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Airport-service hinterland on the monorail. Safe and empty, more logistics than neighborhood.",
+    "landmarks": "Haneda maintenance yards, canals, warehouse edges. Planes overhead, few street-level reasons.",
+    "food": "27 restaurants, mostly worker lunches and airport-adjacent basics. Essentials are thin.",
+    "nightlife": "Six late spots, one karaoke, last train at midnight. Functional, not social."
+  },
+  "ja": {
+    "atmosphere": "モノレール沿いの空港整備エリア。安全で空いているが、街より物流。",
+    "landmarks": "羽田の整備場、運河、倉庫の縁。飛行機は近い、歩く理由は少ない。",
+    "food": "飲食27軒、作業員ランチと空港寄りの基本飯中心。生活利便は薄い。",
+    "nightlife": "深夜6軒、カラオケ1軒、終電は0時。機能的、社交的ではない。"
+  },
+  "ru": {
+    "atmosphere": "Аэропортовая служебная окраина на монорельсе. Безопасно и пусто, больше логистика.",
+    "landmarks": "Ремонтные зоны Ханэды, каналы, склады. Самолёты рядом, уличных причин мало.",
+    "food": "27 ресторанов: рабочие обеды и базовая еда у аэропорта. Бытовых удобств мало.",
+    "nightlife": "Шесть поздних мест, одно караоке, последний поезд в полночь. Функция, не тусовка."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yamanote grit with tram nostalgia. Busy, tasty, slightly sketchy after dark.",
+    "landmarks": "Tokyo Sakura Tram stop, north-south bar streets, Ikebukuro within walking range. Compact chaos.",
+    "food": "311 restaurants, 97 izakayas, 30 bars. Excellent cheap eats; quality swings hard.",
+    "nightlife": "107 late spots. Izakaya-heavy, adult-town edges, not polished."
+  },
+  "ja": {
+    "atmosphere": "山手線のざらつきと都電の懐かしさ。賑やか、旨い、夜は少し荒い。",
+    "landmarks": "東京さくらトラム、南北の飲み屋街、池袋も徒歩圏。小さな混沌。",
+    "food": "飲食311軒、居酒屋97軒、バー30軒。安旨は強いが、質の振れ幅大きめ。",
+    "nightlife": "深夜107軒。居酒屋中心、歓楽街の端の匂い。上品ではない。"
+  },
+  "ru": {
+    "atmosphere": "Яманотэ с шероховатостью и старым трамваем. Шумно, вкусно, ночью чуть мутно.",
+    "landmarks": "Tokyo Sakura Tram, улицы баров с двух сторон, Икэбукуро пешком. Компактный хаос.",
+    "food": "311 ресторанов, 97 изакая, 30 баров. Дёшево и вкусно, но качество скачет.",
+    "nightlife": "107 поздних мест. Изакая, взрослые края района, без лоска."
+  }
+}

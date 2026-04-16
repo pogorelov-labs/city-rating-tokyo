@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Itabashi shotengai town on Tobu Tojo. Dense, honest, easy Ikebukuro access without Ikebukuro chaos.",
+    "landmarks": "Naka-itabashi shopping street, Shakujii River walks, small local bridges. Everyday Tokyo, not scenic.",
+    "food": "78 restaurants, 36 izakayas, 3 bars. Cheap counters, grilled skewers, neighborhood Chinese.",
+    "nightlife": "31 late spots, no karaoke or clubs. Local izakaya crawl, low drama."
+  },
+  "ja": {
+    "atmosphere": "東武東上線の板橋商店街タウン。密で正直、池袋に近いが池袋の混沌はない。",
+    "landmarks": "中板橋商店街、石神井川沿い、小さな橋。景勝地ではなく日常の東京。",
+    "food": "飲食78軒、居酒屋36軒、バー3軒。安いカウンター、焼き鳥、町中華。",
+    "nightlife": "深夜営業31軒、カラオケもクラブもなし。地元居酒屋巡り、荒れにくい。"
+  },
+  "ru": {
+    "atmosphere": "Itabashi-shotengai на Tobu Tojo. Плотно, честно, Ikebukuro близко, но без его хаоса.",
+    "landmarks": "Торговая улица Naka-itabashi, прогулки вдоль Shakujii River, маленькие мосты. Ежедневный Токио, не открытка.",
+    "food": "78 ресторанов, 36 изакая, 3 бара. Дешёвые стойки, якитори, районная китайская.",
+    "nightlife": "31 позднее место, без караоке и клубов. Местный изакая-кролл, мало драмы."
+  }
+}

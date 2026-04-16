@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo Dome surge, student-office mix, event-day chaos. Great access, thin residential soul.",
+    "landmarks": "Tokyo Dome, Korakuen Hall, Koishikawa Korakuen, bookish Jimbocho nearby.",
+    "food": "652 restaurants, 300 izakayas, 24 cafes. Game-day food, student meals, serious choice.",
+    "nightlife": "193 late spots, karaoke but no clubs. Post-event izakaya, then trains."
+  },
+  "ja": {
+    "atmosphere": "東京ドームの波、学生と会社員の混在、イベント日は混沌。アクセス強い、生活感は薄い。",
+    "landmarks": "東京ドーム、後楽園ホール、小石川後楽園、近い神保町の本の気配。",
+    "food": "飲食652軒、居酒屋300軒、カフェ24軒。試合後飯、学生飯、選択肢は本気。",
+    "nightlife": "深夜営業193軒、カラオケあり、クラブなし。イベント後の居酒屋、それから電車。"
+  },
+  "ru": {
+    "atmosphere": "Волна Tokyo Dome, смесь студентов и офисов, хаос в дни событий. Доступ супер, быта мало.",
+    "landmarks": "Tokyo Dome, Korakuen Hall, Koishikawa Korakuen, книжный Jimbocho рядом.",
+    "food": "652 ресторана, 300 изакая, 24 кафе. Еда после матчей, студенческие места, выбор серьёзный.",
+    "nightlife": "193 поздних места, караоке есть, клубов нет. Изакая после событий, потом поезд."
+  }
+}

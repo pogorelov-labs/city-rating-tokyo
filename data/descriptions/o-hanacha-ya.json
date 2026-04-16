@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Katsushika lowland calm, cheap and green. Flood risk and soft-ground flag, very local feel.",
+    "landmarks": "Ohanajaya shopping street, Hikifunegawa Water Park, Keisei local tracks.",
+    "food": "34 restaurants, 12 izakayas, 2 cafes. Basics covered, little food adventure.",
+    "nightlife": "9 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "葛飾低地の静かな街、安くて緑多め。浸水と軟弱地盤リスクあり、完全に地元感。",
+    "landmarks": "お花茶屋商店街、曳舟川親水公園、京成のローカル線路。",
+    "food": "飲食34軒、居酒屋12軒、カフェ2軒。基本は足りるが、食の冒険は少ない。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная низина Katsushika, дёшево и зелено. Риск затопления и мягкий грунт, чисто локально.",
+    "landmarks": "Ohanajaya shopping street, Hikifunegawa Water Park, локальные пути Keisei.",
+    "food": "34 ресторана, 12 изакая, 2 кафе. База закрыта, гастро-приключений мало.",
+    "nightlife": "9 поздних мест, без караоке и клубов. Минимально."
+  }
+}

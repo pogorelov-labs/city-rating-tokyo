@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Meguro residential stop, safe and polished. Good daily base, expensive for the buzz.",
+    "landmarks": "Senzoku pond area nearby, Tokyu Meguro Line lanes, Ookayama within reach.",
+    "food": "100 restaurants, 32 izakayas, 9 bars. Solid local eating, restrained nightlife.",
+    "nightlife": "32 late spots, no karaoke or clubs. Low-key bars, early streets."
+  },
+  "ja": {
+    "atmosphere": "静かな目黒の住宅駅、安全で整っている。日常拠点は良いが、熱量の割に高い。",
+    "landmarks": "近い洗足池方面、東急目黒線の路地、大岡山も徒歩圏。",
+    "food": "飲食100軒、居酒屋32軒、バー9軒。地元飯は安定、夜は控えめ。",
+    "nightlife": "深夜営業32軒、カラオケもクラブもなし。低音量のバー、道は早く静か。"
+  },
+  "ru": {
+    "atmosphere": "Тихая жилая станция Meguro, безопасно и аккуратно. Хорошая база, дорого для такого buzz.",
+    "landmarks": "Рядом район Senzoku pond, переулки Tokyu Meguro Line, Ookayama доступна.",
+    "food": "100 ресторанов, 32 изакая, 9 баров. Крепкая локальная еда, сдержанная ночь.",
+    "nightlife": "32 поздних места, без караоке и клубов. Тихие бары, ранние улицы."
+  }
+}

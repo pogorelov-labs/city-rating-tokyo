@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old merchant core turned polished office grid. Central, expensive, very little home softness.",
+    "landmarks": "Nihonbashi bridge, Coredo, Mitsukoshi, Tokyo Station edge. History under glass.",
+    "food": "1271 restaurants, 575 izakayas, 37 cafes. Excellent lunches and dinners, office prices.",
+    "nightlife": "212 late spots, karaoke but no clubs. After-work drinks, clean finish."
+  },
+  "ja": {
+    "atmosphere": "旧商人街が磨かれたオフィス格子へ。中心で高い、暮らしの柔らかさは薄い。",
+    "landmarks": "日本橋、コレド、三越、東京駅の端。ガラスの下にある歴史。",
+    "food": "飲食1271軒、居酒屋575軒、カフェ37軒。昼も夜も優秀、値段はオフィス仕様。",
+    "nightlife": "深夜営業212軒、カラオケあり、クラブなし。仕事後に飲んで綺麗に終わる。"
+  },
+  "ru": {
+    "atmosphere": "Старое купеческое ядро стало отполированной офисной сеткой. Центр, дорого, мало домашности.",
+    "landmarks": "Мост Nihonbashi, Coredo, Mitsukoshi, край Tokyo Station. История под стеклом.",
+    "food": "1271 ресторан, 575 изакая, 37 кафе. Отличные ланчи и ужины, офисные цены.",
+    "nightlife": "212 поздних мест, караоке есть, клубов нет. Выпивка после работы, чистый финал."
+  }
+}

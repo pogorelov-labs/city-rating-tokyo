@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kawagoe local hub, cheap rents, old-town access. Good weekends, long Tokyo commute.",
+    "landmarks": "Little Edo warehouse district nearby, Crea Mall, Hon-Kawagoe walking link.",
+    "food": "233 restaurants, 120 izakayas; eel, sweets, ramen, tourist overflow and local counters.",
+    "nightlife": "93 late spots, 5 karaoke, 1 club. Busy for Saitama, last train matters."
+  },
+  "ja": {
+    "atmosphere": "川越の地元ハブ。家賃安め、蔵の街も近い。週末は楽しい、都心通勤は長い。",
+    "landmarks": "小江戸の蔵造りエリア、クレアモール、本川越まで徒歩連絡。",
+    "food": "飲食233軒、居酒屋120軒。鰻、甘味、ラーメン、観光客と地元客が混ざる。",
+    "nightlife": "深夜営業93軒、カラオケ5軒、クラブ1軒。埼玉では賑やか、終電注意。"
+  },
+  "ru": {
+    "atmosphere": "Локальный узел Кавагоэ, аренда ниже, старый город рядом. Выходные хороши, до Токио долго.",
+    "landmarks": "Складской район Little Edo рядом, Crea Mall, пешая связка с Hon-Kawagoe.",
+    "food": "233 ресторана, 120 изакая. Угорь, сладости, рамен, туристы вперемешку с местными.",
+    "nightlife": "93 поздних места, 5 караоке, 1 клуб. Для Сайтамы шумно, последний поезд важен."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student-quiet Kodaira suburb, leafy and safe. Single private line, slow to central.",
+    "landmarks": "Hitotsubashi campus area, Tamako Line, green-road pockets. Academic, not flashy.",
+    "food": "20 restaurants, 9 izakayas, no cafes counted. Student meals and local counters.",
+    "nightlife": "6 late spots, no karaoke. Quiet drinks, then home."
+  },
+  "ja": {
+    "atmosphere": "小平の学生寄り住宅地、緑が多く安全。私鉄一本、都心へは遅い。",
+    "landmarks": "一橋学園エリア、多摩湖線、緑道ポケット。学術的、派手さなし。",
+    "food": "飲食20軒、居酒屋9軒、カフェ計上なし。学生飯と地元カウンター。",
+    "nightlife": "深夜6軒、カラオケなし。静かに飲んで帰る街。"
+  },
+  "ru": {
+    "atmosphere": "Тихий студенческий пригород Кодайры, зелено и безопасно. Одна частная линия, центр медленный.",
+    "landmarks": "Зона Hitotsubashi, линия Tamako, карманы зеленых дорожек. Академично, не ярко.",
+    "food": "20 ресторанов, 9 изакая, кафе не видно. Студенческая еда и местные стойки.",
+    "nightlife": "6 поздних мест, караоке нет. Тихо выпить и домой."
+  }
+}

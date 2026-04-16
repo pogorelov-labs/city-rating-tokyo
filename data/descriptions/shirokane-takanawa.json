@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Minato calm, moneyed but not loud. Great access, painful rent, low street chaos.",
+    "landmarks": "Sengakuji side, Takanawa slopes, temple pockets. Green patches hide between expensive blocks.",
+    "food": "78 listed spots, 75 food pins. Better for refined meals than cheap daily grazing.",
+    "nightlife": "Quietly useful: 16 late spots, six bars, no karaoke. Sleepy for Minato."
+  },
+  "ja": {
+    "atmosphere": "港区らしい上品な静けさ、金持ち感はあるが騒がしくない。家賃は痛い。",
+    "landmarks": "泉岳寺側、高輪の坂、寺の小さな固まり。高い街区の間に緑あり。",
+    "food": "掲載78軒、飲食75。安い日常食より、整った外食向き。",
+    "nightlife": "静かに使える程度。深夜16軒、バー6、カラオケなし。港区にしては眠い。"
+  },
+  "ru": {
+    "atmosphere": "Вылизанный покой Минато, дорого, но без крика. Доступ отличный, аренда болезненная.",
+    "landmarks": "Сторона Sengakuji, склоны Takanawa, карманы храмов. Зелень прячется между дорогими кварталами.",
+    "food": "78 мест в выдаче, 75 точек. Лучше для аккуратных ужинов, чем для дешёвой еды на каждый день.",
+    "nightlife": "Тихо полезно: 16 поздних мест, шесть баров, караоке нет. Для Минато сонно."
+  }
+}

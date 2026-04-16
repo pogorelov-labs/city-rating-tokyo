@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya tram calm, residential and slow. Safe, leafy enough, inconvenient if you hate transfers.",
+    "landmarks": "Gotokuji temple cats, Setagaya Hachimangu, Setagaya Line streetcar rhythm.",
+    "food": "92 restaurants, 34 izakayas. Small soba shops, cafes, family places, no destination buzz.",
+    "nightlife": "38 late spots, 3 karaoke. Quiet local drinking, last tram just after midnight."
+  },
+  "ja": {
+    "atmosphere": "世田谷線の静かな住宅地。安全、ほどほど緑、乗換嫌いには不便。",
+    "landmarks": "豪徳寺の招き猫、世田谷八幡宮、世田谷線の路面電車リズム。",
+    "food": "飲食92軒、居酒屋34軒。小さなそば屋、カフェ、家族店。目的地感は薄い。",
+    "nightlife": "深夜38軒、カラオケ3軒。静かな地元飲み、終電は日付少し過ぎ。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная Setagaya на трамвае: жилой, медленный ритм. Безопасно, зелено, пересадки раздражают.",
+    "landmarks": "Коты Gotokuji, Setagaya Hachimangu, ритм уличной Setagaya Line.",
+    "food": "92 ресторана, 34 изакая. Маленькая соба, кафе, семейные места, без гастро-шума.",
+    "nightlife": "38 поздних мест, 3 караоке. Тихая местная выпивка, последний трамвай чуть после полуночи."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "University town on Meguro ward, 27 min commute, spacious & calm. Student discount culture, low crowds.",
+    "landmarks": "Tokyo Metropolitan University campus, nearby parks & gardens. Quiet neighborhoods, minimal tourist draw.",
+    "food": "56 restaurants, 14 izakayas. Student-friendly joints, scattered quality options.",
+    "nightlife": "15 midnight spots, minimal clubs. Campus bars, early closing. Student nightlife is tame."
+  },
+  "ja": {
+    "atmosphere": "目黒区の大学町、通勤27分、広々落ち着き。学割文化、混雑低い。",
+    "landmarks": "都立大学キャンパス、近くの公園＆庭園。静かな街、観光客少ない。",
+    "food": "食堂56軒、27件、居酒屋14軒。学生向け安食、品質は散在。",
+    "nightlife": "夜間営業15件、クラブ最小。キャンパス系バー、早期終了。学生夜遊びは地味。"
+  },
+  "ru": {
+    "atmosphere": "Студенческий городок в Мегуро-ку, коммутинг 27 минут, просторно и спокойно. Студенческая скидка-культура, низкие толпы.",
+    "landmarks": "Кампус Токийского университета, поблизости парки и сады. Спокойные кварталы, туристов минимум.",
+    "food": "56 ресторанов, 27 (), 14 изакай. Студентоориентированные, качество разное.",
+    "nightlife": "15 ночных мест, клубы минимальны. Кампусные бары, раннее закрытие. Студенческая ночная жизнь скромна."
+  }
+}

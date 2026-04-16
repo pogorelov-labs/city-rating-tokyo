@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned waterfront island, wide roads and tower blocks. Event-day crowds, empty gaps between.",
+    "landmarks": "Tokyo Big Sight, Ariake Garden, Garden Theater, canal walks. Convention Tokyo, not old Tokyo.",
+    "food": "41 restaurants, 11 izakayas, almost no bar culture. Mall meals and event fuel dominate.",
+    "nightlife": "Thin after events. Yurikamome gets quiet, drinking options feel scheduled."
+  },
+  "ja": {
+    "atmosphere": "計画された湾岸島。広い道路とタワマン。イベント日は混む、普段は空白が目立つ。",
+    "landmarks": "東京ビッグサイト、有明ガーデン、ガーデンシアター、運河沿い。古い東京ではなく展示会の東京。",
+    "food": "飲食41軒、居酒屋11軒、バー文化ほぼなし。モール飯とイベント前後の補給が中心。",
+    "nightlife": "イベント後は薄い。ゆりかもめが静まると、飲みも予定調和。"
+  },
+  "ru": {
+    "atmosphere": "Спланированный остров у залива, широкие дороги и башни. Толпа в дни событий, пустоты между ними.",
+    "landmarks": "Tokyo Big Sight, Ariake Garden, Garden Theater, прогулки вдоль каналов. Конвеншн-Токио, не старый город.",
+    "food": "41 ресторан, 11 изакая, почти без барной культуры. Еда моллов и топливо перед ивентами.",
+    "nightlife": "После событий тонко. Yurikamome затихает, выпивка кажется расписанной."
+  }
+}

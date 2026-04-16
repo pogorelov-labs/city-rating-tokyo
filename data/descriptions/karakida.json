@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tama New Town sprawl, Odakyu edge. Huge green belt (4.8M sqm). Family suburb, very safe. 63 min transit.",
+    "landmarks": "Tama New Town planning exhibit site. Parks, nurseries, schools. Zero nightlife attractions.",
+    "food": "2 listings minimal, 3. Data limited. Convenience stores, family chains dominate.",
+    "nightlife": "Practically absent. New Town sleeps by 9pm."
+  },
+  "ja": {
+    "atmosphere": "多摩ニュータウンの拡大、小田急の端。巨大緑地帯（480万平方メートル）。家族向け郊外、非常に安全。通勤63分。",
+    "landmarks": "多摩ニュータウン計画展示跡。公園、保育園、学校。夜間ライフの名所なし。",
+    "food": "ホットペッパー2軒、3軒。データ限定。コンビニ、ファミリーチェーン支配。",
+    "nightlife": "ほぼ皆無。ニュータウン21時には静寂。"
+  },
+  "ru": {
+    "atmosphere": "Sprawl Tama New Town, край Odakyu. Огромный зелёный пояс (4.8M кв.м). Семейный пригород, очень безопасен. 63 минуты в пути.",
+    "landmarks": "Участок выставки плана Tama New Town. Парки, ясли, школы. Нулевые ночные достопримечательности.",
+    "food": "2 listings минимум, 3. Данные неполные. Convenience stores, семейные чейны доминируют.",
+    "nightlife": "Практически отсутствует. New Town спит к 21:00."
+  }
+}

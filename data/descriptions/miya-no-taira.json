@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain hamlet on Ome Line, west of Tokyo. Zero crime recorded. Highest elevation in dataset (256m). Truly remote.",
+    "landmarks": "69M sqm park (largest green area). Mountain isolation. One small cafe. Perfect solitude.",
+    "food": "1 location, 0 bars, 0 cafes in data. Zero food. Bring supplies. Very sparse.",
+    "nightlife": "None. Last train 23:41. Off-grid living starts here."
+  },
+  "ja": {
+    "atmosphere": "青梅線の山奥。犯罪0件記録。標高256m、日本最高。本当に遠い。",
+    "landmarks": "69万平米公園（最大緑地）。山の中。カフェ1。完全隔離。",
+    "food": "1件、バーなし、カフェなし。データ0。食料持参必須。本当に稀。",
+    "nightlife": "皆無。23時41分が最終。ここからは別世界。"
+  },
+  "ru": {
+    "atmosphere": "Горное селение на линии Омэ, запад Токио. Преступлений: 0. Высота 256м (максимум в наборе). По-настоящему затерянно.",
+    "landmarks": "Парк на 69М кв.м (самая большая зелень). Горная изоляция. Кафе 1. Идеальное уединение.",
+    "food": ": 1 место, бары: 0, кафе: 0 в базе. : пусто. Припасы с собой. Редко-редко.",
+    "nightlife": "Совсем нет. Последний поезд 23:41. Off-grid жизнь."
+  }
+}

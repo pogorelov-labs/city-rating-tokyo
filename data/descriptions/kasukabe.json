@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tobu interchange suburb, cheap, practical, far out. Soft-ground warning.",
+    "landmarks": "Kasukabe Station east-west sides, Tobu Ramen on platform, Shin-chan city aura.",
+    "food": "89 restaurants, 46 izakayas, 6 cafes. Solid local eating, not destination dining.",
+    "nightlife": "40 late spots, almost no bars, no karaoke. Station drinking, then home."
+  },
+  "ja": {
+    "atmosphere": "東武の乗換郊外、安くて実用的、都心は遠い。軟弱地盤に注意。",
+    "landmarks": "春日部駅の東西口、ホームの東武ラーメン、クレしんの街感。",
+    "food": "飲食89軒、居酒屋46軒、カフェ6軒。地元飯は強い、遠征飯ではない。",
+    "nightlife": "深夜40軒、バー少なめ、カラオケなし。駅前で飲んで帰る街。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный узел Tobu, дешево, практично, далеко. Мягкий грунт.",
+    "landmarks": "Восток-запад Kasukabe Station, Tobu Ramen на платформе, аура Shin-chan.",
+    "food": "89 ресторанов, 46 изакай, 6 кафе. Локальная еда крепкая, не гастро-магнит.",
+    "nightlife": "40 поздних мест, баров мало, караоке нет. Выпил у станции и домой."
+  }
+}

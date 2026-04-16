@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya cat-temple calm, low-rise and quietly loved. Cute, useful, not cheap.",
+    "landmarks": "Gotokuji temple, maneki-neko rows, Setagaya Line crossings. Weekend visitors trickle in.",
+    "food": "58 restaurants, 22 izakayas, 5 cafes. Small local food scene, pleasant but limited.",
+    "nightlife": "26 late spots, no karaoke or clubs. Neighborhood drinks only."
+  },
+  "ja": {
+    "atmosphere": "猫寺のある世田谷の低層住宅地、静かに愛されている。可愛い、便利、安くはない。",
+    "landmarks": "豪徳寺、招き猫の列、世田谷線の踏切。週末は観光客が少し来る。",
+    "food": "飲食58軒、居酒屋22軒、カフェ5軒。小さな地元食、感じは良いが限界あり。",
+    "nightlife": "深夜営業26軒、カラオケもクラブもなし。近所飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Спокойствие Setagaya с кошачьим храмом, низко и любимо. Мило, удобно, не дёшево.",
+    "landmarks": "Gotokuji temple, ряды maneki-neko, переезды Setagaya Line. По выходным капают гости.",
+    "food": "58 ресторанов, 22 изакая, 5 кафе. Малая локальная еда, приятно, но ограничено.",
+    "nightlife": "26 поздних мест, без караоке и клубов. Только соседские напитки."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sotetsu ridge suburb in Seya-ku, clinics everywhere, green around the edges. Practical, sleepy.",
+    "landmarks": "Mitsukyo station mall, Sotetsu Main Line commute, high-ground residential streets.",
+    "food": "19 restaurants, 5 izakayas, no cafes in the scrape. Basic meals, not a food crawl.",
+    "nightlife": "8 late spots, 2 karaoke. Local, small, early."
+  },
+  "ja": {
+    "atmosphere": "瀬谷区の相鉄沿線、丘上の住宅地。医院多め、周辺は緑。実用的で眠い。",
+    "landmarks": "三ツ境駅前モール、相鉄本線の通勤動線、標高高めの住宅街。",
+    "food": "飲食19軒、居酒屋5軒、カフェは検出なし。普段飯中心、食べ歩き向きではない。",
+    "nightlife": "深夜8軒、カラオケ2軒。地元規模、小さく早い。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Sotetsu на гряде Сэя-ку, клиники повсюду, зелень по краям. Практично, сонно.",
+    "landmarks": "Станционный молл Mitsukyo, комьют по Sotetsu Main, жилые улицы на высоте.",
+    "food": "19 ресторанов, 5 изакая, кафе скрепер не поймал. Базовая еда, не фуд-кролл.",
+    "nightlife": "8 поздних мест, 2 караоке. Местно, мелко, рано."
+  }
+}

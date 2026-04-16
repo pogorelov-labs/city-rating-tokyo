@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kanagawa commuter suburb, roomier and cheaper. Central Tokyo is a serious haul.",
+    "landmarks": "Yamato city errands, mall streets, Izumi-no-Mori by bike. Ordinary, spacious.",
+    "food": "69 restaurants; casual chain-local mix, decent for a suburb.",
+    "nightlife": "28 late spots, 1 karaoke. Local bars, no clubs."
+  },
+  "ja": {
+    "atmosphere": "神奈川の通勤郊外、広めで安い。都心通勤はかなり重い。",
+    "landmarks": "大和市の生活動線、モール街、泉の森は自転車圏。普通で広い。",
+    "food": "飲食69軒、124件。チェーンと地元店の混合、郊外としては十分。",
+    "nightlife": "深夜営業28軒、カラオケ1軒。地元バー中心、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Канаганский пригород для комьютеров, просторнее и дешевле. До центра Токио тяжело.",
+    "landmarks": "Бытовые улицы Ямато, моллы, Izumi-no-Mori на велосипеде. Обычно, просторно.",
+    "food": "69 ресторанов и 124 -точки. Смесь сетей и местных мест, для пригорода норм.",
+    "nightlife": "28 поздних мест, 1 караоке. Местные бары, клубов нет."
+  }
+}

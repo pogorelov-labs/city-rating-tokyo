@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba suburb, Sobu Line. Small commuter town (2,978 daily), elevation 40m, high seismic. Cheap rent (¥93k), quiet residential.",
+    "landmarks": "1 market, 1 clinic, 1 pharmacy. Standard suburban amenities, no cultural venues.",
+    "food": "1 restaurant. Minimal food options, mostly home cooking.",
+    "nightlife": "Minimal. Dead after 10pm."
+  },
+  "ja": {
+    "atmosphere": "千葉郊外、Sobu線。小さな通勤町（2978日）。40m、high seismic。安い（¥93k）、静か。",
+    "landmarks": "market1、clinic1、pharm1。標準郊外、文化なし。",
+    "food": "食堂1、2。食事少ない、自炊向け。",
+    "nightlife": "最小。22時死。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Chiba, линия Sobu. Малый коммьютерный город (2978 в день). 40м, высокий seismic. Дешёво (¥93k), тихой жилой.",
+    "landmarks": "1 рынок, 1 клиника, 1 аптека. Стандартные пригородные удобства, культурных мест нет.",
+    "food": "1 ресторан, 2. Минимум еды, свой готовить.",
+    "nightlife": "Минимум. После 22:00 мертво."
+  }
+}

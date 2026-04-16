@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy-and-club Tokyo, rich and messy at once. Flashy dinners, loud nights, safety tax.",
+    "landmarks": "Roppongi Hills, Tokyo Midtown, Mori Art Museum. Green pockets hide behind luxury blocks.",
+    "food": "756 restaurants, 130 izakayas, 95 bars. Excellent range, brutal prices, tourist traps included.",
+    "nightlife": "367 late spots, 9 clubs. Tokyo goes hard here, and gets messy."
+  },
+  "ja": {
+    "atmosphere": "大使館とクラブの東京、富裕と混沌が同居。派手な食事、騒がしい夜、安全面の代償。",
+    "landmarks": "六本木ヒルズ、東京ミッドタウン、森美術館。高級街区の裏に緑も隠れる。",
+    "food": "飲食756軒、居酒屋130軒、バー95軒。幅は抜群、価格は重い、観光地罠も混ざる。",
+    "nightlife": "深夜367軒、クラブ9軒。東京の夜が本気を出す、そして荒れる。"
+  },
+  "ru": {
+    "atmosphere": "Токио посольств и клубов, богатый и грязноватый одновременно. Яркие ужины, громкие ночи, налог безопасностью.",
+    "landmarks": "Roppongi Hills, Tokyo Midtown, Mori Art Museum. Зеленые карманы прячутся за люкс-блоками.",
+    "food": "756 ресторанов, 130 изакая, 95 баров. Диапазон отличный, цены тяжелые, туристические ловушки внутри.",
+    "nightlife": "367 поздних мест, 9 клубов. Здесь Токио пьет всерьез и часто мутнеет."
+  }
+}

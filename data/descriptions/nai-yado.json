@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama suburban town on New Shuttle line, 4,282 daily passengers. Residential blocks, minimal urban core. Safe, dull.",
+    "landmarks": "Saitama New Shuttle station, 14 small parks, pharmacy cluster. Commuter-focused, no landmarks.",
+    "food": "2 restaurants + 4 spots. Minimal nightlife venues. Expect convenience store dinners.",
+    "nightlife": "Minimal. Early close, zero karaoke. Families go home by 10pm."
+  },
+  "ja": {
+    "atmosphere": "埼玉新都市交通沿線、4282人。住宅地、都市核なし。安全、地味。",
+    "landmarks": "ニューシャトル、小公園14個、薬局密集。",
+    "food": "飲食店2軒、ほぼコンビニ。夜の店なし。",
+    "nightlife": "皆無。10時で寝る家族町。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Сайтамы на New Shuttle, 4282 пассажира. Жилые кварталы, минимум центра. Безопасно, скучно.",
+    "landmarks": "Станция New Shuttle, 14 парков, аптеки. Коммютерский фокус.",
+    "food": "2 ресторана, 4 места. Минимум ночной жизни.",
+    "nightlife": "Минимум. Рано закрывают. Семьи в 22:00 дома."
+  }
+}

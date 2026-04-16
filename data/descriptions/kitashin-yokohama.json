@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama suburb on Blue Line. Family-oriented, low crowds. Flood risk (3m elevation).",
+    "landmarks": "Pedestrian streets (5), shopping mall zone. Uninspiring.",
+    "food": "5 listings, 6. Bare minimum options.",
+    "nightlife": "Minimal (3 midnight spots). Families head home by 10pm."
+  },
+  "ja": {
+    "atmosphere": "横浜のBlue Line沿い住宅地。ファミリー向け、人出少ない。浸水リスク注意(3m)。",
+    "landmarks": "商店街5本、ショッピングモール。地味。",
+    "food": "5軒、6軒。選択肢少ない。",
+    "nightlife": "深夜営業3軒。22時消滅。"
+  },
+  "ru": {
+    "atmosphere": "Иокохама, Blue Line. Семейная, тихая, низко (3м над уровнем) — риск наводнения.",
+    "landmarks": "5 пешеходных улиц, торговый центр. Без изюма.",
+    "food": "5, 6. Минимум вариантов.",
+    "nightlife": "3 ночных места максимум. Семьи в 22:00 спят."
+  }
+}

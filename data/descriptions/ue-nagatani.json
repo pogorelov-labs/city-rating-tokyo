@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama Blue Line terminal, 31k daily passengers. Walkable shopping streets (23 pedestrian paths), good transit. Quiet by Yokohama standards. 62 min commute.",
+    "landmarks": "23 shopping streets, pedestrian-friendly district. Commercial but organized. Low-rise residential feel.",
+    "food": "12 listings spots. Limited options, neighborhood casual dining. Cafe culture minimal.",
+    "nightlife": "4 midnight spots, low-key. Quiet night scene, no clubs."
+  },
+  "ja": {
+    "atmosphere": "横浜ブルーラインの終点。1日3.1万人。歩行者街23本。好アクセス。静か。62分通勤。",
+    "landmarks": "商店街23本、歩行者優先。商業的だが整備。低層住宅地。",
+    "food": "12軒。限定的。近所の食堂。",
+    "nightlife": "深夜営業4軒。静か。"
+  },
+  "ru": {
+    "atmosphere": "Йокохама, конец Синей линии. 31к пассажиров. 23 пешеходные улицы. Хороший транспорт. Тихо. 62 мин.",
+    "landmarks": "23 торговые улицы. Пешеходный приоритет. Коммерч, но организованно.",
+    "food": "12 мест. Соседская еда. Кафе редко.",
+    "nightlife": "4 ночных места. Не шумно."
+  }
+}

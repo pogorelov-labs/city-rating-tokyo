@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku back-pocket, central but oddly local. Expensive rent, useful food, high seismic risk.",
+    "landmarks": "Shinjuku Line stop, Arakicho lanes nearby, Yotsuya and Ichigaya within walking range.",
+    "food": "321 restaurants, 106 izakayas, 23 bars. Strong backstreet dining, not tourist-polished.",
+    "nightlife": "95 late spots, 1 karaoke. Bars and izakayas, quieter than Shinjuku proper."
+  },
+  "ja": {
+    "atmosphere": "新宿の裏ポケット、都心なのに地元感あり。家賃高め、飯は強い、地震リスク高め。",
+    "landmarks": "都営新宿線の小駅、荒木町の路地、四谷・市ヶ谷が徒歩圏。",
+    "food": "飲食321軒、居酒屋106軒、バー23軒。裏通りの食は強い、観光向けの磨きではない。",
+    "nightlife": "深夜95軒、カラオケ1軒。バーと居酒屋、新宿本体より静か。"
+  },
+  "ru": {
+    "atmosphere": "Задний карман Синдзюку: центр, но с местным нервом. Аренда высокая, сейсмориск тоже.",
+    "landmarks": "Станция Shinjuku Line, переулки Араки-тё, Ёцуя и Итигая пешком.",
+    "food": "321 ресторан, 106 изакая, 23 бара. Сильная еда в переулках, без туристического лака.",
+    "nightlife": "95 поздних мест, 1 караоке. Бары и изакаи, тише настоящего Синдзюку."
+  }
+}

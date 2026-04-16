@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Stadium-side green belt with premium rent. Gorgeous walks, weak daily shopping, event crowds spike.",
+    "landmarks": "National Stadium, Meiji Jingu Gaien, Sendagaya, Olympic museum. Best on foot.",
+    "food": "128 restaurants, 26 izakayas; cafes and event-day meals, better toward Aoyama or Sendagaya.",
+    "nightlife": "20 late spots, 1 club. Mostly post-event drinks, not a nightlife base."
+  },
+  "ja": {
+    "atmosphere": "競技場横の緑地帯、家賃はプレミアム。散歩は最高、日用品は弱い、イベント時は急混雑。",
+    "landmarks": "国立競技場、明治神宮外苑、千駄ヶ谷、五輪ミュージアム。徒歩が一番。",
+    "food": "飲食128軒、居酒屋26軒。カフェとイベント飯、青山や千駄ヶ谷寄りが強い。",
+    "nightlife": "深夜20軒、クラブ1軒。ほぼイベント後の一杯、夜遊び拠点ではない。"
+  },
+  "ru": {
+    "atmosphere": "Зеленый пояс у стадиона с премиальной арендой. Прогулки отличные, быт слабый, события дают толпы.",
+    "landmarks": "National Stadium, Meiji Jingu Gaien, Sendagaya, Olympic museum. Лучше всего пешком.",
+    "food": "128 ресторанов, 26 изакая; кафе и еда после событий, сильнее к Aoyama или Sendagaya.",
+    "nightlife": "20 поздних мест, 1 клуб. В основном напитки после матчей, не база для ночи."
+  }
+}

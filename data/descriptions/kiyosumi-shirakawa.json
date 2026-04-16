@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coffee-town calm with warehouse bones. Green, tasteful, pricey; soft-ground flag near the river.",
+    "landmarks": "Kiyosumi Garden, MOT Tokyo, Sumida-side walks. Cafes hide in old warehouses.",
+    "food": "101 restaurants, 35 izakayas, 11 cafes. Coffee stronger than late-night food.",
+    "nightlife": "26 late spots, no karaoke or clubs. Quiet drinks, early neighborhood."
+  },
+  "ja": {
+    "atmosphere": "倉庫の骨格が残るコーヒー街。緑と趣味は良いが高め、川近くの軟弱地盤あり。",
+    "landmarks": "清澄庭園、東京都現代美術館、隅田川方面の散歩。古い倉庫にカフェ。",
+    "food": "飲食101軒、居酒屋35軒、カフェ11軒。深夜飯よりコーヒーの街。",
+    "nightlife": "深夜営業26軒、カラオケもクラブもなし。静かに飲んで早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Кофейное спокойствие с костями складов. Зелено, со вкусом, дорого; у реки мягкий грунт.",
+    "landmarks": "Kiyosumi Garden, MOT Tokyo, прогулки к Sumida. Кафе прячутся в старых складах.",
+    "food": "101 ресторан, 35 изакая, 11 кафе. Кофе сильнее, чем поздняя еда.",
+    "nightlife": "26 поздних мест, без караоке и клубов. Тихие напитки, ранний район."
+  }
+}

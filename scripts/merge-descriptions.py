@@ -13,7 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DESC_DIR = ROOT / "data" / "descriptions"
-OUT_PATH = ROOT / "data" / "generated-descriptions.json"
+# Output lives under app/src/data/ so the Next.js frontend can import it —
+# `data/` (repo root) is outside the Docker build context per CRTKY-86 fix.
+OUT_PATH = ROOT / "app" / "src" / "data" / "generated-descriptions.json"
 
 
 def validate(d: dict) -> bool:

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Chiba-side suburb, local Keisei stop, cheap and clinic-heavy. Useful, not central.",
+    "landmarks": "Inage residential grid, small parks, coast not far but not station-front. High seismic risk.",
+    "food": "60 restaurants, 28 izakayas, almost no bars. Everyday ramen, family meals, neighborhood drinking.",
+    "nightlife": "16 late spots, 1 karaoke. Local drinks only, last train before midnight."
+  },
+  "ja": {
+    "atmosphere": "千葉側の静かな住宅地、京成のローカル駅。安めで医院多め、便利だが中心ではない。",
+    "landmarks": "稲毛の住宅格子、小公園、海は遠くないが駅前ではない。地震リスクは高め。",
+    "food": "飲食60軒、居酒屋28軒、バーはほぼなし。日常ラーメン、家族飯、近所飲み。",
+    "nightlife": "深夜営業16軒、カラオケ1軒。地元飲みだけ、終電は日付前。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригород Chiba, локальная остановка Keisei, дёшево и много клиник. Полезно, не центр.",
+    "landmarks": "Жилая сетка Inage, маленькие парки, море недалеко, но не у станции. Сейсмориск высокий.",
+    "food": "60 ресторанов, 28 изакая, баров почти нет. Рамен на каждый день, семейная еда, соседская выпивка.",
+    "nightlife": "16 поздних мест, 1 караоке. Только местные напитки, последний поезд до полуночи."
+  }
+}

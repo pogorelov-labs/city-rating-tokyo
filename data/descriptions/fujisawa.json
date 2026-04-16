@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shonan gateway, busy transfer energy and beach-town marketing. Fun, crowded, long Tokyo commute.",
+    "landmarks": "Enoden terminal, south-side shopping streets, route to Enoshima. The sea is close, not at the gate.",
+    "food": "262 restaurants, 146 izakayas. Big suburban hub choice, from chains to seafood-leaning counters.",
+    "nightlife": "114 late spots, 4 karaoke, no clubs. Izakaya-heavy, lively but not wild."
+  },
+  "ja": {
+    "atmosphere": "湘南の玄関口。乗換の忙しさと海町ブランド。楽しいが混む、東京通勤は長い。",
+    "landmarks": "江ノ電ターミナル、南口商店街、江の島方面への入口。海は近いが駅前ではない。",
+    "food": "飲食262軒、居酒屋146軒。大型郊外ハブの選択肢、チェーンから海寄りの店まで。",
+    "nightlife": "深夜営業114軒、カラオケ4軒、クラブなし。居酒屋強め、賑やかだが荒れない。"
+  },
+  "ru": {
+    "atmosphere": "Ворота Shonan, энергия пересадочного узла и пляжный маркетинг. Весело, людно, до Токио долго.",
+    "landmarks": "Терминал Enoden, южные торговые улицы, маршрут к Enoshima. Море близко, но не у турникета.",
+    "food": "262 ресторана, 146 изакая. Большой пригородный выбор: от сетей до лавок с морским уклоном.",
+    "nightlife": "114 поздних мест, 4 караоке, клубов нет. Изакая-тяжело, живо, но не дико."
+  }
+}

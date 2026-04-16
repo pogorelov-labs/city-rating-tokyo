@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bay-edge Yokohama, part commuter hub, part seaside town. Cheap-ish, but far from central Tokyo.",
+    "landmarks": "Seto Shrine, Nojima Park, Seaside Line toward Hakkeijima. Green and water beat city polish here.",
+    "food": "Small cluster: 29 restaurants, 14 izakayas, few cafes. Better for local seafood than date-night hunting.",
+    "nightlife": "Six late spots, no karaoke, no clubs. Drinks stay local and quiet."
+  },
+  "ja": {
+    "atmosphere": "横浜の湾岸、通勤ハブと海辺町の中間。家賃は軽いが、都心は遠い。",
+    "landmarks": "瀬戸神社、野島公園、八景島方面のシーサイドライン。都会感より緑と水。",
+    "food": "飲食は小さめ、29軒・居酒屋14軒・カフェ少数。デート探しより地元海鮮向き。",
+    "nightlife": "深夜6軒、カラオケなし、クラブなし。飲みは近所で静かに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Йокогама у залива: пересадка и приморский городок одновременно. Дешевле, но центр далеко.",
+    "landmarks": "Seto Shrine, парк Nojima, Seaside Line к Hakkeijima. Здесь вода и зелень важнее городского блеска.",
+    "food": "Небольшой кластер: 29 мест, 14 изакая, кафе мало. Скорее локальная рыба, чем свидания.",
+    "nightlife": "Шесть поздних мест, без караоке и клубов. Тихая районная выпивка."
+  }
+}

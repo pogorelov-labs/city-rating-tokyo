@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned arena-and-office district, clean and wide. Great logistics, less neighborhood intimacy.",
+    "landmarks": "Saitama Super Arena, Keyaki Hiroba, Cocoon City. Event crowds define the mood.",
+    "food": "91 restaurants, 35 izakayas, 10 cafes. Mall dining and event-night meals, not hidden gems.",
+    "nightlife": "11 late spots, no karaoke. Drinks fade when the arena empties."
+  },
+  "ja": {
+    "atmosphere": "計画されたアリーナ兼オフィス街、広くて清潔。移動は強いが近所感は薄い。",
+    "landmarks": "さいたまスーパーアリーナ、けやきひろば、コクーンシティ。イベント客で街の表情が変わる。",
+    "food": "飲食91軒、居酒屋35軒、カフェ10軒。モール飯とイベント飯、隠れた名店感は弱い。",
+    "nightlife": "深夜11軒、カラオケなし。アリーナ客が引くと酒も静まる。"
+  },
+  "ru": {
+    "atmosphere": "Плановый район арены и офисов, чистый и широкий. Логистика сильная, соседской близости мало.",
+    "landmarks": "Saitama Super Arena, Keyaki Hiroba, Cocoon City. Настроение задают событийные толпы.",
+    "food": "91 ресторан, 35 изакая, 10 кафе. Молловая еда и ужины после событий, не тайные находки.",
+    "nightlife": "11 поздних мест, караоке нет. Когда арена пустеет, выпивка тоже стихает."
+  }
+}

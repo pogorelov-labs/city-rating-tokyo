@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Park-gate suburb on the Ome Line. Calm, spacious, far from the city-core rush.",
+    "landmarks": "Showa Kinen Park is the whole point: lawns, cycling paths, flowers. Station life stays small.",
+    "food": "13 restaurants, 4 izakayas, almost no bars. Picnics beat dinner plans here.",
+    "nightlife": "Minimal. Five late spots, no karaoke, no clubs."
+  },
+  "ja": {
+    "atmosphere": "青梅線の公園口郊外。静かで広い、都心の速度とは別世界。",
+    "landmarks": "昭和記念公園が主役。芝生、自転車道、花畑。駅前の街は小さい。",
+    "food": "飲食13軒、居酒屋4軒、バーほぼなし。外食より公園ピクニック向き。",
+    "nightlife": "ほぼ皆無。深夜5軒、カラオケなし、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород у ворот парка на Ome Line. Спокойно, просторно, далеко от темпа центра.",
+    "landmarks": "Showa Kinen Park — главный смысл: газоны, велодорожки, цветы. У станции всё скромно.",
+    "food": "13 ресторанов, 4 изакая, баров почти нет. Пикник здесь логичнее ужина.",
+    "nightlife": "Минимально. Пять поздних мест, караоке и клубов нет."
+  }
+}

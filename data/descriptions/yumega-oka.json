@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet suburban oasis, family-focus. Empty stations, low-key parks.",
+    "landmarks": "Development zone parks, shopping mall. No cultural venues.",
+    "food": "3 chains + 16 small spots. Scattered, no scene.",
+    "nightlife": "Dead after 9pm. One late spot, that's it."
+  },
+  "ja": {
+    "atmosphere": "静かな郊外オアシス。駅は空。",
+    "landmarks": "開発地帯の公園。文化的施設なし。",
+    "food": "チェーン3軒、16 件。散在。",
+    "nightlife": "夜9時で終わり。"
+  },
+  "ru": {
+    "atmosphere": "Тихий пригородный оазис, семейный. Пустые станции, парки.",
+    "landmarks": "Зоны развития, парки, торговый центр.",
+    "food": "3 сети + 16 мест. Разреженно.",
+    "nightlife": "Мертво после 21:00."
+  }
+}

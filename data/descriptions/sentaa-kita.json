@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama's planned new city. Two metro lines, 36 pedestrian streets, walkable family vibe. Sprawling but not quite urban.",
+    "landmarks": "Tsuzuki central, shopping malls, urban parks (1.4M sqm green). Development-style architecture.",
+    "food": "37 restaurants, 13 izakayas, strong coverage (62). Good variety for families. Few bars (0)—missing nightlife infrastructure.",
+    "nightlife": "9 late spots, 2 karaoke. Quiet after midnight. Clearly not a party zone."
+  },
+  "ja": {
+    "atmosphere": "横浜計画新都市。メトロ2線、歩行者街36。ファミリー色濃い。広いが都市的ではない。",
+    "landmarks": "都筑中心、ショッピング施設、公園群（1.4M sqm）。開発都市建築。",
+    "food": "食堂37、居酒屋13、食スポット豊富。ファミリー向け。バーゼロ。",
+    "nightlife": "夜間営業9、カラオケ2。深夜静か。夜遊びエリアではない。"
+  },
+  "ru": {
+    "atmosphere": "Йокогамская плановая новостройка. Метро 2 линии, 36 пешеходных улиц, семейная. Растопыренная, не городская.",
+    "landmarks": "Центр Цузуки, торговые молы, парки (1.4М sqm). Развивающийся стиль.",
+    "food": "37 ресторанов, 13 изакай. Хорошо для семей. Баров 0—нет ночной инфры.",
+    "nightlife": "9 поздних мест, 2 караоке. После 00 мертво."
+  }
+}

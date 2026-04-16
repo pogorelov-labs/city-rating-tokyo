@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Platinum old-money calm, leafy and expensive. Beautiful daily life, thin street heat.",
+    "landmarks": "Institute for Nature Study, Platinum Street, Happo-en. Green walls and quiet wealth.",
+    "food": "124 restaurants, 35 izakayas, 16 bars. Polished dining, low cafe count, high bills.",
+    "nightlife": "51 late spots, no karaoke or clubs. Quiet bars, early residents."
+  },
+  "ja": {
+    "atmosphere": "白金の旧い余裕、緑が濃くて高い。日常は美しいが、街の熱は薄い。",
+    "landmarks": "自然教育園、プラチナ通り、八芳園。緑の壁と静かな富裕感。",
+    "food": "飲食124軒、居酒屋35軒、バー16軒。磨かれた食、カフェ少なめ、会計は重い。",
+    "nightlife": "深夜営業51軒、カラオケもクラブもなし。静かなバー、住民は早い。"
+  },
+  "ru": {
+    "atmosphere": "Платиновое old-money спокойствие, зелено и дорого. Красивый быт, мало уличного жара.",
+    "landmarks": "Institute for Nature Study, Platinum Street, Happo-en. Зелёные стены и тихие деньги.",
+    "food": "124 ресторана, 35 изакая, 16 баров. Полированная еда, мало кафе, тяжёлые счета.",
+    "nightlife": "51 позднее место, без караоке и клубов. Тихие бары, ранние жители."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old east-side grid between Kiyosumi and Ryogoku. Handy, low-key, soft-ground risk.",
+    "landmarks": "Kiyosumi Garden, Sumida walks, Fukagawa edges. Bridges and warehouses set the tone.",
+    "food": "167 spots, 59 izakayas, 17 cafes. Good everyday food, less hype than Kiyosumi.",
+    "nightlife": "46 late spots, 16 hostels, no clubs. Izakaya and visitor bars, not dancing."
+  },
+  "ja": {
+    "atmosphere": "清澄と両国の間の下町グリッド。便利で地味、軟弱地盤リスクあり。",
+    "landmarks": "清澄庭園、隅田川散歩、深川の端。橋と倉庫の空気が濃い。",
+    "food": "飲食167軒、居酒屋59軒、カフェ17軒。普段使いは強い、清澄ほど映えない。",
+    "nightlife": "深夜営業46軒、ホステル16件、クラブなし。居酒屋と旅行者バー、踊る街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Старый восточный грид между Kiyosumi и Ryogoku. Удобно, тихо, риск мягкого грунта.",
+    "landmarks": "Kiyosumi Garden, прогулки вдоль Sumida, края Fukagawa. Мосты и склады задают тон.",
+    "food": "167 мест, 59 изакая, 17 кафе. Сильная еда на каждый день, меньше хайпа Kiyosumi.",
+    "nightlife": "46 поздних мест, 16 хостелов, без клубов. Изакая и бары для приезжих, не танцы."
+  }
+}

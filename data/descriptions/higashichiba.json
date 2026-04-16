@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet side-door to Chiba city nightlife. Cheap, sparse essentials, safety trade-off.",
+    "landmarks": "Chiba Park, Chiba Shrine side streets, central Chiba within a walk. Station itself is plain.",
+    "food": "344 restaurants nearby, 183 izakayas; most action is toward Chiba Station.",
+    "nightlife": "176 late spots, 34 bars. Strong nearby drinking, not much on the platform."
+  },
+  "ja": {
+    "atmosphere": "千葉市夜遊び圏の静かな裏口。安め、生活店は薄い、安全面は妥協。",
+    "landmarks": "千葉公園、千葉神社周辺、千葉駅方面も徒歩圏。駅自体は地味。",
+    "food": "周辺344軒、居酒屋183軒。主戦場は千葉駅側に寄る。",
+    "nightlife": "深夜176軒、バー34軒。近場の飲みは強い、ホーム前は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Тихий задний вход к ночной Тибе. Дешевле, быт редкий, по безопасности компромисс.",
+    "landmarks": "Chiba Park, улицы у Chiba Shrine, центр Тибы пешком. Сама станция простая.",
+    "food": "344 ресторана рядом, 183 изакая; основное движение ближе к Chiba Station.",
+    "nightlife": "176 поздних мест, 34 бара. Сильное питье рядом, мало прямо у платформы."
+  }
+}

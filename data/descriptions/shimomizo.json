@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Spacious suburban Sagami Line station. Big parks (1.6 million sqm green), hilly elevation 59m. 68 min commute, affordable rent.",
+    "landmarks": "Large protected green areas, multiple parks. Hill setting with views. Rural but organized.",
+    "food": "Minimal dining—1 listings venue, nearly zero food data. Chain restaurants likely.",
+    "nightlife": "Minimal."
+  },
+  "ja": {
+    "atmosphere": "相模線の広々とした駅。大きな公園（160万㎡）。丘の上（59m）。68分通勤、手頃な家賃。",
+    "landmarks": "広い公園複数。眺望のある丘地。地方だが整備されている。",
+    "food": "ほぼ食べ物なし。1軒。",
+    "nightlife": "皆無。"
+  },
+  "ru": {
+    "atmosphere": "Просторный Сагами с 1.6 млн кв.м зелени. 59м над уровнем моря. 68 мин до города, дешёвая аренда.",
+    "landmarks": "Большие охраняемые парки. Холмистая местность с видами. Провинциально, но содержится.",
+    "food": "Почти ничего. 1 место.",
+    "nightlife": "Не существует."
+  }
+}

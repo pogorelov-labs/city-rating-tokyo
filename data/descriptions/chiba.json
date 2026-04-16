@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big prefectural hub, cheap for its scale, busy and rougher than Tokyo cores.",
+    "landmarks": "Chiba Urban Monorail, Sogo, Chiba Park, government district. Nine-line gravity.",
+    "food": "442 restaurants, 225 izakayas. Serious station food; chains and drinking dens dominate.",
+    "nightlife": "209 late-night spots, 5 karaoke. Big drinking town, not a club town."
+  },
+  "ja": {
+    "atmosphere": "県都の大型ハブ。規模の割に安いが、忙しく東京中心部より荒さあり。",
+    "landmarks": "千葉都市モノレール、そごう、千葉公園、官庁街。9路線の引力。",
+    "food": "飲食442軒、居酒屋225軒。駅前飯は強い。チェーンと飲み屋密度が主役。",
+    "nightlife": "深夜営業209軒、カラオケ5軒。大きな飲み町、クラブ町ではない。"
+  },
+  "ru": {
+    "atmosphere": "Крупный префектурный хаб, дешёвый для масштаба, занятой и грубее токийских ядер.",
+    "landmarks": "Chiba Urban Monorail, Sogo, Chiba Park, правительственный район. Притяжение девяти линий.",
+    "food": "442 ресторана, 225 изакая. Серьёзная вокзальная еда; сети и питейные норы доминируют.",
+    "nightlife": "209 поздних мест, 5 караоке. Большой город выпивки, не клубный город."
+  }
+}

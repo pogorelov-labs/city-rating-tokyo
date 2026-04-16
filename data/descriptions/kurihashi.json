@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet neighborhood. Note high seismic risk. Mixed vibe.",
+    "landmarks": "No major landmarks. Small parks interspersed in residential blocks.",
+    "food": "Limited dining (2 places). Rely on chains and fast food.",
+    "nightlife": "Sparse nightlife. Neighborhood bars only. Early closing."
+  },
+  "ja": {
+    "atmosphere": "静かな地域。朝夕の時間帯に混雑。",
+    "landmarks": "大きな見どころなし。小公園が点在。",
+    "food": "食べ物少ない（2軒）。コンビニ頼り。",
+    "nightlife": "居酒屋少。10時で閉まる。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная окраина. Утром/вечером больше людей.",
+    "landmarks": "Нет крупных мест. Маленькие парки между домов.",
+    "food": "Мало ресторанов (2). Магазинчики спасают.",
+    "nightlife": "Батонов мало. Закрываются в 22:00."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama suburban junction, practical and green. Commute is okay, station area gets busy.",
+    "landmarks": "JR Yokohama Line meets Green Line; Shikinomori Park and Zoorasia are bus-distance anchors.",
+    "food": "30 restaurants, 16 izakayas, no bars. Local dinner works, cafe scene is thin.",
+    "nightlife": "12 late-night spots, 2 karaoke. Neighborhood night, no clubs."
+  },
+  "ja": {
+    "atmosphere": "横浜の郊外結節点。実用的で緑も多い。通勤は許容、駅前はそれなりに混む。",
+    "landmarks": "JR横浜線とグリーンラインの接点。四季の森公園とズーラシアはバス圏の柱。",
+    "food": "飲食30軒、居酒屋16軒、バーなし。地元夕食は成立、カフェ層は薄い。",
+    "nightlife": "深夜営業12軒、カラオケ2軒。近所の夜、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный узел Йокогамы, практичный и зелёный. Коммьют терпимый, у станции бывает тесно.",
+    "landmarks": "JR Yokohama Line встречает Green Line; Shikinomori Park и Zoorasia — якоря на автобусе.",
+    "food": "30 ресторанов, 16 изакая, баров нет. Локальный ужин работает, кафе тонкие.",
+    "nightlife": "12 поздних мест, 2 караоке. Соседская ночь, без клубов."
+  }
+}

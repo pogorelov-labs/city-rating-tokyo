@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big border-city hub, Tokyo address with Kanagawa gravity. Cheap rent, real crowds, long ride in.",
+    "landmarks": "Lumine, Marui, Odakyu decks, Serigaya Park. Retail canyon around the station.",
+    "food": "345 restaurants, 196 izakayas. Suburban feast: ramen, yakiniku, chains, student drinking.",
+    "nightlife": "167 late spots, 5 karaoke. Strong bar crawl, zero club culture."
+  },
+  "ja": {
+    "atmosphere": "県境の巨大ハブ。住所は東京、重心は神奈川寄り。家賃安い、人多い、都心は遠い。",
+    "landmarks": "ルミネ、丸井、小田急デッキ、芹ヶ谷公園。駅前は商業の谷。",
+    "food": "飲食345軒、居酒屋196軒。郊外の大食堂、ラーメン、焼肉、チェーン、学生飲み。",
+    "nightlife": "深夜167軒、カラオケ5軒。飲み歩きは強い、クラブ文化はゼロ。"
+  },
+  "ru": {
+    "atmosphere": "Большой пограничный хаб: адрес Tokyo, гравитация Kanagawa. Дешевая аренда, толпы, центр далеко.",
+    "landmarks": "Lumine, Marui, Odakyu decks, Serigaya Park. Вокзал зажат коммерческим каньоном.",
+    "food": "345 ресторанов, 196 изакая. Пригородный пир: рамэн, якинику, сети, студенческая выпивка.",
+    "nightlife": "167 поздних мест, 5 караоке. Сильный бар-кроул, клубной культуры нет."
+  }
+}

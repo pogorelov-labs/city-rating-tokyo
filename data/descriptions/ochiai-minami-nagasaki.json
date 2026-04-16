@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Oedo pocket between Shinjuku and Ikebukuro. Safe, hilly, understated.",
+    "landmarks": "Nishiochiai lanes, small parks, residential slopes. No icon, useful calm.",
+    "food": "40 restaurants, 11 izakayas, 3 bars. Enough for weeknights, thin for exploring.",
+    "nightlife": "12 late spots, no karaoke. Neighborhood drinks, early close."
+  },
+  "ja": {
+    "atmosphere": "新宿と池袋の重力の間にある大江戸線の静かな穴場。安全、坂あり、控えめ。",
+    "landmarks": "西落合の路地、小公園、住宅の坂道。大きな名所なし、実用的な静けさ。",
+    "food": "飲食40軒、居酒屋11軒、バー3軒。平日には足りる、探索には薄い。",
+    "nightlife": "深夜12軒、カラオケなし。近所飲み、閉店早め。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман Oedo Line между гравитацией Синдзюку и Икэбукуро. Безопасно, холмисто, неброско.",
+    "landmarks": "Переулки Nishiochiai, малые парки, жилые склоны. Без крупной иконы, зато спокойно.",
+    "food": "40 ресторанов, 11 изакая, 3 бара. Для будней хватит, для исследований тонко.",
+    "nightlife": "12 поздних мест, караоке нет. Соседские напитки, ранний финиш."
+  }
+}

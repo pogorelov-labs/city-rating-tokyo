@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keisei junction town, practical and unromantic. Great airport access, flat east-Tokyo feel.",
+    "landmarks": "Keisei Oshiage split, Narita Sky Access, Katsushika Symphony Hills nearby.",
+    "food": "50 restaurants, 19 izakayas. Enough basics, not much cafe or bar texture.",
+    "nightlife": "18 late-night spots, 2 karaoke. Sparse, mostly local."
+  },
+  "ja": {
+    "atmosphere": "京成の分岐町。実用的でロマンは少ない。空港アクセス強め、東東京の平地感。",
+    "landmarks": "京成押上線の分岐、成田スカイアクセス、かつしかシンフォニーヒルズ近く。",
+    "food": "飲食50軒、居酒屋19軒。基本は足りるが、カフェやバーの厚みは薄い。",
+    "nightlife": "深夜営業18軒、カラオケ2軒。少なめ、ほぼ地元向け。"
+  },
+  "ru": {
+    "atmosphere": "Узел Keisei, практично и без романтики. Сильный доступ к аэропорту, плоский восточный Токио.",
+    "landmarks": "Развилка Keisei Oshiage, Narita Sky Access, рядом Katsushika Symphony Hills.",
+    "food": "50 ресторанов, 19 изакая. База есть, но кафе и бары тонкие.",
+    "nightlife": "18 поздних мест, 2 караоке. Редко, почти всё локальное."
+  }
+}

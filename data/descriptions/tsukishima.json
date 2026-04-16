@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old monja lanes under new bay towers. Central, safe, expensive, a little island-tight.",
+    "landmarks": "Monja Street, Sumida riverfront, Tsukuda backstreets. Bridges frame the whole mood.",
+    "food": "229 restaurants, 77 izakayas, monja overload. Great casual food, touristy pockets.",
+    "nightlife": "61 late spots, bars modest, clubs absent. Dinner lingers, party moves elsewhere."
+  },
+  "ja": {
+    "atmosphere": "湾岸タワー下に残るもんじゃ路地。都心近く安全、高い、島らしく狭い。",
+    "landmarks": "月島もんじゃストリート、隅田川沿い、佃の路地。橋が街の空気を決める。",
+    "food": "飲食229件、居酒屋77件、もんじゃ過多。気軽な食事は強いが観光色も濃い。",
+    "nightlife": "深夜61件、バー控えめ、クラブなし。夕食は長い、遊びは別の街へ。"
+  },
+  "ru": {
+    "atmosphere": "Старые monja-переулки под башнями залива. Центр, безопасно, дорого, тесно по-островному.",
+    "landmarks": "Monja Street, набережная Сумида, закоулки Цукуды. Мосты задают весь тон.",
+    "food": "229 ресторанов, 77 изакая, monja в избытке. Сильная простая еда, местами туристично.",
+    "nightlife": "61 позднее место, бары скромные, клубов нет. Ужин тянется, вечеринка уезжает."
+  }
+}

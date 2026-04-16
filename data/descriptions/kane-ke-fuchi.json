@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Sumida lowland, cheap-feeling and quiet. Flood and soft-ground risk are the price.",
+    "landmarks": "Arakawa riverbanks, narrow shitamachi streets, Tobu Skytree Line overhead.",
+    "food": "Local izakayas, cafes, basic meals. More everyday than exciting.",
+    "nightlife": "A few late izakayas, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "墨田の古い低地、安めで静か。洪水と軟弱地盤が代償。",
+    "landmarks": "荒川の土手、細い下町路地、東武スカイツリーラインの高架。",
+    "food": "地元居酒屋、カフェ、日常飯。楽しいより生活用。",
+    "nightlife": "遅い居酒屋が少し、カラオケとクラブなし。最小限。"
+  },
+  "ru": {
+    "atmosphere": "Старая низина Сумиды, тихо и недорого на вид. Цена — паводок и мягкий грунт.",
+    "landmarks": "Берега Arakawa, узкие shitamachi-улицы, Tobu Skytree Line над головой.",
+    "food": "Местные изакаи, кафе, базовая еда. Больше быт, чем азарт.",
+    "nightlife": "Несколько поздних изакай, без караоке и клубов. Минимально."
+  }
+}

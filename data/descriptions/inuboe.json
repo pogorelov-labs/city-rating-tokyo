@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Cliff-side station at the edge of Choshi, 165 min from Tokyo on a tram. Lighthouse tourism, empty streets, 21:18 last train.",
+    "landmarks": "Inuboe lighthouse, crashing waves, hiking. Dramatic geography, zero urban landmarks.",
+    "food": "3 restaurants. Mostly daytime seaside snacks. No dinner culture.",
+    "nightlife": "Virtually absent. 4 late-night establishments, 0 karaoke. Last train before 10pm kills any scene."
+  },
+  "ja": {
+    "atmosphere": "銚子の崖上駅。東京から165分、電車で辺境。灯台観光、無人街、21:18終電。",
+    "landmarks": "犬吠埼灯台、波音、ハイキング。地理の劇的さ。都市ランドマークなし。",
+    "food": "飲食店3軒、6点。昼間の海辺スナック中心。夜食文化なし。",
+    "nightlife": "ほぼなし。夜営業4軒、カラオケなし。21時終電で夜文化死亡。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежная станция на краю Choshi, 165 мин на трамвае. Маячный туризм, пустые улицы, 21:18 последний поезд.",
+    "landmarks": "Маяк Inuboe, шум волн, пешком. Драматическая география, ноль городских меток.",
+    "food": "3 ресторана, 6 точек. В основном дневные приморские закуски. Ужина нет.",
+    "nightlife": "Практически нет. 4 поздних заведения, 0 караоке. 21:18 終電 убивает сцену."
+  }
+}

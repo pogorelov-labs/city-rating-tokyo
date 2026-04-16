@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keikyu workhorse between airport routes and warehouse Ota. Practical, slightly gritty.",
+    "landmarks": "Heiwajima Boat Race, Big Fun, Heiwa-no-Mori Park. Better errands than scenery.",
+    "food": "58 restaurants, 22 izakayas. Everyday grills and chains; enough choice, little romance.",
+    "nightlife": "23 late spots, no karaoke. Izakaya and budget hotels, not a party district."
+  },
+  "ja": {
+    "atmosphere": "空港動線と大田の倉庫街の間にある京急の実用駅。便利、少し荒い。",
+    "landmarks": "平和島競艇、Big Fun、平和の森公園。景色より用事向き。",
+    "food": "飲食58軒、居酒屋22軒。普段の焼き物とチェーン。選択肢はある、色気は少ない。",
+    "nightlife": "深夜23軒、カラオケなし。居酒屋と安宿の夜、パーティー街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая Keikyu между аэропортом и складской Отой. Практично, чуть шершаво.",
+    "landmarks": "Heiwajima Boat Race, Big Fun, парк Heiwa-no-Mori. Больше для дел, чем для видов.",
+    "food": "58 ресторанов, 22 изакая. Повседневный гриль и сети; выбор есть, романтики мало.",
+    "nightlife": "23 поздних места, караоке нет. Изакаи и бюджетные отели, не тусовочный район."
+  }
+}

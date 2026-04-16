@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Countryside stop on Kururi Line in Kisarazu. Handful of residents, zero tourism. Green spaces dominate the view.",
+    "landmarks": "Rural Chiba: 2 clinics, forests, that's it. Very understated.",
+    "food": "No restaurants detected. Zero listings. Bring your own meals.",
+    "nightlife": "Minimal. Early last train (22:43) means evening is short."
+  },
+  "ja": {
+    "atmosphere": "木更津の空き家駅。数十人の住民、観光客ゼロ。緑が支配。",
+    "landmarks": "田舎千葉。診療所2、森。以上。",
+    "food": "食堂なし。掲載なし。弁当持参のこと。",
+    "nightlife": "最終列車22時43分と早い。夜短い。"
+  },
+  "ru": {
+    "atmosphere": "Деревенская тишь на линии Курури, префектура Кисарацу. Горсть людей, туристы не ходят. Лесик кругом.",
+    "landmarks": "Чистая Чиба: две клиники, деревья, и всё. Скромно.",
+    "food": "Ресторанов нет. Никаких баз еды. Еду с собой.",
+    "nightlife": "Минимально. Последний поезд в 22:43 — вечер короток."
+  }
+}

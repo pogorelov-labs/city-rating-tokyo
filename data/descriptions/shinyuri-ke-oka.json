@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odakyu hill suburb, polished and family-coded. Green, orderly, crowded on trains.",
+    "landmarks": "Odakyu junction, Tama Line gateway, station malls and wooded Asao hills.",
+    "food": "55 restaurants, 22 izakayas, light bar scene. Better for dinner errands than drinking.",
+    "nightlife": "9 late spots, 1 karaoke. Quiet after last cinema crowds fade."
+  },
+  "ja": {
+    "atmosphere": "小田急の丘上住宅地、整っていて家族向け。緑は多い、電車は混む。",
+    "landmarks": "小田急の分岐駅、多摩線の入口、駅ビルと麻生区の緑の丘。",
+    "food": "飲食55軒、居酒屋22軒、バーは薄い。飲み歩きより夕食と買い物向き。",
+    "nightlife": "深夜9軒、カラオケ1軒。映画帰りが消えるとかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Холмистый пригород Odakyu, аккуратный и семейный. Зелено, спокойно, поезда забиты.",
+    "landmarks": "Узел Odakyu, вход на Tama Line, станционные моллы и лесистые холмы Асао.",
+    "food": "55 ресторанов, 22 изакая, барная сцена тонкая. Ужин и дела, не бар-хоппинг.",
+    "nightlife": "9 поздних мест, 1 караоке. После киношной толпы район быстро стихает."
+  }
+}

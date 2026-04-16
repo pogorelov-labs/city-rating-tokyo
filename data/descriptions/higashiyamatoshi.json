@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Seibu suburb, cheap, safe, and slow. Great for quiet life, poor for spontaneity.",
+    "landmarks": "Tamagawa Josui green corridor, local shopping strips, low-rise Higashiyamato blocks.",
+    "food": "34 restaurants, 16 izakayas, almost no cafes. Solid basics, little destination energy.",
+    "nightlife": "16 late spots, no karaoke, no clubs. After last train, it shuts down."
+  },
+  "ja": {
+    "atmosphere": "西武線の西側郊外。安く安全でゆっくり。静かな生活向き、即興遊びは弱い。",
+    "landmarks": "玉川上水の緑道、地元商店、低層の東大和市街地。",
+    "food": "飲食34件、居酒屋16件、カフェほぼなし。基本は揃うが目的地感は薄い。",
+    "nightlife": "深夜営業16件、カラオケなし、クラブなし。終電後は閉じる。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Seibu, дешево, безопасно, медленно. Для тихой жизни, не для импровизаций.",
+    "landmarks": "Зеленый коридор Tamagawa Josui, местные торговые улицы, низкие кварталы Higashiyamato.",
+    "food": "34 места, 16 изакая, кафе почти нет. База крепкая, но ехать специально незачем.",
+    "nightlife": "16 поздних мест, без караоке и клубов. После последнего поезда закрывается."
+  }
+}

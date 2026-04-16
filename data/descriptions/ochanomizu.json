@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "University-and-hospital ridge, guitars, bookshops, commuters. Brilliant, expensive, crowded.",
+    "landmarks": "Kanda Myojin, Yushima Seido, Nikolai-do, instrument shops over Meidai-dori.",
+    "food": "953 restaurants, 418 izakayas. Lunch heaven, after-class drinking, constant queues.",
+    "nightlife": "274 late-night spots, 8 karaoke. Bars and izakayas, clubs barely matter."
+  },
+  "ja": {
+    "atmosphere": "大学と病院の尾根、ギター、本屋、通勤客。抜群だが高い、混む。",
+    "landmarks": "神田明神、湯島聖堂、ニコライ堂、明大通り沿いの楽器店群。",
+    "food": "飲食953軒、居酒屋418軒。昼飯天国、授業後の飲み、常に行列。",
+    "nightlife": "深夜営業274軒、カラオケ8軒。バーと居酒屋中心、クラブは重要でない。"
+  },
+  "ru": {
+    "atmosphere": "Хребет университетов и больниц: гитары, книжные, комьютеры. Сильно, дорого, людно.",
+    "landmarks": "Kanda Myojin, Yushima Seido, Nikolai-do, магазины инструментов вдоль Meidai-dori.",
+    "food": "953 ресторана, 418 изакая. Рай обедов, студенческие выпивки, постоянные очереди.",
+    "nightlife": "274 поздних места, 8 караоке. Бары и изакая; клубы почти не важны."
+  }
+}

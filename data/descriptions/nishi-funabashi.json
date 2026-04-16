@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Five-line commuter knot, fast but exhausting. Platforms, bus loops, crowds, little romance.",
+    "landmarks": "The interchange is the landmark. Tozai, Sobu, Musashino and Keiyo all collide here.",
+    "food": "91 restaurants, izakaya-heavy with 63 spots. Station alleys feed commuters well, not delicately.",
+    "nightlife": "47 late spots, 2 karaoke. Drinking works; clubs do not."
+  },
+  "ja": {
+    "atmosphere": "5路線の通勤結節点。速いが疲れる。ホーム、バスロータリー、人波、情緒は少なめ。",
+    "landmarks": "名所は乗換そのもの。東西線、総武線、武蔵野線、京葉線がここで交差。",
+    "food": "飲食91軒、居酒屋63軒中心。駅前路地は通勤客をしっかり満たすが繊細ではない。",
+    "nightlife": "深夜47軒、カラオケ2軒。飲みは成立、クラブはない。"
+  },
+  "ru": {
+    "atmosphere": "Пятилучевой пересадочный узел, быстрый, но выматывающий. Платформы, автобусы, толпы, мало романтики.",
+    "landmarks": "Главная достопримечательность — сама пересадка. Tozai, Sobu, Musashino и Keiyo сходятся тут.",
+    "food": "91 место, изакая-уклон с 63 точками. Привокзальные улицы кормят хорошо, без изящества.",
+    "nightlife": "47 поздних мест, 2 караоке. Выпить можно; клубов нет."
+  }
+}

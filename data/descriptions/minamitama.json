@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nambu Line Inagi, river air, green space, sparse errands. Calm costs time.",
+    "landmarks": "Tama River levee, Minami-Tama Station, Inagi greenbelt, broad low-key roads.",
+    "food": "6 restaurants, 3 izakayas, no bars, no cafes. Bring expectations down.",
+    "nightlife": "Minimal. No real late-night signal around the station."
+  },
+  "ja": {
+    "atmosphere": "南武線の稲城、川の空気と緑、用事は少なめ。静けさの代償は時間。",
+    "landmarks": "多摩川の土手、南多摩駅、稲城の緑地帯、広くて地味な道。",
+    "food": "飲食6軒、居酒屋3軒、バーなし、カフェなし。期待値は下げる。",
+    "nightlife": "ほぼ皆無。駅周辺に深夜の気配は薄い。"
+  },
+  "ru": {
+    "atmosphere": "Инаги на Nambu Line, речной воздух, зелень, мало дел. Спокойствие стоит времени.",
+    "landmarks": "Дамба Tama River, Minami-Tama Station, зеленый пояс Инаги, широкие тихие дороги.",
+    "food": "6 ресторанов, 3 изакаи, без баров и кафе. Ожидания лучше снизить.",
+    "nightlife": "Минимально. Ночной жизни у станции почти не видно."
+  }
+}

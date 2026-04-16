@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Leafy Tokyu junction by the river. Polished, safe, convenient, but oddly sleepy.",
+    "landmarks": "Tamagawa riverbank, Den-en-chofu edge, three Tokyu lines. Weekend walkers, not crowds.",
+    "food": "18 restaurants, 3 izakayas, almost no bars. Fine for dinner, weak for grazing.",
+    "nightlife": "6 late spots, no karaoke or clubs. Minimal, riverside calm wins after dark."
+  },
+  "ja": {
+    "atmosphere": "川沿いの東急乗換駅。上品で安全、便利だが、驚くほど静か。",
+    "landmarks": "多摩川河川敷、田園調布の端、東急3路線。週末散歩向き、人混み少なめ。",
+    "food": "飲食18件、居酒屋3件、バーほぼなし。夕食は足りる、食べ歩きは弱い。",
+    "nightlife": "深夜6件、カラオケもクラブもなし。夜は最小限、川沿いの静けさが勝つ。"
+  },
+  "ru": {
+    "atmosphere": "Зелёная развязка Tokyu у реки. Чисто, безопасно, удобно, но неожиданно сонно.",
+    "landmarks": "Набережная Тамагава, край Den-en-chofu, три линии Tokyu. Прогулки, не толпы.",
+    "food": "18 ресторанов, 3 изакая, баров почти нет. Ужин найдёшь, гастро-прогулка слабая.",
+    "nightlife": "6 поздних мест, без караоке и клубов. Минимум, ночью побеждает тишина реки."
+  }
+}

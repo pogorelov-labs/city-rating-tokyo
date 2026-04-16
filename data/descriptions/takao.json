@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain-gateway suburb, real rail hub but far from Tokyo core. Cheap, safe, sleepy.",
+    "landmarks": "Mount Takao access, Takao 599 Museum, old Koshu Kaido traces. Hikers set the rhythm.",
+    "food": "9 listed restaurants plus local soba and hikers' snacks. Better daytime than dinner.",
+    "nightlife": "One late spot, no karaoke or clubs. Last trains feel early."
+  },
+  "ja": {
+    "atmosphere": "山の入口の住宅地。鉄道ハブだが都心は遠い。安い、安全、かなり眠い。",
+    "landmarks": "高尾山方面、TAKAO 599 MUSEUM、旧甲州街道の名残。街のリズムは登山客。",
+    "food": "飲食9軒に地元そばと登山客向け軽食。夜より昼の街。",
+    "nightlife": "深夜営業1軒、カラオケとクラブなし。終電も早く感じる。"
+  },
+  "ru": {
+    "atmosphere": "Пригород-ворота к горам, настоящий ж/д узел, но далеко от центра. Дешево, безопасно, сонно.",
+    "landmarks": "Доступ к Mount Takao, музей Takao 599, следы старого Koshu Kaido. Ритм задают хайкеры.",
+    "food": "9 ресторанов плюс местная соба и перекусы для хайкеров. Днем лучше, чем вечером.",
+    "nightlife": "Одно позднее место, без караоке и клубов. Последние поезда кажутся ранними."
+  }
+}

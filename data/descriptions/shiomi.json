@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Waterfront Koto ward on Keiyo Line. 23k daily riders, quick center access (29 min). Low-key, industrial vibe.",
+    "landmarks": "Odaiba fringe. Pedestrian-heavy (9 streets), minimal parks. Seismic very high + elevation 11m.",
+    "food": "13 listings spots, 5 izakaya. Light dining, not a food hub.",
+    "nightlife": "2 midnight spots, minimal. Quiet after 11pm, commuter town."
+  },
+  "ja": {
+    "atmosphere": "江東区の水辺駅、京葉線。23k人/日、センター29分。低調な雰囲気、工業地帯。",
+    "landmarks": "お台場の縁辺。歩行者通りが多い（9本）、緑少ない。地震危険度最高 + 標高11m。",
+    "food": "ホットペッパー13店、居酒屋5軒。軽い飲食程度。",
+    "nightlife": "深夜営業2店。11時以降静か。"
+  },
+  "ru": {
+    "atmosphere": "Приморская станция в Кото на линии Кейо. 23k человек/день, центр 29 минут. Промышленный характер.",
+    "landmarks": "На краю Одайба. Много пешеходных улиц (9), парков нет. Сейсморизк максимум + высота 11 м.",
+    "food": "13 ресторанов listings, 5 изакай. Лёгкий перекус, не гастро-мекка.",
+    "nightlife": "2 ночных заведения. После 23:00 мертво."
+  }
+}

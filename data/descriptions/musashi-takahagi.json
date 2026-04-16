@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama commuter town, 67 min to Tokyo. Modest passenger base (5,572). Affordable, green, quiet. Moderate seismic risk.",
+    "landmarks": "Kawagoe Line. 7 parks, 1.1M sqm green. No cultural draws. Suburban residential, nothing notable.",
+    "food": "5 listings + 3, minimal. 2 izakaya. No bars or cafes. Self-cater expected.",
+    "nightlife": "2 midnight spots, zero karaoke. Nightlife doesn't exist. Kawagoe (20 min) or Tokyo for drinks."
+  },
+  "ja": {
+    "atmosphere": "埼玉の通勤町、67分。乗客5572人。手ごろな価格、緑多し、静か。地震リスク中程度。",
+    "landmarks": "川越線。公園7、1.1M平方m緑。文化施設なし。郊外の住宅地のみ。",
+    "food": "5+3、最小限。居酒屋2。バーなし、カフェなし。自炊推奨。",
+    "nightlife": "深夜2軒、カラオケなし。夜の文化なし。川越や東京へ。"
+  },
+  "ru": {
+    "atmosphere": "Город-спальня Сайтамы, 67 мин до Токио. 5572 пассажира. Доступный, зелёный, тихий. Умеренный сейсмориск.",
+    "landmarks": "Линия Кавагое. 7 парков, 1.1M кв.м зелени. Культурных достопримечательностей нет. Пригородные жилые кварталы.",
+    "food": "5 listings + 3, минимально. 2 изакаи. Нет баров, кафе. Самообслуживание.",
+    "nightlife": "2 ночных места, нет караоке. Ночной жизни не существует. В Кавагоэ или Токио."
+  }
+}

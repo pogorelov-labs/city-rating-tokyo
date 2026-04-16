@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Musashino Line suburb between rivers, practical and low-key. Clinics and pharmacies carry daily life.",
+    "landmarks": "Edogawa/Nakagawa-side parks, big suburban blocks, station-front basics. Not a postcard.",
+    "food": "24 restaurants, 12 izakayas, no cafes listed. Dinner works, coffee culture weak.",
+    "nightlife": "8 late-night spots, 2 karaoke. Small local night, no clubs."
+  },
+  "ja": {
+    "atmosphere": "川に挟まれた武蔵野線の郊外。実用的で地味。薬局とクリニックが生活を支える。",
+    "landmarks": "江戸川・中川側の公園、大きな郊外ブロック、駅前の基本機能。絵葉書ではない。",
+    "food": "飲食24軒、居酒屋12軒、カフェ掲載なし。夕食は成立、コーヒー文化は弱い。",
+    "nightlife": "深夜営業8軒、カラオケ2軒。小さな地元夜、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Musashino Line между реками, практичный и тихий. Клиники и аптеки держат быт.",
+    "landmarks": "Парки у Эдогавы/Накагавы, крупные пригородные кварталы, базовый станционный фронт. Не открытка.",
+    "food": "24 ресторана, 12 изакая, кафе не видно. Ужин работает, кофейная культура слабая.",
+    "nightlife": "8 поздних мест, 2 караоке. Маленькая локальная ночь, без клубов."
+  }
+}

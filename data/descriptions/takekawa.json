@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Saitama station (770 riders). Chichibu Line spur. Cheap (¥93k rent), quiet farming town.",
+    "landmarks": "Rural plateau, 65m elevation, low seismic risk. 170k sqm green space (small). Zero landmarks.",
+    "food": "2 listings spots only, 1 midnight venue. No dining culture, sparse essentials.",
+    "nightlife": "Minimal. Rural closure by 9pm."
+  },
+  "ja": {
+    "atmosphere": "埼玉極小駅（770人/日）。秩父線。安い家賃（93k）、静かな農村。",
+    "landmarks": "田舎台地、標高65m、地震危険度低。17万平米の小さな緑。ランドマークなし。",
+    "food": "ホットペッパーわずか2店。飲食文化なし。",
+    "nightlife": "ほぼなし。9時には閉じる。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная станция в Сайтаме (770 пассажиров). Линия Тиччибу. Дёшево (93k йен), тихий сельский край.",
+    "landmarks": "Сельская платформа, 65 м высота, низкий сейсморизк. 170k кв.м скромной зелени.",
+    "food": "Всего 2 места listings. Никакой гастрономии, редкие услуги.",
+    "nightlife": "Почти ничего. После 21:00 глухо."
+  }
+}

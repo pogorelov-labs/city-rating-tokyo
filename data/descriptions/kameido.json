@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "East Tokyo workhorse, lively and a bit gritty. Good food, heavy crowds, soft-ground flag.",
+    "landmarks": "Kameido Tenjin, gyoza alleys, Tobu branch tracks. Skytree side of old Tokyo.",
+    "food": "317 restaurants, 121 izakayas, 26 bars. Gyoza, izakaya, cheap counters, serious range.",
+    "nightlife": "133 late spots, one club, no karaoke. Loud enough, still local."
+  },
+  "ja": {
+    "atmosphere": "東東京の実用ハブ、賑やかで少しザラつく。飯は強い、人も多い、軟弱地盤あり。",
+    "landmarks": "亀戸天神、餃子の路地、東武亀戸線。スカイツリー側の古い東京。",
+    "food": "飲食317軒、居酒屋121軒、バー26軒。餃子、居酒屋、安いカウンター、幅広い。",
+    "nightlife": "深夜営業133軒、クラブ1軒、カラオケなし。十分騒がしいが地元感。"
+  },
+  "ru": {
+    "atmosphere": "Рабочий узел восточного Токио, живо и чуть шершаво. Еда сильная, толпа, мягкий грунт.",
+    "landmarks": "Kameido Tenjin, переулки гёдза, ветка Tobu. Старый Токио со стороны Skytree.",
+    "food": "317 ресторанов, 121 изакая, 26 баров. Гёдза, изакая, дешёвые стойки, широкий выбор.",
+    "nightlife": "133 поздних места, один клуб, без караоке. Шумно достаточно, но локально."
+  }
+}

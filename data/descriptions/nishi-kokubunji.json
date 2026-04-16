@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet residential suburb, 48 min to center. Affordable, minimal nightlife. Family-oriented.",
+    "landmarks": "Tamagawa Line. Kokubunji Hachimangu shrine nearby. Parks.",
+    "food": "17 listings, 8 izakaya. Scattered, uninspired.",
+    "nightlife": "3 midnight spots. Dead after 9pm."
+  },
+  "ja": {
+    "atmosphere": "静かな住宅地、中心部まで48分。手ごろ。夜間営業少ない。家族向け。",
+    "landmarks": "多摩川線。国分寺八幡宮。公園。",
+    "food": "飲食店17軒、居酒屋8軒、16件。散在、ひねりなし。",
+    "nightlife": "深夜営業3軒。9時以降シャット。"
+  },
+  "ru": {
+    "atmosphere": "Тихая жилая окраина, 48 мин. Доступно, мало ночи. Семейная.",
+    "landmarks": "Линия Tamagawa. Святилище Hachimangu. Парки.",
+    "food": "17 listings, 8 изакай, 16. Разреженно, скучно.",
+    "nightlife": "3 ночных места. Мертво после 21:00."
+  }
+}

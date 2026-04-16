@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odakyu foothill city, cheap and roomy. Good daily base, but Tokyo is a long haul.",
+    "landmarks": "Oyama gateway, Tanzawa foothills, broad suburban streets. Mountain mood near the station.",
+    "food": "54 restaurants, 25 izakayas. Local grills and family spots; solid, not refined.",
+    "nightlife": "25 late spots, 1 karaoke. Izakaya evenings, little club pressure."
+  },
+  "ja": {
+    "atmosphere": "小田急沿いの山麓都市、安くて広め。生活拠点は良い、東京通勤は長い。",
+    "landmarks": "大山への玄関、丹沢の麓、広い郊外道路。駅近くにも山の空気。",
+    "food": "飲食54軒、居酒屋25軒。地元焼き物とファミリー店。堅実、洗練ではない。",
+    "nightlife": "深夜25軒、カラオケ1軒。居酒屋の夜、クラブ圧はほぼない。"
+  },
+  "ru": {
+    "atmosphere": "Город у предгорий на Odakyu, дешево и просторно. Для быта хорошо, до Токио долго.",
+    "landmarks": "Ворота к Oyama, предгорья Tanzawa, широкие пригородные улицы. Горный воздух рядом.",
+    "food": "54 ресторана, 25 изакая. Местный гриль и семейные места; крепко, без утонченности.",
+    "nightlife": "25 поздних мест, 1 караоке. Изакая-вечера, клубного давления почти нет."
+  }
+}

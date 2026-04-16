@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Yokohama commuter hub with mall energy. Useful, crowded, greener than it feels.",
+    "landmarks": "Totsuka Station malls, Kashio River edges, five-line rail web. Practical, not pretty.",
+    "food": "84 restaurants, 41 izakayas, lots of commuter dinner. Solid, chains mixed with local joints.",
+    "nightlife": "33 late spots, no clubs. Izakaya evenings, then suburban shutdown."
+  },
+  "ja": {
+    "atmosphere": "横浜西側の大型通勤ハブ。駅ビル感が強く便利、人は多いが緑も残る。",
+    "landmarks": "戸塚駅の商業施設、柏尾川沿い、5路線の鉄道網。実用的、景色は控えめ。",
+    "food": "飲食84件、居酒屋41件。通勤客の夕食需要が強い、チェーンと地元店が混在。",
+    "nightlife": "深夜33件、クラブなし。居酒屋の夜、その後は郊外らしく静まる。"
+  },
+  "ru": {
+    "atmosphere": "Крупный хаб Йокогамы с энергией ТЦ. Удобно, людно, зелени больше, чем кажется.",
+    "landmarks": "Моллы у Totsuka Station, края Kashio River, пять линий. Практично, не красиво.",
+    "food": "84 ресторана, 41 изакая, много ужинов для коммьютеров. Крепко, сети вперемешку с локальным.",
+    "nightlife": "33 поздних места, клубов нет. Вечера в изакая, потом пригородное затухание."
+  }
+}

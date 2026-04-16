@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Hibiya Line north-end grit, close to Sanya and Arakawa. Practical, cheap-ish, soft-ground risk.",
+    "landmarks": "Joyful Minowa arcade, Yoshiwara fringe, Arakawa tram at Minowabashi. Very old Tokyo.",
+    "food": "106 restaurants, 39 izakayas; cheap set meals, ramen, market snacks. Not polished.",
+    "nightlife": "37 late spots, no karaoke or clubs. Local drinking, rough around the edges."
+  },
+  "ja": {
+    "atmosphere": "日比谷線北側の古いザラつき、山谷と荒川に近い。実用的、やや安め、地盤リスクあり。",
+    "landmarks": "ジョイフル三の輪、吉原の端、三ノ輪橋の都電。かなり古い東京。",
+    "food": "飲食106軒、居酒屋39軒。安い定食、ラーメン、市場系の軽食。磨かれてはいない。",
+    "nightlife": "深夜37軒、カラオケもクラブもなし。地元飲み、少し荒い。"
+  },
+  "ru": {
+    "atmosphere": "Старая шероховатость северной Hibiya Line, рядом Sanya и Arakawa. Практично, дешевле, мягкий грунт.",
+    "landmarks": "Joyful Minowa arcade, край Yoshiwara, трамвай Arakawa у Minowabashi. Очень старый Токио.",
+    "food": "106 ресторанов, 39 изакая; дешевые тэйсёку, рамен, рыночные перекусы. Без полировки.",
+    "nightlife": "37 поздних мест, без караоке и клубов. Местное питье, немного грубо."
+  }
+}

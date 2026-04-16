@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned suburb in Kawasaki. Clean but soulless. Young families, fitness culture. 53 min to center.",
+    "landmarks": "Parks scattered through green space. No historic sites, just landscaping.",
+    "food": "Scattered joints (6 + 16 ). Casual chain vibe. Nothing stands out.",
+    "nightlife": "Minimal. One local izakaya. Most people head elsewhere."
+  },
+  "ja": {
+    "atmosphere": "川崎の計画団地。きれいだが個性なし。ファミリー向け。",
+    "landmarks": "緑地公園が多い。歴史的スポットなし。",
+    "food": "散在した飲食店。チェーン店多い。平凡。",
+    "nightlife": "ほぼない。ジム帰りのみ。"
+  },
+  "ru": {
+    "atmosphere": "Спланированный пригород Кавасаки. Чистый, но безличный. Семейный город.",
+    "landmarks": "Парки везде, истории нет. Ландшафтный дизайн на деньги.",
+    "food": "Редкие закусочные (6 + 16 ). Сетевые рестораны. Скучно.",
+    "nightlife": "Почти нет. Одна соседская изакая. Остальные едят дома."
+  }
+}

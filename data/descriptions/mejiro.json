@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Yamanote privilege, leafy and restrained. Fast everywhere, expensive, low on chaos.",
+    "landmarks": "Gakushuin University, Mejiro Garden, Zoshigaya walks. Old money without shouting.",
+    "food": "335 restaurants, 131 izakayas, 14 cafes. Strong choice from Ikebukuro spillover, calmer streets.",
+    "nightlife": "116 late spots, small bars and karaoke. Nearby action, local volume low."
+  },
+  "ja": {
+    "atmosphere": "静かな山手線の特権、緑があり控えめ。どこへも速い、高い、混沌は少ない。",
+    "landmarks": "学習院大学、目白庭園、雑司が谷散歩。声を張らない旧い上品さ。",
+    "food": "飲食335軒、居酒屋131軒、カフェ14軒。池袋のこぼれで選択肢強いが、通りは落ち着く。",
+    "nightlife": "深夜営業116軒、小さなバーとカラオケ。近くに遊び場、地元の音量は低い。"
+  },
+  "ru": {
+    "atmosphere": "Тихая привилегия Yamanote, зелено и сдержанно. Быстро везде, дорого, мало хаоса.",
+    "landmarks": "Gakushuin University, Mejiro Garden, прогулки Zoshigaya. Старые деньги без крика.",
+    "food": "335 ресторанов, 131 изакая, 14 кафе. Сильный выбор от Ikebukuro spillover, улицы спокойнее.",
+    "nightlife": "116 поздних мест, малые бары и караоке. Движ рядом, локальная громкость низкая."
+  }
+}

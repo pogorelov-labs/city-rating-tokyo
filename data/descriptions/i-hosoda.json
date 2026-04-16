@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural spur station, 111 min from Tokyo. Mountain foothills, hiking gateway, seismic-prone soft ground (very high risk).",
+    "landmarks": "Daiyuzan Line tram stop. Hakone gate. 20 trees registered (formal shrine-adjacent property).",
+    "food": "8 listings, 3 izakaya, 1 hostel. Tourist lodging food only.",
+    "nightlife": "2 late-night, 0 karaoke. Mountain town bedtime 21:00."
+  },
+  "ja": {
+    "atmosphere": "田舎支線、東京まで111分。箱根山麓、登山口。非常に高いP波危険。",
+    "landmarks": "大雄山線。箱根口。樹木20登録。",
+    "food": "旅籠向け8軒、居酒屋3。観光者食堂。",
+    "nightlife": "夜間2軒。山町の21時消灯。"
+  },
+  "ru": {
+    "atmosphere": "Сельская ветка, 111 мин от Токио. Предгорья Хаконэ, вход в горы. Критический сейсмический риск.",
+    "landmarks": "Дайюдзан линия. Врата Хаконэ. 20 зарегистрированных деревьев (храмовая территория).",
+    "food": "8 мест для туристов, 3 изакаи, 1 хостел.",
+    "nightlife": "2 поздних места. Спать в 21:00."
+  }
+}

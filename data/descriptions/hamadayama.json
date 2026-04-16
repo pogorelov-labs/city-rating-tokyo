@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Suginami suburb on Inokashira. Family money, clean streets, low drama.",
+    "landmarks": "Zenpukuji River green belt nearby, quiet villa blocks. No tourist anchor.",
+    "food": "Neighborhood bistros, soba, bakeries, small cafes. Solid, not a food crawl.",
+    "nightlife": "Late izakayas exist, clubs do not. Drinks stay local."
+  },
+  "ja": {
+    "atmosphere": "井の頭線の上品な杉並住宅地。家族向け、道は清潔、刺激は少ない。",
+    "landmarks": "善福寺川の緑地帯が近い。低層住宅と静かな通り、観光の目玉はない。",
+    "food": "近所のビストロ、蕎麦、ベーカリー、小さなカフェ。堅実だが食べ歩き向きではない。",
+    "nightlife": "遅い居酒屋はある、クラブはない。飲みは地元で完結。"
+  },
+  "ru": {
+    "atmosphere": "Вычищенный Сугинами на Инокасира. Семейные деньги, чистые улицы, мало драмы.",
+    "landmarks": "Зеленая полоса Дзэнпукудзи рядом, тихие виллы. Туристического якоря нет.",
+    "food": "Бистро, соба, пекарни, маленькие кафе. Крепко, но не маршрут для фуд-краула.",
+    "nightlife": "Поздние изакаи есть, клубов нет. Пьют по-соседски."
+  }
+}

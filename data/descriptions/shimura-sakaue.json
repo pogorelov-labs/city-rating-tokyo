@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Itabashi plateau suburb, practical and safe. Mita Line works, street vibe stays plain.",
+    "landmarks": "Azusawa sports area, local shopping strips, slopes toward the Arakawa lowland.",
+    "food": "50 restaurants, 18 izakayas, 3 bars. Good enough nearby, little destination pull.",
+    "nightlife": "13 late spots, no karaoke or clubs. Neighborhood drinks, then quiet."
+  },
+  "ja": {
+    "atmosphere": "板橋の台地側、実用的で安全。三田線は使える、街の色は地味。",
+    "landmarks": "小豆沢スポーツ周辺、地元商店、荒川低地へ向かう坂道。",
+    "food": "飲食50件、居酒屋18件、バー3件。近所飯は十分、遠征するほどではない。",
+    "nightlife": "深夜13件、カラオケもクラブもなし。近所飲みの後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Итабаши на плато, практично и безопасно. Mita Line работает, улицы простые.",
+    "landmarks": "Спортивная зона Azusawa, локальные торговые полосы, склоны к низине Arakawa.",
+    "food": "50 ресторанов, 18 изакай, 3 бара. Рядом хватает, ехать ради еды не надо.",
+    "nightlife": "13 поздних мест, без караоке и клубов. Соседские напитки, потом тишина."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Noisy Nambu/Tokyu interchange, useful and dense. Great everyday depth, crowded platforms, safety caveat.",
+    "landmarks": "Tokyu Den-en-toshi/Oimachi and JR Nambu knot. Shopping streets and drink alleys packed tight.",
+    "food": "154 restaurants, 78 izakayas, heavy cheap-dinner energy. Strong, casual, not polished.",
+    "nightlife": "74 midnight spots, 5 karaoke, no clubs. Izakaya-heavy, rowdy not fancy."
+  },
+  "ja": {
+    "atmosphere": "南武線と東急のうるさい結節点。便利で濃い。日常力は高い、ホームは混む、治安は注意。",
+    "landmarks": "田園都市線・大井町線・南武線の結び目。商店街と飲み屋路地が詰まっている。",
+    "food": "飲食154軒、居酒屋78軒、安い夕食の熱量強め。強いが上品ではない。",
+    "nightlife": "深夜営業74軒、カラオケ5軒、クラブなし。居酒屋濃厚、洒落より雑踏。"
+  },
+  "ru": {
+    "atmosphere": "Шумный узел Nambu/Tokyu, плотный и полезный. Сильный быт, забитые платформы, безопасность с оговоркой.",
+    "landmarks": "Узел Tokyu Den-en-toshi/Oimachi и JR Nambu. Торговые улицы и питейные переулки сжаты плотно.",
+    "food": "154 ресторана, 78 изакая, мощная энергия дешёвого ужина. Сильно, повседневно, не глянцево.",
+    "nightlife": "74 ночных места, 5 караоке, клубов нет. Изакая-heavy, шумно, не элегантно."
+  }
+}

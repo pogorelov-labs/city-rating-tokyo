@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain foothills, pristine nature. One clinic, one pharmacy. Elevation 267m makes it a proper escape.",
+    "landmarks": "Deep valley setting, hiking trails, zero urban infrastructure. Quiet sanctuary.",
+    "food": "Minimal — 1 entry only. Prepare meals at home.",
+    "nightlife": "Minimal. Last train 23:45, mountain town sleeps early."
+  },
+  "ja": {
+    "atmosphere": "山麓の自然豊か。267m標高、都市から隔離された場所。",
+    "landmarks": "谷間の駅、ハイキングコース周辺。都市施設ゼロ。",
+    "food": "ほぼなし。1件のみ。自炊が必須。",
+    "nightlife": "ほぼなし。最終電車23:45。"
+  },
+  "ru": {
+    "atmosphere": "Предгорье, нетронутая природа. Высота 267м — настоящее убежище от города.",
+    "landmarks": "Долина, пешеходные маршруты вокруг. Никакой городской инфраструктуры.",
+    "food": "Практически нет — только 1 запись. Готовьте дома.",
+    "nightlife": "Практически нет. Последний поезд 23:45, горный город спит рано."
+  }
+}

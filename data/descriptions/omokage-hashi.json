@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Waseda backwater on the Sakura Tram. Quiet river lanes, student spillover, very early last tram.",
+    "landmarks": "Kanda River cherry walk, Waseda campus nearby, tiny tram stop under old trees.",
+    "food": "255 restaurants around Waseda and Baba; 85 izakayas, plenty of cheap student fuel.",
+    "nightlife": "93 late spots, 1 karaoke. Student bars nearby, but the tram itself sleeps at 23:05."
+  },
+  "ja": {
+    "atmosphere": "早稲田の裏口みたいな都電停留場。川沿い静か、学生の余熱、終電はかなり早い。",
+    "landmarks": "神田川の桜並木、早稲田キャンパス至近、古木の下の小さな停留場。",
+    "food": "早稲田・馬場側に飲食255軒。居酒屋85軒、学生向けの安飯が強い。",
+    "nightlife": "深夜93軒、カラオケ1軒。学生酒場は近いが、都電は23:05で寝る。"
+  },
+  "ru": {
+    "atmosphere": "Тихий задний двор Васэды на трамвае Sakura. Река, студенты рядом, последний трамвай слишком рано.",
+    "landmarks": "Сакура вдоль Kanda River, кампус Waseda рядом, крошечная остановка под старыми деревьями.",
+    "food": "255 мест вокруг Waseda и Baba; 85 изакая, много дешевой студенческой еды.",
+    "nightlife": "93 поздних места, 1 караоке. Студенческие бары рядом, но трамвай засыпает в 23:05."
+  }
+}

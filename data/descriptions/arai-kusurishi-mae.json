@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nakano-side old neighborhood, temple calm and small bars. Useful, slightly under-the-radar.",
+    "landmarks": "Arai Yakushi Baishoin, Nakano Broadway side trips, Seibu Shinjuku backstreets.",
+    "food": "131 restaurants, 50 izakayas, 18 bars. Better drinking than the station size suggests.",
+    "nightlife": "67 late-night spots, no karaoke. Small-bar nights, not club nights."
+  },
+  "ja": {
+    "atmosphere": "中野側の古い住宅街。寺の静けさと小バー。便利だが少し穴場。",
+    "landmarks": "新井薬師梅照院、中野ブロードウェイ方面、西武新宿線の裏道。",
+    "food": "飲食131軒、居酒屋50軒、バー18軒。駅の小ささより飲みは強い。",
+    "nightlife": "深夜営業67軒、カラオケなし。小バーの夜、クラブの夜ではない。"
+  },
+  "ru": {
+    "atmosphere": "Старый район у Накано: храмовое спокойствие и малые бары. Удобно, слегка под радаром.",
+    "landmarks": "Arai Yakushi Baishoin, выезды к Nakano Broadway, закоулки Seibu Shinjuku.",
+    "food": "131 ресторан, 50 изакая, 18 баров. Выпивка сильнее, чем размер станции обещает.",
+    "nightlife": "67 поздних мест, караоке нет. Ночи малых баров, не клубов."
+  }
+}

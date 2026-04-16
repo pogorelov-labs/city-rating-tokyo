@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Oimachi Line residential pocket, polished but not flashy. Good errands, weak draw.",
+    "landmarks": "Senzokuike Park nearby, Ookayama and Hatanodai within reach. Calm side streets.",
+    "food": "82 restaurants, 23 izakayas; local ramen, soba, small counters. Cafes sparse.",
+    "nightlife": "21 late spots, 2 karaoke. Neighborhood drinks, not a night out."
+  },
+  "ja": {
+    "atmosphere": "大井町線の静かな住宅ポケット。整っているが派手ではない。用事は強い、目的地感は弱い。",
+    "landmarks": "洗足池が近く、大岡山と旗の台も圏内。落ち着いた脇道。",
+    "food": "飲食82軒、居酒屋23軒。地元ラーメン、そば、小さなカウンター。カフェ少なめ。",
+    "nightlife": "深夜21軒、カラオケ2軒。近所飲み、夜遊びではない。"
+  },
+  "ru": {
+    "atmosphere": "Тихий жилой карман Oimachi Line, аккуратно, но не ярко. Быт удобен, притяжения мало.",
+    "landmarks": "Рядом Senzokuike Park, Ookayama и Hatanodai достижимы. Спокойные боковые улицы.",
+    "food": "82 ресторана, 23 изакая; местный рамен, соба, малые стойки. Кафе редкие.",
+    "nightlife": "21 позднее место, 2 караоке. Соседские напитки, не вечерний маршрут."
+  }
+}

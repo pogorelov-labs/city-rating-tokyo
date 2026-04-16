@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio residential stop, safe and green, not flashy. Useful, calm, a little plain.",
+    "landmarks": "Suginami-Keio corridor, station shops, park pockets scattered through the grid.",
+    "food": "36 restaurants, 14 izakayas, no real bar scene. Daily meals, not a destination.",
+    "nightlife": "13 late spots, no karaoke. Quiet local drinking only."
+  },
+  "ja": {
+    "atmosphere": "京王線の住宅駅、安全で緑あり、派手さなし。便利、静か、少し地味。",
+    "landmarks": "杉並の京王沿線、駅前商店、住宅街に散る小さな公園。",
+    "food": "飲食36軒、居酒屋14軒、バー感はほぼなし。日常飯の街、目的地ではない。",
+    "nightlife": "深夜13軒、カラオケなし。静かな地元飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Жилая станция Keio, безопасно и зелено, без блеска. Удобно, спокойно, чуть пресно.",
+    "landmarks": "Коридор Keio в Сугинами, магазины у станции, мелкие парки в сетке кварталов.",
+    "food": "36 ресторанов, 14 изакая, баров почти нет. Еда на каждый день, не точка назначения.",
+    "nightlife": "13 поздних мест, без караоке. Только тихие местные выпивки."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mall-city hub for central Kanagawa, VinaWalk crowds and family suburbs. Handy, but soft-ground risk.",
+    "landmarks": "LaLaport Ebina, VinaWalk, Sagami River parks nearby. Three-line transfer, always busy.",
+    "food": "91 restaurants, 54 izakayas. Mall dining, ramen, family chains; more practical than cool.",
+    "nightlife": "32 late spots, 6 karaoke. Izakaya yes, clubs no. Last train not generous."
+  },
+  "ja": {
+    "atmosphere": "県央のモール都市。ビナウォークの人混みと家族向け郊外。便利だが軟弱地盤は注意。",
+    "landmarks": "ららぽーと海老名、ビナウォーク、相模川方面の公園。3路線乗換で常に混む。",
+    "food": "飲食91軒、居酒屋54軒。モール飯、ラーメン、ファミレス系。洒落より実用。",
+    "nightlife": "深夜32軒、カラオケ6軒。居酒屋はある、クラブはない。終電も強くない。"
+  },
+  "ru": {
+    "atmosphere": "Молл-город центра Канагавы, толпы VinaWalk и семейный пригород. Удобно, но грунт мягкий.",
+    "landmarks": "LaLaport Ebina, VinaWalk, парки у реки Сагами. Три линии, пересадки, постоянная суета.",
+    "food": "91 ресторан, 54 изакая. Молл-еда, рамен, семейные сети; практично, не модно.",
+    "nightlife": "32 поздних места, 6 караоке. Изакая да, клубов нет. Последний поезд не щедрый."
+  }
+}

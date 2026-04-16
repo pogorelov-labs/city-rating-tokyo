@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ikebukuro-adjacent side street zone, central and expensive. Convenient, quieter than the neighbor.",
+    "landmarks": "Yurakucho-Fukutoshin junction, Ikebukuro walkable, small parks tucked between roads.",
+    "food": "365 restaurants, 150 izakayas. Spillover from Ikebukuro: ramen, bars, late counters.",
+    "nightlife": "200 late spots, 34 bars. Strong late-night supply, but not clubby."
+  },
+  "ja": {
+    "atmosphere": "池袋隣の脇道エリア、中心部で高い。便利だが隣より静か。",
+    "landmarks": "有楽町線と副都心線の交点、池袋徒歩圏、道路の間に小公園。",
+    "food": "飲食365軒、居酒屋150軒。池袋の余波でラーメン、バー、深夜カウンターが強い。",
+    "nightlife": "深夜200軒、バー34軒。夜の供給は強いが、クラブ寄りではない。"
+  },
+  "ru": {
+    "atmosphere": "Боковые улицы рядом с Икэбукуро, центр и высокая аренда. Удобно, тише соседа.",
+    "landmarks": "Узел Yurakucho и Fukutoshin, Икэбукуро пешком, маленькие парки между дорогами.",
+    "food": "365 ресторанов, 150 изакая. Эхо Икэбукуро: рамен, бары, поздние стойки.",
+    "nightlife": "200 поздних мест, 34 бара. Сильная ночная база, но не клубная."
+  }
+}

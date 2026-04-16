@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Remote Chiba coastal town (288 riders). Uchibo Line, 112 min to center. Cheap (¥73k), isolated.",
+    "landmarks": "Rural coast, minimal development. Zero green infrastructure, seismic high (15m elevation).",
+    "food": "4 listings spots, 1 izakaya. Beach town food, unremarkable.",
+    "nightlife": "Minimal. Last train 00:07 but no venues."
+  },
+  "ja": {
+    "atmosphere": "千葉沿岸の奥地（288人/日）。内房線、センターまで112分。安い（73k）、孤立。",
+    "landmarks": "田舎海岸、開発ほぼなし。緑の施設ゼロ、地震高い（標高15m）。",
+    "food": "ホットペッパー4店、居酒屋1軒。海辺の食、平凡。",
+    "nightlife": "ほぼなし。終電00:07だが店なし。"
+  },
+  "ru": {
+    "atmosphere": "Отдалённый прибрежный город Чиба (288 пассажиров). Линия Учибо, 112 мин до центра. Дёшево (73k йен), изолировано.",
+    "landmarks": "Сельское побережье, почти не развито. Никакой зелёной инфраструктуры, сейсморизк высокий (15 м).",
+    "food": "4 места listings, 1 изакая. Пляжная еда, заурядная.",
+    "nightlife": "Практически нет. Последний поезд в 00:07, но кафе нет."
+  }
+}

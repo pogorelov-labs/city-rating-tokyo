@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya tram stop with quiet streets and surprising food density. Cute, not fast.",
+    "landmarks": "Setagaya Line tracks, Shoin Shrine side streets, Sangenjaya within reach.",
+    "food": "198 restaurants, 69 izakayas, 20 bars. Strong local eating, low-rise drinking.",
+    "nightlife": "106 late spots, no karaoke or clubs. Bars and izakaya, not a club night."
+  },
+  "ja": {
+    "atmosphere": "静かな世田谷線の停留場、食の密度は意外に高い。可愛いが速くはない。",
+    "landmarks": "世田谷線の線路、松陰神社側の路地、三軒茶屋も射程内。",
+    "food": "飲食198軒、居酒屋69軒、バー20軒。地元飯は強い、低層の飲み屋感。",
+    "nightlife": "深夜営業106軒、カラオケもクラブもなし。バーと居酒屋、クラブ夜ではない。"
+  },
+  "ru": {
+    "atmosphere": "Тихая остановка Setagaya Line с неожиданной плотностью еды. Мило, но не быстро.",
+    "landmarks": "Пути Setagaya Line, улицы у Shoin Shrine, Sangenjaya в зоне досягаемости.",
+    "food": "198 ресторанов, 69 изакая, 20 баров. Сильная локальная еда, низкая барная сцена.",
+    "nightlife": "106 поздних мест, без караоке и клубов. Бары и изакая, не клубная ночь."
+  }
+}

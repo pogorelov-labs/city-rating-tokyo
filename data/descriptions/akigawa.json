@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Tokyo edge, cheap and safe, mountain-side rhythm. Commute is the tax.",
+    "landmarks": "Itsukaichi Line stop, Akiruno streets, hills pulling the city toward countryside.",
+    "food": "20 restaurants, 9 izakayas, 1 bar. Small-town basics, limited cafe or dinner variety.",
+    "nightlife": "7 late spots, 1 karaoke. Minimal, local, ends early."
+  },
+  "ja": {
+    "atmosphere": "東京西端、安くて安全、山側のリズム。通勤時間が代金。",
+    "landmarks": "五日市線の駅、あきる野の街路、丘が街を郊外から田舎へ引っ張る。",
+    "food": "飲食20軒、居酒屋9軒、バー1軒。小さな町の最低限、カフェも夕食の幅も狭い。",
+    "nightlife": "深夜7軒、カラオケ1軒。最小限、地元向け、早く終わる。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Токио, дёшево и безопасно, ритм у холмов. Налог — долгая дорога.",
+    "landmarks": "Остановка Itsukaichi Line, улицы Акируно, холмы тянут город к сельскому краю.",
+    "food": "20 ресторанов, 9 изакая, 1 бар. Малый город: базово, кафе и ужины узкие.",
+    "nightlife": "7 поздних мест, 1 караоке. Минимально, местно, заканчивается рано."
+  }
+}

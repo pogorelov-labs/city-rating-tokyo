@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Utsunomiya Line satellite in Saitama, 33k daily commuters. Suburban anchor, family zone.",
+    "landmarks": "14 parks, 243k sqm green. 7 clinics, family healthcare hub. Quiet pedestrian grid.",
+    "food": "17 listings venues, 5 izakaya, some bars. Decent breadth for suburbs.",
+    "nightlife": "4 late spots, modest scene. Karaoke sparse, more drink bars."
+  },
+  "ja": {
+    "atmosphere": "宇都宮線の埼玉衛星駅。利用者3.3万。ファミリータウン。",
+    "landmarks": "公園14、緑地243k平米。診療所7。",
+    "food": "飲食店17軒、居酒屋5、バーも。郊外の割に揃ってる。",
+    "nightlife": "深夜営業4軒。適度な飲み屋。カラオケ稀少。"
+  },
+  "ru": {
+    "atmosphere": "Спутник Утсуномия в埼玉, 33k пассажиров. Пригородный якорь, семьи.",
+    "landmarks": "14 парков, 243k зелени. 7 клиник, медицинский хаб.",
+    "food": "17 ресторанов, 5 изакай, бары есть. Солидно для пригорода.",
+    "nightlife": "4 поздних бара. Умеренно. Караоке редко."
+  }
+}

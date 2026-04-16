@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi lowland, practical and affordable. Flood risk and soft ground are the trade-off.",
+    "landmarks": "Nishiarai Daishi nearby, Toneri Liner viaduct, Arakawa flatlands. Very local.",
+    "food": "39 restaurants, 10 izakayas. Enough for weeknights, thin for picky eaters.",
+    "nightlife": "16 late-night spots, no karaoke. Quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "足立の低地、実用的で安め。水害リスクと軟弱地盤が交換条件。",
+    "landmarks": "西新井大師近く、舎人ライナー高架、荒川低地。完全に地元向け。",
+    "food": "飲食39軒、居酒屋10軒。平日の夕食は足りる、こだわる人には薄い。",
+    "nightlife": "深夜営業16軒、カラオケなし。夕食後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Низина Адачи, практично и доступно. Риск паводка и мягкий грунт идут в комплекте.",
+    "landmarks": "Рядом Nishiarai Daishi, эстакада Toneri Liner, равнины Аракавы. Очень локально.",
+    "food": "39 ресторанов, 10 изакая. На будний ужин хватает, для привередливых тонко.",
+    "nightlife": "16 поздних мест, караоке нет. После ужина тихо."
+  }
+}
