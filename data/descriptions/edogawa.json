@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keisei stop by the river, quiet and safe. One-line life, low crowd, few surprises.",
+    "landmarks": "Edo River embankment, bridge walks toward Ichikawa, old low-rise lanes around Koiwa.",
+    "food": "11 listed restaurants plus a few finds. Two izakayas, small cafes, mostly local basics.",
+    "nightlife": "2 late spots, no karaoke, no clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "川沿いの小さな京成駅。静かで安全、1路線生活、人は少なめ。",
+    "landmarks": "江戸川土手、市川方面への橋、 小岩寄りの低層路地。昔の住宅地感。",
+    "food": "飲食11件＋少数。居酒屋2件、小さなカフェ、基本は地元向け。",
+    "nightlife": "深夜営業2件、カラオケなし、クラブなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая станция Keisei у реки, тихо и безопасно. Одна линия, мало людей, мало сюрпризов.",
+    "landmarks": "Набережная Edo River, мосты к Итикаве, низкие старые улицы у Koiwa.",
+    "food": "11 заведений плюс немного. Две изакая, малые кафе, в основном база для местных.",
+    "nightlife": "2 поздних места, без караоке и клубов. Практически нет."
+  }
+}

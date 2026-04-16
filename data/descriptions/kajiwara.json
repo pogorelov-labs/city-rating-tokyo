@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Sakura Tram stop, quiet and cheap. Green pockets help, but soft-ground risk is real.",
+    "landmarks": "Arakawa tram tracks, Oji side streets, local parks. Old north-Tokyo scale.",
+    "food": "66 restaurants, 23 izakayas, 5 cafes. Better than expected, mostly local counters.",
+    "nightlife": "25 late spots, no karaoke or clubs. Small izakaya night, early tram."
+  },
+  "ja": {
+    "atmosphere": "小さな都電停留場、静かで安め。緑は助かるが、軟弱地盤リスクは重い。",
+    "landmarks": "荒川線の線路、王子側の路地、地元公園。北東京の古いスケール。",
+    "food": "飲食66軒、居酒屋23軒、カフェ5軒。期待より食える、ほぼ地元カウンター。",
+    "nightlife": "深夜営業25軒、カラオケもクラブもなし。小さな居酒屋の夜、都電は早い。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Sakura Tram, тихо и недорого. Зелень спасает, но мягкий грунт реален.",
+    "landmarks": "Рельсы Arakawa, улицы к Oji, локальные парки. Старый масштаб северного Токио.",
+    "food": "66 ресторанов, 23 изакая, 5 кафе. Лучше ожиданий, в основном местные стойки.",
+    "nightlife": "25 поздних мест, без караоке и клубов. Малая изакая-ночь, ранний трамвай."
+  }
+}

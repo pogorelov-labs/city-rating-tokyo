@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Ota shotengai town, practical and a little worn. Haneda access beats glamour.",
+    "landmarks": "Umeyashiki Park, local shopping street, Kamata nearby. Keikyu-only rhythm.",
+    "food": "113 restaurants, 61 izakayas; cheap counters, fried food, local drinking dens.",
+    "nightlife": "48 late spots, 5 bars. Izakaya-heavy, not clubby."
+  },
+  "ja": {
+    "atmosphere": "大田区の古い商店街町、実用的で少し擦れている。羽田アクセスが売り。",
+    "landmarks": "梅屋敷公園、地元商店街、蒲田も近い。京急一本のリズム。",
+    "food": "飲食113軒、居酒屋61軒。安いカウンター、揚げ物、地元の飲み屋。",
+    "nightlife": "深夜営業48軒、バー5軒。居酒屋濃いめ、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Старый торговый район Ота, практично и чуть потёрто. Доступ к Ханэде важнее глянца.",
+    "landmarks": "Парк Umeyashiki, местная торговая улица, Камата рядом. Ритм одной Keikyu.",
+    "food": "113 ресторанов, 61 изакая. Дешёвые стойки, жареное, местные питейные норы.",
+    "nightlife": "48 поздних мест, 5 баров. Сильно изакая, не клубно."
+  }
+}

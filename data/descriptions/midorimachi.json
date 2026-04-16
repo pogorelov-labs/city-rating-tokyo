@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odawara side-street stop, tiny ridership but city-center spillover. Cheap, coastal, very far.",
+    "landmarks": "Odawara Castle area nearby, Daiyuzan Line local feel, old shopping streets. Very high seismic risk.",
+    "food": "114 restaurants, 44 izakayas, 6 bars. Better than the station size suggests, seafood nearby.",
+    "nightlife": "34 late spots, 3 karaoke, no clubs. Small-city drinking, not Tokyo nightlife."
+  },
+  "ja": {
+    "atmosphere": "小田原の脇道駅。乗降は小さいが中心部の余波あり。安く海寄り、東京からは遠い。",
+    "landmarks": "小田原城エリア近く、大雄山線のローカル感、古い商店街。地震リスクはかなり高い。",
+    "food": "飲食114軒、居酒屋44軒、バー6軒。駅の小ささより食は強い、海の店も近い。",
+    "nightlife": "深夜営業34軒、カラオケ3軒、クラブなし。地方都市の飲みで、東京の夜ではない。"
+  },
+  "ru": {
+    "atmosphere": "Боковая остановка Odawara, пассажиров мало, но центр рядом. Дёшево, у моря, очень далеко.",
+    "landmarks": "Рядом зона Odawara Castle, локальный дух Daiyuzan Line, старые торговые улицы. Сейсмориск очень высокий.",
+    "food": "114 ресторанов, 44 изакая, 6 баров. Сильнее, чем размер станции намекает, морская еда близко.",
+    "nightlife": "34 поздних места, 3 караоке, клубов нет. Выпивка малого города, не токийская ночь."
+  }
+}

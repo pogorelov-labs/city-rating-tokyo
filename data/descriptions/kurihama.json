@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokosuka edge town, cheap and coastal, painfully far. Low-lying soft-ground risk.",
+    "landmarks": "Keikyu and JR Kurihama stations, port roads, Perry Park side of town.",
+    "food": "39 restaurants, 17 izakayas, one bar. Local seafood mood, limited cafe life.",
+    "nightlife": "16 late spots, no karaoke, no clubs. Last train feels brutally early."
+  },
+  "ja": {
+    "atmosphere": "横須賀の端、安くて海寄り、都心はかなり遠い。低地と軟弱地盤に注意。",
+    "landmarks": "京急久里浜とJR久里浜、港へ向かう道、ペリー公園側の街。",
+    "food": "飲食39軒、居酒屋17軒、バー1軒。海側の地元飯、カフェ文化は薄い。",
+    "nightlife": "深夜16軒、カラオケなし、クラブなし。終電がかなり早く感じる。"
+  },
+  "ru": {
+    "atmosphere": "Край Йокосуки, дешево и у моря, до центра мучительно далеко. Низина, мягкий грунт.",
+    "landmarks": "Keikyu и JR Kurihama, портовые дороги, сторона Perry Park.",
+    "food": "39 ресторанов, 17 изакай, один бар. Морской локальный вайб, кафе мало.",
+    "nightlife": "16 поздних мест, без караоке и клубов. Последний поезд слишком рано."
+  }
+}

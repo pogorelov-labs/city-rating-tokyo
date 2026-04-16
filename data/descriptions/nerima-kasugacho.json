@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep Oedo-line suburb, clean and residential. Great parks, dull evenings, rent not cheap.",
+    "landmarks": "Hikarigaoka Park side, quiet Kasugacho streets, Toei Oedo deep-platform life.",
+    "food": "13 restaurants, 6 izakayas. Super local, enough for dinner, not for exploring.",
+    "nightlife": "3 late spots, one karaoke, one club marker. Mostly dead after 9pm."
+  },
+  "ja": {
+    "atmosphere": "大江戸線の深い住宅地。清潔で静か、公園は強い、夜は退屈。",
+    "landmarks": "光が丘公園方面、春日町の静かな道、大江戸線の深いホーム生活。",
+    "food": "飲食13件、居酒屋6件。完全に地元用、夕飯には足りる。",
+    "nightlife": "深夜3件、カラオケ1件、クラブ1件。9時以降ほぼ沈む。"
+  },
+  "ru": {
+    "atmosphere": "Глубокий пригород на Oedo Line, чисто и жилое. Парки сильные, вечера скучные, аренда не подарок.",
+    "landmarks": "Сторона Hikarigaoka Park, тихие улицы Kasugacho, жизнь с глубокими платформами Oedo.",
+    "food": "13 ресторанов, 6 изакай. Чисто локально, на ужин хватит, гулять некуда.",
+    "nightlife": "3 поздних места, одно караоке, один клуб-маркер. После 21:00 почти мертво."
+  }
+}

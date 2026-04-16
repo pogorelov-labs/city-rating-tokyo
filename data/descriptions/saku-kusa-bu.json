@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba Monorail local stop, cheap and quiet. Low crowds, long Tokyo commute, sparse basics.",
+    "landmarks": "Monorail viaduct, Chiba Park side, residential Inage streets. Small-scale, not central.",
+    "food": "18 restaurants, 3 izakayas, 3 cafes. Enough for locals, thin for choice.",
+    "nightlife": "2 late spots, no karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "千葉モノレールの生活駅、安くて静か。人は少ない、東京通勤は長い、生活機能は薄め。",
+    "landmarks": "モノレール高架、千葉公園方面、稲毛の住宅街。小規模で中心感はない。",
+    "food": "飲食18軒、居酒屋3軒、カフェ3軒。地元には足りるが選択肢は細い。",
+    "nightlife": "深夜2軒、カラオケなし。最小限。"
+  },
+  "ru": {
+    "atmosphere": "Локальная остановка Chiba Monorail, дешево и тихо. Мало толп, долгая дорога в Токио, база редкая.",
+    "landmarks": "Эстакада монорельса, сторона Chiba Park, жилые улицы Inage. Малый масштаб, не центр.",
+    "food": "18 ресторанов, 3 изакая, 3 кафе. Местным хватит, выбора мало.",
+    "nightlife": "2 поздних места, караоке нет. Минимально."
+  }
+}

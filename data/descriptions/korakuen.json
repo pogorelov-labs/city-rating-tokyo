@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo Dome gravity field: events, students, families, noise. Convenient, rarely calm.",
+    "landmarks": "Tokyo Dome, LaQua, Koishikawa Korakuen, Bunkyo Civic Center. Big-name cluster.",
+    "food": "396 spots, 192 izakayas, 14 cafes. Event-day chains plus strong backstreet meals.",
+    "nightlife": "119 late spots, 2 karaoke, no clubs. Post-game drinks, then a quick drop."
+  },
+  "ja": {
+    "atmosphere": "東京ドームの重力圏。イベント、学生、家族、騒音。便利だが落ち着きにくい。",
+    "landmarks": "東京ドーム、ラクーア、小石川後楽園、文京シビックセンター。名所が密集。",
+    "food": "飲食396軒、居酒屋192軒、カフェ14軒。イベント日のチェーンと裏道の良店。",
+    "nightlife": "深夜営業119軒、カラオケ2軒、クラブなし。試合後の飲み、そこから急に引く。"
+  },
+  "ru": {
+    "atmosphere": "Гравитация Tokyo Dome: события, студенты, семьи, шум. Удобно, редко спокойно.",
+    "landmarks": "Tokyo Dome, LaQua, Koishikawa Korakuen, Bunkyo Civic Center. Крупные точки кучно.",
+    "food": "396 мест, 192 изакая, 14 кафе. Сети на ивенты плюс сильные закоулочные ужины.",
+    "nightlife": "119 поздних мест, 2 караоке, без клубов. Напитки после матча, потом резкий спад."
+  }
+}

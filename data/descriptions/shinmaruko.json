@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Toyoko-Meguro commuter pocket, close to Musashi-Kosugi but rougher, quieter, less polished.",
+    "landmarks": "Tamagawa river walks, small shopping streets, Kosugi towers looming next door.",
+    "food": "192 restaurants, 108 izakayas, lots of casual local tables. Bars are thin, food is not.",
+    "nightlife": "62 late spots, 1 karaoke. Izakaya-heavy, no club scene."
+  },
+  "ja": {
+    "atmosphere": "武蔵小杉の隣、東横・目黒線の生活駅。少し雑、少し静か、気取らない。",
+    "landmarks": "多摩川散歩、駅前商店街、隣に小杉のタワマン群。派手さより生活感。",
+    "food": "飲食192軒、居酒屋108軒。普段使いの店が厚い。バーは薄いが飯は困らない。",
+    "nightlife": "深夜62軒、カラオケ1軒。居酒屋中心、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Карман у Toyoko-Meguro, рядом с Мусаси-Косуги, но проще, тише, менее глянцево.",
+    "landmarks": "Прогулки вдоль Тамагава, мелкие торговые улицы, башни Косуги уже за углом.",
+    "food": "192 ресторана, 108 изакая, много повседневной еды. Баров мало, поесть легко.",
+    "nightlife": "62 поздних места, 1 караоке. Изакая-сцена, без клубной жизни."
+  }
+}

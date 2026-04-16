@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal Chiba village, Uchibo Line. Quiet fishing town (574 daily), elevation 5m (flood risk alert), very high seismic. Safe (7/10), cheap (¥116k).",
+    "landmarks": "3 food entries, 2 clinics. No cultural venues, no pedestrian streets. Minimal infrastructure.",
+    "food": "3 spots only. Village subsistence-level dining.",
+    "nightlife": "Closed. Dead."
+  },
+  "ja": {
+    "atmosphere": "千葉沿岸村、内房線。漁村（574日）。5m（洪水注意）、超high seismic。安全、安い（¥116k）。",
+    "landmarks": "食3、clinic2。文化施設なし、ペデ街なし。最小インフラ。",
+    "food": "3のみ。村自給飯。",
+    "nightlife": "夜中ゼロ。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежная Chiba деревня, линия Uchibo. Тихой рыбацкой город (574 в день). 5м (наводнение риск ALERT), очень высокий seismic. Безопасен (7/10), дешёво (¥116k).",
+    "landmarks": "3 еды, 2 клиники. Культурных мест нет, пешеходных улиц нет. Минимум инфры.",
+    "food": "3 только. Деревенская еда уровня самообслуживания.",
+    "nightlife": "Закрыто. Мертво."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Back pocket of Nishi-Funabashi, quieter than the mega-transfer. Practical, messy, good value.",
+    "landmarks": "Keisei backstreets, short walk toward Nishi-Funabashi, small canals and dense housing.",
+    "food": "91 restaurants, 64 izakayas. Better drinking than the platform suggests, little cafe culture.",
+    "nightlife": "47 late spots, 2 karaoke, no clubs. Salaryman local, not destination nightlife."
+  },
+  "ja": {
+    "atmosphere": "西船橋の裏ポケット。巨大乗換駅より静か。実用的で少し雑、コスパは良い。",
+    "landmarks": "京成側の裏道、西船橋方面への徒歩圏、小さな水路と密な住宅地。",
+    "food": "飲食91軒、居酒屋64軒。ホームの印象より飲める、カフェ文化は薄い。",
+    "nightlife": "深夜営業47軒、カラオケ2軒、クラブなし。サラリーマン地元飲みで、目的地型ではない。"
+  },
+  "ru": {
+    "atmosphere": "Задний карман Nishi-Funabashi, тише огромного пересадочного узла. Практично, неряшливо, выгодно.",
+    "landmarks": "Переулки Keisei, пешком к Nishi-Funabashi, малые каналы и плотное жильё.",
+    "food": "91 ресторан, 64 изакая. Выпивка сильнее, чем кажется с платформы, кафе-культуры мало.",
+    "nightlife": "47 поздних мест, 2 караоке, клубов нет. Salaryman-локал, не ночная цель."
+  }
+}

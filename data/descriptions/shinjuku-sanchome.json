@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "East-Shinjuku core without mercy. Hyper-convenient, culture-dense, expensive, crime-heavy.",
+    "landmarks": "Isetan, Suehirotei, Golden Gai edge, Shinjuku Gyoen nearby. Everything is walkable, crowded.",
+    "food": "2100 restaurants, 916 izakayas, 172 bars. Elite choice, brutal noise, many traps.",
+    "nightlife": "1076 late spots, 13 karaoke, 11 clubs. Full-force Tokyo night."
+  },
+  "ja": {
+    "atmosphere": "容赦ない東新宿の核。超便利、文化密度高い、高い、犯罪数字も重い。",
+    "landmarks": "伊勢丹、末廣亭、ゴールデン街の端、新宿御苑も近い。全部徒歩、全部混む。",
+    "food": "飲食2100軒、居酒屋916軒、バー172軒。選択肢は最強、騒音と地雷も強い。",
+    "nightlife": "深夜1076軒、カラオケ13軒、クラブ11軒。東京の夜が全開。"
+  },
+  "ru": {
+    "atmosphere": "Ядро восточного Синдзюку без жалости. Суперудобно, культурно плотно, дорого, криминально.",
+    "landmarks": "Isetan, Suehirotei, край Golden Gai, рядом Shinjuku Gyoen. Всё пешком и всё в толпе.",
+    "food": "2100 ресторанов, 916 изакая, 172 бара. Выбор элитный, шум жесткий, ловушек много.",
+    "nightlife": "1076 поздних мест, 13 караоке, 11 клубов. Токийская ночь на полной мощности."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Single-line terminus. Bedroom community with 31,712 daily riders.",
+    "landmarks": "Large green space (353k sqm). Walking trails, parks.",
+    "food": "Limited dining (13 places). Rely on chains and fast food.",
+    "nightlife": "Sparse nightlife. Neighborhood bars only. Early closing."
+  },
+  "ja": {
+    "atmosphere": "終点駅。客31,712人/日。寝床街。",
+    "landmarks": "大きな公園（353k㎡）。緑の散歩道。",
+    "food": "食べ物少ない（13軒）。コンビニ頼り。",
+    "nightlife": "居酒屋少。10時で閉まる。"
+  },
+  "ru": {
+    "atmosphere": "Конечная станция (31,712 пассажиров/день). Коммунальный район.",
+    "landmarks": "Большой парк (353k кв.м). Тропы, зелень.",
+    "food": "Мало ресторанов (13). Магазинчики спасают.",
+    "nightlife": "Батонов мало. Закрываются в 22:00."
+  }
+}

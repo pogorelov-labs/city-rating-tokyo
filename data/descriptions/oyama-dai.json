@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya Oimachi-line calm, polished but not flashy. Safe, leafy, family-coded.",
+    "landmarks": "Happy Road Oyamadai, Todoroki Ravine nearby, Kuhonbutsu side streets. Gentle west-side Tokyo.",
+    "food": "47 restaurants, 9 izakayas, 7 cafes. Pleasant local eating, limited late range.",
+    "nightlife": "10 late spots, no karaoke. Quiet drinks, early finish."
+  },
+  "ja": {
+    "atmosphere": "世田谷の大井町線沿い、整って静か。派手さなし、安全で緑多く家族向き。",
+    "landmarks": "ハッピーロード尾山台、等々力渓谷、九品仏方面の路地。西側東京の穏やかさ。",
+    "food": "飲食47軒、居酒屋9軒、カフェ7軒。感じのいい近所飯、深夜の幅は狭い。",
+    "nightlife": "深夜10軒、カラオケなし。静かに飲んで早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная Сетагая на Oimachi Line, ухоженно, но не броско. Безопасно, зелено, семейно.",
+    "landmarks": "Happy Road Oyamadai, рядом Todoroki Ravine, улочки к Kuhonbutsu. Мягкий западный Токио.",
+    "food": "47 ресторанов, 9 изакая, 7 кафе. Приятная локальная еда, поздний выбор узкий.",
+    "nightlife": "10 поздних мест, караоке нет. Тихие напитки, ранний финиш."
+  }
+}

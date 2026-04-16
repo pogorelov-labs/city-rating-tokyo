@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bayfront Minato pocket, offices, piers and empty decks. Convenient, expensive, not homely.",
+    "landmarks": "Hinode Pier, Tokyo Bay cruises, Takeshiba nearby. Water views beat street life.",
+    "food": "290 restaurants, 137 izakayas, 7 cafes. Office and pier dining, strong but impersonal.",
+    "nightlife": "76 late spots, no karaoke or clubs. After-work drinks, then waterfront quiet."
+  },
+  "ja": {
+    "atmosphere": "港区の湾岸ポケット、オフィス、桟橋、空いたデッキ。便利で高いが家感は薄い。",
+    "landmarks": "日の出桟橋、東京湾クルーズ、近い竹芝。街路より水景が勝つ。",
+    "food": "飲食290軒、居酒屋137軒、カフェ7軒。オフィスと桟橋の食、強いが無機質。",
+    "nightlife": "深夜営業76軒、カラオケもクラブもなし。仕事後に飲んで、湾岸は静か。"
+  },
+  "ru": {
+    "atmosphere": "Карман Minato у залива: офисы, пирсы, пустые деки. Удобно, дорого, не домашне.",
+    "landmarks": "Hinode Pier, круизы Tokyo Bay, Takeshiba рядом. Виды воды сильнее улицы.",
+    "food": "290 ресторанов, 137 изакая, 7 кафе. Офисная и пирсовая еда, сильно, но безлично.",
+    "nightlife": "76 поздних мест, без караоке и клубов. Выпивка после работы, потом тишина воды."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Musashino Line suburb, safe and spread out. Cheap, practical, slow to Tokyo.",
+    "landmarks": "Kodaira grid, green pockets, cycling streets. Daily-life base, not destination.",
+    "food": "15 restaurants, 5 izakayas, no bars. Basics only; variety needs a train.",
+    "nightlife": "3 late spots, no karaoke. Minimal, early, residential."
+  },
+  "ja": {
+    "atmosphere": "武蔵野線の郊外、安全で広め。安くて実用的、都心へは時間がかかる。",
+    "landmarks": "小平の住宅グリッド、緑のポケット、自転車道。目的地より生活拠点。",
+    "food": "飲食15軒、居酒屋5軒、バーなし。昼食と基本だけ、幅は電車で補う。",
+    "nightlife": "深夜3軒、カラオケなし。ほぼ皆無。早く静かな住宅地。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Musashino Line, безопасный и разреженный. Дёшево, практично, до центра долго.",
+    "landmarks": "Жилая сетка Kodaira, зелёные карманы, велосипедные улицы. База для жизни, не пункт назначения.",
+    "food": "15 ресторанов, 5 изакая, баров нет. Обед и база; за разнообразием на поезд.",
+    "nightlife": "3 поздних места, караоке нет. Минимум. Рано, тихо, жилое."
+  }
+}

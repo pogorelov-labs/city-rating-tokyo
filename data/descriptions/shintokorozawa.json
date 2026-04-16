@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama commuter suburb with cheap rent and long rides in. Calm, practical, not central.",
+    "landmarks": "Seibu Shinjuku Line spine, station-front shops, low-rise Tokorozawa streets.",
+    "food": "53 restaurants, 29 izakayas, basic neighborhood rotation. Cafes barely register.",
+    "nightlife": "19 late spots, 1 karaoke. Drinks exist, nightlife stays local."
+  },
+  "ja": {
+    "atmosphere": "家賃は軽い、都心は遠い、埼玉の通勤住宅地。静かで実用的、中心感はない。",
+    "landmarks": "西武新宿線の駅前、商店街、低層の所沢住宅街。派手な目的地ではない。",
+    "food": "飲食53軒、居酒屋29軒。近所の定番で回る街。カフェはほぼ薄い。",
+    "nightlife": "深夜19軒、カラオケ1軒。飲めるが地元止まり。"
+  },
+  "ru": {
+    "atmosphere": "Сайтамский пригород для коммьютеров: аренда мягкая, центр далеко. Спокойно, утилитарно.",
+    "landmarks": "Ось Seibu Shinjuku Line, магазины у станции, низкая жилая застройка Токородзавы.",
+    "food": "53 ресторана, 29 изакая. Обычная соседская ротация. Кафе почти не видно.",
+    "nightlife": "19 поздних мест, 1 караоке. Выпить можно, но всё местного масштаба."
+  }
+}

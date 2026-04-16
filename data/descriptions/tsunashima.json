@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Busy Yokohama commuter hub, 41 min to center, izakaya heaven. High foot traffic, youth culture. Safety data weak.",
+    "landmarks": "Tsunashima shopping district, 2 clubs, multiple izakaya lanes. Gridlocked nights.",
+    "food": "76 restaurants, 38 izakayas. Quantity over quality. Party-district density.",
+    "nightlife": "34 midnight venues, 2 clubs, bars open late. Izakaya culture strong. Heavy nightly crowd, raucous atmosphere."
+  },
+  "ja": {
+    "atmosphere": "横浜の忙しい駅、中心地まで41分、居酒屋天国。高い人通り、若者文化。安全データ弱い。",
+    "landmarks": "綱島ショッピング地区、クラブ2軒、居酒屋街複数。夜は大混雑。",
+    "food": "食堂76軒、69件、居酒屋38軒。量>質。パーティ地区密度。",
+    "nightlife": "夜間営業34件、クラブ2軒、バー夜遅く。居酒屋文化強し。毎夜混雑、うるさい雰囲気。"
+  },
+  "ru": {
+    "atmosphere": "Оживленный хаб коммутеров Йокогамы, 41 минуту до центра, рай для изакаи. Высокий пешеходный трафик, молодежная культура. Безопасность данных слабая.",
+    "landmarks": "Район Цунасима, 2 клуба, несколько переулков изакаи. Ночью переполнено.",
+    "food": "76 ресторанов, 69 (), 38 изакай. Количество выше качества. Плотность вечеринок.",
+    "nightlife": "34 ночных места, 2 клуба, бары открыты допоздна. Культура изакаи сильна. Каждую ночь толпа, шумная атмосфера."
+  }
+}

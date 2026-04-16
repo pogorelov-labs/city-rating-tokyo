@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nerima side-street station, livable and unglamorous. Ekoda energy leaks in quietly.",
+    "landmarks": "Sakuradai shotengai, Chihiro Art Museum side trips, Nerima one stop away.",
+    "food": "192 restaurants, 80 izakayas. Good local density, small bars, few destination names.",
+    "nightlife": "85 late-night spots, 1 karaoke. Drinks linger, clubs absent."
+  },
+  "ja": {
+    "atmosphere": "練馬の脇道駅。暮らしやすいが華はない。江古田の気配が少し流れ込む。",
+    "landmarks": "桜台商店街、ちひろ美術館方面、練馬は一駅。日常の動線が主役。",
+    "food": "飲食192軒、居酒屋80軒。地元密度は高い、小バー多め、有名店は少なめ。",
+    "nightlife": "深夜営業85軒、カラオケ1軒。飲みは残るが、クラブはない。"
+  },
+  "ru": {
+    "atmosphere": "Боковая станция Нэримы, жилая и без глянца. Энергия Экоды просачивается тихо.",
+    "landmarks": "Sakuradai shotengai, выезды к Chihiro Art Museum, Нэрима в одной остановке.",
+    "food": "192 ресторана, 80 изакая. Хорошая локальная плотность, малые бары, громких имён мало.",
+    "nightlife": "85 поздних мест, 1 караоке. Выпивка задерживается, клубов нет."
+  }
+}

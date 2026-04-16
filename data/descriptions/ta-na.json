@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyu Den-en-toshi Line (Yokohama Blue Line merger junction). Suburban node, 8k daily. 2 pedestrian streets. Mix of families and young professionals.",
+    "landmarks": "Den-en-toshi/Blue Line interchange. Shopping, clinics, schools dense. Commuter hub.",
+    "food": "11 listings, 4 izakayas. Casual weeknight dining, chains. Not destination food.",
+    "nightlife": "Limited — 2 midnight spots. Couples' dinner escapes mainly."
+  },
+  "ja": {
+    "atmosphere": "東急田園都市線（青葉区）。郊外拠点、8k乗降。歩行者街路2本。ファミリーと駅利用者。",
+    "landmarks": "田園都市線駅。商店、診療所、学校が密集。通勤ハブ。",
+    "food": "11軒、居酒屋4軒。平日ディナー、チェーン中心。目的地級ではない。",
+    "nightlife": "限定的 — 深夜2軒。夫婦ディナーくらい。"
+  },
+  "ru": {
+    "atmosphere": "Токю Den-en-toshi Line (Aoba-ku). Пригородный узел, 8k пассажиров. 2 пешеходные улицы.",
+    "landmarks": "Станция Den-en-toshi. Магазины, клиники, школы. Коммутерный хаб.",
+    "food": "11 мест, 4 изакаи. Будни, цепи. Не пункт назначения.",
+    "nightlife": "Ограничено — 2 ночных места. Семейный ужин."
+  }
+}

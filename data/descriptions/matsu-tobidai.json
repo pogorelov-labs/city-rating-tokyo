@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hokuso Line exurb north of Tokyo, 54 min. Minimal infrastructure, high turnover (9/10 crowd rating).",
+    "landmarks": "Scattered parks (796k sqm), no focal point.",
+    "food": "2 listings, 2 izakaya, 5. Threadbare.",
+    "nightlife": "None. Sleepy town."
+  },
+  "ja": {
+    "atmosphere": "北総線、北方54分。infrastructure最小。通勤客多い。",
+    "landmarks": "公園散在(796k平米)、中心地なし。",
+    "food": "2軒、居酒屋2軒、5軒。貧弱。",
+    "nightlife": "皆無。眠い町。"
+  },
+  "ru": {
+    "atmosphere": "Hokuso Line, север Токио, 54 мин. Минимум инфраструктуры. Транзитный трафик (9/10).",
+    "landmarks": "Парки разреженно (796k кв.м), центра нет.",
+    "food": "2, 2 изакаи, 5. Скудно.",
+    "nightlife": "Нет. Спящий город."
+  }
+}

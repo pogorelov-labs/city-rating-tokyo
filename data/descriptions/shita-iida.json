@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Blue Line suburban Yokohama (Izumi-ku). Residential. 5k daily riders. Quiet escapes. Single pedestrian street for local charm.",
+    "landmarks": "Yokohama Blue Line. Suburban homes, small parks. Peaceful grid.",
+    "food": "3 listings spots. Limited dining — family-focused, not trendy.",
+    "nightlife": "Minimal. Bedroom community rhythms."
+  },
+  "ja": {
+    "atmosphere": "横浜市営地下鉄ブルーラインの郊外駅（泉区）。5k乗降。住宅地の静けさ。",
+    "landmarks": "ブルーライン駅。住宅と小公園。のどか。",
+    "food": "3軒。食には期待禁物。ファミリー中心。",
+    "nightlife": "ほぼなし。ベッドタウン時間。"
+  },
+  "ru": {
+    "atmosphere": "Синяя линия Йокохамы (район Изуми). Жилой. 5k пассажиров. Спокойствие. 1 пешеходная улица.",
+    "landmarks": "Синяя линия. Дома, парки. Мир и тишь.",
+    "food": "3 места. Для семей, не модно.",
+    "nightlife": "Минимум. Спальный ритм."
+  }
+}

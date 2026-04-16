@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "North-side JR hub, loud, cheap, a bit rough. Great access, zero polish.",
+    "landmarks": "Akabane Ichibangai, LaLa Garden, Arakawa riverside. Drinking alleys beat scenery.",
+    "food": "300 restaurants, 169 izakayas. Yakitori, ramen, standing bars; value over refinement.",
+    "nightlife": "149 late spots, karaoke sparse. Izakayas carry the night, gritty after dark."
+  },
+  "ja": {
+    "atmosphere": "北側のJR巨大ハブ、安くて騒がしい、少し荒い。便利だが上品さはない。",
+    "landmarks": "赤羽一番街、LaLaガーデン、荒川河川敷。景色より飲み屋横丁。",
+    "food": "飲食300軒、居酒屋169軒。焼き鳥、ラーメン、立ち飲み。洗練よりコスパ。",
+    "nightlife": "深夜149軒、カラオケ少なめ。夜は居酒屋主役、暗くなると少し荒い。"
+  },
+  "ru": {
+    "atmosphere": "Северный JR-хаб, шумно, дешево, чуть грубо. Доступ отличный, лоска ноль.",
+    "landmarks": "Akabane Ichibangai, LaLa Garden, набережная Аракавы. Переулки с барами важнее видов.",
+    "food": "300 ресторанов, 169 изакая. Якитори, рамен, стоячие бары; ценность выше изящества.",
+    "nightlife": "149 поздних мест, караоке мало. Ночь держат изакаи, после темноты шероховато."
+  }
+}

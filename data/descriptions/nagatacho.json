@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Power-center Tokyo, security gates and empty sidewalks after hours. Brilliant transit, brutal rent.",
+    "landmarks": "National Diet, Kantei, Hie Shrine, Akasaka Palace edge. Government Tokyo in full uniform.",
+    "food": "650 restaurants, 220 izakayas. Political lunches, hotel dining, Akasaka spillover.",
+    "nightlife": "257 late spots, 7 karaoke. After-work bars nearby, but Nagatacho itself stays stiff."
+  },
+  "ja": {
+    "atmosphere": "権力の都心。警備ゲートと夜の空いた歩道。交通は最強、家賃は容赦なし。",
+    "landmarks": "国会議事堂、官邸、日枝神社、赤坂御用地の端。制服を着た東京。",
+    "food": "飲食650軒、居酒屋220軒。政治家ランチ、ホテル飯、赤坂側の余波。",
+    "nightlife": "深夜257軒、カラオケ7軒。近くで仕事帰り飲み、永田町本体は硬い。"
+  },
+  "ru": {
+    "atmosphere": "Центр власти: охрана, ворота, пустые тротуары вечером. Транспорт гениален, аренда жесткая.",
+    "landmarks": "National Diet, Kantei, Hie Shrine, край Akasaka Palace. Государственный Tokyo в форме.",
+    "food": "650 ресторанов, 220 изакая. Политические ланчи, отельная еда, спилловер Akasaka.",
+    "nightlife": "257 поздних мест, 7 караоке. Бары после работы рядом, но сам Nagatacho остается жестким."
+  }
+}

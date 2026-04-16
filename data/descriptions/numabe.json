@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Tamagawa Line stop, low-rise and quiet. River air, clinics, almost no urban buzz.",
+    "landmarks": "Tamagawa riverbank, Sakurazaka slope, Den-en-chofu edges. More walks than sights.",
+    "food": "25 restaurants, 6 izakayas. Neighborhood meals, not a destination; cafes barely register.",
+    "nightlife": "9 late spots, no karaoke. Sleepy, with a few local counters."
+  },
+  "ja": {
+    "atmosphere": "多摩川線の小さな駅、低層で静か。川の空気、クリニック多め、都会感は薄い。",
+    "landmarks": "多摩川河川敷、桜坂、田園調布の端。観光より散歩の街。",
+    "food": "飲食25軒、居酒屋6軒。近所飯はあるが目的地ではない、カフェはほぼ見えない。",
+    "nightlife": "深夜9軒、カラオケなし。眠い街、地元カウンターが少し。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая остановка Tamagawa Line, низкая и тихая. Воздух реки, клиники, почти нет городского шума.",
+    "landmarks": "Набережная Tamagawa, склон Sakurazaka, край Den-en-chofu. Больше прогулок, чем достопримечательностей.",
+    "food": "25 ресторанов, 6 изакая. Соседская еда, не направление; кафе почти не видны.",
+    "nightlife": "9 поздних мест, караоке нет. Сонно, с несколькими местными стойками."
+  }
+}

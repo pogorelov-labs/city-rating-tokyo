@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural railway station near Narita. Quiet residential area with zero urban buzz.",
+    "landmarks": "Countryside, rice paddies, sparse housing. Shibayama Railway nostalgia.",
+    "food": "Minimal local eateries. One entry barely registers.",
+    "nightlife": "Closed after 11pm."
+  },
+  "ja": {
+    "atmosphere": "成田近い地方駅。農村で人気なし。",
+    "landmarks": "田舎、田んぼ、まばらな住宅。芝山鉄道の風情。",
+    "food": "地元の食堂ほぼなし。データほぼなし。",
+    "nightlife": "夜中は静か。"
+  },
+  "ru": {
+    "atmosphere": "Сельская станция близ Наритта. Немного жилья, тишина. Сейсмическая опасность высока.",
+    "landmarks": "Рисовые поля, редкие дома, сельская местность. Линия Shibayama Railroad.",
+    "food": "Почти нет кафе, ресторанов. Один осм-пункт.",
+    "nightlife": "После 23:00 мертво."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Remote Saitama outpost on Tobu Tojo Line. 743 daily passengers. Vast green area but little urban energy.",
+    "landmarks": "Surrounding forest, hiking trails. Castle ruins nearby (Hachigata Castle). No convenience stores.",
+    "food": "Almost no restaurants (1 listings. Zero nightlife venues. Meal options very limited.",
+    "nightlife": "Nonexistent. Bring snacks."
+  },
+  "ja": {
+    "atmosphere": "埼玉奥地の駅。745人/日。緑が多いが活気なし。",
+    "landmarks": "周囲は森、ハイキングコース。鉢形城跡。",
+    "food": "飲食店ほぼなし（1件）。夜の店なし。",
+    "nightlife": "皆無。弁当持参推奨。"
+  },
+  "ru": {
+    "atmosphere": "Удалённая станция Сайтама на линии Тобу Тодзё. 743 пассажира в день. Обширная зелень, но городской энергии мало.",
+    "landmarks": "Окружающий лес, пешеходные тропы. Неподалёку развалины замка Хатиката. Никаких удобных магазинов.",
+    "food": "Почти нет ресторанов (1 listings. Ноль ночных заведений. Варианты еды очень ограничены.",
+    "nightlife": "Не существует. Берите закуски."
+  }
+}

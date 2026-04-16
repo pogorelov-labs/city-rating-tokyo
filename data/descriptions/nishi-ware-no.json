@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain forest station, 247 riders/day. Elevation 281m, pristine hiking access. Remote.",
+    "landmarks": "232M sqm wilderness park. Deep Saitama backwoods. Seibu Chichibu Line trekking hub.",
+    "food": "Single record. Bring supplies or hike down.",
+    "nightlife": "None. Last train 23:41."
+  },
+  "ja": {
+    "atmosphere": "山地駅、毎日247人。標高281m、ハイキング基地。",
+    "landmarks": "2億3千万平方mの森。秩父奥地。",
+    "food": "飲食ほぼなし。",
+    "nightlife": "皆無。23:41末電。"
+  },
+  "ru": {
+    "atmosphere": "Горная станция, 247 пассажиров/день. Высота 281м, пешеходные маршруты. Отдалённо.",
+    "landmarks": "232М кв.м нетронутого леса. Глубокая Сайтама.",
+    "food": "Одна запись. Берите провизию.",
+    "nightlife": "Нет."
+  }
+}

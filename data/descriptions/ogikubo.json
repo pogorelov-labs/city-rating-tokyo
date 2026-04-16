@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo-Line grown-up town. Great access, serious ramen, pricey but less smug than Kichijoji.",
+    "landmarks": "Lumine, Town Seven, Otaguro Park, ramen backstreets. Marunouchi Line starts here.",
+    "food": "127 restaurants plus many side-street spots. Ramen, izakaya, bakeries; strong daily rotation.",
+    "nightlife": "57 late spots, no karaoke or clubs counted. Izakaya nights, not a party zone."
+  },
+  "ja": {
+    "atmosphere": "中央線の大人側。アクセス強い、ラーメン本気、吉祥寺ほど気取らない。",
+    "landmarks": "ルミネ、タウンセブン、大田黒公園、ラーメン路地。丸ノ内線の始発。",
+    "food": "飲食127件、脇道の店も多い。ラーメン、居酒屋、パン屋が回る。",
+    "nightlife": "深夜57件、カラオケとクラブは計上なし。居酒屋の夜、パーティ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Взрослая сторона Chuo Line. Доступ сильный, рамен серьёзный, дорого, но без кичидзёдзи-снобизма.",
+    "landmarks": "Lumine, Town Seven, парк Otaguro, раменные переулки. Marunouchi Line стартует здесь.",
+    "food": "127 ресторанов плюс много мест в переулках. Рамен, изакая, пекарни; хорошая будничная ротация.",
+    "nightlife": "57 поздних мест, караоке и клубов не поймано. Изакая-вечера, не party zone."
+  }
+}

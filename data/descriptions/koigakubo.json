@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kokubunji commuter town, 49 min. Safe, low density, but boring. High elevation (83m), low seismic risk. Quiet residential feel.",
+    "landmarks": "Seibu Kokubunji Line terminus culture. Parks and schools. Zero nightlife landmarks.",
+    "food": "3 restaurants, minimal scene. 1 cafe (likely convenience). Food is scarce.",
+    "nightlife": "Virtually none. 4 rating on data reflects reality — no bars, no infrastructure, no reason to stay out."
+  },
+  "ja": {
+    "atmosphere": "国分寺市の標準的郊外。49分。安全だが退屈。標高83m、地震リスク低い。閑静な住宅地。",
+    "landmarks": "西武国分寺線の終点文化。公園と学校。夜生活スポット皆無。",
+    "food": "3軒、極限定。カフェ1軒。4 （多分コンビニ）。食べ物が稀。",
+    "nightlife": "ほぼなし。4点は実態反映。バーなし、理由なし。帰宅推奨。"
+  },
+  "ru": {
+    "atmosphere": "Спальный город Кокубунджи, 49 минут. Безопасен, низкая плотность, но скучен. Высота 83м, низкий сейсмический риск.",
+    "landmarks": "Концепция линии Seibu Kokubunji. Парки и школы. Ноль ночных ориентиров.",
+    "food": "3 ресторана, минимальная сцена. 1 кафе, 4 места (магазины). Еда редка.",
+    "nightlife": "Практически нет. 4 в рейтинге отражает реальность. Нет причин вечером стоять вне дома."
+  }
+}

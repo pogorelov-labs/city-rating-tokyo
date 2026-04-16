@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Single-line terminus. Bedroom community with 45,590 daily riders.",
+    "landmarks": "Decent parks (212k sqm). Nature pockets scattered.",
+    "food": "51 restaurants, mostly Japanese chains. Few standouts.",
+    "nightlife": "Active izakaya scene (22 late spots). Karaoke sparse."
+  },
+  "ja": {
+    "atmosphere": "終点駅。客45,590人/日。寝床街。",
+    "landmarks": "公園212k㎡。緑スポット点在。",
+    "food": "飲食店51軒。チェーン多め。地元店少ない。",
+    "nightlife": "夜間営業22軒。11時過ぎ静か。"
+  },
+  "ru": {
+    "atmosphere": "Конечная станция (45,590 пассажиров/день). Коммунальный район.",
+    "landmarks": "Парки 212k кв.м. Зелень разбросана.",
+    "food": "Изакая-центр (25 мест). Вечером оживлено.",
+    "nightlife": "Поздно 22 мест. После 23:00 мертво."
+  }
+}

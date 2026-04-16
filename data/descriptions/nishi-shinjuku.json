@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Skyscraper office canyon by day, neon overflow by night. Convenient, expensive, never gentle.",
+    "landmarks": "Tokyo Metropolitan Government towers, Central Park, hotel blocks. Shinjuku looms everywhere.",
+    "food": "1609 restaurants, 732 izakayas, 121 bars. Endless choice, but lunch queues and tourist traps bite.",
+    "nightlife": "827 late spots, 8 karaoke, 2 clubs. Huge, loud, safety trade-off included."
+  },
+  "ja": {
+    "atmosphere": "昼は超高層オフィス峡谷、夜は新宿のネオンが漏れる。便利、高い、穏やかではない。",
+    "landmarks": "東京都庁、中央公園、ホテル街。どこを向いても新宿の圧がある。",
+    "food": "飲食1609軒、居酒屋732軒、バー121軒。選択肢無限、昼の行列と観光地価格に注意。",
+    "nightlife": "深夜827軒、カラオケ8軒、クラブ2軒。巨大で騒がしい、安全面の代償あり。"
+  },
+  "ru": {
+    "atmosphere": "Днем каньон офисных башен, ночью перелив Шиндзюку. Удобно, дорого, совсем не мягко.",
+    "landmarks": "Башни Tokyo Metropolitan Government, Central Park, гостиничные кварталы. Шиндзюку давит отовсюду.",
+    "food": "1609 ресторанов, 732 изакая, 121 бар. Выбор бесконечный, но очереди и туристические ловушки кусаются.",
+    "nightlife": "827 поздних мест, 8 караоке, 2 клуба. Масштабно, шумно, с платой по безопасности."
+  }
+}

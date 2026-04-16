@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ginza theater-side intensity, polished streets and visitor churn. Incredible food, ugly crime denominator.",
+    "landmarks": "Kabuki-za, Ginza core, Tsukiji edge, theater alleys. Old stage culture under luxury signage.",
+    "food": "1906 restaurants, 584 izakayas, 194 bars. Lunch lines, sushi counters, expense-account dinners.",
+    "nightlife": "616 late spots. Serious bar density, expensive and adult, not a club district."
+  },
+  "ja": {
+    "atmosphere": "銀座の劇場側の濃さ。磨かれた通りと来街者の渦。食は圧倒的、犯罪指標は商業地ゆえ荒れる。",
+    "landmarks": "歌舞伎座、銀座中心部、築地の端、劇場裏路地。高級看板の下に古い舞台文化。",
+    "food": "飲食1906軒、居酒屋584軒、バー194軒。ランチ行列、寿司カウンター、経費ディナー。",
+    "nightlife": "深夜営業616軒。バー密度は本気、高くて大人向け、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Театральная сторона Ginza, отполированные улицы и поток гостей. Еда мощная, криминальный знаменатель неприятный.",
+    "landmarks": "Kabuki-za, ядро Ginza, край Tsukiji, театральные переулки. Старая сцена под люксовыми вывесками.",
+    "food": "1906 ресторанов, 584 изакая, 194 бара. Очереди на ланч, суши-стойки, ужины на корпоративный счёт.",
+    "nightlife": "616 поздних мест. Сильная плотность баров, дорого и взросло, не клубный район."
+  }
+}

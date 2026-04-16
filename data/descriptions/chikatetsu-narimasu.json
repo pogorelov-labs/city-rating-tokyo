@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Itabashi edge with three-line access. Suburban, useful, a bit rough around the shopping streets.",
+    "landmarks": "Narimasu shopping arcades, Akatsuka edges, Hikarigaoka Park within reach. Local, not polished.",
+    "food": "62 restaurants, 35 izakayas. Solid after-work food; cafes are almost an afterthought.",
+    "nightlife": "34 late spots, no karaoke, no clubs. Izakaya nights, not party nights."
+  },
+  "ja": {
+    "atmosphere": "板橋の端、3路線使える郊外。便利だが商店街まわりは少し雑然。",
+    "landmarks": "成増の商店街、赤塚方面、光が丘公園も射程。洗練より生活感。",
+    "food": "飲食62件、居酒屋35件。仕事帰りの飯は強い、カフェはほぼ脇役。",
+    "nightlife": "深夜営業34件、カラオケなし、クラブなし。居酒屋の夜、パーティーではない。"
+  },
+  "ru": {
+    "atmosphere": "Край Итабаши с доступом к трем линиям. Пригородно, удобно, у торговых улиц чуть грубо.",
+    "landmarks": "Аркады Narimasu, сторона Akatsuka, парк Hikarigaoka в досягаемости. Локально, без лоска.",
+    "food": "62 места, 35 изакая. Еда после работы крепкая, кафе почти второстепенны.",
+    "nightlife": "34 поздних места, без караоке и клубов. Ночи изакая, не вечеринки."
+  }
+}

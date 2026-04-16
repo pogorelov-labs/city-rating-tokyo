@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural Kanagawa town on Daiyuzan Line. 2300 daily passengers. Cheap rent (¥99k), sparse food scene.",
+    "landmarks": "Forest-heavy area. 17 million sqm green space, hiking trails. Seismic high risk — soft ground alert.",
+    "food": "Minimal, 2 estimated venues. Zero listings coverage, chain restaurants only.",
+    "nightlife": "Minimal. Farmers town, quiet after 9pm."
+  },
+  "ja": {
+    "atmosphere": "神奈川の田舎。大雄山線、2300人/日。家賃安い、飲食店ほぼなし。",
+    "landmarks": "森が支配的。1700万平米の緑地、ハイキング道。地震危険度高 — 軟弱地盤。",
+    "food": "ほぼ皆無、推定2店。チェーン店のみ。",
+    "nightlife": "最小。農村夜は早い。"
+  },
+  "ru": {
+    "atmosphere": "Сельское Канагава, линия Дайюдзан. 2300 пассажиров/день. Дёшевая аренда (99k йен), закуски редки.",
+    "landmarks": "Лесной массив. 17 млн кв.м зелени, пешеходные маршруты. Высокий сейсморизк — мягкий грунт.",
+    "food": "Минимум, 2 предполагаемых заведения. Только сетевые кафе.",
+    "nightlife": "Минимально. Сельский ритм, после 21:00 — тишина."
+  }
+}

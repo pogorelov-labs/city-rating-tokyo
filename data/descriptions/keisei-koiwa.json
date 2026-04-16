@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Edogawa edge life, cheaper and slower than central Tokyo. Keisei access, long commute trade-off.",
+    "landmarks": "Koiwa shopping streets, Edo River flats nearby, Shibamata direction one train away.",
+    "food": "118 restaurants, 56 izakayas. Local Chinese, ramen, yakitori, budget family spots.",
+    "nightlife": "66 late spots, no karaoke. Izakaya-heavy, friendly, not rowdy."
+  },
+  "ja": {
+    "atmosphere": "江戸川区の端の暮らし。都心より安くて遅い。京成は便利だが通勤は長め。",
+    "landmarks": "小岩の商店街、近い江戸川の河川敷、柴又方面へ一駅感覚。",
+    "food": "飲食118軒、居酒屋56軒。町中華、ラーメン、焼き鳥、家族向け安飯。",
+    "nightlife": "深夜66軒、カラオケなし。居酒屋中心、人懐こいが荒くない。"
+  },
+  "ru": {
+    "atmosphere": "Край Edogawa: дешевле и медленнее центра. Keisei помогает, но коммьют долгий.",
+    "landmarks": "Торговые улицы Koiwa, пойма Edo River рядом, Shibamata в одном направлении.",
+    "food": "118 ресторанов, 56 изакая. Местный китайский, рамэн, якитори, бюджетные семейные места.",
+    "nightlife": "66 поздних мест, караоке нет. Изакая-доминирование, дружелюбно, не буйно."
+  }
+}

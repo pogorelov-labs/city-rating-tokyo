@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku's west-side pressure cooker: commuters, touts, hotel crowds. Handy, messy, high-crime.",
+    "landmarks": "Omoide Yokocho, skyscraper blocks, Kabukicho edge. Tokyo Metropolitan Government is a short walk.",
+    "food": "2239 restaurants, 930 izakayas. Endless ramen, yakitori, chains, tourist traps.",
+    "nightlife": "1137 late spots, 13 karaoke, 8 clubs. Loud, gritty, watch your wallet."
+  },
+  "ja": {
+    "atmosphere": "新宿西側の圧縮地帯。通勤客、客引き、ホテル客。便利だが荒い、犯罪感も強い。",
+    "landmarks": "思い出横丁、高層ビル群、歌舞伎町の縁。都庁も徒歩圏。",
+    "food": "飲食2239軒、居酒屋930軒。ラーメン、焼き鳥、チェーン、観光地価格が無限。",
+    "nightlife": "深夜1137軒、カラオケ13、クラブ8。騒がしい、雑、財布に注意。"
+  },
+  "ru": {
+    "atmosphere": "Западный Синдзюку как скороварка: офисные толпы, зазывалы, отели. Удобно, грязновато, криминально.",
+    "landmarks": "Omoide Yokocho, башни, край Кабукичо. До мэрии Токио пешком.",
+    "food": "2239 ресторанов, 930 изакая. Рамен, якитори, сети, ловушки для туристов.",
+    "nightlife": "1137 поздних мест, 13 караоке, 8 клубов. Громко, шершаво, следи за кошельком."
+  }
+}

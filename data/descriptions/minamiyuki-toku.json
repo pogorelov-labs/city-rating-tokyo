@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai Line bedroom town near the Chiba border. Practical, dense, cheaper than inner Tokyo.",
+    "landmarks": "Gyotoku-side canals, flat residential blocks, pocket parks. Very high seismic risk on soft ground.",
+    "food": "52 restaurants, 22 izakayas, 6 bars. Everyday ramen, curry, family spots, no glamour.",
+    "nightlife": "29 late spots, no karaoke or clubs. Local after-work drinks, then quiet."
+  },
+  "ja": {
+    "atmosphere": "千葉境の東西線ベッドタウン。実用的で密、都心内側より安い。",
+    "landmarks": "行徳側の水路、平らな住宅街、小さな公園。軟弱地盤で地震リスクはかなり高い。",
+    "food": "飲食52軒、居酒屋22軒、バー6軒。日常ラーメン、カレー、家族店。華やかさなし。",
+    "nightlife": "深夜営業29軒、カラオケもクラブもなし。仕事帰りの地元飲み、その後は静か。"
+  },
+  "ru": {
+    "atmosphere": "Спальный город Tozai Line у границы Chiba. Практично, плотно, дешевле внутреннего Токио.",
+    "landmarks": "Каналы со стороны Gyotoku, плоские жилые блоки, маленькие парки. Очень высокий сейсмориск на мягком грунте.",
+    "food": "52 ресторана, 22 изакая, 6 баров. Ежедневный рамен, карри, семейные места, без глянца.",
+    "nightlife": "29 поздних мест, без караоке и клубов. Местные напитки после работы, потом тихо."
+  }
+}

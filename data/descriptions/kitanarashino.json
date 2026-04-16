@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Funabashi suburb with two lines and real foot traffic. Practical, not pretty, slightly busy.",
+    "landmarks": "Shin-Keisei and Toyo Rapid meet here; pedestrian lanes around the station do the work.",
+    "food": "49 restaurants, 21 izakayas, only 1 bar. Good daily dinner zone, weak cafe/bar depth.",
+    "nightlife": "19 late-night spots, no clubs. Local izakaya crawl, last train earlyish."
+  },
+  "ja": {
+    "atmosphere": "船橋の実用系郊外。2路線で人通りは本物。きれいより便利、少し騒がしい。",
+    "landmarks": "新京成と東葉高速の接点。駅前の歩行者通りが生活動線を作る。",
+    "food": "飲食49軒、居酒屋21軒、バーは1軒だけ。普段の夕食は強い、カフェとバーは薄い。",
+    "nightlife": "深夜営業19軒、クラブなし。地元居酒屋のはしご、終電はやや早め。"
+  },
+  "ru": {
+    "atmosphere": "Практичный пригород Фунабаси: две линии, реальный поток людей. Удобно, не красиво, чуть шумно.",
+    "landmarks": "Здесь сходятся Shin-Keisei и Toyo Rapid; пешеходные улицы у станции делают район рабочим.",
+    "food": "49 ресторанов, 21 изакая, всего 1 бар. Хорошо для будничного ужина, кафе и бары слабые.",
+    "nightlife": "19 поздних мест, клубов нет. Локальный изакая-круг, последний поезд рановато."
+  }
+}

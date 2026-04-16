@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet old-Ichikawa pocket, close to JR action without the platform crush.",
+    "landmarks": "Tekona Reijindo, Guhoji temple lanes, Edo River not far. Low-key history.",
+    "food": "Ichikawa spillover works: izakayas, cafes, bars, plenty late. Green is weaker.",
+    "nightlife": "Late izakaya density, not clubs. Good for a neighborhood drink."
+  },
+  "ja": {
+    "atmosphere": "古い市川の静かなポケット。JR側の賑わいに近いが、駅は潰れない。",
+    "landmarks": "手児奈霊神堂、弘法寺の路地、江戸川も遠くない。地味な歴史。",
+    "food": "市川側の波及で使える。居酒屋、カフェ、バー、遅い店も多い。緑は弱め。",
+    "nightlife": "遅い居酒屋密度はある、クラブではない。近所飲みにちょうどいい。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман старой Итикавы, рядом с JR-движем, но без давки на платформе.",
+    "landmarks": "Tekona Reijindo, храмовые улочки Guhoji, Edo River недалеко. Скромная история.",
+    "food": "Перелив Итикавы работает: изакаи, кафе, бары, много позднего. Зелени меньше.",
+    "nightlife": "Плотность поздних изакай, не клубы. Хорошо для соседского напитка."
+  }
+}

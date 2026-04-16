@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Company town, Fujifilm-centric. Industrial-quiet, locals-only feel.",
+    "landmarks": "Fujifilm facility, factory tours. No tourism infrastructure.",
+    "food": "7 listings + 2 izakaya. Cafeteria-style, employee-focused.",
+    "nightlife": "1 midnight spot, then dark. Company town closes early."
+  },
+  "ja": {
+    "atmosphere": "企業城下町、富士フイルム中心。工業的、地元のみ。",
+    "landmarks": "富士フイルム工場。ツアー、観光なし。",
+    "food": "7軒、居酒屋2軒。社員食堂風。",
+    "nightlife": "夜間営業1軒。早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Фабричный город, Fujifilm-центричный. Промышленно-тихо, только местные.",
+    "landmarks": "Завод Fujifilm. Туризма нет.",
+    "food": "7 + 2 изакая. Кафетерий-стиль.",
+    "nightlife": "1 поздний бар. Рано закрыто."
+  }
+}

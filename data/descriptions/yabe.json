@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sagamihara commuter stop, practical and high-ground. Cheap rents, long ride to core Tokyo.",
+    "landmarks": "Yokohama Line suburbia, clinics, small parks. Fuchinobe energy is next door.",
+    "food": "52 restaurants, 30 izakayas, cafes thin. Solid local food, not much polish.",
+    "nightlife": "23 late spots, no karaoke or clubs. Neighborhood drinking, early ceiling."
+  },
+  "ja": {
+    "atmosphere": "相模原の実用的な通勤駅、高台で落ち着く。家賃は軽いが都心は遠い。",
+    "landmarks": "横浜線沿いの住宅地、クリニック、小公園。淵野辺の賑わいは隣。",
+    "food": "飲食52件、居酒屋30件、カフェ少なめ。地元飯は強い、洗練は控えめ。",
+    "nightlife": "深夜23件、カラオケもクラブもなし。近所飲み、夜の天井は低い。"
+  },
+  "ru": {
+    "atmosphere": "Коммьютерская станция Сагамихары, практично и на возвышении. Дёшево, до ядра Токио долго.",
+    "landmarks": "Пригород Yokohama Line, клиники, малые парки. Энергия Футинобэ по соседству.",
+    "food": "52 ресторана, 30 изакая, кафе мало. Локальная еда крепкая, лоска немного.",
+    "nightlife": "23 поздних места, без караоке и клубов. Соседская выпивка, ранний потолок."
+  }
+}

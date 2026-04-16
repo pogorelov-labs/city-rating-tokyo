@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo Line suburb with Musashino calm and student edges. Safe, useful, calmer than Kichijoji.",
+    "landmarks": "Seibu Tamagawa Line terminal, Musashino Place, tree-lined streets toward ICU and parks.",
+    "food": "50 restaurants, 23 izakayas, almost no bar/cafe depth. Reliable daily food, not a scene.",
+    "nightlife": "25 late spots, no karaoke or clubs. Station izakayas, early home."
+  },
+  "ja": {
+    "atmosphere": "中央線の武蔵野らしい郊外。学生気配もあり、安全で便利、吉祥寺より落ち着く。",
+    "landmarks": "西武多摩川線の始点、武蔵野プレイス、ICUや公園方面の並木道。",
+    "food": "飲食50軒、居酒屋23軒、バーとカフェの厚みは薄い。日常食は安定、シーン感は弱い。",
+    "nightlife": "深夜営業25軒、カラオケもクラブもなし。駅前居酒屋で飲んで早めに帰る。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Chuo Line с Musashino-спокойствием и студенческими краями. Безопасно, удобно, тише Kichijoji.",
+    "landmarks": "Терминал Seibu Tamagawa Line, Musashino Place, улицы с деревьями к ICU и паркам.",
+    "food": "50 ресторанов, 23 изакая, баров и кафе мало. Надёжная ежедневная еда, не сцена.",
+    "nightlife": "25 поздних мест, без караоке и клубов. Изакаи у станции, ранний дом."
+  }
+}

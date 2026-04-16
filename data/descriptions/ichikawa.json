@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba gateway on the Sobu, busy platforms, normal-life prices. Useful, not chic.",
+    "landmarks": "I-link Town tower, Edogawa riverbank, Mama and Konodai old streets nearby.",
+    "food": "76 restaurants, 30 izakayas; station ramen, chains, after-work drinking.",
+    "nightlife": "30 late spots. Izakaya-heavy, no club culture."
+  },
+  "ja": {
+    "atmosphere": "総武線の千葉入口、ホームは混むが生活価格。便利、しゃれ感は薄い。",
+    "landmarks": "アイ・リンクタウン展望施設、江戸川河川敷、真間と国府台の古い街並み。",
+    "food": "飲食76軒、居酒屋30軒。駅前ラーメン、チェーン、仕事帰り飲み。",
+    "nightlife": "深夜営業30軒。居酒屋中心、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Ворота Тибы на Sobu, шумные платформы, нормальные бытовые цены. Удобно, не шик.",
+    "landmarks": "Башня I-link Town, берег Эдогавы, старые улицы Мама и Конодай рядом.",
+    "food": "76 ресторанов, 30 изакая. Рамен у станции, сети, выпивка после работы.",
+    "nightlife": "30 поздних мест. Много изакая, клубной культуры нет."
+  }
+}

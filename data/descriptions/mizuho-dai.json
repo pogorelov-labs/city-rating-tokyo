@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tobu Tojo bedroom town, affordable and serviceable. Good errands, weak culture, moderate seismic.",
+    "landmarks": "Station-side supermarkets and clinics, 46 green pockets but no big-park signal. Quiet grid.",
+    "food": "36 restaurants, 12 izakayas, 1 bar. Reliable weeknight food, little destination pull.",
+    "nightlife": "14 late-night spots, no karaoke or clubs. Drinks stay very local."
+  },
+  "ja": {
+    "atmosphere": "東武東上線のベッドタウン。安めで実用的。用事は済む、文化は薄い、地震リスクは中程度。",
+    "landmarks": "駅前スーパーとクリニック、小さな緑46か所。ただし大公園感はない。静かな碁盤目。",
+    "food": "飲食36軒、居酒屋12軒、バー1軒。平日の夕食は安定、目的地感は弱い。",
+    "nightlife": "深夜営業14軒、カラオケとクラブなし。飲みはかなり地元内で完結。"
+  },
+  "ru": {
+    "atmosphere": "Спальный город Tobu Tojo, доступный и рабочий. Быт закрывает, культура слабая, сейсмика умеренная.",
+    "landmarks": "Супермаркеты и клиники у станции, 46 зелёных карманов, но без большого парка. Тихая сетка улиц.",
+    "food": "36 ресторанов, 12 изакая, 1 бар. Надёжная еда в будни, мало притяжения извне.",
+    "nightlife": "14 поздних мест, без караоке и клубов. Выпивка остаётся строго локальной."
+  }
+}

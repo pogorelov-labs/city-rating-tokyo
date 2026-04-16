@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ichihara rail junction, cheap and far. Industrial coast nearby, Kominato nostalgia inland.",
+    "landmarks": "Kominato Railway gateway, Uchibo Line platforms, petrochemical waterfront beyond town.",
+    "food": "40 restaurants, 23 izakayas, almost no cafes. Worker lunches and station-front drinking.",
+    "nightlife": "16 late spots, no karaoke, no clubs. Local drinks, not a night out."
+  },
+  "ja": {
+    "atmosphere": "市原の鉄道結節点。安いが遠い。海側は工業地帯、内陸は小湊鉄道の郷愁。",
+    "landmarks": "小湊鉄道の入口、内房線ホーム、街の先に石油化学の臨海部。",
+    "food": "飲食40件、居酒屋23件、カフェほぼなし。現場飯と駅前飲みの街。",
+    "nightlife": "深夜営業16件、カラオケなし、クラブなし。地元飲み、遠征向きではない。"
+  },
+  "ru": {
+    "atmosphere": "Железнодорожный узел Ichihara, дешево и далеко. У моря промышленность, вглубь идет Kominato.",
+    "landmarks": "Ворота Kominato Railway, платформы Uchibo Line, нефтехимическая кромка за городом.",
+    "food": "40 мест, 23 изакая, кафе почти нет. Рабочие обеды и выпивка у станции.",
+    "nightlife": "16 поздних мест, без караоке и клубов. Локальные напитки, не выездная ночь."
+  }
+}

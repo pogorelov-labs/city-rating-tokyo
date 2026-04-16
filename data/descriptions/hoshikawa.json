@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Residential Yokohama with civic-center feel. Sotetsu is useful, central Tokyo is not close.",
+    "landmarks": "Hodogaya Ward Office, Yokohama Business Park nearby, Katabira River walks.",
+    "food": "Izakaya, bars, cafes, late options; stronger than a bedroom town should be.",
+    "nightlife": "Bars and a few clubs show up; still local, not Yokohama Station."
+  },
+  "ja": {
+    "atmosphere": "区役所感のある横浜住宅地。相鉄は便利、都心東京は近くない。",
+    "landmarks": "保土ケ谷区役所、横浜ビジネスパーク方面、帷子川沿いの散歩道。",
+    "food": "居酒屋、バー、カフェ、遅い店まで揃う。寝る街にしては強い。",
+    "nightlife": "バーとクラブ少しあり。ただし横浜駅の代わりではなく地元向け。"
+  },
+  "ru": {
+    "atmosphere": "Жилой Йокогама с ощущением районного центра. Sotetsu удобна, центральный Токио не близко.",
+    "landmarks": "Hodogaya Ward Office, Yokohama Business Park рядом, прогулки вдоль Katabira River.",
+    "food": "Изакаи, бары, кафе и поздние места; сильнее, чем ждешь от спального района.",
+    "nightlife": "Бары и несколько клубов есть; все равно локально, не Yokohama Station."
+  }
+}

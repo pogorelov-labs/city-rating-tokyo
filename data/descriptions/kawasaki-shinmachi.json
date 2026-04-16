@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Nambu-branch stop in industrial Kawasaki. Quiet platforms, gritty surroundings.",
+    "landmarks": "Factory-side streets, local parks, Kawasaki hub one transfer away.",
+    "food": "Decent izakaya and bar spillover for a small station. Cafes almost absent.",
+    "nightlife": "Late bars and izakayas, no karaoke or clubs. Lowland soft-ground risk."
+  },
+  "ja": {
+    "atmosphere": "工業地帯寄りの南武支線の小駅。ホームは静か、周辺は荒め。",
+    "landmarks": "工場側の道、小さな公園、川崎中心部は乗り換え圏内。",
+    "food": "小駅にしては居酒屋とバーの波及あり。カフェはほぼない。",
+    "nightlife": "遅いバーと居酒屋あり、カラオケとクラブなし。低地と軟弱地盤に注意。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная станция ветки Nambu в индустриальном Kawasaki. Платформы тихие, вокруг жестко.",
+    "landmarks": "Улицы у заводов, местные парки, главный Kawasaki в одной пересадке.",
+    "food": "Для малой станции приличный перелив изакай и баров. Кафе почти нет.",
+    "nightlife": "Поздние бары и изакаи, без караоке и клубов. Низина, мягкий грунт."
+  }
+}

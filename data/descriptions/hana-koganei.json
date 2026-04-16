@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Practical Seibu suburb by Koganei Park. Cheap, safe, not fast to center.",
+    "landmarks": "Koganei Park is the real draw; station streets are everyday Kodaira.",
+    "food": "Ramen, family restaurants, izakaya around the gates. Bars basically absent.",
+    "nightlife": "A few late places, no karaoke or clubs. Last call feels local."
+  },
+  "ja": {
+    "atmosphere": "小金井公園そばの実用的な西武沿線。安くて安全、都心は近くない。",
+    "landmarks": "主役は小金井公園。駅前はふつうの小平の生活圏。",
+    "food": "ラーメン、ファミレス、駅前居酒屋。バー文化はほぼない。",
+    "nightlife": "遅い店は少し、カラオケとクラブなし。地元の終電前飲み。"
+  },
+  "ru": {
+    "atmosphere": "Практичный пригород Seibu у Koganei Park. Дешево, безопасно, до центра не быстро.",
+    "landmarks": "Koganei Park тут главный магнит; у станции обычная повседневная Кодайра.",
+    "food": "Рамэн, семейные рестораны, изакаи у выходов. Баров почти нет.",
+    "nightlife": "Несколько поздних мест, без караоке и клубов. Последний заказ сугубо местный."
+  }
+}

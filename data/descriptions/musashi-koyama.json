@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Arcade town with real local appetite. Great daily life, expensive rent, one-line rail.",
+    "landmarks": "Palm shopping arcade, Rinshinomori Park edge, dense Shinagawa backstreets.",
+    "food": "142 restaurants, 49 izakayas, 14 bars. Shotengai snacking is the point.",
+    "nightlife": "60 late spots, one club. Lively drinks, not Shibuya chaos."
+  },
+  "ja": {
+    "atmosphere": "商店街の街、生活欲が強い。日常は最高、家賃高め、路線は一本。",
+    "landmarks": "武蔵小山パルム、林試の森公園の端、品川の密な裏道。",
+    "food": "飲食142軒、居酒屋49軒、バー14軒。商店街つまみ歩きが本体。",
+    "nightlife": "深夜営業60軒、クラブ1軒。飲みは元気、渋谷的カオスではない。"
+  },
+  "ru": {
+    "atmosphere": "Город торговой аркады и сильного местного аппетита. Быт отличный, аренда кусается.",
+    "landmarks": "Аркада Palm, край Rinshinomori Park, плотные переулки Синагавы.",
+    "food": "142 ресторана, 49 изакай, 14 баров. Перекусы в shotengai здесь главный сюжет.",
+    "nightlife": "60 поздних мест, 1 клуб. Живые напитки, но не хаос Сибуи."
+  }
+}

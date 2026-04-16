@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu suburb with family rhythm, cheap rent, high ground. Center takes patience.",
+    "landmarks": "Kodaira Furusato Village, Rune Kodaira hall, Central Park, Seibu shopping strip.",
+    "food": "17 restaurants, 9 izakayas, 3 cafes. Practical chains and locals, little surprise.",
+    "nightlife": "Six late spots, no bars, no karaoke. Sleepy after dinner."
+  },
+  "ja": {
+    "atmosphere": "西武沿線の家族向け郊外、家賃安め、高台。都心へは忍耐。",
+    "landmarks": "小平ふるさと村、ルネこだいら、中央公園、西武沿いの商店街。",
+    "food": "飲食17軒、居酒屋9軒、カフェ3軒。チェーンと地元飯、驚きは少ない。",
+    "nightlife": "深夜6軒、バーなし、カラオケなし。夕飯後は眠い街。"
+  },
+  "ru": {
+    "atmosphere": "Семейный пригород Seibu, дешевая аренда, высокий грунт. До центра терпеть.",
+    "landmarks": "Kodaira Furusato Village, Rune Kodaira hall, Central Park, торговая полоска Seibu.",
+    "food": "17 ресторанов, 9 изакай, 3 кафе. Практичные сети и локалы, сюрпризов мало.",
+    "nightlife": "6 поздних мест, без баров и караоке. После ужина засыпает."
+  }
+}

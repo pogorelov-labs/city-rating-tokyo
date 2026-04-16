@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tamagawa-side Ota, low-key and practical. Safe data, modest green, soft-ground warning.",
+    "landmarks": "Old Yaguchi ferry memory, Tamagawa riverbanks, Tokyu Tamagawa Line lanes. Very local.",
+    "food": "55 spots, 20 izakayas, only three bars. Good for neighborhood dinners, thin for cafes.",
+    "nightlife": "22 late spots, no karaoke or clubs. Local drinking, last train before midnight."
+  },
+  "ja": {
+    "atmosphere": "多摩川寄りの大田、地味で実用的。治安は強い、緑は控えめ、地盤注意。",
+    "landmarks": "矢口の渡しの名残、多摩川河川敷、東急多摩川線の路地。完全に地元。",
+    "food": "55軒、居酒屋20、バー3だけ。近所の夕食向き、カフェは薄い。",
+    "nightlife": "深夜22軒、カラオケもクラブもなし。地元飲み、終電は23時台。"
+  },
+  "ru": {
+    "atmosphere": "Ота у Tama River, тихо и практично. Безопасность сильная, зелени мало, мягкий грунт настораживает.",
+    "landmarks": "Память старой переправы Yaguchi, берега Tamagawa, переулки Tokyu Tamagawa Line. Очень локально.",
+    "food": "55 мест, 20 изакая, всего три бара. Хорошо для соседских ужинов, кафе тонко.",
+    "nightlife": "22 поздних места, без караоке и клубов. Локальные выпивки, последний поезд до полуночи."
+  }
+}

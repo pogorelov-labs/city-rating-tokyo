@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Gritty south-Tokyo hub, working-class, loud, useful. Excellent food, weak polish.",
+    "landmarks": "Kamata Onsen, bar alleys, Keikyu-Kamata walk for Haneda links.",
+    "food": "424 restaurants, 204 izakayas; gyoza, ramen, cheap counters everywhere.",
+    "nightlife": "208 late spots, 5 karaoke. Strong, messy, not refined."
+  },
+  "ja": {
+    "atmosphere": "南東京のざらついたハブ。労働者の街、騒がしい、便利。飯は強いが上品ではない。",
+    "landmarks": "蒲田温泉、飲み屋横丁、京急蒲田まで歩けば羽田方面も近い。",
+    "food": "飲食424軒、居酒屋204軒。餃子、ラーメン、安いカウンターがそこら中。",
+    "nightlife": "深夜営業208軒、カラオケ5軒。強い、雑多、洗練ではない。"
+  },
+  "ru": {
+    "atmosphere": "Шершавый южно-токийский узел, рабочий, громкий, полезный. Еда отличная, лоска мало.",
+    "landmarks": "Kamata Onsen, барные переулки, пешком к Keikyu-Kamata для Ханэды.",
+    "food": "424 ресторана, 204 изакая. Гёдза, рамен, дешевые стойки повсюду.",
+    "nightlife": "208 поздних мест, 5 караоке. Сильно, грязновато, не изысканно."
+  }
+}

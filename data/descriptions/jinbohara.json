@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small-town Saitama on the Takasaki Line. 4.4k daily riders. Quiet suburb, 130 min to Tokyo.",
+    "landmarks": "Local shops, 1 cultural venue. No landmarks worth the detour. Peaceful but nondescript.",
+    "food": "Zero restaurants via aggregators. 6 small shops per. Very basic local food.",
+    "nightlife": "Minimal. Local comfort drinking only."
+  },
+  "ja": {
+    "atmosphere": "埼玉の小さな駅。利用者4400人。都心から130分。",
+    "landmarks": "地元の店、文化施設1。観光地なし。落ち着いているが地味。",
+    "food": "飲食店のデータなし。小さな食堂6軒。",
+    "nightlife": "ほぼなし。近所の飲み屋のみ。"
+  },
+  "ru": {
+    "atmosphere": "Маленький город Сайтама на линии Такасаки. 4,4 тыс. пассажиров/день. Спокойный пригород, 130 минут до Токио.",
+    "landmarks": "Местные магазины, 1 культурное учреждение. Никаких достопримечательностей, стоящих объезда. Спокойно, но безличное.",
+    "food": "Ноль ресторанов через агрегаторы. 6 небольших магазинов за. Очень базовая местная еда.",
+    "nightlife": "Минимально. Только местное комфортное питье."
+  }
+}

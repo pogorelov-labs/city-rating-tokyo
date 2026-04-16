@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shonan city with real local gravity. Cheap rent, strong food, brutal central-Tokyo commute.",
+    "landmarks": "Hiratsuka Hachimangu, Tanabata festival streets, beach side beyond the station grid.",
+    "food": "195 restaurants, 100 izakayas, 11 bars. Seafood, ramen, salaryman drinking, solid range.",
+    "nightlife": "78 late spots, no clubs. Busy drinking town, not a dance floor."
+  },
+  "ja": {
+    "atmosphere": "湘南の地力ある街。家賃は安め、飯は強い、都心通勤はかなり重い。",
+    "landmarks": "平塚八幡宮、七夕まつりの通り、駅前格子の先に海側エリア。",
+    "food": "飲食195件、居酒屋100件、バー11件。海鮮、ラーメン、会社員飲み、幅広い。",
+    "nightlife": "深夜営業78件、クラブなし。飲み屋街として賑やか、踊る街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Город Сёнан с собственной тяжестью. Аренда мягкая, еда сильная, до центра Токио тяжело.",
+    "landmarks": "Hiratsuka Hachimangu, улицы фестиваля Tanabata, морская сторона за сеткой центра.",
+    "food": "195 мест, 100 изакая, 11 баров. Морепродукты, рамен, выпивка офисных, диапазон крепкий.",
+    "nightlife": "78 поздних мест, клубов нет. Город для выпивки, не танцпол."
+  }
+}

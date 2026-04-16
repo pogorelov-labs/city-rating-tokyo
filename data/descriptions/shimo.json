@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Kita-ku pocket near Akabane, low-rise and practical. Soft-ground seismic risk.",
+    "landmarks": "Arakawa river close by, Akabane one stop away. Local streets, not a postcard.",
+    "food": "Izakaya-heavy for its size: 67 spots, plus Namboku-line dinner spillover.",
+    "nightlife": "73 late spots, no karaoke or clubs. Drinking, not dancing."
+  },
+  "ja": {
+    "atmosphere": "赤羽近くの静かな北区住宅地。低層で実用的、ただし軟弱地盤リスクあり。",
+    "landmarks": "荒川が近い、赤羽は一駅。観光地ではなく、完全に地元の道。",
+    "food": "規模の割に居酒屋67軒と強い。南北線沿いの夕飯需要を拾う街。",
+    "nightlife": "深夜営業73軒、カラオケとクラブなし。踊る場所ではなく飲む場所。"
+  },
+  "ru": {
+    "atmosphere": "Тихий карман Кита-ку у Акабанэ, низкая застройка, быт. Риск мягкого грунта.",
+    "landmarks": "Аракава рядом, Акабанэ в одной остановке. Местные улицы, не открытка.",
+    "food": "Для такого размера много изакая: 67 мест, плюс ужины с линии Namboku.",
+    "nightlife": "73 поздних места, без караоке и клубов. Пить, не танцевать."
+  }
+}

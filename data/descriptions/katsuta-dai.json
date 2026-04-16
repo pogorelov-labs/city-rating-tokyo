@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keisei suburb, commuter hub. 24k daily, low noise. Double-line convenience. 63 min to center.",
+    "landmarks": "Yachiyo suburban zone. Park clusters. No signature sites. Residential calm.",
+    "food": "51 listings (21 izakaya), 6 cafes. Solid local scene. Mixed quality, casual tone.",
+    "nightlife": "17 midnight spots, no karaoke. Salarymen locale. Closes by 1am."
+  },
+  "ja": {
+    "atmosphere": "京成郊外、通勤ハブ。1日2万4千人、低騒音。2路線便利。中心まで63分。",
+    "landmarks": "八千代郊外ゾーン。公園群。名所なし。住宅地の落ち着き。",
+    "food": "ホットペッパー51軒（居酒屋21軒）、カフェ6軒。堅実な地元場面。質はまちまち、casual基調。",
+    "nightlife": "深夜営業17軒、カラオケなし。サラリーマン向け。1時閉店。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Keisei, commuter хаб. 24k ежедневно, низкий шум. Двойная линия удобства. 63 минуты до центра.",
+    "landmarks": "Pригородная зона Yachiyo. Кластеры парков. Нет сигнатурных сайтов. Жилая тишина.",
+    "food": "51 listings (21 изакая), 6 кафе. Твёрдая локальная сцена. Смешанное качество, casual тон.",
+    "nightlife": "17 полуночных мест, караоке нет. Место зарплатников. Закрывает к 1am."
+  }
+}

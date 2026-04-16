@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Indie theater and vintage maze, beloved and chaotic. Tiny streets, big weekend crowds.",
+    "landmarks": "Honda Theater, live houses, thrift lanes, reload-style backstreets.",
+    "food": "273 restaurants, 79 izakayas, 29 cafes. Curry, bars, tiny counters; quality swings.",
+    "nightlife": "126 late spots, 28 bars, 2 clubs. Bar-hopping beats clubbing."
+  },
+  "ja": {
+    "atmosphere": "劇場と古着の迷路。愛されているが混沌。道は細く、週末はかなり混む。",
+    "landmarks": "本多劇場、ライブハウス、古着通り、reload周辺の裏路地。",
+    "food": "飲食273軒、居酒屋79軒、カフェ29軒。カレー、バー、小箱カウンター。質は揺れる。",
+    "nightlife": "深夜126軒、バー28軒、クラブ2軒。クラブより飲み歩きの街。"
+  },
+  "ru": {
+    "atmosphere": "Инди-театр и винтажный лабиринт, любимый и хаотичный. Узкие улицы, толпы по выходным.",
+    "landmarks": "Honda Theater, лайв-хаусы, секонд-хенд улицы, закоулки вокруг reload.",
+    "food": "273 ресторана, 79 изакая, 29 кафе. Карри, бары, крошечные стойки; качество скачет.",
+    "nightlife": "126 поздних мест, 28 баров, 2 клуба. Бар-хоппинг сильнее клубов."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Temple tourism, old nightlife and river lowland. Iconic, crowded, flood-prone, rough after dark.",
+    "landmarks": "Sensoji, Nakamise, Sumida River, Kaminarimon. Classic Tokyo with tour buses.",
+    "food": "571 restaurants, 162 izakayas, 53 cafes. Sweets, tempura, tourist traps, old counters.",
+    "nightlife": "135 late spots, 6 karaoke rooms, no clubs. Bars linger, crowds thin unevenly."
+  },
+  "ja": {
+    "atmosphere": "寺の観光、古い夜、川沿い低地。象徴的で混む、浸水リスクあり、夜は少し荒い。",
+    "landmarks": "浅草寺、仲見世、隅田川、雷門。観光バス込みの古典東京。",
+    "food": "飲食571軒、居酒屋162軒、カフェ53軒。甘味、天ぷら、観光罠、古いカウンター。",
+    "nightlife": "深夜営業135軒、カラオケ6軒、クラブなし。バーは残る、人の引き方はムラあり。"
+  },
+  "ru": {
+    "atmosphere": "Храмовый туризм, старая ночь и речная низина. Иконично, людно, flood-prone, ночью грубо.",
+    "landmarks": "Sensoji, Nakamise, Sumida River, Kaminarimon. Классический Токио с автобусами.",
+    "food": "571 ресторан, 162 изакая, 53 кафе. Сладости, темпура, туристические ловушки, старые стойки.",
+    "nightlife": "135 поздних мест, 6 караоке, клубов нет. Бары держатся, толпа уходит неровно."
+  }
+}

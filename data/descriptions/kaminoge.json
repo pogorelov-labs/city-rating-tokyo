@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Oimachi Line slope town, wealthy Setagaya without the sparkle. Calm, car-heavy.",
+    "landmarks": "Gotoh Museum, Kaminoge Inari, Todoroki Valley within walking range.",
+    "food": "35 restaurants, 6 izakayas; cafes and quiet counters, fewer late options.",
+    "nightlife": "10 late spots. Mostly neighborhood bars, early finish."
+  },
+  "ja": {
+    "atmosphere": "大井町線の坂の街。世田谷の余裕はあるが派手さなし、静かで車多め。",
+    "landmarks": "五島美術館、上野毛稲荷、等々力渓谷も徒歩圏。",
+    "food": "飲食35軒、居酒屋6軒。カフェと静かなカウンター、遅い選択肢は少ない。",
+    "nightlife": "深夜営業10軒。ほぼ近所のバー、早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Тихий склон на Oimachi Line, богатая Сэтагая без блеска. Спокойно, много машин.",
+    "landmarks": "Музей Gotoh, Kaminoge Inari, долина Тодороки в пешей зоне.",
+    "food": "35 ресторанов, 6 изакая. Кафе и тихие стойки, поздних вариантов мало.",
+    "nightlife": "10 поздних мест. В основном соседские бары, ранний финиш."
+  }
+}

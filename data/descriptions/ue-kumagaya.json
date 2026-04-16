@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Chichibu-line stop beside Kumagaya’s old center. Cheap, empty, brutally far.",
+    "landmarks": "Kumagaya backstreets, small temples, local bars. The real city sits one stop away.",
+    "food": "96 restaurants, 42 izakayas, strong for a tiny station. Old-town drinking beats cafes.",
+    "nightlife": "51 late spots and one club. Surprisingly alive, but last train quits early."
+  },
+  "ja": {
+    "atmosphere": "熊谷旧市街そばの小さな秩父線駅。安く空いているが、都心はかなり遠い。",
+    "landmarks": "熊谷の路地、小寺、地元飲み屋。本体の街は一駅先にある。",
+    "food": "飲食96件、居酒屋42件。小駅にしては強い。カフェより旧市街飲み。",
+    "nightlife": "深夜51件、クラブ1件。意外と夜はあるが、終電は早く終わる。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Chichibu у старого центра Кумагаи. Дёшево, пусто, очень далеко.",
+    "landmarks": "Закоулки Кумагаи, малые храмы, локальные бары. Настоящий центр в одной станции.",
+    "food": "96 ресторанов, 42 изакая, для такой станции мощно. Старый город пьёт лучше, чем пьёт кофе.",
+    "nightlife": "51 позднее место и один клуб. Неожиданно живо, но последний поезд рано."
+  }
+}

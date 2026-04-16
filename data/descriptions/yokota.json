@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Chiba station (292 riders), Kururi Line. 75 min to center. Cheap (¥107k), car-dependent suburb.",
+    "landmarks": "Forest-adjacent, 10 million sqm green. Minimal commercial zone. Seismic high, elevation 14m.",
+    "food": "Zero listings venues, 1 marker. No dining infrastructure.",
+    "nightlife": "None. Last train 22:55."
+  },
+  "ja": {
+    "atmosphere": "千葉極小駅（292人）、久留里線。センター75分。安い（107k）、車依存郊外。",
+    "landmarks": "森隣接、1000万平米の緑。商業ゼロ。地震高、標高14m。",
+    "food": "ホットペッパーゼロ、マーカー1つ。飲食インフラなし。",
+    "nightlife": "ないに等しい。終電22:55。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная станция Чиба (292 пассажира), линия Куруури. 75 мин до центра. Дёшево (107k йен), автозависимый пригород.",
+    "landmarks": "Лес рядом, 10 млн кв.м зелени. Почти нет магазинов. Сейсморизк высокий, высота 14 м.",
+    "food": "Никаких мест listings, 1 маркер. Никакой гастрономии.",
+    "nightlife": "Нет. Последний поезд 22:55."
+  }
+}

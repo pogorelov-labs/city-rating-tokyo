@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odaiba waterfront emptiness, malls and wide decks. Flood-prone reclaimed land, not cozy.",
+    "landmarks": "Palette Town traces, Tokyo Bay walks, Yurikamome views. Big sky, little street life.",
+    "food": "81 restaurants, 17 izakayas, 8 cafes. Mall food dominates, weak after-hours depth.",
+    "nightlife": "7 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "お台場の湾岸の空白、モールと広いデッキ。埋立地で浸水リスクあり、居心地は硬い。",
+    "landmarks": "パレットタウン跡、東京湾散歩、ゆりかもめの眺め。空は広い、街路生活は薄い。",
+    "food": "飲食81軒、居酒屋17軒、カフェ8軒。モール飯中心、夜の厚みは弱い。",
+    "nightlife": "深夜営業7軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пустота набережной Odaiba, моллы и широкие деки. Намывная земля с flood risk, не уютно.",
+    "landmarks": "Следы Palette Town, прогулки Tokyo Bay, виды Yurikamome. Много неба, мало улицы.",
+    "food": "81 ресторан, 17 изакая, 8 кафе. Доминирует еда в моллах, после часов глубина слабая.",
+    "nightlife": "7 поздних мест, без караоке и клубов. Минимально."
+  }
+}

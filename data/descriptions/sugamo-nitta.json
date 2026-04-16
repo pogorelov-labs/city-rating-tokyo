@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Sakura Tram stop between Otsuka grit and Sugamo old-Tokyo. Cheap-ish, messy, alive.",
+    "landmarks": "Toden tram tracks, Otsuka backstreets, Jizo-dori within reach. Small-stop, big-neighborhood effect.",
+    "food": "266 restaurants, 93 izakayas, 27 bars. Strong old-school eating, plenty late.",
+    "nightlife": "101 late spots, 2 karaoke, no clubs. Bars and izakayas, slightly rough."
+  },
+  "ja": {
+    "atmosphere": "大塚のざらつきと巣鴨の古東京の間にある小さな都電駅。雑で生きてる。",
+    "landmarks": "都電の線路、大塚の裏道、地蔵通りも圏内。小駅なのに周辺は濃い。",
+    "food": "飲食266件、居酒屋93件、バー27件。昭和寄りの食が強く、夜も続く。",
+    "nightlife": "深夜101件、カラオケ2件、クラブなし。バーと居酒屋、少し荒め。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Sakura Tram между шероховатой Otsuka и старым Sugamo. Дешевле, грязновато, живо.",
+    "landmarks": "Трамвайные рельсы Toden, задние улицы Otsuka, Jizo-dori рядом. Малый стоп, большой район.",
+    "food": "266 ресторанов, 93 изакая, 27 баров. Сильная старая еда, много позднего.",
+    "nightlife": "101 позднее место, 2 караоке, без клубов. Бары и изакая, чуть грубо."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bunkyo river corridor, quiet but not sleepy. Office edges, old slopes, Kagurazaka spillover.",
+    "landmarks": "Kanda River walks, Hatoyama Hall, garden pockets near Mejiro-dai. Civilized, slightly hidden.",
+    "food": "190 restaurants, 57 izakayas, 12 bars. Better than it looks from the platform.",
+    "nightlife": "41 late spots, no clubs or karaoke. Drinks are local, restrained, early-ish."
+  },
+  "ja": {
+    "atmosphere": "文京の川沿い回廊。静かだが眠くない。オフィス端、古い坂、神楽坂の余波。",
+    "landmarks": "神田川沿い、鳩山会館、目白台寄りの庭園群。上品で少し隠れている。",
+    "food": "飲食190軒、居酒屋57軒、バー12軒。ホームから見える印象よりかなり食べられる。",
+    "nightlife": "深夜営業41軒、クラブもカラオケもなし。地元飲み、控えめ、やや早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Речной коридор Бункё, тихо но не сонно. Офисные края, старые склоны, отголосок Kagurazaka.",
+    "landmarks": "Прогулки вдоль Kanda River, Hatoyama Hall, садовые карманы у Mejiro-dai. Цивильно и чуть спрятано.",
+    "food": "190 ресторанов, 57 изакая, 12 баров. С платформы район выглядит беднее, чем естся.",
+    "nightlife": "41 позднее место, без клубов и караоке. Местная выпивка, сдержанно, закрывается рановато."
+  }
+}

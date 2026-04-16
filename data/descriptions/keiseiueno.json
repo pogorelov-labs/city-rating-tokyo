@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Airport gateway dropped into Ueno chaos. Food-rich, tourist-heavy, rough around the edges.",
+    "landmarks": "Ueno Park, Ameyoko, Shinobazu Pond, Keisei Skyliner gates. Everything overlaps.",
+    "food": "917 restaurants, 411 izakayas, 70 bars. Huge range, tourist traps and gems mixed.",
+    "nightlife": "369 late spots, 34 clubs, karaoke dense. Loud and gritty after dark."
+  },
+  "ja": {
+    "atmosphere": "上野の混沌に刺さる空港ゲート。飯は濃い、観光客多い、夜は少し荒い。",
+    "landmarks": "上野公園、アメ横、不忍池、京成スカイライナー改札。全部が重なる。",
+    "food": "飲食917軒、居酒屋411軒、バー70軒。幅巨大、観光罠と名店が混ざる。",
+    "nightlife": "深夜営業369軒、クラブ34軒、カラオケ密集。夜はうるさくザラつく。"
+  },
+  "ru": {
+    "atmosphere": "Аэропортные ворота, брошенные в хаос Ueno. Еды много, туристов много, края шершавые.",
+    "landmarks": "Ueno Park, Ameyoko, Shinobazu Pond, ворота Keisei Skyliner. Всё накладывается.",
+    "food": "917 ресторанов, 411 изакая, 70 баров. Огромный диапазон, ловушки туристов и находки вместе.",
+    "nightlife": "369 поздних мест, 34 клуба, плотное караоке. Ночью громко и грубо."
+  }
+}

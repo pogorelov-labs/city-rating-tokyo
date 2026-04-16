@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Katsushika by the Arakawa, low-rise and plain. Cheap, calm, flood risk is the catch.",
+    "landmarks": "Captain Tsubasa statues, Yotsugi riverbank, Keisei Oshiage Line tracks. Local manga pride.",
+    "food": "17 restaurants, 6 izakayas. Basic neighborhood food; cafes are basically absent.",
+    "nightlife": "3 late spots. Minimal, with 4m elevation and very-high seismic risk."
+  },
+  "ja": {
+    "atmosphere": "荒川沿いの古い葛飾、低層で素朴。安くて静か、ただし水害リスクは明確。",
+    "landmarks": "キャプテン翼像、四つ木の河川敷、京成押上線の線路。地元の漫画誇り。",
+    "food": "飲食17軒、居酒屋6軒。近所の基本飯、カフェはほぼ不在。",
+    "nightlife": "深夜3軒。最小限、標高4mと地震リスク非常に高め。"
+  },
+  "ru": {
+    "atmosphere": "Старая Кацусика у Arakawa, низкая и простая. Дешево, спокойно, риск паводка — главный крючок.",
+    "landmarks": "Статуи Captain Tsubasa, берег Yotsugi, пути Keisei Oshiage Line. Локальная манга-гордость.",
+    "food": "17 ресторанов, 6 изакая. Базовая соседская еда; кафе почти отсутствуют.",
+    "nightlife": "3 поздних места. Минимально, при 4 м высоты и очень высоком сейсмориске."
+  }
+}

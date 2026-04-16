@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Very quiet Seibu Tamagawa stop. Green, safe, almost village-like for Tokyo.",
+    "landmarks": "Nogawa Park and ICU side nearby, Tama Cemetery not far. Bicycles beat taxis here.",
+    "food": "22 restaurants, 9 izakayas, no cafes in the scrape. Daily meals only.",
+    "nightlife": "Eight late spots, no karaoke, last train at midnight. Minimal."
+  },
+  "ja": {
+    "atmosphere": "西武多摩川線のかなり静かな駅。緑と安全、東京にしては村っぽい。",
+    "landmarks": "野川公園とICU方面が近い。多磨霊園も遠くない。ここは自転車が強い。",
+    "food": "飲食22軒、居酒屋9軒、カフェ検出なし。日常飯だけ。",
+    "nightlife": "深夜8軒、カラオケなし、終電0時。ほぼミニマル。"
+  },
+  "ru": {
+    "atmosphere": "Очень тихая остановка Seibu Tamagawa. Зелено, безопасно, почти деревня по меркам Токио.",
+    "landmarks": "Рядом Nogawa Park и сторона ICU, Tama Cemetery тоже недалеко. Велосипед важнее такси.",
+    "food": "22 ресторана, 9 изакая, кафе не пойманы. Только повседневная еда.",
+    "nightlife": "Восемь поздних мест, караоке нет, последний поезд в полночь. Минимально."
+  }
+}

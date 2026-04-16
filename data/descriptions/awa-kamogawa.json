@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Coastal terminal town, resort air and fishing-port pace. Beautiful, but brutally far from Tokyo.",
+    "landmarks": "Kamogawa Sea World, beach walks, Sotobo and Uchibo rail ends. Very high seismic risk, coastal caution.",
+    "food": "13 restaurants, 3 izakayas, small seafood-town energy. Good for a stop, thin for daily choice.",
+    "nightlife": "4 late spots and last train at 21:21. The town sleeps early."
+  },
+  "ja": {
+    "atmosphere": "海沿いの終着駅。リゾート感と漁港の速度。景色は良い、東京通勤はかなり重い。",
+    "landmarks": "鴨川シーワールド、海岸散歩、外房線と内房線の終点。地震リスクかなり高め、沿岸注意。",
+    "food": "飲食13軒、居酒屋3軒。小さな海町の魚料理感。寄り道には良い、日常選択肢は薄い。",
+    "nightlife": "深夜営業4軒、終電21:21。町は早く寝る。"
+  },
+  "ru": {
+    "atmosphere": "Приморский конечный город, курортный воздух и рыбацкий темп. Красиво, но до Токио безжалостно далеко.",
+    "landmarks": "Kamogawa Sea World, пляжные прогулки, концы линий Sotobo и Uchibo. Сейсмориск очень высокий, берег требует осторожности.",
+    "food": "13 ресторанов, 3 изакая, маленькая морская энергия. Хорошо на остановку, тонко для ежедневного выбора.",
+    "nightlife": "4 поздних места и последний поезд в 21:21. Город спит рано."
+  }
+}

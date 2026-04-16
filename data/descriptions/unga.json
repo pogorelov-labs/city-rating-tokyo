@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Canal-side commuter town, green and cheap, but remote from Tokyo core.",
+    "landmarks": "Tone Canal paths, Tokyo University of Science Noda campus, wide suburban edges.",
+    "food": "4 listed restaurants, 1 izakaya, more scattered local counters. Plan meals.",
+    "nightlife": "2 late spots, 1 karaoke, no clubs. Almost all quiet after dinner."
+  },
+  "ja": {
+    "atmosphere": "運河沿いの通勤住宅地。緑が強く家賃は軽いが、都心からは遠い。",
+    "landmarks": "利根運河の散歩道、東京理科大野田キャンパス、広い郊外の端っこ。",
+    "food": "飲食4軒、居酒屋1軒、あとは点在する地元カウンター。食事は計画型。",
+    "nightlife": "深夜2軒、カラオケ1、クラブなし。夕飯後はほぼ静まり返る。"
+  },
+  "ru": {
+    "atmosphere": "Коммьютерский город у канала, зелено и дешево, но далеко от центра Токио.",
+    "landmarks": "Тропы Tone Canal, кампус Tokyo University of Science Noda, широкие окраины.",
+    "food": "4 ресторана, 1 изакая, еще разрозненные местные стойки. Еду лучше планировать.",
+    "nightlife": "2 поздних места, 1 караоке, без клубов. После ужина почти тишина."
+  }
+}

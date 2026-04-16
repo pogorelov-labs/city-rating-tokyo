@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Namboku-line residential north, quieter than Oji. Practical, safe, slightly remote.",
+    "landmarks": "Kita-ku housing blocks, Sumida-side walks, Oji nearby for bigger errands.",
+    "food": "64 restaurants, 27 izakayas, 3 cafes. Local food coverage, few destination spots.",
+    "nightlife": "20 late spots, no karaoke or clubs. Small izakaya night."
+  },
+  "ja": {
+    "atmosphere": "南北線の北側住宅地、王子より静か。実用的で安全、少し奥まる。",
+    "landmarks": "北区の住宅街、隅田川方面の散歩、大きな用事は近い王子へ。",
+    "food": "飲食64軒、居酒屋27軒、カフェ3軒。地元飯は揃うが、目的地店は少ない。",
+    "nightlife": "深夜営業20軒、カラオケもクラブもなし。小さな居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Жилой север на Namboku Line, тише чем Oji. Практично, безопасно, чуть удалённо.",
+    "landmarks": "Жилые блоки Kita-ku, прогулки к Sumida, Oji рядом для больших дел.",
+    "food": "64 ресторана, 27 изакая, 3 кафе. Локальная еда закрыта, destination мест мало.",
+    "nightlife": "20 поздних мест, без караоке и клубов. Малая изакая-ночь."
+  }
+}

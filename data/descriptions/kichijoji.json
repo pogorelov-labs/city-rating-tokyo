@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo's favorite west-side chaos: cute, crowded, expensive, still magnetic.",
+    "landmarks": "Inokashira Park, Harmonica Yokocho, Sunroad arcade, Ghibli-bound foot traffic.",
+    "food": "Huge food field: izakaya, cafes, ramen, bars. Great, but queues and hype tax apply.",
+    "nightlife": "Late izakayas and bars thrive, clubs minimal. Crowds stay late."
+  },
+  "ja": {
+    "atmosphere": "東京西側の人気カオス。可愛い、混む、高い、それでも引力がある。",
+    "landmarks": "井の頭公園、ハーモニカ横丁、サンロード、ジブリ方面へ流れる人波。",
+    "food": "巨大な食の場。居酒屋、カフェ、ラーメン、バー。強いが行列と人気税あり。",
+    "nightlife": "遅い居酒屋とバーは強い、クラブは最小限。人は遅くまで残る。"
+  },
+  "ru": {
+    "atmosphere": "Любимый западный хаос Токио: мило, людно, дорого, все равно магнит.",
+    "landmarks": "Inokashira Park, Harmonica Yokocho, Sunroad arcade, поток в сторону Ghibli.",
+    "food": "Огромное поле еды: изакаи, кафе, рамэн, бары. Сильно, но очереди и hype tax.",
+    "nightlife": "Поздние изакаи и бары живут, клубы минимальны. Толпа держится допоздна."
+  }
+}

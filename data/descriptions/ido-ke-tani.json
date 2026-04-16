@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama Minami-ku Keikyu strip, cheap and hilly around the edges. Soft-ground risk.",
+    "landmarks": "Ooka River side, Keikyu main line, steep residential lanes. Yokohama grit, not polish.",
+    "food": "22 restaurants, 9 izakayas, 2 cafes. Local counters and takeout, enough for weekdays.",
+    "nightlife": "6 late spots, 1 club. Mostly small bars, early finish."
+  },
+  "ja": {
+    "atmosphere": "横浜南区の京急沿線、安めで周辺は坂多め。地盤リスクは高い。",
+    "landmarks": "大岡川側、京急本線、急な住宅路地。横浜の生活感、洗練ではない。",
+    "food": "飲食22軒、居酒屋9軒、カフェ2軒。地元カウンターと持ち帰り、平日は足りる。",
+    "nightlife": "深夜6軒、クラブ1軒。小さなバー中心、夜は早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Полоса Keikyu в Minami-ku Йокогамы, дешево, по краям холмы. Грунт рискованный.",
+    "landmarks": "Сторона реки Ooka, магистраль Keikyu, крутые жилые улочки. Йокогамская шероховатость.",
+    "food": "22 ресторана, 9 изакая, 2 кафе. Местные стойки и навынос, на будни хватает.",
+    "nightlife": "6 поздних мест, 1 клуб. В основном малые бары, ранний финал."
+  }
+}

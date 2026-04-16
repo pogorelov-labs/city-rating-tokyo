@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban Ichikawa on Keiyo Line. Walkable residential, low-key, quiet commuter default.",
+    "landmarks": "3 parks, 1 market. Standard suburban infrastructure. No standout features.",
+    "food": "1 spot. Data sparse, assume local.",
+    "nightlife": "None. Station closes early."
+  },
+  "ja": {
+    "atmosphere": "京葉線の市川郊外。徒歩圏内の住宅地、地味、静かな通勤者デフォルト。",
+    "landmarks": "公園3軒、市場1軒。標準的な郊外インフラ。特徴なし。",
+    "food": "1軒。データ不完全、地元と推測。",
+    "nightlife": "なし。駅は早めに閉鎖。"
+  },
+  "ru": {
+    "atmosphere": "Пригородная Ичикава на линии Кейо. Пешеходная жилая, сдержанная, тихий комьютерский дефолт.",
+    "landmarks": "3 парка, 1 рынок. Стандартная пригородная инфраструктура. Без выдающихся черт.",
+    "food": "1 место. Данные редкие, предположим местное.",
+    "nightlife": "Нет. Станция закрывается рано."
+  }
+}

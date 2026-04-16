@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seaside hamlet on Shonan Monorail, 3.2k daily riders. Quiet hilltop village, ocean views. Premium rent (142k), 74 min to Tokyo. Last train 00:01.",
+    "landmarks": "Katase-Yama Park, tiny beach station. Enoshima nearby (car). Coastal village charm, no urban buzz.",
+    "food": "5 rating, sparse. 13 listings, 1 izakaya, 2 cafes, 2. Bring supplies from Enoshima or Kamakura.",
+    "nightlife": "None. Monorail ends at midnight. Surfers drink beer, then sleep."
+  },
+  "ja": {
+    "atmosphere": "湘南モノレールの海辺の集落、3200人/日。静かな丘の村、海の眺め。家賃高め（142k）、都心74分。末電00:01。",
+    "landmarks": "片瀬山公園、小ぶりなビーチ駅。江ノ島は車で。沿岸村のくろい、都会ゼロ。",
+    "food": "5評価、疎ら。ホットペッパー13軒、居酒屋1軒、カフェ2軒、2軒。江ノ島か鎌倉から補給。",
+    "nightlife": "皆無。モノレールは真夜中終了。サーファーはビール飲んで寝る。"
+  },
+  "ru": {
+    "atmosphere": "Приморское селение на монорельсе Сёнан, 3.2k пассажиров/день. Тихая деревня на холме, вид на море. Аренда повыше (142k), 74 мин до центра.末поезд 00:01.",
+    "landmarks": "Парк Катасе-яма, маленькая пляжная станция. Эносима рядом (авто). Приморский колорит, городского нет.",
+    "food": "Рейтинг 5, редко. 13 listings, 1 изакая, 2 кафе, 2. Продукты из Эносимы или Камакуры.",
+    "nightlife": "Нет. Монорельс в полночь. Серферы пиво, потом спят."
+  }
+}

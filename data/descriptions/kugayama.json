@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Inokashira-line Suginami, leafy and safe, quietly expensive. Calm beats buzz.",
+    "landmarks": "Kugayama shopping street, riverside walks, Inokashira and Zenpukuji parks nearby.",
+    "food": "15 restaurants, 2 izakayas, one bar, no cafes. Fine for locals, thin for exploring.",
+    "nightlife": "Six late spots, one odd club signal. Mostly residential quiet."
+  },
+  "ja": {
+    "atmosphere": "井の頭線の杉並、緑多めで安全、静かに高い。賑わいより落ち着き。",
+    "landmarks": "久我山商店街、川沿い散歩、井の頭公園と善福寺公園が圏内。",
+    "food": "飲食15軒、居酒屋2軒、バー1軒、カフェなし。地元用、探索には薄い。",
+    "nightlife": "深夜6軒、クラブ信号1件。基本は住宅地の静けさ。"
+  },
+  "ru": {
+    "atmosphere": "Сугинами на Inokashira Line, зелено и безопасно, тихо дорого. Спокойствие важнее шума.",
+    "landmarks": "Kugayama shotengai, прогулки у воды, Inokashira и Zenpukuji рядом.",
+    "food": "15 ресторанов, 2 изакаи, один бар, кафе нет. Местным норм, исследовать нечего.",
+    "nightlife": "6 поздних мест, один странный клубный сигнал. В основном жилой покой."
+  }
+}

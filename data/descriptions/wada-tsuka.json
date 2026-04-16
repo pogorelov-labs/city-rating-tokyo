@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Enoden stop, beach-town Kamakura mood. Quiet residents, weekend visitors.",
+    "landmarks": "Wada-zuka mound, Yuigahama beach, old Kamakura lanes. Sea air without station chaos.",
+    "food": "128 restaurants, 25 cafes, 21 izakayas. Strong lunches, beach pricing, uneven evenings.",
+    "nightlife": "3 late spots, 9 hostels. Beach beers, not a late-night town."
+  },
+  "ja": {
+    "atmosphere": "江ノ電の小駅、鎌倉の海街ムード。平日は住民、週末は観光客。",
+    "landmarks": "和田塚、由比ヶ浜、古い鎌倉の路地。駅前混雑なしで海の空気。",
+    "food": "飲食128軒、カフェ25軒、居酒屋21軒。昼は強い、海価格、夜はムラあり。",
+    "nightlife": "深夜3軒、ホステル9。浜辺のビール、深夜の街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная остановка Enoden, пляжная Камакура. В будни жители, в выходные гости.",
+    "landmarks": "Курган Wada-zuka, пляж Yuigahama, старые переулки Камакуры. Морской воздух без вокзального хаоса.",
+    "food": "128 ресторанов, 25 кафе, 21 изакая. Сильные ланчи, пляжные цены, вечера неровные.",
+    "nightlife": "3 поздних места, 9 хостелов. Пиво у пляжа, не ночной район."
+  }
+}

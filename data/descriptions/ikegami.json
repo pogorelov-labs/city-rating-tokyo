@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyu local town with temple gravity. Older, calmer Ota; useful but not central.",
+    "landmarks": "Ikegami Honmonji, temple hill, Tokyu Ikegami Line. History beats skyline.",
+    "food": "60 restaurants, 26 izakayas, 3 cafes. Local sushi, soba, grills; reliable, modest.",
+    "nightlife": "24 late spots, no karaoke. Neighborhood drinking, not a crawl town."
+  },
+  "ja": {
+    "atmosphere": "寺の重心がある東急ローカル駅。古く落ち着いた大田、便利だが中心ではない。",
+    "landmarks": "池上本門寺、寺の丘、東急池上線。高層景色より歴史。",
+    "food": "飲食60軒、居酒屋26軒、カフェ3軒。地元寿司、そば、焼き物。堅実で控えめ。",
+    "nightlife": "深夜24軒、カラオケなし。近所飲み、はしご街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Локальный городок Tokyu вокруг храма. Старая, спокойная Ота; удобно, но не центр.",
+    "landmarks": "Ikegami Honmonji, храмовый холм, линия Tokyu Ikegami. История важнее skyline.",
+    "food": "60 ресторанов, 26 изакая, 3 кафе. Местные суши, соба, гриль; надежно, скромно.",
+    "nightlife": "24 поздних места, караоке нет. Соседская выпивка, не город для бар-хоппинга."
+  }
+}

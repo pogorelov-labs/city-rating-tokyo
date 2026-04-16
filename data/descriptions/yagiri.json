@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "River-town quiet near Edo museum. Residential feel, few tourists.",
+    "landmarks": "Edo Museum, Matsudo riverside walks. Low-key cultural hub.",
+    "food": "Sparse but real — 9 venues, 2 chains. Quality varies.",
+    "nightlife": "Minimal. Neighborhood bars, early close."
+  },
+  "ja": {
+    "atmosphere": "江戸博物館近い。静かな住宅地。",
+    "landmarks": "江戸博物館、松戸河岸散歩道。",
+    "food": "少ないが本物 — 9 件、チェーン 2 軒。質はまちまち。",
+    "nightlife": "ほぼなし。近所の飲み屋。"
+  },
+  "ru": {
+    "atmosphere": "Реки-город, рядом музей Эдо. Жилая зона, туристов нет.",
+    "landmarks": "Музей Эдо, набережная Мацудо.",
+    "food": "Разреженно, но есть — 9 мест, 2 сети. Качество скачет.",
+    "nightlife": "Практически нет."
+  }
+}

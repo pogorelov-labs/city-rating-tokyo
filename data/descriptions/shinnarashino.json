@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban quiet, Chiba commuter town. New development, shopping mall vibe. 52-minute slog to center.",
+    "landmarks": "New Town architecture, wide pedestrian plazas (20 streets). Planned, antiseptic. Far from Tokyo.",
+    "food": "Sparse: 2 listings spots, 12. Convenience over character. Early dinner culture.",
+    "nightlife": "Minimal. One midnight spot, families by 9pm. Dead zone after dusk."
+  },
+  "ja": {
+    "atmosphere": "千葉の郊外静寂地。新興住宅地、ショッピングモール型。都心から52分。",
+    "landmarks": "新興団地の風景。広い歩行者天国（20本）。計画的だが無機質。",
+    "food": "疎ら：登録は2軒のみ、12軒弁当。利便性重視、味わいなし。",
+    "nightlife": "ほぼ皆無。夜間営業1軒、19時で住民帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Пригородная тишина Тиба. Новая застройка, торговый центр-стиль. 52 минуты от центра.",
+    "landmarks": "Архитектура спального района. 20 пешеходных улиц, широко, безлично.",
+    "food": "Редко: 2 listings, 12. Удобство, не вкус. Ужин до 18:00.",
+    "nightlife": "Минимально. 1 поздний бар, семьи к 21:00. Вымирает после заката."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tokyo Tower side-street Minato, central and pricey. Quiet blocks, big-city dining nearby.",
+    "landmarks": "Tokyo Tower, Shiba Park, Zojoji, embassy-side slopes. Tourist views, local silence.",
+    "food": "566 restaurants, 203 izakayas, 44 bars. Excellent range, high Minato pricing.",
+    "nightlife": "209 late spots, 1 karaoke, 1 club. Polished drinks, not chaotic."
+  },
+  "ja": {
+    "atmosphere": "東京タワー脇の港区裏通り、中心で高い。道は静か、飲食の厚みは近い。",
+    "landmarks": "東京タワー、芝公園、増上寺、大使館側の坂。観光の景色と地元の静けさ。",
+    "food": "飲食566軒、居酒屋203軒、バー44軒。選択肢は優秀、港区価格。",
+    "nightlife": "深夜営業209軒、カラオケ1軒、クラブ1軒。磨かれた飲み、混沌ではない。"
+  },
+  "ru": {
+    "atmosphere": "Минато-переулки у Tokyo Tower, центр и дорого. Тихие блоки, большая еда рядом.",
+    "landmarks": "Tokyo Tower, Shiba Park, Zojoji, посольские склоны. Туристические виды, локальная тишина.",
+    "food": "566 ресторанов, 203 изакая, 44 бара. Отличный диапазон, цены Minato.",
+    "nightlife": "209 поздних мест, 1 караоке, 1 клуб. Полированные напитки, не хаос."
+  }
+}

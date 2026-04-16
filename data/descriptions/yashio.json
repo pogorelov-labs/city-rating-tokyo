@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "TSE commuter hub with massive sports complex, 41 min. Flood risk (elevation -2m), very high seismic ground.",
+    "landmarks": "Green sprawl (195k sqm), sports facilities, suburban parks. Outdoors-focused but engineering hazard.",
+    "food": "16 restaurants, 10. Minimal nightlife diversity. Gym-heavy destination.",
+    "nightlife": "9 midnight spots, 1 karaoke. Sports culture dominates over food & culture. Ground stability a real concern."
+  },
+  "ja": {
+    "atmosphere": "TSE通勤ハブ（スポーツ複合施設）、41分。洪水リスク（標高-2m）、非常に高い地震地盤。",
+    "landmarks": "緑スプロール（195k sqm）、スポーツ施設、郊外公園。屋外重視だが工学的危険。",
+    "food": "食堂16軒、10件。夜遊び多様性最小。ジム重視目的地。",
+    "nightlife": "夜間営業9件、カラオケ1軒。スポーツ文化が食べ物と文化を支配。地盤安定性は実際の懸念。"
+  },
+  "ru": {
+    "atmosphere": "Хаб коммутеров TSE с огромным спортивным комплексом, 41 мин. Риск наводнения (высота -2м), очень высокий сейсмический грунт.",
+    "landmarks": "Зеленое расползание (195k кв.м), спортивные сооружения, пригородные парки. Ориентирован на открытый воздух, но опасность инженерных работ.",
+    "food": "16 ресторанов, 10 (). Разнообразие ночной жизни минимально. Спортзал как основное назначение.",
+    "nightlife": "9 ночных мест, 1 караоке. Спортивная культура доминирует над едой и культурой. Устойчивость грунта — реальная опасность."
+  }
+}

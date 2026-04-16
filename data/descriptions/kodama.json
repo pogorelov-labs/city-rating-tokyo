@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Deep Saitama exurb (127 min to central Tokyo). Tiny passenger base (746/day). Dying rural outpost.",
+    "landmarks": "Hachiko Line terminus. 96m elevation, low seismic risk. No tourist draw. Last train 23:01 — plan stays.",
+    "food": "Skeleton crew: 4 listings, 4 izakaya, 3 bars. Self-catering recommended. Small towns don't feed night people.",
+    "nightlife": "Minimal. 3 midnight spots, zero karaoke. If you need drinks, head to Honjo 20 min away."
+  },
+  "ja": {
+    "atmosphere": "埼玉深部、駅から127分。乗客746人/日。衰退した農村の終点。",
+    "landmarks": "八高線終端。標高96m、地震リスク低。観光地ではない。23:01最終便。",
+    "food": "4HP、4居酒屋、3バー。自炊推奨。小さな町は夜の人を養わない。",
+    "nightlife": "ほぼなし。深夜3軒、カラオケ0。飲みたければ本庄へ20分。"
+  },
+  "ru": {
+    "atmosphere": "Глубокий пригород Сайтамы (127 мин до центра Токио). 746 пассажиров/день. Умирающий сельский форпост.",
+    "landmarks": "Конечная станция линии Хатико. 96м над уровнем, низкий сейсмориск. Туристических достопримечательностей нет. Последний поезд 23:01.",
+    "food": "Скелет команды: 4 listings, 4 изакая, 3 бара. Самообслуживание рекомендуется.",
+    "nightlife": "Минимально. 3 ночных места, нет караоке. За напитками ехать в Хондзё."
+  }
+}

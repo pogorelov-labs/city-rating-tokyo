@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Adachi workhorse hub, cheaper and busier than it looks. Soft-ground seismic flag, real crowds.",
+    "landmarks": "Nishiarai Daishi temple, Ario mall, Tobu branch tracks. Local life over polish.",
+    "food": "80 restaurants, 33 izakayas, 7 cafes. Practical mall meals plus neighborhood drinking.",
+    "nightlife": "31 late spots, 3 karaoke rooms, no clubs. Local izakaya night."
+  },
+  "ja": {
+    "atmosphere": "足立の実用ハブ、見た目より安くて混む。地盤リスクあり、人の量も本物。",
+    "landmarks": "西新井大師、アリオ、東武大師線。洗練より生活感。",
+    "food": "飲食80軒、居酒屋33軒、カフェ7軒。モール飯と近所飲みが中心。",
+    "nightlife": "深夜営業31軒、カラオケ3軒、クラブなし。地元居酒屋の夜。"
+  },
+  "ru": {
+    "atmosphere": "Рабочий узел Адачи, дешевле и люднее, чем выглядит. Мягкий грунт, толпа настоящая.",
+    "landmarks": "Храм Nishiarai Daishi, Ario mall, ветка Tobu Daishi. Больше быта, чем лоска.",
+    "food": "80 ресторанов, 33 изакая, 7 кафе. Еда в молле плюс районная выпивка.",
+    "nightlife": "31 позднее место, 3 караоке, клубов нет. Ночь местных изакая."
+  }
+}

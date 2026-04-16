@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Reclaimed-bay openness, sports venues and empty decks. Flood risk, low street life.",
+    "landmarks": "Ariake Tennis Forest, Tokyo Garden Theater, waterfront blocks. Big event-zone scale.",
+    "food": "40 restaurants, 11 izakayas, 2 cafes. Event food and mall spillover, thin daily life.",
+    "nightlife": "Minimal. No bars, karaoke or clubs in the data."
+  },
+  "ja": {
+    "atmosphere": "埋立湾岸の広さ、スポーツ施設と空いたデッキ。浸水リスクあり、街路生活は薄い。",
+    "landmarks": "有明テニスの森、東京ガーデンシアター、湾岸ブロック。イベント区域の大きさ。",
+    "food": "飲食40軒、居酒屋11軒、カフェ2軒。イベント飯とモールのこぼれ、日常は薄い。",
+    "nightlife": "ほぼ皆無。データ上はバーもカラオケもクラブもなし。"
+  },
+  "ru": {
+    "atmosphere": "Открытость намывного залива, спорт-объекты и пустые деки. Flood risk, улицы мало.",
+    "landmarks": "Ariake Tennis Forest, Tokyo Garden Theater, waterfront-блоки. Масштаб event-зоны.",
+    "food": "40 ресторанов, 11 изакая, 2 кафе. Event food и перелив моллов, повседневность тонкая.",
+    "nightlife": "Минимально. В данных нет баров, караоке или клубов."
+  }
+}

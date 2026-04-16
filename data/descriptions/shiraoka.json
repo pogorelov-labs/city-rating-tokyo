@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Busy commuter node, 20k daily riders. Utsunomiya Line speed line, 65 min downtown.",
+    "landmarks": "Station square shops, pedestrian zones (2). Green parks, pharmacies abundant. Family-friendly.",
+    "food": "3 restaurants, 3 izakaya. Decent local eats, quality varies.",
+    "nightlife": "Minimal karaoke scene. 1 late-night spot only. Drinks end by 10:30pm."
+  },
+  "ja": {
+    "atmosphere": "駅前駅、毎日2万人。宇都宮線の快速駅。都心65分。",
+    "landmarks": "駅前商店街、歩行者通路2本。薬局多い。",
+    "food": "飲食3軒、居酒屋3軒、7件。",
+    "nightlife": "深夜1軒のみ。カラオケ稀少。"
+  },
+  "ru": {
+    "atmosphere": "Оживленный узел, 20k пассажиров/день. Линия Utsunomiya speed, 65 мин до центра.",
+    "landmarks": "Торговая площадь, пешеходные зоны. Зелень, аптеки.",
+    "food": "3 ресторана, 3 изакаи, 7. Приличные местные блюда.",
+    "nightlife": "Минимум караоке. 1 ночное место. Ночи короткие."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet neighborhood. Note high seismic risk. Mixed vibe.",
+    "landmarks": "Large green space (413k sqm). Walking trails, parks.",
+    "food": "58 restaurants, mostly Japanese chains. Few standouts.",
+    "nightlife": "Sparse nightlife. Neighborhood bars only. Early closing."
+  },
+  "ja": {
+    "atmosphere": "静かな地域。朝夕の時間帯に混雑。",
+    "landmarks": "大きな公園（413k㎡）。緑の散歩道。",
+    "food": "飲食店58軒。チェーン多め。地元店少ない。",
+    "nightlife": "夜間営業18軒。11時過ぎ静か。"
+  },
+  "ru": {
+    "atmosphere": "Спокойная окраина. Утром/вечером больше людей.",
+    "landmarks": "Большой парк (413k кв.м). Тропы, зелень.",
+    "food": "Ресторанов 58. Цепи везде. Местных мало.",
+    "nightlife": "Поздно 18 мест. После 23:00 мертво."
+  }
+}

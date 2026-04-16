@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keisei stop between Chiba hubs. Student-adjacent, quiet, cheap-feeling, very local.",
+    "landmarks": "Nishi-Chiba university belt nearby, Chiba Port side beyond. Low-rise streets, little spectacle.",
+    "food": "55 restaurants and 14 izakayas for a small stop. Neighborhood meals, not date-night polish.",
+    "nightlife": "14 late spots, one club signal. Enough for locals, dead by Tokyo standards."
+  },
+  "ja": {
+    "atmosphere": "千葉の主要駅に挟まれた小さな京成駅。学生寄り、静か、かなりローカル。",
+    "landmarks": "西千葉の大学エリアが近い。千葉港方面も圏内。低層の住宅街、派手さなし。",
+    "food": "小駅にして飲食55軒、居酒屋14軒。近所飯向き、デート感は薄い。",
+    "nightlife": "深夜14軒、クラブ反応1件。地元には十分、東京基準では静か。"
+  },
+  "ru": {
+    "atmosphere": "Крошечная Keisei-точка между узлами Тибы. Студенческий край, тихо, локально.",
+    "landmarks": "Рядом университетская зона Nishi-Chiba, дальше сторона порта. Низкая застройка, без шоу.",
+    "food": "55 ресторанов и 14 изакая для маленькой станции. Еда района, не место для вау-ужина.",
+    "nightlife": "14 поздних мест, один клубный сигнал. Локалам хватит, по меркам Токио тихо."
+  }
+}

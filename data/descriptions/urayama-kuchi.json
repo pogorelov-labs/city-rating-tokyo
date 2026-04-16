@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain village station, 113-minute commute. Forest surroundings, zero urban services, peaceful emptiness.",
+    "landmarks": "Chichibu Main Line rural zone. Saitama mountains, hiking trails, nature only.",
+    "food": "Essentially zero—2 shops only, bring supplies from the city.",
+    "nightlife": "Minimal. Last train 10pm. This is not a dinner destination."
+  },
+  "ja": {
+    "atmosphere": "秩父の山奥。通勤113分。森に囲まれた、サービスゼロの空間。",
+    "landmarks": "秩父本線の山頂付近。登山道、自然のみ。",
+    "food": "ほぼなし。スポット2軒のみ。都市から持参推奨。",
+    "nightlife": "ほぼ皆無。終電22時。"
+  },
+  "ru": {
+    "atmosphere": "Горное село. 113 минут до города. Лес, тишина, ноль сервисов.",
+    "landmarks": "Линия Chichibu Main в горах. Hiking-only. Природа.",
+    "food": "По сути, есть 2 точки. Запасайтесь заранее.",
+    "nightlife": "Нет. Последний поезд 22:04. Это не место для ужина."
+  }
+}

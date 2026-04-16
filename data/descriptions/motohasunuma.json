@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mita Line residential pocket, clinics and markets close. Safe, plain, quietly useful.",
+    "landmarks": "Ajinomoto Field Nishigaoka, training-center blocks, Itabashi backstreets.",
+    "food": "32 restaurants, 14 izakayas, zero cafes. Local dinner works, brunch does not.",
+    "nightlife": "13 late spots, 3 bars. Neighborhood drinks, no club gravity."
+  },
+  "ja": {
+    "atmosphere": "三田線沿いの住宅ポケット。医院とスーパー近い、安全で地味、実用的。",
+    "landmarks": "味の素フィールド西が丘、トレセン周辺、板橋の裏道。",
+    "food": "飲食32軒、居酒屋14軒、カフェ0軒。夕飯は困らない、ブランチは弱い。",
+    "nightlife": "深夜営業13軒、バー3軒。近所飲み向け、クラブ感なし。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман на Mita Line, клиники и магазины рядом. Безопасно, просто, практично.",
+    "landmarks": "Ajinomoto Field Nishigaoka, тренировочные кварталы, задние улицы Итабаси.",
+    "food": "32 ресторана, 14 изакай, кафе ноль. Ужин найдёшь, бранч почти нет.",
+    "nightlife": "13 поздних мест, 3 бара. Соседские напитки, клубного притяжения нет."
+  }
+}

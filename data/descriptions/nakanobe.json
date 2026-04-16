@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shotengai Shinagawa with two-line convenience. Safer, practical, no big-city glamour.",
+    "landmarks": "Nakanobu Skip Road, Ebara-machi lanes, Togoshi Ginza within walking range.",
+    "food": "115 restaurants, 34 izakayas; local sushi, ramen, yakitori. Cafes thin.",
+    "nightlife": "39 late spots, no karaoke or clubs. Local drinks, early finish."
+  },
+  "ja": {
+    "atmosphere": "商店街の品川、二路線で便利。安全で実用的、大都市の華はない。",
+    "landmarks": "中延スキップロード、荏原町の路地、戸越銀座も徒歩圏。",
+    "food": "飲食115軒、居酒屋34軒。地元寿司、ラーメン、焼き鳥。カフェは薄い。",
+    "nightlife": "深夜39軒、カラオケもクラブもなし。地元飲み、早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Синагава с shotengai и удобством двух линий. Безопасно, практично, без большого гламура.",
+    "landmarks": "Nakanobu Skip Road, переулки Ebara-machi, Togoshi Ginza в пешей зоне.",
+    "food": "115 ресторанов, 34 изакая; местные суши, рамен, якитори. Кафе слабо.",
+    "nightlife": "39 поздних мест, без караоке и клубов. Локальные напитки, ранний финиш."
+  }
+}

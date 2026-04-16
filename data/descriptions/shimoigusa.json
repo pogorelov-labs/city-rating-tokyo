@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu Shinjuku Line calm, safe and plain. Quiet if wanted, dull if not.",
+    "landmarks": "Suginami backstreets, small parks, low-rise homes. Local routine only.",
+    "food": "18 restaurants, 5 izakayas, 1 bar. Thin options; cook at home or ride out.",
+    "nightlife": "6 late spots, no karaoke. Minimal. The neighborhood sleeps."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線の静かな住宅地、安全で地味。静けさ目的なら良い、刺激目的なら退屈。",
+    "landmarks": "杉並の裏道、小公園、低層住宅。象徴的な名所なし、地元の日課だけ。",
+    "food": "飲食18軒、居酒屋5軒、バー1軒。選択肢は薄い。自炊か外へ出る。",
+    "nightlife": "深夜6軒、カラオケなし。ほぼ皆無。街は寝る。"
+  },
+  "ru": {
+    "atmosphere": "Жилая тишина Seibu Shinjuku Line, безопасно и просто. Хорошо для покоя, скучно для драйва.",
+    "landmarks": "Закоулки Suginami, малые парки, низкие дома. Без фирменной точки, только локальная рутина.",
+    "food": "18 ресторанов, 5 изакая, 1 бар. Выбор тонкий; готовь дома или езжай дальше.",
+    "nightlife": "6 поздних мест, караоке нет. Минимум. Район спит."
+  }
+}

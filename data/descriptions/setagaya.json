@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Setagaya Line tram town, low-rise and civic. Calm, useful, slower than the map suggests.",
+    "landmarks": "Boro-ichi street, Setagaya Daikan Yashiki, tram stops stitched through backstreets.",
+    "food": "46 restaurants plus 67 small spots; 15 izakayas, no cafes. Local dinner over brunch.",
+    "nightlife": "16 late spots, one bar. Quiet drinks, no all-night pull."
+  },
+  "ja": {
+    "atmosphere": "世田谷線の低層トラム街。区役所感あり、落ち着くが移動は意外に遅い。",
+    "landmarks": "ボロ市通り、世田谷代官屋敷、裏道を縫う世田谷線の停留場。",
+    "food": "飲食46軒と小店67軒、居酒屋15軒、カフェ0軒。夕飯向き、ブランチ弱め。",
+    "nightlife": "深夜営業16軒、バー1軒。静かに飲む程度、徹夜力なし。"
+  },
+  "ru": {
+    "atmosphere": "Трамвайная Сэтагая, низкая и гражданская. Спокойно, удобно, медленнее чем кажется.",
+    "landmarks": "Boro-ichi street, Setagaya Daikan Yashiki, трамвайные остановки в переулках.",
+    "food": "46 ресторанов плюс 67 мелких мест, 15 изакай, кафе ноль. Лучше ужин, чем бранч.",
+    "nightlife": "16 поздних мест, 1 бар. Тихо выпить, без ночного магнита."
+  }
+}

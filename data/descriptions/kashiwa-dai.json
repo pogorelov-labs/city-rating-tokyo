@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban Kanagawa on Sotetsu Main Line. 15k riders. Green neighbourhood with basic services. Quiet residential.",
+    "landmarks": "Parks scattered throughout. 25 green areas. Local shopping strips. Low urban energy.",
+    "food": "Minimal restaurant data (3 cafes, 15 shops). Neighbourhood-level casual dining.",
+    "nightlife": "Minimal. 1 midnight spot. No nightlife culture here."
+  },
+  "ja": {
+    "atmosphere": "相鉄線沿線、海老名市。利用者1.5万人。緑の多い住宅地。静か。",
+    "landmarks": "公園25個。散在する商店街。都市感ゼロ。",
+    "food": "飲食店ほぼなし。カフェ3。近所の食堂のみ。",
+    "nightlife": "ほぼなし。夜中の店1軒。"
+  },
+  "ru": {
+    "atmosphere": "Пригородная Канагава на линии Сотецу. 15 тыс. пассажиров. Зелёный район с базовыми услугами. Спокойный жилой.",
+    "landmarks": "Парки разбросаны. 25 зелёных зон. Местные торговые полосы. Низкая городская энергия.",
+    "food": "Минимальные данные ресторанов (3 кафе, 15 магазинов ). Соседский уровень casual dining.",
+    "nightlife": "Минимально. 1 место после полуночи. Ночной жизни нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Outer Saitama rail junction, cheap and unpretentious. Long commute, but daily life works.",
+    "landmarks": "Tobu Tojo and Ogose split here; local shopping streets, green pockets, no big spectacle.",
+    "food": "32 restaurants, 11 izakayas, almost no cafe scene. Solid local dinners, little polish.",
+    "nightlife": "9 late spots, no karaoke or clubs. Quiet drinks only."
+  },
+  "ja": {
+    "atmosphere": "埼玉外縁の乗換街。安くて飾らない。通勤は長いが日常は回る。",
+    "landmarks": "東武東上線と越生線の分岐。地元商店街と緑の小場所、大物名所はなし。",
+    "food": "飲食32軒、居酒屋11軒、カフェ感は薄い。地元夕食は堅実、洒落感なし。",
+    "nightlife": "深夜9軒、カラオケもクラブもなし。静かな地元飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Внешний узел Сайтамы, дешево и без позы. Комьют долгий, но быт работает.",
+    "landmarks": "Здесь расходятся Tobu Tojo и Ogose; местные торговые улицы, зеленые карманы, без шоу.",
+    "food": "32 ресторана, 11 изакая, кафе-сцены почти нет. Нормальные местные ужины, без лоска.",
+    "nightlife": "9 поздних мест, без караоке и клубов. Только тихая выпивка."
+  }
+}

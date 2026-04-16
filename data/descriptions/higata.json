@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Remote Chiba station, 2-hour commute, soft ground seismic risk. Tidal flats, rural isolation, almost no urban services.",
+    "landmarks": "Sobu Main Line far east. Coastal agricultural zone. No landmarks.",
+    "food": "1 izakaya, 1 restaurant. Fishing-village-level only.",
+    "nightlife": "Minimal. Seismic risk (very high): choose elsewhere."
+  },
+  "ja": {
+    "atmosphere": "千葉県旭市、2時間のへき地。液状化リスク高い。干潟、孤立した農村。",
+    "landmarks": "総武本線最東端。海岸農業地帯。ランドマークなし。",
+    "food": "居酒屋1軒、飲食店1軒、2軒のみ。漁村レベル。",
+    "nightlife": "ほぼなし。液状化リスク非常に高い—別の場所を選んで。"
+  },
+  "ru": {
+    "atmosphere": "Удалённая станция Chiba, 2 часа, мягкий грунт (сейсмический риск очень высокий). Приливные плоскости, сельская изоляция.",
+    "landmarks": "Sobu Main Line на краю. Сельхоззона.",
+    "food": "1 изакая, 1 кафе, 2. Рыбацкий уровень.",
+    "nightlife": "Практически нет. Сейсмический риск очень высокий—выберите другую станцию."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Narita region commuter town, extremely sparse. 1172 passengers daily — ghost town mode.",
+    "landmarks": "Agricultural area, low density. Elevation 6m triggers minor flood risk.",
+    "food": "1 listings, 1 izakaya. Farming community vibes.",
+    "nightlife": "Dead. Last train 23:13."
+  },
+  "ja": {
+    "atmosphere": "成田地域の通勤町。乗降数1172 — 人影少なし。",
+    "landmarks": "農業地帯。標高6m（浸水リスク軽微）。",
+    "food": "1、居酒屋1。農村の空気。",
+    "nightlife": "皆無。最終電車23:13。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный город у Наритыэ, крайне разреженный. 1172 пассажиров — почти пусто.",
+    "landmarks": "Сельскохозяйственная зона, низкая плотность. Высота 6м — небольшой риск наводнения.",
+    "food": "1 место в listings, 1 изакая. Крестьянский быт.",
+    "nightlife": "Совсем нет. Последний поезд 23:13."
+  }
+}

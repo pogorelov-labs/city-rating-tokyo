@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "North Tokyo hub with parks, tram nostalgia and rougher safety numbers. Useful, uneven.",
+    "landmarks": "Asukayama Park, Oji Shrine, Sakura Tram, Shakujii River. Cherry blossom draw.",
+    "food": "70 restaurants, 26 izakayas, 2 cafes. Solid local meals, not much cafe culture.",
+    "nightlife": "27 late spots, no karaoke or clubs. Neighborhood drinks, early finish."
+  },
+  "ja": {
+    "atmosphere": "公園と都電情緒の北東京ハブ、安全数値はかなり荒い。便利だが均一ではない。",
+    "landmarks": "飛鳥山公園、王子神社、さくらトラム、石神井川。桜の引力あり。",
+    "food": "飲食70軒、居酒屋26軒、カフェ2軒。地元飯は堅い、カフェ文化は薄い。",
+    "nightlife": "深夜営業27軒、カラオケもクラブもなし。近所飲み、早めに終わる。"
+  },
+  "ru": {
+    "atmosphere": "Хаб северного Токио с парками, трамвайной ностальгией и грубыми safety numbers. Удобно, неровно.",
+    "landmarks": "Asukayama Park, Oji Shrine, Sakura Tram, Shakujii River. Магнит сакуры.",
+    "food": "70 ресторанов, 26 изакая, 2 кафе. Крепкая локальная еда, кафе-культуры мало.",
+    "nightlife": "27 поздних мест, без караоке и клубов. Соседские напитки, ранний финал."
+  }
+}

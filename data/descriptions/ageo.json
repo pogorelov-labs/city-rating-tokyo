@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Outer Saitama rail town, affordable and green-heavy. Long ride in, daily crowds still real.",
+    "landmarks": "Takasaki Line stop, Ageo station core, lots of small green fragments around town.",
+    "food": "80 restaurants, 42 izakayas, 5 bars. Solid local spread, cafe life almost absent.",
+    "nightlife": "29 late spots, no karaoke. Izakayas carry the night."
+  },
+  "ja": {
+    "atmosphere": "埼玉外側の鉄道街、安くて緑の点が多い。都心は遠いが人は多い。",
+    "landmarks": "高崎線の駅前中心、上尾の商業核、街中に細かい緑が大量に散る。",
+    "food": "飲食80軒、居酒屋42軒、バー5軒。地元の選択肢は十分、カフェはほぼ不在。",
+    "nightlife": "深夜29軒、カラオケなし。夜は居酒屋が支える。"
+  },
+  "ru": {
+    "atmosphere": "Дальний город Сайтамы на рельсах, доступно и зелено. До центра долго, толпы есть.",
+    "landmarks": "Остановка Takasaki Line, ядро у станции Ageo, много мелких зелёных фрагментов.",
+    "food": "80 ресторанов, 42 изакая, 5 баров. Нормальный местный выбор, кафе почти нет.",
+    "nightlife": "29 поздних мест, без караоке. Ночь держат изакаи."
+  }
+}

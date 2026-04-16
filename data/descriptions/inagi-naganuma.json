@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Nambu-line suburban calm, cheap and green. Long commute, thin amenities, very little buzz.",
+    "landmarks": "Tama River flats, Inagi pear-country edges, Gundam statue by the station. Open skies.",
+    "food": "9 restaurants, 5 izakayas, 1 cafe. Bare minimum, plan to travel for variety.",
+    "nightlife": "3 late spots, no bars, karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "南武線の郊外の静けさ、安くて緑多め。通勤は長い、生活施設は薄い、熱気は少ない。",
+    "landmarks": "多摩川の平地、稲城の梨畑感、駅前のガンダム像。空が広い。",
+    "food": "飲食9軒、居酒屋5軒、カフェ1軒。最低限、選択肢は移動前提。",
+    "nightlife": "深夜営業3軒、バーもカラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Пригородное спокойствие Nambu Line, дёшево и зелено. Долгий комьют, удобств мало, жара нет.",
+    "landmarks": "Плоскости Tama River, края грушевой Inagi, Gundam у станции. Широкое небо.",
+    "food": "9 ресторанов, 5 изакая, 1 кафе. Минимум, за разнообразием ехать.",
+    "nightlife": "3 поздних места, без баров, караоке и клубов. Минимально."
+  }
+}

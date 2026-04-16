@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yokohama Line suburb, car-friendly Sagamihara mood. Cheap, useful, not romantic.",
+    "landmarks": "Roadside malls, green pockets, quiet residential blocks. The platform is the hub.",
+    "food": "15 listed restaurants plus 31 local POIs. Izakaya light, cafes basically absent.",
+    "nightlife": "4 late spots and 2 karaoke boxes. Functional, not a night out."
+  },
+  "ja": {
+    "atmosphere": "横浜線の郊外、車社会の相模原感。安くて便利、ロマンは薄い。",
+    "landmarks": "ロードサイド店、緑の余白、静かな住宅地。街の中心はほぼ駅。",
+    "food": "掲載飲食15軒、周辺POI31件。居酒屋少なめ、カフェはほぼ空白。",
+    "nightlife": "深夜営業4軒、カラオケ2軒。機能はある、夜遊びではない。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Yokohama Line, автомобильная Сагамихара. Дёшево, полезно, не романтично.",
+    "landmarks": "Дорожные моллы, зелёные карманы, тихие жилые блоки. Платформа — главный центр.",
+    "food": "15 ресторанов в списке плюс 31 локальная точка. Изакая мало, кафе почти пусто.",
+    "nightlife": "4 поздних места и 2 караоке. Функционально, но это не вечерний маршрут."
+  }
+}

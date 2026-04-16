@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Musashino Line workday stop, factories and campuses. Affordable, quiet, far from buzz.",
+    "landmarks": "Toshiba Fuchu works, Fuchu civic green, long straight institutional roads.",
+    "food": "21 restaurants, 5 izakayas; lunch counters for workers, thin after dark.",
+    "nightlife": "2 midnight spots, no karaoke. Minimal."
+  },
+  "ja": {
+    "atmosphere": "武蔵野線の平日駅。工場とキャンパスの気配、安く静かだが賑わいから遠い。",
+    "landmarks": "東芝府中事業所、府中の公共緑地、まっすぐな業務地区の道。",
+    "food": "飲食21軒、居酒屋5軒。働く人向けの昼カウンター、夜は薄い。",
+    "nightlife": "深夜営業2軒、カラオケなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая станция Musashino Line, заводы и кампусы. Доступно, тихо, далеко от шума.",
+    "landmarks": "Toshiba Fuchu Works, городская зелень Футю, длинные прямые ведомственные дороги.",
+    "food": "21 ресторан, 5 изакая. Обеденные стойки для работников, вечером тонко.",
+    "nightlife": "2 полуночных места, караоке нет. Минимум."
+  }
+}

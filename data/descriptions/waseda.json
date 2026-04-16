@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Student-town density: bookstores, ramen, flyers, old apartments. Central, but rent bites.",
+    "landmarks": "Waseda University, Okuma Garden, Kanda River, Tsubouchi theatre museum. Academic grit.",
+    "food": "107 restaurants, 20 izakayas, 14 cafes. Student ramen, curry, cheap lunches.",
+    "nightlife": "10 late spots, 3 hostels, no clubs. Student bars, early ending."
+  },
+  "ja": {
+    "atmosphere": "学生街の密度。本屋、ラーメン、ビラ、古いアパート。都心近いが家賃は重い。",
+    "landmarks": "早稲田大学、大隈庭園、神田川、坪内博士記念演劇博物館。学術と雑さ。",
+    "food": "飲食107軒、居酒屋20軒、カフェ14軒。学生向けラーメン、カレー、安い昼飯。",
+    "nightlife": "深夜10軒、ホステル3、クラブなし。学生バー、終わりは早い。"
+  },
+  "ru": {
+    "atmosphere": "Плотный студгородок: книжные, рамен, листовки, старые квартиры. Центр близко, аренда кусается.",
+    "landmarks": "Waseda University, Okuma Garden, Kanda River, театральный музей Tsubouchi. Академическая шершавость.",
+    "food": "107 ресторанов, 20 изакая, 14 кафе. Студенческий рамен, карри, дешевые ланчи.",
+    "nightlife": "10 поздних мест, 3 хостела, без клубов. Студенческие бары, ранний финал."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Itabashi-Nerima border utility, three-line access without central prices. Quiet, practical.",
+    "landmarks": "Akatsuka Park side trips, Tobu and metro crossings, local shopping streets.",
+    "food": "27 restaurants, 11 izakayas, 3 bars. Food is modest for such strong transport.",
+    "nightlife": "10 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "板橋と練馬の境界の実用駅、3路線アクセスで都心価格ではない。静かで現実的。",
+    "landmarks": "赤塚公園方面、東武と地下鉄の交差、地元商店街。",
+    "food": "飲食27軒、居酒屋11軒、バー3軒。交通の強さの割に食は控えめ。",
+    "nightlife": "深夜営業10軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Практичная граница Itabashi-Nerima, доступ трёх линий без цен центра. Тихо, полезно.",
+    "landmarks": "Вылазки к Akatsuka Park, пересечение Tobu и метро, локальные shopping streets.",
+    "food": "27 ресторанов, 11 изакая, 3 бара. Еда скромная для такого сильного транспорта.",
+    "nightlife": "10 поздних мест, без караоке и клубов. Минимально."
+  }
+}

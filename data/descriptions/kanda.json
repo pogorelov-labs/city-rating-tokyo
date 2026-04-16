@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Salaryman pressure cooker between Tokyo, Akiba, Otemachi. Brilliant access, brutal crowds, pricey.",
+    "landmarks": "Kanda Station alleys, old izakaya blocks, booktown and Akihabara within walking range.",
+    "food": "1230 restaurants, 598 izakayas; curry, ramen, standing bars, office lunches everywhere.",
+    "nightlife": "312 late spots, 46 bars. Heavy after-work drinking, not a club district."
+  },
+  "ja": {
+    "atmosphere": "東京、秋葉原、大手町の間のサラリーマン圧力鍋。アクセス抜群、人混み強烈、高い。",
+    "landmarks": "神田駅の路地、古い居酒屋街、神保町と秋葉原も徒歩圏。",
+    "food": "飲食1230軒、居酒屋598軒。カレー、ラーメン、立ち飲み、会社員昼飯だらけ。",
+    "nightlife": "深夜312軒、バー46軒。仕事帰りの飲みが濃い、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Офисная скороварка между Tokyo, Akiba и Otemachi. Доступ блестящий, толпы жесткие, дорого.",
+    "landmarks": "Переулки Kanda Station, старые блоки изакая, книжный город и Akihabara пешком.",
+    "food": "1230 ресторанов, 598 изакая; карри, рамен, стоячие бары, офисные ланчи везде.",
+    "nightlife": "312 поздних мест, 46 баров. Тяжелое питье после работы, не клубный район."
+  }
+}

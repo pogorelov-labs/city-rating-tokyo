@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yotsuya's sharper backstreet sibling. Pricey, central, food-heavy, with late-night grit.",
+    "landmarks": "Arakicho alleys, Suga Shrine stairs, Fire Museum, Shinjuku Gyoen within reach.",
+    "food": "381 restaurants, 130 izakayas, 30 bars. Arakicho dining carries the area.",
+    "nightlife": "112 late spots, 2 karaoke, no clubs. Bars and izakaya, adult and smoky."
+  },
+  "ja": {
+    "atmosphere": "四ツ谷の裏路地側の兄弟。高い、中心、食が強い、夜は少しざらつく。",
+    "landmarks": "荒木町の路地、須賀神社の階段、消防博物館、新宿御苑も近い。",
+    "food": "飲食381件、居酒屋130件、バー30件。荒木町の食がこの駅を支える。",
+    "nightlife": "深夜112件、カラオケ2件、クラブなし。バーと居酒屋、大人で煙たい。"
+  },
+  "ru": {
+    "atmosphere": "Более острый переулочный брат Yotsuya. Дорого, центрально, много еды, ночами шероховато.",
+    "landmarks": "Переулки Arakicho, ступени Suga Shrine, Fire Museum, Shinjuku Gyoen рядом.",
+    "food": "381 ресторан, 130 изакай, 30 баров. Район держится на еде Arakicho.",
+    "nightlife": "112 поздних мест, 2 караоке, без клубов. Бары и изакая, взросло и дымно."
+  }
+}

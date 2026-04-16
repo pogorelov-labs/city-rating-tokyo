@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Odakyu commuter suburb, Odawara direction. 6813 passengers, residential character. Last train 00:47 (late).",
+    "landmarks": "Pedestrian shopping street (1), modest scale. Pharmacy (2), market (1) suggest old town roots.",
+    "food": "8 listings entries, minimal bars. Local chains, low turnover dining.",
+    "nightlife": "Minimal bars, no cultural venues. Odawara suburbs wind down early."
+  },
+  "ja": {
+    "atmosphere": "小田急沿線通勤地。6813人乗降。典型的な郊外住宅地。",
+    "landmarks": "歩行者商店街1本。薬局2、市場1。昭和の町並み。",
+    "food": "8件。居酒屋少数。地元チェーン店が大半。",
+    "nightlife": "バーほぼなし。文化施設なし。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Одакю, Одавара линия. 6813 пассажиров, жилой район. Последний поезд 00:47.",
+    "landmarks": "1 пешеходная торговая улица. Несколько аптек и рынок предполагают исторический район.",
+    "food": "8 мест в listings, минимум баров. Локальные чейны, низкий оборот.",
+    "nightlife": "Минимум баров, культурных центров нет. Пригороды Одавары засыпают рано."
+  }
+}

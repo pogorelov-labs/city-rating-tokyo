@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chiba castle-town suburb, cheap and green. Useful rails, very long Tokyo commute.",
+    "landmarks": "Sakura Castle Park, samurai residences, National Museum of Japanese History.",
+    "food": "21 restaurants, 7 izakayas, 1 cafe. Local lunch towns outscore dinner choice.",
+    "nightlife": "Four late spots, two bars. Neighborhood drinks only."
+  },
+  "ja": {
+    "atmosphere": "千葉の城下町郊外、安くて緑多め。路線は使えるが東京通勤は長い。",
+    "landmarks": "佐倉城址公園、武家屋敷、国立歴史民俗博物館。",
+    "food": "飲食21軒、居酒屋7軒、カフェ1軒。昼の地元飯はある、夜の選択肢は少ない。",
+    "nightlife": "深夜営業4軒、バー2軒。近所飲みだけ。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Тибы с замковым прошлым, дёшево и зелено. Поезда есть, до Токио долго.",
+    "landmarks": "Sakura Castle Park, самурайские дома, National Museum of Japanese History.",
+    "food": "21 ресторан, 7 изакай, 1 кафе. Местные обеды есть, вечерний выбор слабый.",
+    "nightlife": "4 поздних места, 2 бара. Только соседские напитки."
+  }
+}

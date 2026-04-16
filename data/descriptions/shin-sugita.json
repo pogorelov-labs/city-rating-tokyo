@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Industrial-bay Yokohama transfer town, cheaper than the core. Practical, not pretty.",
+    "landmarks": "Negishi Line plus Seaside Line gateway, Sugita shopping streets, factories near the bay.",
+    "food": "63 restaurants, 27 izakayas, 4 bars. Worker dinners, station ramen, no glamour.",
+    "nightlife": "28 late spots, 1 karaoke, no clubs. Local drinks before the bay goes quiet."
+  },
+  "ja": {
+    "atmosphere": "横浜湾岸の工業寄り乗換街。中心部より安い。実用的だが美観は弱い。",
+    "landmarks": "根岸線とシーサイドラインの接続、杉田商店街、湾岸の工場地帯。",
+    "food": "飲食63軒、居酒屋27軒、バー4軒。労働者向け夕食と駅前ラーメン、華やかさなし。",
+    "nightlife": "深夜28軒、カラオケ1軒、クラブなし。湾岸が静まる前の地元飲み。"
+  },
+  "ru": {
+    "atmosphere": "Промышленно-заливной пересадочный угол Йокогамы, дешевле центра. Практично, не красиво.",
+    "landmarks": "Negishi Line плюс вход на Seaside Line, улицы Sugita, заводы у залива.",
+    "food": "63 ресторана, 27 изакая, 4 бара. Ужины для рабочих, рамен у станции, без гламура.",
+    "nightlife": "28 поздних мест, 1 караоке, клубов нет. Местная выпивка до тишины залива."
+  }
+}

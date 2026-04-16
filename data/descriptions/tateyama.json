@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Beach town terminus, 2 hours from Tokyo, early closing (23:54 last train). Marine resort vibe, very quiet evenings.",
+    "landmarks": "Tateyama harbor, local fish market, beach access nearby. Slow-paced seaside atmosphere.",
+    "food": "35 restaurants + 61 spots (strong local tally). 15 izakayas, fresh seafood. Small town quality.",
+    "nightlife": "13 midnight venues. Minimal nightlife despite decent food. Beach resort dies after dark."
+  },
+  "ja": {
+    "atmosphere": "ビーチタウン終点、東京から2時間、早期終了（最終23:54）。マリンリゾート気分、夜は静か。",
+    "landmarks": "館山港、地元市場、ビーチアクセス。ゆったりした海辺の雰囲気。",
+    "food": "食堂35軒＋61件（地元実績強い）。居酒屋15軒、新鮮な海の幸。小町クオリティ。",
+    "nightlife": "夜間営業13件。食事は充実も夜遊びは最小。ビーチリゾートは暗くなると死んでいる。"
+  },
+  "ru": {
+    "atmosphere": "Пляжный городок-конечная, 2 часа от Токио, раннее закрытие (последний поезд 23:54). Морской курортный вид, вечера очень спокойны.",
+    "landmarks": "Гавань Татэяма, местный рыбный рынок, доступ к пляжу. Неторопливая приморская атмосфера.",
+    "food": "35 ресторанов + 61 () - сильный локальный охват. 15 изакай, свежие морепродукты. Качество провинциального городка.",
+    "nightlife": "13 ночных мест. Минимум ночной жизни несмотря на еду. Пляжный курорт вымирает после темнотаю"
+  }
+}

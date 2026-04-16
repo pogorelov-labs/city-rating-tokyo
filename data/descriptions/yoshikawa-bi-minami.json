@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Brand-new satellite town, low-rise sprawl. Designed feel, sterile but safe.",
+    "landmarks": "Shopping mall, family parks. No soul, zero history.",
+    "food": "5 venues + 8. Generic chains, no character.",
+    "nightlife": "Minimal. Suburban bars, closing at 10pm. Flood-risk warning: elevation 4m."
+  },
+  "ja": {
+    "atmosphere": "新築衛星都市、低層。デザイン済み、無機質。",
+    "landmarks": "ショッピングモール。魂なし。",
+    "food": "飲食5軒、8件。チェーン。",
+    "nightlife": "ほぼなし。郊外の飲み屋。洪水注意：標高4m。"
+  },
+  "ru": {
+    "atmosphere": "Новый спутник-город, малоэтажный. Спланирован, стерилен, безопасен. ВНИМАНИЕ наводнение: высота 4м.",
+    "landmarks": "Торговый центр, парки.",
+    "food": "5 мест + 8. Типичные сети.",
+    "nightlife": "Минимально. Пригородные бары, закрыто в 22:00."
+  }
+}

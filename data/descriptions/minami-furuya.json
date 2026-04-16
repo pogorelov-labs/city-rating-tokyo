@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kawagoe line town, 59 min commute. Cheap rent, zero charm. Office parks nearby, sparse dining.",
+    "landmarks": "Monolithic shopping center. 6 supermarkets. Dead mall aesthetic. Shrine lost in sprawl.",
+    "food": "Modest — 3 listings + 21. 1 bar, cafes absent. Ramen + gyudon chains.",
+    "nightlife": "Dead — 1 midnight spot. Salaryman head elsewhere."
+  },
+  "ja": {
+    "atmosphere": "川越線沿線、通勤59分。安い、個性ゼロ。オフィスパーク、外食稀。",
+    "landmarks": "ショッピングセンター。スーパー6。廃れたモール感。",
+    "food": "地味 — 3 listings + 21 。バー1軒。ラーメン中心。",
+    "nightlife": "消灯状態 — 1軒のみ。"
+  },
+  "ru": {
+    "atmosphere": "Линия Кавагоэ, 59 минут пути. Дёшево, без характера. Офисные парки, еды мало.",
+    "landmarks": "Торговый центр. 6 супермаркетов. Умирающий молл. Святилище затеряно.",
+    "food": "Скромно — 3 listings + 21. 1 бар. Рамэн + гюдон.",
+    "nightlife": "Мертво — 1 ночное место. Служащие уходят."
+  }
+}

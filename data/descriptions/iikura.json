@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Softground risk (seismic very_high). 113min from center. Shallow elevation (13m) + fragile bedrock.",
+    "landmarks": "Sparse. Two clinics, little else.",
+    "food": "6 spots. Data minimal.",
+    "nightlife": "None."
+  },
+  "ja": {
+    "atmosphere": "地盤リスク高い。中心から113分。標高13m、地震リスク非常に高い。",
+    "landmarks": "クリニック2つ程度。",
+    "food": "ほぼないに等しい。",
+    "nightlife": "なし。"
+  },
+  "ru": {
+    "atmosphere": "Высокий риск мягкого грунта (очень высокая сейсмичность). 113 минут от центра. Высота 13м, опасный грунт.",
+    "landmarks": "Редкие ориентиры. Две клиники.",
+    "food": "6 мест по данным.",
+    "nightlife": "Нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Ameyoko intensity, Ueno spillover, nonstop foot traffic. Delicious, chaotic, rough after dark.",
+    "landmarks": "Ameyoko market, jewelry streets, Ueno-Okachimachi maze. Everything feels five minutes away.",
+    "food": "1087 restaurants, 477 izakayas, 77 bars. Huge choice, tourist traps mixed with gems.",
+    "nightlife": "417 late spots, 36 clubs, karaoke everywhere. Loud, late, not gentle."
+  },
+  "ja": {
+    "atmosphere": "アメ横の密度、上野のこぼれ、人波が止まらない。旨い、雑、夜は少し荒い。",
+    "landmarks": "アメ横、宝石問屋街、上野御徒町の地下迷路。何でも徒歩5分感。",
+    "food": "飲食1087軒、居酒屋477軒、バー77軒。選択肢巨大、観光罠と名店が混在。",
+    "nightlife": "深夜営業417軒、クラブ36軒、カラオケ多数。騒がしい、遅い、優しくない。"
+  },
+  "ru": {
+    "atmosphere": "Интенсивность Ameyoko, перелив Ueno, вечный поток людей. Вкусно, хаотично, ночью грубо.",
+    "landmarks": "Рынок Ameyoko, ювелирные улицы, лабиринт Ueno-Okachimachi. Всё будто в пяти минутах.",
+    "food": "1087 ресторанов, 477 изакая, 77 баров. Выбор огромный, ловушки туристов рядом с жемчугом.",
+    "nightlife": "417 поздних мест, 36 клубов, караоке повсюду. Громко, поздно, не мягко."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tozai Line office-residential block, practical and commute-heavy. Koto, not glamour.",
+    "landmarks": "Koto Ward Office, Kiba Park, canal walks. Big streets, flat city fabric.",
+    "food": "116 restaurants, 54 izakayas. Lunch sets by day, salaryman drinking by night.",
+    "nightlife": "35 late spots, 1 karaoke, no clubs. Izakaya nights, then home."
+  },
+  "ja": {
+    "atmosphere": "東西線の職住ミックス地帯。実用的で通勤圧が重い。江東区、華やかさなし。",
+    "landmarks": "江東区役所、木場公園、運河沿い散歩。道は広く、街は平たい。",
+    "food": "飲食116軒、居酒屋54軒。昼は定食、夜は会社員の飲み。",
+    "nightlife": "深夜35軒、カラオケ1、クラブなし。居酒屋の夜、あとは帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Офисно-жилой блок на Tozai Line, практично и тяжело в час пик. Кото, не гламур.",
+    "landmarks": "Администрация Кото, Kiba Park, прогулки вдоль каналов. Широкие улицы, плоская ткань.",
+    "food": "116 ресторанов, 54 изакая. Днем ланч-сеты, ночью офисная выпивка.",
+    "nightlife": "35 поздних мест, 1 караоке, без клубов. Изакая-вечера, потом домой."
+  }
+}

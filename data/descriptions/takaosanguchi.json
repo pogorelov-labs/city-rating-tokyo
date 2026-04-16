@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mount Takao gateway, Keio Line terminus (trains end 23:54). Hiking town, not livable year-round. Sparse, quiet.",
+    "landmarks": "181m elevation change. Takao-san is the landmark—hikers' pilgrimage, not urban explorer material.",
+    "food": "Bare bones: 4 listings, 20, 1 izakaya. Trail snacks, not dining scene. Only clinic, no essentials.",
+    "nightlife": "Minimal. One midnight spot. Hikers bed down early. Nature draws, not nightlife."
+  },
+  "ja": {
+    "atmosphere": "高尾山の玄関口、京王線終点（23:54終電）。登山町、通年居住地ではない。",
+    "landmarks": "標高差181m。高尾山がランドマーク。ハイカーの聖地、都市生活向きではない。",
+    "food": "最小限：4、20、居酒屋1。登山食、飲食店なし。診療所のみ。",
+    "nightlife": "ほぼ無。深夜営業1軒。登山者は夜中寝る。自然目当てであって。"
+  },
+  "ru": {
+    "atmosphere": "Врата Такао, конец линии Кэйо (23:54 последний). Гора — не жилой городок. Тихо, редко.",
+    "landmarks": "Высота 181м. Гора Такао — святилище. Паломники, не урбанисты.",
+    "food": "Минимум: 4, 20, 1 изакая. Хайкерские закуски. Клиника только.",
+    "nightlife": "Нет. 1 поздний бар. Альпинисты спят. Природа, не развлечения."
+  }
+}

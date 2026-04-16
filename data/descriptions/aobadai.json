@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Leafy Yokohama suburb, polished families, hills and big clinics. Commute is the tax.",
+    "landmarks": "Aobadai Tokyu Square, Sakuradai parks, Aoba-ku hills. Den-en-toshi bubble.",
+    "food": "74 restaurants; cafes, family dining, polite izakayas.",
+    "nightlife": "22 late spots, 3 karaoke, no clubs. Clean local evenings."
+  },
+  "ja": {
+    "atmosphere": "緑多い横浜郊外、整った家族層、坂と大きなクリニック。通勤が税金。",
+    "landmarks": "青葉台東急スクエア、桜台の公園、青葉区の丘。田園都市の泡。",
+    "food": "飲食74軒、113件。カフェ、家族飯、きれいめ居酒屋。",
+    "nightlife": "深夜営業22軒、カラオケ3軒、クラブなし。清潔な地元の夜。"
+  },
+  "ru": {
+    "atmosphere": "Зелёный пригород Йокогамы, аккуратные семьи, холмы и крупные клиники. Комьют как налог.",
+    "landmarks": "Aobadai Tokyu Square, парки Sakuradai, холмы Аоба-ку. Пузырь Den-en-toshi.",
+    "food": "74 ресторана и 113 точек. Кафе, семейные ужины, вежливые изакая.",
+    "nightlife": "22 поздних места, 3 караоке, клубов нет. Чистые местные вечера."
+  }
+}

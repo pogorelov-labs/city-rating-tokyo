@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sumo town, river wind, tourist history and working backstreets. Good food, uneven safety feel.",
+    "landmarks": "Ryogoku Kokugikan, Edo-Tokyo Museum area, Sumida River terraces. Chanko everywhere.",
+    "food": "280 restaurants, 102 izakayas, 22 cafes. Chanko, soba, izakaya; strong for visitors.",
+    "nightlife": "82 late spots, 3 karaoke rooms, no clubs. Post-sumo drinks, not wild."
+  },
+  "ja": {
+    "atmosphere": "相撲の街、川風、観光史と働く裏道。飯は強いが、安全感は少しムラあり。",
+    "landmarks": "両国国技館、江戸東京博物館周辺、隅田川テラス。ちゃんこだらけ。",
+    "food": "飲食280軒、居酒屋102軒、カフェ22軒。ちゃんこ、そば、居酒屋、来客にも強い。",
+    "nightlife": "深夜営業82軒、カラオケ3軒、クラブなし。相撲後の飲み、荒れすぎない。"
+  },
+  "ru": {
+    "atmosphere": "Город сумо, речной ветер, туристическая история и рабочие закоулки. Еда сильная, safety неровный.",
+    "landmarks": "Ryogoku Kokugikan, район Edo-Tokyo Museum, террасы Sumida River. Chanko повсюду.",
+    "food": "280 ресторанов, 102 изакая, 22 кафе. Chanko, soba, изакая; сильно для гостей.",
+    "nightlife": "82 поздних места, 3 караоке, клубов нет. Выпивка после сумо, не дико."
+  }
+}

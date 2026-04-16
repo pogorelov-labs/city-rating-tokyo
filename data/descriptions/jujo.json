@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old-school shopping arcade town, loud vendors, narrow lanes. Great value, rougher edges.",
+    "landmarks": "Jujo Ginza shotengai, Teikyo University side streets, Kita-ku backstreet texture.",
+    "food": "101 restaurants, 41 izakayas; croquettes, ramen, standing drinks. Dense and cheap.",
+    "nightlife": "39 late spots, 2 karaoke. Local drinking, gritty after dark."
+  },
+  "ja": {
+    "atmosphere": "昔ながらの商店街の街。威勢のいい店主、細い路地、安いが荒さもある。",
+    "landmarks": "十条銀座商店街、帝京大学方面の路地、北区らしい生活感。",
+    "food": "飲食101軒、居酒屋41軒。コロッケ、ラーメン、立ち飲み。密で安い。",
+    "nightlife": "深夜営業39軒、カラオケ2軒。地元飲み、夜は少しざらつく。"
+  },
+  "ru": {
+    "atmosphere": "Старый город торговой аркады, громкие продавцы, узкие улицы. Выгодно, но шероховато.",
+    "landmarks": "Jujo Ginza shotengai, улицы к Teikyo University, жилая фактура Кита-ку.",
+    "food": "101 ресторан, 41 изакая. Крокеты, рамен, стоячие бары. Плотно и дешево.",
+    "nightlife": "39 поздних мест, 2 караоке. Локальная выпивка, вечером грубее."
+  }
+}

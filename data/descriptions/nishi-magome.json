@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Asakusa Line terminus, calm Ota suburb feel. Safe, leafy, slightly cut off after last train.",
+    "landmarks": "Magome literary village nearby, Ikegami Honmonji within reach. Hills, temples, quiet lanes.",
+    "food": "13 restaurants, 5 izakayas. Local dinner basics only; serious eating means moving one stop out.",
+    "nightlife": "4 late spots, no karaoke. Minimal, and the last train is early."
+  },
+  "ja": {
+    "atmosphere": "浅草線の終点、大田区らしい静かな住宅地。安全で緑多いが、終電後は孤立感あり。",
+    "landmarks": "馬込文士村、池上本門寺も射程内。坂道、寺、静かな路地。",
+    "food": "飲食13軒、居酒屋5軒。普段の夕食は足りる、本気の外食は一駅動く。",
+    "nightlife": "深夜4軒、カラオケなし。ほぼ最小限、終電も早い。"
+  },
+  "ru": {
+    "atmosphere": "Конечная Asakusa Line, спокойная Ота. Безопасно, зелено, но после последнего поезда отрезает.",
+    "landmarks": "Литературный Магоме рядом, до Ikegami Honmonji тоже реально. Холмы, храмы, тихие улочки.",
+    "food": "13 ресторанов, 5 изакая. Базовый ужин есть; за нормальной едой лучше ехать дальше.",
+    "nightlife": "4 поздних места, караоке нет. Минимально, последний поезд ранний."
+  }
+}

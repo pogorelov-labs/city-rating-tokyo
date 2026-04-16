@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Yanesen-adjacent old Tokyo, temple lanes and student-walker traffic. Charming, pricey, quiet at night.",
+    "landmarks": "Nezu Shrine, Ueno Park edge, Yanaka alleys, dense pedestrian lanes. Tourist footfall, local bones.",
+    "food": "92 restaurants, 24 izakayas, 14 cafes plus strong street food drift. Small, good, crowded.",
+    "nightlife": "9 late spots, no karaoke or clubs. Dinner fades into very quiet streets."
+  },
+  "ja": {
+    "atmosphere": "谷根千寄りの古い東京。寺の路地と学生・散歩客の流れ。魅力的だが高め、夜は静か。",
+    "landmarks": "根津神社、上野公園の端、谷中の路地、歩行者の濃い小道。観光客は来るが骨格は地元。",
+    "food": "飲食92軒、居酒屋24軒、カフェ14軒、食べ歩きの流れも強い。小さく良いが混む。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。夕食後はかなり静か。"
+  },
+  "ru": {
+    "atmosphere": "Старый Токио у Yanesen, храмовые переулки и поток студентов-прогульщиков. Очаровательно, дорого, ночью тихо.",
+    "landmarks": "Nezu Shrine, край Ueno Park, переулки Yanaka, плотные пешеходные дорожки. Туристы есть, кости местные.",
+    "food": "92 ресторана, 24 изакая, 14 кафе плюс сильный уличный шлейф. Маленько, вкусно, тесно.",
+    "nightlife": "9 поздних мест, без караоке и клубов. После ужина улицы быстро затихают."
+  }
+}

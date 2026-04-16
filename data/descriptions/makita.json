@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "South Yokohama residential pocket on the Blue Line. Dense, convenient, less polished than Kannai.",
+    "landmarks": "Maita Park side streets, Ooka River access, old shopping strips. Low ground, high seismic risk.",
+    "food": "56 restaurants, 25 izakayas, strong local basics. Chinese, ramen, counters, family meals.",
+    "nightlife": "19 late spots, 1 club signal, no karaoke. Small local nights, not a party area."
+  },
+  "ja": {
+    "atmosphere": "横浜南区のブルーライン住宅地。密で便利、関内ほど磨かれていない。",
+    "landmarks": "蒔田公園周辺の路地、大岡川アクセス、古い商店筋。低めの土地で地震リスク高め。",
+    "food": "飲食56軒、居酒屋25軒、地元の基礎力は強い。中華、ラーメン、カウンター、家族飯。",
+    "nightlife": "深夜営業19軒、クラブ信号1件、カラオケなし。小さな地元夜で、遊び場ではない。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман южной Yokohama на Blue Line. Плотно, удобно, менее отполировано, чем Kannai.",
+    "landmarks": "Улицы у Maita Park, доступ к Ooka River, старые торговые полосы. Низкая земля, сейсмориск высокий.",
+    "food": "56 ресторанов, 25 изакая, сильная местная база. Китайская еда, рамен, стойки, семейные ужины.",
+    "nightlife": "19 поздних мест, 1 клубный сигнал, без караоке. Малые местные ночи, не party-зона."
+  }
+}

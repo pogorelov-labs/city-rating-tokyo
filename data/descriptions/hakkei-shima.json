@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seaside amusement island in Kanazawa Bay. Sparse crowds, few locals, flat affect. Last train 23:47 — curfew neighborhood.",
+    "landmarks": "Hakkei-Shima theme park anchor. 13 pedestrian streets. Waterfront park sprawl, 5M sqm green (largest asset).",
+    "food": "Tourist-trap dining — 4 listings, 2 cafes, 14 food spots. Mediocre prepared-meal dependency.",
+    "nightlife": "Minimal. Park closes, food courts shutter, it's a ghost zone after dark."
+  },
+  "ja": {
+    "atmosphere": "横浜・金沢湾のテーマパーク島。客足疎、地元民少。23:47で終電。",
+    "landmarks": "八景島シーパラダイス中心。歩行者街13。公園5百万平方メートル。",
+    "food": "観光地の定食屋4軒、カフェ2軒。フードコート頼み。",
+    "nightlife": "ほぼなし。公園閉園で終わり。"
+  },
+  "ru": {
+    "atmosphere": "Остров-парк развлечений в заливе Канадзава. Редкие туристы, почти нет местных. Последний поезд 23:47.",
+    "landmarks": "Тематический парк Hakkei-Shima. Пешеходные зоны 13. Огромный водный парк (5 млн кв.м).",
+    "food": "Туристская еда — 4 места, 2 кафе, 14 лавок. Столовая логика.",
+    "nightlife": "Практически нет. После закрытия парка — пусто."
+  }
+}

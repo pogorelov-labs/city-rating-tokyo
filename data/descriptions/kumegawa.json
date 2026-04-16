@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Higashimurayama workhorse suburb, cheap and safe. Useful, not aspirational.",
+    "landmarks": "Seibu Shinjuku Line shopping streets, local bars, Sayama-side greenery not far.",
+    "food": "Izakaya-heavy, cheap dinners, a few bars. Cafes are thin.",
+    "nightlife": "Late izakayas and bars, no karaoke or clubs. Local salaryman energy."
+  },
+  "ja": {
+    "atmosphere": "東村山の働く郊外。安くて安全、便利だが憧れ系ではない。",
+    "landmarks": "西武新宿線の商店街、地元バー、狭山側の緑も遠くない。",
+    "food": "居酒屋寄り、安い夕食、バー少し。カフェは薄い。",
+    "nightlife": "遅い居酒屋とバー、カラオケとクラブなし。地元サラリーマンの熱。"
+  },
+  "ru": {
+    "atmosphere": "Рабочий пригород Хигасимураямы, дешево и безопасно. Полезно, не мечта.",
+    "landmarks": "Торговые улицы Seibu Shinjuku Line, местные бары, зелень в сторону Sayama недалеко.",
+    "food": "Уклон в изакаи, дешевые ужины, немного баров. Кафе тонко.",
+    "nightlife": "Поздние изакаи и бары, без караоке и клубов. Энергия местных salaryman."
+  }
+}

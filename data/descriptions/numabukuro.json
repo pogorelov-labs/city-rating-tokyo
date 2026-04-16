@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Seibu stop north of Nakano. Residential, green pockets, less pressure than Nogata.",
+    "landmarks": "Heiwa-no-Mori Park nearby, small shotengai, Seibu Shinjuku tracks. Low-drama Tokyo.",
+    "food": "65 restaurants, 26 izakayas, 6 bars. Everyday meals, a few solid counters.",
+    "nightlife": "28 late spots, no clubs. Small bars and izakaya, early fade."
+  },
+  "ja": {
+    "atmosphere": "中野北側の静かな西武駅。住宅地、緑の逃げ場あり、野方より圧が低い。",
+    "landmarks": "平和の森公園近く、小さな商店街、西武新宿線。波風少ない東京。",
+    "food": "飲食65軒、居酒屋26軒、バー6軒。日常飯、少し良いカウンターもある。",
+    "nightlife": "深夜営業28軒、クラブなし。小さなバーと居酒屋、早めに薄まる。"
+  },
+  "ru": {
+    "atmosphere": "Тихая станция Seibu севернее Nakano. Жилая, зелёные карманы, меньше давления чем Nogata.",
+    "landmarks": "Рядом Heiwa-no-Mori Park, малая shotengai, пути Seibu Shinjuku. Токио без драмы.",
+    "food": "65 ресторанов, 26 изакая, 6 баров. Еда на каждый день, несколько крепких стоек.",
+    "nightlife": "28 поздних мест, клубов нет. Малые бары и изакая, рано стихает."
+  }
+}

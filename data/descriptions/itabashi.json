@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saikyo-line commuter stop, practical and busy. Green pockets, little glamour.",
+    "landmarks": "Old Nakasendo traces, Itabashi ward streets, Shimo-Itabashi nearby. Everyday north Tokyo.",
+    "food": "81 restaurants, 35 izakayas, 7 bars. Local meals and drinking, modest range.",
+    "nightlife": "29 late spots, no karaoke or clubs. Neighborhood izakaya, early fade."
+  },
+  "ja": {
+    "atmosphere": "埼京線の通勤駅、実用的で人は多い。緑の逃げ場はあるが、華は少ない。",
+    "landmarks": "旧中山道の気配、板橋区の生活通り、近い下板橋。北東京の日常。",
+    "food": "飲食81軒、居酒屋35軒、バー7軒。地元飯と飲み、幅は控えめ。",
+    "nightlife": "深夜営業29軒、カラオケもクラブもなし。近所居酒屋、早めに薄まる。"
+  },
+  "ru": {
+    "atmosphere": "Комьютерская Saikyo-станция, практично и людно. Зелёные карманы, мало гламура.",
+    "landmarks": "Следы старой Nakasendo, улицы Itabashi, Shimo-Itabashi рядом. Повседневный северный Токио.",
+    "food": "81 ресторан, 35 изакая, 7 баров. Локальная еда и выпивка, диапазон скромный.",
+    "nightlife": "29 поздних мест, без караоке и клубов. Соседская изакая, раннее затухание."
+  }
+}

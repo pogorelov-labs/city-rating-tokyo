@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kashiwa park-line suburb, 57 min out. Green, quiet, family-oriented planning.",
+    "landmarks": "Massive green (1.1M sqm). 31 parks. Nature-forward design. Hiking-friendly.",
+    "food": "Minimal (5 restaurants, 1 izakaya). finds 12 spots. Convenience backup.",
+    "nightlife": "2 late spots. Dead after dark. Families sleep early."
+  },
+  "ja": {
+    "atmosphere": "柏のパークラインの郊外。緑多い。家族向け計画。",
+    "landmarks": "大森林（110万平米）。公園31。自然設計。散歩向け。",
+    "food": "ほぼなし（5軒）。コンビニ頼み。",
+    "nightlife": "2軒のみ。真っ暗。家族街。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Кашивы, 57 мин. Зелень, спокойно, семейное планирование.",
+    "landmarks": "Массив зелени (1.1M кв.м). 31 парк. Природный дизайн. Прогулочный рай.",
+    "food": "Минимум (5 мест). Магазины. Готовьте.",
+    "nightlife": "2 места. После 21:00 спят все."
+  }
+}

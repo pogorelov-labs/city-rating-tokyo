@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban Chiba platform on Keisei Chihara Line. Family-oriented, car-dependent grid.",
+    "landmarks": "Pedestrian malls (17), parks nearby, low-rise residential. Quiet urban sprawl.",
+    "food": "3 listings spots, scattered cafes. No izakaya, minimal nightlife.",
+    "nightlife": "Minimal. Dead after 9pm. Residents stay home."
+  },
+  "ja": {
+    "atmosphere": "房総半島の副都心。車必須の郊外。ファミリー向け。",
+    "landmarks": "商店街17本、公園3.5k平米、低層住宅のみ。",
+    "food": "飲食店3軒。居酒屋なし。カフェわずか。",
+    "nightlife": "ほぼなし。21時閉店。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Чиба по линии Кэйсэй Чихара. Семейный микрорайон, без машины нереально.",
+    "landmarks": "17 торговых центров, парки, только малоэтажное. Спокойно.",
+    "food": "3 ресторана listings, каф разреженно. Никакой ночи.",
+    "nightlife": "Практически нет после 21:00."
+  }
+}

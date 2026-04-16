@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shin-Keisei edge, quiet commuter zone. Huge park belt (1.5M sqm). 4.6k daily. 59 min to center.",
+    "landmarks": "Park trail network, dense green. Futsu suburban zone. Zero nightlife sites.",
+    "food": "10 listings (1 izakaya), 4. Data sparse. Family chains, convenience stores.",
+    "nightlife": "Virtually absent. Village closes by 8pm."
+  },
+  "ja": {
+    "atmosphere": "新京成の端、静かな通勤ゾーン。巨大公園帯（150万平方メートル）。1日4.6千人。中心まで59分。",
+    "landmarks": "公園の遊歩道網、緑が密集。富士郊外ゾーン。ナイトライフの場所なし。",
+    "food": "ホットペッパー10軒（居酒屋1軒）、4軒。データ疎ら。ファミリーチェーン、コンビニ。",
+    "nightlife": "ほぼ皆無。村は20時には静寂。"
+  },
+  "ru": {
+    "atmosphere": "Край Shin-Keisei, тихая commuter зона. Огромный парковый пояс (1.5M кв.м). 4.6k ежедневно. 59 минут до центра.",
+    "landmarks": "Сеть тропинок парка, зелень плотная. Пригородная зона Futsu. Нулевые ночные сайты.",
+    "food": "10 listings (1 изакая), 4. Данные разреженны. Семейные чейны, convenience stores.",
+    "nightlife": "Практически отсутствует. Село закрывает к 20:00."
+  }
+}

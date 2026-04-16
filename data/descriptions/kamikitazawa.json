@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Keio Line Setagaya calm, family blocks, clean sidewalks. Rent stings for the quiet.",
+    "landmarks": "Kamikitazawa cherry-tree street, Roka Park side walks, old Keio shops.",
+    "food": "39 restaurants, 15 izakayas; neighborhood soba, ramen, small counters.",
+    "nightlife": "16 late spots. Local izakayas, no club scene."
+  },
+  "ja": {
+    "atmosphere": "京王線の世田谷らしい静けさ。家族向けの区画、清潔な歩道、静けさ代は高い。",
+    "landmarks": "上北沢の桜並木、蘆花公園方面の散歩道、古い京王沿線の店。",
+    "food": "飲食39軒、居酒屋15軒。近所の蕎麦、ラーメン、小さなカウンター。",
+    "nightlife": "深夜営業16軒。地元居酒屋中心、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Тихая Сэтагая на Keio Line, семейные кварталы, чистые тротуары. За тишину платишь.",
+    "landmarks": "Сакуровая улица Камикитадзавы, прогулки к Roka Park, старые лавки линии Keio.",
+    "food": "39 ресторанов, 15 изакая. Соба по соседству, рамен, маленькие стойки.",
+    "nightlife": "16 поздних мест. Местные изакая, клубной сцены нет."
+  }
+}

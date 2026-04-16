@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Shinjuku Line backstreet between Sumida and Kiyosumi. Useful, dense, expensive for the grit.",
+    "landmarks": "Onagi River, Morishita lanes, Kiyosumi-Shirakawa spillover. Low ground, very high seismic risk.",
+    "food": "172 restaurants, 63 izakayas. Neighborhood ramen, cafes, hostel-fed cheap eats.",
+    "nightlife": "69 late spots, no karaoke. Bars exist, but the mood stays local."
+  },
+  "ja": {
+    "atmosphere": "墨田と清澄の間の新宿線裏通り。便利で密、ざらつきの割に家賃は高い。",
+    "landmarks": "小名木川、森下の路地、清澄白河の余波。低地で地震リスクかなり高い。",
+    "food": "飲食172軒、居酒屋63軒。近所ラーメン、カフェ、ホステル客向け安飯。",
+    "nightlife": "深夜69軒、カラオケなし。バーはあるが、雰囲気は地元のまま。"
+  },
+  "ru": {
+    "atmosphere": "Закоулки Shinjuku Line между Sumida и Kiyosumi. Удобно, плотно, дороговато для такой шероховатости.",
+    "landmarks": "Onagi River, переулки Morishita, спилловер Kiyosumi-Shirakawa. Низина, очень высокий сейсмориск.",
+    "food": "172 ресторана, 63 изакая. Соседский рамэн, кафе, дешевая еда для хостельных гостей.",
+    "nightlife": "69 поздних мест, караоке нет. Бары есть, но настроение остается местным."
+  }
+}

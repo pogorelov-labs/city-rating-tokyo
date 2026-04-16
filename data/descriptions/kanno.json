@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tiny Keisei stop in Ichikawa, calm but not dead. Soft-ground warning.",
+    "landmarks": "Nitta Kasuga Shrine, Suwa Shrine, Shirahata Tenjinsha, hospital-side streets.",
+    "food": "79 restaurants, 29 izakayas, 5 bars. Better dinner density than the platforms suggest.",
+    "nightlife": "40 late spots, no karaoke, no clubs. Drinks, not a scene."
+  },
+  "ja": {
+    "atmosphere": "市川の小さな京成駅、静かだが死んでない。軟弱地盤に注意。",
+    "landmarks": "新田春日神社、諏訪神社、白幡天神社、病院側の住宅道。",
+    "food": "飲食79軒、居酒屋29軒、バー5軒。駅の小ささより夜飯は強い。",
+    "nightlife": "深夜40軒、カラオケなし、クラブなし。飲みはある、遊び場ではない。"
+  },
+  "ru": {
+    "atmosphere": "Маленькая Keisei-станция в Итикаве, тихо, но не мертво. Мягкий грунт.",
+    "landmarks": "Nitta Kasuga Shrine, Suwa Shrine, Shirahata Tenjinsha, улицы у больницы.",
+    "food": "79 ресторанов, 29 изакай, 5 баров. Ужин плотнее, чем обещает платформа.",
+    "nightlife": "40 поздних мест, без караоке и клубов. Выпить можно, сцены нет."
+  }
+}

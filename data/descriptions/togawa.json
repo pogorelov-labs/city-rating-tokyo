@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Fishing village at end of Choshi Line. Authentic small-town vibe, steep drop-off after sunset.",
+    "landmarks": "Choshi Electric Railway terminus. Seaside walks. Pilotage station. Very end of the map.",
+    "food": "2 restaurants (likely local fish). Seasonal offerings.",
+    "nightlife": "Minimal. Shuts down by 9pm. Last train 21:15."
+  },
+  "ja": {
+    "atmosphere": "銚子電鉄の終点、漁村。本物の田舎町、日没後は急速に廃れる。",
+    "landmarks": "銚子電鉄の終端。海辺の散歩。水先案内人駅。地図の最果て。",
+    "food": "レストラン2軒、4箇所（地元魚の可能性）。季節限定。",
+    "nightlife": "ほぼなし。夜9時に閉鎖。最終電車21時15分。"
+  },
+  "ru": {
+    "atmosphere": "Рыболовная деревня в конце линии Чоши. Подлинная провинциальная атмосфера, крутой спад после захода солнца.",
+    "landmarks": "Конечная станция электрички Чоши. Прогулки у моря. Судоходная станция. Самый конец карты.",
+    "food": "2 ресторана, 4 места (вероятно, местная рыба). Сезонные предложения.",
+    "nightlife": "Минимально. Закрывается к 21:00. Последний поезд 21:15."
+  }
+}

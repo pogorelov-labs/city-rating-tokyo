@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Edogawa edge suburb, quiet and practical. One line in, parks everywhere, center feels far.",
+    "landmarks": "Shinozaki Park and the Edogawa riverbank carry the area. Station front is pure local errands.",
+    "food": "Small but useful mix: 16 listed spots, more locals. Izakaya count is thin, cafes sparse.",
+    "nightlife": "Minimal. Five late spots, no bars counted, no karaoke."
+  },
+  "ja": {
+    "atmosphere": "江戸川の端、静かで実用的。1路線、緑は多い、都心は遠め。",
+    "landmarks": "篠崎公園と江戸川河川敷が主役。駅前は完全に生活用。",
+    "food": "掲載16軒、系の地元店は多め。居酒屋薄い、カフェ少ない。",
+    "nightlife": "最小限。深夜5軒、バー計上なし、カラオケなし。"
+  },
+  "ru": {
+    "atmosphere": "Край Эдогавы, тихо и утилитарно. Одна линия, много зелени, центр далеко.",
+    "landmarks": "Парк Shinozaki и набережная Edogawa держат район. У станции только бытовые дела.",
+    "food": "Небольшой, но рабочий набор: 16 мест в выдаче, локалок больше. Изакая тонко, кафе мало.",
+    "nightlife": "Минимум. Пять поздних мест, баров в данных нет, караоке тоже."
+  }
+}

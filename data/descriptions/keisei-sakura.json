@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban Chiba outpost, 75 min from Tokyo. Quiet residential, weekend explorer territory.",
+    "landmarks": "Chiba Prefecture commuter corridor. Few notable venues. Sakura name misleading — not a cherry blossom hub.",
+    "food": "Minimal restaurant scene. 9 listings spots, mostly chains. Cafes rare. Local hole-in-the-wall feel.",
+    "nightlife": "Nearly dead after 9pm. 3 midnight spots, zero karaoke. Salaryman drinks end by 10pm."
+  },
+  "ja": {
+    "atmosphere": "千葉郊外の終点駅。東京から75分。静かな住宅街、週末ドライブの出発点。",
+    "landmarks": "千葉県南部の通勤駅。目立つ施設なし。駅名に桜はいるが、花見スポットではない。",
+    "food": "飲食店数は最小限。チェーン中心。カフェ稀少。地元の小さな店ばかり。",
+    "nightlife": "夜9時以降はほぼ閉鎖状態。深夜3軒、カラオケなし。サラリーマンは10時に帰宅。"
+  },
+  "ru": {
+    "atmosphere": "Пригородная станция в Тиба на 75 минут от Токио. Молчаливые жилые районы, стартовая точка выходного дня.",
+    "landmarks": "Коридор коммунтеров в юж. Тиба. Примечательных мест нет. Имя Сакура обманчиво — не центр цветения вишен.",
+    "food": "Минимальная ресторанная сцена. 9 listings, цепочки в основном. Кафе редки. Местный колорит.",
+    "nightlife": "Почти мертво после 21:00. 3 ночных места, нет караоке. Офисяне кончают пить к 22:00."
+  }
+}

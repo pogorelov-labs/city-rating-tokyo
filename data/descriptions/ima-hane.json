@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Green mega-zone, New Shuttle fringe. 425k sqm parks. Almost no nightlife. Commuter station.",
+    "landmarks": "Omiya Parks cluster, bird sanctuary vibes. Greenery overwhelming. No landmarks per se.",
+    "food": "3 listings minimal, 9 scattered. Data limited — food scrapers missed here.",
+    "nightlife": "Virtually absent. Station sleeps after 6pm."
+  },
+  "ja": {
+    "atmosphere": "緑の巨大ゾーン、ニューシャトルの端。42万5千平方メートル公園。夜間ライフほぼなし。通勤駅。",
+    "landmarks": "さいたま公園群、野鳥保護区の風情。緑が圧倒的。固有の名所なし。",
+    "food": "ホットペッパー3軒、散在9軒。データ限定 — 食のスクレイパー抜け。",
+    "nightlife": "ほぼ皆無。18時以降は静寂。"
+  },
+  "ru": {
+    "atmosphere": "Мега-зелёная зона, край New Shuttle. 425k кв.м парков. Почти никакой ночной жизни. Commuter станция.",
+    "landmarks": "Кластер парков Омия, атмосфера святилища птиц. Зелень подавляющая. Достопримечательностей как таких нет.",
+    "food": "3 listings минимум, 9 разреженно. Данные неполные — пищевые скреперы упустили.",
+    "nightlife": "Практически отсутствует. Станция спит после 18:00."
+  }
+}

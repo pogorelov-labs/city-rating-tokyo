@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Shin-Keisei stop with cheap rent and low crowds. Useful, local, not scenic.",
+    "landmarks": "Neighborhood shops, Hachira-Matsudo orbit, clinic-and-supermarket blocks. No sightseeing anchor.",
+    "food": "42 restaurants, 17 izakayas, 2 cafes. Better everyday eating than the platform suggests.",
+    "nightlife": "15 late spots, one karaoke. Quiet local drinking, early-last-call mood."
+  },
+  "ja": {
+    "atmosphere": "新京成の小駅、家賃安めで混雑少なめ。便利だが、景色で選ぶ街ではない。",
+    "landmarks": "近所商店、八柱と松戸の間の生活圏、病院とスーパーの街区。観光の芯はない。",
+    "food": "飲食42軒、居酒屋17軒、カフェ2軒。ホームの印象より普段飯は使える。",
+    "nightlife": "深夜15軒、カラオケ1軒。静かな地元飲み、早仕舞い気分。"
+  },
+  "ru": {
+    "atmosphere": "Малая станция Shin-Keisei, дешёвая аренда и мало толпы. Практично, локально, не живописно.",
+    "landmarks": "Районные магазины, орбита Hachira-Matsudo, кварталы клиник и супермаркетов. Туристического якоря нет.",
+    "food": "42 ресторана, 17 изакая, 2 кафе. Будничная еда лучше, чем обещает платформа.",
+    "nightlife": "15 поздних мест, одно караоке. Тихая локальная выпивка, ранний финиш."
+  }
+}

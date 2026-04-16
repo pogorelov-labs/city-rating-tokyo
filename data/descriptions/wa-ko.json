@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bedroom town on Tobu Skytree Line, 1 hour from central Tokyo. Quiet but accessible commute hub.",
+    "landmarks": "Tobu Skytree Line only, 73 min to hubs. Mix of new subdivisions and farmland.",
+    "food": "Barely a restaurant. Single listings entry. Truly sparse.",
+    "nightlife": "Minimal. Small-town dead by 9pm."
+  },
+  "ja": {
+    "atmosphere": "東武スカイツリーライン沿い。東京中心から約1時間。静かで通勤便。",
+    "landmarks": "東武スカイツリーラインのみ。中心部まで73分。新興住宅地と農地混在。",
+    "food": "ほぼレストラン無し。1件のみ。超過疎。",
+    "nightlife": "皆無。9時には田舎町化。"
+  },
+  "ru": {
+    "atmosphere": "Спальный город на линии Tobu Skytree, 1 час от центра Токио. Тихий, но удобный коммутерский хаб.",
+    "landmarks": "Только линия Tobu Skytree, 73 мин до хабов. Смесь новых пригородов и полей.",
+    "food": "Почти нет ресторанов. Одна запись listings. Действительно редко.",
+    "nightlife": "Минимально. Маленький город мертв к 21:00."
+  }
+}

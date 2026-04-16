@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Small Meguro/Ota border pocket near Jiyugaoka. Quiet, safe, expensive for the size.",
+    "landmarks": "Tokyo Tech side streets, Ookayama nearby, Jiyugaoka within a walk. Residential lanes win.",
+    "food": "143 restaurants, 36 izakayas; cafes and small bistros spill over from Jiyugaoka.",
+    "nightlife": "46 late spots, 12 bars. Polite local drinking, no clubs."
+  },
+  "ja": {
+    "atmosphere": "自由が丘近くの目黒と大田の境目ポケット。静かで安全、規模の割に高い。",
+    "landmarks": "東工大側の道、大岡山が近く、自由が丘も徒歩圏。住宅路地が主役。",
+    "food": "飲食143軒、居酒屋36軒。自由が丘の余波でカフェと小ビストロが強い。",
+    "nightlife": "深夜46軒、バー12軒。上品な地元飲み、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Малый карман на границе Мэгуро и Оты рядом с Дзюгаока. Тихо, безопасно, дорого для размера.",
+    "landmarks": "Улицы у Tokyo Tech, рядом Ookayama, Jiyugaoka пешком. Побеждают жилые переулки.",
+    "food": "143 ресторана, 36 изакая; кафе и малые бистро переливаются из Jiyugaoka.",
+    "nightlife": "46 поздних мест, 12 баров. Вежливое местное питье, без клубов."
+  }
+}

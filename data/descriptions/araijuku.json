@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama suburban outpost, quiet commuter base. Single line, ~10k daily riders, cheap living.",
+    "landmarks": "Modest residential, local elementary school. Not much of a destination.",
+    "food": "7 venues + 9 entries. Mixed small eateries, nothing spectacular.",
+    "nightlife": "1 midnight spot. Dead after dark."
+  },
+  "ja": {
+    "atmosphere": "埼玉県の目立たない駅。静かな住宅地、通勤族ばかり。",
+    "landmarks": "地元の小学校、住宅の隙間。観光地ではない。",
+    "food": "食堂7軒、記録9件。質素だが普通。",
+    "nightlife": "夜間営業1軒。夜は誰もいない。"
+  },
+  "ru": {
+    "atmosphere": "Невзрачный спальный район Сайтамы. Коротке маршруты, тихо, дёшево.",
+    "landmarks": "Жилые дома, начальная школа. Туризм нулевой.",
+    "food": "7 заведений + 9 на карте. Заурядные мелкие столовые.",
+    "nightlife": "1 поздний бар. После 9 вечера мертво."
+  }
+}

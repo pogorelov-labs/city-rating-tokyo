@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Far-west Tokyo breathing room, river air and cheap rent. Commute is the tax.",
+    "landmarks": "Tama River, Hamura weir, zoo and Ome-line foothill mood. Green space dominates.",
+    "food": "22 restaurants, 7 izakayas, 1 cafe. Enough basics, no central-Tokyo density.",
+    "nightlife": "9 late spots, no karaoke or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "東京西端の余白、川の空気と安い家賃。通勤時間がその代金。",
+    "landmarks": "多摩川、羽村堰、動物公園、青梅線の山裾感。緑が勝つ。",
+    "food": "飲食22軒、居酒屋7軒、カフェ1軒。基本は足りる、都心密度はない。",
+    "nightlife": "深夜営業9軒、カラオケもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Токио, простор, речной воздух и дешёвая аренда. Комьют - налог.",
+    "landmarks": "Tama River, плотина Hamura, зоопарк и предгорный вайб Ome Line. Зелень доминирует.",
+    "food": "22 ресторана, 7 изакая, 1 кафе. База есть, плотности центра нет.",
+    "nightlife": "9 поздних мест, без караоке и клубов. Минимально."
+  }
+}

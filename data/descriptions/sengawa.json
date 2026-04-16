@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Polished Keio suburb with a small creative streak. Family-safe, busy, not cheap-feeling.",
+    "landmarks": "Sengawa Theatre, music-school crowd, tidy shopping streets. Chofu calm with city habits.",
+    "food": "61 restaurants, 24 izakayas, 6 cafes. Better than a one-line suburb, still local-scale.",
+    "nightlife": "19 late spots, no karaoke. Drinks happen, clubs do not."
+  },
+  "ja": {
+    "atmosphere": "少し文化臭のある京王線郊外。家族向きで賑やか、安っぽさは少ない。",
+    "landmarks": "せんがわ劇場、音大系の空気、整った商店街。調布の落ち着きと都会癖。",
+    "food": "飲食61軒、居酒屋24軒、カフェ6軒。単線郊外にしては強い、でも地元規模。",
+    "nightlife": "深夜19軒、カラオケなし。飲めるが、クラブはない。"
+  },
+  "ru": {
+    "atmosphere": "Отполированный пригород Keio с культурной жилкой. Семейно, оживлённо, не совсем дёшево.",
+    "landmarks": "Sengawa Theatre, музыкальная школа, аккуратные торговые улицы. Спокойствие Тёфу.",
+    "food": "61 ресторан, 24 изакая, 6 кафе. Сильнее обычного пригорода, но всё ещё локально.",
+    "nightlife": "19 поздних мест, караоке нет. Выпить можно, клубов нет."
+  }
+}

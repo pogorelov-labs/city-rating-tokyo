@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Tamagawa-edge commuter pocket, cheaper than Futako-Tamagawa next door. Calm, low-key.",
+    "landmarks": "Tamagawa riverbank, Futako Bridge, quick walk to Futako-Tamagawa malls.",
+    "food": "105 restaurants, 42 izakayas; ramen, yakitori, family counters. Better than it looks.",
+    "nightlife": "22 late spots, 2 karaoke. Riverside drinks, no club scene."
+  },
+  "ja": {
+    "atmosphere": "多摩川沿いの通勤住宅地。隣の二子玉川より安い、静かで地味。",
+    "landmarks": "多摩川河川敷、二子橋、二子玉川の商業施設まで徒歩圏。",
+    "food": "飲食105軒、居酒屋42軒。ラーメン、焼鳥、家族向けの店。見た目より強い。",
+    "nightlife": "深夜営業22軒、カラオケ2軒。川沿いの一杯、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Жилой карман у Тамагавы, дешевле соседней Футако-Тамагавы. Тихо, без блеска.",
+    "landmarks": "Набережная Тамагавы, мост Футако, пешком до моллов Футако-Тамагава.",
+    "food": "105 ресторанов, 42 изакаи. Рамен, якитори, семейные стойки. Лучше, чем выглядит.",
+    "nightlife": "22 поздних места, 2 караоке. Речные бары, клубной сцены нет."
+  }
+}

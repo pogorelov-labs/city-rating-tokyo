@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Luxury grid, tourists, suits, spotless pressure. Incredible access, terrible everyday softness.",
+    "landmarks": "Wako clock tower, Kabukiza, Chuo-dori pedestrian heaven. Department-store Tokyo at full volume.",
+    "food": "2232 restaurants, 773 izakayas, 213 bars. World-class choice, brutal prices, many traps.",
+    "nightlife": "783 late spots, bars everywhere, a few clubs. Expensive, polished, relentless."
+  },
+  "ja": {
+    "atmosphere": "高級グリッド、観光客、スーツ、清潔すぎる圧。アクセス最強、日常の柔らかさは薄い。",
+    "landmarks": "和光の時計塔、歌舞伎座、中央通り歩行者天国。百貨店東京の全開。",
+    "food": "飲食2232軒、居酒屋773軒、バー213軒。世界級の選択肢、値段は容赦なし、罠も多い。",
+    "nightlife": "深夜営業783軒、バーだらけ、クラブ少々。高い、磨かれた、止まらない。"
+  },
+  "ru": {
+    "atmosphere": "Люксовая сетка, туристы, костюмы, стерильное давление. Доступ идеален, бытовой мягкости мало.",
+    "landmarks": "Часы Wako, Kabukiza, пешеходная Chuo-dori. Универмажный Токио на полной громкости.",
+    "food": "2232 ресторана, 773 изакая, 213 баров. Мировой выбор, жестокие цены, много ловушек.",
+    "nightlife": "783 поздних места, бары везде, немного клубов. Дорого, гладко, без паузы."
+  }
+}

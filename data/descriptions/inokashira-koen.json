@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Leafy park-edge living with Kichijoji spillover. Romantic, quiet, inconvenient if you hate walks.",
+    "landmarks": "Inokashira Park, Benzaiten pond, Ghibli Museum walk. Green first, station second.",
+    "food": "347 restaurants nearby; Kichijoji carries the range. Cafes and izakayas beat chains.",
+    "nightlife": "153 late spots, 21 bars. Mostly Kichijoji-adjacent, not clubby."
+  },
+  "ja": {
+    "atmosphere": "井の頭公園沿いの緑の暮らし、吉祥寺の余波あり。雰囲気は良い、歩けない人には不便。",
+    "landmarks": "井の頭公園、弁財天の池、ジブリ美術館へ徒歩。駅より緑が主役。",
+    "food": "周辺347軒。幅は吉祥寺頼み。チェーンよりカフェと居酒屋が強い。",
+    "nightlife": "深夜153軒、バー21軒。ほぼ吉祥寺寄り、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Жизнь у края парка, с переливом Китидзёдзи. Романтично, тихо, неудобно без пеших прогулок.",
+    "landmarks": "Парк Inokashira, пруд Benzaiten, пешком до музея Ghibli. Сначала зелень, потом станция.",
+    "food": "347 ресторанов рядом; выбор тянет Китидзёдзи. Кафе и изакаи лучше сетей.",
+    "nightlife": "153 поздних места, 21 бар. Скорее рядом с Китидзёдзи, не клубно."
+  }
+}

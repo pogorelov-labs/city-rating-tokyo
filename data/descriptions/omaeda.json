@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Saitama deep-country, Chichibu line. Only 744 daily passengers. Cheap rent (¥92k) but 112-min commute. Seismic low - a plus.",
+    "landmarks": "1 pedestrian street, agricultural setting. Market + pharmacy nearby but minimal amenities. Local ward infrastructure only.",
+    "food": "1 venue total. Essentially zero restaurant data. You're on your own.",
+    "nightlife": "Minimal. Station closes 23:36. Sleepy commuter town."
+  },
+  "ja": {
+    "atmosphere": "埼玉秩父線。744人/日。家賃安い。112分。地震リスク低い。",
+    "landmarks": "1歩行者街。農村。",
+    "food": "レストランなし。",
+    "nightlife": "最終電車23:36。"
+  },
+  "ru": {
+    "atmosphere": "Глубокая Саитама, линия Титтибу. Только 744 пассажира/день. Дешевая аренда (¥92k), но 112 мин. Низкий сейсмический риск.",
+    "landmarks": "1 пешеходная улица. Сельскохозяйственная местность. Минимальные удобства.",
+    "food": "1 место всего. Ноль ресторанных данных.",
+    "nightlife": "Минимум. Станция закрывается 23:36."
+  }
+}

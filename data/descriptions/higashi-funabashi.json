@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Funabashi's quieter side, commuter-friendly. Safe neighborhood, parks near. Balanced livability.",
+    "landmarks": "Chuo-Sobu local line, riverside walks, 250k sqm green. Low-key.",
+    "food": "33 venues, minimal izakaya (1). -heavy, scattered cafes.",
+    "nightlife": "Sparse. 4 rated spots. Locals head downtown for drinks."
+  },
+  "ja": {
+    "atmosphere": "船橋の静かな側。通勤便利。公園多い。250k平方メートル緑。",
+    "landmarks": "中央線地下鉄。河川敷散歩。公園。",
+    "food": "飲食店33軒。居酒屋ほぼなし。カフェ散在。",
+    "nightlife": "少ない。飲みに出かけるなら市原へ。"
+  },
+  "ru": {
+    "atmosphere": "Тихая сторона Фунабаси, удобно для наезда, парки, 250k м² зелени.",
+    "landmarks": "Линия Чуо-Сосу, прогулки у реки, парки.",
+    "food": "33 заведения, 1 изакая, кафе рассеянно.",
+    "nightlife": "Редко. 4 места. Люди ездят в центр."
+  }
+}

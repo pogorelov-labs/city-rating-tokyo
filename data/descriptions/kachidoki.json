@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Waterfront tower life, clean and expensive. One Oedo line, big-city views, island feel.",
+    "landmarks": "Kachidoki Bridge, Harumi, Tsukiji edge. River walks beat the station plaza.",
+    "food": "284 spots, 95 izakayas, 15 bars. Office lunches and tower-family dinners dominate.",
+    "nightlife": "69 late spots, no karaoke, no clubs. Drinks are polished, not wild."
+  },
+  "ja": {
+    "atmosphere": "水辺のタワマン生活。清潔で高い。大江戸線一本、景色は都心、感覚は島。",
+    "landmarks": "勝鬨橋、晴海、築地の端。駅前より川沿い散歩が主役。",
+    "food": "飲食284軒、居酒屋95軒、バー15軒。会社ランチとタワマン家族の夕食中心。",
+    "nightlife": "深夜営業69軒、カラオケなし、クラブなし。荒れずに整った飲み。"
+  },
+  "ru": {
+    "atmosphere": "Башенная жизнь у воды, чисто и дорого. Одна Oedo-линия, виды центра, островное чувство.",
+    "landmarks": "Мост Kachidoki, Harumi, край Tsukiji. Набережные лучше самой площади у станции.",
+    "food": "284 места, 95 изакая, 15 баров. Офисные ланчи и ужины башенных семей.",
+    "nightlife": "69 поздних точек, без караоке и клубов. Выпивка аккуратная, не дикая."
+  }
+}

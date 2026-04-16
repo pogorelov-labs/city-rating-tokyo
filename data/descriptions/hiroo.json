@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Embassy belt, expat groceries, polished sidewalks. Beautiful, expensive, a bit insulated.",
+    "landmarks": "Arisugawa-no-miya Park, National Azabu, embassy backstreets.",
+    "food": "252 restaurants, 28 bars; international dining, bakeries, polished bistros. Wallet damage.",
+    "nightlife": "97 late spots, 1 club. Elegant bars, not messy nightlife."
+  },
+  "ja": {
+    "atmosphere": "大使館帯、外国人向けスーパー、磨かれた歩道。美しい、高い、少し閉じた街。",
+    "landmarks": "有栖川宮記念公園、ナショナル麻布、大使館裏の静かな道。",
+    "food": "飲食252軒、バー28軒。各国料理、ベーカリー、上品なビストロ。財布は傷む。",
+    "nightlife": "深夜営業97軒、クラブ1軒。上品なバー中心、荒い夜遊びではない。"
+  },
+  "ru": {
+    "atmosphere": "Посольский пояс, expat-супермаркеты, отполированные тротуары. Красиво, дорого, чуть закрыто.",
+    "landmarks": "Парк Арисугава-но-мия, National Azabu, тихие переулки за посольствами.",
+    "food": "252 ресторана, 28 баров. Международная еда, пекарни, гладкие бистро. Бьет по кошельку.",
+    "nightlife": "97 поздних мест, 1 клуб. Элегантные бары, не грязная ночная жизнь."
+  }
+}

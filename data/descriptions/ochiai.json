@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Tozai-line residential pocket between Nakai and Higashi-Nakano. Useful, not flashy.",
+    "landmarks": "Kanda River walks, Saeki Yuzo Atelier, small shopping streets. Shinjuku close without the noise.",
+    "food": "99 restaurants, 33 izakayas. Better than it looks; modest cafes, solid local counters.",
+    "nightlife": "44 late-night spots, 1 karaoke. Low-key drinks, no big scene."
+  },
+  "ja": {
+    "atmosphere": "中井と東中野の間、東西線の静かな住宅ポケット。便利だが派手ではない。",
+    "landmarks": "神田川散歩、佐伯祐三アトリエ、小さな商店街。新宿近いが騒がしくない。",
+    "food": "飲食99軒、居酒屋33軒。見た目より食える。控えめなカフェ、堅い地元カウンター。",
+    "nightlife": "深夜営業44軒、カラオケ1軒。控えめな飲み、大きな夜遊び感はない。"
+  },
+  "ru": {
+    "atmosphere": "Тихий жилой карман Tozai Line между Nakai и Higashi-Nakano. Удобно, не броско.",
+    "landmarks": "Прогулки по Kanda River, Saeki Yuzo Atelier, малые торговые улицы. Синдзюку рядом без шума.",
+    "food": "99 ресторанов, 33 изакая. Лучше, чем выглядит; скромные кафе, крепкие локальные стойки.",
+    "nightlife": "44 поздних места, 1 караоке. Спокойная выпивка, большой сцены нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Quiet Shinjuku back pocket around hospitals and schools. Central, costly, oddly calm.",
+    "landmarks": "Tokyo Women’s Medical area, Toyama Park nearby, Oedo Line cut-throughs.",
+    "food": "100 restaurants, 31 izakayas, 7 cafes. Lunches and low-key dinners, not party fuel.",
+    "nightlife": "25 late spots, no karaoke or clubs. Shinjuku is close; this side sleeps."
+  },
+  "ja": {
+    "atmosphere": "病院と学校の多い新宿の裏側。都心で高いのに、妙に静か。",
+    "landmarks": "東京女子医大周辺、戸山公園近く、大江戸線の抜け道感。",
+    "food": "飲食100件、居酒屋31件、カフェ7件。昼食と静かな夕食、遊びの燃料ではない。",
+    "nightlife": "深夜25件、カラオケもクラブもなし。新宿は近いが、こちら側は寝る。"
+  },
+  "ru": {
+    "atmosphere": "Тихий задний карман Синдзюку, больницы и школы. Центр, дорого, странно спокойно.",
+    "landmarks": "Район Tokyo Women’s Medical, рядом Toyama Park, проходы линии Oedo.",
+    "food": "100 ресторанов, 31 изакая, 7 кафе. Обеды и тихие ужины, не топливо для тусовки.",
+    "nightlife": "25 поздних мест, без караоке и клубов. Синдзюку рядом; эта сторона спит."
+  }
+}

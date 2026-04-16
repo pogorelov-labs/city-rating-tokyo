@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Kita-Ageo suburb, cheap and leafy, but far from center. One line, long ride.",
+    "landmarks": "Kita-Ageo Station, school-zone streets, dense pocket greenery rather than sights.",
+    "food": "23 restaurants, 4 izakayas, 4 cafes. Daily food works; date-night options thin.",
+    "nightlife": "Seven late spots and one karaoke. Mostly quiet residential nights."
+  },
+  "ja": {
+    "atmosphere": "北上尾の郊外、安くて緑多め、都心は遠い。1路線で長めの乗車。",
+    "landmarks": "北上尾駅、学校周辺の住宅道、名所より細かい緑の多さ。",
+    "food": "飲食23軒、居酒屋4軒、カフェ4軒。日常飯は足りる、デート飯は薄い。",
+    "nightlife": "深夜7軒、カラオケ1軒。基本は静かな住宅地の夜。"
+  },
+  "ru": {
+    "atmosphere": "Пригород Кита-Агео, дешево и зелено, но центр далеко. Одна линия, долгая поездка.",
+    "landmarks": "Kita-Ageo Station, школьные улицы, много мелкой зелени вместо достопримечательностей.",
+    "food": "23 ресторана, 4 изакаи, 4 кафе. На будни хватит, для свиданий тонко.",
+    "nightlife": "7 поздних мест и 1 караоке. В основном тихие жилые вечера."
+  }
+}

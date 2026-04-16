@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Yokohama temple town, covered arcade and steep side streets. Homey, useful, not central.",
+    "landmarks": "Gumyoji temple, long shotengai, Ooka River nearby. Hills start right behind the shops.",
+    "food": "46 restaurants, 16 izakayas. Arcade snacks, ramen, local counters; compact but solid.",
+    "nightlife": "16 late spots, 3 bars. Neighborhood drinking, no karaoke, no clubs."
+  },
+  "ja": {
+    "atmosphere": "横浜の古い門前町、アーケード商店街と急な坂。生活感強め、中心部ではない。",
+    "landmarks": "弘明寺、長い商店街、大岡川が近い。店の裏からすぐ坂道。",
+    "food": "飲食46軒、居酒屋16軒。商店街の軽食、ラーメン、地元カウンター。小さいが堅い。",
+    "nightlife": "深夜16軒、バー3軒。近所飲み、カラオケなし、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Старый храмовый район Йокогамы, крытая аркада и крутые боковые улицы. Домашне, полезно, не центр.",
+    "landmarks": "Храм Gumyoji, длинный сётэнгай, река Оока рядом. Холмы начинаются сразу за лавками.",
+    "food": "46 ресторанов, 16 изакая. Аркадные закуски, рамен, местные стойки; компактно, но крепко.",
+    "nightlife": "16 поздних мест, 3 бара. Соседская выпивка, без караоке и клубов."
+  }
+}

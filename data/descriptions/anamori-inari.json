@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Airport-edge shrine town, low-rise and practical. Quiet streets, early flights, little glamour.",
+    "landmarks": "Anamori Inari Shrine, Haneda approach roads, Tama River flats. More local than airport-hotel.",
+    "food": "35 restaurants plus 9 izakayas. Soba, ramen, worker lunches; useful, not destination dining.",
+    "nightlife": "11 late spots, 1 karaoke. Airport-adjacent drinking, no club scene."
+  },
+  "ja": {
+    "atmosphere": "羽田手前の神社町。低層で実用的、静かな路地、早朝便の空気。派手さなし。",
+    "landmarks": "穴守稲荷神社、羽田へ向かう道、多摩川の低地。空港ホテル街より生活感強め。",
+    "food": "飲食35軒、居酒屋9軒。そば、ラーメン、作業員向け昼飯。目的地グルメではない。",
+    "nightlife": "深夜営業11軒、カラオケ1軒。空港近くの一杯、クラブ文化なし。"
+  },
+  "ru": {
+    "atmosphere": "Храмовый район у края Ханэды, низкий и практичный. Тихие улицы, ранние рейсы, без глянца.",
+    "landmarks": "Храм Anamori Inari, дороги к Haneda, низины реки Tama. Больше быта, меньше аэропорт-отеля.",
+    "food": "35 ресторанов, 9 изакая. Соба, рамен, рабочие ланчи; удобно, но не гастро-точка.",
+    "nightlife": "11 поздних мест, 1 караоке. Выпивка у аэропорта, клубной сцены нет."
+  }
+}

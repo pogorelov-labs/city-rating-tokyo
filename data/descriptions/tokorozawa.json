@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Big Saitama interchange, mall energy and commuter churn. Cheap rent, real city feel, long ride.",
+    "landmarks": "Grand Emio, Prope shopping street, Seibu hub. Aviation Park is the weekend escape.",
+    "food": "119 spots, 62 izakayas. Solid station-town eating, chains mixed with salaryman drinking.",
+    "nightlife": "53 late spots, one karaoke, no clubs. Local drinking survives after Tokyo commuters leave."
+  },
+  "ja": {
+    "atmosphere": "埼玉の大きな乗換駅、モール感と通勤の流れ。安いが都心は長い。",
+    "landmarks": "グランエミオ、プロペ通り、西武の要所。週末は航空公園へ逃げる。",
+    "food": "119軒、居酒屋62。駅前都市の食は堅い、チェーンと会社員飲みが混在。",
+    "nightlife": "深夜53軒、カラオケ1、クラブなし。東京通勤組が帰っても地元飲みは残る。"
+  },
+  "ru": {
+    "atmosphere": "Большой узел Сайтамы, ТЦ и поток комьютеров. Дешевле, городско, но ехать долго.",
+    "landmarks": "Grand Emio, торговая Prope Street, узел Seibu. Aviation Park — побег на выходные.",
+    "food": "119 мест, 62 изакая. Нормальная еда у крупной станции, сети плюс офисные пьянки.",
+    "nightlife": "53 поздних места, одно караоке, клубов нет. Местные бары живут после отъезда токийских комьютеров."
+  }
+}

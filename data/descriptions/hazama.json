@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Hachioji hill-edge suburb, cheap and quiet. Feels closer to Takao than Tokyo.",
+    "landmarks": "Keio Takao Line, hillside roads, big-box errands. Mountains set the backdrop.",
+    "food": "Small local set: ramen, family diners, four izakayas. Enough, not varied.",
+    "nightlife": "Minimal. Two late spots, no karaoke or clubs."
+  },
+  "ja": {
+    "atmosphere": "八王子の丘際の住宅地。安くて静か、東京より高尾に近い感覚。",
+    "landmarks": "京王高尾線、坂道、大型店の用事。背景は山。",
+    "food": "小さな地元セット。ラーメン、ファミレス、居酒屋4軒。足りるが広がらない。",
+    "nightlife": "ほぼ最小限。遅い店2軒、カラオケとクラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Холмистая окраина Хатиодзи, дешево и тихо. Ближе к Такао, чем к Токио.",
+    "landmarks": "Keio Takao Line, дороги по склонам, большие магазины для быта. Горы в фоне.",
+    "food": "Малый местный набор: рамэн, семейные дайнеры, четыре изакаи. Хватит, но без выбора.",
+    "nightlife": "Минимально. Два поздних места, без караоке и клубов."
+  }
+}

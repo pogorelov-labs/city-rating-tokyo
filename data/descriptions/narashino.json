@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban mall hub near Tokyo. Affordable. Moderate food scene. Empty after 8pm.",
+    "landmarks": "Musashino Line. Shopping centers nearby. Bland.",
+    "food": "22 listings, 6 izakaya. Chain-heavy, forgettable.",
+    "nightlife": "8 midnight spots. Mostly dead."
+  },
+  "ja": {
+    "atmosphere": "郊外の商業地、手ごろ。飯はまあまあ。夜8時以降は無人。",
+    "landmarks": "武蔵野線。ショッピング地。つまらない。",
+    "food": "飲食店22軒、居酒屋6軒、18件。チェーン中心。",
+    "nightlife": "深夜営業8軒。ほぼシャット。"
+  },
+  "ru": {
+    "atmosphere": "Пригородный mall hub. Доступно. Еда норм. Пусто после 20:00.",
+    "landmarks": "Линия Musashino. Торговые центры. Скучно.",
+    "food": "22 listings, 6 изакай, 18. Цепные, забываемые.",
+    "nightlife": "8 ночных мест. Мертво."
+  }
+}

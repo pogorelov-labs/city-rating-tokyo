@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Gyotoku is Tozai-line commuter density, practical and busy. Cheap-ish, flat, seismic flag.",
+    "landmarks": "Old Gyotoku lanes, bay-side parks, Tozai Line artery. More daily-life grid than spectacle.",
+    "food": "73 spots, 30 izakayas, six cafes. Strong weekday eating, not much polish.",
+    "nightlife": "41 late spots and one karaoke. Neighborhood drinking, no clubs."
+  },
+  "ja": {
+    "atmosphere": "行徳は東西線の通勤密度、実用的で忙しい。安め、平坦、地震リスク注意。",
+    "landmarks": "旧行徳の路地、湾岸の公園、東西線の幹線感。名所より生活の格子。",
+    "food": "73軒、居酒屋30、カフェ6。平日の食は強いが、洒落感は少ない。",
+    "nightlife": "深夜41軒、カラオケ1。近所飲みはある、クラブなし。"
+  },
+  "ru": {
+    "atmosphere": "Gyotoku — плотная Tozai Line для комьютеров, практично и людно. Недорого, плоско, сейсмофлаг.",
+    "landmarks": "Старые переулки Gyotoku, парки у залива, артерия Tozai Line. Больше быт, чем зрелище.",
+    "food": "73 места, 30 изакая, шесть кафе. Сильная будничная еда, без особого лоска.",
+    "nightlife": "41 позднее место и одно караоке. Соседские выпивки, клубов нет."
+  }
+}

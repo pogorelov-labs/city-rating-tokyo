@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Mountain lake town, 3k passengers. Nature escape if you work remote. Otherwise, 77 min commute is brutal.",
+    "landmarks": "Sagamiko Lake. 365M sqm forest (Tanzawa). Hiking paradise, zero town.",
+    "food": "Nearly none. 2 listings spots. Drive 30 min to Sagamihara for dinner.",
+    "nightlife": "None. Maybe a sake bar. Accept rural silence."
+  },
+  "ja": {
+    "atmosphere": "山間湖町、3k乗降。リモート勤務なら天国。通勤なら77分は地獄。",
+    "landmarks": "相模湖。365M平方米の丹沢山。ハイキング天国、町なし。",
+    "food": "ほぼなし。listings",
+    "nightlife": "なし。せめて日本酒バーか。田舎の沈黙を。"
+  },
+  "ru": {
+    "atmosphere": "Горная озёрная деревушка, 3k пассажиров. Рай для удалённой работы. 77 мин—кошмар для коммьютера.",
+    "landmarks": "Озеро Сагамико. 365M кв м лес Танзава. Рай для туристов, но города нет.",
+    "food": "Почти нет. 2 ресторана. Ездите в Сагамихару на ужин.",
+    "nightlife": "Нет. Может сакебар. Сельская тишь."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu Shinjuku corridor, 32k daily passengers. Balanced food/nightlife town. Low crowds for Kanto standards. 63 min commute, moderate seismic risk.",
+    "landmarks": "5 cultural venues, parks scattered. Sayama city center. Mid-tier shrine/temple zone. Not touristy.",
+    "food": "25 spots, 9 izakaya, 3 bars. Good nightlife base (11 midnight, 1 karaoke, 1 hostel). 63 food venues listed.",
+    "nightlife": "Solid for suburbs. 11 late joints, 1 karaoke. Bars + drinks exist. 1 hostel, early bedtime culture."
+  },
+  "ja": {
+    "atmosphere": "西武新宿線沿線、32,000人/日。食べ物と夜の良い町。混雑は中程度。63分通勤、地震中リスク。",
+    "landmarks": "文化施設5軒、公園散在。狭山市街地。寺社仏閣あり。観光地ではない。",
+    "food": "飲食25軒、居酒屋9軒、バー3軒。夜間営業11軒、カラオケ1軒、ホステル1軒。食堂63軒。",
+    "nightlife": "郊外としては頑張ってる。夜営業11軒、カラオケ1軒。バーと飲み文化あり。"
+  },
+  "ru": {
+    "atmosphere": "Коридор линии Сэйбу Синдзюку, 32 тысячи пассажиров в день. Сбалансированный город еды и ночной жизни. 63 минуты до центра.",
+    "landmarks": "5 культурных объектов, парки. Центр города Сайама. Святилища и храмы. Не туристический.",
+    "food": "25 ресторанов, 9 изакай, 3 бара. Хорошая ночная жизнь (11 мест, 1 караоке, 1 хостел). 63 заведения в данных.",
+    "nightlife": "Солидно для пригорода. 11 ночных мест, 1 караоке. Бары + пить есть. 1 хостел."
+  }
+}

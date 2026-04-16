@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rail junction masquerading as a quiet Katsushika town. Great access, sparse street life.",
+    "landmarks": "Keisei junction, airport-bound tracks, Shibamata side trips. More platforms than buzz.",
+    "food": "23 restaurants, 8 izakayas, 5 cafes. Basics only, weak for a transport hub.",
+    "nightlife": "6 late spots, 1 karaoke, no bars or clubs. Minimal."
+  },
+  "ja": {
+    "atmosphere": "静かな葛飾の街に見える鉄道分岐点。アクセスは強いが、街の熱は薄い。",
+    "landmarks": "京成の分岐、空港方面の線路、柴又への寄り道。賑わいよりホーム数。",
+    "food": "飲食23軒、居酒屋8軒、カフェ5軒。最低限、交通ハブの割に弱い。",
+    "nightlife": "深夜営業6軒、カラオケ1軒、バーもクラブもなし。ほぼ皆無。"
+  },
+  "ru": {
+    "atmosphere": "Железнодорожный узел под видом тихой Katsushika. Доступ силён, уличной жизни мало.",
+    "landmarks": "Узел Keisei, пути к аэропорту, вылазки в Shibamata. Платформ больше, чем жара.",
+    "food": "23 ресторана, 8 изакая, 5 кафе. Только база, слабо для транспортного хаба.",
+    "nightlife": "6 поздних мест, 1 караоке, без баров и клубов. Минимально."
+  }
+}

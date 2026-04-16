@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Seibu hub, triple-line junction. Daytime buzz, food/karaoke cluster. Rare quiet zone 3 lines.",
+    "landmarks": "Shopping streets near 3 stations. No landmark sites. Pure transit convenience.",
+    "food": "20 listings spots. Izakaya-heavy (10 spots), ramen, chains. Decent after-work scene.",
+    "nightlife": "6 midnight bars, 2 karaoke. Salarymen locale, drinks wrap early."
+  },
+  "ja": {
+    "atmosphere": "西武ハブ、3路線交差点。昼間は賑やか、食とカラオケが密集。3線接続は稀。",
+    "landmarks": "3駅近い商店街。著名な場所なし。純粋に便利な乗換。",
+    "food": "ホットペッパー20軒、38軒。居酒屋重視（10軒）、ラーメン、チェーン。仕事帰りの場面好適。",
+    "nightlife": "深夜営業6軒、カラオケ2軒。サラリーマン向け、酒は早仕舞い。"
+  },
+  "ru": {
+    "atmosphere": "Хаб Seibu, перекресток 3 линий. Дневной шум, скопления еды/караоке. Редкая тихая зона 3 линий.",
+    "landmarks": "Торговые улицы у 3 станций. Нет достопримечательностей. Чистая транзитная удобство.",
+    "food": "20 listings мест, 38 записей. Изакая-тяжелый (10 мест), рамены, чейны. Приличная рабочая сцена.",
+    "nightlife": "6 поздних баров, 2 караоке. Место для зарплатников, напитки рано закрываются."
+  }
+}

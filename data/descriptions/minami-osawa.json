@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Planned Hachioji suburb, wide decks, student energy. Cheap, green, long commute.",
+    "landmarks": "Mitsui Outlet Park, Tokyo Metropolitan University, Tama New Town hills.",
+    "food": "15 restaurants, 9 izakayas, almost no cafes. Mall meals beat backstreet hunting.",
+    "nightlife": "Five late spots and one karaoke. Last train feels early."
+  },
+  "ja": {
+    "atmosphere": "八王子の計画郊外、広いデッキと学生感。安くて緑多め、都心は遠い。",
+    "landmarks": "三井アウトレットパーク、都立大、多摩ニュータウンの丘陵。",
+    "food": "飲食15軒、居酒屋9軒、カフェほぼなし。路地探しよりモール飯が強い。",
+    "nightlife": "深夜営業5軒、カラオケ1軒。終電の早さを感じる夜。"
+  },
+  "ru": {
+    "atmosphere": "Плановый пригород Хатиодзи, широкие террасы, студенты. Дёшево, зелено, далеко.",
+    "landmarks": "Mitsui Outlet Park, Tokyo Metropolitan University, холмы Tama New Town.",
+    "food": "15 ресторанов, 9 изакай, кафе почти нет. Еда в молле надёжнее поисков в переулках.",
+    "nightlife": "5 поздних мест и 1 караоке. Последний поезд ощущается рано."
+  }
+}

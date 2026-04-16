@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Takasaki line junction, 22k riders, 104-min commute. Regional hub vibe. Cheap rent, modest food culture, some nightlife. Off-center escape.",
+    "landmarks": "17 pedestrian streets, modest scale. Low seismic risk (good soil). Not touristy.",
+    "food": "8 listings, 10, 3 izakaya. Solid midtown dining, nothing fancy.",
+    "nightlife": "4 midnight spots, 6 bars. Local scene, not clubs."
+  },
+  "ja": {
+    "atmosphere": "高崎線の要所。22000人が通勤。104分だが、安くて便利。",
+    "landmarks": "17の商店街。低い地震リスク。観光地ではない。",
+    "food": "8件、10件、居酒屋3軒。地方都市の食事レベル。",
+    "nightlife": "夜間営業4軒、バー6軒。居酒屋文化あり。"
+  },
+  "ru": {
+    "atmosphere": "Узловая станция линии Такасаки. 22 тыс пассажиров, 104 мин до центра. Региональный хаб, дёшево, есть жизнь.",
+    "landmarks": "17 торговых улиц. Низкий сейсмический риск. Не туристическое место.",
+    "food": "8 мест, 10 на карте, 3 изакая. Солидный региональный уровень еды.",
+    "nightlife": "4 поздних бара, 6 заведений. Местная сцена, не клубы."
+  }
+}

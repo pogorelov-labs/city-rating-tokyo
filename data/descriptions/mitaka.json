@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo Line workhorse with leafy edges. Practical, crowded, less smug than Kichijoji.",
+    "landmarks": "Ghibli Museum access, Inokashira Park walks, Dazai traces around town.",
+    "food": "112 restaurants, 49 izakayas, 10 cafes. Strong everyday grid, not flashy.",
+    "nightlife": "34 late spots, one club, no karaoke. Izakaya nights, not all-nighters."
+  },
+  "ja": {
+    "atmosphere": "中央線の実用派、端は緑多め。便利で混む、吉祥寺ほど気取らない。",
+    "landmarks": "ジブリ美術館方面、井の頭公園散歩、太宰治ゆかりの街角。",
+    "food": "飲食112軒、居酒屋49軒、カフェ10軒。派手さより毎日使える強さ。",
+    "nightlife": "深夜営業34軒、クラブ1軒、カラオケなし。居酒屋夜型、徹夜向きではない。"
+  },
+  "ru": {
+    "atmosphere": "Рабочая лошадка Chuo Line, с зелёными краями. Удобно, людно, без кичидзёдзи-позы.",
+    "landmarks": "Доступ к музею Ghibli, прогулки в Inokashira Park, следы Дадзая по району.",
+    "food": "112 ресторанов, 49 изакай, 10 кафе. Сильная повседневная сетка, без глянца.",
+    "nightlife": "34 поздних места, 1 клуб, караоке нет. Изакая-вечера, не ночной марафон."
+  }
+}

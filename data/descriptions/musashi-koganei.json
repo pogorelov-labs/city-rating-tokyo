@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chuo Line suburb with city services and family calm. Busy platform, sane streets.",
+    "landmarks": "Koganei Park and the open-air architecture museum anchor weekends. Station malls handle errands.",
+    "food": "Around 120 food spots; izakaya-heavy but balanced. Better than a suburb should be.",
+    "nightlife": "22 late spots, one karaoke. Local drinks, no real club lane."
+  },
+  "ja": {
+    "atmosphere": "中央線らしい生活力と家族向けの落ち着き。ホームは混む、街はまとも。",
+    "landmarks": "小金井公園と江戸東京たてもの園が週末の軸。駅ビルで用事は済む。",
+    "food": "飲食ピン約120件。居酒屋寄りだがバランスあり、郊外にしては強い。",
+    "nightlife": "深夜22件、カラオケ1件。地元飲み、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Пригород на Chuo Line: сервисы города, семейное спокойствие. Платформа шумит, улицы в норме.",
+    "landmarks": "Парк Koganei и музей под открытым небом держат выходные. У станции закрываются бытовые дела.",
+    "food": "Около 120 точек еды; много изакай, но баланс есть. Сильнее, чем ждёшь от пригорода.",
+    "nightlife": "22 поздних места, одно караоке. Локальные напитки, не клубная улица."
+  }
+}

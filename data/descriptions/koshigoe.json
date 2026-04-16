@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sleepy residential area, weekday mornings quiet, evenings livelier.",
+    "landmarks": "Large green space (2523k sqm). Walking trails, parks.",
+    "food": "57 restaurants, mostly Japanese chains. Few standouts.",
+    "nightlife": "Sparse nightlife. Neighborhood bars only. Early closing."
+  },
+  "ja": {
+    "atmosphere": "住宅地。朝は静か、夜少し人出。",
+    "landmarks": "大きな公園（2523k㎡）。緑の散歩道。",
+    "food": "飲食店57軒。チェーン多め。地元店少ない。",
+    "nightlife": "夜間営業3軒。11時過ぎ静か。"
+  },
+  "ru": {
+    "atmosphere": "Спальный район. Утро тихо, вечер оживлённо.",
+    "landmarks": "Большой парк (2523k кв.м). Тропы, зелень.",
+    "food": "Изакая-центр (10 мест). Вечером оживлено.",
+    "nightlife": "Поздно 3 мест. После 23:00 мертво."
+  }
+}

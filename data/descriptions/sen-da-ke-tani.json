@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Stadium-side Shibuya pocket, expensive and oddly quiet. Central, green, event-day chaos.",
+    "landmarks": "National Stadium, Meiji Jingu Gaien, Sendagaya tunnel lanes. Harajuku and Shinjuku flank it.",
+    "food": "247 restaurants, 83 izakayas, 16 bars. Strong lunches and event spillover.",
+    "nightlife": "59 late spots, one club marker, no karaoke. Drinks yes, party no."
+  },
+  "ja": {
+    "atmosphere": "国立競技場横の渋谷ポケット。高い、意外に静か、イベント日は混む。",
+    "landmarks": "国立競技場、明治神宮外苑、千駄ヶ谷の坂とトンネル。原宿と新宿の間。",
+    "food": "飲食247件、居酒屋83件、バー16件。ランチ強め、イベント客も流れる。",
+    "nightlife": "深夜59件、クラブ印1件、カラオケなし。飲めるが騒ぐ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Карман Сибуи у стадиона, дорого и странно тихо. Центр, зелень, хаос в дни событий.",
+    "landmarks": "National Stadium, Meiji Jingu Gaien, тоннельные улицы Sendagaya. Между Harajuku и Shinjuku.",
+    "food": "247 ресторанов, 83 изакая, 16 баров. Сильные ланчи и поток со стадиона.",
+    "nightlife": "59 поздних мест, один клуб-маркер, без караоке. Выпить да, тусить нет."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Zushi mountain retreat, hiking base, 76 minutes out. No food, pure nature isolation, zero nightlife.",
+    "landmarks": "Keikyu Zushi Line, 15.7 million sqm green (massive temple forest). Hiking gateway.",
+    "food": "Nearly zero—1 spot, bring lunch from Zushi proper.",
+    "nightlife": "None. Temple, nature, silence."
+  },
+  "ja": {
+    "atmosphere": "逗子の山奥。登山基地。76分の隔絶。",
+    "landmarks": "京急逗子線。1570万平方メートルの寺社林（神武寺）。登山口。",
+    "food": "ほぼなし。1軒のみ。弁当持参推奨。",
+    "nightlife": "皆無。寺、自然、沈黙。"
+  },
+  "ru": {
+    "atmosphere": "Гора Zushi, ворота для трекинга. 76 минут, полная изоляция.",
+    "landmarks": "Keikyu Zushi Line. 15.7 млн кв.м лес (храм Jinmu-Tera). Hiking gateway.",
+    "food": "По сути 0. 1 точка. Берите ланч заранее.",
+    "nightlife": "Не существует. Храм, природа, тишина."
+  }
+}

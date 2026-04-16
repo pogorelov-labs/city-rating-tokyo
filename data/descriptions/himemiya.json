@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Suburban Saitama on Tobu Skytree Line (4.5k riders). 67 min to center. Moderate rent (¥80k), commuter town.",
+    "landmarks": "Residential, minimal character. Small green zones, elevation 8m. Seismic high, no major landmarks.",
+    "food": "1 listings, 1 izakaya, 1 marker. Chain-dependent, unremarkable.",
+    "nightlife": "Minimal. Last train 00:27 but no venues — office workers zone."
+  },
+  "ja": {
+    "atmosphere": "埼玉郊外、東武スカイツリーライン（4500人/日）。センター67分。中程度家賃（80k）、通勤圏。",
+    "landmarks": "住宅地、個性ほぼなし。小さな緑地、標高8m。地震高。",
+    "food": "1店、居酒屋1軒、1マーカー。チェーン依存、平凡。",
+    "nightlife": "ほぼなし。終電00:27だが店ゼロ。"
+  },
+  "ru": {
+    "atmosphere": "Пригородная Сайтама на линии Тобу Скайтри (4.5k пассажиров). 67 мин до центра. Умеренная аренда (80k йен), спальный район.",
+    "landmarks": "Жилой, без колорита. Маленькие зелёные зоны, высота 8 м. Сейсморизк высокий.",
+    "food": "1 место listings, 1 изакая, 1 маркер. Сетевые кафе, заурядно.",
+    "nightlife": "Минимум. Последний поезд в 00:27, но мест нет — офисный район."
+  }
+}
