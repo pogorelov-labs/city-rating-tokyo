@@ -14,3 +14,8 @@ data/station-datamart.json
 data/prompts/
 # data/descriptions/ IS committed — that's the output we want to keep
 # data/generated-descriptions.json IS committed — that's the merged result
+
+# MCP embeddings (built offline by scripts/build-embeddings.py, ~80 MB).
+# Regenerated in the Docker stage 2 of mcp/Dockerfile, so the prod image
+# never reads from git for this file.
+data/embeddings.npz

@@ -573,6 +573,74 @@ Safety: the script refuses to run with unrelated dirty files and refuses to push
 
 **Note:** the frontend bakes ratings into static HTML at build time. Re-running scrapers alone does NOT update the live site — you must also run the refresh chain so `demo-ratings.ts` gets rewritten and committed.
 
+## MCP server (`mcp/`)
+
+Public MCP (Model Context Protocol) server exposing the dataset to AI
+clients (Claude Desktop, Claude Code, anything MCP-compatible). Lives in
+`mcp/`, deployed alongside the frontend at **`city-rating.pogorelov.dev/mcp`**
+(path-based Traefik routing — same domain, same TLS cert, different
+container).
+
+### Tools (9)
+
+Light (no model load, all <30 ms): `search_stations`, `get_station`,
+`compare_stations`, `list_pois`, `get_methodology`, `list_categories`.
+Heavy (semantic, ~50 ms warm + ~3 s first-call model load):
+`semantic_search(query, locale, field?)`, `find_similar(slug)`,
+`recommend(query, weights, filters, hybrid_alpha)`.
+
+### Architecture
+
+- **Datamart-backed** — reuses `scripts/build-datamart.py` output. MCP
+  loader additionally merges `generated-descriptions.json` (multilingual
+  4-field) and `livecams.json` on top, so `get_station` returns the same
+  shape the frontend's `getStation()` produces.
+- **Embeddings** — `intfloat/multilingual-e5-large` (1024d, ONNX via
+  fastembed, EN/JA/RU). 22,395 vectors per (slug × locale × field) +
+  per-(slug, locale) aggregate. ~80 MB on disk, in-memory cosine
+  via `numpy M @ q`. Build offline: `python3 scripts/build-embeddings.py`
+  (~19 min on M2 CPU). Output `data/embeddings.npz` (gitignored — image
+  re-builds it in the Docker stage 2).
+- **Auth** — NocoDB-backed bearer keys. Table `api_keys`
+  (`mzcavs8wz1bgwsb`): key_hash (SHA-256), email, use_case, status
+  (pending/active/revoked), rate_limit_per_min. Site form
+  `[locale]/api-access` issues `crk_<32 hex>` once, stores hash, status
+  starts pending. MCP refreshes cache every 5 min; per-key token bucket;
+  401/403/429/503 mapping. `MCP_AUTH_REQUIRED=false` for local dev.
+- **Path routing** — `/mcp/*` → MCP container (transport at `/mcp`,
+  health at `/mcp/healthz`), everything else → Next.js. Switching back
+  to a `mcp.pogorelov.dev` subdomain is a one-line Coolify change.
+
+Full deploy steps + auth schema in [`mcp/README.md`](mcp/README.md).
+
+### Local dev
+
+```bash
+# 1. Build the datamart (NocoDB-backed, ~60 s)
+python3 scripts/build-datamart.py
+
+# 2. (optional) Build embeddings for semantic tools (~19 min on M2)
+python3 scripts/build-embeddings.py
+
+# 3. Install + run
+cd mcp && pip install -e .
+MCP_TRANSPORT=http MCP_AUTH_REQUIRED=false python3 -m city_rating_mcp.server
+
+# Or stdio for Claude Desktop / Code:
+city-rating-mcp
+```
+
+Smoke test: `PYTHONPATH=mcp/src python3 mcp/scripts/smoke-test.py` runs
+all 9 tools end-to-end against the local datamart + embeddings.
+
+### Stack quirk
+
+`fastembed` only supports `multilingual-e5-large` (1024d, 2.2 GB), not
+`-base`. Picked over `paraphrase-multilingual-mpnet-base-v2` for max
+quality; VPS RAM holds at ~2.5 GB resident. If memory ever gets tight
+on the VPS, MiniLM-L12 (384d, 120 MB) is a one-line model swap in the
+build script + Dockerfile ARG.
+
 ## Homepage performance (CRTKY-61 — PR #44)
 
 Three optimizations landed in the homepage initial-load path. If you touch these call sites, preserve the patterns below or the gains regress:
