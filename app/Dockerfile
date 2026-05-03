@@ -11,6 +11,12 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# Cap V8 old-space at 4 GB so a runaway compile gets a clean heap-OOM
+# instead of the kernel killing the whole container. Pairs with the
+# /swapfile we added on the VPS — see PR #103. Bump if 4486+ pages
+# legitimately need more headroom; check the build log for "JavaScript
+# heap out of memory" before raising blindly.
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build
 
 # Production image
