@@ -17,6 +17,11 @@ Live site: https://city-rating.pogorelov.dev
 
 ## Tools
 
+> **Picking the right tool, reading confidence, source caveats, common
+> pitfalls, and copy-paste prompt patterns:** see [`USAGE.md`](USAGE.md).
+> AI clients calling this MCP should read it before quoting numbers as
+> facts — the dataset has known asymmetries that "100% coverage" hides.
+
 ### Light (no model load)
 
 | Tool | What it does |
