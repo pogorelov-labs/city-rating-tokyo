@@ -63,27 +63,25 @@ ls -lh data/embeddings.npz   # ~80 MB
 sha256sum data/embeddings.npz
 ```
 
+### Coolify configuration (one-time)
+
+In the MCP service (UUID `f4p97un8b5pj9wdbam40bq4u`) → **Persistent Storage** → Add → **Directory mount**:
+
+- **Source directory (host):** `/data/coolify/applications/f4p97un8b5pj9wdbam40bq4u/embeddings`
+- **Destination directory (container):** `/app/data/external`
+
+Coolify defaults the host source to `/data/coolify/applications/<uuid>` —
+the `/embeddings` suffix keeps the npz in its own subdir so we can drop
+sibling artifacts in the future without polluting the root.
+
 ### Uploading to the VPS
 
 ```bash
-# 1. Create the host directory (matches Coolify persistent storage path)
-ssh root@vps 'mkdir -p /data/coolify/services/city-rating-mcp/embeddings'
-
-# 2. scp the npz
-scp data/embeddings.npz \
-  root@vps:/data/coolify/services/city-rating-mcp/embeddings/
-
-# 3. Verify checksum on the host
-ssh root@vps 'sha256sum /data/coolify/services/city-rating-mcp/embeddings/embeddings.npz'
+APP=f4p97un8b5pj9wdbam40bq4u
+ssh root@vps "mkdir -p /data/coolify/applications/$APP/embeddings"
+scp data/embeddings.npz root@vps:/data/coolify/applications/$APP/embeddings/
+ssh root@vps "sha256sum /data/coolify/applications/$APP/embeddings/embeddings.npz"
 ```
-
-### Coolify configuration (one-time)
-
-In the MCP service's settings:
-
-- **Persistent Storage** → Add → Bind mount
-  - Source: `/data/coolify/services/city-rating-mcp/embeddings`
-  - Destination: `/app/data/external`
 
 The `CITY_RATING_EMBEDDINGS=/app/data/external/embeddings.npz` env var
 is set in the Dockerfile already — no app config change needed.
