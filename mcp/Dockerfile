@@ -1,10 +1,12 @@
 # City-rating MCP server — multi-stage build.
 #
 # Stage 1 builds the per-station datamart by running scripts/build-datamart.py
-# against NocoDB. Stage 2 builds embeddings from the (already committed)
-# generated-descriptions.json. Stage 3 is the runtime image. Both artifacts
-# are baked in so the runtime container has zero external dependencies
-# beyond the pre-cached fastembed model.
+# against NocoDB. Stage 2 only pre-caches the fastembed ONNX model (no
+# encoding work — we used to encode 17,916 texts here, but that took
+# ~110 min on a 2-core VPS for an artifact that's deterministic given
+# the committed descriptions). Embeddings.npz is now provided as a
+# RUNTIME bind mount from a Coolify persistent volume (see mcp/README
+# "Embeddings: host volume" section). Stage 3 is the runtime image.
 #
 # Build context is the REPO ROOT (the city-rating worktree), not mcp/. Coolify
 # config: dockerfile_path = mcp/Dockerfile, build_context = .
@@ -30,22 +32,22 @@ ENV NOCODB_API_TOKEN=${NOCODB_API_TOKEN}
 RUN python3 scripts/build-datamart.py
 
 
-# ---------- Stage 2: build embeddings + pre-cache fastembed model ----------
-FROM python:${PYTHON_VERSION} AS embeddings
+# ---------- Stage 2: pre-cache fastembed ONNX model ----------
+# Why pre-cache instead of letting fastembed download lazily on first
+# query: it keeps the cold-start tail latency bounded. Without the
+# pre-cache the first semantic_search call after a fresh container start
+# pays ~5 min for the 2.2 GB model download from HuggingFace's CDN.
+# Baking it in trades 5 min of build time for a predictable runtime.
+FROM python:${PYTHON_VERSION} AS model-cache
 
 ARG EMBEDDING_MODEL
 ENV FASTEMBED_CACHE_DIR=/opt/fastembed-cache
 
-WORKDIR /build
 RUN pip install --no-cache-dir fastembed numpy
 
-COPY scripts/build-embeddings.py /build/scripts/build-embeddings.py
-COPY app/src/data/generated-descriptions.json /build/app/src/data/generated-descriptions.json
-
-# Builds data/embeddings.npz AND populates the fastembed cache so the
-# runtime image can copy it instead of fetching at startup.
-RUN mkdir -p /opt/fastembed-cache /build/data \
-    && python3 scripts/build-embeddings.py --model "${EMBEDDING_MODEL}"
+RUN mkdir -p /opt/fastembed-cache \
+    && python3 -c "from fastembed import TextEmbedding; \
+       TextEmbedding(model_name='${EMBEDDING_MODEL}', cache_dir='/opt/fastembed-cache')"
 
 
 # ---------- Stage 3: runtime ----------
@@ -62,14 +64,15 @@ COPY mcp/pyproject.toml /app/pyproject.toml
 COPY mcp/src /app/src
 RUN pip install --no-cache-dir .
 
-COPY --from=datamart   /build/data/station-datamart.json /app/data/station-datamart.json
-COPY --from=embeddings /build/data/embeddings.npz        /app/data/embeddings.npz
-COPY --from=embeddings /opt/fastembed-cache              /opt/fastembed-cache
-COPY app/src/data/generated-descriptions.json            /app/app/src/data/generated-descriptions.json
-COPY app/src/data/livecams.json                          /app/app/src/data/livecams.json
+COPY --from=datamart    /build/data/station-datamart.json /app/data/station-datamart.json
+COPY --from=model-cache /opt/fastembed-cache              /opt/fastembed-cache
+COPY app/src/data/generated-descriptions.json             /app/app/src/data/generated-descriptions.json
+COPY app/src/data/livecams.json                           /app/app/src/data/livecams.json
 
 ENV CITY_RATING_DATAMART=/app/data/station-datamart.json
-ENV CITY_RATING_EMBEDDINGS=/app/data/embeddings.npz
+# Embeddings.npz must be bind-mounted at this path by the orchestrator
+# (Coolify persistent storage). Build does NOT bake it in — see README.
+ENV CITY_RATING_EMBEDDINGS=/app/data/external/embeddings.npz
 ENV CITY_RATING_DESCRIPTIONS=/app/app/src/data/generated-descriptions.json
 ENV CITY_RATING_LIVECAMS=/app/app/src/data/livecams.json
 ENV FASTEMBED_CACHE_DIR=/opt/fastembed-cache

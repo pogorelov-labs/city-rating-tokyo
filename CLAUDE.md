@@ -607,8 +607,11 @@ Heavy (semantic, ~50 ms warm + ~3 s first-call model load):
   fastembed, EN/JA/RU). 22,395 vectors per (slug × locale × field) +
   per-(slug, locale) aggregate. ~80 MB on disk, in-memory cosine
   via `numpy M @ q`. Build offline: `python3 scripts/build-embeddings.py`
-  (~19 min on M2 CPU). Output `data/embeddings.npz` (gitignored — image
-  re-builds it in the Docker stage 2).
+  (~19 min on M2 CPU). Output `data/embeddings.npz` (gitignored).
+  **Shipped to prod via Coolify persistent volume bind-mounted at
+  `/app/data/external/embeddings.npz`** — the Dockerfile no longer
+  encodes them in build (the in-Docker encode took ~110 min on the
+  2-core VPS). Refresh = scp new npz to the host path + restart container.
 - **Auth** — NocoDB-backed bearer keys. Table `api_keys`
   (`mzcavs8wz1bgwsb`): key_hash (SHA-256), email, use_case, status
   (pending/active/revoked), rate_limit_per_min. Site form
