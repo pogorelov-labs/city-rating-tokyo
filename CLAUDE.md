@@ -622,7 +622,7 @@ Heavy (semantic, ~50 ms warm + ~3 s first-call model load):
   health at `/mcp/healthz`), everything else → Next.js. Switching back
   to a `mcp.pogorelov.dev` subdomain is a one-line Coolify change.
 
-Full deploy steps + auth schema in [`mcp/README.md`](mcp/README.md).
+Full deploy steps + auth schema in [`mcp/README.md`](mcp/README.md). Tool-by-tool usage guide, source/confidence interpretation, common pitfalls in [`mcp/USAGE.md`](mcp/USAGE.md). The same usage guide is mirrored to `~/.claude/skills/city-rating-tokyo-mcp/SKILL.md` so it's available across Claude Code sessions, not just this repo.
 
 ### Local dev
 
