@@ -32,6 +32,7 @@ Known tables (IDs may change):
 | `station_elevation` | slug, elevation_m, lat, lng | Open-Elevation API (1493 stations, -2m to 741m) |
 | `station_seismic` | slug, prob_i60_30yr, prob_i55_30yr, intensity_50yr_p10, meshcode | J-SHIS Y2024 seismic hazard |
 | `osm_livability` | slug, supermarket_count, pharmacy_count, clinic_count, school_count, kindergarten_count, post_office_count, bank_count, laundry_count, dentist_count | Daily essentials (1493/1493 complete) |
+| `api_keys` | key_hash, email, use_case, status (pending/active/revoked), rate_limit_per_min, last_used_at, notes | MCP-server bearer keys — admin-only. To approve a request, flip status pending→active. Plaintext keys never live here, only SHA-256 hashes (see `mcp/README.md`). |
 
 ## Common operations
 

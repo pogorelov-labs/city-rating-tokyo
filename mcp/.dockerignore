@@ -1,0 +1,8 @@
+# mcp/.dockerignore is consulted when build_context = mcp/. We currently
+# build with build_context = repo-root so the root .dockerignore controls.
+# This file is kept for future use if the build context narrows.
+__pycache__
+*.pyc
+.venv
+.pytest_cache
+.ruff_cache
