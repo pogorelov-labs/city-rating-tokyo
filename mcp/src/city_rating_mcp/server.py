@@ -328,10 +328,41 @@ def _auth_middleware_factory(store: KeyStore):
     return AuthMiddleware
 
 
+def _check_runtime_artifacts() -> None:
+    """Probe data/model paths at startup so a missing volume mount fails
+    loud (with file paths) instead of breaking semantic tools at first
+    use. Datamart is mandatory; embeddings + descriptions are warned
+    about (light tools work without them)."""
+    from pathlib import Path
+
+    datamart = os.getenv("CITY_RATING_DATAMART", "")
+    if not datamart or not Path(datamart).exists():
+        LOG.error(
+            "Datamart not found at %r — light tools will fail. "
+            "Stage 1 of the Dockerfile builds it; for local dev run "
+            "scripts/build-datamart.py.", datamart,
+        )
+
+    embeddings = os.getenv("CITY_RATING_EMBEDDINGS", "")
+    if not embeddings or not Path(embeddings).exists():
+        LOG.warning(
+            "Embeddings not found at %r — semantic_search / find_similar / "
+            "recommend will raise on first call. In production this file "
+            "must be bind-mounted from a Coolify persistent volume "
+            "(see mcp/README 'Embeddings: host volume'). For local dev: "
+            "python3 scripts/build-embeddings.py.", embeddings,
+        )
+    else:
+        size_mb = Path(embeddings).stat().st_size / 1024 / 1024
+        LOG.info("Embeddings file present at %s (%.1f MB).", embeddings, size_mb)
+
+
 def _serve_http(host: str, port: int, path: str) -> None:
     """HTTP transport with NocoDB-backed bearer-token auth."""
     import uvicorn
     from starlette.middleware import Middleware
+
+    _check_runtime_artifacts()
 
     auth_required = os.getenv("MCP_AUTH_REQUIRED", "true").lower() not in ("false", "0", "no")
     store = KeyStore() if auth_required else None

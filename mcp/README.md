@@ -41,29 +41,78 @@ that, queries are ~50 ms (40 ms ONNX inference + 5 ms cosine + overhead).
 
 Default weights and filter ranges match `app/src/lib/types.ts:DEFAULT_WEIGHTS` / `DEFAULT_FILTERS`.
 
-## Embeddings build
+## Embeddings: host volume
 
-The embeddings file (`data/embeddings.npz`, ~80 MB) is generated offline
-once per descriptions refresh. Source: `app/src/data/generated-descriptions.json`
-(1493 stations × 3 locales × 4 fields = 17,916 texts).
+The embeddings file (`data/embeddings.npz`, ~80 MB, 22,395 e5-large
+vectors) is **not built inside Docker** and **not committed to git**.
+It lives on the host as a Coolify persistent volume, bind-mounted into
+the container at `/app/data/external/embeddings.npz`.
+
+Why: the encoding step (17,916 texts through e5-large ONNX) took ~110
+min on the 2-core VPS — wasteful on every redeploy because the inputs
+(`generated-descriptions.json`) only change when the description corpus
+is regenerated. Decoupling the artifact from the build cuts a redeploy
+from ~2 hours to ~7 min.
+
+### Generating the file
 
 ```bash
-# One-time on the M2 (downloads model ~2.2 GB, encodes in ~10-15 min)
+# One-time on the maintainer's M2 (~19 min wall, faster than VPS).
 python3 scripts/build-embeddings.py
-
-# Validate
-ls -lh data/embeddings.npz
+ls -lh data/embeddings.npz   # ~80 MB
+sha256sum data/embeddings.npz
 ```
 
-Model: `intfloat/multilingual-e5-large` (1024d, ONNX). Picked because it's
-the strongest multilingual encoder fastembed supports — EN/JA/RU all
-native, no language-specific tuning needed. e5 family requires `passage:`
-prefix on documents and `query:` on queries; both paths handle this
-automatically.
+### Uploading to the VPS
 
-The file format is a flat npz with parallel arrays (`vectors`, `slugs`,
-`locales`, `fields`, `model`). The MCP loader splits it into per-(locale,
-field) views in O(1) at startup so cosine queries don't pay a mask cost.
+```bash
+# 1. Create the host directory (matches Coolify persistent storage path)
+ssh root@vps 'mkdir -p /data/coolify/services/city-rating-mcp/embeddings'
+
+# 2. scp the npz
+scp data/embeddings.npz \
+  root@vps:/data/coolify/services/city-rating-mcp/embeddings/
+
+# 3. Verify checksum on the host
+ssh root@vps 'sha256sum /data/coolify/services/city-rating-mcp/embeddings/embeddings.npz'
+```
+
+### Coolify configuration (one-time)
+
+In the MCP service's settings:
+
+- **Persistent Storage** → Add → Bind mount
+  - Source: `/data/coolify/services/city-rating-mcp/embeddings`
+  - Destination: `/app/data/external`
+
+The `CITY_RATING_EMBEDDINGS=/app/data/external/embeddings.npz` env var
+is set in the Dockerfile already — no app config change needed.
+
+If the bind mount is missing or the npz is absent, the container starts
+fine (light tools work) but logs a WARN at startup and `semantic_search
+/ find_similar / recommend` raise on first call. The startup probe
+prints exact paths so misconfig is loud.
+
+### Refreshing embeddings
+
+When `generated-descriptions.json` changes:
+1. Regenerate `data/embeddings.npz` locally (`python3 scripts/build-embeddings.py`)
+2. scp to the host (overwrites the bind-mount target)
+3. Restart the MCP container in Coolify (or `docker restart …`)
+
+No image rebuild needed.
+
+### Model choice
+
+`intfloat/multilingual-e5-large` (1024d, ONNX). Strongest multilingual
+encoder fastembed supports — EN/JA/RU all native. e5 family requires
+`passage:` prefix on documents and `query:` on queries; both code paths
+handle this automatically.
+
+The npz is a flat numpy archive with parallel arrays (`vectors`,
+`slugs`, `locales`, `fields`, `model`). The MCP loader splits it into
+per-(locale, field) views in O(1) at startup so cosine queries don't
+pay a mask cost.
 
 ## Run locally (stdio for Claude Desktop / Claude Code)
 
