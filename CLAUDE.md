@@ -558,6 +558,14 @@ git push origin main     # Coolify auto-deploys
 
 **Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
+**Deploy memory budget (since 2026-05-03):** the VPS has 7.8 GB RAM and Next.js compiling 4486 pages peaks at 3-4 GB resident — borderline without swap. Two guard rails are in place:
+- VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~12 GB; see memory `reference_vps_swap.md` for the setup commands.
+- `app/Dockerfile` builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`) instead of getting silently killed by the kernel.
+
+If a build dies again, check `dmesg | grep oom` on the VPS and the Docker daemon log for `oom_kill event` before raising the heap cap — extra pages don't usually require it.
+
+**`npm audit` failures from transitive deps:** never run `npm audit fix --force`; it tries to downgrade `next` to a years-old major. Add an `overrides` block in `app/package.json` instead (e.g. `{"postcss": "^8.5.13"}` was needed when GHSA-qx2v-qp2m-jg93 went moderate). Verify with `npm ls <pkg>` + `npm audit`. Drop the override once upstream ships the patched copy.
+
 ## Refreshing ratings data
 
 Use the one-command script instead of running compute/export/build manually:
