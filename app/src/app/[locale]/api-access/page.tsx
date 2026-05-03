@@ -66,7 +66,7 @@ export default async function ApiAccessPage({
           <p className="mt-1">
             {t('docs')}:{' '}
             <a
-              href="https://github.com/pogorelov-labs/city-rating/blob/main/mcp/README.md"
+              href="https://github.com/pogorelov-labs/city-rating-tokyo/blob/main/mcp/README.md"
               className="text-blue-600 hover:underline"
               target="_blank"
               rel="noreferrer"
