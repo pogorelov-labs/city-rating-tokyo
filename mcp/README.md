@@ -273,7 +273,7 @@ healthz on the bare host (it'd be hidden behind Next.js anyway).
    city-rating Coolify service. The site reuses `NOCODB_API_URL` and
    `NOCODB_API_TOKEN` already wired for the feedback form. **Redeploy.**
 3. **MCP service in Coolify:**
-   - **New resource → Public Repository → `pogorelov-labs/city-rating`**
+   - **New resource → Public Repository → `pogorelov-labs/city-rating-tokyo`**
    - Build pack: **Dockerfile**
    - Dockerfile path: `mcp/Dockerfile`
    - Build context: `.` (repo root, NOT `mcp/`)
