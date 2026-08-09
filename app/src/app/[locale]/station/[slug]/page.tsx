@@ -92,6 +92,10 @@ export default async function StationPage({
   const images = imageData[slug] || [];
   const places = placesData[slug] || [];
 
+  // The editorial score is a computed weighted value, not an aggregate of
+  // human ratings, so we intentionally do NOT emit schema.org AggregateRating
+  // (which would trigger Search Console warnings for missing ratingCount and
+  // misrepresent the score's semantics).
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Place',
@@ -103,14 +107,6 @@ export default async function StationPage({
       latitude: station.lat,
       longitude: station.lng,
     },
-    ...(score !== null && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: score,
-        bestRating: 10,
-        worstRating: 1,
-      },
-    }),
   };
 
   return (

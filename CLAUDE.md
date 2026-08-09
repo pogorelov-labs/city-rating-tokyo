@@ -137,10 +137,10 @@ Sources: station line_count (100%), MLIT S12 passengers (94%).
 ```
 raw = suumo_1k                                             # real (273 stations)
     || ward_average                                         # Nominatim-matched (713 more)
-    || exp(12.394 - 0.02453 * distance_km)                  # log-linear regression (rest)
+    || exp(regression)                                      # log-linear regression (rest)
 rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80k
 ```
-Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`.
+Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares from the Suumo rent sample; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
 
 ### daily_essentials (14%)
 ```
@@ -558,8 +558,8 @@ git push origin main     # Coolify auto-deploys
 
 **Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
-**Deploy memory budget (since 2026-05-03):** the VPS has 7.8 GB RAM and Next.js compiling 4486 pages peaks at 3-4 GB resident — borderline without swap. Two guard rails are in place:
-- VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~12 GB; see memory `reference_vps_swap.md` for the setup commands.
+**Deploy memory budget (since 2026-05-03):** the VPS has 15 GB RAM (plus a 4 GB swapfile) and Next.js compiling 4486 pages peaks at 3-4 GB resident. With the current 63-container load there is ~8.7 GB headroom for builds. Two guard rails are in place:
+- VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~19 GB; see memory `reference_vps_swap.md` for the setup commands.
 - `app/Dockerfile` builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`) instead of getting silently killed by the kernel.
 
 If a build dies again, check `dmesg | grep oom` on the VPS and the Docker daemon log for `oom_kill event` before raising the heap cap — extra pages don't usually require it.
