@@ -96,7 +96,7 @@ The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI
 ### NocoDB Access
 ```
 URL: https://nocodb.pogorelov.dev
-Token: REDACTED_NOCODB_TOKEN
+Token: set via `$NOCODB_API_TOKEN` env var (never commit the literal — see .gitignore)
 API: /api/v2/tables/{TABLE_ID}/records
 ```
 
@@ -523,7 +523,7 @@ ssh -i ~/.ssh/coolify_vps root@217.196.61.98
 # Launch a scraper
 docker run -d --name SCRAPER_NAME --restart=no \
   -e NOCODB_API_URL=https://nocodb.pogorelov.dev \
-  -e NOCODB_API_TOKEN=REDACTED_NOCODB_TOKEN \
+  -e NOCODB_API_TOKEN=$NOCODB_API_TOKEN \
   -e HOTPEPPER_API_KEY=b20f206ef29b9f48 \
   -v /tmp/SCRIPT.py:/app/scraper.py:ro \
   -v /tmp/stations.json:/app/data/stations.json:ro \

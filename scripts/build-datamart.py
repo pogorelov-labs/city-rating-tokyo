@@ -18,7 +18,9 @@ from pathlib import Path
 
 # NocoDB config
 NOCODB_URL = os.getenv("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
-NOCODB_TOKEN = os.getenv("NOCODB_API_TOKEN", "REDACTED_NOCODB_TOKEN")
+NOCODB_TOKEN = os.getenv("NOCODB_API_TOKEN")
+if not NOCODB_TOKEN:
+    sys.exit("FATAL: NOCODB_API_TOKEN environment variable is not set.")
 
 # Table IDs
 TABLES = {

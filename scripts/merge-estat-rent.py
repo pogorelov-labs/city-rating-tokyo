@@ -35,7 +35,9 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # NocoDB config (for fetching station_wards)
 NOCODB_URL = os.environ.get("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
-NOCODB_TOKEN = os.environ.get("NOCODB_API_TOKEN", "REDACTED_NOCODB_TOKEN")
+NOCODB_TOKEN = os.environ.get("NOCODB_API_TOKEN")
+if not NOCODB_TOKEN:
+    sys.exit("FATAL: NOCODB_API_TOKEN environment variable is not set.")
 STATION_WARDS_TABLE = "m74rdmspn3trrqc"
 
 

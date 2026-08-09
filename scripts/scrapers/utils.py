@@ -16,7 +16,11 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 
 # NocoDB configuration
 NOCODB_API_URL = os.environ.get("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
-NOCODB_API_TOKEN = os.environ.get("NOCODB_API_TOKEN", "REDACTED_NOCODB_TOKEN")
+NOCODB_API_TOKEN = os.environ.get("NOCODB_API_TOKEN")
+if not NOCODB_API_TOKEN:
+    import sys
+    sys.exit("FATAL: NOCODB_API_TOKEN environment variable is not set. "
+             "Set it to a valid NocoDB API token (see NocoDB → Settings → API Tokens).")
 
 # Table IDs (created via API)
 TABLE_IDS = {

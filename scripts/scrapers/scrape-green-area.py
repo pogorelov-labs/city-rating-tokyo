@@ -14,7 +14,7 @@ Usage:
 Run on VPS for reliability:
   docker run -d --name green-area --restart=no \
     -e NOCODB_API_URL=https://nocodb.pogorelov.dev \
-    -e NOCODB_API_TOKEN=REDACTED_NOCODB_TOKEN \
+    -e NOCODB_API_TOKEN=$NOCODB_API_TOKEN \
     -v /tmp/scrape-green-area.py:/app/scraper.py:ro \
     -v /tmp/stations.json:/app/data/stations.json:ro \
     python:3.11-slim bash -c "pip install --quiet requests && python3 -u /app/scraper.py"
