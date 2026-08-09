@@ -4,8 +4,10 @@ import { getClientIP, validateOrigin } from '@/lib/api-security';
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const SLUG_RE = /^[a-z0-9-]+$/;
 
-/** Allowed path characters for page_url (see validatePageUrl). */
-const PAGE_URL_PATH_RE = /^\/[a-z0-9._/-]+$/i;
+/** Allowed path characters for page_url (see validatePageUrl). The `*` (not `+`)
+ *  permits the bare-root path "/" sent by the general-feedback widget on the
+ *  EN homepage (the default locale has no /en prefix). */
+const PAGE_URL_PATH_RE = /^\/[a-z0-9._/-]*$/i;
 
 /** Last submit time per IP — only blocks rapid repeat (double-click / instant re-submit). */
 const rateLimit = new Map<string, number>();
@@ -14,23 +16,29 @@ const rateLimit = new Map<string, number>();
 const MIN_SUBMIT_INTERVAL_MS = 2500;
 
 /**
- * Validate that `page_url` is a same-origin relative URL.
+ * Validate that `page_url` is a same-origin relative URL and return the
+ * sanitized pathname, or `null` if it should be rejected.
  *
  * `startsWith('/')` alone accepts protocol-relative URLs (`//evil.com`) and
  * backslash tricks (`/\\evil.com`), which browsers resolve to a remote host.
  * We parse with a fixed base and require the parsed origin to stay equal to
  * the base (no host is introduced) AND the pathname to match a safe charset.
+ *
+ * Returns the parsed pathname (with no query/hash) so callers persist the
+ * sanitized form — otherwise an attacker-supplied query like
+ * `?redirect=//evil.com` survives validation and gets stored raw.
  */
-function validatePageUrl(page_url: string): boolean {
-  if (page_url.length > 500) return false;
+function validatePageUrl(page_url: string): string | null {
+  if (page_url.length > 500) return null;
   let parsed: URL;
   try {
     parsed = new URL(page_url, 'http://localhost');
   } catch {
-    return false;
+    return null;
   }
-  if (parsed.origin !== 'http://localhost') return false;
-  return PAGE_URL_PATH_RE.test(parsed.pathname);
+  if (parsed.origin !== 'http://localhost') return null;
+  if (!PAGE_URL_PATH_RE.test(parsed.pathname)) return null;
+  return parsed.pathname;
 }
 
 export async function POST(req: NextRequest) {
@@ -75,7 +83,8 @@ export async function POST(req: NextRequest) {
   if (station_slug && !SLUG_RE.test(station_slug)) {
     return NextResponse.json({ error: 'invalid station_slug format' }, { status: 400 });
   }
-  if (!page_url || typeof page_url !== 'string' || !validatePageUrl(page_url)) {
+  const safePageUrl = (!page_url || typeof page_url !== 'string') ? null : validatePageUrl(page_url);
+  if (safePageUrl === null) {
     return NextResponse.json({ error: 'page_url must be a relative same-origin path' }, { status: 400 });
   }
   if (!visitor_id || !UUID_RE.test(visitor_id)) {
@@ -111,7 +120,7 @@ export async function POST(req: NextRequest) {
     vote,
     comment: sanitizedComment || null,
     station_slug: station_slug || null,
-    page_url,
+    page_url: safePageUrl,
     visitor_id,
     user_agent: req.headers.get('user-agent') || null,
     created_at: new Date().toISOString(),
