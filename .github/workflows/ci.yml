@@ -41,15 +41,26 @@ jobs:
       - name: Install package + dev deps
         run: pip install -e ".[dev]"
       - name: Ruff
+        # PYTHONPATH includes the shared schema package so the lint sees the
+        # city_rating_schema imports that mcp/src/city_rating_mcp/scoring.py uses.
+        env:
+          PYTHONPATH: ${{ github.workspace }}/packages/schema/python
         run: ruff check src/
       - name: Pytest
         # No unit tests exist yet — this step primarily confirms the
         # editable install imports cleanly. Pytest exits 5 when no tests
-        # are collected; treat that (and 0) as success.
+        # are collected; treat that (and 0) as success. Note: GitHub's
+        # default shell is `bash -e`, which aborts BEFORE the exit-code
+        # check can run, so we disable -e for this step.
+        env:
+          PYTHONPATH: ${{ github.workspace }}/packages/schema/python
+        shell: bash
         run: |
+          set +e
           pytest
           code=$?
           if [ "$code" -ne 0 ] && [ "$code" -ne 5 ]; then exit "$code"; fi
+          exit 0
       # NOTE: mcp/scripts/smoke-test.py is a deploy-time / manual check —
       # it requires data/station-datamart.json, data/embeddings.npz, and
       # loads the 2.2 GB fastembed model at runtime. Not runnable in CI.
