@@ -1,5 +1,6 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { getClientIP, validateOrigin } from '@/lib/api-security';
 
 /**
  * MCP API key issuance.
@@ -16,16 +17,9 @@ import { NextRequest, NextResponse } from 'next/server';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_SUBMIT_INTERVAL_MS = 60_000;
 const MAX_USE_CASE_LEN = 500;
+const MAX_EMAIL_LEN = 320;
 
 const rateLimit = new Map<string, number>();
-
-function getClientIP(req: NextRequest): string {
-  return (
-    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    req.headers.get('x-real-ip') ||
-    'unknown'
-  );
-}
 
 function generateKey(): string {
   return `crk_${randomBytes(16).toString('hex')}`;
@@ -36,8 +30,7 @@ function hashKey(plaintext: string): string {
 }
 
 export async function POST(req: NextRequest) {
-  const origin = req.headers.get('origin');
-  if (origin && !origin.endsWith('.pogorelov.dev') && !origin.startsWith('http://localhost')) {
+  if (!validateOrigin(req)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -60,7 +53,7 @@ export async function POST(req: NextRequest) {
   const email = (body.email || '').trim().toLowerCase();
   const useCase = (body.use_case || '').replace(/<[^>]*>/g, '').trim();
 
-  if (!EMAIL_RE.test(email) || email.length > 320) {
+  if (!EMAIL_RE.test(email) || email.length > MAX_EMAIL_LEN) {
     return NextResponse.json({ error: 'Valid email required' }, { status: 400 });
   }
   if (useCase.length < 10 || useCase.length > MAX_USE_CASE_LEN) {
