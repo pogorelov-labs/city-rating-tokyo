@@ -100,6 +100,10 @@ if [[ "$DRY_RUN" == 1 ]]; then
     warn "dry-run: demo-ratings.ts NOT written"
     exit 0
 fi
+# export-ratings.py exits 1 if any station lacks a computed rating (missing_count > 0).
+# Thanks to `set -e` above, that non-zero exit propagates and aborts this script
+# before we can build or commit a partial demo-ratings.ts. To override on a known
+# partial run, call export-ratings.py directly with --allow-missing.
 python3 scripts/export-ratings.py
 ok "demo-ratings.ts updated"
 
