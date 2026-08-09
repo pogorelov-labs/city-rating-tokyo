@@ -260,7 +260,18 @@
     "liveCamsPlay": "Play live feed",
     "liveCamsClose": "Stop and close",
     "liveCamsOpenYoutube": "Watch on YouTube",
-    "liveCamsAttribution": "Live feeds via mini-tokyo-3d (MIT)"
+    "liveCamsAttribution": "Live feeds via mini-tokyo-3d (MIT)",
+    "howRatingsWork": {
+      "summary": "Ratings are based on real data scraped from HotPepper, OpenStreetMap, MLIT, Suumo, and other sources, then normalized across 1,493 Greater Tokyo stations. The colored dots next to each rating show how deep the underlying data goes.",
+      "learnMore": "Read the full methodology →"
+    },
+    "dataFreshness": {
+      "label": "Last updated: {date}"
+    },
+    "editorialBadge": {
+      "label": "Curated",
+      "tooltip": "This station's ratings were set by a human researcher using qualitative assessment, not purely from scraped data."
+    }
   },
   "seismicTiers": {
     "low": { "label": "Low", "description": "Below 3% probability" },

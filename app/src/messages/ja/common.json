@@ -260,7 +260,18 @@
     "liveCamsPlay": "ライブ配信を再生",
     "liveCamsClose": "停止して閉じる",
     "liveCamsOpenYoutube": "YouTubeで見る",
-    "liveCamsAttribution": "ライブ配信は mini-tokyo-3d (MIT) 経由"
+    "liveCamsAttribution": "ライブ配信は mini-tokyo-3d (MIT) 経由",
+    "howRatingsWork": {
+      "summary": "評価は、HotPepper、OpenStreetMap、MLIT、Suumoなどのソースからスクレイピングした実データに基づき、首都圏1,493駅で正規化しています。各評価の横にある色付きの点は、その裏付けデータの厚みを示しています。",
+      "learnMore": "評価方法の詳細 →"
+    },
+    "dataFreshness": {
+      "label": "最終更新: {date}"
+    },
+    "editorialBadge": {
+      "label": "編集評価",
+      "tooltip": "この駅の評価は、スクレイピングしたデータのみならず、研究者の定性的評価に基づいて設定されています。"
+    }
   },
   "seismicTiers": {
     "low": {

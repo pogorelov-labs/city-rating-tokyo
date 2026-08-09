@@ -260,7 +260,18 @@
     "liveCamsPlay": "Запустить трансляцию",
     "liveCamsClose": "Остановить и закрыть",
     "liveCamsOpenYoutube": "Смотреть на YouTube",
-    "liveCamsAttribution": "Трансляции через mini-tokyo-3d (MIT)"
+    "liveCamsAttribution": "Трансляции через mini-tokyo-3d (MIT)",
+    "howRatingsWork": {
+      "summary": "Оценки основаны на реальных данных, собранных из HotPepper, OpenStreetMap, MLIT, Suumo и других источников, и нормализованы по 1 493 станциям Большого Токио. Цветные точки рядом с каждой оценкой показывают, насколько глубоки лежащие в её основе данные.",
+      "learnMore": "Подробнее о методологии →"
+    },
+    "dataFreshness": {
+      "label": "Обновлено: {date}"
+    },
+    "editorialBadge": {
+      "label": "Кураторская",
+      "tooltip": "Оценки этой станции заданы исследователем на основе качественной оценки, а не только собранных данных."
+    }
   },
   "seismicTiers": {
     "low": {

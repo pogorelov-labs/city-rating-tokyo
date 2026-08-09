@@ -29,6 +29,7 @@ import stationImages from '@/data/station-images-all.json';
 import stationPlaces from '@/data/station-places.json';
 import { routing, Locale } from '@/i18n/routing';
 import { stationDisplayName } from '@/lib/station-name';
+import { isEditorialStation } from '@/lib/editorial';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 type ImageEntry = { url: string; alt: string; attribution?: string; photographer?: string; photographer_url?: string; source?: string; license?: string; lqip?: string };
@@ -91,6 +92,7 @@ export default async function StationPage({
   const mapsUrl = getGoogleMapsAreaUrl(station.lat, station.lng);
   const images = imageData[slug] || [];
   const places = placesData[slug] || [];
+  const isEditorial = isEditorialStation(station);
 
   // The editorial score is a computed weighted value, not an aggregate of
   // human ratings, so we intentionally do NOT emit schema.org AggregateRating
@@ -128,6 +130,18 @@ export default async function StationPage({
           </Link>
           <span className="text-gray-300">|</span>
           <span className="font-bold text-lg">{displayName}</span>
+          {isEditorial && (
+            <span
+              className="inline-flex items-center gap-1 text-[10px] font-medium text-white px-1.5 py-0.5 rounded-full"
+              style={{ backgroundColor: '#8B6DB0' }}
+              title={t('station.editorialBadge.tooltip')}
+            >
+              <svg className="w-2 h-2" viewBox="0 0 14 14" aria-hidden>
+                <rect x="3" y="3" width="8" height="8" rx="1" fill="currentColor" opacity="0.9" transform="rotate(45 7 7)" />
+              </svg>
+              {t('station.editorialBadge.label')}
+            </span>
+          )}
           <span className="text-gray-400">{secondaryName}</span>
           <a
             href={mapsUrl}
@@ -250,7 +264,14 @@ export default async function StationPage({
               <RadarChartWrapper ratings={station.ratings} />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">
-              <h2 className="font-bold text-lg mb-2">{t('station.ratingsTitle')}</h2>
+              <div className="flex items-baseline justify-between gap-2 mb-2">
+                <h2 className="font-bold text-lg">{t('station.ratingsTitle')}</h2>
+                {station.data_date && (
+                  <span className="text-xs text-gray-500 shrink-0">
+                    {t('station.dataFreshness.label', { date: station.data_date })}
+                  </span>
+                )}
+              </div>
               <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">
                 {t('station.ratingsCaption')}
                 {station.confidence ? t('station.ratingsCaptionWithConfidence') : null}
@@ -369,6 +390,26 @@ export default async function StationPage({
                   ))}
                 </div>
               )}
+              <details className="group mt-3">
+                <summary className="flex items-center gap-1.5 cursor-pointer text-[11px] text-gray-600 hover:text-gray-800 select-none marker:hidden list-none">
+                  <svg
+                    className="w-3 h-3 text-gray-400 transition-transform group-open:rotate-90 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                  {t('station.howRatingsWork.summary')}
+                  <Link
+                    href="/methodology"
+                    className="text-blue-600 hover:underline font-medium"
+                  >
+                    {t('station.howRatingsWork.learnMore')}
+                  </Link>
+                </summary>
+              </details>
             </section>
           </div>
         )}
