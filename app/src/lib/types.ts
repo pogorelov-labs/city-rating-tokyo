@@ -209,40 +209,20 @@ export interface FilterState {
   hasLiveCamera: boolean;
 }
 
-export const DEFAULT_FILTERS: FilterState = {
-  minRent: 80000,
-  maxRent: 300000,
-  minCommute: 10,
-  maxCommute: 60,
-  categoryMins: {},
-  hasLiveCamera: false,
-};
+// Constants now re-exported from @city-rating/schema (single source of truth).
+// The generated constants use generic types (Record<string, number>); the casts
+// here preserve the app's stricter types (FilterState, WeightConfig, etc.).
+import {
+  DEFAULT_FILTERS as SCHEMA_DEFAULT_FILTERS,
+  DEFAULT_WEIGHTS as SCHEMA_DEFAULT_WEIGHTS,
+  RATING_LABELS_EN as SCHEMA_RATING_LABELS,
+} from '@/lib/schema/constants';
 
-export const DEFAULT_WEIGHTS: WeightConfig = {
-  transport: 18,
-  rent: 18,
-  daily_essentials: 14,
-  safety: 10,
-  food: 12,
-  green: 8,
-  gym_sports: 4,
-  vibe: 4,
-  nightlife: 8,
-  crowd: 4,
-};
+export const DEFAULT_FILTERS: FilterState = SCHEMA_DEFAULT_FILTERS as unknown as FilterState;
 
-export const RATING_LABELS: Record<keyof StationRatings, string> = {
-  transport: 'Transport',
-  rent: 'Affordability',
-  daily_essentials: 'Daily Essentials',
-  safety: 'Safety',
-  food: 'Food & Dining',
-  green: 'Parks & Green',
-  gym_sports: 'Gym & Sports',
-  vibe: 'Vibe & Atmosphere',
-  nightlife: 'Nightlife',
-  crowd: 'Quietness',
-};
+export const DEFAULT_WEIGHTS: WeightConfig = SCHEMA_DEFAULT_WEIGHTS as unknown as WeightConfig;
+
+export const RATING_LABELS: Record<keyof StationRatings, string> = SCHEMA_RATING_LABELS as unknown as Record<keyof StationRatings, string>;
 
 export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
   shibuya: 'Shibuya',
