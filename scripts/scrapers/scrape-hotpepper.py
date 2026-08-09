@@ -37,7 +37,12 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
     """
     Query HotPepper API for restaurants near a location.
     radius: 1=300m, 2=500m, 3=1000m, 4=2000m, 5=3000m
-    Returns: (count, avg_rating)
+    Returns: int count on success, or None on failure.
+
+    Returns None (never 0) on error so the caller can skip the upsert rather
+    than persisting a transient zero — the scraper is incremental, so a
+    persisted 0 would never be retried and would permanently zero-rank the
+    station's food/nightlife signal.
     """
     params = {
         "key": API_KEY,
@@ -50,35 +55,68 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
     if genre:
         params["genre"] = genre
 
-    try:
-        resp = requests.get(BASE_URL, params=params, timeout=15)
-        resp.raise_for_status()
-        data = resp.json()
-        results = data.get("results", {})
-        total = int(results.get("results_available", 0))
-        return total
-    except Exception as e:
-        print(f"  API error: {e}")
-        return 0
+    # Retry with backoff — mirrors the pattern in scrape-osm-pois.py
+    # (3 attempts, growing sleep on 429/5xx/timeout/network errors).
+    for attempt in range(3):
+        try:
+            resp = requests.get(BASE_URL, params=params, timeout=15)
+            if resp.status_code == 429:
+                wait = 10 * (attempt + 1)
+                print(f"  Rate limited, waiting {wait}s...")
+                time.sleep(wait)
+                continue
+            if resp.status_code >= 500:
+                wait = 5 * (attempt + 1)
+                print(f"  Server error {resp.status_code}, retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            results = data.get("results", {})
+            return int(results.get("results_available", 0))
+        except requests.exceptions.Timeout:
+            wait = 5 * (attempt + 1)
+            print(f"  Timeout, retrying in {wait}s...")
+            time.sleep(wait)
+            continue
+        except Exception as e:
+            print(f"  API error (attempt {attempt+1}/3): {e}")
+            if attempt < 2:
+                time.sleep(5 * (attempt + 1))
+                continue
+    print("  Failed after 3 retries")
+    return None
 
 
 def query_all_categories(lat, lng, limiter):
-    """Query all restaurant categories for a station."""
+    """Query all restaurant categories for a station.
+
+    Returns a dict of counts, or None if any category query failed (so the
+    caller can skip the upsert instead of persisting partial/zero data).
+    """
     # Total restaurants
     limiter.wait()
     total = query_hotpepper(lat, lng, radius=3)
+    if total is None:
+        return None
 
     # Izakaya
     limiter.wait()
     izakaya = query_hotpepper(lat, lng, radius=3, genre=GENRE_IZAKAYA)
+    if izakaya is None:
+        return None
 
     # Bars
     limiter.wait()
     bar = query_hotpepper(lat, lng, radius=3, genre=GENRE_BAR)
+    if bar is None:
+        return None
 
     # Cafes
     limiter.wait()
     cafe = query_hotpepper(lat, lng, radius=3, genre=GENRE_CAFE)
+    if cafe is None:
+        return None
 
     return {
         "total_count": total,
@@ -121,12 +159,21 @@ def main():
 
     success = 0
     errors = 0
+    skipped = 0
     for i, station in enumerate(remaining):
         slug = station["slug"]
         lat, lng = station["lat"], station["lng"]
         print(f"[{i+1}/{len(remaining)}] {slug}...", end=" ", flush=True)
 
         data = query_all_categories(lat, lng, limiter)
+
+        if data is None:
+            # Query failed after retries — do NOT persist a zero. The scraper
+            # is incremental, so skipping means this station gets retried on
+            # the next run rather than being permanently zero-ranked.
+            print("SKIPPED (API error, will retry next run)")
+            skipped += 1
+            continue
 
         record = {
             "slug": slug,
@@ -144,7 +191,7 @@ def main():
             print(f"DB ERROR: {e}")
             errors += 1
 
-    print(f"\nDone! Success: {success}, Errors: {errors}")
+    print(f"\nDone! Success: {success}, Errors: {errors}, Skipped: {skipped}")
 
 
 if __name__ == "__main__":
