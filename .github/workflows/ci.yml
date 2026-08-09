@@ -22,3 +22,45 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run build
       - run: npm audit --audit-level=moderate
+
+  mcp:
+    # Lint + install check for the FastMCP Python service in mcp/.
+    # Does NOT build the Docker image: the Dockerfile bakes a 2.2 GB
+    # fastembed ONNX model cache (Stage 2) which is far too heavy for CI.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: mcp/pyproject.toml
+      - name: Install package + dev deps
+        run: pip install -e ".[dev]"
+      - name: Ruff
+        # PYTHONPATH includes the shared schema package so the lint sees the
+        # city_rating_schema imports that mcp/src/city_rating_mcp/scoring.py uses.
+        env:
+          PYTHONPATH: ${{ github.workspace }}/packages/schema/python
+        run: ruff check src/
+      - name: Pytest
+        # No unit tests exist yet — this step primarily confirms the
+        # editable install imports cleanly. Pytest exits 5 when no tests
+        # are collected; treat that (and 0) as success. Note: GitHub's
+        # default shell is `bash -e`, which aborts BEFORE the exit-code
+        # check can run, so we disable -e for this step.
+        env:
+          PYTHONPATH: ${{ github.workspace }}/packages/schema/python
+        shell: bash
+        run: |
+          set +e
+          pytest
+          code=$?
+          if [ "$code" -ne 0 ] && [ "$code" -ne 5 ]; then exit "$code"; fi
+          exit 0
+      # NOTE: mcp/scripts/smoke-test.py is a deploy-time / manual check —
+      # it requires data/station-datamart.json, data/embeddings.npz, and
+      # loads the 2.2 GB fastembed model at runtime. Not runnable in CI.

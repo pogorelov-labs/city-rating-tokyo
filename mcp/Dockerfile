@@ -74,6 +74,16 @@ COPY --from=model-cache /opt/fastembed-cache              /opt/fastembed-cache
 COPY app/src/data/generated-descriptions.json             /app/app/src/data/generated-descriptions.json
 COPY app/src/data/livecams.json                           /app/app/src/data/livecams.json
 
+# Drop root at runtime. fastembed writes lock/idx files inside its cache dir
+# on first model load even when the ONNX weights are pre-baked, so the cache
+# and the embeddings bind-mount parent must be owned by the runtime user.
+# /app/data/external is the bind-mount target for embeddings.npz (see README).
+RUN addgroup --system --gid 1001 mcp && \
+    adduser --system --uid 1001 --ingroup mcp mcp && \
+    mkdir -p /app/data/external && \
+    chown -R mcp:mcp /app/data /opt/fastembed-cache
+USER mcp
+
 ENV CITY_RATING_DATAMART=/app/data/station-datamart.json
 # Embeddings.npz must be bind-mounted at this path by the orchestrator
 # (Coolify persistent storage). Build does NOT bake it in — see README.
