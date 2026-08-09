@@ -371,5 +371,9 @@
     "docs": "Docs",
     "errorGeneric": "Something went wrong. Please try again.",
     "errorNetwork": "Network error. Please check your connection."
+  },
+  "methodology": {
+    "title": "Methodology",
+    "englishOnlyNotice": ""
   }
 }

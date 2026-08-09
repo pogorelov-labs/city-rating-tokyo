@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 
 export const metadata: Metadata = {
@@ -124,19 +124,26 @@ export default async function MethodologyPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations();
+  const isEnglish = locale === 'en';
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-blue-600 hover:underline">
-            &larr; Back to map
+            &larr; {t('nav.backToMap')}
           </Link>
-          <h1 className="text-lg font-semibold text-gray-900">Methodology</h1>
+          <h1 className="text-lg font-semibold text-gray-900">{t('methodology.title')}</h1>
           <div className="w-16" />
         </div>
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8 space-y-10">
+        {!isEnglish && (
+          <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800">
+            {t('methodology.englishOnlyNotice')}
+          </div>
+        )}
         {/* Intro */}
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-3">How ratings work</h2>
