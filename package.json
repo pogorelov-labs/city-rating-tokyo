@@ -1,0 +1,12 @@
+{
+  "name": "city-rating-e2e",
+  "private": true,
+  "description": "Root-level Playwright e2e harness for the city-rating app. The Next.js app itself lives under ./app and has its own package.json.",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  }
+}

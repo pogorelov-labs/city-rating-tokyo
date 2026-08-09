@@ -19,3 +19,9 @@ data/prompts/
 # Regenerated in the Docker stage 2 of mcp/Dockerfile, so the prod image
 # never reads from git for this file.
 data/embeddings.npz
+
+# Playwright artifacts (root-level e2e harness). The HTML report and
+# test-results dir are regenerated on every `npm run test:e2e` run.
+test-results/
+playwright-report/
+playwright/.cache/
