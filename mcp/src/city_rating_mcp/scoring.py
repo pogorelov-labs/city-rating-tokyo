@@ -1,10 +1,10 @@
 """Scoring + filtering helpers — Python mirror of app/src/lib/scoring.ts.
 
-Constants (RATING_KEYS, DEFAULT_WEIGHTS, DEFAULT_FILTERS, RENT_FLOOR,
-RENT_CEILING) are now imported from the shared `city_rating_schema` package
-so this file, the frontend scoring.ts, and compute-ratings.py all read from
-one source of truth. The functions below remain a hand-maintained mirror of
-the TS implementations — keep their behaviour aligned when either changes.
+Constants (RATING_KEYS, DEFAULT_WEIGHTS, DEFAULT_FILTERS) are imported from
+the shared `city_rating_schema` package so this file, the frontend scoring.ts,
+and compute-ratings.py all read from one source of truth. The functions below
+remain a hand-maintained mirror of the TS implementations — keep their
+behaviour aligned when either changes.
 """
 
 from __future__ import annotations
@@ -21,13 +21,11 @@ _SCHEMA_PATH = Path(__file__).resolve().parents[3] / "packages" / "schema" / "py
 if _SCHEMA_PATH.is_dir() and str(_SCHEMA_PATH) not in sys.path:
     sys.path.insert(0, str(_SCHEMA_PATH))
 
-from city_rating_schema.constants import (
+from city_rating_schema.constants import (  # noqa: E402
     RATING_KEYS,
     DEFAULT_WEIGHTS,
     DEFAULT_FILTERS,
     DEFAULT_ENVIRONMENT_FILTERS,
-    RENT_FLOOR,
-    RENT_CEILING,
 )
 
 # Re-export for backwards compatibility with existing callers that import
