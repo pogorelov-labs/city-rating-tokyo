@@ -88,7 +88,7 @@ The MCP container runs as a non-root user (`mcp`, uid 1001). The Dockerfile copi
 1. Edit `packages/schema/constants.json`
 2. `cd packages/schema && npm run gen`
 3. Verify `git diff` shows only the expected generated changes in `packages/schema/ts/`, `packages/schema/python/`, AND `app/src/lib/schema/` (the codegen dual-emits to keep the vendored copy inside the app's Docker build context)
-4. Run `cd app && npm test` and `pytest` — the unit tests guard the URL-backcompat invariant and scoring edge cases. Note: the cross-language parity test only guards the Python side today; for cross-language drift, verify by inspection that the TS vendored copy (`app/src/lib/schema/constants.ts`) matches the Python `constants.py`.
+4. Run `cd app && npm test` and `pytest` — the unit tests guard the URL-backcompat invariant and scoring edge cases. The cross-language parity test (`scripts/test_schema_parity.py`) parses the actual generated TS from `app/src/lib/schema/constants.ts` and compares every value against the Python `city_rating_schema` package, so it catches real drift across languages. **Caveat:** the parity test is not yet wired into CI (no repo-root `pytest` job) — it only runs if a developer runs it locally.
 5. If you changed `ABSOLUTE_CAPS`, you must re-run `compute-ratings.py` to regenerate ratings with the new caps
 6. If you changed `RATING_KEYS` order, you've broken all existing shared URLs — add a migration in `url-state.ts`
 
