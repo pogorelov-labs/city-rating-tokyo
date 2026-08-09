@@ -23,6 +23,32 @@ jobs:
       - run: npm run build
       - run: npm audit --audit-level=moderate
 
+  schema:
+    # Codegen drift gate + cross-language parity test.
+    # Ensures the generated constants (ts/ + python/ + vendored app copy)
+    # match constants.json, and that TS and Python values agree.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install schema codegen deps
+        working-directory: ./packages/schema
+        run: npm ci
+      - name: Codegen drift gate
+        working-directory: ./packages/schema
+        run: |
+          npm run gen
+          git diff --exit-code || (echo "ERROR: generated files are out of sync with constants.json. Run 'npm run gen' and commit the result." && exit 1)
+      - name: Cross-language parity test
+        run: |
+          pip install pytest pydantic --quiet
+          pytest scripts/test_schema_parity.py scripts/test_compute_ratings.py -v
+
   mcp:
     # Lint + install check for the FastMCP Python service in mcp/.
     # Does NOT build the Docker image: the Dockerfile bakes a 2.2 GB

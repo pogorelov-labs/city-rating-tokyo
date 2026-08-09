@@ -30,8 +30,17 @@ const generatedDescriptions = Object.fromEntries(
   )
 ) as Record<string, MultilingualDescription>;
 
+/**
+ * Module-level cache for getStations(). The data is static (build-time JSON
+ * imports), so caching is safe. Without this, each call rebuilds all 1493
+ * Station objects — and getStation() calls it once per slug per locale,
+ * resulting in ~9000 full-map traversals per build.
+ */
+let _stationsCache: Station[] | null = null;
+
 export function getStations(): Station[] {
-  return (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
+  if (_stationsCache) return _stationsCache;
+  _stationsCache = (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
     const demo = DEMO_RATINGS[s.slug];
     const rent = suumoRent[s.slug];
 
@@ -89,6 +98,7 @@ export function getStations(): Station[] {
     }
     return { ...s, lines: resolvedLines, ward, last_train, livecams: livecam_list, rent_avg: rentAvg, description, environment: env };
   });
+  return _stationsCache;
 }
 
 /** Lightweight station list for homepage — drops description, transit, lines, prefecture, confidence */
