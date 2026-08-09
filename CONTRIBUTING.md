@@ -4,7 +4,7 @@ A short guide for humans and AI agents working on this codebase. Read this befor
 
 ## Architecture in one paragraph
 
-1493 Tokyo train stations, 10 rating categories, 3 locales (EN/JA/RU), ~4486 SSG pages. **Next.js 16** frontend (`app/`) renders static pages at build time from `app/src/data/*.json` + `demo-ratings.ts`. A **Python scraper pipeline** (`scripts/`) writes to **NocoDB** (SQLite-backed); `compute-ratings.py` normalizes and writes `computed_ratings`; `export-ratings.py` generates `demo-ratings.ts`. A **FastMCP server** (`mcp/`) exposes the dataset to AI clients via a datamart JSON + semantic search at `city-rating.pogorelov.dev/mcp`. Deployed via **Coolify** (Docker) on a VPS with Traefik path-based routing.
+1493 Tokyo train stations, 10 rating categories, 3 locales (EN/JA/RU), ~4493 SSG pages. **Next.js 16** frontend (`app/`) renders static pages at build time from `app/src/data/*.json` + `demo-ratings.ts`. A **Python scraper pipeline** (`scripts/`) writes to **NocoDB** (SQLite-backed); `compute-ratings.py` normalizes and writes `computed_ratings`; `export-ratings.py` generates `demo-ratings.ts`. A **FastMCP server** (`mcp/`) exposes the dataset to AI clients via a datamart JSON + semantic search at `city-rating.pogorelov.dev/mcp`. Deployed via **Coolify** (Docker) on a VPS with Traefik path-based routing.
 
 ## The three scoring copies (and the schema package)
 
@@ -31,7 +31,7 @@ The shared constants (`RENT_FLOOR`, `RENT_CEILING`, `RATING_KEYS`, `DEFAULT_WEIG
 
 7. **CI status check is named `build`.** The required check on `main` is `build` (the job name in `ci.yml`). If you rename the job or restructure the workflow, you MUST register the new check name in GitHub branch protection before merging, or every PR will be blocked.
 
-8. **`main` deploys to production on merge.** Coolify auto-deploys from `main`. Every merge triggers a production build of a 4486-page site. Do not merge without local verification.
+8. **`main` deploys to production on merge.** Coolify auto-deploys from `main`. Every merge triggers a production build of a 4493-page site. Do not merge without local verification.
 
 ## URL state backcompat
 

@@ -372,7 +372,7 @@ app/src/app/
 - JSON-LD includes `inLanguage` field
 - Default locale (EN) has no URL prefix — existing indexed URLs unchanged
 
-### Build: 4486 pages in ~9s (7 workers)
+### Build: 4493 pages in ~30s (10 workers)
 
 ### Station naming convention (CRTKY-111, not yet implemented)
 
@@ -416,7 +416,7 @@ Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji
 | #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + VPS disk. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
 | #80 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. |
 | #81 | CRTKY-87, 50 | **Daily Essentials (10th category)** end-to-end: `scrape-osm-livability.py` (1493/1493), compute + export pipeline, frontend types/weights/presets rebalanced, `/methodology` page, OG images on 1488 station pages. Docs refresh (00-overview, VISION). Plane triage: 14 stale issues closed. |
-| #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4486 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
+| #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4493 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
 | #83 | CRTKY-34, 106 | **GDPR privacy footer** (desktop-only, cookie-free analytics notice in EN/JA/RU). **Methodology page** moved under `[locale]` routing (was 404). Livability scraper 1493/1493 complete (last 2 retried). |
 | #90 | CRTKY-54, 52, 112 | **Transport lines + ward/city on station pages.** 127 ekidata line IDs → name/operator/color mapping (`line-names.json`). 1493 ward records from NocoDB (`ward-data.json`). `TransportLines` component: color dots, locale-aware names, collapse at 6+ lines, type legend. `Station.lines` resolved from `string[]` to `LineInfo[]` at build time. `MapStation` unchanged. |
 | #91 | CRTKY-43 | **Rent expansion 274 → 1100 (18% → 74%)** via e-Stat govt statistics. `scripts/scrapers/scrape-estat-rent.py` + `merge-estat-rent.py`. Suumo actual listings keep priority; e-Stat fills ward-average fallback. `source` field: `suumo` \| `estat` \| old `ward_average` retired. |
@@ -558,7 +558,7 @@ git push origin main     # Coolify auto-deploys
 
 **Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
-**Deploy memory budget (since 2026-05-03):** the VPS has 15 GB RAM (plus a 4 GB swapfile) and Next.js compiling 4486 pages peaks at 3-4 GB resident. With the current 63-container load there is ~8.7 GB headroom for builds. Two guard rails are in place:
+**Deploy memory budget (since 2026-05-03):** the VPS has 15 GB RAM (plus a 4 GB swapfile) and Next.js compiling 4493 pages peaks at 3-4 GB resident. With the current 63-container load there is ~8.7 GB headroom for builds. Two guard rails are in place:
 - VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~19 GB; see memory `reference_vps_swap.md` for the setup commands.
 - `app/Dockerfile` builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`) instead of getting silently killed by the kernel.
 
