@@ -1,0 +1,90 @@
+{
+  "_comment_order_warning": "WARNING: key order in rating_keys, legacy_weight_keys, default_weights, rating_labels_en is LOAD-BEARING. Positional URL decode depends on it. Never sort.",
+  "_comment_legacy": "legacy_weight_keys is kept for backcompat only — used to decode pre-reorder shared URLs (9- or 10-position weight vectors in the OLD order). Never delete it; old links keep circulating.",
+  "rating_keys": [
+    "transport",
+    "rent",
+    "daily_essentials",
+    "safety",
+    "food",
+    "green",
+    "gym_sports",
+    "vibe",
+    "nightlife",
+    "crowd"
+  ],
+  "legacy_weight_keys": [
+    "food",
+    "nightlife",
+    "transport",
+    "rent",
+    "safety",
+    "green",
+    "gym_sports",
+    "vibe",
+    "crowd",
+    "daily_essentials"
+  ],
+  "default_weights": {
+    "transport": 18,
+    "rent": 18,
+    "daily_essentials": 14,
+    "safety": 10,
+    "food": 12,
+    "green": 8,
+    "gym_sports": 4,
+    "vibe": 4,
+    "nightlife": 8,
+    "crowd": 4
+  },
+  "default_filters": {
+    "min_rent": 80000,
+    "max_rent": 300000,
+    "min_commute": 10,
+    "max_commute": 60,
+    "category_mins": {},
+    "has_live_camera": false
+  },
+  "default_environment_filters": {
+    "hide_flood_risk": false,
+    "hide_high_seismic": false
+  },
+  "rent_floor": 80000,
+  "rent_ceiling": 300000,
+  "rating_labels_en": {
+    "transport": "Transport",
+    "rent": "Affordability",
+    "daily_essentials": "Daily Essentials",
+    "safety": "Safety",
+    "food": "Food & Dining",
+    "green": "Parks & Green",
+    "gym_sports": "Gym & Sports",
+    "vibe": "Vibe & Atmosphere",
+    "nightlife": "Nightlife",
+    "crowd": "Quietness"
+  },
+  "composite_anchors_default": {
+    "p5": 3.6,
+    "p50": 6.0,
+    "p95": 7.15
+  },
+  "percentile_anchors_empty_fallback": {
+    "p5": 1,
+    "p50": 5.5,
+    "p95": 10
+  },
+  "pipeline_only": {
+    "_comment": "Constants used only by the offline rating pipeline (scripts/compute-ratings.py). Not imported by the app or MCP server.",
+    "absolute_caps": {
+      "food": [[8, 100], [9, 400], [10, 1000]],
+      "nightlife": [[8, 20], [9, 100], [10, 300]],
+      "transport": [[8, 2], [9, 3], [10, 5]],
+      "green": [[8, 25], [9, 50], [10, 80]],
+      "gym_sports": [[8, 7], [9, 12], [10, 20]],
+      "vibe": [[8, 8], [9, 20], [10, 50]],
+      "rent": [[9, 1], [10, 2]]
+    },
+    "tokyo_station_lat": 35.6812,
+    "tokyo_station_lng": 139.7671
+  }
+}

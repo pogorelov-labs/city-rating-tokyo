@@ -1,56 +1,44 @@
 """Scoring + filtering helpers — Python mirror of app/src/lib/scoring.ts.
 
-Keep this file aligned with the frontend. Default weights and filter
-defaults must match `DEFAULT_WEIGHTS` / `DEFAULT_FILTERS` in
-app/src/lib/types.ts so MCP results match what users see on the site.
+Constants (RATING_KEYS, DEFAULT_WEIGHTS, DEFAULT_FILTERS, RENT_FLOOR,
+RENT_CEILING) are now imported from the shared `city_rating_schema` package
+so this file, the frontend scoring.ts, and compute-ratings.py all read from
+one source of truth. The functions below remain a hand-maintained mirror of
+the TS implementations — keep their behaviour aligned when either changes.
 """
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
 from typing import Any
 
-# 10 rating dimensions, life-first order (CRTKY-84)
-RATING_KEYS: tuple[str, ...] = (
-    "transport",
-    "rent",
-    "daily_essentials",
-    "safety",
-    "food",
-    "green",
-    "gym_sports",
-    "vibe",
-    "nightlife",
-    "crowd",
+# Bootstrap the shared schema package onto sys.path for local dev
+# (pip install -e . && city-rating-mcp). In the Docker image, PYTHONPATH is
+# set to /app/schema by the Dockerfile. This mirrors the pattern
+# compute-ratings.py uses and makes local dev work without manual PYTHONPATH.
+_SCHEMA_PATH = Path(__file__).resolve().parents[3] / "packages" / "schema" / "python"
+if _SCHEMA_PATH.is_dir() and str(_SCHEMA_PATH) not in sys.path:
+    sys.path.insert(0, str(_SCHEMA_PATH))
+
+from city_rating_schema.constants import (
+    RATING_KEYS,
+    DEFAULT_WEIGHTS,
+    DEFAULT_FILTERS,
+    DEFAULT_ENVIRONMENT_FILTERS,
+    RENT_FLOOR,
+    RENT_CEILING,
 )
 
-DEFAULT_WEIGHTS: dict[str, int] = {
-    "transport": 18,
-    "rent": 18,
-    "daily_essentials": 14,
-    "safety": 10,
-    "food": 12,
-    "green": 8,
-    "gym_sports": 4,
-    "vibe": 4,
-    "nightlife": 8,
-    "crowd": 4,
-}
-
+# Re-export for backwards compatibility with existing callers that import
+# these names from this module. DEFAULT_FILTERS from the schema package is
+# the 6 core fields; we merge in the environment-filter defaults so existing
+# callers that read DEFAULT_FILTERS["hide_flood_risk"] keep working.
 DEFAULT_FILTERS = {
-    "min_rent": 80_000,
-    "max_rent": 300_000,
-    "min_commute": 10,
-    "max_commute": 60,
-    "category_mins": {},
-    "has_live_camera": False,
-    "hide_flood_risk": False,
-    "hide_high_seismic": False,
+    **DEFAULT_FILTERS,
+    "hide_flood_risk": DEFAULT_ENVIRONMENT_FILTERS["hide_flood_risk"],
+    "hide_high_seismic": DEFAULT_ENVIRONMENT_FILTERS["hide_high_seismic"],
 }
-
-# Mirrors RENT_FLOOR / RENT_CEILING in app/src/lib/scoring.ts. Must match
-# scripts/compute-ratings.py RENT_FLOOR.
-RENT_FLOOR = 80_000
-RENT_CEILING = 300_000
 
 
 def composite_score(ratings: dict[str, float] | None, weights: dict[str, float] | None = None) -> float | None:

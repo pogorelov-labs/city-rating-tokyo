@@ -1,12 +1,11 @@
 import { WeightConfig, DEFAULT_WEIGHTS, FilterState, DEFAULT_FILTERS, StationRatings } from './types';
+import { LEGACY_WEIGHT_KEYS as SCHEMA_LEGACY_WEIGHT_KEYS } from '@/lib/schema/constants';
 
 const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS) as (keyof WeightConfig)[];
 
-// Old key order (pre-reorder) for backward compat with shared URLs
-const LEGACY_WEIGHT_KEYS: (keyof WeightConfig)[] = [
-  'food', 'nightlife', 'transport', 'rent', 'safety',
-  'green', 'gym_sports', 'vibe', 'crowd', 'daily_essentials',
-];
+// Old key order (pre-reorder) for backward compat with shared URLs.
+// Sourced from @city-rating/schema (single source of truth).
+const LEGACY_WEIGHT_KEYS = [...SCHEMA_LEGACY_WEIGHT_KEYS] as (keyof WeightConfig)[];
 
 export function encodeStateToParams(state: {
   weights: WeightConfig;
