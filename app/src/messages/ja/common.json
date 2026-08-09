@@ -262,6 +262,7 @@
     "liveCamsOpenYoutube": "YouTubeで見る",
     "liveCamsAttribution": "ライブ配信は mini-tokyo-3d (MIT) 経由",
     "howRatingsWork": {
+      "title": "評価の算出方法",
       "summary": "評価は、HotPepper、OpenStreetMap、MLIT、Suumoなどのソースからスクレイピングした実データに基づき、首都圏1,493駅で正規化しています。各評価の横にある色付きの点は、その裏付けデータの厚みを示しています。",
       "learnMore": "評価方法の詳細 →"
     },
@@ -327,7 +328,7 @@
     "typeOther": "その他"
   },
   "privacy": {
-    "notice": "Cookieフリーの分析 \u00b7 データは匿名のまま"
+    "notice": "Cookieフリーの分析 · データは匿名のまま"
   },
   "error": {
     "somethingWentWrong": "エラーが発生しました",

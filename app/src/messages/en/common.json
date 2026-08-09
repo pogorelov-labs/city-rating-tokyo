@@ -262,6 +262,7 @@
     "liveCamsOpenYoutube": "Watch on YouTube",
     "liveCamsAttribution": "Live feeds via mini-tokyo-3d (MIT)",
     "howRatingsWork": {
+      "title": "How ratings work",
       "summary": "Ratings are based on real data scraped from HotPepper, OpenStreetMap, MLIT, Suumo, and other sources, then normalized across 1,493 Greater Tokyo stations. The colored dots next to each rating show how deep the underlying data goes.",
       "learnMore": "Read the full methodology →"
     },
@@ -274,11 +275,26 @@
     }
   },
   "seismicTiers": {
-    "low": { "label": "Low", "description": "Below 3% probability" },
-    "moderate": { "label": "Moderate", "description": "3–15% probability" },
-    "high": { "label": "High", "description": "15–30% probability" },
-    "very_high": { "label": "Very High", "description": "Above 30% probability" },
-    "unknown": { "label": "Unknown", "description": "No data available" }
+    "low": {
+      "label": "Low",
+      "description": "Below 3% probability"
+    },
+    "moderate": {
+      "label": "Moderate",
+      "description": "3–15% probability"
+    },
+    "high": {
+      "label": "High",
+      "description": "15–30% probability"
+    },
+    "very_high": {
+      "label": "Very High",
+      "description": "Above 30% probability"
+    },
+    "unknown": {
+      "label": "Unknown",
+      "description": "No data available"
+    }
   },
   "elevationTiers": {
     "very_low": "Very low — check flood hazard maps",
@@ -312,7 +328,7 @@
     "typeOther": "Other"
   },
   "privacy": {
-    "notice": "Cookie-free analytics \u00b7 your data stays anonymous"
+    "notice": "Cookie-free analytics · your data stays anonymous"
   },
   "error": {
     "somethingWentWrong": "Something went wrong",

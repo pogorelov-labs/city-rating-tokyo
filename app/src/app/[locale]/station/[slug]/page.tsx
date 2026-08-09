@@ -136,8 +136,8 @@ export default async function StationPage({
               style={{ backgroundColor: '#8B6DB0' }}
               title={t('station.editorialBadge.tooltip')}
             >
-              <svg className="w-2 h-2" viewBox="0 0 14 14" aria-hidden>
-                <rect x="3" y="3" width="8" height="8" rx="1" fill="currentColor" opacity="0.9" transform="rotate(45 7 7)" />
+              <svg className="w-2 h-2" viewBox="0 0 10 10" aria-hidden>
+                <rect x="2" y="2" width="6" height="6" fill="currentColor" transform="rotate(45 5 5)" />
               </svg>
               {t('station.editorialBadge.label')}
             </span>
@@ -401,14 +401,17 @@ export default async function StationPage({
                   >
                     <path d="M9 18l6-6-6-6" />
                   </svg>
-                  {t('station.howRatingsWork.summary')}
+                  {t('station.howRatingsWork.title')}
+                </summary>
+                <div className="mt-2 pl-5 text-[11px] text-gray-600 leading-relaxed">
+                  <p>{t('station.howRatingsWork.summary')}</p>
                   <Link
                     href="/methodology"
-                    className="text-blue-600 hover:underline font-medium"
+                    className="inline-block mt-1.5 text-blue-600 hover:underline font-medium"
                   >
                     {t('station.howRatingsWork.learnMore')}
                   </Link>
-                </summary>
+                </div>
               </details>
             </section>
           </div>
