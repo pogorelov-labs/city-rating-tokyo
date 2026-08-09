@@ -14,7 +14,6 @@ from typing import Any
 
 from ..data import Datamart
 
-
 CATEGORY_FIELDS: dict[str, list[tuple[str, str]]] = {
     # (datamart_section, field) pairs aggregated under each category
     "food": [

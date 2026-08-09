@@ -22,10 +22,10 @@ if _SCHEMA_PATH.is_dir() and str(_SCHEMA_PATH) not in sys.path:
     sys.path.insert(0, str(_SCHEMA_PATH))
 
 from city_rating_schema.constants import (  # noqa: E402
-    RATING_KEYS,
-    DEFAULT_WEIGHTS,
-    DEFAULT_FILTERS,
     DEFAULT_ENVIRONMENT_FILTERS,
+    DEFAULT_FILTERS,
+    DEFAULT_WEIGHTS,
+    RATING_KEYS,
 )
 
 # Re-export for backwards compatibility with existing callers that import

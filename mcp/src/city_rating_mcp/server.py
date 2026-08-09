@@ -25,14 +25,20 @@ from .data import Datamart
 from .embeddings import EmbeddingStore
 from .scoring import RATING_KEYS
 from .tools.methodology import get_methodology as _methodology
-from .tools.pois import CATEGORY_FIELDS, list_pois as _list_pois
+from .tools.pois import CATEGORY_FIELDS
+from .tools.pois import list_pois as _list_pois
 from .tools.search import search_stations as _search
 from .tools.semantic import (
     find_similar as _find_similar,
+)
+from .tools.semantic import (
     recommend as _recommend,
+)
+from .tools.semantic import (
     semantic_search as _semantic_search,
 )
-from .tools.station import compare_stations as _compare, get_station as _get
+from .tools.station import compare_stations as _compare
+from .tools.station import get_station as _get
 
 LOG = logging.getLogger("city_rating_mcp")
 
