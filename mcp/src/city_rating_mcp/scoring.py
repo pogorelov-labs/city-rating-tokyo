@@ -9,7 +9,17 @@ the TS implementations — keep their behaviour aligned when either changes.
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
 from typing import Any
+
+# Bootstrap the shared schema package onto sys.path for local dev
+# (pip install -e . && city-rating-mcp). In the Docker image, PYTHONPATH is
+# set to /app/schema by the Dockerfile. This mirrors the pattern
+# compute-ratings.py uses and makes local dev work without manual PYTHONPATH.
+_SCHEMA_PATH = Path(__file__).resolve().parents[3] / "packages" / "schema" / "python"
+if _SCHEMA_PATH.is_dir() and str(_SCHEMA_PATH) not in sys.path:
+    sys.path.insert(0, str(_SCHEMA_PATH))
 
 from city_rating_schema.constants import (
     RATING_KEYS,
