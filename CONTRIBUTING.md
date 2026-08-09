@@ -27,7 +27,7 @@ The shared constants (`RENT_FLOOR`, `RENT_CEILING`, `RATING_KEYS`, `DEFAULT_WEIG
 
 5. **The embeddings rebuild is a hidden coupling.** `scripts/build-embeddings.py` reads `app/src/data/generated-descriptions.json` and produces `data/embeddings.npz` (bind-mounted into the MCP container via Coolify). Any change to descriptions invalidates the embeddings — re-run `build-embeddings.py` (~110 min on the VPS) and re-upload the `.npz` to the Coolify persistent volume.
 
-6. **`slug-redirects.json` (334 entries) is load-bearing for live URLs.** CRTKY-113 renamed station slugs; `next.config.ts` builds 301 redirects from this file. Do not delete it; do not move it out of `app/` (PR #86 fixed a Docker build-context break from exactly this).
+6. **Nothing the app imports can live outside `app/`.** The Next.js Docker build context is `app/` (per `app/Dockerfile`, `app/.dockerignore`). Any import that resolves to `../packages/...` or similar escapes the context and breaks Coolify builds — local builds pass (file exists on disk) but prod fails. This bit `slug-redirects.json` (PR #86) and the schema package's tsconfig alias (caught in review before merge). The codegen dual-emits the schema TS into `app/src/lib/schema/` specifically to stay in-context. If you add a new cross-package import, vendor it or change the build context — don't use a tsconfig path alias that escapes `app/`.
 
 7. **CI status check is named `build`.** The required check on `main` is `build` (the job name in `ci.yml`). If you rename the job or restructure the workflow, you MUST register the new check name in GitHub branch protection before merging, or every PR will be blocked.
 
@@ -87,7 +87,9 @@ The MCP container runs as a non-root user (`mcp`, uid 1001). The Dockerfile copi
 
 1. Edit `packages/schema/constants.json`
 2. `cd packages/schema && npm run gen`
-3. Verify `git diff` shows only the expected generated changes in `ts/` and `python/`
-4. Run `cd app && npm test` and `pytest` — the parity tests will catch drift
+3. Verify `git diff` shows only the expected generated changes in `packages/schema/ts/`, `packages/schema/python/`, AND `app/src/lib/schema/` (the codegen dual-emits to keep the vendored copy inside the app's Docker build context)
+4. Run `cd app && npm test` and `pytest` — the unit tests guard the URL-backcompat invariant and scoring edge cases. Note: the cross-language parity test only guards the Python side today; for cross-language drift, verify by inspection that the TS vendored copy (`app/src/lib/schema/constants.ts`) matches the Python `constants.py`.
 5. If you changed `ABSOLUTE_CAPS`, you must re-run `compute-ratings.py` to regenerate ratings with the new caps
 6. If you changed `RATING_KEYS` order, you've broken all existing shared URLs — add a migration in `url-state.ts`
+
+**Codegen drift gate (TODO):** CI does not yet assert `npm run gen && git diff --exit-code`. Until it does, a hand-edit to the generated files can silently diverge from `constants.json`. Always edit the JSON source and re-run `gen`.
