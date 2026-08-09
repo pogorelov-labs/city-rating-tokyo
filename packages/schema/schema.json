@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://city-rating.dev/schema.json",
+  "title": "City Rating schema",
+  "description": "Type definitions for the city-rating cross-language contract. The order of rating keys is defined in constants.json (rating_keys) and is load-bearing for positional URL decoding — never reorder.",
+  "$defs": {
+    "rating_key": {
+      "type": "string",
+      "enum": [
+        "transport",
+        "rent",
+        "daily_essentials",
+        "safety",
+        "food",
+        "green",
+        "gym_sports",
+        "vibe",
+        "nightlife",
+        "crowd"
+      ],
+      "description": "Canonical rating dimension. Order is defined in constants.json rating_keys and is load-bearing."
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": ["strong", "moderate", "estimate", "editorial"]
+    },
+    "seismic_risk_tier": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "very_high", "unknown"]
+    },
+    "elevation_tier": {
+      "type": "string",
+      "enum": ["very_low", "low", "moderate", "elevated", "high", "mountain", "unknown"]
+    },
+    "station_ratings": {
+      "type": "object",
+      "description": "The 10 canonical rating dimensions. All required.",
+      "properties": {
+        "transport": { "type": "number" },
+        "rent": { "type": "number" },
+        "daily_essentials": { "type": "number" },
+        "safety": { "type": "number" },
+        "food": { "type": "number" },
+        "green": { "type": "number" },
+        "gym_sports": { "type": "number" },
+        "vibe": { "type": "number" },
+        "nightlife": { "type": "number" },
+        "crowd": { "type": "number" }
+      },
+      "required": ["transport", "rent", "daily_essentials", "safety", "food", "green", "gym_sports", "vibe", "nightlife", "crowd"],
+      "additionalProperties": false
+    },
+    "weight_config": {
+      "type": "object",
+      "description": "Per-dimension weights. Same shape as station_ratings.",
+      "properties": {
+        "transport": { "type": "number" },
+        "rent": { "type": "number" },
+        "daily_essentials": { "type": "number" },
+        "safety": { "type": "number" },
+        "food": { "type": "number" },
+        "green": { "type": "number" },
+        "gym_sports": { "type": "number" },
+        "vibe": { "type": "number" },
+        "nightlife": { "type": "number" },
+        "crowd": { "type": "number" }
+      },
+      "required": ["transport", "rent", "daily_essentials", "safety", "food", "green", "gym_sports", "vibe", "nightlife", "crowd"],
+      "additionalProperties": false
+    },
+    "station_confidence": {
+      "type": "object",
+      "description": "Per-dimension confidence. daily_essentials is optional (pipeline has not yet regenerated all entries).",
+      "properties": {
+        "food": { "$ref": "#/$defs/confidence_level" },
+        "nightlife": { "$ref": "#/$defs/confidence_level" },
+        "transport": { "$ref": "#/$defs/confidence_level" },
+        "rent": { "$ref": "#/$defs/confidence_level" },
+        "safety": { "$ref": "#/$defs/confidence_level" },
+        "green": { "$ref": "#/$defs/confidence_level" },
+        "gym_sports": { "$ref": "#/$defs/confidence_level" },
+        "vibe": { "$ref": "#/$defs/confidence_level" },
+        "crowd": { "$ref": "#/$defs/confidence_level" },
+        "daily_essentials": { "$ref": "#/$defs/confidence_level" }
+      },
+      "required": ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"],
+      "additionalProperties": false
+    },
+    "station_sources": {
+      "type": "object",
+      "description": "Per-dimension source URLs. daily_essentials optional (same reason as station_confidence).",
+      "properties": {
+        "food": { "type": "array", "items": { "type": "string" } },
+        "nightlife": { "type": "array", "items": { "type": "string" } },
+        "transport": { "type": "array", "items": { "type": "string" } },
+        "rent": { "type": "array", "items": { "type": "string" } },
+        "safety": { "type": "array", "items": { "type": "string" } },
+        "green": { "type": "array", "items": { "type": "string" } },
+        "gym_sports": { "type": "array", "items": { "type": "string" } },
+        "vibe": { "type": "array", "items": { "type": "string" } },
+        "crowd": { "type": "array", "items": { "type": "string" } },
+        "daily_essentials": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd"],
+      "additionalProperties": false
+    },
+    "rent_avg": {
+      "type": "object",
+      "description": "Rent averages. NOTE: the '1k_1ldk' key starts with a digit — it is a valid JSON object key but requires quoting in TS and aliasing in Pydantic.",
+      "properties": {
+        "1k_1ldk": { "type": ["number", "null"] },
+        "2ldk": { "type": ["number", "null"] },
+        "source": { "type": "string" },
+        "updated": { "type": "string" }
+      },
+      "required": ["1k_1ldk", "2ldk", "source", "updated"],
+      "additionalProperties": false
+    },
+    "transit_minutes": {
+      "type": "object",
+      "description": "Minutes to the five major hubs.",
+      "properties": {
+        "shibuya": { "type": "number" },
+        "shinjuku": { "type": "number" },
+        "tokyo": { "type": "number" },
+        "ikebukuro": { "type": "number" },
+        "shinagawa": { "type": "number" }
+      },
+      "required": ["shibuya", "shinjuku", "tokyo", "ikebukuro", "shinagawa"],
+      "additionalProperties": false
+    },
+    "environment_data": {
+      "type": "object",
+      "description": "All fields optional — populated by the environment pipeline.",
+      "properties": {
+        "elevation_m": { "type": "number" },
+        "elevation_tier": { "$ref": "#/$defs/elevation_tier" },
+        "seismic_prob_i60": { "type": "number" },
+        "seismic_prob_i55": { "type": "number" },
+        "seismic_risk_tier": { "$ref": "#/$defs/seismic_risk_tier" }
+      },
+      "additionalProperties": false
+    },
+    "filter_state": {
+      "type": "object",
+      "description": "User-facing filter state. NOTE: does NOT include environment filters (hide_flood_risk / hide_high_seismic) — those live in environment_filters because they are toggleable separately from the main filter panel.",
+      "properties": {
+        "min_rent": { "type": "number" },
+        "max_rent": { "type": "number" },
+        "min_commute": { "type": "number" },
+        "max_commute": { "type": "number" },
+        "category_mins": {
+          "type": "object",
+          "additionalProperties": { "type": "number" },
+          "propertyNames": { "$ref": "#/$defs/rating_key" }
+        },
+        "has_live_camera": { "type": "boolean" }
+      },
+      "required": ["min_rent", "max_rent", "min_commute", "max_commute", "category_mins", "has_live_camera"],
+      "additionalProperties": false
+    },
+    "environment_filters": {
+      "type": "object",
+      "description": "Environment safety toggles, separate from filter_state.",
+      "properties": {
+        "hide_flood_risk": { "type": "boolean" },
+        "hide_high_seismic": { "type": "boolean" }
+      },
+      "required": ["hide_flood_risk", "hide_high_seismic"],
+      "additionalProperties": false
+    },
+    "percentile_anchors": {
+      "type": "object",
+      "description": "p5 / p50 / p95 anchors for the diverging composite palette.",
+      "properties": {
+        "p5": { "type": "number" },
+        "p50": { "type": "number" },
+        "p95": { "type": "number" }
+      },
+      "required": ["p5", "p50", "p95"],
+      "additionalProperties": false
+    },
+    "preset_profile": {
+      "type": "object",
+      "description": "Named preset profile (Young Pro / Family / etc).",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "icon": { "type": "string" },
+        "weights": { "$ref": "#/$defs/weight_config" },
+        "filters": {
+          "type": "object",
+          "description": "Partial filter_state — only the keys the preset overrides.",
+          "properties": {
+            "min_rent": { "type": "number" },
+            "max_rent": { "type": "number" },
+            "min_commute": { "type": "number" },
+            "max_commute": { "type": "number" },
+            "category_mins": {
+              "type": "object",
+              "additionalProperties": { "type": "number" },
+              "propertyNames": { "$ref": "#/$defs/rating_key" }
+            },
+            "has_live_camera": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["id", "label", "icon", "weights"],
+      "additionalProperties": false
+    }
+  }
+}
