@@ -4,7 +4,12 @@ Export computed ratings from NocoDB to demo-ratings.ts.
 Preserves AI-researched entries (those with descriptions) from existing file.
 Replaces heuristic entries with data-driven computed ratings.
 
-Usage: python3 scripts/export-ratings.py [--dry-run] [--output PATH]
+Usage: python3 scripts/export-ratings.py [--dry-run] [--output PATH] [--allow-missing]
+
+By default the script fails (exit 1) if any station in stations.json has no
+computed rating, which prevents shipping a partial demo-ratings.ts. Pass
+--allow-missing to tolerate a partial run (e.g. a newly-added station that has
+not yet been scraped/computed).
 """
 
 import argparse
@@ -212,6 +217,12 @@ def main():
     parser = argparse.ArgumentParser(description="Export computed ratings to demo-ratings.ts")
     parser.add_argument("--dry-run", action="store_true", help="Print stats without writing file")
     parser.add_argument("--output", type=str, default=str(DEFAULT_OUTPUT), help="Output path")
+    parser.add_argument(
+        "--allow-missing",
+        action="store_true",
+        help="Allow stations with no computed rating instead of failing (exit 1). "
+             "Use for partial runs where a new station has not yet been scraped.",
+    )
     args = parser.parse_args()
 
     output_path = Path(args.output)
@@ -342,6 +353,15 @@ def main():
     print(f"  Missing (no data):         {missing_count}")
     print(f"  Total entries:             {ai_count + computed_count}")
     print(f"  Output size:               {len(output_content)} chars")
+
+    if missing_count > 0 and not args.allow_missing:
+        print(
+            f"\nERROR: {missing_count} station(s) in stations.json have no computed rating. "
+            "Refusing to write a partial demo-ratings.ts. "
+            "Re-run compute-ratings.py, or pass --allow-missing to override.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     if args.dry_run:
         print("\nDry run — not writing file.")

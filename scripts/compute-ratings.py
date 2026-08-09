@@ -643,7 +643,10 @@ def main():
             batch = existing[i:i + 100]
             ids = [{"Id": r["Id"]} for r in batch if r.get("Id")]
             if ids:
-                req.delete(f"{db.base_url}/records", headers=db.headers, json=ids)
+                resp = req.delete(f"{db.base_url}/records", headers=db.headers, json=ids)
+                # Fail loudly on a non-2xx DELETE so we don't silently proceed
+                # to bulk_insert and create duplicate rows in computed_ratings.
+                resp.raise_for_status()
 
     # Insert (includes confidence, sources, data_date columns)
     records = list(results.values())
