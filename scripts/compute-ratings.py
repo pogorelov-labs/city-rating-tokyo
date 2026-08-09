@@ -7,7 +7,7 @@ Sources used per category:
   food:      HotPepper total + OSM food_count
   nightlife: HP midnight + izakaya + bar + OSM nightlife + karaoke + hostel
   transport: line_count + MLIT passengers
-  rent:      Suumo price → linear interpolation (¥70k→10, ¥300k→1)
+  rent:      Suumo price → linear interpolation (¥80k→10, ¥300k→1)
   safety:    ArcGIS weighted crime (Tokyo) / ward-level (others) + daytime adj
   green:     OSM green_count + green_area_sqm (when available)
   gym:       OSM gym_count
@@ -29,37 +29,28 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "packages" / "schema" / "python"))
 from utils import NocoDB, load_stations
+from city_rating_schema.constants import (
+    RENT_FLOOR,
+    RENT_CEILING,
+    RATING_KEYS,
+    PIPELINE_ONLY,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Rent linear interpolation (aligned with frontend rentToAffordability in app/src/lib/scoring.ts)
-# Floor raised from ¥70k → ¥80k because no real Suumo station is below ¥83,500;
-# the old floor only existed to absorb the broken distance_estimate fake prices.
-# MUST stay in sync with app/src/lib/scoring.ts RENT_FLOOR.
-RENT_FLOOR = 80_000   # ¥80k → rating 10
-RENT_CEILING = 300_000  # ¥300k → rating 1
-
-# Tokyo Station coordinates (used as reference point for rent regression)
-TOKYO_STATION_LAT = 35.6812
-TOKYO_STATION_LNG = 139.7671
+# Rent linear interpolation floor/ceiling and absolute caps now come from
+# @city-rating/schema (single source of truth shared with app/src/lib/scoring.ts
+# and mcp/src/city_rating_mcp/scoring.py). The ¥70k→¥80k history lives there.
+TOKYO_STATION_LAT = PIPELINE_ONLY.tokyo_station_lat
+TOKYO_STATION_LNG = PIPELINE_ONLY.tokyo_station_lng
 
 # Absolute caps for rating tiers (CRTKY formula v3).
 # Format: (min_rating, threshold) — "to score min_rating or higher, raw value must be >= threshold".
 # Applied AFTER log-percentile normalization, so cap can only decrease a rating, never increase it.
 # Purpose: prevent "top 5.6%" from automatically meaning "10" when the raw value isn't exceptional.
-ABSOLUTE_CAPS = {
-    "food":       [(8, 100), (9, 400),  (10, 1000)],  # hp_total + osm_food
-    "nightlife":  [(8, 20),  (9, 100),  (10, 300)],   # hp_midnight
-    "transport":  [(8, 2),   (9, 3),    (10, 5)],     # line_count (5+ lines for a 10)
-    "green":      [(8, 25),  (9, 50),   (10, 80)],    # green_count (area_sqm not scraped yet)
-    "gym_sports": [(8, 7),   (9, 12),   (10, 20)],    # gym_count
-    "vibe":       [(8, 8),   (9, 20),   (10, 50)],    # cultural_venue_count
-    # Rent uses SOURCE QUALITY as the cap dimension (not raw price):
-    # 2 = Suumo real data, 1 = ward average, 0 = distance regression estimate.
-    # Ensures regression fallbacks can never surface as "exceptional affordability".
-    "rent":       [(9, 1),   (10, 2)],
-}
+ABSOLUTE_CAPS = PIPELINE_ONLY.absolute_caps
 
 
 def log_percentile_normalize(values, invert=False):
@@ -111,7 +102,7 @@ def log_percentile_normalize(values, invert=False):
 
 
 def rent_to_affordability(price):
-    """Linear interpolation: ¥70k→10, ¥300k→1. Matches frontend PR #28."""
+    """Linear interpolation: ¥80k→10, ¥300k→1. Matches frontend scoring.ts rentToAffordability."""
     if not price or price <= 0:
         return None
     t = max(0.0, min(1.0, (price - RENT_FLOOR) / (RENT_CEILING - RENT_FLOOR)))
@@ -561,7 +552,7 @@ def main():
         print(f"  {cat:12s}: {capped_count:>4} stations capped  ·  top-10 count {before_top} → {after_top}  ·  thresholds: {thresh_str}")
 
     # ===== Build results =====
-    categories = ["food", "nightlife", "transport", "rent", "safety", "green", "gym_sports", "vibe", "crowd", "daily_essentials"]
+    categories = list(RATING_KEYS)
     data_date = date.today().strftime("%Y-%m")
     results = {}
     for slug in all_slugs:

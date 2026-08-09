@@ -14,23 +14,46 @@ from .constants import (
     PERCENTILE_ANCHORS_EMPTY_FALLBACK,
     PIPELINE_ONLY,
 )
-from .models import (
-    RatingKey,
-    ConfidenceLevel,
-    SeismicRiskTier,
-    ElevationTier,
-    StationRatings,
-    WeightConfig,
-    StationConfidence,
-    StationSources,
-    RentAvg,
-    TransitMinutes,
-    EnvironmentData,
-    FilterState,
-    EnvironmentFilters,
-    PercentileAnchors,
-    PresetProfile,
-)
+# Models require pydantic. Import lazily so that environments that only need
+# the constants (e.g. the offline pipeline) can use this package without
+# installing pydantic. Direct submodule imports (from city_rating_schema
+# .constants import ...) also work without triggering this block.
+try:
+    from .models import (
+        RatingKey,
+        ConfidenceLevel,
+        SeismicRiskTier,
+        ElevationTier,
+        StationRatings,
+        WeightConfig,
+        StationConfidence,
+        StationSources,
+        RentAvg,
+        TransitMinutes,
+        EnvironmentData,
+        FilterState,
+        EnvironmentFilters,
+        PercentileAnchors,
+        PresetProfile,
+    )
+except ImportError:
+    RatingKey = None  # pydantic not installed
+    ConfidenceLevel = None  # pydantic not installed
+    SeismicRiskTier = None  # pydantic not installed
+    ElevationTier = None  # pydantic not installed
+    StationRatings = None  # pydantic not installed
+    WeightConfig = None  # pydantic not installed
+    StationConfidence = None  # pydantic not installed
+    StationSources = None  # pydantic not installed
+    RentAvg = None  # pydantic not installed
+    TransitMinutes = None  # pydantic not installed
+    EnvironmentData = None  # pydantic not installed
+    FilterState = None  # pydantic not installed
+    EnvironmentFilters = None  # pydantic not installed
+    PercentileAnchors = None  # pydantic not installed
+    PresetProfile = None  # pydantic not installed
+    import warnings
+    warnings.warn("pydantic not installed; city_rating_schema models unavailable (constants still work)")
 
 __all__ = [
     "RATING_KEYS",

@@ -1,11 +1,9 @@
 import { Station, MapStation, StationRatings, WeightConfig, RentAvg, FilterState, DEFAULT_FILTERS } from './types';
+import { RENT_FLOOR, RENT_CEILING } from '@city-rating/schema/constants';
 
-// Raised from ¥70k → ¥80k in formula v3. The old ¥70k floor was only reachable
-// via the broken distance_estimate fallback which no longer exists. The cheapest
-// real Suumo rent in Greater Tokyo is ¥83,500 (Kawagoe). MUST match
-// scripts/compute-ratings.py RENT_FLOOR.
-const RENT_FLOOR = 80_000;
-const RENT_CEILING = 300_000;
+// RENT_FLOOR / RENT_CEILING now come from @city-rating/schema (the single source
+// of truth shared with compute-ratings.py and the MCP server). The ¥70k→¥80k
+// history is preserved in the schema package's constants.json comment.
 
 /**
  * Color dimension for scoreToColor().

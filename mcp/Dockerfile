@@ -62,6 +62,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY mcp/pyproject.toml /app/pyproject.toml
 COPY mcp/src /app/src
+# Install the shared schema package (constants + Pydantic models) so the MCP
+# server imports from the single source of truth alongside scoring.ts and
+# compute-ratings.py. No build needed — it's pure Python.
+COPY packages/schema/python /app/schema
+ENV PYTHONPATH=/app/schema
 RUN pip install --no-cache-dir .
 
 COPY --from=datamart    /build/data/station-datamart.json /app/data/station-datamart.json

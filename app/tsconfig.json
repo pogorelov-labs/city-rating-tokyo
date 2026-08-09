@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@city-rating/schema": ["../packages/schema/ts/index.ts"],
+      "@city-rating/schema/constants": ["../packages/schema/ts/constants.ts"],
+      "@city-rating/schema/types": ["../packages/schema/ts/types.ts"]
     }
   },
   "include": [
