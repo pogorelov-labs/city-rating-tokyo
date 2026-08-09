@@ -607,6 +607,7 @@ function emitPythonInit(): string {
 
 // ---------- main ----------
 
+// Canonical outputs (for any non-app consumer + the Python codegen).
 emit(join(PKG_ROOT, 'ts', 'constants.ts'), emitTsConstants());
 emit(join(PKG_ROOT, 'ts', 'types.ts'), emitTsTypes());
 emit(join(PKG_ROOT, 'ts', 'index.ts'), emitTsIndex());
@@ -614,4 +615,15 @@ emit(join(PKG_ROOT, 'python', 'city_rating_schema', 'constants.py'), emitPythonC
 emit(join(PKG_ROOT, 'python', 'city_rating_schema', 'models.py'), emitPythonModels());
 emit(join(PKG_ROOT, 'python', 'city_rating_schema', '__init__.py'), emitPythonInit());
 
-console.log('Generated: ts/constants.ts, ts/types.ts, ts/index.ts, python/city_rating_schema/{__init__,constants,models}.py');
+// Vendored copy into the Next.js app's source tree. The app's Docker build
+// context is `app/` (per app/Dockerfile + app/.dockerignore), so imports from
+// `../packages/...` escape the context and break Coolify builds. The app
+// imports these via the existing `@/lib/...` alias, which stays in-context.
+// PR #86 fixed this exact class of bug for slug-redirects.json; see
+// CONTRIBUTING.md invariant #6. The vendored files are GENERATED — never edit.
+const APP_VENDOR = resolve(PKG_ROOT, '..', '..', 'app', 'src', 'lib', 'schema');
+emit(join(APP_VENDOR, 'constants.ts'), emitTsConstants());
+emit(join(APP_VENDOR, 'types.ts'), emitTsTypes());
+emit(join(APP_VENDOR, 'index.ts'), emitTsIndex());
+
+console.log('Generated: ts/{constants,types,index}.ts, python/city_rating_schema/{__init__,constants,models}.py, app/src/lib/schema/{constants,types,index}.ts');

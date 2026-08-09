@@ -1,5 +1,5 @@
 import { Station, MapStation, StationRatings, WeightConfig, RentAvg, FilterState, DEFAULT_FILTERS } from './types';
-import { RENT_FLOOR, RENT_CEILING } from '@city-rating/schema/constants';
+import { RENT_FLOOR, RENT_CEILING } from '@/lib/schema/constants';
 
 // RENT_FLOOR / RENT_CEILING now come from @city-rating/schema (the single source
 // of truth shared with compute-ratings.py and the MCP server). The ¥70k→¥80k
