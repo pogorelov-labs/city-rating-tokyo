@@ -148,7 +148,7 @@ export default async function StationPage({
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-blue-600 hover:underline flex items-center gap-1"
-            title="Open in Google Maps"
+            title={t('station.mapsTooltip')}
             data-umami-event="open-google-maps"
             data-umami-event-station={slug}
           >

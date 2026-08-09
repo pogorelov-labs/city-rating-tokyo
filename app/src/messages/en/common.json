@@ -272,7 +272,8 @@
     "editorialBadge": {
       "label": "Curated",
       "tooltip": "This station's ratings were set by a human researcher using qualitative assessment, not purely from scraped data."
-    }
+    },
+    "mapsTooltip": "Open in Google Maps"
   },
   "seismicTiers": {
     "low": {
@@ -334,7 +335,9 @@
     "somethingWentWrong": "Something went wrong",
     "unexpectedError": "An unexpected error occurred.",
     "tryAgain": "Try again",
-    "stationNotFound": "Station Not Found"
+    "stationNotFound": "Station Not Found",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you're looking for doesn't exist or may have been moved."
   },
   "apiAccess": {
     "title": "API Access",

@@ -272,7 +272,8 @@
     "editorialBadge": {
       "label": "編集評価",
       "tooltip": "この駅の評価は、スクレイピングしたデータのみならず、研究者の定性的評価に基づいて設定されています。"
-    }
+    },
+    "mapsTooltip": "Googleマップで開く"
   },
   "seismicTiers": {
     "low": {
@@ -334,7 +335,9 @@
     "somethingWentWrong": "エラーが発生しました",
     "unexpectedError": "予期しないエラーが発生しました。",
     "tryAgain": "再試行",
-    "stationNotFound": "駅が見つかりません"
+    "stationNotFound": "駅が見つかりません",
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundDescription": "お探しのページは存在しないか、移動された可能性があります。"
   },
   "apiAccess": {
     "title": "APIアクセス",
