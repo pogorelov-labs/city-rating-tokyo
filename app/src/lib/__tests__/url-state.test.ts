@@ -51,7 +51,7 @@ const baselineState = {
   weights: { ...DEFAULT_WEIGHTS },
   filters: { ...DEFAULT_FILTERS },
   selectedStation: null,
-  compareStations: [],
+  compareStations: [] as string[],
   heatmapMode: false,
   heatmapDimension: 'composite',
 } as const;
