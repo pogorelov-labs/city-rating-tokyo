@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getClientIP, validateOrigin } from '@/lib/api-security';
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const SLUG_RE = /^[a-z0-9-]+$/;
+
+/** Allowed path characters for page_url (see validatePageUrl). */
+const PAGE_URL_PATH_RE = /^\/[a-z0-9._/-]+$/i;
 
 /** Last submit time per IP — only blocks rapid repeat (double-click / instant re-submit). */
 const rateLimit = new Map<string, number>();
@@ -9,15 +13,28 @@ const rateLimit = new Map<string, number>();
 /** Min ms between posts from the same IP. Keep low so “Add another tip” works; anti-spam is NocoDB + moderation. */
 const MIN_SUBMIT_INTERVAL_MS = 2500;
 
-function getClientIP(req: NextRequest): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-    || req.headers.get('x-real-ip')
-    || 'unknown';
+/**
+ * Validate that `page_url` is a same-origin relative URL.
+ *
+ * `startsWith('/')` alone accepts protocol-relative URLs (`//evil.com`) and
+ * backslash tricks (`/\\evil.com`), which browsers resolve to a remote host.
+ * We parse with a fixed base and require the parsed origin to stay equal to
+ * the base (no host is introduced) AND the pathname to match a safe charset.
+ */
+function validatePageUrl(page_url: string): boolean {
+  if (page_url.length > 500) return false;
+  let parsed: URL;
+  try {
+    parsed = new URL(page_url, 'http://localhost');
+  } catch {
+    return false;
+  }
+  if (parsed.origin !== 'http://localhost') return false;
+  return PAGE_URL_PATH_RE.test(parsed.pathname);
 }
 
 export async function POST(req: NextRequest) {
-  const origin = req.headers.get('origin');
-  if (origin && !origin.endsWith('.pogorelov.dev')) {
+  if (!validateOrigin(req)) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -58,8 +75,8 @@ export async function POST(req: NextRequest) {
   if (station_slug && !SLUG_RE.test(station_slug)) {
     return NextResponse.json({ error: 'invalid station_slug format' }, { status: 400 });
   }
-  if (!page_url || typeof page_url !== 'string' || page_url.length > 500 || !page_url.startsWith('/')) {
-    return NextResponse.json({ error: 'page_url is required and must start with /' }, { status: 400 });
+  if (!page_url || typeof page_url !== 'string' || !validatePageUrl(page_url)) {
+    return NextResponse.json({ error: 'page_url must be a relative same-origin path' }, { status: 400 });
   }
   if (!visitor_id || !UUID_RE.test(visitor_id)) {
     return NextResponse.json({ error: 'visitor_id must be a valid UUID' }, { status: 400 });
