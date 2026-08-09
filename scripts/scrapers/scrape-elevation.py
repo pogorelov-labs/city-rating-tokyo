@@ -154,8 +154,12 @@ def main():
         # zip() would silently truncate on a length mismatch, dropping stations.
         by_coord = {}
         for result in results:
-            key = (round(result.get("latitude"), 6),
-                   round(result.get("longitude"), 6))
+            lat = result.get("latitude")
+            lng = result.get("longitude")
+            # Guard against None / non-numeric coords — round(None, 6) raises TypeError.
+            if not isinstance(lat, (int, float)) or not isinstance(lng, (int, float)):
+                continue
+            key = (round(lat, 6), round(lng, 6))
             by_coord[key] = result
 
         matched = 0
@@ -180,6 +184,15 @@ def main():
                 "scraped_at": now,
             })
             matched += 1
+
+        # Fail loudly if NOTHING matched. This catches the case where the API
+        # returns grid-cell coordinates instead of echoing the request coords
+        # — without this guard, every station would miss and the scraper would
+        # silently write zero records, which is worse than the original zip() bug.
+        if matched == 0 and len(batch) > 0:
+            print(f"  ERROR: 0/{len(batch)} stations matched in this batch — "
+                  f"the API may not be echoing request coordinates. Aborting batch.")
+            continue
 
         print(f"  Matched {matched}/{len(batch)} elevations "
               f"(running total: {len(all_records)})")
