@@ -65,13 +65,30 @@ def get_existing_slugs():
 
 
 def fetch_elevations(locations):
-    """POST to Open-Elevation API. Returns list of {latitude, longitude, elevation}."""
+    """POST to Open-Elevation API. Returns list of {latitude, longitude, elevation}.
+
+    The API echoes the requested coordinates in each result, so callers should
+    match results by (lat, lng) rather than by positional index.
+    """
     payload = {"locations": [{"latitude": loc[0], "longitude": loc[1]} for loc in locations]}
     for attempt in range(3):
         try:
             r = requests.post(ELEVATION_API, json=payload, timeout=120)
             r.raise_for_status()
-            return r.json().get("results", [])
+            results = r.json().get("results", [])
+            # Hard error if the API returns the wrong number of results — we
+            # cannot safely match stations by position, and the Open-Elevation
+            # service occasionally drops entries. Returning None tells the
+            # caller to retry / skip the whole batch rather than write partial
+            # data that silently drops stations via zip() truncation.
+            if len(results) != len(locations):
+                print(f"  Got {len(results)} results for {len(locations)} requests "
+                      f"(attempt {attempt+1}/3)")
+                if attempt < 2:
+                    time.sleep(5 * (attempt + 1))
+                    continue
+                return None
+            return results
         except Exception as e:
             print(f"  Attempt {attempt+1}/3 failed: {e}")
             if attempt < 2:
@@ -123,24 +140,62 @@ def main():
         results = fetch_elevations(locations)
 
         if results is None:
-            print(f"  FAILED batch {batch_num} — skipping")
+            # Hard failure for this batch (network error, or the API returned
+            # the wrong number of results after retries). Skip the whole batch
+            # — the incremental-resume logic (skip existing slugs) means every
+            # station here will be retried on the next run.
+            print(f"  FAILED batch {batch_num} — skipping (will retry next run)")
+            time.sleep(2)  # be polite between batches
             continue
 
-        if len(results) != len(batch):
-            print(f"  WARNING: got {len(results)} results for {len(batch)} stations")
+        # Match results by returned lat/lng, NOT by positional index. The
+        # Open-Elevation API echoes the requested coordinates in each result;
+        # matching on (lat, lng) is robust to any reordering or duplication.
+        # zip() would silently truncate on a length mismatch, dropping stations.
+        by_coord = {}
+        for result in results:
+            lat = result.get("latitude")
+            lng = result.get("longitude")
+            # Guard against None / non-numeric coords — round(None, 6) raises TypeError.
+            if not isinstance(lat, (int, float)) or not isinstance(lng, (int, float)):
+                continue
+            key = (round(lat, 6), round(lng, 6))
+            by_coord[key] = result
 
-        for i, (station, result) in enumerate(zip(batch, results)):
+        matched = 0
+        for station in batch:
+            key = (round(station["lat"], 6), round(station["lng"], 6))
+            result = by_coord.get(key)
+            if result is None:
+                # No matching result — don't write a zero/None elevation.
+                # Skipped stations get retried on the next run.
+                print(f"  No elevation result for {station['slug']} "
+                      f"({station['lat']}, {station['lng']}) — skipping")
+                continue
             elev = result.get("elevation")
-            if elev is not None:
-                all_records.append({
-                    "slug": station["slug"],
-                    "elevation_m": round(elev, 1),
-                    "lat": station["lat"],
-                    "lng": station["lng"],
-                    "scraped_at": now,
-                })
+            if elev is None:
+                print(f"  Null elevation for {station['slug']} — skipping")
+                continue
+            all_records.append({
+                "slug": station["slug"],
+                "elevation_m": round(elev, 1),
+                "lat": station["lat"],
+                "lng": station["lng"],
+                "scraped_at": now,
+            })
+            matched += 1
 
-        print(f"  Got {len(results)} elevations (batch total: {len(all_records)})")
+        # Fail loudly if NOTHING matched. This catches the case where the API
+        # returns grid-cell coordinates instead of echoing the request coords
+        # — without this guard, every station would miss and the scraper would
+        # silently write zero records, which is worse than the original zip() bug.
+        if matched == 0 and len(batch) > 0:
+            print(f"  ERROR: 0/{len(batch)} stations matched in this batch — "
+                  f"the API may not be echoing request coordinates. Aborting batch.")
+            continue
+
+        print(f"  Matched {matched}/{len(batch)} elevations "
+              f"(running total: {len(all_records)})")
         time.sleep(2)  # be polite between batches
 
     if all_records:
