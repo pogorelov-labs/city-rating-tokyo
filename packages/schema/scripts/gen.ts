@@ -621,9 +621,15 @@ emit(join(PKG_ROOT, 'python', 'city_rating_schema', '__init__.py'), emitPythonIn
 // imports these via the existing `@/lib/...` alias, which stays in-context.
 // PR #86 fixed this exact class of bug for slug-redirects.json; see
 // CONTRIBUTING.md invariant #6. The vendored files are GENERATED — never edit.
+//
+// NOTE: Only constants are vendored. The schema's generated TS types use
+// camelCase (JSON Schema convention) while the app's hand-written types.ts
+// uses snake_case (matching the data files). Vendoring the types would create
+// a second, divergent type definition. The schema package's TS types remain
+// in packages/schema/ts/types.ts for documentation, but the app does NOT
+// import them. Type unification is a Python-only benefit (Pydantic models);
+// the TS side unifies VALUES (constants), not TYPES.
 const APP_VENDOR = resolve(PKG_ROOT, '..', '..', 'app', 'src', 'lib', 'schema');
 emit(join(APP_VENDOR, 'constants.ts'), emitTsConstants());
-emit(join(APP_VENDOR, 'types.ts'), emitTsTypes());
-emit(join(APP_VENDOR, 'index.ts'), emitTsIndex());
 
-console.log('Generated: ts/{constants,types,index}.ts, python/city_rating_schema/{__init__,constants,models}.py, app/src/lib/schema/{constants,types,index}.ts');
+console.log('Generated: ts/{constants,types,index}.ts, python/city_rating_schema/{__init__,constants,models}.py, app/src/lib/schema/constants.ts');

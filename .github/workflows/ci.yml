@@ -46,12 +46,15 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/packages/schema/python
         run: ruff check src/
-      - name: Pytest
-        # No unit tests exist yet — this step primarily confirms the
-        # editable install imports cleanly. Pytest exits 5 when no tests
-        # are collected; treat that (and 0) as success. Note: GitHub's
-        # default shell is `bash -e`, which aborts BEFORE the exit-code
-        # check can run, so we disable -e for this step.
+      - name: MCP import check
+        # This confirms the editable MCP install imports cleanly (the schema
+        # package resolves, scoring.py loads, etc.). It is NOT a test suite —
+        # no MCP unit tests exist yet. The cross-language parity test
+        # (scripts/test_schema_parity.py) lives outside this job's working
+        # directory and runs only locally. Pytest exits 5 when no tests are
+        # collected; treat that (and 0) as success. GitHub's default shell is
+        # `bash -e`, which aborts BEFORE the exit-code check can run, so we
+        # disable -e for this step.
         env:
           PYTHONPATH: ${{ github.workspace }}/packages/schema/python
         shell: bash

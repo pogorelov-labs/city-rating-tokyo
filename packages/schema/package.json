@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Single source of truth for cross-language constants + types (TS + Python).",
+  "description": "Single source of truth for cross-language constants (TS + Python) and Pydantic models (Python only). TS types are NOT unified — the app keeps its own hand-written interfaces.",
   "exports": {
     ".": "./ts/index.ts"
   },
