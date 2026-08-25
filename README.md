@@ -1,6 +1,6 @@
 # City Rating Tokyo
 
-Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across nine categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
+Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across ten categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd, daily essentials), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/ruspg/city-rating-tokyo](https://github.com/ruspg/city-rating-tokyo)
@@ -9,7 +9,7 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 
 - **Map** — weighted composite score; heatmap by category; compare and explore modes (see app for current UX).
 - **Filters** — presets, search, max commute (uses `transit_minutes` where present), rent band, min score.
-- **Station pages (SSG)** — stats, hub strip, radar vs Tokyo median, nine rating bars with confidence dots when pipeline metadata exists, feedback widget.
+- **Station pages (SSG)** — stats, hub strip, radar vs Tokyo median, ten rating bars with confidence dots when pipeline metadata exists, feedback widget.
 
 ## Rating categories (default weights)
 

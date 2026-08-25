@@ -33,12 +33,18 @@
 | food | HotPepper API + OSM Overpass | 1493 + 1398 | 100% | ✅ Да |
 | nightlife | HP izakaya/bar/midnight + OSM bar/pub/karaoke | 1493 + building | 100% | ✅ Да |
 | transport | line_count + MLIT passengers | 1493 + 1409 | 100% | ✅ Да |
-| rent | Suumo scrape | 274 | 18% | ⚠️ Частично |
-| safety | Keishicho ArcGIS (Tokyo), ward-level (others) | 615 + 91 ward | ~45% | ⚠️ Частично |
-| green | OSM park count (area scraper ready, CRTKY-42) | 1398 | 94% | ⚠️ Count без площади (0 strong) |
+| rent | Suumo (станция) / e-Stat + ward avg / регрессия | 82 strong | **5.5% strong**, 55% moderate | ⚠️ Покрытие ~95%, но станционное число — у 82 |
+| safety | Keishicho ArcGIS (Токио) + 91 захардкоженный ward вне Токио | 336 strong | **22% strong**, 55% estimate | ⚠️ Крупнейшая дыра: 824 estimate → CRTKY-82 |
+| green | OSM park count (area scraper ready, CRTKY-42) | 842 strong | **56% strong** | ⚠️ Count без площади; `strong` достижим вопреки прежней заметке |
 | gym | OSM fitness/sports/pool | 1398 | 94% | ✅ Да |
-| vibe | OSM cultural venues + pedestrian streets | 1467 | 98% | ✅ Да (62%+ data-driven since PR #57) |
-| crowd | MLIT + hardcoded | 1409 | 94% | ✅ Да |
+| vibe | OSM cultural venues + pedestrian streets | **0 strong** | 38% moderate, 49% estimate | ⚠️ `strong` структурно недостижим → CRTKY-128 |
+| crowd | MLIT S12 / HP-прокси | 843 strong | **56% strong**, 27% estimate | ⚠️ Хвост 404 (не ~93) → CRTKY-84 |
+
+> **Перемерено 2026-08-25.** Строки rent / safety / green / vibe / crowd выше приведены
+> к фактическому содержимому `app/src/data/demo-ratings.ts`; прежние числа расходились
+> с данными в 3–4 раза. Колонка «Покрытие» теперь означает долю с уровнем `strong`,
+> а не долю строк, участвующих в нормализации. Разбор и решения:
+> [`research/decisions/2026-08-25-epic80-scope.md`](decisions/2026-08-25-epic80-scope.md).
 
 ### Критическая оценка готовности (2026-04)
 
