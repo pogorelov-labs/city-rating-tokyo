@@ -6,7 +6,7 @@ Interactive map of Greater Tokyo (1493 stations) with data-driven neighborhood r
 
 **Live**: https://city-rating.pogorelov.dev
 **Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl v4 (EN/JA/RU). Static JSON data, no DB at runtime.
-**Deploy**: Coolify on VPS (217.196.61.98), GitHub App auto-deploy from `main`.
+**Deploy**: Coolify on the main VPS (host details: `vps_infra/INDEX.md`, private), GitHub App auto-deploy from `main`.
 
 ## Architecture
 
@@ -102,7 +102,7 @@ API: /api/v2/tables/{TABLE_ID}/records
 
 ### HotPepper API
 ```
-Key: b20f206ef29b9f48 (also in Coolify env vars)
+Key: set via `$HOTPEPPER_API_KEY` env var, also in Coolify env vars (never commit the literal)
 Docs: https://webservice.recruit.co.jp/doc/hotpepper/reference.html
 Important param: midnight=1 (returns places open after 23:00)
 ```
@@ -517,14 +517,14 @@ Top-5 ranked visible stations get a subtle `top-ranked-pulse` CSS animation in t
 Scrapers run as detached Docker containers on VPS to avoid laptop sleep issues:
 
 ```bash
-# SSH to VPS (use Coolify localhost key)
-ssh -i ~/.ssh/coolify_vps root@217.196.61.98
+# SSH to the main VPS: host, user and key are in vps_infra/INDEX.md (private)
+ssh <main-vps>
 
 # Launch a scraper
 docker run -d --name SCRAPER_NAME --restart=no \
   -e NOCODB_API_URL=https://nocodb.pogorelov.dev \
   -e NOCODB_API_TOKEN=$NOCODB_API_TOKEN \
-  -e HOTPEPPER_API_KEY=b20f206ef29b9f48 \
+  -e HOTPEPPER_API_KEY=$HOTPEPPER_API_KEY \
   -v /tmp/SCRIPT.py:/app/scraper.py:ro \
   -v /tmp/stations.json:/app/data/stations.json:ro \
   python:3.11-slim bash -c "pip install --quiet requests && python3 -u /app/scraper.py"
