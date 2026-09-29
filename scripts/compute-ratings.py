@@ -182,6 +182,28 @@ def apply_absolute_cap(rating, raw_value, caps):
     return min(rating, max_allowed)
 
 
+def vibe_confidence(cultural, ped_streets):
+    """
+    Confidence level for the vibe rating (CRTKY-128).
+
+    Vibe is measured from two independent OSM signals: cultural venues
+    (theatres, cinemas, galleries, book/music shops) and pedestrian streets.
+    Both present → 'strong', mirroring food and nightlife, where two
+    corroborating sources earn 'strong'. Cultural venues alone → 'moderate'.
+    Pedestrian streets alone carry only 0.15 of the formula, so they stay
+    'estimate', as does the no-signal composite fallback.
+
+    Confidence describes how well-grounded the number is, not how high it
+    is, so there is deliberately no venue-count threshold here — magnitude
+    is handled by ABSOLUTE_CAPS.
+    """
+    if cultural > 0 and ped_streets > 0:
+        return "strong"
+    if cultural > 0:
+        return "moderate"
+    return "estimate"
+
+
 def main():
     parser = argparse.ArgumentParser(description="Compute data-driven ratings v2")
     parser.add_argument("--dry-run", action="store_true")
@@ -442,7 +464,7 @@ def main():
                 math.log1p(cafe) * 0.15 +
                 (min(cultural, 20) / 20.0) * 0.10  # cultural_shop_ratio proxy
             )
-            conf["vibe"] = "moderate" if cultural > 0 else "estimate"
+            conf["vibe"] = vibe_confidence(cultural, ped_streets)
             srcs["vibe"] = (["osm_cultural"] if cultural > 0 else []) + (["osm_pedestrian"] if ped_streets > 0 else [])
         else:
             # Fallback: old composite (cafe + convenience + diversity)
