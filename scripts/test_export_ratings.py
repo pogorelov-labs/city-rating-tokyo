@@ -113,3 +113,60 @@ class TestBackfillOnRealEntries:
             # Removing the injected fragments must give back the original text.
             restored = re.sub(r", daily_essentials: (\d+|'\w+'|\[[^\]]*\]) \}", " }", out)
             assert restored == text, slug
+
+
+def computed_rent(value=7, conf="strong", srcs=("suumo",)):
+    return {
+        "rent": value,
+        "confidence": json.dumps({"rent": conf}),
+        "sources": json.dumps({"rent": list(srcs)}),
+    }
+
+
+EDITORIAL_RENT_ENTRY = AI_ENTRY.replace(
+    "confidence: { food: 'editorial', rent: 'strong', crowd: 'editorial' }",
+    "confidence: { food: 'editorial', rent: 'editorial', crowd: 'editorial' }",
+).replace(
+    "sources: { food: ['ai_research'], rent: ['suumo'], crowd: ['ai_research'] }",
+    "sources: { food: ['ai_research'], rent: ['ai_research'], crowd: ['ai_research'] }",
+)
+
+
+class TestStationLevelRent:
+    """D3b (2026-09-30): station-level rent data wins over the editorial rating."""
+
+    def test_suumo_rating_and_metadata_replace_editorial(self):
+        out, changed = er.apply_station_level_rent(EDITORIAL_RENT_ENTRY, computed_rent(value=7))
+        assert changed
+        assert re.search(r"\brent: 7\b", block(out, "ratings"))
+        assert "rent: 'strong'" in block(out, "confidence")
+        assert "rent: ['suumo']" in block(out, "sources")
+
+    def test_area_level_rent_leaves_editorial_alone(self):
+        for srcs in (("estat",), ("ward_average",), ("distance_regression",)):
+            out, changed = er.apply_station_level_rent(
+                EDITORIAL_RENT_ENTRY, computed_rent(conf="moderate", srcs=srcs))
+            assert not changed and out == EDITORIAL_RENT_ENTRY, srcs
+
+    def test_no_computed_row_is_a_no_op(self):
+        assert er.apply_station_level_rent(EDITORIAL_RENT_ENTRY, None) == (EDITORIAL_RENT_ENTRY, False)
+
+    def test_only_rent_keys_change(self):
+        out, _ = er.apply_station_level_rent(EDITORIAL_RENT_ENTRY, computed_rent(value=7))
+        assert "food: 5, nightlife: 3, transport: 6" in out
+        assert "food: 'editorial'" in out and "crowd: ['ai_research']" in out
+
+    def test_idempotent(self):
+        once, _ = er.apply_station_level_rent(EDITORIAL_RENT_ENTRY, computed_rent())
+        twice, changed = er.apply_station_level_rent(once, computed_rent())
+        assert twice == once and not changed
+
+    def test_real_entries_only_rent_changes(self):
+        entries = er.parse_existing_ai_entries(DEMO_RATINGS)
+        changed_count = 0
+        for slug, text in entries.items():
+            out, changed = er.apply_station_level_rent(text, computed_rent(value=4))
+            changed_count += changed
+            strip = lambda t: re.sub(r"\brent: (\d+|'\w+'|\[[^\]]*\])", "rent: X", t)
+            assert strip(out) == strip(text), slug
+        assert changed_count > 150  # ~190 editorial-labelled entries today

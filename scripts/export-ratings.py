@@ -217,6 +217,46 @@ def backfill_daily_essentials(entry_text, computed_row):
     return entry_text, status
 
 
+STATION_LEVEL_RENT_SOURCES = {"suumo", "homes"}
+
+
+def apply_station_level_rent(entry_text, computed_row):
+    """
+    Let station-level rent data win over the editorial rent rating.
+
+    Decided 2026-09-30 (research/decisions/2026-09-30-epic80-checkpoint.md, D3b):
+    when the pipeline rated this station's rent from listings scraped around it
+    (sources suumo/homes), that rating and its metadata replace the AI
+    researcher's value. The frontend was already showing the recomputed Suumo
+    value, but under an 'editorial' label — this makes the export agree with
+    what is displayed, and the label honest.
+
+    Only the rent key inside ratings/confidence/sources changes; rent_avg and
+    everything else is left as is. Returns (entry_text, changed).
+    """
+    if not computed_row:
+        return entry_text, False
+    srcs = _computed_meta(computed_row, "sources", "rent", [])
+    value = computed_row.get("rent")
+    if value is None or not STATION_LEVEL_RENT_SOURCES & set(srcs):
+        return entry_text, False
+    conf = _computed_meta(computed_row, "confidence", "rent", "estimate")
+    srcs_ts = "[" + ", ".join(f"'{s}'" for s in srcs) + "]"
+
+    before = entry_text
+    for field, pattern, literal in (
+        ("ratings", r"\brent: \d+", f"rent: {int(value)}"),
+        ("confidence", r"\brent: '\w+'", f"rent: '{conf}'"),
+        ("sources", r"\brent: \[[^\]]*\]", f"rent: {srcs_ts}"),
+    ):
+        block = re.search(rf"{field}: \{{([^{{}}]*)\}}", entry_text)
+        if not block:
+            continue
+        inner = re.sub(pattern, literal, block.group(1), count=1)
+        entry_text = entry_text[:block.start(1)] + inner + entry_text[block.end(1):]
+    return entry_text, entry_text != before
+
+
 def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
     """Format a computed rating entry as TypeScript."""
     r = data
@@ -367,6 +407,7 @@ def main():
     ai_conf_merged = 0
     ai_de_filled = 0
     ai_de_missing = []
+    ai_rent_station_level = 0
     for slug in sorted(ai_entries.keys()):
         if slug in all_slugs:
             entry_text = ai_entries[slug]
@@ -398,6 +439,9 @@ def main():
                 # Replace the final '},\n' or '},' with injected block
                 entry_text = re.sub(r'\s*\},?\s*$', inject, entry_text)
                 ai_conf_merged += 1
+            # Station-level rent beats the editorial value (D3b, 2026-09-30).
+            entry_text, rent_changed = apply_station_level_rent(entry_text, comp_row)
+            ai_rent_station_level += rent_changed
             parts.append(entry_text)
             ai_count += 1
 
@@ -432,6 +476,7 @@ def main():
     print(f"  AI-researched (preserved): {ai_count}")
     print(f"    confidence merged:       {ai_conf_merged}")
     print(f"    daily_essentials filled: {ai_de_filled}")
+    print(f"    rent from station data:  {ai_rent_station_level}")
     if ai_de_missing:
         print(f"    daily_essentials MISSING: {len(ai_de_missing)} "
               f"(no computed value): {', '.join(ai_de_missing[:10])}"
