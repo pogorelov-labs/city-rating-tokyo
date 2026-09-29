@@ -31,7 +31,7 @@ const DATA_SOURCES = [
     sources: ['Station line count (ekidata)', 'MLIT S12 daily passenger counts'],
     coverage: '100%',
     confidence: 'strong',
-    note: '94% of stations have official MLIT passenger data.',
+    note: '96% of stations have official MLIT passenger data (FY2024; an earlier year for unmanned JR East stations that dropped out of the latest tables).',
   },
   {
     category: 'Rent / Affordability',
@@ -79,7 +79,7 @@ const DATA_SOURCES = [
     sources: ['MLIT S12 daily passenger counts', 'HotPepper commercial density (fallback)'],
     coverage: '100%',
     confidence: 'strong',
-    note: 'Inverted: fewer passengers = higher rating.',
+    note: 'Inverted: fewer passengers = higher rating. 55 unmanned stations that operators never report use a commercial-density proxy.',
   },
   {
     category: 'Daily Essentials',
@@ -315,8 +315,16 @@ export default async function MethodologyPage({
           <h2 className="text-xl font-bold text-gray-900 mb-3">Data freshness</h2>
           <p className="text-gray-700 text-sm">
             Ratings were last computed in April 2026. Crime data is from 2024 (Keishicho annual report).
-            Passenger counts are from MLIT FY2021. Rent data is from Suumo snapshots taken in April 2026.
+            Passenger counts are from MLIT S12, fiscal year 2024. Rent data is from Suumo snapshots taken in April 2026.
             OSM data reflects the state of OpenStreetMap at scrape time (April 2026).
+          </p>
+          <p className="text-gray-500 text-xs mt-3">
+            Passenger counts: 出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）を加工して作成 —
+            MLIT National Land Numerical Information,{' '}
+            <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-2024.html" className="underline">
+              station passenger data (S12)
+            </a>
+            , processed by City Rating Tokyo.
           </p>
         </section>
 

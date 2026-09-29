@@ -50,7 +50,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | osm_extended | mrpqu8o796e6xzk | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
 | station_crime | mxwixub7d0q5i00 | 615 | Keishicho ArcGIS FeatureServer (Tokyo neighborhood-level) |
 | crime_stats | mxitpnomlom3j3q | 91 | Hardcoded ward-level (legacy fallback for non-Tokyo) |
-| passenger_counts | m36bbxcv8t0asur | 1409 | MLIT S12 GeoJSON (94% coverage, was 6%) |
+| passenger_counts | m36bbxcv8t0asur | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
 | station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
@@ -74,6 +74,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
 | `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
 | `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
+| `data/passengers/s12-passengers.json` | 1438 | `scripts/scrapers/ingest-mlit-s12.py` | MLIT S12 FY2024 daily passengers per slug (+ `confidence`, correction `flags`); read by `compute-ratings.py` and `build-datamart.py`. CC BY 4.0-compatible, attribution on `/methodology` (CRTKY-84) |
 | `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
 
 **Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`. **NocoDB is the exception that was missed:** rows scraped before CRTKY-113 still carry the old slugs, so every bare `{r["slug"]: r ...}` join silently dropped all 334 renamed stations (22%) to proxies in every category until 2026-09-30. Index NocoDB rows with `index_by_slug()` from `scripts/scrapers/slugs.py` — never by raw slug.
@@ -197,7 +198,7 @@ Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; h
 ```
 raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
 ```
-Sources: MLIT S12 (94%), HotPepper total as fallback.
+Sources: MLIT S12 FY2024 — 1438/1493 (96.3%), `moderate` for the 28 that use an older-year fallback; HotPepper total as fallback for the 55 unmanned stations operators never report (CRTKY-84).
 
 ## Override Hierarchy
 1. **AI-researched** (~251 stations in the AI block of demo-ratings.ts) — never overwritten, with two exceptions made in `export-ratings.py`: **`daily_essentials`** is filled from the pipeline because no researcher ever rated it (CRTKY-129), and **rent** takes the pipeline value where listings were scraped around the station — station data beats the editorial guess (D3b, 2026-09-30)

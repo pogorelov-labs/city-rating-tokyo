@@ -62,7 +62,7 @@ Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify*
 - **Stations / lines** — based on open railway-station datasets (see `SPEC.md` / `data/stations.json` provenance).
 - **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB.
 - **Food / nightlife counts** — **HotPepper** API + OSM.
-- **Passengers** — **MLIT** 国土数値情報 S12 (+ operator disclosures; see `research/03-crowd.md`).
+- **Passengers** — **MLIT** 国土数値情報 S12, FY2024 (`scripts/scrapers/ingest-mlit-s12.py` → `data/passengers/s12-passengers.json`; see `research/03-crowd.md`). 出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）を加工して作成.
 - **Crime (Tokyo)** — **Keishicho** ArcGIS / open data (see `research/02-safety.md`).
 - **Rent** — **Suumo** scrape to `rent-averages.json`; ward and model fallbacks in compute (see `research/05-rent.md`).
 - **~272 “AI-researched” stations** — human-reviewed text + integer ratings preserved in export; pipeline confidence merge for those slugs is **CRTKY-83**.

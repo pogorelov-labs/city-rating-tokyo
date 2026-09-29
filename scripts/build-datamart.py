@@ -32,7 +32,6 @@ TABLES = {
     "osm_extended": "mrpqu8o796e6xzk",
     "osm_livability": "m3vasnsm4y09xez",
     "station_crime": "mxwixub7d0q5i00",
-    "passenger_counts": "m36bbxcv8t0asur",
     "station_wards": "m74rdmspn3trrqc",
     "station_elevation": "mkrugzx8z62hli4",
     "station_seismic": "mhtnqvmi1kwbth9",
@@ -108,6 +107,8 @@ def build_datamart(single_slug: str | None = None):
 
     # Last trains (1483 entries: slug → {weekday, holiday, sources})
     last_trains = load_local_json(APP_DATA / "last-trains.json")
+    # MLIT S12 passengers (CRTKY-84) — replaces the NocoDB passenger_counts table
+    passengers = load_local_json(ROOT / "data" / "passengers" / "s12-passengers.json").get("stations", {})
 
     # Demo ratings (for existing descriptions + computed scores)
     with open(APP_DATA / "demo-ratings.ts") as f:
@@ -222,7 +223,7 @@ def build_datamart(single_slug: str | None = None):
             "crime": nocodb_data["station_crime"].get(slug, {}),
 
             # Transport
-            "passengers": nocodb_data["passenger_counts"].get(slug, {}),
+            "passengers": passengers.get(slug, {}),
             "transit_minutes": transit_times.get(slug, {}),
 
             # Rent

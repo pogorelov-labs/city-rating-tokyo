@@ -121,6 +121,19 @@ def haversine(lat1, lng1, lat2, lng2):
     return R * 2 * math.asin(math.sqrt(a))
 
 
+PASSENGERS_PATH = ROOT / "data" / "passengers" / "s12-passengers.json"
+
+
+def load_passengers():
+    """MLIT S12 daily passengers by current slug (CRTKY-84).
+
+    Written by scripts/scrapers/ingest-mlit-s12.py. Replaces the NocoDB
+    passenger_counts table, whose ingest was never committed.
+    """
+    doc = json.loads(PASSENGERS_PATH.read_text())
+    return doc["stations"], doc["metadata"]["fiscal_year"]
+
+
 def load_rent_data():
     """Load Suumo rent data from all possible locations."""
     for p in [
@@ -243,8 +256,8 @@ def main():
     crime_ward = {r["ward_code"]: r for r in NocoDB("crime_stats").get_all_records() if r.get("ward_code")}
     print(f"  crime_stats:      {len(crime_ward)} wards (legacy fallback)")
 
-    pax, note = load_by_slug("passenger_counts")
-    print(f"  passenger_counts: {len(pax)} stations{note}")
+    pax, pax_year = load_passengers()
+    print(f"  passengers:       {len(pax)} stations (MLIT S12 FY{pax_year})")
 
     wards, note = load_by_slug("station_wards")
     print(f"  station_wards:    {len(wards)} stations{note}")
@@ -485,7 +498,9 @@ def main():
         # --- CROWD: MLIT passengers (inverted) ---
         if daily_pax > 0:
             raw["crowd"][slug] = daily_pax
-            conf["crowd"] = "strong"
+            # 'moderate' when the count is an older-vintage fallback (unmanned
+            # JR East stations drop out of the newest tables) — CRTKY-84.
+            conf["crowd"] = p.get("confidence") or "strong"
             srcs["crowd"] = ["mlit_s12"]
         else:
             # Fallback: HP total as proxy + line_count
