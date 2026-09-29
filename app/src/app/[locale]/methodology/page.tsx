@@ -35,10 +35,10 @@ const DATA_SOURCES = [
   },
   {
     category: 'Rent / Affordability',
-    sources: ['Suumo station-level scrape', 'Ward-average fallback (Nominatim)', 'Log-linear distance regression'],
+    sources: ['Suumo station-level listings', 'e-Stat municipal average (labelled on the station page)', 'Log-linear distance regression'],
     coverage: '100%',
     confidence: 'mixed',
-    note: '18% station-level, 48% ward average, 34% regression estimate. Inverted: cheaper = higher rating.',
+    note: '18% station-level listings, 76% municipal average, 6% regression estimate. A municipal average is capped at 9 and a regression at 8, so only listings can reach 10. Inverted: cheaper = higher rating.',
   },
   {
     category: 'Safety',
@@ -72,8 +72,8 @@ const DATA_SOURCES = [
       'Pedestrian street density',
     ],
     coverage: '98%',
-    confidence: 'moderate',
-    note: 'Cultural venue density differentiates neighborhood character. 252 stations also have editorial ratings.',
+    confidence: 'mixed',
+    note: 'Measured when both cultural venues and pedestrian streets are observed, Partial with cultural venues alone. Cultural venue density differentiates neighborhood character. 252 stations also have editorial ratings.',
   },
   {
     category: 'Quietness',
