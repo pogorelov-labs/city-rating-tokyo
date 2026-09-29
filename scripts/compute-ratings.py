@@ -164,7 +164,9 @@ def load_rent_data():
 def fit_rent_regression(rent_data, station_map):
     """
     Fit log-linear regression: log(rent) = a + b * distance_km.
-    Uses real Suumo data as training set. Returns (intercept, slope, n_samples).
+    Trains on every row of rent-averages.json — Suumo listings and, since PR #91,
+    e-Stat municipal averages — so it reflects outer-area municipalities too.
+    Only used for the few stations with neither. Returns (intercept, slope, n_samples).
     Housing prices decay exponentially with distance, so log-linear fits well.
 
     Replaces the broken `max(50000, 160000 - dist*15000)` formula that was
@@ -629,14 +631,17 @@ def main():
 
     # ===== Spot-check =====
     print("\nSpot-check (known stations):")
-    # Expected values calibrated to DATA (not AI estimates which were too generous on safety)
-    # Shinjuku 3-chome: 879 crimes/yr → safety 1-2 is CORRECT (Kabukicho adjacent)
-    # Sugamo: 44 crimes, pop 3916 → safety 7-8 is CORRECT
+    # Expected values calibrated to DATA (not AI estimates, which were too generous on safety).
+    # Safety uses 町丁 within 800 m of Tokyo stations (CRTKY-82): Shinjuku's catchment
+    # includes Kabukicho → 1; Sugamo's includes the Jizo-dori shopping street → ~5;
+    # Otemachi is an office district whose rate uses daytime population → ~9. If
+    # Otemachi drops toward 1, the daytime-population join has broken again.
     check_stations = [
-        ("shinjuku", {"food": 9, "nightlife": 9, "transport": 10, "crowd": 1}),
+        ("shinjuku", {"food": 9, "nightlife": 9, "transport": 10, "crowd": 1, "safety": 1}),
         ("shibuya", {"food": 9, "nightlife": 9, "transport": 10}),
         ("kichijoji", {"food": 8, "nightlife": 7}),
-        ("sugamo", {"food": 7, "safety": 7}),
+        ("sugamo", {"food": 7, "safety": 5}),
+        ("otemachi", {"safety": 9}),
         ("roppongi", {"food": 8, "nightlife": 9}),
     ]
     for slug, expected in check_stations:

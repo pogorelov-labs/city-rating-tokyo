@@ -142,7 +142,7 @@ raw = suumo_1k                                             # real (273 stations)
     || exp(regression)                                      # log-linear regression (rest)
 rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80k
 ```
-Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares from the Suumo rent sample; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
+Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares on every row of `rent-averages.json` — Suumo listings **and** e-Stat municipal averages (since PR #91; the old "Suumo sample" wording was wrong) — and apply only to the ~91 stations with neither; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
 
 ### daily_essentials (14%)
 ```
