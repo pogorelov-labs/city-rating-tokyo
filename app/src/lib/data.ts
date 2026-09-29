@@ -9,10 +9,11 @@ import lastTrainsData from '@/data/last-trains.json';
 import livecamsData from '@/data/livecams.json';
 import generatedDescriptionsData from '@/data/generated-descriptions.json';
 import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo, LastTrainInfo, LiveCamera, MultilingualDescription } from './types';
-import { rentToAffordability } from './scoring';
+import { isStationLevelRent, rentToAffordability } from './scoring';
 import type { Locale } from '@/i18n/routing';
 
-const suumoRent = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
+// Suumo station-level listings AND e-Stat municipal averages (PR #91) — keep `source`.
+const rentAverages = rentData as Record<string, { '1k_1ldk': number | null; '2ldk': number | null; source: string; updated: string }>;
 const thumbData = stationThumbData as Record<string, { thumb: string; lqip: string }>;
 const envData = environmentData as Record<string, EnvironmentData>;
 const lineNames = lineNamesData as Record<string, Omit<LineInfo, 'id'>>;
@@ -42,7 +43,7 @@ export function getStations(): Station[] {
   if (_stationsCache) return _stationsCache;
   _stationsCache = (rawStations as unknown as Array<Omit<Station, 'lines' | 'ward'> & { lines: string[] }>).map((s) => {
     const demo = DEMO_RATINGS[s.slug];
-    const rent = suumoRent[s.slug];
+    const rent = rentAverages[s.slug];
 
     // Resolve line IDs to LineInfo objects
     const resolvedLines: LineInfo[] = s.lines
@@ -58,11 +59,13 @@ export function getStations(): Station[] {
 
     // Suumo real data takes priority over AI estimates
     const rentAvg: RentAvg | null = rent
-      ? { '1k_1ldk': rent['1k_1ldk'], '2ldk': rent['2ldk'], source: 'suumo', updated: rent.updated }
+      ? { '1k_1ldk': rent['1k_1ldk'], '2ldk': rent['2ldk'], source: rent.source, updated: rent.updated }
       : demo?.rent_avg || null;
 
-    // Derive affordability score from real rent data when available
-    const computedRent = rentAvg ? rentToAffordability(rentAvg) : null;
+    // Recompute affordability only from station-level listings. Area-level
+    // figures (e-Stat municipal averages) keep the backend rating, which carries
+    // the source-quality cap — recomputing them here let 74 stations show 10.
+    const computedRent = rentAvg && isStationLevelRent(rentAvg) ? rentToAffordability(rentAvg) : null;
 
     const env = envData[s.slug] || null;
 

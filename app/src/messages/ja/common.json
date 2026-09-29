@@ -34,7 +34,7 @@
     "food": "徒歩10〜15分圏内のレストラン、カフェ、屋台、専門店の種類と質",
     "nightlife": "バー、居酒屋、クラブ、ライブハウス、深夜のエンターテイメント",
     "transport": "路線数、運行頻度、主要ターミナルへの接続、通勤の利便性",
-    "rent": "実際の家賃データに基づく手頃さ（1K〜1LDK）。10=最も安い（〜7万円/月）、1=最も高い（〜30万円+）",
+    "rent": "実際の家賃データに基づく手頃さ（1K〜1LDK）。10=最も安い（〜8万円/月）、1=最も高い（〜30万円+）",
     "safety": "街の総合的な安全性：犯罪率、街灯、ファミリー向け度、夜間の安心感",
     "green": "徒歩15分圏内の公園、庭園、河川敷、緑地、自然",
     "gym_sports": "フィットネスセンター、ジム、スポーツ施設、ランニングコース、スポーツ設備",
@@ -102,7 +102,12 @@
     "prefecture_average": "都道府県平均",
     "composite_fallback": "複合フォールバック",
     "hp_proxy": "HotPepperプロキシ",
-    "ai_research": "AI調査"
+    "ai_research": "AI調査",
+    "estat": "e-Stat（市区町村平均）",
+    "homes": "LIFULL HOME'S",
+    "osm_livability": "OSM（生活施設）",
+    "distance_regression": "距離推定",
+    "convenience_proxy": "コンビニ数による代替"
   },
   "placeCategories": {
     "gym": "ジム・フィットネス",
@@ -222,6 +227,8 @@
     "rentLabel": "家賃",
     "rentRange": "1K〜1LDK → 2LDK / 月",
     "rentSingle": "1K〜1LDK / 月",
+    "rentMunicipalAvg": "市区町村平均（e-Stat）",
+    "rentEstimate": "概算",
     "avgToCenter": "都心への平均",
     "toMajorHubs": "主要5ターミナルへ",
     "lastTrain": "終電",

@@ -34,7 +34,7 @@
     "food": "Variety and quality of restaurants, cafes, street food, and specialty dining within 10-15 min walk",
     "nightlife": "Bars, izakaya, clubs, live music venues, and late-night entertainment options",
     "transport": "Number of train lines, frequency, connections to major hubs, and overall commute convenience",
-    "rent": "Affordability based on actual rent data (1K-1LDK). 10 = cheapest (~¥70k/mo), 1 = most expensive (~¥300k+)",
+    "rent": "Affordability based on actual rent data (1K-1LDK). 10 = cheapest (~¥80k/mo), 1 = most expensive (~¥300k+)",
     "safety": "Overall neighborhood safety: crime rates, street lighting, family-friendliness, late-night comfort",
     "green": "Parks, gardens, riverside walks, green spaces, and nature within 15 min walk",
     "gym_sports": "Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby",
@@ -102,7 +102,12 @@
     "prefecture_average": "Prefecture average",
     "composite_fallback": "Composite fallback",
     "hp_proxy": "HotPepper proxy",
-    "ai_research": "AI researcher"
+    "ai_research": "AI researcher",
+    "estat": "e-Stat (municipal avg)",
+    "homes": "LIFULL HOME'S",
+    "osm_livability": "OSM (daily essentials)",
+    "distance_regression": "Distance estimate",
+    "convenience_proxy": "Convenience-store proxy"
   },
   "placeCategories": {
     "gym": "Gyms & Fitness",
@@ -222,6 +227,8 @@
     "rentLabel": "Rent",
     "rentRange": "1K–1LDK → 2LDK / mo",
     "rentSingle": "1K–1LDK / mo",
+    "rentMunicipalAvg": "Municipal average (e-Stat)",
+    "rentEstimate": "Rough estimate",
     "avgToCenter": "Avg to Center",
     "toMajorHubs": "to 5 major hubs",
     "lastTrain": "Last Train",

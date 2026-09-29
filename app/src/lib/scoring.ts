@@ -101,6 +101,19 @@ function samplePalette(t: number, stops: readonly RGB[]): string {
  * Inverted scale: cheapest → 10, most expensive → 1.
  * Uses 1K-1LDK as primary, falls back to 2LDK.
  */
+/**
+ * Rent sources that describe the station itself (listings scraped around it).
+ * Anything else — e-Stat municipal averages, researcher estimates — is
+ * area-level: it must not be recomputed here, because the backend rating for
+ * it carries the source-quality cap (≤ 9) that this function does not know
+ * about (CRTKY-43).
+ */
+const STATION_LEVEL_RENT_SOURCES = new Set(['suumo', 'homes']);
+
+export function isStationLevelRent(rentAvg: RentAvg | null | undefined): boolean {
+  return !!rentAvg && STATION_LEVEL_RENT_SOURCES.has(rentAvg.source);
+}
+
 export function rentToAffordability(rentAvg: RentAvg): number | null {
   const rent = rentAvg['1k_1ldk'] ?? rentAvg['2ldk'];
   if (rent == null) return null;
