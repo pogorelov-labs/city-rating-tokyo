@@ -16,6 +16,9 @@ import os
 import re
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
+from slugs import index_by_slug  # noqa: E402
+
 # NocoDB config
 NOCODB_URL = os.getenv("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
 NOCODB_TOKEN = os.getenv("NOCODB_API_TOKEN")
@@ -45,7 +48,7 @@ def fetch_all_records(table_id: str) -> dict[str, dict]:
     """Fetch all records from a NocoDB table, keyed by slug."""
     import requests
 
-    records = {}
+    rows = []
     offset = 0
     page_size = 200
 
@@ -61,12 +64,16 @@ def fetch_all_records(table_id: str) -> dict[str, dict]:
                 # Strip NocoDB metadata
                 fields = {k: v for k, v in row.items()
                           if k not in ("Id", "CreatedAt", "UpdatedAt", "id", "nc_order")}
-                records[slug] = fields
+                fields["slug"] = slug
+                rows.append(fields)
 
         if len(data.get("list", [])) < page_size:
             break
         offset += page_size
 
+    # Rows scraped before the CRTKY-113 rename still carry old slugs; without
+    # this the MCP datamart has no signals for 334 stations.
+    records, _ = index_by_slug(rows)
     return records
 
 

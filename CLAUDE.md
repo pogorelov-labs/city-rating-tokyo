@@ -67,7 +67,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | `app/src/data/line-names.json` | 127 | ekidata lookup | `{line_id: {name_ja, name_en, operator_ja, operator_en, color, type}}` — PR #90 |
 | `app/src/data/ward-data.json` | 1493 | NocoDB export | `{slug: {city_name, ward_name, prefecture_name}}` for station detail page — PR #90 |
 | `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
-| `app/src/data/rent-averages.json` | 1100 | Suumo + e-Stat | 274 real Suumo listings + 826 e-Stat govt averages — PR #91 |
+| `app/src/data/rent-averages.json` | 1402 | Suumo + e-Stat | 274 real Suumo listings + 1128 e-Stat municipal averages — PR #91; +302 renamed stations once `merge-estat-rent.py` read `ward-data.json` instead of NocoDB (CRTKY-113 follow-up) |
 | `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
 | `app/src/data/station-thumbnails.json` | 1155 | VPS-generated | 320px thumb URL + LQIP base64 per station |
 | `app/src/data/station-images-all.json` | 1155 | Wikimedia + Unsplash | Gallery full-res images |
@@ -76,7 +76,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
 | `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
 
-**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`.
+**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`. **NocoDB is the exception that was missed:** rows scraped before CRTKY-113 still carry the old slugs, so every bare `{r["slug"]: r ...}` join silently dropped all 334 renamed stations (22%) to proxies in every category until 2026-09-30. Index NocoDB rows with `index_by_slug()` from `scripts/scrapers/slugs.py` — never by raw slug.
 
 `computed_ratings` has 3 metadata columns alongside the 10 rating numbers:
 - `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`

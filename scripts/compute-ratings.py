@@ -31,6 +31,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "packages" / "schema" / "python"))
 from utils import NocoDB, load_stations
+from slugs import index_by_slug, load_slug_redirects
 from city_rating_schema.constants import (
     RENT_FLOOR,
     RENT_CEILING,
@@ -216,30 +217,37 @@ def main():
 
     # ===== Load all data sources =====
     print("\nLoading data sources from NocoDB...")
+    # NocoDB rows scraped before the CRTKY-113 rename still use the old slugs;
+    # index them by current slug or 334 stations silently get no data at all.
+    redirects = load_slug_redirects()
 
-    osm = {r["slug"]: r for r in NocoDB("osm_pois").get_all_records() if r.get("slug")}
-    print(f"  osm_pois:         {len(osm)} stations")
+    def load_by_slug(table):
+        index, remapped = index_by_slug(NocoDB(table).get_all_records(), redirects)
+        return index, (f"  ({remapped} via pre-rename slugs)" if remapped else "")
 
-    livability = {r["slug"]: r for r in NocoDB("osm_livability").get_all_records() if r.get("slug")}
-    print(f"  osm_livability:   {len(livability)} stations")
+    osm, note = load_by_slug("osm_pois")
+    print(f"  osm_pois:         {len(osm)} stations{note}")
 
-    hp = {r["slug"]: r for r in NocoDB("hotpepper").get_all_records() if r.get("slug")}
-    print(f"  hotpepper:        {len(hp)} stations")
+    livability, note = load_by_slug("osm_livability")
+    print(f"  osm_livability:   {len(livability)} stations{note}")
 
-    ext = {r["slug"]: r for r in NocoDB("osm_extended").get_all_records() if r.get("slug")}
-    print(f"  osm_extended:     {len(ext)} stations")
+    hp, note = load_by_slug("hotpepper")
+    print(f"  hotpepper:        {len(hp)} stations{note}")
 
-    crime = {r["slug"]: r for r in NocoDB("station_crime").get_all_records() if r.get("slug")}
-    print(f"  station_crime:    {len(crime)} stations (Tokyo neighborhood-level)")
+    ext, note = load_by_slug("osm_extended")
+    print(f"  osm_extended:     {len(ext)} stations{note}")
+
+    crime, note = load_by_slug("station_crime")
+    print(f"  station_crime:    {len(crime)} stations (Tokyo neighborhood-level){note}")
 
     crime_ward = {r["ward_code"]: r for r in NocoDB("crime_stats").get_all_records() if r.get("ward_code")}
     print(f"  crime_stats:      {len(crime_ward)} wards (legacy fallback)")
 
-    pax = {r["slug"]: r for r in NocoDB("passenger_counts").get_all_records() if r.get("slug")}
-    print(f"  passenger_counts: {len(pax)} stations")
+    pax, note = load_by_slug("passenger_counts")
+    print(f"  passenger_counts: {len(pax)} stations{note}")
 
-    wards = {r["slug"]: r for r in NocoDB("station_wards").get_all_records() if r.get("slug")}
-    print(f"  station_wards:    {len(wards)} stations")
+    wards, note = load_by_slug("station_wards")
+    print(f"  station_wards:    {len(wards)} stations{note}")
 
     rent_data = load_rent_data()
     print(f"  rent (Suumo):     {len(rent_data)} stations")
