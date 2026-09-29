@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
               "script-src 'self' 'unsafe-inline' https://*.pogorelov.dev",
               "style-src 'self' 'unsafe-inline'",
               // i.ytimg.com: YouTube thumbnail hosts (livecam facade previews)
-              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
+              "img-src 'self' data: https://basemaps.cartocdn.com https://tile.openstreetmap.org https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
               "connect-src 'self' https://*.pogorelov.dev",
               "font-src 'self'",
               // frame-src: YouTube live camera embeds (CRTKY-116).

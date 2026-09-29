@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useDeferredValue, useRef, useState, useCallback } from 'react';
 import {
+  AttributionControl,
   MapContainer,
   TileLayer,
   CircleMarker,
@@ -26,6 +27,7 @@ import {
 } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import { useIsTouch } from '@/lib/use-is-touch';
+import { BASEMAP, tileUrl } from '@/lib/basemap';
 import { Link } from '@/i18n/navigation';
 
 /**
@@ -165,29 +167,27 @@ function MapClickHandler() {
 /**
  * Prefetch tiles at zoom 14 around a lat/lng into browser cache.
  * Called on hover so tiles are warm by click time.
- * Uses `<link rel="prefetch">` for low-priority background fetching.
+ *
+ * Uses `new Image()`, not `<link rel="prefetch">`: prefetch requests fall under
+ * the CSP's `default-src 'self'`, so the browser refused every one of them —
+ * image loads fall under `img-src`, which allows the tile host. Skipped when the
+ * provider's terms do not allow prefetching (OSM fallback, see lib/basemap.ts).
  */
-const retinaTag = typeof window !== 'undefined' && window.devicePixelRatio > 1 ? '@2x' : '';
+const prefetchedTiles = new Set<string>();
 function prefetchTilesAroundStation(lat: number, lng: number) {
+  if (!BASEMAP.prefetch) return;
   const z = 14;
   const n = Math.pow(2, z);
   const tileX = Math.floor(((lng + 180) / 360) * n);
   const tileY = Math.floor(
     ((1 - Math.log(Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180)) / Math.PI) / 2) * n,
   );
-  const subs = ['a', 'b', 'c', 'd'];
   for (let dx = -1; dx <= 1; dx++) {
     for (let dy = -1; dy <= 1; dy++) {
-      const x = tileX + dx;
-      const y = tileY + dy;
-      const s = subs[(x + y) % subs.length];
-      const url = `https://${s}.basemaps.cartocdn.com/light_all/${z}/${x}/${y}${retinaTag}.png`;
-      if (!document.querySelector(`link[href="${url}"]`)) {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.as = 'image';
-        link.href = url;
-        document.head.appendChild(link);
+      const url = tileUrl(BASEMAP, z, tileX + dx, tileY + dy);
+      if (!prefetchedTiles.has(url)) {
+        prefetchedTiles.add(url);
+        new Image().src = url;
       }
     }
   }
@@ -479,10 +479,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       attributionControl={false}
       preferCanvas
     >
-      <TileLayer
-        attribution=""
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-      />
+      <TileLayer attribution={BASEMAP.attribution} url={BASEMAP.url} />
+      {/* The tile providers' terms require their attribution on the map. */}
+      <AttributionControl position="bottomright" prefix={false} />
       {flyTarget && (
         <FlyToStation
           lat={flyTarget.lat}
