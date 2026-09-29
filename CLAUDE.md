@@ -28,7 +28,7 @@ Do **not** equate “every station has a number” with “every number is equal
 
 1. **“100%” / full rows:** Often means **all 1493 slugs participate** in normalization, not that each category uses the same spatial granularity or primary data quality everywhere (Tokyo safety polygons vs ward/prefecture outside Tokyo; rent Suumo vs ward vs regression).
 2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use an e-Stat municipal average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`. **Doctrine (CRTKY-43, 2026-09-30):** e-Stat is an allowed but *labelled* fallback — `moderate`, capped at 9, shown as "Municipal average (e-Stat)" on the station page, and never recomputed in the frontend (`isStationLevelRent()` in `scoring.ts`). Only listings scraped around the station (Suumo, HOMES) are `strong`.
-3. **Safety:** Keishicho ArcGIS is **neighborhood-level** for Tokyo; other prefectures may be **municipality/ward** or legacy tables until **CRTKY-82** lands — see `research/02-safety.md`.
+3. **Safety (CRTKY-82, 2026-09-30):** all 1493 stations come from 2024 police open data via `scripts/scrapers/ingest-crime-open-data.py` → `data/crime/station-safety.json`. Tokyo (570) uses the 町丁 within 800 m of the station → `strong`; 45 outer-Tokyo stations with too few 町丁 in range and all of Kanagawa/Saitama/Chiba use the **municipality/ward** → `moderate` — every station in a ward shares one value, so read those as area-level. Same formula, year and daytime-population rule everywhere; Tokyo catchments are clamped to [1/3, 3]× their municipal rate so granularity alone cannot push them into the tails. The old hand-typed `crime_stats` table matched no source year and reached only 187 of 878 non-Tokyo stations — see `research/02-safety.md`.
 4. **Green / vibe:** strong/moderate/estimate reflect **source rules in compute**, not “map looks green.” Re-measured 2026-08-25: `green` **does** reach `strong` (842/1493), so the older “0 strong” note was stale. `vibe` could never reach `strong` until **CRTKY-128**: the old rule was a two-way ternary with no `strong` branch. `vibe_confidence()` in `compute-ratings.py` now gives `strong` when both independent OSM signals are present (cultural venues **and** pedestrian streets — 461 stations as of the 2026-04 data), `moderate` for cultural venues alone, `estimate` otherwise. Takes effect on the next `refresh-ratings.sh` run.
 5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates per-station travel times using geographic distance + line connectivity, calibrated against 252 AI-researched ground-truth values (MAE 5.5 min, 85% within 10 min). AI-researched entries keep hand-authored times. Computed entries use the calibrated model. Output in `data/transit-times.json`, consumed by `export-ratings.py`. **Upgrade path:** replace with GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
 6. **Missing confidence keys in export:** for computed entries, `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong. For AI-researched entries the gap was worse: they predate `daily_essentials`, so all 251 had **no rating at all** for it and `app/src/lib/data.ts` substituted a hardcoded `5` (+ `estimate`) that fed the composite at 14% weight. Since **CRTKY-129**, `backfill_daily_essentials()` fills rating, confidence and sources from the pipeline on every export (no researcher ever rated this category, so nothing editorial is overwritten), and an AI entry it cannot fill counts toward the `missing_count` gate. The `data.ts` fallback remains only as a guard for `--allow-missing` runs.
@@ -48,8 +48,8 @@ Do **not** equate “every station has a number” with “every number is equal
 | osm_pois | mnnuqtldvt4jxlj | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
 | hotpepper | mfk9j2qoj2bkeoo | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
 | osm_extended | mrpqu8o796e6xzk | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
-| station_crime | mxwixub7d0q5i00 | 615 | Keishicho ArcGIS FeatureServer (Tokyo neighborhood-level) |
-| crime_stats | mxitpnomlom3j3q | 91 | Hardcoded ward-level (legacy fallback for non-Tokyo) |
+| station_crime | mxwixub7d0q5i00 | 615 | **Legacy, no longer read** — built from Esri Japan's CrimR6_tokyo copy by a script never committed; superseded by `data/crime/` (CRTKY-82) |
+| crime_stats | mxitpnomlom3j3q | 91 | **Legacy, no longer read** — hand-typed literals (script deleted); superseded by `data/crime/` (CRTKY-82) |
 | passenger_counts | m36bbxcv8t0asur | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
 | station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
@@ -74,6 +74,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
 | `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
 | `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
+| `data/crime/station-safety.json` | 1493 | `scripts/scrapers/ingest-crime-open-data.py` | Weighted crime rate per slug + level (neighborhood/municipal), confidence, municipality; read by `compute-ratings.py` and `build-datamart.py`. Companion files: `municipal-2024.csv` (247 municipalities with all 7 terms and populations), `sources.json` (URLs, SHA-256, attributions) (CRTKY-82) |
 | `data/passengers/s12-passengers.json` | 1438 | `scripts/scrapers/ingest-mlit-s12.py` | MLIT S12 FY2024 daily passengers per slug (+ `confidence`, correction `flags`); read by `compute-ratings.py` and `build-datamart.py`. CC BY 4.0-compatible, attribution on `/methodology` (CRTKY-84) |
 | `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
 
@@ -158,7 +159,7 @@ weighted_crimes = violent*3 + assault*2 + burglary*2 + purse_snatch*2
                 + pickpocket*1.5 + bike_theft*0.3 + fraud*0.2
 rate = weighted_crimes / adjusted_population * 10000
 ```
-Sources: Keishicho ArcGIS neighborhood polygons (Tokyo, 615 stations), prefectural police (others). Daytime population adjustment for commercial wards (Chiyoda ÷12, Chuo ÷4, Minato ÷3.6).
+Sources: 2024 police open data — 警視庁 町丁 CSV (Tokyo: 町丁 within 800 m, `strong`), Kanagawa/Saitama/Chiba municipal tables (`moderate`); e-Stat population + 2020 small-area boundaries. Denominator per research/02-safety.md §2 in every prefecture: daytime population when > 2× residents, residents below 1.5×, their mean between (CRTKY-82).
 
 ### food (12%)
 ```

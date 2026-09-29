@@ -8,7 +8,8 @@ Sources used per category:
   nightlife: HP midnight + izakaya + bar + OSM nightlife + karaoke + hostel
   transport: line_count + MLIT passengers
   rent:      Suumo price → linear interpolation (¥80k→10, ¥300k→1)
-  safety:    ArcGIS weighted crime (Tokyo) / ward-level (others) + daytime adj
+  safety:    official crime open data, 2024 (data/crime/station-safety.json): Tokyo 800 m
+             町丁 catchments, municipal rates elsewhere; daytime-adjusted denominators
   green:     OSM green_count + green_area_sqm (when available)
   gym:       OSM gym_count
   vibe:      OSM cultural venues + pedestrian streets + cafes
@@ -134,6 +135,20 @@ def load_passengers():
     return doc["stations"], doc["metadata"]["fiscal_year"]
 
 
+SAFETY_PATH = ROOT / "data" / "crime" / "station-safety.json"
+
+
+def load_station_safety():
+    """Weighted crime rate per current slug (CRTKY-82).
+
+    Written by scripts/scrapers/ingest-crime-open-data.py from police open data
+    in all four prefectures. Replaces the NocoDB station_crime rows (Esri layer,
+    ingest never committed) and crime_stats (hand-typed literals).
+    """
+    doc = json.loads(SAFETY_PATH.read_text())
+    return doc["stations"], doc["metadata"]["year"]
+
+
 def load_rent_data():
     """Load Suumo rent data from all possible locations."""
     for p in [
@@ -250,11 +265,16 @@ def main():
     ext, note = load_by_slug("osm_extended")
     print(f"  osm_extended:     {len(ext)} stations{note}")
 
-    crime, note = load_by_slug("station_crime")
-    print(f"  station_crime:    {len(crime)} stations (Tokyo neighborhood-level){note}")
+    crime, crime_year = load_station_safety()
+    print(f"  station safety:   {len(crime)} stations (police open data {crime_year})")
+    # Fallback for a station without crime data: its prefecture's median rate,
+    # on the same scale as everything else.
+    pref_rates = defaultdict(list)
+    for s in stations:
+        if s["slug"] in crime:
+            pref_rates[s.get("prefecture")].append(crime[s["slug"]]["rate"])
+    pref_median = {pf: sorted(v)[len(v) // 2] for pf, v in pref_rates.items()}
 
-    crime_ward = {r["ward_code"]: r for r in NocoDB("crime_stats").get_all_records() if r.get("ward_code")}
-    print(f"  crime_stats:      {len(crime_ward)} wards (legacy fallback)")
 
     pax, pax_year = load_passengers()
     print(f"  passengers:       {len(pax)} stations (MLIT S12 FY{pax_year})")
@@ -401,52 +421,20 @@ def main():
                 srcs["rent"] = ["distance_regression"]
                 cap_raw["rent"][slug] = 0  # regression estimate → capped at 8
 
-        # --- SAFETY: weighted crime from ArcGIS (Tokyo) or ward-level (others) ---
-        if cr and cr.get("weighted_crime_score") is not None:
-            # ArcGIS neighborhood-level (Tokyo)
-            # IMPORTANT: crimes_per_10k from scraper may be distorted for tiny-population
-            # neighborhoods (e.g., Shinjuku 3-chome: pop=101, crimes=879 → rate=11161).
-            # Use weighted_crime_score directly and normalize separately.
-            # For neighborhoods with pop < 500, cap the rate to avoid distortion.
-            pop = cr.get("population", 0) or 0
-            weighted = cr.get("weighted_crime_score", 0) or 0
-            if pop >= 500:
-                raw["safety"][slug] = weighted / pop * 10000
-            elif pop > 0:
-                # Commercial area with tiny residential pop — use a blended rate
-                # Assume effective daytime pop is at least 5000 for any station area
-                effective_pop = max(pop, 5000)
-                raw["safety"][slug] = weighted / effective_pop * 10000
-            else:
-                raw["safety"][slug] = weighted * 0.1  # raw score as proxy
-            conf["safety"] = "strong"
-            srcs["safety"] = ["keishicho_arcgis"]
+        # --- SAFETY: weighted crime per 10k people from police open data (CRTKY-82) ---
+        # Tokyo: 町丁 within 800 m of the station ('strong'); elsewhere the
+        # municipality/ward containing it ('moderate'). One year, one formula and
+        # one denominator rule everywhere — see ingest-crime-open-data.py.
+        if cr:
+            raw["safety"][slug] = cr["rate"]
+            conf["safety"] = cr["confidence"]
+            srcs["safety"] = [cr["source"]]
         else:
-            # Fallback: ward-level from crime_stats (legacy) or Nominatim ward match
-            ward_name = w.get("city_name", "")
-            matched_ward = None
-            for wc, wd in crime_ward.items():
-                if wd.get("ward_name", "") == ward_name:
-                    matched_ward = wd
-                    break
-            if matched_ward:
-                raw["safety"][slug] = matched_ward.get("crimes_per_10k", 0) or 0
-                conf["safety"] = "moderate"
-                srcs["safety"] = ["ward_crime_stats"]
-            else:
-                # Prefecture average fallback.
-                # CRTKY-64: add distance-based jitter to avoid 4 fixed values
-                # creating gaps in the distribution. Suburban stations (farther
-                # from Tokyo Station) tend slightly safer → lower rate.
-                pref = st.get("prefecture", "13")
-                pref_avgs = {"13": 120, "14": 65, "11": 60, "12": 55}
-                base = pref_avgs.get(pref, 80)
-                dist = haversine(st["lat"], st["lng"], TOKYO_STATION_LAT, TOKYO_STATION_LNG)
-                # ±15% jitter scaled by distance (30km = ~15% less crime)
-                jitter_factor = 1.0 - min(0.15, dist * 0.005)
-                raw["safety"][slug] = base * jitter_factor
-                conf["safety"] = "estimate"
-                srcs["safety"] = ["prefecture_average"]
+            # Not reachable today (the ingest asserts full coverage); kept so a
+            # new station without crime data degrades to an honest estimate.
+            raw["safety"][slug] = pref_median.get(st.get("prefecture"), 20.0)
+            conf["safety"] = "estimate"
+            srcs["safety"] = ["prefecture_average"]
 
         # --- GREEN: green_area if available, else count only ---
         green_count = o.get("green_count", 0) or 0

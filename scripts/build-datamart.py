@@ -31,7 +31,6 @@ TABLES = {
     "osm_pois": "mnnuqtldvt4jxlj",
     "osm_extended": "mrpqu8o796e6xzk",
     "osm_livability": "m3vasnsm4y09xez",
-    "station_crime": "mxwixub7d0q5i00",
     "station_wards": "m74rdmspn3trrqc",
     "station_elevation": "mkrugzx8z62hli4",
     "station_seismic": "mhtnqvmi1kwbth9",
@@ -109,6 +108,8 @@ def build_datamart(single_slug: str | None = None):
     last_trains = load_local_json(APP_DATA / "last-trains.json")
     # MLIT S12 passengers (CRTKY-84) — replaces the NocoDB passenger_counts table
     passengers = load_local_json(ROOT / "data" / "passengers" / "s12-passengers.json").get("stations", {})
+    # Police open-data safety rates (CRTKY-82) — replaces NocoDB station_crime
+    safety = load_local_json(ROOT / "data" / "crime" / "station-safety.json").get("stations", {})
 
     # Demo ratings (for existing descriptions + computed scores)
     with open(APP_DATA / "demo-ratings.ts") as f:
@@ -220,7 +221,7 @@ def build_datamart(single_slug: str | None = None):
             "livability": nocodb_data["osm_livability"].get(slug, {}),
 
             # Safety / crime
-            "crime": nocodb_data["station_crime"].get(slug, {}),
+            "crime": safety.get(slug, {}),
 
             # Transport
             "passengers": passengers.get(slug, {}),

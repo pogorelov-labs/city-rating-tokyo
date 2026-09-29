@@ -107,7 +107,9 @@
     "homes": "LIFULL HOME'S",
     "osm_livability": "OSM (daily essentials)",
     "distance_regression": "Distance estimate",
-    "convenience_proxy": "Convenience-store proxy"
+    "convenience_proxy": "Convenience-store proxy",
+    "keishicho_choume": "Tokyo police (neighbourhood)",
+    "police_municipal": "Police (municipality)"
   },
   "placeCategories": {
     "gym": "Gyms & Fitness",

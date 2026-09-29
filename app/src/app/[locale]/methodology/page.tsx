@@ -43,12 +43,13 @@ const DATA_SOURCES = [
   {
     category: 'Safety',
     sources: [
-      'Keishicho ArcGIS (Tokyo neighborhood polygons)',
-      'Prefectural police ward-level data',
+      'Tokyo Metropolitan Police neighborhood (町丁) crime counts',
+      'Kanagawa, Saitama and Chiba police municipal crime statistics',
+      'e-Stat population and boundaries',
     ],
     coverage: '100%',
     confidence: 'mixed',
-    note: 'Tokyo stations use neighborhood-level crime polygons. Other prefectures use ward-level data.',
+    note: 'Weighted crimes per 10,000 people, 2024, the same formula in all four prefectures (daytime population in office districts). Tokyo stations use the neighborhoods within 800 m; elsewhere the municipality or ward, which is why those are marked Partial.',
   },
   {
     category: 'Green & Parks',
@@ -314,7 +315,7 @@ export default async function MethodologyPage({
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Data freshness</h2>
           <p className="text-gray-700 text-sm">
-            Ratings were last computed in April 2026. Crime data is from 2024 (Keishicho annual report).
+            Ratings were last computed in April 2026. Crime data is from 2024 police statistics in all four prefectures.
             Passenger counts are from MLIT S12, fiscal year 2024. Rent data is from Suumo snapshots taken in April 2026.
             OSM data reflects the state of OpenStreetMap at scrape time (April 2026).
           </p>
@@ -325,6 +326,12 @@ export default async function MethodologyPage({
               station passenger data (S12)
             </a>
             , processed by City Rating Tokyo.
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Crime: 出典：警視庁ホームページ, 神奈川県警察ホームページ, 埼玉県警察ホームページ,
+            千葉県警察ホームページ (2024 statistics). Population and small-area boundaries:
+            出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成; Tokyo daytime
+            population: 東京都の統計. Source files and checksums are listed in data/crime/sources.json.
           </p>
         </section>
 

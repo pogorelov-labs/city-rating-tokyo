@@ -107,7 +107,9 @@
     "homes": "LIFULL HOME'S",
     "osm_livability": "OSM (повседневные нужды)",
     "distance_regression": "Оценка по расстоянию",
-    "convenience_proxy": "Косвенно: число комбини"
+    "convenience_proxy": "Косвенно: число комбини",
+    "keishicho_choume": "Полиция Токио (кварталы)",
+    "police_municipal": "Полиция (муниципалитет)"
   },
   "placeCategories": {
     "gym": "Спортзалы и фитнес",

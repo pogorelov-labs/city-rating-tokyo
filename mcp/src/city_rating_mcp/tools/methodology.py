@@ -19,7 +19,7 @@ METHODOLOGY = {
         "transport": "line_count + log(daily_passengers). Caps: 8 needs ≥2 lines, 9 ≥3, 10 ≥5.",
         "rent": "Inverted: cheaper → higher. Suumo listings (273 stations) → ward average (713 more) → log-linear distance regression. Floor ¥80k, ceiling ¥300k.",
         "daily_essentials": "Weighted log-counts of supermarket, pharmacy, clinic, dentist, school, post office, bank, laundry. Source: OSM osm_livability table (1493/1493).",
-        "safety": "Weighted crime rate per adjusted population. Tokyo: Keishicho neighborhood polygons (615 stations). Other prefectures: ward/municipality fallback.",
+        "safety": "Inverted: weighted crime (violent x3, assault x2, burglary x2, purse snatching x2, pickpocketing x1.5, bike theft x0.3, fraud x0.2) per 10k people, 2024 police open data. Denominator is daytime population in office districts, residents elsewhere. Tokyo: neighborhoods (町丁) within 800 m of the station, confidence strong. Kanagawa/Saitama/Chiba: the municipality or ward, confidence moderate.",
         "food": "log(HotPepper total) * 0.6 + log(OSM food) * 0.4. Caps: 8 ≥100 venues, 9 ≥400, 10 ≥1000.",
         "green": "Park area + count + large-park bonus + water proximity. Source: OSM polygons.",
         "gym_sports": "OSM gym_count. Caps: 8 ≥7, 9 ≥12, 10 ≥20.",

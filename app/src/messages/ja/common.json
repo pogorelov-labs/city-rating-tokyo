@@ -107,7 +107,9 @@
     "homes": "LIFULL HOME'S",
     "osm_livability": "OSM（生活施設）",
     "distance_regression": "距離推定",
-    "convenience_proxy": "コンビニ数による代替"
+    "convenience_proxy": "コンビニ数による代替",
+    "keishicho_choume": "警視庁（町丁別）",
+    "police_municipal": "警察（市区町村別）"
   },
   "placeCategories": {
     "gym": "ジム・フィットネス",
