@@ -18,13 +18,19 @@ export interface RentAvg {
   updated: string;
 }
 
-export interface TransitMinutes {
+// A type alias (not an interface) so it stays assignable to `HubMinutes`:
+// TS only gives type aliases the implicit index signature.
+export type TransitMinutes = {
   shibuya: number;
   shinjuku: number;
   tokyo: number;
   ikebukuro: number;
   shinagawa: number;
-}
+};
+
+/** Minutes from an area to each of its city's commute hubs, keyed by hub id
+ *  (Tokyo: `TransitMinutes`; Bangkok: siam/asok/silom/rama9/mochit). */
+export type HubMinutes = Record<string, number>;
 
 export interface StationDescription {
   atmosphere: string;
@@ -162,16 +168,34 @@ export interface Station {
   livecams?: LiveCamera[] | null;
 }
 
-/** Lightweight station data for the homepage map & filter panel */
+/**
+ * Lightweight area data for the homepage map & filter panel.
+ *
+ * Despite the name this is the shape of every rated *area* on a city map:
+ * a Tokyo station (the original unit) or a Bangkok district (khet). For
+ * districts, `lat`/`lng` is the label point inside the polygon, `line_count`
+ * counts distinct rail lines serving it and `station_count` its rail stations.
+ */
 export interface MapStation {
   slug: string;
   name_en: string;
+  /** Japanese name — kanji for Tokyo stations, katakana for Bangkok districts. */
   name_jp: string;
   name_ru?: string;
+  /** Thai name (Bangkok only). When present it is the always-visible native
+   *  script, the role kanji plays for Tokyo — see `stationDisplayName()`. */
+  name_th?: string;
   lat: number;
   lng: number;
   line_count: number;
+  /** Rail stations inside the district (districts only). */
+  station_count?: number;
+  /** Extra search terms: neighbourhoods and stations inside a district
+   *  ("Thong Lo", "Ari", "Silom") — how people actually name places. */
+  aliases?: string[];
   ratings: StationRatings | null;
+  /** Monthly rent for the city's reference unit, in the city's currency:
+   *  JPY for a Tokyo 1K–1LDK, THB for a Bangkok 1-bedroom condo. */
   rent_1k: number | null;
   min_transit: number | null;
   elevation_m: number | null;
@@ -184,6 +208,107 @@ export interface MapStation {
   // payload with 1493 stations and is only needed on the station detail page
   // (which uses the full Station type via getStation). If compare-panel
   // badges are needed again, lazy-load them from a separate data file.
+}
+
+// ─── Bangkok (district-level city) ────────────────────────────────────────
+// Produced by scripts/bangkok/build.py → app/src/data/bangkok/*.json.
+
+/** A rapid-transit line (BTS / MRT / Airport Rail Link / SRT Red / monorails). */
+export interface RailLine {
+  id: string;
+  name_en: string;
+  name_th: string;
+  name_ja: string;
+  name_ru: string;
+  /** Operator brand shown as a prefix chip: BTS · MRT · ARL · SRT. */
+  operator: string;
+  color: string;
+  kind: 'metro' | 'monorail' | 'airport_link' | 'commuter';
+}
+
+export interface RailStation {
+  id: string;
+  name_en: string;
+  name_th: string;
+  lat: number;
+  lng: number;
+  /** RailLine ids stopping here (interchanges list several). */
+  lines: string[];
+  /** Slug of the district containing the station; null outside Bangkok. */
+  district: string | null;
+}
+
+/** Wikimedia Commons image for a district (Wikidata P18), hot-linked. */
+export interface DistrictImage {
+  /** ~500 px wide — map popups / tooltips. */
+  thumb: string;
+  /** ~960 px wide — detail-page banner. */
+  hero: string;
+  page: string;
+  artist: string;
+  license: string;
+}
+
+/** Raw counts inside the district boundary — the "by the numbers" card. */
+export interface DistrictFacts {
+  area_km2: number;
+  population: number | null;
+  population_year: number | null;
+  /** People per km². */
+  density: number | null;
+  food: number;
+  nightlife: number;
+  convenience: number;
+  markets: number;
+  essentials: number;
+  sports: number;
+  culture: number;
+  temples: number;
+  /** Parks, gardens and woodland inside the boundary, hectares. */
+  park_ha: number;
+  /** `park_ha` as a percentage of the district area. */
+  park_share: number;
+  piers: number;
+}
+
+export interface DistrictRent {
+  /** Typical asking rent for a ~30–35 m² 1-bedroom condo, THB / month. */
+  one_bed: number | null;
+  /** Typical asking rent for a ~60–70 m² 2-bedroom condo, THB / month. */
+  two_bed: number | null;
+  source: string;
+  updated: string;
+}
+
+export interface District {
+  slug: string;
+  name_en: string;
+  name_th: string;
+  name_jp: string;
+  name_ru: string;
+  /** Label point (pole of inaccessibility) — always inside the polygon. */
+  lat: number;
+  lng: number;
+  ratings: StationRatings;
+  confidence: StationConfidence;
+  sources: StationSources;
+  data_date: string;
+  rent: DistrictRent;
+  transit_minutes: HubMinutes;
+  min_transit: number | null;
+  /** Rail stations inside the boundary. */
+  station_ids: string[];
+  /** Stations just outside (≤ 800 m) that residents near the edge use. */
+  nearby_station_ids: string[];
+  line_ids: string[];
+  /** Slugs of districts sharing a border. */
+  neighbors: string[];
+  aliases: string[];
+  facts: DistrictFacts;
+  description: MultilingualDescription | null;
+  image: DistrictImage | null;
+  /** Wikipedia article URLs by language, when an article exists. */
+  wikipedia: Partial<Record<'en' | 'ja' | 'ru' | 'th', string>>;
 }
 
 export interface WeightConfig {

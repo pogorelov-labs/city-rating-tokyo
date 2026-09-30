@@ -1,0 +1,3 @@
+# Raw open-data dumps (OSM / Wikidata / Commons / Overture), ~50 MB.
+# Regenerate with: uv run scripts/bangkok/fetch.py
+raw/

@@ -2,11 +2,12 @@
 
 import { useState, useMemo, useDeferredValue } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useCityState, useCityActions } from '@/lib/store';
+import { useCity } from '@/lib/city-context';
+import { formatRentShort, hasActiveFilters, type CityConfig } from '@/lib/cities';
 import {
   RATING_LABELS,
   PRESET_PROFILES,
-  DEFAULT_FILTERS,
   WeightConfig,
   MapStation,
   StationRatings,
@@ -18,31 +19,23 @@ import {
   applyDealbreakers,
 } from '@/lib/scoring';
 import Tooltip from '@/components/Tooltip';
-import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
+import { stationDisplayName, stationPrimaryName, matchArea } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 
 interface FilterPanelProps {
   stations: MapStation[];
 }
 
-const RENT_MIN = 80_000;
-const RENT_MAX = 300_000;
-const RENT_STEP = 10_000;
-const COMMUTE_MIN = 10;
-const COMMUTE_MAX = 60;
-const COMMUTE_STEP = 5;
 const CATEGORY_MIN_OPTIONS = [5, 6, 7, 8] as const;
 
-function formatRent(v: number, isMin: boolean, noLimit: string): string {
-  if (isMin && v <= RENT_MIN) return '¥80k';
-  if (!isMin && v >= RENT_MAX) return noLimit;
-  return `¥${(v / 1000).toFixed(0)}k`;
+function formatRent(city: CityConfig, v: number, isMin: boolean, noLimit: string): string {
+  if (!isMin && v >= city.rent.max) return noLimit;
+  return formatRentShort(city.id, isMin ? Math.max(v, city.rent.min) : v);
 }
 
-function formatCommute(v: number, isMin: boolean, noLimit: string): string {
-  if (isMin && v <= COMMUTE_MIN) return '10 min';
-  if (!isMin && v >= COMMUTE_MAX) return noLimit;
-  return `${v} min`;
+function formatCommute(city: CityConfig, v: number, isMin: boolean, noLimit: string): string {
+  if (!isMin && v >= city.commute.max) return noLimit;
+  return `${isMin ? Math.max(v, city.commute.min) : v} min`;
 }
 
 /** Dual-range slider: two thumbs on a single track */
@@ -126,40 +119,37 @@ function DualRange({
 export default function FilterPanel({ stations }: FilterPanelProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
+  const city = useCity();
+  const isDistrict = city.unit === 'district';
   const weights = useAppStore((s) => s.weights);
   const setWeight = useAppStore((s) => s.setWeight);
   const setAllWeights = useAppStore((s) => s.setAllWeights);
   const resetWeights = useAppStore((s) => s.resetWeights);
-  const filters = useAppStore((s) => s.filters);
-  const setMinRent = useAppStore((s) => s.setMinRent);
-  const setMaxRent = useAppStore((s) => s.setMaxRent);
-  const setMinCommute = useAppStore((s) => s.setMinCommute);
-  const setMaxCommute = useAppStore((s) => s.setMaxCommute);
-  const setCategoryMin = useAppStore((s) => s.setCategoryMin);
-  const setFilters = useAppStore((s) => s.setFilters);
-  const resetFilters = useAppStore((s) => s.resetFilters);
-  const setSelectedStation = useAppStore((s) => s.setSelectedStation);
-  const setHoveredStation = useAppStore((s) => s.setHoveredStation);
-  const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
-  const setHideFloodRisk = useAppStore((s) => s.setHideFloodRisk);
-  const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
-  const setHideHighSeismic = useAppStore((s) => s.setHideHighSeismic);
-  const setHasLiveCamera = useAppStore((s) => s.setHasLiveCamera);
+  const filters = useCityState((s) => s.filters);
+  const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
+  const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
+  const {
+    setMinRent,
+    setMaxRent,
+    setMinCommute,
+    setMaxCommute,
+    setCategoryMin,
+    resetFilters,
+    setSelectedStation,
+    setHoveredStation,
+    setHideFloodRisk,
+    setHideHighSeismic,
+    setHasLiveCamera,
+  } = useCityActions();
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
   const deferredWeights = useDeferredValue(weights);
   const noLimit = t('filter.noLimit');
+  // Unit-specific copy ("stations" vs "districts") lives under parallel keys.
+  const u = (key: string) => (isDistrict ? `${key}District` : key);
 
-  const filtersActive =
-    filters.minRent > DEFAULT_FILTERS.minRent ||
-    filters.maxRent < DEFAULT_FILTERS.maxRent ||
-    filters.minCommute > DEFAULT_FILTERS.minCommute ||
-    filters.maxCommute < DEFAULT_FILTERS.maxCommute ||
-    Object.keys(filters.categoryMins).length > 0 ||
-    filters.hasLiveCamera ||
-    hideFloodRisk ||
-    hideHighSeismic;
+  const filtersActive = hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic });
 
   const catMinCount = Object.keys(filters.categoryMins).length;
 
@@ -174,8 +164,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   }, [stations, deferredWeights]);
 
   const filtered = useMemo(
-    () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic),
-    [scoredStations, filters, hideFloodRisk, hideHighSeismic],
+    () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters),
+    [scoredStations, filters, hideFloodRisk, hideHighSeismic, city],
   );
 
   const ranked = useMemo(
@@ -193,15 +183,13 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
   const searchResults = useMemo(() => {
     if (!search || search.length < 2) return [];
-    const q = search.toLowerCase();
-    return stations
-      .filter(
-        (s) =>
-          s.name_en.toLowerCase().includes(q) ||
-          s.name_jp.includes(search) ||
-          (s.name_ru && s.name_ru.toLowerCase().includes(q))
-      )
-      .slice(0, 8);
+    const hits: { station: MapStation; alias?: string }[] = [];
+    for (const s of stations) {
+      const m = matchArea(s, search);
+      if (m.matched) hits.push({ station: s, alias: m.alias });
+      if (hits.length >= 8) break;
+    }
+    return hits;
   }, [stations, search]);
 
   const totalWithRatings = stations.filter((s) => s.ratings).length;
@@ -210,16 +198,16 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
     const p = PRESET_PROFILES.find((pr) => pr.id === presetId);
     if (!p) return;
     setAllWeights(p.weights);
-    // Reset filters first, then apply preset filters
+    // Reset filters first, then apply this city's preset dealbreakers
+    // (weights are universal; rent/commute limits are in local units).
     resetFilters();
-    if (p.filters) {
-      if (p.filters.maxRent != null) setMaxRent(p.filters.maxRent);
-      if (p.filters.maxCommute != null) setMaxCommute(p.filters.maxCommute);
-      if (p.filters.hasLiveCamera != null) setHasLiveCamera(p.filters.hasLiveCamera);
-      if (p.filters.categoryMins) {
-        for (const [k, v] of Object.entries(p.filters.categoryMins)) {
-          setCategoryMin(k as keyof StationRatings, v);
-        }
+    const pf = city.presetFilters[p.id] ?? {};
+    if (pf.maxRent != null) setMaxRent(pf.maxRent);
+    if (pf.maxCommute != null) setMaxCommute(pf.maxCommute);
+    if (pf.hasLiveCamera != null) setHasLiveCamera(pf.hasLiveCamera);
+    if (pf.categoryMins) {
+      for (const [k, v] of Object.entries(pf.categoryMins)) {
+        setCategoryMin(k as keyof StationRatings, v);
       }
     }
     setActivePreset(presetId);
@@ -235,7 +223,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           enterKeyHint="search"
           autoComplete="off"
           spellCheck={false}
-          placeholder={t('filter.searchPlaceholder')}
+          placeholder={t(u('filter.searchPlaceholder'))}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -243,6 +231,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         {search && (
           <button
             onClick={() => setSearch('')}
+            aria-label={t('filter.clearSearch')}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -252,7 +241,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         )}
         {searchResults.length > 0 && (
           <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-hidden">
-            {searchResults.map((s) => (
+            {searchResults.map(({ station: s, alias }) => (
               <button
                 key={s.slug}
                 onClick={() => {
@@ -266,11 +255,16 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 data-umami-event-station={s.slug}
                 className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-50 last:border-0"
               >
-                <span>
+                <span className="min-w-0 truncate">
+                  {alias && <span className="text-gray-500">{alias} → </span>}
                   <span className="font-medium">{stationDisplayName(s, locale).primary}</span>
                   <span className="text-gray-400 ml-1.5 text-xs">{stationDisplayName(s, locale).secondary}</span>
                 </span>
-                <span className="text-xs text-gray-400">{t('filter.lines', { count: s.line_count })}</span>
+                <span className="text-xs text-gray-400 shrink-0 ml-2">
+                  {isDistrict
+                    ? t('filter.stations', { count: s.station_count ?? 0 })
+                    : t('filter.lines', { count: s.line_count })}
+                </span>
               </button>
             ))}
           </div>
@@ -320,31 +314,31 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         <div className="space-y-3">
           {/* Rent range */}
           <DualRange
-            min={RENT_MIN}
-            max={RENT_MAX}
-            step={RENT_STEP}
+            min={city.rent.min}
+            max={city.rent.max}
+            step={city.rent.step}
             valueLow={filters.minRent}
             valueHigh={filters.maxRent}
             onLowChange={(v) => { setMinRent(v); setActivePreset(null); }}
             onHighChange={(v) => { setMaxRent(v); setActivePreset(null); }}
-            formatLow={formatRent(filters.minRent, true, noLimit)}
-            formatHigh={formatRent(filters.maxRent, false, noLimit)}
-            label={t('filter.rent')}
+            formatLow={formatRent(city, filters.minRent, true, noLimit)}
+            formatHigh={formatRent(city, filters.maxRent, false, noLimit)}
+            label={t(u('filter.rent'))}
             umamiEvent="filter-rent"
           />
 
           {/* Commute range */}
           <DualRange
-            min={COMMUTE_MIN}
-            max={COMMUTE_MAX}
-            step={COMMUTE_STEP}
+            min={city.commute.min}
+            max={city.commute.max}
+            step={city.commute.step}
             valueLow={filters.minCommute}
             valueHigh={filters.maxCommute}
             onLowChange={(v) => { setMinCommute(v); setActivePreset(null); }}
             onHighChange={(v) => { setMaxCommute(v); setActivePreset(null); }}
-            formatLow={formatCommute(filters.minCommute, true, noLimit)}
-            formatHigh={formatCommute(filters.maxCommute, false, noLimit)}
-            label={t('filter.commute')}
+            formatLow={formatCommute(city, filters.minCommute, true, noLimit)}
+            formatHigh={formatCommute(city, filters.maxCommute, false, noLimit)}
+            label={t(u('filter.commute'))}
             umamiEvent="filter-commute"
           />
 
@@ -408,8 +402,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             </div>
           </details>
 
-          {/* Environment Safety Filters */}
+          {/* Environment Safety Filters — Tokyo data only (elevation, J-SHIS, livecams) */}
+          {(city.features.environmentFilters || city.features.liveCameras) && (
           <div className="space-y-2 pt-1">
+            {city.features.environmentFilters && (<>
             <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
@@ -434,6 +430,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 <span className="text-gray-400 ml-1">{t('filter.seismicThreshold')}</span>
               </span>
             </label>
+            </>)}
+            {city.features.liveCameras && (
             <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
@@ -446,18 +444,20 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 {t('filter.hasLiveCamera')}
               </span>
             </label>
+            )}
           </div>
+          )}
         </div>
 
         {/* Match counter */}
         <div className="mt-3 text-xs tabular-nums">
           {filtered.length === totalWithRatings ? (
-            <span className="text-gray-400">{t('filter.stationCount', { count: totalWithRatings })}</span>
+            <span className="text-gray-400">{t(u('filter.stationCount'), { count: totalWithRatings })}</span>
           ) : filtered.length === 0 ? (
-            <span className="text-amber-600">{t('filter.noMatch')}</span>
+            <span className="text-amber-600">{t(u('filter.noMatch'))}</span>
           ) : (
             <span className="text-gray-500">
-              {t.rich('filter.matchCount', {
+              {t.rich(u('filter.matchCount'), {
                 filtered: filtered.length,
                 total: totalWithRatings,
                 bold: (chunks) => <span className="font-medium text-gray-700">{chunks}</span>,
@@ -515,7 +515,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         <h2 className="text-lg font-bold mb-2">{t('filter.topRanked')}</h2>
         {ranked.length === 0 ? (
           <p className="text-sm text-gray-400">
-            {filtersActive ? t('filter.noMatchFilters') : t('filter.noRatedYet')}
+            {filtersActive ? t(u('filter.noMatchFilters')) : t(u('filter.noRatedYet'))}
           </p>
         ) : (
           <ol className="space-y-1">
@@ -555,9 +555,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       <hr className="border-gray-200" />
 
-      <div className="text-xs text-gray-400">
-        <p>{t('filter.stationsMapped', { count: stations.length })}</p>
+      <div className="text-xs text-gray-400 space-y-1">
+        <p>{t(u('filter.stationsMapped'), { count: stations.length })}</p>
         <p>{t('filter.withRatings', { count: totalWithRatings })}</p>
+        {isDistrict && <p className="leading-relaxed">{t('filter.relativeScoresNote')}</p>}
       </div>
     </div>
   );

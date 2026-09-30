@@ -9,6 +9,10 @@ interface Props {
   level: ConfidenceLevel;
   sources?: string[];
   size?: 'sm' | 'md';
+  /** Message key replacing `confidence.${level}.description` — lets a city
+   *  word provenance honestly (Bangkok's editorial values are researcher
+   *  estimates, not a human override of pipeline data). */
+  descriptionKey?: string;
 }
 
 /**
@@ -68,7 +72,7 @@ export function ConfidenceIcon({ level, size = 12 }: { level: ConfidenceLevel; s
   );
 }
 
-export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) {
+export default function ConfidenceBadge({ level, sources, size = 'sm', descriptionKey }: Props) {
   const t = useTranslations();
   const [show, setShow] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -111,7 +115,7 @@ export default function ConfidenceBadge({ level, sources, size = 'sm' }: Props) 
   }, [isTouch, show]);
 
   const label = t(`confidence.${level}.label`);
-  const description = t(`confidence.${level}.description`);
+  const description = t(descriptionKey ?? `confidence.${level}.description`);
   const iconSize = size === 'md' ? 14 : 12;
   // On touch, tap target must be at least 44×44px — use padding
   const touchPad = isTouch ? 'p-3 -m-3' : '';

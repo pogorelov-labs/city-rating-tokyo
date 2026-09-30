@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Housing-estate country around Nong Bon and Srinakarin, with Suan Luang Rama IX as the backyard. Yellow Line and Airport Rail Link only at the edges; otherwise a car life. Green, quiet, far.",
+    "landmarks": "Suan Luang Rama IX's themed gardens, the Nong Bon reservoir with sailing and kayaks, Seacon Square and Paradise Park malls on Srinakarin.",
+    "food": "Mall food courts at Seacon Square and Paradise Park, roadside curry-rice and som tam joints, fresh markets, cafés for the car crowd. Spread out; you drive to eat.",
+    "nightlife": "Quiet after dark: mall bars and a few beer gardens around Srinakarin. Evenings end at the mall or a night market."
+  },
+  "ja": {
+    "atmosphere": "ノンボーンとシーナカリン通り周辺に住宅地が広がり、裏庭はスアンルアン・ラマ9世公園。イエローラインとエアポート・レイル・リンクは区の端だけで、基本は車生活。緑が多く静か、ただし遠い。",
+    "landmarks": "スアンルアン・ラマ9世公園のテーマ庭園、セーリングやカヤックができるノンボーン貯水池、シーナカリン通りのシーコン・スクエアとパラダイス・パーク。",
+    "food": "シーコン・スクエアとパラダイス・パークのフードコート、道端のぶっかけ飯屋とソムタム屋、生鮮市場、車で来る客向けのカフェ。店は散らばり、食事にも車が要る。",
+    "nightlife": "夜は静か。モールのバーとシーナカリン通り周辺のビアガーデンが少し。夜はモールかナイトマーケットで終わる。"
+  },
+  "ru": {
+    "atmosphere": "Край посёлков вокруг Нонгбон и Шринакарин, а на заднем дворе — парк Суан Луанг Рама IX. Yellow Line и Airport Rail Link только по краям, в остальном жизнь на машине. Зелено, тихо, далеко.",
+    "landmarks": "Тематические сады парка Суан Луанг Рама IX, водохранилище Нонгбон с парусом и каяками, моллы Seacon Square и Paradise Park на Шринакарин.",
+    "food": "Фудкорты Seacon Square и Paradise Park, придорожные забегаловки с рисом-карри и сом тамом, рынки, кофейни для автомобилистов. Всё врассыпную, за едой — на машине.",
+    "nightlife": "Вечером тихо: бары в моллах и пара пивных садов у Шринакарин. Вечер заканчивается в молле или на ночном рынке."
+  }
+}

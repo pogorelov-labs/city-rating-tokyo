@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's last stretch of Sukhumvit: condo towers by the BTS at Udom Suk, Bang Na and Bearing, La Salle's side streets, expat families drawn by international schools. Mid-priced, practical, rarely exciting.",
+    "landmarks": "BITEC exhibition halls on Bang Na-Trat, Central Bangna, the Bangkok Patana and St Andrews school campuses, the long elevated expressway overhead. Few parks.",
+    "food": "Central Bangna's food floors, markets and street stalls along La Salle and Udom Suk, Japanese and Korean chains, plenty of cafés. Good everyday range, few destinations.",
+    "nightlife": "Neighbourhood bars and live-music restaurants around Udom Suk and La Salle. Real nights out mean the BTS to Thong Lo."
+  },
+  "ja": {
+    "atmosphere": "バンコク市内最後のスクンビット区間。BTSウドムスック、バーンナー、ベーリングの駅前にコンドミニアム、ラサールの横道、インターナショナルスクール目当ての外国人家族。中価格帯で実用的、刺激は少なめ。",
+    "landmarks": "バーンナー・トラート通りのBITEC展示場、セントラル・バーンナー、バンコク・パタナ校やセント・アンドリュース校のキャンパス、頭上に延びる長い高架高速道路。公園は少ない。",
+    "food": "セントラル・バーンナーのレストラン街、ラサールとウドムスック沿いの市場と屋台、日系・韓国系チェーン、カフェ多数。日常には十分、わざわざ行く店は少ない。",
+    "nightlife": "ウドムスックとラサール周辺に近所のバーとライブ演奏のレストラン。本格的に飲むならBTSでトンローへ。"
+  },
+  "ru": {
+    "atmosphere": "Последний бангкокский отрезок Сукхумвита: кондо у станций BTS Удомсук, Бангна и Беринг, переулки Ласаль, семьи экспатов ради международных школ. Средние цены, практично, без искры.",
+    "landmarks": "Выставочные залы BITEC на Бангна-Трат, Central Bangna, кампусы школ Bangkok Patana и St Andrews, длинная эстакада скоростной трассы над головой. Парков мало.",
+    "food": "Фуд-этажи Central Bangna, рынки и уличные лотки на Ласаль и Удомсук, японские и корейские сети, много кофеен. На каждый день хватает, ради еды сюда не едут.",
+    "nightlife": "Районные бары и рестораны с живой музыкой у Удомсука и Ласаль. За настоящим вечером — на BTS в Тонглор."
+  }
+}

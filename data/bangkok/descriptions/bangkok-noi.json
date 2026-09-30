@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Thonburi riverside facing the Old Town: Siriraj Hospital's orbit of doctors and students, Wang Lang's market lanes, Pinklao malls, temple-lined canal sois. MRT Blue Line inland, ferries across the river.",
+    "landmarks": "Siriraj Hospital and its medical museums, the Royal Barges Museum on Khlong Bangkok Noi, Wat Rakhang and Wang Lang pier on the river, Thonburi station for Kanchanaburi trains.",
+    "food": "~1,100 places to eat: Wang Lang market's snacks, curry-rice and Thai desserts feeding the Siriraj crowd, riverside Thai restaurants, mall dining at Central Pinklao. Cheap and thoroughly Thai.",
+    "nightlife": "Modest: riverside bars and local pubs around Pinklao and Wang Lang; Khao San is one bridge away."
+  },
+  "ja": {
+    "atmosphere": "旧市街の対岸、トンブリー側の川沿い。医師と学生が行き交うシリラート病院、ワンランの市場路地、ピンクラオのモール、寺の並ぶ運河沿いのソイ。内陸にMRTブルーライン、対岸へは渡し船。",
+    "landmarks": "シリラート病院と医学博物館群、バーンコークノーイ運河の王室御座船博物館、川沿いのワット・ラカンとワンラン船着場、カンチャナブリー行き列車が出るトンブリー駅。",
+    "food": "飲食店約1100軒。シリラートの人波を支えるワンラン市場の軽食、ぶっかけ飯、タイ菓子。川沿いのタイ料理店、セントラル・ピンクラオ。安く、どこまでもタイの味。",
+    "nightlife": "控えめ。ピンクラオやワンラン周辺の川沿いバーとローカルパブ。カオサン通りは橋を渡ればすぐ。"
+  },
+  "ru": {
+    "atmosphere": "Тонбури у реки напротив Старого города: врачи и студенты вокруг больницы Сирирадж, рыночные переулки Ванг Ланга, моллы Пинклао, сои вдоль каналов с храмами. MRT Blue Line в глубине района, через реку — паромы.",
+    "landmarks": "Больница Сирирадж и её медицинские музеи, Музей королевских барж на канале Бангкок-Ной, Ват Ракханг и пирс Ванг Ланг на реке, вокзал Тонбури с поездами на Канчанабури.",
+    "food": "~1100 мест поесть: закуски, рис с карри и тайские сладости рынка Ванг Ланг кормят весь Сирирадж, тайские ресторанчики у реки, Central Pinklao. Дёшево и очень по-тайски.",
+    "nightlife": "Скромно: бары у реки и местные пабы в Пинклао и Ванг Ланге; до Каосана — один мост."
+  }
+}

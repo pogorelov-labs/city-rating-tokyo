@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's far-western fringe on Phet Kasem and around Nong Khang Phlu, past the last train stop: gated housing estates, shophouse strips, open land toward Samut Sakhon. Rock-bottom rent, very quiet, 70+ minute commutes.",
+    "landmarks": "Mostly everyday landmarks: Phet Kasem's far-west stretch around Soi 81 with markets and hypermarkets, Wat Nong Khaem and other local temples, a couple of hospitals.",
+    "food": "Basic and local: fresh-market stalls on Phet Kasem, hypermarket food courts, noodle and made-to-order shops inside the housing estates; you'll cook or drive for more.",
+    "nightlife": "Quiet after dark: a handful of roadside pubs and beer gardens at most."
+  },
+  "ja": {
+    "atmosphere": "ペッカセーム通りとノーンカーンプルー周辺、鉄道の終点よりさらに先のバンコク最西端。ゲート付き住宅地、ショップハウスの並び、サムットサーコーン方面に空き地。家賃は底値、とても静か、通勤は70分以上。",
+    "landmarks": "ほぼ日常の風景。ペッカセーム通りソイ81周辺の市場と大型スーパー、ワット・ノーンケームなど地元の寺、病院がいくつか。",
+    "food": "素朴でローカル。ペッカセーム通りの市場の屋台、大型スーパーのフードコート、住宅地の中の麺屋とタムサン食堂。それ以上は自炊か車で。",
+    "nightlife": "夜は静か。道路沿いのパブやビアガーデンがせいぜい数軒。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Бангкока на Пхеткасем и вокруг Нонг Кханг Пхлу, за последней станцией метро: закрытые посёлки, ряды шопхаусов, пустыри в сторону Самутсакхона. Аренда на дне, очень тихо, до работы 70+ минут.",
+    "landmarks": "В основном бытовые ориентиры: дальний отрезок Пхеткасем у сои 81 с рынками и гипермаркетами, Ват Нонгкхэм и другие местные храмы, пара больниц.",
+    "food": "Просто и по-местному: лотки на рынках Пхеткасем, фудкорты гипермаркетов, лапшичные и забегаловки «тамсанг» внутри посёлков; за большим — готовить самому или ехать на машине.",
+    "nightlife": "После заката тихо: максимум несколько придорожных пабов и пивных садов."
+  }
+}

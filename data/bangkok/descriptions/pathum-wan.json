@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's retail core: Siam, Ratchaprasong, Lang Suan, Sam Yan, plus a big university campus and embassy-lined Wireless Road. Rail at every turn, some of the steepest rents in town, crowds all day.",
+    "landmarks": "Lumphini Park, Siam Paragon, MBK and CentralWorld, Erawan Shrine, Jim Thompson House, Bangkok Art and Culture Centre, Chulalongkorn University, One Bangkok, the old Hua Lamphong station.",
+    "food": "~3k places to eat: mall food halls at Paragon, CentralWorld and MBK, late-night street food on Banthat Thong, campus canteens, Sam Yan market. Prices climb towards Ratchaprasong.",
+    "nightlife": "Rooftop and hotel bars around Ratchaprasong and Lang Suan, student hangouts near Siam Square and Sam Yan. Polished and pricey, not rowdy."
+  },
+  "ja": {
+    "atmosphere": "バンコクの商業の中枢。サイアム、ラーチャプラソン、ランスアン、サームヤーンに、広大な大学キャンパスと大使館が並ぶウィッタユ通り。駅はどこでも近く、家賃は市内トップクラス、人波は一日中。",
+    "landmarks": "ルンピニー公園、サイアム・パラゴン、MBK、セントラルワールド、エラワン廟、ジム・トンプソンの家、バンコク芸術文化センター、チュラーロンコーン大学、One Bangkok、旧フアランポーン駅。",
+    "food": "飲食店は約3000軒。パラゴン、セントラルワールド、MBKのフードホール、バンタットーン通りの深夜屋台、大学の学食、サームヤーン市場。ラーチャプラソンに近づくほど値が上がる。",
+    "nightlife": "ラーチャプラソンとランスアン周辺にルーフトップとホテルバー、サイアム・スクエアとサームヤーンには学生の溜まり場。洗練されて高め、騒がしくはない。"
+  },
+  "ru": {
+    "atmosphere": "Торговое сердце Бангкока: Сиам, Ратчапрасонг, Лангсуан, Сам Ян, плюс большой университетский кампус и посольства на Витхаю (Wireless Road). Рельсы на каждом углу, аренда одна из самых высоких в городе, толпы весь день.",
+    "landmarks": "Парк Лумпини, Siam Paragon, MBK и CentralWorld, святилище Эраван, дом Джима Томпсона, Bangkok Art and Culture Centre, университет Чулалонгкорн, One Bangkok, старый вокзал Хуалампонг.",
+    "food": "Около 3 тысяч заведений: фуд-холлы Paragon, CentralWorld и MBK, ночная уличная еда на Бантхат Тхонг, студенческие столовые, рынок Сам Ян. Чем ближе к Ратчапрасонгу, тем дороже.",
+    "nightlife": "Руфтопы и отельные бары у Ратчапрасонга и Лангсуан, студенческие точки у Siam Square и Сам Яна. Лоск и высокие цены, без буйства."
+  }
+}
