@@ -12,9 +12,10 @@ half-finished run can be resumed without hammering public APIs.
 Sources (all open):
   - OpenStreetMap via Overpass (ODbL): the 50 khet boundaries, POIs used by
     the rating signals, green-space polygons, rail stations and routes.
-  - Wikidata (CC0): district names in EN/TH/JA/RU, population, area, image.
+  - Wikidata (CC0): district names in EN/TH/JA/RU, population, area, image;
+    the same labels + image for rail stations (station-area pages).
   - Wikimedia Commons (per-file CC licences): thumbnail URL + attribution for
-    each district's Wikidata image.
+    each district's / station's Wikidata image.
   - Overture Maps Places (CDLA-Permissive-2.0; Meta, Microsoft, Foursquare,
     AllThePlaces sources): ~300k places in the Bangkok bbox — the second,
     independent POI source next to OSM (the role HotPepper plays for Tokyo).
@@ -178,8 +179,13 @@ def _district_qids() -> list[str]:
     return qids
 
 
-def fetch_wikidata() -> dict:
-    qids = _district_qids()
+def _station_qids() -> list[str]:
+    """Wikidata items of the rail station nodes/ways (station names in JA/RU + photos)."""
+    stations = json.loads((RAW / "rail_stations.json").read_text())["elements"]
+    return sorted({el["tags"]["wikidata"] for el in stations if el.get("tags", {}).get("wikidata")})
+
+
+def _wbgetentities(qids: list[str]) -> dict:
     entities: dict = {}
     for i in range(0, len(qids), 50):
         chunk = qids[i : i + 50]
@@ -198,11 +204,19 @@ def fetch_wikidata() -> dict:
         resp.raise_for_status()
         entities.update(resp.json()["entities"])
         time.sleep(1)
-    return {"entities": entities}
+    return entities
 
 
-def fetch_commons() -> dict:
-    wd = json.loads((RAW / "wikidata.json").read_text())["entities"]
+def fetch_wikidata() -> dict:
+    return {"entities": _wbgetentities(_district_qids())}
+
+
+def fetch_station_wikidata() -> dict:
+    return {"entities": _wbgetentities(_station_qids())}
+
+
+def _commons_pages(wikidata_file: str) -> dict:
+    wd = json.loads((RAW / wikidata_file).read_text())["entities"]
     files: list[str] = []
     for ent in wd.values():
         for claim in ent.get("claims", {}).get("P18", [])[:1]:
@@ -233,6 +247,14 @@ def fetch_commons() -> dict:
             pages.setdefault("_normalized", {})[norm["from"]] = norm["to"]
         time.sleep(1)
     return {"pages": pages}
+
+
+def fetch_commons() -> dict:
+    return _commons_pages("wikidata.json")
+
+
+def fetch_station_commons() -> dict:
+    return _commons_pages("station_wikidata.json")
 
 
 def fetch_overture() -> dict:
@@ -278,6 +300,8 @@ TASKS: dict[str, Callable[[], dict]] = {
     "rail_stations": fetch_rail_stations,
     "wikidata": fetch_wikidata,  # depends on boundaries
     "commons": fetch_commons,  # depends on wikidata
+    "station_wikidata": fetch_station_wikidata,  # depends on rail_stations
+    "station_commons": fetch_station_commons,  # depends on station_wikidata
     "overture_places": fetch_overture,
 }
 # Tasks that write their own (non-JSON) output file.

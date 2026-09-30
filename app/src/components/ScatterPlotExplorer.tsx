@@ -16,6 +16,7 @@ import { stationPrimaryName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 import { useAppStore } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
+import { areaKind } from '@/lib/area-key';
 import {
   calculateWeightedScore,
   compositeToColor,
@@ -101,7 +102,14 @@ export default function ScatterPlotExplorer({ stations }: Props) {
           </select>
         </label>
         <span className="text-xs text-gray-400">
-          {t(city.unit === 'district' ? 'filter.stationCountDistrict' : 'filter.stationCount', { count: data.length })}
+          {t(
+            city.unit !== 'district'
+              ? 'filter.stationCount'
+              : areaKind(stations[0]?.slug ?? '') === 'station'
+                ? 'filter.stationCountStationArea'
+                : 'filter.stationCountDistrict',
+            { count: data.length },
+          )}
         </span>
       </div>
       <ResponsiveContainer width="100%" height={400}>

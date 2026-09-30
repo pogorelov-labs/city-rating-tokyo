@@ -8,6 +8,7 @@ import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
 import { useCityId } from '@/lib/city-context';
 import { buildShareUrl, selectUrlView } from '@/lib/url-state';
+import { useLevelAreas } from '@/lib/area-lists';
 import FeedbackWidget from './FeedbackWidget';
 
 // recharts is heavy (~350 KB). Only load when the scatter modal opens.
@@ -30,6 +31,9 @@ export default function HeaderActions({ stations }: Props) {
   const [scatterOpen, setScatterOpen] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Plot the areas of the painted level (Bangkok's station level plots
+  // station areas; the grid level keeps the districts).
+  const plotted = useLevelAreas(stations);
 
   const handleShare = async () => {
     const url = buildShareUrl(selectUrlView(useAppStore.getState(), city), city);
@@ -117,7 +121,7 @@ export default function HeaderActions({ stations }: Props) {
                 </svg>
               </button>
             </div>
-            <ScatterPlotExplorer stations={stations} />
+            <ScatterPlotExplorer stations={plotted} />
           </div>
         </div>,
         document.body

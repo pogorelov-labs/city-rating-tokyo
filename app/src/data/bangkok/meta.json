@@ -27,6 +27,42 @@
     "p50": 6.3,
     "p95": 8.2
   },
+  "station_area_count": 133,
+  "station_medians": {
+    "transport": 6,
+    "rent": 9,
+    "daily_essentials": 6,
+    "safety": 7,
+    "food": 6,
+    "green": 6,
+    "gym_sports": 6,
+    "vibe": 6,
+    "nightlife": 6,
+    "crowd": 6
+  },
+  "station_default_anchors": {
+    "p5": 4.3,
+    "p50": 6.0,
+    "p95": 7.8
+  },
+  "grid_cell_count": 39149,
+  "grid_medians": {
+    "transport": 5,
+    "rent": 9,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 5,
+    "green": 5,
+    "gym_sports": 5,
+    "vibe": 5,
+    "nightlife": 5,
+    "crowd": 6
+  },
+  "grid_default_anchors": {
+    "p5": 4.0,
+    "p50": 6.3,
+    "p95": 8.2
+  },
   "rent_scale": {
     "floor": 8000,
     "ceiling": 38000
