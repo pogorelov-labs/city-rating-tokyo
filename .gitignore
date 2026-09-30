@@ -25,3 +25,6 @@ data/embeddings.npz
 test-results/
 playwright-report/
 playwright/.cache/
+
+# Downloaded source files (re-fetched by the ingest scripts)
+.cache/

@@ -27,11 +27,11 @@ app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
 Do **not** equate “every station has a number” with “every number is equally grounded.” This section is the project’s **anti–false-precision** memory.
 
 1. **“100%” / full rows:** Often means **all 1493 slugs participate** in normalization, not that each category uses the same spatial granularity or primary data quality everywhere (Tokyo safety polygons vs ward/prefecture outside Tokyo; rent Suumo vs ward vs regression).
-2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use ward average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`.
-3. **Safety:** Keishicho ArcGIS is **neighborhood-level** for Tokyo; other prefectures may be **municipality/ward** or legacy tables until **CRTKY-82** lands — see `research/02-safety.md`.
-4. **Green / vibe:** OSM signals can exist while **pipeline `confidence` still shows no `strong`** for that category (check `research/00-overview.md` snapshot counts) — strong/moderate/estimate reflect **source rules in compute**, not “map looks green.”
+2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use an e-Stat municipal average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`. **Doctrine (CRTKY-43, 2026-09-30):** e-Stat is an allowed but *labelled* fallback — `moderate`, capped at 9, shown as "Municipal average (e-Stat)" on the station page, and never recomputed in the frontend (`isStationLevelRent()` in `scoring.ts`). Only listings scraped around the station (Suumo, HOMES) are `strong`.
+3. **Safety (CRTKY-82, 2026-09-30):** all 1493 stations come from 2024 police open data via `scripts/scrapers/ingest-crime-open-data.py` → `data/crime/station-safety.json`. Tokyo (570) uses the 町丁 within 800 m of the station → `strong`; 45 outer-Tokyo stations with too few 町丁 in range and all of Kanagawa/Saitama/Chiba use the **municipality/ward** → `moderate` — every station in a ward shares one value, so read those as area-level. Same formula, year and daytime-population rule everywhere; Tokyo catchments are clamped to [1/3, 3]× their municipal rate so granularity alone cannot push them into the tails. The old hand-typed `crime_stats` table matched no source year and reached only 187 of 878 non-Tokyo stations — see `research/02-safety.md`.
+4. **Green / vibe:** strong/moderate/estimate reflect **source rules in compute**, not “map looks green.” Re-measured 2026-08-25: `green` **does** reach `strong` (842/1493), so the older “0 strong” note was stale. `vibe` could never reach `strong` until **CRTKY-128**: the old rule was a two-way ternary with no `strong` branch. `vibe_confidence()` in `compute-ratings.py` now gives `strong` when both independent OSM signals are present (cultural venues **and** pedestrian streets — 461 stations as of the 2026-04 data), `moderate` for cultural venues alone, `estimate` otherwise. Takes effect on the next `refresh-ratings.sh` run.
 5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates per-station travel times using geographic distance + line connectivity, calibrated against 252 AI-researched ground-truth values (MAE 5.5 min, 85% within 10 min). AI-researched entries keep hand-authored times. Computed entries use the calibrated model. Output in `data/transit-times.json`, consumed by `export-ratings.py`. **Upgrade path:** replace with GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
-6. **Missing confidence keys in export:** `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong.
+6. **Missing confidence keys in export:** for computed entries, `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong. For AI-researched entries the gap was worse: they predate `daily_essentials`, so all 251 had **no rating at all** for it and `app/src/lib/data.ts` substituted a hardcoded `5` (+ `estimate`) that fed the composite at 14% weight. Since **CRTKY-129**, `backfill_daily_essentials()` fills rating, confidence and sources from the pipeline on every export (no researcher ever rated this category, so nothing editorial is overwritten), and an AI entry it cannot fill counts toward the `missing_count` gate. The `data.ts` fallback remains only as a guard for `--allow-missing` runs.
 7. **AI-researched slugs (~252):** Integer ratings and `description` are editorial. Since **CRTKY-83**, `export-ratings.py` merges per-category confidence via comparison: matching categories inherit computed metadata, differing ones get `editorial` level. See NocoDB section for full merge policy.
 8. **HotPepper API** is a **single-vendor** dependency for food/nightlife signals; no automated fallback is implemented.
 9. **Last train times (CRTKY-115):** Sourced from [mini-tokyo-3d](https://github.com/nagix/mini-tokyo-3d) (MIT). Computed as `MAX(departure)` per station per day type via coordinate matching (200m) → 1483/1493 coverage (99.3%). Caveats: (a) Sat/Sun/Holiday combined in source (no separate Sunday breakdown), (b) post-midnight times show as 00:xx with no 24:00+ convention, (c) arrival-only terminal stops excluded (not boardable), (d) refresh by re-running `scrape-last-trains.py` against current MT3D master — no auto-refresh. 10 stations uncovered (Hakone cable car, Toden Arakawa tram, a few edge stations with coordinate collisions).
@@ -50,9 +50,9 @@ Do **not** equate “every station has a number” with “every number is equal
 | osm_pois | mnnuqtldvt4jxlj | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
 | hotpepper | mfk9j2qoj2bkeoo | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
 | osm_extended | mrpqu8o796e6xzk | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
-| station_crime | mxwixub7d0q5i00 | 615 | Keishicho ArcGIS FeatureServer (Tokyo neighborhood-level) |
-| crime_stats | mxitpnomlom3j3q | 91 | Hardcoded ward-level (legacy fallback for non-Tokyo) |
-| passenger_counts | m36bbxcv8t0asur | 1409 | MLIT S12 GeoJSON (94% coverage, was 6%) |
+| station_crime | mxwixub7d0q5i00 | 615 | **Legacy, no longer read** — built from Esri Japan's CrimR6_tokyo copy by a script never committed; superseded by `data/crime/` (CRTKY-82) |
+| crime_stats | mxitpnomlom3j3q | 91 | **Legacy, no longer read** — hand-typed literals (script deleted); superseded by `data/crime/` (CRTKY-82) |
+| passenger_counts | m36bbxcv8t0asur | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
 | station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
 | hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
 | computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
@@ -69,16 +69,18 @@ Do **not** equate “every station has a number” with “every number is equal
 | `app/src/data/line-names.json` | 127 | ekidata lookup | `{line_id: {name_ja, name_en, operator_ja, operator_en, color, type}}` — PR #90 |
 | `app/src/data/ward-data.json` | 1493 | NocoDB export | `{slug: {city_name, ward_name, prefecture_name}}` for station detail page — PR #90 |
 | `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
-| `app/src/data/rent-averages.json` | 1100 | Suumo + e-Stat | 274 real Suumo listings + 826 e-Stat govt averages — PR #91 |
+| `app/src/data/rent-averages.json` | 1402 | Suumo + e-Stat | 274 real Suumo listings + 1128 e-Stat municipal averages — PR #91; +302 renamed stations once `merge-estat-rent.py` read `ward-data.json` instead of NocoDB (CRTKY-113 follow-up) |
 | `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
 | `app/src/data/station-thumbnails.json` | 1155 | VPS-generated | 320px thumb URL + LQIP base64 per station |
 | `app/src/data/station-images-all.json` | 1155 | Wikimedia + Unsplash | Gallery full-res images |
 | `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
 | `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
 | `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
+| `data/crime/station-safety.json` | 1493 | `scripts/scrapers/ingest-crime-open-data.py` | Weighted crime rate per slug + level (neighborhood/municipal), confidence, municipality; read by `compute-ratings.py` and `build-datamart.py`. Companion files: `municipal-2024.csv` (247 municipalities with all 7 terms and populations), `sources.json` (URLs, SHA-256, attributions) (CRTKY-82) |
+| `data/passengers/s12-passengers.json` | 1438 | `scripts/scrapers/ingest-mlit-s12.py` | MLIT S12 FY2024 daily passengers per slug (+ `confidence`, correction `flags`); read by `compute-ratings.py` and `build-datamart.py`. CC BY 4.0-compatible, attribution on `/methodology` (CRTKY-84) |
 | `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
 
-**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`.
+**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`. **NocoDB is the exception that was missed:** rows scraped before CRTKY-113 still carry the old slugs, so every bare `{r["slug"]: r ...}` join silently dropped all 334 renamed stations (22%) to proxies in every category until 2026-09-30. Index NocoDB rows with `index_by_slug()` from `scripts/scrapers/slugs.py` — never by raw slug.
 
 `computed_ratings` has 3 metadata columns alongside the 10 rating numbers:
 - `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`
@@ -142,7 +144,7 @@ raw = suumo_1k                                             # real (273 stations)
     || exp(regression)                                      # log-linear regression (rest)
 rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80k
 ```
-Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares from the Suumo rent sample; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
+Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares on every row of `rent-averages.json` — Suumo listings **and** e-Stat municipal averages (since PR #91; the old "Suumo sample" wording was wrong) — and apply only to the ~91 stations with neither; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
 
 ### daily_essentials (14%)
 ```
@@ -159,7 +161,7 @@ weighted_crimes = violent*3 + assault*2 + burglary*2 + purse_snatch*2
                 + pickpocket*1.5 + bike_theft*0.3 + fraud*0.2
 rate = weighted_crimes / adjusted_population * 10000
 ```
-Sources: Keishicho ArcGIS neighborhood polygons (Tokyo, 615 stations), prefectural police (others). Daytime population adjustment for commercial wards (Chiyoda ÷12, Chuo ÷4, Minato ÷3.6).
+Sources: 2024 police open data — 警視庁 町丁 CSV (Tokyo: 町丁 within 800 m, `strong`), Kanagawa/Saitama/Chiba municipal tables (`moderate`); e-Stat population + 2020 small-area boundaries. Denominator per research/02-safety.md §2 in every prefecture: daytime population when > 2× residents, residents below 1.5×, their mean between (CRTKY-82).
 
 ### food (12%)
 ```
@@ -199,10 +201,10 @@ Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; h
 ```
 raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
 ```
-Sources: MLIT S12 (94%), HotPepper total as fallback.
+Sources: MLIT S12 FY2024 — 1438/1493 (96.3%), `moderate` for the 28 that use an older-year fallback; HotPepper total as fallback for the 55 unmanned stations operators never report (CRTKY-84).
 
 ## Override Hierarchy
-1. **AI-researched** (272 stations with `description` field in demo-ratings.ts) — never overwritten
+1. **AI-researched** (~251 stations in the AI block of demo-ratings.ts) — never overwritten, with two exceptions made in `export-ratings.py`: **`daily_essentials`** is filled from the pipeline because no researcher ever rated it (CRTKY-129), and **rent** takes the pipeline value where listings were scraped around the station — station data beats the editorial guess (D3b, 2026-09-30)
 2. **Computed data-driven** — from NocoDB pipeline
 3. **Heuristic fallback** — only where real data unavailable
 

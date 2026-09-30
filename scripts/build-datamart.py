@@ -16,6 +16,9 @@ import os
 import re
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
+from slugs import index_by_slug  # noqa: E402
+
 # NocoDB config
 NOCODB_URL = os.getenv("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
 NOCODB_TOKEN = os.getenv("NOCODB_API_TOKEN")
@@ -28,8 +31,6 @@ TABLES = {
     "osm_pois": "mnnuqtldvt4jxlj",
     "osm_extended": "mrpqu8o796e6xzk",
     "osm_livability": "m3vasnsm4y09xez",
-    "station_crime": "mxwixub7d0q5i00",
-    "passenger_counts": "m36bbxcv8t0asur",
     "station_wards": "m74rdmspn3trrqc",
     "station_elevation": "mkrugzx8z62hli4",
     "station_seismic": "mhtnqvmi1kwbth9",
@@ -45,7 +46,7 @@ def fetch_all_records(table_id: str) -> dict[str, dict]:
     """Fetch all records from a NocoDB table, keyed by slug."""
     import requests
 
-    records = {}
+    rows = []
     offset = 0
     page_size = 200
 
@@ -61,12 +62,16 @@ def fetch_all_records(table_id: str) -> dict[str, dict]:
                 # Strip NocoDB metadata
                 fields = {k: v for k, v in row.items()
                           if k not in ("Id", "CreatedAt", "UpdatedAt", "id", "nc_order")}
-                records[slug] = fields
+                fields["slug"] = slug
+                rows.append(fields)
 
         if len(data.get("list", [])) < page_size:
             break
         offset += page_size
 
+    # Rows scraped before the CRTKY-113 rename still carry old slugs; without
+    # this the MCP datamart has no signals for 334 stations.
+    records, _ = index_by_slug(rows)
     return records
 
 
@@ -101,6 +106,10 @@ def build_datamart(single_slug: str | None = None):
 
     # Last trains (1483 entries: slug → {weekday, holiday, sources})
     last_trains = load_local_json(APP_DATA / "last-trains.json")
+    # MLIT S12 passengers (CRTKY-84) — replaces the NocoDB passenger_counts table
+    passengers = load_local_json(ROOT / "data" / "passengers" / "s12-passengers.json").get("stations", {})
+    # Police open-data safety rates (CRTKY-82) — replaces NocoDB station_crime
+    safety = load_local_json(ROOT / "data" / "crime" / "station-safety.json").get("stations", {})
 
     # Demo ratings (for existing descriptions + computed scores)
     with open(APP_DATA / "demo-ratings.ts") as f:
@@ -212,10 +221,10 @@ def build_datamart(single_slug: str | None = None):
             "livability": nocodb_data["osm_livability"].get(slug, {}),
 
             # Safety / crime
-            "crime": nocodb_data["station_crime"].get(slug, {}),
+            "crime": safety.get(slug, {}),
 
             # Transport
-            "passengers": nocodb_data["passenger_counts"].get(slug, {}),
+            "passengers": passengers.get(slug, {}),
             "transit_minutes": transit_times.get(slug, {}),
 
             # Rent
