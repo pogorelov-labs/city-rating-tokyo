@@ -46,6 +46,62 @@ def percentile_normalize(values: dict[str, float], invert: bool = False) -> dict
     return out
 
 
+def weighted_percentile_normalize(
+    values: list[float], weights: list[float], invert: bool = False
+) -> list[int]:
+    """Resident-weighted version of `percentile_normalize` for the 200 m grid.
+
+    Each cell occupies a slice of the cumulative resident weight, so a block
+    rates 8 when it beats ~75 % of *where people live*, not of all land —
+    paddy fields and river water (weight 0.1) barely move the scale. Ties
+    share their group's midpoint; the lowest group maps to 1 and the highest
+    to 10, like the unweighted rule.
+    """
+    n = len(values)
+    if n == 0:
+        return []
+    order = sorted(range(n), key=lambda i: values[i])
+    centres: list[tuple[list[int], float]] = []
+    acc = 0.0
+    i = 0
+    while i < n:
+        j = i
+        group_w = 0.0
+        while j < n and values[order[j]] == values[order[i]]:
+            group_w += weights[order[j]]
+            j += 1
+        centres.append((order[i:j], acc + group_w / 2))
+        acc += group_w
+        i = j
+    lo, hi = centres[0][1], centres[-1][1]
+    out = [0] * n
+    for members, centre in centres:
+        pct = (centre - lo) / (hi - lo) if hi > lo else 0.5
+        if invert:
+            pct = 1.0 - pct
+        rating = max(1, min(10, round(pct * 9 + 1)))
+        for k in members:
+            out[k] = rating
+    return out
+
+
+def weighted_anchors(scores: list[float], weights: list[float]) -> dict[str, float]:
+    """p5 / p50 / p95 of `scores` by cumulative weight (grid composite palette)."""
+    pairs = sorted(zip(scores, weights))
+    total = sum(w for _, w in pairs)
+    out: dict[str, float] = {}
+    for name, p in (("p5", 0.05), ("p50", 0.5), ("p95", 0.95)):
+        acc = 0.0
+        pick = pairs[-1][0]
+        for score, w in pairs:
+            acc += w
+            if acc >= total * p:
+                pick = score
+                break
+        out[name] = pick
+    return out
+
+
 def rent_to_affordability(rent_thb: float | None) -> int | None:
     """Linear ฿8k→10 … ฿38k→1, clamped. None for missing rent."""
     if not rent_thb or rent_thb <= 0:

@@ -352,7 +352,7 @@ export default async function MethodologyPage({
 
         {/* Bangkok */}
         <section id="bangkok" className="scroll-mt-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Bangkok: district-level ratings</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Bangkok: districts, station areas and a 200&nbsp;m grid</h2>
           <p className="text-gray-700 leading-relaxed">
             Bangkok is rated by its {bangkokMeta.district_count} districts (<em>khet</em>), not by station:
             large parts of the city are not served by rail, and districts are how people there search for
@@ -366,6 +366,32 @@ export default async function MethodologyPage({
             Mo&nbsp;Chit). Points in built-up areas carry full weight and empty paddy fields or river water almost
             none, so a huge semi-rural district is judged by where people actually live. District signals are then
             percentile-ranked across the 50 districts, exactly like Tokyo&apos;s stations.
+          </p>
+          <h3 className="font-semibold text-gray-900 mt-5 mb-2">Three levels of detail</h3>
+          <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+            <li>
+              <strong>Districts</strong> ({bangkokMeta.district_count}) &mdash; as above.
+            </li>
+            <li>
+              <strong>Station areas</strong> ({bangkokMeta.station_area_count}) &mdash; the land within 800&nbsp;m
+              of a rail station that is closer to it than to any other station. Interchanges of different lines a
+              few minutes&apos; walk apart (Asok and Sukhumvit, Sala Daeng and Si Lom, Mo Chit and Chatuchak Park, …)
+              form one area. An area&apos;s score is the resident-weighted average of the grid points inside it,
+              ranked against the other station areas; its commute times are from the station itself. Land farther
+              than 800&nbsp;m from any station has no station area.
+            </li>
+            <li>
+              <strong>200&nbsp;m grid</strong> ({bangkokMeta.grid_cell_count.toLocaleString('en-US')} cells) &mdash; every
+              grid point rated on its own. Here the percentile is weighted by residents: a cell rates 8 when it
+              beats about three quarters of the places where people actually live, not three quarters of all land.
+              Quietness at this level (and for station areas) is the density of all mapped places within
+              400&nbsp;m, since there is no population count at that scale.
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-3 text-sm">
+            Scores are relative within their level: a station area&apos;s 8 and a district&apos;s 8 are ranked
+            against different sets. Rent and safety stay district estimates at every level &mdash; a station area
+            blends the districts it covers by residents, a grid cell takes its own district&apos;s value.
           </p>
           <div className="bg-white rounded-lg border border-gray-200 mt-4 overflow-x-auto">
             <table className="w-full text-sm">
@@ -419,10 +445,14 @@ export default async function MethodologyPage({
               <span className="text-amber-500 mt-0.5">&#9888;</span>
               <span><strong>Population</strong> is DOPA house registration (2020, via Wikidata); central districts house many unregistered residents, so their real density is higher.</span>
             </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>No street-level rent.</strong> Condo rents next to a BTS or MRT station are usually above the district figure, but no open listing data exists to show it; the station and grid levels therefore reuse the district rent estimates.</span>
+            </li>
           </ul>
           <p className="text-xs text-gray-500 mt-3">
             Data: &copy; OpenStreetMap contributors (ODbL), Overture Maps Places release 2026-09-23 (CDLA-Permissive-2.0),
-            Wikidata (CC0), district photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
+            Wikidata (CC0), district and station photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
           </p>
         </section>
 

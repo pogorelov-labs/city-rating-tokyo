@@ -197,6 +197,7 @@ body {
    enter delay (vs 400 ms for station markers) — sweeping across a
    choropleth should feel immediate, but not flicker on every border. */
 .district-tooltip,
+.grid-tooltip,
 .station-dot-tooltip {
   border: none !important;
   border-radius: 8px !important;
@@ -211,7 +212,13 @@ body {
 .station-dot-tooltip {
   padding: 5px 8px !important;
 }
+.grid-tooltip {
+  /* Follows the pointer cell by cell: no appear delay, or it would flicker. */
+  padding: 8px 10px !important;
+  pointer-events: none;
+}
 .district-tooltip::before,
+.grid-tooltip::before,
 .station-dot-tooltip::before {
   border-top-color: white !important;
 }
@@ -225,6 +232,41 @@ body {
 .district-top-pulse {
   animation: district-top-pulse 2.4s ease-in-out infinite;
   pointer-events: none;
+}
+
+/* Bangkok 200 m grid: one canvas pixel per cell. Smooth while cells are a
+   pixel or two wide; crisp squares once zoomed in (class set by GridLayer). */
+.bkk-grid-canvas {
+  image-rendering: auto;
+}
+.bkk-grid-canvas.bkk-grid-crisp {
+  image-rendering: pixelated;
+}
+
+/* Station-area names sit just above their station dot. */
+.station-area-label span {
+  transform: translate(-50%, calc(-100% - 7px));
+  font-size: 10.5px;
+}
+
+/* Grid level: the five best spots, numbered. */
+.grid-hotspot {
+  background: none;
+  border: none;
+}
+.grid-hotspot span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #1e293b;
+  color: #fff;
+  font: 700 11px/1 var(--font-inter), system-ui, sans-serif;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
 }
 
 .leaflet-control-attribution {
