@@ -61,8 +61,11 @@ export default function MobileSearchPill({ stations }: Props) {
   return (
     <div
       ref={containerRef}
-      // Full width: the map controls sit in the row below on phones.
-      className="md:hidden absolute top-2 left-3 right-3 z-[999]"
+      // Full width: the map controls sit in the row below on phones, so the
+      // pill (and its results list, which drops over that row) stacks above
+      // them (controls z 1000; the filter drawer's backdrop, z 1001 later in
+      // the DOM, still covers it).
+      className="md:hidden absolute top-2 left-3 right-3 z-[1001]"
     >
       {/* Pill */}
       <div className="flex items-center bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 gap-2">

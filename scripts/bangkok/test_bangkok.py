@@ -215,6 +215,16 @@ def test_interchanges_merge_only_across_lines():
     assert "chong-nonsi" in by_id and "saint-louis" in by_id  # 436 m apart, same line
 
 
+def test_no_area_holds_two_stops_of_one_line():
+    """Interchange merging never chains same-line neighbours into one area."""
+    line_of = {st["id"]: set(st["lines"]) for st in RAIL["stations"]}
+    for a in AREAS:
+        seen: set[str] = set()
+        for sid in a["station_ids"]:
+            assert not (line_of[sid] & seen), (a["id"], sid)
+            seen |= line_of[sid]
+
+
 def test_station_commute_is_plausible():
     by_id = {a["id"]: a for a in AREAS}
     assert by_id["siam"]["transit_minutes"]["siam"] == 0

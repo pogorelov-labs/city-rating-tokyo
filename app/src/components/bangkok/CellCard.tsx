@@ -78,9 +78,9 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
 
   return (
     <div
-      // Above the touch zoom buttons (Leaflet controls, z 1000): this card is
-      // taller than the station card. The filter drawer (z 1002) still wins.
-      className="md:hidden fixed bottom-0 left-3 right-3 z-[1001] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[60vh] overflow-y-auto"
+      // Same stacking as MobileStationCard: over the touch zoom buttons (equal
+      // z, later in the DOM), under the compare panel and the filter drawer.
+      className="md:hidden fixed bottom-0 left-3 right-3 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[60vh] overflow-y-auto"
       style={{ marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
       role="dialog"
       aria-label={t('map.cellTitle')}

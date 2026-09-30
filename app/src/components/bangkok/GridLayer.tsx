@@ -159,8 +159,9 @@ function GridPointer({ grid, scores, pass, districts, hoverEnabled, onSelect, se
     mouseout: () => setHover(null),
     click: (e) => {
       const target = e.originalEvent?.target as HTMLElement | null;
-      // Station dots, popups and markers handle their own clicks.
-      if (target?.closest('.leaflet-interactive, .leaflet-marker-icon, .leaflet-popup')) return;
+      // Station dots, popups and markers handle their own clicks; the touch
+      // zoom buttons are map controls, not a tap on the cell beneath them.
+      if (target?.closest('.leaflet-interactive, .leaflet-marker-icon, .leaflet-popup, .leaflet-control')) return;
       const i = cellAt(grid, e.latlng.lat, e.latlng.lng);
       clearTimeout(pendingClick.current);
       // Same double-click guard as the district polygons: a dblclick zoom

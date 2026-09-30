@@ -1196,12 +1196,22 @@ def main() -> None:
     # Interchange complexes (Asok + Sukhumvit, Sala Daeng + Si Lom, Mo Chit +
     # Chatuchak Park …) are one neighbourhood: splitting them would draw two
     # half-areas around one set of streets.
-    for ii, a in enumerate(rated):
-        for b in rated[ii + 1:]:
-            if set(stations[a]["lines"]) & set(stations[b]["lines"]):
-                continue
-            if math.hypot(stations[a]["x"] - stations[b]["x"], stations[a]["y"] - stations[b]["y"]) <= INTERCHANGE_MERGE_M:
-                parent[find(a)] = find(b)
+    # Closest pairs first; a merge is refused when the two groups share a line,
+    # so no chain (A–X–B) can pull two stops of one line into one area.
+    group_lines = {j: set(stations[j]["lines"]) for j in rated}
+    pairs = sorted(
+        (math.hypot(stations[a]["x"] - stations[b]["x"], stations[a]["y"] - stations[b]["y"]), a, b)
+        for ii, a in enumerate(rated)
+        for b in rated[ii + 1:]
+    )
+    for dist, a, b in pairs:
+        if dist > INTERCHANGE_MERGE_M:
+            break
+        ra, rb = find(a), find(b)
+        if ra == rb or group_lines[ra] & group_lines[rb]:
+            continue
+        parent[ra] = rb
+        group_lines[rb] |= group_lines.pop(ra)
     groups: dict[int, list[int]] = defaultdict(list)
     for j in rated:
         groups[find(j)].append(j)

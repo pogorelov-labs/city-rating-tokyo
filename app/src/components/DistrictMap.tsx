@@ -164,7 +164,8 @@ function DeselectHandlers({ onClear, clickClears }: { onClear: () => void; click
     click: (e) => {
       if (!clickClears) return;
       const target = e.originalEvent?.target as HTMLElement | null;
-      if (!target?.closest('.leaflet-interactive')) onClear();
+      // A tap on the touch zoom buttons (a map control) is not "outside".
+      if (!target?.closest('.leaflet-interactive, .leaflet-control')) onClear();
     },
   });
   useEffect(() => {
