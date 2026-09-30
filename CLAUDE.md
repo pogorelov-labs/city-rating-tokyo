@@ -580,7 +580,7 @@ cd app && npm run build  # Verify after export-ratings.py
 git push origin main     # Coolify auto-deploys
 ```
 
-**Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
+**Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `npm run lint` + `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. Lint errors fail the check, warnings don't. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
 **Deploy memory budget (since 2026-05-03):** the VPS has 15 GB RAM (plus a 4 GB swapfile) and Next.js compiling 4493 pages peaks at 3-4 GB resident. With the current 63-container load there is ~8.7 GB headroom for builds. Two guard rails are in place:
 - VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~19 GB; see memory `reference_vps_swap.md` for the setup commands.
