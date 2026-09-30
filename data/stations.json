@@ -724,9 +724,9 @@
   },
   {
     "slug": "kuko-daini-biru-daini-ryokyaku-taaminaru",
-    "name_en": "Kuko-Daini-Biru-(-Daini-Ryokyaku-Taaminaru-)",
+    "name_en": "Narita Airport Terminal 2·3",
     "name_jp": "空港第２ビル（第２旅客ターミナル）",
-    "name_ru": "Куко-Дайни-Биру (Дайни-Рёкяку-Таминару)",
+    "name_ru": "Аэропорт Нарита (терминал 2·3)",
     "lat": 35.773327,
     "lng": 140.387871,
     "lines": [
@@ -781,9 +781,9 @@
   },
   {
     "slug": "naritakuko-daiichi-ryokyaku-taaminaru",
-    "name_en": "Naritakuko-(-Daiichi-Ryokyaku-Taaminaru-)",
+    "name_en": "Narita Airport Terminal 1",
     "name_jp": "成田空港（第１旅客ターミナル）",
-    "name_ru": "Наритакуко (Дайити-Рёкяку-Таминару)",
+    "name_ru": "Аэропорт Нарита (терминал 1)",
     "lat": 35.763983,
     "lng": 140.384644,
     "lines": [
@@ -895,7 +895,7 @@
   },
   {
     "slug": "oshiage-sukaitsurii-mae",
-    "name_en": "Oshiage-<-Sukaitsurii-Mae->",
+    "name_en": "Oshiage (Skytree)",
     "name_jp": "押上〈スカイツリー前〉",
     "name_ru": "Осиагэ",
     "lat": 35.710702,
@@ -1493,7 +1493,7 @@
   },
   {
     "slug": "keiotama-sentaa",
-    "name_en": "Keiotama-Sentaa",
+    "name_en": "Keio-Tama-Center",
     "name_jp": "京王多摩センター",
     "name_ru": "Кэйо-Тама-Сэнта",
     "lat": 35.62518,
@@ -1709,7 +1709,7 @@
   },
   {
     "slug": "nagatsuda",
-    "name_en": "Nagatsuda",
+    "name_en": "Nagatsuta",
     "name_jp": "長津田",
     "name_ru": "Нагацута",
     "lat": 35.531698,
@@ -2310,7 +2310,7 @@
   },
   {
     "slug": "chiba-nyutaun-chuo",
-    "name_en": "Chiba-Nyutaun-Chuo",
+    "name_en": "Chiba-Newtown-Chuo",
     "name_jp": "千葉ニュータウン中央",
     "name_ru": "Тиба-Нютаун-Тюо",
     "lat": 35.800175,
@@ -2871,7 +2871,7 @@
   },
   {
     "slug": "ho-tsuchi-ke-tani",
-    "name_en": "Ho-Tsuchi-Ke-Tani",
+    "name_en": "Hodogaya",
     "name_jp": "保土ケ谷",
     "name_ru": "Ходогая",
     "lat": 35.446746,
@@ -2888,7 +2888,7 @@
   },
   {
     "slug": "hokucho-kasumi",
-    "name_en": "Hokucho-Kasumi",
+    "name_en": "Kita-Asaka",
     "name_jp": "北朝霞",
     "name_ru": "Кита-Асака",
     "lat": 35.815475,
@@ -2939,7 +2939,7 @@
   },
   {
     "slug": "hori-no-nai",
-    "name_en": "Hori-No-Nai",
+    "name_en": "Horinouchi",
     "name_jp": "堀ノ内",
     "name_ru": "Хориноути",
     "lat": 35.26322,
@@ -2990,7 +2990,7 @@
   },
   {
     "slug": "inba-nippon-idai",
-    "name_en": "Inba-Nippon-Idai",
+    "name_en": "Inba-Nihon-Idai",
     "name_jp": "印旛日本医大",
     "name_ru": "Инба-Нихон-Идай",
     "lat": 35.787512,
@@ -3449,7 +3449,7 @@
   },
   {
     "slug": "ko-no-shima",
-    "name_en": "Ko-No-Shima",
+    "name_en": "Enoshima",
     "name_jp": "江ノ島",
     "name_ru": "Эносима",
     "lat": 35.311003,
@@ -3466,7 +3466,7 @@
   },
   {
     "slug": "korai",
-    "name_en": "Korai",
+    "name_en": "Koma",
     "name_jp": "高麗",
     "name_ru": "Кома",
     "lat": 35.881982,
@@ -3704,7 +3704,7 @@
   },
   {
     "slug": "me-ke-saki",
-    "name_en": "Me-Ke-Saki",
+    "name_en": "Chigasaki",
     "name_jp": "茅ケ崎",
     "name_ru": "Тигасаки",
     "lat": 35.330741,
@@ -3925,7 +3925,7 @@
   },
   {
     "slug": "nakanobe",
-    "name_en": "Nakanobe",
+    "name_en": "Nakanobu",
     "name_jp": "中延",
     "name_ru": "Наканобу",
     "lat": 35.60571,
@@ -3959,7 +3959,7 @@
   },
   {
     "slug": "nan-etsu-tani",
-    "name_en": "Nan'etsu-Tani",
+    "name_en": "Minami-Koshigaya",
     "name_jp": "南越谷",
     "name_ru": "Минами-Косигая",
     "lat": 35.876106,
@@ -3976,7 +3976,7 @@
   },
   {
     "slug": "nanryu-yama",
-    "name_en": "Nanryu-Yama",
+    "name_en": "Minami-Nagareyama",
     "name_jp": "南流山",
     "name_ru": "Минами-Нагарэяма",
     "lat": 35.838035,
@@ -4163,7 +4163,7 @@
   },
   {
     "slug": "ogawacho",
-    "name_en": "Ogawacho",
+    "name_en": "Ogawamachi",
     "name_jp": "小川町",
     "name_ru": "Огавамати",
     "lat": 36.05903,
@@ -4333,7 +4333,7 @@
   },
   {
     "slug": "sakato",
-    "name_en": "Sakato",
+    "name_en": "Sakado",
     "name_jp": "坂戸",
     "name_ru": "Сакадо",
     "lat": 35.957181,
@@ -4469,7 +4469,7 @@
   },
   {
     "slug": "sekiuchi",
-    "name_en": "Sekiuchi",
+    "name_en": "Kannai",
     "name_jp": "関内",
     "name_ru": "Каннай",
     "lat": 35.443336,
@@ -4520,7 +4520,7 @@
   },
   {
     "slug": "sentaa-kita",
-    "name_en": "Sentaa-Kita",
+    "name_en": "Center-Kita",
     "name_jp": "センター北",
     "name_ru": "Сэнта-Кита",
     "lat": 35.55353,
@@ -4537,7 +4537,7 @@
   },
   {
     "slug": "sentaa-minami",
-    "name_en": "Sentaa-Minami",
+    "name_en": "Center-Minami",
     "name_jp": "センター南",
     "name_ru": "Сэнта-Минами",
     "lat": 35.545476,
@@ -4690,7 +4690,7 @@
   },
   {
     "slug": "shinpachi-hashira",
-    "name_en": "Shinpachi-Hashira",
+    "name_en": "Shin-Yahashira",
     "name_jp": "新八柱",
     "name_ru": "Син-Яхасира",
     "lat": 35.792013,
@@ -4724,7 +4724,7 @@
   },
   {
     "slug": "shinyuri-ke-oka",
-    "name_en": "Shinyuri-Ke-Oka",
+    "name_en": "Shin-Yurigaoka",
     "name_jp": "新百合ヶ丘",
     "name_ru": "Син-Юригаока",
     "lat": 35.603705,
@@ -4809,7 +4809,7 @@
   },
   {
     "slug": "shodai",
-    "name_en": "Shodai",
+    "name_en": "Hatsudai",
     "name_jp": "初台",
     "name_ru": "Хацудай",
     "lat": 35.68123,
@@ -4979,7 +4979,7 @@
   },
   {
     "slug": "tenku-hashi",
-    "name_en": "Tenku-Hashi",
+    "name_en": "Tenkubashi",
     "name_jp": "天空橋",
     "name_ru": "Тэнкубаси",
     "lat": 35.548908,
@@ -5081,7 +5081,7 @@
   },
   {
     "slug": "togo-no",
-    "name_en": "Togo-No",
+    "name_en": "Higashi-Agano",
     "name_jp": "東吾野",
     "name_ru": "Хигаси-Агано",
     "lat": 35.892439,
@@ -5115,7 +5115,7 @@
   },
   {
     "slug": "toyota",
-    "name_en": "Toyota",
+    "name_en": "Toyoda",
     "name_jp": "豊田",
     "name_ru": "Тоёда",
     "lat": 35.659502,
@@ -5200,7 +5200,7 @@
   },
   {
     "slug": "ushita",
-    "name_en": "Ushita",
+    "name_en": "Ushida",
     "name_jp": "牛田",
     "name_ru": "Усида",
     "lat": 35.744555,
@@ -5217,7 +5217,7 @@
   },
   {
     "slug": "ware-no",
-    "name_en": "Ware-No",
+    "name_en": "Agano",
     "name_jp": "吾野",
     "name_ru": "Агано",
     "lat": 35.908502,
@@ -5368,7 +5368,7 @@
   },
   {
     "slug": "agui",
-    "name_en": "Agui",
+    "name_en": "Ajiki",
     "name_jp": "安食",
     "name_ru": "Адзики",
     "lat": 35.835682,
@@ -5480,7 +5480,7 @@
   },
   {
     "slug": "akira-shima",
-    "name_en": "Akira-Shima",
+    "name_en": "Akishima",
     "name_jp": "昭島",
     "name_ru": "Акисима",
     "lat": 35.713305,
@@ -5592,7 +5592,7 @@
   },
   {
     "slug": "ane-ke-saki",
-    "name_en": "Ane-Ke-Saki",
+    "name_en": "Anegasaki",
     "name_jp": "姉ケ崎",
     "name_ru": "Анэгасаки",
     "lat": 35.4786,
@@ -5608,7 +5608,7 @@
   },
   {
     "slug": "anjin-tsuka",
-    "name_en": "Anjin-Tsuka",
+    "name_en": "Anjinzuka",
     "name_jp": "安針塚",
     "name_ru": "Андзиндзука",
     "lat": 35.286641,
@@ -5688,7 +5688,7 @@
   },
   {
     "slug": "arai-kusurishi-mae",
-    "name_en": "Arai-Kusurishi-Mae",
+    "name_en": "Araiyakushi-Mae",
     "name_jp": "新井薬師前",
     "name_ru": "Арайякуси-маэ",
     "lat": 35.715778,
@@ -5848,7 +5848,7 @@
   },
   {
     "slug": "ariake-tenisu-no-mori",
-    "name_en": "Ariake-Tenisu-No-Mori",
+    "name_en": "Ariake-Tennis-No-Mori",
     "name_jp": "有明テニスの森",
     "name_ru": "Ариакэ-Тэнису-но-Мори",
     "lat": 35.639964,
@@ -5912,7 +5912,7 @@
   },
   {
     "slug": "ashi-ke-kubo",
-    "name_en": "Ashi-Ke-Kubo",
+    "name_en": "Ashigakubo",
     "name_jp": "芦ヶ久保",
     "name_ru": "Асигакубо",
     "lat": 35.976505,
@@ -6008,7 +6008,7 @@
   },
   {
     "slug": "awa-tenshin",
-    "name_en": "Awa-Tenshin",
+    "name_en": "Awa-Amatsu",
     "name_jp": "安房天津",
     "name_ru": "Ава-Амацу",
     "lat": 35.125473,
@@ -6024,7 +6024,7 @@
   },
   {
     "slug": "baigo",
-    "name_en": "Baigo",
+    "name_en": "Umesato",
     "name_jp": "梅郷",
     "name_ru": "Умэсато",
     "lat": 35.931575,
@@ -6040,7 +6040,7 @@
   },
   {
     "slug": "ban-ta",
-    "name_en": "Ban-Ta",
+    "name_en": "Banda",
     "name_jp": "番田",
     "name_ru": "Банда",
     "lat": 35.545392,
@@ -6056,7 +6056,7 @@
   },
   {
     "slug": "bando-hashi",
-    "name_en": "Bando-Hashi",
+    "name_en": "Bandobashi",
     "name_jp": "阪東橋",
     "name_ru": "Бандобаси",
     "lat": 35.437434,
@@ -6104,7 +6104,7 @@
   },
   {
     "slug": "benten-hashi",
-    "name_en": "Benten-Hashi",
+    "name_en": "Bentenbashi",
     "name_jp": "弁天橋",
     "name_ru": "Бэнтэмбаси",
     "lat": 35.495758,
@@ -6200,7 +6200,7 @@
   },
   {
     "slug": "busshi",
-    "name_en": "Busshi",
+    "name_en": "Bushi",
     "name_jp": "仏子",
     "name_ru": "Буси",
     "lat": 35.83769,
@@ -6216,7 +6216,7 @@
   },
   {
     "slug": "byobu-ura",
-    "name_en": "Byobu-Ura",
+    "name_en": "Byobugaura",
     "name_jp": "屏風浦",
     "name_ru": "Бёбугаура",
     "lat": 35.394176,
@@ -6248,7 +6248,7 @@
   },
   {
     "slug": "chiba-tera",
-    "name_en": "Chiba-Tera",
+    "name_en": "Chibadera",
     "name_jp": "千葉寺",
     "name_ru": "Тибадэра",
     "lat": 35.590311,
@@ -6312,7 +6312,7 @@
   },
   {
     "slug": "chiku-sentaa",
-    "name_en": "Chiku-Sentaa",
+    "name_en": "Chiku-Center",
     "name_jp": "地区センター",
     "name_ru": "Тику-Сэнта",
     "lat": 35.726225,
@@ -6392,7 +6392,7 @@
   },
   {
     "slug": "cho-ura",
-    "name_en": "Cho-Ura",
+    "name_en": "Nagaura",
     "name_jp": "長浦",
     "name_ru": "Нагаура",
     "lat": 35.450234,
@@ -6472,7 +6472,7 @@
   },
   {
     "slug": "chuodaigaku-meiseidaigaku",
-    "name_en": "Chuodaigaku-・-Meiseidaigaku",
+    "name_en": "Chuo-Daigaku-Meisei-Daigaku",
     "name_jp": "中央大学・明星大学",
     "name_ru": "Тюо-Дайгаку-Мэйсэй-Дайгаку",
     "lat": 35.64197,
@@ -6552,7 +6552,7 @@
   },
   {
     "slug": "dokkyodaigaku-zen-eki-soka-matsubara",
-    "name_en": "Dokkyodaigaku-Zen'eki-<-Soka-Matsubara->",
+    "name_en": "Dokkyodaigaku-Mae (Soka-Matsubara)",
     "name_jp": "獨協大学前駅〈草加松原〉",
     "name_ru": "Доккёдайгакумаэ",
     "lat": 35.84333,
@@ -6568,7 +6568,7 @@
   },
   {
     "slug": "doro",
-    "name_en": "Doro",
+    "name_en": "Toro",
     "name_jp": "土呂",
     "name_ru": "Торо",
     "lat": 35.931997,
@@ -6664,7 +6664,7 @@
   },
   {
     "slug": "ehara-machi",
-    "name_en": "Ehara-Machi",
+    "name_en": "Ebaramachi",
     "name_jp": "荏原町",
     "name_ru": "Эбарамати",
     "lat": 35.60382,
@@ -6680,7 +6680,7 @@
   },
   {
     "slug": "ehara-nakanobe",
-    "name_en": "Ehara-Nakanobe",
+    "name_en": "Ebara-Nakanobu",
     "name_jp": "荏原中延",
     "name_ru": "Эбара-Наканобу",
     "lat": 35.610056,
@@ -6696,7 +6696,7 @@
   },
   {
     "slug": "eifuku-machi",
-    "name_en": "Eifuku-Machi",
+    "name_en": "Eifukucho",
     "name_jp": "永福町",
     "name_ru": "Эйфукутё",
     "lat": 35.67629,
@@ -6744,7 +6744,7 @@
   },
   {
     "slug": "enoto",
-    "name_en": "Enoto",
+    "name_en": "Enokido",
     "name_jp": "榎戸",
     "name_ru": "Энокидо",
     "lat": 35.683967,
@@ -6760,7 +6760,7 @@
   },
   {
     "slug": "etchu-shima",
-    "name_en": "Etchu-Shima",
+    "name_en": "Etchujima",
     "name_jp": "越中島",
     "name_ru": "Эттюдзима",
     "lat": 35.667946,
@@ -6856,9 +6856,9 @@
   },
   {
     "slug": "fuji-fuirumu-mae",
-    "name_en": "Fuji-Fuirumu-Mae",
+    "name_en": "Fujifilm-Mae",
     "name_jp": "富士フイルム前",
-    "name_ru": "Фудзи-Фуируму-маэ",
+    "name_ru": "Фудзифируму-маэ",
     "lat": 35.317657,
     "lng": 139.109483,
     "lines": [
@@ -6984,7 +6984,7 @@
   },
   {
     "slug": "fujisawa-honcho",
-    "name_en": "Fujisawa-Honcho",
+    "name_en": "Fujisawa-Honmachi",
     "name_jp": "藤沢本町",
     "name_ru": "Фудзисава-Хоммати",
     "lat": 35.348188,
@@ -7032,7 +7032,7 @@
   },
   {
     "slug": "fukudawara",
-    "name_en": "Fukudawara",
+    "name_en": "Fukutawara",
     "name_jp": "福俵",
     "name_ru": "Фукутавара",
     "lat": 35.54617,
@@ -7144,7 +7144,7 @@
   },
   {
     "slug": "furusato",
-    "name_en": "Furusato",
+    "name_en": "Kori",
     "name_jp": "古里",
     "name_ru": "Кори",
     "lat": 35.816247,
@@ -7224,7 +7224,7 @@
   },
   {
     "slug": "futawa-mukaedai",
-    "name_en": "Futawa-Mukaedai",
+    "name_en": "Futawamukodai",
     "name_jp": "二和向台",
     "name_ru": "Футавамукодай",
     "lat": 35.753825,
@@ -7320,7 +7320,7 @@
   },
   {
     "slug": "genka-osamu",
-    "name_en": "Genka-Osamu",
+    "name_en": "Motokaji",
     "name_jp": "元加治",
     "name_ru": "Мотокадзи",
     "lat": 35.84058,
@@ -7336,7 +7336,7 @@
   },
   {
     "slug": "gezan-kuchi",
-    "name_en": "Gezan-Kuchi",
+    "name_en": "Shimo-Yamaguchi",
     "name_jp": "下山口",
     "name_ru": "Симо-Ямагути",
     "lat": 35.77941,
@@ -7384,7 +7384,7 @@
   },
   {
     "slug": "gogatsu-dai",
-    "name_en": "Gogatsu-Dai",
+    "name_en": "Satsukidai",
     "name_jp": "五月台",
     "name_ru": "Сацукидай",
     "lat": 35.600174,
@@ -7448,7 +7448,7 @@
   },
   {
     "slug": "gokuraku-tera",
-    "name_en": "Gokuraku-Tera",
+    "name_en": "Gokurakuji",
     "name_jp": "極楽寺",
     "name_ru": "Гокуракудзи",
     "lat": 35.309318,
@@ -7480,7 +7480,7 @@
   },
   {
     "slug": "gun-hatake",
-    "name_en": "Gun-Hatake",
+    "name_en": "Ikusabata",
     "name_jp": "軍畑",
     "name_ru": "Икусабата",
     "lat": 35.807382,
@@ -7528,7 +7528,7 @@
   },
   {
     "slug": "hachi-seki",
-    "name_en": "Hachi-Seki",
+    "name_en": "Yatsumi",
     "name_jp": "八積",
     "name_ru": "Яцуми",
     "lat": 35.403971,
@@ -7560,7 +7560,7 @@
   },
   {
     "slug": "hachiman-yado",
-    "name_en": "Hachiman-Yado",
+    "name_en": "Yawatajuku",
     "name_jp": "八幡宿",
     "name_ru": "Яватадзюку",
     "lat": 35.536189,
@@ -7608,7 +7608,7 @@
   },
   {
     "slug": "hakkei-shima",
-    "name_en": "Hakkei-Shima",
+    "name_en": "Hakkeijima",
     "name_jp": "八景島",
     "name_ru": "Хаккэйдзима",
     "lat": 35.340914,
@@ -7640,7 +7640,7 @@
   },
   {
     "slug": "hakone-ke-saki",
-    "name_en": "Hakone-Ke-Saki",
+    "name_en": "Hakonegasaki",
     "name_jp": "箱根ケ崎",
     "name_ru": "Хаконэгасаки",
     "lat": 35.771158,
@@ -7736,7 +7736,7 @@
   },
   {
     "slug": "hamakin-tani",
-    "name_en": "Hamakin-Tani",
+    "name_en": "Hamakanaya",
     "name_jp": "浜金谷",
     "name_ru": "Хамаканая",
     "lat": 35.168215,
@@ -7816,7 +7816,7 @@
   },
   {
     "slug": "hane-kan",
-    "name_en": "Hane-Kan",
+    "name_en": "Hanuki",
     "name_jp": "羽貫",
     "name_ru": "Хануки",
     "lat": 36.007311,
@@ -7848,7 +7848,7 @@
   },
   {
     "slug": "hara-toma",
-    "name_en": "Hara-Toma",
+    "name_en": "Harataima",
     "name_jp": "原当麻",
     "name_ru": "Харатайма",
     "lat": 35.528978,
@@ -7944,7 +7944,7 @@
   },
   {
     "slug": "hato-ke-tani",
-    "name_en": "Hato-Ke-Tani",
+    "name_en": "Hatogaya",
     "name_jp": "鳩ヶ谷",
     "name_ru": "Хатогая",
     "lat": 35.830859,
@@ -8040,7 +8040,7 @@
   },
   {
     "slug": "heiwa-shima",
-    "name_en": "Heiwa-Shima",
+    "name_en": "Heiwajima",
     "name_jp": "平和島",
     "name_ru": "Хэйвадзима",
     "lat": 35.57868,
@@ -8088,7 +8088,7 @@
   },
   {
     "slug": "higashi-aki-ryu",
-    "name_en": "Higashi-Aki-Ryu",
+    "name_en": "Higashi-Akiru",
     "name_jp": "東秋留",
     "name_ru": "Хигаси-Акиру",
     "lat": 35.725904,
@@ -8200,7 +8200,7 @@
   },
   {
     "slug": "higashi-nami-ken",
-    "name_en": "Higashi-Nami-Ken",
+    "name_en": "Torami",
     "name_jp": "東浪見",
     "name_ru": "Торами",
     "lat": 35.34669,
@@ -8216,7 +8216,7 @@
   },
   {
     "slug": "higashi-washimiya",
-    "name_en": "Higashi-Washimiya",
+    "name_en": "Higashi-Washinomiya",
     "name_jp": "東鷲宮",
     "name_ru": "Хигаси-Васиномия",
     "lat": 36.089428,
@@ -8344,7 +8344,7 @@
   },
   {
     "slug": "higashimon-mae",
-    "name_en": "Higashimon-Mae",
+    "name_en": "Higashimonzen",
     "name_jp": "東門前",
     "name_ru": "Хигасимондзэн",
     "lat": 35.536566,
@@ -8360,7 +8360,7 @@
   },
   {
     "slug": "higashimuki-shima",
-    "name_en": "Higashimuki-Shima",
+    "name_en": "Higashi-Mukojima",
     "name_jp": "東向島",
     "name_ru": "Хигаси-Мукодзима",
     "lat": 35.724324,
@@ -8392,7 +8392,7 @@
   },
   {
     "slug": "higashinaka-kami",
-    "name_en": "Higashinaka-Kami",
+    "name_en": "Higashi-Nakagami",
     "name_jp": "東中神",
     "name_ru": "Хигаси-Накагами",
     "lat": 35.706337,
@@ -8728,7 +8728,7 @@
   },
   {
     "slug": "hire-ke-saki",
-    "name_en": "Hire-Ke-Saki",
+    "name_en": "Hiregasaki",
     "name_jp": "鰭ヶ崎",
     "name_ru": "Хирэгасаки",
     "lat": 35.840948,
@@ -8840,7 +8840,7 @@
   },
   {
     "slug": "hokudai-miya",
-    "name_en": "Hokudai-Miya",
+    "name_en": "Kita-Omiya",
     "name_jp": "北大宮",
     "name_ru": "Кита-Омия",
     "lat": 35.91716,
@@ -8856,7 +8856,7 @@
   },
   {
     "slug": "hokuetsu-tani",
-    "name_en": "Hokuetsu-Tani",
+    "name_en": "Kita-Koshigaya",
     "name_jp": "北越谷",
     "name_ru": "Кита-Косигая",
     "lat": 35.901724,
@@ -8888,7 +8888,7 @@
   },
   {
     "slug": "hon-choshi",
-    "name_en": "Hon-Choshi",
+    "name_en": "Moto-Choshi",
     "name_jp": "本銚子",
     "name_ru": "Мото-Тёси",
     "lat": 35.731055,
@@ -9000,7 +9000,7 @@
   },
   {
     "slug": "honkawa-etsu",
-    "name_en": "Honkawa-Etsu",
+    "name_en": "Hon-Kawagoe",
     "name_jp": "本川越",
     "name_ru": "Хон-Кавагоэ",
     "lat": 35.913524,
@@ -9128,7 +9128,7 @@
   },
   {
     "slug": "i-hosoda",
-    "name_en": "I-Hosoda",
+    "name_en": "Isaida",
     "name_jp": "井細田",
     "name_ru": "Исайда",
     "lat": 35.268964,
@@ -9224,7 +9224,7 @@
   },
   {
     "slug": "ido-ke-tani",
-    "name_en": "Ido-Ke-Tani",
+    "name_en": "Idogaya",
     "name_jp": "井土ヶ谷",
     "name_ru": "Идогая",
     "lat": 35.433895,
@@ -9256,7 +9256,7 @@
   },
   {
     "slug": "iikura",
-    "name_en": "Iikura",
+    "name_en": "Iigura",
     "name_jp": "飯倉",
     "name_ru": "Иигура",
     "lat": 35.685638,
@@ -9288,7 +9288,7 @@
   },
   {
     "slug": "iiyama-man",
-    "name_en": "Iiyama-Man",
+    "name_en": "Hasama",
     "name_jp": "飯山満",
     "name_ru": "Хасама",
     "lat": 35.71407,
@@ -9368,7 +9368,7 @@
   },
   {
     "slug": "ima-hane",
-    "name_en": "Ima-Hane",
+    "name_en": "Konba",
     "name_jp": "今羽",
     "name_ru": "Комба",
     "lat": 35.949941,
@@ -9464,7 +9464,7 @@
   },
   {
     "slug": "inamura-ke-saki",
-    "name_en": "Inamura-Ke-Saki",
+    "name_en": "Inamuragasaki",
     "name_jp": "稲村ヶ崎",
     "name_ru": "Инамурагасаки",
     "lat": 35.30426,
@@ -9544,7 +9544,7 @@
   },
   {
     "slug": "inuboe",
-    "name_en": "Inuboe",
+    "name_en": "Inubo",
     "name_jp": "犬吠",
     "name_ru": "Инубо",
     "lat": 35.706258,
@@ -9832,7 +9832,7 @@
   },
   {
     "slug": "itsumi",
-    "name_en": "Itsumi",
+    "name_en": "Hemi",
     "name_jp": "逸見",
     "name_ru": "Хэми",
     "lat": 35.28048,
@@ -10008,7 +10008,7 @@
   },
   {
     "slug": "jinmu-tera",
-    "name_en": "Jinmu-Tera",
+    "name_en": "Jinmuji",
     "name_jp": "神武寺",
     "name_ru": "Дзиммудзи",
     "lat": 35.306233,
@@ -10040,7 +10040,7 @@
   },
   {
     "slug": "jocho-toro",
-    "name_en": "Jocho-Toro",
+    "name_en": "Kami-Nagatoro",
     "name_jp": "上長瀞",
     "name_ru": "Ками-Нагаторо",
     "lat": 36.086169,
@@ -10056,7 +10056,7 @@
   },
   {
     "slug": "josei-kawa",
-    "name_en": "Josei-Kawa",
+    "name_en": "Kamihoshikawa",
     "name_jp": "上星川",
     "name_ru": "Камихосикава",
     "lat": 35.467694,
@@ -10088,7 +10088,7 @@
   },
   {
     "slug": "juni-hashi",
-    "name_en": "Juni-Hashi",
+    "name_en": "Junikyo",
     "name_jp": "十二橋",
     "name_ru": "Дзюникё",
     "lat": 35.916984,
@@ -10120,7 +10120,7 @@
   },
   {
     "slug": "kadosawa-hashi",
-    "name_en": "Kadosawa-Hashi",
+    "name_en": "Kadosawabashi",
     "name_jp": "門沢橋",
     "name_ru": "Кадосавабаси",
     "lat": 35.406761,
@@ -10248,7 +10248,7 @@
   },
   {
     "slug": "kaishi-ariki",
-    "name_en": "Kaishi-Ariki",
+    "name_en": "Amaariki",
     "name_jp": "海士有木",
     "name_ru": "Амаарики",
     "lat": 35.481729,
@@ -10264,7 +10264,7 @@
   },
   {
     "slug": "kaji-ga-tani",
-    "name_en": "Kaji-Ga-Tani",
+    "name_en": "Kajigaya",
     "name_jp": "梶が谷",
     "name_ru": "Кадзигая",
     "lat": 35.593963,
@@ -10312,7 +10312,7 @@
   },
   {
     "slug": "kama-ke-tani",
-    "name_en": "Kama-Ke-Tani",
+    "name_en": "Kamagaya",
     "name_jp": "鎌ヶ谷",
     "name_ru": "Камагая",
     "lat": 35.763765,
@@ -10328,7 +10328,7 @@
   },
   {
     "slug": "kama-ke-tani-daibutsu",
-    "name_en": "Kama-Ke-Tani-Daibutsu",
+    "name_en": "Kamagaya-Daibutsu",
     "name_jp": "鎌ヶ谷大仏",
     "name_ru": "Камагая-Дайбуцу",
     "lat": 35.757827,
@@ -10344,7 +10344,7 @@
   },
   {
     "slug": "kama-shu",
-    "name_en": "Kama-Shu",
+    "name_en": "Kamatori",
     "name_jp": "鎌取",
     "name_ru": "Каматори",
     "lat": 35.562795,
@@ -10456,7 +10456,7 @@
   },
   {
     "slug": "kamiishi-kami-i",
-    "name_en": "Kamiishi-Kami-I",
+    "name_en": "Kami-Shakujii",
     "name_jp": "上石神井",
     "name_ru": "Ками-Сякудзии",
     "lat": 35.726189,
@@ -10488,7 +10488,7 @@
   },
   {
     "slug": "kamiizumi",
-    "name_en": "Kamiizumi",
+    "name_en": "Shinsen",
     "name_jp": "神泉",
     "name_ru": "Синсэн",
     "lat": 35.657244,
@@ -10536,7 +10536,7 @@
   },
   {
     "slug": "kaminaka-sato",
-    "name_en": "Kaminaka-Sato",
+    "name_en": "Kami-Nakazato",
     "name_jp": "上中里",
     "name_ru": "Ками-Накадзато",
     "lat": 35.74728,
@@ -10584,7 +10584,7 @@
   },
   {
     "slug": "kamo-miya",
-    "name_en": "Kamo-Miya",
+    "name_en": "Kamonomiya",
     "name_jp": "加茂宮",
     "name_ru": "Камономия",
     "lat": 35.93568,
@@ -10680,7 +10680,7 @@
   },
   {
     "slug": "kane-ke-fuchi",
-    "name_en": "Kane-Ke-Fuchi",
+    "name_en": "Kanegafuchi",
     "name_jp": "鐘ヶ淵",
     "name_ru": "Канэгафути",
     "lat": 35.733712,
@@ -10712,7 +10712,7 @@
   },
   {
     "slug": "kanno",
-    "name_en": "Kanno",
+    "name_en": "Sugano",
     "name_jp": "菅野",
     "name_ru": "Сугано",
     "lat": 35.728272,
@@ -10776,7 +10776,7 @@
   },
   {
     "slug": "kasa-ue-kuronama",
-    "name_en": "Kasa-Ue-Kuronama",
+    "name_en": "Kasagami-Kurohae",
     "name_jp": "笠上黒生",
     "name_ru": "Касагами-Курохаэ",
     "lat": 35.728427,
@@ -10824,7 +10824,7 @@
   },
   {
     "slug": "kashima-ta",
-    "name_en": "Kashima-Ta",
+    "name_en": "Kashimada",
     "name_jp": "鹿島田",
     "name_ru": "Касимада",
     "lat": 35.551459,
@@ -10856,9 +10856,9 @@
   },
   {
     "slug": "kashiwa-no-ha-kyanpasu",
-    "name_en": "Kashiwa-No-Ha-Kyanpasu",
+    "name_en": "Kashiwanoha-Campus",
     "name_jp": "柏の葉キャンパス",
-    "name_ru": "Касива-но-Ха-Кянпасу",
+    "name_ru": "Касиваноха-Кянпасу",
     "lat": 35.89308,
     "lng": 139.952454,
     "lines": [
@@ -10936,7 +10936,7 @@
   },
   {
     "slug": "katase-ko-no-shima",
-    "name_en": "Katase-Ko-No-Shima",
+    "name_en": "Katase-Enoshima",
     "name_jp": "片瀬江ノ島",
     "name_ru": "Катасэ-Эносима",
     "lat": 35.309345,
@@ -10968,7 +10968,7 @@
   },
   {
     "slug": "katsu-kawa",
-    "name_en": "Katsu-Kawa",
+    "name_en": "Namegawa",
     "name_jp": "滑河",
     "name_ru": "Намэгава",
     "lat": 35.877079,
@@ -11000,7 +11000,7 @@
   },
   {
     "slug": "kawa-kan",
-    "name_en": "Kawa-Kan",
+    "name_en": "Kawama",
     "name_jp": "川間",
     "name_ru": "Кавама",
     "lat": 35.979172,
@@ -11016,7 +11016,7 @@
   },
   {
     "slug": "kawabe",
-    "name_en": "Kawabe",
+    "name_en": "Kabe",
     "name_jp": "河辺",
     "name_ru": "Кабэ",
     "lat": 35.78473,
@@ -11128,7 +11128,7 @@
   },
   {
     "slug": "kawasumi",
-    "name_en": "Kawasumi",
+    "name_en": "Kawakado",
     "name_jp": "川角",
     "name_ru": "Кавакадо",
     "lat": 35.937438,
@@ -11208,7 +11208,7 @@
   },
   {
     "slug": "kazusa-higashi",
-    "name_en": "Kazusa-Higashi",
+    "name_en": "Kazusa-Azuma",
     "name_jp": "上総東",
     "name_ru": "Кадзуса-Адзума",
     "lat": 35.263313,
@@ -11256,7 +11256,7 @@
   },
   {
     "slug": "kazusa-kawa-kan",
-    "name_en": "Kazusa-Kawa-Kan",
+    "name_en": "Kazusa-Kawama",
     "name_jp": "上総川間",
     "name_ru": "Кадзуса-Кавама",
     "lat": 35.388047,
@@ -11560,7 +11560,7 @@
   },
   {
     "slug": "keio-yomiuri-rando",
-    "name_en": "Keio-Yomiuri-Rando",
+    "name_en": "Keio-Yomiuri-Land",
     "name_jp": "京王よみうりランド",
     "name_ru": "Кэйо-Ёмиури-Рандо",
     "lat": 35.632934,
@@ -11592,7 +11592,7 @@
   },
   {
     "slug": "keioinadatsutsumi",
-    "name_en": "Keioinadatsutsumi",
+    "name_en": "Keio-Inadazutsumi",
     "name_jp": "京王稲田堤",
     "name_ru": "Кэйо-Инададзуцуми",
     "lat": 35.633895,
@@ -11608,7 +11608,7 @@
   },
   {
     "slug": "keiotama-kawa",
-    "name_en": "Keiotama-Kawa",
+    "name_en": "Keio-Tamagawa",
     "name_jp": "京王多摩川",
     "name_ru": "Кэйо-Тамагава",
     "lat": 35.644499,
@@ -11736,7 +11736,7 @@
   },
   {
     "slug": "keisei-sake-kurikaesi-i",
-    "name_en": "Keisei-Sake-(kurikaesi)-I",
+    "name_en": "Keisei-Shisui",
     "name_jp": "京成酒々井",
     "name_ru": "Кэйсэй-Сисуи",
     "lat": 35.736867,
@@ -11880,7 +11880,7 @@
   },
   {
     "slug": "kibo-ke-oka",
-    "name_en": "Kibo-Ke-Oka",
+    "name_en": "Kibogaoka",
     "name_jp": "希望ヶ丘",
     "name_ru": "Кибогаока",
     "lat": 35.460399,
@@ -11928,7 +11928,7 @@
   },
   {
     "slug": "kinoshita",
-    "name_en": "Kinoshita",
+    "name_en": "Kioroshi",
     "name_jp": "木下",
     "name_ru": "Киороси",
     "lat": 35.838817,
@@ -12104,7 +12104,7 @@
   },
   {
     "slug": "kita-me-ke-saki",
-    "name_en": "Kita-Me-Ke-Saki",
+    "name_en": "Kita-Chigasaki",
     "name_jp": "北茅ケ崎",
     "name_ru": "Кита-Тигасаки",
     "lat": 35.339167,
@@ -12168,7 +12168,7 @@
   },
   {
     "slug": "kitado-ta",
-    "name_en": "Kitado-Ta",
+    "name_en": "Kita-Toda",
     "name_jp": "北戸田",
     "name_ru": "Кита-Тода",
     "lat": 35.826883,
@@ -12184,7 +12184,7 @@
   },
   {
     "slug": "kitaguni-fun",
-    "name_en": "Kitaguni-Fun",
+    "name_en": "Kita-Kokubun",
     "name_jp": "北国分",
     "name_ru": "Кита-Кокубун",
     "lat": 35.762916,
@@ -12216,7 +12216,7 @@
   },
   {
     "slug": "kitaike-fukuro",
-    "name_en": "Kitaike-Fukuro",
+    "name_en": "Kita-Ikebukuro",
     "name_jp": "北池袋",
     "name_ru": "Кита-Икэбукуро",
     "lat": 35.741283,
@@ -12248,7 +12248,7 @@
   },
   {
     "slug": "kitakami-o",
-    "name_en": "Kitakami-O",
+    "name_en": "Kita-Ageo",
     "name_jp": "北上尾",
     "name_ru": "Кита-Агэо",
     "lat": 35.985632,
@@ -12328,7 +12328,7 @@
   },
   {
     "slug": "kitasaka-ko",
-    "name_en": "Kitasaka-Ko",
+    "name_en": "Kita-Sakado",
     "name_jp": "北坂戸",
     "name_ru": "Кита-Сакадо",
     "lat": 35.972098,
@@ -12424,7 +12424,7 @@
   },
   {
     "slug": "ko-fuchi",
-    "name_en": "Ko-Fuchi",
+    "name_en": "Kobuchi",
     "name_jp": "古淵",
     "name_ru": "Кобути",
     "lat": 35.556055,
@@ -12584,7 +12584,7 @@
   },
   {
     "slug": "kojima-nitta",
-    "name_en": "Kojima-Nitta",
+    "name_en": "Kojimashinden",
     "name_jp": "小島新田",
     "name_ru": "Кодзимасиндэн",
     "lat": 35.534798,
@@ -12632,7 +12632,7 @@
   },
   {
     "slug": "kokorozashi-kyu",
-    "name_en": "Kokorozashi-Kyu",
+    "name_en": "Shiku",
     "name_jp": "志久",
     "name_ru": "Сику",
     "lat": 35.991099,
@@ -12664,7 +12664,7 @@
   },
   {
     "slug": "kokuga",
-    "name_en": "Kokuga",
+    "name_en": "Yaga",
     "name_jp": "谷峨",
     "name_ru": "Яга",
     "lat": 35.366561,
@@ -12808,7 +12808,7 @@
   },
   {
     "slug": "komura-i",
-    "name_en": "Komura-I",
+    "name_en": "Omurai",
     "name_jp": "小村井",
     "name_ru": "Омурай",
     "lat": 35.710316,
@@ -12872,7 +12872,7 @@
   },
   {
     "slug": "koshigaya-reikutaun",
-    "name_en": "Koshigaya-Reikutaun",
+    "name_en": "Koshigaya-Laketown",
     "name_jp": "越谷レイクタウン",
     "name_ru": "Косигая-Рэйкутаун",
     "lat": 35.87622,
@@ -12936,7 +12936,7 @@
   },
   {
     "slug": "ko-kawara",
-    "name_en": "Ko-Kawara",
+    "name_en": "Mukaigawara",
     "name_jp": "向河原",
     "name_ru": "Мукайгавара",
     "lat": 35.572891,
@@ -12952,7 +12952,7 @@
   },
   {
     "slug": "ko-tsu-no-mori",
-    "name_en": "Ko-Tsu-No-Mori",
+    "name_en": "Kozunomori",
     "name_jp": "公津の杜",
     "name_ru": "Кодзуномори",
     "lat": 35.760446,
@@ -12984,7 +12984,7 @@
   },
   {
     "slug": "koen-shita",
-    "name_en": "Koen-Shita",
+    "name_en": "Koen-Shimo",
     "name_jp": "公園下",
     "name_ru": "Коэн-Симо",
     "lat": 35.249944,
@@ -13000,7 +13000,7 @@
   },
   {
     "slug": "koen-ue",
-    "name_en": "Koen-Ue",
+    "name_en": "Koen-Kami",
     "name_jp": "公園上",
     "name_ru": "Коэн-Ками",
     "lat": 35.249083,
@@ -13192,7 +13192,7 @@
   },
   {
     "slug": "kowakudani",
-    "name_en": "Kowakudani",
+    "name_en": "Kowakidani",
     "name_jp": "小涌谷",
     "name_ru": "Ковакидани",
     "lat": 35.240374,
@@ -13336,7 +13336,7 @@
   },
   {
     "slug": "kuju",
-    "name_en": "Kuju",
+    "name_en": "Kuzumi",
     "name_jp": "久住",
     "name_ru": "Кудзуми",
     "lat": 35.832232,
@@ -13352,7 +13352,7 @@
   },
   {
     "slug": "kumakawa",
-    "name_en": "Kumakawa",
+    "name_en": "Kumagawa",
     "name_jp": "熊川",
     "name_ru": "Кумагава",
     "lat": 35.728321,
@@ -13384,7 +13384,7 @@
   },
   {
     "slug": "kun-ke-hama",
-    "name_en": "Kun-Ke-Hama",
+    "name_en": "Kimigahama",
     "name_jp": "君ヶ浜",
     "name_ru": "Кимигахама",
     "lat": 35.714093,
@@ -13560,7 +13560,7 @@
   },
   {
     "slug": "kyu-ga-hara",
-    "name_en": "Kyu-Ga-Hara",
+    "name_en": "Kugahara",
     "name_jp": "久が原",
     "name_ru": "Кугахара",
     "lat": 35.579499,
@@ -13576,7 +13576,7 @@
   },
   {
     "slug": "kyumei",
-    "name_en": "Kyumei",
+    "name_en": "Gumyo",
     "name_jp": "求名",
     "name_ru": "Гумё",
     "lat": 35.579947,
@@ -13608,7 +13608,7 @@
   },
   {
     "slug": "maehara",
-    "name_en": "Maehara",
+    "name_en": "Maebara",
     "name_jp": "前原",
     "name_ru": "Маэбара",
     "lat": 35.700666,
@@ -13672,7 +13672,7 @@
   },
   {
     "slug": "makita",
-    "name_en": "Makita",
+    "name_en": "Maita",
     "name_jp": "蒔田",
     "name_ru": "Майта",
     "lat": 35.429935,
@@ -13688,7 +13688,7 @@
   },
   {
     "slug": "makuda",
-    "name_en": "Makuda",
+    "name_en": "Makuta",
     "name_jp": "馬来田",
     "name_ru": "Макута",
     "lat": 35.36681,
@@ -13704,7 +13704,7 @@
   },
   {
     "slug": "man-gan-tera",
-    "name_en": "Man-Gan-Tera",
+    "name_en": "Manganji",
     "name_jp": "万願寺",
     "name_ru": "Мангандзи",
     "lat": 35.671249,
@@ -13720,7 +13720,7 @@
   },
   {
     "slug": "manatsuru",
-    "name_en": "Manatsuru",
+    "name_en": "Manazuru",
     "name_jp": "真鶴",
     "name_ru": "Манадзуру",
     "lat": 35.156837,
@@ -13752,7 +13752,7 @@
   },
   {
     "slug": "mashio",
-    "name_en": "Mashio",
+    "name_en": "Masuo",
     "name_jp": "増尾",
     "name_ru": "Масуо",
     "lat": 35.829704,
@@ -13784,7 +13784,7 @@
   },
   {
     "slug": "matsu-ga-tani",
-    "name_en": "Matsu-Ga-Tani",
+    "name_en": "Matsugaya",
     "name_jp": "松が谷",
     "name_ru": "Мацугая",
     "lat": 35.63169,
@@ -13800,7 +13800,7 @@
   },
   {
     "slug": "matsu-tobidai",
-    "name_en": "Matsu-Tobidai",
+    "name_en": "Matsuhidai",
     "name_jp": "松飛台",
     "name_ru": "Мацухидай",
     "lat": 35.775377,
@@ -13848,7 +13848,7 @@
   },
   {
     "slug": "matsudo-nitta",
-    "name_en": "Matsudo-Nitta",
+    "name_en": "Matsudo-Shinden",
     "name_jp": "松戸新田",
     "name_ru": "Мацудо-Синдэн",
     "lat": 35.790652,
@@ -13896,7 +13896,7 @@
   },
   {
     "slug": "mei-ko",
-    "name_en": "Mei-Ko",
+    "name_en": "Aketo",
     "name_jp": "明戸",
     "name_ru": "Акэто",
     "lat": 36.142958,
@@ -13960,7 +13960,7 @@
   },
   {
     "slug": "meshi-kyu",
-    "name_en": "Meshi-Kyu",
+    "name_en": "Itabu",
     "name_jp": "飯給",
     "name_ru": "Итабу",
     "lat": 35.320512,
@@ -13976,7 +13976,7 @@
   },
   {
     "slug": "mibu-kuchi",
-    "name_en": "Mibu-Kuchi",
+    "name_en": "Mitsumineguchi",
     "name_jp": "三峰口",
     "name_ru": "Мицуминэгути",
     "lat": 35.960075,
@@ -14024,7 +14024,7 @@
   },
   {
     "slug": "midorimachi",
-    "name_en": "Midorimachi",
+    "name_en": "Midoricho",
     "name_jp": "緑町",
     "name_ru": "Мидоритё",
     "lat": 35.259226,
@@ -14088,7 +14088,7 @@
   },
   {
     "slug": "minami-asa-ke-tani",
-    "name_en": "Minami-Asa-Ke-Tani",
+    "name_en": "Minami-Asagaya",
     "name_jp": "南阿佐ケ谷",
     "name_ru": "Минами-Асагая",
     "lat": 35.699624,
@@ -14104,7 +14104,7 @@
   },
   {
     "slug": "minami-banki-ga-hara",
-    "name_en": "Minami-Banki-Ga-Hara",
+    "name_en": "Minami-Makigahara",
     "name_jp": "南万騎が原",
     "name_ru": "Минами-Макигахара",
     "lat": 35.452522,
@@ -14152,7 +14152,7 @@
   },
   {
     "slug": "minami-hato-ke-tani",
-    "name_en": "Minami-Hato-Ke-Tani",
+    "name_en": "Minami-Hatogaya",
     "name_jp": "南鳩ヶ谷",
     "name_ru": "Минами-Хатогая",
     "lat": 35.816839,
@@ -14232,7 +14232,7 @@
   },
   {
     "slug": "minami-sake-kurikaesi-i",
-    "name_en": "Minami-Sake-(kurikaesi)-I",
+    "name_en": "Minami-Shisui",
     "name_jp": "南酒々井",
     "name_ru": "Минами-Сисуи",
     "lat": 35.704217,
@@ -14296,7 +14296,7 @@
   },
   {
     "slug": "minami-taira",
-    "name_en": "Minami-Taira",
+    "name_en": "Minamidaira",
     "name_jp": "南平",
     "name_ru": "Минамидайра",
     "lat": 35.654559,
@@ -14408,7 +14408,7 @@
   },
   {
     "slug": "minamiyuki-toku",
-    "name_en": "Minamiyuki-Toku",
+    "name_en": "Minami-Gyotoku",
     "name_jp": "南行徳",
     "name_ru": "Минами-Гётоку",
     "lat": 35.672687,
@@ -14440,7 +14440,7 @@
   },
   {
     "slug": "minatomachi",
-    "name_en": "Minatomachi",
+    "name_en": "Minatocho",
     "name_jp": "港町",
     "name_ru": "Минатотё",
     "lat": 35.535014,
@@ -14680,7 +14680,7 @@
   },
   {
     "slug": "miya-no-taira",
-    "name_en": "Miya-No-Taira",
+    "name_en": "Miyanohira",
     "name_jp": "宮ノ平",
     "name_ru": "Миянохира",
     "lat": 35.787545,
@@ -14824,7 +14824,7 @@
   },
   {
     "slug": "mogusa-sono",
-    "name_en": "Mogusa-Sono",
+    "name_en": "Mogusaen",
     "name_jp": "百草園",
     "name_ru": "Могусаэн",
     "lat": 35.657362,
@@ -14888,7 +14888,7 @@
   },
   {
     "slug": "motomachi-chukagai",
-    "name_en": "Motomachi-・-Chukagai",
+    "name_en": "Motomachi-Chukagai",
     "name_jp": "元町・中華街",
     "name_ru": "Мотомати-Тюкагай",
     "lat": 35.44243,
@@ -14968,7 +14968,7 @@
   },
   {
     "slug": "musashi-arashiyama",
-    "name_en": "Musashi-Arashiyama",
+    "name_en": "Musashi-Ranzan",
     "name_jp": "武蔵嵐山",
     "name_ru": "Мусаси-Рандзан",
     "lat": 36.044001,
@@ -15000,7 +15000,7 @@
   },
   {
     "slug": "musashi-hikita",
-    "name_en": "Musashi-Hikita",
+    "name_en": "Musashi-Hikida",
     "name_jp": "武蔵引田",
     "name_ru": "Мусаси-Хикида",
     "lat": 35.729711,
@@ -15048,7 +15048,7 @@
   },
   {
     "slug": "musashi-masuto",
-    "name_en": "Musashi-Masuto",
+    "name_en": "Musashi-Masuko",
     "name_jp": "武蔵増戸",
     "name_ru": "Мусаси-Масуко",
     "lat": 35.730961,
@@ -15080,7 +15080,7 @@
   },
   {
     "slug": "musashi-shiroishi",
-    "name_en": "Musashi-Shiroishi",
+    "name_en": "Musashi-Shiraishi",
     "name_jp": "武蔵白石",
     "name_ru": "Мусаси-Сирайси",
     "lat": 35.501912,
@@ -15128,7 +15128,7 @@
   },
   {
     "slug": "musashidai-wa",
-    "name_en": "Musashidai-Wa",
+    "name_en": "Musashi-Yamato",
     "name_jp": "武蔵大和",
     "name_ru": "Мусаси-Ямато",
     "lat": 35.756427,
@@ -15288,7 +15288,7 @@
   },
   {
     "slug": "myogaku",
-    "name_en": "Myogaku",
+    "name_en": "Myokaku",
     "name_jp": "明覚",
     "name_ru": "Мёкаку",
     "lat": 36.003309,
@@ -15368,9 +15368,9 @@
   },
   {
     "slug": "nagareyama-sentorarupaaku",
-    "name_en": "Nagareyama-Sentorarupaaku",
+    "name_en": "Nagareyama-Central-Park",
     "name_jp": "流山セントラルパーク",
-    "name_ru": "Нагарэяма-Сэнторарупаку",
+    "name_ru": "Нагарэяма-Сэнторару-Паку",
     "lat": 35.854552,
     "lng": 139.915223,
     "lines": [
@@ -15416,7 +15416,7 @@
   },
   {
     "slug": "nai-yado",
-    "name_en": "Nai-Yado",
+    "name_en": "Uchijuku",
     "name_jp": "内宿",
     "name_ru": "Утидзюку",
     "lat": 36.014163,
@@ -15448,7 +15448,7 @@
   },
   {
     "slug": "naka-no-machi",
-    "name_en": "Naka-No-Machi",
+    "name_en": "Nakanocho",
     "name_jp": "仲ノ町",
     "name_ru": "Наканотё",
     "lat": 35.728813,
@@ -15560,7 +15560,7 @@
   },
   {
     "slug": "nakamura-hashi",
-    "name_en": "Nakamura-Hashi",
+    "name_en": "Nakamurabashi",
     "name_jp": "中村橋",
     "name_ru": "Накамурабаси",
     "lat": 35.736767,
@@ -15640,7 +15640,7 @@
   },
   {
     "slug": "nako-funagata",
-    "name_en": "Nako-Funagata",
+    "name_en": "Nakofunakata",
     "name_jp": "那古船形",
     "name_ru": "Накофунаката",
     "lat": 35.028987,
@@ -15672,9 +15672,9 @@
   },
   {
     "slug": "namekawa-airando",
-    "name_en": "Namekawa-Airando",
+    "name_en": "Namegawa-Island",
     "name_jp": "行川アイランド",
-    "name_ru": "Намэкава-Айрандо",
+    "name_ru": "Намэгава-Айрандо",
     "lat": 35.11832,
     "lng": 140.226962,
     "lines": [
@@ -15688,7 +15688,7 @@
   },
   {
     "slug": "nami-kure",
-    "name_en": "Nami-Kure",
+    "name_en": "Hagure",
     "name_jp": "波久礼",
     "name_ru": "Хагурэ",
     "lat": 36.126728,
@@ -15736,7 +15736,7 @@
   },
   {
     "slug": "nanahikari-dai",
-    "name_en": "Nanahikari-Dai",
+    "name_en": "Nanakodai",
     "name_jp": "七光台",
     "name_ru": "Нанакодай",
     "lat": 35.970884,
@@ -15768,7 +15768,7 @@
   },
   {
     "slug": "naniwa",
-    "name_en": "Naniwa",
+    "name_en": "Namihana",
     "name_jp": "浪花",
     "name_ru": "Намихана",
     "lat": 35.222674,
@@ -15784,7 +15784,7 @@
   },
   {
     "slug": "nankyo-hon",
-    "name_en": "Nankyo-Hon",
+    "name_en": "Minami-Hashimoto",
     "name_jp": "南橋本",
     "name_ru": "Минами-Хасимото",
     "lat": 35.58042,
@@ -15800,7 +15800,7 @@
   },
   {
     "slug": "nansan-hara",
-    "name_en": "Nansan-Hara",
+    "name_en": "Minamihara",
     "name_jp": "南三原",
     "name_ru": "Минамихара",
     "lat": 35.021065,
@@ -15912,7 +15912,7 @@
   },
   {
     "slug": "nerima-koyadai",
-    "name_en": "Nerima-Koyadai",
+    "name_en": "Nerima-Takanodai",
     "name_jp": "練馬高野台",
     "name_ru": "Нэрима-Таканодай",
     "lat": 35.740622,
@@ -15944,7 +15944,7 @@
   },
   {
     "slug": "nichi-no-demachi",
-    "name_en": "Nichi-No-Demachi",
+    "name_en": "Hinodecho",
     "name_jp": "日ノ出町",
     "name_ru": "Хинодэтё",
     "lat": 35.445524,
@@ -15960,7 +15960,7 @@
   },
   {
     "slug": "nihondai-tori",
-    "name_en": "Nihondai-Tori",
+    "name_en": "Nihon-Odori",
     "name_jp": "日本大通り",
     "name_ru": "Нихон-Одори",
     "lat": 35.446821,
@@ -15976,7 +15976,7 @@
   },
   {
     "slug": "niitaka-shima",
-    "name_en": "Niitaka-Shima",
+    "name_en": "Shin-Takashima",
     "name_jp": "新高島",
     "name_ru": "Син-Такасима",
     "lat": 35.46192,
@@ -15992,7 +15992,7 @@
   },
   {
     "slug": "niitaka-shima-taira",
-    "name_en": "Niitaka-Shima-Taira",
+    "name_en": "Shin-Takashimadaira",
     "name_jp": "新高島平",
     "name_ru": "Син-Такасимадайра",
     "lat": 35.790189,
@@ -16136,7 +16136,7 @@
   },
   {
     "slug": "nishi-ke-hara",
-    "name_en": "Nishi-Ke-Hara",
+    "name_en": "Nishigahara",
     "name_jp": "西ケ原",
     "name_ru": "Нисигахара",
     "lat": 35.746008,
@@ -16184,7 +16184,7 @@
   },
   {
     "slug": "nishi-noborito",
-    "name_en": "Nishi-Noborito",
+    "name_en": "Nishi-Nobuto",
     "name_jp": "西登戸",
     "name_ru": "Ниси-Нобуто",
     "lat": 35.617615,
@@ -16264,7 +16264,7 @@
   },
   {
     "slug": "nishi-oyama",
-    "name_en": "Nishi-Oyama",
+    "name_en": "Nishi-Koyama",
     "name_jp": "西小山",
     "name_ru": "Ниси-Кояма",
     "lat": 35.615455,
@@ -16360,7 +16360,7 @@
   },
   {
     "slug": "nishi-ware-no",
-    "name_en": "Nishi-Ware-No",
+    "name_en": "Nishi-Agano",
     "name_jp": "西吾野",
     "name_ru": "Ниси-Агано",
     "lat": 35.927082,
@@ -16392,7 +16392,7 @@
   },
   {
     "slug": "nishiarai-taishi-nishi",
-    "name_en": "Nishiarai-Taishi-Nishi",
+    "name_en": "Nishiaraidaishi-Nishi",
     "name_jp": "西新井大師西",
     "name_ru": "Нисиарайдайси-Ниси",
     "lat": 35.781505,
@@ -16440,7 +16440,7 @@
   },
   {
     "slug": "nishikawa-etsu",
-    "name_en": "Nishikawa-Etsu",
+    "name_en": "Nishi-Kawagoe",
     "name_jp": "西川越",
     "name_ru": "Ниси-Кавагоэ",
     "lat": 35.91909,
@@ -16456,7 +16456,7 @@
   },
   {
     "slug": "nishikawa-kuchi",
-    "name_en": "Nishikawa-Kuchi",
+    "name_en": "Nishi-Kawaguchi",
     "name_jp": "西川口",
     "name_ru": "Ниси-Кавагути",
     "lat": 35.815514,
@@ -16472,7 +16472,7 @@
   },
   {
     "slug": "nishikoku-ritsu",
-    "name_en": "Nishikoku-Ritsu",
+    "name_en": "Nishi-Kunitachi",
     "name_jp": "西国立",
     "name_ru": "Ниси-Кунитати",
     "lat": 35.69375,
@@ -16488,7 +16488,7 @@
   },
   {
     "slug": "nishiko-shima-taira",
-    "name_en": "Nishiko-Shima-Taira",
+    "name_en": "Nishi-Takashimadaira",
     "name_jp": "西高島平",
     "name_ru": "Ниси-Такасимадайра",
     "lat": 35.791833,
@@ -16504,7 +16504,7 @@
   },
   {
     "slug": "nishinaga-fuku",
-    "name_en": "Nishinaga-Fuku",
+    "name_en": "Nishi-Eifuku",
     "name_jp": "西永福",
     "name_ru": "Ниси-Эйфуку",
     "lat": 35.678918,
@@ -16520,7 +16520,7 @@
   },
   {
     "slug": "nishishirai",
-    "name_en": "Nishishirai",
+    "name_en": "Nishi-Shiroi",
     "name_jp": "西白井",
     "name_ru": "Ниси-Сирои",
     "lat": 35.784364,
@@ -16536,7 +16536,7 @@
   },
   {
     "slug": "nishitani",
-    "name_en": "Nishitani",
+    "name_en": "Nishiya",
     "name_jp": "西谷",
     "name_ru": "Нисия",
     "lat": 35.478092,
@@ -16600,7 +16600,7 @@
   },
   {
     "slug": "nitta",
-    "name_en": "Nitta",
+    "name_en": "Shinden",
     "name_jp": "新田",
     "name_ru": "Синдэн",
     "lat": 35.854086,
@@ -16760,7 +16760,7 @@
   },
   {
     "slug": "nyu-so",
-    "name_en": "Nyu-So",
+    "name_en": "Iriso",
     "name_jp": "入曽",
     "name_ru": "Ирисо",
     "lat": 35.832481,
@@ -16776,7 +16776,7 @@
   },
   {
     "slug": "o-hanacha-ya",
-    "name_en": "O-Hanacha-Ya",
+    "name_en": "Ohanajaya",
     "name_jp": "お花茶屋",
     "name_ru": "Оханадзяя",
     "lat": 35.747585,
@@ -16792,7 +16792,7 @@
   },
   {
     "slug": "o-hanahata",
-    "name_en": "O-Hanahata",
+    "name_en": "Ohanabatake",
     "name_jp": "御花畑",
     "name_ru": "Оханабатакэ",
     "lat": 35.992369,
@@ -17176,7 +17176,7 @@
   },
   {
     "slug": "onigori",
-    "name_en": "Onigori",
+    "name_en": "Onigoe",
     "name_jp": "鬼越",
     "name_ru": "Онигоэ",
     "lat": 35.719776,
@@ -17208,7 +17208,7 @@
   },
   {
     "slug": "ontake",
-    "name_en": "Ontake",
+    "name_en": "Mitake",
     "name_jp": "御嶽",
     "name_ru": "Митакэ",
     "lat": 35.801468,
@@ -17224,7 +17224,7 @@
   },
   {
     "slug": "ontake-yama",
-    "name_en": "Ontake-Yama",
+    "name_en": "Ontakesan",
     "name_jp": "御嶽山",
     "name_ru": "Онтакэсан",
     "lat": 35.585236,
@@ -17304,7 +17304,7 @@
   },
   {
     "slug": "oikeiba-ba-mae",
-    "name_en": "Oikeiba-Ba-Mae",
+    "name_en": "Oi-Keibajo-Mae",
     "name_jp": "大井競馬場前",
     "name_ru": "Ои-Кэйбадзё-маэ",
     "lat": 35.595006,
@@ -17576,7 +17576,7 @@
   },
   {
     "slug": "otsuka-teikyodaigaku",
-    "name_en": "Otsuka-・-Teikyodaigaku",
+    "name_en": "Otsuka-Teikyo-Daigaku",
     "name_jp": "大塚・帝京大学",
     "name_ru": "Оцука-Тэйкё-Дайгаку",
     "lat": 35.636878,
@@ -17736,7 +17736,7 @@
   },
   {
     "slug": "oyamatsu",
-    "name_en": "Oyamatsu",
+    "name_en": "Koyamatsu",
     "name_jp": "小谷松",
     "name_ru": "Коямацу",
     "lat": 35.268938,
@@ -17784,7 +17784,7 @@
   },
   {
     "slug": "renkon",
-    "name_en": "Renkon",
+    "name_en": "Hasune",
     "name_jp": "蓮根",
     "name_ru": "Хасунэ",
     "lat": 35.784335,
@@ -17816,7 +17816,7 @@
   },
   {
     "slug": "roku-machi",
-    "name_en": "Roku-Machi",
+    "name_en": "Rokucho",
     "name_jp": "六町",
     "name_ru": "Рокутё",
     "lat": 35.784963,
@@ -17832,7 +17832,7 @@
   },
   {
     "slug": "roku-mi",
-    "name_en": "Roku-Mi",
+    "name_en": "Mutsumi",
     "name_jp": "六実",
     "name_ru": "Муцуми",
     "lat": 35.793715,
@@ -17896,7 +17896,7 @@
   },
   {
     "slug": "ryutsu-sentaa",
-    "name_en": "Ryutsu-Sentaa",
+    "name_en": "Ryutsu-Center",
     "name_jp": "流通センター",
     "name_ru": "Рюцу-Сэнта",
     "lat": 35.58186,
@@ -18056,7 +18056,7 @@
   },
   {
     "slug": "saikai-kashima",
-    "name_en": "Saikai-Kashima",
+    "name_en": "Nishi-Ashikajima",
     "name_jp": "西海鹿島",
     "name_ru": "Ниси-Асикадзима",
     "lat": 35.725131,
@@ -18104,7 +18104,7 @@
   },
   {
     "slug": "sake-kurikaesi-i",
-    "name_en": "Sake-(kurikaesi)-I",
+    "name_en": "Shisui",
     "name_jp": "酒々井",
     "name_ru": "Сисуи",
     "lat": 35.731737,
@@ -18120,7 +18120,7 @@
   },
   {
     "slug": "saku-kusa-bu",
-    "name_en": "Saku-Kusa-Bu",
+    "name_en": "Sakusabe",
     "name_jp": "作草部",
     "name_ru": "Сакусабэ",
     "lat": 35.625806,
@@ -18312,7 +18312,7 @@
   },
   {
     "slug": "san-tsu-sakai",
-    "name_en": "San-Tsu-Sakai",
+    "name_en": "Mitsukyo",
     "name_jp": "三ツ境",
     "name_ru": "Мицукё",
     "lat": 35.467779,
@@ -18328,7 +18328,7 @@
   },
   {
     "slug": "san-tsu-sawa-shitamachi",
-    "name_en": "San-Tsu-Sawa-Shitamachi",
+    "name_en": "Mitsuzawa-Shimocho",
     "name_jp": "三ツ沢下町",
     "name_ru": "Мицудзава-Симотё",
     "lat": 35.476512,
@@ -18344,7 +18344,7 @@
   },
   {
     "slug": "san-tsu-sawakami-machi",
-    "name_en": "San-Tsu-Sawakami-Machi",
+    "name_en": "Mitsuzawa-Kamicho",
     "name_jp": "三ツ沢上町",
     "name_ru": "Мицудзава-Камитё",
     "lat": 35.476526,
@@ -18360,7 +18360,7 @@
   },
   {
     "slug": "sangu-hashi",
-    "name_en": "Sangu-Hashi",
+    "name_en": "Sangubashi",
     "name_jp": "参宮橋",
     "name_ru": "Сангубаси",
     "lat": 35.678586,
@@ -18376,7 +18376,7 @@
   },
   {
     "slug": "sangyo-shinko-sentaa",
-    "name_en": "Sangyo-Shinko-Sentaa",
+    "name_en": "Sangyo-Shinko-Center",
     "name_jp": "産業振興センター",
     "name_ru": "Сангёсинко-Сэнта",
     "lat": 35.35339,
@@ -18408,7 +18408,7 @@
   },
   {
     "slug": "sanpoku",
-    "name_en": "Sanpoku",
+    "name_en": "Yamakita",
     "name_jp": "山北",
     "name_ru": "Ямакита",
     "lat": 35.360808,
@@ -18440,7 +18440,7 @@
   },
   {
     "slug": "saruta",
-    "name_en": "Saruta",
+    "name_en": "Saruda",
     "name_jp": "猿田",
     "name_ru": "Саруда",
     "lat": 35.747383,
@@ -18520,7 +18520,7 @@
   },
   {
     "slug": "sayama-ke-oka",
-    "name_en": "Sayama-Ke-Oka",
+    "name_en": "Sayamagaoka",
     "name_jp": "狭山ヶ丘",
     "name_ru": "Саямагаока",
     "lat": 35.810445,
@@ -18552,7 +18552,7 @@
   },
   {
     "slug": "seibi-ba",
-    "name_en": "Seibi-Ba",
+    "name_en": "Seibijo",
     "name_jp": "整備場",
     "name_ru": "Сэйбидзё",
     "lat": 35.555125,
@@ -18600,7 +18600,7 @@
   },
   {
     "slug": "seibu-yanagisawa",
-    "name_en": "Seibu-Yanagisawa",
+    "name_en": "Seibu-Yagisawa",
     "name_jp": "西武柳沢",
     "name_ru": "Сэйбу-Ягисава",
     "lat": 35.728621,
@@ -18648,7 +18648,7 @@
   },
   {
     "slug": "seifu",
-    "name_en": "Seifu",
+    "name_en": "Nishifu",
     "name_jp": "西府",
     "name_ru": "Нисифу",
     "lat": 35.670912,
@@ -18680,7 +18680,7 @@
   },
   {
     "slug": "seikai",
-    "name_en": "Seikai",
+    "name_en": "Aomi",
     "name_jp": "青海",
     "name_ru": "Аоми",
     "lat": 35.62467,
@@ -18712,7 +18712,7 @@
   },
   {
     "slug": "sen-da-ke-tani",
-    "name_en": "Sen-Da-Ke-Tani",
+    "name_en": "Sendagaya",
     "name_jp": "千駄ケ谷",
     "name_ru": "Сэндагая",
     "lat": 35.681231,
@@ -18728,7 +18728,7 @@
   },
   {
     "slug": "sen-shiro-dai",
-    "name_en": "Sen-Shiro-Dai",
+    "name_en": "Chishirodai",
     "name_jp": "千城台",
     "name_ru": "Тисиродай",
     "lat": 35.622314,
@@ -18744,7 +18744,7 @@
   },
   {
     "slug": "sen-shiro-taihoku",
-    "name_en": "Sen-Shiro-Taihoku",
+    "name_en": "Chishirodai-Kita",
     "name_jp": "千城台北",
     "name_ru": "Тисиродай-Кита",
     "lat": 35.627436,
@@ -18840,7 +18840,7 @@
   },
   {
     "slug": "sensoku",
-    "name_en": "Sensoku",
+    "name_en": "Senzoku",
     "name_jp": "洗足",
     "name_ru": "Сэндзоку",
     "lat": 35.61043,
@@ -18936,7 +18936,7 @@
   },
   {
     "slug": "shakudo-shogakko-mae",
-    "name_en": "Shakudo-Shogakko-Mae",
+    "name_en": "Akado-Shogakkomae",
     "name_jp": "赤土小学校前",
     "name_ru": "Акадо-Сёгаккомаэ",
     "lat": 35.742454,
@@ -18968,7 +18968,7 @@
   },
   {
     "slug": "shi-ga-o",
-    "name_en": "Shi-Ga-O",
+    "name_en": "Ichigao",
     "name_jp": "市が尾",
     "name_ru": "Итигао",
     "lat": 35.551483,
@@ -18984,7 +18984,7 @@
   },
   {
     "slug": "shi-tsu-ki",
-    "name_en": "Shi-Tsu-Ki",
+    "name_en": "Yotsugi",
     "name_jp": "四ツ木",
     "name_ru": "Ёцуги",
     "lat": 35.731962,
@@ -19064,7 +19064,7 @@
   },
   {
     "slug": "shibaura-fu-atama",
-    "name_en": "Shibaura-Fu-Atama",
+    "name_en": "Shibaura-Futo",
     "name_jp": "芝浦ふ頭",
     "name_ru": "Сибаура-Футо",
     "lat": 35.641773,
@@ -19112,7 +19112,7 @@
   },
   {
     "slug": "shichiri",
-    "name_en": "Shichiri",
+    "name_en": "Nanasato",
     "name_jp": "七里",
     "name_ru": "Нанасато",
     "lat": 35.936464,
@@ -19128,7 +19128,7 @@
   },
   {
     "slug": "shichiri-ke-hama",
-    "name_en": "Shichiri-Ke-Hama",
+    "name_en": "Shichirigahama",
     "name_jp": "七里ヶ浜",
     "name_ru": "Ситиригахама",
     "lat": 35.306243,
@@ -19336,7 +19336,7 @@
   },
   {
     "slug": "shimosa-kanzaki",
-    "name_en": "Shimosa-Kanzaki",
+    "name_en": "Shimosa-Kozaki",
     "name_jp": "下総神崎",
     "name_ru": "Симоса-Кодзаки",
     "lat": 35.8948,
@@ -19352,7 +19352,7 @@
   },
   {
     "slug": "shimosa-matsuzaki",
-    "name_en": "Shimosa-Matsuzaki",
+    "name_en": "Shimosa-Manzaki",
     "name_jp": "下総松崎",
     "name_ru": "Симоса-Мандзаки",
     "lat": 35.807806,
@@ -19528,7 +19528,7 @@
   },
   {
     "slug": "shin-hane",
-    "name_en": "Shin-Hane",
+    "name_en": "Nippa",
     "name_jp": "新羽",
     "name_ru": "Ниппа",
     "lat": 35.527701,
@@ -19544,7 +19544,7 @@
   },
   {
     "slug": "shin-kashi",
-    "name_en": "Shin-Kashi",
+    "name_en": "Shingashi",
     "name_jp": "新河岸",
     "name_ru": "Сингаси",
     "lat": 35.890911,
@@ -19736,7 +19736,7 @@
   },
   {
     "slug": "shin-seibi-ba",
-    "name_en": "Shin-Seibi-Ba",
+    "name_en": "Shin-Seibijo",
     "name_jp": "新整備場",
     "name_ru": "Син-Сэйбидзё",
     "lat": 35.542773,
@@ -19800,7 +19800,7 @@
   },
   {
     "slug": "shin-shirota",
-    "name_en": "Shin-Shirota",
+    "name_en": "Shin-Daita",
     "name_jp": "新代田",
     "name_ru": "Син-Дайта",
     "lat": 35.662593,
@@ -19832,7 +19832,7 @@
   },
   {
     "slug": "shinagawa-shiisaido",
-    "name_en": "Shinagawa-Shiisaido",
+    "name_en": "Shinagawa-Seaside",
     "name_jp": "品川シーサイド",
     "name_ru": "Синагава-Сисайдо",
     "lat": 35.608524,
@@ -19848,7 +19848,7 @@
   },
   {
     "slug": "shinanocho",
-    "name_en": "Shinanocho",
+    "name_en": "Shinanomachi",
     "name_jp": "信濃町",
     "name_ru": "Синаномати",
     "lat": 35.680031,
@@ -19864,7 +19864,7 @@
   },
   {
     "slug": "shinbaba",
-    "name_en": "Shinbaba",
+    "name_en": "Shinbanba",
     "name_jp": "新馬場",
     "name_ru": "Симбамба",
     "lat": 35.61762,
@@ -19880,7 +19880,7 @@
   },
   {
     "slug": "shindai-tsu",
-    "name_en": "Shindai-Tsu",
+    "name_en": "Shin-Otsu",
     "name_jp": "新大津",
     "name_ru": "Син-Оцу",
     "lat": 35.257013,
@@ -19944,7 +19944,7 @@
   },
   {
     "slug": "shinkemi-kawa",
-    "name_en": "Shinkemi-Kawa",
+    "name_en": "Shin-Kemigawa",
     "name_jp": "新検見川",
     "name_ru": "Син-Кэмигава",
     "lat": 35.65169,
@@ -19960,7 +19960,7 @@
   },
   {
     "slug": "shinko-kawa",
-    "name_en": "Shinko-Kawa",
+    "name_en": "Shin-Koga",
     "name_jp": "新古河",
     "name_ru": "Син-Кога",
     "lat": 36.192686,
@@ -20056,7 +20056,7 @@
   },
   {
     "slug": "shinsen-hashi",
-    "name_en": "Shinsen-Hashi",
+    "name_en": "Shin-Funabashi",
     "name_jp": "新船橋",
     "name_ru": "Син-Фунабаси",
     "lat": 35.710993,
@@ -20120,7 +20120,7 @@
   },
   {
     "slug": "shinzo-kawashima",
-    "name_en": "Shinzo-Kawashima",
+    "name_en": "Shin-Mikawashima",
     "name_jp": "新三河島",
     "name_ru": "Сим-Микавасима",
     "lat": 35.73714,
@@ -20136,7 +20136,7 @@
   },
   {
     "slug": "shinzo-sato",
-    "name_en": "Shinzo-Sato",
+    "name_en": "Shin-Misato",
     "name_jp": "新三郷",
     "name_ru": "Син-Мисато",
     "lat": 35.858667,
@@ -20200,7 +20200,7 @@
   },
   {
     "slug": "shirai",
-    "name_en": "Shirai",
+    "name_en": "Shiroi",
     "name_jp": "白井",
     "name_ru": "Сирои",
     "lat": 35.784723,
@@ -20280,7 +20280,7 @@
   },
   {
     "slug": "shiromi-ke-oka",
-    "name_en": "Shiromi-Ke-Oka",
+    "name_en": "Shiromigaoka",
     "name_jp": "城見ヶ丘",
     "name_ru": "Сиромигаока",
     "lat": 35.291741,
@@ -20296,7 +20296,7 @@
   },
   {
     "slug": "shirota-hashi",
-    "name_en": "Shirota-Hashi",
+    "name_en": "Daitabashi",
     "name_jp": "代田橋",
     "name_ru": "Дайтабаси",
     "lat": 35.671092,
@@ -20312,7 +20312,7 @@
   },
   {
     "slug": "shita-iida",
-    "name_en": "Shita-Iida",
+    "name_en": "Shimoiida",
     "name_jp": "下飯田",
     "name_ru": "Симоиида",
     "lat": 35.403503,
@@ -20328,7 +20328,7 @@
   },
   {
     "slug": "shita-jinmei",
-    "name_en": "Shita-Jinmei",
+    "name_en": "Shimo-Shinmei",
     "name_jp": "下神明",
     "name_ru": "Симо-Симмэй",
     "lat": 35.608704,
@@ -20344,7 +20344,7 @@
   },
   {
     "slug": "shita-nagatani",
-    "name_en": "Shita-Nagatani",
+    "name_en": "Shimonagaya",
     "name_jp": "下永谷",
     "name_ru": "Симонагая",
     "lat": 35.402677,
@@ -20360,7 +20360,7 @@
   },
   {
     "slug": "shita-soga",
-    "name_en": "Shita-Soga",
+    "name_en": "Shimo-Soga",
     "name_jp": "下曽我",
     "name_ru": "Симо-Сога",
     "lat": 35.303554,
@@ -20376,7 +20376,7 @@
   },
   {
     "slug": "shitaita-hashi",
-    "name_en": "Shitaita-Hashi",
+    "name_en": "Shimo-Itabashi",
     "name_jp": "下板橋",
     "name_ru": "Симо-Итабаси",
     "lat": 35.745721,
@@ -20472,7 +20472,7 @@
   },
   {
     "slug": "shonan-fukazawa",
-    "name_en": "Shonan-Fukazawa",
+    "name_en": "Shonan-Fukasawa",
     "name_jp": "湘南深沢",
     "name_ru": "Сёнан-Фукасава",
     "lat": 35.332865,
@@ -20536,7 +20536,7 @@
   },
   {
     "slug": "showa-shima",
-    "name_en": "Showa-Shima",
+    "name_en": "Showajima",
     "name_jp": "昭和島",
     "name_ru": "Сёвадзима",
     "lat": 35.570656,
@@ -20568,7 +20568,7 @@
   },
   {
     "slug": "sode-ke-ura",
-    "name_en": "Sode-Ke-Ura",
+    "name_en": "Sodegaura",
     "name_jp": "袖ケ浦",
     "name_ru": "Содэгаура",
     "lat": 35.431997,
@@ -20600,7 +20600,7 @@
   },
   {
     "slug": "soshio-ryutsu-sentaa",
-    "name_en": "Soshio-Ryutsu-Sentaa",
+    "name_en": "Socio-Ryutsu-Center",
     "name_jp": "ソシオ流通センター",
     "name_ru": "Сосио-Рюцу-Сэнта",
     "lat": 36.1365,
@@ -20616,7 +20616,7 @@
   },
   {
     "slug": "so-moto",
-    "name_en": "So-Moto",
+    "name_en": "Fusamoto",
     "name_jp": "総元",
     "name_ru": "Фусамото",
     "lat": 35.240588,
@@ -20696,7 +20696,7 @@
   },
   {
     "slug": "soun-yama",
-    "name_en": "Soun-Yama",
+    "name_en": "Sounzan",
     "name_jp": "早雲山",
     "name_ru": "Соундзан",
     "lat": 35.246444,
@@ -20760,7 +20760,7 @@
   },
   {
     "slug": "sugito-koyadai",
-    "name_en": "Sugito-Koyadai",
+    "name_en": "Sugito-Takanodai",
     "name_jp": "杉戸高野台",
     "name_ru": "Сугито-Таканодай",
     "lat": 36.051536,
@@ -20808,7 +20808,7 @@
   },
   {
     "slug": "sunagawa-shichi-ban",
-    "name_en": "Sunagawa-Shichi-Ban",
+    "name_en": "Sunagawa-Nanaban",
     "name_jp": "砂川七番",
     "name_ru": "Сунагава-Нанабан",
     "lat": 35.723319,
@@ -20888,7 +20888,7 @@
   },
   {
     "slug": "ta-umi",
-    "name_en": "Ta-Umi",
+    "name_en": "Futomi",
     "name_jp": "太海",
     "name_ru": "Футоми",
     "lat": 35.081435,
@@ -20920,7 +20920,7 @@
   },
   {
     "slug": "tachiba",
-    "name_en": "Tachiba",
+    "name_en": "Tateba",
     "name_jp": "立場",
     "name_ru": "Татэба",
     "lat": 35.414296,
@@ -20984,7 +20984,7 @@
   },
   {
     "slug": "taisa-kura",
-    "name_en": "Taisa-Kura",
+    "name_en": "Osakura",
     "name_jp": "大佐倉",
     "name_ru": "Осакура",
     "lat": 35.729908,
@@ -21016,7 +21016,7 @@
   },
   {
     "slug": "taiyu-yama",
-    "name_en": "Taiyu-Yama",
+    "name_en": "Daiyuzan",
     "name_jp": "大雄山",
     "name_ru": "Дайюдзан",
     "lat": 35.319046,
@@ -21064,7 +21064,7 @@
   },
   {
     "slug": "takada",
-    "name_en": "Takada",
+    "name_en": "Takata",
     "name_jp": "高田",
     "name_ru": "Таката",
     "lat": 35.549713,
@@ -21160,7 +21160,7 @@
   },
   {
     "slug": "takano",
-    "name_en": "Takano",
+    "name_en": "Koya",
     "name_jp": "高野",
     "name_ru": "Коя",
     "lat": 35.768359,
@@ -21208,7 +21208,7 @@
   },
   {
     "slug": "takashima-machi",
-    "name_en": "Takashima-Machi",
+    "name_en": "Takashimacho",
     "name_jp": "高島町",
     "name_ru": "Такасиматё",
     "lat": 35.458804,
@@ -21224,7 +21224,7 @@
   },
   {
     "slug": "takashima-taira",
-    "name_en": "Takashima-Taira",
+    "name_en": "Takashimadaira",
     "name_jp": "高島平",
     "name_ru": "Такасимадайра",
     "lat": 35.789056,
@@ -21416,7 +21416,7 @@
   },
   {
     "slug": "tama-puraaza",
-    "name_en": "Tama-Puraaza",
+    "name_en": "Tama-Plaza",
     "name_jp": "たまプラーザ",
     "name_ru": "Тама-Пурадза",
     "lat": 35.577427,
@@ -21496,7 +21496,7 @@
   },
   {
     "slug": "tan-so",
-    "name_en": "Tan-So",
+    "name_en": "Tansho",
     "name_jp": "丹荘",
     "name_ru": "Тансё",
     "lat": 36.216668,
@@ -21528,7 +21528,7 @@
   },
   {
     "slug": "tani-zaike",
-    "name_en": "Tani-Zaike",
+    "name_en": "Yazaike",
     "name_jp": "谷在家",
     "name_ru": "Ядзайкэ",
     "lat": 35.788774,
@@ -21672,9 +21672,9 @@
   },
   {
     "slug": "terekomusentaa",
-    "name_en": "Terekomusentaa",
+    "name_en": "Telecom-Center",
     "name_jp": "テレコムセンター",
-    "name_ru": "Тэрэкомусэнта",
+    "name_ru": "Тэрэкому-Сэнта",
     "lat": 35.617593,
     "lng": 139.779327,
     "lines": [
@@ -21832,7 +21832,7 @@
   },
   {
     "slug": "togawa",
-    "name_en": "Togawa",
+    "name_en": "Tokawa",
     "name_jp": "外川",
     "name_ru": "Токава",
     "lat": 35.699314,
@@ -21880,7 +21880,7 @@
   },
   {
     "slug": "tokoshikoen",
-    "name_en": "Tokoshikoen",
+    "name_en": "Togoshi-Koen",
     "name_jp": "戸越公園",
     "name_ru": "Тогоси-Коэн",
     "lat": 35.608856,
@@ -21896,7 +21896,7 @@
   },
   {
     "slug": "tomi-mizu",
-    "name_en": "Tomi-Mizu",
+    "name_en": "Tomizu",
     "name_jp": "富水",
     "name_ru": "Томидзу",
     "lat": 35.296759,
@@ -22040,7 +22040,7 @@
   },
   {
     "slug": "totsuka-angyo",
-    "name_en": "Totsuka-Angyo",
+    "name_en": "Tozuka-Angyo",
     "name_jp": "戸塚安行",
     "name_ru": "Тодзука-Ангё",
     "lat": 35.858873,
@@ -22104,7 +22104,7 @@
   },
   {
     "slug": "todai-miya",
-    "name_en": "Todai-Miya",
+    "name_en": "Higashi-Omiya",
     "name_jp": "東大宮",
     "name_ru": "Хигаси-Омия",
     "lat": 35.948751,
@@ -22120,7 +22120,7 @@
   },
   {
     "slug": "todai-shima",
-    "name_en": "Todai-Shima",
+    "name_en": "Higashi-Ojima",
     "name_jp": "東大島",
     "name_ru": "Хигаси-Одзима",
     "lat": 35.690355,
@@ -22136,7 +22136,7 @@
   },
   {
     "slug": "tofuku-nama",
-    "name_en": "Tofuku-Nama",
+    "name_en": "Higashi-Fussa",
     "name_jp": "東福生",
     "name_ru": "Хигаси-Фусса",
     "lat": 35.745811,
@@ -22168,7 +22168,7 @@
   },
   {
     "slug": "togu-hara",
-    "name_en": "Togu-Hara",
+    "name_en": "Higashi-Miyahara",
     "name_jp": "東宮原",
     "name_ru": "Хигаси-Мияхара",
     "lat": 35.94262,
@@ -22184,7 +22184,7 @@
   },
   {
     "slug": "tohaku-raku",
-    "name_en": "Tohaku-Raku",
+    "name_en": "Higashi-Hakuraku",
     "name_jp": "東白楽",
     "name_ru": "Хигаси-Хакураку",
     "lat": 35.483523,
@@ -22200,7 +22200,7 @@
   },
   {
     "slug": "tokai-kami",
-    "name_en": "Tokai-Kami",
+    "name_en": "Higashi-Kaijin",
     "name_jp": "東海神",
     "name_ru": "Хигаси-Кайдзин",
     "lat": 35.705888,
@@ -22232,7 +22232,7 @@
   },
   {
     "slug": "toko-ta",
-    "name_en": "Toko-Ta",
+    "name_en": "Higashi-Gyoda",
     "name_jp": "東行田",
     "name_ru": "Хигаси-Гёда",
     "lat": 36.147265,
@@ -22248,7 +22248,7 @@
   },
   {
     "slug": "tokyo-sukaitsurii",
-    "name_en": "Tokyo-Sukaitsurii",
+    "name_en": "Tokyo-Skytree",
     "name_jp": "とうきょうスカイツリー",
     "name_ru": "Токио-Сукайцури",
     "lat": 35.71043,
@@ -22280,7 +22280,7 @@
   },
   {
     "slug": "tomo-ro",
-    "name_en": "Tomo-Ro",
+    "name_en": "Higashi-Moro",
     "name_jp": "東毛呂",
     "name_ru": "Хигаси-Моро",
     "lat": 35.947058,
@@ -22296,7 +22296,7 @@
   },
   {
     "slug": "torin-kan",
-    "name_en": "Torin-Kan",
+    "name_en": "Higashi-Rinkan",
     "name_jp": "東林間",
     "name_ru": "Хигаси-Ринкан",
     "lat": 35.520541,
@@ -22312,7 +22312,7 @@
   },
   {
     "slug": "toshin-kawa",
-    "name_en": "Toshin-Kawa",
+    "name_en": "Higashi-Kiyokawa",
     "name_jp": "東清川",
     "name_ru": "Хигаси-Киёкава",
     "lat": 35.390017,
@@ -22328,7 +22328,7 @@
   },
   {
     "slug": "toso-moto",
-    "name_en": "Toso-Moto",
+    "name_en": "Higashi-Fusamoto",
     "name_jp": "東総元",
     "name_ru": "Хигаси-Фусамото",
     "lat": 35.259314,
@@ -22344,7 +22344,7 @@
   },
   {
     "slug": "toyoko-ta",
-    "name_en": "Toyoko-Ta",
+    "name_en": "Higashi-Yokota",
     "name_jp": "東横田",
     "name_ru": "Хигаси-Ёкота",
     "lat": 35.386185,
@@ -22392,7 +22392,7 @@
   },
   {
     "slug": "tsuchike",
-    "name_en": "Tsuchike",
+    "name_en": "Toke",
     "name_jp": "土気",
     "name_ru": "Токэ",
     "lat": 35.530866,
@@ -22536,7 +22536,7 @@
   },
   {
     "slug": "tsukisaki",
-    "name_en": "Tsukisaki",
+    "name_en": "Tsukizaki",
     "name_jp": "月崎",
     "name_ru": "Цукидзаки",
     "lat": 35.302203,
@@ -22600,7 +22600,7 @@
   },
   {
     "slug": "tsuru-ke-shima",
-    "name_en": "Tsuru-Ke-Shima",
+    "name_en": "Tsurugashima",
     "name_jp": "鶴ヶ島",
     "name_ru": "Цуругасима",
     "lat": 35.936771,
@@ -22696,7 +22696,7 @@
   },
   {
     "slug": "tsurumi-shijo",
-    "name_en": "Tsurumi-Shijo",
+    "name_en": "Tsurumi-Ichiba",
     "name_jp": "鶴見市場",
     "name_ru": "Цуруми-Итиба",
     "lat": 35.517594,
@@ -22728,7 +22728,7 @@
   },
   {
     "slug": "tsutsuji-ke-oka",
-    "name_en": "Tsutsuji-Ke-Oka",
+    "name_en": "Tsutsujigaoka",
     "name_jp": "つつじヶ丘",
     "name_ru": "Цуцудзигаока",
     "lat": 35.657936,
@@ -22792,7 +22792,7 @@
   },
   {
     "slug": "ue-gora",
-    "name_en": "Ue-Gora",
+    "name_en": "Kami-Gora",
     "name_jp": "上強羅",
     "name_ru": "Ками-Гора",
     "lat": 35.247306,
@@ -22808,7 +22808,7 @@
   },
   {
     "slug": "ue-kumagaya",
-    "name_en": "Ue-Kumagaya",
+    "name_en": "Kami-Kumagaya",
     "name_jp": "上熊谷",
     "name_ru": "Ками-Кумагая",
     "lat": 36.142657,
@@ -22824,7 +22824,7 @@
   },
   {
     "slug": "ue-nagatani",
-    "name_en": "Ue-Nagatani",
+    "name_en": "Kaminagaya",
     "name_jp": "上永谷",
     "name_ru": "Каминагая",
     "lat": 35.401391,
@@ -22840,7 +22840,7 @@
   },
   {
     "slug": "ue-oi",
-    "name_en": "Ue-Oi",
+    "name_en": "Kami-Oi",
     "name_jp": "上大井",
     "name_ru": "Ками-Ои",
     "lat": 35.321883,
@@ -22856,7 +22856,7 @@
   },
   {
     "slug": "uemachi",
-    "name_en": "Uemachi",
+    "name_en": "Kamimachi",
     "name_jp": "上町",
     "name_ru": "Камимати",
     "lat": 35.643656,
@@ -22872,7 +22872,7 @@
   },
   {
     "slug": "uhara",
-    "name_en": "Uhara",
+    "name_en": "Ubara",
     "name_jp": "鵜原",
     "name_ru": "Убара",
     "lat": 35.140828,
@@ -22888,7 +22888,7 @@
   },
   {
     "slug": "ukima-funato",
-    "name_en": "Ukima-Funato",
+    "name_en": "Ukima-Funado",
     "name_jp": "浮間舟渡",
     "name_ru": "Укима-Фунадо",
     "lat": 35.791209,
@@ -22904,7 +22904,7 @@
   },
   {
     "slug": "umagome-sawa",
-    "name_en": "Umagome-Sawa",
+    "name_en": "Magomezawa",
     "name_jp": "馬込沢",
     "name_ru": "Магомэдзава",
     "lat": 35.741586,
@@ -22920,7 +22920,7 @@
   },
   {
     "slug": "umahori-kaigan",
-    "name_en": "Umahori-Kaigan",
+    "name_en": "Maborikaigan",
     "name_jp": "馬堀海岸",
     "name_ru": "Маборикайган",
     "lat": 35.259651,
@@ -22968,7 +22968,7 @@
   },
   {
     "slug": "umeshima",
-    "name_en": "Umeshima",
+    "name_en": "Umejima",
     "name_jp": "梅島",
     "name_ru": "Умэдзима",
     "lat": 35.772437,
@@ -22986,7 +22986,7 @@
     "slug": "umeyashiki",
     "name_en": "Umeyashiki",
     "name_jp": "梅屋敷",
-    "name_ru": "Умэсики",
+    "name_ru": "Умэясики",
     "lat": 35.566873,
     "lng": 139.728266,
     "lines": [
@@ -23000,7 +23000,7 @@
   },
   {
     "slug": "umi-kashima",
-    "name_en": "Umi-Kashima",
+    "name_en": "Ashikajima",
     "name_jp": "海鹿島",
     "name_ru": "Асикадзима",
     "lat": 35.722089,
@@ -23032,7 +23032,7 @@
   },
   {
     "slug": "umi-no-koen-shiba-kuchi",
-    "name_en": "Umi-No-Koen-Shiba-Kuchi",
+    "name_en": "Uminokoen-Shibaguchi",
     "name_jp": "海の公園柴口",
     "name_ru": "Уминокоэн-Сибагути",
     "lat": 35.342086,
@@ -23064,7 +23064,7 @@
   },
   {
     "slug": "umigami",
-    "name_en": "Umigami",
+    "name_en": "Kaijin",
     "name_jp": "海神",
     "name_ru": "Кайдзин",
     "lat": 35.705888,
@@ -23128,7 +23128,7 @@
   },
   {
     "slug": "urayama-kuchi",
-    "name_en": "Urayama-Kuchi",
+    "name_en": "Urayamaguchi",
     "name_jp": "浦山口",
     "name_ru": "Ураямагути",
     "lat": 35.963922,
@@ -23176,7 +23176,7 @@
   },
   {
     "slug": "ushigome-yanagimachi",
-    "name_en": "Ushigome-Yanagimachi",
+    "name_en": "Ushigome-Yanagicho",
     "name_jp": "牛込柳町",
     "name_ru": "Усигомэ-Янагитё",
     "lat": 35.699518,
@@ -23208,7 +23208,7 @@
   },
   {
     "slug": "uwamizo",
-    "name_en": "Uwamizo",
+    "name_en": "Kamimizo",
     "name_jp": "上溝",
     "name_ru": "Камимидзо",
     "lat": 35.557623,
@@ -23224,7 +23224,7 @@
   },
   {
     "slug": "wa-ko",
-    "name_en": "Wa-Ko",
+    "name_en": "Wado",
     "name_jp": "和戸",
     "name_ru": "Вадо",
     "lat": 36.039562,
@@ -23240,7 +23240,7 @@
   },
   {
     "slug": "wada-kawara",
-    "name_en": "Wada-Kawara",
+    "name_en": "Wadagahara",
     "name_jp": "和田河原",
     "name_ru": "Вадагахара",
     "lat": 35.31585,
@@ -23272,7 +23272,7 @@
   },
   {
     "slug": "wada-tsuka",
-    "name_en": "Wada-Tsuka",
+    "name_en": "Wadazuka",
     "name_jp": "和田塚",
     "name_ru": "Вададзука",
     "lat": 35.31372,
@@ -23304,7 +23304,7 @@
   },
   {
     "slug": "wado-kurotani",
-    "name_en": "Wado-Kurotani",
+    "name_en": "Wado-Kuroya",
     "name_jp": "和銅黒谷",
     "name_ru": "Вадо-Куроя",
     "lat": 36.046671,
@@ -23368,7 +23368,7 @@
   },
   {
     "slug": "wakamatsu-kawata",
-    "name_en": "Wakamatsu-Kawata",
+    "name_en": "Wakamatsu-Kawada",
     "name_jp": "若松河田",
     "name_ru": "Вакамацу-Кавада",
     "lat": 35.699218,
@@ -23416,7 +23416,7 @@
   },
   {
     "slug": "washimiya",
-    "name_en": "Washimiya",
+    "name_en": "Washinomiya",
     "name_jp": "鷲宮",
     "name_ru": "Васиномия",
     "lat": 36.09626,
@@ -23432,7 +23432,7 @@
   },
   {
     "slug": "y-r-p-nobi",
-    "name_en": "Y-R-P-Nobi",
+    "name_en": "YRP-Nobi",
     "name_jp": "ＹＲＰ野比",
     "name_ru": "YRP-Ноби",
     "lat": 35.212229,
@@ -23576,7 +23576,7 @@
   },
   {
     "slug": "yaguchi-watari",
-    "name_en": "Yaguchi-Watari",
+    "name_en": "Yaguchi-No-Watashi",
     "name_jp": "矢口渡",
     "name_ru": "Ягути-но-Ватаси",
     "lat": 35.562462,
@@ -23608,7 +23608,7 @@
   },
   {
     "slug": "yahatayama",
-    "name_en": "Yahatayama",
+    "name_en": "Hachimanyama",
     "name_jp": "八幡山",
     "name_ru": "Хатиманъяма",
     "lat": 35.669982,
@@ -23736,7 +23736,7 @@
   },
   {
     "slug": "yanase-kawa",
-    "name_en": "Yanase-Kawa",
+    "name_en": "Yanasegawa",
     "name_jp": "柳瀬川",
     "name_ru": "Янасэгава",
     "lat": 35.830723,
@@ -23752,7 +23752,7 @@
   },
   {
     "slug": "yanoguchi",
-    "name_en": "Yanoguchi",
+    "name_en": "Yanokuchi",
     "name_jp": "矢野口",
     "name_ru": "Янокути",
     "lat": 35.641305,
@@ -23800,7 +23800,7 @@
   },
   {
     "slug": "yasuda",
-    "name_en": "Yasuda",
+    "name_en": "Hota",
     "name_jp": "保田",
     "name_ru": "Хота",
     "lat": 35.14148,
@@ -23864,7 +23864,7 @@
   },
   {
     "slug": "yoda",
-    "name_en": "Yoda",
+    "name_en": "Honda",
     "name_jp": "誉田",
     "name_ru": "Хонда",
     "lat": 35.546996,
@@ -23880,7 +23880,7 @@
   },
   {
     "slug": "yokose",
-    "name_en": "Yokose",
+    "name_en": "Yokoze",
     "name_jp": "横瀬",
     "name_ru": "Ёкодзэ",
     "lat": 35.985548,
@@ -23960,7 +23960,7 @@
   },
   {
     "slug": "yomiurirando-mae",
-    "name_en": "Yomiurirando-Mae",
+    "name_en": "Yomiuri-Land-Mae",
     "name_jp": "読売ランド前",
     "name_ru": "Ёмиури-Рандо-Маэ",
     "lat": 35.614723,
@@ -23992,7 +23992,7 @@
   },
   {
     "slug": "yono-honcho",
-    "name_en": "Yono-Honcho",
+    "name_en": "Yono-Honmachi",
     "name_jp": "与野本町",
     "name_ru": "Ёно-Хоммати",
     "lat": 35.880968,
@@ -24040,7 +24040,7 @@
   },
   {
     "slug": "yoshikawa-bi-minami",
-    "name_en": "Yoshikawa-Bi-Minami",
+    "name_en": "Yoshikawa-Minami",
     "name_jp": "吉川美南",
     "name_ru": "Ёсикава-Минами",
     "lat": 35.868056,
@@ -24184,7 +24184,7 @@
   },
   {
     "slug": "yubi-ogi",
-    "name_en": "Yubi-Ogi",
+    "name_en": "Sashiogi",
     "name_jp": "指扇",
     "name_ru": "Сасиоги",
     "lat": 35.917023,
@@ -24216,7 +24216,7 @@
   },
   {
     "slug": "yui-ke-hama",
-    "name_en": "Yui-Ke-Hama",
+    "name_en": "Yuigahama",
     "name_jp": "由比ヶ浜",
     "name_ru": "Юигахама",
     "lat": 35.312857,
@@ -24232,7 +24232,7 @@
   },
   {
     "slug": "yuki-ga-taniotsuka",
-    "name_en": "Yuki-Ga-Taniotsuka",
+    "name_en": "Yukigaya-Otsuka",
     "name_jp": "雪が谷大塚",
     "name_ru": "Юкигая-Оцука",
     "lat": 35.592038,
@@ -24248,7 +24248,7 @@
   },
   {
     "slug": "yukinori",
-    "name_en": "Yukinori",
+    "name_en": "Gyotoku",
     "name_jp": "行徳",
     "name_ru": "Гётоку",
     "lat": 35.682686,
@@ -24280,7 +24280,7 @@
   },
   {
     "slug": "yuri-ke-oka",
-    "name_en": "Yuri-Ke-Oka",
+    "name_en": "Yurigaoka",
     "name_jp": "百合ヶ丘",
     "name_ru": "Юригаока",
     "lat": 35.60903,
@@ -24312,7 +24312,7 @@
   },
   {
     "slug": "yutaka-shiki",
-    "name_en": "Yutaka-Shiki",
+    "name_en": "Toyoshiki",
     "name_jp": "豊四季",
     "name_ru": "Тоёсики",
     "lat": 35.86657,
@@ -24376,7 +24376,7 @@
   },
   {
     "slug": "zenko",
-    "name_en": "Zenko",
+    "name_en": "Zengyo",
     "name_jp": "善行",
     "name_ru": "Дзэнгё",
     "lat": 35.36285,

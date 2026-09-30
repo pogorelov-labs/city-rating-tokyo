@@ -39,15 +39,22 @@ _SYLLABLES = {
     "da": "да", "de": "дэ", "do": "до",
     "ba": "ба", "bi": "би", "bu": "бу", "be": "бэ", "bo": "бо",
     "pa": "па", "pi": "пи", "pu": "пу", "pe": "пэ", "po": "по",
+    # katakana for loanwords: ファ フィ フェ フォ ティ ディ
+    "fa": "фа", "fi": "фи", "fe": "фэ", "fo": "фо", "ti": "ти", "di": "ди",
 }
 _VOWELS = {"a": "а", "i": "и", "u": "у", "e": "э", "o": "о"}
 _SOKUON = {"k": "к", "s": "с", "t": "т", "p": "п", "g": "г", "d": "д", "b": "б", "z": "д", "f": "ф", "h": "х", "j": "д", "m": "м", "r": "р", "c": "т"}
 
 # Words with a conventional Russian form that strict Polivanov does not give.
 CONVENTIONAL = {"tokyo": "Токио", "yokohama": "Иокогама"}
-# English words in station names: romanise their katakana reading instead.
+# English words in station names: romanise their katakana reading instead
+# (Tama-Plaza → Тама-Пураза, as たまプラーザ is pronounced).
 LOANWORDS = {"isle": "airu", "teleport": "terepoto", "center": "senta", "centre": "senta",
-             "sports": "supotsu", "sport": "supotsu", "land": "rando"}
+             "sports": "supotsu", "sport": "supotsu", "land": "rando",
+             "plaza": "puraza", "tennis": "tenisu", "campus": "kyanpasu", "laketown": "reikutaun",
+             "central": "sentoraru", "park": "paku", "seaside": "shisaido", "socio": "soshio",
+             "telecom": "terekomu", "skytree": "sukaitsuri", "newtown": "nyutaun",
+             "fujifilm": "fujifirumu", "island": "airando"}
 # Particles and the 前 "in front of" suffix stay lowercase inside a name, as the
 # established names write them (Тёкоку-но-Мори, Ои-Кэйбадзё-маэ).
 LOWERCASE = {"no", "ga", "mae"}
@@ -96,6 +103,20 @@ def word(w: str, diphthong_i: str = "ae") -> str:
                 out.append(c)  # not romaji; left visible for review
                 i, prev = i + 1, None
     return "".join(out)
+
+
+def reading_key(name: str) -> str:
+    """Fold a Cyrillic name to compare it with a kana reading (CRTKY-134):
+    ё/е, й/и, separators, vowel length and m/n before labials compare equal,
+    and the conventional forms count as their strict ones (Токио = Токё)."""
+    s = name.lower()
+    for romaji, conventional in CONVENTIONAL.items():
+        s = s.replace(conventional.lower(), word(romaji))
+    s = re.sub(r"[^а-я0-9]|ъ", "", s.replace("ё", "е").replace("й", "и"))
+    s = re.sub(r"(?<=[ею])у", "", s)            # long yōon: кёу → кё, сюу → сю
+    s = re.sub(r"([аиуэоея])\1+", r"\1", s)     # doubled vowels: оо → о
+    s = s.replace("оу", "о")                    # long o spelled out: тоукёу → токё
+    return re.sub(r"м(?=[бпм])", "н", s)
 
 
 def transliterate(name: str, diphthong_i: str = "ae") -> str:
