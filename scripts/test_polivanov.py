@@ -17,6 +17,7 @@ gen = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(gen)
 
 SNAPSHOT = json.loads((ROOT / "data" / "names" / "wikidata-station-labels.json").read_text())["items"]
+KANA = json.loads((ROOT / "data" / "names" / "wikidata-station-kana.json").read_text())["items"]
 STATIONS = json.loads((ROOT / "data" / "stations.json").read_text())
 APP_STATIONS = json.loads((ROOT / "app" / "src" / "data" / "stations.json").read_text())
 
@@ -85,9 +86,27 @@ class TestSources:
         assert not gen.is_polivanov("Шинджуку")
 
     def test_english_words_fall_through_to_name_en(self):
-        station = {"name_en": "Chiba-Nyutaun-Chuo", "name_jp": "千葉ニュータウン中央"}
+        station = {"name_en": "Naritakuko", "name_jp": "成田空港"}
+        item = {"ru": None, "en": "Narita Airport Station"}
+        assert gen.name_ru_for(station, item) == ("Наритакуко", "name_en")
+
+    def test_loanwords_romanise_their_katakana(self):
+        station = {"name_en": "Chiba-Newtown-Chuo", "name_jp": "千葉ニュータウン中央"}
         item = {"ru": None, "en": "Chiba Newtown Chūō Station"}
-        assert gen.name_ru_for(station, item) == ("Тиба-Нютаун-Тюо", "name_en")
+        assert gen.name_ru_for(station, item) == ("Тиба-Нютаун-Тюо", "wikidata_en")
+
+    def test_a_label_that_disagrees_with_the_kana_is_skipped(self):
+        station = {"name_en": "Umeyashiki", "name_jp": "梅屋敷"}
+        item = {"ru": "Умэсики", "en": "Umeyashiki Station"}        # typo in the established label
+        assert gen.name_ru_for(station, item) == ("Умэсики", "wikidata_ru")
+        assert gen.name_ru_for(station, item, ["うめやしきえき"]) == ("Умэясики", "wikidata_en")
+
+    def test_kana_check_ignores_spelling_style_and_acronyms(self):
+        assert gen.agrees_with_kana("Токио", ["とうきょうえき"])
+        assert gen.agrees_with_kana("Хирай", ["ひらいえき"])           # й/и: romaji cannot tell
+        assert gen.agrees_with_kana("Ниси-Иокогама", ["にしよこはまえき"])
+        assert gen.agrees_with_kana("YRP-Ноби", ["ワイアールピーのびえき"])
+        assert not gen.agrees_with_kana("Намэкава-Айрандо", ["なめがわアイランドえき"])
 
     def test_wikidata_reading_beats_a_misread_name_en(self):
         station = {"name_en": "Nan'etsu-Tani", "name_jp": "南越谷"}
@@ -109,13 +128,29 @@ class TestCommittedData:
         """Editing polivanov.py or the source tiers without re-running
         generate-name-ru.py would leave stale names behind."""
         index = gen.build_index(SNAPSHOT)
-        stale = {s["slug"]: s["name_ru"] for s in STATIONS
-                 if gen.name_ru_for(s, gen.best_match(s, index))[0] != s["name_ru"]}
+        stale = {}
+        for s in STATIONS:
+            item = gen.best_match(s, index)
+            if gen.name_ru_for(s, item, KANA.get(item["qid"], []) if item else [])[0] != s["name_ru"]:
+                stale[s["slug"]] = s["name_ru"]
         assert not stale
+
+    def test_every_name_agrees_with_its_kana_reading(self):
+        index = gen.build_index(SNAPSHOT)
+        checked, disagree = 0, []
+        for s in STATIONS:
+            item = gen.best_match(s, index)
+            kanas = KANA.get(item["qid"], []) if item else []
+            if kanas and s["slug"] not in gen.MANUAL:
+                checked += 1
+                if not gen.agrees_with_kana(s["name_ru"], kanas):
+                    disagree.append(s["slug"])
+        assert checked > 1400 and not disagree
 
     def test_words_are_hyphenated_like_established_names(self):
         for s in STATIONS:
-            assert not re.search(r"[^\s)] +[^\s(]", s["name_ru"]), s["slug"]
+            if s["slug"] not in gen.MANUAL:                      # descriptive: Аэропорт Нарита (терминал 1)
+                assert not re.search(r"[^\s)] +[^\s(]", s["name_ru"]), s["slug"]
 
     def test_both_station_files_agree(self):
         assert [(s["slug"], s["name_ru"]) for s in STATIONS] == [(s["slug"], s["name_ru"]) for s in APP_STATIONS]

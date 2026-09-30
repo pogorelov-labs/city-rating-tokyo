@@ -16,9 +16,15 @@ Sources, in order:
 Matching: same kanji name (NFKC, ヶ→ケ, without 駅, bracket aliases included)
 and at most 1.5 km apart.
 
-Wikidata labels come from a committed snapshot (data/names/wikidata-station-
-labels.json, CC0) so re-runs are reproducible offline; --refresh re-queries it.
-A per-station source report goes to data/names/name-ru-report.json.
+A source only counts if its name agrees with the station's kana reading
+(Wikidata P1814, CRTKY-134): labels can be wrong — the "established" label
+for 梅屋敷 (Umeyashiki) is the typo Умэсики. MANUAL covers the two airport
+stations, whose Russian names are descriptive, not transliterated.
+
+Wikidata labels and kana come from committed snapshots (data/names/wikidata-
+station-labels.json and wikidata-station-kana.json, CC0) so re-runs are
+reproducible offline; --refresh re-queries both. A per-station source report
+goes to data/names/name-ru-report.json.
 
 Usage: python3 scripts/generate-name-ru.py [--refresh] [--dry-run]
 """
@@ -36,24 +42,40 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import kana  # noqa: E402
 import polivanov  # noqa: E402
 
 STATION_FILES = [ROOT / "data" / "stations.json", ROOT / "app" / "src" / "data" / "stations.json"]
 SNAPSHOT = ROOT / "data" / "names" / "wikidata-station-labels.json"
+KANA_SNAPSHOT = ROOT / "data" / "names" / "wikidata-station-kana.json"
 REPORT = ROOT / "data" / "names" / "name-ru-report.json"
 MAX_DIST_M = 1500
 
-SPARQL = """SELECT ?item ?ja ?ru ?en ?lat ?lng WHERE {
-  SERVICE wikibase:box {
+_BOX_AND_JA = """  SERVICE wikibase:box {
     ?item wdt:P625 ?coord .
     bd:serviceParam wikibase:cornerSouthWest "Point(138.9 34.85)"^^geo:wktLiteral .
     bd:serviceParam wikibase:cornerNorthEast "Point(140.95 36.35)"^^geo:wktLiteral .
   }
-  ?item rdfs:label ?ja . FILTER(LANG(?ja) = "ja" && STRENDS(?ja, "駅"))
+  ?item rdfs:label ?ja . FILTER(LANG(?ja) = "ja" && STRENDS(?ja, "駅"))"""
+
+SPARQL = """SELECT ?item ?ja ?ru ?en ?lat ?lng WHERE {
+%s
   OPTIONAL { ?item rdfs:label ?ru . FILTER(LANG(?ru) = "ru") }
   OPTIONAL { ?item rdfs:label ?en . FILTER(LANG(?en) = "en") }
   BIND(geof:latitude(?coord) AS ?lat) BIND(geof:longitude(?coord) AS ?lng)
-}"""
+}""" % _BOX_AND_JA
+
+KANA_SPARQL = """SELECT ?item ?kana WHERE {
+%s
+  ?item wdt:P1814 ?kana .
+}""" % _BOX_AND_JA
+
+# Descriptive names where a transliteration of 成田空港（第１旅客ターミナル）
+# would mean nothing to a Russian reader — the same exception as Токио.
+MANUAL = {
+    "naritakuko-daiichi-ryokyaku-taaminaru": "Аэропорт Нарита (терминал 1)",
+    "kuko-daini-biru-daini-ryokyaku-taaminaru": "Аэропорт Нарита (терминал 2·3)",
+}
 
 _BRACKET = re.compile(r"[〈<(\[【]([^〉>)\]】]*)[〉>)\]】]")
 
@@ -89,14 +111,35 @@ def haversine(lat1, lng1, lat2, lng2) -> float:
     return 2 * 6371008.8 * math.asin(math.sqrt(h))
 
 
-def refresh_snapshot():
-    q = urllib.parse.urlencode({"query": SPARQL})
+def _query(sparql: str) -> list:
+    q = urllib.parse.urlencode({"query": sparql})
     req = urllib.request.Request(
         f"https://query.wikidata.org/sparql?{q}",
         headers={"Accept": "application/sparql-results+json",
                  "User-Agent": "city-rating-tokyo/1.0 (https://city-rating.pogorelov.dev)"})
     with urllib.request.urlopen(req, timeout=180) as resp:
-        rows = json.load(resp)["results"]["bindings"]
+        return json.load(resp)["results"]["bindings"]
+
+
+def _write_snapshot(path: Path, sparql: str, items):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({
+        "metadata": {"source": "Wikidata (CC0)", "endpoint": "https://query.wikidata.org/sparql",
+                     "retrieved": date.today().isoformat(), "query": sparql},
+        "items": items,
+    }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Wikidata snapshot: {len(items)} stations written to {path.relative_to(ROOT)}")
+
+
+def refresh_kana():
+    readings = collections.defaultdict(set)
+    for r in _query(KANA_SPARQL):
+        readings[r["item"]["value"].rsplit("/", 1)[1]].add(r["kana"]["value"])
+    _write_snapshot(KANA_SNAPSHOT, KANA_SPARQL, {qid: sorted(v) for qid, v in sorted(readings.items())})
+
+
+def refresh_snapshot():
+    rows = _query(SPARQL)
     items = sorted(({
         "qid": r["item"]["value"].rsplit("/", 1)[1],
         "ja": r["ja"]["value"],
@@ -105,13 +148,7 @@ def refresh_snapshot():
         "lat": round(float(r["lat"]["value"]), 6),
         "lng": round(float(r["lng"]["value"]), 6),
     } for r in rows), key=lambda x: x["qid"])
-    SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
-    SNAPSHOT.write_text(json.dumps({
-        "metadata": {"source": "Wikidata (CC0)", "endpoint": "https://query.wikidata.org/sparql",
-                     "retrieved": date.today().isoformat(), "query": SPARQL},
-        "items": items,
-    }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"Wikidata snapshot: {len(items)} stations written to {SNAPSHOT.relative_to(ROOT)}")
+    _write_snapshot(SNAPSHOT, SPARQL, items)
 
 
 def build_index(items) -> dict:
@@ -154,25 +191,33 @@ def is_clean(name: str) -> bool:
     return bool(re.fullmatch(r"[А-Яа-яЁёA-Z0-9\s\-()･·]+", name))  # A-Z: acronyms
 
 
-def name_ru_for(station, item):
-    """(name_ru, source) for one station: the first source that yields clean Cyrillic.
-    English labels with English words (Narita Airport Terminal 1) fall through."""
+def agrees_with_kana(name: str, kanas) -> bool:
+    """The name reads like one of the station's kana readings, spelling style
+    aside. Unchecked without kana, and for names with Latin acronyms (YRP-Ноби)."""
+    if not kanas or re.search(r"[A-Z]", name):
+        return True
+    key = polivanov.reading_key(name)
+    return any(key == polivanov.reading_key(polivanov.word(kana.to_romaji(k))) for k in kanas)
+
+
+def name_ru_for(station, item, kanas=()):
+    """(name_ru, source) for one station: the first source that yields clean
+    Cyrillic agreeing with the kana reading. English labels with English words
+    (Narita Airport Terminal 1) and misread labels fall through; if no source
+    agrees, the first clean one is kept and the report flags it."""
+    if station.get("slug") in MANUAL:
+        return MANUAL[station["slug"]], "manual"
     candidates = []
     if item and item["ru"] and is_polivanov(clean_ru(item["ru"])):
         candidates.append((clean_ru(item["ru"]), "wikidata_ru"))
     if item and item["en"]:
         candidates.append((polivanov.transliterate(clean_en(item["en"])), "wikidata_en"))
     candidates.append((polivanov.transliterate(romaji_of_name_en(station)), "name_en"))
-    for name, source in candidates:
-        if is_clean(name):
+    clean = [c for c in candidates if is_clean(c[0])]
+    for name, source in clean:
+        if agrees_with_kana(name, kanas):
             return name, source
-    return candidates[-1]
-
-
-def squash(s: str) -> str:
-    """Compare romanisations ignoring case, macrons, hyphens and spacing."""
-    s = "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.combining(c))
-    return re.sub(r"[\s\-‐'’]", "", s.lower())
+    return (clean or candidates)[0]
 
 
 def main():
@@ -183,20 +228,28 @@ def main():
 
     if args.refresh or not SNAPSHOT.exists():
         refresh_snapshot()
+    if args.refresh or not KANA_SNAPSHOT.exists():
+        refresh_kana()
     index = build_index(json.loads(SNAPSHOT.read_text(encoding="utf-8"))["items"])
+    kana_by_qid = json.loads(KANA_SNAPSHOT.read_text(encoding="utf-8"))["items"]
 
     stations = json.loads(STATION_FILES[0].read_text(encoding="utf-8"))
     names, report, sources = {}, {}, collections.Counter()
-    mismatched_en = {}
+    mismatched_en, disagree = {}, {}
     for st in stations:
         item = best_match(st, index)
-        name_ru, source = name_ru_for(st, item)
+        kanas = kana_by_qid.get(item["qid"], []) if item else []
+        name_ru, source = name_ru_for(st, item, kanas)
         names[st["slug"]] = name_ru
         sources[source] += 1
         entry = {"name_ru": name_ru, "source": source}
         if item:
             entry["wikidata"] = item["qid"]
-            if item["en"] and squash(clean_en(item["en"])) != squash(st["name_en"]):
+            if kanas and source != "manual":
+                entry["kana_agrees"] = agrees_with_kana(name_ru, kanas)
+                if not entry["kana_agrees"]:
+                    disagree[st["slug"]] = (name_ru, kanas[0])
+            if item["en"] and kana.romaji_key(clean_en(item["en"])) != kana.romaji_key(st["name_en"]):
                 entry["wikidata_en"] = clean_en(item["en"])
                 mismatched_en[st["slug"]] = (st["name_en"], clean_en(item["en"]))
         report[st["slug"]] = entry
@@ -204,9 +257,11 @@ def main():
     unclean = {slug: n for slug, n in names.items() if not is_clean(n)}
     if unclean:
         sys.exit(f"FATAL: {len(unclean)} names are not clean Cyrillic: {list(unclean.items())[:10]}")
+    checked = sum("kana_agrees" in e for e in report.values())
     print(f"name_ru for {len(names)} stations: {dict(sources)}")
-    print(f"name_en differs from Wikidata's English label for {len(mismatched_en)} stations "
-          f"(possible misreadings — see the report), e.g. "
+    print(f"checked against a kana reading: {checked}; disagreeing: {len(disagree)} {list(disagree.items())[:5]}")
+    print(f"name_en reads differently from Wikidata's English label for {len(mismatched_en)} stations "
+          f"(scripts/fix-name-en.py settles these with the kana), e.g. "
           + ", ".join(f"{s}: {a} vs {b}" for s, (a, b) in list(mismatched_en.items())[:4]))
     for slug in ("shinjuku", "shibuya", "tokyo", "yokohama", "kichijoji", "nan-etsu-tani"):
         if slug in names:
@@ -232,6 +287,8 @@ def main():
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps({
         "sources": dict(sources),
+        "kana_checked": checked,
+        "kana_disagrees": sorted(disagree),
         "name_en_differs_from_wikidata": len(mismatched_en),
         "stations": report,
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
