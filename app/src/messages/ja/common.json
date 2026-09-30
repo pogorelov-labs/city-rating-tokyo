@@ -238,7 +238,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name}（{nameJp}）— 東京エリアガイド",
+    "metaTitle": "{name}（{secondary}）— 東京エリアガイド",
     "metaDescription": "{name}駅エリア：評価、家賃、所要時間。{description}",
     "metaDescriptionFallback": "東京の{name}駅エリアガイド。",
     "overview": "概要",

@@ -238,7 +238,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name} ({nameJp}) - Tokyo Neighborhood Explorer",
+    "metaTitle": "{name} ({secondary}) - Tokyo Neighborhood Explorer",
     "metaDescription": "{name} station area: ratings, rent prices, transit times. {description}",
     "metaDescriptionFallback": "Neighborhood guide for {name} station area in Tokyo.",
     "overview": "Overview",
