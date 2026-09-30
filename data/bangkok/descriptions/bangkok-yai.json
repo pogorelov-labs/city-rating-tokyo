@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Wat Arun's backyard: canal-side lanes along Khlong Bangkok Yai, old temples, Thai-Muslim communities, navy land on the river. MRT at Itsaraphap and Tha Phra. Affordable and well connected, short on green.",
+    "landmarks": "Wat Arun, Wang Doem Palace and Wichai Prasit Fort inside the navy grounds, Wat Hong Rattanaram, Wat Moli Lokkayaram, Ton Son Mosque on the canal.",
+    "food": "Everyday Thonburi food: boat noodles, curry-rice shops, chicken rice, neighbourhood wet markets, a few cafés catering to the Wat Arun crowd. Solid, not a destination.",
+    "nightlife": "Seems quiet after dark: a few local bars, karaoke. Wat Arun floodlit is the show; drinks mean the ferry to Tha Tien."
+  },
+  "ja": {
+    "atmosphere": "ワット・アルンの裏庭。バーンコークヤイ運河沿いの路地、古い寺、タイ系ムスリムの集落、川沿いには海軍の敷地。MRTはイッサラパープ駅とタープラ駅。手頃で交通も便利、ただし緑は乏しい。",
+    "landmarks": "ワット・アルン（暁の寺）、海軍の敷地内に残るトンブリー王宮（ワン・ドゥーム）とウィチャイプラシット砦、ワット・ホンラッタナーラーム、ワット・モーリーローカヤーラーム、運河沿いのトンソン・モスク。",
+    "food": "日常のトンブリー飯。ボートヌードル、ぶっかけ飯屋、カオマンガイ、近所の生鮮市場、ワット・アルン目当ての客向けカフェが少し。堅実だが、わざわざ食べに来る場所ではない。",
+    "nightlife": "夜は静かなようだ。地元のバーとカラオケが少し。ライトアップされたワット・アルンが夜の主役、飲むなら渡し船でター・ティアンへ。"
+  },
+  "ru": {
+    "atmosphere": "Задний двор Ват Аруна: переулки вдоль канала Бангкок-Яй, старые храмы, тайско-мусульманские общины, у реки — территория ВМФ. MRT на Итсарапхап и Тха Пхра. Недорого и хорошо связано, но зелени мало.",
+    "landmarks": "Ват Арун, дворец Тхонбури (Ванг Доем) и форт Вичай Прасит на территории ВМФ, Ват Хонг Раттанарам, Ват Моли Локкаярам, мечеть Тонсон на канале.",
+    "food": "Будничная еда Тхонбури: лодочная лапша, рис с карри, кхао ман гай, районные рынки, пара кафе для туристов у Ват Аруна. Добротно, но ехать сюда ради еды незачем.",
+    "nightlife": "Похоже, вечером тихо: пара местных баров, караоке. Главное шоу — подсвеченный Ват Арун; выпить — паромом на Тха Тиен."
+  }
+}

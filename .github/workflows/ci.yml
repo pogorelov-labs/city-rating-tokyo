@@ -47,7 +47,7 @@ jobs:
       - name: Cross-language parity test
         run: |
           pip install pytest pydantic --quiet
-          pytest scripts/test_schema_parity.py scripts/test_compute_ratings.py -v
+          pytest scripts/test_schema_parity.py scripts/test_compute_ratings.py scripts/bangkok/test_bangkok.py -v
 
   mcp:
     # Lint + install check for the FastMCP Python service in mcp/.

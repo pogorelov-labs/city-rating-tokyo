@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Thonburi orchard land turned townhouse sprawl: Bang Mot, the Wutthakat sois, Rama II's truck-heavy traffic. One BTS stop at the northern edge; otherwise buses, vans and motorbike taxis. Cheap, local, slow.",
+    "landmarks": "Wat Ratchaorasaram, Rama III's Chinese-style royal temple, Bang Mot market, canal-side lanes off Rama II. Few parks; Central Rama 2 mall sits further out in Bang Khun Thian.",
+    "food": "Market-and-shophouse eating: Bang Mot and neighbourhood fresh markets, noodle shops and khao gaeng rice-and-curry stalls, roadside grills on Rama II and Ekkachai. Few cafés, fewer foreigners.",
+    "nightlife": "Quiet after dark: beer gardens, moo kratha grills and karaoke on the main roads, little else."
+  },
+  "ja": {
+    "atmosphere": "トンブリーの旧果樹園地帯がタウンハウスの海に。バーンモット、ウッタカート通りのソイ、トラックだらけのラーマ2世通り。BTSは北端に1駅だけ、あとはバス、ロットゥー、バイタク。安い、ローカル、ゆっくり。",
+    "landmarks": "ラーマ3世ゆかりの中国風王室寺院ワット・ラーチャオーロット、バーンモット市場、ラーマ2世通り裏の運河沿いの路地。公園は少なく、セントラル・ラマ2はさらに先のバーンクンティアン区。",
+    "food": "市場とショップハウスの食。バーンモットなど地元の生鮮市場、麺屋、カオゲーン（おかずのせご飯）の屋台、ラーマ2世通りとエーカチャイ通りの路上グリル。カフェは少なく、外国人はさらに少ない。",
+    "nightlife": "夜は静か。大通りのビアガーデン、ムーガタ、カラオケくらい。"
+  },
+  "ru": {
+    "atmosphere": "Бывшие сады Тхонбури, ставшие морем таунхаусов: Бангмот, сой Вуттхакат, фуры на Рама II. Одна станция BTS на северной границе, дальше автобусы, маршрутки и мототакси. Дёшево, по-местному, неспешно.",
+    "landmarks": "Ват Ратчаорот, королевский храм в китайском стиле времён Рамы III, рынок Бангмот, переулки вдоль каналов у Рама II. Парков мало; Central Rama 2 дальше, уже в Бангкхунтхиане.",
+    "food": "Рынки и шопхаусы: свежие рынки вроде Бангмота, лапшичные, као кэнг (рис с карри), придорожные грили на Рама II и Эккачай. Кафе мало, иностранцев ещё меньше.",
+    "nightlife": "Вечером тихо: пивные сады, му-ката и караоке на больших дорогах, больше почти ничего."
+  }
+}

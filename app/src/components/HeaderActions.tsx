@@ -6,7 +6,8 @@ import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useAppStore } from '@/lib/store';
-import { buildShareUrl } from '@/lib/url-state';
+import { useCityId } from '@/lib/city-context';
+import { buildShareUrl, selectUrlView } from '@/lib/url-state';
 import FeedbackWidget from './FeedbackWidget';
 
 // recharts is heavy (~350 KB). Only load when the scatter modal opens.
@@ -25,15 +26,16 @@ interface Props {
 
 export default function HeaderActions({ stations }: Props) {
   const t = useTranslations('nav');
+  const city = useCityId();
   const [scatterOpen, setScatterOpen] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    const state = useAppStore.getState();
-    const url = buildShareUrl(state);
+    const url = buildShareUrl(selectUrlView(useAppStore.getState(), city), city);
     try {
       await navigator.clipboard.writeText(url);
+      window.umami?.track('share', { city });
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {

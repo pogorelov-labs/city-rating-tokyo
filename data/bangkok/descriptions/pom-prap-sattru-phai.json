@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old Bangkok between the Golden Mount and Chinatown: Nang Loeng, Bobae, Khlong Thom. Shophouses, wholesale lanes, motorbike-parts dealers, temples everywhere, MRT at Wat Mangkon. Cheap for somewhere so central, but dense and never quiet.",
+    "landmarks": "Golden Mount at Wat Saket, Wat Mangkon Kamalawat, Rajadamnern Stadium, King Prajadhipok Museum, Bangkok Kunsthalle in an old printing house, Nang Loeng and Bobae markets.",
+    "food": "Nang Loeng market's curries and old-school Thai sweets, wok-charred kua gai noodles around Suan Mali, Chinatown street food spilling up from Yaowarat past Wat Mangkon. Serious eating in every direction.",
+    "nightlife": "Chinatown's Soi Nana: tiny cocktail and craft-beer bars. Muay Thai at Rajadamnern, the Golden Mount temple fair each November."
+  },
+  "ja": {
+    "atmosphere": "ゴールデン・マウントとチャイナタウンに挟まれた古いバンコク。ナーンルーン、ボーベー、クロントム。ショップハウス、問屋街、バイク部品屋、どこを見ても寺。MRTはワット・マンコン駅。都心にしては安いが、密集していて静かな時間はない。",
+    "landmarks": "ワット・サケットのゴールデン・マウント、ワット・マンコン（龍蓮寺）、ラジャダムナン・スタジアム、プラチャーティポック王博物館、旧印刷所を再生したバンコク・クンストハレ、ナーンルーン市場とボーベー市場。",
+    "food": "ナーンルーン市場のおかずと昔ながらのタイ菓子、スアンマリ周辺の香ばしい鶏肉炒め麺クアガイ、ヤワラートからワット・マンコン方面へあふれ出すチャイナタウンの屋台。どちらを向いても本気の食。",
+    "nightlife": "チャイナタウン側のソイ・ナナに小さなカクテルバーとクラフトビールの店。ラジャダムナンでムエタイ、11月はゴールデン・マウントの寺祭り。"
+  },
+  "ru": {
+    "atmosphere": "Старый Бангкок между Золотой горой и Чайнатауном: Нанг Лоенг, Бобе, Клонг Тхом. Шопхаусы, оптовые ряды, лавки мотозапчастей, храмы на каждом шагу, MRT Ват Мангкон. Дёшево для такого центра, но тесно и никогда не тихо.",
+    "landmarks": "Золотая гора при Ват Сакет, Ват Мангкон Камалават, стадион Раджадамнерн, музей короля Прачадипока, Bangkok Kunsthalle в бывшей типографии, рынки Нанг Лоенг и Бобе.",
+    "food": "Карри и старинные тайские сладости рынка Нанг Лоенг, обжаренная в воке лапша куа гай у Суан Мали, уличная еда Чайнатауна, которая тянется от Яоварата к Ват Мангкону. Серьёзная еда в любую сторону.",
+    "nightlife": "Сой Нана со стороны Чайнатауна: крошечные коктейльные и крафтовые бары. Муай-тай на Раджадамнерне, в ноябре — храмовая ярмарка у Золотой горы."
+  }
+}

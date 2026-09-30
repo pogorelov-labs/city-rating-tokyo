@@ -25,3 +25,7 @@ data/embeddings.npz
 test-results/
 playwright-report/
 playwright/.cache/
+
+# Bangkok pilot: raw open-data dumps (OSM/Wikidata/Commons), ~40 MB.
+# Regenerate with: uv run scripts/bangkok/fetch.py
+data/bangkok/raw/

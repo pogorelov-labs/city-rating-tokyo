@@ -1,17 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { TransitMinutes } from '@/lib/types';
+import type { HubMinutes } from '@/lib/types';
 
 export default function HubStrip({
   transitMinutes,
   mapsUrl,
 }: {
-  transitMinutes: TransitMinutes;
+  transitMinutes: HubMinutes;
   mapsUrl: string;
 }) {
   const t = useTranslations();
-  const hubs = Object.entries(transitMinutes) as [keyof TransitMinutes, number][];
+  const hubs = Object.entries(transitMinutes);
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-4">

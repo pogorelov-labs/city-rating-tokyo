@@ -14,7 +14,7 @@ import {
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useTranslations, useLocale } from 'next-intl';
-import { MapStation, DEFAULT_FILTERS } from '@/lib/types';
+import { MapStation } from '@/lib/types';
 import { stationDisplayName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 import {
@@ -25,10 +25,13 @@ import {
   ColorDimension,
   applyDealbreakers,
 } from '@/lib/scoring';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useCityState, useCityActions } from '@/lib/store';
+import { useCity } from '@/lib/city-context';
+import { areaPath, formatRentShort, hasActiveFilters } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
 import { Link } from '@/i18n/navigation';
+import { TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
 
 /**
  * Smart flyTo: adapts zoom target and animation based on current map state.
@@ -117,34 +120,6 @@ function FlyToStation({
   return null;
 }
 
-/** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
-function TouchZoomControls() {
-  const map = useMap();
-  return (
-    <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
-      <div
-        className="leaflet-control flex flex-col gap-1"
-        style={{ pointerEvents: 'auto', marginBottom: 'calc(80px + env(safe-area-inset-bottom, 0px))', marginRight: 10 }}
-      >
-        <button
-          onClick={() => map.zoomIn()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
-          aria-label="Zoom in"
-        >
-          +
-        </button>
-        <button
-          onClick={() => map.zoomOut()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
-          aria-label="Zoom out"
-        >
-          −
-        </button>
-      </div>
-    </div>
-  );
-}
-
 /**
  * Background-click dismiss: clicking the map (not a marker) clears the selected
  * station so the halo, popup, and MobileStationCard all vanish. The
@@ -152,7 +127,7 @@ function TouchZoomControls() {
  * click event to the map layer, but they are wrapped in this class by Leaflet.
  */
 function MapClickHandler() {
-  const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const { setSelectedStation } = useCityActions();
   useMapEvents({
     click: (e) => {
       const target = e.originalEvent?.target as HTMLElement | null;
@@ -193,165 +168,8 @@ function prefetchTilesAroundStation(lat: number, lng: number) {
   }
 }
 
-/**
- * Return a darker variant of an `rgb(r, g, b)` string produced by `scoreToColor`.
- * Used for the fallback gradient header so we can't accidentally produce invalid
- * CSS like `${rgbString}cc` (which would be silently dropped by the browser).
- */
-function darkenRgb(rgb: string, factor = 0.7): string {
-  const match = rgb.match(/rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/);
-  if (!match) return rgb;
-  const r = Math.round(Number(match[1]) * factor);
-  const g = Math.round(Number(match[2]) * factor);
-  const b = Math.round(Number(match[3]) * factor);
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
-/**
- * SVG renderer for overlay markers (halo, top-5 pulse) that need CSS
- * className-based animations. The main 1493 markers use the Canvas
- * renderer (preferCanvas on MapContainer) for much cheaper flyTo animation.
- */
-let svgOverlayRenderer: L.SVG | null = null;
-function getSvgRenderer(): L.SVG {
-  if (!svgOverlayRenderer) svgOverlayRenderer = L.svg();
-  return svgOverlayRenderer;
-}
-
 /** ~+40 % radius when selected or hovered (list or map) — CRTKY-59. */
 const HIGHLIGHT_RADIUS_FACTOR = 1.4;
-
-/** Score-colored gradient fallback when no imagery is available. */
-function GradientHeader({
-  nameJp,
-  score,
-  color,
-  height,
-}: {
-  nameJp: string;
-  score: number | null;
-  color: string;
-  height: number;
-}) {
-  return (
-    <div
-      aria-hidden
-      style={{
-        width: '100%',
-        height,
-        backgroundImage:
-          score !== null
-            ? `linear-gradient(135deg, ${color}, ${darkenRgb(color)})`
-            : 'linear-gradient(135deg, #e5e7eb, #9ca3af)',
-        borderRadius: '6px 6px 0 0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        fontFamily: 'serif',
-        fontWeight: 700,
-        fontSize: 26,
-        letterSpacing: 2,
-        textShadow: '0 1px 3px rgba(0,0,0,0.25)',
-      }}
-    >
-      {nameJp}
-    </div>
-  );
-}
-
-/**
- * Tooltip header: three-tier image loading.
- * 1. LQIP base64 shown instantly (blurred, zero network)
- * 2. VPS thumbnail (320px, ~20 KB) crossfades in over LQIP
- * 3. Gradient fallback if no imagery at all
- *
- * The tooltip has a 400ms CSS show delay. If the thumbnail loads within
- * that window the user never sees the LQIP blur.
- */
-function StationTooltipHero({
-  slug,
-  thumb,
-  lqip,
-  nameEn,
-  nameJp,
-  score,
-  color,
-}: {
-  slug: string;
-  thumb: string | undefined;
-  lqip: string | undefined;
-  nameEn: string;
-  nameJp: string;
-  score: number | null;
-  color: string;
-}) {
-  const [thumbLoaded, setThumbLoaded] = useState(false);
-  const [thumbFailed, setThumbFailed] = useState(false);
-
-  // No imagery at all → compact gradient
-  if (!thumb && !lqip) {
-    return <GradientHeader nameJp={nameJp} score={score} color={color} height={60} />;
-  }
-
-  // Thumb failed → degrade to gradient (even if LQIP exists — permanent blur is worse)
-  if (thumbFailed) {
-    return <GradientHeader nameJp={nameJp} score={score} color={color} height={100} />;
-  }
-
-  return (
-    <div
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: 100,
-        overflow: 'hidden',
-        borderRadius: '6px 6px 0 0',
-      }}
-    >
-      {/* Base layer: LQIP (inline data URL, instant, blurred) */}
-      {lqip && !thumbLoaded && (
-        <img
-          src={lqip}
-          alt=""
-          aria-hidden
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'blur(20px)',
-            transform: 'scale(1.1)',
-          }}
-        />
-      )}
-      {/* Top layer: sharp thumbnail, fades in over LQIP */}
-      {thumb && !thumbFailed && (
-        <img
-          src={thumb}
-          alt={nameEn}
-          onLoad={() => setThumbLoaded(true)}
-          onError={() => {
-            setThumbFailed(true);
-            window.umami?.track('error', {
-              category: 'image',
-              station: slug,
-              context: 'tooltip',
-            });
-          }}
-          style={{
-            position: lqip ? 'absolute' : 'relative',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            opacity: thumbLoaded ? 1 : 0,
-            transition: 'opacity 200ms ease-in',
-          }}
-        />
-      )}
-    </div>
-  );
-}
 
 interface MapViewProps {
   stations: MapStation[];
@@ -362,17 +180,15 @@ interface MapViewProps {
 export default function MapView({ stations, thumbnails = {}, snippets = {} }: MapViewProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
+  const city = useCity();
   const weights = useAppStore((s) => s.weights);
-  const selectedStation = useAppStore((s) => s.selectedStation);
-  const setSelectedStation = useAppStore((s) => s.setSelectedStation);
-  const hoveredStation = useAppStore((s) => s.hoveredStation);
-  const setHoveredStation = useAppStore((s) => s.setHoveredStation);
+  const selectedStation = useCityState((s) => s.selectedStation);
+  const hoveredStation = useCityState((s) => s.hoveredStation);
+  const { setSelectedStation, setHoveredStation, addCompareStation, removeCompareStation } = useCityActions();
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
-  const compareStations = useAppStore((s) => s.compareStations);
-  const addCompareStation = useAppStore((s) => s.addCompareStation);
-  const removeCompareStation = useAppStore((s) => s.removeCompareStation);
-  const filters = useAppStore((s) => s.filters);
+  const compareStations = useCityState((s) => s.compareStations);
+  const filters = useCityState((s) => s.filters);
 
   // Guard: hide SVG overlays (halo, top-5 pulse) during flyTo to prevent
   // dual-renderer desync — the SVG layer's coordinate transform lags behind
@@ -391,8 +207,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     // 50ms delay lets the canvas opacity fade-in complete before the popup renders.
     setTimeout(() => { selectedMarkerRef.current?.openPopup(); }, 50);
   }, [setIsFlying]);
-  const hideFloodRisk = useAppStore((s) => s.hideFloodRisk);
-  const hideHighSeismic = useAppStore((s) => s.hideHighSeismic);
+  const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
+  const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
 
   const isTouch = useIsTouch();
 
@@ -432,18 +248,15 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   );
 
   // Dealbreaker filters: rent, commute, category mins, environment safety
+  // Fast path when nothing is set. Uses the same `hasActiveFilters` check as
+  // FilterPanel so the map and the match counter always agree (the old inline
+  // check forgot `hasLiveCamera`, so that filter alone never hid a marker).
   const visibleStations = useMemo(() => {
-    const noFilters =
-      !hideFloodRisk &&
-      !hideHighSeismic &&
-      filters.minRent <= DEFAULT_FILTERS.minRent &&
-      filters.maxRent >= DEFAULT_FILTERS.maxRent &&
-      filters.minCommute <= DEFAULT_FILTERS.minCommute &&
-      filters.maxCommute >= DEFAULT_FILTERS.maxCommute &&
-      Object.keys(filters.categoryMins).length === 0;
-    if (noFilters) return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
-    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic);
-  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic]);
+    if (!hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic })) {
+      return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
+    }
+    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters);
+  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic, city]);
 
   // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
   // Also used (reversed) for top-5 pulse — one sort instead of two.
@@ -472,8 +285,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
 
   return (
     <MapContainer
-      center={[35.6762, 139.7503]}
-      zoom={12}
+      center={city.map.center}
+      zoom={city.map.zoom}
       className="h-full w-full"
       zoomControl={false}
       attributionControl={false}
@@ -572,8 +385,9 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
               },
               mouseout: () => {
                 mapHoverClearRef.current = setTimeout(() => {
-                  const { hoveredStation: h, setHoveredStation: clear } = useAppStore.getState();
-                  if (h === station.slug) clear(null);
+                  if (useAppStore.getState().cities[city.id].hoveredStation === station.slug) {
+                    setHoveredStation(null);
+                  }
                 }, 150);
               },
             }}
@@ -638,7 +452,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
                       {t('filter.lines', { count: station.line_count })}
                       {station.rent_1k && (
-                        <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
+                        <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</>
                       )}
                     </div>
                   </div>
@@ -695,7 +509,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     <div className="text-xs text-gray-500 mb-2">
                       {t('filter.lines', { count: station.line_count })}
                       {station.rent_1k && (
-                        <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</>
+                        <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</>
                       )}
                     </div>
                     {/* Snippet: shown on all platforms for full click-context */}
@@ -706,7 +520,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     )}
                     <div className="flex items-center gap-3 mt-1">
                       <Link
-                        href={`/station/${station.slug}`}
+                        href={areaPath(city.id, station.slug)}
                         className="text-blue-600 text-xs hover:underline"
                         data-umami-event="view-details"
                         data-umami-event-station={station.slug}

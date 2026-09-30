@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "South Thonburi between the river and Suk Sawat: townhouses around Bang Pakok, warehouses, old riverside temples, cheap and unhurried. No rail until the Purple Line extension opens; for now, buses, cars, motorbike taxis.",
+    "landmarks": "Old temples near the river such as Wat Chaeng Ron and Wat Rat Burana, several private hospitals around Suk Sawat, Thonburirom Park just over the Thung Khru line.",
+    "food": "Roadside noodle and curry-rice stalls along Suk Sawat, a fresh market, Lotus's and Makro for the weekly shop; the café and restaurant scene is thin.",
+    "nightlife": "Quiet after dark: a few local bars and roadside beer spots, mostly for regulars."
+  },
+  "ja": {
+    "atmosphere": "川とスックサワット通りに挟まれた南トンブリー。バーンパコック周辺のタウンハウス、倉庫、川沿いの古寺、安くてのんびり。MRTパープルライン延伸の開業までは鉄道なし、今はバス、車、バイクタクシー。",
+    "landmarks": "ワット・チェーンローンやワット・ラートブーラナなど川沿いの古寺、スックサワット通り周辺の私立病院、区境のすぐ外（トゥンクル区）にトンブリーロム公園。",
+    "food": "スックサワット通り沿いの麺とぶっかけ飯の屋台、生鮮市場、まとめ買いはロータスとマクロ。カフェやレストランは手薄。",
+    "nightlife": "夜は静か。常連向けのローカルバーと道端のビール屋が少し。"
+  },
+  "ru": {
+    "atmosphere": "Южный Тонбури между рекой и Суксават: таунхаусы вокруг Банг Пакока, склады, старые храмы у воды, дёшево и неспешно. Рельсов нет, пока не откроют продление Purple Line, так что автобусы, машины, мототакси.",
+    "landmarks": "Старые храмы у реки вроде Ват Чэнг Рон и Ват Ратбурана, частные больницы вокруг Суксават, парк Тонбуриром сразу за границей Тхунгкхру.",
+    "food": "Лапша и рис с карри на лотках вдоль Суксават, свежий рынок, за недельными покупками — в Lotus's и Makro. Кафе и ресторанов мало.",
+    "nightlife": "После темноты тихо: несколько местных баров и пивных точек у дороги, в основном для своих."
+  }
+}

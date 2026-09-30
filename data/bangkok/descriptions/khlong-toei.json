@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sukhumvit's even-numbered side: expat towers and hotels from Nana to Phrom Phong, then Rama IV, the port and Bangkok's biggest slum community. Central, well railed, expensive and loud.",
+    "landmarks": "Benjakitti Forest Park's skywalks on former tobacco-factory land, Benchasiri Park, QSNCC, Khlong Toei Market, Emporium and EMSPHERE, the Port of Bangkok.",
+    "food": "~1.8k places to eat: Khlong Toei Market's wholesale produce and meat, Korean Town in Sukhumvit Plaza, Japanese around Phrom Phong, Emporium and EMSPHERE food halls.",
+    "nightlife": "Nana Plaza's go-go and beer bars, pubs around Soi 22, rooftops and cocktail lounges toward Phrom Phong; seedy next to upscale."
+  },
+  "ja": {
+    "atmosphere": "スクンビットの偶数ソイ側。ナナからプロンポンまで駐在員向けタワーとホテル、その南にラマ4世通り、港、バンコク最大のスラム。都心で駅も多いが、高くて騒がしい。",
+    "landmarks": "旧タバコ工場跡地に空中遊歩道が延びるベンジャキティ森林公園、ベンジャシリ公園、QSNCC、クローントゥーイ市場、エンポリアムとEMSPHERE、バンコク港。",
+    "food": "飲食店は約1800軒。クローントゥーイ市場の卸の青果と肉、スクンビット・プラザのコリアンタウン、日本人の多いプロンポン周辺の和食、エンポリアムとEMSPHEREのフードホール。",
+    "nightlife": "ナナプラザのゴーゴーバーとビアバー、ソイ22周辺のパブ、プロンポン寄りのルーフトップとカクテルラウンジ。いかがわしさと高級感が隣り合う。"
+  },
+  "ru": {
+    "atmosphere": "Чётная сторона Сукхумвита: экспатские башни и отели от Нана до Пхром Пхонг, а за Рама IV — порт и крупнейшие трущобы Бангкока. Центр, метро рядом, дорого и шумно.",
+    "landmarks": "Лесной парк Бенчакитти с подвесными тропами на бывшей земле табачной фабрики, парк Бенчасири, QSNCC, рынок Кхлонгтой, Emporium и EMSPHERE, Бангкокский порт.",
+    "food": "Около 1,8 тыс. мест, где поесть: оптовые овощи и мясо на рынке Кхлонгтой, Корейский квартал в Sukhumvit Plaza, японская еда у Пхром Пхонг, фуд-холлы Emporium и EMSPHERE.",
+    "nightlife": "Гоу-гоу и пивные бары Nana Plaza, пабы вокруг сой 22, руфтопы и коктейльные лаунжи ближе к Пхром Пхонг; злачное и дорогое по соседству."
+  }
+}
