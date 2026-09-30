@@ -92,6 +92,11 @@
     }
   },
   "sources": {
+    "overture": "Overture Maps",
+    "osm_rail": "OSM鉄道網",
+    "transit_model": "通勤モデル",
+    "listing_research": "物件情報の調査",
+    "dopa_population": "内務省地方行政局（DOPA）登録人口",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper（深夜）",
     "osm": "OpenStreetMap",
@@ -108,12 +113,7 @@
     "prefecture_average": "都道府県平均",
     "composite_fallback": "複合フォールバック",
     "hp_proxy": "HotPepperプロキシ",
-    "ai_research": "AI調査",
-    "overture": "Overture Maps",
-    "osm_rail": "OSM鉄道網",
-    "transit_model": "通勤モデル",
-    "listing_research": "物件情報の調査",
-    "dopa_population": "内務省地方行政局（DOPA）登録人口"
+    "ai_research": "AI調査"
   },
   "placeCategories": {
     "gym": "ジム・フィットネス",

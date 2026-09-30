@@ -1,9 +1,11 @@
 # City Rating Tokyo
 
-Interactive map of **1493** Greater Tokyo-area train stations — and, since Sept 2026, all **50 Bangkok districts** (khet) with the BTS / MRT / ARL / SRT Red rail network on top. Adjust weights across ten categories (transport, rent, daily essentials, safety, food, green, gym, vibe, nightlife, quietness), filter by commute and budget, switch cities from the header (weights carry over), and open per-station or per-district pages with radar chart, ratings breakdown, and neighborhood copy in EN / JA / RU.
+Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across nine categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/ruspg/city-rating-tokyo](https://github.com/ruspg/city-rating-tokyo)
+
+**Bangkok (since Sept 2026):** all **50 districts** (khet) with the BTS / MRT / ARL / SRT Red rail network on top — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
 ## What it does
 

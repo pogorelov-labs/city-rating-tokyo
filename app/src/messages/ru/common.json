@@ -92,6 +92,11 @@
     }
   },
   "sources": {
+    "overture": "Overture Maps",
+    "osm_rail": "Железные дороги OSM",
+    "transit_model": "Модель поездок",
+    "listing_research": "Анализ объявлений",
+    "dopa_population": "Регистрация DOPA",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper (ночное)",
     "osm": "OpenStreetMap",
@@ -108,12 +113,7 @@
     "prefecture_average": "Среднее по префектуре",
     "composite_fallback": "Составной резерв",
     "hp_proxy": "Прокси HotPepper",
-    "ai_research": "Исследователь ИИ",
-    "overture": "Overture Maps",
-    "osm_rail": "Железные дороги OSM",
-    "transit_model": "Модель поездок",
-    "listing_research": "Анализ объявлений",
-    "dopa_population": "Регистрация DOPA"
+    "ai_research": "Исследователь ИИ"
   },
   "placeCategories": {
     "gym": "Спортзалы и фитнес",
