@@ -27,13 +27,16 @@ running on :3000 it is reused (locally); in CI a fresh one is started.
 
 ## What's covered
 
-`smoke.spec.ts` verifies the four core flows return HTTP 200 and render a
+`smoke.spec.ts` verifies the core flows return HTTP 200 and render a
 key piece of content:
 
 - Homepage `/` — Leaflet map container mounts
 - Station detail `/station/shibuya` — station name renders
 - Methodology `/methodology` — heading renders
 - Japanese locale `/ja` — localized title renders
+- Bangkok map `/bangkok` — 50 district polygons + city switcher state
+- District detail `/bangkok/district/watthana` — heading and rail stations
+- City switch — weights carry over from Tokyo, yen filters do not
 
 Intentionally **not** covered here:
 

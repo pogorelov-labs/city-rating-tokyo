@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rama 3's river-view condos and office towers, older shophouse sois along Sathu Pradit and Nang Linchi. Calmer and cheaper than Sathon next door, but no rail: taxis, buses and traffic.",
+    "landmarks": "Central Rama 3, Wat Chong Nonsi with its old murals, Wat Pariwat and its tiny Beckham statue, cross-river piers, Bang Krachao's green across the water.",
+    "food": "Food halls at Central Rama 3, Nang Linchi market stalls, shophouse noodles and curry-rice along Sathu Pradit, cafés in the condo strips.",
+    "nightlife": "Mostly quiet, except the Tawandang brewhouse on Rama 3 with house beer and a nightly stage show; a few condo-area bars."
+  },
+  "ja": {
+    "atmosphere": "川を望むラマ3世通りのコンドとオフィスタワー、サートゥプラディットやナーンリンチー沿いの古いショップハウス街。隣のサートーン区より静かで安いが、鉄道はない。タクシー、バス、渋滞。",
+    "landmarks": "セントラル・ラマ3、古い壁画のワット・チョンノンシー、小さなベッカム像で知られるワット・パリワート、渡し船の船着場、川向こうにバーンクラチャオの緑。",
+    "food": "セントラル・ラマ3のフードコート、ナーンリンチー市場の屋台、サートゥプラディット沿いの麺屋とぶっかけ飯、コンド街のカフェ。",
+    "nightlife": "基本は静か。例外はラマ3世通りのタワンデーン、自家醸造ビールと毎晩のステージショー。あとはコンド周辺のバーが少し。"
+  },
+  "ru": {
+    "atmosphere": "Кондо с видом на реку и офисные башни на Раме 3, старые сои с шопхаусами вдоль Сатху Прадит и Нанг Линчи. Спокойнее и дешевле соседнего Сатхона, но без рельсов: такси, автобусы, пробки.",
+    "landmarks": "Central Rama 3, Ват Чонг Нонси со старинными росписями, Ват Париват с крошечной фигуркой Бекхэма, паромные пирсы, зелень Бангкачао на другом берегу.",
+    "food": "Фудкорты Central Rama 3, лотки рынка Нанг Линчи, лапша и рис с карри в шопхаусах на Сатху Прадит, кофейни в кондо-кварталах.",
+    "nightlife": "В основном тихо, кроме пивоварни Tawandang на Раме 3: своё пиво и шоу на сцене каждый вечер. Плюс несколько баров у кондо."
+  }
+}

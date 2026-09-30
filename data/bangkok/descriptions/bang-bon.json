@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's south-western edge along Ekachai Road: workshops, small factories and moo baan between canals, Bang Bon market as the hub. Very quiet, rock-bottom rents, no rail — over an hour to Siam.",
+    "landmarks": "Wat Bang Bon and other local temples, a single big public park and little other green, factories and warehouses along Ekachai Road.",
+    "food": "Basic and local: Ekachai and Bang Bon fresh markets, roadside khao kha moo and noodle stalls, convenience stores on every corner, little variety.",
+    "nightlife": "Minimal: a few karaoke bars and roadside beer shops, quiet by late evening."
+  },
+  "ja": {
+    "atmosphere": "エーカチャイ通り沿いのバンコク南西の端。運河のあいだに町工場、倉庫、ムーバーンが並び、中心はバーンボーン市場。とても静かで家賃は底値、鉄道はなく、サイアムまで1時間以上。",
+    "landmarks": "ワット・バーンボーンなど地元の寺、大きな公園がひとつあるほかは緑が乏しい、エーカチャイ通り沿いの工場と倉庫。",
+    "food": "素朴でローカル。エーカチャイとバーンボーンの生鮮市場、道端のカオカームーと麺の屋台、角ごとのコンビニ。選択肢は少ない。",
+    "nightlife": "最小限。カラオケとビールを出す道端の店が少しあるだけで、夜は早く静まる。"
+  },
+  "ru": {
+    "atmosphere": "Юго-западный край Бангкока вдоль Экачай: мастерские, небольшие фабрики и мубаны между каналами, центр жизни — рынок Бангбон. Очень тихо, аренда на самом дне, рельсов нет — до Сиама больше часа.",
+    "landmarks": "Ват Бангбон и другие районные храмы, один большой общественный парк при общей нехватке зелени, фабрики и склады вдоль Экачай.",
+    "food": "Просто и по-местному: рынки Экачай и Бангбон, придорожные кхао кха му и лапша, минимаркеты на каждом углу, выбор скромный.",
+    "nightlife": "Минимум: несколько караоке и придорожных пивных, к позднему вечеру всё затихает."
+  }
+}

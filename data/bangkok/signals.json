@@ -1,0 +1,3489 @@
+{
+ "_meta": {
+  "generated": "2026-09-30",
+  "grid_m": 200,
+  "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py."
+ },
+ "districts": {
+  "bang-bon": {
+   "raw": {
+    "transport": 0.0867,
+    "rent": 8500,
+    "daily_essentials": 1.052,
+    "safety": 7,
+    "food": 2.7541,
+    "green": 0.3532,
+    "gym_sports": 1.1665,
+    "vibe": 0.7916,
+    "nightlife": 0.5722,
+    "crowd": 6.2562
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 2,
+    "safety": 7,
+    "food": 2,
+    "green": 2,
+    "gym_sports": 2,
+    "vibe": 2,
+    "nightlife": 2,
+    "crowd": 9
+   },
+   "points": 850,
+   "inhabited_share": 0.819,
+   "hub_minutes": {
+    "siam": 67,
+    "asok": 72,
+    "silom": 64,
+    "rama9": 75,
+    "mochit": 78
+   },
+   "min_transit": 64,
+   "mean_station_distance_m": 6416,
+   "facts": {
+    "area_km2": 34.74,
+    "population": 104366,
+    "population_year": 2020,
+    "density": 3004,
+    "food": 711,
+    "nightlife": 21,
+    "convenience": 106,
+    "markets": 4,
+    "essentials": 252,
+    "sports": 35,
+    "culture": 16,
+    "temples": 26,
+    "park_ha": 18.1,
+    "park_share": 0.5,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 43,
+    "nightlife": 2,
+    "essentials": 80,
+    "sports": 3,
+    "culture": 17
+   },
+   "stations": [],
+   "lines": []
+  },
+  "bang-kapi": {
+   "raw": {
+    "transport": 0.3214,
+    "rent": 12000,
+    "daily_essentials": 1.6595,
+    "safety": 6,
+    "food": 3.6701,
+    "green": 0.8168,
+    "gym_sports": 2.1575,
+    "vibe": 1.5818,
+    "nightlife": 1.3494,
+    "crowd": 7.0772
+   },
+   "ratings": {
+    "transport": 5,
+    "rent": 9,
+    "daily_essentials": 6,
+    "safety": 6,
+    "food": 5,
+    "green": 5,
+    "gym_sports": 6,
+    "vibe": 6,
+    "nightlife": 6,
+    "crowd": 5
+   },
+   "points": 688,
+   "inhabited_share": 0.987,
+   "hub_minutes": {
+    "siam": 46,
+    "asok": 44,
+    "silom": 51,
+    "rama9": 40,
+    "mochit": 41
+   },
+   "min_transit": 40,
+   "mean_station_distance_m": 1592,
+   "facts": {
+    "area_km2": 28.52,
+    "population": 144732,
+    "population_year": 2020,
+    "density": 5074,
+    "food": 2074,
+    "nightlife": 78,
+    "convenience": 159,
+    "markets": 13,
+    "essentials": 744,
+    "sports": 116,
+    "culture": 80,
+    "temples": 96,
+    "park_ha": 20.2,
+    "park_share": 0.7,
+    "piers": 10
+   },
+   "osm_counts": {
+    "food": 115,
+    "nightlife": 3,
+    "essentials": 128,
+    "sports": 16,
+    "culture": 23
+   },
+   "stations": [
+    "bang-kapi",
+    "lat-phrao-101",
+    "si-kritha",
+    "yaek-lam-sali"
+   ],
+   "lines": [
+    "mrt_yellow"
+   ]
+  },
+  "bang-khae": {
+   "raw": {
+    "transport": 0.169,
+    "rent": 10000,
+    "daily_essentials": 1.151,
+    "safety": 7,
+    "food": 2.8167,
+    "green": 0.7488,
+    "gym_sports": 1.2328,
+    "vibe": 0.8978,
+    "nightlife": 0.7074,
+    "crowd": 6.5684
+   },
+   "ratings": {
+    "transport": 3,
+    "rent": 9,
+    "daily_essentials": 3,
+    "safety": 7,
+    "food": 2,
+    "green": 5,
+    "gym_sports": 2,
+    "vibe": 3,
+    "nightlife": 3,
+    "crowd": 7
+   },
+   "points": 1195,
+   "inhabited_share": 0.917,
+   "hub_minutes": {
+    "siam": 57,
+    "asok": 63,
+    "silom": 55,
+    "rama9": 64,
+    "mochit": 67
+   },
+   "min_transit": 55,
+   "mean_station_distance_m": 3028,
+   "facts": {
+    "area_km2": 44.46,
+    "population": 193303,
+    "population_year": 2020,
+    "density": 4348,
+    "food": 1300,
+    "nightlife": 44,
+    "convenience": 154,
+    "markets": 16,
+    "essentials": 493,
+    "sports": 61,
+    "culture": 35,
+    "temples": 48,
+    "park_ha": 22.5,
+    "park_share": 0.5,
+    "piers": 4
+   },
+   "osm_counts": {
+    "food": 50,
+    "nightlife": 4,
+    "essentials": 109,
+    "sports": 5,
+    "culture": 17
+   },
+   "stations": [
+    "bang-khae",
+    "lak-song"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "bang-khen": {
+   "raw": {
+    "transport": 0.3297,
+    "rent": 11000,
+    "daily_essentials": 1.3457,
+    "safety": 7,
+    "food": 3.1987,
+    "green": 0.6204,
+    "gym_sports": 1.7626,
+    "vibe": 1.0903,
+    "nightlife": 0.8166,
+    "crowd": 6.6789
+   },
+   "ratings": {
+    "transport": 5,
+    "rent": 9,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 4,
+    "green": 4,
+    "gym_sports": 4,
+    "vibe": 4,
+    "nightlife": 4,
+    "crowd": 7
+   },
+   "points": 1017,
+   "inhabited_share": 0.862,
+   "hub_minutes": {
+    "siam": 55,
+    "asok": 59,
+    "silom": 62,
+    "rama9": 54,
+    "mochit": 42
+   },
+   "min_transit": 42,
+   "mean_station_distance_m": 1474,
+   "facts": {
+    "area_km2": 42.12,
+    "population": 187377,
+    "population_year": 2020,
+    "density": 4448,
+    "food": 1543,
+    "nightlife": 47,
+    "convenience": 159,
+    "markets": 17,
+    "essentials": 553,
+    "sports": 91,
+    "culture": 36,
+    "temples": 56,
+    "park_ha": 21.8,
+    "park_share": 0.5,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 116,
+    "nightlife": 1,
+    "essentials": 160,
+    "sports": 8,
+    "culture": 14
+   },
+   "stations": [
+    "11th-infantry-regiment",
+    "lat-pla-khao",
+    "maiyalap",
+    "phahonyothin-59",
+    "rajabhat-phranakhon",
+    "ram-inthra-3",
+    "ram-inthra-kor-mor-4",
+    "ram-inthra-kor-mor-6",
+    "sai-yud",
+    "saphan-mai",
+    "vacharaphol",
+    "wat-phra-sri-mahathat"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_pink"
+   ]
+  },
+  "bang-kho-laem": {
+   "raw": {
+    "transport": 0.2324,
+    "rent": 15000,
+    "daily_essentials": 1.8328,
+    "safety": 7,
+    "food": 4.0299,
+    "green": 0.8753,
+    "gym_sports": 2.3031,
+    "vibe": 1.8873,
+    "nightlife": 1.7887,
+    "crowd": 7.1483
+   },
+   "ratings": {
+    "transport": 5,
+    "rent": 8,
+    "daily_essentials": 6,
+    "safety": 7,
+    "food": 7,
+    "green": 6,
+    "gym_sports": 7,
+    "vibe": 7,
+    "nightlife": 7,
+    "crowd": 4
+   },
+   "points": 210,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 32,
+    "asok": 36,
+    "silom": 27,
+    "rama9": 42,
+    "mochit": 49
+   },
+   "min_transit": 27,
+   "mean_station_distance_m": 2531,
+   "facts": {
+    "area_km2": 10.92,
+    "population": 82733,
+    "population_year": 2020,
+    "density": 7576,
+    "food": 719,
+    "nightlife": 45,
+    "convenience": 53,
+    "markets": 7,
+    "essentials": 200,
+    "sports": 32,
+    "culture": 20,
+    "temples": 39,
+    "park_ha": 9.5,
+    "park_share": 1.1,
+    "piers": 3
+   },
+   "osm_counts": {
+    "food": 90,
+    "nightlife": 8,
+    "essentials": 70,
+    "sports": 3,
+    "culture": 25
+   },
+   "stations": [],
+   "lines": []
+  },
+  "bang-khun-thian": {
+   "raw": {
+    "transport": 0.0718,
+    "rent": 8500,
+    "daily_essentials": 0.8471,
+    "safety": 7,
+    "food": 2.2815,
+    "green": 0.5875,
+    "gym_sports": 0.9058,
+    "vibe": 0.7117,
+    "nightlife": 0.5006,
+    "crowd": 5.6135
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 2,
+    "safety": 7,
+    "food": 1,
+    "green": 3,
+    "gym_sports": 1,
+    "vibe": 2,
+    "nightlife": 2,
+    "crowd": 10
+   },
+   "points": 3106,
+   "inhabited_share": 0.427,
+   "hub_minutes": {
+    "siam": 67,
+    "asok": 71,
+    "silom": 62,
+    "rama9": 74,
+    "mochit": 79
+   },
+   "min_transit": 62,
+   "mean_station_distance_m": 10808,
+   "facts": {
+    "area_km2": 120.69,
+    "population": 186144,
+    "population_year": 2020,
+    "density": 1542,
+    "food": 1380,
+    "nightlife": 48,
+    "convenience": 165,
+    "markets": 20,
+    "essentials": 501,
+    "sports": 67,
+    "culture": 39,
+    "temples": 71,
+    "park_ha": 34.9,
+    "park_share": 0.3,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 120,
+    "nightlife": 3,
+    "essentials": 209,
+    "sports": 5,
+    "culture": 24
+   },
+   "stations": [],
+   "lines": []
+  },
+  "bang-na": {
+   "raw": {
+    "transport": 0.3624,
+    "rent": 13000,
+    "daily_essentials": 1.6734,
+    "safety": 7,
+    "food": 3.7838,
+    "green": 0.8251,
+    "gym_sports": 2.3092,
+    "vibe": 1.4507,
+    "nightlife": 1.3171,
+    "crowd": 7.0029
+   },
+   "ratings": {
+    "transport": 6,
+    "rent": 8,
+    "daily_essentials": 6,
+    "safety": 7,
+    "food": 6,
+    "green": 5,
+    "gym_sports": 7,
+    "vibe": 6,
+    "nightlife": 6,
+    "crowd": 6
+   },
+   "points": 477,
+   "inhabited_share": 0.992,
+   "hub_minutes": {
+    "siam": 43,
+    "asok": 37,
+    "silom": 48,
+    "rama9": 48,
+    "mochit": 56
+   },
+   "min_transit": 37,
+   "mean_station_distance_m": 1099,
+   "facts": {
+    "area_km2": 18.79,
+    "population": 88535,
+    "population_year": 2020,
+    "density": 4712,
+    "food": 1283,
+    "nightlife": 63,
+    "convenience": 101,
+    "markets": 9,
+    "essentials": 473,
+    "sports": 91,
+    "culture": 38,
+    "temples": 34,
+    "park_ha": 8.8,
+    "park_share": 0.5,
+    "piers": 1
+   },
+   "osm_counts": {
+    "food": 93,
+    "nightlife": 3,
+    "essentials": 112,
+    "sports": 11,
+    "culture": 11
+   },
+   "stations": [
+    "bang-na",
+    "bearing",
+    "si-iam",
+    "si-la-salle",
+    "udom-suk"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_yellow"
+   ]
+  },
+  "bang-phlat": {
+   "raw": {
+    "transport": 0.5246,
+    "rent": 11500,
+    "daily_essentials": 1.9301,
+    "safety": 7,
+    "food": 3.9242,
+    "green": 0.9999,
+    "gym_sports": 1.9769,
+    "vibe": 1.957,
+    "nightlife": 1.8297,
+    "crowd": 7.2579
+   },
+   "ratings": {
+    "transport": 8,
+    "rent": 9,
+    "daily_essentials": 7,
+    "safety": 7,
+    "food": 7,
+    "green": 6,
+    "gym_sports": 5,
+    "vibe": 7,
+    "nightlife": 8,
+    "crowd": 4
+   },
+   "points": 298,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 34,
+    "asok": 42,
+    "silom": 39,
+    "rama9": 39,
+    "mochit": 30
+   },
+   "min_transit": 30,
+   "mean_station_distance_m": 691,
+   "facts": {
+    "area_km2": 11.36,
+    "population": 89417,
+    "population_year": 2020,
+    "density": 7871,
+    "food": 763,
+    "nightlife": 56,
+    "convenience": 86,
+    "markets": 12,
+    "essentials": 316,
+    "sports": 41,
+    "culture": 31,
+    "temples": 59,
+    "park_ha": 4.2,
+    "park_share": 0.4,
+    "piers": 8
+   },
+   "osm_counts": {
+    "food": 111,
+    "nightlife": 6,
+    "essentials": 83,
+    "sports": 1,
+    "culture": 38
+   },
+   "stations": [
+    "bang-bamru",
+    "bang-o",
+    "bang-phlat",
+    "bang-yi-khan",
+    "sirindhorn"
+   ],
+   "lines": [
+    "mrt_blue",
+    "srt_light_red"
+   ]
+  },
+  "bang-rak": {
+   "raw": {
+    "transport": 0.7062,
+    "rent": 26000,
+    "daily_essentials": 3.3725,
+    "safety": 6,
+    "food": 6.308,
+    "green": 2.1377,
+    "gym_sports": 3.7469,
+    "vibe": 3.7869,
+    "nightlife": 3.9414,
+    "crowd": 7.9704
+   },
+   "ratings": {
+    "transport": 10,
+    "rent": 5,
+    "daily_essentials": 10,
+    "safety": 6,
+    "food": 10,
+    "green": 9,
+    "gym_sports": 10,
+    "vibe": 10,
+    "nightlife": 10,
+    "crowd": 1
+   },
+   "points": 95,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 17,
+    "asok": 25,
+    "silom": 12,
+    "rama9": 28,
+    "mochit": 34
+   },
+   "min_transit": 12,
+   "mean_station_distance_m": 468,
+   "facts": {
+    "area_km2": 5.54,
+    "population": 45757,
+    "population_year": 2020,
+    "density": 8259,
+    "food": 1773,
+    "nightlife": 215,
+    "convenience": 58,
+    "markets": 21,
+    "essentials": 445,
+    "sports": 62,
+    "culture": 80,
+    "temples": 59,
+    "park_ha": 9.3,
+    "park_share": 2.4,
+    "piers": 5
+   },
+   "osm_counts": {
+    "food": 720,
+    "nightlife": 95,
+    "essentials": 364,
+    "sports": 16,
+    "culture": 73
+   },
+   "stations": [
+    "chong-nonsi",
+    "hua-lamphong",
+    "lumphini",
+    "saint-louis",
+    "sala-daeng",
+    "sam-yan",
+    "saphan-taksin",
+    "si-lom",
+    "surasak"
+   ],
+   "lines": [
+    "bts_silom",
+    "bts_gold",
+    "mrt_blue"
+   ]
+  },
+  "bang-sue": {
+   "raw": {
+    "transport": 0.5449,
+    "rent": 12000,
+    "daily_essentials": 1.6876,
+    "safety": 7,
+    "food": 3.6791,
+    "green": 1.1594,
+    "gym_sports": 1.9877,
+    "vibe": 1.4974,
+    "nightlife": 1.432,
+    "crowd": 7.4433
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 9,
+    "daily_essentials": 6,
+    "safety": 7,
+    "food": 6,
+    "green": 7,
+    "gym_sports": 5,
+    "vibe": 6,
+    "nightlife": 6,
+    "crowd": 3
+   },
+   "points": 322,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 39,
+    "asok": 44,
+    "silom": 45,
+    "rama9": 38,
+    "mochit": 23
+   },
+   "min_transit": 23,
+   "mean_station_distance_m": 848,
+   "facts": {
+    "area_km2": 11.5,
+    "population": 122410,
+    "population_year": 2020,
+    "density": 10644,
+    "food": 869,
+    "nightlife": 41,
+    "convenience": 92,
+    "markets": 6,
+    "essentials": 305,
+    "sports": 46,
+    "culture": 21,
+    "temples": 42,
+    "park_ha": 8.3,
+    "park_share": 0.6,
+    "piers": 2
+   },
+   "osm_counts": {
+    "food": 35,
+    "nightlife": 2,
+    "essentials": 53,
+    "sports": 3,
+    "culture": 11
+   },
+   "stations": [
+    "bang-pho",
+    "bang-son",
+    "tao-poon",
+    "wong-sawang"
+   ],
+   "lines": [
+    "mrt_blue",
+    "mrt_purple",
+    "srt_dark_red",
+    "srt_light_red"
+   ]
+  },
+  "bangkok-noi": {
+   "raw": {
+    "transport": 0.4083,
+    "rent": 12000,
+    "daily_essentials": 2.0377,
+    "safety": 7,
+    "food": 3.9333,
+    "green": 1.0463,
+    "gym_sports": 1.9422,
+    "vibe": 2.1567,
+    "nightlife": 1.4973,
+    "crowd": 7.4269
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 9,
+    "daily_essentials": 8,
+    "safety": 7,
+    "food": 7,
+    "green": 6,
+    "gym_sports": 5,
+    "vibe": 7,
+    "nightlife": 7,
+    "crowd": 4
+   },
+   "points": 308,
+   "inhabited_share": 0.987,
+   "hub_minutes": {
+    "siam": 36,
+    "asok": 44,
+    "silom": 38,
+    "rama9": 44,
+    "mochit": 39
+   },
+   "min_transit": 36,
+   "mean_station_distance_m": 1033,
+   "facts": {
+    "area_km2": 11.94,
+    "population": 103791,
+    "population_year": 2020,
+    "density": 8690,
+    "food": 1115,
+    "nightlife": 46,
+    "convenience": 79,
+    "markets": 9,
+    "essentials": 578,
+    "sports": 46,
+    "culture": 54,
+    "temples": 89,
+    "park_ha": 7.4,
+    "park_share": 0.6,
+    "piers": 7
+   },
+   "osm_counts": {
+    "food": 53,
+    "nightlife": 2,
+    "essentials": 135,
+    "sports": 1,
+    "culture": 52
+   },
+   "stations": [
+    "bang-khun-non",
+    "fai-chai"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "bangkok-yai": {
+   "raw": {
+    "transport": 0.5566,
+    "rent": 11000,
+    "daily_essentials": 1.9345,
+    "safety": 7,
+    "food": 3.8384,
+    "green": 0.542,
+    "gym_sports": 2.1563,
+    "vibe": 2.1367,
+    "nightlife": 1.4833,
+    "crowd": 7.3451
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 9,
+    "daily_essentials": 7,
+    "safety": 7,
+    "food": 6,
+    "green": 3,
+    "gym_sports": 6,
+    "vibe": 7,
+    "nightlife": 6,
+    "crowd": 4
+   },
+   "points": 157,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 33,
+    "asok": 39,
+    "silom": 31,
+    "rama9": 39,
+    "mochit": 43
+   },
+   "min_transit": 31,
+   "mean_station_distance_m": 579,
+   "facts": {
+    "area_km2": 6.18,
+    "population": 63861,
+    "population_year": 2020,
+    "density": 10333,
+    "food": 346,
+    "nightlife": 16,
+    "convenience": 32,
+    "markets": 5,
+    "essentials": 124,
+    "sports": 14,
+    "culture": 18,
+    "temples": 61,
+    "park_ha": 2.8,
+    "park_share": 0.5,
+    "piers": 5
+   },
+   "osm_counts": {
+    "food": 24,
+    "nightlife": 0,
+    "essentials": 67,
+    "sports": 4,
+    "culture": 26
+   },
+   "stations": [
+    "charan-13",
+    "itsaraphap",
+    "tha-phra"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "bueng-kum": {
+   "raw": {
+    "transport": 0.1861,
+    "rent": 9500,
+    "daily_essentials": 1.5313,
+    "safety": 7,
+    "food": 3.6369,
+    "green": 0.9358,
+    "gym_sports": 1.9203,
+    "vibe": 1.3771,
+    "nightlife": 1.1381,
+    "crowd": 6.8915
+   },
+   "ratings": {
+    "transport": 3,
+    "rent": 10,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 5,
+    "green": 6,
+    "gym_sports": 5,
+    "vibe": 5,
+    "nightlife": 5,
+    "crowd": 6
+   },
+   "points": 580,
+   "inhabited_share": 0.991,
+   "hub_minutes": {
+    "siam": 55,
+    "asok": 52,
+    "silom": 58,
+    "rama9": 48,
+    "mochit": 46
+   },
+   "min_transit": 46,
+   "mean_station_distance_m": 2599,
+   "facts": {
+    "area_km2": 24.31,
+    "population": 140817,
+    "population_year": 2020,
+    "density": 5792,
+    "food": 1124,
+    "nightlife": 64,
+    "convenience": 105,
+    "markets": 25,
+    "essentials": 351,
+    "sports": 65,
+    "culture": 28,
+    "temples": 30,
+    "park_ha": 37.8,
+    "park_share": 1.6,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 110,
+    "nightlife": 2,
+    "essentials": 181,
+    "sports": 9,
+    "culture": 17
+   },
+   "stations": [
+    "ram-inthra-kor-mor-6"
+   ],
+   "lines": [
+    "mrt_pink"
+   ]
+  },
+  "chatuchak": {
+   "raw": {
+    "transport": 0.5439,
+    "rent": 16000,
+    "daily_essentials": 1.9418,
+    "safety": 7,
+    "food": 4.1645,
+    "green": 1.6745,
+    "gym_sports": 2.3956,
+    "vibe": 1.9657,
+    "nightlife": 1.7832,
+    "crowd": 7.1042
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 8,
+    "daily_essentials": 7,
+    "safety": 7,
+    "food": 8,
+    "green": 9,
+    "gym_sports": 7,
+    "vibe": 7,
+    "nightlife": 7,
+    "crowd": 5
+   },
+   "points": 809,
+   "inhabited_share": 0.999,
+   "hub_minutes": {
+    "siam": 35,
+    "asok": 39,
+    "silom": 43,
+    "rama9": 32,
+    "mochit": 20
+   },
+   "min_transit": 20,
+   "mean_station_distance_m": 733,
+   "facts": {
+    "area_km2": 32.91,
+    "population": 155297,
+    "population_year": 2020,
+    "density": 4719,
+    "food": 2746,
+    "nightlife": 167,
+    "convenience": 203,
+    "markets": 38,
+    "essentials": 914,
+    "sports": 135,
+    "culture": 134,
+    "temples": 54,
+    "park_ha": 167.1,
+    "park_share": 5.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 361,
+    "nightlife": 33,
+    "essentials": 350,
+    "sports": 33,
+    "culture": 85
+   },
+   "stations": [
+    "bang-bua",
+    "bang-khen",
+    "bang-sue",
+    "chatuchak",
+    "chatuchak-park",
+    "ha-yaek-lat-phrao",
+    "kamphaeng-phet",
+    "kasetsart-university",
+    "krung-thep-aphiwat",
+    "lat-phrao",
+    "mo-chit",
+    "phahon-yothin",
+    "phahonyothin-24",
+    "ratchayothin",
+    "royal-forest-department",
+    "sena-nikhom",
+    "wat-samian-nari"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_blue",
+    "mrt_yellow",
+    "srt_dark_red",
+    "srt_light_red"
+   ]
+  },
+  "chom-thong": {
+   "raw": {
+    "transport": 0.2057,
+    "rent": 10500,
+    "daily_essentials": 1.3864,
+    "safety": 7,
+    "food": 3.1627,
+    "green": 0.5293,
+    "gym_sports": 1.4041,
+    "vibe": 1.2381,
+    "nightlife": 0.8154,
+    "crowd": 6.6499
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 9,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 4,
+    "green": 3,
+    "gym_sports": 3,
+    "vibe": 4,
+    "nightlife": 4,
+    "crowd": 7
+   },
+   "points": 563,
+   "inhabited_share": 0.948,
+   "hub_minutes": {
+    "siam": 44,
+    "asok": 49,
+    "silom": 39,
+    "rama9": 53,
+    "mochit": 59
+   },
+   "min_transit": 39,
+   "mean_station_distance_m": 2997,
+   "facts": {
+    "area_km2": 26.27,
+    "population": 148290,
+    "population_year": 2020,
+    "density": 5646,
+    "food": 717,
+    "nightlife": 24,
+    "convenience": 103,
+    "markets": 11,
+    "essentials": 273,
+    "sports": 33,
+    "culture": 22,
+    "temples": 50,
+    "park_ha": 2.9,
+    "park_share": 0.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 45,
+    "nightlife": 1,
+    "essentials": 116,
+    "sports": 1,
+    "culture": 19
+   },
+   "stations": [
+    "wutthakat"
+   ],
+   "lines": [
+    "bts_silom"
+   ]
+  },
+  "din-daeng": {
+   "raw": {
+    "transport": 0.5156,
+    "rent": 13000,
+    "daily_essentials": 2.6147,
+    "safety": 5,
+    "food": 4.9455,
+    "green": 1.3158,
+    "gym_sports": 3.0114,
+    "vibe": 2.4287,
+    "nightlife": 2.4839,
+    "crowd": 7.9294
+   },
+   "ratings": {
+    "transport": 8,
+    "rent": 8,
+    "daily_essentials": 9,
+    "safety": 5,
+    "food": 8,
+    "green": 8,
+    "gym_sports": 9,
+    "vibe": 8,
+    "nightlife": 8,
+    "crowd": 2
+   },
+   "points": 212,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 27,
+    "asok": 24,
+    "silom": 32,
+    "rama9": 15,
+    "mochit": 22
+   },
+   "min_transit": 15,
+   "mean_station_distance_m": 853,
+   "facts": {
+    "area_km2": 8.35,
+    "population": 115508,
+    "population_year": 2020,
+    "density": 13827,
+    "food": 1322,
+    "nightlife": 85,
+    "convenience": 89,
+    "markets": 25,
+    "essentials": 457,
+    "sports": 64,
+    "culture": 39,
+    "temples": 54,
+    "park_ha": 15.5,
+    "park_share": 1.8,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 210,
+    "nightlife": 12,
+    "essentials": 248,
+    "sports": 19,
+    "culture": 23
+   },
+   "stations": [
+    "huai-khwang",
+    "phra-ram-9",
+    "ratchadaphisek",
+    "sutthisan",
+    "thailand-cultural-centre"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "don-mueang": {
+   "raw": {
+    "transport": 0.2263,
+    "rent": 9500,
+    "daily_essentials": 1.171,
+    "safety": 7,
+    "food": 3.0044,
+    "green": 0.6133,
+    "gym_sports": 1.4019,
+    "vibe": 1.0491,
+    "nightlife": 0.9531,
+    "crowd": 6.5469
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 10,
+    "daily_essentials": 3,
+    "safety": 7,
+    "food": 3,
+    "green": 4,
+    "gym_sports": 3,
+    "vibe": 3,
+    "nightlife": 4,
+    "crowd": 8
+   },
+   "points": 923,
+   "inhabited_share": 0.86,
+   "hub_minutes": {
+    "siam": 65,
+    "asok": 71,
+    "silom": 73,
+    "rama9": 65,
+    "mochit": 51
+   },
+   "min_transit": 51,
+   "mean_station_distance_m": 1968,
+   "facts": {
+    "area_km2": 36.8,
+    "population": 170791,
+    "population_year": 2020,
+    "density": 4641,
+    "food": 1034,
+    "nightlife": 50,
+    "convenience": 106,
+    "markets": 7,
+    "essentials": 312,
+    "sports": 50,
+    "culture": 33,
+    "temples": 40,
+    "park_ha": 25.9,
+    "park_share": 0.7,
+    "piers": 1
+   },
+   "osm_counts": {
+    "food": 103,
+    "nightlife": 3,
+    "essentials": 77,
+    "sports": 1,
+    "culture": 17
+   },
+   "stations": [
+    "bhumibol-adulyadej-hospital",
+    "don-mueang",
+    "kan-kheha",
+    "royal-thai-air-force-museum",
+    "yaek-kor-por-aor"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "srt_dark_red"
+   ]
+  },
+  "dusit": {
+   "raw": {
+    "transport": 0.3502,
+    "rent": 13000,
+    "daily_essentials": 2.016,
+    "safety": 8,
+    "food": 3.9772,
+    "green": 2.7349,
+    "gym_sports": 2.2736,
+    "vibe": 2.2714,
+    "nightlife": 1.2447,
+    "crowd": 7.2438
+   },
+   "ratings": {
+    "transport": 6,
+    "rent": 8,
+    "daily_essentials": 7,
+    "safety": 8,
+    "food": 7,
+    "green": 10,
+    "gym_sports": 7,
+    "vibe": 8,
+    "nightlife": 5,
+    "crowd": 4
+   },
+   "points": 279,
+   "inhabited_share": 0.993,
+   "hub_minutes": {
+    "siam": 27,
+    "asok": 34,
+    "silom": 33,
+    "rama9": 32,
+    "mochit": 27
+   },
+   "min_transit": 27,
+   "mean_station_distance_m": 1635,
+   "facts": {
+    "area_km2": 10.66,
+    "population": 83897,
+    "population_year": 2020,
+    "density": 7867,
+    "food": 680,
+    "nightlife": 15,
+    "convenience": 54,
+    "markets": 13,
+    "essentials": 266,
+    "sports": 38,
+    "culture": 60,
+    "temples": 59,
+    "park_ha": 120.9,
+    "park_share": 10.7,
+    "piers": 4
+   },
+   "osm_counts": {
+    "food": 87,
+    "nightlife": 2,
+    "essentials": 135,
+    "sports": 4,
+    "culture": 41
+   },
+   "stations": [],
+   "lines": []
+  },
+  "huai-khwang": {
+   "raw": {
+    "transport": 0.4156,
+    "rent": 15000,
+    "daily_essentials": 2.0128,
+    "safety": 5,
+    "food": 4.0732,
+    "green": 1.2589,
+    "gym_sports": 2.49,
+    "vibe": 1.8009,
+    "nightlife": 2.2078,
+    "crowd": 7.2991
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 8,
+    "daily_essentials": 7,
+    "safety": 5,
+    "food": 7,
+    "green": 7,
+    "gym_sports": 8,
+    "vibe": 7,
+    "nightlife": 8,
+    "crowd": 4
+   },
+   "points": 409,
+   "inhabited_share": 0.993,
+   "hub_minutes": {
+    "siam": 32,
+    "asok": 25,
+    "silom": 36,
+    "rama9": 19,
+    "mochit": 29
+   },
+   "min_transit": 19,
+   "mean_station_distance_m": 1109,
+   "facts": {
+    "area_km2": 15.03,
+    "population": 84233,
+    "population_year": 2020,
+    "density": 5603,
+    "food": 1558,
+    "nightlife": 128,
+    "convenience": 132,
+    "markets": 6,
+    "essentials": 601,
+    "sports": 99,
+    "culture": 59,
+    "temples": 33,
+    "park_ha": 16.5,
+    "park_share": 1.0,
+    "piers": 2
+   },
+   "osm_counts": {
+    "food": 129,
+    "nightlife": 31,
+    "essentials": 172,
+    "sports": 3,
+    "culture": 17
+   },
+   "stations": [
+    "huai-khwang",
+    "phawana",
+    "phetchaburi",
+    "phra-ram-9",
+    "ramkhamhaeng",
+    "ratchadaphisek",
+    "sutthisan",
+    "thailand-cultural-centre"
+   ],
+   "lines": [
+    "mrt_blue",
+    "mrt_yellow",
+    "arl"
+   ]
+  },
+  "khan-na-yao": {
+   "raw": {
+    "transport": 0.3341,
+    "rent": 9000,
+    "daily_essentials": 1.3184,
+    "safety": 7,
+    "food": 3.3765,
+    "green": 1.0123,
+    "gym_sports": 1.967,
+    "vibe": 1.1891,
+    "nightlife": 0.8335,
+    "crowd": 6.562
+   },
+   "ratings": {
+    "transport": 5,
+    "rent": 10,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 4,
+    "green": 6,
+    "gym_sports": 5,
+    "vibe": 4,
+    "nightlife": 4,
+    "crowd": 7
+   },
+   "points": 640,
+   "inhabited_share": 0.844,
+   "hub_minutes": {
+    "siam": 63,
+    "asok": 59,
+    "silom": 68,
+    "rama9": 55,
+    "mochit": 52
+   },
+   "min_transit": 52,
+   "mean_station_distance_m": 1233,
+   "facts": {
+    "area_km2": 25.98,
+    "population": 96330,
+    "population_year": 2020,
+    "density": 3708,
+    "food": 940,
+    "nightlife": 30,
+    "convenience": 77,
+    "markets": 6,
+    "essentials": 338,
+    "sports": 65,
+    "culture": 27,
+    "temples": 29,
+    "park_ha": 24.6,
+    "park_share": 1.0,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 129,
+    "nightlife": 1,
+    "essentials": 71,
+    "sports": 5,
+    "culture": 10
+   },
+   "stations": [
+    "khu-bon",
+    "nopparat",
+    "outer-ring-road-ram-inthra",
+    "ram-inthra-kor-mor-6",
+    "ram-inthra-kor-mor-9"
+   ],
+   "lines": [
+    "mrt_pink"
+   ]
+  },
+  "khlong-sam-wa": {
+   "raw": {
+    "transport": 0.0534,
+    "rent": 8000,
+    "daily_essentials": 0.6985,
+    "safety": 7,
+    "food": 2.1462,
+    "green": 0.5437,
+    "gym_sports": 0.9172,
+    "vibe": 0.5868,
+    "nightlife": 0.4191,
+    "crowd": 5.6225
+   },
+   "ratings": {
+    "transport": 1,
+    "rent": 10,
+    "daily_essentials": 1,
+    "safety": 7,
+    "food": 1,
+    "green": 3,
+    "gym_sports": 2,
+    "vibe": 1,
+    "nightlife": 1,
+    "crowd": 9
+   },
+   "points": 2866,
+   "inhabited_share": 0.458,
+   "hub_minutes": {
+    "siam": 79,
+    "asok": 77,
+    "silom": 82,
+    "rama9": 74,
+    "mochit": 71
+   },
+   "min_transit": 71,
+   "mean_station_distance_m": 5894,
+   "facts": {
+    "area_km2": 110.69,
+    "population": 204900,
+    "population_year": 2020,
+    "density": 1851,
+    "food": 1093,
+    "nightlife": 36,
+    "convenience": 110,
+    "markets": 15,
+    "essentials": 313,
+    "sports": 58,
+    "culture": 21,
+    "temples": 62,
+    "park_ha": 48.6,
+    "park_share": 0.4,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 26,
+    "nightlife": 0,
+    "essentials": 69,
+    "sports": 3,
+    "culture": 26
+   },
+   "stations": [],
+   "lines": []
+  },
+  "khlong-san": {
+   "raw": {
+    "transport": 0.635,
+    "rent": 20000,
+    "daily_essentials": 2.5123,
+    "safety": 7,
+    "food": 4.9927,
+    "green": 1.1047,
+    "gym_sports": 2.5505,
+    "vibe": 2.6557,
+    "nightlife": 2.48,
+    "crowd": 7.7642
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 6,
+    "daily_essentials": 8,
+    "safety": 7,
+    "food": 9,
+    "green": 7,
+    "gym_sports": 8,
+    "vibe": 9,
+    "nightlife": 8,
+    "crowd": 2
+   },
+   "points": 151,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 24,
+    "asok": 33,
+    "silom": 21,
+    "rama9": 37,
+    "mochit": 40
+   },
+   "min_transit": 21,
+   "mean_station_distance_m": 619,
+   "facts": {
+    "area_km2": 6.05,
+    "population": 69139,
+    "population_year": 2020,
+    "density": 11426,
+    "food": 970,
+    "nightlife": 47,
+    "convenience": 56,
+    "markets": 8,
+    "essentials": 297,
+    "sports": 26,
+    "culture": 22,
+    "temples": 44,
+    "park_ha": 5.3,
+    "park_share": 0.9,
+    "piers": 8
+   },
+   "osm_counts": {
+    "food": 86,
+    "nightlife": 3,
+    "essentials": 105,
+    "sports": 4,
+    "culture": 23
+   },
+   "stations": [
+    "charoen-nakhon",
+    "khlong-san",
+    "krung-thon-buri",
+    "wongwian-yai"
+   ],
+   "lines": [
+    "bts_silom",
+    "bts_gold"
+   ]
+  },
+  "khlong-toei": {
+   "raw": {
+    "transport": 0.4937,
+    "rent": 25000,
+    "daily_essentials": 2.2817,
+    "safety": 5,
+    "food": 4.6137,
+    "green": 1.4562,
+    "gym_sports": 3.2031,
+    "vibe": 2.2589,
+    "nightlife": 2.743,
+    "crowd": 7.5554
+   },
+   "ratings": {
+    "transport": 8,
+    "rent": 5,
+    "daily_essentials": 8,
+    "safety": 5,
+    "food": 8,
+    "green": 8,
+    "gym_sports": 9,
+    "vibe": 8,
+    "nightlife": 9,
+    "crowd": 3
+   },
+   "points": 336,
+   "inhabited_share": 0.955,
+   "hub_minutes": {
+    "siam": 25,
+    "asok": 18,
+    "silom": 26,
+    "rama9": 25,
+    "mochit": 39
+   },
+   "min_transit": 18,
+   "mean_station_distance_m": 872,
+   "facts": {
+    "area_km2": 12.99,
+    "population": 93193,
+    "population_year": 2020,
+    "density": 7172,
+    "food": 1817,
+    "nightlife": 249,
+    "convenience": 105,
+    "markets": 18,
+    "essentials": 548,
+    "sports": 139,
+    "culture": 68,
+    "temples": 45,
+    "park_ha": 85.4,
+    "park_share": 6.3,
+    "piers": 1
+   },
+   "osm_counts": {
+    "food": 429,
+    "nightlife": 113,
+    "essentials": 261,
+    "sports": 29,
+    "culture": 35
+   },
+   "stations": [
+    "asok",
+    "ekkamai",
+    "khlong-toei",
+    "nana",
+    "on-nut",
+    "phra-khanong",
+    "phrom-phong",
+    "queen-sirikit-national-convention-centre",
+    "sukhumvit",
+    "thong-lo"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_blue"
+   ]
+  },
+  "lak-si": {
+   "raw": {
+    "transport": 0.3973,
+    "rent": 10500,
+    "daily_essentials": 1.4991,
+    "safety": 7,
+    "food": 3.2181,
+    "green": 1.4307,
+    "gym_sports": 2.0874,
+    "vibe": 1.2525,
+    "nightlife": 0.9891,
+    "crowd": 6.7308
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 9,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 4,
+    "green": 8,
+    "gym_sports": 6,
+    "vibe": 4,
+    "nightlife": 4,
+    "crowd": 7
+   },
+   "points": 572,
+   "inhabited_share": 0.946,
+   "hub_minutes": {
+    "siam": 50,
+    "asok": 56,
+    "silom": 58,
+    "rama9": 53,
+    "mochit": 36
+   },
+   "min_transit": 36,
+   "mean_station_distance_m": 992,
+   "facts": {
+    "area_km2": 22.84,
+    "population": 102704,
+    "population_year": 2020,
+    "density": 4496,
+    "food": 902,
+    "nightlife": 29,
+    "convenience": 111,
+    "markets": 10,
+    "essentials": 383,
+    "sports": 51,
+    "culture": 33,
+    "temples": 14,
+    "park_ha": 37.5,
+    "park_share": 1.6,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 35,
+    "nightlife": 2,
+    "essentials": 84,
+    "sports": 20,
+    "culture": 10
+   },
+   "stations": [
+    "chaeng-watthana-14",
+    "government-complex",
+    "lak-si",
+    "national-telecom",
+    "rajabhat-phranakhon",
+    "thung-song-hong"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_pink",
+    "srt_dark_red"
+   ]
+  },
+  "lat-krabang": {
+   "raw": {
+    "transport": 0.1108,
+    "rent": 8500,
+    "daily_essentials": 0.7662,
+    "safety": 7,
+    "food": 2.4037,
+    "green": 0.6162,
+    "gym_sports": 0.7868,
+    "vibe": 0.644,
+    "nightlife": 0.6381,
+    "crowd": 5.6194
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 1,
+    "safety": 7,
+    "food": 2,
+    "green": 4,
+    "gym_sports": 1,
+    "vibe": 1,
+    "nightlife": 3,
+    "crowd": 10
+   },
+   "points": 3202,
+   "inhabited_share": 0.483,
+   "hub_minutes": {
+    "siam": 62,
+    "asok": 68,
+    "silom": 70,
+    "rama9": 66,
+    "mochit": 70
+   },
+   "min_transit": 62,
+   "mean_station_distance_m": 4995,
+   "facts": {
+    "area_km2": 123.86,
+    "population": 178971,
+    "population_year": 2020,
+    "density": 1445,
+    "food": 1625,
+    "nightlife": 85,
+    "convenience": 180,
+    "markets": 17,
+    "essentials": 498,
+    "sports": 56,
+    "culture": 32,
+    "temples": 60,
+    "park_ha": 39.1,
+    "park_share": 0.3,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 211,
+    "nightlife": 22,
+    "essentials": 154,
+    "sports": 13,
+    "culture": 26
+   },
+   "stations": [
+    "lat-krabang"
+   ],
+   "lines": [
+    "arl"
+   ]
+  },
+  "lat-phrao": {
+   "raw": {
+    "transport": 0.1991,
+    "rent": 11500,
+    "daily_essentials": 1.5439,
+    "safety": 7,
+    "food": 3.8362,
+    "green": 0.6434,
+    "gym_sports": 2.0158,
+    "vibe": 1.3492,
+    "nightlife": 1.7089,
+    "crowd": 7.0927
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 9,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 6,
+    "green": 4,
+    "gym_sports": 6,
+    "vibe": 5,
+    "nightlife": 7,
+    "crowd": 5
+   },
+   "points": 535,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 48,
+    "asok": 47,
+    "silom": 52,
+    "rama9": 40,
+    "mochit": 34
+   },
+   "min_transit": 34,
+   "mean_station_distance_m": 2396,
+   "facts": {
+    "area_km2": 21.5,
+    "population": 117108,
+    "population_year": 2020,
+    "density": 5447,
+    "food": 1854,
+    "nightlife": 107,
+    "convenience": 128,
+    "markets": 6,
+    "essentials": 464,
+    "sports": 95,
+    "culture": 41,
+    "temples": 25,
+    "park_ha": 7.8,
+    "park_share": 0.4,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 83,
+    "nightlife": 10,
+    "essentials": 51,
+    "sports": 2,
+    "culture": 13
+   },
+   "stations": [],
+   "lines": []
+  },
+  "min-buri": {
+   "raw": {
+    "transport": 0.1917,
+    "rent": 9000,
+    "daily_essentials": 0.8825,
+    "safety": 7,
+    "food": 2.3287,
+    "green": 0.1416,
+    "gym_sports": 0.9394,
+    "vibe": 0.7444,
+    "nightlife": 0.4735,
+    "crowd": 5.9412
+   },
+   "ratings": {
+    "transport": 3,
+    "rent": 10,
+    "daily_essentials": 2,
+    "safety": 7,
+    "food": 2,
+    "green": 1,
+    "gym_sports": 2,
+    "vibe": 2,
+    "nightlife": 2,
+    "crowd": 9
+   },
+   "points": 1497,
+   "inhabited_share": 0.571,
+   "hub_minutes": {
+    "siam": 74,
+    "asok": 74,
+    "silom": 78,
+    "rama9": 71,
+    "mochit": 68
+   },
+   "min_transit": 68,
+   "mean_station_distance_m": 2888,
+   "facts": {
+    "area_km2": 63.65,
+    "population": 142197,
+    "population_year": 2020,
+    "density": 2234,
+    "food": 947,
+    "nightlife": 27,
+    "convenience": 94,
+    "markets": 4,
+    "essentials": 362,
+    "sports": 44,
+    "culture": 22,
+    "temples": 54,
+    "park_ha": 1.7,
+    "park_share": 0.0,
+    "piers": 2
+   },
+   "osm_counts": {
+    "food": 17,
+    "nightlife": 0,
+    "essentials": 35,
+    "sports": 2,
+    "culture": 17
+   },
+   "stations": [
+    "bang-chan",
+    "min-buri",
+    "min-buri-market",
+    "setthabutbamphen"
+   ],
+   "lines": [
+    "mrt_pink"
+   ]
+  },
+  "nong-chok": {
+   "raw": {
+    "transport": 0.004,
+    "rent": 7000,
+    "daily_essentials": 0.3577,
+    "safety": 8,
+    "food": 1.3773,
+    "green": 0.2404,
+    "gym_sports": 0.3474,
+    "vibe": 0.3516,
+    "nightlife": 0.1168,
+    "crowd": 4.6048
+   },
+   "ratings": {
+    "transport": 1,
+    "rent": 10,
+    "daily_essentials": 1,
+    "safety": 8,
+    "food": 1,
+    "green": 1,
+    "gym_sports": 1,
+    "vibe": 1,
+    "nightlife": 1,
+    "crowd": 10
+   },
+   "points": 5955,
+   "inhabited_share": 0.161,
+   "hub_minutes": {
+    "siam": 101,
+    "asok": 103,
+    "silom": 107,
+    "rama9": 100,
+    "mochit": 101
+   },
+   "min_transit": 100,
+   "mean_station_distance_m": 14244,
+   "facts": {
+    "area_km2": 236.26,
+    "population": 177979,
+    "population_year": 2020,
+    "density": 753,
+    "food": 698,
+    "nightlife": 12,
+    "convenience": 56,
+    "markets": 3,
+    "essentials": 206,
+    "sports": 32,
+    "culture": 9,
+    "temples": 95,
+    "park_ha": 25.1,
+    "park_share": 0.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 13,
+    "nightlife": 0,
+    "essentials": 17,
+    "sports": 4,
+    "culture": 29
+   },
+   "stations": [],
+   "lines": []
+  },
+  "nong-khaem": {
+   "raw": {
+    "transport": 0.0675,
+    "rent": 8500,
+    "daily_essentials": 1.2091,
+    "safety": 7,
+    "food": 2.5992,
+    "green": 0.4876,
+    "gym_sports": 1.0817,
+    "vibe": 0.7156,
+    "nightlife": 0.5471,
+    "crowd": 6.3731
+   },
+   "ratings": {
+    "transport": 1,
+    "rent": 10,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 2,
+    "green": 2,
+    "gym_sports": 2,
+    "vibe": 2,
+    "nightlife": 2,
+    "crowd": 9
+   },
+   "points": 906,
+   "inhabited_share": 0.774,
+   "hub_minutes": {
+    "siam": 72,
+    "asok": 77,
+    "silom": 69,
+    "rama9": 78,
+    "mochit": 79
+   },
+   "min_transit": 69,
+   "mean_station_distance_m": 6496,
+   "facts": {
+    "area_km2": 35.83,
+    "population": 156203,
+    "population_year": 2020,
+    "density": 4360,
+    "food": 657,
+    "nightlife": 21,
+    "convenience": 110,
+    "markets": 7,
+    "essentials": 296,
+    "sports": 30,
+    "culture": 13,
+    "temples": 26,
+    "park_ha": 11.3,
+    "park_share": 0.3,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 20,
+    "nightlife": 0,
+    "essentials": 106,
+    "sports": 1,
+    "culture": 7
+   },
+   "stations": [],
+   "lines": []
+  },
+  "pathum-wan": {
+   "raw": {
+    "transport": 0.7208,
+    "rent": 38000,
+    "daily_essentials": 3.1232,
+    "safety": 7,
+    "food": 6.003,
+    "green": 2.8946,
+    "gym_sports": 3.8737,
+    "vibe": 3.5999,
+    "nightlife": 3.6158,
+    "crowd": 7.8035
+   },
+   "ratings": {
+    "transport": 10,
+    "rent": 1,
+    "daily_essentials": 10,
+    "safety": 7,
+    "food": 10,
+    "green": 10,
+    "gym_sports": 10,
+    "vibe": 9,
+    "nightlife": 10,
+    "crowd": 2
+   },
+   "points": 204,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 13,
+    "asok": 17,
+    "silom": 14,
+    "rama9": 23,
+    "mochit": 29
+   },
+   "min_transit": 13,
+   "mean_station_distance_m": 492,
+   "facts": {
+    "area_km2": 8.37,
+    "population": 43338,
+    "population_year": 2020,
+    "density": 5178,
+    "food": 3064,
+    "nightlife": 164,
+    "convenience": 95,
+    "markets": 10,
+    "essentials": 838,
+    "sports": 136,
+    "culture": 195,
+    "temples": 55,
+    "park_ha": 101.3,
+    "park_share": 12.4,
+    "piers": 10
+   },
+   "osm_counts": {
+    "food": 794,
+    "nightlife": 39,
+    "essentials": 262,
+    "sports": 37,
+    "culture": 126
+   },
+   "stations": [
+    "chit-lom",
+    "hua-lamphong",
+    "lumphini",
+    "national-stadium",
+    "phloen-chit",
+    "ratchadamri",
+    "sam-yan",
+    "si-lom",
+    "siam"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "bts_silom",
+    "mrt_blue"
+   ]
+  },
+  "phasi-charoen": {
+   "raw": {
+    "transport": 0.3649,
+    "rent": 10500,
+    "daily_essentials": 1.5731,
+    "safety": 7,
+    "food": 3.5131,
+    "green": 0.4261,
+    "gym_sports": 1.4962,
+    "vibe": 1.4001,
+    "nightlife": 1.081,
+    "crowd": 7.0471
+   },
+   "ratings": {
+    "transport": 6,
+    "rent": 9,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 5,
+    "green": 2,
+    "gym_sports": 4,
+    "vibe": 5,
+    "nightlife": 4,
+    "crowd": 5
+   },
+   "points": 478,
+   "inhabited_share": 0.979,
+   "hub_minutes": {
+    "siam": 42,
+    "asok": 49,
+    "silom": 38,
+    "rama9": 49,
+    "mochit": 52
+   },
+   "min_transit": 38,
+   "mean_station_distance_m": 1372,
+   "facts": {
+    "area_km2": 17.83,
+    "population": 124318,
+    "population_year": 2020,
+    "density": 6971,
+    "food": 913,
+    "nightlife": 33,
+    "convenience": 96,
+    "markets": 9,
+    "essentials": 341,
+    "sports": 32,
+    "culture": 32,
+    "temples": 72,
+    "park_ha": 8.7,
+    "park_share": 0.5,
+    "piers": 12
+   },
+   "osm_counts": {
+    "food": 112,
+    "nightlife": 6,
+    "essentials": 197,
+    "sports": 3,
+    "culture": 41
+   },
+   "stations": [
+    "bang-phai",
+    "bang-wa",
+    "phasi-charoen",
+    "phetkasem-48"
+   ],
+   "lines": [
+    "bts_silom",
+    "mrt_blue"
+   ]
+  },
+  "phaya-thai": {
+   "raw": {
+    "transport": 0.5587,
+    "rent": 18000,
+    "daily_essentials": 2.4818,
+    "safety": 8,
+    "food": 4.9312,
+    "green": 1.9419,
+    "gym_sports": 2.9018,
+    "vibe": 2.4324,
+    "nightlife": 2.7,
+    "crowd": 7.47
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 7,
+    "daily_essentials": 8,
+    "safety": 8,
+    "food": 8,
+    "green": 9,
+    "gym_sports": 9,
+    "vibe": 8,
+    "nightlife": 9,
+    "crowd": 3
+   },
+   "points": 232,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 21,
+    "asok": 27,
+    "silom": 29,
+    "rama9": 24,
+    "mochit": 17
+   },
+   "min_transit": 17,
+   "mean_station_distance_m": 720,
+   "facts": {
+    "area_km2": 9.59,
+    "population": 67388,
+    "population_year": 2020,
+    "density": 7027,
+    "food": 1302,
+    "nightlife": 116,
+    "convenience": 76,
+    "markets": 8,
+    "essentials": 483,
+    "sports": 54,
+    "culture": 46,
+    "temples": 23,
+    "park_ha": 14.8,
+    "park_share": 1.6,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 242,
+    "nightlife": 18,
+    "essentials": 138,
+    "sports": 7,
+    "culture": 10
+   },
+   "stations": [
+    "ari",
+    "kamphaeng-phet",
+    "sanam-pao",
+    "saphan-khwai",
+    "sena-ruam"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_blue"
+   ]
+  },
+  "phra-khanong": {
+   "raw": {
+    "transport": 0.3222,
+    "rent": 15000,
+    "daily_essentials": 1.5541,
+    "safety": 7,
+    "food": 3.4945,
+    "green": 0.3129,
+    "gym_sports": 2.0038,
+    "vibe": 1.3936,
+    "nightlife": 1.406,
+    "crowd": 7.0109
+   },
+   "ratings": {
+    "transport": 5,
+    "rent": 8,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 5,
+    "green": 1,
+    "gym_sports": 6,
+    "vibe": 5,
+    "nightlife": 6,
+    "crowd": 6
+   },
+   "points": 326,
+   "inhabited_share": 0.957,
+   "hub_minutes": {
+    "siam": 36,
+    "asok": 30,
+    "silom": 42,
+    "rama9": 41,
+    "mochit": 49
+   },
+   "min_transit": 30,
+   "mean_station_distance_m": 1231,
+   "facts": {
+    "area_km2": 13.99,
+    "population": 87856,
+    "population_year": 2020,
+    "density": 6282,
+    "food": 735,
+    "nightlife": 32,
+    "convenience": 62,
+    "markets": 4,
+    "essentials": 246,
+    "sports": 34,
+    "culture": 20,
+    "temples": 38,
+    "park_ha": 1.2,
+    "park_share": 0.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 41,
+    "nightlife": 2,
+    "essentials": 57,
+    "sports": 2,
+    "culture": 9
+   },
+   "stations": [
+    "bang-chak",
+    "on-nut",
+    "punnawithi"
+   ],
+   "lines": [
+    "bts_sukhumvit"
+   ]
+  },
+  "phra-nakhon": {
+   "raw": {
+    "transport": 0.4827,
+    "rent": 14000,
+    "daily_essentials": 2.8831,
+    "safety": 5,
+    "food": 5.8347,
+    "green": 2.4316,
+    "gym_sports": 2.6676,
+    "vibe": 4.0326,
+    "nightlife": 3.5761,
+    "crowd": 7.8965
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 8,
+    "daily_essentials": 9,
+    "safety": 5,
+    "food": 9,
+    "green": 10,
+    "gym_sports": 8,
+    "vibe": 10,
+    "nightlife": 9,
+    "crowd": 2
+   },
+   "points": 136,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 26,
+    "asok": 34,
+    "silom": 29,
+    "rama9": 35,
+    "mochit": 38
+   },
+   "min_transit": 26,
+   "mean_station_distance_m": 1123,
+   "facts": {
+    "area_km2": 5.54,
+    "population": 44923,
+    "population_year": 2020,
+    "density": 8115,
+    "food": 1446,
+    "nightlife": 147,
+    "convenience": 48,
+    "markets": 25,
+    "essentials": 261,
+    "sports": 19,
+    "culture": 155,
+    "temples": 171,
+    "park_ha": 36.3,
+    "park_share": 6.7,
+    "piers": 24
+   },
+   "osm_counts": {
+    "food": 678,
+    "nightlife": 97,
+    "essentials": 330,
+    "sports": 9,
+    "culture": 153
+   },
+   "stations": [
+    "sam-yot",
+    "sanam-chai"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "pom-prap-sattru-phai": {
+   "raw": {
+    "transport": 0.5334,
+    "rent": 12000,
+    "daily_essentials": 2.984,
+    "safety": 6,
+    "food": 5.5437,
+    "green": 2.0419,
+    "gym_sports": 2.4813,
+    "vibe": 3.6767,
+    "nightlife": 3.0228,
+    "crowd": 8.4703
+   },
+   "ratings": {
+    "transport": 8,
+    "rent": 9,
+    "daily_essentials": 9,
+    "safety": 6,
+    "food": 9,
+    "green": 9,
+    "gym_sports": 8,
+    "vibe": 9,
+    "nightlife": 9,
+    "crowd": 1
+   },
+   "points": 65,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 19,
+    "asok": 28,
+    "silom": 23,
+    "rama9": 31,
+    "mochit": 33
+   },
+   "min_transit": 19,
+   "mean_station_distance_m": 967,
+   "facts": {
+    "area_km2": 1.93,
+    "population": 41524,
+    "population_year": 2020,
+    "density": 21504,
+    "food": 572,
+    "nightlife": 38,
+    "convenience": 38,
+    "markets": 10,
+    "essentials": 200,
+    "sports": 12,
+    "culture": 35,
+    "temples": 62,
+    "park_ha": 0.7,
+    "park_share": 0.3,
+    "piers": 4
+   },
+   "osm_counts": {
+    "food": 121,
+    "nightlife": 23,
+    "essentials": 112,
+    "sports": 5,
+    "culture": 44
+   },
+   "stations": [
+    "wat-mangkon"
+   ],
+   "lines": [
+    "mrt_blue"
+   ]
+  },
+  "prawet": {
+   "raw": {
+    "transport": 0.1712,
+    "rent": 10500,
+    "daily_essentials": 1.1441,
+    "safety": 7,
+    "food": 3.006,
+    "green": 1.0778,
+    "gym_sports": 1.444,
+    "vibe": 0.9494,
+    "nightlife": 0.6538,
+    "crowd": 6.5039
+   },
+   "ratings": {
+    "transport": 3,
+    "rent": 9,
+    "daily_essentials": 3,
+    "safety": 7,
+    "food": 3,
+    "green": 7,
+    "gym_sports": 4,
+    "vibe": 3,
+    "nightlife": 3,
+    "crowd": 8
+   },
+   "points": 1346,
+   "inhabited_share": 0.863,
+   "hub_minutes": {
+    "siam": 52,
+    "asok": 51,
+    "silom": 56,
+    "rama9": 52,
+    "mochit": 58
+   },
+   "min_transit": 51,
+   "mean_station_distance_m": 2654,
+   "facts": {
+    "area_km2": 52.5,
+    "population": 181821,
+    "population_year": 2020,
+    "density": 3463,
+    "food": 1729,
+    "nightlife": 67,
+    "convenience": 142,
+    "markets": 19,
+    "essentials": 545,
+    "sports": 94,
+    "culture": 50,
+    "temples": 53,
+    "park_ha": 212.0,
+    "park_share": 3.9,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 103,
+    "nightlife": 10,
+    "essentials": 128,
+    "sports": 6,
+    "culture": 20
+   },
+   "stations": [
+    "ban-thap-chang",
+    "srinagarindra-38"
+   ],
+   "lines": [
+    "mrt_yellow",
+    "arl"
+   ]
+  },
+  "rat-burana": {
+   "raw": {
+    "transport": 0.1687,
+    "rent": 10000,
+    "daily_essentials": 1.4992,
+    "safety": 7,
+    "food": 3.0077,
+    "green": 0.6759,
+    "gym_sports": 1.4169,
+    "vibe": 1.2103,
+    "nightlife": 1.1,
+    "crowd": 6.6443
+   },
+   "ratings": {
+    "transport": 3,
+    "rent": 9,
+    "daily_essentials": 4,
+    "safety": 7,
+    "food": 4,
+    "green": 5,
+    "gym_sports": 3,
+    "vibe": 4,
+    "nightlife": 5,
+    "crowd": 7
+   },
+   "points": 317,
+   "inhabited_share": 0.984,
+   "hub_minutes": {
+    "siam": 41,
+    "asok": 44,
+    "silom": 36,
+    "rama9": 49,
+    "mochit": 58
+   },
+   "min_transit": 36,
+   "mean_station_distance_m": 4944,
+   "facts": {
+    "area_km2": 15.78,
+    "population": 78687,
+    "population_year": 2020,
+    "density": 4986,
+    "food": 436,
+    "nightlife": 21,
+    "convenience": 55,
+    "markets": 1,
+    "essentials": 214,
+    "sports": 22,
+    "culture": 16,
+    "temples": 23,
+    "park_ha": 4.8,
+    "park_share": 0.4,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 9,
+    "nightlife": 1,
+    "essentials": 33,
+    "sports": 0,
+    "culture": 9
+   },
+   "stations": [],
+   "lines": []
+  },
+  "ratchathewi": {
+   "raw": {
+    "transport": 0.6749,
+    "rent": 18000,
+    "daily_essentials": 2.891,
+    "safety": 5,
+    "food": 5.1351,
+    "green": 2.2264,
+    "gym_sports": 3.13,
+    "vibe": 2.9224,
+    "nightlife": 2.744,
+    "crowd": 7.8693
+   },
+   "ratings": {
+    "transport": 9,
+    "rent": 7,
+    "daily_essentials": 9,
+    "safety": 5,
+    "food": 9,
+    "green": 9,
+    "gym_sports": 9,
+    "vibe": 9,
+    "nightlife": 9,
+    "crowd": 2
+   },
+   "points": 181,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 15,
+    "asok": 19,
+    "silom": 22,
+    "rama9": 22,
+    "mochit": 25
+   },
+   "min_transit": 15,
+   "mean_station_distance_m": 599,
+   "facts": {
+    "area_km2": 7.13,
+    "population": 69264,
+    "population_year": 2020,
+    "density": 9720,
+    "food": 1116,
+    "nightlife": 71,
+    "convenience": 63,
+    "markets": 11,
+    "essentials": 705,
+    "sports": 57,
+    "culture": 53,
+    "temples": 60,
+    "park_ha": 15.3,
+    "park_share": 2.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 242,
+    "nightlife": 15,
+    "essentials": 223,
+    "sports": 6,
+    "culture": 30
+   },
+   "stations": [
+    "makkasan",
+    "phaya-thai",
+    "phetchaburi",
+    "ratchaprarop",
+    "ratchathewi",
+    "victory-monument"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "bts_silom",
+    "mrt_blue",
+    "arl"
+   ]
+  },
+  "sai-mai": {
+   "raw": {
+    "transport": 0.1994,
+    "rent": 8500,
+    "daily_essentials": 1.0989,
+    "safety": 7,
+    "food": 2.8535,
+    "green": 0.5187,
+    "gym_sports": 1.3568,
+    "vibe": 0.8941,
+    "nightlife": 0.6644,
+    "crowd": 6.5345
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 10,
+    "daily_essentials": 3,
+    "safety": 7,
+    "food": 3,
+    "green": 3,
+    "gym_sports": 3,
+    "vibe": 3,
+    "nightlife": 3,
+    "crowd": 8
+   },
+   "points": 1084,
+   "inhabited_share": 0.856,
+   "hub_minutes": {
+    "siam": 67,
+    "asok": 71,
+    "silom": 74,
+    "rama9": 68,
+    "mochit": 53
+   },
+   "min_transit": 53,
+   "mean_station_distance_m": 2744,
+   "facts": {
+    "area_km2": 44.62,
+    "population": 207272,
+    "population_year": 2020,
+    "density": 4646,
+    "food": 1302,
+    "nightlife": 44,
+    "convenience": 124,
+    "markets": 12,
+    "essentials": 407,
+    "sports": 57,
+    "culture": 24,
+    "temples": 36,
+    "park_ha": 15.3,
+    "park_share": 0.4,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 56,
+    "nightlife": 0,
+    "essentials": 106,
+    "sports": 2,
+    "culture": 15
+   },
+   "stations": [
+    "bhumibol-adulyadej-hospital",
+    "khu-khot",
+    "royal-thai-air-force-museum",
+    "saphan-mai",
+    "yaek-kor-por-aor"
+   ],
+   "lines": [
+    "bts_sukhumvit"
+   ]
+  },
+  "samphanthawong": {
+   "raw": {
+    "transport": 0.6932,
+    "rent": 14000,
+    "daily_essentials": 3.2111,
+    "safety": 6,
+    "food": 6.2133,
+    "green": 1.5184,
+    "gym_sports": 2.4277,
+    "vibe": 3.9423,
+    "nightlife": 3.5095,
+    "crowd": 8.4084
+   },
+   "ratings": {
+    "transport": 10,
+    "rent": 8,
+    "daily_essentials": 10,
+    "safety": 6,
+    "food": 10,
+    "green": 8,
+    "gym_sports": 8,
+    "vibe": 10,
+    "nightlife": 9,
+    "crowd": 1
+   },
+   "points": 35,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 20,
+    "asok": 29,
+    "silom": 20,
+    "rama9": 30,
+    "mochit": 36
+   },
+   "min_transit": 20,
+   "mean_station_distance_m": 487,
+   "facts": {
+    "area_km2": 1.42,
+    "population": 21324,
+    "population_year": 2020,
+    "density": 15059,
+    "food": 778,
+    "nightlife": 35,
+    "convenience": 21,
+    "markets": 9,
+    "essentials": 149,
+    "sports": 3,
+    "culture": 28,
+    "temples": 44,
+    "park_ha": 0.5,
+    "park_share": 0.3,
+    "piers": 6
+   },
+   "osm_counts": {
+    "food": 244,
+    "nightlife": 20,
+    "essentials": 145,
+    "sports": 3,
+    "culture": 59
+   },
+   "stations": [
+    "hua-lamphong",
+    "wat-mangkon"
+   ],
+   "lines": [
+    "bts_gold",
+    "mrt_blue"
+   ]
+  },
+  "saphan-sung": {
+   "raw": {
+    "transport": 0.1477,
+    "rent": 9500,
+    "daily_essentials": 0.9978,
+    "safety": 8,
+    "food": 2.9398,
+    "green": 0.6156,
+    "gym_sports": 1.4286,
+    "vibe": 0.8554,
+    "nightlife": 0.6235,
+    "crowd": 6.3945
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 2,
+    "safety": 8,
+    "food": 3,
+    "green": 4,
+    "gym_sports": 3,
+    "vibe": 2,
+    "nightlife": 2,
+    "crowd": 9
+   },
+   "points": 698,
+   "inhabited_share": 0.931,
+   "hub_minutes": {
+    "siam": 52,
+    "asok": 54,
+    "silom": 59,
+    "rama9": 52,
+    "mochit": 55
+   },
+   "min_transit": 52,
+   "mean_station_distance_m": 2883,
+   "facts": {
+    "area_km2": 28.12,
+    "population": 96092,
+    "population_year": 2020,
+    "density": 3417,
+    "food": 845,
+    "nightlife": 23,
+    "convenience": 71,
+    "markets": 2,
+    "essentials": 244,
+    "sports": 45,
+    "culture": 17,
+    "temples": 20,
+    "park_ha": 14.2,
+    "park_share": 0.5,
+    "piers": 10
+   },
+   "osm_counts": {
+    "food": 63,
+    "nightlife": 1,
+    "essentials": 48,
+    "sports": 3,
+    "culture": 6
+   },
+   "stations": [
+    "ban-thap-chang"
+   ],
+   "lines": [
+    "arl"
+   ]
+  },
+  "sathon": {
+   "raw": {
+    "transport": 0.473,
+    "rent": 25000,
+    "daily_essentials": 2.58,
+    "safety": 7,
+    "food": 5.1916,
+    "green": 2.1447,
+    "gym_sports": 3.3319,
+    "vibe": 2.5599,
+    "nightlife": 2.392,
+    "crowd": 7.484
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 5,
+    "daily_essentials": 9,
+    "safety": 7,
+    "food": 9,
+    "green": 9,
+    "gym_sports": 9,
+    "vibe": 9,
+    "nightlife": 8,
+    "crowd": 3
+   },
+   "points": 182,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 22,
+    "asok": 25,
+    "silom": 16,
+    "rama9": 30,
+    "mochit": 39
+   },
+   "min_transit": 16,
+   "mean_station_distance_m": 966,
+   "facts": {
+    "area_km2": 9.33,
+    "population": 75735,
+    "population_year": 2020,
+    "density": 8121,
+    "food": 1098,
+    "nightlife": 63,
+    "convenience": 55,
+    "markets": 6,
+    "essentials": 285,
+    "sports": 54,
+    "culture": 33,
+    "temples": 42,
+    "park_ha": 25.4,
+    "park_share": 3.5,
+    "piers": 2
+   },
+   "osm_counts": {
+    "food": 207,
+    "nightlife": 12,
+    "essentials": 196,
+    "sports": 11,
+    "culture": 37
+   },
+   "stations": [
+    "khlong-toei",
+    "lumphini",
+    "saint-louis",
+    "saphan-taksin",
+    "surasak"
+   ],
+   "lines": [
+    "bts_silom",
+    "mrt_blue"
+   ]
+  },
+  "suan-luang": {
+   "raw": {
+    "transport": 0.3348,
+    "rent": 12000,
+    "daily_essentials": 1.5577,
+    "safety": 7,
+    "food": 3.5399,
+    "green": 0.5036,
+    "gym_sports": 1.8792,
+    "vibe": 1.3346,
+    "nightlife": 1.2859,
+    "crowd": 6.9787
+   },
+   "ratings": {
+    "transport": 6,
+    "rent": 9,
+    "daily_essentials": 5,
+    "safety": 7,
+    "food": 5,
+    "green": 2,
+    "gym_sports": 4,
+    "vibe": 5,
+    "nightlife": 5,
+    "crowd": 6
+   },
+   "points": 610,
+   "inhabited_share": 0.998,
+   "hub_minutes": {
+    "siam": 38,
+    "asok": 37,
+    "silom": 44,
+    "rama9": 38,
+    "mochit": 46
+   },
+   "min_transit": 37,
+   "mean_station_distance_m": 1302,
+   "facts": {
+    "area_km2": 23.68,
+    "population": 123609,
+    "population_year": 2020,
+    "density": 5220,
+    "food": 1351,
+    "nightlife": 71,
+    "convenience": 151,
+    "markets": 7,
+    "essentials": 461,
+    "sports": 67,
+    "culture": 32,
+    "temples": 59,
+    "park_ha": 4.1,
+    "park_share": 0.2,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 89,
+    "nightlife": 4,
+    "essentials": 124,
+    "sports": 6,
+    "culture": 21
+   },
+   "stations": [
+    "hua-mak",
+    "kalantan",
+    "ramkhamhaeng",
+    "si-nut"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_yellow",
+    "arl"
+   ]
+  },
+  "taling-chan": {
+   "raw": {
+    "transport": 0.1945,
+    "rent": 10000,
+    "daily_essentials": 1.0733,
+    "safety": 8,
+    "food": 3.1127,
+    "green": 0.6407,
+    "gym_sports": 1.6171,
+    "vibe": 1.0965,
+    "nightlife": 0.6298,
+    "crowd": 6.5004
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 9,
+    "daily_essentials": 2,
+    "safety": 8,
+    "food": 4,
+    "green": 4,
+    "gym_sports": 4,
+    "vibe": 4,
+    "nightlife": 2,
+    "crowd": 8
+   },
+   "points": 893,
+   "inhabited_share": 0.952,
+   "hub_minutes": {
+    "siam": 48,
+    "asok": 55,
+    "silom": 49,
+    "rama9": 55,
+    "mochit": 51
+   },
+   "min_transit": 48,
+   "mean_station_distance_m": 2413,
+   "facts": {
+    "area_km2": 29.48,
+    "population": 103617,
+    "population_year": 2020,
+    "density": 3515,
+    "food": 1133,
+    "nightlife": 23,
+    "convenience": 99,
+    "markets": 15,
+    "essentials": 272,
+    "sports": 74,
+    "culture": 24,
+    "temples": 65,
+    "park_ha": 8.0,
+    "park_share": 0.2,
+    "piers": 1
+   },
+   "osm_counts": {
+    "food": 96,
+    "nightlife": 2,
+    "essentials": 54,
+    "sports": 5,
+    "culture": 38
+   },
+   "stations": [
+    "taling-chan"
+   ],
+   "lines": [
+    "srt_light_red"
+   ]
+  },
+  "thawi-watthana": {
+   "raw": {
+    "transport": 0.0707,
+    "rent": 8500,
+    "daily_essentials": 0.7904,
+    "safety": 8,
+    "food": 2.4903,
+    "green": 1.0745,
+    "gym_sports": 1.2908,
+    "vibe": 0.6894,
+    "nightlife": 0.3738,
+    "crowd": 5.7055
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 2,
+    "safety": 8,
+    "food": 2,
+    "green": 7,
+    "gym_sports": 2,
+    "vibe": 2,
+    "nightlife": 1,
+    "crowd": 9
+   },
+   "points": 1253,
+   "inhabited_share": 0.745,
+   "hub_minutes": {
+    "siam": 69,
+    "asok": 75,
+    "silom": 70,
+    "rama9": 75,
+    "mochit": 73
+   },
+   "min_transit": 69,
+   "mean_station_distance_m": 7418,
+   "facts": {
+    "area_km2": 50.22,
+    "population": 78749,
+    "population_year": 2020,
+    "density": 1568,
+    "food": 819,
+    "nightlife": 16,
+    "convenience": 73,
+    "markets": 9,
+    "essentials": 202,
+    "sports": 57,
+    "culture": 21,
+    "temples": 20,
+    "park_ha": 36.8,
+    "park_share": 0.7,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 29,
+    "nightlife": 0,
+    "essentials": 33,
+    "sports": 6,
+    "culture": 10
+   },
+   "stations": [],
+   "lines": []
+  },
+  "thon-buri": {
+   "raw": {
+    "transport": 0.5172,
+    "rent": 12000,
+    "daily_essentials": 2.1471,
+    "safety": 7,
+    "food": 4.3606,
+    "green": 0.5171,
+    "gym_sports": 2.2782,
+    "vibe": 2.1665,
+    "nightlife": 1.7511,
+    "crowd": 7.625
+   },
+   "ratings": {
+    "transport": 8,
+    "rent": 9,
+    "daily_essentials": 8,
+    "safety": 7,
+    "food": 8,
+    "green": 2,
+    "gym_sports": 7,
+    "vibe": 8,
+    "nightlife": 7,
+    "crowd": 3
+   },
+   "points": 200,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 29,
+    "asok": 38,
+    "silom": 26,
+    "rama9": 44,
+    "mochit": 46
+   },
+   "min_transit": 26,
+   "mean_station_distance_m": 915,
+   "facts": {
+    "area_km2": 8.55,
+    "population": 103377,
+    "population_year": 2020,
+    "density": 12089,
+    "food": 889,
+    "nightlife": 38,
+    "convenience": 64,
+    "markets": 13,
+    "essentials": 298,
+    "sports": 41,
+    "culture": 36,
+    "temples": 77,
+    "park_ha": 3.1,
+    "park_share": 0.4,
+    "piers": 3
+   },
+   "osm_counts": {
+    "food": 76,
+    "nightlife": 2,
+    "essentials": 117,
+    "sports": 3,
+    "culture": 41
+   },
+   "stations": [
+    "pho-nimit",
+    "talat-phlu",
+    "wutthakat"
+   ],
+   "lines": [
+    "bts_silom",
+    "mrt_blue"
+   ]
+  },
+  "thung-khru": {
+   "raw": {
+    "transport": 0.1009,
+    "rent": 9000,
+    "daily_essentials": 1.1368,
+    "safety": 8,
+    "food": 2.9092,
+    "green": 1.1549,
+    "gym_sports": 1.5214,
+    "vibe": 0.9507,
+    "nightlife": 0.7126,
+    "crowd": 6.3996
+   },
+   "ratings": {
+    "transport": 2,
+    "rent": 10,
+    "daily_essentials": 3,
+    "safety": 8,
+    "food": 3,
+    "green": 7,
+    "gym_sports": 4,
+    "vibe": 3,
+    "nightlife": 3,
+    "crowd": 8
+   },
+   "points": 690,
+   "inhabited_share": 0.828,
+   "hub_minutes": {
+    "siam": 52,
+    "asok": 53,
+    "silom": 48,
+    "rama9": 58,
+    "mochit": 68
+   },
+   "min_transit": 48,
+   "mean_station_distance_m": 8412,
+   "facts": {
+    "area_km2": 30.74,
+    "population": 123700,
+    "population_year": 2020,
+    "density": 4024,
+    "food": 841,
+    "nightlife": 27,
+    "convenience": 80,
+    "markets": 10,
+    "essentials": 222,
+    "sports": 37,
+    "culture": 17,
+    "temples": 26,
+    "park_ha": 29.0,
+    "park_share": 1.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 51,
+    "nightlife": 3,
+    "essentials": 117,
+    "sports": 9,
+    "culture": 8
+   },
+   "stations": [],
+   "lines": []
+  },
+  "wang-thonglang": {
+   "raw": {
+    "transport": 0.3972,
+    "rent": 11500,
+    "daily_essentials": 1.9143,
+    "safety": 7,
+    "food": 3.8898,
+    "green": 0.356,
+    "gym_sports": 2.1731,
+    "vibe": 1.5588,
+    "nightlife": 1.6488,
+    "crowd": 7.1463
+   },
+   "ratings": {
+    "transport": 6,
+    "rent": 9,
+    "daily_essentials": 7,
+    "safety": 7,
+    "food": 6,
+    "green": 2,
+    "gym_sports": 7,
+    "vibe": 6,
+    "nightlife": 7,
+    "crowd": 5
+   },
+   "points": 428,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 42,
+    "asok": 36,
+    "silom": 45,
+    "rama9": 30,
+    "mochit": 34
+   },
+   "min_transit": 30,
+   "mean_station_distance_m": 1104,
+   "facts": {
+    "area_km2": 18.91,
+    "population": 107458,
+    "population_year": 2020,
+    "density": 5684,
+    "food": 1343,
+    "nightlife": 84,
+    "convenience": 126,
+    "markets": 4,
+    "essentials": 520,
+    "sports": 59,
+    "culture": 39,
+    "temples": 29,
+    "park_ha": 1.8,
+    "park_share": 0.1,
+    "piers": 0
+   },
+   "osm_counts": {
+    "food": 46,
+    "nightlife": 3,
+    "essentials": 96,
+    "sports": 5,
+    "culture": 7
+   },
+   "stations": [
+    "chok-chai-4",
+    "lat-phrao-101",
+    "lat-phrao-71",
+    "lat-phrao-83",
+    "mahatthai"
+   ],
+   "lines": [
+    "mrt_yellow"
+   ]
+  },
+  "watthana": {
+   "raw": {
+    "transport": 0.4834,
+    "rent": 32000,
+    "daily_essentials": 2.6677,
+    "safety": 7,
+    "food": 5.3169,
+    "green": 0.8343,
+    "gym_sports": 3.5771,
+    "vibe": 2.5328,
+    "nightlife": 3.6042,
+    "crowd": 7.7291
+   },
+   "ratings": {
+    "transport": 7,
+    "rent": 3,
+    "daily_essentials": 9,
+    "safety": 7,
+    "food": 9,
+    "green": 5,
+    "gym_sports": 10,
+    "vibe": 9,
+    "nightlife": 10,
+    "crowd": 2
+   },
+   "points": 324,
+   "inhabited_share": 1.0,
+   "hub_minutes": {
+    "siam": 26,
+    "asok": 19,
+    "silom": 31,
+    "rama9": 24,
+    "mochit": 38
+   },
+   "min_transit": 19,
+   "mean_station_distance_m": 909,
+   "facts": {
+    "area_km2": 12.56,
+    "population": 81623,
+    "population_year": 2020,
+    "density": 6496,
+    "food": 3111,
+    "nightlife": 545,
+    "convenience": 115,
+    "markets": 9,
+    "essentials": 857,
+    "sports": 210,
+    "culture": 120,
+    "temples": 82,
+    "park_ha": 3.7,
+    "park_share": 0.3,
+    "piers": 10
+   },
+   "osm_counts": {
+    "food": 897,
+    "nightlife": 208,
+    "essentials": 526,
+    "sports": 26,
+    "culture": 54
+   },
+   "stations": [
+    "asok",
+    "ekkamai",
+    "nana",
+    "on-nut",
+    "phetchaburi",
+    "phra-khanong",
+    "phrom-phong",
+    "sukhumvit",
+    "thong-lo"
+   ],
+   "lines": [
+    "bts_sukhumvit",
+    "mrt_blue",
+    "arl"
+   ]
+  },
+  "yan-nawa": {
+   "raw": {
+    "transport": 0.2269,
+    "rent": 15000,
+    "daily_essentials": 1.7999,
+    "safety": 7,
+    "food": 4.0437,
+    "green": 1.3386,
+    "gym_sports": 2.7171,
+    "vibe": 1.7501,
+    "nightlife": 1.1983,
+    "crowd": 6.86
+   },
+   "ratings": {
+    "transport": 4,
+    "rent": 8,
+    "daily_essentials": 6,
+    "safety": 7,
+    "food": 7,
+    "green": 8,
+    "gym_sports": 9,
+    "vibe": 6,
+    "nightlife": 5,
+    "crowd": 6
+   },
+   "points": 309,
+   "inhabited_share": 0.987,
+   "hub_minutes": {
+    "siam": 34,
+    "asok": 32,
+    "silom": 27,
+    "rama9": 38,
+    "mochit": 51
+   },
+   "min_transit": 27,
+   "mean_station_distance_m": 3540,
+   "facts": {
+    "area_km2": 16.66,
+    "population": 76564,
+    "population_year": 2020,
+    "density": 4595,
+    "food": 848,
+    "nightlife": 33,
+    "convenience": 67,
+    "markets": 5,
+    "essentials": 286,
+    "sports": 69,
+    "culture": 29,
+    "temples": 27,
+    "park_ha": 9.6,
+    "park_share": 0.8,
+    "piers": 4
+   },
+   "osm_counts": {
+    "food": 183,
+    "nightlife": 4,
+    "essentials": 116,
+    "sports": 16,
+    "culture": 27
+   },
+   "stations": [],
+   "lines": [
+    "mrt_blue"
+   ]
+  }
+ }
+}

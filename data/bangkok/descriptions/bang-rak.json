@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old and new downtown at once: Silom towers and Patpong neon, then Charoen Krung's shophouses, galleries and riverside hotels. Rail on every corner, expensive, never quiet.",
+    "landmarks": "MahaNakhon tower, Sri Mahamariamman temple on Silom, Assumption Cathedral, Haroon Mosque, TCDC in the Grand Postal Building, Chao Phraya piers, Lumphini Park across Rama IV.",
+    "food": "~1.8k places to eat: Silom lunch carts and Soi Convent stalls, Thaniya's Japanese strip, Prachak roast duck and halal curry shops on Charoen Krung, riverside hotel dining.",
+    "nightlife": "Patpong's go-go bars and night market, Silom's gay sois, Thaniya hostess clubs, Sky Bar and MahaNakhon rooftops, cocktail bars along Charoen Krung."
+  },
+  "ja": {
+    "atmosphere": "新旧が同居する都心。シーロムの高層ビルとパッポンのネオン、その先にチャルンクルン通りの古いショップハウス、ギャラリー、川沿いのホテル。駅はどこにでもあるが、家賃は高く、静けさはない。",
+    "landmarks": "マハナコーン、シーロムのスリ・マハ・マリアマン寺院、アサンプション大聖堂、ハルーン・モスク、旧中央郵便局に入るTCDC、チャオプラヤー川の船着き場、ラマ4世通りの向かいにルンピニー公園。",
+    "food": "飲食店は約1800軒。シーロムの昼の屋台とコンベント通りの屋台、日本料理が並ぶタニヤ通り、チャルンクルン通りのプラチャックのローストダックとハラールのカレー食堂、川沿いホテルのダイニング。",
+    "nightlife": "パッポンのゴーゴーバーとナイトマーケット、シーロムのゲイ街、日本人向けクラブが並ぶタニヤ、スカイバーやマハナコーンの屋上バー、チャルンクルン通りのカクテルバー。"
+  },
+  "ru": {
+    "atmosphere": "Старый и новый даунтаун сразу: башни Силома и неон Патпонга, а дальше шопхаусы Чароен Крунг, галереи и отели у реки. Станции на каждом углу, дорого, тихо не бывает.",
+    "landmarks": "Башня MahaNakhon, индуистский храм Шри Маха Мариамман на Силоме, Успенский собор, мечеть Харун, старый Главпочтамт с TCDC, пирсы Чао Прайи, парк Лумпини через Рама IV.",
+    "food": "Около 1,8 тыс. мест, где поесть: обеденные тележки Силома и лотки на сой Конвент, японская улица Тания, утка в Prachak и халяльные карри на Чароен Крунг, отельные рестораны у реки.",
+    "nightlife": "Гоу-гоу бары и ночной рынок Патпонга, гей-сои Силома, хостес-клубы Тании, руфтопы Sky Bar и MahaNakhon, коктейльные бары на Чароен Крунг."
+  }
+}

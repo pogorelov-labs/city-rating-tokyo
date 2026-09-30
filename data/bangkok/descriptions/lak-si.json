@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Civil-service north: the Chaeng Watthana Government Complex, National Telecom offices, gated estates and public-housing blocks at Thung Song Hong. Pink Line and Red Line, yet Siam is ~50 min away. Calm, cheap, plain.",
+    "landmarks": "Government Complex with the Immigration office, IT Square, Chulabhorn Hospital, Dhurakij Pundit University, Bueng Si Kan lake park; Don Mueang airport just north.",
+    "food": "Food courts inside the Government Complex, shophouse noodle and rice stalls, small fresh markets; the big malls sit just over the Nonthaburi line.",
+    "nightlife": "Quiet after dark: a handful of beer gardens, local pubs and karaoke. Early nights are the norm."
+  },
+  "ja": {
+    "atmosphere": "公務員の北部。チェーンワッタナ政府合同庁舎、国営通信NTのオフィス、トゥンソーンホンのゲート付き住宅地と公営団地。ピンクラインとレッドラインはあるが、サイアムまで約50分。穏やか、安い、地味。",
+    "landmarks": "入国管理局（ビザ延長）が入る政府合同庁舎、ITスクエア、チュラポーン病院、ドゥラキットバンディット大学、池のあるブンシーカン公園。すぐ北にドンムアン空港。",
+    "food": "政府合同庁舎内のフードコート、ショップハウスの麺・ご飯の屋台、小さな生鮮市場。大型モールはノンタブリー県に入ってすぐ。",
+    "nightlife": "夜は静か。ビアガーデン、地元のパブ、カラオケが少し。早寝が基本。"
+  },
+  "ru": {
+    "atmosphere": "Чиновничий север: правительственный комплекс на Чаенгваттана, офисы National Telecom, закрытые посёлки и муниципальные дома в Тхунг Сонг Хонге. Есть розовая ветка и красная линия SRT, но до Сиама ~50 минут. Спокойно, дёшево, пресно.",
+    "landmarks": "Правительственный комплекс с иммиграционным офисом для продления виз, IT Square, больница Чулабхорн, университет Dhurakij Pundit, озёрный парк Бынгсикан; чуть севернее аэропорт Донмыанг.",
+    "food": "Фудкорты внутри правительственного комплекса, лапша и рис в шопхаусах, небольшие рынки; крупные моллы сразу за границей Нонтхабури.",
+    "nightlife": "Вечером тихо: пара пивных садов, местные пабы и караоке. Здесь рано ложатся."
+  }
+}

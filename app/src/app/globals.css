@@ -164,3 +164,78 @@ body {
     visibility: visible;
   }
 }
+
+/* ─── Bangkok district map (DistrictMap.tsx) ─── */
+
+/* Clicking a district focuses its SVG path; Chrome then draws a rectangular
+   focus ring around the whole polygon. Mouse focus needs no ring — keyboard
+   users reach districts through search and the ranked list. */
+.leaflet-container path.leaflet-interactive:focus {
+  outline: none;
+}
+
+/* District name labels: divIcon markers with a zero-size anchor, centred on
+   the polygon's pole of inaccessibility. White halo keeps them legible on
+   every fill of the akane↔kon palette. */
+.district-label {
+  background: none;
+  border: none;
+}
+.district-label span {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font: 600 11px/1.1 var(--font-inter), system-ui, sans-serif;
+  color: #1f2937;
+  letter-spacing: 0.01em;
+  text-shadow:
+    0 0 2px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+/* Sticky tooltip that follows the cursor across districts. A short 120 ms
+   enter delay (vs 400 ms for station markers) — sweeping across a
+   choropleth should feel immediate, but not flicker on every border. */
+.district-tooltip,
+.station-dot-tooltip {
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  background: white !important;
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+}
+.district-tooltip {
+  padding: 8px 10px !important;
+  animation: station-tooltip-appear 1ms linear 120ms both;
+}
+.station-dot-tooltip {
+  padding: 5px 8px !important;
+}
+.district-tooltip::before,
+.station-dot-tooltip::before {
+  border-top-color: white !important;
+}
+
+/* Top-5 districts: outline-only breathing (fill untouched so the palette
+   stays readable). */
+@keyframes district-top-pulse {
+  0%, 100% { stroke-opacity: 0.25; stroke-width: 1.5; }
+  50% { stroke-opacity: 0.8; stroke-width: 3; }
+}
+.district-top-pulse {
+  animation: district-top-pulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #6b7280 !important;
+}
+
+@media (hover: none) {
+  .district-tooltip {
+    animation: none;
+    visibility: visible;
+  }
+}

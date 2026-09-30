@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Chinatown proper and Bangkok's smallest district: Yaowarat's gold shops, Sampeng's wholesale crush, riverside Talat Noi's auto-parts workshops. MRT at Wat Mangkon, food on every corner, never quiet, cramped shophouse living.",
+    "landmarks": "Yaowarat Road, Sampeng Lane, Wat Traimit's Golden Buddha, Song Wat's old warehouses turned cafés, Talat Noi's Holy Rosary Church and So Heng Tai mansion, River City on the Chao Phraya.",
+    "food": "Yaowarat after dark is one long table: seafood grills, peppery roll-noodle soup, dim sum, dessert carts. By day, shark-fin and bird's-nest houses, old coffee shops, Talat Noi's new cafés.",
+    "nightlife": "Shophouse cocktail bars and small jazz rooms; Chinatown's Soi Nana bar strip sits just over the line in Pom Prap."
+  },
+  "ja": {
+    "atmosphere": "チャイナタウンの本丸、バンコク最小の区。ヤワラートの金行、サンペンの問屋の雑踏、川沿いタラートノーイの自動車部品工房。MRTワット・マンコン駅、どこでも食、静けさはゼロ、ショップハウス暮らしは窮屈。",
+    "landmarks": "ヤワラート通り、サンペン・レーン、黄金仏のワット・トライミット、古い倉庫がカフェになったソンワット通り、タラートノーイのホーリーロザリー教会とソーヘンタイ邸、チャオプラヤー川沿いのリバーシティ。",
+    "food": "夜のヤワラートは一本の長い食卓。海鮮焼き、胡椒の効いたクイジャップ、点心、甘味の屋台。昼はフカヒレと燕の巣の店、古い喫茶、タラートノーイの新しいカフェ。",
+    "nightlife": "ショップハウスのカクテルバーと小さなジャズバー。チャイナタウンのソイ・ナナのバー街は区境をまたいですぐ隣。"
+  },
+  "ru": {
+    "atmosphere": "Чайнатаун в чистом виде и самый маленький район Бангкока: золотые лавки Яоварата, оптовая давка Сампенга, прибрежный Талат Ной с мастерскими автозапчастей. MRT Ват Мангкон рядом, еда на каждом углу, тишины нет, жильё — тесные шопхаусы.",
+    "landmarks": "Улица Яоварат, переулок Сампенг, Золотой Будда в Ват Траймит, старые склады улицы Сонгват, ставшие кафе, церковь Святого Розария и особняк Со Хенг Тай в Талат Ное, River City у реки Чао Прайя.",
+    "food": "Вечером Яоварат — один длинный стол: морепродукты на гриле, перечный суп с рулетиками лапши, димсамы, десертные тележки. Днём — лавки с акульими плавниками и ласточкиными гнёздами, старые кофейни, новые кафе Талат Ноя.",
+    "nightlife": "Коктейльные бары в шопхаусах и крошечные джаз-бары; барная Сой Нана (не путать с сукхумвитской) — сразу за границей района."
+  }
+}
