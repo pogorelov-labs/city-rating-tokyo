@@ -33,17 +33,18 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
 
   useEffect(() => {
     if (!open && visible) {
+      // The drawer div is always rendered (only display toggles), so the ref is
+      // set by now. If it ever isn't, the fallback timer below still hides it.
       const el = drawerRef.current;
-      if (!el) { setVisible(false); return; }
       const onEnd = (e: TransitionEvent) => {
         // Ignore bubbled transitionend from children (e.g. button transition-colors)
         if (e.target !== el) return;
         setVisible(false);
       };
-      el.addEventListener('transitionend', onEnd);
+      el?.addEventListener('transitionend', onEnd);
       // Fallback in case transitionend doesn't fire (e.g. display:none race)
       const timer = setTimeout(() => setVisible(false), 350);
-      return () => { el.removeEventListener('transitionend', onEnd); clearTimeout(timer); };
+      return () => { el?.removeEventListener('transitionend', onEnd); clearTimeout(timer); };
     }
   }, [open, visible]);
 

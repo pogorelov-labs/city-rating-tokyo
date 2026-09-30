@@ -19,6 +19,9 @@ jobs:
           cache: npm
           cache-dependency-path: app/package-lock.json
       - run: npm ci
+      # Errors fail the job; warnings don't. Lint crashed from 2026-08 until
+      # CRTKY-133 and nobody noticed, because CI never ran it.
+      - run: npm run lint
       - run: npx tsc --noEmit
       - run: npm run build
       - run: npm audit --audit-level=moderate
