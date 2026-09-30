@@ -60,6 +60,7 @@ Scrapers run as ad-hoc Docker containers on the VPS (no scheduler yet). They are
 
 ## Testing
 
+- **ESLint** (`cd app && npm run lint`): Next.js + TypeScript + React hooks / React Compiler rules. Runs in CI's `build` job; errors fail it, warnings don't
 - **Vitest** (`cd app && npm test`): scoring pure functions, URL state round-trip, dealbreaker filtering
 - **pytest** (`pytest` from repo root): `compute-ratings.py` normalization/caps, cross-language schema parity
 - **Playwright** (e2e): planned; not yet wired. The `.claude/skills/` (flyto-visual-test, perf-capture, prod-smoke-test) document manual verification flows.
@@ -79,7 +80,7 @@ The MCP container runs as a non-root user (`mcp`, uid 1001). The Dockerfile copi
 
 ## Branch protection on `main`
 
-- Requires the `build` status check (CI: `tsc --noEmit` + `npm run build` + `npm audit` + now MCP `ruff`/`pytest`)
+- Requires the `build` status check (CI: `npm run lint` + `tsc --noEmit` + `npm run build` + `npm audit` + now MCP `ruff`/`pytest`)
 - No force-push, no deletion (admin bypass available for emergencies)
 - No PR review enforcement (merging is convention, not API-enforced) — be disciplined
 
