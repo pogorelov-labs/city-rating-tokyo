@@ -35,10 +35,7 @@ export default function LiveCameras({ livecams, locale }: Props) {
   const isTouch = useIsTouch();
   const [activeIdx, setActiveIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  if (!livecams || livecams.length === 0) return null;
-
-  const active = livecams[activeIdx];
+  const embedUrl = livecams?.[activeIdx]?.embed_url;
 
   // iOS Safari often refuses to autoplay YouTube live stream embeds even when
   // muted: the player ends up in a stuck "trying to autoplay" state and shows
@@ -47,16 +44,22 @@ export default function LiveCameras({ livecams, locale }: Props) {
   // tap as a (single extra) gesture to actually start the stream. Desktop keeps
   // autoplay because Chrome/Safari/Firefox honor `mute=1` autoplay reliably
   // and the click on our facade already counts as the gesture.
+  // Computed before the early return below: hooks must run on every render.
   const iframeSrc = useMemo(() => {
-    if (!isTouch) return active.embed_url;
+    if (!embedUrl || !isTouch) return embedUrl;
     try {
-      const u = new URL(active.embed_url);
+      const u = new URL(embedUrl);
       u.searchParams.delete('autoplay');
       return u.toString();
     } catch {
-      return active.embed_url.replace(/[?&]autoplay=1/, (m) => (m.startsWith('?') ? '?' : ''));
+      return embedUrl.replace(/[?&]autoplay=1/, (m) => (m.startsWith('?') ? '?' : ''));
     }
-  }, [active.embed_url, isTouch]);
+  }, [embedUrl, isTouch]);
+
+  if (!livecams || livecams.length === 0) return null;
+
+  const active = livecams[activeIdx];
+
   // RU falls back to EN — MT3D source has no Russian
   const pickName = (cam: LiveCamera) =>
     locale === 'ja' ? cam.name_ja : cam.name_en;

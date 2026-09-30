@@ -71,7 +71,7 @@ export default function ScatterPlotExplorer({ stations }: Props) {
         return { name: stationPrimaryName(s, locale), x, y, score, fill: compositeToColor(score, compositeAnchors) };
       })
       .filter(Boolean) as { name: string; x: number; y: number; score: number; fill: string }[];
-  }, [stations, deferredWeights, xAxis, yAxis, compositeAnchors]);
+  }, [stations, deferredWeights, xAxis, yAxis, compositeAnchors, locale]);
 
   return (
     <div>

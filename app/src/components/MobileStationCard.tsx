@@ -25,11 +25,13 @@ interface MobileStationCardProps {
  * targets, and can't reliably position above a marker near the viewport edge).
  * Follows the industry-standard pattern used by Google Maps, Apple Maps, Airbnb.
  *
- * State machine:
- *   - null → non-null: setVisible(true) → double-rAF → setOpen(true), slide up
+ * State machine (one `raised` flag, set only from rAF / transitionend / timer
+ * callbacks; `open` and `visible` are derived from it):
+ *   - null → non-null: mounts offscreen → double-rAF → raised, slide up
  *   - switching stations (non-null → different non-null): stays open, content swaps
- *   - non-null → null: setOpen(false), transitionend → setVisible(false), slide down
- *   - while isFlying: card stays hidden; it appears after flyTo lands
+ *   - non-null → null: card unmounts at once; `raised` resets during render
+ *   - while isFlying: slides down, display:none after transitionend; it slides
+ *     back up after flyTo lands
  *
  * `display: none` when fully hidden avoids Safari 26 Liquid Glass toolbar
  * tinting scanning the card's white background behind the toolbar.
@@ -66,50 +68,52 @@ export default function MobileStationCard({
   const snippet = station && (city.unit === 'district' || locale === 'ru') ? snippets[station.slug] : undefined;
   const isCompared = station ? compareStations.includes(station.slug) : false;
 
-  // Visibility state machine — mirrors MobileDrawer pattern.
-  const [visible, setVisible] = useState(false);
-  const [open, setOpen] = useState(false);
+  // Visibility state machine — same two phases as MobileDrawer, but driven by
+  // selectedStation + isFlying instead of button handlers.
+  const [raised, setRaised] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Drive the slide-up animation based on selectedStation + isFlying.
+  // No station → the card unmounts (early return below), so the next one must
+  // slide up from the bottom again. Reset during render, not in an effect: an
+  // effect would commit the stale flag first and then render a second time.
+  if (!station && raised) setRaised(false);
+
   // A station is showable when: it exists AND we are not mid-flight.
   const showable = station !== null && !isFlying;
+  const open = showable && raised;
+  // Still displayed while sliding down; display:none once fully lowered.
+  const visible = showable || raised;
 
+  // Phase 1: mounted offscreen (visible, not open). Phase 2, two frames later
+  // so the offscreen position has been laid out: slide up.
   useEffect(() => {
-    if (showable) {
-      // Phase 1: mount offscreen, Phase 2: slide up.
-      setVisible(true);
-      const raf1 = requestAnimationFrame(() => {
-        const raf2 = requestAnimationFrame(() => setOpen(true));
-        return () => cancelAnimationFrame(raf2);
-      });
-      return () => cancelAnimationFrame(raf1);
-    } else {
-      setOpen(false);
-    }
+    if (!showable) return;
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => setRaised(true));
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
   }, [showable]);
 
-  // After slide-down completes, unmount (display:none) to avoid Safari 26
+  // After slide-down completes, hide (display:none) to avoid Safari 26
   // Liquid Glass toolbar tinting. Fallback timer handles missed transitionend.
   useEffect(() => {
-    if (!open && visible) {
-      const el = cardRef.current;
-      if (!el) {
-        setVisible(false);
-        return;
-      }
-      const onEnd = (e: TransitionEvent) => {
-        if (e.target !== el) return;
-        setVisible(false);
-      };
-      el.addEventListener('transitionend', onEnd);
-      const timer = setTimeout(() => setVisible(false), 300);
-      return () => {
-        el.removeEventListener('transitionend', onEnd);
-        clearTimeout(timer);
-      };
-    }
-  }, [open, visible]);
+    if (showable || !raised) return;
+    const el = cardRef.current;
+    const onEnd = (e: TransitionEvent) => {
+      if (e.target !== el) return;
+      setRaised(false);
+    };
+    el?.addEventListener('transitionend', onEnd);
+    const timer = setTimeout(() => setRaised(false), 300);
+    return () => {
+      el?.removeEventListener('transitionend', onEnd);
+      clearTimeout(timer);
+    };
+  }, [showable, raised]);
 
   const handleClose = useCallback(() => {
     setSelectedStation(null);
