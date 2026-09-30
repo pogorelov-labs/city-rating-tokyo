@@ -56,16 +56,16 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'station' });
   const station = getStation(slug);
   if (!station) return { title: 'Station Not Found' };
-  const { primary } = stationDisplayName(station, locale as Locale);
+  const { primary, secondary } = stationDisplayName(station, locale as Locale);
   const atmosphere = station.description?.[locale as Locale]?.atmosphere;
   const desc = atmosphere
     ? atmosphere.slice(0, 155)
     : t('metaDescriptionFallback', { name: primary });
   return {
-    title: t('metaTitle', { name: primary, nameJp: station.name_jp }),
+    title: t('metaTitle', { name: primary, secondary }),
     description: t('metaDescription', { name: primary, description: desc }),
     openGraph: {
-      title: `${primary} (${station.name_jp})`,
+      title: `${primary} (${secondary})`,
       description: desc,
       type: 'article',
     },

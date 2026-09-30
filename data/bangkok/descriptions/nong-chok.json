@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's rural far east: rice paddies, fish ponds, farm canals, Thai-Muslim and Buddhist villages from Lam Phak Chi to Khok Faet. No rail at all; the centre is ~1h40 by road. Cheapest, quietest, remotest.",
+    "landmarks": "Bangkok's biggest district by area: paddies and canals, many mosques, Nong Chok Park and market, Mahanakorn University, Bangkok Arena, an indoor stadium among the fields.",
+    "food": "Halal khao mok, roti and beef noodle shops, stalls around Nong Chok market, a few garden restaurants. Sparse; for more choice, drive to Min Buri.",
+    "nightlife": "Likely very little after dark beyond a few roadside beer gardens and karaoke; nights start and end early."
+  },
+  "ja": {
+    "atmosphere": "バンコクの農村、最東端。田んぼ、養魚池、農業用水路、ラムパックチーからコークファエットまで続くムスリムと仏教徒の村。鉄道は一切なし、都心まで車で約1時間40分。最安、最静、最遠。",
+    "landmarks": "面積はバンコク最大の区。田んぼと運河、多くのモスク、ノーンチョーク公園と市場、マハナコーン工科大学、田園に建つ屋内競技場バンコク・アリーナ。",
+    "food": "ハラールのカオモック、ロティ、牛肉麺の店、ノーンチョーク市場周辺の屋台、ガーデンレストランが少し。選択肢は乏しく、もっと欲しければ車でミンブリーへ。",
+    "nightlife": "夜はおそらくほぼ何もない。道路沿いのビアガーデンとカラオケが少し、夜は早く始まり早く終わる。"
+  },
+  "ru": {
+    "atmosphere": "Сельский дальний восток Бангкока: рисовые поля, рыбные пруды, каналы, мусульманские и буддийские деревни от Лам Пхак Чи до Кхок Фаэта. Никаких рельсов, до центра ~1 ч 40 мин по дороге. Дешевле, тише и дальше некуда.",
+    "landmarks": "Крупнейший по площади район Бангкока: поля и каналы, много мечетей, парк и рынок Нонгчок, университет Маханакорн, крытый стадион Bangkok Arena посреди полей.",
+    "food": "Халяльные као мок, роти и говяжья лапша, лотки у рынка Нонгчок, пара садовых ресторанов. Выбор скудный, за разнообразием — на машине в Минбури.",
+    "nightlife": "Похоже, вечером почти ничего: пара придорожных пивных садов и караоке, ночь начинается и кончается рано."
+  }
+}

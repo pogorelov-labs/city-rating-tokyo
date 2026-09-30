@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { routing } from '@/i18n/routing';
@@ -41,11 +41,18 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
   setRequestLocale(locale);
   const tp = await getTranslations({ locale, namespace: 'privacy' });
+  // `bangkok.*` copy is rendered by server components only (district pages,
+  // the Bangkok header, metadata), so it stays out of the client payload of
+  // every page — including the 4.5k Tokyo ones that never use it.
+  const messages = await getMessages();
+  const clientMessages = Object.fromEntries(
+    Object.entries(messages).filter(([namespace]) => namespace !== 'bangkok'),
+  ) as typeof messages;
 
   return (
     <html lang={locale} className={`${inter.variable} h-full`}>
       <body className="h-full font-sans antialiased">
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>
           {children}
         </NextIntlClientProvider>
         <p className="hidden md:block fixed bottom-1 left-1/2 -translate-x-1/2 text-[10px] text-gray-400/60 pointer-events-none z-[1] whitespace-nowrap">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import bangkokMeta from '@/data/bangkok/meta.json';
 
 export const metadata: Metadata = {
   title: 'Methodology - Tokyo Neighborhood Explorer',
@@ -89,6 +90,20 @@ const DATA_SOURCES = [
     confidence: 'strong',
     note: '9 subcategories weighted by daily-life importance. 1491 stations from direct OSM data, 2 from proxy.',
   },
+];
+
+/** Bangkok (district-level) sources — see research/bangkok/00-overview.md. */
+const BANGKOK_SOURCES: { category: string; sources: string; confidence: string }[] = [
+  { category: 'Transport', sources: 'OpenStreetMap rail network (BTS, MRT, ARL, SRT Red, Gold, monorails) + bus stops and boat piers; modelled commute to 5 hubs', confidence: 'Partial' },
+  { category: 'Rent / Affordability', sources: 'Researcher estimate of typical 1-bed / 2-bed condo asking rents, calibrated on published listing aggregates', confidence: 'Curated' },
+  { category: 'Daily Essentials', sources: 'Overture Maps Places + OpenStreetMap (convenience stores, markets, pharmacies, clinics, banks, laundries, schools)', confidence: 'Measured (49/50)' },
+  { category: 'Safety', sources: 'Researcher assessment — no open district-level crime data is published', confidence: 'Curated' },
+  { category: 'Food & Dining', sources: 'Overture Maps Places + OpenStreetMap (restaurants, street-food stalls, cafés, food courts)', confidence: 'Measured (43/50)' },
+  { category: 'Parks & Green', sources: 'OpenStreetMap park / garden / woodland polygons — hectares within 1 km', confidence: 'Partial' },
+  { category: 'Gym & Sports', sources: 'Overture Maps Places + OpenStreetMap (gyms, sports centres, pools)', confidence: 'Measured / Partial' },
+  { category: 'Vibe & Atmosphere', sources: 'Overture + OSM culture venues, cafés, temples, markets, pedestrian streets', confidence: 'Measured / Partial' },
+  { category: 'Nightlife', sources: 'Overture + OSM bars, pubs, clubs, live-music venues, karaoke', confidence: 'Measured / Partial' },
+  { category: 'Quietness', sources: 'DOPA registered population density + density of all mapped places (inverted)', confidence: 'Partial' },
 ];
 
 const CONFIDENCE_LEVELS = [
@@ -332,6 +347,82 @@ export default async function MethodologyPage({
             千葉県警察ホームページ (2024 statistics). Population and small-area boundaries:
             出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成; Tokyo daytime
             population: 東京都の統計. Source files and checksums are listed in data/crime/sources.json.
+          </p>
+        </section>
+
+        {/* Bangkok */}
+        <section id="bangkok" className="scroll-mt-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Bangkok: district-level ratings</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Bangkok is rated by its {bangkokMeta.district_count} districts (<em>khet</em>), not by station:
+            large parts of the city are not served by rail, and districts are how people there search for
+            a place to live. The rail network is drawn on top of the map ({bangkokMeta.station_count} stations
+            on 10 lines) as context.
+          </p>
+          <p className="text-gray-700 leading-relaxed mt-3">
+            Each district is covered by a 200&nbsp;m grid. Every point records what a resident standing there
+            can reach: places to eat, shops and clinics within walking distance, park hectares within 1&nbsp;km,
+            the nearest rail station, and a modelled peak-hour commute to five hubs (Siam, Asok, Silom, Rama&nbsp;9,
+            Mo&nbsp;Chit). Points in built-up areas carry full weight and empty paddy fields or river water almost
+            none, so a huge semi-rural district is judged by where people actually live. District signals are then
+            percentile-ranked across the 50 districts, exactly like Tokyo&apos;s stations.
+          </p>
+          <div className="bg-white rounded-lg border border-gray-200 mt-4 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-xs text-gray-500 border-b border-gray-200">
+                  <th className="px-4 py-2 font-medium">Category</th>
+                  <th className="px-4 py-2 font-medium">Sources</th>
+                  <th className="px-4 py-2 font-medium">Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                {BANGKOK_SOURCES.map((row) => (
+                  <tr key={row.category} className="border-b border-gray-50 last:border-0 align-top">
+                    <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">{row.category}</td>
+                    <td className="px-4 py-2 text-gray-600">{row.sources}</td>
+                    <td className="px-4 py-2 text-gray-600 whitespace-nowrap">{row.confidence}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-2">
+            The two POI sources agree closely across districts (Pearson r of log density: food{' '}
+            {bangkokMeta.source_agreement_r.food}, nightlife {bangkokMeta.source_agreement_r.nightlife}, daily
+            essentials {bangkokMeta.source_agreement_r.daily_essentials}, culture {bangkokMeta.source_agreement_r.vibe}).
+            A category is &ldquo;Measured&rdquo; in a district only when both are well mapped there.
+          </p>
+          <h3 className="font-semibold text-gray-900 mt-5 mb-2">Bangkok limitations</h3>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Scores are relative within each city.</strong> A Bangkok 8 means &ldquo;among the best of Bangkok&apos;s 50 districts&rdquo; &mdash; it is not comparable with a Tokyo 8. Weights carry over between cities; dealbreakers are kept per city because rent is in different currencies.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Rent and safety are researcher estimates.</strong> Bangkok publishes no open district-level rent or crime statistics and the listing portals block automated access, so both are marked &ldquo;Curated&rdquo;. Safety does not cover road traffic, the city&apos;s largest real risk.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Mapping bias.</strong> Tourist and expat districts are mapped more thoroughly than outer suburbs in both OSM and Overture; outer-district food and nightlife scores are likely understated.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Commute model.</strong> Door-to-door estimate: walk or motorbike taxi to a station, peak waits and average line speeds calibrated on published end-to-end times, or a road trip with distance-dependent peak speed. Not timetable-based; lines under construction are not included.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>No flood layer yet.</strong> Elevation and seismic filters are Tokyo-only. District-level flood exposure for Bangkok (e.g. from BMA Traffy Fondue flood reports) is a planned addition.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>Population</strong> is DOPA house registration (2020, via Wikidata); central districts house many unregistered residents, so their real density is higher.</span>
+            </li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-3">
+            Data: &copy; OpenStreetMap contributors (ODbL), Overture Maps Places release 2026-09-23 (CDLA-Permissive-2.0),
+            Wikidata (CC0), district photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
           </p>
         </section>
 

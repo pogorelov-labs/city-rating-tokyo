@@ -3,7 +3,9 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useCityState, useCityActions } from '@/lib/store';
+import { useCity } from '@/lib/city-context';
+import { areaPath, formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { stationDisplayName } from '@/lib/station-name';
 import { calculateWeightedScore } from '@/lib/scoring';
@@ -41,12 +43,11 @@ export default function MobileStationCard({
   const locale = useLocale() as Locale;
   const isTouch = useIsTouch();
 
-  const selectedStation = useAppStore((s) => s.selectedStation);
-  const setSelectedStation = useAppStore((s) => s.setSelectedStation);
+  const city = useCity();
+  const selectedStation = useCityState((s) => s.selectedStation);
   const isFlying = useAppStore((s) => s.isFlying);
-  const compareStations = useAppStore((s) => s.compareStations);
-  const addCompareStation = useAppStore((s) => s.addCompareStation);
-  const removeCompareStation = useAppStore((s) => s.removeCompareStation);
+  const compareStations = useCityState((s) => s.compareStations);
+  const { setSelectedStation, addCompareStation, removeCompareStation } = useCityActions();
   const weights = useAppStore((s) => s.weights);
 
   const station = useMemo(
@@ -60,7 +61,9 @@ export default function MobileStationCard({
   );
 
   const thumbEntry = station ? thumbnails[station.slug] : undefined;
-  const snippet = station && locale === 'ru' ? snippets[station.slug] : undefined;
+  // Tokyo snippets stay RU-only (legacy gate); Bangkok descriptions were
+  // written natively in EN/JA/RU, so they show in every locale.
+  const snippet = station && (city.unit === 'district' || locale === 'ru') ? snippets[station.slug] : undefined;
   const isCompared = station ? compareStations.includes(station.slug) : false;
 
   // Visibility state machine — mirrors MobileDrawer pattern.
@@ -198,8 +201,12 @@ export default function MobileStationCard({
             )}
           </div>
           <div className="text-xs text-gray-500 mt-1">
-            {t('filter.lines', { count: station.line_count })}
-            {station.rent_1k ? <> · ~¥{(station.rent_1k / 1000).toFixed(0)}k/mo</> : null}
+            {city.unit === 'district' && station.station_count !== undefined
+              ? station.station_count > 0
+                ? <>{t('filter.stations', { count: station.station_count })} · {t('filter.lines', { count: station.line_count })}</>
+                : t('map.noRailInDistrict')
+              : t('filter.lines', { count: station.line_count })}
+            {station.rent_1k ? <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</> : null}
           </div>
           {snippet && (
             <div className="text-xs text-gray-600 mt-1.5 line-clamp-2 leading-relaxed">
@@ -211,7 +218,7 @@ export default function MobileStationCard({
         {/* Close button */}
         <button
           onClick={handleClose}
-          aria-label={t('map.closeCard')}
+          aria-label={t(city.unit === 'district' ? 'map.closeCardDistrict' : 'map.closeCard')}
           className="shrink-0 -mr-1 -mt-1 p-2 text-gray-400 active:text-gray-600 active:bg-gray-100 rounded-lg"
           style={{ minWidth: 36, minHeight: 36 }}
         >
@@ -224,7 +231,7 @@ export default function MobileStationCard({
       {/* Actions — 44px WCAG pill buttons */}
       <div className="flex items-stretch gap-2 px-3 pb-3">
         <Link
-          href={`/station/${station.slug}`}
+          href={areaPath(city.id, station.slug)}
           data-umami-event="view-details"
           data-umami-event-station={station.slug}
           className="flex-1 flex items-center justify-center rounded-lg bg-blue-600 text-white text-sm font-medium active:bg-blue-700"

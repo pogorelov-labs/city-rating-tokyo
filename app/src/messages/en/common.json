@@ -59,7 +59,12 @@
     "shinjuku": "Shinjuku",
     "tokyo": "Tokyo",
     "ikebukuro": "Ikebukuro",
-    "shinagawa": "Shinagawa"
+    "shinagawa": "Shinagawa",
+    "siam": "Siam",
+    "asok": "Asok",
+    "silom": "Silom",
+    "rama9": "Rama 9",
+    "mochit": "Mo Chit"
   },
   "presets": {
     "young-pro": "Young Pro",
@@ -82,10 +87,16 @@
     },
     "editorial": {
       "label": "Curated",
-      "description": "Set by human researcher, may differ from data"
+      "description": "Set by human researcher, may differ from data",
+      "descriptionResearch": "Researcher estimate — no open district-level data exists; treat as indicative"
     }
   },
   "sources": {
+    "overture": "Overture Maps",
+    "osm_rail": "OSM rail network",
+    "transit_model": "Commute model",
+    "listing_research": "Listing research",
+    "dopa_population": "DOPA registration",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper (late-night)",
     "osm": "OpenStreetMap",
@@ -122,7 +133,8 @@
   },
   "scatterAxes": {
     "rent_1k": "Rent (1K-1LDK, yen)",
-    "min_transit": "Min Transit (min)"
+    "min_transit": "Min Transit (min)",
+    "rent_1k_bangkok": "Rent (1-bed condo, THB)"
   },
   "loading": {
     "chart": "Loading chart…",
@@ -158,7 +170,20 @@
     "stationsMapped": "{count} stations mapped",
     "withRatings": "{count} with ratings",
     "rentUnconfirmed": "(rent unconfirmed)",
-    "lines": "{count, plural, one {# line} other {# lines}}"
+    "lines": "{count, plural, one {# line} other {# lines}}",
+    "searchPlaceholderDistrict": "Search district, area or station…",
+    "searchPlaceholderDistrictShort": "District, area, station…",
+    "clearSearch": "Clear search",
+    "stations": "{count, plural, =0 {no stations} one {# station} other {# stations}}",
+    "rentDistrict": "Rent (1-bed)",
+    "commuteDistrict": "Commute to hub",
+    "stationCountDistrict": "{count} districts",
+    "matchCountDistrict": "<bold>{filtered}</bold> of {total} districts match",
+    "noMatchDistrict": "No districts match — try relaxing filters",
+    "noMatchFiltersDistrict": "No districts match your filters",
+    "noRatedYetDistrict": "No rated districts yet",
+    "stationsMappedDistrict": "{count} districts mapped",
+    "relativeScoresNote": "Scores are relative within Bangkok's 50 districts — not comparable with Tokyo scores. Rent and safety are researcher estimates."
   },
   "map": {
     "clickForDetails": "Click for details →",
@@ -168,13 +193,30 @@
     "removeCompare": "Remove compare",
     "dataComingSoon": "Data coming soon",
     "heatmap": "Heatmap",
-    "compositeScore": "Composite Score"
+    "compositeScore": "Composite Score",
+    "railNetwork": "Rail",
+    "railNetworkHint": "Show BTS, MRT, Airport Rail Link and SRT Red Line routes and stations",
+    "noRailInDistrict": "No rail station",
+    "closeCardDistrict": "Close district card",
+    "filteredOut": "Filtered out",
+    "reasonCategory": "{category} below {min}",
+    "reason_rentHigh": "rent above your limit",
+    "reason_rentLow": "rent below your minimum",
+    "reason_commuteLong": "commute too long",
+    "reason_commuteShort": "commute shorter than your minimum",
+    "reason_flood": "low elevation",
+    "reason_seismic": "high seismic risk",
+    "reason_liveCamera": "no live camera",
+    "legendDistricts": "Weighted score, relative to Bangkok's 50 districts",
+    "legendFilteredOut": "Excluded by your dealbreakers"
   },
   "compare": {
     "clearAll": "Clear all",
     "dimension": "Dimension",
     "score": "Score",
-    "rent1k": "Rent (1K)"
+    "rent1k": "Rent (1K)",
+    "rent1bed": "Rent (1-bed)",
+    "remove": "Remove {name} from comparison"
   },
   "drawer": {
     "filters": "Filters",
@@ -203,7 +245,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name} ({nameJp}) - Tokyo Neighborhood Explorer",
+    "metaTitle": "{name} ({secondary}) - Tokyo Neighborhood Explorer",
     "metaDescription": "{name} station area: ratings, rent prices, transit times. {description}",
     "metaDescriptionFallback": "Neighborhood guide for {name} station area in Tokyo.",
     "overview": "Overview",
@@ -384,5 +426,71 @@
   "methodology": {
     "title": "Methodology",
     "englishOnlyNotice": ""
+  },
+  "city": {
+    "switchLabel": "City",
+    "tokyo": "Tokyo",
+    "bangkok": "Bangkok"
+  },
+  "bangkok": {
+    "metadata": {
+      "title": "Bangkok District Explorer — Find the Best Area to Live",
+      "description": "All 50 Bangkok districts rated on transport, rent, daily essentials, food, nightlife, parks and more — built from OpenStreetMap and Overture Maps data, with the BTS / MRT network on the map."
+    },
+    "header": {
+      "titleShort": "Bangkok Explorer",
+      "titleFull": "Bangkok District Explorer",
+      "districtCount": "{count} districts"
+    },
+    "district": {
+      "notFound": "District not found",
+      "metaTitle": "{name} ({nameTh}) — Bangkok District Explorer",
+      "metaDescriptionFallback": "Living in {name}, Bangkok: ratings, rent, rail access and commute times.",
+      "backToMap": "Bangkok map",
+      "scoreTooltip": "Weighted score with default weights, relative to Bangkok's 50 districts",
+      "imageAlt": "{name} district, Bangkok",
+      "imageCredit": "Photo: {artist} · {license} · Wikimedia Commons",
+      "rail": "Rail",
+      "noRail": "No rail",
+      "nearbyCount": "{count, plural, =0 {nothing within 800 m} one {# station just outside} other {# stations just outside}}",
+      "rentLabel": "Rent (condo)",
+      "rentSub": "1-bed → 2-bed / mo · estimate",
+      "toHubsSub": "median resident, peak, 5 hubs",
+      "density": "Density",
+      "populationSub": "{population} residents ({year})",
+      "railTitle": "Rail stations",
+      "railCaption": "BTS, MRT, Airport Rail Link and SRT Red Line stations inside the district or on its boundary road.",
+      "onBorder": "on the border",
+      "noRailText": "No rail station in this district — daily life runs on buses, boats, songthaews and motorbike taxis.",
+      "nearbyStations": "Just outside (≤ 800 m)",
+      "radarMedianLabel": "Typical Bangkok district (median)",
+      "radarDistrictLabel": "This district",
+      "ratingsCaption": "Bar fill compares this district to the median of Bangkok's 50 districts — hover the bar for detail, the category name for what it measures. Dots show how firm each score is.",
+      "barTooltipDev": "Bangkok norm is {median} — this district is {dev} {direction} norm.",
+      "barTooltipDevExact": "Bangkok norm is {median} — this district is exactly average.",
+      "bangkokMedian": "Bangkok median: {value}",
+      "thisDistrict": "This district: {value}",
+      "rentTooltip": "Affordability from typical 1-bedroom condo asking rents (researcher estimate). 10 = cheapest (≈ ฿8k/mo), 1 = most expensive (≈ ฿38k+)",
+      "howRatingsWork": "Each district is covered by a 200 m grid. Every point records what a resident there can reach on foot — places to eat, shops, clinics, gyms, parks — plus distance to rail and a modelled peak-hour commute to five hubs. Points in built-up areas count fully, empty fields barely. Places come from two independent sources, OpenStreetMap and Overture Maps. Rent and safety are researcher estimates: Bangkok publishes no open district-level data for them.",
+      "relativeNote": "Scores are relative within Bangkok's 50 districts: a Bangkok 8 is not comparable with a Tokyo 8.",
+      "aboutDistrict": "About this district",
+      "factsTitle": "By the numbers",
+      "factFood": "Places to eat & drink",
+      "factNightlife": "Bars & nightlife",
+      "factConvenience": "Convenience stores",
+      "factEssentials": "Shops, clinics, banks",
+      "factMarkets": "Markets",
+      "factSports": "Gyms & sports",
+      "factCulture": "Museums, galleries, cinemas",
+      "factTemples": "Temples & places of worship",
+      "factPiers": "Boat piers",
+      "factParks": "Parks & green",
+      "factArea": "Area",
+      "factPopulation": "Registered population",
+      "factsSource": "Counts inside the district boundary, approximate. Places: Overture Maps Places (CDLA-Permissive-2.0); parks and piers: © OpenStreetMap contributors (ODbL). Population and area: Department of Provincial Administration registration via Wikidata — registered residents undercount central districts.",
+      "neighbors": "Neighboring districts",
+      "readMore": "Read more:",
+      "noRailNearbyText": "No station inside the district itself — the nearest ones are just outside its edge (below)."
+    }
   }
 }

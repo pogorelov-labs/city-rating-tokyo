@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Green north-central Bangkok: Mo Chit's rail junction, Ratchayothin office towers and the Kasetsart student belt. BTS, MRT and SRT Red lines all meet here; mid-priced, swamped on market weekends.",
+    "landmarks": "Chatuchak Weekend Market, the linked Chatuchak, Queen Sirikit and Rot Fai parks, Or Tor Kor market, Kasetsart University, MOCA, Krung Thep Aphiwat terminal.",
+    "food": "~2.7k places to eat: Or Tor Kor's premium produce and ready-made curries, weekend grazing at JJ, Kasetsart canteens, Central Ladprao and Union Mall food courts, cafés in every soi.",
+    "nightlife": "Student pubs and live-music bars around Kasetsart and Ratchayothin; lively but local, not a club district."
+  },
+  "ja": {
+    "atmosphere": "緑の多いバンコク中北部。モーチットの鉄道結節点、ラチャヨーティンのオフィス街、カセサート大学の学生街。BTS、MRT、SRTレッドラインが集まり、家賃は中くらい。市場の週末は人であふれる。",
+    "landmarks": "チャトゥチャック・ウィークエンドマーケット、つながったチャトゥチャック公園・シリキット王妃公園・ロットファイ公園、オートーコー市場、カセサート大学、MOCA、クルンテープ・アピワット中央駅。",
+    "food": "飲食店は約2700軒。オートーコー市場の上質な青果と総菜カレー、週末のJJ食べ歩き、カセサートの学食、セントラル・ラートプラーオとユニオンモールのフードコート、ソイごとにカフェ。",
+    "nightlife": "カセサートやラチャヨーティン周辺の学生パブとライブバー。にぎやかだがローカルで、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Зелёный северный центр Бангкока: железнодорожный узел Мо Чит, офисы Ратчайотина, студенческий пояс Касетсарта. Здесь сходятся BTS, MRT и красные линии SRT; цены средние, в выходные рынок тонет в толпе.",
+    "landmarks": "Рынок выходного дня Чатучак, связанные парки Чатучак, Королевы Сирикит и Рот Фай, рынок Ор Тор Кор, университет Касетсарт, музей MOCA, вокзал Крунг Тхеп Апхиват.",
+    "food": "Около 2,7 тыс. мест, где поесть: отборные продукты и готовые карри на Ор Тор Кор, перекусы на рынке выходного дня, столовые Касетсарта, фудкорты Central Ladprao и Union Mall, кофейни в каждом сое.",
+    "nightlife": "Студенческие пабы и бары с живой музыкой у Касетсарта и Ратчайотина; живо, но по-местному, клубного района тут нет."
+  }
+}

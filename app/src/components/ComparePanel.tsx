@@ -2,7 +2,9 @@
 
 import { useMemo, useDeferredValue } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useCityState, useCityActions } from '@/lib/store';
+import { useCity } from '@/lib/city-context';
+import { formatRentShort } from '@/lib/cities';
 import { MapStation, RATING_LABELS, WeightConfig } from '@/lib/types';
 import {
   calculateWeightedScore,
@@ -22,9 +24,9 @@ interface Props {
 export default function ComparePanel({ stations }: Props) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const compareStations = useAppStore((s) => s.compareStations);
-  const removeCompareStation = useAppStore((s) => s.removeCompareStation);
-  const clearCompareStations = useAppStore((s) => s.clearCompareStations);
+  const city = useCity();
+  const compareStations = useCityState((s) => s.compareStations);
+  const { removeCompareStation, clearCompareStations } = useCityActions();
   const weights = useAppStore((s) => s.weights);
   // Defer weights so the (expensive) percentile sort over 1493 scores
   // doesn't fire on every drag frame while the user is adjusting sliders.
@@ -61,6 +63,7 @@ export default function ComparePanel({ stations }: Props) {
                 <button
                   onClick={() => removeCompareStation(s.slug)}
                   className="hover:opacity-60 ml-0.5"
+                  aria-label={t('compare.remove', { name: stationPrimaryName(s, locale) })}
                 >
                   x
                 </button>
@@ -132,10 +135,10 @@ export default function ComparePanel({ stations }: Props) {
                 </tr>
                 {/* Rent */}
                 <tr>
-                  <td className="py-1 pr-2 text-gray-500">{t('compare.rent1k')}</td>
+                  <td className="py-1 pr-2 text-gray-500">{t(city.unit === 'district' ? 'compare.rent1bed' : 'compare.rent1k')}</td>
                   {compared.map((s, i) => (
                     <td key={i} className="text-right py-1 px-2 tabular-nums">
-                      {s.rent_1k ? `¥${(s.rent_1k / 1000).toFixed(0)}k` : '-'}
+                      {s.rent_1k ? formatRentShort(city.id, s.rent_1k) : '-'}
                     </td>
                   ))}
                 </tr>

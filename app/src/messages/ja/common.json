@@ -59,7 +59,12 @@
     "shinjuku": "新宿",
     "tokyo": "東京",
     "ikebukuro": "池袋",
-    "shinagawa": "品川"
+    "shinagawa": "品川",
+    "siam": "サイアム",
+    "asok": "アソーク",
+    "silom": "シーロム",
+    "rama9": "ラマ9世",
+    "mochit": "モーチット"
   },
   "presets": {
     "young-pro": "若手プロ",
@@ -82,10 +87,16 @@
     },
     "editorial": {
       "label": "キュレーション",
-      "description": "研究者が設定、データと異なる場合あり"
+      "description": "研究者が設定、データと異なる場合あり",
+      "descriptionResearch": "調査者による推定 — 区単位の公開データが存在しないため、目安として参照"
     }
   },
   "sources": {
+    "overture": "Overture Maps",
+    "osm_rail": "OSM鉄道網",
+    "transit_model": "通勤モデル",
+    "listing_research": "物件情報の調査",
+    "dopa_population": "内務省地方行政局（DOPA）登録人口",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper（深夜）",
     "osm": "OpenStreetMap",
@@ -122,7 +133,8 @@
   },
   "scatterAxes": {
     "rent_1k": "家賃（1K〜1LDK、円）",
-    "min_transit": "最短所要時間（分）"
+    "min_transit": "最短所要時間（分）",
+    "rent_1k_bangkok": "家賃（1ベッドコンドミニアム、バーツ）"
   },
   "loading": {
     "chart": "チャート読み込み中…",
@@ -158,7 +170,20 @@
     "stationsMapped": "マップ上に{count}駅",
     "withRatings": "{count}駅が評価済み",
     "rentUnconfirmed": "（家賃未確認）",
-    "lines": "{count}路線"
+    "lines": "{count}路線",
+    "searchPlaceholderDistrict": "区・エリア・駅を検索…",
+    "searchPlaceholderDistrictShort": "区・エリア・駅…",
+    "clearSearch": "検索をクリア",
+    "stations": "{count, plural, =0 {駅なし} other {#駅}}",
+    "rentDistrict": "家賃（1ベッド）",
+    "commuteDistrict": "ハブまで",
+    "stationCountDistrict": "{count}区",
+    "matchCountDistrict": "{total}区中<bold>{filtered}</bold>区が該当",
+    "noMatchDistrict": "該当する区がありません — フィルターを緩めてみてください",
+    "noMatchFiltersDistrict": "フィルターに該当する区がありません",
+    "noRatedYetDistrict": "評価済みの区はまだありません",
+    "stationsMappedDistrict": "マップ上に{count}区",
+    "relativeScoresNote": "スコアはバンコク50区内での相対評価で、東京のスコアとは比較できません。家賃と治安は調査者による推定です。"
   },
   "map": {
     "clickForDetails": "詳細を見る →",
@@ -168,13 +193,30 @@
     "removeCompare": "比較から外す",
     "dataComingSoon": "データ準備中",
     "heatmap": "ヒートマップ",
-    "compositeScore": "総合スコア"
+    "compositeScore": "総合スコア",
+    "railNetwork": "鉄道",
+    "railNetworkHint": "BTS・MRT・エアポート・レール・リンク・SRTレッドラインの路線と駅を表示",
+    "noRailInDistrict": "鉄道駅なし",
+    "closeCardDistrict": "区のカードを閉じる",
+    "filteredOut": "条件外",
+    "reasonCategory": "{category}が{min}未満",
+    "reason_rentHigh": "家賃が上限超え",
+    "reason_rentLow": "家賃が下限未満",
+    "reason_commuteLong": "通勤時間が長すぎる",
+    "reason_commuteShort": "通勤時間が下限未満",
+    "reason_flood": "標高が低い",
+    "reason_seismic": "地震リスクが高い",
+    "reason_liveCamera": "ライブカメラなし",
+    "legendDistricts": "加重スコア（バンコク50区内の相対評価）",
+    "legendFilteredOut": "絶対条件で除外"
   },
   "compare": {
     "clearAll": "クリア",
     "dimension": "カテゴリ",
     "score": "スコア",
-    "rent1k": "家賃（1K）"
+    "rent1k": "家賃（1K）",
+    "rent1bed": "家賃（1ベッド）",
+    "remove": "{name}を比較から外す"
   },
   "drawer": {
     "filters": "フィルター",
@@ -203,7 +245,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name}（{nameJp}）— 東京エリアガイド",
+    "metaTitle": "{name}（{secondary}）— 東京エリアガイド",
     "metaDescription": "{name}駅エリア：評価、家賃、所要時間。{description}",
     "metaDescriptionFallback": "東京の{name}駅エリアガイド。",
     "overview": "概要",
@@ -384,5 +426,71 @@
   "methodology": {
     "title": "評価方法",
     "englishOnlyNotice": "このページは現在英語のみで提供されています。日本語版は今後追加予定です。"
+  },
+  "city": {
+    "switchLabel": "都市",
+    "tokyo": "東京",
+    "bangkok": "バンコク"
+  },
+  "bangkok": {
+    "metadata": {
+      "title": "バンコク・エリアガイド — 住むエリアを探そう",
+      "description": "バンコク全50区を交通・家賃・生活利便・グルメ・ナイトライフ・公園などで評価。OpenStreetMapとOverture Mapsのデータに基づき、BTS／MRTの路線網も地図に表示。"
+    },
+    "header": {
+      "titleShort": "バンコクガイド",
+      "titleFull": "バンコク・エリアガイド",
+      "districtCount": "{count}区"
+    },
+    "district": {
+      "notFound": "区が見つかりません",
+      "metaTitle": "{name}（{nameTh}） — バンコク・エリアガイド",
+      "metaDescriptionFallback": "バンコク・{name}の住みやすさ：評価、家賃、鉄道アクセス、通勤時間。",
+      "backToMap": "バンコクの地図",
+      "scoreTooltip": "標準の重み付けによるスコア（バンコク50区内の相対評価）",
+      "imageAlt": "バンコク・{name}",
+      "imageCredit": "写真: {artist} · {license} · Wikimedia Commons",
+      "rail": "鉄道",
+      "noRail": "駅なし",
+      "nearbyCount": "{count, plural, =0 {800m以内に駅なし} other {区外すぐに#駅}}",
+      "rentLabel": "家賃（コンドミニアム）",
+      "rentSub": "1ベッド → 2ベッド／月 · 推定",
+      "toHubsSub": "住民の中央値・ラッシュ時・5ハブ",
+      "density": "人口密度",
+      "populationSub": "住民{population}人（{year}年）",
+      "railTitle": "鉄道駅",
+      "railCaption": "区内または区境の道路上にあるBTS・MRT・エアポート・レール・リンク・SRTレッドラインの駅。",
+      "onBorder": "区境",
+      "noRailText": "区内に鉄道駅はなく、日々の移動はバス、ボート、ソンテウ、バイクタクシーが頼り。",
+      "nearbyStations": "区外すぐ（800m以内）",
+      "radarMedianLabel": "バンコクの標準（中央値）",
+      "radarDistrictLabel": "この区",
+      "ratingsCaption": "バーの長さはバンコク50区の中央値との比較です。バーにカーソルを合わせると詳細が、カテゴリ名で説明が表示されます。点はスコアの確かさを示します。",
+      "barTooltipDev": "バンコクの基準値は{median} — この区は基準より{dev}{direction}です。",
+      "barTooltipDevExact": "バンコクの基準値は{median} — この区はちょうど平均です。",
+      "bangkokMedian": "バンコク中央値: {value}",
+      "thisDistrict": "この区: {value}",
+      "rentTooltip": "1ベッドルーム・コンドミニアムの一般的な募集家賃（調査者推定）から算出。10＝最も安い（約฿8,000／月）、1＝最も高い（約฿38,000以上）",
+      "howRatingsWork": "各区を200m間隔のグリッドで覆い、各地点から徒歩で行ける飲食店・商店・クリニック・ジム・公園、鉄道駅までの距離、5つのハブへのラッシュ時の通勤時間（モデル推計）を記録します。市街地の地点は重く、空き地や田畑はごく軽く数えます。施設データはOpenStreetMapとOverture Mapsという独立した2つのソースから。家賃と治安は区単位の公開データがないため、調査者による推定です。",
+      "relativeNote": "スコアはバンコク50区内での相対評価です。バンコクの「8」と東京の「8」は比較できません。",
+      "aboutDistrict": "この区について",
+      "factsTitle": "数字で見る",
+      "factFood": "飲食店・カフェ",
+      "factNightlife": "バー・ナイトライフ",
+      "factConvenience": "コンビニ",
+      "factEssentials": "商店・クリニック・銀行",
+      "factMarkets": "市場",
+      "factSports": "ジム・スポーツ施設",
+      "factCulture": "美術館・ギャラリー・映画館",
+      "factTemples": "寺院・礼拝所",
+      "factPiers": "船着き場",
+      "factParks": "公園・緑地",
+      "factArea": "面積",
+      "factPopulation": "登録人口",
+      "factsSource": "区の境界内の概数。施設: Overture Maps Places（CDLA-Permissive-2.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。人口・面積: 内務省地方行政局の住民登録（Wikidata経由）— 中心部の区では実際の居住者より少なく出ます。",
+      "neighbors": "隣接する区",
+      "readMore": "詳しく:",
+      "noRailNearbyText": "区内に駅はありませんが、区境のすぐ外に最寄り駅があります（下記）。"
+    }
   }
 }

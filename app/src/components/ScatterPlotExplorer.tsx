@@ -15,6 +15,7 @@ import { MapStation, RATING_LABELS } from '@/lib/types';
 import { stationPrimaryName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 import { useAppStore } from '@/lib/store';
+import { useCity } from '@/lib/city-context';
 import {
   calculateWeightedScore,
   compositeToColor,
@@ -36,13 +37,14 @@ const AXIS_KEYS = [
 export default function ScatterPlotExplorer({ stations }: Props) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
+  const city = useCity();
   const weights = useAppStore((s) => s.weights);
   const deferredWeights = useDeferredValue(weights);
   const [xAxis, setXAxis] = useState('rent');
   const [yAxis, setYAxis] = useState('food');
 
   function axisLabel(key: string): string {
-    if (key === 'rent_1k') return t('scatterAxes.rent_1k');
+    if (key === 'rent_1k') return t(city.unit === 'district' ? 'scatterAxes.rent_1k_bangkok' : 'scatterAxes.rent_1k');
     if (key === 'min_transit') return t('scatterAxes.min_transit');
     return t(`ratings.${key}`);
   }
@@ -98,7 +100,9 @@ export default function ScatterPlotExplorer({ stations }: Props) {
             ))}
           </select>
         </label>
-        <span className="text-xs text-gray-400">{t('filter.stationCount', { count: data.length })}</span>
+        <span className="text-xs text-gray-400">
+          {t(city.unit === 'district' ? 'filter.stationCountDistrict' : 'filter.stationCount', { count: data.length })}
+        </span>
       </div>
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>

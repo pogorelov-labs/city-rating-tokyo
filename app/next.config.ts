@@ -9,11 +9,20 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     // 301 redirects for renamed station slugs (wapuro→Hepburn romanization fix)
-    return Object.entries(slugRedirects).map(([oldSlug, newSlug]) => ({
+    const slugs = Object.entries(slugRedirects).map(([oldSlug, newSlug]) => ({
       source: `/station/${oldSlug}`,
       destination: `/station/${newSlug}`,
       permanent: true,
     }));
+    // City aliases. Temporary (307) on purpose: Tokyo lives at the root today,
+    // and a cached 301 would get in the way if it ever moves under /tokyo.
+    const cities = [
+      { source: '/tokyo', destination: '/', permanent: false },
+      { source: '/:locale(ja|ru)/tokyo', destination: '/:locale', permanent: false },
+      { source: '/bangkok/district', destination: '/bangkok', permanent: false },
+      { source: '/:locale(ja|ru)/bangkok/district', destination: '/:locale/bangkok', permanent: false },
+    ];
+    return [...slugs, ...cities];
   },
   async headers() {
     return [
@@ -27,7 +36,8 @@ const nextConfig: NextConfig = {
               "script-src 'self' 'unsafe-inline' https://*.pogorelov.dev",
               "style-src 'self' 'unsafe-inline'",
               // i.ytimg.com: YouTube thumbnail hosts (livecam facade previews)
-              "img-src 'self' data: https://*.basemaps.cartocdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
+              // thumb.wikimedia.org: Commons' thumbnail host (Bangkok district photos).
+              "img-src 'self' data: https://basemaps.cartocdn.com https://tile.openstreetmap.org https://upload.wikimedia.org https://thumb.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
               "connect-src 'self' https://*.pogorelov.dev",
               "font-src 'self'",
               // frame-src: YouTube live camera embeds (CRTKY-116).

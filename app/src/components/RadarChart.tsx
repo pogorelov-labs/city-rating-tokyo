@@ -15,6 +15,11 @@ import { CITY_MEDIANS } from '@/lib/scoring';
 
 interface Props {
   ratings: StationRatings;
+  /** City medians for the reference polygon (default: Tokyo). */
+  medians?: Record<keyof StationRatings, number>;
+  /** Message keys for the two legend entries (default: Tokyo wording). */
+  medianLabelKey?: string;
+  areaLabelKey?: string;
 }
 
 const MEDIAN_STROKE = '#94a3b8';
@@ -22,14 +27,19 @@ const MEDIAN_FILL = '#94a3b8';
 const STATION_STROKE = '#2563eb';
 const STATION_FILL = '#2563eb';
 
-export default function StationRadarChart({ ratings }: Props) {
+export default function StationRadarChart({
+  ratings,
+  medians = CITY_MEDIANS,
+  medianLabelKey = 'station.radarMedianLabel',
+  areaLabelKey = 'station.radarStationLabel',
+}: Props) {
   const t = useTranslations();
   const keys = Object.keys(RATING_LABELS) as (keyof StationRatings)[];
 
   const data = keys.map((key) => ({
     category: t(`ratings.${key}`).replace(' & ', '\n& '),
     station: ratings[key],
-    median: CITY_MEDIANS[key],
+    median: medians[key],
     fullMark: 10,
   }));
 
@@ -51,7 +61,7 @@ export default function StationRadarChart({ ratings }: Props) {
           <Tooltip contentStyle={{ fontSize: 12 }} />
           {/* Draw median first so the station polygon reads on top (CRTKY-76). */}
           <Radar
-            name={t('station.radarMedianLabel')}
+            name={t(medianLabelKey)}
             dataKey="median"
             stroke={MEDIAN_STROKE}
             fill={MEDIAN_FILL}
@@ -60,7 +70,7 @@ export default function StationRadarChart({ ratings }: Props) {
             dot={false}
           />
           <Radar
-            name={t('station.radarStationLabel')}
+            name={t(areaLabelKey)}
             dataKey="station"
             stroke={STATION_STROKE}
             fill={STATION_FILL}
@@ -72,12 +82,12 @@ export default function StationRadarChart({ ratings }: Props) {
       <p className="mt-2 text-center text-[10px] text-gray-400 leading-relaxed px-1">
         <span className="inline-flex items-center gap-1">
           <span className="h-2 w-2 shrink-0 rounded-sm" style={{ backgroundColor: MEDIAN_STROKE, opacity: 0.85 }} />
-          {t('station.radarMedianLabel')}
+          {t(medianLabelKey)}
         </span>
         <span className="mx-2 text-gray-300">·</span>
         <span className="inline-flex items-center gap-1">
           <span className="h-2 w-2 shrink-0 rounded-sm" style={{ backgroundColor: STATION_STROKE, opacity: 0.9 }} />
-          {t('station.radarStationLabel')}
+          {t(areaLabelKey)}
         </span>
       </p>
     </div>

@@ -336,36 +336,62 @@ export function applyDealbreakers(
   filters: FilterState,
   hideFloodRisk: boolean,
   hideHighSeismic: boolean,
+  /** The city's wide-open filter values (rent/commute ranges differ per city). */
+  defaults: FilterState = DEFAULT_FILTERS,
 ): FilteredMapStation[] {
-  const rentMaxActive = filters.maxRent < DEFAULT_FILTERS.maxRent;
-  const rentMinActive = filters.minRent > DEFAULT_FILTERS.minRent;
-  const rentActive = rentMaxActive || rentMinActive;
-  const commuteMaxActive = filters.maxCommute < DEFAULT_FILTERS.maxCommute;
-  const commuteMinActive = filters.minCommute > DEFAULT_FILTERS.minCommute;
-  const catKeys = Object.keys(filters.categoryMins) as (keyof StationRatings)[];
-
+  const rentActive = filters.maxRent < defaults.maxRent || filters.minRent > defaults.minRent;
   return stations
-    .filter((s) => {
-      // Rent filter: known and outside range → fail
-      if (rentMaxActive && s.rent_1k !== null && s.rent_1k > filters.maxRent) return false;
-      if (rentMinActive && s.rent_1k !== null && s.rent_1k < filters.minRent) return false;
-      // Commute filter: known and outside range → fail
-      if (commuteMaxActive && s.min_transit !== null && s.min_transit > filters.maxCommute) return false;
-      if (commuteMinActive && s.min_transit !== null && s.min_transit < filters.minCommute) return false;
-      // Category minimums
-      for (const key of catKeys) {
-        const min = filters.categoryMins[key];
-        if (min != null && s.ratings !== null && s.ratings[key] < min) return false;
-      }
-      // Environment safety (moved from Map.tsx visibleStations)
-      if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) return false;
-      if (hideHighSeismic && s.seismic_risk_tier === 'very_high') return false;
-      // Live camera dealbreaker
-      if (filters.hasLiveCamera && !s.hasLiveCamera) return false;
-      return true;
-    })
+    .filter((s) => dealbreakerReasons(s, filters, hideFloodRisk, hideHighSeismic, defaults).length === 0)
     .map((s) => ({
       ...s,
       rentUnknown: rentActive && s.rent_1k === null,
     }));
+}
+
+/** Why an area fails the current dealbreakers (empty array = it passes). */
+export type DealbreakerReason =
+  | { kind: 'rentHigh' | 'rentLow' | 'commuteLong' | 'commuteShort' | 'flood' | 'seismic' | 'liveCamera' }
+  | { kind: 'category'; key: keyof StationRatings; min: number };
+
+/**
+ * The per-area check behind `applyDealbreakers`, exposed so the district map
+ * can explain *why* a greyed-out district is excluded instead of silently
+ * hiding it. Same null-safety as before: unknown rent / commute / ratings
+ * never fail a filter.
+ */
+export function dealbreakerReasons(
+  s: MapStation,
+  filters: FilterState,
+  hideFloodRisk: boolean,
+  hideHighSeismic: boolean,
+  defaults: FilterState = DEFAULT_FILTERS,
+): DealbreakerReason[] {
+  const reasons: DealbreakerReason[] = [];
+  // Rent filter: known and outside range → fail
+  if (filters.maxRent < defaults.maxRent && s.rent_1k !== null && s.rent_1k > filters.maxRent) {
+    reasons.push({ kind: 'rentHigh' });
+  }
+  if (filters.minRent > defaults.minRent && s.rent_1k !== null && s.rent_1k < filters.minRent) {
+    reasons.push({ kind: 'rentLow' });
+  }
+  // Commute filter: known and outside range → fail
+  if (filters.maxCommute < defaults.maxCommute && s.min_transit !== null && s.min_transit > filters.maxCommute) {
+    reasons.push({ kind: 'commuteLong' });
+  }
+  if (filters.minCommute > defaults.minCommute && s.min_transit !== null && s.min_transit < filters.minCommute) {
+    reasons.push({ kind: 'commuteShort' });
+  }
+  // Category minimums
+  for (const key of Object.keys(filters.categoryMins) as (keyof StationRatings)[]) {
+    const min = filters.categoryMins[key];
+    if (min != null && s.ratings !== null && s.ratings[key] < min) {
+      reasons.push({ kind: 'category', key, min });
+    }
+  }
+  // Environment safety (moved from Map.tsx visibleStations)
+  if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) reasons.push({ kind: 'flood' });
+  if (hideHighSeismic && s.seismic_risk_tier === 'very_high') reasons.push({ kind: 'seismic' });
+  // Live camera dealbreaker
+  if (filters.hasLiveCamera && !s.hasLiveCamera) reasons.push({ kind: 'liveCamera' });
+  return reasons;
 }

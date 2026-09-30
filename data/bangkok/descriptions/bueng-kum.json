@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Eastern suburbia off Nawamin and Seri Thai roads: gated housing estates, townhouses, Nuan Chan and Khlong Kum. One Pink Line station on the northern edge, otherwise cars, buses, motorbike taxis. Rock-bottom rents, long commutes.",
+    "landmarks": "Seri Thai Park and Nawaminphirom Park for evening runs, Wat Nuan Chan. The big malls sit just outside: The Mall Bangkapi, Fashion Island.",
+    "food": "Practical suburban Thai: Isan grills, noodle shops, ~25 markets, drive-up cafés along Nawamin, mall food courts next door. Decent, rarely memorable.",
+    "nightlife": "Thai pub-restaurants with live bands and a few beer gardens along Nawamin. Otherwise quiet, and getting home means a car."
+  },
+  "ja": {
+    "atmosphere": "ナワミン通りとセーリータイ通りから入る東部の郊外。ゲート付き住宅地、タウンハウス、ヌアンチャン、クロンクム。北端にピンクラインの駅が1つあるだけで、あとは車、バス、バイクタクシー。家賃は底値、通勤は長い。",
+    "landmarks": "夕方のランニングならセーリータイ公園とナワミンピロム公園、ワット・ヌアンチャン。大型モールは区のすぐ外、ザ・モール・バンカピとファッション・アイランド。",
+    "food": "実用本位の郊外タイ飯。イサーン焼き、麺屋、約25の市場、ナワミン通りの車で寄るカフェ、隣の区のモールのフードコート。悪くないが記憶には残りにくい。",
+    "nightlife": "ナワミン通りにバンド生演奏のタイ式パブレストランとビアガーデンが少し。それ以外は静かで、帰りは車が前提。"
+  },
+  "ru": {
+    "atmosphere": "Восточная субурбия у Навамин и Сери Тай: закрытые посёлки, таунхаусы, Нуанчан и Клонгкум. Одна станция Pink Line на северной границе, дальше машины, автобусы и мототакси. Аренда ниже некуда, дорога в центр долгая.",
+    "landmarks": "Парки Сери Тай и Навамин Пхиром для вечерних пробежек, Ват Нуанчан. Большие моллы сразу за границей: The Mall Bangkapi, Fashion Island.",
+    "food": "Практичная пригородная тайская еда: исанский гриль, лапшичные, около 25 рынков, кофейни с парковкой на Навамин, фудкорты соседних моллов. Прилично, но редко запоминается.",
+    "nightlife": "Тайские пабы-рестораны с живыми группами и пара пивных садов на Навамин. В остальном тихо, домой — только на машине."
+  }
+}

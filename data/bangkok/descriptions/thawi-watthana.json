@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's far west on the Nakhon Pathom edge: farm plots, canals, gated estates around Sala Thammasop and the Phutthamonthon Sai roads. No BTS or MRT; life runs on the car. Cheap, roomy, very quiet.",
+    "landmarks": "Sanam Luang 2 market for plants, pets and second-hand finds, Thawiwanarom Park, the Thawi Watthana canal. Phutthamonthon's Buddhist park is a short drive west.",
+    "food": "Thin on the ground: roadside Thai and Isan, garden restaurants, stalls at Sanam Luang 2, a few cafés for the drive-by crowd. Expect to drive for choice.",
+    "nightlife": "Likely very quiet after dark: a handful of roadside pubs and karaoke. Nights here are for home, or a drive into town."
+  },
+  "ja": {
+    "atmosphere": "ナコーンパトム県境に接するバンコクの西端。畑、運河、サーラータンマソップやプッタモントン・サーイ通り沿いのゲート付き住宅地。BTSもMRTもなく、暮らしは車次第。安く、広く、とても静か。",
+    "landmarks": "植木、ペット、中古品が並ぶサナームルアン2市場、タウィーワナーロム公園、タウィーワッタナー運河。西へ少し走ればプッタモントンの仏教公園。",
+    "food": "店はまばら。道端のタイ料理とイサーン料理、庭園レストラン、サナームルアン2市場の屋台、ドライブ客向けのカフェが少し。選択肢を求めるなら車で遠出。",
+    "nightlife": "夜はおそらくとても静か。道端のパブとカラオケが数軒。夜は家で過ごすか、車で街へ出る。"
+  },
+  "ru": {
+    "atmosphere": "Дальний запад Бангкока на границе с Накхонпатхомом: огороды, каналы, закрытые посёлки у Сала Тхаммасоп и дорог Пхуттхамонтхон Сай. Ни BTS, ни MRT, всё на машине. Дёшево, просторно, очень тихо.",
+    "landmarks": "Рынок Санам Луанг 2 с растениями, питомцами и барахолкой, парк Тхавиванаром, канал Тхави-Ваттхана. До буддийского парка Пхуттхамонтхон — недолго на запад.",
+    "food": "Негусто: придорожная тайская и исанская еда, садовые рестораны, лотки на Санам Луанг 2, пара кофеен для проезжающих. За выбором — на машине.",
+    "nightlife": "Скорее всего, вечером очень тихо: пара придорожных пабов и караоке. Ночи здесь — для дома или поездки в город."
+  }
+}

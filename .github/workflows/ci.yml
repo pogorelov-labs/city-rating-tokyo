@@ -96,3 +96,17 @@ jobs:
       # NOTE: mcp/scripts/smoke-test.py is a deploy-time / manual check —
       # it requires data/station-datamart.json, data/embeddings.npz, and
       # loads the 2.2 GB fastembed model at runtime. Not runnable in CI.
+
+  bangkok:
+    # Bangkok district pipeline: pure-Python rating math + integrity of the
+    # committed app data. build.py itself (numpy/shapely/duckdb) is not run here.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bangkok pipeline tests
+        run: |
+          pip install pytest --quiet
+          pytest scripts/bangkok/test_bangkok.py -v

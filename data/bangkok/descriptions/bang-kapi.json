@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Everyday east Bangkok around Ramkhamhaeng University and Bang Kapi junction: student dorms, malls, markets, traffic. Cheap and lively; the Yellow Line and Saen Saep canal boats help, but the centre is 40+ minutes out.",
+    "landmarks": "Ramkhamhaeng University and Rajamangala National Stadium in Hua Mak, The Mall Bangkapi, Happyland and Tawanna at the junction, Wat Si Bun Rueang pier on Khlong Saen Saep.",
+    "food": "Student-budget eating: rice-and-curry shops, noodle stalls and night-market carts around the university and Bang Kapi junction, plus mall food courts. Plenty of it, little that stands out.",
+    "nightlife": "Student pubs and Thai live-music bars around Ramkhamhaeng, beer gardens near the malls; loud, cheap and local, not a destination."
+  },
+  "ja": {
+    "atmosphere": "ラムカムヘン大学とバーンカピ交差点を軸にした東部の日常バンコク。学生寮、モール、市場、渋滞。安くて賑やか。MRTイエローラインとセーンセープ運河ボートが頼りになるが、都心まで40分以上。",
+    "landmarks": "フアマークのラムカムヘン大学とラジャマンガラ国立競技場、交差点のザ・モール・バーンカピ、ハッピーランド、タワンナー、セーンセープ運河のワット・シーブンルアン船着場。",
+    "food": "学生価格の食。大学とバーンカピ交差点の周りにぶっかけ飯屋、麺の屋台、ナイトマーケットの屋台、それにモールのフードコート。量は多いが突出した店は少ない。",
+    "nightlife": "ラムカムヘン周辺に学生向けパブとタイのライブバー、モール近くにビアガーデン。騒がしく安くローカル、わざわざ来る場所ではない。"
+  },
+  "ru": {
+    "atmosphere": "Будничный восток Бангкока вокруг университета Рамкхамхэнг и перекрёстка Бангкапи: студенческие общаги, моллы, рынки, пробки. Дёшево и живо; выручают Жёлтая линия и лодки по каналу Саен Саеп, но до центра 40+ минут.",
+    "landmarks": "Университет Рамкхамхэнг и национальный стадион Раджамангала в Хуамаке, The Mall Bangkapi, Happyland и Tawanna у перекрёстка, пирс Ват Си Бун Руанг на канале Саен Саеп.",
+    "food": "Еда по студенческому бюджету: рис с карри, лапшичные лотки и ночные рынки у университета и перекрёстка Бангкапи, плюс фудкорты моллов. Много, но мало выдающегося.",
+    "nightlife": "Студенческие пабы и тайские бары с живой музыкой у Рамкхамхэнга, пивные сады возле моллов; громко, дёшево, по-местному, но ехать сюда ради этого не стоит."
+  }
+}

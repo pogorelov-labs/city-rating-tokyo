@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Central Bangkok's crossroads: Victory Monument's bus-and-student churn, Pratunam's garment-wholesale crush, a cluster of big hospitals, leafy Soi Rangnam as the calm pocket. BTS, MRT and Airport Rail Link at the door. Mid-priced, never quiet.",
+    "landmarks": "Victory Monument, Baiyoke Tower II above Pratunam, Suan Pakkad and Phaya Thai palaces, Santiphap Park, Ban Khrua, the old Muslim silk-weaving community on Saen Saep canal.",
+    "food": "~1.1k places to eat: boat noodles by Victory Monument, Pratunam chicken rice and late street stalls, cheap student and hospital-staff canteens, Rangnam cafés.",
+    "nightlife": "Live-music pubs and rooftop bars around Victory Monument, the Baiyoke Sky roof deck, Pratunam hotel bars. Lively, cheap, not clubby."
+  },
+  "ja": {
+    "atmosphere": "バンコク中心の交差点。戦勝記念塔のバスと学生の渦、プラトゥーナムの衣料問屋の雑踏、大病院の集積、静かなのは緑のソイ・ランナムだけ。BTS、MRT、エアポート・レール・リンクが目の前。家賃は中くらい、静けさは皆無。",
+    "landmarks": "戦勝記念塔、プラトゥーナムにそびえるバイヨーク・タワーII、スアンパッカード宮殿とパヤタイ宮殿、サンティパープ公園、セーンセープ運河沿いの古いムスリムの絹織り集落バーンクルア。",
+    "food": "飲食約1100軒。戦勝記念塔のボートヌードル、プラトゥーナムのカオマンガイと夜の屋台、学生や病院スタッフ向けの安い食堂、ランナムのカフェ。",
+    "nightlife": "戦勝記念塔周辺のライブ演奏パブと屋上バー、バイヨーク・スカイの展望デッキ、プラトゥーナムのホテルバー。賑やかで安い、クラブ街ではない。"
+  },
+  "ru": {
+    "atmosphere": "Перекрёсток Бангкока: автобусная и студенческая круговерть у Монумента Победы, оптовая швейная толчея Пратунама, кластер крупных больниц, тихий островок — зелёный Рангнам. BTS, MRT и Airport Rail Link под боком. Цены средние, тишины нет.",
+    "landmarks": "Монумент Победы, Baiyoke Tower II над Пратунамом, дворцы Суан Паккад и Пхаятхай, парк Сантипхап, старая мусульманская ткацкая община Бан Кхруа у канала Саен Саеп.",
+    "food": "Около 1,1 тыс. мест поесть: лодочная лапша у Монумента Победы, као ман кай Пратунама и поздние уличные лотки, дешёвые столовые для студентов и медиков, кафе на Рангнам.",
+    "nightlife": "Пабы с живой музыкой и руфтопы у Монумента Победы, смотровая крыша Baiyoke Sky, отельные бары Пратунама. Живо и недорого, но не клубный район."
+  }
+}
