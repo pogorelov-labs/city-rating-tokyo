@@ -1,7 +1,8 @@
-import type { FilterState, StationRatings } from './types';
+import type { AreaLevel, FilterState, StationRatings } from './types';
 import { DEFAULT_FILTERS, PRESET_PROFILES } from './types';
 import { CITY_MEDIANS, DEFAULT_COMPOSITE_ANCHORS, type PercentileAnchors } from './scoring';
 import bangkokMeta from '@/data/bangkok/meta.json';
+import { parseAreaKey } from './area-key';
 
 /**
  * City registry — the single place where Tokyo and Bangkok differ.
@@ -24,6 +25,15 @@ export type CityId = (typeof CITY_IDS)[number];
 
 /** What one rated area is: a train-station catchment or an administrative district. */
 export type CityUnit = 'station' | 'district';
+
+/** Distribution of one level's ratings — the norm tick on rating bars and
+ *  the palette anchors for statically rendered pages (default weights). */
+export interface LevelStats {
+  medians: Record<keyof StationRatings, number>;
+  defaultAnchors: PercentileAnchors;
+  /** Rated areas at this level (districts / station areas / grid cells). */
+  count: number;
+}
 
 export interface RangeConfig {
   min: number;
@@ -71,6 +81,11 @@ export interface CityConfig {
   medians: Record<keyof StationRatings, number>;
   /** Composite anchors for statically rendered pages (default weights). */
   defaultAnchors: PercentileAnchors;
+  /** Levels of detail the map offers, coarsest first; the first is `unit`'s. */
+  levels: readonly AreaLevel[];
+  defaultLevel: AreaLevel;
+  /** Ratings are percentile-normalised *within* a level, so each has its own norm. */
+  levelStats: Partial<Record<AreaLevel, LevelStats>>;
 }
 
 const tokyoPresetFilters = Object.fromEntries(
@@ -107,6 +122,9 @@ export const CITIES: Record<CityId, CityConfig> = {
     features: { environmentFilters: true, liveCameras: true, railOverlay: false },
     medians: CITY_MEDIANS,
     defaultAnchors: DEFAULT_COMPOSITE_ANCHORS,
+    levels: ['station'],
+    defaultLevel: 'station',
+    levelStats: { station: { medians: CITY_MEDIANS, defaultAnchors: DEFAULT_COMPOSITE_ANCHORS, count: 1493 } },
   },
   bangkok: {
     id: 'bangkok',
@@ -137,6 +155,25 @@ export const CITIES: Record<CityId, CityConfig> = {
     features: { environmentFilters: false, liveCameras: false, railOverlay: true },
     medians: bangkokMeta.medians as Record<keyof StationRatings, number>,
     defaultAnchors: bangkokMeta.default_anchors as PercentileAnchors,
+    levels: ['district', 'station', 'grid'],
+    defaultLevel: 'district',
+    levelStats: {
+      district: {
+        medians: bangkokMeta.medians as Record<keyof StationRatings, number>,
+        defaultAnchors: bangkokMeta.default_anchors as PercentileAnchors,
+        count: bangkokMeta.district_count,
+      },
+      station: {
+        medians: bangkokMeta.station_medians as Record<keyof StationRatings, number>,
+        defaultAnchors: bangkokMeta.station_default_anchors as PercentileAnchors,
+        count: bangkokMeta.station_area_count,
+      },
+      grid: {
+        medians: bangkokMeta.grid_medians as Record<keyof StationRatings, number>,
+        defaultAnchors: bangkokMeta.grid_default_anchors as PercentileAnchors,
+        count: bangkokMeta.grid_cell_count,
+      },
+    },
   },
 };
 
@@ -144,9 +181,20 @@ export function isCityId(value: unknown): value is CityId {
   return typeof value === 'string' && (CITY_IDS as readonly string[]).includes(value);
 }
 
-/** Locale-agnostic detail path for an area, e.g. `/station/shibuya` or `/bangkok/district/watthana`. */
-export function areaPath(city: CityId, slug: string): string {
-  return `${CITIES[city].detailBasePath}/${slug}`;
+/** Locale-agnostic detail path for an area, e.g. `/station/shibuya`,
+ *  `/bangkok/district/watthana` or (key `st.asok`) `/bangkok/station/asok`.
+ *  Grid cells have no page of their own: their key maps to the city map. */
+export function areaPath(city: CityId, key: string): string {
+  if (city === 'bangkok') {
+    const { kind, id } = parseAreaKey(key);
+    if (kind === 'station') return `/bangkok/station/${id}`;
+    if (kind === 'cell') return CITIES.bangkok.homePath;
+  }
+  return `${CITIES[city].detailBasePath}/${key}`;
+}
+
+export function isAreaLevel(city: CityId, value: unknown): value is AreaLevel {
+  return typeof value === 'string' && (CITIES[city].levels as readonly string[]).includes(value);
 }
 
 /**

@@ -13,6 +13,7 @@ import {
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
 import { stationPrimaryName } from '@/lib/station-name';
+import { areaKind } from '@/lib/area-key';
 import type { Locale } from '@/i18n/routing';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
@@ -60,6 +61,12 @@ export default function ComparePanel({ stations }: Props) {
                 style={{ borderColor: COLORS[i], color: COLORS[i] }}
               >
                 {stationPrimaryName(s, locale)}
+                {/* Bangkok compares districts and station areas side by side. */}
+                {city.unit === 'district' && (
+                  <span className="opacity-60">
+                    · {t(areaKind(s.slug) === 'station' ? 'filter.kindStationArea' : 'filter.kindDistrict')}
+                  </span>
+                )}
                 <button
                   onClick={() => removeCompareStation(s.slug)}
                   className="hover:opacity-60 ml-0.5"

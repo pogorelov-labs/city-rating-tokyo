@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo, useDeferredValue } from 'react';
+import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
@@ -21,6 +22,13 @@ import {
 import Tooltip from '@/components/Tooltip';
 import { stationDisplayName, stationPrimaryName, matchArea } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
+import { useAllAreas, useLevelAreas } from '@/lib/area-lists';
+import { areaKind } from '@/lib/area-key';
+
+// Bangkok's 200 m grid ranks cells, not listed areas; its module (and the
+// grid download) only loads when that level is open.
+const GridMatchCount = dynamic(() => import('./bangkok/GridRanking').then((m) => m.GridMatchCount), { ssr: false });
+const GridHotspotList = dynamic(() => import('./bangkok/GridRanking').then((m) => m.GridHotspotList), { ssr: false });
 
 interface FilterPanelProps {
   stations: MapStation[];
@@ -121,6 +129,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const locale = useLocale() as Locale;
   const city = useCity();
   const isDistrict = city.unit === 'district';
+  const level = useCityState((s) => s.level);
+  const isGrid = level === 'grid';
+  // The ranked / counted areas of the painted level; search spans every level.
+  const levelAreas = useLevelAreas(stations);
+  const searchable = useAllAreas(stations);
   const weights = useAppStore((s) => s.weights);
   const setWeight = useAppStore((s) => s.setWeight);
   const setAllWeights = useAppStore((s) => s.setAllWeights);
@@ -146,8 +159,12 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
   const deferredWeights = useDeferredValue(weights);
   const noLimit = t('filter.noLimit');
-  // Unit-specific copy ("stations" vs "districts") lives under parallel keys.
-  const u = (key: string) => (isDistrict ? `${key}District` : key);
+  // City-wide copy (Bangkok's rent is a 1-bed condo, its search spans every
+  // level) and level-specific counts ("districts" / "station areas" / "cells")
+  // live under parallel keys.
+  const b = (key: string) => (isDistrict ? `${key}District` : key);
+  const levelSuffix = !isDistrict ? '' : level === 'station' ? 'StationArea' : level === 'grid' ? 'Grid' : 'District';
+  const u = (key: string) => `${key}${levelSuffix}`;
 
   const filtersActive = hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic });
 
@@ -155,13 +172,13 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
   // Score all stations, then apply dealbreakers for ranked list + match count
   const scoredStations = useMemo(() => {
-    return stations
+    return levelAreas
       .filter((s) => s.ratings !== null)
       .map((s) => ({
         ...s,
         score: calculateWeightedScore(s.ratings!, deferredWeights),
       }));
-  }, [stations, deferredWeights]);
+  }, [levelAreas, deferredWeights]);
 
   const filtered = useMemo(
     () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters),
@@ -177,22 +194,23 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   );
 
   const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, deferredWeights),
-    [stations, deferredWeights],
+    () => computeCompositeAnchors(levelAreas, deferredWeights),
+    [levelAreas, deferredWeights],
   );
+  const districtBySlug = useMemo(() => new Map(stations.map((s) => [s.slug, s])), [stations]);
 
   const searchResults = useMemo(() => {
     if (!search || search.length < 2) return [];
     const hits: { station: MapStation; alias?: string }[] = [];
-    for (const s of stations) {
+    for (const s of searchable) {
       const m = matchArea(s, search);
       if (m.matched) hits.push({ station: s, alias: m.alias });
       if (hits.length >= 8) break;
     }
     return hits;
-  }, [stations, search]);
+  }, [searchable, search]);
 
-  const totalWithRatings = stations.filter((s) => s.ratings).length;
+  const totalWithRatings = levelAreas.filter((s) => s.ratings).length;
 
   function applyPreset(presetId: string) {
     const p = PRESET_PROFILES.find((pr) => pr.id === presetId);
@@ -223,7 +241,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
           enterKeyHint="search"
           autoComplete="off"
           spellCheck={false}
-          placeholder={t(u('filter.searchPlaceholder'))}
+          placeholder={t(b('filter.searchPlaceholder'))}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -261,9 +279,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   <span className="text-gray-400 ml-1.5 text-xs">{stationDisplayName(s, locale).secondary}</span>
                 </span>
                 <span className="text-xs text-gray-400 shrink-0 ml-2">
-                  {isDistrict
-                    ? t('filter.stations', { count: s.station_count ?? 0 })
-                    : t('filter.lines', { count: s.line_count })}
+                  {!isDistrict
+                    ? t('filter.lines', { count: s.line_count })
+                    : areaKind(s.slug) === 'station'
+                      ? t('filter.kindStationArea')
+                      : t('filter.kindDistrict')}
                 </span>
               </button>
             ))}
@@ -323,7 +343,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             onHighChange={(v) => { setMaxRent(v); setActivePreset(null); }}
             formatLow={formatRent(city, filters.minRent, true, noLimit)}
             formatHigh={formatRent(city, filters.maxRent, false, noLimit)}
-            label={t(u('filter.rent'))}
+            label={t(b('filter.rent'))}
             umamiEvent="filter-rent"
           />
 
@@ -338,7 +358,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             onHighChange={(v) => { setMaxCommute(v); setActivePreset(null); }}
             formatLow={formatCommute(city, filters.minCommute, true, noLimit)}
             formatHigh={formatCommute(city, filters.maxCommute, false, noLimit)}
-            label={t(u('filter.commute'))}
+            label={t(b('filter.commute'))}
             umamiEvent="filter-commute"
           />
 
@@ -451,7 +471,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
         {/* Match counter */}
         <div className="mt-3 text-xs tabular-nums">
-          {filtered.length === totalWithRatings ? (
+          {isGrid ? (
+            <GridMatchCount districts={stations} />
+          ) : filtered.length === totalWithRatings ? (
             <span className="text-gray-400">{t(u('filter.stationCount'), { count: totalWithRatings })}</span>
           ) : filtered.length === 0 ? (
             <span className="text-amber-600">{t(u('filter.noMatch'))}</span>
@@ -512,8 +534,13 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
       {/* Top Ranked */}
       <div>
-        <h2 className="text-lg font-bold mb-2">{t('filter.topRanked')}</h2>
-        {ranked.length === 0 ? (
+        <h2 className="text-lg font-bold mb-2">{t(isGrid ? 'filter.bestSpots' : 'filter.topRanked')}</h2>
+        {isGrid ? (
+          <>
+            <p className="text-[11px] text-gray-500 leading-snug mb-2">{t('filter.bestSpotsHint')}</p>
+            <GridHotspotList districts={stations} />
+          </>
+        ) : ranked.length === 0 ? (
           <p className="text-sm text-gray-400">
             {filtersActive ? t(u('filter.noMatchFilters')) : t(u('filter.noRatedYet'))}
           </p>
@@ -534,10 +561,22 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                   <span className="text-xs text-gray-400 w-5 tabular-nums">
                     {i + 1}.
                   </span>
-                  <span className="flex-1 text-sm font-medium truncate">
-                    {stationPrimaryName(s, locale)}
-                    {s.rentUnknown && (
-                      <span className="text-[10px] text-gray-400 ml-1 font-normal">{t('filter.rentUnconfirmed')}</span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-medium truncate">
+                      {stationPrimaryName(s, locale)}
+                      {s.rentUnknown && (
+                        <span className="text-[10px] text-gray-400 ml-1 font-normal">{t('filter.rentUnconfirmed')}</span>
+                      )}
+                    </span>
+                    {s.line_colors && (
+                      <span className="flex items-center gap-1 text-[11px] text-gray-400 truncate">
+                        {s.line_colors.map((c, k) => (
+                          <span key={k} className="inline-block h-1.5 w-1.5 rounded-full shrink-0" style={{ backgroundColor: c }} aria-hidden />
+                        ))}
+                        {s.district && districtBySlug.get(s.district) && (
+                          <span className="truncate">{stationPrimaryName(districtBySlug.get(s.district)!, locale)}</span>
+                        )}
+                      </span>
                     )}
                   </span>
                   <span
@@ -556,9 +595,19 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
       <hr className="border-gray-200" />
 
       <div className="text-xs text-gray-400 space-y-1">
-        <p>{t(u('filter.stationsMapped'), { count: stations.length })}</p>
-        <p>{t('filter.withRatings', { count: totalWithRatings })}</p>
-        {isDistrict && <p className="leading-relaxed">{t('filter.relativeScoresNote')}</p>}
+        {!isGrid && <p>{t(u('filter.stationsMapped'), { count: levelAreas.length })}</p>}
+        {!isGrid && <p>{t('filter.withRatings', { count: totalWithRatings })}</p>}
+        {isDistrict && (
+          <p className="leading-relaxed">
+            {t(
+              level === 'station'
+                ? 'filter.relativeScoresNoteStationArea'
+                : level === 'grid'
+                  ? 'filter.relativeScoresNoteGrid'
+                  : 'filter.relativeScoresNote',
+            )}
+          </p>
+        )}
       </div>
     </div>
   );

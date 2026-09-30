@@ -1,6 +1,6 @@
-import { WeightConfig, DEFAULT_WEIGHTS, FilterState, StationRatings } from './types';
+import { WeightConfig, DEFAULT_WEIGHTS, FilterState, StationRatings, type AreaLevel } from './types';
 import { LEGACY_WEIGHT_KEYS as SCHEMA_LEGACY_WEIGHT_KEYS } from '@/lib/schema/constants';
-import { CITIES, type CityId } from './cities';
+import { CITIES, isAreaLevel, type CityId } from './cities';
 
 const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS) as (keyof WeightConfig)[];
 
@@ -10,6 +10,8 @@ const LEGACY_WEIGHT_KEYS = [...SCHEMA_LEGACY_WEIGHT_KEYS] as (keyof WeightConfig
 
 /** Flat view of everything a share link carries (one city's slice + shared prefs). */
 export interface UrlStateView {
+  /** Omitted from the URL when it is the city's default level. */
+  level?: AreaLevel;
   weights: WeightConfig;
   filters: FilterState;
   selectedStation: string | null;
@@ -27,6 +29,9 @@ export interface UrlStateView {
 export function encodeStateToParams(state: UrlStateView, city: CityId = 'tokyo'): URLSearchParams {
   const params = new URLSearchParams();
   const defaults = CITIES[city].defaultFilters;
+
+  // Level of detail first, so `?lv=grid&…` reads naturally.
+  if (state.level && state.level !== CITIES[city].defaultLevel) params.set('lv', state.level);
 
   // Only include weights if different from defaults
   const isDefault = WEIGHT_KEYS.every((k) => state.weights[k] === DEFAULT_WEIGHTS[k]);
@@ -64,6 +69,7 @@ export function encodeStateToParams(state: UrlStateView, city: CityId = 'tokyo')
 }
 
 export function decodeParamsToState(params: URLSearchParams, city: CityId = 'tokyo'): {
+  level?: AreaLevel;
   weights?: WeightConfig;
   filters?: Partial<FilterState>;
   selectedStation?: string;
@@ -73,6 +79,9 @@ export function decodeParamsToState(params: URLSearchParams, city: CityId = 'tok
 } {
   const result: ReturnType<typeof decodeParamsToState> = {};
   const { rent, commute, features } = CITIES[city];
+
+  const lv = params.get('lv');
+  if (isAreaLevel(city, lv)) result.level = lv;
 
   const w = params.get('w');
   if (w) {
@@ -185,12 +194,16 @@ export function selectUrlView(
     weights: WeightConfig;
     heatmapMode: boolean;
     heatmapDimension: string;
-    cities: Record<CityId, { filters: FilterState; selectedStation: string | null; compareStations: string[] }>;
+    cities: Record<
+      CityId,
+      { level: AreaLevel; filters: FilterState; selectedStation: string | null; compareStations: string[] }
+    >;
   },
   city: CityId,
 ): UrlStateView {
   const slice = state.cities[city];
   return {
+    level: slice.level,
     weights: state.weights,
     filters: slice.filters,
     selectedStation: slice.selectedStation,

@@ -8,10 +8,12 @@ import { CITIES, areaPath, formatRentShort } from '@/lib/cities';
 import {
   getBangkokDistrict,
   getBangkokMapDistricts,
-  getBangkokSlugs,
+  getBangkokStationArea,
+  getBangkokStationAreaIds,
   getRailLine,
   getRailStation,
 } from '@/lib/bangkok-data';
+import { stationAreaKey } from '@/lib/area-key';
 import {
   calculateWeightedScore,
   categoryDeviationColor,
@@ -19,7 +21,7 @@ import {
   pigmentName,
 } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS, RATING_LABELS, getGoogleMapsAreaUrl, type StationRatings } from '@/lib/types';
-import { stationDisplayName } from '@/lib/station-name';
+import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
 import RatingBar from '@/components/RatingBar';
@@ -30,79 +32,95 @@ import FeedbackWidget from '@/components/FeedbackWidget';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 const CITY = CITIES.bangkok;
+const STATS = CITY.levelStats.station!;
 const RATING_KEYS = Object.keys(RATING_LABELS) as (keyof StationRatings)[];
 
 export function generateStaticParams() {
-  const slugs = getBangkokSlugs();
-  return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  const ids = getBangkokStationAreaIds();
+  return routing.locales.flatMap((locale) => ids.map((id) => ({ locale, id })));
+}
+
+/** JA pages lead with the katakana name, every other locale with the Latin
+ *  name on the station signs; Thai is always the secondary line. */
+function areaNames(id: string, locale: Locale) {
+  const a = getBangkokStationArea(id)!;
+  return stationDisplayName({ name_en: a.name_en, name_jp: a.name_jp, name_th: a.name_th }, locale);
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ locale: string; id: string }>;
 }): Promise<Metadata> {
-  const { locale, slug } = await params;
-  const district = getBangkokDistrict(slug);
-  const t = await getTranslations({ locale, namespace: 'bangkok.district' });
-  if (!district) return { title: t('notFound') };
-  const { primary } = stationDisplayName(district, locale as Locale);
-  const atmosphere = district.description?.[locale as Locale]?.atmosphere;
-  const desc = atmosphere ? atmosphere.slice(0, 155) : t('metaDescriptionFallback', { name: primary });
+  const { locale, id } = await params;
+  const area = getBangkokStationArea(id);
+  const t = await getTranslations({ locale, namespace: 'bangkok.station' });
+  if (!area) return { title: t('notFound') };
+  const { primary } = areaNames(id, locale as Locale);
+  const district = getBangkokDistrict(area.district);
+  const districtName = district ? stationPrimaryName(district, locale as Locale) : area.district;
+  const desc = t('metaDescription', { name: primary, district: districtName });
   return {
-    title: t('metaTitle', { name: primary, nameTh: district.name_th }),
+    title: t('metaTitle', { name: primary, nameTh: area.name_th }),
     description: desc,
     openGraph: {
-      title: `${primary} (${district.name_th})`,
+      title: `${primary} (${area.name_th})`,
       description: desc,
       type: 'article',
-      ...(district.image && { images: [{ url: district.image.hero }] }),
+      ...(area.image && { images: [{ url: area.image.hero }] }),
     },
   };
 }
 
-export default async function DistrictPage({
+export default async function StationAreaPage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ locale: string; id: string }>;
 }) {
-  const { locale, slug } = await params;
+  const { locale, id } = await params;
   setRequestLocale(locale);
   const loc = locale as Locale;
   const t = await getTranslations();
 
-  const d = getBangkokDistrict(slug);
-  if (!d) notFound();
+  const a = getBangkokStationArea(id);
+  if (!a) notFound();
 
-  const { primary: displayName, secondary: thaiName } = stationDisplayName(d, loc);
-  const score = calculateWeightedScore(d.ratings, DEFAULT_WEIGHTS);
-  const mapsUrl = getGoogleMapsAreaUrl(d.lat, d.lng);
-  const stations = d.station_ids.map(getRailStation).filter((s) => s !== undefined);
-  const nearby = d.nearby_station_ids.map(getRailStation).filter((s) => s !== undefined);
-  const lines = d.line_ids.map(getRailLine).filter((l) => l !== undefined);
-  const hubValues = Object.values(d.transit_minutes);
-  const avgHub = Math.round(hubValues.reduce((a, b) => a + b, 0) / hubValues.length);
-  const desc = d.description?.[loc];
+  const { primary: displayName, secondary: thaiName } = areaNames(id, loc);
+  const score = calculateWeightedScore(a.ratings, DEFAULT_WEIGHTS);
+  const mapsUrl = getGoogleMapsAreaUrl(a.lat, a.lng);
+  const members = a.station_ids.map(getRailStation).filter((s) => s !== undefined);
+  const lines = a.line_ids.map(getRailLine).filter((l) => l !== undefined);
+  const lineName = (l: { name_en: string; name_ja: string; name_ru: string }) =>
+    loc === 'ja' ? l.name_ja : loc === 'ru' ? l.name_ru : l.name_en;
+  const stationName = (s: { name_en: string; name_ja?: string | null }) =>
+    loc === 'ja' && s.name_ja ? s.name_ja : s.name_en;
+  const hubValues = Object.values(a.transit_minutes);
+  const avgHub = Math.round(hubValues.reduce((x, y) => x + y, 0) / hubValues.length);
+  const residentValues = Object.values(a.resident_minutes);
+  const residentMin = Math.min(...residentValues);
   const mapDistricts = getBangkokMapDistricts();
-  const neighbors = d.neighbors
-    .map((n) => mapDistricts.find((m) => m.slug === n))
+  const districtBySlug = new Map(mapDistricts.map((d) => [d.slug, d]));
+  const neighbors = a.neighbors
+    .map((n) => getBangkokStationArea(n))
     .filter((n) => n !== undefined)
-    .map((n) => ({ ...n, score: calculateWeightedScore(n.ratings!, DEFAULT_WEIGHTS) }))
-    .sort((a, b) => b.score - a.score);
+    .map((n) => ({ ...n, score: calculateWeightedScore(n.ratings, DEFAULT_WEIGHTS) }))
+    .sort((x, y) => y.score - x.score);
   const wikiOrder: ('en' | 'ja' | 'ru' | 'th')[] = [loc, 'th', ...(['en', 'ja', 'ru'] as const).filter((l) => l !== loc)];
-  const wikiLinks = wikiOrder.filter((l) => d.wikipedia[l]).map((l) => ({ lang: l, url: d.wikipedia[l]! }));
-  const f = d.facts;
+  const wikiLinks = wikiOrder.filter((l) => a.wikipedia[l]).map((l) => ({ lang: l, url: a.wikipedia[l]! }));
+  const f = a.facts;
   const nf = new Intl.NumberFormat(loc === 'en' ? 'en-US' : loc);
+  const mapHref = { pathname: CITY.homePath, query: { lv: 'station', s: stationAreaKey(a.id) } };
+  const gridHref = { pathname: CITY.homePath, query: { lv: 'grid', s: stationAreaKey(a.id) } };
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'AdministrativeArea',
-    name: `${displayName} District, Bangkok`,
-    alternateName: [d.name_th, d.name_en].filter((n) => n !== displayName),
+    '@type': 'Place',
+    name: `${displayName} station area, Bangkok`,
+    alternateName: [a.name_th, a.name_en].filter((n) => n !== displayName),
     inLanguage: locale,
     containedInPlace: { '@type': 'City', name: 'Bangkok' },
-    geo: { '@type': 'GeoCoordinates', latitude: d.lat, longitude: d.lng },
-    ...(d.wikipedia.en && { sameAs: d.wikipedia.en }),
+    geo: { '@type': 'GeoCoordinates', latitude: a.lat, longitude: a.lng },
+    ...(a.wikipedia.en && { sameAs: a.wikipedia.en }),
   };
 
   return (
@@ -110,15 +128,10 @@ export default async function DistrictPage({
       <div className="min-h-screen bg-gray-50">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        {/* Header */}
         <header className="bg-white border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center gap-x-4 gap-y-1">
-            <Link
-              href={CITY.homePath}
-              className="text-sm text-blue-600 hover:underline flex items-center gap-1"
-              data-umami-event="back-to-map"
-            >
-              &larr; {t('bangkok.district.backToMap')}
+            <Link href={mapHref} className="text-sm text-blue-600 hover:underline flex items-center gap-1" data-umami-event="back-to-map">
+              &larr; {t('bangkok.station.backToMap')}
             </Link>
             <span className="text-gray-300">|</span>
             <h1 className="font-bold text-lg">{displayName}</h1>
@@ -130,7 +143,7 @@ export default async function DistrictPage({
               className="text-xs text-blue-600 hover:underline flex items-center gap-1"
               title={t('station.mapsTooltip')}
               data-umami-event="open-google-maps"
-              data-umami-event-station={slug}
+              data-umami-event-station={stationAreaKey(a.id)}
             >
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -141,8 +154,8 @@ export default async function DistrictPage({
             <LocaleSwitcher />
             <span
               className="ml-auto text-2xl font-bold"
-              style={{ color: compositeToColor(score, CITY.defaultAnchors) }}
-              title={t('bangkok.district.scoreTooltip')}
+              style={{ color: compositeToColor(score, STATS.defaultAnchors) }}
+              title={t('bangkok.station.scoreTooltip')}
             >
               {score.toFixed(1)}
             </span>
@@ -150,19 +163,18 @@ export default async function DistrictPage({
         </header>
 
         <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
-          {/* Hero image (Wikimedia Commons, hot-linked with attribution) */}
-          {d.image && (
+          {a.image && (
             <figure className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={d.image.hero}
-                alt={t('bangkok.district.imageAlt', { name: displayName })}
+                src={a.image.hero}
+                alt={t('bangkok.station.imageAlt', { name: displayName })}
                 className="w-full h-48 md:h-64 object-cover"
                 loading="eager"
               />
               <figcaption className="px-3 py-1.5 text-[10px] text-gray-400 truncate">
-                <a href={d.image.page} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
-                  {t('bangkok.district.imageCredit', { artist: d.image.artist, license: d.image.license })}
+                <a href={a.image.page} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
+                  {t('bangkok.district.imageCredit', { artist: a.image.artist, license: a.image.license })}
                 </a>
               </figcaption>
             </figure>
@@ -170,91 +182,82 @@ export default async function DistrictPage({
 
           {/* Quick stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <StatCard
-              label={t('bangkok.district.rail')}
-              sub={
-                stations.length > 0
-                  ? t('filter.lines', { count: lines.length })
-                  : t('bangkok.district.nearbyCount', { count: nearby.length })
-              }
-            >
-              <div className="text-xl font-bold">
-                {stations.length > 0 ? t('filter.stations', { count: stations.length }) : t('bangkok.district.noRail')}
-              </div>
+            <StatCard label={t('bangkok.station.linesLabel')} sub={t('filter.stations', { count: members.length })}>
+              <div className="text-xl font-bold">{t('filter.lines', { count: lines.length })}</div>
             </StatCard>
-            <StatCard label={t('bangkok.district.rentLabel')} sub={t('bangkok.district.rentSub')}>
+            <StatCard label={t('bangkok.district.rentLabel')} sub={t('bangkok.station.rentSub')}>
               <div className="flex items-baseline gap-1">
-                <span className="text-xl font-bold">{formatRentShort('bangkok', d.rent.one_bed ?? 0)}</span>
-                {d.rent.two_bed && (
+                <span className="text-xl font-bold">{formatRentShort('bangkok', a.rent.one_bed ?? 0)}</span>
+                {a.rent.two_bed && (
                   <>
                     <span className="text-xs text-gray-400">–</span>
-                    <span className="text-xl font-bold">{formatRentShort('bangkok', d.rent.two_bed)}</span>
+                    <span className="text-xl font-bold">{formatRentShort('bangkok', a.rent.two_bed)}</span>
                   </>
                 )}
               </div>
             </StatCard>
+            <StatCard label={t('bangkok.station.fromStation')} value={`${avgHub} min`} sub={t('bangkok.station.fromStationSub')} />
             <StatCard
-              label={t('station.avgToCenter')}
-              value={`${avgHub} min`}
-              sub={t('bangkok.district.toHubsSub')}
-            />
-            <StatCard
-              label={t('bangkok.district.density')}
-              value={f.density ? `${nf.format(f.density)}/km²` : '—'}
-              sub={
-                f.population
-                  ? t('bangkok.district.populationSub', { population: nf.format(f.population), year: f.population_year ?? '' })
-                  : t('station.noDataYet')
-              }
+              label={t('bangkok.station.residentLabel')}
+              value={`${residentMin} min`}
+              sub={t('bangkok.station.residentSub')}
             />
           </div>
 
-          <HubStrip transitMinutes={d.transit_minutes} mapsUrl={mapsUrl} />
+          <HubStrip transitMinutes={a.transit_minutes} mapsUrl={mapsUrl} />
 
-          {/* Rail stations */}
+          {/* Stations & lines */}
           <section className="bg-white rounded-lg border border-gray-200 p-5">
-            <h2 className="font-bold text-lg mb-1">{t('bangkok.district.railTitle')}</h2>
-            <p className="text-[11px] text-gray-500 mb-3">{t('bangkok.district.railCaption')}</p>
-            {lines.length > 0 && (
-              <div className="flex flex-wrap gap-1.5 mb-3">
-                {lines.map((l) => (
-                  <span
-                    key={l.id}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs text-gray-700"
-                  >
-                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: l.color }} aria-hidden />
-                    {loc === 'ja' ? l.name_ja : loc === 'ru' ? l.name_ru : l.name_en}
+            <h2 className="font-bold text-lg mb-1">{t('bangkok.station.stationsTitle')}</h2>
+            <p className="text-[11px] text-gray-500 mb-3">
+              {t(members.length > 1 ? 'bangkok.station.interchangeCaption' : 'bangkok.station.stationsCaption')}
+            </p>
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {lines.map((l) => (
+                <span
+                  key={l.id}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs text-gray-700"
+                >
+                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: l.color }} aria-hidden />
+                  {lineName(l)}
+                </span>
+              ))}
+            </div>
+            <ul className="space-y-1.5">
+              {members.map((s) => (
+                <li key={s.id} className="flex items-center gap-2 text-sm">
+                  <span className="flex gap-0.5 shrink-0" aria-hidden>
+                    {s.lines.map((lid) => (
+                      <span key={lid} className="h-2 w-2 rounded-full" style={{ backgroundColor: getRailLine(lid)?.color }} />
+                    ))}
                   </span>
-                ))}
+                  <span className="font-medium">{stationName(s)}</span>
+                  <span className="text-gray-400 text-xs">{s.name_th}</span>
+                </li>
+              ))}
+            </ul>
+            {neighbors.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <div className="text-xs text-gray-500 mb-2">{t('bangkok.station.nextStops')}</div>
+                <div className="flex flex-wrap gap-2">
+                  {neighbors.map((n) => (
+                    <Link
+                      key={n.id}
+                      href={areaPath('bangkok', stationAreaKey(n.id))}
+                      className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-1.5 text-sm hover:bg-gray-50"
+                      data-umami-event="neighbor-station-area"
+                      data-umami-event-station={n.id}
+                    >
+                      <span className="font-medium">
+                        {stationPrimaryName({ name_en: n.name_en, name_jp: n.name_jp, name_th: n.name_th }, loc)}
+                      </span>
+                      <span className="font-bold tabular-nums text-xs" style={{ color: compositeToColor(n.score, STATS.defaultAnchors) }}>
+                        {n.score.toFixed(1)}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            )}
-            {stations.length > 0 ? (
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5">
-                {stations.map((s) => (
-                  <li key={s.id} className="flex items-center gap-2 text-sm">
-                    <span className="flex gap-0.5 shrink-0" aria-hidden>
-                      {s.lines.map((lid) => (
-                        <span key={lid} className="h-2 w-2 rounded-full" style={{ backgroundColor: getRailLine(lid)?.color }} />
-                      ))}
-                    </span>
-                    <span className="font-medium">{s.name_en}</span>
-                    <span className="text-gray-400 text-xs">{s.name_th}</span>
-                    {s.district && s.district !== d.slug && (
-                      <span className="text-[10px] text-gray-400 ml-auto">{t('bangkok.district.onBorder')}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-gray-600">
-                {t(nearby.length > 0 ? 'bangkok.district.noRailNearbyText' : 'bangkok.district.noRailText')}
-              </p>
-            )}
-            {nearby.length > 0 && (
-              <p className="mt-3 pt-2 border-t border-gray-100 text-xs text-gray-500">
-                <span className="text-gray-400">{t('bangkok.district.nearbyStations')}: </span>
-                {nearby.map((s) => s.name_en).join(' · ')}
-              </p>
             )}
           </section>
 
@@ -263,35 +266,31 @@ export default async function DistrictPage({
             <section className="bg-white rounded-lg border border-gray-200 p-5">
               <h2 className="font-bold text-lg mb-2">{t('station.overview')}</h2>
               <RadarChartWrapper
-                ratings={d.ratings}
-                medians={CITY.medians}
-                medianLabel={t('bangkok.district.radarMedianLabel')}
-                areaLabel={t('bangkok.district.radarDistrictLabel')}
+                ratings={a.ratings}
+                medians={STATS.medians}
+                medianLabel={t('bangkok.station.radarMedianLabel')}
+                areaLabel={t('bangkok.station.radarAreaLabel')}
               />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">
               <div className="flex items-baseline justify-between gap-2 mb-2">
                 <h2 className="font-bold text-lg">{t('station.ratingsTitle')}</h2>
-                <span className="text-xs text-gray-500 shrink-0">
-                  {t('station.dataFreshness.label', { date: d.data_date })}
-                </span>
+                <span className="text-xs text-gray-500 shrink-0">{t('station.dataFreshness.label', { date: a.data_date })}</span>
               </div>
-              <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">
-                {t('bangkok.district.ratingsCaption')}
-              </p>
+              <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">{t('bangkok.station.ratingsCaption')}</p>
               <div className="space-y-3">
                 {RATING_KEYS.map((key) => {
-                  const val = d.ratings[key];
-                  const conf = d.confidence[key];
-                  const srcs = d.sources[key];
-                  const median = CITY.medians[key];
+                  const val = a.ratings[key];
+                  const conf = a.confidence[key];
+                  const srcs = a.sources[key];
+                  const median = STATS.medians[key];
                   const dev = val - median;
                   const barColor = categoryDeviationColor(val, median);
                   const pigment = pigmentName(dev);
                   const devPhrase =
                     dev === 0
-                      ? t('bangkok.district.barTooltipDevExact', { median })
-                      : t('bangkok.district.barTooltipDev', {
+                      ? t('bangkok.station.barTooltipDevExact', { median })
+                      : t('bangkok.station.barTooltipDev', {
                           median,
                           dev: Math.abs(dev),
                           direction: dev > 0 ? t('station.devAbove') : t('station.devBelow'),
@@ -309,7 +308,7 @@ export default async function DistrictPage({
                           <ConfidenceBadge
                             level={conf}
                             sources={srcs}
-                            descriptionKey={conf === 'editorial' ? 'confidence.editorial.descriptionResearch' : undefined}
+                            descriptionKey={conf === 'editorial' ? 'confidence.editorial.descriptionDistrictLevel' : undefined}
                           />
                         )}
                       </div>
@@ -317,16 +316,16 @@ export default async function DistrictPage({
                         showHelpIcon={false}
                         content={
                           <>
-                            <span>{t(key === 'rent' ? 'bangkok.district.rentTooltip' : `ratingTooltips.${key}`)}</span>
+                            <span>{t(key === 'rent' ? 'bangkok.station.rentTooltip' : `ratingTooltips.${key}`)}</span>
                             {srcs && srcs.length > 0 && (
                               <span className="block mt-1.5 text-gray-400">
                                 Sources: {srcs.map((s) => (t.has(`sources.${s}`) ? t(`sources.${s}`) : s)).join(', ')}
                               </span>
                             )}
                             <span className="block mt-1.5 pt-1.5 border-t border-gray-600/40 tabular-nums">
-                              {t('bangkok.district.bangkokMedian', { value: median })}
+                              {t('bangkok.station.bangkokMedian', { value: median })}
                               <br />
-                              {t('bangkok.district.thisDistrict', { value: val })} ({labelDevSummary})
+                              {t('bangkok.station.thisArea', { value: val })} ({labelDevSummary})
                             </span>
                           </>
                         }
@@ -388,8 +387,8 @@ export default async function DistrictPage({
                   {t('station.howRatingsWork.title')}
                 </summary>
                 <div className="mt-2 pl-5 text-[11px] text-gray-600 leading-relaxed space-y-1.5">
-                  <p>{t('bangkok.district.howRatingsWork')}</p>
-                  <p>{t('bangkok.district.relativeNote')}</p>
+                  <p>{t('bangkok.station.howRatingsWork')}</p>
+                  <p>{t('bangkok.station.relativeNote')}</p>
                   <Link href="/methodology#bangkok" className="inline-block text-blue-600 hover:underline font-medium">
                     {t('station.howRatingsWork.learnMore')}
                   </Link>
@@ -398,39 +397,14 @@ export default async function DistrictPage({
             </section>
           </div>
 
-          {/* Description */}
-          {desc ? (
-            <section className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
-              <h2 className="font-bold text-lg">{t('bangkok.district.aboutDistrict')}</h2>
-              {(
-                [
-                  ['atmosphere', 'station.atmosphere'],
-                  ['landmarks', 'station.landmarks'],
-                  ['food', 'station.foodAndCafes'],
-                  ['nightlife', 'station.barsAndNightlife'],
-                ] as const
-              ).map(([field, label]) =>
-                desc[field] ? (
-                  <div key={field}>
-                    <h3 className="font-medium text-sm text-gray-500 mb-1">{t(label)}</h3>
-                    <p className="text-gray-700">{desc[field]}</p>
-                  </div>
-                ) : null,
-              )}
-            </section>
-          ) : (
-            <section className="bg-white rounded-lg border border-gray-200 p-5 text-center text-gray-400">
-              <p>{t('station.descriptionComingSoon')}</p>
-            </section>
-          )}
-
           {/* By the numbers */}
           <section className="bg-white rounded-lg border border-gray-200 p-5">
-            <h2 className="font-bold text-lg mb-3">{t('bangkok.district.factsTitle')}</h2>
+            <h2 className="font-bold text-lg mb-3">{t('bangkok.station.factsTitle')}</h2>
             <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm">
               {(
                 [
                   ['factFood', f.food],
+                  ['factCafes', f.cafes],
                   ['factNightlife', f.nightlife],
                   ['factConvenience', f.convenience],
                   ['factEssentials', f.essentials],
@@ -438,61 +412,69 @@ export default async function DistrictPage({
                   ['factSports', f.sports],
                   ['factCulture', f.culture],
                   ['factTemples', f.temples],
-                  ['factPiers', f.piers],
                 ] as const
               ).map(([key, value]) => (
                 <div key={key}>
-                  <dt className="text-xs text-gray-500">{t(`bangkok.district.${key}`)}</dt>
+                  <dt className="text-xs text-gray-500">
+                    {t(key === 'factCafes' ? 'bangkok.station.factCafes' : `bangkok.district.${key}`)}
+                  </dt>
                   <dd className="font-semibold tabular-nums">{nf.format(value)}</dd>
                 </div>
               ))}
               <div>
                 <dt className="text-xs text-gray-500">{t('bangkok.district.factParks')}</dt>
-                <dd className="font-semibold tabular-nums">
-                  {nf.format(f.park_ha)} ha <span className="text-gray-400 font-normal">({f.park_share}%)</span>
-                </dd>
+                <dd className="font-semibold tabular-nums">{nf.format(f.park_ha)} ha</dd>
               </div>
               <div>
                 <dt className="text-xs text-gray-500">{t('bangkok.district.factArea')}</dt>
                 <dd className="font-semibold tabular-nums">{nf.format(f.area_km2)} km²</dd>
               </div>
               <div>
-                <dt className="text-xs text-gray-500">{t('bangkok.district.factPopulation')}</dt>
-                <dd className="font-semibold tabular-nums">{f.population ? nf.format(f.population) : '—'}</dd>
+                <dt className="text-xs text-gray-500">{t('bangkok.district.factPiers')}</dt>
+                <dd className="font-semibold tabular-nums">{nf.format(f.piers)}</dd>
               </div>
             </dl>
             <p className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 leading-relaxed">
-              {t('bangkok.district.factsSource')}
+              {t('bangkok.station.factsSource')}
             </p>
           </section>
 
-          {/* Neighbouring districts */}
-          {neighbors.length > 0 && (
-            <section className="bg-white rounded-lg border border-gray-200 p-5">
-              <h2 className="font-bold text-lg mb-3">{t('bangkok.district.neighbors')}</h2>
-              <div className="flex flex-wrap gap-2">
-                {neighbors.map((n) => (
+          {/* Districts covered */}
+          <section className="bg-white rounded-lg border border-gray-200 p-5">
+            <h2 className="font-bold text-lg mb-1">{t('bangkok.station.districtsTitle')}</h2>
+            <p className="text-[11px] text-gray-500 mb-3">{t('bangkok.station.districtsCaption')}</p>
+            <div className="flex flex-wrap gap-2">
+              {a.districts.map(({ slug, share }) => {
+                const d = districtBySlug.get(slug);
+                if (!d) return null;
+                const dScore = calculateWeightedScore(d.ratings!, DEFAULT_WEIGHTS);
+                return (
                   <Link
-                    key={n.slug}
-                    href={areaPath('bangkok', n.slug)}
+                    key={slug}
+                    href={areaPath('bangkok', slug)}
                     className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-1.5 text-sm hover:bg-gray-50"
-                    data-umami-event="neighbor-district"
-                    data-umami-event-station={n.slug}
+                    data-umami-event="station-area-district"
+                    data-umami-event-station={slug}
                   >
-                    <span className="font-medium">{stationDisplayName(n, loc).primary}</span>
-                    <span
-                      className="font-bold tabular-nums text-xs"
-                      style={{ color: compositeToColor(n.score, CITY.defaultAnchors) }}
-                    >
-                      {n.score.toFixed(1)}
+                    <span className="font-medium">{stationPrimaryName(d, loc)}</span>
+                    <span className="text-xs text-gray-400 tabular-nums">{Math.round(share * 100)}%</span>
+                    <span className="font-bold tabular-nums text-xs" style={{ color: compositeToColor(dScore, CITY.defaultAnchors) }}>
+                      {dScore.toFixed(1)}
                     </span>
                   </Link>
-                ))}
-              </div>
-            </section>
-          )}
+                );
+              })}
+            </div>
+            <Link
+              href={gridHref}
+              className="mt-3 inline-block text-xs text-blue-600 hover:underline"
+              data-umami-event="station-area-grid"
+              data-umami-event-station={a.id}
+            >
+              {t('bangkok.station.viewGrid')}
+            </Link>
+          </section>
 
-          {/* Wikipedia */}
           {wikiLinks.length > 0 && (
             <p className="text-xs text-gray-500">
               {t('bangkok.district.readMore')}{' '}
@@ -507,7 +489,7 @@ export default async function DistrictPage({
             </p>
           )}
 
-          <FeedbackWidget stationSlug={slug} stationName={displayName} source="station_page" />
+          <FeedbackWidget stationSlug={stationAreaKey(a.id)} stationName={displayName} source="station_page" />
         </main>
       </div>
     </CityProvider>

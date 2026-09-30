@@ -1,12 +1,20 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getBangkokMapDistricts, getBangkokSnippets, getBangkokThumbnails } from '@/lib/bangkok-data';
+import {
+  getBangkokMapDistricts,
+  getBangkokMapStationAreas,
+  getBangkokSnippets,
+  getBangkokStationAreaThumbnails,
+  getBangkokThumbnails,
+} from '@/lib/bangkok-data';
 import type { Locale } from '@/i18n/routing';
 import CityHome from '@/components/CityHome';
 
 // Locale-agnostic data — computed once at module load
 const districts = getBangkokMapDistricts();
-const thumbnails = getBangkokThumbnails();
+const stationAreas = getBangkokMapStationAreas();
+// One map keyed like the selection: district slugs + `st.<id>` station areas.
+const thumbnails = { ...getBangkokThumbnails(), ...getBangkokStationAreaThumbnails() };
 
 export async function generateMetadata({
   params,
@@ -31,5 +39,13 @@ export default async function BangkokHome({
   setRequestLocale(locale);
   const snippets = getBangkokSnippets(locale as Locale);
 
-  return <CityHome city="bangkok" stations={districts} thumbnails={thumbnails} snippets={snippets} />;
+  return (
+    <CityHome
+      city="bangkok"
+      stations={districts}
+      stationAreas={stationAreas}
+      thumbnails={thumbnails}
+      snippets={snippets}
+    />
+  );
 }

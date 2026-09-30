@@ -7,7 +7,8 @@ import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { areaPath, formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { stationDisplayName } from '@/lib/station-name';
+import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
+import { areaKind } from '@/lib/area-key';
 import { calculateWeightedScore } from '@/lib/scoring';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
@@ -130,11 +131,16 @@ export default function MobileStationCard({
 
   const names = stationDisplayName(station, locale);
   const compareDisabled = !isCompared && compareStations.length >= 3;
+  // Bangkok keys are typed: `st.<id>` is a station area, a bare slug a district.
+  const isStationArea = city.unit === 'district' && areaKind(station.slug) === 'station';
+  const parentDistrict = isStationArea && station.district ? stations.find((s) => s.slug === station.district) : undefined;
 
   return (
     <div
       ref={cardRef}
-      className={`md:hidden fixed bottom-0 left-3 right-3 z-[800] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
+      // z above the touch zoom buttons (Leaflet controls, z 1000), which
+      // otherwise sit on top of the card's right edge; the drawer (z 1002) wins.
+      className={`md:hidden fixed bottom-0 left-3 right-3 z-[1001] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
         open ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
@@ -201,7 +207,9 @@ export default function MobileStationCard({
             )}
           </div>
           <div className="text-xs text-gray-500 mt-1">
-            {city.unit === 'district' && station.station_count !== undefined
+            {isStationArea
+              ? <>{t('filter.lines', { count: station.line_count })}{parentDistrict && <> · {stationPrimaryName(parentDistrict, locale)}</>}</>
+              : city.unit === 'district' && station.station_count !== undefined
               ? station.station_count > 0
                 ? <>{t('filter.stations', { count: station.station_count })} · {t('filter.lines', { count: station.line_count })}</>
                 : t('map.noRailInDistrict')
@@ -218,7 +226,7 @@ export default function MobileStationCard({
         {/* Close button */}
         <button
           onClick={handleClose}
-          aria-label={t(city.unit === 'district' ? 'map.closeCardDistrict' : 'map.closeCard')}
+          aria-label={t(city.unit === 'district' && !isStationArea ? 'map.closeCardDistrict' : 'map.closeCard')}
           className="shrink-0 -mr-1 -mt-1 p-2 text-gray-400 active:text-gray-600 active:bg-gray-100 rounded-lg"
           style={{ minWidth: 36, minHeight: 36 }}
         >
