@@ -63,7 +63,7 @@ Do **not** equate “every station has a number” with “every number is equal
 
 | File | Records | Source | Purpose |
 |------|---------|--------|---------|
-| `app/src/data/stations.json` | 1493 | ekidata | Master station list (slug, name_en, name_jp, lines[], lat/lng, prefecture). Mirrored to `data/stations.json` for scripts. |
+| `app/src/data/stations.json` | 1493 | ekidata | Master station list (slug, name_en, name_jp, name_ru, lines[], lat/lng, prefecture). Mirrored to `data/stations.json` for scripts. |
 | `app/src/data/line-names.json` | 127 | ekidata lookup | `{line_id: {name_ja, name_en, operator_ja, operator_en, color, type}}` — PR #90 |
 | `app/src/data/ward-data.json` | 1493 | NocoDB export | `{slug: {city_name, ward_name, prefecture_name}}` for station detail page — PR #90 |
 | `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
@@ -374,17 +374,21 @@ app/src/app/
 
 ### Build: 4493 pages in ~30s (10 workers)
 
-### Station naming convention (CRTKY-111, not yet implemented)
+### Station naming convention (CRTKY-111 helpers + CRTKY-107 data)
 
-Current: `name_en` hardcoded as primary everywhere. Correct pattern:
+`stationDisplayName()` / `stationPrimaryName()` in `lib/station-name.ts` pick the name per locale:
 
 | Locale | Primary (bold) | Secondary (gray) | Notes |
 |--------|---------------|-------------------|-------|
-| EN | name_en | name_jp | Current behavior |
+| EN | name_en | name_jp | |
 | JA | name_jp | name_en | Kanji primary, romaji helper |
 | RU | name_ru | name_jp | Cyrillic primary, kanji for context |
 
-Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji on station signs. `name_ru` requires CRTKY-107 (Polivanov transliteration + Wikipedia override for top 100).
+Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji on station signs.
+
+**`name_ru` (CRTKY-107, 2026-09-30):** all 1493 stations, written into both `stations.json` files by `scripts/generate-name-ru.py`. Sources in order: the established Russian name on Wikidata when it is Polivanov (386); Polivanov (`scripts/polivanov.py`) of Wikidata's English label (1051); Polivanov of our `name_en` (56 — including labels with English words, e.g. "Narita Airport Terminal 1"). `scripts/test_polivanov.py` fails if the committed names drift from what the generator produces, so re-run it after touching the transliterator. Wikidata labels come from a committed CC0 snapshot, `data/names/wikidata-station-labels.json` (`--refresh` re-queries). Per-station sources: `data/names/name-ru-report.json`.
+
+⚠️ **`name_en` is misread for roughly 330 stations** (automated kanji→romaji; 362 differ from Wikidata's English label, ~330 after discounting spelling style like Shinbashi/Shimbashi and bracket aliases): 元加治 shows as "Genka-Osamu" (Motokaji), 新羽 as "Shin-Hane" (Nippa), 南越谷 as "Nan'etsu-Tani" (Minami-Koshigaya). `name_ru` avoids it by using Wikidata's reading; the English names themselves are not fixed yet — candidates are listed under `wikidata_en` in the report. Slugs derive from these readings, so a fix must not rename slugs without a CRTKY-113-style redirect pass.
 
 ### Known limitations
 - `dynamic()` loading callbacks ("Loading map...") can't use hooks — left as EN
