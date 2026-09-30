@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Sukhumvit's expat engine: Asok offices, Japanese Phrom Phong, moneyed Thong Lo. Everything within a soi, BTS along Sukhumvit, motorbike taxis up the long sois. Top-tier rents, heavy traffic, constant noise.",
+    "landmarks": "Terminal 21, EmQuartier, Soi Cowboy's neon, Kamthieng House at the Siam Society, Bumrungrad and Samitivej hospitals, Saen Saep canal boats. Almost no parks inside; Benjasiri is across Sukhumvit.",
+    "food": "~3.1k places to eat: Japanese izakaya and supermarkets around Phrom Phong and Thong Lo, Middle Eastern Soi Arab by Nana, chef-driven Thai, cheap mall food courts too.",
+    "nightlife": "Bangkok's bar capital: Thong Lo and Ekkamai cocktail bars and clubs, Nana's party sois, Soi Cowboy, hotel rooftops. Late, loud, pricey."
+  },
+  "ja": {
+    "atmosphere": "スクンビットの駐在員エンジン。アソークのオフィス、日本人のプロンポン、富裕層のトンロー。何でもソイの中で揃い、通りにはBTS、長いソイの奥はバイタク。家賃は最上位クラス、渋滞と騒音は常時。",
+    "landmarks": "ターミナル21、エムクオーティエ、ソイ・カウボーイのネオン、サイアム・ソサエティのカムティエン・ハウス、バムルンラード病院とサミティベート病院、セーンセープ運河のボート。区内に公園はほぼなく、ベンチャシリ公園はスクンビット通りの向こう側。",
+    "food": "飲食約3100軒。プロンポンとトンローの居酒屋と日系スーパー、ナナ近くソイ・アラブの中東料理、シェフ系のタイ料理、モールの安いフードコートも。",
+    "nightlife": "バンコクのバー首都。トンローとエカマイのカクテルバーとクラブ、ナナのパーティー通り、ソイ・カウボーイ、ホテルの屋上バー。遅い、うるさい、高い。"
+  },
+  "ru": {
+    "atmosphere": "Экспатский мотор Сукхумвита: офисы Асока, японский Пхромпхонг, денежный Тонглор. Всё в шаговой доступности, BTS вдоль Сукхумвита, вглубь длинных сой — на мототакси. Аренда высшей лиги, пробки и шум постоянно.",
+    "landmarks": "Terminal 21, EmQuartier, неон Soi Cowboy, дом Камтхиенг в Сиамском обществе, больницы Bumrungrad и Samitivej, лодки по каналу Саен Саеп. Парков внутри почти нет, Бенджасири — через Сукхумвит.",
+    "food": "Около 3,1 тыс. мест поесть: японские изакаи и супермаркеты у Пхромпхонга и Тонглора, ближневосточная Soi Arab у Наны, авторская тайская кухня и дешёвые фудкорты в молах.",
+    "nightlife": "Барная столица Бангкока: коктейльные бары и клубы Тонглора и Экамая, тусовочные сой у Наны, Soi Cowboy, отельные руфтопы. Поздно, громко, дорого."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Old market town on Bangkok's eastern edge: Min Buri Market on Saen Saep canal, Bang Chan factories, Thai-Muslim villages, townhouse estates. Pink Line terminus, but the centre is ~75 min away. Rock-bottom rents, slow pace.",
+    "landmarks": "Min Buri's old market and canal piers, Kwan-Riam weekend floating market on Saen Saep, mosques along the water, Bang Chan Industrial Estate. Parks: practically none.",
+    "food": "Min Buri Market stalls, halal khao mok and roti, noodle shops and grilled-meat carts along Ramkhamhaeng and Suwinthawong. Chains and cafés are thin on the ground.",
+    "nightlife": "Quiet after dark: roadside beer gardens and karaoke, nothing much past midnight."
+  },
+  "ja": {
+    "atmosphere": "バンコク東端の古い市場町。セーンセープ運河沿いのミンブリー市場、バーンチャンの工場、タイ・ムスリムの集落、タウンハウス団地。ピンクラインの終点だが都心まで約75分。家賃は底値、のんびり。",
+    "landmarks": "ミンブリーの古い市場と運河の船着き場、セーンセープ運河の週末クワンリアム水上マーケット、水辺のモスク、バーンチャン工業団地。公園は事実上ゼロ。",
+    "food": "ミンブリー市場の屋台、ハラールのカオモックとロティ、ラームカムヘーン通りとスウィンタウォン通りの麺屋と串焼き屋台。チェーン店やカフェは少ない。",
+    "nightlife": "夜は静か。道路沿いのビアガーデンとカラオケ、深夜はほぼ何もない。"
+  },
+  "ru": {
+    "atmosphere": "Старый рыночный городок на восточном краю Бангкока: рынок Минбури у канала Саен Саеп, фабрики Бангчана, деревни тайских мусульман, таунхаусные посёлки. Конечная розовой ветки, но до центра ~75 минут. Аренда на дне, темп медленный.",
+    "landmarks": "Старый рынок Минбури и пристани на канале, выходной плавучий рынок Кван-Риам на Саен Саепе, мечети у воды, промзона Бангчан. Парков практически нет.",
+    "food": "Лотки рынка Минбури, халяльные као мок и роти, лапшичные и гриль-тележки на Рамкхамхэнг и Сувинтавонг. Сетевых ресторанов и кафе мало.",
+    "nightlife": "Вечером тихо: придорожные пивные сады и караоке, после полуночи почти ничего."
+  }
+}

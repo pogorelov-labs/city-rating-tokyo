@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Rural-edge Bangkok around Sam Wa and Sai Kong Din: canals, rice fields, new housing estates, Thai-Muslim villages with mosques beside temples. Very cheap and quiet; no rail inside, over an hour to town.",
+    "landmarks": "Safari World's drive-through zoo, the Taiwanese-run Fo Guang Shan Thaihua temple, canal-side wats and mosques, Big C Hathairat as the shopping anchor.",
+    "food": "Fresh and night markets, roadside stalls, halal kitchens near the mosques; for real choice, drive to Fashion Island or Min Buri.",
+    "nightlife": "Minimal: a handful of roadside bars, otherwise quiet nights."
+  },
+  "ja": {
+    "atmosphere": "サームワーやサーイコーンディン周辺、農村の面影が残るバンコクの外縁。運河、田んぼ、新しい住宅地、寺の隣にモスクが建つタイ・ムスリムの集落。とても安く静か、区内に鉄道はなく都心まで1時間以上。",
+    "landmarks": "ドライブスルー式動物園のサファリワールド、台湾系の佛光山泰華寺、運河沿いの寺とモスク、買い物の拠点はビッグC ハタイラート。",
+    "food": "生鮮市場とナイトマーケット、道端の屋台、モスク周辺のハラール食堂。選択肢が欲しければ車でファッションアイランドかミンブリーへ。",
+    "nightlife": "ほぼなし。道端のバーが数軒、あとは静かな夜。"
+  },
+  "ru": {
+    "atmosphere": "Окраина-деревня вокруг Сам Ва и Сай Конг Дин: каналы, рисовые поля, новые мубаны, тайско-мусульманские посёлки с мечетями рядом с храмами. Очень дёшево и тихо; рельсов внутри нет, до центра больше часа.",
+    "landmarks": "Safari World с сафари-парком на машине, тайваньский храм Фогуаншань Тайхуа, храмы и мечети вдоль каналов, Big C Hathairat как главный магазин.",
+    "food": "Свежие и ночные рынки, уличные лотки, халяльные кухни у мечетей; за выбором — на машине в Fashion Island или Минбури.",
+    "nightlife": "Минимум: несколько придорожных баров, в остальном тихие ночи."
+  }
+}

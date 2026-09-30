@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Riverside Rama III: condo towers and old warehouses on the Chao Phraya's big bend, plus Charoen Krung's southern tail. Cheaper than Sathorn next door, but no rail at all: buses, boats, taxis, traffic.",
+    "landmarks": "Asiatique's riverside warehouses and big wheel, Terminal 21 Rama 3, the Rama III and Rama IX bridges, old riverside temples along Charoen Krung.",
+    "food": "Local rice-and-noodle shops along Charoen Krung and the Rama III sois, mall food courts at Terminal 21, tourist-priced dining at Asiatique; decent, not a food destination.",
+    "nightlife": "Asiatique's bars and Calypso cabaret for visitors, riverside hotel bars, beer gardens and Thai pubs along Rama III; quiet elsewhere."
+  },
+  "ja": {
+    "atmosphere": "川沿いのラーマ三世通り。チャオプラヤー川の大きな湾曲に沿ってコンドタワーと古い倉庫、そしてチャルンクルン通りの南端。隣のサートーンより安いが鉄道はまったくなし。バス、船、タクシー、渋滞。",
+    "landmarks": "川沿いの倉庫と観覧車のアジアティーク、ターミナル21ラーマ3、ラーマ三世橋とラーマ九世橋、チャルンクルン通り沿いの古い川辺の寺。",
+    "food": "チャルンクルン通りとラーマ三世通りのソイに地元の飯屋と麺屋、ターミナル21のフードコート、アジアティークは観光価格。悪くはないが、食べに来る街ではない。",
+    "nightlife": "観光客向けにアジアティークのバーとカリプソのキャバレー、川沿いのホテルバー、ラーマ三世通りのビアガーデンとタイ式パブ。それ以外は静か。"
+  },
+  "ru": {
+    "atmosphere": "Прибрежный Рама III: кондо-башни и старые склады в большой излучине Чао Прайи, плюс южный хвост Чароен Крунг. Дешевле соседнего Сатхорна, но рельсов нет вовсе: автобусы, лодки, такси, пробки.",
+    "landmarks": "Asiatique со складами на набережной и колесом обозрения, Terminal 21 Rama 3, мосты Рамы III и Рамы IX, старые храмы у реки вдоль Чароен Крунг.",
+    "food": "Местные рисовые и лапшичные вдоль Чароен Крунг и в соях Рамы III, фудкорты Terminal 21, туристические цены в Asiatique. Прилично, но не гастрономическая цель.",
+    "nightlife": "Для туристов — бары Asiatique и кабаре Calypso, бары прибрежных отелей, пивные сады и тайские пабы на Раме III; в остальном тихо."
+  }
+}

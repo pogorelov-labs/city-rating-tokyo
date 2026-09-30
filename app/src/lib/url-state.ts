@@ -1,5 +1,6 @@
-import { WeightConfig, DEFAULT_WEIGHTS, FilterState, DEFAULT_FILTERS, StationRatings } from './types';
+import { WeightConfig, DEFAULT_WEIGHTS, FilterState, StationRatings } from './types';
 import { LEGACY_WEIGHT_KEYS as SCHEMA_LEGACY_WEIGHT_KEYS } from '@/lib/schema/constants';
+import { CITIES, type CityId } from './cities';
 
 const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS) as (keyof WeightConfig)[];
 
@@ -7,15 +8,25 @@ const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS) as (keyof WeightConfig)[];
 // Sourced from @city-rating/schema (single source of truth).
 const LEGACY_WEIGHT_KEYS = [...SCHEMA_LEGACY_WEIGHT_KEYS] as (keyof WeightConfig)[];
 
-export function encodeStateToParams(state: {
+/** Flat view of everything a share link carries (one city's slice + shared prefs). */
+export interface UrlStateView {
   weights: WeightConfig;
   filters: FilterState;
   selectedStation: string | null;
   compareStations: string[];
   heatmapMode: boolean;
   heatmapDimension: string;
-}): URLSearchParams {
+}
+
+/**
+ * Encode state into query params. Filter params (`nr`/`mr` rent, `nc`/`mc`
+ * commute) are in the city's own units — yen for Tokyo, baht for Bangkok —
+ * and only emitted when they differ from that city's defaults. The path
+ * (`/` vs `/bangkok`) disambiguates which city a link belongs to.
+ */
+export function encodeStateToParams(state: UrlStateView, city: CityId = 'tokyo'): URLSearchParams {
   const params = new URLSearchParams();
+  const defaults = CITIES[city].defaultFilters;
 
   // Only include weights if different from defaults
   const isDefault = WEIGHT_KEYS.every((k) => state.weights[k] === DEFAULT_WEIGHTS[k]);
@@ -24,16 +35,16 @@ export function encodeStateToParams(state: {
   }
 
   // Filters: only encode when non-default
-  if (state.filters.minRent > DEFAULT_FILTERS.minRent) {
+  if (state.filters.minRent > defaults.minRent) {
     params.set('nr', String(state.filters.minRent));
   }
-  if (state.filters.maxRent < DEFAULT_FILTERS.maxRent) {
+  if (state.filters.maxRent < defaults.maxRent) {
     params.set('mr', String(state.filters.maxRent));
   }
-  if (state.filters.minCommute > DEFAULT_FILTERS.minCommute) {
+  if (state.filters.minCommute > defaults.minCommute) {
     params.set('nc', String(state.filters.minCommute));
   }
-  if (state.filters.maxCommute < DEFAULT_FILTERS.maxCommute) {
+  if (state.filters.maxCommute < defaults.maxCommute) {
     params.set('mc', String(state.filters.maxCommute));
   }
   const catEntries = Object.entries(state.filters.categoryMins) as [keyof StationRatings, number][];
@@ -52,7 +63,7 @@ export function encodeStateToParams(state: {
   return params;
 }
 
-export function decodeParamsToState(params: URLSearchParams): {
+export function decodeParamsToState(params: URLSearchParams, city: CityId = 'tokyo'): {
   weights?: WeightConfig;
   filters?: Partial<FilterState>;
   selectedStation?: string;
@@ -61,6 +72,7 @@ export function decodeParamsToState(params: URLSearchParams): {
   heatmapDimension?: string;
 } {
   const result: ReturnType<typeof decodeParamsToState> = {};
+  const { rent, commute, features } = CITIES[city];
 
   const w = params.get('w');
   if (w) {
@@ -79,14 +91,16 @@ export function decodeParamsToState(params: URLSearchParams): {
     }
   }
 
-  // Decode filters
+  // Decode filters — out-of-range values (e.g. a yen amount on a baht page)
+  // are silently dropped rather than clamped.
   const filterPatch: Partial<FilterState> = {};
   let hasFilter = false;
+  const inRange = (v: number, r: { min: number; max: number }) => !isNaN(v) && v >= r.min && v <= r.max;
 
   const nr = params.get('nr');
   if (nr) {
     const v = Number(nr);
-    if (!isNaN(v) && v >= 80000 && v <= 300000) {
+    if (inRange(v, rent)) {
       filterPatch.minRent = v;
       hasFilter = true;
     }
@@ -95,7 +109,7 @@ export function decodeParamsToState(params: URLSearchParams): {
   const mr = params.get('mr');
   if (mr) {
     const v = Number(mr);
-    if (!isNaN(v) && v >= 80000 && v <= 300000) {
+    if (inRange(v, rent)) {
       filterPatch.maxRent = v;
       hasFilter = true;
     }
@@ -104,7 +118,7 @@ export function decodeParamsToState(params: URLSearchParams): {
   const nc = params.get('nc');
   if (nc) {
     const v = Number(nc);
-    if (!isNaN(v) && v >= 10 && v <= 60) {
+    if (inRange(v, commute)) {
       filterPatch.minCommute = v;
       hasFilter = true;
     }
@@ -113,7 +127,7 @@ export function decodeParamsToState(params: URLSearchParams): {
   const mc = params.get('mc');
   if (mc) {
     const v = Number(mc);
-    if (!isNaN(v) && v >= 10 && v <= 60) {
+    if (inRange(v, commute)) {
       filterPatch.maxCommute = v;
       hasFilter = true;
     }
@@ -138,7 +152,7 @@ export function decodeParamsToState(params: URLSearchParams): {
     }
   }
 
-  if (params.get('lc') === '1') {
+  if (params.get('lc') === '1' && features.liveCameras) {
     filterPatch.hasLiveCamera = true;
     hasFilter = true;
   }
@@ -159,8 +173,29 @@ export function decodeParamsToState(params: URLSearchParams): {
   return result;
 }
 
-export function buildShareUrl(state: Parameters<typeof encodeStateToParams>[0]): string {
-  const params = encodeStateToParams(state);
+export function buildShareUrl(state: UrlStateView, city: CityId = 'tokyo'): string {
+  const params = encodeStateToParams(state, city);
   const qs = params.toString();
   return window.location.origin + window.location.pathname + (qs ? '?' + qs : '');
+}
+
+/** Flatten the store into the share-link view for one city. */
+export function selectUrlView(
+  state: {
+    weights: WeightConfig;
+    heatmapMode: boolean;
+    heatmapDimension: string;
+    cities: Record<CityId, { filters: FilterState; selectedStation: string | null; compareStations: string[] }>;
+  },
+  city: CityId,
+): UrlStateView {
+  const slice = state.cities[city];
+  return {
+    weights: state.weights,
+    filters: slice.filters,
+    selectedStation: slice.selectedStation,
+    compareStations: slice.compareStations,
+    heatmapMode: state.heatmapMode,
+    heatmapDimension: state.heatmapDimension,
+  };
 }

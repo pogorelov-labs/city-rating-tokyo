@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's only stretch of coast: mangroves and shrimp ponds down south, factories around Tha Kham, housing estates off traffic-choked Rama 2 near Samae Dam. No BTS or MRT. Cheap, very quiet, far from everything.",
+    "landmarks": "The Bang Khun Thian mangrove centre and its coastal walkways, an eroding shoreline, the Mon village and temple at Bang Kradi, Central Rama 2 for everything else.",
+    "food": "Sparse: roadside Thai, markets, Central Rama 2's food court. The real draw is fresh seafood out at the coast, crab, prawns and fish by the mangroves.",
+    "nightlife": "Very quiet at night: a few pubs and beer gardens off Rama 2, scattered karaoke. The coast mostly empties after sunset."
+  },
+  "ja": {
+    "atmosphere": "バンコク唯一の海岸線。南にマングローブとエビの養殖池、ターカームには工場、サメーダム周辺では渋滞するラマ2世通り沿いに住宅地。BTSもMRTもない。安く、とても静かで、どこへ行くにも遠い。",
+    "landmarks": "バーンクンティアンのマングローブ学習センターと海辺の遊歩道、侵食が進む海岸線、バーンクラディーのモン族の村と寺、日々の用事はセントラル・ラマ2で。",
+    "food": "飲食店は少ない。道端のタイ料理、市場、セントラル・ラマ2のフードコート。本当の目玉は海辺の新鮮なシーフード、マングローブ脇でカニ、エビ、魚。",
+    "nightlife": "夜はとても静か。ラマ2世通り沿いにパブとビアガーデンが少し、カラオケが点在。海辺は日没後ほぼ無人になる。"
+  },
+  "ru": {
+    "atmosphere": "Единственное морское побережье Бангкока: на юге мангры и креветочные пруды, у Тха Кхам заводы, у Самэдам посёлки вдоль вечно стоящей в пробках Рама 2. Ни BTS, ни MRT. Дёшево, очень тихо, далеко от всего.",
+    "landmarks": "Мангровый центр Бангкхунтхиана с тропами у моря, размываемый берег, монская деревня с храмом в Бангкради, Central Rama 2 для всего остального.",
+    "food": "Еды немного: придорожная тайская кухня, рынки, фудкорт Central Rama 2. Настоящий повод приехать — свежие морепродукты у моря: крабы, креветки, рыба у мангров.",
+    "nightlife": "Ночью очень тихо: несколько пабов и пивных садов у Рама 2, кое-где караоке. Побережье после заката в основном пустеет."
+  }
+}

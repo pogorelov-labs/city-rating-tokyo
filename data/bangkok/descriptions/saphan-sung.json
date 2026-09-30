@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Eastern Bangkok's gated-estate belt around Rat Phatthana, Sammakorn and Krungthep Kreetha: family houses, international-school parents, Muslim communities by the canals. Very quiet and cheap, car-dependent; one Airport Rail Link stop.",
+    "landmarks": "Khlong Saen Saep and its canal piers on the northern edge, mosques and temples, Wellington College's campus, moo baan gates everywhere.",
+    "food": "Estate-edge eating: halal kitchens near the mosques, roadside noodle and grilled-chicken stalls, chain outlets at Sammakorn Place; drive for anything special.",
+    "nightlife": "Quiet after dark; a beer garden or karaoke here and there, the rest happens in Bang Kapi or at home."
+  },
+  "ja": {
+    "atmosphere": "ラートパッタナー、サンマコーン、クルンテープ・クリーター通りに広がるバンコク東部のゲーテッド住宅地帯。戸建てのファミリー、インターナショナルスクールの親、運河沿いのムスリム集落。とても静かで安いが車社会、駅はエアポート・レイル・リンクの1駅だけ。",
+    "landmarks": "北の区境を流れるセーンセープ運河と船着き場、モスクと寺、ウェリントン・カレッジのキャンパス、どこまでも続くムーバーン（分譲住宅地）のゲート。",
+    "food": "住宅地の縁の食。モスク近くのハラール食堂、道端の麺とガイヤーンの屋台、サンマコーン・プレイスのチェーン店。特別な食事は車で遠出。",
+    "nightlife": "夜は静か。ビアガーデンやカラオケがぽつぽつある程度で、遊ぶならバーンカピか家飲み。"
+  },
+  "ru": {
+    "atmosphere": "Восточный пояс закрытых мубанов вокруг Рат Пхаттхана, Саммакорна и Крунгтеп Критха: семейные дома, родители учеников международных школ, мусульманские общины у каналов. Очень тихо и дёшево, без машины никак; одна станция Airport Rail Link.",
+    "landmarks": "Канал Сэнсэп с пирсами по северной границе, мечети и храмы, кампус Wellington College, шлагбаумы мубанов повсюду.",
+    "food": "Еда на краю мубанов: халяльные столовые у мечетей, придорожная лапша и курица-гриль, сетевые кафе в Sammakorn Place; за чем-то особенным — на машине.",
+    "nightlife": "Вечером тихо: где-то пивной сад или караоке, остальное — в Бангкапи или дома."
+  }
+}

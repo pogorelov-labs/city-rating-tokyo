@@ -1,0 +1,732 @@
+{
+  "_meta": {
+    "updated": "2026-09",
+    "rent": {
+      "unit": "THB per month",
+      "definition": "Typical asking rent for a ~30-35 m² 1-bedroom condo (rent_1br) and a ~60-70 m² 2-bedroom condo (rent_2br) in the district's main residential corridors. Not a statistical median.",
+      "method": "Researcher estimate. Bangkok has no open rent statistics at district level and the listing portals (Hipflat, FazWaz, DDproperty) block automated access, so values are calibrated by hand against published aggregates: city-wide 1-bed average ~฿22.9k (PropertyScout listing average, skewed to central supply); prime BTS corridor (Asok, Phrom Phong, Thong Lo, Chit Lom) ~฿800-1,200/m²; On Nut / Bang Na / Rama 9 ~฿10-15k for ~30 m²; Bang Kapi ~฿440/m². Outer districts with little condo supply are anchored to townhouse/apartment rents.",
+      "confidence": "editorial",
+      "calibration_sources": [
+        "https://propertyscout.co.th/en/bangkok/rentals/condo/",
+        "https://propertysights.com/blog/condo-rent-bangkok",
+        "https://www.bangkok-housing.com/condo-apartment/rent/district/khlong-toei-district/"
+      ]
+    },
+    "safety": {
+      "scale": "1-10, higher = safer, relative within Bangkok",
+      "method": "Researcher assessment. The Royal Thai Police publishes no open, district-level crime statistics, so this is a judgement from reported patterns: petty theft and scams around tourist and nightlife strips (Khao San, Patpong, Nana, Soi Cowboy, Pratunam, Ratchada), clustered incidents around the Khlong Toei port communities and Din Daeng flats, versus quiet residential and government districts. It does not cover road safety, the city's largest real risk.",
+      "confidence": "editorial"
+    },
+    "aliases": "Neighbourhood, road and landmark names people use instead of the khet name. Search matches them; they also let rail-station names resolve to the district."
+  },
+  "districts": {
+    "phra-nakhon": {
+      "rent_1br": 14000,
+      "rent_2br": 28000,
+      "safety": 5,
+      "aliases": [
+        "Rattanakosin",
+        "Old Town",
+        "Khao San",
+        "Khaosan",
+        "Banglamphu",
+        "Grand Palace",
+        "Wat Pho",
+        "Sanam Luang",
+        "Democracy Monument",
+        "Tha Tien",
+        "Phra Athit",
+        "Sam Yot",
+        "Sanam Chai"
+      ]
+    },
+    "pom-prap-sattru-phai": {
+      "rent_1br": 12000,
+      "rent_2br": 24000,
+      "safety": 6,
+      "aliases": [
+        "Golden Mount",
+        "Wat Saket",
+        "Nang Loeng",
+        "Bobae",
+        "Khlong Thom",
+        "Woeng Nakhon Kasem",
+        "Pom Prap"
+      ]
+    },
+    "samphanthawong": {
+      "rent_1br": 14000,
+      "rent_2br": 28000,
+      "safety": 6,
+      "aliases": [
+        "Chinatown",
+        "Yaowarat",
+        "Sampeng",
+        "Talat Noi",
+        "Wat Traimit",
+        "Song Wat",
+        "Wat Mangkon"
+      ]
+    },
+    "bang-rak": {
+      "rent_1br": 26000,
+      "rent_2br": 55000,
+      "safety": 6,
+      "aliases": [
+        "Silom",
+        "Sala Daeng",
+        "Patpong",
+        "Surawong",
+        "Charoen Krung",
+        "Saphan Taksin",
+        "Si Phraya",
+        "Suriwong",
+        "MahaNakhon"
+      ]
+    },
+    "pathum-wan": {
+      "rent_1br": 38000,
+      "rent_2br": 85000,
+      "safety": 7,
+      "aliases": [
+        "Siam",
+        "Chit Lom",
+        "Chidlom",
+        "Ratchaprasong",
+        "Lumphini",
+        "Lumpini",
+        "Phloen Chit",
+        "Ploenchit",
+        "Lang Suan",
+        "Wireless Road",
+        "Sam Yan",
+        "National Stadium",
+        "Chulalongkorn",
+        "MBK",
+        "Hua Lamphong"
+      ]
+    },
+    "ratchathewi": {
+      "rent_1br": 18000,
+      "rent_2br": 38000,
+      "safety": 5,
+      "aliases": [
+        "Victory Monument",
+        "Pratunam",
+        "Ratchaprarop",
+        "Rangnam",
+        "Makkasan",
+        "Phetchaburi Road",
+        "Petchaburi"
+      ]
+    },
+    "phaya-thai": {
+      "rent_1br": 18000,
+      "rent_2br": 37000,
+      "safety": 8,
+      "aliases": [
+        "Ari",
+        "Aree",
+        "Saphan Khwai",
+        "Sanam Pao",
+        "Pradiphat",
+        "Inthamara",
+        "Samsen Nai"
+      ]
+    },
+    "dusit": {
+      "rent_1br": 13000,
+      "rent_2br": 26000,
+      "safety": 8,
+      "aliases": [
+        "Thewet",
+        "Thewes",
+        "Samsen",
+        "Si Yan",
+        "Chitralada",
+        "Dusit Palace",
+        "Kiakkai",
+        "Rama V Road"
+      ]
+    },
+    "bang-sue": {
+      "rent_1br": 12000,
+      "rent_2br": 25000,
+      "safety": 7,
+      "aliases": [
+        "Tao Poon",
+        "Bang Pho",
+        "Bang Son",
+        "Wong Sawang",
+        "Pracharat",
+        "Prachachuen"
+      ]
+    },
+    "chatuchak": {
+      "rent_1br": 16000,
+      "rent_2br": 33000,
+      "safety": 7,
+      "aliases": [
+        "Mo Chit",
+        "Mochit",
+        "Chatuchak Market",
+        "JJ Market",
+        "Ha Yaek Lat Phrao",
+        "Central Ladprao",
+        "Ratchayothin",
+        "Kasetsart",
+        "Sena Nikhom",
+        "Phahon Yothin",
+        "Vibhavadi",
+        "Kamphaeng Phet",
+        "Lat Yao",
+        "Krung Thep Aphiwat",
+        "Bang Sue Grand"
+      ]
+    },
+    "don-mueang": {
+      "rent_1br": 9500,
+      "rent_2br": 19000,
+      "safety": 7,
+      "aliases": [
+        "Don Muang",
+        "Don Mueang Airport",
+        "DMK",
+        "Song Prapha",
+        "Si Kan"
+      ]
+    },
+    "lak-si": {
+      "rent_1br": 10500,
+      "rent_2br": 21000,
+      "safety": 7,
+      "aliases": [
+        "Laksi",
+        "Chaeng Watthana",
+        "Chaengwattana",
+        "Government Complex",
+        "Thung Song Hong",
+        "IT Square"
+      ]
+    },
+    "bang-khen": {
+      "rent_1br": 11000,
+      "rent_2br": 22000,
+      "safety": 7,
+      "aliases": [
+        "Ram Inthra",
+        "Ramintra",
+        "Bang Bua",
+        "Wat Phra Sri Mahathat",
+        "Tha Raeng",
+        "Anusawari",
+        "Lak Si Monument",
+        "Rajabhat Phranakhon",
+        "Saphan Mai",
+        "Sai Yud"
+      ]
+    },
+    "din-daeng": {
+      "rent_1br": 13000,
+      "rent_2br": 27000,
+      "safety": 5,
+      "aliases": [
+        "Pracha Songkhro",
+        "Sutthisan",
+        "Ratchadaphisek",
+        "Mitr Maitri",
+        "Vibhavadi",
+        "SET Building",
+        "Thailand Cultural Centre",
+        "Esplanade",
+        "Jodd Fairs",
+        "Ratchada",
+        "Huai Khwang Night Market",
+        "The Street Ratchada",
+        "Fortune Town"
+      ]
+    },
+    "huai-khwang": {
+      "rent_1br": 15000,
+      "rent_2br": 32000,
+      "safety": 5,
+      "aliases": [
+        "Rama 9",
+        "Rama IX",
+        "Phra Ram 9",
+        "Ratchada",
+        "Ratchadaphisek",
+        "Thailand Cultural Centre",
+        "Huai Khwang Night Market",
+        "Pracha Rat Bamphen",
+        "Central Rama 9"
+      ]
+    },
+    "khlong-toei": {
+      "rent_1br": 25000,
+      "rent_2br": 52000,
+      "safety": 5,
+      "aliases": [
+        "Sukhumvit",
+        "Asok",
+        "Asoke",
+        "Nana",
+        "Phrom Phong",
+        "Emporium",
+        "Queen Sirikit",
+        "QSNCC",
+        "Benjakitti",
+        "Rama 4",
+        "Rama IV",
+        "Khlong Toei Market",
+        "Klong Toey",
+        "Kluaynamthai"
+      ]
+    },
+    "watthana": {
+      "rent_1br": 32000,
+      "rent_2br": 70000,
+      "safety": 7,
+      "aliases": [
+        "Vadhana",
+        "Sukhumvit",
+        "Asok",
+        "Asoke",
+        "Thong Lo",
+        "Thonglor",
+        "Ekkamai",
+        "Ekamai",
+        "Phrom Phong",
+        "Promphong",
+        "Nana",
+        "Terminal 21",
+        "Soi Cowboy",
+        "EmQuartier",
+        "Khlong Tan Nuea",
+        "Khlong Toei Nuea"
+      ]
+    },
+    "lat-phrao": {
+      "rent_1br": 11500,
+      "rent_2br": 23000,
+      "safety": 7,
+      "aliases": [
+        "Ladprao",
+        "Chok Chai 4",
+        "Chokchai 4",
+        "Lat Phrao 71",
+        "Kaset-Nawamin",
+        "Chorakhe Bua",
+        "Lat Phrao Wanghin"
+      ]
+    },
+    "sai-mai": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 7,
+      "aliases": [
+        "Saphan Mai",
+        "Sai Yud",
+        "Or Ngoen",
+        "Khlong Thanon"
+      ]
+    },
+    "bang-kapi": {
+      "rent_1br": 12000,
+      "rent_2br": 24000,
+      "safety": 6,
+      "aliases": [
+        "Ramkhamhaeng",
+        "Ramkamhaeng",
+        "Hua Mak",
+        "The Mall Bangkapi",
+        "Lam Sali",
+        "Rajamangala",
+        "Happyland"
+      ]
+    },
+    "bangkok-yai": {
+      "rent_1br": 11000,
+      "rent_2br": 22000,
+      "safety": 7,
+      "aliases": [
+        "Wat Arun",
+        "Tha Phra",
+        "Itsaraphap",
+        "Wang Doem",
+        "Wat Hong Rattanaram"
+      ]
+    },
+    "taling-chan": {
+      "rent_1br": 10000,
+      "rent_2br": 20000,
+      "safety": 8,
+      "aliases": [
+        "Taling Chan Floating Market",
+        "Borommaratchachonnani",
+        "Chimphli",
+        "Chak Phra",
+        "Khlong Chak Phra"
+      ]
+    },
+    "thawi-watthana": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 8,
+      "aliases": [
+        "Thawee Wattana",
+        "Phutthamonthon Sai",
+        "Sala Thammasop"
+      ]
+    },
+    "wang-thonglang": {
+      "rent_1br": 11500,
+      "rent_2br": 23000,
+      "safety": 7,
+      "aliases": [
+        "Lat Phrao 101",
+        "Pracha Uthit",
+        "Phlap Phla",
+        "Saphan Song",
+        "Wang Thong Lang",
+        "Chok Chai 4",
+        "Lat Phrao 71"
+      ]
+    },
+    "bang-phlat": {
+      "rent_1br": 11500,
+      "rent_2br": 24000,
+      "safety": 7,
+      "aliases": [
+        "Charan Sanitwong",
+        "Charansanitwong",
+        "Bang Yi Khan",
+        "Bang O",
+        "Sirindhorn",
+        "Rama 8 Bridge",
+        "Bang Bamru"
+      ]
+    },
+    "bangkok-noi": {
+      "rent_1br": 12000,
+      "rent_2br": 25000,
+      "safety": 7,
+      "aliases": [
+        "Pinklao",
+        "Pin Klao",
+        "Siriraj",
+        "Wang Lang",
+        "Arun Amarin",
+        "Bang Khun Non",
+        "Fai Chai",
+        "Thonburi Railway Station",
+        "Royal Barges"
+      ]
+    },
+    "nong-khaem": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 7,
+      "aliases": [
+        "Nong Khang Phlu",
+        "Phet Kasem",
+        "Phetkasem 81"
+      ]
+    },
+    "bang-khae": {
+      "rent_1br": 10000,
+      "rent_2br": 20000,
+      "safety": 7,
+      "aliases": [
+        "Lak Song",
+        "The Mall Bang Khae",
+        "Phet Kasem",
+        "Phetkasem",
+        "Bang Khae Market"
+      ]
+    },
+    "bueng-kum": {
+      "rent_1br": 9500,
+      "rent_2br": 19000,
+      "safety": 7,
+      "aliases": [
+        "Nawamin",
+        "Nawamintr",
+        "Seri Thai",
+        "Nuanchan",
+        "Khlong Kum"
+      ]
+    },
+    "khan-na-yao": {
+      "rent_1br": 9000,
+      "rent_2br": 18000,
+      "safety": 7,
+      "aliases": [
+        "Fashion Island",
+        "The Promenade",
+        "Siam Amazing Park",
+        "Siam Park City",
+        "Ram Inthra km 8",
+        "Khu Bon"
+      ]
+    },
+    "phasi-charoen": {
+      "rent_1br": 10500,
+      "rent_2br": 21000,
+      "safety": 7,
+      "aliases": [
+        "Bang Wa",
+        "Phet Kasem 28",
+        "Bang Duan",
+        "Khlong Phasi Charoen",
+        "Seacon Bang Khae"
+      ]
+    },
+    "khlong-sam-wa": {
+      "rent_1br": 8000,
+      "rent_2br": 16000,
+      "safety": 7,
+      "aliases": [
+        "Safari World",
+        "Sam Wa",
+        "Bang Chan",
+        "Sai Kong Din"
+      ]
+    },
+    "bang-na": {
+      "rent_1br": 13000,
+      "rent_2br": 26000,
+      "safety": 7,
+      "aliases": [
+        "Bangna",
+        "BITEC",
+        "Bearing",
+        "Udom Suk",
+        "Central Bangna",
+        "La Salle",
+        "Lasalle",
+        "Bang Na-Trat",
+        "Sukhumvit 105"
+      ]
+    },
+    "min-buri": {
+      "rent_1br": 9000,
+      "rent_2br": 18000,
+      "safety": 7,
+      "aliases": [
+        "Minburi",
+        "Min Buri Market",
+        "Setthabut Bamphen",
+        "Bang Chan"
+      ]
+    },
+    "prawet": {
+      "rent_1br": 10500,
+      "rent_2br": 21000,
+      "safety": 7,
+      "aliases": [
+        "Suan Luang Rama IX",
+        "Suan Luang Rama 9",
+        "Srinakarin",
+        "Srinagarindra",
+        "Seacon Square",
+        "Paradise Park",
+        "Nong Bon",
+        "Ban Thap Chang",
+        "Chaloem Phrakiat"
+      ]
+    },
+    "saphan-sung": {
+      "rent_1br": 9500,
+      "rent_2br": 19000,
+      "safety": 8,
+      "aliases": [
+        "Rat Phatthana",
+        "Krungthep Kreetha",
+        "Sukhaphiban 3",
+        "Rat Phatthana Road"
+      ]
+    },
+    "phra-khanong": {
+      "rent_1br": 15000,
+      "rent_2br": 30000,
+      "safety": 7,
+      "aliases": [
+        "On Nut",
+        "Onnut",
+        "Bang Chak",
+        "Punnawithi",
+        "True Digital Park",
+        "Sukhumvit 101"
+      ]
+    },
+    "suan-luang": {
+      "rent_1br": 12000,
+      "rent_2br": 24000,
+      "safety": 7,
+      "aliases": [
+        "Pattanakarn",
+        "Phatthanakan",
+        "On Nut Road",
+        "Srinakarin"
+      ]
+    },
+    "chom-thong": {
+      "rent_1br": 10500,
+      "rent_2br": 21000,
+      "safety": 7,
+      "aliases": [
+        "Wutthakat",
+        "Rama 2",
+        "Rama II",
+        "Bang Mot",
+        "Chom Thong Market"
+      ]
+    },
+    "rat-burana": {
+      "rent_1br": 10000,
+      "rent_2br": 20000,
+      "safety": 7,
+      "aliases": [
+        "Suk Sawat",
+        "Suksawat",
+        "Bang Pakok",
+        "Rat Burana Road"
+      ]
+    },
+    "thung-khru": {
+      "rent_1br": 9000,
+      "rent_2br": 18000,
+      "safety": 8,
+      "aliases": [
+        "KMUTT",
+        "Bang Mod",
+        "Pracha Uthit",
+        "Thung Kru"
+      ]
+    },
+    "khlong-san": {
+      "rent_1br": 20000,
+      "rent_2br": 45000,
+      "safety": 7,
+      "aliases": [
+        "ICONSIAM",
+        "Iconsiam",
+        "Charoen Nakhon",
+        "Krung Thon Buri",
+        "Lhong 1919",
+        "Klong San",
+        "Somdet Chao Phraya"
+      ]
+    },
+    "thon-buri": {
+      "rent_1br": 12000,
+      "rent_2br": 24000,
+      "safety": 7,
+      "aliases": [
+        "Thonburi",
+        "Wongwian Yai",
+        "Wong Wian Yai",
+        "Talat Phlu",
+        "Pho Nimit",
+        "Kudi Chin",
+        "Kudichin",
+        "Bukkhalo",
+        "Dao Khanong",
+        "Wat Kalayanamit",
+        "Wutthakat"
+      ]
+    },
+    "bang-bon": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 7,
+      "aliases": [
+        "Ekachai",
+        "Ekkachai",
+        "Bang Bon Market"
+      ]
+    },
+    "bang-khun-thian": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 7,
+      "aliases": [
+        "Rama 2",
+        "Central Rama 2",
+        "Bang Khun Thian Seaside",
+        "Samae Dam",
+        "Tha Kham",
+        "Bangkok coast",
+        "Mangroves"
+      ]
+    },
+    "sathon": {
+      "rent_1br": 25000,
+      "rent_2br": 55000,
+      "safety": 7,
+      "aliases": [
+        "Sathorn",
+        "Chong Nonsi",
+        "St. Louis",
+        "Saint Louis",
+        "Surasak",
+        "Nang Linchi",
+        "Yen Akat",
+        "Narathiwas",
+        "Thung Maha Mek"
+      ]
+    },
+    "bang-kho-laem": {
+      "rent_1br": 15000,
+      "rent_2br": 32000,
+      "safety": 7,
+      "aliases": [
+        "Rama 3",
+        "Rama III",
+        "Asiatique",
+        "Charoen Krung",
+        "Wat Phraya Krai"
+      ]
+    },
+    "yan-nawa": {
+      "rent_1br": 15000,
+      "rent_2br": 32000,
+      "safety": 7,
+      "aliases": [
+        "Yannawa",
+        "Rama 3",
+        "Central Rama 3",
+        "Sathu Pradit",
+        "Bang Phong Phang",
+        "Chong Nonsi",
+        "Nang Linchi"
+      ]
+    },
+    "lat-krabang": {
+      "rent_1br": 8500,
+      "rent_2br": 17000,
+      "safety": 7,
+      "aliases": [
+        "Ladkrabang",
+        "Lad Krabang",
+        "Suvarnabhumi",
+        "KMITL",
+        "Romklao",
+        "Lat Krabang Industrial Estate",
+        "Hua Takhe"
+      ]
+    },
+    "nong-chok": {
+      "rent_1br": 7000,
+      "rent_2br": 14000,
+      "safety": 8,
+      "aliases": [
+        "Lam Phak Chi",
+        "Khok Faet",
+        "Krathum Rai",
+        "Nongchok"
+      ]
+    }
+  }
+}

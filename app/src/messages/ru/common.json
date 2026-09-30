@@ -59,7 +59,12 @@
     "shinjuku": "Синдзюку",
     "tokyo": "Токио",
     "ikebukuro": "Икэбукуро",
-    "shinagawa": "Синагава"
+    "shinagawa": "Синагава",
+    "siam": "Сиам",
+    "asok": "Асок",
+    "silom": "Силом",
+    "rama9": "Рама 9",
+    "mochit": "Мо Чит"
   },
   "presets": {
     "young-pro": "Молодой специалист",
@@ -82,10 +87,16 @@
     },
     "editorial": {
       "label": "Кураторское",
-      "description": "Установлено исследователем, может отличаться от данных"
+      "description": "Установлено исследователем, может отличаться от данных",
+      "descriptionResearch": "Оценка исследователя — открытых данных по районам нет; ориентир, а не измерение"
     }
   },
   "sources": {
+    "overture": "Overture Maps",
+    "osm_rail": "Железные дороги OSM",
+    "transit_model": "Модель поездок",
+    "listing_research": "Анализ объявлений",
+    "dopa_population": "Регистрация DOPA",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper (ночное)",
     "osm": "OpenStreetMap",
@@ -115,7 +126,8 @@
   },
   "scatterAxes": {
     "rent_1k": "Аренда (1K–1LDK, ¥)",
-    "min_transit": "Мин. время (мин)"
+    "min_transit": "Мин. время (мин)",
+    "rent_1k_bangkok": "Аренда (кондо, 1 спальня, бат)"
   },
   "loading": {
     "chart": "Загрузка графика…",
@@ -151,7 +163,20 @@
     "stationsMapped": "{count, plural, one {# станция на карте} few {# станции на карте} many {# станций на карте} other {# станций на карте}}",
     "withRatings": "{count} с оценками",
     "rentUnconfirmed": "(аренда не подтверждена)",
-    "lines": "{count, plural, one {# линия} few {# линии} many {# линий} other {# линий}}"
+    "lines": "{count, plural, one {# линия} few {# линии} many {# линий} other {# линий}}",
+    "searchPlaceholderDistrict": "Район, квартал или станция…",
+    "searchPlaceholderDistrictShort": "Район, станция…",
+    "clearSearch": "Очистить поиск",
+    "stations": "{count, plural, =0 {нет станций} one {# станция} few {# станции} many {# станций} other {# станции}}",
+    "rentDistrict": "Аренда (1 спальня)",
+    "commuteDistrict": "Дорога до хаба",
+    "stationCountDistrict": "{count, plural, one {# район} few {# района} many {# районов} other {# района}}",
+    "matchCountDistrict": "<bold>{filtered}</bold> из {total} районов подходят",
+    "noMatchDistrict": "Ни один район не подходит — попробуйте ослабить фильтры",
+    "noMatchFiltersDistrict": "Под ваши фильтры не подходит ни один район",
+    "noRatedYetDistrict": "Пока нет районов с оценками",
+    "stationsMappedDistrict": "{count, plural, one {# район на карте} few {# района на карте} many {# районов на карте} other {# района на карте}}",
+    "relativeScoresNote": "Оценки относительны внутри 50 районов Бангкока и не сравнимы с оценками Токио. Аренда и безопасность — оценки исследователя."
   },
   "map": {
     "clickForDetails": "Подробности →",
@@ -161,13 +186,30 @@
     "removeCompare": "Убрать из сравнения",
     "dataComingSoon": "Данные скоро появятся",
     "heatmap": "Тепловая карта",
-    "compositeScore": "Общий балл"
+    "compositeScore": "Общий балл",
+    "railNetwork": "Метро",
+    "railNetworkHint": "Показать линии и станции BTS, MRT, Airport Rail Link и SRT Red Line",
+    "noRailInDistrict": "Нет станций",
+    "closeCardDistrict": "Закрыть карточку района",
+    "filteredOut": "Не подходит",
+    "reasonCategory": "{category} ниже {min}",
+    "reason_rentHigh": "аренда выше лимита",
+    "reason_rentLow": "аренда ниже минимума",
+    "reason_commuteLong": "слишком долгая дорога",
+    "reason_commuteShort": "дорога короче минимума",
+    "reason_flood": "низкая высота над уровнем моря",
+    "reason_seismic": "высокий сейсмический риск",
+    "reason_liveCamera": "нет веб-камеры",
+    "legendDistricts": "Взвешенная оценка относительно 50 районов Бангкока",
+    "legendFilteredOut": "Исключено вашими условиями"
   },
   "compare": {
     "clearAll": "Очистить",
     "dimension": "Категория",
     "score": "Балл",
-    "rent1k": "Аренда (1K)"
+    "rent1k": "Аренда (1K)",
+    "rent1bed": "Аренда (1 спальня)",
+    "remove": "Убрать {name} из сравнения"
   },
   "drawer": {
     "filters": "Фильтры",
@@ -196,7 +238,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name} ({nameJp}) — Гид по районам Токио",
+    "metaTitle": "{name} ({secondary}) — Гид по районам Токио",
     "metaDescription": "Район станции {name}: оценки, цены на аренду, время в пути. {description}",
     "metaDescriptionFallback": "Путеводитель по району станции {name} в Токио.",
     "overview": "Обзор",
@@ -375,5 +417,71 @@
   "methodology": {
     "title": "Методология",
     "englishOnlyNotice": "Эта страница в настоящее время доступна только на английском языке. Русская версия будет добавлена позже."
+  },
+  "city": {
+    "switchLabel": "Город",
+    "tokyo": "Токио",
+    "bangkok": "Бангкок"
+  },
+  "bangkok": {
+    "metadata": {
+      "title": "Гид по районам Бангкока — где лучше жить",
+      "description": "Все 50 районов Бангкока с оценками транспорта, аренды, бытовой инфраструктуры, еды, ночной жизни, парков и не только — по данным OpenStreetMap и Overture Maps, с сетью BTS / MRT на карте."
+    },
+    "header": {
+      "titleShort": "Бангкок Гид",
+      "titleFull": "Гид по районам Бангкока",
+      "districtCount": "{count, plural, one {# район} few {# района} many {# районов} other {# района}}"
+    },
+    "district": {
+      "notFound": "Район не найден",
+      "metaTitle": "{name} ({nameTh}) — Гид по районам Бангкока",
+      "metaDescriptionFallback": "Жизнь в районе {name}, Бангкок: оценки, аренда, метро и время в пути.",
+      "backToMap": "Карта Бангкока",
+      "scoreTooltip": "Взвешенная оценка со стандартными весами, относительно 50 районов Бангкока",
+      "imageAlt": "Район {name}, Бангкок",
+      "imageCredit": "Фото: {artist} · {license} · Wikimedia Commons",
+      "rail": "Метро и ж/д",
+      "noRail": "Нет станций",
+      "nearbyCount": "{count, plural, =0 {в 800 м ничего нет} one {# станция рядом за границей} few {# станции рядом за границей} many {# станций рядом за границей} other {# станции рядом за границей}}",
+      "rentLabel": "Аренда (кондо)",
+      "rentSub": "1 → 2 спальни / мес · оценка",
+      "toHubsSub": "медиана жителей, час пик, 5 хабов",
+      "density": "Плотность",
+      "populationSub": "{population} жителей ({year})",
+      "railTitle": "Станции",
+      "railCaption": "Станции BTS, MRT, Airport Rail Link и SRT Red Line внутри района или на его пограничной улице.",
+      "onBorder": "на границе",
+      "noRailText": "В районе нет станций — повседневная жизнь держится на автобусах, лодках, сонгтэо и мототакси.",
+      "nearbyStations": "Рядом, за границей (≤ 800 м)",
+      "radarMedianLabel": "Типичный район Бангкока (медиана)",
+      "radarDistrictLabel": "Этот район",
+      "ratingsCaption": "Заполнение полосы сравнивает район с медианой по 50 районам Бангкока — наведите на полосу для деталей, на название категории для описания. Точки показывают надёжность оценки.",
+      "barTooltipDev": "Норма Бангкока — {median}, этот район на {dev} {direction} нормы.",
+      "barTooltipDevExact": "Норма Бангкока — {median}, этот район ровно на среднем уровне.",
+      "bangkokMedian": "Медиана Бангкока: {value}",
+      "thisDistrict": "Этот район: {value}",
+      "rentTooltip": "Доступность по типичной запрашиваемой аренде кондо с одной спальней (оценка исследователя). 10 = дешевле всего (≈ ฿8 тыс./мес), 1 = дороже всего (≈ ฿38 тыс.+)",
+      "howRatingsWork": "Каждый район покрыт сеткой с шагом 200 м. Для каждой точки считаем, что житель может найти пешком — еду, магазины, клиники, спортзалы, парки, — а также расстояние до станции и модельное время дороги в час пик до пяти хабов. Точки в застроенных кварталах весят полностью, пустыри и поля — почти ничего. Места берутся из двух независимых источников: OpenStreetMap и Overture Maps. Аренда и безопасность — оценки исследователя: открытых данных по районам Бангкок не публикует.",
+      "relativeNote": "Оценки относительны внутри 50 районов Бангкока: «8» в Бангкоке и «8» в Токио сравнивать нельзя.",
+      "aboutDistrict": "О районе",
+      "factsTitle": "В цифрах",
+      "factFood": "Еда и напитки",
+      "factNightlife": "Бары и ночная жизнь",
+      "factConvenience": "Магазины у дома",
+      "factEssentials": "Магазины, клиники, банки",
+      "factMarkets": "Рынки",
+      "factSports": "Спортзалы и спорт",
+      "factCulture": "Музеи, галереи, кино",
+      "factTemples": "Храмы",
+      "factPiers": "Пристани",
+      "factParks": "Парки и зелень",
+      "factArea": "Площадь",
+      "factPopulation": "Зарегистрировано жителей",
+      "factsSource": "Приблизительные подсчёты внутри границы района. Места: Overture Maps Places (CDLA-Permissive-2.0); парки и пристани: © участники OpenStreetMap (ODbL). Население и площадь: регистрация Департамента местной администрации (DOPA) через Wikidata — в центральных районах реальных жителей больше.",
+      "neighbors": "Соседние районы",
+      "readMore": "Подробнее:",
+      "noRailNearbyText": "Внутри района станций нет — ближайшие сразу за его границей (ниже)."
+    }
   }
 }

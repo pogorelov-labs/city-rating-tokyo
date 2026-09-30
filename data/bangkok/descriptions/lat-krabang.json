@@ -1,0 +1,20 @@
+{
+  "en": {
+    "atmosphere": "Bangkok's vast airport-side edge: KMITL's student quarter, the industrial estate, then canals, fields and housing estates off Romklao. One Airport Rail Link stop; very cheap and quiet, but without a car distances hurt.",
+    "landmarks": "KMITL's campus with Hua Takhe's old wooden canal market beside it, the Lat Krabang Industrial Estate, temple-lined canals, Suvarnabhumi airport on the doorstep.",
+    "food": "~1,600 places to eat, spread thin: student food streets and canteens around KMITL, night and weekend markets, old-market eats at Hua Takhe.",
+    "nightlife": "Student bars and live-music pubs near KMITL, busy in term time; the rest of the district goes dark early."
+  },
+  "ja": {
+    "atmosphere": "空港側に広がるバンコク東端。KMITLの学生街と工業団地、その先に運河、田畑、ロムクラオ通り沿いの住宅地。エアポート・レイル・リンクの駅はひとつだけ。とても安く静か、ただし車なしでは距離がつらい。",
+    "landmarks": "KMITL（モンクット王工科大学ラートクラバン校）のキャンパスと隣の木造のフアタケー旧市場、ラートクラバン工業団地、寺の並ぶ運河、目と鼻の先のスワンナプーム空港。",
+    "food": "飲食店約1600軒だが広く点在。KMITL周辺の学生向け屋台街と食堂、ナイトマーケットや週末市場、フアタケー旧市場の昔ながらの味。",
+    "nightlife": "KMITL近くの学生バーと生演奏パブ、学期中はにぎやか。それ以外は早々に暗くなる。"
+  },
+  "ru": {
+    "atmosphere": "Огромная окраина Бангкока у аэропорта: студенческий квартал KMITL, промзона, дальше каналы, поля и мубаны вдоль Ромклао. Одна станция Airport Rail Link; очень дёшево и тихо, но без машины расстояния изматывают.",
+    "landmarks": "Кампус KMITL и рядом старый деревянный рынок Хуатакхе на канале, промзона Латкрабанг, храмы вдоль каналов, Суварнабхуми под боком.",
+    "food": "~1600 мест поесть, но всё разбросано: студенческие фудстриты и столовые у KMITL, ночные и выходные рынки, старая рыночная еда в Хуатакхе.",
+    "nightlife": "Студенческие бары и пабы с живой музыкой у KMITL, людно в семестр; остальной район гаснет рано."
+  }
+}
