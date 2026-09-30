@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { MapStation } from '@/lib/types';
 import { useCityState } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
+import { useAllAreas } from '@/lib/area-lists';
 import MapControls from './MapControls';
 import UrlSync from './UrlSync';
 
@@ -38,6 +39,11 @@ const MobileStationCard = dynamic(() => import('./MobileStationCard'), {
   ssr: false,
 });
 
+// Bangkok only: the level-of-detail switch and the touch card of a 200 m
+// grid cell (both pull in the grid module, which Tokyo never needs).
+const LevelSwitcher = dynamic(() => import('./bangkok/LevelSwitcher'), { ssr: false });
+const CellCard = dynamic(() => import('./bangkok/CellCard'), { ssr: false });
+
 interface MapWrapperProps {
   stations: MapStation[];
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
@@ -49,14 +55,20 @@ export default function MapWrapper({ stations, thumbnails, snippets }: MapWrappe
   // Gate ComparePanel behind the store so the recharts chunk is never
   // downloaded unless the user actively compares something.
   const hasCompareTarget = useCityState((s) => s.compareStations.length >= 2);
+  const cellSelected = useCityState((s) => s.selectedStation?.startsWith('cell.') ?? false);
+  // Selection / compare keys can point at any level's areas (Bangkok).
+  const allAreas = useAllAreas(stations);
   const View = city.unit === 'district' ? DistrictMapView : MapView;
+  const multiLevel = city.levels.length > 1;
 
   return (
     <div className="relative h-full w-full">
       <View stations={stations} thumbnails={thumbnails} snippets={snippets} />
       <MapControls />
-      {hasCompareTarget && <ComparePanel stations={stations} />}
-      <MobileStationCard stations={stations} thumbnails={thumbnails} snippets={snippets} />
+      {multiLevel && <LevelSwitcher />}
+      {hasCompareTarget && <ComparePanel stations={allAreas} />}
+      <MobileStationCard stations={allAreas} thumbnails={thumbnails} snippets={snippets} />
+      {multiLevel && cellSelected && <CellCard districts={stations} />}
       <UrlSync />
     </div>
   );

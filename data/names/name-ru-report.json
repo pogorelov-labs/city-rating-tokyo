@@ -1,0 +1,8872 @@
+{
+ "sources": {
+  "wikidata_ru": 385,
+  "wikidata_en": 1061,
+  "manual": 2,
+  "name_en": 45
+ },
+ "kana_checked": 1432,
+ "kana_disagrees": [],
+ "name_en_differs_from_wikidata": 4,
+ "stations": {
+  "shinjuku": {
+   "name_ru": "Синдзюку",
+   "source": "wikidata_ru",
+   "wikidata": "Q801447",
+   "kana_agrees": true
+  },
+  "tokyo": {
+   "name_ru": "Токио",
+   "source": "wikidata_ru",
+   "wikidata": "Q283196",
+   "kana_agrees": true
+  },
+  "yokohama": {
+   "name_ru": "Иокогама",
+   "source": "wikidata_ru",
+   "wikidata": "Q801658",
+   "kana_agrees": true
+  },
+  "shibuya": {
+   "name_ru": "Сибуя",
+   "source": "wikidata_ru",
+   "wikidata": "Q428811",
+   "kana_agrees": true
+  },
+  "chiba": {
+   "name_ru": "Тиба",
+   "source": "wikidata_ru",
+   "wikidata": "Q800625",
+   "kana_agrees": true
+  },
+  "ikebukuro": {
+   "name_ru": "Икэбукуро",
+   "source": "wikidata_ru",
+   "wikidata": "Q173919",
+   "kana_agrees": true
+  },
+  "omiya": {
+   "name_ru": "Омия",
+   "source": "wikidata_ru",
+   "wikidata": "Q801692",
+   "kana_agrees": true
+  },
+  "ueno": {
+   "name_ru": "Уэно",
+   "source": "wikidata_ru",
+   "wikidata": "Q801551",
+   "kana_agrees": true
+  },
+  "shimbashi": {
+   "name_ru": "Симбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q801436",
+   "kana_agrees": true
+  },
+  "kita-senju": {
+   "name_ru": "Кита-Сэндзю",
+   "source": "wikidata_ru",
+   "wikidata": "Q801026",
+   "kana_agrees": true
+  },
+  "musashi-kosugi": {
+   "name_ru": "Мусаси-Косуги",
+   "source": "wikidata_en",
+   "wikidata": "Q801207",
+   "kana_agrees": true
+  },
+  "narita": {
+   "name_ru": "Нарита",
+   "source": "wikidata_en",
+   "wikidata": "Q845243",
+   "kana_agrees": true
+  },
+  "nippori": {
+   "name_ru": "Ниппори",
+   "source": "wikidata_ru",
+   "wikidata": "Q801262",
+   "kana_agrees": true
+  },
+  "ofuna": {
+   "name_ru": "Офуна",
+   "source": "wikidata_en",
+   "wikidata": "Q1143863",
+   "kana_agrees": true
+  },
+  "shinagawa": {
+   "name_ru": "Синагава",
+   "source": "wikidata_ru",
+   "wikidata": "Q801442",
+   "kana_agrees": true
+  },
+  "akabane": {
+   "name_ru": "Акабанэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q800369",
+   "kana_agrees": true
+  },
+  "akihabara": {
+   "name_ru": "Акихабара",
+   "source": "wikidata_ru",
+   "wikidata": "Q800374",
+   "kana_agrees": true
+  },
+  "hachioji": {
+   "name_ru": "Хатиодзи",
+   "source": "wikidata_en",
+   "wikidata": "Q800868",
+   "kana_agrees": true
+  },
+  "iidabashi": {
+   "name_ru": "Иидабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q800953",
+   "kana_agrees": true
+  },
+  "keisei-takasago": {
+   "name_ru": "Кэйсэй-Такасаго",
+   "source": "wikidata_en",
+   "wikidata": "Q4162460",
+   "kana_agrees": true
+  },
+  "kichijoji": {
+   "name_ru": "Китидзёдзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q801004",
+   "kana_agrees": true
+  },
+  "kokubunji": {
+   "name_ru": "Кокубундзи",
+   "source": "wikidata_en",
+   "wikidata": "Q251693",
+   "kana_agrees": true
+  },
+  "nagatacho": {
+   "name_ru": "Нагататё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1142211",
+   "kana_agrees": true
+  },
+  "nishi-funabashi": {
+   "name_ru": "Ниси-Фунабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q128803",
+   "kana_agrees": true
+  },
+  "okachimachi": {
+   "name_ru": "Окатимати",
+   "source": "wikidata_ru",
+   "wikidata": "Q801296",
+   "kana_agrees": true
+  },
+  "otemachi": {
+   "name_ru": "Отэмати",
+   "source": "wikidata_ru",
+   "wikidata": "Q1326767",
+   "kana_agrees": true
+  },
+  "tachikawa": {
+   "name_ru": "Татикава",
+   "source": "wikidata_ru",
+   "wikidata": "Q801501",
+   "kana_agrees": true
+  },
+  "totsuka": {
+   "name_ru": "Тоцука",
+   "source": "wikidata_en",
+   "wikidata": "Q801522",
+   "kana_agrees": true
+  },
+  "yotsuya": {
+   "name_ru": "Ёцуя",
+   "source": "wikidata_ru",
+   "wikidata": "Q801654",
+   "kana_agrees": true
+  },
+  "ebisu": {
+   "name_ru": "Эбису",
+   "source": "wikidata_ru",
+   "wikidata": "Q800715",
+   "kana_agrees": true
+  },
+  "funabashi": {
+   "name_ru": "Фунабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q800795",
+   "kana_agrees": true
+  },
+  "haijima": {
+   "name_ru": "Хайдзима",
+   "source": "wikidata_en",
+   "wikidata": "Q1065988",
+   "kana_agrees": true
+  },
+  "ichigaya": {
+   "name_ru": "Итигая",
+   "source": "wikidata_ru",
+   "wikidata": "Q800947",
+   "kana_agrees": true
+  },
+  "kanda": {
+   "name_ru": "Канда",
+   "source": "wikidata_ru",
+   "wikidata": "Q800989",
+   "kana_agrees": true
+  },
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+   "name_ru": "Аэропорт Нарита (терминал 2·3)",
+   "source": "manual",
+   "wikidata": "Q841454"
+  },
+  "meguro": {
+   "name_ru": "Мэгуро",
+   "source": "wikidata_ru",
+   "wikidata": "Q678461",
+   "kana_agrees": true
+  },
+  "mitaka": {
+   "name_ru": "Митака",
+   "source": "wikidata_ru",
+   "wikidata": "Q546655",
+   "kana_agrees": true
+  },
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
+   "name_ru": "Аэропорт Нарита (терминал 1)",
+   "source": "manual",
+   "wikidata": "Q906732"
+  },
+  "nerima": {
+   "name_ru": "Нэрима",
+   "source": "wikidata_ru",
+   "wikidata": "Q134373840"
+  },
+  "nishi-nippori": {
+   "name_ru": "Ниси-Ниппори",
+   "source": "wikidata_ru",
+   "wikidata": "Q636845",
+   "kana_agrees": true
+  },
+  "ochanomizu": {
+   "name_ru": "Отяномидзу",
+   "source": "wikidata_ru",
+   "wikidata": "Q801289",
+   "kana_agrees": true
+  },
+  "odawara": {
+   "name_ru": "Одавара",
+   "source": "wikidata_ru",
+   "wikidata": "Q801290",
+   "kana_agrees": true
+  },
+  "osaki": {
+   "name_ru": "Осаки",
+   "source": "wikidata_ru",
+   "wikidata": "Q801695",
+   "kana_agrees": true
+  },
+  "oshiage-sukaitsurii-mae": {
+   "name_ru": "Осиагэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q80545",
+   "kana_agrees": true,
+   "wikidata_en": "Oshiage"
+  },
+  "shin-kamagaya": {
+   "name_ru": "Син-Камагая",
+   "source": "wikidata_en",
+   "wikidata": "Q842992",
+   "kana_agrees": true
+  },
+  "takao": {
+   "name_ru": "Такао",
+   "source": "wikidata_ru",
+   "wikidata": "Q1065002",
+   "kana_agrees": true
+  },
+  "urawa": {
+   "name_ru": "Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q652141",
+   "kana_agrees": true
+  },
+  "abiko": {
+   "name_ru": "Абико",
+   "source": "wikidata_ru",
+   "wikidata": "Q1043787",
+   "kana_agrees": true
+  },
+  "aoto": {
+   "name_ru": "Аото",
+   "source": "wikidata_en",
+   "wikidata": "Q4132960",
+   "kana_agrees": true
+  },
+  "aoyama-itchome": {
+   "name_ru": "Аояма-Иттёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q602410",
+   "kana_agrees": true
+  },
+  "asakusa": {
+   "name_ru": "Асакуса",
+   "source": "wikidata_ru",
+   "wikidata": "Q800405",
+   "kana_agrees": true
+  },
+  "bakurocho": {
+   "name_ru": "Бакуротё",
+   "source": "wikidata_en",
+   "wikidata": "Q844182",
+   "kana_agrees": true
+  },
+  "chikatetsu-akatsuka": {
+   "name_ru": "Тикатэцу-Акацука",
+   "source": "wikidata_ru",
+   "wikidata": "Q80412",
+   "kana_agrees": true
+  },
+  "chikatetsu-narimasu": {
+   "name_ru": "Тикатэцу-Наримасу",
+   "source": "wikidata_ru",
+   "wikidata": "Q80506",
+   "kana_agrees": true
+  },
+  "choshi": {
+   "name_ru": "Тёси",
+   "source": "wikidata_en",
+   "wikidata": "Q861084",
+   "kana_agrees": true
+  },
+  "ebina": {
+   "name_ru": "Эбина",
+   "source": "wikidata_ru",
+   "wikidata": "Q865932",
+   "kana_agrees": true
+  },
+  "fujisawa": {
+   "name_ru": "Фудзисава",
+   "source": "wikidata_ru",
+   "wikidata": "Q1133110",
+   "kana_agrees": true
+  },
+  "ginza": {
+   "name_ru": "Гиндза",
+   "source": "wikidata_ru",
+   "wikidata": "Q602372",
+   "kana_agrees": true
+  },
+  "gotanda": {
+   "name_ru": "Готанда",
+   "source": "wikidata_ru",
+   "wikidata": "Q736018",
+   "kana_agrees": true
+  },
+  "hamamatsucho": {
+   "name_ru": "Хамамацутё",
+   "source": "wikidata_ru",
+   "wikidata": "Q800873",
+   "kana_agrees": true
+  },
+  "hanedakuko-kokunaisen-taaminaru": {
+   "name_ru": "Ханэдакуко-Кокунайсэн-Таминару",
+   "source": "name_en"
+  },
+  "harajuku": {
+   "name_ru": "Харадзюку",
+   "source": "wikidata_ru",
+   "wikidata": "Q800894",
+   "kana_agrees": true
+  },
+  "hashimoto": {
+   "name_ru": "Хасимото",
+   "source": "wikidata_ru",
+   "wikidata": "Q800895",
+   "kana_agrees": true
+  },
+  "hibiya": {
+   "name_ru": "Хибия",
+   "source": "wikidata_ru",
+   "wikidata": "Q511753",
+   "kana_agrees": true
+  },
+  "higashi-kanagawa": {
+   "name_ru": "Хигаси-Канагава",
+   "source": "wikidata_ru",
+   "wikidata": "Q128205",
+   "kana_agrees": true
+  },
+  "higashi-matsudo": {
+   "name_ru": "Хигаси-Мацудо",
+   "source": "wikidata_en",
+   "wikidata": "Q3467990",
+   "kana_agrees": true
+  },
+  "higashi-murayama": {
+   "name_ru": "Хигаси-Мураяма",
+   "source": "wikidata_en",
+   "wikidata": "Q5753740",
+   "kana_agrees": true
+  },
+  "higashihanno": {
+   "name_ru": "Хигаси-Ханно",
+   "source": "wikidata_en",
+   "wikidata": "Q842772",
+   "kana_agrees": true
+  },
+  "hikifune": {
+   "name_ru": "Хикифунэ",
+   "source": "wikidata_en",
+   "wikidata": "Q842038",
+   "kana_agrees": true
+  },
+  "hiyoshi": {
+   "name_ru": "Хиёси",
+   "source": "wikidata_en",
+   "wikidata": "Q390392",
+   "kana_agrees": true
+  },
+  "jimbocho": {
+   "name_ru": "Дзимботё",
+   "source": "wikidata_ru",
+   "wikidata": "Q76805",
+   "kana_agrees": true
+  },
+  "kamata": {
+   "name_ru": "Камата",
+   "source": "wikidata_ru",
+   "wikidata": "Q800981",
+   "kana_agrees": true
+  },
+  "kanazawa-hakkei": {
+   "name_ru": "Канадзава-Хаккэй",
+   "source": "wikidata_en",
+   "wikidata": "Q6360870",
+   "kana_agrees": true
+  },
+  "kashiwa": {
+   "name_ru": "Касива",
+   "source": "wikidata_en",
+   "wikidata": "Q865156",
+   "kana_agrees": true
+  },
+  "kawagoe": {
+   "name_ru": "Кавагоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q800995",
+   "kana_agrees": true
+  },
+  "kawasaki": {
+   "name_ru": "Кавасаки",
+   "source": "wikidata_ru",
+   "wikidata": "Q80562",
+   "kana_agrees": true
+  },
+  "keiotama-sentaa": {
+   "name_ru": "Кэйо-Тама-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q124477070",
+   "kana_agrees": true
+  },
+  "keisei-tsudanuma": {
+   "name_ru": "Кэйсэй-Цуданума",
+   "source": "wikidata_en",
+   "wikidata": "Q4389595",
+   "kana_agrees": true
+  },
+  "kinshicho": {
+   "name_ru": "Кинситё",
+   "source": "wikidata_ru",
+   "wikidata": "Q801017",
+   "kana_agrees": true
+  },
+  "komagawa": {
+   "name_ru": "Комагава",
+   "source": "wikidata_en",
+   "wikidata": "Q910599",
+   "kana_agrees": true
+  },
+  "kotake-mukaihara": {
+   "name_ru": "Котакэ-Мукаихара",
+   "source": "wikidata_ru",
+   "wikidata": "Q93684",
+   "kana_agrees": true
+  },
+  "kudanshita": {
+   "name_ru": "Кудансита",
+   "source": "wikidata_ru",
+   "wikidata": "Q76899",
+   "kana_agrees": true
+  },
+  "machiya": {
+   "name_ru": "Матия",
+   "source": "wikidata_ru",
+   "wikidata": "Q390638",
+   "kana_agrees": true
+  },
+  "matsudo": {
+   "name_ru": "Мацудо",
+   "source": "wikidata_en",
+   "wikidata": "Q841460",
+   "kana_agrees": true
+  },
+  "minamisenju": {
+   "name_ru": "Минами-Сэндзю",
+   "source": "wikidata_ru",
+   "wikidata": "Q80570",
+   "kana_agrees": true
+  },
+  "mitsukoshimae": {
+   "name_ru": "Мицукосимаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q76898",
+   "kana_agrees": true
+  },
+  "mizonokuchi": {
+   "name_ru": "Мидзонокути",
+   "source": "wikidata_en",
+   "wikidata": "Q5366296",
+   "kana_agrees": true
+  },
+  "motoyawata": {
+   "name_ru": "Мотоявата",
+   "source": "wikidata_ru",
+   "wikidata": "Q1142065",
+   "kana_agrees": true
+  },
+  "nagatsuda": {
+   "name_ru": "Нагацута",
+   "source": "wikidata_en",
+   "wikidata": "Q801229",
+   "kana_agrees": true
+  },
+  "nakano": {
+   "name_ru": "Накано",
+   "source": "wikidata_ru",
+   "wikidata": "Q801234",
+   "kana_agrees": true
+  },
+  "nakano-sakaue": {
+   "name_ru": "Накано-Сакауэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q275436",
+   "kana_agrees": true
+  },
+  "nihonbashi": {
+   "name_ru": "Нихонбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q775847",
+   "kana_agrees": true
+  },
+  "ogikubo": {
+   "name_ru": "Огикубо",
+   "source": "wikidata_ru",
+   "wikidata": "Q801294",
+   "kana_agrees": true
+  },
+  "oimachi": {
+   "name_ru": "Оимати",
+   "source": "wikidata_ru",
+   "wikidata": "Q801690",
+   "kana_agrees": true
+  },
+  "oji": {
+   "name_ru": "Одзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q801689",
+   "kana_agrees": true
+  },
+  "omotesando": {
+   "name_ru": "Омотэсандо",
+   "source": "wikidata_ru",
+   "wikidata": "Q1326733",
+   "kana_agrees": true
+  },
+  "saitama-shintoshin": {
+   "name_ru": "Сайтама-Синтосин",
+   "source": "wikidata_en",
+   "wikidata": "Q801393",
+   "kana_agrees": true
+  },
+  "shin-matsudo": {
+   "name_ru": "Син-Мацудо",
+   "source": "wikidata_en",
+   "wikidata": "Q6799406",
+   "kana_agrees": true
+  },
+  "shinjuku-sanchome": {
+   "name_ru": "Синдзюку-Сантёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1147009",
+   "kana_agrees": true
+  },
+  "shinkiba": {
+   "name_ru": "Син-Киба",
+   "source": "wikidata_ru",
+   "wikidata": "Q1376066",
+   "kana_agrees": true
+  },
+  "shonandai": {
+   "name_ru": "Сёнандай",
+   "source": "wikidata_ru",
+   "wikidata": "Q1036357",
+   "kana_agrees": true
+  },
+  "soga": {
+   "name_ru": "Сога",
+   "source": "wikidata_en",
+   "wikidata": "Q844422",
+   "kana_agrees": true
+  },
+  "takadanobaba": {
+   "name_ru": "Такаданобаба",
+   "source": "wikidata_ru",
+   "wikidata": "Q801506",
+   "kana_agrees": true
+  },
+  "takahata-fudo": {
+   "name_ru": "Такахатафудо",
+   "source": "wikidata_ru",
+   "wikidata": "Q1064614",
+   "kana_agrees": true
+  },
+  "tamagawa": {
+   "name_ru": "Тамагава",
+   "source": "wikidata_en",
+   "wikidata": "Q7680540",
+   "kana_agrees": true
+  },
+  "tobudobutsukoen": {
+   "name_ru": "Тобу-Добуцу-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q843158",
+   "kana_agrees": true
+  },
+  "tsurumi": {
+   "name_ru": "Цуруми",
+   "source": "wikidata_ru",
+   "wikidata": "Q128164",
+   "kana_agrees": true
+  },
+  "wakoshi": {
+   "name_ru": "Вакоси",
+   "source": "wikidata_ru",
+   "wikidata": "Q128298",
+   "kana_agrees": true
+  },
+  "yorii": {
+   "name_ru": "Ёрии",
+   "source": "wikidata_en",
+   "wikidata": "Q910653",
+   "kana_agrees": true
+  },
+  "yoyogi": {
+   "name_ru": "Ёёги",
+   "source": "wikidata_ru",
+   "wikidata": "Q590162",
+   "kana_agrees": true
+  },
+  "yurakucho": {
+   "name_ru": "Юракутё",
+   "source": "wikidata_ru",
+   "wikidata": "Q801655",
+   "kana_agrees": true
+  },
+  "akabane-iwabuchi": {
+   "name_ru": "Акабанэ-Ивабути",
+   "source": "wikidata_ru",
+   "wikidata": "Q151409",
+   "kana_agrees": true
+  },
+  "asagaya": {
+   "name_ru": "Асагая",
+   "source": "wikidata_ru",
+   "wikidata": "Q800402",
+   "kana_agrees": true
+  },
+  "asakusabashi": {
+   "name_ru": "Асакусабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q800404",
+   "kana_agrees": true
+  },
+  "atsugi": {
+   "name_ru": "Ацуги",
+   "source": "wikidata_ru",
+   "wikidata": "Q994477",
+   "kana_agrees": true
+  },
+  "awa-kamogawa": {
+   "name_ru": "Ава-Камогава",
+   "source": "wikidata_en",
+   "wikidata": "Q552842",
+   "kana_agrees": true
+  },
+  "awajicho": {
+   "name_ru": "Авадзитё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078432",
+   "kana_agrees": true
+  },
+  "ayase": {
+   "name_ru": "Аясэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q390691",
+   "kana_agrees": true
+  },
+  "azabu-juban": {
+   "name_ru": "Адзабу-Дзюбан",
+   "source": "wikidata_ru",
+   "wikidata": "Q112382",
+   "kana_agrees": true
+  },
+  "azami-no": {
+   "name_ru": "Адзамино",
+   "source": "wikidata_en",
+   "wikidata": "Q852232",
+   "kana_agrees": true
+  },
+  "bubaigawara": {
+   "name_ru": "Бубайгавара",
+   "source": "wikidata_ru",
+   "wikidata": "Q857315",
+   "kana_agrees": true
+  },
+  "chiba-minato": {
+   "name_ru": "Тиба-Минато",
+   "source": "wikidata_en",
+   "wikidata": "Q2648818",
+   "kana_agrees": true
+  },
+  "chiba-nyutaun-chuo": {
+   "name_ru": "Тиба-Нютаун-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q855466",
+   "kana_agrees": true
+  },
+  "chibachuo": {
+   "name_ru": "Тиба-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q5095292",
+   "kana_agrees": true
+  },
+  "chofu": {
+   "name_ru": "Тёфу",
+   "source": "wikidata_ru",
+   "wikidata": "Q1063956",
+   "kana_agrees": true
+  },
+  "chuorinkan": {
+   "name_ru": "Тюо-Ринкан",
+   "source": "wikidata_ru",
+   "wikidata": "Q906671",
+   "kana_agrees": true
+  },
+  "daimon": {
+   "name_ru": "Даймон",
+   "source": "wikidata_ru",
+   "wikidata": "Q247129",
+   "kana_agrees": true
+  },
+  "denenchofu": {
+   "name_ru": "Дэн-Эн-Тёфу",
+   "source": "wikidata_en",
+   "wikidata": "Q5256442",
+   "kana_agrees": true
+  },
+  "fuchuhonmachi": {
+   "name_ru": "Футю-Хоммати",
+   "source": "wikidata_en",
+   "wikidata": "Q800794",
+   "kana_agrees": true
+  },
+  "futako-tamagawa": {
+   "name_ru": "Футако-Тамагава",
+   "source": "wikidata_en",
+   "wikidata": "Q1042466",
+   "kana_agrees": true
+  },
+  "futakoshinchi": {
+   "name_ru": "Футако-Синти",
+   "source": "wikidata_en",
+   "wikidata": "Q5510461",
+   "kana_agrees": true
+  },
+  "futamatagawa": {
+   "name_ru": "Футаматагава",
+   "source": "wikidata_en",
+   "wikidata": "Q846471",
+   "kana_agrees": true
+  },
+  "goi": {
+   "name_ru": "Гои",
+   "source": "wikidata_ru",
+   "wikidata": "Q573427",
+   "kana_agrees": true
+  },
+  "gotokuji": {
+   "name_ru": "Готокудзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q4147064",
+   "kana_agrees": true
+  },
+  "gora": {
+   "name_ru": "Гора",
+   "source": "wikidata_en",
+   "wikidata": "Q997926",
+   "kana_agrees": true
+  },
+  "hagiyama": {
+   "name_ru": "Хагияма",
+   "source": "wikidata_en",
+   "wikidata": "Q5638755",
+   "kana_agrees": true
+  },
+  "hamakawasaki": {
+   "name_ru": "Хама-Кавасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q1581467",
+   "kana_agrees": true
+  },
+  "hanedakuko-kokusaisen-taaminaru": {
+   "name_ru": "Ханэдакуко-Кокусайсэн-Таминару",
+   "source": "name_en"
+  },
+  "hanno": {
+   "name_ru": "Ханно",
+   "source": "wikidata_en",
+   "wikidata": "Q5649307",
+   "kana_agrees": true
+  },
+  "hanyu": {
+   "name_ru": "Ханю",
+   "source": "wikidata_en",
+   "wikidata": "Q843716",
+   "kana_agrees": true
+  },
+  "hatagaya": {
+   "name_ru": "Хатагая",
+   "source": "wikidata_ru",
+   "wikidata": "Q4496513",
+   "kana_agrees": true
+  },
+  "hatanodai": {
+   "name_ru": "Хатанодай",
+   "source": "wikidata_en",
+   "wikidata": "Q852281",
+   "kana_agrees": true
+  },
+  "hatchobori": {
+   "name_ru": "Хаттёбори",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073008",
+   "kana_agrees": true
+  },
+  "hatchonawate": {
+   "name_ru": "Хаттёнаватэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5366338",
+   "kana_agrees": true
+  },
+  "heiwadai": {
+   "name_ru": "Хэйвадай",
+   "source": "wikidata_ru",
+   "wikidata": "Q80427",
+   "kana_agrees": true
+  },
+  "higashi-fuchu": {
+   "name_ru": "Хигаси-Футю",
+   "source": "wikidata_ru",
+   "wikidata": "Q4497461",
+   "kana_agrees": true
+  },
+  "higashi-ikebukuro": {
+   "name_ru": "Хигаси-Икэбукуро",
+   "source": "wikidata_ru",
+   "wikidata": "Q331193",
+   "kana_agrees": true
+  },
+  "higashi-nakano": {
+   "name_ru": "Хигаси-Накано",
+   "source": "wikidata_ru",
+   "wikidata": "Q800921",
+   "kana_agrees": true
+  },
+  "higashi-shinjuku": {
+   "name_ru": "Хигаси-Синдзюку",
+   "source": "wikidata_ru",
+   "wikidata": "Q112503",
+   "kana_agrees": true
+  },
+  "higashiginza": {
+   "name_ru": "Хигаси-Гиндза",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078393",
+   "kana_agrees": true
+  },
+  "higashikawaguchi": {
+   "name_ru": "Хигаси-Кавагути",
+   "source": "wikidata_en",
+   "wikidata": "Q8015281",
+   "kana_agrees": true
+  },
+  "higashinarita": {
+   "name_ru": "Хигаси-Нарита",
+   "source": "wikidata_en",
+   "wikidata": "Q846460",
+   "kana_agrees": true
+  },
+  "higashitotsuka": {
+   "name_ru": "Хигаси-Тоцука",
+   "source": "wikidata_en",
+   "wikidata": "Q844252",
+   "kana_agrees": true
+  },
+  "hikawadai": {
+   "name_ru": "Хикавадай",
+   "source": "wikidata_ru",
+   "wikidata": "Q93680",
+   "kana_agrees": true
+  },
+  "hino": {
+   "name_ru": "Хино",
+   "source": "wikidata_en",
+   "wikidata": "Q800923",
+   "kana_agrees": true
+  },
+  "ho-tsuchi-ke-tani": {
+   "name_ru": "Ходогая",
+   "source": "wikidata_en",
+   "wikidata": "Q844185",
+   "kana_agrees": true
+  },
+  "hokucho-kasumi": {
+   "name_ru": "Кита-Асака",
+   "source": "wikidata_en",
+   "wikidata": "Q6417515",
+   "kana_agrees": true
+  },
+  "honchiba": {
+   "name_ru": "Хон-Тиба",
+   "source": "wikidata_en",
+   "wikidata": "Q4389608",
+   "kana_agrees": true
+  },
+  "hongo-sanchome": {
+   "name_ru": "Хонго-Сантёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q80774",
+   "kana_agrees": true
+  },
+  "hori-no-nai": {
+   "name_ru": "Хориноути",
+   "source": "wikidata_en",
+   "wikidata": "Q5370292",
+   "kana_agrees": true
+  },
+  "ichikawa": {
+   "name_ru": "Итикава",
+   "source": "wikidata_ru",
+   "wikidata": "Q1067608",
+   "kana_agrees": true
+  },
+  "inage": {
+   "name_ru": "Инагэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q909403",
+   "kana_agrees": true
+  },
+  "inba-nippon-idai": {
+   "name_ru": "Инба-Нихон-Идай",
+   "source": "wikidata_en",
+   "wikidata": "Q859077",
+   "kana_agrees": true
+  },
+  "jiyugaoka": {
+   "name_ru": "Дзиюгаока",
+   "source": "wikidata_en",
+   "wikidata": "Q800972",
+   "kana_agrees": true
+  },
+  "kamakura": {
+   "name_ru": "Камакура",
+   "source": "wikidata_en",
+   "wikidata": "Q932895",
+   "kana_agrees": true
+  },
+  "kameido": {
+   "name_ru": "Камэйдо",
+   "source": "wikidata_ru",
+   "wikidata": "Q1036376",
+   "kana_agrees": true
+  },
+  "kamiooka": {
+   "name_ru": "Камиоока",
+   "source": "wikidata_en",
+   "wikidata": "Q865627",
+   "kana_agrees": true
+  },
+  "kanamachi": {
+   "name_ru": "Канамати",
+   "source": "wikidata_en",
+   "wikidata": "Q1952878",
+   "kana_agrees": true
+  },
+  "kanamecho": {
+   "name_ru": "Канамэтё",
+   "source": "wikidata_ru",
+   "wikidata": "Q128296",
+   "kana_agrees": true
+  },
+  "kasuga": {
+   "name_ru": "Касуга",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073928",
+   "kana_agrees": true
+  },
+  "kasukabe": {
+   "name_ru": "Касукабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q842446",
+   "kana_agrees": true
+  },
+  "katori": {
+   "name_ru": "Катори",
+   "source": "wikidata_en",
+   "wikidata": "Q6377809",
+   "kana_agrees": true
+  },
+  "katsuta-dai": {
+   "name_ru": "Кацутадай",
+   "source": "wikidata_en",
+   "wikidata": "Q4502157",
+   "kana_agrees": true
+  },
+  "kayabacho": {
+   "name_ru": "Каябатё",
+   "source": "wikidata_ru",
+   "wikidata": "Q80566",
+   "kana_agrees": true
+  },
+  "kazusanakano": {
+   "name_ru": "Кадзуса-Накано",
+   "source": "wikidata_en",
+   "wikidata": "Q6381719",
+   "kana_agrees": true
+  },
+  "keikyu-kamata": {
+   "name_ru": "Кэйкю-Камата",
+   "source": "wikidata_en",
+   "wikidata": "Q841552",
+   "kana_agrees": true
+  },
+  "keikyu-kawasaki": {
+   "name_ru": "Кэйкю-Кавасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q6383705",
+   "kana_agrees": true
+  },
+  "keio-nagayama": {
+   "name_ru": "Кэйо-Нагаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q124458705",
+   "kana_agrees": true
+  },
+  "keiseiueno": {
+   "name_ru": "Кэйсэй-Уэно",
+   "source": "wikidata_en",
+   "wikidata": "Q907059",
+   "kana_agrees": true
+  },
+  "kikuna": {
+   "name_ru": "Кикуна",
+   "source": "wikidata_en",
+   "wikidata": "Q801006",
+   "kana_agrees": true
+  },
+  "kisarazu": {
+   "name_ru": "Кисарадзу",
+   "source": "wikidata_en",
+   "wikidata": "Q575433",
+   "kana_agrees": true
+  },
+  "kitanarashino": {
+   "name_ru": "Кита-Нарасино",
+   "source": "wikidata_en",
+   "wikidata": "Q6417578",
+   "kana_agrees": true
+  },
+  "kitano": {
+   "name_ru": "Китано",
+   "source": "wikidata_ru",
+   "wikidata": "Q4222444",
+   "kana_agrees": true
+  },
+  "kiyosumi-shirakawa": {
+   "name_ru": "Киёсуми-Сиракава",
+   "source": "wikidata_ru",
+   "wikidata": "Q80542",
+   "kana_agrees": true
+  },
+  "kodaira": {
+   "name_ru": "Кодайра",
+   "source": "wikidata_en",
+   "wikidata": "Q6425085",
+   "kana_agrees": true
+  },
+  "koenji": {
+   "name_ru": "Коэндзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q801056",
+   "kana_agrees": true
+  },
+  "kokkai-gijidomae": {
+   "name_ru": "Коккай-Гидзидомаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1192508",
+   "kana_agrees": true
+  },
+  "komagome": {
+   "name_ru": "Комагомэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q801032",
+   "kana_agrees": true
+  },
+  "korakuen": {
+   "name_ru": "Коракуэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q1156432",
+   "kana_agrees": true
+  },
+  "ko-no-shima": {
+   "name_ru": "Эносима",
+   "source": "wikidata_en",
+   "wikidata": "Q846972",
+   "kana_agrees": true
+  },
+  "korai": {
+   "name_ru": "Кома",
+   "source": "wikidata_en",
+   "wikidata": "Q6428027",
+   "kana_agrees": true
+  },
+  "kozu": {
+   "name_ru": "Кодзу",
+   "source": "wikidata_en",
+   "wikidata": "Q865280",
+   "kana_agrees": true
+  },
+  "kuki": {
+   "name_ru": "Куки",
+   "source": "wikidata_en",
+   "wikidata": "Q843719",
+   "kana_agrees": true
+  },
+  "kumagaya": {
+   "name_ru": "Кумагая",
+   "source": "wikidata_en",
+   "wikidata": "Q735594",
+   "kana_agrees": true
+  },
+  "kumano-mae": {
+   "name_ru": "Куманомаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6443453",
+   "kana_agrees": true
+  },
+  "kuramae": {
+   "name_ru": "Курамаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q112348",
+   "kana_agrees": true
+  },
+  "kurihama": {
+   "name_ru": "Курихама",
+   "source": "wikidata_en",
+   "wikidata": "Q844268",
+   "kana_agrees": true
+  },
+  "kurihashi": {
+   "name_ru": "Курихаси",
+   "source": "wikidata_en",
+   "wikidata": "Q846796",
+   "kana_agrees": true
+  },
+  "kyobashi": {
+   "name_ru": "Кёбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q347981",
+   "kana_agrees": true
+  },
+  "mabashi": {
+   "name_ru": "Мабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q865196",
+   "kana_agrees": true
+  },
+  "machida": {
+   "name_ru": "Матида",
+   "source": "wikidata_ru",
+   "wikidata": "Q801146",
+   "kana_agrees": true
+  },
+  "makuhari": {
+   "name_ru": "Макухари",
+   "source": "wikidata_ru",
+   "wikidata": "Q908755",
+   "kana_agrees": true
+  },
+  "makuharihongo": {
+   "name_ru": "Макухари-Хонго",
+   "source": "wikidata_ru",
+   "wikidata": "Q906124",
+   "kana_agrees": true
+  },
+  "matsugishi": {
+   "name_ru": "Мацугиси",
+   "source": "wikidata_en",
+   "wikidata": "Q5365309",
+   "kana_agrees": true
+  },
+  "me-ke-saki": {
+   "name_ru": "Тигасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q800622",
+   "kana_agrees": true
+  },
+  "meidaimae": {
+   "name_ru": "Мэйдаймаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q906793",
+   "kana_agrees": true
+  },
+  "minamiurawa": {
+   "name_ru": "Минами-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q268540",
+   "kana_agrees": true
+  },
+  "mita": {
+   "name_ru": "Мита",
+   "source": "wikidata_ru",
+   "wikidata": "Q905732",
+   "kana_agrees": true
+  },
+  "monzen-nakacho": {
+   "name_ru": "Мондзэн-Накатё",
+   "source": "wikidata_ru",
+   "wikidata": "Q80576",
+   "kana_agrees": true
+  },
+  "morishita": {
+   "name_ru": "Морисита",
+   "source": "wikidata_ru",
+   "wikidata": "Q112723",
+   "kana_agrees": true
+  },
+  "motosumiyoshi": {
+   "name_ru": "Мотосумиёси",
+   "source": "wikidata_en",
+   "wikidata": "Q7937375",
+   "kana_agrees": true
+  },
+  "musashi-sakai": {
+   "name_ru": "Мусаси-Сакай",
+   "source": "wikidata_en",
+   "wikidata": "Q137550",
+   "kana_agrees": true
+  },
+  "musashi-yokote": {
+   "name_ru": "Мусаси-Ёкотэ",
+   "source": "wikidata_en",
+   "wikidata": "Q8015462",
+   "kana_agrees": true
+  },
+  "musashiurawa": {
+   "name_ru": "Мусаси-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q801208",
+   "kana_agrees": true
+  },
+  "nagareyama-otakano-mori": {
+   "name_ru": "Нагарэяма-Отаканомори",
+   "source": "wikidata_en",
+   "wikidata": "Q841689",
+   "kana_agrees": true
+  },
+  "nakai": {
+   "name_ru": "Накаи",
+   "source": "wikidata_ru",
+   "wikidata": "Q275116",
+   "kana_agrees": true
+  },
+  "nakameguro": {
+   "name_ru": "Нака-Мэгуро",
+   "source": "wikidata_ru",
+   "wikidata": "Q1132605",
+   "kana_agrees": true
+  },
+  "nakanobe": {
+   "name_ru": "Наканобу",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040875",
+   "kana_agrees": true
+  },
+  "nakayama": {
+   "name_ru": "Накаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q844670",
+   "kana_agrees": true
+  },
+  "nan-etsu-tani": {
+   "name_ru": "Минами-Косигая",
+   "source": "wikidata_en",
+   "wikidata": "Q842469",
+   "kana_agrees": true
+  },
+  "nanryu-yama": {
+   "name_ru": "Минами-Нагарэяма",
+   "source": "wikidata_en",
+   "wikidata": "Q267770",
+   "kana_agrees": true
+  },
+  "naruto": {
+   "name_ru": "Наруто",
+   "source": "wikidata_en",
+   "wikidata": "Q6966490",
+   "kana_agrees": true
+  },
+  "ningyocho": {
+   "name_ru": "Нингётё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1147003",
+   "kana_agrees": true
+  },
+  "nishi-hachioji": {
+   "name_ru": "Ниси-Хатиодзи",
+   "source": "wikidata_en",
+   "wikidata": "Q500790",
+   "kana_agrees": true
+  },
+  "nishi-kokubunji": {
+   "name_ru": "Ниси-Кокубундзи",
+   "source": "wikidata_en",
+   "wikidata": "Q801259",
+   "kana_agrees": true
+  },
+  "nishi-oi": {
+   "name_ru": "Ниси-Ои",
+   "source": "wikidata_en",
+   "wikidata": "Q844193",
+   "kana_agrees": true
+  },
+  "nishi-tokorozawa": {
+   "name_ru": "Ниси-Токородзава",
+   "source": "wikidata_en",
+   "wikidata": "Q7040433",
+   "kana_agrees": true
+  },
+  "nishiarai": {
+   "name_ru": "Нисиарай",
+   "source": "wikidata_en",
+   "wikidata": "Q841838",
+   "kana_agrees": true
+  },
+  "nishiogikubo": {
+   "name_ru": "Ниси-Огикубо",
+   "source": "wikidata_ru",
+   "wikidata": "Q801263",
+   "kana_agrees": true
+  },
+  "noborito": {
+   "name_ru": "Ноборито",
+   "source": "wikidata_ru",
+   "wikidata": "Q801266",
+   "kana_agrees": true
+  },
+  "ogawa": {
+   "name_ru": "Огава",
+   "source": "wikidata_en",
+   "wikidata": "Q7079856",
+   "kana_agrees": true
+  },
+  "ogawacho": {
+   "name_ru": "Огавамати",
+   "source": "wikidata_en",
+   "wikidata": "Q844858",
+   "kana_agrees": true
+  },
+  "ogose": {
+   "name_ru": "Огосэ",
+   "source": "wikidata_en",
+   "wikidata": "Q845041",
+   "kana_agrees": true
+  },
+  "oku": {
+   "name_ru": "Оку",
+   "source": "wikidata_en",
+   "wikidata": "Q845113",
+   "kana_agrees": true
+  },
+  "oami": {
+   "name_ru": "Оами",
+   "source": "wikidata_en",
+   "wikidata": "Q5353488",
+   "kana_agrees": true
+  },
+  "ohara": {
+   "name_ru": "Охара",
+   "source": "wikidata_en",
+   "wikidata": "Q552811",
+   "kana_agrees": true
+  },
+  "ookayama": {
+   "name_ru": "Оокаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q843724",
+   "kana_agrees": true
+  },
+  "otsuka": {
+   "name_ru": "Оцука",
+   "source": "wikidata_ru",
+   "wikidata": "Q801696",
+   "kana_agrees": true
+  },
+  "roppongi": {
+   "name_ru": "Роппонги",
+   "source": "wikidata_ru",
+   "wikidata": "Q1326723",
+   "kana_agrees": true
+  },
+  "ryogoku": {
+   "name_ru": "Рёгоку",
+   "source": "wikidata_ru",
+   "wikidata": "Q801389",
+   "kana_agrees": true
+  },
+  "sagamiono": {
+   "name_ru": "Сагами-Оно",
+   "source": "wikidata_ru",
+   "wikidata": "Q1054659",
+   "kana_agrees": true
+  },
+  "sakato": {
+   "name_ru": "Сакадо",
+   "source": "wikidata_en",
+   "wikidata": "Q7402739",
+   "kana_agrees": true
+  },
+  "sakura": {
+   "name_ru": "Сакура",
+   "source": "wikidata_en",
+   "wikidata": "Q7403176",
+   "kana_agrees": true
+  },
+  "sakuragicho": {
+   "name_ru": "Сакурагитё",
+   "source": "wikidata_en",
+   "wikidata": "Q801396",
+   "kana_agrees": true
+  },
+  "sangenjaya": {
+   "name_ru": "Сангэн-Дзяя",
+   "source": "wikidata_en",
+   "wikidata": "Q7417938",
+   "kana_agrees": true
+  },
+  "sasazuka": {
+   "name_ru": "Сасадзука",
+   "source": "wikidata_ru",
+   "wikidata": "Q841861",
+   "kana_agrees": true
+  },
+  "sawara": {
+   "name_ru": "Савара",
+   "source": "wikidata_en",
+   "wikidata": "Q5359841",
+   "kana_agrees": true
+  },
+  "seibu-yuenchi": {
+   "name_ru": "Сэйбу-Юэнти",
+   "source": "name_en"
+  },
+  "seibukyujo-mae": {
+   "name_ru": "Сэйбу-Кюдзё-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7446591",
+   "kana_agrees": true
+  },
+  "sekiuchi": {
+   "name_ru": "Каннай",
+   "source": "wikidata_en",
+   "wikidata": "Q800982",
+   "kana_agrees": true
+  },
+  "sengakuji": {
+   "name_ru": "Сэнгакудзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q905742",
+   "kana_agrees": true
+  },
+  "senkawa": {
+   "name_ru": "Сэнкава",
+   "source": "wikidata_ru",
+   "wikidata": "Q128304",
+   "kana_agrees": true
+  },
+  "sentaa-kita": {
+   "name_ru": "Сэнта-Кита",
+   "source": "wikidata_en",
+   "wikidata": "Q847363",
+   "kana_agrees": true
+  },
+  "sentaa-minami": {
+   "name_ru": "Сэнта-Минами",
+   "source": "wikidata_en",
+   "wikidata": "Q844629",
+   "kana_agrees": true
+  },
+  "shimokitazawa": {
+   "name_ru": "Симо-Китадзава",
+   "source": "wikidata_ru",
+   "wikidata": "Q1059947",
+   "kana_agrees": true
+  },
+  "shimotakaido": {
+   "name_ru": "Симо-Такайдо",
+   "source": "wikidata_ru",
+   "wikidata": "Q994285",
+   "kana_agrees": true
+  },
+  "shin-koiwa": {
+   "name_ru": "Син-Коива",
+   "source": "wikidata_ru",
+   "wikidata": "Q1063750",
+   "kana_agrees": true
+  },
+  "shin-okachimachi": {
+   "name_ru": "Син-Окатимати",
+   "source": "wikidata_ru",
+   "wikidata": "Q80540",
+   "kana_agrees": true
+  },
+  "shin-sugita": {
+   "name_ru": "Син-Сугита",
+   "source": "wikidata_en",
+   "wikidata": "Q844465",
+   "kana_agrees": true
+  },
+  "shinkawasaki": {
+   "name_ru": "Син-Кавасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q801434",
+   "kana_agrees": true
+  },
+  "shinkoyasu": {
+   "name_ru": "Син-Коясу",
+   "source": "wikidata_ru",
+   "wikidata": "Q128314",
+   "kana_agrees": true
+  },
+  "shinmaruko": {
+   "name_ru": "Син-Маруко",
+   "source": "wikidata_en",
+   "wikidata": "Q7497117",
+   "kana_agrees": true
+  },
+  "shinpachi-hashira": {
+   "name_ru": "Син-Яхасира",
+   "source": "wikidata_en",
+   "wikidata": "Q3525564",
+   "kana_agrees": true
+  },
+  "shinyokohama": {
+   "name_ru": "Син-Иокогама",
+   "source": "wikidata_ru",
+   "wikidata": "Q801437",
+   "kana_agrees": true
+  },
+  "shinyuri-ke-oka": {
+   "name_ru": "Син-Юригаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q1061373",
+   "kana_agrees": true
+  },
+  "shiodome": {
+   "name_ru": "Сиодомэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1063299",
+   "kana_agrees": true
+  },
+  "shirokane-takanawa": {
+   "name_ru": "Сироканэ-Таканава",
+   "source": "wikidata_ru",
+   "wikidata": "Q112323",
+   "kana_agrees": true
+  },
+  "shirokanedai": {
+   "name_ru": "Сироканэдай",
+   "source": "wikidata_ru",
+   "wikidata": "Q112357",
+   "kana_agrees": true
+  },
+  "shitte": {
+   "name_ru": "Ситтэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5367537",
+   "kana_agrees": true
+  },
+  "shodai": {
+   "name_ru": "Хацудай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4496691",
+   "kana_agrees": true
+  },
+  "sugamo": {
+   "name_ru": "Сугамо",
+   "source": "wikidata_ru",
+   "wikidata": "Q801500",
+   "kana_agrees": true
+  },
+  "suidobashi": {
+   "name_ru": "Суйдобаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q801496",
+   "kana_agrees": true
+  },
+  "sumiyoshi": {
+   "name_ru": "Сумиёси",
+   "source": "wikidata_ru",
+   "wikidata": "Q80536",
+   "kana_agrees": true
+  },
+  "tabata": {
+   "name_ru": "Табата",
+   "source": "wikidata_ru",
+   "wikidata": "Q801503",
+   "kana_agrees": true
+  },
+  "takatsu": {
+   "name_ru": "Такацу",
+   "source": "wikidata_en",
+   "wikidata": "Q7677439",
+   "kana_agrees": true
+  },
+  "tama-dobutsu-koen": {
+   "name_ru": "Тама-Добуцукоэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4450752",
+   "kana_agrees": true
+  },
+  "tamachi": {
+   "name_ru": "Тамати",
+   "source": "wikidata_ru",
+   "wikidata": "Q801510",
+   "kana_agrees": true
+  },
+  "tamagawajosui": {
+   "name_ru": "Тамагава-Дзёсуи",
+   "source": "wikidata_en",
+   "wikidata": "Q842489",
+   "kana_agrees": true
+  },
+  "tameike-sanno": {
+   "name_ru": "Тамэикэ-Санно",
+   "source": "wikidata_ru",
+   "wikidata": "Q277208",
+   "kana_agrees": true
+  },
+  "tenku-hashi": {
+   "name_ru": "Тэнкубаси",
+   "source": "wikidata_en",
+   "wikidata": "Q5367248",
+   "kana_agrees": true
+  },
+  "tennodai": {
+   "name_ru": "Тэннодай",
+   "source": "wikidata_en",
+   "wikidata": "Q1952908",
+   "kana_agrees": true
+  },
+  "tennozu-isle": {
+   "name_ru": "Тэннодзу-Айру",
+   "source": "wikidata_en",
+   "wikidata": "Q841425",
+   "kana_agrees": true
+  },
+  "togoshi-ginza": {
+   "name_ru": "Тогоси-Гиндза",
+   "source": "wikidata_en",
+   "wikidata": "Q11496630",
+   "kana_agrees": true
+  },
+  "tokorozawa": {
+   "name_ru": "Токородзава",
+   "source": "wikidata_en",
+   "wikidata": "Q842569",
+   "kana_agrees": true
+  },
+  "toshimaen": {
+   "name_ru": "Тосимаэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q906947",
+   "kana_agrees": true
+  },
+  "togo-no": {
+   "name_ru": "Хигаси-Агано",
+   "source": "wikidata_en",
+   "wikidata": "Q8016063",
+   "kana_agrees": true
+  },
+  "toyosu": {
+   "name_ru": "Тоёсу",
+   "source": "wikidata_ru",
+   "wikidata": "Q1141968",
+   "kana_agrees": true
+  },
+  "toyota": {
+   "name_ru": "Тоёда",
+   "source": "wikidata_en",
+   "wikidata": "Q867338",
+   "kana_agrees": true
+  },
+  "tsudanuma": {
+   "name_ru": "Цуданума",
+   "source": "wikidata_ru",
+   "wikidata": "Q801534",
+   "kana_agrees": true
+  },
+  "tsuga": {
+   "name_ru": "Цуга",
+   "source": "wikidata_en",
+   "wikidata": "Q7849953",
+   "kana_agrees": true
+  },
+  "tsukishima": {
+   "name_ru": "Цукисима",
+   "source": "wikidata_ru",
+   "wikidata": "Q112337",
+   "kana_agrees": true
+  },
+  "uguisudani": {
+   "name_ru": "Угуисудани",
+   "source": "wikidata_ru",
+   "wikidata": "Q801546",
+   "kana_agrees": true
+  },
+  "ushita": {
+   "name_ru": "Усида",
+   "source": "wikidata_en",
+   "wikidata": "Q7901940",
+   "kana_agrees": true
+  },
+  "ware-no": {
+   "name_ru": "Агано",
+   "source": "wikidata_en",
+   "wikidata": "Q4691200",
+   "kana_agrees": true
+  },
+  "yamato": {
+   "name_ru": "Ямато",
+   "source": "wikidata_ru",
+   "wikidata": "Q1036368",
+   "kana_agrees": true
+  },
+  "yotsukaido": {
+   "name_ru": "Ёцукайдо",
+   "source": "wikidata_en",
+   "wikidata": "Q8013017",
+   "kana_agrees": true
+  },
+  "yoyogi-hachiman": {
+   "name_ru": "Ёёги-Хатиман",
+   "source": "wikidata_ru",
+   "wikidata": "Q1083866",
+   "kana_agrees": true
+  },
+  "yoyogi-uehara": {
+   "name_ru": "Ёёги-Уэхара",
+   "source": "wikidata_ru",
+   "wikidata": "Q1131825",
+   "kana_agrees": true
+  },
+  "yukari-ga-oka": {
+   "name_ru": "Юкаригаока",
+   "source": "wikidata_en",
+   "wikidata": "Q8062735",
+   "kana_agrees": true
+  },
+  "zoshigaya": {
+   "name_ru": "Дзосигая",
+   "source": "wikidata_ru",
+   "wikidata": "Q128312",
+   "kana_agrees": true
+  },
+  "adachi-odai": {
+   "name_ru": "Адати-Одай",
+   "source": "wikidata_en",
+   "wikidata": "Q4678340",
+   "kana_agrees": true
+  },
+  "ageo": {
+   "name_ru": "Агэо",
+   "source": "wikidata_en",
+   "wikidata": "Q800360",
+   "kana_agrees": true
+  },
+  "agui": {
+   "name_ru": "Адзики",
+   "source": "wikidata_en",
+   "wikidata": "Q864215",
+   "kana_agrees": true
+  },
+  "aihara": {
+   "name_ru": "Айхара",
+   "source": "wikidata_en",
+   "wikidata": "Q844635",
+   "kana_agrees": true
+  },
+  "aiko-ishida": {
+   "name_ru": "Аико-Исида",
+   "source": "wikidata_ru",
+   "wikidata": "Q1107009",
+   "kana_agrees": true
+  },
+  "akabanebashi": {
+   "name_ru": "Акабанэбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q246176",
+   "kana_agrees": true
+  },
+  "akasaka": {
+   "name_ru": "Акасака",
+   "source": "wikidata_ru",
+   "wikidata": "Q1042002",
+   "kana_agrees": true
+  },
+  "akebonobashi": {
+   "name_ru": "Акэбонобаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q128308",
+   "kana_agrees": true
+  },
+  "akigawa": {
+   "name_ru": "Акигава",
+   "source": "wikidata_en",
+   "wikidata": "Q4700907",
+   "kana_agrees": true
+  },
+  "akira-shima": {
+   "name_ru": "Акисима",
+   "source": "wikidata_en",
+   "wikidata": "Q844152",
+   "kana_agrees": true
+  },
+  "akitsu": {
+   "name_ru": "Акицу",
+   "source": "wikidata_en",
+   "wikidata": "Q842513",
+   "kana_agrees": true
+  },
+  "akiyama": {
+   "name_ru": "Акияма",
+   "source": "wikidata_en",
+   "wikidata": "Q858983",
+   "kana_agrees": true
+  },
+  "an-zen": {
+   "name_ru": "Андзэн",
+   "source": "wikidata_en",
+   "wikidata": "Q1581479",
+   "kana_agrees": true
+  },
+  "anabe": {
+   "name_ru": "Анабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q4750577",
+   "kana_agrees": true
+  },
+  "anagawa": {
+   "name_ru": "Анагава",
+   "source": "wikidata_en",
+   "wikidata": "Q4750826",
+   "kana_agrees": true
+  },
+  "anamori-inari": {
+   "name_ru": "Анамори-Инари",
+   "source": "wikidata_en",
+   "wikidata": "Q4751212",
+   "kana_agrees": true
+  },
+  "ane-ke-saki": {
+   "name_ru": "Анэгасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q573432",
+   "kana_agrees": true
+  },
+  "anjin-tsuka": {
+   "name_ru": "Андзиндзука",
+   "source": "wikidata_en",
+   "wikidata": "Q4765822",
+   "kana_agrees": true
+  },
+  "ao-hori": {
+   "name_ru": "Аохори",
+   "source": "wikidata_en",
+   "wikidata": "Q558935",
+   "kana_agrees": true
+  },
+  "aobadai": {
+   "name_ru": "Аобадай",
+   "source": "wikidata_en",
+   "wikidata": "Q857586",
+   "kana_agrees": true
+  },
+  "aoi": {
+   "name_ru": "Аои",
+   "source": "wikidata_en",
+   "wikidata": "Q850623",
+   "kana_agrees": true
+  },
+  "aomono-yokocho": {
+   "name_ru": "Аомоно-Ёкотё",
+   "source": "wikidata_en",
+   "wikidata": "Q852188",
+   "kana_agrees": true
+  },
+  "arai-kusurishi-mae": {
+   "name_ru": "Арайякуси-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q843454",
+   "kana_agrees": true
+  },
+  "araijuku": {
+   "name_ru": "Арайдзюку",
+   "source": "wikidata_en",
+   "wikidata": "Q3701488",
+   "kana_agrees": true
+  },
+  "arakawa-itchu-mae": {
+   "name_ru": "Аракава-Иттю-маэ",
+   "source": "name_en"
+  },
+  "arakawa-nichome": {
+   "name_ru": "Аракава-Нитёмэ",
+   "source": "name_en"
+  },
+  "arakawa-shichi-chome": {
+   "name_ru": "Аракава-Сити-Тёмэ",
+   "source": "name_en"
+  },
+  "arakawa-yuenchi-mae": {
+   "name_ru": "Аракава-Юэнти-маэ",
+   "source": "name_en"
+  },
+  "arakawaku-yakusho-mae": {
+   "name_ru": "Аракаваку-Якусё-маэ",
+   "source": "name_en"
+  },
+  "arakawashakomae": {
+   "name_ru": "Аракавасякомаэ",
+   "source": "name_en"
+  },
+  "araki": {
+   "name_ru": "Араки",
+   "source": "wikidata_en",
+   "wikidata": "Q4783839",
+   "kana_agrees": true
+  },
+  "ariake": {
+   "name_ru": "Ариакэ",
+   "source": "wikidata_en",
+   "wikidata": "Q17719",
+   "kana_agrees": true
+  },
+  "ariake-tenisu-no-mori": {
+   "name_ru": "Ариакэ-Тэнису-но-Мори",
+   "source": "wikidata_en",
+   "wikidata": "Q373913",
+   "kana_agrees": true
+  },
+  "asahi": {
+   "name_ru": "Асахи",
+   "source": "wikidata_en",
+   "wikidata": "Q863457",
+   "kana_agrees": true
+  },
+  "asaka": {
+   "name_ru": "Асака",
+   "source": "wikidata_en",
+   "wikidata": "Q4803419",
+   "kana_agrees": true
+  },
+  "asano": {
+   "name_ru": "Асано",
+   "source": "wikidata_en",
+   "wikidata": "Q4803534",
+   "kana_agrees": true
+  },
+  "ashi-ke-kubo": {
+   "name_ru": "Асигакубо",
+   "source": "wikidata_en",
+   "wikidata": "Q4805059",
+   "kana_agrees": true
+  },
+  "ashigara": {
+   "name_ru": "Асигара",
+   "source": "wikidata_ru",
+   "wikidata": "Q1108294",
+   "kana_agrees": true
+  },
+  "asuka-yama": {
+   "name_ru": "Асука-Яма",
+   "source": "name_en"
+  },
+  "atago": {
+   "name_ru": "Атаго",
+   "source": "wikidata_en",
+   "wikidata": "Q4812646",
+   "kana_agrees": true
+  },
+  "awa-katsuyama": {
+   "name_ru": "Ава-Кацуяма",
+   "source": "wikidata_en",
+   "wikidata": "Q558545",
+   "kana_agrees": true
+  },
+  "awa-kominato": {
+   "name_ru": "Ава-Коминато",
+   "source": "wikidata_en",
+   "wikidata": "Q552825",
+   "kana_agrees": true
+  },
+  "awa-tenshin": {
+   "name_ru": "Ава-Амацу",
+   "source": "wikidata_en",
+   "wikidata": "Q553048",
+   "kana_agrees": true
+  },
+  "baigo": {
+   "name_ru": "Умэсато",
+   "source": "wikidata_en",
+   "wikidata": "Q7881495",
+   "kana_agrees": true
+  },
+  "ban-ta": {
+   "name_ru": "Банда",
+   "source": "wikidata_en",
+   "wikidata": "Q4854306",
+   "kana_agrees": true
+  },
+  "bando-hashi": {
+   "name_ru": "Бандобаси",
+   "source": "wikidata_en",
+   "wikidata": "Q852854",
+   "kana_agrees": true
+  },
+  "barakinakayama": {
+   "name_ru": "Бараки-Накаяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q128808",
+   "kana_agrees": true
+  },
+  "basha-michi": {
+   "name_ru": "Басямити",
+   "source": "wikidata_en",
+   "wikidata": "Q4866771",
+   "kana_agrees": true
+  },
+  "benten-hashi": {
+   "name_ru": "Бэнтэмбаси",
+   "source": "wikidata_en",
+   "wikidata": "Q1392590",
+   "kana_agrees": true
+  },
+  "bushu-araki": {
+   "name_ru": "Бусю-Араки",
+   "source": "wikidata_en",
+   "wikidata": "Q5001622",
+   "kana_agrees": true
+  },
+  "bushu-hino": {
+   "name_ru": "Бусю-Хино",
+   "source": "wikidata_en",
+   "wikidata": "Q3701398",
+   "kana_agrees": true
+  },
+  "bushu-karasawa": {
+   "name_ru": "Бусю-Карасава",
+   "source": "wikidata_en",
+   "wikidata": "Q5001626",
+   "kana_agrees": true
+  },
+  "bushu-nagase": {
+   "name_ru": "Бусю-Нагасэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5001625",
+   "kana_agrees": true
+  },
+  "bushu-nakagawa": {
+   "name_ru": "Бусю-Накагава",
+   "source": "wikidata_en",
+   "wikidata": "Q3701401",
+   "kana_agrees": true
+  },
+  "busshi": {
+   "name_ru": "Буси",
+   "source": "wikidata_en",
+   "wikidata": "Q5001507",
+   "kana_agrees": true
+  },
+  "byobu-ura": {
+   "name_ru": "Бёбугаура",
+   "source": "wikidata_en",
+   "wikidata": "Q5004739",
+   "kana_agrees": true
+  },
+  "chiba-koen": {
+   "name_ru": "Тиба-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5095295",
+   "kana_agrees": true
+  },
+  "chiba-tera": {
+   "name_ru": "Тибадэра",
+   "source": "wikidata_en",
+   "wikidata": "Q11405986",
+   "kana_agrees": true
+  },
+  "chichibu": {
+   "name_ru": "Титибу",
+   "source": "wikidata_en",
+   "wikidata": "Q5096049",
+   "kana_agrees": true
+  },
+  "chidoricho": {
+   "name_ru": "Тидоритё",
+   "source": "wikidata_en",
+   "wikidata": "Q5096628",
+   "kana_agrees": true
+  },
+  "chihara-dai": {
+   "name_ru": "Тихарадай",
+   "source": "wikidata_en",
+   "wikidata": "Q5097270",
+   "kana_agrees": true
+  },
+  "chiku-sentaa": {
+   "name_ru": "Тику-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q11424114",
+   "kana_agrees": true
+  },
+  "chikura": {
+   "name_ru": "Тикура",
+   "source": "wikidata_en",
+   "wikidata": "Q553855",
+   "kana_agrees": true
+  },
+  "chitose": {
+   "name_ru": "Титосэ",
+   "source": "wikidata_en",
+   "wikidata": "Q553875",
+   "kana_agrees": true
+  },
+  "chitose-funabashi": {
+   "name_ru": "Титосэ-Фунабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q4458343",
+   "kana_agrees": true
+  },
+  "chitose-karasuyama": {
+   "name_ru": "Титосэ-Карасуяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q841868",
+   "kana_agrees": true
+  },
+  "cho-ura": {
+   "name_ru": "Нагаура",
+   "source": "wikidata_en",
+   "wikidata": "Q573425",
+   "kana_agrees": true
+  },
+  "chogo": {
+   "name_ru": "Тёго",
+   "source": "wikidata_ru",
+   "wikidata": "Q4468045",
+   "kana_agrees": true
+  },
+  "chojamachi": {
+   "name_ru": "Тёдзямати",
+   "source": "wikidata_en",
+   "wikidata": "Q564439",
+   "kana_agrees": true
+  },
+  "chokoku-no-mori": {
+   "name_ru": "Тёкоку-но-Мори",
+   "source": "wikidata_en",
+   "wikidata": "Q3096249",
+   "kana_agrees": true
+  },
+  "chugakko": {
+   "name_ru": "Тюгакко",
+   "source": "wikidata_en",
+   "wikidata": "Q11363857",
+   "kana_agrees": true
+  },
+  "chuodaigaku-meiseidaigaku": {
+   "name_ru": "Тюо-Дайгаку-Мэйсэй-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q5119037",
+   "kana_agrees": true
+  },
+  "daiba": {
+   "name_ru": "Дайба",
+   "source": "wikidata_en",
+   "wikidata": "Q906784",
+   "kana_agrees": true
+  },
+  "daijingushita": {
+   "name_ru": "Дайдзингусита",
+   "source": "wikidata_en",
+   "wikidata": "Q5209145",
+   "kana_agrees": true
+  },
+  "daikanyama": {
+   "name_ru": "Дайкан-Яма",
+   "source": "wikidata_en",
+   "wikidata": "Q852326",
+   "kana_agrees": true
+  },
+  "daishimae": {
+   "name_ru": "Дайсимаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5209614",
+   "kana_agrees": true
+  },
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
+   "name_ru": "Доккёдайгакумаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6788024",
+   "kana_agrees": true,
+   "wikidata_en": "Dokkyodaigakumae"
+  },
+  "doro": {
+   "name_ru": "Торо",
+   "source": "wikidata_en",
+   "wikidata": "Q857902",
+   "kana_agrees": true
+  },
+  "dobutsu-koen": {
+   "name_ru": "Добуцукоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5321252",
+   "kana_agrees": true
+  },
+  "eda": {
+   "name_ru": "Эда",
+   "source": "wikidata_en",
+   "wikidata": "Q5335639",
+   "kana_agrees": true
+  },
+  "edogawa": {
+   "name_ru": "Эдогава",
+   "source": "wikidata_en",
+   "wikidata": "Q5340176",
+   "kana_agrees": true
+  },
+  "edogawa-dai": {
+   "name_ru": "Эдогавадай",
+   "source": "wikidata_en",
+   "wikidata": "Q5340181",
+   "kana_agrees": true
+  },
+  "edogawabashi": {
+   "name_ru": "Эдогавабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q331929",
+   "kana_agrees": true
+  },
+  "ehara-machi": {
+   "name_ru": "Эбарамати",
+   "source": "wikidata_en",
+   "wikidata": "Q5331501",
+   "kana_agrees": true
+  },
+  "ehara-nakanobe": {
+   "name_ru": "Эбара-Наканобу",
+   "source": "wikidata_en",
+   "wikidata": "Q5331497",
+   "kana_agrees": true
+  },
+  "eifuku-machi": {
+   "name_ru": "Эйфукутё",
+   "source": "wikidata_ru",
+   "wikidata": "Q4389461",
+   "kana_agrees": true
+  },
+  "ekoda": {
+   "name_ru": "Экода",
+   "source": "wikidata_en",
+   "wikidata": "Q5350525",
+   "kana_agrees": true
+  },
+  "emi": {
+   "name_ru": "Эми",
+   "source": "wikidata_en",
+   "wikidata": "Q553871",
+   "kana_agrees": true
+  },
+  "enoto": {
+   "name_ru": "Энокидо",
+   "source": "wikidata_en",
+   "wikidata": "Q5364697",
+   "kana_agrees": true
+  },
+  "etchu-shima": {
+   "name_ru": "Эттюдзима",
+   "source": "wikidata_en",
+   "wikidata": "Q844276",
+   "kana_agrees": true
+  },
+  "fuchinobe": {
+   "name_ru": "Футинобэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844699",
+   "kana_agrees": true
+  },
+  "fuchu": {
+   "name_ru": "Футю",
+   "source": "wikidata_ru",
+   "wikidata": "Q4493756",
+   "kana_agrees": true
+  },
+  "fuchu-keiba-seimonmae": {
+   "name_ru": "Футю-Кэйба-Сэймон-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4493753",
+   "kana_agrees": true
+  },
+  "fuda": {
+   "name_ru": "Фуда",
+   "source": "wikidata_ru",
+   "wikidata": "Q4493273",
+   "kana_agrees": true
+  },
+  "fudomae": {
+   "name_ru": "Фудомаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q852869",
+   "kana_agrees": true
+  },
+  "fuji-fuirumu-mae": {
+   "name_ru": "Фудзифируму-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5507389",
+   "kana_agrees": true
+  },
+  "fuji-no-ushijima": {
+   "name_ru": "Фудзино-Усидзима",
+   "source": "wikidata_en",
+   "wikidata": "Q5367524",
+   "kana_agrees": true
+  },
+  "fujigaoka": {
+   "name_ru": "Фудзигаока",
+   "source": "wikidata_en",
+   "wikidata": "Q5366756",
+   "kana_agrees": true
+  },
+  "fujimi-no": {
+   "name_ru": "Фудзимино",
+   "source": "wikidata_en",
+   "wikidata": "Q5507442",
+   "kana_agrees": true
+  },
+  "fujimicho": {
+   "name_ru": "Фудзимитё",
+   "source": "wikidata_en",
+   "wikidata": "Q1094940",
+   "kana_agrees": true
+  },
+  "fujimidai": {
+   "name_ru": "Фудзимидай",
+   "source": "wikidata_en",
+   "wikidata": "Q5507443",
+   "kana_agrees": true
+  },
+  "fujimigaoka": {
+   "name_ru": "Фудзимигаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q27285",
+   "kana_agrees": true
+  },
+  "fujino": {
+   "name_ru": "Фудзино",
+   "source": "wikidata_en",
+   "wikidata": "Q5507458",
+   "kana_agrees": true
+  },
+  "fujisawa-honcho": {
+   "name_ru": "Фудзисава-Хоммати",
+   "source": "wikidata_ru",
+   "wikidata": "Q4493282",
+   "kana_agrees": true
+  },
+  "fukaya": {
+   "name_ru": "Фукая",
+   "source": "wikidata_en",
+   "wikidata": "Q844895",
+   "kana_agrees": true
+  },
+  "fukiage": {
+   "name_ru": "Фукиагэ",
+   "source": "wikidata_en",
+   "wikidata": "Q845096",
+   "kana_agrees": true
+  },
+  "fukudawara": {
+   "name_ru": "Фукутавара",
+   "source": "wikidata_en",
+   "wikidata": "Q5353408",
+   "kana_agrees": true
+  },
+  "fukuura": {
+   "name_ru": "Фукуура",
+   "source": "wikidata_en",
+   "wikidata": "Q5507751",
+   "kana_agrees": true
+  },
+  "funabashi-hoten": {
+   "name_ru": "Фунабаси-Хотэн",
+   "source": "wikidata_en",
+   "wikidata": "Q2743695",
+   "kana_agrees": true
+  },
+  "funabashi-nichidai-mae": {
+   "name_ru": "Фунабаси-Нитидаймаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5366251",
+   "kana_agrees": true
+  },
+  "funabashikeibajo": {
+   "name_ru": "Фунабасикэйбадзё",
+   "source": "wikidata_en",
+   "wikidata": "Q5508710",
+   "kana_agrees": true
+  },
+  "funabori": {
+   "name_ru": "Фунабори",
+   "source": "wikidata_ru",
+   "wikidata": "Q1041252",
+   "kana_agrees": true
+  },
+  "fune-no-kagakukan": {
+   "name_ru": "Фунэ-но-Кагакукан",
+   "source": "name_en"
+  },
+  "furusato": {
+   "name_ru": "Кори",
+   "source": "wikidata_en",
+   "wikidata": "Q844141",
+   "kana_agrees": true
+  },
+  "fusa": {
+   "name_ru": "Фуса",
+   "source": "wikidata_en",
+   "wikidata": "Q5366552",
+   "kana_agrees": true
+  },
+  "fussa": {
+   "name_ru": "Фусса",
+   "source": "wikidata_en",
+   "wikidata": "Q5510343",
+   "kana_agrees": true
+  },
+  "futamata-o": {
+   "name_ru": "Футаматао",
+   "source": "wikidata_en",
+   "wikidata": "Q5510471",
+   "kana_agrees": true
+  },
+  "futamata-shinmachi": {
+   "name_ru": "Футаматасиммати",
+   "source": "wikidata_en",
+   "wikidata": "Q2258179",
+   "kana_agrees": true
+  },
+  "futawa-mukaedai": {
+   "name_ru": "Футавамукодай",
+   "source": "wikidata_en",
+   "wikidata": "Q5510499",
+   "kana_agrees": true
+  },
+  "gaiemmae": {
+   "name_ru": "Гайэммаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q275433",
+   "kana_agrees": true
+  },
+  "gakuen-mae": {
+   "name_ru": "Гакуэммаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q5517706",
+   "kana_agrees": true
+  },
+  "gakugei-daigaku": {
+   "name_ru": "Гакугэй-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q5517709",
+   "kana_agrees": true
+  },
+  "gakushuin-shita": {
+   "name_ru": "Гакусюин-Сита",
+   "source": "name_en"
+  },
+  "gamo": {
+   "name_ru": "Гамо",
+   "source": "wikidata_en",
+   "wikidata": "Q5520436",
+   "kana_agrees": true
+  },
+  "genka-osamu": {
+   "name_ru": "Мотокадзи",
+   "source": "wikidata_en",
+   "wikidata": "Q6918030",
+   "kana_agrees": true
+  },
+  "gezan-kuchi": {
+   "name_ru": "Симо-Ямагути",
+   "source": "wikidata_en",
+   "wikidata": "Q7496941",
+   "kana_agrees": true
+  },
+  "ginzaitchome": {
+   "name_ru": "Гиндза-Иттёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q331185",
+   "kana_agrees": true
+  },
+  "gion": {
+   "name_ru": "Гион",
+   "source": "wikidata_en",
+   "wikidata": "Q5563370",
+   "kana_agrees": true
+  },
+  "gogatsu-dai": {
+   "name_ru": "Сацукидай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4409583",
+   "kana_agrees": true
+  },
+  "gohyaku-rakan": {
+   "name_ru": "Гохякуракан",
+   "source": "wikidata_en",
+   "wikidata": "Q5577610",
+   "kana_agrees": true
+  },
+  "gokokuji": {
+   "name_ru": "Гококудзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q331941",
+   "kana_agrees": true
+  },
+  "goko": {
+   "name_ru": "Гоко",
+   "source": "wikidata_en",
+   "wikidata": "Q5578138",
+   "kana_agrees": true
+  },
+  "gokuraku-tera": {
+   "name_ru": "Гокуракудзи",
+   "source": "wikidata_en",
+   "wikidata": "Q858997",
+   "kana_agrees": true
+  },
+  "gotan-no": {
+   "name_ru": "Готанно",
+   "source": "wikidata_en",
+   "wikidata": "Q5587720",
+   "kana_agrees": true
+  },
+  "gun-hatake": {
+   "name_ru": "Икусабата",
+   "source": "wikidata_en",
+   "wikidata": "Q8013549",
+   "kana_agrees": true
+  },
+  "gyoda": {
+   "name_ru": "Гёда",
+   "source": "wikidata_en",
+   "wikidata": "Q845058",
+   "kana_agrees": true
+  },
+  "gyodashi": {
+   "name_ru": "Гёдаси",
+   "source": "wikidata_en",
+   "wikidata": "Q5625685",
+   "kana_agrees": true
+  },
+  "hachi-seki": {
+   "name_ru": "Яцуми",
+   "source": "wikidata_en",
+   "wikidata": "Q564445",
+   "kana_agrees": true
+  },
+  "hachigata": {
+   "name_ru": "Хатигата",
+   "source": "wikidata_en",
+   "wikidata": "Q5637046",
+   "kana_agrees": true
+  },
+  "hachiman-yado": {
+   "name_ru": "Яватадзюку",
+   "source": "wikidata_en",
+   "wikidata": "Q573497",
+   "kana_agrees": true
+  },
+  "hachioji-minami-no": {
+   "name_ru": "Хатиодзиминамино",
+   "source": "wikidata_en",
+   "wikidata": "Q844693",
+   "kana_agrees": true
+  },
+  "hadano": {
+   "name_ru": "Хадано",
+   "source": "wikidata_ru",
+   "wikidata": "Q4494514",
+   "kana_agrees": true
+  },
+  "hakkei-shima": {
+   "name_ru": "Хаккэйдзима",
+   "source": "wikidata_en",
+   "wikidata": "Q5640543",
+   "kana_agrees": true
+  },
+  "hakone-itabashi": {
+   "name_ru": "Хаконэ-Итабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q8281276",
+   "kana_agrees": true
+  },
+  "hakone-ke-saki": {
+   "name_ru": "Хаконэгасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q844354",
+   "kana_agrees": true
+  },
+  "hakoneyumoto": {
+   "name_ru": "Хаконэ-Юмото",
+   "source": "wikidata_ru",
+   "wikidata": "Q2593075",
+   "kana_agrees": true
+  },
+  "hakuraku": {
+   "name_ru": "Хакураку",
+   "source": "wikidata_en",
+   "wikidata": "Q5640648",
+   "kana_agrees": true
+  },
+  "hakusan": {
+   "name_ru": "Хакусан",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039879",
+   "kana_agrees": true
+  },
+  "hamacho": {
+   "name_ru": "Хаматё",
+   "source": "wikidata_ru",
+   "wikidata": "Q128403",
+   "kana_agrees": true
+  },
+  "hamadayama": {
+   "name_ru": "Хамадаяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q27101",
+   "kana_agrees": true
+  },
+  "hamakin-tani": {
+   "name_ru": "Хамаканая",
+   "source": "wikidata_en",
+   "wikidata": "Q558560",
+   "kana_agrees": true
+  },
+  "hamano": {
+   "name_ru": "Хамано",
+   "source": "wikidata_en",
+   "wikidata": "Q571740",
+   "kana_agrees": true
+  },
+  "hamura": {
+   "name_ru": "Хамура",
+   "source": "wikidata_en",
+   "wikidata": "Q5646478",
+   "kana_agrees": true
+  },
+  "hana-koganei": {
+   "name_ru": "Хана-Коганэй",
+   "source": "wikidata_en",
+   "wikidata": "Q5646738",
+   "kana_agrees": true
+  },
+  "hanasaki": {
+   "name_ru": "Ханасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q5646939",
+   "kana_agrees": true
+  },
+  "hane-kan": {
+   "name_ru": "Хануки",
+   "source": "wikidata_en",
+   "wikidata": "Q11610375"
+  },
+  "hanzomon": {
+   "name_ru": "Хандзомон",
+   "source": "wikidata_ru",
+   "wikidata": "Q80551",
+   "kana_agrees": true
+  },
+  "hara-toma": {
+   "name_ru": "Харатайма",
+   "source": "wikidata_en",
+   "wikidata": "Q5654301",
+   "kana_agrees": true
+  },
+  "haraichi": {
+   "name_ru": "Харайти",
+   "source": "wikidata_en",
+   "wikidata": "Q11284211"
+  },
+  "haruhi-no": {
+   "name_ru": "Харухино",
+   "source": "wikidata_ru",
+   "wikidata": "Q4496149",
+   "kana_agrees": true
+  },
+  "hase": {
+   "name_ru": "Хасэ",
+   "source": "name_en"
+  },
+  "hasuda": {
+   "name_ru": "Хасуда",
+   "source": "wikidata_en",
+   "wikidata": "Q872705",
+   "kana_agrees": true
+  },
+  "hasunuma": {
+   "name_ru": "Хасунума",
+   "source": "wikidata_en",
+   "wikidata": "Q5680732",
+   "kana_agrees": true
+  },
+  "hato-ke-tani": {
+   "name_ru": "Хатогая",
+   "source": "wikidata_en",
+   "wikidata": "Q3701478",
+   "kana_agrees": true
+  },
+  "hato-no-su": {
+   "name_ru": "Хатоносу",
+   "source": "wikidata_en",
+   "wikidata": "Q8013671",
+   "kana_agrees": true
+  },
+  "hatsuishi": {
+   "name_ru": "Хацуиси",
+   "source": "wikidata_en",
+   "wikidata": "Q5681846",
+   "kana_agrees": true
+  },
+  "hatsutomi": {
+   "name_ru": "Хацутоми",
+   "source": "wikidata_en",
+   "wikidata": "Q5367450",
+   "kana_agrees": true
+  },
+  "hayakawa": {
+   "name_ru": "Хаякава",
+   "source": "wikidata_en",
+   "wikidata": "Q865781",
+   "kana_agrees": true
+  },
+  "hazama": {
+   "name_ru": "Хадзама",
+   "source": "wikidata_ru",
+   "wikidata": "Q4494570",
+   "kana_agrees": true
+  },
+  "heiwa-shima": {
+   "name_ru": "Хэйвадзима",
+   "source": "wikidata_en",
+   "wikidata": "Q5367220",
+   "kana_agrees": true
+  },
+  "hibarigaoka": {
+   "name_ru": "Хибаригаока",
+   "source": "wikidata_en",
+   "wikidata": "Q8016226",
+   "kana_agrees": true
+  },
+  "higashi-abiko": {
+   "name_ru": "Хигаси-Абико",
+   "source": "wikidata_en",
+   "wikidata": "Q5753445",
+   "kana_agrees": true
+  },
+  "higashi-aki-ryu": {
+   "name_ru": "Хигаси-Акиру",
+   "source": "wikidata_en",
+   "wikidata": "Q5753453",
+   "kana_agrees": true
+  },
+  "higashi-azuma": {
+   "name_ru": "Хигаси-Адзума",
+   "source": "wikidata_en",
+   "wikidata": "Q11523777",
+   "kana_agrees": true
+  },
+  "higashi-funabashi": {
+   "name_ru": "Хигаси-Фунабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q908788",
+   "kana_agrees": true
+  },
+  "higashi-iwatsuki": {
+   "name_ru": "Хигаси-Ивацуки",
+   "source": "wikidata_en",
+   "wikidata": "Q5753571",
+   "kana_agrees": true
+  },
+  "higashi-koenji": {
+   "name_ru": "Хигаси-Коэндзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078443",
+   "kana_agrees": true
+  },
+  "higashi-koganei": {
+   "name_ru": "Хигаси-Коганэй",
+   "source": "wikidata_en",
+   "wikidata": "Q800920",
+   "kana_agrees": true
+  },
+  "higashi-matsubara": {
+   "name_ru": "Хигаси-Мацубара",
+   "source": "wikidata_ru",
+   "wikidata": "Q4389689",
+   "kana_agrees": true
+  },
+  "higashi-nami-ken": {
+   "name_ru": "Торами",
+   "source": "wikidata_en",
+   "wikidata": "Q564474",
+   "kana_agrees": true
+  },
+  "higashi-washimiya": {
+   "name_ru": "Хигаси-Васиномия",
+   "source": "wikidata_en",
+   "wikidata": "Q845454",
+   "kana_agrees": true
+  },
+  "higashi-zushi": {
+   "name_ru": "Хигаси-Дзуси",
+   "source": "wikidata_en",
+   "wikidata": "Q844310",
+   "kana_agrees": true
+  },
+  "higashichiba": {
+   "name_ru": "Хигаси-Тиба",
+   "source": "wikidata_en",
+   "wikidata": "Q8013045",
+   "kana_agrees": true
+  },
+  "higashifushimi": {
+   "name_ru": "Хигаси-Фусими",
+   "source": "wikidata_en",
+   "wikidata": "Q5753520",
+   "kana_agrees": true
+  },
+  "higashijujo": {
+   "name_ru": "Хигаси-Дзюдзё",
+   "source": "wikidata_en",
+   "wikidata": "Q800919",
+   "kana_agrees": true
+  },
+  "higashikitazawa": {
+   "name_ru": "Хигаси-Китадзава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4497457",
+   "kana_agrees": true
+  },
+  "higashikurume": {
+   "name_ru": "Хигаси-Курумэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5753665",
+   "kana_agrees": true
+  },
+  "higashimatsuyama": {
+   "name_ru": "Хигаси-Мацуяма",
+   "source": "wikidata_en",
+   "wikidata": "Q5753688",
+   "kana_agrees": true
+  },
+  "higashimon-mae": {
+   "name_ru": "Хигасимондзэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5754076",
+   "kana_agrees": true
+  },
+  "higashimuki-shima": {
+   "name_ru": "Хигаси-Мукодзима",
+   "source": "wikidata_en",
+   "wikidata": "Q5753733",
+   "kana_agrees": true
+  },
+  "higashinagasaki": {
+   "name_ru": "Хигаси-Нагасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q843275",
+   "kana_agrees": true
+  },
+  "higashinaka-kami": {
+   "name_ru": "Хигаси-Накагами",
+   "source": "wikidata_en",
+   "wikidata": "Q8014532",
+   "kana_agrees": true
+  },
+  "higashinakayama": {
+   "name_ru": "Хигаси-Накаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q8015446",
+   "kana_agrees": true
+  },
+  "higashiogu-sanchome": {
+   "name_ru": "Хигасиогу-Сантёмэ",
+   "source": "name_en"
+  },
+  "higashiome": {
+   "name_ru": "Хигаси-Омэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844198",
+   "kana_agrees": true
+  },
+  "higashitokorozawa": {
+   "name_ru": "Хигаси-Токородзава",
+   "source": "wikidata_en",
+   "wikidata": "Q5753886",
+   "kana_agrees": true
+  },
+  "higashiurawa": {
+   "name_ru": "Хигаси-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q5753897",
+   "kana_agrees": true
+  },
+  "higashiyama-kita": {
+   "name_ru": "Хигаси-Ямакита",
+   "source": "wikidata_en",
+   "wikidata": "Q5357345",
+   "kana_agrees": true
+  },
+  "higashiyama-ta": {
+   "name_ru": "Хигаси-Ямата",
+   "source": "wikidata_en",
+   "wikidata": "Q11103294",
+   "kana_agrees": true
+  },
+  "higashiyamatoshi": {
+   "name_ru": "Хигаси-Яматоси",
+   "source": "wikidata_en",
+   "wikidata": "Q5754181",
+   "kana_agrees": true
+  },
+  "higata": {
+   "name_ru": "Хигата",
+   "source": "wikidata_en",
+   "wikidata": "Q5363793",
+   "kana_agrees": true
+  },
+  "higuchi": {
+   "name_ru": "Хигути",
+   "source": "wikidata_en",
+   "wikidata": "Q11542163",
+   "kana_agrees": true
+  },
+  "hikarigaoka": {
+   "name_ru": "Хикаригаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q1132210",
+   "kana_agrees": true
+  },
+  "himemiya": {
+   "name_ru": "Химэмия",
+   "source": "wikidata_en",
+   "wikidata": "Q8190066",
+   "kana_agrees": true
+  },
+  "hinatawada": {
+   "name_ru": "Хинатавада",
+   "source": "wikidata_en",
+   "wikidata": "Q8013228",
+   "kana_agrees": true
+  },
+  "hinode": {
+   "name_ru": "Хинодэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5365974",
+   "kana_agrees": true
+  },
+  "hirai": {
+   "name_ru": "Хираи",
+   "source": "wikidata_ru",
+   "wikidata": "Q909531",
+   "kana_agrees": true
+  },
+  "hirama": {
+   "name_ru": "Хирама",
+   "source": "wikidata_en",
+   "wikidata": "Q5366557",
+   "kana_agrees": true
+  },
+  "hiranumabashi": {
+   "name_ru": "Хиранумабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q5769436",
+   "kana_agrees": true
+  },
+  "hiratsuka": {
+   "name_ru": "Хирацука",
+   "source": "wikidata_en",
+   "wikidata": "Q372513",
+   "kana_agrees": true
+  },
+  "hirayama": {
+   "name_ru": "Хираяма",
+   "source": "wikidata_en",
+   "wikidata": "Q11482566",
+   "kana_agrees": true
+  },
+  "hirayama-joshi-koen": {
+   "name_ru": "Хираямадзёси-коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4497858",
+   "kana_agrees": true
+  },
+  "hire-ke-saki": {
+   "name_ru": "Хирэгасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q11674329"
+  },
+  "hiroaki-tera": {
+   "name_ru": "Хироаки-Тэра",
+   "source": "name_en"
+  },
+  "hiroo": {
+   "name_ru": "Хироо",
+   "source": "wikidata_ru",
+   "wikidata": "Q1156428",
+   "kana_agrees": true
+  },
+  "hirose-yacho-no-mori": {
+   "name_ru": "Хиросэ-Ятё-но-Мори",
+   "source": "wikidata_en",
+   "wikidata": "Q5770745",
+   "kana_agrees": true
+  },
+  "hitotsubashi-gakuen": {
+   "name_ru": "Хитоцубаси-Гакуэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5872402",
+   "kana_agrees": true
+  },
+  "hiyoshihoncho": {
+   "name_ru": "Хиёси-Хонтё",
+   "source": "wikidata_en",
+   "wikidata": "Q5872965",
+   "kana_agrees": true
+  },
+  "hodokubo": {
+   "name_ru": "Ходокубо",
+   "source": "wikidata_en",
+   "wikidata": "Q5876257",
+   "kana_agrees": true
+  },
+  "hokudai-miya": {
+   "name_ru": "Кита-Омия",
+   "source": "wikidata_en",
+   "wikidata": "Q5367635",
+   "kana_agrees": true
+  },
+  "hokuetsu-tani": {
+   "name_ru": "Кита-Косигая",
+   "source": "wikidata_en",
+   "wikidata": "Q842492",
+   "kana_agrees": true
+  },
+  "hon-atsugi": {
+   "name_ru": "Хон-Ацуги",
+   "source": "wikidata_ru",
+   "wikidata": "Q4499730",
+   "kana_agrees": true
+  },
+  "hon-choshi": {
+   "name_ru": "Мото-Тёси",
+   "source": "wikidata_en",
+   "wikidata": "Q6917931",
+   "kana_agrees": true
+  },
+  "hon-komagome": {
+   "name_ru": "Хон-Комагомэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q151419",
+   "kana_agrees": true
+  },
+  "hon-no": {
+   "name_ru": "Хонно",
+   "source": "wikidata_en",
+   "wikidata": "Q564470",
+   "kana_agrees": true
+  },
+  "honancho": {
+   "name_ru": "Хонантё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078437",
+   "kana_agrees": true
+  },
+  "hongodai": {
+   "name_ru": "Хонгодай",
+   "source": "wikidata_en",
+   "wikidata": "Q844379",
+   "kana_agrees": true
+  },
+  "honjoazumabashi": {
+   "name_ru": "Хондзё-Адзумабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q910813",
+   "kana_agrees": true
+  },
+  "honjo": {
+   "name_ru": "Хондзё",
+   "source": "wikidata_en",
+   "wikidata": "Q844906",
+   "kana_agrees": true
+  },
+  "honkawa-etsu": {
+   "name_ru": "Хон-Кавагоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q842892",
+   "kana_agrees": true
+  },
+  "honkugenuma": {
+   "name_ru": "Хон-Кугэнума",
+   "source": "wikidata_ru",
+   "wikidata": "Q4499731",
+   "kana_agrees": true
+  },
+  "horikiri": {
+   "name_ru": "Хорикири",
+   "source": "wikidata_en",
+   "wikidata": "Q5903267",
+   "kana_agrees": true
+  },
+  "horikiri-shobuen": {
+   "name_ru": "Хорикири-Сёбуэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5903250",
+   "kana_agrees": true
+  },
+  "hoshikawa": {
+   "name_ru": "Хосикава",
+   "source": "wikidata_en",
+   "wikidata": "Q5908047",
+   "kana_agrees": true
+  },
+  "hotaruda": {
+   "name_ru": "Хотаруда",
+   "source": "wikidata_ru",
+   "wikidata": "Q4500301",
+   "kana_agrees": true
+  },
+  "hoya": {
+   "name_ru": "Хоя",
+   "source": "wikidata_en",
+   "wikidata": "Q843153",
+   "kana_agrees": true
+  },
+  "hyuga": {
+   "name_ru": "Хюга",
+   "source": "wikidata_en",
+   "wikidata": "Q5363469",
+   "kana_agrees": true
+  },
+  "i-hosoda": {
+   "name_ru": "Исайда",
+   "source": "wikidata_en",
+   "wikidata": "Q6078639",
+   "kana_agrees": true
+  },
+  "ichi-no-wari": {
+   "name_ru": "Итиновари",
+   "source": "wikidata_en",
+   "wikidata": "Q5986273",
+   "kana_agrees": true
+  },
+  "ichikawa-mama": {
+   "name_ru": "Итикавамама",
+   "source": "wikidata_en",
+   "wikidata": "Q5986159",
+   "kana_agrees": true
+  },
+  "ichikawa-ono": {
+   "name_ru": "Итикаваоно",
+   "source": "wikidata_en",
+   "wikidata": "Q2783576",
+   "kana_agrees": true
+  },
+  "ichikawa-shiohama": {
+   "name_ru": "Итикавасиохама",
+   "source": "wikidata_en",
+   "wikidata": "Q844441",
+   "kana_agrees": true
+  },
+  "ichinoe": {
+   "name_ru": "Итиноэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1044276",
+   "kana_agrees": true
+  },
+  "ido-ke-tani": {
+   "name_ru": "Идогая",
+   "source": "wikidata_en",
+   "wikidata": "Q5989285",
+   "kana_agrees": true
+  },
+  "iida-oka": {
+   "name_ru": "Иидаока",
+   "source": "wikidata_en",
+   "wikidata": "Q5994936",
+   "kana_agrees": true
+  },
+  "iikura": {
+   "name_ru": "Иигура",
+   "source": "wikidata_en",
+   "wikidata": "Q5363230",
+   "kana_agrees": true
+  },
+  "iioka": {
+   "name_ru": "Ииока",
+   "source": "wikidata_en",
+   "wikidata": "Q5364920",
+   "kana_agrees": true
+  },
+  "iiyama-man": {
+   "name_ru": "Хасама",
+   "source": "wikidata_en",
+   "wikidata": "Q5366376",
+   "kana_agrees": true
+  },
+  "ikegami": {
+   "name_ru": "Икэгами",
+   "source": "wikidata_en",
+   "wikidata": "Q5995781",
+   "kana_agrees": true
+  },
+  "ikejiriohashi": {
+   "name_ru": "Икэдзири-Охаси",
+   "source": "wikidata_en",
+   "wikidata": "Q852141",
+   "kana_agrees": true
+  },
+  "ikenoe": {
+   "name_ru": "Икэноуэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4199142",
+   "kana_agrees": true
+  },
+  "ikuta": {
+   "name_ru": "Икута",
+   "source": "wikidata_ru",
+   "wikidata": "Q4199128",
+   "kana_agrees": true
+  },
+  "ima-hane": {
+   "name_ru": "Комба",
+   "source": "wikidata_en",
+   "wikidata": "Q11377372"
+  },
+  "ina-chuo": {
+   "name_ru": "Ина-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q11379278"
+  },
+  "inadazutsumi": {
+   "name_ru": "Инададзуцуми",
+   "source": "wikidata_en",
+   "wikidata": "Q5368291",
+   "kana_agrees": true
+  },
+  "inage-kaigan": {
+   "name_ru": "Инагэ-Кайган",
+   "source": "wikidata_en",
+   "wikidata": "Q2583249",
+   "kana_agrees": true
+  },
+  "inagi": {
+   "name_ru": "Инаги",
+   "source": "wikidata_ru",
+   "wikidata": "Q4200479",
+   "kana_agrees": true
+  },
+  "inagi-naganuma": {
+   "name_ru": "Инаги-Наганума",
+   "source": "wikidata_en",
+   "wikidata": "Q5366278",
+   "kana_agrees": true
+  },
+  "inamura-ke-saki": {
+   "name_ru": "Инамурагасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q858991",
+   "kana_agrees": true
+  },
+  "inaricho": {
+   "name_ru": "Инаритё",
+   "source": "wikidata_ru",
+   "wikidata": "Q347996",
+   "kana_agrees": true
+  },
+  "inariyama-koen": {
+   "name_ru": "Инарияма-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q6013618",
+   "kana_agrees": true
+  },
+  "ino": {
+   "name_ru": "Ино",
+   "source": "name_en"
+  },
+  "inokashira-koen": {
+   "name_ru": "Инокасира-коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4201277",
+   "kana_agrees": true
+  },
+  "inuboe": {
+   "name_ru": "Инубо",
+   "source": "wikidata_en",
+   "wikidata": "Q5696669",
+   "kana_agrees": true
+  },
+  "inzai-maki-no-hara": {
+   "name_ru": "Индзай-Макинохара",
+   "source": "wikidata_en",
+   "wikidata": "Q5366605",
+   "kana_agrees": true
+  },
+  "iogi": {
+   "name_ru": "Иоги",
+   "source": "wikidata_en",
+   "wikidata": "Q843289",
+   "kana_agrees": true
+  },
+  "ipponmatsu": {
+   "name_ru": "Иппонмацу",
+   "source": "name_en"
+  },
+  "iriuda": {
+   "name_ru": "Ириуда",
+   "source": "wikidata_en",
+   "wikidata": "Q6071878",
+   "kana_agrees": true
+  },
+  "iriya": {
+   "name_ru": "Ирия",
+   "source": "wikidata_en",
+   "wikidata": "Q8193653",
+   "kana_agrees": true
+  },
+  "irumashi": {
+   "name_ru": "Ирумаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6074023",
+   "kana_agrees": true
+  },
+  "isehara": {
+   "name_ru": "Исэхара",
+   "source": "wikidata_ru",
+   "wikidata": "Q4205219",
+   "kana_agrees": true
+  },
+  "isezaki-chojamachi": {
+   "name_ru": "Исэдзаки-Тёдзямати",
+   "source": "wikidata_en",
+   "wikidata": "Q841434",
+   "kana_agrees": true
+  },
+  "ishigami": {
+   "name_ru": "Исигами",
+   "source": "wikidata_en",
+   "wikidata": "Q859782",
+   "kana_agrees": true
+  },
+  "ishigami-mae": {
+   "name_ru": "Исигамимаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q8013316",
+   "kana_agrees": true
+  },
+  "ishihara": {
+   "name_ru": "Исихара",
+   "source": "name_en"
+  },
+  "ishikawacho": {
+   "name_ru": "Исикаватё",
+   "source": "wikidata_en",
+   "wikidata": "Q800960",
+   "kana_agrees": true
+  },
+  "ishikawadai": {
+   "name_ru": "Исикавадай",
+   "source": "wikidata_en",
+   "wikidata": "Q6080316",
+   "kana_agrees": true
+  },
+  "isogo": {
+   "name_ru": "Исого",
+   "source": "wikidata_en",
+   "wikidata": "Q79378",
+   "kana_agrees": true
+  },
+  "itabashi": {
+   "name_ru": "Итабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q800966",
+   "kana_agrees": true
+  },
+  "itabashihoncho": {
+   "name_ru": "Итабаси-Хонтё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073933",
+   "kana_agrees": true
+  },
+  "itabashikuyakusho-mae": {
+   "name_ru": "Итабаси-Куякусёмаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039760",
+   "kana_agrees": true
+  },
+  "itsumi": {
+   "name_ru": "Хэми",
+   "source": "wikidata_en",
+   "wikidata": "Q5711388",
+   "kana_agrees": true
+  },
+  "iwahara": {
+   "name_ru": "Ивахара",
+   "source": "wikidata_en",
+   "wikidata": "Q6100298",
+   "kana_agrees": true
+  },
+  "iwai": {
+   "name_ru": "Ивай",
+   "source": "wikidata_en",
+   "wikidata": "Q556710",
+   "kana_agrees": true
+  },
+  "iwamotocho": {
+   "name_ru": "Ивамототё",
+   "source": "wikidata_ru",
+   "wikidata": "Q128319",
+   "kana_agrees": true
+  },
+  "iwane": {
+   "name_ru": "Иванэ",
+   "source": "wikidata_en",
+   "wikidata": "Q573420",
+   "kana_agrees": true
+  },
+  "iwatsuki": {
+   "name_ru": "Ивацуки",
+   "source": "wikidata_en",
+   "wikidata": "Q5368936",
+   "kana_agrees": true
+  },
+  "izumi-chuo": {
+   "name_ru": "Идзуми-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q6102271",
+   "kana_agrees": true
+  },
+  "izumi-no": {
+   "name_ru": "Идзумино",
+   "source": "wikidata_en",
+   "wikidata": "Q6102365",
+   "kana_agrees": true
+  },
+  "izumi-taiikukan": {
+   "name_ru": "Идзуми-Тайикукан",
+   "source": "wikidata_en",
+   "wikidata": "Q6102266",
+   "kana_agrees": true
+  },
+  "izumi-tamagawa": {
+   "name_ru": "Идзуми-Тамагава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4197917",
+   "kana_agrees": true
+  },
+  "jinbohara": {
+   "name_ru": "Дзимбохара",
+   "source": "wikidata_en",
+   "wikidata": "Q845133",
+   "kana_agrees": true
+  },
+  "jinmu-tera": {
+   "name_ru": "Дзиммудзи",
+   "source": "wikidata_en",
+   "wikidata": "Q6199430",
+   "kana_agrees": true
+  },
+  "joshidai": {
+   "name_ru": "Дзёсидай",
+   "source": "wikidata_en",
+   "wikidata": "Q11446373",
+   "kana_agrees": true
+  },
+  "jocho-toro": {
+   "name_ru": "Ками-Нагаторо",
+   "source": "wikidata_en",
+   "wikidata": "Q3701538",
+   "kana_agrees": true
+  },
+  "josei-kawa": {
+   "name_ru": "Камихосикава",
+   "source": "wikidata_en",
+   "wikidata": "Q11359095",
+   "kana_agrees": true
+  },
+  "jujo": {
+   "name_ru": "Дзюдзё",
+   "source": "wikidata_en",
+   "wikidata": "Q800975",
+   "kana_agrees": true
+  },
+  "juni-hashi": {
+   "name_ru": "Дзюникё",
+   "source": "wikidata_en",
+   "wikidata": "Q6322340",
+   "kana_agrees": true
+  },
+  "kachidoki": {
+   "name_ru": "Катидоки",
+   "source": "wikidata_ru",
+   "wikidata": "Q246191",
+   "kana_agrees": true
+  },
+  "kadosawa-hashi": {
+   "name_ru": "Кадосавабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6345663",
+   "kana_agrees": true
+  },
+  "kagawa": {
+   "name_ru": "Кагава",
+   "source": "wikidata_en",
+   "wikidata": "Q6346410",
+   "kana_agrees": true
+  },
+  "kagemori": {
+   "name_ru": "Кагэмори",
+   "source": "wikidata_en",
+   "wikidata": "Q3701498",
+   "kana_agrees": true
+  },
+  "kagetsuen-mae": {
+   "name_ru": "Кагэцуэн-маэ",
+   "source": "name_en"
+  },
+  "kago-hara": {
+   "name_ru": "Кагохара",
+   "source": "wikidata_en",
+   "wikidata": "Q845092",
+   "kana_agrees": true
+  },
+  "kagurazaka": {
+   "name_ru": "Кагурадзака",
+   "source": "wikidata_ru",
+   "wikidata": "Q80573",
+   "kana_agrees": true
+  },
+  "kaihinmakuhari": {
+   "name_ru": "Кайхиммакухари",
+   "source": "wikidata_en",
+   "wikidata": "Q906715",
+   "kana_agrees": true
+  },
+  "kaisei": {
+   "name_ru": "Кайсэй",
+   "source": "wikidata_ru",
+   "wikidata": "Q4208752",
+   "kana_agrees": true
+  },
+  "kaishi-ariki": {
+   "name_ru": "Амаарики",
+   "source": "wikidata_en",
+   "wikidata": "Q4738981",
+   "kana_agrees": true
+  },
+  "kaji-ga-tani": {
+   "name_ru": "Кадзигая",
+   "source": "wikidata_en",
+   "wikidata": "Q11538785",
+   "kana_agrees": true
+  },
+  "kajiwara": {
+   "name_ru": "Кадзивара",
+   "source": "name_en"
+  },
+  "kakio": {
+   "name_ru": "Какио",
+   "source": "wikidata_ru",
+   "wikidata": "Q4208911",
+   "kana_agrees": true
+  },
+  "kama-ke-tani": {
+   "name_ru": "Камагая",
+   "source": "wikidata_en",
+   "wikidata": "Q6355264",
+   "kana_agrees": true
+  },
+  "kama-ke-tani-daibutsu": {
+   "name_ru": "Камагая-Дайбуцу",
+   "source": "wikidata_en",
+   "wikidata": "Q12060945",
+   "kana_agrees": true
+  },
+  "kama-shu": {
+   "name_ru": "Каматори",
+   "source": "wikidata_en",
+   "wikidata": "Q5353463",
+   "kana_agrees": true
+  },
+  "kamakura-koko-mae": {
+   "name_ru": "Камакуракокомаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q859202",
+   "kana_agrees": true
+  },
+  "kameari": {
+   "name_ru": "Камэари",
+   "source": "wikidata_en",
+   "wikidata": "Q1952873",
+   "kana_agrees": true
+  },
+  "kameido-suijin": {
+   "name_ru": "Камэйдосуидзин",
+   "source": "wikidata_en",
+   "wikidata": "Q6356576",
+   "kana_agrees": true
+  },
+  "kamifukuoka": {
+   "name_ru": "Ками-Фукуока",
+   "source": "wikidata_en",
+   "wikidata": "Q11360002",
+   "kana_agrees": true
+  },
+  "kamihongo": {
+   "name_ru": "Камихонго",
+   "source": "wikidata_en",
+   "wikidata": "Q6357786",
+   "kana_agrees": true
+  },
+  "kamiigusa": {
+   "name_ru": "Ками-Игуса",
+   "source": "wikidata_en",
+   "wikidata": "Q5973346",
+   "kana_agrees": true
+  },
+  "kamiishi-kami-i": {
+   "name_ru": "Ками-Сякудзии",
+   "source": "wikidata_en",
+   "wikidata": "Q842904",
+   "kana_agrees": true
+  },
+  "kamiitabashi": {
+   "name_ru": "Ками-Итабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6357144",
+   "kana_agrees": true
+  },
+  "kamiizumi": {
+   "name_ru": "Синсэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4389637",
+   "kana_agrees": true
+  },
+  "kamikita-dai": {
+   "name_ru": "Камикитадай",
+   "source": "wikidata_en",
+   "wikidata": "Q6357916",
+   "kana_agrees": true
+  },
+  "kamikitazawa": {
+   "name_ru": "Ками-Китадзава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4211559",
+   "kana_agrees": true
+  },
+  "kaminaka-sato": {
+   "name_ru": "Ками-Накадзато",
+   "source": "wikidata_ru",
+   "wikidata": "Q910858",
+   "kana_agrees": true
+  },
+  "kaminoge": {
+   "name_ru": "Каминогэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6357226",
+   "kana_agrees": true
+  },
+  "kamiyacho": {
+   "name_ru": "Камиятё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1072953",
+   "kana_agrees": true
+  },
+  "kamo-miya": {
+   "name_ru": "Камономия",
+   "source": "wikidata_en",
+   "wikidata": "Q11398842"
+  },
+  "kamoi": {
+   "name_ru": "Камои",
+   "source": "wikidata_en",
+   "wikidata": "Q844702",
+   "kana_agrees": true
+  },
+  "kamonomiya": {
+   "name_ru": "Камономия",
+   "source": "wikidata_en",
+   "wikidata": "Q865791",
+   "kana_agrees": true
+  },
+  "kanagawa": {
+   "name_ru": "Канагава",
+   "source": "wikidata_en",
+   "wikidata": "Q5362069",
+   "kana_agrees": true
+  },
+  "kanagawashinmachi": {
+   "name_ru": "Канагава-Симмати",
+   "source": "wikidata_en",
+   "wikidata": "Q5368901",
+   "kana_agrees": true
+  },
+  "kanazawa-bunko": {
+   "name_ru": "Канадзава-Бунко",
+   "source": "wikidata_en",
+   "wikidata": "Q6360872",
+   "kana_agrees": true
+  },
+  "kane-ke-fuchi": {
+   "name_ru": "Канэгафути",
+   "source": "wikidata_en",
+   "wikidata": "Q6361921",
+   "kana_agrees": true
+  },
+  "kaneko": {
+   "name_ru": "Канэко",
+   "source": "wikidata_en",
+   "wikidata": "Q844340",
+   "kana_agrees": true
+  },
+  "kanno": {
+   "name_ru": "Сугано",
+   "source": "wikidata_en",
+   "wikidata": "Q7634712",
+   "kana_agrees": true
+  },
+  "kannon": {
+   "name_ru": "Каннон",
+   "source": "wikidata_en",
+   "wikidata": "Q6364091",
+   "kana_agrees": true
+  },
+  "karakida": {
+   "name_ru": "Каракида",
+   "source": "wikidata_ru",
+   "wikidata": "Q4213880",
+   "kana_agrees": true
+  },
+  "kasa-hata": {
+   "name_ru": "Касахата",
+   "source": "wikidata_en",
+   "wikidata": "Q844363",
+   "kana_agrees": true
+  },
+  "kasa-ue-kuronama": {
+   "name_ru": "Касагами-Курохаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6373952",
+   "kana_agrees": true
+  },
+  "kasai": {
+   "name_ru": "Касай",
+   "source": "wikidata_ru",
+   "wikidata": "Q126762",
+   "kana_agrees": true
+  },
+  "kasai-rinkai-koen": {
+   "name_ru": "Касайринкай-Коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q844280",
+   "kana_agrees": true
+  },
+  "kashima-ta": {
+   "name_ru": "Касимада",
+   "source": "wikidata_en",
+   "wikidata": "Q5367917",
+   "kana_agrees": true
+  },
+  "kashiwa-dai": {
+   "name_ru": "Касивадай",
+   "source": "wikidata_en",
+   "wikidata": "Q6374358",
+   "kana_agrees": true
+  },
+  "kashiwa-no-ha-kyanpasu": {
+   "name_ru": "Касиваноха-Кянпасу",
+   "source": "wikidata_en",
+   "wikidata": "Q6374365",
+   "kana_agrees": true
+  },
+  "kashiwa-tanaka": {
+   "name_ru": "Касива-Танака",
+   "source": "wikidata_en",
+   "wikidata": "Q5366315",
+   "kana_agrees": true
+  },
+  "kasumigaseki": {
+   "name_ru": "Касумигасэки",
+   "source": "wikidata_en",
+   "wikidata": "Q5614472",
+   "kana_agrees": true
+  },
+  "katakura": {
+   "name_ru": "Катакура",
+   "source": "wikidata_en",
+   "wikidata": "Q844653",
+   "kana_agrees": true
+  },
+  "katakuracho": {
+   "name_ru": "Катакуратё",
+   "source": "wikidata_en",
+   "wikidata": "Q589860",
+   "kana_agrees": true
+  },
+  "katase-ko-no-shima": {
+   "name_ru": "Катасэ-Эносима",
+   "source": "wikidata_ru",
+   "wikidata": "Q1058370",
+   "kana_agrees": true
+  },
+  "katase-yama": {
+   "name_ru": "Катасэяма",
+   "source": "wikidata_en",
+   "wikidata": "Q4251612",
+   "kana_agrees": true
+  },
+  "katsu-kawa": {
+   "name_ru": "Намэгава",
+   "source": "wikidata_en",
+   "wikidata": "Q6961565",
+   "kana_agrees": true
+  },
+  "katsuura": {
+   "name_ru": "Кацуура",
+   "source": "wikidata_en",
+   "wikidata": "Q553034",
+   "kana_agrees": true
+  },
+  "kawa-kan": {
+   "name_ru": "Кавама",
+   "source": "wikidata_en",
+   "wikidata": "Q6379600",
+   "kana_agrees": true
+  },
+  "kawabe": {
+   "name_ru": "Кабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6344018",
+   "kana_agrees": true
+  },
+  "kawagoeshi": {
+   "name_ru": "Кавагоэси",
+   "source": "wikidata_en",
+   "wikidata": "Q4702993",
+   "kana_agrees": true
+  },
+  "kawaguchi": {
+   "name_ru": "Кавагути",
+   "source": "wikidata_en",
+   "wikidata": "Q735498",
+   "kana_agrees": true
+  },
+  "kawaguchi-motogo": {
+   "name_ru": "Кавагути-Мотого",
+   "source": "wikidata_en",
+   "wikidata": "Q3701469",
+   "kana_agrees": true
+  },
+  "kawai": {
+   "name_ru": "Кавай",
+   "source": "wikidata_en",
+   "wikidata": "Q6379533",
+   "kana_agrees": true
+  },
+  "kawasaki-shinmachi": {
+   "name_ru": "Кавасаки-Симмати",
+   "source": "wikidata_en",
+   "wikidata": "Q6379722",
+   "kana_agrees": true
+  },
+  "kawasakidaishi": {
+   "name_ru": "Кавасаки-Дайси",
+   "source": "wikidata_en",
+   "wikidata": "Q6379720",
+   "kana_agrees": true
+  },
+  "kawasumi": {
+   "name_ru": "Кавакадо",
+   "source": "wikidata_en",
+   "wikidata": "Q6379557"
+  },
+  "kawawacho": {
+   "name_ru": "Кававатё",
+   "source": "wikidata_en",
+   "wikidata": "Q6379900",
+   "kana_agrees": true
+  },
+  "kayama": {
+   "name_ru": "Каяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q4218388",
+   "kana_agrees": true
+  },
+  "kazamatsuri": {
+   "name_ru": "Кадзамацури",
+   "source": "wikidata_en",
+   "wikidata": "Q6380859",
+   "kana_agrees": true
+  },
+  "kazo": {
+   "name_ru": "Кадзо",
+   "source": "wikidata_en",
+   "wikidata": "Q6381375",
+   "kana_agrees": true
+  },
+  "kazusa-higashi": {
+   "name_ru": "Кадзуса-Адзума",
+   "source": "wikidata_en",
+   "wikidata": "Q11360043",
+   "kana_agrees": true
+  },
+  "kazusa-ichinomiya": {
+   "name_ru": "Кадзуса-Итиномия",
+   "source": "wikidata_en",
+   "wikidata": "Q564483",
+   "kana_agrees": true
+  },
+  "kazusa-kameyama": {
+   "name_ru": "Кадзуса-Камэяма",
+   "source": "wikidata_en",
+   "wikidata": "Q6381705",
+   "kana_agrees": true
+  },
+  "kazusa-kawa-kan": {
+   "name_ru": "Кадзуса-Кавама",
+   "source": "wikidata_en",
+   "wikidata": "Q6381703",
+   "kana_agrees": true
+  },
+  "kazusa-kiyokawa": {
+   "name_ru": "Кадзуса-Киёкава",
+   "source": "wikidata_en",
+   "wikidata": "Q11360046",
+   "kana_agrees": true
+  },
+  "kazusa-kubo": {
+   "name_ru": "Кадзуса-Кубо",
+   "source": "wikidata_en",
+   "wikidata": "Q6381709",
+   "kana_agrees": true
+  },
+  "kazusa-matsuoka": {
+   "name_ru": "Кадзуса-Мацуока",
+   "source": "wikidata_en",
+   "wikidata": "Q6381711",
+   "kana_agrees": true
+  },
+  "kazusa-minato": {
+   "name_ru": "Кадзуса-Минато",
+   "source": "wikidata_en",
+   "wikidata": "Q558554",
+   "kana_agrees": true
+  },
+  "kazusa-mitsumata": {
+   "name_ru": "Кадзуса-Мицумата",
+   "source": "wikidata_en",
+   "wikidata": "Q6381715",
+   "kana_agrees": true
+  },
+  "kazusa-murakami": {
+   "name_ru": "Кадзуса-Мураками",
+   "source": "wikidata_en",
+   "wikidata": "Q6381713",
+   "kana_agrees": true
+  },
+  "kazusa-nakagawa": {
+   "name_ru": "Кадзуса-Накагава",
+   "source": "wikidata_en",
+   "wikidata": "Q6381717",
+   "kana_agrees": true
+  },
+  "kazusa-okitsu": {
+   "name_ru": "Кадзуса-Окицу",
+   "source": "wikidata_en",
+   "wikidata": "Q553023",
+   "kana_agrees": true
+  },
+  "kazusa-okubo": {
+   "name_ru": "Кадзуса-Окубо",
+   "source": "wikidata_en",
+   "wikidata": "Q6381728",
+   "kana_agrees": true
+  },
+  "kazusa-tsurumai": {
+   "name_ru": "Кадзуса-Цурумай",
+   "source": "wikidata_en",
+   "wikidata": "Q6381721",
+   "kana_agrees": true
+  },
+  "kazusa-ushiku": {
+   "name_ru": "Кадзуса-Усику",
+   "source": "wikidata_en",
+   "wikidata": "Q6381724",
+   "kana_agrees": true
+  },
+  "kazusa-yamada": {
+   "name_ru": "Кадзуса-Ямада",
+   "source": "wikidata_en",
+   "wikidata": "Q6381726",
+   "kana_agrees": true
+  },
+  "keikyu-nagasawa": {
+   "name_ru": "Кэйкю-Нагасава",
+   "source": "wikidata_en",
+   "wikidata": "Q6383708",
+   "kana_agrees": true
+  },
+  "keikyu-otsu": {
+   "name_ru": "Кэйкю-Оцу",
+   "source": "wikidata_en",
+   "wikidata": "Q5370884",
+   "kana_agrees": true
+  },
+  "keikyu-taura": {
+   "name_ru": "Кэйкю-Таура",
+   "source": "wikidata_en",
+   "wikidata": "Q6383711",
+   "kana_agrees": true
+  },
+  "keikyu-tomioka": {
+   "name_ru": "Кэйкю-Томиока",
+   "source": "wikidata_en",
+   "wikidata": "Q12060974",
+   "kana_agrees": true
+  },
+  "keio-horinochi": {
+   "name_ru": "Кэйо-Хориноути",
+   "source": "wikidata_ru",
+   "wikidata": "Q269149",
+   "kana_agrees": true
+  },
+  "keio-katakura": {
+   "name_ru": "Кэйо-Катакура",
+   "source": "wikidata_ru",
+   "wikidata": "Q4251056",
+   "kana_agrees": true
+  },
+  "keio-yomiuri-rando": {
+   "name_ru": "Кэйо-Ёмиури-Рандо",
+   "source": "wikidata_ru",
+   "wikidata": "Q4251055",
+   "kana_agrees": true
+  },
+  "keiohachioji": {
+   "name_ru": "Кэйо-Хатиодзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q906143",
+   "kana_agrees": true
+  },
+  "keioinadatsutsumi": {
+   "name_ru": "Кэйо-Инададзуцуми",
+   "source": "wikidata_ru",
+   "wikidata": "Q4251057",
+   "kana_agrees": true
+  },
+  "keiotama-kawa": {
+   "name_ru": "Кэйо-Тамагава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4251058",
+   "kana_agrees": true
+  },
+  "keisei-hikifune": {
+   "name_ru": "Кэйсэй-Хикифунэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5366562",
+   "kana_agrees": true
+  },
+  "keisei-inage": {
+   "name_ru": "Кэйсэй-Инагэ",
+   "source": "wikidata_en",
+   "wikidata": "Q11374398",
+   "kana_agrees": true
+  },
+  "keisei-koiwa": {
+   "name_ru": "Кэйсэй-Коива",
+   "source": "wikidata_en",
+   "wikidata": "Q6383844",
+   "kana_agrees": true
+  },
+  "keisei-nakayama": {
+   "name_ru": "Кэйсэй-Накаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q6383846",
+   "kana_agrees": true
+  },
+  "keisei-nishifuna": {
+   "name_ru": "Кэйсэй-Нисифуна",
+   "source": "wikidata_en",
+   "wikidata": "Q6383831",
+   "kana_agrees": true
+  },
+  "keisei-okubo": {
+   "name_ru": "Кэйсэй-Окубо",
+   "source": "wikidata_en",
+   "wikidata": "Q6383851",
+   "kana_agrees": true
+  },
+  "keisei-owada": {
+   "name_ru": "Кэйсэй-Овада",
+   "source": "wikidata_en",
+   "wikidata": "Q6383852",
+   "kana_agrees": true
+  },
+  "keisei-sake-kurikaesi-i": {
+   "name_ru": "Кэйсэй-Сисуи",
+   "source": "wikidata_en",
+   "wikidata": "Q6383847",
+   "kana_agrees": true
+  },
+  "keisei-sakura": {
+   "name_ru": "Кэйсэй-Сакура",
+   "source": "wikidata_en",
+   "wikidata": "Q4502033",
+   "kana_agrees": true
+  },
+  "keisei-tateishi": {
+   "name_ru": "Кэйсэй-Татэйси",
+   "source": "wikidata_en",
+   "wikidata": "Q5366765",
+   "kana_agrees": true
+  },
+  "keisei-usui": {
+   "name_ru": "Кэйсэй-Усуи",
+   "source": "wikidata_en",
+   "wikidata": "Q6383832",
+   "kana_agrees": true
+  },
+  "kemigawa": {
+   "name_ru": "Кэмигава",
+   "source": "wikidata_en",
+   "wikidata": "Q6386953",
+   "kana_agrees": true
+  },
+  "kemigawahama": {
+   "name_ru": "Кэмигавахама",
+   "source": "wikidata_en",
+   "wikidata": "Q2493887",
+   "kana_agrees": true
+  },
+  "kenchomae": {
+   "name_ru": "Кэнтё-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6388822",
+   "kana_agrees": true
+  },
+  "kenritsudai-gaku": {
+   "name_ru": "Кэнрицу-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q6391354",
+   "kana_agrees": true
+  },
+  "kiba": {
+   "name_ru": "Киба",
+   "source": "wikidata_ru",
+   "wikidata": "Q126770",
+   "kana_agrees": true
+  },
+  "kibo-ke-oka": {
+   "name_ru": "Кибогаока",
+   "source": "wikidata_en",
+   "wikidata": "Q6404108",
+   "kana_agrees": true
+  },
+  "kikukawa": {
+   "name_ru": "Кикукава",
+   "source": "wikidata_ru",
+   "wikidata": "Q1043756",
+   "kana_agrees": true
+  },
+  "kimitsu": {
+   "name_ru": "Кимицу",
+   "source": "wikidata_en",
+   "wikidata": "Q575422",
+   "kana_agrees": true
+  },
+  "kinoshita": {
+   "name_ru": "Киороси",
+   "source": "wikidata_en",
+   "wikidata": "Q6414520",
+   "kana_agrees": true
+  },
+  "kinugasa": {
+   "name_ru": "Кинугаса",
+   "source": "wikidata_en",
+   "wikidata": "Q844272",
+   "kana_agrees": true
+  },
+  "kishine-koen": {
+   "name_ru": "Кисинэ-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q589898",
+   "kana_agrees": true
+  },
+  "kita-akabane": {
+   "name_ru": "Кита-Акабанэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844401",
+   "kana_agrees": true
+  },
+  "kita-ayase": {
+   "name_ru": "Кита-Аясэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040951",
+   "kana_agrees": true
+  },
+  "kita-fuchu": {
+   "name_ru": "Кита-Футю",
+   "source": "wikidata_en",
+   "wikidata": "Q6417528",
+   "kana_agrees": true
+  },
+  "kita-hatsutomi": {
+   "name_ru": "Кита-Хацутоми",
+   "source": "wikidata_en",
+   "wikidata": "Q6417537",
+   "kana_agrees": true
+  },
+  "kita-kashiwa": {
+   "name_ru": "Кита-Касива",
+   "source": "wikidata_en",
+   "wikidata": "Q5364151",
+   "kana_agrees": true
+  },
+  "kita-kasukabe": {
+   "name_ru": "Кита-Касукабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6417560",
+   "kana_agrees": true
+  },
+  "kita-kogane": {
+   "name_ru": "Кита-Коганэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5364850",
+   "kana_agrees": true
+  },
+  "kita-konosu": {
+   "name_ru": "Кита-Коносу",
+   "source": "wikidata_en",
+   "wikidata": "Q845061",
+   "kana_agrees": true
+  },
+  "kita-me-ke-saki": {
+   "name_ru": "Кита-Тигасаки",
+   "source": "wikidata_en",
+   "wikidata": "Q6417522",
+   "kana_agrees": true
+  },
+  "kita-sando": {
+   "name_ru": "Китасандо",
+   "source": "wikidata_ru",
+   "wikidata": "Q128322",
+   "kana_agrees": true
+  },
+  "kita-shinagawa": {
+   "name_ru": "Китасинагава",
+   "source": "wikidata_en",
+   "wikidata": "Q858214",
+   "kana_agrees": true
+  },
+  "kita-yono": {
+   "name_ru": "Кита-Ёно",
+   "source": "wikidata_en",
+   "wikidata": "Q844444",
+   "kana_agrees": true
+  },
+  "kitado-ta": {
+   "name_ru": "Кита-Тода",
+   "source": "wikidata_en",
+   "wikidata": "Q844358",
+   "kana_agrees": true
+  },
+  "kitaguni-fun": {
+   "name_ru": "Кита-Кокубун",
+   "source": "wikidata_en",
+   "wikidata": "Q5366284",
+   "kana_agrees": true
+  },
+  "kitahachi-oji": {
+   "name_ru": "Кита-Хатиодзи",
+   "source": "wikidata_en",
+   "wikidata": "Q844347",
+   "kana_agrees": true
+  },
+  "kitaike-fukuro": {
+   "name_ru": "Кита-Икэбукуро",
+   "source": "wikidata_en",
+   "wikidata": "Q6417547",
+   "kana_agrees": true
+  },
+  "kitakamakura": {
+   "name_ru": "Кита-Камакура",
+   "source": "wikidata_en",
+   "wikidata": "Q910286",
+   "kana_agrees": true
+  },
+  "kitakami-o": {
+   "name_ru": "Кита-Агэо",
+   "source": "wikidata_en",
+   "wikidata": "Q845123",
+   "kana_agrees": true
+  },
+  "kitakurihama": {
+   "name_ru": "Китакурихама",
+   "source": "wikidata_en",
+   "wikidata": "Q5370713",
+   "kana_agrees": true
+  },
+  "kitamatsudo": {
+   "name_ru": "Кита-Мацудо",
+   "source": "wikidata_en",
+   "wikidata": "Q5364690",
+   "kana_agrees": true
+  },
+  "kitami": {
+   "name_ru": "Китами",
+   "source": "wikidata_ru",
+   "wikidata": "Q4222438",
+   "kana_agrees": true
+  },
+  "kitamoto": {
+   "name_ru": "Китамото",
+   "source": "wikidata_en",
+   "wikidata": "Q845066",
+   "kana_agrees": true
+  },
+  "kitasaka-ko": {
+   "name_ru": "Кита-Сакадо",
+   "source": "wikidata_en",
+   "wikidata": "Q6417594",
+   "kana_agrees": true
+  },
+  "kitasenzoku": {
+   "name_ru": "Кита-Сэндзоку",
+   "source": "wikidata_en",
+   "wikidata": "Q6417605",
+   "kana_agrees": true
+  },
+  "kitashin-yokohama": {
+   "name_ru": "Кита-Син-Иокогама",
+   "source": "wikidata_en",
+   "wikidata": "Q852295",
+   "kana_agrees": true
+  },
+  "kitaurawa": {
+   "name_ru": "Кита-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q801021",
+   "kana_agrees": true
+  },
+  "kitayamata": {
+   "name_ru": "Кита-Ямата",
+   "source": "wikidata_en",
+   "wikidata": "Q6417619",
+   "kana_agrees": true
+  },
+  "kiyose": {
+   "name_ru": "Киёсэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6419078",
+   "kana_agrees": true
+  },
+  "ko-fuchi": {
+   "name_ru": "Кобути",
+   "source": "wikidata_en",
+   "wikidata": "Q844706",
+   "kana_agrees": true
+  },
+  "kobayashi": {
+   "name_ru": "Кобаяси",
+   "source": "wikidata_en",
+   "wikidata": "Q5363656",
+   "kana_agrees": true
+  },
+  "kodama": {
+   "name_ru": "Кодама",
+   "source": "wikidata_en",
+   "wikidata": "Q845035",
+   "kana_agrees": true
+  },
+  "kodenmacho": {
+   "name_ru": "Кодэмматё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1072970",
+   "kana_agrees": true
+  },
+  "kodomono-kuni": {
+   "name_ru": "Кодомонокуни",
+   "source": "wikidata_en",
+   "wikidata": "Q6425421",
+   "kana_agrees": true
+  },
+  "kogane-joshi": {
+   "name_ru": "Коганэ-Дзёси",
+   "source": "wikidata_en",
+   "wikidata": "Q11464338"
+  },
+  "koganecho": {
+   "name_ru": "Коганэтё",
+   "source": "wikidata_en",
+   "wikidata": "Q6425766",
+   "kana_agrees": true
+  },
+  "kohoku-abiko": {
+   "name_ru": "Кохоку",
+   "source": "wikidata_en",
+   "wikidata": "Q5366305",
+   "kana_agrees": true
+  },
+  "koigakubo": {
+   "name_ru": "Коигакубо",
+   "source": "wikidata_en",
+   "wikidata": "Q6426270",
+   "kana_agrees": true
+  },
+  "koiwa": {
+   "name_ru": "Коива",
+   "source": "wikidata_ru",
+   "wikidata": "Q1067969",
+   "kana_agrees": true
+  },
+  "kojima-nitta": {
+   "name_ru": "Кодзимасиндэн",
+   "source": "wikidata_en",
+   "wikidata": "Q6426486",
+   "kana_agrees": true
+  },
+  "kojimachi": {
+   "name_ru": "Кодзимати",
+   "source": "wikidata_ru",
+   "wikidata": "Q331948",
+   "kana_agrees": true
+  },
+  "kokonoe": {
+   "name_ru": "Коконоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q553860",
+   "kana_agrees": true
+  },
+  "kokorozashi-kyu": {
+   "name_ru": "Сику",
+   "source": "wikidata_en",
+   "wikidata": "Q11490824"
+  },
+  "kokudo": {
+   "name_ru": "Кокудо",
+   "source": "wikidata_en",
+   "wikidata": "Q77872",
+   "kana_agrees": true
+  },
+  "kokuga": {
+   "name_ru": "Яга",
+   "source": "wikidata_en",
+   "wikidata": "Q5357267",
+   "kana_agrees": true
+  },
+  "kokuritsu-kyogijo": {
+   "name_ru": "Кокурицу-Кёгидзё",
+   "source": "wikidata_ru",
+   "wikidata": "Q275113",
+   "kana_agrees": true
+  },
+  "kokuryo": {
+   "name_ru": "Кокурё",
+   "source": "wikidata_ru",
+   "wikidata": "Q4227494",
+   "kana_agrees": true
+  },
+  "kokusai-tenjijo": {
+   "name_ru": "Кокусай-Тэндзидзё",
+   "source": "wikidata_en",
+   "wikidata": "Q841567",
+   "kana_agrees": true
+  },
+  "kokusai-tenjijo-seimon": {
+   "name_ru": "Кокусай-Тэндзидзё-Сэймон",
+   "source": "name_en"
+  },
+  "komabatodaimae": {
+   "name_ru": "Комаба-Тодаймаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4229113",
+   "kana_agrees": true
+  },
+  "komae": {
+   "name_ru": "Комаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4229429",
+   "kana_agrees": true
+  },
+  "komazawa-daigaku": {
+   "name_ru": "Комадзава-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q6428224",
+   "kana_agrees": true
+  },
+  "komiya": {
+   "name_ru": "Комия",
+   "source": "wikidata_en",
+   "wikidata": "Q844334",
+   "kana_agrees": true
+  },
+  "komura-i": {
+   "name_ru": "Омурай",
+   "source": "wikidata_en",
+   "wikidata": "Q7090805",
+   "kana_agrees": true
+  },
+  "komuro": {
+   "name_ru": "Комуро",
+   "source": "wikidata_en",
+   "wikidata": "Q6428666",
+   "kana_agrees": true
+  },
+  "koremasa": {
+   "name_ru": "Корэмаса",
+   "source": "wikidata_en",
+   "wikidata": "Q5367981",
+   "kana_agrees": true
+  },
+  "koshigaya": {
+   "name_ru": "Косигая",
+   "source": "wikidata_en",
+   "wikidata": "Q842666",
+   "kana_agrees": true
+  },
+  "koshigaya-reikutaun": {
+   "name_ru": "Косигая-Рэйкутаун",
+   "source": "wikidata_en",
+   "wikidata": "Q6433119",
+   "kana_agrees": true
+  },
+  "koshigoe": {
+   "name_ru": "Косигоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q858923",
+   "kana_agrees": true
+  },
+  "kosuge": {
+   "name_ru": "Косугэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6433611",
+   "kana_agrees": true
+  },
+  "kotesashi": {
+   "name_ru": "Котэсаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6433936",
+   "kana_agrees": true
+  },
+  "ko-kawara": {
+   "name_ru": "Мукайгавара",
+   "source": "wikidata_en",
+   "wikidata": "Q5366346",
+   "kana_agrees": true
+  },
+  "ko-tsu-no-mori": {
+   "name_ru": "Кодзуномори",
+   "source": "wikidata_en",
+   "wikidata": "Q6455356",
+   "kana_agrees": true
+  },
+  "koen": {
+   "name_ru": "Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q11391979",
+   "kana_agrees": true
+  },
+  "koen-shita": {
+   "name_ru": "Коэн-Симо",
+   "source": "wikidata_en",
+   "wikidata": "Q6455101",
+   "kana_agrees": true
+  },
+  "koen-ue": {
+   "name_ru": "Коэн-Ками",
+   "source": "wikidata_en",
+   "wikidata": "Q6455099",
+   "kana_agrees": true
+  },
+  "kofu-dai": {
+   "name_ru": "Кофудай",
+   "source": "wikidata_en",
+   "wikidata": "Q11388598",
+   "kana_agrees": true
+  },
+  "kohoku-adachi": {
+   "name_ru": "Кохоку",
+   "source": "wikidata_en",
+   "wikidata": "Q6455131",
+   "kana_agrees": true
+  },
+  "kojiya": {
+   "name_ru": "Кодзия",
+   "source": "wikidata_en",
+   "wikidata": "Q5361691",
+   "kana_agrees": true
+  },
+  "koku-koen": {
+   "name_ru": "Коку-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q6455205",
+   "kana_agrees": true
+  },
+  "konan-chuo": {
+   "name_ru": "Конан-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q573434",
+   "kana_agrees": true
+  },
+  "konandai": {
+   "name_ru": "Конандай",
+   "source": "wikidata_en",
+   "wikidata": "Q844457",
+   "kana_agrees": true
+  },
+  "konodai": {
+   "name_ru": "Конодай",
+   "source": "wikidata_en",
+   "wikidata": "Q6455240",
+   "kana_agrees": true
+  },
+  "konosu": {
+   "name_ru": "Коносу",
+   "source": "wikidata_en",
+   "wikidata": "Q801054",
+   "kana_agrees": true
+  },
+  "koshin-tsuka": {
+   "name_ru": "Косин-Цука",
+   "source": "name_en"
+  },
+  "koshukaido": {
+   "name_ru": "Косю-Кайдо",
+   "source": "wikidata_en",
+   "wikidata": "Q6455297",
+   "kana_agrees": true
+  },
+  "koza-shibuya": {
+   "name_ru": "Кодза-Сибуя",
+   "source": "wikidata_ru",
+   "wikidata": "Q4226172",
+   "kana_agrees": true
+  },
+  "kowakudani": {
+   "name_ru": "Ковакидани",
+   "source": "wikidata_en",
+   "wikidata": "Q994123",
+   "kana_agrees": true
+  },
+  "koyasu": {
+   "name_ru": "Коясу",
+   "source": "wikidata_en",
+   "wikidata": "Q6435147",
+   "kana_agrees": true
+  },
+  "kozukue": {
+   "name_ru": "Кодзукуэ",
+   "source": "wikidata_en",
+   "wikidata": "Q909994",
+   "kana_agrees": true
+  },
+  "kuga-hara": {
+   "name_ru": "Кугахара",
+   "source": "wikidata_en",
+   "wikidata": "Q6441938",
+   "kana_agrees": true
+  },
+  "kugayama": {
+   "name_ru": "Кугаяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q4244277",
+   "kana_agrees": true
+  },
+  "kugenuma": {
+   "name_ru": "Кугэнума",
+   "source": "wikidata_en",
+   "wikidata": "Q858839",
+   "kana_agrees": true
+  },
+  "kugenuma-kaigan": {
+   "name_ru": "Кугэнума-Кайган",
+   "source": "wikidata_ru",
+   "wikidata": "Q4244329",
+   "kana_agrees": true
+  },
+  "kuhonbutsu": {
+   "name_ru": "Кухомбуцу",
+   "source": "wikidata_en",
+   "wikidata": "Q6442177",
+   "kana_agrees": true
+  },
+  "kuji": {
+   "name_ru": "Кудзи",
+   "source": "wikidata_en",
+   "wikidata": "Q5366826",
+   "kana_agrees": true
+  },
+  "kuju": {
+   "name_ru": "Кудзуми",
+   "source": "wikidata_en",
+   "wikidata": "Q6449307",
+   "kana_agrees": true
+  },
+  "kumakawa": {
+   "name_ru": "Кумагава",
+   "source": "wikidata_en",
+   "wikidata": "Q6443378",
+   "kana_agrees": true
+  },
+  "kumegawa": {
+   "name_ru": "Кумэгава",
+   "source": "wikidata_en",
+   "wikidata": "Q6443795",
+   "kana_agrees": true
+  },
+  "kun-ke-hama": {
+   "name_ru": "Кимигахама",
+   "source": "wikidata_en",
+   "wikidata": "Q6410125",
+   "kana_agrees": true
+  },
+  "kunitachi": {
+   "name_ru": "Кунитати",
+   "source": "wikidata_en",
+   "wikidata": "Q474512",
+   "kana_agrees": true
+  },
+  "kuniyoshi": {
+   "name_ru": "Куниёси",
+   "source": "wikidata_en",
+   "wikidata": "Q6444797",
+   "kana_agrees": true
+  },
+  "kunugi-yama": {
+   "name_ru": "Кунугияма",
+   "source": "wikidata_en",
+   "wikidata": "Q6445119",
+   "kana_agrees": true
+  },
+  "kurahashi": {
+   "name_ru": "Курахаси",
+   "source": "wikidata_en",
+   "wikidata": "Q5364298",
+   "kana_agrees": true
+  },
+  "kurami": {
+   "name_ru": "Курами",
+   "source": "wikidata_en",
+   "wikidata": "Q6445569",
+   "kana_agrees": true
+  },
+  "kurihira": {
+   "name_ru": "Курихира",
+   "source": "wikidata_ru",
+   "wikidata": "Q4248427",
+   "kana_agrees": true
+  },
+  "kurokawa": {
+   "name_ru": "Курокава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4248710",
+   "kana_agrees": true
+  },
+  "kururi": {
+   "name_ru": "Курури",
+   "source": "wikidata_en",
+   "wikidata": "Q6447492",
+   "kana_agrees": true
+  },
+  "kyodo": {
+   "name_ru": "Кёдо",
+   "source": "wikidata_ru",
+   "wikidata": "Q4251372",
+   "kana_agrees": true
+  },
+  "kyoteijo-mae": {
+   "name_ru": "Кётэйдзё-маэ",
+   "source": "name_en"
+  },
+  "kyu-ga-hara": {
+   "name_ru": "Кугахара",
+   "source": "wikidata_en",
+   "wikidata": "Q6441939",
+   "kana_agrees": true
+  },
+  "kyumei": {
+   "name_ru": "Гумё",
+   "source": "wikidata_en",
+   "wikidata": "Q5353413",
+   "kana_agrees": true
+  },
+  "machiya-nichome": {
+   "name_ru": "Матия-Нитёмэ",
+   "source": "name_en"
+  },
+  "maehara": {
+   "name_ru": "Маэбара",
+   "source": "wikidata_en",
+   "wikidata": "Q11397077",
+   "kana_agrees": true
+  },
+  "magome": {
+   "name_ru": "Магомэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040904",
+   "kana_agrees": true
+  },
+  "maihama": {
+   "name_ru": "Майхама",
+   "source": "wikidata_en",
+   "wikidata": "Q801154",
+   "kana_agrees": true
+  },
+  "maioka": {
+   "name_ru": "Майока",
+   "source": "wikidata_en",
+   "wikidata": "Q904116",
+   "kana_agrees": true
+  },
+  "makita": {
+   "name_ru": "Майта",
+   "source": "wikidata_en",
+   "wikidata": "Q579091",
+   "kana_agrees": true
+  },
+  "makuda": {
+   "name_ru": "Макута",
+   "source": "wikidata_en",
+   "wikidata": "Q6740491",
+   "kana_agrees": true
+  },
+  "man-gan-tera": {
+   "name_ru": "Мангандзи",
+   "source": "wikidata_en",
+   "wikidata": "Q6748797",
+   "kana_agrees": true
+  },
+  "manatsuru": {
+   "name_ru": "Манадзуру",
+   "source": "wikidata_en",
+   "wikidata": "Q865802",
+   "kana_agrees": true
+  },
+  "maruyama": {
+   "name_ru": "Маруяма",
+   "source": "wikidata_en",
+   "wikidata": "Q10877242"
+  },
+  "mashio": {
+   "name_ru": "Масуо",
+   "source": "wikidata_en",
+   "wikidata": "Q6785712",
+   "kana_agrees": true
+  },
+  "matoba": {
+   "name_ru": "Матоба",
+   "source": "wikidata_en",
+   "wikidata": "Q844395",
+   "kana_agrees": true
+  },
+  "matsu-ga-tani": {
+   "name_ru": "Мацугая",
+   "source": "wikidata_en",
+   "wikidata": "Q6788096",
+   "kana_agrees": true
+  },
+  "matsu-tobidai": {
+   "name_ru": "Мацухидай",
+   "source": "wikidata_en",
+   "wikidata": "Q6788097",
+   "kana_agrees": true
+  },
+  "matsubara": {
+   "name_ru": "Мацубара",
+   "source": "wikidata_en",
+   "wikidata": "Q6788018",
+   "kana_agrees": true
+  },
+  "matsuda": {
+   "name_ru": "Мацуда",
+   "source": "wikidata_en",
+   "wikidata": "Q5357522",
+   "kana_agrees": true
+  },
+  "matsudo-nitta": {
+   "name_ru": "Мацудо-Синдэн",
+   "source": "wikidata_en",
+   "wikidata": "Q11530713",
+   "kana_agrees": true
+  },
+  "matsuhisa": {
+   "name_ru": "Мацухиса",
+   "source": "wikidata_en",
+   "wikidata": "Q845010",
+   "kana_agrees": true
+  },
+  "matsuo": {
+   "name_ru": "Мацуо",
+   "source": "wikidata_en",
+   "wikidata": "Q5365257",
+   "kana_agrees": true
+  },
+  "mei-ko": {
+   "name_ru": "Акэто",
+   "source": "wikidata_en",
+   "wikidata": "Q4700660",
+   "kana_agrees": true
+  },
+  "mejiro": {
+   "name_ru": "Мэдзиро",
+   "source": "wikidata_ru",
+   "wikidata": "Q375154",
+   "kana_agrees": true
+  },
+  "mejiro-dai": {
+   "name_ru": "Мэдзиродай",
+   "source": "wikidata_ru",
+   "wikidata": "Q6810499",
+   "kana_agrees": true
+  },
+  "mejiro-yamashita": {
+   "name_ru": "Мэдзироямасита",
+   "source": "wikidata_en",
+   "wikidata": "Q1094934",
+   "kana_agrees": true
+  },
+  "meshi-kyu": {
+   "name_ru": "Итабу",
+   "source": "wikidata_en",
+   "wikidata": "Q11666649",
+   "kana_agrees": true
+  },
+  "mibu-kuchi": {
+   "name_ru": "Мицуминэгути",
+   "source": "wikidata_en",
+   "wikidata": "Q5969031",
+   "kana_agrees": true
+  },
+  "midori-dai": {
+   "name_ru": "Мидори-Дай",
+   "source": "wikidata_en",
+   "wikidata": "Q6842906",
+   "kana_agrees": true
+  },
+  "midorigaoka": {
+   "name_ru": "Мидоригаока",
+   "source": "wikidata_en",
+   "wikidata": "Q6842941",
+   "kana_agrees": true
+  },
+  "midorimachi": {
+   "name_ru": "Мидоритё",
+   "source": "wikidata_en",
+   "wikidata": "Q11607855",
+   "kana_agrees": true
+  },
+  "mikado": {
+   "name_ru": "Микадо",
+   "source": "wikidata_en",
+   "wikidata": "Q564431",
+   "kana_agrees": true
+  },
+  "mikawa-shima": {
+   "name_ru": "Микавасима",
+   "source": "wikidata_en",
+   "wikidata": "Q865170",
+   "kana_agrees": true
+  },
+  "mimomi": {
+   "name_ru": "Мимоми",
+   "source": "wikidata_en",
+   "wikidata": "Q6862305",
+   "kana_agrees": true
+  },
+  "minami-asa-ke-tani": {
+   "name_ru": "Минами-Асагая",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073001",
+   "kana_agrees": true
+  },
+  "minami-banki-ga-hara": {
+   "name_ru": "Минами-Макигахара",
+   "source": "wikidata_en",
+   "wikidata": "Q6862945",
+   "kana_agrees": true
+  },
+  "minami-furuya": {
+   "name_ru": "Минами-Фуруя",
+   "source": "wikidata_en",
+   "wikidata": "Q844387",
+   "kana_agrees": true
+  },
+  "minami-hanyu": {
+   "name_ru": "Минами-Ханю",
+   "source": "wikidata_en",
+   "wikidata": "Q6862883",
+   "kana_agrees": true
+  },
+  "minami-hato-ke-tani": {
+   "name_ru": "Минами-Хатогая",
+   "source": "wikidata_en",
+   "wikidata": "Q5369132",
+   "kana_agrees": true
+  },
+  "minami-kashiwa": {
+   "name_ru": "Минами-Касива",
+   "source": "wikidata_en",
+   "wikidata": "Q5363133",
+   "kana_agrees": true
+  },
+  "minami-kurihashi": {
+   "name_ru": "Минами-Курихаси",
+   "source": "wikidata_en",
+   "wikidata": "Q846777",
+   "kana_agrees": true
+  },
+  "minami-ota": {
+   "name_ru": "Минами-Ота",
+   "source": "wikidata_en",
+   "wikidata": "Q6863036",
+   "kana_agrees": true
+  },
+  "minami-osawa": {
+   "name_ru": "Минами-Осава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4293994",
+   "kana_agrees": true
+  },
+  "minami-sake-kurikaesi-i": {
+   "name_ru": "Минами-Сисуи",
+   "source": "wikidata_en",
+   "wikidata": "Q5364222",
+   "kana_agrees": true
+  },
+  "minami-sakurai": {
+   "name_ru": "Минами-Сакурай",
+   "source": "wikidata_en",
+   "wikidata": "Q5367953",
+   "kana_agrees": true
+  },
+  "minami-shinjuku": {
+   "name_ru": "Минами-Синдзюку",
+   "source": "wikidata_ru",
+   "wikidata": "Q1135947",
+   "kana_agrees": true
+  },
+  "minami-sunamachi": {
+   "name_ru": "Минами-Сунамати",
+   "source": "wikidata_ru",
+   "wikidata": "Q126760",
+   "kana_agrees": true
+  },
+  "minami-taira": {
+   "name_ru": "Минамидайра",
+   "source": "wikidata_ru",
+   "wikidata": "Q4294001",
+   "kana_agrees": true
+  },
+  "minami-yono": {
+   "name_ru": "Минами-Ёно",
+   "source": "wikidata_en",
+   "wikidata": "Q844368",
+   "kana_agrees": true
+  },
+  "minamifunabashi": {
+   "name_ru": "Минами-Фунабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q2259071",
+   "kana_agrees": true
+  },
+  "minamimachida": {
+   "name_ru": "Минамиматида",
+   "source": "name_en"
+  },
+  "minamiotsuka": {
+   "name_ru": "Минами-Оцука",
+   "source": "wikidata_en",
+   "wikidata": "Q8015394",
+   "kana_agrees": true
+  },
+  "minamirinkan": {
+   "name_ru": "Минами-Ринкан",
+   "source": "wikidata_ru",
+   "wikidata": "Q999127",
+   "kana_agrees": true
+  },
+  "minamitama": {
+   "name_ru": "Минами-Тама",
+   "source": "wikidata_en",
+   "wikidata": "Q5366901",
+   "kana_agrees": true
+  },
+  "minamiyuki-toku": {
+   "name_ru": "Минами-Гётоку",
+   "source": "wikidata_ru",
+   "wikidata": "Q128797",
+   "kana_agrees": true
+  },
+  "minano": {
+   "name_ru": "Минано",
+   "source": "wikidata_en",
+   "wikidata": "Q6863174",
+   "kana_agrees": true
+  },
+  "minatomachi": {
+   "name_ru": "Минатотё",
+   "source": "wikidata_en",
+   "wikidata": "Q6863265",
+   "kana_agrees": true
+  },
+  "minatomirai": {
+   "name_ru": "Минатомирай",
+   "source": "wikidata_en",
+   "wikidata": "Q3299269",
+   "kana_agrees": true
+  },
+  "minori-dai": {
+   "name_ru": "Миноридай",
+   "source": "wikidata_en",
+   "wikidata": "Q6869225",
+   "kana_agrees": true
+  },
+  "minowa": {
+   "name_ru": "Минова",
+   "source": "wikidata_ru",
+   "wikidata": "Q1072979",
+   "kana_agrees": true
+  },
+  "minuma-dai-shinsui-koen": {
+   "name_ru": "Минумадай-Синсуикоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q6869774",
+   "kana_agrees": true
+  },
+  "misaki": {
+   "name_ru": "Мисаки",
+   "source": "wikidata_en",
+   "wikidata": "Q6875087",
+   "kana_agrees": true
+  },
+  "misakiguchi": {
+   "name_ru": "Мисакигути",
+   "source": "wikidata_en",
+   "wikidata": "Q846713",
+   "kana_agrees": true
+  },
+  "misato": {
+   "name_ru": "Мисато",
+   "source": "wikidata_en",
+   "wikidata": "Q6875181",
+   "kana_agrees": true
+  },
+  "misato-chuo": {
+   "name_ru": "Мисато-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q5368856",
+   "kana_agrees": true
+  },
+  "mitakadai": {
+   "name_ru": "Митакадай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4296577",
+   "kana_agrees": true
+  },
+  "mitsuwa-dai": {
+   "name_ru": "Мицувадай",
+   "source": "wikidata_en",
+   "wikidata": "Q6883389",
+   "kana_agrees": true
+  },
+  "miurakaigan": {
+   "name_ru": "Миуракайган",
+   "source": "wikidata_en",
+   "wikidata": "Q5371356",
+   "kana_agrees": true
+  },
+  "miya-no-mae": {
+   "name_ru": "Мия-но-маэ",
+   "source": "name_en"
+  },
+  "miya-no-saka": {
+   "name_ru": "Мияносака",
+   "source": "wikidata_en",
+   "wikidata": "Q6884414",
+   "kana_agrees": true
+  },
+  "miya-no-shita": {
+   "name_ru": "Мияносита",
+   "source": "wikidata_en",
+   "wikidata": "Q997348",
+   "kana_agrees": true
+  },
+  "miya-no-taira": {
+   "name_ru": "Миянохира",
+   "source": "wikidata_en",
+   "wikidata": "Q8013443",
+   "kana_agrees": true
+  },
+  "miyahara": {
+   "name_ru": "Мияхара",
+   "source": "wikidata_en",
+   "wikidata": "Q845070",
+   "kana_agrees": true
+  },
+  "miyamaedaira": {
+   "name_ru": "Миямаэдайра",
+   "source": "wikidata_en",
+   "wikidata": "Q6884310",
+   "kana_agrees": true
+  },
+  "miyayama": {
+   "name_ru": "Мияяма",
+   "source": "wikidata_en",
+   "wikidata": "Q265686",
+   "kana_agrees": true
+  },
+  "miyazakidai": {
+   "name_ru": "Миядзакидай",
+   "source": "wikidata_en",
+   "wikidata": "Q6884463",
+   "kana_agrees": true
+  },
+  "mizue": {
+   "name_ru": "Мидзуэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040898",
+   "kana_agrees": true
+  },
+  "mizuho-dai": {
+   "name_ru": "Мидзуходай",
+   "source": "wikidata_en",
+   "wikidata": "Q6884805",
+   "kana_agrees": true
+  },
+  "mobara": {
+   "name_ru": "Мобара",
+   "source": "wikidata_en",
+   "wikidata": "Q564427",
+   "kana_agrees": true
+  },
+  "mochida": {
+   "name_ru": "Мотида",
+   "source": "wikidata_en",
+   "wikidata": "Q3701544",
+   "kana_agrees": true
+  },
+  "mogusa-sono": {
+   "name_ru": "Могусаэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4299262",
+   "kana_agrees": true
+  },
+  "monoi": {
+   "name_ru": "Монои",
+   "source": "wikidata_en",
+   "wikidata": "Q6901635",
+   "kana_agrees": true
+  },
+  "moro": {
+   "name_ru": "Моро",
+   "source": "wikidata_en",
+   "wikidata": "Q844988",
+   "kana_agrees": true
+  },
+  "motohasunuma": {
+   "name_ru": "Мотохасунума",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039257",
+   "kana_agrees": true
+  },
+  "motomachi-chukagai": {
+   "name_ru": "Мотомати-Тюкагай",
+   "source": "wikidata_en",
+   "wikidata": "Q995359",
+   "kana_agrees": true
+  },
+  "motoyama": {
+   "name_ru": "Мотояма",
+   "source": "wikidata_en",
+   "wikidata": "Q6918571",
+   "kana_agrees": true
+  },
+  "mukaihara": {
+   "name_ru": "Мукайхара",
+   "source": "name_en"
+  },
+  "mukogaokayuen": {
+   "name_ru": "Мукогаока-Юэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q801204",
+   "kana_agrees": true
+  },
+  "murakami": {
+   "name_ru": "Мураками",
+   "source": "name_en"
+  },
+  "musashi-arashiyama": {
+   "name_ru": "Мусаси-Рандзан",
+   "source": "wikidata_en",
+   "wikidata": "Q6940142",
+   "kana_agrees": true
+  },
+  "musashi-fujisawa": {
+   "name_ru": "Мусаси-Фудзисава",
+   "source": "wikidata_en",
+   "wikidata": "Q8015433",
+   "kana_agrees": true
+  },
+  "musashi-hikita": {
+   "name_ru": "Мусаси-Хикида",
+   "source": "wikidata_en",
+   "wikidata": "Q6940130",
+   "kana_agrees": true
+  },
+  "musashi-koganei": {
+   "name_ru": "Мусаси-Коганэй",
+   "source": "wikidata_en",
+   "wikidata": "Q801206",
+   "kana_agrees": true
+  },
+  "musashi-koyama": {
+   "name_ru": "Мусаси-Кояма",
+   "source": "wikidata_en",
+   "wikidata": "Q3097145",
+   "kana_agrees": true
+  },
+  "musashi-masuto": {
+   "name_ru": "Мусаси-Масуко",
+   "source": "wikidata_en",
+   "wikidata": "Q6940139",
+   "kana_agrees": true
+  },
+  "musashi-nitta": {
+   "name_ru": "Мусаси-Нитта",
+   "source": "wikidata_en",
+   "wikidata": "Q6940140",
+   "kana_agrees": true
+  },
+  "musashi-shiroishi": {
+   "name_ru": "Мусаси-Сирайси",
+   "source": "wikidata_en",
+   "wikidata": "Q1581531",
+   "kana_agrees": true
+  },
+  "musashi-sunagawa": {
+   "name_ru": "Мусаси-Сунагава",
+   "source": "wikidata_en",
+   "wikidata": "Q8015376",
+   "kana_agrees": true
+  },
+  "musashi-takahagi": {
+   "name_ru": "Мусаси-Такахаги",
+   "source": "wikidata_en",
+   "wikidata": "Q1129108",
+   "kana_agrees": true
+  },
+  "musashidai-wa": {
+   "name_ru": "Мусаси-Ямато",
+   "source": "wikidata_en",
+   "wikidata": "Q6940151",
+   "kana_agrees": true
+  },
+  "musashiitsukaichi": {
+   "name_ru": "Мусаси-Ицукайти",
+   "source": "wikidata_en",
+   "wikidata": "Q6940131",
+   "kana_agrees": true
+  },
+  "musashinakahara": {
+   "name_ru": "Мусаси-Накахара",
+   "source": "wikidata_en",
+   "wikidata": "Q5367238",
+   "kana_agrees": true
+  },
+  "musashino-dai": {
+   "name_ru": "Мусасинодай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4308321",
+   "kana_agrees": true
+  },
+  "musashiseki": {
+   "name_ru": "Мусаси-Сэки",
+   "source": "wikidata_en",
+   "wikidata": "Q843304",
+   "kana_agrees": true
+  },
+  "musashishinjo": {
+   "name_ru": "Мусаси-Синдзё",
+   "source": "wikidata_en",
+   "wikidata": "Q5366887",
+   "kana_agrees": true
+  },
+  "mutsuai-nichidai-mae": {
+   "name_ru": "Муцуай-Нитидаймаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4309032",
+   "kana_agrees": true
+  },
+  "mutsura": {
+   "name_ru": "Муцуура",
+   "source": "wikidata_en",
+   "wikidata": "Q11312859",
+   "kana_agrees": true
+  },
+  "myogadani": {
+   "name_ru": "Мёгадани",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078367",
+   "kana_agrees": true
+  },
+  "myoden": {
+   "name_ru": "Мёдэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q128795",
+   "kana_agrees": true
+  },
+  "myogaku": {
+   "name_ru": "Мёкаку",
+   "source": "wikidata_en",
+   "wikidata": "Q845049",
+   "kana_agrees": true
+  },
+  "myorenji": {
+   "name_ru": "Мёрэндзи",
+   "source": "wikidata_en",
+   "wikidata": "Q6949405",
+   "kana_agrees": true
+  },
+  "nagahara": {
+   "name_ru": "Нагахара",
+   "source": "wikidata_en",
+   "wikidata": "Q6958330",
+   "kana_agrees": true
+  },
+  "naganuma": {
+   "name_ru": "Наганума",
+   "source": "wikidata_ru",
+   "wikidata": "Q6958464",
+   "kana_agrees": true
+  },
+  "nagareyama": {
+   "name_ru": "Нагарэяма",
+   "source": "wikidata_en",
+   "wikidata": "Q11556674"
+  },
+  "nagareyama-sentorarupaaku": {
+   "name_ru": "Нагарэяма-Сэнторару-Паку",
+   "source": "name_en",
+   "wikidata": "Q850570",
+   "kana_agrees": true
+  },
+  "nagata": {
+   "name_ru": "Нагата",
+   "source": "wikidata_en",
+   "wikidata": "Q564453",
+   "kana_agrees": true
+  },
+  "nagatoro": {
+   "name_ru": "Нагаторо",
+   "source": "wikidata_en",
+   "wikidata": "Q8013090",
+   "kana_agrees": true
+  },
+  "nai-yado": {
+   "name_ru": "Утидзюку",
+   "source": "wikidata_en",
+   "wikidata": "Q10891265"
+  },
+  "naka-gora": {
+   "name_ru": "Нака-Гора",
+   "source": "wikidata_en",
+   "wikidata": "Q6960082",
+   "kana_agrees": true
+  },
+  "naka-no-machi": {
+   "name_ru": "Наканотё",
+   "source": "wikidata_en",
+   "wikidata": "Q6960280",
+   "kana_agrees": true
+  },
+  "nakada": {
+   "name_ru": "Накада",
+   "source": "wikidata_en",
+   "wikidata": "Q573641",
+   "kana_agrees": true
+  },
+  "nakagami": {
+   "name_ru": "Накагами",
+   "source": "wikidata_en",
+   "wikidata": "Q8013086",
+   "kana_agrees": true
+  },
+  "nakagawa": {
+   "name_ru": "Накагава",
+   "source": "wikidata_en",
+   "wikidata": "Q573443",
+   "kana_agrees": true
+  },
+  "nakagawara": {
+   "name_ru": "Накагавара",
+   "source": "wikidata_ru",
+   "wikidata": "Q4312482",
+   "kana_agrees": true
+  },
+  "nakaitabashi": {
+   "name_ru": "Нака-Итабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6960085",
+   "kana_agrees": true
+  },
+  "nakamachidai": {
+   "name_ru": "Накаматидай",
+   "source": "wikidata_en",
+   "wikidata": "Q851025",
+   "kana_agrees": true
+  },
+  "nakamura-hashi": {
+   "name_ru": "Накамурабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q6960255",
+   "kana_agrees": true
+  },
+  "nakano-fujimicho": {
+   "name_ru": "Накано-Фудзимитё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1132601",
+   "kana_agrees": true
+  },
+  "nakano-shima": {
+   "name_ru": "Наканосима",
+   "source": "wikidata_en",
+   "wikidata": "Q5366675",
+   "kana_agrees": true
+  },
+  "nakano-shinbashi": {
+   "name_ru": "Накано-Симбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q1132589",
+   "kana_agrees": true
+  },
+  "nakaura-wa": {
+   "name_ru": "Нака-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q844419",
+   "kana_agrees": true
+  },
+  "nako-funagata": {
+   "name_ru": "Накофунаката",
+   "source": "wikidata_en",
+   "wikidata": "Q556700",
+   "kana_agrees": true
+  },
+  "namamugi": {
+   "name_ru": "Намамуги",
+   "source": "wikidata_en",
+   "wikidata": "Q6961267",
+   "kana_agrees": true
+  },
+  "namekawa-airando": {
+   "name_ru": "Намэгава-Айрандо",
+   "source": "wikidata_en",
+   "wikidata": "Q552818",
+   "kana_agrees": true
+  },
+  "nami-kure": {
+   "name_ru": "Хагурэ",
+   "source": "wikidata_en",
+   "wikidata": "Q3701668",
+   "kana_agrees": true
+  },
+  "namiki-chuo": {
+   "name_ru": "Намики-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q6961853",
+   "kana_agrees": true
+  },
+  "namiki-kita": {
+   "name_ru": "Намики-Кита",
+   "source": "wikidata_en",
+   "wikidata": "Q6961854",
+   "kana_agrees": true
+  },
+  "nanahikari-dai": {
+   "name_ru": "Нанакодай",
+   "source": "wikidata_en",
+   "wikidata": "Q6962405",
+   "kana_agrees": true
+  },
+  "nanbu-shijo": {
+   "name_ru": "Намбу-Сидзё",
+   "source": "wikidata_en",
+   "wikidata": "Q11408539",
+   "kana_agrees": true
+  },
+  "naniwa": {
+   "name_ru": "Намихана",
+   "source": "wikidata_en",
+   "wikidata": "Q552791",
+   "kana_agrees": true
+  },
+  "nankyo-hon": {
+   "name_ru": "Минами-Хасимото",
+   "source": "wikidata_en",
+   "wikidata": "Q6862886",
+   "kana_agrees": true
+  },
+  "nansan-hara": {
+   "name_ru": "Минамихара",
+   "source": "wikidata_en",
+   "wikidata": "Q553865",
+   "kana_agrees": true
+  },
+  "narashino": {
+   "name_ru": "Нарасино",
+   "source": "wikidata_en",
+   "wikidata": "Q6965411",
+   "kana_agrees": true
+  },
+  "narita-yukawa": {
+   "name_ru": "Нарита-Юкава",
+   "source": "wikidata_en",
+   "wikidata": "Q859802",
+   "kana_agrees": true
+  },
+  "naruse": {
+   "name_ru": "Нарусэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844689",
+   "kana_agrees": true
+  },
+  "nebukawa": {
+   "name_ru": "Нэбукава",
+   "source": "wikidata_en",
+   "wikidata": "Q865785",
+   "kana_agrees": true
+  },
+  "negishi": {
+   "name_ru": "Нэгиси",
+   "source": "wikidata_en",
+   "wikidata": "Q801241",
+   "kana_agrees": true
+  },
+  "nerima-kasugacho": {
+   "name_ru": "Нэрима-Касугатё",
+   "source": "wikidata_ru",
+   "wikidata": "Q275521",
+   "kana_agrees": true
+  },
+  "nerima-koyadai": {
+   "name_ru": "Нэрима-Таканодай",
+   "source": "wikidata_en",
+   "wikidata": "Q843164",
+   "kana_agrees": true
+  },
+  "nezu": {
+   "name_ru": "Нэдзу",
+   "source": "wikidata_ru",
+   "wikidata": "Q390655",
+   "kana_agrees": true
+  },
+  "nichi-no-demachi": {
+   "name_ru": "Хинодэтё",
+   "source": "wikidata_en",
+   "wikidata": "Q5767411",
+   "kana_agrees": true
+  },
+  "nihondai-tori": {
+   "name_ru": "Нихон-Одори",
+   "source": "wikidata_en",
+   "wikidata": "Q7034272",
+   "kana_agrees": true
+  },
+  "niitaka-shima": {
+   "name_ru": "Син-Такасима",
+   "source": "wikidata_en",
+   "wikidata": "Q854231",
+   "kana_agrees": true
+  },
+  "niitaka-shima-taira": {
+   "name_ru": "Син-Такасимадайра",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039572",
+   "kana_agrees": true
+  },
+  "niiza": {
+   "name_ru": "Ниидза",
+   "source": "wikidata_en",
+   "wikidata": "Q7034510",
+   "kana_agrees": true
+  },
+  "nijubashimae": {
+   "name_ru": "Нидзюбаси-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q390676",
+   "kana_agrees": true
+  },
+  "ninomiya": {
+   "name_ru": "Ниномия",
+   "source": "wikidata_en",
+   "wikidata": "Q511262",
+   "kana_agrees": true
+  },
+  "nishi-chiba": {
+   "name_ru": "Ниси-Тиба",
+   "source": "wikidata_ru",
+   "wikidata": "Q1067240",
+   "kana_agrees": true
+  },
+  "nishi-chofu": {
+   "name_ru": "Ниси-Тёфу",
+   "source": "wikidata_ru",
+   "wikidata": "Q4321505",
+   "kana_agrees": true
+  },
+  "nishi-hanyu": {
+   "name_ru": "Ниси-Ханю",
+   "source": "wikidata_en",
+   "wikidata": "Q7040342",
+   "kana_agrees": true
+  },
+  "nishi-kamakura": {
+   "name_ru": "Ниси-Камакура",
+   "source": "wikidata_en",
+   "wikidata": "Q1094928",
+   "kana_agrees": true
+  },
+  "nishi-kasai": {
+   "name_ru": "Ниси-Касай",
+   "source": "wikidata_ru",
+   "wikidata": "Q126768",
+   "kana_agrees": true
+  },
+  "nishi-ke-hara": {
+   "name_ru": "Нисигахара",
+   "source": "wikidata_ru",
+   "wikidata": "Q151561",
+   "kana_agrees": true
+  },
+  "nishi-ke-hara-shitei-me": {
+   "name_ru": "Ниси-Кэ-Хара-Ситэй-Мэ",
+   "source": "name_en"
+  },
+  "nishi-magome": {
+   "name_ru": "Ниси-Магомэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1038919",
+   "kana_agrees": true
+  },
+  "nishi-noborito": {
+   "name_ru": "Ниси-Нобуто",
+   "source": "wikidata_en",
+   "wikidata": "Q7040665",
+   "kana_agrees": true
+  },
+  "nishi-ohara": {
+   "name_ru": "Ниси-Охара",
+   "source": "wikidata_en",
+   "wikidata": "Q7040469",
+   "kana_agrees": true
+  },
+  "nishi-omiya": {
+   "name_ru": "Ниси-Омия",
+   "source": "wikidata_en",
+   "wikidata": "Q849342",
+   "kana_agrees": true
+  },
+  "nishi-ojima": {
+   "name_ru": "Ниси-Одзима",
+   "source": "wikidata_ru",
+   "wikidata": "Q1044267",
+   "kana_agrees": true
+  },
+  "nishi-oya": {
+   "name_ru": "Ниси-Оя",
+   "source": "wikidata_en",
+   "wikidata": "Q7040477",
+   "kana_agrees": true
+  },
+  "nishi-oyama": {
+   "name_ru": "Ниси-Кояма",
+   "source": "wikidata_en",
+   "wikidata": "Q5370722",
+   "kana_agrees": true
+  },
+  "nishi-shinjuku": {
+   "name_ru": "Ниси-Синдзюку",
+   "source": "wikidata_ru",
+   "wikidata": "Q138555",
+   "kana_agrees": true
+  },
+  "nishi-shinjuku-gochome": {
+   "name_ru": "Ниси-Синдзюку-Готёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q275541",
+   "kana_agrees": true
+  },
+  "nishi-sugamo": {
+   "name_ru": "Ниси-Сугамо",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039887",
+   "kana_agrees": true
+  },
+  "nishi-tachikawa": {
+   "name_ru": "Ниси-Татикава",
+   "source": "wikidata_en",
+   "wikidata": "Q7040422",
+   "kana_agrees": true
+  },
+  "nishi-taishido": {
+   "name_ru": "Ниси-Тайсидо",
+   "source": "wikidata_en",
+   "wikidata": "Q7040419",
+   "kana_agrees": true
+  },
+  "nishi-ware-no": {
+   "name_ru": "Ниси-Агано",
+   "source": "wikidata_en",
+   "wikidata": "Q7040305",
+   "kana_agrees": true
+  },
+  "nishi-waseda": {
+   "name_ru": "Ниси-Васэда",
+   "source": "wikidata_ru",
+   "wikidata": "Q128305",
+   "kana_agrees": true
+  },
+  "nishiarai-taishi-nishi": {
+   "name_ru": "Нисиарайдайси-Ниси",
+   "source": "wikidata_en",
+   "wikidata": "Q11628298",
+   "kana_agrees": true
+  },
+  "nishidai": {
+   "name_ru": "Нисидай",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039896",
+   "kana_agrees": true
+  },
+  "nishihata": {
+   "name_ru": "Нисихата",
+   "source": "wikidata_en",
+   "wikidata": "Q7040558",
+   "kana_agrees": true
+  },
+  "nishikawa-etsu": {
+   "name_ru": "Ниси-Кавагоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844431",
+   "kana_agrees": true
+  },
+  "nishikawa-kuchi": {
+   "name_ru": "Ниси-Кавагути",
+   "source": "wikidata_en",
+   "wikidata": "Q801258",
+   "kana_agrees": true
+  },
+  "nishikoku-ritsu": {
+   "name_ru": "Ниси-Кунитати",
+   "source": "wikidata_en",
+   "wikidata": "Q5366355",
+   "kana_agrees": true
+  },
+  "nishiko-shima-taira": {
+   "name_ru": "Ниси-Такасимадайра",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039288",
+   "kana_agrees": true
+  },
+  "nishinaga-fuku": {
+   "name_ru": "Ниси-Эйфуку",
+   "source": "wikidata_ru",
+   "wikidata": "Q31589",
+   "kana_agrees": true
+  },
+  "nishishirai": {
+   "name_ru": "Ниси-Сирои",
+   "source": "wikidata_en",
+   "wikidata": "Q5367967",
+   "kana_agrees": true
+  },
+  "nishitani": {
+   "name_ru": "Нисия",
+   "source": "wikidata_en",
+   "wikidata": "Q7040756",
+   "kana_agrees": true
+  },
+  "nishiura-wa": {
+   "name_ru": "Ниси-Урава",
+   "source": "wikidata_en",
+   "wikidata": "Q7040446",
+   "kana_agrees": true
+  },
+  "nishiyokohama": {
+   "name_ru": "Ниси-Иокогама",
+   "source": "wikidata_en",
+   "wikidata": "Q11628832",
+   "kana_agrees": true
+  },
+  "nisshin": {
+   "name_ru": "Ниссин",
+   "source": "wikidata_en",
+   "wikidata": "Q844375",
+   "kana_agrees": true
+  },
+  "nitta": {
+   "name_ru": "Синдэн",
+   "source": "wikidata_en",
+   "wikidata": "Q8191166",
+   "kana_agrees": true
+  },
+  "nittano": {
+   "name_ru": "Ниттано",
+   "source": "wikidata_en",
+   "wikidata": "Q11503778",
+   "kana_agrees": true
+  },
+  "nodashi": {
+   "name_ru": "Нодаси",
+   "source": "wikidata_en",
+   "wikidata": "Q11645982",
+   "kana_agrees": true
+  },
+  "nogami": {
+   "name_ru": "Ногами",
+   "source": "wikidata_en",
+   "wikidata": "Q3701473",
+   "kana_agrees": true
+  },
+  "nogata": {
+   "name_ru": "Ногата",
+   "source": "wikidata_en",
+   "wikidata": "Q260859",
+   "kana_agrees": true
+  },
+  "nogizaka": {
+   "name_ru": "Ногидзака",
+   "source": "wikidata_ru",
+   "wikidata": "Q347791",
+   "kana_agrees": true
+  },
+  "nojima-koen": {
+   "name_ru": "Нодзимакоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q7047813",
+   "kana_agrees": true
+  },
+  "nokendai": {
+   "name_ru": "Нокэндай",
+   "source": "wikidata_en",
+   "wikidata": "Q7071606",
+   "kana_agrees": true
+  },
+  "numabe": {
+   "name_ru": "Нумабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q11554639",
+   "kana_agrees": true
+  },
+  "numabukuro": {
+   "name_ru": "Нумабукуро",
+   "source": "wikidata_en",
+   "wikidata": "Q843370",
+   "kana_agrees": true
+  },
+  "nyu-so": {
+   "name_ru": "Ирисо",
+   "source": "wikidata_en",
+   "wikidata": "Q6071849",
+   "kana_agrees": true
+  },
+  "o-hanacha-ya": {
+   "name_ru": "Оханадзяя",
+   "source": "wikidata_en",
+   "wikidata": "Q7080614",
+   "kana_agrees": true
+  },
+  "o-hanahata": {
+   "name_ru": "Оханабатакэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7080615",
+   "kana_agrees": true
+  },
+  "obitsu": {
+   "name_ru": "Обицу",
+   "source": "wikidata_en",
+   "wikidata": "Q7074984",
+   "kana_agrees": true
+  },
+  "obusuma": {
+   "name_ru": "Обусума",
+   "source": "wikidata_en",
+   "wikidata": "Q7075604",
+   "kana_agrees": true
+  },
+  "ochiai": {
+   "name_ru": "Отиаи",
+   "source": "wikidata_ru",
+   "wikidata": "Q80579",
+   "kana_agrees": true
+  },
+  "ochiai-minami-nagasaki": {
+   "name_ru": "Отиай-Минами-Нагасаки",
+   "source": "wikidata_ru",
+   "wikidata": "Q275510",
+   "kana_agrees": true
+  },
+  "oda-sakae": {
+   "name_ru": "Одасакаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q21020014",
+   "kana_agrees": true
+  },
+  "odai": {
+   "name_ru": "Одай",
+   "source": "name_en"
+  },
+  "odaiba-kaihinkoen": {
+   "name_ru": "Одайба-Кайхинкоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q858883",
+   "kana_agrees": true
+  },
+  "odakyu-sagamihara": {
+   "name_ru": "Одакю-Сагамихара",
+   "source": "wikidata_ru",
+   "wikidata": "Q4331335",
+   "kana_agrees": true
+  },
+  "odoriba": {
+   "name_ru": "Одориба",
+   "source": "wikidata_en",
+   "wikidata": "Q852877",
+   "kana_agrees": true
+  },
+  "ogura-dai": {
+   "name_ru": "Огурадай",
+   "source": "wikidata_en",
+   "wikidata": "Q7080299",
+   "kana_agrees": true
+  },
+  "oizumi-gakuen": {
+   "name_ru": "Оидзуми-Гакуэн",
+   "source": "wikidata_en",
+   "wikidata": "Q8016303",
+   "kana_agrees": true
+  },
+  "oji-kamiya": {
+   "name_ru": "Одзи-Камия",
+   "source": "wikidata_ru",
+   "wikidata": "Q151406",
+   "kana_agrees": true
+  },
+  "okabe": {
+   "name_ru": "Окабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q845054",
+   "kana_agrees": true
+  },
+  "okegawa": {
+   "name_ru": "Окэгава",
+   "source": "wikidata_en",
+   "wikidata": "Q844901",
+   "kana_agrees": true
+  },
+  "okusawa": {
+   "name_ru": "Окусава",
+   "source": "wikidata_en",
+   "wikidata": "Q7082777",
+   "kana_agrees": true
+  },
+  "okutama": {
+   "name_ru": "Окутама",
+   "source": "wikidata_en",
+   "wikidata": "Q842968",
+   "kana_agrees": true
+  },
+  "omaeda": {
+   "name_ru": "Омаэда",
+   "source": "wikidata_en",
+   "wikidata": "Q7089376",
+   "kana_agrees": true
+  },
+  "ome": {
+   "name_ru": "Омэ",
+   "source": "wikidata_en",
+   "wikidata": "Q843019",
+   "kana_agrees": true
+  },
+  "omigawa": {
+   "name_ru": "Омигава",
+   "source": "wikidata_en",
+   "wikidata": "Q7090185",
+   "kana_agrees": true
+  },
+  "omokage-hashi": {
+   "name_ru": "Омокагэ-Хаси",
+   "source": "name_en"
+  },
+  "omori": {
+   "name_ru": "Омори",
+   "source": "wikidata_ru",
+   "wikidata": "Q80420",
+   "kana_agrees": true
+  },
+  "onarimon": {
+   "name_ru": "Онаримон",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039085",
+   "kana_agrees": true
+  },
+  "onda": {
+   "name_ru": "Онда",
+   "source": "wikidata_en",
+   "wikidata": "Q7092149",
+   "kana_agrees": true
+  },
+  "onigori": {
+   "name_ru": "Онигоэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7093901",
+   "kana_agrees": true
+  },
+  "onjuku": {
+   "name_ru": "Ондзюку",
+   "source": "wikidata_en",
+   "wikidata": "Q552783",
+   "kana_agrees": true
+  },
+  "ontake": {
+   "name_ru": "Митакэ",
+   "source": "wikidata_en",
+   "wikidata": "Q6880751",
+   "kana_agrees": true
+  },
+  "ontake-yama": {
+   "name_ru": "Онтакэсан",
+   "source": "wikidata_en",
+   "wikidata": "Q7094574",
+   "kana_agrees": true
+  },
+  "oaso": {
+   "name_ru": "Оасо",
+   "source": "wikidata_en",
+   "wikidata": "Q3701525",
+   "kana_agrees": true
+  },
+  "obukuro": {
+   "name_ru": "Обукуро",
+   "source": "wikidata_en",
+   "wikidata": "Q8081433",
+   "kana_agrees": true
+  },
+  "oguchi": {
+   "name_ru": "Огути",
+   "source": "wikidata_en",
+   "wikidata": "Q801688",
+   "kana_agrees": true
+  },
+  "ohiradai": {
+   "name_ru": "Охирадай",
+   "source": "wikidata_en",
+   "wikidata": "Q8081501",
+   "kana_agrees": true
+  },
+  "oikeiba-ba-mae": {
+   "name_ru": "Ои-Кэйбадзё-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5367547",
+   "kana_agrees": true
+  },
+  "oiso": {
+   "name_ru": "Оисо",
+   "source": "wikidata_en",
+   "wikidata": "Q865175",
+   "kana_agrees": true
+  },
+  "okawa": {
+   "name_ru": "Окава",
+   "source": "wikidata_en",
+   "wikidata": "Q1581453",
+   "kana_agrees": true
+  },
+  "okubo": {
+   "name_ru": "Окубо",
+   "source": "wikidata_ru",
+   "wikidata": "Q116259",
+   "kana_agrees": true
+  },
+  "okurayama": {
+   "name_ru": "Окураяма",
+   "source": "wikidata_en",
+   "wikidata": "Q8081588",
+   "kana_agrees": true
+  },
+  "omachi": {
+   "name_ru": "Омати",
+   "source": "wikidata_en",
+   "wikidata": "Q8081600",
+   "kana_agrees": true
+  },
+  "omiya-koen": {
+   "name_ru": "Омия-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q8081623",
+   "kana_agrees": true
+  },
+  "omori-dai": {
+   "name_ru": "Оморидай",
+   "source": "wikidata_en",
+   "wikidata": "Q8081632",
+   "kana_agrees": true
+  },
+  "omori-kaigan": {
+   "name_ru": "Омори-Кайган",
+   "source": "wikidata_en",
+   "wikidata": "Q1592872",
+   "kana_agrees": true
+  },
+  "omori-machi": {
+   "name_ru": "Оморимати",
+   "source": "wikidata_en",
+   "wikidata": "Q5362060",
+   "kana_agrees": true
+  },
+  "onohara": {
+   "name_ru": "Онохара",
+   "source": "wikidata_en",
+   "wikidata": "Q8081669",
+   "kana_agrees": true
+  },
+  "onuki": {
+   "name_ru": "Онуки",
+   "source": "wikidata_en",
+   "wikidata": "Q558903",
+   "kana_agrees": true
+  },
+  "osaki-hirokoji": {
+   "name_ru": "Осаки-Хирокодзи",
+   "source": "wikidata_en",
+   "wikidata": "Q8081686",
+   "kana_agrees": true
+  },
+  "ojima": {
+   "name_ru": "Одзима",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040931",
+   "kana_agrees": true
+  },
+  "otaki": {
+   "name_ru": "Отаки",
+   "source": "wikidata_en",
+   "wikidata": "Q11434170",
+   "kana_agrees": true
+  },
+  "oto": {
+   "name_ru": "Ото",
+   "source": "wikidata_en",
+   "wikidata": "Q8081763",
+   "kana_agrees": true
+  },
+  "otorii": {
+   "name_ru": "Отории",
+   "source": "wikidata_en",
+   "wikidata": "Q5362449",
+   "kana_agrees": true
+  },
+  "otsuka-teikyodaigaku": {
+   "name_ru": "Оцука-Тэйкё-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q8011282",
+   "kana_agrees": true
+  },
+  "owada": {
+   "name_ru": "Овада",
+   "source": "wikidata_en",
+   "wikidata": "Q5368706",
+   "kana_agrees": true
+  },
+  "oyama": {
+   "name_ru": "Ояма",
+   "source": "wikidata_en",
+   "wikidata": "Q8081809",
+   "kana_agrees": true
+  },
+  "oppama": {
+   "name_ru": "Оппама",
+   "source": "wikidata_en",
+   "wikidata": "Q7098536",
+   "kana_agrees": true
+  },
+  "orihara": {
+   "name_ru": "Орихара",
+   "source": "wikidata_en",
+   "wikidata": "Q845030",
+   "kana_agrees": true
+  },
+  "ogi-ohashi": {
+   "name_ru": "Оги-Охаси",
+   "source": "wikidata_en",
+   "wikidata": "Q8081475",
+   "kana_agrees": true
+  },
+  "ogimachi": {
+   "name_ru": "Огимати",
+   "source": "wikidata_en",
+   "wikidata": "Q1581492",
+   "kana_agrees": true
+  },
+  "omekaido": {
+   "name_ru": "Омэкайдо",
+   "source": "wikidata_en",
+   "wikidata": "Q8014548",
+   "kana_agrees": true
+  },
+  "oya-hana": {
+   "name_ru": "Ояхана",
+   "source": "wikidata_en",
+   "wikidata": "Q7116209",
+   "kana_agrees": true
+  },
+  "oyama-dai": {
+   "name_ru": "Оямадай",
+   "source": "wikidata_en",
+   "wikidata": "Q7116237",
+   "kana_agrees": true
+  },
+  "oyamatsu": {
+   "name_ru": "Коямацу",
+   "source": "wikidata_en",
+   "wikidata": "Q6435135",
+   "kana_agrees": true
+  },
+  "oyumi-no": {
+   "name_ru": "Оюмино",
+   "source": "wikidata_en",
+   "wikidata": "Q7116390",
+   "kana_agrees": true
+  },
+  "ozaku": {
+   "name_ru": "Одзаку",
+   "source": "wikidata_en",
+   "wikidata": "Q7116441",
+   "kana_agrees": true
+  },
+  "renkon": {
+   "name_ru": "Хасунэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1038786",
+   "kana_agrees": true
+  },
+  "roka-koen": {
+   "name_ru": "Рока-Коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q2717793",
+   "kana_agrees": true
+  },
+  "roku-machi": {
+   "name_ru": "Рокутё",
+   "source": "wikidata_en",
+   "wikidata": "Q5369300",
+   "kana_agrees": true
+  },
+  "roku-mi": {
+   "name_ru": "Муцуми",
+   "source": "wikidata_en",
+   "wikidata": "Q11392323",
+   "kana_agrees": true
+  },
+  "rokugo-dote": {
+   "name_ru": "Рокугодотэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7360103",
+   "kana_agrees": true
+  },
+  "roppongi-itchome": {
+   "name_ru": "Роппонги-Иттёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073717",
+   "kana_agrees": true
+  },
+  "ryokuen-toshi": {
+   "name_ru": "Рёкуэнтоси",
+   "source": "wikidata_en",
+   "wikidata": "Q7385303",
+   "kana_agrees": true
+  },
+  "ryutsu-sentaa": {
+   "name_ru": "Рюцу-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q5367298",
+   "kana_agrees": true
+  },
+  "sachiura": {
+   "name_ru": "Сатиура",
+   "source": "wikidata_en",
+   "wikidata": "Q7396765",
+   "kana_agrees": true
+  },
+  "sagami-kaneko": {
+   "name_ru": "Сагами-Канэко",
+   "source": "wikidata_en",
+   "wikidata": "Q5357284",
+   "kana_agrees": true
+  },
+  "sagami-no": {
+   "name_ru": "Сагамино",
+   "source": "wikidata_en",
+   "wikidata": "Q7398969",
+   "kana_agrees": true
+  },
+  "sagami-numata": {
+   "name_ru": "Сагами-Нумата",
+   "source": "wikidata_en",
+   "wikidata": "Q7398953",
+   "kana_agrees": true
+  },
+  "sagamihara": {
+   "name_ru": "Сагамихара",
+   "source": "wikidata_en",
+   "wikidata": "Q844696",
+   "kana_agrees": true
+  },
+  "sagamiko": {
+   "name_ru": "Сагамико",
+   "source": "wikidata_en",
+   "wikidata": "Q7398971",
+   "kana_agrees": true
+  },
+  "sagamiotsuka": {
+   "name_ru": "Сагами-Оцука",
+   "source": "wikidata_en",
+   "wikidata": "Q7398954",
+   "kana_agrees": true
+  },
+  "sagi-no-miya": {
+   "name_ru": "Сагиномия",
+   "source": "wikidata_en",
+   "wikidata": "Q843170",
+   "kana_agrees": true
+  },
+  "saginuma": {
+   "name_ru": "Сагинума",
+   "source": "wikidata_en",
+   "wikidata": "Q7399289",
+   "kana_agrees": true
+  },
+  "saikai-kashima": {
+   "name_ru": "Ниси-Асикадзима",
+   "source": "wikidata_en",
+   "wikidata": "Q11629100",
+   "kana_agrees": true
+  },
+  "sakaemachi": {
+   "name_ru": "Сакаэмати",
+   "source": "name_en"
+  },
+  "sakasai": {
+   "name_ru": "Сакасай",
+   "source": "wikidata_en",
+   "wikidata": "Q7402847",
+   "kana_agrees": true
+  },
+  "sake-kurikaesi-i": {
+   "name_ru": "Сисуи",
+   "source": "wikidata_en",
+   "wikidata": "Q7499126",
+   "kana_agrees": true
+  },
+  "saku-kusa-bu": {
+   "name_ru": "Сакусабэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7403224",
+   "kana_agrees": true
+  },
+  "sakura-kaido": {
+   "name_ru": "Сакура-Кайдо",
+   "source": "wikidata_en",
+   "wikidata": "Q7403154",
+   "kana_agrees": true
+  },
+  "sakuradai": {
+   "name_ru": "Сакурадай",
+   "source": "wikidata_en",
+   "wikidata": "Q843041",
+   "kana_agrees": true
+  },
+  "sakuradamon": {
+   "name_ru": "Сакурадамон",
+   "source": "wikidata_ru",
+   "wikidata": "Q277196",
+   "kana_agrees": true
+  },
+  "sakuragaoka": {
+   "name_ru": "Сакурагаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q4405554",
+   "kana_agrees": true
+  },
+  "sakuragi": {
+   "name_ru": "Сакураги",
+   "source": "wikidata_en",
+   "wikidata": "Q7403200",
+   "kana_agrees": true
+  },
+  "sakurajosui": {
+   "name_ru": "Сакурадзёсуй",
+   "source": "wikidata_ru",
+   "wikidata": "Q842009",
+   "kana_agrees": true
+  },
+  "sakurashinmachi": {
+   "name_ru": "Сакура-Синмати",
+   "source": "wikidata_en",
+   "wikidata": "Q261870",
+   "kana_agrees": true
+  },
+  "sakurazawa": {
+   "name_ru": "Сакурадзава",
+   "source": "wikidata_en",
+   "wikidata": "Q3701568",
+   "kana_agrees": true
+  },
+  "samezu": {
+   "name_ru": "Самэдзу",
+   "source": "wikidata_en",
+   "wikidata": "Q3019291",
+   "kana_agrees": true
+  },
+  "samukawa": {
+   "name_ru": "Самукава",
+   "source": "wikidata_en",
+   "wikidata": "Q8192986",
+   "kana_agrees": true
+  },
+  "san-no-wa-hashi": {
+   "name_ru": "Сан-но-Ва-Хаси",
+   "source": "name_en"
+  },
+  "san-tsu-sakai": {
+   "name_ru": "Мицукё",
+   "source": "wikidata_en",
+   "wikidata": "Q11354006",
+   "kana_agrees": true
+  },
+  "san-tsu-sawa-shitamachi": {
+   "name_ru": "Мицудзава-Симотё",
+   "source": "wikidata_en",
+   "wikidata": "Q589920",
+   "kana_agrees": true
+  },
+  "san-tsu-sawakami-machi": {
+   "name_ru": "Мицудзава-Камитё",
+   "source": "wikidata_en",
+   "wikidata": "Q903553",
+   "kana_agrees": true
+  },
+  "sangu-hashi": {
+   "name_ru": "Сангубаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q1010020",
+   "kana_agrees": true
+  },
+  "sangyo-shinko-sentaa": {
+   "name_ru": "Сангёсинко-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q7418197",
+   "kana_agrees": true
+  },
+  "sangyodoro": {
+   "name_ru": "Сангёдоро",
+   "source": "name_en"
+  },
+  "sanpoku": {
+   "name_ru": "Ямакита",
+   "source": "wikidata_en",
+   "wikidata": "Q5357538",
+   "kana_agrees": true
+  },
+  "sanuki-machi": {
+   "name_ru": "Санукимати",
+   "source": "wikidata_en",
+   "wikidata": "Q558870",
+   "kana_agrees": true
+  },
+  "saruta": {
+   "name_ru": "Саруда",
+   "source": "wikidata_en",
+   "wikidata": "Q5364199",
+   "kana_agrees": true
+  },
+  "sasagawa": {
+   "name_ru": "Сасагава",
+   "source": "wikidata_en",
+   "wikidata": "Q7424969",
+   "kana_agrees": true
+  },
+  "satomi": {
+   "name_ru": "Сатоми",
+   "source": "wikidata_en",
+   "wikidata": "Q7426357",
+   "kana_agrees": true
+  },
+  "satte": {
+   "name_ru": "Саттэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7426528",
+   "kana_agrees": true
+  },
+  "sawai": {
+   "name_ru": "Савай",
+   "source": "wikidata_en",
+   "wikidata": "Q7428551",
+   "kana_agrees": true
+  },
+  "sayama-ke-oka": {
+   "name_ru": "Саямагаока",
+   "source": "wikidata_en",
+   "wikidata": "Q7429111",
+   "kana_agrees": true
+  },
+  "sayamashi": {
+   "name_ru": "Саямаси",
+   "source": "wikidata_en",
+   "wikidata": "Q7429114",
+   "kana_agrees": true
+  },
+  "seibi-ba": {
+   "name_ru": "Сэйбидзё",
+   "source": "wikidata_en",
+   "wikidata": "Q7446588",
+   "kana_agrees": true
+  },
+  "seibu-chichibu": {
+   "name_ru": "Сэйбу-Титибу",
+   "source": "wikidata_en",
+   "wikidata": "Q7446590",
+   "kana_agrees": true
+  },
+  "seibu-tachikawa": {
+   "name_ru": "Сэйбу-Татикава",
+   "source": "wikidata_en",
+   "wikidata": "Q8014513",
+   "kana_agrees": true
+  },
+  "seibu-yanagisawa": {
+   "name_ru": "Сэйбу-Ягисава",
+   "source": "wikidata_en",
+   "wikidata": "Q8014478",
+   "kana_agrees": true
+  },
+  "seibuen": {
+   "name_ru": "Сэйбуэн",
+   "source": "wikidata_en",
+   "wikidata": "Q7446611",
+   "kana_agrees": true
+  },
+  "seibushinjuku": {
+   "name_ru": "Сэйбу-Синдзюку",
+   "source": "wikidata_en",
+   "wikidata": "Q167299",
+   "kana_agrees": true
+  },
+  "seifu": {
+   "name_ru": "Нисифу",
+   "source": "wikidata_en",
+   "wikidata": "Q5366323",
+   "kana_agrees": true
+  },
+  "seijo-gakuenmae": {
+   "name_ru": "Сэйдзёгакуэн-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4448389",
+   "kana_agrees": true
+  },
+  "seikai": {
+   "name_ru": "Аоми",
+   "source": "wikidata_en",
+   "wikidata": "Q1042051",
+   "kana_agrees": true
+  },
+  "seiseki-sakuragaoka": {
+   "name_ru": "Сэйсэки-Сакурагаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q1064646",
+   "kana_agrees": true
+  },
+  "sen-da-ke-tani": {
+   "name_ru": "Сэндагая",
+   "source": "wikidata_ru",
+   "wikidata": "Q801428",
+   "kana_agrees": true
+  },
+  "sen-shiro-dai": {
+   "name_ru": "Тисиродай",
+   "source": "wikidata_en",
+   "wikidata": "Q5102080",
+   "kana_agrees": true
+  },
+  "sen-shiro-taihoku": {
+   "name_ru": "Тисиродай-Кита",
+   "source": "wikidata_en",
+   "wikidata": "Q5102077",
+   "kana_agrees": true
+  },
+  "sendagi": {
+   "name_ru": "Сэндаги",
+   "source": "wikidata_ru",
+   "wikidata": "Q390662",
+   "kana_agrees": true
+  },
+  "sengawa": {
+   "name_ru": "Сэнгава",
+   "source": "wikidata_ru",
+   "wikidata": "Q906121",
+   "kana_agrees": true
+  },
+  "sengen-dai": {
+   "name_ru": "Сэнгэндай",
+   "source": "wikidata_en",
+   "wikidata": "Q842516",
+   "kana_agrees": true
+  },
+  "sengoku": {
+   "name_ru": "Сэнгоку",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039142",
+   "kana_agrees": true
+  },
+  "senju-ohashi": {
+   "name_ru": "Сэндзюохаси",
+   "source": "wikidata_en",
+   "wikidata": "Q388969",
+   "kana_agrees": true
+  },
+  "sensoku": {
+   "name_ru": "Сэндзоку",
+   "source": "wikidata_en",
+   "wikidata": "Q7451439",
+   "kana_agrees": true
+  },
+  "senzokuike": {
+   "name_ru": "Сэндзоку-Икэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7451436",
+   "kana_agrees": true
+  },
+  "setagaya": {
+   "name_ru": "Сэтагая",
+   "source": "wikidata_en",
+   "wikidata": "Q7456328",
+   "kana_agrees": true
+  },
+  "setagaya-daita": {
+   "name_ru": "Сэтагая-Дайта",
+   "source": "wikidata_ru",
+   "wikidata": "Q4448445",
+   "kana_agrees": true
+  },
+  "seya": {
+   "name_ru": "Сэя",
+   "source": "wikidata_en",
+   "wikidata": "Q7458919",
+   "kana_agrees": true
+  },
+  "shake": {
+   "name_ru": "Сякэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7462638",
+   "kana_agrees": true
+  },
+  "shakudo-shogakko-mae": {
+   "name_ru": "Акадо-Сёгаккомаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q4700094",
+   "kana_agrees": true
+  },
+  "shakujii-koen": {
+   "name_ru": "Сякудзии-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q8016003",
+   "kana_agrees": true
+  },
+  "shi-ga-o": {
+   "name_ru": "Итигао",
+   "source": "wikidata_en",
+   "wikidata": "Q11479967",
+   "kana_agrees": true
+  },
+  "shi-tsu-ki": {
+   "name_ru": "Ёцуги",
+   "source": "wikidata_en",
+   "wikidata": "Q8015357",
+   "kana_agrees": true
+  },
+  "shibakoen": {
+   "name_ru": "Сиба-Коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q905609",
+   "kana_agrees": true
+  },
+  "shibamata": {
+   "name_ru": "Сибамата",
+   "source": "wikidata_en",
+   "wikidata": "Q7496017",
+   "kana_agrees": true
+  },
+  "shibasaki": {
+   "name_ru": "Сибасаки",
+   "source": "wikidata_ru",
+   "wikidata": "Q4418205",
+   "kana_agrees": true
+  },
+  "shibasaki-taiikukan": {
+   "name_ru": "Сибасаки-Тайикукан",
+   "source": "wikidata_en",
+   "wikidata": "Q7496025",
+   "kana_agrees": true
+  },
+  "shibaura-fu-atama": {
+   "name_ru": "Сибаура-Футо",
+   "source": "wikidata_en",
+   "wikidata": "Q858865",
+   "kana_agrees": true
+  },
+  "shibayama-chiyoda": {
+   "name_ru": "Сибаяма-Тиёда",
+   "source": "wikidata_en",
+   "wikidata": "Q846391",
+   "kana_agrees": true
+  },
+  "shibusawa": {
+   "name_ru": "Сибусава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4418411",
+   "kana_agrees": true
+  },
+  "shichiri": {
+   "name_ru": "Нанасато",
+   "source": "wikidata_en",
+   "wikidata": "Q6962432",
+   "kana_agrees": true
+  },
+  "shichiri-ke-hama": {
+   "name_ru": "Ситиригахама",
+   "source": "wikidata_en",
+   "wikidata": "Q858960",
+   "kana_agrees": true
+  },
+  "shidai-igakubu": {
+   "name_ru": "Сидай-Игакубу",
+   "source": "wikidata_en",
+   "wikidata": "Q7496125",
+   "kana_agrees": true
+  },
+  "shiinamachi": {
+   "name_ru": "Сиинамати",
+   "source": "wikidata_en",
+   "wikidata": "Q7496494",
+   "kana_agrees": true
+  },
+  "shiishiba": {
+   "name_ru": "Сиисиба",
+   "source": "wikidata_en",
+   "wikidata": "Q7496496",
+   "kana_agrees": true
+  },
+  "shijo-mae": {
+   "name_ru": "Сидзё-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q859054",
+   "kana_agrees": true
+  },
+  "shiki": {
+   "name_ru": "Сики",
+   "source": "wikidata_en",
+   "wikidata": "Q5367643",
+   "kana_agrees": true
+  },
+  "shimizu-koen": {
+   "name_ru": "Симидзу-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q7496870",
+   "kana_agrees": true
+  },
+  "shimo": {
+   "name_ru": "Симо",
+   "source": "wikidata_ru",
+   "wikidata": "Q151416",
+   "kana_agrees": true
+  },
+  "shimogori": {
+   "name_ru": "Симогори",
+   "source": "wikidata_en",
+   "wikidata": "Q7496964",
+   "kana_agrees": true
+  },
+  "shimoigusa": {
+   "name_ru": "Симо-Игуса",
+   "source": "wikidata_en",
+   "wikidata": "Q843437",
+   "kana_agrees": true
+  },
+  "shimomaruko": {
+   "name_ru": "Симо-Маруко",
+   "source": "wikidata_en",
+   "wikidata": "Q7496927",
+   "kana_agrees": true
+  },
+  "shimomizo": {
+   "name_ru": "Симомидзо",
+   "source": "wikidata_en",
+   "wikidata": "Q7496979",
+   "kana_agrees": true
+  },
+  "shimo-ochiai": {
+   "name_ru": "Симо-Отиай",
+   "source": "wikidata_en",
+   "wikidata": "Q843464",
+   "kana_agrees": true
+  },
+  "shimosa-kanzaki": {
+   "name_ru": "Симоса-Кодзаки",
+   "source": "wikidata_en",
+   "wikidata": "Q7497064",
+   "kana_agrees": true
+  },
+  "shimosa-matsuzaki": {
+   "name_ru": "Симоса-Мандзаки",
+   "source": "wikidata_en",
+   "wikidata": "Q5363815",
+   "kana_agrees": true
+  },
+  "shimosa-nakayama": {
+   "name_ru": "Симоса-Накаяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q1067586",
+   "kana_agrees": true
+  },
+  "shimosa-tachibana": {
+   "name_ru": "Симоса-Татибана",
+   "source": "wikidata_en",
+   "wikidata": "Q7497065",
+   "kana_agrees": true
+  },
+  "shimosa-toyosato": {
+   "name_ru": "Симоса-Тоёсато",
+   "source": "wikidata_en",
+   "wikidata": "Q7497068",
+   "kana_agrees": true
+  },
+  "shimura-sakaue": {
+   "name_ru": "Симура-Сакауэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039780",
+   "kana_agrees": true
+  },
+  "shimura-sanchome": {
+   "name_ru": "Симура-Сантёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039149",
+   "kana_agrees": true
+  },
+  "shin-itabashi": {
+   "name_ru": "Син-Итабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q1039904",
+   "kana_agrees": true
+  },
+  "shin-urayasu": {
+   "name_ru": "Син-Ураясу",
+   "source": "wikidata_en",
+   "wikidata": "Q844256",
+   "kana_agrees": true
+  },
+  "shin-akitsu": {
+   "name_ru": "Син-Акицу",
+   "source": "wikidata_en",
+   "wikidata": "Q7497083",
+   "kana_agrees": true
+  },
+  "shin-chiba": {
+   "name_ru": "Син-Тиба",
+   "source": "wikidata_en",
+   "wikidata": "Q7497084",
+   "kana_agrees": true
+  },
+  "shin-egota": {
+   "name_ru": "Син-Эгота",
+   "source": "wikidata_ru",
+   "wikidata": "Q275527",
+   "kana_agrees": true
+  },
+  "shin-hane": {
+   "name_ru": "Ниппа",
+   "source": "wikidata_en",
+   "wikidata": "Q841479",
+   "kana_agrees": true
+  },
+  "shin-kashi": {
+   "name_ru": "Сингаси",
+   "source": "wikidata_en",
+   "wikidata": "Q7497441",
+   "kana_agrees": true
+  },
+  "shin-kashiwa": {
+   "name_ru": "Син-Касива",
+   "source": "wikidata_en",
+   "wikidata": "Q7497105",
+   "kana_agrees": true
+  },
+  "shin-kodaira": {
+   "name_ru": "Син-Кодайра",
+   "source": "wikidata_en",
+   "wikidata": "Q7497112",
+   "kana_agrees": true
+  },
+  "shin-koenji": {
+   "name_ru": "Син-Коэндзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078400",
+   "kana_agrees": true
+  },
+  "shin-koganei": {
+   "name_ru": "Син-Коганэй",
+   "source": "wikidata_en",
+   "wikidata": "Q5368666",
+   "kana_agrees": true
+  },
+  "shin-koshin-tsuka": {
+   "name_ru": "Син-Косин-Цука",
+   "source": "name_en"
+  },
+  "shin-mobara": {
+   "name_ru": "Син-Мобара",
+   "source": "wikidata_en",
+   "wikidata": "Q564465",
+   "kana_agrees": true
+  },
+  "shin-nakano": {
+   "name_ru": "Син-Накано",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073232",
+   "kana_agrees": true
+  },
+  "shin-okubo": {
+   "name_ru": "Син-Окубо",
+   "source": "wikidata_ru",
+   "wikidata": "Q589599",
+   "kana_agrees": true
+  },
+  "shin-otsuka": {
+   "name_ru": "Син-Оцука",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078382",
+   "kana_agrees": true
+  },
+  "shin-sakuradai": {
+   "name_ru": "Син-Сакурадай",
+   "source": "wikidata_en",
+   "wikidata": "Q7497126",
+   "kana_agrees": true
+  },
+  "shin-sayama": {
+   "name_ru": "Син-Саяма",
+   "source": "wikidata_en",
+   "wikidata": "Q7497127",
+   "kana_agrees": true
+  },
+  "shin-seibi-ba": {
+   "name_ru": "Син-Сэйбидзё",
+   "source": "wikidata_en",
+   "wikidata": "Q5362517",
+   "kana_agrees": true
+  },
+  "shin-shibamata": {
+   "name_ru": "Син-Сибамата",
+   "source": "wikidata_en",
+   "wikidata": "Q5370898",
+   "kana_agrees": true
+  },
+  "shin-shibaura": {
+   "name_ru": "Син-Сибаура",
+   "source": "wikidata_en",
+   "wikidata": "Q1581516",
+   "kana_agrees": true
+  },
+  "shin-shiraoka": {
+   "name_ru": "Син-Сираока",
+   "source": "wikidata_en",
+   "wikidata": "Q874047",
+   "kana_agrees": true
+  },
+  "shin-shirota": {
+   "name_ru": "Син-Дайта",
+   "source": "wikidata_ru",
+   "wikidata": "Q263289",
+   "kana_agrees": true
+  },
+  "shin-toyosu": {
+   "name_ru": "Син-Тоёсу",
+   "source": "wikidata_en",
+   "wikidata": "Q766348",
+   "kana_agrees": true
+  },
+  "shinagawa-shiisaido": {
+   "name_ru": "Синагава-Сисайдо",
+   "source": "wikidata_en",
+   "wikidata": "Q849106",
+   "kana_agrees": true
+  },
+  "shinanocho": {
+   "name_ru": "Синаномати",
+   "source": "wikidata_ru",
+   "wikidata": "Q335677",
+   "kana_agrees": true
+  },
+  "shinbaba": {
+   "name_ru": "Симбамба",
+   "source": "wikidata_en",
+   "wikidata": "Q863236",
+   "kana_agrees": true
+  },
+  "shindai-tsu": {
+   "name_ru": "Син-Оцу",
+   "source": "wikidata_en",
+   "wikidata": "Q5370229",
+   "kana_agrees": true
+  },
+  "shingo": {
+   "name_ru": "Синго",
+   "source": "wikidata_en",
+   "wikidata": "Q7497502",
+   "kana_agrees": true
+  },
+  "shinjuku-gyoenmae": {
+   "name_ru": "Синдзюку-Гёэммаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1132610",
+   "kana_agrees": true
+  },
+  "shinjukunishiguchi": {
+   "name_ru": "Синдзюку-Нисигути",
+   "source": "wikidata_ru",
+   "wikidata": "Q246198",
+   "kana_agrees": true
+  },
+  "shinkemi-kawa": {
+   "name_ru": "Син-Кэмигава",
+   "source": "wikidata_ru",
+   "wikidata": "Q908760",
+   "kana_agrees": true
+  },
+  "shinko-kawa": {
+   "name_ru": "Син-Кога",
+   "source": "wikidata_en",
+   "wikidata": "Q7497111",
+   "kana_agrees": true
+  },
+  "shinmatsuda": {
+   "name_ru": "Син-Мацуда",
+   "source": "wikidata_ru",
+   "wikidata": "Q4419978",
+   "kana_agrees": true
+  },
+  "shinnarashino": {
+   "name_ru": "Син-Нарасино",
+   "source": "wikidata_en",
+   "wikidata": "Q2370433",
+   "kana_agrees": true
+  },
+  "shinonome": {
+   "name_ru": "Синономэ",
+   "source": "wikidata_en",
+   "wikidata": "Q849094",
+   "kana_agrees": true
+  },
+  "shinozaki": {
+   "name_ru": "Синодзаки",
+   "source": "wikidata_ru",
+   "wikidata": "Q1043876",
+   "kana_agrees": true
+  },
+  "shinrinkoen": {
+   "name_ru": "Синринкоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q5368656",
+   "kana_agrees": true
+  },
+  "shinsen-hashi": {
+   "name_ru": "Син-Фунабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q7497087",
+   "kana_agrees": true
+  },
+  "shintokorozawa": {
+   "name_ru": "Син-Токородзава",
+   "source": "wikidata_en",
+   "wikidata": "Q7497140",
+   "kana_agrees": true
+  },
+  "shintomicho": {
+   "name_ru": "Синтомитё",
+   "source": "wikidata_ru",
+   "wikidata": "Q332002",
+   "kana_agrees": true
+  },
+  "shintsudanuma": {
+   "name_ru": "Син-Цуданума",
+   "source": "wikidata_en",
+   "wikidata": "Q285362",
+   "kana_agrees": true
+  },
+  "shinzo-kawashima": {
+   "name_ru": "Сим-Микавасима",
+   "source": "wikidata_en",
+   "wikidata": "Q5367894",
+   "kana_agrees": true
+  },
+  "shinzo-sato": {
+   "name_ru": "Син-Мисато",
+   "source": "wikidata_en",
+   "wikidata": "Q6139591",
+   "kana_agrees": true
+  },
+  "shinzushi": {
+   "name_ru": "Синдзуси",
+   "source": "name_en"
+  },
+  "shioiri": {
+   "name_ru": "Сиоири",
+   "source": "wikidata_en",
+   "wikidata": "Q7497872",
+   "kana_agrees": true
+  },
+  "shiomi": {
+   "name_ru": "Сиоми",
+   "source": "wikidata_en",
+   "wikidata": "Q844315",
+   "kana_agrees": true
+  },
+  "shirai": {
+   "name_ru": "Сирои",
+   "source": "wikidata_en",
+   "wikidata": "Q7498913",
+   "kana_agrees": true
+  },
+  "shiraitodai": {
+   "name_ru": "Сирайтодай",
+   "source": "wikidata_en",
+   "wikidata": "Q5368205",
+   "kana_agrees": true
+  },
+  "shiraoka": {
+   "name_ru": "Сираока",
+   "source": "wikidata_en",
+   "wikidata": "Q873198",
+   "kana_agrees": true
+  },
+  "shiroku": {
+   "name_ru": "Сироку",
+   "source": "wikidata_en",
+   "wikidata": "Q3701539",
+   "kana_agrees": true
+  },
+  "shiromaru": {
+   "name_ru": "Сиромару",
+   "source": "wikidata_en",
+   "wikidata": "Q7498943",
+   "kana_agrees": true
+  },
+  "shiromi-ke-oka": {
+   "name_ru": "Сиромигаока",
+   "source": "wikidata_en",
+   "wikidata": "Q7498947",
+   "kana_agrees": true
+  },
+  "shirota-hashi": {
+   "name_ru": "Дайтабаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q4154095",
+   "kana_agrees": true
+  },
+  "shita-iida": {
+   "name_ru": "Симоиида",
+   "source": "wikidata_en",
+   "wikidata": "Q573742",
+   "kana_agrees": true
+  },
+  "shita-jinmei": {
+   "name_ru": "Симо-Симмэй",
+   "source": "wikidata_en",
+   "wikidata": "Q7496934",
+   "kana_agrees": true
+  },
+  "shita-nagatani": {
+   "name_ru": "Симонагая",
+   "source": "wikidata_en",
+   "wikidata": "Q579066",
+   "kana_agrees": true
+  },
+  "shita-soga": {
+   "name_ru": "Симо-Сога",
+   "source": "wikidata_en",
+   "wikidata": "Q5357301",
+   "kana_agrees": true
+  },
+  "shitaita-hashi": {
+   "name_ru": "Симо-Итабаси",
+   "source": "wikidata_en",
+   "wikidata": "Q7496921",
+   "kana_agrees": true
+  },
+  "shiyakushomae": {
+   "name_ru": "Сиякусё-маэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7499454",
+   "kana_agrees": true
+  },
+  "shizu": {
+   "name_ru": "Сидзу",
+   "source": "wikidata_en",
+   "wikidata": "Q7499472",
+   "kana_agrees": true
+  },
+  "shoin-jinja-mae": {
+   "name_ru": "Сёин-Дзиндзямаэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7506130",
+   "kana_agrees": true
+  },
+  "shomaru": {
+   "name_ru": "Сёмару",
+   "source": "wikidata_en",
+   "wikidata": "Q8017361",
+   "kana_agrees": true
+  },
+  "shonan": {
+   "name_ru": "Сёнан",
+   "source": "wikidata_en",
+   "wikidata": "Q11554443"
+  },
+  "shonan-fukazawa": {
+   "name_ru": "Сёнан-Фукасава",
+   "source": "wikidata_en",
+   "wikidata": "Q1094911",
+   "kana_agrees": true
+  },
+  "shonan-kaigan-koen": {
+   "name_ru": "Сёнанкайганкоэн",
+   "source": "wikidata_en",
+   "wikidata": "Q858964",
+   "kana_agrees": true
+  },
+  "shonan-machiya": {
+   "name_ru": "Сёнан-Матия",
+   "source": "wikidata_en",
+   "wikidata": "Q1093346",
+   "kana_agrees": true
+  },
+  "showa": {
+   "name_ru": "Сёва",
+   "source": "wikidata_en",
+   "wikidata": "Q1581652",
+   "kana_agrees": true
+  },
+  "showa-shima": {
+   "name_ru": "Сёвадзима",
+   "source": "wikidata_en",
+   "wikidata": "Q5368842",
+   "kana_agrees": true
+  },
+  "shukugawara": {
+   "name_ru": "Сюкугавара",
+   "source": "wikidata_en",
+   "wikidata": "Q5366653",
+   "kana_agrees": true
+  },
+  "sode-ke-ura": {
+   "name_ru": "Содэгаура",
+   "source": "wikidata_en",
+   "wikidata": "Q573413",
+   "kana_agrees": true
+  },
+  "soshigaya-okura": {
+   "name_ru": "Сосигая-Окура",
+   "source": "wikidata_ru",
+   "wikidata": "Q4429457",
+   "kana_agrees": true
+  },
+  "soshio-ryutsu-sentaa": {
+   "name_ru": "Сосио-Рюцу-Сэнта",
+   "source": "name_en",
+   "wikidata": "Q28105552",
+   "kana_agrees": true,
+   "wikidata_en": "Socio Distribution Center"
+  },
+  "so-moto": {
+   "name_ru": "Фусамото",
+   "source": "wikidata_en",
+   "wikidata": "Q5509878",
+   "kana_agrees": true
+  },
+  "sobudai-mae": {
+   "name_ru": "Собудай-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4426128",
+   "kana_agrees": true
+  },
+  "sobudai-shita": {
+   "name_ru": "Собудайсита",
+   "source": "wikidata_en",
+   "wikidata": "Q7667566",
+   "kana_agrees": true
+  },
+  "sogo-sando": {
+   "name_ru": "Согосандо",
+   "source": "wikidata_en",
+   "wikidata": "Q7667572",
+   "kana_agrees": true
+  },
+  "soka": {
+   "name_ru": "Сока",
+   "source": "wikidata_en",
+   "wikidata": "Q842450",
+   "kana_agrees": true
+  },
+  "soun-yama": {
+   "name_ru": "Соундзан",
+   "source": "wikidata_en",
+   "wikidata": "Q7667653",
+   "kana_agrees": true
+  },
+  "suehirocho": {
+   "name_ru": "Суэхиротё",
+   "source": "wikidata_ru",
+   "wikidata": "Q347988",
+   "kana_agrees": true
+  },
+  "sugamo-nitta": {
+   "name_ru": "Сугамо-Нитта",
+   "source": "name_en"
+  },
+  "sugita": {
+   "name_ru": "Сугита",
+   "source": "wikidata_en",
+   "wikidata": "Q7635125",
+   "kana_agrees": true
+  },
+  "sugito-koyadai": {
+   "name_ru": "Сугито-Таканодай",
+   "source": "wikidata_en",
+   "wikidata": "Q7635130",
+   "kana_agrees": true
+  },
+  "suigo": {
+   "name_ru": "Суиго",
+   "source": "wikidata_en",
+   "wikidata": "Q7635422",
+   "kana_agrees": true
+  },
+  "suitengumae": {
+   "name_ru": "Суйтэнгумаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q80546",
+   "kana_agrees": true
+  },
+  "sunagawa-shichi-ban": {
+   "name_ru": "Сунагава-Нанабан",
+   "source": "wikidata_en",
+   "wikidata": "Q7638759",
+   "kana_agrees": true
+  },
+  "sports-center": {
+   "name_ru": "Супоцу-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q4268568",
+   "kana_agrees": true
+  },
+  "suzukakedai": {
+   "name_ru": "Судзукакэдай",
+   "source": "wikidata_en",
+   "wikidata": "Q7651185",
+   "kana_agrees": true
+  },
+  "suzukicho": {
+   "name_ru": "Судзукитё",
+   "source": "wikidata_en",
+   "wikidata": "Q7651381",
+   "kana_agrees": true
+  },
+  "ta-na": {
+   "name_ru": "Тана",
+   "source": "wikidata_en",
+   "wikidata": "Q7682183",
+   "kana_agrees": true
+  },
+  "ta-umi": {
+   "name_ru": "Футоми",
+   "source": "wikidata_en",
+   "wikidata": "Q553805",
+   "kana_agrees": true
+  },
+  "tachiaigawa": {
+   "name_ru": "Татиайгава",
+   "source": "wikidata_en",
+   "wikidata": "Q3019280",
+   "kana_agrees": true
+  },
+  "tachiba": {
+   "name_ru": "Татэба",
+   "source": "wikidata_en",
+   "wikidata": "Q573441",
+   "kana_agrees": true
+  },
+  "tachihi": {
+   "name_ru": "Татихи",
+   "source": "wikidata_en",
+   "wikidata": "Q7673726",
+   "kana_agrees": true
+  },
+  "tachikawa-kita": {
+   "name_ru": "Татикава-Кита",
+   "source": "wikidata_en",
+   "wikidata": "Q844136",
+   "kana_agrees": true
+  },
+  "tachikawa-minami": {
+   "name_ru": "Татикава-Минами",
+   "source": "wikidata_en",
+   "wikidata": "Q844178",
+   "kana_agrees": true
+  },
+  "taisa-kura": {
+   "name_ru": "Осакура",
+   "source": "wikidata_en",
+   "wikidata": "Q8081685",
+   "kana_agrees": true
+  },
+  "taito": {
+   "name_ru": "Тайто",
+   "source": "wikidata_en",
+   "wikidata": "Q564210",
+   "kana_agrees": true
+  },
+  "taiyu-yama": {
+   "name_ru": "Дайюдзан",
+   "source": "wikidata_en",
+   "wikidata": "Q5209846",
+   "kana_agrees": true
+  },
+  "taka-no-dai": {
+   "name_ru": "Таканодай",
+   "source": "wikidata_en",
+   "wikidata": "Q7677190",
+   "kana_agrees": true
+  },
+  "taka-taki": {
+   "name_ru": "Такатаки",
+   "source": "wikidata_en",
+   "wikidata": "Q7677419",
+   "kana_agrees": true
+  },
+  "takada": {
+   "name_ru": "Таката",
+   "source": "wikidata_en",
+   "wikidata": "Q7677418",
+   "kana_agrees": true
+  },
+  "takaido": {
+   "name_ru": "Такайдо",
+   "source": "wikidata_ru",
+   "wikidata": "Q31309",
+   "kana_agrees": true
+  },
+  "takamatsu": {
+   "name_ru": "Такамацу",
+   "source": "wikidata_en",
+   "wikidata": "Q7677135",
+   "kana_agrees": true
+  },
+  "takanawa-dai": {
+   "name_ru": "Таканавадай",
+   "source": "wikidata_ru",
+   "wikidata": "Q1040769",
+   "kana_agrees": true
+  },
+  "takane-kido": {
+   "name_ru": "Таканэкидо",
+   "source": "wikidata_en",
+   "wikidata": "Q7677174",
+   "kana_agrees": true
+  },
+  "takane-kodan": {
+   "name_ru": "Таканэкодан",
+   "source": "wikidata_en",
+   "wikidata": "Q7677176",
+   "kana_agrees": true
+  },
+  "takano": {
+   "name_ru": "Коя",
+   "source": "wikidata_en",
+   "wikidata": "Q6455332",
+   "kana_agrees": true
+  },
+  "takaosanguchi": {
+   "name_ru": "Такаосангути",
+   "source": "wikidata_ru",
+   "wikidata": "Q4450115",
+   "kana_agrees": true
+  },
+  "takasaka": {
+   "name_ru": "Такасака",
+   "source": "wikidata_en",
+   "wikidata": "Q7677290",
+   "kana_agrees": true
+  },
+  "takashima-machi": {
+   "name_ru": "Такасиматё",
+   "source": "wikidata_en",
+   "wikidata": "Q850673",
+   "kana_agrees": true
+  },
+  "takashima-taira": {
+   "name_ru": "Такасимадайра",
+   "source": "wikidata_ru",
+   "wikidata": "Q1038971",
+   "kana_agrees": true
+  },
+  "takayanagi": {
+   "name_ru": "Такаянаги",
+   "source": "wikidata_en",
+   "wikidata": "Q7677472",
+   "kana_agrees": true
+  },
+  "takebashi": {
+   "name_ru": "Такэбаси",
+   "source": "wikidata_ru",
+   "wikidata": "Q80564",
+   "kana_agrees": true
+  },
+  "takekawa": {
+   "name_ru": "Такэкава",
+   "source": "wikidata_en",
+   "wikidata": "Q7677997",
+   "kana_agrees": true
+  },
+  "takenotsuka": {
+   "name_ru": "Такэноцука",
+   "source": "wikidata_en",
+   "wikidata": "Q7678040",
+   "kana_agrees": true
+  },
+  "takeoka": {
+   "name_ru": "Такэока",
+   "source": "wikidata_en",
+   "wikidata": "Q558883",
+   "kana_agrees": true
+  },
+  "takesato": {
+   "name_ru": "Такэсато",
+   "source": "wikidata_en",
+   "wikidata": "Q7678100",
+   "kana_agrees": true
+  },
+  "takeshiba": {
+   "name_ru": "Такэсиба",
+   "source": "wikidata_en",
+   "wikidata": "Q858876",
+   "kana_agrees": true
+  },
+  "takezawa": {
+   "name_ru": "Такэдзава",
+   "source": "wikidata_en",
+   "wikidata": "Q845007",
+   "kana_agrees": true
+  },
+  "taki-fudo": {
+   "name_ru": "Такифудо",
+   "source": "wikidata_en",
+   "wikidata": "Q11565062",
+   "kana_agrees": true
+  },
+  "takinogawa-itchome": {
+   "name_ru": "Такиногава-Иттёмэ",
+   "source": "name_en"
+  },
+  "tama": {
+   "name_ru": "Тама",
+   "source": "wikidata_en",
+   "wikidata": "Q5368661",
+   "kana_agrees": true
+  },
+  "tama-puraaza": {
+   "name_ru": "Тама-Пурадза",
+   "source": "name_en",
+   "wikidata": "Q3299307",
+   "kana_agrees": true,
+   "wikidata_en": "閻魔大王"
+  },
+  "tama-reien": {
+   "name_ru": "Тама-Рэйэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q7680496",
+   "kana_agrees": true
+  },
+  "tama-sakai": {
+   "name_ru": "Тамасакай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4450818",
+   "kana_agrees": true
+  },
+  "tama-yodo": {
+   "name_ru": "Тамаёдо",
+   "source": "wikidata_en",
+   "wikidata": "Q7680980",
+   "kana_agrees": true
+  },
+  "tamagawagakuen-mae": {
+   "name_ru": "Тамагавагакуэн-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q7680544",
+   "kana_agrees": true
+  },
+  "tan-so": {
+   "name_ru": "Тансё",
+   "source": "wikidata_en",
+   "wikidata": "Q845044",
+   "kana_agrees": true
+  },
+  "tanashi": {
+   "name_ru": "Танаси",
+   "source": "wikidata_en",
+   "wikidata": "Q843176",
+   "kana_agrees": true
+  },
+  "tani-zaike": {
+   "name_ru": "Ядзайкэ",
+   "source": "wikidata_en",
+   "wikidata": "Q8050564",
+   "kana_agrees": true
+  },
+  "tanmachi": {
+   "name_ru": "Таммати",
+   "source": "wikidata_en",
+   "wikidata": "Q7681523",
+   "kana_agrees": true
+  },
+  "tateyama": {
+   "name_ru": "Татэяма",
+   "source": "wikidata_en",
+   "wikidata": "Q553883",
+   "kana_agrees": true
+  },
+  "tatsumi": {
+   "name_ru": "Тацуми",
+   "source": "wikidata_ru",
+   "wikidata": "Q331177",
+   "kana_agrees": true
+  },
+  "taura": {
+   "name_ru": "Таура",
+   "source": "wikidata_en",
+   "wikidata": "Q844260",
+   "kana_agrees": true
+  },
+  "tawarada": {
+   "name_ru": "Таварада",
+   "source": "wikidata_en",
+   "wikidata": "Q7689221",
+   "kana_agrees": true
+  },
+  "tawaramachi": {
+   "name_ru": "Таварамати",
+   "source": "wikidata_ru",
+   "wikidata": "Q1196090",
+   "kana_agrees": true
+  },
+  "tendai": {
+   "name_ru": "Тэндай",
+   "source": "wikidata_en",
+   "wikidata": "Q7699571",
+   "kana_agrees": true
+  },
+  "tennocho": {
+   "name_ru": "Тэннотё",
+   "source": "wikidata_en",
+   "wikidata": "Q7700532",
+   "kana_agrees": true
+  },
+  "terekomusentaa": {
+   "name_ru": "Тэрэкому-Сэнта",
+   "source": "wikidata_en",
+   "wikidata": "Q859177",
+   "kana_agrees": true
+  },
+  "tetsudohakubutsukan": {
+   "name_ru": "Тэцудо-Хакубуцукан",
+   "source": "wikidata_en",
+   "wikidata": "Q7706853"
+  },
+  "tobe": {
+   "name_ru": "Тобэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7811562",
+   "kana_agrees": true
+  },
+  "tobitakyu": {
+   "name_ru": "Тобитакю",
+   "source": "wikidata_ru",
+   "wikidata": "Q4459114",
+   "kana_agrees": true
+  },
+  "tochomae": {
+   "name_ru": "Тотёмаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q246186",
+   "kana_agrees": true
+  },
+  "toda": {
+   "name_ru": "Тода",
+   "source": "wikidata_en",
+   "wikidata": "Q844437",
+   "kana_agrees": true
+  },
+  "todaimae": {
+   "name_ru": "Тодаймаэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073411",
+   "kana_agrees": true
+  },
+  "todakoen": {
+   "name_ru": "Тода-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q844571",
+   "kana_agrees": true
+  },
+  "toden-zatsu-tsukasa-ke-tani": {
+   "name_ru": "Тодэн-Дзацу-Цукаса-Кэ-Тани",
+   "source": "name_en"
+  },
+  "todoroki": {
+   "name_ru": "Тодороки",
+   "source": "wikidata_en",
+   "wikidata": "Q7812857",
+   "kana_agrees": true
+  },
+  "togawa": {
+   "name_ru": "Токава",
+   "source": "wikidata_en",
+   "wikidata": "Q5697162",
+   "kana_agrees": true
+  },
+  "tokiwa-dai": {
+   "name_ru": "Токивадай",
+   "source": "wikidata_en",
+   "wikidata": "Q7813626",
+   "kana_agrees": true
+  },
+  "tokiwadaira": {
+   "name_ru": "Токивадайра",
+   "source": "wikidata_en",
+   "wikidata": "Q7813628",
+   "kana_agrees": true
+  },
+  "tokoshikoen": {
+   "name_ru": "Тогоси-Коэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q999134",
+   "kana_agrees": true
+  },
+  "tomi-mizu": {
+   "name_ru": "Томидзу",
+   "source": "wikidata_ru",
+   "wikidata": "Q7818992",
+   "kana_agrees": true
+  },
+  "tomiura": {
+   "name_ru": "Томиура",
+   "source": "wikidata_en",
+   "wikidata": "Q556722",
+   "kana_agrees": true
+  },
+  "toneri": {
+   "name_ru": "Тонэри",
+   "source": "wikidata_en",
+   "wikidata": "Q7820886",
+   "kana_agrees": true
+  },
+  "toneri-koen": {
+   "name_ru": "Тонэри-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q7820883",
+   "kana_agrees": true
+  },
+  "tokaichiba": {
+   "name_ru": "Токаитиба",
+   "source": "wikidata_ru",
+   "wikidata": "Q844640",
+   "kana_agrees": true
+  },
+  "toranomon": {
+   "name_ru": "Тораномон",
+   "source": "wikidata_ru",
+   "wikidata": "Q347972",
+   "kana_agrees": true
+  },
+  "torihama": {
+   "name_ru": "Торихама",
+   "source": "wikidata_en",
+   "wikidata": "Q7825788",
+   "kana_agrees": true
+  },
+  "toritsu-daigaku": {
+   "name_ru": "Торицу-Дайгаку",
+   "source": "wikidata_en",
+   "wikidata": "Q7825831",
+   "kana_agrees": true
+  },
+  "toritsukasei": {
+   "name_ru": "Торицу-Касэй",
+   "source": "wikidata_en",
+   "wikidata": "Q843447",
+   "kana_agrees": true
+  },
+  "totsuka-angyo": {
+   "name_ru": "Тодзука-Ангё",
+   "source": "wikidata_en",
+   "wikidata": "Q5369332",
+   "kana_agrees": true
+  },
+  "to-no-sawa": {
+   "name_ru": "Тоносава",
+   "source": "wikidata_en",
+   "wikidata": "Q8189833",
+   "kana_agrees": true
+  },
+  "tobu-nerima": {
+   "name_ru": "Тобу-Нэрима",
+   "source": "wikidata_en",
+   "wikidata": "Q7862632",
+   "kana_agrees": true
+  },
+  "tobu-takezawa": {
+   "name_ru": "Тобу-Такэдзава",
+   "source": "wikidata_en",
+   "wikidata": "Q7862634",
+   "kana_agrees": true
+  },
+  "todai-miya": {
+   "name_ru": "Хигаси-Омия",
+   "source": "wikidata_en",
+   "wikidata": "Q861532",
+   "kana_agrees": true
+  },
+  "todai-shima": {
+   "name_ru": "Хигаси-Одзима",
+   "source": "wikidata_ru",
+   "wikidata": "Q908010",
+   "kana_agrees": true
+  },
+  "tofuku-nama": {
+   "name_ru": "Хигаси-Фусса",
+   "source": "wikidata_en",
+   "wikidata": "Q844330",
+   "kana_agrees": true
+  },
+  "togane": {
+   "name_ru": "Тоганэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5353531",
+   "kana_agrees": true
+  },
+  "togu-hara": {
+   "name_ru": "Хигаси-Мияхара",
+   "source": "wikidata_en",
+   "wikidata": "Q11526625"
+  },
+  "tohaku-raku": {
+   "name_ru": "Хигаси-Хакураку",
+   "source": "wikidata_en",
+   "wikidata": "Q5753538",
+   "kana_agrees": true
+  },
+  "tokai-kami": {
+   "name_ru": "Хигаси-Кайдзин",
+   "source": "wikidata_en",
+   "wikidata": "Q5366546",
+   "kana_agrees": true
+  },
+  "tokaidaigakumae": {
+   "name_ru": "Токайдайгаку-маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4459449",
+   "kana_agrees": true
+  },
+  "toko-ta": {
+   "name_ru": "Хигаси-Гёда",
+   "source": "wikidata_en",
+   "wikidata": "Q5753524",
+   "kana_agrees": true
+  },
+  "tokyo-sukaitsurii": {
+   "name_ru": "Токио-Сукайцури",
+   "source": "wikidata_en",
+   "wikidata": "Q900250",
+   "kana_agrees": true
+  },
+  "tokyo-teleport": {
+   "name_ru": "Токио-Тэрэпото",
+   "source": "wikidata_en",
+   "wikidata": "Q906738",
+   "kana_agrees": true
+  },
+  "tomo-ro": {
+   "name_ru": "Хигаси-Моро",
+   "source": "wikidata_en",
+   "wikidata": "Q11527554",
+   "kana_agrees": true
+  },
+  "torin-kan": {
+   "name_ru": "Хигаси-Ринкан",
+   "source": "wikidata_ru",
+   "wikidata": "Q4497459",
+   "kana_agrees": true
+  },
+  "toshin-kawa": {
+   "name_ru": "Хигаси-Киёкава",
+   "source": "wikidata_en",
+   "wikidata": "Q11527993",
+   "kana_agrees": true
+  },
+  "toso-moto": {
+   "name_ru": "Хигаси-Фусамото",
+   "source": "wikidata_en",
+   "wikidata": "Q5753509",
+   "kana_agrees": true
+  },
+  "toyoko-ta": {
+   "name_ru": "Хигаси-Ёкота",
+   "source": "wikidata_en",
+   "wikidata": "Q5753915",
+   "kana_agrees": true
+  },
+  "toyocho": {
+   "name_ru": "Тоётё",
+   "source": "wikidata_ru",
+   "wikidata": "Q126765",
+   "kana_agrees": true
+  },
+  "toyoharu": {
+   "name_ru": "Тоёхару",
+   "source": "wikidata_en",
+   "wikidata": "Q5368674",
+   "kana_agrees": true
+  },
+  "tsuchike": {
+   "name_ru": "Токэ",
+   "source": "wikidata_en",
+   "wikidata": "Q5353420",
+   "kana_agrees": true
+  },
+  "tsuda-yama": {
+   "name_ru": "Цудаяма",
+   "source": "wikidata_en",
+   "wikidata": "Q211015",
+   "kana_agrees": true
+  },
+  "tsujido": {
+   "name_ru": "Цудзидо",
+   "source": "wikidata_en",
+   "wikidata": "Q1049779",
+   "kana_agrees": true
+  },
+  "tsukada": {
+   "name_ru": "Цукада",
+   "source": "wikidata_en",
+   "wikidata": "Q7850035",
+   "kana_agrees": true
+  },
+  "tsukahara": {
+   "name_ru": "Цукахара",
+   "source": "wikidata_en",
+   "wikidata": "Q7850037",
+   "kana_agrees": true
+  },
+  "tsukiji": {
+   "name_ru": "Цукидзи",
+   "source": "wikidata_ru",
+   "wikidata": "Q1072938",
+   "kana_agrees": true
+  },
+  "tsukiji-shijo": {
+   "name_ru": "Цукидзисидзё",
+   "source": "wikidata_ru",
+   "wikidata": "Q246180",
+   "kana_agrees": true
+  },
+  "tsukimi-no": {
+   "name_ru": "Цукимино",
+   "source": "wikidata_en",
+   "wikidata": "Q7850073",
+   "kana_agrees": true
+  },
+  "tsukinowa": {
+   "name_ru": "Цукинова",
+   "source": "wikidata_en",
+   "wikidata": "Q7850076",
+   "kana_agrees": true
+  },
+  "tsukisaki": {
+   "name_ru": "Цукидзаки",
+   "source": "wikidata_en",
+   "wikidata": "Q7850090",
+   "kana_agrees": true
+  },
+  "tsukuihama": {
+   "name_ru": "Цукуихама",
+   "source": "wikidata_en",
+   "wikidata": "Q7850103",
+   "kana_agrees": true
+  },
+  "tsukushi-no": {
+   "name_ru": "Цукусино",
+   "source": "wikidata_en",
+   "wikidata": "Q7850118",
+   "kana_agrees": true
+  },
+  "tsunashima": {
+   "name_ru": "Цунасима",
+   "source": "wikidata_en",
+   "wikidata": "Q7937387",
+   "kana_agrees": true
+  },
+  "tsuru-ke-shima": {
+   "name_ru": "Цуругасима",
+   "source": "wikidata_en",
+   "wikidata": "Q7850270",
+   "kana_agrees": true
+  },
+  "tsurugamine": {
+   "name_ru": "Цуругаминэ",
+   "source": "wikidata_en",
+   "wikidata": "Q11675875",
+   "kana_agrees": true
+  },
+  "tsurukawa": {
+   "name_ru": "Цурукава",
+   "source": "wikidata_ru",
+   "wikidata": "Q4506208",
+   "kana_agrees": true
+  },
+  "tsuruma": {
+   "name_ru": "Цурума",
+   "source": "wikidata_ru",
+   "wikidata": "Q4506209",
+   "kana_agrees": true
+  },
+  "tsurumakionsen": {
+   "name_ru": "Цурумаки-Онсэн",
+   "source": "wikidata_ru",
+   "wikidata": "Q4506211",
+   "kana_agrees": true
+  },
+  "tsurumi-ono": {
+   "name_ru": "Цуруми-Оно",
+   "source": "wikidata_en",
+   "wikidata": "Q869061",
+   "kana_agrees": true
+  },
+  "tsurumi-shijo": {
+   "name_ru": "Цуруми-Итиба",
+   "source": "wikidata_en",
+   "wikidata": "Q5361946",
+   "kana_agrees": true
+  },
+  "tsuruse": {
+   "name_ru": "Цурусэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7850302",
+   "kana_agrees": true
+  },
+  "tsutsuji-ke-oka": {
+   "name_ru": "Цуцудзигаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q841913",
+   "kana_agrees": true
+  },
+  "tsuzuki-fureaino-oka": {
+   "name_ru": "Цудзуки-Фурэай-но-Ока",
+   "source": "wikidata_en",
+   "wikidata": "Q7850400",
+   "kana_agrees": true
+  },
+  "u-no-ki": {
+   "name_ru": "Уноки",
+   "source": "wikidata_en",
+   "wikidata": "Q7897240",
+   "kana_agrees": true
+  },
+  "uchisaiwaicho": {
+   "name_ru": "Утисайваитё",
+   "source": "wikidata_ru",
+   "wikidata": "Q1038948",
+   "kana_agrees": true
+  },
+  "ue-gora": {
+   "name_ru": "Ками-Гора",
+   "source": "wikidata_en",
+   "wikidata": "Q6357118",
+   "kana_agrees": true
+  },
+  "ue-kumagaya": {
+   "name_ru": "Ками-Кумагая",
+   "source": "wikidata_en",
+   "wikidata": "Q6357161",
+   "kana_agrees": true
+  },
+  "ue-nagatani": {
+   "name_ru": "Каминагая",
+   "source": "wikidata_ru",
+   "wikidata": "Q841420",
+   "kana_agrees": true
+  },
+  "ue-oi": {
+   "name_ru": "Ками-Ои",
+   "source": "wikidata_en",
+   "wikidata": "Q5357556",
+   "kana_agrees": true
+  },
+  "uemachi": {
+   "name_ru": "Камимати",
+   "source": "wikidata_en",
+   "wikidata": "Q6358110",
+   "kana_agrees": true
+  },
+  "uhara": {
+   "name_ru": "Убара",
+   "source": "wikidata_en",
+   "wikidata": "Q553006",
+   "kana_agrees": true
+  },
+  "ukima-funato": {
+   "name_ru": "Укима-Фунадо",
+   "source": "wikidata_en",
+   "wikidata": "Q844434",
+   "kana_agrees": true
+  },
+  "umagome-sawa": {
+   "name_ru": "Магомэдзава",
+   "source": "wikidata_en",
+   "wikidata": "Q6732342",
+   "kana_agrees": true
+  },
+  "umahori-kaigan": {
+   "name_ru": "Маборикайган",
+   "source": "wikidata_en",
+   "wikidata": "Q5370891",
+   "kana_agrees": true
+  },
+  "umatate": {
+   "name_ru": "Умататэ",
+   "source": "wikidata_en",
+   "wikidata": "Q7881193",
+   "kana_agrees": true
+  },
+  "umegaoka": {
+   "name_ru": "Умэгаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q4475573",
+   "kana_agrees": true
+  },
+  "umeshima": {
+   "name_ru": "Умэдзима",
+   "source": "wikidata_en",
+   "wikidata": "Q7881477",
+   "kana_agrees": true
+  },
+  "umeyashiki": {
+   "name_ru": "Умэясики",
+   "source": "wikidata_en",
+   "wikidata": "Q865643",
+   "kana_agrees": true
+  },
+  "umi-kashima": {
+   "name_ru": "Асикадзима",
+   "source": "wikidata_en",
+   "wikidata": "Q4805079",
+   "kana_agrees": true
+  },
+  "umi-no-koen-minamiguchi": {
+   "name_ru": "Уминокоэн-Минамигути",
+   "source": "wikidata_en",
+   "wikidata": "Q7881587",
+   "kana_agrees": true
+  },
+  "umi-no-koen-shiba-kuchi": {
+   "name_ru": "Уминокоэн-Сибагути",
+   "source": "wikidata_en",
+   "wikidata": "Q7881582",
+   "kana_agrees": true
+  },
+  "umi-shibaura": {
+   "name_ru": "Уми-Сибаура",
+   "source": "wikidata_en",
+   "wikidata": "Q1052602",
+   "kana_agrees": true
+  },
+  "umigami": {
+   "name_ru": "Кайдзин",
+   "source": "wikidata_en",
+   "wikidata": "Q6347743",
+   "kana_agrees": true
+  },
+  "unga": {
+   "name_ru": "Унга",
+   "source": "wikidata_en",
+   "wikidata": "Q7884435",
+   "kana_agrees": true
+  },
+  "uraga": {
+   "name_ru": "Урага",
+   "source": "wikidata_en",
+   "wikidata": "Q268790",
+   "kana_agrees": true
+  },
+  "urawa-misono": {
+   "name_ru": "Урава-Мисоно",
+   "source": "wikidata_en",
+   "wikidata": "Q1042376",
+   "kana_agrees": true
+  },
+  "urayama-kuchi": {
+   "name_ru": "Ураямагути",
+   "source": "wikidata_en",
+   "wikidata": "Q3701527",
+   "kana_agrees": true
+  },
+  "urayasu": {
+   "name_ru": "Ураясу",
+   "source": "name_en"
+  },
+  "ushigome-kagurazaka": {
+   "name_ru": "Усигомэ-Кагурадзака",
+   "source": "wikidata_ru",
+   "wikidata": "Q246195",
+   "kana_agrees": true
+  },
+  "ushigome-yanagimachi": {
+   "name_ru": "Усигомэ-Янагитё",
+   "source": "wikidata_ru",
+   "wikidata": "Q247099",
+   "kana_agrees": true
+  },
+  "ushihama": {
+   "name_ru": "Усихама",
+   "source": "wikidata_en",
+   "wikidata": "Q7901942",
+   "kana_agrees": true
+  },
+  "uwamizo": {
+   "name_ru": "Камимидзо",
+   "source": "wikidata_en",
+   "wikidata": "Q6358129",
+   "kana_agrees": true
+  },
+  "wa-ko": {
+   "name_ru": "Вадо",
+   "source": "wikidata_en",
+   "wikidata": "Q7959314",
+   "kana_agrees": true
+  },
+  "wada-kawara": {
+   "name_ru": "Вадагахара",
+   "source": "wikidata_en",
+   "wikidata": "Q254831",
+   "kana_agrees": true
+  },
+  "wada-machi": {
+   "name_ru": "Вадамати",
+   "source": "wikidata_en",
+   "wikidata": "Q7958950",
+   "kana_agrees": true
+  },
+  "wada-tsuka": {
+   "name_ru": "Вададзука",
+   "source": "wikidata_en",
+   "wikidata": "Q858969",
+   "kana_agrees": true
+  },
+  "wada-ura": {
+   "name_ru": "Вадаура",
+   "source": "wikidata_en",
+   "wikidata": "Q553736",
+   "kana_agrees": true
+  },
+  "wado-kurotani": {
+   "name_ru": "Вадо-Куроя",
+   "source": "wikidata_en",
+   "wikidata": "Q7959369",
+   "kana_agrees": true
+  },
+  "wakaba": {
+   "name_ru": "Вакаба",
+   "source": "wikidata_en",
+   "wikidata": "Q7960744",
+   "kana_agrees": true
+  },
+  "wakabadai": {
+   "name_ru": "Вакабадай",
+   "source": "wikidata_ru",
+   "wikidata": "Q4102591",
+   "kana_agrees": true
+  },
+  "wakabayashi": {
+   "name_ru": "Вакабаяси",
+   "source": "wikidata_en",
+   "wikidata": "Q7960749",
+   "kana_agrees": true
+  },
+  "wakamatsu-kawata": {
+   "name_ru": "Вакамацу-Кавада",
+   "source": "wikidata_ru",
+   "wikidata": "Q246173",
+   "kana_agrees": true
+  },
+  "warabi": {
+   "name_ru": "Вараби",
+   "source": "wikidata_en",
+   "wikidata": "Q786349",
+   "kana_agrees": true
+  },
+  "waseda": {
+   "name_ru": "Васэда",
+   "source": "wikidata_ru",
+   "wikidata": "Q1078459",
+   "kana_agrees": true
+  },
+  "washimiya": {
+   "name_ru": "Васиномия",
+   "source": "wikidata_en",
+   "wikidata": "Q844040",
+   "kana_agrees": true
+  },
+  "y-r-p-nobi": {
+   "name_ru": "YRP-Ноби",
+   "source": "wikidata_en",
+   "wikidata": "Q8046018",
+   "kana_agrees": true
+  },
+  "yabe": {
+   "name_ru": "Ябэ",
+   "source": "wikidata_en",
+   "wikidata": "Q844663",
+   "kana_agrees": true
+  },
+  "yachimata": {
+   "name_ru": "Ятимата",
+   "source": "wikidata_en",
+   "wikidata": "Q5364855",
+   "kana_agrees": true
+  },
+  "yachiyo-chuo": {
+   "name_ru": "Ятиё-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q5366268",
+   "kana_agrees": true
+  },
+  "yachiyo-midorigaoka": {
+   "name_ru": "Ятиё-Мидоригаока",
+   "source": "wikidata_en",
+   "wikidata": "Q5367282",
+   "kana_agrees": true
+  },
+  "yachiyodai": {
+   "name_ru": "Ятиёдай",
+   "source": "wikidata_en",
+   "wikidata": "Q4373709",
+   "kana_agrees": true
+  },
+  "yagawa": {
+   "name_ru": "Ягава",
+   "source": "wikidata_en",
+   "wikidata": "Q5366364",
+   "kana_agrees": true
+  },
+  "yagi-saki": {
+   "name_ru": "Ягисаки",
+   "source": "wikidata_en",
+   "wikidata": "Q11391340",
+   "kana_agrees": true
+  },
+  "yagiri": {
+   "name_ru": "Ягири",
+   "source": "wikidata_en",
+   "wikidata": "Q5370868",
+   "kana_agrees": true
+  },
+  "yaguchi-watari": {
+   "name_ru": "Ягути-но-Ватаси",
+   "source": "wikidata_en",
+   "wikidata": "Q8046756",
+   "kana_agrees": true
+  },
+  "yagyu": {
+   "name_ru": "Ягю",
+   "source": "wikidata_en",
+   "wikidata": "Q11534548",
+   "kana_agrees": true
+  },
+  "yahatayama": {
+   "name_ru": "Хатиманъяма",
+   "source": "wikidata_ru",
+   "wikidata": "Q4496530",
+   "kana_agrees": true
+  },
+  "yahiro": {
+   "name_ru": "Яхиро",
+   "source": "wikidata_en",
+   "wikidata": "Q8015247",
+   "kana_agrees": true
+  },
+  "yaho": {
+   "name_ru": "Яхо",
+   "source": "wikidata_en",
+   "wikidata": "Q5366778",
+   "kana_agrees": true
+  },
+  "yako": {
+   "name_ru": "Яко",
+   "source": "wikidata_en",
+   "wikidata": "Q5367593",
+   "kana_agrees": true
+  },
+  "yakuen-dai": {
+   "name_ru": "Якуэндай",
+   "source": "wikidata_en",
+   "wikidata": "Q8047226",
+   "kana_agrees": true
+  },
+  "yamada": {
+   "name_ru": "Ямада",
+   "source": "name_en"
+  },
+  "yamate": {
+   "name_ru": "Яматэ",
+   "source": "wikidata_en",
+   "wikidata": "Q801651",
+   "kana_agrees": true
+  },
+  "yanagikoji": {
+   "name_ru": "Янагикодзи",
+   "source": "wikidata_en",
+   "wikidata": "Q859740",
+   "kana_agrees": true
+  },
+  "yanase-kawa": {
+   "name_ru": "Янасэгава",
+   "source": "wikidata_en",
+   "wikidata": "Q8048266",
+   "kana_agrees": true
+  },
+  "yanoguchi": {
+   "name_ru": "Янокути",
+   "source": "wikidata_en",
+   "wikidata": "Q5366316",
+   "kana_agrees": true
+  },
+  "yasaka": {
+   "name_ru": "Ясака",
+   "source": "wikidata_en",
+   "wikidata": "Q8014496",
+   "kana_agrees": true
+  },
+  "yashio": {
+   "name_ru": "Ясио",
+   "source": "wikidata_en",
+   "wikidata": "Q8017379",
+   "kana_agrees": true
+  },
+  "yasuda": {
+   "name_ru": "Хота",
+   "source": "wikidata_en",
+   "wikidata": "Q558549",
+   "kana_agrees": true
+  },
+  "yatsu": {
+   "name_ru": "Яцу",
+   "source": "wikidata_en",
+   "wikidata": "Q8050270",
+   "kana_agrees": true
+  },
+  "yatsuka": {
+   "name_ru": "Яцука",
+   "source": "wikidata_en",
+   "wikidata": "Q8050280",
+   "kana_agrees": true
+  },
+  "yayoi-dai": {
+   "name_ru": "Яёидай",
+   "source": "wikidata_en",
+   "wikidata": "Q8050550",
+   "kana_agrees": true
+  },
+  "yoda": {
+   "name_ru": "Хонда",
+   "source": "wikidata_en",
+   "wikidata": "Q5353370",
+   "kana_agrees": true
+  },
+  "yokose": {
+   "name_ru": "Ёкодзэ",
+   "source": "wikidata_en",
+   "wikidata": "Q8016151",
+   "kana_agrees": true
+  },
+  "yokoshiba": {
+   "name_ru": "Ёкосиба",
+   "source": "wikidata_en",
+   "wikidata": "Q5363081",
+   "kana_agrees": true
+  },
+  "yokosuka": {
+   "name_ru": "Ёкосука",
+   "source": "wikidata_en",
+   "wikidata": "Q844320",
+   "kana_agrees": true
+  },
+  "yokosuka-chuo": {
+   "name_ru": "Ёкосука-Тюо",
+   "source": "wikidata_en",
+   "wikidata": "Q8054669",
+   "kana_agrees": true
+  },
+  "yokota": {
+   "name_ru": "Ёкота",
+   "source": "wikidata_en",
+   "wikidata": "Q8054678",
+   "kana_agrees": true
+  },
+  "yomiurirando-mae": {
+   "name_ru": "Ёмиури-Рандо-Маэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q4053762",
+   "kana_agrees": true
+  },
+  "yono": {
+   "name_ru": "Ёно",
+   "source": "wikidata_en",
+   "wikidata": "Q801652",
+   "kana_agrees": true
+  },
+  "yono-honcho": {
+   "name_ru": "Ёно-Хоммати",
+   "source": "wikidata_en",
+   "wikidata": "Q844390",
+   "kana_agrees": true
+  },
+  "yoshi-kawa-koen": {
+   "name_ru": "Ёсикава-Коэн",
+   "source": "wikidata_en",
+   "wikidata": "Q11621166",
+   "kana_agrees": true
+  },
+  "yoshikawa": {
+   "name_ru": "Ёсикава",
+   "source": "wikidata_en",
+   "wikidata": "Q8013280",
+   "kana_agrees": true
+  },
+  "yoshikawa-bi-minami": {
+   "name_ru": "Ёсикава-Минами",
+   "source": "wikidata_en",
+   "wikidata": "Q8056102",
+   "kana_agrees": true
+  },
+  "yoshino-hara": {
+   "name_ru": "Ёсинохара",
+   "source": "wikidata_en",
+   "wikidata": "Q11414370"
+  },
+  "yoshinocho": {
+   "name_ru": "Ёсинотё",
+   "source": "wikidata_en",
+   "wikidata": "Q579077",
+   "kana_agrees": true
+  },
+  "yotsuya-sanchome": {
+   "name_ru": "Ёцуя-Сантёмэ",
+   "source": "wikidata_ru",
+   "wikidata": "Q1073207",
+   "kana_agrees": true
+  },
+  "yodo": {
+   "name_ru": "Ёдо",
+   "source": "wikidata_en",
+   "wikidata": "Q844838",
+   "kana_agrees": true
+  },
+  "yoga": {
+   "name_ru": "Ёга",
+   "source": "wikidata_en",
+   "wikidata": "Q5367233",
+   "kana_agrees": true
+  },
+  "yokaichiba": {
+   "name_ru": "Ёкайтиба",
+   "source": "wikidata_en",
+   "wikidata": "Q5363766",
+   "kana_agrees": true
+  },
+  "yokodai": {
+   "name_ru": "Ёкодай",
+   "source": "wikidata_en",
+   "wikidata": "Q844428",
+   "kana_agrees": true
+  },
+  "yoro-keikoku": {
+   "name_ru": "Ёрокэйкоку",
+   "source": "wikidata_en",
+   "wikidata": "Q8062673",
+   "kana_agrees": true
+  },
+  "yubi-ogi": {
+   "name_ru": "Сасиоги",
+   "source": "wikidata_en",
+   "wikidata": "Q844454",
+   "kana_agrees": true
+  },
+  "yugawara": {
+   "name_ru": "Югавара",
+   "source": "wikidata_en",
+   "wikidata": "Q841936",
+   "kana_agrees": true
+  },
+  "yui-ke-hama": {
+   "name_ru": "Юигахама",
+   "source": "wikidata_en",
+   "wikidata": "Q859070",
+   "kana_agrees": true
+  },
+  "yuki-ga-taniotsuka": {
+   "name_ru": "Юкигая-Оцука",
+   "source": "wikidata_en",
+   "wikidata": "Q8060692",
+   "kana_agrees": true
+  },
+  "yukinori": {
+   "name_ru": "Гётоку",
+   "source": "wikidata_ru",
+   "wikidata": "Q128806",
+   "kana_agrees": true
+  },
+  "yumega-oka": {
+   "name_ru": "Юмэгаока",
+   "source": "wikidata_en",
+   "wikidata": "Q5367513",
+   "kana_agrees": true
+  },
+  "yuri-ke-oka": {
+   "name_ru": "Юригаока",
+   "source": "wikidata_ru",
+   "wikidata": "Q4534822",
+   "kana_agrees": true
+  },
+  "yushima": {
+   "name_ru": "Юсима",
+   "source": "wikidata_ru",
+   "wikidata": "Q390694",
+   "kana_agrees": true
+  },
+  "yutaka-shiki": {
+   "name_ru": "Тоёсики",
+   "source": "wikidata_en",
+   "wikidata": "Q7830720",
+   "kana_agrees": true
+  },
+  "yutenji": {
+   "name_ru": "Ютэндзи",
+   "source": "wikidata_en",
+   "wikidata": "Q3178446",
+   "kana_agrees": true
+  },
+  "yuenchi-nishi": {
+   "name_ru": "Юэнти-Ниси",
+   "source": "name_en"
+  },
+  "zama": {
+   "name_ru": "Дзама",
+   "source": "wikidata_ru",
+   "wikidata": "Q4160705",
+   "kana_agrees": true
+  },
+  "zenko": {
+   "name_ru": "Дзэнгё",
+   "source": "wikidata_ru",
+   "wikidata": "Q4160904",
+   "kana_agrees": true
+  },
+  "zoshiki": {
+   "name_ru": "Дзосики",
+   "source": "wikidata_en",
+   "wikidata": "Q8076244",
+   "kana_agrees": true
+  },
+  "zushi": {
+   "name_ru": "Дзуси",
+   "source": "wikidata_ru",
+   "wikidata": "Q844325",
+   "kana_agrees": true
+  }
+ }
+}

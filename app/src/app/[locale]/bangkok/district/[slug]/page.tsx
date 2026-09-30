@@ -265,8 +265,8 @@ export default async function DistrictPage({
               <RadarChartWrapper
                 ratings={d.ratings}
                 medians={CITY.medians}
-                medianLabelKey="bangkok.district.radarMedianLabel"
-                areaLabelKey="bangkok.district.radarDistrictLabel"
+                medianLabel={t('bangkok.district.radarMedianLabel')}
+                areaLabel={t('bangkok.district.radarDistrictLabel')}
               />
             </section>
             <section className="bg-white rounded-lg border border-gray-200 p-5">

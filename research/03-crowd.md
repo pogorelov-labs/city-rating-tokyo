@@ -13,18 +13,19 @@
 ### 1a. MLIT National Land Numerical Information (Best Single Source)
 
 **Dataset:** 国土数値情報 駅別乗降客数データ (S12)
-**URL:** https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-v3_1.html
+**URL:** https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-2024.html (the v3.1 page only lists ≤FY2021)
+**Ingest (CRTKY-84, 2026-09-30):** `scripts/scrapers/ingest-mlit-s12.py` downloads the pinned `S12-25_GML.zip` (FY2024, SHA-256 checked) and writes `data/passengers/s12-passengers.json`: 1438/1493 stations (96.3%), 28 of them from an older-year fallback (`moderate`). The remaining 55 are unmanned JR East stations never published in any year, plus とうきょうスカイツリー, whose count Tobu files under 押上.
 **Coverage:** Nationwide — all railway operators who disclose data
 **Format:** GML (JPGIS 2.1), GeoJSON (from FY2016+), Shapefile
-**Years available:** FY2011 through FY2021 in current v3.1 dataset; FY2023 data was published June 2024; FY2024 data released June 2025
+**Years available:** every file carries the full series from FY2011; the newest is FY2024 (`S12-25`, published 2026-04). File naming is `S12-{YY}` with YY = data FY + 1.
 **File pattern:** S12-{YY}_GML.zip (e.g. S12-22_GML.zip for FY2021)
 **Fields (approx 49):** station name, station code, group code, operating company, railway line, classification, annual passenger count per year (integer, persons/day), data availability flags, duplicate codes, remarks
-**License:** Non-commercial use per railway operator agreements
+**License:** 政府標準利用規約 2.0, CC BY 4.0 compatible — commercial use allowed, attribution plus a 加工 note required (shown on `/methodology`). The "non-commercial" note applied only to the old ≤FY2021 v3.1 files.
 **Expected coverage:** Likely 800-1200+ stations in Greater Tokyo (all operators who disclose). Some operators (notably JR Central, JR Shikoku) withhold data, but JR East and all major private railways in Tokyo area are included.
 
 **Assessment:** This is the single most valuable dataset. One download gives station-level daily passenger counts for most stations across all operators. GeoJSON format means it includes lat/lng, making station matching straightforward. Should be priority #1 for implementation.
 
-**Key limitation:** Some stations have missing data where operators opted out. The latest version available to download is FY2021 (v3.1 page), but newer versions (FY2023, FY2024) have been released on the download site — need to check exact URL for latest.
+**Key limitation:** operators opt out per station (JR East unmanned stations), and FY2024 has three verified quirks handled by year-keyed corrections in the ingest: Yokohama subway is boarding-only (×2), Toei drops transfer passengers (max of FY2023/FY2024), and unmanned JR East stations fall back to their last reported year. Re-check per-operator year-on-year ratios before trusting a new vintage.
 
 ### 1b. ODPT Public Transport Open Data Center API
 

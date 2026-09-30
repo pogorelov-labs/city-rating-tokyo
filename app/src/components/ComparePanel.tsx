@@ -13,6 +13,7 @@ import {
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
 import { stationPrimaryName } from '@/lib/station-name';
+import { areaKind } from '@/lib/area-key';
 import type { Locale } from '@/i18n/routing';
 
 const COLORS = ['#3b82f6', '#f97316', '#8b5cf6'];
@@ -48,7 +49,7 @@ export default function ComparePanel({ stations }: Props) {
   const keys = Object.keys(RATING_LABELS) as (keyof WeightConfig)[];
 
   return (
-    <div className="absolute bottom-0 left-0 md:left-72 right-0 z-[900] bg-white rounded-t-xl shadow-2xl border-t border-gray-200 max-h-[50vh] overflow-y-auto" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
+    <div className="absolute bottom-0 left-0 md:left-72 right-0 z-[1001] bg-white rounded-t-xl shadow-2xl border-t border-gray-200 max-h-[50vh] overflow-y-auto" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
       <div className="p-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-3">
@@ -60,6 +61,12 @@ export default function ComparePanel({ stations }: Props) {
                 style={{ borderColor: COLORS[i], color: COLORS[i] }}
               >
                 {stationPrimaryName(s, locale)}
+                {/* Bangkok compares districts and station areas side by side. */}
+                {city.unit === 'district' && (
+                  <span className="opacity-60">
+                    · {t(areaKind(s.slug) === 'station' ? 'filter.kindStationArea' : 'filter.kindDistrict')}
+                  </span>
+                )}
                 <button
                   onClick={() => removeCompareStation(s.slug)}
                   className="hover:opacity-60 ml-0.5"

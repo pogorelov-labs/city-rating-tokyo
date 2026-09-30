@@ -193,6 +193,12 @@ export interface MapStation {
   /** Extra search terms: neighbourhoods and stations inside a district
    *  ("Thong Lo", "Ari", "Silom") — how people actually name places. */
   aliases?: string[];
+  /** Rail lines serving a Bangkok station area, and their colours (chips in
+   *  lists — the colours ride along so lists need not load the rail data). */
+  line_ids?: string[];
+  line_colors?: string[];
+  /** Bangkok station areas: district of the primary station. */
+  district?: string;
   ratings: StationRatings | null;
   /** Monthly rent for the city's reference unit, in the city's currency:
    *  JPY for a Tokyo 1K–1LDK, THB for a Bangkok 1-bedroom condo. */
@@ -230,12 +236,16 @@ export interface RailStation {
   id: string;
   name_en: string;
   name_th: string;
+  /** Katakana name (Wikidata / ja.wikipedia conventions), no 駅 suffix. */
+  name_ja?: string | null;
   lat: number;
   lng: number;
   /** RailLine ids stopping here (interchanges list several). */
   lines: string[];
   /** Slug of the district containing the station; null outside Bangkok. */
   district: string | null;
+  /** Id of the station area this station belongs to; null outside Bangkok. */
+  area?: string | null;
 }
 
 /** Wikimedia Commons image for a district (Wikidata P18), hot-linked. */
@@ -308,6 +318,68 @@ export interface District {
   description: MultilingualDescription | null;
   image: DistrictImage | null;
   /** Wikipedia article URLs by language, when an article exists. */
+  wikipedia: Partial<Record<'en' | 'ja' | 'ru' | 'th', string>>;
+}
+
+/**
+ * How finely a city map is divided. Tokyo has one level (station). Bangkok
+ * has three: its 50 districts, the walkable area around each rail station,
+ * and a 200 m grid — see `CityConfig.levels`.
+ */
+export type AreaLevel = 'district' | 'station' | 'grid';
+
+/** Counts inside a Bangkok station area (Overture Maps / OSM). */
+export interface StationAreaFacts {
+  area_km2: number;
+  food: number;
+  cafes: number;
+  nightlife: number;
+  convenience: number;
+  markets: number;
+  essentials: number;
+  sports: number;
+  culture: number;
+  temples: number;
+  /** Parks, gardens and woodland inside the area, hectares. */
+  park_ha: number;
+  piers: number;
+}
+
+/**
+ * A Bangkok station area: the part of the city within walking range
+ * (≤ 800 m) of one rail station — or of an interchange complex such as
+ * Asok + Sukhumvit — and nearer to it than to any other station.
+ * Rent and safety are the district estimates, blended by resident weight
+ * where the area straddles a district border.
+ */
+export interface StationArea {
+  id: string;
+  name_en: string;
+  name_th: string;
+  name_jp: string;
+  /** The primary station — the map label position. */
+  lat: number;
+  lng: number;
+  station_ids: string[];
+  line_ids: string[];
+  /** District of the primary station. */
+  district: string;
+  /** Districts the area covers, by share of resident weight (≥ 5 %). */
+  districts: { slug: string; share: number }[];
+  ratings: StationRatings;
+  confidence: StationConfidence;
+  sources: StationSources;
+  data_date: string;
+  rent: DistrictRent;
+  /** Peak minutes from the station itself to each hub. */
+  transit_minutes: HubMinutes;
+  min_transit: number | null;
+  /** Median resident of the area, door to hub (includes the walk to the station). */
+  resident_minutes: HubMinutes;
+  /** Adjacent station areas along the lines (next stops). */
+  neighbors: string[];
+  facts: StationAreaFacts;
+  image: DistrictImage | null;
   wikipedia: Partial<Record<'en' | 'ja' | 'ru' | 'th', string>>;
 }
 
