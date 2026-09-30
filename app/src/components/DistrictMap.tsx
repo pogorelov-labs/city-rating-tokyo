@@ -102,7 +102,6 @@ function FlyToBounds({
   // Mount-only (the parent keys this component on the selection): the
   // callbacks are stable, and re-running on parent re-render would detach
   // the moveend listener mid-animation (same as Map.tsx FlyToStation).
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
     const latLngBounds = L.latLngBounds(bounds);
     const padTL = L.point(40, 40);
@@ -134,6 +133,7 @@ function FlyToBounds({
       duration: 0.6,
       easeLinearity: 0.4,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return null;
 }
