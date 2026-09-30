@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
       { source: '/:locale(ja|ru)/tokyo', destination: '/:locale', permanent: false },
       { source: '/bangkok/district', destination: '/bangkok', permanent: false },
       { source: '/:locale(ja|ru)/bangkok/district', destination: '/:locale/bangkok', permanent: false },
+      { source: '/bangkok/station', destination: '/bangkok?lv=station', permanent: false },
+      { source: '/:locale(ja|ru)/bangkok/station', destination: '/:locale/bangkok?lv=station', permanent: false },
     ];
     return [...slugs, ...cities];
   },
@@ -68,6 +70,12 @@ const nextConfig: NextConfig = {
             value: "camera=(), microphone=(), geolocation=()",
           },
         ],
+      },
+      {
+        // Bangkok's packed 200 m grid: the file name carries a content hash
+        // (scripts/bangkok/build.py), so it can be cached for good.
+        source: "/data/bangkok/:file*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];
   },

@@ -148,6 +148,115 @@ def merge_ai_confidence(entry_text, ai_ratings, computed_row):
     return conf_str, srcs_str, data_date
 
 
+def _computed_meta(computed_row, field, cat, default):
+    """Read one category from a computed row's JSON-string metadata column."""
+    val = computed_row.get(field) if computed_row else None
+    if isinstance(val, str):
+        try:
+            val = json.loads(val)
+        except (json.JSONDecodeError, TypeError):
+            val = None
+    if isinstance(val, dict):
+        return val.get(cat, default)
+    return default
+
+
+def backfill_daily_essentials(entry_text, computed_row):
+    """
+    Fill daily_essentials into an AI-researched entry from the computed pipeline.
+
+    CRTKY-129: the AI-researched entries predate the daily_essentials category
+    (PR #81), so their ratings, confidence and sources objects have no
+    daily_essentials key — and the CRTKY-83 merge only runs for entries without
+    a confidence block, so it never revisits them. The frontend then substituted
+    a hardcoded 5 (data.ts) that fed the composite score at 14% weight.
+
+    No researcher ever rated this category, so there is no editorial value to
+    preserve: the computed rating, confidence and sources are the honest ones.
+    Keys that are already present are left untouched.
+
+    Returns (entry_text, status) with status one of:
+      'present' — the entry already had a daily_essentials rating
+      'filled'  — the rating was filled from computed data
+      'missing' — no rating and no computed value to fill it from
+    """
+    computed_value = computed_row.get("daily_essentials") if computed_row else None
+    ratings = re.search(r"ratings: \{([^}]*)\}", entry_text)
+    existing = re.search(r"daily_essentials: (\d+)", ratings.group(1)) if ratings else None
+    if existing:
+        status = "present"
+        # A researcher-set value follows the CRTKY-83 rule: agreement with the
+        # pipeline inherits its metadata, disagreement is editorial.
+        inherits = computed_value is not None and int(existing.group(1)) == int(computed_value)
+    else:
+        if computed_value is None or not ratings:
+            return entry_text, "missing"
+        entry_text = (
+            entry_text[:ratings.end() - 1].rstrip()
+            + f", daily_essentials: {int(computed_value)} "
+            + entry_text[ratings.end() - 1:]
+        )
+        status = "filled"
+        inherits = True
+
+    if inherits:
+        conf_level = _computed_meta(computed_row, "confidence", "daily_essentials", "estimate")
+        srcs_list = _computed_meta(computed_row, "sources", "daily_essentials", [])
+    else:
+        conf_level, srcs_list = "editorial", ["ai_research"]
+    srcs_ts = "[" + ", ".join(f"'{s}'" for s in srcs_list) + "]"
+    for field, literal in (("confidence", f"'{conf_level}'"), ("sources", srcs_ts)):
+        # confidence values have no brackets; sources values are flat [...] arrays
+        block = re.search(rf"{field}: \{{([^{{}}]*)\}}", entry_text)
+        if block and "daily_essentials:" not in block.group(1):
+            entry_text = (
+                entry_text[:block.end() - 1].rstrip()
+                + f", daily_essentials: {literal} "
+                + entry_text[block.end() - 1:]
+            )
+    return entry_text, status
+
+
+STATION_LEVEL_RENT_SOURCES = {"suumo", "homes"}
+
+
+def apply_station_level_rent(entry_text, computed_row):
+    """
+    Let station-level rent data win over the editorial rent rating.
+
+    Decided 2026-09-30 (research/decisions/2026-09-30-epic80-checkpoint.md, D3b):
+    when the pipeline rated this station's rent from listings scraped around it
+    (sources suumo/homes), that rating and its metadata replace the AI
+    researcher's value. The frontend was already showing the recomputed Suumo
+    value, but under an 'editorial' label — this makes the export agree with
+    what is displayed, and the label honest.
+
+    Only the rent key inside ratings/confidence/sources changes; rent_avg and
+    everything else is left as is. Returns (entry_text, changed).
+    """
+    if not computed_row:
+        return entry_text, False
+    srcs = _computed_meta(computed_row, "sources", "rent", [])
+    value = computed_row.get("rent")
+    if value is None or not STATION_LEVEL_RENT_SOURCES & set(srcs):
+        return entry_text, False
+    conf = _computed_meta(computed_row, "confidence", "rent", "estimate")
+    srcs_ts = "[" + ", ".join(f"'{s}'" for s in srcs) + "]"
+
+    before = entry_text
+    for field, pattern, literal in (
+        ("ratings", r"\brent: \d+", f"rent: {int(value)}"),
+        ("confidence", r"\brent: '\w+'", f"rent: '{conf}'"),
+        ("sources", r"\brent: \[[^\]]*\]", f"rent: {srcs_ts}"),
+    ):
+        block = re.search(rf"{field}: \{{([^{{}}]*)\}}", entry_text)
+        if not block:
+            continue
+        inner = re.sub(pattern, literal, block.group(1), count=1)
+        entry_text = entry_text[:block.start(1)] + inner + entry_text[block.end(1):]
+    return entry_text, entry_text != before
+
+
 def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
     """Format a computed rating entry as TypeScript."""
     r = data
@@ -273,7 +382,7 @@ def main():
     parts = []
     parts.append("import { StationRatings, TransitMinutes, RentAvg, StationConfidence, StationSources } from '@/lib/types';")
     parts.append("")
-    parts.append("// daily_essentials is optional for AI-researched entries until they are re-exported")
+    parts.append("// daily_essentials is filled for every entry by export-ratings.py (CRTKY-129); optional only for --allow-missing runs")
     parts.append("type DemoRatings = Omit<StationRatings, 'daily_essentials'> & { daily_essentials?: number };")
     parts.append("")
     parts.append("interface DemoData {")
@@ -296,14 +405,24 @@ def main():
     # First: AI-researched entries (ratings preserved, confidence merged)
     parts.append("  // === AI-researched ratings (preserved, confidence merged) ===")
     ai_conf_merged = 0
+    ai_de_filled = 0
+    ai_de_missing = []
+    ai_rent_station_level = 0
     for slug in sorted(ai_entries.keys()):
         if slug in all_slugs:
             entry_text = ai_entries[slug]
+            comp_row = computed.get(slug)
+            # Fill daily_essentials from the pipeline first (CRTKY-129), so the
+            # CRTKY-83 merge below sees a rating that agrees with computed.
+            entry_text, de_status = backfill_daily_essentials(entry_text, comp_row)
+            if de_status == "filled":
+                ai_de_filled += 1
+            elif de_status == "missing":
+                ai_de_missing.append(slug)
             # Merge confidence metadata from computed pipeline (CRTKY-83)
             has_confidence = 'confidence:' in entry_text
             if not has_confidence:
                 ai_ratings = parse_ai_ratings(entry_text)
-                comp_row = computed.get(slug)
                 conf_str, srcs_str, data_date = merge_ai_confidence(
                     entry_text, ai_ratings, comp_row
                 )
@@ -320,6 +439,9 @@ def main():
                 # Replace the final '},\n' or '},' with injected block
                 entry_text = re.sub(r'\s*\},?\s*$', inject, entry_text)
                 ai_conf_merged += 1
+            # Station-level rent beats the editorial value (D3b, 2026-09-30).
+            entry_text, rent_changed = apply_station_level_rent(entry_text, comp_row)
+            ai_rent_station_level += rent_changed
             parts.append(entry_text)
             ai_count += 1
 
@@ -341,6 +463,10 @@ def main():
         else:
             missing_count += 1
 
+    # An AI entry with no daily_essentials rating would fall back to a synthetic
+    # value in the frontend — treat it like any other missing rating.
+    missing_count += len(ai_de_missing)
+
     parts.append("};")
     parts.append("")
 
@@ -349,6 +475,12 @@ def main():
     print(f"\nSummary:")
     print(f"  AI-researched (preserved): {ai_count}")
     print(f"    confidence merged:       {ai_conf_merged}")
+    print(f"    daily_essentials filled: {ai_de_filled}")
+    print(f"    rent from station data:  {ai_rent_station_level}")
+    if ai_de_missing:
+        print(f"    daily_essentials MISSING: {len(ai_de_missing)} "
+              f"(no computed value): {', '.join(ai_de_missing[:10])}"
+              f"{' …' if len(ai_de_missing) > 10 else ''}")
     print(f"  Computed (data-driven):    {computed_count}")
     print(f"  Missing (no data):         {missing_count}")
     print(f"  Total entries:             {ai_count + computed_count}")
@@ -356,7 +488,7 @@ def main():
 
     if missing_count > 0 and not args.allow_missing:
         print(
-            f"\nERROR: {missing_count} station(s) in stations.json have no computed rating. "
+            f"\nERROR: {missing_count} station(s) lack a computed rating (whole entry, or daily_essentials on an AI-researched entry). "
             "Refusing to write a partial demo-ratings.ts. "
             "Re-run compute-ratings.py, or pass --allow-missing to override.",
             file=sys.stderr,

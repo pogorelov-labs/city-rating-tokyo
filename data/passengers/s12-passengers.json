@@ -1,0 +1,9006 @@
+{
+ "metadata": {
+  "source": "国土数値情報 駅別乗降客数データ (S12), 国土交通省",
+  "dataset_page": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-2024.html",
+  "file": "https://nlftp.mlit.go.jp/ksj/gml/data/S12/S12-25/S12-25_GML.zip",
+  "sha256": "0785e932a32b3ec15e1a1345537ae145eafe1c07bf38d5c16c11ee2b391e7a28",
+  "fiscal_year": 2024,
+  "unit": "persons/day, boarding + alighting, summed across operators",
+  "license": "政府標準利用規約 2.0 (CC BY 4.0 compatible)",
+  "attribution": "出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）(https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-2024.html) を加工して作成",
+  "generated_by": "scripts/scrapers/ingest-mlit-s12.py",
+  "stations_valued": 1438,
+  "stations_without_data": [
+   "an-zen",
+   "asano",
+   "benten-hashi",
+   "chitose",
+   "fukudawara",
+   "gion",
+   "gun-hatake",
+   "hamakawasaki",
+   "higashi-abiko",
+   "higashi-nami-ken",
+   "hirayama",
+   "iikura",
+   "iriya",
+   "ishigami-mae",
+   "juni-hashi",
+   "katori",
+   "kawai",
+   "kazusa-kiyokawa",
+   "kazusa-matsuoka",
+   "kokonoe",
+   "kokudo",
+   "kuju",
+   "kurahashi",
+   "matsuhisa",
+   "mikado",
+   "minami-sake-kurikaesi-i",
+   "miya-no-taira",
+   "musashi-shiroishi",
+   "namekawa-airando",
+   "naniwa",
+   "nebukawa",
+   "obitsu",
+   "oda-sakae",
+   "ogimachi",
+   "okawa",
+   "orihara",
+   "oto",
+   "saruta",
+   "sawai",
+   "shiishiba",
+   "shimogori",
+   "shimosa-toyosato",
+   "shin-shibaura",
+   "shiromaru",
+   "showa",
+   "suigo",
+   "takeoka",
+   "tawarada",
+   "tofuku-nama",
+   "tokyo-sukaitsurii",
+   "toshin-kawa",
+   "toyoko-ta",
+   "tsurumi-ono",
+   "umi-shibaura",
+   "yodo"
+  ],
+  "corrections_applied": {
+   "boarding_x2": 39,
+   "fallback": 70,
+   "prev_year_max": 41
+  }
+ },
+ "stations": {
+  "abiko": {
+   "daily_passengers": 57512,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "adachi-odai": {
+   "daily_passengers": 3685,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ageo": {
+   "daily_passengers": 77362,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "agui": {
+   "daily_passengers": 3942,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "aihara": {
+   "daily_passengers": 19964,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aiko-ishida": {
+   "daily_passengers": 46455,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akabane": {
+   "daily_passengers": 188334,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akabane-iwabuchi": {
+   "daily_passengers": 94035,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akabanebashi": {
+   "daily_passengers": 37465,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akasaka": {
+   "daily_passengers": 77718,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akebonobashi": {
+   "daily_passengers": 36403,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akigawa": {
+   "daily_passengers": 11938,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akihabara": {
+   "daily_passengers": 678406,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akira-shima": {
+   "daily_passengers": 46582,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akitsu": {
+   "daily_passengers": 76596,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "akiyama": {
+   "daily_passengers": 8596,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "anabe": {
+   "daily_passengers": 1247,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "anagawa": {
+   "daily_passengers": 3858,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "anamori-inari": {
+   "daily_passengers": 20698,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ane-ke-saki": {
+   "daily_passengers": 18488,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "anjin-tsuka": {
+   "daily_passengers": 4297,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ao-hori": {
+   "daily_passengers": 2666,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aobadai": {
+   "daily_passengers": 98123,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aoi": {
+   "daily_passengers": 13288,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aomono-yokocho": {
+   "daily_passengers": 35970,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aoto": {
+   "daily_passengers": 48727,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "aoyama-itchome": {
+   "daily_passengers": 164851,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "arai-kusurishi-mae": {
+   "daily_passengers": 19709,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "araijuku": {
+   "daily_passengers": 12000,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawa-itchu-mae": {
+   "daily_passengers": 699,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawa-nichome": {
+   "daily_passengers": 845,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawa-shichi-chome": {
+   "daily_passengers": 473,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawa-yuenchi-mae": {
+   "daily_passengers": 2207,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawaku-yakusho-mae": {
+   "daily_passengers": 1689,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "arakawashakomae": {
+   "daily_passengers": 3350,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "araki": {
+   "daily_passengers": 5312,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "ariake": {
+   "daily_passengers": 9102,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ariake-tenisu-no-mori": {
+   "daily_passengers": 8868,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "asagaya": {
+   "daily_passengers": 84048,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "asahi": {
+   "daily_passengers": 3166,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "asaka": {
+   "daily_passengers": 67537,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "asakusa": {
+   "daily_passengers": 203740,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "asakusabashi": {
+   "daily_passengers": 156901,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ashi-ke-kubo": {
+   "daily_passengers": 372,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ashigara": {
+   "daily_passengers": 3561,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "asuka-yama": {
+   "daily_passengers": 993,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "atago": {
+   "daily_passengers": 10146,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "atsugi": {
+   "daily_passengers": 32376,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "awa-kamogawa": {
+   "daily_passengers": 2162,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "awa-katsuyama": {
+   "daily_passengers": 574,
+   "data_year": 2019,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2019"
+   ]
+  },
+  "awa-kominato": {
+   "daily_passengers": 266,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "awa-tenshin": {
+   "daily_passengers": 264,
+   "data_year": 2018,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2018"
+   ]
+  },
+  "awajicho": {
+   "daily_passengers": 127065,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ayase": {
+   "daily_passengers": 384554,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "azabu-juban": {
+   "daily_passengers": 73958,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "azami-no": {
+   "daily_passengers": 194631,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "baigo": {
+   "daily_passengers": 15374,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bakurocho": {
+   "daily_passengers": 232415,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ban-ta": {
+   "daily_passengers": 7076,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "bando-hashi": {
+   "daily_passengers": 23452,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "barakinakayama": {
+   "daily_passengers": 27159,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "basha-michi": {
+   "daily_passengers": 43530,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bubaigawara": {
+   "daily_passengers": 161390,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bushu-araki": {
+   "daily_passengers": 300,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bushu-hino": {
+   "daily_passengers": 141,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bushu-karasawa": {
+   "daily_passengers": 2859,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bushu-nagase": {
+   "daily_passengers": 3757,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "bushu-nakagawa": {
+   "daily_passengers": 197,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "busshi": {
+   "daily_passengers": 9467,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "byobu-ura": {
+   "daily_passengers": 16607,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiba": {
+   "daily_passengers": 268298,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiba-koen": {
+   "daily_passengers": 2386,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiba-minato": {
+   "daily_passengers": 51813,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiba-nyutaun-chuo": {
+   "daily_passengers": 23521,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiba-tera": {
+   "daily_passengers": 5353,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chibachuo": {
+   "daily_passengers": 20353,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chichibu": {
+   "daily_passengers": 1070,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chidoricho": {
+   "daily_passengers": 15216,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chihara-dai": {
+   "daily_passengers": 5991,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chikatetsu-akatsuka": {
+   "daily_passengers": 54804,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chikatetsu-narimasu": {
+   "daily_passengers": 103999,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chiku-sentaa": {
+   "daily_passengers": 449,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chikura": {
+   "daily_passengers": 522,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "chitose-funabashi": {
+   "daily_passengers": 55873,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chitose-karasuyama": {
+   "daily_passengers": 79689,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "cho-ura": {
+   "daily_passengers": 11440,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chofu": {
+   "daily_passengers": 118575,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chogo": {
+   "daily_passengers": 31840,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chojamachi": {
+   "daily_passengers": 576,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "chokoku-no-mori": {
+   "daily_passengers": 904,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "choshi": {
+   "daily_passengers": 5783,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chugakko": {
+   "daily_passengers": 2012,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chuodaigaku-meiseidaigaku": {
+   "daily_passengers": 27913,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "chuorinkan": {
+   "daily_passengers": 187009,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "daiba": {
+   "daily_passengers": 19936,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "daijingushita": {
+   "daily_passengers": 5578,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "daikanyama": {
+   "daily_passengers": 28772,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "daimon": {
+   "daily_passengers": 101853,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "daishimae": {
+   "daily_passengers": 12621,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "denenchofu": {
+   "daily_passengers": 30210,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "dobutsu-koen": {
+   "daily_passengers": 1539,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
+   "daily_passengers": 56374,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "doro": {
+   "daily_passengers": 30412,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ebina": {
+   "daily_passengers": 275368,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ebisu": {
+   "daily_passengers": 356771,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "eda": {
+   "daily_passengers": 31901,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "edogawa": {
+   "daily_passengers": 6229,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "edogawa-dai": {
+   "daily_passengers": 23221,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "edogawabashi": {
+   "daily_passengers": 49844,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ehara-machi": {
+   "daily_passengers": 15179,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ehara-nakanobe": {
+   "daily_passengers": 12777,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "eifuku-machi": {
+   "daily_passengers": 30039,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ekoda": {
+   "daily_passengers": 32177,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "emi": {
+   "daily_passengers": 102,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "enoto": {
+   "daily_passengers": 3378,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "etchu-shima": {
+   "daily_passengers": 10880,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuchinobe": {
+   "daily_passengers": 70264,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuchu": {
+   "daily_passengers": 81516,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuchu-keiba-seimonmae": {
+   "daily_passengers": 2442,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuchuhonmachi": {
+   "daily_passengers": 32500,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuda": {
+   "daily_passengers": 13497,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fudomae": {
+   "daily_passengers": 29015,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuji-fuirumu-mae": {
+   "daily_passengers": 1320,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fuji-no-ushijima": {
+   "daily_passengers": 6920,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujigaoka": {
+   "daily_passengers": 25508,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujimi-no": {
+   "daily_passengers": 62055,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujimicho": {
+   "daily_passengers": 5722,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujimidai": {
+   "daily_passengers": 27732,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujimigaoka": {
+   "daily_passengers": 13091,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujino": {
+   "daily_passengers": 3488,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujisawa": {
+   "daily_passengers": 388269,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fujisawa-honcho": {
+   "daily_passengers": 20527,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fukaya": {
+   "daily_passengers": 18100,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fukiage": {
+   "daily_passengers": 15864,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fukuura": {
+   "daily_passengers": 3929,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "funabashi": {
+   "daily_passengers": 465944,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "funabashi-hoten": {
+   "daily_passengers": 35370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "funabashi-nichidai-mae": {
+   "daily_passengers": 21606,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "funabashikeibajo": {
+   "daily_passengers": 18907,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "funabori": {
+   "daily_passengers": 58409,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "fune-no-kagakukan": {
+   "daily_passengers": 3503,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "furusato": {
+   "daily_passengers": 532,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "fusa": {
+   "daily_passengers": 5530,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "fussa": {
+   "daily_passengers": 30374,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "futako-tamagawa": {
+   "daily_passengers": 140353,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "futakoshinchi": {
+   "daily_passengers": 20845,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "futamata-o": {
+   "daily_passengers": 976,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "futamata-shinmachi": {
+   "daily_passengers": 10104,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "futamatagawa": {
+   "daily_passengers": 77768,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "futawa-mukaedai": {
+   "daily_passengers": 16387,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gaiemmae": {
+   "daily_passengers": 74637,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gakuen-mae": {
+   "daily_passengers": 5794,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gakugei-daigaku": {
+   "daily_passengers": 72696,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gakushuin-shita": {
+   "daily_passengers": 1716,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gamo": {
+   "daily_passengers": 17051,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "genka-osamu": {
+   "daily_passengers": 7276,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gezan-kuchi": {
+   "daily_passengers": 7266,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ginza": {
+   "daily_passengers": 230271,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ginzaitchome": {
+   "daily_passengers": 33805,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gogatsu-dai": {
+   "daily_passengers": 9688,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gohyaku-rakan": {
+   "daily_passengers": 1351,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "goi": {
+   "daily_passengers": 35058,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "goko": {
+   "daily_passengers": 27684,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gokokuji": {
+   "daily_passengers": 40640,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gokuraku-tera": {
+   "daily_passengers": 1733,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gora": {
+   "daily_passengers": 5824,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gotan-no": {
+   "daily_passengers": 36724,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gotanda": {
+   "daily_passengers": 375542,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gotokuji": {
+   "daily_passengers": 35296,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gyoda": {
+   "daily_passengers": 11830,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "gyodashi": {
+   "daily_passengers": 1394,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hachi-seki": {
+   "daily_passengers": 1302,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "hachigata": {
+   "daily_passengers": 787,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hachiman-yado": {
+   "daily_passengers": 22134,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hachioji": {
+   "daily_passengers": 154802,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hachioji-minami-no": {
+   "daily_passengers": 34374,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hadano": {
+   "daily_passengers": 36217,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hagiyama": {
+   "daily_passengers": 9179,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "haijima": {
+   "daily_passengers": 90716,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hakkei-shima": {
+   "daily_passengers": 4988,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hakone-itabashi": {
+   "daily_passengers": 2113,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hakone-ke-saki": {
+   "daily_passengers": 7948,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "hakoneyumoto": {
+   "daily_passengers": 9525,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hakuraku": {
+   "daily_passengers": 41502,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hakusan": {
+   "daily_passengers": 48388,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hamacho": {
+   "daily_passengers": 21447,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hamadayama": {
+   "daily_passengers": 27565,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hamakin-tani": {
+   "daily_passengers": 432,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "hamamatsucho": {
+   "daily_passengers": 362056,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hamano": {
+   "daily_passengers": 15008,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hamura": {
+   "daily_passengers": 25008,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hana-koganei": {
+   "daily_passengers": 54491,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanasaki": {
+   "daily_passengers": 9690,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hane-kan": {
+   "daily_passengers": 4540,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanedakuko-kokunaisen-taaminaru": {
+   "daily_passengers": 132821,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanedakuko-kokusaisen-taaminaru": {
+   "daily_passengers": 47320,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanno": {
+   "daily_passengers": 27920,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanyu": {
+   "daily_passengers": 15450,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hanzomon": {
+   "daily_passengers": 73487,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hara-toma": {
+   "daily_passengers": 9136,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "haraichi": {
+   "daily_passengers": 3255,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "harajuku": {
+   "daily_passengers": 240479,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "haruhi-no": {
+   "daily_passengers": 9763,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hase": {
+   "daily_passengers": 10238,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hashimoto": {
+   "daily_passengers": 210749,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hasuda": {
+   "daily_passengers": 37868,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hasunuma": {
+   "daily_passengers": 8254,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hatagaya": {
+   "daily_passengers": 29965,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hatanodai": {
+   "daily_passengers": 39338,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hatchobori": {
+   "daily_passengers": 166605,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hatchonawate": {
+   "daily_passengers": 20206,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hato-ke-tani": {
+   "daily_passengers": 23200,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hato-no-su": {
+   "daily_passengers": 404,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "hatsuishi": {
+   "daily_passengers": 19248,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hatsutomi": {
+   "daily_passengers": 5248,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hayakawa": {
+   "daily_passengers": 2720,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hazama": {
+   "daily_passengers": 7823,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "heiwa-shima": {
+   "daily_passengers": 44102,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "heiwadai": {
+   "daily_passengers": 42893,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hibarigaoka": {
+   "daily_passengers": 68792,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hibiya": {
+   "daily_passengers": 173739,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "higashi-aki-ryu": {
+   "daily_passengers": 8656,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-azuma": {
+   "daily_passengers": 7938,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-fuchu": {
+   "daily_passengers": 19944,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-funabashi": {
+   "daily_passengers": 40076,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-ikebukuro": {
+   "daily_passengers": 49091,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-iwatsuki": {
+   "daily_passengers": 19454,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-kanagawa": {
+   "daily_passengers": 91804,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-koenji": {
+   "daily_passengers": 33021,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-koganei": {
+   "daily_passengers": 59298,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-matsubara": {
+   "daily_passengers": 15426,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-matsudo": {
+   "daily_passengers": 66247,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-murayama": {
+   "daily_passengers": 45102,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-nakano": {
+   "daily_passengers": 98101,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "higashi-shinjuku": {
+   "daily_passengers": 76281,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "higashi-washimiya": {
+   "daily_passengers": 17180,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashi-zushi": {
+   "daily_passengers": 8964,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashichiba": {
+   "daily_passengers": 5944,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashifushimi": {
+   "daily_passengers": 21835,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiginza": {
+   "daily_passengers": 161127,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "higashihanno": {
+   "daily_passengers": 16486,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashijujo": {
+   "daily_passengers": 45690,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashikawaguchi": {
+   "daily_passengers": 111914,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashikitazawa": {
+   "daily_passengers": 8030,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashikurume": {
+   "daily_passengers": 51222,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashimatsuyama": {
+   "daily_passengers": 26436,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashimon-mae": {
+   "daily_passengers": 12967,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashimuki-shima": {
+   "daily_passengers": 19220,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashinagasaki": {
+   "daily_passengers": 25544,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashinaka-kami": {
+   "daily_passengers": 14574,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashinakayama": {
+   "daily_passengers": 6963,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashinarita": {
+   "daily_passengers": 2101,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiogu-sanchome": {
+   "daily_passengers": 1563,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiome": {
+   "daily_passengers": 12302,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashitokorozawa": {
+   "daily_passengers": 31078,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashitotsuka": {
+   "daily_passengers": 103486,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiurawa": {
+   "daily_passengers": 54654,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiyama-kita": {
+   "daily_passengers": 1542,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higashiyama-ta": {
+   "daily_passengers": 10386,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "higashiyamatoshi": {
+   "daily_passengers": 23998,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "higata": {
+   "daily_passengers": 1730,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "higuchi": {
+   "daily_passengers": 155,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hikarigaoka": {
+   "daily_passengers": 56838,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hikawadai": {
+   "daily_passengers": 37978,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hikifune": {
+   "daily_passengers": 29890,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "himemiya": {
+   "daily_passengers": 4651,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hinatawada": {
+   "daily_passengers": 2030,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "hino": {
+   "daily_passengers": 45858,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hinode": {
+   "daily_passengers": 2441,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hirai": {
+   "daily_passengers": 62126,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hirama": {
+   "daily_passengers": 26592,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hiranumabashi": {
+   "daily_passengers": 9177,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hiratsuka": {
+   "daily_passengers": 113340,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hirayama-joshi-koen": {
+   "daily_passengers": 7740,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hire-ke-saki": {
+   "daily_passengers": 1124,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hiroaki-tera": {
+   "daily_passengers": 26648,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hiroo": {
+   "daily_passengers": 58660,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hirose-yacho-no-mori": {
+   "daily_passengers": 1217,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hitotsubashi-gakuen": {
+   "daily_passengers": 20370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hiyoshi": {
+   "daily_passengers": 264549,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "hiyoshihoncho": {
+   "daily_passengers": 16594,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "ho-tsuchi-ke-tani": {
+   "daily_passengers": 58488,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hodokubo": {
+   "daily_passengers": 1711,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hokucho-kasumi": {
+   "daily_passengers": 288341,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hokudai-miya": {
+   "daily_passengers": 6499,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hokuetsu-tani": {
+   "daily_passengers": 48539,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hon-atsugi": {
+   "daily_passengers": 127031,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hon-choshi": {
+   "daily_passengers": 116,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hon-komagome": {
+   "daily_passengers": 21070,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hon-no": {
+   "daily_passengers": 2984,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "honancho": {
+   "daily_passengers": 40171,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "honchiba": {
+   "daily_passengers": 25816,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hongo-sanchome": {
+   "daily_passengers": 71805,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "hongodai": {
+   "daily_passengers": 36576,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "honjo": {
+   "daily_passengers": 17226,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "honjoazumabashi": {
+   "daily_passengers": 21482,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "honkawa-etsu": {
+   "daily_passengers": 49020,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "honkugenuma": {
+   "daily_passengers": 13013,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hori-no-nai": {
+   "daily_passengers": 11365,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "horikiri": {
+   "daily_passengers": 4217,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "horikiri-shobuen": {
+   "daily_passengers": 22096,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hoshikawa": {
+   "daily_passengers": 30148,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hotaruda": {
+   "daily_passengers": 5617,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hoya": {
+   "daily_passengers": 56960,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "hyuga": {
+   "daily_passengers": 1374,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "i-hosoda": {
+   "daily_passengers": 3370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichi-no-wari": {
+   "daily_passengers": 16354,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichigaya": {
+   "daily_passengers": 321074,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ichikawa": {
+   "daily_passengers": 112842,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichikawa-mama": {
+   "daily_passengers": 6821,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichikawa-ono": {
+   "daily_passengers": 22360,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichikawa-shiohama": {
+   "daily_passengers": 15764,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ichinoe": {
+   "daily_passengers": 43043,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ido-ke-tani": {
+   "daily_passengers": 27383,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iida-oka": {
+   "daily_passengers": 1842,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iidabashi": {
+   "daily_passengers": 323664,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "iioka": {
+   "daily_passengers": 1246,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "iiyama-man": {
+   "daily_passengers": 20211,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ikebukuro": {
+   "daily_passengers": 2364011,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ikegami": {
+   "daily_passengers": 35181,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ikejiriohashi": {
+   "daily_passengers": 63191,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ikenoe": {
+   "daily_passengers": 9179,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ikuta": {
+   "daily_passengers": 44658,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ima-hane": {
+   "daily_passengers": 4798,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ina-chuo": {
+   "daily_passengers": 2395,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inadazutsumi": {
+   "daily_passengers": 47366,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inage": {
+   "daily_passengers": 92590,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inage-kaigan": {
+   "daily_passengers": 40720,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inagi": {
+   "daily_passengers": 19257,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inagi-naganuma": {
+   "daily_passengers": 15668,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inamura-ke-saki": {
+   "daily_passengers": 4142,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inaricho": {
+   "daily_passengers": 18891,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inariyama-koen": {
+   "daily_passengers": 9589,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inba-nippon-idai": {
+   "daily_passengers": 5289,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ino": {
+   "daily_passengers": 562,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inokashira-koen": {
+   "daily_passengers": 6657,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inuboe": {
+   "daily_passengers": 145,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "inzai-maki-no-hara": {
+   "daily_passengers": 16549,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iogi": {
+   "daily_passengers": 18679,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ipponmatsu": {
+   "daily_passengers": 4368,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iriuda": {
+   "daily_passengers": 952,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "irumashi": {
+   "daily_passengers": 29964,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "isehara": {
+   "daily_passengers": 47079,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "isezaki-chojamachi": {
+   "daily_passengers": 19358,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "ishigami": {
+   "daily_passengers": 699,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ishihara": {
+   "daily_passengers": 1172,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ishikawacho": {
+   "daily_passengers": 60082,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ishikawadai": {
+   "daily_passengers": 14877,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "isogo": {
+   "daily_passengers": 35350,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "itabashi": {
+   "daily_passengers": 65264,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "itabashihoncho": {
+   "daily_passengers": 37555,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "itabashikuyakusho-mae": {
+   "daily_passengers": 34519,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "itsumi": {
+   "daily_passengers": 4491,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iwahara": {
+   "daily_passengers": 1407,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iwai": {
+   "daily_passengers": 458,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "iwamotocho": {
+   "daily_passengers": 49899,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "iwane": {
+   "daily_passengers": 3222,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "iwatsuki": {
+   "daily_passengers": 35091,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "izumi-chuo": {
+   "daily_passengers": 15694,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "izumi-no": {
+   "daily_passengers": 12933,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "izumi-taiikukan": {
+   "daily_passengers": 6498,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "izumi-tamagawa": {
+   "daily_passengers": 14474,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "jimbocho": {
+   "daily_passengers": 216755,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "jinbohara": {
+   "daily_passengers": 5112,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "jinmu-tera": {
+   "daily_passengers": 4982,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "jiyugaoka": {
+   "daily_passengers": 136588,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "jocho-toro": {
+   "daily_passengers": 229,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "josei-kawa": {
+   "daily_passengers": 22607,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "joshidai": {
+   "daily_passengers": 577,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "jujo": {
+   "daily_passengers": 67506,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kachidoki": {
+   "daily_passengers": 91189,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kadosawa-hashi": {
+   "daily_passengers": 3710,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "kagawa": {
+   "daily_passengers": 11546,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kagemori": {
+   "daily_passengers": 417,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kagetsuen-mae": {
+   "daily_passengers": 7268,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kago-hara": {
+   "daily_passengers": 27114,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kagurazaka": {
+   "daily_passengers": 40020,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaihinmakuhari": {
+   "daily_passengers": 113990,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaisei": {
+   "daily_passengers": 12818,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaishi-ariki": {
+   "daily_passengers": 131,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaji-ga-tani": {
+   "daily_passengers": 36095,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kajiwara": {
+   "daily_passengers": 2628,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kakio": {
+   "daily_passengers": 34337,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kama-ke-tani": {
+   "daily_passengers": 21710,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kama-ke-tani-daibutsu": {
+   "daily_passengers": 14000,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kama-shu": {
+   "daily_passengers": 37772,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamakura": {
+   "daily_passengers": 105981,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamakura-koko-mae": {
+   "daily_passengers": 6592,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamata": {
+   "daily_passengers": 408525,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kameari": {
+   "daily_passengers": 79818,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kameido": {
+   "daily_passengers": 135911,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kameido-suijin": {
+   "daily_passengers": 4434,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamifukuoka": {
+   "daily_passengers": 51582,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamihongo": {
+   "daily_passengers": 7143,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamiigusa": {
+   "daily_passengers": 18819,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamiishi-kami-i": {
+   "daily_passengers": 41728,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamiitabashi": {
+   "daily_passengers": 51233,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamiizumi": {
+   "daily_passengers": 10963,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamikita-dai": {
+   "daily_passengers": 13333,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamikitazawa": {
+   "daily_passengers": 14678,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaminaka-sato": {
+   "daily_passengers": 14482,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaminoge": {
+   "daily_passengers": 22230,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamiooka": {
+   "daily_passengers": 193633,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "kamiyacho": {
+   "daily_passengers": 107982,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamo-miya": {
+   "daily_passengers": 6354,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamoi": {
+   "daily_passengers": 68816,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kamonomiya": {
+   "daily_passengers": 22262,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanagawa": {
+   "daily_passengers": 4209,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanagawashinmachi": {
+   "daily_passengers": 17052,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanamachi": {
+   "daily_passengers": 122970,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanamecho": {
+   "daily_passengers": 40890,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanazawa-bunko": {
+   "daily_passengers": 59752,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanazawa-hakkei": {
+   "daily_passengers": 79218,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kanda": {
+   "daily_passengers": 237297,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kane-ke-fuchi": {
+   "daily_passengers": 12929,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kaneko": {
+   "daily_passengers": 3584,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kanno": {
+   "daily_passengers": 5021,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kannon": {
+   "daily_passengers": 89,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "karakida": {
+   "daily_passengers": 14316,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasa-hata": {
+   "daily_passengers": 5648,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasa-ue-kuronama": {
+   "daily_passengers": 121,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasai": {
+   "daily_passengers": 99258,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasai-rinkai-koen": {
+   "daily_passengers": 29022,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kashima-ta": {
+   "daily_passengers": 33178,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kashiwa": {
+   "daily_passengers": 379914,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kashiwa-dai": {
+   "daily_passengers": 17548,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kashiwa-no-ha-kyanpasu": {
+   "daily_passengers": 39740,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kashiwa-tanaka": {
+   "daily_passengers": 16066,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasuga": {
+   "daily_passengers": 67327,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "kasukabe": {
+   "daily_passengers": 64091,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kasumigaseki": {
+   "daily_passengers": 24277,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "katakura": {
+   "daily_passengers": 10146,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "katakuracho": {
+   "daily_passengers": 21104,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "katase-ko-no-shima": {
+   "daily_passengers": 19404,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "katase-yama": {
+   "daily_passengers": 3912,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "katsu-kawa": {
+   "daily_passengers": 1146,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "katsuta-dai": {
+   "daily_passengers": 77160,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "katsuura": {
+   "daily_passengers": 1656,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawa-kan": {
+   "daily_passengers": 15867,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawabe": {
+   "daily_passengers": 24334,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawagoe": {
+   "daily_passengers": 189564,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawagoeshi": {
+   "daily_passengers": 43704,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawaguchi": {
+   "daily_passengers": 150122,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawaguchi-motogo": {
+   "daily_passengers": 20900,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawasaki": {
+   "daily_passengers": 388782,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawasaki-shinmachi": {
+   "daily_passengers": 2268,
+   "data_year": 2020,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2020"
+   ]
+  },
+  "kawasakidaishi": {
+   "daily_passengers": 17432,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawasumi": {
+   "daily_passengers": 11886,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kawawacho": {
+   "daily_passengers": 9762,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "kayabacho": {
+   "daily_passengers": 112343,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kayama": {
+   "daily_passengers": 7177,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazamatsuri": {
+   "daily_passengers": 1511,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazo": {
+   "daily_passengers": 12566,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-higashi": {
+   "daily_passengers": 25,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-ichinomiya": {
+   "daily_passengers": 5348,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-kameyama": {
+   "daily_passengers": 180,
+   "data_year": 2011,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2011"
+   ]
+  },
+  "kazusa-kawa-kan": {
+   "daily_passengers": 59,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-kubo": {
+   "daily_passengers": 8,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-minato": {
+   "daily_passengers": 890,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kazusa-mitsumata": {
+   "daily_passengers": 84,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-murakami": {
+   "daily_passengers": 77,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-nakagawa": {
+   "daily_passengers": 8,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-okitsu": {
+   "daily_passengers": 282,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kazusa-okubo": {
+   "daily_passengers": 5,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-tsurumai": {
+   "daily_passengers": 7,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-ushiku": {
+   "daily_passengers": 329,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusa-yamada": {
+   "daily_passengers": 88,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kazusanakano": {
+   "daily_passengers": 82,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-kamata": {
+   "daily_passengers": 61303,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-kawasaki": {
+   "daily_passengers": 123389,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-nagasawa": {
+   "daily_passengers": 6442,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-otsu": {
+   "daily_passengers": 4530,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-taura": {
+   "daily_passengers": 11416,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keikyu-tomioka": {
+   "daily_passengers": 18812,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keio-horinochi": {
+   "daily_passengers": 28968,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keio-katakura": {
+   "daily_passengers": 5139,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keio-nagayama": {
+   "daily_passengers": 67334,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keio-yomiuri-rando": {
+   "daily_passengers": 14826,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keiohachioji": {
+   "daily_passengers": 47824,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keioinadatsutsumi": {
+   "daily_passengers": 50725,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keiotama-kawa": {
+   "daily_passengers": 14983,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keiotama-sentaa": {
+   "daily_passengers": 159710,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-hikifune": {
+   "daily_passengers": 19929,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-inage": {
+   "daily_passengers": 7483,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-koiwa": {
+   "daily_passengers": 18036,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-nakayama": {
+   "daily_passengers": 3681,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-nishifuna": {
+   "daily_passengers": 10702,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-okubo": {
+   "daily_passengers": 34928,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-owada": {
+   "daily_passengers": 12139,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-sake-kurikaesi-i": {
+   "daily_passengers": 6246,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-sakura": {
+   "daily_passengers": 16492,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-takasago": {
+   "daily_passengers": 102056,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-tateishi": {
+   "daily_passengers": 34621,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-tsudanuma": {
+   "daily_passengers": 58525,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keisei-usui": {
+   "daily_passengers": 16825,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "keiseiueno": {
+   "daily_passengers": 48475,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kemigawa": {
+   "daily_passengers": 4371,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kemigawahama": {
+   "daily_passengers": 29902,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kenchomae": {
+   "daily_passengers": 1697,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kenritsudai-gaku": {
+   "daily_passengers": 10931,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kiba": {
+   "daily_passengers": 72289,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kibo-ke-oka": {
+   "daily_passengers": 31558,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kichijoji": {
+   "daily_passengers": 383705,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kikukawa": {
+   "daily_passengers": 24573,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kikuna": {
+   "daily_passengers": 166973,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kimitsu": {
+   "daily_passengers": 14298,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kinoshita": {
+   "daily_passengers": 3688,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kinshicho": {
+   "daily_passengers": 299028,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kinugasa": {
+   "daily_passengers": 15166,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kisarazu": {
+   "daily_passengers": 25922,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kishine-koen": {
+   "daily_passengers": 11926,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "kita-akabane": {
+   "daily_passengers": 36982,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-ayase": {
+   "daily_passengers": 43371,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-fuchu": {
+   "daily_passengers": 25152,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-hatsutomi": {
+   "daily_passengers": 5399,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-kashiwa": {
+   "daily_passengers": 34766,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-kasukabe": {
+   "daily_passengers": 9633,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-kogane": {
+   "daily_passengers": 43432,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-konosu": {
+   "daily_passengers": 13296,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-me-ke-saki": {
+   "daily_passengers": 5634,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kita-sando": {
+   "daily_passengers": 23768,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-senju": {
+   "daily_passengers": 1434911,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-shinagawa": {
+   "daily_passengers": 8977,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kita-yono": {
+   "daily_passengers": 22262,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitado-ta": {
+   "daily_passengers": 44370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitaguni-fun": {
+   "daily_passengers": 8385,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitahachi-oji": {
+   "daily_passengers": 13736,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitaike-fukuro": {
+   "daily_passengers": 10356,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitakamakura": {
+   "daily_passengers": 16572,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitakami-o": {
+   "daily_passengers": 29194,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitakurihama": {
+   "daily_passengers": 23095,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitamatsudo": {
+   "daily_passengers": 40146,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitami": {
+   "daily_passengers": 30793,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitamoto": {
+   "daily_passengers": 32922,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitanarashino": {
+   "daily_passengers": 83316,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitano": {
+   "daily_passengers": 20488,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitasaka-ko": {
+   "daily_passengers": 18619,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitasenzoku": {
+   "daily_passengers": 7266,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitashin-yokohama": {
+   "daily_passengers": 12846,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "kitaurawa": {
+   "daily_passengers": 96364,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kitayamata": {
+   "daily_passengers": 25500,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "kiyose": {
+   "daily_passengers": 62526,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kiyosumi-shirakawa": {
+   "daily_passengers": 97005,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ko-fuchi": {
+   "daily_passengers": 44018,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ko-kawara": {
+   "daily_passengers": 14604,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ko-no-shima": {
+   "daily_passengers": 15907,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ko-tsu-no-mori": {
+   "daily_passengers": 14734,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kobayashi": {
+   "daily_passengers": 3142,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kodaira": {
+   "daily_passengers": 35442,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kodama": {
+   "daily_passengers": 746,
+   "data_year": 2019,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2019"
+   ]
+  },
+  "kodenmacho": {
+   "daily_passengers": 36068,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kodomono-kuni": {
+   "daily_passengers": 10174,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koen": {
+   "daily_passengers": 306,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koen-shita": {
+   "daily_passengers": 91,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koen-ue": {
+   "daily_passengers": 84,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koenji": {
+   "daily_passengers": 95432,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kofu-dai": {
+   "daily_passengers": 236,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kogane-joshi": {
+   "daily_passengers": 1651,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koganecho": {
+   "daily_passengers": 21804,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kohoku-abiko": {
+   "daily_passengers": 7364,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "kohoku-adachi": {
+   "daily_passengers": 12958,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koigakubo": {
+   "daily_passengers": 12502,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koiwa": {
+   "daily_passengers": 120166,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kojima-nitta": {
+   "daily_passengers": 21774,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kojimachi": {
+   "daily_passengers": 56238,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kojiya": {
+   "daily_passengers": 28346,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokkai-gijidomae": {
+   "daily_passengers": 40907,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokorozashi-kyu": {
+   "daily_passengers": 3743,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koku-koen": {
+   "daily_passengers": 23946,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokubunji": {
+   "daily_passengers": 313511,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokuga": {
+   "daily_passengers": 180,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokuritsu-kyogijo": {
+   "daily_passengers": 13711,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokuryo": {
+   "daily_passengers": 32992,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokusai-tenjijo": {
+   "daily_passengers": 70461,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kokusai-tenjijo-seimon": {
+   "daily_passengers": 19291,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komabatodaimae": {
+   "daily_passengers": 35206,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komae": {
+   "daily_passengers": 44674,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komagawa": {
+   "daily_passengers": 7888,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komagome": {
+   "daily_passengers": 124751,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komazawa-daigaku": {
+   "daily_passengers": 74266,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komiya": {
+   "daily_passengers": 5286,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "komura-i": {
+   "daily_passengers": 11154,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "komuro": {
+   "daily_passengers": 4411,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "konan-chuo": {
+   "daily_passengers": 18314,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "konandai": {
+   "daily_passengers": 56772,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "konodai": {
+   "daily_passengers": 11912,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "konosu": {
+   "daily_passengers": 35656,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "korai": {
+   "daily_passengers": 2189,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "korakuen": {
+   "daily_passengers": 104894,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koremasa": {
+   "daily_passengers": 7009,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koshigaya": {
+   "daily_passengers": 48139,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koshigaya-reikutaun": {
+   "daily_passengers": 59534,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koshigoe": {
+   "daily_passengers": 2879,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koshin-tsuka": {
+   "daily_passengers": 2450,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koshukaido": {
+   "daily_passengers": 9088,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kosuge": {
+   "daily_passengers": 6261,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kotake-mukaihara": {
+   "daily_passengers": 317839,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kotesashi": {
+   "daily_passengers": 43489,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kowakudani": {
+   "daily_passengers": 498,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koyasu": {
+   "daily_passengers": 6996,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "koza-shibuya": {
+   "daily_passengers": 24705,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kozu": {
+   "daily_passengers": 10236,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kozukue": {
+   "daily_passengers": 18506,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kudanshita": {
+   "daily_passengers": 201105,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuga-hara": {
+   "daily_passengers": 4,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kugayama": {
+   "daily_passengers": 38168,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kugenuma": {
+   "daily_passengers": 3929,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kugenuma-kaigan": {
+   "daily_passengers": 18001,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuhonbutsu": {
+   "daily_passengers": 12729,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuji": {
+   "daily_passengers": 26960,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuki": {
+   "daily_passengers": 112094,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+   "daily_passengers": 47715,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kumagaya": {
+   "daily_passengers": 65360,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kumakawa": {
+   "daily_passengers": 2850,
+   "data_year": 2013,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2013"
+   ]
+  },
+  "kumano-mae": {
+   "daily_passengers": 13313,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kumegawa": {
+   "daily_passengers": 30875,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kun-ke-hama": {
+   "daily_passengers": 21,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kunitachi": {
+   "daily_passengers": 97096,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuniyoshi": {
+   "daily_passengers": 52,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kunugi-yama": {
+   "daily_passengers": 6614,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kuramae": {
+   "daily_passengers": 73473,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "kurami": {
+   "daily_passengers": 3818,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "kurihama": {
+   "daily_passengers": 49234,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kurihashi": {
+   "daily_passengers": 31883,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kurihira": {
+   "daily_passengers": 22743,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kurokawa": {
+   "daily_passengers": 9073,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kururi": {
+   "daily_passengers": 512,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kyobashi": {
+   "daily_passengers": 87126,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kyodo": {
+   "daily_passengers": 82232,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kyoteijo-mae": {
+   "daily_passengers": 2977,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kyu-ga-hara": {
+   "daily_passengers": 15640,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "kyumei": {
+   "daily_passengers": 3706,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "mabashi": {
+   "daily_passengers": 49991,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "machida": {
+   "daily_passengers": 458864,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "machiya": {
+   "daily_passengers": 88640,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "machiya-nichome": {
+   "daily_passengers": 775,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "maehara": {
+   "daily_passengers": 10432,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "magome": {
+   "daily_passengers": 26346,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "maihama": {
+   "daily_passengers": 158806,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "maioka": {
+   "daily_passengers": 5522,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "makita": {
+   "daily_passengers": 22300,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "makuda": {
+   "daily_passengers": 272,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "makuhari": {
+   "daily_passengers": 38774,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "makuharihongo": {
+   "daily_passengers": 67969,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "man-gan-tera": {
+   "daily_passengers": 8126,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "manatsuru": {
+   "daily_passengers": 5410,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "maruyama": {
+   "daily_passengers": 3567,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mashio": {
+   "daily_passengers": 12532,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matoba": {
+   "daily_passengers": 6102,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsu-ga-tani": {
+   "daily_passengers": 2547,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsu-tobidai": {
+   "daily_passengers": 5579,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsubara": {
+   "daily_passengers": 3113,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsuda": {
+   "daily_passengers": 6022,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsudo": {
+   "daily_passengers": 273339,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsudo-nitta": {
+   "daily_passengers": 7315,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "matsugishi": {
+   "daily_passengers": 838,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "matsuo": {
+   "daily_passengers": 1466,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "me-ke-saki": {
+   "daily_passengers": 104686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "meguro": {
+   "daily_passengers": 565824,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mei-ko": {
+   "daily_passengers": 249,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "meidaimae": {
+   "daily_passengers": 91172,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mejiro": {
+   "daily_passengers": 67082,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mejiro-dai": {
+   "daily_passengers": 14183,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mejiro-yamashita": {
+   "daily_passengers": 505,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "meshi-kyu": {
+   "daily_passengers": 4,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mibu-kuchi": {
+   "daily_passengers": 306,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "midori-dai": {
+   "daily_passengers": 8071,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "midorigaoka": {
+   "daily_passengers": 10090,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "midorimachi": {
+   "daily_passengers": 597,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mikawa-shima": {
+   "daily_passengers": 24202,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mimomi": {
+   "daily_passengers": 24292,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-asa-ke-tani": {
+   "daily_passengers": 27693,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-banki-ga-hara": {
+   "daily_passengers": 10416,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-furuya": {
+   "daily_passengers": 15924,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-hanyu": {
+   "daily_passengers": 3326,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-hato-ke-tani": {
+   "daily_passengers": 16500,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-kashiwa": {
+   "daily_passengers": 61052,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-kurihashi": {
+   "daily_passengers": 7463,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-osawa": {
+   "daily_passengers": 53927,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-ota": {
+   "daily_passengers": 17152,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-sakurai": {
+   "daily_passengers": 13448,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-shinjuku": {
+   "daily_passengers": 3926,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-sunamachi": {
+   "daily_passengers": 59562,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-taira": {
+   "daily_passengers": 9759,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minami-yono": {
+   "daily_passengers": 38218,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamifunabashi": {
+   "daily_passengers": 47596,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamimachida": {
+   "daily_passengers": 46967,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamiotsuka": {
+   "daily_passengers": 16665,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamirinkan": {
+   "daily_passengers": 30634,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamisenju": {
+   "daily_passengers": 79673,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamitama": {
+   "daily_passengers": 12842,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamiurawa": {
+   "daily_passengers": 110620,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minamiyuki-toku": {
+   "daily_passengers": 50950,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minano": {
+   "daily_passengers": 795,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minatomachi": {
+   "daily_passengers": 7737,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minatomirai": {
+   "daily_passengers": 85853,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minori-dai": {
+   "daily_passengers": 9081,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minowa": {
+   "daily_passengers": 46924,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "minuma-dai-shinsui-koen": {
+   "daily_passengers": 13889,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "misaki": {
+   "daily_passengers": 13851,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "misakiguchi": {
+   "daily_passengers": 13451,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "misato": {
+   "daily_passengers": 26538,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "misato-chuo": {
+   "daily_passengers": 30722,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mita": {
+   "daily_passengers": 107560,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mitaka": {
+   "daily_passengers": 173686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mitakadai": {
+   "daily_passengers": 19570,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mitsukoshimae": {
+   "daily_passengers": 154053,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mitsuwa-dai": {
+   "daily_passengers": 3527,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miurakaigan": {
+   "daily_passengers": 9390,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miya-no-mae": {
+   "daily_passengers": 3101,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miya-no-saka": {
+   "daily_passengers": 4002,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miya-no-shita": {
+   "daily_passengers": 528,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miyahara": {
+   "daily_passengers": 42824,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miyamaedaira": {
+   "daily_passengers": 46121,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "miyayama": {
+   "daily_passengers": 4456,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "miyazakidai": {
+   "daily_passengers": 47972,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mizonokuchi": {
+   "daily_passengers": 351682,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mizue": {
+   "daily_passengers": 55028,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mizuho-dai": {
+   "daily_passengers": 38575,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mobara": {
+   "daily_passengers": 18566,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mochida": {
+   "daily_passengers": 824,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mogusa-sono": {
+   "daily_passengers": 7434,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "monoi": {
+   "daily_passengers": 7748,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "monzen-nakacho": {
+   "daily_passengers": 184479,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "morishita": {
+   "daily_passengers": 74094,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "moro": {
+   "daily_passengers": 1392,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "motohasunuma": {
+   "daily_passengers": 25190,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "motomachi-chukagai": {
+   "daily_passengers": 56862,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "motosumiyoshi": {
+   "daily_passengers": 59259,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "motoyama": {
+   "daily_passengers": 15684,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "motoyawata": {
+   "daily_passengers": 214962,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "mukaihara": {
+   "daily_passengers": 1460,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mukogaokayuen": {
+   "daily_passengers": 57254,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "murakami": {
+   "daily_passengers": 7305,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-arashiyama": {
+   "daily_passengers": 6487,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-fujisawa": {
+   "daily_passengers": 22401,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-hikita": {
+   "daily_passengers": 8502,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-koganei": {
+   "daily_passengers": 113426,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-kosugi": {
+   "daily_passengers": 431702,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-koyama": {
+   "daily_passengers": 54004,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-masuto": {
+   "daily_passengers": 4686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-nitta": {
+   "daily_passengers": 25710,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-sakai": {
+   "daily_passengers": 155938,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-sunagawa": {
+   "daily_passengers": 12150,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-takahagi": {
+   "daily_passengers": 6440,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashi-yokote": {
+   "daily_passengers": 241,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashidai-wa": {
+   "daily_passengers": 7452,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashiitsukaichi": {
+   "daily_passengers": 7484,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashinakahara": {
+   "daily_passengers": 55204,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashino-dai": {
+   "daily_passengers": 22356,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashiseki": {
+   "daily_passengers": 29438,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashishinjo": {
+   "daily_passengers": 69142,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "musashiurawa": {
+   "daily_passengers": 100744,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mutsuai-nichidai-mae": {
+   "daily_passengers": 27821,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "mutsura": {
+   "daily_passengers": 14212,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "myoden": {
+   "daily_passengers": 50244,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "myogadani": {
+   "daily_passengers": 78606,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "myogaku": {
+   "daily_passengers": 710,
+   "data_year": 2012,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2012"
+   ]
+  },
+  "myorenji": {
+   "daily_passengers": 24996,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagahara": {
+   "daily_passengers": 14880,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naganuma": {
+   "daily_passengers": 3840,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagareyama": {
+   "daily_passengers": 2422,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagareyama-otakano-mori": {
+   "daily_passengers": 150953,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagareyama-sentorarupaaku": {
+   "daily_passengers": 11233,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagata": {
+   "daily_passengers": 1576,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "nagatacho": {
+   "daily_passengers": 164486,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagatoro": {
+   "daily_passengers": 1213,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nagatsuda": {
+   "daily_passengers": 240737,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nai-yado": {
+   "daily_passengers": 5294,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naka-gora": {
+   "daily_passengers": 65,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naka-no-machi": {
+   "daily_passengers": 48,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakada": {
+   "daily_passengers": 17404,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "nakagami": {
+   "daily_passengers": 23020,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakagawa": {
+   "daily_passengers": 16932,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "nakagawara": {
+   "daily_passengers": 24800,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakai": {
+   "daily_passengers": 51593,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nakaitabashi": {
+   "daily_passengers": 27781,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakamachidai": {
+   "daily_passengers": 30554,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "nakameguro": {
+   "daily_passengers": 381738,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakamura-hashi": {
+   "daily_passengers": 38455,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakano": {
+   "daily_passengers": 406312,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakano-fujimicho": {
+   "daily_passengers": 19307,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakano-sakaue": {
+   "daily_passengers": 111351,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nakano-shima": {
+   "daily_passengers": 28216,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakano-shinbashi": {
+   "daily_passengers": 20570,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakanobe": {
+   "daily_passengers": 49338,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakaura-wa": {
+   "daily_passengers": 25542,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nakayama": {
+   "daily_passengers": 104816,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "nako-funagata": {
+   "daily_passengers": 370,
+   "data_year": 2017,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2017"
+   ]
+  },
+  "namamugi": {
+   "daily_passengers": 28687,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nami-kure": {
+   "daily_passengers": 204,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "namiki-chuo": {
+   "daily_passengers": 5085,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "namiki-kita": {
+   "daily_passengers": 4018,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nan-etsu-tani": {
+   "daily_passengers": 287367,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nanahikari-dai": {
+   "daily_passengers": 7102,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nanbu-shijo": {
+   "daily_passengers": 4624,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nankyo-hon": {
+   "daily_passengers": 10908,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nanryu-yama": {
+   "daily_passengers": 152479,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nansan-hara": {
+   "daily_passengers": 816,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "narashino": {
+   "daily_passengers": 13187,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "narita": {
+   "daily_passengers": 67636,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "narita-yukawa": {
+   "daily_passengers": 2063,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
+   "daily_passengers": 49336,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naruse": {
+   "daily_passengers": 34478,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "naruto": {
+   "daily_passengers": 5108,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "negishi": {
+   "daily_passengers": 41524,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nerima": {
+   "daily_passengers": 195913,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nerima-kasugacho": {
+   "daily_passengers": 22655,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nerima-koyadai": {
+   "daily_passengers": 26372,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nezu": {
+   "daily_passengers": 27937,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nichi-no-demachi": {
+   "daily_passengers": 25784,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nihonbashi": {
+   "daily_passengers": 263099,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nihondai-tori": {
+   "daily_passengers": 28043,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "niitaka-shima": {
+   "daily_passengers": 13140,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "niitaka-shima-taira": {
+   "daily_passengers": 9534,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "niiza": {
+   "daily_passengers": 40180,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nijubashimae": {
+   "daily_passengers": 35289,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ningyocho": {
+   "daily_passengers": 116614,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "ninomiya": {
+   "daily_passengers": 23008,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nippori": {
+   "daily_passengers": 367674,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nishi-chiba": {
+   "daily_passengers": 40842,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-chofu": {
+   "daily_passengers": 16652,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-funabashi": {
+   "daily_passengers": 643203,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-hachioji": {
+   "daily_passengers": 60272,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-hanyu": {
+   "daily_passengers": 250,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-kamakura": {
+   "daily_passengers": 5628,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-kasai": {
+   "daily_passengers": 96546,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-ke-hara": {
+   "daily_passengers": 8976,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-ke-hara-shitei-me": {
+   "daily_passengers": 2515,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-kokubunji": {
+   "daily_passengers": 55728,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-magome": {
+   "daily_passengers": 43636,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-nippori": {
+   "daily_passengers": 365488,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "nishi-noborito": {
+   "daily_passengers": 3279,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-ohara": {
+   "daily_passengers": 18,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-oi": {
+   "daily_passengers": 39232,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-ojima": {
+   "daily_passengers": 27698,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-omiya": {
+   "daily_passengers": 25212,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-oya": {
+   "daily_passengers": 3715,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-oyama": {
+   "daily_passengers": 33007,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-shinjuku": {
+   "daily_passengers": 85481,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-shinjuku-gochome": {
+   "daily_passengers": 32776,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-sugamo": {
+   "daily_passengers": 29560,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-tachikawa": {
+   "daily_passengers": 12614,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-taishido": {
+   "daily_passengers": 734,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-tokorozawa": {
+   "daily_passengers": 24676,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-ware-no": {
+   "daily_passengers": 233,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishi-waseda": {
+   "daily_passengers": 37411,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiarai": {
+   "daily_passengers": 62984,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiarai-taishi-nishi": {
+   "daily_passengers": 12405,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishidai": {
+   "daily_passengers": 25605,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishihata": {
+   "daily_passengers": 4,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishikawa-etsu": {
+   "daily_passengers": 2588,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "nishikawa-kuchi": {
+   "daily_passengers": 109948,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiko-shima-taira": {
+   "daily_passengers": 12970,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishikoku-ritsu": {
+   "daily_passengers": 18656,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishinaga-fuku": {
+   "daily_passengers": 17596,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiogikubo": {
+   "daily_passengers": 85340,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishishirai": {
+   "daily_passengers": 13219,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishitani": {
+   "daily_passengers": 28752,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiura-wa": {
+   "daily_passengers": 27786,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nishiyokohama": {
+   "daily_passengers": 14957,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nisshin": {
+   "daily_passengers": 24980,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nitta": {
+   "daily_passengers": 28998,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nittano": {
+   "daily_passengers": 5,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "noborito": {
+   "daily_passengers": 316047,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nodashi": {
+   "daily_passengers": 9014,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nogami": {
+   "daily_passengers": 561,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nogata": {
+   "daily_passengers": 23415,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nogizaka": {
+   "daily_passengers": 39194,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nojima-koen": {
+   "daily_passengers": 3579,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nokendai": {
+   "daily_passengers": 30091,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "numabe": {
+   "daily_passengers": 10289,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "numabukuro": {
+   "daily_passengers": 18003,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "nyu-so": {
+   "daily_passengers": 16146,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "o-hanacha-ya": {
+   "daily_passengers": 32727,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "o-hanahata": {
+   "daily_passengers": 2319,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oami": {
+   "daily_passengers": 17304,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oaso": {
+   "daily_passengers": 226,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "obukuro": {
+   "daily_passengers": 17909,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "obusuma": {
+   "daily_passengers": 1461,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ochanomizu": {
+   "daily_passengers": 318333,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ochiai": {
+   "daily_passengers": 26664,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ochiai-minami-nagasaki": {
+   "daily_passengers": 27118,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "odai": {
+   "daily_passengers": 3186,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "odaiba-kaihinkoen": {
+   "daily_passengers": 13435,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "odakyu-sagamihara": {
+   "daily_passengers": 52578,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "odawara": {
+   "daily_passengers": 173849,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "odoriba": {
+   "daily_passengers": 17702,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "ofuna": {
+   "daily_passengers": 213714,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogawa": {
+   "daily_passengers": 27117,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogawacho": {
+   "daily_passengers": 8895,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogi-ohashi": {
+   "daily_passengers": 10663,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogikubo": {
+   "daily_passengers": 250115,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogose": {
+   "daily_passengers": 4641,
+   "data_year": 2017,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2017"
+   ]
+  },
+  "oguchi": {
+   "daily_passengers": 37382,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ogura-dai": {
+   "daily_passengers": 3120,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ohara": {
+   "daily_passengers": 2477,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ohiradai": {
+   "daily_passengers": 261,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oikeiba-ba-mae": {
+   "daily_passengers": 11828,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oimachi": {
+   "daily_passengers": 366901,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oiso": {
+   "daily_passengers": 15194,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oizumi-gakuen": {
+   "daily_passengers": 80236,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oji": {
+   "daily_passengers": 187367,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oji-kamiya": {
+   "daily_passengers": 36275,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ojima": {
+   "daily_passengers": 31661,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okabe": {
+   "daily_passengers": 5650,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okachimachi": {
+   "daily_passengers": 246163,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "okegawa": {
+   "daily_passengers": 46616,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oku": {
+   "daily_passengers": 20858,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okubo": {
+   "daily_passengers": 51544,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okurayama": {
+   "daily_passengers": 49730,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okusawa": {
+   "daily_passengers": 12146,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "okutama": {
+   "daily_passengers": 1788,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omachi": {
+   "daily_passengers": 1838,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omaeda": {
+   "daily_passengers": 1019,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ome": {
+   "daily_passengers": 10962,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omekaido": {
+   "daily_passengers": 7985,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omigawa": {
+   "daily_passengers": 1974,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "omiya": {
+   "daily_passengers": 685073,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omiya-koen": {
+   "daily_passengers": 8941,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omokage-hashi": {
+   "daily_passengers": 822,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omori": {
+   "daily_passengers": 165460,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omori-dai": {
+   "daily_passengers": 3422,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omori-kaigan": {
+   "daily_passengers": 13644,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omori-machi": {
+   "daily_passengers": 21817,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "omotesando": {
+   "daily_passengers": 176901,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "onarimon": {
+   "daily_passengers": 43230,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "onda": {
+   "daily_passengers": 974,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "onigori": {
+   "daily_passengers": 5833,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "onjuku": {
+   "daily_passengers": 820,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "onohara": {
+   "daily_passengers": 1044,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ontake": {
+   "daily_passengers": 1412,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "ontake-yama": {
+   "daily_passengers": 23587,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "onuki": {
+   "daily_passengers": 1632,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ookayama": {
+   "daily_passengers": 47370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oppama": {
+   "daily_passengers": 38784,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "osaki": {
+   "daily_passengers": 290388,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "osaki-hirokoji": {
+   "daily_passengers": 7648,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oshiage-sukaitsurii-mae": {
+   "daily_passengers": 526053,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "otaki": {
+   "daily_passengers": 159,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "otemachi": {
+   "daily_passengers": 434894,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "otorii": {
+   "daily_passengers": 30660,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "otsuka": {
+   "daily_passengers": 116692,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "otsuka-teikyodaigaku": {
+   "daily_passengers": 9008,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "owada": {
+   "daily_passengers": 18986,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oya-hana": {
+   "daily_passengers": 357,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oyama": {
+   "daily_passengers": 48683,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oyama-dai": {
+   "daily_passengers": 30971,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oyamatsu": {
+   "daily_passengers": 3,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "oyumi-no": {
+   "daily_passengers": 5575,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ozaku": {
+   "daily_passengers": 30194,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "renkon": {
+   "daily_passengers": 19363,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "roka-koen": {
+   "daily_passengers": 14016,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "roku-machi": {
+   "daily_passengers": 34213,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "roku-mi": {
+   "daily_passengers": 12776,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "rokugo-dote": {
+   "daily_passengers": 16205,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "roppongi": {
+   "daily_passengers": 189906,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "roppongi-itchome": {
+   "daily_passengers": 74305,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ryogoku": {
+   "daily_passengers": 104604,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ryokuen-toshi": {
+   "daily_passengers": 21214,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ryutsu-sentaa": {
+   "daily_passengers": 15693,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sachiura": {
+   "daily_passengers": 5323,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagami-kaneko": {
+   "daily_passengers": 1139,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagami-no": {
+   "daily_passengers": 33888,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagami-numata": {
+   "daily_passengers": 2558,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagamihara": {
+   "daily_passengers": 55924,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagamiko": {
+   "daily_passengers": 3648,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagamiono": {
+   "daily_passengers": 117415,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagamiotsuka": {
+   "daily_passengers": 14538,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sagi-no-miya": {
+   "daily_passengers": 30388,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "saginuma": {
+   "daily_passengers": 59568,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "saikai-kashima": {
+   "daily_passengers": 68,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "saitama-shintoshin": {
+   "daily_passengers": 107440,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakaemachi": {
+   "daily_passengers": 789,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakasai": {
+   "daily_passengers": 13182,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakato": {
+   "daily_passengers": 28330,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sake-kurikaesi-i": {
+   "daily_passengers": 7074,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "saku-kusa-bu": {
+   "daily_passengers": 4458,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakura": {
+   "daily_passengers": 18106,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakura-kaido": {
+   "daily_passengers": 6949,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakuradai": {
+   "daily_passengers": 15032,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakuradamon": {
+   "daily_passengers": 13129,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakuragaoka": {
+   "daily_passengers": 18849,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakuragi": {
+   "daily_passengers": 3679,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakuragicho": {
+   "daily_passengers": 185406,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "sakurajosui": {
+   "daily_passengers": 36224,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakurashinmachi": {
+   "daily_passengers": 68296,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sakurazawa": {
+   "daily_passengers": 809,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "samezu": {
+   "daily_passengers": 9677,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "samukawa": {
+   "daily_passengers": 13070,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "san-no-wa-hashi": {
+   "daily_passengers": 3266,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "san-tsu-sakai": {
+   "daily_passengers": 51434,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "san-tsu-sawa-shitamachi": {
+   "daily_passengers": 12620,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "san-tsu-sawakami-machi": {
+   "daily_passengers": 14620,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "sangenjaya": {
+   "daily_passengers": 167214,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sangu-hashi": {
+   "daily_passengers": 13182,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sangyo-shinko-sentaa": {
+   "daily_passengers": 4381,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sangyodoro": {
+   "daily_passengers": 10557,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sanpoku": {
+   "daily_passengers": 923,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sanuki-machi": {
+   "daily_passengers": 316,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "sasagawa": {
+   "daily_passengers": 490,
+   "data_year": 2020,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2020"
+   ]
+  },
+  "sasazuka": {
+   "daily_passengers": 73199,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "satomi": {
+   "daily_passengers": 35,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "satte": {
+   "daily_passengers": 11666,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sawara": {
+   "daily_passengers": 5632,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sayama-ke-oka": {
+   "daily_passengers": 22670,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sayamashi": {
+   "daily_passengers": 37200,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibi-ba": {
+   "daily_passengers": 1749,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibu-chichibu": {
+   "daily_passengers": 6563,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibu-tachikawa": {
+   "daily_passengers": 12004,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibu-yanagisawa": {
+   "daily_passengers": 15973,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibu-yuenchi": {
+   "daily_passengers": 2375,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibuen": {
+   "daily_passengers": 3187,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibukyujo-mae": {
+   "daily_passengers": 12883,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seibushinjuku": {
+   "daily_passengers": 147390,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seifu": {
+   "daily_passengers": 21706,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seijo-gakuenmae": {
+   "daily_passengers": 80513,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seikai": {
+   "daily_passengers": 2455,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seiseki-sakuragaoka": {
+   "daily_passengers": 58241,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sekiuchi": {
+   "daily_passengers": 146564,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "sen-da-ke-tani": {
+   "daily_passengers": 34572,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sen-shiro-dai": {
+   "daily_passengers": 7859,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sen-shiro-taihoku": {
+   "daily_passengers": 2263,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sendagi": {
+   "daily_passengers": 28507,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sengakuji": {
+   "daily_passengers": 195118,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "sengawa": {
+   "daily_passengers": 70712,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sengen-dai": {
+   "daily_passengers": 51014,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sengoku": {
+   "daily_passengers": 31304,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "senju-ohashi": {
+   "daily_passengers": 16762,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "senkawa": {
+   "daily_passengers": 39136,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sensoku": {
+   "daily_passengers": 14288,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sentaa-kita": {
+   "daily_passengers": 73802,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "sentaa-minami": {
+   "daily_passengers": 81686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "senzokuike": {
+   "daily_passengers": 17037,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "setagaya": {
+   "daily_passengers": 7592,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "setagaya-daita": {
+   "daily_passengers": 9582,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "seya": {
+   "daily_passengers": 40456,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shake": {
+   "daily_passengers": 4058,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "shakudo-shogakko-mae": {
+   "daily_passengers": 5630,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shakujii-koen": {
+   "daily_passengers": 76732,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shi-ga-o": {
+   "daily_passengers": 38633,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shi-tsu-ki": {
+   "daily_passengers": 18180,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibakoen": {
+   "daily_passengers": 28023,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibamata": {
+   "daily_passengers": 8624,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibasaki": {
+   "daily_passengers": 16316,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibasaki-taiikukan": {
+   "daily_passengers": 4366,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibaura-fu-atama": {
+   "daily_passengers": 5032,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibayama-chiyoda": {
+   "daily_passengers": 1492,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibusawa": {
+   "daily_passengers": 24098,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shibuya": {
+   "daily_passengers": 2897703,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shichiri": {
+   "daily_passengers": 18353,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shichiri-ke-hama": {
+   "daily_passengers": 8128,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shidai-igakubu": {
+   "daily_passengers": 11058,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiinamachi": {
+   "daily_passengers": 20617,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shijo-mae": {
+   "daily_passengers": 16534,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiki": {
+   "daily_passengers": 95860,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimbashi": {
+   "daily_passengers": 809595,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "shimizu-koen": {
+   "daily_passengers": 4875,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimo": {
+   "daily_passengers": 15187,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimo-ochiai": {
+   "daily_passengers": 11882,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimoigusa": {
+   "daily_passengers": 22499,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimokitazawa": {
+   "daily_passengers": 229107,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimomaruko": {
+   "daily_passengers": 31438,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimomizo": {
+   "daily_passengers": 2252,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "shimosa-kanzaki": {
+   "daily_passengers": 1336,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "shimosa-matsuzaki": {
+   "daily_passengers": 992,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "shimosa-nakayama": {
+   "daily_passengers": 44298,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimosa-tachibana": {
+   "daily_passengers": 816,
+   "data_year": 2016,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2016"
+   ]
+  },
+  "shimotakaido": {
+   "daily_passengers": 55782,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimura-sakaue": {
+   "daily_passengers": 30150,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shimura-sanchome": {
+   "daily_passengers": 30055,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-akitsu": {
+   "daily_passengers": 74644,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-chiba": {
+   "daily_passengers": 2167,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-egota": {
+   "daily_passengers": 28904,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-hane": {
+   "daily_passengers": 21468,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "shin-itabashi": {
+   "daily_passengers": 28249,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "shin-kamagaya": {
+   "daily_passengers": 110126,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-kashi": {
+   "daily_passengers": 25701,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-kashiwa": {
+   "daily_passengers": 20960,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-kodaira": {
+   "daily_passengers": 22178,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-koenji": {
+   "daily_passengers": 35288,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-koganei": {
+   "daily_passengers": 4024,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-koiwa": {
+   "daily_passengers": 146776,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-koshin-tsuka": {
+   "daily_passengers": 2649,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-matsudo": {
+   "daily_passengers": 76452,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-mobara": {
+   "daily_passengers": 2470,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "shin-nakano": {
+   "daily_passengers": 33550,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-okachimachi": {
+   "daily_passengers": 102578,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "shin-okubo": {
+   "daily_passengers": 98492,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-otsuka": {
+   "daily_passengers": 25769,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-sakuradai": {
+   "daily_passengers": 9867,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-sayama": {
+   "daily_passengers": 17696,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-seibi-ba": {
+   "daily_passengers": 4366,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-shibamata": {
+   "daily_passengers": 5520,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-shiraoka": {
+   "daily_passengers": 12734,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-shirota": {
+   "daily_passengers": 8765,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-sugita": {
+   "daily_passengers": 102163,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-toyosu": {
+   "daily_passengers": 10511,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shin-urayasu": {
+   "daily_passengers": 103208,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinagawa": {
+   "daily_passengers": 892969,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinagawa-shiisaido": {
+   "daily_passengers": 37378,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinanocho": {
+   "daily_passengers": 43682,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinbaba": {
+   "daily_passengers": 15099,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shindai-tsu": {
+   "daily_passengers": 5979,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shingo": {
+   "daily_passengers": 276,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinjuku": {
+   "daily_passengers": 2713386,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinjuku-gyoenmae": {
+   "daily_passengers": 48832,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinjuku-sanchome": {
+   "daily_passengers": 220634,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "shinjukunishiguchi": {
+   "daily_passengers": 51581,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "shinkawasaki": {
+   "daily_passengers": 51854,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinkemi-kawa": {
+   "daily_passengers": 41494,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinkiba": {
+   "daily_passengers": 296274,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinko-kawa": {
+   "daily_passengers": 1197,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinkoyasu": {
+   "daily_passengers": 49072,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinmaruko": {
+   "daily_passengers": 26424,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinmatsuda": {
+   "daily_passengers": 20403,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinnarashino": {
+   "daily_passengers": 23084,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinonome": {
+   "daily_passengers": 14700,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinozaki": {
+   "daily_passengers": 39512,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinpachi-hashira": {
+   "daily_passengers": 88556,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinrinkoen": {
+   "daily_passengers": 12160,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinsen-hashi": {
+   "daily_passengers": 13775,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shintokorozawa": {
+   "daily_passengers": 47629,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shintomicho": {
+   "daily_passengers": 36625,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shintsudanuma": {
+   "daily_passengers": 60382,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinyokohama": {
+   "daily_passengers": 399672,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "shinyuri-ke-oka": {
+   "daily_passengers": 114816,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinzo-kawashima": {
+   "daily_passengers": 5882,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinzo-sato": {
+   "daily_passengers": 27290,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shinzushi": {
+   "daily_passengers": 22587,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiodome": {
+   "daily_passengers": 45681,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shioiri": {
+   "daily_passengers": 21204,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiomi": {
+   "daily_passengers": 30732,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shirai": {
+   "daily_passengers": 9863,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiraitodai": {
+   "daily_passengers": 6498,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiraoka": {
+   "daily_passengers": 23340,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shirokane-takanawa": {
+   "daily_passengers": 36926,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shirokanedai": {
+   "daily_passengers": 16791,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiroku": {
+   "daily_passengers": 85,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiromi-ke-oka": {
+   "daily_passengers": 16,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shirota-hashi": {
+   "daily_passengers": 17148,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shita-iida": {
+   "daily_passengers": 8658,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "shita-jinmei": {
+   "daily_passengers": 9364,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shita-nagatani": {
+   "daily_passengers": 9866,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "shita-soga": {
+   "daily_passengers": 2318,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shitaita-hashi": {
+   "daily_passengers": 16048,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shitte": {
+   "daily_passengers": 28394,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shiyakushomae": {
+   "daily_passengers": 5818,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shizu": {
+   "daily_passengers": 13757,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shodai": {
+   "daily_passengers": 59407,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shoin-jinja-mae": {
+   "daily_passengers": 9531,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shomaru": {
+   "daily_passengers": 164,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shonan": {
+   "daily_passengers": 3672,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shonan-fukazawa": {
+   "daily_passengers": 6310,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shonan-kaigan-koen": {
+   "daily_passengers": 2254,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shonan-machiya": {
+   "daily_passengers": 7811,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shonandai": {
+   "daily_passengers": 162798,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "showa-shima": {
+   "daily_passengers": 5862,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "shukugawara": {
+   "daily_passengers": 16416,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "so-moto": {
+   "daily_passengers": 6,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sobudai-mae": {
+   "daily_passengers": 35603,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sobudai-shita": {
+   "daily_passengers": 2406,
+   "data_year": 2014,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2014"
+   ]
+  },
+  "sode-ke-ura": {
+   "daily_passengers": 11312,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "soga": {
+   "daily_passengers": 65410,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sogo-sando": {
+   "daily_passengers": 2952,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "soka": {
+   "daily_passengers": 82501,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "soshigaya-okura": {
+   "daily_passengers": 47616,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "soshio-ryutsu-sentaa": {
+   "daily_passengers": 658,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "soun-yama": {
+   "daily_passengers": 3936,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sports-center": {
+   "daily_passengers": 4951,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "suehirocho": {
+   "daily_passengers": 27833,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sugamo": {
+   "daily_passengers": 219754,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "sugamo-nitta": {
+   "daily_passengers": 1180,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sugita": {
+   "daily_passengers": 30965,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sugito-koyadai": {
+   "daily_passengers": 9935,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "suidobashi": {
+   "daily_passengers": 187540,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "suitengumae": {
+   "daily_passengers": 74355,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "sumiyoshi": {
+   "daily_passengers": 94631,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "sunagawa-shichi-ban": {
+   "daily_passengers": 4918,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "suzukakedai": {
+   "daily_passengers": 10465,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "suzukicho": {
+   "daily_passengers": 10906,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ta-na": {
+   "daily_passengers": 9505,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ta-umi": {
+   "daily_passengers": 126,
+   "data_year": 2018,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2018"
+   ]
+  },
+  "tabata": {
+   "daily_passengers": 80958,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tachiaigawa": {
+   "daily_passengers": 17669,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tachiba": {
+   "daily_passengers": 20298,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "tachihi": {
+   "daily_passengers": 14304,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tachikawa": {
+   "daily_passengers": 308182,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tachikawa-kita": {
+   "daily_passengers": 44015,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tachikawa-minami": {
+   "daily_passengers": 31877,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "taisa-kura": {
+   "daily_passengers": 370,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "taito": {
+   "daily_passengers": 714,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "taiyu-yama": {
+   "daily_passengers": 4307,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "taka-no-dai": {
+   "daily_passengers": 24283,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "taka-taki": {
+   "daily_passengers": 36,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takada": {
+   "daily_passengers": 16264,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "takadanobaba": {
+   "daily_passengers": 809212,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takahata-fudo": {
+   "daily_passengers": 73483,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takaido": {
+   "daily_passengers": 37789,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takamatsu": {
+   "daily_passengers": 7377,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takanawa-dai": {
+   "daily_passengers": 13969,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takane-kido": {
+   "daily_passengers": 8079,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takane-kodan": {
+   "daily_passengers": 14886,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takano": {
+   "daily_passengers": 6635,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takao": {
+   "daily_passengers": 74336,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takaosanguchi": {
+   "daily_passengers": 10690,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takasaka": {
+   "daily_passengers": 23674,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takashima-machi": {
+   "daily_passengers": 9914,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "takashima-taira": {
+   "daily_passengers": 27789,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takatsu": {
+   "daily_passengers": 28557,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takayanagi": {
+   "daily_passengers": 15899,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takebashi": {
+   "daily_passengers": 42156,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takekawa": {
+   "daily_passengers": 863,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takenotsuka": {
+   "daily_passengers": 67699,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takesato": {
+   "daily_passengers": 14199,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takeshiba": {
+   "daily_passengers": 5132,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takezawa": {
+   "daily_passengers": 62,
+   "data_year": 2011,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2011"
+   ]
+  },
+  "taki-fudo": {
+   "daily_passengers": 7703,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "takinogawa-itchome": {
+   "daily_passengers": 1610,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama": {
+   "daily_passengers": 12915,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama-dobutsu-koen": {
+   "daily_passengers": 6455,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama-puraaza": {
+   "daily_passengers": 78780,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama-reien": {
+   "daily_passengers": 12850,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama-sakai": {
+   "daily_passengers": 20444,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tama-yodo": {
+   "daily_passengers": 500,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tamachi": {
+   "daily_passengers": 251710,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tamagawa": {
+   "daily_passengers": 21510,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tamagawagakuen-mae": {
+   "daily_passengers": 41185,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tamagawajosui": {
+   "daily_passengers": 64172,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tameike-sanno": {
+   "daily_passengers": 82631,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tan-so": {
+   "daily_passengers": 538,
+   "data_year": 2011,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2011"
+   ]
+  },
+  "tanashi": {
+   "daily_passengers": 68058,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tani-zaike": {
+   "daily_passengers": 11064,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tanmachi": {
+   "daily_passengers": 13199,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tateyama": {
+   "daily_passengers": 2898,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tatsumi": {
+   "daily_passengers": 27776,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "taura": {
+   "daily_passengers": 3976,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tawaramachi": {
+   "daily_passengers": 36681,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tendai": {
+   "daily_passengers": 4317,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tenku-hashi": {
+   "daily_passengers": 30427,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tennocho": {
+   "daily_passengers": 22980,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tennodai": {
+   "daily_passengers": 32568,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tennozu-isle": {
+   "daily_passengers": 54707,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "terekomusentaa": {
+   "daily_passengers": 9267,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tetsudohakubutsukan": {
+   "daily_passengers": 10730,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "to-no-sawa": {
+   "daily_passengers": 104,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tobe": {
+   "daily_passengers": 16413,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tobitakyu": {
+   "daily_passengers": 26692,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tobu-nerima": {
+   "daily_passengers": 56181,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tobu-takezawa": {
+   "daily_passengers": 688,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tobudobutsukoen": {
+   "daily_passengers": 28665,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tochomae": {
+   "daily_passengers": 49779,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toda": {
+   "daily_passengers": 42074,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "todai-miya": {
+   "daily_passengers": 64474,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "todai-shima": {
+   "daily_passengers": 30424,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "todaimae": {
+   "daily_passengers": 27311,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "todakoen": {
+   "daily_passengers": 65930,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toden-zatsu-tsukasa-ke-tani": {
+   "daily_passengers": 1067,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "todoroki": {
+   "daily_passengers": 27098,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "togane": {
+   "daily_passengers": 7820,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "togawa": {
+   "daily_passengers": 431,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "togo-no": {
+   "daily_passengers": 477,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "togoshi-ginza": {
+   "daily_passengers": 40669,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "togu-hara": {
+   "daily_passengers": 4658,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tohaku-raku": {
+   "daily_passengers": 15371,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokai-kami": {
+   "daily_passengers": 9349,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokaichiba": {
+   "daily_passengers": 37478,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokaidaigakumae": {
+   "daily_passengers": 36215,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokiwa-dai": {
+   "daily_passengers": 43271,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokiwadaira": {
+   "daily_passengers": 18549,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toko-ta": {
+   "daily_passengers": 2142,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokorozawa": {
+   "daily_passengers": 109930,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokoshikoen": {
+   "daily_passengers": 13597,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokyo": {
+   "daily_passengers": 1262604,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tokyo-teleport": {
+   "daily_passengers": 45645,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tomi-mizu": {
+   "daily_passengers": 6485,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tomiura": {
+   "daily_passengers": 350,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "tomo-ro": {
+   "daily_passengers": 4828,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toneri": {
+   "daily_passengers": 9542,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toneri-koen": {
+   "daily_passengers": 5729,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toranomon": {
+   "daily_passengers": 96029,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "torihama": {
+   "daily_passengers": 9462,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "torin-kan": {
+   "daily_passengers": 20438,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toritsu-daigaku": {
+   "daily_passengers": 46393,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toritsukasei": {
+   "daily_passengers": 17816,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toshimaen": {
+   "daily_passengers": 29508,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toso-moto": {
+   "daily_passengers": 4,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "totsuka": {
+   "daily_passengers": 282944,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "totsuka-angyo": {
+   "daily_passengers": 16800,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toyocho": {
+   "daily_passengers": 114708,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toyoharu": {
+   "daily_passengers": 11592,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toyosu": {
+   "daily_passengers": 246184,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "toyota": {
+   "daily_passengers": 64440,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuchike": {
+   "daily_passengers": 22160,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuda-yama": {
+   "daily_passengers": 7826,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsudanuma": {
+   "daily_passengers": 178890,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuga": {
+   "daily_passengers": 51792,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsujido": {
+   "daily_passengers": 112742,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukada": {
+   "daily_passengers": 18137,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukahara": {
+   "daily_passengers": 1976,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukiji": {
+   "daily_passengers": 59492,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukiji-shijo": {
+   "daily_passengers": 23281,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukimi-no": {
+   "daily_passengers": 10708,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukinowa": {
+   "daily_passengers": 5290,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukisaki": {
+   "daily_passengers": 7,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukishima": {
+   "daily_passengers": 135870,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "tsukuihama": {
+   "daily_passengers": 5949,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsukushi-no": {
+   "daily_passengers": 10686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsunashima": {
+   "daily_passengers": 81176,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuru-ke-shima": {
+   "daily_passengers": 30286,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsurugamine": {
+   "daily_passengers": 55967,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsurukawa": {
+   "daily_passengers": 60371,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuruma": {
+   "daily_passengers": 29046,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsurumakionsen": {
+   "daily_passengers": 13627,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsurumi": {
+   "daily_passengers": 174016,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsurumi-shijo": {
+   "daily_passengers": 20431,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuruse": {
+   "daily_passengers": 47220,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsutsuji-ke-oka": {
+   "daily_passengers": 40628,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "tsuzuki-fureaino-oka": {
+   "daily_passengers": 20708,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "u-no-ki": {
+   "daily_passengers": 19463,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uchisaiwaicho": {
+   "daily_passengers": 38025,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ue-gora": {
+   "daily_passengers": 121,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ue-kumagaya": {
+   "daily_passengers": 724,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ue-nagatani": {
+   "daily_passengers": 32768,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "ue-oi": {
+   "daily_passengers": 907,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uemachi": {
+   "daily_passengers": 8814,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ueno": {
+   "daily_passengers": 529457,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uguisudani": {
+   "daily_passengers": 48920,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uhara": {
+   "daily_passengers": 168,
+   "data_year": 2016,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2016"
+   ]
+  },
+  "ukima-funato": {
+   "daily_passengers": 43438,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umagome-sawa": {
+   "daily_passengers": 25693,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umahori-kaigan": {
+   "daily_passengers": 8357,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umatate": {
+   "daily_passengers": 133,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umegaoka": {
+   "daily_passengers": 32280,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umeshima": {
+   "daily_passengers": 35416,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umeyashiki": {
+   "daily_passengers": 16426,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umi-kashima": {
+   "daily_passengers": 94,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umi-no-koen-minamiguchi": {
+   "daily_passengers": 2013,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umi-no-koen-shiba-kuchi": {
+   "daily_passengers": 2458,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "umigami": {
+   "daily_passengers": 6015,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "unga": {
+   "daily_passengers": 21494,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uraga": {
+   "daily_passengers": 16478,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "urawa": {
+   "daily_passengers": 181878,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "urawa-misono": {
+   "daily_passengers": 25400,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "urayama-kuchi": {
+   "daily_passengers": 106,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "urayasu": {
+   "daily_passengers": 78626,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ushigome-kagurazaka": {
+   "daily_passengers": 13686,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ushigome-yanagimachi": {
+   "daily_passengers": 19954,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ushihama": {
+   "daily_passengers": 8634,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ushita": {
+   "daily_passengers": 44164,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "uwamizo": {
+   "daily_passengers": 12044,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wa-ko": {
+   "daily_passengers": 3611,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wada-kawara": {
+   "daily_passengers": 2889,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wada-machi": {
+   "daily_passengers": 14473,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wada-tsuka": {
+   "daily_passengers": 1233,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wada-ura": {
+   "daily_passengers": 188,
+   "data_year": 2016,
+   "confidence": "moderate",
+   "flags": [
+    "fallback_fy2016"
+   ]
+  },
+  "wado-kurotani": {
+   "daily_passengers": 385,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wakaba": {
+   "daily_passengers": 34699,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wakabadai": {
+   "daily_passengers": 23893,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wakabayashi": {
+   "daily_passengers": 7606,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wakamatsu-kawata": {
+   "daily_passengers": 28849,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "wakoshi": {
+   "daily_passengers": 343898,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "warabi": {
+   "daily_passengers": 111724,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "ware-no": {
+   "daily_passengers": 515,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "waseda": {
+   "daily_passengers": 79978,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "washimiya": {
+   "daily_passengers": 6205,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "y-r-p-nobi": {
+   "daily_passengers": 14623,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yabe": {
+   "daily_passengers": 23664,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yachimata": {
+   "daily_passengers": 9588,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yachiyo-chuo": {
+   "daily_passengers": 23403,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yachiyo-midorigaoka": {
+   "daily_passengers": 41037,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yachiyodai": {
+   "daily_passengers": 43829,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yagawa": {
+   "daily_passengers": 16536,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yagi-saki": {
+   "daily_passengers": 10172,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yagiri": {
+   "daily_passengers": 8659,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yaguchi-watari": {
+   "daily_passengers": 25506,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yagyu": {
+   "daily_passengers": 1027,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yahatayama": {
+   "daily_passengers": 37716,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yahiro": {
+   "daily_passengers": 14618,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yaho": {
+   "daily_passengers": 19250,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yako": {
+   "daily_passengers": 35884,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yakuen-dai": {
+   "daily_passengers": 14755,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yamada": {
+   "daily_passengers": 5196,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yamate": {
+   "daily_passengers": 33896,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yamato": {
+   "daily_passengers": 221306,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yanagikoji": {
+   "daily_passengers": 2720,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yanase-kawa": {
+   "daily_passengers": 18204,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yanoguchi": {
+   "daily_passengers": 18294,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yasaka": {
+   "daily_passengers": 6368,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yashio": {
+   "daily_passengers": 50219,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yasuda": {
+   "daily_passengers": 362,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "fallback_fy2023"
+   ]
+  },
+  "yatsu": {
+   "daily_passengers": 10398,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yatsuka": {
+   "daily_passengers": 38080,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yayoi-dai": {
+   "daily_passengers": 14426,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoda": {
+   "daily_passengers": 14144,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoga": {
+   "daily_passengers": 65061,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokaichiba": {
+   "daily_passengers": 2980,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokodai": {
+   "daily_passengers": 36486,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokohama": {
+   "daily_passengers": 1999758,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "yokose": {
+   "daily_passengers": 1413,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokoshiba": {
+   "daily_passengers": 2260,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokosuka": {
+   "daily_passengers": 9154,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokosuka-chuo": {
+   "daily_passengers": 58695,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yokota": {
+   "daily_passengers": 280,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yomiurirando-mae": {
+   "daily_passengers": 31747,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yono": {
+   "daily_passengers": 51106,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yono-honcho": {
+   "daily_passengers": 29304,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yorii": {
+   "daily_passengers": 6785,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoro-keikoku": {
+   "daily_passengers": 92,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoshi-kawa-koen": {
+   "daily_passengers": 2355,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoshikawa": {
+   "daily_passengers": 32920,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoshikawa-bi-minami": {
+   "daily_passengers": 13590,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoshino-hara": {
+   "daily_passengers": 3671,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoshinocho": {
+   "daily_passengers": 16944,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": [
+    "boarding_x2"
+   ]
+  },
+  "yotsukaido": {
+   "daily_passengers": 40648,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yotsuya": {
+   "daily_passengers": 295458,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yotsuya-sanchome": {
+   "daily_passengers": 42890,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoyogi": {
+   "daily_passengers": 143924,
+   "data_year": 2023,
+   "confidence": "strong",
+   "flags": [
+    "prev_year_max"
+   ]
+  },
+  "yoyogi-hachiman": {
+   "daily_passengers": 47429,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yoyogi-uehara": {
+   "daily_passengers": 269075,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yubi-ogi": {
+   "daily_passengers": 19130,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yuenchi-nishi": {
+   "daily_passengers": 1472,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yugawara": {
+   "daily_passengers": 10342,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yui-ke-hama": {
+   "daily_passengers": 2348,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yukari-ga-oka": {
+   "daily_passengers": 22125,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yuki-ga-taniotsuka": {
+   "daily_passengers": 22365,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yukinori": {
+   "daily_passengers": 54606,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yumega-oka": {
+   "daily_passengers": 7278,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yurakucho": {
+   "daily_passengers": 392785,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yuri-ke-oka": {
+   "daily_passengers": 20583,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yushima": {
+   "daily_passengers": 37913,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yutaka-shiki": {
+   "daily_passengers": 15569,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "yutenji": {
+   "daily_passengers": 29907,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "zama": {
+   "daily_passengers": 18701,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "zenko": {
+   "daily_passengers": 26612,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "zoshigaya": {
+   "daily_passengers": 21965,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "zoshiki": {
+   "daily_passengers": 30842,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  },
+  "zushi": {
+   "daily_passengers": 51270,
+   "data_year": 2024,
+   "confidence": "strong",
+   "flags": []
+  }
+ }
+}

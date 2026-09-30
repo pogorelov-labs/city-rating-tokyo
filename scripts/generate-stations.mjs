@@ -2,6 +2,10 @@
  * Generate filtered stations.json for Tokyo Neighborhood Explorer
  * Source: piuccio/open-data-jp-railway-stations
  * Enriched with romaji names and line names
+ *
+ * HISTORICAL — bootstrapped stations.json in 2026-04. Do not re-run: it would
+ * overwrite everything edited in place since (CRTKY-113 slugs, CRTKY-107
+ * name_ru, CRTKY-134 name_en, whose misreadings came from this source's romaji).
  */
 
 import { readFileSync, writeFileSync } from 'fs';

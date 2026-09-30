@@ -1239,8 +1239,8 @@
       "nightlife": "ほぼなし。最終00:29。桜木町まで戻り道。"
     },
     "ru": {
-      "atmosphere": "Бандо-Хаси. Синяя линия Йокогамы. 56 минут до центра. Низкая высота (5м)—зона наводнения. Плотные кварталы. Небезопасно (4).",
-      "landmarks": "Бандо-Хаси—спутник Йокогамы. Район Нака. Нечего смотреть. Плотно, но безлико.",
+      "atmosphere": "Бандобаси. Синяя линия Йокогамы. 56 минут до центра. Низкая высота (5м)—зона наводнения. Плотные кварталы. Небезопасно (4).",
+      "landmarks": "Бандобаси—спутник Йокогамы. Район Нака. Нечего смотреть. Плотно, но безлико.",
       "food": "Рамен, удон. Йокогама-чейны. Забываемо.",
       "nightlife": "Минимум. Последний поезд 00:29. Час туда-обратно."
     }
@@ -1459,8 +1459,8 @@
       "nightlife": "ほぼゼロ。最終00:38。都心からは遠い。"
     },
     "ru": {
-      "atmosphere": "Бёбу-Ура. Кэйкю главная линия, 62 минуты. Район Исого, старый жилой. Низкая безопасность (4). Стареющий район.",
-      "landmarks": "Бёбу-Ура—спутник Йокогамы. Коммутерская база Кэйкю. Достопримечательностей нет. Дряхлеющие магазины.",
+      "atmosphere": "Бёбугаура. Кэйкю главная линия, 62 минуты. Район Исого, старый жилой. Низкая безопасность (4). Стареющий район.",
+      "landmarks": "Бёбугаура—спутник Йокогамы. Коммутерская база Кэйкю. Достопримечательностей нет. Дряхлеющие магазины.",
       "food": "Рамен, окономияки. Бабушкин уровень. Современного нет.",
       "nightlife": "Не существует. Последний поезд 00:38. Далеко от города."
     }
@@ -2388,7 +2388,7 @@
   "etchu-shima": {
     "en": {
       "atmosphere": "Isolated logistics hub on the Keiyo Line. One line, industrial waterfront, 24min to Shinjuku, feels abandoned after 7pm.",
-      "landmarks": "Etchu-Shima cargo terminal area, Koto ward industrial port. Functional, not scenic.",
+      "landmarks": "Etchujima cargo terminal area, Koto ward industrial port. Functional, not scenic.",
       "food": "Virtually no restaurants. Industrial canteen spots only, data gaps pervasive.",
       "nightlife": "None. Workers leave by 6pm, area is dead after sunset. Minimal seismic risk (high), low elevation still stable."
     },
@@ -3408,7 +3408,7 @@
   "gokuraku-tera": {
     "en": {
       "atmosphere": "Kamakura beach-edge tram station, 1.4k riders. Temple, hiking, calm pilgrim town.",
-      "landmarks": "Gokuraku-Tera Temple, cliff walks, coastal trails. Enoshima line nostalgia.",
+      "landmarks": "Gokurakuji Temple, cliff walks, coastal trails. Enoshima line nostalgia.",
       "food": "30 restaurants, 10 cafes, 3 izakaya. Tourist snacks & weekend brunch scene.",
       "nightlife": "1 midnight spot, 5 hostels. Mellow early bedtimes. Sake at the izakaya, sleep at 10pm."
     },
@@ -3728,7 +3728,7 @@
   "hakkei-shima": {
     "en": {
       "atmosphere": "Seaside amusement island in Kanazawa Bay. Sparse crowds, few locals, flat affect. Last train 23:47 — curfew neighborhood.",
-      "landmarks": "Hakkei-Shima theme park anchor. 13 pedestrian streets. Waterfront park sprawl, 5M sqm green (largest asset).",
+      "landmarks": "Hakkeijima theme park anchor. 13 pedestrian streets. Waterfront park sprawl, 5M sqm green (largest asset).",
       "food": "Tourist-trap dining — 4 listings, 2 cafes, 14 food spots. Mediocre prepared-meal dependency.",
       "nightlife": "Minimal. Park closes, food courts shutter, it's a ghost zone after dark."
     },
@@ -3740,7 +3740,7 @@
     },
     "ru": {
       "atmosphere": "Остров-парк развлечений в заливе Канадзава. Редкие туристы, почти нет местных. Последний поезд 23:47.",
-      "landmarks": "Тематический парк Hakkei-Shima. Пешеходные зоны 13. Огромный водный парк (5 млн кв.м).",
+      "landmarks": "Тематический парк Hakkeijima. Пешеходные зоны 13. Огромный водный парк (5 млн кв.м).",
       "food": "Туристская еда — 4 места, 2 кафе, 14 лавок. Столовая логика.",
       "nightlife": "Практически нет. После закрытия парка — пусто."
     }
@@ -4148,7 +4148,7 @@
   "hara-toma": {
     "en": {
       "atmosphere": "Sagami Line exurban outpost, 68 min from Shinjuku, moderate seismic. Affordable blank slate.",
-      "landmarks": "Hara-Toma is a passing stop; no notable landmarks. Agricultural edge of sprawl.",
+      "landmarks": "Harataima is a passing stop; no notable landmarks. Agricultural edge of sprawl.",
       "food": "Minimal dining. Convenience store culture, few local spots. Not a destination.",
       "nightlife": "Minimal. Quiet after 9pm."
     },
@@ -4160,7 +4160,7 @@
     },
     "ru": {
       "atmosphere": "Sagami Line пригород, 68 мин от Shinjuku, умеренная сейсмичность. Дешево, но пусто.",
-      "landmarks": "Hara-Toma — проходная станция, ничего примечательного. Агро-окраина.",
+      "landmarks": "Harataima — проходная станция, ничего примечательного. Агро-окраина.",
       "food": "Минимум. Conbini культура. Не пункт назначения.",
       "nightlife": "Минимум."
     }
@@ -6968,7 +6968,7 @@
   "inuboe": {
     "en": {
       "atmosphere": "Cliff-side station at the edge of Choshi, 165 min from Tokyo on a tram. Lighthouse tourism, empty streets, 21:18 last train.",
-      "landmarks": "Inuboe lighthouse, crashing waves, hiking. Dramatic geography, zero urban landmarks.",
+      "landmarks": "Inubo lighthouse, crashing waves, hiking. Dramatic geography, zero urban landmarks.",
       "food": "3 restaurants. Mostly daytime seaside snacks. No dinner culture.",
       "nightlife": "Virtually absent. 4 late-night establishments, 0 karaoke. Last train before 10pm kills any scene."
     },
@@ -6980,7 +6980,7 @@
     },
     "ru": {
       "atmosphere": "Прибрежная станция на краю Choshi, 165 мин на трамвае. Маячный туризм, пустые улицы, 21:18 последний поезд.",
-      "landmarks": "Маяк Inuboe, шум волн, пешком. Драматическая география, ноль городских меток.",
+      "landmarks": "Маяк Inubo, шум волн, пешком. Драматическая география, ноль городских меток.",
       "food": "3 ресторана, 6 точек. В основном дневные приморские закуски. Ужина нет.",
       "nightlife": "Практически нет. 4 поздних заведения, 0 караоке. 21:18 終電 убивает сцену."
     }
@@ -7580,7 +7580,7 @@
     },
     "ru": {
       "atmosphere": "Гора Zushi, ворота для трекинга. 76 минут, полная изоляция.",
-      "landmarks": "Keikyu Zushi Line. 15.7 млн кв.м лес (храм Jinmu-Tera). Hiking gateway.",
+      "landmarks": "Keikyu Zushi Line. 15.7 млн кв.м лес (храм Jinmuji). Hiking gateway.",
       "food": "По сути 0. 1 точка. Берите ланч заранее.",
       "nightlife": "Не существует. Храм, природа, тишина."
     }
@@ -9108,7 +9108,7 @@
   "kawabe": {
     "en": {
       "atmosphere": "Ome Line suburb, mountain air and cheap rent. Tokyo commute is the tax.",
-      "landmarks": "Tama River side, Ome foothills, Kawabe Onsen Ume-no-yu. Practical rather than cute.",
+      "landmarks": "Tama River side, Ome foothills, Kabe Onsen Ume-no-yu. Practical rather than cute.",
       "food": "24 restaurants, 13 izakayas. Daily food works; destination eating is scarce.",
       "nightlife": "8 late-night spots. Minimal. Local izakayas, no karaoke, no clubs."
     },
@@ -9120,7 +9120,7 @@
     },
     "ru": {
       "atmosphere": "Пригород Ome Line, горный воздух и дешёвая аренда. Комьют до Токио — налог.",
-      "landmarks": "Сторона Tama River, предгорья Оме, Kawabe Onsen Ume-no-yu. Практично, не мило.",
+      "landmarks": "Сторона Tama River, предгорья Оме, Kabe Onsen Ume-no-yu. Практично, не мило.",
       "food": "24 ресторана, 13 изакая. На каждый день работает; ехать ради еды почти некуда.",
       "nightlife": "8 поздних мест. Минимально. Локальные изакая, без караоке, без клубов."
     }
@@ -13360,14 +13360,14 @@
     },
     "ru": {
       "atmosphere": "Край монорельса, 60 минут от центра. Спокойно, безопасно, культуры нет. Забыто.",
-      "landmarks": "Храм Мангантэра у станции. Клиники (5). Вымершие улицы.",
+      "landmarks": "Храм Мангандзи у станции. Клиники (5). Вымершие улицы.",
       "food": "Минимум — 2 listings, 7. Обед. Ночной жизни нет.",
       "nightlife": "Ноль. Ночь начинается в 21:00."
     }
   },
   "manatsuru": {
     "en": {
-      "atmosphere": "Manatsuru is a clifftop coastal town on Tokaido Line. Mountain elevation (61m), ocean views, quiet charm. 2 hours from Tokyo.",
+      "atmosphere": "Manazuru is a clifftop coastal town on Tokaido Line. Mountain elevation (61m), ocean views, quiet charm. 2 hours from Tokyo.",
       "landmarks": "Seaside hamlet with fishing heritage. One huge park (39M sqm landuse). Minimal infrastructure otherwise.",
       "food": "7 restaurants. Seafood-focused, sparse but decent. 1 cafe.",
       "nightlife": "Minimal. Resort town closes early. Breakfast people, not bar people."
@@ -13379,7 +13379,7 @@
       "nightlife": "ほぼなし。リゾート気分で早寝。朝型。"
     },
     "ru": {
-      "atmosphere": "Манацуру — прибрежный город на склоне (61м) линии Токайдо. Вид на море, спокойствие. Далеко от Центра.",
+      "atmosphere": "Манадзуру — прибрежный город на склоне (61м) линии Токайдо. Вид на море, спокойствие. Далеко от Центра.",
       "landmarks": "Рыбацкая деревня. Парк огромный (39М кв.м). Больше ничего.",
       "food": "7 мест, 8. Морепродукты. Редко, но хорошо. Кафе 1.",
       "nightlife": "Практически нет. Курортный быт, рано спят."
@@ -14968,7 +14968,7 @@
   "mogusa-sono": {
     "en": {
       "atmosphere": "Suburban hill town with narrow lanes and granny Tokyo. Quiet, safe, but 50 min from the hub.",
-      "landmarks": "Mogusa-Sono means botanical garden — hiking escape. Single-line outpost, green spaces everywhere.",
+      "landmarks": "Mogusaen means botanical garden — hiking escape. Single-line outpost, green spaces everywhere.",
       "food": "Sparse restaurant scene (3 actual spots). Convenience store dinner zone.",
       "nightlife": "Minimal. Nobody here after 9pm."
     },
@@ -18128,7 +18128,7 @@
   "o-hanahata": {
     "en": {
       "atmosphere": "Mountain town above Tokyo (234m, low seismic risk). Chichibu festival hub. Tourist trap for outdoors lovers. 112 min commute, last train 10:44pm.",
-      "landmarks": "Chichibu Shrine, night market (Ohanahata matsuri). 7 pedestrian streets. River gorge access. Hiking paradise nearby.",
+      "landmarks": "Chichibu Shrine, night market (Ohanabatake matsuri). 7 pedestrian streets. River gorge access. Hiking paradise nearby.",
       "food": "40 spots, 13 izakaya, 1 bar. Night market culture. Nightlife surprisingly robust (13 midnight).",
       "nightlife": "Festive town. 13 late-night joints. Night market scene. Karaoke-free but drinks-heavy."
     },
@@ -18140,7 +18140,7 @@
     },
     "ru": {
       "atmosphere": "Горная деревня над Токио (234м, низкий сейсмический риск). Центр фестиваля Чичибу. 112 минут до центра, последний поезд 22:44.",
-      "landmarks": "Святилище Чичибу, ночной рынок (фестиваль О-Ханахата). 7 пешеходных улиц. Доступ в ущелье. Рай для трекинга.",
+      "landmarks": "Святилище Чичибу, ночной рынок (фестиваль Оханабатакэ). 7 пешеходных улиц. Доступ в ущелье. Рай для трекинга.",
       "food": "40 ресторанов, 13 изакай, 1 бар. Культура ночного рынка. Ночные заведения (13 мест).",
       "nightlife": "Праздничный город. 13 ночных мест. Шум ночного рынка. Нет каракое."
     }
@@ -25088,7 +25088,7 @@
   "takashima-taira": {
     "en": {
       "atmosphere": "Itabashi housing estate, Mita line. Sprawling parks, family zone. Grimy crime rate (70/10k) — don't walk alone late.",
-      "landmarks": "Takashima-Taira park, athletic fields, two youth hostels. Planned neighborhood vibe.",
+      "landmarks": "Takashimadaira park, athletic fields, two youth hostels. Planned neighborhood vibe.",
       "food": "26 spots, 10 izakaya—minimal nightlife. Gyms thrive here (9-rated), bars don't.",
       "nightlife": "Minimal. 7 late-night places max, no karaoke. Families asleep by 10pm."
     },
@@ -26428,7 +26428,7 @@
   "tokoshikoen": {
     "en": {
       "atmosphere": "Quiet residential pocket on the Tokyu Oimachi Line. Single track, limited transit options, 30min to central Tokyo.",
-      "landmarks": "Tokoshikoen Park nearby, Shinagawa ward residential district. Low-key, no major attractions.",
+      "landmarks": "Togoshi-Koen Park nearby, Shinagawa ward residential district. Low-key, no major attractions.",
       "food": "Sparse food venues, mostly local chains. Data limited for this area.",
       "nightlife": "Minimal. Neighborhood bars close early, post-work scene near nonexistent."
     },
@@ -27488,7 +27488,7 @@
   "ue-gora": {
     "en": {
       "atmosphere": "Alpine cable car stop at Hakone. Mountain resort, isolated. 698m elevation.",
-      "landmarks": "Ue-Gora ropeway junction. Highland shrine. Art museum access.",
+      "landmarks": "Kami-Gora ropeway junction. Highland shrine. Art museum access.",
       "food": "Resort inns and teahouses only. Tourist-priced.",
       "nightlife": "None. Visitors are tourists enjoying hot springs and views."
     },
@@ -27500,7 +27500,7 @@
     },
     "ru": {
       "atmosphere": "Альпийская остановка кабельной дороги в Хаконе. Горный курорт, изолирован. 698м.",
-      "landmarks": "Развязка канатной дороги Уэ-Гора. Высокогорное святилище. Доступ к художественному музею.",
+      "landmarks": "Развязка канатной дороги Ками-Гора. Высокогорное святилище. Доступ к художественному музею.",
       "food": "Только курортные гостиницы и чайные. Туристические цены.",
       "nightlife": "Нет. Посетители — туристы, наслаждающиеся горячими источниками и видами."
     }
@@ -28388,7 +28388,7 @@
   "washimiya": {
     "en": {
       "atmosphere": "Shrine town north of Tokyo. Quiet residential sprawl, anime pilgrimage buzz.",
-      "landmarks": "Washimiya Shrine, local shrine hub. Otaku culture destination, low-key.",
+      "landmarks": "Washinomiya Shrine, local shrine hub. Otaku culture destination, low-key.",
       "food": "Few spots (4 cafes, 1 izakaya). Chains dominate, limited quality.",
       "nightlife": "Minimal. Shrine-town vibe, early closing."
     },

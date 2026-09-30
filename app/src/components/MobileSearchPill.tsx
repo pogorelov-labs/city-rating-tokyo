@@ -6,6 +6,8 @@ import { MapStation } from '@/lib/types';
 import { useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { stationDisplayName, matchArea } from '@/lib/station-name';
+import { useAllAreas } from '@/lib/area-lists';
+import { areaKind } from '@/lib/area-key';
 import type { Locale } from '@/i18n/routing';
 
 interface Props {
@@ -22,17 +24,19 @@ export default function MobileSearchPill({ stations }: Props) {
   const { setSelectedStation, setHoveredStation } = useCityActions();
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  // Bangkok: districts and station areas are both searchable at every level.
+  const searchable = useAllAreas(stations);
 
   const searchResults = useMemo(() => {
     if (!search || search.length < 2) return [];
     const hits: { station: MapStation; alias?: string }[] = [];
-    for (const s of stations) {
+    for (const s of searchable) {
       const m = matchArea(s, search);
       if (m.matched) hits.push({ station: s, alias: m.alias });
       if (hits.length >= 6) break;
     }
     return hits;
-  }, [stations, search]);
+  }, [searchable, search]);
 
   // Close dropdown on tap outside
   useEffect(() => {
@@ -57,7 +61,11 @@ export default function MobileSearchPill({ stations }: Props) {
   return (
     <div
       ref={containerRef}
-      className={`md:hidden absolute top-2 left-3 z-[999] ${isDistrict ? 'right-40' : 'right-24'}`}
+      // Full width: the map controls sit in the row below on phones, so the
+      // pill (and its results list, which drops over that row) stacks above
+      // them (controls z 1000; the filter drawer's backdrop, z 1001 later in
+      // the DOM, still covers it).
+      className="md:hidden absolute top-2 left-3 right-3 z-[1001]"
     >
       {/* Pill */}
       <div className="flex items-center bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 gap-2">
@@ -120,9 +128,11 @@ export default function MobileSearchPill({ stations }: Props) {
                 <span className="text-gray-400 ml-1.5 text-xs">{stationDisplayName(s, locale).secondary}</span>
               </span>
               <span className="text-xs text-gray-400 shrink-0">
-                {isDistrict
-                  ? t('filter.stations', { count: s.station_count ?? 0 })
-                  : t('filter.lines', { count: s.line_count })}
+                {!isDistrict
+                  ? t('filter.lines', { count: s.line_count })
+                  : areaKind(s.slug) === 'station'
+                    ? t('filter.kindStationArea')
+                    : t('filter.kindDistrict')}
               </span>
             </button>
           ))}

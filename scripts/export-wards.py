@@ -12,6 +12,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "scrapers"))
 from utils import NocoDB
+from slugs import index_by_slug
 
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "..", "app", "src", "data", "ward-data.json")
 
@@ -24,11 +25,14 @@ def main():
     db = NocoDB("station_wards")
     records = db.get_all_records(fields=["slug", "city_name", "ward_name", "prefecture_name"])
 
-    ward_data = {}
+    # Re-key rows scraped before the CRTKY-113 rename; otherwise this export
+    # would write 334 old slugs back into ward-data.json.
     for r in records:
-        slug = r.get("slug", "").strip()
-        if not slug:
-            continue
+        r["slug"] = (r.get("slug") or "").strip()
+    by_slug, _ = index_by_slug(records)
+
+    ward_data = {}
+    for slug, r in by_slug.items():
         ward_data[slug] = {
             "city_name": r.get("city_name", "").strip(),
             "ward_name": r.get("ward_name", "").strip(),

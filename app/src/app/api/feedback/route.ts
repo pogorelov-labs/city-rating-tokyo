@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getClientIP, validateOrigin } from '@/lib/api-security';
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-const SLUG_RE = /^[a-z0-9-]+$/;
+/** Tokyo station / Bangkok district slugs, or a Bangkok station-area key
+ *  (`st.<id>`, see lib/area-key.ts) from /bangkok/station/<id>. */
+const SLUG_RE = /^(st\.)?[a-z0-9-]+$/;
 
 /** Allowed path characters for page_url (see validatePageUrl). The `*` (not `+`)
  *  permits the bare-root path "/" sent by the general-feedback widget on the
