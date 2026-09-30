@@ -229,8 +229,9 @@ def build_compact_context(s: dict) -> str:
 
     if crime:
         ctx["crime"] = {
-            "total": crime.get("total_crimes"),
-            "rate_per_10k": crime.get("crimes_per_10k"),
+            "weighted_rate_per_10k": crime.get("rate"),
+            "level": crime.get("level"),  # neighborhood (Tokyo 800 m) or municipal
+            "area": crime.get("municipality"),
         }
 
     if env.get("elevation_m") is not None:

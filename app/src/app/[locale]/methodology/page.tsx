@@ -32,24 +32,25 @@ const DATA_SOURCES = [
     sources: ['Station line count (ekidata)', 'MLIT S12 daily passenger counts'],
     coverage: '100%',
     confidence: 'strong',
-    note: '94% of stations have official MLIT passenger data.',
+    note: '96% of stations have official MLIT passenger data (FY2024; an earlier year for unmanned JR East stations that dropped out of the latest tables).',
   },
   {
     category: 'Rent / Affordability',
-    sources: ['Suumo station-level scrape', 'Ward-average fallback (Nominatim)', 'Log-linear distance regression'],
+    sources: ['Suumo station-level listings', 'e-Stat municipal average (labelled on the station page)', 'Log-linear distance regression'],
     coverage: '100%',
     confidence: 'mixed',
-    note: '18% station-level, 48% ward average, 34% regression estimate. Inverted: cheaper = higher rating.',
+    note: '18% station-level listings, 76% municipal average, 6% regression estimate. A municipal average is capped at 9 and a regression at 8, so only listings can reach 10. Inverted: cheaper = higher rating.',
   },
   {
     category: 'Safety',
     sources: [
-      'Keishicho ArcGIS (Tokyo neighborhood polygons)',
-      'Prefectural police ward-level data',
+      'Tokyo Metropolitan Police neighborhood (町丁) crime counts',
+      'Kanagawa, Saitama and Chiba police municipal crime statistics',
+      'e-Stat population and boundaries',
     ],
     coverage: '100%',
     confidence: 'mixed',
-    note: 'Tokyo stations use neighborhood-level crime polygons. Other prefectures use ward-level data.',
+    note: 'Weighted crimes per 10,000 people, 2024, the same formula in all four prefectures (daytime population in office districts). Tokyo stations use the neighborhoods within 800 m; elsewhere the municipality or ward, which is why those are marked Partial.',
   },
   {
     category: 'Green & Parks',
@@ -72,15 +73,15 @@ const DATA_SOURCES = [
       'Pedestrian street density',
     ],
     coverage: '98%',
-    confidence: 'moderate',
-    note: 'Cultural venue density differentiates neighborhood character. 252 stations also have editorial ratings.',
+    confidence: 'mixed',
+    note: 'Measured when both cultural venues and pedestrian streets are observed, Partial with cultural venues alone. Cultural venue density differentiates neighborhood character. 252 stations also have editorial ratings.',
   },
   {
     category: 'Quietness',
     sources: ['MLIT S12 daily passenger counts', 'HotPepper commercial density (fallback)'],
     coverage: '100%',
     confidence: 'strong',
-    note: 'Inverted: fewer passengers = higher rating.',
+    note: 'Inverted: fewer passengers = higher rating. 55 unmanned stations that operators never report use a commercial-density proxy.',
   },
   {
     category: 'Daily Essentials',
@@ -329,15 +330,29 @@ export default async function MethodologyPage({
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Data freshness</h2>
           <p className="text-gray-700 text-sm">
-            Ratings were last computed in April 2026. Crime data is from 2024 (Keishicho annual report).
-            Passenger counts are from MLIT FY2021. Rent data is from Suumo snapshots taken in April 2026.
+            Ratings were last computed in April 2026. Crime data is from 2024 police statistics in all four prefectures.
+            Passenger counts are from MLIT S12, fiscal year 2024. Rent data is from Suumo snapshots taken in April 2026.
             OSM data reflects the state of OpenStreetMap at scrape time (April 2026).
+          </p>
+          <p className="text-gray-500 text-xs mt-3">
+            Passenger counts: 出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）を加工して作成 —
+            MLIT National Land Numerical Information,{' '}
+            <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-S12-2024.html" className="underline">
+              station passenger data (S12)
+            </a>
+            , processed by City Rating Tokyo.
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Crime: 出典：警視庁ホームページ, 神奈川県警察ホームページ, 埼玉県警察ホームページ,
+            千葉県警察ホームページ (2024 statistics). Population and small-area boundaries:
+            出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成; Tokyo daytime
+            population: 東京都の統計. Source files and checksums are listed in data/crime/sources.json.
           </p>
         </section>
 
         {/* Bangkok */}
         <section id="bangkok" className="scroll-mt-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Bangkok: district-level ratings</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Bangkok: districts, station areas and a 200&nbsp;m grid</h2>
           <p className="text-gray-700 leading-relaxed">
             Bangkok is rated by its {bangkokMeta.district_count} districts (<em>khet</em>), not by station:
             large parts of the city are not served by rail, and districts are how people there search for
@@ -351,6 +366,32 @@ export default async function MethodologyPage({
             Mo&nbsp;Chit). Points in built-up areas carry full weight and empty paddy fields or river water almost
             none, so a huge semi-rural district is judged by where people actually live. District signals are then
             percentile-ranked across the 50 districts, exactly like Tokyo&apos;s stations.
+          </p>
+          <h3 className="font-semibold text-gray-900 mt-5 mb-2">Three levels of detail</h3>
+          <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+            <li>
+              <strong>Districts</strong> ({bangkokMeta.district_count}) &mdash; as above.
+            </li>
+            <li>
+              <strong>Station areas</strong> ({bangkokMeta.station_area_count}) &mdash; the land within 800&nbsp;m
+              of a rail station that is closer to it than to any other station. Interchanges of different lines a
+              few minutes&apos; walk apart (Asok and Sukhumvit, Sala Daeng and Si Lom, Mo Chit and Chatuchak Park, …)
+              form one area. An area&apos;s score is the resident-weighted average of the grid points inside it,
+              ranked against the other station areas; its commute times are from the station itself. Land farther
+              than 800&nbsp;m from any station has no station area.
+            </li>
+            <li>
+              <strong>200&nbsp;m grid</strong> ({bangkokMeta.grid_cell_count.toLocaleString('en-US')} cells) &mdash; every
+              grid point rated on its own. Here the percentile is weighted by residents: a cell rates 8 when it
+              beats about three quarters of the places where people actually live, not three quarters of all land.
+              Quietness at this level (and for station areas) is the density of all mapped places within
+              400&nbsp;m, since there is no population count at that scale.
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-3 text-sm">
+            Scores are relative within their level: a station area&apos;s 8 and a district&apos;s 8 are ranked
+            against different sets. Rent and safety stay district estimates at every level &mdash; a station area
+            blends the districts it covers by residents, a grid cell takes its own district&apos;s value.
           </p>
           <div className="bg-white rounded-lg border border-gray-200 mt-4 overflow-x-auto">
             <table className="w-full text-sm">
@@ -404,10 +445,14 @@ export default async function MethodologyPage({
               <span className="text-amber-500 mt-0.5">&#9888;</span>
               <span><strong>Population</strong> is DOPA house registration (2020, via Wikidata); central districts house many unregistered residents, so their real density is higher.</span>
             </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">&#9888;</span>
+              <span><strong>No street-level rent.</strong> Condo rents next to a BTS or MRT station are usually above the district figure, but no open listing data exists to show it; the station and grid levels therefore reuse the district rent estimates.</span>
+            </li>
           </ul>
           <p className="text-xs text-gray-500 mt-3">
             Data: &copy; OpenStreetMap contributors (ODbL), Overture Maps Places release 2026-09-23 (CDLA-Permissive-2.0),
-            Wikidata (CC0), district photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
+            Wikidata (CC0), district and station photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
           </p>
         </section>
 

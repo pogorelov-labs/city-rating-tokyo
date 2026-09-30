@@ -159,6 +159,18 @@ STATION_TH_FALLBACK: dict[str, str] = {
     "Rangsit": "รังสิต",
 }
 
+# Japanese station names (station id → katakana) for the few stations whose
+# Wikidata item has no Japanese label; same conventions as ja.wikipedia's
+# Bangkok station articles (long vowels written out, no 駅 suffix).
+STATION_JA_FALLBACK: dict[str, str] = {
+    "bang-wa": "バーンワー",
+    "hua-lamphong": "フワランポーン",
+    "sena-ruam": "セーナールワム",
+    "si-iam": "シーイアム",  # OSM node carries Si La Salle's item (Q119010023)
+    "talat-phlu": "タラートプルー",
+    "wong-sawang": "ウォンサワーン",
+}
+
 STATION_NAME_ALIASES: dict[str, str] = {
     "don muang": "Don Mueang",
     "จรัญฯ 13": "Charan 13",

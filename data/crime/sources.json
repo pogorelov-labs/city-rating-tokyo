@@ -1,0 +1,99 @@
+{
+ "files": {
+  "tokyo": {
+   "title": "区市町村の町丁別、罪種別及び手口別認知件数 (令和6年)",
+   "url": "https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/jokyo/ninchikensu.files/R6.csv",
+   "page": "https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/jokyo/ninchikensu.html",
+   "sha256": "e8758aa0c684aa819f1f701c2a0d8e350143605323808ea1e11d815a6d75045c",
+   "licence": "CC BY 4.0",
+   "attribution": "出典：警視庁ホームページ（https://www.keishicho.metro.tokyo.lg.jp/）",
+   "bytes": 501146
+  },
+  "kanagawa": {
+   "title": "刑法犯 罪名別市区町村別 認知件数 (令和6年 確定値)",
+   "url": "https://www.police.pref.kanagawa.jp/assets/entry/c0030_62.pdf",
+   "page": "https://www.police.pref.kanagawa.jp/tokei/hanzai_tokei/mesc0030.html",
+   "sha256": "5e889b1a71492987e5734767902dcae95a9a18db0c3d8ff66a6ba66059efe515",
+   "licence": "free reuse with attribution (神奈川県警察 著作権について)",
+   "attribution": "出典：神奈川県警察ホームページ（https://www.police.pref.kanagawa.jp/）",
+   "bytes": 949073
+  },
+  "saitama": {
+   "title": "犯罪統計年鑑 令和6年の犯罪, 表31 刑法犯 罪種別 市区町村別 認知件数",
+   "url": "https://www.police.pref.saitama.lg.jp/documents/31689/hannzaitoukeinennkann6nenn.pdf",
+   "page": "https://www.police.pref.saitama.lg.jp/e0010/keisou-toukei.html",
+   "sha256": "0f9b25d658f4244a07582e1e12ac74c139429e657c071b36df6c1d2c632c611b",
+   "licence": "free reuse with attribution (埼玉県警察 著作権について)",
+   "attribution": "出典：埼玉県警察ホームページ（https://www.police.pref.saitama.lg.jp/）",
+   "bytes": 3419940
+  },
+  "chiba": {
+   "title": "令和6年 犯罪の概要, 表4 刑法犯 市区町村別 罪種(手口)別 認知件数",
+   "url": "https://www.police.pref.chiba.jp/content/common/000069930.pdf",
+   "page": "https://www.police.pref.chiba.jp/keisoka/safe-life_crime_statisticsA-07.html",
+   "sha256": "08c5a4f01cda39188579ca1cae37b437e6ac0b51f38f5231190ca74749e15512",
+   "licence": "free reuse with attribution (千葉県警察 著作権について)",
+   "attribution": "出典：千葉県警察ホームページ（https://www.police.pref.chiba.jp/）",
+   "bytes": 6282299
+  },
+  "tokyo_daytime": {
+   "title": "東京都の昼間人口 2020, 表11 町丁・字等別昼間人口",
+   "url": "https://www.toukei.metro.tokyo.lg.jp/tyukanj/2020/tj20zv1100.csv",
+   "page": "https://www.toukei.metro.tokyo.lg.jp/tyukanj/2020/tj-20index.htm",
+   "sha256": "9c296cda939b88850993dda2e4ac9e60c463a9a9430025cda56103289619dccf",
+   "licence": "CC BY 4.0",
+   "attribution": "出典：東京都の統計（https://www.toukei.metro.tokyo.lg.jp/）",
+   "bytes": 813425
+  },
+  "boundaries_11": {
+   "title": "令和2年国勢調査 小地域 境界データ (Saitama)",
+   "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=11&coordSys=1&format=shape&downloadType=5&datum=2011",
+   "page": "https://www.e-stat.go.jp/gis/statmap-search?type=2",
+   "sha256": "8f08dc5c345b9dba600d6092aa208c147235f6b1e811b5c781c87c5aa6ef7331",
+   "licence": "政府標準利用規約 2.0 (CC BY 4.0 compatible)",
+   "attribution": "出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成",
+   "bytes": 5797974
+  },
+  "boundaries_12": {
+   "title": "令和2年国勢調査 小地域 境界データ (Chiba)",
+   "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=12&coordSys=1&format=shape&downloadType=5&datum=2011",
+   "page": "https://www.e-stat.go.jp/gis/statmap-search?type=2",
+   "sha256": "c00ef474930bbf53e814d0bef04b699c2d2e06bf0f09fd48a804c0cbe120fd4c",
+   "licence": "政府標準利用規約 2.0 (CC BY 4.0 compatible)",
+   "attribution": "出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成",
+   "bytes": 10199187
+  },
+  "boundaries_13": {
+   "title": "令和2年国勢調査 小地域 境界データ (Tokyo)",
+   "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=13&coordSys=1&format=shape&downloadType=5&datum=2011",
+   "page": "https://www.e-stat.go.jp/gis/statmap-search?type=2",
+   "sha256": "fefff9196e8d2dd0e089065a37bb30141ff07bac976cae138c42e26acb441886",
+   "licence": "政府標準利用規約 2.0 (CC BY 4.0 compatible)",
+   "attribution": "出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成",
+   "bytes": 5679981
+  },
+  "boundaries_14": {
+   "title": "令和2年国勢調査 小地域 境界データ (Kanagawa)",
+   "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=14&coordSys=1&format=shape&downloadType=5&datum=2011",
+   "page": "https://www.e-stat.go.jp/gis/statmap-search?type=2",
+   "sha256": "82e901cf0e9736ff3a22803c8193419781988cb275579fb97cde1013907dc59c",
+   "licence": "政府標準利用規約 2.0 (CC BY 4.0 compatible)",
+   "attribution": "出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成",
+   "bytes": 5041900
+  }
+ },
+ "population": {
+  "api": "https://dashboard.e-stat.go.jp/api/1.0/Json/getData",
+  "resident": {
+   "indicator": "0201200000000010010",
+   "time": "2025CY00",
+   "label": "住民基本台帳人口 2025-01-01"
+  },
+  "daytime": {
+   "indicator": "0201060000000010000",
+   "time": "2020CY00",
+   "label": "昼間人口 (2020年国勢調査)"
+  },
+  "attribution": "出典：政府統計の総合窓口(e-Stat)（https://www.e-stat.go.jp/）を加工して作成"
+ }
+}
