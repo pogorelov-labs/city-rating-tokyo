@@ -11,42 +11,53 @@ interface MobileDrawerProps {
 
 export default function MobileDrawer({ stations }: MobileDrawerProps) {
   const t = useTranslations('drawer');
-  const [open, setOpen] = useState(false);
+  // Same model as MobileStationCard: `wantOpen` is set only by the handlers,
+  // `raised` only from rAF / transitionend / timer callbacks, and `open` /
+  // `visible` are derived from the two.
+  const [wantOpen, setWantOpen] = useState(false);
+  const [raised, setRaised] = useState(false);
+  const open = wantOpen && raised;
   // Drawer is display:none when fully closed to prevent Safari 26 Liquid Glass
   // tinting from scanning its fixed white background behind the toolbar.
-  const [visible, setVisible] = useState(false);
+  const visible = wantOpen || raised;
   const drawerRef = useRef<HTMLDivElement>(null);
 
-  const handleOpen = useCallback(() => {
-    // Phase 1: mount with translate-y-full (offscreen)
-    setVisible(true);
-    // Phase 2: after layout, slide up
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => setOpen(true));
-    });
-  }, []);
+  const handleOpen = useCallback(() => setWantOpen(true), []);
+  const handleClose = useCallback(() => setWantOpen(false), []);
 
-  const handleClose = useCallback(() => {
-    setOpen(false);
-    // Wait for the 300ms slide-down transition, then hide
-  }, []);
-
+  // Phase 1 (wanted, not raised): shown with translate-y-full (offscreen).
+  // Phase 2, two frames later so that position has been laid out: slide up.
   useEffect(() => {
-    if (!open && visible) {
+    if (!wantOpen) return;
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => setRaised(true));
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
+  }, [wantOpen]);
+
+  // Hide after the 300ms slide-down. Armed only while closing, never in phase 1:
+  // a fallback armed there can fire before a slow double rAF and leave the
+  // drawer open but display:none.
+  useEffect(() => {
+    if (!wantOpen && raised) {
       // The drawer div is always rendered (only display toggles), so the ref is
       // set by now. If it ever isn't, the fallback timer below still hides it.
       const el = drawerRef.current;
       const onEnd = (e: TransitionEvent) => {
         // Ignore bubbled transitionend from children (e.g. button transition-colors)
         if (e.target !== el) return;
-        setVisible(false);
+        setRaised(false);
       };
       el?.addEventListener('transitionend', onEnd);
       // Fallback in case transitionend doesn't fire (e.g. display:none race)
-      const timer = setTimeout(() => setVisible(false), 350);
+      const timer = setTimeout(() => setRaised(false), 350);
       return () => { el?.removeEventListener('transitionend', onEnd); clearTimeout(timer); };
     }
-  }, [open, visible]);
+  }, [wantOpen, raised]);
 
   return (
     <>
