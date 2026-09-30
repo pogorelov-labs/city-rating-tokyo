@@ -7,6 +7,7 @@ import {
   categoryDeviationColor,
   CITY_MEDIANS,
   DEFAULT_COMPOSITE_ANCHORS,
+  isStationLevelRent,
   pigmentName,
 } from '@/lib/scoring';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
@@ -196,6 +197,12 @@ export default async function StationPage({
               <div className="text-xs text-gray-400">
                 {station.rent_avg?.['2ldk'] ? t('station.rentRange') : t('station.rentSingle')}
               </div>
+              {/* Area-level figures must not read as this station's rent (CRTKY-43). */}
+              {!isStationLevelRent(station.rent_avg) && (
+                <div className="text-xs text-gray-500">
+                  {station.rent_avg.source === 'estat' ? t('station.rentMunicipalAvg') : t('station.rentEstimate')}
+                </div>
+              )}
             </StatCard>
           ) : (
             <StatCard label={t('station.rentLabel')} value="—" sub={t('station.noDataYet')} />

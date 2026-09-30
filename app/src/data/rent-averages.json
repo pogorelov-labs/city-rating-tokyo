@@ -8798,5 +8798,2421 @@
     "updated": "2026-04",
     "area_code": "14208",
     "area_name": "逗子市"
+  },
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+    "1k_1ldk": 99787,
+    "2ldk": 109486,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12211",
+    "area_name": "成田市"
+  },
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
+    "1k_1ldk": 99787,
+    "2ldk": 109486,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12211",
+    "area_name": "成田市"
+  },
+  "choshi": {
+    "1k_1ldk": 75476,
+    "2ldk": 74421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12202",
+    "area_name": "銚子市"
+  },
+  "hanedakuko-kokunaisen-taaminaru": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "higashihanno": {
+    "1k_1ldk": 106446,
+    "2ldk": 113558,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11209",
+    "area_name": "飯能市"
+  },
+  "keiotama-sentaa": {
+    "1k_1ldk": 115283,
+    "2ldk": 119521,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13224",
+    "area_name": "多摩市"
+  },
+  "shonandai": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "chiba-nyutaun-chuo": {
+    "1k_1ldk": 98851,
+    "2ldk": 130412,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12231",
+    "area_name": "印西市"
+  },
+  "chibachuo": {
+    "1k_1ldk": 120149,
+    "2ldk": 140749,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12101",
+    "area_name": "中央区"
+  },
+  "chuorinkan": {
+    "1k_1ldk": 117117,
+    "2ldk": 130790,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14213",
+    "area_name": "大和市"
+  },
+  "fuchuhonmachi": {
+    "1k_1ldk": 132198,
+    "2ldk": 157720,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13206",
+    "area_name": "府中市"
+  },
+  "hanedakuko-kokusaisen-taaminaru": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "hanno": {
+    "1k_1ldk": 106446,
+    "2ldk": 113558,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11209",
+    "area_name": "飯能市"
+  },
+  "hanyu": {
+    "1k_1ldk": 84742,
+    "2ldk": 105577,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11216",
+    "area_name": "羽生市"
+  },
+  "hatchobori": {
+    "1k_1ldk": 130310,
+    "2ldk": 147416,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11105",
+    "area_name": "中央区"
+  },
+  "hatchonawate": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "higashi-fuchu": {
+    "1k_1ldk": 132198,
+    "2ldk": 157720,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13206",
+    "area_name": "府中市"
+  },
+  "hokucho-kasumi": {
+    "1k_1ldk": 127854,
+    "2ldk": 163122,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11227",
+    "area_name": "朝霞市"
+  },
+  "kamiooka": {
+    "1k_1ldk": 133484,
+    "2ldk": 128731,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14111",
+    "area_name": "港南区"
+  },
+  "keikyu-kamata": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "keikyu-kawasaki": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "keio-nagayama": {
+    "1k_1ldk": 115283,
+    "2ldk": 119521,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13224",
+    "area_name": "多摩市"
+  },
+  "ko-no-shima": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "korai": {
+    "1k_1ldk": 108007,
+    "2ldk": 90909,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11242",
+    "area_name": "日高市"
+  },
+  "kozu": {
+    "1k_1ldk": 102295,
+    "2ldk": 117320,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14206",
+    "area_name": "小田原市"
+  },
+  "makuharihongo": {
+    "1k_1ldk": 120897,
+    "2ldk": 121538,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12102",
+    "area_name": "花見川区"
+  },
+  "nagareyama-otakano-mori": {
+    "1k_1ldk": 115879,
+    "2ldk": 154366,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12220",
+    "area_name": "流山市"
+  },
+  "nanryu-yama": {
+    "1k_1ldk": 115879,
+    "2ldk": 154366,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12220",
+    "area_name": "流山市"
+  },
+  "naruto": {
+    "1k_1ldk": 81900,
+    "2ldk": 96898,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12237",
+    "area_name": "山武市"
+  },
+  "oami": {
+    "1k_1ldk": 105884,
+    "2ldk": 113373,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12239",
+    "area_name": "大網白里市"
+  },
+  "ohara": {
+    "1k_1ldk": 84794,
+    "2ldk": 84079,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12238",
+    "area_name": "いすみ市"
+  },
+  "ookayama": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "sagamiono": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "sakuragicho": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "seibu-yuenchi": {
+    "1k_1ldk": 122100,
+    "2ldk": 116267,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13213",
+    "area_name": "東村山市"
+  },
+  "seibukyujo-mae": {
+    "1k_1ldk": 115182,
+    "2ldk": 138552,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11208",
+    "area_name": "所沢市"
+  },
+  "tama-dobutsu-koen": {
+    "1k_1ldk": 114065,
+    "2ldk": 127105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13212",
+    "area_name": "日野市"
+  },
+  "tamagawajosui": {
+    "1k_1ldk": 120018,
+    "2ldk": 142799,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13202",
+    "area_name": "立川市"
+  },
+  "tenku-hashi": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "tennodai": {
+    "1k_1ldk": 104152,
+    "2ldk": 106484,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12222",
+    "area_name": "我孫子市"
+  },
+  "togo-no": {
+    "1k_1ldk": 106446,
+    "2ldk": 113558,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11209",
+    "area_name": "飯能市"
+  },
+  "yotsukaido": {
+    "1k_1ldk": 93167,
+    "2ldk": 112373,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12228",
+    "area_name": "四街道市"
+  },
+  "yukari-ga-oka": {
+    "1k_1ldk": 94347,
+    "2ldk": 111309,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12212",
+    "area_name": "佐倉市"
+  },
+  "aiko-ishida": {
+    "1k_1ldk": 104650,
+    "2ldk": 118637,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14212",
+    "area_name": "厚木市"
+  },
+  "aomono-yokocho": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "arakawa-itchu-mae": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "arakawa-nichome": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "arakawa-shichi-chome": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "arakawa-yuenchi-mae": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "baigo": {
+    "1k_1ldk": 89339,
+    "2ldk": 105268,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12208",
+    "area_name": "野田市"
+  },
+  "bando-hashi": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "bushu-araki": {
+    "1k_1ldk": 91872,
+    "2ldk": 101141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11206",
+    "area_name": "行田市"
+  },
+  "bushu-hino": {
+    "1k_1ldk": 83579,
+    "2ldk": 82480,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11207",
+    "area_name": "秩父市"
+  },
+  "bushu-nakagawa": {
+    "1k_1ldk": 83579,
+    "2ldk": 82480,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11207",
+    "area_name": "秩父市"
+  },
+  "byobu-ura": {
+    "1k_1ldk": 115637,
+    "2ldk": 133048,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14107",
+    "area_name": "磯子区"
+  },
+  "chiba-koen": {
+    "1k_1ldk": 120149,
+    "2ldk": 140749,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12101",
+    "area_name": "中央区"
+  },
+  "chidoricho": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "cho-ura": {
+    "1k_1ldk": 106595,
+    "2ldk": 113853,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12229",
+    "area_name": "袖ケ浦市"
+  },
+  "chogo": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "chojamachi": {
+    "1k_1ldk": 84794,
+    "2ldk": 84079,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12238",
+    "area_name": "いすみ市"
+  },
+  "chugakko": {
+    "1k_1ldk": 94347,
+    "2ldk": 111309,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12212",
+    "area_name": "佐倉市"
+  },
+  "chuodaigaku-meiseidaigaku": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "daijingushita": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
+    "1k_1ldk": 120974,
+    "2ldk": 138489,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11221",
+    "area_name": "草加市"
+  },
+  "dobutsu-koen": {
+    "1k_1ldk": 101310,
+    "2ldk": 109024,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12103",
+    "area_name": "稲毛区"
+  },
+  "etchu-shima": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "fuchu-keiba-seimonmae": {
+    "1k_1ldk": 132198,
+    "2ldk": 157720,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13206",
+    "area_name": "府中市"
+  },
+  "fudomae": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "fujimicho": {
+    "1k_1ldk": 141620,
+    "2ldk": 169427,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14204",
+    "area_name": "鎌倉市"
+  },
+  "fujisawa-honcho": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "funabashi-hoten": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "funabashikeibajo": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "gakushuin-shita": {
+    "1k_1ldk": 166720,
+    "2ldk": 224281,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13116",
+    "area_name": "豊島区"
+  },
+  "gamo": {
+    "1k_1ldk": 110463,
+    "2ldk": 132967,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11222",
+    "area_name": "越谷市"
+  },
+  "ginzaitchome": {
+    "1k_1ldk": 130310,
+    "2ldk": 147416,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11105",
+    "area_name": "中央区"
+  },
+  "goko": {
+    "1k_1ldk": 114519,
+    "2ldk": 127863,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12207",
+    "area_name": "松戸市"
+  },
+  "gyoda": {
+    "1k_1ldk": 91872,
+    "2ldk": 101141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11206",
+    "area_name": "行田市"
+  },
+  "gyodashi": {
+    "1k_1ldk": 91872,
+    "2ldk": 101141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11206",
+    "area_name": "行田市"
+  },
+  "hachioji-minami-no": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "hara-toma": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "higashi-aki-ryu": {
+    "1k_1ldk": 113285,
+    "2ldk": 128731,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13228",
+    "area_name": "あきる野市"
+  },
+  "higashijujo": {
+    "1k_1ldk": 119639,
+    "2ldk": 134620,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11102",
+    "area_name": "北区"
+  },
+  "higashiogu-sanchome": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "higashiome": {
+    "1k_1ldk": 90404,
+    "2ldk": 100252,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13205",
+    "area_name": "青梅市"
+  },
+  "hirayama-joshi-koen": {
+    "1k_1ldk": 114065,
+    "2ldk": 127105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13212",
+    "area_name": "日野市"
+  },
+  "hirose-yacho-no-mori": {
+    "1k_1ldk": 93413,
+    "2ldk": 107763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11202",
+    "area_name": "熊谷市"
+  },
+  "hiyoshihoncho": {
+    "1k_1ldk": 151373,
+    "2ldk": 190045,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14109",
+    "area_name": "港北区"
+  },
+  "hon-choshi": {
+    "1k_1ldk": 75476,
+    "2ldk": 74421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12202",
+    "area_name": "銚子市"
+  },
+  "hon-no": {
+    "1k_1ldk": 82575,
+    "2ldk": 104344,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12210",
+    "area_name": "茂原市"
+  },
+  "hongodai": {
+    "1k_1ldk": 114453,
+    "2ldk": 159161,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14115",
+    "area_name": "栄区"
+  },
+  "honjo": {
+    "1k_1ldk": 85455,
+    "2ldk": 99045,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11211",
+    "area_name": "本庄市"
+  },
+  "horikiri-shobuen": {
+    "1k_1ldk": 131553,
+    "2ldk": 148497,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13122",
+    "area_name": "葛飾区"
+  },
+  "hyuga": {
+    "1k_1ldk": 81900,
+    "2ldk": 96898,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12237",
+    "area_name": "山武市"
+  },
+  "ichikawa-ono": {
+    "1k_1ldk": 128138,
+    "2ldk": 155895,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12203",
+    "area_name": "市川市"
+  },
+  "ikejiriohashi": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "ikenoe": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "inariyama-koen": {
+    "1k_1ldk": 92551,
+    "2ldk": 101964,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11215",
+    "area_name": "狭山市"
+  },
+  "isezaki-chojamachi": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "ishikawacho": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "itabashihoncho": {
+    "1k_1ldk": 145075,
+    "2ldk": 166851,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13119",
+    "area_name": "板橋区"
+  },
+  "izumi-chuo": {
+    "1k_1ldk": 125194,
+    "2ldk": 107567,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14116",
+    "area_name": "泉区"
+  },
+  "josei-kawa": {
+    "1k_1ldk": 134192,
+    "2ldk": 158755,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14100",
+    "area_name": "横浜市"
+  },
+  "juni-hashi": {
+    "1k_1ldk": 97748,
+    "2ldk": 103421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12236",
+    "area_name": "香取市"
+  },
+  "kamakura-koko-mae": {
+    "1k_1ldk": 141620,
+    "2ldk": 169427,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14204",
+    "area_name": "鎌倉市"
+  },
+  "kamihongo": {
+    "1k_1ldk": 114519,
+    "2ldk": 127863,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12207",
+    "area_name": "松戸市"
+  },
+  "kamiyacho": {
+    "1k_1ldk": 230481,
+    "2ldk": 312005,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13103",
+    "area_name": "港区"
+  },
+  "kasai-rinkai-koen": {
+    "1k_1ldk": 138615,
+    "2ldk": 157928,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13123",
+    "area_name": "江戸川区"
+  },
+  "katakuracho": {
+    "1k_1ldk": 135108,
+    "2ldk": 167270,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14102",
+    "area_name": "神奈川区"
+  },
+  "katase-ko-no-shima": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "kawaguchi-motogo": {
+    "1k_1ldk": 133991,
+    "2ldk": 148842,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11203",
+    "area_name": "川口市"
+  },
+  "kawawacho": {
+    "1k_1ldk": 146717,
+    "2ldk": 198515,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14118",
+    "area_name": "都筑区"
+  },
+  "kazusa-okubo": {
+    "1k_1ldk": 101562,
+    "2ldk": 98032,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12219",
+    "area_name": "市原市"
+  },
+  "keikyu-nagasawa": {
+    "1k_1ldk": 113068,
+    "2ldk": 103191,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14201",
+    "area_name": "横須賀市"
+  },
+  "keikyu-otsu": {
+    "1k_1ldk": 113068,
+    "2ldk": 103191,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14201",
+    "area_name": "横須賀市"
+  },
+  "keikyu-taura": {
+    "1k_1ldk": 113068,
+    "2ldk": 103191,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14201",
+    "area_name": "横須賀市"
+  },
+  "keikyu-tomioka": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "keio-katakura": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "keio-yomiuri-rando": {
+    "1k_1ldk": 118856,
+    "2ldk": 135426,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13225",
+    "area_name": "稲城市"
+  },
+  "keiohachioji": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "keioinadatsutsumi": {
+    "1k_1ldk": 128652,
+    "2ldk": 163734,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14135",
+    "area_name": "多摩区"
+  },
+  "keiotama-kawa": {
+    "1k_1ldk": 140420,
+    "2ldk": 183788,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13208",
+    "area_name": "調布市"
+  },
+  "keisei-okubo": {
+    "1k_1ldk": 117701,
+    "2ldk": 137981,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12216",
+    "area_name": "習志野市"
+  },
+  "keisei-owada": {
+    "1k_1ldk": 103441,
+    "2ldk": 118060,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12221",
+    "area_name": "八千代市"
+  },
+  "kenchomae": {
+    "1k_1ldk": 120149,
+    "2ldk": 140749,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12101",
+    "area_name": "中央区"
+  },
+  "kibo-ke-oka": {
+    "1k_1ldk": 116569,
+    "2ldk": 132640,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14112",
+    "area_name": "旭区"
+  },
+  "kishine-koen": {
+    "1k_1ldk": 151373,
+    "2ldk": 190045,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14109",
+    "area_name": "港北区"
+  },
+  "kita-konosu": {
+    "1k_1ldk": 91114,
+    "2ldk": 106638,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11217",
+    "area_name": "鴻巣市"
+  },
+  "kitahachi-oji": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "kodenmacho": {
+    "1k_1ldk": 130310,
+    "2ldk": 147416,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11105",
+    "area_name": "中央区"
+  },
+  "kogane-joshi": {
+    "1k_1ldk": 114519,
+    "2ldk": 127863,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12207",
+    "area_name": "松戸市"
+  },
+  "koganecho": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "kohoku-abiko": {
+    "1k_1ldk": 104152,
+    "2ldk": 106484,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12222",
+    "area_name": "我孫子市"
+  },
+  "kokudo": {
+    "1k_1ldk": 136364,
+    "2ldk": 168141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14101",
+    "area_name": "鶴見区"
+  },
+  "kokuryo": {
+    "1k_1ldk": 140420,
+    "2ldk": 183788,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13208",
+    "area_name": "調布市"
+  },
+  "kokusai-tenjijo": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "kokusai-tenjijo-seimon": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "komabatodaimae": {
+    "1k_1ldk": 197642,
+    "2ldk": 271445,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13110",
+    "area_name": "目黒区"
+  },
+  "ko-kawara": {
+    "1k_1ldk": 160386,
+    "2ldk": 201801,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14133",
+    "area_name": "中原区"
+  },
+  "ko-tsu-no-mori": {
+    "1k_1ldk": 99787,
+    "2ldk": 109486,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12211",
+    "area_name": "成田市"
+  },
+  "koen": {
+    "1k_1ldk": 94347,
+    "2ldk": 111309,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12212",
+    "area_name": "佐倉市"
+  },
+  "kofu-dai": {
+    "1k_1ldk": 101562,
+    "2ldk": 98032,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12219",
+    "area_name": "市原市"
+  },
+  "kohoku-adachi": {
+    "1k_1ldk": 129719,
+    "2ldk": 130423,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13121",
+    "area_name": "足立区"
+  },
+  "kojiya": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "koku-koen": {
+    "1k_1ldk": 115182,
+    "2ldk": 138552,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11208",
+    "area_name": "所沢市"
+  },
+  "konan-chuo": {
+    "1k_1ldk": 133484,
+    "2ldk": 128731,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14111",
+    "area_name": "港南区"
+  },
+  "konandai": {
+    "1k_1ldk": 133484,
+    "2ldk": 128731,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14111",
+    "area_name": "港南区"
+  },
+  "konodai": {
+    "1k_1ldk": 128138,
+    "2ldk": 155895,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12203",
+    "area_name": "市川市"
+  },
+  "konosu": {
+    "1k_1ldk": 91114,
+    "2ldk": 106638,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11217",
+    "area_name": "鴻巣市"
+  },
+  "koshin-tsuka": {
+    "1k_1ldk": 166720,
+    "2ldk": 224281,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13116",
+    "area_name": "豊島区"
+  },
+  "koshukaido": {
+    "1k_1ldk": 114065,
+    "2ldk": 127105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13212",
+    "area_name": "日野市"
+  },
+  "koza-shibuya": {
+    "1k_1ldk": 117117,
+    "2ldk": 130790,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14213",
+    "area_name": "大和市"
+  },
+  "kuju": {
+    "1k_1ldk": 99787,
+    "2ldk": 109486,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12211",
+    "area_name": "成田市"
+  },
+  "kyoteijo-mae": {
+    "1k_1ldk": 132198,
+    "2ldk": 157720,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13206",
+    "area_name": "府中市"
+  },
+  "kyu-ga-hara": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "kyumei": {
+    "1k_1ldk": 91651,
+    "2ldk": 93269,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12213",
+    "area_name": "東金市"
+  },
+  "machiya-nichome": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "meshi-kyu": {
+    "1k_1ldk": 101562,
+    "2ldk": 98032,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12219",
+    "area_name": "市原市"
+  },
+  "minami-hanyu": {
+    "1k_1ldk": 84742,
+    "2ldk": 105577,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11216",
+    "area_name": "羽生市"
+  },
+  "minami-ota": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "minamiotsuka": {
+    "1k_1ldk": 109669,
+    "2ldk": 133982,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11201",
+    "area_name": "川越市"
+  },
+  "minuma-dai-shinsui-koen": {
+    "1k_1ldk": 129719,
+    "2ldk": 130423,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13121",
+    "area_name": "足立区"
+  },
+  "misato-chuo": {
+    "1k_1ldk": 116767,
+    "2ldk": 123282,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11237",
+    "area_name": "三郷市"
+  },
+  "motomachi-chukagai": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "mukogaokayuen": {
+    "1k_1ldk": 128652,
+    "2ldk": 163734,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14135",
+    "area_name": "多摩区"
+  },
+  "musashishinjo": {
+    "1k_1ldk": 160386,
+    "2ldk": 201801,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14133",
+    "area_name": "中原区"
+  },
+  "mutsura": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "myoden": {
+    "1k_1ldk": 128138,
+    "2ldk": 155895,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12203",
+    "area_name": "市川市"
+  },
+  "myorenji": {
+    "1k_1ldk": 151373,
+    "2ldk": 190045,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14109",
+    "area_name": "港北区"
+  },
+  "nakano-fujimicho": {
+    "1k_1ldk": 162464,
+    "2ldk": 210564,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13114",
+    "area_name": "中野区"
+  },
+  "namiki-chuo": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "nanbu-shijo": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "nankyo-hon": {
+    "1k_1ldk": 106958,
+    "2ldk": 130750,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14152",
+    "area_name": "中央区"
+  },
+  "nerima-koyadai": {
+    "1k_1ldk": 148030,
+    "2ldk": 177069,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13120",
+    "area_name": "練馬区"
+  },
+  "nihondai-tori": {
+    "1k_1ldk": 160668,
+    "2ldk": 210442,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14104",
+    "area_name": "中区"
+  },
+  "nijubashimae": {
+    "1k_1ldk": 235565,
+    "2ldk": 292521,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13101",
+    "area_name": "千代田区"
+  },
+  "nishi-chofu": {
+    "1k_1ldk": 140420,
+    "2ldk": 183788,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13208",
+    "area_name": "調布市"
+  },
+  "nishi-hanyu": {
+    "1k_1ldk": 84742,
+    "2ldk": 105577,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11216",
+    "area_name": "羽生市"
+  },
+  "nishi-ohara": {
+    "1k_1ldk": 84794,
+    "2ldk": 84079,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12238",
+    "area_name": "いすみ市"
+  },
+  "nishi-omiya": {
+    "1k_1ldk": 129796,
+    "2ldk": 143255,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11101",
+    "area_name": "西区"
+  },
+  "nishi-ojima": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "nishi-oya": {
+    "1k_1ldk": 90302,
+    "2ldk": 107734,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11239",
+    "area_name": "坂戸市"
+  },
+  "nishi-taishido": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "nishiko-shima-taira": {
+    "1k_1ldk": 145075,
+    "2ldk": 166851,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13119",
+    "area_name": "板橋区"
+  },
+  "nojima-koen": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "nokendai": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "nyu-so": {
+    "1k_1ldk": 92551,
+    "2ldk": 101964,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11215",
+    "area_name": "狭山市"
+  },
+  "odakyu-sagamihara": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "oaso": {
+    "1k_1ldk": 93413,
+    "2ldk": 107763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11202",
+    "area_name": "熊谷市"
+  },
+  "obukuro": {
+    "1k_1ldk": 110463,
+    "2ldk": 132967,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11222",
+    "area_name": "越谷市"
+  },
+  "oguchi": {
+    "1k_1ldk": 135108,
+    "2ldk": 167270,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14102",
+    "area_name": "神奈川区"
+  },
+  "oikeiba-ba-mae": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "okawa": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "okubo": {
+    "1k_1ldk": 190904,
+    "2ldk": 244845,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13104",
+    "area_name": "新宿区"
+  },
+  "okurayama": {
+    "1k_1ldk": 151373,
+    "2ldk": 190045,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14109",
+    "area_name": "港北区"
+  },
+  "omachi": {
+    "1k_1ldk": 128138,
+    "2ldk": 155895,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12203",
+    "area_name": "市川市"
+  },
+  "omiya-koen": {
+    "1k_1ldk": 137862,
+    "2ldk": 167674,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11103",
+    "area_name": "大宮区"
+  },
+  "omori-dai": {
+    "1k_1ldk": 120149,
+    "2ldk": 140749,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12101",
+    "area_name": "中央区"
+  },
+  "omori-kaigan": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "omori-machi": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "onohara": {
+    "1k_1ldk": 83579,
+    "2ldk": 82480,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11207",
+    "area_name": "秩父市"
+  },
+  "onuki": {
+    "1k_1ldk": 70498,
+    "2ldk": 101429,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12226",
+    "area_name": "富津市"
+  },
+  "osaki-hirokoji": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "ojima": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "oto": {
+    "1k_1ldk": 97748,
+    "2ldk": 103421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12236",
+    "area_name": "香取市"
+  },
+  "otorii": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "otsuka-teikyodaigaku": {
+    "1k_1ldk": 114494,
+    "2ldk": 128469,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13201",
+    "area_name": "八王子市"
+  },
+  "owada": {
+    "1k_1ldk": 102611,
+    "2ldk": 116612,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11104",
+    "area_name": "見沼区"
+  },
+  "oyama": {
+    "1k_1ldk": 145075,
+    "2ldk": 166851,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13119",
+    "area_name": "板橋区"
+  },
+  "ogi-ohashi": {
+    "1k_1ldk": 129719,
+    "2ldk": 130423,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13121",
+    "area_name": "足立区"
+  },
+  "ogimachi": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "omekaido": {
+    "1k_1ldk": 120126,
+    "2ldk": 130944,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13211",
+    "area_name": "小平市"
+  },
+  "roka-koen": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "rokugo-dote": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "ryutsu-sentaa": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "sagamiotsuka": {
+    "1k_1ldk": 117117,
+    "2ldk": 130790,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14213",
+    "area_name": "大和市"
+  },
+  "sakura-kaido": {
+    "1k_1ldk": 98125,
+    "2ldk": 95188,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13220",
+    "area_name": "東大和市"
+  },
+  "sangu-hashi": {
+    "1k_1ldk": 200897,
+    "2ldk": 275584,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13113",
+    "area_name": "渋谷区"
+  },
+  "sangyo-shinko-sentaa": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "sangyodoro": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "senju-ohashi": {
+    "1k_1ldk": 129719,
+    "2ldk": 130423,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13121",
+    "area_name": "足立区"
+  },
+  "shakudo-shogakko-mae": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "shibakoen": {
+    "1k_1ldk": 230481,
+    "2ldk": 312005,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13103",
+    "area_name": "港区"
+  },
+  "shijo-mae": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "shimizu-koen": {
+    "1k_1ldk": 89339,
+    "2ldk": 105268,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12208",
+    "area_name": "野田市"
+  },
+  "shimogori": {
+    "1k_1ldk": 80193,
+    "2ldk": 78594,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12225",
+    "area_name": "君津市"
+  },
+  "shimo-ochiai": {
+    "1k_1ldk": 190904,
+    "2ldk": 244845,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13104",
+    "area_name": "新宿区"
+  },
+  "shimosa-matsuzaki": {
+    "1k_1ldk": 99787,
+    "2ldk": 109486,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12211",
+    "area_name": "成田市"
+  },
+  "shimosa-nakayama": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "shimosa-toyosato": {
+    "1k_1ldk": 75476,
+    "2ldk": 74421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12202",
+    "area_name": "銚子市"
+  },
+  "shimura-sanchome": {
+    "1k_1ldk": 145075,
+    "2ldk": 166851,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13119",
+    "area_name": "板橋区"
+  },
+  "shin-koshin-tsuka": {
+    "1k_1ldk": 166720,
+    "2ldk": 224281,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13116",
+    "area_name": "豊島区"
+  },
+  "shinanocho": {
+    "1k_1ldk": 190904,
+    "2ldk": 244845,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13104",
+    "area_name": "新宿区"
+  },
+  "shingo": {
+    "1k_1ldk": 84742,
+    "2ldk": 105577,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11216",
+    "area_name": "羽生市"
+  },
+  "shinzo-kawashima": {
+    "1k_1ldk": 154458,
+    "2ldk": 181848,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13118",
+    "area_name": "荒川区"
+  },
+  "shinzo-sato": {
+    "1k_1ldk": 116767,
+    "2ldk": 123282,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11237",
+    "area_name": "三郷市"
+  },
+  "shoin-jinja-mae": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "shomaru": {
+    "1k_1ldk": 106446,
+    "2ldk": 113558,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11209",
+    "area_name": "飯能市"
+  },
+  "shonan": {
+    "1k_1ldk": 107199,
+    "2ldk": 115216,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11219",
+    "area_name": "上尾市"
+  },
+  "shonan-fukazawa": {
+    "1k_1ldk": 141620,
+    "2ldk": 169427,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14204",
+    "area_name": "鎌倉市"
+  },
+  "shonan-kaigan-koen": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "shonan-machiya": {
+    "1k_1ldk": 141620,
+    "2ldk": 169427,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14204",
+    "area_name": "鎌倉市"
+  },
+  "showa": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "showa-shima": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "soshio-ryutsu-sentaa": {
+    "1k_1ldk": 93413,
+    "2ldk": 107763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11202",
+    "area_name": "熊谷市"
+  },
+  "sobudai-mae": {
+    "1k_1ldk": 104515,
+    "2ldk": 123403,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14216",
+    "area_name": "座間市"
+  },
+  "sobudai-shita": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "soka": {
+    "1k_1ldk": 120974,
+    "2ldk": 138489,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11221",
+    "area_name": "草加市"
+  },
+  "suigo": {
+    "1k_1ldk": 97748,
+    "2ldk": 103421,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12236",
+    "area_name": "香取市"
+  },
+  "suitengumae": {
+    "1k_1ldk": 130310,
+    "2ldk": 147416,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11105",
+    "area_name": "中央区"
+  },
+  "sports-center": {
+    "1k_1ldk": 101310,
+    "2ldk": 109024,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12103",
+    "area_name": "稲毛区"
+  },
+  "suzukicho": {
+    "1k_1ldk": 139603,
+    "2ldk": 176960,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14131",
+    "area_name": "川崎区"
+  },
+  "taito": {
+    "1k_1ldk": 84794,
+    "2ldk": 84079,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12238",
+    "area_name": "いすみ市"
+  },
+  "taiyu-yama": {
+    "1k_1ldk": 99253,
+    "2ldk": 104233,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14217",
+    "area_name": "南足柄市"
+  },
+  "takane-kodan": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "taki-fudo": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "takinogawa-itchome": {
+    "1k_1ldk": 119639,
+    "2ldk": 134620,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11102",
+    "area_name": "北区"
+  },
+  "tennocho": {
+    "1k_1ldk": 134192,
+    "2ldk": 158755,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14100",
+    "area_name": "横浜市"
+  },
+  "tetsudohakubutsukan": {
+    "1k_1ldk": 137862,
+    "2ldk": 167674,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11103",
+    "area_name": "大宮区"
+  },
+  "tobitakyu": {
+    "1k_1ldk": 140420,
+    "2ldk": 183788,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13208",
+    "area_name": "調布市"
+  },
+  "todakoen": {
+    "1k_1ldk": 122740,
+    "2ldk": 169659,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11224",
+    "area_name": "戸田市"
+  },
+  "tokoshikoen": {
+    "1k_1ldk": 183892,
+    "2ldk": 241534,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13109",
+    "area_name": "品川区"
+  },
+  "toneri-koen": {
+    "1k_1ldk": 129719,
+    "2ldk": 130423,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13121",
+    "area_name": "足立区"
+  },
+  "tokaichiba": {
+    "1k_1ldk": 111388,
+    "2ldk": 137131,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14151",
+    "area_name": "緑区"
+  },
+  "totsuka-angyo": {
+    "1k_1ldk": 133991,
+    "2ldk": 148842,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11203",
+    "area_name": "川口市"
+  },
+  "tobu-nerima": {
+    "1k_1ldk": 145075,
+    "2ldk": 166851,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13119",
+    "area_name": "板橋区"
+  },
+  "todai-miya": {
+    "1k_1ldk": 102611,
+    "2ldk": 116612,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11104",
+    "area_name": "見沼区"
+  },
+  "todai-shima": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "tofuku-nama": {
+    "1k_1ldk": 93611,
+    "2ldk": 114167,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13218",
+    "area_name": "福生市"
+  },
+  "togane": {
+    "1k_1ldk": 91651,
+    "2ldk": 93269,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12213",
+    "area_name": "東金市"
+  },
+  "togu-hara": {
+    "1k_1ldk": 119639,
+    "2ldk": 134620,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11102",
+    "area_name": "北区"
+  },
+  "tohaku-raku": {
+    "1k_1ldk": 135108,
+    "2ldk": 167270,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14102",
+    "area_name": "神奈川区"
+  },
+  "tokai-kami": {
+    "1k_1ldk": 130421,
+    "2ldk": 152571,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12204",
+    "area_name": "船橋市"
+  },
+  "tokaidaigakumae": {
+    "1k_1ldk": 96661,
+    "2ldk": 107540,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14211",
+    "area_name": "秦野市"
+  },
+  "toko-ta": {
+    "1k_1ldk": 91872,
+    "2ldk": 101141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11206",
+    "area_name": "行田市"
+  },
+  "tokyo-sukaitsurii": {
+    "1k_1ldk": 172821,
+    "2ldk": 216799,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13107",
+    "area_name": "墨田区"
+  },
+  "tokyo-teleport": {
+    "1k_1ldk": 157826,
+    "2ldk": 174105,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13108",
+    "area_name": "江東区"
+  },
+  "torin-kan": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "toshin-kawa": {
+    "1k_1ldk": 93916,
+    "2ldk": 103329,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12206",
+    "area_name": "木更津市"
+  },
+  "toyoko-ta": {
+    "1k_1ldk": 106595,
+    "2ldk": 113853,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12229",
+    "area_name": "袖ケ浦市"
+  },
+  "tsujido": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "tsurumi-shijo": {
+    "1k_1ldk": 136364,
+    "2ldk": 168141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14101",
+    "area_name": "鶴見区"
+  },
+  "uchisaiwaicho": {
+    "1k_1ldk": 235565,
+    "2ldk": 292521,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13101",
+    "area_name": "千代田区"
+  },
+  "umi-no-koen-minamiguchi": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "umi-no-koen-shiba-kuchi": {
+    "1k_1ldk": 117861,
+    "2ldk": 136975,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14108",
+    "area_name": "金沢区"
+  },
+  "wado-kurotani": {
+    "1k_1ldk": 83579,
+    "2ldk": 82480,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11207",
+    "area_name": "秩父市"
+  },
+  "yachiyo-chuo": {
+    "1k_1ldk": 103441,
+    "2ldk": 118060,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12221",
+    "area_name": "八千代市"
+  },
+  "yagyu": {
+    "1k_1ldk": 93699,
+    "2ldk": 107075,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11210",
+    "area_name": "加須市"
+  },
+  "yako": {
+    "1k_1ldk": 136364,
+    "2ldk": 168141,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14101",
+    "area_name": "鶴見区"
+  },
+  "yanagikoji": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "yokosuka-chuo": {
+    "1k_1ldk": 113068,
+    "2ldk": 103191,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14201",
+    "area_name": "横須賀市"
+  },
+  "yono-honcho": {
+    "1k_1ldk": 130310,
+    "2ldk": 147416,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11105",
+    "area_name": "中央区"
+  },
+  "yoshi-kawa-koen": {
+    "1k_1ldk": 120149,
+    "2ldk": 140749,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12101",
+    "area_name": "中央区"
+  },
+  "yoshinocho": {
+    "1k_1ldk": 118915,
+    "2ldk": 143535,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14153",
+    "area_name": "南区"
+  },
+  "yoga": {
+    "1k_1ldk": 169016,
+    "2ldk": 219501,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13112",
+    "area_name": "世田谷区"
+  },
+  "yokaichiba": {
+    "1k_1ldk": 97369,
+    "2ldk": 67052,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12235",
+    "area_name": "匝瑳市"
+  },
+  "yokodai": {
+    "1k_1ldk": 115637,
+    "2ldk": 133048,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14107",
+    "area_name": "磯子区"
+  },
+  "yoro-keikoku": {
+    "1k_1ldk": 101562,
+    "2ldk": 98032,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "12219",
+    "area_name": "市原市"
+  },
+  "yubi-ogi": {
+    "1k_1ldk": 129796,
+    "2ldk": 143255,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11101",
+    "area_name": "西区"
+  },
+  "yuki-ga-taniotsuka": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
+  },
+  "yuenchi-nishi": {
+    "1k_1ldk": 115182,
+    "2ldk": 138552,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "11208",
+    "area_name": "所沢市"
+  },
+  "zenko": {
+    "1k_1ldk": 124712,
+    "2ldk": 153101,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "14205",
+    "area_name": "藤沢市"
+  },
+  "zoshiki": {
+    "1k_1ldk": 151801,
+    "2ldk": 189763,
+    "source": "estat",
+    "updated": "2026-04",
+    "area_code": "13111",
+    "area_name": "大田区"
   }
 }

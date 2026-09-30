@@ -1,7 +1,7 @@
 'use client';
 
 import { create } from 'zustand';
-import { WeightConfig, DEFAULT_WEIGHTS, FilterState, StationRatings } from './types';
+import { WeightConfig, DEFAULT_WEIGHTS, FilterState, StationRatings, type AreaLevel } from './types';
 import { CITIES, CITY_IDS, type CityId } from './cities';
 import { useCityId } from './city-context';
 
@@ -14,6 +14,11 @@ import { useCityId } from './city-context';
  */
 export interface CityScopedState {
   filters: FilterState;
+  /** Level of detail painted on the map (Bangkok: district / station / grid). */
+  level: AreaLevel;
+  /** One selection per city. Bangkok keys are typed (see `lib/area-key.ts`),
+   *  so a district, a station area or a grid cell can be selected — and stays
+   *  highlighted — whatever level is painted. */
   selectedStation: string | null;
   hoveredStation: string | null;
   compareStations: string[];
@@ -27,6 +32,7 @@ export type CityPatch =
 
 /** Shape accepted by `hydrateFromUrl` — what `decodeParamsToState` returns. */
 export interface UrlHydration {
+  level?: AreaLevel;
   weights?: WeightConfig;
   filters?: Partial<FilterState>;
   selectedStation?: string;
@@ -60,6 +66,7 @@ interface AppState {
 export function initialCityState(city: CityId): CityScopedState {
   return {
     filters: { ...CITIES[city].defaultFilters, categoryMins: {} },
+    level: CITIES[city].defaultLevel,
     selectedStation: null,
     hoveredStation: null,
     compareStations: [],
@@ -103,6 +110,7 @@ export const useAppStore = create<AppState>((set) => ({
 
       const prev = state.cities[city];
       const next: CityScopedState = { ...prev };
+      if (partial.level) next.level = partial.level;
       if (partial.selectedStation) next.selectedStation = partial.selectedStation;
       if (partial.compareStations) next.compareStations = partial.compareStations;
       if (partial.filters) {
@@ -120,6 +128,7 @@ export const useAppStore = create<AppState>((set) => ({
 /** Actions bound to one city. Created once per city, so they are referentially
  *  stable and safe in effect / callback dependency lists. */
 export interface CityActions {
+  setLevel: (level: AreaLevel) => void;
   setMinRent: (v: number) => void;
   setMaxRent: (v: number) => void;
   setMinCommute: (v: number) => void;
@@ -138,6 +147,7 @@ export interface CityActions {
 }
 
 const actionsCache = new Map<CityId, CityActions>();
+export const MAX_COMPARE = 3;
 
 export function getCityActions(city: CityId): CityActions {
   const cached = actionsCache.get(city);
@@ -146,6 +156,8 @@ export function getCityActions(city: CityId): CityActions {
   const setFilter = <K extends keyof FilterState>(key: K, value: FilterState[K]) =>
     up((s) => ({ filters: { ...s.filters, [key]: value } }));
   const actions: CityActions = {
+    // A hover belongs to the layer being painted; the selection survives.
+    setLevel: (level) => up((s) => (s.level === level ? {} : { level, hoveredStation: null })),
     setMinRent: (v) => setFilter('minRent', v),
     setMaxRent: (v) => setFilter('maxRent', v),
     setMinCommute: (v) => setFilter('minCommute', v),
@@ -167,7 +179,7 @@ export function getCityActions(city: CityId): CityActions {
     setHideHighSeismic: (hideHighSeismic) => up({ hideHighSeismic }),
     addCompareStation: (slug) =>
       up((s) =>
-        s.compareStations.length >= 3 || s.compareStations.includes(slug)
+        s.compareStations.length >= MAX_COMPARE || s.compareStations.includes(slug)
           ? {}
           : { compareStations: [...s.compareStations, slug] },
       ),

@@ -6,7 +6,7 @@
 
 ## 1. Coverage Expansion Options
 
-> **Phase 0 (Plane CRTKY-43):** **e-Stat** / municipal open aggregates — только валидация и sanity на уровне **ward / prefecture**; не позиционировать и не экспортировать как **station-level** аренду в продукте или в текстах confidence. Канонический чеклист — **description** задачи в Plane.
+> **Доктрина (CRTKY-43, пересмотрена 2026-09-30 — `research/decisions/2026-09-30-epic80-checkpoint.md`, D3):** **e-Stat** / муниципальные средние **разрешены** как fallback для станций без объявлений, но только **подписанными**: confidence `moderate`, потолок рейтинга 9 (`ABSOLUTE_CAPS.rent`), на странице станции — подпись «Municipal average (e-Stat)», и фронт **не** пересчитывает из них рейтинг. Станционным (`strong`) считается только то, что собрано вокруг станции (Suumo, HOMES). Прежняя редакция («только валидация, не показывать») расходилась с кодом с PR #91 и заменена.
 
 ### 1A. Reverse Geocode All 1493 Stations via Nominatim (QUICK WIN)
 

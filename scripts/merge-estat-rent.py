@@ -5,10 +5,11 @@ Merge e-Stat municipality rent data into rent-averages.json as gap-fill.
 Flow:
   1. Load existing rent-averages.json (274 Suumo entries)
   2. Load e-Stat raw data (data/estat/estat-rent-raw.json)
-  3. Load station_wards from NocoDB (1493 station → municipality mappings)
+  3. Load app/src/data/ward-data.json (1493 station → municipality mappings,
+     exported from NocoDB station_wards and keyed by current slugs)
   4. Optionally load calibration factor (data/estat/calibration.json)
   5. For each station NOT in rent-averages.json:
-     - Find municipality via station_wards
+     - Find municipality via ward-data.json
      - Look up e-Stat rent for that municipality (by area_name or area_code)
      - Apply calibration factor
      - Add entry with source: "estat"
@@ -24,21 +25,12 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-import requests
-
 ROOT = Path(__file__).resolve().parent.parent
 
-# NocoDB config (for fetching station_wards)
-NOCODB_URL = os.environ.get("NOCODB_API_URL", "https://nocodb.pogorelov.dev")
-NOCODB_TOKEN = os.environ.get("NOCODB_API_TOKEN")
-if not NOCODB_TOKEN:
-    sys.exit("FATAL: NOCODB_API_TOKEN environment variable is not set.")
-STATION_WARDS_TABLE = "m74rdmspn3trrqc"
 
 
 def load_rent_averages():
@@ -66,31 +58,16 @@ def load_calibration():
     return 1.0
 
 
-def fetch_station_wards():
-    """Fetch all station_wards records from NocoDB."""
-    headers = {"xc-token": NOCODB_TOKEN, "Content-Type": "application/json"}
-    base_url = f"{NOCODB_URL}/api/v2/tables/{STATION_WARDS_TABLE}/records"
+def load_ward_data():
+    """
+    Station → municipality map, keyed by current slug.
 
-    all_records = []
-    offset = 0
-    limit = 200
-    while True:
-        r = requests.get(base_url, headers=headers, params={
-            "fields": "slug,city_name,ward_name,prefecture_name",
-            "limit": limit,
-            "offset": offset,
-        })
-        r.raise_for_status()
-        data = r.json()
-        rows = data.get("list", [])
-        if not rows:
-            break
-        all_records.extend(rows)
-        if len(rows) < limit:
-            break
-        offset += limit
-
-    return all_records
+    Read from the committed export rather than NocoDB: station_wards rows scraped
+    before the CRTKY-113 rename still carry old slugs, which is why the first run
+    of this script added e-Stat rent for only 1 of the 334 renamed stations.
+    """
+    path = ROOT / "app" / "src" / "data" / "ward-data.json"
+    return json.loads(path.read_text())
 
 
 def build_municipality_key(city_name, ward_name=""):
@@ -206,17 +183,9 @@ def main():
     print(f"  e-Stat raw: {len(estat_data)} municipalities")
     print(f"  Calibration factor: {cal_factor:.4f}")
 
-    # Fetch station_wards and build slug→ward lookup
-    print("\n2. Fetching station_wards from NocoDB...")
-    ward_records = fetch_station_wards()
-    print(f"  {len(ward_records)} station-ward mappings")
-
-    # Build ward lookup indexed by slug
-    wards_by_slug = {}
-    for w in ward_records:
-        s = w.get("slug", "")
-        if s:
-            wards_by_slug[s] = w
+    print("\n2. Loading station → municipality map (ward-data.json)...")
+    wards_by_slug = load_ward_data()
+    print(f"  {len(wards_by_slug)} station-ward mappings")
 
     # Load stations.json (canonical slug list)
     stations_path = ROOT / "data" / "stations.json"

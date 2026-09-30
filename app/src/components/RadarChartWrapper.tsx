@@ -15,15 +15,13 @@ const StationRadarChart = dynamic(() => import('./RadarChart'), {
 export default function RadarChartWrapper({
   ratings,
   medians,
-  medianLabelKey,
-  areaLabelKey,
+  medianLabel,
+  areaLabel,
 }: {
   ratings: StationRatings;
   medians?: Record<keyof StationRatings, number>;
-  medianLabelKey?: string;
-  areaLabelKey?: string;
+  medianLabel?: string;
+  areaLabel?: string;
 }) {
-  return (
-    <StationRadarChart ratings={ratings} medians={medians} medianLabelKey={medianLabelKey} areaLabelKey={areaLabelKey} />
-  );
+  return <StationRadarChart ratings={ratings} medians={medians} medianLabel={medianLabel} areaLabel={areaLabel} />;
 }

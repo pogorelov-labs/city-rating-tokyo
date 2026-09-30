@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
 from utils import NocoDB
+from slugs import index_by_slug
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "app" / "src" / "data" / "environment-data.json"
@@ -71,12 +72,12 @@ def main():
 
     print("Loading elevation data from NocoDB...")
     elev_rows = NocoDB("station_elevation").get_all_records()
-    elev = {r["slug"]: r for r in elev_rows if r.get("slug")}
+    elev, _ = index_by_slug(elev_rows)  # pre-CRTKY-113 rows carry old slugs
     print(f"  station_elevation: {len(elev)} records")
 
     print("Loading seismic data from NocoDB...")
     seis_rows = NocoDB("station_seismic").get_all_records()
-    seis = {r["slug"]: r for r in seis_rows if r.get("slug")}
+    seis, _ = index_by_slug(seis_rows)
     print(f"  station_seismic: {len(seis)} records")
 
     # Build merged output

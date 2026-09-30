@@ -1,5 +1,14 @@
 # Safety Rating Research Findings
 
+> **Status 2026-09-30 (CRTKY-82):** implemented by `scripts/scrapers/ingest-crime-open-data.py` → `data/crime/`.
+> Re-verification of the sources below found several notes out of date — trust these corrections over the body:
+> - **§1b** — the FeatureServer is **Esri Japan's** CC BY derivative of the Keishicho data, not Keishicho's own, and has no 2025 layer. The former Tokyo `station_crime` rows came from its `CrimR6_tokyo` copy. The ingest rebuilds Tokyo from Keishicho's own 町丁 CSV instead (99.4% of crimes join to e-Stat small areas).
+> - **§1c** — Kanagawa's final annual figures are on `mesc0030.html` (the `mesc0027` page is current-year provisional); the PDF also has the 窃盗 手口別 table with すり / ひったくり / 侵入盗.
+> - **§1d** — Saitama's full 罪種 × 市区町村 breakdown is table 31 of the 犯罪統計年鑑; the police-site PDF covers only street crimes (~35% of the weighted score) and must not be used for the formula.
+> - **§1e** — the Chiba URL is dead; the full breakdown (incl. すり) is table 4 of 犯罪の概要 (A-07).
+> - **§1g** — e-Stat's municipal crime series stops in 2008.
+> - The hand-typed tables in the deleted `scrape-crime-stats.py` matched no Keishicho year from 2017–2025, and their Kanagawa codes were shifted by one ward.
+
 Date: 2026-04-03
 
 ## 1. Official Data Sources

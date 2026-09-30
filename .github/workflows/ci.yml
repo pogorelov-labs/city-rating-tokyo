@@ -44,10 +44,13 @@ jobs:
         run: |
           npm run gen
           git diff --exit-code || (echo "ERROR: generated files are out of sync with constants.json. Run 'npm run gen' and commit the result." && exit 1)
-      - name: Cross-language parity test
+      - name: Pipeline tests (parity, compute, export, slugs, ingests)
+        # Runs every scripts/test_*.py (pytest.ini testpaths). The ingest tests
+        # also check the committed data/ files they produce.
         run: |
           pip install pytest pydantic --quiet
-          pytest scripts/test_schema_parity.py scripts/test_compute_ratings.py -v
+          pip install -r scripts/requirements-ingest.txt --quiet
+          pytest -v
 
   mcp:
     # Lint + install check for the FastMCP Python service in mcp/.

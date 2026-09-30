@@ -25,16 +25,34 @@ HotPepper with OSM; a category is `strong` only where both are well mapped.
 Rent and safety have no open district-level source: they come from
 data/bangkok/editorial.json and are labelled `editorial` in the UI.
 
+Three levels of detail share that grid:
+  * districts — the 50 khet, as above;
+  * station areas — the walkable catchment of each rail station inside
+    Bangkok (nearest-station cell within AREA_RADIUS_M; interchange pairs such
+    as Asok + Sukhumvit form one area), percentile-normalised across areas;
+  * grid cells — every 200 m point itself, rated by resident-weighted
+    percentile across the city (a block rates 8 when it beats ~75 % of the
+    places people live, not of paddy fields).
+Rent and safety stay district-level at every level (blended by resident
+weight where a station area straddles a border).
+
 Outputs
   app/src/data/bangkok/districts.json  — app data (ratings, facts, names, …)
   app/src/data/bangkok/geometry.json   — simplified polygons + label points
+  app/src/data/bangkok/stations.json   — station areas (ratings, facts, names, …)
+  app/src/data/bangkok/station-geometry.json — station-area polygons
+  app/src/data/bangkok/grid.json       — 200 m grid header (index lists, medians)
+  app/public/data/bangkok/grid-<hash>.bin — 200 m grid cells (packed, gzip)
   app/src/data/bangkok/rail.json       — rail lines (paths) + stations
   app/src/data/bangkok/meta.json       — medians, composite anchors, counts
-  data/bangkok/signals.json            — raw per-district signals (audit trail)
+  data/bangkok/signals.json            — raw per-district / per-area signals (audit trail)
 """
 from __future__ import annotations
 
 import argparse
+import difflib
+import gzip
+import hashlib
 import heapq
 import html
 import json
@@ -63,6 +81,7 @@ from static_data import (  # noqa: E402
     LINES,
     RU_NAMES,
     SLUG_OVERRIDES,
+    STATION_JA_FALLBACK,
     STATION_NAME_ALIASES,
     STATION_TH_FALLBACK,
 )
@@ -71,6 +90,7 @@ ROOT = HERE.parent.parent
 RAW = ROOT / "data" / "bangkok" / "raw"
 DATA = ROOT / "data" / "bangkok"
 APP = ROOT / "app" / "src" / "data" / "bangkok"
+PUBLIC = ROOT / "app" / "public" / "data" / "bangkok"
 SCHEMA_CONSTANTS = ROOT / "packages" / "schema" / "constants.json"
 
 # Local equirectangular projection in metres. Over Bangkok's ~60 km extent the
@@ -84,6 +104,12 @@ CELL_M = 100  # raster cell for "count within radius" convolutions
 SIMPLIFY_M = 18  # polygon simplification tolerance for the app geometry
 
 WALK_M_PER_MIN = 75.0  # 4.5 km/h
+
+AREA_RADIUS_M = 800  # station area = nearest-station cell within this walk (≈ 10–14 min)
+# Stations of *different* lines this close form one interchange area (Asok +
+# Sukhumvit, Sala Daeng + Si Lom, Ha Yaek Lat Phrao + Phahon Yothin at 425 m).
+# Consecutive stops of one line (Chong Nonsi – Saint Louis, 436 m) never merge.
+INTERCHANGE_MERGE_M = 450
 
 
 def feeder_m_per_min(d: np.ndarray) -> np.ndarray:
@@ -254,21 +280,24 @@ def load_districts() -> list[dict]:
     return districts
 
 
-def simplify_coverage(geoms: list[MultiPolygon]) -> list[MultiPolygon]:
+def simplify_coverage(
+    geoms: list[MultiPolygon], tolerance: float = SIMPLIFY_M, min_part_m2: float = 20_000
+) -> list[MultiPolygon]:
     """Simplify shared borders once so neighbouring polygons stay gap-free."""
     arr = np.array(geoms, dtype=object)
     try:
         if not shapely.coverage_is_valid(arr):
-            raise ValueError("district coverage not edge-matched")
-        simp = shapely.coverage_simplify(arr, SIMPLIFY_M, simplify_boundary=True)
+            raise ValueError("coverage not edge-matched")
+        simp = shapely.coverage_simplify(arr, tolerance, simplify_boundary=True)
     except Exception as err:  # fall back to per-polygon simplification
         print(f"  coverage_simplify unavailable ({err}); simplifying polygons independently")
-        simp = [g.simplify(SIMPLIFY_M, preserve_topology=True) for g in geoms]
+        simp = [g.simplify(tolerance, preserve_topology=True) for g in geoms]
     out = []
     for g in simp:
         if g.geom_type == "Polygon":
             g = MultiPolygon([g])
-        parts = [p for p in g.geoms if p.area > 20_000] or [max(g.geoms, key=lambda p: p.area)]
+        polys = [p for p in getattr(g, "geoms", []) if p.geom_type == "Polygon" and not p.is_empty]
+        parts = [p for p in polys if p.area > min_part_m2] or [max(polys, key=lambda p: p.area)]
         out.append(MultiPolygon(parts))
     return out
 
@@ -567,6 +596,7 @@ def load_station_candidates() -> list[dict]:
             "x": x,
             "y": y,
             "rail": t.get("railway") in ("station", "halt"),
+            "qid": t.get("wikidata"),
         })
     return cands
 
@@ -678,6 +708,114 @@ def build_rail(districts: list[dict]):
                 s["district"] = d["slug"]
                 break
     return stations, sequences, tracks
+
+
+def clean_ja_label(label: str | None) -> str | None:
+    """"バーンスー駅 (MRT)" → "バーンスー": Tokyo's `name_jp` omits 駅 too."""
+    if not label:
+        return None
+    label = re.sub(r"\s*[（(][^）)]*[）)]\s*$", "", label.strip())
+    return re.sub(r"駅$", "", label).strip() or None
+
+
+def commons_image(fname: str | None, commons: dict) -> dict | None:
+    """Wikidata P18 file name → hot-link URLs + attribution from the Commons dump."""
+    if not fname:
+        return None
+    normalized = commons.get("_normalized", {})
+    pages_by_title = {p.get("title"): p for k, p in commons.items() if k != "_normalized"}
+    title = normalized.get(f"File:{fname}", f"File:{fname}")
+    page = pages_by_title.get(title)
+    info = (page or {}).get("imageinfo", [{}])[0]
+    if not info.get("thumburl"):
+        return None
+    meta = info.get("extmetadata", {})
+    # Commons now serves thumbnails from thumb.wikimedia.org in fixed
+    # "standard" widths (…, 330, 500, 960, …) and appends utm_* params.
+    # Drop the tracking query and derive a 500 px variant for map popups.
+    hero = info["thumburl"].split("?")[0]
+    thumb = re.sub(r"/\d+px-", "/500px-", hero) if "/thumb/" in hero else hero
+    return {
+        "thumb": thumb,
+        "hero": hero,
+        "page": info.get("descriptionurl", ""),
+        "artist": clean_artist(strip_html(meta.get("Artist", {}).get("value", ""))),
+        "license": strip_html(meta.get("LicenseShortName", {}).get("value", "")) or "see file page",
+    }
+
+
+def clean_artist(artist: str) -> str:
+    """Commons "Artist" fields are free text; keep just the author for the
+    one-line credit (the licence and file page link carry the rest):
+
+      No machine-readable author provided. Cdha~commonswiki assumed (…)  → Cdha
+      This Photo was taken by Supanut Arunoprayote. Feel free to …       → Supanut Arunoprayote
+      The original uploader was Heuristics at Thai Wikipedia.            → Heuristics
+      Fotograf / Photographer: Heinrich Damm (User:Hdamm, …)             → Heinrich Damm
+    """
+    a = artist.strip()
+    for pattern in (
+        r"No machine-readable author provided\.\s*(.+?)\s+assumed\b",
+        r"(?:This )?Photo (?:was )?taken by\s+(.+?)[.,(]",
+        r"The original uploader was\s+(.+?)\s+at\s+\w+ Wikipedia",
+        r"(?:Fotograf\s*/\s*)?Photographer:\s*(.+?)\s*(?:\(|$)",
+    ):
+        m = re.search(pattern, a, flags=re.I)
+        if m:
+            a = m.group(1)
+            break
+    # Thai Commons boilerplate: "creator / submitted to Wikimedia Commons".
+    a = a.replace("ผู้สร้างสรรค์ผลงาน/ส่งข้อมูลเก็บในคลังข้อมูลเสรีวิกิมีเดียคอมมอนส์", "").replace(" - ", " / ")
+    a = re.sub(r"~\w+wiki\b", "", a)
+    a = re.sub(r"\s+", " ", a).strip(" /")
+    if len(a) > 60:
+        a = a[:57].rstrip() + "…"
+    return a or "Unknown"
+
+
+def label_matches(station_norm: str, en_label: str) -> bool:
+    """Does a Wikidata English label name this station? OSM `wikidata` tags are
+    occasionally copied from the neighbouring station (Si Iam's node points at
+    Si La Salle's item); spelling variants (Tao Pun / Tao Poon) still match."""
+    if not en_label:
+        return True  # nothing to check against
+    label = re.sub(r"\b(mrt|bts|arl|srt|brt|station|central terminal)\b", " ", en_label, flags=re.I)
+    a, b = station_norm.replace(" ", ""), norm_name(label).replace(" ", "")
+    return a in b or b in a or difflib.SequenceMatcher(None, a, b).ratio() >= 0.7
+
+
+def attach_station_wikidata(stations: list[dict]) -> None:
+    """Japanese name, photo and Wikipedia links for each station, via the
+    `wikidata` tag of its OSM station node(s).
+
+    Interchanges have one OSM node (and item) per operator, so candidates
+    within 350 m are matched by name first; the first item with a Japanese
+    label / an image wins.
+    """
+    wd = load("station_wikidata")["entities"]
+    commons = load("station_commons")["pages"]
+    cands = [c for c in load_station_candidates() if c["qid"]]
+    for s in stations:
+        near = [c for c in cands if math.hypot(c["x"] - s["x"], c["y"] - s["y"]) < 350]
+        named = [c for c in near if c["norm"] == s["norm"]]
+        closest = sorted(near, key=lambda c: math.hypot(c["x"] - s["x"], c["y"] - s["y"]))
+        pool = named or [c for c in closest[:1] if math.hypot(c["x"] - s["x"], c["y"] - s["y"]) < 120]
+        ents = [
+            wd[c["qid"]] for c in pool
+            if c["qid"] in wd and label_matches(s["norm"], wd[c["qid"]].get("labels", {}).get("en", {}).get("value", ""))
+        ]
+        s["name_ja"] = next(
+            (clean_ja_label(e.get("labels", {}).get("ja", {}).get("value")) for e in ents
+             if e.get("labels", {}).get("ja")), None,
+        ) or STATION_JA_FALLBACK.get(s["id"])
+        s["image"] = None
+        s["wikipedia"] = {}
+        for e in ents:
+            info = wikidata_info(e)
+            if not s["image"] and info["image"]:
+                s["image"] = commons_image(info["image"], commons)
+            for lang, url in info["wikipedia"].items():
+                s["wikipedia"].setdefault(lang, url)
 
 
 def transit_model(stations: list[dict], sequences: dict[str, list[dict]]) -> dict[str, dict[str, float]]:
@@ -815,14 +953,31 @@ def main() -> None:
 
     print("→ rail network + commute model")
     stations, sequences, tracks = build_rail(districts)
+    attach_station_wikidata(stations)
     hub_times = transit_model(stations, sequences)
     SX = np.array([s["x"] for s in stations])
     SY = np.array([s["y"] for s in stations])
+
+    def commute_at(xs: np.ndarray, ys: np.ndarray, dist: np.ndarray | None = None) -> dict[str, np.ndarray]:
+        """Peak door-to-hub minutes from arbitrary points: walk or feeder to the
+        best station + rail, a door-to-door road trip, or walking all the way."""
+        Dx = np.hypot(xs[:, None] - SX[None, :], ys[:, None] - SY[None, :]) if dist is None else dist
+        walk = Dx * WALK_DETOUR / WALK_M_PER_MIN
+        feeder = FEEDER_WAIT + Dx * ROAD_DETOUR / feeder_m_per_min(Dx)
+        access = np.minimum(walk, feeder)
+        out: dict[str, np.ndarray] = {}
+        for hub, times in hub_times.items():
+            hx, hy = times["_xy"]  # type: ignore[misc]
+            tvec = np.array([times[s["id"]] for s in stations])
+            via_rail = (access + tvec[None, :]).min(axis=1)
+            dh = np.hypot(xs - hx, ys - hy)
+            road = ROAD_OVERHEAD + dh * ROAD_DETOUR / road_m_per_min(dh)
+            on_foot = dh * WALK_DETOUR / WALK_M_PER_MIN
+            out[hub] = np.minimum(np.minimum(via_rail, road), on_foot)
+        return out
+
     D = np.hypot(PX[:, None] - SX[None, :], PY[:, None] - SY[None, :])  # points × stations
     d_station = D.min(axis=1)
-    walk = D * WALK_DETOUR / WALK_M_PER_MIN
-    feeder = FEEDER_WAIT + D * ROAD_DETOUR / feeder_m_per_min(D)
-    access = np.minimum(walk, feeder)
     # distinct lines with a station within 1.5 km of each point
     line_ids = list(LINES)
     lines_near = np.zeros(len(PX))
@@ -830,15 +985,7 @@ def main() -> None:
         cols = [j for j, s in enumerate(stations) if lid in s["lines"]]
         if cols:
             lines_near += (D[:, cols].min(axis=1) <= 1500).astype(float)
-    commute_pt: dict[str, np.ndarray] = {}
-    for hub, times in hub_times.items():
-        hx, hy = times["_xy"]  # type: ignore[misc]
-        tvec = np.array([times[s["id"]] for s in stations])
-        via_rail = (access + tvec[None, :]).min(axis=1)
-        dh = np.hypot(PX - hx, PY - hy)
-        road = ROAD_OVERHEAD + dh * ROAD_DETOUR / road_m_per_min(dh)
-        on_foot = dh * WALK_DETOUR / WALK_M_PER_MIN
-        commute_pt[hub] = np.minimum(np.minimum(via_rail, road), on_foot)
+    commute_pt = commute_at(PX, PY, D)
     commute_min_pt = np.min(np.vstack(list(commute_pt.values())), axis=0)
 
     print("→ per-point signals")
@@ -877,6 +1024,11 @@ def main() -> None:
             + 0.15 * np.clip(1 - (commute_min_pt - 10) / 80, 0, 1)
         ),
     }
+
+    # Busyness around a point for the station-area / grid levels, where no
+    # population density exists: every place within 400 m (Overture's full
+    # POI set — shops, eateries, offices, services). Inverted → quietness.
+    pt_crowd = L(near("ovt_all", 400))
 
     print("→ district aggregates")
     raw: dict[str, dict[str, float]] = {k: {} for k in RATING_KEYS}
@@ -1014,31 +1166,9 @@ def main() -> None:
 
     # Images (Wikimedia Commons via Wikidata P18)
     commons = load("commons")["pages"]
-    normalized = commons.get("_normalized", {})
-    pages_by_title = {p.get("title"): p for k, p in commons.items() if k != "_normalized"}
 
     def image_for(d: dict) -> dict | None:
-        fname = d["wd"]["image"]
-        if not fname:
-            return None
-        title = normalized.get(f"File:{fname}", f"File:{fname}")
-        page = pages_by_title.get(title)
-        info = (page or {}).get("imageinfo", [{}])[0]
-        if not info.get("thumburl"):
-            return None
-        meta = info.get("extmetadata", {})
-        # Commons now serves thumbnails from thumb.wikimedia.org in fixed
-        # "standard" widths (…, 330, 500, 960, …) and appends utm_* params.
-        # Drop the tracking query and derive a 500 px variant for map popups.
-        hero = info["thumburl"].split("?")[0]
-        thumb = re.sub(r"/\d+px-", "/500px-", hero) if "/thumb/" in hero else hero
-        return {
-            "thumb": thumb,
-            "hero": hero,
-            "page": info.get("descriptionurl", ""),
-            "artist": strip_html(meta.get("Artist", {}).get("value", "")) or "Unknown",
-            "license": strip_html(meta.get("LicenseShortName", {}).get("value", "")) or "see file page",
-        }
+        return commons_image(d["wd"]["image"], commons)
 
     def description_for(slug: str) -> dict | None:
         path = DATA / "descriptions" / f"{slug}.json"
@@ -1050,6 +1180,210 @@ def main() -> None:
             assert all(fields.get(k) for k in ("atmosphere", "landmarks", "food", "nightlife")), f"{slug}.{lang} incomplete"
         return {lang: {k: desc[lang][k].strip() for k in ("atmosphere", "landmarks", "food", "nightlife")}
                 for lang in ("en", "ja", "ru")}
+
+
+    # ───────────────────────────── station areas ─────────────────────────────
+    print("→ station areas")
+    rated = [j for j, st in enumerate(stations) if st["district"]]
+    parent = list(range(len(stations)))
+
+    def find(a: int) -> int:
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+
+    # Interchange complexes (Asok + Sukhumvit, Sala Daeng + Si Lom, Mo Chit +
+    # Chatuchak Park …) are one neighbourhood: splitting them would draw two
+    # half-areas around one set of streets.
+    # Closest pairs first; a merge is refused when the two groups share a line,
+    # so no chain (A–X–B) can pull two stops of one line into one area.
+    group_lines = {j: set(stations[j]["lines"]) for j in rated}
+    pairs = sorted(
+        (math.hypot(stations[a]["x"] - stations[b]["x"], stations[a]["y"] - stations[b]["y"]), a, b)
+        for ii, a in enumerate(rated)
+        for b in rated[ii + 1:]
+    )
+    for dist, a, b in pairs:
+        if dist > INTERCHANGE_MERGE_M:
+            break
+        ra, rb = find(a), find(b)
+        if ra == rb or group_lines[ra] & group_lines[rb]:
+            continue
+        parent[ra] = rb
+        group_lines[rb] |= group_lines.pop(ra)
+    groups: dict[int, list[int]] = defaultdict(list)
+    for j in rated:
+        groups[find(j)].append(j)
+    line_order = list(LINES)
+
+    def member_key(j: int):
+        st = stations[j]
+        return (-len(st["lines"]), min(line_order.index(lid) for lid in st["lines"]), st["name_en"])
+
+    areas: list[dict] = []
+    for members in groups.values():
+        members.sort(key=member_key)
+        ms = [stations[j] for j in members]
+        areas.append({
+            "id": ms[0]["id"],
+            "members": members,
+            "name_en": " / ".join(st["name_en"] for st in ms),
+            "name_th": " / ".join(st["name_th"] for st in ms if st["name_th"]),
+            "name_jp": " / ".join(st["name_ja"] or st["name_en"] for st in ms),
+            "lines": sorted({lid for st in ms for lid in st["lines"]}, key=line_order.index),
+            "x": ms[0]["x"],
+            "y": ms[0]["y"],
+        })
+    areas.sort(key=lambda a: a["id"])
+    area_of_station = np.full(len(stations), -1)
+    for k, a in enumerate(areas):
+        for j in a["members"]:
+            area_of_station[j] = k
+    for j, st in enumerate(stations):
+        st["area"] = areas[area_of_station[j]]["id"] if area_of_station[j] >= 0 else None
+
+    # Each grid point belongs to its nearest rated station's area when that
+    # station is within walking range; the polygons below draw the same rule
+    # (Voronoi cell ∩ AREA_RADIUS_M disc ∩ Bangkok).
+    D_rated = D[:, rated]
+    nearest_rated = np.array(rated)[D_rated.argmin(axis=1)]
+    AREA = np.where(D_rated.min(axis=1) <= AREA_RADIUS_M, area_of_station[nearest_rated], -1)
+
+    rated_pts = [Point(stations[j]["x"], stations[j]["y"]) for j in rated]
+    vor = shapely.voronoi_polygons(shapely.MultiPoint(rated_pts), extend_to=province.envelope.buffer(10_000))
+    vor_cells = list(vor.geoms)
+    cell_of: dict[int, Polygon] = {}
+    for j, pnt in zip(rated, rated_pts):
+        cell_of[j] = next(c for c in vor_cells if c.contains(pnt))
+    area_geoms = []
+    for a in areas:
+        parts = [
+            cell_of[j].intersection(Point(stations[j]["x"], stations[j]["y"]).buffer(AREA_RADIUS_M, quad_segs=24))
+            for j in a["members"]
+        ]
+        g = unary_union(parts).intersection(province)
+        area_geoms.append(g if g.geom_type == "MultiPolygon" else MultiPolygon([g] if g.geom_type == "Polygon" else [
+            p for p in getattr(g, "geoms", []) if p.geom_type == "Polygon"
+        ]))
+    area_simplified = simplify_coverage(area_geoms, tolerance=12, min_part_m2=5_000)
+
+    area_raw: dict[str, dict[str, float]] = {k: {} for k in RATING_KEYS}
+    area_agg: dict[str, dict] = {}
+    for k, a in enumerate(areas):
+        m = AREA == k
+        if m.sum() < 3:  # tiny catchment on the city edge: use every point within walking range
+            m = np.hypot(PX - a["x"], PY - a["y"]) <= AREA_RADIUS_M
+        w = weight[m]
+        for key, arr in pt.items():
+            area_raw[key][a["id"]] = float((arr[m] * w).sum() / w.sum())
+        area_raw["crowd"][a["id"]] = float((pt_crowd[m] * w).sum() / w.sum())
+        own = OWN[m]
+        share: dict[str, float] = defaultdict(float)
+        for i_d, w_i in zip(own.tolist(), w.tolist()):
+            share[districts[i_d]["slug"]] += w_i
+        total_w = sum(share.values())
+        shares = sorted(((slug, v / total_w) for slug, v in share.items()), key=lambda x: -x[1])
+        blend = lambda field: sum(editorial[slug][field] * sh for slug, sh in shares)  # noqa: E731
+        members_xy = np.array([[stations[j]["x"], stations[j]["y"]] for j in a["members"]])
+        from_station = commute_at(members_xy[:, 0], members_xy[:, 1])
+        hub_minutes = {hub: int(round(float(v.min()))) for hub, v in from_station.items()}
+        area_agg[a["id"]] = {
+            "points": int(m.sum()),
+            "districts": [{"slug": slug, "share": round(sh, 3)} for slug, sh in shares if sh >= 0.05],
+            "rent_1br": int(round(blend("rent_1br") / 500) * 500),
+            "rent_2br": int(round(blend("rent_2br") / 500) * 500),
+            "safety": blend("safety"),
+            "hub_minutes": hub_minutes,
+            "min_transit": min(hub_minutes.values()),
+            "resident_minutes": {
+                hub: int(round(R.weighted_median(commute_pt[hub][m].tolist(), w.tolist()))) for hub in HUBS
+            },
+        }
+
+    area_ratings: dict[str, dict[str, int]] = defaultdict(dict)
+    for key in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe", "green", "transport"):
+        for aid, v in R.percentile_normalize(area_raw[key]).items():
+            area_ratings[aid][key] = v
+    for aid, v in R.percentile_normalize(area_raw["crowd"], invert=True).items():
+        area_ratings[aid]["crowd"] = v
+    for a in areas:
+        g = area_agg[a["id"]]
+        area_ratings[a["id"]]["rent"] = R.rent_to_affordability(g["rent_1br"]) or 5
+        area_ratings[a["id"]]["safety"] = int(round(g["safety"]))
+        area_raw["rent"][a["id"]] = g["rent_1br"]
+        area_raw["safety"][a["id"]] = round(g["safety"], 2)
+
+    # Facts inside the area polygon (same sources as the district card).
+    AREA_TWO_SOURCE = [  # (category, Overture key, OSM key, Overture min, OSM min) per ~1–2 km² area
+        ("food", "food", "food", 80, 20),
+        ("nightlife", "nightlife", "nightlife", 10, 4),
+        ("daily_essentials", "essentials", "essentials", 40, 15),
+        ("gym_sports", "sports", "sports", 6, 3),
+        ("vibe", "culture", "culture", 6, 8),
+    ]
+    for k, a in enumerate(areas):
+        g = area_geoms[k]
+        area_km2 = g.area / 1e6
+        park_ha = sum(p.intersection(g).area for p in parks if p.intersects(g)) / 10_000
+        essential_cats = ("grocery", "pharmacy", "health", "bank", "laundry", "post")
+        a["facts"] = {
+            "area_km2": round(area_km2, 2),
+            "food": count_inside("ovt_food", g),
+            "cafes": count_inside("ovt_cafe", g),
+            "nightlife": count_inside("ovt_night", g),
+            "convenience": count_inside("ovt_convenience", g),
+            "markets": count_inside("ovt_market", g) + count_inside("market", g),
+            "essentials": sum(count_inside(f"ovt_{c}", g) for c in essential_cats),
+            "sports": count_inside("ovt_sports", g),
+            "culture": count_inside("ovt_venue", g),
+            "temples": count_inside("ovt_temple", g),
+            "park_ha": round(park_ha, 1),
+            "piers": count_inside("pier", g),
+        }
+        a["osm_counts"] = {
+            "food": count_inside("food", g),
+            "nightlife": count_inside("night", g) + count_inside("karaoke", g),
+            "essentials": sum(count_inside(c, g) for c in essential_cats) + count_inside("convenience", g),
+            "sports": count_inside("sports", g),
+            "culture": count_inside("venue", g) + count_inside("attraction", g) + count_inside("temple", g),
+        }
+        conf: dict[str, str] = {}
+        srcs: dict[str, list[str]] = {}
+        for cat, fkey, okey, ovt_min, osm_min in AREA_TWO_SOURCE:
+            conf[cat], srcs[cat] = R.two_source_confidence(a["facts"][fkey] >= ovt_min, a["osm_counts"][okey] >= osm_min)
+        conf.update({"transport": "moderate", "rent": "editorial", "safety": "editorial",
+                     "green": "moderate", "crowd": "moderate"})
+        srcs.update({"transport": ["osm_rail", "transit_model"], "rent": ["listing_research"],
+                     "safety": ["ai_research"], "green": ["osm"], "crowd": ["overture"]})
+        a["confidence"], a["sources"] = conf, srcs
+
+    # Neighbouring areas = the next stop(s) along each line.
+    area_neighbors: dict[str, set[str]] = defaultdict(set)
+    for lid, seq in sequences.items():
+        ids = [st.get("area") for st in seq]
+        for x_id, y_id in zip(ids, ids[1:]):
+            if x_id and y_id and x_id != y_id:
+                area_neighbors[x_id].add(y_id)
+                area_neighbors[y_id].add(x_id)
+
+    station_medians = {k: R.median_int([area_ratings[a["id"]][k] for a in areas]) for k in RATING_KEYS}
+    station_anchors = R.anchors([R.composite(area_ratings[a["id"]], default_weights) for a in areas])
+
+    # ─────────────────────────────── 200 m grid ──────────────────────────────
+    print("→ grid ratings")
+    w_list = weight.tolist()
+    grid_ratings: dict[str, list[int]] = {}
+    for key in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe", "green", "transport"):
+        grid_ratings[key] = R.weighted_percentile_normalize(pt[key].tolist(), w_list)
+    grid_ratings["crowd"] = R.weighted_percentile_normalize(pt_crowd.tolist(), w_list, invert=True)
+    grid_ratings["rent"] = [ratings[districts[i]["slug"]]["rent"] for i in OWN.tolist()]
+    grid_ratings["safety"] = [ratings[districts[i]["slug"]]["safety"] for i in OWN.tolist()]
+    grid_medians = {k: int(R.weighted_median(grid_ratings[k], w_list)) for k in RATING_KEYS}
+    grid_scores = [
+        R.composite({k: grid_ratings[k][i] for k in RATING_KEYS}, default_weights) for i in range(len(PX))
+    ]
+    grid_anchors = R.weighted_anchors(grid_scores, w_list)
 
     today = date.today()
     data_date = today.strftime("%Y-%m")
@@ -1112,12 +1446,116 @@ def main() -> None:
         })
     rail_stations = sorted(
         [{
-            "id": s["id"], "name_en": s["name_en"], "name_th": s["name_th"],
+            "id": s["id"], "name_en": s["name_en"], "name_th": s["name_th"], "name_ja": s["name_ja"],
             "lat": latlng_pair(s["x"], s["y"])[0], "lng": latlng_pair(s["x"], s["y"])[1],
-            "lines": s["lines"], "district": s["district"],
+            "lines": s["lines"], "district": s["district"], "area": s["area"],
         } for s in stations],
         key=lambda s: s["id"],
     )
+
+    editorial_updated = json.loads((DATA / "editorial.json").read_text())["_meta"]["updated"]
+    out_areas = []
+    for k, a in enumerate(areas):
+        g = area_agg[a["id"]]
+        primary = stations[a["members"][0]]
+        wiki: dict[str, str] = {}
+        for j in a["members"]:
+            for lang, url in stations[j]["wikipedia"].items():
+                wiki.setdefault(lang, url)
+        lat, lng = latlng_pair(primary["x"], primary["y"])
+        out_areas.append({
+            "id": a["id"],
+            "name_en": a["name_en"],
+            "name_th": a["name_th"],
+            "name_jp": a["name_jp"],
+            "lat": lat,
+            "lng": lng,
+            "station_ids": [stations[j]["id"] for j in a["members"]],
+            "line_ids": a["lines"],
+            "district": primary["district"],
+            "districts": g["districts"],
+            "ratings": {key: area_ratings[a["id"]][key] for key in RATING_KEYS},
+            "confidence": a["confidence"],
+            "sources": a["sources"],
+            "data_date": data_date,
+            "rent": {"one_bed": g["rent_1br"], "two_bed": g["rent_2br"], "source": "listing_research",
+                     "updated": editorial_updated},
+            "transit_minutes": g["hub_minutes"],
+            "min_transit": g["min_transit"],
+            "resident_minutes": g["resident_minutes"],
+            "neighbors": sorted(area_neighbors[a["id"]]),
+            "facts": a["facts"],
+            "image": next((stations[j]["image"] for j in a["members"] if stations[j]["image"]), None),
+            "wikipedia": wiki,
+        })
+
+    def bbox_latlng(geom) -> list[list[float]]:
+        x0, y0, x1, y1 = geom.bounds
+        return [latlng_pair(x0, y0), latlng_pair(x1, y1)]
+
+    station_geometry = {
+        a["id"]: {
+            "polygons": [polygon_to_latlng(poly) for poly in area_simplified[k].geoms],
+            "bbox": bbox_latlng(area_simplified[k]),
+        }
+        for k, a in enumerate(areas)
+    }
+
+    # 200 m grid, packed for the browser: one uint8 plane per field over the
+    # full nx × ny bbox (rows north → south, 0 = outside Bangkok), each row
+    # delta-coded (mod 256) so gzip sees long zero runs, then gzip'd.
+    print("→ grid export")
+    nx, ny = len(gx), len(gy)
+    col = np.rint((PX - gx[0]) / GRID_M).astype(int)
+    row = (ny - 1) - np.rint((PY - gy[0]) / GRID_M).astype(int)
+    flat = row * nx + col
+    station_order = sorted(range(len(stations)), key=lambda j: stations[j]["id"])  # = rail.json order
+    station_rank = np.empty(len(stations), dtype=int)
+    station_rank[station_order] = np.arange(len(stations))
+    grid_fields: dict[str, np.ndarray] = {
+        key: np.array(grid_ratings[key])
+        for key in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe", "green", "transport", "crowd")
+    }
+    grid_fields["district"] = OWN + 1
+    grid_fields["weight"] = np.rint(weight * 250)
+    for hub in HUBS:
+        grid_fields[f"hub_{hub}"] = np.clip(np.rint(commute_pt[hub]), 1, 250)
+    grid_fields["station"] = station_rank[D.argmin(axis=1)] + 1
+    grid_fields["station_dist"] = np.where(d_station > 254 * 20, 255, np.rint(d_station / 20))
+    grid_fields["area"] = AREA + 1
+    planes = []
+    for values in grid_fields.values():
+        plane = np.zeros(nx * ny, dtype=np.int16)
+        plane[flat] = values.astype(np.int16)
+        delta = np.diff(plane.reshape(ny, nx), axis=1, prepend=0) % 256
+        planes.append(delta.astype(np.uint8).tobytes())
+    grid_packed = gzip.compress(b"".join(planes), compresslevel=9, mtime=0)
+    grid_file = f"grid-{hashlib.sha256(grid_packed).hexdigest()[:12]}.bin"
+    west, south = lonlat(gx[0] - GRID_M / 2, gy[0] - GRID_M / 2)
+    east, north = lonlat(gx[-1] + GRID_M / 2, gy[-1] + GRID_M / 2)
+    grid_header = {
+        "_comment": "GENERATED by scripts/bangkok/build.py — header of the packed 200 m grid in app/public.",
+        "version": 1,
+        "file": f"/data/bangkok/{grid_file}",
+        "bytes": len(grid_packed),
+        "cell_m": GRID_M,
+        "nx": nx,
+        "ny": ny,
+        "west": round(west, 7),
+        "south": round(south, 7),
+        "east": round(east, 7),
+        "north": round(north, 7),
+        "cells": int(len(PX)),
+        "fields": list(grid_fields),
+        "encoding": "uint8 planes (nx*ny each, rows north->south, 0 = outside), per-row delta mod 256, gzip",
+        "scales": {"weight": 250, "station_dist_m": 20},
+        "districts": [d["slug"] for d in districts],
+        "stations": [stations[j]["id"] for j in station_order],
+        "areas": [a["id"] for a in areas],
+        "medians": grid_medians,
+        "default_anchors": grid_anchors,
+        "data_date": data_date,
+    }
 
     source_agreement = {}
     for cat, fkey, okey, _, _ in TWO_SOURCE:
@@ -1133,6 +1571,12 @@ def main() -> None:
         "stations_in_bangkok": sum(1 for s in rail_stations if s["district"]),
         "medians": medians,
         "default_anchors": anchors,
+        "station_area_count": len(areas),
+        "station_medians": station_medians,
+        "station_default_anchors": station_anchors,
+        "grid_cell_count": int(len(PX)),
+        "grid_medians": grid_medians,
+        "grid_default_anchors": grid_anchors,
         "rent_scale": {"floor": R.RENT_FLOOR_THB, "ceiling": R.RENT_CEILING_THB},
         "data_date": data_date,
     }
@@ -1154,6 +1598,16 @@ def main() -> None:
                 "lines": d["line_ids"],
             }
             for d in districts
+        },
+        "station_areas": {
+            a["id"]: {
+                "raw": {k: round(area_raw[k][a["id"]], 4) for k in RATING_KEYS},
+                "ratings": area_ratings[a["id"]],
+                **area_agg[a["id"]],
+                "facts": a["facts"],
+                "osm_counts": a["osm_counts"],
+            }
+            for a in areas
         },
     }
 
@@ -1179,6 +1633,29 @@ def main() -> None:
         a = agg[slug]
         print(f"  {slug:14s} {ratings[slug]}  hubs={a['hub_minutes']}")
 
+    print(f"\nStation areas: {len(areas)} (from {len(rated)} stations inside Bangkok; "
+          f"{sum(len(a['members']) > 1 for a in areas)} interchange complexes)")
+    print("  interchanges:", ", ".join(a["name_en"] for a in areas if len(a["members"]) > 1))
+    pts_per_area = sorted(area_agg[a["id"]]["points"] for a in areas)
+    print(f"  grid points per area: min {pts_per_area[0]}, median {pts_per_area[len(pts_per_area) // 2]}, max {pts_per_area[-1]}")
+    for k in RATING_KEYS:
+        dist = defaultdict(int)
+        for a in areas:
+            dist[area_ratings[a["id"]][k]] += 1
+        print(f"  {k:17s} median {station_medians[k]:>2}  " + " ".join(f"{v}:{dist[v]}" for v in sorted(dist)))
+    area_top = sorted(areas, key=lambda a: -R.composite(area_ratings[a["id"]], default_weights))
+    print("  top 10:", ", ".join(f"{a['id']} {R.composite(area_ratings[a['id']], default_weights)}" for a in area_top[:10]))
+    print("  bottom 5:", ", ".join(f"{a['id']} {R.composite(area_ratings[a['id']], default_weights)}" for a in area_top[-5:]))
+    conf_counts = defaultdict(lambda: defaultdict(int))
+    for a in areas:
+        for k, v in a["confidence"].items():
+            conf_counts[k][v] += 1
+    print("  confidence:", {k: dict(v) for k, v in conf_counts.items() if k in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe")})
+    missing_ja = [st["id"] for st in stations if st["district"] and not st["name_ja"]]
+    print(f"  stations without a Japanese name: {missing_ja or 'none'}")
+    print(f"\nGrid: {len(PX):,} cells, {nx}×{ny}, packed {len(grid_packed) / 1024:.0f} KB; medians {grid_medians}; "
+          f"anchors {grid_anchors}")
+
     if args.verbose:
         print("\nAll districts (composite · ratings · min commute):")
         for d in top:
@@ -1200,6 +1677,16 @@ def main() -> None:
                                   "districts": out_districts}, indent=1)
     dump(APP / "geometry.json", geometry)
     dump(APP / "rail.json", {"lines": rail_lines, "stations": rail_stations})
+    dump(APP / "stations.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py"},
+                                 "areas": out_areas}, indent=1)
+    dump(APP / "station-geometry.json", station_geometry)
+    dump(APP / "grid.json", grid_header, indent=1)
+    PUBLIC.mkdir(parents=True, exist_ok=True)
+    for old in PUBLIC.glob("grid-*.bin"):
+        if old.name != grid_file:
+            old.unlink()
+    (PUBLIC / grid_file).write_bytes(grid_packed)
+    print(f"  wrote {(PUBLIC / grid_file).relative_to(ROOT)} ({len(grid_packed) / 1024:.0f} KB)")
     dump(APP / "meta.json", meta, indent=2)
     dump(DATA / "signals.json", signals, indent=1)
     print(f"\nDone in {time.time() - started:.1f}s")

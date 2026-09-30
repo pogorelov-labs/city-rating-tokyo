@@ -62,14 +62,20 @@ export function matchArea(
 ): { matched: boolean; alias?: string } {
   const q = query.trim().toLowerCase();
   if (q.length < 2) return { matched: false };
+  // Romanised Thai is spaced inconsistently ("Silom" / "Si Lom", "Thonglor"
+  // / "Thong Lo", "Onnut" / "On Nut"), so Latin names also match with
+  // spaces and hyphens ignored.
+  const squash = (s: string) => s.toLowerCase().replace(/[\s\-]+/g, '');
+  const qs = squash(q);
+  const latin = (s: string) => s.toLowerCase().includes(q) || (qs.length >= 3 && squash(s).includes(qs));
   if (
-    area.name_en.toLowerCase().includes(q) ||
+    latin(area.name_en) ||
     area.name_jp.includes(query.trim()) ||
     (area.name_ru && area.name_ru.toLowerCase().includes(q)) ||
     (area.name_th && area.name_th.includes(query.trim()))
   ) {
     return { matched: true };
   }
-  const alias = area.aliases?.find((a) => a.toLowerCase().includes(q));
+  const alias = area.aliases?.find(latin);
   return alias ? { matched: true, alias } : { matched: false };
 }

@@ -8,7 +8,8 @@ Sources used per category:
   nightlife: HP midnight + izakaya + bar + OSM nightlife + karaoke + hostel
   transport: line_count + MLIT passengers
   rent:      Suumo price → linear interpolation (¥80k→10, ¥300k→1)
-  safety:    ArcGIS weighted crime (Tokyo) / ward-level (others) + daytime adj
+  safety:    official crime open data, 2024 (data/crime/station-safety.json): Tokyo 800 m
+             町丁 catchments, municipal rates elsewhere; daytime-adjusted denominators
   green:     OSM green_count + green_area_sqm (when available)
   gym:       OSM gym_count
   vibe:      OSM cultural venues + pedestrian streets + cafes
@@ -31,6 +32,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "packages" / "schema" / "python"))
 from utils import NocoDB, load_stations
+from slugs import index_by_slug, load_slug_redirects
 from city_rating_schema.constants import (
     RENT_FLOOR,
     RENT_CEILING,
@@ -120,6 +122,33 @@ def haversine(lat1, lng1, lat2, lng2):
     return R * 2 * math.asin(math.sqrt(a))
 
 
+PASSENGERS_PATH = ROOT / "data" / "passengers" / "s12-passengers.json"
+
+
+def load_passengers():
+    """MLIT S12 daily passengers by current slug (CRTKY-84).
+
+    Written by scripts/scrapers/ingest-mlit-s12.py. Replaces the NocoDB
+    passenger_counts table, whose ingest was never committed.
+    """
+    doc = json.loads(PASSENGERS_PATH.read_text())
+    return doc["stations"], doc["metadata"]["fiscal_year"]
+
+
+SAFETY_PATH = ROOT / "data" / "crime" / "station-safety.json"
+
+
+def load_station_safety():
+    """Weighted crime rate per current slug (CRTKY-82).
+
+    Written by scripts/scrapers/ingest-crime-open-data.py from police open data
+    in all four prefectures. Replaces the NocoDB station_crime rows (Esri layer,
+    ingest never committed) and crime_stats (hand-typed literals).
+    """
+    doc = json.loads(SAFETY_PATH.read_text())
+    return doc["stations"], doc["metadata"]["year"]
+
+
 def load_rent_data():
     """Load Suumo rent data from all possible locations."""
     for p in [
@@ -135,7 +164,9 @@ def load_rent_data():
 def fit_rent_regression(rent_data, station_map):
     """
     Fit log-linear regression: log(rent) = a + b * distance_km.
-    Uses real Suumo data as training set. Returns (intercept, slope, n_samples).
+    Trains on every row of rent-averages.json — Suumo listings and, since PR #91,
+    e-Stat municipal averages — so it reflects outer-area municipalities too.
+    Only used for the few stations with neither. Returns (intercept, slope, n_samples).
     Housing prices decay exponentially with distance, so log-linear fits well.
 
     Replaces the broken `max(50000, 160000 - dist*15000)` formula that was
@@ -182,6 +213,28 @@ def apply_absolute_cap(rating, raw_value, caps):
     return min(rating, max_allowed)
 
 
+def vibe_confidence(cultural, ped_streets):
+    """
+    Confidence level for the vibe rating (CRTKY-128).
+
+    Vibe is measured from two independent OSM signals: cultural venues
+    (theatres, cinemas, galleries, book/music shops) and pedestrian streets.
+    Both present → 'strong', mirroring food and nightlife, where two
+    corroborating sources earn 'strong'. Cultural venues alone → 'moderate'.
+    Pedestrian streets alone carry only 0.15 of the formula, so they stay
+    'estimate', as does the no-signal composite fallback.
+
+    Confidence describes how well-grounded the number is, not how high it
+    is, so there is deliberately no venue-count threshold here — magnitude
+    is handled by ABSOLUTE_CAPS.
+    """
+    if cultural > 0 and ped_streets > 0:
+        return "strong"
+    if cultural > 0:
+        return "moderate"
+    return "estimate"
+
+
 def main():
     parser = argparse.ArgumentParser(description="Compute data-driven ratings v2")
     parser.add_argument("--dry-run", action="store_true")
@@ -194,30 +247,42 @@ def main():
 
     # ===== Load all data sources =====
     print("\nLoading data sources from NocoDB...")
+    # NocoDB rows scraped before the CRTKY-113 rename still use the old slugs;
+    # index them by current slug or 334 stations silently get no data at all.
+    redirects = load_slug_redirects()
 
-    osm = {r["slug"]: r for r in NocoDB("osm_pois").get_all_records() if r.get("slug")}
-    print(f"  osm_pois:         {len(osm)} stations")
+    def load_by_slug(table):
+        index, remapped = index_by_slug(NocoDB(table).get_all_records(), redirects)
+        return index, (f"  ({remapped} via pre-rename slugs)" if remapped else "")
 
-    livability = {r["slug"]: r for r in NocoDB("osm_livability").get_all_records() if r.get("slug")}
-    print(f"  osm_livability:   {len(livability)} stations")
+    osm, note = load_by_slug("osm_pois")
+    print(f"  osm_pois:         {len(osm)} stations{note}")
 
-    hp = {r["slug"]: r for r in NocoDB("hotpepper").get_all_records() if r.get("slug")}
-    print(f"  hotpepper:        {len(hp)} stations")
+    livability, note = load_by_slug("osm_livability")
+    print(f"  osm_livability:   {len(livability)} stations{note}")
 
-    ext = {r["slug"]: r for r in NocoDB("osm_extended").get_all_records() if r.get("slug")}
-    print(f"  osm_extended:     {len(ext)} stations")
+    hp, note = load_by_slug("hotpepper")
+    print(f"  hotpepper:        {len(hp)} stations{note}")
 
-    crime = {r["slug"]: r for r in NocoDB("station_crime").get_all_records() if r.get("slug")}
-    print(f"  station_crime:    {len(crime)} stations (Tokyo neighborhood-level)")
+    ext, note = load_by_slug("osm_extended")
+    print(f"  osm_extended:     {len(ext)} stations{note}")
 
-    crime_ward = {r["ward_code"]: r for r in NocoDB("crime_stats").get_all_records() if r.get("ward_code")}
-    print(f"  crime_stats:      {len(crime_ward)} wards (legacy fallback)")
+    crime, crime_year = load_station_safety()
+    print(f"  station safety:   {len(crime)} stations (police open data {crime_year})")
+    # Fallback for a station without crime data: its prefecture's median rate,
+    # on the same scale as everything else.
+    pref_rates = defaultdict(list)
+    for s in stations:
+        if s["slug"] in crime:
+            pref_rates[s.get("prefecture")].append(crime[s["slug"]]["rate"])
+    pref_median = {pf: sorted(v)[len(v) // 2] for pf, v in pref_rates.items()}
 
-    pax = {r["slug"]: r for r in NocoDB("passenger_counts").get_all_records() if r.get("slug")}
-    print(f"  passenger_counts: {len(pax)} stations")
 
-    wards = {r["slug"]: r for r in NocoDB("station_wards").get_all_records() if r.get("slug")}
-    print(f"  station_wards:    {len(wards)} stations")
+    pax, pax_year = load_passengers()
+    print(f"  passengers:       {len(pax)} stations (MLIT S12 FY{pax_year})")
+
+    wards, note = load_by_slug("station_wards")
+    print(f"  station_wards:    {len(wards)} stations{note}")
 
     rent_data = load_rent_data()
     print(f"  rent (Suumo):     {len(rent_data)} stations")
@@ -358,52 +423,20 @@ def main():
                 srcs["rent"] = ["distance_regression"]
                 cap_raw["rent"][slug] = 0  # regression estimate → capped at 8
 
-        # --- SAFETY: weighted crime from ArcGIS (Tokyo) or ward-level (others) ---
-        if cr and cr.get("weighted_crime_score") is not None:
-            # ArcGIS neighborhood-level (Tokyo)
-            # IMPORTANT: crimes_per_10k from scraper may be distorted for tiny-population
-            # neighborhoods (e.g., Shinjuku 3-chome: pop=101, crimes=879 → rate=11161).
-            # Use weighted_crime_score directly and normalize separately.
-            # For neighborhoods with pop < 500, cap the rate to avoid distortion.
-            pop = cr.get("population", 0) or 0
-            weighted = cr.get("weighted_crime_score", 0) or 0
-            if pop >= 500:
-                raw["safety"][slug] = weighted / pop * 10000
-            elif pop > 0:
-                # Commercial area with tiny residential pop — use a blended rate
-                # Assume effective daytime pop is at least 5000 for any station area
-                effective_pop = max(pop, 5000)
-                raw["safety"][slug] = weighted / effective_pop * 10000
-            else:
-                raw["safety"][slug] = weighted * 0.1  # raw score as proxy
-            conf["safety"] = "strong"
-            srcs["safety"] = ["keishicho_arcgis"]
+        # --- SAFETY: weighted crime per 10k people from police open data (CRTKY-82) ---
+        # Tokyo: 町丁 within 800 m of the station ('strong'); elsewhere the
+        # municipality/ward containing it ('moderate'). One year, one formula and
+        # one denominator rule everywhere — see ingest-crime-open-data.py.
+        if cr:
+            raw["safety"][slug] = cr["rate"]
+            conf["safety"] = cr["confidence"]
+            srcs["safety"] = [cr["source"]]
         else:
-            # Fallback: ward-level from crime_stats (legacy) or Nominatim ward match
-            ward_name = w.get("city_name", "")
-            matched_ward = None
-            for wc, wd in crime_ward.items():
-                if wd.get("ward_name", "") == ward_name:
-                    matched_ward = wd
-                    break
-            if matched_ward:
-                raw["safety"][slug] = matched_ward.get("crimes_per_10k", 0) or 0
-                conf["safety"] = "moderate"
-                srcs["safety"] = ["ward_crime_stats"]
-            else:
-                # Prefecture average fallback.
-                # CRTKY-64: add distance-based jitter to avoid 4 fixed values
-                # creating gaps in the distribution. Suburban stations (farther
-                # from Tokyo Station) tend slightly safer → lower rate.
-                pref = st.get("prefecture", "13")
-                pref_avgs = {"13": 120, "14": 65, "11": 60, "12": 55}
-                base = pref_avgs.get(pref, 80)
-                dist = haversine(st["lat"], st["lng"], TOKYO_STATION_LAT, TOKYO_STATION_LNG)
-                # ±15% jitter scaled by distance (30km = ~15% less crime)
-                jitter_factor = 1.0 - min(0.15, dist * 0.005)
-                raw["safety"][slug] = base * jitter_factor
-                conf["safety"] = "estimate"
-                srcs["safety"] = ["prefecture_average"]
+            # Not reachable today (the ingest asserts full coverage); kept so a
+            # new station without crime data degrades to an honest estimate.
+            raw["safety"][slug] = pref_median.get(st.get("prefecture"), 20.0)
+            conf["safety"] = "estimate"
+            srcs["safety"] = ["prefecture_average"]
 
         # --- GREEN: green_area if available, else count only ---
         green_count = o.get("green_count", 0) or 0
@@ -442,7 +475,7 @@ def main():
                 math.log1p(cafe) * 0.15 +
                 (min(cultural, 20) / 20.0) * 0.10  # cultural_shop_ratio proxy
             )
-            conf["vibe"] = "moderate" if cultural > 0 else "estimate"
+            conf["vibe"] = vibe_confidence(cultural, ped_streets)
             srcs["vibe"] = (["osm_cultural"] if cultural > 0 else []) + (["osm_pedestrian"] if ped_streets > 0 else [])
         else:
             # Fallback: old composite (cafe + convenience + diversity)
@@ -455,7 +488,9 @@ def main():
         # --- CROWD: MLIT passengers (inverted) ---
         if daily_pax > 0:
             raw["crowd"][slug] = daily_pax
-            conf["crowd"] = "strong"
+            # 'moderate' when the count is an older-vintage fallback (unmanned
+            # JR East stations drop out of the newest tables) — CRTKY-84.
+            conf["crowd"] = p.get("confidence") or "strong"
             srcs["crowd"] = ["mlit_s12"]
         else:
             # Fallback: HP total as proxy + line_count
@@ -596,14 +631,17 @@ def main():
 
     # ===== Spot-check =====
     print("\nSpot-check (known stations):")
-    # Expected values calibrated to DATA (not AI estimates which were too generous on safety)
-    # Shinjuku 3-chome: 879 crimes/yr → safety 1-2 is CORRECT (Kabukicho adjacent)
-    # Sugamo: 44 crimes, pop 3916 → safety 7-8 is CORRECT
+    # Expected values calibrated to DATA (not AI estimates, which were too generous on safety).
+    # Safety uses 町丁 within 800 m of Tokyo stations (CRTKY-82): Shinjuku's catchment
+    # includes Kabukicho → 1; Sugamo's includes the Jizo-dori shopping street → ~5;
+    # Otemachi is an office district whose rate uses daytime population → ~9. If
+    # Otemachi drops toward 1, the daytime-population join has broken again.
     check_stations = [
-        ("shinjuku", {"food": 9, "nightlife": 9, "transport": 10, "crowd": 1}),
+        ("shinjuku", {"food": 9, "nightlife": 9, "transport": 10, "crowd": 1, "safety": 1}),
         ("shibuya", {"food": 9, "nightlife": 9, "transport": 10}),
         ("kichijoji", {"food": 8, "nightlife": 7}),
-        ("sugamo", {"food": 7, "safety": 7}),
+        ("sugamo", {"food": 7, "safety": 5}),
+        ("otemachi", {"safety": 9}),
         ("roppongi", {"food": 8, "nightlife": 9}),
     ]
     for slug, expected in check_stations:

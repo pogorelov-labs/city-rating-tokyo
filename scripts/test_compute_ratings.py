@@ -171,3 +171,31 @@ class TestAbsoluteCapsShape:
             assert thresholds == sorted(thresholds), f"{cat} thresholds not sorted"
             ratings = [r for r, _ in caps]
             assert ratings == sorted(ratings), f"{cat} min-ratings not sorted"
+
+
+# -----------------------------------------------------------------------------
+# vibe_confidence — CRTKY-128: vibe must be able to reach 'strong'
+# -----------------------------------------------------------------------------
+class TestVibeConfidence:
+    def test_both_signals_is_strong(self):
+        assert cr.vibe_confidence(cultural=12, ped_streets=3) == "strong"
+
+    def test_strong_needs_no_magnitude_threshold(self):
+        # Confidence is about grounding, not how high the rating is.
+        assert cr.vibe_confidence(cultural=1, ped_streets=1) == "strong"
+
+    def test_cultural_only_is_moderate(self):
+        assert cr.vibe_confidence(cultural=5, ped_streets=0) == "moderate"
+
+    def test_pedestrian_only_stays_estimate(self):
+        assert cr.vibe_confidence(cultural=0, ped_streets=4) == "estimate"
+
+    def test_no_signal_is_estimate(self):
+        assert cr.vibe_confidence(cultural=0, ped_streets=0) == "estimate"
+
+    def test_every_outcome_is_reachable(self):
+        # The original bug: no input could produce 'strong'. Guard the whole range.
+        outcomes = {
+            cr.vibe_confidence(c, p) for c in (0, 1, 50) for p in (0, 1, 10)
+        }
+        assert outcomes == {"strong", "moderate", "estimate"}
