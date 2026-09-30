@@ -284,7 +284,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
-    "metaTitle": "{name} ({nameJp}) — Гид по районам Токио",
+    "metaTitle": "{name} ({secondary}) — Гид по районам Токио",
     "metaDescription": "Район станции {name}: оценки, цены на аренду, время в пути. {description}",
     "metaDescriptionFallback": "Путеводитель по району станции {name} в Токио.",
     "overview": "Обзор",
