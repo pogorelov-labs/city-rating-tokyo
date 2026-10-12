@@ -370,6 +370,8 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 
 **Bangkok (2026-09 →):** второй город на сайте — ✅ `CRTKY-130` (50 кхетов + переключатель Токио ⇄ Бангкок) и ✅ `CRTKY-135` (133 станционных ареала + сетка 200 м, 39k ячеек; верификация 2026-10-13 — тесты зелёные, прод синхронен). Открытое поддерево **CRTKY-130: `CRTKY-131–153`** — flood/safety/noise/AQ research с подтверждёнными открытыми источниками (ThaiFloodRisk, Air4Thai, PCD Noise Monitor, реестр зон риска BMA), обогащение категорий (Michelin, health food, рынки, red-light зоны), якоря аренды и событийные блокеры. Группировка и статусы: [`research/bangkok/backlog.md`](bangkok/backlog.md) (синхронизирован 2026-10-13). Оговорки честности для уровня города (honesty notes): `research/bangkok/00-overview.md` → *Honesty notes*.
 
+**Tokyo discovery (2026-10-13 →):** зеркало бангкокской программы — эпик **`CRTKY-170`** с детьми **`CRTKY-171–185`**: замена SRTM&lt;5 m на официальные hazard-полигоны MLIT (A51 内水 / A31b 洪水, CC-BY-4.0, GeoJSON + растры глубин TMG), воздух (そらまめ API) и пыльца, туристическая нагрузка (宿泊旅行統計 e-Stat), шум день/ночь, дорожная безопасность + бездомные (services-framing), health food с японским словарём, Michelin/Tabelog-вердикт, shotengai, учреждения (посольства, англоязычная медицина), пешеходность/барьер-фри, entertainment-зоны, mesh-население, дериск HotPepper (риск №8), check-livecams. Сквозной аудит здоровья проекта — отдельный эпик **`CRTKY-154`** (security, test infra, рефакторинг, доки; см. `research/decisions/2026-10-13-project-health-audit.md`).
+
 ---
 
 ## Roadmap: транспорт, хабы, аренда, «последний поезд»
