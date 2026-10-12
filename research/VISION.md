@@ -368,6 +368,8 @@ Sprint 1 (data completion) issues were tracked separately and scrapers are all r
 
 **Plane — эпик и новые тикеты (2026-04):** `CRTKY-80` umbrella; дочерние **`CRTKY-81`** реальные `transit_minutes`, **`CRTKY-82`** криминал префектур, **`CRTKY-83`** мердж pipeline `confidence` для AI-only slugs, **`CRTKY-84`** обновление MLIT S12 / закрытие хвоста пассажиров (crowd). У **CRTKY-48–52, 55–56, 42–43, 64–65, 69** — комментарии *Spec packet*. **Док-синхронизация готовности:** `CLAUDE.md` §Data readiness, этот файл §Критическая оценка, `README.md`, `00-overview.md` (2026-04-07).
 
+**Bangkok (2026-09 →):** второй город на сайте — ✅ `CRTKY-130` (50 кхетов + переключатель Токио ⇄ Бангкок) и ✅ `CRTKY-135` (133 станционных ареала + сетка 200 м, 39k ячеек; верификация 2026-10-13 — тесты зелёные, прод синхронен). Открытое поддерево **CRTKY-130: `CRTKY-131–153`** — flood/safety/noise/AQ research с подтверждёнными открытыми источниками (ThaiFloodRisk, Air4Thai, PCD Noise Monitor, реестр зон риска BMA), обогащение категорий (Michelin, health food, рынки, red-light зоны), якоря аренды и событийные блокеры. Группировка и статусы: [`research/bangkok/backlog.md`](bangkok/backlog.md) (синхронизирован 2026-10-13). Оговорки честности для уровня города (honesty notes): `research/bangkok/00-overview.md` → *Honesty notes*.
+
 ---
 
 ## Roadmap: транспорт, хабы, аренда, «последний поезд»
