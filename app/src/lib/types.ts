@@ -95,6 +95,11 @@ export interface EnvironmentData {
   seismic_prob_i60?: number;
   seismic_prob_i55?: number;
   seismic_risk_tier?: SeismicRiskTier;
+  /** Official TMG flood-zone flag (CRTKY-187) — replaces the SRTM<5 m
+   *  elevation proxy for the flood dealbreaker. true = ≥0.5 m expected
+   *  inundation depth within 100 m of the station (TMG 浸水予想区域図). */
+  flood_exposed?: boolean;
+  flood_depth_m?: number;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';

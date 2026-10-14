@@ -1,0 +1,8989 @@
+{
+ "_meta": {
+  "source": "TMG 浸水予想区域図 (東京都建設局) — inundation depth point grids, 14 river-basin zones",
+  "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000029",
+  "license": "CC BY 4.0",
+  "attribution": "出典：東京都建設局 浸水予想区域図（東京都オープンデータカタログサイト）",
+  "threshold_m": 0.5,
+  "radius_m": 100,
+  "scenario": "想定最大規模 (maximum assumed scale)",
+  "ingested": "2026-10-14",
+  "notes": "Depth is continuous (not banded), from both 外水氾濫 (river overflow) and 内水氾濫 (inland/drainage flooding). Official zones understate — real flooding can exceed the model (MLIT caveat). The SRTM<5 m proxy remains as elevation display; only the flood dealbreaker moved.",
+  "zones": {
+   "kandagawa": "09b261c4bff2af41",
+   "sumidagawa": "5e3bad8919679af7",
+   "syakujiigawa": "0a4e97c8e0279329",
+   "jyounantiku": "383f994008de7f97",
+   "koutounaibu": "250810532379b4d5",
+   "nogawa": "606cd454fe3213db",
+   "kuromegawa": "ad5addc971d81890",
+   "zanborigawa": "7f34569056ccc3b1",
+   "sakaigawa": "1124fae251e97e2b",
+   "nakagawa": "edd1730959292a36",
+   "tsurumigawa": "1124fae251e97e2b",
+   "asakawa": "3b3146a51d9d0574",
+   "tamagawa": "ffd7fc32998c4b67",
+   "akikawa": "6fac6089a18a7164"
+  }
+ },
+ "stations": {
+  "shinjuku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokyo": {
+   "max_depth_m": 3.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokohama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibuya": {
+   "max_depth_m": 3.132,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ikebukuro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ueno": {
+   "max_depth_m": 0.18,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimbashi": {
+   "max_depth_m": 0.7,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-senju": {
+   "max_depth_m": 0.8,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-kosugi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "narita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nippori": {
+   "max_depth_m": 3.05,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ofuna": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinagawa": {
+   "max_depth_m": 0.985,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akabane": {
+   "max_depth_m": 0.94,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akihabara": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hachioji": {
+   "max_depth_m": 0.83,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iidabashi": {
+   "max_depth_m": 5.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-takasago": {
+   "max_depth_m": 1.43,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kichijoji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokubunji": {
+   "max_depth_m": 0.705,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagatacho": {
+   "max_depth_m": 0.64,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-funabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okachimachi": {
+   "max_depth_m": 0.63,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "otemachi": {
+   "max_depth_m": 0.71,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachikawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "totsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yotsuya": {
+   "max_depth_m": 3.71,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ebisu": {
+   "max_depth_m": 0.522,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "funabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "haijima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichigaya": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "meguro": {
+   "max_depth_m": 0.459,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mitaka": {
+   "max_depth_m": 0.219,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nerima": {
+   "max_depth_m": 0.21,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-nippori": {
+   "max_depth_m": 1.47,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ochanomizu": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "odawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "osaki": {
+   "max_depth_m": 2.089,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oshiage-sukaitsurii-mae": {
+   "max_depth_m": 0.61,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-kamagaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takao": {
+   "max_depth_m": 1.36,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "urawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "abiko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aoto": {
+   "max_depth_m": 0.51,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aoyama-itchome": {
+   "max_depth_m": 0.19,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asakusa": {
+   "max_depth_m": 0.65,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bakurocho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chikatetsu-akatsuka": {
+   "max_depth_m": 0.4,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chikatetsu-narimasu": {
+   "max_depth_m": 0.68,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "choshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ebina": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujisawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ginza": {
+   "max_depth_m": 0.19,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gotanda": {
+   "max_depth_m": 4.785,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamamatsucho": {
+   "max_depth_m": 3.235,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanedakuko-kokunaisen-taaminaru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "harajuku": {
+   "max_depth_m": 1.891,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hashimoto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hibiya": {
+   "max_depth_m": 1.86,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-kanagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-matsudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-murayama": {
+   "max_depth_m": 0.533,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashihanno": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hikifune": {
+   "max_depth_m": 0.55,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiyoshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jimbocho": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamata": {
+   "max_depth_m": 0.816,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanazawa-hakkei": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kashiwa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawagoe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawasaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keiotama-sentaa": {
+   "max_depth_m": 0.89,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-tsudanuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kinshicho": {
+   "max_depth_m": 3.84,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kotake-mukaihara": {
+   "max_depth_m": 0.14,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kudanshita": {
+   "max_depth_m": 3.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "machiya": {
+   "max_depth_m": 0.27,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamisenju": {
+   "max_depth_m": 2.06,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mitsukoshimae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mizonokuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "motoyawata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagatsuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakano": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakano-sakaue": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nihonbashi": {
+   "max_depth_m": 0.32,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogikubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oimachi": {
+   "max_depth_m": 0.359,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oji": {
+   "max_depth_m": 2.96,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omotesando": {
+   "max_depth_m": 0.078,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "saitama-shintoshin": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-matsudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinjuku-sanchome": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinkiba": {
+   "max_depth_m": 0.28,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shonandai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "soga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takadanobaba": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takahata-fudo": {
+   "max_depth_m": 1.32,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tamagawa": {
+   "max_depth_m": 0.592,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tobudobutsukoen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wakoshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yorii": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoyogi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yurakucho": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akabane-iwabuchi": {
+   "max_depth_m": 1.97,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asagaya": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asakusabashi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "atsugi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "awa-kamogawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "awajicho": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ayase": {
+   "max_depth_m": 0.61,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "azabu-juban": {
+   "max_depth_m": 1.489,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "azami-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bubaigawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiba-minato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiba-nyutaun-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chibachuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chofu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chuorinkan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "daimon": {
+   "max_depth_m": 1.455,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "denenchofu": {
+   "max_depth_m": 0.372,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuchuhonmachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futako-tamagawa": {
+   "max_depth_m": 1.742,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futakoshinchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futamatagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "goi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gotokuji": {
+   "max_depth_m": 1.564,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gora": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hagiyama": {
+   "max_depth_m": 0.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamakawasaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanedakuko-kokusaisen-taaminaru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanno": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatagaya": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatanodai": {
+   "max_depth_m": 0.256,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatchobori": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatchonawate": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "heiwadai": {
+   "max_depth_m": 0.4,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-fuchu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-ikebukuro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-nakano": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-shinjuku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiginza": {
+   "max_depth_m": 3.1,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashikawaguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashinarita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashitotsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hikawadai": {
+   "max_depth_m": 6.48,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ho-tsuchi-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hokucho-kasumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honchiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hongo-sanchome": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hori-no-nai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichikawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inage": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inba-nippon-idai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jiyugaoka": {
+   "max_depth_m": 0.999,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamakura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kameido": {
+   "max_depth_m": 0.44,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiooka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanamachi": {
+   "max_depth_m": 2.19,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanamecho": {
+   "max_depth_m": 0.84,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasuga": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasukabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katsuta-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kayabacho": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusanakano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-kamata": {
+   "max_depth_m": 0.781,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-kawasaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keio-nagayama": {
+   "max_depth_m": 1.12,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keiseiueno": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kikuna": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kisarazu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitanarashino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitano": {
+   "max_depth_m": 1.01,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kiyosumi-shirakawa": {
+   "max_depth_m": 0.61,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kodaira": {
+   "max_depth_m": 0.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koenji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokkai-gijidomae": {
+   "max_depth_m": 3.16,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komagome": {
+   "max_depth_m": 0.65,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "korakuen": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ko-no-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "korai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kozu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kumagaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kumano-mae": {
+   "max_depth_m": 0.89,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuramae": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurihashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kyobashi": {
+   "max_depth_m": 0.93,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "machida": {
+   "max_depth_m": 6.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "makuhari": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "makuharihongo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsugishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "me-ke-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "meidaimae": {
+   "max_depth_m": 1.977,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamiurawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mita": {
+   "max_depth_m": 0.635,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "monzen-nakacho": {
+   "max_depth_m": 0.94,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "morishita": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "motosumiyoshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-sakai": {
+   "max_depth_m": 0.474,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-yokote": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashiurawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagareyama-otakano-mori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakai": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakameguro": {
+   "max_depth_m": 1.36,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakanobe": {
+   "max_depth_m": 0.335,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nan-etsu-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nanryu-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naruto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ningyocho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-hachioji": {
+   "max_depth_m": 1.1,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-kokubunji": {
+   "max_depth_m": 2.038,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-oi": {
+   "max_depth_m": 0.943,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-tokorozawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiarai": {
+   "max_depth_m": 1.49,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiogikubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "noborito": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogawa": {
+   "max_depth_m": 0.15,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogawacho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogose": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oku": {
+   "max_depth_m": 0.29,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ohara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ookayama": {
+   "max_depth_m": 0.251,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "otsuka": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "roppongi": {
+   "max_depth_m": 0.628,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ryogoku": {
+   "max_depth_m": 1.18,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagamiono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakuragicho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sangenjaya": {
+   "max_depth_m": 0.154,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sasazuka": {
+   "max_depth_m": 0.06,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibu-yuenchi": {
+   "max_depth_m": 2.11,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibukyujo-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sekiuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sengakuji": {
+   "max_depth_m": 1.118,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "senkawa": {
+   "max_depth_m": 0.48,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sentaa-kita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sentaa-minami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimokitazawa": {
+   "max_depth_m": 0.565,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimotakaido": {
+   "max_depth_m": 0.154,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-koiwa": {
+   "max_depth_m": 3.5,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-okachimachi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-sugita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinkawasaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinkoyasu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinmaruko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinpachi-hashira": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinyokohama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinyuri-ke-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiodome": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shirokane-takanawa": {
+   "max_depth_m": 0.317,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shirokanedai": {
+   "max_depth_m": 0.164,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shitte": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sugamo": {
+   "max_depth_m": 1.18,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suidobashi": {
+   "max_depth_m": 3.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sumiyoshi": {
+   "max_depth_m": 0.89,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tabata": {
+   "max_depth_m": 2.83,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takatsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama-dobutsu-koen": {
+   "max_depth_m": 2.15,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tamachi": {
+   "max_depth_m": 0.434,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tamagawajosui": {
+   "max_depth_m": 1.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tameike-sanno": {
+   "max_depth_m": 1.25,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tenku-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tennodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tennozu-isle": {
+   "max_depth_m": 0.632,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "togoshi-ginza": {
+   "max_depth_m": 1.014,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokorozawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toshimaen": {
+   "max_depth_m": 0.69,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "togo-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toyosu": {
+   "max_depth_m": 0.44,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toyota": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsudanuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukishima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uguisudani": {
+   "max_depth_m": 0.16,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ushita": {
+   "max_depth_m": 1.37,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ware-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yamato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yotsukaido": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoyogi-hachiman": {
+   "max_depth_m": 1.94,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoyogi-uehara": {
+   "max_depth_m": 1.383,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yukari-ga-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "zoshigaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "adachi-odai": {
+   "max_depth_m": 1.48,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ageo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "agui": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aihara": {
+   "max_depth_m": 1.059,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aiko-ishida": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akabanebashi": {
+   "max_depth_m": 3.079,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akasaka": {
+   "max_depth_m": 0.57,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akebonobashi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akigawa": {
+   "max_depth_m": 0.75,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akira-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akitsu": {
+   "max_depth_m": 0.64,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "akiyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "an-zen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "anabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "anagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "anamori-inari": {
+   "max_depth_m": 0.323,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ane-ke-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "anjin-tsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ao-hori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aobadai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aoi": {
+   "max_depth_m": 2.51,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "aomono-yokocho": {
+   "max_depth_m": 0.645,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arai-kusurishi-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "araijuku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawa-itchu-mae": {
+   "max_depth_m": 0.52,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawa-nichome": {
+   "max_depth_m": 0.69,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawa-shichi-chome": {
+   "max_depth_m": 0.27,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawa-yuenchi-mae": {
+   "max_depth_m": 1.2,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawaku-yakusho-mae": {
+   "max_depth_m": 0.85,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "arakawashakomae": {
+   "max_depth_m": 0.68,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "araki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ariake": {
+   "max_depth_m": 2.3,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ariake-tenisu-no-mori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asahi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asaka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ashi-ke-kubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ashigara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "asuka-yama": {
+   "max_depth_m": 0.17,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "atago": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "awa-katsuyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "awa-kominato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "awa-tenshin": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "baigo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ban-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bando-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "barakinakayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "basha-michi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "benten-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bushu-araki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bushu-hino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bushu-karasawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bushu-nagase": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "bushu-nakagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "busshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "byobu-ura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiba-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiba-tera": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chichibu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chidoricho": {
+   "max_depth_m": 0.291,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chihara-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chiku-sentaa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chikura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chitose": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chitose-funabashi": {
+   "max_depth_m": 0.372,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chitose-karasuyama": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "cho-ura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chogo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chojamachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chokoku-no-mori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chugakko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "chuodaigaku-meiseidaigaku": {
+   "max_depth_m": 2.44,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "daiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "daijingushita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "daikanyama": {
+   "max_depth_m": 1.058,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "daishimae": {
+   "max_depth_m": 0.56,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "doro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "dobutsu-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "eda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "edogawa": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "edogawa-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "edogawabashi": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ehara-machi": {
+   "max_depth_m": 1.399,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ehara-nakanobe": {
+   "max_depth_m": 0.315,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "eifuku-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ekoda": {
+   "max_depth_m": 0.28,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "emi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "enoto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "etchu-shima": {
+   "max_depth_m": 0.23,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuchinobe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuchu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuchu-keiba-seimonmae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fudomae": {
+   "max_depth_m": 2.461,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuji-fuirumu-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fuji-no-ushijima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujigaoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujimi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujimicho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujimidai": {
+   "max_depth_m": 0.12,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujimigaoka": {
+   "max_depth_m": 5.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fujisawa-honcho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fukaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fukiage": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fukudawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fukuura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "funabashi-hoten": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "funabashi-nichidai-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "funabashikeibajo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "funabori": {
+   "max_depth_m": 1.53,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fune-no-kagakukan": {
+   "max_depth_m": 0.89,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "furusato": {
+   "max_depth_m": 0.45,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fusa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "fussa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futamata-o": {
+   "max_depth_m": 3.47,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futamata-shinmachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "futawa-mukaedai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gaiemmae": {
+   "max_depth_m": 0.158,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gakuen-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gakugei-daigaku": {
+   "max_depth_m": 0.213,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gakushuin-shita": {
+   "max_depth_m": 3.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gamo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "genka-osamu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gezan-kuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ginzaitchome": {
+   "max_depth_m": 0.38,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gion": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gogatsu-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gohyaku-rakan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gokokuji": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "goko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gokuraku-tera": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gotan-no": {
+   "max_depth_m": 1.98,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gun-hatake": {
+   "max_depth_m": 1.76,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gyoda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "gyodashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hachi-seki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hachigata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hachiman-yado": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hachioji-minami-no": {
+   "max_depth_m": 1.03,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hadano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakkei-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakone-itabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakone-ke-saki": {
+   "max_depth_m": 0.53,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakoneyumoto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakuraku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hakusan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamacho": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamadayama": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamakin-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hamura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hana-koganei": {
+   "max_depth_m": 0.71,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanasaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hane-kan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hanzomon": {
+   "max_depth_m": 0.34,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hara-toma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "haraichi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "haruhi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hase": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hasuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hasunuma": {
+   "max_depth_m": 0.582,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hato-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hato-no-su": {
+   "max_depth_m": 15.5,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatsuishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hatsutomi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hayakawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hazama": {
+   "max_depth_m": 1.25,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "heiwa-shima": {
+   "max_depth_m": 1.303,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hibarigaoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-abiko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-aki-ryu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-azuma": {
+   "max_depth_m": 1.65,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-funabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-iwatsuki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-koenji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-koganei": {
+   "max_depth_m": 0.561,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-matsubara": {
+   "max_depth_m": 0.262,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-nami-ken": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-washimiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashi-zushi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashichiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashifushimi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashijujo": {
+   "max_depth_m": 0.18,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashikitazawa": {
+   "max_depth_m": 0.377,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashikurume": {
+   "max_depth_m": 1.47,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashimatsuyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashimon-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashimuki-shima": {
+   "max_depth_m": 0.64,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashinagasaki": {
+   "max_depth_m": 0.265,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashinaka-kami": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashinakayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiogu-sanchome": {
+   "max_depth_m": 0.72,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiome": {
+   "max_depth_m": 0.6,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashitokorozawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiurawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiyama-kita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiyama-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higashiyamatoshi": {
+   "max_depth_m": 0.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "higuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hikarigaoka": {
+   "max_depth_m": 1.79,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "himemiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hinatawada": {
+   "max_depth_m": 0.74,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hinode": {
+   "max_depth_m": 0.267,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hirai": {
+   "max_depth_m": 0.51,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hirama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiranumabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiratsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hirayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hirayama-joshi-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hire-ke-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiroaki-tera": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiroo": {
+   "max_depth_m": 1.035,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hirose-yacho-no-mori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hitotsubashi-gakuen": {
+   "max_depth_m": 0.56,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hiyoshihoncho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hodokubo": {
+   "max_depth_m": 2.19,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hokudai-miya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hokuetsu-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hon-atsugi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hon-choshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hon-komagome": {
+   "max_depth_m": 0.09,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hon-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honancho": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hongodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honjoazumabashi": {
+   "max_depth_m": 0.24,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honjo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honkawa-etsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "honkugenuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "horikiri": {
+   "max_depth_m": 0.54,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "horikiri-shobuen": {
+   "max_depth_m": 1.01,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hoshikawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hotaruda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hoya": {
+   "max_depth_m": 0.16,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "hyuga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "i-hosoda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichi-no-wari": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichikawa-mama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichikawa-ono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichikawa-shiohama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ichinoe": {
+   "max_depth_m": 1.44,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ido-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iida-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iikura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iioka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iiyama-man": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ikegami": {
+   "max_depth_m": 0.983,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ikejiriohashi": {
+   "max_depth_m": 2.099,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ikenoe": {
+   "max_depth_m": 0.069,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ikuta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ima-hane": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ina-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inadazutsumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inage-kaigan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inagi": {
+   "max_depth_m": 0.59,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inagi-naganuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inamura-ke-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inaricho": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inariyama-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inokashira-koen": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inuboe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "inzai-maki-no-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iogi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ipponmatsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iriuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iriya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "irumashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "isehara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "isezaki-chojamachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ishigami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ishigami-mae": {
+   "max_depth_m": 0.74,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ishihara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ishikawacho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ishikawadai": {
+   "max_depth_m": 1.512,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "isogo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "itabashi": {
+   "max_depth_m": 2.26,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "itabashihoncho": {
+   "max_depth_m": 0.19,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "itabashikuyakusho-mae": {
+   "max_depth_m": 0.95,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "itsumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iwahara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iwai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iwamotocho": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iwane": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "iwatsuki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "izumi-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "izumi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "izumi-taiikukan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "izumi-tamagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jinbohara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jinmu-tera": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "joshidai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jocho-toro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "josei-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "jujo": {
+   "max_depth_m": 0.71,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "juni-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kachidoki": {
+   "max_depth_m": 0.51,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kadosawa-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kagemori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kagetsuen-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kago-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kagurazaka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaihinmakuhari": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaisei": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaishi-ariki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaji-ga-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kajiwara": {
+   "max_depth_m": 0.74,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kakio": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kama-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kama-ke-tani-daibutsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kama-shu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamakura-koko-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kameari": {
+   "max_depth_m": 0.15,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kameido-suijin": {
+   "max_depth_m": 1.2,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamifukuoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamihongo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiigusa": {
+   "max_depth_m": 0.166,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiishi-kami-i": {
+   "max_depth_m": 0.27,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiitabashi": {
+   "max_depth_m": 0.36,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiizumi": {
+   "max_depth_m": 0.268,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamikita-dai": {
+   "max_depth_m": 0.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamikitazawa": {
+   "max_depth_m": 0.28,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaminaka-sato": {
+   "max_depth_m": 1.06,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaminoge": {
+   "max_depth_m": 2.46,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamiyacho": {
+   "max_depth_m": 0.15,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamo-miya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamoi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kamonomiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanagawashinmachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanazawa-bunko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kane-ke-fuchi": {
+   "max_depth_m": 0.79,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kaneko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kanno": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kannon": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "karakida": {
+   "max_depth_m": 1.13,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasa-hata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasa-ue-kuronama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasai": {
+   "max_depth_m": 1.02,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasai-rinkai-koen": {
+   "max_depth_m": 0.48,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kashima-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kashiwa-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kashiwa-no-ha-kyanpasu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kashiwa-tanaka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kasumigaseki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katakura": {
+   "max_depth_m": 1.05,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katakuracho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katase-ko-no-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katase-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katsu-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "katsuura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawa-kan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawagoeshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawaguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawaguchi-motogo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawai": {
+   "max_depth_m": 29.41,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawasaki-shinmachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawasakidaishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawasumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kawawacho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazamatsuri": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-higashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-ichinomiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-kameyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-kawa-kan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-kiyokawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-kubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-matsuoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-minato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-mitsumata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-murakami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-nakagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-okitsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-okubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-tsurumai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-ushiku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kazusa-yamada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-nagasawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-otsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-taura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keikyu-tomioka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keio-horinochi": {
+   "max_depth_m": 0.39,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keio-katakura": {
+   "max_depth_m": 1.82,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keio-yomiuri-rando": {
+   "max_depth_m": 1.23,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keiohachioji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keioinadatsutsumi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keiotama-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-hikifune": {
+   "max_depth_m": 0.44,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-inage": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-koiwa": {
+   "max_depth_m": 0.71,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-nakayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-nishifuna": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-okubo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-owada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-sake-kurikaesi-i": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-sakura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-tateishi": {
+   "max_depth_m": 0.43,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "keisei-usui": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kemigawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kemigawahama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kenchomae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kenritsudai-gaku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kiba": {
+   "max_depth_m": 0.87,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kibo-ke-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kikukawa": {
+   "max_depth_m": 0.72,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kimitsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kinoshita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kinugasa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kishine-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-akabane": {
+   "max_depth_m": 4.15,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-ayase": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-fuchu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-hatsutomi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-kashiwa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-kasukabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-kogane": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-konosu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-me-ke-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-sando": {
+   "max_depth_m": 1.46,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-shinagawa": {
+   "max_depth_m": 0.581,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kita-yono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitado-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitaguni-fun": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitahachi-oji": {
+   "max_depth_m": 0.26,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitaike-fukuro": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitakamakura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitakami-o": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitakurihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitamatsudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitami": {
+   "max_depth_m": 0.515,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitamoto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitasaka-ko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitasenzoku": {
+   "max_depth_m": 0.667,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitashin-yokohama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitaurawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kitayamata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kiyose": {
+   "max_depth_m": 1.43,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ko-fuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kobayashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kodama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kodenmacho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kodomono-kuni": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kogane-joshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koganecho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kohoku-abiko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koigakubo": {
+   "max_depth_m": 0.336,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koiwa": {
+   "max_depth_m": 0.7,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kojima-nitta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kojimachi": {
+   "max_depth_m": 0.14,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokonoe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokorozashi-kyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokuga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokuritsu-kyogijo": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokuryo": {
+   "max_depth_m": 0.349,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokusai-tenjijo": {
+   "max_depth_m": 2.3,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kokusai-tenjijo-seimon": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komabatodaimae": {
+   "max_depth_m": 0.543,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komae": {
+   "max_depth_m": 2.476,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komazawa-daigaku": {
+   "max_depth_m": 0.162,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komura-i": {
+   "max_depth_m": 0.97,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "komuro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koremasa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koshigaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koshigaya-reikutaun": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koshigoe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kosuge": {
+   "max_depth_m": 1.76,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kotesashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ko-kawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ko-tsu-no-mori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koen-shita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koen-ue": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kofu-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kohoku-adachi": {
+   "max_depth_m": 0.29,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kojiya": {
+   "max_depth_m": 0.23,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koku-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "konan-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "konandai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "konodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "konosu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koshin-tsuka": {
+   "max_depth_m": 0.346,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koshukaido": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koza-shibuya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kowakudani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "koyasu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kozukue": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuga-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kugayama": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kugenuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kugenuma-kaigan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuhonbutsu": {
+   "max_depth_m": 0.124,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuju": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kumakawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kumegawa": {
+   "max_depth_m": 1.62,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kun-ke-hama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kunitachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kuniyoshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kunugi-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurahashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurihira": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kurokawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kururi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kyodo": {
+   "max_depth_m": 0.261,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kyoteijo-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kyu-ga-hara": {
+   "max_depth_m": 0.118,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "kyumei": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "machiya-nichome": {
+   "max_depth_m": 0.58,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "maehara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "magome": {
+   "max_depth_m": 0.286,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "maihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "maioka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "makita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "makuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "man-gan-tera": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "manatsuru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "maruyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mashio": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matoba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsu-ga-tani": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsu-tobidai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsubara": {
+   "max_depth_m": 0.982,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsudo-nitta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsuhisa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "matsuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mei-ko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mejiro": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mejiro-dai": {
+   "max_depth_m": 0.88,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mejiro-yamashita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "meshi-kyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mibu-kuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "midori-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "midorigaoka": {
+   "max_depth_m": 1.903,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "midorimachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mikado": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mikawa-shima": {
+   "max_depth_m": 0.43,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mimomi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-asa-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-banki-ga-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-furuya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-hanyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-hato-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-kashiwa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-kurihashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-ota": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-osawa": {
+   "max_depth_m": 1.84,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-sake-kurikaesi-i": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-sakurai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-shinjuku": {
+   "max_depth_m": 3.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-sunamachi": {
+   "max_depth_m": 0.25,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-taira": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minami-yono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamifunabashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamimachida": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamiotsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamirinkan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamitama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minamiyuki-toku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minatomachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minatomirai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minori-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minowa": {
+   "max_depth_m": 0.51,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "minuma-dai-shinsui-koen": {
+   "max_depth_m": 0.61,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "misaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "misakiguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "misato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "misato-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mitakadai": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mitsuwa-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miurakaigan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miya-no-mae": {
+   "max_depth_m": 1.38,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miya-no-saka": {
+   "max_depth_m": 1.969,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miya-no-shita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miya-no-taira": {
+   "max_depth_m": 0.41,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miyahara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miyamaedaira": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miyayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "miyazakidai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mizue": {
+   "max_depth_m": 1.48,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mizuho-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mobara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mochida": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mogusa-sono": {
+   "max_depth_m": 0.63,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "monoi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "moro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "motohasunuma": {
+   "max_depth_m": 0.1,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "motomachi-chukagai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "motoyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mukaihara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mukogaokayuen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "murakami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-arashiyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-fujisawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-hikita": {
+   "max_depth_m": 0.27,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-koganei": {
+   "max_depth_m": 0.697,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-koyama": {
+   "max_depth_m": 0.117,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-masuto": {
+   "max_depth_m": 0.42,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-nitta": {
+   "max_depth_m": 0.193,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-shiroishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-sunagawa": {
+   "max_depth_m": 0.57,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashi-takahagi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashidai-wa": {
+   "max_depth_m": 2.3,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashiitsukaichi": {
+   "max_depth_m": 1.25,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashinakahara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashino-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashiseki": {
+   "max_depth_m": 4.92,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "musashishinjo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mutsuai-nichidai-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "mutsura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "myogadani": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "myoden": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "myogaku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "myorenji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagahara": {
+   "max_depth_m": 0.266,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naganuma": {
+   "max_depth_m": 1.94,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagareyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagareyama-sentorarupaaku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nagatoro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nai-yado": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naka-gora": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naka-no-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakagami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakagawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakaitabashi": {
+   "max_depth_m": 0.83,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakamachidai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakamura-hashi": {
+   "max_depth_m": 0.291,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakano-fujimicho": {
+   "max_depth_m": 6.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakano-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakano-shinbashi": {
+   "max_depth_m": 5.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nakaura-wa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nako-funagata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "namamugi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "namekawa-airando": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nami-kure": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "namiki-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "namiki-kita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nanahikari-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nanbu-shijo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naniwa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nankyo-hon": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nansan-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "narashino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "narita-yukawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "naruse": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nebukawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "negishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nerima-kasugacho": {
+   "max_depth_m": 2.14,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nerima-koyadai": {
+   "max_depth_m": 0.18,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nezu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nichi-no-demachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nihondai-tori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "niitaka-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "niitaka-shima-taira": {
+   "max_depth_m": 1.93,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "niiza": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nijubashimae": {
+   "max_depth_m": 1.28,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ninomiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-chiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-chofu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-hanyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-kamakura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-kasai": {
+   "max_depth_m": 2.08,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-ke-hara": {
+   "max_depth_m": 3.7,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-ke-hara-shitei-me": {
+   "max_depth_m": 0.38,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-magome": {
+   "max_depth_m": 0.955,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-noborito": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-ohara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-omiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-ojima": {
+   "max_depth_m": 0.32,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-oya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-oyama": {
+   "max_depth_m": 1.406,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-shinjuku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-shinjuku-gochome": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-sugamo": {
+   "max_depth_m": 0.41,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-tachikawa": {
+   "max_depth_m": 1.83,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-taishido": {
+   "max_depth_m": 0.258,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-ware-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishi-waseda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiarai-taishi-nishi": {
+   "max_depth_m": 0.24,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishidai": {
+   "max_depth_m": 1.98,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishihata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishikawa-etsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishikawa-kuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishikoku-ritsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiko-shima-taira": {
+   "max_depth_m": 0.56,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishinaga-fuku": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishishirai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishitani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiura-wa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nishiyokohama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nisshin": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nitta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nittano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nodashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nogami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nogata": {
+   "max_depth_m": 2.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nogizaka": {
+   "max_depth_m": 1.47,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nojima-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nokendai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "numabe": {
+   "max_depth_m": 1.508,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "numabukuro": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "nyu-so": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "o-hanacha-ya": {
+   "max_depth_m": 1.17,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "o-hanahata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "obitsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "obusuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ochiai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ochiai-minami-nagasaki": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oda-sakae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "odai": {
+   "max_depth_m": 1.02,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "odaiba-kaihinkoen": {
+   "max_depth_m": 0.19,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "odakyu-sagamihara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "odoriba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogura-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oizumi-gakuen": {
+   "max_depth_m": 0.38,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oji-kamiya": {
+   "max_depth_m": 1.73,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okegawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okusawa": {
+   "max_depth_m": 0.136,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okutama": {
+   "max_depth_m": 11.48,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omaeda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ome": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omigawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omokage-hashi": {
+   "max_depth_m": 6.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omori": {
+   "max_depth_m": 0.245,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onarimon": {
+   "max_depth_m": 0.513,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onigori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onjuku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ontake": {
+   "max_depth_m": 17.6,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ontake-yama": {
+   "max_depth_m": 1.1,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oaso": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "obukuro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ohiradai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oikeiba-ba-mae": {
+   "max_depth_m": 0.527,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oiso": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okubo": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "okurayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omiya-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omori-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omori-kaigan": {
+   "max_depth_m": 1.202,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omori-machi": {
+   "max_depth_m": 0.859,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onohara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "onuki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "osaki-hirokoji": {
+   "max_depth_m": 1.859,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ojima": {
+   "max_depth_m": 1.5,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "otaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "otorii": {
+   "max_depth_m": 0.654,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "otsuka-teikyodaigaku": {
+   "max_depth_m": 1.96,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "owada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oyama": {
+   "max_depth_m": 1.32,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oppama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "orihara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogi-ohashi": {
+   "max_depth_m": 0.67,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ogimachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "omekaido": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oya-hana": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oyama-dai": {
+   "max_depth_m": 0.668,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oyamatsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "oyumi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ozaku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "renkon": {
+   "max_depth_m": 3.24,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "roka-koen": {
+   "max_depth_m": 0.718,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "roku-machi": {
+   "max_depth_m": 0.8,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "roku-mi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "rokugo-dote": {
+   "max_depth_m": 0.463,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "roppongi-itchome": {
+   "max_depth_m": 2.47,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ryokuen-toshi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ryutsu-sentaa": {
+   "max_depth_m": 0.254,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sachiura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagami-kaneko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagami-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagami-numata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagamihara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagamiko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagamiotsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sagi-no-miya": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "saginuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "saikai-kashima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakaemachi": {
+   "max_depth_m": 0.42,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakasai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sake-kurikaesi-i": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "saku-kusa-bu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakura-kaido": {
+   "max_depth_m": 0.9,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakuradai": {
+   "max_depth_m": 0.19,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakuradamon": {
+   "max_depth_m": 1.55,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakuragaoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakuragi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakurajosui": {
+   "max_depth_m": 0.184,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakurashinmachi": {
+   "max_depth_m": 0.092,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sakurazawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "samezu": {
+   "max_depth_m": 0.811,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "samukawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "san-no-wa-hashi": {
+   "max_depth_m": 1.72,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "san-tsu-sakai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "san-tsu-sawa-shitamachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "san-tsu-sawakami-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sangu-hashi": {
+   "max_depth_m": 1.039,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sangyo-shinko-sentaa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sangyodoro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sanpoku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sanuki-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "saruta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sasagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "satomi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "satte": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sawai": {
+   "max_depth_m": 0.43,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sayama-ke-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sayamashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibi-ba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibu-chichibu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibu-tachikawa": {
+   "max_depth_m": 0.46,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibu-yanagisawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibuen": {
+   "max_depth_m": 1.26,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seibushinjuku": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seifu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seijo-gakuenmae": {
+   "max_depth_m": 0.203,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seikai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seiseki-sakuragaoka": {
+   "max_depth_m": 1.22,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sen-da-ke-tani": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sen-shiro-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sen-shiro-taihoku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sendagi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sengawa": {
+   "max_depth_m": 1.638,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sengen-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sengoku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "senju-ohashi": {
+   "max_depth_m": 0.97,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sensoku": {
+   "max_depth_m": 0.213,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "senzokuike": {
+   "max_depth_m": 0.588,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "setagaya": {
+   "max_depth_m": 0.469,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "setagaya-daita": {
+   "max_depth_m": 0.361,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "seya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shake": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shakudo-shogakko-mae": {
+   "max_depth_m": 0.35,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shakujii-koen": {
+   "max_depth_m": 0.09,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shi-ga-o": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shi-tsu-ki": {
+   "max_depth_m": 0.45,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibakoen": {
+   "max_depth_m": 1.606,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibamata": {
+   "max_depth_m": 0.49,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibasaki": {
+   "max_depth_m": 0.872,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibasaki-taiikukan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibaura-fu-atama": {
+   "max_depth_m": 0.377,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibayama-chiyoda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shibusawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shichiri": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shichiri-ke-hama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shidai-igakubu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiinamachi": {
+   "max_depth_m": 0.47,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiishiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shijo-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimizu-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimo": {
+   "max_depth_m": 2.1,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimogori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimoigusa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimomaruko": {
+   "max_depth_m": 0.819,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimomizo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimo-ochiai": {
+   "max_depth_m": 5.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimosa-kanzaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimosa-matsuzaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimosa-nakayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimosa-tachibana": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimosa-toyosato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimura-sakaue": {
+   "max_depth_m": 0.11,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shimura-sanchome": {
+   "max_depth_m": 0.81,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-itabashi": {
+   "max_depth_m": 0.4,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-urayasu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-akitsu": {
+   "max_depth_m": 3.56,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-chiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-egota": {
+   "max_depth_m": 0.308,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-hane": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-kashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-kashiwa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-kodaira": {
+   "max_depth_m": 0.21,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-koenji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-koganei": {
+   "max_depth_m": 0.83,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-koshin-tsuka": {
+   "max_depth_m": 0.25,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-mobara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-nakano": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-okubo": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-otsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-sakuradai": {
+   "max_depth_m": 0.27,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-sayama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-seibi-ba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-shibamata": {
+   "max_depth_m": 0.68,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-shibaura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-shiraoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-shirota": {
+   "max_depth_m": 1.348,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shin-toyosu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinagawa-shiisaido": {
+   "max_depth_m": 0.695,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinanocho": {
+   "max_depth_m": 0.52,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinbaba": {
+   "max_depth_m": 1.911,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shindai-tsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shingo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinjuku-gyoenmae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinjukunishiguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinkemi-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinko-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinmatsuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinnarashino": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinonome": {
+   "max_depth_m": 0.75,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinozaki": {
+   "max_depth_m": 1.07,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinrinkoen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinsen-hashi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shintokorozawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shintomicho": {
+   "max_depth_m": 6.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shintsudanuma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinzo-kawashima": {
+   "max_depth_m": 0.65,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinzo-sato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shinzushi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shioiri": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiomi": {
+   "max_depth_m": 0.42,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shirai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiraitodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiraoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiroku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiromaru": {
+   "max_depth_m": 18.81,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiromi-ke-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shirota-hashi": {
+   "max_depth_m": 0.113,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shita-iida": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shita-jinmei": {
+   "max_depth_m": 0.862,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shita-nagatani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shita-soga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shitaita-hashi": {
+   "max_depth_m": 1.85,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shiyakushomae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shizu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shoin-jinja-mae": {
+   "max_depth_m": 0.132,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shomaru": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shonan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shonan-fukazawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shonan-kaigan-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shonan-machiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "showa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "showa-shima": {
+   "max_depth_m": 0.87,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "shukugawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sode-ke-ura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "soshigaya-okura": {
+   "max_depth_m": 0.469,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "soshio-ryutsu-sentaa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "so-moto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sobudai-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sobudai-shita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sogo-sando": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "soka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "soun-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suehirocho": {
+   "max_depth_m": 0.58,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sugamo-nitta": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sugita": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sugito-koyadai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suigo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suitengumae": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sunagawa-shichi-ban": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "sports-center": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suzukakedai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "suzukicho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ta-na": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ta-umi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachiaigawa": {
+   "max_depth_m": 1.846,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachihi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachikawa-kita": {
+   "max_depth_m": 1.1,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tachikawa-minami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taisa-kura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taito": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taiyu-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taka-no-dai": {
+   "max_depth_m": 0.15,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taka-taki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takaido": {
+   "max_depth_m": 4.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takamatsu": {
+   "max_depth_m": 0.04,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takanawa-dai": {
+   "max_depth_m": 0.207,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takane-kido": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takane-kodan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takano": {
+   "max_depth_m": 1.26,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takaosanguchi": {
+   "max_depth_m": 2.6,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takasaka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takashima-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takashima-taira": {
+   "max_depth_m": 2.77,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takayanagi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takebashi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takekawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takenotsuka": {
+   "max_depth_m": 0.86,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takeoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takesato": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takeshiba": {
+   "max_depth_m": 1.361,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takezawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taki-fudo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "takinogawa-itchome": {
+   "max_depth_m": 0.17,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama-puraaza": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama-reien": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama-sakai": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tama-yodo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tamagawagakuen-mae": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tan-so": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tanashi": {
+   "max_depth_m": 0.63,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tani-zaike": {
+   "max_depth_m": 0.47,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tanmachi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tateyama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tatsumi": {
+   "max_depth_m": 0.15,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "taura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tawarada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tawaramachi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tendai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tennocho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "terekomusentaa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tetsudohakubutsukan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tobe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tobitakyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tochomae": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "todaimae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "todakoen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toden-zatsu-tsukasa-ke-tani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "todoroki": {
+   "max_depth_m": 0.346,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "togawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokiwa-dai": {
+   "max_depth_m": 0.29,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokiwadaira": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokoshikoen": {
+   "max_depth_m": 0.223,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tomi-mizu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tomiura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toneri": {
+   "max_depth_m": 0.4,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toneri-koen": {
+   "max_depth_m": 0.53,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokaichiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toranomon": {
+   "max_depth_m": 0.1,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "torihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toritsu-daigaku": {
+   "max_depth_m": 2.031,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toritsukasei": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "totsuka-angyo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "to-no-sawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tobu-nerima": {
+   "max_depth_m": 0.6,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tobu-takezawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "todai-miya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "todai-shima": {
+   "max_depth_m": 0.78,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tofuku-nama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "togane": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "togu-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tohaku-raku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokai-kami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokaidaigakumae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toko-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokyo-sukaitsurii": {
+   "max_depth_m": 0.55,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tokyo-teleport": {
+   "max_depth_m": 0.44,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tomo-ro": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "torin-kan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toshin-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toso-moto": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toyoko-ta": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toyocho": {
+   "max_depth_m": 0.88,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "toyoharu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuchike": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuda-yama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsujido": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukada": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukahara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukiji": {
+   "max_depth_m": 0.43,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukiji-shijo": {
+   "max_depth_m": 0.49,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukimi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukinowa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukisaki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukuihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsukushi-no": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsunashima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuru-ke-shima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurugamine": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurukawa": {
+   "max_depth_m": 5.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuruma": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurumakionsen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurumi-ono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsurumi-shijo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuruse": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsutsuji-ke-oka": {
+   "max_depth_m": 0.735,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "tsuzuki-fureaino-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "u-no-ki": {
+   "max_depth_m": 0.352,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uchisaiwaicho": {
+   "max_depth_m": 1.11,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ue-gora": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ue-kumagaya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ue-nagatani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ue-oi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uemachi": {
+   "max_depth_m": 1.313,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uhara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ukima-funato": {
+   "max_depth_m": 6.61,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umagome-sawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umahori-kaigan": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umatate": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umegaoka": {
+   "max_depth_m": 1.757,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umeshima": {
+   "max_depth_m": 1.59,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umeyashiki": {
+   "max_depth_m": 0.776,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umi-kashima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umi-no-koen-minamiguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umi-no-koen-shiba-kuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umi-shibaura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "umigami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "unga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uraga": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "urawa-misono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "urayama-kuchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "urayasu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ushigome-kagurazaka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ushigome-yanagimachi": {
+   "max_depth_m": 1.0,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "ushihama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "uwamizo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wa-ko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wada-kawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wada-machi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wada-tsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wada-ura": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wado-kurotani": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wakaba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wakabadai": {
+   "max_depth_m": 0.37,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wakabayashi": {
+   "max_depth_m": 2.075,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "wakamatsu-kawata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "warabi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "waseda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "washimiya": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "y-r-p-nobi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yabe": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yachimata": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yachiyo-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yachiyo-midorigaoka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yachiyodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yagawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yagi-saki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yagiri": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yaguchi-watari": {
+   "max_depth_m": 0.364,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yagyu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yahatayama": {
+   "max_depth_m": 0.98,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yahiro": {
+   "max_depth_m": 0.6,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yaho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yako": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yakuen-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yamada": {
+   "max_depth_m": 1.06,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yamate": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yanagikoji": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yanase-kawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yanoguchi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yasaka": {
+   "max_depth_m": 1.5,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yashio": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yasuda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yatsu": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yatsuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yayoi-dai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoda": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokose": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokoshiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokosuka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokosuka-chuo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokota": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yomiurirando-mae": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yono": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yono-honcho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoshi-kawa-koen": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoshikawa": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoshikawa-bi-minami": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoshino-hara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoshinocho": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yotsuya-sanchome": {
+   "max_depth_m": 0.08,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yodo": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoga": {
+   "max_depth_m": 1.479,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokaichiba": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yokodai": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yoro-keikoku": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yubi-ogi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yugawara": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yui-ke-hama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yuki-ga-taniotsuka": {
+   "max_depth_m": 0.167,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yukinori": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yumega-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yuri-ke-oka": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yushima": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yutaka-shiki": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yutenji": {
+   "max_depth_m": 0.816,
+   "flood_risk": true,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "yuenchi-nishi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "zama": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "zenko": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "zoshiki": {
+   "max_depth_m": 0.361,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  },
+  "zushi": {
+   "max_depth_m": 0.0,
+   "flood_risk": false,
+   "radius_m": 100,
+   "source": "tmg"
+  }
+ }
+}
