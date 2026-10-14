@@ -377,7 +377,11 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
     const bySlugRaw = new Map(districts.map((d) => [d.slug, d]));
     return grid.header.districts.map((slug) => {
       const d = bySlugRaw.get(slug);
-      return { ratings: (d?.ratings ?? {}) as StationRatings, rent_1k: d?.rent_1k ?? null };
+      return {
+        ratings: (d?.ratings ?? {}) as StationRatings,
+        rent_1k: d?.rent_1k ?? null,
+        flood_exposed: d?.flood_exposed === true,
+      };
     });
   }, [grid, districts]);
   const gridScores = useMemo(
@@ -386,8 +390,8 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   );
   const gridAnch = useMemo(() => (grid && gridScores ? gridAnchors(grid, gridScores) : null), [grid, gridScores]);
   const gridPass = useMemo(
-    () => (grid ? passMask(grid, filters, city.defaultFilters, gridDistricts) : null),
-    [grid, filters, city, gridDistricts],
+    () => (grid ? passMask(grid, filters, city.defaultFilters, gridDistricts, hideFloodRisk) : null),
+    [grid, filters, city, gridDistricts, hideFloodRisk],
   );
   // Best spots rank the weighted score, so a single-category heatmap hides them
   // (like the districts' top-5 pulse).

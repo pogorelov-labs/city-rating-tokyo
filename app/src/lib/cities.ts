@@ -152,7 +152,7 @@ export const CITIES: Record<CityId, CityConfig> = {
       'foodie-budget': { maxRent: 15_000 },
       'digital-nomad': { maxRent: 18_000 },
     },
-    features: { environmentFilters: false, liveCameras: false, railOverlay: true },
+    features: { environmentFilters: true, liveCameras: false, railOverlay: true },
     medians: bangkokMeta.medians as Record<keyof StationRatings, number>,
     defaultAnchors: bangkokMeta.default_anchors as PercentileAnchors,
     levels: ['district', 'station', 'grid'],

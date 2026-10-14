@@ -422,7 +422,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             </div>
           </details>
 
-          {/* Environment Safety Filters — Tokyo data only (elevation, J-SHIS, livecams) */}
+          {/* Environment Safety Filters — Tokyo: elevation + J-SHIS + livecams;
+              Bangkok: reported flood exposure (CRTKY-186), no seismic toggle. */}
           {(city.features.environmentFilters || city.features.liveCameras) && (
           <div className="space-y-2 pt-1">
             {city.features.environmentFilters && (<>
@@ -435,9 +436,12 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               />
               <span className="text-xs text-gray-600">
                 {t('filter.hideFloodRisk')}
-                <span className="text-gray-400 ml-1">{t('filter.belowXm')}</span>
+                <span className="text-gray-400 ml-1">
+                  {city.id === 'bangkok' ? t('filter.floodReported') : t('filter.belowXm')}
+                </span>
               </span>
             </label>
+            {city.id !== 'bangkok' && (
             <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
@@ -450,6 +454,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 <span className="text-gray-400 ml-1">{t('filter.seismicThreshold')}</span>
               </span>
             </label>
+            )}
             </>)}
             {city.features.liveCameras && (
             <label className="flex items-center gap-2 cursor-pointer">

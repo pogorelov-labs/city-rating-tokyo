@@ -72,6 +72,8 @@ export interface BangkokGrid {
 export interface GridDistrict {
   ratings: StationRatings;
   rent_1k: number | null;
+  /** Flood dealbreaker flag (CRTKY-186) — the cell's district's flag. */
+  flood_exposed?: boolean;
 }
 
 // ─── decoding ────────────────────────────────────────────────────────────
@@ -320,6 +322,7 @@ export function passMask(
   filters: FilterState,
   defaults: FilterState,
   districts: readonly GridDistrict[],
+  hideFloodRisk = false,
 ): Uint8Array {
   const size = grid.header.nx * grid.header.ny;
   const out = new Uint8Array(size);
@@ -328,9 +331,10 @@ export function passMask(
   const rentMax = filters.maxRent < defaults.maxRent ? filters.maxRent : Infinity;
   const rentMin = filters.minRent > defaults.minRent ? filters.minRent : -Infinity;
   const commuteMax = filters.maxCommute < defaults.maxCommute ? filters.maxCommute : Infinity;
-  const commuteMin = filters.minCommute > defaults.minCommute ? filters.minCommute : -Infinity;
+  const commuteMin = filters.maxCommute > defaults.minCommute ? filters.minCommute : -Infinity;
   const mins = Object.entries(filters.categoryMins).filter(([, v]) => v != null) as [keyof StationRatings, number][];
   const districtOk = districts.map((d) => {
+    if (hideFloodRisk && d.flood_exposed) return false; // CRTKY-186
     if (d.rent_1k !== null && (d.rent_1k > rentMax || d.rent_1k < rentMin)) return false;
     return mins.every(([k, min]) => (k === 'rent' || k === 'safety' ? d.ratings[k] >= min : true));
   });

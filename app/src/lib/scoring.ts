@@ -388,8 +388,11 @@ export function dealbreakerReasons(
       reasons.push({ kind: 'category', key, min });
     }
   }
-  // Environment safety (moved from Map.tsx visibleStations)
+  // Environment safety (moved from Map.tsx visibleStations). Tokyo: official
+  // elevation proxy; Bangkok: ThaiFloodRisk episodes + GISTDA 2011 share
+  // (CRTKY-186) — each city's flag rides on its own field, the other is null.
   if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) reasons.push({ kind: 'flood' });
+  if (hideFloodRisk && s.flood_exposed === true) reasons.push({ kind: 'flood' });
   if (hideHighSeismic && s.seismic_risk_tier === 'very_high') reasons.push({ kind: 'seismic' });
   // Live camera dealbreaker
   if (filters.hasLiveCamera && !s.hasLiveCamera) reasons.push({ kind: 'liveCamera' });

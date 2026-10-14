@@ -202,7 +202,8 @@
     "bestSpots": "Best spots",
     "bestSpotsHint": "The highest-scoring built-up cells for your weights and dealbreakers, at least 1.5 km apart.",
     "relativeScoresNoteStationArea": "Scores are relative within Bangkok's station areas (up to 800 m on foot, nearest station). Rent and safety are district estimates.",
-    "relativeScoresNoteGrid": "Cell scores are relative to where Bangkok's residents live (a resident-weighted percentile). Rent and safety are district estimates."
+    "relativeScoresNoteGrid": "Cell scores are relative to where Bangkok's residents live (a resident-weighted percentile). Rent and safety are district estimates.",
+    "floodReported": "(reported 2021–2026)"
   },
   "map": {
     "clickForDetails": "Click for details →",
