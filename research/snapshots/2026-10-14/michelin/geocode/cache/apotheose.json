@@ -1,0 +1,12 @@
+{
+ "lat": 35.6675422,
+ "lon": 139.7469108,
+ "display_name": "虎ノ門ヒルズ ステーションタワー, 1, 虎ノ門二丁目, 虎ノ門, 港区, 東京都, 105-0001, 日本",
+ "osm_type": "way",
+ "osm_id": 1158726591,
+ "type": "commercial",
+ "query": "Toranomon Hills Station Tower, Toranomon 2-chome, Minato-ku, Tokyo, 105-5549, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "49F, Toranomon Hills Station Tower, 2-6-2 Toranomon, Minato-ku, Tokyo, 105-5549, Japan",
+ "simplified_query": true
+}

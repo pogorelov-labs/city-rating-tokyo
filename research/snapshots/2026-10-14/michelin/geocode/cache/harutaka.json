@@ -1,0 +1,12 @@
+{
+ "lat": 35.666698,
+ "lon": 139.763463,
+ "display_name": "銀座八丁目, 銀座, 中央区, 東京都, 104-0061, 日本",
+ "osm_type": "relation",
+ "osm_id": 4859106,
+ "type": "administrative",
+ "query": "Ginza 8-chome, Chuo-ku, Tokyo, 104-0061, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "6F, 8-3-1 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+ "simplified_query": true
+}

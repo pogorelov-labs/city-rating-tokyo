@@ -1,0 +1,12 @@
+{
+ "lat": 13.7439967,
+ "lon": 100.5147904,
+ "display_name": "เขตป้อมปราบศัตรูพ่าย, กรุงเทพมหานคร, 10100, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92058,
+ "type": "administrative",
+ "query": "Pom Prap Sattru Phai, Bangkok, 10100, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "360 Soi Nakhon Sawan 8, Nakhon Sawan Road, Wat Sommanat, Pom Prap Sattru Phai, Bangkok, 10100, Thailand",
+ "simplified_query": true
+}

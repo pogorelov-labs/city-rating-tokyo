@@ -1,0 +1,12 @@
+{
+ "lat": 35.6520769,
+ "lon": 139.7221799,
+ "display_name": "広尾, 外苑西通り, 広尾五丁目, 広尾, 渋谷区, 東京都, 106-0047, 日本",
+ "osm_type": "node",
+ "osm_id": 8014829772,
+ "type": "stop",
+ "query": "Hiro 5-chome, Shibuya-ku, Tokyo, 150-0012, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "5-19-1 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+ "simplified_query": true
+}

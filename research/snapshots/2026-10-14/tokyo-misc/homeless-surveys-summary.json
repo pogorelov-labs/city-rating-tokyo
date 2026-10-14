@@ -1,0 +1,51 @@
+{
+  "surveys": "東京都 路上生活者概数調査 (street-dweller rough-count survey, twice yearly, summer+winter) + ホームレスの実態に関する全国調査（東京23区の生活実態調査）",
+  "publisher": "東京都福祉局 生活福祉部保護課 (www.fukushi.metro.tokyo.lg.jp) — the ask's 'tosei.metro.tokyo.lg.jp' is not a real host; actual pages live on www.fukushi.metro.tokyo.lg.jp/seikatsu/rojo/",
+  "retrieved": "2026-10-14",
+  "license": "no explicit open-data license on the pages — government publications; INTERNAL ONLY, cite as fact",
+  "files": {
+    "gaisu-r8-01.pdf": {
+      "survey": "路上生活者概数調査 令和8年1月 (Jan 2026)",
+      "pages": 2,
+      "total_総計": 507,
+      "women_in_total": 27,
+      "ward23_23区": 307,
+      "tama_多摩": 18,
+      "national_rivers_国河川": 182,
+      "prev_23区": 342,
+      "delta_23区": -35
+    },
+    "gaisu-r7-08.pdf": {
+      "survey": "路上生活者概数調査 令和7年8月 (Aug 2025)",
+      "pages": 2,
+      "total_総計": 557,
+      "women_in_total": 30,
+      "ward23_23区": 342,
+      "tama_多摩": 18,
+      "national_rivers_国河川": 197,
+      "prev_23区": 347,
+      "delta_23区": -5
+    },
+    "gaisu-r7-01.pdf": {
+      "survey": "路上生活者概数調査 令和7年1月 (Jan 2025)",
+      "pages": 2,
+      "total_総計": 565,
+      "women_in_total": 26,
+      "ward23_23区": 347,
+      "tama_多摩": 15,
+      "national_rivers_国河川": 203,
+      "prev_23区": 342,
+      "delta_23区": 5
+    },
+    "seikatsu-jittai-r3.pdf": {
+      "survey": "令和3年度 ホームレスの実態に関する全国調査（東京23区の生活実態調査）(2021/22, runs ~every 5 years; latest edition)",
+      "pages": 84,
+      "content_extraction": "NOT extracted (CID-encoded PDF, no extractor in this runtime); numbers must be read manually if needed"
+    }
+  },
+  "naming_note": "The ask said '路上生活実態調査 PDF последних 2-3 лет'. The exactly-named 生活実態調査 exists only as 令和3年度 (5-year cadence) → seikatsu-jittai-r3.pdf. The regularly-published TMG series covering the last 2-3 years is the 路上生活者概数調査 (twice a year) → three latest PDFs downloaded. Both included.",
+  "source_pages": [
+    "https://www.fukushi.metro.tokyo.lg.jp/seikatsu/rojo/gaisuchosa",
+    "https://www.fukushi.metro.tokyo.lg.jp/seikatsu/rojo/seikatsuchosa"
+  ]
+}

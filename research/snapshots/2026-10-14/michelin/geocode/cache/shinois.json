@@ -1,0 +1,12 @@
+{
+ "lat": 35.6393691,
+ "lon": 139.7260067,
+ "display_name": "白金台四丁目, 白金台, 港区, 東京都, 108-0071, 日本",
+ "osm_type": "relation",
+ "osm_id": 18773156,
+ "type": "administrative",
+ "query": "Shirokanedai 4-chome, Minato-ku, Tokyo, 108-0071, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 4-2-7 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+ "simplified_query": true
+}

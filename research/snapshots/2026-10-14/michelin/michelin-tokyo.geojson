@@ -1,0 +1,5125 @@
+{
+ "type": "FeatureCollection",
+ "name": "michelin-tokyo",
+ "metadata": {
+  "city": "Tokyo",
+  "guide_year": 2026,
+  "scraped": "2026-10-14",
+  "source": "guide.michelin.com (via r.jina.ai reader)",
+  "attribution": "© Michelin — factual roster, INTERNAL ONLY — not for site publication without owner sign-off",
+  "distinctions": {
+   "Bib Gourmand": 111,
+   "3 Stars": 11,
+   "2 Stars": 26,
+   "1 Star": 119
+  },
+  "geocoded": 183,
+  "geocode_null": 84,
+  "geocoder": "Nominatim (openstreetmap.org)"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.820369,
+     35.7355627
+    ]
+   },
+   "properties": {
+    "name": "Shutei Tanaka",
+    "distinction": "Bib Gourmand",
+    "address": "3-25-7 Sumida, Sumida-ku, Tokyo, 131-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shutei-tanaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sobakappo Nagano",
+    "distinction": "Bib Gourmand",
+    "address": "2-20-6 Higashimukojima, Sumida-ku, Tokyo, 131-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sobakappo-nagano",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7965783,
+     35.718839
+    ]
+   },
+   "properties": {
+    "name": "noura",
+    "distinction": "Bib Gourmand",
+    "address": "4-10-6 Asakusa, Taito-ku, Tokyo, 111-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/noura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7975831,
+     35.7169184
+    ]
+   },
+   "properties": {
+    "name": "grill GRAND",
+    "distinction": "Bib Gourmand",
+    "address": "3-24-6 Asakusa, Taito-ku, Tokyo, 111-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/grill-grand",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7817646,
+     35.7294836
+    ]
+   },
+   "properties": {
+    "name": "Ramenya Toy Box",
+    "distinction": "Bib Gourmand",
+    "address": "1-1-3 Higashinippori, Arakawa-ku, Tokyo, 116-0014, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ramenya-toy-box",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7260932,
+     35.7685924
+    ]
+   },
+   "properties": {
+    "name": "Ittoan",
+    "distinction": "Bib Gourmand",
+    "address": "2-16-10 Higashijujo, Kita-ku, Tokyo, 114-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ittoan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763863,
+     35.7198456
+    ]
+   },
+   "properties": {
+    "name": "wokotote",
+    "distinction": "Bib Gourmand",
+    "address": "2-35-1 Nezu, Bunkyo-ku, Tokyo, 113-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/wokotote",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Negima",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 2-31-19 Kitaotsuka, Toshima-ku, Tokyo, 170-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/negima",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7903283,
+     35.7144096
+    ]
+   },
+   "properties": {
+    "name": "Asakusa Hirayama",
+    "distinction": "Bib Gourmand",
+    "address": "1-3-14 Nishiasakusa, Taito-ku, Tokyo, 111-0035, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/asakusa-hirayama",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7924383,
+     35.706948
+    ]
+   },
+   "properties": {
+    "name": "Sugita",
+    "distinction": "Bib Gourmand",
+    "address": "3-8-3 Kotobuki, Taito-ku, Tokyo, 111-0042, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sugita",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7572317,
+     35.7162465
+    ]
+   },
+   "properties": {
+    "name": "Ma Poule",
+    "distinction": "Bib Gourmand",
+    "address": "2-19-17 Nishikata, Bunkyo-ku, Tokyo, 113-0024, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ma-poule",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7945453,
+     35.7097352
+    ]
+   },
+   "properties": {
+    "name": "Hatsuogawa",
+    "distinction": "Bib Gourmand",
+    "address": "2-8-4 Kaminarimon, Taito-ku, Tokyo, 111-0034, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hatsuogawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.798756,
+     35.697291
+    ]
+   },
+   "properties": {
+    "name": "Edosoba Hosokawa",
+    "distinction": "Bib Gourmand",
+    "address": "1-6-5 Kamezawa, Sumida-ku, Tokyo, 130-0014, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/edosoba-hosokawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7975626,
+     35.7175966
+    ]
+   },
+   "properties": {
+    "name": "Onigiri Asakusa Yadoroku",
+    "distinction": "Bib Gourmand",
+    "address": "3-9-10 Asakusa, Taito-ku, Tokyo, 111-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/onigiri-asakusa-yadoroku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.775362,
+     35.7106288
+    ]
+   },
+   "properties": {
+    "name": "Tompachitei",
+    "distinction": "Bib Gourmand",
+    "address": "4-3-4 Ueno, Taito-ku, Tokyo, 110-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tompachitei",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Biriyani Osawa",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 1-15-12 Uchikanda, Chiyoda-ku, Tokyo, 101-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/biriyani-osawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7524975,
+     35.7119279
+    ]
+   },
+   "properties": {
+    "name": "Watabe",
+    "distinction": "Bib Gourmand",
+    "address": "1-9-14 Koishikawa, Bunkyo-ku, Tokyo, 112-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/watabe",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Mejiro Shunkotei",
+    "distinction": "Bib Gourmand",
+    "address": "2F, Trad Mejiro, 2-39-1 Mejiro, Toshima-ku, Tokyo, 171-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/mejiro-shunkotei",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7178575,
+     35.7330459
+    ]
+   },
+   "properties": {
+    "name": "Japanese Ramen Gokan",
+    "distinction": "Bib Gourmand",
+    "address": "2-57-2 Higashiikebukuro, Toshima-ku, Tokyo, 170-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/japanese-ramen-gokan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7733376,
+     35.7054109
+    ]
+   },
+   "properties": {
+    "name": "Ponta Honke",
+    "distinction": "Bib Gourmand",
+    "address": "3-23-3 Ueno, Taito-ku, Tokyo, 110-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ponta-honke",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7397745,
+     35.7096282
+    ]
+   },
+   "properties": {
+    "name": "Hashimoto",
+    "distinction": "Bib Gourmand",
+    "address": "2-5-7 Suido, Bunkyo-ku, Tokyo, 112-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hashimoto",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Mejiro Zorome",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 3-3-1 Mejiro, Toshima-ku, Tokyo, 171-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/mejiro-zorome",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sosakumenkobo NAKIRYU",
+    "distinction": "Bib Gourmand",
+    "address": "2-34-4 Minamiotsuka, Toshima-ku, Tokyo, 170-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sosakumenkobo-nakiryu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "SANTOSHAM",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 3-2 Kandaogawamachi, Chiyoda-ku, Tokyo, 101-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/santosham",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Katchar Batchar",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 3-2-10 Minamiotsuka, Toshima-ku, Tokyo, 170-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/katchar-batchar",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Hamacho Kaneko",
+    "distinction": "Bib Gourmand",
+    "address": "3-7-3 Nihombashihamacho, Chuo-ku, Tokyo, 103-0007, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hamacho-kaneko",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Katsuyoshi",
+    "distinction": "Bib Gourmand",
+    "address": "3-4-11 Nihombashiningyocho, Chuo-ku, Tokyo, 103-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/katsuyoshi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "YAMATO",
+    "distinction": "Bib Gourmand",
+    "address": "16-3 Nihombashitomizawacho, Chuo-ku, Tokyo, 103-0006, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yamato-1194199",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7397509,
+     35.6984047
+    ]
+   },
+   "properties": {
+    "name": "Loiseau de France",
+    "distinction": "Bib Gourmand",
+    "address": "15 Ichigayafunagawaramachi, Shinjuku-ku, Tokyo, 162-0826, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/loiseau-de-france",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.765481,
+     35.670113
+    ]
+   },
+   "properties": {
+    "name": "Les Copains de DOMINIQUE BOUCHET",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 5-1-8 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/les-copains-de-dominique-bouchet",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Yakitori SANKA",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 64-4 Yaraicho, Shinjuku-ku, Tokyo, 162-0805, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yakitori-sanka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7696846,
+     35.6799658
+    ]
+   },
+   "properties": {
+    "name": "Yaesu Unagi Hashimoto",
+    "distinction": "Bib Gourmand",
+    "address": "1-5-10 Yaesu, Chuo-ku, Tokyo, 103-0028, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yaesu-unagi-hashimoto",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Soba Osame",
+    "distinction": "Bib Gourmand",
+    "address": "3-21-5 Shimochiai, Shinjuku-ku, Tokyo, 161-0033, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/soba-osame",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7995633,
+     35.671289
+    ]
+   },
+   "properties": {
+    "name": "TRATTORIA BUCA'MASSIMO",
+    "distinction": "Bib Gourmand",
+    "address": "1-24-11 Tomioka, Koto-ku, Tokyo, 135-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/trattoria-buca-massimo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "GINZA KATSUKAMI II",
+    "distinction": "Bib Gourmand",
+    "address": "4F, Kojun Bldg, 6-8-7 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-katsukami-ii",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7647202,
+     35.6720135
+    ]
+   },
+   "properties": {
+    "name": "Le Nougat",
+    "distinction": "Bib Gourmand",
+    "address": "6-12-2 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/le-nougat",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7647202,
+     35.6720135
+    ]
+   },
+   "properties": {
+    "name": "Chukasoba Ginza Hachigou",
+    "distinction": "Bib Gourmand",
+    "address": "3-14-2 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/chukasoba-ginza-hachigo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "HOPPERS",
+    "distinction": "Bib Gourmand",
+    "address": "7-1 Nihombashikabutocho, Chuo-ku, Tokyo, 103-0026, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hoppers-1206470",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7647202,
+     35.6720135
+    ]
+   },
+   "properties": {
+    "name": "ARROCERÍA La Panza",
+    "distinction": "Bib Gourmand",
+    "address": "1-15-8 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/arroceria-la-panza",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7079192,
+     35.7130015
+    ]
+   },
+   "properties": {
+    "name": "L'AMITIE",
+    "distinction": "Bib Gourmand",
+    "address": "2-9-12 Takadanobaba, Shinjuku-ku, Tokyo, 169-0075, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-amitie-1194223",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7213919,
+     35.6900255
+    ]
+   },
+   "properties": {
+    "name": "Sushidokoro Shigeru",
+    "distinction": "Bib Gourmand",
+    "address": "15 Funamachi, Shinjuku-ku, Tokyo, 160-0006, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushidokoro-shigeru",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6724727,
+     35.7305452
+    ]
+   },
+   "properties": {
+    "name": "Teuchisoba Jiyusan",
+    "distinction": "Bib Gourmand",
+    "address": "3-1-4 Eharacho, Nakano-ku, Tokyo, 165-0023, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/teuchisoba-jiyusan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.690807,
+     35.7260837
+    ]
+   },
+   "properties": {
+    "name": "Matsunozushi",
+    "distinction": "Bib Gourmand",
+    "address": "2-16-12 Minaminagasaki, Toshima-ku, Tokyo, 171-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/matsunozushi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7024917,
+     35.7117438
+    ]
+   },
+   "properties": {
+    "name": "Tonkatsu Hinata",
+    "distinction": "Bib Gourmand",
+    "address": "2-13-9 Takadanobaba, Shinjuku-ku, Tokyo, 169-0075, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tonkatsu-hinata",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7647202,
+     35.6720135
+    ]
+   },
+   "properties": {
+    "name": "LA BETTOLA da Ochiai",
+    "distinction": "Bib Gourmand",
+    "address": "1-21-2 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/la-bettola-da-ochiai",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7353911,
+     35.7019549
+    ]
+   },
+   "properties": {
+    "name": "Meishan",
+    "distinction": "Bib Gourmand",
+    "address": "37-39 Yokoteramachi, Shinjuku-ku, Tokyo, 162-0831, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/meishan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.767249,
+     35.671967
+    ]
+   },
+   "properties": {
+    "name": "Ginza HARU CHAN Ramen",
+    "distinction": "Bib Gourmand",
+    "address": "3-11-6 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-haru-chan-ramen",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7412287,
+     35.7010851
+    ]
+   },
+   "properties": {
+    "name": "Kyorakutei",
+    "distinction": "Bib Gourmand",
+    "address": "3-6 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kyorakutei",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.766249,
+     35.67117
+    ]
+   },
+   "properties": {
+    "name": "Bistrot Vivienne",
+    "distinction": "Bib Gourmand",
+    "address": "4-13-19 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/bistrot-vivienne",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726107,
+     35.6840521
+    ]
+   },
+   "properties": {
+    "name": "Shinrakuki",
+    "distinction": "Bib Gourmand",
+    "address": "2-7 Wakaba, Shinjuku-ku, Tokyo, 160-0011, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shinrakuki",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7311224,
+     35.6811845
+    ]
+   },
+   "properties": {
+    "name": "RAMEN MATSUI",
+    "distinction": "Bib Gourmand",
+    "address": "4-25-10 Yotsuya, Shinjuku-ku, Tokyo, 160-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ramen-matsui",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7194058,
+     35.6899754
+    ]
+   },
+   "properties": {
+    "name": "Tonkatsu Nanaido",
+    "distinction": "Bib Gourmand",
+    "address": "3-18 Aizumicho, Shinjuku-ku, Tokyo, 160-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tonkatsu-nanaido",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6990827,
+     35.6855225
+    ]
+   },
+   "properties": {
+    "name": "Torishige",
+    "distinction": "Bib Gourmand",
+    "address": "2-6-5 Yoyogi, Shibuya-ku, Tokyo, 151-0053, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/torishige",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tempura Kakiage Yukimura",
+    "distinction": "Bib Gourmand",
+    "address": "6-13-13 Shimbashi, Minato-ku, Tokyo, 105-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-kakiage-yukimura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7130028,
+     35.6897822
+    ]
+   },
+   "properties": {
+    "name": "Shokudo Wata",
+    "distinction": "Bib Gourmand",
+    "address": "1-19-11 Shinjuku, Shinjuku-ku, Tokyo, 160-0022, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shokudo-wata",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Yoshino",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 2-30-2 Chuo, Nakano-ku, Tokyo, 164-0011, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-yoshino",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Osteria da K. [káppa]",
+    "distinction": "Bib Gourmand",
+    "address": "5F, 8-7-2 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/osteria-da-k-kappa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7073412,
+     35.6598417
+    ]
+   },
+   "properties": {
+    "name": "Night Market",
+    "distinction": "Bib Gourmand",
+    "address": "2-6-6 Shibuya, Shibuya-ku, Tokyo, 150-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/night-market-1241936",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7107597,
+     35.6704333
+    ]
+   },
+   "properties": {
+    "name": "BRAMASOLE",
+    "distinction": "Bib Gourmand",
+    "address": "3-42-5 Jingumae, Shibuya-ku, Tokyo, 150-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/bramasole",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "le bistrot des bleus",
+    "distinction": "Bib Gourmand",
+    "address": "2F, EAT PLAY WORKS, 5-4-16 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/le-bistrot-des-bleus",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Ma Cuisine",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 1-2-14 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ma-cuisine-1194175",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6943057,
+     35.6832066
+    ]
+   },
+   "properties": {
+    "name": "Kinoshita",
+    "distinction": "Bib Gourmand",
+    "address": "3-37-1 Yoyogi, Shibuya-ku, Tokyo, 151-0053, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kinoshita-1197753",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7188607,
+     35.6667236
+    ]
+   },
+   "properties": {
+    "name": "L'AS",
+    "distinction": "Bib Gourmand",
+    "address": "4-16-3 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-as",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7414307,
+     35.6467874
+    ]
+   },
+   "properties": {
+    "name": "Sushi Mikata",
+    "distinction": "Bib Gourmand",
+    "address": "4-1-4 Mita, Minato-ku, Tokyo, 108-0073, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-mikata",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Les six",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 5-15-25 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/les-six",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7373095,
+     35.6486345
+    ]
+   },
+   "properties": {
+    "name": "T'astous",
+    "distinction": "Bib Gourmand",
+    "address": "2-5-21 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/t-astous",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6858165,
+     35.6718115
+    ]
+   },
+   "properties": {
+    "name": "Le cabaret",
+    "distinction": "Bib Gourmand",
+    "address": "8-8 Motoyoyogicho, Shibuya-ku, Tokyo, 151-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/le-cabaret-1194236",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7277018,
+     35.6438973
+    ]
+   },
+   "properties": {
+    "name": "ROZZO SICILIA",
+    "distinction": "Bib Gourmand",
+    "address": "1-1-12 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/rozzo-sicilia",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6858165,
+     35.6718115
+    ]
+   },
+   "properties": {
+    "name": "REI",
+    "distinction": "Bib Gourmand",
+    "address": "10-8 Motoyoyogicho, Shibuya-ku, Tokyo, 151-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/rei",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7334981,
+     35.6624568
+    ]
+   },
+   "properties": {
+    "name": "IRUCA TOKYO",
+    "distinction": "Bib Gourmand",
+    "address": "4-12-12 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/iruca-tokyo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7238075,
+     35.6600266
+    ]
+   },
+   "properties": {
+    "name": "Osobano Kouga",
+    "distinction": "Bib Gourmand",
+    "address": "2-14-5 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/osobano-kouga",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.690335,
+     35.6689805
+    ]
+   },
+   "properties": {
+    "name": "Cristiano's",
+    "distinction": "Bib Gourmand",
+    "address": "1-51-10 Tomigaya Shibuya-ku, Tokyo, 151-0063, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/cristiano-s",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.624042,
+     35.7081696
+    ]
+   },
+   "properties": {
+    "name": "there is ramen",
+    "distinction": "Bib Gourmand",
+    "address": "3-10-16 Amanuma, Suginami-ku, Tokyo, 167-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/there-is-ramen",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tachigui Sushi Tonari",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 2-8-7 Azabujuban, Minato-ku, Tokyo, 106-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tachigui-sushi-tonari",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sobakiri Suzuki",
+    "distinction": "Bib Gourmand",
+    "address": "4-43-32 Minamioizumi, Nerima-ku, Tokyo, 178-0064, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sobakiri-suzuki",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6901053,
+     35.673692
+    ]
+   },
+   "properties": {
+    "name": "Los Reyes Magos",
+    "distinction": "Bib Gourmand",
+    "address": "5-55-7 Yoyogi, Shibuya-ku, Tokyo, 151-0053, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/los-reyes-magos",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6801396,
+     35.670867
+    ]
+   },
+   "properties": {
+    "name": "jeeten",
+    "distinction": "Bib Gourmand",
+    "address": "3-2-3 Nishihara, Shibuya-ku, Tokyo, 151-0066, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/jeeten",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tensuke",
+    "distinction": "Bib Gourmand",
+    "address": "3-22-7 Koenjikita, Suginami-ku, Tokyo, 166-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tensuke",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7188607,
+     35.6667236
+    ]
+   },
+   "properties": {
+    "name": "LAUBURU",
+    "distinction": "Bib Gourmand",
+    "address": "6-8-18 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/lauburu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7246074,
+     35.6599898
+    ]
+   },
+   "properties": {
+    "name": "Soba Tajima",
+    "distinction": "Bib Gourmand",
+    "address": "3-8-6 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/soba-tajima",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7338374,
+     35.6451128
+    ]
+   },
+   "properties": {
+    "name": "AlCeppo",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 1-25-32 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/alceppo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Yakitori Abe",
+    "distinction": "Bib Gourmand",
+    "address": "3-3-4 Kamiosaki, Shinagawa-ku, Tokyo, 141-0021, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yakitori-abe",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7098155,
+     35.6533232
+    ]
+   },
+   "properties": {
+    "name": "Kuhara",
+    "distinction": "Bib Gourmand",
+    "address": "2-25-38 Higashi, Shibuya-ku, Tokyo, 150-0011, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/koryori-kuhara",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6684438,
+     35.6735852
+    ]
+   },
+   "properties": {
+    "name": "Tachiguisushi Sushikawa",
+    "distinction": "Bib Gourmand",
+    "address": "1-62-6 Sasazuka, Shibuya-ku, Tokyo, 151-0073, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tachiguisushi-sushikawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6831016,
+     35.6498119
+    ]
+   },
+   "properties": {
+    "name": "Lien",
+    "distinction": "Bib Gourmand",
+    "address": "3-5-22 Ikejiri, Setagaya-ku, Tokyo, 154-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/lien",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6818429,
+     35.6474955
+    ]
+   },
+   "properties": {
+    "name": "BISTRO GLOUTON",
+    "distinction": "Bib Gourmand",
+    "address": "2-33-7 Ikejiri, Setagaya-ku, Tokyo, 154-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/bistro-glouton",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.714385,
+     35.6462954
+    ]
+   },
+   "properties": {
+    "name": "IL BALLOND'ORO",
+    "distinction": "Bib Gourmand",
+    "address": "1-24-10 Ebisu, Shibuya-ku, Tokyo, 150-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/il-ballond-oro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6196517,
+     35.6893392
+    ]
+   },
+   "properties": {
+    "name": "Shiosoba Jiku",
+    "distinction": "Bib Gourmand",
+    "address": "4-14-7 Takaidohigashi, Suginami-ku, Tokyo, 168-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shiosoba-jiku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Katsuo Shokudo",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 7-12 Uguisudanicho, Shibuya-ku, Tokyo, 150-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/katsuo-shokudo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "falò",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 14-10 Daikanyamacho, Shibuya-ku, Tokyo, 150-0034, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/falo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6930849,
+     35.6428011
+    ]
+   },
+   "properties": {
+    "name": "AUDACE",
+    "distinction": "Bib Gourmand",
+    "address": "3-8-1 Kamimeguro, Meguro-ku, Tokyo, 153-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/audace",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.668154,
+     35.6634677
+    ]
+   },
+   "properties": {
+    "name": "DIALOGUE",
+    "distinction": "Bib Gourmand",
+    "address": "3-23-21 Kitazawa, Setagaya-ku, Tokyo, 155-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/dialogue-1200268",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Arrocería Sal y Amor",
+    "distinction": "Bib Gourmand",
+    "address": "B1F, 12-19 Daikanyamacho, Shibuya-ku, Tokyo, 150-0034, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/arroceria-sal-y-amor",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6843225,
+     35.6690181
+    ]
+   },
+   "properties": {
+    "name": "Hibino Chukashokudo",
+    "distinction": "Bib Gourmand",
+    "address": "1-33-11 Uehara, Shibuya-ku, Tokyo, 151-0064, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hibino-chukashokudo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6868824,
+     35.6501066
+    ]
+   },
+   "properties": {
+    "name": "YAKUMO",
+    "distinction": "Bib Gourmand",
+    "address": "3-6-15 Higashiyama, Meguro-ku, Tokyo, 153-0043, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yakumo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.5954984,
+     35.7075775
+    ]
+   },
+   "properties": {
+    "name": "Sasaki Seimenjo",
+    "distinction": "Bib Gourmand",
+    "address": "4-26-10 Nishiogikita, Suginami-ku, Tokyo, 167-0042, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sasaki-seimenjo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6930849,
+     35.6428011
+    ]
+   },
+   "properties": {
+    "name": "Teuchi Asama",
+    "distinction": "Bib Gourmand",
+    "address": "2-13-7 Kamimeguro, Meguro-ku, Tokyo, 153-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/teuchi-asama",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7277018,
+     35.6438973
+    ]
+   },
+   "properties": {
+    "name": "Yoshoku Edoya",
+    "distinction": "Bib Gourmand",
+    "address": "6-6-1 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yoshoku-edoya",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6017866,
+     35.7065034
+    ]
+   },
+   "properties": {
+    "name": "Sennomago",
+    "distinction": "Bib Gourmand",
+    "address": "4-4-2 Nishiogikita, Suginami-ku, Tokyo, 167-0042, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sennomago",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6991003,
+     35.6444589
+    ]
+   },
+   "properties": {
+    "name": "Ramen Break Beats",
+    "distinction": "Bib Gourmand",
+    "address": "4-21-19 Meguro, Meguro-ku, Tokyo, 153-0063, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ramen-break-beats",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6574065,
+     35.6463596
+    ]
+   },
+   "properties": {
+    "name": "Gigio",
+    "distinction": "Bib Gourmand",
+    "address": "4-24-19 Wakabayashi, Setagaya-ku, Tokyo, 154-0023, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/gigio",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7054905,
+     35.6198463
+    ]
+   },
+   "properties": {
+    "name": "Mochibuta Tonkatsu Taiyo",
+    "distinction": "Bib Gourmand",
+    "address": "3-22-7 Koyama, Shinagawa-ku, Tokyo, 142-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/mochibuta-tonkatsu-taiyo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Homemade Ramen Muginae",
+    "distinction": "Bib Gourmand",
+    "address": "6-11-10 Minamioi, Shinagawa-ku, Tokyo, 140-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/homemade-ramen-muginae",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.687686,
+     35.6064305
+    ]
+   },
+   "properties": {
+    "name": "Washokuya Taichi",
+    "distinction": "Bib Gourmand",
+    "address": "3-36-14 Kitasenzoku, Ota-ku, Tokyo, 145-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/washokuya-taichi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6048352,
+     35.6641696
+    ]
+   },
+   "properties": {
+    "name": "Tohakuan Karibe",
+    "distinction": "Bib Gourmand",
+    "address": "4-23-19 Kasuya, Setagaya-ku, Tokyo, 157-0063, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tohakuan-karibe",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6482554,
+     35.6442148
+    ]
+   },
+   "properties": {
+    "name": "Seki Hanare",
+    "distinction": "Bib Gourmand",
+    "address": "3-1-3 Setagaya, Setagaya-ku, Tokyo, 154-0017, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/seki-hanare",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6745083,
+     35.6111287
+    ]
+   },
+   "properties": {
+    "name": "Le Monde Gourmand",
+    "distinction": "Bib Gourmand",
+    "address": "2-17-15 Midorigaoka, Meguro-ku, Tokyo, 152-0034, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/le-monde-gourmand",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6056506,
+     35.6439706
+    ]
+   },
+   "properties": {
+    "name": "ZUPPERIA OSTERIA PITIGLIANO",
+    "distinction": "Bib Gourmand",
+    "address": "2F, 3-4-9 Soshigaya, Setagaya-ku, Tokyo, 157-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/zupperia-osteria-pitigliano",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7041622,
+     35.5744251
+    ]
+   },
+   "properties": {
+    "name": "Tonkatsu Enraku",
+    "distinction": "Bib Gourmand",
+    "address": "6-1-4 Ikegami, Ota-ku, Tokyo, 146-0082, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tonkatsu-enraku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6358222,
+     35.6271856
+    ]
+   },
+   "properties": {
+    "name": "LANBRoA",
+    "distinction": "Bib Gourmand",
+    "address": "3-11-15 Yoga, Setagaya-ku, Tokyo, 158-0097, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/lanbroa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7057661,
+     35.5466705
+    ]
+   },
+   "properties": {
+    "name": "Shinjiko Shijimi Chukasoba Kohaku",
+    "distinction": "Bib Gourmand",
+    "address": "2-1-3 Nishirokugo, Ota-ku, Tokyo, 144-0056, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shinjiko-shijimi-chukasoba-kohaku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7592489,
+     35.6734721
+    ]
+   },
+   "properties": {
+    "name": "RyuGin",
+    "distinction": "3 Stars",
+    "address": "7F, Tokyo Midtown Hibiya, 1-1-2 Yurakucho, Chiyoda-ku, Tokyo, 100-0006, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ryugin-1194232",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7412287,
+     35.7010851
+    ]
+   },
+   "properties": {
+    "name": "Kagurazaka Ishikawa",
+    "distinction": "3 Stars",
+    "address": "5-37 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kagurazaka-ishikawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Kanda",
+    "distinction": "3 Stars",
+    "address": "1F, Toranomon Hills Residential Tower, 1-1-1 Atago, Minato-ku, Tokyo, 105-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kanda",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763386,
+     35.668438
+    ]
+   },
+   "properties": {
+    "name": "L'OSIER",
+    "distinction": "3 Stars",
+    "address": "7-5-5 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-osier",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763463,
+     35.666698
+    ]
+   },
+   "properties": {
+    "name": "Harutaka",
+    "distinction": "3 Stars",
+    "address": "6F, 8-3-1 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/harutaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7365288,
+     35.6554035
+    ]
+   },
+   "properties": {
+    "name": "Azabu Kadowaki",
+    "distinction": "3 Stars",
+    "address": "2-7-2 Azabujuban, Minato-ku, Tokyo, 106-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/azabu-kadowaki",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7246876,
+     35.6598689
+    ]
+   },
+   "properties": {
+    "name": "Myojaku",
+    "distinction": "3 Stars",
+    "address": "B1F, 3-2-34 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/myojaku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7206181,
+     35.661876
+    ]
+   },
+   "properties": {
+    "name": "L'Effervescence",
+    "distinction": "3 Stars",
+    "address": "2-26-4 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-effervescence",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7260416,
+     35.6488508
+    ]
+   },
+   "properties": {
+    "name": "Sazenka",
+    "distinction": "3 Stars",
+    "address": "4-7-5 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sazenka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Joël Robuchon",
+    "distinction": "3 Stars",
+    "address": "Yebisu Garden Place, 1-13-1 Mita, Meguro-ku, Tokyo, 153-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/joel-robuchon-1193981",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7338998,
+     35.6237806
+    ]
+   },
+   "properties": {
+    "name": "Quintessence",
+    "distinction": "3 Stars",
+    "address": "1F, Garden City Shinagawa Gotenyama, 6-7-29 Kitashinagawa, Shinagawa-ku, Tokyo, 141-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/quintessence-1193907",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7965783,
+     35.718839
+    ]
+   },
+   "properties": {
+    "name": "HOMMAGE",
+    "distinction": "2 Stars",
+    "address": "4-10-5 Asakusa, Taito-ku, Tokyo, 111-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hommage",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "ASAHINA Gastronome",
+    "distinction": "2 Stars",
+    "address": "1-4 Nihombashikabutocho, Chuo-ku, Tokyo, 103-0026, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/asahina-gastronome",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7634943,
+     35.670593
+    ]
+   },
+   "properties": {
+    "name": "Tempura Kondo",
+    "distinction": "2 Stars",
+    "address": "9F, 5-5-13 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-kondo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7412287,
+     35.7010851
+    ]
+   },
+   "properties": {
+    "name": "Kohaku",
+    "distinction": "2 Stars",
+    "address": "3-5-5 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kohaku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.765481,
+     35.670113
+    ]
+   },
+   "properties": {
+    "name": "ESqUISSE",
+    "distinction": "2 Stars",
+    "address": "9F, 5-4-6 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/esquisse",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Ginza Kojyu",
+    "distinction": "2 Stars",
+    "address": "4F, 5-4-8 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-koju",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Ginza Shinohara",
+    "distinction": "2 Stars",
+    "address": "B1F, 2-8-17 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-shinohara",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7741405,
+     35.6724176
+    ]
+   },
+   "properties": {
+    "name": "Kutan",
+    "distinction": "2 Stars",
+    "address": "2-5-5 Shintomi, Chuo-ku, Tokyo, 104-0041, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kutan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "MAZ",
+    "distinction": "2 Stars",
+    "address": "3F, Tokyo Garden Terrace Kioicho, 1-3 Kioicho, Chiyoda-ku, Tokyo, 102-0094, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/maz",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Florilège",
+    "distinction": "2 Stars",
+    "address": "2F, Azabudai Hills Garden Plaza D, 5-10-7 Toranomon, Minato-ku, Tokyo, 105-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/florilege",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763463,
+     35.666698
+    ]
+   },
+   "properties": {
+    "name": "Ginza Fukuju",
+    "distinction": "2 Stars",
+    "address": "5F, 8-8-19 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-fukuju",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7354864,
+     35.6808358
+    ]
+   },
+   "properties": {
+    "name": "Kioicho Fukudaya",
+    "distinction": "2 Stars",
+    "address": "1-13 Kioicho, Chiyoda-ku, Tokyo, 102-0094, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kioicho-fukudaya",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Ryuzu",
+    "distinction": "2 Stars",
+    "address": "B1F, 4-2-35 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ryuzu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7222596,
+     35.6672683
+    ]
+   },
+   "properties": {
+    "name": "NARISAWA",
+    "distinction": "2 Stars",
+    "address": "2-6-15 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/narisawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Kanesaka",
+    "distinction": "2 Stars",
+    "address": "B1F, 8-10-3 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-kanesaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7356439,
+     35.669419
+    ]
+   },
+   "properties": {
+    "name": "Akasaka Kikunoi",
+    "distinction": "2 Stars",
+    "address": "6-13-8 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/akasaka-kikunoi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7188607,
+     35.6667236
+    ]
+   },
+   "properties": {
+    "name": "PRISMA",
+    "distinction": "2 Stars",
+    "address": "6-4-6 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/prisma-1194160",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7416815,
+     35.6498447
+    ]
+   },
+   "properties": {
+    "name": "Seizan",
+    "distinction": "2 Stars",
+    "address": "B1F, 2-17-29 Mita, Minato-ku, Tokyo, 108-0073, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/seizan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7183382,
+     35.6648299
+    ]
+   },
+   "properties": {
+    "name": "Hakuun",
+    "distinction": "2 Stars",
+    "address": "4-11-2 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hakuun",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7401686,
+     35.656266
+    ]
+   },
+   "properties": {
+    "name": "Crony",
+    "distinction": "2 Stars",
+    "address": "1-20-3 Higashiazabu, Minato-ku, Tokyo, 106-0044, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/crony-1194937",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7217339,
+     35.6576798
+    ]
+   },
+   "properties": {
+    "name": "Nishiazabu Sushi Shin",
+    "distinction": "2 Stars",
+    "address": "4-18-20 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nishiazabu-sushi-shin",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7072847,
+     35.6692039
+    ]
+   },
+   "properties": {
+    "name": "Jingumae Higuchi",
+    "distinction": "2 Stars",
+    "address": "2-19-12 Jingumae, Shibuya-ku, Tokyo, 150-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/jingumae-higuchi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7072847,
+     35.6692039
+    ]
+   },
+   "properties": {
+    "name": "Den",
+    "distinction": "2 Stars",
+    "address": "2-3-18 Jingumae, Shibuya-ku, Tokyo, 150-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/den",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sukiyabashi Jiro Roppongiten",
+    "distinction": "2 Stars",
+    "address": "3F, Roppongi Hills Residence B, 6-12-2 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sukiyabashi-jiro-roppongiten",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tempura Motoyoshi",
+    "distinction": "2 Stars",
+    "address": "3F, 2-8-11 Ebisunishi, Shibuya-ku, Tokyo, 150-0021, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-motoyoshi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7035189,
+     35.6399235
+    ]
+   },
+   "properties": {
+    "name": "Ensui",
+    "distinction": "2 Stars",
+    "address": "1-5-12 Nakameguro, Meguro-ku, Tokyo, 153-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ensui",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7961143,
+     35.7173102
+    ]
+   },
+   "properties": {
+    "name": "Oku",
+    "distinction": "1 Star",
+    "address": "3-42-11 Asakusa, Taito-ku, Tokyo, 111-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/oku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7945589,
+     35.7060393
+    ]
+   },
+   "properties": {
+    "name": "Nabeno-Ism",
+    "distinction": "1 Star",
+    "address": "2-1-17 Komagata, Taito-ku, Tokyo, 111-0043, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nabeno-ism",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "La Paix",
+    "distinction": "1 Star",
+    "address": "B1F, 1-9-4 Nihombashimuromachi, Chuo-ku, Tokyo, 103-0022, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/la-paix-1194221",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Nihombashi Sonoji",
+    "distinction": "1 Star",
+    "address": "2-22-11 Nihombashiningyocho, Chuo-ku, Tokyo, 103-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nihombashi-sonoji",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "nôl",
+    "distinction": "1 Star",
+    "address": "1F, DDD HOTEL, 2-2-1 Nihombashibakurocho, Chuo-ku, Tokyo, 103-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nol",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Ichijo",
+    "distinction": "1 Star",
+    "address": "3-1-3 Higashinihombashi, Chuo-ku, Tokyo, 103-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-ichijo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "KHAO",
+    "distinction": "1 Star",
+    "address": "2-12-7 Kandajimbocho, Chiyoda-ku, Tokyo, 101-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/khao-1217131",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Edomae Shinsaku",
+    "distinction": "1 Star",
+    "address": "6F, 2-10-11 Nihombashiningyocho, Chuo-ku, Tokyo, 103-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/edomae-shinsaku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tempura Yaguchi",
+    "distinction": "1 Star",
+    "address": "2-9-7 Nihombashiningyocho, Chuo-ku, Tokyo, 103-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-yaguchi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "est",
+    "distinction": "1 Star",
+    "address": "39F, Four Seasons Hotel Tokyo at Otemachi, 1-2-1 Otemachi, Chiyoda-ku, Tokyo, 100-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/est",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7612448,
+     35.6845039
+    ]
+   },
+   "properties": {
+    "name": "ESTERRE by Alain Ducasse",
+    "distinction": "1 Star",
+    "address": "6F, Palace Hotel Tokyo, 1-1-1 Marunouchi, Chiyoda-ku, Tokyo, 100-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/esterre-by-alain-ducasse",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Il Ristorante - Niko Romito",
+    "distinction": "1 Star",
+    "address": "40F, Bvlgari Hotel Tokyo, 2-2-1 Yaesu, Chuo-ku, Tokyo, 104-0028, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/il-ristorante-niko-romito-1208307",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "MAKIYAKI GINZA ONODERA",
+    "distinction": "1 Star",
+    "address": "9F, 5-14-14 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/makiyaki-ginza-onodera",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.773545,
+     35.66777
+    ]
+   },
+   "properties": {
+    "name": "Seiju",
+    "distinction": "1 Star",
+    "address": "B1F, 3-16-9 Tsukiji, Chuo-ku, Tokyo, 104-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/seiju",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Oya",
+    "distinction": "1 Star",
+    "address": "3F, 3-6 Fukuromachi, Shinjuku-ku, Tokyo, 162-0828, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-oya",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "BEIGE Alain Ducasse",
+    "distinction": "1 Star",
+    "address": "10F, 3-5-3 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/beige-alain-ducasse",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.773263,
+     35.663691
+    ]
+   },
+   "properties": {
+    "name": "Sushi Keita",
+    "distinction": "1 Star",
+    "address": "6-6-4 Tsukiji, Chuo-ku, Tokyo, 104-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-keita",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7717019,
+     35.6758835
+    ]
+   },
+   "properties": {
+    "name": "Kyobashi Tempura Fukamachi",
+    "distinction": "1 Star",
+    "address": "2-5-2 Kyobashi, Chuo-ku, Tokyo, 104-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kyobashi-tempura-fukamachi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.765481,
+     35.670113
+    ]
+   },
+   "properties": {
+    "name": "Shokuzen Abe",
+    "distinction": "1 Star",
+    "address": "4F, 5-6-10 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shokuzen-abe",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7741405,
+     35.6724176
+    ]
+   },
+   "properties": {
+    "name": "Sushi Hashimoto",
+    "distinction": "1 Star",
+    "address": "1-8-2 Shintomi, Chuo-ku, Tokyo, 104-0041, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-hashimoto",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Guchokuni",
+    "distinction": "1 Star",
+    "address": "3F, 6-21 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/guchokuni",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Les Saisons",
+    "distinction": "1 Star",
+    "address": "MF, Main Bldg, Imperial Hotel Tokyo, 1-1-1 Uchisaiwaicho, Chiyoda-ku, Tokyo, 100-8558, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/les-saisons-1194250",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "hortensia",
+    "distinction": "1 Star",
+    "address": "2F, 1-5-12 Shintomi, Chuo-ku, Tokyo, 104-0041, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hortensia",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7398071,
+     35.7021947
+    ]
+   },
+   "properties": {
+    "name": "FUSHIKINO",
+    "distinction": "1 Star",
+    "address": "2F, 4-3-11 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/fushikino",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7670332,
+     35.6743469
+    ]
+   },
+   "properties": {
+    "name": "Oniku Karyu",
+    "distinction": "1 Star",
+    "address": "7F, 1-14-6 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/oniku-karyu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.770735,
+     35.669305
+    ]
+   },
+   "properties": {
+    "name": "PRIMO PASSO",
+    "distinction": "1 Star",
+    "address": "B1F, 1-5-11 Tsukiji, Chuo-ku, Tokyo, 104-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/primo-passo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7715703,
+     35.6805581
+    ]
+   },
+   "properties": {
+    "name": "Yakitori Takahashi",
+    "distinction": "1 Star",
+    "address": "2F, 2-10-11 Nihombashi, Chuo-ku, Tokyo, 103-0027, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yakitori-takahashi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Torakuro",
+    "distinction": "1 Star",
+    "address": "B1F, Imperial Hotel Tokyo Main, 1-1-1 Uchisaiwaicho, Chiyoda-ku, Tokyo, 100-8558, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/torakuro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7659374,
+     35.6714016
+    ]
+   },
+   "properties": {
+    "name": "Hyakuyaku by Tokuyamazushi",
+    "distinction": "1 Star",
+    "address": "9F, 4-4-2 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hyakuyaku-by-tokuyamazushi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7670332,
+     35.6743469
+    ]
+   },
+   "properties": {
+    "name": "Dominique Bouchet Tokyo",
+    "distinction": "1 Star",
+    "address": "2F, 1-5-6 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/dominique-bouchet-1194086",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740964,
+     35.7014604
+    ]
+   },
+   "properties": {
+    "name": "Tanimoto",
+    "distinction": "1 Star",
+    "address": "3F, 3-1 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tanimoto",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7632495,
+     35.6876628
+    ]
+   },
+   "properties": {
+    "name": "CYCLE by Mauro Colagreco",
+    "distinction": "1 Star",
+    "address": "1F, Otemachi One, 1-2-1 Otemachi, Chiyoda-ku, Tokyo, 100-0004, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/cycle-by-mauro-colagreco",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.765481,
+     35.670113
+    ]
+   },
+   "properties": {
+    "name": "L'AFFINAGE",
+    "distinction": "1 Star",
+    "address": "2F, 5-9-16 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-affinage",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "ZURRIOLA",
+    "distinction": "1 Star",
+    "address": "4F, Kojun Bldg, 6-8-7 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/zurriola",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740964,
+     35.7014604
+    ]
+   },
+   "properties": {
+    "name": "L'ÉTERRE",
+    "distinction": "1 Star",
+    "address": "2F, 3-6-53 Kagurazaka, Shinjuku-ku, Tokyo, 162-0825, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-eterre",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Ginza Kitagawa",
+    "distinction": "1 Star",
+    "address": "3F, 2-10-11 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-kitagawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "PRUNIER",
+    "distinction": "1 Star",
+    "address": "2F, Tokyo Kaikan, 3-2-1 Marunouchi, Chiyoda-ku, Tokyo, 100-0005, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/prunier-1200289",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7634943,
+     35.670593
+    ]
+   },
+   "properties": {
+    "name": "amarantos",
+    "distinction": "1 Star",
+    "address": "9F, 5-6-7 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/amarantos",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.764429,
+     35.669261
+    ]
+   },
+   "properties": {
+    "name": "Ginza Kousui",
+    "distinction": "1 Star",
+    "address": "8F, 6-12-14 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ginza-kousui",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.765481,
+     35.670113
+    ]
+   },
+   "properties": {
+    "name": "Mutsukari",
+    "distinction": "1 Star",
+    "address": "6F, 5-5-19 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/mutsukari",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.764429,
+     35.669261
+    ]
+   },
+   "properties": {
+    "name": "Gucci Osteria da Massimo Bottura Tokyo",
+    "distinction": "1 Star",
+    "address": "4F, 6-6-12 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/gucci-osteria-da-massimo-bottura-1201836",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tour D'argent Tokyo",
+    "distinction": "1 Star",
+    "address": "Lobby floor, Hotel New Otani Tokyo (The Main), 4-1 Kioicho, Chiyoda-ku, Tokyo, 102-8578, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tour-d-argent-1194082",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Héritage by Kei Kobayashi",
+    "distinction": "1 Star",
+    "address": "45F, The Ritz-Carlton, Tokyo, 9-7-1 Akasaka, Minato-ku, Tokyo, 107-6245, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/heritage-by-kei-kobayashi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "L'ARGENT",
+    "distinction": "1 Star",
+    "address": "2F, Tokyo Club Bldg, 3-2-6 Kasumigaseki, Chiyoda-ku, Tokyo, 100-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-argent",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "FARO",
+    "distinction": "1 Star",
+    "address": "10F, 8-8-3 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/faro-1194154",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7232722,
+     35.6904492
+    ]
+   },
+   "properties": {
+    "name": "Sharikimon Onozawa",
+    "distinction": "1 Star",
+    "address": "6-39 Arakicho, Shinjuku-ku, Tokyo, 160-0007, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sharikimon-onozawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Koshikiryori Koki",
+    "distinction": "1 Star",
+    "address": "2-13-6 Nishishimbashi, Minato-ku, Tokyo, 105-0003, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/koshikiryori-koki",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763386,
+     35.668438
+    ]
+   },
+   "properties": {
+    "name": "TROIS VISAGES",
+    "distinction": "1 Star",
+    "address": "7-16-21 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/trois-visages",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7356224,
+     35.6716786
+    ]
+   },
+   "properties": {
+    "name": "Edomae Sushi Hanabusa",
+    "distinction": "1 Star",
+    "address": "9-1-7 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/edomae-sushi-hanabusa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "La Gloire",
+    "distinction": "1 Star",
+    "address": "2-17-7 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/la-gloire-1218215",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763386,
+     35.668438
+    ]
+   },
+   "properties": {
+    "name": "Sushi Kojima",
+    "distinction": "1 Star",
+    "address": "5F, 7-3-8 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-kojima",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Nogizaka Shin",
+    "distinction": "1 Star",
+    "address": "8-11-19 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nogizaka-shin",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7489629,
+     35.6634512
+    ]
+   },
+   "properties": {
+    "name": "Daigo",
+    "distinction": "1 Star",
+    "address": "2F, Forest Tower, 2-3-1 Atago, Minato-ku, Tokyo, 105-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/daigo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Yotsuya Minemura",
+    "distinction": "1 Star",
+    "address": "2F, 3-21 Arakicho, Shinjuku-ku, Tokyo, 160-0007, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yotsuya-minemura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.737048,
+     35.6753817
+    ]
+   },
+   "properties": {
+    "name": "Akasaka Shimabukuro",
+    "distinction": "1 Star",
+    "address": "3F, 3-21-8 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/akasaka-shimabukuro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7469108,
+     35.6675422
+    ]
+   },
+   "properties": {
+    "name": "apothéose",
+    "distinction": "1 Star",
+    "address": "49F, Toranomon Hills Station Tower, 2-6-2 Toranomon, Minato-ku, Tokyo, 105-5549, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/apotheose",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Ryujiro",
+    "distinction": "1 Star",
+    "address": "2-11-11 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-ryujiro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7460078,
+     35.6670276
+    ]
+   },
+   "properties": {
+    "name": "Sorahana",
+    "distinction": "1 Star",
+    "address": "5-3-3 Toranomon, Minato-ku, Tokyo, 105-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sorahana",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.763386,
+     35.668438
+    ]
+   },
+   "properties": {
+    "name": "Ren Mishina",
+    "distinction": "1 Star",
+    "address": "B1F, 7-3-13 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ren-mishina",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7356439,
+     35.669419
+    ]
+   },
+   "properties": {
+    "name": "Sumibikappo SHIROSAKA",
+    "distinction": "1 Star",
+    "address": "6-3-9 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sumibikappo-shirosaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Édition Koji Shimomura",
+    "distinction": "1 Star",
+    "address": "1F, Roppongi T-Cube, 3-1-1 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/edition-koji-shimomura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7086541,
+     35.6942679
+    ]
+   },
+   "properties": {
+    "name": "Takumi Tatsuhiro",
+    "distinction": "1 Star",
+    "address": "1-11-7 Shinjuku, Shinjuku-ku, Tokyo, 160-0022, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/takumi-tatsuhiro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tenoshima",
+    "distinction": "1 Star",
+    "address": "2F, 1-3-21 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tenoshima",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7356439,
+     35.669419
+    ]
+   },
+   "properties": {
+    "name": "Sushi Miura",
+    "distinction": "1 Star",
+    "address": "6-19-46 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-miura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7232722,
+     35.6904492
+    ]
+   },
+   "properties": {
+    "name": "Ubuka",
+    "distinction": "1 Star",
+    "address": "2-14 Arakicho, Shinjuku-ku, Tokyo, 160-0007, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ubuka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Shimbashi Sasada",
+    "distinction": "1 Star",
+    "address": "1-23-7 Nishishimbashi, Minato-ku, Tokyo, 105-0003, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shimbashi-sasada",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7246074,
+     35.6599898
+    ]
+   },
+   "properties": {
+    "name": "mærge",
+    "distinction": "1 Star",
+    "address": "3-8-14 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/maerge",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sassa",
+    "distinction": "1 Star",
+    "address": "5-13-6 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sassa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728716,
+     35.6515204
+    ]
+   },
+   "properties": {
+    "name": "Waketokuyama",
+    "distinction": "1 Star",
+    "address": "5-1-5 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/waketokuyama",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728716,
+     35.6515204
+    ]
+   },
+   "properties": {
+    "name": "Sushi Tanaka",
+    "distinction": "1 Star",
+    "address": "2-7-23 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-tanaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6782325,
+     35.6737432
+    ]
+   },
+   "properties": {
+    "name": "Shigeyuki",
+    "distinction": "1 Star",
+    "address": "2-17-3 Nishihara, Shibuya-ku, Tokyo, 151-0066, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shigeyuki",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7235351,
+     35.6589471
+    ]
+   },
+   "properties": {
+    "name": "Towa",
+    "distinction": "1 Star",
+    "address": "2F, 4-11-25 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/towa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7238075,
+     35.6600266
+    ]
+   },
+   "properties": {
+    "name": "Jushu",
+    "distinction": "1 Star",
+    "address": "2-16-1 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/jushu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7134915,
+     35.6623456
+    ]
+   },
+   "properties": {
+    "name": "Miyasaka",
+    "distinction": "1 Star",
+    "address": "5-4-30 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/miyasaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.706914,
+     35.6674051
+    ]
+   },
+   "properties": {
+    "name": "l'élan",
+    "distinction": "1 Star",
+    "address": "4F, GYRE, 5-10-1 Jingumae, Shibuya-ku, Tokyo, 150-0001, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-elan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7271714,
+     35.6563155
+    ]
+   },
+   "properties": {
+    "name": "Ten Yokota",
+    "distinction": "1 Star",
+    "address": "2F, 3-10-5 Motoazabu, Minato-ku, Tokyo, 106-0046, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ten-yokota",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7238075,
+     35.6600266
+    ]
+   },
+   "properties": {
+    "name": "Kappo Muroi",
+    "distinction": "1 Star",
+    "address": "2-16-4 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/kappo-muroi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "L'ATELIER de Joël Robuchon",
+    "distinction": "1 Star",
+    "address": "2F, Roppongi Hills Hillside, 6-10-1 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/l-atelier-de-joel-robuchon-1194216",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "EWIG",
+    "distinction": "1 Star",
+    "address": "2F, 4-3-23 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ewig",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7186301,
+     35.6711007
+    ]
+   },
+   "properties": {
+    "name": "Sushi Masashi",
+    "distinction": "1 Star",
+    "address": "7F, 2-9-9 Kitaaoyama, Minato-ku, Tokyo, 107-0061, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-masashi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7148753,
+     35.6672703
+    ]
+   },
+   "properties": {
+    "name": "itsuka",
+    "distinction": "1 Star",
+    "address": "2F, 2-14-15 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/itsuka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7365288,
+     35.6554035
+    ]
+   },
+   "properties": {
+    "name": "Azabujuban Fukuda",
+    "distinction": "1 Star",
+    "address": "3-7-5 Azabujuban, Minato-ku, Tokyo, 106-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/azabujuban-fukuda",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7392286,
+     35.6602764
+    ]
+   },
+   "properties": {
+    "name": "Series",
+    "distinction": "1 Star",
+    "address": "3-4-11 Azabudai, Minato-ku, Tokyo, 106-0041, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/series",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7304082,
+     35.6568255
+    ]
+   },
+   "properties": {
+    "name": "Ippei Hanten",
+    "distinction": "1 Star",
+    "address": "3-12-41 Motoazabu, Minato-ku, Tokyo, 106-0046, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/ippei-hanten",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7138701,
+     35.6604463
+    ]
+   },
+   "properties": {
+    "name": "NéMo",
+    "distinction": "1 Star",
+    "address": "B1F, 6-15-4 Minamiaoyama, Minato-ku, Tokyo, 107-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nemo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7065137,
+     35.6758403
+    ]
+   },
+   "properties": {
+    "name": "Sincère",
+    "distinction": "1 Star",
+    "address": "B1F, 3-7-13 Sendagaya, Shibuya-ku, Tokyo, 151-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sincere",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7073412,
+     35.6598417
+    ]
+   },
+   "properties": {
+    "name": "MONOLITH",
+    "distinction": "1 Star",
+    "address": "2-6-1 Shibuya, Shibuya-ku, Tokyo, 150-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/monolith",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7217339,
+     35.6576798
+    ]
+   },
+   "properties": {
+    "name": "hakunei",
+    "distinction": "1 Star",
+    "address": "4-9-11 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hakunei",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7279271,
+     35.6642481
+    ]
+   },
+   "properties": {
+    "name": "le sputnik",
+    "distinction": "1 Star",
+    "address": "7-9-9 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/le-sputnik",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7206181,
+     35.661876
+    ]
+   },
+   "properties": {
+    "name": "Nishiazabu Taku",
+    "distinction": "1 Star",
+    "address": "2-11-5 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nishiazabu-taku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Sushi Yuki",
+    "distinction": "1 Star",
+    "address": "5-17-4 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-yuki-1213818",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7019483,
+     35.6595021
+    ]
+   },
+   "properties": {
+    "name": "LATURE",
+    "distinction": "1 Star",
+    "address": "B1F, 2-2-2 Shibuya, Shibuya-ku, Tokyo, 150-0002, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/lature",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "JO",
+    "distinction": "1 Star",
+    "address": "3F, 2-8-6 Azabujuban, Minato-ku, Tokyo, 106-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/jo",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7334981,
+     35.6624568
+    ]
+   },
+   "properties": {
+    "name": "Mētis Roppongi",
+    "distinction": "1 Star",
+    "address": "5-18-22 Roppongi, Minato-ku, Tokyo, 106-0032, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/metis-roppongi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.744449,
+     35.655135
+    ]
+   },
+   "properties": {
+    "name": "Oryori Tsuji",
+    "distinction": "1 Star",
+    "address": "B1F, 3-3-9 Higashiazabu, Minato-ku, Tokyo, 106-0044, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/oryori-tsuji",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Tempura Maehira",
+    "distinction": "1 Star",
+    "address": "4F, 2-8-16 Azabujuban, Minato-ku, Tokyo, 106-0045, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-maehira",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7260416,
+     35.6488508
+    ]
+   },
+   "properties": {
+    "name": "Seisoka",
+    "distinction": "1 Star",
+    "address": "4-2-34 Minamiazabu, Minato-ku, Tokyo, 106-0047, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/seisoka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7518913,
+     35.6513704
+    ]
+   },
+   "properties": {
+    "name": "Sanosushi",
+    "distinction": "1 Star",
+    "address": "2-18-9 Shiba, Minato-ku, Tokyo, 105-0014, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sanosushi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "BOTTEGA",
+    "distinction": "1 Star",
+    "address": "B1F, 5-17-8 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/bottega-1194168",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7401686,
+     35.656266
+    ]
+   },
+   "properties": {
+    "name": "Nodaiwa Azabu Iikura Honten",
+    "distinction": "1 Star",
+    "address": "1-5-4 Higashiazabu, Minato-ku, Tokyo, 106-0044, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/nodaiwa-azabu-Iikura-honten-1194124",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "MANOIR",
+    "distinction": "1 Star",
+    "address": "1-10-6 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/manoir",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7236919,
+     35.6431658
+    ]
+   },
+   "properties": {
+    "name": "Yama",
+    "distinction": "1 Star",
+    "address": "6-16-41 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yama-1214953",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6898194,
+     35.6472236
+    ]
+   },
+   "properties": {
+    "name": "Higashiyama Muku",
+    "distinction": "1 Star",
+    "address": "1-15-5 Higashiyama, Meguro-ku, Tokyo, 153-0043, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/higashiyama-muku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "LA TABLE de Joël Robuchon",
+    "distinction": "1 Star",
+    "address": "Yebisu Garden Place, 1-13-1 Mita, Meguro-ku, Tokyo, 153-0062, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/la-table-de-joel-robuchon",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6989856,
+     35.6441855
+    ]
+   },
+   "properties": {
+    "name": "Tempura Miyashiro",
+    "distinction": "1 Star",
+    "address": "2-18-11 Kamimeguro, Meguro-ku, Tokyo, 153-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-miyashiro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7174798,
+     35.6404354
+    ]
+   },
+   "properties": {
+    "name": "au deco",
+    "distinction": "1 Star",
+    "address": "2-23-3 Ebisu, Shibuya-ku, Tokyo, 150-0013, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/au-deco",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7221799,
+     35.6520769
+    ]
+   },
+   "properties": {
+    "name": "Piao-Xiang",
+    "distinction": "1 Star",
+    "address": "5-19-1 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/piao-xiang",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7277018,
+     35.6438973
+    ]
+   },
+   "properties": {
+    "name": "Sushi Matsuura",
+    "distinction": "1 Star",
+    "address": "5-7-8 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushi-matsuura",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7202426,
+     35.6390225
+    ]
+   },
+   "properties": {
+    "name": "Tempura Ginya",
+    "distinction": "1 Star",
+    "address": "B1F, 5-17-9 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tempura-ginya",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7202426,
+     35.6390225
+    ]
+   },
+   "properties": {
+    "name": "Alchimiste",
+    "distinction": "1 Star",
+    "address": "5-17-10 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/alchimiste",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Saucer",
+    "distinction": "1 Star",
+    "address": "B1F, 2-7-10 Ebisunishi, Shibuya-ku, Tokyo, 150-0021, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/saucer",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7065258,
+     35.6483517
+    ]
+   },
+   "properties": {
+    "name": "abysse",
+    "distinction": "1 Star",
+    "address": "1-30-12 Ebisunishi, Shibuya-ku, Tokyo, 150-0021, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/abysse",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "TEN-MASA",
+    "distinction": "1 Star",
+    "address": "B1F, 3-16-13 Kamimeguro, Meguro-ku, Tokyo, 153-0051, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/tenmasa-1194080",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7260067,
+     35.6393691
+    ]
+   },
+   "properties": {
+    "name": "ShinoiS",
+    "distinction": "1 Star",
+    "address": "2F, 4-2-7 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/shinois",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Jizozushi",
+    "distinction": "1 Star",
+    "address": "2F, 3-18-5 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/jizozushi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Hiroo Ishizaka",
+    "distinction": "1 Star",
+    "address": "2F, 5-19-1 Hiro, Shibuya-ku, Tokyo, 150-0012, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/hiroo-ishizaka",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6970724,
+     35.6482209
+    ]
+   },
+   "properties": {
+    "name": "CRAFTALE",
+    "distinction": "1 Star",
+    "address": "2F, 1-16-11 Aobadai, Meguro-ku, Tokyo, 153-0042, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/craftale",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6359193,
+     35.649472
+    ]
+   },
+   "properties": {
+    "name": "Sushidokoro Kiraku",
+    "distinction": "1 Star",
+    "address": "1-12-12 Kyodo, Setagaya-ku, Tokyo, 156-0052, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/sushidokoro-kiraku",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6690718,
+     35.6203425
+    ]
+   },
+   "properties": {
+    "name": "Yakumo Uezu",
+    "distinction": "1 Star",
+    "address": "1-3-9 Yakumo, Meguro-ku, Tokyo, 152-0023, Japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/tokyo-region/tokyo/restaurant/yakumo-uezu",
+    "attribution": "© Michelin"
+   }
+  }
+ ]
+}

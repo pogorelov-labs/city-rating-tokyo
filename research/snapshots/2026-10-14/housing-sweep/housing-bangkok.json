@@ -1,0 +1,459 @@
+{
+ "meta": {
+  "city": "bangkok",
+  "generated": "2026-10-14T13:16:45Z",
+  "method": "Overpass API per-khet area() counts (one request per khet), method per research/bangkok/notes/2026-10-13-housing-crtky148.md §2",
+  "definitions": {
+   "buildings_total": "building=apartments+residential+dormitory+commercial+mixed_use (ways+multipolygon relations), mapped stock only",
+   "apartments": "building=apartments (condo proxy, mapped)",
+   "residential": "building=residential (low-rise/townhouse, mapped)",
+   "towers_20plus": "building:levels>=20, mapped lower bound (no 10-19 band tagged in Bangkok)",
+   "stations_in_khet": "railway=station with station=subway|light_rail|monorail inside khet polygon; OSM station=* sub-tag coverage is patchy — treat as indicative (note §5)"
+  },
+  "registry_snapshot": "2026-10-14T11:33:21Z",
+  "sweep_snapshots": [
+   "2026-10-14T11:38:25Z",
+   "2026-10-14T11:44:40Z",
+   "2026-10-14T11:53:51Z",
+   "2026-10-14T11:54:51Z",
+   "2026-10-14T11:59:57Z",
+   "2026-10-14T12:05:01Z",
+   "2026-10-14T12:11:06Z",
+   "2026-10-14T12:12:06Z",
+   "2026-10-14T12:15:07Z",
+   "2026-10-14T12:16:08Z",
+   "2026-10-14T12:17:10Z",
+   "2026-10-14T12:18:09Z",
+   "2026-10-14T12:22:21Z",
+   "2026-10-14T12:26:21Z",
+   "2026-10-14T12:29:26Z",
+   "2026-10-14T12:30:27Z",
+   "2026-10-14T12:37:32Z",
+   "2026-10-14T12:39:33Z",
+   "2026-10-14T12:40:36Z",
+   "2026-10-14T12:41:39Z",
+   "2026-10-14T12:42:39Z",
+   "2026-10-14T12:43:40Z",
+   "2026-10-14T12:46:43Z",
+   "2026-10-14T12:49:50Z",
+   "2026-10-14T12:50:51Z",
+   "2026-10-14T12:51:51Z",
+   "2026-10-14T12:52:51Z",
+   "2026-10-14T12:53:50Z",
+   "2026-10-14T12:54:51Z",
+   "2026-10-14T12:55:56Z",
+   "2026-10-14T12:56:58Z",
+   "2026-10-14T13:00:01Z",
+   "2026-10-14T13:02:01Z",
+   "2026-10-14T13:06:05Z",
+   "2026-10-14T13:07:06Z",
+   "2026-10-14T13:08:06Z",
+   "2026-10-14T13:09:06Z"
+  ],
+  "rows_source": "46 khets swept 2026-10-14 (sweep_overpass.py); 4 khets from research/bangkok/notes/2026-10-13-housing-crtky148.md §2 (watthana, bang-na, khlong-toei, huai-khwang)",
+  "license": "ODbL 1.0, (c) OpenStreetMap contributors — see LICENSE.txt",
+  "coverage_note": "OSM building coverage of Bangkok is partial; counts are mapped lower bounds, not real-world stock totals"
+ },
+ "khets": [
+  {
+   "khet": "bang-bon",
+   "buildings_total": 279,
+   "apartments": 2,
+   "residential": 277,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "bang-kapi",
+   "buildings_total": 86,
+   "apartments": 25,
+   "residential": 57,
+   "towers_20plus": 6,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "bang-khae",
+   "buildings_total": 620,
+   "apartments": 7,
+   "residential": 610,
+   "towers_20plus": 0,
+   "stations_in_khet": 2
+  },
+  {
+   "khet": "bang-khen",
+   "buildings_total": 34,
+   "apartments": 29,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 12
+  },
+  {
+   "khet": "bang-kho-laem",
+   "buildings_total": 62,
+   "apartments": 20,
+   "residential": 2,
+   "towers_20plus": 4,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "bang-khun-thian",
+   "buildings_total": 159,
+   "apartments": 109,
+   "residential": 1,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "bang-na",
+   "buildings_total": 73,
+   "apartments": 36,
+   "residential": 15,
+   "towers_20plus": 10,
+   "stations_in_khet": 5
+  },
+  {
+   "khet": "bang-phlat",
+   "buildings_total": 30,
+   "apartments": 20,
+   "residential": 4,
+   "towers_20plus": 6,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "bang-rak",
+   "buildings_total": 1435,
+   "apartments": 65,
+   "residential": 635,
+   "towers_20plus": 44,
+   "stations_in_khet": 5
+  },
+  {
+   "khet": "bang-sue",
+   "buildings_total": 63,
+   "apartments": 39,
+   "residential": 7,
+   "towers_20plus": 8,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "bangkok-noi",
+   "buildings_total": 63,
+   "apartments": 7,
+   "residential": 6,
+   "towers_20plus": 5,
+   "stations_in_khet": 2
+  },
+  {
+   "khet": "bangkok-yai",
+   "buildings_total": 18,
+   "apartments": 12,
+   "residential": 6,
+   "towers_20plus": 2,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "bueng-kum",
+   "buildings_total": 396,
+   "apartments": 35,
+   "residential": 290,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "chatuchak",
+   "buildings_total": 531,
+   "apartments": 113,
+   "residential": 357,
+   "towers_20plus": 15,
+   "stations_in_khet": 14
+  },
+  {
+   "khet": "chom-thong",
+   "buildings_total": 41,
+   "apartments": 6,
+   "residential": 35,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "din-daeng",
+   "buildings_total": 653,
+   "apartments": 511,
+   "residential": 1,
+   "towers_20plus": 14,
+   "stations_in_khet": 5
+  },
+  {
+   "khet": "don-mueang",
+   "buildings_total": 765,
+   "apartments": 7,
+   "residential": 755,
+   "towers_20plus": 0,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "dusit",
+   "buildings_total": 167,
+   "apartments": 76,
+   "residential": 4,
+   "towers_20plus": 7,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "huai-khwang",
+   "buildings_total": 237,
+   "apartments": 82,
+   "residential": 119,
+   "towers_20plus": 40,
+   "stations_in_khet": 1
+  },
+  {
+   "khet": "khan-na-yao",
+   "buildings_total": 134,
+   "apartments": 22,
+   "residential": 99,
+   "towers_20plus": 0,
+   "stations_in_khet": 5
+  },
+  {
+   "khet": "khlong-sam-wa",
+   "buildings_total": 295,
+   "apartments": 0,
+   "residential": 293,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "khlong-san",
+   "buildings_total": 44,
+   "apartments": 30,
+   "residential": 7,
+   "towers_20plus": 18,
+   "stations_in_khet": 2
+  },
+  {
+   "khet": "khlong-toei",
+   "buildings_total": 472,
+   "apartments": 250,
+   "residential": 66,
+   "towers_20plus": 106,
+   "stations_in_khet": 9
+  },
+  {
+   "khet": "lak-si",
+   "buildings_total": 97,
+   "apartments": 84,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "lat-krabang",
+   "buildings_total": 492,
+   "apartments": 353,
+   "residential": 31,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "lat-phrao",
+   "buildings_total": 16,
+   "apartments": 2,
+   "residential": 1,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "min-buri",
+   "buildings_total": 9,
+   "apartments": 3,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "nong-chok",
+   "buildings_total": 147,
+   "apartments": 2,
+   "residential": 91,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "nong-khaem",
+   "buildings_total": 1221,
+   "apartments": 21,
+   "residential": 1199,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "pathum-wan",
+   "buildings_total": 894,
+   "apartments": 126,
+   "residential": 35,
+   "towers_20plus": 66,
+   "stations_in_khet": 9
+  },
+  {
+   "khet": "phasi-charoen",
+   "buildings_total": 146,
+   "apartments": 139,
+   "residential": 4,
+   "towers_20plus": 3,
+   "stations_in_khet": 5
+  },
+  {
+   "khet": "phaya-thai",
+   "buildings_total": 234,
+   "apartments": 128,
+   "residential": 19,
+   "towers_20plus": 26,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "phra-khanong",
+   "buildings_total": 37,
+   "apartments": 25,
+   "residential": 10,
+   "towers_20plus": 4,
+   "stations_in_khet": 2
+  },
+  {
+   "khet": "phra-nakhon",
+   "buildings_total": 1184,
+   "apartments": 29,
+   "residential": 38,
+   "towers_20plus": 0,
+   "stations_in_khet": 2
+  },
+  {
+   "khet": "pom-prap-sattru-phai",
+   "buildings_total": 663,
+   "apartments": 7,
+   "residential": 47,
+   "towers_20plus": 1,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "prawet",
+   "buildings_total": 23,
+   "apartments": 16,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "rat-burana",
+   "buildings_total": 16,
+   "apartments": 16,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "ratchathewi",
+   "buildings_total": 99,
+   "apartments": 47,
+   "residential": 32,
+   "towers_20plus": 23,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "sai-mai",
+   "buildings_total": 19,
+   "apartments": 0,
+   "residential": 16,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "samphanthawong",
+   "buildings_total": 999,
+   "apartments": 10,
+   "residential": 78,
+   "towers_20plus": 2,
+   "stations_in_khet": 1
+  },
+  {
+   "khet": "saphan-sung",
+   "buildings_total": 1,
+   "apartments": 0,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "sathon",
+   "buildings_total": 486,
+   "apartments": 150,
+   "residential": 62,
+   "towers_20plus": 41,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "suan-luang",
+   "buildings_total": 34,
+   "apartments": 17,
+   "residential": 10,
+   "towers_20plus": 16,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "taling-chan",
+   "buildings_total": 24,
+   "apartments": 14,
+   "residential": 0,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "thawi-watthana",
+   "buildings_total": 451,
+   "apartments": 6,
+   "residential": 375,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "thon-buri",
+   "buildings_total": 18,
+   "apartments": 10,
+   "residential": 5,
+   "towers_20plus": 7,
+   "stations_in_khet": 3
+  },
+  {
+   "khet": "thung-khru",
+   "buildings_total": 152,
+   "apartments": 83,
+   "residential": 65,
+   "towers_20plus": 0,
+   "stations_in_khet": 0
+  },
+  {
+   "khet": "wang-thonglang",
+   "buildings_total": 40,
+   "apartments": 10,
+   "residential": 20,
+   "towers_20plus": 0,
+   "stations_in_khet": 4
+  },
+  {
+   "khet": "watthana",
+   "buildings_total": 478,
+   "apartments": 212,
+   "residential": 18,
+   "towers_20plus": 136,
+   "stations_in_khet": 1
+  },
+  {
+   "khet": "yan-nawa",
+   "buildings_total": 522,
+   "apartments": 67,
+   "residential": 31,
+   "towers_20plus": 15,
+   "stations_in_khet": 0
+  }
+ ]
+}

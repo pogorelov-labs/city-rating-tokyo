@@ -1,0 +1,12 @@
+{
+ "lat": 35.6758403,
+ "lon": 139.7065137,
+ "display_name": "千駄ヶ谷三丁目, 千駄ヶ谷, 渋谷区, 東京都, 151-0051, 日本",
+ "osm_type": "relation",
+ "osm_id": 17054664,
+ "type": "administrative",
+ "query": "Sendagaya 3-chome, Shibuya-ku, Tokyo, 151-0051, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 3-7-13 Sendagaya, Shibuya-ku, Tokyo, 151-0051, Japan",
+ "simplified_query": true
+}

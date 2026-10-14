@@ -1,0 +1,12 @@
+{
+ "lat": 13.7777,
+ "lon": 100.4570707,
+ "display_name": "เขตตลิ่งชัน, กรุงเทพมหานคร, กระทุ่มล้ม, 10170, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 2939954,
+ "type": "administrative",
+ "query": "Taling Chan, Bangkok, 10170, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "28/1 Phran Nok-Phutthamonthon 4 Road, Bang Phrom, Taling Chan, Bangkok, 10170, Thailand",
+ "simplified_query": true
+}

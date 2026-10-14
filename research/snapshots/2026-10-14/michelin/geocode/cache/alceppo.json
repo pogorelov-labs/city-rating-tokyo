@@ -1,0 +1,12 @@
+{
+ "lat": 35.6451128,
+ "lon": 139.7338374,
+ "display_name": "白金一丁目, 白金, 港区, 東京都, 108-0072, 日本",
+ "osm_type": "relation",
+ "osm_id": 18773146,
+ "type": "administrative",
+ "query": "Shirokane 1-chome, Minato-ku, Tokyo, 108-0072, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 1-25-32 Shirokane, Minato-ku, Tokyo, 108-0072, Japan",
+ "simplified_query": true
+}

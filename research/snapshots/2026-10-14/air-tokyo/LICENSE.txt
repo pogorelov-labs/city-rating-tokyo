@@ -1,0 +1,7 @@
+Набор: air-tokyo (годовые архивы качества воздуха Токио и соседних префектур)
+Дата выгрузки: 2026-10-14
+Источники: NIES 環境展望台 https://tenbou.nies.go.jp/download/ (база «大気汚染常時監視データ», данные 環境省/Ministry of the Environment Japan)
+Лицензия: © National Institute for Environmental Studies; условия https://tenbou.nies.go.jp/copyright/ и сайт-политика NIES. Данные предоставлены 環境省 из отчётов префектур/постановлений; данные не-государственных станций требуют разрешения местных властей.
+Отметка: INTERNAL ONLY — not for site publication (явной open-data лицензии на повторную публикацию нет).
+
+Детали и URL API — см. manifest.json и LICENSE.txt в каталогах td_annual_monthly/, tj_hourly/, tm_station_master/.

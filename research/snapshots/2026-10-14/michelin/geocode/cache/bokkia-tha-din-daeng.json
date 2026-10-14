@@ -1,0 +1,12 @@
+{
+ "lat": 13.7300756,
+ "lon": 100.5085972,
+ "display_name": "เขตคลองสาน, กรุงเทพมหานคร, 10600, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 3147280,
+ "type": "administrative",
+ "query": "Khlong San, Bangkok, 10600, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "323 Tha Din Daeng Road, Somdet Chao Phraya, Khlong San, Bangkok, 10600, Thailand",
+ "simplified_query": true
+}

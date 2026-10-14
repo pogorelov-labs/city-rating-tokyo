@@ -1,0 +1,334 @@
+{
+ "generated": "2026-10-14",
+ "direction": "embassies",
+ "method": "Overpass office=diplomatic in city bbox + Wikidata P31=Q3917681 & P159->city; merge by QID then normalized name; coordinates OSM-only (WD P625 absent by design); defunct WD noise excluded (CRTKY-145/180); represented country from P137 / OSM country tag / name patterns",
+ "cities": {
+  "bangkok": {
+   "file": "research/snapshots/2026-10-14/embassies/embassies-bangkok.geojson",
+   "counts": {
+    "overpass_elements": 81,
+    "overpass_unique_after_dedupe": 80,
+    "wikidata_items": 57,
+    "wikidata_active_after_defunct": 57,
+    "matched_qid_or_name": 47,
+    "osm_only": 33,
+    "wikidata_only_with_coords": 0,
+    "features": 79,
+    "features_with_country": 79,
+    "excluded_by_reason": {
+     "data_noise": 1,
+     "unnamed": 1,
+     "no_coordinates": 10
+    }
+   },
+   "excluded": [
+    {
+     "name": "สถานกงสุลซิลดาเวีย Consulat de Syldavie à Bangkok",
+     "osm": "way/1443131197",
+     "reason": "data_noise",
+     "detail": "fictional country (Syldavia, Tintin); OSM name:fr 'Consulat de Syldavie à Bangkok'",
+     "source": "osm"
+    },
+    {
+     "name": "way/331967737",
+     "osm": "way/331967737",
+     "reason": "unnamed",
+     "detail": "OSM element without name tag and no WD match",
+     "source": "osm"
+    },
+    {
+     "name": "Embassy of Morocco, Bangkok",
+     "qid": "Q121770206",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Kosovo, Bangkok",
+     "qid": "Q111539383",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Bhutan, Bangkok",
+     "qid": "Q106451766",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Bangladesh, Bangkok",
+     "qid": "Q83584280",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Vietnam, Bangkok",
+     "qid": "Q136503499",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Maldives, Bangkok",
+     "qid": "Q99568873",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Slovakia, Bangkok",
+     "qid": "Q52197774",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Mongolia, Bangkok",
+     "qid": "Q107608146",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Bahrain, Bangkok",
+     "qid": "Q68170723",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of North Korea, Bangkok",
+     "qid": "Q124055062",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    }
+   ],
+   "qa": {
+    "p137_vs_osm_country_disagree": [
+     {
+      "name": "สถานทูตประเทศไอร์แลนด์",
+      "p137": "Ireland",
+      "osm_country_tag": "IR"
+     }
+    ]
+   }
+  },
+  "tokyo": {
+   "file": "research/snapshots/2026-10-14/embassies/embassies-tokyo.geojson",
+   "counts": {
+    "overpass_elements": 170,
+    "overpass_unique_after_dedupe": 169,
+    "wikidata_items": 157,
+    "wikidata_active_after_defunct": 155,
+    "matched_qid_or_name": 140,
+    "osm_only": 29,
+    "wikidata_only_with_coords": 0,
+    "features": 167,
+    "features_with_country": 167,
+    "excluded_by_reason": {
+     "defunct": 2,
+     "duplicate": 1,
+     "unnamed": 2,
+     "no_coordinates": 21
+    }
+   },
+   "excluded": [
+    {
+     "name": "Embassy of Manchukuo, Tokyo",
+     "qid": "Q121295010",
+     "reason": "defunct",
+     "detail": "historical state P17=Empire of Japan",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of the Republic of China, Tokyo",
+     "qid": "Q10876488",
+     "reason": "defunct",
+     "detail": "dissolved (P576=1940-01-01)",
+     "source": "wikidata"
+    },
+    {
+     "name": "フランス大使館",
+     "osm": "way/383579458",
+     "reason": "duplicate",
+     "detail": "same normalized name within 120 m of way/220319419",
+     "source": "osm"
+    },
+    {
+     "name": "way/801343976",
+     "osm": "way/801343976",
+     "reason": "unnamed",
+     "detail": "OSM element without name tag and no WD match",
+     "source": "osm"
+    },
+    {
+     "name": "way/1208191588",
+     "osm": "way/1208191588",
+     "reason": "unnamed",
+     "detail": "OSM element without name tag and no WD match",
+     "source": "osm"
+    },
+    {
+     "name": "Embassy of Gabon, Tokyo",
+     "qid": "Q61877234",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of the Republic of Congo, Tokyo",
+     "qid": "Q61877086",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Yemen, Tokyo",
+     "qid": "Q61911599",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Angola, Tokyo",
+     "qid": "Q30403436",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Turkmenistan, Tokyo",
+     "qid": "Q55664157",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Lesotho, Tokyo",
+     "qid": "Q61877276",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Mali, Tokyo",
+     "qid": "Q61877294",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Uzbekistan, Tokyo",
+     "qid": "Q61925853",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Tonga in Japan",
+     "qid": "Q47510848",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Georgia, Tokyo",
+     "qid": "Q52388399",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Malta, Tokyo",
+     "qid": "Q104491974",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Bangladesh embassy in Tokyo",
+     "qid": "Q52213274",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Denmark, Tokyo",
+     "qid": "Q61877440",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Cyprus, Tokyo",
+     "qid": "Q91673990",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of the Marshall Islands, Tokyo",
+     "qid": "Q84034197",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Uganda, Tokyo",
+     "qid": "Q61877338",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of South Sudan, Tokyo",
+     "qid": "Q134450764",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of East Timor, Tokyo",
+     "qid": "Q52215240",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Syria, Tokyo",
+     "qid": "Q44825284",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of the Republic of Mauritius, Tokyo",
+     "qid": "Q135964423",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    },
+    {
+     "name": "Embassy of Cambodia, Tokyo",
+     "qid": "Q52175898",
+     "reason": "no_coordinates",
+     "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+     "source": "wikidata"
+    }
+   ],
+   "qa": {
+    "p137_vs_osm_country_disagree": [
+     {
+      "name": "アルメニア大使館",
+      "p137": "Armenia",
+      "osm_country_tag": "AR"
+     }
+    ]
+   }
+  }
+ }
+}

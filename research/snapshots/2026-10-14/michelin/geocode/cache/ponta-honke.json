@@ -1,0 +1,12 @@
+{
+ "lat": 35.7054109,
+ "lon": 139.7733376,
+ "display_name": "上野三丁目, 上野, 台東区, 東京都, 110-0005, 日本",
+ "osm_type": "relation",
+ "osm_id": 15920271,
+ "type": "administrative",
+ "query": "Ueno 3-chome, Taito-ku, Tokyo, 110-0005, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "3-23-3 Ueno, Taito-ku, Tokyo, 110-0005, Japan",
+ "simplified_query": true
+}

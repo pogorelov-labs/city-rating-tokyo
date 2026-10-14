@@ -1,0 +1,12 @@
+{
+ "lat": 35.6498447,
+ "lon": 139.7416815,
+ "display_name": "三田二丁目, 三田, 港区, 東京都, 108-0073, 日本",
+ "osm_type": "relation",
+ "osm_id": 18184162,
+ "type": "administrative",
+ "query": "Mita 2-chome, Minato-ku, Tokyo, 108-0073, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 2-17-29 Mita, Minato-ku, Tokyo, 108-0073, Japan",
+ "simplified_query": true
+}

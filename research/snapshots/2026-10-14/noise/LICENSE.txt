@@ -1,0 +1,50 @@
+LICENSE / PROVENANCE — research/snapshots/2026-10-14/noise/
+Fetched 2026-10-14 by the noise data-acquisition agent (city-rating project).
+
+=== SET 1: PCD (Thailand) — gdcatalog noise-monitor metadata ===
+Files: pcd_ckan_package_show.json, pcd_resources_index.json, pcd_fetch_attempts.log
+Source: CKAN API https://gdcatalog.go.th/api/3/action/package_show?id=gdpublish-noise-monitor
+Publisher: กรมควบคุมมลพิษ (Pollution Control Department), MNRE, Thailand.
+License (per CKAN metadata, verified 2026-10-14): "Open Data Common" — public use with
+attribution; no access restrictions. The underlying CSVs (noisestation.csv + annual
+noise2559–2568.csv) were NOT downloaded: host pcd.gdcatalog.go.th drops TLS handshakes
+from this network (12 attempts logged in pcd_fetch_attempts.log). The JSON here is CKAN
+API output (catalog metadata), not station measurements.
+
+=== SET 2: TMG — Tokyo Statistical Yearbook table 19-11 (noise complaints by ward) ===
+Files: yearbook1911_2024.csv (令和6年 ed., FY2020–2024), yearbook1911_2023.csv (FY2019–2023),
+yearbook1911_2022.csv (FY2018–2022)
+Source: https://www.toukei.metro.tokyo.lg.jp/tnenkan/<ed>/tn<ed2>qv191100.csv
+Publisher: 東京都 (Tokyo Metropolitan Government), 東京都統計年鑑.
+License: CC BY 4.0 (catalog metadata of the yearbook datasets, e.g. 令和6年 19B
+t000003d2000001166; re-confirmed on the catalog 2026-10-13 note, host serves CSVs openly).
+
+=== SET 3: TMG — 自動車交通騒音調査結果 (vehicle traffic noise survey) FY2019–FY2023 ===
+Files: tmg_r5_* = 令和5年度 (FY2023): -_-28 XLSX, -_-3 dict CSV, -_-27 常時監視 CSV, -_-29 要請限度 CSV
+       tmg_r4_* = 令和4年度 (FY2022): -1-1 / -1-2 / -35
+       tmg_r3_* = 令和3年度 (FY2021): -33 / -32 / -38
+       tmg_r2_* = 令和2年度 (FY2020): files-2020{monitoring,guide,limit}
+       tmg_r1_* = 令和元年度 (FY2019): files-2019{monitoring,guide,limit}
+       (+ tmg_survey_summary.json — derived, UTF-8 normalized summary built here)
+Source: https://www.kankyo.metro.tokyo.lg.jp/vehicle/noise/result/cyousakekka[/reiwaN]
+Publisher: 東京都環境局 (TMG Bureau of Environment).
+License: CC BY 4.0 (TMG open-data policy; the FY2000–2013 siblings of this series carry
+license_id CC-BY-4.0 in the TMG catalog — same publisher/series). CP932 encoding is
+original; decoding happened only in the derived summary.
+
+=== SET 4: TMG — 環境白書2025 noise slice (broken-resource evidence) ===
+Files: hakusho2025_34_shinkansen_noise_2024.csv (valid data),
+hakusho2025_35_aircraft_noise_2024.csv (BROKEN: contains 大気汚染環境基準, 1,577 B),
+hakusho2025_39_noise_standards.csv (BROKEN: contains GHG emissions table)
+Source: https://www.opendata.metro.tokyo.lg.jp/kankyo/<name>.csv (dataset 東京都環境白書2025,
+t000009d2000000066). Publisher: 東京都. License: CC BY 4.0 (CKAN license_id).
+Broken 35/39 re-confirmed live 2026-10-14 — evidence files only.
+
+=== SET 5: 調布市 (Chofu City) — (平成29年)道路交通騒音状況, gap-year sample ===
+File: chofu_h29_roadnoise.xls (FY2017; Excel 97-2003, 26,624 B; content NOT parsed —
+no xlrd in this environment; format verified via `file`)
+Source: https://www.city.chofu.lg.jp/documents/4659/84_4.xls (resource of TMG catalog
+dataset t132080d3100001264). Publisher: 調布市. License: CC BY 4.0 (catalog license_id).
+
+NOTE: All sources are government open data under open licenses; suitable for site
+publication WITH attribution. No personal data involved.

@@ -1,0 +1,12 @@
+{
+ "lat": 35.6237806,
+ "lon": 139.7338998,
+ "display_name": "ガーデンシティ 品川 御殿山, 環状六号線, 北品川六丁目, 東五反田, 北品川, 品川区, 東京都, 141-8642, 日本",
+ "osm_type": "way",
+ "osm_id": 215734833,
+ "type": "yes",
+ "query": "Garden City Shinagawa Gotenyama, Kitashinagawa 6-chome, Shinagawa-ku, Tokyo, 141-0001, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "1F, Garden City Shinagawa Gotenyama, 6-7-29 Kitashinagawa, Shinagawa-ku, Tokyo, 141-0001, Japan",
+ "simplified_query": true
+}

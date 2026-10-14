@@ -1,0 +1,53 @@
+LICENSE.txt — research/snapshots/2026-10-14/accidents-bangkok/
+Дата выгрузки: 2026-10-14. Задача: accidents-bangkok (ДТП Бангкок).
+
+=== Источники и лицензии ===
+
+1) bkk_accident_risk ปี 2568 (50 координатных точек риска)
+   Источник: Open Government Data of Bangkok (data.bangkok.go.th),
+   датасет slug `bkk_accident_risk`, id c73f160b-c838-418d-bf1c-f96edb79bd77,
+   ресурс fb6f1dc8-afb9-4288-8f42-0ba059b8daf1 («-2568.xlsx», 24 642 B, md5 d0f101a3bf3e993a7f6091707ff2f2b9).
+   Ведомство: สำนักการจราจรและขนส่ง (Traffic and Transport Dept, BMA).
+   Доступ: полный контент получен из харвест-копии национального каталога data.go.th
+   (CKAN datastore_search, resource_id fb6f1dc8-…, total=50) 2026-10-14; сам бинарный XLSX
+   с data.bangkok.go.th недоступен с этой машины (IP-блок, см. attempts.txt).
+   Лицензия: в CKAN указано «License not specified» (isopen=false); категория
+   ข้อมูลสาธารณะ (публичные данные) по thai DGA classification.
+
+2) 100-risk-map — «ข้อมูลการวิเคราะห์ Solution จุดเสี่ยงอุบัติเหตุบนถนน กทม.»
+   Источник: data.bangkok.go.th, датасет slug `100-risk-map`, id 820fa433-cdc4-4e2f-b8c7-a6c40546a5d8,
+   data_source: ThaiRsc / iTIC. Лицензия: «License not specified».
+
+   2a. Карта 126+15 чёрных точек (Google My Maps, mid=1hTC9XwOVzmX3sFLOchZmABrMogXGRPA,
+       ресурс a7bf1de2-3efa-4008-b1ec-fe0cda02ef62) — скачан KMZ напрямую с google.com
+       (HTTP 200, 554 680 B): mymaps_100clusters.kmz + kmz_extract/doc.kml (126 точек статуса
+       исправления + 15 доп. точек + 50 полигонов районов с демографией).
+   2b. Таблица 126 кластеров «-heat-map-9-11-65.xlsx» (ресурс 6cc7a43f-52b3-4381-9a8f-2b8a35c3174a,
+       26 287 B, md5 cadeeceafb75001847eb012533e05135) — полный контент (126 строк, total=126)
+       получен из харвест-datastore data.go.th, 2026-10-14.
+   2c. 6 PDF «วิเคราะห์ Solutions จุดที่ 1-20 … 101-126» — бинарники недоступны (IP-блок);
+       текст извлечён серверными ридерами частично: 1-20 и 21-40 — полностью; 41-48, 61-67,
+       81-86, 101-106 — частично (охват указан в шапке каждого файла).
+
+3) Longdo кластеры (mapdemo.longdo.com/bkk-accidents-clusters/, скачаны напрямую, HTTP 200):
+   itic_dbscan_100.json (100 кластеров iTIC, ДТП 2020-2022), rvp_dbscan_100_new.json
+   (100 кластеров RVP/ThaiRSC), itic_road_2.json (50 точек), 3 GeoJSON-грида.
+   Поля: no/name/gid/lat/long/accidents/road/subdistrict/district. Демо-страница Longdo
+   ссылается на источники: มูลนิธิ iTIC, ThaiRSC, Longdo Traffic, RVP.
+
+=== Правовой статус ===
+Все датасеты — государственные открытые данные Таиланда, опубликованные для публичного
+доступа (ข้อมูลสาธารณะ), но ЯВНАЯ лицензия не указана ни на одном из них.
+-> INTERNAL ONLY — not for site publication без решения владельца по лицензионному вопросу.
+Цитирование фактов (числа точек, названия, счётчики ДТП) на страницах районов —
+только после owner-decision (см. research/bangkok/notes/2026-10-13-safety-crtky150.md, §7).
+
+=== Ограничения данных (важно) ===
+- Полей «погибшие/раненые» (จำนวนผู้เสียชีวิต และผู้บาดเจ็บ) из описания датасета 100-risk-map
+  НЕ найдено ни в datastore-таблице 126 кластеров, ни в KMZ, ни в текстах PDF, ни в JSON Longdo.
+  В извлечённых материалах есть: число ДТП за 2566 по точкам (ThaiRSC_2566/iTIC_2566 в XLSX 2568),
+  число ДТП за 2020-2022 по кластерам Longdo (accidents), iRAP-рейтинг («1 ดาว»/«2 ดาว»),
+  ранги точек по ThaiRSC/iTIC в PDF. Честная пометка: per-point fatalities/injuries не верифицированы.
+- XLSX `bkk_accident_risk` 2568: год данных по полям ThaiRSC_2566/iTIC_2566 = BE2566 (2023),
+  сам реестр — план/меры 2568 (2025). 50 точек покрывают 46 районов.
+- KMZ: 126 точек = datastore 126 строк (123/126 точных совпадений координат — перекрёстная проверка).

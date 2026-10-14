@@ -1,0 +1,12 @@
+{
+ "lat": 35.6845039,
+ "lon": 139.7612448,
+ "display_name": "パレスホテル東京, 内堀通り, 丸の内一丁目, 丸の内, 千代田区, 東京都, 100-0005, 日本",
+ "osm_type": "relation",
+ "osm_id": 5823721,
+ "type": "hotel",
+ "query": "Palace Hotel Tokyo, Marunouchi 1-chome, Chiyoda-ku, Tokyo, 100-0005, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "6F, Palace Hotel Tokyo, 1-1-1 Marunouchi, Chiyoda-ku, Tokyo, 100-0005, Japan",
+ "simplified_query": true
+}

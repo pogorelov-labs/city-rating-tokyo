@@ -1,0 +1,12 @@
+{
+ "lat": 35.6734721,
+ "lon": 139.7592489,
+ "display_name": "東京ミッドタウン日比谷, 日比谷仲通り, 有楽町一丁目, 有楽町, 千代田区, 東京都, 100-0006, 日本",
+ "osm_type": "node",
+ "osm_id": 5539721821,
+ "type": "department_store",
+ "query": "Tokyo Midtown Hibiya, Yurakucho 1-chome, Chiyoda-ku, Tokyo, 100-0006, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "7F, Tokyo Midtown Hibiya, 1-1-2 Yurakucho, Chiyoda-ku, Tokyo, 100-0006, Japan",
+ "simplified_query": true
+}

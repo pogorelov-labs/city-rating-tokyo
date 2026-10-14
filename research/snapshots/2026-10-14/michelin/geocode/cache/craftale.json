@@ -1,0 +1,12 @@
+{
+ "lat": 35.6482209,
+ "lon": 139.6970724,
+ "display_name": "青葉台一丁目, 青葉台, 目黒区, 東京都, 日本",
+ "osm_type": "relation",
+ "osm_id": 18447132,
+ "type": "administrative",
+ "query": "Aobadai 1-chome, Meguro-ku, Tokyo, 153-0042, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 1-16-11 Aobadai, Meguro-ku, Tokyo, 153-0042, Japan",
+ "simplified_query": true
+}
