@@ -380,7 +380,9 @@
     "sourceMedicine": "JNTO Guide for when you are feeling ill",
     "floodDepth": "Ожидаемая глубина затопления: {depth} м",
     "floodDepthTooltip": "Максимальная глубина затопления по модели TMG (максимальный сценарий).",
-    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)"
+    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)",
+    "michelin": "Рестораны Michelin рядом",
+    "michelinTooltip": "Звёздные и Bib Gourmand рестораны из Michelin Guide 2026 в 800 м."
   },
   "seismicTiers": {
     "low": {

@@ -20,10 +20,12 @@ interface Props {
 export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
   const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier,
-          embassies_800m, english_medicine_2km, flood_depth_m } = environment;
+          embassies_800m, english_medicine_2km, flood_depth_m,
+          michelin_stars, michelin_bib } = environment;
 
   if (elevation_m == null && seismic_prob_i60 == null
-      && embassies_800m == null && english_medicine_2km == null) return null;
+      && embassies_800m == null && english_medicine_2km == null
+      && michelin_stars == null && michelin_bib == null) return null;
 
   const tier = seismic_risk_tier ?? 'unknown';
   const seismicColor = SEISMIC_COLORS[tier];
@@ -203,6 +205,36 @@ export function NaturalEnvironment({ environment }: Props) {
                   </span>
                   <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-red-50 border border-red-200 px-2 py-0.5 text-[10px] font-medium text-red-700">
                     {t('station.floodRisk')}
+                  </span>
+                </div>
+              </Tooltip>
+            </div>
+          </div>
+        )}
+
+        {/* Michelin restaurants nearby (CRTKY-191) */}
+        {michelin_stars != null && (michelin_stars > 0 || (michelin_bib ?? 0) > 0) && (
+          <div className="flex items-start gap-3">
+            <span className="text-lg mt-0.5 shrink-0" aria-hidden>⭐</span>
+            <div className="min-w-0">
+              <Tooltip
+                showHelpIcon={false}
+                content={
+                  <>
+                    <span className="font-semibold">{t('station.michelin')}</span>
+                    <span className="block mt-1">{t('station.michelinTooltip')}</span>
+                    <span className="block mt-1 text-gray-400 text-xs">© Michelin Guide 2026</span>
+                  </>
+                }
+              >
+                <div className="cursor-help">
+                  <span className="text-sm font-medium text-gray-900">
+                    {t('station.michelin')}
+                  </span>
+                  <span className="text-xs text-gray-500 ml-1.5">
+                    {michelin_stars > 0 && `${michelin_stars}★`}
+                    {michelin_stars > 0 && (michelin_bib ?? 0) > 0 && ' · '}
+                    {(michelin_bib ?? 0) > 0 && `${michelin_bib} Bib`}
                   </span>
                 </div>
               </Tooltip>

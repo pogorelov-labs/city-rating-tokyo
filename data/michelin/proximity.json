@@ -1,0 +1,936 @@
+{
+ "_meta": {
+  "source": "guide.michelin.com 2026, © Michelin — factual data with attribution",
+  "tokyo": "183 restaurants, 145 stations",
+  "bangkok": "54 restaurants, 9 districts",
+  "computed": "2026-10-15"
+ },
+ "stations": {
+  "shinjuku": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "tokyo": {
+   "stars": 6,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shibuya": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ikebukuro": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ueno": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shimbashi": {
+   "stars": 14,
+   "max_stars": 3,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shinagawa": {
+   "stars": 1,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "akihabara": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "iidabashi": {
+   "stars": 5,
+   "max_stars": 3,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "nagatacho": {
+   "stars": 3,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "okachimachi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "otemachi": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "yotsuya": {
+   "stars": 1,
+   "max_stars": 2,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "ebisu": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "kanda": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "meguro": {
+   "stars": 3,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "osaki": {
+   "stars": 1,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "aoyama-itchome": {
+   "stars": 2,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "asakusa": {
+   "stars": 3,
+   "max_stars": 2,
+   "bib_gourmand": 6,
+   "guide_year": "2026"
+  },
+  "ginza": {
+   "stars": 19,
+   "max_stars": 3,
+   "bib_gourmand": 7,
+   "guide_year": "2026"
+  },
+  "hamamatsucho": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "harajuku": {
+   "stars": 4,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "hibiya": {
+   "stars": 16,
+   "max_stars": 3,
+   "bib_gourmand": 7,
+   "guide_year": "2026"
+  },
+  "nihonbashi": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ogikubo": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "omotesando": {
+   "stars": 9,
+   "max_stars": 2,
+   "bib_gourmand": 4,
+   "guide_year": "2026"
+  },
+  "shinjuku-sanchome": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "takadanobaba": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "yoyogi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "yurakucho": {
+   "stars": 17,
+   "max_stars": 3,
+   "bib_gourmand": 8,
+   "guide_year": "2026"
+  },
+  "azabu-juban": {
+   "stars": 8,
+   "max_stars": 3,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "daimon": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "hatagaya": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "hatchobori": {
+   "stars": 3,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "higashi-shinjuku": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "higashiginza": {
+   "stars": 21,
+   "max_stars": 3,
+   "bib_gourmand": 7,
+   "guide_year": "2026"
+  },
+  "jiyugaoka": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kasuga": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kayabacho": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "keiseiueno": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "kokkai-gijidomae": {
+   "stars": 3,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "korakuen": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kuramae": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "kyobashi": {
+   "stars": 7,
+   "max_stars": 2,
+   "bib_gourmand": 7,
+   "guide_year": "2026"
+  },
+  "mita": {
+   "stars": 2,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "monzen-nakacho": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "nakameguro": {
+   "stars": 3,
+   "max_stars": 2,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "nishiogikubo": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "ookayama": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "roppongi": {
+   "stars": 8,
+   "max_stars": 3,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "ryogoku": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "sasazuka": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shimokitazawa": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shin-okachimachi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "shiodome": {
+   "stars": 8,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "shirokane-takanawa": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 5,
+   "guide_year": "2026"
+  },
+  "shirokanedai": {
+   "stars": 5,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "shodai": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "tamachi": {
+   "stars": 2,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "tameike-sanno": {
+   "stars": 5,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "yoyogi-hachiman": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 5,
+   "guide_year": "2026"
+  },
+  "yoyogi-uehara": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 4,
+   "guide_year": "2026"
+  },
+  "akabanebashi": {
+   "stars": 7,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "akasaka": {
+   "stars": 5,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "akebonobashi": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "arakawaku-yakusho-mae": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "chitose-karasuyama": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "daikanyama": {
+   "stars": 3,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "edogawabashi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ekoda": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "etchu-shima": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "gaiemmae": {
+   "stars": 5,
+   "max_stars": 2,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "gakushuin-shita": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ginzaitchome": {
+   "stars": 20,
+   "max_stars": 3,
+   "bib_gourmand": 8,
+   "guide_year": "2026"
+  },
+  "hakusan": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "hanzomon": {
+   "stars": 1,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "higashijujo": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "higashikitazawa": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "hinode": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "hiroo": {
+   "stars": 9,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "ikegami": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ikejiriohashi": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "ikenoe": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "inaricho": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "kachidoki": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "kagurazaka": {
+   "stars": 5,
+   "max_stars": 3,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "kamiizumi": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "kamiyacho": {
+   "stars": 4,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "kane-ke-fuchi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kiba": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kita-sando": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "kita-shinagawa": {
+   "stars": 1,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "kitasenzoku": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kojimachi": {
+   "stars": 1,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "kyodo": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "midorigaoka": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "mikawa-shima": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "minami-shinjuku": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "miya-no-saka": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "mukaihara": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "musashi-koyama": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "nezu": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "nijubashimae": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "nishi-oyama": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "nishi-waseda": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "nogizaka": {
+   "stars": 10,
+   "max_stars": 3,
+   "bib_gourmand": 4,
+   "guide_year": "2026"
+  },
+  "ochiai-minami-nagasaki": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "omokage-hashi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "onarimon": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "roka-koen": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "rokugo-dote": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "roppongi-itchome": {
+   "stars": 8,
+   "max_stars": 2,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "sangu-hashi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "seijo-gakuenmae": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "sen-da-ke-tani": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "sendagi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "sensoku": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "setagaya": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "shibakoen": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "shiinamachi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shimo-ochiai": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shin-egota": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shin-shirota": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shinanocho": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shinjuku-gyoenmae": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "shintomicho": {
+   "stars": 13,
+   "max_stars": 2,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "shoin-jinja-mae": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "soshigaya-okura": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "suehirocho": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "takaido": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "takebashi": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "tawaramachi": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "todaimae": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "toranomon": {
+   "stars": 3,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "toritsu-daigaku": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "tsukiji": {
+   "stars": 12,
+   "max_stars": 2,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "tsukiji-shijo": {
+   "stars": 18,
+   "max_stars": 3,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "uchisaiwaicho": {
+   "stars": 11,
+   "max_stars": 3,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "uemachi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ushigome-kagurazaka": {
+   "stars": 5,
+   "max_stars": 3,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "wakabayashi": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "yotsuya-sanchome": {
+   "stars": 2,
+   "max_stars": 1,
+   "bib_gourmand": 4,
+   "guide_year": "2026"
+  },
+  "yoga": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "yushima": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "yutenji": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  }
+ },
+ "districts": {
+  "bang-kapi": {
+   "stars": 1,
+   "max_stars": 2,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "bang-rak": {
+   "stars": 3,
+   "max_stars": 2,
+   "bib_gourmand": 3,
+   "guide_year": "2026"
+  },
+  "khlong-toei": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 2,
+   "guide_year": "2026"
+  },
+  "pathum-wan": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "phaya-thai": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "phra-nakhon": {
+   "stars": 0,
+   "max_stars": 0,
+   "bib_gourmand": 4,
+   "guide_year": "2026"
+  },
+  "pom-prap-sattru-phai": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  },
+  "ratchathewi": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 0,
+   "guide_year": "2026"
+  },
+  "samphanthawong": {
+   "stars": 1,
+   "max_stars": 1,
+   "bib_gourmand": 1,
+   "guide_year": "2026"
+  }
+ }
+}

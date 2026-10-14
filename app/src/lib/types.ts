@@ -105,6 +105,9 @@ export interface EnvironmentData {
   /** English-speaking medical facilities within 2 km (CRTKY-190, Tokyo) —
    *  JNTO guide, counts only, no row republication. */
   english_medicine_2km?: number;
+  /** Michelin starred restaurants within 800 m (CRTKY-191) — © Michelin 2026. */
+  michelin_stars?: number;
+  michelin_bib?: number;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';
