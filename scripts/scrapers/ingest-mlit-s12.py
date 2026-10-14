@@ -523,6 +523,20 @@ def main():
     if args.dry_run:
         print("\nDry run — not writing.")
         return
+
+    # Integrity gate (CRTKY-160): coverage printed-but-not-enforced before —
+    # ekidata or S12 vintage drift degraded matching silently. Current truth
+    # is ~96.3%; the 93% floor leaves headroom for normal churn.
+    valued_ratio = len(valued) / n if n else 0.0
+    if valued_ratio <= 0.93:
+        print(
+            f"FATAL: valued coverage {len(valued)}/{n} ({valued_ratio:.1%}) is at or "
+            "below the 93% gate — ekidata line-names.json or the S12 vintage has "
+            "likely drifted. Not writing crowd data.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"\nWrote {OUTPUT.relative_to(ROOT)}")
