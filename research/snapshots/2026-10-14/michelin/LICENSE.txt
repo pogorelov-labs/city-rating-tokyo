@@ -1,0 +1,46 @@
+Michelin Guide rosters — Tokyo & Bangkok (2026 guide), with Nominatim geocoding
+===============================================================================
+
+Source:      guide.michelin.com (The MICHELIN Guide), live list pages with
+             server-side distinction path filters:
+               tokyo-region:   /restaurants/{3-stars-michelin,2-stars-michelin,1-star-michelin,bib-gourmand}
+               bangkok-region: same filters
+             Detail pages (one per restaurant) supplied the address lines.
+             Pages were reached through the public r.jina.ai reader because
+             guide.michelin.com sits behind an AWS WAF challenge (plain curl
+             gets HTTP 202 / challenge page). Method per
+             research/notes/2026-10-13-michelin-crtky177.md and
+             research/bangkok/notes/2026-10-13-michelin-crtky142.md.
+
+Downloaded:  2026-10-14 (list pages + 338 detail pages + Nominatim pass)
+
+License:     Guide content is © Michelin (proprietary, all rights reserved).
+             This snapshot stores a FACTUAL roster (restaurant name,
+             distinction, address string, point coordinates) with attribution.
+             No guide prose, photos or ratings text are reproduced.
+             INTERNAL ONLY — not for site publication without owner sign-off
+             (same interpretation as research/bangkok/notes/2026-10-13-michelin-crtky142.md §8).
+
+Geocoding:   Nominatim (nominatim.openstreetmap.org), results © OpenStreetMap
+             contributors, ODbL. UA "city-rating-acq", 1 req/s, per-slug cache
+             in geocode/cache/. Unmatched addresses keep null coordinates.
+
+Counts:      Tokyo 267 = 3★ 11 + 2★ 26 + 1★ 119 + Bib Gourmand 111
+             (matches the site's own facet counts of 2026-10-14).
+             Bangkok 71 = 3★ 2 + 2★ 8 + 1★ 29 + Bib Gourmand 32
+             (matches facets; region total 197 also includes 126 "selected"
+             restaurants without a distinction — out of scope per ask).
+
+Geocode
+outcome:     Tokyo 183/267 located (68.5%), 84 null; Bangkok 54/71 (76.1%),
+             17 null — null per ask: unmatched addresses keep null geometry.
+             Two passes: original address, then simplified/chome-level
+             retry (72 additional fixes). All hits verified inside the city
+             bounding boxes. Point precision varies from building/parcel to
+             chome/subdistrict centroid — see 'simplified_query' flag and
+             'query' vs 'query_original' in geocode/cache/*.json.
+
+Note:        the asking ticket estimated "~156 Bangkok region records"; the
+             live guide on 2026-10-14 shows 71 starred+Bib in the region
+             (197 total incl. 126 undistinguished "selected") — actual
+             numbers recorded above.

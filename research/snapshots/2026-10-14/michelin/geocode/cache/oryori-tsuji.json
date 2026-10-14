@@ -1,0 +1,12 @@
+{
+ "lat": 35.655135,
+ "lon": 139.744449,
+ "display_name": "Dash Living HigashiAzabu, 環状三号線, 東麻布一丁目, 東麻布, 港区, 東京都, 106-0044, 日本",
+ "osm_type": "node",
+ "osm_id": 11436145670,
+ "type": "bicycle_rental",
+ "query": "Higashiazabu 3-chome, Minato-ku, Tokyo, 106-0044, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 3-3-9 Higashiazabu, Minato-ku, Tokyo, 106-0044, Japan",
+ "simplified_query": true
+}

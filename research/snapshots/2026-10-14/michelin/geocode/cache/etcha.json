@@ -1,0 +1,12 @@
+{
+ "lat": 13.7532229,
+ "lon": 100.5318599,
+ "display_name": "เขตราชเทวี, กรุงเทพมหานคร, 10400, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92064,
+ "type": "administrative",
+ "query": "Ratchathewi, Bangkok, 10400, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "7F, Chatrium Grand Bangkok, 728 Phetchaburi Road, Phetchaburi, Ratchathewi, Bangkok, 10400, Thailand",
+ "simplified_query": true
+}

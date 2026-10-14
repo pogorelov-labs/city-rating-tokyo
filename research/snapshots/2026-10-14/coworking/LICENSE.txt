@@ -1,0 +1,67 @@
+# LICENSE — research/snapshots/2026-10-14/coworking/
+
+Дата выгрузки: 2026-10-14
+Назначение: факт-данные «близость коворкинга» для city-rating (Токио, Бангкок).
+Машинно-читаемые итоги: coworking-tokyo.json (105 записей), coworking-bangkok.json (54 записи).
+Каждая запись несёт своё поле source_url — страницу-источник конкретной локации.
+
+## Источники и условия
+
+### 1. WeWork Japan (Токио, 30 записей)
+- Источник: https://www.wework.co.jp/ (страница листинга /location?show_option=all&areas=...,
+  карточки /location/tokyo/<area>/<slug>). Материалы выгрузки: wework-jp-locations-list.html,
+  wework-jp-next-data.json, wework-jp/*.html (30 страниц), wework-jp-tokyo-extract.json.
+- Условия: контент сайта © WeWork Japan G.K. Явной открытой лицензии нет.
+  Выгрузка факт-данных (название, адрес, координаты) с публичного общедоступного локатора
+  в исследовательских целях.
+
+### 2. Regus / IWG (Токио, 73 записи)
+- Источник: https://www.regus.com/en/jp/tokyo/coworking (JS-страница за Incapsula; получено
+  через управляемый браузер). Материалы: regus-tokyo-cards-raw.json, regus-tokyo-extract.json.
+- Условия: © IWG plc / Regus. Открытой лицензии нет. Факт-данные локатора, INTERNAL ONLY.
+
+### 3. Global Business Hub Tokyo — проект Правительства Токио (1 запись)
+- Источник: https://www.gbh-tokyo.or.jp/en/access, /en/about.
+  Материалы: gbh-tokyo-access.html, gbh-tokyo-about.html.
+- Условия: © Global Business Hub Tokyo / Tokyo Metropolitan Government. Открытой лицензии нет.
+
+### 4. JustCo (1 запись Токио + 1 запись Бангкок)
+- Источник: https://www.justcoglobal.com/en-jp/centre/justco-shibuya-hikarie/ и
+  https://www.justcoglobal.com/en-th/centre/justco-jubilee-prestige-tower/,
+  листинги /en-jp/locations/tokyo/ и /en-th/locations/bangkok/.
+  Материалы: justco-tokyo-listing.html, justco-bangkok-listing.html,
+  justco-th-jubilee-centre.html, justco-jp-shibuya-centre.html, justco-*-rendered.json.
+- Условия: © JustCo Group. Открытой лицензии нет.
+
+### 5. WeWork Thailand (Бангкок, 3 записи)
+- Источник: https://www.wework.com/l/coworking-space/bangkok и карточки
+  /buildings/{slug}--bangkok (schema.org JSON-LD с адресом и координатами).
+  Материалы: wework-th-*-ld.json, wework-th-bangkok-extract.json.
+- Условия: © WeWork. Открытой лицензии нет.
+
+### 6. the Hive Bangkok (2 записи)
+- Источники: https://thehive.co.th/location/ (Thonglor) и https://thehiveprakanong.com/
+  (Prakanong), https://thehive.co.th/all-locations/.
+  Материалы: hive-thonglor-location.html, hive-prakanong-home.html, hive-all-locations.html.
+- Условия: © the Hive. Открытой лицензии нет.
+
+### 7. Spaces / IWG network (Бангкок, 48 записей)
+- Источник: https://www.spacesworks.com/en/th/krung-thep-maha-nakhon/bangkok/coworking
+  (JS-страница; получено через управляемый браузер). На странице сети IWG часть карточек
+  промаркирована Regus (1 шт.) — бренд указан в поле brand каждой записи.
+  Материалы: spaces-bangkok-cards-raw.json, spaces-bangkok-extract.json.
+- Условия: © IWG plc / Spaces. Открытой лицензии нет.
+
+## Итог
+
+Все 7 источников — © их владельцев, открытых лицензий (CC/OdbL и т.п.) НЕ обнаружено.
+Пометка для всего набора: INTERNAL ONLY — not for site publication.
+Использование: внутренний редакционный кандидат для расчёта признака «близость коворкинга».
+Публичное воспроизведение списков/адресов без разрешения правообладателей не допускается.
+OSM-данные по коворкингам отклонены на этапе discovery (разреженность); если позже данные
+понадобятся для публикации, приоритет — перевыборка из OpenStreetMap (ODbL).
+
+## Не идентифицировано
+
+«CCOC» из постановки задачи — коворкинг-бренд/сеть с таким именем в Бангкоке не найден
+(веб-поиск от 2026-10-14; «CCOC coworking Bangkok» не даёт бренда, только общие списки).

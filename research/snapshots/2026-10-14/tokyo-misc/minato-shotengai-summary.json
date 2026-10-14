@@ -1,0 +1,29 @@
+{
+  "dataset": "港区商店街・商業施設・アンテナショップ — Minato ward shotengai points (GeoJSON)",
+  "file": "minato_shoutengai.geojson",
+  "original_publisher": "港区 (Minato City) オープンデータカタログ, dataset minato_shoutengai (id e1b08c99-e695-47e8-bce4-a243247effed)",
+  "original_resource_url": "https://opendata.city.minato.tokyo.jp/dataset/e1b08c99-e695-47e8-bce4-a243247effed/resource/eee864a8-107e-4953-b312-89b77580ff13/download/minato_shoutengai.json",
+  "status_2026_10_14": "LIVE SOURCE NO LONGER SERVES THE FILE: portal 403 on download, CKAN package_show Authorization Error; dataset absent from portal search. The whole 港区観光情報 family (shoutengai/shukuhaku) is inaccessible live.",
+  "recovered_via": "Internet Archive Wayback captures 2020-10-29 and 2021-01-24 (identical md5 per CDX digest 5ORPPU2LTS3RYHSH2JSKASXWVW2XOPB7); file fetched from snapshot 20210124001703 (id_ raw bytes)",
+  "retrieved": "2026-10-14",
+  "license": "クリエイティブ・コモンズ 表示 (CC BY) — per archived dataset page web.archive.org/web/20200925130541 (title 港区商店街) and per TMG catalog package 港区観光情報 t131032d0000000009",
+  "content_year": "snapshot of data as archived 2020-10/2021-01; ward counts (令和4年度 TMG survey) list 58 商店街 in 港区 — treat this file as a point-in-time ward list, not current",
+  "feature_count": 54,
+  "geometry": "all Point; NOTE coordinates are published as JSON strings (e.g. '139.7520966'), not numbers",
+  "properties_per_feature": [
+    "エリア名称",
+    "区分",
+    "名称",
+    "所在地"
+  ],
+  "areas": {
+    "芝・三田エリア": 7,
+    "新橋エリア": 14,
+    "麻布エリア": 8,
+    "青山・赤坂エリア": 11,
+    "白金・高輪エリア": 8,
+    "芝浦・港南エリア": 4,
+    "お台場エリア": 2
+  },
+  "csv_variant": "not archived (only 404 captures in Wayback); live CSV also 403"
+}

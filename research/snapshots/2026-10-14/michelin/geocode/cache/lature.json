@@ -1,0 +1,10 @@
+{
+ "lat": 35.6595021,
+ "lon": 139.7019483,
+ "display_name": "B1F, 渋谷二丁目, 渋谷, 渋谷区, 東京都, 150-0002, 日本",
+ "osm_type": "relation",
+ "osm_id": 9232642,
+ "type": "pedestrian",
+ "query": "B1F, 2-2-2 Shibuya, Shibuya-ku, Tokyo, 150-0002, Japan",
+ "geocoded_at": "2026-10-14"
+}

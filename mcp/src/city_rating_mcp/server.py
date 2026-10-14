@@ -379,8 +379,9 @@ def _serve_http(host: str, port: int, path: str) -> None:
             LOG.warning(
                 "MCP_AUTH_REQUIRED=true but NocoDB env not set "
                 "(NOCODB_API_URL / NOCODB_API_TOKEN / NOCODB_API_KEYS_TABLE_ID) — "
-                "the server will start but will reject every request. "
-                "Set MCP_AUTH_REQUIRED=false for unauthenticated local dev."
+                "the server will start but reject EVERY request with 503 "
+                "(auth fails closed on a misconfigured deploy). "
+                "Set MCP_AUTH_REQUIRED=false only for unauthenticated local dev."
             )
         middleware.append(Middleware(_auth_middleware_factory(store)))
     else:
@@ -421,6 +422,16 @@ def main() -> None:
         path = os.getenv("MCP_PATH", "/mcp")
         _serve_http(host, port, path)
     elif transport == "sse":
+        # The SSE transport has no middleware hook in our wiring, so it would
+        # bypass bearer auth entirely (audit finding C2). Refuse it whenever
+        # auth is required; use the default streamable-http transport instead.
+        auth_required = os.getenv("MCP_AUTH_REQUIRED", "true").lower() not in ("false", "0", "no")
+        if auth_required:
+            raise SystemExit(
+                "MCP_TRANSPORT=sse is not allowed with MCP_AUTH_REQUIRED=true: "
+                "the SSE wiring cannot carry the auth middleware and would run "
+                "unauthenticated. Use MCP_TRANSPORT=http (streamable-http) instead."
+            )
         host = os.getenv("MCP_HOST", "0.0.0.0")
         port = int(os.getenv("MCP_PORT", "8000"))
         mcp.run(transport="sse", host=host, port=port)

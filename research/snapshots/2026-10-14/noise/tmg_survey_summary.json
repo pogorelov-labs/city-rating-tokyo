@@ -1,0 +1,113 @@
+{
+  "source": "TMG 自動車交通騒音調査結果 常時監視測定地点 CSVs (CP932 decoded here)",
+  "fetched": "2026-10-14",
+  "day_def": "06:00-22:00",
+  "night_def": "22:00-06:00",
+  "years": [
+    {
+      "fiscal_year": 2019,
+      "file": "tmg_r1_jouji_monitoring.csv",
+      "rows_total": 345,
+      "points_with_day_night_leq": 284,
+      "day_leq": {
+        "n": 284,
+        "min": 53.0,
+        "median": 67.0,
+        "mean": 66.59,
+        "max": 76.0
+      },
+      "night_leq": {
+        "n": 284,
+        "min": 46.0,
+        "median": 63.0,
+        "mean": 63.02,
+        "max": 75.0
+      },
+      "day_night_gap_mean": 3.57
+    },
+    {
+      "fiscal_year": 2020,
+      "file": "tmg_r2_jouji_monitoring.csv",
+      "rows_total": 322,
+      "points_with_day_night_leq": 284,
+      "day_leq": {
+        "n": 284,
+        "min": 53.0,
+        "median": 66.0,
+        "mean": 65.83,
+        "max": 75.0
+      },
+      "night_leq": {
+        "n": 284,
+        "min": 33.0,
+        "median": 62.0,
+        "mean": 61.67,
+        "max": 74.0
+      },
+      "day_night_gap_mean": 4.17
+    },
+    {
+      "fiscal_year": 2021,
+      "file": "tmg_r3_jouji_monitoring.csv",
+      "rows_total": 307,
+      "points_with_day_night_leq": 280,
+      "day_leq": {
+        "n": 280,
+        "min": 55.0,
+        "median": 66.0,
+        "mean": 65.9,
+        "max": 75.0
+      },
+      "night_leq": {
+        "n": 280,
+        "min": 30.0,
+        "median": 62.0,
+        "mean": 62.02,
+        "max": 74.0
+      },
+      "day_night_gap_mean": 3.88
+    },
+    {
+      "fiscal_year": 2022,
+      "file": "tmg_r4_jouji_monitoring.csv",
+      "rows_total": 273,
+      "points_with_day_night_leq": 273,
+      "day_leq": {
+        "n": 273,
+        "min": 52.0,
+        "median": 66.0,
+        "mean": 66.25,
+        "max": 75.0
+      },
+      "night_leq": {
+        "n": 273,
+        "min": 47.0,
+        "median": 63.0,
+        "mean": 62.49,
+        "max": 74.0
+      },
+      "day_night_gap_mean": 3.75
+    },
+    {
+      "fiscal_year": 2023,
+      "file": "tmg_r5_jouji_monitoring.csv",
+      "rows_total": 267,
+      "points_with_day_night_leq": 267,
+      "day_leq": {
+        "n": 267,
+        "min": 54.0,
+        "median": 66.0,
+        "mean": 65.94,
+        "max": 74.0
+      },
+      "night_leq": {
+        "n": 267,
+        "min": 48.0,
+        "median": 62.0,
+        "mean": 62.28,
+        "max": 73.0
+      },
+      "day_night_gap_mean": 3.65
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+ "lat": 13.7526168,
+ "lon": 100.4933634,
+ "display_name": "เขตพระนคร, กรุงเทพมหานคร, 10200, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92053,
+ "type": "administrative",
+ "query": "Phra Nakhon, Bangkok, 10200, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "28/1 Phraeng Phuthon Road, San Chao Pho Suea, Phra Nakhon, Bangkok, 10200, Thailand",
+ "simplified_query": true
+}

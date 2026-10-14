@@ -1,0 +1,12 @@
+{
+ "lat": 35.6598689,
+ "lon": 139.7246876,
+ "display_name": "西麻布, 六本木通り, 西麻布三丁目, 西麻布, 港区, 東京都, 106-0031, 日本",
+ "osm_type": "node",
+ "osm_id": 2792751244,
+ "type": "bus_stop",
+ "query": "Nishiazabu 3-chome, Minato-ku, Tokyo, 106-0031, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 3-2-34 Nishiazabu, Minato-ku, Tokyo, 106-0031, Japan",
+ "simplified_query": true
+}

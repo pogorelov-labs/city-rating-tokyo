@@ -1,0 +1,12 @@
+{
+ "lat": 35.6805581,
+ "lon": 139.7715703,
+ "display_name": "nefi nihombashi, 4, 日本橋三丁目, 日本橋, 中央区, 東京都, 103-0027, 日本",
+ "osm_type": "way",
+ "osm_id": 187797769,
+ "type": "commercial",
+ "query": "Nihombashi 2-chome, Chuo-ku, Tokyo, 103-0027, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 2-10-11 Nihombashi, Chuo-ku, Tokyo, 103-0027, Japan",
+ "simplified_query": true
+}

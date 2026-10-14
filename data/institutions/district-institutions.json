@@ -1,0 +1,103 @@
+{
+ "_meta": {
+  "embassies": "OSM office=diplomatic + Wikidata, 79 POIs, ODbL 1.0 / CC0",
+  "computed": "2026-10-14"
+ },
+ "districts": {
+  "bang-rak": {
+   "embassies_within_800m": 3
+  },
+  "khlong-toei": {
+   "embassies_within_800m": 1
+  },
+  "pathum-wan": {
+   "embassies_within_800m": 9
+  },
+  "sathon": {
+   "embassies_within_800m": 2
+  },
+  "watthana": {
+   "embassies_within_800m": 1
+  }
+ },
+ "station_areas": {
+  "asok": {
+   "embassies_within_800m": 9
+  },
+  "charoen-nakhon": {
+   "embassies_within_800m": 2
+  },
+  "chit-lom": {
+   "embassies_within_800m": 19
+  },
+  "chong-nonsi": {
+   "embassies_within_800m": 10
+  },
+  "ekkamai": {
+   "embassies_within_800m": 1
+  },
+  "khlong-san": {
+   "embassies_within_800m": 1
+  },
+  "khlong-toei": {
+   "embassies_within_800m": 2
+  },
+  "lak-si": {
+   "embassies_within_800m": 1
+  },
+  "lumphini": {
+   "embassies_within_800m": 13
+  },
+  "nana": {
+   "embassies_within_800m": 10
+  },
+  "phaya-thai": {
+   "embassies_within_800m": 1
+  },
+  "phetchaburi": {
+   "embassies_within_800m": 3
+  },
+  "phloen-chit": {
+   "embassies_within_800m": 23
+  },
+  "phra-khanong": {
+   "embassies_within_800m": 1
+  },
+  "phra-ram-9": {
+   "embassies_within_800m": 2
+  },
+  "phrom-phong": {
+   "embassies_within_800m": 4
+  },
+  "ratchadamri": {
+   "embassies_within_800m": 6
+  },
+  "ratchathewi": {
+   "embassies_within_800m": 1
+  },
+  "saint-louis": {
+   "embassies_within_800m": 11
+  },
+  "sala-daeng": {
+   "embassies_within_800m": 8
+  },
+  "sam-yan": {
+   "embassies_within_800m": 1
+  },
+  "saphan-taksin": {
+   "embassies_within_800m": 1
+  },
+  "siam": {
+   "embassies_within_800m": 1
+  },
+  "surasak": {
+   "embassies_within_800m": 4
+  },
+  "thailand-cultural-centre": {
+   "embassies_within_800m": 2
+  },
+  "thong-lo": {
+   "embassies_within_800m": 3
+  }
+ }
+}

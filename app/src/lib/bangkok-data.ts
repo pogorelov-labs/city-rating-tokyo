@@ -80,6 +80,7 @@ export function getBangkokMapDistricts(): MapStation[] {
     min_transit: d.min_transit,
     elevation_m: null,
     seismic_risk_tier: null,
+    flood_exposed: d.flood?.exposed === true,
   }));
   return mapCache;
 }
@@ -143,6 +144,7 @@ export function getBangkokMapStationAreas(): MapStation[] {
     min_transit: a.min_transit,
     elevation_m: null,
     seismic_risk_tier: null,
+    flood_exposed: districtBySlug.get(a.district)?.flood?.exposed === true,
   }));
   return areaMapCache;
 }

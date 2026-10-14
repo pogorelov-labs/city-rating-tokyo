@@ -1,0 +1,71 @@
+Bangkok housing sweep — per-khet OSM building/station counts
+=============================================================
+
+Acquired: 2026-10-14, by the housing-sweep data agent.
+Method: Overpass API, one request per khet, seven `out count` blocks
+(building=apartments / residential / dormitory / commercial / mixed_use;
+building:levels>=20 via regex; railway=station with station~subway|light_rail|
+monorail), server-side `area(3600000000 + relation_id)` filters. Method as
+documented in research/bangkok/notes/2026-10-13-housing-crtky148.md section 2.
+
+Source
+------
+OpenStreetMap data via the Overpass API, mirrors used 2026-10-14:
+  - https://overpass-api.de/api/interpreter            (main instance)
+  - https://maps.mail.ru/osm/tools/overpass/api/interpreter
+  - https://overpass.kumi.systems/api/interpreter      (attempts only)
+  - https://overpass.private.coffee/api/interpreter    (attempts only)
+  - https://overpass.monicz.dev/api/interpreter        (attempts only)
+
+License
+-------
+(c) OpenStreetMap contributors, data licensed under the Open Database License
+(ODbL) v1.0 — every Overpass response carries: "The data included in this
+document is from www.openstreetmap.org. The data is made available under the
+Open Database License (ODbL)". Raw responses are preserved in raw/*.json.
+
+osm3s dump stamps (timestamp_osm_base per response)
+---------------------------------------------------
+Khet boundary registry (raw/registry.json, overpass-api.de):
+  2026-10-14T11:33:21Z
+
+46 swept khets (raw/<khet>.json), snapshots span 2026-10-14T11:38:25Z …
+2026-10-14T13:09:06Z; the exact per-row stamp and serving mirror are recorded
+in housing-bangkok.csv (columns `snapshot`, `mirror`) and mirrored in
+housing-bangkok.json (meta.sweep_snapshots, 37 distinct stamps).
+
+4 khets taken as counted in research/bangkok/notes/2026-10-13-housing-crtky148.md
+section 2 (not re-swept here):
+  watthana    2026-10-13T22:20Z  overpass-api.de
+  bang-na     2026-10-13T22:26Z  overpass-api.de
+  khlong-toei 2026-07-15T15:22Z  overpass.kumi.systems
+  huai-khwang 2026-07-15T15:22Z  overpass.monicz.dev
+
+Verification probes (2026-10-14, second mirror, independent queries):
+  min-buri residential=0     MATCH, snapshot 2026-10-14T13:11:07Z (maps.mail.ru)
+  prawet residential=0       MATCH, snapshot 2026-10-14T13:13:07Z (overpass-api.de)
+  lat-krabang apartments=353 MATCH, snapshot 2026-10-14T13:15:11Z (overpass-api.de)
+
+Caveats (carry over from the research note)
+-------------------------------------------
+- OSM building coverage of Bangkok is partial: every count is a *mapped*
+  lower bound, not real-world stock. Zeros are mapping gaps (verified as such).
+- towers_20plus is a lower bound by construction (Bangkok mappers tag no
+  10-19-floor band; `building:levels` >= 20 regex only).
+- stations_in_khet uses the station~subway|light_rail|monorail tag combination;
+  OSM `station=*` sub-tag coverage is patchy in the core (note section 5) —
+  indicative only, not shippable as a fact without normalization.
+- Rows come from different dump timestamps (see CSV); do not sum across rows
+  into a "single-date citywide" claim without restating snapshots.
+
+Files
+-----
+  housing-bangkok.json   50 khets {khet, buildings_total, apartments,
+                         residential, towers_20plus, stations_in_khet} + meta
+  housing-bangkok.csv    full per-khet detail (rel_id, quadrant, all 7 counts,
+                         snapshot, mirror, source)
+  raw/                   untouched Overpass JSON responses (registry + 46 khets)
+  sweep_overpass.py      sweep script (resumable; every attempt logged)
+  assemble.py            JSON/CSV builder
+  run.log                full attempt log: mirrors, HTTP codes, snapshots
+  results.json           intermediate parsed counts per khet

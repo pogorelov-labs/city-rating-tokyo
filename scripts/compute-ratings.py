@@ -238,6 +238,12 @@ def vibe_confidence(cultural, ped_streets):
 def main():
     parser = argparse.ArgumentParser(description="Compute data-driven ratings v2")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--no-strict",
+        action="store_true",
+        help="Do not exit 1 on spot-check divergences (debugging only — "
+             "refresh-ratings.sh relies on the strict default).",
+    )
     args = parser.parse_args()
 
     stations = load_stations()
@@ -644,6 +650,7 @@ def main():
         ("otemachi", {"safety": 9}),
         ("roppongi", {"food": 8, "nightlife": 9}),
     ]
+    spot_failures: list[str] = []
     for slug, expected in check_stations:
         if slug in results:
             r = results[slug]
@@ -655,6 +662,21 @@ def main():
                     warnings.append(f"{cat}: computed={actual} expected~{exp_val} DIFF={abs(actual-exp_val)}")
             warn_str = f"  ⚠️  {'; '.join(warnings)}" if warnings else ""
             print(f"  {slug:20s}: {vals}{warn_str}")
+            spot_failures.extend(f"{slug}: {w}" for w in warnings)
+
+    # Integrity gate (CRTKY-160): a diverging canary means the join broke —
+    # a print-only warning let corrupted output ship through refresh-ratings.sh.
+    if spot_failures:
+        print(
+            f"\nFATAL: {len(spot_failures)} spot-check divergence(s) beyond ±3 — "
+            "the daytime-population join or a source ingest has likely broken. "
+            "Not writing to NocoDB.",
+            file=sys.stderr,
+        )
+        if args.no_strict:
+            print("  (--no-strict passed — continuing anyway)", file=sys.stderr)
+        else:
+            sys.exit(1)
 
     if args.dry_run:
         print("\nDry run — not writing to NocoDB.")

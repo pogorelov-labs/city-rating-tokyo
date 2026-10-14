@@ -1,0 +1,160 @@
+2026-10-14T11:39:41Z registry ok: 50 khets mapped, snapshot=2026-10-14T11:33:21Z
+2026-10-14T11:39:41Z todo 46 khets, order: bang-phlat bang-rak bang-sue bangkok-noi bangkok-yai chatuchak din-daeng don-mueang dusit lak-si lat-phrao pathum-wan phaya-thai phra-nakhon pom-prap-sattru-phai ratchathewi samphanthawong suan-luang taling-chan thawi-watthana wang-thonglang bang-kapi bang-khen bueng-kum khan-na-yao khlong-sam-wa lat-krabang min-buri nong-chok sai-mai saphan-sung bang-bon bang-khae bang-kho-laem bang-khun-thian chom-thong khlong-san nong-khaem phasi-charoen phra-khanong rat-burana sathon thon-buri thung-khru yan-nawa prawet
+2026-10-14T11:39:44Z OK bang-phlat (NW) overpass-api.de 3.4s snapshot=2026-10-14T11:38:25Z {'apartments': 20, 'residential': 4, 'dormitory': 0, 'commercial': 6, 'mixed_use': 0, 'towers_20plus': 6, 'stations_in_khet': 4}
+2026-10-14T11:41:33Z RETRY bang-rak overpass.kumi.systems http=504
+2026-10-14T11:44:40Z RETRY bang-rak overpass.private.coffee http=504
+2026-10-14T11:46:28Z registry ok: 50 khets mapped, snapshot=2026-10-14T11:33:21Z
+2026-10-14T11:46:28Z todo 46 khets, order: bang-phlat bang-rak bang-sue bangkok-noi bangkok-yai chatuchak din-daeng don-mueang dusit lak-si lat-phrao pathum-wan phaya-thai phra-nakhon pom-prap-sattru-phai ratchathewi samphanthawong suan-luang taling-chan thawi-watthana wang-thonglang bang-kapi bang-khen bueng-kum khan-na-yao khlong-sam-wa lat-krabang min-buri nong-chok sai-mai saphan-sung bang-bon bang-khae bang-kho-laem bang-khun-thian chom-thong khlong-san nong-khaem phasi-charoen phra-khanong rat-burana sathon thon-buri thung-khru yan-nawa prawet
+2026-10-14T11:46:35Z OK bang-rak (NW) overpass-api.de 6.5s snapshot=2026-10-14T11:44:40Z {'apartments': 65, 'residential': 635, 'dormitory': 2, 'commercial': 733, 'mixed_use': 0, 'towers_20plus': 44, 'stations_in_khet': 5}
+2026-10-14T11:46:45Z RETRY bang-sue overpass-api.de http=504
+2026-10-14T11:48:09Z RETRY bang-sue overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T11:49:33Z RETRY bang-sue overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T11:50:57Z RETRY bang-sue overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T11:51:00Z -- bang-sue: full mirror round 1/20 failed, sleep 30s
+2026-10-14T11:51:40Z RETRY bang-sue overpass-api.de http=504
+2026-10-14T11:53:03Z RETRY bang-sue overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T11:54:27Z RETRY bang-sue overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T11:55:33Z registry ok: 50 khets mapped, snapshot=2026-10-14T11:33:21Z
+2026-10-14T11:55:33Z todo 46 khets, order: bang-phlat bang-rak bang-sue bangkok-noi bangkok-yai chatuchak din-daeng don-mueang dusit lak-si lat-phrao pathum-wan phaya-thai phra-nakhon pom-prap-sattru-phai ratchathewi samphanthawong suan-luang taling-chan thawi-watthana wang-thonglang bang-kapi bang-khen bueng-kum khan-na-yao khlong-sam-wa lat-krabang min-buri nong-chok sai-mai saphan-sung bang-bon bang-khae bang-kho-laem bang-khun-thian chom-thong khlong-san nong-khaem phasi-charoen phra-khanong rat-burana sathon thon-buri thung-khru yan-nawa prawet
+2026-10-14T11:55:35Z OK bang-sue (NW) overpass-api.de 2.1s snapshot=2026-10-14T11:53:51Z {'apartments': 39, 'residential': 7, 'dormitory': 2, 'commercial': 15, 'mixed_use': 0, 'towers_20plus': 8, 'stations_in_khet': 4}
+2026-10-14T11:56:13Z OK bangkok-noi (NW) overpass-api.de 8.0s snapshot=2026-10-14T11:54:51Z {'apartments': 7, 'residential': 6, 'dormitory': 6, 'commercial': 44, 'mixed_use': 0, 'towers_20plus': 5, 'stations_in_khet': 2}
+2026-10-14T11:56:52Z RETRY bangkok-yai overpass-api.de http=504
+2026-10-14T11:58:16Z RETRY bangkok-yai overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T11:59:39Z RETRY bangkok-yai overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:01:04Z RETRY bangkok-yai overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:01:09Z RETRY bangkok-yai overpass.osm.jp URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'overpass.osm.jp'
+2026-10-14T12:01:29Z OK bangkok-yai (NW) maps.mail.ru/osm/tools/overpass 17.0s snapshot=2026-10-14T11:59:57Z {'apartments': 12, 'residential': 6, 'dormitory': 0, 'commercial': 0, 'mixed_use': 0, 'towers_20plus': 2, 'stations_in_khet': 3}
+2026-10-14T12:02:07Z RETRY chatuchak overpass-api.de http=504
+2026-10-14T12:03:31Z RETRY chatuchak overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:04:55Z RETRY chatuchak overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:06:19Z RETRY chatuchak overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:06:23Z RETRY chatuchak overpass.osm.jp URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'overpass.osm.jp'
+2026-10-14T12:07:12Z OK chatuchak (NW) maps.mail.ru/osm/tools/overpass 45.4s snapshot=2026-10-14T12:05:01Z {'apartments': 113, 'residential': 357, 'dormitory': 10, 'commercial': 51, 'mixed_use': 0, 'towers_20plus': 15, 'stations_in_khet': 14}
+2026-10-14T12:07:55Z RETRY din-daeng overpass-api.de http=504
+2026-10-14T12:09:18Z RETRY din-daeng overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:10:42Z RETRY din-daeng overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:12:06Z RETRY din-daeng overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:12:10Z RETRY din-daeng overpass.osm.jp URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'overpass.osm.jp'
+2026-10-14T12:12:59Z registry ok: 50 khets mapped, snapshot=2026-10-14T11:33:21Z
+2026-10-14T12:12:59Z todo 46 khets, order: bang-phlat bang-rak bang-sue bangkok-noi bangkok-yai chatuchak din-daeng don-mueang dusit lak-si lat-phrao pathum-wan phaya-thai phra-nakhon pom-prap-sattru-phai ratchathewi samphanthawong suan-luang taling-chan thawi-watthana wang-thonglang bang-kapi bang-khen bueng-kum khan-na-yao khlong-sam-wa lat-krabang min-buri nong-chok sai-mai saphan-sung bang-bon bang-khae bang-kho-laem bang-khun-thian chom-thong khlong-san nong-khaem phasi-charoen phra-khanong rat-burana sathon thon-buri thung-khru yan-nawa prawet
+2026-10-14T12:13:03Z OK din-daeng (NW) overpass-api.de 3.5s snapshot=2026-10-14T12:11:06Z {'apartments': 511, 'residential': 1, 'dormitory': 0, 'commercial': 141, 'mixed_use': 0, 'towers_20plus': 14, 'stations_in_khet': 5}
+2026-10-14T12:13:37Z OK don-mueang (NW) overpass-api.de 4.8s snapshot=2026-10-14T12:12:06Z {'apartments': 7, 'residential': 755, 'dormitory': 0, 'commercial': 3, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 3}
+2026-10-14T12:14:15Z RETRY dusit overpass-api.de http=504
+2026-10-14T12:14:21Z RETRY dusit maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:14:49Z RETRY dusit overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:15:18Z RETRY dusit overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:15:48Z RETRY dusit overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:15:51Z -- dusit: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:16:41Z OK dusit (NW) overpass-api.de 5.3s snapshot=2026-10-14T12:15:07Z {'apartments': 76, 'residential': 4, 'dormitory': 8, 'commercial': 79, 'mixed_use': 0, 'towers_20plus': 7, 'stations_in_khet': 0}
+2026-10-14T12:17:20Z RETRY lak-si overpass-api.de http=504
+2026-10-14T12:17:41Z OK lak-si (NW) maps.mail.ru/osm/tools/overpass 18.0s snapshot=2026-10-14T12:16:08Z {'apartments': 84, 'residential': 0, 'dormitory': 0, 'commercial': 13, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 4}
+2026-10-14T12:18:19Z RETRY lat-phrao overpass-api.de http=504
+2026-10-14T12:18:38Z OK lat-phrao (NW) maps.mail.ru/osm/tools/overpass 15.4s snapshot=2026-10-14T12:17:10Z {'apartments': 2, 'residential': 1, 'dormitory': 0, 'commercial': 13, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:19:12Z OK pathum-wan (NW) overpass-api.de 4.6s snapshot=2026-10-14T12:18:09Z {'apartments': 126, 'residential': 35, 'dormitory': 21, 'commercial': 712, 'mixed_use': 0, 'towers_20plus': 66, 'stations_in_khet': 9}
+2026-10-14T12:19:51Z OK phaya-thai (NW) overpass-api.de 8.6s snapshot=2026-10-14T12:18:09Z {'apartments': 128, 'residential': 19, 'dormitory': 4, 'commercial': 83, 'mixed_use': 0, 'towers_20plus': 26, 'stations_in_khet': 3}
+2026-10-14T12:20:28Z RETRY phra-nakhon overpass-api.de http=504
+2026-10-14T12:20:34Z RETRY phra-nakhon maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:21:03Z RETRY phra-nakhon overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:21:31Z RETRY phra-nakhon overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:22:01Z RETRY phra-nakhon overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:22:04Z -- phra-nakhon: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:22:57Z RETRY phra-nakhon overpass-api.de http=504
+2026-10-14T12:23:15Z OK phra-nakhon (NW) maps.mail.ru/osm/tools/overpass 15.7s snapshot=2026-10-14T12:22:21Z {'apartments': 29, 'residential': 38, 'dormitory': 0, 'commercial': 1117, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 2}
+2026-10-14T12:23:54Z RETRY pom-prap-sattru-phai overpass-api.de http=504
+2026-10-14T12:24:13Z OK pom-prap-sattru-phai (NW) maps.mail.ru/osm/tools/overpass 15.4s snapshot=2026-10-14T12:22:21Z {'apartments': 7, 'residential': 47, 'dormitory': 0, 'commercial': 609, 'mixed_use': 0, 'towers_20plus': 1, 'stations_in_khet': 0}
+2026-10-14T12:24:50Z RETRY ratchathewi overpass-api.de http=504
+2026-10-14T12:24:56Z RETRY ratchathewi maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:25:24Z RETRY ratchathewi overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:25:53Z RETRY ratchathewi overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:26:23Z RETRY ratchathewi overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:26:26Z -- ratchathewi: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:27:26Z RETRY ratchathewi overpass-api.de http=504
+2026-10-14T12:27:44Z OK ratchathewi (NW) maps.mail.ru/osm/tools/overpass 15.6s snapshot=2026-10-14T12:26:21Z {'apartments': 47, 'residential': 32, 'dormitory': 1, 'commercial': 19, 'mixed_use': 0, 'towers_20plus': 23, 'stations_in_khet': 4}
+2026-10-14T12:28:24Z RETRY samphanthawong overpass-api.de http=504
+2026-10-14T12:28:29Z RETRY samphanthawong maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:28:57Z RETRY samphanthawong overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:29:26Z RETRY samphanthawong overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:29:56Z RETRY samphanthawong overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:29:59Z -- samphanthawong: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:30:52Z RETRY samphanthawong overpass-api.de http=504
+2026-10-14T12:31:21Z OK samphanthawong (NW) maps.mail.ru/osm/tools/overpass 26.7s snapshot=2026-10-14T12:29:26Z {'apartments': 10, 'residential': 78, 'dormitory': 0, 'commercial': 911, 'mixed_use': 0, 'towers_20plus': 2, 'stations_in_khet': 1}
+2026-10-14T12:32:00Z RETRY suan-luang overpass-api.de http=504
+2026-10-14T12:32:20Z OK suan-luang (NW) maps.mail.ru/osm/tools/overpass 17.4s snapshot=2026-10-14T12:30:27Z {'apartments': 17, 'residential': 10, 'dormitory': 0, 'commercial': 7, 'mixed_use': 0, 'towers_20plus': 16, 'stations_in_khet': 3}
+2026-10-14T12:32:59Z RETRY taling-chan overpass-api.de http=504
+2026-10-14T12:33:03Z RETRY taling-chan maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:33:34Z RETRY taling-chan overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:34:03Z RETRY taling-chan overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:34:32Z RETRY taling-chan overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:34:35Z -- taling-chan: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:35:28Z RETRY taling-chan overpass-api.de http=504
+2026-10-14T12:36:20Z RETRY taling-chan maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:36:49Z RETRY taling-chan overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:37:17Z RETRY taling-chan overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:37:47Z RETRY taling-chan overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:37:50Z -- taling-chan: full mirror round 2/40 failed, sleep 45s
+2026-10-14T12:38:45Z OK taling-chan (NW) overpass-api.de 9.7s snapshot=2026-10-14T12:37:32Z {'apartments': 14, 'residential': 0, 'dormitory': 4, 'commercial': 6, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:39:23Z RETRY thawi-watthana overpass-api.de http=504
+2026-10-14T12:40:14Z OK thawi-watthana (NW) maps.mail.ru/osm/tools/overpass 47.5s snapshot=2026-10-14T12:37:32Z {'apartments': 6, 'residential': 375, 'dormitory': 8, 'commercial': 62, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:40:47Z OK wang-thonglang (NW) overpass-api.de 3.1s snapshot=2026-10-14T12:39:33Z {'apartments': 10, 'residential': 20, 'dormitory': 0, 'commercial': 10, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 4}
+2026-10-14T12:41:25Z RETRY bang-kapi overpass-api.de http=504
+2026-10-14T12:41:46Z OK bang-kapi (NE) maps.mail.ru/osm/tools/overpass 17.4s snapshot=2026-10-14T12:39:33Z {'apartments': 25, 'residential': 57, 'dormitory': 0, 'commercial': 4, 'mixed_use': 0, 'towers_20plus': 6, 'stations_in_khet': 4}
+2026-10-14T12:42:19Z OK bang-khen (NE) overpass-api.de 3.7s snapshot=2026-10-14T12:40:36Z {'apartments': 29, 'residential': 0, 'dormitory': 0, 'commercial': 5, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 12}
+2026-10-14T12:42:51Z OK bueng-kum (NE) overpass-api.de 1.9s snapshot=2026-10-14T12:41:39Z {'apartments': 35, 'residential': 290, 'dormitory': 0, 'commercial': 71, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:43:29Z RETRY khan-na-yao overpass-api.de http=504
+2026-10-14T12:43:55Z OK khan-na-yao (NE) maps.mail.ru/osm/tools/overpass 23.0s snapshot=2026-10-14T12:41:39Z {'apartments': 22, 'residential': 99, 'dormitory': 0, 'commercial': 13, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 5}
+2026-10-14T12:44:35Z RETRY khlong-sam-wa overpass-api.de http=504
+2026-10-14T12:44:52Z OK khlong-sam-wa (NE) maps.mail.ru/osm/tools/overpass 13.5s snapshot=2026-10-14T12:42:39Z {'apartments': 0, 'residential': 293, 'dormitory': 0, 'commercial': 2, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:45:27Z OK lat-krabang (NE) overpass-api.de 5.1s snapshot=2026-10-14T12:43:40Z {'apartments': 353, 'residential': 31, 'dormitory': 85, 'commercial': 23, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:46:04Z RETRY min-buri overpass-api.de http=504
+2026-10-14T12:46:09Z RETRY min-buri maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:46:38Z RETRY min-buri overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:47:06Z RETRY min-buri overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:47:36Z RETRY min-buri overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:47:39Z -- min-buri: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:48:30Z RETRY min-buri overpass-api.de http=504
+2026-10-14T12:48:46Z OK min-buri (NE) maps.mail.ru/osm/tools/overpass 13.0s snapshot=2026-10-14T12:46:43Z {'apartments': 3, 'residential': 0, 'dormitory': 0, 'commercial': 6, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 4}
+2026-10-14T12:49:24Z RETRY nong-chok overpass-api.de http=504
+2026-10-14T12:49:30Z RETRY nong-chok maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T12:49:58Z RETRY nong-chok overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T12:50:27Z RETRY nong-chok overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T12:50:56Z RETRY nong-chok overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T12:50:59Z -- nong-chok: full mirror round 1/40 failed, sleep 45s
+2026-10-14T12:51:46Z OK nong-chok (NE) overpass-api.de 2.2s snapshot=2026-10-14T12:49:50Z {'apartments': 2, 'residential': 91, 'dormitory': 3, 'commercial': 51, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:52:28Z RETRY sai-mai overpass-api.de http=504
+2026-10-14T12:52:39Z OK sai-mai (NE) maps.mail.ru/osm/tools/overpass 8.3s snapshot=2026-10-14T12:50:51Z {'apartments': 0, 'residential': 16, 'dormitory': 0, 'commercial': 3, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:53:14Z OK saphan-sung (NE) overpass-api.de 5.1s snapshot=2026-10-14T12:51:51Z {'apartments': 0, 'residential': 0, 'dormitory': 0, 'commercial': 1, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:53:52Z RETRY bang-bon overpass-api.de http=504
+2026-10-14T12:54:08Z OK bang-bon (SW) maps.mail.ru/osm/tools/overpass 12.5s snapshot=2026-10-14T12:51:51Z {'apartments': 2, 'residential': 277, 'dormitory': 0, 'commercial': 0, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:54:43Z OK bang-khae (SW) overpass-api.de 4.9s snapshot=2026-10-14T12:52:51Z {'apartments': 7, 'residential': 610, 'dormitory': 0, 'commercial': 3, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 2}
+2026-10-14T12:55:16Z OK bang-kho-laem (SW) overpass-api.de 3.3s snapshot=2026-10-14T12:53:50Z {'apartments': 20, 'residential': 2, 'dormitory': 0, 'commercial': 40, 'mixed_use': 0, 'towers_20plus': 4, 'stations_in_khet': 0}
+2026-10-14T12:55:57Z OK bang-khun-thian (SW) overpass-api.de 10.7s snapshot=2026-10-14T12:54:51Z {'apartments': 109, 'residential': 1, 'dormitory': 2, 'commercial': 47, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:56:39Z OK chom-thong (SW) overpass-api.de 11.9s snapshot=2026-10-14T12:54:51Z {'apartments': 6, 'residential': 35, 'dormitory': 0, 'commercial': 0, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:57:17Z RETRY khlong-san overpass-api.de http=504
+2026-10-14T12:57:39Z OK khlong-san (SW) maps.mail.ru/osm/tools/overpass 18.9s snapshot=2026-10-14T12:55:56Z {'apartments': 30, 'residential': 7, 'dormitory': 0, 'commercial': 7, 'mixed_use': 0, 'towers_20plus': 18, 'stations_in_khet': 2}
+2026-10-14T12:58:12Z OK nong-khaem (SW) overpass-api.de 3.1s snapshot=2026-10-14T12:56:58Z {'apartments': 21, 'residential': 1199, 'dormitory': 0, 'commercial': 1, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T12:58:51Z RETRY phasi-charoen overpass-api.de http=504
+2026-10-14T12:59:44Z RETRY phasi-charoen maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T13:00:12Z RETRY phasi-charoen overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T13:00:41Z RETRY phasi-charoen overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T13:01:11Z RETRY phasi-charoen overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T13:01:14Z -- phasi-charoen: full mirror round 1/40 failed, sleep 45s
+2026-10-14T13:02:09Z OK phasi-charoen (SW) overpass-api.de 10.2s snapshot=2026-10-14T13:00:01Z {'apartments': 139, 'residential': 4, 'dormitory': 0, 'commercial': 3, 'mixed_use': 0, 'towers_20plus': 3, 'stations_in_khet': 5}
+2026-10-14T13:02:52Z RETRY phra-khanong overpass-api.de http=504
+2026-10-14T13:03:18Z OK phra-khanong (SW) maps.mail.ru/osm/tools/overpass 23.2s snapshot=2026-10-14T13:02:01Z {'apartments': 25, 'residential': 10, 'dormitory': 0, 'commercial': 2, 'mixed_use': 0, 'towers_20plus': 4, 'stations_in_khet': 2}
+2026-10-14T13:04:02Z RETRY rat-burana overpass-api.de http=504
+2026-10-14T13:04:21Z OK rat-burana (SW) maps.mail.ru/osm/tools/overpass 15.1s snapshot=2026-10-14T13:02:01Z {'apartments': 16, 'residential': 0, 'dormitory': 0, 'commercial': 0, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T13:05:02Z RETRY sathon overpass-api.de http=504
+2026-10-14T13:05:07Z RETRY sathon maps.mail.ru/osm/tools/overpass http=504
+2026-10-14T13:05:36Z RETRY sathon overpass.kumi.systems TimeoutError: The read operation timed out
+2026-10-14T13:06:05Z RETRY sathon overpass.private.coffee TimeoutError: The read operation timed out
+2026-10-14T13:06:34Z RETRY sathon overpass.monicz.dev TimeoutError: The read operation timed out
+2026-10-14T13:06:37Z -- sathon: full mirror round 1/40 failed, sleep 45s
+2026-10-14T13:07:30Z RETRY sathon overpass-api.de http=504
+2026-10-14T13:07:51Z OK sathon (SW) maps.mail.ru/osm/tools/overpass 17.3s snapshot=2026-10-14T13:06:05Z {'apartments': 150, 'residential': 62, 'dormitory': 2, 'commercial': 272, 'mixed_use': 0, 'towers_20plus': 41, 'stations_in_khet': 0}
+2026-10-14T13:08:26Z OK thon-buri (SW) overpass-api.de 4.8s snapshot=2026-10-14T13:07:06Z {'apartments': 10, 'residential': 5, 'dormitory': 0, 'commercial': 3, 'mixed_use': 0, 'towers_20plus': 7, 'stations_in_khet': 3}
+2026-10-14T13:08:59Z OK thung-khru (SW) overpass-api.de 3.3s snapshot=2026-10-14T13:07:06Z {'apartments': 83, 'residential': 65, 'dormitory': 0, 'commercial': 4, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 0}
+2026-10-14T13:09:37Z RETRY yan-nawa overpass-api.de http=504
+2026-10-14T13:09:57Z OK yan-nawa (SW) maps.mail.ru/osm/tools/overpass 17.2s snapshot=2026-10-14T13:08:06Z {'apartments': 67, 'residential': 31, 'dormitory': 0, 'commercial': 424, 'mixed_use': 0, 'towers_20plus': 15, 'stations_in_khet': 0}
+2026-10-14T13:10:34Z RETRY prawet overpass-api.de http=504
+2026-10-14T13:11:01Z OK prawet (SE) maps.mail.ru/osm/tools/overpass 23.8s snapshot=2026-10-14T13:09:06Z {'apartments': 16, 'residential': 0, 'dormitory': 0, 'commercial': 7, 'mixed_use': 0, 'towers_20plus': 0, 'stations_in_khet': 3}
+2026-10-14T13:11:31Z sweep finished: 50 khets counted in total (incl. 4 from note)

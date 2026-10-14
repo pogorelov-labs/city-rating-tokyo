@@ -4,7 +4,7 @@ Export computed ratings from NocoDB to demo-ratings.ts.
 Preserves AI-researched entries (those with descriptions) from existing file.
 Replaces heuristic entries with data-driven computed ratings.
 
-Usage: python3 scripts/export-ratings.py [--dry-run] [--output PATH] [--allow-missing]
+Usage: python3 scripts/export-ratings.py [--dry-run] [--output PATH] [--allow-missing] [--allow-transit-default]
 
 By default the script fails (exit 1) if any station in stations.json has no
 computed rating, which prevents shipping a partial demo-ratings.ts. Pass
@@ -332,6 +332,13 @@ def main():
         help="Allow stations with no computed rating instead of failing (exit 1). "
              "Use for partial runs where a new station has not yet been scraped.",
     )
+    parser.add_argument(
+        "--allow-transit-default",
+        action="store_true",
+        help="Allow stations missing from transit-times.json to ship with the "
+             "fabricated 30-minute default commute instead of failing (exit 1). "
+             "Debugging only — CRTKY-81 should cover all 1493 stations.",
+    )
     args = parser.parse_args()
 
     output_path = Path(args.output)
@@ -373,6 +380,15 @@ def main():
         transit_raw = json.loads(transit_path.read_text())
         transit_times = transit_raw.get("transit_times", {})
     print(f"  Transit times: {len(transit_times)} stations")
+
+    # Integrity gate (CRTKY-160): count stations that would ship with the
+    # fabricated 30-minute default commute (missing from transit-times.json
+    # or missing individual hub keys) — checked after the build, before write.
+    TRANSIT_KEYS = ("shibuya", "shinjuku", "tokyo", "ikebukuro", "shinagawa")
+    transit_default_slugs = [
+        s for s in sorted(all_slugs)
+        if any(k not in transit_times.get(s, {}) for k in TRANSIT_KEYS)
+    ]
 
     # 5. Build output
     ai_count = 0
@@ -483,6 +499,8 @@ def main():
               f"{' …' if len(ai_de_missing) > 10 else ''}")
     print(f"  Computed (data-driven):    {computed_count}")
     print(f"  Missing (no data):         {missing_count}")
+    print(f"  Transit-default commute:   {len(transit_default_slugs)}"
+          f"{' ⚠️ fabricated 30 min' if transit_default_slugs else ''}")
     print(f"  Total entries:             {ai_count + computed_count}")
     print(f"  Output size:               {len(output_content)} chars")
 
@@ -491,6 +509,19 @@ def main():
             f"\nERROR: {missing_count} station(s) lack a computed rating (whole entry, or daily_essentials on an AI-researched entry). "
             "Refusing to write a partial demo-ratings.ts. "
             "Re-run compute-ratings.py, or pass --allow-missing to override.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    # Integrity gate (CRTKY-160): the silent `t.get(key, 30)` fallback in
+    # format_ratings_entry ships five fabricated commute minutes per station.
+    if transit_default_slugs and not args.allow_transit_default:
+        print(
+            f"\nERROR: {len(transit_default_slugs)} station(s) are missing from "
+            "transit-times.json and would ship with the fabricated 30-minute "
+            f"default commute: {', '.join(transit_default_slugs[:10])}"
+            f"{' …' if len(transit_default_slugs) > 10 else ''}. "
+            "Re-run scripts/compute-transit-times.py, or pass --allow-transit-default to override.",
             file=sys.stderr,
         )
         sys.exit(1)

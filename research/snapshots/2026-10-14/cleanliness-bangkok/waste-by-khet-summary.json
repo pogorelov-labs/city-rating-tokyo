@@ -1,0 +1,45 @@
+{
+ "source": "data.go.th dataset 731a8cb0-d563-45ca-93ae-52e3de47e474 (BMA)",
+ "obtained_via": "Internet Archive Wayback snapshot 2023-12-20 (live portal WAF-blocked 2026-10-14)",
+ "license": "CC BY (Creative Commons Attribution) per data.go.th metadata",
+ "rows": 51,
+ "khets_covered": 50,
+ "code_1000_meaning": "อื่นๆ (other/unclassified, NOT a city total) — per data dictionary garbage.docx",
+ "years_be": [
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61
+ ],
+ "years_ad": [
+  2010,
+  2011,
+  2012,
+  2013,
+  2014,
+  2015,
+  2016,
+  2017,
+  2018
+ ],
+ "citywide_tons_excl_1000": {
+  "2010": 3011002.7,
+  "2011": 3248679.68,
+  "2012": 3318561.67,
+  "2013": 3421722.6,
+  "2014": 3415086.43,
+  "2015": 3487019.53,
+  "2016": 3508137.12,
+  "2017": 3660137.61,
+  "2018": 3692869.44
+ },
+ "data_quality_flags": [
+  "per-day column inconsistent with tonnage column in several rows (e.g. dcode 1002 garbage55=116.37 vs neighbors ~116k; several garbageperday58=0.00)",
+  "dataset last updated 2020-06-04 (per docx); data ends at BE 2561 / AD 2018"
+ ]
+}

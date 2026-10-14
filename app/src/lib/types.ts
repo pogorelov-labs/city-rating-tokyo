@@ -95,6 +95,16 @@ export interface EnvironmentData {
   seismic_prob_i60?: number;
   seismic_prob_i55?: number;
   seismic_risk_tier?: SeismicRiskTier;
+  /** Official TMG flood-zone flag (CRTKY-187) — replaces the SRTM<5 m
+   *  elevation proxy for the flood dealbreaker. true = ≥0.5 m expected
+   *  inundation depth within 100 m of the station (TMG 浸水予想区域図). */
+  flood_exposed?: boolean;
+  flood_depth_m?: number;
+  /** Embassies within 800 m (CRTKY-190) — OSM/Wikidata, ODbL/CC0. */
+  embassies_800m?: number;
+  /** English-speaking medical facilities within 2 km (CRTKY-190, Tokyo) —
+   *  JNTO guide, counts only, no row republication. */
+  english_medicine_2km?: number;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';
@@ -210,6 +220,9 @@ export interface MapStation {
    *  lives on the detail-page `Station` — this boolean keeps the RSC payload
    *  to 1 bit per station (~30 stations flagged today out of 1493). */
   hasLiveCamera?: boolean;
+  /** Bangkok flood dealbreaker flag (districts + station areas inherit their
+   *  district's flag). Tokyo uses `elevation_m < 5` instead. */
+  flood_exposed?: boolean;
   // confidence is NOT included here on purpose: it was ~226 KB of the RSC
   // payload with 1493 stations and is only needed on the station detail page
   // (which uses the full Station type via getStation). If compare-panel
@@ -290,6 +303,26 @@ export interface DistrictRent {
   updated: string;
 }
 
+/**
+ * Flood exposure per Bangkok district (CRTKY-186): reported street-flooding
+ * episodes 2021–2026 (BMA Drainage Dept via ThaiFloodRisk, CC BY 4.0) plus
+ * the GISTDA 2011 satellite flood share. `exposed` is the dealbreaker flag —
+ * see build.py `flood_exposed` for the threshold rationale. Tokyo has no
+ * equivalent field (it uses `elevation_m < 5`).
+ */
+export interface DistrictFlood {
+  episodes_total: number;
+  episodes_by_year: Record<string, number>;
+  days_total: number;
+  max_height_cm: number | null;
+  median_duration_min: number | null;
+  /** % of district area flooded in 2011 (GISTDA satellite). */
+  share_flooded_2011_pct: number | null;
+  share_flooded_2012_2024_pct: number | null;
+  /** Dealbreaker flag: ≥30 episodes 2021–2026 OR ≥50% flooded in 2011. */
+  exposed: boolean;
+}
+
 export interface District {
   slug: string;
   name_en: string;
@@ -315,6 +348,8 @@ export interface District {
   neighbors: string[];
   aliases: string[];
   facts: DistrictFacts;
+  /** Flood exposure (Bangkok only). */
+  flood?: DistrictFlood;
   description: MultilingualDescription | null;
   image: DistrictImage | null;
   /** Wikipedia article URLs by language, when an article exists. */

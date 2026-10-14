@@ -1,0 +1,26 @@
+[
+ {
+  "slug": "spring-tower",
+  "name": "WeWork Spring Tower",
+  "address": "Phayathai Rd Khwaeng Thung Phaya Thai, Khet Ratchathewi Bangkok, Bangkok 10400",
+  "lat": "13.753711",
+  "lng": "100.531647",
+  "detail_url": "https://www.wework.com/buildings/spring-tower--bangkok"
+ },
+ {
+  "slug": "t-one-building",
+  "name": "WeWork T-One Building",
+  "address": "8 Soi Sukhumvit 40, 15-17, 20, 25-27Fl. Khet Khlong Toei, Krung Thep Maha Nakhon Bangkok, Bangkok 10110",
+  "lat": "13.722563",
+  "lng": "100.58068",
+  "detail_url": "https://www.wework.com/buildings/t-one-building--bangkok"
+ },
+ {
+  "slug": "the-parq",
+  "name": "WeWork The Parq",
+  "address": "88 The Parq Building, 7th-8th Floor Ratchadaphisek Road, Klongtoey Sub-district, Klongtoey District Bangkok, Bangkok 10110",
+  "lat": "13.721001",
+  "lng": "100.558629",
+  "detail_url": "https://www.wework.com/buildings/the-parq--bangkok"
+ }
+]

@@ -1,0 +1,34 @@
+# Licences — research/snapshots/2026-10-14/embassies/
+
+Snapshot date: 2026-10-14 (fetched live this day).
+
+## overpass-bangkok.json, overpass-tokyo.json
+- Source: OpenStreetMap via Overpass API (mirror overpass.kumi.systems; overpass-api.de returned 504 on this machine)
+- Query: `nwr["office"="diplomatic"] + nwr["diplomatic"]` within city bbox
+  (Bangkok 13.47,100.30,13.98,100.96 — repo `scripts/bangkok/static_data.py:195`;
+   Tokyo 35.5,139.2,36.0,139.9 — same bbox as research note CRTKY-180)
+- OSM base snapshot: Bangkok 2026-06-01T08:52:28Z, Tokyo 2026-07-24T11:04:51Z (from osm3s in response)
+- Licence: ODbL 1.0 (c) OpenStreetMap contributors, https://www.openstreetmap.org/copyright
+- URL: https://overpass-api.de/ (+ mirrors)
+
+## wikidata-bangkok.json, wikidata-tokyo.json, wikidata-operators.json
+- Source: Wikidata Query Service (query.wikidata.org/sparql)
+- Query: P31=Q3917681 (embassy) AND (P159 = wd:Q1861 Bangkok / wd:Q1490 Tokyo,
+  direct or via P131* chain); supplementary pull of P137 (operator = represented
+  country), P1027, P17 (host country), P625, P576
+- Licence: CC0 1.0 (Wikidata), https://www.wikidata.org/wiki/Wikidata:Licensing
+- URLs: https://query.wikidata.org/sparql
+
+## embassies-bangkok.geojson, embassies-tokyo.geojson, summary.json
+- Derived products of the two sources above. Same licences apply per contribution:
+  OSM-derived attributes under ODbL, Wikidata-derived attributes under CC0.
+- Country attribution of Wikidata items (P137 labels) is CC0.
+
+## Note
+- No third-party copyright-restricted data was used (unlike JNTO/JMIP in
+  CRTKY-180, which are NOT part of this direction).
+- The `data_noise` exclusion records OSM object way/… "Consulate of Syldavia"
+  (fictional country, Tintin) — kept out of features, evidence in summary.json.
+
+Suitable for site publication (OSM attribution required for the OSM-derived
+part; CC0 part needs no attribution).

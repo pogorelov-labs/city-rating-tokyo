@@ -1,0 +1,12 @@
+{
+ "lat": 13.7461522,
+ "lon": 100.5310235,
+ "display_name": "เขตปทุมวัน, กรุงเทพมหานคร, 10330, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92063,
+ "type": "administrative",
+ "query": "Pathum Wan, Bangkok, 10330, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "Mahatun Plaza, 888/28-29 Phloen Chit Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+ "simplified_query": true
+}

@@ -1,0 +1,95 @@
+{
+ "source": "NIES tenbou.nies.go.jp/download 大気汚染常時監視データ",
+ "years": {
+  "2019": {
+   "11": {
+    "file": "TM20190011.zip",
+    "stations": 83
+   },
+   "12": {
+    "file": "TM20190012.zip",
+    "stations": 125
+   },
+   "13": {
+    "file": "TM20190013.zip",
+    "stations": 99
+   },
+   "14": {
+    "file": "TM20190014.zip",
+    "stations": 92
+   }
+  },
+  "2020": {
+   "11": {
+    "file": "TM20200011.zip",
+    "stations": 83
+   },
+   "12": {
+    "file": "TM20200012.zip",
+    "stations": 125
+   },
+   "13": {
+    "file": "TM20200013.zip",
+    "stations": 89
+   },
+   "14": {
+    "file": "TM20200014.zip",
+    "stations": 92
+   }
+  },
+  "2021": {
+   "11": {
+    "file": "TM20210011.zip",
+    "stations": 83
+   },
+   "12": {
+    "file": "TM20210012.zip",
+    "stations": 122
+   },
+   "13": {
+    "file": "TM20210013.zip",
+    "stations": 88
+   },
+   "14": {
+    "file": "TM20210014.zip",
+    "stations": 94
+   }
+  },
+  "2022": {
+   "11": {
+    "file": "TM20220011.zip",
+    "stations": 83
+   },
+   "12": {
+    "file": "TM20220012.zip",
+    "stations": 121
+   },
+   "13": {
+    "file": "TM20220013.zip",
+    "stations": 91
+   },
+   "14": {
+    "file": "TM20220014.zip",
+    "stations": 92
+   }
+  },
+  "2023": {
+   "11": {
+    "file": "TM20230011.zip",
+    "stations": 81
+   },
+   "12": {
+    "file": "TM20230012.zip",
+    "stations": 115
+   },
+   "13": {
+    "file": "TM20230013.zip",
+    "stations": 87
+   },
+   "14": {
+    "file": "TM20230014.zip",
+    "stations": 92
+   }
+  }
+ }
+}

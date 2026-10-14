@@ -1,0 +1,12 @@
+{
+ "lat": 35.6390225,
+ "lon": 139.7202426,
+ "display_name": "白金台五丁目, 白金台, 港区, 東京都, 108-0071, 日本",
+ "osm_type": "relation",
+ "osm_id": 18773157,
+ "type": "administrative",
+ "query": "Shirokanedai 5-chome, Minato-ku, Tokyo, 108-0071, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 5-17-9 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+ "simplified_query": true
+}

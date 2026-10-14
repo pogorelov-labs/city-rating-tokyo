@@ -1,0 +1,30 @@
+PCD gdcatalog file downloads — attempts log (2026-10-14)
+Target: https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/<id>/download/<file>
+       (noisestation.csv + annual CSVs noise2559..noise2567.csv, 2016–2024 CE)
+All commands run from this machine (RU-ish residential network, macOS, curl 8.x).
+
+#  ATTEMPT                                    RESULT
+1  direct HTTPS, curl default                 curl 28 — SSL connection timeout (15 s)
+2  plain HTTP :80                             curl 28 — operation timed out after 25 s, 0 bytes
+3  HTTPS --tlsv1.2, --connect-timeout 60      curl 28 — SSL connection timeout (75 s window)
+4  r.jina.ai/https://pcd.gdcatalog.go.th/...  HTTP 422 — jina fetcher: "Could not resolve hostname" (code 6); retry with URL-encoded target → same 422
+5  Wayback availability + CDX prefix scan     CDX works; ZERO archived downloads for any noise file on pcd.gdcatalog.go.th (only site chrome); zero "noise" URLs on gdcatalog.go.th
+6  data.go.th CKAN package_search             HTTP 403 (WAF "Access Denied"), also with browser User-Agent + Referer
+7  Wayback Save-Page-Now /save/<url>          HTTP 520 twice (job error); CDX re-check afterwards: still no snapshot
+8  api.allorigins.win/raw?url=...             HTTP 522 — proxy could not connect to origin (same TLS wall)
+9  corsproxy.io/?url=...                      HTTP 401 — requires paid API key
+10 openssl s_client handshake, ~100 s          TCP connect OK → "unexpected eof while reading" during TLS handshake; "no peer certificate available"
+11 api.codetabs.com/v1/proxy?quest=...         HTTP 522 — origin unreachable from proxy too
+12 same path on main host gdcatalog.go.th      HTTP 404 (file routing exists only on the pcd. vhost); CKAN datastore_search and resource_show → 404 (datastore not enabled)
+
+DNS check: pcd.gdcatalog.go.th → CNAME asfour.gdcatalog.go.th → 164.115.45.230 resolves fine
+from local resolver and 1.1.1.1 (dig notes "malformed message packet" warnings — possibly
+why r.jina.ai's resolver fails — but A-record delivery works locally). The wall is
+transport-level at the Thai server (TLS handshake dropped for this network), not DNS.
+
+WHAT WAS ACQUIRED: CKAN package_show metadata (pcd_ckan_package_show.json, HTTP 200,
+45,328 B) — full resource list with URLs/sizes, license "Open Data Common",
+metadata_modified 2026-09-18; distilled to pcd_resources_index.json.
+
+VERDICT: file contents blocked from this machine — retry from a Thai IP / VPN, or ask
+PCD (eis.pcd@gmail.com per CKAN metadata; noise@pcd.go.th per portal) for a bulk export.

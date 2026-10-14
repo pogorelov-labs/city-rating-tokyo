@@ -1,0 +1,24 @@
+LICENSE / PROVENANCE — air-bangkok snapshot
+Snapshot date: 2026-10-14
+
+1) Yearly PM2.5 workbooks 2011–2020 (wayback_rar_2011_2020/PM2.5(2011..2020).xlsx + original_download.rar)
+   Source dataset: "gdpublish-air-quality-bangkok-metropolitan-region"
+   Title (th): ข้อมูลคุณภาพอากาศจากจุดตรวจวัดคุณภาพอากาศอัตโนมัติพื้นที่กรุงเทพมหานครและปริมณฑล
+   Publisher: กรมควบคุมมลพิษ (Pollution Control Department, PCD), Ministry of Natural Resources and Environment, Thailand
+   Catalog: gdcatalog.go.th (Thai Government Open Data catalog), CKAN license_title: "Open Data Common"
+   Original resource URLs (pcd.gdcatalog.go.th — listed in gdcatalog_package_show.json)
+   Files acquired from: Internet Archive / Wayback Machine capture of the official .rar bundle
+     https://web.archive.org/web/20220622044235if_/https://pcd.gdcatalog.go.th/dataset/78495048-ce78-4b53-b6b9-63610fc9e841/resource/d15285e8-d00f-4da0-8607-659dc86ce8c0/download/.rar
+   Download date: 2026-10-14
+   Content: daily PM2.5 readings per automatic monitoring station (Air4Thai network), Bangkok Metropolitan Region,
+   one workbook per CE year; sheet "PM2.5" = dates x station IDs, sheet "รายละเอียด" = station metadata.
+   License note: catalog states "Open Data Common" (license_url absent in CKAN metadata). Thai government
+   open-data portal content; reuse per Open Data Commons. If the exact license applicability is in doubt,
+   treat as: INTERNAL ONLY — not for site publication without license review.
+
+2) gdcatalog_package_show.json — raw CKAN package_show response (metadata), same dataset/license.
+   air4thai_history_stations.json — station registry from https://air4thai.com/forweb/getHistoryStation.php
+   (PCD Air4Thai public API, no auth), fetched 2026-10-14. Same publisher/license posture as above.
+   xlsx_summary.json, download_manifest.json — locally produced machine-readable summaries of the above.
+
+INTERNAL ONLY — not for site publication (license verification pending).

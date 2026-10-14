@@ -890,11 +890,22 @@ def main() -> None:
     schema = json.loads(SCHEMA_CONSTANTS.read_text())
     default_weights = schema["default_weights"]
     editorial = json.loads((DATA / "editorial.json").read_text())["districts"]
+    flood_doc = json.loads((DATA / "flood.json").read_text())
+    flood = flood_doc["districts"]
+
+    def flood_exposed(f: dict) -> bool:
+        """Flood dealbreaker flag: ≥30 reported episodes 2021–2026 (22/50
+        districts) OR ≥50% of the district flooded in 2011 (GISTDA satellite;
+        covers districts with ~0 recent reports — Nong Chok, Thawi Watthana).
+        The two signals are complementary, not redundant (research note §1.2)."""
+        return f["episodes_total"] >= 30 or (f["share_flooded_2011_pct"] or 0) >= 50
 
     print("→ districts")
     districts = load_districts()
     missing_editorial = {d["slug"] for d in districts} - set(editorial)
     assert not missing_editorial, f"editorial.json missing {missing_editorial}"
+    missing_flood = {d["slug"] for d in districts} - set(flood)
+    assert not missing_flood, f"flood.json missing {missing_flood} — run scripts/bangkok/fetch-flood.py"
     for d in districts:
         area = d["geom"].area / 1e6
         wd_area = d["wd"]["area_km2"]
@@ -1414,6 +1425,7 @@ def main() -> None:
             "neighbors": d["neighbors"],
             "aliases": e["aliases"],
             "facts": d["facts"],
+            "flood": {**flood[slug], "exposed": flood_exposed(flood[slug])},
             "description": description_for(slug),
             "image": image_for(d),
             "wikipedia": d["wd"]["wikipedia"],

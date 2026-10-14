@@ -1,0 +1,12 @@
+{
+ "lat": 35.6563155,
+ "lon": 139.7271714,
+ "display_name": "中国大使館, 33, 元麻布三丁目, 元麻布, 港区, 東京都, 106-0046, 日本",
+ "osm_type": "relation",
+ "osm_id": 2880718,
+ "type": "diplomatic",
+ "query": "Motoazabu 3-chome, Minato-ku, Tokyo, 106-0046, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 3-10-5 Motoazabu, Minato-ku, Tokyo, 106-0046, Japan",
+ "simplified_query": true
+}

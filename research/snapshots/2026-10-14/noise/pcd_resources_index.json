@@ -1,0 +1,124 @@
+{
+  "dataset": "gdpublish-noise-monitor",
+  "dataset_id": "3a4c2d5e-510f-4fbc-873a-10ccb72f79f6",
+  "title_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง",
+  "publisher": "กรมควบคุมมลพิษ (Pollution Control Department, PCD), MNRE Thailand",
+  "license_id": "Open Data Common",
+  "license_title": "Open Data Common",
+  "metadata_modified": "2026-09-18T07:58:25.561045",
+  "ckan_api_verified": "https://gdcatalog.go.th/api/3/action/package_show?id=gdpublish-noise-monitor (HTTP 200, 2026-10-14)",
+  "files_downloaded": 0,
+  "note": "All 11 resource files live on pcd.gdcatalog.go.th which is unreachable from this machine (TCP connects, TLS handshake killed). Metadata and license verified via CKAN API.",
+  "resources": [
+    {
+      "resource_id": "3f8dfb40-45fe-418c-a98f-5f3934cb2fcb",
+      "name_th": "รายชื่อสถานีตรวจวัดระดับเสียง",
+      "year_be": null,
+      "year_ce": null,
+      "format": "CSV",
+      "size_bytes": 2614,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/72d31081-3996-4c33-b64e-382b1ab3d34a/download/noisestation.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "ee622f25-0fb7-42d4-8bf1-9864ef27bafb",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2559",
+      "year_be": 2559,
+      "year_ce": 2016,
+      "format": "CSV",
+      "size_bytes": 311342,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/a7e5305e-8554-4893-9d6c-ac5ce59a33e7/download/noise2559.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "aa4ac58b-99ae-44c3-a57e-d83358dd4caa",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2560",
+      "year_be": 2560,
+      "year_ce": 2017,
+      "format": "CSV",
+      "size_bytes": 321769,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/0e2991ae-e18c-41a4-bf4c-42a3aef8307e/download/noise2560.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "d88cc4d1-c42d-4813-a322-e8e94596e63c",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2561",
+      "year_be": 2561,
+      "year_ce": 2018,
+      "format": "CSV",
+      "size_bytes": 307239,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/df856d61-d1fe-4b25-873a-e3ef249eabcd/download/noise2561.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "8ca9c13f-8f9a-4512-b70f-ef5e2fab9a43",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2562",
+      "year_be": 2562,
+      "year_ce": 2019,
+      "format": "CSV",
+      "size_bytes": 325293,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/cebd2708-7783-4e5f-a2ee-3fcdb11a2abd/download/noise2562.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "b0763776-d81f-4d54-b7e1-a66e4a4955cc",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2563",
+      "year_be": 2563,
+      "year_ce": 2020,
+      "format": "CSV",
+      "size_bytes": 331197,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/b2e9ca72-07be-4578-8ef1-dec6300f4d94/download/noise2563.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "ad5d50ed-fe0d-421a-bc75-366be0ee5ab7",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2564",
+      "year_be": 2564,
+      "year_ce": 2021,
+      "format": "CSV",
+      "size_bytes": 317566,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/58cd92bd-d2b9-440e-98c0-54d0c4323491/download/noise2564.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "2f057b16-5a80-44b1-a26d-ab8d24443404",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2565",
+      "year_be": 2565,
+      "year_ce": 2022,
+      "format": "CSV",
+      "size_bytes": 315779,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/118825c8-a46b-4915-8200-82ba3f456e6b/download/noise2565.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "18df6583-0201-443d-bf13-8d8c9bc30356",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2566",
+      "year_be": 2566,
+      "year_ce": 2023,
+      "format": "CSV",
+      "size_bytes": 330891,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/3ee7041e-5598-461e-8400-62e2bb038f9a/download/noise-2566.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "4c0e0a1a-f277-4211-948e-585b23bbfc63",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2567",
+      "year_be": 2567,
+      "year_ce": 2024,
+      "format": "CSV",
+      "size_bytes": 317499,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/b8740989-a03b-4dde-85ac-a01448245ee0/download/noise2567.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    },
+    {
+      "resource_id": "c738e96b-befa-4ae3-a048-a162679417c8",
+      "name_th": "ข้อมูลค่าระดับเสียงจากสถานีตรวจวัดระดับเสียง ปี 2568",
+      "year_be": 2568,
+      "year_ce": 2025,
+      "format": "CSV",
+      "size_bytes": 166672,
+      "url": "https://pcd.gdcatalog.go.th/dataset/3a4c2d5e-510f-4fbc-873a-10ccb72f79f6/resource/d8c4cfac-98e6-4ec7-add5-b80dd9a9553d/download/daily_noise_opendata_2568.csv",
+      "download_status": "blocked (host pcd.gdcatalog.go.th unreachable, 2026-10-14)"
+    }
+  ]
+}

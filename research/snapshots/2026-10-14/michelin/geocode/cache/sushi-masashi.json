@@ -1,0 +1,12 @@
+{
+ "lat": 35.6711007,
+ "lon": 139.7186301,
+ "display_name": "日本オラクル, 8, 北青山二丁目, 北青山, 港区, 東京都, 107-0061, 日本",
+ "osm_type": "node",
+ "osm_id": 13299480798,
+ "type": "company",
+ "query": "Kitaaoyama 2-chome, Minato-ku, Tokyo, 107-0061, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "7F, 2-9-9 Kitaaoyama, Minato-ku, Tokyo, 107-0061, Japan",
+ "simplified_query": true
+}

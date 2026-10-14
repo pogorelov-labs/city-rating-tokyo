@@ -1,0 +1,12 @@
+{
+ "lat": 35.670113,
+ "lon": 139.765481,
+ "display_name": "銀座五丁目, 銀座, 中央区, 東京都, 104-0061, 日本",
+ "osm_type": "relation",
+ "osm_id": 4859105,
+ "type": "administrative",
+ "query": "Ginza 5-chome, Chuo-ku, Tokyo, 104-0061, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 5-1-8 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+ "simplified_query": true
+}

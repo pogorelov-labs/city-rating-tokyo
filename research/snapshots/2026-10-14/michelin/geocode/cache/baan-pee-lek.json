@@ -1,0 +1,12 @@
+{
+ "lat": 13.7213599,
+ "lon": 100.6978082,
+ "display_name": "เขตประเวศ, กรุงเทพมหานคร, 10250, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 3146414,
+ "type": "administrative",
+ "query": "Prawet, Bangkok, 10250, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "39 Chalermprakhet 9 Soi 9, Nong Bon, Prawet, Bangkok, 10250, Thailand",
+ "simplified_query": true
+}

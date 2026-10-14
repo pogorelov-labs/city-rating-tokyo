@@ -1,0 +1,12 @@
+{
+ "lat": 13.7678209,
+ "lon": 100.598274,
+ "display_name": "เขตวังทองหลาง, กรุงเทพมหานคร, 10310, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 2939956,
+ "type": "administrative",
+ "query": "Wang Thonglang, Bangkok, 10310, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "273/4 Soi Ramkhamhaeng 21, Ramkhamhaeng Road, Wang Thonglang, Bangkok, 10310, Thailand",
+ "simplified_query": true
+}

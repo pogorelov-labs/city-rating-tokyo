@@ -1,0 +1,243 @@
+[
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "54T"
+    ],
+    "data_rows": 367,
+    "date_min": "2011-01-01",
+    "date_max": "2011-12-31",
+    "cells_with_value": 366,
+    "cells_empty_or_na": 0,
+    "year": 2011,
+    "file": "wayback_rar_2011_2020/PM2.5(2011).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "54T"
+    ],
+    "data_rows": 367,
+    "date_min": "2012-01-01",
+    "date_max": "2012-12-31",
+    "cells_with_value": 367,
+    "cells_empty_or_na": 0,
+    "year": 2012,
+    "file": "wayback_rar_2011_2020/PM2.5(2012).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "54T",
+      "27T"
+    ],
+    "data_rows": 366,
+    "date_min": "2013-01-01",
+    "date_max": "2013-12-31",
+    "cells_with_value": 731,
+    "cells_empty_or_na": 0,
+    "year": 2013,
+    "file": "wayback_rar_2011_2020/PM2.5(2013).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "61T",
+      "54T",
+      "27T"
+    ],
+    "data_rows": 366,
+    "date_min": "2014-01-01",
+    "date_max": "2014-12-31",
+    "cells_with_value": 1096,
+    "cells_empty_or_na": 2,
+    "year": 2014,
+    "file": "wayback_rar_2011_2020/PM2.5(2014).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "59T ",
+      "61T",
+      "54T ",
+      "27T"
+    ],
+    "data_rows": 366,
+    "date_min": "2015-01-01",
+    "date_max": "2015-12-31",
+    "cells_with_value": 1461,
+    "cells_empty_or_na": 0,
+    "year": 2015,
+    "file": "wayback_rar_2011_2020/PM2.5(2015).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "05T",
+      "59T",
+      "61T ",
+      "52T ",
+      "54T ",
+      "08T ",
+      "27T "
+    ],
+    "data_rows": 367,
+    "date_min": "2016-01-01",
+    "date_max": "2016-12-31",
+    "cells_with_value": 2563,
+    "cells_empty_or_na": 0,
+    "year": 2016,
+    "file": "wayback_rar_2011_2020/PM2.5(2016).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "05T",
+      "59T",
+      "61T",
+      "50T",
+      "52T",
+      "53T",
+      "54T",
+      "08T",
+      "19T",
+      "27T"
+    ],
+    "data_rows": 366,
+    "date_min": "2017-01-01",
+    "date_max": "2017-12-31",
+    "cells_with_value": 3651,
+    "cells_empty_or_na": 0,
+    "year": 2017,
+    "file": "wayback_rar_2011_2020/PM2.5(2017).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "รายละเอียด"
+    ],
+    "stations": [
+      "05T",
+      "10T",
+      "11T",
+      "59T",
+      "61T",
+      "03T",
+      "50T",
+      "52T",
+      "53T",
+      "54T",
+      "08T",
+      "14T",
+      "17T",
+      "18T",
+      "19T",
+      "20T",
+      "27T"
+    ],
+    "data_rows": 366,
+    "date_min": "2018-01-01",
+    "date_max": "2018-12-31",
+    "cells_with_value": 6206,
+    "cells_empty_or_na": 0,
+    "year": 2018,
+    "file": "wayback_rar_2011_2020/PM2.5(2018).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "พารามิเตอร์_สถานี"
+    ],
+    "stations": [
+      "02T",
+      "05T",
+      "10T",
+      "11T",
+      "12T",
+      "59T",
+      "61T",
+      "03T",
+      "50T",
+      "52T",
+      "53T",
+      "54T",
+      "08T",
+      "13T",
+      "14T",
+      "16T",
+      "17T",
+      "18T",
+      "19T",
+      "20T",
+      "22T",
+      "27T",
+      "81T"
+    ],
+    "data_rows": 366,
+    "date_min": "2019-01-01",
+    "date_max": "2019-12-31",
+    "cells_with_value": 8396,
+    "cells_empty_or_na": 0,
+    "year": 2019,
+    "file": "wayback_rar_2011_2020/PM2.5(2019).xlsx"
+  },
+  {
+    "sheets": [
+      "PM2.5",
+      "พารามิเตอร์_สถานี"
+    ],
+    "stations": [
+      "02T",
+      "05T",
+      "10T",
+      "11T",
+      "12T",
+      "59T",
+      "61T",
+      "03T",
+      "50T",
+      "52T",
+      "53T",
+      "54T",
+      "08T",
+      "13T",
+      "14T",
+      "16T",
+      "17T",
+      "18T",
+      "19T",
+      "20T",
+      "22T",
+      "27T",
+      "81T"
+    ],
+    "data_rows": 367,
+    "date_min": "2020-01-01",
+    "date_max": "2020-12-31",
+    "cells_with_value": 8419,
+    "cells_empty_or_na": 0,
+    "year": 2020,
+    "file": "wayback_rar_2011_2020/PM2.5(2020).xlsx"
+  }
+]

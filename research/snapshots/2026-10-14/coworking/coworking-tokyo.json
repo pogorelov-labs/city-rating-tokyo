@@ -1,0 +1,954 @@
+{
+ "dataset": "coworking-tokyo",
+ "city": "Tokyo",
+ "captured_at": "2026-10-14",
+ "method": "curated chain locators (public location pages), editorial candidate data; OSM rejected",
+ "count": 105,
+ "locations": [
+  {
+   "name": "WeWork ギンザシックス",
+   "brand": "WeWork",
+   "address": "東京都中央区銀座6-10-1 GINZA SIX 13F",
+   "postal_code": "104-0061",
+   "lat": 35.6695908,
+   "lng": 139.764069,
+   "source_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/ginza-six"
+  },
+  {
+   "name": "WeWork 日比谷FORT TOWER",
+   "brand": "WeWork",
+   "address": "東京都港区西新橋1-1-1 10F",
+   "postal_code": "105-0003",
+   "lat": 35.670129,
+   "lng": 139.752928,
+   "source_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/hibiya-fort-tower"
+  },
+  {
+   "name": "WeWork 日比谷パークフロント",
+   "brand": "WeWork",
+   "address": "東京都千代田区内幸町2-1-6 日比谷パークフロント 19F",
+   "postal_code": "100-0011",
+   "lat": 35.671223,
+   "lng": 139.7538048,
+   "source_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/hibiya-park-front"
+  },
+  {
+   "name": "WeWork 品川",
+   "brand": "WeWork",
+   "address": "東京都港区高輪4-10-18 京急第1ビル 13F",
+   "postal_code": "108-0074",
+   "lat": 35.628855,
+   "lng": 139.736569,
+   "source_url": "https://www.wework.co.jp/location/tokyo/gotanda-area/shinagawa"
+  },
+  {
+   "name": "WeWork TK 池田山",
+   "brand": "WeWork",
+   "address": "東京都品川区東五反田5-22-33 TK池田山ビル 2F",
+   "postal_code": "141-0022",
+   "lat": 35.62809649999999,
+   "lng": 139.7221267,
+   "source_url": "https://www.wework.co.jp/location/tokyo/gotanda-area/tk-ikedayama"
+  },
+  {
+   "name": "WeWork 東京ポートシティ竹芝",
+   "brand": "WeWork",
+   "address": "東京都港区海岸1-7-1 東京ポートシティ竹芝 10F",
+   "postal_code": "105-7510",
+   "lat": 35.6550112,
+   "lng": 139.7613438,
+   "source_url": "https://www.wework.co.jp/location/tokyo/hamamatsucho-area/tokyo-portcity-takeshiba"
+  },
+  {
+   "name": "WeWork Daiwa 晴海",
+   "brand": "WeWork",
+   "address": "東京都中央区晴海3-10-1 Daiwa晴海ビル 2F",
+   "postal_code": "104-0053",
+   "lat": 35.6540555,
+   "lng": 139.7792145,
+   "source_url": "https://www.wework.co.jp/location/tokyo/harumi-area/daiwa-harumi"
+  },
+  {
+   "name": "WeWork Hareza 池袋",
+   "brand": "WeWork",
+   "address": "東京都豊島区東池袋1-18-1 Hareza Tower 20F",
+   "postal_code": "170-0013",
+   "lat": 35.732402,
+   "lng": 139.7155294,
+   "source_url": "https://www.wework.co.jp/location/tokyo/ikebukuro-area/hareza-ikebukuro"
+  },
+  {
+   "name": "WeWork メトロポリタンプラザビル",
+   "brand": "WeWork",
+   "address": "東京都豊島区西池袋1-11-1 メトロポリタンプラザビル 14F",
+   "postal_code": "171-0021",
+   "lat": 35.7289678,
+   "lng": 139.7096039,
+   "source_url": "https://www.wework.co.jp/location/tokyo/ikebukuro-area/metropolitan-plaza-building"
+  },
+  {
+   "name": "WeWork 神保町",
+   "brand": "WeWork",
+   "address": "東京都千代田区神田神保町2-11-15 2F",
+   "postal_code": "101-0051",
+   "lat": 35.695405,
+   "lng": 139.756784,
+   "source_url": "https://www.wework.co.jp/location/tokyo/kanda-jimbocho-area/jimbocho"
+  },
+  {
+   "name": "WeWork KANDA SQUARE",
+   "brand": "WeWork",
+   "address": "東京都千代田区神田錦町2-2-1 KANDA SQUARE 11F",
+   "postal_code": "101-0054",
+   "lat": 35.6932143,
+   "lng": 139.7632165,
+   "source_url": "https://www.wework.co.jp/location/tokyo/kanda-jimbocho-area/kanda-square"
+  },
+  {
+   "name": "WeWork KABUTO ONE",
+   "brand": "WeWork",
+   "address": "東京都中央区日本橋兜町7-1",
+   "postal_code": "103-0026",
+   "lat": 35.68152169686719,
+   "lng": 139.77827718968206,
+   "source_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/kabuto-one"
+  },
+  {
+   "name": "WeWork 丸の内北口",
+   "brand": "WeWork",
+   "address": "東京都千代田区丸の内1-6-5 丸の内北口ビルディング 9F",
+   "postal_code": "100-0005",
+   "lat": 35.6839627,
+   "lng": 139.766878,
+   "source_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/marunouchi-kitaguchi"
+  },
+  {
+   "name": "WeWork 日本生命日本橋ビル",
+   "brand": "WeWork",
+   "address": "東京都中央区日本橋2-13-12 日本生命日本橋ビル 4F",
+   "postal_code": "103-0027",
+   "lat": 35.6806587,
+   "lng": 139.7756399,
+   "source_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/nippon-life-nihonbashi-building"
+  },
+  {
+   "name": "WeWork 東京スクエアガーデン",
+   "brand": "WeWork",
+   "address": "東京都中央区京橋3-1-1 東京スクエアガーデン 14F",
+   "postal_code": "104-0031",
+   "lat": 35.6760575,
+   "lng": 139.768882,
+   "source_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/tokyo-square-garden"
+  },
+  {
+   "name": "WeWork 赤坂グリーンクロス",
+   "brand": "WeWork",
+   "address": "東京都港区赤坂2-4-6 赤坂グリーンクロス6F",
+   "postal_code": "107-0052",
+   "lat": 35.67211421415673,
+   "lng": 139.74055175698328,
+   "source_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/akasaka-green-cross"
+  },
+  {
+   "name": "WeWork アークヒルズサウス",
+   "brand": "WeWork",
+   "address": "東京都港区六本木1-4-5 アークヒルズサウスタワー 16F",
+   "postal_code": "106-0032",
+   "lat": 35.6657028,
+   "lng": 139.7393806,
+   "source_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/ark-hills-south"
+  },
+  {
+   "name": "WeWork 神谷町トラストタワー",
+   "brand": "WeWork",
+   "address": "東京都港区虎ノ門4-1-1 神谷町トラストタワー 23F",
+   "postal_code": "105-6923",
+   "lat": 35.6650161,
+   "lng": 139.7454071,
+   "source_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/kamiyacho-trust-tower"
+  },
+  {
+   "name": "WeWork KDX 虎ノ門１丁目",
+   "brand": "WeWork",
+   "address": "東京都港区虎ノ門1-10-5 KDX虎ノ門一丁目ビル 11F",
+   "postal_code": "105-0001",
+   "lat": 35.66841900000001,
+   "lng": 139.750634,
+   "source_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/kdx-toranomon-1-chome"
+  },
+  {
+   "name": "WeWork 城山トラストタワー",
+   "brand": "WeWork",
+   "address": "東京都港区虎ノ門4-3-1 城山トラストタワー 21F",
+   "postal_code": "105-6021",
+   "lat": 35.6646397,
+   "lng": 139.7430889,
+   "source_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/shiroyama-trust-tower"
+  },
+  {
+   "name": "WeWork アイスバーグ",
+   "brand": "WeWork",
+   "address": "東京都渋谷区神宮前 6-12-18 The Iceberg 1F",
+   "postal_code": "150-0001",
+   "lat": 35.6663045,
+   "lng": 139.7042606,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/iceberg"
+  },
+  {
+   "name": "WeWork 乃木坂",
+   "brand": "WeWork",
+   "address": "東京都港区南青山1-24-3 1F",
+   "postal_code": "107-0062",
+   "lat": 35.667567,
+   "lng": 139.7265296,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/nogizaka"
+  },
+  {
+   "name": "WeWork 渋谷スクランブルスクエア",
+   "brand": "WeWork",
+   "address": "東京都渋谷区渋谷2-24-12 渋谷スクランブルスクエア 39F",
+   "postal_code": "150-6139",
+   "lat": 35.6584638,
+   "lng": 139.7022621,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/shibuya-scramble-square"
+  },
+  {
+   "name": "WeWork ジ アーガイル アオヤマ",
+   "brand": "WeWork",
+   "address": "東京都港区北青山 2-14-4 the ARGYLE aoyama 6F",
+   "postal_code": "107-0061",
+   "lat": 35.6695526,
+   "lng": 139.7159731,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/the-argyle-aoyama"
+  },
+  {
+   "name": "WeWork Dタワー 西新宿",
+   "brand": "WeWork",
+   "address": "東京都新宿区西新宿6-11-3 Dタワー西新宿 16F",
+   "postal_code": "160-0023",
+   "lat": 35.6948108,
+   "lng": 139.689912,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shinjuku-nishishinjuku-area/d-tower-nishishinjuku"
+  },
+  {
+   "name": "WeWork リンクスクエア新宿",
+   "brand": "WeWork",
+   "address": "東京都渋谷区千駄ヶ谷5-27-5 リンクスクエア新宿 16F",
+   "postal_code": "151-0051",
+   "lat": 35.68652749999999,
+   "lng": 139.7028382,
+   "source_url": "https://www.wework.co.jp/location/tokyo/shinjuku-nishishinjuku-area/link-square-shinjuku"
+  },
+  {
+   "name": "WeWork 半蔵門 PREX North",
+   "brand": "WeWork",
+   "address": "東京都千代田区麹町2-3-2 半蔵門PREX North 2F",
+   "postal_code": "102-0083",
+   "lat": 35.684089,
+   "lng": 139.7404994,
+   "source_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/hanzomon-prex-north"
+  },
+  {
+   "name": "WeWork 半蔵門 PREX South",
+   "brand": "WeWork",
+   "address": "東京都千代田区麹町2-5-1 半蔵門PREX South 2F",
+   "postal_code": "102-0083",
+   "lat": 35.68368470000001,
+   "lng": 139.7408045,
+   "source_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/hanzomon-prex-south"
+  },
+  {
+   "name": "WeWork 日テレ四谷ビル",
+   "brand": "WeWork",
+   "address": "東京都千代田区麹町5-3-23 日テレ四谷ビル 1F",
+   "postal_code": "102-0083",
+   "lat": 35.68417579999999,
+   "lng": 139.733811,
+   "source_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/nippon-tv-yotsuya-building"
+  },
+  {
+   "name": "WeWork 麹町",
+   "brand": "WeWork",
+   "address": "東京都千代田区麹町6-6-2 番町麹町ビルディング 5F",
+   "postal_code": "102-0083",
+   "lat": 35.6857022,
+   "lng": 139.7320324,
+   "source_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/tokyu-yotsuya"
+  },
+  {
+   "name": "Kamiyacho MT Building",
+   "brand": "Regus",
+   "address": "4-3-20 Toranomon 14F Kamiyacho MT Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0001",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/189"
+  },
+  {
+   "name": "Shinjyuku Park Tower",
+   "brand": "Regus",
+   "address": "3-7-1 Nishi-Shinjuku 30F, Shinjuku Park Tower N Building Shinjuku-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "163-1030",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/190"
+  },
+  {
+   "name": "Otemachi 1st Square",
+   "brand": "Regus",
+   "address": "1-5-1 Otemachi 4F Otemachi First Square Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-0004",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/284"
+  },
+  {
+   "name": "ARK Mori Building",
+   "brand": "Regus",
+   "address": "1-12-32 Akasaka 12F Ark Mori Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-6012",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/560"
+  },
+  {
+   "name": "Shibuya Mark City",
+   "brand": "Regus",
+   "address": "1-12-1 Dogenzaka 22F/16F Shibuya Mark City W Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0043",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/578"
+  },
+  {
+   "name": "Kabutocho 1st Heiwa Building",
+   "brand": "Regus",
+   "address": "5-1 Nihonbashi Kabutocho 3F Kabutocho 1st Heiwa Bldg Chuo-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "103-0026",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/663"
+  },
+  {
+   "name": "Pacific Century Place Marunouchi",
+   "brand": "Regus",
+   "address": "1-11-1 Marunouchi Level 13 Pacific Century Place Marunouchi Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-6213",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/665"
+  },
+  {
+   "name": "Arca Central Building",
+   "brand": "Regus",
+   "address": "1-2-1 Kinshi 14F Arca Central Sumida-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "130-0013",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/690"
+  },
+  {
+   "name": "Yurakucho Building",
+   "brand": "Regus",
+   "address": "2-7-1 Yurakucho 12F Yurakucho ITOCiA Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-0006",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/841"
+  },
+  {
+   "name": "Shinbashi Tokyo Building",
+   "brand": "Regus",
+   "address": "4-21-3 Shimbashi Shimbashi Tokyu Building 2F/3F Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0004",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/1386"
+  },
+  {
+   "name": "Shinagawa East One Tower",
+   "brand": "Regus",
+   "address": "2-16-1 Konan 4F Shinagawa East One Tower Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "108-0075",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/1547"
+  },
+  {
+   "name": "5F Daiwa Azabu Terrace",
+   "brand": "Regus",
+   "address": "3-20-1 Minamiazabu 5F Daiwa Azabu Terrace Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "106-0047",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/1560"
+  },
+  {
+   "name": "Shiodome Building",
+   "brand": "Regus",
+   "address": "1-2-20 Kaigan 3F Shiodome Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/1597"
+  },
+  {
+   "name": "Akasaka Business Place",
+   "brand": "Regus",
+   "address": "2-14-5 Akasaka 7F Daiwa Akasaka Building Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0052",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2002"
+  },
+  {
+   "name": "Azabu East Court",
+   "brand": "Regus",
+   "address": "2-22-5 Higashi Azabu 1F Azabu East Court Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "106-0044",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2003"
+  },
+  {
+   "name": "Akasaka Business Court",
+   "brand": "Regus",
+   "address": "4-7-6 Akasaka 2F/3F/4F Akasaka Buisiness Court Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0052",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2004"
+  },
+  {
+   "name": "Nogizaka Business Court",
+   "brand": "Regus",
+   "address": "1-20-2 Minami Aoyama 1F/2F/3F Nogizaka Business Court Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0062",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2005"
+  },
+  {
+   "name": "DF Building",
+   "brand": "Regus",
+   "address": "2-2-8 Minami Aoyama 5F/6F/10F DF Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0062",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2008"
+  },
+  {
+   "name": "Daiichi Nirasawa Building",
+   "brand": "Regus",
+   "address": "3-5-2 Minami Aoyama 3F Minami Aoyama Daiichi Nirasawa Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0062",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2009"
+  },
+  {
+   "name": "Fuji Building 40",
+   "brand": "Regus",
+   "address": "15-14 Sakuragaokacho 7F Fuji Bldg 40 Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0031",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2010"
+  },
+  {
+   "name": "Toyo Building",
+   "brand": "Regus",
+   "address": "1-2-10 Nihonbashi 3F/5F/6F Toyo Bldg Chuo-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "103-0027",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2014"
+  },
+  {
+   "name": "Shinjuku Eastside Square",
+   "brand": "Regus",
+   "address": "6-27-30 Shinjuku B1F Shinjuku East Side Square Shinjuku-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "160-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2195"
+  },
+  {
+   "name": "Akasaka Habitation Building",
+   "brand": "Regus",
+   "address": "1-3-5 Akasaka 3F/8F Akasaka Habitation Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0052",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2736"
+  },
+  {
+   "name": "Daiei Ginza Building",
+   "brand": "Regus",
+   "address": "1-16-7 Ginza 5F/6F Daiei Ginza Bldg Chuo-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "104-0061",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2772"
+  },
+  {
+   "name": "Daiwa Shibuya Square",
+   "brand": "Regus",
+   "address": "16-28 Nampeidai 6F Daiwa Shibuya Square Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0036",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2830"
+  },
+  {
+   "name": "Taisei Koki Building",
+   "brand": "Regus",
+   "address": "5-4-12 Hiroo 4F/5F Taisei Koki Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0012",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/2957"
+  },
+  {
+   "name": "Nukariya Building",
+   "brand": "Regus",
+   "address": "1-16-20 Minami Ikebukuro 6F Nukariya Bldg Toshima-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "171-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3093"
+  },
+  {
+   "name": "Humax Ebisu Building",
+   "brand": "Regus",
+   "address": "1-1-1 Ebisu minami 6F/7F/8F Humax Ebisu Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3096"
+  },
+  {
+   "name": "Tobu Building",
+   "brand": "Regus",
+   "address": "6-28-9 Jingumae 3F/5F/6F  Tobu Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0001",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3203"
+  },
+  {
+   "name": "Shiba Daimon Centre",
+   "brand": "Regus",
+   "address": "1-10-11 Shiba Daimon 10F  Shiba Daimon Centre Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0012",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3204"
+  },
+  {
+   "name": "Tokyodo Nishikicho Building",
+   "brand": "Regus",
+   "address": "3-7-2 Kanda Nishikicho 7F/8F/9F Tokyodo Nishiki-cho Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "101-0054",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3372"
+  },
+  {
+   "name": "Roppongi Denki Building",
+   "brand": "Regus",
+   "address": "6-1-20 Roppongi 5F/6F/7F Roppongi Denki Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "106-0032",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3439"
+  },
+  {
+   "name": "Vera Heights",
+   "brand": "Regus",
+   "address": "27-9 Nihonbashi Hakozakicho 1F Office Vera Nihonbashi Hakozaki Chuo-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "103-0015",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3615"
+  },
+  {
+   "name": "Yamato Building 1F 8F",
+   "brand": "Regus",
+   "address": "5-27-3 Sendagaya 1F/8F Shinjuku Yamato Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "151-0051",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3618"
+  },
+  {
+   "name": "GYB Akihabara Building",
+   "brand": "Regus",
+   "address": "2-25 Kanda Sudacho 4F/5F GYB Akihabara Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "104-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3636"
+  },
+  {
+   "name": "Miyata Building",
+   "brand": "Regus",
+   "address": "1-12-14 Jinnan 6F/7F/8F Shibuya Miyata Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3706"
+  },
+  {
+   "name": "Frances Building",
+   "brand": "Regus",
+   "address": "2-19-9 Ebisu Nishi 1F/2F Frances Bldg Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0021",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3787"
+  },
+  {
+   "name": "KS Building",
+   "brand": "Regus",
+   "address": "4-5-20  Kojimachi KS Building 4F, 7F, 8F Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "102-0083",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3788"
+  },
+  {
+   "name": "Okura Annex",
+   "brand": "Regus",
+   "address": "3-4-1 Ginza 5F Okura Bekkan Chuo-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "104-0061",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3791"
+  },
+  {
+   "name": "Dai 3 Meiwa Building",
+   "brand": "Regus",
+   "address": "4-31-3 Shimbashi 3rd Nawa Building 1F-9F Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0004",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3920"
+  },
+  {
+   "name": "Dai 21 Arai Building",
+   "brand": "Regus",
+   "address": "1-20-6 Ebisu Minami Prefas Ebisu Minami 4F Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3926"
+  },
+  {
+   "name": "Akasaka K Tower",
+   "brand": "Regus",
+   "address": "1-2-7 Motoakasaka 4F Akasaka K Tower Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0051",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/3932"
+  },
+  {
+   "name": "Marunouchi Tekko Building",
+   "brand": "Regus",
+   "address": "1-8-2 Marunouchi 4F Tekko Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-0005",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4061"
+  },
+  {
+   "name": "Marunouchi Shin Kokusai Building",
+   "brand": "Regus",
+   "address": "3-4-1 Marunouchi 8F Shin Kokusai Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-0005",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4162"
+  },
+  {
+   "name": "Otemachi Building",
+   "brand": "Regus",
+   "address": "1-6-1 Otemachi 1F/2F/3F Otemachi Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "100-0004",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4303"
+  },
+  {
+   "name": "Shinagawa Grand Central",
+   "brand": "Regus",
+   "address": "2-16-4 Konan 8F Shinagawa Grand Central Tower Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "108-0075",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4502"
+  },
+  {
+   "name": "Haneda Airport Terminal 1",
+   "brand": "Regus",
+   "address": "3-3-2 Haneda Airport 5F Haneda Airport Passenger Terminal 1 Market Place Ota-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "144-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4533"
+  },
+  {
+   "name": "Hulic Kanda Building",
+   "brand": "Regus",
+   "address": "1-14-1 Kanda Sudacho 1F-4F Kanda Sudacho Hulic Bldg Chiyoda-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "101-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4682"
+  },
+  {
+   "name": "Hoshino Building",
+   "brand": "Regus",
+   "address": "8-11-10 Nishi-Shinjuku 3F Hoshino Bldg Shinjuku-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "160-0023",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4734"
+  },
+  {
+   "name": "Forest Hills East Wing",
+   "brand": "Regus",
+   "address": "4-18-11 Minami Aoyama 2F Forest Hills East Wing Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0062",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4742"
+  },
+  {
+   "name": "Estage Osaki Building",
+   "brand": "Regus",
+   "address": "3-5-2 Osaki 6F Estage Osaki Bldg Shinagawa-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "141-0032",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4879"
+  },
+  {
+   "name": "Gotanda Sun Heights",
+   "brand": "Regus",
+   "address": "1-26-2 Nishi Gotanda 2F Gotanda Sun Haitsu Bldg Shinagawa-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "141-0031",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4963"
+  },
+  {
+   "name": "ACN Shibadaimon Building",
+   "brand": "Regus",
+   "address": "2-2-1, Shibadaimon ACN Shibadaimon Building 6F 7F Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "105-0012",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/4965"
+  },
+  {
+   "name": "DaiyaGate",
+   "brand": "Regus",
+   "address": "1-16-15 Minami-Ikebukuro 5F Daiya Gate Ikebukuro Toshima-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "171-0022",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5045"
+  },
+  {
+   "name": "Square Daikanyama",
+   "brand": "Regus",
+   "address": "8-7, Daikanyama-cho Daiwa Daikanyama 1F-6F Shibuya-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0034",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5248"
+  },
+  {
+   "name": "Shinagawa Central Tower",
+   "brand": "Regus",
+   "address": "2-16-1 Kounan 7F/8F Shinagawa East One Tower Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "108-0075",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5396"
+  },
+  {
+   "name": "R7 Building",
+   "brand": "Regus",
+   "address": "R7 Building 7-12-2 Roppongi Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "106-0032",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5438"
+  },
+  {
+   "name": "Zenken Plaza",
+   "brand": "Regus",
+   "address": "1-4-11 NishiShinjuku Zenken Plaza Bldg Shinjuku-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "160-0023",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5600"
+  },
+  {
+   "name": "Hulic JP Akasaka Building",
+   "brand": "Regus",
+   "address": "2-5-8 Akasaka Hulic JP Akasaka Bldg Minato-ku, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0052",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5670"
+  },
+  {
+   "name": "Roppongi Hills Mori Tower",
+   "brand": "Regus",
+   "address": "6-10-1, Roppongi Roppongi Hills Mori Tower, Tokyo, Tokyo, JPN",
+   "postal_code": "106-6116",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5829"
+  },
+  {
+   "name": "Shibuya Koendori Building",
+   "brand": "Regus",
+   "address": "1-23-14 Jinnan Regus Shibuya Koen-dori Building 1F-8F, Tokyo, Tokyo, JPN",
+   "postal_code": "150-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/5830"
+  },
+  {
+   "name": "Nippon Life Marunouchi",
+   "brand": "Regus",
+   "address": "1-6-6 Marunouchi 21st Floor, Nippon Life Marunouchi Building Chiyoda-ku, Tokyo, JPN",
+   "postal_code": "100-0005",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/7133"
+  },
+  {
+   "name": "Hibiya First",
+   "brand": "Regus",
+   "address": "1-13-2 Yurakucho 12F Dai-ichi Life Hibiya First, Tokyo, Chiyoda-ku, JPN",
+   "postal_code": "100-0006",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/7339"
+  },
+  {
+   "name": "Aoyama Twin",
+   "brand": "Regus",
+   "address": "7F Shin-Aoyama Building East Building, Tokyo, Tokyo, JPN",
+   "postal_code": "107-0062",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/7486"
+  },
+  {
+   "name": "Seaside East Tower",
+   "brand": "Regus",
+   "address": "4-12-8 Higashi-Shinagawa, Tokyo, Shinagawa-ku, JPN",
+   "postal_code": "140-0002",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/7529"
+  },
+  {
+   "name": "Mita Kokusai",
+   "brand": "Regus",
+   "address": "1-4-28 Mita, Tokyo, Minato-ku, JPN",
+   "postal_code": "108-0073",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/8267"
+  },
+  {
+   "name": "Akihabara Manseibashi",
+   "brand": "Regus",
+   "address": "2-19-23 Kanda Sudacho 2F Daiwa Akihabara Building, Tokyo, Tokyo, JPN",
+   "postal_code": "101-0041",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/8395"
+  },
+  {
+   "name": "Sunshine 60",
+   "brand": "Regus",
+   "address": "Sunshine 60, 12th floor, 1-1 Higashi-Ikebukuro 3-chome, Tokyo, Toshima-ku, JPN",
+   "postal_code": "170-0013",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/8543"
+  },
+  {
+   "name": "Roppongi Mikawadai Square",
+   "brand": "Regus",
+   "address": "Roppongi Mikawadai Square, 4-2-14 Roppongi Minato-ku, Tokyo, JPN",
+   "postal_code": "106-0032",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/10148"
+  },
+  {
+   "name": "Musashikosugi",
+   "brand": "Regus",
+   "address": "Deal Musashikosugi, 35-9, Nakamaruko Nakahara-ku Kawasaki-shi, Kanagawa, JPN",
+   "postal_code": "211-0012",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/10149"
+  },
+  {
+   "name": "Shinjuku i-Land Tower",
+   "brand": "Regus",
+   "address": "Shinjuku Island Tower, 6-5-1 Nishi-Shinjuku Shinjuku-ku, Tokyo, JPN",
+   "postal_code": "163-1327",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/10380"
+  },
+  {
+   "name": "Hibiya Business Center",
+   "brand": "Regus",
+   "address": "1-1-1 Uchisaiwaicho Chiyoda-ku, Tokyo, JPN",
+   "postal_code": "100-0011",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/11182"
+  },
+  {
+   "name": "2 Dogenzaka",
+   "brand": "Regus",
+   "address": "2-38 Dogenzaka Shibuya-ku, Tokyo, JPN",
+   "postal_code": "150-0043",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.regus.com/en/jp/11232"
+  },
+  {
+   "name": "Global Business Hub Tokyo",
+   "brand": "Global Business Hub Tokyo (Tokyo Metropolitan Government)",
+   "address": "Otemachi Financial City Grand Cube 3F, 1-9-2 Otemachi, Chiyoda-ku, Tokyo 100-0004",
+   "postal_code": "100-0004",
+   "lat": null,
+   "lng": null,
+   "source_url": "https://www.gbh-tokyo.or.jp/en/access"
+  },
+  {
+   "name": "JustCo Shibuya Hikarie",
+   "brand": "JustCo",
+   "address": "Shibuya Hikarie, 33rd fl, 2-21-1 Shibuya, Shibuya-ku, Tokyo 150-8510",
+   "postal_code": "150-8510",
+   "lat": 35.6591283,
+   "lng": 139.703737,
+   "source_url": "https://www.justcoglobal.com/en-jp/centre/justco-shibuya-hikarie/"
+  }
+ ]
+}

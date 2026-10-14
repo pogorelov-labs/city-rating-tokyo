@@ -1,0 +1,12 @@
+{
+ "lat": 13.7213584,
+ "lon": 100.5305075,
+ "display_name": "เขตสาทร, กรุงเทพมหานคร, 10120, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 3147425,
+ "type": "administrative",
+ "query": "Sathon, Bangkok, 10120, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "3 Soi Phra Phinit, Suan Phlu Road, Thung Maha Mek, Sathon, Bangkok, 10120, Thailand",
+ "simplified_query": true
+}

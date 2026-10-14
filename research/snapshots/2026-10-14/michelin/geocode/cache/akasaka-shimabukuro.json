@@ -1,0 +1,12 @@
+{
+ "lat": 35.6753817,
+ "lon": 139.737048,
+ "display_name": "赤坂三丁目, 赤坂, 港区, 東京都, 107-0052, 日本",
+ "osm_type": "relation",
+ "osm_id": 18760464,
+ "type": "administrative",
+ "query": "Akasaka 3-chome, Minato-ku, Tokyo, 107-0052, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "3F, 3-21-8 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+ "simplified_query": true
+}

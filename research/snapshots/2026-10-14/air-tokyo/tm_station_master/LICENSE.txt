@@ -1,0 +1,12 @@
+Источник: 国立環境研究所 環境展望台 «大気汚染常時監視データ» (данные собирает и публикует 環境省 / Ministry of the Environment, Japan)
+URL каталога: https://tenbou.nies.go.jp/download/
+URL файлов (POST API): https://tenbou.nies.go.jp/download/api/archivedownload.php (params: type=tm, file=<name>)
+Дата выгрузки: 2026-10-14
+Лицензия: (c) National Institute for Environmental Studies; условия — https://tenbou.nies.go.jp/copyright/ и политика NIES (https://www.nies.go.jp/).
+Отметка: INTERNAL ONLY — not for site publication (©-условия NIES/環境省, нет явной open-data лицензии на повторную публикацию).
+
+Состав: 20 zip-файлов TM{YYYY}00{PP}.zip — «大気環境測定局データファイル» (мастер-список станций:
+код, название, координаты в градусах/минутах/секундах, адрес, категория, измеряемые вещества и т.д.)
+для префектур 13 Токио, 11 Сайтама, 12 Тиба, 14 Канагава, годы 2019–2023.
+Формат внутри: один CSV (Shift-JIS/CP932) на zip.
+Машинная выжимка (2023, 4 префектуры, 375 станций) — ../stations_2023.csv и ../stations_summary.json.

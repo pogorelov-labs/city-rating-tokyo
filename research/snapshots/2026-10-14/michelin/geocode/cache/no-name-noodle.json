@@ -1,0 +1,12 @@
+{
+ "lat": 13.7187306,
+ "lon": 100.5601721,
+ "display_name": "เขตคลองเตย, กรุงเทพมหานคร, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 2938033,
+ "type": "administrative",
+ "query": "Khlong Toei, Bangkok, 10110, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "1F, Room P2, 1/2 Soi Athakravi 1, Sukhumvit 26 Road, Khlong Tan, Khlong Toei, Bangkok, 10110, Thailand",
+ "simplified_query": true
+}
