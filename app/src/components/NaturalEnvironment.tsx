@@ -19,9 +19,11 @@ interface Props {
 
 export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
-  const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier } = environment;
+  const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier,
+          embassies_800m, english_medicine_2km, flood_depth_m } = environment;
 
-  if (elevation_m == null && seismic_prob_i60 == null) return null;
+  if (elevation_m == null && seismic_prob_i60 == null
+      && embassies_800m == null && english_medicine_2km == null) return null;
 
   const tier = seismic_risk_tier ?? 'unknown';
   const seismicColor = SEISMIC_COLORS[tier];
@@ -126,6 +128,84 @@ export function NaturalEnvironment({ environment }: Props) {
               <p className="text-[11px] text-gray-500 mt-0.5 ml-0">
                 {t('station.seismicProbability')}
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Embassies within walking distance (CRTKY-190) */}
+        {embassies_800m != null && embassies_800m > 0 && (
+          <div className="flex items-start gap-3">
+            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🏛️</span>
+            <div className="min-w-0">
+              <Tooltip
+                showHelpIcon={false}
+                content={
+                  <>
+                    <span className="font-semibold">{t('station.embassies', { count: embassies_800m })}</span>
+                    <span className="block mt-1">{t('station.embassiesTooltip')}</span>
+                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceEmbassies')}</span>
+                  </>
+                }
+              >
+                <div className="cursor-help">
+                  <span className="text-sm font-medium text-gray-900">
+                    {t('station.embassies', { count: embassies_800m })}
+                  </span>
+                </div>
+              </Tooltip>
+            </div>
+          </div>
+        )}
+
+        {/* English-speaking medical facilities within 2 km (CRTKY-190, Tokyo) */}
+        {english_medicine_2km != null && english_medicine_2km > 0 && (
+          <div className="flex items-start gap-3">
+            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🏥</span>
+            <div className="min-w-0">
+              <Tooltip
+                showHelpIcon={false}
+                content={
+                  <>
+                    <span className="font-semibold">{t('station.englishMedicine', { count: english_medicine_2km })}</span>
+                    <span className="block mt-1">{t('station.englishMedicineTooltip')}</span>
+                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceMedicine')}</span>
+                  </>
+                }
+              >
+                <div className="cursor-help">
+                  <span className="text-sm font-medium text-gray-900">
+                    {t('station.englishMedicine', { count: english_medicine_2km })}
+                  </span>
+                </div>
+              </Tooltip>
+            </div>
+          </div>
+        )}
+
+        {/* Flood depth from official zones (CRTKY-187, replaces SRTM badge) */}
+        {flood_depth_m != null && flood_depth_m >= 0.5 && (
+          <div className="flex items-start gap-3">
+            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🌊</span>
+            <div className="min-w-0">
+              <Tooltip
+                showHelpIcon={false}
+                content={
+                  <>
+                    <span className="font-semibold">{t('station.floodDepth', { depth: flood_depth_m })}</span>
+                    <span className="block mt-1">{t('station.floodDepthTooltip')}</span>
+                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceFlood')}</span>
+                  </>
+                }
+              >
+                <div className="cursor-help">
+                  <span className="text-sm font-medium text-gray-900">
+                    {t('station.floodDepth', { depth: flood_depth_m })}
+                  </span>
+                  <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-red-50 border border-red-200 px-2 py-0.5 text-[10px] font-medium text-red-700">
+                    {t('station.floodRisk')}
+                  </span>
+                </div>
+              </Tooltip>
             </div>
           </div>
         )}

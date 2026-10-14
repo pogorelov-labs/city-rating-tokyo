@@ -100,6 +100,11 @@ export interface EnvironmentData {
    *  inundation depth within 100 m of the station (TMG 浸水予想区域図). */
   flood_exposed?: boolean;
   flood_depth_m?: number;
+  /** Embassies within 800 m (CRTKY-190) — OSM/Wikidata, ODbL/CC0. */
+  embassies_800m?: number;
+  /** English-speaking medical facilities within 2 km (CRTKY-190, Tokyo) —
+   *  JNTO guide, counts only, no row republication. */
+  english_medicine_2km?: number;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';

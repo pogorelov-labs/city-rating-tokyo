@@ -371,7 +371,16 @@
       "label": "Curated",
       "tooltip": "This station's ratings were set by a human researcher using qualitative assessment, not purely from scraped data."
     },
-    "mapsTooltip": "Open in Google Maps"
+    "mapsTooltip": "Open in Google Maps",
+    "embassies": "{count, plural, one {# embassy} other {# embassies}} within 800 m",
+    "embassiesTooltip": "Embassies and diplomatic missions within walking distance of this station.",
+    "sourceEmbassies": "OSM · Wikidata (ODbL / CC0)",
+    "englishMedicine": "{count, plural, one {# English-speaking clinic} other {# English-speaking clinics}} within 2 km",
+    "englishMedicineTooltip": "Medical facilities listed in the JNTO guide as offering English-language services.",
+    "sourceMedicine": "JNTO Guide for when you are feeling ill",
+    "floodDepth": "Expected flood depth: {depth} m",
+    "floodDepthTooltip": "Maximum inundation depth at this location in the maximum-assumed-scale scenario (TMG flood hazard model).",
+    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)"
   },
   "seismicTiers": {
     "low": {
