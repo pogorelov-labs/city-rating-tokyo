@@ -125,13 +125,15 @@ function FlyToStation({
  * station so the halo, popup, and MobileStationCard all vanish. The
  * `.leaflet-interactive` check filters out marker clicks — markers bubble a
  * click event to the map layer, but they are wrapped in this class by Leaflet.
+ * `.leaflet-control` filters out the touch zoom buttons (a map control is not
+ * "outside") — same guard the Bangkok map's DeselectHandlers already has.
  */
 function MapClickHandler() {
   const { setSelectedStation } = useCityActions();
   useMapEvents({
     click: (e) => {
       const target = e.originalEvent?.target as HTMLElement | null;
-      if (!target?.closest('.leaflet-interactive')) {
+      if (!target?.closest('.leaflet-interactive, .leaflet-control')) {
         setSelectedStation(null);
       }
     },
