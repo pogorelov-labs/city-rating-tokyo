@@ -39,7 +39,7 @@ Do **not** equate “every station has a number” with “every number is equal
 
 11. **Bangkok (district layer):** a different unit (50 khet, polygons) with its own honesty caveats — rent and safety are **editorial** for all 50 (no open district data), scores are percentile-relative **within Bangkok** (a Bangkok 8 ≠ a Tokyo 8), outer-district POIs are under-mapped in both sources. The finer levels (station areas, 200 m grid, CRTKY-135) measure eight categories locally but **inherit rent and safety from the districts** — a grid cell's rent is its district's estimate, not a local one. Full list: `research/bangkok/00-overview.md` → *Honesty notes*.
 
-**Docs to keep aligned:** `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, `research/bangkok/00-overview.md`, this file, **Plane CRTKY-80** subtree (81–84) and **CRTKY-116** subtree (117–119, livecams).
+**Docs to keep aligned:** `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, `research/bangkok/00-overview.md`, `research/bangkok/backlog.md` (CRTKY-130 subtree map), this file, **Plane CRTKY-80** subtree (81–84), **CRTKY-116** subtree (117–119, livecams) and **CRTKY-130** subtree (131–153, Bangkok follow-ups + discovery).
 
 ## Data Pipeline
 

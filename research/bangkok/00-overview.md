@@ -117,17 +117,17 @@ Watthana; Esplanade and Jodd Fairs Ratchada are on the Din Daeng side).
 
 ## Follow-ups
 
-- **Flood exposure (CRTKY-131).** BMA's Traffy Fondue complaints carry district + type
-  (`น้ำท่วม` flood, `จุดเสี่ยง` risk spot, lighting…). The anonymous API does not
-  filter by district, and the monthly CSV export requires a registration form
-  (name / org / email) — the owner has to request it. Would give a real flood
-  dealbreaker and a data-backed safety proxy.
-- **Rent data.** Replace editorial rent with listing statistics if a portal
-  offers an API or export (FazWaz, DDproperty, Hipflat all 403 scrapers).
-- **Foursquare OS Places** is gated on Hugging Face since 2025 (accept terms
-  while logged in) — a third POI source.
-- **Lines under construction** (Orange East, Purple South, Grey) — add to the
-  commute model when they open.
-- **MCP server** still serves Tokyo only (CRTKY-132).
-- **Station-level rent.** If listing data ever becomes available, the station
-  and grid levels are where it would help most (premium near BTS stations).
+All open work lives in the **Plane CRTKY-130 subtree (131–153)**, grouped and
+kept current in [`backlog.md`](backlog.md). Highlights as of 2026-10-13:
+
+- **Ready to start, no blockers:** CRTKY-139 (open flood data — ThaiFloodRisk
+  per-district CSVs may unblock CRTKY-131 without the Traffy export),
+  CRTKY-146 (Air4Thai PM2.5, new category), CRTKY-150 (BMA risk-area registry
+  for safety), CRTKY-151 (PCD day/night noise), CRTKY-140 (WorldPop/GHS-POP),
+  CRTKY-132 (MCP server, Bangkok districts).
+- **Blocked / event-driven:** CRTKY-131 (Traffy export registration — owner
+  action), CRTKY-136/137/138 (portal API, HF terms, line openings).
+- **Category-enrichment research:** CRTKY-142–145, 147–149, 152–153 —
+  Michelin and health food, fitness studios, markets, institutions,
+  walkability, housing stock, tourist load, red-light zones; rent anchors in
+  CRTKY-141.
