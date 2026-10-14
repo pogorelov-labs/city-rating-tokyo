@@ -1,0 +1,1490 @@
+{
+ "type": "FeatureCollection",
+ "properties": {
+  "dataset": "embassies-bangkok",
+  "generated": "2026-10-14",
+  "city_bbox": [
+   13.47,
+   100.3,
+   13.98,
+   100.96
+  ],
+  "city_wikidata": "Q1861",
+  "sources": {
+   "osm": "Overpass API, nwr[office=diplomatic] + nwr[diplomatic], bbox [13.47, 100.3, 13.98, 100.96]; raw snapshot: overpass-bangkok.json",
+   "wikidata": "Wikidata Query Service, P31=Q3917681 AND (P159=wd:Q1861 OR P159->P131* wd:Q1861); P137/P1027/P17/P625/P576 pulled; raw snapshots: wikidata-bangkok.json + wikidata-operators.json (both cities)"
+  },
+  "schema": {
+   "feature_properties": [
+    "name",
+    "country",
+    "lat",
+    "lon",
+    "source"
+   ],
+   "source_values": [
+    "osm",
+    "wikidata",
+    "both"
+   ],
+   "country_rule": "represented country: WD P137 label > OSM `country` ISO-3166 tag > mission-name pattern (en/fr) > ja/th name dictionary. P17 is the HOST country (verified: BKK 57/57 Thailand, TYO 156/157 Japan) and is deliberately not used for naming. null = unresolved.",
+   "excluded": "list of objects deliberately not in features, each {name, reason, detail, source, qid?/osm?}"
+  },
+  "qa": {
+   "p137_vs_osm_country_disagree": [
+    {
+     "name": "สถานทูตประเทศไอร์แลนด์",
+     "p137": "Ireland",
+     "osm_country_tag": "IR"
+    }
+   ]
+  },
+  "counts": {
+   "overpass_elements": 81,
+   "overpass_unique_after_dedupe": 80,
+   "wikidata_items": 57,
+   "wikidata_active_after_defunct": 57,
+   "matched_qid_or_name": 47,
+   "osm_only": 33,
+   "wikidata_only_with_coords": 0,
+   "features": 79,
+   "features_with_country": 79,
+   "excluded_by_reason": {
+    "data_noise": 1,
+    "unnamed": 1,
+    "no_coordinates": 10
+   }
+  },
+  "excluded": [
+   {
+    "name": "สถานกงสุลซิลดาเวีย Consulat de Syldavie à Bangkok",
+    "osm": "way/1443131197",
+    "reason": "data_noise",
+    "detail": "fictional country (Syldavia, Tintin); OSM name:fr 'Consulat de Syldavie à Bangkok'",
+    "source": "osm"
+   },
+   {
+    "name": "way/331967737",
+    "osm": "way/331967737",
+    "reason": "unnamed",
+    "detail": "OSM element without name tag and no WD match",
+    "source": "osm"
+   },
+   {
+    "name": "Embassy of Morocco, Bangkok",
+    "qid": "Q121770206",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Kosovo, Bangkok",
+    "qid": "Q111539383",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Bhutan, Bangkok",
+    "qid": "Q106451766",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Bangladesh, Bangkok",
+    "qid": "Q83584280",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Vietnam, Bangkok",
+    "qid": "Q136503499",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Maldives, Bangkok",
+    "qid": "Q99568873",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Slovakia, Bangkok",
+    "qid": "Q52197774",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Mongolia, Bangkok",
+    "qid": "Q107608146",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Bahrain, Bangkok",
+    "qid": "Q68170723",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of North Korea, Bangkok",
+    "qid": "Q124055062",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   }
+  ]
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.579917,
+     13.878116
+    ]
+   },
+   "properties": {
+    "name": "สำนักงานเศรษฐกิจและวัฒนธรรมไทเปประจำประเทศไทย",
+    "country": "Taiwan",
+    "lat": 13.878116,
+    "lon": 100.579917,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.586766,
+     13.788022
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตตุรกี",
+    "country": "Turkey",
+    "lat": 13.788022,
+    "lon": 100.586766,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.595533,
+     13.769263
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตลาว",
+    "country": "Laos",
+    "lat": 13.769263,
+    "lon": 100.595533,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.596399,
+     13.768348
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตกัมพูชา",
+    "country": "Cambodia",
+    "lat": 13.768348,
+    "lon": 100.596399,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.57795,
+     13.768012
+    ]
+   },
+   "properties": {
+    "name": "ถานเอกอัครราชทูตสาธารณรัฐเกาหลีประจำประเทศไทย",
+    "country": "South Korea",
+    "lat": 13.768012,
+    "lon": 100.57795,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5669,
+     13.763122
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตจีน",
+    "country": "China",
+    "lat": 13.763122,
+    "lon": 100.5669,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.566493,
+     13.762742
+    ]
+   },
+   "properties": {
+    "name": "สำนักงานหนังสือเดินทางและบริการกงสุลสาธารณรัฐประชาชนจีน",
+    "country": "China",
+    "lat": 13.762742,
+    "lon": 100.566493,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.536343,
+     13.750548
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตอินโดนีเซีย",
+    "country": "Indonesia",
+    "lat": 13.750548,
+    "lon": 100.536343,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.554633,
+     13.746952
+    ]
+   },
+   "properties": {
+    "name": "ทำเนียบเอกอัครราชทูตญี่ปุ่น",
+    "country": "Japan",
+    "lat": 13.746952,
+    "lon": 100.554633,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.553265,
+     13.745545
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตปากีสถาน",
+    "country": "Pakistan",
+    "lat": 13.745545,
+    "lon": 100.553265,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548501,
+     13.745364
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสวิตเซอร์แลนด์",
+    "country": "Switzerland",
+    "lat": 13.745364,
+    "lon": 100.548501,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.561091,
+     13.742903
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตอิสราเอล",
+    "country": "Israel",
+    "lat": 13.742903,
+    "lon": 100.561091,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.561556,
+     13.742827
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Sri Lanka",
+    "country": "Sri Lanka",
+    "lat": 13.742827,
+    "lon": 100.561556,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547895,
+     13.74278
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตฮังการี",
+    "country": "Hungary",
+    "lat": 13.74278,
+    "lon": 100.547895,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.544963,
+     13.742254
+    ]
+   },
+   "properties": {
+    "name": "New Zealand Offical Residence",
+    "country": "New Zealand",
+    "lat": 13.742254,
+    "lon": 100.544963,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.563886,
+     13.742212
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตอินเดีย",
+    "country": "India",
+    "lat": 13.742212,
+    "lon": 100.563886,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548619,
+     13.741063
+    ]
+   },
+   "properties": {
+    "name": "คณะผู้แทนสหภาพยุโรปประจำประเทศไทย",
+    "country": "European Union",
+    "lat": 13.741063,
+    "lon": 100.548619,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548725,
+     13.741022
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตโคลอมเบีย",
+    "country": "Colombia",
+    "lat": 13.741022,
+    "lon": 100.548725,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548602,
+     13.740971
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตฟินแลนด์",
+    "country": "Finland",
+    "lat": 13.740971,
+    "lon": 100.548602,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548811,
+     13.740933
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตโปแลนด์",
+    "country": "Poland",
+    "lat": 13.740933,
+    "lon": 100.548811,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.545653,
+     13.74076
+    ]
+   },
+   "properties": {
+    "name": "ทำเนียบเอกอัครราชทูตสหรัฐอเมริกา",
+    "country": "United States",
+    "lat": 13.74076,
+    "lon": 100.545653,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547555,
+     13.740737
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตเวียดนาม",
+    "country": "Vietnam",
+    "lat": 13.740737,
+    "lon": 100.547555,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.54785,
+     13.740283
+    ]
+   },
+   "properties": {
+    "name": "สถานกงสุลใหญ่สาธารณรัฐอุซเบกิสถาน",
+    "country": "Uzbekistan",
+    "lat": 13.740283,
+    "lon": 100.54785,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.554236,
+     13.740227
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสวีเดน",
+    "country": "Sweden",
+    "lat": 13.740227,
+    "lon": 100.554236,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547323,
+     13.739634
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตนิวซีแลนด์",
+    "country": "New Zealand",
+    "lat": 13.739634,
+    "lon": 100.547323,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547663,
+     13.739531
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตแอฟริกาใต้",
+    "country": "South Africa",
+    "lat": 13.739531,
+    "lon": 100.547663,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.546412,
+     13.73936
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตประเทศไอร์แลนด์",
+    "country": "Ireland",
+    "lat": 13.73936,
+    "lon": 100.546412,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547941,
+     13.73925
+    ]
+   },
+   "properties": {
+    "name": "Embassy of the United Arab Emirates",
+    "country": "United Arab Emirates",
+    "lat": 13.73925,
+    "lon": 100.547941,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.545625,
+     13.738978
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตเนเธอร์แลนด์",
+    "country": "Netherlands",
+    "lat": 13.738978,
+    "lon": 100.545625,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547888,
+     13.738973
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตยูเครน",
+    "country": "Ukraine",
+    "lat": 13.738973,
+    "lon": 100.547888,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547883,
+     13.738931
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตอิตาลี",
+    "country": "Italy",
+    "lat": 13.738931,
+    "lon": 100.547883,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.591758,
+     13.738815
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตบังกลาเทศ",
+    "country": "Bangladesh",
+    "lat": 13.738815,
+    "lon": 100.591758,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.540645,
+     13.737652
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสหรัฐอเมริกา สำนักงานราชดำริ",
+    "country": "United States",
+    "lat": 13.737652,
+    "lon": 100.540645,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.550875,
+     13.737504
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตสาธารณรัฐเช็ก",
+    "country": "Czech Republic",
+    "lat": 13.737504,
+    "lon": 100.550875,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.576408,
+     13.737417
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตอิหร่าน",
+    "country": "Iran",
+    "lat": 13.737417,
+    "lon": 100.576408,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.545372,
+     13.737288
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสหรัฐอเมริกา",
+    "country": "United States",
+    "lat": 13.737288,
+    "lon": 100.545372,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547473,
+     13.736062
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสหรัฐอเมริกา (แผนกกงสุล)",
+    "country": "United States",
+    "lat": 13.736062,
+    "lon": 100.547473,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.563318,
+     13.73601
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Argentina",
+    "country": "Argentina",
+    "lat": 13.73601,
+    "lon": 100.563318,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.564072,
+     13.735797
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Cuba",
+    "country": "Cuba",
+    "lat": 13.735797,
+    "lon": 100.564072,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.563209,
+     13.735353
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Peru",
+    "country": "Peru",
+    "lat": 13.735353,
+    "lon": 100.563209,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.572006,
+     13.733631
+    ]
+   },
+   "properties": {
+    "name": "Honorary Consulate of Albania",
+    "country": "Albania",
+    "lat": 13.733631,
+    "lon": 100.572006,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.567595,
+     13.732821
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตนอร์เวย์",
+    "country": "Norway",
+    "lat": 13.732821,
+    "lon": 100.567595,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.560452,
+     13.731063
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตสเปน",
+    "country": "Spain",
+    "lat": 13.731063,
+    "lon": 100.560452,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.560631,
+     13.731063
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตชิลี",
+    "country": "Chile",
+    "lat": 13.731063,
+    "lon": 100.560631,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.546042,
+     13.729468
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตญี่ปุ่น",
+    "country": "Japan",
+    "lat": 13.729468,
+    "lon": 100.546042,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.527188,
+     13.729408
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตรัสเซีย",
+    "country": "Russia",
+    "lat": 13.729408,
+    "lon": 100.527188,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.547444,
+     13.729206
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตออสเตรเลีย",
+    "country": "Australia",
+    "lat": 13.729206,
+    "lon": 100.547444,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.595174,
+     13.728596
+    ]
+   },
+   "properties": {
+    "name": "embassy of Nepal in Thailand",
+    "country": "Nepal",
+    "lat": 13.728596,
+    "lon": 100.595174,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.513953,
+     13.727929
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตโปรตุเกส",
+    "country": "Portugal",
+    "lat": 13.727929,
+    "lon": 100.513953,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.538942,
+     13.727202
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตแคนาดา",
+    "country": "Canada",
+    "lat": 13.727202,
+    "lon": 100.538942,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.573912,
+     13.72701
+    ]
+   },
+   "properties": {
+    "name": "สถานทูต ฟิลิปปินส์",
+    "country": "Philippines",
+    "lat": 13.72701,
+    "lon": 100.573912,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.544382,
+     13.725473
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตลักเซมเบิร์ก",
+    "country": "Luxembourg",
+    "lat": 13.725473,
+    "lon": 100.544382,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.544309,
+     13.725355
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตเม็กซิโก",
+    "country": "Mexico",
+    "lat": 13.725355,
+    "lon": 100.544309,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.514316,
+     13.724601
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตฝรั่งเศส",
+    "country": "France",
+    "lat": 13.724601,
+    "lon": 100.514316,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.541023,
+     13.724411
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตสาธารณรัฐสโลวัก",
+    "country": "Slovakia",
+    "lat": 13.724411,
+    "lon": 100.541023,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.539558,
+     13.724156
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตเม็กซิโก",
+    "country": "Mexico",
+    "lat": 13.724156,
+    "lon": 100.539558,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.531693,
+     13.723898
+    ]
+   },
+   "properties": {
+    "name": "ทำเนียบเอกอัครราชทูตเบลเยียม",
+    "country": "Belgium",
+    "lat": 13.723898,
+    "lon": 100.531693,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.584343,
+     13.723824
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Egypt",
+    "country": "Egypt",
+    "lat": 13.723824,
+    "lon": 100.584343,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.571297,
+     13.723807
+    ]
+   },
+   "properties": {
+    "name": "The Consulate of the Republic of Suriname",
+    "country": "Suriname",
+    "lat": 13.723807,
+    "lon": 100.571297,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.542255,
+     13.723773
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตเยอรมนี",
+    "country": "Germany",
+    "lat": 13.723773,
+    "lon": 100.542255,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.549503,
+     13.723702
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตปานามา",
+    "country": "Panama",
+    "lat": 13.723702,
+    "lon": 100.549503,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.54367,
+     13.723266
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตเอกอัครราชทูตเดนมาร์ก",
+    "country": "Denmark",
+    "lat": 13.723266,
+    "lon": 100.54367,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.549263,
+     13.723153
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตบลาซิล",
+    "country": "Brazil",
+    "lat": 13.723153,
+    "lon": 100.549263,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.532622,
+     13.722929
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตซาอุดีอาระเบีย",
+    "country": "Saudi Arabia",
+    "lat": 13.722929,
+    "lon": 100.532622,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.530249,
+     13.722914
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตคูเวต",
+    "country": "Kuwait",
+    "lat": 13.722914,
+    "lon": 100.530249,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.530401,
+     13.722588
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตกรีซ",
+    "country": "Greece",
+    "lat": 13.722588,
+    "lon": 100.530401,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.529371,
+     13.722554
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตเบลเยี่ยม",
+    "country": "Belgium",
+    "lat": 13.722554,
+    "lon": 100.529371,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.543934,
+     13.722352
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตออสเตรีย",
+    "country": "Austria",
+    "lat": 13.722352,
+    "lon": 100.543934,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.596069,
+     13.722274
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตสหพันธ์สาธารณรัฐไนจีเรีย",
+    "country": "Nigeria",
+    "lat": 13.722274,
+    "lon": 100.596069,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.533057,
+     13.72222
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตสิงค์โปร์",
+    "country": "Singapore",
+    "lat": 13.72222,
+    "lon": 100.533057,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.539373,
+     13.72218
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตมาเลเซีย",
+    "country": "Malaysia",
+    "lat": 13.72218,
+    "lon": 100.539373,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.521268,
+     13.721783
+    ]
+   },
+   "properties": {
+    "name": "ทำเนียบเอกอัครราชทูตอิตาลี",
+    "country": "Italy",
+    "lat": 13.721783,
+    "lon": 100.521268,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.524587,
+     13.720772
+    ]
+   },
+   "properties": {
+    "name": "สถานทูตสาธารณรัฐสหภาพพม่า",
+    "country": "Myanmar",
+    "lat": 13.720772,
+    "lon": 100.524587,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.530483,
+     13.720468
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Taiwan",
+    "country": "Taiwan",
+    "lat": 13.720468,
+    "lon": 100.530483,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.526614,
+     13.720283
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตอังกฤษประจำประเทศไทย",
+    "country": "United Kingdom",
+    "lat": 13.720283,
+    "lon": 100.526614,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.523424,
+     13.71911
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครสมณทูตวาติกัน",
+    "country": "Holy See",
+    "lat": 13.71911,
+    "lon": 100.523424,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.59557,
+     13.718465
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Nepal",
+    "country": "Nepal",
+    "lat": 13.718465,
+    "lon": 100.59557,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.570641,
+     13.717017
+    ]
+   },
+   "properties": {
+    "name": "สถานเอกอัครราชทูตโรมาเนีย",
+    "country": "Romania",
+    "lat": 13.717017,
+    "lon": 100.570641,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.534864,
+     13.710977
+    ]
+   },
+   "properties": {
+    "name": "สถานกงสุลสาธารณรัฐคองโก",
+    "country": "Republic of the Congo",
+    "lat": 13.710977,
+    "lon": 100.534864,
+    "source": "osm"
+   }
+  }
+ ]
+}

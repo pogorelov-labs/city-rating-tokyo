@@ -1,0 +1,66 @@
+JNTO "Guide for when you are feeling ill" — English-service medical institutions, all 47 prefectures
+====================================================================================================
+
+INTERNAL ONLY — NOT FOR SITE PUBLICATION
+========================================
+
+Source
+------
+Japan National Tourism Organization / Japan Tourism Agency —
+"Guide for when you are feeling ill" (多言語医療機検索):
+  https://www.jnto.go.jp/emergency/eng/mi_guide.html
+Data endpoint (reverse-engineered from the page's own search.js, same method as
+research/notes/2026-10-13-institutions-crtky180.md):
+  POST https://www.jnto.go.jp/emergency/search.php?<8-char cache-buster>
+  body: search-lang=<eng|jpn>&location=&lat=&lng=&cb-area=<a01_hokkaido..a47_okinawa>&freeword=
+  → JSON {status, rdata:[{pref, medical_institution, postal_code, street_address,
+     phone_number, reception_time, w01..w03, latitude, longitude, d01..d16,
+     v01..v08, emergency_response, jmip, base_hospital1, base_hospital2}]}
+
+License / copyright
+-------------------
+Page footer (fetched 2026-10-14): "Copyright © Japan Tourism Agency. All Rights Reserved."
+No open license is granted; the site's terms permit citation, not redistribution.
+=> This snapshot is © Japan Tourism Agency / JNTO, all rights reserved.
+=> INTERNAL ONLY — not for site publication. Counts, links and citations to the
+   live site are fine; do NOT republish these rows (names/addresses/phones) from
+   the product.
+
+Fetch log
+---------
+2026-10-14, this session: 94 POSTs (47 prefectures x eng+jpn), all HTTP 200,
+0 retries needed, 0.7 s between requests. Raw responses kept as-is:
+  raw/a01_hokkaido_eng.json ... raw/a47_okinawa_jpn.json  (94 files)
+  search.js, mi_guide.html (page + endpoint script as served)
+Row totals: eng 2721 = jpn 2721; Tokyo 508 rows (matches the 2026-10-13 count
+in research/notes/2026-10-13-institutions-crtky180.md).
+
+Derived file
+------------
+medicine-jnto.json — merged array, one object per institution:
+  {pref, name, name_ja, category, lat, lon, address, phone}
+  - pref      English prefecture name (from the cb-area option label; the API's
+              own `pref` field matched the requested prefecture for all 2721 rows)
+  - name      `medical_institution` from search-lang=eng
+  - name_ja   `medical_institution` from search-lang=jpn
+  - category  derived, not from the API (the API has no type field):
+                hospital — name (ja or en) matches /病院|[Hh]ospital/
+                dental   — else name or any d01..d16 department matches /歯|齿|[Oo]ral|[Dd]ental/
+                clinic   — everything else
+              (Precedence hospital > dental > clinic. Counts: hospital 937,
+               dental 674, clinic 1110. This is an inference for internal
+               ranking purposes; the source itself does not classify types.)
+  - lat/lon   float(latitude/longitude) from the API; all 2721 rows parsed,
+              all inside Japan bounds (20–46.5 N, 122–154.5 E)
+  - address   `street_address` (English page: includes postal code; 1 row of
+              2721 has an empty address in the source — kept as "")
+  - phone     `phone_number`
+Known source artifact (not a pipeline bug): 276/2721 English name/address
+fields are stored in the API without spaces (e.g. "IncorporatedMedicalInstitutionYushinkaiHakodateShintoshiHospital",
+"331-1Ishikawacho,Hakodate..."), mostly Hokkaido/Tohoku entries. Copied as-is;
+the Japanese name_ja field is unaffected.
+eng and jpn rows were merged by index; per-prefecture the (phone, postal, lat)
+triple matched for all 2721 index pairs (0 mismatches).
+Not carried over from the API (available in raw/): reception_time, websites,
+departments-per-language, credit cards, emergency_response, jmip flag,
+base_hospital flags, postal_code, distance.

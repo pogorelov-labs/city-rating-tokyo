@@ -1,0 +1,12 @@
+{
+ "lat": 35.6674051,
+ "lon": 139.706914,
+ "display_name": "gyre, 1, 神宮前五丁目, 神宮前, 渋谷区, 東京都, 150-0001, 日本",
+ "osm_type": "way",
+ "osm_id": 139043792,
+ "type": "mall",
+ "query": "GYRE, Jingumae 5-chome, Shibuya-ku, Tokyo, 150-0001, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "4F, GYRE, 5-10-1 Jingumae, Shibuya-ku, Tokyo, 150-0001, Japan",
+ "simplified_query": true
+}

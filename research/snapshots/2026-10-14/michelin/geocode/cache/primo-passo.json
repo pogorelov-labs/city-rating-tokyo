@@ -1,0 +1,12 @@
+{
+ "lat": 35.669305,
+ "lon": 139.770735,
+ "display_name": "築地一丁目, 築地, 中央区, 東京都, 104-0045, 日本",
+ "osm_type": "relation",
+ "osm_id": 16170468,
+ "type": "administrative",
+ "query": "Tsukiji 1-chome, Chuo-ku, Tokyo, 104-0045, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "B1F, 1-5-11 Tsukiji, Chuo-ku, Tokyo, 104-0045, Japan",
+ "simplified_query": true
+}

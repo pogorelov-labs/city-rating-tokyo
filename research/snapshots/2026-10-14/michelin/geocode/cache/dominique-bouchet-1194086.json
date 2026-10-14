@@ -1,0 +1,12 @@
+{
+ "lat": 35.6743469,
+ "lon": 139.7670332,
+ "display_name": "銀座一丁目, 銀座柳通り, 銀座一丁目, 銀座, 中央区, 東京都, 104-0061, 日本",
+ "osm_type": "node",
+ "osm_id": 6333133527,
+ "type": "station",
+ "query": "Ginza 1-chome, Chuo-ku, Tokyo, 104-0061, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "2F, 1-5-6 Ginza, Chuo-ku, Tokyo, 104-0061, Japan",
+ "simplified_query": true
+}

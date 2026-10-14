@@ -1,0 +1,302 @@
+[
+ {
+  "slug": "ginza-six",
+  "name": "WeWork ギンザシックス",
+  "area": "銀座・新橋エリア",
+  "address": "東京都中央区銀座6-10-1 GINZA SIX 13F",
+  "postal_code": "",
+  "lat": "35.6695908",
+  "lng": "139.764069",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/ginza-six"
+ },
+ {
+  "slug": "hibiya-fort-tower",
+  "name": "WeWork 日比谷FORT TOWER",
+  "area": "銀座・新橋エリア",
+  "address": "東京都港区西新橋1-1-1 10F",
+  "postal_code": "",
+  "lat": "35.670129",
+  "lng": "139.752928",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/hibiya-fort-tower"
+ },
+ {
+  "slug": "hibiya-park-front",
+  "name": "WeWork 日比谷パークフロント",
+  "area": "銀座・新橋エリア",
+  "address": "東京都千代田区内幸町2-1-6 日比谷パークフロント 19F",
+  "postal_code": "",
+  "lat": "35.671223",
+  "lng": "139.7538048",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/ginza-shimbashi-area/hibiya-park-front"
+ },
+ {
+  "slug": "shinagawa",
+  "name": "WeWork 品川",
+  "area": "品川・五反田エリア",
+  "address": "東京都港区高輪4-10-18 京急第1ビル 13F",
+  "postal_code": "",
+  "lat": "35.628855",
+  "lng": "139.736569",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/gotanda-area/shinagawa"
+ },
+ {
+  "slug": "tk-ikedayama",
+  "name": "WeWork TK 池田山",
+  "area": "品川・五反田エリア",
+  "address": "東京都品川区東五反田5-22-33 TK池田山ビル 2F",
+  "postal_code": "",
+  "lat": "35.62809649999999",
+  "lng": "139.7221267",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/gotanda-area/tk-ikedayama"
+ },
+ {
+  "slug": "tokyo-portcity-takeshiba",
+  "name": "WeWork 東京ポートシティ竹芝",
+  "area": "浜松町エリア",
+  "address": "東京都港区海岸1-7-1 東京ポートシティ竹芝 10F",
+  "postal_code": "",
+  "lat": "35.6550112",
+  "lng": "139.7613438",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/hamamatsucho-area/tokyo-portcity-takeshiba"
+ },
+ {
+  "slug": "daiwa-harumi",
+  "name": "WeWork Daiwa 晴海",
+  "area": "晴海エリア",
+  "address": "東京都中央区晴海3-10-1 Daiwa晴海ビル 2F",
+  "postal_code": "",
+  "lat": "35.6540555",
+  "lng": "139.7792145",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/harumi-area/daiwa-harumi"
+ },
+ {
+  "slug": "hareza-ikebukuro",
+  "name": "WeWork Hareza 池袋",
+  "area": "池袋エリア",
+  "address": "東京都豊島区東池袋1-18-1 Hareza Tower 20F",
+  "postal_code": "",
+  "lat": "35.732402",
+  "lng": "139.7155294",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/ikebukuro-area/hareza-ikebukuro"
+ },
+ {
+  "slug": "metropolitan-plaza-building",
+  "name": "WeWork メトロポリタンプラザビル",
+  "area": "池袋エリア",
+  "address": "東京都豊島区西池袋1-11-1 メトロポリタンプラザビル 14F",
+  "postal_code": "",
+  "lat": "35.7289678",
+  "lng": "139.7096039",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/ikebukuro-area/metropolitan-plaza-building"
+ },
+ {
+  "slug": "jimbocho",
+  "name": "WeWork 神保町",
+  "area": "神田・神保町エリア",
+  "address": "東京都千代田区神田神保町2-11-15 2F",
+  "postal_code": "",
+  "lat": "35.695405",
+  "lng": "139.756784",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/kanda-jimbocho-area/jimbocho"
+ },
+ {
+  "slug": "kanda-square",
+  "name": "WeWork KANDA SQUARE",
+  "area": "神田・神保町エリア",
+  "address": "東京都千代田区神田錦町2-2-1 KANDA SQUARE 11F",
+  "postal_code": "",
+  "lat": "35.6932143",
+  "lng": "139.7632165",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/kanda-jimbocho-area/kanda-square"
+ },
+ {
+  "slug": "kabuto-one",
+  "name": "WeWork KABUTO ONE",
+  "area": "丸の内・日本橋エリア",
+  "address": "東京都中央区日本橋兜町7-1",
+  "postal_code": "",
+  "lat": "35.68152169686719",
+  "lng": "139.77827718968206",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/kabuto-one"
+ },
+ {
+  "slug": "marunouchi-kitaguchi",
+  "name": "WeWork 丸の内北口",
+  "area": "丸の内・日本橋エリア",
+  "address": "東京都千代田区丸の内1-6-5 丸の内北口ビルディング 9F",
+  "postal_code": "",
+  "lat": "35.6839627",
+  "lng": "139.766878",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/marunouchi-kitaguchi"
+ },
+ {
+  "slug": "nippon-life-nihonbashi-building",
+  "name": "WeWork 日本生命日本橋ビル",
+  "area": "丸の内・日本橋エリア",
+  "address": "東京都中央区日本橋2-13-12 日本生命日本橋ビル 4F",
+  "postal_code": "",
+  "lat": "35.6806587",
+  "lng": "139.7756399",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/nippon-life-nihonbashi-building"
+ },
+ {
+  "slug": "tokyo-square-garden",
+  "name": "WeWork 東京スクエアガーデン",
+  "area": "丸の内・日本橋エリア",
+  "address": "東京都中央区京橋3-1-1 東京スクエアガーデン 14F",
+  "postal_code": "",
+  "lat": "35.6760575",
+  "lng": "139.768882",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/marunouchi-nihonbashi-area/tokyo-square-garden"
+ },
+ {
+  "slug": "akasaka-green-cross",
+  "name": "WeWork 赤坂グリーンクロス",
+  "area": "六本木・神谷町エリア",
+  "address": "東京都港区赤坂2-4-6 赤坂グリーンクロス6F",
+  "postal_code": "",
+  "lat": "35.67211421415673",
+  "lng": "139.74055175698328",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/akasaka-green-cross"
+ },
+ {
+  "slug": "ark-hills-south",
+  "name": "WeWork アークヒルズサウス",
+  "area": "六本木・神谷町エリア",
+  "address": "東京都港区六本木1-4-5 アークヒルズサウスタワー 16F",
+  "postal_code": "",
+  "lat": "35.6657028",
+  "lng": "139.7393806",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/ark-hills-south"
+ },
+ {
+  "slug": "kamiyacho-trust-tower",
+  "name": "WeWork 神谷町トラストタワー",
+  "area": "六本木・神谷町エリア",
+  "address": "東京都港区虎ノ門4-1-1 神谷町トラストタワー 23F",
+  "postal_code": "",
+  "lat": "35.6650161",
+  "lng": "139.7454071",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/kamiyacho-trust-tower"
+ },
+ {
+  "slug": "kdx-toranomon-1-chome",
+  "name": "WeWork KDX 虎ノ門１丁目",
+  "area": "六本木・神谷町エリア",
+  "address": "東京都港区虎ノ門1-10-5 KDX虎ノ門一丁目ビル 11F",
+  "postal_code": "",
+  "lat": "35.66841900000001",
+  "lng": "139.750634",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/kdx-toranomon-1-chome"
+ },
+ {
+  "slug": "shiroyama-trust-tower",
+  "name": "WeWork 城山トラストタワー",
+  "area": "六本木・神谷町エリア",
+  "address": "東京都港区虎ノ門4-3-1 城山トラストタワー 21F",
+  "postal_code": "",
+  "lat": "35.6646397",
+  "lng": "139.7430889",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/roppongi-kamiyacho-area/shiroyama-trust-tower"
+ },
+ {
+  "slug": "iceberg",
+  "name": "WeWork アイスバーグ",
+  "area": "渋谷・青山エリア",
+  "address": "東京都渋谷区神宮前 6-12-18 The Iceberg 1F",
+  "postal_code": "",
+  "lat": "35.6663045",
+  "lng": "139.7042606",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/iceberg"
+ },
+ {
+  "slug": "nogizaka",
+  "name": "WeWork 乃木坂",
+  "area": "渋谷・青山エリア",
+  "address": "東京都港区南青山1-24-3 1F",
+  "postal_code": "",
+  "lat": "35.667567",
+  "lng": "139.7265296",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/nogizaka"
+ },
+ {
+  "slug": "shibuya-scramble-square",
+  "name": "WeWork 渋谷スクランブルスクエア",
+  "area": "渋谷・青山エリア",
+  "address": "東京都渋谷区渋谷2-24-12 渋谷スクランブルスクエア 39F",
+  "postal_code": "",
+  "lat": "35.6584638",
+  "lng": "139.7022621",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/shibuya-scramble-square"
+ },
+ {
+  "slug": "the-argyle-aoyama",
+  "name": "WeWork ジ アーガイル アオヤマ",
+  "area": "渋谷・青山エリア",
+  "address": "東京都港区北青山 2-14-4 the ARGYLE aoyama 6F",
+  "postal_code": "",
+  "lat": "35.6695526",
+  "lng": "139.7159731",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shibuya-aoyama-area/the-argyle-aoyama"
+ },
+ {
+  "slug": "d-tower-nishishinjuku",
+  "name": "WeWork Dタワー 西新宿",
+  "area": "新宿・西新宿エリア",
+  "address": "東京都新宿区西新宿6-11-3 Dタワー西新宿 16F",
+  "postal_code": "",
+  "lat": "35.6948108",
+  "lng": "139.689912",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shinjuku-nishishinjuku-area/d-tower-nishishinjuku"
+ },
+ {
+  "slug": "link-square-shinjuku",
+  "name": "WeWork リンクスクエア新宿",
+  "area": "新宿・西新宿エリア",
+  "address": "東京都渋谷区千駄ヶ谷5-27-5 リンクスクエア新宿 16F",
+  "postal_code": "",
+  "lat": "35.68652749999999",
+  "lng": "139.7028382",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/shinjuku-nishishinjuku-area/link-square-shinjuku"
+ },
+ {
+  "slug": "hanzomon-prex-north",
+  "name": "WeWork 半蔵門 PREX North",
+  "area": "四谷・半蔵門エリア",
+  "address": "東京都千代田区麹町2-3-2 半蔵門PREX North 2F",
+  "postal_code": "",
+  "lat": "35.684089",
+  "lng": "139.7404994",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/hanzomon-prex-north"
+ },
+ {
+  "slug": "hanzomon-prex-south",
+  "name": "WeWork 半蔵門 PREX South",
+  "area": "四谷・半蔵門エリア",
+  "address": "東京都千代田区麹町2-5-1 半蔵門PREX South 2F",
+  "postal_code": "",
+  "lat": "35.68368470000001",
+  "lng": "139.7408045",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/hanzomon-prex-south"
+ },
+ {
+  "slug": "nippon-tv-yotsuya-building",
+  "name": "WeWork 日テレ四谷ビル",
+  "area": "四谷・半蔵門エリア",
+  "address": "東京都千代田区麹町5-3-23 日テレ四谷ビル 1F",
+  "postal_code": "",
+  "lat": "35.68417579999999",
+  "lng": "139.733811",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/nippon-tv-yotsuya-building"
+ },
+ {
+  "slug": "tokyu-yotsuya",
+  "name": "WeWork 麹町",
+  "area": "四谷・半蔵門エリア",
+  "address": "東京都千代田区麹町6-6-2 番町麹町ビルディング 5F",
+  "postal_code": "",
+  "lat": "35.6857022",
+  "lng": "139.7320324",
+  "detail_url": "https://www.wework.co.jp/location/tokyo/yotsuya-hanzomon-area/tokyu-yotsuya"
+ }
+]

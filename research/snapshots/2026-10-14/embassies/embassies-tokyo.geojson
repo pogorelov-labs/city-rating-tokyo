@@ -1,0 +1,3085 @@
+{
+ "type": "FeatureCollection",
+ "properties": {
+  "dataset": "embassies-tokyo",
+  "generated": "2026-10-14",
+  "city_bbox": [
+   35.5,
+   139.2,
+   36.0,
+   139.9
+  ],
+  "city_wikidata": "Q1490",
+  "sources": {
+   "osm": "Overpass API, nwr[office=diplomatic] + nwr[diplomatic], bbox [35.5, 139.2, 36.0, 139.9]; raw snapshot: overpass-tokyo.json",
+   "wikidata": "Wikidata Query Service, P31=Q3917681 AND (P159=wd:Q1490 OR P159->P131* wd:Q1490); P137/P1027/P17/P625/P576 pulled; raw snapshots: wikidata-tokyo.json + wikidata-operators.json (both cities)"
+  },
+  "schema": {
+   "feature_properties": [
+    "name",
+    "country",
+    "lat",
+    "lon",
+    "source"
+   ],
+   "source_values": [
+    "osm",
+    "wikidata",
+    "both"
+   ],
+   "country_rule": "represented country: WD P137 label > OSM `country` ISO-3166 tag > mission-name pattern (en/fr) > ja/th name dictionary. P17 is the HOST country (verified: BKK 57/57 Thailand, TYO 156/157 Japan) and is deliberately not used for naming. null = unresolved.",
+   "excluded": "list of objects deliberately not in features, each {name, reason, detail, source, qid?/osm?}"
+  },
+  "qa": {
+   "p137_vs_osm_country_disagree": [
+    {
+     "name": "アルメニア大使館",
+     "p137": "Armenia",
+     "osm_country_tag": "AR"
+    }
+   ]
+  },
+  "counts": {
+   "overpass_elements": 170,
+   "overpass_unique_after_dedupe": 169,
+   "wikidata_items": 157,
+   "wikidata_active_after_defunct": 155,
+   "matched_qid_or_name": 140,
+   "osm_only": 29,
+   "wikidata_only_with_coords": 0,
+   "features": 167,
+   "features_with_country": 167,
+   "excluded_by_reason": {
+    "defunct": 2,
+    "duplicate": 1,
+    "unnamed": 2,
+    "no_coordinates": 21
+   }
+  },
+  "excluded": [
+   {
+    "name": "Embassy of Manchukuo, Tokyo",
+    "qid": "Q121295010",
+    "reason": "defunct",
+    "detail": "historical state P17=Empire of Japan",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of the Republic of China, Tokyo",
+    "qid": "Q10876488",
+    "reason": "defunct",
+    "detail": "dissolved (P576=1940-01-01)",
+    "source": "wikidata"
+   },
+   {
+    "name": "フランス大使館",
+    "osm": "way/383579458",
+    "reason": "duplicate",
+    "detail": "same normalized name within 120 m of way/220319419",
+    "source": "osm"
+   },
+   {
+    "name": "way/801343976",
+    "osm": "way/801343976",
+    "reason": "unnamed",
+    "detail": "OSM element without name tag and no WD match",
+    "source": "osm"
+   },
+   {
+    "name": "way/1208191588",
+    "osm": "way/1208191588",
+    "reason": "unnamed",
+    "detail": "OSM element without name tag and no WD match",
+    "source": "osm"
+   },
+   {
+    "name": "Embassy of Gabon, Tokyo",
+    "qid": "Q61877234",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of the Republic of Congo, Tokyo",
+    "qid": "Q61877086",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Yemen, Tokyo",
+    "qid": "Q61911599",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Angola, Tokyo",
+    "qid": "Q30403436",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Turkmenistan, Tokyo",
+    "qid": "Q55664157",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Lesotho, Tokyo",
+    "qid": "Q61877276",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Mali, Tokyo",
+    "qid": "Q61877294",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Uzbekistan, Tokyo",
+    "qid": "Q61925853",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Tonga in Japan",
+    "qid": "Q47510848",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Georgia, Tokyo",
+    "qid": "Q52388399",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Malta, Tokyo",
+    "qid": "Q104491974",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Bangladesh embassy in Tokyo",
+    "qid": "Q52213274",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Denmark, Tokyo",
+    "qid": "Q61877440",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Cyprus, Tokyo",
+    "qid": "Q91673990",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of the Marshall Islands, Tokyo",
+    "qid": "Q84034197",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Uganda, Tokyo",
+    "qid": "Q61877338",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of South Sudan, Tokyo",
+    "qid": "Q134450764",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of East Timor, Tokyo",
+    "qid": "Q52215240",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Syria, Tokyo",
+    "qid": "Q44825284",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of the Republic of Mauritius, Tokyo",
+    "qid": "Q135964423",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   },
+   {
+    "name": "Embassy of Cambodia, Tokyo",
+    "qid": "Q52175898",
+    "reason": "no_coordinates",
+    "detail": "WD item has no P625 and no OSM counterpart (WD embassy items are P159-only by design, see CRTKY-145 5.1 / CRTKY-180 3.1)",
+    "source": "wikidata"
+   }
+  ]
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.746922,
+     35.71002
+    ]
+   },
+   "properties": {
+    "name": "ベナン共和国大使館",
+    "country": "Benin",
+    "lat": 35.71002,
+    "lon": 139.746922,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728747,
+     35.704946
+    ]
+   },
+   "properties": {
+    "name": "モルドバ大使館",
+    "country": "Moldova",
+    "lat": 35.704946,
+    "lon": 139.728747,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.781559,
+     35.700348
+    ]
+   },
+   "properties": {
+    "name": "Ambassade de la Republique Democratique du Congo",
+    "country": "Democratic Republic of the Congo",
+    "lat": 35.700348,
+    "lon": 139.781559,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.749246,
+     35.697126
+    ]
+   },
+   "properties": {
+    "name": "駐日フィリピン大使館公邸",
+    "country": "Philippines",
+    "lat": 35.697126,
+    "lon": 139.749246,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.747234,
+     35.693999
+    ]
+   },
+   "properties": {
+    "name": "インド大使館",
+    "country": "India",
+    "lat": 35.693999,
+    "lon": 139.747234,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743423,
+     35.692627
+    ]
+   },
+   "properties": {
+    "name": "チュニジア共和国大使館",
+    "country": "Tunisia",
+    "lat": 35.692627,
+    "lon": 139.743423,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.744731,
+     35.692303
+    ]
+   },
+   "properties": {
+    "name": "香港特別行政区政府香港経済貿易代表部",
+    "country": "Hong Kong",
+    "lat": 35.692303,
+    "lon": 139.744731,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.746338,
+     35.692104
+    ]
+   },
+   "properties": {
+    "name": "イタリア文化会館",
+    "country": "Italy",
+    "lat": 35.692104,
+    "lon": 139.746338,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.736961,
+     35.689655
+    ]
+   },
+   "properties": {
+    "name": "ルクセンブルク大公国大使館",
+    "country": "Luxembourg",
+    "lat": 35.689655,
+    "lon": 139.736961,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741818,
+     35.689579
+    ]
+   },
+   "properties": {
+    "name": "ローマ法王庁大使館",
+    "country": "Holy See",
+    "lat": 35.689579,
+    "lon": 139.741818,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.685873,
+     35.688819
+    ]
+   },
+   "properties": {
+    "name": "ベリーズ大使館",
+    "country": "Belize",
+    "lat": 35.688819,
+    "lon": 139.685873,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.744249,
+     35.688415
+    ]
+   },
+   "properties": {
+    "name": "パラグアイ大使館",
+    "country": "Paraguay",
+    "lat": 35.688415,
+    "lon": 139.744249,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.717756,
+     35.687412
+    ]
+   },
+   "properties": {
+    "name": "インドネシア共和国大使館",
+    "country": "Indonesia",
+    "lat": 35.687412,
+    "lon": 139.717756,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.74392,
+     35.686791
+    ]
+   },
+   "properties": {
+    "name": "英国大使館",
+    "country": "United Kingdom",
+    "lat": 35.686791,
+    "lon": 139.74392,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.73765,
+     35.686001
+    ]
+   },
+   "properties": {
+    "name": "イスラエル大使館",
+    "country": "Israel",
+    "lat": 35.686001,
+    "lon": 139.73765,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740584,
+     35.685628
+    ]
+   },
+   "properties": {
+    "name": "アイルランド大使館",
+    "country": "Ireland",
+    "lat": 35.685628,
+    "lon": 139.740584,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.739118,
+     35.68561
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Portugal",
+    "country": "Portugal",
+    "lat": 35.68561,
+    "lon": 139.739118,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.735892,
+     35.685077
+    ]
+   },
+   "properties": {
+    "name": "ベルギー大使館",
+    "country": "Belgium",
+    "lat": 35.685077,
+    "lon": 139.735892,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741394,
+     35.685026
+    ]
+   },
+   "properties": {
+    "name": "駐日パレスチナ常駐総代表部",
+    "country": "Palestine",
+    "lat": 35.685026,
+    "lon": 139.741394,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743777,
+     35.684327
+    ]
+   },
+   "properties": {
+    "name": "南アフリカ大使館",
+    "country": "South Africa",
+    "lat": 35.684327,
+    "lon": 139.743777,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.739525,
+     35.676924
+    ]
+   },
+   "properties": {
+    "name": "メキシコ大使館",
+    "country": "Mexico",
+    "lat": 35.676924,
+    "lon": 139.739525,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.690467,
+     35.6737
+    ]
+   },
+   "properties": {
+    "name": "ブルガリア大使館",
+    "country": "Bulgaria",
+    "lat": 35.6737,
+    "lon": 139.690467,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728303,
+     35.673373
+    ]
+   },
+   "properties": {
+    "name": "カナダ大使館",
+    "country": "Canada",
+    "lat": 35.673373,
+    "lon": 139.728303,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.70858,
+     35.673193
+    ]
+   },
+   "properties": {
+    "name": "トルコ大使館",
+    "country": "Turkey",
+    "lat": 35.673193,
+    "lon": 139.70858,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.711637,
+     35.67292
+    ]
+   },
+   "properties": {
+    "name": "エストニア共和国大使館",
+    "country": "Estonia",
+    "lat": 35.67292,
+    "lon": 139.711637,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.685821,
+     35.672831
+    ]
+   },
+   "properties": {
+    "name": "ベトナム大使館",
+    "country": "Vietnam",
+    "lat": 35.672831,
+    "lon": 139.685821,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.778041,
+     35.671941
+    ]
+   },
+   "properties": {
+    "name": "サモア大使館",
+    "country": "Samoa",
+    "lat": 35.671941,
+    "lon": 139.778041,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728839,
+     35.671068
+    ]
+   },
+   "properties": {
+    "name": "カンボジア大使館",
+    "country": "Cambodia",
+    "lat": 35.671068,
+    "lon": 139.728839,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.714548,
+     35.670859
+    ]
+   },
+   "properties": {
+    "name": "ブラジル連邦共和国大使館",
+    "country": "Brazil",
+    "lat": 35.670859,
+    "lon": 139.714548,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.677641,
+     35.669209
+    ]
+   },
+   "properties": {
+    "name": "ブルキナファソ大使館",
+    "country": "Burkina Faso",
+    "lat": 35.669209,
+    "lon": 139.677641,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741762,
+     35.668779
+    ]
+   },
+   "properties": {
+    "name": "アルメニア大使館",
+    "country": "Armenia",
+    "lat": 35.668779,
+    "lon": 139.741762,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741718,
+     35.668726
+    ]
+   },
+   "properties": {
+    "name": "レバノン大使館",
+    "country": "Lebanon",
+    "lat": 35.668726,
+    "lon": 139.741718,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741613,
+     35.668609
+    ]
+   },
+   "properties": {
+    "name": "バーレーン大使館",
+    "country": "Bahrain",
+    "lat": 35.668609,
+    "lon": 139.741613,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743349,
+     35.668554
+    ]
+   },
+   "properties": {
+    "name": "米国大使館",
+    "country": "United States",
+    "lat": 35.668554,
+    "lon": 139.743349,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.7337,
+     35.667443
+    ]
+   },
+   "properties": {
+    "name": "シリア・アラブ共和国大使館",
+    "country": "Syria",
+    "lat": 35.667443,
+    "lon": 139.7337,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741871,
+     35.667192
+    ]
+   },
+   "properties": {
+    "name": "ミクロネシア連邦大使館",
+    "country": "Micronesia",
+    "lat": 35.667192,
+    "lon": 139.741871,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.745394,
+     35.666615
+    ]
+   },
+   "properties": {
+    "name": "ナイジェリア大使館",
+    "country": "Nigeria",
+    "lat": 35.666615,
+    "lon": 139.745394,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741525,
+     35.665608
+    ]
+   },
+   "properties": {
+    "name": "スペイン大使館",
+    "country": "Spain",
+    "lat": 35.665608,
+    "lon": 139.741525,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.691178,
+     35.665184
+    ]
+   },
+   "properties": {
+    "name": "ラトビア共和国大使館",
+    "country": "Latvia",
+    "lat": 35.665184,
+    "lon": 139.691178,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.772628,
+     35.665018
+    ]
+   },
+   "properties": {
+    "name": "アルバニア大使館",
+    "country": "Albania",
+    "lat": 35.665018,
+    "lon": 139.772628,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.682603,
+     35.664597
+    ]
+   },
+   "properties": {
+    "name": "コートジボワール共和国大使館",
+    "country": "Ivory Coast",
+    "lat": 35.664597,
+    "lon": 139.682603,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741926,
+     35.664583
+    ]
+   },
+   "properties": {
+    "name": "スウェーデン大使館",
+    "country": "Sweden",
+    "lat": 35.664583,
+    "lon": 139.741926,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.750823,
+     35.664465
+    ]
+   },
+   "properties": {
+    "name": "コソボ共和国大使館",
+    "country": "Kosovo",
+    "lat": 35.664465,
+    "lon": 139.750823,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.691685,
+     35.664411
+    ]
+   },
+   "properties": {
+    "name": "ヨルダン大使館",
+    "country": "Jordan",
+    "lat": 35.664411,
+    "lon": 139.691685,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.690456,
+     35.663799
+    ]
+   },
+   "properties": {
+    "name": "ニュージーランド大使館",
+    "country": "New Zealand",
+    "lat": 35.663799,
+    "lon": 139.690456,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.739231,
+     35.663279
+    ]
+   },
+   "properties": {
+    "name": "サウジアラビア大使館",
+    "country": "Saudi Arabia",
+    "lat": 35.663279,
+    "lon": 139.739231,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.692823,
+     35.663027
+    ]
+   },
+   "properties": {
+    "name": "イラク大使館",
+    "country": "Iraq",
+    "lat": 35.663027,
+    "lon": 139.692823,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.689132,
+     35.662241
+    ]
+   },
+   "properties": {
+    "name": "モンゴル共和国大使館",
+    "country": "Mongolia",
+    "lat": 35.662241,
+    "lon": 139.689132,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.714312,
+     35.662216
+    ]
+   },
+   "properties": {
+    "name": "モロッコ大使館",
+    "country": "Morocco",
+    "lat": 35.662216,
+    "lon": 139.714312,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.74599,
+     35.66181
+    ]
+   },
+   "properties": {
+    "name": "オランダ王国大使館大使公邸",
+    "country": "Netherlands",
+    "lat": 35.66181,
+    "lon": 139.74599,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.744736,
+     35.661724
+    ]
+   },
+   "properties": {
+    "name": "オランダ王国大使館",
+    "country": "Netherlands",
+    "lat": 35.661724,
+    "lon": 139.744736,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.725453,
+     35.661678
+    ]
+   },
+   "properties": {
+    "name": "ガーナ大使館",
+    "country": "Ghana",
+    "lat": 35.661678,
+    "lon": 139.725453,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741565,
+     35.660104
+    ]
+   },
+   "properties": {
+    "name": "カザフスタン大使館",
+    "country": "Kazakhstan",
+    "lat": 35.660104,
+    "lon": 139.741565,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740371,
+     35.660006
+    ]
+   },
+   "properties": {
+    "name": "ナミビア大使館",
+    "country": "Namibia",
+    "lat": 35.660006,
+    "lon": 139.740371,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740318,
+     35.659933
+    ]
+   },
+   "properties": {
+    "name": "エクアドル大使館",
+    "country": "Ecuador",
+    "lat": 35.659933,
+    "lon": 139.740318,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.735211,
+     35.659871
+    ]
+   },
+   "properties": {
+    "name": "Philippine Embassy Tokyo",
+    "country": "Philippines",
+    "lat": 35.659871,
+    "lon": 139.735211,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.740321,
+     35.659824
+    ]
+   },
+   "properties": {
+    "name": "サモア独立国大使館",
+    "country": "Samoa",
+    "lat": 35.659824,
+    "lon": 139.740321,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.742621,
+     35.659718
+    ]
+   },
+   "properties": {
+    "name": "モルディブ大使館",
+    "country": "Maldives",
+    "lat": 35.659718,
+    "lon": 139.742621,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741348,
+     35.659431
+    ]
+   },
+   "properties": {
+    "name": "ロシア大使館",
+    "country": "Russia",
+    "lat": 35.659431,
+    "lon": 139.741348,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.722129,
+     35.659309
+    ]
+   },
+   "properties": {
+    "name": "エルサルバドル大使館",
+    "country": "El Salvador",
+    "lat": 35.659309,
+    "lon": 139.722129,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.722045,
+     35.659298
+    ]
+   },
+   "properties": {
+    "name": "ドミニカ共和国大使館",
+    "country": "Dominican Republic",
+    "lat": 35.659298,
+    "lon": 139.722045,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721926,
+     35.659281
+    ]
+   },
+   "properties": {
+    "name": "エクアドル大使館",
+    "country": "Ecuador",
+    "lat": 35.659281,
+    "lon": 139.721926,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.742564,
+     35.659277
+    ]
+   },
+   "properties": {
+    "name": "フィジー大使館",
+    "country": "Fiji",
+    "lat": 35.659277,
+    "lon": 139.742564,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721809,
+     35.659265
+    ]
+   },
+   "properties": {
+    "name": "ボリビア大使館",
+    "country": "Bolivia",
+    "lat": 35.659265,
+    "lon": 139.721809,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721684,
+     35.659247
+    ]
+   },
+   "properties": {
+    "name": "ハイチ共和国大使館",
+    "country": "Haiti",
+    "lat": 35.659247,
+    "lon": 139.721684,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721562,
+     35.65923
+    ]
+   },
+   "properties": {
+    "name": "ホンジュラス共和国大使館",
+    "country": "Honduras",
+    "lat": 35.65923,
+    "lon": 139.721562,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.722156,
+     35.659202
+    ]
+   },
+   "properties": {
+    "name": "コスタリカ大使館",
+    "country": "Costa Rica",
+    "lat": 35.659202,
+    "lon": 139.722156,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.722033,
+     35.659187
+    ]
+   },
+   "properties": {
+    "name": "ウルグアイ大使館",
+    "country": "Uruguay",
+    "lat": 35.659187,
+    "lon": 139.722033,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721883,
+     35.659168
+    ]
+   },
+   "properties": {
+    "name": "グアテマラ大使館",
+    "country": "Guatemala",
+    "lat": 35.659168,
+    "lon": 139.721883,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721734,
+     35.65915
+    ]
+   },
+   "properties": {
+    "name": "ニカラグア大使館",
+    "country": "Nicaragua",
+    "lat": 35.65915,
+    "lon": 139.721734,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721588,
+     35.659131
+    ]
+   },
+   "properties": {
+    "name": "ベネズエラ大使館",
+    "country": "Venezuela",
+    "lat": 35.659131,
+    "lon": 139.721588,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743448,
+     35.658928
+    ]
+   },
+   "properties": {
+    "name": "エジプト大使館",
+    "country": "Egypt",
+    "lat": 35.658928,
+    "lon": 139.743448,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726049,
+     35.658358
+    ]
+   },
+   "properties": {
+    "name": "ギリシャ大使館",
+    "country": "Greece",
+    "lat": 35.658358,
+    "lon": 139.726049,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726896,
+     35.658172
+    ]
+   },
+   "properties": {
+    "name": "ラオス人民民主共和国 大使館",
+    "country": "Laos",
+    "lat": 35.658172,
+    "lon": 139.726896,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.724506,
+     35.657956
+    ]
+   },
+   "properties": {
+    "name": "ルーマニア大使館",
+    "country": "Romania",
+    "lat": 35.657956,
+    "lon": 139.724506,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741844,
+     35.657841
+    ]
+   },
+   "properties": {
+    "name": "アフガニスタン大使館",
+    "country": "Afghanistan",
+    "lat": 35.657841,
+    "lon": 139.741844,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.734188,
+     35.657504
+    ]
+   },
+   "properties": {
+    "name": "シンガポール大使館",
+    "country": "Singapore",
+    "lat": 35.657504,
+    "lon": 139.734188,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.725198,
+     35.657145
+    ]
+   },
+   "properties": {
+    "name": "ウクライナ大使館",
+    "country": "Ukraine",
+    "lat": 35.657145,
+    "lon": 139.725198,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728333,
+     35.656863
+    ]
+   },
+   "properties": {
+    "name": "サンマリノ大使館",
+    "country": "San Marino",
+    "lat": 35.656863,
+    "lon": 139.728333,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.672613,
+     35.656826
+    ]
+   },
+   "properties": {
+    "name": "アンゴラ共和国大使館",
+    "country": "Angola",
+    "lat": 35.656826,
+    "lon": 139.672613,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.717331,
+     35.656716
+    ]
+   },
+   "properties": {
+    "name": "スロベニア大使館",
+    "country": "Slovenia",
+    "lat": 35.656716,
+    "lon": 139.717331,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741371,
+     35.656568
+    ]
+   },
+   "properties": {
+    "name": "パラオ共和国大使館",
+    "country": "Palau",
+    "lat": 35.656568,
+    "lon": 139.741371,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.729745,
+     35.656306
+    ]
+   },
+   "properties": {
+    "name": "リトアニア共和国大使館",
+    "country": "Lithuania",
+    "lat": 35.656306,
+    "lon": 139.729745,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741729,
+     35.656296
+    ]
+   },
+   "properties": {
+    "name": "パナマ大使館",
+    "country": "Panama",
+    "lat": 35.656296,
+    "lon": 139.741729,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727455,
+     35.656295
+    ]
+   },
+   "properties": {
+    "name": "中国大使館",
+    "country": "China",
+    "lat": 35.656295,
+    "lon": 139.727455,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.731905,
+     35.655911
+    ]
+   },
+   "properties": {
+    "name": "駐日オーストリア共和国大使館",
+    "country": "Austria",
+    "lat": 35.655911,
+    "lon": 139.731905,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.732748,
+     35.655857
+    ]
+   },
+   "properties": {
+    "name": "オーストリア大使館",
+    "country": "Austria",
+    "lat": 35.655857,
+    "lon": 139.732748,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726228,
+     35.65562
+    ]
+   },
+   "properties": {
+    "name": "駐日ポルトガル大使館",
+    "country": "Portugal",
+    "lat": 35.65562,
+    "lon": 139.726228,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743572,
+     35.655465
+    ]
+   },
+   "properties": {
+    "name": "キューバ大使館 領事部",
+    "country": "Cuba",
+    "lat": 35.655465,
+    "lon": 139.743572,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.743946,
+     35.655438
+    ]
+   },
+   "properties": {
+    "name": "キューバ大使館",
+    "country": "Cuba",
+    "lat": 35.655438,
+    "lon": 139.743946,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.715104,
+     35.655194
+    ]
+   },
+   "properties": {
+    "name": "クロアチア大使館",
+    "country": "Croatia",
+    "lat": 35.655194,
+    "lon": 139.715104,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.730471,
+     35.65435
+    ]
+   },
+   "properties": {
+    "name": "スロバキア大使館",
+    "country": "Slovakia",
+    "lat": 35.65435,
+    "lon": 139.730471,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721595,
+     35.654277
+    ]
+   },
+   "properties": {
+    "name": "オマーン大使館",
+    "country": "Oman",
+    "lat": 35.654277,
+    "lon": 139.721595,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.730744,
+     35.654253
+    ]
+   },
+   "properties": {
+    "name": "ジャマイカ大使館",
+    "country": "Jamaica",
+    "lat": 35.654253,
+    "lon": 139.730744,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.745533,
+     35.654196
+    ]
+   },
+   "properties": {
+    "name": "チリ大使館",
+    "country": "Chile",
+    "lat": 35.654196,
+    "lon": 139.745533,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.696541,
+     35.653897
+    ]
+   },
+   "properties": {
+    "name": "アラブ首長国連邦大使館",
+    "country": "United Arab Emirates",
+    "lat": 35.653897,
+    "lon": 139.696541,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727454,
+     35.653662
+    ]
+   },
+   "properties": {
+    "name": "カタール大使館",
+    "country": "Qatar",
+    "lat": 35.653662,
+    "lon": 139.727454,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.723654,
+     35.653649
+    ]
+   },
+   "properties": {
+    "name": "在日スイス大使館",
+    "country": "Switzerland",
+    "lat": 35.653649,
+    "lon": 139.723654,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727782,
+     35.65364
+    ]
+   },
+   "properties": {
+    "name": "マダガスカル大使館",
+    "country": "Madagascar",
+    "lat": 35.65364,
+    "lon": 139.727782,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.72463,
+     35.653447
+    ]
+   },
+   "properties": {
+    "name": "ボスニア・ヘルツェゴビナ大使館",
+    "country": "Bosnia and Herzegovina",
+    "lat": 35.653447,
+    "lon": 139.72463,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.74022,
+     35.653405
+    ]
+   },
+   "properties": {
+    "name": "駐日キルギス大使館",
+    "country": "Kyrgyzstan",
+    "lat": 35.653405,
+    "lon": 139.74022,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.723813,
+     35.653365
+    ]
+   },
+   "properties": {
+    "name": "スイス大使館",
+    "country": "Switzerland",
+    "lat": 35.653365,
+    "lon": 139.723813,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.724108,
+     35.653086
+    ]
+   },
+   "properties": {
+    "name": "中華人民共和国大使館 経済商務部",
+    "country": "China",
+    "lat": 35.653086,
+    "lon": 139.724108,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.723719,
+     35.652855
+    ]
+   },
+   "properties": {
+    "name": "ノルウェー大使館",
+    "country": "Norway",
+    "lat": 35.652855,
+    "lon": 139.723719,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.730398,
+     35.652627
+    ]
+   },
+   "properties": {
+    "name": "アルゼンチン大使館",
+    "country": "Argentina",
+    "lat": 35.652627,
+    "lon": 139.730398,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.714104,
+     35.652347
+    ]
+   },
+   "properties": {
+    "name": "ペルー共和国大使館",
+    "country": "Peru",
+    "lat": 35.652347,
+    "lon": 139.714104,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.69553,
+     35.652327
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Malaysia",
+    "country": "Malaysia",
+    "lat": 35.652327,
+    "lon": 139.69553,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.716903,
+     35.651994
+    ]
+   },
+   "properties": {
+    "name": "チェコ共和国大使館",
+    "country": "Czech Republic",
+    "lat": 35.651994,
+    "lon": 139.716903,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.732432,
+     35.651783
+    ]
+   },
+   "properties": {
+    "name": "韓国大使館",
+    "country": "South Korea",
+    "lat": 35.651783,
+    "lon": 139.732432,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.696741,
+     35.651744
+    ]
+   },
+   "properties": {
+    "name": "ギニア共和国大使館",
+    "country": "Guinea",
+    "lat": 35.651744,
+    "lon": 139.696741,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.739159,
+     35.651681
+    ]
+   },
+   "properties": {
+    "name": "オーストラリア大使館",
+    "country": "Australia",
+    "lat": 35.651681,
+    "lon": 139.739159,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.737036,
+     35.651554
+    ]
+   },
+   "properties": {
+    "name": "駐日韓国領事館",
+    "country": "South Korea",
+    "lat": 35.651554,
+    "lon": 139.737036,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.704645,
+     35.650963
+    ]
+   },
+   "properties": {
+    "name": "リビア大使館",
+    "country": "Libya",
+    "lat": 35.650963,
+    "lon": 139.704645,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.725308,
+     35.650834
+    ]
+   },
+   "properties": {
+    "name": "ドイツ大使館",
+    "country": "Germany",
+    "lat": 35.650834,
+    "lon": 139.725308,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727961,
+     35.650463
+    ]
+   },
+   "properties": {
+    "name": "アルジェリア民主人民共和国大使館",
+    "country": "Algeria",
+    "lat": 35.650463,
+    "lon": 139.727961,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.74218,
+     35.650434
+    ]
+   },
+   "properties": {
+    "name": "イタリア大使館",
+    "country": "Italy",
+    "lat": 35.650434,
+    "lon": 139.74218,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.728628,
+     35.650401
+    ]
+   },
+   "properties": {
+    "name": "フィンランド大使館",
+    "country": "Finland",
+    "lat": 35.650401,
+    "lon": 139.728628,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.725651,
+     35.650379
+    ]
+   },
+   "properties": {
+    "name": "Residence of German Ambassador",
+    "country": "Germany",
+    "lat": 35.650379,
+    "lon": 139.725651,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727896,
+     35.65009
+    ]
+   },
+   "properties": {
+    "name": "パキスタン・イスラム共和国大使館",
+    "country": "Pakistan",
+    "lat": 35.65009,
+    "lon": 139.727896,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726913,
+     35.649807
+    ]
+   },
+   "properties": {
+    "name": "駐日欧州連合代表部",
+    "country": "European Union",
+    "lat": 35.649807,
+    "lon": 139.726913,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.725165,
+     35.649609
+    ]
+   },
+   "properties": {
+    "name": "中国大使館別館",
+    "country": "China",
+    "lat": 35.649609,
+    "lon": 139.725165,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.696804,
+     35.649446
+    ]
+   },
+   "properties": {
+    "name": "セネガル大使館",
+    "country": "Senegal",
+    "lat": 35.649446,
+    "lon": 139.696804,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.698463,
+     35.648956
+    ]
+   },
+   "properties": {
+    "name": "エジプト大使館",
+    "country": "Egypt",
+    "lat": 35.648956,
+    "lon": 139.698463,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.750914,
+     35.648766
+    ]
+   },
+   "properties": {
+    "name": "ボツワナ共和国大使館",
+    "country": "Botswana",
+    "lat": 35.648766,
+    "lon": 139.750914,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.6998,
+     35.648351
+    ]
+   },
+   "properties": {
+    "name": "デンマーク大使館",
+    "country": "Denmark",
+    "lat": 35.648351,
+    "lon": 139.6998,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741118,
+     35.64823
+    ]
+   },
+   "properties": {
+    "name": "ハンガリー大使館",
+    "country": "Hungary",
+    "lat": 35.64823,
+    "lon": 139.741118,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.731376,
+     35.648085
+    ]
+   },
+   "properties": {
+    "name": "イラン大使館",
+    "country": "Iran",
+    "lat": 35.648085,
+    "lon": 139.731376,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.738957,
+     35.64768
+    ]
+   },
+   "properties": {
+    "name": "ジンバブエ大使館",
+    "country": "Zimbabwe",
+    "lat": 35.64768,
+    "lon": 139.738957,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726239,
+     35.647324
+    ]
+   },
+   "properties": {
+    "name": "フランス大使館",
+    "country": "France",
+    "lat": 35.647324,
+    "lon": 139.726239,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.741562,
+     35.64534
+    ]
+   },
+   "properties": {
+    "name": "クウェート国大使館",
+    "country": "Kuwait",
+    "lat": 35.64534,
+    "lon": 139.741562,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.686621,
+     35.643935
+    ]
+   },
+   "properties": {
+    "name": "マレーシア大使館",
+    "country": "Malaysia",
+    "lat": 35.643935,
+    "lon": 139.686621,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.727426,
+     35.640608
+    ]
+   },
+   "properties": {
+    "name": "リベリア共和国大使館",
+    "country": "Liberia",
+    "lat": 35.640608,
+    "lon": 139.727426,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.736822,
+     35.639923
+    ]
+   },
+   "properties": {
+    "name": "スリランカ大使館",
+    "country": "Sri Lanka",
+    "lat": 35.639923,
+    "lon": 139.736822,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.70867,
+     35.639372
+    ]
+   },
+   "properties": {
+    "name": "ポーランド大使館",
+    "country": "Poland",
+    "lat": 35.639372,
+    "lon": 139.70867,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.710188,
+     35.639083
+    ]
+   },
+   "properties": {
+    "name": "アルジェリア大使館",
+    "country": "Algeria",
+    "lat": 35.639083,
+    "lon": 139.710188,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.687903,
+     35.63854
+    ]
+   },
+   "properties": {
+    "name": "Embassy of Mauritania",
+    "country": "Mauritania",
+    "lat": 35.63854,
+    "lon": 139.687903,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.726124,
+     35.638122
+    ]
+   },
+   "properties": {
+    "name": "エリトリア大使館",
+    "country": "Eritrea",
+    "lat": 35.638122,
+    "lon": 139.726124,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.72188,
+     35.63753
+    ]
+   },
+   "properties": {
+    "name": "台湾駐日代表処",
+    "country": "Taiwan",
+    "lat": 35.63753,
+    "lon": 139.72188,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.629008,
+     35.636796
+    ]
+   },
+   "properties": {
+    "name": "駐日タンザニア連合共和国",
+    "country": "Tanzania",
+    "lat": 35.636796,
+    "lon": 139.629008,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.731579,
+     35.634923
+    ]
+   },
+   "properties": {
+    "name": "マラウイ大使館",
+    "country": "Malawi",
+    "lat": 35.634923,
+    "lon": 139.731579,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.731457,
+     35.634508
+    ]
+   },
+   "properties": {
+    "name": "エチオピア大使館",
+    "country": "Ethiopia",
+    "lat": 35.634508,
+    "lon": 139.731457,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.723759,
+     35.63313
+    ]
+   },
+   "properties": {
+    "name": "タジキスタン大使館",
+    "country": "Tajikistan",
+    "lat": 35.63313,
+    "lon": 139.723759,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.674241,
+     35.632433
+    ]
+   },
+   "properties": {
+    "name": "カメルーン大使館",
+    "country": "Cameroon",
+    "lat": 35.632433,
+    "lon": 139.674241,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.719562,
+     35.6319
+    ]
+   },
+   "properties": {
+    "name": "タイ大使館",
+    "country": "Thailand",
+    "lat": 35.6319,
+    "lon": 139.719562,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.717706,
+     35.631789
+    ]
+   },
+   "properties": {
+    "name": "コロンビア大使館",
+    "country": "Colombia",
+    "lat": 35.631789,
+    "lon": 139.717706,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.721273,
+     35.631388
+    ]
+   },
+   "properties": {
+    "name": "インドネシア大使館",
+    "country": "Indonesia",
+    "lat": 35.631388,
+    "lon": 139.721273,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.72283,
+     35.630575
+    ]
+   },
+   "properties": {
+    "name": "ベラルーシ大使館",
+    "country": "Belarus",
+    "lat": 35.630575,
+    "lon": 139.72283,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.666317,
+     35.63057
+    ]
+   },
+   "properties": {
+    "name": "ガボン共和国大使館",
+    "country": "Gabon",
+    "lat": 35.63057,
+    "lon": 139.666317,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.702559,
+     35.629927
+    ]
+   },
+   "properties": {
+    "name": "ジブチ大使館",
+    "country": "Djibouti",
+    "lat": 35.629927,
+    "lon": 139.702559,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.72252,
+     35.628838
+    ]
+   },
+   "properties": {
+    "name": "マケドニア大使館",
+    "country": "North Macedonia",
+    "lat": 35.628838,
+    "lon": 139.72252,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.697958,
+     35.627818
+    ]
+   },
+   "properties": {
+    "name": "ネパール大使館",
+    "country": "Nepal",
+    "lat": 35.627818,
+    "lon": 139.697958,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.643496,
+     35.627717
+    ]
+   },
+   "properties": {
+    "name": "モザンビーク大使館",
+    "country": "Mozambique",
+    "lat": 35.627717,
+    "lon": 139.643496,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.724587,
+     35.626757
+    ]
+   },
+   "properties": {
+    "name": "在東京ペルー総領事館",
+    "country": "Peru",
+    "lat": 35.626757,
+    "lon": 139.724587,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.72452,
+     35.626708
+    ]
+   },
+   "properties": {
+    "name": "在東京ブラジル総領事館",
+    "country": "Brazil",
+    "lat": 35.626708,
+    "lon": 139.72452,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.70334,
+     35.626578
+    ]
+   },
+   "properties": {
+    "name": "パプアニューギニア大使館",
+    "country": "Papua New Guinea",
+    "lat": 35.626578,
+    "lon": 139.70334,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.733079,
+     35.626484
+    ]
+   },
+   "properties": {
+    "name": "セルビア大使館",
+    "country": "Serbia",
+    "lat": 35.626484,
+    "lon": 139.733079,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.73379,
+     35.626411
+    ]
+   },
+   "properties": {
+    "name": "アイスランド大使館",
+    "country": "Iceland",
+    "lat": 35.626411,
+    "lon": 139.73379,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.668475,
+     35.626157
+    ]
+   },
+   "properties": {
+    "name": "アゼルバイジャン大使館",
+    "country": "Azerbaijan",
+    "lat": 35.626157,
+    "lon": 139.668475,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.732562,
+     35.625898
+    ]
+   },
+   "properties": {
+    "name": "ブルネイ大使館",
+    "country": "Brunei",
+    "lat": 35.625898,
+    "lon": 139.732562,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.671884,
+     35.623751
+    ]
+   },
+   "properties": {
+    "name": "スーダン大使館",
+    "country": "Sudan",
+    "lat": 35.623751,
+    "lon": 139.671884,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.734112,
+     35.620912
+    ]
+   },
+   "properties": {
+    "name": "モーリタニア大使館",
+    "country": "Mauritania",
+    "lat": 35.620912,
+    "lon": 139.734112,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.715264,
+     35.620588
+    ]
+   },
+   "properties": {
+    "name": "ザンビア共和国大使館",
+    "country": "Zambia",
+    "lat": 35.620588,
+    "lon": 139.715264,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.670681,
+     35.620098
+    ]
+   },
+   "properties": {
+    "name": "トーゴ共和国大使館",
+    "country": "Togo",
+    "lat": 35.620098,
+    "lon": 139.670681,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.736067,
+     35.619976
+    ]
+   },
+   "properties": {
+    "name": "ミャンマー大使館",
+    "country": "Myanmar",
+    "lat": 35.619976,
+    "lon": 139.736067,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.661992,
+     35.617021
+    ]
+   },
+   "properties": {
+    "name": "ルワンダ大使館",
+    "country": "Rwanda",
+    "lat": 35.617021,
+    "lon": 139.661992,
+    "source": "both"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.639216,
+     35.615611
+    ]
+   },
+   "properties": {
+    "name": "在東京中央アフリカ共和国名誉総領事館",
+    "country": "Central African Republic",
+    "lat": 35.615611,
+    "lon": 139.639216,
+    "source": "osm"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.666102,
+     35.614307
+    ]
+   },
+   "properties": {
+    "name": "ケニア大使館",
+    "country": "Kenya",
+    "lat": 35.614307,
+    "lon": 139.666102,
+    "source": "both"
+   }
+  }
+ ]
+}

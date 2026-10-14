@@ -1,0 +1,12 @@
+{
+ "lat": 13.8030357,
+ "lon": 100.5502304,
+ "display_name": "เขตจตุจักร, กรุงเทพมหานคร, 10900, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 1639286,
+ "type": "administrative",
+ "query": "Chatuchak, Bangkok, 10900, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "12/21, 99/231 Thetsaban Songkhro Road, Lat Yao, Chatuchak, Bangkok, 10900, Thailand",
+ "simplified_query": true
+}

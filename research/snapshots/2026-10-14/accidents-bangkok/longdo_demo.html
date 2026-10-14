@@ -1,0 +1,719 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>100 คลัสเตอร์อุบัติเหตุ ใน กทม.</title>
+    <meta name="description"
+        content="ข้อมูลพิกัดอุบัติเหตุจากมูลนิธิศูนย์ข้อมูลจราจรอัจฉริยะไทย (iTIC), ศูนย์ข้อมูลอุบัติเหตุ (ThaiRSC) และการแปลงพิกัดเป็นที่อยู่จริง (reverse geocoding) จาก Longdo Map">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin: 0px;
+            height: 100%;
+        }
+
+        span {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #sidebar {
+            padding: 15px;
+            flex: 3;
+            height: calc(100% - 20px);
+            overflow-y: scroll;
+        }
+
+        #map {
+            flex: 6;
+            height: 100%;
+            box-shadow: 0 2px 4px 0 rgba(153, 148, 148, 0.258);
+            /* border-style: solid;
+            border-width: 1px 0px 0px 0px;
+            border-color: rgb(95, 95, 95) */
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            margin-right: 10px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+        }
+
+        #legend {
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            line-height: 18px;
+            height: 20px;
+            margin-bottom: 80px;
+            width: 220px;
+        }
+
+        .legend-key {
+            display: inline-block;
+            border-radius: 20%;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+
+        ol {
+            padding: 0px
+        }
+
+        .button {
+            position: relative;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 14px;
+            color: #FFFFFF;
+            padding: 4px;
+            width: 50px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+        .count-accidents {
+            display: flex;
+            justify-content: end;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        @media (max-width: 480px) {
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title-web {
+                font-size: 24px;
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
+
+            #sidebar {
+                flex: 3;
+                /* height: calc(100% - 20px); */
+            }
+
+            #map {
+                flex: 3;
+                height: 100%;
+                box-shadow: 0 2px 4px 0 rgba(153, 148, 148, 0.258);
+                border-style: solid;
+                border-width: 1px 0px 0px 0px;
+                border-color: rgb(95, 95, 95, 0.5)
+            }
+        }
+    </style>
+    <!-- <script type="text/javascript" src="https://dev.thaimap.longdo.org/map/?key=CHANGE_THIS_TO_YOUR_OWN_KEY"></script> -->
+    <script type="text/javascript" src="https://api.longdo.com/map3/?key=thisisreallymagic"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./itic_road_2.json"></script>
+    <script src="./rvp_dbscan_100_new.json"></script>
+    <script src="./itic_dbscan_100.json"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script>
+        var map
+        var type_data = undefined;
+
+        const layers = [
+            'ข้อมูล iTIC ปี 2022-2020',
+            'ข้อมูล DGA ปี 2020-2018',
+        ];
+        const colors = [
+            '#B42222',
+            '#004AAD',
+        ];
+
+        const legend = document.getElementById('legend');
+
+        function init() {
+
+            map = new longdo.Map({
+                layer: [longdo.Layers.GRAY],
+                zoom: 12,
+                placeholder: document.getElementById('map'),
+                center: [100.563320, 13.758296]
+            });
+            // map.Layers.setBase(longdo.Layers.GRAY);
+
+            map.Event.bind("ready", function (location) {
+
+                map.Tags.add('%',
+                    {
+                        visibleRange: { min: 19, max: 20 }
+                    });
+
+                // iTIC Heatmap id "accident-heat"
+                map.Layers.add(
+                    new longdo.Layer({
+                        sources: {
+                            accident: {
+                                type: "geojson",
+                                data: "./heatmap-itic.geojson",
+                            },
+                        },
+                        layers: [
+                            {
+                                id: "accident-heat",
+                                type: "heatmap",
+                                source: "accident",
+                                minzoom: 8,
+                                maxzoom: 17,
+                                paint: {
+                                    // increase weight as diameter breast height increases
+                                    'heatmap-weight': {
+                                        // 'property': 'dbh',
+                                        'type': 'exponential',
+                                        'stops': [
+                                            [1, 0],
+                                            [62, 1]
+                                        ]
+                                    },
+                                    // increase intensity as zoom level increases
+                                    'heatmap-intensity': {
+                                        'stops': [
+                                            [8, 0.5],
+                                            [15, 3]
+                                        ]
+                                    },
+                                    // use sequential color palette to use exponentially as the weight increases
+                                    'heatmap-color': [
+                                        'interpolate',
+                                        ['linear'],
+                                        ['heatmap-density'],
+                                        0,
+                                        "rgba(33,102,172,0)",
+                                        0.1,
+                                        "rgba(184,229,255,0.5)",
+                                        0.3,
+                                        "rgb(255,251,148)",
+                                        0.5,
+                                        "rgb(253,219,199)",
+                                        0.7,
+                                        "rgb(239,138,98)",
+                                        1,
+                                        "rgb(178,24,43)"
+                                    ],
+
+                                    // increase radius as zoom increases
+                                    'heatmap-radius': {
+                                        'stops': [
+                                            [8, 1],
+                                            [15, 20]
+                                        ]
+                                    },
+                                    // decrease opacity to transition into the circle layer
+                                    'heatmap-opacity': {
+                                        'default': 1,
+                                        'stops': [
+                                            [8, 0.9],
+                                            [16, 0.3]
+                                        ]
+                                    }
+                                }
+                            },
+                        ],
+                    })
+                );
+
+                // map.Layers.add(
+                //     new longdo.Layer({
+                //         sources: {
+                //             accident_grids_itic_2022_2020: {
+                //                 type: "geojson",
+                //                 data: "./data/accident_grids_itic_2022_2020.geojson",
+                //                 // data: "./bkk-accident-only.geojson",
+                //             },
+                //         },
+                //         layers: [
+                //             {
+                //                 'id': 'accident_grids_itic_2022_2020',
+                //                 'type': 'circle',
+                //                 'source': 'accident_grids_itic_2022_2020',
+                //                 'minzoom': 7,
+                //                 'maxzoom': 20,
+                //                 'paint': {
+                //                     'circle-radius': 5,
+                //                     'circle-color': '#B42222'
+                //                 },
+                //                 'filter': ['==', '$type', 'Point']
+                //             }
+                //         ],
+                //     })
+                // );
+
+                //iTIC dbscan point id "itic_dbscan"
+                map.Layers.add(
+                    new longdo.Layer({
+                        sources: {
+                            itic_dbscan: {
+                                type: "geojson",
+                                data: "./data/accident_grids_itic_dbscan_2022_2020.geojson",
+                                // data: "./bkk-accident-only.geojson",
+                            },
+                        },
+                        layers: [
+                            {
+                                'id': 'itic_dbscan',
+                                'type': 'circle',
+                                'source': 'itic_dbscan',
+                                'minzoom': 7,
+                                'maxzoom': 20,
+                                'paint': {
+                                    'circle-radius': 5,
+                                    'circle-color': '#B42222'
+                                },
+                                'filter': ['==', '$type', 'Point']
+                            }
+                        ],
+                    })
+                );
+
+                // RVP dbscan point id "accident_grids_rvp_dbscan_2022_2020"
+                map.Layers.add(
+                    new longdo.Layer({
+                        sources: {
+                            accident_grids_rvp_dbscan_2022_2020: {
+                                type: "geojson",
+                                data: "./data/accident_grids_rvp_dbscan_2022_2020.geojson",
+                                // data: "./bkk-accident-only.geojson",
+                            },
+                        },
+                        layers: [
+                            {
+                                'id': 'accident_grids_rvp_dbscan_2022_2020',
+                                'type': 'circle',
+                                'source': 'accident_grids_rvp_dbscan_2022_2020',
+                                'minzoom': 7,
+                                'maxzoom': 20,
+                                'paint': {
+                                    'circle-radius': 5,
+                                    'circle-color': '#B42222'
+                                },
+                                'filter': ['==', '$type', 'Point']
+                            }
+                        ],
+                    })
+                );
+
+                // RVP Heatmap accident-heat-rvp
+                map.Layers.add(
+                    new longdo.Layer({
+                        sources: {
+                            accident_heatmap: {
+                                type: "geojson",
+                                data: "./heatmap-rvp-2.geojson",
+                            },
+                        },
+                        layers: [
+                            {
+                                id: "accident-heat-rvp",
+                                type: "heatmap",
+                                source: "accident_heatmap",
+                                minzoom: 8,
+                                maxzoom: 17,
+                                paint: {
+                                    // increase weight as diameter breast height increases
+                                    'heatmap-weight': {
+                                        // 'property': 'dbh',
+                                        'type': 'exponential',
+                                        'stops': [
+                                            [1, 0],
+                                            [62, 1]
+                                        ]
+                                    },
+                                    // increase intensity as zoom level increases
+                                    'heatmap-intensity': {
+                                        'stops': [
+                                            [8, 0.5],
+                                            [15, 3]
+                                        ]
+                                    },
+                                    // use sequential color palette to use exponentially as the weight increases
+                                    'heatmap-color': [
+                                        'interpolate',
+                                        ['linear'],
+                                        ['heatmap-density'],
+                                        0,
+                                        "rgba(33,102,172,0)",
+                                        0.1,
+                                        "rgba(184,229,255,0.5)",
+                                        0.3,
+                                        "rgb(255,251,148)",
+                                        0.5,
+                                        "rgb(253,219,199)",
+                                        0.7,
+                                        "rgb(98,138,239)",
+                                        1,
+                                        "rgb(0,0,255)"
+                                    ],
+
+                                    // increase radius as zoom increases
+                                    'heatmap-radius': {
+                                        'stops': [
+                                            [8, 1],
+                                            [15, 20]
+                                        ]
+                                    },
+                                    // decrease opacity to transition into the circle layer
+                                    'heatmap-opacity': {
+                                        'default': 1,
+                                        'stops': [
+                                            [8, 0.9],
+                                            [16, 0.3]
+                                        ]
+                                    }
+                                }
+                            },
+                        ],
+                    })
+                );
+
+                map.Renderer.setLayoutProperty('accident-heat-rvp', 'visibility', 'none');
+                map.Renderer.setLayoutProperty('accident_grids_rvp_dbscan_2022_2020', 'visibility', 'none');
+                map.Renderer.setLayoutProperty('itic_dbscan', 'visibility', 'visibility');
+                map.Renderer.setLayoutProperty('accident-heat', 'visibility', 'visibility');
+                // map.Renderer.setLayoutProperty('accident_grids_itic_2022_2020', 'visibility', 'visible');
+
+                // map.Renderer.on('click', 'accident_grids_itic_2022_2020', (e) => {
+                //     const coordinates = e.features[0].geometry.coordinates.slice();
+                //     const accidents = e.features[0].properties.accidents;
+                //     const name = e.features[0].properties.name;
+                //     const subdistrict = e.features[0].properties.subdistrict;
+
+                //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                //         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                //     }
+
+                //     map.Overlays.add(new longdo.Popup({ lon: coordinates[0], lat: coordinates[1] },
+                //         {
+                //             title: name + ' ' + subdistrict,
+                //             detail: 'จำนวนการเกิดอุบัติเหตุ ' + accidents + ' ครั้ง'
+                //         }));
+                // });
+
+                map.Renderer.on('click', 'itic_dbscan', (e) => {
+
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const accidents = e.features[0].properties.accidents;
+                    const name = e.features[0].properties.road;
+                    const subdistrict = e.features[0].properties.subdistrict;
+
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    map.Overlays.add(new longdo.Popup({ lon: coordinates[0], lat: coordinates[1] },
+                        {
+                            title: name + ' ' + subdistrict,
+                            detail: 'จำนวนการเกิดอุบัติเหตุ ' + accidents + ' ครั้ง'
+                        }));
+                });
+
+                map.Renderer.on('click', 'accident_grids_rvp_dbscan_2022_2020', (e) => {
+
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const accidents = e.features[0].properties.accidents;
+                    const name = e.features[0].properties.road;
+                    const subdistrict = e.features[0].properties.subdistrict;
+
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    map.Overlays.add(new longdo.Popup({ lon: coordinates[0], lat: coordinates[1] },
+                        {
+                            title: name + ' ' + subdistrict,
+                            detail: 'จำนวนการเกิดอุบัติเหตุ ' + accidents + ' ครั้ง'
+                        }));
+                });
+
+
+                // map.Renderer.on('mouseenter', 'accident_grids_itic_2022_2020', () => {
+                //     map.Renderer.getCanvas().style.cursor = 'pointer';
+                // });
+
+                // map.Renderer.on('mouseleave', 'accident_grids_itic_2022_2020', () => {
+                //     map.Renderer.getCanvas().style.cursor = '';
+                // });
+
+                map.Renderer.on('mouseenter', 'itic_dbscan', () => {
+                    map.Renderer.getCanvas().style.cursor = 'pointer';
+                });
+
+                map.Renderer.on('mouseleave', 'itic_dbscan', () => {
+                    map.Renderer.getCanvas().style.cursor = '';
+                });
+
+                map.Renderer.on('mouseenter', 'accident_grids_rvp_dbscan_2022_2020', () => {
+                    map.Renderer.getCanvas().style.cursor = 'pointer';
+                });
+
+                map.Renderer.on('mouseleave', 'accident_grids_rvp_dbscan_2022_2020', () => {
+                    map.Renderer.getCanvas().style.cursor = '';
+                });
+
+                const selectElement = document.querySelector('.custom-select');
+
+                selectElement.addEventListener('change', (event) => {
+                    makeTable(event.target.value)
+                    if (event.target.value === 'itic_road') {
+                        makeTable('itic_road');
+                        drawITIC();
+                    } else if (event.target.value === 'itic_dbscan') {
+                        makeTable('itic_dbscan');
+                        drawITICDBScan();
+                    } else if (event.target.value === 'rvp_dbscan') {
+                        makeTable('rvp_dbscan');
+                        drawRvpDBScan();
+                    } else if (event.target.value === 'rvp_move_window') {
+                        makeTable('rvp_move_window');
+                    } else {
+                        makeTable('dga_road');
+                    }
+                });
+
+            });
+
+            makeTable('itic_dbscan');
+        }
+
+        function gotoLocation(lat, lon) {
+            map.location({ lat: lat, lon: lon })
+
+            setTimeout(() => {
+                map.zoom(16)
+            }, 1000);
+        }
+        // dga_road
+        function makeTable(arrayData) {
+            let tempData = [];
+
+            if (arrayData === 'itic_road') {
+                tempData = itic_road;
+                type_data = 'itic_road'
+
+            } else if (arrayData === 'itic_dbscan') {
+                tempData = itic_dbscan;
+                type_data = 'itic_dbscan'
+
+            } else if (arrayData === 'rvp_dbscan') {
+                tempData = rvp_dbscan;
+                type_data = 'rvp_dbscan'
+
+            } else {
+                tempData = dga_road;
+            }
+
+            const tableData = tempData.map(function (value) {
+                return (
+                    `<tr class="pointer" onclick="drawChild(` + value.gid + ',' + value.latitude + ',' + value.longitude + `)">
+                        <td>${value.no}</td>
+                        <td class="pointer">` + value.name + `</td>
+                        <td class="count-accidents">${value.accidents}</td>
+                    </tr>`
+                );
+
+                // return (
+                //     `<tr>
+                //         <td>${value.no}</td>
+                //         <td class="pointer" onclick="gotoLocation(`+ value.latitude + ',' + value.longitude + `)">` + value.name + `</td>
+                //         <td class="count-accidents">${value.accidents}</td>
+                //         <td><button class="button" onclick="drawChild(`+ value.gid + ',' + value.latitude + ',' + value.longitude + `)">ดูเพิ่ม</button><td>
+                //     </tr>`
+                // );
+            }).join('');
+
+            const tabelBody = document.querySelector("#tableBody");
+            const headerTable = "<tr><th>ลำดับ</th><th>บริเวณ</th><th>อุบัติเหตุ</th><th><th></tr>";
+            // console.log(tableData)
+            // console.log(headerTable.concat("", tableData));
+            tableBody.innerHTML = headerTable.concat("", tableData);
+        }
+
+        function checkIsRoad(params) {
+            if (params.name === '') { return params.subdistrict }
+            else return params.name;
+        }
+
+        function drawChild(params, lat, lon) {
+            console.log(type_data)
+            let size_circle = 0.0021;
+            if (type_data === 'itic_road') {
+                size_circle = 0.0021
+            } else {
+                size_circle = 0.004
+            }
+            gotoLocation(lat, lon)
+            map.Overlays.clear();
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function () {
+                const myObj = JSON.parse(this.responseText);
+                map.Overlays.add(new longdo.Circle({
+                    lon: lon,
+                    lat: lat,
+                }, size_circle, {
+                    lineWidth: 1,
+                    lineColor: 'rgba(200, 100, 100, 0.5)',
+                    fillColor: 'rgba(200, 100, 100, 0.2)',
+                    weight: 1
+                }));
+
+                myObj.forEach(element => {
+                    map.Overlays.add(new longdo.Circle({
+                        lon: element.lon,
+                        lat: element.lat,
+                    }, 0.00007, {
+                        title: element.title,
+                        detail: element.description + '</br>' + element.date_acc + '</br>' + element.contributor,
+                        lineWidth: 1,
+                        lineColor: 'rgba(0, 0, 200, 0.5)',
+                        fillColor: 'rgba(0, 0, 200, 0.3)',
+                        weight: 4
+                    }));
+                });
+            }
+            xmlhttp.open("GET", "./get_parent.php?gid=" + params + "&type=" + type_data, true);
+            xmlhttp.send();
+        }
+
+        function drawITIC() {
+            map.Overlays.clear();
+            map.Renderer.setLayoutProperty('accident_grids_rvp_dbscan_2022_2020', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident_grids_itic_2022_2020', 'visibility', 'visible');
+            map.Renderer.setLayoutProperty('itic_dbscan', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident-heat', 'visibility', 'visible');
+            map.Renderer.setLayoutProperty('accident-heat-rvp', 'visibility', 'none');
+        }
+
+        function drawITICDBScan() {
+            map.Overlays.clear();
+            map.Renderer.setLayoutProperty('accident_grids_rvp_dbscan_2022_2020', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident_grids_itic_2022_2020', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('itic_dbscan', 'visibility', 'visible');
+            map.Renderer.setLayoutProperty('accident-heat', 'visibility', 'visible');
+            map.Renderer.setLayoutProperty('accident-heat-rvp', 'visibility', 'none');
+        }
+        function drawRvpDBScan() {
+            map.Overlays.clear();
+            map.Renderer.setLayoutProperty('accident_grids_itic_2022_2020', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident_grids_rvp_dbscan_2022_2020', 'visibility', 'visible');
+            map.Renderer.setLayoutProperty('itic_dbscan', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident-heat', 'visibility', 'none');
+            map.Renderer.setLayoutProperty('accident-heat-rvp', 'visibility', 'visible');
+        }
+    </script>
+</head>
+
+<body onload="init();">
+    <div class="container">
+        <div id="sidebar">
+            <div class="logo-container">
+                <a href="https://main.bangkok.go.th/traffic" target="_blank">
+                    <img class="logo" src="./img/logo_bkk.png" alt=""></a>
+                <a href="https://traffic.longdo.com/" target="_blank">
+                    <img class="logo" src="./img/logo_longdo.png" alt=""></a>
+                <a href="https://iticfoundation.org/" target="_blank">
+                    <img class="logo" src="./img/logo_itic.png" alt=""></a>
+                <a href="https://www.rvp.co.th/" target="_blank">
+                    <img class="logo" src="./img/logo_rvp.png" alt="">
+                </a>
+            </div>
+            <h1 class="title-web">
+              <a href=. style="color: black; text-decoration: none">100 คลัสเตอร์อุบัติเหตุ กทม.</a>
+            </h1>
+
+            <label>กรุณาเลือกชุดข้อมูล:
+                <select class="custom-select" name="custom-select">
+                    <!-- <option value="itic_road">iTIC 2022-2020</option> -->
+                    <option value="itic_dbscan">iTIC (2020-2022)</option>
+                    <option value="rvp_dbscan">ThaiRSC (2020-2022)</option>
+                </select>
+            </label>
+
+            <ol>
+                <table id="tableBody">
+
+                </table>
+            </ol>
+            <p class="subtitle">อ้างอิงข้อมูลจาก: <a
+                    href="https://live.iticfoundation.org/">ข้อมูลพิกัดอุบัติเหตุจากมูลนิธิศูนย์ข้อมูลจราจรอัจฉริยะไทย
+                    2020-2022</a>, <a href="https://traffic.longdo.com/">Longdo Traffic</a>, <a
+                    href="https://www.thairsc.com/">ศูนย์ข้อมูลอุบัติเหตุ ThaiRSC</a> และ <a
+                    href="https://api.longdo.com/map/doc/rest.php#Address">การแปลงพิกัดเป็นที่อยู่จริง (reverse
+                    geocoding)</a> จาก Longdo Map</p> <a
+                href=https://github.com/MetamediaTechnology/bangkok-accidents-data/tree/main/2022-06>
+                ดาวน์โหลดข้อมูล</a>
+        </div>
+        <div id="map"></div>
+        <!-- <div class="map-overlay" id="legend">
+            <div>
+                <span style="background-color:#B42222;" class="legend-key"></span>
+                <span>ข้อมูล iTIC ปี 2022-2020</span>
+            </div>
+            <div>
+                <span style="background-color:#004AAD;" class="legend-key"></span>
+                <span>ข้อมูล DGA ปี 2020-2018</span>
+            </div>
+        </div> -->
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4a63e5b9c931e13',t:'MTc5MTk3NzMzOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>

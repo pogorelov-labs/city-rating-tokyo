@@ -1,0 +1,21 @@
+tokyo: 267 to fetch
+tokyo: 20/267 done
+tokyo: 40/267 done
+  retry 42/267 teuchisoba-jiyusan code=200 size=123 attempt=1
+tokyo: 60/267 done
+tokyo: 80/267 done
+tokyo: 100/267 done
+tokyo: 120/267 done
+  retry 128/267 ginza-koju code=200 size=115 attempt=1
+  retry 133/267 ginza-fukuju code=200 size=117 attempt=1
+tokyo: 140/267 done
+  retry 144/267 jingumae-higuchi code=200 size=121 attempt=1
+tokyo: 160/267 done
+tokyo: 180/267 done
+tokyo: 200/267 done
+tokyo: 220/267 done
+  retry 229/267 itsuka code=200 size=111 attempt=1
+tokyo: 240/267 done
+tokyo: 260/267 done
+tokyo: ALL DONE
+FINISHED

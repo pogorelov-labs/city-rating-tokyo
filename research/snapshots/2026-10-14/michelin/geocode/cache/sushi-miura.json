@@ -1,0 +1,12 @@
+{
+ "lat": 35.669419,
+ "lon": 139.7356439,
+ "display_name": "赤坂六丁目, 赤坂, 港区, 東京都, 107-0052, 日本",
+ "osm_type": "relation",
+ "osm_id": 18760467,
+ "type": "administrative",
+ "query": "Akasaka 6-chome, Minato-ku, Tokyo, 107-0052, Japan",
+ "geocoded_at": "2026-10-14",
+ "query_original": "6-19-46 Akasaka, Minato-ku, Tokyo, 107-0052, Japan",
+ "simplified_query": true
+}

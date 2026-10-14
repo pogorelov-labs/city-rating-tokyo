@@ -1,0 +1,1411 @@
+{
+ "type": "FeatureCollection",
+ "name": "michelin-bangkok",
+ "metadata": {
+  "city": "Bangkok",
+  "guide_year": 2026,
+  "scraped": "2026-10-14",
+  "source": "guide.michelin.com (via r.jina.ai reader)",
+  "attribution": "© Michelin — factual roster, INTERNAL ONLY — not for site publication without owner sign-off",
+  "distinctions": {
+   "Bib Gourmand": 32,
+   "3 Stars": 2,
+   "2 Stars": 8,
+   "1 Star": 29
+  },
+  "geocoded": 54,
+  "geocode_null": 17,
+  "geocoder": "Nominatim (openstreetmap.org)"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5502304,
+     13.8030357
+    ]
+   },
+   "properties": {
+    "name": "Beer Hima (Chatuchak)",
+    "distinction": "Bib Gourmand",
+    "address": "12/21, 99/231 Thetsaban Songkhro Road, Lat Yao, Chatuchak, Bangkok, 10900, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/beer-hima-prachachuen",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5161932,
+     13.815119
+    ]
+   },
+   "properties": {
+    "name": "Pae Brass Pot Porridge 38 Years",
+    "distinction": "Bib Gourmand",
+    "address": "320 Pracha Rat Sai 1 Road, Bang Sue, Bangkok, 10800, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/pae-jok-38-years",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5481487,
+     13.7897993
+    ]
+   },
+   "properties": {
+    "name": "Prik-Yuak (Phya Thai)",
+    "distinction": "Bib Gourmand",
+    "address": "108 Pradiphat Road, Phaya Thai, Bangkok, 10400, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/prik-yuak",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Krua Apsorn (Dusit)",
+    "distinction": "Bib Gourmand",
+    "address": "503-505 Sam Sen Road, Wachira Payaban, Dusit, Bangkok, 10300, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/krua-apsorn-sam-sen",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Maan Muang",
+    "distinction": "Bib Gourmand",
+    "address": "165/6-7 Soi Ramkhamhaeng 112, Ramkhamhaeng Road, Saphan Sung, Bangkok, 10240, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/maan-muang",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.3945326,
+     13.7838418
+    ]
+   },
+   "properties": {
+    "name": "Kin Kub Koi",
+    "distinction": "Bib Gourmand",
+    "address": "83/3 Phuttha Monthon Sai 2 Road, Sala Thammasop, Thawi Watthana, Bangkok, 10170, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/kin-kub-koi",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4570707,
+     13.7777
+    ]
+   },
+   "properties": {
+    "name": "Lucky Seafood",
+    "distinction": "Bib Gourmand",
+    "address": "28/1 Phran Nok-Phutthamonthon 4 Road, Bang Phrom, Taling Chan, Bangkok, 10170, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/lucky-seafood",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5147904,
+     13.7439967
+    ]
+   },
+   "properties": {
+    "name": "Bunloet (Pom Prap Sattru Phai)",
+    "distinction": "Bib Gourmand",
+    "address": "360 Soi Nakhon Sawan 8, Nakhon Sawan Road, Wat Sommanat, Pom Prap Sattru Phai, Bangkok, 10100, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/bunloet",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.598274,
+     13.7678209
+    ]
+   },
+   "properties": {
+    "name": "Janhom",
+    "distinction": "Bib Gourmand",
+    "address": "273/4 Soi Ramkhamhaeng 21, Ramkhamhaeng Road, Wang Thonglang, Bangkok, 10310, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/janhom",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5000044,
+     13.7534718
+    ]
+   },
+   "properties": {
+    "name": "Kolun.h",
+    "distinction": "Bib Gourmand",
+    "address": "110/1 Mahannop Road, Sao Chingcha, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/kolun-h",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4570707,
+     13.7777
+    ]
+   },
+   "properties": {
+    "name": "Phed Phed Bistro",
+    "distinction": "Bib Gourmand",
+    "address": "Unit L1, The Circle Ratchapruk, 39 Ratchaphruek Road, Bang Ramat, Taling Chan, Bangkok, 10170, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/phed-phed-bistro",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5021884,
+     13.7581931
+    ]
+   },
+   "properties": {
+    "name": "Pad Thai Fai Ta Lu (Phra Nakhon)",
+    "distinction": "Bib Gourmand",
+    "address": "115/5 Dinso Road, Bowon Niwet, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/eat-pad-thai",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4983823,
+     13.7520842
+    ]
+   },
+   "properties": {
+    "name": "K. Panich",
+    "distinction": "Bib Gourmand",
+    "address": "431-433 Tanao Road, Sao Chingcha, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/k-panich",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4933634,
+     13.7526168
+    ]
+   },
+   "properties": {
+    "name": "Thai Tham",
+    "distinction": "Bib Gourmand",
+    "address": "28/1 Phraeng Phuthon Road, San Chao Pho Suea, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/thai-tham",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5042948,
+     13.7626277
+    ]
+   },
+   "properties": {
+    "name": "Ten Suns",
+    "distinction": "Bib Gourmand",
+    "address": "456 Wisut Kasat Road, Bang Khun Phrom, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/ten-suns",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5310235,
+     13.7461522
+    ]
+   },
+   "properties": {
+    "name": "Thai Niyom",
+    "distinction": "Bib Gourmand",
+    "address": "Mahatun Plaza, 888/28-29 Phloen Chit Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/thai-niyom",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5085972,
+     13.7300756
+    ]
+   },
+   "properties": {
+    "name": "Bokkia Tha Din Daeng",
+    "distinction": "Bib Gourmand",
+    "address": "323 Tha Din Daeng Road, Somdet Chao Phraya, Khlong San, Bangkok, 10600, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/bokkia-tha-din-daeng",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5060421,
+     13.7388961
+    ]
+   },
+   "properties": {
+    "name": "Urai Braised Goose",
+    "distinction": "Bib Gourmand",
+    "address": "935 Song Wat Road, Chakkrawat, Samphanthawong, Bangkok, 10100, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/urai-braised-goose",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5159599,
+     13.7239499
+    ]
+   },
+   "properties": {
+    "name": "Thien Duong",
+    "distinction": "Bib Gourmand",
+    "address": "Baan Dusit Thani, 116 Saladaeng Road, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/thien-duong",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5305075,
+     13.7213584
+    ]
+   },
+   "properties": {
+    "name": "Plu",
+    "distinction": "Bib Gourmand",
+    "address": "3 Soi Phra Phinit, Suan Phlu Road, Thung Maha Mek, Sathon, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/plu",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5601721,
+     13.7187306
+    ]
+   },
+   "properties": {
+    "name": "Keawloon",
+    "distinction": "Bib Gourmand",
+    "address": "21/3 Soi Saeng Chan, Phra Khanong, Khlong Toei, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/keawloon",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5707277,
+     13.7283912
+    ]
+   },
+   "properties": {
+    "name": "Rung Rueang Tung Pork Noodle",
+    "distinction": "Bib Gourmand",
+    "address": "21/2 Soi Sukhumvit 26, Khlong Tan, Khlong Toei, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/guay-tiew-mu-rung-rueang",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.495321,
+     13.7257317
+    ]
+   },
+   "properties": {
+    "name": "Somsak Pu Ob (Charoen Rat)",
+    "distinction": "Bib Gourmand",
+    "address": "199-205 Soi Charoen Rat 1, Khlong San, Bangkok, 10600, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/somsak-pu-ob-charoen-rat",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5159599,
+     13.7239499
+    ]
+   },
+   "properties": {
+    "name": "Aunglo by Yangrak",
+    "distinction": "Bib Gourmand",
+    "address": "174/4-6, Decho Road, Suriyawong, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/aunglo-by-yangrak",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5015638,
+     13.7303982
+    ]
+   },
+   "properties": {
+    "name": "Ann Tha Din Daeng",
+    "distinction": "Bib Gourmand",
+    "address": "167 Tha Din Daeng Road, Khlong San, Bangkok, 10600, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/ann-tha-din-daeng",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5601721,
+     13.7187306
+    ]
+   },
+   "properties": {
+    "name": "No Name Noodle",
+    "distinction": "Bib Gourmand",
+    "address": "1F, Room P2, 1/2 Soi Athakravi 1, Sukhumvit 26 Road, Khlong Tan, Khlong Toei, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/no-name-noodle",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5155088,
+     13.7302513
+    ]
+   },
+   "properties": {
+    "name": "Samlor",
+    "distinction": "Bib Gourmand",
+    "address": "1076 Charoen Krung Road, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/samlor",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5899552,
+     13.7412942
+    ]
+   },
+   "properties": {
+    "name": "Here Hai (Vadhana)",
+    "distinction": "Bib Gourmand",
+    "address": "112/1 Soi Sukhumvit 63, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/here-hai",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5356368,
+     13.7057185
+    ]
+   },
+   "properties": {
+    "name": "Jaan",
+    "distinction": "Bib Gourmand",
+    "address": "9 Soi Chan 7, Chong Nonsi, Yan Nawa, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/jaan-by-khun-jim",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Gim Nguan Noodle",
+    "distinction": "Bib Gourmand",
+    "address": "75/70 Soi Chom Thong 16, Chom Thong Road, Bang Kho, Chom Thong, Bangkok, 10150, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/grim-nguan-noodle",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5173416,
+     13.708106
+    ]
+   },
+   "properties": {
+    "name": "Hia Wan Khao Tom Pla",
+    "distinction": "Bib Gourmand",
+    "address": "816 Chan Road, Thung Wat Don, Sathon, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/hia-wan-khao-tom-pla",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.6978082,
+     13.7213599
+    ]
+   },
+   "properties": {
+    "name": "Baan Pee Lek",
+    "distinction": "Bib Gourmand",
+    "address": "39 Chalermprakhet 9 Soi 9, Nong Bon, Prawet, Bangkok, 10250, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/baan-pee-lek",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.57006,
+     13.7272898
+    ]
+   },
+   "properties": {
+    "name": "Sorn",
+    "distinction": "3 Stars",
+    "address": "56 Soi Sukhumvit 26, Khlong Tan, Khlong Toei, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/sorn",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5453481,
+     13.7104718
+    ]
+   },
+   "properties": {
+    "name": "Sühring",
+    "distinction": "3 Stars",
+    "address": "10 Soi Yen Akat 3, Chong Nonsi, Yan Nawa, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/suhring",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.647157,
+     13.7627905
+    ]
+   },
+   "properties": {
+    "name": "Baan Tepa",
+    "distinction": "2 Stars",
+    "address": "561 Ramkhamhaeng Road, Hua Mak, Bang Kapi, Bangkok, 10240, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/baan-tepa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5310235,
+     13.7461522
+    ]
+   },
+   "properties": {
+    "name": "INDDEE",
+    "distinction": "2 Stars",
+    "address": "68/1 Soi Lang Suan, Phloen Chit Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/inddee",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Chef's Table",
+    "distinction": "2 Stars",
+    "address": "61F, Tower Club at Lebua, 1055 Silom Road, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/chef-s-table1184372",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5159599,
+     13.7239499
+    ]
+   },
+   "properties": {
+    "name": "Anne-Sophie Pic at Le Normandie",
+    "distinction": "2 Stars",
+    "address": "5F, Mandarin Oriental, Bangkok, 48 Soi Charoen Krung 40, Charoen Krung Road, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/le-normandie",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5159599,
+     13.7239499
+    ]
+   },
+   "properties": {
+    "name": "Mezzaluna",
+    "distinction": "2 Stars",
+    "address": "65F, Tower Club at Lebua, 1055 Silom Road, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/mezzaluna",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5781672,
+     13.7325813
+    ]
+   },
+   "properties": {
+    "name": "R-Haan",
+    "distinction": "2 Stars",
+    "address": "131 Soi Sukhumvit 53, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/r-haan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5605006,
+     13.7427931
+    ]
+   },
+   "properties": {
+    "name": "Gaa",
+    "distinction": "2 Stars",
+    "address": "46/1 Sukhumvit 53, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/gaa-1194845",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Côte by Mauro Colagreco",
+    "distinction": "2 Stars",
+    "address": "2F, Capella Bangkok, 300/2 Charoenkrung Road, Yan Nawa, Sathon, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/cote-by-mauro-colagreco",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5198745,
+     13.7903969
+    ]
+   },
+   "properties": {
+    "name": "Chim by Siam Wisdom",
+    "distinction": "1 Star",
+    "address": "315 Soi Ongkharak 13, Thanon Nakhon Chai Si, Dusit, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/chim-by-siam-wisdom",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5041368,
+     13.7506605
+    ]
+   },
+   "properties": {
+    "name": "Jay Fai",
+    "distinction": "1 Star",
+    "address": "327 Maha Chai Road, Samran Rat, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/jay-fai",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5379761,
+     13.7641156
+    ]
+   },
+   "properties": {
+    "name": "Wana Yook",
+    "distinction": "1 Star",
+    "address": "5/15 Phaya Thai Road, Thanon Phaya Thai, Ratchathewi, Bangkok, 10400, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/wana-yook",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "AVANT",
+    "distinction": "1 Star",
+    "address": "30F, Kimpton Maa-Lai Bangkok, 78 Soi Ton Son, Lumphini, Pathum Wan, Bangkok, 10300, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/avant",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Signature",
+    "distinction": "1 Star",
+    "address": "11F, VIE Hotel Bangkok - MGallery Collection, 117/39-40 Phayathai Road, Thanon Phetchaburi, Ratchathewi, Bangkok, 10400, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/signature-1194955",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Saneh Jaan",
+    "distinction": "1 Star",
+    "address": "Sindhorn Tower, 130-132 Wireless Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/saneh-jaan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5310235,
+     13.7461522
+    ]
+   },
+   "properties": {
+    "name": "Elements, Inspired by Ciel Bleu",
+    "distinction": "1 Star",
+    "address": "25F, The Okura Prestige, 57 Wireless Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/elements",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "IGNIV",
+    "distinction": "1 Star",
+    "address": "GF, The St. Regis, 159 Ratchadamri Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/igniv",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5103567,
+     13.7378375
+    ]
+   },
+   "properties": {
+    "name": "POTONG",
+    "distinction": "1 Star",
+    "address": "422 Vanich 1 Road, Samphanthawong, Bangkok, 10100, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/potong",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5678337,
+     13.7429351
+    ]
+   },
+   "properties": {
+    "name": "Haoma",
+    "distinction": "1 Star",
+    "address": "231/3 Soi Sukhumvit 31, Khlong Toei Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/haoma",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Juksunchae",
+    "distinction": "1 Star",
+    "address": "Marriott Executive Apartments Town Hall, 88/8 Soi Sukhumvit 49, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/juksunchae",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.544879,
+     13.7358349
+    ]
+   },
+   "properties": {
+    "name": "Coda",
+    "distinction": "1 Star",
+    "address": "130-132 Wireless Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/coda-1206365",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4938176,
+     13.7432433
+    ]
+   },
+   "properties": {
+    "name": "Nusara",
+    "distinction": "1 Star",
+    "address": "336 Maha Rat Road, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok, 10200, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/nusara-1192382",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Gaggan",
+    "distinction": "1 Star",
+    "address": "68 Soi Sukhumvit 31, Sukhumvit Road, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/gaggan-anand",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5318599,
+     13.7532229
+    ]
+   },
+   "properties": {
+    "name": "etcha",
+    "distinction": "1 Star",
+    "address": "7F, Chatrium Grand Bangkok, 728 Phetchaburi Road, Phetchaburi, Ratchathewi, Bangkok, 10400, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/etcha",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5275314,
+     13.7223654
+    ]
+   },
+   "properties": {
+    "name": "Maison Dunand",
+    "distinction": "1 Star",
+    "address": "55 Soi Sathon 10, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/maison-dunand",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Nahm",
+    "distinction": "1 Star",
+    "address": "GF, COMO Metropolitan Bangkok, 27 Sathon Tai Road, Thung Maha Mek, Sathon, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/nahm",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Mia",
+    "distinction": "1 Star",
+    "address": "30 Soi Athakravi 1, Rama 4 Road, Khlong Tan, Khlong Toei, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/mia",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Resonance",
+    "distinction": "1 Star",
+    "address": "108, 4 Soi Sukhumvit 65, Phra Khanong Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/resonance",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "Blue by Alain Ducasse",
+    "distinction": "1 Star",
+    "address": "Unit L101, 1F, ICONLUXE ICONSIAM Shopping Centre, 299 Charoen Nakhon Road, Khlong Ton Sai, Khlong San, Bangkok, 10600, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/blue-by-alain-ducasse",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "80/20",
+    "distinction": "1 Star",
+    "address": "1052-1054 Charoen Krung 26 Road, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/80-20",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5141211,
+     13.7271847
+    ]
+   },
+   "properties": {
+    "name": "Cannubi by Umberto Bombana",
+    "distinction": "1 Star",
+    "address": "LF, Dusit Thani Bangkok, 98 Rama IV Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/cannubi-by-umberto-bombana",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5605006,
+     13.7427931
+    ]
+   },
+   "properties": {
+    "name": "GOAT",
+    "distinction": "1 Star",
+    "address": "12 Soi Ekkamai 10 Lane 2, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/goat",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.529305,
+     13.7250578
+    ]
+   },
+   "properties": {
+    "name": "Le Du",
+    "distinction": "1 Star",
+    "address": "399/3 Soi Si Lom 7, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/le-du",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5781672,
+     13.7325813
+    ]
+   },
+   "properties": {
+    "name": "Bo.lan",
+    "distinction": "1 Star",
+    "address": "24 Soi Sukhumvit 53, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/bo-lan",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5159599,
+     13.7239499
+    ]
+   },
+   "properties": {
+    "name": "Aksorn",
+    "distinction": "1 Star",
+    "address": "5F, Central: The Original Store, 1266 Charoenkrung Road, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/aksorn",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "name": "NAWA",
+    "distinction": "1 Star",
+    "address": "1F, Parklane, 18 Soi Sukhumvit 61, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/nawa",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5374026,
+     13.7269129
+    ]
+   },
+   "properties": {
+    "name": "Samrub Samrub Thai",
+    "distinction": "1 Star",
+    "address": "39/11 Soi Yommarat, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/samrub-samrub-thai",
+    "attribution": "© Michelin"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5305075,
+     13.7213584
+    ]
+   },
+   "properties": {
+    "name": "Sushi Saito",
+    "distinction": "1 Star",
+    "address": "Four Seasons Private Residences Bangkok, 300 Charoen Krung Road, Yan Nawa, Sathon, Bangkok, 10120, Thailand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "guide_year": 2026,
+    "source": "guide.michelin.com",
+    "source_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/sushi-saito-1208794",
+    "attribution": "© Michelin"
+   }
+  }
+ ]
+}

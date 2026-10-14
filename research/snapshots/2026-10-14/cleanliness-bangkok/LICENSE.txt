@@ -1,0 +1,50 @@
+# cleanliness-bangkok — выгрузка 2026-10-14
+
+## 1. Основной набор: объём твёрдых отходов по кхетам (garbage-by-khet.csv + garbage-metadata.docx + производные waste-by-khet-*.csv/json, khet-codes.json)
+
+- Источник (оригинал): data.go.th — датасет «ข้อมูลปริมาณขยะมูลฝอย จำแนกตามเขตการปกครองกรุงเทพมหานคร»
+  (объём муниципальных твёрдых отходов по административным районам Бангкока), организация BMA.
+- Package id на data.go.th: 731a8cb0-d563-45ca-93ae-52e3de47e474
+- Ресурс CSV: https://data.go.th/dataset/731a8cb0-d563-45ca-93ae-52e3de47e474/resource/1c0a2c55-d28e-446d-bbdf-9b810b8c0035/download/garbage.csv
+- Получено через: Internet Archive Wayback Machine, снапшот 2023-12-20T15:12:43
+  https://web.archive.org/web/20231220151243/https://data.go.th/dataset/731a8cb0-d563-45ca-93ae-52e3de47e474/resource/1c0a2c55-d28e-446d-bbdf-9b810b8c0035/download/garbage.csv
+  (живой портал за WAF/Cloudflare: 403 на curl, браузерные заголовки и r.jina.ai — см. access-log.md)
+- Ресурс DOCX (дата-словарь): .../resource/00bc5965-dd86-41e1-be2a-2487c0692b6f/download/garbage.docx
+  через https://web.archive.org/web/20231112133800/ (снапшот 2023-11-12)
+- Дата выгрузки: 2026-10-14
+- Лицензия: Creative Commons Attribution (CC BY) — по метаданным датасета на data.go.th
+  (подтверждено в заметках research/bangkok/notes/2026-10-13-urban-fabric-crtky147.md через
+  DGA harvest catalog; сам живой портал из среды недоступен).
+- Кросс-чек: идентичная по байтам копия лежала на data.bangkok.go.th (Open Government Data
+  of Bangkok, датасет 58771fe2-7614-4ebc-ab0b-a85c84fe19be, там «License not specified»;
+  национальная запись data.go.th — CC BY, берём её лицензию).
+- Покрытие: кхеты 1001–1050 (50 шт., все) + код 1000 = «อื่นๆ» (прочее; НЕ итог по городу —
+  сказано в дата-словаре); годы BE 2553–2561 = AD 2010–2018; тонны/год и тонны/день.
+  Данные заканчиваются на 2018 (датасет обновлялся до 2020-06-04, живых свежих данных
+  из среды не достать).
+
+## 2. Альтернативный набор: alt-bma-garbage-service.csv (сборы/объёмы по кхетам)
+
+- Источник: data.bangkok.go.th — «รายได้ค่าธรรมเนียมการขนถ่ายสิ่งปฏิกูลและการเก็บขนมูลฝอย»
+  (доходы от вывоза нечистот и сбора мусора), датасет 71169824-b308-4a9f-9ffa-e32baf78e2a7
+- Ресурс: .../resource/f7f54d51-5e84-45ce-8ec6-c19f4d41d1ee/download/garbage_service.csv
+- Получено через: Wayback снапшот 2022-06-23T05:38:03 (живой портал unreachable из среды)
+- Дата выгрузки: 2026-10-14
+- Лицензия: на странице датасета «License not specified» —
+  **INTERNAL ONLY — not for site publication.**
+- Покрытие: dcode 1000–1050, BE 2558–2561 (AD 2015–2018); единицы измерения в самой записи
+  не указаны — не интерпретированы.
+
+## 3. khet-codes.json / маппинг кодов кхетов
+
+- Построен из Thai Wikipedia «รายชื่อเขตของกรุงเทพมหานคร» (таблица отсортирована
+  по официальному коду кхета; вики-исходник сохранён как wiki-khet-list.txt),
+  слаги/названия en/ru слинкованы с app/src/data/bangkok/districts.json (50/50).
+- Лицензия вики-текста: CC BY-SA 4.0 (только как источник порядка кодов; итоговый
+  маппинг — факт публичной административной номенклатуры).
+
+## 4. Прочие файлы (attempt*.json/html/md, bma-env-stats.html, gdcatalog-mnre-resource.json, wayback-*.json/html)
+
+- Логи попыток доступа и артефакты проверки; служебные, без данных для продукта.
+- BMA Environment Dept страница статистики (webportal.bangkok.go.th/environmentbma/page/sub/7405):
+  403 Cloudflare и напрямую, и через r.jina.ai — источник из среды недоступен.

@@ -1,0 +1,44 @@
+# LICENSE — research/snapshots/2026-10-14/tokyo-misc/
+
+Все три источника — публикации японских государственных органов. Выгрузка 2026-10-14.
+
+## 1. kt10-reiwa7-keishicho.xlsx (+ kt10-reiwa7-digest.csv)
+
+- Источник: 警視庁「警視庁の統計（令和7年）」第10表 交通事故発生状況（警察署別）
+- URL: https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/tokei/reiwa_7.files/kt10.xlsx
+  (страница: https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/tokei/reiwa_7.html, обновлена 2026-10-02)
+- Дата выгрузки: 2026-10-14
+- Лицензия: явной open-data лицензии на странице НЕТ (© 東京都警視庁). Правительственная
+  статистика, цитировать как факт — можно; переиздание файла как данных — не подтверждено.
+  **INTERNAL ONLY — not for site publication** (только внутренние расчёты/проверки).
+- kt10-reiwa7-digest.csv — наша машинно-читаемая выжимка (перекодировка исходника).
+
+## 2. gaisu-r8-01.pdf, gaisu-r7-08.pdf, gaisu-r7-01.pdf, seikatsu-jittai-r3.pdf (+ homeless-surveys-summary.json)
+
+- Источник: 東京都福祉局, 路上生活者概数調査 и ホームレスの実態に関する全国調査（東京23区の生活実態調査）
+- URL: https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2026-04-28-174733-136 (令和8年1月)
+        https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2025-10-29-075433-584 (令和7年8月)
+        https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2025-04-30-132531-846 (令和7年1月)
+        https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/r4-seikatsuchosa (令和3年度生活実態調査)
+  (страницы: /seikatsu/rojo/gaisuchosa, /seikatsu/rojo/seikatsuchosa)
+- Дата выгрузки: 2026-10-14
+- Лицензия: явной open-data лицензии НЕТ. Правительственные отчёты: цитировать как факт —
+  можно. **INTERNAL ONLY — not for site publication**.
+- homeless-surveys-summary.json — наша выжимка ключевых цифр (из прочитанных PDF).
+
+## 3. minato_shoutengai.geojson (+ minato-shotengai-summary.json)
+
+- Источник: 港区オープンデータカタログ, набор minato_shoutengai
+  «港区商店街・商業施設・アンテナショップ» (в составе пакета TMG-каталога 港区観光情報 t131032d0000000009)
+- Живой URL (НЕДОСТУПЕН с 2026-10-14, портал отдаёт 403/Authorization Error):
+  https://opendata.city.minato.tokyo.jp/dataset/e1b08c99-e695-47e8-bce4-a243247effed/resource/eee864a8-107e-4953-b312-89b77580ff13/download/minato_shoutengai.json
+- Фактически получен из веб-архива:
+  https://web.archive.org/web/20210124001703id_/https://opendata.city.minato.tokyo.jp/.../minato_shoutengai.json
+  (захваты 2020-10-29 и 2021-01-24, идентичный контент по CDX-дайджесту)
+- Дата выгрузки: 2026-10-14
+- Лицензия: クリエイティブ・コモンズ 表示 (CC BY) — подтверждено архивной страницей набора
+  (web.archive.org/web/20200925130541, заголовок «港区商店街», раздел ライセンス) и метаданными
+  TMG-каталога. Переиспользование с атрибуцией допустимо; при публикации на сайте указать:
+  港区 / Internet Archive, данные на 2020–2021 гг.
+- ВНИМАНИЕ: срез данных на момент архивации (2020–2021); в живом портале набора больше нет.
+  港区商店街 summary: 54 точки; координаты в JSON строками (как опубликовано). minato-shotengai-summary.json — наша выжимка.

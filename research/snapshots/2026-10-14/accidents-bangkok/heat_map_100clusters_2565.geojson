@@ -1,0 +1,2400 @@
+{
+ "type": "FeatureCollection",
+ "source": "data.bangkok.go.th dataset 100-risk-map (820fa433-cdc4-4e2f-b8c7-a6c40546a5d8), resource 6cc7a43f-52b3-4381-9a8f-2b8a35c3174a '-heat-map-9-11-65.xlsx' (100 จุดเสี่ยงอุบัติเหตุสูงสุด 3 ปีย้อนหลังจากข้อมูล Heat Map ของ ThaiRSC และ iTIC), read via data.go.th datastore_search 2026-10-14",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.64114,
+     13.735236
+    ]
+   },
+   "properties": {
+    "no": 1,
+    "location": "แยกพัฒนาการ (ถ.พัฒนาการ - ศรีนครินทร์)",
+    "district": "สวนหลวง",
+    "police_station": "คลองตัน,ประเวศ",
+    "lat": 13.735236,
+    "long": 100.64114,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.493022,
+     13.726948
+    ]
+   },
+   "properties": {
+    "no": 2,
+    "location": "ถนนประชาธิปก (ใกล้วงเวียนใหญ่)",
+    "district": "คลองสาน",
+    "police_station": "บางยี่เรือ",
+    "lat": 13.726948,
+    "long": 100.493022,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.52834,
+     13.828467
+    ]
+   },
+   "properties": {
+    "no": 3,
+    "location": "แยกวงศ์สว่าง (ถนนวงศ์สว่าง ตัดถนนกรุงเทพ-นนทบุรี)",
+    "district": "บางซื่อ",
+    "police_station": "ประชาชื่น",
+    "lat": 13.828467,
+    "long": 100.52834,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4577,
+     13.720691
+    ]
+   },
+   "properties": {
+    "no": 4,
+    "location": "แยกบางหว้า (ถนนเพชรเกษม ตัดถนนราชพฤกษ์)",
+    "district": "ภาษีเจริญ",
+    "police_station": "ภาษีเจริญ",
+    "lat": 13.720691,
+    "long": 100.4577,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.485541,
+     13.704663
+    ]
+   },
+   "properties": {
+    "no": 5,
+    "location": "แยกมไหสวรรค์ (ถนนพระรามที่ 3 ตัดถนนสมเด็จพระเจ้าตากสิน)",
+    "district": "ธนบุรี",
+    "police_station": "บุคคโล,สำเหร่",
+    "lat": 13.704663,
+    "long": 100.485541,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4995,
+     13.711271
+    ]
+   },
+   "properties": {
+    "no": 6,
+    "location": "ถนนเจริญนคร บริเวณซอย 39 - 47",
+    "district": "ธนบุรี",
+    "police_station": "สำเหร่",
+    "lat": 13.711271,
+    "long": 100.4995,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.517003,
+     13.71798
+    ]
+   },
+   "properties": {
+    "no": 7,
+    "location": "สะพานสมเด็จพระเจ้าตากสิน",
+    "district": "คลองสาน",
+    "police_station": "สมเด็จเจ้าพระยา,สำเหร่",
+    "lat": 13.71798,
+    "long": 100.517003,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.468906,
+     13.713122
+    ]
+   },
+   "properties": {
+    "no": 8,
+    "location": "ถนนราชพฤกษ์ ใกล้สถานี BTS วุฒากาศ",
+    "district": "ธนบุรี",
+    "police_station": "ตลาดพลู,บางขุนเทียน",
+    "lat": 13.713122,
+    "long": 100.468906,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.474459,
+     13.729236
+    ]
+   },
+   "properties": {
+    "no": 9,
+    "location": "แยกท่าพระ (ถนนรัชดาภิเษก ตัดถนนจรัญสนิทวงศ์ ตัดถนนเพชรเกษม)",
+    "district": "บางกอกใหญ่",
+    "police_station": "ท่าพระ",
+    "lat": 13.729236,
+    "long": 100.474459,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.49122,
+     13.720611
+    ]
+   },
+   "properties": {
+    "no": 10,
+    "location": "แยกถนนสมเด็จพระเจ้าตากสิน ตัดถนนราชพฤกษ์",
+    "district": "ธนบุรี",
+    "police_station": "บางยี่เรือ,บุปผาราม,สำเหร่,บุคคโล",
+    "lat": 13.720611,
+    "long": 100.49122,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.601985,
+     13.76705
+    ]
+   },
+   "properties": {
+    "no": 11,
+    "location": "แยกประชาธรรม (รามคำแหง 39) ถนนประดิษฐ์มนูธรรม",
+    "district": "วังทองหลาง",
+    "police_station": "วังทองหลาง",
+    "lat": 13.76705,
+    "long": 100.601985,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.575383,
+     13.815975
+    ]
+   },
+   "properties": {
+    "no": 12,
+    "location": "ถนนรัชดาภิเษก (บริเวณรัชดาภิเษก 32 หน้าศาลอาญา)",
+    "district": "จตุจักร",
+    "police_station": "พหลโยธิน",
+    "lat": 13.815975,
+    "long": 100.575383,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.628045,
+     13.825735
+    ]
+   },
+   "properties": {
+    "no": 13,
+    "location": "ถนนประเสริฐมนูกิจ ตัดถนนประดิษฐ์มนูธรรม",
+    "district": "ลาดพร้าว",
+    "police_station": "โชคชัย,โคกคราม",
+    "lat": 13.825735,
+    "long": 100.628045,
+    "res_agency": "การทางพิเศษ"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.56129,
+     13.736391
+    ]
+   },
+   "properties": {
+    "no": 14,
+    "location": "แยกอโศกมนตรี (ถนนสุขุมวิท ตัดถนนอโศกมนตรี)",
+    "district": "คลองเตย",
+    "police_station": "ลุมพินี,คลองเตย",
+    "lat": 13.736391,
+    "long": 100.56129,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.595018,
+     13.841782
+    ]
+   },
+   "properties": {
+    "no": 15,
+    "location": "ถนนประเสริฐมนูกิจ ตัดถนนลาดปลาเค้า",
+    "district": "ลาดพร้าว",
+    "police_station": "โชคชัย",
+    "lat": 13.841782,
+    "long": 100.595018,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.486815,
+     13.719225
+    ]
+   },
+   "properties": {
+    "no": 16,
+    "location": "ถนนราชพฤกษ์ (ซอยสมเด็จพระเจ้าตากสิน8) ใกล้สถานีรถไฟฟ้าโพธิ์นิมิตร",
+    "district": "ธนบุรี",
+    "police_station": "บางยี่เรือ",
+    "lat": 13.719225,
+    "long": 100.486815,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.574932,
+     13.805396
+    ]
+   },
+   "properties": {
+    "no": 17,
+    "location": "สะพานข้ามแยกรัชดา-ลาดพร้าว",
+    "district": "จตุจักร",
+    "police_station": "สุทธิสาร,พหลโยธิน",
+    "lat": 13.805396,
+    "long": 100.574932,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.465072,
+     13.678346
+    ]
+   },
+   "properties": {
+    "no": 18,
+    "location": "ถนนพระราม 2 (ทางหลวงแผ่นดินหมายเลข 35) (พระราม 2 ซอย 24 - พระราม 2 ซอย 28/1)",
+    "district": "จอมทอง",
+    "police_station": "บางมด",
+    "lat": 13.678346,
+    "long": 100.465072,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4153553,
+     13.711445
+    ]
+   },
+   "properties": {
+    "no": 19,
+    "location": "ถนนเพชรเกษม บริเวณเพชรเกษม ซอย 68 ถึงเพชรเกษม ซอย 74",
+    "district": "บางแค",
+    "police_station": "หลักสอง,เพชรเกษม",
+    "lat": 13.711445,
+    "long": 100.4153553,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.568732,
+     13.71827
+    ]
+   },
+   "properties": {
+    "no": 20,
+    "location": "แยกเกษมราษฎร์ (ถนนพระราม 4 ตัดถนนเกษมราษฎร์) ใกล้โลตัสพระราม 4",
+    "district": "คลองเตย",
+    "police_station": "ทองหล่อ",
+    "lat": 13.71827,
+    "long": 100.568732,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.495649,
+     13.647107
+    ]
+   },
+   "properties": {
+    "no": 21,
+    "location": "ถนนพุทธบูชา ตัดถนนประชาอุทิศ(ใกล้มจธ.)",
+    "district": "ทุ่งครุ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.647107,
+    "long": 100.495649,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.521745,
+     13.809157
+    ]
+   },
+   "properties": {
+    "no": 22,
+    "location": "ประชาราษฎร์สาย1 หน้าซอยวัดบางโพโอมาวาส",
+    "district": "บางซื่อ",
+    "police_station": "เตาปูน,บางโพ",
+    "lat": 13.809157,
+    "long": 100.521745,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.60871,
+     13.824186
+    ]
+   },
+   "properties": {
+    "no": 23,
+    "location": "ถนนสุคนธสวัสดิ์ (โค้งหักศอกบริเวณเสนานิเวศน์ ซอย 120)",
+    "district": "ลาดพร้าว",
+    "police_station": "โชคชัย",
+    "lat": 13.824186,
+    "long": 100.60871,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.502182,
+     13.756536
+    ]
+   },
+   "properties": {
+    "no": 24,
+    "location": "แยกอนุสาวรีย์ประชาธิปไตย (ถนนราชดำเนินกลาง ตัดถนนดินสอ)",
+    "district": "พระนคร",
+    "police_station": "ชนะสงคราม,สำราญราษฎร์9",
+    "lat": 13.756536,
+    "long": 100.502182,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.502295,
+     13.675695
+    ]
+   },
+   "properties": {
+    "no": 25,
+    "location": "ถนนสุขสวัสดิ์ บริเวณซอย 27",
+    "district": "ราษฎร์บูรณะ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.675695,
+    "long": 100.502295,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.469875,
+     13.750809
+    ]
+   },
+   "properties": {
+    "no": 26,
+    "location": "ถนนจรัญสนิทวงศ์ บริเวณซอย 28",
+    "district": "ภาษีเจริญ",
+    "police_station": "บางกอกน้อย,บางขุนนนท์",
+    "lat": 13.750809,
+    "long": 100.469875,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.403601,
+     13.661717
+    ]
+   },
+   "properties": {
+    "no": 27,
+    "location": "ถนนเอกชัย ซอย 91 - 99",
+    "district": "บางบอน",
+    "police_station": "บางบอน,บางขุนเทียน",
+    "lat": 13.661717,
+    "long": 100.403601,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.575713,
+     13.839851
+    ]
+   },
+   "properties": {
+    "no": 28,
+    "location": "สี่แยกเกษตร ถนนประเสริฐมนูกิจ",
+    "district": "จตุจักร",
+    "police_station": "บางเขน",
+    "lat": 13.839851,
+    "long": 100.575713,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.675477,
+     13.699966
+    ]
+   },
+   "properties": {
+    "no": 29,
+    "location": "แยกถนนเชื่อมต่อพัฒนาการ ตัดถนนเฉลิมพระเกียรติ ร.9",
+    "district": "ประเวศ",
+    "police_station": "อุดมสุข",
+    "lat": 13.699966,
+    "long": 100.675477,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.557291,
+     13.830636
+    ]
+   },
+   "properties": {
+    "no": 30,
+    "location": "แยกรัชวิภา (ถ.รัชดาภิเษก - ถ.วิภาวดีรังสิต)",
+    "district": "จตุจักร",
+    "police_station": "จตุจักร",
+    "lat": 13.830636,
+    "long": 100.557291,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.62998,
+     13.754727
+    ]
+   },
+   "properties": {
+    "no": 31,
+    "location": "ถนนหัวหมาก (ซอยรามคำแหง 24)",
+    "district": "บางกะปิ",
+    "police_station": "หัวหมาก",
+    "lat": 13.754727,
+    "long": 100.62998,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.583051,
+     13.735314
+    ]
+   },
+   "properties": {
+    "no": 32,
+    "location": "ถนนทองหล่อ บริเวณซอย 18 (โพธิบุตร)",
+    "district": "วัฒนา",
+    "police_station": "ทองหล่อ",
+    "lat": 13.735314,
+    "long": 100.583051,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.445112,
+     13.702693
+    ]
+   },
+   "properties": {
+    "no": 33,
+    "location": "ถนนกัลปพฤกษ์ บริเวณข้ามคลองบางประทุน",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.702693,
+    "long": 100.445112,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.425586,
+     13.673892
+    ]
+   },
+   "properties": {
+    "no": 34,
+    "location": "สามแยกบางบอน (ถนนเอกชัย ตัดถนนบางขุนเทียน)",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.673892,
+    "long": 100.425586,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.50885,
+     13.67147
+    ]
+   },
+   "properties": {
+    "no": 35,
+    "location": "ถนนสุขสวัสดิ์ (บริเวณทางขึ้นลงทางพิเศษเฉลิมมหานคร)",
+    "district": "ราษฎร์บูรณะ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.67147,
+    "long": 100.50885,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.47911,
+     13.650779
+    ]
+   },
+   "properties": {
+    "no": 36,
+    "location": "ถนนพุทธบูชา ซอย 36 - ซอย 37/1",
+    "district": "ทุ่งครุ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.650779,
+    "long": 100.47911,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.554892,
+     13.760502
+    ]
+   },
+   "properties": {
+    "no": 37,
+    "location": "แยกประชาสงเคราะห์ (ถนนดินแดง ตัดถนนประชาสงเคราะห์)",
+    "district": "ดินแดง",
+    "police_station": "ดินแดง",
+    "lat": 13.760502,
+    "long": 100.554892,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.434825,
+     13.60528
+    ]
+   },
+   "properties": {
+    "no": 38,
+    "location": "ถนนบางขุนเทียน-ชายทะเล บริเวณข้ามคลองบางหญ้า (ระหว่างเทียนทะเล 26-28)",
+    "district": "บางขุนเทียน",
+    "police_station": "เทียนทะเล",
+    "lat": 13.60528,
+    "long": 100.434825,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.613208,
+     13.663846
+    ]
+   },
+   "properties": {
+    "no": 39,
+    "location": "ถนนลาซาล (สุขุมวิท 105) ตัดถนนลาซาล 21 และถนนลาซาล 23",
+    "district": "บางนา",
+    "police_station": "บางนา",
+    "lat": 13.663846,
+    "long": 100.613208,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.650145,
+     13.80982
+    ]
+   },
+   "properties": {
+    "no": 40,
+    "location": "แยกถนนประเสริฐมนูกิจ ตัดถนนนวมินทร์",
+    "district": "บึงกุ่ม",
+    "police_station": "โคกคราม,บึงกุ่ม",
+    "lat": 13.80982,
+    "long": 100.650145,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.419497,
+     13.648637
+    ]
+   },
+   "properties": {
+    "no": 41,
+    "location": "ถนนพระราม 2 ซอย 69",
+    "district": "บางขุนเทียน",
+    "police_station": "ท่าข้าม",
+    "lat": 13.648637,
+    "long": 100.419497,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.495732,
+     13.734267
+    ]
+   },
+   "properties": {
+    "no": 42,
+    "location": "ถนนประชาธิปก หน้าโรงเรียนศึกษานารี (ถนนอรุณอัมรินทร์ ตัดถนนสมเด็จเจ้าพระยาตัดถนนประชาธิปก)",
+    "district": "ธนบุรี",
+    "police_station": "บุปผาราม",
+    "lat": 13.734267,
+    "long": 100.495732,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.64237,
+     13.815742
+    ]
+   },
+   "properties": {
+    "no": 43,
+    "location": "แยกถนนประเสริฐมนูกิจ ตัดถนนนวมินทร์-รามอินทรา",
+    "district": "บึงกุ่ม",
+    "police_station": "โคกคราม",
+    "lat": 13.815742,
+    "long": 100.64237,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.424169,
+     13.679318
+    ]
+   },
+   "properties": {
+    "no": 44,
+    "location": "ถนนบางบอน 1 ซอย 9 ถึง ซอย 12",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.679318,
+    "long": 100.424169,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.498992,
+     13.644589
+    ]
+   },
+   "properties": {
+    "no": 45,
+    "location": "ถนนประชาอุทิศ ซอย 61 ตลาดทุ่งครุ",
+    "district": "ทุ่งครุ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.644589,
+    "long": 100.498992,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.436887,
+     13.680191
+    ]
+   },
+   "properties": {
+    "no": 46,
+    "location": "ถนนเอกชัย ซอย 50 – ซอย 64",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.680191,
+    "long": 100.436887,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.407082,
+     13.697011
+    ]
+   },
+   "properties": {
+    "no": 47,
+    "location": "ถนนกาญจนาภิเษก ช่วงเพชรเกษม - กัลปพฤกษ์ (ใกล้โรงพยาบาลสัตว์มิราเคิล)",
+    "district": "บางแค",
+    "police_station": "เพชรเกษม",
+    "lat": 13.697011,
+    "long": 100.407082,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.586502,
+     13.769775
+    ]
+   },
+   "properties": {
+    "no": 48,
+    "location": "แยกประชาอุทิศ (ถนนเทียมร่วมมิตรตัดถนนประชาอุทิศ)",
+    "district": "ห้วยขวาง",
+    "police_station": "ห้วยขวาง",
+    "lat": 13.769775,
+    "long": 100.586502,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.416215,
+     13.668854
+    ]
+   },
+   "properties": {
+    "no": 49,
+    "location": "ถนนเอกชัย ซอย 66/6 - 76",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.668854,
+    "long": 100.416215,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.50416,
+     13.666274
+    ]
+   },
+   "properties": {
+    "no": 50,
+    "location": "ถนนประชาอุทิศ ซอย 1 ถึงประชาอุทิศ ซอย 17",
+    "district": "ราษฎร์บูรณะ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.666274,
+    "long": 100.50416,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.425353,
+     13.633858
+    ]
+   },
+   "properties": {
+    "no": 51,
+    "location": "ถนนสะแกงาม ปากซอยสะแกงาม 32 - 52",
+    "district": "บางขุนเทียน",
+    "police_station": "แสมดำ,ท่าข้าม",
+    "lat": 13.633858,
+    "long": 100.425353,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.674311,
+     13.827074
+    ]
+   },
+   "properties": {
+    "no": 52,
+    "location": "ถนนรามอินทรา จุดตัดกับวงแหวนรอบนอก (ถนนกาญจนาภิเษก)",
+    "district": "คันนายาว",
+    "police_station": "คันนายาว,โคกคราม",
+    "lat": 13.827074,
+    "long": 100.674311,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.479185,
+     13.748534
+    ]
+   },
+   "properties": {
+    "no": 53,
+    "location": "ถนนอิสรภาพ บริเวณหน้ากองบัญชาการกองทัพเรือ",
+    "district": "บางกอกน้อย",
+    "police_station": "บางกอกน้อย",
+    "lat": 13.748534,
+    "long": 100.479185,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.47838,
+     13.715285
+    ]
+   },
+   "properties": {
+    "no": 54,
+    "location": "แยกรัชดา-ราชพฤกษ์",
+    "district": "ธนบุรี",
+    "police_station": "ตลาดพลู,บุคคโล",
+    "lat": 13.715285,
+    "long": 100.47838,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.37195,
+     13.638519
+    ]
+   },
+   "properties": {
+    "no": 55,
+    "location": "สี่แยกบางบอน 5 - เอกชัย 131",
+    "district": "บางบอน",
+    "police_station": "บางบอน",
+    "lat": 13.638519,
+    "long": 100.37195,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.544989,
+     13.780866
+    ]
+   },
+   "properties": {
+    "no": 56,
+    "location": "ถนนพหลโยธิน ตัดซอยพหลโยธิน7 (ซอยอารีย์)",
+    "district": "พญาไท",
+    "police_station": "บางซื่อ",
+    "lat": 13.780866,
+    "long": 100.544989,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.493054,
+     13.67619
+    ]
+   },
+   "properties": {
+    "no": 57,
+    "location": "ซอยสุขสวัสดิ์ 26 ตัดซอยสุขสวัสดิ์ 30",
+    "district": "ราษฎร์บูรณะ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.67619,
+    "long": 100.493054,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.503996,
+     13.630385
+    ]
+   },
+   "properties": {
+    "no": 58,
+    "location": "ถนนประชาอุทิศ บริเวณประชาอุทิศ ซอย 72",
+    "district": "ทุ่งครุ",
+    "police_station": "ทุ่งครุ",
+    "lat": 13.630385,
+    "long": 100.503996,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.64062,
+     13.826473
+    ]
+   },
+   "properties": {
+    "no": 59,
+    "location": "ถนนนวลจันทร์ บริเวณถนนนวลจันทร์ซอย 26 - 44",
+    "district": "บึงกุ่ม",
+    "police_station": "โคกคราม",
+    "lat": 13.826473,
+    "long": 100.64062,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.79435,
+     13.75051
+    ]
+   },
+   "properties": {
+    "no": 60,
+    "location": "แยกถนนเจ้าคุณทหาร ตัดถนนฉลองกรุง",
+    "district": "ลาดกระบัง",
+    "police_station": "ฉลองกรุง",
+    "lat": 13.75051,
+    "long": 100.79435,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.510659,
+     13.611288
+    ]
+   },
+   "properties": {
+    "no": 61,
+    "location": "ประชาอุทิศ 90 (ถนนประชาอุทิศ)",
+    "district": "ทุ่งครุ",
+    "police_station": "ทุ่งครุ",
+    "lat": 13.611288,
+    "long": 100.510659,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.361531,
+     13.706937
+    ]
+   },
+   "properties": {
+    "no": 62,
+    "location": "ถนนเพชรเกษม 73/2 - เพชรเกษม 77",
+    "district": "หนองแขม",
+    "police_station": "หนองค้างพลู,หนองแขม",
+    "lat": 13.706937,
+    "long": 100.361531,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.445458,
+     13.685003
+    ]
+   },
+   "properties": {
+    "no": 63,
+    "location": "ถนนเอกชัย ตัดถนนกำนันแม้น (แยกวัดสิงห์)",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.685003,
+    "long": 100.445458,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.499418,
+     13.656951
+    ]
+   },
+   "properties": {
+    "no": 64,
+    "location": "ถนนประชาอุทิศ 33 และประชาอุทิศ 37",
+    "district": "ราษฎร์บูรณะ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.656951,
+    "long": 100.499418,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.371777,
+     13.786945
+    ]
+   },
+   "properties": {
+    "no": 65,
+    "location": "ถนนบรมราชชนนี บริเวณหน้าร้านบุญถาวร และบรมราชชนนี 70/1",
+    "district": "ทวีวัฒนา",
+    "police_station": "ธรรมศาลา",
+    "lat": 13.786945,
+    "long": 100.371777,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.4884,
+     13.684563
+    ]
+   },
+   "properties": {
+    "no": 66,
+    "location": "ถนนพระราม 2 ตัดถนนสุขสวัสดิ์",
+    "district": "จอมทอง",
+    "police_station": "บางมด,บุคคโล,ราษฎร์บูรณะ",
+    "lat": 13.684563,
+    "long": 100.4884,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.405685,
+     13.613882
+    ]
+   },
+   "properties": {
+    "no": 67,
+    "location": "แยกซอยบางกระดี่ 35 แยก 1",
+    "district": "บางขุนเทียน",
+    "police_station": "แสมดำ",
+    "lat": 13.613882,
+    "long": 100.405685,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.5681,
+     13.827062
+    ]
+   },
+   "properties": {
+    "no": 68,
+    "location": "สี่แยกรัชโยธิน (ถ.รัชดาภิเษก - ถ.พหลโยธิน)",
+    "district": "จตุจักร",
+    "police_station": "พหลโยธิน",
+    "lat": 13.827062,
+    "long": 100.5681,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.459998,
+     13.712767
+    ]
+   },
+   "properties": {
+    "no": 69,
+    "location": "ถนนราชพฤกษ์ ตัดถนนกัลปพฤกษ์",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.712767,
+    "long": 100.459998,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.657982,
+     13.688149
+    ]
+   },
+   "properties": {
+    "no": 70,
+    "location": "ถนนเฉลิมพระเกียรติ ร.9 (หน้าสวนหลวง ร.9)",
+    "district": "ประเวศ",
+    "police_station": "ประเวศ",
+    "lat": 13.688149,
+    "long": 100.657982,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.386696,
+     13.650316
+    ]
+   },
+   "properties": {
+    "no": 71,
+    "location": "ถนนบางบอน 3 ตัดถนนเอกชัย",
+    "district": "บางบอน",
+    "police_station": "บางบอน",
+    "lat": 13.650316,
+    "long": 100.386696,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.573503,
+     13.778432
+    ]
+   },
+   "properties": {
+    "no": 72,
+    "location": "แยกห้วยขวาง (ถ.รัชดาภิเษก - ถ.ประชาราษฎร์บำเพ็ญ)",
+    "district": "ห้วยขวาง",
+    "police_station": "ห้วยขวาง,สุทธิสาร",
+    "lat": 13.778432,
+    "long": 100.573503,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.467266,
+     13.699079
+    ]
+   },
+   "properties": {
+    "no": 73,
+    "location": "แยกจอมทอง ถนนจอมทองตัดถนนวุฒากาศ",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.699079,
+    "long": 100.467266,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.545696,
+     13.700891
+    ]
+   },
+   "properties": {
+    "no": 74,
+    "location": "พระราม 3 ซอย 64 - ใกล้โรงเรียนนนทรีวิทยา",
+    "district": "ยานนาวา",
+    "police_station": "ทุ่งมหาเมฆ",
+    "lat": 13.700891,
+    "long": 100.545696,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.40607,
+     13.663212
+    ]
+   },
+   "properties": {
+    "no": 75,
+    "location": "ถนนเอกชัยตัดถนนกาญจนาภิเษก ถึงซอยเอกชัย 88",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.663212,
+    "long": 100.40607,
+    "res_agency": "กรมทางหลวงชนบท"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.65422,
+     13.81922
+    ]
+   },
+   "properties": {
+    "no": 76,
+    "location": "แยกถนนนวมินทร์-รามอินทรา ตัดถนนนวมินทร์",
+    "district": "บึงกุ่ม",
+    "police_station": "โคกคราม",
+    "lat": 13.81922,
+    "long": 100.65422,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.502804,
+     13.634158
+    ]
+   },
+   "properties": {
+    "no": 77,
+    "location": "ถนนประชาอุทิศ บริเวณประชาอุทิศ ซอย 79",
+    "district": "ทุ่งครุ",
+    "police_station": "ทุ่งครุ",
+    "lat": 13.634158,
+    "long": 100.502804,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.571317,
+     13.724966
+    ]
+   },
+   "properties": {
+    "no": 78,
+    "location": "ซอยท่านหญิงพวงรัตน์ประไพ (สุขุมวิท 26)",
+    "district": "คลองเตย",
+    "police_station": "ทองหล่อ",
+    "lat": 13.724966,
+    "long": 100.571317,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.443814,
+     13.687364
+    ]
+   },
+   "properties": {
+    "no": 79,
+    "location": "ถนนกำนันแม้น (กำนันแม้น ซอย 2 - กำนันแม้น ซอย 24)",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.687364,
+    "long": 100.443814,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.384962,
+     13.667747
+    ]
+   },
+   "properties": {
+    "no": 80,
+    "location": "ถนนบางบอน 3 (บางบอน 3 ซอย 3 - บางบอน 3 ซอย 5)",
+    "district": "บางบอน",
+    "police_station": "บางบอน",
+    "lat": 13.667747,
+    "long": 100.384962,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.413331,
+     13.644037
+    ]
+   },
+   "properties": {
+    "no": 81,
+    "location": "ถนนสะแกงาม ตัดถนนพระรามที่2",
+    "district": "บางขุนเทียน",
+    "police_station": "ท่าข้าม,แสมดำ",
+    "lat": 13.644037,
+    "long": 100.413331,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.530399,
+     13.680531
+    ]
+   },
+   "properties": {
+    "no": 82,
+    "location": "ถนนสาธุประดิษฐ์ 57",
+    "district": "ยานนาวา",
+    "police_station": "บางโพงพาง",
+    "lat": 13.680531,
+    "long": 100.530399,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.373832,
+     13.70787
+    ]
+   },
+   "properties": {
+    "no": 83,
+    "location": "แยกถนนเพชรเกษม ตัดถนนเพชรเกษม 69",
+    "district": "หนองแขม",
+    "police_station": "เพชรเกษม",
+    "lat": 13.70787,
+    "long": 100.373832,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.581543,
+     13.884323
+    ]
+   },
+   "properties": {
+    "no": 84,
+    "location": "แยกหลักสี่ (ถ.วิภาวดีรังสิต - ถ.แจ้งวัฒนะ)",
+    "district": "หลักสี่",
+    "police_station": "ทุ่งสองห้อง",
+    "lat": 13.884323,
+    "long": 100.581543,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.561083,
+     13.847738
+    ]
+   },
+   "properties": {
+    "no": 85,
+    "location": "แยกเกษตร (ถ.วิภาวดีรังสิต - ถ.งามวงศ์วาน)",
+    "district": "จตุจักร",
+    "police_station": "ทุ่งสองห้อง",
+    "lat": 13.847738,
+    "long": 100.561083,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.670257,
+     13.852299
+    ]
+   },
+   "properties": {
+    "no": 86,
+    "location": "ถนนคู้บอน ปากซอยคู้บอน 28",
+    "district": "คันนายาว",
+    "police_station": "คันนายาว",
+    "lat": 13.852299,
+    "long": 100.670257,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.592606,
+     13.714271
+    ]
+   },
+   "properties": {
+    "no": 87,
+    "location": "แยกพระโขนง (ถนนสุขุมวิท ตัดถนนพระรามที่ 4)",
+    "district": "คลองเตย",
+    "police_station": "คลองตัน",
+    "lat": 13.714271,
+    "long": 100.592606,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.592307,
+     13.925429
+    ]
+   },
+   "properties": {
+    "no": 88,
+    "location": "ถนนสรงประภา ตัดสรงประภาซอย5",
+    "district": "ดอนเมือง",
+    "police_station": "ดอนเมือง",
+    "lat": 13.925429,
+    "long": 100.592307,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.343261,
+     13.705433
+    ]
+   },
+   "properties": {
+    "no": 89,
+    "location": "ถนนเพชรเกษมตัดถนนมาเจริญ (ซอยเพชรเกษม81)",
+    "district": "หนองแขม",
+    "police_station": "หนองแขม",
+    "lat": 13.705433,
+    "long": 100.343261,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.494357,
+     13.784485
+    ]
+   },
+   "properties": {
+    "no": 90,
+    "location": "แยกบางพลัด และอุโมงค์บางพลัด",
+    "district": "บางพลัด",
+    "police_station": "บางพลัด,บวรมงคล",
+    "lat": 13.784485,
+    "long": 100.494357,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.406243,
+     13.670765
+    ]
+   },
+   "properties": {
+    "no": 91,
+    "location": "ถนนกาญจนาภิเษก บริเวณแม็คโครบางบอน",
+    "district": "บางบอน",
+    "police_station": "บางขุนเทียน,บางบอน",
+    "lat": 13.670765,
+    "long": 100.406243,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.510329,
+     13.622456
+    ]
+   },
+   "properties": {
+    "no": 92,
+    "location": "ถนนประชาอุทิศ ตัดถนนครุใน",
+    "district": "ทุ่งครุ",
+    "police_station": "ทุ่งครุ",
+    "lat": 13.622456,
+    "long": 100.510329,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.484042,
+     13.700287
+    ]
+   },
+   "properties": {
+    "no": 93,
+    "location": "ถนนสมเด็จพระเจ้าตากสิน (ตั้งแต่สมเด็จพระเจ้าตากสิน 40 - 44)",
+    "district": "ธนบุรี",
+    "police_station": "บุคคโล",
+    "lat": 13.700287,
+    "long": 100.484042,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.460023,
+     13.698626
+    ]
+   },
+   "properties": {
+    "no": 94,
+    "location": "ถนนเอกชัย บริเวณเอกชัย 10 ถึงเอกชัย 16",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.698626,
+    "long": 100.460023,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.489195,
+     13.714725
+    ]
+   },
+   "properties": {
+    "no": 95,
+    "location": "ถนนสมเด็จพระเจ้าตากสิน (ตั้งแต่สมเด็จพระเจ้าตากสิน 11- 21)",
+    "district": "ธนบุรี",
+    "police_station": "สำเหร่",
+    "lat": 13.714725,
+    "long": 100.489195,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.477975,
+     13.7555638
+    ]
+   },
+   "properties": {
+    "no": 96,
+    "location": "ถนนพรานนก ตัดถนนอิสรภาพ",
+    "district": "บางกอกน้อย",
+    "police_station": "บางกอกน้อย",
+    "lat": 13.7555638,
+    "long": 100.477975,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.600297,
+     13.71537
+    ]
+   },
+   "properties": {
+    "no": 97,
+    "location": "ซอยมีสุวรรณ 3 แยก 10 (ซอยจุฬาพรประสิทธิ์/ ถนนปรีดีพนมยงค์ 36)",
+    "district": "วัฒนา",
+    "police_station": "คลองตัน",
+    "lat": 13.71537,
+    "long": 100.600297,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.496836,
+     13.651404
+    ]
+   },
+   "properties": {
+    "no": 98,
+    "location": "ประชาอุทิศ (ตั้งแต่ประชาอุทิศ39 - ประชาอุทิศ 47)",
+    "district": "ทุ่งครุ",
+    "police_station": "ราษฎร์บูรณะ",
+    "lat": 13.651404,
+    "long": 100.496836,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.70049,
+     13.753301
+    ]
+   },
+   "properties": {
+    "no": 99,
+    "location": "ถนนศรีนครินทร์-ร่มเกล้า ตัดถนนกาญจนาภิเษก",
+    "district": "สะพานสูง",
+    "police_station": "ประเวศ",
+    "lat": 13.753301,
+    "long": 100.70049,
+    "res_agency": "กรมทางหลวง"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.454679,
+     13.691938
+    ]
+   },
+   "properties": {
+    "no": 100,
+    "location": "ถนนเอกชัย บริเวณเอกชัย 23 ถึงเอกชัย 35",
+    "district": "จอมทอง",
+    "police_station": "บางขุนเทียน",
+    "lat": 13.691938,
+    "long": 100.454679,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.6628298,
+     13.8425543
+    ]
+   },
+   "properties": {
+    "no": 101,
+    "location": "ปากซอยคู้บอน 6",
+    "district": "คันนายาว",
+    "police_station": "คันนายาว",
+    "lat": 13.8425543,
+    "long": 100.6628298,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.444138,
+     13.715183
+    ]
+   },
+   "properties": {
+    "no": 102,
+    "location": "ถนนเพชรเกษม บริเวณเพชรเกษม ซอย 46 ถึงเพชรเกษม ซอย 48/1",
+    "district": "ภาษีเจริญ",
+    "police_station": "ภาษีเจริญ",
+    "lat": 13.715183,
+    "long": 100.444138,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.530878,
+     13.746226
+    ]
+   },
+   "properties": {
+    "no": 103,
+    "location": "แยกปทุมวัน (ถนนพระรามที่ 1 ตัดถนนพญาไท)",
+    "district": "ปทุมวัน",
+    "police_station": "ปทุมวัน",
+    "lat": 13.746226,
+    "long": 100.530878,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.584032,
+     13.71298
+    ]
+   },
+   "properties": {
+    "no": 104,
+    "location": "แยกกล้วยน้ำไท (ถนนพระราม 4 ตัดถนนกล้วยน้ำไท)",
+    "district": "คลองเตย",
+    "police_station": "คลองตัน,ทองหล่อ",
+    "lat": 13.71298,
+    "long": 100.584032,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.432217,
+     13.641474
+    ]
+   },
+   "properties": {
+    "no": 105,
+    "location": "ถนนบางขุนเทียน-ชายทะเล (บริเวณซอยเทียนทะเล 7)",
+    "district": "บางขุนเทียน",
+    "police_station": "ท่าข้าม",
+    "lat": 13.641474,
+    "long": 100.432217,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.433345,
+     13.63497
+    ]
+   },
+   "properties": {
+    "no": 106,
+    "location": "ถนนบางขุนเทียน-ชายทะเล (บริเวณซอยเทียนทะเล 11 - 15)",
+    "district": "บางขุนเทียน",
+    "police_station": "ท่าข้าม",
+    "lat": 13.63497,
+    "long": 100.433345,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.574237,
+     13.789746
+    ]
+   },
+   "properties": {
+    "no": 107,
+    "location": "แยกรัชดา-สุทธิสาร",
+    "district": "ดินแดง",
+    "police_station": "สุทธิสาร",
+    "lat": 13.789746,
+    "long": 100.574237,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.541179,
+     13.830096
+    ]
+   },
+   "properties": {
+    "no": 108,
+    "location": "ถนนรัชดาภิเษก ช่วงใกล้ทางขึ้นลงทางด่วนฯ",
+    "district": "จตุจักร",
+    "police_station": "ประชาชื่น",
+    "lat": 13.830096,
+    "long": 100.541179,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.49445,
+     13.784602
+    ]
+   },
+   "properties": {
+    "no": 109,
+    "location": "สี่แยกบางพลัด",
+    "district": "บางพลัด",
+    "police_station": "บางพลัด",
+    "lat": 13.784602,
+    "long": 100.49445,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.557758,
+     13.720687
+    ]
+   },
+   "properties": {
+    "no": 110,
+    "location": "ถนนพระราม 4 ช่วงคลองเตย",
+    "district": "คลองเตย",
+    "police_station": "ทุ่งมหาเมฆ,ทองหล่อ",
+    "lat": 13.720687,
+    "long": 100.557758,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.605557,
+     13.747478
+    ]
+   },
+   "properties": {
+    "no": 111,
+    "location": "แยกรามคำแหง (ถนนพระราม 9 - ถนนรามคำแหง)",
+    "district": "บางกะปิ",
+    "police_station": "หัวหมาก",
+    "lat": 13.747478,
+    "long": 100.605557,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.579627,
+     13.754398
+    ]
+   },
+   "properties": {
+    "no": 112,
+    "location": "ซอยโรงพยาบาลปิยะเวท",
+    "district": "ห้วยขวาง",
+    "police_station": "มักกะสัน, ห้วยขวาง",
+    "lat": 13.754398,
+    "long": 100.579627,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.646036,
+     13.677827
+    ]
+   },
+   "properties": {
+    "no": 113,
+    "location": "แยกศรีอุดม (ถนนศรีนครินทร์ - ถนนเฉลิมพระเกียรติ ร.9)",
+    "district": "ประเวศ",
+    "police_station": "พระโขนง,บางนา,ประเวศ",
+    "lat": 13.677827,
+    "long": 100.646036,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.563358,
+     13.748989
+    ]
+   },
+   "properties": {
+    "no": 114,
+    "location": "แยกอโศก-เพชรบุรี",
+    "district": "ราชเทวี",
+    "police_station": "มักกะสัน",
+    "lat": 13.748989,
+    "long": 100.563358,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.548095,
+     13.763922
+    ]
+   },
+   "properties": {
+    "no": 115,
+    "location": "แยกดินแดง (ถ.ดินแดง - ถ.วิภาวดีรังสิต)",
+    "district": "ดินแดง",
+    "police_station": "ดินแดง",
+    "lat": 13.763922,
+    "long": 100.548095,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.573383,
+     13.75555
+    ]
+   },
+   "properties": {
+    "no": 116,
+    "location": "แยกผังเมือง และบนสะพานข้ามแยก อสมท.",
+    "district": "ห้วยขวาง",
+    "police_station": "ห้วยขวาง",
+    "lat": 13.75555,
+    "long": 100.573383,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.494686,
+     13.730929
+    ]
+   },
+   "properties": {
+    "no": 117,
+    "location": "สี่แยกบ้านแขก (ถนนประชาธิปก - ถนนอิสรภาพ)",
+    "district": "ธนบุรี",
+    "police_station": "บางยี่เรือ,บุปผาราม",
+    "lat": 13.730929,
+    "long": 100.494686,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.545385,
+     13.7634
+    ]
+   },
+   "properties": {
+    "no": 118,
+    "location": "ถนนดินแดง ใกล้สามเหลี่ยมดินแดง",
+    "district": "ราชเทวี",
+    "police_station": "พญาไท",
+    "lat": 13.7634,
+    "long": 100.545385,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.581257,
+     13.754742
+    ]
+   },
+   "properties": {
+    "no": 119,
+    "location": "ถนนพระราม 9 บริเวณข้ามคลองชวดใหญ่",
+    "district": "ห้วยขวาง",
+    "police_station": "วังทองหลาง,ห้วยขวาง",
+    "lat": 13.754742,
+    "long": 100.581257,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.535867,
+     13.804541
+    ]
+   },
+   "properties": {
+    "no": 120,
+    "location": "สะพานสูงบางซื่อ",
+    "district": "บางซื่อ",
+    "police_station": "เตาปูน",
+    "lat": 13.804541,
+    "long": 100.535867,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.59943,
+     13.709104
+    ]
+   },
+   "properties": {
+    "no": 121,
+    "location": "ถนนสุขุมวิท ตัดถนนอ่อนนุช (สุขุมวิท 77)",
+    "district": "คลองเตย",
+    "police_station": "พระโขนง",
+    "lat": 13.709104,
+    "long": 100.59943,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.564988,
+     13.756141
+    ]
+   },
+   "properties": {
+    "no": 122,
+    "location": "แยกพระราม 9 (ถนนพระราม 9 - ถนนรัชดาภิเษก)",
+    "district": "ห้วยขวาง",
+    "police_station": "ห้วยขวาง",
+    "lat": 13.756141,
+    "long": 100.564988,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.575076,
+     13.746894
+    ]
+   },
+   "properties": {
+    "no": 123,
+    "location": "ถนนเพชรบุรีตัดใหม่ (โรงเรียนวัดใหม่ช่องลม - ปั้มน้ำมันเชลล์)",
+    "district": "ห้วยขวาง",
+    "police_station": "มักกะสัน",
+    "lat": 13.746894,
+    "long": 100.575076,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.570188,
+     13.825968
+    ]
+   },
+   "properties": {
+    "no": 124,
+    "location": "ถนนรัชดาภิษก ใกล้แยกรัชโยธิน (ซอยรัชดาฯ 44)",
+    "district": "จตุจักร",
+    "police_station": "พหลโยธิน",
+    "lat": 13.825968,
+    "long": 100.570188,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.542398,
+     13.756118
+    ]
+   },
+   "properties": {
+    "no": 125,
+    "location": "แยกมักกะสัน (ถนนราชปรารถ - ถนนศรีอยุธยา)",
+    "district": "ราชเทวี",
+    "police_station": "พญาไท",
+    "lat": 13.756118,
+    "long": 100.542398,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100.616351,
+     13.736468
+    ]
+   },
+   "properties": {
+    "no": 126,
+    "location": "ถนนพัฒนาการ อุโมงค์ถนนพัฒนาการ",
+    "district": "สวนหลวง",
+    "police_station": "คลองตัน",
+    "lat": 13.736468,
+    "long": 100.616351,
+    "res_agency": "กรุงเทพมหานคร"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "lat": 13.7378375,
+ "lon": 100.5103567,
+ "display_name": "เขตสัมพันธวงศ์, กรุงเทพมหานคร, 10100, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92056,
+ "type": "administrative",
+ "query": "Samphanthawong, Bangkok, 10100, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "422 Vanich 1 Road, Samphanthawong, Bangkok, 10100, Thailand",
+ "simplified_query": true
+}

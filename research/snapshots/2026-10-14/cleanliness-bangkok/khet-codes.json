@@ -1,0 +1,352 @@
+[
+ {
+  "dcode": "1001",
+  "name_th": "พระนคร",
+  "name_en": "Phra Nakhon",
+  "slug": "phra-nakhon",
+  "name_ru": "Пхранакхон"
+ },
+ {
+  "dcode": "1002",
+  "name_th": "ดุสิต",
+  "name_en": "Dusit",
+  "slug": "dusit",
+  "name_ru": "Дусит"
+ },
+ {
+  "dcode": "1003",
+  "name_th": "หนองจอก",
+  "name_en": "Nong Chok",
+  "slug": "nong-chok",
+  "name_ru": "Нонгчок"
+ },
+ {
+  "dcode": "1004",
+  "name_th": "บางรัก",
+  "name_en": "Bang Rak",
+  "slug": "bang-rak",
+  "name_ru": "Банграк"
+ },
+ {
+  "dcode": "1005",
+  "name_th": "บางเขน",
+  "name_en": "Bang Khen",
+  "slug": "bang-khen",
+  "name_ru": "Бангкхен"
+ },
+ {
+  "dcode": "1006",
+  "name_th": "บางกะปิ",
+  "name_en": "Bang Kapi",
+  "slug": "bang-kapi",
+  "name_ru": "Бангкапи"
+ },
+ {
+  "dcode": "1007",
+  "name_th": "ปทุมวัน",
+  "name_en": "Pathum Wan",
+  "slug": "pathum-wan",
+  "name_ru": "Патхумван"
+ },
+ {
+  "dcode": "1008",
+  "name_th": "ป้อมปราบศัตรูพ่าย",
+  "name_en": "Pom Prap Sattru Phai",
+  "slug": "pom-prap-sattru-phai",
+  "name_ru": "Помпрап-Саттрупхай"
+ },
+ {
+  "dcode": "1009",
+  "name_th": "พระโขนง",
+  "name_en": "Phra Khanong",
+  "slug": "phra-khanong",
+  "name_ru": "Пхракханонг"
+ },
+ {
+  "dcode": "1010",
+  "name_th": "มีนบุรี",
+  "name_en": "Min Buri",
+  "slug": "min-buri",
+  "name_ru": "Минбури"
+ },
+ {
+  "dcode": "1011",
+  "name_th": "ลาดกระบัง",
+  "name_en": "Lat Krabang",
+  "slug": "lat-krabang",
+  "name_ru": "Латкрабанг"
+ },
+ {
+  "dcode": "1012",
+  "name_th": "ยานนาวา",
+  "name_en": "Yan Nawa",
+  "slug": "yan-nawa",
+  "name_ru": "Яннава"
+ },
+ {
+  "dcode": "1013",
+  "name_th": "สัมพันธวงศ์",
+  "name_en": "Samphanthawong",
+  "slug": "samphanthawong",
+  "name_ru": "Сампхантхавонг"
+ },
+ {
+  "dcode": "1014",
+  "name_th": "พญาไท",
+  "name_en": "Phaya Thai",
+  "slug": "phaya-thai",
+  "name_ru": "Пхаятхай"
+ },
+ {
+  "dcode": "1015",
+  "name_th": "ธนบุรี",
+  "name_en": "Thon Buri",
+  "slug": "thon-buri",
+  "name_ru": "Тхонбури"
+ },
+ {
+  "dcode": "1016",
+  "name_th": "บางกอกใหญ่",
+  "name_en": "Bangkok Yai",
+  "slug": "bangkok-yai",
+  "name_ru": "Бангкок-Яй"
+ },
+ {
+  "dcode": "1017",
+  "name_th": "ห้วยขวาง",
+  "name_en": "Huai Khwang",
+  "slug": "huai-khwang",
+  "name_ru": "Хуайкхванг"
+ },
+ {
+  "dcode": "1018",
+  "name_th": "คลองสาน",
+  "name_en": "Khlong San",
+  "slug": "khlong-san",
+  "name_ru": "Кхлонгсан"
+ },
+ {
+  "dcode": "1019",
+  "name_th": "ตลิ่งชัน",
+  "name_en": "Taling Chan",
+  "slug": "taling-chan",
+  "name_ru": "Талингчан"
+ },
+ {
+  "dcode": "1020",
+  "name_th": "บางกอกน้อย",
+  "name_en": "Bangkok Noi",
+  "slug": "bangkok-noi",
+  "name_ru": "Бангкок-Ной"
+ },
+ {
+  "dcode": "1021",
+  "name_th": "บางขุนเทียน",
+  "name_en": "Bang Khun Thian",
+  "slug": "bang-khun-thian",
+  "name_ru": "Бангкхунтхиан"
+ },
+ {
+  "dcode": "1022",
+  "name_th": "ภาษีเจริญ",
+  "name_en": "Phasi Charoen",
+  "slug": "phasi-charoen",
+  "name_ru": "Пхасичароен"
+ },
+ {
+  "dcode": "1023",
+  "name_th": "หนองแขม",
+  "name_en": "Nong Khaem",
+  "slug": "nong-khaem",
+  "name_ru": "Нонгкхэм"
+ },
+ {
+  "dcode": "1024",
+  "name_th": "ราษฎร์บูรณะ",
+  "name_en": "Rat Burana",
+  "slug": "rat-burana",
+  "name_ru": "Ратбурана"
+ },
+ {
+  "dcode": "1025",
+  "name_th": "บางพลัด",
+  "name_en": "Bang Phlat",
+  "slug": "bang-phlat",
+  "name_ru": "Бангпхлат"
+ },
+ {
+  "dcode": "1026",
+  "name_th": "ดินแดง",
+  "name_en": "Din Daeng",
+  "slug": "din-daeng",
+  "name_ru": "Диндэнг"
+ },
+ {
+  "dcode": "1027",
+  "name_th": "บึงกุ่ม",
+  "name_en": "Bueng Kum",
+  "slug": "bueng-kum",
+  "name_ru": "Бынгкум"
+ },
+ {
+  "dcode": "1028",
+  "name_th": "สาทร",
+  "name_en": "Sathon",
+  "slug": "sathon",
+  "name_ru": "Сатхон"
+ },
+ {
+  "dcode": "1029",
+  "name_th": "บางซื่อ",
+  "name_en": "Bang Sue",
+  "slug": "bang-sue",
+  "name_ru": "Бангсы"
+ },
+ {
+  "dcode": "1030",
+  "name_th": "จตุจักร",
+  "name_en": "Chatuchak",
+  "slug": "chatuchak",
+  "name_ru": "Чатучак"
+ },
+ {
+  "dcode": "1031",
+  "name_th": "บางคอแหลม",
+  "name_en": "Bang Kho Laem",
+  "slug": "bang-kho-laem",
+  "name_ru": "Бангкхолэм"
+ },
+ {
+  "dcode": "1032",
+  "name_th": "ประเวศ",
+  "name_en": "Prawet",
+  "slug": "prawet",
+  "name_ru": "Правет"
+ },
+ {
+  "dcode": "1033",
+  "name_th": "คลองเตย",
+  "name_en": "Khlong Toei",
+  "slug": "khlong-toei",
+  "name_ru": "Кхлонгтой"
+ },
+ {
+  "dcode": "1034",
+  "name_th": "สวนหลวง",
+  "name_en": "Suan Luang",
+  "slug": "suan-luang",
+  "name_ru": "Суанлуанг"
+ },
+ {
+  "dcode": "1035",
+  "name_th": "จอมทอง",
+  "name_en": "Chom Thong",
+  "slug": "chom-thong",
+  "name_ru": "Чомтхонг"
+ },
+ {
+  "dcode": "1036",
+  "name_th": "ดอนเมือง",
+  "name_en": "Don Mueang",
+  "slug": "don-mueang",
+  "name_ru": "Донмыанг"
+ },
+ {
+  "dcode": "1037",
+  "name_th": "ราชเทวี",
+  "name_en": "Ratchathewi",
+  "slug": "ratchathewi",
+  "name_ru": "Ратчатхеви"
+ },
+ {
+  "dcode": "1038",
+  "name_th": "ลาดพร้าว",
+  "name_en": "Lat Phrao",
+  "slug": "lat-phrao",
+  "name_ru": "Латпхрао"
+ },
+ {
+  "dcode": "1039",
+  "name_th": "วัฒนา",
+  "name_en": "Watthana",
+  "slug": "watthana",
+  "name_ru": "Ваттхана"
+ },
+ {
+  "dcode": "1040",
+  "name_th": "บางแค",
+  "name_en": "Bang Khae",
+  "slug": "bang-khae",
+  "name_ru": "Бангкхэ"
+ },
+ {
+  "dcode": "1041",
+  "name_th": "หลักสี่",
+  "name_en": "Lak Si",
+  "slug": "lak-si",
+  "name_ru": "Лакси"
+ },
+ {
+  "dcode": "1042",
+  "name_th": "สายไหม",
+  "name_en": "Sai Mai",
+  "slug": "sai-mai",
+  "name_ru": "Саймай"
+ },
+ {
+  "dcode": "1043",
+  "name_th": "คันนายาว",
+  "name_en": "Khan Na Yao",
+  "slug": "khan-na-yao",
+  "name_ru": "Кханнаяо"
+ },
+ {
+  "dcode": "1044",
+  "name_th": "สะพานสูง",
+  "name_en": "Saphan Sung",
+  "slug": "saphan-sung",
+  "name_ru": "Сапхансунг"
+ },
+ {
+  "dcode": "1045",
+  "name_th": "วังทองหลาง",
+  "name_en": "Wang Thonglang",
+  "slug": "wang-thonglang",
+  "name_ru": "Вангтхонгланг"
+ },
+ {
+  "dcode": "1046",
+  "name_th": "คลองสามวา",
+  "name_en": "Khlong Sam Wa",
+  "slug": "khlong-sam-wa",
+  "name_ru": "Кхлонгсамва"
+ },
+ {
+  "dcode": "1047",
+  "name_th": "บางนา",
+  "name_en": "Bang Na",
+  "slug": "bang-na",
+  "name_ru": "Бангна"
+ },
+ {
+  "dcode": "1048",
+  "name_th": "ทวีวัฒนา",
+  "name_en": "Thawi Watthana",
+  "slug": "thawi-watthana",
+  "name_ru": "Тхави-Ваттхана"
+ },
+ {
+  "dcode": "1049",
+  "name_th": "ทุ่งครุ",
+  "name_en": "Thung Khru",
+  "slug": "thung-khru",
+  "name_ru": "Тхунгкхру"
+ },
+ {
+  "dcode": "1050",
+  "name_th": "บางบอน",
+  "name_en": "Bang Bon",
+  "slug": "bang-bon",
+  "name_ru": "Бангбон"
+ }
+]

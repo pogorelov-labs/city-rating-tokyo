@@ -1,0 +1,51 @@
+khet,rel_id,osm_name_en,quadrant,apartments,residential,dormitory,commercial,mixed_use,buildings_total,towers_20plus,stations_in_khet,snapshot,mirror,source
+bang-bon,3147312,Bang Bon,SW,2,277,0,0,0,279,0,0,2026-10-14T12:51:51Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+bang-kapi,2939952,Bang Kapi,NE,25,57,0,4,0,86,6,4,2026-10-14T12:39:33Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+bang-khae,2946804,Bang Khae,SW,7,610,0,3,0,620,0,2,2026-10-14T12:52:51Z,overpass-api.de,sweep 2026-10-14
+bang-khen,2938030,Bang Khen,NE,29,0,0,5,0,34,0,12,2026-10-14T12:40:36Z,overpass-api.de,sweep 2026-10-14
+bang-kho-laem,3147455,Bang Kho Laem,SW,20,2,0,40,0,62,4,0,2026-10-14T12:53:50Z,overpass-api.de,sweep 2026-10-14
+bang-khun-thian,3147313,Bang Khun Thian,SW,109,1,2,47,0,159,0,0,2026-10-14T12:54:51Z,overpass-api.de,sweep 2026-10-14
+bang-na,3146412,Bang Na,SW,36,15,0,22,0,73,10,5,2026-10-13T22:26Z,overpass-api.de,note 2026-10-13-housing-crtky148.md §2
+bang-phlat,2942281,Bang Phlat,NW,20,4,0,6,0,30,6,4,2026-10-14T11:38:25Z,overpass-api.de,sweep 2026-10-14
+bang-rak,92061,Bang Rak,NW,65,635,2,733,0,1435,44,5,2026-10-14T11:44:40Z,overpass-api.de,sweep 2026-10-14
+bang-sue,1639285,Bang Sue,NW,39,7,2,15,0,63,8,4,2026-10-14T11:53:51Z,overpass-api.de,sweep 2026-10-14
+bangkok-noi,2942282,Bangkok Noi,NW,7,6,6,44,0,63,5,2,2026-10-14T11:54:51Z,overpass-api.de,sweep 2026-10-14
+bangkok-yai,2939953,Bangkok Yai,NW,12,6,0,0,0,18,2,3,2026-10-14T11:59:57Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+bueng-kum,2946805,Bueng Kum,NE,35,290,0,71,0,396,0,0,2026-10-14T12:41:39Z,overpass-api.de,sweep 2026-10-14
+chatuchak,1639286,Chatuchak,NW,113,357,10,51,0,531,15,14,2026-10-14T12:05:01Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+chom-thong,3147007,Chom Thong,SW,6,35,0,0,0,41,0,0,2026-10-14T12:54:51Z,overpass-api.de,sweep 2026-10-14
+din-daeng,2938031,Din Daeng,NW,511,1,0,141,0,653,14,5,2026-10-14T12:11:06Z,overpass-api.de,sweep 2026-10-14
+don-mueang,1639287,Don Mueang,NW,7,755,0,3,0,765,0,3,2026-10-14T12:12:06Z,overpass-api.de,sweep 2026-10-14
+dusit,92069,Dusit,NW,76,4,8,79,0,167,7,0,2026-10-14T12:15:07Z,overpass-api.de,sweep 2026-10-14
+huai-khwang,2938032,Huai Khwang,NW,82,119,0,36,0,237,40,1,2026-07-15T15:22Z,overpass.monicz.dev,note 2026-10-13-housing-crtky148.md §2
+khan-na-yao,2946806,Khan Na Yao,NE,22,99,0,13,0,134,0,5,2026-10-14T12:41:39Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+khlong-sam-wa,2997412,Khlong Sam Wa,NE,0,293,0,2,0,295,0,0,2026-10-14T12:42:39Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+khlong-san,3147280,Khlong San,SW,30,7,0,7,0,44,18,2,2026-10-14T12:55:56Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+khlong-toei,2938033,Khlong Toei,SW,250,66,0,156,0,472,106,9,2026-07-15T15:22Z,overpass.kumi.systems,note 2026-10-13-housing-crtky148.md §2
+lak-si,1639288,Lak Si,NW,84,0,0,13,0,97,0,4,2026-10-14T12:16:08Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+lat-krabang,3147500,Lat Krabang,NE,353,31,85,23,0,492,0,0,2026-10-14T12:43:40Z,overpass-api.de,sweep 2026-10-14
+lat-phrao,2938034,Lat Phrao,NW,2,1,0,13,0,16,0,0,2026-10-14T12:17:10Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+min-buri,3146413,Min Buri,NE,3,0,0,6,0,9,0,4,2026-10-14T12:46:43Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+nong-chok,3147501,Nong Chok,NE,2,91,3,51,0,147,0,0,2026-10-14T12:49:50Z,overpass-api.de,sweep 2026-10-14
+nong-khaem,2942283,Nong Khaem,SW,21,1199,0,1,0,1221,0,0,2026-10-14T12:56:58Z,overpass-api.de,sweep 2026-10-14
+pathum-wan,92063,Pathum Wan,NW,126,35,21,712,0,894,66,9,2026-10-14T12:18:09Z,overpass-api.de,sweep 2026-10-14
+phasi-charoen,2946807,Phasi Charoen,SW,139,4,0,3,0,146,3,5,2026-10-14T13:00:01Z,overpass-api.de,sweep 2026-10-14
+phaya-thai,92068,Phaya Thai,NW,128,19,4,83,0,234,26,3,2026-10-14T12:18:09Z,overpass-api.de,sweep 2026-10-14
+phra-khanong,3146642,Phra Khanong,SW,25,10,0,2,0,37,4,2,2026-10-14T13:02:01Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+phra-nakhon,92053,Phra Nakhon,NW,29,38,0,1117,0,1184,0,2,2026-10-14T12:22:21Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+pom-prap-sattru-phai,92058,Pom Prap Sattru Phai,NW,7,47,0,609,0,663,1,0,2026-10-14T12:22:21Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+prawet,3146414,Prawet,SE,16,0,0,7,0,23,0,3,2026-10-14T13:09:06Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+rat-burana,3147008,Rat Burana,SW,16,0,0,0,0,16,0,0,2026-10-14T13:02:01Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+ratchathewi,92064,Ratchathewi,NW,47,32,1,19,0,99,23,4,2026-10-14T12:26:21Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+sai-mai,2938035,Sai Mai,NE,0,16,0,3,0,19,0,0,2026-10-14T12:50:51Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+samphanthawong,92056,Samphanthawong,NW,10,78,0,911,0,999,2,1,2026-10-14T12:29:26Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+saphan-sung,3146415,Saphan Sung,NE,0,0,0,1,0,1,0,0,2026-10-14T12:51:51Z,overpass-api.de,sweep 2026-10-14
+sathon,3147425,Sathon,SW,150,62,2,272,0,486,41,0,2026-10-14T13:06:05Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+suan-luang,3146643,Suan Luang,NW,17,10,0,7,0,34,16,3,2026-10-14T12:30:27Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+taling-chan,2939954,Taling Chan,NW,14,0,4,6,0,24,0,0,2026-10-14T12:37:32Z,overpass-api.de,sweep 2026-10-14
+thawi-watthana,2939955,Thawi Watthana,NW,6,375,8,62,0,451,0,0,2026-10-14T12:37:32Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14
+thon-buri,3147281,Thon Buri,SW,10,5,0,3,0,18,7,3,2026-10-14T13:07:06Z,overpass-api.de,sweep 2026-10-14
+thung-khru,3147104,Thung Khru,SW,83,65,0,4,0,152,0,0,2026-10-14T13:07:06Z,overpass-api.de,sweep 2026-10-14
+wang-thonglang,2939956,Wang Thonglang,NW,10,20,0,10,0,40,0,4,2026-10-14T12:39:33Z,overpass-api.de,sweep 2026-10-14
+watthana,2938036,Vadhana,NW,212,18,1,247,0,478,136,1,2026-10-13T22:20Z,overpass-api.de,note 2026-10-13-housing-crtky148.md §2
+yan-nawa,3147456,Yan Nawa,SW,67,31,0,424,0,522,15,0,2026-10-14T13:08:06Z,maps.mail.ru/osm/tools/overpass,sweep 2026-10-14

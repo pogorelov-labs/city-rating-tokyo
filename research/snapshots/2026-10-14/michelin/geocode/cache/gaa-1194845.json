@@ -1,0 +1,12 @@
+{
+ "lat": 13.7427931,
+ "lon": 100.5605006,
+ "display_name": "เขตวัฒนา, กรุงเทพมหานคร, 10110, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 2938036,
+ "type": "administrative",
+ "query": "Vadhana, Bangkok, 10110, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "46/1 Sukhumvit 53, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+ "simplified_query": true
+}

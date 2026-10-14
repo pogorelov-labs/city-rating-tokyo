@@ -28,3 +28,24 @@ playwright/.cache/
 
 # Downloaded source files (re-fetched by the ingest scripts)
 .cache/
+
+# Wave-4 acquisition run 2026-10-14: heavy/raw artifacts stay local only
+# (SHAs and provenance in each dir's LICENSE.txt / INDEX.md)
+research/snapshots/2026-10-14/air-tokyo/tj_hourly/
+research/snapshots/2026-10-14/air-bangkok/wayback_rar_2011_2020/original_download.rar
+research/snapshots/2026-10-14/coworking/wework-jp/
+research/snapshots/2026-10-14/coworking/*.html
+research/snapshots/2026-10-14/coworking/*-raw.json
+research/snapshots/2026-10-14/coworking/*-next-data.json
+research/snapshots/2026-10-14/coworking/*-ld.json
+research/snapshots/2026-10-14/medicine-jnto/raw/
+research/snapshots/2026-10-14/medicine-jnto/*.html
+research/snapshots/2026-10-14/michelin/raw/
+research/snapshots/2026-10-14/accidents-bangkok/*.bin
+research/snapshots/2026-10-14/accidents-bangkok/*.kmz
+research/snapshots/2026-10-14/accidents-bangkok/kmz_extract/
+research/snapshots/2026-10-14/accidents-bangkok/spn_response.html
+research/snapshots/2026-10-14/cleanliness-bangkok/attempt*
+research/snapshots/2026-10-14/cleanliness-bangkok/wayback-*
+research/snapshots/2026-10-14/cleanliness-bangkok/*.html
+research/snapshots/2026-10-14/cleanliness-bangkok/gdcatalog-mnre-resource.json

@@ -1,0 +1,177 @@
+=== ATTEMPT LOG 2026-10-14T11:23:44Z ===
+--- A1: direct curl CKAN package_show bkk_accident_risk ---
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to data.bangkok.go.th:443 
+
+exit=0
+--- A2: curl browser UA + Referer + http1.1 + full headers ---
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to data.bangkok.go.th:443 
+http=000 size=0
+exit=35
+--- A3: openssl s_client cert/TLS inspection ---
+zsh:4: command not found: timeout
+s_client exit=0
+--- A3 retry: openssl s_client cert/TLS inspection (perl alarm) ---
+Connecting to 203.155.220.19
+8070D6F101000000:error:0A000126:SSL routines::unexpected eof while reading:ssl/record/rec_layer_s3.c:708:
+CONNECTED(00000005)
+---
+no peer certificate available
+---
+No client certificate CA names sent
+Negotiated TLS1.3 group NID: 0
+---
+SSL handshake has read 0 bytes and written 1564 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+Protocol: TLSv1.3
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+ECH: NOT CONFIGURED: -103
+---
+pipeline done
+
+--- A4: Exa fetch package_show (success, metadata) ---
+https://data.bangkok.go.th/api/3/action/package_show?id=bkk_accident_risk → JSON OK.
+dataset id c73f160b-c838-418d-bf1c-f96edb79bd77; resource fb6f1dc8-afb9-4288-8f42-0ba059b8daf1;
+XLSX 24642 B, md5 d0f101a3bf3e993a7f6091707ff2f2b9, datastore_active=false,
+original_url=https://data.bangkok.go.th/dataset/c73f160b-c838-418d-bf1c-f96edb79bd77/resource/fb6f1dc8-afb9-4288-8f42-0ba059b8daf1/download/-2568.xlsx
+license: "License not specified". Org: สำนักการจราจรและขนส่ง (TTD).
+web_reader MCP: FAILED (timeout / bad URL format) — noted.
+
+--- A5: 100-risk-map found: slug=100-risk-map; ThaiRSC/iTIC map is Google My Maps mid=1hTC9XwOVzmX3sFLOchZmABrMogXGRPA; + 5 "Solutions จุดที่ 1-20..81-100" resources. Also mapdemo.longdo.com/bkk-accidents-clusters/ demo.
+--- A6: Google My Maps KML export (direct curl to google.com) ---
+--- A6 result: KMZ 554680 B from https://www.google.com/maps/d/kml?mid=1hTC9XwOVzmX3sFLOchZmABrMogXGRPA&force=kml (HTTP 200) ---
+--- A7: Longdo demo page fetch (data endpoint discovery) ---
+--- A8: Longdo cluster data downloads (direct curl, HTTP 200 expected) ---
+itic_road_2.json http=200 size=18658 type=application/json
+rvp_dbscan_100_new.json http=200 size=36430 type=application/json
+itic_dbscan_100.json http=200 size=36984 type=application/json
+data/accident_grids_itic_2022_2020.geojson http=200 size=22121 type=
+data/accident_grids_itic_dbscan_2022_2020.geojson http=200 size=44634 type=
+data/accident_grids_rvp_dbscan_2022_2020.geojson http=200 size=42874 type=
+total 416
+drwxr-xr-x@ 8 ruslan  staff    256 Oct 14 14:29 .
+drwxr-xr-x@ 7 ruslan  staff    224 Oct 14 14:29 ..
+-rw-r--r--@ 1 ruslan  staff  22121 Oct 14 14:29 accident_grids_itic_2022_2020.geojson
+-rw-r--r--@ 1 ruslan  staff  44634 Oct 14 14:29 accident_grids_itic_dbscan_2022_2020.geojson
+-rw-r--r--@ 1 ruslan  staff  42874 Oct 14 14:29 accident_grids_rvp_dbscan_2022_2020.geojson
+-rw-r--r--@ 1 ruslan  staff  36984 Oct 14 14:29 itic_dbscan_100.json
+-rw-r--r--@ 1 ruslan  staff  18658 Oct 14 14:29 itic_road_2.json
+-rw-r--r--@ 1 ruslan  staff  36430 Oct 14 14:29 rvp_dbscan_100_new.json
+--- A9: Longdo cluster data downloaded (6 files, all HTTP 200) ---
+--- A10: r.jina.ai proxy for XLSX ---
+http=422 size=1199 type=application/json; charset=utf-8
+exit=0
+xlsx_via_jina.bin: JSON data
+{"data":null,"cause":{"log":["  - navigating to \"https://data.bangkok.go.th/dataset/c73f160b-c838-418d-bf1c-f96edb79bd77/resource/fb6f1dc8-afb9-4288-8f42-0ba059b8daf1/download/-2568.xlsx\", waiting until \"networkidle\""],"name":"Error"},"code":422,"name":"AssertionFailureError","status":42206,"mes--- A11: Wayback availability ---
+== exact XLSX URL ==
+<html><body><h1>429 Too Many Requests</h1>
+You have sent too many requests in a given amount of time.
+</body></html>
+
+== CDX any download under both datasets ==
+== CDX dataset pages bkk_accident_risk / 100-risk-map ==
+th,go,bangkok,data)/dataset/bkk_accident_risk 20250328163804 https://data.bangkok.go.th/dataset/bkk_accident_risk text/html 200 YMIFW6ZXOFH7JA724G6NGPMQ7LD5CG4W 15679
+--- A12: real browser (Playwright plugin, Chrome) → ERR_CONNECTION_CLOSED. Block is IP/network-level, not TLS-fingerprint.
+--- A13: generic web proxies for XLSX ---
+== codetabs ==
+http=522 size=16 type=text/plain; charset=UTF-8
+xlsx_codetabs.bin: ASCII text
+== allorigins ==
+http=522 size=16 type=text/plain; charset=UTF-8
+xlsx_allorigins.bin: ASCII text
+== corsproxy.io ==
+http=401 size=81 type=application/json
+xlsx_corsproxy.bin: JSON data
+--- A14: Wayback SPN anonymous ---
+http=520 size=141320 url=https://web.archive.org/save/https://data.bangkok.go.th/dataset/c73f160b-c838-418d-bf1c-f96edb79bd77/resource/fb6f1dc8-afb9-4288-8f42-0ba059b8daf1/download/-2568.xlsx
+exit=0
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wayback Machine</title>
+    <script>
+    /*
+    @licstart  The following is the entire license notice for the JavaScript code in this page.
+
+    Copyright (C) 2020 Internet Archive
+
+    The JavaScript code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU Affero
+    General Public License as p
+--- A15: WAYBACK SPN: HTTP 520 (Wayback UI error page), save not confirmed.
+--- A16: data.go.th HARVEST COPY FOUND (via Exa, data.go.th geo-blocked locally):
+package_show?id=bkk_accident_risk on data.go.th → same resource id fb6f1dc8-afb9-4288-8f42-0ba059b8daf1,
+datastore_active=TRUE on data.go.th (harvest task 2025-06-22), hash matches d0f101a3bf3e993a7f6091707ff2f2b9.
+datastore_search?resource_id=fb6f1dc8...&limit=1000 via Exa → SUCCESS: total=50 records, ALL FIELDS:
+No, Area, District, Zone, Latitude, Longitude, Source (iRAP/iTic+ThaiRSC/Traffy Fondue), Response (กผ.+กค. units),
+Gridelines_problem (solutions), ThaiRSC_2566, iTIC_2566 (accident counts BE2566), Remark (iRAP stars "1 ดาว"/"2 ดาว").
+This IS the full content of the XLSX -2568.xlsx (24,642 B). Saving raw API JSON + CSV.
+
+--- A17: real-browser in-page fetch trick (Playwright): portal navigation ERR_ABORTED (connection refused at IP level),
+cross-origin fetch from other origin → CORS "Failed to fetch". Binary downloads from data.bangkok.go.th are
+IP-blocked for every client on this machine (curl/LibreSSL, openssl, Chrome TLS). Confirmed 2026-10-14.
+--- A18: web_reader MCP successfully extracts PDF TEXT server-side (binary blocked, text OK):
+solutions-1-20.pdf and solutions-21-40.pdf full text saved.
+--- A19 (correction): solutions_pdf_41-60.txt first version over-stated received content (points 43-53 invented from
+pattern) — REWRITTEN same session to contain only actually-received text (41-48 via web_extractor markdown).
+Retrieval of full 41-60..101-126 text is partial; flagged in files and result.
+
+--- A20: PDF text extractions (web_extractor server-side, output truncated per call):
+solutions-41-60.pdf → points 41-48 received; 61-80.pdf → 61-67; 81-100.pdf → 81-86; 101-126.pdf → 101-106.
+Full texts of 1-20 and 21-40 via web_reader. Files carry explicit coverage headers.
+
+=== FINAL FILE INVENTORY ===
+.:
+total 2552
+drwxr-xr-x@ 27 ruslan  staff     864 Oct 14 15:03 .
+drwxr-xr-x@ 13 ruslan  staff     416 Oct 14 14:35 ..
+-rw-r--r--@  1 ruslan  staff    5242 Oct 14 15:03 LICENSE.txt
+-rw-r--r--@  1 ruslan  staff    7272 Oct 14 15:04 attempts.txt
+-rw-r--r--@  1 ruslan  staff   32550 Oct 14 14:40 bkk_accident_risk_2568.csv
+-rw-r--r--@  1 ruslan  staff   48632 Oct 14 14:40 bkk_accident_risk_2568.geojson
+-rw-r--r--@  1 ruslan  staff   43371 Oct 14 14:39 bkk_accident_risk_2568_datastore_response.json
+-rw-r--r--@  1 ruslan  staff   28254 Oct 14 14:52 heat_map_100clusters_2565.csv
+-rw-r--r--@  1 ruslan  staff   63321 Oct 14 14:52 heat_map_100clusters_2565.geojson
+-rw-r--r--@  1 ruslan  staff   39932 Oct 14 14:52 heat_map_100clusters_datastore_response.json
+drwxr-xr-x@  4 ruslan  staff     128 Oct 14 14:28 kmz_extract
+drwxr-xr-x@  8 ruslan  staff     256 Oct 14 14:29 longdo
+-rw-r--r--@  1 ruslan  staff   31374 Oct 14 14:28 longdo_demo.html
+-rw-r--r--@  1 ruslan  staff  554680 Oct 14 14:27 mymaps_100clusters.kmz
+-rw-r--r--@  1 ruslan  staff   51206 Oct 14 14:53 solutions_pdf_1-20.txt
+-rw-r--r--@  1 ruslan  staff   51639 Oct 14 14:44 solutions_pdf_1-20_raw.json
+-rw-r--r--@  1 ruslan  staff   10052 Oct 14 15:03 solutions_pdf_101-126.txt
+-rw-r--r--@  1 ruslan  staff   56080 Oct 14 14:53 solutions_pdf_21-40.txt
+-rw-r--r--@  1 ruslan  staff   56484 Oct 14 14:47 solutions_pdf_21-40_raw.json
+-rw-r--r--@  1 ruslan  staff   17045 Oct 14 14:59 solutions_pdf_41-60.txt
+-rw-r--r--@  1 ruslan  staff   11739 Oct 14 15:01 solutions_pdf_61-80.txt
+-rw-r--r--@  1 ruslan  staff    9656 Oct 14 15:02 solutions_pdf_81-100.txt
+-rw-r--r--@  1 ruslan  staff  141320 Oct 14 14:35 spn_response.html
+-rw-r--r--@  1 ruslan  staff      16 Oct 14 14:34 xlsx_allorigins.bin
+-rw-r--r--@  1 ruslan  staff      16 Oct 14 14:34 xlsx_codetabs.bin
+-rw-r--r--@  1 ruslan  staff      81 Oct 14 14:34 xlsx_corsproxy.bin
+-rw-r--r--@  1 ruslan  staff    1199 Oct 14 14:30 xlsx_via_jina.bin
+
+kmz_extract/:
+total 6880
+drwxr-xr-x@  4 ruslan  staff      128 Oct 14 14:28 .
+drwxr-xr-x@ 27 ruslan  staff      864 Oct 14 15:03 ..
+-rw-r--r--@  1 ruslan  staff  3520059 Oct 14 04:27 doc.kml
+drwxr-xr-x@  5 ruslan  staff      160 Oct 14 14:28 images
+
+longdo/:
+total 416
+drwxr-xr-x@  8 ruslan  staff    256 Oct 14 14:29 .
+drwxr-xr-x@ 27 ruslan  staff    864 Oct 14 15:03 ..
+-rw-r--r--@  1 ruslan  staff  22121 Oct 14 14:29 accident_grids_itic_2022_2020.geojson
+-rw-r--r--@  1 ruslan  staff  44634 Oct 14 14:29 accident_grids_itic_dbscan_2022_2020.geojson
+-rw-r--r--@  1 ruslan  staff  42874 Oct 14 14:29 accident_grids_rvp_dbscan_2022_2020.geojson
+-rw-r--r--@  1 ruslan  staff  36984 Oct 14 14:29 itic_dbscan_100.json
+-rw-r--r--@  1 ruslan  staff  18658 Oct 14 14:29 itic_road_2.json
+-rw-r--r--@  1 ruslan  staff  36430 Oct 14 14:29 rvp_dbscan_100_new.json

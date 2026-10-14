@@ -1,0 +1,12 @@
+{
+ "lat": 13.7239499,
+ "lon": 100.5159599,
+ "display_name": "เขตบางรัก, กรุงเทพมหานคร, 10500, ประเทศไทย",
+ "osm_type": "relation",
+ "osm_id": 92061,
+ "type": "administrative",
+ "query": "Bang Rak, Bangkok, 10500, Thailand",
+ "geocoded_at": "2026-10-14",
+ "query_original": "65F, Tower Club at Lebua, 1055 Silom Road, Si Lom, Bang Rak, Bangkok, 10500, Thailand",
+ "simplified_query": true
+}
