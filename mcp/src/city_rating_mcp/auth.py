@@ -50,6 +50,15 @@ def hash_key(plaintext: str) -> str:
     return hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
 
 
+def _coerce_rate(value: Any) -> int:
+    """Malformed rate values (blank / non-numeric junk in NocoDB) must never
+    raise out of refresh() — that would kill the background refresh task."""
+    try:
+        return max(1, int(value))
+    except (TypeError, ValueError):
+        return DEFAULT_RATE_PER_MIN
+
+
 @dataclass
 class KeyRecord:
     key_hash: str
@@ -161,7 +170,7 @@ class KeyStore:
             new_records[kh] = KeyRecord(
                 key_hash=kh,
                 status=(row.get("status") or "pending").strip().lower(),
-                rate_limit_per_min=int(row.get("rate_limit_per_min") or DEFAULT_RATE_PER_MIN),
+                rate_limit_per_min=_coerce_rate(row.get("rate_limit_per_min")),
                 email=row.get("email"),
                 note=row.get("notes"),
             )
@@ -184,8 +193,13 @@ class KeyStore:
 
     async def refresh_loop(self) -> None:
         """Async background task — lives for the server's lifetime."""
-        # Initial blocking attempt so the first request finds a cache.
-        self.refresh()
+        # Initial blocking attempt so the first request finds a cache. Must
+        # not raise: a malformed row here would otherwise kill the task
+        # before the cache is ever set → permanent 503 for every request.
+        try:
+            self.refresh()
+        except Exception:
+            LOG.exception("initial api_keys refresh raised; retrying on timer")
         while True:
             await asyncio.sleep(self.refresh_seconds)
             try:
@@ -197,9 +211,12 @@ class KeyStore:
         if not bearer:
             return False, "missing"
         if not self.configured:
-            # Auth disabled → allow everything. Caller controls this via
-            # MCP_AUTH_REQUIRED in server.py; we never silently bypass.
-            return True, "ok"
+            # Fail CLOSED: an unconfigured store inside an auth-required server
+            # means the deploy is broken (missing NocoDB env). Rejecting with
+            # 503 "unavailable" is the safe default; the only "allow all" path
+            # is MCP_AUTH_REQUIRED=false, where server.py never builds a store
+            # and this method is not called at all.
+            return False, "unavailable"
         if not self._cache_ready.is_set():
             return False, "unavailable"
 
