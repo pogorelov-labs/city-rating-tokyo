@@ -622,7 +622,7 @@ scripts/refresh-ratings.sh --dry-run    # preview without writes
 scripts/refresh-ratings.sh --no-build   # skip build verification
 ```
 
-Safety: the script refuses to run with unrelated dirty files and refuses to push directly to main without `--force-main`. Never uses `--amend` or force push.
+Safety: the script refuses to run without `NOCODB_API_TOKEN`, with unrelated dirty files (untracked `.claude/` tooling such as worktrees and plans is ignored), or when the branch is behind `origin/main` — `compute-ratings.py` writes NocoDB, so a stale checkout would publish old formulas (`--dry-run` only warns). It refuses to push directly to main without `--force-main` and never uses `--amend` or force push.
 
 **Note:** the frontend bakes ratings into static HTML at build time. Re-running scrapers alone does NOT update the live site — you must also run the refresh chain so `demo-ratings.ts` gets rewritten and committed.
 

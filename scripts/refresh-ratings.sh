@@ -12,7 +12,11 @@
 #   scripts/refresh-ratings.sh --no-build   # skip Next.js build verification
 #
 # Safety:
+# - Refuses to run without NOCODB_API_TOKEN (compute and export read NocoDB)
 # - Refuses to run if the working tree has unrelated dirty files
+#   (untracked agent tooling under .claude/ is ignored)
+# - Refuses to run when the branch is behind origin/main: compute-ratings.py
+#   writes NocoDB, so a stale checkout would publish old formulas
 # - Refuses to push to main unless --force-main is passed
 # - Never uses --amend or force push
 #
@@ -36,7 +40,7 @@ for arg in "$@"; do
         --no-build) DO_BUILD=0 ;;
         --force-main) FORCE_MAIN=1 ;;
         -h|--help)
-            sed -n '3,17p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
+            sed -n '3,/^$/p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
             exit 0
             ;;
         *)
@@ -63,6 +67,9 @@ command -v python3 >/dev/null || die "python3 not found"
 python3 -c "import requests" 2>/dev/null || die "python3 'requests' module not installed"
 ok "python3 + requests available"
 
+[[ -n "${NOCODB_API_TOKEN:-}" ]] || die "NOCODB_API_TOKEN is not set — export it first (compute and export read NocoDB, --dry-run too)"
+ok "NOCODB_API_TOKEN set"
+
 [[ -f scripts/compute-ratings.py ]] || die "scripts/compute-ratings.py not found"
 [[ -f scripts/export-ratings.py ]] || die "scripts/export-ratings.py not found"
 ok "pipeline scripts found"
@@ -74,8 +81,10 @@ if [[ "$CURRENT_BRANCH" == "main" && "$PUSH" == 1 && "$FORCE_MAIN" != 1 ]]; then
     die "refusing to push directly to main — use a feature branch or pass --force-main"
 fi
 
-# Check that the working tree has only the allowed dirty files (demo-ratings.ts)
-DIRTY="$(git status --porcelain 2>/dev/null | grep -v '^?? \.claude/worktrees/' | awk '{print $2}' || true)"
+# Check that the working tree has only the allowed dirty files (demo-ratings.ts).
+# Untracked files under .claude/ (worktrees, plans, launch.json) are agent tooling:
+# nothing below reads them, and the commit only adds demo-ratings.ts.
+DIRTY="$(git status --porcelain 2>/dev/null | grep -v '^?? \.claude/' | awk '{print $2}' || true)"
 ALLOWED_DIRTY="app/src/data/demo-ratings.ts"
 for f in $DIRTY; do
     if [[ "$f" != "$ALLOWED_DIRTY" ]]; then
@@ -83,6 +92,21 @@ for f in $DIRTY; do
     fi
 done
 ok "working tree clean (or only demo-ratings.ts modified)"
+
+# compute-ratings.py writes NocoDB and the export is baked into the site, so the
+# pipeline code must be current main — a stale checkout publishes old formulas.
+if git fetch --quiet origin main 2>/dev/null; then
+    BEHIND="$(git rev-list --count HEAD..origin/main)"
+    if [[ "$BEHIND" == 0 ]]; then
+        ok "up to date with origin/main"
+    elif [[ "$DRY_RUN" == 1 ]]; then
+        warn "$BEHIND commit(s) behind origin/main — fine for a dry run, merge main before the real one"
+    else
+        die "$BEHIND commit(s) behind origin/main — run 'git merge origin/main' first"
+    fi
+else
+    warn "could not fetch origin/main — skipping the up-to-date check"
+fi
 
 # ---- 2. Compute ----
 step "Running compute-ratings.py$([[ $DRY_RUN == 1 ]] && echo ' (dry-run)')"
