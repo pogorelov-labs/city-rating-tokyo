@@ -380,7 +380,9 @@
     "sourceMedicine": "JNTO 外国人患者受入れ医療機関ガイド",
     "floodDepth": "想定浸水深：{depth}m",
     "floodDepthTooltip": "想定最大規模 scenarioでの浸水深度（東京都浸水予想区域図）。",
-    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)"
+    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)",
+    "michelin": "ミシュラン近く",
+    "michelinTooltip": "ミシュランガイド2026の星付き・ビブグルマン店舗（800m以内）。"
   },
   "seismicTiers": {
     "low": {
