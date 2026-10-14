@@ -371,7 +371,16 @@
       "label": "編集評価",
       "tooltip": "この駅の評価は、スクレイピングしたデータのみならず、研究者の定性的評価に基づいて設定されています。"
     },
-    "mapsTooltip": "Googleマップで開く"
+    "mapsTooltip": "Googleマップで開く",
+    "embassies": "800m以内に大使館{count}件",
+    "embassiesTooltip": "この駅の徒歩圏内にある大使館・外交機関の数。",
+    "sourceEmbassies": "OSM・Wikidata (ODbL / CC0)",
+    "englishMedicine": "2km以内に英語対応医療機関{count}件",
+    "englishMedicineTooltip": "JNTOガイドに掲載されている英語対応医療機関。",
+    "sourceMedicine": "JNTO 外国人患者受入れ医療機関ガイド",
+    "floodDepth": "想定浸水深：{depth}m",
+    "floodDepthTooltip": "想定最大規模 scenarioでの浸水深度（東京都浸水予想区域図）。",
+    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)"
   },
   "seismicTiers": {
     "low": {

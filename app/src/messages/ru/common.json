@@ -371,7 +371,16 @@
       "label": "Кураторская",
       "tooltip": "Оценки этой станции заданы исследователем на основе качественной оценки, а не только собранных данных."
     },
-    "mapsTooltip": "Открыть в Google Maps"
+    "mapsTooltip": "Открыть в Google Maps",
+    "embassies": "{count, plural, one {# посольство} other {# посольств}} в 800 м",
+    "embassiesTooltip": "Посольства и дипломатические представительства в пешей доступности от станции.",
+    "sourceEmbassies": "OSM · Wikidata (ODbL / CC0)",
+    "englishMedicine": "{count, plural, one {# англоязычная клиника} other {# англоязычных клиник}} в 2 км",
+    "englishMedicineTooltip": "Медицинские учреждения из справочника JNTO с англоязычным обслуживанием.",
+    "sourceMedicine": "JNTO Guide for when you are feeling ill",
+    "floodDepth": "Ожидаемая глубина затопления: {depth} м",
+    "floodDepthTooltip": "Максимальная глубина затопления по модели TMG (максимальный сценарий).",
+    "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)"
   },
   "seismicTiers": {
     "low": {
