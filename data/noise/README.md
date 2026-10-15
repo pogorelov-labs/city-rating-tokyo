@@ -60,7 +60,12 @@ gzip (~10.5 MB combined), allowing a clean checkout to rebuild without Overpass.
 - **TMG Statistical Yearbook 19-11, CC BY 4.0.** Committed 2022/2023/2024
   edition CSVs supply the corresponding fiscal year's municipality totals.
   They are contextual complaint counts, **not calibration inputs or levels**.
-  Suppressed/non-numeric values stay absent. No cross-prefecture ward-name join.
+  Suppressed/non-numeric values stay absent. Joins require the canonical station
+  prefecture code `13` (Tokyo), no conflicting ward-map prefecture, and an exact
+  `city_name` municipality match. Tokyo special wards are municipalities here;
+  the map's `ward_name` may be a smaller district and is not used for this join.
+  Missing or outside-Tokyo identities are omitted, including names shared with
+  Chiba, Saitama or Sagamihara wards.
 - **PCD, catalog metadata only.** `pcd_resources_index.json` and its source
   `pcd_ckan_package_show.json` identify station/annual CSVs; the underlying files
   are absent. The station CSV retry on 2026-10-15 timed out in TLS handshake.

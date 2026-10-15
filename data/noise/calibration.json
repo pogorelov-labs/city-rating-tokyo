@@ -352,7 +352,7 @@
     },
     {
       "path": "scripts/noise/build.py",
-      "sha256": "195d2f62f215ae595b21a771ddbd1fcc5c169a0b8b546086dd93be6ddd46f387"
+      "sha256": "f13d57a1af2e8298feb1ac75b9853c4ad7498fb8a563e56f5b78b6929e85c9b7"
     },
     {
       "path": "scripts/noise/fetch.py",

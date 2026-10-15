@@ -125,23 +125,6 @@
         "nightlife_800m": 47,
         "arterial_distance_m": 326.5,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "ikebukuro": {
@@ -268,6 +251,23 @@
         "nightlife_800m": 146,
         "arterial_distance_m": 453.0,
         "expressway_distance_m": 1126.6
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "musashi-kosugi": {
@@ -1062,6 +1062,23 @@
         "nightlife_800m": 25,
         "arterial_distance_m": 21.6,
         "expressway_distance_m": 311.5
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "mitaka": {
@@ -1249,6 +1266,23 @@
         "nightlife_800m": 27,
         "arterial_distance_m": 36.4,
         "expressway_distance_m": 117.5
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "oshiage-sukaitsurii-mae": {
@@ -1497,6 +1531,23 @@
         "nightlife_800m": 129,
         "arterial_distance_m": 0.6,
         "expressway_distance_m": 649.5
+      },
+      "complaints": {
+        "municipality": "中央区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 192
+          },
+          {
+            "year": 2023,
+            "count": 122
+          },
+          {
+            "year": 2024,
+            "count": 128
+          }
+        ]
       }
     },
     "chikatetsu-akatsuka": {
@@ -1653,6 +1704,23 @@
         "nightlife_800m": 33,
         "arterial_distance_m": 37.6,
         "expressway_distance_m": 318.1
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "hamamatsucho": {
@@ -2571,6 +2639,23 @@
         "nightlife_800m": 7,
         "arterial_distance_m": 603.9,
         "expressway_distance_m": 1069.0
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "oji": {
@@ -2650,23 +2735,6 @@
         "nightlife_800m": 12,
         "arterial_distance_m": 65.5,
         "expressway_distance_m": 55.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "shin-matsudo": {
@@ -2729,6 +2797,23 @@
         "nightlife_800m": 4,
         "arterial_distance_m": 24.8,
         "expressway_distance_m": 32.8
+      },
+      "complaints": {
+        "municipality": "江東区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 123
+          },
+          {
+            "year": 2023,
+            "count": 26
+          },
+          {
+            "year": 2024,
+            "count": 39
+          }
+        ]
       }
     },
     "shonandai": {
@@ -2759,23 +2844,6 @@
         "nightlife_800m": 7,
         "arterial_distance_m": 402.9,
         "expressway_distance_m": 1370.8
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "takadanobaba": {
@@ -3057,6 +3125,23 @@
         "nightlife_800m": 96,
         "arterial_distance_m": 542.9,
         "expressway_distance_m": 2000.0
+      },
+      "complaints": {
+        "municipality": "杉並区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 136
+          },
+          {
+            "year": 2023,
+            "count": 36
+          },
+          {
+            "year": 2024,
+            "count": 62
+          }
+        ]
       }
     },
     "asakusabashi": {
@@ -3291,23 +3376,6 @@
         "nightlife_800m": 3,
         "arterial_distance_m": 441.3,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "chiba-nyutaun-chuo": {
@@ -3338,23 +3406,6 @@
         "nightlife_800m": 68,
         "arterial_distance_m": 326.7,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "chofu": {
@@ -3778,6 +3829,23 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 171.9,
         "expressway_distance_m": 1916.7
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "hatchobori": {
@@ -4185,23 +4253,6 @@
         "nightlife_800m": 17,
         "arterial_distance_m": 120.3,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "hongo-sanchome": {
@@ -4558,6 +4609,23 @@
         "nightlife_800m": 70,
         "arterial_distance_m": 3.8,
         "expressway_distance_m": 149.2
+      },
+      "complaints": {
+        "municipality": "中央区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 192
+          },
+          {
+            "year": 2023,
+            "count": 122
+          },
+          {
+            "year": 2024,
+            "count": 128
+          }
+        ]
       }
     },
     "kazusanakano": {
@@ -4840,6 +4908,23 @@
         "nightlife_800m": 97,
         "arterial_distance_m": 447.6,
         "expressway_distance_m": 2000.0
+      },
+      "complaints": {
+        "municipality": "杉並区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 136
+          },
+          {
+            "year": 2023,
+            "count": 36
+          },
+          {
+            "year": 2024,
+            "count": 62
+          }
+        ]
       }
     },
     "kokkai-gijidomae": {
@@ -5522,6 +5607,23 @@
         "nightlife_800m": 15,
         "arterial_distance_m": 5.1,
         "expressway_distance_m": 4.1
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "nakameguro": {
@@ -5583,6 +5685,23 @@
         "nightlife_800m": 12,
         "arterial_distance_m": 102.5,
         "expressway_distance_m": 1329.3
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "nakayama": {
@@ -5658,6 +5777,23 @@
         "nightlife_800m": 43,
         "arterial_distance_m": 333.6,
         "expressway_distance_m": 373.6
+      },
+      "complaints": {
+        "municipality": "中央区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 192
+          },
+          {
+            "year": 2023,
+            "count": 122
+          },
+          {
+            "year": 2024,
+            "count": 128
+          }
+        ]
       }
     },
     "nishi-hachioji": {
@@ -5737,6 +5873,23 @@
         "nightlife_800m": 2,
         "arterial_distance_m": 781.1,
         "expressway_distance_m": 1746.1
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "nishi-tokorozawa": {
@@ -7042,6 +7195,23 @@
         "nightlife_800m": 140,
         "arterial_distance_m": 118.5,
         "expressway_distance_m": 753.6
+      },
+      "complaints": {
+        "municipality": "港区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 152
+          },
+          {
+            "year": 2023,
+            "count": 244
+          },
+          {
+            "year": 2024,
+            "count": 185
+          }
+        ]
       }
     },
     "tamagawajosui": {
@@ -7196,6 +7366,23 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 11.7,
         "expressway_distance_m": 19.8
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "togoshi-ginza": {
@@ -7211,6 +7398,23 @@
         "nightlife_800m": 15,
         "arterial_distance_m": 175.0,
         "expressway_distance_m": 260.1
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "tokorozawa": {
@@ -7474,6 +7678,23 @@
         "nightlife_800m": 50,
         "arterial_distance_m": 224.4,
         "expressway_distance_m": 571.8
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "ware-no": {
@@ -8126,6 +8347,23 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 696.4,
         "expressway_distance_m": 223.9
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "aomono-yokocho": {
@@ -8155,6 +8393,23 @@
         "nightlife_800m": 11,
         "arterial_distance_m": 33.1,
         "expressway_distance_m": 694.0
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "arai-kusurishi-mae": {
@@ -8712,23 +8967,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 80.3,
         "expressway_distance_m": 1827.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "bando-hashi": {
@@ -8909,23 +9147,6 @@
         "nightlife_800m": 16,
         "arterial_distance_m": 29.1,
         "expressway_distance_m": 1503.7
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "chiba-tera": {
@@ -8941,23 +9162,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 451.8,
         "expressway_distance_m": 1240.8
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "chichibu": {
@@ -9391,23 +9595,6 @@
         "nightlife_800m": 2,
         "arterial_distance_m": 188.8,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "dobutsu-koen": {
@@ -9532,6 +9719,23 @@
         "nightlife_800m": 11,
         "arterial_distance_m": 495.0,
         "expressway_distance_m": 1713.9
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "ehara-nakanobe": {
@@ -9547,6 +9751,23 @@
         "nightlife_800m": 14,
         "arterial_distance_m": 214.6,
         "expressway_distance_m": 904.2
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "eifuku-machi": {
@@ -9702,23 +9923,6 @@
         "nightlife_800m": 21,
         "arterial_distance_m": 257.9,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "fuchu": {
@@ -9830,6 +10034,23 @@
         "nightlife_800m": 24,
         "arterial_distance_m": 42.8,
         "expressway_distance_m": 39.4
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "fuji-fuirumu-mae": {
@@ -10909,6 +11130,23 @@
         "nightlife_800m": 22,
         "arterial_distance_m": 276.8,
         "expressway_distance_m": 102.4
+      },
+      "complaints": {
+        "municipality": "中央区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 192
+          },
+          {
+            "year": 2023,
+            "count": 122
+          },
+          {
+            "year": 2024,
+            "count": 128
+          }
+        ]
       }
     },
     "hamadayama": {
@@ -10971,23 +11209,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 252.5,
         "expressway_distance_m": 722.4
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "hamura": {
@@ -11572,6 +11793,23 @@
         "nightlife_800m": 21,
         "arterial_distance_m": 18.7,
         "expressway_distance_m": 2000.0
+      },
+      "complaints": {
+        "municipality": "杉並区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 136
+          },
+          {
+            "year": 2023,
+            "count": 36
+          },
+          {
+            "year": 2024,
+            "count": 62
+          }
+        ]
       }
     },
     "higashi-koganei": {
@@ -11696,23 +11934,6 @@
         "nightlife_800m": 22,
         "arterial_distance_m": 28.5,
         "expressway_distance_m": 1544.9
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "higashifushimi": {
@@ -12812,6 +13033,23 @@
         "nightlife_800m": 39,
         "arterial_distance_m": 25.0,
         "expressway_distance_m": 420.1
+      },
+      "complaints": {
+        "municipality": "墨田区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 41
+          },
+          {
+            "year": 2023,
+            "count": 185
+          },
+          {
+            "year": 2024,
+            "count": 239
+          }
+        ]
       }
     },
     "honjo": {
@@ -12872,6 +13110,23 @@
         "nightlife_800m": 8,
         "arterial_distance_m": 229.8,
         "expressway_distance_m": 81.9
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "horikiri-shobuen": {
@@ -13289,23 +13544,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 92.8,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "ina-chuo": {
@@ -13829,6 +14067,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 368.6,
         "expressway_distance_m": 373.7
+      },
+      "complaints": {
+        "municipality": "板橋区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 158
+          },
+          {
+            "year": 2023,
+            "count": 144
+          },
+          {
+            "year": 2024,
+            "count": 133
+          }
+        ]
       }
     },
     "itabashihoncho": {
@@ -13876,6 +14131,23 @@
         "nightlife_800m": 12,
         "arterial_distance_m": 1.3,
         "expressway_distance_m": 6.7
+      },
+      "complaints": {
+        "municipality": "板橋区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 158
+          },
+          {
+            "year": 2023,
+            "count": 144
+          },
+          {
+            "year": 2024,
+            "count": 133
+          }
+        ]
       }
     },
     "itsumi": {
@@ -14720,6 +14992,23 @@
         "nightlife_800m": 3,
         "arterial_distance_m": 304.0,
         "expressway_distance_m": 1377.1
+      },
+      "complaints": {
+        "municipality": "板橋区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 158
+          },
+          {
+            "year": 2023,
+            "count": 144
+          },
+          {
+            "year": 2024,
+            "count": 133
+          }
+        ]
       }
     },
     "kamiizumi": {
@@ -14955,23 +15244,6 @@
         "nightlife_800m": 2,
         "arterial_distance_m": 25.3,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "kamoi": {
@@ -16394,23 +16666,6 @@
         "nightlife_800m": 47,
         "arterial_distance_m": 86.8,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "kenritsudai-gaku": {
@@ -16488,6 +16743,23 @@
         "nightlife_800m": 43,
         "arterial_distance_m": 1.6,
         "expressway_distance_m": 464.3
+      },
+      "complaints": {
+        "municipality": "墨田区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 41
+          },
+          {
+            "year": 2023,
+            "count": 185
+          },
+          {
+            "year": 2024,
+            "count": 239
+          }
+        ]
       }
     },
     "kimitsu": {
@@ -16595,6 +16867,23 @@
         "nightlife_800m": 8,
         "arterial_distance_m": 29.9,
         "expressway_distance_m": 556.8
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "kita-fuchu": {
@@ -16778,6 +17067,23 @@
         "nightlife_800m": 28,
         "arterial_distance_m": 36.4,
         "expressway_distance_m": 647.7
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "kita-yono": {
@@ -16793,23 +17099,6 @@
         "nightlife_800m": 13,
         "arterial_distance_m": 25.0,
         "expressway_distance_m": 355.7
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "kitado-ta": {
@@ -19701,23 +19990,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 307.2,
         "expressway_distance_m": 949.5
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "minamifunabashi": {
@@ -19949,6 +20221,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 4.4,
         "expressway_distance_m": 987.3
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "misaki": {
@@ -20197,23 +20486,6 @@
         "nightlife_800m": 3,
         "arterial_distance_m": 350.1,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "miyamaedaira": {
@@ -20645,6 +20917,23 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 665.8,
         "expressway_distance_m": 1015.0
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "musashi-masuto": {
@@ -21692,23 +21981,6 @@
         "nightlife_800m": 3,
         "arterial_distance_m": 329.3,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "nansan-hara": {
@@ -22066,23 +22338,6 @@
         "nightlife_800m": 7,
         "arterial_distance_m": 643.1,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "nishi-chofu": {
@@ -22288,23 +22543,6 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 247.7,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "nishi-ohara": {
@@ -22411,6 +22649,23 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 798.5,
         "expressway_distance_m": 1557.3
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "nishi-shinjuku": {
@@ -22643,6 +22898,23 @@
         "nightlife_800m": 26,
         "arterial_distance_m": 4.0,
         "expressway_distance_m": 1638.6
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "nishiarai-taishi-nishi": {
@@ -22937,23 +23209,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 817.7,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "nitta": {
@@ -23325,6 +23580,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 0.4,
         "expressway_distance_m": 732.1
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "oda-sakae": {
@@ -23681,6 +23953,23 @@
         "nightlife_800m": 14,
         "arterial_distance_m": 2.6,
         "expressway_distance_m": 1151.0
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "omori": {
@@ -24005,6 +24294,23 @@
         "nightlife_800m": 81,
         "arterial_distance_m": 305.4,
         "expressway_distance_m": 1285.3
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "okurayama": {
@@ -24065,23 +24371,6 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 73.8,
         "expressway_distance_m": 86.7
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "omori-kaigan": {
@@ -24191,6 +24480,23 @@
         "nightlife_800m": 41,
         "arterial_distance_m": 81.0,
         "expressway_distance_m": 77.1
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "ojima": {
@@ -24921,23 +25227,6 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 648.0,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "sagamiko": {
@@ -26169,6 +26458,23 @@
         "nightlife_800m": 9,
         "arterial_distance_m": 65.1,
         "expressway_distance_m": 1712.4
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "sensoku": {
@@ -26965,6 +27271,23 @@
         "nightlife_800m": 22,
         "arterial_distance_m": 93.2,
         "expressway_distance_m": 646.2
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "shimosa-kanzaki": {
@@ -27119,6 +27442,23 @@
         "nightlife_800m": 8,
         "arterial_distance_m": 7.8,
         "expressway_distance_m": 1.4
+      },
+      "complaints": {
+        "municipality": "板橋区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 158
+          },
+          {
+            "year": 2023,
+            "count": 144
+          },
+          {
+            "year": 2024,
+            "count": 133
+          }
+        ]
       }
     },
     "shin-urayasu": {
@@ -27181,23 +27521,6 @@
         "nightlife_800m": 13,
         "arterial_distance_m": 205.1,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "shin-egota": {
@@ -27336,6 +27659,23 @@
         "nightlife_800m": 50,
         "arterial_distance_m": 13.4,
         "expressway_distance_m": 2000.0
+      },
+      "complaints": {
+        "municipality": "杉並区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 136
+          },
+          {
+            "year": 2023,
+            "count": 36
+          },
+          {
+            "year": 2024,
+            "count": 62
+          }
+        ]
       }
     },
     "shin-koganei": {
@@ -27476,6 +27816,23 @@
         "nightlife_800m": 119,
         "arterial_distance_m": 306.7,
         "expressway_distance_m": 1551.4
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "shin-otsuka": {
@@ -27742,6 +28099,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 122.7,
         "expressway_distance_m": 92.5
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "shinanocho": {
@@ -27803,6 +28177,23 @@
         "nightlife_800m": 8,
         "arterial_distance_m": 30.5,
         "expressway_distance_m": 147.9
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "shindai-tsu": {
@@ -28433,6 +28824,23 @@
         "nightlife_800m": 0,
         "arterial_distance_m": 1034.7,
         "expressway_distance_m": 1186.9
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "shita-nagatani": {
@@ -28510,23 +28918,6 @@
         "nightlife_800m": 5,
         "arterial_distance_m": 83.7,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "shizu": {
@@ -29001,6 +29392,23 @@
         "nightlife_800m": 32,
         "arterial_distance_m": 144.7,
         "expressway_distance_m": 140.0
+      },
+      "complaints": {
+        "municipality": "中央区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 192
+          },
+          {
+            "year": 2023,
+            "count": 122
+          },
+          {
+            "year": 2024,
+            "count": 128
+          }
+        ]
       }
     },
     "sunagawa-shichi-ban": {
@@ -29718,6 +30126,23 @@
         "nightlife_800m": 17,
         "arterial_distance_m": 1035.5,
         "expressway_distance_m": 2000.0
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "takeoka": {
@@ -30543,6 +30968,23 @@
         "nightlife_800m": 3,
         "arterial_distance_m": 259.6,
         "expressway_distance_m": 1306.6
+      },
+      "complaints": {
+        "municipality": "板橋区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 158
+          },
+          {
+            "year": 2023,
+            "count": 144
+          },
+          {
+            "year": 2024,
+            "count": 133
+          }
+        ]
       }
     },
     "tokiwadaira": {
@@ -30573,6 +31015,23 @@
         "nightlife_800m": 11,
         "arterial_distance_m": 329.8,
         "expressway_distance_m": 901.4
+      },
+      "complaints": {
+        "municipality": "品川区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 60
+          },
+          {
+            "year": 2023,
+            "count": 99
+          },
+          {
+            "year": 2024,
+            "count": 115
+          }
+        ]
       }
     },
     "tomi-mizu": {
@@ -30618,6 +31077,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 5.5,
         "expressway_distance_m": 946.6
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "toneri-koen": {
@@ -30633,6 +31109,23 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 7.7,
         "expressway_distance_m": 805.2
+      },
+      "complaints": {
+        "municipality": "足立区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 154
+          },
+          {
+            "year": 2023,
+            "count": 259
+          },
+          {
+            "year": 2024,
+            "count": 243
+          }
+        ]
       }
     },
     "tokaichiba": {
@@ -30945,23 +31438,6 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 457.5,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "tohaku-raku": {
@@ -32207,6 +32683,23 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 97.5,
         "expressway_distance_m": 1151.7
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "ushihama": {
@@ -32254,23 +32747,6 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 48.7,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "wa-ko": {
@@ -32547,23 +33023,6 @@
         "nightlife_800m": 6,
         "arterial_distance_m": 583.8,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "yachimata": {
@@ -33224,23 +33683,6 @@
         "nightlife_800m": 4,
         "arterial_distance_m": 589.3,
         "expressway_distance_m": 785.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "yoshi-kawa-koen": {
@@ -33256,23 +33698,6 @@
         "nightlife_800m": 68,
         "arterial_distance_m": 141.3,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "中央区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 192
-          },
-          {
-            "year": 2023,
-            "count": 122
-          },
-          {
-            "year": 2024,
-            "count": 128
-          }
-        ]
       }
     },
     "yoshikawa": {
@@ -33318,23 +33743,6 @@
         "nightlife_800m": 1,
         "arterial_distance_m": 64.2,
         "expressway_distance_m": 2000.0
-      },
-      "complaints": {
-        "municipality": "北区",
-        "series": [
-          {
-            "year": 2022,
-            "count": 56
-          },
-          {
-            "year": 2023,
-            "count": 111
-          },
-          {
-            "year": 2024,
-            "count": 85
-          }
-        ]
       }
     },
     "yoshinocho": {
@@ -33365,6 +33773,23 @@
         "nightlife_800m": 58,
         "arterial_distance_m": 4.5,
         "expressway_distance_m": 881.6
+      },
+      "complaints": {
+        "municipality": "新宿区",
+        "series": [
+          {
+            "year": 2022,
+            "count": 13
+          },
+          {
+            "year": 2023,
+            "count": 105
+          },
+          {
+            "year": 2024,
+            "count": 106
+          }
+        ]
       }
     },
     "yodo": {

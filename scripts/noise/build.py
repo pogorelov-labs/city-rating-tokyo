@@ -279,8 +279,14 @@ def build():
                                             | {'distance_m': round(distance), 'coordinate_year': 2013,
                                                'source_url': 'https://www.kankyo.metro.tokyo.lg.jp/vehicle/noise/result/cyousakekka/reiwa5'})
                 ward = wards.get(slug, {})
-                municipality = ward.get('ward_name') or ward.get('city_name')
-                if municipality in complaint_data:
+                # The station catalogue spans four prefectures. Chuo/Kita ward
+                # names also occur outside Tokyo; require Tokyo's prefecture code.
+                # Within Tokyo, city_name identifies the municipality (including
+                # special wards); ward_name can instead be a submunicipal district.
+                municipality = ward.get('city_name')
+                if (station.get('prefecture') == '13'
+                        and ward.get('prefecture_name', '') in ('', '東京都')
+                        and municipality in complaint_data):
                     entry['complaints'] = {'municipality': municipality, 'series': complaint_data[municipality]}
             output[city][slug] = entry
     paths = sorted([*SNAP.glob('tmg_r*_jouji_monitoring.csv'), *SNAP.glob('yearbook1911_*.csv'),

@@ -117,6 +117,23 @@ def test_complaints_are_municipal_context(rebuilt):
     assert 'complaints' not in output['tokyo']['yokohama']
 
 
+def test_complaints_require_tokyo_municipality_identity(rebuilt):
+    output, _, _ = rebuilt
+    wards = noise.read_json(ROOT/'app/src/data/ward-data.json')
+    # These names collide with Tokyo municipalities in the same yearbook.
+    for slug in ['chiba', 'saitama-shintoshin', 'sagamihara', 'doro']:
+        assert wards[slug]['ward_name'] in ('中央区', '北区')
+        assert 'complaints' not in output['tokyo'][slug]
+    for station in noise.read_json(ROOT/'data/stations.json'):
+        if station['prefecture'] != '13':
+            assert 'complaints' not in output['tokyo'][station['slug']]
+    # Keep Tokyo's true municipality, even when ward_name is a smaller district.
+    assert output['tokyo']['oji']['complaints']['municipality'] == '北区'
+    assert output['tokyo']['ningyocho']['complaints'] == {
+        'municipality': '中央区', 'series': [
+            {'year': 2022, 'count': 192}, {'year': 2023, 'count': 122}, {'year': 2024, 'count': 128}]}
+
+
 def test_outputs_reproduce_offline_and_inputs_are_hashed(rebuilt):
     output, report, matched = rebuilt
     for path, doc in [
