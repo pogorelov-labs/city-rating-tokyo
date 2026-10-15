@@ -306,6 +306,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const filters = useCityState((s) => s.filters);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
   const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
   const { setLevel, setSelectedStation, setHoveredStation, addCompareStation, removeCompareStation } = useCityActions();
 
   const selection = selected ? parseAreaKey(selected) : null;
@@ -345,9 +346,9 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const passing = useMemo(
     () =>
       new Set(
-        applyDealbreakers(scored, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters).map((d) => d.slug),
+        applyDealbreakers(scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((d) => d.slug),
       ),
-    [scored, filters, hideFloodRisk, hideHighSeismic, city],
+    [scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
   );
   const bySlug = useMemo(() => new Map(scored.map((d) => [d.slug, d])), [scored]);
 
@@ -364,9 +365,9 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const areaPassing = useMemo(
     () =>
       new Set(
-        applyDealbreakers(scoredAreas, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters).map((a) => a.slug),
+        applyDealbreakers(scoredAreas, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((a) => a.slug),
       ),
-    [scoredAreas, filters, hideFloodRisk, hideHighSeismic, city],
+    [scoredAreas, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
   );
   const areaByKey = useMemo(() => new Map(scoredAreas.map((a) => [a.slug, a])), [scoredAreas]);
 
@@ -622,7 +623,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
               const isSel = d.slug === selected;
               const isHov = d.slug === hovered;
               const fill = pass ? colorFor(d, anchors) : FILTERED_FILL;
-              const reasons = pass ? [] : dealbreakerReasons(d, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters);
+              const reasons = pass ? [] : dealbreakerReasons(d, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters);
               const names = stationDisplayName(d, locale);
               return (
                 <Polygon
@@ -711,7 +712,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
             heatmapMode={heatmapMode}
             isTouch={isTouch}
             reasonsFor={(a) =>
-              dealbreakerReasons(a, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters).map((r) => reasonText(t, r))
+              dealbreakerReasons(a, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((r) => reasonText(t, r))
             }
             lineChip={lineChip}
             districtName={districtName}

@@ -24,6 +24,9 @@ export interface CityScopedState {
   compareStations: string[];
   hideFloodRisk: boolean;
   hideHighSeismic: boolean;
+  /** Family filter (CRTKY-192): hide areas inside an adult_entertainment
+   *  zone. club_district / afterwork_drinking never trigger it. */
+  hideAdultZones: boolean;
 }
 
 export type CityPatch =
@@ -72,6 +75,7 @@ export function initialCityState(city: CityId): CityScopedState {
     compareStations: [],
     hideFloodRisk: false,
     hideHighSeismic: false,
+    hideAdultZones: false,
   };
 }
 
@@ -141,6 +145,7 @@ export interface CityActions {
   setHoveredStation: (slug: string | null) => void;
   setHideFloodRisk: (v: boolean) => void;
   setHideHighSeismic: (v: boolean) => void;
+  setHideAdultZones: (v: boolean) => void;
   addCompareStation: (slug: string) => void;
   removeCompareStation: (slug: string) => void;
   clearCompareStations: () => void;
@@ -177,6 +182,7 @@ export function getCityActions(city: CityId): CityActions {
       up((s) => (s.hoveredStation === hoveredStation ? {} : { hoveredStation })),
     setHideFloodRisk: (hideFloodRisk) => up({ hideFloodRisk }),
     setHideHighSeismic: (hideHighSeismic) => up({ hideHighSeismic }),
+    setHideAdultZones: (hideAdultZones) => up({ hideAdultZones }),
     addCompareStation: (slug) =>
       up((s) =>
         s.compareStations.length >= MAX_COMPARE || s.compareStations.includes(slug)

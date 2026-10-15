@@ -1,4 +1,5 @@
 import districtsData from '@/data/bangkok/districts.json';
+import zoneFlagsData from '@/data/entertainment/bangkok-area-flags.json';
 import railData from '@/data/bangkok/rail.json';
 import stationAreasData from '@/data/bangkok/stations.json';
 import type { District, MapStation, RailLine, RailStation, StationArea } from './types';
@@ -18,6 +19,12 @@ import { stationAreaKey } from './area-key';
 export type RailLineWithPaths = RailLine & { paths: [number, number][][] };
 
 const districts = (districtsData as unknown as { districts: District[] }).districts;
+const zoneFlags = zoneFlagsData as unknown as {
+  areas: Record<string, { id: string; kind: string }[]>;
+  districts: Record<string, { id: string; kind: string }[]>;
+};
+const inAdultZone = (hits: { kind: string }[] | undefined) =>
+  hits?.some((h) => h.kind === 'adult_entertainment') === true;
 const districtBySlug = new Map(districts.map((d) => [d.slug, d]));
 const rail = railData as unknown as { lines: RailLineWithPaths[]; stations: RailStation[] };
 const stationById = new Map(rail.stations.map((s) => [s.id, s]));
@@ -81,6 +88,7 @@ export function getBangkokMapDistricts(): MapStation[] {
     elevation_m: null,
     seismic_risk_tier: null,
     flood_exposed: d.flood?.exposed === true,
+    ...(inAdultZone(zoneFlags.districts[d.slug]) && { adult_zone: true }),
   }));
   return mapCache;
 }
@@ -145,6 +153,7 @@ export function getBangkokMapStationAreas(): MapStation[] {
     elevation_m: null,
     seismic_risk_tier: null,
     flood_exposed: districtBySlug.get(a.district)?.flood?.exposed === true,
+    ...(inAdultZone(zoneFlags.areas[a.id]) && { adult_zone: true }),
   }));
   return areaMapCache;
 }

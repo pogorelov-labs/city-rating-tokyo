@@ -203,7 +203,8 @@
     "bestSpotsHint": "重みと条件に対してスコアが最も高い市街地メッシュ（互いに1.5km以上離れた地点）。",
     "relativeScoresNoteStationArea": "スコアはバンコクの駅エリア（最寄り駅から徒歩800m以内）の中での相対評価です。家賃と治安は区の推定値です。",
     "relativeScoresNoteGrid": "メッシュのスコアは、バンコクの住民が暮らす場所に対する相対評価（居住者で重み付けしたパーセンタイル）です。家賃と治安は区の推定値です。",
-    "floodReported": "（2021–2026年報告）"
+    "floodReported": "（2021–2026年報告）",
+    "hideAdultZones": "ファミリー向け：歓楽街エリアを非表示"
   },
   "map": {
     "clickForDetails": "詳細を見る →",

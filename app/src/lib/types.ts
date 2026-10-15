@@ -113,6 +113,8 @@ export interface EnvironmentData {
   attractions_800m?: number;
   /** Badge: Tokyo ≥15 hotels (ADR #8). */
   tourist_badge?: boolean;
+  /** Family filter (CRTKY-192): anchor inside an adult_entertainment zone. */
+  adult_zone?: boolean;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';
@@ -231,6 +233,9 @@ export interface MapStation {
   /** Bangkok flood dealbreaker flag (districts + station areas inherit their
    *  district's flag). Tokyo uses `elevation_m < 5` instead. */
   flood_exposed?: boolean;
+  /** Family filter (CRTKY-192): the anchor sits inside an
+   *  adult_entertainment zone (club districts never set this). */
+  adult_zone?: boolean;
   // confidence is NOT included here on purpose: it was ~226 KB of the RSC
   // payload with 1493 stations and is only needed on the station detail page
   // (which uses the full Station type via getStation). If compare-panel

@@ -141,6 +141,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const filters = useCityState((s) => s.filters);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
   const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
   const {
     setMinRent,
     setMaxRent,
@@ -152,6 +153,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
     setHoveredStation,
     setHideFloodRisk,
     setHideHighSeismic,
+    setHideAdultZones,
     setHasLiveCamera,
   } = useCityActions();
   const [search, setSearch] = useState('');
@@ -166,7 +168,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const levelSuffix = !isDistrict ? '' : level === 'station' ? 'StationArea' : level === 'grid' ? 'Grid' : 'District';
   const u = (key: string) => `${key}${levelSuffix}`;
 
-  const filtersActive = hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic });
+  const filtersActive = hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic, hideAdultZones });
 
   const catMinCount = Object.keys(filters.categoryMins).length;
 
@@ -181,8 +183,8 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   }, [levelAreas, deferredWeights]);
 
   const filtered = useMemo(
-    () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters),
-    [scoredStations, filters, hideFloodRisk, hideHighSeismic, city],
+    () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters),
+    [scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
   );
 
   const ranked = useMemo(
@@ -321,6 +323,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 resetFilters();
                 setHideFloodRisk(false);
                 setHideHighSeismic(false);
+                setHideAdultZones(false);
                 setActivePreset(null);
               }}
               data-umami-event="clear-filters"
@@ -455,7 +458,19 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               </span>
             </label>
             )}
-            </>)}
+            </>
+            )}
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={hideAdultZones}
+                onChange={(e) => { setHideAdultZones(e.target.checked); setActivePreset(null); }}
+                className="h-3.5 w-3.5 rounded border-gray-300 text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
+              />
+              <span className="text-xs text-gray-600">
+                {t('filter.hideAdultZones')}
+              </span>
+            </label>
             {city.features.liveCameras && (
             <label className="flex items-center gap-2 cursor-pointer">
               <input

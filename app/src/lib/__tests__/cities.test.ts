@@ -166,8 +166,8 @@ describe('dealbreakers with city defaults', () => {
 
   it('keeps every district when Bangkok filters are wide open', () => {
     const areas = [area({ rent_1k: 7_000 }), area({ slug: 'y', rent_1k: 38_000, min_transit: 100 })];
-    expect(applyDealbreakers(areas, { ...d }, false, false, d)).toHaveLength(2);
-    expect(hasActiveFilters('bangkok', { ...d }, { hideFloodRisk: false, hideHighSeismic: false })).toBe(false);
+    expect(applyDealbreakers(areas, { ...d }, false, false, false, d)).toHaveLength(2);
+    expect(hasActiveFilters('bangkok', { ...d }, { hideFloodRisk: false, hideHighSeismic: false, hideAdultZones: false })).toBe(false);
   });
 
   it('explains why a district is excluded', () => {
@@ -175,6 +175,7 @@ describe('dealbreakers with city defaults', () => {
     const reasons = dealbreakerReasons(
       area({ rent_1k: 32_000, min_transit: 60, ratings: { ...FIVES, safety: 5 } }),
       f,
+      false,
       false,
       false,
       d,

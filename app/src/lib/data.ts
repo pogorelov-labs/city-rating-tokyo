@@ -126,6 +126,7 @@ export function getMapStations(): MapStation[] {
       elevation_m: s.environment?.elevation_m ?? null,
       seismic_risk_tier: s.environment?.seismic_risk_tier ?? null,
       ...(s.environment?.flood_exposed === true && { flood_exposed: true }),
+      ...(s.environment?.adult_zone === true && { adult_zone: true }),
       ...(s.livecams && s.livecams.length > 0 && { hasLiveCamera: true }),
     };
   });
