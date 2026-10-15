@@ -134,6 +134,9 @@ class Budget:
                 raise AcquisitionStopped('cached_response_hash')
             return json.loads(raw)
         maximum = self.limits.get('maximum_attempts_per_page', self.limits.get('maximum_attempts_per_range', 2))
+        if previous and len(previous) < maximum:
+            # A resumed interrupted retry also observes the frozen backoff.
+            time.sleep(min(2, self.remaining()))
         while len(previous) < maximum:
             self.remaining()
             if len(self.ledger['attempts']) >= self.limits['attempts']:

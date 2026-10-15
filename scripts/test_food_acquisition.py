@@ -70,7 +70,9 @@ def test_distinct_complete_zero_states(tmp_path,total,shops,status):
         assert acquire_station(STATION,budget,'fake')['status']==status
 
 
-def test_budget_pending_interrupt_charged_on_resume_and_replay(tmp_path):
+def test_budget_pending_interrupt_charged_on_resume_and_replay(tmp_path,monkeypatch):
+    waits=[]
+    monkeypatch.setattr(bounded.time,'sleep',lambda seconds:waits.append(seconds))
     def interrupted(*args,**kwargs):
         on_disk=json.loads((tmp_path/'ledger.json').read_text())
         assert on_disk['attempts'][0]['status']=='pending' and on_disk['charged_bytes']==16384
@@ -82,6 +84,7 @@ def test_budget_pending_interrupt_charged_on_resume_and_replay(tmp_path):
         assert budget.fetch('page1',object(),lambda raw,r:json.loads(raw),kind='page')=={}
         assert budget.ledger['charged_bytes']==16386
         assert len(budget.ledger['attempts'])==2
+    assert waits==[2]
     assert ReplayBudget(tmp_path).fetch('page1',object(),None)=={}
     with pytest.raises(AcquisitionStopped,match='no_reset'): Budget(tmp_path,limits(),'manifest')
 
