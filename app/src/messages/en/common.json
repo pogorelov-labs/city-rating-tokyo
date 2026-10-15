@@ -382,7 +382,11 @@
     "floodDepthTooltip": "Maximum inundation depth at this location in the maximum-assumed-scale scenario (TMG flood hazard model).",
     "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)",
     "michelin": "Michelin restaurants nearby",
-    "michelinTooltip": "Starred and Bib Gourmand restaurants from the Michelin Guide 2026 within 800 m."
+    "michelinTooltip": "Starred and Bib Gourmand restaurants from the Michelin Guide 2026 within 800 m.",
+    "touristLoad": "High tourist area",
+    "touristLoadTooltip": "This station sits in a tourist-heavy area — many hotels and attractions within walking distance.",
+    "touristLoadBadge": "{count} hotels nearby",
+    "sourceTourism": "OpenStreetMap (ODbL)"
   },
   "seismicTiers": {
     "low": {
@@ -582,7 +586,9 @@
       "factsSource": "Counts inside the station area (≤ 800 m, nearest station), approximate. Places: Overture Maps Places (CDLA-Permissive-2.0); parks and piers: © OpenStreetMap contributors (ODbL).",
       "districtsTitle": "Districts",
       "districtsCaption": "The districts this station area covers, by share of its residents — rent and safety come from their estimates.",
-      "viewGrid": "See it on the 200 m grid →"
+      "viewGrid": "See it on the 200 m grid →",
+      "factHotels": "Hotels nearby",
+      "factAttractions": "Attractions nearby"
     }
   }
 }

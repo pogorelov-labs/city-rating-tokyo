@@ -1,0 +1,6532 @@
+{
+ "_meta": {
+  "source": "OpenStreetMap via Overpass, ODbL 1.0",
+  "radius_m": 800,
+  "thresholds": {
+   "tokyo_hotels": 15,
+   "bangkok_hotels": 50,
+   "bangkok_attractions": 8
+  },
+  "fetched": "2026-10-15",
+  "tokyo": {
+   "hotels_total": 1680,
+   "attractions_total": 1406,
+   "stations": 1493
+  },
+  "bangkok": {
+   "hotels_total": 2010,
+   "attractions_total": 482,
+   "stations": 133
+  }
+ },
+ "stations": {
+  "tokyo": {
+   "shinjuku": {
+    "hotels_800m": 41,
+    "attractions_800m": 20
+   },
+   "tokyo": {
+    "hotels_800m": 24,
+    "attractions_800m": 28
+   },
+   "yokohama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shibuya": {
+    "hotels_800m": 24,
+    "attractions_800m": 11
+   },
+   "chiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ikebukuro": {
+    "hotels_800m": 39,
+    "attractions_800m": 11
+   },
+   "omiya": {
+    "hotels_800m": 13,
+    "attractions_800m": 1
+   },
+   "ueno": {
+    "hotels_800m": 62,
+    "attractions_800m": 34
+   },
+   "shimbashi": {
+    "hotels_800m": 40,
+    "attractions_800m": 14
+   },
+   "kita-senju": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "musashi-kosugi": {
+    "hotels_800m": 3,
+    "attractions_800m": 1
+   },
+   "narita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nippori": {
+    "hotels_800m": 14,
+    "attractions_800m": 9
+   },
+   "ofuna": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinagawa": {
+    "hotels_800m": 15,
+    "attractions_800m": 5
+   },
+   "akabane": {
+    "hotels_800m": 17,
+    "attractions_800m": 0
+   },
+   "akihabara": {
+    "hotels_800m": 58,
+    "attractions_800m": 10
+   },
+   "hachioji": {
+    "hotels_800m": 11,
+    "attractions_800m": 0
+   },
+   "iidabashi": {
+    "hotels_800m": 14,
+    "attractions_800m": 6
+   },
+   "keisei-takasago": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "kichijoji": {
+    "hotels_800m": 5,
+    "attractions_800m": 3
+   },
+   "kokubunji": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "nagatacho": {
+    "hotels_800m": 38,
+    "attractions_800m": 5
+   },
+   "nishi-funabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "okachimachi": {
+    "hotels_800m": 89,
+    "attractions_800m": 18
+   },
+   "otemachi": {
+    "hotels_800m": 25,
+    "attractions_800m": 21
+   },
+   "tachikawa": {
+    "hotels_800m": 17,
+    "attractions_800m": 3
+   },
+   "totsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yotsuya": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "ebisu": {
+    "hotels_800m": 4,
+    "attractions_800m": 4
+   },
+   "funabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "haijima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ichigaya": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   },
+   "kanda": {
+    "hotels_800m": 44,
+    "attractions_800m": 15
+   },
+   "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "meguro": {
+    "hotels_800m": 6,
+    "attractions_800m": 8
+   },
+   "mitaka": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "naritakuko-daiichi-ryokyaku-taaminaru": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nerima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-nippori": {
+    "hotels_800m": 13,
+    "attractions_800m": 6
+   },
+   "ochanomizu": {
+    "hotels_800m": 34,
+    "attractions_800m": 13
+   },
+   "odawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "osaki": {
+    "hotels_800m": 10,
+    "attractions_800m": 5
+   },
+   "oshiage-sukaitsurii-mae": {
+    "hotels_800m": 6,
+    "attractions_800m": 14
+   },
+   "shin-kamagaya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takao": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "urawa": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "abiko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "aoto": {
+    "hotels_800m": 6,
+    "attractions_800m": 0
+   },
+   "aoyama-itchome": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "asakusa": {
+    "hotels_800m": 63,
+    "attractions_800m": 19
+   },
+   "bakurocho": {
+    "hotels_800m": 54,
+    "attractions_800m": 6
+   },
+   "chikatetsu-akatsuka": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "chikatetsu-narimasu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "choshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ebina": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujisawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ginza": {
+    "hotels_800m": 45,
+    "attractions_800m": 27
+   },
+   "gotanda": {
+    "hotels_800m": 12,
+    "attractions_800m": 5
+   },
+   "hamamatsucho": {
+    "hotels_800m": 28,
+    "attractions_800m": 2
+   },
+   "hanedakuko-kokunaisen-taaminaru": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "harajuku": {
+    "hotels_800m": 3,
+    "attractions_800m": 21
+   },
+   "hashimoto": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "hibiya": {
+    "hotels_800m": 23,
+    "attractions_800m": 18
+   },
+   "higashi-kanagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-matsudo": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashi-murayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashihanno": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "hikifune": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "hiyoshi": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "jimbocho": {
+    "hotels_800m": 18,
+    "attractions_800m": 9
+   },
+   "kamata": {
+    "hotels_800m": 26,
+    "attractions_800m": 1
+   },
+   "kanazawa-hakkei": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kashiwa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawagoe": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "kawasaki": {
+    "hotels_800m": 29,
+    "attractions_800m": 5
+   },
+   "keiotama-sentaa": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "keisei-tsudanuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kinshicho": {
+    "hotels_800m": 9,
+    "attractions_800m": 1
+   },
+   "komagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kotake-mukaihara": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "kudanshita": {
+    "hotels_800m": 15,
+    "attractions_800m": 10
+   },
+   "machiya": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "matsudo": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "minamisenju": {
+    "hotels_800m": 34,
+    "attractions_800m": 2
+   },
+   "mitsukoshimae": {
+    "hotels_800m": 50,
+    "attractions_800m": 14
+   },
+   "mizonokuchi": {
+    "hotels_800m": 3,
+    "attractions_800m": 3
+   },
+   "motoyawata": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nagatsuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nakano": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "nakano-sakaue": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "nihonbashi": {
+    "hotels_800m": 44,
+    "attractions_800m": 26
+   },
+   "ogikubo": {
+    "hotels_800m": 2,
+    "attractions_800m": 4
+   },
+   "oimachi": {
+    "hotels_800m": 6,
+    "attractions_800m": 1
+   },
+   "oji": {
+    "hotels_800m": 7,
+    "attractions_800m": 6
+   },
+   "omotesando": {
+    "hotels_800m": 7,
+    "attractions_800m": 14
+   },
+   "saitama-shintoshin": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   },
+   "shin-matsudo": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "shinjuku-sanchome": {
+    "hotels_800m": 50,
+    "attractions_800m": 20
+   },
+   "shinkiba": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "shonandai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "soga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takadanobaba": {
+    "hotels_800m": 5,
+    "attractions_800m": 6
+   },
+   "takahata-fudo": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "tamagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "tobudobutsukoen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsurumi": {
+    "hotels_800m": 7,
+    "attractions_800m": 1
+   },
+   "wakoshi": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "yorii": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoyogi": {
+    "hotels_800m": 8,
+    "attractions_800m": 9
+   },
+   "yurakucho": {
+    "hotels_800m": 38,
+    "attractions_800m": 28
+   },
+   "akabane-iwabuchi": {
+    "hotels_800m": 17,
+    "attractions_800m": 1
+   },
+   "asagaya": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "asakusabashi": {
+    "hotels_800m": 58,
+    "attractions_800m": 8
+   },
+   "atsugi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "awa-kamogawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "awajicho": {
+    "hotels_800m": 45,
+    "attractions_800m": 14
+   },
+   "ayase": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "azabu-juban": {
+    "hotels_800m": 3,
+    "attractions_800m": 3
+   },
+   "azami-no": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "bubaigawara": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "chiba-minato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chiba-nyutaun-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chibachuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chofu": {
+    "hotels_800m": 5,
+    "attractions_800m": 4
+   },
+   "chuorinkan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "daimon": {
+    "hotels_800m": 31,
+    "attractions_800m": 3
+   },
+   "denenchofu": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "fuchuhonmachi": {
+    "hotels_800m": 3,
+    "attractions_800m": 3
+   },
+   "futako-tamagawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "futakoshinchi": {
+    "hotels_800m": 2,
+    "attractions_800m": 3
+   },
+   "futamatagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "goi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gotokuji": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "gora": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hagiyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hamakawasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hanedakuko-kokusaisen-taaminaru": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "hanno": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "hanyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hatagaya": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "hatanodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hatchobori": {
+    "hotels_800m": 39,
+    "attractions_800m": 10
+   },
+   "hatchonawate": {
+    "hotels_800m": 9,
+    "attractions_800m": 0
+   },
+   "heiwadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-fuchu": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "higashi-ikebukuro": {
+    "hotels_800m": 13,
+    "attractions_800m": 8
+   },
+   "higashi-nakano": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "higashi-shinjuku": {
+    "hotels_800m": 48,
+    "attractions_800m": 10
+   },
+   "higashiginza": {
+    "hotels_800m": 50,
+    "attractions_800m": 22
+   },
+   "higashikawaguchi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "higashinarita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashitotsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hikawadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hino": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "ho-tsuchi-ke-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hokucho-kasumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "honchiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hongo-sanchome": {
+    "hotels_800m": 19,
+    "attractions_800m": 17
+   },
+   "hori-no-nai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ichikawa": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "inage": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inba-nippon-idai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "jiyugaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "kamakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kameido": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kamiooka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanamachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanamecho": {
+    "hotels_800m": 7,
+    "attractions_800m": 2
+   },
+   "kasuga": {
+    "hotels_800m": 13,
+    "attractions_800m": 11
+   },
+   "kasukabe": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "katori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katsuta-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kayabacho": {
+    "hotels_800m": 31,
+    "attractions_800m": 13
+   },
+   "kazusanakano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keikyu-kamata": {
+    "hotels_800m": 20,
+    "attractions_800m": 1
+   },
+   "keikyu-kawasaki": {
+    "hotels_800m": 26,
+    "attractions_800m": 5
+   },
+   "keio-nagayama": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "keiseiueno": {
+    "hotels_800m": 73,
+    "attractions_800m": 32
+   },
+   "kikuna": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kisarazu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitanarashino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kiyosumi-shirakawa": {
+    "hotels_800m": 10,
+    "attractions_800m": 3
+   },
+   "kodaira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koenji": {
+    "hotels_800m": 5,
+    "attractions_800m": 3
+   },
+   "kokkai-gijidomae": {
+    "hotels_800m": 24,
+    "attractions_800m": 4
+   },
+   "komagome": {
+    "hotels_800m": 6,
+    "attractions_800m": 5
+   },
+   "korakuen": {
+    "hotels_800m": 14,
+    "attractions_800m": 8
+   },
+   "ko-no-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "korai": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kozu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kuki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kumagaya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kumano-mae": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "kuramae": {
+    "hotels_800m": 47,
+    "attractions_800m": 10
+   },
+   "kurihama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kurihashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kyobashi": {
+    "hotels_800m": 50,
+    "attractions_800m": 32
+   },
+   "mabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "machida": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "makuhari": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "makuharihongo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsugishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "me-ke-saki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "meidaimae": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "minamiurawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "mita": {
+    "hotels_800m": 16,
+    "attractions_800m": 3
+   },
+   "monzen-nakacho": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "morishita": {
+    "hotels_800m": 13,
+    "attractions_800m": 2
+   },
+   "motosumiyoshi": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "musashi-sakai": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "musashi-yokote": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashiurawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nagareyama-otakano-mori": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nakai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nakameguro": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "nakanobe": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nakayama": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nan-etsu-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nanryu-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "naruto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ningyocho": {
+    "hotels_800m": 43,
+    "attractions_800m": 10
+   },
+   "nishi-hachioji": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-kokubunji": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "nishi-oi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nishi-tokorozawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "nishiarai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishiogikubo": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "noborito": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "ogawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ogawacho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ogose": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "oku": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "oami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ohara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ookayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "otsuka": {
+    "hotels_800m": 13,
+    "attractions_800m": 5
+   },
+   "roppongi": {
+    "hotels_800m": 12,
+    "attractions_800m": 14
+   },
+   "ryogoku": {
+    "hotels_800m": 24,
+    "attractions_800m": 15
+   },
+   "sagamiono": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "sakato": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "sakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakuragicho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sangenjaya": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "sasazuka": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "sawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "seibu-yuenchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "seibukyujo-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sekiuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sengakuji": {
+    "hotels_800m": 8,
+    "attractions_800m": 1
+   },
+   "senkawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "sentaa-kita": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "sentaa-minami": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "shimokitazawa": {
+    "hotels_800m": 2,
+    "attractions_800m": 7
+   },
+   "shimotakaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shin-koiwa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "shin-okachimachi": {
+    "hotels_800m": 79,
+    "attractions_800m": 7
+   },
+   "shin-sugita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinkawasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinkoyasu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinmaruko": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "shinpachi-hashira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinyokohama": {
+    "hotels_800m": 11,
+    "attractions_800m": 1
+   },
+   "shinyuri-ke-oka": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "shiodome": {
+    "hotels_800m": 41,
+    "attractions_800m": 13
+   },
+   "shirokane-takanawa": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "shirokanedai": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "shitte": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "shodai": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "sugamo": {
+    "hotels_800m": 7,
+    "attractions_800m": 1
+   },
+   "suidobashi": {
+    "hotels_800m": 21,
+    "attractions_800m": 12
+   },
+   "sumiyoshi": {
+    "hotels_800m": 8,
+    "attractions_800m": 2
+   },
+   "tabata": {
+    "hotels_800m": 3,
+    "attractions_800m": 5
+   },
+   "takatsu": {
+    "hotels_800m": 3,
+    "attractions_800m": 3
+   },
+   "tama-dobutsu-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 46
+   },
+   "tamachi": {
+    "hotels_800m": 14,
+    "attractions_800m": 3
+   },
+   "tamagawajosui": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tameike-sanno": {
+    "hotels_800m": 35,
+    "attractions_800m": 7
+   },
+   "tenku-hashi": {
+    "hotels_800m": 13,
+    "attractions_800m": 0
+   },
+   "tennodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tennozu-isle": {
+    "hotels_800m": 0,
+    "attractions_800m": 7
+   },
+   "togoshi-ginza": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "tokorozawa": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "toshimaen": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "togo-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toyosu": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "toyota": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tsudanuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsuga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukishima": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "uguisudani": {
+    "hotels_800m": 20,
+    "attractions_800m": 20
+   },
+   "ushita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ware-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yamato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yotsukaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoyogi-hachiman": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "yoyogi-uehara": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "yukari-ga-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "zoshigaya": {
+    "hotels_800m": 5,
+    "attractions_800m": 3
+   },
+   "adachi-odai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ageo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "agui": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "aihara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "aiko-ishida": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "akabanebashi": {
+    "hotels_800m": 6,
+    "attractions_800m": 7
+   },
+   "akasaka": {
+    "hotels_800m": 40,
+    "attractions_800m": 5
+   },
+   "akebonobashi": {
+    "hotels_800m": 6,
+    "attractions_800m": 6
+   },
+   "akigawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "akira-shima": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "akitsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "akiyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "an-zen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "anabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "anagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "anamori-inari": {
+    "hotels_800m": 19,
+    "attractions_800m": 0
+   },
+   "ane-ke-saki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "anjin-tsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ao-hori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "aobadai": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "aoi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "aomono-yokocho": {
+    "hotels_800m": 5,
+    "attractions_800m": 1
+   },
+   "arai-kusurishi-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "araijuku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "arakawa-itchu-mae": {
+    "hotels_800m": 7,
+    "attractions_800m": 4
+   },
+   "arakawa-nichome": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "arakawa-shichi-chome": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "arakawa-yuenchi-mae": {
+    "hotels_800m": 4,
+    "attractions_800m": 5
+   },
+   "arakawaku-yakusho-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "arakawashakomae": {
+    "hotels_800m": 2,
+    "attractions_800m": 5
+   },
+   "araki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ariake": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   },
+   "ariake-tenisu-no-mori": {
+    "hotels_800m": 3,
+    "attractions_800m": 5
+   },
+   "asahi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "asaka": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "asano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ashi-ke-kubo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ashigara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "asuka-yama": {
+    "hotels_800m": 5,
+    "attractions_800m": 6
+   },
+   "atago": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "awa-katsuyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "awa-kominato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "awa-tenshin": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "baigo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ban-ta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bando-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "barakinakayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "basha-michi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "benten-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bushu-araki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bushu-hino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bushu-karasawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bushu-nagase": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bushu-nakagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "busshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "byobu-ura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chiba-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chiba-tera": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chichibu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chidoricho": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "chihara-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chiku-sentaa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chikura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chitose": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chitose-funabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chitose-karasuyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "cho-ura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chogo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chojamachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chokoku-no-mori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chugakko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chuodaigaku-meiseidaigaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "daiba": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "daijingushita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "daikanyama": {
+    "hotels_800m": 7,
+    "attractions_800m": 4
+   },
+   "daishimae": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "dokkyodaigaku-zen-eki-soka-matsubara": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "doro": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "dobutsu-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "eda": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "edogawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "edogawa-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "edogawabashi": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "ehara-machi": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "ehara-nakanobe": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "eifuku-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "ekoda": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "emi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "enoto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "etchu-shima": {
+    "hotels_800m": 5,
+    "attractions_800m": 3
+   },
+   "fuchinobe": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "fuchu": {
+    "hotels_800m": 11,
+    "attractions_800m": 3
+   },
+   "fuchu-keiba-seimonmae": {
+    "hotels_800m": 8,
+    "attractions_800m": 4
+   },
+   "fuda": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "fudomae": {
+    "hotels_800m": 6,
+    "attractions_800m": 1
+   },
+   "fuji-fuirumu-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fuji-no-ushijima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujigaoka": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "fujimi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujimicho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujimidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "fujimigaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fujisawa-honcho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fukaya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fukiage": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fukudawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fukuura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "funabashi-hoten": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "funabashi-nichidai-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "funabashikeibajo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "funabori": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "fune-no-kagakukan": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "furusato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fusa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "fussa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "futamata-o": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "futamata-shinmachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "futawa-mukaedai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gaiemmae": {
+    "hotels_800m": 5,
+    "attractions_800m": 6
+   },
+   "gakuen-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gakugei-daigaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gakushuin-shita": {
+    "hotels_800m": 5,
+    "attractions_800m": 5
+   },
+   "gamo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "genka-osamu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gezan-kuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "ginzaitchome": {
+    "hotels_800m": 49,
+    "attractions_800m": 30
+   },
+   "gion": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gogatsu-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gohyaku-rakan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gokokuji": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "goko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gokuraku-tera": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gotan-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gun-hatake": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gyoda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "gyodashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hachi-seki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hachigata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hachiman-yado": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hachioji-minami-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hadano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hakkei-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hakone-itabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hakone-ke-saki": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "hakoneyumoto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hakuraku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hakusan": {
+    "hotels_800m": 4,
+    "attractions_800m": 2
+   },
+   "hamacho": {
+    "hotels_800m": 31,
+    "attractions_800m": 7
+   },
+   "hamadayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hamakin-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hamano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hamura": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "hana-koganei": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hanasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hane-kan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hanzomon": {
+    "hotels_800m": 13,
+    "attractions_800m": 1
+   },
+   "hara-toma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "haraichi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "haruhi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hase": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hasuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hasunuma": {
+    "hotels_800m": 11,
+    "attractions_800m": 1
+   },
+   "hato-ke-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "hato-no-su": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hatsuishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hatsutomi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hayakawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hazama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "heiwa-shima": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "hibarigaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-abiko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-aki-ryu": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashi-azuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashi-funabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-iwatsuki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-koenji": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "higashi-koganei": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashi-matsubara": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "higashi-nami-ken": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-washimiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashi-zushi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashichiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashifushimi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashijujo": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "higashikitazawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 9
+   },
+   "higashikurume": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "higashimatsuyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashimon-mae": {
+    "hotels_800m": 2,
+    "attractions_800m": 5
+   },
+   "higashimuki-shima": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "higashinagasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "higashinaka-kami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashinakayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashiogu-sanchome": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "higashiome": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "higashitokorozawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "higashiurawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashiyama-kita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higashiyama-ta": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "higashiyamatoshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "higuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hikarigaoka": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "himemiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hinatawada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hinode": {
+    "hotels_800m": 10,
+    "attractions_800m": 0
+   },
+   "hirai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "hirama": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "hiranumabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hiratsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hirayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hirayama-joshi-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "hire-ke-saki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hiroaki-tera": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hiroo": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "hirose-yacho-no-mori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hitotsubashi-gakuen": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "hiyoshihoncho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hodokubo": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "hokudai-miya": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "hokuetsu-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hon-atsugi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hon-choshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hon-komagome": {
+    "hotels_800m": 2,
+    "attractions_800m": 3
+   },
+   "hon-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "honancho": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "hongodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "honjoazumabashi": {
+    "hotels_800m": 12,
+    "attractions_800m": 16
+   },
+   "honjo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "honkawa-etsu": {
+    "hotels_800m": 4,
+    "attractions_800m": 2
+   },
+   "honkugenuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "horikiri": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "horikiri-shobuen": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "hoshikawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hotaruda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hoya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "hyuga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "i-hosoda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ichi-no-wari": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ichikawa-mama": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "ichikawa-ono": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ichikawa-shiohama": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "ichinoe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ido-ke-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iida-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iikura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iioka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iiyama-man": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ikegami": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "ikejiriohashi": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   },
+   "ikenoe": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "ikuta": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "ima-hane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ina-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inadazutsumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inage-kaigan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inagi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inagi-naganuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inamura-ke-saki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inaricho": {
+    "hotels_800m": 76,
+    "attractions_800m": 15
+   },
+   "inariyama-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "ino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inokashira-koen": {
+    "hotels_800m": 3,
+    "attractions_800m": 1
+   },
+   "inuboe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "inzai-maki-no-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iogi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ipponmatsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iriuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iriya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "irumashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "isehara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "isezaki-chojamachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ishigami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ishigami-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "ishihara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ishikawacho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ishikawadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "isogo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "itabashi": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "itabashihoncho": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "itabashikuyakusho-mae": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "itsumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iwahara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iwai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iwamotocho": {
+    "hotels_800m": 65,
+    "attractions_800m": 11
+   },
+   "iwane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "iwatsuki": {
+    "hotels_800m": 2,
+    "attractions_800m": 3
+   },
+   "izumi-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "izumi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "izumi-taiikukan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "izumi-tamagawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "jinbohara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "jinmu-tera": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "joshidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "jocho-toro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "josei-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "jujo": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "juni-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kachidoki": {
+    "hotels_800m": 7,
+    "attractions_800m": 3
+   },
+   "kadosawa-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kagemori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kagetsuen-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kago-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kagurazaka": {
+    "hotels_800m": 4,
+    "attractions_800m": 2
+   },
+   "kaihinmakuhari": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kaisei": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kaishi-ariki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kaji-ga-tani": {
+    "hotels_800m": 3,
+    "attractions_800m": 1
+   },
+   "kajiwara": {
+    "hotels_800m": 2,
+    "attractions_800m": 5
+   },
+   "kakio": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kama-ke-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kama-ke-tani-daibutsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kama-shu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamakura-koko-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kameari": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "kameido-suijin": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kamifukuoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamihongo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamiigusa": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kamiishi-kami-i": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamiitabashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "kamiizumi": {
+    "hotels_800m": 16,
+    "attractions_800m": 10
+   },
+   "kamikita-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamikitazawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kaminaka-sato": {
+    "hotels_800m": 2,
+    "attractions_800m": 6
+   },
+   "kaminoge": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "kamiyacho": {
+    "hotels_800m": 10,
+    "attractions_800m": 11
+   },
+   "kamo-miya": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kamoi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamonomiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanagawashinmachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanazawa-bunko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kane-ke-fuchi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kaneko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kanno": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kannon": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "karakida": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kasa-hata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kasa-ue-kuronama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kasai": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "kasai-rinkai-koen": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "kashima-ta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kashiwa-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kashiwa-no-ha-kyanpasu": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "kashiwa-tanaka": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kasumigaseki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katakuracho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katase-ko-no-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katase-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katsu-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "katsuura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawa-kan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kawagoeshi": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "kawaguchi": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "kawaguchi-motogo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawasaki-shinmachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawasakidaishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "kawasumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kawawacho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazamatsuri": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-higashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-ichinomiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-kameyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-kawa-kan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-kiyokawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-kubo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-matsuoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-minato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-mitsumata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-murakami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-nakagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-okitsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-okubo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-tsurumai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-ushiku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kazusa-yamada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keikyu-nagasawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keikyu-otsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keikyu-taura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keikyu-tomioka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keio-horinochi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keio-katakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keio-yomiuri-rando": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "keiohachioji": {
+    "hotels_800m": 8,
+    "attractions_800m": 0
+   },
+   "keioinadatsutsumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keiotama-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "keisei-hikifune": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "keisei-inage": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-koiwa": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "keisei-nakayama": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "keisei-nishifuna": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-okubo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-owada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-sake-kurikaesi-i": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-sakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-tateishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "keisei-usui": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kemigawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kemigawahama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kenchomae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kenritsudai-gaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kiba": {
+    "hotels_800m": 5,
+    "attractions_800m": 1
+   },
+   "kibo-ke-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kikukawa": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "kimitsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kinoshita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kinugasa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kishine-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-akabane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-ayase": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-fuchu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-hatsutomi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-kashiwa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-kasukabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-kogane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-konosu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-me-ke-saki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kita-sando": {
+    "hotels_800m": 0,
+    "attractions_800m": 12
+   },
+   "kita-shinagawa": {
+    "hotels_800m": 10,
+    "attractions_800m": 5
+   },
+   "kita-yono": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "kitado-ta": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kitaguni-fun": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kitahachi-oji": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitaike-fukuro": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "kitakamakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitakami-o": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitakurihama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitamatsudo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kitami": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kitamoto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitasaka-ko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitasenzoku": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kitashin-yokohama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kitaurawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kitayamata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kiyose": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ko-fuchi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kobayashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kodama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kodenmacho": {
+    "hotels_800m": 60,
+    "attractions_800m": 10
+   },
+   "kodomono-kuni": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "kogane-joshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koganecho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kohoku-abiko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koigakubo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "koiwa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kojima-nitta": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kojimachi": {
+    "hotels_800m": 14,
+    "attractions_800m": 1
+   },
+   "kokonoe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kokorozashi-kyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kokudo": {
+    "hotels_800m": 3,
+    "attractions_800m": 1
+   },
+   "kokuga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kokuritsu-kyogijo": {
+    "hotels_800m": 3,
+    "attractions_800m": 8
+   },
+   "kokuryo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kokusai-tenjijo": {
+    "hotels_800m": 5,
+    "attractions_800m": 3
+   },
+   "kokusai-tenjijo-seimon": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "komabatodaimae": {
+    "hotels_800m": 4,
+    "attractions_800m": 7
+   },
+   "komae": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "komazawa-daigaku": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "komiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "komura-i": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "komuro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koremasa": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "koshigaya": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "koshigaya-reikutaun": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "koshigoe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kosuge": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kotesashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "ko-kawara": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "ko-tsu-no-mori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koen-shita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koen-ue": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kofu-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kohoku-adachi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kojiya": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "koku-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "konan-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "konandai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "konodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "konosu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koshin-tsuka": {
+    "hotels_800m": 8,
+    "attractions_800m": 2
+   },
+   "koshukaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koza-shibuya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kowakudani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "koyasu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kozukue": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "kuga-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kugayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kugenuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kugenuma-kaigan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kuhonbutsu": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "kuji": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kuju": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kumakawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kumegawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kun-ke-hama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kunitachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "kuniyoshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kunugi-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kurahashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kurami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kurihira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kurokawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kururi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kyodo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kyoteijo-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "kyu-ga-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "kyumei": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "machiya-nichome": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "maehara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "magome": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "maihama": {
+    "hotels_800m": 4,
+    "attractions_800m": 37
+   },
+   "maioka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "makita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "makuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "man-gan-tera": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "manatsuru": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "maruyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mashio": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matoba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsu-ga-tani": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "matsu-tobidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsubara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsudo-nitta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsuhisa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "matsuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mei-ko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mejiro": {
+    "hotels_800m": 6,
+    "attractions_800m": 5
+   },
+   "mejiro-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mejiro-yamashita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "meshi-kyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mibu-kuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "midori-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "midorigaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "midorimachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mikado": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mikawa-shima": {
+    "hotels_800m": 9,
+    "attractions_800m": 3
+   },
+   "mimomi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-asa-ke-tani": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "minami-banki-ga-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-furuya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-hanyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-hato-ke-tani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-kashiwa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-kurihashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-ota": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-osawa": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "minami-sake-kurikaesi-i": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-sakurai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minami-shinjuku": {
+    "hotels_800m": 14,
+    "attractions_800m": 10
+   },
+   "minami-sunamachi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "minami-taira": {
+    "hotels_800m": 0,
+    "attractions_800m": 16
+   },
+   "minami-yono": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minamifunabashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minamimachida": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "minamiotsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minamirinkan": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "minamitama": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "minamiyuki-toku": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "minano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minatomachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minatomirai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minori-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "minowa": {
+    "hotels_800m": 32,
+    "attractions_800m": 3
+   },
+   "minuma-dai-shinsui-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "misaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "misakiguchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "misato": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "misato-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mitakadai": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "mitsuwa-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miurakaigan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miya-no-mae": {
+    "hotels_800m": 6,
+    "attractions_800m": 5
+   },
+   "miya-no-saka": {
+    "hotels_800m": 0,
+    "attractions_800m": 6
+   },
+   "miya-no-shita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miya-no-taira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miyahara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miyamaedaira": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "miyayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "miyazakidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "mizue": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "mizuho-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mobara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mochida": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mogusa-sono": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "monoi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "moro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "motohasunuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "motomachi-chukagai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "motoyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mukaihara": {
+    "hotels_800m": 18,
+    "attractions_800m": 7
+   },
+   "mukogaokayuen": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "murakami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-arashiyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-fujisawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-hikita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-koganei": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "musashi-koyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-masuto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-nitta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-shiroishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-sunagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashi-takahagi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashidai-wa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashiitsukaichi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashinakahara": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "musashino-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "musashiseki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "musashishinjo": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "mutsuai-nichidai-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "mutsura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "myogadani": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "myoden": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "myogaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "myorenji": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nagahara": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "naganuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "nagareyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nagareyama-sentorarupaaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nagata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nagatoro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nai-yado": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "naka-gora": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "naka-no-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nakada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nakagami": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nakagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nakagawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nakaitabashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "nakamachidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "nakamura-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nakano-fujimicho": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nakano-shima": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nakano-shinbashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "nakaura-wa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nako-funagata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "namamugi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "namekawa-airando": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nami-kure": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "namiki-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "namiki-kita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nanahikari-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nanbu-shijo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "naniwa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nankyo-hon": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "nansan-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "narashino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "narita-yukawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "naruse": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "nebukawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "negishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nerima-kasugacho": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "nerima-koyadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nezu": {
+    "hotels_800m": 7,
+    "attractions_800m": 21
+   },
+   "nichi-no-demachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nihondai-tori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "niitaka-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "niitaka-shima-taira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "niiza": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nijubashimae": {
+    "hotels_800m": 11,
+    "attractions_800m": 20
+   },
+   "ninomiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-chiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-chofu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-hanyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-kamakura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-kasai": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "nishi-ke-hara": {
+    "hotels_800m": 2,
+    "attractions_800m": 6
+   },
+   "nishi-ke-hara-shitei-me": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "nishi-magome": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "nishi-noborito": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-ohara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-omiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-ojima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-oya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-oyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nishi-shinjuku": {
+    "hotels_800m": 26,
+    "attractions_800m": 11
+   },
+   "nishi-shinjuku-gochome": {
+    "hotels_800m": 10,
+    "attractions_800m": 3
+   },
+   "nishi-sugamo": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "nishi-tachikawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-taishido": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "nishi-ware-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishi-waseda": {
+    "hotels_800m": 1,
+    "attractions_800m": 8
+   },
+   "nishiarai-taishi-nishi": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "nishidai": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "nishihata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishikawa-etsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishikawa-kuchi": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "nishikoku-ritsu": {
+    "hotels_800m": 8,
+    "attractions_800m": 0
+   },
+   "nishiko-shima-taira": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nishinaga-fuku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishishirai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishitani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nishiura-wa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nishiyokohama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nisshin": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "nitta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nittano": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nodashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "nogami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nogata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nogizaka": {
+    "hotels_800m": 11,
+    "attractions_800m": 10
+   },
+   "nojima-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "nokendai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "numabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "numabukuro": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "nyu-so": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "o-hanacha-ya": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "o-hanahata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "obitsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "obusuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ochiai": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "ochiai-minami-nagasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "oda-sakae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "odai": {
+    "hotels_800m": 6,
+    "attractions_800m": 5
+   },
+   "odaiba-kaihinkoen": {
+    "hotels_800m": 0,
+    "attractions_800m": 10
+   },
+   "odakyu-sagamihara": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "odoriba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ogura-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oizumi-gakuen": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "oji-kamiya": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "okabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "okegawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "okusawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "okutama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "omaeda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ome": {
+    "hotels_800m": 1,
+    "attractions_800m": 8
+   },
+   "omigawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "omokage-hashi": {
+    "hotels_800m": 1,
+    "attractions_800m": 10
+   },
+   "omori": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "onarimon": {
+    "hotels_800m": 32,
+    "attractions_800m": 8
+   },
+   "onda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "onigori": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "onjuku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ontake": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ontake-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "oaso": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "obukuro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oguchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ohiradai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oikeiba-ba-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "oiso": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "okawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "okubo": {
+    "hotels_800m": 44,
+    "attractions_800m": 6
+   },
+   "okurayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "omachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "omiya-koen": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "omori-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "omori-kaigan": {
+    "hotels_800m": 8,
+    "attractions_800m": 0
+   },
+   "omori-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "onohara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "onuki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "osaki-hirokoji": {
+    "hotels_800m": 14,
+    "attractions_800m": 3
+   },
+   "ojima": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "otaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "otorii": {
+    "hotels_800m": 12,
+    "attractions_800m": 0
+   },
+   "otsuka-teikyodaigaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "owada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oyama": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "oppama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "orihara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ogi-ohashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ogimachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "omekaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oya-hana": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oyama-dai": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "oyamatsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "oyumi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ozaku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "renkon": {
+    "hotels_800m": 0,
+    "attractions_800m": 5
+   },
+   "roka-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "roku-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "roku-mi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "rokugo-dote": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "roppongi-itchome": {
+    "hotels_800m": 27,
+    "attractions_800m": 15
+   },
+   "ryokuen-toshi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ryutsu-sentaa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "sachiura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagami-kaneko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagami-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagami-numata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagamihara": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "sagamiko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagamiotsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sagi-no-miya": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "saginuma": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "saikai-kashima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakaemachi": {
+    "hotels_800m": 4,
+    "attractions_800m": 6
+   },
+   "sakasai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sake-kurikaesi-i": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "saku-kusa-bu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakura-kaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakuradai": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "sakuradamon": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "sakuragaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakuragi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sakurajosui": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "sakurashinmachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "sakurazawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "samezu": {
+    "hotels_800m": 5,
+    "attractions_800m": 1
+   },
+   "samukawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "san-no-wa-hashi": {
+    "hotels_800m": 18,
+    "attractions_800m": 3
+   },
+   "san-tsu-sakai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "san-tsu-sawa-shitamachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "san-tsu-sawakami-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sangu-hashi": {
+    "hotels_800m": 4,
+    "attractions_800m": 7
+   },
+   "sangyo-shinko-sentaa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sangyodoro": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "sanpoku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sanuki-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "saruta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sasagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "satomi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "satte": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sawai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sayama-ke-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sayamashi": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "seibi-ba": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "seibu-chichibu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "seibu-tachikawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "seibu-yanagisawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "seibuen": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "seibushinjuku": {
+    "hotels_800m": 60,
+    "attractions_800m": 18
+   },
+   "seifu": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "seijo-gakuenmae": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "seikai": {
+    "hotels_800m": 0,
+    "attractions_800m": 9
+   },
+   "seiseki-sakuragaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sen-da-ke-tani": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "sen-shiro-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sen-shiro-taihoku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sendagi": {
+    "hotels_800m": 7,
+    "attractions_800m": 6
+   },
+   "sengawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "sengen-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sengoku": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "senju-ohashi": {
+    "hotels_800m": 4,
+    "attractions_800m": 2
+   },
+   "sensoku": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "senzokuike": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "setagaya": {
+    "hotels_800m": 0,
+    "attractions_800m": 6
+   },
+   "setagaya-daita": {
+    "hotels_800m": 0,
+    "attractions_800m": 7
+   },
+   "seya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shake": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shakudo-shogakko-mae": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "shakujii-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shi-ga-o": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shi-tsu-ki": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "shibakoen": {
+    "hotels_800m": 26,
+    "attractions_800m": 4
+   },
+   "shibamata": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "shibasaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shibasaki-taiikukan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shibaura-fu-atama": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "shibayama-chiyoda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shibusawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shichiri": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shichiri-ke-hama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shidai-igakubu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiinamachi": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "shiishiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shijo-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 6
+   },
+   "shiki": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "shimizu-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimogori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimoigusa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shimomaruko": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shimomizo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimo-ochiai": {
+    "hotels_800m": 4,
+    "attractions_800m": 3
+   },
+   "shimosa-kanzaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimosa-matsuzaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimosa-nakayama": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "shimosa-tachibana": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimosa-toyosato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimura-sakaue": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shimura-sanchome": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-itabashi": {
+    "hotels_800m": 2,
+    "attractions_800m": 3
+   },
+   "shin-urayasu": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "shin-akitsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-chiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-egota": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "shin-hane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-kashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-kashiwa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-kodaira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-koenji": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "shin-koganei": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shin-koshin-tsuka": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "shin-mobara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-nakano": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "shin-okubo": {
+    "hotels_800m": 49,
+    "attractions_800m": 8
+   },
+   "shin-otsuka": {
+    "hotels_800m": 7,
+    "attractions_800m": 3
+   },
+   "shin-sakuradai": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "shin-sayama": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "shin-seibi-ba": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "shin-shibamata": {
+    "hotels_800m": 1,
+    "attractions_800m": 3
+   },
+   "shin-shibaura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-shiraoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shin-shirota": {
+    "hotels_800m": 1,
+    "attractions_800m": 7
+   },
+   "shin-toyosu": {
+    "hotels_800m": 1,
+    "attractions_800m": 4
+   },
+   "shinagawa-shiisaido": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "shinanocho": {
+    "hotels_800m": 3,
+    "attractions_800m": 7
+   },
+   "shinbaba": {
+    "hotels_800m": 6,
+    "attractions_800m": 5
+   },
+   "shindai-tsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shingo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinjuku-gyoenmae": {
+    "hotels_800m": 17,
+    "attractions_800m": 9
+   },
+   "shinjukunishiguchi": {
+    "hotels_800m": 57,
+    "attractions_800m": 20
+   },
+   "shinkemi-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinko-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinmatsuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinnarashino": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinonome": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinozaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shinrinkoen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinsen-hashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shintokorozawa": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "shintomicho": {
+    "hotels_800m": 43,
+    "attractions_800m": 13
+   },
+   "shintsudanuma": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinzo-kawashima": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "shinzo-sato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shinzushi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shioiri": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiomi": {
+    "hotels_800m": 4,
+    "attractions_800m": 2
+   },
+   "shirai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiraitodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shiraoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiroku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiromaru": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shiromi-ke-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shirota-hashi": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "shita-iida": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shita-jinmei": {
+    "hotels_800m": 5,
+    "attractions_800m": 0
+   },
+   "shita-nagatani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shita-soga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shitaita-hashi": {
+    "hotels_800m": 2,
+    "attractions_800m": 1
+   },
+   "shiyakushomae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shizu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shoin-jinja-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "shomaru": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shonan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shonan-fukazawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shonan-kaigan-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shonan-machiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "showa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "showa-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "shukugawara": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "sode-ke-ura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "soshigaya-okura": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "soshio-ryutsu-sentaa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "so-moto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sobudai-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sobudai-shita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sogo-sando": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "soka": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "soun-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "suehirocho": {
+    "hotels_800m": 66,
+    "attractions_800m": 16
+   },
+   "sugamo-nitta": {
+    "hotels_800m": 14,
+    "attractions_800m": 3
+   },
+   "sugita": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sugito-koyadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "suigo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "suitengumae": {
+    "hotels_800m": 29,
+    "attractions_800m": 5
+   },
+   "sunagawa-shichi-ban": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "sports-center": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "suzukakedai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "suzukicho": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "ta-na": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ta-umi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tachiaigawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "tachiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tachihi": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tachikawa-kita": {
+    "hotels_800m": 17,
+    "attractions_800m": 3
+   },
+   "tachikawa-minami": {
+    "hotels_800m": 16,
+    "attractions_800m": 2
+   },
+   "taisa-kura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "taito": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "taiyu-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "taka-no-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "taka-taki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takaido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takamatsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "takanawa-dai": {
+    "hotels_800m": 13,
+    "attractions_800m": 5
+   },
+   "takane-kido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takane-kodan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takano": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "takaosanguchi": {
+    "hotels_800m": 2,
+    "attractions_800m": 3
+   },
+   "takasaka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takashima-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takashima-taira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takayanagi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takebashi": {
+    "hotels_800m": 12,
+    "attractions_800m": 7
+   },
+   "takekawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takenotsuka": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "takeoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takesato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takeshiba": {
+    "hotels_800m": 17,
+    "attractions_800m": 1
+   },
+   "takezawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "taki-fudo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "takinogawa-itchome": {
+    "hotels_800m": 1,
+    "attractions_800m": 5
+   },
+   "tama": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "tama-puraaza": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tama-reien": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "tama-sakai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tama-yodo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tamagawagakuen-mae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tan-so": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tanashi": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "tani-zaike": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "tanmachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tateyama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tatsumi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "taura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tawarada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tawaramachi": {
+    "hotels_800m": 76,
+    "attractions_800m": 18
+   },
+   "tendai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tennocho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "terekomusentaa": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "tetsudohakubutsukan": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tobe": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tobitakyu": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "tochomae": {
+    "hotels_800m": 24,
+    "attractions_800m": 10
+   },
+   "toda": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "todaimae": {
+    "hotels_800m": 8,
+    "attractions_800m": 5
+   },
+   "todakoen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toden-zatsu-tsukasa-ke-tani": {
+    "hotels_800m": 11,
+    "attractions_800m": 6
+   },
+   "todoroki": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "togawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tokiwa-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tokiwadaira": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tokoshikoen": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "tomi-mizu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tomiura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toneri": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "toneri-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "tokaichiba": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "toranomon": {
+    "hotels_800m": 14,
+    "attractions_800m": 8
+   },
+   "torihama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toritsu-daigaku": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "toritsukasei": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "totsuka-angyo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "to-no-sawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tobu-nerima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tobu-takezawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "todai-miya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "todai-shima": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "tofuku-nama": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "togane": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "togu-hara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tohaku-raku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tokai-kami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tokaidaigakumae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toko-ta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tokyo-sukaitsurii": {
+    "hotels_800m": 10,
+    "attractions_800m": 14
+   },
+   "tokyo-teleport": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "tomo-ro": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "torin-kan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toshin-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toso-moto": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toyoko-ta": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "toyocho": {
+    "hotels_800m": 4,
+    "attractions_800m": 1
+   },
+   "toyoharu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsuchike": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsuda-yama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsujido": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukahara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukiji": {
+    "hotels_800m": 36,
+    "attractions_800m": 10
+   },
+   "tsukiji-shijo": {
+    "hotels_800m": 34,
+    "attractions_800m": 17
+   },
+   "tsukimi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tsukinowa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukisaki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukuihama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsukushi-no": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsunashima": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "tsuru-ke-shima": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "tsurugamine": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsurukawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsuruma": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "tsurumakionsen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsurumi-ono": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsurumi-shijo": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "tsuruse": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tsutsuji-ke-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "tsuzuki-fureaino-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "u-no-ki": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "uchisaiwaicho": {
+    "hotels_800m": 30,
+    "attractions_800m": 16
+   },
+   "ue-gora": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ue-kumagaya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ue-nagatani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ue-oi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "uemachi": {
+    "hotels_800m": 0,
+    "attractions_800m": 7
+   },
+   "uhara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ukima-funato": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umagome-sawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umahori-kaigan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umatate": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umegaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "umeshima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umeyashiki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umi-kashima": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umi-no-koen-minamiguchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umi-no-koen-shiba-kuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umi-shibaura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "umigami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "unga": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "uraga": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "urawa-misono": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "urayama-kuchi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "urayasu": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "ushigome-kagurazaka": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   },
+   "ushigome-yanagimachi": {
+    "hotels_800m": 2,
+    "attractions_800m": 5
+   },
+   "ushihama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "uwamizo": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "wa-ko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wada-kawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wada-machi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wada-tsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wada-ura": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wado-kurotani": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wakaba": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "wakabadai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wakabayashi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wakamatsu-kawata": {
+    "hotels_800m": 6,
+    "attractions_800m": 3
+   },
+   "warabi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "waseda": {
+    "hotels_800m": 1,
+    "attractions_800m": 10
+   },
+   "washimiya": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "y-r-p-nobi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yabe": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "yachimata": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yachiyo-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yachiyo-midorigaoka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yachiyodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yagawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "yagi-saki": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yagiri": {
+    "hotels_800m": 0,
+    "attractions_800m": 3
+   },
+   "yaguchi-watari": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yagyu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yahatayama": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "yahiro": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yaho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yako": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yakuen-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yamada": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yamate": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yanagikoji": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yanase-kawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yanoguchi": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yasaka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yashio": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yasuda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yatsu": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yatsuka": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yayoi-dai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoda": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokose": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokoshiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokosuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokosuka-chuo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokota": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yomiurirando-mae": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yono": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yono-honcho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoshi-kawa-koen": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoshikawa": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoshikawa-bi-minami": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoshino-hara": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yoshinocho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yotsuya-sanchome": {
+    "hotels_800m": 6,
+    "attractions_800m": 10
+   },
+   "yodo": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoga": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "yokaichiba": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yokodai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yoro-keikoku": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yubi-ogi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yugawara": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yui-ke-hama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yuki-ga-taniotsuka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yukinori": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yumega-oka": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yuri-ke-oka": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "yushima": {
+    "hotels_800m": 63,
+    "attractions_800m": 25
+   },
+   "yutaka-shiki": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "yutenji": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "yuenchi-nishi": {
+    "hotels_800m": 0,
+    "attractions_800m": 4
+   },
+   "zama": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "zenko": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "zoshiki": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "zushi": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   }
+  },
+  "bangkok": {
+   "11th-infantry-regiment": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ari": {
+    "hotels_800m": 8,
+    "attractions_800m": 3
+   },
+   "asok": {
+    "hotels_800m": 156,
+    "attractions_800m": 4
+   },
+   "ban-thap-chang": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-bua": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-chak": {
+    "hotels_800m": 11,
+    "attractions_800m": 0
+   },
+   "bang-chan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-kapi": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "bang-khae": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-khen": {
+    "hotels_800m": 2,
+    "attractions_800m": 4
+   },
+   "bang-khun-non": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "bang-na": {
+    "hotels_800m": 0,
+    "attractions_800m": 2
+   },
+   "bang-o": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "bang-phai": {
+    "hotels_800m": 3,
+    "attractions_800m": 4
+   },
+   "bang-phlat": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "bang-pho": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-son": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "bang-wa": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "bang-yi-khan": {
+    "hotels_800m": 10,
+    "attractions_800m": 1
+   },
+   "bearing": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "bhumibol-adulyadej-hospital": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chaeng-watthana-14": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "charan-13": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "charoen-nakhon": {
+    "hotels_800m": 17,
+    "attractions_800m": 4
+   },
+   "chatuchak": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "chit-lom": {
+    "hotels_800m": 46,
+    "attractions_800m": 5
+   },
+   "chok-chai-4": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "chong-nonsi": {
+    "hotels_800m": 95,
+    "attractions_800m": 6
+   },
+   "don-mueang": {
+    "hotels_800m": 10,
+    "attractions_800m": 1
+   },
+   "ekkamai": {
+    "hotels_800m": 19,
+    "attractions_800m": 2
+   },
+   "fai-chai": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "government-complex": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "ha-yaek-lat-phrao": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "hua-lamphong": {
+    "hotels_800m": 61,
+    "attractions_800m": 12
+   },
+   "hua-mak": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "huai-khwang": {
+    "hotels_800m": 29,
+    "attractions_800m": 1
+   },
+   "itsaraphap": {
+    "hotels_800m": 1,
+    "attractions_800m": 2
+   },
+   "kalantan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "kamphaeng-phet": {
+    "hotels_800m": 5,
+    "attractions_800m": 6
+   },
+   "kan-kheha": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "kasetsart-university": {
+    "hotels_800m": 6,
+    "attractions_800m": 2
+   },
+   "khlong-san": {
+    "hotels_800m": 15,
+    "attractions_800m": 7
+   },
+   "khlong-toei": {
+    "hotels_800m": 23,
+    "attractions_800m": 2
+   },
+   "khu-bon": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "krung-thep-aphiwat": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "krung-thon-buri": {
+    "hotels_800m": 13,
+    "attractions_800m": 0
+   },
+   "lak-si": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "lak-song": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "lat-krabang": {
+    "hotels_800m": 5,
+    "attractions_800m": 1
+   },
+   "lat-phrao": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "lat-phrao-101": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "lat-phrao-71": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "lat-phrao-83": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "lat-pla-khao": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "lumphini": {
+    "hotels_800m": 37,
+    "attractions_800m": 5
+   },
+   "mahatthai": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "maiyalap": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "min-buri": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "min-buri-market": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "mo-chit": {
+    "hotels_800m": 2,
+    "attractions_800m": 9
+   },
+   "nana": {
+    "hotels_800m": 197,
+    "attractions_800m": 3
+   },
+   "national-stadium": {
+    "hotels_800m": 46,
+    "attractions_800m": 15
+   },
+   "national-telecom": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "nopparat": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "on-nut": {
+    "hotels_800m": 23,
+    "attractions_800m": 1
+   },
+   "outer-ring-road-ram-inthra": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "phahonyothin-24": {
+    "hotels_800m": 2,
+    "attractions_800m": 2
+   },
+   "phahonyothin-59": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "phasi-charoen": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "phawana": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "phaya-thai": {
+    "hotels_800m": 114,
+    "attractions_800m": 4
+   },
+   "phetchaburi": {
+    "hotels_800m": 15,
+    "attractions_800m": 0
+   },
+   "phetkasem-48": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "phloen-chit": {
+    "hotels_800m": 125,
+    "attractions_800m": 3
+   },
+   "pho-nimit": {
+    "hotels_800m": 4,
+    "attractions_800m": 0
+   },
+   "phra-khanong": {
+    "hotels_800m": 15,
+    "attractions_800m": 1
+   },
+   "phra-ram-9": {
+    "hotels_800m": 10,
+    "attractions_800m": 1
+   },
+   "phrom-phong": {
+    "hotels_800m": 74,
+    "attractions_800m": 2
+   },
+   "punnawithi": {
+    "hotels_800m": 9,
+    "attractions_800m": 1
+   },
+   "queen-sirikit-national-convention-centre": {
+    "hotels_800m": 22,
+    "attractions_800m": 3
+   },
+   "rajabhat-phranakhon": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "ram-inthra-3": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ram-inthra-kor-mor-4": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "ram-inthra-kor-mor-6": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ram-inthra-kor-mor-9": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "ramkhamhaeng": {
+    "hotels_800m": 7,
+    "attractions_800m": 0
+   },
+   "ratchadamri": {
+    "hotels_800m": 27,
+    "attractions_800m": 5
+   },
+   "ratchadaphisek": {
+    "hotels_800m": 9,
+    "attractions_800m": 1
+   },
+   "ratchaprarop": {
+    "hotels_800m": 118,
+    "attractions_800m": 5
+   },
+   "ratchathewi": {
+    "hotels_800m": 109,
+    "attractions_800m": 11
+   },
+   "ratchayothin": {
+    "hotels_800m": 5,
+    "attractions_800m": 1
+   },
+   "royal-forest-department": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "royal-thai-air-force-museum": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "sai-yud": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "saint-louis": {
+    "hotels_800m": 71,
+    "attractions_800m": 3
+   },
+   "sala-daeng": {
+    "hotels_800m": 87,
+    "attractions_800m": 5
+   },
+   "sam-yan": {
+    "hotels_800m": 62,
+    "attractions_800m": 11
+   },
+   "sam-yot": {
+    "hotels_800m": 53,
+    "attractions_800m": 16
+   },
+   "sanam-chai": {
+    "hotels_800m": 21,
+    "attractions_800m": 13
+   },
+   "sanam-pao": {
+    "hotels_800m": 8,
+    "attractions_800m": 0
+   },
+   "saphan-khwai": {
+    "hotels_800m": 15,
+    "attractions_800m": 5
+   },
+   "saphan-mai": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "saphan-taksin": {
+    "hotels_800m": 30,
+    "attractions_800m": 3
+   },
+   "sena-nikhom": {
+    "hotels_800m": 3,
+    "attractions_800m": 2
+   },
+   "sena-ruam": {
+    "hotels_800m": 18,
+    "attractions_800m": 2
+   },
+   "setthabutbamphen": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "si-iam": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "si-kritha": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "si-la-salle": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "si-nut": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "siam": {
+    "hotels_800m": 41,
+    "attractions_800m": 19
+   },
+   "sirindhorn": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "srinagarindra-38": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "surasak": {
+    "hotels_800m": 55,
+    "attractions_800m": 2
+   },
+   "sutthisan": {
+    "hotels_800m": 25,
+    "attractions_800m": 1
+   },
+   "talat-phlu": {
+    "hotels_800m": 2,
+    "attractions_800m": 0
+   },
+   "taling-chan": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tao-poon": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "tha-phra": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "thailand-cultural-centre": {
+    "hotels_800m": 11,
+    "attractions_800m": 3
+   },
+   "thong-lo": {
+    "hotels_800m": 26,
+    "attractions_800m": 4
+   },
+   "thung-song-hong": {
+    "hotels_800m": 1,
+    "attractions_800m": 1
+   },
+   "udom-suk": {
+    "hotels_800m": 9,
+    "attractions_800m": 0
+   },
+   "vacharaphol": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "victory-monument": {
+    "hotels_800m": 36,
+    "attractions_800m": 4
+   },
+   "wat-mangkon": {
+    "hotels_800m": 61,
+    "attractions_800m": 17
+   },
+   "wat-phra-sri-mahathat": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "wat-samian-nari": {
+    "hotels_800m": 1,
+    "attractions_800m": 0
+   },
+   "wong-sawang": {
+    "hotels_800m": 0,
+    "attractions_800m": 0
+   },
+   "wongwian-yai": {
+    "hotels_800m": 12,
+    "attractions_800m": 0
+   },
+   "wutthakat": {
+    "hotels_800m": 3,
+    "attractions_800m": 0
+   },
+   "yaek-kor-por-aor": {
+    "hotels_800m": 0,
+    "attractions_800m": 1
+   },
+   "yaek-lam-sali": {
+    "hotels_800m": 5,
+    "attractions_800m": 2
+   }
+  }
+ }
+}

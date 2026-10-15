@@ -382,7 +382,11 @@
     "floodDepthTooltip": "想定最大規模 scenarioでの浸水深度（東京都浸水予想区域図）。",
     "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)",
     "michelin": "ミシュラン近く",
-    "michelinTooltip": "ミシュランガイド2026の星付き・ビブグルマン店舗（800m以内）。"
+    "michelinTooltip": "ミシュランガイド2026の星付き・ビブグルマン店舗（800m以内）。",
+    "touristLoad": "観光客が多いエリア",
+    "touristLoadTooltip": "徒歩圏内にホテルや観光スポットが多い駅です。",
+    "touristLoadBadge": "近くにホテル{count}件",
+    "sourceTourism": "OpenStreetMap (ODbL)"
   },
   "seismicTiers": {
     "low": {
@@ -582,7 +586,9 @@
       "factsSource": "駅エリア（最寄り駅から800m以内）の中の概数。施設: Overture Maps Places（CDLA-Permissive-2.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。",
       "districtsTitle": "区",
       "districtsCaption": "この駅エリアがまたがる区と住民の比率。家賃と治安はこれらの区の推定値から。",
-      "viewGrid": "200mメッシュで見る →"
+      "viewGrid": "200mメッシュで見る →",
+      "factHotels": "近くのホテル",
+      "factAttractions": "近くの観光スポット"
     }
   }
 }

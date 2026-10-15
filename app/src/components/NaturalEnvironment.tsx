@@ -21,11 +21,12 @@ export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
   const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier,
           embassies_800m, english_medicine_2km, flood_depth_m,
-          michelin_stars, michelin_bib } = environment;
+          michelin_stars, michelin_bib, hotels_800m, tourist_badge } = environment;
 
   if (elevation_m == null && seismic_prob_i60 == null
       && embassies_800m == null && english_medicine_2km == null
-      && michelin_stars == null && michelin_bib == null) return null;
+      && michelin_stars == null && michelin_bib == null
+      && hotels_800m == null) return null;
 
   const tier = seismic_risk_tier ?? 'unknown';
   const seismicColor = SEISMIC_COLORS[tier];
@@ -235,6 +236,34 @@ export function NaturalEnvironment({ environment }: Props) {
                     {michelin_stars > 0 && `${michelin_stars}★`}
                     {michelin_stars > 0 && (michelin_bib ?? 0) > 0 && ' · '}
                     {(michelin_bib ?? 0) > 0 && `${michelin_bib} Bib`}
+                  </span>
+                </div>
+              </Tooltip>
+            </div>
+          </div>
+        )}
+
+        {/* Tourist load badge (CRTKY-193) */}
+        {tourist_badge === true && hotels_800m != null && (
+          <div className="flex items-start gap-3">
+            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🧳</span>
+            <div className="min-w-0">
+              <Tooltip
+                showHelpIcon={false}
+                content={
+                  <>
+                    <span className="font-semibold">{t('station.touristLoad')}</span>
+                    <span className="block mt-1">{t('station.touristLoadTooltip')}</span>
+                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceTourism')}</span>
+                  </>
+                }
+              >
+                <div className="cursor-help">
+                  <span className="text-sm font-medium text-gray-900">
+                    {t('station.touristLoad')}
+                  </span>
+                  <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-sky-50 border border-sky-200 px-2 py-0.5 text-[10px] font-medium text-sky-700">
+                    {t('station.touristLoadBadge', { count: hotels_800m })}
                   </span>
                 </div>
               </Tooltip>
