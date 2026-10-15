@@ -1,3 +1,5 @@
+import { InstitutionFacts } from '@/components/InstitutionFacts';
+import { getInstitutions } from '@/lib/institutions';
 import { dataLabel } from '@/i18n/message-key';
 import { hasLocale } from 'next-intl';
 import AirPanel from '@/components/AirPanel';
@@ -405,6 +407,7 @@ export default async function StationAreaPage({
           </div>
 
           <AirPanel city="bangkok" />
+        <InstitutionFacts fact={getInstitutions('bangkok', 'station', a.id)} />
           <QuietnessFacts fact={getQuietness('bangkok', a.id)} />
 
           {/* By the numbers */}

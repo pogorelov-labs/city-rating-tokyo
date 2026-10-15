@@ -1,653 +1,87 @@
 {
  "_meta": {
-  "embassies": "OSM office=diplomatic + Wikidata, 167 POIs, ODbL 1.0 / CC0",
-  "english_medicine": "JNTO 'Guide for when you are feeling ill', 508 Tokyo facilities, © JNTO — counts only, no row republication",
-  "computed": "2026-10-14"
+  "snapshot_date": "2026-10-14",
+  "source_urls": {
+   "osm": "https://www.openstreetmap.org/copyright",
+   "wikidata": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+   "medicine": "https://www.jnto.go.jp/emergency/eng/mi_guide.html"
+  },
+  "embassy_license": "OpenStreetMap ODbL 1.0; Wikidata CC0",
+  "medicine_license": "© Japan Tourism Agency / JNTO; aggregate counts and links only",
+  "embassy_radius_m": 800,
+  "medicine_radius_m": 2000,
+  "distance": "great-circle, Earth radius 6371000 m; inclusive threshold; not walking distance",
+  "district_rule": "committed polygons including holes; covers; shared boundary assigned to first sorted slug; overlapping interiors rejected",
+  "coverage": "Snapshot records, not exhaustive inventories. Tokyo medicine includes only 508 Tokyo-prefecture JNTO records, including counts near the prefecture border.",
+  "bangkok_medicine": "unavailable: no verified publishable English-service source",
+  "source_dates": {
+   "bangkok_osm": "2026-06-01T08:52:28Z",
+   "tokyo_osm": "2026-07-24T11:04:51Z"
+  },
+  "retained_embassies": {
+   "tokyo": 167,
+   "bangkok": 79
+  },
+  "tokyo_medicine_records": 508,
+  "excluded_by_reason": {
+   "tokyo": {
+    "defunct": 2,
+    "duplicate": 1,
+    "unnamed": 2,
+    "no_coordinates": 21
+   },
+   "bangkok": {
+    "data_noise": 1,
+    "unnamed": 1,
+    "no_coordinates": 10
+   }
+  },
+  "input_sha256": {
+   "research/snapshots/2026-10-14/embassies/embassies-tokyo.geojson": "b68d91899cd7b3ce56017fccba117fe2663776f9427594affc0e8088a501baca",
+   "research/snapshots/2026-10-14/embassies/embassies-bangkok.geojson": "8661b991ae46ef9b8506d197736e8d464cdca1f3fbe1a085ac3b5e761ee6580b",
+   "research/snapshots/2026-10-14/embassies/summary.json": "b4119bef2aa83192898960a90be83668da2afa11e2182971f47168ecff29a801",
+   "research/snapshots/2026-10-14/embassies/LICENSE.txt": "608da72151deb83715eceeddcb5a510f44c5b5b0ff3390e608b78173ccc56f99",
+   "research/snapshots/2026-10-14/medicine-jnto/medicine-jnto.json": "2c9cfcf6e5f8c809ce1a6d2c682e3ae0e8ab174d18bff7177fb4b9a933f68a45",
+   "research/snapshots/2026-10-14/medicine-jnto/LICENSE.txt": "82e1902c3dcddecf43e5bc8d0d83a6756fd14052c695779931dd2bb86652d156",
+   "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+   "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+   "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
+   "app/src/data/bangkok/districts.json": "2ca67341e86cab9292c198e1de9e0ea19d792cbe52beea2bb036bb48e17e0e36",
+   "app/src/data/bangkok/stations.json": "e8a50e834cce129ecb2f9ed22e2863674a8acfb48effa6a23ea62c8361c0328a"
+  }
  },
  "stations": {
-  "shinjuku": {
+  "abiko": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 35
+   "english_medicine_within_2km": 0
   },
-  "tokyo": {
+  "adachi-odai": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 52
+   "english_medicine_within_2km": 0
   },
-  "shibuya": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 32
-  },
-  "ikebukuro": {
+  "ageo": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 21
+   "english_medicine_within_2km": 0
   },
-  "ueno": {
+  "agui": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 23
+   "english_medicine_within_2km": 0
   },
-  "shimbashi": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 57
-  },
-  "kita-senju": {
+  "aihara": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
+   "english_medicine_within_2km": 0
   },
-  "nippori": {
+  "aiko-ishida": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 12
-  },
-  "shinagawa": {
-   "embassies_within_800m": 3,
-   "english_medicine_within_2km": 18
+   "english_medicine_within_2km": 0
   },
   "akabane": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
-  "akihabara": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 36
-  },
-  "hachioji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "iidabashi": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 27
-  },
-  "keisei-takasago": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "kichijoji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "kokubunji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "nagatacho": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 52
-  },
-  "okachimachi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 29
-  },
-  "otemachi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 47
-  },
-  "tachikawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "yotsuya": {
-   "embassies_within_800m": 4,
-   "english_medicine_within_2km": 32
-  },
-  "ebisu": {
-   "embassies_within_800m": 2,
-   "english_medicine_within_2km": 43
-  },
-  "haijima": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "ichigaya": {
-   "embassies_within_800m": 7,
-   "english_medicine_within_2km": 27
-  },
-  "kanda": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 46
-  },
-  "meguro": {
-   "embassies_within_800m": 7,
-   "english_medicine_within_2km": 27
-  },
-  "mitaka": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "nerima": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "nishi-nippori": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "ochanomizu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 38
-  },
-  "osaki": {
-   "embassies_within_800m": 3,
-   "english_medicine_within_2km": 21
-  },
-  "oshiage-sukaitsurii-mae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
-  },
-  "takao": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "aoyama-itchome": {
-   "embassies_within_800m": 2,
-   "english_medicine_within_2km": 65
-  },
-  "asakusa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 11
-  },
-  "bakurocho": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 34
-  },
-  "chikatetsu-akatsuka": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "chikatetsu-narimasu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "ginza": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 50
-  },
-  "gotanda": {
-   "embassies_within_800m": 8,
-   "english_medicine_within_2km": 25
-  },
-  "hamamatsucho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 39
-  },
-  "harajuku": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 32
-  },
-  "hibiya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 55
-  },
-  "hikifune": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "jimbocho": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 39
-  },
-  "kamata": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "keiotama-sentaa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "kinshicho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "kotake-mukaihara": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "kudanshita": {
-   "embassies_within_800m": 4,
-   "english_medicine_within_2km": 33
-  },
-  "machiya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "minamisenju": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "mitsukoshimae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 43
-  },
-  "nakano": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 13
-  },
-  "nakano-sakaue": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 29
-  },
-  "nihonbashi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 48
-  },
-  "ogikubo": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "oimachi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
-  },
-  "oji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "omotesando": {
-   "embassies_within_800m": 2,
-   "english_medicine_within_2km": 50
-  },
-  "shinjuku-sanchome": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 37
-  },
-  "takadanobaba": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 27
-  },
-  "tamagawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "yoyogi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 36
-  },
-  "yurakucho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 52
-  },
   "akabane-iwabuchi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
-  },
-  "asagaya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
-  },
-  "asakusabashi": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 29
-  },
-  "awajicho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 40
-  },
-  "ayase": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "azabu-juban": {
-   "embassies_within_800m": 28,
-   "english_medicine_within_2km": 65
-  },
-  "bubaigawara": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "daimon": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 46
-  },
-  "denenchofu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "fuchuhonmachi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "futako-tamagawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "futakoshinchi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 5
-  },
-  "gotokuji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
-  },
-  "hagiyama": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "hatagaya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 13
-  },
-  "hatanodai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
-  },
-  "hatchobori": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 40
-  },
-  "heiwadai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "higashi-fuchu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "higashi-ikebukuro": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 26
-  },
-  "higashi-nakano": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 32
-  },
-  "higashi-shinjuku": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 37
-  },
-  "higashiginza": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 46
-  },
-  "hikawadai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "hongo-sanchome": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 42
-  },
-  "jiyugaoka": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
-  },
-  "kameido": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "kanamachi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "kanamecho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 18
-  },
-  "kasuga": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 30
-  },
-  "kayabacho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 38
-  },
-  "keikyu-kamata": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "keiseiueno": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 28
-  },
-  "kitano": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "kiyosumi-shirakawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "kodaira": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "koenji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 13
-  },
-  "kokkai-gijidomae": {
-   "embassies_within_800m": 5,
-   "english_medicine_within_2km": 55
-  },
-  "komagome": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 14
-  },
-  "korakuen": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 34
-  },
-  "kumano-mae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "kuramae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 18
-  },
-  "kyobashi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 48
-  },
-  "machida": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "meidaimae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "mita": {
-   "embassies_within_800m": 5,
-   "english_medicine_within_2km": 29
-  },
-  "monzen-nakacho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 12
-  },
-  "morishita": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
-  },
-  "musashi-sakai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 5
-  },
-  "nakai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 18
-  },
-  "nakameguro": {
-   "embassies_within_800m": 3,
-   "english_medicine_within_2km": 22
-  },
-  "nakanobe": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "ningyocho": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 34
-  },
-  "nishi-hachioji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "nishi-kokubunji": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "nishi-oi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
-  },
-  "nishiarai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "nishiogikubo": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 5
-  },
-  "ogawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "oku": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "ookayama": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
-  },
-  "otsuka": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 23
-  },
-  "roppongi": {
-   "embassies_within_800m": 11,
-   "english_medicine_within_2km": 76
-  },
-  "ryogoku": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 10
-  },
-  "sagamiono": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "sangenjaya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 10
-  },
-  "sasazuka": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 10
-  },
-  "sengakuji": {
-   "embassies_within_800m": 2,
-   "english_medicine_within_2km": 29
-  },
-  "senkawa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "shimokitazawa": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 12
-  },
-  "shimotakaido": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 5
-  },
-  "shin-koiwa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "shin-okachimachi": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 28
-  },
-  "shiodome": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 49
-  },
-  "shirokane-takanawa": {
-   "embassies_within_800m": 5,
-   "english_medicine_within_2km": 45
-  },
-  "shirokanedai": {
-   "embassies_within_800m": 6,
-   "english_medicine_within_2km": 33
-  },
-  "shodai": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 20
-  },
-  "sugamo": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 15
-  },
-  "suidobashi": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 35
-  },
-  "sumiyoshi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 10
-  },
-  "tabata": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
-  },
-  "takatsu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "tamachi": {
-   "embassies_within_800m": 4,
-   "english_medicine_within_2km": 29
-  },
-  "tameike-sanno": {
-   "embassies_within_800m": 6,
-   "english_medicine_within_2km": 58
-  },
-  "tenku-hashi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "tennozu-isle": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 11
-  },
-  "togoshi-ginza": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 13
-  },
-  "toshimaen": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "toyosu": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 5
-  },
-  "toyota": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "tsukishima": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 22
-  },
-  "uguisudani": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 18
-  },
-  "ushita": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
-  },
-  "yoyogi-hachiman": {
-   "embassies_within_800m": 5,
-   "english_medicine_within_2km": 18
-  },
-  "yoyogi-uehara": {
-   "embassies_within_800m": 3,
-   "english_medicine_within_2km": 11
-  },
-  "zoshigaya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 27
   },
   "akabanebashi": {
    "embassies_within_800m": 21,
@@ -661,6 +95,14 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 35
   },
+  "akigawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "akihabara": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 36
+  },
   "akira-shima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
@@ -669,9 +111,41 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "akiyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "an-zen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "anabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "anagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "anamori-inari": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "ane-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "anjin-tsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ao-hori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "aobadai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "aoi": {
    "embassies_within_800m": 0,
@@ -681,9 +155,21 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
   },
+  "aoto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "aoyama-itchome": {
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": 65
+  },
   "arai-kusurishi-mae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 12
+  },
+  "araijuku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "arakawa-itchu-mae": {
    "embassies_within_800m": 0,
@@ -709,6 +195,10 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "araki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "ariake": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
@@ -717,13 +207,197 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "asagaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
+  "asahi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "asaka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "asakusa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 11
+  },
+  "asakusabashi": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 29
+  },
+  "asano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ashi-ke-kubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ashigara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "asuka-yama": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "atago": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "atsugi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "awa-kamogawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "awa-katsuyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "awa-kominato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "awa-tenshin": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "awajicho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 40
+  },
+  "ayase": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "azabu-juban": {
+   "embassies_within_800m": 28,
+   "english_medicine_within_2km": 65
+  },
+  "azami-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "baigo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bakurocho": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 34
+  },
+  "ban-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bando-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "barakinakayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "basha-michi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "benten-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bubaigawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "bushu-araki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bushu-hino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bushu-karasawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bushu-nagase": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "bushu-nakagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "busshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "byobu-ura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chiba-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chiba-minato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chiba-nyutaun-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chiba-tera": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chibachuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chichibu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "chidoricho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "chihara-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chikatetsu-akatsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "chikatetsu-narimasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "chiku-sentaa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chikura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chitose": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "chitose-funabashi": {
    "embassies_within_800m": 0,
@@ -733,21 +407,97 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
+  "cho-ura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chofu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chogo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chojamachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chokoku-no-mori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "choshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chugakko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chuodaigaku-meiseidaigaku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "chuorinkan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "daiba": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "daijingushita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "daikanyama": {
    "embassies_within_800m": 5,
    "english_medicine_within_2km": 34
   },
+  "daimon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 46
+  },
   "daishimae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "denenchofu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
+  "dobutsu-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "dokkyodaigaku-zen-eki-soka-matsubara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "doro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ebina": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ebisu": {
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": 43
+  },
+  "eda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "edogawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "edogawa-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "edogawabashi": {
    "embassies_within_800m": 1,
@@ -769,9 +519,21 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "emi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "enoto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "etchu-shima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 15
+  },
+  "fuchinobe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "fuchu": {
    "embassies_within_800m": 0,
@@ -781,9 +543,37 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "fuchuhonmachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "fuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "fudomae": {
    "embassies_within_800m": 4,
    "english_medicine_within_2km": 20
+  },
+  "fuji-fuirumu-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fuji-no-ushijima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fujigaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fujimi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fujimicho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "fujimidai": {
    "embassies_within_800m": 0,
@@ -793,6 +583,50 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "fujino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fujisawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fujisawa-honcho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fukaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fukiage": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fukudawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fukuura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "funabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "funabashi-hoten": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "funabashi-nichidai-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "funabashikeibajo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "funabori": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
@@ -801,13 +635,49 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "furusato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "fusa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "fussa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "futako-tamagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
+  "futakoshinchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 5
+  },
+  "futamata-o": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "futamata-shinmachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "futamatagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "futawa-mukaedai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "gaiemmae": {
    "embassies_within_800m": 2,
    "english_medicine_within_2km": 58
+  },
+  "gakuen-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "gakugei-daigaku": {
    "embassies_within_800m": 0,
@@ -817,17 +687,133 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 27
   },
+  "gamo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "genka-osamu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gezan-kuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ginza": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 50
+  },
   "ginzaitchome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 48
+  },
+  "gion": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gogatsu-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gohyaku-rakan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "goi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "goko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "gokokuji": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 21
   },
+  "gokuraku-tera": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gora": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "gotan-no": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "gotanda": {
+   "embassies_within_800m": 8,
+   "english_medicine_within_2km": 25
+  },
+  "gotokuji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
+  "gun-hatake": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gyoda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "gyodashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hachi-seki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hachigata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hachiman-yado": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hachioji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "hachioji-minami-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hadano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hagiyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "haijima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "hakkei-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hakone-itabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hakone-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hakoneyumoto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hakuraku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "hakusan": {
    "embassies_within_800m": 0,
@@ -841,17 +827,125 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "hamakawasaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hamakin-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hamamatsucho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 39
+  },
+  "hamano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "hamura": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "hana-koganei": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hanasaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hane-kan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hanedakuko-kokunaisen-taaminaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hanedakuko-kokusaisen-taaminaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hanno": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hanyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "hanzomon": {
    "embassies_within_800m": 12,
    "english_medicine_within_2km": 32
   },
+  "hara-toma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "haraichi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "harajuku": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 32
+  },
+  "haruhi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hase": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hashimoto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hasuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "hasunuma": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
+  },
+  "hatagaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 13
+  },
+  "hatanodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
+  "hatchobori": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 40
+  },
+  "hatchonawate": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hato-ke-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hato-no-su": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hatsuishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hatsutomi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hayakawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "hazama": {
    "embassies_within_800m": 0,
@@ -861,6 +955,22 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "heiwadai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "hibarigaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hibiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 55
+  },
+  "higashi-abiko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "higashi-aki-ryu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
@@ -868,6 +978,26 @@
   "higashi-azuma": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "higashi-fuchu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "higashi-funabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-ikebukuro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 26
+  },
+  "higashi-iwatsuki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-kanagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "higashi-koenji": {
    "embassies_within_800m": 0,
@@ -881,13 +1011,69 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
+  "higashi-matsudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-murayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-nakano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 32
+  },
+  "higashi-nami-ken": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-shinjuku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 37
+  },
+  "higashi-washimiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashi-zushi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashichiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashifushimi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashiginza": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 46
+  },
+  "higashihanno": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "higashijujo": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "higashikawaguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "higashikitazawa": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 10
+  },
+  "higashikurume": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashimatsuyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "higashimon-mae": {
    "embassies_within_800m": 0,
@@ -901,13 +1087,81 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
   },
+  "higashinaka-kami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashinakayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashinarita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "higashiogu-sanchome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "higashiome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashitokorozawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashitotsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashiurawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashiyama-kita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashiyama-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higashiyamatoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "higuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "hikarigaoka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "hikawadai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "hikifune": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
+  "himemiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hinatawada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "hinode": {
    "embassies_within_800m": 1,
@@ -917,25 +1171,125 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "hirama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hiranumabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hiratsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hirayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hirayama-joshi-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hire-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hiroaki-tera": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "hiroo": {
    "embassies_within_800m": 40,
    "english_medicine_within_2km": 61
+  },
+  "hirose-yacho-no-mori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "hitotsubashi-gakuen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "hiyoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hiyoshihoncho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ho-tsuchi-ke-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hodokubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hokucho-kasumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hokudai-miya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hokuetsu-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hon-atsugi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hon-choshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "hon-komagome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 22
+  },
+  "hon-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "honancho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "honchiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hongo-sanchome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 42
+  },
+  "hongodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "honjo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "honjoazumabashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
+  },
+  "honkawa-etsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "honkugenuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hori-no-nai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "horikiri": {
    "embassies_within_800m": 0,
@@ -944,6 +1298,82 @@
   "horikiri-shobuen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "hoshikawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hotaruda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hoya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "hyuga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "i-hosoda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichi-no-wari": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichigaya": {
+   "embassies_within_800m": 7,
+   "english_medicine_within_2km": 27
+  },
+  "ichikawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichikawa-mama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichikawa-ono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichikawa-shiohama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ichinoe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ido-ke-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iida-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iidabashi": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 27
+  },
+  "iikura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iioka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iiyama-man": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ikebukuro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 21
   },
   "ikegami": {
    "embassies_within_800m": 0,
@@ -957,21 +1387,121 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 13
   },
+  "ikuta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ima-hane": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ina-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inadazutsumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inage": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inage-kaigan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inagi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inagi-naganuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inamura-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "inaricho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 22
+  },
+  "inariyama-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inba-nippon-idai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "inokashira-koen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "inuboe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "inzai-maki-no-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "iogi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "ipponmatsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iriuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iriya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "irumashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "isehara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "isezaki-chojamachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ishigami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ishigami-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ishihara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ishikawacho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "ishikawadai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "isogo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "itabashi": {
    "embassies_within_800m": 0,
@@ -985,25 +1515,125 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
   },
+  "itsumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iwahara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iwai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "iwamotocho": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 39
+  },
+  "iwane": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "iwatsuki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "izumi-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "izumi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "izumi-taiikukan": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "izumi-tamagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "jimbocho": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 39
+  },
+  "jinbohara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "jinmu-tera": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "jiyugaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 8
+  },
+  "jocho-toro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "josei-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "joshidai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "jujo": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "juni-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kachidoki": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 20
   },
+  "kadosawa-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kagemori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kagetsuen-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kago-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kagurazaka": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 25
+  },
+  "kaihinmakuhari": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kaisei": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kaishi-ariki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kaji-ga-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kajiwara": {
    "embassies_within_800m": 0,
@@ -1013,17 +1643,57 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "kama-ke-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kama-ke-tani-daibutsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kama-shu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamakura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamakura-koko-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
   "kameari": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "kameido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
   },
   "kameido-suijin": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "kamifukuoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamihongo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kamiigusa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "kamiishi-kami-i": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kamiitabashi": {
    "embassies_within_800m": 0,
@@ -1032,6 +1702,10 @@
   "kamiizumi": {
    "embassies_within_800m": 6,
    "english_medicine_within_2km": 28
+  },
+  "kamikita-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kamikitazawa": {
    "embassies_within_800m": 0,
@@ -1045,17 +1719,81 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 8
   },
+  "kamiooka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kamiyacho": {
    "embassies_within_800m": 22,
    "english_medicine_within_2km": 71
+  },
+  "kamo-miya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamoi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kamonomiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanagawashinmachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanamachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "kanamecho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 18
+  },
+  "kanazawa-bunko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanazawa-hakkei": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 46
   },
   "kane-ke-fuchi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "kaneko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kanno": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kannon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "karakida": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "kasa-hata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kasa-ue-kuronama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kasai": {
    "embassies_within_800m": 0,
@@ -1065,13 +1803,225 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "kashima-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kashiwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kashiwa-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kashiwa-no-ha-kyanpasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kashiwa-tanaka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kasuga": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 30
+  },
+  "kasukabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kasumigaseki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "katakura": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "katakuracho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katase-ko-no-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katase-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katsu-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katsuta-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "katsuura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawa-kan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawagoe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawagoeshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawaguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawaguchi-motogo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawasaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawasaki-shinmachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kawasakidaishi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "kawasumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kawawacho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kayabacho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 38
+  },
+  "kayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazamatsuri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-higashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-ichinomiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-kameyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-kawa-kan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-kiyokawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-kubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-matsuoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-minato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-mitsumata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-murakami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-nakagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-okitsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-okubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-tsurumai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-ushiku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusa-yamada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kazusanakano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keikyu-kamata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
+  "keikyu-kawasaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keikyu-nagasawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keikyu-otsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keikyu-taura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keikyu-tomioka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "keio-horinochi": {
    "embassies_within_800m": 0,
@@ -1081,25 +2031,145 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "keio-nagayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keio-yomiuri-rando": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "keiohachioji": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "keioinadatsutsumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keiotama-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keiotama-sentaa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
   },
   "keisei-hikifune": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "keisei-inage": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "keisei-koiwa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "keisei-nakayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-nishifuna": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-okubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-owada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-sake-kurikaesi-i": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-sakura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-takasago": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "keisei-tateishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-tsudanuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keisei-usui": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "keiseiueno": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 28
+  },
+  "kemigawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kemigawahama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kenchomae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kenritsudai-gaku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kiba": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "kibo-ke-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kichijoji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
   "kikukawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "kikuna": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kimitsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kinoshita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kinshicho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
+  "kinugasa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kisarazu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kishine-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kita-akabane": {
    "embassies_within_800m": 0,
@@ -1113,13 +2183,53 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "kita-hatsutomi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kita-kashiwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kita-kasukabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kita-kogane": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kita-konosu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kita-me-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kita-sando": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 31
   },
+  "kita-senju": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
   "kita-shinagawa": {
    "embassies_within_800m": 5,
    "english_medicine_within_2km": 16
+  },
+  "kita-yono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitado-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitaguni-fun": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kitahachi-oji": {
    "embassies_within_800m": 0,
@@ -1129,17 +2239,137 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 18
   },
+  "kitakamakura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitakami-o": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitakurihama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitamatsudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitamoto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitanarashino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "kitasaka-ko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kitasenzoku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "kitashin-yokohama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitaurawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kitayamata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kiyose": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kiyosumi-shirakawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
   },
   "ko-fuchi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "ko-kawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ko-no-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ko-tsu-no-mori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kobayashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kodaira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "kodama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kodenmacho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 39
+  },
+  "kodomono-kuni": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koen-shita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koen-ue": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koenji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 13
+  },
+  "kofu-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kogane-joshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koganecho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kohoku-abiko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kohoku-adachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
   },
   "koigakubo": {
    "embassies_within_800m": 0,
@@ -1149,13 +2379,53 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "kojima-nitta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kojimachi": {
    "embassies_within_800m": 10,
    "english_medicine_within_2km": 35
   },
+  "kojiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 8
+  },
+  "kokkai-gijidomae": {
+   "embassies_within_800m": 5,
+   "english_medicine_within_2km": 55
+  },
+  "kokonoe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kokorozashi-kyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koku-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kokubunji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "kokudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kokuga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kokuritsu-kyogijo": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 34
+  },
+  "kokuryo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kokusai-tenjijo": {
    "embassies_within_800m": 0,
@@ -1169,6 +2439,18 @@
    "embassies_within_800m": 3,
    "english_medicine_within_2km": 17
   },
+  "komae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "komagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "komagome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 14
+  },
   "komazawa-daigaku": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 11
@@ -1181,51 +2463,223 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
-  "koremasa": {
+  "komuro": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
+   "english_medicine_within_2km": 0
   },
-  "kosuge": {
+  "konan-chuo": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 3
+   "english_medicine_within_2km": 0
   },
-  "kohoku-adachi": {
+  "konandai": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "kojiya": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 8
+   "english_medicine_within_2km": 0
   },
   "konodai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "konosu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "korai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "korakuen": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 34
+  },
+  "koremasa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "koshigaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koshigaya-reikutaun": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koshigoe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "koshin-tsuka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 17
+  },
+  "koshukaido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kosuge": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "kotake-mukaihara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "kotesashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kowakudani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koyasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "koza-shibuya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kozu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kozukue": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kudanshita": {
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": 33
+  },
+  "kuga-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kugayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kugenuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kugenuma-kaigan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "kuhonbutsu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
   },
+  "kuji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kuju": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kuki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kuko-daini-biru-daini-ryokyaku-taaminaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kumagaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kumakawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "kumano-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
   },
   "kumegawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "kun-ke-hama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kunitachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "kuniyoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kunugi-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kurahashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kuramae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 18
+  },
+  "kurami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kurihama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kurihashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kurihira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kurokawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kururi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "kyobashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 48
   },
   "kyodo": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "kyoteijo-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "kyu-ga-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "kyumei": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "machida": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "machiya": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
@@ -1233,17 +2687,109 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "maehara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "magome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "maihama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "maioka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "makita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "makuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "makuhari": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "makuharihongo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "man-gan-tera": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "manatsuru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "maruyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mashio": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matoba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "matsu-ga-tani": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "matsu-tobidai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "matsubara": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "matsuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matsudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matsudo-nitta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matsugishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matsuhisa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "matsuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "me-ke-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "meguro": {
+   "embassies_within_800m": 7,
+   "english_medicine_within_2km": 27
+  },
+  "mei-ko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "meidaimae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
   },
   "mejiro": {
    "embassies_within_800m": 0,
@@ -1253,33 +2799,197 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "mejiro-yamashita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "meshi-kyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mibu-kuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "midori-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "midorigaoka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
+  },
+  "midorimachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mikado": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "mikawa-shima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "mimomi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "minami-asa-ke-tani": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
+  },
+  "minami-banki-ga-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-furuya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-hanyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-hato-ke-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-kashiwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-kurihashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-osawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-ota": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-sake-kurikaesi-i": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-sakurai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "minami-shinjuku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 35
   },
+  "minami-sunamachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-taira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minami-yono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamifunabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamimachida": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamiotsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamirinkan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamisenju": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
+  "minamitama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamiurawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minamiyuki-toku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "minatomachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "minatomirai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "minori-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "minowa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
+  "minuma-dai-shinsui-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "misaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "misakiguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "misato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "misato-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mita": {
+   "embassies_within_800m": 5,
+   "english_medicine_within_2km": 29
+  },
+  "mitaka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
   "mitakadai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "mitsukoshimae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 43
+  },
+  "mitsuwa-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miurakaigan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "miya-no-mae": {
    "embassies_within_800m": 0,
@@ -1289,49 +2999,409 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
+  "miya-no-shita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miya-no-taira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miyahara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miyamaedaira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miyayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "miyazakidai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mizonokuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mizue": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mizuho-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mobara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mochida": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mogusa-sono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "monoi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "monzen-nakacho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 12
+  },
+  "morishita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 8
+  },
+  "moro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "motohasunuma": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
+  },
+  "motomachi-chukagai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "motosumiyoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "motoyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "motoyawata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "mukaihara": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 22
   },
+  "mukogaokayuen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "murakami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-arashiyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-fujisawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-hikita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "musashi-koganei": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "musashi-kosugi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "musashi-koyama": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 15
   },
+  "musashi-masuto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "musashi-nitta": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "musashi-sakai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 5
+  },
+  "musashi-shiroishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-sunagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-takahagi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashi-yokote": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashidai-wa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashiitsukaichi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashinakahara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashino-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashiseki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashishinjo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "musashiurawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mutsuai-nichidai-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "mutsura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "myoden": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "myogadani": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 26
   },
+  "myogaku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "myorenji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "nagahara": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "naganuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagareyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagareyama-otakano-mori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagareyama-sentorarupaaku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagatacho": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 52
+  },
+  "nagatoro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nagatsuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nai-yado": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naka-gora": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naka-no-machi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakagami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakagawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 18
   },
   "nakaitabashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "nakamachidai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakameguro": {
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": 22
+  },
   "nakamura-hashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "nakano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 13
   },
   "nakano-fujimicho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 14
   },
+  "nakano-sakaue": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 29
+  },
+  "nakano-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "nakano-shinbashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 16
+  },
+  "nakanobe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
+  "nakaura-wa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nakayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nako-funagata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "namamugi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "namekawa-airando": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nami-kure": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "namiki-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "namiki-kita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nan-etsu-tani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nanahikari-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nanbu-shijo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naniwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nankyo-hon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nanryu-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nansan-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "narashino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "narita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "narita-yukawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naritakuko-daiichi-ryokyaku-taaminaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naruse": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "naruto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nebukawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "negishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nerima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
   },
   "nerima-kasugacho": {
    "embassies_within_800m": 0,
@@ -1345,13 +3415,69 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 29
   },
+  "nichi-no-demachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nihonbashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 48
+  },
+  "nihondai-tori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "niitaka-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "niitaka-shima-taira": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "niiza": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "nijubashimae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 51
+  },
+  "ningyocho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 34
+  },
+  "ninomiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nippori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 12
+  },
+  "nishi-chiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-chofu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-funabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-hachioji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "nishi-hanyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-kamakura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "nishi-kasai": {
    "embassies_within_800m": 0,
@@ -1365,13 +3491,41 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "nishi-kokubunji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
   "nishi-magome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "nishi-nippori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
+  "nishi-noborito": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-ohara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-oi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
   "nishi-ojima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
+  },
+  "nishi-omiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-oya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "nishi-oyama": {
    "embassies_within_800m": 0,
@@ -1397,9 +3551,21 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 10
   },
+  "nishi-tokorozawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishi-ware-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "nishi-waseda": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 30
+  },
+  "nishiarai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
   },
   "nishiarai-taishi-nishi": {
    "embassies_within_800m": 0,
@@ -1409,6 +3575,22 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "nishihata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishikawa-etsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishikawa-kuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishiko-shima-taira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "nishikoku-ritsu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
@@ -1416,6 +3598,50 @@
   "nishinaga-fuku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "nishiogikubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 5
+  },
+  "nishishirai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishitani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishiura-wa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nishiyokohama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nisshin": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nitta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nittano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "noborito": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nodashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nogami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "nogata": {
    "embassies_within_800m": 0,
@@ -1425,9 +3651,57 @@
    "embassies_within_800m": 4,
    "english_medicine_within_2km": 71
   },
+  "nojima-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "nokendai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "numabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "numabukuro": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 12
+  },
+  "nyu-so": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "o-hanacha-ya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "o-hanahata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oaso": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "obitsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "obukuro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "obusuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ochanomizu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 38
   },
   "ochiai": {
    "embassies_within_800m": 0,
@@ -1437,21 +3711,165 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 10
   },
+  "oda-sakae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "odai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "odaiba-kaihinkoen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "odakyu-sagamihara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "odawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "odoriba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ofuna": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ogawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "ogawacho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ogi-ohashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "ogikubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
+  "ogimachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ogose": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ogura-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ohara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ohiradai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oikeiba-ba-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
+  "oimachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 8
+  },
+  "oiso": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "oizumi-gakuen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "oji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
   "oji-kamiya": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "ojima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
+  "okabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "okachimachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 29
+  },
+  "okawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "okegawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "okubo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 33
+  },
+  "okurayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "okusawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
+  },
+  "okutama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "omachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "omaeda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "omekaido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "omigawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "omiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "omiya-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "omokage-hashi": {
    "embassies_within_800m": 0,
@@ -1461,21 +3879,9 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
-  "onarimon": {
-   "embassies_within_800m": 4,
-   "english_medicine_within_2km": 63
-  },
-  "ontake-yama": {
+  "omori-dai": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "oikeiba-ba-mae": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "okubo": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 33
+   "english_medicine_within_2km": 0
   },
   "omori-kaigan": {
    "embassies_within_800m": 0,
@@ -1485,37 +3891,117 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 12
   },
+  "omotesando": {
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": 50
+  },
+  "onarimon": {
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": 63
+  },
+  "onda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "onigori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "onjuku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "onohara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ontake": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ontake-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "onuki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ookayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 7
+  },
+  "oppama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "orihara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "osaki": {
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": 21
+  },
   "osaki-hirokoji": {
    "embassies_within_800m": 4,
    "english_medicine_within_2km": 24
   },
-  "ojima": {
+  "oshiage-sukaitsurii-mae": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 7
+   "english_medicine_within_2km": 8
+  },
+  "otaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "otemachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 47
+  },
+  "oto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "otorii": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "otsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 23
+  },
   "otsuka-teikyodaigaku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "owada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oya-hana": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "oyama": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
-  "ogi-ohashi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "omekaido": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
   "oyama-dai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
+  },
+  "oyamatsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "oyumi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ozaku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "renkon": {
    "embassies_within_800m": 0,
@@ -1529,29 +4015,109 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "roku-mi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "rokugo-dote": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "roppongi": {
+   "embassies_within_800m": 11,
+   "english_medicine_within_2km": 76
   },
   "roppongi-itchome": {
    "embassies_within_800m": 20,
    "english_medicine_within_2km": 72
   },
+  "ryogoku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 10
+  },
+  "ryokuen-toshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "ryutsu-sentaa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "sachiura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sagami-kaneko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sagami-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sagami-numata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "sagamihara": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "sagamiko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sagamiono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "sagamiotsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "sagi-no-miya": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "saginuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "saikai-kashima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "saitama-shintoshin": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "sakaemachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "sakasai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sakato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sake-kurikaesi-i": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "saku-kusa-bu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sakura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sakura-kaido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "sakuradai": {
    "embassies_within_800m": 0,
@@ -1561,6 +4127,18 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 59
   },
+  "sakuragaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sakuragi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sakuragicho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "sakurajosui": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
@@ -1569,33 +4147,129 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 8
   },
+  "sakurazawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "samezu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "samukawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "san-no-wa-hashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "san-tsu-sakai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "san-tsu-sawa-shitamachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "san-tsu-sawakami-machi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sangenjaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 10
+  },
   "sangu-hashi": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 26
+  },
+  "sangyo-shinko-sentaa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "sangyodoro": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "sanpoku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sanuki-machi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "saruta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sasagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sasazuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 10
+  },
+  "satomi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "satte": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sawai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sayama-ke-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sayamashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "seibi-ba": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "seibu-chichibu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "seibu-tachikawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "seibu-yanagisawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "seibu-yuenchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "seibuen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "seibukyujo-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "seibushinjuku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 35
+  },
+  "seifu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "seijo-gakuenmae": {
    "embassies_within_800m": 0,
@@ -1605,17 +4279,41 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "seiseki-sakuragaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sekiuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "sen-da-ke-tani": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 32
+  },
+  "sen-shiro-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sen-shiro-taihoku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "sendagi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 18
   },
+  "sengakuji": {
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": 29
+  },
   "sengawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "sengen-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "sengoku": {
    "embassies_within_800m": 0,
@@ -1625,9 +4323,21 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
   },
+  "senkawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
   "sensoku": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "sentaa-kita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sentaa-minami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "senzokuike": {
    "embassies_within_800m": 0,
@@ -1641,6 +4351,14 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
   },
+  "seya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shake": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shakudo-shogakko-mae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
@@ -1648,6 +4366,10 @@
   "shakujii-koen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "shi-ga-o": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shi-tsu-ki": {
    "embassies_within_800m": 0,
@@ -1673,29 +4395,105 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 11
   },
+  "shibayama-chiyoda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shibusawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shibuya": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 32
+  },
+  "shichiri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shichiri-ke-hama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shidai-igakubu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shiinamachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 21
+  },
+  "shiishiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shijo-mae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "shiki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimbashi": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 57
+  },
+  "shimizu-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shimo": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "shimoigusa": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 4
-  },
-  "shimomaruko": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
   "shimo-ochiai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 20
+  },
+  "shimogori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimoigusa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
+  "shimokitazawa": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 12
+  },
+  "shimomaruko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "shimomizo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimosa-kanzaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimosa-matsuzaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimosa-nakayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimosa-tachibana": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimosa-toyosato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shimotakaido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 5
   },
   "shimura-sakaue": {
    "embassies_within_800m": 0,
@@ -1705,17 +4503,37 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
-  "shin-itabashi": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
   "shin-akitsu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "shin-chiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shin-egota": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
+  },
+  "shin-hane": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-itabashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
+  "shin-kamagaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-kashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-kashiwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shin-kodaira": {
    "embassies_within_800m": 0,
@@ -1729,13 +4547,29 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "shin-koiwa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
   "shin-koshin-tsuka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 16
   },
+  "shin-matsudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-mobara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shin-nakano": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 17
+  },
+  "shin-okachimachi": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 28
   },
   "shin-okubo": {
    "embassies_within_800m": 0,
@@ -1749,17 +4583,45 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "shin-sayama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-seibi-ba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shin-shibamata": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "shin-shibaura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shin-shiraoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shin-shirota": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "shin-sugita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shin-toyosu": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "shin-urayasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinagawa": {
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": 18
   },
   "shinagawa-shiisaido": {
    "embassies_within_800m": 0,
@@ -1773,79 +4635,355 @@
    "embassies_within_800m": 2,
    "english_medicine_within_2km": 13
   },
+  "shindai-tsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shingo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinjuku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 35
+  },
   "shinjuku-gyoenmae": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 34
+  },
+  "shinjuku-sanchome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 37
   },
   "shinjukunishiguchi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 34
   },
+  "shinkawasaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinkemi-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinkiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinko-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinkoyasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinmaruko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinmatsuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinnarashino": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shinonome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "shinozaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinpachi-hashira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinrinkoen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinsen-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shintokorozawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shintomicho": {
    "embassies_within_800m": 2,
    "english_medicine_within_2km": 43
   },
+  "shintsudanuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinyokohama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinyuri-ke-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shinzo-kawashima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "shinzo-sato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shinzushi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiodome": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 49
+  },
+  "shioiri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shiomi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "shirai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiraitodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiraoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shirokane-takanawa": {
+   "embassies_within_800m": 5,
+   "english_medicine_within_2km": 45
+  },
+  "shirokanedai": {
+   "embassies_within_800m": 6,
+   "english_medicine_within_2km": 33
+  },
+  "shiroku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiromaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiromi-ke-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shirota-hashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
+  },
+  "shita-iida": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "shita-jinmei": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 10
   },
+  "shita-nagatani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shita-soga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "shitaita-hashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 16
+  },
+  "shitte": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shiyakushomae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shizu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 20
   },
   "shoin-jinja-mae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 10
   },
+  "shomaru": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shonan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shonan-fukazawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shonan-kaigan-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shonan-machiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "shonandai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "showa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "showa-shima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "shukugawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "so-moto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sobudai-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sobudai-shita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sode-ke-ura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "soga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sogo-sando": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "soka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "soshigaya-okura": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "soshio-ryutsu-sentaa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "soun-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sports-center": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "suehirocho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 34
+  },
+  "sugamo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 15
   },
   "sugamo-nitta": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 20
   },
+  "sugita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "sugito-koyadai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "suidobashi": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 35
+  },
+  "suigo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "suitengumae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 33
+  },
+  "sumiyoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 10
   },
   "sunagawa-shichi-ban": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "suzukakedai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "suzukicho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "ta-na": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ta-umi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tabata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 8
   },
   "tachiaigawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "tachiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tachihi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "tachikawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
@@ -1857,9 +4995,37 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "taisa-kura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "taito": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "taiyu-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "taka-no-dai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "taka-taki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "takada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "takadanobaba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 27
+  },
+  "takahata-fudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "takaido": {
    "embassies_within_800m": 0,
@@ -1873,7 +5039,19 @@
    "embassies_within_800m": 10,
    "english_medicine_within_2km": 24
   },
+  "takane-kido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "takane-kodan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "takano": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "takao": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
@@ -1881,25 +5059,73 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "takasaka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "takashima-machi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "takashima-taira": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "takatsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "takayanagi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "takebashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 41
   },
+  "takekawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "takenotsuka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "takeoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "takesato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "takeshiba": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 31
   },
+  "takezawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "taki-fudo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "takinogawa-itchome": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 7
+  },
+  "tama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tama-dobutsu-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tama-puraaza": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "tama-reien": {
    "embassies_within_800m": 0,
@@ -1909,6 +5135,34 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "tama-yodo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tamachi": {
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": 29
+  },
+  "tamagawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "tamagawagakuen-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tamagawajosui": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tameike-sanno": {
+   "embassies_within_800m": 6,
+   "english_medicine_within_2km": 58
+  },
+  "tan-so": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tanashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
@@ -1917,25 +5171,105 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "tanmachi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tateyama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tatsumi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "taura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tawarada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "tawaramachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 16
   },
+  "tendai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tenku-hashi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "tennocho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tennodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tennozu-isle": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 11
+  },
   "terekomusentaa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "tetsudohakubutsukan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "to-no-sawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tobe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tobitakyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tobu-nerima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 2
+  },
+  "tobu-takezawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tobudobutsukoen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "tochomae": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 31
   },
+  "toda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "todai-miya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "todai-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 6
+  },
   "todaimae": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 30
+  },
+  "todakoen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "toden-zatsu-tsukasa-ke-tani": {
    "embassies_within_800m": 0,
@@ -1945,41 +5279,69 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
   },
+  "tofuku-nama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "togane": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "togawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "togo-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "togoshi-ginza": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 13
+  },
+  "togu-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tohaku-raku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tokai-kami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tokaichiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tokaidaigakumae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tokiwa-dai": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 4
+  },
+  "tokiwadaira": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toko-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tokorozawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "tokoshikoen": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
-  "toneri-koen": {
+  "tokyo": {
    "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
-  },
-  "toranomon": {
-   "embassies_within_800m": 7,
-   "english_medicine_within_2km": 65
-  },
-  "toritsu-daigaku": {
-   "embassies_within_800m": 2,
-   "english_medicine_within_2km": 12
-  },
-  "toritsukasei": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 9
-  },
-  "tobu-nerima": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 2
-  },
-  "todai-shima": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 6
-  },
-  "tofuku-nama": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": 1
+   "english_medicine_within_2km": 52
   },
   "tokyo-sukaitsurii": {
    "embassies_within_800m": 0,
@@ -1989,9 +5351,113 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "tomi-mizu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tomiura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tomo-ro": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toneri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toneri-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "toranomon": {
+   "embassies_within_800m": 7,
+   "english_medicine_within_2km": 65
+  },
+  "torihama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "torin-kan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toritsu-daigaku": {
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": 12
+  },
+  "toritsukasei": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 9
+  },
+  "toshimaen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 4
+  },
+  "toshin-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toso-moto": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "totsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "totsuka-angyo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "toyocho": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "toyoharu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toyoko-ta": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "toyosu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 5
+  },
+  "toyota": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 1
+  },
+  "tsuchike": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsuda-yama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsudanuma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsuga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsujido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukada": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukahara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "tsukiji": {
    "embassies_within_800m": 2,
@@ -2001,13 +5467,77 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 47
   },
+  "tsukimi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukinowa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukisaki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukishima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 22
+  },
+  "tsukuihama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsukushi-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsunashima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsuru-ke-shima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsurugamine": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tsurukawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
   },
+  "tsuruma": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsurumakionsen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsurumi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsurumi-ono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsurumi-shijo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "tsuruse": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "tsutsuji-ke-oka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
+  },
+  "tsuzuki-fureaino-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "u-no-ki": {
    "embassies_within_800m": 0,
@@ -2017,13 +5547,53 @@
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 61
   },
+  "ue-gora": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ue-kumagaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ue-nagatani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ue-oi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "uemachi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 6
   },
+  "ueno": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 23
+  },
+  "uguisudani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 18
+  },
+  "uhara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "ukima-funato": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "umagome-sawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umahori-kaigan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umatate": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "umegaoka": {
    "embassies_within_800m": 0,
@@ -2037,6 +5607,50 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
   },
+  "umi-kashima": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umi-no-koen-minamiguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umi-no-koen-shiba-kuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umi-shibaura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "umigami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "unga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "uraga": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "urawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "urawa-misono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "urayama-kuchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "urayasu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "ushigome-kagurazaka": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 24
@@ -2049,6 +5663,46 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
+  "ushita": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 3
+  },
+  "uwamizo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wa-ko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wada-kawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wada-machi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wada-tsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wada-ura": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wado-kurotani": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wakaba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "wakabadai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "wakabayashi": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 9
@@ -2057,17 +5711,69 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 36
   },
+  "wakoshi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "warabi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "ware-no": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "waseda": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 26
+  },
+  "washimiya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "y-r-p-nobi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yabe": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yachimata": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yachiyo-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yachiyo-midorigaoka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yachiyodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "yagawa": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
   },
+  "yagi-saki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yagiri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "yaguchi-watari": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "yagyu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "yahatayama": {
    "embassies_within_800m": 0,
@@ -2081,37 +5787,241 @@
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
   },
+  "yako": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yakuen-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "yamada": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 1
+  },
+  "yamate": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yamato": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yanagikoji": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yanase-kawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yanoguchi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "yasaka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 2
   },
-  "yotsuya-sanchome": {
-   "embassies_within_800m": 1,
-   "english_medicine_within_2km": 30
+  "yashio": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yasuda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yatsu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yatsuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yayoi-dai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoda": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yodo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "yoga": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 8
   },
+  "yokaichiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokodai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokohama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokose": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokoshiba": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokosuka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokosuka-chuo": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yokota": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yomiurirando-mae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yono": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yono-honcho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yorii": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoro-keikoku": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoshi-kawa-koen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoshikawa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoshikawa-bi-minami": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoshino-hara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yoshinocho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yotsukaido": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yotsuya": {
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": 32
+  },
+  "yotsuya-sanchome": {
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": 30
+  },
+  "yoyogi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 36
+  },
+  "yoyogi-hachiman": {
+   "embassies_within_800m": 5,
+   "english_medicine_within_2km": 18
+  },
+  "yoyogi-uehara": {
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": 11
+  },
+  "yubi-ogi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yuenchi-nishi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yugawara": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yui-ke-hama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yukari-ga-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "yuki-ga-taniotsuka": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 3
+  },
+  "yukinori": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yumega-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "yurakucho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 52
+  },
+  "yuri-ke-oka": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   },
   "yushima": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 33
   },
+  "yutaka-shiki": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
   "yutenji": {
    "embassies_within_800m": 1,
    "english_medicine_within_2km": 16
   },
+  "zama": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "zenko": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
+  },
+  "zoshigaya": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 27
+  },
   "zoshiki": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": 5
+  },
+  "zushi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": 0
   }
  }
 }
