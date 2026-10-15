@@ -1,3 +1,4 @@
+import AirPanel from '@/components/AirPanel';
 import { QuietnessFacts } from '@/components/QuietnessFacts';
 import { getQuietness } from '@/lib/quietness';
 import type { Metadata } from 'next';
@@ -399,6 +400,7 @@ export default async function StationAreaPage({
             </section>
           </div>
 
+          <AirPanel city="bangkok" />
           <QuietnessFacts fact={getQuietness('bangkok', a.id)} />
 
           {/* By the numbers */}

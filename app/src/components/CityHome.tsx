@@ -1,3 +1,4 @@
+import AirPanel from '@/components/AirPanel';
 import { getTranslations } from 'next-intl/server';
 import type { MapStation } from '@/lib/types';
 import type { CityId } from '@/lib/cities';
@@ -62,6 +63,7 @@ export default async function CityHome({ city, stations, stationAreas, thumbnail
           </a>
         </div>
       </header>
+      <AirPanel city={city} compact />
 
       <div className="flex flex-1 overflow-hidden">
         <aside className="hidden md:block w-72 border-r border-gray-200 bg-white overflow-y-auto shrink-0">
