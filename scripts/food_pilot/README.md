@@ -135,3 +135,58 @@ failed zero inference, tied strata, spatial exclusion, reproducibility and
 continuation-budget preservation, including a real SIGTERM in an isolated mocked
 process and Ctrl-C followed by resume/offline replay. They do not supply pilot
 observations.
+
+## Owner-amended manifest and first acquisition phases
+
+The owner approved the Tokyo 2-zero/6-low allocation on 2026-10-15. See
+[PROTOCOL.md](PROTOCOL.md) for the unchanged remaining gates and bounded phases.
+`freeze_sample()` retains the original design by default so the preserved 63-site
+artifact remains reproducible. The explicit `owner_2026_10_15` allocation produces
+the separate amended core. `manifest.py` also freezes the challenge prescreen
+order, current source hashes, acquisition ceilings and the bound audit procedure.
+
+Run `python -m food_pilot.manifest --help` with `PYTHONPATH=scripts` for the
+explicit input paths. Finalization requires the accepted audit spec/schema,
+auditor-only rubric and both seed receipts. It hashes every pilot Python module
+and creates a new output with exclusive creation; never overwrite the candidate
+or original insufficient evidence. Copy the final bytes into the separate
+immutable archive and verify identical hashes before requesting root's gate.
+
+The first executable phases are `overture_metadata`, `hp_development`,
+`overture_development` and `hp_prescreen`. They require a final manifest and an
+internal root execution receipt containing that manifest SHA-256, the native-
+approved head, `root_manifest_check: true`, and the explicit allowed phases:
+
+```sh
+PYTHONPATH=scripts python -m food_pilot.run \
+  --manifest /internal/frozen-manifest.json \
+  --execution-gate /internal/root-execution-receipt.json \
+  --phase hp_development --output-root /internal/acquisition
+```
+
+Use the already documented scoped secret consumer to supply only
+`HOTPEPPER_API_KEY` to the HP process; never put it in command arguments or files.
+The request URL exists only inside that consumer. Query hashes cover credential-
+free parameters. Ledgers/cache/error output omit request URLs, headers and
+exception messages. Redirects are rejected. HP stores only projected venue/page
+fields and a response hash, never a raw error body. No NocoDB client is used.
+
+Overture metadata/data phases use the existing cached Python/pyarrow runtime;
+there is no automatic install. Pass the hash-bound metadata result with
+`--overture-metadata` for data extraction. Exact object ranges must return HTTP
+206 with matching Content-Range, size and ETag; If-Match prevents silently mixing
+object revisions. All objects are inspected and missing statistics retain groups.
+Actual WKB Point coordinates determine 800 m membership. Full parquet archives
+are never downloaded by a fallback path.
+
+`--resume` keeps the original phase's deadline, attempts and byte charges. Failed
+or interrupted logical requests consume their original retry allowance. Verified
+cached pages/ranges support `ReplayBudget` without network access. An exhausted
+phase stays incomplete; no new output directory is permission to restart it.
+Source-date windows and real zero-confirmation eligibility remain mandatory.
+
+The CLI rejects holdout without a matching primary-candidate freeze receipt.
+Root's first execution receipt must not release holdout or zero confirmation:
+those require their subsequent analysis/audit review and actual time gates.
+Later reporting conveniences are outside this first executable slice. No pilot
+result, audit success or production activation is implied by a passing code test.

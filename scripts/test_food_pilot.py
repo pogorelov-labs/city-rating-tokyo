@@ -443,3 +443,41 @@ def test_expiry_inside_acquisition_prevents_any_later_request(tmp_path, monkeypa
     assert ledger["status"] == "incomplete"
     assert ledger["tiles_completed"] == []
     assert len(ledger["attempts"]) == 1
+
+
+def test_owner_amendment_changes_only_tokyo_allocation_and_preserves_split():
+    stations, rows = synthetic_frame()
+    for i in range(2):
+        slug = f'extra-tokyo-low-{i}'
+        stations.append({"slug": slug, "lat": 34.56, "lng": 139.30 + i*.06, "prefecture": "13"})
+        rows.append({"slug": slug, "count": 1, "radius_m": 800, "status": "complete_positive"})
+    original = freeze_sample(stations, rows, [])
+    amended = freeze_sample(stations, rows, [], allocation='owner_2026_10_15')
+    assert original['status'] == amended['status'] == 'frozen'
+    assert len(amended['stations']) == 64
+    assert sum(s['split'] == 'holdout' for s in amended['stations']) == 32
+    for cell in amended['cells']:
+        expected = {'zero': 2, 'low': 6, 'middle': 4, 'high': 4}[cell['stratum']] if cell['prefecture'] == '13' else 4
+        assert len(cell['selected']) == expected
+    assert freeze_sample(stations, rows, []) == original
+    with pytest.raises(ValueError, match='Unknown allocation'):
+        freeze_sample(stations, rows, [], allocation='automatic_relaxation')
+
+
+def test_historical_empty_label_is_only_priority_not_confirmed_zero():
+    from food_pilot.manifest import historical_empty_labels, challenge_order
+    raw = b'''export const DEMO_RATINGS = {
+  synthetic: {
+    sources: { rent: ['other'], food: [] },
+  },
+};'''
+    labels = historical_empty_labels(raw, [STATION])
+    assert labels == {'synthetic': True}
+    rows = [{'slug': 'synthetic', 'count': 0, 'status': 'complete_zero'}]
+    challenge = challenge_order([STATION], rows, {'boundaries': {'13': [1, 2]}, 'stations': []}, [], labels)
+    assert challenge['order'][0]['hp_zero_status'] == 'not_acquired'
+    assert challenge['order'][0]['challenge_group'] == 'sparse'
+    with pytest.raises(ValueError, match='differ from station frame'):
+        historical_empty_labels(raw, [])
+    blocked = challenge_order([STATION], rows, {'boundaries': {'13': [1,2]}, 'stations': [STATION]}, [], labels)
+    assert blocked['order'] == []

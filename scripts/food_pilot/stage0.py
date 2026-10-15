@@ -141,12 +141,14 @@ def hash_order(slug):
     return hashlib.sha256(f"{SEED}|{slug}".encode()).hexdigest(), slug
 
 
-def freeze_sample(stations, rows, old_centers):
+def freeze_sample(stations, rows, old_centers, *, allocation="original"):
     """Conservative deterministic selection; insufficiency is not proof of impossibility.
 
     Require all selected core circles to be disjoint (stronger than cross-split
     separation). Greedy exhaustion is reported, never repaired using outcomes.
     """
+    if allocation not in {"original", "owner_2026_10_15"}:
+        raise ValueError("Unknown allocation; no implicit sample redesign")
     source = {r["slug"]: r for r in rows}
     if len(source) != len(rows):
         raise ValueError("Duplicate census slug")
@@ -176,6 +178,9 @@ def freeze_sample(stations, rows, old_centers):
             count = station["osm_food_count"]
             station["stratum"] = "zero" if count == 0 else "low" if count <= low else "middle" if count <= high else "high"
         for stratum in ("zero", "low", "middle", "high"):
+            required = 4
+            if allocation == "owner_2026_10_15" and prefecture == "13":
+                required = {"zero": 2, "low": 6, "middle": 4, "high": 4}[stratum]
             candidates = sorted((s for s in pool if s["stratum"] == stratum), key=lambda s: hash_order(s["slug"]))
             chosen = []
             for station in candidates:
@@ -184,13 +189,13 @@ def freeze_sample(stations, rows, old_centers):
                     continue
                 chosen.append(station)
                 selected.append(station)
-                if len(chosen) == 4:
+                if len(chosen) == required:
                     break
             cells.append({"prefecture": prefecture, "stratum": stratum,
                           "available": len(candidates), "selected": [s["slug"] for s in chosen],
                           "reserve_order": [s["slug"] for s in candidates if s not in chosen]})
             for i, station in enumerate(chosen):
-                station["split"] = "development" if i < 2 else "holdout"
+                station["split"] = "development" if i < required // 2 else "holdout"
     complete = len(selected) == 64
     return {"status": "frozen" if complete else "insufficient", "seed": SEED,
             "reason": None if complete else "fixed greedy spatial design did not fill every cell; no outcome-driven replacement",

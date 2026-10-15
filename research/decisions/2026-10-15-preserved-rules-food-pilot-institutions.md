@@ -69,6 +69,30 @@ pilot's matched 800 m universe.
   evidence. Acquisition dates do not establish venue observation dates. Core
   HP/OSM acquisition must fit the protocol's seven-calendar-day window.
 
+### Owner allocation amendment — 2026-10-15
+
+After the complete Stage 0 census found only three Tokyo mapped-food zero
+stations, the owner explicitly approved: “2 Tokyo zero + 6 low-positive sites,
+keeping 64 total and 32/32 splits. Record the amendment, freeze revised
+sample/acquisition budget, then run bounded shadow pilot. Keep production
+rules unchanged.” The coordinating session relayed this approval on 2026-10-15.
+
+This supersedes **only** Tokyo's cell allocation above: zero has one development
+and one holdout site; low-positive has three of each; middle and high retain two
+of each. Every other prefecture retains two of each per stratum. Preserve the
+original insufficient 63-site artifact and census; it remains the evidence for
+this pre-outcome amendment. Do not retroactively call it a complete sample.
+
+The amended manifest must freeze exact IDs/centers, census and code hashes,
+strata, reserve order, spatial exclusions, the separate HP-zero prescreen order,
+category/status/dedup contracts and acquisition budgets before target outcomes.
+Root checks that manifest and the acquisition/analysis code-review gates before
+requests; this is coordination validation of the accepted pilot, not a new owner
+policy decision. Holdout remains unopened until the primary candidate is frozen.
+All quality, time-window, challenge, production and non-adoption gates below
+remain unchanged. The executable manifest and staged acquisition contract are
+documented in [the pilot protocol](../../scripts/food_pilot/PROTOCOL.md).
+
 The final audit is **200 random distinct holdout Overture provider IDs**, not the
 earlier 160-record proposal, plus up to 80 separately reported targeted cases.
 Random sampling is over candidate-food IDs in the union of the 32 holdout
