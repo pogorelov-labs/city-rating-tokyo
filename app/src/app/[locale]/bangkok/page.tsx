@@ -1,3 +1,6 @@
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { hasLocale } from 'next-intl';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
@@ -22,6 +25,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   const t = await getTranslations({ locale, namespace: 'bangkok.metadata' });
   return {
     title: t('title'),
@@ -36,6 +40,7 @@ export default async function BangkokHome({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const snippets = getBangkokSnippets(locale as Locale);
 

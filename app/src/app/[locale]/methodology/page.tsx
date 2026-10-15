@@ -1,3 +1,6 @@
+import { hasLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
 import AirMethodology from '@/components/AirMethodology';
 import { QuietnessMethodology } from '@/components/QuietnessMethodology';
 import type { Metadata } from 'next';
@@ -141,6 +144,7 @@ export default async function MethodologyPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations();
   const isEnglish = locale === 'en';

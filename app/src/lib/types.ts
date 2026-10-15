@@ -483,7 +483,7 @@ export const HUB_LABELS: Record<keyof TransitMinutes, string> = {
 };
 
 export interface PresetProfile {
-  id: string;
+  id: 'young-pro' | 'family' | 'foodie-budget' | 'digital-nomad';
   label: string;
   icon: string;
   weights: WeightConfig;

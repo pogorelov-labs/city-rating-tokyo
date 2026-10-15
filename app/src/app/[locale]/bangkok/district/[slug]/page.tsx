@@ -1,3 +1,5 @@
+import { dataLabel } from '@/i18n/message-key';
+import { hasLocale } from 'next-intl';
 import AirPanel from '@/components/AirPanel';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -44,6 +46,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   const district = getBangkokDistrict(slug);
   const t = await getTranslations({ locale, namespace: 'bangkok.district' });
   if (!district) return { title: t('notFound') };
@@ -68,6 +71,7 @@ export default async function DistrictPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const loc = locale as Locale;
   const t = await getTranslations();
@@ -322,7 +326,7 @@ export default async function DistrictPage({
                             <span>{t(key === 'rent' ? 'bangkok.district.rentTooltip' : `ratingTooltips.${key}`)}</span>
                             {srcs && srcs.length > 0 && (
                               <span className="block mt-1.5 text-gray-400">
-                                Sources: {srcs.map((s) => (t.has(`sources.${s}`) ? t(`sources.${s}`) : s)).join(', ')}
+                                {t('station.sourcesLabel')} {srcs.map((s) => (dataLabel(t, 'sources', s))).join(', ')}
                               </span>
                             )}
                             <span className="block mt-1.5 pt-1.5 border-t border-gray-600/40 tabular-nums">

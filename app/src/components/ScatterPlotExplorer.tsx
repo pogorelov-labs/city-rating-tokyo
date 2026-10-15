@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { useTranslations, useLocale } from 'next-intl';
-import { MapStation, RATING_LABELS } from '@/lib/types';
+import { MapStation, RATING_LABELS, StationRatings } from '@/lib/types';
 import { stationPrimaryName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 import { useAppStore } from '@/lib/store';
@@ -47,7 +47,7 @@ export default function ScatterPlotExplorer({ stations }: Props) {
   function axisLabel(key: string): string {
     if (key === 'rent_1k') return t(city.unit === 'district' ? 'scatterAxes.rent_1k_bangkok' : 'scatterAxes.rent_1k');
     if (key === 'min_transit') return t('scatterAxes.min_transit');
-    return t(`ratings.${key}`);
+    return t(`ratings.${key as keyof StationRatings}`);
   }
 
   const xLabel = axisLabel(xAxis);

@@ -1,6 +1,7 @@
 'use client';
 
 import { useLayoutEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { observeMapContainer } from '@/lib/map-resize';
@@ -18,6 +19,7 @@ export function MapContainerResize() {
 
 /** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
 export function TouchZoomControls() {
+  const t = useTranslations('map');
   const map = useMap();
   return (
     <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
@@ -28,14 +30,14 @@ export function TouchZoomControls() {
         <button
           onClick={() => map.zoomIn()}
           className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
-          aria-label="Zoom in"
+          aria-label={t('zoomIn')}
         >
           +
         </button>
         <button
           onClick={() => map.zoomOut()}
           className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
-          aria-label="Zoom out"
+          aria-label={t('zoomOut')}
         >
           −
         </button>

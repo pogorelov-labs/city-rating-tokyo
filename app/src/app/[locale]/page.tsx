@@ -1,3 +1,6 @@
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { getMapStations, getThumbnails, getSnippets } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
@@ -13,6 +16,7 @@ export default async function Home({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   // Snippets are locale-specific — each locale's homepage renders its own

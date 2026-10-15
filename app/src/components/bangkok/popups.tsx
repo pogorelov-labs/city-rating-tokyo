@@ -1,5 +1,6 @@
 'use client';
 
+import { dataLabel } from '@/i18n/message-key';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
@@ -192,7 +193,7 @@ export function CellDetails({
         <div className="flex flex-wrap gap-x-2 gap-y-0.5 mt-0.5 text-gray-500">
           {Object.entries(info.hubMinutes).map(([hub, m]) => (
             <span key={hub} className="tabular-nums">
-              {t(`hubs.${hub}`)} {m}m
+              {dataLabel(t, 'hubs', hub)} {m}m
             </span>
           ))}
         </div>

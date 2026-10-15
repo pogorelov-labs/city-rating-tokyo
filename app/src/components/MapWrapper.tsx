@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useTranslations } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useCityState } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
@@ -8,24 +9,21 @@ import { useAllAreas } from '@/lib/area-lists';
 import MapControls from './MapControls';
 import UrlSync from './UrlSync';
 
+export function MapLoading() {
+  const t = useTranslations('loading');
+  return <div role="status" className="h-full w-full flex items-center justify-center bg-gray-100 text-gray-400">{t('map')}</div>;
+}
+
 const MapView = dynamic(() => import('./Map'), {
   ssr: false,
-  loading: () => (
-    <div className="h-full w-full flex items-center justify-center bg-gray-100 text-gray-400">
-      Loading map...
-    </div>
-  ),
+  loading: MapLoading,
 });
 
 // Bangkok: district polygons + rail overlay. A separate chunk, so the Tokyo
 // homepage never downloads the district geometry (and vice versa).
 const DistrictMapView = dynamic(() => import('./DistrictMap'), {
   ssr: false,
-  loading: () => (
-    <div className="h-full w-full flex items-center justify-center bg-gray-100 text-gray-400">
-      Loading map...
-    </div>
-  ),
+  loading: MapLoading,
 });
 
 // ComparePanel imports recharts (CompareRadarChart). Load it only when the
