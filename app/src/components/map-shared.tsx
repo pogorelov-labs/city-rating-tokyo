@@ -1,12 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
+import { observeMapContainer } from '@/lib/map-resize';
 
 // Map building blocks shared by the Tokyo station map (Map.tsx) and the
 // Bangkok district map (DistrictMap.tsx). Kept in their own module so the
 // district chunk does not pull in the whole station map.
+
+/** Keep selection geometry and tile coverage aligned with the actual viewport. */
+export function MapContainerResize() {
+  const map = useMap();
+  useLayoutEffect(() => observeMapContainer(map), [map]);
+  return null;
+}
 
 /** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
 export function TouchZoomControls() {

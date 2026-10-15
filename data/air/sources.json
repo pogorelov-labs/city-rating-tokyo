@@ -1,0 +1,24 @@
+{
+  "terms": [
+    {
+      "name": "Soramame national data terms",
+      "url": "https://soramame.env.go.jp/data/apiManual/2.html",
+      "checked": "2026-10-15",
+      "sha256": "f380065559542f13f2a36ee74447de25608ef2f7ed45ca4fdcf05f4a60875d9a",
+      "decision": "National stations only under MOE rules; other providers require contact."
+    },
+    {
+      "name": "TMG pollen policy",
+      "url": "https://www.hokeniryo1.metro.tokyo.lg.jp/allergy/about.html",
+      "checked": "2026-10-15",
+      "sha256": "9457e6db45345829a4c5c2b6e2ec41c96655e6960aeb93cfdfa2be8c0133e7c7",
+      "decision": "Prior permission required for republication; no pollen data enabled."
+    }
+  ],
+  "moe_use_rules": "https://www.env.go.jp/mail.html",
+  "restricted_inputs": [
+    "research/snapshots/2026-10-14/air-tokyo/LICENSE.txt",
+    "research/snapshots/2026-10-14/air-bangkok/LICENSE.txt"
+  ],
+  "bangkok_live_terms": "Unresolved; numeric output disabled"
+}
