@@ -105,7 +105,7 @@ const BANGKOK_SOURCES: { category: string; sources: string; confidence: string }
   { category: 'Gym & Sports', sources: 'Overture Maps Places + OpenStreetMap (gyms, sports centres, pools)', confidence: 'Measured / Partial' },
   { category: 'Vibe & Atmosphere', sources: 'Overture + OSM culture venues, cafés, temples, markets, pedestrian streets', confidence: 'Measured / Partial' },
   { category: 'Nightlife', sources: 'Overture + OSM bars, pubs, clubs, live-music venues, karaoke', confidence: 'Measured / Partial' },
-  { category: 'Quietness', sources: 'DOPA registered population density + density of all mapped places (inverted)', confidence: 'Partial' },
+  { category: 'Quietness', sources: 'WorldPop constrained 2020 population density + density of mapped places (inverted)', confidence: 'Partial' },
 ];
 
 const CONFIDENCE_LEVELS = [
@@ -390,7 +390,7 @@ export default async function MethodologyPage({
               grid point rated on its own. Here the percentile is weighted by residents: a cell rates 8 when it
               beats about three quarters of the places where people actually live, not three quarters of all land.
               Quietness at this level (and for station areas) is the density of all mapped places within
-              400&nbsp;m, since there is no population count at that scale.
+              400&nbsp;m; the population raster is currently used only at district level.
             </li>
           </ul>
           <p className="text-gray-700 leading-relaxed mt-3 text-sm">
@@ -411,7 +411,7 @@ export default async function MethodologyPage({
                 {BANGKOK_SOURCES.map((row) => (
                   <tr key={row.category} className="border-b border-gray-50 last:border-0 align-top">
                     <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">{row.category}</td>
-                    <td className="px-4 py-2 text-gray-600">{row.sources}</td>
+                    <td className="px-4 py-2 text-gray-600">{row.category === 'Quietness' ? t('populationMethodology.tableSource') : row.sources}</td>
                     <td className="px-4 py-2 text-gray-600 whitespace-nowrap">{row.confidence}</td>
                   </tr>
                 ))}
@@ -423,6 +423,13 @@ export default async function MethodologyPage({
             {bangkokMeta.source_agreement_r.food}, nightlife {bangkokMeta.source_agreement_r.nightlife}, daily
             essentials {bangkokMeta.source_agreement_r.daily_essentials}, culture {bangkokMeta.source_agreement_r.vibe}).
             A category is &ldquo;Measured&rdquo; in a district only when both are well mapped there.
+          </p>
+          <p className="text-sm text-gray-700 mt-3">{t('populationMethodology.method')}</p>
+          <p className="text-sm text-gray-700 mt-2">{t('populationMethodology.observed')}</p>
+          <p className="text-xs text-gray-500 mt-2">
+            {t('populationMethodology.attribution')}{' '}
+            <a href="https://doi.org/10.5258/SOTON/WP00684" className="underline">doi:10.5258/SOTON/WP00684</a>{' · '}
+            <a href="https://creativecommons.org/licenses/by/4.0/" className="underline">CC BY 4.0</a>
           </p>
           <h3 className="font-semibold text-gray-900 mt-5 mb-2">Bangkok limitations</h3>
           <ul className="space-y-2 text-sm text-gray-700">
@@ -448,7 +455,7 @@ export default async function MethodologyPage({
             </li>
             <li className="flex items-start gap-2">
               <span className="text-amber-500 mt-0.5">&#9888;</span>
-              <span><strong>Population</strong> is DOPA house registration (2020, via Wikidata); central districts house many unregistered residents, so their real density is higher.</span>
+              <span>{t('populationMethodology.limits')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-amber-500 mt-0.5">&#9888;</span>

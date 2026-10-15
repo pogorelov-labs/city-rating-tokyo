@@ -23,8 +23,9 @@ the map popup links to the cell's district and station area. Tokyo stays at
 
 ```
 uv run scripts/bangkok/fetch.py      # network, cached in data/bangkok/raw/ (gitignored, ~50 MB)
+uv run scripts/bangkok/fetch-population.py # pinned WorldPop country raster, 28.9 MB (cached, SHA checked)
 uv run scripts/bangkok/build.py      # offline, ~15 s → app/src/data/bangkok/*.json, app/public/data/bangkok/grid-<hash>.bin, data/bangkok/signals.json
-pytest scripts/bangkok/test_bangkok.py
+uv run --with pytest --with requests --with numpy --with shapely --with rasterio pytest scripts/bangkok
 ```
 
 | Step | What |
@@ -41,6 +42,46 @@ pytest scripts/bangkok/test_bangkok.py
 | Grid packing | One uint8 plane per field over the 330 × 257 bbox (8 ratings, district, resident weight, 5 hub commutes, nearest station + distance, station area), per-row delta, gzip → ~140 KB with a content hash in the name, header in `grid.json`. Fetched only when the grid level opens |
 | Station names | JA from the stations' Wikidata items (label checked against the station name — OSM's Si Iam node points at Si La Salle's item), a few hand-written in `static_data.STATION_JA_FALLBACK`; RU keeps the Latin name that is on BTS / MRT signage |
 
+
+### Reproducing the population replacement (CRTKY-197)
+
+`uv run scripts/bangkok/fetch-population.py` downloads only the pinned WorldPop
+country GeoTIFF; no Range requests, TLS exceptions, credentials or OSM refresh.
+`data/bangkok/population-source.json` pins the URL, byte count, SHA-256, raster
+contract, epoch, production date and license. Rasterio 1.x, NumPy and Shapely
+are declared in the build/replay scripts' uv metadata. The ~29 MB raw raster
+is cached under `data/bangkok/raw/`, never committed.
+
+`uv run scripts/bangkok/rebuild-population.py` replays the adoption using the
+committed district geometry, `population-baseline.json` and the raster. It
+regenerates the all-50 `population-comparison.json`/`.csv` and changes only
+district crowd ratings/source, signals and district composite anchors.
+Before any write, the replay verifies every non-crowd snapshot signature and
+requires crowd values to match the exact original snapshot or a recomputed,
+verified previous replay. Changed POIs, provenance or anchors fail closed.
+No other source dates are advanced. The historical raw OSM/Overture/Wikidata
+cache was unavailable during adoption; **a full historical `build.py` replay
+has not been verified**. Missing raw inputs still fail explicitly. With that
+cache available, `build.py` invokes the same raster aggregation on its
+published, simplified/rounded polygons and uses exact POI counts.
+
+The replay retains the original rounded crowd signal's POI log term (maximum
+±0.00005 raw uncertainty); it rejects results whose ratings could change
+within that interval. It does not invent integer POI counts. Full builds
+calculate the POI term directly and may differ in the fourth raw decimal.
+Raster cells store **people**, not people/km². Sum pixel centers, excluding
+polygon holes; NoData is BSGM-unsettled and contributes zero, with settled
+and total pixel counts recorded. Validate all 50 joins, extent coverage,
+no duplicate cell assignments and district-sum/union-total reconciliation.
+Use the **official area** as before, not angular pixel area or OSM area.
+The UTM 47N polygon area in the audit quantifies denominator mismatch only.
+
+Source: WorldPop, University of Southampton; Bondarenko M., Kerr D.,
+Sorichetta A. and Tatem A.J. (2020), constrained BSGM population dataset,
+[doi:10.5258/SOTON/WP00684](https://doi.org/10.5258/SOTON/WP00684),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Adaptation: district aggregation and density scoring by City Rating.
+
 ## Sources and confidence (50 districts)
 
 | Category | Sources | Confidence |
@@ -54,15 +95,15 @@ pytest scripts/bangkok/test_bangkok.py
 | Gym & sports | Overture + OSM (pools weighted 0.3) | strong 27 · moderate 22 · estimate 1 |
 | Vibe | Overture + OSM culture venues, cafés, temples, markets, pedestrian streets | strong 27 · moderate 22 · estimate 1 |
 | Nightlife | Overture + OSM bars/pubs/clubs/live music, karaoke; hostels weighted only 0.05 | strong 16 · moderate 30 · estimate 4 |
-| Quietness | DOPA registered population density (2020, Wikidata) + density of all Overture places, inverted | moderate ×50 |
+| Quietness | WorldPop constrained 2020 model population / official district area + density of all Overture places, inverted | moderate ×50 |
 
 Station areas use the same sources with per-area thresholds (food ≥ 80
 Overture and ≥ 20 OSM places …): strong / moderate / estimate is roughly
 half / a third / a sixth for food and essentials, with far more `estimate`
 for nightlife and culture in the outer station areas, where there is
 little of either to count. Quietness at the station and grid levels is the
-density of *all* Overture places within 400 m (no population raster at that
-scale), inverted. Grid cells carry no per-cell confidence; the popup says
+density of *all* Overture places within 400 m (the population raster is
+not used at those levels), inverted. Grid cells carry no per-cell confidence; the popup says
 which scores are district estimates.
 
 `strong` = both POI sources well mapped in that district (Tokyo's "2+ sources"
@@ -88,8 +129,16 @@ apartment buildings — that category is excluded (`build.py load_overture`).
    district boundaries. Stations within 150 m of a boundary count for both
    sides; "nearby" = up to 800 m outside. Lat Phrao district has no station
    inside — the Yellow Line runs 0.5 km beyond its edge, in Wang Thonglang.
-5. **Registered population** undercounts central districts (many residents
-   are not registered where they live).
+5. **Population model vs registration.** District quietness uses WorldPop
+   constrained **2020**, produced **2020-09-16**, not a current census or daytime
+   visitor count. Displayed population/density facts remain DOPA registration
+   (2020 via Wikidata). The model-to-registration gap is evidence consistent
+   with registration undercoverage, not a measured count of unregistered
+   residents: model assumptions, boundaries and the six-year-old epoch matter.
+   Measured adoption result: **10,887,568 modeled vs 5,588,222 registered**
+   (1.9483×; registration 48.67% below the model); **20/50 scores change by
+   one point**. The all-50 observed comparison and methodological caveats are in
+   [the adoption comparison](population-comparison.md).
 6. **Official vs OSM area.** Some riverside districts differ from the
    Wikidata/BMA areas (e.g. Bang Rak 3.9 km² in OSM vs 5.5 official) while
    the 50-district total matches (1,566 vs 1,569 km²). Densities use the

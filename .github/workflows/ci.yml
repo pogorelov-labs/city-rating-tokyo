@@ -58,7 +58,7 @@ jobs:
         # Runs every scripts/test_*.py (pytest.ini testpaths). The ingest tests
         # also check the committed data/ files they produce.
         run: |
-          pip install pytest pydantic --quiet
+          pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
           pip install -r scripts/requirements-ingest.txt --quiet
           pytest -v
 
@@ -109,7 +109,7 @@ jobs:
 
   bangkok:
     # Bangkok district pipeline: pure-Python rating math + integrity of the
-    # committed app data. build.py itself (numpy/shapely/duckdb) is not run here.
+    # committed app data plus offline WorldPop raster fixtures. No live downloads.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -118,5 +118,5 @@ jobs:
           python-version: "3.12"
       - name: Bangkok pipeline tests
         run: |
-          pip install pytest --quiet
-          pytest scripts/bangkok/test_bangkok.py -v
+          pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
+          pytest scripts/bangkok -v

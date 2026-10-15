@@ -1,0 +1,37 @@
+{
+  "id": "worldpop_2020",
+  "dataset": "WorldPop Global1 constrained individual countries 2020 / BSGM / THA",
+  "record_id": 49890,
+  "filename": "tha_ppp_2020_constrained.tif",
+  "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020_Constrained/2020/BSGM/THA/tha_ppp_2020_constrained.tif",
+  "record_url": "https://hub.worldpop.org/geodata/summary?id=49890",
+  "doi": "10.5258/SOTON/WP00684",
+  "epoch": 2020,
+  "production_date": "2020-09-16",
+  "retrieved": "2026-10-15",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "WorldPop, University of Southampton. Bondarenko M., Kerr D., Sorichetta A. and Tatem A.J. (2020). Constrained BSGM census/projection-disaggregated population. Adapted by City Rating: district aggregation and density scoring.",
+  "bytes": 28878233,
+  "sha256": "400dc5435e15e78ce6b5e510327ec863c62d209011ce1b03cad4445773753d42",
+  "units": "people_per_pixel",
+  "nodata_semantics": "BSGM_unsettled",
+  "raster": {
+    "crs": "EPSG:4326",
+    "shape": [
+      17816,
+      9952
+    ],
+    "dtype": "float32",
+    "nodata": -99999.0,
+    "transform": [
+      0.0008333333299839229,
+      0.0,
+      97.345416292,
+      0.0,
+      -0.0008333333299842838,
+      20.462916786
+    ]
+  },
+  "method": "Sum original float counts in pixel-center masks of published OSM district polygons, excluding holes; divide by official district area. NoData contributes zero; no pixel-area multiplier, reprojection or resampling of population counts."
+}

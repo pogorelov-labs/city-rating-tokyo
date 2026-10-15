@@ -1,0 +1,415 @@
+{
+  "_meta": {
+    "baseline_commit": "505ae726489fffc6548bd7bb789a1d8d0e0089cb",
+    "geometry_sha256": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
+    "signals_sha256": "43da9daf187a89173adca306071433ff23fd023515ef4cedf318d71cfd743cf5",
+    "note": "Frozen CRTKY-197 adoption comparison. crowd_raw is the committed four-decimal signal; recovered POI log term has at most 0.00005 rounding error. No POI counts are inferred.",
+    "unchanged_signatures": {
+      "districts": "a3dae8d91438aeb61204aedfd63d25d4fc9c59d4742542f71c6cc63c81572395",
+      "signals": "1f499b8b079de36d52bb7ab53a4d2cedd608a0e5a6690f3571f40b00b5bf7a39",
+      "meta": "b86fd0428f841acef19f76dfb6de1ed1581404a792da7112005b06a1056142d0"
+    }
+  },
+  "districts": {
+    "bang-bon": {
+      "registered_population": 104366,
+      "population_year": 2020,
+      "official_area_km2": 34.74,
+      "registered_density_input": 3004,
+      "crowd_raw": 6.2562,
+      "crowd_rating": 9
+    },
+    "bang-kapi": {
+      "registered_population": 144732,
+      "population_year": 2020,
+      "official_area_km2": 28.52,
+      "registered_density_input": 5074,
+      "crowd_raw": 7.0772,
+      "crowd_rating": 5
+    },
+    "bang-khae": {
+      "registered_population": 193303,
+      "population_year": 2020,
+      "official_area_km2": 44.46,
+      "registered_density_input": 4348,
+      "crowd_raw": 6.5684,
+      "crowd_rating": 7
+    },
+    "bang-khen": {
+      "registered_population": 187377,
+      "population_year": 2020,
+      "official_area_km2": 42.12,
+      "registered_density_input": 4448,
+      "crowd_raw": 6.6789,
+      "crowd_rating": 7
+    },
+    "bang-kho-laem": {
+      "registered_population": 82733,
+      "population_year": 2020,
+      "official_area_km2": 10.92,
+      "registered_density_input": 7576,
+      "crowd_raw": 7.1483,
+      "crowd_rating": 4
+    },
+    "bang-khun-thian": {
+      "registered_population": 186144,
+      "population_year": 2020,
+      "official_area_km2": 120.69,
+      "registered_density_input": 1542,
+      "crowd_raw": 5.6135,
+      "crowd_rating": 10
+    },
+    "bang-na": {
+      "registered_population": 88535,
+      "population_year": 2020,
+      "official_area_km2": 18.79,
+      "registered_density_input": 4712,
+      "crowd_raw": 7.0029,
+      "crowd_rating": 6
+    },
+    "bang-phlat": {
+      "registered_population": 89417,
+      "population_year": 2020,
+      "official_area_km2": 11.36,
+      "registered_density_input": 7871,
+      "crowd_raw": 7.2579,
+      "crowd_rating": 4
+    },
+    "bang-rak": {
+      "registered_population": 45757,
+      "population_year": 2020,
+      "official_area_km2": 5.54,
+      "registered_density_input": 8259,
+      "crowd_raw": 7.9704,
+      "crowd_rating": 1
+    },
+    "bang-sue": {
+      "registered_population": 122410,
+      "population_year": 2020,
+      "official_area_km2": 11.5,
+      "registered_density_input": 10644,
+      "crowd_raw": 7.4433,
+      "crowd_rating": 3
+    },
+    "bangkok-noi": {
+      "registered_population": 103791,
+      "population_year": 2020,
+      "official_area_km2": 11.94,
+      "registered_density_input": 8690,
+      "crowd_raw": 7.4269,
+      "crowd_rating": 4
+    },
+    "bangkok-yai": {
+      "registered_population": 63861,
+      "population_year": 2020,
+      "official_area_km2": 6.18,
+      "registered_density_input": 10333,
+      "crowd_raw": 7.3451,
+      "crowd_rating": 4
+    },
+    "bueng-kum": {
+      "registered_population": 140817,
+      "population_year": 2020,
+      "official_area_km2": 24.31,
+      "registered_density_input": 5792,
+      "crowd_raw": 6.8915,
+      "crowd_rating": 6
+    },
+    "chatuchak": {
+      "registered_population": 155297,
+      "population_year": 2020,
+      "official_area_km2": 32.91,
+      "registered_density_input": 4719,
+      "crowd_raw": 7.1042,
+      "crowd_rating": 5
+    },
+    "chom-thong": {
+      "registered_population": 148290,
+      "population_year": 2020,
+      "official_area_km2": 26.27,
+      "registered_density_input": 5646,
+      "crowd_raw": 6.6499,
+      "crowd_rating": 7
+    },
+    "din-daeng": {
+      "registered_population": 115508,
+      "population_year": 2020,
+      "official_area_km2": 8.35,
+      "registered_density_input": 13827,
+      "crowd_raw": 7.9294,
+      "crowd_rating": 2
+    },
+    "don-mueang": {
+      "registered_population": 170791,
+      "population_year": 2020,
+      "official_area_km2": 36.8,
+      "registered_density_input": 4641,
+      "crowd_raw": 6.5469,
+      "crowd_rating": 8
+    },
+    "dusit": {
+      "registered_population": 83897,
+      "population_year": 2020,
+      "official_area_km2": 10.66,
+      "registered_density_input": 7867,
+      "crowd_raw": 7.2438,
+      "crowd_rating": 4
+    },
+    "huai-khwang": {
+      "registered_population": 84233,
+      "population_year": 2020,
+      "official_area_km2": 15.03,
+      "registered_density_input": 5603,
+      "crowd_raw": 7.2991,
+      "crowd_rating": 4
+    },
+    "khan-na-yao": {
+      "registered_population": 96330,
+      "population_year": 2020,
+      "official_area_km2": 25.98,
+      "registered_density_input": 3708,
+      "crowd_raw": 6.562,
+      "crowd_rating": 7
+    },
+    "khlong-sam-wa": {
+      "registered_population": 204900,
+      "population_year": 2020,
+      "official_area_km2": 110.69,
+      "registered_density_input": 1851,
+      "crowd_raw": 5.6225,
+      "crowd_rating": 9
+    },
+    "khlong-san": {
+      "registered_population": 69139,
+      "population_year": 2020,
+      "official_area_km2": 6.05,
+      "registered_density_input": 11426,
+      "crowd_raw": 7.7642,
+      "crowd_rating": 2
+    },
+    "khlong-toei": {
+      "registered_population": 93193,
+      "population_year": 2020,
+      "official_area_km2": 12.99,
+      "registered_density_input": 7172,
+      "crowd_raw": 7.5554,
+      "crowd_rating": 3
+    },
+    "lak-si": {
+      "registered_population": 102704,
+      "population_year": 2020,
+      "official_area_km2": 22.84,
+      "registered_density_input": 4496,
+      "crowd_raw": 6.7308,
+      "crowd_rating": 7
+    },
+    "lat-krabang": {
+      "registered_population": 178971,
+      "population_year": 2020,
+      "official_area_km2": 123.86,
+      "registered_density_input": 1445,
+      "crowd_raw": 5.6194,
+      "crowd_rating": 10
+    },
+    "lat-phrao": {
+      "registered_population": 117108,
+      "population_year": 2020,
+      "official_area_km2": 21.5,
+      "registered_density_input": 5447,
+      "crowd_raw": 7.0927,
+      "crowd_rating": 5
+    },
+    "min-buri": {
+      "registered_population": 142197,
+      "population_year": 2020,
+      "official_area_km2": 63.65,
+      "registered_density_input": 2234,
+      "crowd_raw": 5.9412,
+      "crowd_rating": 9
+    },
+    "nong-chok": {
+      "registered_population": 177979,
+      "population_year": 2020,
+      "official_area_km2": 236.26,
+      "registered_density_input": 753,
+      "crowd_raw": 4.6048,
+      "crowd_rating": 10
+    },
+    "nong-khaem": {
+      "registered_population": 156203,
+      "population_year": 2020,
+      "official_area_km2": 35.83,
+      "registered_density_input": 4360,
+      "crowd_raw": 6.3731,
+      "crowd_rating": 9
+    },
+    "pathum-wan": {
+      "registered_population": 43338,
+      "population_year": 2020,
+      "official_area_km2": 8.37,
+      "registered_density_input": 5178,
+      "crowd_raw": 7.8035,
+      "crowd_rating": 2
+    },
+    "phasi-charoen": {
+      "registered_population": 124318,
+      "population_year": 2020,
+      "official_area_km2": 17.83,
+      "registered_density_input": 6971,
+      "crowd_raw": 7.0471,
+      "crowd_rating": 5
+    },
+    "phaya-thai": {
+      "registered_population": 67388,
+      "population_year": 2020,
+      "official_area_km2": 9.59,
+      "registered_density_input": 7027,
+      "crowd_raw": 7.47,
+      "crowd_rating": 3
+    },
+    "phra-khanong": {
+      "registered_population": 87856,
+      "population_year": 2020,
+      "official_area_km2": 13.99,
+      "registered_density_input": 6282,
+      "crowd_raw": 7.0109,
+      "crowd_rating": 6
+    },
+    "phra-nakhon": {
+      "registered_population": 44923,
+      "population_year": 2020,
+      "official_area_km2": 5.54,
+      "registered_density_input": 8115,
+      "crowd_raw": 7.8965,
+      "crowd_rating": 2
+    },
+    "pom-prap-sattru-phai": {
+      "registered_population": 41524,
+      "population_year": 2020,
+      "official_area_km2": 1.93,
+      "registered_density_input": 21504,
+      "crowd_raw": 8.4703,
+      "crowd_rating": 1
+    },
+    "prawet": {
+      "registered_population": 181821,
+      "population_year": 2020,
+      "official_area_km2": 52.5,
+      "registered_density_input": 3463,
+      "crowd_raw": 6.5039,
+      "crowd_rating": 8
+    },
+    "rat-burana": {
+      "registered_population": 78687,
+      "population_year": 2020,
+      "official_area_km2": 15.78,
+      "registered_density_input": 4986,
+      "crowd_raw": 6.6443,
+      "crowd_rating": 7
+    },
+    "ratchathewi": {
+      "registered_population": 69264,
+      "population_year": 2020,
+      "official_area_km2": 7.13,
+      "registered_density_input": 9720,
+      "crowd_raw": 7.8693,
+      "crowd_rating": 2
+    },
+    "sai-mai": {
+      "registered_population": 207272,
+      "population_year": 2020,
+      "official_area_km2": 44.62,
+      "registered_density_input": 4646,
+      "crowd_raw": 6.5345,
+      "crowd_rating": 8
+    },
+    "samphanthawong": {
+      "registered_population": 21324,
+      "population_year": 2020,
+      "official_area_km2": 1.42,
+      "registered_density_input": 15059,
+      "crowd_raw": 8.4084,
+      "crowd_rating": 1
+    },
+    "saphan-sung": {
+      "registered_population": 96092,
+      "population_year": 2020,
+      "official_area_km2": 28.12,
+      "registered_density_input": 3417,
+      "crowd_raw": 6.3945,
+      "crowd_rating": 9
+    },
+    "sathon": {
+      "registered_population": 75735,
+      "population_year": 2020,
+      "official_area_km2": 9.33,
+      "registered_density_input": 8121,
+      "crowd_raw": 7.484,
+      "crowd_rating": 3
+    },
+    "suan-luang": {
+      "registered_population": 123609,
+      "population_year": 2020,
+      "official_area_km2": 23.68,
+      "registered_density_input": 5220,
+      "crowd_raw": 6.9787,
+      "crowd_rating": 6
+    },
+    "taling-chan": {
+      "registered_population": 103617,
+      "population_year": 2020,
+      "official_area_km2": 29.48,
+      "registered_density_input": 3515,
+      "crowd_raw": 6.5004,
+      "crowd_rating": 8
+    },
+    "thawi-watthana": {
+      "registered_population": 78749,
+      "population_year": 2020,
+      "official_area_km2": 50.22,
+      "registered_density_input": 1568,
+      "crowd_raw": 5.7055,
+      "crowd_rating": 9
+    },
+    "thon-buri": {
+      "registered_population": 103377,
+      "population_year": 2020,
+      "official_area_km2": 8.55,
+      "registered_density_input": 12089,
+      "crowd_raw": 7.625,
+      "crowd_rating": 3
+    },
+    "thung-khru": {
+      "registered_population": 123700,
+      "population_year": 2020,
+      "official_area_km2": 30.74,
+      "registered_density_input": 4024,
+      "crowd_raw": 6.3996,
+      "crowd_rating": 8
+    },
+    "wang-thonglang": {
+      "registered_population": 107458,
+      "population_year": 2020,
+      "official_area_km2": 18.91,
+      "registered_density_input": 5684,
+      "crowd_raw": 7.1463,
+      "crowd_rating": 5
+    },
+    "watthana": {
+      "registered_population": 81623,
+      "population_year": 2020,
+      "official_area_km2": 12.56,
+      "registered_density_input": 6496,
+      "crowd_raw": 7.7291,
+      "crowd_rating": 2
+    },
+    "yan-nawa": {
+      "registered_population": 76564,
+      "population_year": 2020,
+      "official_area_km2": 16.66,
+      "registered_density_input": 4595,
+      "crowd_raw": 6.86,
+      "crowd_rating": 6
+    }
+  }
+}

@@ -2,7 +2,13 @@
  "_meta": {
   "generated": "2026-09-30",
   "grid_m": 200,
-  "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py."
+  "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py.",
+  "population": {
+   "source": "worldpop_2020",
+   "epoch": 2020,
+   "sha256": "400dc5435e15e78ce6b5e510327ec863c62d209011ce1b03cad4445773753d42",
+   "method": "pixel_center_sum / official_area_km2"
+  }
  },
  "districts": {
   "bang-bon": {
@@ -16,7 +22,7 @@
     "gym_sports": 1.1665,
     "vibe": 0.7916,
     "nightlife": 0.5722,
-    "crowd": 6.2562
+    "crowd": 6.5281
    },
    "ratings": {
     "transport": 2,
@@ -79,7 +85,7 @@
     "gym_sports": 2.1575,
     "vibe": 1.5818,
     "nightlife": 1.3494,
-    "crowd": 7.0772
+    "crowd": 7.6289
    },
    "ratings": {
     "transport": 5,
@@ -149,7 +155,7 @@
     "gym_sports": 1.2328,
     "vibe": 0.8978,
     "nightlife": 0.7074,
-    "crowd": 6.5684
+    "crowd": 6.9071
    },
    "ratings": {
     "transport": 3,
@@ -217,7 +223,7 @@
     "gym_sports": 1.7626,
     "vibe": 1.0903,
     "nightlife": 0.8166,
-    "crowd": 6.6789
+    "crowd": 6.9575
    },
    "ratings": {
     "transport": 5,
@@ -296,7 +302,7 @@
     "gym_sports": 2.3031,
     "vibe": 1.8873,
     "nightlife": 1.7887,
-    "crowd": 7.1483
+    "crowd": 7.4812
    },
    "ratings": {
     "transport": 5,
@@ -308,7 +314,7 @@
     "gym_sports": 7,
     "vibe": 7,
     "nightlife": 7,
-    "crowd": 4
+    "crowd": 5
    },
    "points": 210,
    "inhabited_share": 1.0,
@@ -359,7 +365,7 @@
     "gym_sports": 0.9058,
     "vibe": 0.7117,
     "nightlife": 0.5006,
-    "crowd": 5.6135
+    "crowd": 5.9198
    },
    "ratings": {
     "transport": 2,
@@ -422,7 +428,7 @@
     "gym_sports": 2.3092,
     "vibe": 1.4507,
     "nightlife": 1.3171,
-    "crowd": 7.0029
+    "crowd": 7.444
    },
    "ratings": {
     "transport": 6,
@@ -434,7 +440,7 @@
     "gym_sports": 7,
     "vibe": 6,
     "nightlife": 6,
-    "crowd": 6
+    "crowd": 5
    },
    "points": 477,
    "inhabited_share": 0.992,
@@ -494,7 +500,7 @@
     "gym_sports": 1.9769,
     "vibe": 1.957,
     "nightlife": 1.8297,
-    "crowd": 7.2579
+    "crowd": 7.7523
    },
    "ratings": {
     "transport": 8,
@@ -566,7 +572,7 @@
     "gym_sports": 3.7469,
     "vibe": 3.7869,
     "nightlife": 3.9414,
-    "crowd": 7.9704
+    "crowd": 8.2167
    },
    "ratings": {
     "transport": 10,
@@ -578,7 +584,7 @@
     "gym_sports": 10,
     "vibe": 10,
     "nightlife": 10,
-    "crowd": 1
+    "crowd": 2
    },
    "points": 95,
    "inhabited_share": 1.0,
@@ -643,7 +649,7 @@
     "gym_sports": 1.9877,
     "vibe": 1.4974,
     "nightlife": 1.432,
-    "crowd": 7.4433
+    "crowd": 7.6845
    },
    "ratings": {
     "transport": 9,
@@ -655,7 +661,7 @@
     "gym_sports": 5,
     "vibe": 6,
     "nightlife": 6,
-    "crowd": 3
+    "crowd": 4
    },
    "points": 322,
    "inhabited_share": 1.0,
@@ -716,7 +722,7 @@
     "gym_sports": 1.9422,
     "vibe": 2.1567,
     "nightlife": 1.4973,
-    "crowd": 7.4269
+    "crowd": 7.7992
    },
    "ratings": {
     "transport": 7,
@@ -728,7 +734,7 @@
     "gym_sports": 5,
     "vibe": 7,
     "nightlife": 7,
-    "crowd": 4
+    "crowd": 3
    },
    "points": 308,
    "inhabited_share": 0.987,
@@ -784,7 +790,7 @@
     "gym_sports": 2.1563,
     "vibe": 2.1367,
     "nightlife": 1.4833,
-    "crowd": 7.3451
+    "crowd": 7.6783
    },
    "ratings": {
     "transport": 9,
@@ -853,7 +859,7 @@
     "gym_sports": 1.9203,
     "vibe": 1.3771,
     "nightlife": 1.1381,
-    "crowd": 6.8915
+    "crowd": 7.0135
    },
    "ratings": {
     "transport": 3,
@@ -865,7 +871,7 @@
     "gym_sports": 5,
     "vibe": 5,
     "nightlife": 5,
-    "crowd": 6
+    "crowd": 7
    },
    "points": 580,
    "inhabited_share": 0.991,
@@ -920,7 +926,7 @@
     "gym_sports": 2.3956,
     "vibe": 1.9657,
     "nightlife": 1.7832,
-    "crowd": 7.1042
+    "crowd": 7.636
    },
    "ratings": {
     "transport": 9,
@@ -932,7 +938,7 @@
     "gym_sports": 7,
     "vibe": 7,
     "nightlife": 7,
-    "crowd": 5
+    "crowd": 4
    },
    "points": 809,
    "inhabited_share": 0.999,
@@ -1007,7 +1013,7 @@
     "gym_sports": 1.4041,
     "vibe": 1.2381,
     "nightlife": 0.8154,
-    "crowd": 6.6499
+    "crowd": 6.9067
    },
    "ratings": {
     "transport": 4,
@@ -1074,7 +1080,7 @@
     "gym_sports": 3.0114,
     "vibe": 2.4287,
     "nightlife": 2.4839,
-    "crowd": 7.9294
+    "crowd": 8.2265
    },
    "ratings": {
     "transport": 8,
@@ -1145,7 +1151,7 @@
     "gym_sports": 1.4019,
     "vibe": 1.0491,
     "nightlife": 0.9531,
-    "crowd": 6.5469
+    "crowd": 6.8422
    },
    "ratings": {
     "transport": 4,
@@ -1217,7 +1223,7 @@
     "gym_sports": 2.2736,
     "vibe": 2.2714,
     "nightlife": 1.2447,
-    "crowd": 7.2438
+    "crowd": 7.5237
    },
    "ratings": {
     "transport": 6,
@@ -1229,7 +1235,7 @@
     "gym_sports": 7,
     "vibe": 8,
     "nightlife": 5,
-    "crowd": 4
+    "crowd": 5
    },
    "points": 279,
    "inhabited_share": 0.993,
@@ -1280,7 +1286,7 @@
     "gym_sports": 2.49,
     "vibe": 1.8009,
     "nightlife": 2.2078,
-    "crowd": 7.2991
+    "crowd": 7.7794
    },
    "ratings": {
     "transport": 7,
@@ -1356,7 +1362,7 @@
     "gym_sports": 1.967,
     "vibe": 1.1891,
     "nightlife": 0.8335,
-    "crowd": 6.562
+    "crowd": 6.8366
    },
    "ratings": {
     "transport": 5,
@@ -1368,7 +1374,7 @@
     "gym_sports": 5,
     "vibe": 4,
     "nightlife": 4,
-    "crowd": 7
+    "crowd": 8
    },
    "points": 640,
    "inhabited_share": 0.844,
@@ -1427,7 +1433,7 @@
     "gym_sports": 0.9172,
     "vibe": 0.5868,
     "nightlife": 0.4191,
-    "crowd": 5.6225
+    "crowd": 5.816
    },
    "ratings": {
     "transport": 1,
@@ -1439,7 +1445,7 @@
     "gym_sports": 2,
     "vibe": 1,
     "nightlife": 1,
-    "crowd": 9
+    "crowd": 10
    },
    "points": 2866,
    "inhabited_share": 0.458,
@@ -1490,7 +1496,7 @@
     "gym_sports": 2.5505,
     "vibe": 2.6557,
     "nightlife": 2.48,
-    "crowd": 7.7642
+    "crowd": 8.0252
    },
    "ratings": {
     "transport": 9,
@@ -1561,7 +1567,7 @@
     "gym_sports": 3.2031,
     "vibe": 2.2589,
     "nightlife": 2.743,
-    "crowd": 7.5554
+    "crowd": 7.975
    },
    "ratings": {
     "transport": 8,
@@ -1638,7 +1644,7 @@
     "gym_sports": 2.0874,
     "vibe": 1.2525,
     "nightlife": 0.9891,
-    "crowd": 6.7308
+    "crowd": 7.187
    },
    "ratings": {
     "transport": 7,
@@ -1650,7 +1656,7 @@
     "gym_sports": 6,
     "vibe": 4,
     "nightlife": 4,
-    "crowd": 7
+    "crowd": 6
    },
    "points": 572,
    "inhabited_share": 0.946,
@@ -1712,7 +1718,7 @@
     "gym_sports": 0.7868,
     "vibe": 0.644,
     "nightlife": 0.6381,
-    "crowd": 5.6194
+    "crowd": 5.9808
    },
    "ratings": {
     "transport": 2,
@@ -1724,7 +1730,7 @@
     "gym_sports": 1,
     "vibe": 1,
     "nightlife": 3,
-    "crowd": 10
+    "crowd": 9
    },
    "points": 3202,
    "inhabited_share": 0.483,
@@ -1779,7 +1785,7 @@
     "gym_sports": 2.0158,
     "vibe": 1.3492,
     "nightlife": 1.7089,
-    "crowd": 7.0927
+    "crowd": 7.4297
    },
    "ratings": {
     "transport": 4,
@@ -1791,7 +1797,7 @@
     "gym_sports": 6,
     "vibe": 5,
     "nightlife": 7,
-    "crowd": 5
+    "crowd": 6
    },
    "points": 535,
    "inhabited_share": 1.0,
@@ -1842,7 +1848,7 @@
     "gym_sports": 0.9394,
     "vibe": 0.7444,
     "nightlife": 0.4735,
-    "crowd": 5.9412
+    "crowd": 6.2758
    },
    "ratings": {
     "transport": 3,
@@ -1912,7 +1918,7 @@
     "gym_sports": 0.3474,
     "vibe": 0.3516,
     "nightlife": 0.1168,
-    "crowd": 4.6048
+    "crowd": 4.7198
    },
    "ratings": {
     "transport": 1,
@@ -1975,7 +1981,7 @@
     "gym_sports": 1.0817,
     "vibe": 0.7156,
     "nightlife": 0.5471,
-    "crowd": 6.3731
+    "crowd": 6.6238
    },
    "ratings": {
     "transport": 1,
@@ -1987,7 +1993,7 @@
     "gym_sports": 2,
     "vibe": 2,
     "nightlife": 2,
-    "crowd": 9
+    "crowd": 8
    },
    "points": 906,
    "inhabited_share": 0.774,
@@ -2038,7 +2044,7 @@
     "gym_sports": 3.8737,
     "vibe": 3.5999,
     "nightlife": 3.6158,
-    "crowd": 7.8035
+    "crowd": 8.2962
    },
    "ratings": {
     "transport": 10,
@@ -2050,7 +2056,7 @@
     "gym_sports": 10,
     "vibe": 9,
     "nightlife": 10,
-    "crowd": 2
+    "crowd": 1
    },
    "points": 204,
    "inhabited_share": 1.0,
@@ -2115,7 +2121,7 @@
     "gym_sports": 1.4962,
     "vibe": 1.4001,
     "nightlife": 1.081,
-    "crowd": 7.0471
+    "crowd": 7.4078
    },
    "ratings": {
     "transport": 6,
@@ -2127,7 +2133,7 @@
     "gym_sports": 4,
     "vibe": 5,
     "nightlife": 4,
-    "crowd": 5
+    "crowd": 6
    },
    "points": 478,
    "inhabited_share": 0.979,
@@ -2186,7 +2192,7 @@
     "gym_sports": 2.9018,
     "vibe": 2.4324,
     "nightlife": 2.7,
-    "crowd": 7.47
+    "crowd": 7.9514
    },
    "ratings": {
     "transport": 9,
@@ -2258,7 +2264,7 @@
     "gym_sports": 2.0038,
     "vibe": 1.3936,
     "nightlife": 1.406,
-    "crowd": 7.0109
+    "crowd": 7.3872
    },
    "ratings": {
     "transport": 5,
@@ -2327,7 +2333,7 @@
     "gym_sports": 2.6676,
     "vibe": 4.0326,
     "nightlife": 3.5761,
-    "crowd": 7.8965
+    "crowd": 8.2039
    },
    "ratings": {
     "transport": 7,
@@ -2395,7 +2401,7 @@
     "gym_sports": 2.4813,
     "vibe": 3.6767,
     "nightlife": 3.0228,
-    "crowd": 8.4703
+    "crowd": 8.5964
    },
    "ratings": {
     "transport": 8,
@@ -2462,7 +2468,7 @@
     "gym_sports": 1.444,
     "vibe": 0.9494,
     "nightlife": 0.6538,
-    "crowd": 6.5039
+    "crowd": 6.7054
    },
    "ratings": {
     "transport": 3,
@@ -2531,7 +2537,7 @@
     "gym_sports": 1.4169,
     "vibe": 1.2103,
     "nightlife": 1.1,
-    "crowd": 6.6443
+    "crowd": 6.9561
    },
    "ratings": {
     "transport": 3,
@@ -2594,7 +2600,7 @@
     "gym_sports": 3.13,
     "vibe": 2.9224,
     "nightlife": 2.744,
-    "crowd": 7.8693
+    "crowd": 8.2335
    },
    "ratings": {
     "transport": 9,
@@ -2669,7 +2675,7 @@
     "gym_sports": 1.3568,
     "vibe": 0.8941,
     "nightlife": 0.6644,
-    "crowd": 6.5345
+    "crowd": 6.6875
    },
    "ratings": {
     "transport": 4,
@@ -2740,7 +2746,7 @@
     "gym_sports": 2.4277,
     "vibe": 3.9423,
     "nightlife": 3.5095,
-    "crowd": 8.4084
+    "crowd": 8.3858
    },
    "ratings": {
     "transport": 10,
@@ -2809,7 +2815,7 @@
     "gym_sports": 1.4286,
     "vibe": 0.8554,
     "nightlife": 0.6235,
-    "crowd": 6.3945
+    "crowd": 6.6224
    },
    "ratings": {
     "transport": 2,
@@ -2876,7 +2882,7 @@
     "gym_sports": 3.3319,
     "vibe": 2.5599,
     "nightlife": 2.392,
-    "crowd": 7.484
+    "crowd": 7.9179
    },
    "ratings": {
     "transport": 7,
@@ -2948,7 +2954,7 @@
     "gym_sports": 1.8792,
     "vibe": 1.3346,
     "nightlife": 1.2859,
-    "crowd": 6.9787
+    "crowd": 7.4378
    },
    "ratings": {
     "transport": 6,
@@ -2960,7 +2966,7 @@
     "gym_sports": 4,
     "vibe": 5,
     "nightlife": 5,
-    "crowd": 6
+    "crowd": 5
    },
    "points": 610,
    "inhabited_share": 0.998,
@@ -3020,7 +3026,7 @@
     "gym_sports": 1.6171,
     "vibe": 1.0965,
     "nightlife": 0.6298,
-    "crowd": 6.5004
+    "crowd": 6.8566
    },
    "ratings": {
     "transport": 4,
@@ -3032,7 +3038,7 @@
     "gym_sports": 4,
     "vibe": 4,
     "nightlife": 2,
-    "crowd": 8
+    "crowd": 7
    },
    "points": 893,
    "inhabited_share": 0.952,
@@ -3087,7 +3093,7 @@
     "gym_sports": 1.2908,
     "vibe": 0.6894,
     "nightlife": 0.3738,
-    "crowd": 5.7055
+    "crowd": 5.9968
    },
    "ratings": {
     "transport": 2,
@@ -3150,7 +3156,7 @@
     "gym_sports": 2.2782,
     "vibe": 2.1665,
     "nightlife": 1.7511,
-    "crowd": 7.625
+    "crowd": 7.9389
    },
    "ratings": {
     "transport": 8,
@@ -3220,7 +3226,7 @@
     "gym_sports": 1.5214,
     "vibe": 0.9507,
     "nightlife": 0.7126,
-    "crowd": 6.3996
+    "crowd": 6.5546
    },
    "ratings": {
     "transport": 2,
@@ -3232,7 +3238,7 @@
     "gym_sports": 4,
     "vibe": 3,
     "nightlife": 3,
-    "crowd": 8
+    "crowd": 9
    },
    "points": 690,
    "inhabited_share": 0.828,
@@ -3283,7 +3289,7 @@
     "gym_sports": 2.1731,
     "vibe": 1.5588,
     "nightlife": 1.6488,
-    "crowd": 7.1463
+    "crowd": 7.6542
    },
    "ratings": {
     "transport": 6,
@@ -3295,7 +3301,7 @@
     "gym_sports": 7,
     "vibe": 6,
     "nightlife": 7,
-    "crowd": 5
+    "crowd": 4
    },
    "points": 428,
    "inhabited_share": 1.0,
@@ -3354,7 +3360,7 @@
     "gym_sports": 3.5771,
     "vibe": 2.5328,
     "nightlife": 3.6042,
-    "crowd": 7.7291
+    "crowd": 8.229
    },
    "ratings": {
     "transport": 7,
@@ -3431,7 +3437,7 @@
     "gym_sports": 2.7171,
     "vibe": 1.7501,
     "nightlife": 1.1983,
-    "crowd": 6.86
+    "crowd": 7.3465
    },
    "ratings": {
     "transport": 4,

@@ -24,7 +24,7 @@
   },
   "default_anchors": {
     "p5": 4.2,
-    "p50": 6.3,
+    "p50": 6.2,
     "p95": 8.2
   },
   "station_area_count": 133,
