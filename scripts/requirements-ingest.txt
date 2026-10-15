@@ -1,4 +1,5 @@
 # Extra dependencies for the ingest scripts that parse PDFs and shapefiles.
 # The ratings pipeline itself (compute/export) only needs `requests`.
+requests>=2.32
 pdfplumber>=0.11
 pyshp>=2.3

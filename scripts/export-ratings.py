@@ -20,6 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
 from utils import NocoDB, load_stations
+from source_health import decode_dates, conservative_month
+from rating_store import DEFAULT_RECOVERY_DIR, table_lock, assert_recovered
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = ROOT / "app" / "src" / "data" / "demo-ratings.ts"
@@ -129,7 +131,7 @@ def merge_ai_confidence(entry_text, ai_ratings, computed_row):
             merged_conf[cat] = 'editorial'
             merged_srcs[cat] = ['ai_research']
 
-    data_date = computed_row.get("data_date", "2026-04") if computed_row else "2026-04"
+    data_date, _ = date_metadata(computed_row)
 
     # Format as TS object strings
     conf_parts = [f"{c}: '{merged_conf[c]}'" for c in cats]
@@ -257,6 +259,24 @@ def apply_station_level_rent(entry_text, computed_row):
     return entry_text, entry_text != before
 
 
+def date_metadata(row):
+    row = row or {}
+    dates = decode_dates(row.get("source_dates"))
+    return conservative_month(dates, row.get("data_date")), dates
+
+
+def refresh_entry_dates(entry, row):
+    """Refresh provenance even for already-curated entries; leave their scores alone."""
+    if row is None:
+        return entry
+    month, dates = date_metadata(row)
+    entry = re.sub(r"^\s*(?:data_date|source_dates):.*\n", "", entry, flags=re.M)
+    metadata = f"\n    data_date: '{month}',"
+    if dates:
+        metadata += f"\n    source_dates: {json.dumps(dates, sort_keys=True)},"
+    return re.sub(r"\s*\},?\s*$", lambda _: metadata + "\n  },", entry)
+
+
 def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
     """Format a computed rating entry as TypeScript."""
     r = data
@@ -278,7 +298,7 @@ def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
     # Parse confidence and sources from NocoDB JSON string columns
     conf = {}
     srcs = {}
-    data_date = r.get("data_date", "2026-04")
+    data_date, dates = date_metadata(r)
     for field, target in [("confidence", conf), ("sources", srcs)]:
         val = r.get(field)
         if isinstance(val, str):
@@ -318,6 +338,8 @@ def format_ratings_entry(slug, data, rent_data=None, transit_data=None):
         f"    confidence: {conf_str},\n"
         f"    sources: {srcs_str},\n"
         f"    data_date: '{data_date}',\n"
+        + (f"    source_dates: {json.dumps(dates, sort_keys=True)},\n" if dates else "")
+        +
         f"  }},"
     )
 
@@ -339,6 +361,7 @@ def main():
              "fabricated 30-minute default commute instead of failing (exit 1). "
              "Debugging only — CRTKY-81 should cover all 1493 stations.",
     )
+    parser.add_argument("--recovery-dir", type=Path, default=DEFAULT_RECOVERY_DIR)
     args = parser.parse_args()
 
     output_path = Path(args.output)
@@ -355,7 +378,9 @@ def main():
     # 2. Load computed ratings from NocoDB
     print("Loading computed ratings from NocoDB...")
     db = NocoDB("computed_ratings")
-    computed_rows = db.get_all_records()
+    with table_lock(args.recovery_dir):
+        assert_recovered(args.recovery_dir)
+        computed_rows = db.get_all_records()
     computed = {r["slug"]: r for r in computed_rows if r.get("slug")}
     print(f"  Computed ratings: {len(computed)}")
 
@@ -408,6 +433,7 @@ def main():
     parts.append("  confidence?: StationConfidence;")
     parts.append("  sources?: StationSources;")
     parts.append("  data_date?: string;")
+    parts.append("  source_dates?: Record<string, string | null>;")
     parts.append("  description?: {")
     parts.append("    atmosphere: string;")
     parts.append("    landmarks: string;")
@@ -458,6 +484,7 @@ def main():
             # Station-level rent beats the editorial value (D3b, 2026-09-30).
             entry_text, rent_changed = apply_station_level_rent(entry_text, comp_row)
             ai_rent_station_level += rent_changed
+            entry_text = refresh_entry_dates(entry_text, comp_row)
             parts.append(entry_text)
             ai_count += 1
 

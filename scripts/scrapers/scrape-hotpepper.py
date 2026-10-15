@@ -19,10 +19,9 @@ import sys
 import time
 from datetime import date
 
-import requests
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
-from utils import NocoDB, RateLimiter, load_stations
+from slugs import index_by_slug
 
 API_KEY = os.environ.get("HOTPEPPER_API_KEY", "")
 BASE_URL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
@@ -33,7 +32,7 @@ GENRE_BAR = "G012"       # バー・カクテル
 GENRE_CAFE = "G014"      # カフェ・スイーツ
 
 
-def query_hotpepper(lat, lng, radius=3, genre=None):
+def query_hotpepper(lat, lng, radius=3, genre=None, midnight=False, get=None):
     """
     Query HotPepper API for restaurants near a location.
     radius: 1=300m, 2=500m, 3=1000m, 4=2000m, 5=3000m
@@ -44,6 +43,9 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
     persisted 0 would never be retried and would permanently zero-rank the
     station's food/nightlife signal.
     """
+    if get is None:
+        import requests
+        get = requests.get
     params = {
         "key": API_KEY,
         "lat": lat,
@@ -52,6 +54,8 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
         "count": 1,  # We just need the count, not all results
         "format": "json",
     }
+    if midnight:
+        params["midnight"] = 1
     if genre:
         params["genre"] = genre
 
@@ -59,7 +63,7 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
     # (3 attempts, growing sleep on 429/5xx/timeout/network errors).
     for attempt in range(3):
         try:
-            resp = requests.get(BASE_URL, params=params, timeout=15)
+            resp = get(BASE_URL, params=params, timeout=15)
             if resp.status_code == 429:
                 wait = 10 * (attempt + 1)
                 print(f"  Rate limited, waiting {wait}s...")
@@ -73,14 +77,23 @@ def query_hotpepper(lat, lng, radius=3, genre=None):
             resp.raise_for_status()
             data = resp.json()
             results = data.get("results", {})
-            return int(results.get("results_available", 0))
-        except requests.exceptions.Timeout:
-            wait = 5 * (attempt + 1)
-            print(f"  Timeout, retrying in {wait}s...")
-            time.sleep(wait)
-            continue
-        except Exception as e:
-            print(f"  API error (attempt {attempt+1}/3): {e}")
+            # Recruit returns HTTP 200 for auth/parameter/server errors.
+            if results.get("error"):
+                codes = {str(e.get("code")) for e in results["error"] if isinstance(e, dict)}
+                if codes & {"2000", "3000"}:
+                    print("  HotPepper authentication/parameter error; no row written")
+                    return None
+                raise ValueError("HotPepper service error")
+            count = results.get("results_available")
+            if isinstance(count, bool) or not isinstance(count, (int, str)):
+                raise ValueError("Missing/invalid result count")
+            count = int(count)
+            if count < 0:
+                raise ValueError("Negative result count")
+            return count
+        except Exception:
+            # Exception text can contain the request URL and API key.
+            print(f"  API request/response failed (attempt {attempt+1}/3)")
             if attempt < 2:
                 time.sleep(5 * (attempt + 1))
                 continue
@@ -118,7 +131,13 @@ def query_all_categories(lat, lng, limiter):
     if cafe is None:
         return None
 
+    limiter.wait()
+    midnight = query_hotpepper(lat, lng, radius=3, midnight=True)
+    if midnight is None:
+        return None
+
     return {
+        "midnight_count": midnight,
         "total_count": total,
         "izakaya_count": izakaya,
         "bar_count": bar,
@@ -131,6 +150,8 @@ def main():
     parser.add_argument("--delay", type=float, default=0.5, help="Delay between requests (seconds)")
     parser.add_argument("--limit", type=int, default=0, help="Limit number of stations (0=all)")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--refresh", action="store_true", help="Refresh existing rows by Id after all five queries succeed")
+    parser.add_argument("--check-key", action="store_true", help="One read-only API probe; no NocoDB access")
     args = parser.parse_args()
 
     if not API_KEY:
@@ -138,13 +159,19 @@ def main():
         print("Register at: https://webservice.recruit.co.jp/register/")
         sys.exit(1)
 
+    if args.check_key:
+        value = query_hotpepper(35.6812, 139.7671)
+        print("HotPepper key probe passed" if value is not None else "HotPepper key probe failed")
+        sys.exit(0 if value is not None else 1)
+
+    from utils import NocoDB, RateLimiter, load_stations
     stations = load_stations()
     db = NocoDB("hotpepper")
     limiter = RateLimiter(args.delay)
-    today = date.today().isoformat()
 
-    existing = db.get_existing_slugs()
-    remaining = [s for s in stations if s["slug"] not in existing]
+    existing, _ = index_by_slug(db.get_all_records())
+    remaining = [s for s in stations if args.refresh or s["slug"] not in existing
+                 or existing[s["slug"]].get("midnight_count") is None]
 
     if args.limit > 0:
         remaining = remaining[:args.limit]
@@ -179,19 +206,25 @@ def main():
             "slug": slug,
             **data,
             "avg_rating": 0,  # HotPepper count endpoint doesn't give ratings
-            "scraped_at": today,
+            "scraped_at": date.today().isoformat(),
         }
 
         try:
-            db.upsert_record(record)
+            if slug in existing:
+                # Keep the existing slug/Id; avoid duplicates across slug renames.
+                db.update_record(existing[slug]["Id"], {k: v for k, v in record.items() if k != "slug"})
+            else:
+                db.upsert_record(record)
             success += 1
             print(f"total={data['total_count']} izakaya={data['izakaya_count']} "
                   f"bar={data['bar_count']} cafe={data['cafe_count']}")
-        except Exception as e:
-            print(f"DB ERROR: {e}")
+        except Exception:
+            print("DB ERROR (request details suppressed)")
             errors += 1
 
     print(f"\nDone! Success: {success}, Errors: {errors}, Skipped: {skipped}")
+    if errors or skipped:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
