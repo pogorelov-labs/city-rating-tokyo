@@ -25,12 +25,12 @@ export async function QuietnessMethodology() {
       <p>{t('methodComplaints')}</p>
       <h3 className="font-semibold text-gray-900">{t('methodSources')}</h3>
       <ul className="list-disc pl-5 space-y-1">
-        {[
+        {([
           ['sourceTmg', 'https://www.kankyo.metro.tokyo.lg.jp/vehicle/noise/result/cyousakekka'],
           ['sourceYearbook', 'https://www.toukei.metro.tokyo.lg.jp/tnenkan/2024/tn24qv191100.csv'],
           ['sourcePcd', 'https://gdcatalog.go.th/dataset/gdpublish-noise-monitor'],
           ['sourceCode', 'https://github.com/pogorelov-labs/city-rating-tokyo/tree/main/data/noise'],
-        ].map(([key, href]) => (
+        ] as const).map(([key, href]) => (
           <li key={key}><a className="inline-flex min-h-11 items-center text-blue-700 underline" href={href} target="_blank" rel="noopener noreferrer">{t(key)}</a></li>
         ))}
       </ul>

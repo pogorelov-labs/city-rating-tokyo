@@ -1,5 +1,6 @@
 'use client';
 
+import { dataLabel } from '@/i18n/message-key';
 import { useTranslations } from 'next-intl';
 import type { HubMinutes } from '@/lib/types';
 
@@ -23,7 +24,7 @@ export default function HubStrip({
               key={hub}
               className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200"
             >
-              {t(`hubs.${hub}`)} {minutes}m
+              {dataLabel(t, 'hubs', hub)} {minutes}m
             </span>
           ))}
         </div>

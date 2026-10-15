@@ -3,7 +3,7 @@ export default async function AirMethodology() {
   const t = await getTranslations('air');
   return <section id="air" className="scroll-mt-6 space-y-3 text-sm text-gray-700">
     <h2 className="text-xl font-bold text-gray-900">{t('methodTitle')}</h2>
-    {['methodScope','methodLive','methodSeason','methodMissing','methodPermissions'].map(k=><p key={k}>{t(k)}</p>)}
+    {(['methodScope','methodLive','methodSeason','methodMissing','methodPermissions'] as const).map(k=><p key={k}>{t(k)}</p>)}
     <ul className="list-disc pl-5">
       {[
         [t('tokyoSource'),'https://soramame.env.go.jp/'],

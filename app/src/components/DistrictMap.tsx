@@ -205,7 +205,7 @@ function mapLabel(name: string, locale: Locale): string {
   return locale === 'ja' ? name.replace(/区$/, '') : name;
 }
 
-function reasonText(t: ReturnType<typeof useTranslations>, r: DealbreakerReason): string {
+function reasonText(t: ReturnType<typeof useTranslations<never>>, r: DealbreakerReason): string {
   if (r.kind === 'category') {
     return t('map.reasonCategory', { category: t(`shortLabels.${r.key}`), min: r.min });
   }
@@ -233,7 +233,7 @@ function Legend({
   filtersActive: boolean;
 }) {
   const t = useTranslations();
-  const dim = heatmapMode && heatmapDimension !== 'composite' ? (heatmapDimension as ColorDimension) : null;
+  const dim = heatmapMode && heatmapDimension !== 'composite' ? (heatmapDimension as Exclude<ColorDimension, 'composite'>) : null;
   const stops = dim
     ? [1, 5.5, 10].map((v) => scoreToColor(v, dim))
     : [anchors.p5, (anchors.p5 + anchors.p50) / 2, anchors.p50, (anchors.p50 + anchors.p95) / 2, anchors.p95].map((v) =>

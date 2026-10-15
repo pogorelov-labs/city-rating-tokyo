@@ -215,6 +215,9 @@
     "hideAdultZones": "Семейный фильтр: скрыть зоны развлечений для взрослых"
   },
   "map": {
+    "reason_adultZone": "в зоне развлечений для взрослых",
+    "zoomIn": "Приблизить",
+    "zoomOut": "Отдалить",
     "clickForDetails": "Подробности →",
     "closeCard": "Закрыть карточку",
     "viewDetails": "Подробности →",
@@ -301,6 +304,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
+    "sourcesLabel": "Источники:",
     "metaTitle": "{name} ({secondary}) — Гид по районам Токио",
     "metaDescription": "Район станции {name}: оценки, цены на аренду, время в пути. {description}",
     "metaDescriptionFallback": "Путеводитель по району станции {name} в Токио.",

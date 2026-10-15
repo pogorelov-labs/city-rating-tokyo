@@ -4,7 +4,7 @@ import { SOURCES, type AirCity } from '@/lib/air/model';
 import AirLiveChip, { type AirLabels } from './AirLiveChip';
 export default async function AirPanel({ city, compact = false }: { city: AirCity; compact?: boolean }) {
   const t = await getTranslations('air');
-  const labels = Object.fromEntries(['loading','fresh','stale','unavailable','permission_pending','observed','fetched','coverage','preliminary'].map(k=>[k,t(k)])) as AirLabels;
+  const labels = Object.fromEntries((['loading','fresh','stale','unavailable','permission_pending','observed','fetched','coverage','preliminary'] as const).map(k=>[k,t(k)])) as AirLabels;
   const content = <section aria-labelledby={`air-${city}-title`} className="bg-white rounded-lg border border-gray-200 p-5 space-y-3">
     <h2 id={`air-${city}-title`} className="font-bold text-lg">{t('title', {city:t(city)})}</h2>
     <p className="text-sm text-gray-700">{t(`${city}Scope`)}</p>

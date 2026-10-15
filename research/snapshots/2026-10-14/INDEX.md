@@ -17,7 +17,7 @@ keishicho digest 118 строк). Лицензии сверены с LICENSE.txt
 | noise | partial | TMG: yearbook1911_{2022,2023,2024}.csv, tmg_r1–r5_* (автодорожный шум FY2019–23, сводка tmg_survey_summary.json), hakusho2025_34; chofu_h29_roadnoise.xls; PCD: только pcd_ckan_package_show.json + pcd_resources_index.json | TMG CC BY 4.0 (годоскоп 19-11, шум, 白書); 調布市 CC BY 4.0; PCD «Open Data Common» (метаданные; сами CSV не скачаны) | нет — TMG/調布 публикуемы с атрибуцией; PCD-CSV пока нет на диске | Доскачать PCD CSV (тайский egress; URL в pcd_resources_index.json) или bulk-запрос PCD; принять TMG-набор (FY2018–2024); сообщить TMG о битых 白書 35/39 |
 | accidents-bangkok | partial | bkk_accident_risk_2568.csv/.geojson (50 точек, 46 районов), heat_map_100clusters_2565.csv/.geojson (126 кластеров), mymaps_100clusters.kmz, longdo/*.json (кластеры iTIC/RVP + гриды), solutions_pdf_*.txt (частично) | data.bangkok.go.th («License not specified», isopen=false) — контент из харвест-datastore data.go.th; KMZ — Google My Maps BMA; Longdo — iTIC/ThaiRSC/RVP без явной лицензии | **да** (без решения владельца по лицензии) | Таблицы готовы к ingestion по тикету 150 (факты, не скоринг); добрать тексты Solutions PDF 49–126 живым браузером; владельцу решить лицензию и отсутствие полей «погибшие/раненые» |
 | cleanliness-bangkok | acquired | garbage-by-khet.csv (CC BY, через Wayback), waste-by-khet-tidy.csv / -named.csv (459 строк), khet-codes.json (50/50); alt-bma-garbage-service.csv | data.go.th CC BY (основной); alt-набор data.bangkok.go.th «License not specified»; wiki-коды CC BY-SA | основной — нет (CC BY); **alt-CSV — да** | Свести tidy с app/src/data/bangkok/districts.json через khet-codes.json в кандидат-факт cleanliness-сигнала (данные до 2018; код 1000 ≠ итог) |
-| coworking | acquired | coworking-tokyo.json (105 записей, 31 с коорд.), coworking-bangkok.json (54, 5 с коорд.); сырьё 7 источников (wework-jp/ 30 карточек и др.) | WeWork, IWG/Regus/Spaces, JustCo, the Hive, GBH — все © владельцев, открытых лицензий нет | **да** (весь набор) | Геокодировать 74 записи по адресам; нормализация в редакционный стат-слой; расчёт признака «близость коворкинга» |
+| coworking | acquired | coworking-tokyo.json (105 записей, 31 с коорд.), coworking-bangkok.json (54, 5 с коорд.); сырьё 7 источников (wework-jp/ 30 карточек и др.) | WeWork, IWG/Regus/Spaces, JustCo, the Hive, GBH — все © владельцев, открытых лицензий нет | **да** (весь набор) | 123 записи без координат: 74 Tokyo + 49 Bangkok; сначала publication basis/потребитель, затем геокодинг (см. уточнение CRTKY-196 ниже) |
 | medicine-jnto | acquired | medicine-jnto.json (2721 запись, Tokyo 508); raw/ 94 файла (47 префектур × eng/jpn); fetch_all.py, build.py | JNTO/Japan Tourism Agency «All Rights Reserved» | **да** (републикация строк запрещена; счётчики и ссылки на живой сайт — можно) | haversine-джойн по 800 м для факт-блока english_medicine (счётчики + ссылка, без строк); категории — инференс (hospital 937 / dental 674 / clinic 1110) |
 | michelin | acquired | michelin-{tokyo,bangkok}.geojson/.csv/.roster.json (Tokyo 267 = 3★11/2★26/1★119/Bib111; Bangkok 71 = 2/8/29/32); raw/ 351 стр., geocode/cache/ 338 | guide.michelin.com — © Michelin (фактический ростер с атрибуцией); координаты — OSM/Nominatim ODbL | **да** (до лицензионного sign-off владельца; координаты — ODbL) | Point-in-polygon к кварталам/вокруг станций; кросс-чек имён с Wikipedia-ростерами; 101 null-геометрию можно добить по кэшу; тикет 142/177 «N★/M Bib in 800 m» |
 | embassies | acquired | embassies-{bangkok,tokyo}.geojson (79/167 фич), summary.json, overpass/wikidata JSON; QA-находки в properties.qa | OSM ODbL 1.0 + Wikidata CC0 1.0 | нет — публикуемо (OSM-атрибуция обязательна) | Залить geojson в факт-блоки (тикет 145/180); owner-review трёх QA-находок: тег-ошибки country=IR/AR, Syldavia-шум, 31 wikidata-only объект без координат |
@@ -68,13 +68,24 @@ keishicho digest 118 строк). Лицензии сверены с LICENSE.txt
     в источниках нет поля «погибшие/раненые», лицензия не указана → INTERNAL до
     решения владельца.
 12. **Wave-4 конверсии ADR** (coworking, cleanliness из политики разовых закупок) —
-    готовы к тикетам: геокодинг 74 записей коворкинга и свод waste-by-khet с
-    districts.json (маппинг 50/50) — чисто механические шаги.
+    готовы к тикетам: 123 записи коворкинга без координат и свод waste-by-khet с
+    districts.json (маппинг 50/50); права публикации и смысл метрики требуют
+    отдельного решения — это не только механические шаги (уточнение CRTKY-196 ниже).
 13. **Не покрыто этим забегом** (снапшотов нет): flood-решения №1–2, entertainment-зоны
     №6, tourist badge №8, WorldPop №9, HotPepper №10 — по ним данных волна-4 не завозила.
 14. **Честные оговорки к качеству**: michelin — 101/338 null-геометрий и смена оценки
-    Бангкока (~156 → 71 starred+Bib); coworking — 74/159 без координат, бренд «CCOC» не
+    Бангкока (~156 → 71 starred+Bib); coworking — 123/159 без координат (74/105 Tokyo + 49/54 Bangkok), бренд «CCOC» не
     идентифицирован; JNTO-категории — инференс правила, не данные источника (276 записей
     без пробелов в eng-полях — артефакт источника); Minato GeoJSON — архивный срез
     (живой набор удалён с портала);TMG 白書-ресурсы 35/39 битые на стороне издателя
     (перекачаны как доказательство).
+
+## Уточнение CRTKY-196 — 2026-10-15
+
+[Воспроизводимая проверка и вердикт](../../notes/2026-10-15-workspaces-cleanliness-crtky196.md):
+159 строк coworking, 36 с координатами и 123 без; все 159 имеют адрес и ссылку.
+Весь набор остаётся INTERNAL ONLY, публичный proximity-слой не выпущен.
+Waste: 459 = 450 district-years + 9 «other» (1000), 2010–2018, тонны и тонны/день.
+50/50 slug joins подтверждены; выявлены несогласованные годовые/дневные значения,
+включая 50 нулевых дневных значений в 2017. Тоннаж не принят как факт чистоты;
+исторический контекст сохранён только в research. Новых данных в app нет.
