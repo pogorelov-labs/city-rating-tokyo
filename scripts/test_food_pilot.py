@@ -5,6 +5,9 @@ import hashlib
 import json
 import io
 import sys
+import subprocess
+from datetime import datetime, timezone
+from pathlib import Path
 
 import pytest
 
@@ -193,3 +196,171 @@ def test_adapter_rejects_http200_partial_or_stale_and_preserves_budget(tmp_path,
     monkeypatch.setattr(sys, "argv", argv + ["--acquire", "--resume"])
     with pytest.raises(ValueError, match="budget exhausted"):
         acquire_osm.main()
+
+
+def adapter_fixture(tmp_path, monkeypatch):
+    frame = tmp_path / "stations.json"
+    frame.write_text(json.dumps([STATION]))
+    output = tmp_path / "internal"
+    argv = ["acquire_osm.py", "--stations", str(frame), "--output", str(output)]
+    monkeypatch.setattr(sys, "argv", argv + ["--plan-only"])
+    acquire_osm.main()
+    monkeypatch.setattr(acquire_osm.time, "sleep", lambda _: None)
+    return frame, output, argv
+
+
+@pytest.mark.parametrize("interruption", ["keyboard", "sigterm"])
+def test_interrupted_request_reserves_budget_then_resumes_and_replays(tmp_path, monkeypatch, interruption):
+    frame, output, argv = adapter_fixture(tmp_path, monkeypatch)
+    ledger_path = output / "attempts.json"
+    if interruption == "keyboard":
+        class InterruptedBody(io.BytesIO):
+            calls = 0
+
+            def read(self, n):
+                self.calls += 1
+                if self.calls == 1:
+                    return b"partial response"
+                raise KeyboardInterrupt()
+
+        def interrupted_open(*args, **kwargs):
+            persisted = json.loads(ledger_path.read_text())
+            assert persisted["attempts"][0]["status"] == "pending"
+            assert persisted["wire_bytes"] == acquire_osm.LIMITS["response_bytes"]
+            return InterruptedBody()
+
+        monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", interrupted_open)
+        monkeypatch.setattr(sys, "argv", argv + ["--acquire"])
+        with pytest.raises(KeyboardInterrupt):
+            acquire_osm.main()
+    else:
+        # A real SIGTERM bypasses Python finally blocks. This isolated process
+        # mocks all network I/O and dies during its second read, after bytes
+        # have been returned by the first. The parent resumes its on-disk state.
+        child = r"""
+import io, json, os, signal, sys
+from pathlib import Path
+sys.path.insert(0, sys.argv[1])
+from food_pilot import acquire_osm
+frame, output = sys.argv[2:]
+class InterruptedBody(io.BytesIO):
+    calls = 0
+    def read(self, n):
+        self.calls += 1
+        if self.calls == 1:
+            return b"partial response"
+        os.kill(os.getpid(), signal.SIGTERM)
+def interrupted_open(*args, **kwargs):
+    ledger = json.loads((Path(output) / "attempts.json").read_text())
+    assert ledger["attempts"][0]["status"] == "pending"
+    assert ledger["wire_bytes"] == acquire_osm.LIMITS["response_bytes"]
+    return InterruptedBody()
+acquire_osm.urllib.request.urlopen = interrupted_open
+sys.argv = ["acquire_osm.py", "--stations", frame, "--output", output, "--acquire"]
+acquire_osm.main()
+"""
+        result = subprocess.run([sys.executable, "-c", child, str(Path(__file__).parent),
+                                 str(frame), str(output)], capture_output=True, timeout=15)
+        assert result.returncode == -15, result.stderr.decode()
+    interrupted = json.loads(ledger_path.read_text())
+    assert len(interrupted["attempts"]) == 1
+    assert interrupted["attempts"][0]["status"] == ("pending" if interruption == "sigterm" else "interrupted")
+    reserved = acquire_osm.LIMITS["response_bytes"]
+    assert interrupted["wire_bytes"] == reserved
+    with pytest.raises(ValueError, match="Incomplete"):
+        load_census(frame.read_bytes(), output)
+    body = json.dumps({"osm3s": {"timestamp_osm_base": datetime.now(timezone.utc).isoformat()},
+                       "elements": []}).encode()
+    monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", lambda *a, **k: io.BytesIO(body))
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire", "--resume"])
+    acquire_osm.main()
+    resumed = json.loads(ledger_path.read_text())
+    assert resumed["status"] == "complete"
+    assert resumed["started_at"] == interrupted["started_at"]
+    assert len(resumed["attempts"]) == 9  # interrupted request is not forgotten
+    assert resumed["wire_bytes"] == reserved + 8 * len(body)
+    assert resumed["attempts"][0]["status"] == "interrupted"
+    assert resumed["attempts"][0]["accounting"] == "conservative_reservation"
+    assert load_census(frame.read_bytes(), output)[0][0]["count"] == 0
+
+
+@pytest.mark.parametrize("exhausted", ["attempts", "wire_bytes"])
+def test_interrupted_reservation_cannot_reset_exhausted_budget(tmp_path, monkeypatch, exhausted):
+    monkeypatch.setitem(acquire_osm.LIMITS, "attempts", 1 if exhausted == "attempts" else 24)
+    monkeypatch.setitem(acquire_osm.LIMITS, "response_bytes", 1024)
+    monkeypatch.setitem(acquire_osm.LIMITS, "wire_bytes", 1024)
+    frame, output, argv = adapter_fixture(tmp_path, monkeypatch)
+    calls = []
+
+    def interrupt(*args, **kwargs):
+        calls.append(1)
+        raise KeyboardInterrupt()
+
+    monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", interrupt)
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire"])
+    with pytest.raises(KeyboardInterrupt):
+        acquire_osm.main()
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire", "--resume"])
+    with pytest.raises((ValueError, SystemExit), match="budget exhausted|incomplete"):
+        acquire_osm.main()
+    assert len(calls) == 1
+    ledger = json.loads((output / "attempts.json").read_text())
+    assert len(ledger["attempts"]) == 1
+    assert ledger["wire_bytes"] == 1024
+    with pytest.raises(ValueError, match="Incomplete"):
+        load_census(frame.read_bytes(), output)
+
+
+def test_legacy_statusless_attempt_is_conservatively_settled(tmp_path):
+    ledger = {"attempts": [{"tile": "0-0"}], "wire_bytes": 17, "tiles_completed": []}
+    acquire_osm.settle_interrupted(ledger, tmp_path)
+    assert ledger["attempts"][0]["status"] == "interrupted"
+    assert ledger["wire_bytes"] == 17 + acquire_osm.LIMITS["response_bytes"]
+    acquire_osm.settle_interrupted(ledger, tmp_path)
+    assert ledger["wire_bytes"] == 17 + acquire_osm.LIMITS["response_bytes"]
+
+
+def test_resume_preserves_orphan_then_never_invalidates_later_success(tmp_path):
+    path = tmp_path / 'tile-0-0.json.gz'
+    path.write_bytes(b'interrupted file write')
+    ledger = {"attempts": [{"tile": "0-0", "status": "pending", "reserved_bytes": 1024}],
+              "wire_bytes": 1024, "tiles_completed": []}
+    acquire_osm.settle_interrupted(ledger, tmp_path)
+    retained = tmp_path / ledger["attempts"][0]["retained_artifact"]
+    assert retained.read_bytes() == b'interrupted file write'
+    path.write_bytes(b'later successful response')
+    ledger["attempts"].append({"tile": "0-0", "status": "complete"})
+    ledger["tiles_completed"].append("0-0")
+    acquire_osm.settle_interrupted(ledger, tmp_path)
+    assert path.read_bytes() == b'later successful response'
+    assert ledger["tiles_completed"] == ["0-0"]
+    assert ledger["wire_bytes"] == 1024
+
+
+def test_adapter_never_reads_extra_probe_past_reserved_budget(tmp_path, monkeypatch):
+    monkeypatch.setitem(acquire_osm.LIMITS, "response_bytes", 64)
+    monkeypatch.setitem(acquire_osm.LIMITS, "wire_bytes", 64)
+    frame, output, argv = adapter_fixture(tmp_path, monkeypatch)
+    body = io.BytesIO(b'x' * 65)
+    observed = []
+
+    class Body:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            pass
+
+        def read(self, n):
+            result = body.read(n)
+            observed.append(len(result))
+            return result
+
+    monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", lambda *a, **k: Body())
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire"])
+    with pytest.raises(SystemExit, match="incomplete"):
+        acquire_osm.main()
+    ledger = json.loads((output / 'attempts.json').read_text())
+    assert sum(observed) == ledger['wire_bytes'] == 64
+    assert ledger['attempts'][0]['accounting'] == 'conservative_reservation'
+    assert len(ledger['attempts']) == 1

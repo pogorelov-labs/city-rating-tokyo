@@ -26,6 +26,9 @@ def load_census(stations_raw, raw_dir):
     ledger = json.loads((raw_dir / "attempts.json").read_text())
     if ledger["status"] != "complete" or sorted(ledger["tiles_completed"]) != sorted(t["id"] for t in plan["tiles"]):
         raise ValueError("Incomplete attempt ledger; do not infer zeros")
+    if any(a.get("status") not in {"complete", "failed", "interrupted", "rejected_stale"}
+           for a in ledger["attempts"]):
+        raise ValueError("Unsettled or unknown attempt status; resume before replay")
     tiles, hashes = [], {}
     for tile in plan["tiles"]:
         records = [a for a in ledger["attempts"] if a["tile"] == tile["id"] and a["status"] == "complete"]

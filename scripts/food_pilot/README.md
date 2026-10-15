@@ -48,8 +48,18 @@ not evidence that no real restaurant exists. No count slots are padded.
 Limits: 24 cumulative attempts, 128 MiB of response bodies, 16 MiB per response,
 256 MiB retained, 15 minutes wall time from the original start, 90-second provider
 timeout and at most 110-second socket timeout. Response accounting excludes HTTP
-headers/TLS overhead; report that distinction with observed bytes. Partial bytes
-read before an error count against the response budget. A POSIX wall deadline
+headers/TLS overhead; report that distinction with observed bytes. Each attempt
+is atomically saved and fsynced with a `pending` status and its
+maximum response-byte reservation **before** network I/O. A confirmed complete
+body releases the unused reservation; interrupted or uncertain transfers retain
+the entire charge. Thus `wire_bytes` is a conservative budget charge after an
+interruption, not necessarily measured traffic. SIGTERM/process death leaves a
+pending receipt; resume marks it `interrupted` without refunding it. Ctrl-C also
+records an explicit interrupted status. These receipts remain valid history for
+offline replay once every tile has a successful receipt. A legacy status-less
+receipt is charged an additional full response allowance rather than guessed.
+No read exceeds its reservation; a response that fills it exactly is rejected
+without an extra byte probe. A POSIX wall deadline
 also bounds slow reads. Errors retain an attempt record, without credential or
 environment output. Raw successful bodies and their hashes are retained; files
 are never silently overwritten.
@@ -119,4 +129,6 @@ pytest -q scripts/test_food_pilot.py
 Synthetic fixtures cover boundary coverage, missing tiles, query/hash tampering,
 HTTP200 partial/stale payloads, missing/invalid coordinates, cross-tile duplicates,
 failed zero inference, tied strata, spatial exclusion, reproducibility and
-continuation-budget preservation. They do not supply pilot observations.
+continuation-budget preservation, including a real SIGTERM in an isolated mocked
+process and Ctrl-C followed by resume/offline replay. They do not supply pilot
+observations.

@@ -9,6 +9,8 @@ import argparse
 import gzip
 import hashlib
 import json
+import os
+import tempfile
 import signal
 import time
 import urllib.error
@@ -41,6 +43,42 @@ def encoded(value):
 def write_new(path, value):
     with path.open("xb") as stream:
         stream.write(encoded(value))
+
+
+def save_ledger(path, ledger):
+    """Commit a complete receipt durably before any external request begins."""
+    with tempfile.NamedTemporaryFile(dir=path.parent, prefix=".ledger-", delete=False) as stream:
+        temporary = Path(stream.name)
+        stream.write(encoded(ledger))
+        stream.flush()
+        os.fsync(stream.fileno())
+    os.replace(temporary, path)
+    directory = os.open(path.parent, os.O_RDONLY)
+    try:
+        os.fsync(directory)
+    finally:
+        os.close(directory)
+
+
+def settle_interrupted(ledger, output):
+    """Never refund an interrupted request whose consumed bytes are unknown."""
+    for attempt in ledger["attempts"]:
+        if attempt.get("status") not in (None, "pending", "interrupted") or attempt.get("reconciled"):
+            continue
+        if "reserved_bytes" not in attempt:
+            # Legacy Ctrl-C receipts had no status/reservation. Additional full
+            # charging may overcount, but cannot silently restore their budget.
+            attempt["reserved_bytes"] = LIMITS["response_bytes"]
+            ledger["wire_bytes"] += attempt["reserved_bytes"]
+        attempt.update(status="interrupted", accounting="conservative_reservation")
+        path = output / f"tile-{attempt['tile']}.json.gz"
+        if attempt["tile"] in ledger["tiles_completed"]:
+            ledger["tiles_completed"].remove(attempt["tile"])
+        if path.exists():
+            retained = f"tile-{attempt['tile']}-interrupted-{ledger['attempts'].index(attempt)}.json.gz"
+            path.rename(output / retained)
+            attempt["retained_artifact"] = retained
+        attempt["reconciled"] = True
 
 
 def main():
@@ -82,6 +120,8 @@ def main():
         if elapsed >= LIMITS["wall_seconds"] or len(ledger["attempts"]) >= LIMITS["attempts"]:
             raise ValueError("Original acquisition budget exhausted; resume cannot reset it")
         write_new(output / f'attempts-before-resume-{len(ledger["attempts"])}.json', ledger)
+        settle_interrupted(ledger, output)
+        save_ledger(ledger_path, ledger)
         # Preserve rejected bytes and the original ledger; re-query only the same tile.
         for tile_id in list(ledger["tiles_completed"]):
             successful = [a for a in ledger["attempts"] if a["tile"] == tile_id and a["status"] == "complete"]
@@ -98,12 +138,12 @@ def main():
                 successful[0].update(status="rejected_stale", transport_status="complete", retained_artifact=rejected)
                 ledger["tiles_completed"].remove(tile_id)
         ledger["status"] = "in_progress"
-        ledger_path.write_bytes(encoded(ledger))
+        save_ledger(ledger_path, ledger)
     else:
         elapsed = 0
         ledger = {"started_at": datetime.now(timezone.utc).isoformat(), "attempts": [],
                   "wire_bytes": 0, "tiles_completed": [], "status": "in_progress"}
-        write_new(ledger_path, ledger)
+        save_ledger(ledger_path, ledger)
     started = time.monotonic() - elapsed
     def deadline(_signum, _frame):
         raise TimeoutError("Acquisition wall deadline")
@@ -121,25 +161,36 @@ def main():
                 if remaining <= 0:
                     raise ValueError("Wire-byte budget exhausted")
                 attempt = {"tile": tile["id"], "endpoint": endpoint,
-                           "at": datetime.now(timezone.utc).isoformat()}
+                           "at": datetime.now(timezone.utc).isoformat(),
+                           "status": "pending", "reserved_bytes": remaining,
+                           "accounting": "conservative_reservation"}
                 ledger["attempts"].append(attempt)
+                # Charge the maximum before I/O. A killed process leaves this
+                # pending receipt and its entire reservation on disk.
+                ledger["wire_bytes"] += remaining
+                save_ledger(ledger_path, ledger)
+                received = 0
+                eof = False
                 raw = b""
                 try:
                     req = urllib.request.Request(endpoint,
                         data=urllib.parse.urlencode({"data": tile["query"]}).encode(),
                         headers={"User-Agent": "city-rating-food-shadow/1.0", "Content-Type": "application/x-www-form-urlencoded"})
                     with urllib.request.urlopen(req, timeout=min(LIMITS["socket_seconds"], remaining_time)) as response:
-                        # Read incrementally so interrupted transfers count against the budget.
+                        # Never consume beyond the durably reserved allowance.
                         chunks = []
                         while True:
-                            chunk = response.read(min(65536, remaining + 1))
-                            ledger["wire_bytes"] += len(chunk)
+                            if remaining <= 0:
+                                raise ValueError("Response/wire-byte limit")
+                            chunk = response.read(min(65536, remaining))
+                            received += len(chunk)
                             remaining -= len(chunk)
                             if remaining < 0:
                                 raise ValueError("Response/wire-byte limit")
                             if time.monotonic() - started > LIMITS["wall_seconds"]:
                                 raise ValueError("Wall budget exhausted")
                             if not chunk:
+                                eof = True
                                 break
                             chunks.append(chunk)
                         raw = b"".join(chunks)
@@ -160,8 +211,16 @@ def main():
                 except Exception as exc:
                     attempt.update(status="failed", error_type=type(exc).__name__,
                                    http_status=getattr(exc, "code", None))
+                except BaseException as exc:
+                    attempt.update(status="interrupted", error_type=type(exc).__name__)
+                    ledger.update(status="incomplete", reason=type(exc).__name__)
+                    raise
                 finally:
-                    (output / "attempts.json").write_bytes(encoded(ledger))
+                    attempt["observed_bytes"] = received
+                    if eof and attempt["status"] != "interrupted":
+                        ledger["wire_bytes"] -= attempt["reserved_bytes"] - received
+                        attempt["accounting"] = "observed_complete_body"
+                    save_ledger(ledger_path, ledger)
                     print(json.dumps(attempt), flush=True)
                 if attempt["status"] == "complete":
                     break
@@ -175,7 +234,7 @@ def main():
         signal.setitimer(signal.ITIMER_REAL, 0)
         signal.signal(signal.SIGALRM, previous_handler)
         ledger["finished_at"] = datetime.now(timezone.utc).isoformat()
-        (output / "attempts.json").write_bytes(encoded(ledger))
+        save_ledger(ledger_path, ledger)
     if ledger["status"] != "complete":
         raise SystemExit("Census incomplete; no zero inference or sample freeze permitted")
 
