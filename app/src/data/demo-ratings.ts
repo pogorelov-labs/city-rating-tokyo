@@ -10,6 +10,7 @@ interface DemoData {
   confidence?: StationConfidence;
   sources?: StationSources;
   data_date?: string;
+  source_dates?: Record<string, string | null>;
   description?: {
     atmosphere: string;
     landmarks: string;
