@@ -1,3 +1,4 @@
+import AirPanel from '@/components/AirPanel';
 import { QuietnessFacts } from '@/components/QuietnessFacts';
 import { getQuietness } from '@/lib/quietness';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -426,6 +427,7 @@ export default async function StationPage({
           </div>
         )}
 
+        <AirPanel city="tokyo" />
         <QuietnessFacts fact={getQuietness('tokyo', station.slug)} />
 
         {/* Natural Environment (elevation + seismic risk) */}

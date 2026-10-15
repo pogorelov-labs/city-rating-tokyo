@@ -31,7 +31,7 @@ import { areaPath, formatRentShort, hasActiveFilters } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
 import { Link } from '@/i18n/navigation';
-import { TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
+import { MapContainerResize, TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
 
 /**
  * Smart flyTo: adapts zoom target and animation based on current map state.
@@ -295,6 +295,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       attributionControl={false}
       preferCanvas
     >
+      <MapContainerResize />
       <TileLayer attribution={BASEMAP.attribution} url={BASEMAP.url} />
       {/* The tile providers' terms require their attribution on the map. */}
       <AttributionControl position="bottomright" prefix={false} />

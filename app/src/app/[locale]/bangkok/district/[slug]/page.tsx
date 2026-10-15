@@ -1,3 +1,4 @@
+import AirPanel from '@/components/AirPanel';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -150,6 +151,7 @@ export default async function DistrictPage({
         </header>
 
         <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+          <AirPanel city="bangkok" />
           {/* Hero image (Wikimedia Commons, hot-linked with attribution) */}
           {d.image && (
             <figure className="bg-white rounded-lg border border-gray-200 overflow-hidden">
