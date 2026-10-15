@@ -215,6 +215,9 @@
     "hideAdultZones": "ファミリー向け：歓楽街エリアを非表示"
   },
   "map": {
+    "reason_adultZone": "成人向け娯楽エリア内",
+    "zoomIn": "拡大",
+    "zoomOut": "縮小",
     "clickForDetails": "詳細を見る →",
     "closeCard": "カードを閉じる",
     "viewDetails": "詳細を見る →",
@@ -301,6 +304,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
+    "sourcesLabel": "データソース：",
     "metaTitle": "{name}（{secondary}）— 東京エリアガイド",
     "metaDescription": "{name}駅エリア：評価、家賃、所要時間。{description}",
     "metaDescriptionFallback": "東京の{name}駅エリアガイド。",

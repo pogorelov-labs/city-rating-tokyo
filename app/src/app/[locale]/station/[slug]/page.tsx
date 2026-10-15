@@ -1,3 +1,5 @@
+import { dataLabel } from '@/i18n/message-key';
+import { hasLocale } from 'next-intl';
 import AirPanel from '@/components/AirPanel';
 import { QuietnessFacts } from '@/components/QuietnessFacts';
 import { getQuietness } from '@/lib/quietness';
@@ -56,9 +58,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   const t = await getTranslations({ locale, namespace: 'station' });
   const station = getStation(slug);
-  if (!station) return { title: 'Station Not Found' };
+  if (!station) {
+    const errors = await getTranslations({ locale, namespace: 'error' });
+    return { title: errors('stationNotFound') };
+  }
   const { primary, secondary } = stationDisplayName(station, locale as Locale);
   const atmosphere = station.description?.[locale as Locale]?.atmosphere;
   const desc = atmosphere
@@ -81,6 +87,7 @@ export default async function StationPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations();
   const loc = locale as Locale;
@@ -325,7 +332,7 @@ export default async function StationPage({
                             <span>{t(`ratingTooltips.${key}`)}</span>
                             {srcs && srcs.length > 0 && (
                               <span className="block mt-1.5 text-gray-400">
-                                Sources: {srcs.map(s => t.has(`sources.${s}`) ? t(`sources.${s}`) : s).join(', ')}
+                                {t('station.sourcesLabel')} {srcs.map(s => dataLabel(t, 'sources', s)).join(', ')}
                               </span>
                             )}
                             <span className="block mt-1.5 pt-1.5 border-t border-gray-600/40 tabular-nums">

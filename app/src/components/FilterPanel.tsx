@@ -164,9 +164,11 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   // City-wide copy (Bangkok's rent is a 1-bed condo, its search spans every
   // level) and level-specific counts ("districts" / "station areas" / "cells")
   // live under parallel keys.
-  const b = (key: string) => (isDistrict ? `${key}District` : key);
-  const levelSuffix = !isDistrict ? '' : level === 'station' ? 'StationArea' : level === 'grid' ? 'Grid' : 'District';
-  const u = (key: string) => `${key}${levelSuffix}`;
+  const b = <K extends 'filter.searchPlaceholder' | 'filter.rent' | 'filter.commute'>(key: K) =>
+    isDistrict ? `${key}District` as const : key;
+  // Grid counts render through GridMatchCount; these keys cover named areas.
+  const levelSuffix = !isDistrict ? '' : level === 'station' ? 'StationArea' : 'District';
+  const u = <K extends 'filter.stationCount' | 'filter.noMatch' | 'filter.matchCount' | 'filter.noMatchFilters' | 'filter.noRatedYet' | 'filter.stationsMapped'>(key: K) => `${key}${levelSuffix}` as const;
 
   const filtersActive = hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic, hideAdultZones });
 

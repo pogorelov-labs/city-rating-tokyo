@@ -16,13 +16,13 @@ const TYPE_COLORS: Record<LineType, string> = {
   other: '#828A8C',
 };
 
-const TYPE_LABEL_KEYS: Record<LineType, string> = {
+const TYPE_LABEL_KEYS = {
   general: 'typeGeneral',
   subway: 'typeSubway',
   monorail: 'typeMonorail',
   tram: 'typeTram',
   other: 'typeOther',
-};
+} as const satisfies Record<LineType, string>;
 
 /** Sort priority: subway → JR → private railway; alphabetical within group */
 function lineSortKey(line: LineInfo, locale: string): string {

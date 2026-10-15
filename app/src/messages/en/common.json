@@ -215,6 +215,9 @@
     "hideAdultZones": "Family-friendly: hide adult entertainment areas"
   },
   "map": {
+    "reason_adultZone": "inside an adult-entertainment zone",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
     "clickForDetails": "Click for details →",
     "closeCard": "Close station card",
     "viewDetails": "View details →",
@@ -301,6 +304,7 @@
     "charCount": "{count}/1000"
   },
   "station": {
+    "sourcesLabel": "Sources:",
     "metaTitle": "{name} ({secondary}) - Tokyo Neighborhood Explorer",
     "metaDescription": "{name} station area: ratings, rent prices, transit times. {description}",
     "metaDescriptionFallback": "Neighborhood guide for {name} station area in Tokyo.",

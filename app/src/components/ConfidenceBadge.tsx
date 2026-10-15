@@ -1,5 +1,6 @@
 'use client';
 
+import { dataLabel } from '@/i18n/message-key';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { ConfidenceLevel } from '@/lib/types';
@@ -12,7 +13,7 @@ interface Props {
   /** Message key replacing `confidence.${level}.description` — lets a city
    *  word provenance honestly (Bangkok's editorial values are researcher
    *  estimates, not a human override of pipeline data). */
-  descriptionKey?: string;
+  descriptionKey?: import('@/i18n/message-key').MessageKey;
 }
 
 /**
@@ -120,7 +121,7 @@ export default function ConfidenceBadge({ level, sources, size = 'sm', descripti
   // On touch, tap target must be at least 44×44px — use padding
   const touchPad = isTouch ? 'p-3 -m-3' : '';
   const sourceList = sources && sources.length > 0
-    ? sources.map((s) => t.has(`sources.${s}`) ? t(`sources.${s}`) : s).join(', ')
+    ? sources.map((s) => dataLabel(t, 'sources', s)).join(', ')
     : null;
 
   return (
@@ -141,7 +142,7 @@ export default function ConfidenceBadge({ level, sources, size = 'sm', descripti
           <span className="block text-gray-300 mt-0.5">{description}</span>
           {sourceList && (
             <span className="block mt-1 text-gray-300">
-              <span className="text-gray-400">Sources: </span>
+              <span className="text-gray-400">{t('station.sourcesLabel')} </span>
               {sourceList}
             </span>
           )}
