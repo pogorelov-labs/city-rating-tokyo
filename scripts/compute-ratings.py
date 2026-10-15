@@ -42,6 +42,10 @@ from city_rating_schema.constants import (
     PIPELINE_ONLY,
 )
 
+from city_rating_schema.normalize import (
+    midpoint_percentile, rent_to_affordability as normalize_rent, two_source_confidence,
+)
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Rent linear interpolation floor/ceiling and absolute caps now come from
@@ -72,45 +76,12 @@ def log_percentile_normalize(values, invert=False):
     group instead of all getting the lowest rank. This spreads tied clusters
     across the rating boundary instead of lumping them at one integer.
     """
-    if not values:
-        return {}
-
-    # Step 1: log transform
-    log_values = {slug: math.log1p(v) for slug, v in values.items()}
-
-    # Step 2: percentile ranking with midpoint for ties
-    sorted_vals = sorted(log_values.values())
-    n = len(sorted_vals)
-
-    # Build value → midpoint rank mapping (average of first and last occurrence)
-    from bisect import bisect_right
-    midpoint_rank = {}
-    i = 0
-    while i < n:
-        val = sorted_vals[i]
-        j = bisect_right(sorted_vals, val)  # one past last occurrence
-        mid = (i + j - 1) / 2.0
-        midpoint_rank[val] = mid
-        i = j
-
-    result = {}
-    for slug, val in log_values.items():
-        rank = midpoint_rank[val]
-        percentile = rank / max(n - 1, 1)
-        if invert:
-            percentile = 1.0 - percentile
-        rating = max(1, min(10, round(percentile * 9 + 1)))
-        result[slug] = rating
-
-    return result
+    return midpoint_percentile(values, invert=invert, pre=math.log1p)
 
 
 def rent_to_affordability(price):
     """Linear interpolation: ¥80k→10, ¥300k→1. Matches frontend scoring.ts rentToAffordability."""
-    if not price or price <= 0:
-        return None
-    t = max(0.0, min(1.0, (price - RENT_FLOOR) / (RENT_CEILING - RENT_FLOOR)))
-    return max(1, min(10, round(10 - 9 * t)))
+    return normalize_rent(price, RENT_FLOOR, RENT_CEILING)
 
 
 def haversine(lat1, lng1, lat2, lng2):
@@ -359,15 +330,10 @@ def main():
         food_osm = o.get("food_count", 0) or 0
         raw["food"][slug] = math.log1p(food_hp) * 0.6 + math.log1p(food_osm) * 0.4
         cap_raw["food"][slug] = food_hp + food_osm  # total restaurants for cap check
-        if food_hp > 0 and food_osm > 0:
-            conf["food"] = "strong"
-            srcs["food"] = ["hotpepper", "osm"]
-        elif food_hp > 0:
-            conf["food"] = "moderate"
-            srcs["food"] = ["hotpepper"]
-        else:
-            conf["food"] = "estimate"
-            srcs["food"] = []
+        conf["food"], srcs["food"] = two_source_confidence(
+            food_hp > 0, food_osm > 0, sources=("hotpepper", "osm"),
+            policy="primary_required",  # Preserve HP=0 → estimate/[], even with OSM.
+        )
 
         # --- NIGHTLIFE: HP midnight + izakaya + bar + OSM night + karaoke + hostel ---
         midnight = h.get("midnight_count", 0) or 0
