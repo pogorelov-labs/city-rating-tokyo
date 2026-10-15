@@ -20,11 +20,10 @@ interface Props {
 export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
   const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier,
-          embassies_800m, english_medicine_2km, flood_depth_m,
+          flood_depth_m,
           michelin_stars, michelin_bib, hotels_800m, tourist_badge } = environment;
 
   if (elevation_m == null && seismic_prob_i60 == null
-      && embassies_800m == null && english_medicine_2km == null
       && michelin_stars == null && michelin_bib == null
       && hotels_800m == null) return null;
 
@@ -131,56 +130,6 @@ export function NaturalEnvironment({ environment }: Props) {
               <p className="text-[11px] text-gray-500 mt-0.5 ml-0">
                 {t('station.seismicProbability')}
               </p>
-            </div>
-          </div>
-        )}
-
-        {/* Embassies within walking distance (CRTKY-190) */}
-        {embassies_800m != null && embassies_800m > 0 && (
-          <div className="flex items-start gap-3">
-            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🏛️</span>
-            <div className="min-w-0">
-              <Tooltip
-                showHelpIcon={false}
-                content={
-                  <>
-                    <span className="font-semibold">{t('station.embassies', { count: embassies_800m })}</span>
-                    <span className="block mt-1">{t('station.embassiesTooltip')}</span>
-                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceEmbassies')}</span>
-                  </>
-                }
-              >
-                <div className="cursor-help">
-                  <span className="text-sm font-medium text-gray-900">
-                    {t('station.embassies', { count: embassies_800m })}
-                  </span>
-                </div>
-              </Tooltip>
-            </div>
-          </div>
-        )}
-
-        {/* English-speaking medical facilities within 2 km (CRTKY-190, Tokyo) */}
-        {english_medicine_2km != null && english_medicine_2km > 0 && (
-          <div className="flex items-start gap-3">
-            <span className="text-lg mt-0.5 shrink-0" aria-hidden>🏥</span>
-            <div className="min-w-0">
-              <Tooltip
-                showHelpIcon={false}
-                content={
-                  <>
-                    <span className="font-semibold">{t('station.englishMedicine', { count: english_medicine_2km })}</span>
-                    <span className="block mt-1">{t('station.englishMedicineTooltip')}</span>
-                    <span className="block mt-1 text-gray-400 text-xs">{t('station.sourceMedicine')}</span>
-                  </>
-                }
-              >
-                <div className="cursor-help">
-                  <span className="text-sm font-medium text-gray-900">
-                    {t('station.englishMedicine', { count: english_medicine_2km })}
-                  </span>
-                </div>
-              </Tooltip>
             </div>
           </div>
         )}
