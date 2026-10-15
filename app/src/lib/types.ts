@@ -108,6 +108,11 @@ export interface EnvironmentData {
   /** Michelin starred restaurants within 800 m (CRTKY-191) — © Michelin 2026. */
   michelin_stars?: number;
   michelin_bib?: number;
+  /** Tourist-load counts within 800 m (CRTKY-193): OSM, ODbL. */
+  hotels_800m?: number;
+  attractions_800m?: number;
+  /** Badge: Tokyo ≥15 hotels (ADR #8). */
+  tourist_badge?: boolean;
 }
 
 export type LineType = 'general' | 'subway' | 'monorail' | 'tram' | 'other';
@@ -417,6 +422,11 @@ export interface StationArea {
   /** Adjacent station areas along the lines (next stops). */
   neighbors: string[];
   facts: StationAreaFacts;
+  /** Tourist-load counts within 800 m (CRTKY-193): OSM, ODbL. */
+  hotels_800m?: number;
+  attractions_800m?: number;
+  /** Badge: Bangkok ≥50 hotels OR ≥8 attractions (ADR #8). */
+  tourist_badge?: boolean;
   image: DistrictImage | null;
   wikipedia: Partial<Record<'en' | 'ja' | 'ru' | 'th', string>>;
 }

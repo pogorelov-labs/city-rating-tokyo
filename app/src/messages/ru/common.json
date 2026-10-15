@@ -382,7 +382,11 @@
     "floodDepthTooltip": "Максимальная глубина затопления по модели TMG (максимальный сценарий).",
     "sourceFlood": "東京都建設局 浸水予想区域図 (CC BY 4.0)",
     "michelin": "Рестораны Michelin рядом",
-    "michelinTooltip": "Звёздные и Bib Gourmand рестораны из Michelin Guide 2026 в 800 м."
+    "michelinTooltip": "Звёздные и Bib Gourmand рестораны из Michelin Guide 2026 в 800 м.",
+    "touristLoad": "Высокий турпоток",
+    "touristLoadTooltip": "Станция в туристическом районе — много отелей и достопримечательностей в пешей доступности.",
+    "touristLoadBadge": "{count} отелей рядом",
+    "sourceTourism": "OpenStreetMap (ODbL)"
   },
   "seismicTiers": {
     "low": {
@@ -582,7 +586,9 @@
       "factsSource": "Приблизительные подсчёты внутри зоны станции (до 800 м, ближайшая станция). Места: Overture Maps Places (CDLA-Permissive-2.0); парки и пристани: © участники OpenStreetMap (ODbL).",
       "districtsTitle": "Районы",
       "districtsCaption": "Районы, которые захватывает зона станции, по доле её жителей — аренда и безопасность берутся из их оценок.",
-      "viewGrid": "Посмотреть на сетке 200 м →"
+      "viewGrid": "Посмотреть на сетке 200 м →",
+      "factHotels": "Отелей рядом",
+      "factAttractions": "Достопримечательностей рядом"
     }
   }
 }

@@ -433,6 +433,25 @@ export default async function StationAreaPage({
                 <dt className="text-xs text-gray-500">{t('bangkok.district.factPiers')}</dt>
                 <dd className="font-semibold tabular-nums">{nf.format(f.piers)}</dd>
               </div>
+              {a.hotels_800m != null && (
+                <div>
+                  <dt className="text-xs text-gray-500">{t('bangkok.station.factHotels')}</dt>
+                  <dd className="font-semibold tabular-nums">
+                    {nf.format(a.hotels_800m)}
+                    {a.tourist_badge && (
+                      <span className="ml-1.5 inline-flex items-center rounded-full bg-sky-50 border border-sky-200 px-1.5 py-0.5 text-[10px] font-medium text-sky-700">
+                        {t('station.touristLoad')}
+                      </span>
+                    )}
+                  </dd>
+                </div>
+              )}
+              {a.attractions_800m != null && (
+                <div>
+                  <dt className="text-xs text-gray-500">{t('bangkok.station.factAttractions')}</dt>
+                  <dd className="font-semibold tabular-nums">{nf.format(a.attractions_800m)}</dd>
+                </div>
+              )}
             </dl>
             <p className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 leading-relaxed">
               {t('bangkok.station.factsSource')}
