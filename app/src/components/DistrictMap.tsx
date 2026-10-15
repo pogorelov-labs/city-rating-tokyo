@@ -55,7 +55,7 @@ import {
 } from '@/lib/bangkok-grid';
 import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { StationTooltipHero, TouchZoomControls } from './map-shared';
+import { MapContainerResize, StationTooltipHero, TouchZoomControls } from './map-shared';
 import { BASEMAP } from '@/lib/basemap';
 import GridLayer from './bangkok/GridLayer';
 import StationAreaLayer, { type AreaShape, type ScoredArea } from './bangkok/StationAreaLayer';
@@ -574,6 +574,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         zoomControl={false}
         attributionControl={false}
       >
+        <MapContainerResize />
         {/* Same provider as the Tokyo map (lib/basemap.ts); the district data
             itself also carries Overture's attribution. */}
         <TileLayer url={BASEMAP.url} attribution={`${BASEMAP.attribution} &middot; Overture Maps`} />

@@ -129,6 +129,7 @@ class NocoDB:
                 f"{self.base_url}/records",
                 headers=self.headers,
                 params=params,
+                timeout=30,
             )
             resp.raise_for_status()
             data = resp.json()

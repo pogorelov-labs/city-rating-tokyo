@@ -32,6 +32,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent / "scrapers"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "packages" / "schema" / "python"))
 from utils import NocoDB, load_stations
+from source_health import check_sources, check_source_mix, station_dates, encode_dates, conservative_month
+from rating_store import DEFAULT_RECOVERY_DIR, NocoRatingStore, replace_ratings
 from slugs import index_by_slug, load_slug_redirects
 from city_rating_schema.constants import (
     RENT_FLOOR,
@@ -244,6 +246,8 @@ def main():
         help="Do not exit 1 on spot-check divergences (debugging only — "
              "refresh-ratings.sh relies on the strict default).",
     )
+    parser.add_argument("--max-source-age-days", type=int, required=True)
+    parser.add_argument("--recovery-dir", type=Path, default=DEFAULT_RECOVERY_DIR)
     args = parser.parse_args()
 
     stations = load_stations()
@@ -272,6 +276,11 @@ def main():
 
     ext, note = load_by_slug("osm_extended")
     print(f"  osm_extended:     {len(ext)} stations{note}")
+
+    source_tables = {"hotpepper": hp, "osm_pois": osm,
+                     "osm_extended": ext, "osm_livability": livability}
+    # Check the exact inputs used below, even if invoked outside refresh.
+    print(json.dumps(check_sources(all_slugs, source_tables, args.max_source_age_days), indent=2))
 
     crime, crime_year = load_station_safety()
     print(f"  station safety:   {len(crime)} stations (police open data {crime_year})")
@@ -594,9 +603,9 @@ def main():
 
     # ===== Build results =====
     categories = list(RATING_KEYS)
-    data_date = date.today().strftime("%Y-%m")
     results = {}
     for slug in all_slugs:
+        dates = station_dates(slug, source_tables)
         results[slug] = {
             "slug": slug,
             "food": food_ratings.get(slug, 5),
@@ -611,7 +620,8 @@ def main():
             "daily_essentials": daily_essentials_ratings.get(slug, 5),
             "confidence": json.dumps(confidence.get(slug, {})),
             "sources": json.dumps(sources_used.get(slug, {})),
-            "data_date": data_date,
+            "data_date": conservative_month(dates),
+            "source_dates": encode_dates(dates),
             "source": "computed_v2",
             "computed_at": date.today().isoformat(),
         }
@@ -686,23 +696,10 @@ def main():
     print(f"\nWriting {len(results)} computed ratings to NocoDB...")
     db = NocoDB("computed_ratings")
 
-    # Clear existing
-    existing = db.get_all_records(fields=["Id"])
-    if existing:
-        import requests as req
-        for i in range(0, len(existing), 100):
-            batch = existing[i:i + 100]
-            ids = [{"Id": r["Id"]} for r in batch if r.get("Id")]
-            if ids:
-                resp = req.delete(f"{db.base_url}/records", headers=db.headers, json=ids)
-                # Fail loudly on a non-2xx DELETE so we don't silently proceed
-                # to bulk_insert and create duplicate rows in computed_ratings.
-                resp.raise_for_status()
-
-    # Insert (includes confidence, sources, data_date columns)
     records = list(results.values())
-    db.bulk_insert(records)
-    print(f"Done! Wrote {len(records)} records.")
+    journal = replace_ratings(NocoRatingStore(db), records, args.recovery_dir,
+                              validate=check_source_mix)
+    print(f"Done! Verified {len(records)} records. Recovery journal: {journal}")
 
 
 if __name__ == "__main__":

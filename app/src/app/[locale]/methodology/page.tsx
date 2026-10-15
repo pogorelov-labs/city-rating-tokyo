@@ -1,3 +1,4 @@
+import AirMethodology from '@/components/AirMethodology';
 import { QuietnessMethodology } from '@/components/QuietnessMethodology';
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
@@ -177,6 +178,7 @@ export default async function MethodologyPage({
         </section>
 
         <QuietnessMethodology />
+        <AirMethodology />
 
         {/* Pipeline */}
         <section>

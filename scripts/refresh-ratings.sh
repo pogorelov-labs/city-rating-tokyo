@@ -5,11 +5,14 @@
 # Chains: compute-ratings.py → export-ratings.py → optional commit + push
 #
 # Usage:
-#   scripts/refresh-ratings.sh              # compute, export, verify, offer to commit
+#   scripts/refresh-ratings.sh --max-source-age-days=N # compute, export, verify, offer to commit
 #   scripts/refresh-ratings.sh --auto       # compute, export, commit without prompting
 #   scripts/refresh-ratings.sh --push       # also push to current branch
 #   scripts/refresh-ratings.sh --dry-run    # compute with --dry-run, no NocoDB writes
 #   scripts/refresh-ratings.sh --no-build   # skip Next.js build verification
+#
+# Required: --max-source-age-days=N (owner-approved source freshness policy).
+# Offline gate only: --check-sources-fixture=PATH --max-source-age-days=N
 #
 # Safety:
 # - Refuses to run without NOCODB_API_TOKEN (compute and export read NocoDB)
@@ -31,9 +34,13 @@ PUSH=0
 DRY_RUN=0
 DO_BUILD=1
 FORCE_MAIN=0
+SOURCE_AGE=""
+SOURCE_FIXTURE=""
 
 for arg in "$@"; do
     case "$arg" in
+        --max-source-age-days=*) SOURCE_AGE="${arg#*=}" ;;
+        --check-sources-fixture=*) SOURCE_FIXTURE="${arg#*=}" ;;
         --auto) AUTO=1 ;;
         --push) PUSH=1 ;;
         --dry-run) DRY_RUN=1 ;;
@@ -59,6 +66,13 @@ step() { echo; echo "$(bold "==>") $(bold "$*")"; }
 ok() { echo "    $(green "✓") $*"; }
 warn() { echo "    $(yellow "⚠") $*"; }
 die() { echo "    $(red "✗") $*" >&2; exit 1; }
+
+# Offline verification is terminal: it cannot compute, write, build or commit.
+if [[ -n "$SOURCE_FIXTURE" ]]; then
+    python3 scripts/check-rating-sources.py --fixture "$SOURCE_FIXTURE" --max-source-age-days "$SOURCE_AGE"
+    exit $?
+fi
+[[ "$SOURCE_AGE" =~ ^[1-9][0-9]*$ ]] || die "pass --max-source-age-days=N using the approved freshness policy"
 
 # ---- 1. Preflight ----
 step "Preflight checks"
@@ -108,12 +122,18 @@ else
     warn "could not fetch origin/main — skipping the up-to-date check"
 fi
 
+# Check schema and source health BEFORE any compute/write/export/commit.
+step "Checking ratings schema and source freshness/mix"
+python3 scripts/check-rating-schema.py
+python3 scripts/check-rating-sources.py --max-source-age-days "$SOURCE_AGE"
+ok "source canary passed"
+
 # ---- 2. Compute ----
 step "Running compute-ratings.py$([[ $DRY_RUN == 1 ]] && echo ' (dry-run)')"
 if [[ "$DRY_RUN" == 1 ]]; then
-    python3 scripts/compute-ratings.py --dry-run
+    python3 scripts/compute-ratings.py --dry-run --max-source-age-days "$SOURCE_AGE"
 else
-    python3 scripts/compute-ratings.py
+    python3 scripts/compute-ratings.py --max-source-age-days "$SOURCE_AGE"
 fi
 ok "compute done"
 

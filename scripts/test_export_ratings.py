@@ -13,6 +13,8 @@ import sys
 import types
 from pathlib import Path
 
+import pytest
+
 if "utils" not in sys.modules:
     utils_stub = types.ModuleType("utils")
     utils_stub.NocoDB = object
@@ -36,6 +38,22 @@ AI_ENTRY = """  abiko: {
     sources: { food: ['ai_research'], rent: ['suumo'], crowd: ['ai_research'] },
     data_date: '2026-04',
   },"""
+
+
+def test_export_preserves_per_source_vintage_and_legacy_scalar():
+    dates = {name: "2026-04-15" for name in ("hotpepper", "osm_pois", "osm_extended", "osm_livability")}
+    dates["osm_pois"] = "2026-03-01"
+    row = {"source_dates": json.dumps(dates), "data_date": "2026-10"}
+    out = er.refresh_entry_dates(AI_ENTRY, row)
+    assert "data_date: '2026-03'" in out
+    assert '"hotpepper": "2026-04-15"' in out
+    assert "food: 5, nightlife: 3" in out
+    assert er.refresh_entry_dates(out, row) == out
+    assert er.date_metadata({"data_date": "2026-04"}) == ("2026-04", {})
+    dates["hotpepper"] = None
+    assert er.date_metadata({"source_dates": dates})[0] == "unknown"
+    with pytest.raises(ValueError):
+        er.date_metadata({"source_dates": "malformed"})
 
 
 def computed(de=6, conf="strong", srcs=("osm_livability",)):
