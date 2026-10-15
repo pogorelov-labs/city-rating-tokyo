@@ -669,5 +669,20 @@
     "methodSeason": "The Bangkok seasonal calculation is defined as December 1 through March 31, including leap days. Each daily input must be a station mean with at least 18 valid hourly observations. A city day is the arithmetic mean of eligible station-day means when at least half the explicitly selected monitors report. The percentage is days with a city mean ≥ 37.5 µg/m³ divided by valid city days, with calendar, valid and missing day counts retained. Missing days never count as clean days. Incomplete seasons remain partial; no historical result is currently published.",
     "methodMissing": "The acquired Tokyo 2019–2023 and Bangkok 2011–2020 archives remain excluded from public numeric output while publication permission is unresolved. Bangkok 2021–2025 is missing. Future December 2026 collection is not an already-running archive. Pollen source permission is unresolved: the interface does not provide pollen measurements, forecasts or a completed pollen integration.",
     "methodPermissions": "Attribution: Ministry of the Environment, Japan, Soramame national-station data, processed by City Rating. Local-government and NIES archive data are not covered by this national-monitor subset. Air4Thai and pollen links take readers to the publishers; they do not imply permission to redistribute their measurements."
+  },
+  "safetyFacts": {
+    "title": "Public statistics: scope and limits",
+    "intro": "The Safety rating describes crime-related conditions. The separate statistics below provide metropolitan background; they do not contribute to any rating.",
+    "roadTitle": "Road traffic — Tokyo Metropolis",
+    "roadCount": "For the calendar year {year}, the Tokyo Metropolitan Police Department reported {accidents, number} traffic accidents and {fatalities, number} fatalities in Table 10 of its annual statistics.",
+    "roadScope": "These are jurisdiction-wide totals, including expressways and islands, not rates per resident, journey or kilometre. They do not describe an 800 m station catchment, and they do not cover Kanagawa, Saitama or Chiba. The table does not tell us the risk of a particular walk or crossing.",
+    "roadSource": "Tokyo Metropolitan Police: 2025 annual statistics, Table 10",
+    "welfareTitle": "Understanding the homelessness survey",
+    "welfareCount": "Tokyo’s rough count of people sleeping in public places recorded {people, number} people in {period}. The total covers the 23 wards, Tama and the separately counted nationally managed rivers.",
+    "welfareScope": "This twice-yearly survey counts people in places such as roads, parks, riverbanks and station buildings. It is not a count of everyone experiencing homelessness, a list of support services, or a measure of service capacity. It cannot establish whether a service is near a station. Homelessness is not used as a danger signal or a safety-score input.",
+    "welfareSource": "Tokyo Bureau of Social Welfare: rough-count survey archive",
+    "bangkokTitle": "Bangkok: limits of the available context",
+    "bangkokScope": "Bangkok safety ratings remain editorial assessments and do not include road accidents. No comparable Bangkok accident total or verified local risk-point layer is presented here. Missing local evidence does not mean that no accidents or hazards exist.",
+    "verified": "Citations checked:"
   }
 }

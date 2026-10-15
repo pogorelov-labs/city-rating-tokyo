@@ -2,6 +2,7 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import AirMethodology from '@/components/AirMethodology';
+import SafetyMethodology from '@/components/SafetyMethodology';
 import { QuietnessMethodology } from '@/components/QuietnessMethodology';
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
@@ -236,6 +237,8 @@ export default async function MethodologyPage({
             ))}
           </div>
         </section>
+
+        <SafetyMethodology />
 
         {/* Confidence Levels */}
         <section>
