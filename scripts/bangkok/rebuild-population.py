@@ -11,6 +11,8 @@ Run repeatedly with byte-identical outputs. Original population facts, all
 other ratings, station areas and grid remain untouched. Full future pipeline
 builds use population.py too, with their exact POI counts.
 """
+import copy
+import hashlib
 import csv
 import io
 import json
@@ -58,6 +60,61 @@ def compare(baseline, populations):
     return rows
 
 
+
+def snapshot_signature(doc, kind):
+    """Hash everything the adoption replay is forbidden to change."""
+    doc = copy.deepcopy(doc)
+    if kind in ('districts', 'signals'):
+        doc.pop('_meta')
+        entries = doc['districts'] if kind == 'districts' else doc['districts'].values()
+        for d in entries:
+            d['ratings'].pop('crowd')
+            d['sources' if kind == 'districts' else 'raw'].pop('crowd')
+    elif kind == 'meta':
+        doc['medians'].pop('crowd')
+        doc.pop('default_anchors')
+    else:
+        raise ValueError(f'Unknown snapshot kind: {kind}')
+    return hashlib.sha256(json.dumps(doc, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+
+
+def validate_snapshot(baseline, districts, signals, meta):
+    for name, doc in [('districts', districts), ('signals', signals), ('meta', meta)]:
+        if snapshot_signature(doc, name) != baseline['_meta']['unchanged_signatures'][name]:
+            raise ValueError(f'Incompatible {name} snapshot: non-crowd inputs changed; full build required')
+
+
+def validate_crowd_state(baseline, districts, signals, meta, rows, weights):
+    """Accept only the original inputs or a recomputed, verified previous replay."""
+    original = all(
+        d['ratings']['crowd'] == baseline['districts'][d['slug']]['crowd_rating']
+        and d['sources']['crowd'] == ['dopa_population', 'overture']
+        and signals['districts'][d['slug']]['ratings']['crowd'] == d['ratings']['crowd']
+        and signals['districts'][d['slug']]['raw']['crowd'] == baseline['districts'][d['slug']]['crowd_raw']
+        for d in districts['districts']
+    )
+    replayed = all(
+        d['ratings']['crowd'] == rows[d['slug']]['worldpop_rating']
+        and d['sources']['crowd'] == ['worldpop_2020', 'overture']
+        and signals['districts'][d['slug']]['ratings']['crowd'] == d['ratings']['crowd']
+        and signals['districts'][d['slug']]['raw']['crowd'] == round(rows[d['slug']]['worldpop_raw'], 4)
+        for d in districts['districts']
+    )
+    if original:
+        if sha256(DATA / 'signals.json') != baseline['_meta']['signals_sha256']:
+            raise ValueError('Incompatible original signals checksum; full build required')
+    elif replayed:
+        expected = population_metadata()
+        if any(doc['_meta'].get('population') != expected for doc in (districts, signals)):
+            raise ValueError('Incompatible previous replay provenance')
+    else:
+        raise ValueError('Incompatible crowd snapshot: neither original baseline nor verified replay')
+    ratings = [d['ratings'] for d in districts['districts']]
+    if (meta['default_anchors'] != R.anchors([R.composite(r, weights) for r in ratings])
+            or meta['medians']['crowd'] != R.median_int([r['crowd'] for r in ratings])):
+        raise ValueError('Incompatible crowd medians/composite anchors')
+
+
 def main():
     baseline = json.loads((DATA / 'population-baseline.json').read_text())
     if sha256(APP / 'geometry.json') != baseline['_meta']['geometry_sha256']:
@@ -65,6 +122,7 @@ def main():
     districts = json.loads((APP / 'districts.json').read_text())
     signals = json.loads((DATA / 'signals.json').read_text())
     meta = json.loads((APP / 'meta.json').read_text())
+    validate_snapshot(baseline, districts, signals, meta)
     slugs = {d['slug'] for d in districts['districts']}
     if slugs != set(baseline['districts']) or slugs != set(signals['districts']):
         raise ValueError('District snapshot join mismatch')
@@ -76,6 +134,8 @@ def main():
                 raise ValueError(f'Baseline facts changed: {d["slug"]}.{field}')
     populations, summary = load_population(json.loads((APP / 'geometry.json').read_text()), slugs)
     rows = compare(baseline['districts'], populations)
+    weights = json.loads((ROOT / 'packages/schema/constants.json').read_text())['default_weights']
+    validate_crowd_state(baseline, districts, signals, meta, rows, weights)
     registered = sum(b['registered_population'] for b in baseline['districts'].values())
     summary.update(registered_population=registered, population_ratio=summary['population'] / registered,
                    registered_shortfall_pct_of_model=100 * (1 - registered / summary['population']),
@@ -88,7 +148,6 @@ def main():
         d['sources']['crowd'] = ['worldpop_2020', 'overture']
         signals['districts'][d['slug']]['ratings']['crowd'] = row['worldpop_rating']
         signals['districts'][d['slug']]['raw']['crowd'] = round(row['worldpop_raw'], 4)
-    weights = json.loads((ROOT / 'packages/schema/constants.json').read_text())['default_weights']
     meta['medians']['crowd'] = R.median_int([d['ratings']['crowd'] for d in districts['districts']])
     meta['default_anchors'] = R.anchors([R.composite(d['ratings'], weights) for d in districts['districts']])
     # Separate population epoch/provenance; do not relabel stale POIs as fresh.

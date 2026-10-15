@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # /// script
 # requires-python = ">=3.11"
-# dependencies = ["numpy>=2", "shapely>=2.1", "duckdb>=1.1"]
+# dependencies = ["numpy>=2", "shapely>=2.1", "duckdb>=1.1", "rasterio>=1.4,<2"]
 # ///
 """Build the Bangkok district dataset from the raw dumps fetched by fetch.py.
 
@@ -73,6 +73,7 @@ from shapely.ops import linemerge, polygonize, polylabel, unary_union
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import ratings as R  # noqa: E402
+from population import load_population, crowd_raw, population_metadata  # noqa: E402
 from static_data import (  # noqa: E402
     BBOX,
     CURATED_SEQUENCES,
@@ -902,6 +903,15 @@ def main() -> None:
 
     print("→ districts")
     districts = load_districts()
+    # Use the same published, rounded polygons as the adoption comparison.
+    # Summing the original unsimplified boundaries would introduce a second,
+    # undocumented methodological change relative to CRTKY-140 research.
+    population_geometry = {
+        d["slug"]: {"polygons": [polygon_to_latlng(p) for p in g.geoms]}
+        for d, g in zip(districts, simplify_coverage([d["geom"] for d in districts]))
+    }
+    population, population_summary = load_population(population_geometry, {d["slug"] for d in districts})
+    print(f"  WorldPop: {len(population)} districts, {population_summary['population']:,.0f} people (2020 model)")
     missing_editorial = {d["slug"] for d in districts} - set(editorial)
     assert not missing_editorial, f"editorial.json missing {missing_editorial}"
     missing_flood = {d["slug"] for d in districts} - set(flood)
@@ -1102,8 +1112,9 @@ def main() -> None:
             "culture": count_inside("venue", g) + count_inside("attraction", g) + count_inside("temple", g),
         }
         places_per_km2 = count_inside("ovt_all", g) / facts["area_km2"]
-        raw["crowd"][d["slug"]] = (
-            0.5 * math.log(max(facts["density"] or 1, 1)) + 0.5 * math.log1p(places_per_km2)
+        raw["crowd"][d["slug"]] = crowd_raw(
+            population[d["slug"]]["population"] / facts["area_km2"],
+            0.5 * math.log1p(places_per_km2),
         )
 
     print("→ ratings")
@@ -1172,7 +1183,7 @@ def main() -> None:
         conf.update({"transport": "moderate", "rent": "editorial", "safety": "editorial",
                      "green": "moderate", "crowd": "moderate"})
         sources.update({"transport": ["osm_rail", "transit_model"], "rent": ["listing_research"],
-                        "safety": ["ai_research"], "green": ["osm"], "crowd": ["dopa_population", "overture"]})
+                        "safety": ["ai_research"], "green": ["osm"], "crowd": ["worldpop_2020", "overture"]})
         return conf, sources
 
     # Images (Wikimedia Commons via Wikidata P18)
@@ -1597,6 +1608,7 @@ def main() -> None:
         "_meta": {
             "generated": today.isoformat(),
             "grid_m": GRID_M,
+            "population": population_metadata(),
             "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py.",
         },
         "districts": {
@@ -1685,7 +1697,8 @@ def main() -> None:
         path.write_text(json.dumps(obj, ensure_ascii=False, indent=indent, separators=None if indent else (",", ":")) + "\n")
         print(f"  wrote {path.relative_to(ROOT)} ({path.stat().st_size / 1024:.0f} KB)")
 
-    dump(APP / "districts.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py"},
+    dump(APP / "districts.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py",
+                                             "population": population_metadata()},
                                   "districts": out_districts}, indent=1)
     dump(APP / "geometry.json", geometry)
     dump(APP / "rail.json", {"lines": rail_lines, "stations": rail_stations})

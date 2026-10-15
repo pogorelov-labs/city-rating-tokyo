@@ -1,4 +1,11 @@
 {
+  "populationMethodology": {
+    "observed": "The October 2026 adoption comparison sums to 10.89 million modeled residents versus 5.59 million registered (1.95×). Registration is 48.67% below the model. Twenty of 50 district scores change by one point; 30 stay unchanged.",
+    "tableSource": "WorldPop constrained 2020 population density + density of mapped places (inverted)",
+    "method": "District quietness uses the WorldPop constrained 2020 resident-population model: people per pixel are summed within the published OSM district polygons, divided by the official district area, and blended equally in log space with mapped-place density. The result is ranked across 50 districts. Station/grid quietness and resident weights still use mapped places. This crowd score is separate from the modeled day/night noise facts.",
+    "limits": "Displayed population facts remain DOPA registration (2020, via Wikidata). WorldPop is a 2020 model, not a current census or a count of daytime visitors. The model-to-registration gap also reflects model assumptions, boundary differences and source uncertainty; it is not a measured count of unregistered residents.",
+    "attribution": "Population: WorldPop, University of Southampton — Bondarenko, Kerr, Sorichetta and Tatem (2020), constrained BSGM dataset, produced 2020-09-16. Adapted by City Rating through district aggregation and density scoring."
+  },
   "metadata": {
     "title": "Tokyo Neighborhood Explorer - Find Your Perfect Area",
     "description": "Interactive map of Tokyo neighborhoods rated by food, nightlife, transport, rent, safety, parks, and more. Find the best area to live in Greater Tokyo."
@@ -98,6 +105,7 @@
     "transit_model": "Commute model",
     "listing_research": "Listing research",
     "dopa_population": "DOPA registration",
+    "worldpop_2020": "WorldPop population model (2020)",
     "hotpepper": "HotPepper",
     "hotpepper_midnight": "HotPepper (late-night)",
     "osm": "OpenStreetMap",
