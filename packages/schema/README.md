@@ -144,3 +144,11 @@ The rating-key reorder is a breaking change for shared URLs — if you ever need
 to do another one, add a new `LEGACY_WEIGHT_KEYS_V2` alongside the existing one
 and bump the URL sniff logic in `url-state.ts`. Do not overwrite the existing
 legacy array.
+
+## Noise facts
+
+`noise_anchor`, `noise_proxies`, `noise_complaint_year`, `noise_complaints`, and
+`quietness_fact` define the standalone day/night estimate contract. Codegen
+also writes `app/src/lib/schema/noise-types.ts` with the original snake_case
+JSON field names, so the app-only Docker context can consume these new types.
+Existing app types remain unchanged.

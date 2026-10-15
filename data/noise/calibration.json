@@ -1,0 +1,374 @@
+{
+  "model_version": "quietness-v1",
+  "model": {
+    "day": [
+      65.03403237,
+      1.89732932,
+      0.5
+    ],
+    "night": [
+      58.7405249,
+      3.96545326,
+      1.5
+    ]
+  },
+  "features": [
+    "intercept",
+    "max(exp(-arterial_distance_m/200), exp(-expressway_distance_m/400))",
+    "ln(1+nightlife_800m)"
+  ],
+  "evaluation_design": "Retrospective spatial evaluation, not untouched validation: earlier fits were inspected; heuristic coefficients frozen for final model.",
+  "fit": "least squares intercept and non-negative road slopes; fixed nightlife slope; frozen FY2019–22 fit, no refit on evaluation data",
+  "nightlife_assumption_db_per_log_count": {
+    "day": 0.5,
+    "night": 1.5
+  },
+  "road_exposure_assumption": "Shared slope for primary/trunk and motorway/link, taking maximum proximity pressure. Decay lengths 200/400 m are heuristics, not fitted propagation or building shielding.",
+  "nightlife_limit": "0.5 day / 1.5 night dB per ln(1+venues) is a declared heuristic, not an effect measured by roadside surveys. Day/night models are not constrained to night being quieter.",
+  "coordinate_match": "Exact normalized full address to unique FY2013 JGD2011 coordinate; approximate archival position, no fuzzy geocoding",
+  "valid_readings_by_year": {
+    "2019": 284,
+    "2020": 284,
+    "2021": 280,
+    "2022": 273,
+    "2023": 267
+  },
+  "invalid_readings_by_year": {
+    "2019": 0,
+    "2020": 0,
+    "2021": 0,
+    "2022": 0,
+    "2023": 0
+  },
+  "unmatched_addresses_by_year": {
+    "2019": 252,
+    "2020": 261,
+    "2021": 255,
+    "2022": 254,
+    "2023": 184
+  },
+  "outside_proxy_extent_by_year": {},
+  "matched_readings_by_year": {
+    "2019": 32,
+    "2020": 23,
+    "2021": 25,
+    "2022": 19,
+    "2023": 83
+  },
+  "training_rows": 99,
+  "training_locations": 68,
+  "test_rows": 76,
+  "test_locations": 76,
+  "test_excluded_repeated_locations": 7,
+  "training_ids": [
+    "tmg-2019-7",
+    "tmg-2019-18",
+    "tmg-2019-20",
+    "tmg-2019-43",
+    "tmg-2019-44",
+    "tmg-2019-51",
+    "tmg-2019-69",
+    "tmg-2019-70",
+    "tmg-2019-71",
+    "tmg-2019-72",
+    "tmg-2019-74",
+    "tmg-2019-76",
+    "tmg-2019-78",
+    "tmg-2019-83",
+    "tmg-2019-103",
+    "tmg-2019-107",
+    "tmg-2019-119",
+    "tmg-2019-120",
+    "tmg-2019-141",
+    "tmg-2019-173",
+    "tmg-2019-180",
+    "tmg-2019-196",
+    "tmg-2019-203",
+    "tmg-2019-204",
+    "tmg-2019-212",
+    "tmg-2019-216",
+    "tmg-2019-220",
+    "tmg-2019-237",
+    "tmg-2019-239",
+    "tmg-2019-240",
+    "tmg-2019-251",
+    "tmg-2019-252",
+    "tmg-2020-16",
+    "tmg-2020-19",
+    "tmg-2020-43",
+    "tmg-2020-44",
+    "tmg-2020-61",
+    "tmg-2020-72",
+    "tmg-2020-73",
+    "tmg-2020-75",
+    "tmg-2020-77",
+    "tmg-2020-85",
+    "tmg-2020-103",
+    "tmg-2020-122",
+    "tmg-2020-123",
+    "tmg-2020-144",
+    "tmg-2020-184",
+    "tmg-2020-199",
+    "tmg-2020-205",
+    "tmg-2020-206",
+    "tmg-2020-213",
+    "tmg-2020-239",
+    "tmg-2020-242",
+    "tmg-2020-243",
+    "tmg-2020-273",
+    "tmg-2021-16",
+    "tmg-2021-22",
+    "tmg-2021-33",
+    "tmg-2021-35",
+    "tmg-2021-45",
+    "tmg-2021-46",
+    "tmg-2021-62",
+    "tmg-2021-63",
+    "tmg-2021-64",
+    "tmg-2021-65",
+    "tmg-2021-73",
+    "tmg-2021-89",
+    "tmg-2021-99",
+    "tmg-2021-117",
+    "tmg-2021-174",
+    "tmg-2021-175",
+    "tmg-2021-191",
+    "tmg-2021-197",
+    "tmg-2021-198",
+    "tmg-2021-204",
+    "tmg-2021-205",
+    "tmg-2021-213",
+    "tmg-2021-214",
+    "tmg-2021-216",
+    "tmg-2021-218",
+    "tmg-2022-23",
+    "tmg-2022-26",
+    "tmg-2022-42",
+    "tmg-2022-43",
+    "tmg-2022-56",
+    "tmg-2022-58",
+    "tmg-2022-72",
+    "tmg-2022-119",
+    "tmg-2022-123",
+    "tmg-2022-137",
+    "tmg-2022-170",
+    "tmg-2022-185",
+    "tmg-2022-192",
+    "tmg-2022-198",
+    "tmg-2022-199",
+    "tmg-2022-201",
+    "tmg-2022-203",
+    "tmg-2022-209",
+    "tmg-2022-255"
+  ],
+  "test_ids": [
+    "tmg-2023-1",
+    "tmg-2023-2",
+    "tmg-2023-3",
+    "tmg-2023-4",
+    "tmg-2023-5",
+    "tmg-2023-8",
+    "tmg-2023-10",
+    "tmg-2023-14",
+    "tmg-2023-17",
+    "tmg-2023-18",
+    "tmg-2023-22",
+    "tmg-2023-24",
+    "tmg-2023-27",
+    "tmg-2023-28",
+    "tmg-2023-29",
+    "tmg-2023-30",
+    "tmg-2023-31",
+    "tmg-2023-39",
+    "tmg-2023-42",
+    "tmg-2023-47",
+    "tmg-2023-48",
+    "tmg-2023-49",
+    "tmg-2023-50",
+    "tmg-2023-52",
+    "tmg-2023-54",
+    "tmg-2023-55",
+    "tmg-2023-71",
+    "tmg-2023-73",
+    "tmg-2023-79",
+    "tmg-2023-80",
+    "tmg-2023-81",
+    "tmg-2023-83",
+    "tmg-2023-84",
+    "tmg-2023-85",
+    "tmg-2023-86",
+    "tmg-2023-88",
+    "tmg-2023-89",
+    "tmg-2023-90",
+    "tmg-2023-91",
+    "tmg-2023-92",
+    "tmg-2023-93",
+    "tmg-2023-94",
+    "tmg-2023-104",
+    "tmg-2023-105",
+    "tmg-2023-112",
+    "tmg-2023-114",
+    "tmg-2023-116",
+    "tmg-2023-118",
+    "tmg-2023-119",
+    "tmg-2023-122",
+    "tmg-2023-124",
+    "tmg-2023-126",
+    "tmg-2023-127",
+    "tmg-2023-135",
+    "tmg-2023-164",
+    "tmg-2023-165",
+    "tmg-2023-181",
+    "tmg-2023-189",
+    "tmg-2023-190",
+    "tmg-2023-191",
+    "tmg-2023-202",
+    "tmg-2023-207",
+    "tmg-2023-208",
+    "tmg-2023-232",
+    "tmg-2023-234",
+    "tmg-2023-237",
+    "tmg-2023-239",
+    "tmg-2023-242",
+    "tmg-2023-253",
+    "tmg-2023-258",
+    "tmg-2023-259",
+    "tmg-2023-263",
+    "tmg-2023-264",
+    "tmg-2023-265",
+    "tmg-2023-266",
+    "tmg-2023-267"
+  ],
+  "evaluation": {
+    "day": {
+      "mae_db": 3.225,
+      "training_mean_baseline_mae_db": 3.304
+    },
+    "night": {
+      "mae_db": 4.296,
+      "training_mean_baseline_mae_db": 4.278
+    }
+  },
+  "target": "Roadside campaign Leq dB, day 06–22 / night 22–06; NOT residential or 1–10 index accuracy",
+  "temporal_limit": "2026 OSM proxies matched to FY2019–23 surveys using FY2013 coordinates; retrospective evaluation, not prospective validation",
+  "bangkok": {
+    "status": "uncalibrated_transfer",
+    "measured_anchors": 0,
+    "mae_db": null,
+    "reason": "PCD station and annual CSVs not acquired; TLS handshake timeout on 2026-10-15. Metadata only. No measured day/night in the acquired materials."
+  },
+  "inputs": [
+    {
+      "path": "app/src/data/bangkok/stations.json",
+      "sha256": "e8a50e834cce129ecb2f9ed22e2863674a8acfb48effa6a23ea62c8361c0328a"
+    },
+    {
+      "path": "app/src/data/ward-data.json",
+      "sha256": "3b186fe7e7f2417f771a139a860661758d1994d696d9de67804e0564f95d0b80"
+    },
+    {
+      "path": "data/noise/raw/bangkok-nightlife.json.gz",
+      "sha256": "4a04f287c6d298827cb7a525dbe099b37645b6d1044453d1d6c6bb49568b5a5f"
+    },
+    {
+      "path": "data/noise/raw/bangkok-nightlife.source.json",
+      "sha256": "eb51019b1f7e750f7afb26c905234c9a15f240868361ae8924a39a06955c27d4"
+    },
+    {
+      "path": "data/noise/raw/bangkok-roads.json.gz",
+      "sha256": "24602612c2d927cf4a0891da3cd0218798e3747fd745330fd884bb01c7a0c52c"
+    },
+    {
+      "path": "data/noise/raw/bangkok-roads.source.json",
+      "sha256": "a2878d3e2904e3a7d4400d7f25626a789db9a1e3164a1fb3d106dc3bffd14ac2"
+    },
+    {
+      "path": "data/noise/raw/tmg-h25.csv",
+      "sha256": "1d3694eeec9aad024bbf4cefb844d56ff0686a87f3e614720b0bece44f52b085"
+    },
+    {
+      "path": "data/noise/raw/tmg-h25.source.json",
+      "sha256": "73740179a01e876a280e2afad12fe0b03f67e13345216fed9749559942d5b5d4"
+    },
+    {
+      "path": "data/noise/raw/tokyo-nightlife.json.gz",
+      "sha256": "0218533ad530cc200f3f4ee0d41d9e613e5858149ac7b0a9d4fdb14a66cbc3c5"
+    },
+    {
+      "path": "data/noise/raw/tokyo-nightlife.source.json",
+      "sha256": "8901391285d51c3899adcd4c5bce365d79376f65adeb7999010c1537fe8445d1"
+    },
+    {
+      "path": "data/noise/raw/tokyo-roads.json.gz",
+      "sha256": "df74e75f54c49e8f7fc2aa35944c652228ae07e9fd6ee076332b83b8aa827a06"
+    },
+    {
+      "path": "data/noise/raw/tokyo-roads.source.json",
+      "sha256": "33ab5dcd467a079676d00e7f639a3b913f92661409b898ddfeca0b41d433a84b"
+    },
+    {
+      "path": "data/stations.json",
+      "sha256": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/LICENSE.txt",
+      "sha256": "6abd6ac485f37796cd8265e7823a1261074fdaeff53a5220e5e20edeb5a8432f"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/pcd_resources_index.json",
+      "sha256": "8df9b1fbe75ab90db6d32f31b0030a9bb85392e261fdb69e53c48e91bba8f284"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+      "sha256": "2afb024cabb0d423a06898a9611b5284ce4529e1176f3f0e68d89bf5db7372ed"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+      "sha256": "69fcc634a1ab9f2920b914411e7bab793da05a7ede74b0a2bb49ab9a42ffe112"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+      "sha256": "09fd1111012d83595a50bbed7e4904909d69f0851d116b1c2cd561d3000cfbac"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+      "sha256": "80ebf6c1595044224249f68f35745168efd3a39068af7fd3c46ca6917a20a6fc"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+      "sha256": "88ebf626ad00e655f740d90a030273affb8cd9a61e260155066b11c816aa4e3b"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/yearbook1911_2022.csv",
+      "sha256": "9b3fc02b2d0c07eea683efece945da70fffab1d8381ce0154da3b976f376fc39"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/yearbook1911_2023.csv",
+      "sha256": "60168466abdcb12f87b8fed6ad6b73a989974e081c0f3c5b110bf759e35a4e85"
+    },
+    {
+      "path": "research/snapshots/2026-10-14/noise/yearbook1911_2024.csv",
+      "sha256": "675eb2aaa5c2932d881a0e256eb01ffb1b4d91dbc9b202ba59446f8ac275e251"
+    },
+    {
+      "path": "scripts/noise/build.py",
+      "sha256": "195d2f62f215ae595b21a771ddbd1fcc5c169a0b8b546086dd93be6ddd46f387"
+    },
+    {
+      "path": "scripts/noise/fetch.py",
+      "sha256": "b4355336fbf8cbc8ea8e33aa0f962024f95261d67116c79398c60cf315b6bd08"
+    }
+  ],
+  "coverage": {
+    "tokyo": {
+      "stations": 1493,
+      "estimated": 1493,
+      "with_measured_anchor": 103
+    },
+    "bangkok": {
+      "stations": 133,
+      "estimated": 133,
+      "with_measured_anchor": 0
+    }
+  }
+}

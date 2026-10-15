@@ -149,3 +149,49 @@ class PresetProfile(BaseModel):
     icon: str = Field(...)
     weights: WeightConfig = Field(...)
     filters: Optional[dict] = None
+
+class NoiseAnchor(BaseModel):
+    """
+    Measured TMG roadside day/night Leq; distance uses an exact-address match to archival coordinates, not the station reading.
+    """
+
+    id: str = Field(...)
+    address: str = Field(...)
+    road: str = Field(...)
+    year: float = Field(...)
+    day_db: float = Field(...)
+    night_db: float = Field(...)
+    start_date: str = Field(...)
+    end_date: str = Field(...)
+    distance_m: float = Field(...)
+    coordinate_year: float = Field(...)
+    source_url: str = Field(...)
+
+class NoiseProxies(BaseModel):
+    nightlife_800m: float = Field(...)
+    arterial_distance_m: float = Field(...)
+    expressway_distance_m: float = Field(...)
+
+class NoiseComplaintYear(BaseModel):
+    year: float = Field(...)
+    count: float = Field(...)
+
+class NoiseComplaints(BaseModel):
+    municipality: str = Field(...)
+    series: list[NoiseComplaintYear] = Field(...)
+
+class QuietnessFact(BaseModel):
+    """
+    Standalone modeled day/night quietness: 1–10, higher quieter. Not a rating category or measured sound level. Missing proxy coverage produces nulls.
+    """
+
+    status: Literal["available", "missing_proxies"] = Field(...)
+    confidence: Literal["estimate"] = Field(...)
+    calibration: Literal["tokyo_roadside", "uncalibrated_transfer"] = Field(...)
+    data_date: str = Field(...)
+    model_version: str = Field(...)
+    day: float | None = Field(...)
+    night: float | None = Field(...)
+    proxies: Optional[NoiseProxies] = None
+    anchors: list[NoiseAnchor] = Field(...)
+    complaints: Optional[NoiseComplaints] = None

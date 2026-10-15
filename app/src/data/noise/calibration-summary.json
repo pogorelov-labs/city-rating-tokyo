@@ -1,0 +1,29 @@
+{
+  "training_rows": 99,
+  "training_locations": 68,
+  "test_locations": 76,
+  "evaluation": {
+    "day": {
+      "mae_db": 3.225,
+      "training_mean_baseline_mae_db": 3.304
+    },
+    "night": {
+      "mae_db": 4.296,
+      "training_mean_baseline_mae_db": 4.278
+    }
+  },
+  "matched_readings_by_year": {
+    "2019": 32,
+    "2020": 23,
+    "2021": 25,
+    "2022": 19,
+    "2023": 83
+  },
+  "unmatched_addresses_by_year": {
+    "2019": 252,
+    "2020": 261,
+    "2021": 255,
+    "2022": 254,
+    "2023": 184
+  }
+}

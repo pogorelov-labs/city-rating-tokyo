@@ -155,3 +155,52 @@ export interface PresetProfile {
     hasLiveCamera?: boolean;
   };
 }
+
+/**
+ * Measured TMG roadside day/night Leq; distance uses an exact-address match to archival coordinates, not the station reading.
+ */
+export interface NoiseAnchor {
+  id: string;
+  address: string;
+  road: string;
+  year: number;
+  dayDb: number;
+  nightDb: number;
+  startDate: string;
+  endDate: string;
+  distanceM: number;
+  coordinateYear: number;
+  sourceUrl: string;
+}
+
+export interface NoiseProxies {
+  nightlife_800m: number;
+  arterialDistanceM: number;
+  expresswayDistanceM: number;
+}
+
+export interface NoiseComplaintYear {
+  year: number;
+  count: number;
+}
+
+export interface NoiseComplaints {
+  municipality: string;
+  series: Array<NoiseComplaintYear>;
+}
+
+/**
+ * Standalone modeled day/night quietness: 1–10, higher quieter. Not a rating category or measured sound level. Missing proxy coverage produces nulls.
+ */
+export interface QuietnessFact {
+  status: 'available' | 'missing_proxies';
+  confidence: 'estimate';
+  calibration: 'tokyo_roadside' | 'uncalibrated_transfer';
+  dataDate: string;
+  modelVersion: string;
+  day: number | null;
+  night: number | null;
+  proxies?: NoiseProxies;
+  anchors: Array<NoiseAnchor>;
+  complaints?: NoiseComplaints;
+}

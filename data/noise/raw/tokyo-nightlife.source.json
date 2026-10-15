@@ -1,0 +1,16 @@
+{
+  "url": "https://overpass.private.coffee/api/interpreter",
+  "query": "[out:json][timeout:90];nwr[\"amenity\"~\"^(bar|pub|nightclub|karaoke_box)$\"](34.951704,138.948706,36.278590,140.893096);out center;",
+  "bbox": [
+    34.951704,
+    138.948706,
+    36.27859,
+    140.893096
+  ],
+  "retrieved_at": "2026-10-15T07:36:33.792806+00:00",
+  "osm_base": "2026-06-01T08:52:28Z",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "sha256": "0218533ad530cc200f3f4ee0d41d9e613e5858149ac7b0a9d4fdb14a66cbc3c5",
+  "elements": 13652
+}

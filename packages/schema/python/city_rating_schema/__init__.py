@@ -35,6 +35,11 @@ try:
         EnvironmentFilters,
         PercentileAnchors,
         PresetProfile,
+        NoiseAnchor,
+        NoiseProxies,
+        NoiseComplaintYear,
+        NoiseComplaints,
+        QuietnessFact,
     )
 except ImportError:
     RatingKey = None  # pydantic not installed
@@ -52,6 +57,11 @@ except ImportError:
     EnvironmentFilters = None  # pydantic not installed
     PercentileAnchors = None  # pydantic not installed
     PresetProfile = None  # pydantic not installed
+    NoiseAnchor = None  # pydantic not installed
+    NoiseProxies = None  # pydantic not installed
+    NoiseComplaintYear = None  # pydantic not installed
+    NoiseComplaints = None  # pydantic not installed
+    QuietnessFact = None  # pydantic not installed
     import warnings
     warnings.warn("pydantic not installed; city_rating_schema models unavailable (constants still work)")
 
@@ -82,4 +92,9 @@ __all__ = [
     "EnvironmentFilters",
     "PercentileAnchors",
     "PresetProfile",
+    "NoiseAnchor",
+    "NoiseProxies",
+    "NoiseComplaintYear",
+    "NoiseComplaints",
+    "QuietnessFact",
 ]
