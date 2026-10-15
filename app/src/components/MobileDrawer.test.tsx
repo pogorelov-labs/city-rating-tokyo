@@ -29,8 +29,7 @@ describe('MobileDrawer animation lifecycle', () => {
     frames.next();
     expect(drawer).toHaveClass('translate-y-full');
     frames.next();
-    // Deliberate CRTKY-158 CI failure probe; restore after recording the failed job.
-    expect(drawer).toHaveClass('translate-y-full');
+    expect(drawer).toHaveClass('translate-y-0');
   });
 
   it('ignores child transitionend, then hides on the drawer transitionend', () => {
