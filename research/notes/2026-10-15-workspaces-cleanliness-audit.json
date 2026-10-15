@@ -1,0 +1,134 @@
+{
+  "coworking": {
+    "tokyo": {
+      "records": 105,
+      "with_address_and_source": 105,
+      "with_coordinates": 31,
+      "without_coordinates": 74,
+      "by_brand": {
+        "Global Business Hub Tokyo (Tokyo Metropolitan Government)": {
+          "with_coordinates": 0,
+          "without_coordinates": 1
+        },
+        "JustCo": {
+          "with_coordinates": 1,
+          "without_coordinates": 0
+        },
+        "Regus": {
+          "with_coordinates": 0,
+          "without_coordinates": 73
+        },
+        "WeWork": {
+          "with_coordinates": 30,
+          "without_coordinates": 0
+        }
+      }
+    },
+    "bangkok": {
+      "records": 54,
+      "with_address_and_source": 54,
+      "with_coordinates": 5,
+      "without_coordinates": 49,
+      "by_brand": {
+        "JustCo": {
+          "with_coordinates": 1,
+          "without_coordinates": 0
+        },
+        "Regus": {
+          "with_coordinates": 0,
+          "without_coordinates": 1
+        },
+        "Spaces": {
+          "with_coordinates": 0,
+          "without_coordinates": 47
+        },
+        "WeWork": {
+          "with_coordinates": 3,
+          "without_coordinates": 0
+        },
+        "the Hive": {
+          "with_coordinates": 1,
+          "without_coordinates": 1
+        }
+      }
+    }
+  },
+  "coworking_total_without_coordinates": 123,
+  "waste": {
+    "rows": 459,
+    "district_rows": 450,
+    "other_rows": 9,
+    "districts_joined": 50,
+    "years_ad": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "code_1000": "other, not a city total",
+    "measure": "municipal solid-waste quantity",
+    "units": [
+      "tonnes per reported year",
+      "tonnes per day"
+    ],
+    "annual_tonnes_excluding_other": {
+      "2010": "3011002.70",
+      "2011": "3248679.68",
+      "2012": "3318561.67",
+      "2013": "3421722.6",
+      "2014": "3415086.43",
+      "2015": "3487019.53",
+      "2016": "3508137.12",
+      "2017": "3660137.61",
+      "2018": "3692869.44"
+    },
+    "other_tonnes": {
+      "2010": "189819.45",
+      "2011": "122869.76",
+      "2012": "133599.00",
+      "2013": "206932",
+      "2014": "210940.80",
+      "2015": "217247.09",
+      "2016": "199522.73",
+      "2017": "203794.98",
+      "2018": "219418.80"
+    },
+    "district_zero_daily_values": {
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 50,
+      "2018": 0
+    },
+    "district_calendar_year_discrepancies_over_1pct": {
+      "2010": 0,
+      "2011": 0,
+      "2012": 1,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 41,
+      "2017": 50,
+      "2018": 0
+    }
+  },
+  "input_sha256": {
+    "research/snapshots/2026-10-14/coworking/coworking-tokyo.json": "3fa6b0d472eefaacf9ee80c611595829bce6a4ac2b92de506da9e46124e9897a",
+    "research/snapshots/2026-10-14/coworking/coworking-bangkok.json": "7d89a10525fe66975f76183dbcaa6e84013d2e7875eeec838f519a85f498402a",
+    "research/snapshots/2026-10-14/coworking/LICENSE.txt": "85a8317f459a1c051f4fb6bb20af9e17fc1e39a87d20b9651f72c08905e813f8",
+    "research/snapshots/2026-10-14/cleanliness-bangkok/waste-by-khet-tidy.csv": "4a5f4db6d428d86a0f9c298c4278088b0067283ed0fa42a61f0b04c6e6a5094e",
+    "research/snapshots/2026-10-14/cleanliness-bangkok/garbage-by-khet.csv": "f366a52c14e1fab02ccb10e011494d32f7aa617357daeeb026e7944b02e50dce",
+    "research/snapshots/2026-10-14/cleanliness-bangkok/garbage-metadata.docx": "7e5cb4dd5d9ee70d736e08a106cae2efac71480475f93121c90b7454c998efdc",
+    "research/snapshots/2026-10-14/cleanliness-bangkok/khet-codes.json": "f9554d6900bee9fdb6f2450a44fccda16472e21bed3ddc003651da030d9a88c5",
+    "research/snapshots/2026-10-14/cleanliness-bangkok/LICENSE.txt": "7af5f36db00434e48d7d186e92a391e37cb0480dc0ff12bf8e1f51f7c9a90109"
+  }
+}
