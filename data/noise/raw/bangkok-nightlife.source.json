@@ -1,0 +1,16 @@
+{
+  "url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:90];nwr[\"amenity\"~\"^(bar|pub|nightclub|karaoke_box)$\"](13.629970,100.379480,13.950010,100.778600);out center;",
+  "bbox": [
+    13.62997,
+    100.37948,
+    13.95001,
+    100.7786
+  ],
+  "retrieved_at": "2026-10-15T07:38:02.473042+00:00",
+  "osm_base": "2026-10-15T07:36:46Z",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "sha256": "4a04f287c6d298827cb7a525dbe099b37645b6d1044453d1d6c6bb49568b5a5f",
+  "elements": 860
+}

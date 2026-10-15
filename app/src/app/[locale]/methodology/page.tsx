@@ -1,3 +1,4 @@
+import { QuietnessMethodology } from '@/components/QuietnessMethodology';
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -174,6 +175,8 @@ export default async function MethodologyPage({
             The remaining stations are purely data-driven.
           </p>
         </section>
+
+        <QuietnessMethodology />
 
         {/* Pipeline */}
         <section>

@@ -1,0 +1,16 @@
+{
+  "url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:90];way[\"highway\"~\"^(primary|trunk|motorway|motorway_link)$\"](34.951704,138.948706,36.278590,140.893096);out geom;",
+  "bbox": [
+    34.951704,
+    138.948706,
+    36.27859,
+    140.893096
+  ],
+  "retrieved_at": "2026-10-15T07:37:38.974576+00:00",
+  "osm_base": "2026-10-15T07:35:38Z",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "sha256": "df74e75f54c49e8f7fc2aa35944c652228ae07e9fd6ee076332b83b8aa827a06",
+  "elements": 47718
+}

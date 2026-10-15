@@ -1,0 +1,9 @@
+{
+  "url": "https://www.opendata.metro.tokyo.lg.jp/kankyo/vehicle/noise/H25/H25_kekka.csv",
+  "retrieved_at": "2026-10-15T07:37:38.480723+00:00",
+  "sha256": "1d3694eeec9aad024bbf4cefb844d56ff0686a87f3e614720b0bece44f52b085",
+  "license": "CC-BY-4.0",
+  "attribution": "Tokyo Metropolitan Government, Bureau of Environment",
+  "coordinate_reference": "JGD2011",
+  "fiscal_year": 2013
+}

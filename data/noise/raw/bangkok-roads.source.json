@@ -1,0 +1,16 @@
+{
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "query": "[out:json][timeout:90];way[\"highway\"~\"^(primary|trunk|motorway|motorway_link)$\"](13.629970,100.379480,13.950010,100.778600);out geom;",
+  "bbox": [
+    13.62997,
+    100.37948,
+    13.95001,
+    100.7786
+  ],
+  "retrieved_at": "2026-10-15T07:39:01.809620+00:00",
+  "osm_base": "2026-10-15T07:36:46Z",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "sha256": "24602612c2d927cf4a0891da3cd0218798e3747fd745330fd884bb01c7a0c52c",
+  "elements": 7552
+}

@@ -1,0 +1,3642 @@
+[
+  {
+    "id": "tmg-2019-7",
+    "year": 2019,
+    "address": "中央区晴海3丁目1",
+    "address_key": "中央区晴海3-1",
+    "road": "都道304号日比谷豊洲埠頭東雲町線（晴海通り）",
+    "day_db": 64.0,
+    "night_db": 62.0,
+    "start_date": "2019/10/23",
+    "end_date": "2019/10/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 10,
+    "lat": 35.656456,
+    "lng": 139.779572,
+    "features": {
+      "nightlife_800m": 11,
+      "arterial_distance_m": 62.2,
+      "expressway_distance_m": 339.8
+    }
+  },
+  {
+    "id": "tmg-2019-18",
+    "year": 2019,
+    "address": "港区高輪2丁目13",
+    "address_key": "港区高輪2-13",
+    "road": "国道15号",
+    "day_db": 69.0,
+    "night_db": 68.0,
+    "start_date": "2020/01/30",
+    "end_date": "2020/01/31",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 21,
+    "lat": 35.634586,
+    "lng": 139.737762,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 41.5,
+      "expressway_distance_m": 1164.1
+    }
+  },
+  {
+    "id": "tmg-2019-20",
+    "year": 2019,
+    "address": "港区芝2丁目21",
+    "address_key": "港区芝2-21",
+    "road": "都道409号日比谷芝浦線",
+    "day_db": 66.0,
+    "night_db": 63.0,
+    "start_date": "2020/01/30",
+    "end_date": "2020/01/31",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 23,
+    "lat": 35.651024,
+    "lng": 139.750122,
+    "features": {
+      "nightlife_800m": 150,
+      "arterial_distance_m": 294.7,
+      "expressway_distance_m": 228.5
+    }
+  },
+  {
+    "id": "tmg-2019-43",
+    "year": 2019,
+    "address": "墨田区吾妻橋2丁目3",
+    "address_key": "墨田区吾妻橋2-3",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 66.0,
+    "night_db": 63.0,
+    "start_date": "2019/10/16",
+    "end_date": "2019/10/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 46,
+    "lat": 35.708782,
+    "lng": 139.803726,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 52.3,
+      "expressway_distance_m": 357.8
+    }
+  },
+  {
+    "id": "tmg-2019-44",
+    "year": 2019,
+    "address": "墨田区業平5丁目10",
+    "address_key": "墨田区業平5-10",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 69.0,
+    "night_db": 65.0,
+    "start_date": "2019/10/16",
+    "end_date": "2019/10/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 47,
+    "lat": 35.707935,
+    "lng": 139.816772,
+    "features": {
+      "nightlife_800m": 34,
+      "arterial_distance_m": 730.5,
+      "expressway_distance_m": 1255.5
+    }
+  },
+  {
+    "id": "tmg-2019-51",
+    "year": 2019,
+    "address": "江東区枝川3丁目3",
+    "address_key": "江東区枝川3-3",
+    "road": "都道319号環状三号線（三ツ目通り）（2）",
+    "day_db": 72.0,
+    "night_db": 69.0,
+    "start_date": "2019/11/12",
+    "end_date": "2019/11/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 54,
+    "lat": 35.658913,
+    "lng": 139.808472,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 24.6,
+      "expressway_distance_m": 23.5
+    }
+  },
+  {
+    "id": "tmg-2019-69",
+    "year": 2019,
+    "address": "大田区大森中2丁目1",
+    "address_key": "大田区大森中2-1",
+    "road": "国道15号",
+    "day_db": 74.0,
+    "night_db": 74.0,
+    "start_date": "2019/11/11",
+    "end_date": "2019/11/12",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 72,
+    "lat": 35.568119,
+    "lng": 139.730362,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 39.2,
+      "expressway_distance_m": 1652.7
+    }
+  },
+  {
+    "id": "tmg-2019-70",
+    "year": 2019,
+    "address": "大田区東六郷2丁目18",
+    "address_key": "大田区東六郷2-18",
+    "road": "国道15号",
+    "day_db": 72.0,
+    "night_db": 72.0,
+    "start_date": "2019/11/11",
+    "end_date": "2019/11/12",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 73,
+    "lat": 35.547951,
+    "lng": 139.716278,
+    "features": {
+      "nightlife_800m": 31,
+      "arterial_distance_m": 125.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-71",
+    "year": 2019,
+    "address": "大田区西糀谷3丁目9",
+    "address_key": "大田区西糀谷3-9",
+    "road": "国道131号",
+    "day_db": 70.0,
+    "night_db": 68.0,
+    "start_date": "2019/11/20",
+    "end_date": "2019/11/21",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 74,
+    "lat": 35.555283,
+    "lng": 139.738342,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 95.5,
+      "expressway_distance_m": 727.4
+    }
+  },
+  {
+    "id": "tmg-2019-72",
+    "year": 2019,
+    "address": "大田区南千束3丁目32",
+    "address_key": "大田区南千束3-32",
+    "road": "都道２号東京丸子横浜線",
+    "day_db": 71.0,
+    "night_db": 70.0,
+    "start_date": "2019/11/20",
+    "end_date": "2019/11/21",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 75,
+    "lat": 35.599949,
+    "lng": 139.687881,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 21.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-74",
+    "year": 2019,
+    "address": "大田区新蒲田1丁目14",
+    "address_key": "大田区新蒲田1-14",
+    "road": "都道311号環状八号線",
+    "day_db": 66.0,
+    "night_db": 65.0,
+    "start_date": "2019/11/20",
+    "end_date": "2019/11/21",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 77,
+    "lat": 35.559662,
+    "lng": 139.709015,
+    "features": {
+      "nightlife_800m": 45,
+      "arterial_distance_m": 29.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-76",
+    "year": 2019,
+    "address": "大田区南馬込2丁目31",
+    "address_key": "大田区南馬込2-31",
+    "road": "都道318号環状七号線",
+    "day_db": 72.0,
+    "night_db": 70.0,
+    "start_date": "2019/11/20",
+    "end_date": "2019/11/21",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 79,
+    "lat": 35.588638,
+    "lng": 139.718979,
+    "features": {
+      "nightlife_800m": 10,
+      "arterial_distance_m": 18.0,
+      "expressway_distance_m": 1519.0
+    }
+  },
+  {
+    "id": "tmg-2019-78",
+    "year": 2019,
+    "address": "世田谷区大原2丁目27",
+    "address_key": "世田谷区大原2-27",
+    "road": "国道20号",
+    "day_db": 75.0,
+    "night_db": 74.0,
+    "start_date": "2019/11/19",
+    "end_date": "2019/11/20",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 81,
+    "lat": 35.671265,
+    "lng": 139.658142,
+    "features": {
+      "nightlife_800m": 24,
+      "arterial_distance_m": 60.0,
+      "expressway_distance_m": 65.0
+    }
+  },
+  {
+    "id": "tmg-2019-83",
+    "year": 2019,
+    "address": "世田谷区上用賀6丁目20",
+    "address_key": "世田谷区上用賀6-20",
+    "road": "都道311号環状八号線",
+    "day_db": 71.0,
+    "night_db": 72.0,
+    "start_date": "2019/11/21",
+    "end_date": "2019/11/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 86,
+    "lat": 35.635181,
+    "lng": 139.622925,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 22.3,
+      "expressway_distance_m": 800.1
+    }
+  },
+  {
+    "id": "tmg-2019-103",
+    "year": 2019,
+    "address": "豊島区目白2丁目5",
+    "address_key": "豊島区目白2-5",
+    "road": "都道305号芝新宿王子線(1)",
+    "day_db": 70.0,
+    "night_db": 69.0,
+    "start_date": "2019/11/14",
+    "end_date": "2019/11/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 106,
+    "lat": 35.720997,
+    "lng": 139.712143,
+    "features": {
+      "nightlife_800m": 9,
+      "arterial_distance_m": 50.8,
+      "expressway_distance_m": 798.9
+    }
+  },
+  {
+    "id": "tmg-2019-107",
+    "year": 2019,
+    "address": "北区昭和町3丁目9",
+    "address_key": "北区昭和町3-9",
+    "road": "都道306号王子千住夢の島線",
+    "day_db": 69.0,
+    "night_db": 65.0,
+    "start_date": "2019/11/12",
+    "end_date": "2019/11/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 110,
+    "lat": 35.749084,
+    "lng": 139.75145,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 14.4,
+      "expressway_distance_m": 987.9
+    }
+  },
+  {
+    "id": "tmg-2019-119",
+    "year": 2019,
+    "address": "練馬区大泉町3丁目2",
+    "address_key": "練馬区大泉町3-2",
+    "road": "東京外環自動車道",
+    "day_db": 61.0,
+    "night_db": 56.0,
+    "start_date": "2019/04/16",
+    "end_date": "2019/04/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 122,
+    "lat": 35.763367,
+    "lng": 139.600479,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 582.6,
+      "expressway_distance_m": 80.6
+    }
+  },
+  {
+    "id": "tmg-2019-120",
+    "year": 2019,
+    "address": "練馬区大泉学園町3丁目23",
+    "address_key": "練馬区大泉学園町3-23",
+    "road": "関越自動車道(2)",
+    "day_db": 63.0,
+    "night_db": 58.0,
+    "start_date": "2019/04/16",
+    "end_date": "2019/04/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 123,
+    "lat": 35.764153,
+    "lng": 139.579803,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 566.1,
+      "expressway_distance_m": 52.1
+    }
+  },
+  {
+    "id": "tmg-2019-141",
+    "year": 2019,
+    "address": "葛飾区東新小岩3丁目12",
+    "address_key": "葛飾区東新小岩3-12",
+    "road": "都道315号御徒町小岩線(蔵前通り)",
+    "day_db": 70.0,
+    "night_db": 68.0,
+    "start_date": "2019/11/06",
+    "end_date": "2019/11/07",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 144,
+    "lat": 35.722919,
+    "lng": 139.861862,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 14.1,
+      "expressway_distance_m": 1369.3
+    }
+  },
+  {
+    "id": "tmg-2019-173",
+    "year": 2019,
+    "address": "立川市幸町5丁目83-1",
+    "address_key": "立川市幸町5-83-1",
+    "road": "都道43号立川東大和線",
+    "day_db": 66.0,
+    "night_db": 60.0,
+    "start_date": "2019/11/19",
+    "end_date": "2019/11/20",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 176,
+    "lat": 35.725777,
+    "lng": 139.418456,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 22.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-180",
+    "year": 2019,
+    "address": "武蔵野市関前1丁目9",
+    "address_key": "武蔵野市関前1-9",
+    "road": "都道12号調布田無線",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2019/12/18",
+    "end_date": "2019/12/19",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 183,
+    "lat": 35.710793,
+    "lng": 139.544022,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 25.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-196",
+    "year": 2019,
+    "address": "府中市白糸台1丁目37-5",
+    "address_key": "府中市白糸台1-37-5",
+    "road": "国道20号",
+    "day_db": 71.0,
+    "night_db": 67.0,
+    "start_date": "2019/12/16",
+    "end_date": "2019/12/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 199,
+    "lat": 35.669884,
+    "lng": 139.506317,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 33.4,
+      "expressway_distance_m": 1222.7
+    }
+  },
+  {
+    "id": "tmg-2019-203",
+    "year": 2019,
+    "address": "昭島市拝島町4丁目7",
+    "address_key": "昭島市拝島町4-7",
+    "road": "国道16号",
+    "day_db": 68.0,
+    "night_db": 67.0,
+    "start_date": "2020/02/05",
+    "end_date": "2020/02/06",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 206,
+    "lat": 35.702877,
+    "lng": 139.347549,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 70.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-204",
+    "year": 2019,
+    "address": "昭島市拝島町2丁目2",
+    "address_key": "昭島市拝島町2-2",
+    "road": "国道16号",
+    "day_db": 74.0,
+    "night_db": 73.0,
+    "start_date": "2020/02/05",
+    "end_date": "2020/02/06",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 207,
+    "lat": 35.709324,
+    "lng": 139.34198,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 38.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-212",
+    "year": 2019,
+    "address": "調布市富士見町2丁目16-33",
+    "address_key": "調布市富士見町2-16-33",
+    "road": "都道12号調布田無線",
+    "day_db": 66.0,
+    "night_db": 65.0,
+    "start_date": "2020/01/15",
+    "end_date": "2020/01/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 215,
+    "lat": 35.659873,
+    "lng": 139.541131,
+    "features": {
+      "nightlife_800m": 17,
+      "arterial_distance_m": 37.3,
+      "expressway_distance_m": 320.6
+    }
+  },
+  {
+    "id": "tmg-2019-216",
+    "year": 2019,
+    "address": "町田市相原町",
+    "address_key": "町田市相原町",
+    "road": "国道16号",
+    "day_db": 71.0,
+    "night_db": 67.0,
+    "start_date": "2019/12/05",
+    "end_date": "2019/12/06",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 219,
+    "lat": 35.61293,
+    "lng": 139.30072,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 394.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-220",
+    "year": 2019,
+    "address": "町田市図師町",
+    "address_key": "町田市図師町",
+    "road": "都道57号相模原大蔵町線",
+    "day_db": 63.0,
+    "night_db": 59.0,
+    "start_date": "2019/12/05",
+    "end_date": "2019/12/06",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 223,
+    "lat": 35.587612,
+    "lng": 139.422775,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 541.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-237",
+    "year": 2019,
+    "address": "国立市谷保1253",
+    "address_key": "国立市谷保1253",
+    "road": "国道20号",
+    "day_db": 72.0,
+    "night_db": 70.0,
+    "start_date": "2019/10/26",
+    "end_date": "2019/10/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 240,
+    "lat": 35.675354,
+    "lng": 139.439987,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 45.6,
+      "expressway_distance_m": 103.6
+    }
+  },
+  {
+    "id": "tmg-2019-239",
+    "year": 2019,
+    "address": "国立市中3丁目11",
+    "address_key": "国立市中3-11",
+    "road": "都道146号国立停車場谷保線",
+    "day_db": 60.0,
+    "night_db": 54.0,
+    "start_date": "2019/10/26",
+    "end_date": "2019/10/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 242,
+    "lat": 35.687656,
+    "lng": 139.444794,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 1117.7,
+      "expressway_distance_m": 1214.1
+    }
+  },
+  {
+    "id": "tmg-2019-240",
+    "year": 2019,
+    "address": "国立市谷保7069",
+    "address_key": "国立市谷保7069",
+    "road": "都道256号八王子国立線",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2019/10/26",
+    "end_date": "2019/10/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 243,
+    "lat": 35.683064,
+    "lng": 139.435272,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 544.7,
+      "expressway_distance_m": 598.8
+    }
+  },
+  {
+    "id": "tmg-2019-251",
+    "year": 2019,
+    "address": "東久留米市八幡町3丁目14",
+    "address_key": "東久留米市八幡町3-14",
+    "road": "都道４号東京所沢線",
+    "day_db": 67.0,
+    "night_db": 65.0,
+    "start_date": "2019/11/12",
+    "end_date": "2019/11/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 254,
+    "lat": 35.751335,
+    "lng": 139.514267,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 81.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2019-252",
+    "year": 2019,
+    "address": "東久留米市柳窪4丁目4",
+    "address_key": "東久留米市柳窪4-4",
+    "road": "都道５号新宿青梅線(2)",
+    "day_db": 74.0,
+    "night_db": 70.0,
+    "start_date": "2019/11/12",
+    "end_date": "2019/11/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r1_jouji_monitoring.csv",
+    "line": 255,
+    "lat": 35.74527,
+    "lng": 139.489853,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 17.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-16",
+    "year": 2020,
+    "address": "港区北青山3丁目3",
+    "address_key": "港区北青山3-3",
+    "road": "国道246号",
+    "day_db": 65.0,
+    "night_db": 63.0,
+    "start_date": "2021/01/28",
+    "end_date": "2021/01/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 19,
+    "lat": 35.668293,
+    "lng": 139.714828,
+    "features": {
+      "nightlife_800m": 53,
+      "arterial_distance_m": 28.4,
+      "expressway_distance_m": 1024.6
+    }
+  },
+  {
+    "id": "tmg-2020-19",
+    "year": 2020,
+    "address": "港区西麻布3丁目21",
+    "address_key": "港区西麻布3-21",
+    "road": "都道412号霞ヶ関渋谷線",
+    "day_db": 72.0,
+    "night_db": 70.0,
+    "start_date": "2021/01/28",
+    "end_date": "2021/01/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 22,
+    "lat": 35.659618,
+    "lng": 139.725067,
+    "features": {
+      "nightlife_800m": 53,
+      "arterial_distance_m": 357.8,
+      "expressway_distance_m": 53.9
+    }
+  },
+  {
+    "id": "tmg-2020-43",
+    "year": 2020,
+    "address": "墨田区吾妻橋2丁目3",
+    "address_key": "墨田区吾妻橋2-3",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 65.0,
+    "night_db": 62.0,
+    "start_date": "2020/09/29",
+    "end_date": "2020/09/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 46,
+    "lat": 35.708782,
+    "lng": 139.803726,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 52.3,
+      "expressway_distance_m": 357.8
+    }
+  },
+  {
+    "id": "tmg-2020-44",
+    "year": 2020,
+    "address": "墨田区業平5丁目10",
+    "address_key": "墨田区業平5-10",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 69.0,
+    "night_db": 65.0,
+    "start_date": "2020/09/29",
+    "end_date": "2020/09/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 47,
+    "lat": 35.707935,
+    "lng": 139.816772,
+    "features": {
+      "nightlife_800m": 34,
+      "arterial_distance_m": 730.5,
+      "expressway_distance_m": 1255.5
+    }
+  },
+  {
+    "id": "tmg-2020-61",
+    "year": 2020,
+    "address": "品川区南品川5丁目13",
+    "address_key": "品川区南品川5-13",
+    "road": "都道421号東品川下丸子線",
+    "day_db": 65.0,
+    "night_db": 61.0,
+    "start_date": "2020/12/08",
+    "end_date": "2020/12/09",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 64,
+    "lat": 35.608231,
+    "lng": 139.741135,
+    "features": {
+      "nightlife_800m": 12,
+      "arterial_distance_m": 142.6,
+      "expressway_distance_m": 839.6
+    }
+  },
+  {
+    "id": "tmg-2020-72",
+    "year": 2020,
+    "address": "大田区西糀谷3丁目9",
+    "address_key": "大田区西糀谷3-9",
+    "road": "国道131号",
+    "day_db": 70.0,
+    "night_db": 67.0,
+    "start_date": "2020/11/09",
+    "end_date": "2020/11/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 75,
+    "lat": 35.555283,
+    "lng": 139.738342,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 95.5,
+      "expressway_distance_m": 727.4
+    }
+  },
+  {
+    "id": "tmg-2020-73",
+    "year": 2020,
+    "address": "大田区南千束3丁目32",
+    "address_key": "大田区南千束3-32",
+    "road": "都道２号東京丸子横浜線",
+    "day_db": 71.0,
+    "night_db": 71.0,
+    "start_date": "2020/11/25",
+    "end_date": "2020/11/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 76,
+    "lat": 35.599949,
+    "lng": 139.687881,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 21.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-75",
+    "year": 2020,
+    "address": "大田区新蒲田1丁目14",
+    "address_key": "大田区新蒲田1-14",
+    "road": "都道311号環状八号線",
+    "day_db": 67.0,
+    "night_db": 65.0,
+    "start_date": "2020/11/25",
+    "end_date": "2020/11/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 78,
+    "lat": 35.559662,
+    "lng": 139.709015,
+    "features": {
+      "nightlife_800m": 45,
+      "arterial_distance_m": 29.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-77",
+    "year": 2020,
+    "address": "大田区南馬込2丁目31",
+    "address_key": "大田区南馬込2-31",
+    "road": "都道318号環状七号線",
+    "day_db": 69.0,
+    "night_db": 68.0,
+    "start_date": "2020/11/09",
+    "end_date": "2020/11/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 80,
+    "lat": 35.588638,
+    "lng": 139.718979,
+    "features": {
+      "nightlife_800m": 10,
+      "arterial_distance_m": 18.0,
+      "expressway_distance_m": 1519.0
+    }
+  },
+  {
+    "id": "tmg-2020-85",
+    "year": 2020,
+    "address": "世田谷区代田1丁目3",
+    "address_key": "世田谷区代田1-3",
+    "road": "都道423号渋谷経堂線",
+    "day_db": 67.0,
+    "night_db": 63.0,
+    "start_date": "2020/11/24",
+    "end_date": "2020/11/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 88,
+    "lat": 35.650566,
+    "lng": 139.664078,
+    "features": {
+      "nightlife_800m": 20,
+      "arterial_distance_m": 328.3,
+      "expressway_distance_m": 1007.2
+    }
+  },
+  {
+    "id": "tmg-2020-103",
+    "year": 2020,
+    "address": "豊島区南長崎6丁目1",
+    "address_key": "豊島区南長崎6-1",
+    "road": "都道8号千代田練馬田無線",
+    "day_db": 63.0,
+    "night_db": 61.0,
+    "start_date": "2020/12/17",
+    "end_date": "2020/12/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 106,
+    "lat": 35.728416,
+    "lng": 139.679932,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 16.5,
+      "expressway_distance_m": 1300.8
+    }
+  },
+  {
+    "id": "tmg-2020-122",
+    "year": 2020,
+    "address": "練馬区関町南4丁目6",
+    "address_key": "練馬区関町南4-6",
+    "road": "都道４号東京所沢線",
+    "day_db": 73.0,
+    "night_db": 71.0,
+    "start_date": "2020/10/21",
+    "end_date": "2020/10/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 125,
+    "lat": 35.722366,
+    "lng": 139.576309,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 74.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-123",
+    "year": 2020,
+    "address": "練馬区豊玉北2丁目4",
+    "address_key": "練馬区豊玉北2-4",
+    "road": "都道８号千代田練馬田無線(1)",
+    "day_db": 66.0,
+    "night_db": 63.0,
+    "start_date": "2020/10/27",
+    "end_date": "2020/10/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 126,
+    "lat": 35.733707,
+    "lng": 139.666595,
+    "features": {
+      "nightlife_800m": 16,
+      "arterial_distance_m": 23.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-144",
+    "year": 2020,
+    "address": "葛飾区亀有3丁目38",
+    "address_key": "葛飾区亀有3-38",
+    "road": "都道318号環状七号線(環七通り)",
+    "day_db": 68.0,
+    "night_db": 65.0,
+    "start_date": "2020/10/29",
+    "end_date": "2020/10/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 147,
+    "lat": 35.763786,
+    "lng": 139.850296,
+    "features": {
+      "nightlife_800m": 38,
+      "arterial_distance_m": 86.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-184",
+    "year": 2020,
+    "address": "三鷹市下連雀1丁目1",
+    "address_key": "三鷹市下連雀1-1",
+    "road": "都道114号武蔵野狛江線",
+    "day_db": 66.0,
+    "night_db": 63.0,
+    "start_date": "2020/11/30",
+    "end_date": "2020/12/01",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 187,
+    "lat": 35.695992,
+    "lng": 139.571091,
+    "features": {
+      "nightlife_800m": 7,
+      "arterial_distance_m": 915.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-199",
+    "year": 2020,
+    "address": "府中市白糸台1丁目37-5",
+    "address_key": "府中市白糸台1-37-5",
+    "road": "国道20号",
+    "day_db": 68.0,
+    "night_db": 64.0,
+    "start_date": "2021/01/27",
+    "end_date": "2021/01/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 202,
+    "lat": 35.669884,
+    "lng": 139.506317,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 33.4,
+      "expressway_distance_m": 1222.7
+    }
+  },
+  {
+    "id": "tmg-2020-205",
+    "year": 2020,
+    "address": "昭島市拝島町4丁目7",
+    "address_key": "昭島市拝島町4-7",
+    "road": "国道16号",
+    "day_db": 68.0,
+    "night_db": 67.0,
+    "start_date": "2020/12/22",
+    "end_date": "2020/12/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 208,
+    "lat": 35.702877,
+    "lng": 139.347549,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 70.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-206",
+    "year": 2020,
+    "address": "昭島市拝島町2丁目2",
+    "address_key": "昭島市拝島町2-2",
+    "road": "国道16号",
+    "day_db": 73.0,
+    "night_db": 72.0,
+    "start_date": "2020/12/22",
+    "end_date": "2020/12/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 209,
+    "lat": 35.709324,
+    "lng": 139.34198,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 38.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-213",
+    "year": 2020,
+    "address": "調布市富士見町2丁目16-33",
+    "address_key": "調布市富士見町2-16-33",
+    "road": "都道12号調布田無線",
+    "day_db": 62.0,
+    "night_db": 57.0,
+    "start_date": "2021/01/14",
+    "end_date": "2021/01/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 216,
+    "lat": 35.659873,
+    "lng": 139.541131,
+    "features": {
+      "nightlife_800m": 17,
+      "arterial_distance_m": 37.3,
+      "expressway_distance_m": 320.6
+    }
+  },
+  {
+    "id": "tmg-2020-239",
+    "year": 2020,
+    "address": "国分寺市南町2丁目5",
+    "address_key": "国分寺市南町2-5",
+    "road": "都道133号小川山府中線（国分寺街道）",
+    "day_db": 63.0,
+    "night_db": 58.0,
+    "start_date": "2021/01/14",
+    "end_date": "2021/01/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 242,
+    "lat": 35.697422,
+    "lng": 139.482513,
+    "features": {
+      "nightlife_800m": 13,
+      "arterial_distance_m": 979.9,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2020-242",
+    "year": 2020,
+    "address": "国立市中3丁目11",
+    "address_key": "国立市中3-11",
+    "road": "都道146号国立停車場谷保線",
+    "day_db": 59.0,
+    "night_db": 53.0,
+    "start_date": "2020/11/24",
+    "end_date": "2020/11/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 245,
+    "lat": 35.687656,
+    "lng": 139.444794,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 1117.7,
+      "expressway_distance_m": 1214.1
+    }
+  },
+  {
+    "id": "tmg-2020-243",
+    "year": 2020,
+    "address": "国立市谷保7069",
+    "address_key": "国立市谷保7069",
+    "road": "都道256号八王子国立線",
+    "day_db": 69.0,
+    "night_db": 67.0,
+    "start_date": "2020/11/24",
+    "end_date": "2020/11/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 246,
+    "lat": 35.683064,
+    "lng": 139.435272,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 544.7,
+      "expressway_distance_m": 598.8
+    }
+  },
+  {
+    "id": "tmg-2020-273",
+    "year": 2020,
+    "address": "西東京市田無町3丁目6",
+    "address_key": "西東京市田無町3-6",
+    "road": "都道12号調布田無線（武蔵境通り）",
+    "day_db": 61.0,
+    "night_db": 57.0,
+    "start_date": "2020/12/17",
+    "end_date": "2020/12/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r2_jouji_monitoring.csv",
+    "line": 276,
+    "lat": 35.730122,
+    "lng": 139.543549,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 14.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-16",
+    "year": 2021,
+    "address": "港区東麻布２丁目31",
+    "address_key": "港区東麻布2-31",
+    "road": "都道319号環状3号線",
+    "day_db": 66.0,
+    "night_db": 63.0,
+    "start_date": "2022/1/24",
+    "end_date": "2022/1/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 19,
+    "lat": 35.655727,
+    "lng": 139.740875,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 20.8,
+      "expressway_distance_m": 42.8
+    }
+  },
+  {
+    "id": "tmg-2021-22",
+    "year": 2021,
+    "address": "港区西麻布３丁目12",
+    "address_key": "港区西麻布3-12",
+    "road": "都道418号北品川四谷線",
+    "day_db": 70.0,
+    "night_db": 68.0,
+    "start_date": "2022/1/24",
+    "end_date": "2022/1/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 25,
+    "lat": 35.656204,
+    "lng": 139.724091,
+    "features": {
+      "nightlife_800m": 28,
+      "arterial_distance_m": 716.5,
+      "expressway_distance_m": 394.9
+    }
+  },
+  {
+    "id": "tmg-2021-33",
+    "year": 2021,
+    "address": "文京区関口3丁目11",
+    "address_key": "文京区関口3-11",
+    "road": "首都高速5号池袋線",
+    "day_db": 60.0,
+    "night_db": 56.0,
+    "start_date": "2022/1/25",
+    "end_date": "2022/1/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 36,
+    "lat": 35.714394,
+    "lng": 139.728363,
+    "features": {
+      "nightlife_800m": 11,
+      "arterial_distance_m": 205.0,
+      "expressway_distance_m": 43.8
+    }
+  },
+  {
+    "id": "tmg-2021-35",
+    "year": 2021,
+    "address": "文京区関口1丁目32",
+    "address_key": "文京区関口1-32",
+    "road": "都道8号千代田練馬田無線",
+    "day_db": 67.0,
+    "night_db": 63.0,
+    "start_date": "2022/1/25",
+    "end_date": "2022/1/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 38,
+    "lat": 35.710529,
+    "lng": 139.724091,
+    "features": {
+      "nightlife_800m": 11,
+      "arterial_distance_m": 11.5,
+      "expressway_distance_m": 286.5
+    }
+  },
+  {
+    "id": "tmg-2021-45",
+    "year": 2021,
+    "address": "墨田区吾妻橋2丁目3",
+    "address_key": "墨田区吾妻橋2-3",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 66.0,
+    "night_db": 61.0,
+    "start_date": "2021/10/5",
+    "end_date": "2021/10/6",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 48,
+    "lat": 35.708782,
+    "lng": 139.803726,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 52.3,
+      "expressway_distance_m": 357.8
+    }
+  },
+  {
+    "id": "tmg-2021-46",
+    "year": 2021,
+    "address": "墨田区業平5丁目10",
+    "address_key": "墨田区業平5-10",
+    "road": "都道453号本郷亀戸線",
+    "day_db": 69.0,
+    "night_db": 64.0,
+    "start_date": "2021/10/5",
+    "end_date": "2021/10/6",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 49,
+    "lat": 35.707935,
+    "lng": 139.816772,
+    "features": {
+      "nightlife_800m": 34,
+      "arterial_distance_m": 730.5,
+      "expressway_distance_m": 1255.5
+    }
+  },
+  {
+    "id": "tmg-2021-62",
+    "year": 2021,
+    "address": "目黒区東山3丁目2",
+    "address_key": "目黒区東山3-2",
+    "road": "国道246号",
+    "day_db": 73.0,
+    "night_db": 72.0,
+    "start_date": "2022/2/2",
+    "end_date": "2022/2/3",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 65,
+    "lat": 35.65062,
+    "lng": 139.684952,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 10.7,
+      "expressway_distance_m": 17.4
+    }
+  },
+  {
+    "id": "tmg-2021-63",
+    "year": 2021,
+    "address": "目黒区八雲1丁目12",
+    "address_key": "目黒区八雲1-12",
+    "road": "都道312号白金台町等々力線",
+    "day_db": 72.0,
+    "night_db": 67.0,
+    "start_date": "2022/2/2",
+    "end_date": "2022/2/3",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 66,
+    "lat": 35.6171,
+    "lng": 139.672684,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 37.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-64",
+    "year": 2021,
+    "address": "目黒区五本木3丁目18",
+    "address_key": "目黒区五本木3-18",
+    "road": "都道416号古川橋二子玉川線",
+    "day_db": 70.0,
+    "night_db": 67.0,
+    "start_date": "2022/2/2",
+    "end_date": "2022/2/3",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 67,
+    "lat": 35.631634,
+    "lng": 139.685181,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 764.3,
+      "expressway_distance_m": 1785.9
+    }
+  },
+  {
+    "id": "tmg-2021-65",
+    "year": 2021,
+    "address": "目黒区目黒本町3丁目20",
+    "address_key": "目黒区目黒本町3-20",
+    "road": "都道420号鮫洲大山線",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2022/2/2",
+    "end_date": "2022/2/3",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 68,
+    "lat": 35.624226,
+    "lng": 139.697281,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 518.7,
+      "expressway_distance_m": 1329.0
+    }
+  },
+  {
+    "id": "tmg-2021-73",
+    "year": 2021,
+    "address": "大田区南千束3丁目32",
+    "address_key": "大田区南千束3-32",
+    "road": "東京丸子横浜線",
+    "day_db": 72.0,
+    "night_db": 71.0,
+    "start_date": "2021/11/9",
+    "end_date": "2021/11/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 76,
+    "lat": 35.599949,
+    "lng": 139.687881,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 21.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-89",
+    "year": 2021,
+    "address": "渋谷区富ヶ谷1-11-10",
+    "address_key": "渋谷区富ヶ谷1-11-10",
+    "road": "都道413号赤坂杉並線",
+    "day_db": 66.0,
+    "night_db": 62.0,
+    "start_date": "2022/2/14",
+    "end_date": "2022/2/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 92,
+    "lat": 35.668056,
+    "lng": 139.690994,
+    "features": {
+      "nightlife_800m": 20,
+      "arterial_distance_m": 272.0,
+      "expressway_distance_m": 268.0
+    }
+  },
+  {
+    "id": "tmg-2021-99",
+    "year": 2021,
+    "address": "豊島区池袋本町1丁目7",
+    "address_key": "豊島区池袋本町1-7",
+    "road": "国道254号(2)",
+    "day_db": 72.0,
+    "night_db": 71.0,
+    "start_date": "2021/12/2",
+    "end_date": "2021/12/3",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 102,
+    "lat": 35.738117,
+    "lng": 139.712723,
+    "features": {
+      "nightlife_800m": 20,
+      "arterial_distance_m": 20.2,
+      "expressway_distance_m": 24.5
+    }
+  },
+  {
+    "id": "tmg-2021-117",
+    "year": 2021,
+    "address": "練馬区北町3丁目13",
+    "address_key": "練馬区北町3-13",
+    "road": "国道17号",
+    "day_db": 57.0,
+    "night_db": 54.0,
+    "start_date": "2021/4/21",
+    "end_date": "2021/4/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 120,
+    "lat": 35.767662,
+    "lng": 139.652328,
+    "features": {
+      "nightlife_800m": 50,
+      "arterial_distance_m": 33.0,
+      "expressway_distance_m": 1789.8
+    }
+  },
+  {
+    "id": "tmg-2021-174",
+    "year": 2021,
+    "address": "武蔵野市吉祥寺東町1-23",
+    "address_key": "武蔵野市吉祥寺東町1-23",
+    "road": "都道113号杉並武蔵野線",
+    "day_db": 67.0,
+    "night_db": 62.0,
+    "start_date": "2021/11/29",
+    "end_date": "2021/11/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 177,
+    "lat": 35.708572,
+    "lng": 139.58812,
+    "features": {
+      "nightlife_800m": 12,
+      "arterial_distance_m": 516.8,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-175",
+    "year": 2021,
+    "address": "武蔵野市御殿山1-19",
+    "address_key": "武蔵野市御殿山1-19",
+    "road": "都道114号武蔵野狛江線",
+    "day_db": 64.0,
+    "night_db": 60.0,
+    "start_date": "2021/11/29",
+    "end_date": "2021/11/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 178,
+    "lat": 35.69944,
+    "lng": 139.572311,
+    "features": {
+      "nightlife_800m": 39,
+      "arterial_distance_m": 517.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-191",
+    "year": 2021,
+    "address": "府中市白糸台1丁目37-5",
+    "address_key": "府中市白糸台1-37-5",
+    "road": "国道20号",
+    "day_db": 67.0,
+    "night_db": 65.0,
+    "start_date": "2022/2/7",
+    "end_date": "2022/2/8",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 194,
+    "lat": 35.669884,
+    "lng": 139.506317,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 33.4,
+      "expressway_distance_m": 1222.7
+    }
+  },
+  {
+    "id": "tmg-2021-197",
+    "year": 2021,
+    "address": "昭島市拝島町4丁目7",
+    "address_key": "昭島市拝島町4-7",
+    "road": "国道16号",
+    "day_db": 68.0,
+    "night_db": 67.0,
+    "start_date": "2022/1/17",
+    "end_date": "2022/1/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 200,
+    "lat": 35.702877,
+    "lng": 139.347549,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 70.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-198",
+    "year": 2021,
+    "address": "昭島市拝島町2丁目2",
+    "address_key": "昭島市拝島町2-2",
+    "road": "国道16号",
+    "day_db": 73.0,
+    "night_db": 72.0,
+    "start_date": "2022/1/17",
+    "end_date": "2022/1/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 201,
+    "lat": 35.709324,
+    "lng": 139.34198,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 38.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-204",
+    "year": 2021,
+    "address": "調布市深大寺北町7-6-10",
+    "address_key": "調布市深大寺北町7-6-10",
+    "road": "都道12号調布田無線",
+    "day_db": 58.0,
+    "night_db": 54.0,
+    "start_date": "2022/1/17",
+    "end_date": "2022/1/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 207,
+    "lat": 35.673523,
+    "lng": 139.54484,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 19.1,
+      "expressway_distance_m": 1139.2
+    }
+  },
+  {
+    "id": "tmg-2021-205",
+    "year": 2021,
+    "address": "調布市富士見町2-16-33",
+    "address_key": "調布市富士見町2-16-33",
+    "road": "都道12号調布田無線",
+    "day_db": 62.0,
+    "night_db": 58.0,
+    "start_date": "2022/1/17",
+    "end_date": "2022/1/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 208,
+    "lat": 35.659873,
+    "lng": 139.541131,
+    "features": {
+      "nightlife_800m": 17,
+      "arterial_distance_m": 37.3,
+      "expressway_distance_m": 320.6
+    }
+  },
+  {
+    "id": "tmg-2021-213",
+    "year": 2021,
+    "address": "町田市相原町",
+    "address_key": "町田市相原町",
+    "road": "国道16号",
+    "day_db": 72.0,
+    "night_db": 68.0,
+    "start_date": "2021/12/9",
+    "end_date": "2021/12/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 216,
+    "lat": 35.61293,
+    "lng": 139.30072,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 394.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-214",
+    "year": 2021,
+    "address": "町田市相原町",
+    "address_key": "町田市相原町",
+    "road": "都道47号八王子町田線",
+    "day_db": 66.0,
+    "night_db": 60.0,
+    "start_date": "2021/12/9",
+    "end_date": "2021/12/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 217,
+    "lat": 35.61293,
+    "lng": 139.30072,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 394.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-216",
+    "year": 2021,
+    "address": "町田市図師町",
+    "address_key": "町田市図師町",
+    "road": "都道155号町田平山八王子線",
+    "day_db": 60.0,
+    "night_db": 53.0,
+    "start_date": "2021/12/9",
+    "end_date": "2021/12/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 219,
+    "lat": 35.587612,
+    "lng": 139.422775,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 541.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2021-218",
+    "year": 2021,
+    "address": "町田市相原町",
+    "address_key": "町田市相原町",
+    "road": "都道506号八王子城山線",
+    "day_db": 65.0,
+    "night_db": 59.0,
+    "start_date": "2021/12/9",
+    "end_date": "2021/12/10",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r3_jouji_monitoring.csv",
+    "line": 221,
+    "lat": 35.61293,
+    "lng": 139.30072,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 394.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-23",
+    "year": 2022,
+    "address": "港区台場2丁目3",
+    "address_key": "港区台場2-3",
+    "road": "台場青海線",
+    "day_db": 63.0,
+    "night_db": 59.0,
+    "start_date": "2023/1/23",
+    "end_date": "2023/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 26,
+    "lat": 35.627892,
+    "lng": 139.776321,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 52.4,
+      "expressway_distance_m": 84.0
+    }
+  },
+  {
+    "id": "tmg-2022-26",
+    "year": 2022,
+    "address": "港区台場2丁目3",
+    "address_key": "港区台場2-3",
+    "road": "一般国道357号",
+    "day_db": 72.0,
+    "night_db": 72.0,
+    "start_date": "2023/1/23",
+    "end_date": "2023/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 29,
+    "lat": 35.627892,
+    "lng": 139.776321,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 52.4,
+      "expressway_distance_m": 84.0
+    }
+  },
+  {
+    "id": "tmg-2022-42",
+    "year": 2022,
+    "address": "墨田区吾妻橋2丁目3",
+    "address_key": "墨田区吾妻橋2-3",
+    "road": "本郷亀戸線",
+    "day_db": 65.0,
+    "night_db": 61.0,
+    "start_date": "2022/6/28",
+    "end_date": "2022/6/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 45,
+    "lat": 35.708782,
+    "lng": 139.803726,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 52.3,
+      "expressway_distance_m": 357.8
+    }
+  },
+  {
+    "id": "tmg-2022-43",
+    "year": 2022,
+    "address": "墨田区業平5丁目10",
+    "address_key": "墨田区業平5-10",
+    "road": "本郷亀戸線",
+    "day_db": 69.0,
+    "night_db": 64.0,
+    "start_date": "2022/6/28",
+    "end_date": "2022/6/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 46,
+    "lat": 35.707935,
+    "lng": 139.816772,
+    "features": {
+      "nightlife_800m": 34,
+      "arterial_distance_m": 730.5,
+      "expressway_distance_m": 1255.5
+    }
+  },
+  {
+    "id": "tmg-2022-56",
+    "year": 2022,
+    "address": "品川区西五反田5丁目3",
+    "address_key": "品川区西五反田5-3",
+    "road": "環状6号線(1)",
+    "day_db": 67.0,
+    "night_db": 63.0,
+    "start_date": "2022/10/24",
+    "end_date": "2022/10/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 59,
+    "lat": 35.624962,
+    "lng": 139.716583,
+    "features": {
+      "nightlife_800m": 35,
+      "arterial_distance_m": 92.9,
+      "expressway_distance_m": 88.9
+    }
+  },
+  {
+    "id": "tmg-2022-58",
+    "year": 2022,
+    "address": "品川区大井6丁目18",
+    "address_key": "品川区大井6-18",
+    "road": "東品川下丸子線",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2022/10/24",
+    "end_date": "2022/10/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 61,
+    "lat": 35.595699,
+    "lng": 139.730331,
+    "features": {
+      "nightlife_800m": 25,
+      "arterial_distance_m": 559.4,
+      "expressway_distance_m": 728.0
+    }
+  },
+  {
+    "id": "tmg-2022-72",
+    "year": 2022,
+    "address": "大田区南千束3丁目32",
+    "address_key": "大田区南千束3-32",
+    "road": "東京丸子横浜線",
+    "day_db": 70.0,
+    "night_db": 70.0,
+    "start_date": "2022/11/17",
+    "end_date": "2022/11/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 75,
+    "lat": 35.599949,
+    "lng": 139.687881,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 21.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-119",
+    "year": 2022,
+    "address": "練馬区下石神井3丁目4",
+    "address_key": "練馬区下石神井3-4",
+    "road": "飯田橋石神井新座線",
+    "day_db": 63.0,
+    "night_db": 56.0,
+    "start_date": "2022/5/24",
+    "end_date": "2022/5/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 122,
+    "lat": 35.733875,
+    "lng": 139.60881,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 75.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-123",
+    "year": 2022,
+    "address": "練馬区石神井台4丁目5",
+    "address_key": "練馬区石神井台4-5",
+    "road": "杉並田無線",
+    "day_db": 71.0,
+    "night_db": 69.0,
+    "start_date": "2022/5/18",
+    "end_date": "2022/5/19",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 126,
+    "lat": 35.730782,
+    "lng": 139.582718,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 731.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-137",
+    "year": 2022,
+    "address": "葛飾区東金町6丁目6",
+    "address_key": "葛飾区東金町6-6",
+    "road": "主要都道 王子金町江戸川線",
+    "day_db": 70.0,
+    "night_db": 66.0,
+    "start_date": "2022/12/26",
+    "end_date": "2022/12/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 140,
+    "lat": 35.770786,
+    "lng": 139.876389,
+    "features": {
+      "nightlife_800m": 48,
+      "arterial_distance_m": 16.2,
+      "expressway_distance_m": 1264.9
+    }
+  },
+  {
+    "id": "tmg-2022-170",
+    "year": 2022,
+    "address": "武蔵野市八幡町4-28-13",
+    "address_key": "武蔵野市八幡町4-28-13",
+    "road": "杉並あきる野線",
+    "day_db": 67.0,
+    "night_db": 63.0,
+    "start_date": "2022/10/19",
+    "end_date": "2022/10/20",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 173,
+    "lat": 35.720028,
+    "lng": 139.554337,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 8.5,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-185",
+    "year": 2022,
+    "address": "府中市白糸台1-37-5",
+    "address_key": "府中市白糸台1-37-5",
+    "road": "一般国道20号",
+    "day_db": 67.0,
+    "night_db": 63.0,
+    "start_date": "2023/2/1",
+    "end_date": "2023/2/2",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 188,
+    "lat": 35.669884,
+    "lng": 139.506317,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 33.4,
+      "expressway_distance_m": 1222.7
+    }
+  },
+  {
+    "id": "tmg-2022-192",
+    "year": 2022,
+    "address": "昭島市拝島町2丁目2",
+    "address_key": "昭島市拝島町2-2",
+    "road": "一般国道16号",
+    "day_db": 73.0,
+    "night_db": 72.0,
+    "start_date": "2023/2/6",
+    "end_date": "2023/2/7",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 195,
+    "lat": 35.709324,
+    "lng": 139.34198,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 38.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-198",
+    "year": 2022,
+    "address": "調布市深大寺北町7-6-10",
+    "address_key": "調布市深大寺北町7-6-10",
+    "road": "調布田無線",
+    "day_db": 58.0,
+    "night_db": 54.0,
+    "start_date": "2023/2/27",
+    "end_date": "2023/2/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 201,
+    "lat": 35.673523,
+    "lng": 139.54484,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 19.1,
+      "expressway_distance_m": 1139.2
+    }
+  },
+  {
+    "id": "tmg-2022-199",
+    "year": 2022,
+    "address": "調布市富士見町2-16-33",
+    "address_key": "調布市富士見町2-16-33",
+    "road": "調布田無線",
+    "day_db": 62.0,
+    "night_db": 59.0,
+    "start_date": "2023/2/27",
+    "end_date": "2023/2/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 202,
+    "lat": 35.659873,
+    "lng": 139.541131,
+    "features": {
+      "nightlife_800m": 17,
+      "arterial_distance_m": 37.3,
+      "expressway_distance_m": 320.6
+    }
+  },
+  {
+    "id": "tmg-2022-201",
+    "year": 2022,
+    "address": "調布市小島町3-74",
+    "address_key": "調布市小島町3-74",
+    "road": "下石原小島線",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2023/2/15",
+    "end_date": "2023/2/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 204,
+    "lat": 35.647694,
+    "lng": 139.541687,
+    "features": {
+      "nightlife_800m": 36,
+      "arterial_distance_m": 596.9,
+      "expressway_distance_m": 1185.7
+    }
+  },
+  {
+    "id": "tmg-2022-203",
+    "year": 2022,
+    "address": "調布市深大寺東町8-21",
+    "address_key": "調布市深大寺東町8-21",
+    "road": "武蔵野調布線",
+    "day_db": 60.0,
+    "night_db": 54.0,
+    "start_date": "2023/2/15",
+    "end_date": "2023/2/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 206,
+    "lat": 35.679825,
+    "lng": 139.557083,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 144.9,
+      "expressway_distance_m": 1483.8
+    }
+  },
+  {
+    "id": "tmg-2022-209",
+    "year": 2022,
+    "address": "町田市玉川学園4丁目24",
+    "address_key": "町田市玉川学園4-24",
+    "road": "世田谷町田線",
+    "day_db": 66.0,
+    "night_db": 62.0,
+    "start_date": "2022/12/22",
+    "end_date": "2022/12/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 212,
+    "lat": 35.564339,
+    "lng": 139.452667,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 12.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2022-255",
+    "year": 2022,
+    "address": "羽村市羽加美1丁目29-5",
+    "address_key": "羽村市羽加美1-29-5",
+    "road": "立川青梅線",
+    "day_db": 61.0,
+    "night_db": 56.0,
+    "start_date": "2022/5/25",
+    "end_date": "2022/5/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r4_jouji_monitoring.csv",
+    "line": 258,
+    "lat": 35.7684,
+    "lng": 139.3077,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 108.5,
+      "expressway_distance_m": 1530.8
+    }
+  },
+  {
+    "id": "tmg-2023-1",
+    "year": 2023,
+    "address": "千代田区平河町2丁目6",
+    "address_key": "千代田区平河町2-6",
+    "road": "高速4号新宿線",
+    "day_db": 70.0,
+    "night_db": 67.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 3,
+    "lat": 35.679234,
+    "lng": 139.739197,
+    "features": {
+      "nightlife_800m": 200,
+      "arterial_distance_m": 53.0,
+      "expressway_distance_m": 63.0
+    }
+  },
+  {
+    "id": "tmg-2023-2",
+    "year": 2023,
+    "address": "千代田区外神田2丁目5",
+    "address_key": "千代田区外神田2-5",
+    "road": "一般国道17号",
+    "day_db": 65.0,
+    "night_db": 62.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 4,
+    "lat": 35.699986,
+    "lng": 139.768906,
+    "features": {
+      "nightlife_800m": 341,
+      "arterial_distance_m": 17.3,
+      "expressway_distance_m": 595.5
+    }
+  },
+  {
+    "id": "tmg-2023-3",
+    "year": 2023,
+    "address": "千代田区内神田2丁目3",
+    "address_key": "千代田区内神田2-3",
+    "road": "一般都道405号外濠環状線",
+    "day_db": 65.0,
+    "night_db": 61.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 5,
+    "lat": 35.689632,
+    "lng": 139.768265,
+    "features": {
+      "nightlife_800m": 161,
+      "arterial_distance_m": 363.0,
+      "expressway_distance_m": 110.1
+    }
+  },
+  {
+    "id": "tmg-2023-4",
+    "year": 2023,
+    "address": "千代田区外神田6丁目15",
+    "address_key": "千代田区外神田6-15",
+    "road": "一般都道437号",
+    "day_db": 65.0,
+    "night_db": 62.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 6,
+    "lat": 35.704056,
+    "lng": 139.771591,
+    "features": {
+      "nightlife_800m": 783,
+      "arterial_distance_m": 378.7,
+      "expressway_distance_m": 385.8
+    }
+  },
+  {
+    "id": "tmg-2023-5",
+    "year": 2023,
+    "address": "千代田区西神田3丁目8",
+    "address_key": "千代田区西神田3-8",
+    "road": "特別区道千第319号",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 7,
+    "lat": 35.698326,
+    "lng": 139.753738,
+    "features": {
+      "nightlife_800m": 134,
+      "arterial_distance_m": 261.7,
+      "expressway_distance_m": 122.7
+    }
+  },
+  {
+    "id": "tmg-2023-8",
+    "year": 2023,
+    "address": "中央区晴海２丁目5",
+    "address_key": "中央区晴海2-5",
+    "road": "主要都道304号（日比谷豊洲埠頭東雲町線）（2）",
+    "day_db": 58.0,
+    "night_db": 56.0,
+    "start_date": "2023/12/13",
+    "end_date": "2023/12/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 10,
+    "lat": 35.65546,
+    "lng": 139.7827,
+    "features": {
+      "nightlife_800m": 10,
+      "arterial_distance_m": 28.5,
+      "expressway_distance_m": 94.3
+    }
+  },
+  {
+    "id": "tmg-2023-10",
+    "year": 2023,
+    "address": "中央区月島４丁目1",
+    "address_key": "中央区月島4-1",
+    "road": "特例都道463号（上野月島線）",
+    "day_db": 64.0,
+    "night_db": 60.0,
+    "start_date": "2023/12/13",
+    "end_date": "2023/12/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 12,
+    "lat": 35.662067,
+    "lng": 139.782181,
+    "features": {
+      "nightlife_800m": 15,
+      "arterial_distance_m": 502.6,
+      "expressway_distance_m": 829.0
+    }
+  },
+  {
+    "id": "tmg-2023-14",
+    "year": 2023,
+    "address": "中央区明石町7",
+    "address_key": "中央区明石町7",
+    "road": "特別区道中京第412号線",
+    "day_db": 57.0,
+    "night_db": 51.0,
+    "start_date": "2023/12/13",
+    "end_date": "2023/12/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 16,
+    "lat": 35.667721,
+    "lng": 139.778976,
+    "features": {
+      "nightlife_800m": 12,
+      "arterial_distance_m": 449.9,
+      "expressway_distance_m": 483.4
+    }
+  },
+  {
+    "id": "tmg-2023-17",
+    "year": 2023,
+    "address": "港区白金台1丁目2",
+    "address_key": "港区白金台1-2",
+    "road": "一般国道1号",
+    "day_db": 66.0,
+    "night_db": 62.0,
+    "start_date": "2024/1/15",
+    "end_date": "2024/1/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 19,
+    "lat": 35.636738,
+    "lng": 139.730743,
+    "features": {
+      "nightlife_800m": 3,
+      "arterial_distance_m": 62.6,
+      "expressway_distance_m": 1009.7
+    }
+  },
+  {
+    "id": "tmg-2023-18",
+    "year": 2023,
+    "address": "港区芝浦1丁目6",
+    "address_key": "港区芝浦1-6",
+    "road": "一般国道130号",
+    "day_db": 68.0,
+    "night_db": 63.0,
+    "start_date": "2024/1/15",
+    "end_date": "2024/1/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 20,
+    "lat": 35.647343,
+    "lng": 139.75528,
+    "features": {
+      "nightlife_800m": 56,
+      "arterial_distance_m": 85.9,
+      "expressway_distance_m": 174.4
+    }
+  },
+  {
+    "id": "tmg-2023-22",
+    "year": 2023,
+    "address": "港区港南3丁目9",
+    "address_key": "港区港南3-9",
+    "road": "日本橋芝浦大森線",
+    "day_db": 71.0,
+    "night_db": 68.0,
+    "start_date": "2024/1/15",
+    "end_date": "2024/1/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 24,
+    "lat": 35.632515,
+    "lng": 139.751373,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 64.0,
+      "expressway_distance_m": 71.6
+    }
+  },
+  {
+    "id": "tmg-2023-24",
+    "year": 2023,
+    "address": "港区港南2丁目3",
+    "address_key": "港区港南2-3",
+    "road": "区道243号",
+    "day_db": 63.0,
+    "night_db": 58.0,
+    "start_date": "2024/1/15",
+    "end_date": "2024/1/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 26,
+    "lat": 35.629086,
+    "lng": 139.743881,
+    "features": {
+      "nightlife_800m": 39,
+      "arterial_distance_m": 94.6,
+      "expressway_distance_m": 570.8
+    }
+  },
+  {
+    "id": "tmg-2023-27",
+    "year": 2023,
+    "address": "新宿区西新宿3丁目4",
+    "address_key": "新宿区西新宿3-4",
+    "road": "一般国道20号",
+    "day_db": 70.0,
+    "night_db": 69.0,
+    "start_date": "2024/2/28",
+    "end_date": "2024/2/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 29,
+    "lat": 35.685623,
+    "lng": 139.692352,
+    "features": {
+      "nightlife_800m": 88,
+      "arterial_distance_m": 29.0,
+      "expressway_distance_m": 40.1
+    }
+  },
+  {
+    "id": "tmg-2023-28",
+    "year": 2023,
+    "address": "新宿区下落合4丁目1",
+    "address_key": "新宿区下落合4-1",
+    "road": "千代田練馬田無線",
+    "day_db": 67.0,
+    "night_db": 64.0,
+    "start_date": "2024/2/28",
+    "end_date": "2024/2/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 30,
+    "lat": 35.716824,
+    "lng": 139.698135,
+    "features": {
+      "nightlife_800m": 28,
+      "arterial_distance_m": 23.9,
+      "expressway_distance_m": 775.5
+    }
+  },
+  {
+    "id": "tmg-2023-29",
+    "year": 2023,
+    "address": "新宿区大久保3丁目14",
+    "address_key": "新宿区大久保3-14",
+    "road": "芝新宿王子線",
+    "day_db": 68.0,
+    "night_db": 67.0,
+    "start_date": "2024/2/28",
+    "end_date": "2024/2/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 31,
+    "lat": 35.707726,
+    "lng": 139.708572,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 37.8,
+      "expressway_distance_m": 1692.8
+    }
+  },
+  {
+    "id": "tmg-2023-30",
+    "year": 2023,
+    "address": "新宿区西新宿2丁目11",
+    "address_key": "新宿区西新宿2-11",
+    "road": "新宿副都心5号線",
+    "day_db": 63.0,
+    "night_db": 60.0,
+    "start_date": "2024/2/28",
+    "end_date": "2024/2/29",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 32,
+    "lat": 35.691105,
+    "lng": 139.687698,
+    "features": {
+      "nightlife_800m": 23,
+      "arterial_distance_m": 506.4,
+      "expressway_distance_m": 520.7
+    }
+  },
+  {
+    "id": "tmg-2023-31",
+    "year": 2023,
+    "address": "文京区白山3丁目6",
+    "address_key": "文京区白山3-6",
+    "road": "小石川西巣鴨線",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2024/1/16",
+    "end_date": "2024/1/17",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 33,
+    "lat": 35.720833,
+    "lng": 139.74057,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 472.9,
+      "expressway_distance_m": 1240.1
+    }
+  },
+  {
+    "id": "tmg-2023-39",
+    "year": 2023,
+    "address": "墨田区向島2丁目18",
+    "address_key": "墨田区向島2-18",
+    "road": "一般国道6号",
+    "day_db": 73.0,
+    "night_db": 71.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 41,
+    "lat": 35.714775,
+    "lng": 139.808182,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 22.1,
+      "expressway_distance_m": 173.3
+    }
+  },
+  {
+    "id": "tmg-2023-42",
+    "year": 2023,
+    "address": "墨田区本所4丁目1",
+    "address_key": "墨田区本所4-1",
+    "road": "環状3号線",
+    "day_db": 69.0,
+    "night_db": 68.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 44,
+    "lat": 35.702679,
+    "lng": 139.805069,
+    "features": {
+      "nightlife_800m": 13,
+      "arterial_distance_m": 21.5,
+      "expressway_distance_m": 791.8
+    }
+  },
+  {
+    "id": "tmg-2023-44",
+    "year": 2023,
+    "address": "墨田区吾妻橋2丁目3",
+    "address_key": "墨田区吾妻橋2-3",
+    "road": "本郷亀戸線",
+    "day_db": 66.0,
+    "night_db": 62.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 46,
+    "lat": 35.708782,
+    "lng": 139.803726,
+    "features": {
+      "nightlife_800m": 41,
+      "arterial_distance_m": 52.3,
+      "expressway_distance_m": 357.8
+    }
+  },
+  {
+    "id": "tmg-2023-47",
+    "year": 2023,
+    "address": "江東区亀戸6丁目33",
+    "address_key": "江東区亀戸6-33",
+    "road": "高速7号小松川線",
+    "day_db": 61.0,
+    "night_db": 57.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 49,
+    "lat": 35.693974,
+    "lng": 139.829132,
+    "features": {
+      "nightlife_800m": 8,
+      "arterial_distance_m": 282.8,
+      "expressway_distance_m": 16.4
+    }
+  },
+  {
+    "id": "tmg-2023-48",
+    "year": 2023,
+    "address": "江東区東雲1丁目6",
+    "address_key": "江東区東雲1-6",
+    "road": "日比谷豊洲埠頭東雲町線（晴海通り）",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 50,
+    "lat": 35.646469,
+    "lng": 139.801208,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 47.2,
+      "expressway_distance_m": 604.2
+    }
+  },
+  {
+    "id": "tmg-2023-49",
+    "year": 2023,
+    "address": "江東区有明1丁目2",
+    "address_key": "江東区有明1-2",
+    "road": "日比谷豊洲埠頭東雲町線（晴海通り）",
+    "day_db": 64.0,
+    "night_db": 61.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 51,
+    "lat": 35.640419,
+    "lng": 139.793106,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 151.5,
+      "expressway_distance_m": 146.0
+    }
+  },
+  {
+    "id": "tmg-2023-50",
+    "year": 2023,
+    "address": "江東区亀戸4丁目16",
+    "address_key": "江東区亀戸4-16",
+    "road": "御徒町小岩線（蔵前橋通り）",
+    "day_db": 69.0,
+    "night_db": 66.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 52,
+    "lat": 35.70158,
+    "lng": 139.827087,
+    "features": {
+      "nightlife_800m": 9,
+      "arterial_distance_m": 12.6,
+      "expressway_distance_m": 872.2
+    }
+  },
+  {
+    "id": "tmg-2023-52",
+    "year": 2023,
+    "address": "江東区亀戸3丁目38",
+    "address_key": "江東区亀戸3-38",
+    "road": "本郷亀戸線（浅草通り）",
+    "day_db": 63.0,
+    "night_db": 58.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 54,
+    "lat": 35.706425,
+    "lng": 139.82106,
+    "features": {
+      "nightlife_800m": 27,
+      "arterial_distance_m": 456.7,
+      "expressway_distance_m": 1444.0
+    }
+  },
+  {
+    "id": "tmg-2023-54",
+    "year": 2023,
+    "address": "品川区北品川2丁目7",
+    "address_key": "品川区北品川2-7",
+    "road": "一般国道357号",
+    "day_db": 67.0,
+    "night_db": 61.0,
+    "start_date": "2023/10/16",
+    "end_date": "2023/10/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 56,
+    "lat": 35.618835,
+    "lng": 139.74411,
+    "features": {
+      "nightlife_800m": 7,
+      "arterial_distance_m": 34.2,
+      "expressway_distance_m": 206.5
+    }
+  },
+  {
+    "id": "tmg-2023-55",
+    "year": 2023,
+    "address": "品川区東品川3丁目15",
+    "address_key": "品川区東品川3-15",
+    "road": "一般国道357号",
+    "day_db": 66.0,
+    "night_db": 61.0,
+    "start_date": "2023/10/16",
+    "end_date": "2023/10/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 57,
+    "lat": 35.614147,
+    "lng": 139.747238,
+    "features": {
+      "nightlife_800m": 8,
+      "arterial_distance_m": 44.2,
+      "expressway_distance_m": 351.1
+    }
+  },
+  {
+    "id": "tmg-2023-70",
+    "year": 2023,
+    "address": "大田区南千束3丁目32",
+    "address_key": "大田区南千束3-32",
+    "road": "東京丸子横浜線",
+    "day_db": 71.0,
+    "night_db": 70.0,
+    "start_date": "2023/10/23",
+    "end_date": "2023/10/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 72,
+    "lat": 35.599949,
+    "lng": 139.687881,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 21.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-71",
+    "year": 2023,
+    "address": "大田区山王1丁目6",
+    "address_key": "大田区山王1-6",
+    "road": "東品川下丸子線",
+    "day_db": 64.0,
+    "night_db": 61.0,
+    "start_date": "2023/10/23",
+    "end_date": "2023/10/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 73,
+    "lat": 35.59148,
+    "lng": 139.727737,
+    "features": {
+      "nightlife_800m": 38,
+      "arterial_distance_m": 746.6,
+      "expressway_distance_m": 751.9
+    }
+  },
+  {
+    "id": "tmg-2023-73",
+    "year": 2023,
+    "address": "大田区羽田4丁目18",
+    "address_key": "大田区羽田4-18",
+    "road": "高速1号羽田線",
+    "day_db": 64.0,
+    "night_db": 63.0,
+    "start_date": "2023/10/25",
+    "end_date": "2023/10/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 75,
+    "lat": 35.549213,
+    "lng": 139.744705,
+    "features": {
+      "nightlife_800m": 15,
+      "arterial_distance_m": 290.9,
+      "expressway_distance_m": 18.8
+    }
+  },
+  {
+    "id": "tmg-2023-79",
+    "year": 2023,
+    "address": "渋谷区鉢山町14",
+    "address_key": "渋谷区鉢山町14",
+    "road": "環状6号線",
+    "day_db": 67.0,
+    "night_db": 66.0,
+    "start_date": "2024/2/26",
+    "end_date": "2024/2/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 81,
+    "lat": 35.650928,
+    "lng": 139.697159,
+    "features": {
+      "nightlife_800m": 88,
+      "arterial_distance_m": 32.5,
+      "expressway_distance_m": 451.4
+    }
+  },
+  {
+    "id": "tmg-2023-80",
+    "year": 2023,
+    "address": "渋谷区広尾5丁目7-4",
+    "address_key": "渋谷区広尾5-7-4",
+    "road": "古川橋二子玉川線",
+    "day_db": 67.0,
+    "night_db": 65.0,
+    "start_date": "2024/2/26",
+    "end_date": "2024/2/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 82,
+    "lat": 35.649475,
+    "lng": 139.722443,
+    "features": {
+      "nightlife_800m": 11,
+      "arterial_distance_m": 520.5,
+      "expressway_distance_m": 431.6
+    }
+  },
+  {
+    "id": "tmg-2023-81",
+    "year": 2023,
+    "address": "渋谷区本町1丁目56-2",
+    "address_key": "渋谷区本町1-56-2",
+    "road": "角筈和泉線",
+    "day_db": 65.0,
+    "night_db": 61.0,
+    "start_date": "2024/2/26",
+    "end_date": "2024/2/27",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 83,
+    "lat": 35.682587,
+    "lng": 139.683182,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 284.3,
+      "expressway_distance_m": 291.5
+    }
+  },
+  {
+    "id": "tmg-2023-83",
+    "year": 2023,
+    "address": "中野区弥生町4丁目20",
+    "address_key": "中野区弥生町4-20",
+    "road": "都道新宿国立線",
+    "day_db": 65.0,
+    "night_db": 63.0,
+    "start_date": "2023/12/4",
+    "end_date": "2023/12/5",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 85,
+    "lat": 35.686672,
+    "lng": 139.671631,
+    "features": {
+      "nightlife_800m": 8,
+      "arterial_distance_m": 33.3,
+      "expressway_distance_m": 967.3
+    }
+  },
+  {
+    "id": "tmg-2023-84",
+    "year": 2023,
+    "address": "中野区南台3丁目22",
+    "address_key": "中野区南台3-22",
+    "road": "都道新宿国立線",
+    "day_db": 64.0,
+    "night_db": 60.0,
+    "start_date": "2023/11/27",
+    "end_date": "2023/11/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 86,
+    "lat": 35.685722,
+    "lng": 139.667343,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 43.3,
+      "expressway_distance_m": 1177.6
+    }
+  },
+  {
+    "id": "tmg-2023-85",
+    "year": 2023,
+    "address": "中野区中野5丁目68",
+    "address_key": "中野区中野5-68",
+    "road": "都道鮫洲大山線",
+    "day_db": 65.0,
+    "night_db": 62.0,
+    "start_date": "2023/12/4",
+    "end_date": "2023/12/5",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 87,
+    "lat": 35.709263,
+    "lng": 139.665207,
+    "features": {
+      "nightlife_800m": 53,
+      "arterial_distance_m": 79.6,
+      "expressway_distance_m": 1617.4
+    }
+  },
+  {
+    "id": "tmg-2023-86",
+    "year": 2023,
+    "address": "中野区江古田1丁目16",
+    "address_key": "中野区江古田1-16",
+    "road": "都道鮫洲大山線",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2023/11/27",
+    "end_date": "2023/11/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 88,
+    "lat": 35.726017,
+    "lng": 139.675644,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 416.3,
+      "expressway_distance_m": 1443.8
+    }
+  },
+  {
+    "id": "tmg-2023-88",
+    "year": 2023,
+    "address": "中野区本町5丁目28",
+    "address_key": "中野区本町5-28",
+    "road": "都道鮫洲大山線",
+    "day_db": 66.0,
+    "night_db": 65.0,
+    "start_date": "2023/11/27",
+    "end_date": "2023/11/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 90,
+    "lat": 35.691853,
+    "lng": 139.669846,
+    "features": {
+      "nightlife_800m": 23,
+      "arterial_distance_m": 621.8,
+      "expressway_distance_m": 1065.9
+    }
+  },
+  {
+    "id": "tmg-2023-89",
+    "year": 2023,
+    "address": "杉並区下高井戸4丁目2",
+    "address_key": "杉並区下高井戸4-2",
+    "road": "一般国道20号",
+    "day_db": 74.0,
+    "night_db": 72.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 91,
+    "lat": 35.670437,
+    "lng": 139.629974,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 69.3,
+      "expressway_distance_m": 77.5
+    }
+  },
+  {
+    "id": "tmg-2023-90",
+    "year": 2023,
+    "address": "杉並区下高井戸5丁目10",
+    "address_key": "杉並区下高井戸5-10",
+    "road": "新宿国立線",
+    "day_db": 70.0,
+    "night_db": 67.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 92,
+    "lat": 35.67355,
+    "lng": 139.621597,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 15.2,
+      "expressway_distance_m": 24.5
+    }
+  },
+  {
+    "id": "tmg-2023-91",
+    "year": 2023,
+    "address": "杉並区梅里1丁目1",
+    "address_key": "杉並区梅里1-1",
+    "road": "環状7号線（環七通り）（2）",
+    "day_db": 71.0,
+    "night_db": 70.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 93,
+    "lat": 35.695484,
+    "lng": 139.652878,
+    "features": {
+      "nightlife_800m": 18,
+      "arterial_distance_m": 125.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-92",
+    "year": 2023,
+    "address": "杉並区方南2丁目19",
+    "address_key": "杉並区方南2-19",
+    "road": "新宿国立線（方南通り）",
+    "day_db": 68.0,
+    "night_db": 65.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 94,
+    "lat": 35.683754,
+    "lng": 139.658218,
+    "features": {
+      "nightlife_800m": 2,
+      "arterial_distance_m": 16.2,
+      "expressway_distance_m": 1249.1
+    }
+  },
+  {
+    "id": "tmg-2023-93",
+    "year": 2023,
+    "address": "杉並区大宮2丁目1",
+    "address_key": "杉並区大宮2-1",
+    "road": "新宿国立線（方南通り）",
+    "day_db": 64.0,
+    "night_db": 60.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 95,
+    "lat": 35.681683,
+    "lng": 139.641861,
+    "features": {
+      "nightlife_800m": 13,
+      "arterial_distance_m": 19.8,
+      "expressway_distance_m": 1463.5
+    }
+  },
+  {
+    "id": "tmg-2023-94",
+    "year": 2023,
+    "address": "杉並区方南1丁目2",
+    "address_key": "杉並区方南1-2",
+    "road": "角筈和泉町線",
+    "day_db": 59.0,
+    "night_db": 55.0,
+    "start_date": "2023/6/27",
+    "end_date": "2023/6/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 96,
+    "lat": 35.673565,
+    "lng": 139.660461,
+    "features": {
+      "nightlife_800m": 16,
+      "arterial_distance_m": 24.1,
+      "expressway_distance_m": 108.6
+    }
+  },
+  {
+    "id": "tmg-2023-104",
+    "year": 2023,
+    "address": "荒川区東日暮里5丁目42",
+    "address_key": "荒川区東日暮里5-42",
+    "road": "台東川口線",
+    "day_db": 68.0,
+    "night_db": 65.0,
+    "start_date": "2024/1/31",
+    "end_date": "2024/2/1",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 106,
+    "lat": 35.727264,
+    "lng": 139.774734,
+    "features": {
+      "nightlife_800m": 42,
+      "arterial_distance_m": 25.5,
+      "expressway_distance_m": 1155.4
+    }
+  },
+  {
+    "id": "tmg-2023-105",
+    "year": 2023,
+    "address": "荒川区町屋8丁目3",
+    "address_key": "荒川区町屋8-3",
+    "road": "上野尾竹橋線",
+    "day_db": 63.0,
+    "night_db": 60.0,
+    "start_date": "2024/1/31",
+    "end_date": "2024/2/1",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 107,
+    "lat": 35.74807,
+    "lng": 139.784546,
+    "features": {
+      "nightlife_800m": 7,
+      "arterial_distance_m": 38.0,
+      "expressway_distance_m": 1331.1
+    }
+  },
+  {
+    "id": "tmg-2023-112",
+    "year": 2023,
+    "address": "練馬区大泉町2丁目7",
+    "address_key": "練馬区大泉町2-7",
+    "road": "関越自動車道(2)",
+    "day_db": 60.0,
+    "night_db": 57.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 114,
+    "lat": 35.757301,
+    "lng": 139.601166,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 50.8,
+      "expressway_distance_m": 33.6
+    }
+  },
+  {
+    "id": "tmg-2023-114",
+    "year": 2023,
+    "address": "練馬区大泉町6丁目13",
+    "address_key": "練馬区大泉町6-13",
+    "road": "練馬所沢線(4)",
+    "day_db": 67.0,
+    "night_db": 64.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 116,
+    "lat": 35.757385,
+    "lng": 139.593399,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 24.2,
+      "expressway_distance_m": 405.4
+    }
+  },
+  {
+    "id": "tmg-2023-116",
+    "year": 2023,
+    "address": "練馬区大泉町1丁目44",
+    "address_key": "練馬区大泉町1-44",
+    "road": "東京朝霞線",
+    "day_db": 65.0,
+    "night_db": 60.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 118,
+    "lat": 35.767612,
+    "lng": 139.604416,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 644.4,
+      "expressway_distance_m": 312.4
+    }
+  },
+  {
+    "id": "tmg-2023-118",
+    "year": 2023,
+    "address": "練馬区谷原3丁目24",
+    "address_key": "練馬区谷原3-24",
+    "road": "南田中町旭町線(1)",
+    "day_db": 73.0,
+    "night_db": 71.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 120,
+    "lat": 35.755493,
+    "lng": 139.620148,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 705.5,
+      "expressway_distance_m": 1092.2
+    }
+  },
+  {
+    "id": "tmg-2023-119",
+    "year": 2023,
+    "address": "練馬区光が丘3丁目9",
+    "address_key": "練馬区光が丘3-9",
+    "road": "南田中町旭町線(3)",
+    "day_db": 59.0,
+    "night_db": 53.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 121,
+    "lat": 35.757977,
+    "lng": 139.625824,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 1100.0,
+      "expressway_distance_m": 1650.4
+    }
+  },
+  {
+    "id": "tmg-2023-122",
+    "year": 2023,
+    "address": "足立区神明南1丁目11",
+    "address_key": "足立区神明南1-11",
+    "road": "高速6号三郷線(2)",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2023/11/14",
+    "end_date": "2023/11/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 124,
+    "lat": 35.78883,
+    "lng": 139.82814,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 1237.5,
+      "expressway_distance_m": 39.2
+    }
+  },
+  {
+    "id": "tmg-2023-124",
+    "year": 2023,
+    "address": "足立区入谷7丁目19",
+    "address_key": "足立区入谷7-19",
+    "road": "高速川口線(5)",
+    "day_db": 71.0,
+    "night_db": 68.0,
+    "start_date": "2023/11/21",
+    "end_date": "2023/11/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 126,
+    "lat": 35.79924,
+    "lng": 139.760376,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 877.6,
+      "expressway_distance_m": 60.9
+    }
+  },
+  {
+    "id": "tmg-2023-126",
+    "year": 2023,
+    "address": "足立区中川4丁目16",
+    "address_key": "足立区中川4-16",
+    "road": "主要都道318号環状7号線(2)",
+    "day_db": 71.0,
+    "night_db": 69.0,
+    "start_date": "2023/11/14",
+    "end_date": "2023/11/15",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 128,
+    "lat": 35.772686,
+    "lng": 139.846054,
+    "features": {
+      "nightlife_800m": 27,
+      "arterial_distance_m": 28.8,
+      "expressway_distance_m": 1899.9
+    }
+  },
+  {
+    "id": "tmg-2023-127",
+    "year": 2023,
+    "address": "足立区入谷9丁目15",
+    "address_key": "足立区入谷9-15",
+    "road": "一般都道106号東京鳩ケ谷線(3)",
+    "day_db": 61.0,
+    "night_db": 55.0,
+    "start_date": "2023/11/21",
+    "end_date": "2023/11/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 129,
+    "lat": 35.807961,
+    "lng": 139.756073,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 1261.5,
+      "expressway_distance_m": 236.3
+    }
+  },
+  {
+    "id": "tmg-2023-135",
+    "year": 2023,
+    "address": "葛飾区西新小岩2丁目1",
+    "address_key": "葛飾区西新小岩2-1",
+    "road": "主要都道 御徒町小岩線(蔵前通り)",
+    "day_db": 63.0,
+    "night_db": 60.0,
+    "start_date": "2023/12/25",
+    "end_date": "2023/12/26",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 137,
+    "lat": 35.716991,
+    "lng": 139.851181,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 153.5,
+      "expressway_distance_m": 207.2
+    }
+  },
+  {
+    "id": "tmg-2023-164",
+    "year": 2023,
+    "address": "武蔵野市吉祥寺本町4-17",
+    "address_key": "武蔵野市吉祥寺本町4-17",
+    "road": "杉並あきる野線",
+    "day_db": 66.0,
+    "night_db": 65.0,
+    "start_date": "2023/11/27",
+    "end_date": "2023/11/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 166,
+    "lat": 35.708832,
+    "lng": 139.573532,
+    "features": {
+      "nightlife_800m": 35,
+      "arterial_distance_m": 61.5,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-165",
+    "year": 2023,
+    "address": "武蔵野市関前4-11",
+    "address_key": "武蔵野市関前4-11",
+    "road": "杉並あきる野線",
+    "day_db": 64.0,
+    "night_db": 59.0,
+    "start_date": "2023/11/27",
+    "end_date": "2023/11/28",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 167,
+    "lat": 35.715,
+    "lng": 139.547134,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 34.8,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-181",
+    "year": 2023,
+    "address": "府中市是政2丁目20",
+    "address_key": "府中市是政2-20",
+    "road": "中央自動車道富士吉田線",
+    "day_db": 58.0,
+    "night_db": 54.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 183,
+    "lat": 35.66087,
+    "lng": 139.495407,
+    "features": {
+      "nightlife_800m": 4,
+      "arterial_distance_m": 148.4,
+      "expressway_distance_m": 67.7
+    }
+  },
+  {
+    "id": "tmg-2023-187",
+    "year": 2023,
+    "address": "昭島市拝島町4丁目7",
+    "address_key": "昭島市拝島町4-7",
+    "road": "一般国道16号",
+    "day_db": 68.0,
+    "night_db": 67.0,
+    "start_date": "2024/1/24",
+    "end_date": "2024/1/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 189,
+    "lat": 35.702877,
+    "lng": 139.347549,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 70.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-188",
+    "year": 2023,
+    "address": "昭島市拝島町2丁目2",
+    "address_key": "昭島市拝島町2-2",
+    "road": "一般国道16号",
+    "day_db": 73.0,
+    "night_db": 72.0,
+    "start_date": "2024/1/23",
+    "end_date": "2024/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 190,
+    "lat": 35.709324,
+    "lng": 139.34198,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 38.2,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-189",
+    "year": 2023,
+    "address": "昭島市玉川町3丁目5",
+    "address_key": "昭島市玉川町3-5",
+    "road": "立川青梅線",
+    "day_db": 68.0,
+    "night_db": 62.0,
+    "start_date": "2024/1/23",
+    "end_date": "2024/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 191,
+    "lat": 35.701614,
+    "lng": 139.381683,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 45.1,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-190",
+    "year": 2023,
+    "address": "昭島市玉川町5丁目4",
+    "address_key": "昭島市玉川町5-4",
+    "road": "八王子武蔵村山線",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2024/1/23",
+    "end_date": "2024/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 192,
+    "lat": 35.702297,
+    "lng": 139.378036,
+    "features": {
+      "nightlife_800m": 12,
+      "arterial_distance_m": 53.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-191",
+    "year": 2023,
+    "address": "昭島市朝日町4丁目24",
+    "address_key": "昭島市朝日町4-24",
+    "road": "三ツ木八王子線",
+    "day_db": 63.0,
+    "night_db": 58.0,
+    "start_date": "2024/1/23",
+    "end_date": "2024/1/24",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 193,
+    "lat": 35.708046,
+    "lng": 139.368973,
+    "features": {
+      "nightlife_800m": 10,
+      "arterial_distance_m": 824.0,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-194",
+    "year": 2023,
+    "address": "調布市深大寺北町7-6-10",
+    "address_key": "調布市深大寺北町7-6-10",
+    "road": "調布田無線",
+    "day_db": 59.0,
+    "night_db": 56.0,
+    "start_date": "2024/1/24",
+    "end_date": "2024/1/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 196,
+    "lat": 35.673523,
+    "lng": 139.54484,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 19.1,
+      "expressway_distance_m": 1139.2
+    }
+  },
+  {
+    "id": "tmg-2023-195",
+    "year": 2023,
+    "address": "調布市富士見町2-16-33",
+    "address_key": "調布市富士見町2-16-33",
+    "road": "調布田無線",
+    "day_db": 63.0,
+    "night_db": 60.0,
+    "start_date": "2024/1/24",
+    "end_date": "2024/1/25",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 197,
+    "lat": 35.659873,
+    "lng": 139.541131,
+    "features": {
+      "nightlife_800m": 17,
+      "arterial_distance_m": 37.3,
+      "expressway_distance_m": 320.6
+    }
+  },
+  {
+    "id": "tmg-2023-202",
+    "year": 2023,
+    "address": "町田市原町田2丁目12",
+    "address_key": "町田市原町田2-12",
+    "road": "八王子町田線",
+    "day_db": 66.0,
+    "night_db": 64.0,
+    "start_date": "2023/11/15",
+    "end_date": "2023/11/16",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 204,
+    "lat": 35.540695,
+    "lng": 139.45343,
+    "features": {
+      "nightlife_800m": 51,
+      "arterial_distance_m": 28.8,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-207",
+    "year": 2023,
+    "address": "小金井市桜町1丁目5",
+    "address_key": "小金井市桜町1-5",
+    "road": "府中清瀬線",
+    "day_db": 62.0,
+    "night_db": 59.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 209,
+    "lat": 35.709557,
+    "lng": 139.508514,
+    "features": {
+      "nightlife_800m": 6,
+      "arterial_distance_m": 49.8,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-208",
+    "year": 2023,
+    "address": "小金井市前原町3丁目33",
+    "address_key": "小金井市前原町3-33",
+    "road": "恋ヶ窪新田三鷹線",
+    "day_db": 65.0,
+    "night_db": 62.0,
+    "start_date": "2023/6/13",
+    "end_date": "2023/6/13",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 210,
+    "lat": 35.697128,
+    "lng": 139.502472,
+    "features": {
+      "nightlife_800m": 9,
+      "arterial_distance_m": 319.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-232",
+    "year": 2023,
+    "address": "清瀬市下宿2-666",
+    "address_key": "清瀬市下宿2-666",
+    "road": "関越自動車道",
+    "day_db": 59.0,
+    "night_db": 56.0,
+    "start_date": "2024/1/29",
+    "end_date": "2024/1/30",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 234,
+    "lat": 35.800503,
+    "lng": 139.537628,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 1154.6,
+      "expressway_distance_m": 84.5
+    }
+  },
+  {
+    "id": "tmg-2023-234",
+    "year": 2023,
+    "address": "東久留米市南沢5丁目19",
+    "address_key": "東久留米市南沢5-19",
+    "road": "東京所沢線",
+    "day_db": 67.0,
+    "night_db": 65.0,
+    "start_date": "2023/10/17",
+    "end_date": "2023/10/18",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 236,
+    "lat": 35.745346,
+    "lng": 139.523544,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 47.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-237",
+    "year": 2023,
+    "address": "武蔵村山市榎3丁目113-6",
+    "address_key": "武蔵村山市榎3-113-6",
+    "road": "八王子武蔵村山線（主要地方道第59号線）",
+    "day_db": 64.0,
+    "night_db": 61.0,
+    "start_date": "2023/11/13",
+    "end_date": "2023/11/14",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 239,
+    "lat": 35.749404,
+    "lng": 139.383198,
+    "features": {
+      "nightlife_800m": 1,
+      "arterial_distance_m": 35.6,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-239",
+    "year": 2023,
+    "address": "多摩市鶴牧2丁目24",
+    "address_key": "多摩市鶴牧2-24",
+    "road": "小山乞田線",
+    "day_db": 63.0,
+    "night_db": 56.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 241,
+    "lat": 35.616741,
+    "lng": 139.412979,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 1734.7,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-242",
+    "year": 2023,
+    "address": "多摩市鶴牧5丁目31",
+    "address_key": "多摩市鶴牧5-31",
+    "road": "小山乞田線",
+    "day_db": 64.0,
+    "night_db": 60.0,
+    "start_date": "2023/11/8",
+    "end_date": "2023/11/9",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 244,
+    "lat": 35.611851,
+    "lng": 139.418427,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 2000.0,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-253",
+    "year": 2023,
+    "address": "西東京市芝久保町4丁目15",
+    "address_key": "西東京市芝久保町4-15",
+    "road": "新宿青梅線【青梅街道】",
+    "day_db": 64.0,
+    "night_db": 61.0,
+    "start_date": "2023/9/21",
+    "end_date": "2023/9/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 255,
+    "lat": 35.730896,
+    "lng": 139.520462,
+    "features": {
+      "nightlife_800m": 5,
+      "arterial_distance_m": 62.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-255",
+    "year": 2023,
+    "address": "西東京市田無町3丁目6",
+    "address_key": "西東京市田無町3-6",
+    "road": "調布田無線（武蔵境通り）",
+    "day_db": 62.0,
+    "night_db": 59.0,
+    "start_date": "2023/9/21",
+    "end_date": "2023/9/22",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 257,
+    "lat": 35.730122,
+    "lng": 139.543549,
+    "features": {
+      "nightlife_800m": 26,
+      "arterial_distance_m": 14.3,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-258",
+    "year": 2023,
+    "address": "奥多摩町川井775",
+    "address_key": "奥多摩町川井775",
+    "road": "一般国道411号",
+    "day_db": 63.0,
+    "night_db": 57.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 260,
+    "lat": 35.814102,
+    "lng": 139.154864,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 33.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-259",
+    "year": 2023,
+    "address": "奥多摩町棚沢164",
+    "address_key": "奥多摩町棚沢164",
+    "road": "一般国道411号",
+    "day_db": 62.0,
+    "night_db": 56.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 261,
+    "lat": 35.815421,
+    "lng": 139.131393,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 13.9,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-263",
+    "year": 2023,
+    "address": "瑞穂町駒形富士山209",
+    "address_key": "瑞穂町駒形富士山209",
+    "road": "瑞穂あきる野八王子線",
+    "day_db": 71.0,
+    "night_db": 68.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 265,
+    "lat": 35.779236,
+    "lng": 139.35318,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 605.7,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-264",
+    "year": 2023,
+    "address": "瑞穂町むさし野 1-3",
+    "address_key": "瑞穂町むさし野1-3",
+    "road": "瑞穂あきる野八王子線",
+    "day_db": 65.0,
+    "night_db": 60.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 266,
+    "lat": 35.762783,
+    "lng": 139.338196,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 322.5,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-265",
+    "year": 2023,
+    "address": "日の出町平井 3352",
+    "address_key": "日の出町平井3352",
+    "road": "奥多摩あきる野線",
+    "day_db": 65.0,
+    "night_db": 58.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 267,
+    "lat": 35.745564,
+    "lng": 139.261642,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 1674.4,
+      "expressway_distance_m": 1774.4
+    }
+  },
+  {
+    "id": "tmg-2023-266",
+    "year": 2023,
+    "address": "日の出町平井 2069-2",
+    "address_key": "日の出町平井2069-2",
+    "road": "山田平井線",
+    "day_db": 66.0,
+    "night_db": 59.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 268,
+    "lat": 35.737572,
+    "lng": 139.257889,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 1192.4,
+      "expressway_distance_m": 2000.0
+    }
+  },
+  {
+    "id": "tmg-2023-267",
+    "year": 2023,
+    "address": "日の出町大久野 5718",
+    "address_key": "日の出町大久野5718",
+    "road": "青梅日の出線",
+    "day_db": 64.0,
+    "night_db": 56.0,
+    "start_date": "2024/1/22",
+    "end_date": "2024/1/23",
+    "file": "research/snapshots/2026-10-14/noise/tmg_r5_jouji_monitoring.csv",
+    "line": 269,
+    "lat": 35.76392,
+    "lng": 139.233109,
+    "features": {
+      "nightlife_800m": 0,
+      "arterial_distance_m": 1282.2,
+      "expressway_distance_m": 2000.0
+    }
+  }
+]

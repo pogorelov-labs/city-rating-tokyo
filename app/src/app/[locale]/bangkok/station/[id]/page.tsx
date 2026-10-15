@@ -1,3 +1,5 @@
+import { QuietnessFacts } from '@/components/QuietnessFacts';
+import { getQuietness } from '@/lib/quietness';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -396,6 +398,8 @@ export default async function StationAreaPage({
               </details>
             </section>
           </div>
+
+          <QuietnessFacts fact={getQuietness('bangkok', a.id)} />
 
           {/* By the numbers */}
           <section className="bg-white rounded-lg border border-gray-200 p-5">

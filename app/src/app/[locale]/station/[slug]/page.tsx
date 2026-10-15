@@ -1,3 +1,5 @@
+import { QuietnessFacts } from '@/components/QuietnessFacts';
+import { getQuietness } from '@/lib/quietness';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getStation, getStations } from '@/lib/data';
 import { RATING_LABELS, StationRatings, getGoogleMapsAreaUrl } from '@/lib/types';
@@ -423,6 +425,8 @@ export default async function StationPage({
             </section>
           </div>
         )}
+
+        <QuietnessFacts fact={getQuietness('tokyo', station.slug)} />
 
         {/* Natural Environment (elevation + seismic risk) */}
         {station.environment && (

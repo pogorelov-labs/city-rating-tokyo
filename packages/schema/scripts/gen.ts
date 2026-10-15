@@ -235,7 +235,7 @@ function tsType(node: any): string {
 }
 
 /** Emit a TS interface from a $def that has type:object. */
-function emitTsInterface(name: string, def: any): string {
+function emitTsInterface(name: string, def: any, preserveNames = false): string {
   const props = def.properties || {};
   const required = new Set<string>(def.required || []);
   const lines: string[] = [];
@@ -252,7 +252,7 @@ function emitTsInterface(name: string, def: any): string {
   for (const [key, val] of Object.entries(props)) {
     const isReq = required.has(key);
     const opt = isReq ? '' : '?';
-    lines.push(`  ${tsPropName(key)}${opt}: ${tsType(val as any)};`);
+    lines.push(`  ${preserveNames ? key : tsPropName(key)}${opt}: ${tsType(val as any)};`);
   }
   lines.push('}');
   return lines.join('\n');
@@ -622,14 +622,12 @@ emit(join(PKG_ROOT, 'python', 'city_rating_schema', '__init__.py'), emitPythonIn
 // PR #86 fixed this exact class of bug for slug-redirects.json; see
 // CONTRIBUTING.md invariant #6. The vendored files are GENERATED — never edit.
 //
-// NOTE: Only constants are vendored. The schema's generated TS types use
-// camelCase (JSON Schema convention) while the app's hand-written types.ts
-// uses snake_case (matching the data files). Vendoring the types would create
-// a second, divergent type definition. The schema package's TS types remain
-// in packages/schema/ts/types.ts for documentation, but the app does NOT
-// import them. Type unification is a Python-only benefit (Pydantic models);
-// the TS side unifies VALUES (constants), not TYPES.
+// Existing app types remain hand-written; their schema counterparts use camelCase.
+// New noise facts below preserve JSON field names and have no hand-written twin.
 const APP_VENDOR = resolve(PKG_ROOT, '..', '..', 'app', 'src', 'lib', 'schema');
 emit(join(APP_VENDOR, 'constants.ts'), emitTsConstants());
+// Noise facts are new shared types; vendor only their snake_case definitions.
+const noiseTypes = ['noise_anchor', 'noise_proxies', 'noise_complaint_year', 'noise_complaints', 'quietness_fact'];
+emit(join(APP_VENDOR, 'noise-types.ts'), HEADER_TS + '\n' + noiseTypes.map(name => emitTsInterface(name, defs[name], true)).join('\n\n'));
 
-console.log('Generated: ts/{constants,types,index}.ts, python/city_rating_schema/{__init__,constants,models}.py, app/src/lib/schema/constants.ts');
+console.log('Generated: ts/{constants,types,index}.ts, python/city_rating_schema/{__init__,constants,models}.py, app/src/lib/schema/{constants,noise-types}.ts');

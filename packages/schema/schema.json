@@ -208,6 +208,190 @@
       },
       "required": ["id", "label", "icon", "weights"],
       "additionalProperties": false
+    },
+    "noise_anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "road": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "day_db": {
+          "type": "number"
+        },
+        "night_db": {
+          "type": "number"
+        },
+        "start_date": {
+          "type": "string"
+        },
+        "end_date": {
+          "type": "string"
+        },
+        "distance_m": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 800
+        },
+        "coordinate_year": {
+          "type": "integer"
+        },
+        "source_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "address",
+        "road",
+        "year",
+        "day_db",
+        "night_db",
+        "start_date",
+        "end_date",
+        "distance_m",
+        "coordinate_year",
+        "source_url"
+      ],
+      "description": "Measured TMG roadside day/night Leq; distance uses an exact-address match to archival coordinates, not the station reading."
+    },
+    "noise_proxies": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "nightlife_800m": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "arterial_distance_m": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2000
+        },
+        "expressway_distance_m": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2000
+        }
+      },
+      "required": [
+        "nightlife_800m",
+        "arterial_distance_m",
+        "expressway_distance_m"
+      ]
+    },
+    "noise_complaint_year": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "year",
+        "count"
+      ]
+    },
+    "noise_complaints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "municipality": {
+          "type": "string"
+        },
+        "series": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/noise_complaint_year"
+          }
+        }
+      },
+      "required": [
+        "municipality",
+        "series"
+      ]
+    },
+    "quietness_fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "available",
+            "missing_proxies"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "estimate"
+          ]
+        },
+        "calibration": {
+          "enum": [
+            "tokyo_roadside",
+            "uncalibrated_transfer"
+          ]
+        },
+        "data_date": {
+          "type": "string"
+        },
+        "model_version": {
+          "type": "string"
+        },
+        "day": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 10
+        },
+        "night": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 10
+        },
+        "proxies": {
+          "$ref": "#/$defs/noise_proxies"
+        },
+        "anchors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/noise_anchor"
+          }
+        },
+        "complaints": {
+          "$ref": "#/$defs/noise_complaints"
+        }
+      },
+      "required": [
+        "status",
+        "confidence",
+        "calibration",
+        "data_date",
+        "model_version",
+        "day",
+        "night",
+        "anchors"
+      ],
+      "description": "Standalone modeled day/night quietness: 1–10, higher quieter. Not a rating category or measured sound level. Missing proxy coverage produces nulls."
     }
   }
 }
