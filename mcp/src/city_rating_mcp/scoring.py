@@ -28,6 +28,8 @@ from city_rating_schema.constants import (  # noqa: E402
     RATING_KEYS,
 )
 
+from city_rating_schema.normalize import percentile_anchors as normalize_anchors  # noqa: E402
+
 # Re-export for backwards compatibility with existing callers that import
 # these names from this module. DEFAULT_FILTERS from the schema package is
 # the 6 core fields; we merge in the environment-filter defaults so existing
@@ -67,16 +69,7 @@ def composite_score(ratings: dict[str, float] | None, weights: dict[str, float] 
 
 def percentile_anchors(scores: list[float]) -> dict[str, float]:
     """p5 / p50 / p95 anchors — mirrors `computeCompositeAnchors`."""
-    if not scores:
-        return {"p5": 1.0, "p50": 5.5, "p95": 10.0}
-    s = sorted(scores)
-    n = len(s)
-
-    def pick(pct: float) -> float:
-        idx = max(0, min(n - 1, int(n * pct)))
-        return s[idx]
-
-    return {"p5": pick(0.05), "p50": pick(0.5), "p95": pick(0.95)}
+    return normalize_anchors(scores, empty={"p5": 1.0, "p50": 5.5, "p95": 10.0})
 
 
 def _rent_value(rent_avg: dict[str, Any] | None) -> float | None:
