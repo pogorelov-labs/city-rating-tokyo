@@ -150,3 +150,28 @@ def test_missing_or_wrong_column_type_refused(uidt):
 def test_schema_exact_additive_contract():
     rs.validate_schema({"columns": [{"title": "data_date", "uidt": "SingleLineText"},
                                      {"title": "source_dates", "uidt": "LongText"}]})
+
+
+@pytest.mark.parametrize("status", [408, 500, 502, 503, 504])
+def test_http_timeout_or_server_failure_is_unknown_and_does_not_rollback(tmp_path, monkeypatch, status):
+    import requests
+    store = Store()
+    db = type("DB", (), {"base_url": "https://fixture.test/api/v2/tables/ratings",
+                          "headers": {}, "get_all_records": store.read})()
+    adapter = rs.NocoRatingStore(db)
+    monkeypatch.setattr(adapter, "preflight", lambda: None)
+    calls = []
+    def patch(*args, **kwargs):
+        calls.append(kwargs["json"])
+        # The gateway responds while the upstream PATCH is still queued.
+        return type("Response", (), {"ok": False, "status_code": status})()
+    monkeypatch.setattr(requests, "patch", patch)
+    with pytest.raises(RuntimeError, match="outcome unknown"):
+        rs.replace_ratings(adapter, candidate(store), tmp_path)
+    assert len(calls) == 1  # No racing compensation request.
+    assert all(row["food"] == 3 for row in store.rows)
+    store.patch(calls[0])  # Delayed upstream write lands AFTER the client failed.
+    assert any(row["food"] == 8 for row in store.rows)
+    with pytest.raises(RuntimeError, match="Unresolved"):
+        rs.assert_recovered(tmp_path)
+    assert json.loads(next(tmp_path.glob("*.json")).read_text())["phase"] == "prepared"

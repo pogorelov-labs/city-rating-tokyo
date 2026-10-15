@@ -162,7 +162,9 @@ or INSERT is used, even for restoration.
 Known failed responses/readback errors trigger a best-effort restoration of all
 preimages followed by full verification. The refresh still fails: it never exports
 as though the candidate succeeded. A process kill, failed rollback, or transport
-timeout leaves an unresolved journal. Timeout/disconnect outcomes are ambiguous:
+timeout leaves an unresolved journal. HTTP 408 and every 5xx response (including
+gateway 502/504) also remain unresolved: the upstream PATCH may still be running.
+Timeout/disconnect outcomes are ambiguous:
 automatic compensation could race the original request, so they require explicit
 operator recovery after requests settle. A journal-finalization failure also blocks
 the next run. Compute and export refuse unresolved local journals.

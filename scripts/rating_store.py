@@ -188,6 +188,10 @@ class NocoRatingStore:
         except requests.RequestException:
             # Do not expose tokens, response bodies or authenticated request URLs.
             raise UnknownWriteOutcome("NocoDB PATCH outcome unknown") from None
+        # A gateway/server failure does not prove that the upstream PATCH has
+        # finished. Compensating now could race a delayed successful write.
+        if response.status_code >= 500 or response.status_code == 408:
+            raise UnknownWriteOutcome(f"NocoDB PATCH outcome unknown (HTTP {response.status_code})")
         if not response.ok:
             raise RuntimeError(f"NocoDB PATCH rejected (HTTP {response.status_code})")
 
