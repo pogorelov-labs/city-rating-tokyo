@@ -336,12 +336,14 @@ export function applyDealbreakers(
   filters: FilterState,
   hideFloodRisk: boolean,
   hideHighSeismic: boolean,
+  /** Family filter (CRTKY-192): hide areas in adult_entertainment zones. */
+  hideAdultZones = false,
   /** The city's wide-open filter values (rent/commute ranges differ per city). */
   defaults: FilterState = DEFAULT_FILTERS,
 ): FilteredMapStation[] {
   const rentActive = filters.maxRent < defaults.maxRent || filters.minRent > defaults.minRent;
   return stations
-    .filter((s) => dealbreakerReasons(s, filters, hideFloodRisk, hideHighSeismic, defaults).length === 0)
+    .filter((s) => dealbreakerReasons(s, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, defaults).length === 0)
     .map((s) => ({
       ...s,
       rentUnknown: rentActive && s.rent_1k === null,
@@ -350,7 +352,7 @@ export function applyDealbreakers(
 
 /** Why an area fails the current dealbreakers (empty array = it passes). */
 export type DealbreakerReason =
-  | { kind: 'rentHigh' | 'rentLow' | 'commuteLong' | 'commuteShort' | 'flood' | 'seismic' | 'liveCamera' }
+  | { kind: 'rentHigh' | 'rentLow' | 'commuteLong' | 'commuteShort' | 'flood' | 'seismic' | 'liveCamera' | 'adultZone' }
   | { kind: 'category'; key: keyof StationRatings; min: number };
 
 /**
@@ -364,6 +366,7 @@ export function dealbreakerReasons(
   filters: FilterState,
   hideFloodRisk: boolean,
   hideHighSeismic: boolean,
+  hideAdultZones = false,
   defaults: FilterState = DEFAULT_FILTERS,
 ): DealbreakerReason[] {
   const reasons: DealbreakerReason[] = [];
@@ -394,6 +397,8 @@ export function dealbreakerReasons(
   if (hideFloodRisk && s.elevation_m !== null && s.elevation_m < 5) reasons.push({ kind: 'flood' });
   if (hideFloodRisk && s.flood_exposed === true) reasons.push({ kind: 'flood' });
   if (hideHighSeismic && s.seismic_risk_tier === 'very_high') reasons.push({ kind: 'seismic' });
+  // Family filter (CRTKY-192): the area anchor sits inside an adult zone.
+  if (hideAdultZones && s.adult_zone === true) reasons.push({ kind: 'adultZone' });
   // Live camera dealbreaker
   if (filters.hasLiveCamera && !s.hasLiveCamera) reasons.push({ kind: 'liveCamera' });
   return reasons;

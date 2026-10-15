@@ -1,0 +1,72 @@
+{
+ "_meta": {
+  "description": "Curated entertainment zones (center + radius), zone-level. Only adult_entertainment triggers the family filter (ADR #6).",
+  "curated": "2026-10-13 (research waves); owner-approved 2026-10-14",
+  "sources": "Wikipedia/Wikidata coordinates; OSM corroboration counts in the research notes"
+ },
+ "stations": {
+  "ikebukuro": [
+   {
+    "id": "ikebukuro-kitaguchi",
+    "kind": "adult_entertainment",
+    "distance_m": 232
+   }
+  ],
+  "shimbashi": [
+   {
+    "id": "shimbashi-karasumori",
+    "kind": "afterwork_drinking",
+    "distance_m": 136
+   }
+  ],
+  "okachimachi": [
+   {
+    "id": "ueno-ameyoko",
+    "kind": "adult_entertainment",
+    "distance_m": 258
+   }
+  ],
+  "kinshicho": [
+   {
+    "id": "kinshicho-minamiguchi",
+    "kind": "adult_entertainment",
+    "distance_m": 225
+   }
+  ],
+  "shinjuku-sanchome": [
+   {
+    "id": "shinjuku-nichome",
+    "kind": "adult_entertainment",
+    "distance_m": 136
+   }
+  ],
+  "keiseiueno": [
+   {
+    "id": "ueno-ameyoko",
+    "kind": "adult_entertainment",
+    "distance_m": 195
+   }
+  ],
+  "roppongi": [
+   {
+    "id": "roppongi",
+    "kind": "club_district",
+    "distance_m": 93
+   }
+  ],
+  "seibushinjuku": [
+   {
+    "id": "kabukicho",
+    "kind": "adult_entertainment",
+    "distance_m": 281
+   }
+  ],
+  "yushima": [
+   {
+    "id": "ueno-ameyoko",
+    "kind": "adult_entertainment",
+    "distance_m": 386
+   }
+  ]
+ }
+}

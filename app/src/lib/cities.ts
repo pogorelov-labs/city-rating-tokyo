@@ -216,7 +216,7 @@ export function formatRentShort(city: CityId, value: number): string {
 export function hasActiveFilters(
   city: CityId,
   filters: FilterState,
-  env: { hideFloodRisk: boolean; hideHighSeismic: boolean },
+  env: { hideFloodRisk: boolean; hideHighSeismic: boolean; hideAdultZones?: boolean },
 ): boolean {
   const d = CITIES[city].defaultFilters;
   return (
@@ -227,6 +227,7 @@ export function hasActiveFilters(
     Object.keys(filters.categoryMins).length > 0 ||
     filters.hasLiveCamera ||
     env.hideFloodRisk ||
-    env.hideHighSeismic
+    env.hideHighSeismic ||
+    env.hideAdultZones === true
   );
 }

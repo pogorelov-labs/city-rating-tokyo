@@ -1,0 +1,38 @@
+{
+ "_meta": {
+  "description": "Curated entertainment zones (center + radius), zone-level. Only adult_entertainment triggers the family filter (ADR #6).",
+  "curated": "2026-10-13 (research waves); owner-approved 2026-10-14",
+  "sources": "Wikipedia/Wikidata coordinates; OSM corroboration counts in the research notes"
+ },
+ "areas": {
+  "asok": [
+   {
+    "id": "soi-cowboy",
+    "kind": "adult_entertainment",
+    "distance_m": 198
+   }
+  ],
+  "huai-khwang": [
+   {
+    "id": "huai-khwang-ratchada",
+    "kind": "adult_entertainment",
+    "distance_m": 25
+   }
+  ],
+  "nana": [
+   {
+    "id": "nana-plaza",
+    "kind": "adult_entertainment",
+    "distance_m": 249
+   }
+  ],
+  "sala-daeng": [
+   {
+    "id": "patpong",
+    "kind": "adult_entertainment",
+    "distance_m": 156
+   }
+  ]
+ },
+ "districts": {}
+}

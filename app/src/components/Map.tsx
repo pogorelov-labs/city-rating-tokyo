@@ -211,6 +211,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   }, [setIsFlying]);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
   const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
 
   const isTouch = useIsTouch();
 
@@ -254,11 +255,11 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   // FilterPanel so the map and the match counter always agree (the old inline
   // check forgot `hasLiveCamera`, so that filter alone never hid a marker).
   const visibleStations = useMemo(() => {
-    if (!hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic })) {
+    if (!hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic, hideAdultZones })) {
       return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
     }
-    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, city.defaultFilters);
-  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic, city]);
+    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters);
+  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city]);
 
   // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
   // Also used (reversed) for top-5 pulse — one sort instead of two.
