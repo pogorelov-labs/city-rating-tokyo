@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "publication": "aggregate_citation_only",
+  "verified_at": "2026-10-15",
+  "facts": {
+    "traffic": {
+      "publisher": "Tokyo Metropolitan Police Department",
+      "period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "scope": "tokyo_metropolis_mpd_jurisdiction",
+      "unit": "reported_count",
+      "denominator": null,
+      "source_url": "https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/tokei/reiwa_7.html",
+      "document_url": "https://www.keishicho.metro.tokyo.lg.jp/about_mpd/jokyo_tokei/tokei/reiwa_7.files/kt10.xlsx",
+      "table": "10",
+      "values": {
+        "accidents": 30176,
+        "fatalities": 134
+      }
+    },
+    "welfare": {
+      "publisher": "Tokyo Metropolitan Government Bureau of Social Welfare",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-01-31"
+      },
+      "scope": "tokyo_23_wards_tama_and_national_rivers",
+      "unit": "survey_count_people",
+      "denominator": null,
+      "source_url": "https://www.fukushi.metro.tokyo.lg.jp/seikatsu/rojo/gaisuchosa",
+      "document_url": "https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2026-04-28-174733-136",
+      "table": "January 2026, pages 1–2",
+      "values": {
+        "people": 507
+      }
+    }
+  },
+  "source_sha256": {
+    "traffic_workbook": "f51fcb1300504ab868cd14287f17515b9bb2a2fb9c4b9572eeeb228a38ec9eb3",
+    "traffic_digest": "37083f593922879583eb234791ae2c0df441825dcaba67271c816058ba442426",
+    "survey_pdf": "a660c51e20e38af1e3b2e99fb9951259a6dcdea8254cd617e9fd8c3754bf9bf9",
+    "survey_summary": "c4204970076480465b51ec707baf8dc6df2515923548cb1933d247d62272d5fd"
+  }
+}
