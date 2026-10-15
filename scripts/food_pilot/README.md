@@ -65,7 +65,10 @@ environment output. Raw successful bodies and their hashes are retained; files
 are never silently overwritten.
 
 An explicitly invoked continuation preserves the **original** deadline and
-cumulative counters, rather than treating another process as a fresh allowance:
+cumulative counters, rather than treating another process as a fresh allowance.
+The monotonic deadline is anchored before reconciliation; retained-file validation
+and receipt fsync time consume the original window. Expiry during recovery blocks
+all further requests:
 
 ```sh
 python3 scripts/food_pilot/acquire_osm.py --output "$PILOT_ARTIFACT_DIR/osm" --acquire --resume

@@ -116,7 +116,9 @@ def main():
         raise ValueError("Attempt ledger already exists; no silent budget reset")
     if args.resume:
         ledger = json.loads(ledger_path.read_text())
+        resume_clock = time.monotonic()
         elapsed = (datetime.now(timezone.utc) - datetime.fromisoformat(ledger["started_at"])).total_seconds()
+        started = resume_clock - elapsed
         if elapsed >= LIMITS["wall_seconds"] or len(ledger["attempts"]) >= LIMITS["attempts"]:
             raise ValueError("Original acquisition budget exhausted; resume cannot reset it")
         write_new(output / f'attempts-before-resume-{len(ledger["attempts"])}.json', ledger)
@@ -140,16 +142,24 @@ def main():
         ledger["status"] = "in_progress"
         save_ledger(ledger_path, ledger)
     else:
-        elapsed = 0
+        started = time.monotonic()
         ledger = {"started_at": datetime.now(timezone.utc).isoformat(), "attempts": [],
                   "wire_bytes": 0, "tiles_completed": [], "status": "in_progress"}
         save_ledger(ledger_path, ledger)
-    started = time.monotonic() - elapsed
+    def remaining_budget():
+        remaining = LIMITS["wall_seconds"] - (time.monotonic() - started)
+        if remaining <= 0:
+            raise TimeoutError("Original acquisition wall deadline")
+        return remaining
+
     def deadline(_signum, _frame):
         raise TimeoutError("Acquisition wall deadline")
     previous_handler = signal.signal(signal.SIGALRM, deadline)
-    signal.setitimer(signal.ITIMER_REAL, LIMITS["wall_seconds"] - elapsed)
     try:
+        remaining_time = LIMITS["wall_seconds"] - (time.monotonic() - started)
+        if remaining_time <= 0:
+            raise ValueError("Original wall budget exhausted during recovery")
+        signal.setitimer(signal.ITIMER_REAL, remaining_time)
         for tile in plan["tiles"]:
             if tile["id"] in ledger["tiles_completed"]:
                 continue
@@ -176,6 +186,8 @@ def main():
                     req = urllib.request.Request(endpoint,
                         data=urllib.parse.urlencode({"data": tile["query"]}).encode(),
                         headers={"User-Agent": "city-rating-food-shadow/1.0", "Content-Type": "application/x-www-form-urlencoded"})
+                    # Receipt fsync time is also part of the original deadline.
+                    remaining_time = remaining_budget()
                     with urllib.request.urlopen(req, timeout=min(LIMITS["socket_seconds"], remaining_time)) as response:
                         # Never consume beyond the durably reserved allowance.
                         chunks = []
@@ -196,6 +208,7 @@ def main():
                         raw = b"".join(chunks)
                     doc = json.loads(raw)
                     stamp, features = validate_osm(doc)
+                    remaining_budget()
                     if not 0 <= (datetime.now(timezone.utc) - stamp).total_seconds() <= 7 * 86400:
                         raise ValueError("OSM timestamp outside seven-day acquisition window")
                     packed = gzip.compress(raw, mtime=0)
@@ -205,6 +218,7 @@ def main():
                     path = output / f'tile-{tile["id"]}.json.gz'
                     with path.open("xb") as stream:
                         stream.write(packed)
+                    remaining_budget()
                     attempt.update(status="complete", source_base=stamp.isoformat(), features=len(features),
                                    response_sha256=hashlib.sha256(raw).hexdigest(), bytes=len(raw))
                     ledger["tiles_completed"].append(tile["id"])
@@ -227,6 +241,7 @@ def main():
                 time.sleep(min(2, max(0, LIMITS["wall_seconds"] - (time.monotonic() - started))))
             else:
                 raise ValueError("All established mirrors failed a required tile")
+        remaining_budget()
         ledger["status"] = "complete"
     except Exception as exc:
         ledger.update(status="incomplete", reason=type(exc).__name__)

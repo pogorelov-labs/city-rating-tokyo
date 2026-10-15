@@ -6,7 +6,7 @@ import json
 import io
 import sys
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import pytest
@@ -364,3 +364,82 @@ def test_adapter_never_reads_extra_probe_past_reserved_budget(tmp_path, monkeypa
     assert sum(observed) == ledger['wire_bytes'] == 64
     assert ledger['attempts'][0]['accounting'] == 'conservative_reservation'
     assert len(ledger['attempts']) == 1
+
+
+def test_resume_validation_cannot_extend_original_wall_deadline(tmp_path, monkeypatch):
+    frame, output, argv = adapter_fixture(tmp_path, monkeypatch)
+    now = datetime.now(timezone.utc)
+    clock = [100.0]
+
+    class FixedDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now
+
+    monkeypatch.setattr(acquire_osm, "datetime", FixedDateTime)
+    monkeypatch.setattr(acquire_osm.time, "monotonic", lambda: clock[0])
+    tile = tile_plan([STATION])["tiles"][0]
+    body = json.dumps({"osm3s": {"timestamp_osm_base": now.isoformat()}, "elements": []}).encode()
+    (output / f"tile-{tile['id']}.json.gz").write_bytes(gzip.compress(body))
+    started_at = (now - timedelta(seconds=890)).isoformat()
+    ledger = {"started_at": started_at, "status": "incomplete", "wire_bytes": len(body),
+              "tiles_completed": [tile["id"]], "attempts": [{"tile": tile["id"], "status": "complete",
+              "response_sha256": hashlib.sha256(body).hexdigest()}]}
+    (output / "attempts.json").write_text(json.dumps(ledger))
+    validate = acquire_osm.validate_osm
+
+    def slow_validation(doc):
+        clock[0] += 20  # recovery consumes the ten remaining original seconds
+        return validate(doc)
+
+    monkeypatch.setattr(acquire_osm, "validate_osm", slow_validation)
+    requests = []
+    monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", lambda *a, **k: requests.append(1))
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire", "--resume"])
+    with pytest.raises(SystemExit, match="incomplete"):
+        acquire_osm.main()
+    assert requests == []
+    after = json.loads((output / "attempts.json").read_text())
+    assert after["status"] == "incomplete"
+    assert after["started_at"] == started_at
+    assert after["attempts"] == ledger["attempts"]
+    assert after["wire_bytes"] == len(body)
+
+
+@pytest.mark.parametrize("phase", ["pending_receipt", "payload_validation"])
+def test_expiry_inside_acquisition_prevents_any_later_request(tmp_path, monkeypatch, phase):
+    frame, output, argv = adapter_fixture(tmp_path, monkeypatch)
+    clock = [100.0]
+    monkeypatch.setattr(acquire_osm.time, "monotonic", lambda: clock[0])
+    save = acquire_osm.save_ledger
+    validate = acquire_osm.validate_osm
+
+    def slow_receipt(path, ledger):
+        save(path, ledger)
+        if phase == "pending_receipt" and ledger["attempts"] and ledger["attempts"][-1]["status"] == "pending":
+            clock[0] = 1001.0
+
+    def slow_validation(doc):
+        if phase == "payload_validation":
+            clock[0] = 1001.0
+        return validate(doc)
+
+    monkeypatch.setattr(acquire_osm, "save_ledger", slow_receipt)
+    monkeypatch.setattr(acquire_osm, "validate_osm", slow_validation)
+    body = json.dumps({"osm3s": {"timestamp_osm_base": datetime.now(timezone.utc).isoformat()},
+                       "elements": []}).encode()
+    calls = []
+
+    def request(*args, **kwargs):
+        calls.append(1)
+        return io.BytesIO(body)
+
+    monkeypatch.setattr(acquire_osm.urllib.request, "urlopen", request)
+    monkeypatch.setattr(sys, "argv", argv + ["--acquire"])
+    with pytest.raises(SystemExit, match="incomplete"):
+        acquire_osm.main()
+    assert len(calls) == (0 if phase == "pending_receipt" else 1)
+    ledger = json.loads((output / "attempts.json").read_text())
+    assert ledger["status"] == "incomplete"
+    assert ledger["tiles_completed"] == []
+    assert len(ledger["attempts"]) == 1
