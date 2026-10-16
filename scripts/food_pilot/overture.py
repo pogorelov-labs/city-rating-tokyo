@@ -188,7 +188,7 @@ def extract(manifest, stations, pinned_metadata, budget):
                 identity = row.get('id')
                 if not isinstance(identity,str) or not identity:
                     raise ValueError('missing_provider_identity')
-                row = {k:v for k,v in row.items() if k != 'geometry'}
+                row = {**{k:v for k,v in row.items() if k != 'geometry'}, **coords}
                 if identity in seen:
                     if seen[identity] != row:
                         raise ValueError('conflicting_provider_identity')

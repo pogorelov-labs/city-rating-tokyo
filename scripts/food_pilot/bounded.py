@@ -34,10 +34,21 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 
 class Budget:
-    def __init__(self, directory, limits, manifest_hash, *, resume=False, opener=None):
+    def __init__(self, directory, limits, manifest_hash, *, resume=False, opener=None,
+                 absolute_deadline=None, identity_windows=None, completion_window=None):
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=True)
         self.limits = limits
+        self.absolute_deadline = self._utc(absolute_deadline) if absolute_deadline else None
+        self.identity_windows = {key: tuple(self._utc(v) for v in value)
+                                 for key, value in (identity_windows or {}).items()}
+        self.completion_window = tuple(self._utc(v) for v in completion_window) if completion_window else None
+        self.window_contract = {
+            'absolute_deadline': self.absolute_deadline.isoformat() if self.absolute_deadline else None,
+            'identity_windows': {key: [v.isoformat() for v in value]
+                                 for key, value in sorted(self.identity_windows.items())},
+            'completion_window': [v.isoformat() for v in self.completion_window] if self.completion_window else None,
+        }
         self.path = self.directory / 'ledger.json'
         self.lock = (self.directory / '.reader.lock').open('a')
         fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -52,6 +63,10 @@ class Budget:
             if self.ledger['manifest_sha256'] != manifest_hash or self.ledger['limits'] != limits:
                 self.close()
                 raise AcquisitionStopped('frozen_budget_changed')
+            if self.ledger.get('window_contract', self.window_contract) != self.window_contract:
+                self.close()
+                raise AcquisitionStopped('frozen_acquisition_window_changed')
+            self.ledger.setdefault('window_contract', self.window_contract)
             elapsed = (now - datetime.fromisoformat(self.ledger['started_at'])).total_seconds()
             if elapsed < 0:
                 self.close()
@@ -59,10 +74,16 @@ class Budget:
             for attempt in self.ledger['attempts']:
                 if attempt['status'] == 'pending':
                     attempt['status'] = 'interrupted'
+                    attempt['retry_disposition'] = 'retryable'
+                elif attempt['status'] == 'failed' and 'retry_disposition' not in attempt:
+                    # Older receipts did not persist this decision. Fail closed:
+                    # a resumed invocation must not infer permission to retry.
+                    attempt['retry_disposition'] = 'terminal'
         else:
             self.ledger = {'manifest_sha256': manifest_hash, 'limits': limits,
                            'started_at': now.isoformat(), 'attempts': [], 'charged_bytes': 0,
-                           'successful_pages': 0, 'row_groups': [], 'status': 'in_progress'}
+                           'successful_pages': 0, 'row_groups': [], 'status': 'in_progress',
+                           'window_contract': self.window_contract}
             elapsed = 0
         self.deadline = anchor + limits['wall_seconds'] - elapsed
         last_at = self.ledger['attempts'][-1]['at'] if self.ledger['attempts'] else None
@@ -98,11 +119,44 @@ class Budget:
     def _alarm(_signum, _frame):
         raise AcquisitionStopped('original_wall_deadline')
 
-    def remaining(self):
+    @staticmethod
+    def _utc(value):
+        parsed = datetime.fromisoformat(value.replace('Z', '+00:00')) if isinstance(value, str) else value
+        if parsed.tzinfo is None:
+            raise AcquisitionStopped('naive_acquisition_window')
+        return parsed.astimezone(timezone.utc)
+
+    def check_window(self, identity=None, *, completion=False):
+        now = datetime.now(timezone.utc)
+        if self.absolute_deadline is not None and now >= self.absolute_deadline:
+            raise AcquisitionStopped('absolute_source_deadline')
+        if completion and self.completion_window is not None:
+            earliest, latest = self.completion_window
+            if now < earliest or now >= latest:
+                raise AcquisitionStopped('confirmation_completion_window')
+        if identity is not None:
+            for prefix, (earliest, latest) in self.identity_windows.items():
+                if identity.startswith(prefix) and (now < earliest or now >= latest):
+                    raise AcquisitionStopped('confirmation_request_window')
+
+    def remaining(self, identity=None):
+        self.check_window(identity)
         remaining = self.deadline - time.monotonic()
         if remaining <= 0:
             raise AcquisitionStopped('original_wall_deadline')
+        if self.absolute_deadline is not None:
+            remaining = min(remaining, (self.absolute_deadline-datetime.now(timezone.utc)).total_seconds())
+        if identity is not None:
+            for prefix, (_earliest, latest) in self.identity_windows.items():
+                if identity.startswith(prefix):
+                    remaining = min(remaining, (latest-datetime.now(timezone.utc)).total_seconds())
+        if remaining <= 0:
+            raise AcquisitionStopped('absolute_acquisition_window')
         return remaining
+
+    def check_completion(self):
+        self.check_window(completion=True)
+        self.remaining()
 
     def persist(self):
         if self.retained()+len(encoded(self.ledger)) > self.limits['retained_bytes']:
@@ -123,8 +177,12 @@ class Budget:
 
     def fetch(self, identity, request, project, *, response_bytes=None, kind='range'):
         """Return projected/cached safe data; bounded unknown attempts stay charged."""
-        self.remaining()
+        self.remaining(identity)
         previous = [a for a in self.ledger['attempts'] if a['identity'] == identity]
+        terminal = [a for a in previous if a.get('retry_disposition') == 'terminal' or
+                    a.get('status') == 'failed' and a.get('retry_disposition') not in ('transient', 'retryable')]
+        if terminal:
+            raise RequestRejected(terminal[-1].get('error_type', 'TerminalRequestHistory'))
         complete = [a for a in previous if a['status'] == 'complete']
         if complete:
             if len(complete) != 1:
@@ -136,9 +194,9 @@ class Budget:
         maximum = self.limits.get('maximum_attempts_per_page', self.limits.get('maximum_attempts_per_range', 2))
         if previous and len(previous) < maximum:
             # A resumed interrupted retry also observes the frozen backoff.
-            time.sleep(min(2, self.remaining()))
+            time.sleep(min(2, self.remaining(identity)))
         while len(previous) < maximum:
-            self.remaining()
+            self.remaining(identity)
             if len(self.ledger['attempts']) >= self.limits['attempts']:
                 raise AcquisitionStopped('attempt_budget')
             if kind == 'page' and self.ledger['successful_pages'] >= self.limits['successful_pages']:
@@ -151,21 +209,22 @@ class Budget:
             if self.last_request is not None:
                 wait = self.limits['minimum_request_interval_seconds'] - (time.monotonic() - self.last_request)
                 if wait > 0:
-                    time.sleep(min(wait, self.remaining()))
+                    time.sleep(min(wait, self.remaining(identity)))
             attempt = {'identity': identity, 'status': 'pending', 'reserved_bytes': reservation,
-                       'at': datetime.now(timezone.utc).isoformat(), 'accounting': 'conservative_reservation'}
+                       'at': datetime.now(timezone.utc).isoformat(), 'accounting': 'conservative_reservation',
+                       'retry_disposition': 'pending'}
             self.ledger['attempts'].append(attempt)
             previous.append(attempt)
             self.ledger['charged_bytes'] += reservation
             self.persist()  # durable before opening a socket
             received, eof, retry = 0, False, False
             try:
-                timeout = min(self.limits['socket_seconds'], self.remaining())
+                timeout = min(self.limits['socket_seconds'], self.remaining(identity))
                 self.last_request = time.monotonic()
                 with self.opener(request, timeout=timeout) as response:
                     chunks = []
                     while True:
-                        self.remaining()
+                        self.remaining(identity)
                         if received == reservation:
                             # Exact-length range callers can validate this using
                             # Content-Range; ordinary pages require EOF below cap.
@@ -180,7 +239,7 @@ class Budget:
                         chunks.append(chunk)
                     raw = b''.join(chunks)
                     result = project(raw, response)
-                    self.remaining()
+                    self.remaining(identity)
                 cached = encoded(result)
                 if self.retained() + len(cached) > self.limits['retained_bytes']:
                     raise AcquisitionStopped('retained_byte_budget')
@@ -190,24 +249,26 @@ class Budget:
                     stream.flush()
                     import os
                     os.fsync(stream.fileno())
-                self.remaining()
+                self.remaining(identity)
                 attempt.update(status='complete', cache=cache,
                                cache_sha256=hashlib.sha256(cached).hexdigest(),
-                               response_sha256=hashlib.sha256(raw).hexdigest())
+                               response_sha256=hashlib.sha256(raw).hexdigest(),
+                               retry_disposition='none')
                 if kind == 'page':
                     self.ledger['successful_pages'] += 1
                 # Successful exact-range projection establishes complete bytes.
                 eof = True
             except urllib.error.HTTPError as exc:
-                attempt.update(status='failed', http_status=exc.code, error_type='HTTPError')
                 retry = 500 <= exc.code <= 599
+                attempt.update(status='failed', http_status=exc.code, error_type='HTTPError',
+                               retry_disposition='transient' if retry else 'terminal')
             except (urllib.error.URLError, TimeoutError) as exc:
-                attempt.update(status='failed', error_type=type(exc).__name__)
                 retry = True
+                attempt.update(status='failed', error_type=type(exc).__name__, retry_disposition='transient')
             except Exception as exc:
-                attempt.update(status='failed', error_type=type(exc).__name__)
+                attempt.update(status='failed', error_type=type(exc).__name__, retry_disposition='terminal')
             except BaseException as exc:
-                attempt.update(status='interrupted', error_type=type(exc).__name__)
+                attempt.update(status='interrupted', error_type=type(exc).__name__, retry_disposition='retryable')
                 raise
             finally:
                 attempt['observed_bytes'] = received
@@ -220,7 +281,7 @@ class Budget:
             if not retry:
                 raise RequestRejected(attempt.get('error_type', 'UnknownRequestError'))
             if len(previous) < maximum:
-                time.sleep(min(2, self.remaining()))
+                time.sleep(min(2, self.remaining(identity)))
         raise AcquisitionStopped('logical_request_attempt_budget')
 
 

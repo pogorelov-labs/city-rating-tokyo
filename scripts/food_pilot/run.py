@@ -47,6 +47,24 @@ def primary_gate(path, manifest_hash, manifest):
         raise AcquisitionStopped('primary_candidate_not_frozen')
 
 
+def validate_result_windows(result, windows):
+    by_slug = {key.removeprefix('hp:').removesuffix(':'): (start, end)
+               for key, (start, end) in windows.items()}
+    for station in result.get('stations', []):
+        window = by_slug.get(station.get('slug'))
+        if window is None or station.get('status') == 'missing':
+            continue
+        earliest, latest = window
+        stamps = [station.get('finished_at')]
+        stamps.extend(page.get('received_at') for page in station.get('pages', []))
+        for stamp in stamps:
+            if stamp is None:
+                continue
+            received = datetime.fromisoformat(stamp.replace('Z', '+00:00'))
+            if received.tzinfo is None or not earliest <= received.astimezone(timezone.utc) < latest:
+                raise AcquisitionStopped('confirmation_result_outside_candidate_window')
+
+
 def phase_sites(manifest, phase, prior=None, now=None):
     core = manifest['core']['stations']
     if phase.endswith('development'):
@@ -120,10 +138,13 @@ def main():
     if datetime.now(timezone.utc) >= datetime.fromisoformat(manifest['source_window']['core_hp_complete_before'].replace('Z','+00:00')):
         raise AcquisitionStopped('frozen_pilot_window_expired')
     prior = json.loads(args.prior_prescreen.read_text()) if args.prior_prescreen else None
+    checkpoint = None
     if prior is not None:
         if prior.get('manifest_sha256') != manifest_hash or prior.get('phase') != 'hp_prescreen':
             raise AcquisitionStopped('wrong_prescreen_provenance')
         prior = prior['result']
+    if args.phase == 'hp_confirmation':
+        checkpoint = confirmation_checkpoint(prior)
     sites = phase_sites(manifest, args.phase, prior)
     phase_dir = root/args.phase
     phase_dir.mkdir(parents=True, exist_ok=True)
@@ -134,7 +155,15 @@ def main():
     key = os.environ.get('HOTPEPPER_API_KEY') if args.phase.startswith('hp_') else None
     if args.phase.startswith('hp_') and not key:
         raise AcquisitionStopped('scoped_hp_credential_unavailable')
-    with Budget(phase_dir, manifest['budgets'][args.phase], manifest_hash, resume=args.resume) as budget:
+    windows = {}
+    completion_window = None
+    if checkpoint and checkpoint['candidates']:
+        windows = {f"hp:{row['slug']}:": (row['eligible_from'], row['eligible_until'])
+                   for row in checkpoint['candidates']}
+        completion_window = (checkpoint['batch_eligible_from'], checkpoint['batch_eligible_until'])
+    with Budget(phase_dir, manifest['budgets'][args.phase], manifest_hash, resume=args.resume,
+                absolute_deadline=manifest['source_window']['core_hp_complete_before'],
+                identity_windows=windows, completion_window=completion_window) as budget:
         try:
             if args.phase.startswith('hp_'):
                 result = acquire_sites(sites,budget,key)
@@ -148,6 +177,9 @@ def main():
                 if pinned.get('manifest_sha256')!=manifest_hash or pinned.get('phase')!='overture_metadata':
                     raise AcquisitionStopped('metadata_provenance')
                 result=extract(manifest,sites,pinned['result'],budget)
+            budget.check_completion()
+            if checkpoint:
+                validate_result_windows(result, windows)
         except Exception as exc:
             result={'status':'incomplete','error_type':type(exc).__name__}
         envelope={'phase':args.phase,'manifest_sha256':manifest_hash,'result':result}
