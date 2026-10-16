@@ -73,7 +73,74 @@ def test_bad_coordinates_keep_explicit_state_and_stop_remaining_sites(tmp_path):
 @pytest.mark.parametrize('total,shops,status',[(0,[],'complete_provider_zero'),(1,[{'id':'outside','lat':'35.708','lng':'139.7'}],'complete_800m_zero')])
 def test_distinct_complete_zero_states(tmp_path,total,shops,status):
     with Budget(tmp_path,limits(),'manifest',opener=lambda *a,**k:Response(hp_page(total,1,shops))) as budget:
-        assert acquire_station(STATION,budget,'fake')['status']==status
+        result=acquire_station(STATION,budget,'fake')
+        assert result['status']==status
+        assert result['pages'][0]['diagnostic']['http_status']==200
+        assert result['pages'][0]['diagnostic']['pagination_counts']=={
+            'results_available':total,'results_start':1,'results_returned':len(shops)}
+
+
+def test_hp_api_documented_empty_page_shape_is_accepted_without_relaxing_counts():
+    result=page_projection(hp_page(0,1,[]),Response(b''))
+    assert result['total']==0 and result['returned']==0 and result['shops']==[]
+    assert result['diagnostic']['pagination_types']=={
+        'results_available':'integer','results_start':'integer','results_returned':'string'}
+
+
+def test_hp_provider_error_and_malformed_pagination_expose_only_safe_diagnostics(tmp_path):
+    body=json.dumps({'results':{'error':[{'code':2000,'message':'PRIVATE PROVIDER DETAIL'}]}}).encode()
+    with Budget(tmp_path/'provider-error',limits(),'manifest',opener=lambda *a,**k:Response(body)) as budget:
+        result=acquire_sites([STATION,{**STATION,'slug':'later'}],budget,'fake')
+    assert result['status']=='incomplete'
+    row=result['stations'][0]
+    assert row['error_type']=='HPApiError' and row['status']=='error'
+    assert row['error_diagnostic']=={
+        'http_status':200,'payload_type':'object','body_bytes':len(body),
+        'pagination_types':{'results_available':'null','results_start':'null','results_returned':'null'},
+        'shop_type':'null','provider_error_present':True,'provider_error_codes':['2000'],
+        'parser_reason':'provider_error'}
+    assert result['stations'][1]['status']=='missing'
+    ledger=(tmp_path/'provider-error'/'ledger.json').read_text()
+    assert 'PRIVATE PROVIDER DETAIL' not in ledger and 'fake' not in ledger
+
+    malformed=json.dumps({'results':{'results_available':'many','results_start':'1',
+                                     'results_returned':0,'shop':[]}}).encode()
+    with pytest.raises(PaginationChanged) as failure:
+        page_projection(malformed,Response(b''))
+    assert failure.value.reason=='invalid_results_available'
+    assert failure.value.safe_diagnostic['pagination_types']=={
+        'results_available':'string','results_start':'string','results_returned':'integer'}
+    assert failure.value.safe_diagnostic['pagination_counts']=={'results_start':1,'results_returned':0}
+    assert 'many' not in json.dumps(failure.value.safe_diagnostic)
+
+
+def test_hp_changed_pagination_diagnostic_has_no_venue_data(tmp_path):
+    first=[{'id':str(i),'lat':'35.7','lng':'139.7'} for i in range(100)]
+    pages=[hp_page(101,1,first),hp_page(102,101,[{'id':'private-venue-id','lat':'35.7','lng':'139.7'}])]
+    with Budget(tmp_path,limits(),'manifest',opener=lambda *a,**k:Response(pages.pop(0))) as budget:
+        result=acquire_sites([STATION],budget,'fake')
+    assert result['status']=='incomplete'
+    row=result['stations'][0]
+    assert row['status']=='truncated' and row['error_type']=='PaginationChanged'
+    assert row['error_diagnostic']['parser_reason']=='total_changed_during_pagination'
+    assert row['error_diagnostic']['pagination_counts']=={
+        'results_available':102,'results_start':101,'results_returned':1}
+    assert 'private-venue-id' not in json.dumps(result)
+
+
+def test_budget_persists_only_allowlisted_diagnostic_fields(tmp_path):
+    class ParserFailure(ValueError):
+        safe_diagnostic={'http_status':200,'parser_reason':'invalid_json','message':'private detail',
+                         'url':'https://secret.invalid/?key=secret','pagination_counts':{'results_start':2,
+                         'venue_id':123,'results_available':10**20},'provider_error_codes':['2000','SECRET']}
+    with Budget(tmp_path,limits(),'manifest',opener=lambda *a,**k:Response(b'{}')) as budget:
+        with pytest.raises(RequestRejected):
+            budget.fetch('page-safe-diagnostic',object(),lambda raw,response:(_ for _ in ()).throw(ParserFailure()),kind='page')
+    ledger=(tmp_path/'ledger.json').read_text()
+    assert 'private detail' not in ledger and 'secret.invalid' not in ledger and 'SECRET' not in ledger
+    diagnostic=json.loads(ledger)['attempts'][0]['diagnostic']
+    assert diagnostic=={'http_status':200,'parser_reason':'invalid_json',
+                        'pagination_counts':{'results_start':2},'provider_error_codes':['2000']}
 
 
 def test_budget_pending_interrupt_charged_on_resume_and_replay(tmp_path,monkeypatch):
@@ -106,6 +173,8 @@ def test_terminal_http_failure_cannot_be_retried_after_resume(tmp_path, code):
             budget.fetch('page-terminal', object(), lambda raw, response: {}, kind='page')
     ledger=json.loads((tmp_path/'ledger.json').read_text())
     assert ledger['attempts'][0]['retry_disposition']=='terminal'
+    assert ledger['attempts'][0]['diagnostic']=={'http_status':code,'parser_reason':'http_error'}
+    assert 'redacted.invalid' not in json.dumps(ledger)
     with pytest.raises(RequestRejected):
         with Budget(tmp_path, limits(), 'manifest', resume=True,
                     opener=lambda *a, **k: calls.append(2)) as budget:

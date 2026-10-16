@@ -8,6 +8,7 @@ from __future__ import annotations
 import fcntl
 import hashlib
 import json
+import re
 import signal
 import time
 import urllib.error
@@ -23,9 +24,60 @@ class AcquisitionStopped(RuntimeError):
 
 
 class RequestRejected(AcquisitionStopped):
-    def __init__(self, error_type):
+    def __init__(self, error_type, diagnostic=None):
         super().__init__('request_or_contract_rejected')
         self.error_type = error_type
+        self.diagnostic = diagnostic
+
+
+_DIAGNOSTIC_TYPES = {'null', 'boolean', 'integer', 'number', 'string', 'array', 'object', 'other'}
+_DIAGNOSTIC_PAGINATION = {'results_available', 'results_start', 'results_returned'}
+_DIAGNOSTIC_PROVIDER_CODES = {'1000', '2000', '3000'}
+
+
+def safe_diagnostic(value):
+    """Copy only bounded structural diagnostics; never persist arbitrary parser data."""
+    if not isinstance(value, dict):
+        return None
+    result = {}
+    status = value.get('http_status')
+    if type(status) is int and 100 <= status <= 599:
+        result['http_status'] = status
+    reason = value.get('parser_reason')
+    if isinstance(reason, str) and re.fullmatch(r'[a-z][a-z0-9_]{0,63}', reason):
+        result['parser_reason'] = reason
+    body_bytes = value.get('body_bytes')
+    if type(body_bytes) is int and 0 <= body_bytes <= 1_048_576:
+        result['body_bytes'] = body_bytes
+    payload_type = value.get('payload_type')
+    if isinstance(payload_type, str) and payload_type in _DIAGNOSTIC_TYPES | {'invalid_json'}:
+        result['payload_type'] = payload_type
+    for key in ('pagination_types', 'pagination_counts'):
+        fields = value.get(key)
+        if isinstance(fields, dict):
+            if key == 'pagination_types':
+                clean = {name: kind for name, kind in fields.items()
+                         if name in _DIAGNOSTIC_PAGINATION and isinstance(kind, str) and kind in _DIAGNOSTIC_TYPES}
+            else:
+                clean = {name: count for name, count in fields.items()
+                         if name in _DIAGNOSTIC_PAGINATION and type(count) is int and 0 <= count <= 1_000_000}
+            if clean:
+                result[key] = clean
+    shop_type = value.get('shop_type')
+    if isinstance(shop_type, str) and shop_type in _DIAGNOSTIC_TYPES:
+        result['shop_type'] = shop_type
+    shop_count = value.get('shop_count')
+    if type(shop_count) is int and 0 <= shop_count <= 1000:
+        result['shop_count'] = shop_count
+    if type(value.get('provider_error_present')) is bool:
+        result['provider_error_present'] = value['provider_error_present']
+    codes = value.get('provider_error_codes')
+    if isinstance(codes, list):
+        clean_codes = sorted({code for code in codes
+                              if isinstance(code, str) and code in _DIAGNOSTIC_PROVIDER_CODES})
+        if clean_codes:
+            result['provider_error_codes'] = clean_codes
+    return result or None
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -259,14 +311,22 @@ class Budget:
                 # Successful exact-range projection establishes complete bytes.
                 eof = True
             except urllib.error.HTTPError as exc:
-                retry = 500 <= exc.code <= 599
-                attempt.update(status='failed', http_status=exc.code, error_type='HTTPError',
-                               retry_disposition='transient' if retry else 'terminal')
+                status = exc.code if type(exc.code) is int and 100 <= exc.code <= 599 else None
+                retry = status is not None and 500 <= status <= 599
+                attempt.update(status='failed', error_type='HTTPError',
+                               retry_disposition='transient' if retry else 'terminal',
+                               diagnostic=safe_diagnostic({'http_status': status, 'parser_reason': 'http_error'}))
+                if status is not None:
+                    attempt['http_status'] = status
             except (urllib.error.URLError, TimeoutError) as exc:
                 retry = True
                 attempt.update(status='failed', error_type=type(exc).__name__, retry_disposition='transient')
             except Exception as exc:
                 attempt.update(status='failed', error_type=type(exc).__name__, retry_disposition='terminal')
+                diagnostic = getattr(exc, 'safe_diagnostic', None)
+                diagnostic = safe_diagnostic(diagnostic)
+                if diagnostic:
+                    attempt['diagnostic'] = diagnostic
             except BaseException as exc:
                 attempt.update(status='interrupted', error_type=type(exc).__name__, retry_disposition='retryable')
                 raise
@@ -279,7 +339,8 @@ class Budget:
             if attempt['status'] == 'complete':
                 return result
             if not retry:
-                raise RequestRejected(attempt.get('error_type', 'UnknownRequestError'))
+                raise RequestRejected(attempt.get('error_type', 'UnknownRequestError'),
+                                      attempt.get('diagnostic'))
             if len(previous) < maximum:
                 time.sleep(min(2, self.remaining(identity)))
         raise AcquisitionStopped('logical_request_attempt_budget')
