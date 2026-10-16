@@ -231,12 +231,21 @@ def test_confirmation_window_checked_for_each_request_and_completion(tmp_path, m
             budget.check_completion()
 
 
-def test_confirmation_result_timestamp_cannot_escape_candidate_window():
-    windows={'hp:test:':(datetime(2026,10,16,12,tzinfo=timezone.utc),datetime(2026,10,19,12,tzinfo=timezone.utc))}
-    result={'stations':[{'slug':'test','status':'complete_800m_zero','finished_at':'2026-10-19T12:00:00+00:00',
-                         'pages':[{'received_at':'2026-10-18T12:00:00+00:00'}]}]}
+def test_confirmation_result_validator_accepts_checkpoint_strings_and_rejects_expiry():
+    first=datetime(2026,10,16,12,tzinfo=timezone.utc)
+    checkpoint=confirmation_checkpoint({'stations':[{'slug':'test','status':'complete_provider_zero',
+                                                     'finished_at':first.isoformat()}]})
+    candidate=checkpoint['candidates'][0]
+    windows={'hp:test:':(candidate['eligible_from'],candidate['eligible_until'])}
+    valid={'stations':[{'slug':'test','status':'complete_800m_zero',
+                        'finished_at':(first+timedelta(hours=25)).isoformat(),
+                        'pages':[{'received_at':(first+timedelta(hours=24,minutes=1)).isoformat()}]}]}
+    validate_result_windows(valid,windows)
+    expired={'stations':[{'slug':'test','status':'complete_800m_zero',
+                          'finished_at':(first+timedelta(hours=72)).isoformat(),
+                          'pages':[{'received_at':(first+timedelta(hours=24,minutes=1)).isoformat()}]}]}
     with pytest.raises(AcquisitionStopped, match='confirmation_result_outside'):
-        validate_result_windows(result,windows)
+        validate_result_windows(expired,windows)
 
 
 def test_confirmation_requires_real_window_and_never_promotes_first_zero():

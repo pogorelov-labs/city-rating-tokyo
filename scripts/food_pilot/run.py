@@ -48,7 +48,13 @@ def primary_gate(path, manifest_hash, manifest):
 
 
 def validate_result_windows(result, windows):
-    by_slug = {key.removeprefix('hp:').removesuffix(':'): (start, end)
+    def utc(value):
+        parsed = datetime.fromisoformat(value.replace('Z', '+00:00')) if isinstance(value, str) else value
+        if parsed.tzinfo is None:
+            raise AcquisitionStopped('naive_confirmation_result_window')
+        return parsed.astimezone(timezone.utc)
+
+    by_slug = {key.removeprefix('hp:').removesuffix(':'): (utc(start), utc(end))
                for key, (start, end) in windows.items()}
     for station in result.get('stations', []):
         window = by_slug.get(station.get('slug'))
