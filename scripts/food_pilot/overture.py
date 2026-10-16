@@ -43,9 +43,13 @@ def fetch_range(budget, url, start, end=None, *, etag=None, size=None, suffix=Fa
     header = f'bytes=-{start}' if suffix else f'bytes={start}-{end}'
     request = urllib.request.Request(url, headers={'Range': header, 'Accept-Encoding':'identity',
                                     **({'If-Match':etag} if etag else {})})
-    identity = 'ov:'+url.removeprefix(BASE)+':'+header
+    identity = range_identity(url, header)
     return budget.fetch(identity, request, range_projection(start, end, etag=etag, size=size, suffix=suffix),
                         response_bytes=start if suffix else end-start+1)
+
+
+def range_identity(url, header):
+    return 'ov:'+url.removeprefix(BASE)+':'+header
 
 
 def metadata(manifest, budget):
@@ -92,8 +96,10 @@ def metadata(manifest, budget):
                 value = getattr(stats, fn, None) if stats is not None and stats.has_min_max and stats.null_count == 0 else None
                 extents.append(value if isinstance(value, (int,float)) and math.isfinite(value) else None)
             groups.append({'index':index, 'rows':group.num_rows, 'bounds':extents})
+        footer_header = f"bytes={tail['size']-footer_size}-{tail['size']-1}"
         objects.append({'url':url, 'etag':tail['etag'], 'size':tail['size'],
-                        'footer_b64':footer['body_b64'], 'groups':groups})
+                        'footer_ref':budget.cache_reference(range_identity(url,footer_header)),
+                        'groups':groups})
     return {'release':release, 'objects':objects, 'complete':True}
 
 
@@ -111,9 +117,15 @@ def selected_groups(item, stations):
 
 
 class Ranges(io.RawIOBase):
-    def __init__(self, item, budget):
+    def __init__(self, item, budget, metadata_cache=None):
         self.item, self.budget = item, budget
-        self.footer = base64.b64decode(item['footer_b64'])
+        if 'footer_ref' in item:
+            if metadata_cache is None:
+                raise ValueError('missing_metadata_cache_for_footer_reference')
+            self.footer = base64.b64decode(metadata_cache.resolve_reference(item['footer_ref'])['body_b64'])
+        else:
+            # Compatibility for the existing offline duplicate-identity unit fixture.
+            self.footer = base64.b64decode(item['footer_b64'])
         self.position = 0
 
     def readable(self): return True
@@ -158,7 +170,7 @@ def is_food(hierarchy, contract):
     return (len(h)>1 and h[0] == contract['hierarchy_prefix'] and h[1] in contract['second_level']) or bool(set(h)&set(contract['any_hierarchy_level']))
 
 
-def extract(manifest, stations, pinned_metadata, budget):
+def extract(manifest, stations, pinned_metadata, budget, metadata_cache=None):
     import pyarrow.parquet as pq
     if not pinned_metadata.get('complete') or pinned_metadata['release'] != manifest['overture']['release']:
         raise ValueError('incomplete_metadata')
@@ -171,7 +183,7 @@ def extract(manifest, stations, pinned_metadata, budget):
         for index in selected_groups(item, stations):
             identity = item['url']+':group:'+str(index)
             budget.group(identity)
-            reader = Ranges(item, budget)
+            reader = Ranges(item, budget, metadata_cache)
             table = pq.ParquetFile(reader, pre_buffer=False).read_row_group(index, columns=COLUMNS, use_threads=False)
             expected = next(g['rows'] for g in item['groups'] if g['index']==index)
             if table.num_rows != expected:

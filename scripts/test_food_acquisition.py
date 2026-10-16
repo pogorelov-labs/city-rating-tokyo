@@ -1,4 +1,6 @@
 """Offline target acquisition contracts: no provider or credential access."""
+import base64
+import hashlib
 import io
 import json
 import struct
@@ -10,10 +12,11 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from food_pilot import bounded
+from food_pilot.acquire_osm import encoded
 from food_pilot.bounded import Budget, ReplayBudget, AcquisitionStopped, RequestRejected
 from food_pilot.hotpepper import acquire_station, page_projection, BadCoordinates, PaginationChanged, confirmation_checkpoint, acquire_sites
-from food_pilot.overture import range_projection, wkb_point, selected_groups, is_food, extract
-from food_pilot.run import phase_sites, primary_gate, checked_gate, validate_result_windows
+from food_pilot.overture import range_projection, wkb_point, selected_groups, is_food, extract, Ranges
+from food_pilot.run import phase_sites, primary_gate, checked_gate, validate_result_windows, immutable_result
 
 STATION={'slug':'test','lat':35.7,'lng':139.7}
 
@@ -315,8 +318,10 @@ def test_extract_rejects_duplicate_provider_id_at_different_normalized_points(mo
         'release':'r',
         'objects':[{
             'url':'https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/r/p.parquet',
+            'etag':'fixture-etag','size':1024,
             'groups':[{'index':0,'rows':2,'bounds':[None]*4}],
-            'footer_b64':'',
+            'footer_ref':{'identity':'fixture-footer','cache':'response-00001.json',
+                          'cache_sha256':'fixture-cache-sha','response_sha256':'fixture-response-sha'},
         }],
     }
     manifest={'overture':{'release':'r','objects':[metadata['objects'][0]['url']],
@@ -325,8 +330,82 @@ def test_extract_rejects_duplicate_provider_id_at_different_normalized_points(mo
     class FakeBudget:
         def group(self, identity): pass
         def remaining(self): pass
+    class FakeCache:
+        def resolve_reference(self, reference): return {'body_b64':''}
     with pytest.raises(ValueError, match='conflicting_provider_identity'):
-        extract(manifest,stations,metadata,FakeBudget())
+        extract(manifest,stations,metadata,FakeBudget(),FakeCache())
+
+
+def test_compact_footer_references_replay_and_fit_actual_metadata_retention(tmp_path):
+    # Match the failed phase's observed cache footprint and full metadata shape:
+    # 16 object identities and 4,864 row-group records, with cache bytes retained once.
+    target_cache_bytes=40_214_217
+    q,r=divmod(target_cache_bytes,16)
+    attempts=[]; objects=[]
+    for index in range(16):
+        filename=f'response-{index+1:05d}.json'
+        wanted=q+(index<r)
+        prefix=b'{"body_b64":"'; suffix=b'"}'
+        raw=prefix+b'A'*(wanted-len(prefix)-len(suffix))+suffix
+        (tmp_path/filename).write_bytes(raw)
+        identity=f'ov:release/object-{index}.parquet:bytes=100-200'
+        cache_sha=hashlib.sha256(raw).hexdigest()
+        response_sha=hashlib.sha256(f'response-{index}'.encode()).hexdigest()
+        attempts.append({'identity':identity,'status':'complete','cache':filename,
+                         'cache_sha256':cache_sha,'response_sha256':response_sha})
+        objects.append({'url':f'https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/object-{index}.parquet',
+                        'etag':f'etag-{index}','size':100000,
+                        'footer_ref':{'identity':identity,'cache':filename,'cache_sha256':cache_sha,
+                                      'response_sha256':response_sha},
+                        'groups':[{'index':g,'rows':100,'bounds':[139.0,35.0,140.0,36.0]} for g in range(304)]})
+    ledger={'limits':limits(),'attempts':attempts,'row_groups':[]}
+    (tmp_path/'ledger.json').write_bytes(encoded(ledger))
+    compact={'phase':'overture_metadata','manifest_sha256':'frozen',
+             'result':{'release':'2026-09-23.1','objects':objects,'complete':True}}
+    compact_bytes=encoded(compact)
+    assert len(objects)==16 and sum(len(x['groups']) for x in objects)==4864
+    assert sum((tmp_path/f'response-{i+1:05d}.json').stat().st_size for i in range(16))==target_cache_bytes
+    cache=ReplayBudget(tmp_path)
+    for item in objects:
+        assert cache.resolve_reference(item['footer_ref'])['body_b64']
+    used=sum(p.stat().st_size for p in tmp_path.rglob('*') if p.is_file())
+    cap=used+len(compact_bytes)
+    result_path,_=immutable_result(tmp_path,compact,cap)
+    assert result_path.read_bytes()==compact_bytes
+    assert sum(p.stat().st_size for p in tmp_path.rglob('*') if p.is_file())==cap
+
+
+def test_compact_metadata_retention_cap_failure_is_truthful(tmp_path):
+    cache=tmp_path/'response-00001.json'; cache.write_bytes(b'{"body_b64":"AAAA"}')
+    value={'phase':'overture_metadata','manifest_sha256':'frozen',
+           'result':{'complete':True,'objects':[{'url':'object-0','footer_ref':{'cache_sha256':'x'},
+                       'groups':[{'index':i,'rows':100,'bounds':[None]*4} for i in range(304)]}]}}
+    used=sum(p.stat().st_size for p in tmp_path.rglob('*') if p.is_file())
+    with pytest.raises(AcquisitionStopped,match='retained_result_budget'):
+        immutable_result(tmp_path,value,used+len(encoded(value))-1)
+    assert not list(tmp_path.glob('result-*.json'))
+
+
+def test_ranges_replay_resolves_compacted_footer_from_original_cache(tmp_path):
+    footer=b'PAR1immutable-footer'
+    projection={'body_b64':base64.b64encode(footer).decode()}
+    cache_raw=encoded(projection); cache_sha=hashlib.sha256(cache_raw).hexdigest()
+    response_sha=hashlib.sha256(footer).hexdigest()
+    (tmp_path/'response-00001.json').write_bytes(cache_raw)
+    ledger={'limits':limits(),'attempts':[{'identity':'footer-range','status':'complete',
+             'cache':'response-00001.json','cache_sha256':cache_sha,'response_sha256':response_sha}],
+            'row_groups':[]}
+    (tmp_path/'ledger.json').write_bytes(encoded(ledger))
+    item={'url':'https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/r/p.parquet',
+          'etag':'tag','size':len(footer)+10,
+          'footer_ref':{'identity':'footer-range','cache':'response-00001.json',
+                        'cache_sha256':cache_sha,'response_sha256':response_sha}}
+    class NoRequests:
+        def remaining(self): return None
+        def fetch(self,*args,**kwargs): raise AssertionError('footer replay must not issue a request')
+    ranges=Ranges(item,NoRequests(),ReplayBudget(tmp_path))
+    ranges.seek(item['size']-len(footer))
+    assert ranges.read(len(footer))==footer
 
 
 def test_frozen_food_taxonomy_does_not_substitute_nightlife():

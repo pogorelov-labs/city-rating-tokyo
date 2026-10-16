@@ -284,6 +284,20 @@ class Budget:
                 time.sleep(min(2, self.remaining(identity)))
         raise AcquisitionStopped('logical_request_attempt_budget')
 
+    def cache_reference(self, identity):
+        """Return a compact, ledger-bound reference to one completed projection."""
+        records = [a for a in self.ledger['attempts']
+                   if a['identity'] == identity and a['status'] == 'complete']
+        if len(records) != 1:
+            raise AcquisitionStopped('missing_unique_cached_response')
+        record = records[0]
+        raw = (self.directory / record['cache']).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != record['cache_sha256']:
+            raise AcquisitionStopped('cached_response_hash')
+        return {'identity': identity, 'cache': record['cache'],
+                'cache_sha256': record['cache_sha256'],
+                'response_sha256': record['response_sha256']}
+
 
 class ReplayBudget:
     """Read verified completed projections/ranges only; no network or new budget."""
@@ -305,5 +319,37 @@ class ReplayBudget:
             raise AcquisitionStopped('missing_complete_cached_response')
         raw = (self.directory/records[0]['cache']).read_bytes()
         if hashlib.sha256(raw).hexdigest() != records[0]['cache_sha256']:
+            raise AcquisitionStopped('cached_response_hash')
+        return json.loads(raw)
+
+    def cache_reference(self, identity):
+        records = [a for a in self.ledger['attempts']
+                   if a['identity'] == identity and a['status'] == 'complete']
+        if len(records) != 1:
+            raise AcquisitionStopped('missing_unique_cached_response')
+        record = records[0]
+        reference = {'identity': identity, 'cache': record['cache'],
+                     'cache_sha256': record['cache_sha256'],
+                     'response_sha256': record['response_sha256']}
+        self.resolve_reference(reference)
+        return reference
+
+    def resolve_reference(self, reference):
+        """Resolve a content-addressed projection without network or new budget."""
+        if not isinstance(reference, dict) or set(reference) != {
+                'identity', 'cache', 'cache_sha256', 'response_sha256'}:
+            raise AcquisitionStopped('invalid_cache_reference')
+        if not isinstance(reference['cache'], str) or Path(reference['cache']).name != reference['cache']:
+            raise AcquisitionStopped('invalid_cache_reference')
+        records = [a for a in self.ledger['attempts']
+                   if a['identity'] == reference['identity'] and a['status'] == 'complete']
+        if len(records) != 1:
+            raise AcquisitionStopped('missing_complete_cached_response')
+        record = records[0]
+        if any(record.get(key) != reference[key]
+               for key in ('cache', 'cache_sha256', 'response_sha256')):
+            raise AcquisitionStopped('cache_reference_mismatch')
+        raw = (self.directory / record['cache']).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != record['cache_sha256']:
             raise AcquisitionStopped('cached_response_hash')
         return json.loads(raw)

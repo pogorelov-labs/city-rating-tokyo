@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .acquire_osm import encoded
-from .bounded import AcquisitionStopped, Budget
+from .bounded import AcquisitionStopped, Budget, ReplayBudget
 from .hotpepper import acquire_sites, confirmation_checkpoint
 from .overture import metadata, extract
 
@@ -182,7 +182,8 @@ def main():
                 pinned=json.loads(args.overture_metadata.read_text())
                 if pinned.get('manifest_sha256')!=manifest_hash or pinned.get('phase')!='overture_metadata':
                     raise AcquisitionStopped('metadata_provenance')
-                result=extract(manifest,sites,pinned['result'],budget)
+                metadata_cache=ReplayBudget(args.overture_metadata.parent)
+                result=extract(manifest,sites,pinned['result'],budget,metadata_cache)
             budget.check_completion()
             if checkpoint:
                 validate_result_windows(result, windows)
