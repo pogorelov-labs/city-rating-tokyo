@@ -27,6 +27,9 @@ def checked_manifest(path):
             raise AcquisitionStopped('unapproved_code_path')
         if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
             raise AcquisitionStopped('code_changed_after_freeze')
+    runtime_files = {str(p.relative_to(ROOT)) for p in (ROOT/'scripts'/'food_pilot').glob('*.py')}
+    if set(manifest['code_sha256']) != runtime_files:
+        raise AcquisitionStopped('incomplete_runtime_code_hash_map')
     return manifest, hashlib.sha256(raw).hexdigest()
 
 
@@ -119,6 +122,29 @@ def immutable_result(directory, value, retained_limit):
     return path, digest
 
 
+def overture_metadata_input(args, manifest, manifest_hash):
+    """Read ordinary pinned metadata or explicit cache-only recovery admission."""
+    recovery_paths = (args.cache_only_admission, args.cache_only_source_manifest,
+                      args.cache_only_owner_exception, args.cache_only_root_release)
+    if any(recovery_paths):
+        if args.phase != 'overture_development' or not all(recovery_paths):
+            raise AcquisitionStopped('invalid_cache_only_recovery_scope')
+        if args.overture_metadata is not None:
+            raise AcquisitionStopped('conflicting_metadata_inputs')
+        from .recovery import load_admitted_metadata
+        return load_admitted_metadata(admission_path=args.cache_only_admission,
+            source_manifest_path=args.cache_only_source_manifest,
+            downstream_manifest=manifest, downstream_manifest_sha=manifest_hash,
+            owner_exception_path=args.cache_only_owner_exception,
+            root_release_path=args.cache_only_root_release)
+    if args.overture_metadata is None:
+        raise AcquisitionStopped('missing_pinned_metadata')
+    pinned = json.loads(args.overture_metadata.read_text())
+    if pinned.get('manifest_sha256') != manifest_hash or pinned.get('phase') != 'overture_metadata':
+        raise AcquisitionStopped('metadata_provenance')
+    return pinned['result'], ReplayBudget(args.overture_metadata.parent)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', type=Path, required=True)
@@ -129,7 +155,17 @@ def main():
     parser.add_argument('--primary-freeze', type=Path)
     parser.add_argument('--prior-prescreen', type=Path)
     parser.add_argument('--overture-metadata', type=Path)
+    parser.add_argument('--cache-only-admission', type=Path)
+    parser.add_argument('--cache-only-source-manifest', type=Path)
+    parser.add_argument('--cache-only-owner-exception', type=Path)
+    parser.add_argument('--cache-only-root-release', type=Path)
     args = parser.parse_args()
+    recovery_args = (args.cache_only_admission, args.cache_only_source_manifest,
+                     args.cache_only_owner_exception, args.cache_only_root_release)
+    if any(recovery_args) and (args.phase != 'overture_development' or not all(recovery_args)):
+        parser.error('cache-only recovery is available only for overture_development with all four receipts/paths')
+    if all(recovery_args) and args.overture_metadata is not None:
+        parser.error('choose ordinary pinned metadata or cache-only admission, not both')
     root = args.output_root.resolve()
     if root.is_relative_to(ROOT):
         parser.error('Raw pilot data must stay outside git')
@@ -177,13 +213,8 @@ def main():
                 result = metadata(manifest,budget)
                 result['status']='complete'
             else:
-                if args.overture_metadata is None:
-                    raise AcquisitionStopped('missing_pinned_metadata')
-                pinned=json.loads(args.overture_metadata.read_text())
-                if pinned.get('manifest_sha256')!=manifest_hash or pinned.get('phase')!='overture_metadata':
-                    raise AcquisitionStopped('metadata_provenance')
-                metadata_cache=ReplayBudget(args.overture_metadata.parent)
-                result=extract(manifest,sites,pinned['result'],budget,metadata_cache)
+                pinned_result, metadata_cache = overture_metadata_input(args, manifest, manifest_hash)
+                result=extract(manifest,sites,pinned_result,budget,metadata_cache)
             budget.check_completion()
             if checkpoint:
                 validate_result_windows(result, windows)
