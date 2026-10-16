@@ -31,6 +31,8 @@ SOURCE_V4_MANIFEST_SHA256 = '43a71f74f7e4cfc400e6de74454435f2be8496ccb00060cdf55
 SOURCE_V4_LEDGER_SHA256 = 'b18fe378893e2a88cf306d0f4f6775d8412dce464d233bfb1a8ca746ffa5b399'
 SOURCE_DIAGNOSTIC_SHA256 = '7c7fa5d2a0d2378a07e20ddcc2fd30d27b41a654072d7bded998af01e4ccf873'
 V5_MANIFEST_SHA256 = 'df6e5d99290bed6e6f0aec47fc85fd01b6560558618db7caecf9108310eba6d4'
+V6_MANIFEST_SHA256 = '7a6f996f2324a3158407e8b8e4ef63c2670cdd05d33ce6230171bee1f84e0c00'
+V7_MANIFEST_SHA256 = '04d9137b38e2a20d34e7273f54eca264873382832d5b5c00e846468b4cb928c9'
 EXPECTED_STARTED_AT = '2026-10-16T11:37:07.610699+00:00'
 EXPECTED_FINISHED_AT = '2026-10-16T11:38:01.834534+00:00'
 EXPECTED_DEADLINE = '2026-10-16T11:47:07.610699+00:00'
@@ -85,6 +87,25 @@ def _footer_reference_rows(result):
             for obj in sorted(result['objects'], key=lambda item: item['url'])]
 
 
+def _check_successor_lineage(downstream_manifest, downstream_manifest_sha):
+    """Accept the pinned v5→v6→v7 chain and one reviewed successor of v7."""
+    pinned_parents = {
+        V5_MANIFEST_SHA256: SOURCE_V4_MANIFEST_SHA256,
+        V6_MANIFEST_SHA256: V5_MANIFEST_SHA256,
+        V7_MANIFEST_SHA256: V6_MANIFEST_SHA256,
+    }
+    expected_parent = pinned_parents.get(downstream_manifest_sha)
+    actual_parent = downstream_manifest.get('supersedes_manifest_sha256')
+    if expected_parent is not None and actual_parent == expected_parent:
+        return
+    # A future code-only successor may be used only as the direct child of the
+    # pinned v7 tip. Its exact manifest hash is then bound by fresh owner/root
+    # receipts below; arbitrary ancestors or skipped links remain rejected.
+    if downstream_manifest_sha not in pinned_parents and actual_parent == V7_MANIFEST_SHA256:
+        return
+    raise AcquisitionStopped('recovery_manifest_lineage_mismatch')
+
+
 def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
               diagnostic, diagnostic_sha, downstream_manifest, downstream_manifest_sha,
               phase_dir):
@@ -96,8 +117,7 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
         raise AcquisitionStopped('recovery_not_frozen_diagnostic')
     if source_manifest_sha == downstream_manifest_sha:
         raise AcquisitionStopped('recovery_manifest_not_successor')
-    if downstream_manifest.get('supersedes_manifest_sha256') != V5_MANIFEST_SHA256:
-        raise AcquisitionStopped('recovery_manifest_lineage_mismatch')
+    _check_successor_lineage(downstream_manifest, downstream_manifest_sha)
     if downstream_manifest.get('budgets') != source_manifest.get('budgets'):
         raise AcquisitionStopped('recovery_budget_contract_changed')
     if downstream_manifest.get('source_window') != source_manifest.get('source_window'):

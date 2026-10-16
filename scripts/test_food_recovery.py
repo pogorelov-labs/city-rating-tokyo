@@ -1,6 +1,7 @@
 """Offline regressions for the explicitly gated cache-only recovery adapter."""
 import hashlib
 import json
+import copy
 from pathlib import Path
 
 import pytest
@@ -34,15 +35,15 @@ def fixture(tmp_path, monkeypatch):
     source_path = tmp_path / 'source-v4.json'
     source_raw = encoded(source)
     source_path.write_bytes(source_raw)
-    downstream = {'state': 'frozen', 'supersedes_manifest_sha256': recovery.V5_MANIFEST_SHA256,
-                  'supersession_reason': 'cache-only adapter tests', 'budgets': source['budgets'],
+    downstream = {'state': 'frozen', 'supersedes_manifest_sha256': recovery.V7_MANIFEST_SHA256,
+                  'supersession_reason': 'reviewed code-only child fixture', 'budgets': source['budgets'],
                   'source_window': source['source_window'], 'code_sha256': {}}
     root = Path(__file__).resolve().parents[1]
     downstream['code_sha256'] = {
         str(p.relative_to(root)): sha(p.read_bytes())
         for p in sorted((root / 'scripts' / 'food_pilot').glob('*.py'))
     }
-    downstream_path = tmp_path / 'downstream-v6.json'
+    downstream_path = tmp_path / 'downstream-v8.json'
     downstream_raw = encoded(downstream)
     downstream_path.write_bytes(downstream_raw)
 
@@ -115,6 +116,53 @@ def fixture(tmp_path, monkeypatch):
         'downstream': downstream, 'downstream_path': downstream_path,
         'diagnostic_path': diagnostic_path, 'owner_path': owner_path, 'root_path': root_path,
         'ledger_before': ledger_raw, 'result': result}
+
+
+def test_pinned_v5_v6_v7_chain_and_only_direct_v7_successor_are_accepted():
+    chain = {
+        recovery.V5_MANIFEST_SHA256: recovery.SOURCE_V4_MANIFEST_SHA256,
+        recovery.V6_MANIFEST_SHA256: recovery.V5_MANIFEST_SHA256,
+        recovery.V7_MANIFEST_SHA256: recovery.V6_MANIFEST_SHA256,
+    }
+    for manifest_sha, parent_sha in chain.items():
+        assert recovery._check_successor_lineage(
+            {'supersedes_manifest_sha256': parent_sha}, manifest_sha) is None
+
+    # The next code-only manifest is eligible only as a direct child of v7;
+    # its exact hash is additionally bound by the new owner/root receipts.
+    assert recovery._check_successor_lineage(
+        {'supersedes_manifest_sha256': recovery.V7_MANIFEST_SHA256}, 'new-v8-hash') is None
+
+
+@pytest.mark.parametrize(('manifest_sha', 'parent_sha'), [
+    (recovery.V7_MANIFEST_SHA256, recovery.V5_MANIFEST_SHA256),
+    ('new-v8-hash', recovery.V6_MANIFEST_SHA256),
+    ('unknown-manifest-hash', recovery.V5_MANIFEST_SHA256),
+])
+def test_broken_or_skipped_successor_lineage_is_rejected(manifest_sha, parent_sha):
+    with pytest.raises(AcquisitionStopped, match='recovery_manifest_lineage_mismatch'):
+        recovery._check_successor_lineage({'supersedes_manifest_sha256': parent_sha}, manifest_sha)
+
+
+@pytest.mark.parametrize(('field', 'expected_error'), [
+    ('budgets', 'recovery_budget_contract_changed'),
+    ('source_window', 'recovery_source_window_changed'),
+])
+def test_v8_successor_cannot_change_frozen_budget_or_source_window(tmp_path, monkeypatch, field, expected_error):
+    f = fixture(tmp_path, monkeypatch)
+    downstream = copy.deepcopy(f['downstream'])
+    if field == 'budgets':
+        downstream['budgets']['overture_metadata']['attempts'] += 1
+    else:
+        downstream['source_window']['core_hp_complete_before'] = '2026-10-23T00:00:00Z'
+    source_raw = f['source_path'].read_bytes()
+    ledger_raw = (f['phase'] / 'ledger.json').read_bytes()
+    diagnostic_raw = f['diagnostic_path'].read_bytes()
+    with pytest.raises(AcquisitionStopped, match=expected_error):
+        recovery._bindings(source_manifest=f['source'], source_manifest_sha=sha(source_raw),
+            ledger=json.loads(ledger_raw), ledger_sha=sha(ledger_raw),
+            diagnostic=json.loads(diagnostic_raw), diagnostic_sha=sha(diagnostic_raw),
+            downstream_manifest=downstream, downstream_manifest_sha='new-v8-hash', phase_dir=f['phase'])
 
 
 def test_explicit_cache_only_admission_is_distinct_and_ledger_stays_incomplete(tmp_path, monkeypatch):
