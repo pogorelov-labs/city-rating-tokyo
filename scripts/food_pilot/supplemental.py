@@ -640,6 +640,23 @@ class SupplementalBudget:
         if not is_exception and any(row.get('retry_disposition') not in ('transient', 'retryable')
                                     for row in historical if row.get('identity') == identity and row.get('status') != 'complete'):
             raise RequestRejected('TerminalRequestHistory')
+        transient_failures = [event for event in self.journal.events
+                              if event.get('event') == 'attempt_settled'
+                              and event.get('identity') == identity
+                              and event.get('status') == 'failed'
+                              and event.get('retry_disposition') in ('transient', 'retryable')]
+        if transient_failures and not is_exception:
+            # Reapply the ordinary two-second retry delay after a process
+            # interruption. Its settlement timestamp is durable and uses the
+            # same monotonic clock as this run; the exceptional identity never
+            # reaches this retry path.
+            settled_at = transient_failures[-1].get('monotonic')
+            if type(settled_at) not in (int, float):
+                raise AcquisitionStopped('supplemental_retry_clock_missing')
+            delay = max(0.0, 2.0 - (self.monotonic() - settled_at))
+            if delay:
+                self.sleeper(min(delay, self.journal.remaining()))
+            self.journal.remaining()
         if self.attempts_used() >= HP_ATTEMPT_LIMIT:
             raise AcquisitionStopped('supplemental_attempt_budget')
         if self.body_used() + BODY_CAP > HP_BODY_LIMIT:
@@ -720,7 +737,6 @@ class SupplementalBudget:
             })
             self.journal.retention_reservation = 0
             if disposition == 'transient' and used + 1 < maximum:
-                self.sleeper(min(2.0, self.journal.remaining()))
                 return self.fetch(identity, request, project, response_bytes=response_bytes, kind=kind)
             raise RequestRejected('HTTPError', safe_diagnostic({'http_status': status, 'parser_reason': 'http_error'})) from None
         except (urllib.error.URLError, TimeoutError) as exc:
@@ -740,7 +756,6 @@ class SupplementalBudget:
             })
             self.journal.retention_reservation = 0
             if used + 1 < maximum:
-                self.sleeper(min(2.0, self.journal.remaining()))
                 return self.fetch(identity, request, project, response_bytes=response_bytes, kind=kind)
             raise RequestRejected(type(exc).__name__) from None
         except BaseException as exc:

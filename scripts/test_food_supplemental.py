@@ -172,6 +172,28 @@ def test_only_durable_complete_cache_is_reused_without_another_request(tmp_path,
     assert len(calls) == 1
 
 
+def test_resumed_ordinary_transient_retry_keeps_two_second_backoff(tmp_path, monkeypatch):
+    identity = 'hp:other:1:' + '7' * 64
+    target, output, clock, journal, _budget = make_budget(tmp_path, monkeypatch, identity=identity)
+    journal.append('attempt_reserved', {'attempt_id': 'supp-0001', 'identity': identity,
+                                        'reserved_body_bytes': supplemental.BODY_CAP})
+    journal.append('attempt_settled', {'attempt_id': 'supp-0001', 'identity': identity,
+                                       'status': 'failed', 'charged_body_bytes': supplemental.BODY_CAP,
+                                       'retry_disposition': 'transient', 'error_type': 'TimeoutError'})
+    clock.elapsed = 1.0
+    resumed = supplemental.Journal(output, resume=True, now=clock.now, monotonic=clock.mono)
+    calls = []
+    budget = supplemental.SupplementalBudget(
+        output, target, {'attempts': 400, 'response_body_bytes': supplemental.HP_BODY_LIMIT,
+                         'successful_pages': 320, 'pages_per_station': 50,
+                         'response_bytes': supplemental.BODY_CAP, 'socket_seconds': 20,
+                         'minimum_request_interval_seconds': 0.6},
+        resumed, opener=lambda *_a, **_k: (calls.append(clock.elapsed) or Response(b'{}')),
+        sleeper=clock.sleep, monotonic=clock.mono, original_ledger={'attempts': []})
+    budget.fetch(identity, object(), lambda raw, _response: json.loads(raw), kind='page')
+    assert calls == [2.0]
+
+
 def _sample32(monkeypatch):
     stations = []
     for index in range(32):
