@@ -32,6 +32,10 @@ def make_case(tmp_path, monkeypatch, *, total_cap=2 * 1024**3):
     (phase / '.reader.lock').touch()
     monkeypatch.setattr(diagnostic, 'HP_PHASE_DIR', phase)
     monkeypatch.setattr(diagnostic, '_current_head', lambda: HEAD)
+    # Keep ordinary tests independent of wall-clock date; cutoff tests override
+    # this explicitly. The synthetic approvals below are recorded at 10:00Z.
+    monkeypatch.setattr(diagnostic, '_now',
+                        lambda: datetime(2026, 10, 17, 12, tzinfo=timezone.utc))
 
     budgets = {'attempts': 400, 'concurrency': 1, 'maximum_attempts_per_page': 2,
         'minimum_request_interval_seconds': .6, 'pages_per_station': 50,
