@@ -35,7 +35,7 @@ def fixture(tmp_path, monkeypatch):
     source_path = tmp_path / 'source-v4.json'
     source_raw = encoded(source)
     source_path.write_bytes(source_raw)
-    downstream = {'state': 'frozen', 'supersedes_manifest_sha256': recovery.V7_MANIFEST_SHA256,
+    downstream = {'state': 'frozen', 'supersedes_manifest_sha256': recovery.V8_MANIFEST_SHA256,
                   'supersession_reason': 'reviewed code-only child fixture', 'budgets': source['budgets'],
                   'source_window': source['source_window'], 'code_sha256': {}}
     root = Path(__file__).resolve().parents[1]
@@ -46,6 +46,9 @@ def fixture(tmp_path, monkeypatch):
     downstream_path = tmp_path / 'downstream-v8.json'
     downstream_raw = encoded(downstream)
     downstream_path.write_bytes(downstream_raw)
+    contract = {key: value for key, value in downstream.items()
+                if key not in {'code_sha256', 'supersedes_manifest_sha256', 'supersession_reason'}}
+    monkeypatch.setattr(recovery, 'V8_NONCODE_CONTRACT_SHA256', recovery.canonical_sha(contract))
 
     attempts, objects = [], []
     for i in range(33):
@@ -118,25 +121,28 @@ def fixture(tmp_path, monkeypatch):
         'ledger_before': ledger_raw, 'result': result}
 
 
-def test_pinned_v5_v6_v7_chain_and_only_direct_v7_successor_are_accepted():
+def test_pinned_v5_v6_v7_v8_chain_and_only_direct_v8_successor_are_accepted(monkeypatch):
     chain = {
         recovery.V5_MANIFEST_SHA256: recovery.SOURCE_V4_MANIFEST_SHA256,
         recovery.V6_MANIFEST_SHA256: recovery.V5_MANIFEST_SHA256,
         recovery.V7_MANIFEST_SHA256: recovery.V6_MANIFEST_SHA256,
+        recovery.V8_MANIFEST_SHA256: recovery.V7_MANIFEST_SHA256,
     }
     for manifest_sha, parent_sha in chain.items():
         assert recovery._check_successor_lineage(
             {'supersedes_manifest_sha256': parent_sha}, manifest_sha) is None
 
-    # The next code-only manifest is eligible only as a direct child of v7;
+    # The next code-only manifest is eligible only as a direct child of v8;
     # its exact hash is additionally bound by the new owner/root receipts.
+    contract = {'state': 'frozen', 'budgets': {'total_retained_bytes': 2048}}
+    monkeypatch.setattr(recovery, 'V8_NONCODE_CONTRACT_SHA256', recovery.canonical_sha(contract))
     assert recovery._check_successor_lineage(
-        {'supersedes_manifest_sha256': recovery.V7_MANIFEST_SHA256}, 'new-v8-hash') is None
+        {**contract, 'supersedes_manifest_sha256': recovery.V8_MANIFEST_SHA256}, 'new-v9-hash') is None
 
 
 @pytest.mark.parametrize(('manifest_sha', 'parent_sha'), [
     (recovery.V7_MANIFEST_SHA256, recovery.V5_MANIFEST_SHA256),
-    ('new-v8-hash', recovery.V6_MANIFEST_SHA256),
+    ('new-v9-hash', recovery.V7_MANIFEST_SHA256),
     ('unknown-manifest-hash', recovery.V5_MANIFEST_SHA256),
 ])
 def test_broken_or_skipped_successor_lineage_is_rejected(manifest_sha, parent_sha):
@@ -144,11 +150,8 @@ def test_broken_or_skipped_successor_lineage_is_rejected(manifest_sha, parent_sh
         recovery._check_successor_lineage({'supersedes_manifest_sha256': parent_sha}, manifest_sha)
 
 
-@pytest.mark.parametrize(('field', 'expected_error'), [
-    ('budgets', 'recovery_budget_contract_changed'),
-    ('source_window', 'recovery_source_window_changed'),
-])
-def test_v8_successor_cannot_change_frozen_budget_or_source_window(tmp_path, monkeypatch, field, expected_error):
+@pytest.mark.parametrize('field', ['budgets', 'source_window'])
+def test_v9_successor_cannot_change_frozen_budget_or_source_window(tmp_path, monkeypatch, field):
     f = fixture(tmp_path, monkeypatch)
     downstream = copy.deepcopy(f['downstream'])
     if field == 'budgets':
@@ -158,11 +161,11 @@ def test_v8_successor_cannot_change_frozen_budget_or_source_window(tmp_path, mon
     source_raw = f['source_path'].read_bytes()
     ledger_raw = (f['phase'] / 'ledger.json').read_bytes()
     diagnostic_raw = f['diagnostic_path'].read_bytes()
-    with pytest.raises(AcquisitionStopped, match=expected_error):
+    with pytest.raises(AcquisitionStopped, match='recovery_manifest_noncode_contract_changed'):
         recovery._bindings(source_manifest=f['source'], source_manifest_sha=sha(source_raw),
             ledger=json.loads(ledger_raw), ledger_sha=sha(ledger_raw),
             diagnostic=json.loads(diagnostic_raw), diagnostic_sha=sha(diagnostic_raw),
-            downstream_manifest=downstream, downstream_manifest_sha='new-v8-hash', phase_dir=f['phase'])
+        downstream_manifest=downstream, downstream_manifest_sha='new-v9-hash', phase_dir=f['phase'])
 
 
 def test_explicit_cache_only_admission_is_distinct_and_ledger_stays_incomplete(tmp_path, monkeypatch):

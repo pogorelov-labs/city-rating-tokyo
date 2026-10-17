@@ -33,6 +33,8 @@ SOURCE_DIAGNOSTIC_SHA256 = '7c7fa5d2a0d2378a07e20ddcc2fd30d27b41a654072d7bded998
 V5_MANIFEST_SHA256 = 'df6e5d99290bed6e6f0aec47fc85fd01b6560558618db7caecf9108310eba6d4'
 V6_MANIFEST_SHA256 = '7a6f996f2324a3158407e8b8e4ef63c2670cdd05d33ce6230171bee1f84e0c00'
 V7_MANIFEST_SHA256 = '04d9137b38e2a20d34e7273f54eca264873382832d5b5c00e846468b4cb928c9'
+V8_MANIFEST_SHA256 = 'c67e0c723ffa9eca6fa79028a2bc4900129c630bed6a48c2ea58c87c3795881d'
+V8_NONCODE_CONTRACT_SHA256 = '74bfcef62f9fce2c14e73468a8f7c33ae2cbf7de7066fb0c47a1d4d935fc238c'
 EXPECTED_STARTED_AT = '2026-10-16T11:37:07.610699+00:00'
 EXPECTED_FINISHED_AT = '2026-10-16T11:38:01.834534+00:00'
 EXPECTED_DEADLINE = '2026-10-16T11:47:07.610699+00:00'
@@ -88,20 +90,26 @@ def _footer_reference_rows(result):
 
 
 def _check_successor_lineage(downstream_manifest, downstream_manifest_sha):
-    """Accept the pinned v5→v6→v7 chain and one reviewed successor of v7."""
+    """Accept the pinned v5→v6→v7→v8 chain and one reviewed successor of v8."""
     pinned_parents = {
         V5_MANIFEST_SHA256: SOURCE_V4_MANIFEST_SHA256,
         V6_MANIFEST_SHA256: V5_MANIFEST_SHA256,
         V7_MANIFEST_SHA256: V6_MANIFEST_SHA256,
+        V8_MANIFEST_SHA256: V7_MANIFEST_SHA256,
     }
     expected_parent = pinned_parents.get(downstream_manifest_sha)
     actual_parent = downstream_manifest.get('supersedes_manifest_sha256')
     if expected_parent is not None and actual_parent == expected_parent:
         return
     # A future code-only successor may be used only as the direct child of the
-    # pinned v7 tip. Its exact manifest hash is then bound by fresh owner/root
+    # pinned v8 tip. Its exact manifest hash is then bound by fresh owner/root
     # receipts below; arbitrary ancestors or skipped links remain rejected.
-    if downstream_manifest_sha not in pinned_parents and actual_parent == V7_MANIFEST_SHA256:
+    if downstream_manifest_sha not in pinned_parents and actual_parent == V8_MANIFEST_SHA256:
+        contract = {key: value for key, value in downstream_manifest.items()
+                    if key not in {'code_sha256', 'supersedes_manifest_sha256',
+                                   'supersession_reason'}}
+        if canonical_sha(contract) != V8_NONCODE_CONTRACT_SHA256:
+            raise AcquisitionStopped('recovery_manifest_noncode_contract_changed')
         return
     raise AcquisitionStopped('recovery_manifest_lineage_mismatch')
 

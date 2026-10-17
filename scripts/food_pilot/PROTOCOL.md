@@ -1,7 +1,10 @@
 # Owner-amended Tokyo food shadow protocol
 
-Status: owner scope accepted on 2026-10-15; target acquisition remains gated on
-root's manifest consistency check and reviewed acquisition/analysis code.
+Status: owner scope accepted on 2026-10-15. Overture metadata ended incomplete;
+its cache-only downstream admission is separate from source-phase completion.
+HP development ended terminal/incomplete at its first request and its original
+deadline has expired. Later phases remain stopped; the diagnostic-only option
+below is disabled and requires a separate exact-head owner/root gate.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
@@ -145,3 +148,58 @@ No correlation-only adoption, provider summation or automatic confidence uplift.
 Full same-vintage 1,493-station score/rank/composite replay, attribution/rights,
 freshness SLA, operator schema/recovery and explicit production rollout remain
 separate gates. HP-zero policy stays unchanged even if the challenge succeeds.
+
+## Disabled one-request HP diagnostic exception
+
+The original `hp_development` phase remains terminal and incomplete: its frozen
+start, finish, deadline, ledger and result are not resumed, rewritten or relabeled.
+The deadline was `2026-10-16T13:55:29.181380Z` and has expired. A separate,
+disabled diagnostic command exists only to make a possible narrowly scoped
+owner decision reviewable. It is not a pilot phase or an enabled recovery path.
+The prior v6/v8 approvals and ordinary pilot root receipts do not authorize it.
+
+Activation would require both a fresh owner exception and a separate root gate,
+stored under the existing `target-v4` accounting tree and bound to the exact
+successor manifest SHA, code map and Git head, original HP ledger/result hashes,
+and request identity. The root gate must record current-head native approval,
+all CI green, the exact owner-exception hash, and an explicit permission for
+only this one diagnostic. Neither gate may allow retries, redirects, pilot
+counts, phase completion, metadata reads or a next request. Without both valid
+files the command fails before reserving or opening a socket.
+
+The command accepts no station, query, output-root or retry options. It fixes
+the request to the first development station (`gun-hatake`), page 1, and the
+credential-free query hash already in the terminal ledger. It permits at most
+one request, with redirects rejected, a 20-second socket timeout, a hard
+60-second diagnostic window and a 1 MiB response-body limit. The October 22
+source cutoff is checked before the request, while reading, and before a result
+is accepted. No raw body, venue rows, URL, headers, key or arbitrary provider
+message is retained. The outcome contains only allowlisted HTTP/provider codes,
+parser reason and structural pagination types/counts.
+
+Before any possible request, the command writes and fsyncs an immutable
+reservation beside the original HP evidence. It reserves one attempt, one page
+slot, 1 MiB of response-body budget and 16 KiB of combined reservation/outcome
+retention against the original phase and global caps. A complete EOF may release
+unused body bytes in a separate additive outcome receipt; interrupted or
+uncertain results keep the full 1 MiB charge. An existing reservation or
+outcome blocks all later calls. Gate files and receipts count within the
+existing 2 GiB global retained tree; diagnostic receipts also remain within the
+HP phase retention limit. The original ledger/result and expired phase deadline
+remain byte-identical. This diagnostic can never produce an HP count, establish
+a zero, complete the phase or authorize another request.
+
+The dedicated command is intentionally not called from `food_pilot.run`:
+
+```sh
+PYTHONPATH=scripts python -m food_pilot.diagnostic \
+  --manifest /internal/current-v9-manifest.json \
+  --owner-exception /internal/target-v4/owner-diagnostic-exception.json \
+  --root-gate /internal/target-v4/root-diagnostic-gate.json
+```
+
+The API key must arrive only through the existing scoped secret consumer as a
+process environment value; it is never supplied in command arguments or receipt
+files. The command prints only diagnostic state, receipt hash and charged body
+bytes. Its HTTP adapter is mock-tested offline. No owner exception/root gate is
+present in this change, and no request has been made through this path.
