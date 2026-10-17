@@ -227,8 +227,18 @@ sample/order/query fingerprints, output location and remaining budget snapshot.
 The activation authorizes only this supplemental HP development run. It cannot
 authorize the diagnostic again, another run, a changed request, or any other
 phase. V10 approval alone is not activation. Missing, stale, reused or
-mismatched activation fails closed. A launch attempt consumes that activation
-even if preflight fails; a further run requires a new explicit root decision.
+mismatched activation fails closed. The first invocation consumes this one
+prospective window, even if preflight fails. An interrupted same-run
+continuation may use only the same activation, run journal, T0 and D before D
+expires; that is not a new window. Any further prospective window requires a
+new explicit owner amendment and a separate root release.
+
+Enforce a single writer for the activation and both original/supplemental phase
+accounting roots. The process must acquire and hold an exclusive lock from
+before it validates or changes shared accounting through durable finalization.
+Lock contenders cannot reserve budget or dispatch requests; any lock wait is
+inside this same window. Loss of the lock before dispatch stops without I/O;
+loss after a reservation leaves the request outcome unknown and charged.
 
 T0 is a real, non-backdated UTC timestamp captured at command invocation after
 the exact-head activation exists, but before preflight/input validation, lock
@@ -313,8 +323,8 @@ global cap (2,106,015,272 bytes of arithmetic headroom). The supplemental
 directory and all its ledgers, receipts and results count against both
 applicable retention caps. Before any request, reserve sufficient space for the
 full body cap and a conservative bound on receipts/result bytes. If remaining
-space or accounting cannot be proved, stop before opening a socket. Existing
-Reading or hashing an existing file does not create another request/body charge.
+space or accounting cannot be proved, stop before opening a socket. Reading or
+hashing an existing file does not create another request/body charge.
 Every physical retained copy is a separate storage charge and counts in full.
 
 ### Outcomes, stops and required implementation acceptance
@@ -345,7 +355,7 @@ activation:
 | Any other request identity | Preserve existing cumulative two-attempt limit and transient-only retry behavior. |
 | Reservation, crash, timeout or ambiguous dispatch | Persist before I/O; charge attempt and page slot; keep full 1 MiB on unknown; never blind replay. |
 | Complete EOF and known outcome | Settle body to observed bytes; release only known unused reservation; settle page slot explicitly without double-counting transitions. |
-| Original/diagnostic evidence and artifact tree | Verify original hashes and all 49 original files unchanged; link, do not duplicate; count every actual copy. |
+| Original/diagnostic evidence and artifact tree | Verify original hashes and all 49 files in the frozen current target-v4 tree unchanged; link, do not duplicate; count every actual copy. |
 | Shared cap or retained-space exhaustion | Stop before I/O or preserve partial/incomplete; no transfer or reset. |
 | Holdout and unrelated stages | No Overture metadata/development, prescreen, holdout, challenge, audit or confirmation access; no automatic next phase. |
 | Complete development zero | Preserve V10 pagination evidence; do not treat it as confirmed HP-zero without the separate 24–72-hour process. |
