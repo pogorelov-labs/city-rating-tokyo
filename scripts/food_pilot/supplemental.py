@@ -251,15 +251,17 @@ def _append_fsynced(path, raw, *, create=False):
 
 
 class Journal:
-    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None):
+    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None,
+                 defer_start=False):
         self.directory = Path(directory)
         if self.directory.is_symlink():
             raise AcquisitionStopped('supplemental_root_symlink_rejected')
         if self.directory.exists() and not resume:
             raise AcquisitionStopped('supplemental_root_already_exists')
-        self.directory.mkdir(parents=True, exist_ok=True)
-        if not self.directory.is_dir():
-            raise AcquisitionStopped('supplemental_root_path_invalid')
+        if not defer_start:
+            self.directory.mkdir(parents=True, exist_ok=True)
+            if not self.directory.is_dir():
+                raise AcquisitionStopped('supplemental_root_path_invalid')
         self.path = self.directory / 'journal.jsonl'
         self.now = now
         self.monotonic = monotonic
@@ -280,9 +282,17 @@ class Journal:
                 raise AcquisitionStopped('supplemental_journal_missing')
             self.started_utc = _utc(start_utc if start_utc is not None else now())
             self.started_mono = start_mono if start_mono is not None else monotonic()
-            self._check_clock(self.started_utc, self.started_mono)
-            self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
-                                        'monotonic_anchor': self.started_mono})
+            if not defer_start:
+                self._check_clock(self.started_utc, self.started_mono)
+                self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
+                                            'monotonic_anchor': self.started_mono})
+
+    def begin(self):
+        if self.events or self.path.exists():
+            raise AcquisitionStopped('supplemental_root_already_consumed')
+        self.directory.mkdir(parents=True, exist_ok=False)
+        self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
+                                    'monotonic_anchor': self.started_mono})
 
     def _check_clock(self, current_utc, current_mono):
         if current_utc >= UTC_CUTOFF:
@@ -421,10 +431,11 @@ class ExclusiveAccountingLock:
             # failed launch, so leave a terminal marker; never let a later
             # `--resume` turn it into a valid launch after the environment is
             # changed.
-            try:
-                self.journal.append('launch_terminal', {'error_type': 'AccountingLockUnavailable'})
-            except AcquisitionStopped:
-                pass
+            if self.journal.events:
+                try:
+                    self.journal.append('launch_terminal', {'error_type': 'AccountingLockUnavailable'})
+                except AcquisitionStopped:
+                    pass
             raise AcquisitionStopped('supplemental_shared_lock_missing')
         self.stream = self.path.open('rb')
         while True:
@@ -810,6 +821,74 @@ def _validate_roots(target_root, supplemental_root):
     return target, output
 
 
+def _consume_bad_output_at_bound_root(*, manifest_path, owner_activation_path,
+                                      root_release_path, supplied_target,
+                                      supplied_output, invocation_utc,
+                                      invocation_mono, now, monotonic,
+                                      head_provider):
+    """Terminalize a valid activation only at its receipt-bound safe root."""
+    try:
+        manifest, manifest_hash, map_hash = check_manifest(manifest_path)
+        owner, owner_raw = _read_json(owner_activation_path)
+        root_gate, root_raw = _read_json(root_release_path)
+        contract = manifest['supplemental_hp_development']
+        head = head_provider()
+        target, output = _validate_roots(owner.get('target_root'), owner.get('supplemental_root'))
+        if contract.get('reviewed_git_head') != head:
+            return False
+        activation_id, run_id = _receipt_bindings(
+            manifest, manifest_hash, map_hash, head, owner, root_gate, target, output)
+        if root_gate.get('owner_activation_sha256') != sha256(owner_raw):
+            return False
+        if root_raw is None or owner.get('created_at') is None or root_gate.get('released_at') is None:
+            return False
+        if _utc(owner['created_at']) > invocation_utc or _utc(root_gate['released_at']) > invocation_utc:
+            return False
+        if (_utc(owner.get('activation_expires_at', '')) <= invocation_utc or
+                _utc(root_gate.get('release_expires_at', '')) <= invocation_utc):
+            return False
+        # The safe destination must come from the exact owner/root binding,
+        # never from the rejected command-line path.
+        if Path(supplied_target).resolve() != target:
+            return False
+        lock_path = target / 'hp_development' / '.reader.lock'
+        if not lock_path.is_file() or lock_path.is_symlink() or output.exists():
+            return False
+
+        def retention_guard(added):
+            if (file_size(target / 'hp_development') + file_size(output) + added +
+                    CONTROL_RETENTION_RESERVE > HP_RETAINED_LIMIT):
+                raise AcquisitionStopped('supplemental_hp_retained_budget')
+            if (file_size(target) + file_size(output) + added +
+                    CONTROL_RETENTION_RESERVE > GLOBAL_RETAINED_LIMIT):
+                raise AcquisitionStopped('supplemental_global_retained_budget')
+
+        retention_guard(0)
+        journal = Journal(output, resume=False, now=now, monotonic=monotonic,
+                          start_utc=invocation_utc, start_mono=invocation_mono,
+                          defer_start=True)
+        with ExclusiveAccountingLock(target, journal) as lock:
+            journal.lock_check = lock.assert_held
+            journal.retention_guard = retention_guard
+            journal.begin()
+            journal.append('activation_preflight_started', {
+                'owner_activation_sha256': sha256(owner_raw),
+                'root_release_sha256': sha256(root_raw),
+            })
+            journal.append('activation_consumed', {
+                'activation_id': activation_id, 'run_id': run_id,
+                'owner_activation_sha256': sha256(owner_raw),
+                'root_release_sha256': sha256(root_raw),
+            })
+            journal.append('launch_terminal', {'error_type': 'UnsafeOutputRoot'})
+        return True
+    except Exception:
+        # Invalid/missing approval data is not trusted as a destination for a
+        # terminal receipt. The caller still fails closed without writing to
+        # the supplied unsafe path.
+        return False
+
+
 def _verify_evidence(target_root, contract):
     digest, total_size, count = tree_digest(target_root)
     if digest != EXPECTED_TARGET_TREE or count != 49 or total_size != 41_468_376:
@@ -853,7 +932,17 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
     invocation_mono = monotonic()
     # Reject unsafe locations before creating the journal or any other file.
     # T0 is still captured first, so preflight time is inside the window.
-    target, output = _validate_roots(target_root, supplemental_root)
+    try:
+        target, output = _validate_roots(target_root, supplemental_root)
+    except Exception:
+        _consume_bad_output_at_bound_root(
+            manifest_path=manifest_path,
+            owner_activation_path=owner_activation_path,
+            root_release_path=root_release_path,
+            supplied_target=target_root, supplied_output=supplemental_root,
+            invocation_utc=invocation_utc, invocation_mono=invocation_mono,
+            now=now, monotonic=monotonic, head_provider=head_provider)
+        raise
     output_arg = Path(supplemental_root)
     journal = Journal(output_arg, resume=resume, now=now, monotonic=monotonic,
                       start_utc=invocation_utc, start_mono=invocation_mono)

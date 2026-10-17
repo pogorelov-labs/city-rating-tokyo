@@ -650,6 +650,87 @@ def test_unsafe_output_root_is_rejected_before_any_protected_tree_write(tmp_path
     assert supplemental.tree_digest(target) == before
 
 
+def test_unsafe_output_consumes_valid_activation_at_receipt_bound_root(tmp_path, monkeypatch):
+    stations, _identity = _sample32(monkeypatch)
+    target = tmp_path / 'target-v4'
+    (target / 'hp_development').mkdir(parents=True)
+    (target / 'hp_development' / '.reader.lock').write_bytes(b'')
+    bound_output = tmp_path / 'supplemental-v1'
+    unsafe_output = target / 'hp_development' / 'supplemental'
+    clock = Clock()
+    protocol_hash, decision_hash = '1' * 64, '2' * 64
+    evidence = {'hp_ledger': '3' * 64, 'hp_result': '4' * 64,
+                'diagnostic_reservation': '5' * 64, 'diagnostic_outcome': '6' * 64}
+    sample_hash = supplemental.sha256(supplemental.encoded(stations))
+    query_hash = supplemental.sha256(supplemental.encoded(
+        [{'slug': row['slug'], 'page1_identity': supplemental.request_identity(row, 1)} for row in stations]))
+    snapshot = {'attempts_used': 2, 'attempt_limit': 400, 'body_bytes_used': 214,
+                'body_byte_limit': supplemental.HP_BODY_LIMIT, 'admitted_pages': 0,
+                'held_page_slots': 1, 'page_slot_limit': 320, 'hp_retained_bytes': 14_579,
+                'hp_retained_limit': supplemental.HP_RETAINED_LIMIT,
+                'global_retained_bytes': 41_468_376,
+                'global_retained_limit': supplemental.GLOBAL_RETAINED_LIMIT}
+    manifest = {'supplemental_hp_development': {
+        'reviewed_git_head': 'head-test', 'protocol_sha256': protocol_hash,
+        'decision_sha256': decision_hash, 'original_evidence_sha256': evidence,
+        'development_sample_sha256': sample_hash, 'query_fingerprint_sha256': query_hash,
+        'budget_snapshot': snapshot}}
+    manifest_hash, map_hash, head = 'a' * 64, 'b' * 64, 'head-test'
+    monkeypatch.setattr(supplemental, 'check_manifest',
+                        lambda *_a, **_k: (manifest, manifest_hash, map_hash))
+    roots = [str(target.resolve()), str(bound_output.resolve())]
+    owner = {'kind': 'owner_supplemental_hp_activation', 'activation_id': 'activation-1',
+             'run_id': 'run-1', 'single_use': True, 'manifest_sha256': manifest_hash,
+             'git_head': head, 'code_map_sha256': map_hash, 'protocol_sha256': protocol_hash,
+             'decision_sha256': decision_hash, 'evidence_sha256': evidence,
+             'sample_sha256': sample_hash, 'query_fingerprint_sha256': query_hash,
+             'target_root': roots[0], 'supplemental_root': roots[1], 'accounted_roots': roots,
+             'budget_snapshot': snapshot, 'allowed_operation': 'supplemental_hp_development',
+             'created_at': (clock.start - timedelta(seconds=10)).isoformat(),
+             'activation_expires_at': (clock.start + timedelta(hours=1)).isoformat()}
+    owner_raw = json.dumps(owner, sort_keys=True, separators=(',', ':')).encode()
+    owner_path = tmp_path / 'owner.json'
+    owner_path.write_bytes(owner_raw)
+    root_gate = {'kind': 'root_supplemental_hp_release', **{k: v for k, v in owner.items()
+                 if k not in ('kind', 'created_at', 'activation_expires_at')},
+                 'owner_activation_sha256': hashlib.sha256(owner_raw).hexdigest(),
+                 'root_manifest_check': True, 'native_review_approved_head': head,
+                 'released_at': (clock.start - timedelta(seconds=5)).isoformat(),
+                 'release_expires_at': (clock.start + timedelta(hours=1)).isoformat()}
+    root_path = tmp_path / 'root.json'
+    root_path.write_text(json.dumps(root_gate, sort_keys=True, separators=(',', ':')))
+    before = supplemental.tree_digest(target)
+    calls = []
+
+    with pytest.raises(AcquisitionStopped, match='root_not_sibling'):
+        supplemental.execute(manifest_path=tmp_path / 'manifest.json',
+                             owner_activation_path=owner_path, root_release_path=root_path,
+                             target_root=target, supplemental_root=unsafe_output,
+                             now=clock.now, monotonic=clock.mono,
+                             opener=lambda *_a, **_k: calls.append(1),
+                             head_provider=lambda: head, api_key='fixture-only')
+    assert not unsafe_output.exists()
+    assert supplemental.tree_digest(target) == before
+    events = [json.loads(line) for line in (bound_output / 'journal.jsonl').read_text().splitlines()]
+    assert events[0]['event'] == 'run_started'
+    assert events[0]['t0_utc'] == clock.start.isoformat()
+    assert [event['event'] for event in events][-3:] == [
+        'activation_preflight_started', 'activation_consumed', 'launch_terminal']
+
+    # A later invocation cannot replace the consumed activation's original T0.
+    clock.elapsed = 15.0
+    with pytest.raises(AcquisitionStopped, match='root_already_exists'):
+        supplemental.execute(manifest_path=tmp_path / 'manifest.json',
+                             owner_activation_path=owner_path, root_release_path=root_path,
+                             target_root=target, supplemental_root=bound_output,
+                             now=clock.now, monotonic=clock.mono,
+                             opener=lambda *_a, **_k: calls.append(1),
+                             head_provider=lambda: head, api_key='fixture-only')
+    persisted = [json.loads(line) for line in (bound_output / 'journal.jsonl').read_text().splitlines()]
+    assert sum(event['event'] == 'run_started' for event in persisted) == 1
+    assert not calls
+
+
 def test_execute_binds_activation_journal_lock_and_full_hp_caller(tmp_path, monkeypatch):
     stations, identity = _sample32(monkeypatch)
     target = tmp_path / 'target-v4'
