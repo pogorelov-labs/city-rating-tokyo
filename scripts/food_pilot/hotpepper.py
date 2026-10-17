@@ -115,7 +115,7 @@ def integer(value, field, diagnostic):
     return result
 
 
-def page_projection(raw, response):
+def page_projection(raw, response, *, allow_empty_start_zero=False):
     if response.status != 200:
         raise HPApiError('http_status', _page_diagnostic(response.status, body_bytes=len(raw)))
     try:
@@ -143,7 +143,22 @@ def page_projection(raw, response):
         raise PaginationChanged('shop_count_mismatch', diagnostic)
     if returned > 100:
         raise PaginationChanged('page_size_over_limit', diagnostic)
-    if start < 1:
+    # Recruit's published reference does not define the empty JSON encoding.
+    # A single observed diagnostic supports this exact representation only.
+    # Keep the ordinary parser (including the diagnostic consumer) strict by
+    # default; acquisition opts in only for its first page.
+    empty_start_zero = (
+        allow_empty_start_zero
+        and type(data.get('results_available')) is int
+        and data['results_available'] == 0
+        and type(data.get('results_returned')) is str
+        and data['results_returned'] == '0'
+        and type(data.get('results_start')) is int
+        and data['results_start'] == 0
+        and type(shops) is list
+        and not shops
+    )
+    if start < 1 and not empty_start_zero:
         raise PaginationChanged('start_below_one', diagnostic)
     rows = []
     for shop in shops:
@@ -174,20 +189,39 @@ def acquire_station(station, budget, key):
         params['key'] = key
         request = urllib.request.Request('https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?'+urllib.parse.urlencode(params),
                                         headers={'User-Agent':'city-rating-food-shadow/2.0', 'Accept-Encoding':'identity'})
-        page = budget.fetch(f"hp:{station['slug']}:{start}:{query_hash}", request, page_projection, kind='page')
-        if page['start'] != start:
+        first_page_without_prior = page_index == 0 and total is None
+        project = lambda raw, response: page_projection(
+            raw, response, allow_empty_start_zero=first_page_without_prior)
+        page = budget.fetch(f"hp:{station['slug']}:{start}:{query_hash}", request, project, kind='page')
+        empty_first_page = (
+            first_page_without_prior
+            and start == 1
+            and page['total'] == 0
+            and page['start'] == 0
+            and page['returned'] == 0
+            and page['shops'] == []
+            and page['diagnostic'].get('pagination_types') == {
+                'results_available': 'integer',
+                'results_start': 'integer',
+                'results_returned': 'string',
+            }
+            and page['diagnostic'].get('shop_type') == 'array'
+            and page['diagnostic'].get('shop_count') == 0
+        )
+        if page['start'] != start and not empty_first_page:
             raise PaginationChanged('start_mismatch', page.get('diagnostic'))
         if total is not None and page['total'] != total:
             raise PaginationChanged('total_changed_during_pagination', page.get('diagnostic'))
         total = page['total']
-        expected = min(100, max(0, total-start+1))
+        expected = 0 if empty_first_page else min(100, max(0, total-start+1))
         if page['returned'] != expected:
             raise PaginationChanged('returned_count_mismatch', page.get('diagnostic'))
         for shop in page['shops']:
             if shop['id'] in shops:
                 raise PaginationChanged('duplicate_or_conflicting_provider_id', page.get('diagnostic'))
             shops[shop['id']] = shop
-        page_receipts.append({'query_sha256':query_hash,'start': start, 'returned': page['returned'], 'received_at': page['received_at'],
+        page_receipts.append({'query_sha256':query_hash,'start': start, 'results_start': page['start'],
+                              'returned': page['returned'], 'received_at': page['received_at'],
                               'diagnostic': page['diagnostic'],
                               'projected_sha256': hashlib.sha256(json.dumps(page, sort_keys=True).encode()).hexdigest()})
         if len(shops) == total:

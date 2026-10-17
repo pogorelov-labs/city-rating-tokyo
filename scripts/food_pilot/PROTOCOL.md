@@ -91,6 +91,23 @@ cannot establish a complete count or zero. Separate provider-zero from complete
 unstable states distinct. The primary comparator is all HP gourmet genres;
 its mismatch with the narrower Overture food universe is an explicit limitation.
 
+One narrow response-representation compatibility case is accepted for a
+successful first requested page only: no prior page for that station; HTTP 200,
+complete EOF and no provider error under the existing checks; exact JSON
+`results_available: 0` (integer), `results_returned: "0"` (canonical string),
+`results_start: 0` (integer), and `shop: []`. The request still asks for
+`start=1`; preserve both the requested start and observed `results_start=0` in
+the page receipt. This treats the zero-item page as having no result position to
+reconcile and leaves count/completeness semantics unchanged. It is a local
+compatibility inference from one allowlisted diagnostic shape, not a documented
+Recruit guarantee: the [official reference](https://webservice.recruit.co.jp/doc/hotpepper/reference.html)
+defines these fields and shows start position 1 but does not specify the empty
+JSON representation. Do not coerce or broaden this exact type tuple. Any
+nonempty, malformed, contradictory, provider-error, missing, non-EOF, or later
+page remains incomplete/rejected. This clarification never reinterprets the
+original terminal HP ledger/result or diagnostic, emits a count from that
+history, or authorizes a resume/request.
+
 ## Candidate acquisition budgets
 
 These ceilings are frozen before target outcomes and subject to root's consistency

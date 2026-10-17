@@ -14,7 +14,7 @@ import pytest
 from food_pilot import bounded
 from food_pilot.acquire_osm import encoded
 from food_pilot.bounded import Budget, ReplayBudget, AcquisitionStopped, RequestRejected
-from food_pilot.hotpepper import acquire_station, page_projection, BadCoordinates, PaginationChanged, confirmation_checkpoint, acquire_sites
+from food_pilot.hotpepper import acquire_station, page_projection, BadCoordinates, HPApiError, PaginationChanged, confirmation_checkpoint, acquire_sites
 from food_pilot.overture import range_projection, wkb_point, selected_groups, is_food, extract, Ranges
 from food_pilot.run import phase_sites, primary_gate, checked_gate, validate_result_windows, immutable_result
 
@@ -30,11 +30,21 @@ def limits():
 class Response(io.BytesIO):
     status=200
     headers={}
+    def __init__(self, body, status=200):
+        super().__init__(body)
+        self.status=status
 
 
 def hp_page(total=1,start=1,shops=None):
     shops=[{'id':'venue','lat':'35.7','lng':'139.7','name':'synthetic','genre':{'code':'G001'}}] if shops is None else shops
     return json.dumps({'results':{'results_available':total,'results_start':start,'results_returned':str(len(shops)),'shop':shops}}).encode()
+
+
+def hp_empty_start_zero_page():
+    # Synthetic exact structure from the allowlisted diagnostic; the lost
+    # response body itself was not retained or reconstructed.
+    return json.dumps({'results':{'results_available':0,'results_start':0,
+                                  'results_returned':'0','shop':[]}}).encode()
 
 
 def test_hp_complete_one_km_then_800m_filter_and_offline_replay(tmp_path):
@@ -85,6 +95,122 @@ def test_hp_api_documented_empty_page_shape_is_accepted_without_relaxing_counts(
     assert result['total']==0 and result['returned']==0 and result['shops']==[]
     assert result['diagnostic']['pagination_types']=={
         'results_available':'integer','results_start':'integer','results_returned':'string'}
+
+
+@pytest.mark.parametrize('available_type,start_type,returned_type', [
+    (int,int,int),(int,int,str),(int,str,int),(int,str,str),
+    (str,int,int),(str,int,str),(str,str,int),(str,str,str),
+])
+def test_positive_start_one_scalar_forms_remain_supported(available_type,start_type,returned_type):
+    data={'results_available':available_type(1),'results_start':start_type(1),
+          'results_returned':returned_type(1),
+          'shop':[{'id':'venue','lat':'35.7','lng':'139.7'}]}
+    page=page_projection(json.dumps({'results':data}).encode(),Response(b''))
+    assert page['total']==page['start']==page['returned']==1
+    assert page['shops'][0]['id']=='venue'
+
+
+def test_first_empty_start_zero_is_caller_scoped_and_preserves_observed_start(tmp_path):
+    raw=hp_empty_start_zero_page()
+    with pytest.raises(PaginationChanged,match='start_below_one'):
+        page_projection(raw,Response(b''))
+
+    opened=[]
+    def opener(request,**kwargs):
+        opened.append(request)
+        assert 'start=1' in request.full_url
+        return Response(raw)
+    with Budget(tmp_path,limits(),'manifest',opener=opener) as budget:
+        result=acquire_station(STATION,budget,'SYNTHETIC_KEY')
+    assert result['status']=='complete_provider_zero'
+    assert result['results_available_1000m']==0 and result['count_800m']==0
+    assert len(opened)==1
+    receipt=result['pages'][0]
+    assert receipt['start']==1 and receipt['results_start']==0
+    assert receipt['diagnostic']['pagination_types']=={
+        'results_available':'integer','results_start':'integer','results_returned':'string'}
+    replay=acquire_station(STATION,ReplayBudget(tmp_path),'OFFLINE_NOT_SENT')
+    assert replay==result
+    assert json.loads((tmp_path/'ledger.json').read_text())['successful_pages']==1
+
+
+@pytest.mark.parametrize('data', [
+    {'results_available':0,'results_start':0,'results_returned':0,'shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'00','shop':[]},
+    {'results_available':False,'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0.0,'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':False,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':0.0,'results_returned':'0','shop':[]},
+    {'results_available':'0','results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'0','shop':[{'id':'venue'}]},
+    {'results_available':1,'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'1','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'0','shop':None},
+    {'results_available':0,'results_start':0,'results_returned':'0'},
+    {'results_available':None,'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':-1,'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':None,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':-1,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':None,'shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'+0','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'0 ','shop':[]},
+    {'results_available':0,'results_start':0,'results_returned':'0','shop':{}},
+    {'results_start':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_returned':'0','shop':[]},
+    {'results_available':0,'results_start':0,'shop':[]},
+])
+def test_empty_start_zero_rejects_unobserved_or_contradictory_shapes(data):
+    with pytest.raises((PaginationChanged,HPApiError)):
+        page_projection(json.dumps({'results':data}).encode(),Response(b''),
+                        allow_empty_start_zero=True)
+
+
+def test_empty_start_zero_rejects_http_and_provider_errors():
+    raw=hp_empty_start_zero_page()
+    with pytest.raises(HPApiError,match='http_status'):
+        page_projection(raw,Response(b'',status=503),allow_empty_start_zero=True)
+    provider_error={'results':{'error':[{'code':2000}], 'results_available':0,
+        'results_start':0,'results_returned':'0','shop':[]}}
+    with pytest.raises(HPApiError,match='provider_error'):
+        page_projection(json.dumps(provider_error).encode(),Response(b''),
+                        allow_empty_start_zero=True)
+
+
+def test_empty_start_zero_rejects_later_page_or_prior_page(tmp_path):
+    first=[{'id':str(i),'lat':'35.7','lng':'139.7'} for i in range(100)]
+    pages=[hp_page(101,1,first),hp_empty_start_zero_page()]
+    with Budget(tmp_path,limits(),'manifest',
+                opener=lambda *a,**k:Response(pages.pop(0))) as budget:
+        with pytest.raises(RequestRejected) as failure:
+            acquire_station(STATION,budget,'SYNTHETIC_KEY')
+        assert failure.value.diagnostic['parser_reason']=='start_below_one'
+    ledger=json.loads((tmp_path/'ledger.json').read_text())
+    assert ledger['successful_pages']==1
+
+    changed=[hp_page(101,1,first),hp_page(0,101,[])]
+    with Budget(tmp_path/'changed-total',limits(),'manifest',
+                opener=lambda *a,**k:Response(changed.pop(0))) as budget:
+        with pytest.raises(PaginationChanged) as failure:
+            acquire_station(STATION,budget,'SYNTHETIC_KEY')
+        assert failure.value.reason=='total_changed_during_pagination'
+
+
+def test_empty_start_zero_malformed_and_truncated_transport_never_complete(tmp_path,monkeypatch):
+    with Budget(tmp_path/'malformed',limits(),'manifest',
+                opener=lambda *a,**k:Response(b'{"results":')) as budget:
+        with pytest.raises(RequestRejected):
+            acquire_station(STATION,budget,'SYNTHETIC_KEY')
+    class Disconnect(Response):
+        def read(self,*args,**kwargs):
+            raise TimeoutError('synthetic disconnect')
+    monkeypatch.setattr(bounded.time,'sleep',lambda _:None)
+    with Budget(tmp_path/'disconnect',limits(),'manifest',
+                opener=lambda *a,**k:Disconnect(b'')) as budget:
+        with pytest.raises(AcquisitionStopped,match='logical_request_attempt_budget'):
+            acquire_station(STATION,budget,'SYNTHETIC_KEY')
+    ledger=json.loads((tmp_path/'disconnect'/'ledger.json').read_text())
+    assert ledger['successful_pages']==0
+    assert len(ledger['attempts'])==2 and all(a['status']=='failed' for a in ledger['attempts'])
 
 
 def test_hp_provider_error_and_malformed_pagination_expose_only_safe_diagnostics(tmp_path):
