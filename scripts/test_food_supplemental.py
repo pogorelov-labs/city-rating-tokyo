@@ -315,6 +315,43 @@ def test_resume_reloads_journal_after_waiting_for_writer_lock(tmp_path):
     assert len(reader_observed) == 1
 
 
+def test_fresh_launcher_reloads_terminal_journal_after_resumer_advances_it(tmp_path):
+    target = tmp_path / 'target-v4'
+    (target / 'hp_development').mkdir(parents=True)
+    (target / 'hp_development' / '.reader.lock').write_bytes(b'')
+    output = tmp_path / 'supplemental-v1'
+    clock = Clock()
+
+    # Launcher A has already published its claim and is now paused before
+    # acquiring the writer lock. Its in-memory journal is stale from here on.
+    launcher_a = supplemental.Journal(output, resume=False, now=clock.now,
+                                      monotonic=clock.mono)
+    launcher_a.append('activation_preflight_started', {'fixture': True})
+    launcher_a.append('activation_consumed', {'fixture': True})
+
+    # A same-run resumer B acquires the lock first and terminalizes the run.
+    launcher_b = supplemental.Journal(output, resume=True, now=clock.now,
+                                      monotonic=clock.mono)
+    lock_b = supplemental.ExclusiveAccountingLock(target, launcher_b)
+    with lock_b:
+        launcher_b.lock_check = lock_b.assert_held
+        launcher_b.reload_under_lock()
+        launcher_b.append('run_finalized', {'status': 'incomplete', 'result': 'partial.json'})
+
+    calls = []
+    lock_a = supplemental.ExclusiveAccountingLock(target, launcher_a)
+    with lock_a:
+        launcher_a.lock_check = lock_a.assert_held
+        with pytest.raises(AcquisitionStopped, match='already_finalized'):
+            launcher_a.reload_under_lock()
+        # The execute caller performs this reload before constructing its
+        # budget or invoking the fetch adapter, so no stale state can dispatch.
+    assert not calls
+    persisted = [json.loads(line) for line in (output / 'journal.jsonl').read_text().splitlines()]
+    assert [event['event'] for event in persisted][-1] == 'run_finalized'
+    assert [event['seq'] for event in persisted] == list(range(len(persisted)))
+
+
 def test_preflight_failure_consumes_activation_and_cannot_be_repaired_by_resume(tmp_path, monkeypatch):
     stations, _identity = _sample32(monkeypatch)
     target = tmp_path / 'target-v4'
@@ -616,7 +653,7 @@ def test_unsafe_output_root_is_rejected_before_any_protected_tree_write(tmp_path
     before = supplemental.tree_digest(target)
     invalid_output = target / 'hp_development' / 'supplemental'
     clock = Clock()
-    with pytest.raises(AcquisitionStopped, match='root_not_sibling'):
+    with pytest.raises(AcquisitionStopped, match='receipt_unreadable'):
         supplemental.execute(manifest_path=tmp_path / 'missing.json',
                              owner_activation_path=tmp_path / 'missing-owner.json',
                              root_release_path=tmp_path / 'missing-root.json',
@@ -628,14 +665,17 @@ def test_unsafe_output_root_is_rejected_before_any_protected_tree_write(tmp_path
     assert supplemental.tree_digest(target) == before
 
 
-@pytest.mark.parametrize('wrong_path', ['nested', 'wrong-sibling'])
-def test_wrong_output_consumes_valid_activation_at_receipt_bound_root(tmp_path, monkeypatch, wrong_path):
+@pytest.mark.parametrize('wrong_path', ['nested', 'wrong-sibling', 'missing-target'])
+def test_invalid_supplied_roots_consume_valid_activation_at_receipt_bound_root(tmp_path, monkeypatch, wrong_path):
     stations, _identity = _sample32(monkeypatch)
     target = tmp_path / 'target-v4'
     (target / 'hp_development').mkdir(parents=True)
     (target / 'hp_development' / '.reader.lock').write_bytes(b'')
     bound_output = tmp_path / 'supplemental-v1'
+    missing_target = tmp_path / 'missing-target-v4'
+    supplied_target = missing_target if wrong_path == 'missing-target' else target
     unsafe_output = (target / 'hp_development' / 'supplemental' if wrong_path == 'nested'
+                     else bound_output if wrong_path == 'missing-target'
                      else tmp_path / 'other-supplemental')
     clock = Clock()
     protocol_hash, decision_hash = '1' * 64, '2' * 64
@@ -682,16 +722,20 @@ def test_wrong_output_consumes_valid_activation_at_receipt_bound_root(tmp_path, 
     before = supplemental.tree_digest(target)
     calls = []
 
-    expected_reason = ('root_not_sibling' if wrong_path == 'nested'
-                       else 'root_not_receipt_bound')
+    expected_reason = ('root_not_sibling' if wrong_path == 'nested' else
+                       'root_path_invalid' if wrong_path == 'missing-target' else
+                       'root_not_receipt_bound')
     with pytest.raises(AcquisitionStopped, match=expected_reason):
         supplemental.execute(manifest_path=tmp_path / 'manifest.json',
                              owner_activation_path=owner_path, root_release_path=root_path,
-                             target_root=target, supplemental_root=unsafe_output,
+                             target_root=supplied_target, supplemental_root=unsafe_output,
                              now=clock.now, monotonic=clock.mono,
                              opener=lambda *_a, **_k: calls.append(1),
                              head_provider=lambda: head, api_key='fixture-only')
-    assert not unsafe_output.exists()
+    if wrong_path != 'missing-target':
+        assert not unsafe_output.exists()
+    else:
+        assert not missing_target.exists()
     assert supplemental.tree_digest(target) == before
     events = [json.loads(line) for line in (bound_output / 'journal.jsonl').read_text().splitlines()]
     assert events[0]['event'] == 'run_started'
@@ -711,6 +755,104 @@ def test_wrong_output_consumes_valid_activation_at_receipt_bound_root(tmp_path, 
     persisted = [json.loads(line) for line in (bound_output / 'journal.jsonl').read_text().splitlines()]
     assert sum(event['event'] == 'run_started' for event in persisted) == 1
     assert not calls
+
+
+def test_execute_fresh_launcher_reloads_after_resumer_finalizes_before_lock(tmp_path, monkeypatch):
+    stations, _identity = _sample32(monkeypatch)
+    target = tmp_path / 'target-v4'
+    (target / 'hp_development').mkdir(parents=True)
+    (target / 'hp_development' / '.reader.lock').write_bytes(b'')
+    output = tmp_path / 'supplemental-v1'
+    clock = Clock()
+    protocol_hash, decision_hash = '1' * 64, '2' * 64
+    evidence = {'hp_ledger': '3' * 64, 'hp_result': '4' * 64,
+                'diagnostic_reservation': '5' * 64, 'diagnostic_outcome': '6' * 64}
+    sample_hash = supplemental.sha256(supplemental.encoded(stations))
+    query_hash = supplemental.sha256(supplemental.encoded(
+        [{'slug': row['slug'], 'page1_identity': supplemental.request_identity(row, 1)}
+         for row in stations]))
+    snapshot = {'attempts_used': 2, 'attempt_limit': 400, 'body_bytes_used': 214,
+                'body_byte_limit': supplemental.HP_BODY_LIMIT, 'admitted_pages': 0,
+                'held_page_slots': 1, 'page_slot_limit': 320, 'hp_retained_bytes': 14_579,
+                'hp_retained_limit': supplemental.HP_RETAINED_LIMIT,
+                'global_retained_bytes': 41_468_376,
+                'global_retained_limit': supplemental.GLOBAL_RETAINED_LIMIT}
+    contract = {'reviewed_git_head': 'head-test', 'protocol_sha256': protocol_hash,
+                'decision_sha256': decision_hash, 'original_evidence_sha256': evidence,
+                'development_sample_sha256': sample_hash,
+                'query_fingerprint_sha256': query_hash,
+                'development_order': [row['slug'] for row in stations],
+                'budget_snapshot': snapshot}
+    manifest = {'supplemental_hp_development': contract}
+    manifest_hash, map_hash = 'a' * 64, 'b' * 64
+    monkeypatch.setattr(supplemental, 'check_manifest',
+                        lambda *_a, **_k: (manifest, manifest_hash, map_hash))
+    roots = [str(target.resolve()), str(output.resolve())]
+    owner = {'kind': 'owner_supplemental_hp_activation', 'activation_id': 'activation-1',
+             'run_id': 'run-1', 'single_use': True, 'manifest_sha256': manifest_hash,
+             'git_head': 'head-test', 'code_map_sha256': map_hash,
+             'protocol_sha256': protocol_hash, 'decision_sha256': decision_hash,
+             'evidence_sha256': evidence, 'sample_sha256': sample_hash,
+             'query_fingerprint_sha256': query_hash, 'target_root': roots[0],
+             'supplemental_root': roots[1], 'accounted_roots': roots,
+             'budget_snapshot': snapshot, 'allowed_operation': 'supplemental_hp_development',
+             'created_at': (clock.start - timedelta(seconds=10)).isoformat(),
+             'activation_expires_at': (clock.start + timedelta(hours=1)).isoformat()}
+    owner_raw = json.dumps(owner, sort_keys=True, separators=(',', ':')).encode()
+    owner_path = tmp_path / 'owner.json'
+    owner_path.write_bytes(owner_raw)
+    root_gate = {'kind': 'root_supplemental_hp_release',
+                 **{key: value for key, value in owner.items()
+                    if key not in ('kind', 'created_at', 'activation_expires_at')},
+                 'owner_activation_sha256': supplemental.sha256(owner_raw),
+                 'root_manifest_check': True, 'native_review_approved_head': 'head-test',
+                 'released_at': (clock.start - timedelta(seconds=5)).isoformat(),
+                 'release_expires_at': (clock.start + timedelta(hours=1)).isoformat()}
+    root_path = tmp_path / 'root.json'
+    root_path.write_text(json.dumps(root_gate, sort_keys=True, separators=(',', ':')))
+
+    real_lock = supplemental.ExclusiveAccountingLock
+    interleaved = []
+
+    class ResumerWinsLock:
+        def __init__(self, lock_target, journal):
+            self.actual = real_lock(lock_target, journal)
+
+        def __enter__(self):
+            if not interleaved:
+                # The fresh execute launcher already claimed T0 but has not
+                # entered its lock. A resumer advances the journal first.
+                resumed = supplemental.Journal(output, resume=True,
+                                                now=clock.now, monotonic=clock.mono)
+                with real_lock(target, resumed) as lock_b:
+                    resumed.lock_check = lock_b.assert_held
+                    resumed.reload_under_lock()
+                    resumed.append('run_finalized', {
+                        'status': 'incomplete', 'result': 'resumer-partial.json'})
+                interleaved.append(True)
+            self.actual.__enter__()
+            return self
+
+        def assert_held(self):
+            self.actual.assert_held()
+
+        def __exit__(self, *args):
+            return self.actual.__exit__(*args)
+
+    monkeypatch.setattr(supplemental, 'ExclusiveAccountingLock', ResumerWinsLock)
+    fetches = []
+    with pytest.raises(AcquisitionStopped, match='already_finalized'):
+        supplemental.execute(
+            manifest_path=tmp_path / 'manifest.json', owner_activation_path=owner_path,
+            root_release_path=root_path, target_root=target, supplemental_root=output,
+            now=clock.now, monotonic=clock.mono,
+            opener=lambda *_a, **_k: fetches.append(1),
+            head_provider=lambda: 'head-test', api_key='fixture-only')
+    assert interleaved == [True]
+    assert not fetches
+    persisted = [json.loads(line) for line in (output / 'journal.jsonl').read_text().splitlines()]
+    assert persisted[-1]['event'] == 'run_finalized'
+    assert [event['seq'] for event in persisted] == list(range(len(persisted)))
 
 
 @pytest.mark.parametrize('wait_error', [TimeoutError, KeyboardInterrupt])

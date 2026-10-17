@@ -803,10 +803,19 @@ class SupplementalBudget:
 
 
 def _validate_roots(target_root, supplemental_root):
-    if Path(target_root).is_symlink() or Path(supplemental_root).is_symlink():
-        raise AcquisitionStopped('supplemental_root_path_invalid')
-    target = Path(target_root).resolve(strict=True)
-    output = Path(supplemental_root).resolve()
+    try:
+        target_path = Path(target_root)
+        output_path = Path(supplemental_root)
+        if target_path.is_symlink() or output_path.is_symlink():
+            raise AcquisitionStopped('supplemental_root_path_invalid')
+        target = target_path.resolve(strict=True)
+        output = output_path.resolve()
+    except AcquisitionStopped:
+        raise
+    except (OSError, RuntimeError, TypeError, ValueError):
+        # Normalize caller-supplied path failures so a valid activation can
+        # still be consumed at its receipt-bound destination before rejection.
+        raise AcquisitionStopped('supplemental_root_path_invalid') from None
     if not target.is_dir():
         raise AcquisitionStopped('supplemental_root_path_invalid')
     if output.parent != target.parent or output.name == target.name:
@@ -937,22 +946,23 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
         if target != context['target'] or output != context['output']:
             raise AcquisitionStopped('supplemental_root_not_receipt_bound')
     else:
+        # Establish the trusted receipt-bound accounting destination before
+        # inspecting caller-controlled paths. Invalid caller paths can then
+        # consume a valid activation only at that authoritative destination.
+        context = _activation_context(
+            manifest_path=manifest_path, owner_activation_path=owner_activation_path,
+            root_release_path=root_release_path, invocation_utc=invocation_utc,
+            head_provider=head_provider)
+        target, output = context['target'], context['output']
         supplied_root_error = None
         try:
-            _validate_roots(target_root, supplemental_root)
+            supplied_target, supplied_output = _validate_roots(target_root, supplemental_root)
         except AcquisitionStopped as exc:
             supplied_root_error = exc
-        try:
-            context = _activation_context(
-                manifest_path=manifest_path, owner_activation_path=owner_activation_path,
-                root_release_path=root_release_path, invocation_utc=invocation_utc,
-                head_provider=head_provider)
-        except Exception:
-            if supplied_root_error is not None:
-                raise supplied_root_error
-            raise
-        target, output = context['target'], context['output']
-        roots_match = (_matches_bound_path(target_root, target) and
+            supplied_target = supplied_output = None
+        roots_match = (supplied_root_error is None and supplied_target == target and
+                       supplied_output == output and
+                       _matches_bound_path(target_root, target) and
                        _matches_bound_path(supplemental_root, output))
         if not roots_match:
             reason = (str(supplied_root_error) if supplied_root_error is not None
@@ -968,12 +978,12 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
                                     invocation_mono=invocation_mono, now=now,
                                     monotonic=monotonic)
     with ExclusiveAccountingLock(target, journal) as accounting_lock:
-        journal.remaining()
         journal.lock_check = accounting_lock.assert_held
-        if resume:
-            # The pre-lock read supplies only the original T0/D for lock wait.
-            # Refresh the chain after acquiring the writer lock before any append.
-            journal.reload_under_lock()
+        # Every launcher, including the original fresh process, may have been
+        # descheduled after publishing its claim while a resumer advanced the
+        # journal. Never append or dispatch from a pre-lock snapshot.
+        journal.reload_under_lock()
+        journal.remaining()
         if any(event['event'] == 'run_finalized' for event in journal.events):
             raise AcquisitionStopped('supplemental_run_already_finalized')
         if any(event['event'] in ('launch_terminal', 'run_terminal') for event in journal.events):
