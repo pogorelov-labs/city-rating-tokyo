@@ -287,6 +287,8 @@ class Journal:
     def _check_clock(self, current_utc, current_mono):
         if current_utc >= UTC_CUTOFF:
             raise AcquisitionStopped('supplemental_source_cutoff')
+        if self.started_utc is not None and current_utc >= self.deadline:
+            raise AcquisitionStopped('supplemental_wall_deadline')
         if self.last_utc is not None and current_utc < self.last_utc:
             raise AcquisitionStopped('supplemental_utc_clock_went_backwards')
         if self.last_mono is not None and current_mono < self.last_mono:
@@ -341,9 +343,26 @@ class Journal:
             raise AcquisitionStopped('supplemental_launch_terminal')
 
     def append(self, name, fields=None):
+        self._append_event(name, fields, allow_late=False)
+        if name == 'run_finalized':
+            try:
+                self._check_clock(_utc(self.now()), self.monotonic())
+            except AcquisitionStopped as exc:
+                if str(exc) not in ('supplemental_wall_deadline', 'supplemental_source_cutoff'):
+                    raise
+                self._append_event('run_late_failure', {
+                    'status': 'incomplete', 'reason': 'finalization_not_durable_by_deadline',
+                }, allow_late=True)
+                raise AcquisitionStopped('supplemental_finalization_after_deadline') from None
+
+    def _append_event(self, name, fields=None, *, allow_late):
         current_utc = _utc(self.now())
         current_mono = self.monotonic()
-        self._check_clock(current_utc, current_mono)
+        if allow_late:
+            if current_utc < self.last_utc or (self.last_mono is not None and current_mono < self.last_mono):
+                raise AcquisitionStopped('supplemental_clock_went_backwards')
+        else:
+            self._check_clock(current_utc, current_mono)
         if self.lock_check is not None:
             self.lock_check()
         row = {'seq': len(self.events), 'previous_sha256': self.last_sha,
@@ -685,12 +704,10 @@ class SupplementalBudget:
                 while True:
                     self.journal.remaining()
                     if received == BODY_CAP:
-                        chunk = response.read(1)
-                        if chunk:
-                            received += len(chunk)
-                            raise AcquisitionStopped('supplemental_response_at_cap')
-                        eof = True
-                        break
+                        # The reservation is a hard read ceiling. Once it is
+                        # consumed, EOF cannot be proven without reading an
+                        # uncharged byte, so keep the full reservation unknown.
+                        raise AcquisitionStopped('supplemental_response_at_cap_eof_unproven')
                     chunk = response.read(min(65536, BODY_CAP - received))
                     if not chunk:
                         eof = True
@@ -834,6 +851,9 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
     # T0 precedes path validation, journal/receipt parsing and lock wait.
     invocation_utc = _utc(now())
     invocation_mono = monotonic()
+    # Reject unsafe locations before creating the journal or any other file.
+    # T0 is still captured first, so preflight time is inside the window.
+    target, output = _validate_roots(target_root, supplemental_root)
     output_arg = Path(supplemental_root)
     journal = Journal(output_arg, resume=resume, now=now, monotonic=monotonic,
                       start_utc=invocation_utc, start_mono=invocation_mono)
@@ -861,12 +881,6 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
             # could not be, a later continuation must fail closed on its
             # incomplete launch history.
             raise
-    try:
-        target, output = _validate_roots(target_root, supplemental_root)
-    except Exception as exc:
-        journal.append('launch_terminal', {'error_type': type(exc).__name__})
-        raise
-
     with ExclusiveAccountingLock(target, journal) as accounting_lock:
         journal.remaining()
         journal.lock_check = accounting_lock.assert_held

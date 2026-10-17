@@ -16,15 +16,19 @@ class Clock:
     def __init__(self, start=None):
         self.start = start or datetime(2026, 10, 17, 12, 0, tzinfo=timezone.utc)
         self.elapsed = 0.0
+        self.utc_skew = 0.0
 
     def now(self):
-        return self.start + timedelta(seconds=self.elapsed)
+        return self.start + timedelta(seconds=self.elapsed + self.utc_skew)
 
     def mono(self):
         return 1000.0 + self.elapsed
 
     def sleep(self, seconds):
         self.elapsed += seconds
+
+    def advance_utc(self, seconds):
+        self.utc_skew += seconds
 
 
 class Response:
@@ -497,6 +501,40 @@ def test_retained_cap_reserves_full_response_before_socket(tmp_path, monkeypatch
     assert not calls
 
 
+def test_response_reader_never_consumes_beyond_reserved_body_cap(tmp_path, monkeypatch):
+    identity = 'hp:other:1:' + 'c' * 64
+    _target, output, _clock, journal, budget = make_budget(tmp_path, monkeypatch, identity=identity)
+
+    class OversizeStream:
+        status = 200
+
+        def __init__(self):
+            self.total_read = 0
+            self.remaining = supplemental.BODY_CAP + 1
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_):
+            return False
+
+        def read(self, size=-1):
+            requested = min(size, self.remaining)
+            self.total_read += requested
+            self.remaining -= requested
+            return b'x' * requested
+
+    stream = OversizeStream()
+    budget.opener = lambda *_a, **_k: stream
+    with pytest.raises(AcquisitionStopped, match='response_at_cap_eof_unproven'):
+        budget.fetch(identity, object(), lambda *_: {}, kind='page')
+    assert stream.total_read == supplemental.BODY_CAP
+    assert stream.remaining == 1
+    assert budget.body_used() == 214 + supplemental.BODY_CAP
+    assert len(journal.unresolved_attempts()) == 1
+    assert not list(output.glob('response-*'))
+
+
 def test_truncated_journal_is_not_silently_resumed(tmp_path):
     clock = Clock()
     output = tmp_path / 'truncated'
@@ -521,6 +559,95 @@ def test_clock_expiry_and_backward_checkpoint_fail_closed(tmp_path):
     clock2.elapsed = -1
     with pytest.raises(AcquisitionStopped, match='clock_went_backwards'):
         supplemental.Journal(output2, resume=True, now=clock2.now, monotonic=clock2.mono)
+
+
+def test_utc_deadline_is_enforced_even_when_monotonic_clock_has_time_left(tmp_path):
+    clock = Clock()
+    journal = supplemental.Journal(tmp_path / 'utc-deadline', resume=False,
+                                   now=clock.now, monotonic=clock.mono)
+    clock.advance_utc(1800)
+    assert clock.elapsed == 0
+    with pytest.raises(AcquisitionStopped, match='wall_deadline'):
+        journal.remaining()
+    with pytest.raises(AcquisitionStopped, match='wall_deadline'):
+        journal.append('must_not_be_recorded')
+    assert [event['event'] for event in journal.events] == ['run_started']
+
+
+def test_response_completion_after_utc_deadline_stays_unknown(tmp_path, monkeypatch):
+    identity = 'hp:other:1:' + 'd' * 64
+    target, output, clock, journal, budget = make_budget(tmp_path, monkeypatch, identity=identity)
+
+    class CrossingResponse(Response):
+        def read(self, size=-1):
+            chunk = super().read(size)
+            if chunk:
+                clock.advance_utc(1800)
+            return chunk
+
+    payload = raw_page()
+    budget.opener = lambda *_a, **_k: CrossingResponse(payload)
+    with pytest.raises(AcquisitionStopped, match='wall_deadline'):
+        budget.fetch(identity, object(), lambda raw, _response: json.loads(raw), kind='page')
+    assert clock.elapsed == 0  # monotonic still has the full window
+    assert journal.unresolved_attempts() == ['supp-0001']
+    assert budget.body_used() == 214 + supplemental.BODY_CAP
+    assert not list(output.glob('response-*'))
+
+
+def test_page_admission_after_absolute_deadline_is_rejected(tmp_path, monkeypatch):
+    identity = 'hp:other:1:' + 'e' * 64
+    _target, _output, clock, journal, budget = make_budget(tmp_path, monkeypatch, identity=identity)
+    budget.opener = lambda *_a, **_k: Response(raw_page())
+    budget.fetch(identity, object(), lambda raw, _response: json.loads(raw), kind='page')
+    clock.advance_utc(1800)
+    with pytest.raises(AcquisitionStopped, match='wall_deadline'):
+        budget.admit_page(identity)
+    assert not any(event['event'] == 'page_slot_admitted' for event in journal.events)
+
+
+def test_final_journal_fsync_crossing_deadline_adds_late_failure_not_success(tmp_path, monkeypatch):
+    clock = Clock()
+    output = tmp_path / 'late-finalize'
+    journal = supplemental.Journal(output, resume=False,
+                                   now=clock.now, monotonic=clock.mono)
+    real_append = supplemental._append_fsynced
+
+    def fsync_then_cross_deadline(path, raw, *, create=False):
+        real_append(path, raw, create=create)
+        if json.loads(raw)['event'] == 'run_finalized':
+            # UTC crosses D while the monotonic clock remains unchanged.
+            clock.advance_utc(1800)
+
+    monkeypatch.setattr(supplemental, '_append_fsynced', fsync_then_cross_deadline)
+    with pytest.raises(AcquisitionStopped, match='finalization_after_deadline'):
+        journal.append('run_finalized', {'status': 'complete', 'result': 'fixture.json'})
+    assert [event['event'] for event in journal.events][-2:] == [
+        'run_finalized', 'run_late_failure']
+    assert journal.events[-1]['status'] == 'incomplete'
+    assert journal.events[-1]['reason'] == 'finalization_not_durable_by_deadline'
+    persisted = [json.loads(line) for line in (output / 'journal.jsonl').read_text().splitlines()]
+    assert persisted[-1]['event'] == 'run_late_failure'
+    assert persisted[-2]['event'] == 'run_finalized'
+
+
+def test_unsafe_output_root_is_rejected_before_any_protected_tree_write(tmp_path):
+    target = tmp_path / 'target-v4'
+    (target / 'hp_development').mkdir(parents=True)
+    (target / 'hp_development' / 'original.bin').write_bytes(b'preserve-me')
+    before = supplemental.tree_digest(target)
+    invalid_output = target / 'hp_development' / 'supplemental'
+    clock = Clock()
+    with pytest.raises(AcquisitionStopped, match='root_not_sibling'):
+        supplemental.execute(manifest_path=tmp_path / 'missing.json',
+                             owner_activation_path=tmp_path / 'missing-owner.json',
+                             root_release_path=tmp_path / 'missing-root.json',
+                             target_root=target, supplemental_root=invalid_output,
+                             now=clock.now, monotonic=clock.mono,
+                             opener=lambda *_a, **_k: pytest.fail('unsafe path reached I/O'),
+                             api_key='fixture-only')
+    assert not invalid_output.exists()
+    assert supplemental.tree_digest(target) == before
 
 
 def test_execute_binds_activation_journal_lock_and_full_hp_caller(tmp_path, monkeypatch):
