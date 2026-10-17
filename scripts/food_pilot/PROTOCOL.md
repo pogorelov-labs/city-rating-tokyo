@@ -4,9 +4,10 @@ Status: owner scope accepted on 2026-10-15. Overture metadata ended incomplete;
 its cache-only downstream admission is separate from source-phase completion.
 HP development ended terminal/incomplete at its first request and its original
 deadline has expired. Its one-shot diagnostic was later spent without completing
-that phase. The owner has requested preparation and review of a prospective HP
-continuation amendment; this protocol does not implement or activate it. Later
-phases remain stopped.
+that phase. The owner separately requested implementation and review of one
+prospective HP development run. PR141 contains an offline implementation and
+mocked regressions, but it has not been activated or run. Later phases remain
+stopped.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
@@ -175,8 +176,11 @@ with one additional attempt for the exhausted first page, within the frozen
 cumulative budgets (Plane CRTKY-194 comment
 `9f7e6acd-0bce-462d-bfde-9e1f36a3648c`). This is a supplemental run with a new
 wall window, not a reset, reopening, completion or relabeling of the expired
-original HP phase. The existing V10 runtime does not implement these controls.
-This protocol amendment alone does not authorize a run or any request.
+original HP phase. PR141 adds an offline supplemental runner and mocked
+regressions for these controls; they are not an activation or an execution
+receipt. The runner remains inert unless a new exact-manifest owner activation
+and root release are supplied after review. This protocol amendment alone does
+not authorize a run or any request.
 Expiry of the original window does not block this expressly approved new
 prospective window; the original deadline and terminal record remain immutable.
 The only intended changes are this new 1,800-second window and the single
@@ -219,10 +223,10 @@ metadata admission is not bound to V10 and is not an HP-run precondition.
 
 ### Single-use activation and prospective deadline
 
-Before execution, a continuation-capable runtime must implement and test this
-contract, be reviewed on an exact immutable code head/manifest, and pass current
-native-review and CI gates. Only then may a separate single-use root activation
-bind the owner decision, exact head/manifest/code-map, original evidence hashes,
+Before execution, the implemented supplemental runtime and tests must be
+reviewed on an exact immutable code head/manifest and pass current native-review
+and CI gates. Only then may a separate single-use owner activation and root
+release bind the exact head/manifest/code-map, original evidence hashes,
 sample/order/query fingerprints, output location and remaining budget snapshot.
 The activation authorizes only this supplemental HP development run. It cannot
 authorize the diagnostic again, another run, a changed request, or any other
@@ -360,10 +364,12 @@ activation:
 | Holdout and unrelated stages | No Overture metadata/development, prescreen, holdout, challenge, audit or confirmation access; no automatic next phase. |
 | Complete development zero | Preserve V10 pagination evidence; do not treat it as confirmed HP-zero without the separate 24–72-hour process. |
 
-These are normative requirements, not implementation claims or checks already
-performed. V10 does not implement the supplemental consumer. No acquisition may
-occur until that consumer is implemented, reviewed and tested on an exact
-successor head, and a separate single-use root activation is issued.
+These are normative requirements, not claims that a pilot has run or passed.
+V10 remains the predecessor without this consumer. PR141 adds an offline
+implementation and mocked controls; it remains inactive until the exact
+successor head and manifest pass native review and CI and a fresh owner
+activation and root release are separately issued. The implementation task
+creates no activation, execution receipt, or permission to acquire data.
 
 ## Historical one-request HP diagnostic exception (spent)
 

@@ -192,7 +192,8 @@ def acquire_station(station, budget, key):
         first_page_without_prior = page_index == 0 and total is None
         project = lambda raw, response: page_projection(
             raw, response, allow_empty_start_zero=first_page_without_prior)
-        page = budget.fetch(f"hp:{station['slug']}:{start}:{query_hash}", request, project, kind='page')
+        identity = f"hp:{station['slug']}:{start}:{query_hash}"
+        page = budget.fetch(identity, request, project, kind='page')
         empty_first_page = (
             first_page_without_prior
             and start == 1
@@ -208,22 +209,31 @@ def acquire_station(station, budget, key):
             and page['diagnostic'].get('shop_type') == 'array'
             and page['diagnostic'].get('shop_count') == 0
         )
-        if page['start'] != start and not empty_first_page:
-            raise PaginationChanged('start_mismatch', page.get('diagnostic'))
-        if total is not None and page['total'] != total:
-            raise PaginationChanged('total_changed_during_pagination', page.get('diagnostic'))
-        total = page['total']
-        expected = 0 if empty_first_page else min(100, max(0, total-start+1))
-        if page['returned'] != expected:
-            raise PaginationChanged('returned_count_mismatch', page.get('diagnostic'))
-        for shop in page['shops']:
-            if shop['id'] in shops:
-                raise PaginationChanged('duplicate_or_conflicting_provider_id', page.get('diagnostic'))
-            shops[shop['id']] = shop
-        page_receipts.append({'query_sha256':query_hash,'start': start, 'results_start': page['start'],
-                              'returned': page['returned'], 'received_at': page['received_at'],
-                              'diagnostic': page['diagnostic'],
-                              'projected_sha256': hashlib.sha256(json.dumps(page, sort_keys=True).encode()).hexdigest()})
+        try:
+            if page['start'] != start and not empty_first_page:
+                raise PaginationChanged('start_mismatch', page.get('diagnostic'))
+            if total is not None and page['total'] != total:
+                raise PaginationChanged('total_changed_during_pagination', page.get('diagnostic'))
+            total = page['total']
+            expected = 0 if empty_first_page else min(100, max(0, total-start+1))
+            if page['returned'] != expected:
+                raise PaginationChanged('returned_count_mismatch', page.get('diagnostic'))
+            for shop in page['shops']:
+                if shop['id'] in shops:
+                    raise PaginationChanged('duplicate_or_conflicting_provider_id', page.get('diagnostic'))
+                shops[shop['id']] = shop
+            page_receipts.append({'query_sha256':query_hash,'start': start, 'results_start': page['start'],
+                                  'returned': page['returned'], 'received_at': page['received_at'],
+                                  'diagnostic': page['diagnostic'],
+                                  'projected_sha256': hashlib.sha256(json.dumps(page, sort_keys=True).encode()).hexdigest()})
+            admit_page = getattr(budget, 'admit_page', None)
+            if admit_page is not None:
+                admit_page(identity)
+        except Exception:
+            reject_page = getattr(budget, 'reject_page', None)
+            if reject_page is not None:
+                reject_page(identity)
+            raise
         if len(shops) == total:
             inside = sorted((v for v in shops.values() if distance(station, v) <= 800), key=lambda v:v['id'])
             status = 'complete_provider_zero' if total == 0 else 'complete_800m_zero' if not inside else 'complete_positive'
@@ -232,6 +242,9 @@ def acquire_station(station, budget, key):
                     'unique_fetched': len(shops), 'outside_800m': len(shops)-len(inside),
                     'pages': page_receipts, 'venues_800m': inside, 'count_800m': len(inside)}
         if len(shops) > total:
+            reject_page = getattr(budget, 'reject_page', None)
+            if reject_page is not None:
+                reject_page(identity)
             raise PaginationChanged('unexpected_extra_rows', page.get('diagnostic'))
     raise AcquisitionStopped('station_page_cap_truncated')
 
