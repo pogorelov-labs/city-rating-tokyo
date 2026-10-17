@@ -251,7 +251,8 @@ def _append_fsynced(path, raw, *, create=False):
 
 
 class Journal:
-    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None):
+    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None,
+                 start_fields=None, require_activation_claim=False):
         self.directory = Path(directory)
         if self.directory.is_symlink():
             raise AcquisitionStopped('supplemental_root_symlink_rejected')
@@ -271,6 +272,7 @@ class Journal:
         self.started_utc = None
         self.lock_check = None
         self.retention_guard = None
+        self.require_activation_claim = require_activation_claim
         if self.path.exists():
             if not resume:
                 raise AcquisitionStopped('supplemental_root_already_consumed')
@@ -282,7 +284,37 @@ class Journal:
             self.started_mono = start_mono if start_mono is not None else monotonic()
             self._check_clock(self.started_utc, self.started_mono)
             self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
-                                        'monotonic_anchor': self.started_mono})
+                                        'monotonic_anchor': self.started_mono,
+                                        **(start_fields or {})})
+
+    def validate_activation_claim(self):
+        if not self.events:
+            raise AcquisitionStopped('supplemental_journal_start_missing')
+        start = self.events[0]
+        claim_state = start.get('activation_claim_state')
+        if claim_state is None:
+            raise AcquisitionStopped('supplemental_activation_claim_missing')
+        if claim_state == 'terminal':
+            raise AcquisitionStopped('supplemental_launch_terminal')
+        if claim_state == 'pending':
+            claim_events = [event for event in self.events
+                            if event['event'] in ('activation_preflight_started',
+                                                  'activation_consumed',
+                                                  'activation_claim_ready')]
+            if [event['event'] for event in claim_events] != [
+                    'activation_preflight_started', 'activation_consumed',
+                    'activation_claim_ready']:
+                raise AcquisitionStopped('supplemental_activation_claim_incomplete')
+            preflight, consumed, ready = claim_events
+            binding_keys = ('activation_id', 'run_id', 'owner_activation_sha256',
+                            'root_release_sha256')
+            if (any(not preflight.get(key) for key in binding_keys[2:]) or
+                    any(not consumed.get(key) for key in binding_keys) or
+                    any(ready.get(key) != consumed.get(key) for key in binding_keys) or
+                    any(preflight.get(key) != consumed.get(key) for key in binding_keys[2:])):
+                raise AcquisitionStopped('supplemental_activation_claim_incomplete')
+        else:
+            raise AcquisitionStopped('supplemental_activation_claim_state_invalid')
 
     def _check_clock(self, current_utc, current_mono):
         if current_utc >= UTC_CUTOFF:
@@ -337,6 +369,8 @@ class Journal:
         self.lock_check()
         self._load()
         self.lock_check()
+        if self.require_activation_claim:
+            self.validate_activation_claim()
         if any(event['event'] == 'run_finalized' for event in self.events):
             raise AcquisitionStopped('supplemental_run_already_finalized')
         if any(event['event'] == 'launch_terminal' for event in self.events):
@@ -874,7 +908,10 @@ def _claim_activation(context, *, invocation_utc, invocation_mono, now, monotoni
 
     retention_guard(0)
     journal = Journal(output, resume=False, now=now, monotonic=monotonic,
-                      start_utc=invocation_utc, start_mono=invocation_mono)
+                      start_utc=invocation_utc, start_mono=invocation_mono,
+                      start_fields={'activation_claim_state':
+                                    'terminal' if terminal_reason is not None else 'pending'},
+                      require_activation_claim=True)
     journal.retention_guard = retention_guard
     owner_sha, root_sha = sha256(context['owner_raw']), sha256(context['root_raw'])
     journal.append('activation_preflight_started', {
@@ -885,6 +922,10 @@ def _claim_activation(context, *, invocation_utc, invocation_mono, now, monotoni
     if terminal_reason is not None:
         journal.append('launch_terminal', {'error_type': 'UnsafeOutputRoot',
                                            'reason': terminal_reason})
+    else:
+        journal.append('activation_claim_ready', {
+            'activation_id': context['activation_id'], 'run_id': context['run_id'],
+            'owner_activation_sha256': owner_sha, 'root_release_sha256': root_sha})
     return journal
 
 
@@ -934,7 +975,9 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
         # later receipt availability. Nonterminal resumes still rebind to the
         # authoritative receipt path before any lock wait or request work.
         target, output = _validate_roots(target_root, supplemental_root)
-        journal = Journal(output, resume=True, now=now, monotonic=monotonic)
+        journal = Journal(output, resume=True, now=now, monotonic=monotonic,
+                          require_activation_claim=True)
+        journal.validate_activation_claim()
         if any(event['event'] == 'run_finalized' for event in journal.events):
             raise AcquisitionStopped('supplemental_run_already_finalized')
         if any(event['event'] == 'launch_terminal' for event in journal.events):

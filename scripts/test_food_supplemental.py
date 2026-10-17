@@ -471,7 +471,16 @@ def test_finalized_partial_journal_is_terminal_before_caller_io(tmp_path):
     (target / 'hp_development' / '.reader.lock').write_bytes(b'')
     output = tmp_path / 'finalized-partial'
     clock = Clock()
-    journal = supplemental.Journal(output, resume=False, now=clock.now, monotonic=clock.mono)
+    journal = supplemental.Journal(
+        output, resume=False, now=clock.now, monotonic=clock.mono,
+        start_fields={'activation_claim_state': 'pending'})
+    claim = {'activation_id': 'activation', 'run_id': 'run',
+             'owner_activation_sha256': 'a' * 64, 'root_release_sha256': 'b' * 64}
+    journal.append('activation_preflight_started', {
+        'owner_activation_sha256': claim['owner_activation_sha256'],
+        'root_release_sha256': claim['root_release_sha256']})
+    journal.append('activation_consumed', claim)
+    journal.append('activation_claim_ready', claim)
     journal.append('run_finalized', {'status': 'incomplete', 'result': 'fixture.json',
                                     'result_sha256': 'f' * 64})
     calls = []
@@ -665,7 +674,9 @@ def test_unsafe_output_root_is_rejected_before_any_protected_tree_write(tmp_path
     assert supplemental.tree_digest(target) == before
 
 
-@pytest.mark.parametrize('wrong_path', ['nested', 'wrong-sibling', 'missing-target'])
+@pytest.mark.parametrize('wrong_path', ['nested', 'wrong-sibling', 'missing-target',
+                                       'wrong-sibling-interleaved', 'claim-interrupted',
+                                       'legacy-consumed-prefix'])
 def test_invalid_supplied_roots_consume_valid_activation_at_receipt_bound_root(tmp_path, monkeypatch, wrong_path):
     stations, _identity = _sample32(monkeypatch)
     target = tmp_path / 'target-v4'
@@ -675,6 +686,7 @@ def test_invalid_supplied_roots_consume_valid_activation_at_receipt_bound_root(t
     missing_target = tmp_path / 'missing-target-v4'
     supplied_target = missing_target if wrong_path == 'missing-target' else target
     unsafe_output = (target / 'hp_development' / 'supplemental' if wrong_path == 'nested'
+                     else bound_output if wrong_path == 'claim-interrupted'
                      else bound_output if wrong_path == 'missing-target'
                      else tmp_path / 'other-supplemental')
     clock = Clock()
@@ -690,10 +702,17 @@ def test_invalid_supplied_roots_consume_valid_activation_at_receipt_bound_root(t
                 'hp_retained_limit': supplemental.HP_RETAINED_LIMIT,
                 'global_retained_bytes': 41_468_376,
                 'global_retained_limit': supplemental.GLOBAL_RETAINED_LIMIT}
-    manifest = {'supplemental_hp_development': {
+    limits = {'attempts': 400, 'maximum_attempts_per_page': 2,
+              'response_body_bytes': supplemental.HP_BODY_LIMIT, 'response_bytes': supplemental.BODY_CAP,
+              'retained_bytes': supplemental.HP_RETAINED_LIMIT, 'successful_pages': 320,
+              'pages_per_station': 50, 'socket_seconds': 20,
+              'minimum_request_interval_seconds': 0.6, 'concurrency': 1}
+    manifest = {'core': {'stations': stations}, 'budgets': {'hp_development': limits},
+                'supplemental_hp_development': {
         'reviewed_git_head': 'head-test', 'protocol_sha256': protocol_hash,
         'decision_sha256': decision_hash, 'original_evidence_sha256': evidence,
         'development_sample_sha256': sample_hash, 'query_fingerprint_sha256': query_hash,
+        'development_order': [row['slug'] for row in stations],
         'budget_snapshot': snapshot}}
     manifest_hash, map_hash, head = 'a' * 64, 'b' * 64, 'head-test'
     monkeypatch.setattr(supplemental, 'check_manifest',
@@ -719,27 +738,100 @@ def test_invalid_supplied_roots_consume_valid_activation_at_receipt_bound_root(t
                  'release_expires_at': (clock.start + timedelta(hours=1)).isoformat()}
     root_path = tmp_path / 'root.json'
     root_path.write_text(json.dumps(root_gate, sort_keys=True, separators=(',', ':')))
+    if wrong_path == 'legacy-consumed-prefix':
+        legacy = supplemental.Journal(bound_output, resume=False,
+                                      now=clock.now, monotonic=clock.mono)
+        legacy.append('activation_preflight_started', {'fixture': True})
+        legacy.append('activation_consumed', {'fixture': True})
+        legacy_bytes = (bound_output / 'journal.jsonl').read_bytes()
     before = supplemental.tree_digest(target)
     calls = []
+
+    if wrong_path == 'wrong-sibling-interleaved':
+        monkeypatch.setattr(supplemental, '_verify_evidence', lambda *_: {
+            'attempts': [{'identity': supplemental.EXCEPTIONAL_IDENTITY, 'status': 'failed',
+                          'retry_disposition': 'terminal'}],
+            'status': 'incomplete', 'successful_pages': 0, 'charged_bytes': 107})
+        monkeypatch.setattr(supplemental, 'acquire_sites',
+                            lambda *_a: calls.append('dispatch'))
+        real_append = supplemental._append_fsynced
+        nested_errors = []
+
+        def resume_between_consumption_and_terminal(path, raw, *, create=False):
+            real_append(path, raw, create=create)
+            event = json.loads(raw).get('event')
+            if event == 'activation_consumed':
+                try:
+                    supplemental.execute(
+                        manifest_path=tmp_path / 'manifest.json', owner_activation_path=owner_path,
+                        root_release_path=root_path, target_root=target,
+                        supplemental_root=bound_output, resume=True,
+                        now=clock.now, monotonic=clock.mono,
+                        opener=lambda *_a, **_k: calls.append('fetch'),
+                        head_provider=lambda: head, api_key='fixture-only')
+                except AcquisitionStopped as exc:
+                    nested_errors.append(str(exc))
+
+        monkeypatch.setattr(supplemental, '_append_fsynced', resume_between_consumption_and_terminal)
+    elif wrong_path == 'claim-interrupted':
+        real_append = supplemental._append_fsynced
+
+        def interrupt_after_consumption(path, raw, *, create=False):
+            real_append(path, raw, create=create)
+            if json.loads(raw).get('event') == 'activation_consumed':
+                raise KeyboardInterrupt('controlled claim interruption')
+
+        monkeypatch.setattr(supplemental, '_append_fsynced', interrupt_after_consumption)
 
     expected_reason = ('root_not_sibling' if wrong_path == 'nested' else
                        'root_path_invalid' if wrong_path == 'missing-target' else
                        'root_not_receipt_bound')
-    with pytest.raises(AcquisitionStopped, match=expected_reason):
+    if wrong_path == 'legacy-consumed-prefix':
+        with pytest.raises(AcquisitionStopped, match='supplemental_activation_claim_missing'):
+            supplemental.execute(manifest_path=tmp_path / 'manifest.json',
+                                 owner_activation_path=owner_path, root_release_path=root_path,
+                                 target_root=target, supplemental_root=bound_output, resume=True,
+                                 now=clock.now, monotonic=clock.mono,
+                                 opener=lambda *_a, **_k: calls.append(1),
+                                 head_provider=lambda: head, api_key='fixture-only')
+        assert (bound_output / 'journal.jsonl').read_bytes() == legacy_bytes
+        assert supplemental.tree_digest(target) == before
+        assert not calls
+        return
+    expected_exception = KeyboardInterrupt if wrong_path == 'claim-interrupted' else AcquisitionStopped
+    expected_match = None if wrong_path == 'claim-interrupted' else expected_reason
+    with pytest.raises(expected_exception, match=expected_match):
         supplemental.execute(manifest_path=tmp_path / 'manifest.json',
                              owner_activation_path=owner_path, root_release_path=root_path,
                              target_root=supplied_target, supplemental_root=unsafe_output,
                              now=clock.now, monotonic=clock.mono,
                              opener=lambda *_a, **_k: calls.append(1),
                              head_provider=lambda: head, api_key='fixture-only')
-    if wrong_path != 'missing-target':
+    if wrong_path not in ('missing-target', 'claim-interrupted'):
         assert not unsafe_output.exists()
     else:
         assert not missing_target.exists()
     assert supplemental.tree_digest(target) == before
+    if wrong_path == 'wrong-sibling-interleaved':
+        assert nested_errors == ['supplemental_launch_terminal']
+        assert not calls
     events = [json.loads(line) for line in (bound_output / 'journal.jsonl').read_text().splitlines()]
     assert events[0]['event'] == 'run_started'
     assert events[0]['t0_utc'] == clock.start.isoformat()
+    if wrong_path == 'claim-interrupted':
+        assert events[0]['activation_claim_state'] == 'pending'
+        assert [event['event'] for event in events][-2:] == [
+            'activation_preflight_started', 'activation_consumed']
+        with pytest.raises(AcquisitionStopped, match='supplemental_activation_claim_incomplete'):
+            supplemental.execute(manifest_path=tmp_path / 'manifest.json',
+                                 owner_activation_path=owner_path, root_release_path=root_path,
+                                 target_root=target, supplemental_root=bound_output, resume=True,
+                                 now=clock.now, monotonic=clock.mono,
+                                 opener=lambda *_a, **_k: calls.append(1),
+                                 head_provider=lambda: head, api_key='fixture-only')
+        assert not calls
+        return
+    assert events[0]['activation_claim_state'] == 'terminal'
     assert [event['event'] for event in events][-3:] == [
         'activation_preflight_started', 'activation_consumed', 'launch_terminal']
 
@@ -856,7 +948,10 @@ def test_execute_fresh_launcher_reloads_after_resumer_finalizes_before_lock(tmp_
 
 
 @pytest.mark.parametrize('wait_error', [TimeoutError, KeyboardInterrupt])
-def test_execute_binds_activation_journal_lock_and_full_hp_caller(tmp_path, monkeypatch, wait_error):
+@pytest.mark.parametrize('claim_pause_event', [None, 'run_started', 'activation_preflight_started',
+                                                'activation_consumed'])
+def test_execute_binds_activation_journal_lock_and_full_hp_caller(
+        tmp_path, monkeypatch, wait_error, claim_pause_event):
     stations, identity = _sample32(monkeypatch)
     target = tmp_path / 'target-v4'
     (target / 'hp_development').mkdir(parents=True)
@@ -922,6 +1017,30 @@ def test_execute_binds_activation_journal_lock_and_full_hp_caller(tmp_path, monk
         calls.append((station['slug'], start))
         return Response(_empty_page_for(start, gun=station['slug'] == 'gun-hatake'))
 
+    pre_ready_rejections = []
+    if claim_pause_event is not None:
+        real_append = supplemental._append_fsynced
+        attempted = []
+
+        def resume_at_claim_prefix(path, raw, *, create=False):
+            real_append(path, raw, create=create)
+            event = json.loads(raw).get('event')
+            if event == claim_pause_event and not attempted:
+                attempted.append(event)
+                with pytest.raises(AcquisitionStopped,
+                                   match='supplemental_activation_claim_incomplete'):
+                    supplemental.execute(
+                        manifest_path=tmp_path / 'manifest.json',
+                        owner_activation_path=owner_path, root_release_path=root_path,
+                        target_root=target, supplemental_root=output, resume=True,
+                        now=clock.now, monotonic=clock.mono,
+                        opener=lambda *_a, **_k: calls.append(('unexpected', 0)),
+                        sleeper=clock.sleep, head_provider=lambda: head,
+                        api_key='fixture-only')
+                pre_ready_rejections.append(event)
+
+        monkeypatch.setattr(supplemental, '_append_fsynced', resume_at_claim_prefix)
+
     # A different writer holds the shared lock while this invocation waits.
     # The run claim/T0 must already be durable before timeout or interruption.
     lock_path = target / 'hp_development' / '.reader.lock'
@@ -941,7 +1060,10 @@ def test_execute_binds_activation_journal_lock_and_full_hp_caller(tmp_path, monk
             head_provider=lambda: head, api_key='fixture-only')
     claimed = [json.loads(line) for line in (output / 'journal.jsonl').read_text().splitlines()]
     assert [event['event'] for event in claimed] == [
-        'run_started', 'activation_preflight_started', 'activation_consumed']
+        'run_started', 'activation_preflight_started', 'activation_consumed',
+        'activation_claim_ready']
+    assert claimed[0]['activation_claim_state'] == 'pending'
+    assert pre_ready_rejections == ([] if claim_pause_event is None else [claim_pause_event])
     assert claimed[0]['t0_utc'] == clock.start.isoformat()
     assert not calls
     monkeypatch.setattr(supplemental.time, 'sleep', original_sleep)
