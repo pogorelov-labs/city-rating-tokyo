@@ -251,17 +251,15 @@ def _append_fsynced(path, raw, *, create=False):
 
 
 class Journal:
-    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None,
-                 defer_start=False):
+    def __init__(self, directory, *, resume, now, monotonic, start_utc=None, start_mono=None):
         self.directory = Path(directory)
         if self.directory.is_symlink():
             raise AcquisitionStopped('supplemental_root_symlink_rejected')
         if self.directory.exists() and not resume:
             raise AcquisitionStopped('supplemental_root_already_exists')
-        if not defer_start:
-            self.directory.mkdir(parents=True, exist_ok=True)
-            if not self.directory.is_dir():
-                raise AcquisitionStopped('supplemental_root_path_invalid')
+        self.directory.mkdir(parents=True, exist_ok=True)
+        if not self.directory.is_dir():
+            raise AcquisitionStopped('supplemental_root_path_invalid')
         self.path = self.directory / 'journal.jsonl'
         self.now = now
         self.monotonic = monotonic
@@ -282,17 +280,9 @@ class Journal:
                 raise AcquisitionStopped('supplemental_journal_missing')
             self.started_utc = _utc(start_utc if start_utc is not None else now())
             self.started_mono = start_mono if start_mono is not None else monotonic()
-            if not defer_start:
-                self._check_clock(self.started_utc, self.started_mono)
-                self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
-                                            'monotonic_anchor': self.started_mono})
-
-    def begin(self):
-        if self.events or self.path.exists():
-            raise AcquisitionStopped('supplemental_root_already_consumed')
-        self.directory.mkdir(parents=True, exist_ok=False)
-        self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
-                                    'monotonic_anchor': self.started_mono})
+            self._check_clock(self.started_utc, self.started_mono)
+            self.append('run_started', {'t0_utc': self.started_utc.isoformat(),
+                                        'monotonic_anchor': self.started_mono})
 
     def _check_clock(self, current_utc, current_mono):
         if current_utc >= UTC_CUTOFF:
@@ -438,13 +428,18 @@ class ExclusiveAccountingLock:
                     pass
             raise AcquisitionStopped('supplemental_shared_lock_missing')
         self.stream = self.path.open('rb')
-        while True:
-            self.journal.remaining()  # lock wait consumes the original window
-            try:
-                fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
-                return self
-            except BlockingIOError:
-                time.sleep(min(0.05, self.journal.remaining()))
+        try:
+            while True:
+                self.journal.remaining()  # lock wait consumes the original window
+                try:
+                    fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    return self
+                except BlockingIOError:
+                    time.sleep(min(0.05, self.journal.remaining()))
+        except BaseException:
+            self.stream.close()
+            self.stream = None
+            raise
 
     def assert_held(self):
         if self.stream is None or self.stream.closed:
@@ -821,72 +816,67 @@ def _validate_roots(target_root, supplemental_root):
     return target, output
 
 
-def _consume_bad_output_at_bound_root(*, manifest_path, owner_activation_path,
-                                      root_release_path, supplied_target,
-                                      supplied_output, invocation_utc,
-                                      invocation_mono, now, monotonic,
-                                      head_provider):
-    """Terminalize a valid activation only at its receipt-bound safe root."""
+def _activation_context(*, manifest_path, owner_activation_path, root_release_path,
+                        invocation_utc, head_provider):
+    """Resolve and validate the authoritative output destination from exact receipt bindings."""
+    manifest, manifest_hash, map_hash = check_manifest(manifest_path)
+    owner, owner_raw = _read_json(owner_activation_path)
+    root_gate, root_raw = _read_json(root_release_path)
+    contract = manifest['supplemental_hp_development']
+    head = head_provider()
+    target, output = _validate_roots(owner.get('target_root'), owner.get('supplemental_root'))
+    activation_id, run_id = _receipt_bindings(
+        manifest, manifest_hash, map_hash, head, owner, root_gate, target, output)
+    if root_gate.get('owner_activation_sha256') != sha256(owner_raw):
+        raise AcquisitionStopped('supplemental_root_owner_receipt_hash')
+    if owner.get('created_at') is None or root_gate.get('released_at') is None:
+        raise AcquisitionStopped('supplemental_activation_receipt_time_missing')
+    if _utc(owner['created_at']) > invocation_utc or _utc(root_gate['released_at']) > invocation_utc:
+        raise AcquisitionStopped('supplemental_activation_not_preexisting')
+    if (_utc(owner.get('activation_expires_at', '')) <= invocation_utc or
+            _utc(root_gate.get('release_expires_at', '')) <= invocation_utc):
+        raise AcquisitionStopped('supplemental_activation_expired')
+    return {'manifest': manifest, 'manifest_hash': manifest_hash, 'map_hash': map_hash,
+            'contract': contract, 'head': head, 'owner': owner, 'owner_raw': owner_raw,
+            'root_gate': root_gate, 'root_raw': root_raw, 'target': target, 'output': output,
+            'activation_id': activation_id, 'run_id': run_id}
+
+
+def _matches_bound_path(supplied, bound):
     try:
-        manifest, manifest_hash, map_hash = check_manifest(manifest_path)
-        owner, owner_raw = _read_json(owner_activation_path)
-        root_gate, root_raw = _read_json(root_release_path)
-        contract = manifest['supplemental_hp_development']
-        head = head_provider()
-        target, output = _validate_roots(owner.get('target_root'), owner.get('supplemental_root'))
-        if contract.get('reviewed_git_head') != head:
-            return False
-        activation_id, run_id = _receipt_bindings(
-            manifest, manifest_hash, map_hash, head, owner, root_gate, target, output)
-        if root_gate.get('owner_activation_sha256') != sha256(owner_raw):
-            return False
-        if root_raw is None or owner.get('created_at') is None or root_gate.get('released_at') is None:
-            return False
-        if _utc(owner['created_at']) > invocation_utc or _utc(root_gate['released_at']) > invocation_utc:
-            return False
-        if (_utc(owner.get('activation_expires_at', '')) <= invocation_utc or
-                _utc(root_gate.get('release_expires_at', '')) <= invocation_utc):
-            return False
-        # The safe destination must come from the exact owner/root binding,
-        # never from the rejected command-line path.
-        if Path(supplied_target).resolve() != target:
-            return False
-        lock_path = target / 'hp_development' / '.reader.lock'
-        if not lock_path.is_file() or lock_path.is_symlink() or output.exists():
-            return False
-
-        def retention_guard(added):
-            if (file_size(target / 'hp_development') + file_size(output) + added +
-                    CONTROL_RETENTION_RESERVE > HP_RETAINED_LIMIT):
-                raise AcquisitionStopped('supplemental_hp_retained_budget')
-            if (file_size(target) + file_size(output) + added +
-                    CONTROL_RETENTION_RESERVE > GLOBAL_RETAINED_LIMIT):
-                raise AcquisitionStopped('supplemental_global_retained_budget')
-
-        retention_guard(0)
-        journal = Journal(output, resume=False, now=now, monotonic=monotonic,
-                          start_utc=invocation_utc, start_mono=invocation_mono,
-                          defer_start=True)
-        with ExclusiveAccountingLock(target, journal) as lock:
-            journal.lock_check = lock.assert_held
-            journal.retention_guard = retention_guard
-            journal.begin()
-            journal.append('activation_preflight_started', {
-                'owner_activation_sha256': sha256(owner_raw),
-                'root_release_sha256': sha256(root_raw),
-            })
-            journal.append('activation_consumed', {
-                'activation_id': activation_id, 'run_id': run_id,
-                'owner_activation_sha256': sha256(owner_raw),
-                'root_release_sha256': sha256(root_raw),
-            })
-            journal.append('launch_terminal', {'error_type': 'UnsafeOutputRoot'})
-        return True
-    except Exception:
-        # Invalid/missing approval data is not trusted as a destination for a
-        # terminal receipt. The caller still fails closed without writing to
-        # the supplied unsafe path.
+        path = Path(supplied)
+        return not path.is_symlink() and path.resolve() == bound
+    except (OSError, RuntimeError, TypeError, ValueError):
         return False
+
+
+def _claim_activation(context, *, invocation_utc, invocation_mono, now, monotonic,
+                      terminal_reason=None):
+    """Durably claim T0 at the receipt-bound root before any lock wait."""
+    target, output = context['target'], context['output']
+
+    def retention_guard(added):
+        if (file_size(target / 'hp_development') + file_size(output) + added +
+                CONTROL_RETENTION_RESERVE > HP_RETAINED_LIMIT):
+            raise AcquisitionStopped('supplemental_hp_retained_budget')
+        if (file_size(target) + file_size(output) + added +
+                CONTROL_RETENTION_RESERVE > GLOBAL_RETAINED_LIMIT):
+            raise AcquisitionStopped('supplemental_global_retained_budget')
+
+    retention_guard(0)
+    journal = Journal(output, resume=False, now=now, monotonic=monotonic,
+                      start_utc=invocation_utc, start_mono=invocation_mono)
+    journal.retention_guard = retention_guard
+    owner_sha, root_sha = sha256(context['owner_raw']), sha256(context['root_raw'])
+    journal.append('activation_preflight_started', {
+        'owner_activation_sha256': owner_sha, 'root_release_sha256': root_sha})
+    journal.append('activation_consumed', {
+        'activation_id': context['activation_id'], 'run_id': context['run_id'],
+        'owner_activation_sha256': owner_sha, 'root_release_sha256': root_sha})
+    if terminal_reason is not None:
+        journal.append('launch_terminal', {'error_type': 'UnsafeOutputRoot',
+                                           'reason': terminal_reason})
+    return journal
 
 
 def _verify_evidence(target_root, contract):
@@ -930,46 +920,53 @@ def execute(*, manifest_path, owner_activation_path, root_release_path, target_r
     # T0 precedes path validation, journal/receipt parsing and lock wait.
     invocation_utc = _utc(now())
     invocation_mono = monotonic()
-    # Reject unsafe locations before creating the journal or any other file.
-    # T0 is still captured first, so preflight time is inside the window.
-    try:
+    if resume:
+        # A terminal existing journal can be rejected without depending on
+        # later receipt availability. Nonterminal resumes still rebind to the
+        # authoritative receipt path before any lock wait or request work.
         target, output = _validate_roots(target_root, supplemental_root)
-    except Exception:
-        _consume_bad_output_at_bound_root(
-            manifest_path=manifest_path,
-            owner_activation_path=owner_activation_path,
-            root_release_path=root_release_path,
-            supplied_target=target_root, supplied_output=supplemental_root,
-            invocation_utc=invocation_utc, invocation_mono=invocation_mono,
-            now=now, monotonic=monotonic, head_provider=head_provider)
-        raise
-    output_arg = Path(supplemental_root)
-    journal = Journal(output_arg, resume=resume, now=now, monotonic=monotonic,
-                      start_utc=invocation_utc, start_mono=invocation_mono)
-    if not resume:
-        # Consume the one activation at first invocation, before path checks
-        # and lock wait. The first durable event remains run_started/T0.
+        journal = Journal(output, resume=True, now=now, monotonic=monotonic)
+        if any(event['event'] == 'run_finalized' for event in journal.events):
+            raise AcquisitionStopped('supplemental_run_already_finalized')
+        if any(event['event'] == 'launch_terminal' for event in journal.events):
+            raise AcquisitionStopped('supplemental_launch_terminal')
+        context = _activation_context(
+            manifest_path=manifest_path, owner_activation_path=owner_activation_path,
+            root_release_path=root_release_path, invocation_utc=invocation_utc,
+            head_provider=head_provider)
+        if target != context['target'] or output != context['output']:
+            raise AcquisitionStopped('supplemental_root_not_receipt_bound')
+    else:
+        supplied_root_error = None
         try:
-            owner_raw, root_raw = b'', b''
-            try:
-                owner_raw = Path(owner_activation_path).read_bytes()
-            except OSError:
-                pass
-            try:
-                root_raw = Path(root_release_path).read_bytes()
-            except OSError:
-                pass
-            journal.append('activation_preflight_started', {
-                'owner_activation_sha256': sha256(owner_raw),
-                'root_release_sha256': sha256(root_raw)})
-            journal.append('activation_consumed', {
-                'owner_activation_sha256': sha256(owner_raw),
-                'root_release_sha256': sha256(root_raw)})
-        except Exception as exc:
-            # If the first event was durable but a subsequent preflight marker
-            # could not be, a later continuation must fail closed on its
-            # incomplete launch history.
+            _validate_roots(target_root, supplemental_root)
+        except AcquisitionStopped as exc:
+            supplied_root_error = exc
+        try:
+            context = _activation_context(
+                manifest_path=manifest_path, owner_activation_path=owner_activation_path,
+                root_release_path=root_release_path, invocation_utc=invocation_utc,
+                head_provider=head_provider)
+        except Exception:
+            if supplied_root_error is not None:
+                raise supplied_root_error
             raise
+        target, output = context['target'], context['output']
+        roots_match = (_matches_bound_path(target_root, target) and
+                       _matches_bound_path(supplemental_root, output))
+        if not roots_match:
+            reason = (str(supplied_root_error) if supplied_root_error is not None
+                      else 'supplemental_root_not_receipt_bound')
+            _claim_activation(context, invocation_utc=invocation_utc,
+                              invocation_mono=invocation_mono, now=now,
+                              monotonic=monotonic, terminal_reason=reason)
+            raise AcquisitionStopped(reason)
+        # Claim the exact activation/T0 before entering the interruptible lock
+        # wait. Contenders cannot append budget events or dispatch until they
+        # acquire the shared writer lock and reload this journal.
+        journal = _claim_activation(context, invocation_utc=invocation_utc,
+                                    invocation_mono=invocation_mono, now=now,
+                                    monotonic=monotonic)
     with ExclusiveAccountingLock(target, journal) as accounting_lock:
         journal.remaining()
         journal.lock_check = accounting_lock.assert_held
