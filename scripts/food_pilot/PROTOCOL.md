@@ -3,8 +3,10 @@
 Status: owner scope accepted on 2026-10-15. Overture metadata ended incomplete;
 its cache-only downstream admission is separate from source-phase completion.
 HP development ended terminal/incomplete at its first request and its original
-deadline has expired. Later phases remain stopped; the diagnostic-only option
-below is disabled and requires a separate exact-head owner/root gate.
+deadline has expired. Its one-shot diagnostic was later spent without completing
+that phase. The owner has requested preparation and review of a prospective HP
+continuation amendment; this protocol does not implement or activate it. Later
+phases remain stopped.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
@@ -97,16 +99,16 @@ complete EOF and no provider error under the existing checks; exact JSON
 `results_available: 0` (integer), `results_returned: "0"` (canonical string),
 `results_start: 0` (integer), and `shop: []`. The request still asks for
 `start=1`; preserve both the requested start and observed `results_start=0` in
-the page receipt. This treats the zero-item page as having no result position to
-reconcile and leaves count/completeness semantics unchanged. It is a local
-compatibility inference from one allowlisted diagnostic shape, not a documented
-Recruit guarantee: the [official reference](https://webservice.recruit.co.jp/doc/hotpepper/reference.html)
+the page receipt. For this exact tuple V10 classifies the first page as
+`complete_provider_zero`; the previous parser rejected it. This is an actual
+local parser/classification behavior change based on one allowlisted diagnostic
+shape, not a documented Recruit guarantee: the [official reference](https://webservice.recruit.co.jp/doc/hotpepper/reference.html)
 defines these fields and shows start position 1 but does not specify the empty
 JSON representation. Do not coerce or broaden this exact type tuple. Any
 nonempty, malformed, contradictory, provider-error, missing, non-EOF, or later
-page remains incomplete/rejected. This clarification never reinterprets the
-original terminal HP ledger/result or diagnostic, emits a count from that
-history, or authorizes a resume/request.
+page remains incomplete/rejected. This change never reinterprets the original
+terminal HP ledger/result or diagnostic, emits a count from that history, or
+authorizes a resume/request.
 
 ## Candidate acquisition budgets
 
@@ -166,23 +168,215 @@ Full same-vintage 1,493-station score/rank/composite replay, attribution/rights,
 freshness SLA, operator schema/recovery and explicit production rollout remain
 separate gates. HP-zero policy stays unchanged even if the challenge succeeds.
 
-## Disabled one-request HP diagnostic exception
+## Prospective HP development supplemental run (normative, not activated)
 
-The original `hp_development` phase remains terminal and incomplete: its frozen
-start, finish, deadline, ledger and result are not resumed, rewritten or relabeled.
-The deadline was `2026-10-16T13:55:29.181380Z` and has expired. A separate,
-disabled diagnostic command exists only to make a possible narrowly scoped
-owner decision reviewable. It is not a pilot phase or an enabled recovery path.
-The prior v6/v8 approvals and ordinary pilot root receipts do not authorize it.
+The owner approved preparation and review of one prospective HP development run
+with one additional attempt for the exhausted first page, within the frozen
+cumulative budgets (Plane CRTKY-194 comment
+`9f7e6acd-0bce-462d-bfde-9e1f36a3648c`). This is a supplemental run with a new
+wall window, not a reset, reopening, completion or relabeling of the expired
+original HP phase. The existing V10 runtime does not implement these controls.
+This protocol amendment alone does not authorize a run or any request.
+Expiry of the original window does not block this expressly approved new
+prospective window; the original deadline and terminal record remain immutable.
+The only intended changes are this new 1,800-second window and the single
+lifetime third attempt for the exact exhausted first-page identity. All other
+sample, source, quality, quantitative-cap and product rules remain unchanged.
 
-Activation would require both a fresh owner exception and a separate root gate,
-stored under the existing `target-v4` accounting tree and bound to the exact
-successor manifest SHA, code map and Git head, original HP ledger/result hashes,
-and request identity. The root gate must record current-head native approval,
-all CI green, the exact owner-exception hash, and an explicit permission for
-only this one diagnostic. Neither gate may allow retries, redirects, pilot
-counts, phase completion, metadata reads or a next request. Without both valid
-files the command fails before reserving or opening a socket.
+### Scope and immutable evidence
+
+The supplemental run covers exactly the frozen 32-site development split in its
+existing order, using the same IDs, centers, request order, category, canonical
+query parameters and count contract. It starts from the beginning of that split
+but must reuse already complete, identity-matched results rather than reacquire
+successful request identities. The `gun-hatake` page-1 request must match the
+full canonical request identity in the original ledger, including station,
+endpoint, page/start, all credential-free frozen parameters and query
+fingerprint. A mismatch stops before I/O.
+
+Create a distinct append-only supplemental ledger/result in a new sibling
+directory under the existing pilot artifact parent, outside the frozen current
+49-file `target-v4` tree (SHA-256
+`49df1e59182bfeb5a3c6eb25f6d53676a96b0cb93c312ff3ccf3d698c5c0af36`). The
+historical 44-file pre-receipt subset has SHA-256
+`68c125c986f388e56b2a23be3f76867ad41bf0c52cc45469c250f49db112d012`; preserve
+both identities. Bind the supplemental ledger by path and SHA-256 to the original HP ledger
+and result, the V9 diagnostic reservation/outcome, V10 protocol/parser contract,
+sample and query hashes, and exact runtime/manifest hashes. Do not copy those
+prior artifacts. The frozen current 49 files must remain byte-identical. Count every
+physical supplemental file and any actual copy against both the HP development
+retention ceiling and the 2 GiB global ceiling. The future runtime must aggregate
+the original and supplemental locations; it must reject unaccounted or
+ambiguous roots. The original HP ledger/result and diagnostic remain terminal,
+incomplete or diagnostic-only exactly as recorded. A complete supplemental
+result may describe only its own 32-site data; it cannot change those earlier
+states.
+
+This grant is HP-only. It creates no dependency on Overture metadata or cache
+admission, and does not release Overture development, HP prescreen, holdout,
+challenge, audit, zero confirmation or any later phase. The previous V6
+metadata admission is not bound to V10 and is not an HP-run precondition.
+
+### Single-use activation and prospective deadline
+
+Before execution, a continuation-capable runtime must implement and test this
+contract, be reviewed on an exact immutable code head/manifest, and pass current
+native-review and CI gates. Only then may a separate single-use root activation
+bind the owner decision, exact head/manifest/code-map, original evidence hashes,
+sample/order/query fingerprints, output location and remaining budget snapshot.
+The activation authorizes only this supplemental HP development run. It cannot
+authorize the diagnostic again, another run, a changed request, or any other
+phase. V10 approval alone is not activation. Missing, stale, reused or
+mismatched activation fails closed. A launch attempt consumes that activation
+even if preflight fails; a further run requires a new explicit root decision.
+
+T0 is a real, non-backdated UTC timestamp captured at command invocation after
+the exact-head activation exists, but before preflight/input validation, lock
+wait, reservation or finalization. Persist T0 and a monotonic-clock anchor as the
+first supplemental journal record. Reject T0 at or after
+`2026-10-22T00:00:00Z`. Define the absolute deadline as
+`D = min(T0 + 1,800 seconds, 2026-10-22T00:00:00Z)`. Enforce both the
+supplemental monotonic deadline and D throughout input/gate validation, lock
+wait, reservation, request spacing, request dispatch, response read, parsing,
+budget settlement and durable result finalization. Bound each request timeout by
+the remaining interval. A request still in flight at D, or with an ambiguous
+completion/receipt at D, is unknown/incomplete; it cannot be accepted as success.
+A late failure tombstone may record the incomplete outcome, but it cannot permit
+post-D I/O or claim success.
+
+Any process continuation after interruption must use the same activation nonce,
+run ID, append-only journal, T0, D and cumulative counters. It must check D before
+recovery or validation work; that work consumes remaining time. It must never
+grant a new 1,800-second interval or replay a reserved/unknown request. If a
+required clock/checkpoint history is absent or UTC is earlier than the last
+durable UTC checkpoint, fail closed. No result, page, body or output may be
+finalized as successful after either deadline.
+
+### Lifetime attempt exception
+
+The frozen two-attempt lifetime ceiling remains in force for every request
+identity except the one full `gun-hatake` page-1 identity above. That identity's
+lifetime maximum becomes exactly three: original attempt + spent V9 diagnostic
+attempt + one new supplemental attempt. The new attempt must be reserved durably
+before dispatch. It has no retry, including after transient transport or HTTP
+5xx failure, and no fourth attempt is permitted. A timeout, interruption, crash,
+transport failure, ambiguous dispatch or unknown outcome after reservation
+consumes this one allowance permanently. A prior or existing supplemental
+reservation/outcome blocks another call.
+
+Every other request identity retains its cumulative existing maximum of two
+attempts, including attempts in earlier ledgers. Its current retry and terminal
+rules remain unchanged: one retry after two seconds only for allowed transient
+transport/HTTP 5xx failures; authentication rejection, HTTP 429, schema or
+projection failure, request/object identity change, provider error and other
+existing terminal outcomes stop under current policy. This exception grants no
+additional attempt to page 2 or later, any other station, prescreen, or
+confirmation.
+
+### Cumulative counters, page slots and retained evidence
+
+The phase ceilings do not increase: HP development remains capped at 400 total
+attempts, 134,217,728 response-body bytes, 134,217,728 retained bytes, 320
+successful-page slots and 50 pages per site. Preserve the original and diagnostic
+charges and add supplemental attempts/reservations to the same lifetime
+accounting. A request body is charged once per actual attempt, independent of
+how many retained artifacts reference it; each physical retained copy counts
+its actual bytes against retention. No phase budget is transferred or reset.
+
+Verified pre-continuation accounting from the preserved records is 2/400
+attempts and 214/134,217,728 body bytes. The phase-wide arithmetic remainder is
+398 attempts and 134,217,514 body bytes. The one new request must reserve its
+full 1,048,576-byte response maximum before I/O, leaving at most 133,168,938
+bytes provisionally available while the outcome is unknown. Confirmed complete
+EOF may settle that reservation to the actually observed body size, releasing
+only the known unused bytes. If EOF or dispatch is uncertain, retain the full
+reservation. These numbers are planning facts, not extra allowance.
+
+The original ledger admits zero successful pages. The diagnostic reserved one
+successful-page slot but ended `diagnostic_only/parser_rejected`; its receipt has
+no explicit slot-release/admission field. Do not rewrite it, infer a refund, or
+claim 320 slots are operationally available. Conservatively count that one
+reservation as occupied; there are at most 319 other future admitted, pending
+or unreleased slots under the 320-slot ceiling. Define occupancy as
+`admitted + pending + unreleased reservations`; a pending-to-admitted transition
+counts once. The exceptional `gun-hatake` attempt can produce at most one new
+admitted page. If it succeeds, ordinary pagination and the remaining development
+sites may proceed in frozen order within unchanged per-identity and phase
+limits; page 2 and later get no attempt exception. The future runtime must
+explicitly settle its page-slot reservation; an unknown result keeps it occupied.
+It cannot retroactively settle the diagnostic slot.
+
+The preserved HP development directory currently contains 14,579 bytes of its
+134,217,728-byte cap (134,203,149 bytes of arithmetic headroom). The frozen
+current 49-file target-v4 tree contains 41,468,376 bytes of the 2,147,483,648-byte
+global cap (2,106,015,272 bytes of arithmetic headroom). The supplemental
+directory and all its ledgers, receipts and results count against both
+applicable retention caps. Before any request, reserve sufficient space for the
+full body cap and a conservative bound on receipts/result bytes. If remaining
+space or accounting cannot be proved, stop before opening a socket. Existing
+Reading or hashing an existing file does not create another request/body charge.
+Every physical retained copy is a separate storage charge and counts in full.
+
+### Outcomes, stops and required implementation acceptance
+
+Keep every per-site/page status, timestamp, request fingerprint, observed
+pagination field and byte/attempt/slot disposition. Record the supplemental
+fetch/receipt dates separately; do not change source vintage or observation
+dates. An incomplete station/page, invalid or changed response, terminal error,
+exhausted shared cap, ambiguous dispatch or deadline crossing makes this
+supplemental result partial/incomplete or terminal. Preserve partial evidence;
+never omit failed evidence or turn missing/error/unknown into zero. V10's exact
+empty-first-page representation remains a parser behavior change and may be
+accepted only under its existing complete transport and no-provider-error
+conditions; any genuine initial zero still requires its separate fresh
+24–72-hour confirmation. Do not change production ratings, confidence, nightlife
+or HP-zero rules.
+
+The continuation consumer must pass these offline acceptance cases before any
+activation:
+
+| Case | Required behavior |
+| --- | --- |
+| Start at or after cutoff; 30-minute window crosses cutoff | Reject start at cutoff; use earlier of T0+1,800s and cutoff; do not start unbounded requests. |
+| Validation, lock wait, recovery or finalization consumes time | Count it from T0; refuse I/O/success after D; resume retains the same T0/D. |
+| Exact original `gun-hatake` page-1 identity | Permit at most the one third lifetime attempt; reservation consumes it; no retry or fourth attempt for any outcome. |
+| Exceptional page succeeds | Continue ordinary pagination and remaining development sites in frozen order under existing page and phase caps; no later phase is unlocked. |
+| Changed query, page, station, source input or run identity | Fail closed before network I/O; exception cannot transfer. |
+| Any other request identity | Preserve existing cumulative two-attempt limit and transient-only retry behavior. |
+| Reservation, crash, timeout or ambiguous dispatch | Persist before I/O; charge attempt and page slot; keep full 1 MiB on unknown; never blind replay. |
+| Complete EOF and known outcome | Settle body to observed bytes; release only known unused reservation; settle page slot explicitly without double-counting transitions. |
+| Original/diagnostic evidence and artifact tree | Verify original hashes and all 49 original files unchanged; link, do not duplicate; count every actual copy. |
+| Shared cap or retained-space exhaustion | Stop before I/O or preserve partial/incomplete; no transfer or reset. |
+| Holdout and unrelated stages | No Overture metadata/development, prescreen, holdout, challenge, audit or confirmation access; no automatic next phase. |
+| Complete development zero | Preserve V10 pagination evidence; do not treat it as confirmed HP-zero without the separate 24–72-hour process. |
+
+These are normative requirements, not implementation claims or checks already
+performed. V10 does not implement the supplemental consumer. No acquisition may
+occur until that consumer is implemented, reviewed and tested on an exact
+successor head, and a separate single-use root activation is issued.
+
+## Historical one-request HP diagnostic exception (spent)
+
+This section records a spent, historical one-request diagnostic, not an active
+recovery path. The original `hp_development` phase remains terminal/incomplete:
+its frozen start, finish, deadline, ledger and result are not resumed, rewritten
+or relabeled. The original deadline was `2026-10-16T13:55:29.181380Z` and has
+expired. The owner/root approvals and the one reservation/outcome were consumed
+for this diagnostic only and do not authorize the supplemental run below.
+
+The diagnostic ran once on `2026-10-17T18:01:17.376314Z`–
+`2026-10-17T18:01:19.124398Z`: HTTP 200, complete EOF, 107 response-body bytes,
+`diagnostic_only/parser_rejected`, reason `start_below_one`. Its allowlisted
+structure was integer `results_available=0`, string `results_returned="0"`,
+integer `results_start=0`, and empty `shop`. It produced no pilot count or
+HP-zero confirmation. The discarded original 107-byte body remains unavailable;
+neither it nor the diagnostic response establishes the earlier failure cause.
+
+The diagnostic required a one-time owner exception and separate root gate under
+the existing accounting tree, bound to its V9 code/manifest, original evidence
+and request identity. Those exact gates and the diagnostic reservation/outcome
+are preserved and spent. They cannot be reused for this protocol amendment or
+for another request.
 
 The command accepts no station, query, output-root or retry options. It fixes
 the request to the first development station (`gun-hatake`), page 1, and the
@@ -206,7 +400,9 @@ HP phase retention limit. The original ledger/result and expired phase deadline
 remain byte-identical. This diagnostic can never produce an HP count, establish
 a zero, complete the phase or authorize another request.
 
-The dedicated command is intentionally not called from `food_pilot.run`:
+The historical diagnostic command was intentionally not called from
+`food_pilot.run`. The invocation below is retained as historical documentation
+only and must not be reused:
 
 ```sh
 PYTHONPATH=scripts python -m food_pilot.diagnostic \
@@ -215,8 +411,9 @@ PYTHONPATH=scripts python -m food_pilot.diagnostic \
   --root-gate /internal/target-v4/root-diagnostic-gate.json
 ```
 
-The API key must arrive only through the existing scoped secret consumer as a
-process environment value; it is never supplied in command arguments or receipt
-files. The command prints only diagnostic state, receipt hash and charged body
-bytes. Its HTTP adapter is mock-tested offline. No owner exception/root gate is
-present in this change, and no request has been made through this path.
+The API key arrived only through the existing scoped secret consumer as a
+process environment value; it was not supplied in command arguments or receipt
+files. The command printed only diagnostic state, receipt hash and charged body
+bytes. Its HTTP adapter was mock-tested offline. The owner/root/reservation/
+outcome receipts are preserved under the original HP evidence; they authorize
+no further request, phase completion or zero classification.

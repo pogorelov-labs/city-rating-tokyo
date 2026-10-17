@@ -93,6 +93,26 @@ All quality, time-window, challenge, production and non-adoption gates below
 remain unchanged. The executable manifest and staged acquisition contract are
 documented in [the pilot protocol](../../scripts/food_pilot/PROTOCOL.md).
 
+### Prospective HP development supplemental window — 2026-10-17
+
+The owner requested a protocol amendment for one prospective 30-minute HP
+development run and one additional attempt for the already exhausted
+`gun-hatake` page-1 identity, within remaining cumulative budgets (Plane comment
+`9f7e6acd-0bce-462d-bfde-9e1f36a3648c`). This selects only the prospective
+window and that identity's lifetime third attempt; it resets no quantitative
+counter or the expired original deadline. The original terminal/incomplete
+ledger/result, spent diagnostic and frozen current 49-file target-v4 tree
+(SHA-256 `49df1e59182bfeb5a3c6eb25f6d53676a96b0cb93c312ff3ccf3d698c5c0af36`)
+remain unchanged. Its historical 44-file pre-receipt subset is separately
+preserved at SHA-256
+`68c125c986f388e56b2a23be3f76867ad41bf0c52cc45469c250f49db112d012`.
+The sample, 32/32 split, source cutoff, holdout, 24–72-hour zero-confirmation
+and production rules remain unchanged. The owner request authorizes protocol
+preparation and review only; execution requires a separately implemented,
+reviewed runtime and later single-use root activation. The normative timing,
+attempt, page-slot, retention and stop contract is in the
+[prospective continuation section](../../scripts/food_pilot/PROTOCOL.md#prospective-hp-development-supplemental-run-normative-not-activated).
+
 The final audit is **200 random distinct holdout Overture provider IDs**, not the
 earlier 160-record proposal, plus up to 80 separately reported targeted cases.
 Random sampling is over candidate-food IDs in the union of the 32 holdout
