@@ -45,6 +45,9 @@ V16_MANIFEST_SHA256 = '1cb2b0203f9fcd7601e2b0e93c17bd382500c601c1d9cfa715ea28f3c
 V17_MANIFEST_SHA256 = 'd0183b183bb451bff39eec3fa710e141454759c94de051cb5a142035ad10f2a2'
 V18_MANIFEST_SHA256 = '0f12301839516763eacfc9749f3127bf2239a68b3cda42e412bbc78f47b5a970'
 V18_NONCODE_CONTRACT_SHA256 = 'fd0cd9ace8b2700af0b7865488d1fcdfa12aa8b9cd432e0e4cc76c0476b91e64'
+V19_MANIFEST_SHA256 = 'afaeabe21f4ff49c79eb8eac67eebaeedd777d501f3717a2d41854ac6ae7f8d3'
+V19_NONCODE_CONTRACT_SHA256 = '86c5924dda8244853e26426f0d872073faef564733fa4876bc1b4477e755ded9'
+EXPECTED_CURRENT_ADMISSION_CONTRACT_SHA256 = '62b70c81a45de1b16ee86754d8980fbb2d02cfbefd21d6dbd2732126771f3912'
 V8_NONCODE_CONTRACT_SHA256 = '74bfcef62f9fce2c14e73468a8f7c33ae2cbf7de7066fb0c47a1d4d935fc238c'
 EXPECTED_STARTED_AT = '2026-10-16T11:37:07.610699+00:00'
 EXPECTED_FINISHED_AT = '2026-10-16T11:38:01.834534+00:00'
@@ -147,12 +150,231 @@ def _check_successor_lineage(downstream_manifest, downstream_manifest_sha):
         if canonical_sha(contract) != V18_NONCODE_CONTRACT_SHA256:
             raise AcquisitionStopped('recovery_manifest_noncode_contract_changed')
         return
+    if downstream_manifest_sha not in pinned_parents and actual_parent == V19_MANIFEST_SHA256:
+        admission_contract = downstream_manifest.get('current_manifest_cache_admission')
+        if (not isinstance(admission_contract, dict)
+                or canonical_sha(admission_contract) != EXPECTED_CURRENT_ADMISSION_CONTRACT_SHA256):
+            raise AcquisitionStopped('recovery_current_admission_contract_changed')
+        contract = {key: value for key, value in downstream_manifest.items()
+                    if key not in {'code_sha256', 'supersedes_manifest_sha256',
+                                   'supersession_reason', 'version',
+                                   'current_manifest_cache_admission'}}
+        if canonical_sha(contract) != V19_NONCODE_CONTRACT_SHA256:
+            raise AcquisitionStopped('recovery_manifest_noncode_contract_changed')
+        return
     raise AcquisitionStopped('recovery_manifest_lineage_mismatch')
+
+
+def _reject_symlink_components(path, error):
+    candidate = Path(path).absolute()
+    for item in (candidate, *candidate.parents):
+        if item.exists() and item.is_symlink():
+            raise AcquisitionStopped(error)
+
+
+def _resolve_admission_roots(downstream_manifest, source_phase_dir, admission_root,
+                             *, require_admission_root=False):
+    """Resolve the immutable V4 cache separately from a current-manifest receipt root."""
+    _reject_symlink_components(source_phase_dir, 'recovery_source_cache_root_symlink')
+    if admission_root is not None:
+        _reject_symlink_components(admission_root, 'recovery_admission_root_symlink')
+    source_phase_dir = Path(source_phase_dir).resolve()
+    if source_phase_dir != SOURCE_PHASE_DIR.resolve():
+        raise AcquisitionStopped('recovery_not_original_v4_phase')
+    current = downstream_manifest.get('current_manifest_cache_admission')
+    if current is None:
+        if downstream_manifest.get('historical_supplemental_hp_run') is not None:
+            if require_admission_root:
+                raise AcquisitionStopped('recovery_current_admission_contract_missing')
+            if admission_root is not None:
+                raise AcquisitionStopped('recovery_unbound_admission_root')
+        elif admission_root is not None and Path(admission_root).resolve() != source_phase_dir:
+            raise AcquisitionStopped('recovery_unbound_admission_root')
+        return source_phase_dir, source_phase_dir, None
+    if canonical_sha(current) != EXPECTED_CURRENT_ADMISSION_CONTRACT_SHA256:
+        raise AcquisitionStopped('recovery_current_admission_contract_changed')
+
+    artifact_root = source_phase_dir.parents[1].resolve()
+
+    def resolve_relative(value, error, *, must_exist):
+        if not isinstance(value, str):
+            raise AcquisitionStopped(error)
+        relative = Path(value)
+        if relative.is_absolute() or not relative.parts or any(part in ('', '.', '..') for part in relative.parts):
+            raise AcquisitionStopped(error)
+        candidate = artifact_root
+        for part in relative.parts:
+            candidate = candidate / part
+            if candidate.is_symlink():
+                raise AcquisitionStopped(error)
+        resolved = candidate.resolve()
+        if not resolved.is_relative_to(artifact_root):
+            raise AcquisitionStopped(error)
+        if must_exist and not resolved.is_dir():
+            raise AcquisitionStopped(error)
+        return resolved
+
+    expected_source = resolve_relative(current.get('source_cache_directory'),
+                                       'recovery_source_cache_path_invalid', must_exist=True)
+    expected_output = resolve_relative(current.get('admission_directory'),
+                                       'recovery_admission_root_invalid', must_exist=False)
+    if expected_source != source_phase_dir:
+        raise AcquisitionStopped('recovery_source_cache_root_mismatch')
+    target_root = (artifact_root / 'target-v4').resolve()
+    repository_root = Path(__file__).resolve().parents[2]
+    if (expected_output == source_phase_dir
+            or expected_output.is_relative_to(target_root)
+            or expected_output.is_relative_to(repository_root)):
+        raise AcquisitionStopped('recovery_admission_root_unsafe')
+    if expected_output.exists() and not expected_output.is_dir():
+        raise AcquisitionStopped('recovery_admission_root_invalid')
+    if admission_root is None:
+        if require_admission_root:
+            raise AcquisitionStopped('recovery_admission_root_required')
+    elif Path(admission_root).resolve() != expected_output:
+        raise AcquisitionStopped('recovery_admission_root_mismatch')
+    if current.get('source_manifest_sha256') != SOURCE_V4_MANIFEST_SHA256:
+        raise AcquisitionStopped('recovery_current_source_manifest_mismatch')
+    if current.get('source_ledger_sha256') != SOURCE_V4_LEDGER_SHA256:
+        raise AcquisitionStopped('recovery_current_source_ledger_mismatch')
+    if current.get('source_diagnostic_sha256') != SOURCE_DIAGNOSTIC_SHA256:
+        raise AcquisitionStopped('recovery_current_source_diagnostic_mismatch')
+    handoff = downstream_manifest.get('historical_supplemental_hp_run')
+    if (not isinstance(handoff, dict)
+            or current.get('historical_supplemental_hp_run_sha256') != canonical_sha(handoff)):
+        raise AcquisitionStopped('recovery_current_historical_handoff_mismatch')
+    if current.get('metadata_requests_permitted') is not False:
+        raise AcquisitionStopped('recovery_current_source_io_not_disabled')
+    if current.get('source_phase_completion_claim') is not False:
+        raise AcquisitionStopped('recovery_current_source_completion_claim')
+    if (current.get('fresh_owner_root_required') is not True
+            or current.get('admission_is_not_phase_completion') is not True
+            or current.get('downstream_phase_execution_permitted') is not False
+            or current.get('authorization_subdirectory') != 'authorizations'
+            or current.get('owner_file') != 'owner-exception.json'
+            or current.get('root_file') != 'root-release.json'):
+        raise AcquisitionStopped('recovery_current_admission_contract_changed')
+    return source_phase_dir, expected_output, canonical_sha(current)
+
+
+def _validate_current_authorization_paths(downstream_manifest, admission_root,
+                                         owner_path, root_path):
+    current = downstream_manifest.get('current_manifest_cache_admission')
+    if current is None:
+        return
+    _reject_symlink_components(admission_root, 'recovery_admission_root_symlink')
+    _reject_symlink_components(owner_path, 'recovery_authorization_root_symlink')
+    _reject_symlink_components(root_path, 'recovery_authorization_root_symlink')
+    output = Path(admission_root).resolve()
+    auth_root = output / current['authorization_subdirectory']
+    if auth_root.is_symlink():
+        raise AcquisitionStopped('recovery_authorization_root_invalid')
+    expected_owner = auth_root / current['owner_file']
+    expected_root = auth_root / current['root_file']
+    if (Path(owner_path).is_symlink() or Path(root_path).is_symlink()
+            or Path(owner_path).resolve() != expected_owner.resolve()
+            or Path(root_path).resolve() != expected_root.resolve()
+            or expected_owner.is_symlink() or expected_root.is_symlink()):
+        raise AcquisitionStopped('recovery_authorization_root_mismatch')
+
+
+def _current_accounting_roots(source_phase_dir, current):
+    artifact_root = Path(source_phase_dir).resolve().parents[1]
+    relative_roots = current.get('global_retention_roots')
+    if not isinstance(relative_roots, list) or not relative_roots or len(set(relative_roots)) != len(relative_roots):
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    resolved = []
+    for relative in relative_roots:
+        if not isinstance(relative, str) or Path(relative).is_absolute():
+            raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+        candidate = artifact_root
+        for part in Path(relative).parts:
+            if part in ('', '.', '..'):
+                raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+            candidate = candidate / part
+            if candidate.is_symlink():
+                raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+        candidate = candidate.resolve()
+        if not candidate.is_relative_to(artifact_root):
+            raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+        if candidate.exists() and not candidate.is_dir():
+            raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+        resolved.append(str(candidate))
+    if str(Path(source_phase_dir).resolve().parents[1] / 'target-v4') not in resolved:
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    if str(Path(source_phase_dir).resolve().parents[1] / current['admission_directory']) not in resolved:
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    handoff = current.get('historical_supplemental_hp_run_sha256')
+    if handoff is None:
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    expected_roots = {
+        str(artifact_root / 'target-v4'),
+        str(artifact_root / 'supplemental-hp-v18-001'),
+        str(artifact_root / 'supplemental-hp-v18-001-authorizations'),
+        str(artifact_root / current['admission_directory']),
+    }
+    if set(resolved) != expected_roots:
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    expected_metadata_roots = {
+        str(Path(source_phase_dir).resolve()),
+        str(artifact_root / current['admission_directory']),
+    }
+    metadata_roots = current.get('metadata_retention_roots')
+    if not isinstance(metadata_roots, list):
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    resolved_metadata = []
+    for relative in metadata_roots:
+        candidate = artifact_root / relative
+        _reject_symlink_components(candidate, 'recovery_current_accounting_roots_invalid')
+        resolved_metadata.append(str(candidate.resolve()))
+    if set(resolved_metadata) != expected_metadata_roots:
+        raise AcquisitionStopped('recovery_current_accounting_roots_invalid')
+    return resolved
+
+
+def _current_retention_usage(*, source_phase_dir, admission_root, downstream_manifest,
+                             source_manifest):
+    """Count metadata source+new receipt separately; count source only once globally."""
+    from .supplemental import file_size
+
+    current = downstream_manifest.get('current_manifest_cache_admission')
+    if not isinstance(current, dict):
+        raise AcquisitionStopped('recovery_current_admission_contract_missing')
+    artifact_root = Path(source_phase_dir).resolve().parents[1]
+    handoff = downstream_manifest.get('historical_supplemental_hp_run')
+    if not isinstance(handoff, dict):
+        raise AcquisitionStopped('recovery_historical_hp_handoff_missing')
+    run_root = (artifact_root / handoff['run_directory']).resolve()
+    auth_root = (artifact_root / handoff['authorization_directory']).resolve()
+    target_root = artifact_root / 'target-v4'
+    if Path(admission_root).is_symlink():
+        raise AcquisitionStopped('recovery_admission_root_invalid')
+    source_used = file_size(source_phase_dir)
+    if Path(admission_root).is_symlink():
+        raise AcquisitionStopped('recovery_admission_root_invalid')
+    output_used = file_size(admission_root) if Path(admission_root).exists() else 0
+    target_used = file_size(target_root)
+    run_used = file_size(run_root)
+    auth_used = file_size(auth_root)
+    metadata_used = source_used + output_used
+    global_used = target_used + run_used + auth_used + output_used
+    metadata_limit = source_manifest['budgets']['overture_metadata']['retained_bytes']
+    global_limit = downstream_manifest['budgets']['total_retained_bytes']
+    if (metadata_limit != current.get('metadata_retention_limit')
+            or global_limit != current.get('global_retention_limit')
+            or source_used != current.get('baseline_metadata_source_bytes')
+            or target_used + run_used + auth_used != current.get('baseline_global_bytes')):
+        raise AcquisitionStopped('recovery_current_retention_baseline_mismatch')
+    if metadata_used > metadata_limit or global_used > global_limit:
+        raise AcquisitionStopped('combined_current_admission_retention_budget')
+    return {'metadata_used': metadata_used, 'metadata_limit': metadata_limit,
+            'global_used': global_used, 'global_limit': global_limit,
+            'output_used': output_used}
 
 
 def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
               diagnostic, diagnostic_sha, downstream_manifest, downstream_manifest_sha,
-              phase_dir):
+              phase_dir, admission_root=None, require_admission_root=False):
     if source_manifest.get('state') != 'frozen' or downstream_manifest.get('state') != 'frozen':
         raise AcquisitionStopped('recovery_manifest_not_frozen')
     if source_manifest_sha != SOURCE_V4_MANIFEST_SHA256 or ledger_sha != SOURCE_V4_LEDGER_SHA256:
@@ -171,6 +393,13 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
         verify_historical_supplemental_run(
             downstream_manifest, artifact_root=phase_dir.resolve().parents[1])
         handoff_binding_sha = handoff_canonical_sha(handoff)
+    source_cache_dir, output_dir, current_admission_sha = _resolve_admission_roots(
+        downstream_manifest, phase_dir, admission_root,
+        require_admission_root=require_admission_root)
+    if current_admission_sha is not None:
+        _current_retention_usage(source_phase_dir=source_cache_dir,
+            admission_root=output_dir, downstream_manifest=downstream_manifest,
+            source_manifest=source_manifest)
     if downstream_manifest.get('budgets') != source_manifest.get('budgets'):
         raise AcquisitionStopped('recovery_budget_contract_changed')
     if downstream_manifest.get('source_window') != source_manifest.get('source_window'):
@@ -262,6 +491,19 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
     }
     if handoff_binding_sha is not None:
         bindings['historical_supplemental_hp_run_sha256'] = handoff_binding_sha
+    if current_admission_sha is not None:
+        current = downstream_manifest['current_manifest_cache_admission']
+        accounted_roots = _current_accounting_roots(source_cache_dir, current)
+        authorization_dir = output_dir / current['authorization_subdirectory']
+        bindings.update({
+            'source_phase_directory': str(source_cache_dir),
+            'admission_directory': str(output_dir),
+            'authorization_directory': str(authorization_dir),
+            'accounted_roots': accounted_roots,
+            'current_manifest_cache_admission_sha256': current_admission_sha,
+            'metadata_retention_limit': current['metadata_retention_limit'],
+            'global_retention_limit': current['global_retention_limit'],
+        })
     return bindings
 
 
@@ -314,12 +556,16 @@ def _valid_receipt_time(value, error):
 
 
 def make_admission(*, source_manifest_path, downstream_manifest_path, phase_dir,
-                   diagnostic_path, owner_exception_path, root_release_path):
+                   diagnostic_path, owner_exception_path, root_release_path,
+                   admission_root=None):
     """Validate separate approvals and write only a cache-admission receipt."""
     from .run import checked_manifest
 
     source_manifest_path = Path(source_manifest_path).resolve()
     downstream_manifest_path = Path(downstream_manifest_path).resolve()
+    _reject_symlink_components(phase_dir, 'recovery_source_cache_root_symlink')
+    if admission_root is not None:
+        _reject_symlink_components(admission_root, 'recovery_admission_root_symlink')
     phase_dir = Path(phase_dir).resolve()
     diagnostic_path = Path(diagnostic_path).resolve()
     if (phase_dir != SOURCE_PHASE_DIR.resolve() or diagnostic_path.parent != phase_dir
@@ -329,7 +575,13 @@ def make_admission(*, source_manifest_path, downstream_manifest_path, phase_dir,
     if lock_path.is_symlink():
         raise AcquisitionStopped('unexpected_metadata_symlink')
     try:
-        lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+        # Current-manifest admission is read-only against the frozen V4 source:
+        # never create a missing lock inside that tree. Keep the legacy V6
+        # in-place behavior unchanged when no external admission root is used.
+        lock_flags = os.O_RDWR | os.O_NOFOLLOW
+        if admission_root is None:
+            lock_flags |= os.O_CREAT
+        lock_fd = os.open(lock_path, lock_flags, 0o600)
     except OSError:
         raise AcquisitionStopped('metadata_cache_lock_unavailable') from None
     lock = os.fdopen(lock_fd, 'a+')
@@ -350,24 +602,45 @@ def make_admission(*, source_manifest_path, downstream_manifest_path, phase_dir,
         bindings = _bindings(source_manifest=source_manifest, source_manifest_sha=source_sha,
             ledger=ledger, ledger_sha=sha256(ledger_raw), diagnostic=diagnostic,
             diagnostic_sha=sha256(diagnostic_raw), downstream_manifest=downstream_manifest,
-            downstream_manifest_sha=downstream_sha, phase_dir=phase_dir)
+            downstream_manifest_sha=downstream_sha, phase_dir=phase_dir,
+            admission_root=admission_root, require_admission_root=True)
+        if downstream_manifest.get('current_manifest_cache_admission') is not None:
+            _validate_current_authorization_paths(downstream_manifest,
+                bindings['admission_directory'], owner_exception_path, root_release_path)
         owner_sha, root_sha = verify_owner_and_root(owner_path=owner_exception_path,
             root_path=root_release_path, binding=bindings)
+        output_dir = Path(bindings.get('admission_directory', phase_dir)).resolve()
+        output_dir.mkdir(parents=True, exist_ok=True)
+        if output_dir.is_symlink() or not output_dir.is_dir():
+            raise AcquisitionStopped('recovery_admission_root_invalid')
         receipt = {'receipt_type': ADMISSION_TYPE, 'state': ADMISSION_STATE, **bindings,
             'owner_exception_sha256': owner_sha, 'root_release_sha256': root_sha,
             'diagnostic_file': diagnostic_path.name,
             'source_phase_directory': str(phase_dir),
             'admission_is_not_phase_completion': True}
+        if output_dir != phase_dir:
+            receipt['admission_directory'] = str(output_dir)
         raw = encoded(receipt)
         receipt_sha = sha256(raw)
-        output = phase_dir / f'cache-only-admission-{receipt_sha}.json'
-        entries = list(phase_dir.rglob('*'))
-        if any(item.is_symlink() for item in entries):
+        output = output_dir / f'cache-only-admission-{receipt_sha}.json'
+        if any(item.is_symlink() for item in phase_dir.rglob('*')):
             raise AcquisitionStopped('unexpected_metadata_symlink')
-        retained = sum(item.stat().st_size for item in entries if item.is_file())
-        cap = source_manifest['budgets']['overture_metadata']['retained_bytes']
-        if retained + (0 if output.exists() else len(raw)) > cap:
-            raise AcquisitionStopped('combined_metadata_retention_budget')
+        if any(item.is_symlink() for item in output_dir.rglob('*')):
+            raise AcquisitionStopped('unexpected_admission_symlink')
+        if bindings.get('current_manifest_cache_admission_sha256') is None:
+            entries = list(phase_dir.rglob('*'))
+            retained = sum(item.stat().st_size for item in entries if item.is_file())
+            cap = source_manifest['budgets']['overture_metadata']['retained_bytes']
+            if retained + (0 if output.exists() else len(raw)) > cap:
+                raise AcquisitionStopped('combined_metadata_retention_budget')
+        else:
+            usage = _current_retention_usage(source_phase_dir=phase_dir,
+                admission_root=output_dir, downstream_manifest=downstream_manifest,
+                source_manifest=source_manifest)
+            new_bytes = 0 if output.exists() else len(raw)
+            if (usage['metadata_used'] + new_bytes > usage['metadata_limit']
+                    or usage['global_used'] + new_bytes > usage['global_limit']):
+                raise AcquisitionStopped('combined_current_admission_retention_budget')
         if output.exists():
             if output.read_bytes() != raw:
                 raise AcquisitionStopped('immutable_admission_receipt_conflict')
@@ -377,6 +650,10 @@ def make_admission(*, source_manifest_path, downstream_manifest_path, phase_dir,
                 stream.write(raw)
                 stream.flush()
                 os.fsync(stream.fileno())
+        if bindings.get('current_manifest_cache_admission_sha256') is not None:
+            _current_retention_usage(source_phase_dir=phase_dir,
+                admission_root=output_dir, downstream_manifest=downstream_manifest,
+                source_manifest=source_manifest)
         if sha256((phase_dir / 'ledger.json').read_bytes()) != bindings['source_ledger_sha256']:
             raise AcquisitionStopped('recovery_source_ledger_mutated')
         return output, receipt_sha
@@ -385,12 +662,35 @@ def make_admission(*, source_manifest_path, downstream_manifest_path, phase_dir,
 
 
 def load_admitted_metadata(*, admission_path, source_manifest_path, downstream_manifest,
-                           downstream_manifest_sha, owner_exception_path, root_release_path):
+                           downstream_manifest_sha, owner_exception_path, root_release_path,
+                           source_phase_dir=None, admission_root=None):
     """Revalidate an admission receipt before it can feed Overture development."""
+    _reject_symlink_components(admission_path, 'recovery_admission_path_symlink')
+    if source_phase_dir is not None:
+        _reject_symlink_components(source_phase_dir, 'recovery_source_cache_root_symlink')
+    if admission_root is not None:
+        _reject_symlink_components(admission_root, 'recovery_admission_root_symlink')
     admission_path = Path(admission_path).resolve()
-    phase_dir = admission_path.parent
-    if phase_dir != SOURCE_PHASE_DIR.resolve():
-        raise AcquisitionStopped('recovery_artifacts_not_colocated')
+    current = downstream_manifest.get('current_manifest_cache_admission')
+    if current is not None:
+        if source_phase_dir is None or admission_root is None:
+            raise AcquisitionStopped('recovery_current_admission_roots_required')
+        phase_dir, output_dir, _contract_sha = _resolve_admission_roots(
+            downstream_manifest, source_phase_dir, admission_root,
+            require_admission_root=True)
+        if admission_path.parent != output_dir:
+            raise AcquisitionStopped('recovery_admission_root_mismatch')
+        _validate_current_authorization_paths(downstream_manifest, output_dir,
+            owner_exception_path, root_release_path)
+    else:
+        phase_dir = admission_path.parent
+        if phase_dir != SOURCE_PHASE_DIR.resolve():
+            raise AcquisitionStopped('recovery_artifacts_not_colocated')
+        if source_phase_dir is not None and Path(source_phase_dir).resolve() != phase_dir:
+            raise AcquisitionStopped('recovery_source_cache_root_mismatch')
+        if admission_root is not None and Path(admission_root).resolve() != phase_dir:
+            raise AcquisitionStopped('recovery_unbound_admission_root')
+        output_dir = phase_dir
     try:
         receipt_raw = admission_path.read_bytes()
     except OSError:
@@ -413,6 +713,8 @@ def load_admitted_metadata(*, admission_path, source_manifest_path, downstream_m
             or not isinstance(recorded_directory, str)
             or Path(recorded_directory).resolve() != phase_dir):
         raise AcquisitionStopped('recovery_artifacts_not_colocated')
+    if current is not None and receipt.get('admission_directory') != str(output_dir):
+        raise AcquisitionStopped('recovery_admission_root_mismatch')
     source_raw = Path(source_manifest_path).read_bytes()
     source_manifest = json.loads(source_raw)
     ledger_raw = (phase_dir / 'ledger.json').read_bytes()
@@ -422,7 +724,8 @@ def load_admitted_metadata(*, admission_path, source_manifest_path, downstream_m
     bindings = _bindings(source_manifest=source_manifest, source_manifest_sha=sha256(source_raw),
         ledger=ledger, ledger_sha=sha256(ledger_raw), diagnostic=diagnostic,
         diagnostic_sha=sha256(diagnostic_raw), downstream_manifest=downstream_manifest,
-        downstream_manifest_sha=downstream_manifest_sha, phase_dir=phase_dir)
+        downstream_manifest_sha=downstream_manifest_sha, phase_dir=phase_dir,
+        admission_root=output_dir, require_admission_root=current is not None)
     owner_sha, root_sha = verify_owner_and_root(owner_path=owner_exception_path,
         root_path=root_release_path, binding=bindings)
     _require_binding(receipt, bindings)
@@ -434,15 +737,24 @@ def load_admitted_metadata(*, admission_path, source_manifest_path, downstream_m
         'diagnostic_file': diagnostic_path.name,
         'source_phase_directory': str(phase_dir),
         'admission_is_not_phase_completion': True}
+    if output_dir != phase_dir:
+        expected_receipt['admission_directory'] = str(output_dir)
     if receipt != expected_receipt:
         raise AcquisitionStopped('invalid_cache_only_admission_contract')
     if sha256((phase_dir / 'ledger.json').read_bytes()) != bindings['source_ledger_sha256']:
         raise AcquisitionStopped('recovery_ledger_changed')
-    entries = list(phase_dir.rglob('*'))
-    if any(item.is_symlink() for item in entries):
-        raise AcquisitionStopped('unexpected_metadata_symlink')
-    if sum(item.stat().st_size for item in entries if item.is_file()) > source_manifest['budgets']['overture_metadata']['retained_bytes']:
-        raise AcquisitionStopped('combined_metadata_retention_budget')
+    if current is None:
+        entries = list(phase_dir.rglob('*'))
+        if any(item.is_symlink() for item in entries):
+            raise AcquisitionStopped('unexpected_metadata_symlink')
+        if sum(item.stat().st_size for item in entries if item.is_file()) > source_manifest['budgets']['overture_metadata']['retained_bytes']:
+            raise AcquisitionStopped('combined_metadata_retention_budget')
+    else:
+        if any(item.is_symlink() for item in output_dir.rglob('*')):
+            raise AcquisitionStopped('unexpected_admission_symlink')
+        _current_retention_usage(source_phase_dir=phase_dir,
+            admission_root=output_dir, downstream_manifest=downstream_manifest,
+            source_manifest=source_manifest)
     return diagnostic['result'], ReplayBudget(phase_dir)
 
 
@@ -454,12 +766,13 @@ def main():
     parser.add_argument('--diagnostic', type=Path, required=True)
     parser.add_argument('--owner-exception', type=Path, required=True)
     parser.add_argument('--root-release', type=Path, required=True)
+    parser.add_argument('--admission-root', type=Path)
     args = parser.parse_args()
     try:
         path, digest = make_admission(source_manifest_path=args.source_manifest,
             downstream_manifest_path=args.downstream_manifest, phase_dir=args.source_phase_dir,
             diagnostic_path=args.diagnostic, owner_exception_path=args.owner_exception,
-            root_release_path=args.root_release)
+            root_release_path=args.root_release, admission_root=args.admission_root)
         print(json.dumps({'state': ADMISSION_STATE, 'receipt_path': str(path),
                           'sha256': digest, 'metadata_requests_performed': 0,
                           'source_phase_completed': False}))

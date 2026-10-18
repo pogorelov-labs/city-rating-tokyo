@@ -433,3 +433,39 @@ files. The command printed only diagnostic state, receipt hash and charged body
 bytes. Its HTTP adapter was mock-tested offline. The owner/root/reservation/
 outcome receipts are preserved under the original HP evidence; they authorize
 no further request, phase completion or zero classification.
+
+## Current-manifest Overture cache-only admission (V20 contract)
+
+The V20 contract adds a separate, disabled-by-default admission destination for
+the preserved V4 Overture metadata cache. The cache source remains the exact
+`target-v4/overture_metadata` directory and remains incomplete under its
+original ledger, deadline and charged counters. A new admission receipt is
+written only beneath the sibling
+`v20-overture-metadata-admissions/` directory, with fresh current-manifest
+owner/root files under its `authorizations/` child. This output is outside the
+frozen `target-v4` tree. Source and output roots are independently resolved,
+checked against the pinned contract, rejected on symlinks or path escape, and
+bound into both authorization receipts and the resulting admission. The
+loader requires those same explicit roots and current-manifest bindings; it
+replays only the original cache and never opens a provider connection.
+
+The V20 direct successor contract pins the V4 manifest, ledger and compact
+diagnostic hashes, the V18 historical supplemental HP development handoff,
+the exact source and admission paths, and the retention roots and limits.
+Historical V6 admission remains V6-bound and is not authorization for V20.
+Every V20 admission requires fresh owner/root receipts bound to the exact V20
+manifest and runtime code map. No authorization or admission receipt is
+created by the offline implementation or tests.
+
+Retention is computed over physical files: metadata usage is the original
+metadata source directory plus the external admission directory, bounded by
+the inherited 64 MiB metadata ceiling; global usage is the frozen `target-v4`
+tree, historical HP run and its authorization directory, plus the external
+admission directory, bounded by the inherited 2 GiB ceiling. The V4 source
+tree is counted once in global usage and is also included in metadata usage;
+references and hash reads do not create a second charge, while every physical
+copy does. The baseline source/global byte totals and exact roots are checked
+before receipt creation and after loading. Admission does not rewrite source
+files, complete the V4 phase, or release Overture development or any other
+pilot phase. This section records a disabled historical-input handoff, not an
+execution release.

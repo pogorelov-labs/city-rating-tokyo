@@ -134,17 +134,25 @@ def overture_metadata_input(args, manifest, manifest_hash):
     """Read ordinary pinned metadata or explicit cache-only recovery admission."""
     recovery_paths = (args.cache_only_admission, args.cache_only_source_manifest,
                       args.cache_only_owner_exception, args.cache_only_root_release)
+    location_paths = (getattr(args, 'cache_only_source_phase_dir', None),
+                      getattr(args, 'cache_only_admission_root', None))
     if any(recovery_paths):
         if args.phase != 'overture_development' or not all(recovery_paths):
             raise AcquisitionStopped('invalid_cache_only_recovery_scope')
         if args.overture_metadata is not None:
             raise AcquisitionStopped('conflicting_metadata_inputs')
+        current_contract = manifest.get('current_manifest_cache_admission')
+        if current_contract is not None and not all(location_paths):
+            raise AcquisitionStopped('current_manifest_admission_roots_required')
+        if current_contract is None and any(location_paths):
+            raise AcquisitionStopped('unbound_current_admission_roots')
         from .recovery import load_admitted_metadata
         return load_admitted_metadata(admission_path=args.cache_only_admission,
             source_manifest_path=args.cache_only_source_manifest,
             downstream_manifest=manifest, downstream_manifest_sha=manifest_hash,
             owner_exception_path=args.cache_only_owner_exception,
-            root_release_path=args.cache_only_root_release)
+            root_release_path=args.cache_only_root_release,
+            source_phase_dir=location_paths[0], admission_root=location_paths[1])
     if args.overture_metadata is None:
         raise AcquisitionStopped('missing_pinned_metadata')
     pinned = json.loads(args.overture_metadata.read_text())
@@ -167,11 +175,17 @@ def main():
     parser.add_argument('--cache-only-source-manifest', type=Path)
     parser.add_argument('--cache-only-owner-exception', type=Path)
     parser.add_argument('--cache-only-root-release', type=Path)
+    parser.add_argument('--cache-only-source-phase-dir', type=Path)
+    parser.add_argument('--cache-only-admission-root', type=Path)
     args = parser.parse_args()
     recovery_args = (args.cache_only_admission, args.cache_only_source_manifest,
                      args.cache_only_owner_exception, args.cache_only_root_release)
+    recovery_location_args = (args.cache_only_source_phase_dir, args.cache_only_admission_root)
     if any(recovery_args) and (args.phase != 'overture_development' or not all(recovery_args)):
         parser.error('cache-only recovery is available only for overture_development with all four receipts/paths')
+    if any(recovery_location_args) and (args.phase != 'overture_development'
+                                        or not all(recovery_location_args) or not all(recovery_args)):
+        parser.error('current cache-only recovery requires source-phase and admission roots plus all four receipts/paths')
     if all(recovery_args) and args.overture_metadata is not None:
         parser.error('choose ordinary pinned metadata or cache-only admission, not both')
     root = args.output_root.resolve()
