@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -247,6 +248,18 @@ def test_v20_run_main_routes_current_roots_through_cache_admission(tmp_path, mon
     monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f['downstream'], manifest_sha))
     monkeypatch.setattr(run, 'checked_gate', lambda *_args: None)
     monkeypatch.setattr(run, 'phase_sites', lambda *_args: [])
+    # Synthetic fixture: pin the runner clock inside the manifest's source window
+    # (core_hp_complete_before = 2026-10-22T00:00:00Z) so run.main() reaches the
+    # mocked extractor regardless of the real wall clock.
+    pinned_now = [datetime(2026, 10, 21, 23, 0, 0, tzinfo=timezone.utc)]
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return pinned_now[0].astimezone(tz) if tz else pinned_now[0]
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
 
     class OfflineBudget:
         def __init__(self, *_args, **_kwargs):
