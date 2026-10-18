@@ -34,6 +34,17 @@ V5_MANIFEST_SHA256 = 'df6e5d99290bed6e6f0aec47fc85fd01b6560558618db7caecf9108310
 V6_MANIFEST_SHA256 = '7a6f996f2324a3158407e8b8e4ef63c2670cdd05d33ce6230171bee1f84e0c00'
 V7_MANIFEST_SHA256 = '04d9137b38e2a20d34e7273f54eca264873382832d5b5c00e846468b4cb928c9'
 V8_MANIFEST_SHA256 = 'c67e0c723ffa9eca6fa79028a2bc4900129c630bed6a48c2ea58c87c3795881d'
+V9_MANIFEST_SHA256 = '9528171588e0d2f5c91bd9149733c65cfe5e66ee1e9e4c80d80d9ebb8d2d4b62'
+V10_MANIFEST_SHA256 = 'd753a5d8238b03ab2c0774150794acbdaf3f09bb4f905c487a1ea661b1630f7b'
+V11_MANIFEST_SHA256 = '5ceee657d5f7946675a773b760b4d525cc4cbdbb17391d68d8805c72e9c91e88'
+V12_MANIFEST_SHA256 = '599c0489cd50b716dc36755414f6f47ae08032256d34570ba46a1d1fb2ba6345'
+V13_MANIFEST_SHA256 = '0342111e73a8f076c862638805dd12058a391f92dff2a77b78699b13703c417d'
+V14_MANIFEST_SHA256 = 'dc15c2b7ef850c754c60f34668722b268c9c17a3adda68bff787425c5079fd97'
+V15_MANIFEST_SHA256 = 'bde52bdcdd04b7ee8a6df28a6aea9d9ac1bf4982d307064ace2e47ce4e9d7ef1'
+V16_MANIFEST_SHA256 = '1cb2b0203f9fcd7601e2b0e93c17bd382500c601c1d9cfa715ea28f3c6fb4c5c'
+V17_MANIFEST_SHA256 = 'd0183b183bb451bff39eec3fa710e141454759c94de051cb5a142035ad10f2a2'
+V18_MANIFEST_SHA256 = '0f12301839516763eacfc9749f3127bf2239a68b3cda42e412bbc78f47b5a970'
+V18_NONCODE_CONTRACT_SHA256 = 'fd0cd9ace8b2700af0b7865488d1fcdfa12aa8b9cd432e0e4cc76c0476b91e64'
 V8_NONCODE_CONTRACT_SHA256 = '74bfcef62f9fce2c14e73468a8f7c33ae2cbf7de7066fb0c47a1d4d935fc238c'
 EXPECTED_STARTED_AT = '2026-10-16T11:37:07.610699+00:00'
 EXPECTED_FINISHED_AT = '2026-10-16T11:38:01.834534+00:00'
@@ -90,25 +101,50 @@ def _footer_reference_rows(result):
 
 
 def _check_successor_lineage(downstream_manifest, downstream_manifest_sha):
-    """Accept the pinned v5→v6→v7→v8 chain and one reviewed successor of v8."""
+    """Accept only the pinned V5–V18 chain and one exact-contract V18 child."""
     pinned_parents = {
         V5_MANIFEST_SHA256: SOURCE_V4_MANIFEST_SHA256,
         V6_MANIFEST_SHA256: V5_MANIFEST_SHA256,
         V7_MANIFEST_SHA256: V6_MANIFEST_SHA256,
         V8_MANIFEST_SHA256: V7_MANIFEST_SHA256,
+        V9_MANIFEST_SHA256: V8_MANIFEST_SHA256,
+        V10_MANIFEST_SHA256: V9_MANIFEST_SHA256,
+        V11_MANIFEST_SHA256: V10_MANIFEST_SHA256,
+        V12_MANIFEST_SHA256: V11_MANIFEST_SHA256,
+        V13_MANIFEST_SHA256: V12_MANIFEST_SHA256,
+        V14_MANIFEST_SHA256: V13_MANIFEST_SHA256,
+        V15_MANIFEST_SHA256: V14_MANIFEST_SHA256,
+        V16_MANIFEST_SHA256: V15_MANIFEST_SHA256,
+        V17_MANIFEST_SHA256: V16_MANIFEST_SHA256,
+        V18_MANIFEST_SHA256: V17_MANIFEST_SHA256,
     }
     expected_parent = pinned_parents.get(downstream_manifest_sha)
     actual_parent = downstream_manifest.get('supersedes_manifest_sha256')
     if expected_parent is not None and actual_parent == expected_parent:
         return
-    # A future code-only successor may be used only as the direct child of the
-    # pinned v8 tip. Its exact manifest hash is then bound by fresh owner/root
-    # receipts below; arbitrary ancestors or skipped links remain rejected.
+    # Preserve the legacy V8 code-only extension, but do not let it license a
+    # later descendant or a changed source/budget contract.
     if downstream_manifest_sha not in pinned_parents and actual_parent == V8_MANIFEST_SHA256:
         contract = {key: value for key, value in downstream_manifest.items()
                     if key not in {'code_sha256', 'supersedes_manifest_sha256',
                                    'supersession_reason'}}
         if canonical_sha(contract) != V8_NONCODE_CONTRACT_SHA256:
+            raise AcquisitionStopped('recovery_manifest_noncode_contract_changed')
+        return
+    # V19 adds one pinned historical HP-run handoff block to V18. Apart from
+    # that exact block, version, code hashes and supersession fields, every
+    # non-code contract field must remain byte-equivalent to the V18 contract.
+    if downstream_manifest_sha not in pinned_parents and actual_parent == V18_MANIFEST_SHA256:
+        from .historical_handoff import EXPECTED_HANDOFF_CONTRACT_SHA256
+
+        handoff = downstream_manifest.get('historical_supplemental_hp_run')
+        if not isinstance(handoff, dict) or canonical_sha(handoff) != EXPECTED_HANDOFF_CONTRACT_SHA256:
+            raise AcquisitionStopped('recovery_historical_hp_handoff_contract_changed')
+        contract = {key: value for key, value in downstream_manifest.items()
+                    if key not in {'code_sha256', 'supersedes_manifest_sha256',
+                                   'supersession_reason', 'version',
+                                   'historical_supplemental_hp_run'}}
+        if canonical_sha(contract) != V18_NONCODE_CONTRACT_SHA256:
             raise AcquisitionStopped('recovery_manifest_noncode_contract_changed')
         return
     raise AcquisitionStopped('recovery_manifest_lineage_mismatch')
@@ -126,6 +162,15 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
     if source_manifest_sha == downstream_manifest_sha:
         raise AcquisitionStopped('recovery_manifest_not_successor')
     _check_successor_lineage(downstream_manifest, downstream_manifest_sha)
+    handoff = downstream_manifest.get('historical_supplemental_hp_run')
+    handoff_binding_sha = None
+    if handoff is not None:
+        from .historical_handoff import canonical_sha as handoff_canonical_sha
+        from .historical_handoff import verify_historical_supplemental_run
+
+        verify_historical_supplemental_run(
+            downstream_manifest, artifact_root=phase_dir.resolve().parents[1])
+        handoff_binding_sha = handoff_canonical_sha(handoff)
     if downstream_manifest.get('budgets') != source_manifest.get('budgets'):
         raise AcquisitionStopped('recovery_budget_contract_changed')
     if downstream_manifest.get('source_window') != source_manifest.get('source_window'):
@@ -192,7 +237,7 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
     identities = _object_identity_rows(result)
     row_groups = _row_group_rows(result)
     footer_refs = _footer_reference_rows(result)
-    return {
+    bindings = {
         'source_manifest_sha256': source_manifest_sha,
         'source_ledger_sha256': ledger_sha,
         'source_phase_status': 'incomplete',
@@ -215,6 +260,9 @@ def _bindings(*, source_manifest, source_manifest_sha, ledger, ledger_sha,
         'phase_completion_claim': False,
         'metadata_requests_performed': 0,
     }
+    if handoff_binding_sha is not None:
+        bindings['historical_supplemental_hp_run_sha256'] = handoff_binding_sha
+    return bindings
 
 
 def _require_binding(receipt, bindings):

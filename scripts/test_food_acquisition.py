@@ -16,7 +16,9 @@ from food_pilot.acquire_osm import encoded
 from food_pilot.bounded import Budget, ReplayBudget, AcquisitionStopped, RequestRejected
 from food_pilot.hotpepper import acquire_station, page_projection, BadCoordinates, HPApiError, PaginationChanged, confirmation_checkpoint, acquire_sites
 from food_pilot.overture import range_projection, wkb_point, selected_groups, is_food, extract, Ranges
-from food_pilot.run import phase_sites, primary_gate, checked_gate, validate_result_windows, immutable_result
+from food_pilot.run import (phase_sites, primary_gate, checked_gate,
+                            validate_result_windows, immutable_result,
+                            checked_confirmation_prior)
 
 STATION={'slug':'test','lat':35.7,'lng':139.7}
 
@@ -456,6 +458,24 @@ def test_confirmation_requires_real_window_and_never_promotes_first_zero():
         with pytest.raises(AcquisitionStopped,match='real_24_72'):
             phase_sites(manifest,'hp_confirmation',prior,stamp+timedelta(hours=hours))
     assert phase_sites(manifest,'hp_confirmation',prior,stamp+timedelta(hours=25))==[STATION]
+
+
+@pytest.mark.parametrize('phase', ['supplemental_hp_development', 'hp_development'])
+def test_supplemental_or_core_development_cannot_be_confirmation_prior(phase):
+    envelope={'phase':phase,'manifest_sha256':'current','result':{
+        'stations':[{'slug':'test','status':'complete_provider_zero',
+                     'finished_at':'2026-10-17T22:08:52.236247+00:00'}]}}
+    with pytest.raises(AcquisitionStopped, match='wrong_prescreen_provenance'):
+        checked_confirmation_prior(envelope,'current')
+
+
+def test_only_current_manifest_prescreen_envelope_is_confirmation_prior():
+    result={'stations':[{'slug':'challenge-zero','status':'complete_provider_zero',
+                         'finished_at':'2026-10-17T22:08:52.236247+00:00'}]}
+    envelope={'phase':'hp_prescreen','manifest_sha256':'current','result':result}
+    assert checked_confirmation_prior(envelope,'current') is result
+    with pytest.raises(AcquisitionStopped, match='wrong_prescreen_provenance'):
+        checked_confirmation_prior({**envelope,'manifest_sha256':'old'},'current')
 
 
 def test_holdout_and_execution_receipts_are_bound_to_manifest(tmp_path):

@@ -104,6 +104,14 @@ def phase_sites(manifest, phase, prior=None, now=None):
     raise AcquisitionStopped('unknown_phase')
 
 
+def checked_confirmation_prior(prior, manifest_hash):
+    """Only a current-manifest hp_prescreen envelope can seed confirmation."""
+    if (not isinstance(prior, dict) or prior.get('manifest_sha256') != manifest_hash
+            or prior.get('phase') != 'hp_prescreen' or not isinstance(prior.get('result'), dict)):
+        raise AcquisitionStopped('wrong_prescreen_provenance')
+    return prior['result']
+
+
 def immutable_result(directory, value, retained_limit):
     raw = encoded(value)
     digest = hashlib.sha256(raw).hexdigest()
@@ -182,9 +190,7 @@ def main():
     prior = json.loads(args.prior_prescreen.read_text()) if args.prior_prescreen else None
     checkpoint = None
     if prior is not None:
-        if prior.get('manifest_sha256') != manifest_hash or prior.get('phase') != 'hp_prescreen':
-            raise AcquisitionStopped('wrong_prescreen_provenance')
-        prior = prior['result']
+        prior = checked_confirmation_prior(prior, manifest_hash)
     if args.phase == 'hp_confirmation':
         checkpoint = confirmation_checkpoint(prior)
     sites = phase_sites(manifest, args.phase, prior)

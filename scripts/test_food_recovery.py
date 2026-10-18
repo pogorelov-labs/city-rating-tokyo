@@ -121,12 +121,22 @@ def fixture(tmp_path, monkeypatch):
         'ledger_before': ledger_raw, 'result': result}
 
 
-def test_pinned_v5_v6_v7_v8_chain_and_only_direct_v8_successor_are_accepted(monkeypatch):
+def test_pinned_v5_v18_chain_and_only_reviewed_direct_successors_are_accepted(monkeypatch):
     chain = {
         recovery.V5_MANIFEST_SHA256: recovery.SOURCE_V4_MANIFEST_SHA256,
         recovery.V6_MANIFEST_SHA256: recovery.V5_MANIFEST_SHA256,
         recovery.V7_MANIFEST_SHA256: recovery.V6_MANIFEST_SHA256,
         recovery.V8_MANIFEST_SHA256: recovery.V7_MANIFEST_SHA256,
+        recovery.V9_MANIFEST_SHA256: recovery.V8_MANIFEST_SHA256,
+        recovery.V10_MANIFEST_SHA256: recovery.V9_MANIFEST_SHA256,
+        recovery.V11_MANIFEST_SHA256: recovery.V10_MANIFEST_SHA256,
+        recovery.V12_MANIFEST_SHA256: recovery.V11_MANIFEST_SHA256,
+        recovery.V13_MANIFEST_SHA256: recovery.V12_MANIFEST_SHA256,
+        recovery.V14_MANIFEST_SHA256: recovery.V13_MANIFEST_SHA256,
+        recovery.V15_MANIFEST_SHA256: recovery.V14_MANIFEST_SHA256,
+        recovery.V16_MANIFEST_SHA256: recovery.V15_MANIFEST_SHA256,
+        recovery.V17_MANIFEST_SHA256: recovery.V16_MANIFEST_SHA256,
+        recovery.V18_MANIFEST_SHA256: recovery.V17_MANIFEST_SHA256,
     }
     for manifest_sha, parent_sha in chain.items():
         assert recovery._check_successor_lineage(
@@ -138,6 +148,34 @@ def test_pinned_v5_v6_v7_v8_chain_and_only_direct_v8_successor_are_accepted(monk
     monkeypatch.setattr(recovery, 'V8_NONCODE_CONTRACT_SHA256', recovery.canonical_sha(contract))
     assert recovery._check_successor_lineage(
         {**contract, 'supersedes_manifest_sha256': recovery.V8_MANIFEST_SHA256}, 'new-v9-hash') is None
+
+
+def test_v18_child_requires_exact_handoff_and_unchanged_noncode_contract(monkeypatch):
+    from food_pilot import historical_handoff
+
+    v18_contract = {'state': 'frozen', 'budgets': {'metadata': 64},
+                    'source_window': {'cutoff': '2026-10-22T00:00:00Z'}}
+    monkeypatch.setattr(recovery, 'V18_NONCODE_CONTRACT_SHA256', recovery.canonical_sha(v18_contract))
+    handoff = {'state': 'historical_development_evidence_only', 'run_id': 'fixture'}
+    monkeypatch.setattr(historical_handoff, 'EXPECTED_HANDOFF_CONTRACT_SHA256',
+                        historical_handoff.canonical_sha(handoff))
+    child = {**v18_contract, 'version': 'v19', 'code_sha256': {'runtime.py': 'fixed'},
+             'supersedes_manifest_sha256': recovery.V18_MANIFEST_SHA256,
+             'supersession_reason': 'bind historical HP development evidence',
+             'historical_supplemental_hp_run': handoff}
+    assert recovery._check_successor_lineage(child, 'new-v19-hash') is None
+
+    changed_contract = {**child, 'budgets': {'metadata': 65}}
+    with pytest.raises(AcquisitionStopped, match='recovery_manifest_noncode_contract_changed'):
+        recovery._check_successor_lineage(changed_contract, 'new-v19-hash')
+
+    changed_handoff = {**child, 'historical_supplemental_hp_run': {**handoff, 'run_id': 'other'}}
+    with pytest.raises(AcquisitionStopped, match='recovery_historical_hp_handoff_contract_changed'):
+        recovery._check_successor_lineage(changed_handoff, 'new-v19-hash')
+
+    skipped = {**child, 'supersedes_manifest_sha256': recovery.V17_MANIFEST_SHA256}
+    with pytest.raises(AcquisitionStopped, match='recovery_manifest_lineage_mismatch'):
+        recovery._check_successor_lineage(skipped, 'new-v19-hash')
 
 
 @pytest.mark.parametrize(('manifest_sha', 'parent_sha'), [
@@ -262,6 +300,24 @@ def test_tampered_admission_receipt_is_rejected(tmp_path, monkeypatch):
             source_manifest_path=f['source_path'], downstream_manifest=f['downstream'],
             downstream_manifest_sha=sha(f['downstream_path'].read_bytes()),
             owner_exception_path=f['owner_path'], root_release_path=f['root_path'])
+
+
+def test_historical_v6_admission_cannot_authorize_a_new_current_manifest(tmp_path, monkeypatch):
+    phase = tmp_path / 'target-v4' / 'overture_metadata'
+    phase.mkdir(parents=True)
+    monkeypatch.setattr(recovery, 'SOURCE_PHASE_DIR', phase)
+    receipt = {'receipt_type': recovery.ADMISSION_TYPE, 'state': recovery.ADMISSION_STATE,
+               'admission_is_not_phase_completion': True,
+               'downstream_phase': recovery.DOWNSTREAM_PHASE,
+               'downstream_manifest_sha256': recovery.V6_MANIFEST_SHA256}
+    path = phase / 'historical-v6-admission.json'
+    path.write_bytes(encoded(receipt))
+    with pytest.raises(AcquisitionStopped, match='invalid_cache_only_admission'):
+        recovery.load_admitted_metadata(admission_path=path,
+            source_manifest_path=tmp_path / 'unused-v4.json', downstream_manifest={},
+            downstream_manifest_sha='new-current-v19-manifest',
+            owner_exception_path=tmp_path / 'old-owner.json',
+            root_release_path=tmp_path / 'old-root.json')
 
 
 def test_runner_cache_only_path_is_opt_in_and_phase_scoped(tmp_path, monkeypatch):
