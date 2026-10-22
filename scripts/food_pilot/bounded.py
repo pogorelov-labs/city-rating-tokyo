@@ -91,12 +91,15 @@ class Budget:
     def __init__(self, directory, limits, manifest_hash, *, resume=False, opener=None,
                  absolute_deadline=None, identity_windows=None, completion_window=None,
                  window_started_at=None, confirmation_lock_guard=False,
-                 confirmation_claim_sha=None, allow_resume_without_ledger=False,
+                 confirmation_claim_sha=None, confirmation_claim_path=None,
+                 confirmation_claim_root=None, allow_resume_without_ledger=False,
                  require_real_directory=False):
         self.directory = Path(directory)
         self.manifest_hash = manifest_hash
         self.confirmation_lock_guard = confirmation_lock_guard
         self.confirmation_claim_sha = confirmation_claim_sha
+        self.confirmation_claim_path = Path(confirmation_claim_path) if confirmation_claim_path else None
+        self.confirmation_claim_root = Path(confirmation_claim_root).resolve() if confirmation_claim_root else None
         self.allow_resume_without_ledger = allow_resume_without_ledger
         if require_real_directory:
             try:
@@ -250,18 +253,33 @@ class Budget:
     def _check_confirmation_claim_under_lock(self):
         if not self.confirmation_claim_sha:
             raise AcquisitionStopped('confirmation_activation_claim_missing')
-        claim_path = self.directory/'activation-claim.json'
+        claim_path = self.confirmation_claim_path
         marker_path = self.directory/'activation-budget-started.json'
+        if (claim_path is None or self.confirmation_claim_root is None
+                or claim_path.parent != self.confirmation_claim_root
+                or not claim_path.name.startswith('.hp_confirmation_claim-')
+                or not claim_path.name.endswith('.json')):
+            raise AcquisitionStopped('confirmation_activation_claim_invalid')
+        descriptor = None
         try:
-            if claim_path.is_symlink() or marker_path.is_symlink():
+            if marker_path.is_symlink():
                 raise AcquisitionStopped('confirmation_activation_claim_invalid')
-            claim_raw = claim_path.read_bytes()
+            descriptor = os.open(claim_path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0))
+            claim_stat = os.fstat(descriptor)
+            if not stat.S_ISREG(claim_stat.st_mode) or claim_stat.st_nlink != 1:
+                raise AcquisitionStopped('confirmation_activation_claim_invalid')
+            with os.fdopen(descriptor, 'rb') as stream:
+                descriptor = None
+                claim_raw = stream.read()
             claim = json.loads(claim_raw)
             marker = json.loads(marker_path.read_bytes())
         except AcquisitionStopped:
             raise
         except (OSError, ValueError, TypeError):
             raise AcquisitionStopped('confirmation_activation_claim_missing') from None
+        finally:
+            if descriptor is not None:
+                os.close(descriptor)
         if hashlib.sha256(claim_raw).hexdigest() != self.confirmation_claim_sha:
             raise AcquisitionStopped('confirmation_activation_claim_binding')
         expected_marker = {
@@ -382,7 +400,25 @@ class Budget:
         save_ledger(self.path, self.ledger)
 
     def retained(self):
-        return sum(p.stat().st_size for p in self.directory.rglob('*') if p.is_file())
+        phase_bytes = sum(p.stat().st_size for p in self.directory.rglob('*') if p.is_file())
+        if self.confirmation_claim_root is None:
+            return phase_bytes
+        claim_bytes = 0
+        try:
+            with os.scandir(self.confirmation_claim_root) as entries:
+                for entry in entries:
+                    if not (entry.name.startswith('.hp_confirmation_claim-')
+                            and entry.name.endswith('.json')):
+                        continue
+                    info = entry.stat(follow_symlinks=False)
+                    if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+                        raise AcquisitionStopped('confirmation_activation_claim_invalid')
+                    claim_bytes += info.st_size
+        except AcquisitionStopped:
+            raise
+        except OSError:
+            raise AcquisitionStopped('confirmation_activation_claim_unreadable') from None
+        return phase_bytes+claim_bytes
 
     def group(self, identity):
         self.remaining()

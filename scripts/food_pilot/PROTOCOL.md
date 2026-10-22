@@ -44,11 +44,29 @@ envelope is hash-checked as opaque provenance; it is never relabeled as a
 current-manifest result or rewritten.
 
 The `hp_confirmation` output root must equal the successor's pinned V20
-`historical_v20.artifact_root`; write only to its `hp_confirmation` child. The
-2 GiB global retained-byte preflight counts every physical file under that
-common artifact root, including the frozen V20 evidence and prior phase trees.
-The 64 MiB confirmation phase retention cap is enforced separately within
-`hp_confirmation`.
+`historical_v20.artifact_root`; phase data is written only to its
+`hp_confirmation` child. After validating the fresh owner and root receipts, the
+runner durably creates a single-use activation claim directly under the common
+ART root before validating or creating that phase directory. The claim binds the
+activation, run, exact code/manifest/receipt hashes, T0 and D. If the phase path
+is unsafe, correcting it does not permit a fresh invocation: only a resume using
+that same claim can continue, before D. Claims remain as immutable accounting
+evidence, including after preflight failure.
+
+The 2 GiB global retained-byte preflight counts every physical file under the
+common artifact root, including frozen V20 evidence, prior phase trees and all
+activation claims. Claim publication reserves the confirmation phase allowance
+against that global cap first. The 64 MiB confirmation phase retention cap is
+charged for both phase files and every root-level confirmation claim; ledger,
+marker, lock, cache and result writes include those claim bytes. If the full
+runnable claim cannot fit, persist a compact terminal rejection at the same
+ART-root claim path only when that rejection itself fits both physical caps,
+then stop without source I/O. This rejection preserves the original T0/D and
+prevents reuse. If even the terminal rejection cannot fit, reject without
+writing outside ART, exceeding either cap or dispatching. No in-capacity durable
+record can consume that last refused attempt; under this edge condition the
+same owner/root receipts must be treated as unusable even if capacity later
+changes, and a future run requires a separately issued authorization.
 
 V20's frame remains 32 rich / 32 sparse; its zero candidates remain 0 rich /
 13 sparse. Repeat all 13 in frozen order. The first eight per group remains a

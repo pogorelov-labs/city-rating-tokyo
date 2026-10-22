@@ -24,6 +24,18 @@ def stamp(value):
     return value.isoformat().replace('+00:00', 'Z')
 
 
+def physical_regular_bytes(root):
+    total = 0
+    for path in Path(root).rglob('*'):
+        try:
+            info = path.lstat()
+        except FileNotFoundError:
+            continue
+        if not path.is_symlink() and path.is_file():
+            total += info.st_size
+    return total
+
+
 def synthetic_handoff(tmp_path, monkeypatch, checkpoint_edit=None, total_retained_bytes=2*1024**3):
     artifact_root = tmp_path/'v20-artifacts'
     manifest_dir = artifact_root/'amended-v1'
@@ -352,7 +364,11 @@ def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monk
     owner_path, gate_path, owner, _gate = authorization_files(
         f, tmp_path, f.artifact_root, started)
     phase_dir = f.artifact_root/'hp_confirmation'
-    claim_path = phase_dir/'activation-claim.json'
+    claim_path = run._confirmation_claim_path(
+        f.artifact_root,
+        run._confirmation_claim_binding(
+            owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
+            f.successor, f.successor_sha, HEAD, f.artifact_root))
     marker_path = phase_dir/'activation-budget-started.json'
     ledger_path = phase_dir/'ledger.json'
     source_calls = []
@@ -445,8 +461,9 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
     binding = run._confirmation_claim_binding(
         owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD, f.artifact_root)
     deadline = started+timedelta(seconds=1800)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
     _claim, claim_sha = run._prepare_confirmation_claim(
-        phase_dir, binding, started, deadline, resume=False)
+        claim_path, binding, started, deadline, resume=False, manifest=f.successor)
     run._mark_confirmation_budget_started(phase_dir, claim_sha)
 
     prior, checkpoint = run.checked_confirmation_handoff(
@@ -460,6 +477,7 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
         absolute_deadline=deadline, identity_windows=windows,
         completion_window=completion_window, window_started_at=started,
         confirmation_lock_guard=True, confirmation_claim_sha=claim_sha,
+        confirmation_claim_path=claim_path, confirmation_claim_root=f.artifact_root,
         require_real_directory=True)
     initial_budget.close()
     ledger_path = phase_dir/'ledger.json'
@@ -649,6 +667,21 @@ def test_confirmation_budget_rejects_reader_lock_symlink_before_open_or_flock(
     assert not (phase_dir/'ledger.json').exists()
 
 
+def test_budget_counts_art_root_claims_against_confirmation_retention(tmp_path):
+    output_root = tmp_path/'art'
+    phase_dir = output_root/'hp_confirmation'
+    phase_dir.mkdir(parents=True)
+    (output_root/'.hp_confirmation_claim-prior.json').write_bytes(b'prior claim bytes')
+    limits = copy.deepcopy(manifest_contract.CONFIRMATION_BUDGET)
+    limits['retained_bytes'] = 8
+
+    with pytest.raises(AcquisitionStopped, match='retained_ledger_budget'):
+        bounded.Budget(
+            phase_dir, limits, 'manifest-hash', confirmation_claim_root=output_root,
+            require_real_directory=True)
+    assert not (phase_dir/'ledger.json').exists()
+
+
 def test_run_main_uses_all_thirteen_and_confirmation_deadline_without_network(
         tmp_path, monkeypatch, capsys):
     f = synthetic_handoff(tmp_path, monkeypatch)
@@ -717,7 +750,9 @@ def test_run_main_uses_all_thirteen_and_confirmation_deadline_without_network(
     monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
     monkeypatch.setattr(run, 'Budget', OfflineBudget)
     monkeypatch.setattr(run, 'acquire_sites', offline_acquire)
-    def offline_immutable(_directory, _value, _limit, *, commit_guard=None):
+    def offline_immutable(_directory, _value, _limit, *, commit_guard=None,
+                          retained_extra_bytes=0):
+        assert retained_extra_bytes > 0
         if commit_guard:
             commit_guard()
         return tmp_path/'result.json', 'result-hash'
@@ -825,7 +860,9 @@ def test_run_main_finalization_crossing_deadline_never_reports_complete(
             for row in sites
         ]}
 
-    def late_immutable(_directory, _value, _limit, *, commit_guard=None):
+    def late_immutable(_directory, _value, _limit, *, commit_guard=None,
+                       retained_extra_bytes=0):
+        assert retained_extra_bytes > 0
         if commit_guard:
             commit_guard()
         if deadline_stage == 'immutable_result':
@@ -984,22 +1021,26 @@ def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
     poisoned_ledger.write_bytes(b'must not be read through the symlink')
     phase_dir = f.artifact_root/'hp_confirmation'
     phase_dir.symlink_to(frozen_dir, target_is_directory=True)
-
-    class MustNotStartBudget:
-        def __init__(self, *_args, **_kwargs):
-            pytest.fail('symlink preflight must reject before Budget')
-
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, now[0])
+    owner_sha = sha(owner_path.read_bytes())
+    gate_sha = sha(gate_path.read_bytes())
+    binding = run._confirmation_claim_binding(
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD, f.artifact_root)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
+    source_calls = []
     monkeypatch.setattr(run, 'datetime', ControlledDateTime)
     monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
     monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
-    monkeypatch.setattr(run, 'Budget', MustNotStartBudget)
-    monkeypatch.setattr('sys.argv', [
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('called'))
+    argv = [
         'food-pilot-run', '--manifest', str(f.successor_path),
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
-        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root), '--resume',
-    ])
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+    ]
+    monkeypatch.setattr('sys.argv', argv)
     with pytest.raises(AcquisitionStopped, match='confirmation_phase_directory_invalid'):
         run.main()
 
@@ -1007,8 +1048,20 @@ def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
     assert frozen_marker.read_bytes() == b'frozen synthetic evidence'
     assert poisoned_ledger.read_bytes() == b'must not be read through the symlink'
     assert not (frozen_dir/'.reader.lock').exists()
-    assert not (frozen_dir/'activation-claim.json').exists()
     assert not (frozen_dir/'activation-budget-started.json').exists()
+    claim = json.loads(claim_path.read_bytes())
+    assert claim['window_started_at'] == stamp(now[0])
+    assert claim['absolute_deadline'] == stamp(now[0]+timedelta(seconds=1800))
+    original_claim = claim_path.read_bytes()
+    assert source_calls == []
+
+    phase_dir.unlink()
+    now[0] += timedelta(minutes=5)
+    monkeypatch.setattr('sys.argv', argv)
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
+        run.main()
+    assert claim_path.read_bytes() == original_claim
+    assert source_calls == []
 
 
 def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkeypatch):
@@ -1042,6 +1095,98 @@ def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkey
     with pytest.raises(AcquisitionStopped, match='total_retained_budget'):
         run.main()
     assert any(path.is_file() for path in f.artifact_root.rglob('*'))
+    claims = list(f.artifact_root.glob('.hp_confirmation_claim-*.json'))
+    assert len(claims) == 1
+    assert physical_regular_bytes(f.artifact_root) <= 64*1024**2
+
+
+def test_run_main_near_global_cap_rejects_claim_without_overbudget_write_or_reuse(
+        tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    now = [datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)]
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, now[0])
+    binding = run._confirmation_claim_binding(
+        owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
+        f.successor, f.successor_sha, HEAD, f.artifact_root)
+    trial_claim = {
+        **binding,
+        'claim_state': 'preflight_claimed',
+        'window_started_at': stamp(now[0]),
+        'absolute_deadline': stamp(now[0]+timedelta(seconds=1800)),
+        'claimed_at': stamp(now[0]),
+    }
+    trial_claim_size = len(encoded(trial_claim))
+    physical_before = physical_regular_bytes(f.artifact_root)
+    cap = physical_before+trial_claim_size-1
+    f.successor['budgets']['total_retained_bytes'] = cap
+    f.successor_raw = manifest_contract.canonical_manifest_bytes(f.successor)
+    f.successor_sha = sha(f.successor_raw)
+    f.successor_path.write_bytes(f.successor_raw)
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, now[0])
+    binding = run._confirmation_claim_binding(
+        owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
+        f.successor, f.successor_sha, HEAD, f.artifact_root)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
+    actual_claim_size = len(encoded({
+        **binding,
+        'claim_state': 'preflight_claimed',
+        'window_started_at': stamp(now[0]),
+        'absolute_deadline': stamp(now[0]+timedelta(seconds=1800)),
+        'claimed_at': stamp(now[0]),
+    }))
+    assert actual_claim_size == trial_claim_size
+    assert cap-physical_before == actual_claim_size-1
+
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    source_calls = []
+
+    class MustNotStartBudget:
+        def __init__(self, *_args, **_kwargs):
+            pytest.fail('near-cap rejection must precede Budget and source calls')
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setattr(run, 'Budget', MustNotStartBudget)
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('called'))
+    argv = [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+    ]
+    monkeypatch.setattr('sys.argv', argv)
+    with pytest.raises(AcquisitionStopped, match='total_retained_budget'):
+        run.main()
+    terminal_claim = json.loads(claim_path.read_bytes())
+    terminal_size = claim_path.stat().st_size
+    assert terminal_claim['kind'] == 'hp_confirmation_activation_claim_rejected'
+    assert terminal_claim['window_started_at'] == stamp(now[0])
+    assert terminal_claim['absolute_deadline'] == stamp(now[0]+timedelta(seconds=1800))
+    assert terminal_claim['reason'] == 'total_retained_budget'
+    assert terminal_size < actual_claim_size
+    assert physical_regular_bytes(f.artifact_root) == physical_before+terminal_size
+    assert physical_regular_bytes(f.artifact_root) <= cap
+    assert source_calls == []
+
+    # The durable terminal claim blocks reuse and preserves the original T0/D.
+    terminal_bytes = claim_path.read_bytes()
+    now[0] += timedelta(minutes=5)
+    monkeypatch.setattr('sys.argv', argv)
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
+        run.main()
+    assert claim_path.read_bytes() == terminal_bytes
+    assert physical_regular_bytes(f.artifact_root) == physical_before+terminal_size
+    assert source_calls == []
 
 
 def test_nonconfirmation_phase_keeps_original_global_cutoff(tmp_path, monkeypatch):

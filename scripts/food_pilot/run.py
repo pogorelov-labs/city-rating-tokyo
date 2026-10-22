@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
+import stat
 import subprocess
 import time
 import uuid
@@ -410,17 +412,174 @@ def _confirmation_claim_binding(owner, owner_sha, gate_sha, manifest, manifest_h
     }
 
 
-def _read_confirmation_claim(phase_dir, binding):
-    path = Path(phase_dir)/'activation-claim.json'
+def _confirmation_claim_path(output_root, binding):
+    identity = encoded({'activation_id': binding['activation_id'], 'run_id': binding['run_id']})
+    suffix = hashlib.sha256(identity).hexdigest()
+    return Path(output_root).resolve()/f'.hp_confirmation_claim-{suffix}.json'
+
+
+def _confirmation_claim_files(output_root):
+    root = Path(output_root).resolve(strict=True)
+    claims = []
     try:
-        if path.is_symlink():
+        with os.scandir(root) as entries:
+            for entry in entries:
+                if not (entry.name.startswith('.hp_confirmation_claim-')
+                        and entry.name.endswith('.json')):
+                    continue
+                info = entry.stat(follow_symlinks=False)
+                if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+                    raise AcquisitionStopped('confirmation_activation_claim_invalid')
+                claims.append((root/entry.name, info.st_size))
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_activation_claim_unreadable') from None
+    return claims
+
+
+def _confirmation_claim_bytes(output_root):
+    return sum(size for _path, size in _confirmation_claim_files(output_root))
+
+
+def _physical_retained_bytes(directory):
+    """Count bytes beneath a root without following any symlink target."""
+    total = 0
+
+    def raise_walk_error(error):
+        raise error
+
+    try:
+        for current, directories, files in os.walk(
+                directory, topdown=True, followlinks=False, onerror=raise_walk_error):
+            kept_directories = []
+            for name in directories:
+                path = Path(current)/name
+                info = path.lstat()
+                if stat.S_ISLNK(info.st_mode):
+                    total += info.st_size
+                else:
+                    kept_directories.append(name)
+            directories[:] = kept_directories
+            for name in files:
+                info = (Path(current)/name).lstat()
+                if stat.S_ISREG(info.st_mode) or stat.S_ISLNK(info.st_mode):
+                    total += info.st_size
+    except OSError:
+        raise AcquisitionStopped('retention_preflight_unreadable') from None
+    return total
+
+
+def _persist_confirmation_claim(output_root, claim_path, raw, manifest):
+    root = Path(output_root).resolve(strict=True)
+    claim_path = Path(claim_path)
+    if claim_path.parent != root or claim_path.name != _confirmation_claim_path(
+            root, json.loads(raw)).name:
+        raise AcquisitionStopped('confirmation_activation_claim_path')
+    directory_fd = None
+    rejected_reason = None
+    try:
+        directory_fd = os.open(
+            root, os.O_RDONLY | getattr(os, 'O_DIRECTORY', 0) | getattr(os, 'O_NOFOLLOW', 0))
+        if not stat.S_ISDIR(os.fstat(directory_fd).st_mode):
+            raise AcquisitionStopped('confirmation_artifact_root_invalid')
+        fcntl.flock(directory_fd, fcntl.LOCK_EX)
+        try:
+            try:
+                os.stat(claim_path.name, dir_fd=directory_fd, follow_symlinks=False)
+            except FileNotFoundError:
+                pass
+            else:
+                raise AcquisitionStopped('confirmation_activation_already_claimed')
+            claims = _confirmation_claim_files(root)
+            prior_claim_bytes = sum(size for _path, size in claims)
+            phase_dir = root/'hp_confirmation'
+            phase_bytes = 0
+            if not phase_dir.is_symlink() and phase_dir.is_dir():
+                phase_bytes = _physical_retained_bytes(phase_dir)
+            phase_limit = manifest['budgets']['hp_confirmation']['retained_bytes']
+            total_limit = manifest['budgets']['total_retained_bytes']
+            retained = _physical_retained_bytes(root)
+            reason = None
+            if phase_bytes+prior_claim_bytes+len(raw) > phase_limit:
+                reason = 'retained_claim_budget'
+            # Claims and phase outputs share the confirmation allowance; reserve
+            # that full allowance in ART before publishing a runnable claim.
+            elif retained-phase_bytes-prior_claim_bytes+phase_limit > total_limit:
+                reason = 'total_retained_budget'
+            if reason is not None:
+                rejected_reason = reason
+                claim = json.loads(raw)
+                terminal = {
+                    'kind': 'hp_confirmation_activation_claim_rejected',
+                    'schema_version': 1,
+                    'phase': 'hp_confirmation',
+                    'manifest_sha256': claim['manifest_sha256'],
+                    'owner_activation_sha256': claim['owner_activation_sha256'],
+                    'root_release_sha256': claim['root_release_sha256'],
+                    'activation_id': claim['activation_id'],
+                    'run_id': claim['run_id'],
+                    'window_started_at': claim['window_started_at'],
+                    'absolute_deadline': claim['absolute_deadline'],
+                    'rejected_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+                    'reason': reason,
+                }
+                terminal_raw = encoded(terminal)
+                if (phase_bytes+prior_claim_bytes+len(terminal_raw) > phase_limit
+                        or retained+len(terminal_raw) > total_limit):
+                    raise AcquisitionStopped(reason)
+                raw = terminal_raw
+            flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, 'O_NOFOLLOW', 0)
+            try:
+                descriptor = os.open(claim_path.name, flags, 0o600, dir_fd=directory_fd)
+            except FileExistsError:
+                raise AcquisitionStopped('confirmation_activation_already_claimed') from None
+            except OSError:
+                raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
+            try:
+                with os.fdopen(descriptor, 'wb') as stream:
+                    stream.write(raw)
+                    stream.flush()
+                    os.fsync(stream.fileno())
+                os.fsync(directory_fd)
+            except OSError:
+                # A partial or uncertain claim remains evidence and blocks reuse.
+                raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
+        finally:
+            fcntl.flock(directory_fd, fcntl.LOCK_UN)
+    except AcquisitionStopped:
+        raise
+    except (OSError, KeyError, TypeError, ValueError):
+        raise AcquisitionStopped('retention_preflight_unreadable') from None
+    finally:
+        if directory_fd is not None:
+            os.close(directory_fd)
+    if rejected_reason is not None:
+        raise AcquisitionStopped(rejected_reason)
+
+
+def _read_confirmation_claim(claim_path, binding):
+    path = Path(claim_path)
+    expected_path = _confirmation_claim_path(binding['output_root'], binding)
+    if path != expected_path:
+        raise AcquisitionStopped('confirmation_activation_claim_path')
+    descriptor = None
+    try:
+        descriptor = os.open(path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0))
+        info = os.fstat(descriptor)
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
             raise AcquisitionStopped('confirmation_activation_claim_invalid')
-        raw = path.read_bytes()
+        with os.fdopen(descriptor, 'rb') as stream:
+            descriptor = None
+            raw = stream.read()
         claim = json.loads(raw)
     except AcquisitionStopped:
         raise
     except (OSError, ValueError, TypeError):
         raise AcquisitionStopped('confirmation_activation_claim_missing') from None
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
     expected_keys = set(binding) | {
         'claim_state', 'window_started_at', 'absolute_deadline', 'claimed_at'}
     if (not isinstance(claim, dict) or set(claim) != expected_keys
@@ -440,9 +599,10 @@ def _read_confirmation_claim(phase_dir, binding):
     return claim, hashlib.sha256(raw).hexdigest(), started, deadline
 
 
-def _prepare_confirmation_claim(phase_dir, binding, started, deadline, *, resume):
+def _prepare_confirmation_claim(claim_path, binding, started, deadline, *, resume,
+                                manifest=None):
     if resume:
-        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(phase_dir, binding)
+        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(claim_path, binding)
         if claim_started != started or claim_deadline != deadline:
             raise AcquisitionStopped('confirmation_activation_claim_window')
         return claim, claim_sha
@@ -453,9 +613,10 @@ def _prepare_confirmation_claim(phase_dir, binding, started, deadline, *, resume
         'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
         'claimed_at': started.isoformat().replace('+00:00', 'Z'),
     }
-    raw = _write_confirmation_receipt(
-        Path(phase_dir)/'activation-claim.json', claim,
-        'confirmation_activation_already_claimed')
+    if manifest is None:
+        raise AcquisitionStopped('confirmation_activation_claim_manifest_missing')
+    raw = encoded(claim)
+    _persist_confirmation_claim(binding['output_root'], claim_path, raw, manifest)
     return claim, hashlib.sha256(raw).hexdigest()
 
 
@@ -479,7 +640,8 @@ def _read_confirmation_budget_marker(phase_dir, claim_sha):
     return marker
 
 
-def _mark_confirmation_budget_started(phase_dir, claim_sha):
+def _mark_confirmation_budget_started(phase_dir, claim_sha, *, retained_limit=None,
+                                      claim_root=None):
     path = Path(phase_dir)/'activation-budget-started.json'
     if path.exists() or path.is_symlink():
         return _read_confirmation_budget_marker(phase_dir, claim_sha)
@@ -488,18 +650,28 @@ def _mark_confirmation_budget_started(phase_dir, claim_sha):
         'schema_version': 1,
         'claim_sha256': claim_sha,
     }
+    if retained_limit is not None:
+        phase_bytes = _physical_retained_bytes(phase_dir)
+        claim_bytes = _confirmation_claim_bytes(claim_root)
+        if phase_bytes+claim_bytes+len(encoded(marker)) > retained_limit:
+            raise AcquisitionStopped('retained_activation_marker_budget')
     _write_confirmation_receipt(
         path, marker, 'confirmation_activation_marker_already_recorded')
     return marker
 
 
 def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
-                             phase_dir=None, claim_binding=None):
+                             phase_dir=None, claim_binding=None, claim_path=None):
     cutoff = _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE)
     phase_dir = Path(phase_dir or (args.output_root/'hp_confirmation'))
     ledger_path = phase_dir/'ledger.json'
-    claim_path = phase_dir/'activation-claim.json'
     marker_path = phase_dir/'activation-budget-started.json'
+    claim = claim_started = claim_deadline = claim_sha = None
+    if claim_binding is not None:
+        if claim_path is None:
+            claim_path = _confirmation_claim_path(claim_binding['output_root'], claim_binding)
+        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(
+            claim_path, claim_binding)
     if args.resume:
         if ledger_path.is_symlink():
             raise AcquisitionStopped('confirmation_ledger_path_invalid')
@@ -517,8 +689,6 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
                     or deadline != min(started+timedelta(seconds=1800), cutoff)):
                 raise AcquisitionStopped('confirmation_resume_window_mismatch')
             if claim_binding is not None:
-                claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(
-                    phase_dir, claim_binding)
                 if claim_started != started or claim_deadline != deadline:
                     raise AcquisitionStopped('confirmation_activation_claim_window')
                 _read_confirmation_budget_marker(phase_dir, claim_sha)
@@ -535,10 +705,9 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
                 entries = {path.name for path in phase_dir.iterdir()}
             except OSError:
                 raise AcquisitionStopped('confirmation_resume_window_missing') from None
-            if entries != {'activation-claim.json'}:
+            if entries:
                 raise AcquisitionStopped('confirmation_resume_ledger_missing')
-            _claim, _claim_sha, started, deadline = _read_confirmation_claim(
-                phase_dir, claim_binding)
+            started, deadline = claim_started, claim_deadline
     else:
         if claim_binding is not None:
             try:
@@ -548,6 +717,8 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
                 raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
         started = invocation_utc
         deadline = min(started+timedelta(seconds=1800), cutoff)
+        if claim_binding is not None and (claim_started != started or claim_deadline != deadline):
+            raise AcquisitionStopped('confirmation_activation_claim_window')
     elapsed = (invocation_utc-started).total_seconds()
     remaining = min(1800-elapsed, (deadline-invocation_utc).total_seconds())
     if invocation_utc < started:
@@ -576,7 +747,8 @@ def _fsync_directory(directory):
         os.close(descriptor)
 
 
-def immutable_result(directory, value, retained_limit, *, commit_guard=None):
+def immutable_result(directory, value, retained_limit, *, commit_guard=None,
+                     retained_extra_bytes=0):
     raw = encoded(value)
     digest = hashlib.sha256(raw).hexdigest()
     path = directory/f'result-{digest}.json'
@@ -587,7 +759,7 @@ def immutable_result(directory, value, retained_limit, *, commit_guard=None):
             commit_guard()
         return path, digest
     used=sum(p.stat().st_size for p in directory.rglob('*') if p.is_file())
-    if used+len(raw)>retained_limit:
+    if used+retained_extra_bytes+len(raw)>retained_limit:
         raise AcquisitionStopped('retained_result_budget')
     if commit_guard is not None:
         temporary = directory/f'.{path.name}.{uuid.uuid4().hex}.pending'
@@ -701,9 +873,25 @@ def main():
         head = confirmation_git_head()
         confirmation_owner, confirmation_gate, owner_sha, gate_sha = checked_confirmation_gate(
             args.execution_gate, args.owner_activation, manifest, manifest_hash, head, root, invocation_utc)
-        confirmation_phase_dir = _confirmation_phase_directory(root)
         confirmation_claim_binding = _confirmation_claim_binding(
             confirmation_owner, owner_sha, gate_sha, manifest, manifest_hash, head, root)
+        claim_path = _confirmation_claim_path(root, confirmation_claim_binding)
+        if args.resume:
+            _claim, _claim_sha, confirmation_started, confirmation_deadline = _read_confirmation_claim(
+                claim_path, confirmation_claim_binding)
+        else:
+            confirmation_started = invocation_utc
+            confirmation_deadline = min(
+                confirmation_started+timedelta(seconds=1800),
+                _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
+            if confirmation_started >= confirmation_deadline:
+                raise AcquisitionStopped('confirmation_completion_deadline_expired')
+        _claim, confirmation_claim_sha = _prepare_confirmation_claim(
+            claim_path, confirmation_claim_binding, confirmation_started,
+            confirmation_deadline, resume=args.resume, manifest=manifest)
+        # The claim is durably bound to this ART root before checking the phase
+        # destination; an unsafe phase path therefore cannot reset its window.
+        confirmation_phase_dir = _confirmation_phase_directory(root)
         ledger_path = confirmation_phase_dir/'ledger.json'
         marker_path = confirmation_phase_dir/'activation-budget-started.json'
         confirmation_resume_from_claim = (
@@ -711,10 +899,7 @@ def main():
             and not ledger_path.is_symlink() and not marker_path.is_symlink())
         confirmation_started, confirmation_deadline, confirmation_monotonic_remaining = _confirmation_run_window(
             args, manifest_hash, invocation_utc, phase_dir=confirmation_phase_dir,
-            claim_binding=confirmation_claim_binding)
-        _claim, confirmation_claim_sha = _prepare_confirmation_claim(
-            confirmation_phase_dir, confirmation_claim_binding,
-            confirmation_started, confirmation_deadline, resume=args.resume)
+            claim_binding=confirmation_claim_binding, claim_path=claim_path)
         _check_confirmation_run_window(confirmation_started, confirmation_deadline, invocation_utc,
                                        invocation_monotonic, confirmation_monotonic_remaining)
         prior, historical_checkpoint = checked_confirmation_handoff(
@@ -742,11 +927,17 @@ def main():
         _check_confirmation_run_window(confirmation_started, confirmation_deadline, invocation_utc,
                                        invocation_monotonic, confirmation_monotonic_remaining)
     phase_dir = confirmation_phase_dir or root/args.phase
-    if args.phase != 'hp_confirmation':
+    if args.phase == 'hp_confirmation':
+        retained = _physical_retained_bytes(root)
+        already = _physical_retained_bytes(phase_dir)
+    else:
         phase_dir.mkdir(parents=True, exist_ok=True)
-    retained = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
-    already = sum(p.stat().st_size for p in phase_dir.rglob('*') if p.is_file())
-    if retained-already+manifest['budgets'][args.phase]['retained_bytes'] > manifest['budgets']['total_retained_bytes']:
+        retained = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
+        already = sum(p.stat().st_size for p in phase_dir.rglob('*') if p.is_file())
+    claim_bytes = (_confirmation_claim_bytes(root)
+                   if args.phase == 'hp_confirmation' else 0)
+    if (retained-already-claim_bytes+manifest['budgets'][args.phase]['retained_bytes']
+            > manifest['budgets']['total_retained_bytes']):
         raise AcquisitionStopped('total_retained_budget')
     key = os.environ.get('HOTPEPPER_API_KEY') if args.phase.startswith('hp_') else None
     if args.phase.startswith('hp_') and not key:
@@ -766,11 +957,15 @@ def main():
         budget_window['window_started_at'] = confirmation_started.isoformat().replace('+00:00', 'Z')
     confirmation_output = None
     if args.phase == 'hp_confirmation':
-        phase_dir = _confirmation_phase_directory(root)
-        _mark_confirmation_budget_started(phase_dir, confirmation_claim_sha)
+        _mark_confirmation_budget_started(
+            phase_dir, confirmation_claim_sha,
+            retained_limit=manifest['budgets'][args.phase]['retained_bytes'],
+            claim_root=root)
     with Budget(phase_dir, manifest['budgets'][args.phase], manifest_hash, resume=args.resume,
                 confirmation_lock_guard=args.phase == 'hp_confirmation',
                 confirmation_claim_sha=confirmation_claim_sha,
+                confirmation_claim_path=(claim_path if args.phase == 'hp_confirmation' else None),
+                confirmation_claim_root=(root if args.phase == 'hp_confirmation' else None),
                 allow_resume_without_ledger=confirmation_resume_from_claim,
                 require_real_directory=args.phase == 'hp_confirmation',
                 **budget_window) as budget:
@@ -821,7 +1016,8 @@ def main():
             try:
                 path, digest = immutable_result(
                     phase_dir, envelope, budget.limits['retained_bytes'],
-                    commit_guard=confirmation_commit_guard)
+                    commit_guard=confirmation_commit_guard,
+                    retained_extra_bytes=_confirmation_claim_bytes(root))
                 confirmation_commit_guard()
             except BaseException as exc:
                 record_confirmation_finalization_rejection(exc)
