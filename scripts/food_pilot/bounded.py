@@ -8,8 +8,10 @@ from __future__ import annotations
 import fcntl
 import hashlib
 import json
+import os
 import re
 import signal
+import stat
 import time
 import urllib.error
 import urllib.request
@@ -122,7 +124,10 @@ class Budget:
         self.path = self.directory / 'ledger.json'
         self.finalization_guard = None
         self.finalization_rejection_callback = None
-        self.lock = (self.directory / '.reader.lock').open('a')
+        if require_real_directory:
+            self.lock = self._open_confirmation_lock()
+        else:
+            self.lock = (self.directory / '.reader.lock').open('a')
         fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if confirmation_lock_guard:
             try:
@@ -202,6 +207,45 @@ class Budget:
         except BaseException:
             self.close()
             raise
+
+    def _open_confirmation_lock(self):
+        nofollow = getattr(os, 'O_NOFOLLOW', None)
+        directory_flag = getattr(os, 'O_DIRECTORY', None)
+        if nofollow is None or directory_flag is None:
+            raise AcquisitionStopped('confirmation_lock_path_invalid')
+        try:
+            directory_fd = os.open(self.directory, os.O_RDONLY | directory_flag | nofollow)
+        except OSError:
+            raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+        lock_fd = None
+        try:
+            if not stat.S_ISDIR(os.fstat(directory_fd).st_mode):
+                raise AcquisitionStopped('confirmation_phase_directory_invalid')
+            try:
+                lock_stat = os.stat('.reader.lock', dir_fd=directory_fd, follow_symlinks=False)
+            except FileNotFoundError:
+                lock_stat = None
+            except OSError:
+                raise AcquisitionStopped('confirmation_lock_path_invalid') from None
+            if lock_stat is not None and (
+                    not stat.S_ISREG(lock_stat.st_mode) or lock_stat.st_nlink != 1):
+                raise AcquisitionStopped('confirmation_lock_path_invalid')
+            try:
+                lock_fd = os.open(
+                    '.reader.lock', os.O_RDWR | os.O_CREAT | nofollow,
+                    0o600, dir_fd=directory_fd)
+            except OSError:
+                raise AcquisitionStopped('confirmation_lock_path_invalid') from None
+            lock_stat = os.fstat(lock_fd)
+            if not stat.S_ISREG(lock_stat.st_mode) or lock_stat.st_nlink != 1:
+                raise AcquisitionStopped('confirmation_lock_path_invalid')
+            return os.fdopen(lock_fd, 'r+')
+        except BaseException:
+            if lock_fd is not None:
+                os.close(lock_fd)
+            raise
+        finally:
+            os.close(directory_fd)
 
     def _check_confirmation_claim_under_lock(self):
         if not self.confirmation_claim_sha:

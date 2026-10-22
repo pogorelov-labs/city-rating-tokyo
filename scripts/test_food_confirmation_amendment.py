@@ -621,6 +621,34 @@ def test_budget_final_ledger_commit_crossing_deadline_persists_rejection(monkeyp
     assert len(save_calls) >= 3
 
 
+def test_confirmation_budget_rejects_reader_lock_symlink_before_open_or_flock(
+        monkeypatch, tmp_path):
+    phase_dir = tmp_path/'art'/'hp_confirmation'
+    phase_dir.mkdir(parents=True)
+    outside_target = tmp_path/'outside'/'lock-target'
+    outside_target.parent.mkdir()
+    lock_path = phase_dir/'.reader.lock'
+    lock_path.symlink_to(outside_target)
+    flock_calls = []
+    real_flock = bounded.fcntl.flock
+
+    def track_flock(*args):
+        flock_calls.append(args)
+        return real_flock(*args)
+
+    monkeypatch.setattr(bounded.fcntl, 'flock', track_flock)
+    with pytest.raises(AcquisitionStopped, match='confirmation_lock_path_invalid'):
+        bounded.Budget(
+            phase_dir, copy.deepcopy(manifest_contract.CONFIRMATION_BUDGET),
+            'manifest-hash', confirmation_lock_guard=True,
+            confirmation_claim_sha='a'*64, require_real_directory=True)
+
+    assert lock_path.is_symlink()
+    assert not outside_target.exists()
+    assert flock_calls == []
+    assert not (phase_dir/'ledger.json').exists()
+
+
 def test_run_main_uses_all_thirteen_and_confirmation_deadline_without_network(
         tmp_path, monkeypatch, capsys):
     f = synthetic_handoff(tmp_path, monkeypatch)
