@@ -40,6 +40,25 @@ V20_CANDIDATE_FIRST_COMPLETIONS = (
 )
 V20_BATCH_ELIGIBLE_FROM = '2026-10-22T08:37:46.527802Z'
 V20_BATCH_ELIGIBLE_UNTIL = '2026-10-24T08:34:49.296391Z'
+CONFIRMATION_CONTROL_SLOT_BYTES = 4096
+CONFIRMATION_CONTROL_SLOT_ROLES = (
+    'allocation_descriptor', 'preparation_owner_intent', 'preparation_root_intent',
+    'burn_claim', 'final_owner_execution_receipt', 'final_root_release_receipt',
+)
+CONFIRMATION_CONTROL_POOL_BYTES = CONFIRMATION_CONTROL_SLOT_BYTES*len(CONFIRMATION_CONTROL_SLOT_ROLES)
+CONFIRMATION_CONTROL_POOL_CONTRACT = {
+    'schema_version': 1,
+    'location': 'pinned V20 common artifact root',
+    'slot_bytes': CONFIRMATION_CONTROL_SLOT_BYTES,
+    'slot_roles': list(CONFIRMATION_CONTROL_SLOT_ROLES),
+    'total_bytes': CONFIRMATION_CONTROL_POOL_BYTES,
+    'format': 'canonical JSON padded to fixed slot size',
+    'accounting': 'all six ART files count once in hp_confirmation and global retained-byte caps',
+    'window_anchor': 'durable owner preparation intent captures T0/D; root intent must match',
+    'approval_binding': 'all six slots bind exact SHA-256 of nonrunnable execution intent',
+    'execution_order': 'burn claim precedes final owner/root execution receipts',
+    'consumer': 'final receipts only; consumer reads T0/D and never selects a new window',
+}
 CONFIRMATION_BUDGET = {
     'attempts': 200, 'successful_pages': 160, 'pages_per_station': 50,
     'response_bytes': MIB, 'response_body_bytes': 64*MIB,
@@ -133,6 +152,7 @@ def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_
         'allowed_phases': ['hp_confirmation'],
         'requires_fresh_exact_head_manifest_code_owner_root_release': True,
         'v20_remains_insufficient': True,
+        'control_pool_contract': CONFIRMATION_CONTROL_POOL_CONTRACT,
         'historical_v20': {
             'artifact_root': str(artifact_root),
             'manifest_path': str(artifact_root/'amended-v1/final-manifest-v20.json'),

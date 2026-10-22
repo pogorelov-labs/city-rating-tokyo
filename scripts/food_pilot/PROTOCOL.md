@@ -45,28 +45,49 @@ current-manifest result or rewritten.
 
 The `hp_confirmation` output root must equal the successor's pinned V20
 `historical_v20.artifact_root`; phase data is written only to its
-`hp_confirmation` child. After validating the fresh owner and root receipts, the
-runner durably creates a single-use activation claim directly under the common
-ART root before validating or creating that phase directory. The claim binds the
-activation, run, exact code/manifest/receipt hashes, T0 and D. If the phase path
-is unsafe, correcting it does not permit a fresh invocation: only a resume using
-that same claim can continue, before D. Claims remain as immutable accounting
-evidence, including after preflight failure.
+`hp_confirmation` child. Before any usable confirmation intent, pre-reserve six
+fixed 4,096-byte files as direct children of that ART root: allocation
+descriptor, owner preparation intent, root preparation intent, burn claim,
+final owner execution receipt, and final root release receipt. The allocation
+descriptor and each slot bind the activation/run IDs, exact head, successor
+manifest, code map, common output root, phase/global byte caps, and the
+SHA-256 of the approved non-runnable execution intent. The pool totals 24,576
+bytes. The padded slot contents are rewritten in place; no temporary receipt,
+sidecar or duplicate slot is allowed.
 
-The 2 GiB global retained-byte preflight counts every physical file under the
-common artifact root, including frozen V20 evidence, prior phase trees and all
-activation claims. Claim publication reserves the confirmation phase allowance
-against that global cap first. The 64 MiB confirmation phase retention cap is
-charged for both phase files and every root-level confirmation claim; ledger,
-marker, lock, cache and result writes include those claim bytes. If the full
-runnable claim cannot fit, persist a compact terminal rejection at the same
-ART-root claim path only when that rejection itself fits both physical caps,
-then stop without source I/O. This rejection preserves the original T0/D and
-prevents reuse. If even the terminal rejection cannot fit, reject without
-writing outside ART, exceeding either cap or dispatching. No in-capacity durable
-record can consume that last refused attempt; under this edge condition the
-same owner/root receipts must be treated as unusable even if capacity later
-changes, and a future run requires a separately issued authorization.
+The activation workflow issuer captures factual UTC T0 before fallible checks.
+The first durable owner preparation intent binds T0 and
+`D = min(T0 + 1,800 seconds, 2026-10-23T00:00:00Z)`; it is not runnable by the
+source consumer. The root preparation intent must bind the same execution-intent
+SHA, T0/D, allocation descriptor and owner-intent hash. A contender reloads all
+six slots under the common ART lock and uses a durable owner intent's original
+T0/D; it cannot replace the window from a stale local clock. A valid owner-only
+prefix may be completed only with that same T0/D. A malformed or partial slot
+fails closed. If no owner intent was durably written, no usable window or source
+authority exists.
+
+The burn controller reads and revalidates that intent pair under the ART lock;
+it never chooses T0. Its fixed-size burn claim commits the same T0/D, approval,
+slot hashes, exact head/manifest/map, activation/run IDs, output root and caps.
+Only after that claim is durable may the final owner execution receipt and root
+release occupy their reserved slots. The source consumer accepts only that final
+pair, rechecks the complete slot chain while holding the phase reader lock, reads
+T0/D from the claim, and never derives a new window from its invocation time.
+The claim transitions in place to consumer-started before source dispatch. An
+unsafe confirmation phase path is terminally recorded in the pre-reserved claim
+slot without following or modifying the unsafe target; correcting the path does
+not make the same authority runnable again. Partial or uncertain slot writes
+remain failure evidence and fail closed.
+
+The six slots count exactly once against both existing retention ceilings before
+the first owner intent is published. The 64 MiB confirmation cap covers those
+slots plus every phase file, ledger, marker, lock, cache and result. The 2 GiB
+global preflight counts every physical file below the common ART root, including
+frozen V20 evidence and prior phase trees, while reserving the full confirmation
+phase allowance. No cap is increased and no control state is stored outside ART.
+All slot/intent/burn/finalization paths are exercised only with synthetic
+temporary directories in offline tests; this implementation creates no real
+ART slots, T0, operational receipts or acquisition authority.
 
 V20's frame remains 32 rich / 32 sparse; its zero candidates remain 0 rich /
 13 sparse. Repeat all 13 in frozen order. The first eight per group remains a

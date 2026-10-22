@@ -2,6 +2,8 @@
 import copy
 import hashlib
 import json
+import threading
+from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -14,6 +16,7 @@ from food_pilot.bounded import AcquisitionStopped
 
 
 HEAD = 'a' * 40
+EXECUTION_INTENT_SHA256 = 'e' * 64
 
 
 def sha(raw):
@@ -122,13 +125,44 @@ def synthetic_handoff(tmp_path, monkeypatch, checkpoint_edit=None, total_retaine
 
 
 def authorization_files(f, tmp_path, output_root, now, *, head=HEAD):
-    auth_dir = tmp_path/'authorization'
-    auth_dir.mkdir(exist_ok=True)
-    owner_path = auth_dir/'owner-activation.json'
-    gate_path = auth_dir/'root-release.json'
     map_sha = manifest_contract.canonical_code_map_sha256(f.successor['code_sha256'])
+    activation_id = 'synthetic-activation-1'
+    run_id = 'synthetic-run-1'
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, head, output_root, activation_id, run_id,
+        EXECUTION_INTENT_SHA256)
+    real_datetime = run.datetime
+
+    class FixtureDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now.astimezone(tz) if tz else now
+
+    run.datetime = FixtureDateTime
+    try:
+        pool = run._issue_confirmation_preparation_intents_at(
+            f.successor, f.successor_sha, head, output_root, activation_id, run_id, now,
+            EXECUTION_INTENT_SHA256)
+        pool = run._commit_confirmation_burn_claim_at(
+            f.successor, f.successor_sha, head, output_root, activation_id, run_id, now,
+            EXECUTION_INTENT_SHA256)
+    finally:
+        run.datetime = real_datetime
+    started, deadline = run._intent_window(pool['slots']['preparation_owner_intent'])
+    chain_fields = {
+        'allocation_descriptor_sha256': pool['descriptor_sha256'],
+        'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+        'preparation_root_intent_sha256': pool['slot_sha256']['preparation_root_intent'],
+        'execution_intent_sha256': EXECUTION_INTENT_SHA256,
+        'burn_claim_commitment_sha256': pool['slots']['burn_claim']['claim_commitment_sha256'],
+        'window_started_at': stamp(started),
+        'absolute_deadline': stamp(deadline),
+    }
     owner = {
+        **run._control_slot_reservation(
+            pool['descriptor'], pool['descriptor_sha256'], 'final_owner_execution_receipt'),
         'kind': 'owner_hp_confirmation_activation',
+        'slot_state': 'issued',
         'phase': 'hp_confirmation',
         'allowed_phases': ['hp_confirmation'],
         'single_use': True,
@@ -144,12 +178,13 @@ def authorization_files(f, tmp_path, output_root, now, *, head=HEAD):
         'candidate_count': 13,
         'group_counts': {'rich': 0, 'sparse': 13},
         'budget': f.successor['budgets']['hp_confirmation'],
-        'activation_id': 'synthetic-activation-1',
-        'run_id': 'synthetic-run-1',
-        'created_at': stamp(now-timedelta(minutes=1)),
-        'expires_at': stamp(now+timedelta(hours=1)),
+        'activation_id': activation_id,
+        'run_id': run_id,
+        'created_at': stamp(now),
+        'expires_at': stamp(deadline),
+        **chain_fields,
     }
-    owner_raw = encoded(owner)
+    owner_raw = run._padded_control_slot(owner)
     owner_sha = sha(owner_raw)
     root_check = {
         'manifest_sha256': f.successor_sha,
@@ -158,9 +193,13 @@ def authorization_files(f, tmp_path, output_root, now, *, head=HEAD):
         'allowed_phases': ['hp_confirmation'],
         'output_root': str(output_root.resolve()),
         'owner_activation_sha256': owner_sha,
+        **chain_fields,
     }
     gate = {
+        **run._control_slot_reservation(
+            pool['descriptor'], pool['descriptor_sha256'], 'final_root_release_receipt'),
         'kind': 'root_hp_confirmation_release',
+        'slot_state': 'issued',
         'phase': 'hp_confirmation',
         'allowed_phases': ['hp_confirmation'],
         'manifest_sha256': f.successor_sha,
@@ -170,12 +209,58 @@ def authorization_files(f, tmp_path, output_root, now, *, head=HEAD):
         'native_review_approved_head': head,
         'owner_activation_sha256': owner_sha,
         'root_manifest_check': root_check,
-        'released_at': stamp(now-timedelta(minutes=1)),
-        'expires_at': stamp(now+timedelta(hours=1)),
+        'released_at': stamp(now),
+        'expires_at': stamp(deadline),
+        **chain_fields,
     }
-    owner_path.write_bytes(owner_raw)
-    gate_path.write_bytes(encoded(gate))
+    real_datetime = run.datetime
+
+    class FixtureDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now.astimezone(tz) if tz else now
+
+    run.datetime = FixtureDateTime
+    try:
+        pool = run.publish_confirmation_execution_receipts(
+            f.successor, f.successor_sha, head, output_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256, owner, gate)
+    finally:
+        run.datetime = real_datetime
+    owner_path = pool['paths']['final_owner_execution_receipt']
+    gate_path = pool['paths']['final_root_release_receipt']
     return owner_path, gate_path, owner, gate
+
+
+def replace_control_slot(f, role, value, *, head=HEAD):
+    owner = value if role == 'final_owner_execution_receipt' else None
+    identity = (owner or {}).get('activation_id', 'synthetic-activation-1')
+    run_id = (owner or {}).get('run_id', 'synthetic-run-1')
+    with run._confirmation_control_lock(f.artifact_root) as (root, root_fd):
+        pool = run._read_control_pool_locked(
+            root_fd, root, f.successor, f.successor_sha, head, identity, run_id,
+            EXECUTION_INTENT_SHA256)
+        raw = run._rewrite_control_slot_locked(
+            root_fd, pool['paths'][role].name, pool['raws'][role], value)
+    return raw
+
+
+def force_replace_control_slot(path, value):
+    root = Path(path).parent
+    with run._confirmation_control_lock(root) as (_root, root_fd):
+        old_raw = run._read_fixed_control_file(path)
+        return run._rewrite_control_slot_locked(
+            root_fd, Path(path).name, old_raw, value)
+
+
+def replace_authorization_pair(f, owner_path, gate_path, owner, gate):
+    owner_raw = replace_control_slot(f, 'final_owner_execution_receipt', owner)
+    owner_sha = sha(owner_raw)
+    gate = copy.deepcopy(gate)
+    gate['owner_activation_sha256'] = owner_sha
+    gate['root_manifest_check']['owner_activation_sha256'] = owner_sha
+    gate_raw = replace_control_slot(f, 'final_root_release_receipt', gate)
+    return owner_raw, gate_raw, gate
 
 
 def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monkeypatch):
@@ -202,6 +287,291 @@ def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monk
     }
     assert f.successor['confirmation_amendment']['v20_remains_insufficient'] is True
     assert f.successor['confirmation_amendment']['authority']['implementation_approval_is_not_activation'] is True
+    assert f.successor['confirmation_amendment']['control_pool_contract']['slot_bytes'] == 4096
+    assert f.successor['confirmation_amendment']['control_pool_contract']['total_bytes'] == 24576
+
+
+def test_control_pool_pre_reserves_all_bytes_and_pins_exact_execution_intent(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    before = physical_regular_bytes(f.artifact_root)
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        'synthetic-activation-1', 'synthetic-run-1', EXECUTION_INTENT_SHA256)
+    assert physical_regular_bytes(f.artifact_root)-before == 24576
+    assert run._confirmation_control_bytes(f.artifact_root) == 24576
+    assert pool['descriptor']['execution_intent_sha256'] == EXECUTION_INTENT_SHA256
+    assert set(pool['paths']) == set(manifest_contract.CONFIRMATION_CONTROL_SLOT_ROLES)
+    for role, path in pool['paths'].items():
+        assert path.stat().st_size == 4096
+        value = run._control_json(path.read_bytes())
+        assert value.get('execution_intent_sha256') == EXECUTION_INTENT_SHA256
+    with pytest.raises(AcquisitionStopped, match='confirmation_control_pool_binding'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            'synthetic-activation-1', 'synthetic-run-1', 'f'*64)
+    owner_intent = run._control_json(
+        pool['paths']['preparation_owner_intent'].read_bytes())
+    assert owner_intent['slot_state'] == 'reserved'
+
+
+def test_issuer_live_deadline_after_lock_wait_publishes_no_owner_intent(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    activation_id, run_id = 'delay-activation', 'delay-run'
+    run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    now = [start]
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    real_lock = run._confirmation_control_lock
+    real_rewrite = run._rewrite_control_slot_locked
+    owner_name = run._control_pool_paths(
+        f.artifact_root, activation_id, run_id)['preparation_owner_intent'].name
+
+    @contextmanager
+    def delay_lock(root):
+        now[0] = start+timedelta(minutes=29)
+        with real_lock(root) as locked:
+            yield locked
+
+    def delay_owner_write(root_fd, name, expected_raw, value, *, pre_write_guard=None):
+        if name == owner_name:
+            now[0] = start+timedelta(seconds=1800)
+        return real_rewrite(root_fd, name, expected_raw, value,
+                            pre_write_guard=pre_write_guard)
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, '_confirmation_control_lock', delay_lock)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', delay_owner_write)
+    with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256)
+    monkeypatch.setattr(run, '_confirmation_control_lock', real_lock)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', real_rewrite)
+    paths = run._control_pool_paths(f.artifact_root, activation_id, run_id)
+    for role in ('preparation_owner_intent', 'preparation_root_intent', 'burn_claim',
+                 'final_owner_execution_receipt', 'final_root_release_receipt'):
+        value = run._control_json(paths[role].read_bytes())
+        assert value['slot_state'] == 'reserved'
+
+
+def test_pre_owner_intent_storage_failure_publishes_no_usable_window(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    activation_id, run_id = 'prewrite-activation', 'prewrite-run'
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    real_datetime = run.datetime
+    real_rewrite = run._rewrite_control_slot_locked
+    owner_name = pool['paths']['preparation_owner_intent'].name
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return start.astimezone(tz) if tz else start
+
+    def fail_before_owner_mutation(root_fd, name, expected_raw, value, *, pre_write_guard=None):
+        if name == owner_name:
+            raise AcquisitionStopped('synthetic_owner_slot_open_failure')
+        return real_rewrite(root_fd, name, expected_raw, value,
+                            pre_write_guard=pre_write_guard)
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', fail_before_owner_mutation)
+    with pytest.raises(AcquisitionStopped, match='synthetic_owner_slot_open_failure'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', real_rewrite)
+    paths = run._control_pool_paths(f.artifact_root, activation_id, run_id)
+    for role in ('preparation_owner_intent', 'preparation_root_intent', 'burn_claim',
+                 'final_owner_execution_receipt', 'final_root_release_receipt'):
+        assert run._control_json(paths[role].read_bytes())['slot_state'] == 'reserved'
+    with pytest.raises(AcquisitionStopped, match='confirmation_preparation_owner_intent_missing'):
+        run._confirmation_control_chain(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256)
+
+    start = start+timedelta(minutes=1)
+    issued = run._issue_confirmation_preparation_intents_at(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, start, EXECUTION_INTENT_SHA256)
+    assert issued['slots']['preparation_owner_intent']['window_started_at'] == stamp(start)
+    assert issued['slots']['preparation_root_intent']['slot_state'] == 'issued'
+
+
+def test_preparation_intents_alone_are_not_runnable_by_actual_cli(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    now = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now.astimezone(tz) if tz else now
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    activation_id, run_id = 'prep-only-activation', 'prep-only-run'
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    pool = run._issue_confirmation_preparation_intents_at(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, now, EXECUTION_INTENT_SHA256)
+    calls = []
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: calls.append('source'))
+    monkeypatch.setattr('sys.argv', [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(pool['paths']['final_root_release_receipt']),
+        '--owner-activation', str(pool['paths']['final_owner_execution_receipt']),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+    ])
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_claim_missing'):
+        run.main()
+    assert pool['slots']['preparation_owner_intent']['slot_state'] == 'issued'
+    assert pool['slots']['preparation_root_intent']['slot_state'] == 'issued'
+    assert pool['slots']['burn_claim']['slot_state'] == 'reserved'
+    assert calls == []
+
+
+def test_issuer_owner_first_prefix_retry_reuses_fixed_t0_and_approval(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    activation_id, run_id = 'prefix-activation', 'prefix-run'
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    now = [start]
+    real_datetime = run.datetime
+    real_rewrite = run._rewrite_control_slot_locked
+    root_name = pool['paths']['preparation_root_intent'].name
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    fail_root = [True]
+
+    def fail_after_owner(root_fd, name, expected_raw, value, *, pre_write_guard=None):
+        if name == root_name and fail_root[0]:
+            fail_root[0] = False
+            raise AcquisitionStopped('synthetic_root_intent_persist_failure')
+        return real_rewrite(root_fd, name, expected_raw, value,
+                            pre_write_guard=pre_write_guard)
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', fail_after_owner)
+    with pytest.raises(AcquisitionStopped, match='synthetic_root_intent_persist_failure'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256)
+    monkeypatch.setattr(run, '_rewrite_control_slot_locked', real_rewrite)
+    paths = run._control_pool_paths(f.artifact_root, activation_id, run_id)
+    owner_intent = run._control_json(paths['preparation_owner_intent'].read_bytes())
+    assert owner_intent['window_started_at'] == stamp(start)
+    assert run._control_json(paths['preparation_root_intent'].read_bytes())['slot_state'] == 'reserved'
+    with pytest.raises(AcquisitionStopped, match='confirmation_control_pool_binding'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, 'f'*64)
+
+    now[0] += timedelta(minutes=5)
+    retried = run.issue_confirmation_preparation_intents(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    assert retried['slots']['preparation_owner_intent']['window_started_at'] == stamp(start)
+    assert retried['slots']['preparation_root_intent']['window_started_at'] == stamp(start)
+    assert retried['slots']['preparation_root_intent']['absolute_deadline'] == stamp(
+        start+timedelta(seconds=1800))
+    assert retried['slots']['preparation_root_intent']['execution_intent_sha256'] == EXECUTION_INTENT_SHA256
+
+
+def test_concurrent_issuers_reload_owner_window_under_art_lock(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    activation_id, run_id = 'concurrent-activation', 'concurrent-run'
+    run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    clock_values = {
+        'issuer-early': start,
+        'issuer-late': start+timedelta(minutes=5),
+    }
+    real_datetime = run.datetime
+    real_lock = run._confirmation_control_lock
+    barrier = threading.Barrier(2)
+
+    class ConcurrentDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            value = clock_values[threading.current_thread().name]
+            return value.astimezone(tz) if tz else value
+
+    @contextmanager
+    def simultaneous_lock(root):
+        barrier.wait(timeout=5)
+        with real_lock(root) as locked:
+            yield locked
+
+    monkeypatch.setattr(run, 'datetime', ConcurrentDateTime)
+    monkeypatch.setattr(run, '_confirmation_control_lock', simultaneous_lock)
+    results, errors = {}, []
+
+    def issue():
+        name = threading.current_thread().name
+        try:
+            results[name] = run.issue_confirmation_preparation_intents(
+                f.successor, f.successor_sha, HEAD, f.artifact_root,
+                activation_id, run_id, EXECUTION_INTENT_SHA256)
+        except BaseException as exc:
+            errors.append(exc)
+
+    threads = [threading.Thread(target=issue, name=name)
+               for name in ('issuer-early', 'issuer-late')]
+    for thread in threads:
+        thread.start()
+    for thread in threads:
+        thread.join(timeout=10)
+    assert all(not thread.is_alive() for thread in threads)
+    assert errors == []
+    windows = {result['slots']['preparation_owner_intent']['window_started_at']
+               for result in results.values()}
+    assert len(windows) == 1
+    pool = next(iter(results.values()))
+    assert pool['slots']['preparation_root_intent']['window_started_at'] == next(iter(windows))
+    assert pool['slots']['preparation_root_intent']['preparation_owner_intent_sha256'] == \
+        pool['slot_sha256']['preparation_owner_intent']
+    assert pool['descriptor']['execution_intent_sha256'] == EXECUTION_INTENT_SHA256
+
+
+@pytest.mark.parametrize('wrong_version', [True, 1.0])
+def test_control_slot_schema_version_rejects_bool_and_float(tmp_path, monkeypatch, wrong_version):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    activation_id, run_id = 'typed-activation', 'typed-run'
+    pool = run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        activation_id, run_id, EXECUTION_INTENT_SHA256)
+    slot = pool['paths']['preparation_owner_intent']
+    value = run._control_json(slot.read_bytes())
+    value['schema_version'] = wrong_version
+    force_replace_control_slot(slot, value)
+    with pytest.raises(AcquisitionStopped, match='confirmation_control_slot_schema'):
+        run.issue_confirmation_preparation_intents(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            activation_id, run_id, EXECUTION_INTENT_SHA256)
 
 
 def test_historical_handoff_uses_checkpoint_and_opaque_result_hash(tmp_path, monkeypatch):
@@ -265,25 +635,31 @@ def test_confirmation_gate_requires_exact_head_manifest_map_and_single_phase(tmp
         {'root_manifest_check': True},
     ):
         changed = {**gate, **changes}
-        gate_path.write_bytes(encoded(changed))
-        with pytest.raises(AcquisitionStopped, match='confirmation_root_gate_binding'):
+        force_replace_control_slot(gate_path, changed)
+        if changes.get('kind') == 'stale_v20_gate':
+            expected_error = 'confirmation_control_slot_state_invalid'
+        elif any(key in changes for key in (
+                'manifest_sha256', 'git_head', 'code_map_sha256', 'output_root')):
+            expected_error = 'confirmation_control_slot_binding'
+        else:
+            expected_error = 'confirmation_root_gate_binding'
+        with pytest.raises(AcquisitionStopped, match=expected_error):
             run.checked_confirmation_gate(
                 gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, now)
+        force_replace_control_slot(gate_path, gate)
 
 
 def test_confirmation_gate_rejects_missing_and_expired_owner_root_receipts(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     now = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
     owner_path, gate_path, owner, gate = authorization_files(f, tmp_path, f.artifact_root, now)
-    with pytest.raises(AcquisitionStopped, match='confirmation_owner_or_root_release_unreadable'):
+    with pytest.raises(AcquisitionStopped, match='confirmation_final_receipt_path'):
         run.checked_confirmation_gate(
             gate_path, tmp_path/'missing-owner.json', f.successor,
             f.successor_sha, HEAD, f.artifact_root, now)
     owner['expires_at'] = stamp(now)
-    owner_path.write_bytes(encoded(owner))
-    gate['owner_activation_sha256'] = sha(owner_path.read_bytes())
-    gate['root_manifest_check']['owner_activation_sha256'] = sha(owner_path.read_bytes())
-    gate_path.write_bytes(encoded(gate))
+    _owner_raw, _gate_raw, gate = replace_authorization_pair(
+        f, owner_path, gate_path, owner, gate)
     with pytest.raises(AcquisitionStopped, match='confirmation_owner_activation_not_fresh'):
         run.checked_confirmation_gate(
             gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, now)
@@ -291,30 +667,80 @@ def test_confirmation_gate_rejects_missing_and_expired_owner_root_receipts(tmp_p
 
 def test_confirmation_t0_uses_minimum_of_wall_and_absolute_deadline(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
-    args = SimpleNamespace(resume=False, output_root=tmp_path/'out')
     start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
-    started, deadline, remaining = run._confirmation_run_window(args, f.successor_sha, start)
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, start)
+    phase = run._confirmation_phase_directory(f.artifact_root)
+    _owner, _root, owner_sha, gate_sha = run.checked_confirmation_gate(
+        gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, start)
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    binding = run._confirmation_claim_binding(
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD,
+        f.artifact_root, control_pool=pool)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
+    args = SimpleNamespace(resume=False, output_root=f.artifact_root)
+    started, deadline, remaining = run._confirmation_run_window(
+        args, f.successor_sha, start, phase_dir=phase, claim_binding=binding,
+        claim_path=claim_path)
     assert started == start
     assert deadline == start+timedelta(seconds=1800)
     assert remaining == 1800
 
-    near_cutoff = datetime(2026, 10, 23, 0, 0, tzinfo=timezone.utc)-timedelta(minutes=10)
-    _started, deadline, remaining = run._confirmation_run_window(args, f.successor_sha, near_cutoff)
+    near_tmp = tmp_path/'near-cutoff'
+    f_near = synthetic_handoff(near_tmp, monkeypatch)
+    near_cutoff = datetime(2026, 10, 22, 23, 50, tzinfo=timezone.utc)
+    near_owner_path, near_gate_path, near_owner, _ = authorization_files(
+        f_near, near_tmp, f_near.artifact_root, near_cutoff)
+    near_phase = run._confirmation_phase_directory(f_near.artifact_root)
+    _owner, _root, near_owner_sha, near_gate_sha = run.checked_confirmation_gate(
+        near_gate_path, near_owner_path, f_near.successor, f_near.successor_sha,
+        HEAD, f_near.artifact_root, near_cutoff)
+    near_pool = run._confirmation_control_chain(
+        f_near.successor, f_near.successor_sha, HEAD, f_near.artifact_root,
+        near_owner['activation_id'], near_owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    near_binding = run._confirmation_claim_binding(
+        near_owner, near_owner_sha, near_gate_sha, f_near.successor,
+        f_near.successor_sha, HEAD, f_near.artifact_root, control_pool=near_pool)
+    near_claim = run._confirmation_claim_path(f_near.artifact_root, near_binding)
+    near_args = SimpleNamespace(resume=False, output_root=f_near.artifact_root)
+    _started, deadline, remaining = run._confirmation_run_window(
+        near_args, f_near.successor_sha, near_cutoff, phase_dir=near_phase,
+        claim_binding=near_binding, claim_path=near_claim)
     assert deadline == datetime(2026, 10, 23, 0, 0, tzinfo=timezone.utc)
     assert remaining == 600
-    for expired in (datetime(2026, 10, 23, 0, 0, tzinfo=timezone.utc),
-                    datetime(2026, 10, 23, 0, 1, tzinfo=timezone.utc)):
+    for expired in (deadline, deadline+timedelta(minutes=1)):
         with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
-            run._confirmation_run_window(args, f.successor_sha, expired)
+            run._confirmation_run_window(
+                near_args, f_near.successor_sha, expired, phase_dir=near_phase,
+                claim_binding=near_binding, claim_path=near_claim)
 
 
 def test_confirmation_resume_retains_original_t0_and_deadline(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     start = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
     deadline = start+timedelta(seconds=1800)
-    output = tmp_path/'out'
-    phase = output/'hp_confirmation'
-    phase.mkdir(parents=True)
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, start)
+    phase = run._confirmation_phase_directory(f.artifact_root)
+    _owner, _root, owner_sha, gate_sha = run.checked_confirmation_gate(
+        gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, start)
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    binding = run._confirmation_claim_binding(
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD,
+        f.artifact_root, control_pool=pool)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
+    _claim, claim_sha, _claim_started, _claim_deadline = run._read_confirmation_claim(
+        claim_path, binding)
+    run._mark_confirmation_budget_started(
+        phase, claim_sha, retained_limit=f.successor['budgets']['hp_confirmation']['retained_bytes'],
+        claim_root=f.artifact_root)
     ledger = {
         'manifest_sha256': f.successor_sha,
         'limits': f.successor['budgets']['hp_confirmation'],
@@ -325,18 +751,23 @@ def test_confirmation_resume_retains_original_t0_and_deadline(tmp_path, monkeypa
         },
     }
     (phase/'ledger.json').write_bytes(encoded(ledger))
-    args = SimpleNamespace(resume=True, output_root=output)
+    args = SimpleNamespace(resume=True, output_root=f.artifact_root)
     resumed_start, resumed_deadline, remaining = run._confirmation_run_window(
-        args, f.successor_sha, start+timedelta(minutes=5))
+        args, f.successor_sha, start+timedelta(minutes=5), phase_dir=phase,
+        claim_binding=binding, claim_path=claim_path)
     assert resumed_start == start
     assert resumed_deadline == deadline
     assert remaining == 1500
     with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
-        run._confirmation_run_window(args, f.successor_sha, deadline)
+        run._confirmation_run_window(
+            args, f.successor_sha, deadline, phase_dir=phase,
+            claim_binding=binding, claim_path=claim_path)
     ledger['finalization_rejections'] = [{'result_sha256': 'late-result'}]
     (phase/'ledger.json').write_bytes(encoded(ledger))
     with pytest.raises(AcquisitionStopped, match='confirmation_late_finalization_not_admissible'):
-        run._confirmation_run_window(args, f.successor_sha, start+timedelta(minutes=5))
+        run._confirmation_run_window(args, f.successor_sha, start+timedelta(minutes=5),
+                                     phase_dir=phase, claim_binding=binding,
+                                     claim_path=claim_path)
 
 
 def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monkeypatch, capsys):
@@ -401,24 +832,18 @@ def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monk
         run.main()
     original_claim_raw = claim_path.read_bytes()
     claim = json.loads(original_claim_raw)
-    assert claim['claim_state'] == 'preflight_claimed'
+    assert claim['claim_state'] == 'committed'
     assert claim['activation_id'] == owner['activation_id']
     assert claim['run_id'] == owner['run_id']
     assert claim['window_started_at'] == stamp(started)
     assert claim['absolute_deadline'] == stamp(started+timedelta(seconds=1800))
-    assert claim['owner_activation_sha256'] == sha(owner_path.read_bytes())
+    assert claim['execution_intent_sha256'] == EXECUTION_INTENT_SHA256
+    assert claim['preparation_owner_intent_sha256']
     assert not marker_path.exists()
     assert not ledger_path.exists()
 
     now[0] = started+timedelta(minutes=5)
     monkeypatch.setattr('sys.argv', argv())
-    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
-        run.main()
-    assert claim_path.read_bytes() == original_claim_raw
-    assert source_calls == []
-
-    # A corrected preflight may continue only as the same resume, with original T0/D.
-    monkeypatch.setattr('sys.argv', argv(resume=True))
     run.main()
     output = json.loads(capsys.readouterr().out)
     assert output['status'] == 'complete'
@@ -427,7 +852,12 @@ def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monk
     assert ledger['started_at'] == started.isoformat()
     assert ledger['window_contract']['window_started_at'] == started.isoformat()
     assert ledger['window_contract']['absolute_deadline'] == (started+timedelta(seconds=1800)).isoformat()
-    assert sha(claim_path.read_bytes()) == json.loads(marker_path.read_bytes())['claim_sha256']
+    claim_after = json.loads(claim_path.read_bytes())
+    assert claim_after['claim_state'] == 'consumer_started'
+    assert claim_after['window_started_at'] == stamp(started)
+    assert claim_after['absolute_deadline'] == stamp(started+timedelta(seconds=1800))
+    assert claim_after['claim_commitment_sha256'] == json.loads(marker_path.read_bytes())['claim_sha256']
+    assert original_claim_raw != claim_path.read_bytes()
 
 
 @pytest.mark.parametrize('terminal_state', ['complete', 'finalization_rejected'])
@@ -458,13 +888,18 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
     phase_dir = run._confirmation_phase_directory(f.artifact_root)
     _owner, _gate, owner_sha, gate_sha = run.checked_confirmation_gate(
         gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, started)
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
     binding = run._confirmation_claim_binding(
-        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD, f.artifact_root)
-    deadline = started+timedelta(seconds=1800)
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD,
+        f.artifact_root, control_pool=pool)
     claim_path = run._confirmation_claim_path(f.artifact_root, binding)
-    _claim, claim_sha = run._prepare_confirmation_claim(
-        claim_path, binding, started, deadline, resume=False, manifest=f.successor)
-    run._mark_confirmation_budget_started(phase_dir, claim_sha)
+    _claim, claim_sha, started, deadline = run._read_confirmation_claim(claim_path, binding)
+    run._mark_confirmation_budget_started(
+        phase_dir, claim_sha, retained_limit=f.successor['budgets']['hp_confirmation']['retained_bytes'],
+        claim_root=f.artifact_root)
 
     prior, checkpoint = run.checked_confirmation_handoff(
         f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
@@ -478,6 +913,9 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
         completion_window=completion_window, window_started_at=started,
         confirmation_lock_guard=True, confirmation_claim_sha=claim_sha,
         confirmation_claim_path=claim_path, confirmation_claim_root=f.artifact_root,
+        confirmation_authority_guard=lambda: run._consume_confirmation_control_claim(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256, resume=False),
         require_real_directory=True)
     initial_budget.close()
     ledger_path = phase_dir/'ledger.json'
@@ -667,13 +1105,78 @@ def test_confirmation_budget_rejects_reader_lock_symlink_before_open_or_flock(
     assert not (phase_dir/'ledger.json').exists()
 
 
-def test_budget_counts_art_root_claims_against_confirmation_retention(tmp_path):
-    output_root = tmp_path/'art'
+def test_real_cli_art_lock_delay_past_does_not_start_consumer_or_dispatch(
+        tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    deadline = started+timedelta(seconds=1800)
+    now = [started]
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, started)
+    real_run_datetime = run.datetime
+    real_budget_datetime = bounded.datetime
+    real_control_lock = run._confirmation_control_lock
+
+    class ControlledRunDateTime(real_run_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    class ControlledBudgetDateTime(real_budget_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    lock_calls = []
+
+    @contextmanager
+    def delay_consumer_lock(root):
+        lock_calls.append(root)
+        if len(lock_calls) == 3:
+            now[0] = deadline
+        with real_control_lock(root) as locked:
+            yield locked
+
+    monkeypatch.setattr(run, 'datetime', ControlledRunDateTime)
+    monkeypatch.setattr(bounded, 'datetime', ControlledBudgetDateTime)
+    monkeypatch.setattr(run, '_confirmation_control_lock', delay_consumer_lock)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setenv('HOTPEPPER_API_KEY', 'offline-test-only')
+    source_calls = []
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('source'))
+    monkeypatch.setattr('sys.argv', [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+    ])
+    with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
+        run.main()
+
+    claim_path = run._control_pool_paths(
+        f.artifact_root, owner['activation_id'], owner['run_id'])['burn_claim']
+    claim = run._control_json(claim_path.read_bytes())
+    assert len(lock_calls) == 3
+    assert claim['claim_state'] == 'committed'
+    assert claim['window_started_at'] == stamp(started)
+    assert (f.artifact_root/'hp_confirmation'/'activation-budget-started.json').exists()
+    assert not (f.artifact_root/'hp_confirmation'/'ledger.json').exists()
+    assert source_calls == []
+
+
+def test_budget_counts_art_root_claims_against_confirmation_retention(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    output_root = f.artifact_root
+    run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, output_root,
+        'synthetic-activation-1', 'synthetic-run-1', EXECUTION_INTENT_SHA256)
     phase_dir = output_root/'hp_confirmation'
-    phase_dir.mkdir(parents=True)
-    (output_root/'.hp_confirmation_claim-prior.json').write_bytes(b'prior claim bytes')
+    phase_dir.mkdir()
+    assert run._confirmation_control_bytes(output_root) == manifest_contract.CONFIRMATION_CONTROL_POOL_BYTES
     limits = copy.deepcopy(manifest_contract.CONFIRMATION_BUDGET)
-    limits['retained_bytes'] = 8
+    limits['retained_bytes'] = manifest_contract.CONFIRMATION_CONTROL_POOL_BYTES
 
     with pytest.raises(AcquisitionStopped, match='retained_ledger_budget'):
         bounded.Budget(
@@ -929,7 +1432,7 @@ def test_real_cli_rejects_late_final_ledger_commit_and_resume(tmp_path, monkeypa
     monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
     monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
     monkeypatch.setenv('HOTPEPPER_API_KEY', 'offline-test-only')
-    owner_path, gate_path, _owner, _gate = authorization_files(
+    owner_path, gate_path, owner, _gate = authorization_files(
         f, tmp_path, f.artifact_root, started)
 
     source_calls = []
@@ -967,9 +1470,19 @@ def test_real_cli_rejects_late_final_ledger_commit_and_resume(tmp_path, monkeypa
     assert rejection['reason_type'] == 'AcquisitionStopped'
     assert len(save_calls) >= 3
 
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    binding = run._confirmation_claim_binding(
+        owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
+        f.successor, f.successor_sha, HEAD, f.artifact_root, control_pool=pool)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
     resume_args = SimpleNamespace(resume=True, output_root=f.artifact_root)
     with pytest.raises(AcquisitionStopped, match='confirmation_late_finalization_not_admissible'):
-        run._confirmation_run_window(resume_args, f.successor_sha, deadline-timedelta(seconds=1))
+        run._confirmation_run_window(
+            resume_args, f.successor_sha, deadline-timedelta(seconds=1),
+            phase_dir=phase_dir, claim_binding=binding, claim_path=claim_path)
 
 
 def test_run_main_rejects_arbitrary_confirmation_root_before_output(
@@ -1021,12 +1534,11 @@ def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
     poisoned_ledger.write_bytes(b'must not be read through the symlink')
     phase_dir = f.artifact_root/'hp_confirmation'
     phase_dir.symlink_to(frozen_dir, target_is_directory=True)
-    owner_path, gate_path, owner, _gate = authorization_files(
-        f, tmp_path, f.artifact_root, now[0])
     owner_sha = sha(owner_path.read_bytes())
     gate_sha = sha(gate_path.read_bytes())
     binding = run._confirmation_claim_binding(
-        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD, f.artifact_root)
+        _owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD,
+        f.artifact_root)
     claim_path = run._confirmation_claim_path(f.artifact_root, binding)
     source_calls = []
     monkeypatch.setattr(run, 'datetime', ControlledDateTime)
@@ -1052,20 +1564,80 @@ def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
     claim = json.loads(claim_path.read_bytes())
     assert claim['window_started_at'] == stamp(now[0])
     assert claim['absolute_deadline'] == stamp(now[0]+timedelta(seconds=1800))
+    assert claim['claim_state'] == 'terminal_rejected'
+    assert claim['terminal_reason'] == 'confirmation_phase_directory_invalid'
     original_claim = claim_path.read_bytes()
     assert source_calls == []
 
     phase_dir.unlink()
     now[0] += timedelta(minutes=5)
     monkeypatch.setattr('sys.argv', argv)
-    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_terminal_rejection'):
         run.main()
     assert claim_path.read_bytes() == original_claim
     assert source_calls == []
 
 
+def test_run_main_terminalizes_non_directory_phase_path_in_art_control_slot(
+        tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    now = [started]
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, started)
+    phase_path = f.artifact_root/'hp_confirmation'
+    phase_path.write_bytes(b'unsafe synthetic phase file')
+    source_calls = []
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('source'))
+    argv = [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+    ]
+    monkeypatch.setattr('sys.argv', argv)
+    with pytest.raises(AcquisitionStopped, match='confirmation_phase_directory_invalid'):
+        run.main()
+    assert phase_path.read_bytes() == b'unsafe synthetic phase file'
+    claim_path = run._control_pool_paths(
+        f.artifact_root, owner['activation_id'], owner['run_id'])['burn_claim']
+    claim = run._control_json(claim_path.read_bytes())
+    assert claim['claim_state'] == 'terminal_rejected'
+    assert claim['terminal_reason'] == 'confirmation_phase_directory_invalid'
+    phase_path.unlink()
+    now[0] += timedelta(minutes=5)
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_terminal_rejection'):
+        run.main()
+    assert source_calls == []
+
+
+def create_global_retention_pressure(f):
+    root = f.artifact_root
+    phase_bytes = run._confirmation_phase_bytes(root)
+    control_bytes = run._confirmation_control_bytes(root)
+    retained = run._physical_retained_bytes(root)
+    projected = retained-phase_bytes-control_bytes+f.successor['budgets']['hp_confirmation']['retained_bytes']
+    filler_size = f.successor['budgets']['total_retained_bytes']-projected+1
+    assert filler_size > 0
+    filler = root/'.synthetic-global-retention-pressure.bin'
+    with filler.open('wb') as stream:
+        stream.truncate(filler_size)
+    return filler
+
+
 def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkeypatch):
-    f = synthetic_handoff(tmp_path, monkeypatch, total_retained_bytes=64*1024**2)
+    f = synthetic_handoff(tmp_path, monkeypatch)
     now = [datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)]
     real_datetime = run.datetime
 
@@ -1076,6 +1648,7 @@ def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkey
 
     owner_path, gate_path, _owner, _gate = authorization_files(
         f, tmp_path, f.artifact_root, now[0])
+    filler = create_global_retention_pressure(f)
 
     class MustNotStartBudget:
         def __init__(self, *_args, **_kwargs):
@@ -1094,50 +1667,27 @@ def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkey
     ])
     with pytest.raises(AcquisitionStopped, match='total_retained_budget'):
         run.main()
-    assert any(path.is_file() for path in f.artifact_root.rglob('*'))
-    claims = list(f.artifact_root.glob('.hp_confirmation_claim-*.json'))
-    assert len(claims) == 1
-    assert physical_regular_bytes(f.artifact_root) <= 64*1024**2
+    assert filler.stat().st_size > 0
+    controls = run._confirmation_control_files(f.artifact_root)
+    assert len(controls) == 6
+    assert all(size == manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES
+               for _path, size in controls)
+    assert physical_regular_bytes(f.artifact_root) <= f.successor['budgets']['total_retained_bytes']
 
 
-def test_run_main_near_global_cap_rejects_claim_without_overbudget_write_or_reuse(
+def test_run_main_global_cap_restoration_reuses_original_claim_window(
         tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     now = [datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)]
     owner_path, gate_path, owner, _gate = authorization_files(
         f, tmp_path, f.artifact_root, now[0])
-    binding = run._confirmation_claim_binding(
-        owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
-        f.successor, f.successor_sha, HEAD, f.artifact_root)
-    trial_claim = {
-        **binding,
-        'claim_state': 'preflight_claimed',
-        'window_started_at': stamp(now[0]),
-        'absolute_deadline': stamp(now[0]+timedelta(seconds=1800)),
-        'claimed_at': stamp(now[0]),
-    }
-    trial_claim_size = len(encoded(trial_claim))
-    physical_before = physical_regular_bytes(f.artifact_root)
-    cap = physical_before+trial_claim_size-1
-    f.successor['budgets']['total_retained_bytes'] = cap
-    f.successor_raw = manifest_contract.canonical_manifest_bytes(f.successor)
-    f.successor_sha = sha(f.successor_raw)
-    f.successor_path.write_bytes(f.successor_raw)
-    owner_path, gate_path, owner, _gate = authorization_files(
-        f, tmp_path, f.artifact_root, now[0])
-    binding = run._confirmation_claim_binding(
-        owner, sha(owner_path.read_bytes()), sha(gate_path.read_bytes()),
-        f.successor, f.successor_sha, HEAD, f.artifact_root)
-    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
-    actual_claim_size = len(encoded({
-        **binding,
-        'claim_state': 'preflight_claimed',
-        'window_started_at': stamp(now[0]),
-        'absolute_deadline': stamp(now[0]+timedelta(seconds=1800)),
-        'claimed_at': stamp(now[0]),
-    }))
-    assert actual_claim_size == trial_claim_size
-    assert cap-physical_before == actual_claim_size-1
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    claim_path = pool['paths']['burn_claim']
+    original_claim = claim_path.read_bytes()
+    create_global_retention_pressure(f)
 
     real_datetime = run.datetime
 
@@ -1146,17 +1696,18 @@ def test_run_main_near_global_cap_rejects_claim_without_overbudget_write_or_reus
         def now(cls, tz=None):
             return now[0].astimezone(tz) if tz else now[0]
 
+    monkeypatch.setattr(bounded, 'datetime', ControlledDateTime)
+    monkeypatch.setenv('HOTPEPPER_API_KEY', 'offline-test-only')
     source_calls = []
-
-    class MustNotStartBudget:
-        def __init__(self, *_args, **_kwargs):
-            pytest.fail('near-cap rejection must precede Budget and source calls')
 
     monkeypatch.setattr(run, 'datetime', ControlledDateTime)
     monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
     monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
-    monkeypatch.setattr(run, 'Budget', MustNotStartBudget)
-    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('called'))
+    monkeypatch.setattr(run, 'acquire_sites', lambda sites, _budget, _key: (
+        source_calls.append('called'), {'status': 'complete', 'stations': [
+            {'slug': row['slug'], 'status': 'complete_provider_zero',
+             'finished_at': stamp(now[0]+timedelta(minutes=1)), 'pages': []} for row in sites
+        ]})[1])
     argv = [
         'food-pilot-run', '--manifest', str(f.successor_path),
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
@@ -1167,26 +1718,21 @@ def test_run_main_near_global_cap_rejects_claim_without_overbudget_write_or_reus
     monkeypatch.setattr('sys.argv', argv)
     with pytest.raises(AcquisitionStopped, match='total_retained_budget'):
         run.main()
-    terminal_claim = json.loads(claim_path.read_bytes())
-    terminal_size = claim_path.stat().st_size
-    assert terminal_claim['kind'] == 'hp_confirmation_activation_claim_rejected'
-    assert terminal_claim['window_started_at'] == stamp(now[0])
-    assert terminal_claim['absolute_deadline'] == stamp(now[0]+timedelta(seconds=1800))
-    assert terminal_claim['reason'] == 'total_retained_budget'
-    assert terminal_size < actual_claim_size
-    assert physical_regular_bytes(f.artifact_root) == physical_before+terminal_size
-    assert physical_regular_bytes(f.artifact_root) <= cap
+    assert claim_path.read_bytes() == original_claim
     assert source_calls == []
 
-    # The durable terminal claim blocks reuse and preserves the original T0/D.
-    terminal_bytes = claim_path.read_bytes()
+    filler = f.artifact_root/'.synthetic-global-retention-pressure.bin'
+    filler.unlink()
     now[0] += timedelta(minutes=5)
     monkeypatch.setattr('sys.argv', argv)
-    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
-        run.main()
-    assert claim_path.read_bytes() == terminal_bytes
-    assert physical_regular_bytes(f.artifact_root) == physical_before+terminal_size
-    assert source_calls == []
+    run.main()
+    assert source_calls == ['called']
+    ledger = json.loads((f.artifact_root/'hp_confirmation'/'ledger.json').read_bytes())
+    original_started = now[0]-timedelta(minutes=5)
+    assert ledger['started_at'] == original_started.isoformat()
+    claim = json.loads(claim_path.read_bytes())
+    assert claim['window_started_at'] == stamp(original_started)
+    assert claim['claim_state'] == 'consumer_started'
 
 
 def test_nonconfirmation_phase_keeps_original_global_cutoff(tmp_path, monkeypatch):

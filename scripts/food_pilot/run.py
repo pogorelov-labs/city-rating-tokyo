@@ -10,6 +10,7 @@ import stat
 import subprocess
 import time
 import uuid
+from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -137,6 +138,7 @@ def checked_confirmation_amendment(manifest):
             or amendment.get('allowed_phases') != ['hp_confirmation']
             or amendment.get('requires_fresh_exact_head_manifest_code_owner_root_release') is not True
             or amendment.get('v20_remains_insufficient') is not True
+            or amendment.get('control_pool_contract') != manifest_contract.CONFIRMATION_CONTROL_POOL_CONTRACT
             or manifest.get('source_window', {}).get('core_hp_complete_before') != manifest_contract.CORE_SOURCE_CUTOFF
             or manifest.get('reviewed_execution_scope') != ['hp_confirmation']
             or manifest.get('budgets', {}).get('hp_confirmation') != manifest_contract.CONFIRMATION_BUDGET):
@@ -162,6 +164,897 @@ def _confirmation_artifact_root(manifest):
         return root.resolve()
     except (KeyError, OSError, RuntimeError, TypeError, ValueError):
         raise AcquisitionStopped('confirmation_artifact_root_invalid') from None
+
+
+_CONTROL_ROLE_PREFIX = {
+    'allocation_descriptor': '.hp_confirmation_allocation-',
+    'preparation_owner_intent': '.hp_confirmation_preparation_owner-',
+    'preparation_root_intent': '.hp_confirmation_preparation_root-',
+    'burn_claim': '.hp_confirmation_claim-',
+    'final_owner_execution_receipt': '.hp_confirmation_final_owner-',
+    'final_root_release_receipt': '.hp_confirmation_final_root-',
+}
+
+
+def _control_identity(activation_id, run_id):
+    return hashlib.sha256(encoded({'activation_id': activation_id, 'run_id': run_id})).hexdigest()
+
+
+def _control_pool_paths(output_root, activation_id, run_id):
+    root = Path(output_root).resolve()
+    suffix = _control_identity(activation_id, run_id)
+    return {role: root/f'{prefix}{suffix}.json'
+            for role, prefix in _CONTROL_ROLE_PREFIX.items()}
+
+
+def _padded_control_slot(value):
+    raw = encoded(value)
+    size = manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES
+    if len(raw) >= size:
+        raise AcquisitionStopped('confirmation_control_slot_payload_too_large')
+    return raw+b' '*(size-len(raw))
+
+
+def _read_fixed_control_file(path):
+    descriptor = None
+    try:
+        descriptor = os.open(path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0))
+        info = os.fstat(descriptor)
+        if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1
+                or info.st_size != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES):
+            raise AcquisitionStopped('confirmation_control_slot_invalid')
+        chunks = []
+        while True:
+            chunk = os.read(descriptor, 8192)
+            if not chunk:
+                break
+            chunks.append(chunk)
+        raw = b''.join(chunks)
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_missing_or_unreadable') from None
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
+    if len(raw) != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES:
+        raise AcquisitionStopped('confirmation_control_slot_invalid')
+    return raw
+
+
+def _confirmation_control_files(output_root):
+    root = Path(output_root).resolve(strict=True)
+    files = []
+    try:
+        with os.scandir(root) as entries:
+            for entry in entries:
+                if not any(entry.name.startswith(prefix) and entry.name.endswith('.json')
+                           for prefix in _CONTROL_ROLE_PREFIX.values()):
+                    continue
+                info = entry.stat(follow_symlinks=False)
+                if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1
+                        or info.st_size != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES):
+                    raise AcquisitionStopped('confirmation_control_slot_invalid')
+                files.append((root/entry.name, info.st_size))
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_unreadable') from None
+    return files
+
+
+def _confirmation_control_bytes(output_root):
+    return sum(size for _path, size in _confirmation_control_files(output_root))
+
+
+def _confirmation_phase_bytes(root, *, allow_unsafe_path=False):
+    phase_dir = Path(root).resolve()/'hp_confirmation'
+    if phase_dir.is_symlink() or (phase_dir.exists() and not phase_dir.is_dir()):
+        if allow_unsafe_path:
+            try:
+                return phase_dir.lstat().st_size
+            except OSError:
+                raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+        raise AcquisitionStopped('confirmation_phase_directory_invalid')
+    if not phase_dir.exists():
+        return 0
+    return _physical_retained_bytes(phase_dir)
+
+
+def _control_pool_descriptor(manifest, manifest_hash, head, output_root,
+                             activation_id, run_id, execution_intent_sha256):
+    execution_intent_sha256 = _checked_approval_sha256(execution_intent_sha256)
+    root = Path(output_root).resolve()
+    paths = _control_pool_paths(root, activation_id, run_id)
+    return {
+        'kind': 'hp_confirmation_control_pool',
+        'schema_version': 1,
+        'phase': 'hp_confirmation',
+        'activation_id': activation_id,
+        'run_id': run_id,
+        'git_head': head,
+        'execution_intent_sha256': execution_intent_sha256,
+        'manifest_sha256': manifest_hash,
+        'code_map_sha256': manifest_contract.canonical_code_map_sha256(manifest.get('code_sha256')),
+        'output_root': str(root),
+        'phase_retained_bytes': manifest['budgets']['hp_confirmation']['retained_bytes'],
+        'total_retained_bytes': manifest['budgets']['total_retained_bytes'],
+        'slot_bytes': manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES,
+        'total_slot_bytes': manifest_contract.CONFIRMATION_CONTROL_POOL_BYTES,
+        'slot_state': 'reserved',
+        'role': 'allocation_descriptor',
+        'slots': {role: {'path': str(path), 'bytes': manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES}
+                  for role, path in paths.items()},
+    }
+
+
+def _control_slot_reservation(descriptor, allocation_sha256, role):
+    return {
+        'kind': 'hp_confirmation_control_slot_reservation',
+        'schema_version': 1,
+        'role': role,
+        'allocation_descriptor_sha256': allocation_sha256,
+        'activation_id': descriptor['activation_id'],
+        'run_id': descriptor['run_id'],
+        'phase': descriptor['phase'],
+        'git_head': descriptor['git_head'],
+        'execution_intent_sha256': descriptor['execution_intent_sha256'],
+        'manifest_sha256': descriptor['manifest_sha256'],
+        'code_map_sha256': descriptor['code_map_sha256'],
+        'output_root': descriptor['output_root'],
+        'phase_retained_bytes': descriptor['phase_retained_bytes'],
+        'total_retained_bytes': descriptor['total_retained_bytes'],
+        'slot_bytes': descriptor['slot_bytes'],
+        'slot_state': 'reserved',
+    }
+
+
+def _control_capacity_preflight(root, manifest, additional_bytes=0, *,
+                                allow_unsafe_phase_path=False):
+    root = Path(root).resolve(strict=True)
+    phase_bytes = _confirmation_phase_bytes(
+        root, allow_unsafe_path=allow_unsafe_phase_path)
+    control_bytes = _confirmation_control_bytes(root)
+    retained = _physical_retained_bytes(root)
+    phase_limit = manifest['budgets']['hp_confirmation']['retained_bytes']
+    total_limit = manifest['budgets']['total_retained_bytes']
+    if phase_bytes+control_bytes+additional_bytes > phase_limit:
+        raise AcquisitionStopped('retained_control_pool_budget')
+    # The phase cap, including all controls, remains reserved in the global tree.
+    if retained-phase_bytes-control_bytes+phase_limit > total_limit:
+        raise AcquisitionStopped('total_retained_budget')
+
+
+def _write_new_fixed_control_file(root_fd, name, raw):
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, 'O_NOFOLLOW', 0)
+    try:
+        descriptor = os.open(name, flags, 0o600, dir_fd=root_fd)
+    except FileExistsError:
+        return False
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_persist_failed') from None
+    try:
+        written = 0
+        while written < len(raw):
+            amount = os.write(descriptor, raw[written:])
+            if amount <= 0:
+                raise OSError('short control slot write')
+            written += amount
+        os.fsync(descriptor)
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_persist_failed') from None
+    finally:
+        os.close(descriptor)
+    return True
+
+
+_CONTROL_INTEGER_KEYS = {
+    'schema_version', 'phase_retained_bytes', 'total_retained_bytes', 'slot_bytes',
+    'total_slot_bytes', 'candidate_count', 'attempts', 'successful_pages',
+    'pages_per_station', 'response_bytes', 'response_body_bytes', 'retained_bytes',
+    'wall_seconds', 'socket_seconds', 'concurrency', 'maximum_attempts_per_page',
+    'bytes', 'rich', 'sparse',
+}
+_CONTROL_BOOLEAN_KEYS = {'single_use'}
+_CONTROL_FLOAT_KEYS = {'minimum_request_interval_seconds'}
+
+
+def _validate_control_integer_types(value):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if key in _CONTROL_INTEGER_KEYS and type(item) is not int:
+                raise AcquisitionStopped('confirmation_control_slot_integer_type')
+            if key in _CONTROL_BOOLEAN_KEYS and type(item) is not bool:
+                raise AcquisitionStopped('confirmation_control_slot_boolean_type')
+            if key in _CONTROL_FLOAT_KEYS and type(item) is not float:
+                raise AcquisitionStopped('confirmation_control_slot_float_type')
+            _validate_control_integer_types(item)
+    elif isinstance(value, list):
+        for item in value:
+            _validate_control_integer_types(item)
+
+
+def _control_json(raw):
+    if len(raw) != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES:
+        raise AcquisitionStopped('confirmation_control_slot_invalid')
+    try:
+        value = json.loads(raw)
+    except (ValueError, TypeError):
+        raise AcquisitionStopped('confirmation_control_slot_invalid') from None
+    if (not isinstance(value, dict)
+            or type(value.get('schema_version')) is not int
+            or value.get('schema_version') != 1):
+        raise AcquisitionStopped('confirmation_control_slot_schema')
+    _validate_control_integer_types(value)
+    if not isinstance(value, dict) or _padded_control_slot(value) != raw:
+        raise AcquisitionStopped('confirmation_control_slot_noncanonical')
+    return value
+
+
+def _checked_approval_sha256(value):
+    if (not isinstance(value, str) or len(value) != 64
+            or any(character not in '0123456789abcdef' for character in value)):
+        raise AcquisitionStopped('confirmation_execution_intent_approval_binding')
+    return value
+
+
+@contextmanager
+def _confirmation_control_lock(root):
+    root = Path(root).resolve(strict=True)
+    descriptor = None
+    try:
+        descriptor = os.open(root, os.O_RDONLY | getattr(os, 'O_DIRECTORY', 0)
+                             | getattr(os, 'O_NOFOLLOW', 0))
+        if not stat.S_ISDIR(os.fstat(descriptor).st_mode):
+            raise AcquisitionStopped('confirmation_artifact_root_invalid')
+        fcntl.flock(descriptor, fcntl.LOCK_EX)
+        yield root, descriptor
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_pool_unavailable') from None
+    finally:
+        if descriptor is not None:
+            try:
+                fcntl.flock(descriptor, fcntl.LOCK_UN)
+            finally:
+                os.close(descriptor)
+
+
+def _read_control_slot_locked(root_fd, name):
+    descriptor = None
+    try:
+        descriptor = os.open(name, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0),
+                             dir_fd=root_fd)
+        info = os.fstat(descriptor)
+        if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1
+                or info.st_size != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES):
+            raise AcquisitionStopped('confirmation_control_slot_invalid')
+        chunks = []
+        while True:
+            chunk = os.read(descriptor, 8192)
+            if not chunk:
+                break
+            chunks.append(chunk)
+        raw = b''.join(chunks)
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_missing_or_unreadable') from None
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
+    return raw, _control_json(raw)
+
+
+def _rewrite_control_slot_locked(root_fd, name, expected_raw, value, *, pre_write_guard=None):
+    raw = _padded_control_slot(value)
+    descriptor = None
+    try:
+        descriptor = os.open(name, os.O_RDWR | getattr(os, 'O_NOFOLLOW', 0),
+                             dir_fd=root_fd)
+        info = os.fstat(descriptor)
+        if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1
+                or info.st_size != manifest_contract.CONFIRMATION_CONTROL_SLOT_BYTES):
+            raise AcquisitionStopped('confirmation_control_slot_invalid')
+        chunks = []
+        while True:
+            chunk = os.read(descriptor, 8192)
+            if not chunk:
+                break
+            chunks.append(chunk)
+        if b''.join(chunks) != expected_raw:
+            raise AcquisitionStopped('confirmation_control_slot_concurrent_change')
+        if pre_write_guard is not None:
+            pre_write_guard()
+        written = 0
+        while written < len(raw):
+            amount = os.pwrite(descriptor, raw[written:], written)
+            if amount <= 0:
+                raise OSError('short fixed-slot rewrite')
+            written += amount
+        os.fsync(descriptor)
+        os.fsync(root_fd)
+    except AcquisitionStopped:
+        raise
+    except OSError:
+        raise AcquisitionStopped('confirmation_control_slot_persist_failed') from None
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
+    return raw
+
+
+def _read_control_pool_locked(root_fd, root, manifest, manifest_hash, head,
+                              activation_id, run_id, execution_intent_sha256):
+    descriptor = _control_pool_descriptor(
+        manifest, manifest_hash, head, root, activation_id, run_id,
+        execution_intent_sha256)
+    paths = _control_pool_paths(root, activation_id, run_id)
+    allocation_raw, allocation = _read_control_slot_locked(
+        root_fd, paths['allocation_descriptor'].name)
+    expected_allocation = _padded_control_slot(descriptor)
+    if allocation_raw != expected_allocation:
+        raise AcquisitionStopped('confirmation_control_pool_binding')
+    allocation_sha = hashlib.sha256(allocation_raw).hexdigest()
+    slots = {}
+    raws = {'allocation_descriptor': allocation_raw}
+    for role in manifest_contract.CONFIRMATION_CONTROL_POOL_CONTRACT['slot_roles']:
+        if role == 'allocation_descriptor':
+            continue
+        raw, value = _read_control_slot_locked(root_fd, paths[role].name)
+        reservation = _control_slot_reservation(descriptor, allocation_sha, role)
+        if any(value.get(key) != expected for key, expected in reservation.items()
+               if key not in ('kind', 'slot_state')):
+            raise AcquisitionStopped('confirmation_control_slot_binding')
+        if value != reservation:
+            expected_kinds = {
+                'preparation_owner_intent': ('hp_confirmation_preparation_owner_intent', 'issued'),
+                'preparation_root_intent': ('hp_confirmation_preparation_root_intent', 'issued'),
+                'burn_claim': ('hp_confirmation_activation_claim',
+                               ('committed', 'consumer_started', 'terminal_rejected')),
+                'final_owner_execution_receipt': ('owner_hp_confirmation_activation', 'issued'),
+                'final_root_release_receipt': ('root_hp_confirmation_release', 'issued'),
+            }
+            expected_kind, expected_state = expected_kinds[role]
+            actual_state = value.get('claim_state') if role == 'burn_claim' else value.get('slot_state')
+            if (value.get('kind') != expected_kind
+                    or (actual_state not in expected_state if isinstance(expected_state, tuple)
+                        else actual_state != expected_state)):
+                raise AcquisitionStopped('confirmation_control_slot_state_invalid')
+        slots[role] = value
+        raws[role] = raw
+    return {
+        'descriptor': descriptor,
+        'descriptor_sha256': allocation_sha,
+        'paths': paths,
+        'slots': slots,
+        'raws': raws,
+        'slot_sha256': {role: hashlib.sha256(raw).hexdigest() for role, raw in raws.items()},
+    }
+
+
+def _intent_window(owner_intent):
+    try:
+        started = _utc(owner_intent['window_started_at'])
+        deadline = _utc(owner_intent['absolute_deadline'])
+    except (KeyError, TypeError):
+        raise AcquisitionStopped('confirmation_preparation_intent_window') from None
+    expected = min(started+timedelta(seconds=1800),
+                   _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
+    if deadline != expected:
+        raise AcquisitionStopped('confirmation_preparation_intent_window')
+    return started, deadline
+
+
+def _publish_confirmation_intents_locked(root_fd, root, pool, invocation_started,
+                                         execution_intent_sha256):
+    slots = pool['slots']
+    descriptor = pool['descriptor']
+    paths = pool['paths']
+    owner = slots['preparation_owner_intent']
+    root_intent = slots['preparation_root_intent']
+    if owner.get('slot_state') == 'reserved':
+        if root_intent.get('slot_state') != 'reserved':
+            raise AcquisitionStopped('confirmation_preparation_partial_corrupt')
+        started = invocation_started
+        deadline = min(started+timedelta(seconds=1800),
+                       _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
+        if started >= deadline:
+            raise AcquisitionStopped('confirmation_completion_deadline_expired')
+        live_now = datetime.now(timezone.utc)
+        if live_now < started:
+            raise AcquisitionStopped('confirmation_clock_moved_backwards')
+        if live_now >= deadline:
+            raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+        def check_owner_publication_deadline():
+            publish_now = datetime.now(timezone.utc)
+            if publish_now < started:
+                raise AcquisitionStopped('confirmation_clock_moved_backwards')
+            if publish_now >= deadline:
+                raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+        owner_value = {
+            **_control_slot_reservation(descriptor, pool['descriptor_sha256'],
+                                        'preparation_owner_intent'),
+            'kind': 'hp_confirmation_preparation_owner_intent',
+            'slot_state': 'issued',
+            'window_started_at': started.isoformat().replace('+00:00', 'Z'),
+            'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
+            'issued_at': started.isoformat().replace('+00:00', 'Z'),
+            'execution_intent_sha256': execution_intent_sha256,
+        }
+        owner_raw = _rewrite_control_slot_locked(
+            root_fd, paths['preparation_owner_intent'].name,
+            pool['raws']['preparation_owner_intent'], owner_value,
+            pre_write_guard=check_owner_publication_deadline)
+        owner = owner_value
+        pool['raws']['preparation_owner_intent'] = owner_raw
+        pool['slot_sha256']['preparation_owner_intent'] = hashlib.sha256(owner_raw).hexdigest()
+        slots['preparation_owner_intent'] = owner
+    else:
+        started, deadline = _intent_window(owner)
+        if owner.get('execution_intent_sha256') != execution_intent_sha256:
+            raise AcquisitionStopped('confirmation_execution_intent_approval_binding')
+
+    if root_intent.get('slot_state') == 'reserved':
+        root_now = datetime.now(timezone.utc)
+        if root_now < started:
+            raise AcquisitionStopped('confirmation_clock_moved_backwards')
+        if root_now >= deadline:
+            raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+        def check_root_publication_deadline():
+            publish_now = datetime.now(timezone.utc)
+            if publish_now < started:
+                raise AcquisitionStopped('confirmation_clock_moved_backwards')
+            if publish_now >= deadline:
+                raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+        root_value = {
+            **_control_slot_reservation(descriptor, pool['descriptor_sha256'],
+                                        'preparation_root_intent'),
+            'kind': 'hp_confirmation_preparation_root_intent',
+            'slot_state': 'issued',
+            'window_started_at': started.isoformat().replace('+00:00', 'Z'),
+            'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
+            'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+            'execution_intent_sha256': execution_intent_sha256,
+        }
+        root_raw = _rewrite_control_slot_locked(
+            root_fd, paths['preparation_root_intent'].name,
+            pool['raws']['preparation_root_intent'], root_value,
+            pre_write_guard=check_root_publication_deadline)
+        root_intent = root_value
+        pool['raws']['preparation_root_intent'] = root_raw
+        pool['slot_sha256']['preparation_root_intent'] = hashlib.sha256(root_raw).hexdigest()
+        slots['preparation_root_intent'] = root_intent
+    elif (root_intent.get('window_started_at') != started.isoformat().replace('+00:00', 'Z')
+          or root_intent.get('absolute_deadline') != deadline.isoformat().replace('+00:00', 'Z')
+          or root_intent.get('preparation_owner_intent_sha256')
+          != pool['slot_sha256']['preparation_owner_intent']
+          or root_intent.get('execution_intent_sha256') != execution_intent_sha256):
+        raise AcquisitionStopped('confirmation_preparation_partial_corrupt')
+    return pool
+
+
+def issue_confirmation_preparation_intents(manifest, manifest_hash, head, output_root,
+                                           activation_id, run_id,
+                                           execution_intent_sha256):
+    """Anchor T0/D in the first durable owner intent; retries reuse that window."""
+    invocation_started = datetime.now(timezone.utc).astimezone(timezone.utc)
+    return _issue_confirmation_preparation_intents_at(
+        manifest, manifest_hash, head, output_root, activation_id, run_id,
+        invocation_started, execution_intent_sha256)
+
+
+def _issue_confirmation_preparation_intents_at(manifest, manifest_hash, head, output_root,
+                                                activation_id, run_id, invocation_started,
+                                                execution_intent_sha256):
+    execution_intent_sha256 = _checked_approval_sha256(execution_intent_sha256)
+    root = Path(output_root).resolve(strict=True)
+    if root != _confirmation_artifact_root(manifest):
+        raise AcquisitionStopped('confirmation_artifact_root_mismatch')
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id, execution_intent_sha256)
+        _control_capacity_preflight(root, manifest)
+        pool = _publish_confirmation_intents_locked(
+            root_fd, locked_root, pool, invocation_started, execution_intent_sha256)
+        return pool
+
+
+def commit_confirmation_burn_claim(manifest, manifest_hash, head, output_root,
+                                   activation_id, run_id, execution_intent_sha256):
+    """Commit the fixed preparation window into the reserved burn-claim slot."""
+    now = datetime.now(timezone.utc)
+    return _commit_confirmation_burn_claim_at(
+        manifest, manifest_hash, head, output_root, activation_id, run_id, now,
+        execution_intent_sha256)
+
+
+def _commit_confirmation_burn_claim_at(manifest, manifest_hash, head, output_root,
+                                       activation_id, run_id, now,
+                                       execution_intent_sha256):
+    execution_intent_sha256 = _checked_approval_sha256(execution_intent_sha256)
+    root = Path(output_root).resolve(strict=True)
+    if root != _confirmation_artifact_root(manifest):
+        raise AcquisitionStopped('confirmation_artifact_root_mismatch')
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id, execution_intent_sha256)
+        owner = pool['slots']['preparation_owner_intent']
+        root_intent = pool['slots']['preparation_root_intent']
+        if owner.get('slot_state') != 'issued' or root_intent.get('slot_state') != 'issued':
+            raise AcquisitionStopped('confirmation_preparation_intents_required')
+        if (pool['slots']['final_owner_execution_receipt'].get('slot_state') != 'reserved'
+                or pool['slots']['final_root_release_receipt'].get('slot_state') != 'reserved'):
+            raise AcquisitionStopped('confirmation_final_receipt_order')
+        _control_capacity_preflight(root, manifest)
+        started, deadline = _intent_window(owner)
+        if (root_intent.get('window_started_at') != owner.get('window_started_at')
+                or root_intent.get('absolute_deadline') != owner.get('absolute_deadline')
+                or root_intent.get('preparation_owner_intent_sha256')
+                != pool['slot_sha256']['preparation_owner_intent']
+                or owner.get('execution_intent_sha256') != execution_intent_sha256
+                or root_intent.get('execution_intent_sha256') != execution_intent_sha256):
+            raise AcquisitionStopped('confirmation_preparation_intent_mismatch')
+        claim = pool['slots']['burn_claim']
+        if claim.get('slot_state') == 'reserved':
+            if not started <= now < deadline:
+                raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+            def check_claim_commit_deadline():
+                commit_now = datetime.now(timezone.utc)
+                if commit_now < started:
+                    raise AcquisitionStopped('confirmation_clock_moved_backwards')
+                if commit_now >= deadline:
+                    raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+            commitment = {
+                'phase': 'hp_confirmation',
+                'activation_id': activation_id,
+                'run_id': run_id,
+                'git_head': head,
+                'manifest_sha256': manifest_hash,
+                'code_map_sha256': pool['descriptor']['code_map_sha256'],
+                'output_root': str(root),
+                'allocation_descriptor_sha256': pool['descriptor_sha256'],
+                'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+                'preparation_root_intent_sha256': pool['slot_sha256']['preparation_root_intent'],
+                'execution_intent_sha256': execution_intent_sha256,
+                'window_started_at': owner['window_started_at'],
+                'absolute_deadline': owner['absolute_deadline'],
+                'phase_retained_bytes': pool['descriptor']['phase_retained_bytes'],
+                'total_retained_bytes': pool['descriptor']['total_retained_bytes'],
+            }
+            claim_value = {
+                **_control_slot_reservation(pool['descriptor'], pool['descriptor_sha256'],
+                                            'burn_claim'),
+                'kind': 'hp_confirmation_activation_claim',
+                'claim_state': 'committed',
+                **commitment,
+                'claimed_at': now.isoformat().replace('+00:00', 'Z'),
+                'claim_commitment_sha256': hashlib.sha256(encoded(commitment)).hexdigest(),
+            }
+            claim_raw = _rewrite_control_slot_locked(
+                root_fd, pool['paths']['burn_claim'].name,
+                pool['raws']['burn_claim'], claim_value,
+                pre_write_guard=check_claim_commit_deadline)
+            pool['slots']['burn_claim'] = claim_value
+            pool['raws']['burn_claim'] = claim_raw
+            pool['slot_sha256']['burn_claim'] = hashlib.sha256(claim_raw).hexdigest()
+            claim = claim_value
+        elif claim.get('claim_state') not in ('committed', 'consumer_started'):
+            raise AcquisitionStopped('confirmation_claim_state_invalid')
+        if (claim.get('window_started_at') != owner.get('window_started_at')
+                or claim.get('absolute_deadline') != owner.get('absolute_deadline')):
+            raise AcquisitionStopped('confirmation_activation_claim_window')
+        return pool
+
+
+def publish_confirmation_execution_receipts(manifest, manifest_hash, head, output_root,
+                                            activation_id, run_id,
+                                            execution_intent_sha256,
+                                            owner_receipt, root_release_receipt):
+    """Persist externally approved final receipts into their already charged slots."""
+    execution_intent_sha256 = _checked_approval_sha256(execution_intent_sha256)
+    root = Path(output_root).resolve(strict=True)
+    if root != _confirmation_artifact_root(manifest):
+        raise AcquisitionStopped('confirmation_artifact_root_mismatch')
+    if not isinstance(owner_receipt, dict) or not isinstance(root_release_receipt, dict):
+        raise AcquisitionStopped('confirmation_final_execution_receipts_required')
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id,
+                                         execution_intent_sha256)
+        _control_capacity_preflight(root, manifest)
+        pool = _validate_control_chain(pool)
+        claim = pool['slots']['burn_claim']
+        if claim.get('claim_state') != 'committed':
+            raise AcquisitionStopped('confirmation_final_receipt_order')
+        owner_intent = pool['slots']['preparation_owner_intent']
+        started, deadline = _intent_window(owner_intent)
+        now = datetime.now(timezone.utc)
+        if not started <= now < deadline:
+            raise AcquisitionStopped('confirmation_completion_deadline_expired')
+        chain_fields = {
+            'allocation_descriptor_sha256': pool['descriptor_sha256'],
+            'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+            'preparation_root_intent_sha256': pool['slot_sha256']['preparation_root_intent'],
+            'execution_intent_sha256': execution_intent_sha256,
+            'burn_claim_commitment_sha256': claim['claim_commitment_sha256'],
+            'window_started_at': owner_intent['window_started_at'],
+            'absolute_deadline': owner_intent['absolute_deadline'],
+        }
+        owner_reservation = _control_slot_reservation(
+            pool['descriptor'], pool['descriptor_sha256'], 'final_owner_execution_receipt')
+        root_reservation = _control_slot_reservation(
+            pool['descriptor'], pool['descriptor_sha256'], 'final_root_release_receipt')
+        for role, value, reservation, kind in (
+                ('final_owner_execution_receipt', owner_receipt, owner_reservation,
+                 'owner_hp_confirmation_activation'),
+                ('final_root_release_receipt', root_release_receipt, root_reservation,
+                 'root_hp_confirmation_release')):
+            if (value.get('kind') != kind or value.get('slot_state') != 'issued'
+                    or any(value.get(key) != expected for key, expected in reservation.items()
+                           if key not in ('kind', 'slot_state'))
+                    or any(value.get(key) != expected for key, expected in chain_fields.items())):
+                raise AcquisitionStopped('confirmation_final_receipt_binding')
+            _padded_control_slot(value)
+        owner_raw = _padded_control_slot(owner_receipt)
+        owner_sha = hashlib.sha256(owner_raw).hexdigest()
+        if (root_release_receipt.get('owner_activation_sha256') != owner_sha
+                or not isinstance(root_release_receipt.get('root_manifest_check'), dict)
+                or root_release_receipt['root_manifest_check'].get('owner_activation_sha256')
+                != owner_sha):
+            raise AcquisitionStopped('confirmation_final_receipt_binding')
+        owner_slot = pool['slots']['final_owner_execution_receipt']
+        root_slot = pool['slots']['final_root_release_receipt']
+        if owner_slot.get('slot_state') not in ('reserved', 'issued'):
+            raise AcquisitionStopped('confirmation_final_receipt_order')
+        if root_slot.get('slot_state') not in ('reserved', 'issued'):
+            raise AcquisitionStopped('confirmation_final_receipt_order')
+        if owner_slot.get('slot_state') == 'reserved':
+            def check_owner_receipt_deadline():
+                if datetime.now(timezone.utc) >= deadline:
+                    raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+            _rewrite_control_slot_locked(
+                root_fd, pool['paths']['final_owner_execution_receipt'].name,
+                pool['raws']['final_owner_execution_receipt'], owner_receipt,
+                pre_write_guard=check_owner_receipt_deadline)
+            pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                             head, activation_id, run_id,
+                                             execution_intent_sha256)
+        elif pool['raws']['final_owner_execution_receipt'] != owner_raw:
+            raise AcquisitionStopped('confirmation_final_receipt_already_issued')
+        root_raw = _padded_control_slot(root_release_receipt)
+        if root_slot.get('slot_state') == 'reserved':
+            def check_root_release_deadline():
+                if datetime.now(timezone.utc) >= deadline:
+                    raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+            _rewrite_control_slot_locked(
+                root_fd, pool['paths']['final_root_release_receipt'].name,
+                pool['raws']['final_root_release_receipt'], root_release_receipt,
+                pre_write_guard=check_root_release_deadline)
+            pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                             head, activation_id, run_id,
+                                             execution_intent_sha256)
+        elif pool['raws']['final_root_release_receipt'] != root_raw:
+            raise AcquisitionStopped('confirmation_final_receipt_already_issued')
+        return _validate_control_chain(pool, require_final=True)
+
+
+def _confirmation_claim_commitment(claim):
+    keys = (
+        'phase', 'activation_id', 'run_id', 'git_head', 'manifest_sha256',
+        'code_map_sha256', 'output_root', 'allocation_descriptor_sha256',
+        'preparation_owner_intent_sha256', 'preparation_root_intent_sha256',
+        'execution_intent_sha256',
+        'window_started_at', 'absolute_deadline', 'phase_retained_bytes',
+        'total_retained_bytes',
+    )
+    try:
+        return {key: claim[key] for key in keys}
+    except (KeyError, TypeError):
+        raise AcquisitionStopped('confirmation_activation_claim_invalid') from None
+
+
+def _validate_control_chain(pool, *, require_final=False):
+    slots = pool['slots']
+    owner_intent = slots['preparation_owner_intent']
+    root_intent = slots['preparation_root_intent']
+    claim = slots['burn_claim']
+    if owner_intent.get('slot_state') != 'issued':
+        raise AcquisitionStopped('confirmation_preparation_owner_intent_missing')
+    started, deadline = _intent_window(owner_intent)
+    expected_started = owner_intent['window_started_at']
+    expected_deadline = owner_intent['absolute_deadline']
+    if (owner_intent.get('issued_at') != expected_started
+            or _checked_approval_sha256(owner_intent.get('execution_intent_sha256'))
+            != root_intent.get('execution_intent_sha256')
+            or root_intent.get('slot_state') != 'issued'
+            or root_intent.get('window_started_at') != expected_started
+            or root_intent.get('absolute_deadline') != expected_deadline
+            or root_intent.get('preparation_owner_intent_sha256')
+            != pool['slot_sha256']['preparation_owner_intent']):
+        raise AcquisitionStopped('confirmation_preparation_intent_mismatch')
+    if claim.get('claim_state') not in ('committed', 'consumer_started', 'terminal_rejected'):
+        if require_final:
+            raise AcquisitionStopped('confirmation_activation_claim_missing')
+        return pool
+    commitment = _confirmation_claim_commitment(claim)
+    try:
+        claimed_at = _utc(claim.get('claimed_at'))
+    except AcquisitionStopped:
+        raise AcquisitionStopped('confirmation_activation_claim_invalid') from None
+    if (claim.get('claim_commitment_sha256') != hashlib.sha256(encoded(commitment)).hexdigest()
+            or claim.get('allocation_descriptor_sha256') != pool['descriptor_sha256']
+            or claim.get('preparation_owner_intent_sha256')
+            != pool['slot_sha256']['preparation_owner_intent']
+            or claim.get('preparation_root_intent_sha256')
+            != pool['slot_sha256']['preparation_root_intent']
+            or claim.get('execution_intent_sha256') != owner_intent.get('execution_intent_sha256')
+            or claim.get('window_started_at') != expected_started
+            or claim.get('absolute_deadline') != expected_deadline
+            or not started <= claimed_at < deadline):
+        raise AcquisitionStopped('confirmation_activation_claim_binding')
+    if require_final:
+        owner = slots['final_owner_execution_receipt']
+        root_release = slots['final_root_release_receipt']
+        if (owner.get('slot_state') != 'issued'
+                or root_release.get('slot_state') != 'issued'):
+            raise AcquisitionStopped('confirmation_final_execution_receipts_required')
+        receipt_bindings = {
+            'allocation_descriptor_sha256': pool['descriptor_sha256'],
+            'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+            'preparation_root_intent_sha256': pool['slot_sha256']['preparation_root_intent'],
+            'execution_intent_sha256': claim['execution_intent_sha256'],
+            'burn_claim_commitment_sha256': claim['claim_commitment_sha256'],
+            'window_started_at': expected_started,
+            'absolute_deadline': expected_deadline,
+        }
+        if any(owner.get(key) != value or root_release.get(key) != value
+               for key, value in receipt_bindings.items()):
+            raise AcquisitionStopped('confirmation_final_receipt_binding')
+        owner_sha = pool['slot_sha256']['final_owner_execution_receipt']
+        if root_release.get('owner_activation_sha256') != owner_sha:
+            raise AcquisitionStopped('confirmation_final_receipt_binding')
+    return pool
+
+
+def reserve_confirmation_control_pool(manifest, manifest_hash, head, output_root,
+                                      activation_id, run_id, execution_intent_sha256):
+    """Reserve all six fixed-size ART slots; run.main never creates a pool."""
+    root = Path(output_root).resolve(strict=True)
+    if root != _confirmation_artifact_root(manifest):
+        raise AcquisitionStopped('confirmation_artifact_root_mismatch')
+    descriptor = _control_pool_descriptor(
+        manifest, manifest_hash, head, root, activation_id, run_id,
+        execution_intent_sha256)
+    descriptor_raw = _padded_control_slot(descriptor)
+    descriptor_sha = hashlib.sha256(descriptor_raw).hexdigest()
+    expected = {'allocation_descriptor': descriptor_raw}
+    for role in manifest_contract.CONFIRMATION_CONTROL_POOL_CONTRACT['slot_roles']:
+        if role != 'allocation_descriptor':
+            expected[role] = _padded_control_slot(
+                _control_slot_reservation(descriptor, descriptor_sha, role))
+    paths = _control_pool_paths(root, activation_id, run_id)
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        try:
+            existing = {path.name: size for path, size in _confirmation_control_files(locked_root)}
+            missing_bytes = sum(len(raw) for role, raw in expected.items()
+                                if paths[role].name not in existing)
+            _control_capacity_preflight(root, manifest, missing_bytes)
+            for role, raw in expected.items():
+                name = paths[role].name
+                if name in existing:
+                    current_raw, _current = _read_control_slot_locked(root_fd, name)
+                    if role == 'allocation_descriptor' and current_raw != raw:
+                        raise AcquisitionStopped('confirmation_control_pool_binding')
+                    if role != 'allocation_descriptor':
+                        current = _control_json(current_raw)
+                        if (current.get('allocation_descriptor_sha256') != descriptor_sha
+                                or current.get('role') != role):
+                            raise AcquisitionStopped('confirmation_control_pool_binding')
+                else:
+                    _write_new_fixed_control_file(root_fd, name, raw)
+            os.fsync(root_fd)
+            return _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                             head, activation_id, run_id,
+                                             execution_intent_sha256)
+        except AcquisitionStopped:
+            raise
+        except OSError:
+            raise AcquisitionStopped('confirmation_control_pool_unavailable') from None
+
+
+def _confirmation_control_chain(manifest, manifest_hash, head, output_root,
+                                 activation_id, run_id, execution_intent_sha256,
+                                 *, require_final=False):
+    root = Path(output_root).resolve(strict=True)
+    if root != _confirmation_artifact_root(manifest):
+        raise AcquisitionStopped('confirmation_artifact_root_mismatch')
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id,
+                                         execution_intent_sha256)
+        _control_capacity_preflight(root, manifest, allow_unsafe_phase_path=True)
+        return _validate_control_chain(pool, require_final=require_final)
+
+
+def _terminal_reject_confirmation_claim(manifest, manifest_hash, head, output_root,
+                                        activation_id, run_id, execution_intent_sha256,
+                                        reason):
+    """Persist a fixed-size terminal rejection in the pre-reserved claim slot."""
+    root = Path(output_root).resolve(strict=True)
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id,
+                                         execution_intent_sha256)
+        pool = _validate_control_chain(pool, require_final=True)
+        claim = pool['slots']['burn_claim']
+        if claim.get('claim_state') == 'terminal_rejected':
+            return pool
+        terminal = dict(claim)
+        terminal['claim_state'] = 'terminal_rejected'
+        terminal['terminal_reason'] = reason
+        terminal['terminal_at'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+        raw = _rewrite_control_slot_locked(
+            root_fd, pool['paths']['burn_claim'].name,
+            pool['raws']['burn_claim'], terminal)
+        pool['slots']['burn_claim'] = terminal
+        pool['raws']['burn_claim'] = raw
+        pool['slot_sha256']['burn_claim'] = hashlib.sha256(raw).hexdigest()
+        return pool
+
+
+def _consume_confirmation_control_claim(manifest, manifest_hash, head, output_root,
+                                        activation_id, run_id, execution_intent_sha256,
+                                        *, resume):
+    """Mark the reserved claim in place under the ART lock after phase lock acquisition."""
+    root = Path(output_root).resolve(strict=True)
+    with _confirmation_control_lock(root) as (locked_root, root_fd):
+        pool = _read_control_pool_locked(root_fd, locked_root, manifest, manifest_hash,
+                                         head, activation_id, run_id,
+                                         execution_intent_sha256)
+        _control_capacity_preflight(root, manifest)
+        pool = _validate_control_chain(pool, require_final=True)
+        claim = pool['slots']['burn_claim']
+        started, deadline = _intent_window(pool['slots']['preparation_owner_intent'])
+        now = datetime.now(timezone.utc)
+        if now < started:
+            raise AcquisitionStopped('confirmation_clock_precedes_start')
+        if now >= deadline:
+            raise AcquisitionStopped('confirmation_completion_deadline_expired')
+        if claim.get('claim_state') == 'committed':
+            claim_value = dict(claim)
+            claim_value['claim_state'] = 'consumer_started'
+            claim_value['consumer_started_at'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+
+            def check_consumer_start_deadline():
+                commit_now = datetime.now(timezone.utc)
+                if commit_now < started:
+                    raise AcquisitionStopped('confirmation_clock_precedes_start')
+                if commit_now >= deadline:
+                    raise AcquisitionStopped('confirmation_completion_deadline_expired')
+
+            claim_raw = _rewrite_control_slot_locked(
+                root_fd, pool['paths']['burn_claim'].name,
+                pool['raws']['burn_claim'], claim_value,
+                pre_write_guard=check_consumer_start_deadline)
+            pool['slots']['burn_claim'] = claim_value
+            pool['raws']['burn_claim'] = claim_raw
+            pool['slot_sha256']['burn_claim'] = hashlib.sha256(claim_raw).hexdigest()
+        elif claim.get('claim_state') == 'consumer_started':
+            if not resume:
+                raise AcquisitionStopped('confirmation_activation_already_claimed')
+        else:
+            raise AcquisitionStopped('confirmation_activation_claim_state_invalid')
+        return pool
 
 
 def _bound_file(path, expected_path, reason):
@@ -274,18 +1167,66 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
     if Path(output_root).resolve() != bound_output_root:
         raise AcquisitionStopped('confirmation_artifact_root_mismatch')
     try:
-        owner_raw = Path(owner_path).read_bytes()
-        gate_raw = Path(gate_path).read_bytes()
-        owner = json.loads(owner_raw)
-        gate = json.loads(gate_raw)
+        owner_candidate = Path(owner_path)
+        gate_candidate = Path(gate_path)
+        if (owner_candidate.is_symlink() or gate_candidate.is_symlink()
+                or owner_candidate.parent.resolve() != bound_output_root
+                or gate_candidate.parent.resolve() != bound_output_root
+                or not owner_candidate.name.startswith(_CONTROL_ROLE_PREFIX['final_owner_execution_receipt'])
+                or not gate_candidate.name.startswith(_CONTROL_ROLE_PREFIX['final_root_release_receipt'])
+                or not owner_candidate.name.endswith('.json')
+                or not gate_candidate.name.endswith('.json')):
+            raise AcquisitionStopped('confirmation_final_receipt_path')
+        owner_candidate = owner_candidate.parent.resolve()/owner_candidate.name
+        gate_candidate = gate_candidate.parent.resolve()/gate_candidate.name
+        owner_raw = _read_fixed_control_file(owner_candidate)
+        owner = _control_json(owner_raw)
+    except AcquisitionStopped:
+        raise
     except (OSError, ValueError, TypeError):
         raise AcquisitionStopped('confirmation_owner_or_root_release_unreadable') from None
+    activation_id, run_id = owner.get('activation_id'), owner.get('run_id')
+    if not isinstance(activation_id, str) or not activation_id or not isinstance(run_id, str) or not run_id:
+        raise AcquisitionStopped('confirmation_owner_activation_binding')
+    if (owner.get('manifest_sha256') != manifest_hash
+            or owner.get('git_head') != head
+            or owner.get('code_map_sha256')
+            != manifest_contract.canonical_code_map_sha256(manifest.get('code_sha256'))
+            or owner.get('output_root') != str(bound_output_root)):
+        raise AcquisitionStopped('confirmation_owner_activation_binding')
+    execution_intent_sha256 = _checked_approval_sha256(owner.get('execution_intent_sha256'))
+    pool = _confirmation_control_chain(
+        manifest, manifest_hash, head, bound_output_root, activation_id, run_id,
+        execution_intent_sha256, require_final=True)
+    if (owner_candidate != pool['paths']['final_owner_execution_receipt']
+            or gate_candidate != pool['paths']['final_root_release_receipt']
+            or owner_raw != pool['raws']['final_owner_execution_receipt']):
+        raise AcquisitionStopped('confirmation_final_receipt_path')
+    gate_raw = pool['raws']['final_root_release_receipt']
+    gate = pool['slots']['final_root_release_receipt']
+    if pool['slots']['burn_claim'].get('claim_state') == 'terminal_rejected':
+        raise AcquisitionStopped('confirmation_activation_terminal_rejection')
     checked_confirmation_amendment(manifest)
     map_sha = manifest_contract.canonical_code_map_sha256(manifest.get('code_sha256'))
-    owner_sha = hashlib.sha256(owner_raw).hexdigest()
+    owner_sha = pool['slot_sha256']['final_owner_execution_receipt']
+    claim = pool['slots']['burn_claim']
+    owner_intent = pool['slots']['preparation_owner_intent']
+    root_intent = pool['slots']['preparation_root_intent']
+    claim_commitment_sha = claim['claim_commitment_sha256']
+    started, deadline = _intent_window(owner_intent)
+    chain_fields = {
+        'allocation_descriptor_sha256': pool['descriptor_sha256'],
+        'preparation_owner_intent_sha256': pool['slot_sha256']['preparation_owner_intent'],
+        'preparation_root_intent_sha256': pool['slot_sha256']['preparation_root_intent'],
+        'burn_claim_commitment_sha256': claim_commitment_sha,
+        'execution_intent_sha256': owner_intent['execution_intent_sha256'],
+        'window_started_at': started.isoformat().replace('+00:00', 'Z'),
+        'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
+    }
     allowed = ['hp_confirmation']
     expected_owner = {
         'kind': 'owner_hp_confirmation_activation',
+        'slot_state': 'issued',
         'phase': 'hp_confirmation',
         'allowed_phases': allowed,
         'single_use': True,
@@ -301,10 +1242,12 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         'candidate_count': 13,
         'group_counts': {'rich': 0, 'sparse': 13},
         'budget': manifest['budgets']['hp_confirmation'],
+        **chain_fields,
     }
     if (not isinstance(owner, dict)
             or any(owner.get(key) != value for key, value in expected_owner.items())
-            or not owner.get('activation_id') or not owner.get('run_id')):
+            or owner.get('activation_id') != activation_id
+            or owner.get('run_id') != run_id):
         raise AcquisitionStopped('confirmation_owner_activation_binding')
     if manifest.get('confirmation_amendment', {}).get('git_head') != head:
         raise AcquisitionStopped('confirmation_manifest_head_mismatch')
@@ -313,7 +1256,8 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         owner_expires = _utc(owner.get('expires_at'))
     except AcquisitionStopped:
         raise AcquisitionStopped('confirmation_owner_activation_time') from None
-    if created > invocation_utc or owner_expires <= invocation_utc:
+    if (created < started or created > invocation_utc or owner_expires <= invocation_utc
+            or owner_expires > deadline):
         raise AcquisitionStopped('confirmation_owner_activation_not_fresh')
 
     expected_root_check = {
@@ -323,6 +1267,7 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         'allowed_phases': allowed,
         'output_root': str(bound_output_root),
         'owner_activation_sha256': owner_sha,
+        **chain_fields,
     }
     if (not isinstance(gate, dict)
             or gate.get('kind') != 'root_hp_confirmation_release'
@@ -334,6 +1279,7 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
             or gate.get('output_root') != str(bound_output_root)
             or gate.get('native_review_approved_head') != head
             or gate.get('owner_activation_sha256') != owner_sha
+            or any(gate.get(key) != value for key, value in chain_fields.items())
             or gate.get('root_manifest_check') != expected_root_check):
         raise AcquisitionStopped('confirmation_root_gate_binding')
     try:
@@ -341,10 +1287,15 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         root_expires = _utc(gate.get('expires_at'))
     except AcquisitionStopped:
         raise AcquisitionStopped('confirmation_root_gate_time') from None
-    if released > invocation_utc or root_expires <= invocation_utc:
+    if (released < started or released > invocation_utc or root_expires <= invocation_utc
+            or root_expires > deadline):
         raise AcquisitionStopped('confirmation_root_gate_not_fresh')
     if manifest.get('confirmation_amendment', {}).get('allowed_phases') != allowed:
         raise AcquisitionStopped('confirmation_scope_not_single_phase')
+    if (released < created or claim.get('window_started_at') != chain_fields['window_started_at']
+            or claim.get('absolute_deadline') != chain_fields['absolute_deadline']
+            or root_intent.get('window_started_at') != chain_fields['window_started_at']):
+        raise AcquisitionStopped('confirmation_final_receipt_window')
     return owner, gate, owner_sha, hashlib.sha256(gate_raw).hexdigest()
 
 
@@ -396,7 +1347,13 @@ def _write_confirmation_receipt(path, value, conflict_reason):
 
 
 def _confirmation_claim_binding(owner, owner_sha, gate_sha, manifest, manifest_hash,
-                                head, output_root):
+                                head, output_root, control_pool=None):
+    if control_pool is None:
+        control_pool = _confirmation_control_chain(
+            manifest, manifest_hash, head, output_root,
+            owner['activation_id'], owner['run_id'], owner['execution_intent_sha256'],
+            require_final=True)
+    claim = control_pool['slots']['burn_claim']
     return {
         'kind': 'hp_confirmation_activation_claim',
         'schema_version': 1,
@@ -405,10 +1362,13 @@ def _confirmation_claim_binding(owner, owner_sha, gate_sha, manifest, manifest_h
         'git_head': head,
         'code_map_sha256': manifest_contract.canonical_code_map_sha256(manifest.get('code_sha256')),
         'output_root': str(Path(output_root).resolve()),
-        'owner_activation_sha256': owner_sha,
-        'root_release_sha256': gate_sha,
         'activation_id': owner['activation_id'],
         'run_id': owner['run_id'],
+        'allocation_descriptor_sha256': control_pool['descriptor_sha256'],
+        'preparation_owner_intent_sha256': control_pool['slot_sha256']['preparation_owner_intent'],
+        'preparation_root_intent_sha256': control_pool['slot_sha256']['preparation_root_intent'],
+        'execution_intent_sha256': claim.get('execution_intent_sha256'),
+        'claim_commitment_sha256': claim.get('claim_commitment_sha256'),
     }
 
 
@@ -470,154 +1430,33 @@ def _physical_retained_bytes(directory):
     return total
 
 
-def _persist_confirmation_claim(output_root, claim_path, raw, manifest):
-    root = Path(output_root).resolve(strict=True)
-    claim_path = Path(claim_path)
-    if claim_path.parent != root or claim_path.name != _confirmation_claim_path(
-            root, json.loads(raw)).name:
-        raise AcquisitionStopped('confirmation_activation_claim_path')
-    directory_fd = None
-    rejected_reason = None
-    try:
-        directory_fd = os.open(
-            root, os.O_RDONLY | getattr(os, 'O_DIRECTORY', 0) | getattr(os, 'O_NOFOLLOW', 0))
-        if not stat.S_ISDIR(os.fstat(directory_fd).st_mode):
-            raise AcquisitionStopped('confirmation_artifact_root_invalid')
-        fcntl.flock(directory_fd, fcntl.LOCK_EX)
-        try:
-            try:
-                os.stat(claim_path.name, dir_fd=directory_fd, follow_symlinks=False)
-            except FileNotFoundError:
-                pass
-            else:
-                raise AcquisitionStopped('confirmation_activation_already_claimed')
-            claims = _confirmation_claim_files(root)
-            prior_claim_bytes = sum(size for _path, size in claims)
-            phase_dir = root/'hp_confirmation'
-            phase_bytes = 0
-            if not phase_dir.is_symlink() and phase_dir.is_dir():
-                phase_bytes = _physical_retained_bytes(phase_dir)
-            phase_limit = manifest['budgets']['hp_confirmation']['retained_bytes']
-            total_limit = manifest['budgets']['total_retained_bytes']
-            retained = _physical_retained_bytes(root)
-            reason = None
-            if phase_bytes+prior_claim_bytes+len(raw) > phase_limit:
-                reason = 'retained_claim_budget'
-            # Claims and phase outputs share the confirmation allowance; reserve
-            # that full allowance in ART before publishing a runnable claim.
-            elif retained-phase_bytes-prior_claim_bytes+phase_limit > total_limit:
-                reason = 'total_retained_budget'
-            if reason is not None:
-                rejected_reason = reason
-                claim = json.loads(raw)
-                terminal = {
-                    'kind': 'hp_confirmation_activation_claim_rejected',
-                    'schema_version': 1,
-                    'phase': 'hp_confirmation',
-                    'manifest_sha256': claim['manifest_sha256'],
-                    'owner_activation_sha256': claim['owner_activation_sha256'],
-                    'root_release_sha256': claim['root_release_sha256'],
-                    'activation_id': claim['activation_id'],
-                    'run_id': claim['run_id'],
-                    'window_started_at': claim['window_started_at'],
-                    'absolute_deadline': claim['absolute_deadline'],
-                    'rejected_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
-                    'reason': reason,
-                }
-                terminal_raw = encoded(terminal)
-                if (phase_bytes+prior_claim_bytes+len(terminal_raw) > phase_limit
-                        or retained+len(terminal_raw) > total_limit):
-                    raise AcquisitionStopped(reason)
-                raw = terminal_raw
-            flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, 'O_NOFOLLOW', 0)
-            try:
-                descriptor = os.open(claim_path.name, flags, 0o600, dir_fd=directory_fd)
-            except FileExistsError:
-                raise AcquisitionStopped('confirmation_activation_already_claimed') from None
-            except OSError:
-                raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
-            try:
-                with os.fdopen(descriptor, 'wb') as stream:
-                    stream.write(raw)
-                    stream.flush()
-                    os.fsync(stream.fileno())
-                os.fsync(directory_fd)
-            except OSError:
-                # A partial or uncertain claim remains evidence and blocks reuse.
-                raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
-        finally:
-            fcntl.flock(directory_fd, fcntl.LOCK_UN)
-    except AcquisitionStopped:
-        raise
-    except (OSError, KeyError, TypeError, ValueError):
-        raise AcquisitionStopped('retention_preflight_unreadable') from None
-    finally:
-        if directory_fd is not None:
-            os.close(directory_fd)
-    if rejected_reason is not None:
-        raise AcquisitionStopped(rejected_reason)
-
-
 def _read_confirmation_claim(claim_path, binding):
     path = Path(claim_path)
     expected_path = _confirmation_claim_path(binding['output_root'], binding)
     if path != expected_path:
         raise AcquisitionStopped('confirmation_activation_claim_path')
-    descriptor = None
     try:
-        descriptor = os.open(path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0))
-        info = os.fstat(descriptor)
-        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
-            raise AcquisitionStopped('confirmation_activation_claim_invalid')
-        with os.fdopen(descriptor, 'rb') as stream:
-            descriptor = None
-            raw = stream.read()
-        claim = json.loads(raw)
+        raw = _read_fixed_control_file(path)
+        claim = _control_json(raw)
     except AcquisitionStopped:
         raise
     except (OSError, ValueError, TypeError):
         raise AcquisitionStopped('confirmation_activation_claim_missing') from None
-    finally:
-        if descriptor is not None:
-            os.close(descriptor)
-    expected_keys = set(binding) | {
-        'claim_state', 'window_started_at', 'absolute_deadline', 'claimed_at'}
-    if (not isinstance(claim, dict) or set(claim) != expected_keys
-            or claim.get('claim_state') != 'preflight_claimed'
+    if (claim.get('kind') != 'hp_confirmation_activation_claim'
+            or claim.get('claim_state') not in ('committed', 'consumer_started')
             or any(claim.get(key) != value for key, value in binding.items())):
         raise AcquisitionStopped('confirmation_activation_claim_binding')
     try:
         started = _utc(claim['window_started_at'])
         deadline = _utc(claim['absolute_deadline'])
-        claimed = _utc(claim['claimed_at'])
     except AcquisitionStopped:
         raise AcquisitionStopped('confirmation_activation_claim_invalid') from None
-    expected_deadline = min(
-        started+timedelta(seconds=1800), _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
-    if claimed != started or deadline != expected_deadline:
+    commitment = _confirmation_claim_commitment(claim)
+    if (claim.get('claim_commitment_sha256') != hashlib.sha256(encoded(commitment)).hexdigest()
+            or deadline != min(started+timedelta(seconds=1800),
+                               _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))):
         raise AcquisitionStopped('confirmation_activation_claim_window')
-    return claim, hashlib.sha256(raw).hexdigest(), started, deadline
-
-
-def _prepare_confirmation_claim(claim_path, binding, started, deadline, *, resume,
-                                manifest=None):
-    if resume:
-        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(claim_path, binding)
-        if claim_started != started or claim_deadline != deadline:
-            raise AcquisitionStopped('confirmation_activation_claim_window')
-        return claim, claim_sha
-    claim = {
-        **binding,
-        'claim_state': 'preflight_claimed',
-        'window_started_at': started.isoformat().replace('+00:00', 'Z'),
-        'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
-        'claimed_at': started.isoformat().replace('+00:00', 'Z'),
-    }
-    if manifest is None:
-        raise AcquisitionStopped('confirmation_activation_claim_manifest_missing')
-    raw = encoded(claim)
-    _persist_confirmation_claim(binding['output_root'], claim_path, raw, manifest)
-    return claim, hashlib.sha256(raw).hexdigest()
+    return claim, claim['claim_commitment_sha256'], started, deadline
 
 
 def _read_confirmation_budget_marker(phase_dir, claim_sha):
@@ -652,7 +1491,7 @@ def _mark_confirmation_budget_started(phase_dir, claim_sha, *, retained_limit=No
     }
     if retained_limit is not None:
         phase_bytes = _physical_retained_bytes(phase_dir)
-        claim_bytes = _confirmation_claim_bytes(claim_root)
+        claim_bytes = _confirmation_control_bytes(claim_root)
         if phase_bytes+claim_bytes+len(encoded(marker)) > retained_limit:
             raise AcquisitionStopped('retained_activation_marker_budget')
     _write_confirmation_receipt(
@@ -666,12 +1505,12 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
     phase_dir = Path(phase_dir or (args.output_root/'hp_confirmation'))
     ledger_path = phase_dir/'ledger.json'
     marker_path = phase_dir/'activation-budget-started.json'
-    claim = claim_started = claim_deadline = claim_sha = None
-    if claim_binding is not None:
-        if claim_path is None:
-            claim_path = _confirmation_claim_path(claim_binding['output_root'], claim_binding)
-        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(
-            claim_path, claim_binding)
+    if claim_binding is None:
+        raise AcquisitionStopped('confirmation_activation_claim_missing')
+    if claim_path is None:
+        claim_path = _confirmation_claim_path(claim_binding['output_root'], claim_binding)
+    claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(
+        claim_path, claim_binding)
     if args.resume:
         if ledger_path.is_symlink():
             raise AcquisitionStopped('confirmation_ledger_path_invalid')
@@ -688,17 +1527,14 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
                     or _utc(ledger.get('started_at')) != started
                     or deadline != min(started+timedelta(seconds=1800), cutoff)):
                 raise AcquisitionStopped('confirmation_resume_window_mismatch')
-            if claim_binding is not None:
-                if claim_started != started or claim_deadline != deadline:
-                    raise AcquisitionStopped('confirmation_activation_claim_window')
-                _read_confirmation_budget_marker(phase_dir, claim_sha)
+            if claim_started != started or claim_deadline != deadline:
+                raise AcquisitionStopped('confirmation_activation_claim_window')
+            _read_confirmation_budget_marker(phase_dir, claim_sha)
             if ledger.get('status') == 'complete':
                 raise AcquisitionStopped('confirmation_run_already_finalized')
             if ledger.get('finalization_rejections'):
                 raise AcquisitionStopped('confirmation_late_finalization_not_admissible')
         else:
-            if claim_binding is None:
-                raise AcquisitionStopped('confirmation_resume_window_missing')
             if marker_path.exists() or marker_path.is_symlink():
                 raise AcquisitionStopped('confirmation_resume_ledger_missing')
             try:
@@ -707,23 +1543,23 @@ def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
                 raise AcquisitionStopped('confirmation_resume_window_missing') from None
             if entries:
                 raise AcquisitionStopped('confirmation_resume_ledger_missing')
+            if claim.get('claim_state') != 'consumer_started':
+                raise AcquisitionStopped('confirmation_resume_before_consumer_start')
             started, deadline = claim_started, claim_deadline
     else:
-        if claim_binding is not None:
-            try:
-                if any(phase_dir.iterdir()):
-                    raise AcquisitionStopped('confirmation_activation_already_claimed')
-            except OSError:
-                raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
-        started = invocation_utc
-        deadline = min(started+timedelta(seconds=1800), cutoff)
-        if claim_binding is not None and (claim_started != started or claim_deadline != deadline):
-            raise AcquisitionStopped('confirmation_activation_claim_window')
+        try:
+            if phase_dir.exists() and any(phase_dir.iterdir()):
+                raise AcquisitionStopped('confirmation_activation_already_claimed')
+        except OSError:
+            raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+        if claim.get('claim_state') != 'committed':
+            raise AcquisitionStopped('confirmation_activation_already_claimed')
+        started, deadline = claim_started, claim_deadline
     elapsed = (invocation_utc-started).total_seconds()
     remaining = min(1800-elapsed, (deadline-invocation_utc).total_seconds())
     if invocation_utc < started:
         raise AcquisitionStopped('confirmation_clock_precedes_start')
-    if remaining <= 0 or invocation_utc >= cutoff:
+    if remaining <= 0 or invocation_utc >= claim_deadline:
         raise AcquisitionStopped('confirmation_completion_deadline_expired')
     return started, deadline, remaining
 
@@ -868,35 +1704,44 @@ def main():
     confirmation_claim_sha = None
     confirmation_resume_from_claim = False
     historical_checkpoint = None
+    confirmation_control_pool = None
+    confirmation_authority_guard = None
     if args.phase == 'hp_confirmation':
         checked_confirmation_amendment(manifest)
         head = confirmation_git_head()
         confirmation_owner, confirmation_gate, owner_sha, gate_sha = checked_confirmation_gate(
             args.execution_gate, args.owner_activation, manifest, manifest_hash, head, root, invocation_utc)
+        confirmation_control_pool = _confirmation_control_chain(
+            manifest, manifest_hash, head, root,
+            confirmation_owner['activation_id'], confirmation_owner['run_id'],
+            confirmation_owner['execution_intent_sha256'], require_final=True)
         confirmation_claim_binding = _confirmation_claim_binding(
-            confirmation_owner, owner_sha, gate_sha, manifest, manifest_hash, head, root)
+            confirmation_owner, owner_sha, gate_sha, manifest, manifest_hash, head, root,
+            control_pool=confirmation_control_pool)
         claim_path = _confirmation_claim_path(root, confirmation_claim_binding)
-        if args.resume:
-            _claim, _claim_sha, confirmation_started, confirmation_deadline = _read_confirmation_claim(
-                claim_path, confirmation_claim_binding)
-        else:
-            confirmation_started = invocation_utc
-            confirmation_deadline = min(
-                confirmation_started+timedelta(seconds=1800),
-                _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
-            if confirmation_started >= confirmation_deadline:
-                raise AcquisitionStopped('confirmation_completion_deadline_expired')
-        _claim, confirmation_claim_sha = _prepare_confirmation_claim(
-            claim_path, confirmation_claim_binding, confirmation_started,
-            confirmation_deadline, resume=args.resume, manifest=manifest)
-        # The claim is durably bound to this ART root before checking the phase
-        # destination; an unsafe phase path therefore cannot reset its window.
-        confirmation_phase_dir = _confirmation_phase_directory(root)
+        _claim, confirmation_claim_sha, confirmation_started, confirmation_deadline = _read_confirmation_claim(
+            claim_path, confirmation_claim_binding)
+        try:
+            confirmation_phase_dir = _confirmation_phase_directory(root)
+        except AcquisitionStopped as exc:
+            if str(exc) == 'confirmation_phase_directory_invalid':
+                _terminal_reject_confirmation_claim(
+                    manifest, manifest_hash, head, root,
+                    confirmation_owner['activation_id'], confirmation_owner['run_id'],
+                    confirmation_owner['execution_intent_sha256'],
+                    'confirmation_phase_directory_invalid')
+            raise
         ledger_path = confirmation_phase_dir/'ledger.json'
         marker_path = confirmation_phase_dir/'activation-budget-started.json'
         confirmation_resume_from_claim = (
             args.resume and not ledger_path.exists() and not marker_path.exists()
             and not ledger_path.is_symlink() and not marker_path.is_symlink())
+        if (args.resume and not ledger_path.exists() and _claim.get('claim_state') != 'consumer_started'):
+            raise AcquisitionStopped('confirmation_resume_before_consumer_start')
+        confirmation_authority_guard = lambda: _consume_confirmation_control_claim(
+            manifest, manifest_hash, head, root, confirmation_owner['activation_id'],
+            confirmation_owner['run_id'], confirmation_owner['execution_intent_sha256'],
+            resume=args.resume)
         confirmation_started, confirmation_deadline, confirmation_monotonic_remaining = _confirmation_run_window(
             args, manifest_hash, invocation_utc, phase_dir=confirmation_phase_dir,
             claim_binding=confirmation_claim_binding, claim_path=claim_path)
@@ -934,7 +1779,7 @@ def main():
         phase_dir.mkdir(parents=True, exist_ok=True)
         retained = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
         already = sum(p.stat().st_size for p in phase_dir.rglob('*') if p.is_file())
-    claim_bytes = (_confirmation_claim_bytes(root)
+    claim_bytes = (_confirmation_control_bytes(root)
                    if args.phase == 'hp_confirmation' else 0)
     if (retained-already-claim_bytes+manifest['budgets'][args.phase]['retained_bytes']
             > manifest['budgets']['total_retained_bytes']):
@@ -966,6 +1811,7 @@ def main():
                 confirmation_claim_sha=confirmation_claim_sha,
                 confirmation_claim_path=(claim_path if args.phase == 'hp_confirmation' else None),
                 confirmation_claim_root=(root if args.phase == 'hp_confirmation' else None),
+                confirmation_authority_guard=confirmation_authority_guard,
                 allow_resume_without_ledger=confirmation_resume_from_claim,
                 require_real_directory=args.phase == 'hp_confirmation',
                 **budget_window) as budget:
@@ -1017,7 +1863,7 @@ def main():
                 path, digest = immutable_result(
                     phase_dir, envelope, budget.limits['retained_bytes'],
                     commit_guard=confirmation_commit_guard,
-                    retained_extra_bytes=_confirmation_claim_bytes(root))
+                    retained_extra_bytes=_confirmation_control_bytes(root))
                 confirmation_commit_guard()
             except BaseException as exc:
                 record_confirmation_finalization_rejection(exc)

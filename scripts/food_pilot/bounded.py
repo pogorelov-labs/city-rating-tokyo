@@ -35,6 +35,12 @@ class RequestRejected(AcquisitionStopped):
 _DIAGNOSTIC_TYPES = {'null', 'boolean', 'integer', 'number', 'string', 'array', 'object', 'other'}
 _DIAGNOSTIC_PAGINATION = {'results_available', 'results_start', 'results_returned'}
 _DIAGNOSTIC_PROVIDER_CODES = {'1000', '2000', '3000'}
+_CONFIRMATION_CONTROL_PREFIXES = (
+    '.hp_confirmation_allocation-', '.hp_confirmation_preparation_owner-',
+    '.hp_confirmation_preparation_root-', '.hp_confirmation_claim-',
+    '.hp_confirmation_final_owner-', '.hp_confirmation_final_root-',
+)
+_CONFIRMATION_CONTROL_SLOT_BYTES = 4096
 
 
 def safe_diagnostic(value):
@@ -92,7 +98,8 @@ class Budget:
                  absolute_deadline=None, identity_windows=None, completion_window=None,
                  window_started_at=None, confirmation_lock_guard=False,
                  confirmation_claim_sha=None, confirmation_claim_path=None,
-                 confirmation_claim_root=None, allow_resume_without_ledger=False,
+                 confirmation_claim_root=None, confirmation_authority_guard=None,
+                 allow_resume_without_ledger=False,
                  require_real_directory=False):
         self.directory = Path(directory)
         self.manifest_hash = manifest_hash
@@ -100,6 +107,7 @@ class Budget:
         self.confirmation_claim_sha = confirmation_claim_sha
         self.confirmation_claim_path = Path(confirmation_claim_path) if confirmation_claim_path else None
         self.confirmation_claim_root = Path(confirmation_claim_root).resolve() if confirmation_claim_root else None
+        self.confirmation_authority_guard = confirmation_authority_guard
         self.allow_resume_without_ledger = allow_resume_without_ledger
         if require_real_directory:
             try:
@@ -251,7 +259,7 @@ class Budget:
             os.close(directory_fd)
 
     def _check_confirmation_claim_under_lock(self):
-        if not self.confirmation_claim_sha:
+        if not self.confirmation_claim_sha or self.confirmation_authority_guard is None:
             raise AcquisitionStopped('confirmation_activation_claim_missing')
         claim_path = self.confirmation_claim_path
         marker_path = self.directory/'activation-budget-started.json'
@@ -280,8 +288,6 @@ class Budget:
         finally:
             if descriptor is not None:
                 os.close(descriptor)
-        if hashlib.sha256(claim_raw).hexdigest() != self.confirmation_claim_sha:
-            raise AcquisitionStopped('confirmation_activation_claim_binding')
         expected_marker = {
             'kind': 'hp_confirmation_budget_started',
             'schema_version': 1,
@@ -291,8 +297,9 @@ class Budget:
                 or claim.get('kind') != 'hp_confirmation_activation_claim'
                 or claim.get('schema_version') != 1
                 or claim.get('phase') != 'hp_confirmation'
-                or claim.get('claim_state') != 'preflight_claimed'
+                or claim.get('claim_state') not in ('committed', 'consumer_started')
                 or claim.get('manifest_sha256') != self.manifest_hash
+                or claim.get('claim_commitment_sha256') != self.confirmation_claim_sha
                 or marker != expected_marker):
             raise AcquisitionStopped('confirmation_activation_claim_binding')
         try:
@@ -306,6 +313,12 @@ class Budget:
         if (started != self.window_started_at or deadline != self.absolute_deadline
                 or actual_directory != expected_directory):
             raise AcquisitionStopped('confirmation_activation_claim_window')
+        pool = self.confirmation_authority_guard()
+        current_claim = pool.get('slots', {}).get('burn_claim') if isinstance(pool, dict) else None
+        if (not isinstance(current_claim, dict)
+                or current_claim.get('claim_commitment_sha256') != self.confirmation_claim_sha
+                or current_claim.get('claim_state') != 'consumer_started'):
+            raise AcquisitionStopped('confirmation_activation_claim_binding')
 
     def close(self):
         if not self.lock.closed:
@@ -403,22 +416,23 @@ class Budget:
         phase_bytes = sum(p.stat().st_size for p in self.directory.rglob('*') if p.is_file())
         if self.confirmation_claim_root is None:
             return phase_bytes
-        claim_bytes = 0
+        control_bytes = 0
         try:
             with os.scandir(self.confirmation_claim_root) as entries:
                 for entry in entries:
-                    if not (entry.name.startswith('.hp_confirmation_claim-')
-                            and entry.name.endswith('.json')):
+                    if not any(entry.name.startswith(prefix) and entry.name.endswith('.json')
+                               for prefix in _CONFIRMATION_CONTROL_PREFIXES):
                         continue
                     info = entry.stat(follow_symlinks=False)
-                    if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
-                        raise AcquisitionStopped('confirmation_activation_claim_invalid')
-                    claim_bytes += info.st_size
+                    if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1
+                            or info.st_size != _CONFIRMATION_CONTROL_SLOT_BYTES):
+                        raise AcquisitionStopped('confirmation_control_slot_invalid')
+                    control_bytes += info.st_size
         except AcquisitionStopped:
             raise
         except OSError:
             raise AcquisitionStopped('confirmation_activation_claim_unreadable') from None
-        return phase_bytes+claim_bytes
+        return phase_bytes+control_bytes
 
     def group(self, identity):
         self.remaining()
