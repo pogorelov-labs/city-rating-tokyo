@@ -1132,7 +1132,7 @@ def test_real_cli_art_lock_delay_past_does_not_start_consumer_or_dispatch(
     @contextmanager
     def delay_consumer_lock(root):
         lock_calls.append(root)
-        if len(lock_calls) == 3:
+        if len(lock_calls) == 4:
             now[0] = deadline
         with real_control_lock(root) as locked:
             yield locked
@@ -1158,7 +1158,7 @@ def test_real_cli_art_lock_delay_past_does_not_start_consumer_or_dispatch(
     claim_path = run._control_pool_paths(
         f.artifact_root, owner['activation_id'], owner['run_id'])['burn_claim']
     claim = run._control_json(claim_path.read_bytes())
-    assert len(lock_calls) == 3
+    assert len(lock_calls) == 4
     assert claim['claim_state'] == 'committed'
     assert claim['window_started_at'] == stamp(started)
     assert (f.artifact_root/'hp_confirmation'/'activation-budget-started.json').exists()
@@ -1183,6 +1183,183 @@ def test_budget_counts_art_root_claims_against_confirmation_retention(tmp_path, 
             phase_dir, limits, 'manifest-hash', confirmation_claim_root=output_root,
             require_real_directory=True)
     assert not (phase_dir/'ledger.json').exists()
+
+
+def test_second_pool_is_frozen_during_consumer_result_write(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+
+    class ControlledDateTime(run.datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return started.astimezone(tz) if tz else started
+
+    class ControlledBudgetDateTime(bounded.datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return started.astimezone(tz) if tz else started
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(bounded, 'datetime', ControlledBudgetDateTime)
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, started)
+    phase_dir = run._confirmation_phase_directory(f.artifact_root)
+    _owner, _gate, owner_sha, gate_sha = run.checked_confirmation_gate(
+        gate_path, owner_path, f.successor, f.successor_sha, HEAD,
+        f.artifact_root, started)
+    pool = run._confirmation_control_chain(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+        require_final=True)
+    binding = run._confirmation_claim_binding(
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD,
+        f.artifact_root, control_pool=pool)
+    claim_path = run._confirmation_claim_path(f.artifact_root, binding)
+    _claim, claim_sha, _started, deadline = run._read_confirmation_claim(
+        claim_path, binding)
+    run._mark_confirmation_budget_started(
+        phase_dir, claim_sha, retained_limit=f.successor['budgets']['hp_confirmation']['retained_bytes'],
+        claim_root=f.artifact_root)
+    budget = bounded.Budget(
+        phase_dir, f.successor['budgets']['hp_confirmation'], f.successor_sha,
+        absolute_deadline=deadline, window_started_at=started,
+        confirmation_lock_guard=True, confirmation_claim_sha=claim_sha,
+        confirmation_claim_path=claim_path, confirmation_claim_root=f.artifact_root,
+        confirmation_authority_guard=lambda: run._consume_confirmation_control_claim(
+            f.successor, f.successor_sha, HEAD, f.artifact_root,
+            owner['activation_id'], owner['run_id'], EXECUTION_INTENT_SHA256,
+            resume=False),
+        require_real_directory=True)
+
+    retained_limit = f.successor['budgets']['hp_confirmation']['retained_bytes']
+    pool_bytes = manifest_contract.CONFIRMATION_CONTROL_POOL_BYTES
+    control_bytes = run._confirmation_control_bytes(f.artifact_root)
+    phase_bytes = run._physical_retained_bytes(phase_dir)
+    filler_size = retained_limit-control_bytes-pool_bytes-phase_bytes
+    value = {'payload': 'x'*10_000}
+    result_raw = encoded(value)
+    assert 0 < len(result_raw) < pool_bytes
+    assert filler_size > 0
+    with (phase_dir/'.synthetic-retention-fill.bin').open('wb') as stream:
+        stream.truncate(filler_size)
+
+    at_result_open = threading.Event()
+    allow_result_write = threading.Event()
+    original_open = Path.open
+
+    def pause_result_open(path, mode='r', *args, **kwargs):
+        if path.parent == phase_dir and path.name.startswith('result-') and mode == 'xb':
+            at_result_open.set()
+            if not allow_result_write.wait(5):
+                raise TimeoutError('result write interleaving timed out')
+        return original_open(path, mode, *args, **kwargs)
+
+    monkeypatch.setattr(Path, 'open', pause_result_open)
+    outcome, errors = {}, []
+
+    def publish_result():
+        try:
+            outcome['result'] = run.immutable_result(
+                phase_dir, value, retained_limit,
+                retained_extra_bytes=control_bytes)
+        except BaseException as exc:
+            errors.append(exc)
+
+    thread = threading.Thread(target=publish_result, name='result-writer')
+    try:
+        thread.start()
+        assert at_result_open.wait(5), 'result did not reach the post-check write boundary'
+        with pytest.raises(AcquisitionStopped, match='confirmation_control_pool_frozen'):
+            run.reserve_confirmation_control_pool(
+                f.successor, f.successor_sha, HEAD, f.artifact_root,
+                'second-synthetic-activation', 'second-synthetic-run',
+                EXECUTION_INTENT_SHA256)
+    finally:
+        allow_result_write.set()
+        thread.join(timeout=10)
+        budget.close()
+
+    assert not thread.is_alive(), 'result writer deadlocked with ART reservation'
+    assert errors == []
+    result_path, result_sha = outcome['result']
+    assert result_path.read_bytes() == result_raw
+    assert sha(result_raw) == result_sha
+    assert run._confirmation_control_bytes(f.artifact_root) == pool_bytes
+    assert (run._physical_retained_bytes(phase_dir)+pool_bytes
+            == retained_limit-pool_bytes+len(result_raw))
+    assert physical_regular_bytes(f.artifact_root) <= f.successor['budgets']['total_retained_bytes']
+    assert not list(phase_dir.glob('*.pending'))
+
+
+def test_preconsumer_marker_write_serializes_with_pool_capacity_check(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    run.reserve_confirmation_control_pool(
+        f.successor, f.successor_sha, HEAD, f.artifact_root,
+        'first-synthetic-activation', 'first-synthetic-run', EXECUTION_INTENT_SHA256)
+    phase_dir = run._confirmation_phase_directory(f.artifact_root)
+    retained_limit = f.successor['budgets']['hp_confirmation']['retained_bytes']
+    pool_bytes = manifest_contract.CONFIRMATION_CONTROL_POOL_BYTES
+    control_bytes = run._confirmation_control_bytes(f.artifact_root)
+    filler_size = retained_limit-control_bytes-pool_bytes
+    assert filler_size > 0
+    with (phase_dir/'.synthetic-retention-fill.bin').open('wb') as stream:
+        stream.truncate(filler_size)
+
+    at_marker_check = threading.Event()
+    allow_marker_check = threading.Event()
+    original_physical_retained_bytes = run._physical_retained_bytes
+
+    def pause_marker_capacity_check(directory):
+        if (threading.current_thread().name == 'marker-writer'
+                and Path(directory) == phase_dir):
+            at_marker_check.set()
+            if not allow_marker_check.wait(5):
+                raise TimeoutError('marker capacity interleaving timed out')
+        return original_physical_retained_bytes(directory)
+
+    monkeypatch.setattr(run, '_physical_retained_bytes', pause_marker_capacity_check)
+    outcomes, errors = {}, []
+    reserve_attempted = threading.Event()
+
+    def write_marker():
+        try:
+            outcomes['marker'] = run._mark_confirmation_budget_started(
+                phase_dir, 'a'*64, retained_limit=retained_limit,
+                claim_root=f.artifact_root)
+        except BaseException as exc:
+            errors.append(exc)
+
+    def reserve_second_pool():
+        reserve_attempted.set()
+        try:
+            outcomes['pool'] = run.reserve_confirmation_control_pool(
+                f.successor, f.successor_sha, HEAD, f.artifact_root,
+                'second-synthetic-activation', 'second-synthetic-run',
+                EXECUTION_INTENT_SHA256)
+        except BaseException as exc:
+            outcomes['pool_error'] = exc
+
+    marker_thread = threading.Thread(target=write_marker, name='marker-writer')
+    pool_thread = threading.Thread(target=reserve_second_pool, name='pool-reserver')
+    try:
+        marker_thread.start()
+        assert at_marker_check.wait(5), 'marker did not reach its capacity snapshot'
+        pool_thread.start()
+        assert reserve_attempted.wait(5)
+    finally:
+        allow_marker_check.set()
+        marker_thread.join(timeout=10)
+        pool_thread.join(timeout=10)
+
+    assert not marker_thread.is_alive() and not pool_thread.is_alive(), 'ART lock order deadlocked'
+    assert errors == []
+    assert outcomes['marker']['kind'] == 'hp_confirmation_budget_started'
+    assert isinstance(outcomes.get('pool_error'), AcquisitionStopped)
+    assert outcomes['pool_error'].args == ('retained_control_pool_budget',)
+    assert (phase_dir/'activation-budget-started.json').exists()
+    assert run._confirmation_control_bytes(f.artifact_root) == pool_bytes
+    assert run._physical_retained_bytes(phase_dir)+pool_bytes <= retained_limit
+    assert physical_regular_bytes(f.artifact_root) <= f.successor['budgets']['total_retained_bytes']
 
 
 def test_run_main_uses_all_thirteen_and_confirmation_deadline_without_network(

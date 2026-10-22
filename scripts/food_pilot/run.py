@@ -247,6 +247,18 @@ def _confirmation_control_bytes(output_root):
     return sum(size for _path, size in _confirmation_control_files(output_root))
 
 
+def _confirmation_consumer_started_locked(root_fd, root):
+    """Return whether any reserved confirmation pool has entered consumption."""
+    for path, _size in _confirmation_control_files(root):
+        if not path.name.startswith(_CONTROL_ROLE_PREFIX['burn_claim']):
+            continue
+        _raw, claim = _read_control_slot_locked(root_fd, path.name)
+        if (claim.get('kind') == 'hp_confirmation_activation_claim'
+                and claim.get('claim_state') == 'consumer_started'):
+            return True
+    return False
+
+
 def _confirmation_phase_bytes(root, *, allow_unsafe_path=False):
     phase_dir = Path(root).resolve()/'hp_confirmation'
     if phase_dir.is_symlink() or (phase_dir.exists() and not phase_dir.is_dir()):
@@ -948,7 +960,13 @@ def reserve_confirmation_control_pool(manifest, manifest_hash, head, output_root
             existing = {path.name: size for path, size in _confirmation_control_files(locked_root)}
             missing_bytes = sum(len(raw) for role, raw in expected.items()
                                 if paths[role].name not in existing)
-            _control_capacity_preflight(root, manifest, missing_bytes)
+            if missing_bytes:
+                # Budget writes phase bytes while holding hp_confirmation/.reader.lock.
+                # Its authority guard marks consumer_started under this ART lock first;
+                # once that state is visible, no new allocation may race a later check.
+                if _confirmation_consumer_started_locked(root_fd, locked_root):
+                    raise AcquisitionStopped('confirmation_control_pool_frozen')
+                _control_capacity_preflight(root, manifest, missing_bytes)
             for role, raw in expected.items():
                 name = paths[role].name
                 if name in existing:
@@ -1481,22 +1499,33 @@ def _read_confirmation_budget_marker(phase_dir, claim_sha):
 
 def _mark_confirmation_budget_started(phase_dir, claim_sha, *, retained_limit=None,
                                       claim_root=None):
-    path = Path(phase_dir)/'activation-budget-started.json'
-    if path.exists() or path.is_symlink():
-        return _read_confirmation_budget_marker(phase_dir, claim_sha)
+    phase_dir = Path(phase_dir)
+    if claim_root is None:
+        raise AcquisitionStopped('confirmation_artifact_root_invalid')
+    root = Path(claim_root).resolve(strict=True)
+    if (phase_dir.is_symlink() or not phase_dir.is_dir()
+            or phase_dir.resolve(strict=True) != root/'hp_confirmation'):
+        raise AcquisitionStopped('confirmation_phase_directory_invalid')
+    path = phase_dir/'activation-budget-started.json'
     marker = {
         'kind': 'hp_confirmation_budget_started',
         'schema_version': 1,
         'claim_sha256': claim_sha,
     }
-    if retained_limit is not None:
-        phase_bytes = _physical_retained_bytes(phase_dir)
-        claim_bytes = _confirmation_control_bytes(claim_root)
-        if phase_bytes+claim_bytes+len(encoded(marker)) > retained_limit:
-            raise AcquisitionStopped('retained_activation_marker_budget')
-    _write_confirmation_receipt(
-        path, marker, 'confirmation_activation_marker_already_recorded')
-    return marker
+    # Keep every preconsumer byte check/write in the same serialization domain as
+    # control-pool allocation. Budget later takes .reader.lock then this ART lock;
+    # no ART-locked path takes .reader.lock, so the order cannot invert.
+    with _confirmation_control_lock(root) as (locked_root, _root_fd):
+        if path.exists() or path.is_symlink():
+            return _read_confirmation_budget_marker(phase_dir, claim_sha)
+        if retained_limit is not None:
+            phase_bytes = _physical_retained_bytes(phase_dir)
+            claim_bytes = _confirmation_control_bytes(locked_root)
+            if phase_bytes+claim_bytes+len(encoded(marker)) > retained_limit:
+                raise AcquisitionStopped('retained_activation_marker_budget')
+        _write_confirmation_receipt(
+            path, marker, 'confirmation_activation_marker_already_recorded')
+        return marker
 
 
 def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
