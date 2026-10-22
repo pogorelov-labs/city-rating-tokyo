@@ -168,6 +168,8 @@ def authorization_files(f, tmp_path, output_root, now, *, head=HEAD):
 
 def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
+    assert f.successor['version'] == 'v21'
+    assert f.successor['supersedes_manifest_sha256'] == sha(f.source_raw)
     assert f.successor['source_window']['core_hp_complete_before'] == '2026-10-22T00:00:00Z'
     assert f.successor['confirmation_amendment']['confirmation_completion_before'] == '2026-10-23T00:00:00Z'
     assert f.successor['reviewed_execution_scope'] == ['hp_confirmation']
@@ -225,7 +227,7 @@ def test_confirmation_gate_requires_exact_head_manifest_map_and_single_phase(tmp
     f = synthetic_handoff(tmp_path, monkeypatch)
     now = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
     owner_path, gate_path, _owner, gate = authorization_files(f, tmp_path, f.artifact_root, now)
-    owner, root = run.checked_confirmation_gate(
+    owner, root, _owner_sha, _gate_sha = run.checked_confirmation_gate(
         gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, now)
     assert owner['activation_id'] == 'synthetic-activation-1'
     assert root['allowed_phases'] == ['hp_confirmation']
@@ -323,6 +325,175 @@ def test_confirmation_resume_retains_original_t0_and_deadline(tmp_path, monkeypa
     (phase/'ledger.json').write_bytes(encoded(ledger))
     with pytest.raises(AcquisitionStopped, match='confirmation_late_finalization_not_admissible'):
         run._confirmation_run_window(args, f.successor_sha, start+timedelta(minutes=5))
+
+
+def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monkeypatch, capsys):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    now = [started]
+    real_run_datetime = run.datetime
+    real_budget_datetime = bounded.datetime
+
+    class ControlledRunDateTime(real_run_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    class ControlledBudgetDateTime(real_budget_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    monkeypatch.setattr(run, 'datetime', ControlledRunDateTime)
+    monkeypatch.setattr(bounded, 'datetime', ControlledBudgetDateTime)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setenv('HOTPEPPER_API_KEY', 'offline-test-only')
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, started)
+    phase_dir = f.artifact_root/'hp_confirmation'
+    claim_path = phase_dir/'activation-claim.json'
+    marker_path = phase_dir/'activation-budget-started.json'
+    ledger_path = phase_dir/'ledger.json'
+    source_calls = []
+
+    def offline_acquire(sites, _budget, _key):
+        source_calls.append('mocked_hotpepper_adapter')
+        finish = stamp(now[0]+timedelta(minutes=1))
+        return {'status': 'complete', 'stations': [
+            {'slug': row['slug'], 'status': 'complete_provider_zero',
+             'finished_at': finish, 'pages': []} for row in sites
+        ]}
+
+    monkeypatch.setattr(run, 'acquire_sites', offline_acquire)
+
+    def argv(*, resume=False, prior_checkpoint=None):
+        values = [
+            'food-pilot-run', '--manifest', str(f.successor_path),
+            '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+            '--prior-prescreen', str(f.prescreen_path),
+            '--prior-checkpoint', str(prior_checkpoint or f.checkpoint_path),
+            '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+            '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
+        ]
+        if resume:
+            values.append('--resume')
+        return values
+
+    monkeypatch.setattr('sys.argv', argv(prior_checkpoint=tmp_path/'wrong-checkpoint.json'))
+    with pytest.raises(AcquisitionStopped, match='confirmation_v20_checkpoint_path'):
+        run.main()
+    original_claim_raw = claim_path.read_bytes()
+    claim = json.loads(original_claim_raw)
+    assert claim['claim_state'] == 'preflight_claimed'
+    assert claim['activation_id'] == owner['activation_id']
+    assert claim['run_id'] == owner['run_id']
+    assert claim['window_started_at'] == stamp(started)
+    assert claim['absolute_deadline'] == stamp(started+timedelta(seconds=1800))
+    assert claim['owner_activation_sha256'] == sha(owner_path.read_bytes())
+    assert not marker_path.exists()
+    assert not ledger_path.exists()
+
+    now[0] = started+timedelta(minutes=5)
+    monkeypatch.setattr('sys.argv', argv())
+    with pytest.raises(AcquisitionStopped, match='confirmation_activation_already_claimed'):
+        run.main()
+    assert claim_path.read_bytes() == original_claim_raw
+    assert source_calls == []
+
+    # A corrected preflight may continue only as the same resume, with original T0/D.
+    monkeypatch.setattr('sys.argv', argv(resume=True))
+    run.main()
+    output = json.loads(capsys.readouterr().out)
+    assert output['status'] == 'complete'
+    assert source_calls == ['mocked_hotpepper_adapter']
+    ledger = json.loads(ledger_path.read_bytes())
+    assert ledger['started_at'] == started.isoformat()
+    assert ledger['window_contract']['window_started_at'] == started.isoformat()
+    assert ledger['window_contract']['absolute_deadline'] == (started+timedelta(seconds=1800)).isoformat()
+    assert sha(claim_path.read_bytes()) == json.loads(marker_path.read_bytes())['claim_sha256']
+
+
+@pytest.mark.parametrize('terminal_state', ['complete', 'finalization_rejected'])
+def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
+        tmp_path, monkeypatch, capsys, terminal_state):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    now = [started]
+    real_run_datetime = run.datetime
+    real_budget_datetime = bounded.datetime
+
+    class ControlledRunDateTime(real_run_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    class ControlledBudgetDateTime(real_budget_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    monkeypatch.setattr(run, 'datetime', ControlledRunDateTime)
+    monkeypatch.setattr(bounded, 'datetime', ControlledBudgetDateTime)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    owner_path, gate_path, owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, started)
+    phase_dir = run._confirmation_phase_directory(f.artifact_root)
+    _owner, _gate, owner_sha, gate_sha = run.checked_confirmation_gate(
+        gate_path, owner_path, f.successor, f.successor_sha, HEAD, f.artifact_root, started)
+    binding = run._confirmation_claim_binding(
+        owner, owner_sha, gate_sha, f.successor, f.successor_sha, HEAD, f.artifact_root)
+    deadline = started+timedelta(seconds=1800)
+    _claim, claim_sha = run._prepare_confirmation_claim(
+        phase_dir, binding, started, deadline, resume=False)
+    run._mark_confirmation_budget_started(phase_dir, claim_sha)
+
+    prior, checkpoint = run.checked_confirmation_handoff(
+        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+    windows = {f"hp:{row['slug']}:": (row['eligible_from'], row['eligible_until'])
+               for row in checkpoint['zero_confirmation']['candidates']}
+    completion_window = (checkpoint['zero_confirmation']['batch_eligible_from'],
+                         checkpoint['zero_confirmation']['batch_eligible_until'])
+    initial_budget = bounded.Budget(
+        phase_dir, f.successor['budgets']['hp_confirmation'], f.successor_sha,
+        absolute_deadline=deadline, identity_windows=windows,
+        completion_window=completion_window, window_started_at=started,
+        confirmation_lock_guard=True, confirmation_claim_sha=claim_sha,
+        require_real_directory=True)
+    initial_budget.close()
+    ledger_path = phase_dir/'ledger.json'
+
+    real_handoff = run.checked_confirmation_handoff
+
+    def finish_between_precheck_and_budget(*args):
+        result = real_handoff(*args)
+        ledger = json.loads(ledger_path.read_bytes())
+        if terminal_state == 'complete':
+            ledger['status'] = 'complete'
+        else:
+            ledger['status'] = 'incomplete'
+            ledger['finalization_rejections'] = [{'result_sha256': 'synthetic-late-result'}]
+        bounded.save_ledger(ledger_path, ledger)
+        return result
+
+    monkeypatch.setattr(run, 'checked_confirmation_handoff', finish_between_precheck_and_budget)
+    monkeypatch.setenv('HOTPEPPER_API_KEY', 'offline-test-only')
+    source_calls = []
+    monkeypatch.setattr(run, 'acquire_sites', lambda *_args: source_calls.append('called'))
+    monkeypatch.setattr('sys.argv', [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root), '--resume',
+    ])
+    reason = ('confirmation_run_already_finalized' if terminal_state == 'complete'
+              else 'confirmation_late_finalization_not_admissible')
+    with pytest.raises(AcquisitionStopped, match=reason):
+        run.main()
+    assert capsys.readouterr().out == ''
+    assert source_calls == []
 
 
 def test_confirmation_candidate_and_batch_windows_are_half_open(tmp_path, monkeypatch):
@@ -762,6 +933,54 @@ def test_run_main_rejects_arbitrary_confirmation_root_before_output(
     with pytest.raises(AcquisitionStopped, match='confirmation_artifact_root_mismatch'):
         run.main()
     assert not sibling.exists()
+
+
+def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
+        tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    now = [datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)]
+    real_datetime = run.datetime
+
+    class ControlledDateTime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now[0].astimezone(tz) if tz else now[0]
+
+    owner_path, gate_path, _owner, _gate = authorization_files(
+        f, tmp_path, f.artifact_root, now[0])
+    frozen_dir = f.artifact_root/'target-v4'
+    frozen_dir.mkdir()
+    frozen_marker = frozen_dir/'preserved.bin'
+    frozen_marker.write_bytes(b'frozen synthetic evidence')
+    poisoned_ledger = frozen_dir/'ledger.json'
+    poisoned_ledger.write_bytes(b'must not be read through the symlink')
+    phase_dir = f.artifact_root/'hp_confirmation'
+    phase_dir.symlink_to(frozen_dir, target_is_directory=True)
+
+    class MustNotStartBudget:
+        def __init__(self, *_args, **_kwargs):
+            pytest.fail('symlink preflight must reject before Budget')
+
+    monkeypatch.setattr(run, 'datetime', ControlledDateTime)
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (f.successor, f.successor_sha))
+    monkeypatch.setattr(run, 'confirmation_git_head', lambda: HEAD)
+    monkeypatch.setattr(run, 'Budget', MustNotStartBudget)
+    monkeypatch.setattr('sys.argv', [
+        'food-pilot-run', '--manifest', str(f.successor_path),
+        '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
+        '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
+        '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root), '--resume',
+    ])
+    with pytest.raises(AcquisitionStopped, match='confirmation_phase_directory_invalid'):
+        run.main()
+
+    assert phase_dir.is_symlink()
+    assert frozen_marker.read_bytes() == b'frozen synthetic evidence'
+    assert poisoned_ledger.read_bytes() == b'must not be read through the symlink'
+    assert not (frozen_dir/'.reader.lock').exists()
+    assert not (frozen_dir/'activation-claim.json').exists()
+    assert not (frozen_dir/'activation-budget-started.json').exists()
 
 
 def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkeypatch):

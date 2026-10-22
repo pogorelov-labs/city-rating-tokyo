@@ -88,9 +88,23 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 class Budget:
     def __init__(self, directory, limits, manifest_hash, *, resume=False, opener=None,
                  absolute_deadline=None, identity_windows=None, completion_window=None,
-                 window_started_at=None):
+                 window_started_at=None, confirmation_lock_guard=False,
+                 confirmation_claim_sha=None, allow_resume_without_ledger=False,
+                 require_real_directory=False):
         self.directory = Path(directory)
-        self.directory.mkdir(parents=True, exist_ok=True)
+        self.manifest_hash = manifest_hash
+        self.confirmation_lock_guard = confirmation_lock_guard
+        self.confirmation_claim_sha = confirmation_claim_sha
+        self.allow_resume_without_ledger = allow_resume_without_ledger
+        if require_real_directory:
+            try:
+                if (self.directory.is_symlink() or not self.directory.is_dir()
+                        or self.directory.resolve(strict=True) != self.directory.absolute()):
+                    raise AcquisitionStopped('confirmation_phase_directory_invalid')
+            except (OSError, RuntimeError, ValueError):
+                raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+        else:
+            self.directory.mkdir(parents=True, exist_ok=True)
         self.limits = limits
         self.absolute_deadline = self._utc(absolute_deadline) if absolute_deadline else None
         self.window_started_at = self._utc(window_started_at) if window_started_at else None
@@ -110,17 +124,37 @@ class Budget:
         self.finalization_rejection_callback = None
         self.lock = (self.directory / '.reader.lock').open('a')
         fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if confirmation_lock_guard:
+            try:
+                self._check_confirmation_claim_under_lock()
+            except BaseException:
+                self.close()
+                raise
         self.opener = opener or urllib.request.build_opener(NoRedirect()).open
         anchor = time.monotonic()
         now = datetime.now(timezone.utc)
+        if confirmation_lock_guard and self.path.is_symlink():
+            self.close()
+            raise AcquisitionStopped('confirmation_ledger_path_invalid')
         if self.path.exists():
-            if not resume:
+            if not resume and not confirmation_lock_guard:
                 self.close()
                 raise AcquisitionStopped('ledger_exists_no_reset')
             self.ledger = json.loads(self.path.read_text())
             if self.ledger['manifest_sha256'] != manifest_hash or self.ledger['limits'] != limits:
                 self.close()
                 raise AcquisitionStopped('frozen_budget_changed')
+            if confirmation_lock_guard:
+                status = self.ledger.get('status')
+                if status == 'complete':
+                    self.close()
+                    raise AcquisitionStopped('confirmation_run_already_finalized')
+                if self.ledger.get('finalization_rejections'):
+                    self.close()
+                    raise AcquisitionStopped('confirmation_late_finalization_not_admissible')
+                if status not in ('in_progress', 'incomplete'):
+                    self.close()
+                    raise AcquisitionStopped('confirmation_resume_terminal_state_invalid')
             if (self.window_started_at is not None
                     and self._utc(self.ledger['started_at']) != self.window_started_at):
                 self.close()
@@ -128,6 +162,9 @@ class Budget:
             if self.ledger.get('window_contract', self.window_contract) != self.window_contract:
                 self.close()
                 raise AcquisitionStopped('frozen_acquisition_window_changed')
+            if not resume:
+                self.close()
+                raise AcquisitionStopped('ledger_exists_no_reset')
             self.ledger.setdefault('window_contract', self.window_contract)
             elapsed = (now - datetime.fromisoformat(self.ledger['started_at'])).total_seconds()
             if elapsed < 0:
@@ -142,6 +179,10 @@ class Budget:
                     # a resumed invocation must not infer permission to retry.
                     attempt['retry_disposition'] = 'terminal'
         else:
+            if (resume and confirmation_lock_guard
+                    and not allow_resume_without_ledger):
+                self.close()
+                raise AcquisitionStopped('confirmation_resume_ledger_missing')
             started_at = self.window_started_at or now
             elapsed = (now - started_at).total_seconds()
             if elapsed < 0:
@@ -161,6 +202,48 @@ class Budget:
         except BaseException:
             self.close()
             raise
+
+    def _check_confirmation_claim_under_lock(self):
+        if not self.confirmation_claim_sha:
+            raise AcquisitionStopped('confirmation_activation_claim_missing')
+        claim_path = self.directory/'activation-claim.json'
+        marker_path = self.directory/'activation-budget-started.json'
+        try:
+            if claim_path.is_symlink() or marker_path.is_symlink():
+                raise AcquisitionStopped('confirmation_activation_claim_invalid')
+            claim_raw = claim_path.read_bytes()
+            claim = json.loads(claim_raw)
+            marker = json.loads(marker_path.read_bytes())
+        except AcquisitionStopped:
+            raise
+        except (OSError, ValueError, TypeError):
+            raise AcquisitionStopped('confirmation_activation_claim_missing') from None
+        if hashlib.sha256(claim_raw).hexdigest() != self.confirmation_claim_sha:
+            raise AcquisitionStopped('confirmation_activation_claim_binding')
+        expected_marker = {
+            'kind': 'hp_confirmation_budget_started',
+            'schema_version': 1,
+            'claim_sha256': self.confirmation_claim_sha,
+        }
+        if (not isinstance(claim, dict)
+                or claim.get('kind') != 'hp_confirmation_activation_claim'
+                or claim.get('schema_version') != 1
+                or claim.get('phase') != 'hp_confirmation'
+                or claim.get('claim_state') != 'preflight_claimed'
+                or claim.get('manifest_sha256') != self.manifest_hash
+                or marker != expected_marker):
+            raise AcquisitionStopped('confirmation_activation_claim_binding')
+        try:
+            started = self._utc(claim.get('window_started_at'))
+            deadline = self._utc(claim.get('absolute_deadline'))
+            output_root = Path(claim.get('output_root')).resolve()
+            expected_directory = output_root/'hp_confirmation'
+            actual_directory = self.directory.resolve(strict=True)
+        except (OSError, RuntimeError, TypeError, ValueError):
+            raise AcquisitionStopped('confirmation_activation_claim_invalid') from None
+        if (started != self.window_started_at or deadline != self.absolute_deadline
+                or actual_directory != expected_directory):
+            raise AcquisitionStopped('confirmation_activation_claim_window')
 
     def close(self):
         if not self.lock.closed:

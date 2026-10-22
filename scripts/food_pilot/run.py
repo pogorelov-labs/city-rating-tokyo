@@ -273,8 +273,9 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         raise AcquisitionStopped('confirmation_artifact_root_mismatch')
     try:
         owner_raw = Path(owner_path).read_bytes()
+        gate_raw = Path(gate_path).read_bytes()
         owner = json.loads(owner_raw)
-        gate = json.loads(Path(gate_path).read_bytes())
+        gate = json.loads(gate_raw)
     except (OSError, ValueError, TypeError):
         raise AcquisitionStopped('confirmation_owner_or_root_release_unreadable') from None
     checked_confirmation_amendment(manifest)
@@ -342,30 +343,209 @@ def checked_confirmation_gate(gate_path, owner_path, manifest, manifest_hash, he
         raise AcquisitionStopped('confirmation_root_gate_not_fresh')
     if manifest.get('confirmation_amendment', {}).get('allowed_phases') != allowed:
         raise AcquisitionStopped('confirmation_scope_not_single_phase')
-    return owner, gate
+    return owner, gate, owner_sha, hashlib.sha256(gate_raw).hexdigest()
 
 
-def _confirmation_run_window(args, manifest_hash, invocation_utc):
-    cutoff = _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE)
-    if args.resume:
-        ledger_path = args.output_root/'hp_confirmation'/'ledger.json'
+def _confirmation_phase_directory(root):
+    """Create/check only the real confirmation child beneath the pinned ART root."""
+    root = Path(root).resolve()
+    phase_dir = root/'hp_confirmation'
+    if phase_dir.is_symlink():
+        raise AcquisitionStopped('confirmation_phase_directory_invalid')
+    try:
+        phase_dir.mkdir(mode=0o700, exist_ok=False)
+    except FileExistsError:
+        pass
+    except OSError:
+        raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+    try:
+        if (phase_dir.is_symlink() or not phase_dir.is_dir()
+                or phase_dir.resolve(strict=True) != phase_dir.absolute()
+                or not phase_dir.resolve(strict=True).is_relative_to(root)):
+            raise AcquisitionStopped('confirmation_phase_directory_invalid')
+    except (OSError, RuntimeError, ValueError):
+        raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
+    return phase_dir
+
+
+def _write_confirmation_receipt(path, value, conflict_reason):
+    """Create one durable confirmation receipt without following an existing path."""
+    raw = encoded(value)
+    try:
+        descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    except FileExistsError:
+        raise AcquisitionStopped(conflict_reason) from None
+    except OSError:
+        raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
+    try:
+        with os.fdopen(descriptor, 'wb') as stream:
+            stream.write(raw)
+            stream.flush()
+            os.fsync(stream.fileno())
+        directory_fd = os.open(path.parent, os.O_RDONLY)
         try:
-            ledger = json.loads(ledger_path.read_text())
-            contract = ledger['window_contract']
-            started = _utc(contract['window_started_at'])
-            deadline = _utc(contract['absolute_deadline'])
-        except (OSError, KeyError, TypeError, ValueError):
-            raise AcquisitionStopped('confirmation_resume_window_missing') from None
-        if (ledger.get('manifest_sha256') != manifest_hash
-                or ledger.get('limits') != manifest_contract.CONFIRMATION_BUDGET
-                or _utc(ledger.get('started_at')) != started
-                or deadline != min(started+timedelta(seconds=1800), cutoff)):
-            raise AcquisitionStopped('confirmation_resume_window_mismatch')
-        if ledger.get('status') == 'complete':
-            raise AcquisitionStopped('confirmation_run_already_finalized')
-        if ledger.get('finalization_rejections'):
-            raise AcquisitionStopped('confirmation_late_finalization_not_admissible')
+            os.fsync(directory_fd)
+        finally:
+            os.close(directory_fd)
+    except OSError:
+        # Leave any partial receipt in place. A later invocation must fail closed.
+        raise AcquisitionStopped('confirmation_activation_claim_persist_failed') from None
+    return raw
+
+
+def _confirmation_claim_binding(owner, owner_sha, gate_sha, manifest, manifest_hash,
+                                head, output_root):
+    return {
+        'kind': 'hp_confirmation_activation_claim',
+        'schema_version': 1,
+        'phase': 'hp_confirmation',
+        'manifest_sha256': manifest_hash,
+        'git_head': head,
+        'code_map_sha256': manifest_contract.canonical_code_map_sha256(manifest.get('code_sha256')),
+        'output_root': str(Path(output_root).resolve()),
+        'owner_activation_sha256': owner_sha,
+        'root_release_sha256': gate_sha,
+        'activation_id': owner['activation_id'],
+        'run_id': owner['run_id'],
+    }
+
+
+def _read_confirmation_claim(phase_dir, binding):
+    path = Path(phase_dir)/'activation-claim.json'
+    try:
+        if path.is_symlink():
+            raise AcquisitionStopped('confirmation_activation_claim_invalid')
+        raw = path.read_bytes()
+        claim = json.loads(raw)
+    except AcquisitionStopped:
+        raise
+    except (OSError, ValueError, TypeError):
+        raise AcquisitionStopped('confirmation_activation_claim_missing') from None
+    expected_keys = set(binding) | {
+        'claim_state', 'window_started_at', 'absolute_deadline', 'claimed_at'}
+    if (not isinstance(claim, dict) or set(claim) != expected_keys
+            or claim.get('claim_state') != 'preflight_claimed'
+            or any(claim.get(key) != value for key, value in binding.items())):
+        raise AcquisitionStopped('confirmation_activation_claim_binding')
+    try:
+        started = _utc(claim['window_started_at'])
+        deadline = _utc(claim['absolute_deadline'])
+        claimed = _utc(claim['claimed_at'])
+    except AcquisitionStopped:
+        raise AcquisitionStopped('confirmation_activation_claim_invalid') from None
+    expected_deadline = min(
+        started+timedelta(seconds=1800), _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE))
+    if claimed != started or deadline != expected_deadline:
+        raise AcquisitionStopped('confirmation_activation_claim_window')
+    return claim, hashlib.sha256(raw).hexdigest(), started, deadline
+
+
+def _prepare_confirmation_claim(phase_dir, binding, started, deadline, *, resume):
+    if resume:
+        claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(phase_dir, binding)
+        if claim_started != started or claim_deadline != deadline:
+            raise AcquisitionStopped('confirmation_activation_claim_window')
+        return claim, claim_sha
+    claim = {
+        **binding,
+        'claim_state': 'preflight_claimed',
+        'window_started_at': started.isoformat().replace('+00:00', 'Z'),
+        'absolute_deadline': deadline.isoformat().replace('+00:00', 'Z'),
+        'claimed_at': started.isoformat().replace('+00:00', 'Z'),
+    }
+    raw = _write_confirmation_receipt(
+        Path(phase_dir)/'activation-claim.json', claim,
+        'confirmation_activation_already_claimed')
+    return claim, hashlib.sha256(raw).hexdigest()
+
+
+def _read_confirmation_budget_marker(phase_dir, claim_sha):
+    path = Path(phase_dir)/'activation-budget-started.json'
+    try:
+        if path.is_symlink():
+            raise AcquisitionStopped('confirmation_activation_marker_invalid')
+        marker = json.loads(path.read_bytes())
+    except AcquisitionStopped:
+        raise
+    except (OSError, ValueError, TypeError):
+        raise AcquisitionStopped('confirmation_activation_marker_missing') from None
+    expected = {
+        'kind': 'hp_confirmation_budget_started',
+        'schema_version': 1,
+        'claim_sha256': claim_sha,
+    }
+    if marker != expected:
+        raise AcquisitionStopped('confirmation_activation_marker_binding')
+    return marker
+
+
+def _mark_confirmation_budget_started(phase_dir, claim_sha):
+    path = Path(phase_dir)/'activation-budget-started.json'
+    if path.exists() or path.is_symlink():
+        return _read_confirmation_budget_marker(phase_dir, claim_sha)
+    marker = {
+        'kind': 'hp_confirmation_budget_started',
+        'schema_version': 1,
+        'claim_sha256': claim_sha,
+    }
+    _write_confirmation_receipt(
+        path, marker, 'confirmation_activation_marker_already_recorded')
+    return marker
+
+
+def _confirmation_run_window(args, manifest_hash, invocation_utc, *,
+                             phase_dir=None, claim_binding=None):
+    cutoff = _utc(manifest_contract.CONFIRMATION_COMPLETION_BEFORE)
+    phase_dir = Path(phase_dir or (args.output_root/'hp_confirmation'))
+    ledger_path = phase_dir/'ledger.json'
+    claim_path = phase_dir/'activation-claim.json'
+    marker_path = phase_dir/'activation-budget-started.json'
+    if args.resume:
+        if ledger_path.is_symlink():
+            raise AcquisitionStopped('confirmation_ledger_path_invalid')
+        if ledger_path.exists():
+            try:
+                ledger = json.loads(ledger_path.read_text())
+                contract = ledger['window_contract']
+                started = _utc(contract['window_started_at'])
+                deadline = _utc(contract['absolute_deadline'])
+            except (OSError, KeyError, TypeError, ValueError):
+                raise AcquisitionStopped('confirmation_resume_window_missing') from None
+            if (ledger.get('manifest_sha256') != manifest_hash
+                    or ledger.get('limits') != manifest_contract.CONFIRMATION_BUDGET
+                    or _utc(ledger.get('started_at')) != started
+                    or deadline != min(started+timedelta(seconds=1800), cutoff)):
+                raise AcquisitionStopped('confirmation_resume_window_mismatch')
+            if claim_binding is not None:
+                claim, claim_sha, claim_started, claim_deadline = _read_confirmation_claim(
+                    phase_dir, claim_binding)
+                if claim_started != started or claim_deadline != deadline:
+                    raise AcquisitionStopped('confirmation_activation_claim_window')
+                _read_confirmation_budget_marker(phase_dir, claim_sha)
+            if ledger.get('status') == 'complete':
+                raise AcquisitionStopped('confirmation_run_already_finalized')
+            if ledger.get('finalization_rejections'):
+                raise AcquisitionStopped('confirmation_late_finalization_not_admissible')
+        else:
+            if claim_binding is None:
+                raise AcquisitionStopped('confirmation_resume_window_missing')
+            if marker_path.exists() or marker_path.is_symlink():
+                raise AcquisitionStopped('confirmation_resume_ledger_missing')
+            try:
+                entries = {path.name for path in phase_dir.iterdir()}
+            except OSError:
+                raise AcquisitionStopped('confirmation_resume_window_missing') from None
+            if entries != {'activation-claim.json'}:
+                raise AcquisitionStopped('confirmation_resume_ledger_missing')
+            _claim, _claim_sha, started, deadline = _read_confirmation_claim(
+                phase_dir, claim_binding)
     else:
+        if claim_binding is not None:
+            try:
+                if any(phase_dir.iterdir()):
+                    raise AcquisitionStopped('confirmation_activation_already_claimed')
+            except OSError:
+                raise AcquisitionStopped('confirmation_phase_directory_invalid') from None
         started = invocation_utc
         deadline = min(started+timedelta(seconds=1800), cutoff)
     elapsed = (invocation_utc-started).total_seconds()
@@ -511,16 +691,30 @@ def main():
         raise AcquisitionStopped('unknown_phase')
     confirmation_started = confirmation_deadline = confirmation_monotonic_remaining = None
     confirmation_owner = confirmation_gate = None
+    confirmation_phase_dir = None
+    confirmation_claim_binding = None
+    confirmation_claim_sha = None
+    confirmation_resume_from_claim = False
     historical_checkpoint = None
     if args.phase == 'hp_confirmation':
         checked_confirmation_amendment(manifest)
-        confirmation_started, confirmation_deadline, confirmation_monotonic_remaining = _confirmation_run_window(
-            args, manifest_hash, invocation_utc)
-        _check_confirmation_run_window(confirmation_started, confirmation_deadline, invocation_utc,
-                                       invocation_monotonic, confirmation_monotonic_remaining)
         head = confirmation_git_head()
-        confirmation_owner, confirmation_gate = checked_confirmation_gate(
+        confirmation_owner, confirmation_gate, owner_sha, gate_sha = checked_confirmation_gate(
             args.execution_gate, args.owner_activation, manifest, manifest_hash, head, root, invocation_utc)
+        confirmation_phase_dir = _confirmation_phase_directory(root)
+        confirmation_claim_binding = _confirmation_claim_binding(
+            confirmation_owner, owner_sha, gate_sha, manifest, manifest_hash, head, root)
+        ledger_path = confirmation_phase_dir/'ledger.json'
+        marker_path = confirmation_phase_dir/'activation-budget-started.json'
+        confirmation_resume_from_claim = (
+            args.resume and not ledger_path.exists() and not marker_path.exists()
+            and not ledger_path.is_symlink() and not marker_path.is_symlink())
+        confirmation_started, confirmation_deadline, confirmation_monotonic_remaining = _confirmation_run_window(
+            args, manifest_hash, invocation_utc, phase_dir=confirmation_phase_dir,
+            claim_binding=confirmation_claim_binding)
+        _claim, confirmation_claim_sha = _prepare_confirmation_claim(
+            confirmation_phase_dir, confirmation_claim_binding,
+            confirmation_started, confirmation_deadline, resume=args.resume)
         _check_confirmation_run_window(confirmation_started, confirmation_deadline, invocation_utc,
                                        invocation_monotonic, confirmation_monotonic_remaining)
         prior, historical_checkpoint = checked_confirmation_handoff(
@@ -547,8 +741,9 @@ def main():
     if args.phase == 'hp_confirmation':
         _check_confirmation_run_window(confirmation_started, confirmation_deadline, invocation_utc,
                                        invocation_monotonic, confirmation_monotonic_remaining)
-    phase_dir = root/args.phase
-    phase_dir.mkdir(parents=True, exist_ok=True)
+    phase_dir = confirmation_phase_dir or root/args.phase
+    if args.phase != 'hp_confirmation':
+        phase_dir.mkdir(parents=True, exist_ok=True)
     retained = sum(p.stat().st_size for p in root.rglob('*') if p.is_file())
     already = sum(p.stat().st_size for p in phase_dir.rglob('*') if p.is_file())
     if retained-already+manifest['budgets'][args.phase]['retained_bytes'] > manifest['budgets']['total_retained_bytes']:
@@ -570,7 +765,14 @@ def main():
     if args.phase == 'hp_confirmation':
         budget_window['window_started_at'] = confirmation_started.isoformat().replace('+00:00', 'Z')
     confirmation_output = None
+    if args.phase == 'hp_confirmation':
+        phase_dir = _confirmation_phase_directory(root)
+        _mark_confirmation_budget_started(phase_dir, confirmation_claim_sha)
     with Budget(phase_dir, manifest['budgets'][args.phase], manifest_hash, resume=args.resume,
+                confirmation_lock_guard=args.phase == 'hp_confirmation',
+                confirmation_claim_sha=confirmation_claim_sha,
+                allow_resume_without_ledger=confirmation_resume_from_claim,
+                require_real_directory=args.phase == 'hp_confirmation',
                 **budget_window) as budget:
         try:
             if args.phase.startswith('hp_'):
