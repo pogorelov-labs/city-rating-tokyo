@@ -77,7 +77,7 @@ def confirmation_candidate_bindings():
 
 def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_root=None,
                                 code_head=None):
-    """Create the frozen confirmation-only successor from the exact V20 bytes."""
+    """Create the frozen V21 confirmation-only successor from the exact V20 bytes."""
     if digest(predecessor_raw) != V20_MANIFEST_SHA256:
         raise ValueError('V20 manifest bytes do not match the pinned predecessor')
     predecessor = json.loads(predecessor_raw)
@@ -116,6 +116,8 @@ def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_
     if not isinstance(code_head, str) or len(code_head) != 40 or re.fullmatch(r'[0-9a-f]{40}', code_head) is None:
         raise ValueError('Current code head is invalid')
     result = json.loads(predecessor_raw)
+    result['version'] = 'v21'
+    result['supersedes_manifest_sha256'] = V20_MANIFEST_SHA256
     result['confirmation_amendment'] = {
         'schema_version': 1,
         'authority': {
