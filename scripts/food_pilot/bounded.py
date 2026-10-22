@@ -87,11 +87,13 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 class Budget:
     def __init__(self, directory, limits, manifest_hash, *, resume=False, opener=None,
-                 absolute_deadline=None, identity_windows=None, completion_window=None):
+                 absolute_deadline=None, identity_windows=None, completion_window=None,
+                 window_started_at=None):
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=True)
         self.limits = limits
         self.absolute_deadline = self._utc(absolute_deadline) if absolute_deadline else None
+        self.window_started_at = self._utc(window_started_at) if window_started_at else None
         self.identity_windows = {key: tuple(self._utc(v) for v in value)
                                  for key, value in (identity_windows or {}).items()}
         self.completion_window = tuple(self._utc(v) for v in completion_window) if completion_window else None
@@ -101,7 +103,11 @@ class Budget:
                                  for key, value in sorted(self.identity_windows.items())},
             'completion_window': [v.isoformat() for v in self.completion_window] if self.completion_window else None,
         }
+        if self.window_started_at is not None:
+            self.window_contract['window_started_at'] = self.window_started_at.isoformat()
         self.path = self.directory / 'ledger.json'
+        self.finalization_guard = None
+        self.finalization_rejection_callback = None
         self.lock = (self.directory / '.reader.lock').open('a')
         fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         self.opener = opener or urllib.request.build_opener(NoRedirect()).open
@@ -115,6 +121,10 @@ class Budget:
             if self.ledger['manifest_sha256'] != manifest_hash or self.ledger['limits'] != limits:
                 self.close()
                 raise AcquisitionStopped('frozen_budget_changed')
+            if (self.window_started_at is not None
+                    and self._utc(self.ledger['started_at']) != self.window_started_at):
+                self.close()
+                raise AcquisitionStopped('frozen_acquisition_window_changed')
             if self.ledger.get('window_contract', self.window_contract) != self.window_contract:
                 self.close()
                 raise AcquisitionStopped('frozen_acquisition_window_changed')
@@ -132,11 +142,15 @@ class Budget:
                     # a resumed invocation must not infer permission to retry.
                     attempt['retry_disposition'] = 'terminal'
         else:
+            started_at = self.window_started_at or now
+            elapsed = (now - started_at).total_seconds()
+            if elapsed < 0:
+                self.close()
+                raise AcquisitionStopped('clock_precedes_original_start')
             self.ledger = {'manifest_sha256': manifest_hash, 'limits': limits,
-                           'started_at': now.isoformat(), 'attempts': [], 'charged_bytes': 0,
+                           'started_at': started_at.isoformat(), 'attempts': [], 'charged_bytes': 0,
                            'successful_pages': 0, 'row_groups': [], 'status': 'in_progress',
                            'window_contract': self.window_contract}
-            elapsed = 0
         self.deadline = anchor + limits['wall_seconds'] - elapsed
         last_at = self.ledger['attempts'][-1]['at'] if self.ledger['attempts'] else None
         self.last_request = anchor-(now-datetime.fromisoformat(last_at)).total_seconds() if last_at else None
@@ -160,12 +174,37 @@ class Budget:
     def __exit__(self, kind, value, trace):
         signal.setitimer(signal.ITIMER_REAL, 0)
         signal.signal(signal.SIGALRM, self.previous_handler)
-        self.ledger['status'] = 'complete' if kind is None else 'incomplete'
-        self.ledger['finished_at'] = datetime.now(timezone.utc).isoformat()
         try:
-            self.persist()
+            if self.finalization_guard is None or kind is not None:
+                self.ledger['status'] = 'complete' if kind is None else 'incomplete'
+                self.ledger['finished_at'] = datetime.now(timezone.utc).isoformat()
+                self.persist()
+                return False
+
+            try:
+                self.finalization_guard()
+                self.ledger['status'] = 'complete'
+                self.ledger['finished_at'] = datetime.now(timezone.utc).isoformat()
+                self.persist()
+                self.finalization_guard()
+            except BaseException as exc:
+                self._record_finalization_rejection(exc)
+                self.ledger['status'] = 'incomplete'
+                self.ledger['finished_at'] = datetime.now(timezone.utc).isoformat()
+                self.persist()
+                raise
         finally:
             self.close()
+        return False
+
+    def _record_finalization_rejection(self, exc):
+        if self.finalization_rejection_callback is not None:
+            self.finalization_rejection_callback(exc)
+        else:
+            self.ledger.setdefault('finalization_rejections', []).append({
+                'rejected_at': datetime.now(timezone.utc).isoformat(),
+                'reason_type': type(exc).__name__,
+            })
 
     @staticmethod
     def _alarm(_signum, _frame):

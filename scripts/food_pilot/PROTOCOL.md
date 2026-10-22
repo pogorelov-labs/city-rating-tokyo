@@ -11,6 +11,72 @@ stopped.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
+## Confirmation-only deadline amendment (2026-10-22)
+
+The owner instruction for PR141 is: “Implement the confirmation-only amendment
+through October 23, 00:00 UTC for all 13 candidates, preserving V20 evidence and
+existing budgets. Add offline tests and complete exact-head review and CI. Do
+not activate acquisition.” This authorizes implementation only; it is not an
+activation or permission to acquire data.
+
+Keep `source_window.core_hp_complete_before` at `2026-10-22T00:00:00Z` for every
+phase other than `hp_confirmation`. The successor adds a separate, strict
+`confirmation_completion_before` of `2026-10-23T00:00:00Z`; equality is rejected.
+For a future authorized run, capture a fresh UTC T0 at command invocation and
+enforce `D = min(T0 + 1,800 seconds, confirmation_completion_before)` from
+preflight through finalization. A same-run resume retains the original T0 and D.
+The run must also stay inside each candidate's original 24–72 hour interval and
+the certified batch intersection `[2026-10-22T08:37:46.527802Z,
+2026-10-24T08:34:49.296391Z)`. These per-candidate and batch checks remain
+independent of the new earlier completion deadline.
+
+The successor is derived from the immutable V20 manifest and archive, both
+SHA-256 `98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb`,
+and V20 runtime code-map digest
+`246c2f0e276bfb2d7f9e6295539aef0ad7a9ce213b960498e613082401448292`. Its
+read-only historical input is the V20 `hp_prescreen` envelope with opaque
+SHA-256 `69217f88ac70d677a816fc3e31ec2fbcbe2868f4bfd60c56f0e3d6c5de1b44ff`,
+paired with the certified 4,081-byte control checkpoint
+`277cfbd918553cb5bd9caaf6878ab04ade46dfd713a02f067223a8a16962789d`. The
+checkpoint binds all 13 initially complete zeros in frozen challenge order,
+their original completion times and both eligibility boundaries. The original
+envelope is hash-checked as opaque provenance; it is never relabeled as a
+current-manifest result or rewritten.
+
+The `hp_confirmation` output root must equal the successor's pinned V20
+`historical_v20.artifact_root`; write only to its `hp_confirmation` child. The
+2 GiB global retained-byte preflight counts every physical file under that
+common artifact root, including the frozen V20 evidence and prior phase trees.
+The 64 MiB confirmation phase retention cap is enforced separately within
+`hp_confirmation`.
+
+V20's frame remains 32 rich / 32 sparse; its zero candidates remain 0 rich /
+13 sparse. Repeat all 13 in frozen order. The first eight per group remains a
+selection goal, not an execution cap. The repeats cannot create rich candidates,
+relabel core zeros, satisfy the 8+8 quality target, or make the V20 study
+sufficient. Preserve all `hp_confirmation` limits and guards: 200 attempts,
+160 successful pages, 50 pages per candidate, 1 MiB per response, 64 MiB total
+body and retained bytes, 0.6-second start spacing, 20-second socket timeout,
+one concurrent request, 1,800-second wall limit, and at most two attempts per
+page. Retry, reservation, unknown-outcome, EOF, retention and cumulative
+accounting behavior remain unchanged.
+
+The completion deadline covers durable result finalization and the complete
+status report. If the deadline guard fails after an envelope has been written,
+preserve those bytes as failure evidence, record the result digest and rejection
+in the incomplete phase ledger, suppress the complete report, and reject any
+same-run resume that encounters that rejection. Never erase or rewrite a late
+envelope to make it appear incomplete.
+
+The new reviewed successor gate must bind the exact current head, successor
+manifest and code map, and must allow only `hp_confirmation`; it also requires
+a fresh owner activation bound to a matching root release. Old V20 gates,
+current-manifest prescreen inputs, extra phase scopes, missing receipts and
+mismatched checkpoint or provenance hashes fail closed. No acquisition, T0,
+reservation, owner activation, root release, or later-phase release is created
+by this amendment. Confirmation has no `primary_freeze` dependency; holdout and
+all other phases keep their existing gates.
+
 ## Amendment and sample
 
 Preserve the original complete census and insufficient 63-site design. The
