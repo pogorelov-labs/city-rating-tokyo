@@ -10,11 +10,14 @@ import fcntl
 import hashlib
 import json
 import os
+import signal
 import subprocess
+import threading
 import time
 import urllib.error
 import urllib.request
 import uuid
+from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -441,6 +444,52 @@ class Journal:
         return [key for key, status in reserved.items() if status in ('pending', 'unknown')]
 
 
+def _check_deadline_interrupt_support():
+    if (threading.current_thread() is not threading.main_thread()
+            or not hasattr(signal, 'SIGALRM')
+            or not hasattr(signal, 'ITIMER_REAL')
+            or not callable(getattr(signal, 'getitimer', None))
+            or not callable(getattr(signal, 'setitimer', None))):
+        raise AcquisitionStopped('supplemental_deadline_interrupt_unavailable')
+    try:
+        delay, interval = signal.getitimer(signal.ITIMER_REAL)
+    except (OSError, RuntimeError, ValueError):
+        raise AcquisitionStopped('supplemental_deadline_interrupt_unavailable') from None
+    if delay > 0 or interval > 0:
+        raise AcquisitionStopped('supplemental_deadline_alarm_conflict')
+
+
+@contextmanager
+def _interruptible_deadline(journal):
+    """Interrupt blocking HTTP I/O at the journal's existing absolute deadline."""
+    _check_deadline_interrupt_support()
+    remaining = journal.remaining()
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    handler_installed = False
+
+    def expire(_signum, _frame):
+        try:
+            journal.remaining()
+        except AcquisitionStopped:
+            raise
+        raise AcquisitionStopped('supplemental_wall_deadline')
+
+    try:
+        try:
+            signal.signal(signal.SIGALRM, expire)
+            handler_installed = True
+            signal.setitimer(signal.ITIMER_REAL, remaining)
+        except (OSError, RuntimeError, ValueError):
+            raise AcquisitionStopped('supplemental_deadline_interrupt_unavailable') from None
+        yield remaining
+    finally:
+        if handler_installed:
+            try:
+                signal.setitimer(signal.ITIMER_REAL, 0)
+            finally:
+                signal.signal(signal.SIGALRM, previous_handler)
+
+
 class ExclusiveAccountingLock:
     """Use the existing HP development lock to serialize both accounting roots."""
     def __init__(self, target_root, journal):
@@ -725,6 +774,7 @@ class SupplementalBudget:
             delay = max(0.0, 0.6 - (self.monotonic() - self.last_request))
             if delay:
                 self.sleeper(min(delay, self.journal.remaining()))
+        _check_deadline_interrupt_support()
         self._slot_reserve(identity)
         self.journal.retention_reservation = BODY_CAP
         attempt_id = f"supp-{len([e for e in self.journal.events if e['event']=='attempt_reserved'])+1:04d}"
@@ -736,29 +786,30 @@ class SupplementalBudget:
         received = 0
         eof = False
         try:
-            if self.lock is not None:
-                self.lock.assert_held()
-            timeout = min(20.0, self.journal.remaining())
-            with self.opener(request, timeout=timeout) as response:
-                chunks = []
-                while True:
+            with _interruptible_deadline(self.journal) as remaining:
+                if self.lock is not None:
+                    self.lock.assert_held()
+                timeout = min(20.0, remaining)
+                with self.opener(request, timeout=timeout) as response:
+                    chunks = []
+                    while True:
+                        self.journal.remaining()
+                        if received == BODY_CAP:
+                            # The reservation is a hard read ceiling. Once it is
+                            # consumed, EOF cannot be proven without reading an
+                            # uncharged byte, so keep the full reservation unknown.
+                            raise AcquisitionStopped('supplemental_response_at_cap_eof_unproven')
+                        chunk = response.read(min(65536, BODY_CAP - received))
+                        if not chunk:
+                            eof = True
+                            break
+                        received += len(chunk)
+                        if received > BODY_CAP:
+                            raise AcquisitionStopped('supplemental_response_at_cap')
+                        chunks.append(chunk)
+                    raw = b''.join(chunks)
+                    projected = project(raw, response)
                     self.journal.remaining()
-                    if received == BODY_CAP:
-                        # The reservation is a hard read ceiling. Once it is
-                        # consumed, EOF cannot be proven without reading an
-                        # uncharged byte, so keep the full reservation unknown.
-                        raise AcquisitionStopped('supplemental_response_at_cap_eof_unproven')
-                    chunk = response.read(min(65536, BODY_CAP - received))
-                    if not chunk:
-                        eof = True
-                        break
-                    received += len(chunk)
-                    if received > BODY_CAP:
-                        raise AcquisitionStopped('supplemental_response_at_cap')
-                    chunks.append(chunk)
-                raw = b''.join(chunks)
-                projected = project(raw, response)
-                self.journal.remaining()
             cached_bytes = encoded(projected)
             self._check_storage(len(cached_bytes))
             cache_name = f'response-{attempt_id}.json'

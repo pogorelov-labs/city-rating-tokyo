@@ -1,7 +1,11 @@
-import hashlib
 import fcntl
+import hashlib
+import http.client
 import json
+import signal
+import socket
 import threading
+import time
 import urllib.error
 import urllib.parse
 from datetime import datetime, timedelta, timezone
@@ -617,6 +621,177 @@ def test_response_completion_after_utc_deadline_stays_unknown(tmp_path, monkeypa
     assert journal.unresolved_attempts() == ['supp-0001']
     assert budget.body_used() == 214 + supplemental.BODY_CAP
     assert not list(output.glob('response-*'))
+
+
+@pytest.mark.skipif(not hasattr(signal, 'SIGALRM')
+                    or not hasattr(signal, 'ITIMER_REAL')
+                    or not hasattr(signal, 'setitimer')
+                    or not hasattr(socket, 'socketpair'),
+                    reason='requires local sockets and interruptible real-time signal timers')
+def test_itimer_interrupts_local_httpresponse_buffered_read_at_deadline(
+        tmp_path, monkeypatch):
+    monkeypatch.setattr(supplemental, 'WALL_SECONDS', 0.5)
+    target = tmp_path/'target-v4'
+    phase = target/'hp_development'
+    phase.mkdir(parents=True)
+    (phase/'.reader.lock').write_bytes(b'')
+    output = tmp_path/'supplemental-v1'
+    identity = 'hp:other:1:' + 'f' * 64
+    start = datetime(2026, 10, 17, 12, 0, tzinfo=timezone.utc)
+
+    class RunningClock:
+        def __init__(self):
+            self.anchor = time.monotonic()
+
+        def elapsed(self):
+            return time.monotonic()-self.anchor
+
+        def now(self):
+            return start+timedelta(seconds=self.elapsed())
+
+        def mono(self):
+            return 1000.0+self.elapsed()
+
+        def sleep(self, seconds):
+            time.sleep(seconds)
+
+    client_sock, server_sock = socket.socketpair()
+    stop_server = threading.Event()
+    body_may_start = threading.Event()
+    headers_sent = threading.Event()
+    body_bytes_sent = [0]
+
+    def serve_slow_response():
+        try:
+            server_sock.sendall(
+                b'HTTP/1.1 200 OK\r\nContent-Length: 1048576\r\n'
+                b'Connection: keep-alive\r\n\r\n')
+            headers_sent.set()
+            body_may_start.wait(1)
+            while not stop_server.is_set():
+                server_sock.sendall(b'x'*1024)
+                body_bytes_sent[0] += 1024
+                time.sleep(0.012)
+        except OSError:
+            pass
+
+    server = threading.Thread(target=serve_slow_response, name='local-http-drip', daemon=True)
+    server.start()
+    try:
+        assert headers_sent.wait(1)
+        clock = RunningClock()
+        journal = supplemental.Journal(
+            output, resume=False, now=clock.now, monotonic=clock.mono)
+        deadline = journal.deadline
+        limits = {'attempts': 400, 'response_body_bytes': supplemental.HP_BODY_LIMIT,
+                  'successful_pages': 320, 'pages_per_station': 50,
+                  'response_bytes': supplemental.BODY_CAP, 'socket_seconds': 20,
+                  'minimum_request_interval_seconds': 0.6}
+        read_started = threading.Event()
+        read_finished = threading.Event()
+        read_clock = {}
+        project_calls = []
+
+        class TrackingHTTPResponse(http.client.HTTPResponse):
+            def read(self, amt=None):
+                read_clock['start'] = time.monotonic()
+                read_started.set()
+                try:
+                    return super().read(amt)
+                finally:
+                    read_clock['finish'] = time.monotonic()
+                    read_finished.set()
+
+        opener_timeouts = []
+        socket_timeouts = []
+
+        def local_http_opener(_request, timeout):
+            opener_timeouts.append(timeout)
+            # Keep the socket inactivity timeout well beyond D so this test
+            # proves ITIMER_REAL, rather than socket timeout, interrupts read.
+            socket_timeout = timeout+5.0
+            socket_timeouts.append(socket_timeout)
+            client_sock.settimeout(socket_timeout)
+            response = TrackingHTTPResponse(client_sock)
+            response.begin()
+            body_may_start.set()
+            return response
+
+        budget = supplemental.SupplementalBudget(
+            output, target, limits, journal, opener=local_http_opener,
+            sleeper=clock.sleep, monotonic=clock.mono,
+            original_ledger={'attempts': []},
+            diagnostic_identity=supplemental.EXCEPTIONAL_IDENTITY)
+        accounting_lock = supplemental.ExclusiveAccountingLock(target, journal)
+        budget.lock = accounting_lock
+        previous_handler = signal.getsignal(signal.SIGALRM)
+        assert signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0)
+        try:
+            with pytest.raises(AcquisitionStopped, match='supplemental_wall_deadline'):
+                with accounting_lock:
+                    journal.lock_check = accounting_lock.assert_held
+                    budget.fetch(identity, object(),
+                                 lambda raw, _response: project_calls.append(raw),
+                                 kind='page')
+        finally:
+            stop_server.set()
+            body_may_start.set()
+            client_sock.close()
+            server_sock.close()
+            server.join(timeout=2)
+
+        assert not server.is_alive(), 'local HTTP server thread leaked'
+        assert accounting_lock.stream.closed
+        probe = (phase/'.reader.lock').open('rb')
+        try:
+            fcntl.flock(probe, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            fcntl.flock(probe, fcntl.LOCK_UN)
+        finally:
+            probe.close()
+        assert opener_timeouts and 0 < opener_timeouts[0] <= 0.5
+        assert socket_timeouts == [opener_timeouts[0]+5.0]
+        assert read_started.is_set() and read_finished.is_set()
+        assert 0.3 <= read_clock['finish']-read_clock['start'] < 1.0
+        assert 0 < body_bytes_sent[0] < 65536
+        assert clock.now() >= deadline-timedelta(milliseconds=50)
+        assert project_calls == []
+        assert journal.unresolved_attempts() == ['supp-0001']
+        assert budget.body_used() == 214 + supplemental.BODY_CAP
+        assert not list(output.glob('response-*'))
+        assert [event['event'] for event in journal.events].count('run_started') == 1
+        assert signal.getsignal(signal.SIGALRM) == previous_handler
+        assert signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0)
+    finally:
+        stop_server.set()
+        body_may_start.set()
+        client_sock.close()
+        server_sock.close()
+        server.join(timeout=2)
+
+
+def test_non_main_thread_fails_closed_before_supplemental_attempt_reservation(
+        tmp_path, monkeypatch):
+    identity = 'hp:other:1:' + '1' * 64
+    _target, _output, _clock, journal, budget = make_budget(
+        tmp_path, monkeypatch, identity=identity)
+    opener_calls, errors = [], []
+    budget.opener = lambda *_a, **_k: opener_calls.append(1)
+
+    def fetch_from_worker():
+        try:
+            budget.fetch(identity, object(), lambda raw, _response: json.loads(raw), kind='page')
+        except BaseException as exc:
+            errors.append(exc)
+
+    worker = threading.Thread(target=fetch_from_worker)
+    worker.start()
+    worker.join(timeout=5)
+    assert not worker.is_alive()
+    assert len(errors) == 1
+    assert isinstance(errors[0], AcquisitionStopped)
+    assert errors[0].args == ('supplemental_deadline_interrupt_unavailable',)
+    assert not opener_calls
+    assert not any(event['event'] == 'attempt_reserved' for event in journal.events)
 
 
 def test_page_admission_after_absolute_deadline_is_rejected(tmp_path, monkeypatch):
