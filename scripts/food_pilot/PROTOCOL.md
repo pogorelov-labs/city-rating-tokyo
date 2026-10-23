@@ -11,28 +11,42 @@ stopped.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
-## Confirmation-only deadline amendment (2026-10-22)
+## Confirmation-only deadline amendment (V22; 2026-10-23)
 
-The owner instruction for PR141 is: “Implement the confirmation-only amendment
-through October 23, 00:00 UTC for all 13 candidates, preserving V20 evidence and
-existing budgets. Add offline tests and complete exact-head review and CI. Do
-not activate acquisition.” This authorizes implementation only; it is not an
-activation or permission to acquire data.
+The owner instruction for PR141 is to implement the reviewed confirmation-only
+amendment through October 24, 00:00 UTC for the same 13 candidates, preserving
+budgets, evidence, and original eligibility windows; add offline tests and
+complete exact-head review and CI; do not activate acquisition. The
+implementation-only decision is recorded as CRTKY-194
+(`OWNER-OCT24-IMPLEMENT-20261023`). It is not an activation or permission to
+acquire data.
 
 Keep `source_window.core_hp_complete_before` at `2026-10-22T00:00:00Z` for every
 phase other than `hp_confirmation`. The successor adds a separate, strict
-`confirmation_completion_before` of `2026-10-23T00:00:00Z`; equality is rejected.
-For a future authorized run, capture a fresh UTC T0 at command invocation and
-enforce `D = min(T0 + 1,800 seconds, confirmation_completion_before)` from
-preflight through finalization. A same-run resume retains the original T0 and D.
-The run must also stay inside each candidate's original 24–72 hour interval and
-the certified batch intersection `[2026-10-22T08:37:46.527802Z,
+`confirmation_completion_before` of `2026-10-24T00:00:00Z`; equality is rejected.
+V22 must directly supersede the exact approved V21 manifest/archive SHA-256
+`75ea8de2b9cfb390fd116a46a976e2f36b12af452960d05b91ac23cd99ee1948`, preserve
+its runtime code-map SHA-256 `00d26dd768479afbf268643de9bb158a351fc6bde3b3ed69622190bd5d994bb2`
+and compact amendment SHA-256
+`ccb84fcc9b7f8e7a27da6d6204aa2b943f347d98bfc6bee92712decd55322c91`, and carry the nested V20
+manifest/archive SHA-256 `98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb`
+unchanged. V21's expired operational authority is not reusable.
+
+Only the first issuance of a genuinely new, separately authorized execution
+intent may capture a fresh UTC T0, before fallible preflight. Its first durable
+owner preparation intent fixes T0 and D. If a valid owner intent already holds
+T0/D, every retry or resume must reuse it or reject; it cannot rebase or extend
+the window. Enforce `D = min(T0 + 1,800 seconds,
+confirmation_completion_before)` from preflight through finalization. The run
+must also stay inside each candidate's original 24–72 hour interval and the
+certified batch intersection `[2026-10-22T08:37:46.527802Z,
 2026-10-24T08:34:49.296391Z)`. These per-candidate and batch checks remain
 independent of the new earlier completion deadline.
 
-The successor is derived from the immutable V20 manifest and archive, both
-SHA-256 `98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb`,
-and V20 runtime code-map digest
+V22 carries forward the V21 `historical_v20` handoff unchanged. It pins the
+immutable V20 manifest and archive, both SHA-256
+`98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb`, and V20
+runtime code-map digest
 `246c2f0e276bfb2d7f9e6295539aef0ad7a9ce213b960498e613082401448292`. Its
 read-only historical input is the V20 `hp_prescreen` envelope with opaque
 SHA-256 `69217f88ac70d677a816fc3e31ec2fbcbe2868f4bfd60c56f0e3d6c5de1b44ff`,
@@ -45,7 +59,7 @@ current-manifest result or rewritten.
 
 The `hp_confirmation` output root must equal the successor's pinned V20
 `historical_v20.artifact_root`; phase data is written only to its
-`hp_confirmation` child. Before any usable confirmation intent, pre-reserve six
+`hp_confirmation` child. A future V22 activation must pre-reserve six
 fixed 4,096-byte files as direct children of that ART root: allocation
 descriptor, owner preparation intent, root preparation intent, burn claim,
 final owner execution receipt, and final root release receipt. The allocation
@@ -55,9 +69,10 @@ SHA-256 of the approved non-runnable execution intent. The pool totals 24,576
 bytes. The padded slot contents are rewritten in place; no temporary receipt,
 sidecar or duplicate slot is allowed.
 
-The activation workflow issuer captures factual UTC T0 before fallible checks.
-The first durable owner preparation intent binds T0 and
-`D = min(T0 + 1,800 seconds, 2026-10-23T00:00:00Z)`; it is not runnable by the
+The future activation workflow issuer captures factual UTC T0 before fallible
+checks, only for a new separately authorized execution intent. The first durable
+owner preparation intent binds T0 and
+`D = min(T0 + 1,800 seconds, 2026-10-24T00:00:00Z)`; it is not runnable by the
 source consumer. The root preparation intent must bind the same execution-intent
 SHA, T0/D, allocation descriptor and owner-intent hash. A contender reloads all
 six slots under the common ART lock and uses a durable owner intent's original

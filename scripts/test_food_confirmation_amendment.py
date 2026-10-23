@@ -1,4 +1,4 @@
-"""Offline controls for the prospective V20 confirmation-only amendment."""
+"""Offline controls for the prospective V22 confirmation-only amendment."""
 import copy
 import hashlib
 import json
@@ -16,6 +16,7 @@ from food_pilot.bounded import AcquisitionStopped
 
 
 HEAD = 'a' * 40
+V21_HEAD = 'b' * 40
 EXECUTION_INTENT_SHA256 = 'e' * 64
 
 
@@ -108,8 +109,26 @@ def synthetic_handoff(tmp_path, monkeypatch, checkpoint_edit=None, total_retaine
     archive_path.write_bytes(archive_raw)
     prescreen_path.write_bytes(prescreen_raw)
     checkpoint_path.write_bytes(checkpoint_raw)
-    successor = manifest_contract.make_confirmation_successor(
-        source_raw, artifact_root=artifact_root, runtime_root=run.ROOT, code_head=HEAD)
+    v21 = manifest_contract.make_v21_test_predecessor(
+        source_raw, artifact_root=artifact_root, runtime_root=run.ROOT, code_head=V21_HEAD)
+    v21_raw = manifest_contract.canonical_manifest_bytes(v21)
+    v21_archive_raw = v21_raw
+    v21_artifact_root = tmp_path/'v21-artifacts'
+    v21_artifact_root.mkdir()
+    v21_manifest_path = v21_artifact_root/'final-manifest-v21.json'
+    v21_archive_path = v21_artifact_root/'final-manifest-v21.archive.json'
+    v21_manifest_path.write_bytes(v21_raw)
+    v21_archive_path.write_bytes(v21_archive_raw)
+    monkeypatch.setattr(manifest_contract, 'V21_MANIFEST_SHA256', sha(v21_raw))
+    monkeypatch.setattr(manifest_contract, 'V21_ARCHIVE_SHA256', sha(v21_archive_raw))
+    monkeypatch.setattr(manifest_contract, 'V21_CODE_MAP_SHA256',
+                        manifest_contract.canonical_code_map_sha256(v21['code_sha256']))
+    monkeypatch.setattr(manifest_contract, 'V21_AMENDMENT_SHA256',
+                        manifest_contract.canonical_compact_sha256(v21['confirmation_amendment']))
+    monkeypatch.setattr(manifest_contract, 'V21_GIT_HEAD', V21_HEAD)
+    successor = manifest_contract.make_confirmation_successor_v22(
+        v21_raw, v21_archive_raw, artifact_root=v21_artifact_root,
+        runtime_root=run.ROOT, code_head=HEAD)
     successor_path = tmp_path/'successor-manifest.json'
     successor_raw = manifest_contract.canonical_manifest_bytes(successor)
     successor_path.write_bytes(successor_raw)
@@ -118,6 +137,9 @@ def synthetic_handoff(tmp_path, monkeypatch, checkpoint_edit=None, total_retaine
         source_path=source_path, archive_path=archive_path, archive_raw=archive_raw,
         prescreen_path=prescreen_path, prescreen_raw=prescreen_raw,
         checkpoint_path=checkpoint_path, checkpoint=checkpoint,
+        v21=v21, v21_raw=v21_raw, v21_archive_raw=v21_archive_raw,
+        v21_artifact_root=v21_artifact_root,
+        v21_manifest_path=v21_manifest_path, v21_archive_path=v21_archive_path,
         checkpoint_raw=checkpoint_raw, successor=successor,
         successor_path=successor_path, successor_raw=successor_raw,
         successor_sha=sha(successor_raw), candidate_ids=candidate_ids,
@@ -265,10 +287,10 @@ def replace_authorization_pair(f, owner_path, gate_path, owner, gate):
 
 def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
-    assert f.successor['version'] == 'v21'
-    assert f.successor['supersedes_manifest_sha256'] == sha(f.source_raw)
+    assert f.successor['version'] == 'v22'
+    assert f.successor['supersedes_manifest_sha256'] == sha(f.v21_raw)
     assert f.successor['source_window']['core_hp_complete_before'] == '2026-10-22T00:00:00Z'
-    assert f.successor['confirmation_amendment']['confirmation_completion_before'] == '2026-10-23T00:00:00Z'
+    assert f.successor['confirmation_amendment']['confirmation_completion_before'] == '2026-10-24T00:00:00Z'
     assert f.successor['reviewed_execution_scope'] == ['hp_confirmation']
     assert f.successor['budgets'] == f.source['budgets']
     assert f.successor['budgets']['hp_confirmation'] == {
@@ -289,6 +311,38 @@ def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monk
     assert f.successor['confirmation_amendment']['authority']['implementation_approval_is_not_activation'] is True
     assert f.successor['confirmation_amendment']['control_pool_contract']['slot_bytes'] == 4096
     assert f.successor['confirmation_amendment']['control_pool_contract']['total_bytes'] == 24576
+    v21 = f.successor['confirmation_amendment']['historical_v21']
+    assert v21['manifest_sha256'] == sha(f.v21_raw)
+    assert v21['archive_sha256'] == sha(f.v21_archive_raw)
+    assert v21['code_map_sha256'] == manifest_contract.V21_CODE_MAP_SHA256
+    assert f.successor['confirmation_amendment']['historical_v20'] == f.v21['confirmation_amendment']['historical_v20']
+    assert f.successor['confirmation_amendment']['predecessor_operational_authority_reusable'] is False
+
+
+def test_v22_accepts_only_exact_direct_v21_lineage_and_rejects_v21_authority(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    amendment = run.checked_confirmation_amendment(f.successor)
+    assert amendment['confirmation_completion_before'] == '2026-10-24T00:00:00Z'
+    assert f.successor['supersedes_manifest_sha256'] == sha(f.v21_raw)
+    with pytest.raises(AcquisitionStopped, match='confirmation_amendment_required_or_invalid'):
+        run.checked_confirmation_amendment(f.v21)
+    with pytest.raises(AcquisitionStopped, match='confirmation_amendment_required_or_invalid'):
+        run.checked_confirmation_gate(
+            tmp_path/'old-v21-gate.json', tmp_path/'old-v21-owner.json', f.v21,
+            sha(f.v21_raw), V21_HEAD, f.artifact_root,
+            datetime(2026, 10, 23, 12, 0, tzinfo=timezone.utc))
+
+    changed_archive = f.v21_archive_raw+b'changed'
+    f.v21_archive_path.write_bytes(changed_archive)
+    with pytest.raises(AcquisitionStopped, match='confirmation_v21_predecessor_hash'):
+        run.checked_confirmation_handoff(
+            f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+            f.v21_manifest_path, f.v21_archive_path, HEAD)
+
+    changed_successor = copy.deepcopy(f.successor)
+    changed_successor['supersedes_manifest_sha256'] = sha(f.source_raw)
+    with pytest.raises(AcquisitionStopped, match='confirmation_amendment_required_or_invalid'):
+        run.checked_confirmation_amendment(changed_successor)
 
 
 def test_control_pool_pre_reserves_all_bytes_and_pins_exact_execution_intent(tmp_path, monkeypatch):
@@ -436,6 +490,7 @@ def test_preparation_intents_alone_are_not_runnable_by_actual_cli(tmp_path, monk
         '--owner-activation', str(pool['paths']['final_owner_execution_receipt']),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ])
     with pytest.raises(AcquisitionStopped, match='confirmation_activation_claim_missing'):
@@ -577,7 +632,8 @@ def test_control_slot_schema_version_rejects_bool_and_float(tmp_path, monkeypatc
 def test_historical_handoff_uses_checkpoint_and_opaque_result_hash(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     prior, checkpoint = run.checked_confirmation_handoff(
-        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+        f.v21_manifest_path, f.v21_archive_path, HEAD)
     assert f.prescreen_raw.startswith(b'opaque')
     assert [row['slug'] for row in prior['stations']] == f.candidate_ids
     assert run.confirmation_checkpoint(prior) == checkpoint['zero_confirmation']
@@ -587,11 +643,13 @@ def test_historical_handoff_rejects_current_prior_path_and_changed_checkpoint(tm
     f = synthetic_handoff(tmp_path, monkeypatch)
     with pytest.raises(AcquisitionStopped, match='confirmation_v20_prescreen_path'):
         run.checked_confirmation_handoff(
-            f.successor, f.successor_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+            f.successor, f.successor_path, f.checkpoint_path, f.source_path, f.archive_path,
+            f.v21_manifest_path, f.v21_archive_path, HEAD)
     f.checkpoint_path.write_bytes(f.checkpoint_raw+b'changed')
     with pytest.raises(AcquisitionStopped, match='confirmation_v20_checkpoint_hash'):
         run.checked_confirmation_handoff(
-            f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+            f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+            f.v21_manifest_path, f.v21_archive_path, HEAD)
 
 
 def test_historical_handoff_rejects_checkpoint_order_even_with_matching_pinned_hash(tmp_path, monkeypatch):
@@ -602,7 +660,8 @@ def test_historical_handoff_rejects_checkpoint_order_even_with_matching_pinned_h
     f = synthetic_handoff(tmp_path, monkeypatch, checkpoint_edit=reverse_candidates)
     with pytest.raises(AcquisitionStopped, match='confirmation_checkpoint_order_or_status'):
         run.checked_confirmation_handoff(
-            f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+            f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+            f.v21_manifest_path, f.v21_archive_path, HEAD)
 
 
 def test_confirmation_gate_requires_exact_head_manifest_map_and_single_phase(tmp_path, monkeypatch):
@@ -691,7 +750,7 @@ def test_confirmation_t0_uses_minimum_of_wall_and_absolute_deadline(tmp_path, mo
 
     near_tmp = tmp_path/'near-cutoff'
     f_near = synthetic_handoff(near_tmp, monkeypatch)
-    near_cutoff = datetime(2026, 10, 22, 23, 50, tzinfo=timezone.utc)
+    near_cutoff = datetime(2026, 10, 23, 23, 50, tzinfo=timezone.utc)
     near_owner_path, near_gate_path, near_owner, _ = authorization_files(
         f_near, near_tmp, f_near.artifact_root, near_cutoff)
     near_phase = run._confirmation_phase_directory(f_near.artifact_root)
@@ -710,8 +769,12 @@ def test_confirmation_t0_uses_minimum_of_wall_and_absolute_deadline(tmp_path, mo
     _started, deadline, remaining = run._confirmation_run_window(
         near_args, f_near.successor_sha, near_cutoff, phase_dir=near_phase,
         claim_binding=near_binding, claim_path=near_claim)
-    assert deadline == datetime(2026, 10, 23, 0, 0, tzinfo=timezone.utc)
+    assert deadline == datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
     assert remaining == 600
+    _started, _deadline, remaining = run._confirmation_run_window(
+        near_args, f_near.successor_sha, deadline-timedelta(microseconds=1),
+        phase_dir=near_phase, claim_binding=near_binding, claim_path=near_claim)
+    assert remaining == pytest.approx(0.000001)
     for expired in (deadline, deadline+timedelta(minutes=1)):
         with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
             run._confirmation_run_window(
@@ -821,6 +884,7 @@ def test_failed_confirmation_preflight_cannot_reset_activation_t0(tmp_path, monk
             '--prior-prescreen', str(f.prescreen_path),
             '--prior-checkpoint', str(prior_checkpoint or f.checkpoint_path),
             '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+            '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
             '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
         ]
         if resume:
@@ -902,7 +966,8 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
         claim_root=f.artifact_root)
 
     prior, checkpoint = run.checked_confirmation_handoff(
-        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+        f.v21_manifest_path, f.v21_archive_path, HEAD)
     windows = {f"hp:{row['slug']}:": (row['eligible_from'], row['eligible_until'])
                for row in checkpoint['zero_confirmation']['candidates']}
     completion_window = (checkpoint['zero_confirmation']['batch_eligible_from'],
@@ -942,6 +1007,7 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root), '--resume',
     ])
     reason = ('confirmation_run_already_finalized' if terminal_state == 'complete'
@@ -955,7 +1021,8 @@ def test_confirmation_resume_rechecks_terminal_ledger_under_lock(
 def test_confirmation_candidate_and_batch_windows_are_half_open(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     prior, _ = run.checked_confirmation_handoff(
-        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path, HEAD)
+        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+        f.v21_manifest_path, f.v21_archive_path, HEAD)
     challenge = f.successor['challenge']['order']
     batch_start = datetime.fromisoformat('2026-10-22T08:37:46.527802+00:00')
     batch_end = datetime.fromisoformat('2026-10-24T08:34:49.296391+00:00')
@@ -997,8 +1064,19 @@ def test_budget_enforces_confirmation_completion_end_and_absolute_deadline(monke
         budget.check_completion()
     now[0] = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
     budget.check_window('hp:emi:page1')
-    budget.absolute_deadline = datetime(2026, 10, 23, 0, 0, tzinfo=timezone.utc)
+    budget.identity_windows = {}
+    budget.completion_window = None
+    budget.absolute_deadline = datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
+    now[0] = budget.absolute_deadline-timedelta(microseconds=1)
+    budget.check_window()
+    budget.check_completion()
+    assert budget.remaining() > 0
     now[0] = budget.absolute_deadline
+    with pytest.raises(AcquisitionStopped, match='absolute_source_deadline'):
+        budget.check_window()
+    with pytest.raises(AcquisitionStopped, match='absolute_source_deadline'):
+        budget.check_completion()
+    now[0] += timedelta(microseconds=1)
     with pytest.raises(AcquisitionStopped, match='absolute_source_deadline'):
         budget.check_completion()
 
@@ -1038,8 +1116,8 @@ def test_budget_persists_command_t0_and_refuses_resume_window_reset(monkeypatch,
                        absolute_deadline=deadline, window_started_at=started+timedelta(seconds=1))
 
 
-def test_budget_final_ledger_commit_crossing_deadline_persists_rejection(monkeypatch, tmp_path):
-    now = [datetime(2026, 10, 22, 9, 0, 5, tzinfo=timezone.utc)]
+def test_budget_final_ledger_commit_at_v22_cutoff_persists_rejection(monkeypatch, tmp_path):
+    now = [datetime(2026, 10, 23, 23, 30, 5, tzinfo=timezone.utc)]
     mono = [100.0]
     real_datetime = bounded.datetime
     real_save_ledger = bounded.save_ledger
@@ -1053,13 +1131,13 @@ def test_budget_final_ledger_commit_crossing_deadline_persists_rejection(monkeyp
     def save_ledger_advancing_on_final_write(path, ledger):
         save_calls.append('save')
         if len(save_calls) == 2:
-            now[0] = datetime(2026, 10, 22, 9, 30, tzinfo=timezone.utc)
+            now[0] = datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
         return real_save_ledger(path, ledger)
 
     monkeypatch.setattr(bounded, 'datetime', ControlledDateTime)
     monkeypatch.setattr(bounded, 'time', SimpleNamespace(monotonic=lambda: mono[0]))
     monkeypatch.setattr(bounded, 'save_ledger', save_ledger_advancing_on_final_write)
-    started = datetime(2026, 10, 22, 9, 0, tzinfo=timezone.utc)
+    started = datetime(2026, 10, 23, 23, 30, tzinfo=timezone.utc)
     deadline = started+timedelta(seconds=1800)
     directory = tmp_path/'budget-final-ledger'
     budget = bounded.Budget(directory, copy.deepcopy(manifest_contract.CONFIRMATION_BUDGET),
@@ -1150,6 +1228,7 @@ def test_real_cli_art_lock_delay_past_does_not_start_consumer_or_dispatch(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ])
     with pytest.raises(AcquisitionStopped, match='confirmation_completion_deadline_expired'):
@@ -1444,6 +1523,7 @@ def test_run_main_uses_all_thirteen_and_confirmation_deadline_without_network(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(output_root),
     ])
     run.main()
@@ -1561,6 +1641,7 @@ def test_run_main_finalization_crossing_deadline_never_reports_complete(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(output_root),
     ])
     with pytest.raises(AcquisitionStopped):
@@ -1628,6 +1709,7 @@ def test_real_cli_rejects_late_final_ledger_commit_and_resume(tmp_path, monkeypa
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ])
     with pytest.raises(AcquisitionStopped, match='absolute_source_deadline'):
@@ -1683,6 +1765,7 @@ def test_run_main_rejects_arbitrary_confirmation_root_before_output(
         '--owner-activation', str(tmp_path/'unused-owner.json'),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(sibling),
     ])
     with pytest.raises(AcquisitionStopped, match='confirmation_artifact_root_mismatch'):
@@ -1727,6 +1810,7 @@ def test_run_main_rejects_confirmation_phase_symlink_before_ledger_or_budget(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ]
     monkeypatch.setattr('sys.argv', argv)
@@ -1781,6 +1865,7 @@ def test_run_main_terminalizes_non_directory_phase_path_in_art_control_slot(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ]
     monkeypatch.setattr('sys.argv', argv)
@@ -1840,6 +1925,7 @@ def test_run_main_global_retention_counts_common_art_root_files(tmp_path, monkey
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ])
     with pytest.raises(AcquisitionStopped, match='total_retained_budget'):
@@ -1890,6 +1976,7 @@ def test_run_main_global_cap_restoration_reuses_original_claim_window(
         '--execution-gate', str(gate_path), '--owner-activation', str(owner_path),
         '--prior-prescreen', str(f.prescreen_path), '--prior-checkpoint', str(f.checkpoint_path),
         '--prior-v20-manifest', str(f.source_path), '--prior-v20-archive', str(f.archive_path),
+        '--prior-v21-manifest', str(f.v21_manifest_path), '--prior-v21-archive', str(f.v21_archive_path),
         '--phase', 'hp_confirmation', '--output-root', str(f.artifact_root),
     ]
     monkeypatch.setattr('sys.argv', argv)
@@ -1914,8 +2001,8 @@ def test_run_main_global_cap_restoration_reuses_original_claim_window(
 
 def test_nonconfirmation_phase_keeps_original_global_cutoff(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
-    source = f.source
-    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (source, sha(f.source_raw)))
+    source = f.successor
+    monkeypatch.setattr(run, 'checked_manifest', lambda _path: (source, f.successor_sha))
     monkeypatch.setattr(run, 'checked_gate', lambda *_args: None)
     now = [datetime(2026, 10, 22, 0, 0, tzinfo=timezone.utc)]
     real_datetime = run.datetime
@@ -1927,7 +2014,7 @@ def test_nonconfirmation_phase_keeps_original_global_cutoff(tmp_path, monkeypatc
 
     monkeypatch.setattr(run, 'datetime', ControlledDateTime)
     monkeypatch.setattr('sys.argv', [
-        'food-pilot-run', '--manifest', str(f.source_path),
+        'food-pilot-run', '--manifest', str(f.successor_path),
         '--execution-gate', str(tmp_path/'old-gate.json'), '--phase', 'overture_metadata',
         '--output-root', str(tmp_path/'non-confirmation-output'),
     ])

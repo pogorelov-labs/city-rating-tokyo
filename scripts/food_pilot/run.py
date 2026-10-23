@@ -131,10 +131,20 @@ def _utc(value, reason='confirmation_timestamp_invalid'):
 
 def checked_confirmation_amendment(manifest):
     amendment = manifest.get('confirmation_amendment')
-    if (not isinstance(amendment, dict)
+    historical_v21 = amendment.get('historical_v21') if isinstance(amendment, dict) else None
+    if (manifest.get('version') != 'v22'
+            or manifest.get('supersedes_manifest_sha256') != manifest_contract.V21_MANIFEST_SHA256
+            or not isinstance(amendment, dict)
             or amendment.get('schema_version') != 1
             or amendment.get('source_cutoff') != manifest_contract.CORE_SOURCE_CUTOFF
             or amendment.get('confirmation_completion_before') != manifest_contract.CONFIRMATION_COMPLETION_BEFORE
+            or amendment.get('predecessor_operational_authority_reusable') is not False
+            or not isinstance(historical_v21, dict)
+            or historical_v21.get('manifest_sha256') != manifest_contract.V21_MANIFEST_SHA256
+            or historical_v21.get('archive_sha256') != manifest_contract.V21_ARCHIVE_SHA256
+            or historical_v21.get('code_map_sha256') != manifest_contract.V21_CODE_MAP_SHA256
+            or historical_v21.get('amendment_sha256') != manifest_contract.V21_AMENDMENT_SHA256
+            or historical_v21.get('git_head') != manifest_contract.V21_GIT_HEAD
             or amendment.get('allowed_phases') != ['hp_confirmation']
             or amendment.get('requires_fresh_exact_head_manifest_code_owner_root_release') is not True
             or amendment.get('v20_remains_insufficient') is not True
@@ -1090,12 +1100,22 @@ def _bound_file(path, expected_path, reason):
 
 
 def checked_confirmation_handoff(manifest, prior_prescreen_path, prior_checkpoint_path,
-                                 prior_v20_manifest_path, prior_v20_archive_path, head):
-    """Validate the pinned historical V20 artifacts without parsing its result payload."""
+                                 prior_v20_manifest_path, prior_v20_archive_path,
+                                 prior_v21_manifest_path, prior_v21_archive_path, head):
+    """Validate the direct V21 predecessor and preserved historical V20 handoff."""
     amendment = checked_confirmation_amendment(manifest)
     handoff = amendment.get('historical_v20')
+    handoff_v21 = amendment.get('historical_v21')
     if not isinstance(handoff, dict):
         raise AcquisitionStopped('confirmation_historical_handoff_missing')
+    if not isinstance(handoff_v21, dict):
+        raise AcquisitionStopped('confirmation_v21_historical_handoff_missing')
+    v21_manifest_path = _bound_file(
+        prior_v21_manifest_path, handoff_v21.get('manifest_path'),
+        'confirmation_v21_manifest_path')
+    v21_archive_path = _bound_file(
+        prior_v21_archive_path, handoff_v21.get('archive_path'),
+        'confirmation_v21_archive_path')
     manifest_path = _bound_file(prior_v20_manifest_path, handoff.get('manifest_path'),
                                 'confirmation_v20_manifest_path')
     archive_path = _bound_file(prior_v20_archive_path, handoff.get('archive_path'),
@@ -1105,6 +1125,13 @@ def checked_confirmation_handoff(manifest, prior_prescreen_path, prior_checkpoin
     checkpoint_path = _bound_file(prior_checkpoint_path, handoff.get('control_checkpoint_path'),
                                   'confirmation_v20_checkpoint_path')
     try:
+        v21_manifest_raw = v21_manifest_path.read_bytes()
+        v21_archive_raw = v21_archive_path.read_bytes()
+        if (hashlib.sha256(v21_manifest_raw).hexdigest() != manifest_contract.V21_MANIFEST_SHA256
+                or hashlib.sha256(v21_archive_raw).hexdigest() != manifest_contract.V21_ARCHIVE_SHA256
+                or v21_manifest_raw != v21_archive_raw):
+            raise AcquisitionStopped('confirmation_v21_predecessor_hash')
+        v21_predecessor = json.loads(v21_manifest_raw)
         manifest_raw = manifest_path.read_bytes()
         if hashlib.sha256(manifest_raw).hexdigest() != manifest_contract.V20_MANIFEST_SHA256:
             raise AcquisitionStopped('confirmation_v20_manifest_hash')
@@ -1126,12 +1153,16 @@ def checked_confirmation_handoff(manifest, prior_prescreen_path, prior_checkpoin
             != manifest_contract.V20_CODE_MAP_SHA256):
         raise AcquisitionStopped('confirmation_v20_code_map_hash')
     try:
-        expected_successor = manifest_contract.make_confirmation_successor(
-            manifest_raw, artifact_root=handoff.get('artifact_root'), runtime_root=ROOT,
+        expected_successor = manifest_contract.make_confirmation_successor_v22(
+            v21_manifest_raw, v21_archive_raw,
+            artifact_root=handoff_v21.get('artifact_root'), runtime_root=ROOT,
             code_head=head)
     except (ValueError, OSError, TypeError):
         raise AcquisitionStopped('confirmation_successor_binding_invalid') from None
-    if manifest != expected_successor or handoff != expected_successor['confirmation_amendment']['historical_v20']:
+    if (manifest != expected_successor
+            or handoff != expected_successor['confirmation_amendment']['historical_v20']
+            or handoff_v21 != expected_successor['confirmation_amendment']['historical_v21']
+            or v21_predecessor.get('supersedes_manifest_sha256') != manifest_contract.V20_MANIFEST_SHA256):
         raise AcquisitionStopped('confirmation_successor_manifest_mismatch')
 
     zeroes = checkpoint.get('zero_confirmation') if isinstance(checkpoint, dict) else None
@@ -1695,6 +1726,8 @@ def main():
     parser.add_argument('--prior-checkpoint', type=Path)
     parser.add_argument('--prior-v20-manifest', type=Path)
     parser.add_argument('--prior-v20-archive', type=Path)
+    parser.add_argument('--prior-v21-manifest', type=Path)
+    parser.add_argument('--prior-v21-archive', type=Path)
     parser.add_argument('--owner-activation', type=Path)
     parser.add_argument('--overture-metadata', type=Path)
     parser.add_argument('--cache-only-admission', type=Path)
@@ -1715,7 +1748,8 @@ def main():
     if all(recovery_args) and args.overture_metadata is not None:
         parser.error('choose ordinary pinned metadata or cache-only admission, not both')
     confirmation_inputs = (args.prior_checkpoint, args.prior_v20_manifest,
-                          args.prior_v20_archive, args.owner_activation)
+                          args.prior_v20_archive, args.prior_v21_manifest,
+                          args.prior_v21_archive, args.owner_activation)
     if args.phase == 'hp_confirmation' and (args.prior_prescreen is None or any(p is None for p in confirmation_inputs)):
         raise AcquisitionStopped('confirmation_historical_handoff_and_activation_required')
     if args.phase != 'hp_confirmation' and any(p is not None for p in confirmation_inputs):
@@ -1778,7 +1812,8 @@ def main():
                                        invocation_monotonic, confirmation_monotonic_remaining)
         prior, historical_checkpoint = checked_confirmation_handoff(
             manifest, args.prior_prescreen, args.prior_checkpoint,
-            args.prior_v20_manifest, args.prior_v20_archive, head)
+            args.prior_v20_manifest, args.prior_v20_archive,
+            args.prior_v21_manifest, args.prior_v21_archive, head)
         checkpoint = confirmation_checkpoint(prior)
         if checkpoint != historical_checkpoint.get('zero_confirmation'):
             raise AcquisitionStopped('confirmation_historical_prior_checkpoint_mismatch')

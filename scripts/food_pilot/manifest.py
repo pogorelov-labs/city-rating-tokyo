@@ -16,13 +16,20 @@ RELEASE = "2026-09-23.1"
 MIB = 1024**2
 
 CORE_SOURCE_CUTOFF = "2026-10-22T00:00:00Z"
-CONFIRMATION_COMPLETION_BEFORE = "2026-10-23T00:00:00Z"
+V21_CONFIRMATION_COMPLETION_BEFORE = "2026-10-23T00:00:00Z"
+CONFIRMATION_COMPLETION_BEFORE = "2026-10-24T00:00:00Z"
 V20_ARTIFACT_ROOT = Path('/Users/ruslan/.ao/data/artifacts/city-rating-3/overture-food-shadow')
 V20_MANIFEST_SHA256 = '98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb'
 V20_ARCHIVE_SHA256 = '98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb'
 V20_CODE_MAP_SHA256 = '246c2f0e276bfb2d7f9e6295539aef0ad7a9ce213b960498e613082401448292'
 V20_PRESCREEN_SHA256 = '69217f88ac70d677a816fc3e31ec2fbcbe2868f4bfd60c56f0e3d6c5de1b44ff'
 V20_CHECKPOINT_SHA256 = '277cfbd918553cb5bd9caaf6878ab04ade46dfd713a02f067223a8a16962789d'
+V21_ARTIFACT_ROOT = Path('/Users/ruslan/.ao/data/artifacts/city-rating-8/pr141-confirmation/v21-supplemental-deadline-94e3908')
+V21_MANIFEST_SHA256 = '75ea8de2b9cfb390fd116a46a976e2f36b12af452960d05b91ac23cd99ee1948'
+V21_ARCHIVE_SHA256 = '75ea8de2b9cfb390fd116a46a976e2f36b12af452960d05b91ac23cd99ee1948'
+V21_CODE_MAP_SHA256 = '00d26dd768479afbf268643de9bb158a351fc6bde3b3ed69622190bd5d994bb2'
+V21_AMENDMENT_SHA256 = 'ccb84fcc9b7f8e7a27da6d6204aa2b943f347d98bfc6bee92712decd55322c91'
+V21_GIT_HEAD = '94e39082b44d432fea56b57ea650da3099604a75'
 V20_CANDIDATE_FIRST_COMPLETIONS = (
     ('emi', '2026-10-21T08:34:49.296391Z'),
     ('shimosa-tachibana', '2026-10-21T08:34:55.772628Z'),
@@ -80,6 +87,10 @@ def canonical_code_map_sha256(code_map):
     return digest((json.dumps(code_map, sort_keys=True, indent=2)+'\n').encode())
 
 
+def canonical_compact_sha256(value):
+    return digest(json.dumps(value, sort_keys=True, separators=(',', ':')).encode())
+
+
 def confirmation_candidate_bindings():
     rows = []
     for slug, first_complete_at in V20_CANDIDATE_FIRST_COMPLETIONS:
@@ -94,9 +105,9 @@ def confirmation_candidate_bindings():
     return rows
 
 
-def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_root=None,
-                                code_head=None):
-    """Create the frozen V21 confirmation-only successor from the exact V20 bytes."""
+def make_v21_test_predecessor(predecessor_raw, *, artifact_root=None, runtime_root=None,
+                              code_head=None):
+    """Build a synthetic V21-shaped predecessor for offline V22 tests only."""
     if digest(predecessor_raw) != V20_MANIFEST_SHA256:
         raise ValueError('V20 manifest bytes do not match the pinned predecessor')
     predecessor = json.loads(predecessor_raw)
@@ -147,7 +158,7 @@ def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_
             'implementation_approval_is_not_activation': True,
         },
         'source_cutoff': CORE_SOURCE_CUTOFF,
-        'confirmation_completion_before': CONFIRMATION_COMPLETION_BEFORE,
+        'confirmation_completion_before': V21_CONFIRMATION_COMPLETION_BEFORE,
         'git_head': code_head,
         'allowed_phases': ['hp_confirmation'],
         'requires_fresh_exact_head_manifest_code_owner_root_release': True,
@@ -184,6 +195,86 @@ def make_confirmation_successor(predecessor_raw, *, artifact_root=None, runtime_
     code_dir = runtime_root/'scripts'/'food_pilot'
     result['code_sha256'] = {str(path.relative_to(runtime_root)): digest(path.read_bytes())
                              for path in sorted(code_dir.glob('*.py'))}
+    result['state'] = 'frozen'
+    return result
+
+
+def make_confirmation_successor_v22(predecessor_raw, predecessor_archive_raw, *,
+                                    artifact_root=None, runtime_root=None, code_head=None):
+    """Create the direct V22 successor from the one approved V21 artifact pair."""
+    if (digest(predecessor_raw) != V21_MANIFEST_SHA256
+            or digest(predecessor_archive_raw) != V21_ARCHIVE_SHA256
+            or predecessor_raw != predecessor_archive_raw):
+        raise ValueError('V21 manifest/archive bytes do not match the pinned predecessor')
+    try:
+        predecessor = json.loads(predecessor_raw)
+    except (TypeError, ValueError):
+        raise ValueError('V21 predecessor manifest is unreadable') from None
+    amendment = predecessor.get('confirmation_amendment')
+    historical_v20 = amendment.get('historical_v20') if isinstance(amendment, dict) else None
+    if (predecessor.get('version') != 'v21'
+            or predecessor.get('supersedes_manifest_sha256') != V20_MANIFEST_SHA256
+            or predecessor.get('state') != 'frozen'
+            or predecessor.get('source_window', {}).get('core_hp_complete_before') != CORE_SOURCE_CUTOFF
+            or predecessor.get('budgets', {}).get('hp_confirmation') != CONFIRMATION_BUDGET
+            or not isinstance(amendment, dict)
+            or amendment.get('source_cutoff') != CORE_SOURCE_CUTOFF
+            or amendment.get('confirmation_completion_before') != V21_CONFIRMATION_COMPLETION_BEFORE
+            or amendment.get('allowed_phases') != ['hp_confirmation']
+            or amendment.get('git_head') != V21_GIT_HEAD
+            or amendment.get('control_pool_contract') != CONFIRMATION_CONTROL_POOL_CONTRACT
+            or amendment.get('v20_remains_insufficient') is not True
+            or predecessor.get('reviewed_execution_scope') != ['hp_confirmation']
+            or not isinstance(historical_v20, dict)
+            or historical_v20.get('manifest_sha256') != V20_MANIFEST_SHA256
+            or historical_v20.get('archive_sha256') != V20_ARCHIVE_SHA256
+            or historical_v20.get('code_map_sha256') != V20_CODE_MAP_SHA256
+            or historical_v20.get('prescreen_envelope_sha256') != V20_PRESCREEN_SHA256
+            or historical_v20.get('control_checkpoint_sha256') != V20_CHECKPOINT_SHA256
+            or canonical_code_map_sha256(predecessor.get('code_sha256')) != V21_CODE_MAP_SHA256
+            or canonical_compact_sha256(amendment) != V21_AMENDMENT_SHA256):
+        raise ValueError('V21 predecessor contract does not match the pinned amendment')
+
+    artifact_root = Path(artifact_root or V21_ARTIFACT_ROOT).resolve()
+    runtime_root = Path(runtime_root or Path(__file__).resolve().parents[2]).resolve()
+    if code_head is None:
+        try:
+            code_head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=runtime_root,
+                                       check=True, capture_output=True, text=True).stdout.strip()
+        except (OSError, subprocess.CalledProcessError):
+            raise ValueError('Current code head is unavailable') from None
+    if not isinstance(code_head, str) or len(code_head) != 40 or re.fullmatch(r'[0-9a-f]{40}', code_head) is None:
+        raise ValueError('Current code head is invalid')
+
+    result = json.loads(predecessor_raw)
+    result['version'] = 'v22'
+    result['supersedes_manifest_sha256'] = V21_MANIFEST_SHA256
+    amendment = result['confirmation_amendment']
+    amendment['authority'] = {
+        'kind': 'explicit_owner_instruction',
+        'date': '2026-10-23',
+        'pr': 'https://github.com/pogorelov-labs/city-rating-tokyo/pull/141',
+        'scope': 'prospective hp_confirmation-only completion before 2026-10-24T00:00:00Z',
+        'implementation_approval_is_not_activation': True,
+        'decision_reference': 'CRTKY-194 / OWNER-OCT24-IMPLEMENT-20261023',
+    }
+    amendment['confirmation_completion_before'] = CONFIRMATION_COMPLETION_BEFORE
+    amendment['git_head'] = code_head
+    amendment['predecessor_operational_authority_reusable'] = False
+    amendment['historical_v21'] = {
+        'artifact_root': str(artifact_root),
+        'manifest_path': str(artifact_root/'final-manifest-v21.json'),
+        'manifest_sha256': V21_MANIFEST_SHA256,
+        'archive_path': str(artifact_root/'final-manifest-v21.archive.json'),
+        'archive_sha256': V21_ARCHIVE_SHA256,
+        'code_map_sha256': V21_CODE_MAP_SHA256,
+        'amendment_sha256': V21_AMENDMENT_SHA256,
+        'git_head': V21_GIT_HEAD,
+    }
+    result['code_sha256'] = {
+        str(path.relative_to(runtime_root)): digest(path.read_bytes())
+        for path in sorted((runtime_root/'scripts'/'food_pilot').glob('*.py'))
+    }
     result['state'] = 'frozen'
     return result
 
