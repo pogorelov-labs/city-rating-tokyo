@@ -18,7 +18,7 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 - **Unit:** 50 districts (polygons), not stations — a quarter of Bangkok's districts have no rail inside.
 - **Data:** OpenStreetMap + [Overture Maps Places](https://docs.overturemaps.org/guides/places/) (two independent POI sources, r ≈ 0.9 agreement), Wikidata (names, population), a door-to-door commute model to five hubs, Wikimedia Commons photos.
 - **Honesty:** rent and safety are researcher estimates (no open district data) and scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
-- **Rebuild:** `uv run scripts/bangkok/fetch.py && uv run scripts/bangkok/build.py`.
+- **Rebuild:** see the [Bangkok pipeline guide](scripts/bangkok/README.md) for the Geofabrik PBF path (no Overpass), other API inputs, and offline build. The existing Overpass path remains available.
 
 ## Rating categories (default weights)
 

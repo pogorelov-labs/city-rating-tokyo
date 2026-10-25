@@ -39,6 +39,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from static_data import BBOX, RAIL_ROUTE_RELATIONS  # noqa: E402
+from osm_filters import GREEN_FILTERS, POI_FILTERS, STATION_FILTERS, query_body  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 RAW = ROOT / "data" / "bangkok" / "raw"
@@ -106,42 +107,13 @@ def fetch_province() -> dict:
     )
 
 
-POI_QUERIES: dict[str, str] = {
-    "pois_food": (
-        'nwr["amenity"~"^(restaurant|cafe|fast_food|food_court|ice_cream)$"];'
-        'nwr["shop"~"^(bakery|coffee|pastry)$"];'
-    ),
-    "pois_nightlife": (
-        'nwr["amenity"~"^(bar|pub|nightclub|biergarten|karaoke_box)$"];'
-        'nwr["tourism"="hostel"];'
-    ),
-    "pois_essentials": (
-        'nwr["shop"~"^(supermarket|convenience|chemist|laundry|dry_cleaning|greengrocer|mall|department_store)$"];'
-        'nwr["amenity"~"^(pharmacy|clinic|doctors|dentist|hospital|bank|post_office|school|kindergarten|marketplace)$"];'
-    ),
-    "pois_sports": (
-        'nwr["leisure"~"^(fitness_centre|sports_centre|swimming_pool|stadium|fitness_station)$"];'
-    ),
-    "pois_culture": (
-        'nwr["amenity"~"^(theatre|cinema|arts_centre|library|place_of_worship)$"];'
-        'nwr["tourism"~"^(museum|gallery|attraction)$"];'
-        'nwr["shop"~"^(books|music|art|antiques|second_hand|musical_instrument|craft)$"];'
-        'nwr["historic"];'
-        'way["highway"="pedestrian"];'
-    ),
-    "pois_transit_other": (
-        'nwr["amenity"="ferry_terminal"];'
-        'node["highway"="bus_stop"];'
-    ),
-}
+POI_QUERIES = {name: query_body(selectors) for name, selectors in POI_FILTERS.items()}
 
 
 def fetch_green() -> dict:
     return overpass(
         q_bbox(
-            'nwr["leisure"~"^(park|garden|nature_reserve)$"];'
-            'nwr["landuse"~"^(forest|recreation_ground|village_green)$"];'
-            'nwr["natural"="wood"];',
+            query_body(GREEN_FILTERS),
             out="out geom;",
         ),
         "green",
@@ -162,10 +134,7 @@ def fetch_rail_stops() -> dict:
 def fetch_rail_stations() -> dict:
     return overpass(
         q_bbox(
-            'node["railway"="station"];'
-            'node["public_transport"="station"];'
-            'way["railway"="station"];'
-            'way["public_transport"="station"];',
+            query_body(STATION_FILTERS),
         ),
         "rail_stations",
     )
