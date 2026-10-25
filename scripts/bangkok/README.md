@@ -66,9 +66,11 @@ PBF (about 330 MB as of October 2026), cache JSONs and other build inputs.
   relations have `center: {lat, lon}`: the midpoint of the full bounding box,
   **not** a centroid or the mean of vertices. As with [Overpass out center](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_(out)),
   direct node/way members contribute; nested relation members do not.
-- Bbox selection uses at least one inside node (including direct node/way
-  members of relations), rather than a center-inside or line-intersection
-  test. This retains crossing ways whose computed center lies outside.
+- Bbox selection includes nodes inside the box and ways with an inside vertex
+  or a segment that crosses/touches the box, even when both endpoints are
+  outside. A relation also qualifies through such a direct member way,
+  including an untagged one. Selection retains full geometry and does not
+  require the computed center to lie inside the box.
 - Green ways contain full `geometry: [{lat, lon}, ...]`. Relations preserve
   ordered `{type, ref, role}` members, direct node coordinates, and complete
   way-member `geometry`, including inner rings and route direction roles.

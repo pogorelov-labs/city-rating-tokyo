@@ -73,7 +73,7 @@ def test_bbox_midpoint_is_not_vertex_average_or_clipped_center():
     assert G.center(points) == {"lat": 13, "lon": 104}
     with pytest.raises(ValueError, match="without coordinates"):
         G.center([])
-    # Select ways by any vertex in the bbox, then center the full geometry.
+    # Intersection selection must still center the full, unclipped geometry.
     way = {"type": "way", "id": 1, "tags": {"amenity": "cafe"}, "geometry": [
         {"lat": 13.5, "lon": 100.5}, {"lat": 15, "lon": 102},
     ]}
@@ -82,6 +82,76 @@ def test_bbox_midpoint_is_not_vertex_average_or_clipped_center():
     assert not G.in_bbox(G.point_element(way)["center"])
     assert G.in_bbox({"lat": 13.47, "lon": 100.30})
     assert not G.in_bbox({"lat": 13.46, "lon": 100.30})
+
+
+@pytest.mark.parametrize("coordinates,expected", [
+    ([], False),
+    ([(0.5, 0.5)], True),
+    ([(2, 2)], False),
+    ([(-1, 0.5), (2, 0.5)], True),  # horizontal crossing
+    ([(0.5, -1), (0.5, 2)], True),  # vertical crossing
+    ([(-1, -1), (2, 2)], True),  # diagonal crossing
+    ([(-1, 0), (2, 0)], True),  # boundary overlap
+    ([(-1, 1), (1, -1)], True),  # corner touch
+    ([(-1, -1), (2, -1)], False),  # parallel outside
+    ([(0.5, -1), (2, 0.5)], False),  # bounds overlap, segment misses corner
+    ([(2, 2), (2, 2)], False),  # zero-length outside
+    ([(-1, -1), (-1, 2), (2, 2), (2, -1), (-1, -1)], False),  # enclosing ring, no crossing
+])
+def test_segment_bbox_intersection(coordinates, expected):
+    points = [{"lon": lon, "lat": lat} for lon, lat in coordinates]
+    assert G.way_intersects_bbox(points, (0, 0, 1, 1)) is expected
+    assert G.way_intersects_bbox(points[::-1], (0, 0, 1, 1)) is expected
+
+
+def test_crossing_only_way_is_selected_with_full_bounds_center():
+    way = {"type": "way", "id": 10, "tags": {"amenity": "cafe"}, "geometry": [
+        {"lat": 13.6, "lon": 100.2}, {"lat": 13.6, "lon": 103.0},
+    ]}
+    assert not any(G.in_bbox(p) for p in way["geometry"])
+    assert not G.in_bbox(G.center(way["geometry"]))
+    outputs = {name: [] for name in G.OSM_FILTERS}
+    inside = {"node": set(), "way": set()}
+    G.select_bbox_way(outputs, inside, set(), way)
+    assert outputs["pois_food"] == [G.point_element(way)]
+    assert outputs["pois_food"][0]["center"] == {"lat": 13.6, "lon": 101.6}
+
+
+def test_crossing_southwest_corner_matches_review_example():
+    way = {"type": "way", "id": 11, "tags": {"highway": "pedestrian"}, "geometry": [
+        {"lat": 13.4699, "lon": 100.3002}, {"lat": 13.4702, "lon": 100.2999},
+    ]}
+    assert not any(G.in_bbox(p) for p in way["geometry"])
+    outputs = {name: [] for name in G.OSM_FILTERS}
+    inside = {"node": set(), "way": set()}
+    G.select_bbox_way(outputs, inside, {11}, way)
+    assert outputs["pois_culture"] == [G.point_element(way)]
+    assert inside["way"] == {11}
+
+
+def test_relation_selected_when_only_its_untagged_member_way_crosses_bbox():
+    points = [
+        {"lat": 13.6, "lon": 100.2}, {"lat": 13.6, "lon": 101.1},
+        {"lat": 14.1, "lon": 101.1}, {"lat": 14.1, "lon": 100.2},
+        {"lat": 13.6, "lon": 100.2},
+    ]
+    assert not any(G.in_bbox(p) for p in points)
+    way = {"type": "way", "id": 20, "tags": {}, "geometry": points}
+    relation = {"type": "relation", "id": 21, "tags": {"leisure": "park"}, "members": [
+        {"type": "way", "ref": 20, "role": "outer"},
+    ]}
+    outside = {**relation, "id": 22, "members": [{"type": "way", "ref": 23, "role": "outer"}]}
+    outputs = {name: [] for name in G.OSM_FILTERS}
+    inside = {"node": set(), "way": set()}
+    G.select_bbox_way(outputs, inside, {20, 23}, way)
+    assert inside == {"node": set(), "way": {20}}
+    assert not any(outputs.values())  # untagged member isn't a standalone POI
+    selected = G.select_bbox_relations({21: relation, 22: outside}, inside, province_id=99)
+    assert selected == {21: relation}
+    mapped = {**selected[21], "members": G.member_geometry(relation["members"], {}, {20: points})}
+    G.append_filtered(outputs, mapped)
+    assert outputs["green"] == [mapped]
+    assert outputs["green"][0]["members"][0]["geometry"] == points
 
 
 def test_members_keep_full_geometry_order_roles_and_direct_node_coordinates():

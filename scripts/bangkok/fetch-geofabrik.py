@@ -98,6 +98,30 @@ def in_bbox(point: dict, bbox: tuple = BBOX) -> bool:
     return south <= point["lat"] <= north and west <= point["lon"] <= east
 
 
+def way_intersects_bbox(points: list[dict], bbox: tuple = BBOX) -> bool:
+    """Include vertices and crossing/touching segments in the Bangkok bbox."""
+    if any(in_bbox(p, bbox) for p in points):
+        return True
+    south, west, north, east = bbox
+    for start, end in zip(points, points[1:]):
+        # Clip the segment's parameter interval [0, 1] against each axis.
+        # Overlapping coordinate bounds alone would admit corner near-misses.
+        enter, leave = 0.0, 1.0
+        for key, lower, upper in (("lat", south, north), ("lon", west, east)):
+            delta = end[key] - start[key]
+            if delta == 0:
+                if not lower <= start[key] <= upper:
+                    break
+            else:
+                first, last = sorted(((lower - start[key]) / delta, (upper - start[key]) / delta))
+                enter, leave = max(enter, first), min(leave, last)
+                if enter > leave:
+                    break
+        else:
+            return True
+    return False
+
+
 def center(points: list[dict]) -> dict:
     """Overpass out center: bounding-box midpoint, not vertex/polygon centroid."""
     if not points:
@@ -154,6 +178,21 @@ def append_filtered(outputs: dict[str, list], element: dict) -> None:
     for name, selectors in OSM_FILTERS.items():
         if matches(element["type"], element["tags"], selectors):
             outputs[name].append(element if name == "green" else point_element(element))
+
+
+def select_bbox_way(outputs: dict[str, list], inside: dict[str, set], referenced_ways: set[int], way: dict) -> None:
+    if not way_intersects_bbox(way["geometry"]):
+        return
+    if way["id"] in referenced_ways:
+        inside["way"].add(way["id"])
+    append_filtered(outputs, way)
+
+
+def select_bbox_relations(relations: dict[int, dict], inside: dict[str, set], province_id: int) -> dict[int, dict]:
+    # Way membership includes segment intersections, even without inside nodes.
+    return {rid: r for rid, r in relations.items() if rid in ROUTE_IDS or rid == province_id or any(
+        m["ref"] in inside.get(m["type"], ()) for m in r["members"]
+    )}
 
 
 def is_boundary(tags: dict, level: str) -> bool:
@@ -226,18 +265,11 @@ def extract(path: Path) -> tuple[dict[str, list], dict]:
             if obj.id not in refs["way"] and not matched:
                 continue
             points = [{"lat": n.lat, "lon": n.lon} for n in obj.nodes]
-            if not any(in_bbox(p) for p in points):
-                continue
-            if obj.id in refs["way"]:
-                inside["way"].add(obj.id)
-            if matched:
-                append_filtered(outputs, {"type": "way", "id": obj.id, "tags": tags, "geometry": points})
+            select_bbox_way(outputs, inside, refs["way"], {
+                "type": "way", "id": obj.id, "tags": tags, "geometry": points,
+            })
     del processor
-    # As in Overpass bbox selection, direct node/way members determine
-    # intersection; crossing segments without an inside node do not qualify.
-    selected = {rid: r for rid, r in relations.items() if rid in ROUTE_IDS or rid == province_id or any(
-        m["ref"] in inside.get(m["type"], ()) for m in r["members"]
-    )}
+    selected = select_bbox_relations(relations, inside, province_id)
     del relations, refs, inside
 
     # 3/4: now retrieve EVERY node of EVERY selected way, even outside the
