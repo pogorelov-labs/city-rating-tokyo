@@ -1,3 +1,5 @@
+import { InstitutionFacts } from '@/components/InstitutionFacts';
+import { getInstitutions } from '@/lib/institutions';
 import { dataLabel } from '@/i18n/message-key';
 import { hasLocale } from 'next-intl';
 import AirPanel from '@/components/AirPanel';
@@ -156,6 +158,7 @@ export default async function DistrictPage({
 
         <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
           <AirPanel city="bangkok" />
+        <InstitutionFacts fact={getInstitutions('bangkok', 'district', d.slug)} />
           {/* Hero image (Wikimedia Commons, hot-linked with attribution) */}
           {d.image && (
             <figure className="bg-white rounded-lg border border-gray-200 overflow-hidden">

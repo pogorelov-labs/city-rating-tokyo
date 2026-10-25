@@ -47,7 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   // every page — including the 4.5k Tokyo ones that never use it.
   const messages = await getMessages();
   const clientMessages = Object.fromEntries(
-    Object.entries(messages).filter(([namespace]) => namespace !== 'bangkok' && namespace !== 'quietness' && namespace !== 'air' && namespace !== 'safetyFacts'),
+    Object.entries(messages).filter(([namespace]) => namespace !== 'bangkok' && namespace !== 'quietness' && namespace !== 'air' && namespace !== 'safetyFacts' && namespace !== 'institutions'),
   ) as typeof messages;
 
   return (
