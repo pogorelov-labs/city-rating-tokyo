@@ -14,56 +14,23 @@ from .constants import (
     PERCENTILE_ANCHORS_EMPTY_FALLBACK,
     PIPELINE_ONLY,
 )
-# Models require pydantic. Import lazily so that environments that only need
-# the constants (e.g. the offline pipeline) can use this package without
-# installing pydantic. Direct submodule imports (from city_rating_schema
-# .constants import ...) also work without triggering this block.
-try:
-    from .models import (
-        RatingKey,
-        ConfidenceLevel,
-        SeismicRiskTier,
-        ElevationTier,
-        StationRatings,
-        WeightConfig,
-        StationConfidence,
-        StationSources,
-        RentAvg,
-        TransitMinutes,
-        EnvironmentData,
-        FilterState,
-        EnvironmentFilters,
-        PercentileAnchors,
-        PresetProfile,
-        NoiseAnchor,
-        NoiseProxies,
-        NoiseComplaintYear,
-        NoiseComplaints,
-        QuietnessFact,
-    )
-except ImportError:
-    RatingKey = None  # pydantic not installed
-    ConfidenceLevel = None  # pydantic not installed
-    SeismicRiskTier = None  # pydantic not installed
-    ElevationTier = None  # pydantic not installed
-    StationRatings = None  # pydantic not installed
-    WeightConfig = None  # pydantic not installed
-    StationConfidence = None  # pydantic not installed
-    StationSources = None  # pydantic not installed
-    RentAvg = None  # pydantic not installed
-    TransitMinutes = None  # pydantic not installed
-    EnvironmentData = None  # pydantic not installed
-    FilterState = None  # pydantic not installed
-    EnvironmentFilters = None  # pydantic not installed
-    PercentileAnchors = None  # pydantic not installed
-    PresetProfile = None  # pydantic not installed
-    NoiseAnchor = None  # pydantic not installed
-    NoiseProxies = None  # pydantic not installed
-    NoiseComplaintYear = None  # pydantic not installed
-    NoiseComplaints = None  # pydantic not installed
-    QuietnessFact = None  # pydantic not installed
-    import warnings
-    warnings.warn("pydantic not installed; city_rating_schema models unavailable (constants still work)")
+# Keep constants/normalization stdlib-only. Models load only on access.
+_MODEL_NAMES = ["RatingKey","ConfidenceLevel","SeismicRiskTier","ElevationTier","StationRatings","WeightConfig","StationConfidence","StationSources","RentAvg","TransitMinutes","EnvironmentData","FilterState","EnvironmentFilters","PercentileAnchors","PresetProfile","NoiseAnchor","NoiseProxies","NoiseComplaintYear","NoiseComplaints","QuietnessFact"]
+
+def __getattr__(name):
+    if name not in _MODEL_NAMES:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    from importlib import import_module
+    try:
+        models = import_module(".models", __name__)
+    except ImportError:
+        # Preserve the previous optional-model fallback, but only when requested.
+        import warnings
+        warnings.warn("pydantic not installed; city_rating_schema models unavailable (constants still work)")
+        globals().update({key: None for key in _MODEL_NAMES})
+    else:
+        globals().update({key: getattr(models, key) for key in _MODEL_NAMES})
+    return globals()[name]
 
 __all__ = [
     "RATING_KEYS",
