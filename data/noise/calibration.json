@@ -260,7 +260,7 @@
   "inputs": [
     {
       "path": "app/src/data/bangkok/stations.json",
-      "sha256": "e8a50e834cce129ecb2f9ed22e2863674a8acfb48effa6a23ea62c8361c0328a"
+      "sha256": "94ac162361a25ee64a092648f78d9fe5933726109ec9034472f20aa181562ea2"
     },
     {
       "path": "app/src/data/ward-data.json",

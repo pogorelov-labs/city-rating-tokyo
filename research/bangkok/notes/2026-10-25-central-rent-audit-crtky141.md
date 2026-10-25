@@ -139,3 +139,22 @@ Phrom Phong **1BR 48,000**, Chit Lom **2BR 120,000**, and Chong Nonsi
 **2BR 72,000** are explicitly flagged in the UI as composition-skewed published
 proxies, not typical reference-size rents. Published typical sizes are shown
 beside the values when available; unknown sizes are identified as unpublished.
+
+## CI snapshot compatibility
+
+The frozen population replay pins explicitly incorporate this rent-only
+exception, while preserving all 50 population/crowd baseline records and the
+strict snapshot/original-checksum rejection guards. Previous pins and the
+source rent commit are retained in `population-baseline.json`; the comparison
+file mirrors that provenance. A comparison against d131c7a established that
+all non-rent fields are identical.
+
+Institutions regeneration changes only the two Bangkok JSON input hashes in
+shared provenance, including the copies attached to Tokyo institution exports.
+All embassy/medical counts, joins and other metadata are byte-equivalent.
+Noise regeneration changes only the Bangkok station JSON input hash in the
+calibration report: all 1,493 Tokyo and 133 Bangkok quietness records, model
+coefficients, evaluation results and TMG anchors are identical. No institution
+or noise assertions are disabled or relaxed. The Bangkok normalization golden
+is regenerated from the committed rent signals; only four station-area rent ratings differ; anchors and all other golden
+output remain identical.

@@ -46,8 +46,8 @@
    "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
    "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
    "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
-   "app/src/data/bangkok/districts.json": "2ca67341e86cab9292c198e1de9e0ea19d792cbe52beea2bb036bb48e17e0e36",
-   "app/src/data/bangkok/stations.json": "e8a50e834cce129ecb2f9ed22e2863674a8acfb48effa6a23ea62c8361c0328a"
+   "app/src/data/bangkok/districts.json": "8ef5b0fd4cae3e8ef70c5b4968130fcfdf0c39a4bfe9dc9c4e907758d8930f39",
+   "app/src/data/bangkok/stations.json": "94ac162361a25ee64a092648f78d9fe5933726109ec9034472f20aa181562ea2"
   }
  },
  "stations": {
