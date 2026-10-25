@@ -41,6 +41,16 @@ The shared constants (`RENT_FLOOR`, `RENT_CEILING`, `RATING_KEYS`, `DEFAULT_WEIG
 
 Do not "improve" this sniff to be smarter — old shared URLs depend on the exact length-based discrimination. The comment at `url-state.ts:72-74` notes a known ambiguity (10-value URLs from a brief transition window) that is deliberately left as-is.
 
+## Releases
+
+Follow the [release runbook](docs/RELEASING.md): update the changelog and release
+notes, pass `build`, `schema`, `mcp` and `bangkok` on both the PR and main merge
+commit, then publish an annotated version tag and GitHub release. The first
+release is v0.1.0; no package version bump is needed. Data refreshes require a
+separate PR and must not be mixed into a code/docs release. See the
+[scoped Bangkok remediation plan](docs/DATA_REFRESH_REMEDIATION.md) for the
+unshipped full spatial refresh.
+
 ## Pipeline refresh workflow
 
 ```bash

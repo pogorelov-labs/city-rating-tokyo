@@ -101,6 +101,12 @@ population, flood, or editorial descriptions. A full build currently omits
 station tourism enrichment fields; review generated changes before publishing
 any refreshed data.
 
+The **full spatial refresh is not shipped in v0.1.0**. Experimental refreshed
+output has 10 validation failures and tourism/Michelin/embassy enrichment losses,
+with quality and attribution reviews pending. Follow the [scoped, unimplemented
+remediation plan](../../docs/DATA_REFRESH_REMEDIATION.md) and [release
+runbook](../../docs/RELEASING.md); any refresh needs a separate PR.
+
 ## Verification and attribution
 
 ```sh
