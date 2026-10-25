@@ -17,7 +17,7 @@ MIB = 1024**2
 
 CORE_SOURCE_CUTOFF = "2026-10-22T00:00:00Z"
 V21_CONFIRMATION_COMPLETION_BEFORE = "2026-10-23T00:00:00Z"
-CONFIRMATION_COMPLETION_BEFORE = "2026-10-24T00:00:00Z"
+CONFIRMATION_COMPLETION_BEFORE = "2026-11-01T00:00:00Z"
 V20_ARTIFACT_ROOT = Path('/Users/ruslan/.ao/data/artifacts/city-rating-3/overture-food-shadow')
 V20_MANIFEST_SHA256 = '98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb'
 V20_ARCHIVE_SHA256 = '98b361b4d06c159912de17783f825557686090f5d3c9a894a289031648b403eb'
@@ -252,11 +252,11 @@ def make_confirmation_successor_v22(predecessor_raw, predecessor_archive_raw, *,
     amendment = result['confirmation_amendment']
     amendment['authority'] = {
         'kind': 'explicit_owner_instruction',
-        'date': '2026-10-23',
+        'date': '2026-10-25',
         'pr': 'https://github.com/pogorelov-labs/city-rating-tokyo/pull/141',
-        'scope': 'prospective hp_confirmation-only completion before 2026-10-24T00:00:00Z',
+        'scope': 'prospective hp_confirmation-only completion before 2026-11-01T00:00:00Z',
         'implementation_approval_is_not_activation': True,
-        'decision_reference': 'CRTKY-194 / OWNER-OCT24-IMPLEMENT-20261023',
+        'decision_reference': 'CRTKY-194 / OWNER-OCT24-IMPLEMENT-20261023; cutoff extension instruction 2026-10-25',
     }
     amendment['confirmation_completion_before'] = CONFIRMATION_COMPLETION_BEFORE
     amendment['git_head'] = code_head

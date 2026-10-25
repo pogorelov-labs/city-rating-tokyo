@@ -11,19 +11,18 @@ stopped.
 [Decision and verbatim approval](../../research/decisions/2026-10-15-preserved-rules-food-pilot-institutions.md).
 No production ratings, confidence, nightlife, schema or refresh changes.
 
-## Confirmation-only deadline amendment (V22; 2026-10-23)
+## Confirmation-only deadline extension (V22; follow-up 2026-10-25)
 
-The owner instruction for PR141 is to implement the reviewed confirmation-only
-amendment through October 24, 00:00 UTC for the same 13 candidates, preserving
-budgets, evidence, and original eligibility windows; add offline tests and
-complete exact-head review and CI; do not activate acquisition. The
-implementation-only decision is recorded as CRTKY-194
-(`OWNER-OCT24-IMPLEMENT-20261023`). It is not an activation or permission to
-acquire data.
+The reviewed V22 implementation-only amendment originally set a confirmation
+completion cutoff of October 24, 00:00 UTC. The explicit PR141 follow-up on
+2026-10-25 extends only that strict `hp_confirmation` completion cutoff through
+November 1, 00:00 UTC for the same 13 candidates, preserving budgets, evidence,
+and original eligibility windows. This is a deadline/documentation extension,
+not a new acquisition authorization or activation.
 
 Keep `source_window.core_hp_complete_before` at `2026-10-22T00:00:00Z` for every
 phase other than `hp_confirmation`. The successor adds a separate, strict
-`confirmation_completion_before` of `2026-10-24T00:00:00Z`; equality is rejected.
+`confirmation_completion_before` of `2026-11-01T00:00:00Z`; equality is rejected.
 V22 must directly supersede the exact approved V21 manifest/archive SHA-256
 `75ea8de2b9cfb390fd116a46a976e2f36b12af452960d05b91ac23cd99ee1948`, preserve
 its runtime code-map SHA-256 `00d26dd768479afbf268643de9bb158a351fc6bde3b3ed69622190bd5d994bb2`
@@ -40,8 +39,12 @@ the window. Enforce `D = min(T0 + 1,800 seconds,
 confirmation_completion_before)` from preflight through finalization. The run
 must also stay inside each candidate's original 24–72 hour interval and the
 certified batch intersection `[2026-10-22T08:37:46.527802Z,
-2026-10-24T08:34:49.296391Z)`. These per-candidate and batch checks remain
-independent of the new earlier completion deadline.
+2026-10-24T08:34:49.296391Z)`. That intersection ended before this follow-up;
+all 13 original candidate windows were also closed by 2026-10-24T08:37:46.527802Z.
+Extending the completion cutoff alone therefore does not make a future
+confirmation run eligible. Reopening candidate or batch windows is outside this
+amendment and would require separate explicit authorization. No run is possible
+under the preserved windows as of 2026-10-25.
 
 V22 carries forward the V21 `historical_v20` handoff unchanged. It pins the
 immutable V20 manifest and archive, both SHA-256
@@ -72,7 +75,7 @@ sidecar or duplicate slot is allowed.
 The future activation workflow issuer captures factual UTC T0 before fallible
 checks, only for a new separately authorized execution intent. The first durable
 owner preparation intent binds T0 and
-`D = min(T0 + 1,800 seconds, 2026-10-24T00:00:00Z)`; it is not runnable by the
+`D = min(T0 + 1,800 seconds, 2026-11-01T00:00:00Z)`; it is not runnable by the
 source consumer. The root preparation intent must bind the same execution-intent
 SHA, T0/D, allocation descriptor and owner-intent hash. A contender reloads all
 six slots under the common ART lock and uses a durable owner intent's original

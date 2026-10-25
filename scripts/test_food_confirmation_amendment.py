@@ -290,7 +290,10 @@ def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monk
     assert f.successor['version'] == 'v22'
     assert f.successor['supersedes_manifest_sha256'] == sha(f.v21_raw)
     assert f.successor['source_window']['core_hp_complete_before'] == '2026-10-22T00:00:00Z'
-    assert f.successor['confirmation_amendment']['confirmation_completion_before'] == '2026-10-24T00:00:00Z'
+    assert f.successor['confirmation_amendment']['confirmation_completion_before'] == '2026-11-01T00:00:00Z'
+    assert f.successor['confirmation_amendment']['authority']['date'] == '2026-10-25'
+    assert f.successor['confirmation_amendment']['authority']['scope'] == (
+        'prospective hp_confirmation-only completion before 2026-11-01T00:00:00Z')
     assert f.successor['reviewed_execution_scope'] == ['hp_confirmation']
     assert f.successor['budgets'] == f.source['budgets']
     assert f.successor['budgets']['hp_confirmation'] == {
@@ -322,7 +325,7 @@ def test_successor_is_confirmation_only_and_preserves_v20_budgets(tmp_path, monk
 def test_v22_accepts_only_exact_direct_v21_lineage_and_rejects_v21_authority(tmp_path, monkeypatch):
     f = synthetic_handoff(tmp_path, monkeypatch)
     amendment = run.checked_confirmation_amendment(f.successor)
-    assert amendment['confirmation_completion_before'] == '2026-10-24T00:00:00Z'
+    assert amendment['confirmation_completion_before'] == '2026-11-01T00:00:00Z'
     assert f.successor['supersedes_manifest_sha256'] == sha(f.v21_raw)
     with pytest.raises(AcquisitionStopped, match='confirmation_amendment_required_or_invalid'):
         run.checked_confirmation_amendment(f.v21)
@@ -750,7 +753,7 @@ def test_confirmation_t0_uses_minimum_of_wall_and_absolute_deadline(tmp_path, mo
 
     near_tmp = tmp_path/'near-cutoff'
     f_near = synthetic_handoff(near_tmp, monkeypatch)
-    near_cutoff = datetime(2026, 10, 23, 23, 50, tzinfo=timezone.utc)
+    near_cutoff = datetime(2026, 10, 31, 23, 50, tzinfo=timezone.utc)
     near_owner_path, near_gate_path, near_owner, _ = authorization_files(
         f_near, near_tmp, f_near.artifact_root, near_cutoff)
     near_phase = run._confirmation_phase_directory(f_near.artifact_root)
@@ -769,7 +772,7 @@ def test_confirmation_t0_uses_minimum_of_wall_and_absolute_deadline(tmp_path, mo
     _started, deadline, remaining = run._confirmation_run_window(
         near_args, f_near.successor_sha, near_cutoff, phase_dir=near_phase,
         claim_binding=near_binding, claim_path=near_claim)
-    assert deadline == datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
+    assert deadline == datetime(2026, 11, 1, 0, 0, tzinfo=timezone.utc)
     assert remaining == 600
     _started, _deadline, remaining = run._confirmation_run_window(
         near_args, f_near.successor_sha, deadline-timedelta(microseconds=1),
@@ -1035,6 +1038,23 @@ def test_confirmation_candidate_and_batch_windows_are_half_open(tmp_path, monkey
     assert len(challenge) == 64
 
 
+def test_november_cutoff_extension_does_not_reopen_expired_batch_window(tmp_path, monkeypatch):
+    f = synthetic_handoff(tmp_path, monkeypatch)
+    amendment = f.successor['confirmation_amendment']
+    assert amendment['confirmation_completion_before'] == '2026-11-01T00:00:00Z'
+    assert amendment['source_cutoff'] == '2026-10-22T00:00:00Z'
+    assert amendment['historical_v20']['batch_window'] == {
+        'start_inclusive': '2026-10-22T08:37:46.527802Z',
+        'end_exclusive': '2026-10-24T08:34:49.296391Z',
+    }
+    prior, _ = run.checked_confirmation_handoff(
+        f.successor, f.prescreen_path, f.checkpoint_path, f.source_path, f.archive_path,
+        f.v21_manifest_path, f.v21_archive_path, HEAD)
+    now = datetime(2026, 10, 25, 0, 0, tzinfo=timezone.utc)
+    with pytest.raises(AcquisitionStopped, match='outside_real_24_72_hour_confirmation_window'):
+        run.phase_sites(f.successor, 'hp_confirmation', prior, now=now)
+
+
 def test_budget_enforces_confirmation_completion_end_and_absolute_deadline(monkeypatch, tmp_path):
     now = [datetime(2026, 10, 22, 8, 37, 46, 527802, tzinfo=timezone.utc)]
     mono = [100.0]
@@ -1066,7 +1086,7 @@ def test_budget_enforces_confirmation_completion_end_and_absolute_deadline(monke
     budget.check_window('hp:emi:page1')
     budget.identity_windows = {}
     budget.completion_window = None
-    budget.absolute_deadline = datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
+    budget.absolute_deadline = datetime(2026, 11, 1, 0, 0, tzinfo=timezone.utc)
     now[0] = budget.absolute_deadline-timedelta(microseconds=1)
     budget.check_window()
     budget.check_completion()
@@ -1117,7 +1137,7 @@ def test_budget_persists_command_t0_and_refuses_resume_window_reset(monkeypatch,
 
 
 def test_budget_final_ledger_commit_at_v22_cutoff_persists_rejection(monkeypatch, tmp_path):
-    now = [datetime(2026, 10, 23, 23, 30, 5, tzinfo=timezone.utc)]
+    now = [datetime(2026, 10, 31, 23, 30, 5, tzinfo=timezone.utc)]
     mono = [100.0]
     real_datetime = bounded.datetime
     real_save_ledger = bounded.save_ledger
@@ -1131,13 +1151,13 @@ def test_budget_final_ledger_commit_at_v22_cutoff_persists_rejection(monkeypatch
     def save_ledger_advancing_on_final_write(path, ledger):
         save_calls.append('save')
         if len(save_calls) == 2:
-            now[0] = datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
+            now[0] = datetime(2026, 11, 1, 0, 0, tzinfo=timezone.utc)
         return real_save_ledger(path, ledger)
 
     monkeypatch.setattr(bounded, 'datetime', ControlledDateTime)
     monkeypatch.setattr(bounded, 'time', SimpleNamespace(monotonic=lambda: mono[0]))
     monkeypatch.setattr(bounded, 'save_ledger', save_ledger_advancing_on_final_write)
-    started = datetime(2026, 10, 23, 23, 30, tzinfo=timezone.utc)
+    started = datetime(2026, 10, 31, 23, 30, tzinfo=timezone.utc)
     deadline = started+timedelta(seconds=1800)
     directory = tmp_path/'budget-final-ledger'
     budget = bounded.Budget(directory, copy.deepcopy(manifest_contract.CONFIRMATION_BUDGET),

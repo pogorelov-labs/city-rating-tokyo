@@ -118,6 +118,21 @@ catalog is not independent venue truth. Unknown operation is not confirmed-open;
 provider IDs are not physical identity. No fallback or confidence promotion
 follows from this tooling or a high correlation.
 
+## V22 confirmation cutoff extension (implementation only)
+
+The V22 `hp_confirmation` completion cutoff is strict before
+`2026-11-01T00:00:00Z`; equality is rejected. The original
+`source_window.core_hp_complete_before` remains `2026-10-22T00:00:00Z` for every
+other phase. The 13 candidate order, budgets, and original 24–72-hour windows
+are unchanged.
+
+The certified batch intersection `[2026-10-22T08:37:46.527802Z,
+2026-10-24T08:34:49.296391Z)` has ended, and the latest individual candidate
+window ended at `2026-10-24T08:37:46.527802Z`. Therefore extending the completion
+cutoff alone does not make a future confirmation run eligible. Reopening any
+window is outside this amendment and requires separate explicit authorization.
+This documentation change grants no activation or acquisition permission.
+
 Full same-vintage 1,493-station baseline/candidate score-impact replay, publication
 rights, attribution, freshness SLA and operator recovery/schema prerequisites
 are later production gates. The pilot can conclude `INSUFFICIENT` without
