@@ -12,6 +12,7 @@ import {
   computeCompositeAnchors,
 } from '@/lib/scoring';
 import CompareRadarChart from './CompareRadarChart';
+import RentNote from './bangkok/RentNote';
 import { stationPrimaryName } from '@/lib/station-name';
 import { areaKind } from '@/lib/area-key';
 import type { Locale } from '@/i18n/routing';
@@ -141,11 +142,16 @@ export default function ComparePanel({ stations }: Props) {
                   })}
                 </tr>
                 {/* Rent */}
-                <tr>
+                <tr className={compared.some((s) => s.rent_provenance) ? '[&>td]:align-top' : undefined}>
                   <td className="py-1 pr-2 text-gray-500">{t(city.unit === 'district' ? 'compare.rent1bed' : 'compare.rent1k')}</td>
                   {compared.map((s, i) => (
                     <td key={i} className="text-right py-1 px-2 tabular-nums">
                       {s.rent_1k ? formatRentShort(city.id, s.rent_1k) : '-'}
+                      {s.rent_provenance && (
+                        <div className="min-w-32 max-w-48 whitespace-normal text-left">
+                          <RentNote rent={s.rent_provenance} compact />
+                        </div>
+                      )}
                     </td>
                   ))}
                 </tr>
