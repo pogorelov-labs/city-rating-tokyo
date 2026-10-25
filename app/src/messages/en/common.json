@@ -684,5 +684,21 @@
     "bangkokTitle": "Bangkok: limits of the available context",
     "bangkokScope": "Bangkok safety ratings remain editorial assessments and do not include road accidents. No comparable Bangkok accident total or verified local risk-point layer is presented here. Missing local evidence does not mean that no accidents or hazards exist.",
     "verified": "Citations checked:"
+  },
+  "institutions": {
+    "title": "Embassies and medical facilities",
+    "missing": "Institution counts are unavailable for this area.",
+    "embassiesDistrict": "{count, plural, one {# listed diplomatic mission inside this district} other {# listed diplomatic missions inside this district}}",
+    "embassiesStation": "{count, plural, one {# listed diplomatic mission within 800 m} other {# listed diplomatic missions within 800 m}}",
+    "districtDistance": "Counted inside the published district boundaries, including boundary points assigned to one district. This is not a radius around the district center.",
+    "stationDistance": "800 m straight-line distance from the station-area point, not walking distance.",
+    "embassyLimit": "Embassies and other diplomatic offices in the OSM/Wikidata snapshot. Coverage is incomplete; zero means no records in this snapshot. A citywide cross-check does not verify every office with two sources.",
+    "tokyoEmbassyDate": "OSM source date: 24 July 2026.",
+    "bangkokEmbassyDate": "OSM source date: 1 June 2026.",
+    "medicine": "{count, plural, one {# listed English-service medical facility within 2 km} other {# listed English-service medical facilities within 2 km}}",
+    "medicineLimit": "2 km straight-line distance, not walking distance. Counts use 508 Tokyo-prefecture facilities in the JNTO snapshot; facilities in other prefectures are not included. Zero is not proof that care is unavailable. Confirm language support and opening hours with the facility.",
+    "medicineUnavailable": "English-service medical facilities: data unavailable. Bangkok coverage remains incomplete until a suitable publishable source is verified; this does not mean there are no facilities.",
+    "medicineSource": "© Japan Tourism Agency / JNTO — medical facility directory",
+    "snapshot": "Snapshot: {date}. Counts and source links only; these facts do not affect ratings."
   }
 }

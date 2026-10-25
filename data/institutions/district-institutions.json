@@ -1,103 +1,794 @@
 {
  "_meta": {
-  "embassies": "OSM office=diplomatic + Wikidata, 79 POIs, ODbL 1.0 / CC0",
-  "computed": "2026-10-14"
+  "snapshot_date": "2026-10-14",
+  "source_urls": {
+   "osm": "https://www.openstreetmap.org/copyright",
+   "wikidata": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+   "medicine": "https://www.jnto.go.jp/emergency/eng/mi_guide.html"
+  },
+  "embassy_license": "OpenStreetMap ODbL 1.0; Wikidata CC0",
+  "medicine_license": "© Japan Tourism Agency / JNTO; aggregate counts and links only",
+  "embassy_radius_m": 800,
+  "medicine_radius_m": 2000,
+  "distance": "great-circle, Earth radius 6371000 m; inclusive threshold; not walking distance",
+  "district_rule": "committed polygons including holes; covers; shared boundary assigned to first sorted slug; overlapping interiors rejected",
+  "coverage": "Snapshot records, not exhaustive inventories. Tokyo medicine includes only 508 Tokyo-prefecture JNTO records, including counts near the prefecture border.",
+  "bangkok_medicine": "unavailable: no verified publishable English-service source",
+  "source_dates": {
+   "bangkok_osm": "2026-06-01T08:52:28Z",
+   "tokyo_osm": "2026-07-24T11:04:51Z"
+  },
+  "retained_embassies": {
+   "tokyo": 167,
+   "bangkok": 79
+  },
+  "tokyo_medicine_records": 508,
+  "excluded_by_reason": {
+   "tokyo": {
+    "defunct": 2,
+    "duplicate": 1,
+    "unnamed": 2,
+    "no_coordinates": 21
+   },
+   "bangkok": {
+    "data_noise": 1,
+    "unnamed": 1,
+    "no_coordinates": 10
+   }
+  },
+  "input_sha256": {
+   "research/snapshots/2026-10-14/embassies/embassies-tokyo.geojson": "b68d91899cd7b3ce56017fccba117fe2663776f9427594affc0e8088a501baca",
+   "research/snapshots/2026-10-14/embassies/embassies-bangkok.geojson": "8661b991ae46ef9b8506d197736e8d464cdca1f3fbe1a085ac3b5e761ee6580b",
+   "research/snapshots/2026-10-14/embassies/summary.json": "b4119bef2aa83192898960a90be83668da2afa11e2182971f47168ecff29a801",
+   "research/snapshots/2026-10-14/embassies/LICENSE.txt": "608da72151deb83715eceeddcb5a510f44c5b5b0ff3390e608b78173ccc56f99",
+   "research/snapshots/2026-10-14/medicine-jnto/medicine-jnto.json": "2c9cfcf6e5f8c809ce1a6d2c682e3ae0e8ab174d18bff7177fb4b9a933f68a45",
+   "research/snapshots/2026-10-14/medicine-jnto/LICENSE.txt": "82e1902c3dcddecf43e5bc8d0d83a6756fd14052c695779931dd2bb86652d156",
+   "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+   "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+   "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
+   "app/src/data/bangkok/districts.json": "2ca67341e86cab9292c198e1de9e0ea19d792cbe52beea2bb036bb48e17e0e36",
+   "app/src/data/bangkok/stations.json": "e8a50e834cce129ecb2f9ed22e2863674a8acfb48effa6a23ea62c8361c0328a"
+  },
+  "district_join": {
+   "outside": 0,
+   "boundary_assigned": 0,
+   "total_assigned": 79
+  }
  },
  "districts": {
+  "bang-bon": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-kapi": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khae": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khen": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-kho-laem": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khun-thian": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-na": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-phlat": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
   "bang-rak": {
-   "embassies_within_800m": 3
+   "embassies_inside_district": 11,
+   "english_medicine_within_2km": null
+  },
+  "bang-sue": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bangkok-noi": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bangkok-yai": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "bueng-kum": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "chatuchak": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "chom-thong": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "din-daeng": {
+   "embassies_inside_district": 2,
+   "english_medicine_within_2km": null
+  },
+  "don-mueang": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "dusit": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "huai-khwang": {
+   "embassies_inside_district": 2,
+   "english_medicine_within_2km": null
+  },
+  "khan-na-yao": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "khlong-sam-wa": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "khlong-san": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
   },
   "khlong-toei": {
-   "embassies_within_800m": 1
+   "embassies_inside_district": 6,
+   "english_medicine_within_2km": null
+  },
+  "lak-si": {
+   "embassies_inside_district": 1,
+   "english_medicine_within_2km": null
+  },
+  "lat-krabang": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-phrao": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "min-buri": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "nong-chok": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "nong-khaem": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
   },
   "pathum-wan": {
-   "embassies_within_800m": 9
+   "embassies_inside_district": 23,
+   "english_medicine_within_2km": null
+  },
+  "phasi-charoen": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "phaya-thai": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "phra-khanong": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "phra-nakhon": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "pom-prap-sattru-phai": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "prawet": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "rat-burana": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "ratchathewi": {
+   "embassies_inside_district": 1,
+   "english_medicine_within_2km": null
+  },
+  "sai-mai": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "samphanthawong": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "saphan-sung": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
   },
   "sathon": {
-   "embassies_within_800m": 2
+   "embassies_inside_district": 15,
+   "english_medicine_within_2km": null
+  },
+  "suan-luang": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "taling-chan": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "thawi-watthana": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "thon-buri": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "thung-khru": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
+  },
+  "wang-thonglang": {
+   "embassies_inside_district": 2,
+   "english_medicine_within_2km": null
   },
   "watthana": {
-   "embassies_within_800m": 1
+   "embassies_inside_district": 16,
+   "english_medicine_within_2km": null
+  },
+  "yan-nawa": {
+   "embassies_inside_district": 0,
+   "english_medicine_within_2km": null
   }
  },
  "station_areas": {
+  "11th-infantry-regiment": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ari": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
   "asok": {
-   "embassies_within_800m": 9
+   "embassies_within_800m": 9,
+   "english_medicine_within_2km": null
+  },
+  "ban-thap-chang": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-bua": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-chak": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-chan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-kapi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khae": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-khun-non": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-na": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-o": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-phai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-phlat": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-pho": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-son": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-wa": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bang-yi-khan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bearing": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "bhumibol-adulyadej-hospital": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "chaeng-watthana-14": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "charan-13": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "charoen-nakhon": {
-   "embassies_within_800m": 2
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": null
+  },
+  "chatuchak": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "chit-lom": {
-   "embassies_within_800m": 19
+   "embassies_within_800m": 19,
+   "english_medicine_within_2km": null
+  },
+  "chok-chai-4": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "chong-nonsi": {
-   "embassies_within_800m": 10
+   "embassies_within_800m": 10,
+   "english_medicine_within_2km": null
+  },
+  "don-mueang": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "ekkamai": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "fai-chai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "government-complex": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ha-yaek-lat-phrao": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "hua-lamphong": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "hua-mak": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "huai-khwang": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "itsaraphap": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "kalantan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "kamphaeng-phet": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "kan-kheha": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "kasetsart-university": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "khlong-san": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
   },
   "khlong-toei": {
-   "embassies_within_800m": 2
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": null
+  },
+  "khu-bon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "krung-thep-aphiwat": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "krung-thon-buri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "lak-si": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "lak-song": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-krabang": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-phrao": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-phrao-101": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-phrao-71": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-phrao-83": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "lat-pla-khao": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "lumphini": {
-   "embassies_within_800m": 13
+   "embassies_within_800m": 13,
+   "english_medicine_within_2km": null
+  },
+  "mahatthai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "maiyalap": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "min-buri": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "min-buri-market": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "mo-chit": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "nana": {
-   "embassies_within_800m": 10
+   "embassies_within_800m": 10,
+   "english_medicine_within_2km": null
+  },
+  "national-stadium": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "national-telecom": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "nopparat": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "on-nut": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "outer-ring-road-ram-inthra": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "phahonyothin-24": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "phahonyothin-59": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "phasi-charoen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "phawana": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "phaya-thai": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
   },
   "phetchaburi": {
-   "embassies_within_800m": 3
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": null
+  },
+  "phetkasem-48": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "phloen-chit": {
-   "embassies_within_800m": 23
+   "embassies_within_800m": 23,
+   "english_medicine_within_2km": null
+  },
+  "pho-nimit": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "phra-khanong": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
   },
   "phra-ram-9": {
-   "embassies_within_800m": 2
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": null
   },
   "phrom-phong": {
-   "embassies_within_800m": 4
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": null
+  },
+  "punnawithi": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "queen-sirikit-national-convention-centre": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "rajabhat-phranakhon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ram-inthra-3": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ram-inthra-kor-mor-4": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ram-inthra-kor-mor-6": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ram-inthra-kor-mor-9": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ramkhamhaeng": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "ratchadamri": {
-   "embassies_within_800m": 6
+   "embassies_within_800m": 6,
+   "english_medicine_within_2km": null
+  },
+  "ratchadaphisek": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "ratchaprarop": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "ratchathewi": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "ratchayothin": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "royal-forest-department": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "royal-thai-air-force-museum": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "sai-yud": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "saint-louis": {
-   "embassies_within_800m": 11
+   "embassies_within_800m": 11,
+   "english_medicine_within_2km": null
   },
   "sala-daeng": {
-   "embassies_within_800m": 8
+   "embassies_within_800m": 8,
+   "english_medicine_within_2km": null
   },
   "sam-yan": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "sam-yot": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "sanam-chai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "sanam-pao": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "saphan-khwai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "saphan-mai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "saphan-taksin": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "sena-nikhom": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "sena-ruam": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "setthabutbamphen": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "si-iam": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "si-kritha": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "si-la-salle": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "si-nut": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "siam": {
-   "embassies_within_800m": 1
+   "embassies_within_800m": 1,
+   "english_medicine_within_2km": null
+  },
+  "sirindhorn": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "srinagarindra-38": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "surasak": {
-   "embassies_within_800m": 4
+   "embassies_within_800m": 4,
+   "english_medicine_within_2km": null
+  },
+  "sutthisan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "talat-phlu": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "taling-chan": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "tao-poon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "tha-phra": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   },
   "thailand-cultural-centre": {
-   "embassies_within_800m": 2
+   "embassies_within_800m": 2,
+   "english_medicine_within_2km": null
   },
   "thong-lo": {
-   "embassies_within_800m": 3
+   "embassies_within_800m": 3,
+   "english_medicine_within_2km": null
+  },
+  "thung-song-hong": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "udom-suk": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "vacharaphol": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "victory-monument": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wat-mangkon": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wat-phra-sri-mahathat": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wat-samian-nari": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wong-sawang": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wongwian-yai": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "wutthakat": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "yaek-kor-por-aor": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
+  },
+  "yaek-lam-sali": {
+   "embassies_within_800m": 0,
+   "english_medicine_within_2km": null
   }
  }
 }
