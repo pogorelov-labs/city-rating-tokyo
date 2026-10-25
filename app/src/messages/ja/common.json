@@ -129,7 +129,8 @@
     "distance_regression": "距離推定",
     "convenience_proxy": "コンビニ数による代替",
     "keishicho_choume": "警視庁（町丁別）",
-    "police_municipal": "警察（市区町村別）"
+    "police_municipal": "警察（市区町村別）",
+    "dooasset": "DooAsset"
   },
   "placeCategories": {
     "gym": "ジム・フィットネス",
@@ -529,7 +530,7 @@
       "noRail": "駅なし",
       "nearbyCount": "{count, plural, =0 {800m以内に駅なし} other {区外すぐに#駅}}",
       "rentLabel": "家賃（コンドミニアム）",
-      "rentSub": "1ベッド → 2ベッド／月 · 推定",
+      "rentSub": "1ベッド → 2ベッド／月",
       "toHubsSub": "住民の中央値・ラッシュ時・5ハブ",
       "density": "人口密度",
       "populationSub": "住民{population}人（{year}年）",
@@ -575,7 +576,7 @@
       "scoreTooltip": "標準の重み付けによるスコア（バンコクの駅エリア内の相対評価）",
       "imageAlt": "バンコク・{name}駅",
       "linesLabel": "鉄道",
-      "rentSub": "1ベッド → 2ベッド／月 · 区の推定",
+      "rentSub": "1ベッド → 2ベッド／月",
       "fromStation": "駅から",
       "fromStationSub": "ラッシュ時・5ハブの平均",
       "residentLabel": "自宅からハブ",
@@ -602,6 +603,24 @@
       "viewGrid": "200mメッシュで見る →",
       "factHotels": "近くのホテル",
       "factAttractions": "近くの観光スポット"
+    },
+    "rent": {
+      "medianLabel": "募集家賃中央値 · 面積混在の参考値",
+      "editorialLabel": "一般的な募集家賃 · 編集推定",
+      "blendLabel": "一般的な募集家賃 · 区の加重推定",
+      "samples": "1ベッド n={one} · 2ベッド n={two}",
+      "asOf": "基準日 {date}",
+      "definitionLink": "定義と算出方法",
+      "medianDefinition": "出典の駅から半径800m以内にあるコンドミニアムの募集家賃中央値（寝室数別）。面積は混在。契約期間とサービスアパートの除外は未確認です。",
+      "medianLimitations": "単一事業者の募集物件で、成約家賃ではありません。半径内には隣駅の物件も含まれ、地図のエリア境界とは異なります。基準面積は1ベッド30～35m²、2ベッド60～70m²ですが、中央値は面積で絞り込んでいません。",
+      "editorialDefinition": "1ベッド30～35m²、2ベッド60～70m²のコンドミニアムの一般的な募集家賃。サービスアパートと短期滞在を除く調査者の推定で、統計的中央値ではありません。",
+      "editorialLimitations": "駅エリアの推定は各区の家賃を住民比率で加重し、500バーツ単位に丸めます。グリッドの家賃は区の推定値で、駅別の上書きは適用しません。",
+      "proxyConfidence": "推定：単一事業者の寝室数別中央値です。面積・契約期間の構成が基準物件と異なるため、近隣の参考値として示しています。",
+      "affordability": "家賃の手頃さは1ベッドの値から算出。10＝月約฿8,000以下、1＝月約฿38,000以上。",
+      "sourceSizes": "出典の代表面積：1ベッド {one} · 2ベッド {two}",
+      "unpublishedSize": "未公表",
+      "compositionSkew": "出典の標本は大型・高級物件寄りで、一般的な家賃ではありません。",
+      "sizeSqm": "{size} m²"
     }
   },
   "quietness": {

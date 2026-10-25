@@ -3644,7 +3644,7 @@
   "asok": {
    "raw": {
     "transport": 0.683,
-    "rent": 28500,
+    "rent": 26500,
     "daily_essentials": 3.4421,
     "safety": 6.03,
     "food": 6.2995,
@@ -3677,8 +3677,8 @@
      "share": 0.487
     }
    ],
-   "rent_1br": 28500,
-   "rent_2br": 61000,
+   "rent_1br": 26500,
+   "rent_2br": 55000,
    "safety": 6.0256410256410255,
    "hub_minutes": {
     "siam": 9,
@@ -5364,7 +5364,7 @@
   "chit-lom": {
    "raw": {
     "transport": 0.7952,
-    "rent": 38000,
+    "rent": 45000,
     "daily_essentials": 3.4542,
     "safety": 7.0,
     "food": 6.4123,
@@ -5393,8 +5393,8 @@
      "share": 1.0
     }
    ],
-   "rent_1br": 38000,
-   "rent_2br": 85000,
+   "rent_1br": 45000,
+   "rent_2br": 120000,
    "safety": 7.0,
    "hub_minutes": {
     "siam": 5,
@@ -5516,7 +5516,7 @@
   "chong-nonsi": {
    "raw": {
     "transport": 0.6962,
-    "rent": 25500,
+    "rent": 24000,
     "daily_essentials": 3.4396,
     "safety": 6.32,
     "food": 6.386,
@@ -5549,8 +5549,8 @@
      "share": 0.316
     }
    ],
-   "rent_1br": 25500,
-   "rent_2br": 55000,
+   "rent_1br": 24000,
+   "rent_2br": 72000,
    "safety": 6.315789473684211,
    "hub_minutes": {
     "siam": 9,
@@ -5664,7 +5664,7 @@
   "ekkamai": {
    "raw": {
     "transport": 0.5763,
-    "rent": 28500,
+    "rent": 27000,
     "daily_essentials": 2.8035,
     "safety": 5.97,
     "food": 5.5417,
@@ -5697,8 +5697,8 @@
      "share": 0.484
     }
    ],
-   "rent_1br": 28500,
-   "rent_2br": 60500,
+   "rent_1br": 27000,
+   "rent_2br": 50000,
    "safety": 5.967741935483871,
    "hub_minutes": {
     "siam": 16,
@@ -7960,7 +7960,7 @@
   "nana": {
    "raw": {
     "transport": 0.72,
-    "rent": 29500,
+    "rent": 28000,
     "daily_essentials": 3.4816,
     "safety": 6.12,
     "food": 6.2008,
@@ -7997,8 +7997,8 @@
      "share": 0.08
     }
    ],
-   "rent_1br": 29500,
-   "rent_2br": 63500,
+   "rent_1br": 28000,
+   "rent_2br": 60000,
    "safety": 6.12,
    "hub_minutes": {
     "siam": 8,
@@ -8712,7 +8712,7 @@
   "phaya-thai": {
    "raw": {
     "transport": 0.7432,
-    "rent": 18000,
+    "rent": 25000,
     "daily_essentials": 3.0519,
     "safety": 5.0,
     "food": 5.5169,
@@ -8731,7 +8731,7 @@
     "green": 8,
     "transport": 10,
     "crowd": 2,
-    "rent": 7,
+    "rent": 5,
     "safety": 5
    },
    "points": 22,
@@ -8741,8 +8741,8 @@
      "share": 1.0
     }
    ],
-   "rent_1br": 18000,
-   "rent_2br": 38000,
+   "rent_1br": 25000,
+   "rent_2br": 43500,
    "safety": 5.0,
    "hub_minutes": {
     "siam": 6,
@@ -9244,7 +9244,7 @@
   "phrom-phong": {
    "raw": {
     "transport": 0.6197,
-    "rent": 28500,
+    "rent": 48000,
     "daily_essentials": 3.2024,
     "safety": 6.03,
     "food": 6.2537,
@@ -9263,7 +9263,7 @@
     "green": 7,
     "transport": 7,
     "crowd": 1,
-    "rent": 4,
+    "rent": 1,
     "safety": 6
    },
    "points": 39,
@@ -9277,8 +9277,8 @@
      "share": 0.487
     }
    ],
-   "rent_1br": 28500,
-   "rent_2br": 61000,
+   "rent_1br": 48000,
+   "rent_2br": 52500,
    "safety": 6.0256410256410255,
    "hub_minutes": {
     "siam": 12,
@@ -10144,7 +10144,7 @@
   "ratchathewi": {
    "raw": {
     "transport": 0.787,
-    "rent": 18000,
+    "rent": 21500,
     "daily_essentials": 3.1128,
     "safety": 5.0,
     "food": 6.0325,
@@ -10163,7 +10163,7 @@
     "green": 8,
     "transport": 10,
     "crowd": 2,
-    "rent": 7,
+    "rent": 6,
     "safety": 5
    },
    "points": 19,
@@ -10173,7 +10173,7 @@
      "share": 1.0
     }
    ],
-   "rent_1br": 18000,
+   "rent_1br": 21500,
    "rent_2br": 38000,
    "safety": 5.0,
    "hub_minutes": {
@@ -10592,7 +10592,7 @@
   "sala-daeng": {
    "raw": {
     "transport": 0.7204,
-    "rent": 32000,
+    "rent": 38000,
     "daily_essentials": 3.3791,
     "safety": 6.58,
     "food": 6.2586,
@@ -10611,7 +10611,7 @@
     "green": 10,
     "transport": 9,
     "crowd": 2,
-    "rent": 3,
+    "rent": 1,
     "safety": 7
    },
    "points": 31,
@@ -10629,8 +10629,8 @@
      "share": 0.065
     }
    ],
-   "rent_1br": 32000,
-   "rent_2br": 70500,
+   "rent_1br": 38000,
+   "rent_2br": 60000,
    "safety": 6.580645161290322,
    "hub_minutes": {
     "siam": 8,
@@ -12476,7 +12476,7 @@
   "thong-lo": {
    "raw": {
     "transport": 0.5809,
-    "rent": 28500,
+    "rent": 28000,
     "daily_essentials": 3.035,
     "safety": 6.03,
     "food": 5.9864,
@@ -12509,8 +12509,8 @@
      "share": 0.487
     }
    ],
-   "rent_1br": 28500,
-   "rent_2br": 61000,
+   "rent_1br": 28000,
+   "rent_2br": 56500,
    "safety": 6.0256410256410255,
    "hub_minutes": {
     "siam": 14,

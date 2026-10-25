@@ -7,6 +7,7 @@
 
     uv run scripts/bangkok/fetch.py     # once (network, cached)
     uv run scripts/bangkok/build.py     # offline, ~20 s
+    uv run scripts/bangkok/build.py --rent-only  # use committed spatial outputs
 
 Unit of rating = khet (district), all 50. Instead of counting POIs inside a
 boundary (which rewards big districts and ignores what lies just across a
@@ -33,8 +34,9 @@ Three levels of detail share that grid:
   * grid cells — every 200 m point itself, rated by resident-weighted
     percentile across the city (a block rates 8 when it beats ~75 % of the
     places people live, not of paddy fields).
-Rent and safety stay district-level at every level (blended by resident
-weight where a station area straddles a border).
+Safety stays district-level (blended by resident weight across borders).
+Station rents use documented rent-overrides.json proxies where available,
+otherwise the resident-weighted district blend. Grid rent stays district-level.
 
 Outputs
   app/src/data/bangkok/districts.json  — app data (ratings, facts, names, …)
@@ -73,6 +75,7 @@ from shapely.ops import linemerge, polygonize, polylabel, unary_union
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import ratings as R  # noqa: E402
+from rents import GRID_POLICY, editorial_rent, rent_audit, refresh_committed_rents, station_rent, validate_overrides  # noqa: E402
 from population import load_population, crowd_raw, population_metadata  # noqa: E402
 from static_data import (  # noqa: E402
     BBOX,
@@ -883,6 +886,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true", help="compute and print, write nothing")
     parser.add_argument("--verbose", action="store_true", help="print every district's ratings")
+    parser.add_argument("--rent-only", action="store_true", help="refresh rent from committed spatial outputs; rejects district rent changes")
     args = parser.parse_args()
     started = time.time()
 
@@ -890,7 +894,28 @@ def main() -> None:
     RAIL_RELATIONS.update(RAIL_ROUTE_RELATIONS)
     schema = json.loads(SCHEMA_CONSTANTS.read_text())
     default_weights = schema["default_weights"]
-    editorial = json.loads((DATA / "editorial.json").read_text())["districts"]
+    editorial_doc = json.loads((DATA / "editorial.json").read_text())
+    editorial = editorial_doc["districts"]
+    rent_meta = editorial_doc["_meta"]["rent"]
+    rent_overrides = json.loads((DATA / "rent-overrides.json").read_text())
+    if args.rent_only:
+        paths = [APP / "districts.json", APP / "stations.json", APP / "meta.json", APP / "grid.json", DATA / "signals.json"]
+        originals = [p.read_text() for p in paths]
+        docs = [json.loads(text) for text in originals]
+        packed = (ROOT / "app" / "public" / docs[3]["file"].lstrip("/")).read_bytes()
+        if len(packed) != docs[3]["bytes"] or hashlib.sha256(packed).hexdigest()[:12] not in docs[3]["file"]:
+            raise ValueError("Committed grid binary does not match its header")
+        refresh_committed_rents(editorial_doc, rent_overrides, *docs, R, default_weights)
+        if not args.dry_run:
+            for path, doc, original in zip(paths, docs, originals):
+                compact = "\n" not in original.rstrip("\n")
+                indent = None if compact else (2 if path.name == "meta.json" else 1)
+                path.write_text(json.dumps(doc, ensure_ascii=False, indent=indent,
+                                           separators=(",", ":") if compact else None) + "\n")
+                print(f"  wrote {path.relative_to(ROOT)}")
+        print(f"Rent refresh: {len(docs[0]['districts'])} districts, {len(docs[1]['areas'])} areas, "
+              f"{len(rent_overrides['areas'])} overrides; grid binary unchanged ({hashlib.sha256(packed).hexdigest()[:12]})")
+        return
     flood_doc = json.loads((DATA / "flood.json").read_text())
     flood = flood_doc["districts"]
 
@@ -1180,7 +1205,7 @@ def main() -> None:
             ovt_ok, osm_ok = f[fkey] >= ovt_min, o[okey] >= osm_min
             level, srcs = R.two_source_confidence(ovt_ok, osm_ok)
             conf[cat], sources[cat] = level, srcs
-        conf.update({"transport": "moderate", "rent": "editorial", "safety": "editorial",
+        conf.update({"transport": "moderate", "rent": editorial[d["slug"]].get("rent_confidence", rent_meta["confidence"]), "safety": "editorial",
                      "green": "moderate", "crowd": "moderate"})
         sources.update({"transport": ["osm_rail", "transit_model"], "rent": ["listing_research"],
                         "safety": ["ai_research"], "green": ["osm"], "crowd": ["worldpop_2020", "overture"]})
@@ -1258,6 +1283,7 @@ def main() -> None:
             "y": ms[0]["y"],
         })
     areas.sort(key=lambda a: a["id"])
+    validate_overrides(rent_overrides, {a["id"] for a in areas})
     area_of_station = np.full(len(stations), -1)
     for k, a in enumerate(areas):
         for j in a["members"]:
@@ -1323,6 +1349,13 @@ def main() -> None:
             },
         }
 
+    area_rents = {
+        a["id"]: station_rent(a["id"], area_agg[a["id"]], rent_meta, rent_overrides)
+        for a in areas
+    }
+    for aid, rent in area_rents.items():
+        area_agg[aid].update({"rent_1br": rent["one_bed"], "rent_2br": rent["two_bed"]})
+
     area_ratings: dict[str, dict[str, int]] = defaultdict(dict)
     for key in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe", "green", "transport"):
         for aid, v in R.percentile_normalize(area_raw[key]).items():
@@ -1378,6 +1411,8 @@ def main() -> None:
                      "green": "moderate", "crowd": "moderate"})
         srcs.update({"transport": ["osm_rail", "transit_model"], "rent": ["listing_research"],
                      "safety": ["ai_research"], "green": ["osm"], "crowd": ["overture"]})
+        conf["rent"] = area_rents[a["id"]]["confidence"]
+        srcs["rent"] = [area_rents[a["id"]]["source"]]
         a["confidence"], a["sources"] = conf, srcs
 
     # Neighbouring areas = the next stop(s) along each line.
@@ -1426,8 +1461,7 @@ def main() -> None:
             "confidence": conf,
             "sources": sources,
             "data_date": data_date,
-            "rent": {"one_bed": e["rent_1br"], "two_bed": e["rent_2br"], "source": "listing_research",
-                     "updated": json.loads((DATA / "editorial.json").read_text())["_meta"]["updated"]},
+            "rent": editorial_rent(e, rent_meta),
             "transit_minutes": agg[slug]["hub_minutes"],
             "min_transit": agg[slug]["min_transit"],
             "station_ids": d["station_ids"],
@@ -1476,7 +1510,6 @@ def main() -> None:
         key=lambda s: s["id"],
     )
 
-    editorial_updated = json.loads((DATA / "editorial.json").read_text())["_meta"]["updated"]
     out_areas = []
     for k, a in enumerate(areas):
         g = area_agg[a["id"]]
@@ -1501,8 +1534,7 @@ def main() -> None:
             "confidence": a["confidence"],
             "sources": a["sources"],
             "data_date": data_date,
-            "rent": {"one_bed": g["rent_1br"], "two_bed": g["rent_2br"], "source": "listing_research",
-                     "updated": editorial_updated},
+            "rent": area_rents[a["id"]],
             "transit_minutes": g["hub_minutes"],
             "min_transit": g["min_transit"],
             "resident_minutes": g["resident_minutes"],
@@ -1562,6 +1594,7 @@ def main() -> None:
         "file": f"/data/bangkok/{grid_file}",
         "bytes": len(grid_packed),
         "cell_m": GRID_M,
+        "rent_policy": GRID_POLICY,
         "nx": nx,
         "ny": ny,
         "west": round(west, 7),
@@ -1601,6 +1634,7 @@ def main() -> None:
         "grid_medians": grid_medians,
         "grid_default_anchors": grid_anchors,
         "rent_scale": {"floor": R.RENT_FLOOR_THB, "ceiling": R.RENT_CEILING_THB},
+        "rent_audit": rent_audit(rent_overrides),
         "data_date": data_date,
     }
 
@@ -1698,11 +1732,11 @@ def main() -> None:
         print(f"  wrote {path.relative_to(ROOT)} ({path.stat().st_size / 1024:.0f} KB)")
 
     dump(APP / "districts.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py",
-                                             "population": population_metadata()},
+                                             "population": population_metadata(), "rent_audit": rent_audit(rent_overrides)},
                                   "districts": out_districts}, indent=1)
     dump(APP / "geometry.json", geometry)
     dump(APP / "rail.json", {"lines": rail_lines, "stations": rail_stations})
-    dump(APP / "stations.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py"},
+    dump(APP / "stations.json", {"_meta": {"generated": today.isoformat(), "source": "scripts/bangkok/build.py", "rent_audit": rent_audit(rent_overrides)},
                                  "areas": out_areas}, indent=1)
     dump(APP / "station-geometry.json", station_geometry)
     dump(APP / "grid.json", grid_header, indent=1)

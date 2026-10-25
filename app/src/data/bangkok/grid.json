@@ -421,5 +421,6 @@
   "p50": 6.3,
   "p95": 8.2
  },
- "data_date": "2026-09"
+ "data_date": "2026-09",
+ "rent_policy": "district_editorial; station-area rent overrides do not apply to grid cells"
 }

@@ -223,6 +223,8 @@ export interface MapStation {
   /** Monthly rent for the city's reference unit, in the city's currency:
    *  JPY for a Tokyo 1K–1LDK, THB for a Bangkok 1-bedroom condo. */
   rent_1k: number | null;
+  /** Bangkok only: enough provenance to explain rent in maps and previews. */
+  rent_provenance?: BangkokRentProvenance;
   min_transit: number | null;
   elevation_m: number | null;
   seismic_risk_tier: SeismicRiskTier | null;
@@ -307,13 +309,36 @@ export interface DistrictFacts {
   piers: number;
 }
 
-export interface DistrictRent {
-  /** Typical asking rent for a ~30–35 m² 1-bedroom condo, THB / month. */
+export interface BangkokRentSource {
+  id: string;
+  publisher: string;
+  url: string;
+  accessed: string;
+  as_of: string;
+}
+
+export interface BangkokRentProvenance {
+  metric: 'typical_asking' | 'median_asking_by_bedroom';
+  provenance: 'district_editorial' | 'district_blend' | 'station_override';
+  confidence: Exclude<ConfidenceLevel, 'strong'>;
+  as_of: string;
+  sample_size: { one_bed: number; two_bed: number } | null;
+  sources: BangkokRentSource[];
+  source_typical_size_sqm?: { one_bed: number | null; two_bed: number | null };
+  composition_skew?: boolean;
+}
+
+export interface DistrictRent extends BangkokRentProvenance {
+  /** Asking THB/month; metric distinguishes fixed-size estimates from proxies. */
   one_bed: number | null;
-  /** Typical asking rent for a ~60–70 m² 2-bedroom condo, THB / month. */
   two_bed: number | null;
   source: string;
   updated: string;
+  definition: string;
+  method: string;
+  limitations: string[];
+  audited_at: string;
+  source_audit: string;
 }
 
 /**

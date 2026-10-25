@@ -9,6 +9,7 @@ import gzip
 import json
 import math
 import sys
+from copy import deepcopy
 from pathlib import Path
 
 import pytest
@@ -18,9 +19,12 @@ sys.path.insert(0, str(HERE))
 
 import ratings as R  # noqa: E402
 from static_data import HUBS, LINES, RU_NAMES  # noqa: E402
+from rents import refresh_committed_rents, station_rent, validate_overrides  # noqa: E402
 
 ROOT = HERE.parent.parent
-EDITORIAL = json.loads((ROOT / "data" / "bangkok" / "editorial.json").read_text())["districts"]
+EDITORIAL_DOC = json.loads((ROOT / "data" / "bangkok" / "editorial.json").read_text())
+EDITORIAL = EDITORIAL_DOC["districts"]
+RENT_OVERRIDES = json.loads((ROOT / "data" / "bangkok" / "rent-overrides.json").read_text())
 APP = ROOT / "app" / "src" / "data" / "bangkok"
 DISTRICTS = json.loads((APP / "districts.json").read_text())["districts"]
 AREAS = json.loads((APP / "stations.json").read_text())["areas"]
@@ -134,6 +138,104 @@ def test_editorial_covers_every_district():
         assert e["aliases"] and all(a.strip() for a in e["aliases"]), slug
 
 
+def test_rent_override_provenance_and_area_join():
+    validate_overrides(RENT_OVERRIDES, {a["id"] for a in AREAS})
+    assert len(AREAS) == 133
+    assert len(RENT_OVERRIDES["areas"]) == META["rent_audit"]["station_override_count"] == 10
+    assert all(e["confidence"] == "estimate" for e in RENT_OVERRIDES["areas"].values())
+    assert not {"ari", "siam", "surasak", "saint-louis"} & set(RENT_OVERRIDES["areas"])
+    for a in AREAS:
+        rent = a["rent"]
+        assert a["confidence"]["rent"] == rent["confidence"]
+        assert a["sources"]["rent"] == [rent["source"]]
+        assert rent["definition"] and rent["method"] and rent["limitations"]
+        if a["id"] in RENT_OVERRIDES["areas"]:
+            e = RENT_OVERRIDES["areas"][a["id"]]
+            assert rent["one_bed"] == e["rent_1br"]
+            assert rent["two_bed"] == e["rent_2br"]
+            assert rent["sample_size"] == e["sample_size"]
+            assert rent["as_of"] == rent["updated"] == e["as_of"]
+            assert [s["id"] for s in rent["sources"]] == e["sources"]
+            assert rent["provenance"] == "station_override"
+        else:
+            assert rent["provenance"] == "district_blend"
+            assert rent["confidence"] == "editorial"
+            assert rent["sample_size"] is None and rent["sources"] == []
+
+
+@pytest.mark.parametrize("mutation", ["orphan", "bounds", "order", "strong", "missing_source", "sample", "date"])
+def test_reject_invalid_rent_overrides(mutation):
+    doc = deepcopy(RENT_OVERRIDES)
+    entry = doc["areas"]["asok"]
+    if mutation == "orphan":
+        doc["areas"]["not-a-station"] = entry
+    elif mutation == "bounds":
+        entry["rent_1br"] = 4_999
+    elif mutation == "order":
+        entry["rent_2br"] = entry["rent_1br"]
+    elif mutation == "strong":
+        entry["confidence"] = "strong"
+    elif mutation == "missing_source":
+        entry["sources"] = ["unknown"]
+    elif mutation == "sample":
+        entry["sample_size"]["two_bed"] = 3
+    elif mutation == "date":
+        entry["as_of"] = "2026-11-01"
+    with pytest.raises(ValueError):
+        validate_overrides(doc, {a["id"] for a in AREAS})
+
+
+def test_unoverridden_rent_preserves_blended_pair():
+    # Deliberately unequal inputs catch accidental district lookup/rounding or
+    # an override being applied to a neighboring, unresearched station.
+    blended = {"rent_1br": 17_500, "rent_2br": 33_500}
+    for a in AREAS:
+        if a["id"] not in RENT_OVERRIDES["areas"]:
+            rent = station_rent(a["id"], blended, EDITORIAL_DOC["_meta"]["rent"], RENT_OVERRIDES)
+            assert (rent["one_bed"], rent["two_bed"]) == (17_500, 33_500), a["id"]
+
+
+def _rent_refresh_docs():
+    return [json.loads(p.read_text()) for p in (
+        APP / "districts.json", APP / "stations.json", APP / "meta.json", APP / "grid.json",
+        ROOT / "data/bangkok/signals.json",
+    )]
+
+
+def test_rent_refresh_preserves_other_signals_and_restores_removed_override():
+    docs = _rent_refresh_docs()
+    before = deepcopy(docs)
+    overrides = deepcopy(RENT_OVERRIDES)
+    overrides["areas"]["asok"]["rent_1br"] += 1_000
+    refresh_committed_rents(EDITORIAL_DOC, overrides, *docs, R, SCHEMA["default_weights"])
+    for old, new in zip(before[1]["areas"], docs[1]["areas"]):
+        assert old["id"] == new["id"]
+        for key in old:
+            if key not in {"rent", "ratings", "confidence", "sources"}:
+                assert old[key] == new[key], (old["id"], key)
+        for key in RATING_KEYS:
+            if key != "rent":
+                assert old["ratings"][key] == new["ratings"][key]
+                assert old["confidence"][key] == new["confidence"][key]
+                assert old["sources"][key] == new["sources"][key]
+        if old["id"] != "asok":
+            assert old["rent"] == new["rent"], old["id"]
+    assert docs[0] == before[0]  # every district rent and rating is unchanged
+    del overrides["areas"]["asok"]
+    refresh_committed_rents(EDITORIAL_DOC, overrides, *docs, R, SCHEMA["default_weights"])
+    restored = next(a for a in docs[1]["areas"] if a["id"] == "asok")["rent"]
+    assert restored["one_bed"] == restored["editorial_baseline"]["rent_1br"] == 28_500
+    assert restored["provenance"] == "district_blend"
+    assert restored["sources"] == [] and restored["confidence"] == "editorial"
+
+
+def test_rent_only_rejects_district_changes_requiring_spatial_rebuild():
+    editorial = deepcopy(EDITORIAL_DOC)
+    editorial["districts"]["watthana"]["rent_1br"] += 500
+    with pytest.raises(ValueError, match="full spatial build"):
+        refresh_committed_rents(editorial, RENT_OVERRIDES, *_rent_refresh_docs(), R, SCHEMA["default_weights"])
+
+
 def test_line_metadata_is_complete():
     for lid, spec in LINES.items():
         for key in ("name_en", "name_th", "name_ja", "name_ru", "operator", "color", "kind"):
@@ -151,7 +253,10 @@ def test_export_matches_editorial_inputs():
         assert d["ratings"]["rent"] == R.rent_to_affordability(e["rent_1br"]), d["slug"]
         assert d["ratings"]["safety"] == e["safety"], d["slug"]
         assert d["rent"]["one_bed"] == e["rent_1br"]
-        assert d["confidence"]["rent"] == d["confidence"]["safety"] == "editorial"
+        assert d["confidence"]["rent"] == e.get("rent_confidence", "editorial") == d["rent"]["confidence"]
+        assert d["confidence"]["safety"] == "editorial"
+        assert d["rent"]["metric"] == "typical_asking"
+        assert d["rent"]["as_of"] == "2026-09"  # auditing does not refresh observations
 
 
 def test_percentile_categories_are_uniform():
@@ -200,7 +305,8 @@ def test_station_area_ratings():
     for a in AREAS:
         assert a["ratings"]["rent"] == R.rent_to_affordability(a["rent"]["one_bed"]), a["id"]
         assert 1 <= a["ratings"]["safety"] <= 10
-        assert a["confidence"]["rent"] == a["confidence"]["safety"] == "editorial"
+        assert a["confidence"]["rent"] in {"moderate", "estimate", "editorial"}
+        assert a["confidence"]["safety"] == "editorial"
         assert a["min_transit"] == min(a["transit_minutes"].values())
     for key in RATING_KEYS:
         assert META["station_medians"][key] == R.median_int([a["ratings"][key] for a in AREAS]), key
@@ -285,6 +391,14 @@ def test_grid_values_in_range():
     for hub in HUBS:
         vals = [PLANES[f"hub_{hub}"][i] for i in INSIDE]
         assert min(vals) <= 5 and max(vals) <= 250, hub
+
+
+def test_grid_rent_stays_district_level():
+    assert "station-area rent overrides do not apply" in GRID["rent_policy"]
+    assert "rent" not in PLANES  # client inherits the owning district's rating
+    values = [DISTRICTS[PLANES["district"][i] - 1]["ratings"]["rent"] for i in INSIDE]
+    weights = [PLANES["weight"][i] for i in INSIDE]
+    assert int(R.weighted_median(values, weights)) == GRID["medians"]["rent"]
 
 
 def test_grid_medians_are_resident_weighted():
