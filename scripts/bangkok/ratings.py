@@ -11,7 +11,17 @@ a 200 m sample grid inside the district, so no extra log is applied here.
 from __future__ import annotations
 
 import math
-from bisect import bisect_right
+import sys
+from pathlib import Path
+
+# Same checkout bootstrap as compute and MCP; no installed schema package needed.
+_SCHEMA_PATH = Path(__file__).resolve().parents[2] / "packages" / "schema" / "python"
+if str(_SCHEMA_PATH) not in sys.path:
+    sys.path.insert(0, str(_SCHEMA_PATH))
+from city_rating_schema.normalize import (  # noqa: E402
+    midpoint_percentile, percentile_anchors, rent_to_affordability as normalize_rent,
+    two_source_confidence as source_confidence,
+)
 
 # THB/month → affordability. ฿8k (cheapest khet corridors) → 10, ฿38k
 # (Pathum Wan / Watthana luxury stock) → 1. Linear, like Tokyo's ¥80k→¥300k.
@@ -27,23 +37,7 @@ def percentile_normalize(values: dict[str, float], invert: bool = False) -> dict
     Ties share the average of their lowest and highest rank, so a cluster of
     equal values straddles a rating boundary instead of all rounding down.
     """
-    if not values:
-        return {}
-    ordered = sorted(values.values())
-    n = len(ordered)
-    midpoint: dict[float, float] = {}
-    i = 0
-    while i < n:
-        j = bisect_right(ordered, ordered[i])
-        midpoint[ordered[i]] = (i + j - 1) / 2.0
-        i = j
-    out: dict[str, int] = {}
-    for key, value in values.items():
-        pct = midpoint[value] / max(n - 1, 1)
-        if invert:
-            pct = 1.0 - pct
-        out[key] = max(1, min(10, round(pct * 9 + 1)))
-    return out
+    return midpoint_percentile(values, invert=invert)
 
 
 def weighted_percentile_normalize(
@@ -104,11 +98,7 @@ def weighted_anchors(scores: list[float], weights: list[float]) -> dict[str, flo
 
 def rent_to_affordability(rent_thb: float | None) -> int | None:
     """Linear ฿8k→10 … ฿38k→1, clamped. None for missing rent."""
-    if not rent_thb or rent_thb <= 0:
-        return None
-    t = (rent_thb - RENT_FLOOR_THB) / (RENT_CEILING_THB - RENT_FLOOR_THB)
-    t = max(0.0, min(1.0, t))
-    return max(1, min(10, round(10 - 9 * t)))
+    return normalize_rent(rent_thb, RENT_FLOOR_THB, RENT_CEILING_THB)
 
 
 def weighted_median(values: list[float], weights: list[float]) -> float:
@@ -144,26 +134,16 @@ def composite(ratings: dict[str, int], weights: dict[str, float]) -> float:
 
 def anchors(scores: list[float]) -> dict[str, float]:
     """p5 / p50 / p95 with the same index rule as computeCompositeAnchors()."""
-    s = sorted(scores)
-    n = len(s)
-
-    def pick(p: float) -> float:
-        return s[min(n - 1, max(0, math.floor(n * p)))]
-
-    return {"p5": pick(0.05), "p50": pick(0.5), "p95": pick(0.95)}
+    return percentile_anchors(scores)
 
 
 def two_source_confidence(overture_ok: bool, osm_ok: bool) -> tuple[str, list[str]]:
-    """Tokyo's rule, applied to Bangkok's two POI sources.
+    """Bangkok's symmetric rule (deliberately different from Tokyo food).
 
     strong   — both OSM and Overture map the category well in this district
     moderate — only one of them does
     estimate — neither reaches its threshold (formula over sparse data)
     """
-    if overture_ok and osm_ok:
-        return "strong", ["overture", "osm"]
-    if overture_ok:
-        return "moderate", ["overture"]
-    if osm_ok:
-        return "moderate", ["osm"]
-    return "estimate", ["overture", "osm"]
+    return source_confidence(
+        overture_ok, osm_ok, sources=("overture", "osm"), policy="symmetric",
+    )

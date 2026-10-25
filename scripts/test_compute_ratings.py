@@ -92,13 +92,11 @@ class TestLogPercentileNormalize:
         out = cr.log_percentile_normalize({"a": 5})
         assert out["a"] == 1
 
-    def test_all_equal_yields_uniform_high_rating(self):
-        # When every value ties, midpoint ranking puts everyone at the top rank
-        # → percentile 1.0 → rating 10 for all. This is the "tie" edge case
-        # CRTKY-64/65 fixed: previously all tied stations would lump at one int.
-        out = cr.log_percentile_normalize({"a": 5, "b": 5, "c": 5})
-        # All three should receive the same rating (no spread among ties)
-        assert len(set(out.values())) == 1
+    def test_all_equal_yields_midpoint_rating(self):
+        # All equal values share the midpoint rank: percentile .5 → round(5.5)=6.
+        assert cr.log_percentile_normalize({"a": 5, "b": 5, "c": 5}) == {
+            "a": 6, "b": 6, "c": 6,
+        }
 
     def test_outlier_ranks_highest(self):
         # One clearly-higher value should get the top rating; the others lower.
