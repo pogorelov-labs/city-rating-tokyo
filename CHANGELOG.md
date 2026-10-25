@@ -1,0 +1,57 @@
+# Changelog
+
+Release tags use semantic versioning. Add user-visible changes here and keep each
+published entry aligned with its [release notes](docs/releases/) and immutable
+tag. The [release runbook](docs/RELEASING.md) defines the gates and commands.
+
+## v0.1.0 — 2026-10-26
+
+First tagged release of City Rating: **Tokyo + Bangkok**. This entry describes
+the existing product at the release commit; the release preparation changes
+documentation only and does not regenerate data or bump package versions.
+
+### Product
+
+- Greater Tokyo: **1,493 train stations** with map exploration, station pages,
+  category breakdowns, comparison, commute/rent dealbreakers and adjustable
+  weights.
+- Bangkok: **50 districts, 133 station areas and a 200 m grid**, with rail
+  overlays, detail pages and modeled commute to five hubs. Preferences carry
+  between cities; currency-specific filters are kept per city.
+- **10 categories:** transport, affordability, daily essentials, safety, food,
+  green, gym/sports, vibe, nightlife and quietness. **EN/JA/RU** interfaces and
+  localized detail pages.
+- Bangkok rent: **10 central station-area DooAsset proxies**, using published
+  condominium asking-rent medians by bedroom count across all floor areas,
+  at **estimate** confidence. District and grid rents remain editorial; other
+  station areas retain district blends. ComparePanel distinguishes these
+  provenances and shows source/date/sample information for the proxies.
+- Existing context includes flood exposure, tourism, Michelin and institution
+  facts, with source and coverage caveats in the methodology and research docs.
+
+### Recent features and hardening
+
+- Geofabrik Thailand OSM acquisition via
+  [`scripts/bangkok/fetch-geofabrik.py`](scripts/bangkok/fetch-geofabrik.py),
+  including provenance hashes and complete bbox-crossing geometry. This ships
+  the **fetch path only**, without the experimental full spatial refresh.
+- Shared Python normalization with equivalence/golden checks that preserve
+  city-specific confidence rules; schema codegen and data-integrity gates.
+- UI interaction tests, typed translation keys and EN/JA/RU message checks.
+- Next.js 16.4.2 security update and MCP authentication fixes for fail-open,
+  transport bypass and KeyStore-failure cases.
+- HotPepper freshness/recovery tooling and the previously adopted Bangkok
+  WorldPop district population model, with their documented source limits.
+
+### Not in this release
+
+The **full Bangkok spatial data refresh** remains blocked by **10 validation
+failures** (8 population snapshot/scope, 1 normalization golden, 1 transport
+median) and losses of **tourism, Michelin and embassy enrichments** in full
+builder output. Green/area anomalies, source pinning and Overture attribution
+also need review. The [scoped remediation plan](docs/DATA_REFRESH_REMEDIATION.md)
+is **not implemented**. A refresh requires its own PR and acceptance evidence;
+this release does not advance those source snapshots.
+
+[GitHub release](https://github.com/pogorelov-labs/city-rating-tokyo/releases/tag/v0.1.0)
+· [Release body](docs/releases/v0.1.0.md)

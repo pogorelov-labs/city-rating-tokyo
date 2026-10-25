@@ -3,9 +3,11 @@
 Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across ten categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd, daily essentials), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
-**Repo / issues:** [github.com/ruspg/city-rating-tokyo](https://github.com/ruspg/city-rating-tokyo)
+**Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
-**Bangkok (since Sept 2026):** all **50 districts** (khet) with the BTS / MRT / ARL / SRT Red rail network on top — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
+**Latest release:** [v0.1.0 — Tokyo + Bangkok](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
+
+**Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and a **200 m grid**, with the BTS / MRT / ARL / SRT Red rail network on top — switch cities from the header; your weights carry over. **EN/JA/RU** across both cities. See [Bangkok](#bangkok-district-layer) below.
 
 ## What it does
 
@@ -15,24 +17,29 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 
 ## Bangkok (district layer)
 
-- **Unit:** 50 districts (polygons), not stations — a quarter of Bangkok's districts have no rail inside.
+- **Levels:** 50 districts (polygons), 133 walkable station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
 - **Data:** OpenStreetMap + [Overture Maps Places](https://docs.overturemaps.org/guides/places/) (two independent POI sources, r ≈ 0.9 agreement), Wikidata (names, population), a door-to-door commute model to five hubs, Wikimedia Commons photos.
-- **Honesty:** rent and safety are researcher estimates (no open district data) and scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
-- **Rebuild:** see the [Bangkok pipeline guide](scripts/bangkok/README.md) for the Geofabrik PBF path (no Overpass), other API inputs, and offline build. The existing Overpass path remains available.
+- **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
+- **Honesty:** safety remains editorial; scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. Evidence density differs by category and level. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
+- **Acquisition code:** [`scripts/bangkok/fetch-geofabrik.py`](scripts/bangkok/fetch-geofabrik.py) fetches OSM from a Geofabrik Thailand PBF without Overpass. The [pipeline guide](scripts/bangkok/README.md) covers this path, other API inputs and offline builds; the Overpass path remains available.
+- **Refresh status:** the full Bangkok spatial refresh is **not shipped in v0.1.0**. It is blocked by 10 validation failures and tourism/Michelin/embassy enrichment losses, plus quality/attribution reviews. The [scoped remediation plan](docs/DATA_REFRESH_REMEDIATION.md) is not implemented; any refresh requires a separate PR.
 
 ## Rating categories (default weights)
 
 | Category | Weight | Notes |
 |----------|--------|--------|
-| Transport | 20% | Line count + passenger volume (MLIT S12 where available) |
-| Affordability | 20% | Rent model: Suumo where scraped, else ward / regression |
-| Food & Dining | 15% | HotPepper + OpenStreetMap |
-| Nightlife | 10% | HotPepper + OSM extended |
-| Safety | 10% | Police open data, 2024: Tokyo neighborhoods within 800 m; municipalities elsewhere |
-| Parks & Green | 10% | OSM (area scrape pending — **CRTKY-42**) |
-| Gym & Sports | 5% | OSM |
-| Vibe | 5% | OSM cultural / pedestrian signals + AI overrides |
-| Low Crowds | 5% | Passengers + fallbacks |
+| Transport | 18% | Tokyo lines/passengers; Bangkok rail + commute model |
+| Affordability | 18% | Tokyo Suumo / e-Stat / regression; Bangkok editorial + 10 station-area proxies |
+| Daily Essentials | 14% | Tokyo OSM; Bangkok Overture + OSM |
+| Safety | 10% | Tokyo 2024 police open data; Bangkok editorial |
+| Food & Dining | 12% | Tokyo HotPepper + OSM; Bangkok Overture + OSM |
+| Parks & Green | 8% | OSM green signals |
+| Gym & Sports | 4% | Tokyo OSM; Bangkok Overture + OSM |
+| Vibe | 4% | Cultural / pedestrian signals + documented editorial overrides |
+| Nightlife | 8% | Tokyo HotPepper + OSM; Bangkok Overture + OSM |
+| Quietness | 4% | Tokyo passengers + fallbacks; Bangkok WorldPop (districts) / place density (finer levels) |
+
+Weights match [`packages/schema/constants.json`](packages/schema/constants.json).
 
 ## Tech stack
 
@@ -66,22 +73,25 @@ Open [localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify** on a VPS with Traefik and TLS.
+Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify** on a VPS with Traefik and TLS, auto-deployed from `main`. Static city data needs no runtime DB; v0.1.0 has no DB migration. See the [release runbook](docs/RELEASING.md).
 
 ## Data sources (high level)
 
 - **Stations / lines** — based on open railway-station datasets (see `SPEC.md` / `data/stations.json` provenance).
-- **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB.
+- **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB for Tokyo; Bangkok combines OSM + **Overture Places**. The new Geofabrik OSM fetch path is code only; the full spatial refresh is excluded.
 - **Food / nightlife counts** — **HotPepper** API + OSM.
 - **Passengers** — **MLIT** 国土数値情報 S12, FY2024 (`scripts/scrapers/ingest-mlit-s12.py` → `data/passengers/s12-passengers.json`; see `research/03-crowd.md`). 出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）を加工して作成.
 - **Crime** — 2024 police statistics from 警視庁 (町丁 CSV) and the Kanagawa, Saitama and Chiba prefectural police, with e-Stat population and boundaries (`scripts/scrapers/ingest-crime-open-data.py` → `data/crime/`; sources and attributions in `data/crime/sources.json`, see `research/02-safety.md`).
-- **Rent** — **Suumo** scrape to `rent-averages.json`; ward and model fallbacks in compute (see `research/05-rent.md`).
+- **Rent** — Tokyo **Suumo** scrape to `rent-averages.json`, with **e-Stat** municipal and model fallbacks (see `research/05-rent.md`); Bangkok editorial district/grid estimates and 10 DooAsset station-area estimate proxies.
+- **Bangkok context** — Wikidata / Wikimedia Commons names and credited photos; **WorldPop constrained 2020** district population model; **ThaiFloodRisk** flood inputs; separately added tourism, Michelin and institution facts. Per-source dates/licenses apply; the release date is not a data-refresh date. Additional Overture attribution review is pending before a future refresh.
 - **~272 “AI-researched” stations** — human-reviewed text + integer ratings preserved in export; pipeline confidence merge for those slugs is **CRTKY-83**.
 
-**Honesty:** “Every station has scores” does not mean every score uses the same evidence density. **Hub commute minutes** are a **placeholder (30m × 5)** for most exported computed rows until **CRTKY-81**. See **`CLAUDE.md` → Data readiness & coverage honesty** and **`research/VISION.md`** (critical readiness + backlog tables).
+**Honesty:** “Every station has scores” does not mean every score uses the same evidence density. Tokyo computed **hub commute minutes** use a calibrated geographic/line model; researched entries retain authored values, so these are not timetable routing results (CRTKY-81). See **`CLAUDE.md` → Data readiness & coverage honesty** and **`research/VISION.md`** (critical readiness + backlog tables).
 
 ## Maintainer docs & task tracking
 
+- [**CHANGELOG.md**](CHANGELOG.md) · [**Release runbook**](docs/RELEASING.md) · [**v0.1.0 notes**](docs/releases/v0.1.0.md)
+- [**Bangkok data-refresh remediation**](docs/DATA_REFRESH_REMEDIATION.md) — scoped, not implemented; separate from this release.
 - **`CLAUDE.md`** — NocoDB table IDs, formulas, perf invariants, **data readiness** section.
 - **`research/00-overview.md`** — pipeline phase checklist + confidence snapshot.
 - **`research/VISION.md`** — product roadmap + Plane cross-links (**CRTKY-80** … **CRTKY-84**).

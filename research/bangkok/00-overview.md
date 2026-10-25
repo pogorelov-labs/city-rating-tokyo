@@ -21,6 +21,20 @@ the map popup links to the cell's district and station area. Tokyo stays at
 
 ## Pipeline
 
+The [acquisition/build guide](../../scripts/bangkok/README.md) now includes
+`scripts/bangkok/fetch-geofabrik.py`: a Geofabrik Thailand PBF path that replaces
+the OSM Overpass tasks with a coherent, hashed snapshot. Fetch the remaining
+Wikidata/Commons/Overture tasks separately as that guide describes. The existing
+Overpass workflow below remains available; do not mix OSM snapshots.
+
+**v0.1.0 does not ship the full spatial refresh.** Its experimental output has
+**10 validation failures** and loses tourism, Michelin and embassy enrichments;
+green/area anomalies, source pinning and additional Overture attribution also
+need review. The [scoped remediation plan](../../docs/DATA_REFRESH_REMEDIATION.md)
+is **not implemented**. Any refresh requires a separate PR under the
+[release runbook](../../docs/RELEASING.md); a successful build is not approval
+to publish its output.
+
 ```
 uv run scripts/bangkok/fetch.py      # network, cached in data/bangkok/raw/ (gitignored, ~50 MB)
 uv run scripts/bangkok/fetch-population.py # pinned WorldPop country raster, 28.9 MB (cached, SHA checked)
@@ -114,15 +128,29 @@ gyms 0.77 (`meta.json → source_agreement_r`).
 Overture caveat: ~12k Bangkok rows typed `historic_site` are mis-classified
 apartment buildings — that category is excluded (`build.py load_overture`).
 
+### Station-area rent exception
+
+The district table above is unchanged. **10 central station areas** use
+DooAsset's published condominium asking-rent medians by bedroom count, across
+**all floor areas**, at **estimate** confidence. `data/bangkok/rent-overrides.json`
+records sources, dates and separate 1BR/2BR sample sizes. See the
+[central rent audit](notes/2026-10-25-central-rent-audit-crtky141.md). These are
+single-provider proxies with overlapping 800 m source radii, not fixed-size
+representative samples or transaction prices; lease-duration/short-stay
+exclusions are not established. The other 123 areas retain district blends,
+including Ari and Siam; grid rents stay district-level editorial.
+ComparePanel distinguishes proxies, blends and editorial district estimates.
+
 ## Honesty notes (read before quoting a Bangkok number)
 
 1. **Relative scores.** Percentile across 50 districts: a Bangkok 8 ≠ a Tokyo 8.
    The UI says so in the filter panel, the district "How ratings work" box and
    /methodology#bangkok.
-2. **Rent and safety are editorial** — no open district-level data exists
+2. **District rent and safety are editorial** — no open district-level data exists
    (portals block automated access; the police publish no district crime
    statistics). Rent was calibrated by hand against published aggregates
-   (see `editorial.json → _meta`). Safety excludes road traffic.
+   (see `editorial.json → _meta`). The 10 station-area rent proxies described
+   above do not change district values or confidence. Safety excludes road traffic.
 3. **Mapping bias.** Tourist and expat districts are better mapped in both OSM
    and Overture; outer-district food / nightlife is likely understated.
 4. **Borders on roads.** Sukhumvit, Ratchadaphisek and Lat Phrao roads are
@@ -143,11 +171,12 @@ apartment buildings — that category is excluded (`build.py load_overture`).
    Wikidata/BMA areas (e.g. Bang Rak 3.9 km² in OSM vs 5.5 official) while
    the 50-district total matches (1,566 vs 1,569 km²). Densities use the
    official area.
-7. **Rent and safety stay district-level at the finer levels.** A station
-   area gets the resident-weighted blend of the districts it covers, a grid
-   cell its own district's estimate — so the grid shows steps at district
-   borders in those two categories. Condo rents near a BTS station are
-   usually above the district figure; no open data exists to model that.
+7. **Grid rent and safety stay district-level.** A grid cell uses its own
+   district's editorial estimates, so these categories step at district borders.
+   Station-area safety and rents for 123 areas use resident-weighted district
+   blends. Only the 10 researched rent overrides use station-area proxies;
+   their metric differs from the editorial fixed-size reference. No value is
+   extrapolated to neighboring areas or the grid.
 8. **Station areas are not a partition.** Land farther than 800 m from any
    station (most of Nong Chok, Bang Khun Thian, Thawi Watthana …) is left
    unpainted at the station level; the district and grid levels cover it.
