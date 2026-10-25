@@ -1,5 +1,7 @@
 'use client';
 
+import RentNote from '@/components/bangkok/RentNote';
+
 import { dataLabel } from '@/i18n/message-key';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
@@ -112,6 +114,7 @@ export function StationAreaPopupBody({
         {t('map.stationAreaCaption')}
         {area.district && <> · {districtName(area.district)}</>}
         {area.rent_1k != null && <> · ~{formatRentShort('bangkok', area.rent_1k)}/mo</>}
+        {area.rent_provenance && <RentNote rent={area.rent_provenance} compact />}
       </div>
       <div className="flex items-center gap-3 mt-1">
         <Link

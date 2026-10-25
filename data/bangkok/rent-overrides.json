@@ -1,0 +1,366 @@
+{
+  "_meta": {
+    "audited_at": "2026-10-25",
+    "unit": "THB/month",
+    "reference_definition": "Asking rent in THB/month for a roughly 30–35 m² 1BR or 60–70 m² 2BR condo, excluding serviced apartments and short stays. Typical editorial corridor estimate, not a statistical median.",
+    "definition": "Published median condo asking rent by bedroom count within the source’s 800 m station radius, all floor areas. A proxy for the reference metric; lease duration and serviced-unit exclusion are not verified.",
+    "audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
+    "grid_policy": "Grid rent remains district editorial; only station-area rent and affordability ratings use overrides.",
+    "sources": {
+      "dooasset-thong-lo-2026-09-29": {
+        "publisher": "DooAsset",
+        "title": "BTS Thong Lo: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-thong-lo/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-09-29",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-ekkamai-2026-10-25": {
+        "publisher": "DooAsset",
+        "title": "BTS Ekkamai: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-ekkamai/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-25",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-phrom-phong-2026-10-25": {
+        "publisher": "DooAsset",
+        "title": "BTS Phrom Phong: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-phrom-phong/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-25",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-asok-2026-10-25": {
+        "publisher": "DooAsset",
+        "title": "BTS Asok / Sukhumvit: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-asok/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-25",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-nana-2026-10-17": {
+        "publisher": "DooAsset",
+        "title": "BTS Nana: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-nana/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-17",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-chit-lom-2026-10-21": {
+        "publisher": "DooAsset",
+        "title": "BTS Chit Lom: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-chit-lom/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-21",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-sala-daeng-2026-10-07": {
+        "publisher": "DooAsset",
+        "title": "BTS Sala Daeng / Si Lom: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-sala-daeng/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-07",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-chong-nonsi-2026-10-01": {
+        "publisher": "DooAsset",
+        "title": "BTS Chong Nonsi: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-chong-nonsi/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-01",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-ratchathewi-2026-10-07": {
+        "publisher": "DooAsset",
+        "title": "BTS Ratchathewi: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-ratchathewi/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-07",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      },
+      "dooasset-phaya-thai-2026-10-10": {
+        "publisher": "DooAsset",
+        "title": "BTS Phaya Thai: condo rents by bedroom",
+        "url": "https://dooasset.com/en/area/bts-phaya-thai/",
+        "accessed": "2026-10-25",
+        "as_of": "2026-10-10",
+        "methodology_url": "https://dooasset.com/en/methodology/",
+        "access": "Individually cited public-page aggregate facts; direct automated access returned 403 and was stopped. No bulk/listing scrape or CSV retrieved."
+      }
+    },
+    "gaps": {
+      "ari": "1BR median 27,000 (n=8), but 2BR median suppressed (n=3); keep the complete editorial pair.",
+      "siam": "Both bedroom medians suppressed (1BR n=3, 2BR n=2); keep editorial."
+    }
+  },
+  "areas": {
+    "thong-lo": {
+      "rent_1br": 28000,
+      "rent_2br": 56500,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-thong-lo-2026-09-29"
+      ],
+      "as_of": "2026-09-29",
+      "sample_size": {
+        "one_bed": 33,
+        "two_bed": 24
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 38,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "ekkamai": {
+      "rent_1br": 27000,
+      "rent_2br": 50000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-ekkamai-2026-10-25"
+      ],
+      "as_of": "2026-10-25",
+      "sample_size": {
+        "one_bed": 38,
+        "two_bed": 16
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 35,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "phrom-phong": {
+      "rent_1br": 48000,
+      "rent_2br": 52500,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-phrom-phong-2026-10-25"
+      ],
+      "as_of": "2026-10-25",
+      "sample_size": {
+        "one_bed": 19,
+        "two_bed": 26
+      },
+      "source_typical_size_sqm": {
+        "one_bed": null,
+        "two_bed": 68.2
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only.",
+        "Composition-skewed published proxy; do not interpret as a typical rent for the reference size."
+      ],
+      "composition_skew": true
+    },
+    "asok": {
+      "rent_1br": 26500,
+      "rent_2br": 55000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-asok-2026-10-25"
+      ],
+      "as_of": "2026-10-25",
+      "sample_size": {
+        "one_bed": 30,
+        "two_bed": 18
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 35,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "nana": {
+      "rent_1br": 28000,
+      "rent_2br": 60000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-nana-2026-10-17"
+      ],
+      "as_of": "2026-10-17",
+      "sample_size": {
+        "one_bed": 27,
+        "two_bed": 11
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 35,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "chit-lom": {
+      "rent_1br": 45000,
+      "rent_2br": 120000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-chit-lom-2026-10-21"
+      ],
+      "as_of": "2026-10-21",
+      "sample_size": {
+        "one_bed": 11,
+        "two_bed": 11
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 56,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only.",
+        "Published typical 1BR size is 56 m²; luxury/size mix makes this unsuitable as a fixed-size rent.",
+        "Composition-skewed published proxy; do not interpret as a typical rent for the reference size."
+      ],
+      "composition_skew": true
+    },
+    "sala-daeng": {
+      "rent_1br": 38000,
+      "rent_2br": 60000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-sala-daeng-2026-10-07"
+      ],
+      "as_of": "2026-10-07",
+      "sample_size": {
+        "one_bed": 13,
+        "two_bed": 13
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 44,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "chong-nonsi": {
+      "rent_1br": 24000,
+      "rent_2br": 72000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-chong-nonsi-2026-10-01"
+      ],
+      "as_of": "2026-10-01",
+      "sample_size": {
+        "one_bed": 9,
+        "two_bed": 16
+      },
+      "source_typical_size_sqm": {
+        "one_bed": null,
+        "two_bed": 93.3
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only.",
+        "Published typical 2BR size is 93.3 m², above the 60–70 m² reference band.",
+        "Composition-skewed published proxy; do not interpret as a typical rent for the reference size."
+      ],
+      "composition_skew": true
+    },
+    "ratchathewi": {
+      "rent_1br": 21500,
+      "rent_2br": 38000,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-ratchathewi-2026-10-07"
+      ],
+      "as_of": "2026-10-07",
+      "sample_size": {
+        "one_bed": 10,
+        "two_bed": 5
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 34,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    },
+    "phaya-thai": {
+      "rent_1br": 25000,
+      "rent_2br": 43500,
+      "confidence": "estimate",
+      "metric": "median_asking_by_bedroom",
+      "sources": [
+        "dooasset-phaya-thai-2026-10-10"
+      ],
+      "as_of": "2026-10-10",
+      "sample_size": {
+        "one_bed": 23,
+        "two_bed": 6
+      },
+      "source_typical_size_sqm": {
+        "one_bed": 34,
+        "two_bed": null
+      },
+      "method": "Transcribed published bedroom-table medians and rental counts; no size adjustment, per-m² conversion, averaging across sources, or editorial blending.",
+      "limitations": [
+        "One provider’s available condo inventory, not signed leases or a representative market sample.",
+        "No reference-size filter; minimum lease duration and serviced-unit exclusion are unverified.",
+        "Source radius can overlap nearby stations and differs from the application’s nearest-station catchment.",
+        "Live pages can have lagging FAQ/count sections; this snapshot uses the dated bedroom table only."
+      ]
+    }
+  }
+}

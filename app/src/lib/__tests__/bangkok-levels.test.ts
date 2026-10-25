@@ -164,7 +164,17 @@ describe('Bangkok station areas', () => {
       expect(a.ratings[key]).toBeGreaterThanOrEqual(1);
       expect(a.ratings[key]).toBeLessThanOrEqual(10);
     }
-    expect(a.confidence.rent).toBe('editorial');
+    expect(['moderate', 'estimate', 'editorial']).toContain(a.confidence.rent);
+    expect(a.confidence.rent).toBe(a.rent.confidence);
+    if (a.rent.provenance === 'station_override') {
+      expect(a.rent.metric).toBe('median_asking_by_bedroom');
+      expect(a.rent.sources.length).toBeGreaterThan(0);
+      expect(a.rent.sample_size!.one_bed).toBeGreaterThanOrEqual(5);
+      expect(a.rent.sample_size!.two_bed).toBeGreaterThanOrEqual(5);
+    } else {
+      expect(a.confidence.rent).toBe('editorial');
+      expect(a.rent.metric).toBe('typical_asking');
+    }
     expect(a.confidence.safety).toBe('editorial');
     expect(a.rent.two_bed!).toBeGreaterThan(a.rent.one_bed!);
     expect(Object.keys(a.transit_minutes).sort()).toEqual([...CITIES.bangkok.hubs].sort());

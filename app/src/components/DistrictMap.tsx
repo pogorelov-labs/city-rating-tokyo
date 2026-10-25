@@ -1,5 +1,7 @@
 'use client';
 
+import RentNote from '@/components/bangkok/RentNote';
+
 import { useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   AttributionControl,
@@ -687,6 +689,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
                             t('map.noRailInDistrict')
                           )}
                           {d.rent_1k != null && <> · ~{formatRentShort(city.id, d.rent_1k)}/mo</>}
+                          {d.rent_provenance && <RentNote rent={d.rent_provenance} compact />}
                         </div>
                         {reasons.length > 0 && (
                           <div style={{ fontSize: 11, color: '#b45309', marginTop: 4 }}>
@@ -1022,6 +1025,7 @@ function DistrictPopupBody({
           t('map.noRailInDistrict')
         )}
         {d.rent_1k != null && <> · ~{formatRentShort('bangkok', d.rent_1k)}/mo</>}
+        {d.rent_provenance && <RentNote rent={d.rent_provenance} compact />}
       </div>
       {snippet && <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">{snippet}</div>}
       <div className="flex items-center gap-3 mt-1">

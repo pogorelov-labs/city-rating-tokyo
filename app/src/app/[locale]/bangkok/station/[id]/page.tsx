@@ -31,6 +31,8 @@ import { DEFAULT_WEIGHTS, RATING_LABELS, getGoogleMapsAreaUrl, type StationRatin
 import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
 import Tooltip from '@/components/Tooltip';
+import RentNote from '@/components/bangkok/RentNote';
+import { rentTooltip } from '@/lib/bangkok-rent';
 import RatingBar from '@/components/RatingBar';
 import ConfidenceBadge, { ConfidenceIcon } from '@/components/ConfidenceBadge';
 import StatCard from '@/components/StatCard';
@@ -204,6 +206,7 @@ export default async function StationAreaPage({
                   </>
                 )}
               </div>
+              <RentNote rent={a.rent} />
             </StatCard>
             <StatCard label={t('bangkok.station.fromStation')} value={`${avgHub} min`} sub={t('bangkok.station.fromStationSub')} />
             <StatCard
@@ -317,7 +320,7 @@ export default async function StationAreaPage({
                           <ConfidenceBadge
                             level={conf}
                             sources={srcs}
-                            descriptionKey={conf === 'editorial' ? 'confidence.editorial.descriptionDistrictLevel' : undefined}
+                            descriptionKey={key === 'rent' && a.rent.provenance === 'station_override' ? 'bangkok.rent.proxyConfidence' : conf === 'editorial' ? 'confidence.editorial.descriptionDistrictLevel' : undefined}
                           />
                         )}
                       </div>
@@ -325,7 +328,7 @@ export default async function StationAreaPage({
                         showHelpIcon={false}
                         content={
                           <>
-                            <span>{t(key === 'rent' ? 'bangkok.station.rentTooltip' : `ratingTooltips.${key}`)}</span>
+                            <span>{key === 'rent' ? rentTooltip(t, a.rent) : t(`ratingTooltips.${key}`)}</span>
                             {srcs && srcs.length > 0 && (
                               <span className="block mt-1.5 text-gray-400">
                                 {t('station.sourcesLabel')} {srcs.map((s) => (dataLabel(t, 'sources', s))).join(', ')}

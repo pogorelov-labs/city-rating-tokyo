@@ -1,5 +1,7 @@
 'use client';
 
+import RentNote from '@/components/bangkok/RentNote';
+
 import { useEffect, useRef } from 'react';
 import { Pane, Polygon, Tooltip } from 'react-leaflet';
 import { useLocale, useTranslations } from 'next-intl';
@@ -135,6 +137,7 @@ export default function StationAreaLayer({
                   <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
                     {a.district && districtName(a.district)}
                     {a.rent_1k != null && <> · ~{formatRentShort('bangkok', a.rent_1k)}/mo</>}
+                    {a.rent_provenance && <RentNote rent={a.rent_provenance} compact />}
                     {a.min_transit != null && <> · {t('map.cellCommute', { minutes: a.min_transit })}</>}
                   </div>
                   {reasons.length > 0 && (

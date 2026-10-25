@@ -2,7 +2,7 @@ import districtsData from '@/data/bangkok/districts.json';
 import zoneFlagsData from '@/data/entertainment/bangkok-area-flags.json';
 import railData from '@/data/bangkok/rail.json';
 import stationAreasData from '@/data/bangkok/stations.json';
-import type { District, MapStation, RailLine, RailStation, StationArea } from './types';
+import type { BangkokRentProvenance, District, DistrictRent, MapStation, RailLine, RailStation, StationArea } from './types';
 import type { Locale } from '@/i18n/routing';
 import { stationAreaKey } from './area-key';
 
@@ -68,6 +68,12 @@ function searchAliases(d: District): string[] {
 
 let mapCache: MapStation[] | null = null;
 
+function rentSummary(rent: DistrictRent): BangkokRentProvenance {
+  const { metric, provenance, confidence, as_of, sample_size, sources, source_typical_size_sqm, composition_skew } = rent;
+  return { metric, provenance, confidence, as_of, sample_size, source_typical_size_sqm, composition_skew,
+    sources: sources.map(({ id, publisher, url, accessed, as_of }) => ({ id, publisher, url, accessed, as_of })) };
+}
+
 /** Lightweight district list for the homepage map, filter panel and search. */
 export function getBangkokMapDistricts(): MapStation[] {
   if (mapCache) return mapCache;
@@ -84,6 +90,7 @@ export function getBangkokMapDistricts(): MapStation[] {
     aliases: searchAliases(d),
     ratings: d.ratings,
     rent_1k: d.rent.one_bed,
+    rent_provenance: rentSummary(d.rent),
     min_transit: d.min_transit,
     elevation_m: null,
     seismic_risk_tier: null,
@@ -149,6 +156,7 @@ export function getBangkokMapStationAreas(): MapStation[] {
     district: a.district,
     ratings: a.ratings,
     rent_1k: a.rent.one_bed,
+    rent_provenance: rentSummary(a.rent),
     min_transit: a.min_transit,
     elevation_m: null,
     seismic_risk_tier: null,

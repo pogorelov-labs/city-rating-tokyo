@@ -4,12 +4,25 @@
     "rent": {
       "unit": "THB per month",
       "definition": "Typical asking rent for a ~30-35 m² 1-bedroom condo (rent_1br) and a ~60-70 m² 2-bedroom condo (rent_2br) in the district's main residential corridors. Not a statistical median.",
-      "method": "Researcher estimate. Bangkok has no open rent statistics at district level and the listing portals (Hipflat, FazWaz, DDproperty) block automated access, so values are calibrated by hand against published aggregates: city-wide 1-bed average ~฿22.9k (PropertyScout listing average, skewed to central supply); prime BTS corridor (Asok, Phrom Phong, Thong Lo, Chit Lom) ~฿800-1,200/m²; On Nut / Bang Na / Rama 9 ~฿10-15k for ~30 m²; Bang Kapi ~฿440/m². Outer districts with little condo supply are anchored to townhouse/apartment rents.",
+      "method": "Researcher estimate calibrated by hand against the public sources listed below. The 2026-10-25 source audit does not establish statistical district medians for the reference size bands; it preserves every district value and documents separately labeled station-level proxies.",
       "confidence": "editorial",
       "calibration_sources": [
         "https://propertyscout.co.th/en/bangkok/rentals/condo/",
         "https://propertysights.com/blog/condo-rent-bangkok",
         "https://www.bangkok-housing.com/condo-apartment/rent/district/khlong-toei-district/"
+      ],
+      "as_of": "2026-09",
+      "audited_at": "2026-10-25",
+      "exclusions": [
+        "serviced apartments",
+        "short-term stays"
+      ],
+      "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
+      "station_overrides": "data/bangkok/rent-overrides.json",
+      "limitations": [
+        "All 50 district values remain editorial estimates; no public source in the audit isolates both reference size/tenure cohorts by khet.",
+        "Published station-bedroom medians cover all floor areas and cannot silently replace fixed-size district estimates.",
+        "Grid rent remains district-level; non-overridden station areas retain the resident-weighted district blend."
       ]
     },
     "safety": {

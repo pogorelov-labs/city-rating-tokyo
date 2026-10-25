@@ -67,5 +67,11 @@
     "floor": 8000,
     "ceiling": 38000
   },
-  "data_date": "2026-09"
+  "data_date": "2026-09",
+  "rent_audit": {
+    "audited_at": "2026-10-25",
+    "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
+    "station_override_count": 10,
+    "grid_rent": "district_editorial"
+  }
 }

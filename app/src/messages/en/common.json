@@ -129,7 +129,8 @@
     "distance_regression": "Distance estimate",
     "convenience_proxy": "Convenience-store proxy",
     "keishicho_choume": "Tokyo police (neighbourhood)",
-    "police_municipal": "Police (municipality)"
+    "police_municipal": "Police (municipality)",
+    "dooasset": "DooAsset"
   },
   "placeCategories": {
     "gym": "Gyms & Fitness",
@@ -529,7 +530,7 @@
       "noRail": "No rail",
       "nearbyCount": "{count, plural, =0 {nothing within 800 m} one {# station just outside} other {# stations just outside}}",
       "rentLabel": "Rent (condo)",
-      "rentSub": "1-bed → 2-bed / mo · estimate",
+      "rentSub": "1-bed → 2-bed / mo",
       "toHubsSub": "median resident, peak, 5 hubs",
       "density": "Density",
       "populationSub": "{population} residents ({year})",
@@ -575,7 +576,7 @@
       "scoreTooltip": "Weighted score with default weights, relative to Bangkok's station areas",
       "imageAlt": "{name} station, Bangkok",
       "linesLabel": "Rail",
-      "rentSub": "1-bed → 2-bed / mo · district estimate",
+      "rentSub": "1-bed → 2-bed / mo",
       "fromStation": "From the station",
       "fromStationSub": "peak, average of 5 hubs",
       "residentLabel": "Door to hub",
@@ -602,6 +603,24 @@
       "viewGrid": "See it on the 200 m grid →",
       "factHotels": "Hotels nearby",
       "factAttractions": "Attractions nearby"
+    },
+    "rent": {
+      "medianLabel": "Median asking rent · mixed-size proxy",
+      "editorialLabel": "Typical asking rent · editorial estimate",
+      "blendLabel": "Typical asking rent · district blend estimate",
+      "samples": "1BR n={one} · 2BR n={two}",
+      "asOf": "As of {date}",
+      "definitionLink": "Definition and method",
+      "medianDefinition": "Condo asking-rent medians by bedroom count within the source’s 800 m station radius. All floor areas; lease duration and serviced-unit exclusion are unverified.",
+      "medianLimitations": "One provider’s inventory, not signed leases. The radius overlaps nearby stations and differs from this map’s catchment. Reference sizes are 30–35 m² (1BR) and 60–70 m² (2BR); these medians are not size-filtered.",
+      "editorialDefinition": "Typical asking rent for a 30–35 m² 1BR or 60–70 m² 2BR condo, excluding serviced apartments and short stays. A researcher estimate, not a statistical median.",
+      "editorialLimitations": "Station estimates blend district rents by resident share, rounded to ฿500. Grid rents remain district estimates; station overrides do not apply to grid cells.",
+      "proxyConfidence": "Estimate: published bedroom medians from one provider. The floor-area and lease mix differs from the reference unit; this is a neighborhood proxy.",
+      "affordability": "Affordability uses the 1BR figure: 10 ≈ ฿8k/month or less; 1 ≈ ฿38k/month or more.",
+      "sourceSizes": "Source typical size: 1BR {one} · 2BR {two}",
+      "unpublishedSize": "not published",
+      "compositionSkew": "Source sample skews larger / luxury; not a typical rent.",
+      "sizeSqm": "{size} m²"
     }
   },
   "quietness": {

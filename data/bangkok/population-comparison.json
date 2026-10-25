@@ -39,12 +39,23 @@
   "baseline": {
     "baseline_commit": "505ae726489fffc6548bd7bb789a1d8d0e0089cb",
     "geometry_sha256": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
-    "signals_sha256": "43da9daf187a89173adca306071433ff23fd023515ef4cedf318d71cfd743cf5",
-    "note": "Frozen CRTKY-197 adoption comparison. crowd_raw is the committed four-decimal signal; recovered POI log term has at most 0.00005 rounding error. No POI counts are inferred.",
+    "signals_sha256": "44505acce24c0795aee176f8db889cb47808754a05b5fb05d29484530d8dec84",
+    "note": "Frozen CRTKY-197 adoption comparison. crowd_raw is the committed four-decimal signal; recovered POI log term has at most 0.00005 rounding error. No POI counts are inferred. Non-crowd signatures and the original-crowd-state signals checksum include the explicitly pinned CRTKY-141/136 rent exception below.",
     "unchanged_signatures": {
-      "districts": "a3dae8d91438aeb61204aedfd63d25d4fc9c59d4742542f71c6cc63c81572395",
-      "signals": "1f499b8b079de36d52bb7ab53a4d2cedd608a0e5a6690f3571f40b00b5bf7a39",
-      "meta": "b86fd0428f841acef19f76dfb6de1ed1581404a792da7112005b06a1056142d0"
+      "districts": "7b79b3e00c3475b0e5f79e7ea2aacb651d5628a808ae03fb8e9e656be449e213",
+      "signals": "9b1531b66878d8e2e8227c52b4390fa27369a0db60a3fc86f7d584b6371dacf2",
+      "meta": "3da161be1e89f799c4ca70bbd9b5f9792e19a57c672e6d735985d3a31d989d11"
+    },
+    "rent_scope_exception": {
+      "input_commit": "c16326043026f31e3e57c91d03d755ddae0c1ce6",
+      "audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
+      "scope": "District rent provenance metadata; ten station-area rent pairs/raw signals/affordability ratings; station rent anchors and audit metadata. Population facts, crowd inputs, geometry and every other category remain identical to d131c7a. Strict snapshot and original-checksum guards remain enabled.",
+      "previous_unchanged_signatures": {
+        "districts": "a3dae8d91438aeb61204aedfd63d25d4fc9c59d4742542f71c6cc63c81572395",
+        "signals": "1f499b8b079de36d52bb7ab53a4d2cedd608a0e5a6690f3571f40b00b5bf7a39",
+        "meta": "b86fd0428f841acef19f76dfb6de1ed1581404a792da7112005b06a1056142d0"
+      },
+      "previous_signals_sha256": "43da9daf187a89173adca306071433ff23fd023515ef4cedf318d71cfd743cf5"
     }
   },
   "summary": {

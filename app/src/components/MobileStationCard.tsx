@@ -1,5 +1,7 @@
 'use client';
 
+import RentNote from '@/components/bangkok/RentNote';
+
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
@@ -220,6 +222,7 @@ export default function MobileStationCard({
                 : t('map.noRailInDistrict')
               : t('filter.lines', { count: station.line_count })}
             {station.rent_1k ? <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</> : null}
+            {city.id === 'bangkok' && station.rent_provenance && <RentNote rent={station.rent_provenance} compact />}
           </div>
           {snippet && (
             <div className="text-xs text-gray-600 mt-1.5 line-clamp-2 leading-relaxed">
