@@ -45,9 +45,9 @@
    "research/snapshots/2026-10-14/medicine-jnto/LICENSE.txt": "82e1902c3dcddecf43e5bc8d0d83a6756fd14052c695779931dd2bb86652d156",
    "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
    "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
-   "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
-   "app/src/data/bangkok/districts.json": "8ef5b0fd4cae3e8ef70c5b4968130fcfdf0c39a4bfe9dc9c4e907758d8930f39",
-   "app/src/data/bangkok/stations.json": "94ac162361a25ee64a092648f78d9fe5933726109ec9034472f20aa181562ea2"
+   "app/src/data/bangkok/geometry.json": "1cfd9ccb9afbe662b7ba9cd36a729778b9cac2a14f70364664f576be840adb43",
+   "app/src/data/bangkok/districts.json": "2df7cb309aea13820c6c0edefbd4e50ecc1fa5d0ce3b0587e72466abb71727b3",
+   "app/src/data/bangkok/stations.json": "3647b260b699aa5511d4d8da3dfecb71d03790ebf13d129fde0462bba744504f"
   },
   "district_join": {
    "outside": 0,

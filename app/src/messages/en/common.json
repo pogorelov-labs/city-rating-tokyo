@@ -563,7 +563,7 @@
       "factParks": "Parks & green",
       "factArea": "Area",
       "factPopulation": "Registered population",
-      "factsSource": "Counts inside the district boundary, approximate. Places: Overture Maps Places (CDLA-Permissive-2.0); parks and piers: © OpenStreetMap contributors (ODbL). Population and area: Department of Provincial Administration registration via Wikidata — registered residents undercount central districts.",
+      "factsSource": "Counts inside the district boundary, approximate. Places: Overture Maps Places (CDLA-Permissive-2.0; Foursquare: Apache-2.0; AllThePlaces: CC0-1.0); parks and piers: © OpenStreetMap contributors (ODbL). Population and area: Department of Provincial Administration registration via Wikidata — registered residents undercount central districts.",
       "neighbors": "Neighboring districts",
       "readMore": "Read more:",
       "noRailNearbyText": "No station inside the district itself — the nearest ones are just outside its edge (below)."
@@ -597,7 +597,7 @@
       "relativeNote": "Scores are relative within Bangkok's station areas: they are not comparable with district scores, nor with Tokyo.",
       "factsTitle": "Inside the station area",
       "factCafes": "Cafés",
-      "factsSource": "Counts inside the station area (≤ 800 m, nearest station), approximate. Places: Overture Maps Places (CDLA-Permissive-2.0); parks and piers: © OpenStreetMap contributors (ODbL).",
+      "factsSource": "Counts inside the station area (≤ 800 m, nearest station), approximate. Places: Overture Maps Places (CDLA-Permissive-2.0; Foursquare: Apache-2.0; AllThePlaces: CC0-1.0); parks and piers: © OpenStreetMap contributors (ODbL).",
       "districtsTitle": "Districts",
       "districtsCaption": "The districts this station area covers, by share of its residents — rent and safety come from their estimates.",
       "viewGrid": "See it on the 200 m grid →",

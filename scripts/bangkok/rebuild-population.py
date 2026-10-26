@@ -12,6 +12,7 @@ other ratings, station areas and grid remain untouched. Full future pipeline
 builds use population.py too, with their exact POI counts.
 """
 import copy
+import argparse
 import hashlib
 import csv
 import io
@@ -25,6 +26,8 @@ from population import load_population, crowd_raw, sha256, population_metadata
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / 'data/bangkok'
 APP = ROOT / 'app/src/data/bangkok'
+BASELINES = {'adoption': 'population-baseline.json',
+             'refresh-2026-10-24': 'population-baseline-refresh-2026-10-24.json'}
 
 
 def compare(baseline, populations):
@@ -39,7 +42,10 @@ def compare(baseline, populations):
         area = b['official_area_km2']
         if area <= 0 or b['registered_population'] <= 0:
             raise ValueError(f'Invalid baseline area/population: {slug}')
-        poi_term = b['crowd_raw'] - 0.5 * math.log(max(b['registered_density_input'], 1))
+        # Historical adoption has only rounded raw; the refresh freezes the
+        # precise POI term from the spatial build. Never rewrite the old input.
+        poi_term = (b['poi_log_term'] if 'poi_log_term' in b else
+                    b['crowd_raw'] - 0.5 * math.log(max(b['registered_density_input'], 1)))
         raw = crowd_raw(pop / area, poi_term)
         rows[slug] = {**b, **populations[slug], 'density': pop / area,
                       'population_delta': pop - b['registered_population'],
@@ -115,10 +121,14 @@ def validate_crowd_state(baseline, districts, signals, meta, rows, weights):
         raise ValueError('Incompatible crowd medians/composite anchors')
 
 
-def main():
-    baseline = json.loads((DATA / 'population-baseline.json').read_text())
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--baseline', choices=BASELINES, required=True,
+                        help='explicit immutable snapshot; adoption is historical only')
+    args = parser.parse_args(argv)
+    baseline = json.loads((DATA / BASELINES[args.baseline]).read_text())
     if sha256(APP / 'geometry.json') != baseline['_meta']['geometry_sha256']:
-        raise ValueError('Adoption replay requires the pinned baseline district geometry')
+        raise ValueError('Incompatible geometry: replay requires the selected baseline district geometry')
     districts = json.loads((APP / 'districts.json').read_text())
     signals = json.loads((DATA / 'signals.json').read_text())
     meta = json.loads((APP / 'meta.json').read_text())
@@ -154,7 +164,9 @@ def main():
     population_meta = population_metadata()
     districts['_meta']['population'] = population_meta
     signals['_meta']['population'] = population_meta
-    for path, doc, indent in [(APP / 'districts.json', districts, None), (DATA / 'signals.json', signals, 1),
+    district_text = (APP / 'districts.json').read_text()
+    district_indent = None if '\n' not in district_text.rstrip('\n') else 1
+    for path, doc, indent in [(APP / 'districts.json', districts, district_indent), (DATA / 'signals.json', signals, 1),
                               (APP / 'meta.json', meta, 2), (DATA / 'population-comparison.json', comparison, 2)]:
         path.write_text(json.dumps(doc, ensure_ascii=False, indent=indent,
                                   separators=(',', ':') if indent is None else None) + '\n')

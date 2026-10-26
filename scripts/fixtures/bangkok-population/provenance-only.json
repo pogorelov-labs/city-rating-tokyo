@@ -1,0 +1,35 @@
+{
+  "base_commit": "d7e2ddf5c5d906e155e0f310015f45441360fa06",
+  "allowed_input_paths": [
+    "app/src/data/bangkok/districts.json",
+    "app/src/data/bangkok/geometry.json",
+    "app/src/data/bangkok/stations.json"
+  ],
+  "scope": "Only SHA-256 fields for these Bangkok input paths may change. All other metadata and every Tokyo/Bangkok institution and noise value remains identical.",
+  "files": {
+    "data/institutions/station-institutions.json": {
+      "original_bytes_sha256": "07435c549b4c23ffacbbc7339627fb7ef3cb9a38e3783522fe2af1efbd942213",
+      "excluding_allowed_hash_fields_sha256": "f4ba8fda9c0c1141658ee310e3dcef616bd6ba04289cbae44801916813d2fc0c"
+    },
+    "app/src/data/institutions/station-institutions.json": {
+      "original_bytes_sha256": "07435c549b4c23ffacbbc7339627fb7ef3cb9a38e3783522fe2af1efbd942213",
+      "excluding_allowed_hash_fields_sha256": "f4ba8fda9c0c1141658ee310e3dcef616bd6ba04289cbae44801916813d2fc0c"
+    },
+    "data/institutions/district-institutions.json": {
+      "original_bytes_sha256": "45aafd31caf9b1d40a09c197ca1bca6b666032a844c11b98425fbffc252c9c86",
+      "excluding_allowed_hash_fields_sha256": "7617cdc7e08b21bdbf7915f6c59b3368897ff9a8243212474c6d47d0bb303037"
+    },
+    "app/src/data/institutions/district-institutions.json": {
+      "original_bytes_sha256": "45aafd31caf9b1d40a09c197ca1bca6b666032a844c11b98425fbffc252c9c86",
+      "excluding_allowed_hash_fields_sha256": "7617cdc7e08b21bdbf7915f6c59b3368897ff9a8243212474c6d47d0bb303037"
+    },
+    "data/noise/calibration.json": {
+      "original_bytes_sha256": "6b5691621f5fd64e8d7899810ed5353482febd5dd98ddf621d01f1670e4baa34",
+      "excluding_allowed_hash_fields_sha256": "1bac9c3765a7cb887d88cc5c63398205e778351208f92bdd8b78d48d2189063f"
+    },
+    "app/src/data/noise/quietness.json": {
+      "original_bytes_sha256": "3c083b8ecc31a0abbdfc240bb634f8d2d4e3a4b4b847728862b5b3c31d1e5db8",
+      "excluding_allowed_hash_fields_sha256": "34e8284d328d5fe1778bb7224dd9b9125e520c7e52de088dddfecc9140b10667"
+    }
+  }
+}

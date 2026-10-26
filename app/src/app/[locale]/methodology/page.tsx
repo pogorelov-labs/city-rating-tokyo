@@ -470,7 +470,11 @@ export default async function MethodologyPage({
             </li>
           </ul>
           <p className="text-xs text-gray-500 mt-3">
-            Data: &copy; OpenStreetMap contributors (ODbL), Overture Maps Places release 2026-09-23 (CDLA-Permissive-2.0),
+            Data: &copy; OpenStreetMap contributors (ODbL), Overture Maps Foundation, Places release 2026-09-23.1:
+            Meta, Microsoft, PinMeTo and DAC (CDLA-Permissive-2.0),
+            Foursquare (&copy; 2024 Foursquare Labs, Inc., Apache-2.0), AllThePlaces (CC0-1.0).
+            {' '}Foursquare data was transformed to the Overture schema; we filter, bucket and aggregate places into Bangkok ratings.
+            {' '}<a className="underline" href="/data/bangkok/licenses/NOTICE.txt">Notices and licenses</a>.{' '}
             Wikidata (CC0), district and station photos from Wikimedia Commons (credited on each page). Computed {bangkokMeta.data_date}.
           </p>
         </section>

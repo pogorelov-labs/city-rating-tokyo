@@ -97,15 +97,30 @@ Avoid mixing its OSM tasks with Geofabrik JSONs in one cache. A completed
 Geofabrik run restores a coherent OSM snapshot. WD/Commons are live APIs;
 Overture uses the release pinned in fetch.py. These inputs have independent
 dates and licenses. A build-month `data_date` does not refresh rent, safety,
-population, flood, or editorial descriptions. A full build currently omits
-station tourism enrichment fields; review generated changes before publishing
-any refreshed data.
+population, flood, or editorial descriptions. The full build now automatically
+reapplies the pinned tourism/Michelin/legacy-embassy observations before output
+writes. Missing source hashes/joins fail; the standalone
+`uv run scripts/bangkok/apply-enrichments.py` is an idempotent replay.
 
-The **full spatial refresh is not shipped in v0.1.0**. Experimental refreshed
-output has 10 validation failures and tourism/Michelin/embassy enrichment losses,
-with quality and attribution reviews pending. Follow the [scoped, unimplemented
-remediation plan](../../docs/DATA_REFRESH_REMEDIATION.md) and [release
-runbook](../../docs/RELEASING.md); any refresh needs a separate PR.
+The **full spatial refresh is not shipped in v0.1.0**. Remediation is implemented
+in a separate data PR; see the [status/evidence](../../docs/DATA_REFRESH_REMEDIATION.md)
+and [complete review](../../research/bangkok/notes/2026-10-26-frozen-refresh.md).
+Historical population/normalization fixtures remain unchanged.
+
+For exact frozen-input rebuilds, restore the archived raw payloads and caches:
+
+```sh
+uv run scripts/bangkok/freeze-inputs.py --verify
+uv run scripts/bangkok/build.py --inputs-manifest data/bangkok/refresh-inputs.json
+```
+
+The committed manifest records all raw hashes and Wikimedia revisions; its
+build date also fixes the output date. Live Wikimedia refetches cannot promise
+identical bytes. The pinned Overture acquisition inventories all source-entry
+licenses and sorts its slim output by ID. Population-only replay explicitly
+selects `--baseline refresh-2026-10-24`; `--baseline adoption` is historical and
+requires the old geometry/snapshot. The new immutable baseline includes precise
+POI terms; do not overwrite the historical baseline or golden.
 
 ## Verification and attribution
 
@@ -124,3 +139,16 @@ distributed by Geofabrik; retain attribution and follow ODbL obligations for
 published derived databases. See [Geofabrik technical details](https://download.geofabrik.de/technical.html)
 for extract completeness and public metadata exclusions. Keep other sources'
 license and per-image Commons attribution alongside OSM provenance.
+
+Overture Places **2026-09-23.1** includes CDLA-Permissive-2.0 (Meta, Microsoft,
+PinMeTo, DAC and Overture), **Apache-2.0 (Foursquare)** and **CC0-1.0
+(AllThePlaces)**. See [Overture attribution](https://docs.overturemaps.org/attribution/#places)
+and the shipped [notice/license copies](../../app/public/data/bangkok/licenses/NOTICE.txt).
+The source manifest inventories all source entries, including secondary ones.
+Per-image Commons attribution remains independent; exact revision IDs do not
+freeze transcluded metadata or hosted thumbnail bytes.
+
+Grid header medians and composite anchors use published integer resident-weight
+units (scale 250), so summaries can be reproduced from the binary. Cell rating
+normalization continues to use the original full precision weights. The
+threshold-crossing regression documents the refresh's transport median of 5.

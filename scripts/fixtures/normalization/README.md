@@ -17,6 +17,13 @@ shared math. No live calls or generated application data are involved.
   weighted grid routines and composite summation are deliberately untouched.
 
 Run `pytest scripts/test_normalization.py` for stable golden regression checks.
+The Bangkok historical golden is now replayed against immutable signals in
+`../bangkok-population/adoption/`, captured from release commit `d7e2ddf` (the
+reviewed rent-provenance scope is included). `bangkok-golden.json` is unchanged.
+`bangkok-refresh-2026-10-24-golden.json` is the separate current refresh golden.
+All 54 changed outputs and 489 changed rounded inputs are recorded in
+`research/bangkok/notes/2026-10-26-frozen-refresh-review.json`; tests require
+complete coverage of the golden diff.
 For a fresh old/new comparison against the recorded revision:
 
 ```sh

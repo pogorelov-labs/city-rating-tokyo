@@ -563,7 +563,7 @@
       "factParks": "公園・緑地",
       "factArea": "面積",
       "factPopulation": "登録人口",
-      "factsSource": "区の境界内の概数。施設: Overture Maps Places（CDLA-Permissive-2.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。人口・面積: 内務省地方行政局の住民登録（Wikidata経由）— 中心部の区では実際の居住者より少なく出ます。",
+      "factsSource": "区の境界内の概数。施設: Overture Maps Places（CDLA-Permissive-2.0、Foursquare: Apache-2.0、AllThePlaces: CC0-1.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。人口・面積: 内務省地方行政局の住民登録（Wikidata経由）— 中心部の区では実際の居住者より少なく出ます。",
       "neighbors": "隣接する区",
       "readMore": "詳しく:",
       "noRailNearbyText": "区内に駅はありませんが、区境のすぐ外に最寄り駅があります（下記）。"
@@ -597,7 +597,7 @@
       "relativeNote": "スコアはバンコクの駅エリア内での相対評価です。区のスコアや東京のスコアとは比較できません。",
       "factsTitle": "駅エリアの中",
       "factCafes": "カフェ",
-      "factsSource": "駅エリア（最寄り駅から800m以内）の中の概数。施設: Overture Maps Places（CDLA-Permissive-2.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。",
+      "factsSource": "駅エリア（最寄り駅から800m以内）の中の概数。施設: Overture Maps Places（CDLA-Permissive-2.0、Foursquare: Apache-2.0、AllThePlaces: CC0-1.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。",
       "districtsTitle": "区",
       "districtsCaption": "この駅エリアがまたがる区と住民の比率。家賃と治安はこれらの区の推定値から。",
       "viewGrid": "200mメッシュで見る →",

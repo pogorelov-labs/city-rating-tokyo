@@ -1,0 +1,3616 @@
+{
+  "schema_version": 1,
+  "build_date": "2026-10-26",
+  "base_commit": "d7e2ddf5c5d906e155e0f310015f45441360fa06",
+  "files": {
+    "app/public/data/bangkok/licenses/Apache-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "app/public/data/bangkok/licenses/CDLA-Permissive-2.0.txt": {
+      "bytes": 2373,
+      "sha256": "2f1c6dec466c36a0f27833cf8276007bcf6407504c8b7db1a6e94165ec6bf2ef"
+    },
+    "app/public/data/bangkok/licenses/Foursquare-NOTICE.txt": {
+      "bytes": 1770,
+      "sha256": "a8cc045ab64f040aadbdfb1cf9c8dbce221ccb41d3b96e52c2d25fd5270a7b5c"
+    },
+    "app/public/data/bangkok/licenses/NOTICE.txt": {
+      "bytes": 1914,
+      "sha256": "66846f6466f4e44322eb0231409b211bd132707c281f4b4e6d09c381f85e468e"
+    },
+    "data/bangkok/descriptions/bang-bon.json": {
+      "bytes": 2480,
+      "sha256": "21d9996a149c6bfd2433c0a60f6c514ea32ea12737b439dd7552dc57032e5715"
+    },
+    "data/bangkok/descriptions/bang-kapi.json": {
+      "bytes": 3150,
+      "sha256": "b7dc515ca045e896c94dbcc40943eea17e969a39b2038a2190228c14beaaecee"
+    },
+    "data/bangkok/descriptions/bang-khae.json": {
+      "bytes": 2819,
+      "sha256": "0fc44f52f61079775020bf1d42da86bf91016843ad1223567e30d40d7db7dc64"
+    },
+    "data/bangkok/descriptions/bang-khen.json": {
+      "bytes": 3111,
+      "sha256": "2f56a3518146d21cdcfd9aa897f4e6ede011aa07b1d7646127313bc74aca908e"
+    },
+    "data/bangkok/descriptions/bang-kho-laem.json": {
+      "bytes": 2872,
+      "sha256": "0b12616ba9a4ff4ce21da86331f8098d244230dd75fc2fed6069ff62e114f7cf"
+    },
+    "data/bangkok/descriptions/bang-khun-thian.json": {
+      "bytes": 2863,
+      "sha256": "b620ef13ad2ee074585b582d27f25412981175158c7ce17630b4bbfcd8b24f07"
+    },
+    "data/bangkok/descriptions/bang-na.json": {
+      "bytes": 2859,
+      "sha256": "39573be97b72ed390313aca1a19c46619f1b2e0ba3a31e2393f00ae69bb29c8b"
+    },
+    "data/bangkok/descriptions/bang-phlat.json": {
+      "bytes": 2963,
+      "sha256": "85443ec6a00496380902fe0c1271a6887e6baec37d3ab35c33510dc3e2e92c87"
+    },
+    "data/bangkok/descriptions/bang-rak.json": {
+      "bytes": 3129,
+      "sha256": "6cb5e51db6e637f7ae18b098fdb0fad8f4282ea9d6e3d4cd44bed5de7ded20d3"
+    },
+    "data/bangkok/descriptions/bang-sue.json": {
+      "bytes": 2967,
+      "sha256": "108fc4497d0d69bea0f39709069bf1e314d44cd98286a7e875266d6c8f29dba3"
+    },
+    "data/bangkok/descriptions/bangkok-noi.json": {
+      "bytes": 2912,
+      "sha256": "f16ae2b7512f1dd619414352f5f37707de295267915bf4c6c6436c0017fd6042"
+    },
+    "data/bangkok/descriptions/bangkok-yai.json": {
+      "bytes": 3010,
+      "sha256": "9b03a10cf57dee0f86b0300259c60564e78db130c294ac7b247d17bcb3419546"
+    },
+    "data/bangkok/descriptions/bueng-kum.json": {
+      "bytes": 2938,
+      "sha256": "079c7fbd547aea443b541d9b19ea53c95030245e2050d7592dc320adc81e8884"
+    },
+    "data/bangkok/descriptions/chatuchak.json": {
+      "bytes": 3045,
+      "sha256": "8cc3d6b4c74b10e466a65ef529d3e74363fe3f54d0f190af219ea04899f41e76"
+    },
+    "data/bangkok/descriptions/chom-thong.json": {
+      "bytes": 2941,
+      "sha256": "fb6b4e1cf88b15b3e183417f35b91d56821259b18a8c6ed553da56dfa7fc777f"
+    },
+    "data/bangkok/descriptions/din-daeng.json": {
+      "bytes": 2889,
+      "sha256": "bf6cfca895df934a2c31a21881f44a97ff920ca8f6374ff9f04498223a0c3c03"
+    },
+    "data/bangkok/descriptions/don-mueang.json": {
+      "bytes": 2776,
+      "sha256": "ae267579c37192e79cc2c27668ed73cc109f10d9d6c3f285618338b0d1543bb5"
+    },
+    "data/bangkok/descriptions/dusit.json": {
+      "bytes": 3122,
+      "sha256": "d99873cef880fedacd10b9f5aed185c8a2750ec54f01634c2371e3a953956bbc"
+    },
+    "data/bangkok/descriptions/huai-khwang.json": {
+      "bytes": 2935,
+      "sha256": "bcd7e3665f6e478323a375ec35e59645b0d099b5e7de9dd223916dff55cfd35d"
+    },
+    "data/bangkok/descriptions/khan-na-yao.json": {
+      "bytes": 2749,
+      "sha256": "9ea38d0b5adc584150bc1ff549f9e38dc0d38e23b809cc573ff787f7a945ae6b"
+    },
+    "data/bangkok/descriptions/khlong-sam-wa.json": {
+      "bytes": 2455,
+      "sha256": "d61d04e608db09f293207281f34fd01528ec6ff644cbc12a12eedd436df1cf4f"
+    },
+    "data/bangkok/descriptions/khlong-san.json": {
+      "bytes": 3156,
+      "sha256": "0ca2273dc0792f8df025b37e47aa0f84499b4c1c27d67149e3cae5460982e469"
+    },
+    "data/bangkok/descriptions/khlong-toei.json": {
+      "bytes": 2850,
+      "sha256": "303b38e47938d307ed9819839472b1cdc5abb6d89af79581464e886623b6d024"
+    },
+    "data/bangkok/descriptions/lak-si.json": {
+      "bytes": 2788,
+      "sha256": "c395007eb442839adb289162b316cbade11727cc17cc7488e0b40f3e61e0b6bf"
+    },
+    "data/bangkok/descriptions/lat-krabang.json": {
+      "bytes": 2717,
+      "sha256": "6ead0f5292754e0380d4677d0e13716fd916065c0284f6dbd32048ff0f8cbaab"
+    },
+    "data/bangkok/descriptions/lat-phrao.json": {
+      "bytes": 3046,
+      "sha256": "d7f394b34bd9bce7c11d7e5a8cf70e0d0c2f89a39a8e4e439f9b53d1263ccea0"
+    },
+    "data/bangkok/descriptions/min-buri.json": {
+      "bytes": 2782,
+      "sha256": "08535b3abfac976a90fe5aac7dcbcfb6ebf5234e9ff10bcb6dd3bd1e0f78c5d0"
+    },
+    "data/bangkok/descriptions/nong-chok.json": {
+      "bytes": 2848,
+      "sha256": "82d875c16cb7fd6d91bd81123dcebd696da9e06d605f43db5c566d2ccab7c9a4"
+    },
+    "data/bangkok/descriptions/nong-khaem.json": {
+      "bytes": 2712,
+      "sha256": "ad369f1a279cf9ec30ca223ad09c0347cf75ebf3a1b68dc9b4bfe95d8bf389ab"
+    },
+    "data/bangkok/descriptions/pathum-wan.json": {
+      "bytes": 3152,
+      "sha256": "49fae554713f6134999ec6c25d8242525b7b5df3bb9ccef925a924575e3d38a5"
+    },
+    "data/bangkok/descriptions/phasi-charoen.json": {
+      "bytes": 2754,
+      "sha256": "247f66e6dad15d3a057320202e3023b9d24bed01051d343124e34d510821a098"
+    },
+    "data/bangkok/descriptions/phaya-thai.json": {
+      "bytes": 3025,
+      "sha256": "a1b58645284732fdaabac8485b5d244471519fbaec38cbe0b01ce4dfc5bb612b"
+    },
+    "data/bangkok/descriptions/phra-khanong.json": {
+      "bytes": 2755,
+      "sha256": "44d0b917128c35ceac9b3a08eb143c0a41e6ece1de67293a2daf59cb7a99e5c0"
+    },
+    "data/bangkok/descriptions/phra-nakhon.json": {
+      "bytes": 3186,
+      "sha256": "1b6b07d6c3eba46ec5cbf223d41805c927e8bf0deaed840c952e07e189f948e3"
+    },
+    "data/bangkok/descriptions/pom-prap-sattru-phai.json": {
+      "bytes": 3412,
+      "sha256": "ab58f8826276431545582c32d010255f3cc79f626f6b0e7452731fc525d6cf35"
+    },
+    "data/bangkok/descriptions/prawet.json": {
+      "bytes": 2760,
+      "sha256": "2f4fdd89360b474a7da6f6e21d94679e61cd2d0eacee1abd219a5804bb546cb0"
+    },
+    "data/bangkok/descriptions/rat-burana.json": {
+      "bytes": 2635,
+      "sha256": "58b21664c091f7bee9166d67d8efa90536ad2891a6186ac688aed394212f7a6a"
+    },
+    "data/bangkok/descriptions/ratchathewi.json": {
+      "bytes": 3198,
+      "sha256": "5946f23ddf36695dd1c0ae31cd55df4267f493eb1a123ab888a7519fcae22211"
+    },
+    "data/bangkok/descriptions/sai-mai.json": {
+      "bytes": 2546,
+      "sha256": "b25a44761db961e2ba2bd1147450bd1d8d72e7677e0b38f9f29db77417838083"
+    },
+    "data/bangkok/descriptions/samphanthawong.json": {
+      "bytes": 3350,
+      "sha256": "3373e230bbcc06dc15f6695029d1481bab6314d9cc2e9729971966e6ea8d67b5"
+    },
+    "data/bangkok/descriptions/saphan-sung.json": {
+      "bytes": 2812,
+      "sha256": "1d7446dc3d8b66619075322efe94507c3de3c4fa95bb8bfa3f527401ebd07416"
+    },
+    "data/bangkok/descriptions/sathon.json": {
+      "bytes": 3219,
+      "sha256": "53d718af35119fc25e9b75acf8fde7c5128fa9ba8dd73bb84cfda0136924e4dd"
+    },
+    "data/bangkok/descriptions/suan-luang.json": {
+      "bytes": 3071,
+      "sha256": "e8d107da2dfa68e270a143d9eb60a1900eb5f15ec95a942b03bc3e77876803da"
+    },
+    "data/bangkok/descriptions/taling-chan.json": {
+      "bytes": 2767,
+      "sha256": "00a9b290a5d6d4d90d119467d43bd28bc32210e89751844ffdae362e1bdaa685"
+    },
+    "data/bangkok/descriptions/thawi-watthana.json": {
+      "bytes": 2795,
+      "sha256": "affecaed4a97ee058cd7b200cb16e2cc2af067c0f827f3ecec5e7b898d836155"
+    },
+    "data/bangkok/descriptions/thon-buri.json": {
+      "bytes": 3262,
+      "sha256": "c9c9dbd06410e6816c131113e12db4c474fc739e8b429c1440c6ab052dbd41ae"
+    },
+    "data/bangkok/descriptions/thung-khru.json": {
+      "bytes": 2624,
+      "sha256": "76eb48f7eed9293e3d4913da10d3d70fb2bc6a74e394f22f2bb5127ff015354e"
+    },
+    "data/bangkok/descriptions/wang-thonglang.json": {
+      "bytes": 3005,
+      "sha256": "280670e09758aee2ce23798c5682845fe515a85336974c49fa6874e2ec53b397"
+    },
+    "data/bangkok/descriptions/watthana.json": {
+      "bytes": 3261,
+      "sha256": "01869f2b232360bedc790a024cfc6f1d3eb69bd037d7da965363bf59beb0c964"
+    },
+    "data/bangkok/descriptions/yan-nawa.json": {
+      "bytes": 2719,
+      "sha256": "25c3a2649994038ab948feec9c502ab46b47db22a01d0f9cbb12a263aaa3c77d"
+    },
+    "data/bangkok/editorial.json": {
+      "bytes": 16650,
+      "sha256": "1a8a8cd80f71d562b6e980c39ae22385e4a28b12e0b48aca9e38f980be370e10"
+    },
+    "data/bangkok/enrichments-baseline.json": {
+      "bytes": 9136,
+      "sha256": "beabd5e75565c71ec2be75d9376ca814aabfbc28e772a65671891c30425d309f"
+    },
+    "data/bangkok/flood.json": {
+      "bytes": 16571,
+      "sha256": "0660511a59893488c99630983271037a30aa90a21662e457cbbab0300aa1a17f"
+    },
+    "data/bangkok/population-source.json": {
+      "bytes": 1529,
+      "sha256": "5e85da5ba4c9b6cb165011e156fb1b7de3f3fe15286e4bc043cfdfc219cec950"
+    },
+    "data/bangkok/raw/boundaries.json": {
+      "bytes": 656111,
+      "sha256": "4195e9df43e33b5919577b90c215359fef4c1ccbab6d8e7283c0afcadd8e2c69"
+    },
+    "data/bangkok/raw/commons.json": {
+      "bytes": 267561,
+      "sha256": "91850764e76218ed61d2274065aaf436b82fb792c3da87f99f2d844872722e56"
+    },
+    "data/bangkok/raw/geofabrik-source.json": {
+      "bytes": 864,
+      "sha256": "9ff4aebc5a7e6c0b1059e755564ed4a43025414ef1bd52ef38dda35a3c3d473f"
+    },
+    "data/bangkok/raw/green.json": {
+      "bytes": 4615200,
+      "sha256": "41b11469875ed5d2686b621a626209555c6b46eec5d9c49917acbfada1e77eb5"
+    },
+    "data/bangkok/raw/overture-source.json": {
+      "bytes": 1053,
+      "sha256": "6b87886a5db555ce8156b2a2bdbdbf56aa491d8a8e783c668dd27dfb36ea568c"
+    },
+    "data/bangkok/raw/overture_places.parquet": {
+      "bytes": 16706966,
+      "sha256": "4d387194906eb0c6350d86ed017fd7e4339271c626dc605d8834cb6470dc3040"
+    },
+    "data/bangkok/raw/pois_culture.json": {
+      "bytes": 1372889,
+      "sha256": "ec9efebed2b60fb0411fb3816bdac4571c9f2d32740a035d13f835f7fe9c82a0"
+    },
+    "data/bangkok/raw/pois_essentials.json": {
+      "bytes": 2237038,
+      "sha256": "3a620e8eb20c5b028eee9a45cd0a1adb951e75c9bd56edf2ff2b1b90f449002f"
+    },
+    "data/bangkok/raw/pois_food.json": {
+      "bytes": 2507509,
+      "sha256": "b24af2123308f0175acd2da610005fa7235e95ddac0f1a6abb502b07ce3c510b"
+    },
+    "data/bangkok/raw/pois_nightlife.json": {
+      "bytes": 317793,
+      "sha256": "85befd7ae50b4def36b89b2866c087e503b5f2f9cf44651a82f2aeb3ea27fca2"
+    },
+    "data/bangkok/raw/pois_sports.json": {
+      "bytes": 281775,
+      "sha256": "4995e71249c97f8be1583ec37a711b9c6d4a3e1fc7d4f5698233536d9cfb2fdf"
+    },
+    "data/bangkok/raw/pois_transit_other.json": {
+      "bytes": 1166953,
+      "sha256": "4c460e2c798b8311bdbdfcdb966fcba3e5d51720c15868144058a8f31db9268d"
+    },
+    "data/bangkok/raw/province.json": {
+      "bytes": 126410,
+      "sha256": "4dd21e174868572b8513f5e2d60cb5db6c63db6b8bae5d745377239772c93158"
+    },
+    "data/bangkok/raw/rail_routes.json": {
+      "bytes": 295750,
+      "sha256": "23f6248dc380e97d1ec0dfc213d4eb00c5eed8e35860dd1444465b3ca2c1876c"
+    },
+    "data/bangkok/raw/rail_stations.json": {
+      "bytes": 227926,
+      "sha256": "0b0e180390ecc3cd582f260967f199ae97dd6c3b3f39a5651e9b7822124a12ec"
+    },
+    "data/bangkok/raw/rail_stops.json": {
+      "bytes": 106978,
+      "sha256": "c0331cb31ab6a1a24797bca0d937c81cfa51e62a45f30ab91a86f02d61719e70"
+    },
+    "data/bangkok/raw/review/relation-21083246-history.json": {
+      "bytes": 739,
+      "sha256": "0a3351d65ce9df4f4e901ed4235de3e66853c93312f182af48a3ab79b39b40b7"
+    },
+    "data/bangkok/raw/review/way-1287037724-history.json": {
+      "bytes": 712,
+      "sha256": "8868dbfc39aca2fbc5e988786806014e888e48e656e3f67fd1129c98a114d944"
+    },
+    "data/bangkok/raw/review/way-1482579416-history.json": {
+      "bytes": 589,
+      "sha256": "88cb2a16ea314d05e9db92dae074d20a4cd01efbd497f752035e5c5ba83cc349"
+    },
+    "data/bangkok/raw/station_commons.json": {
+      "bytes": 810311,
+      "sha256": "a59044007a34cc8139ba0664d5c6a13208adadfe7f6393449f17169c9fb46931"
+    },
+    "data/bangkok/raw/station_wikidata.json": {
+      "bytes": 2364493,
+      "sha256": "d7407f5f5a4746d99d24e80e105b3a40da259da0e24916b151933d3628f35887"
+    },
+    "data/bangkok/raw/tha_ppp_2020_constrained.tif": {
+      "bytes": 28878233,
+      "sha256": "400dc5435e15e78ce6b5e510327ec863c62d209011ce1b03cad4445773753d42"
+    },
+    "data/bangkok/raw/thaifloodrisk.zip": {
+      "bytes": 68400,
+      "sha256": "8ce4a1c95771f56204d979dafcb61df44f4f2aee4e19fbf40adc75ebbb8b8ddf"
+    },
+    "data/bangkok/raw/thailand.osm.pbf": {
+      "bytes": 329280467,
+      "sha256": "e8373240cf0be47cc641f2c8627e674064d8c47f4ff2a11f6a33fcbfc9a50949"
+    },
+    "data/bangkok/raw/thailand.osm.pbf.source.json": {
+      "bytes": 410,
+      "sha256": "8dd9cb3d50595f7bc3b801767e8a667ca80656243e7fc377051585c0aca9c9be"
+    },
+    "data/bangkok/raw/wikidata.json": {
+      "bytes": 1594260,
+      "sha256": "441ddd4c7fc321ed9fb3fb426b126b90ff99ed5af6a8d3b26a5cd1b3b804ac56"
+    },
+    "data/bangkok/rent-overrides.json": {
+      "bytes": 17121,
+      "sha256": "926ec97af57547c9bffc1cb1406350245d774fa7c9703ac576768c8fe4382eb1"
+    },
+    "data/institutions/district-institutions.json": {
+      "bytes": 20323,
+      "sha256": "a326259d9054e36412706b990bc4a637ee281a3a7bc53d4951b00f9fd61d3d4f"
+    },
+    "data/institutions/station-institutions.json": {
+      "bytes": 137900,
+      "sha256": "d510c21bef49a6ccb6c78aac30c259507d1d110801c767884e8a250bdefd70a9"
+    },
+    "data/michelin/proximity.json": {
+      "bytes": 16158,
+      "sha256": "55ee27a43c538100e4f956a0abe99a90ea78d975ec9b28bd309d3a0844a1aba3"
+    },
+    "data/tourism/proximity.json": {
+      "bytes": 120195,
+      "sha256": "0fbb1b68ecd8f51691dee5e27a20e505757ced31e7f04abda78d61d3f504a424"
+    },
+    "packages/schema/constants.json": {
+      "bytes": 2385,
+      "sha256": "7e543bec3e952022b5eaee0c97ee151b996ce72c2f0ed89692c8732f327fa716"
+    }
+  },
+  "geofabrik": {
+    "requested_url": "https://download.geofabrik.de/asia/thailand-261024.osm.pbf",
+    "resolved_url": "https://download.geofabrik.de/asia/thailand-261024.osm.pbf",
+    "last_modified": "Sat, 24 Oct 2026 23:00:29 GMT",
+    "content_length": 329280467,
+    "bytes": 329280467,
+    "sha256": "e8373240cf0be47cc641f2c8627e674064d8c47f4ff2a11f6a33fcbfc9a50949",
+    "retrieved_at": "2026-10-26T05:57:31.941867+00:00",
+    "license": "ODbL-1.0",
+    "license_url": "https://www.openstreetmap.org/copyright",
+    "timestamp_osm_base": "2026-10-24T20:20:51Z",
+    "bbox": [
+      13.47,
+      100.3,
+      13.98,
+      100.96
+    ],
+    "extracted_at": "2026-10-26T06:01:45.570875+00:00",
+    "counts": {
+      "pois_food": 9261,
+      "pois_nightlife": 1280,
+      "pois_essentials": 7521,
+      "pois_sports": 1456,
+      "pois_culture": 4664,
+      "pois_transit_other": 5172,
+      "green": 6963,
+      "rail_stations": 449,
+      "boundaries": 50,
+      "province": 1,
+      "rail_routes": 20,
+      "rail_stops": 311
+    }
+  },
+  "overture": {
+    "release": "2026-09-23.1",
+    "path": "data/bangkok/raw/overture_places.parquet",
+    "acquisition": {
+      "release": "2026-09-23.1",
+      "rows": 309704,
+      "fetched_at": "2026-10-26T06:04:17Z",
+      "source_entry_licenses": [
+        {
+          "dataset": "AllThePlaces",
+          "license": "CC0-1.0",
+          "entries": 7417
+        },
+        {
+          "dataset": "DAC",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 18
+        },
+        {
+          "dataset": "Foursquare",
+          "license": "Apache-2.0",
+          "entries": 8356
+        },
+        {
+          "dataset": "Microsoft",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 2302
+        },
+        {
+          "dataset": "Overture",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 309704
+        },
+        {
+          "dataset": "Overture-signals",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 3
+        },
+        {
+          "dataset": "PinMeTo",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 65
+        },
+        {
+          "dataset": "meta",
+          "license": "CDLA-Permissive-2.0",
+          "entries": 291546
+        }
+      ],
+      "note": "All source entries for the selected rows, including secondary sources; slim parquet retains sources[1]."
+    },
+    "rows": 309704,
+    "source_licenses": [
+      {
+        "dataset": "AllThePlaces",
+        "license": "CC0-1.0",
+        "rows": 7417
+      },
+      {
+        "dataset": "DAC",
+        "license": "CDLA-Permissive-2.0",
+        "rows": 18
+      },
+      {
+        "dataset": "Foursquare",
+        "license": "Apache-2.0",
+        "rows": 8356
+      },
+      {
+        "dataset": "Microsoft",
+        "license": "CDLA-Permissive-2.0",
+        "rows": 2302
+      },
+      {
+        "dataset": "PinMeTo",
+        "license": "CDLA-Permissive-2.0",
+        "rows": 65
+      },
+      {
+        "dataset": "meta",
+        "license": "CDLA-Permissive-2.0",
+        "rows": 291546
+      }
+    ],
+    "attribution": "Overture Maps Foundation; Meta, Microsoft, PinMeTo, DAC (CDLA-Permissive-2.0); Foursquare (Apache-2.0); AllThePlaces (CC0-1.0)",
+    "license_review": "research/bangkok/notes/2026-10-26-frozen-refresh.md"
+  },
+  "wikimedia": {
+    "mode": "live API acquisition; exact payload hashes and response revision IDs frozen, not revision-pinned HTTP replay",
+    "limitation": "Commons extmetadata can include transcluded templates; a page revision alone cannot reproduce it. Retain the hashed raw payloads for exact rebuilds. Thumbnail bytes are not vendored.",
+    "payloads": {
+      "wikidata.json": {
+        "fetched_at": "2026-10-26T06:02:30Z",
+        "records": {
+          "Q1525441": {
+            "revision_id": 2474186808,
+            "timestamp": "2026-03-21T12:37:02Z"
+          },
+          "Q1972315": {
+            "revision_id": 2485840597,
+            "timestamp": "2026-04-30T14:20:26Z"
+          },
+          "Q1019440": {
+            "revision_id": 2473522800,
+            "timestamp": "2026-03-19T08:43:28Z"
+          },
+          "Q302711": {
+            "revision_id": 2529632694,
+            "timestamp": "2026-08-10T14:28:14Z"
+          },
+          "Q1025838": {
+            "revision_id": 2550956716,
+            "timestamp": "2026-09-29T18:34:56Z"
+          },
+          "Q999170": {
+            "revision_id": 2558567899,
+            "timestamp": "2026-10-19T00:17:32Z"
+          },
+          "Q999098": {
+            "revision_id": 2505391298,
+            "timestamp": "2026-06-13T08:26:35Z"
+          },
+          "Q1267640": {
+            "revision_id": 2475198406,
+            "timestamp": "2026-03-25T07:48:07Z"
+          },
+          "Q166236": {
+            "revision_id": 2334590791,
+            "timestamp": "2025-04-04T17:44:32Z"
+          },
+          "Q1019658": {
+            "revision_id": 2520080040,
+            "timestamp": "2026-07-20T07:49:02Z"
+          },
+          "Q1239362": {
+            "revision_id": 2473623108,
+            "timestamp": "2026-03-19T14:53:57Z"
+          },
+          "Q1008352": {
+            "revision_id": 2332566743,
+            "timestamp": "2025-03-30T16:11:48Z"
+          },
+          "Q806443": {
+            "revision_id": 2332568699,
+            "timestamp": "2025-03-30T16:19:42Z"
+          },
+          "Q113560": {
+            "revision_id": 2476359443,
+            "timestamp": "2026-03-30T11:21:19Z"
+          },
+          "Q1975222": {
+            "revision_id": 2332527399,
+            "timestamp": "2025-03-30T13:12:35Z"
+          },
+          "Q1403340": {
+            "revision_id": 2519959677,
+            "timestamp": "2026-07-20T01:55:53Z"
+          },
+          "Q999094": {
+            "revision_id": 2560652047,
+            "timestamp": "2026-10-25T11:01:13Z"
+          },
+          "Q1025969": {
+            "revision_id": 2529633016,
+            "timestamp": "2026-08-10T14:30:51Z"
+          },
+          "Q1019417": {
+            "revision_id": 2332568940,
+            "timestamp": "2025-03-30T16:20:38Z"
+          },
+          "Q806445": {
+            "revision_id": 2432521003,
+            "timestamp": "2025-11-22T14:52:48Z"
+          },
+          "Q175236": {
+            "revision_id": 2332566407,
+            "timestamp": "2025-03-30T16:10:18Z"
+          },
+          "Q1759319": {
+            "revision_id": 2396995681,
+            "timestamp": "2025-08-27T00:22:18Z"
+          },
+          "Q1972329": {
+            "revision_id": 2511566985,
+            "timestamp": "2026-06-28T18:16:33Z"
+          },
+          "Q1019428": {
+            "revision_id": 2537570225,
+            "timestamp": "2026-08-29T01:19:13Z"
+          },
+          "Q806453": {
+            "revision_id": 2515580907,
+            "timestamp": "2026-07-09T16:32:08Z"
+          },
+          "Q806486": {
+            "revision_id": 2540658815,
+            "timestamp": "2026-09-05T20:58:23Z"
+          },
+          "Q1019620": {
+            "revision_id": 2520543318,
+            "timestamp": "2026-07-21T07:18:14Z"
+          },
+          "Q225618": {
+            "revision_id": 2529632827,
+            "timestamp": "2026-08-10T14:29:15Z"
+          },
+          "Q1001823": {
+            "revision_id": 2337601016,
+            "timestamp": "2025-04-13T14:01:51Z"
+          },
+          "Q1019432": {
+            "revision_id": 2334587572,
+            "timestamp": "2025-04-04T17:34:13Z"
+          },
+          "Q1019590": {
+            "revision_id": 2420064240,
+            "timestamp": "2025-10-21T17:25:19Z"
+          },
+          "Q1740651": {
+            "revision_id": 2395298649,
+            "timestamp": "2025-08-22T05:42:08Z"
+          },
+          "Q806448": {
+            "revision_id": 2334585864,
+            "timestamp": "2025-04-04T17:28:41Z"
+          },
+          "Q1936178": {
+            "revision_id": 2332566512,
+            "timestamp": "2025-03-30T16:10:53Z"
+          },
+          "Q1019626": {
+            "revision_id": 2332573184,
+            "timestamp": "2025-03-30T16:41:54Z"
+          },
+          "Q1019420": {
+            "revision_id": 2468603781,
+            "timestamp": "2026-03-02T04:44:19Z"
+          },
+          "Q473316": {
+            "revision_id": 2332566569,
+            "timestamp": "2025-03-30T16:11:07Z"
+          },
+          "Q1019611": {
+            "revision_id": 2334591354,
+            "timestamp": "2025-04-04T17:46:25Z"
+          },
+          "Q1019598": {
+            "revision_id": 2246244710,
+            "timestamp": "2024-09-10T15:49:11Z"
+          },
+          "Q1019633": {
+            "revision_id": 2473870513,
+            "timestamp": "2026-03-20T09:52:47Z"
+          },
+          "Q1972732": {
+            "revision_id": 2410811256,
+            "timestamp": "2025-09-29T19:44:55Z"
+          },
+          "Q1019456": {
+            "revision_id": 2332566817,
+            "timestamp": "2025-03-30T16:12:13Z"
+          },
+          "Q2305621": {
+            "revision_id": 2479069889,
+            "timestamp": "2026-04-07T09:39:46Z"
+          },
+          "Q534226": {
+            "revision_id": 2432520961,
+            "timestamp": "2025-11-22T14:52:37Z"
+          },
+          "Q806447": {
+            "revision_id": 2332566804,
+            "timestamp": "2025-03-30T16:12:08Z"
+          },
+          "Q45744": {
+            "revision_id": 2532131043,
+            "timestamp": "2026-08-16T23:01:23Z"
+          },
+          "Q806446": {
+            "revision_id": 2460320957,
+            "timestamp": "2026-02-03T11:53:20Z"
+          },
+          "Q1019651": {
+            "revision_id": 2473808138,
+            "timestamp": "2026-03-20T03:48:26Z"
+          },
+          "Q1806807": {
+            "revision_id": 2335607440,
+            "timestamp": "2025-04-07T20:49:55Z"
+          },
+          "Q1839285": {
+            "revision_id": 2334588031,
+            "timestamp": "2025-04-04T17:35:26Z"
+          }
+        }
+      },
+      "commons.json": {
+        "fetched_at": "2026-10-26T06:02:32Z",
+        "records": {
+          "57131261": {
+            "title": "File:201701 Lak Si Station.jpg",
+            "revision_id": 959465490,
+            "timestamp": "2024-11-20T10:08:44Z",
+            "image_timestamp": "2017-03-16T01:43:58Z",
+            "image_sha1": "a71e2848c4f0567e98f9c39148c9f2c73b8086e7"
+          },
+          "36614121": {
+            "title": "File:Asiatique (11384515613).jpg",
+            "revision_id": 1226524139,
+            "timestamp": "2026-06-06T00:19:05Z",
+            "image_timestamp": "2014-11-05T02:10:34Z",
+            "image_sha1": "bc2eda06776816c626427d0dd59d531c10fc42f1"
+          },
+          "37866717": {
+            "title": "File:BTSサムロン駅予定地.JPG",
+            "revision_id": 1074590881,
+            "timestamp": "2025-08-19T01:44:29Z",
+            "image_timestamp": "2015-01-15T12:51:51Z",
+            "image_sha1": "33f95048f751927903566e9f721a132de4f04006"
+          },
+          "43529212": {
+            "title": "File:Bangkok Fustal Arena.jpg",
+            "revision_id": 1102982172,
+            "timestamp": "2025-10-21T11:22:38Z",
+            "image_timestamp": "2015-09-22T18:58:17Z",
+            "image_sha1": "24a0f42eb39e534bc062d34549c6ad3177c91c99"
+          },
+          "17091": {
+            "title": "File:Bangkok old parliament.jpg",
+            "revision_id": 1022637705,
+            "timestamp": "2025-04-19T15:30:12Z",
+            "image_timestamp": "2010-08-17T04:42:20Z",
+            "image_sha1": "eac8b107f850abbb9079f0a6a41a6bee32d695e9"
+          },
+          "1926160": {
+            "title": "File:Bangkok skytrain Saphan Khwal.JPG",
+            "revision_id": 945181725,
+            "timestamp": "2024-10-17T11:53:31Z",
+            "image_timestamp": "2007-04-11T16:33:13Z",
+            "image_sha1": "48f4d07880f3e3ec9c0055a840d1b22045a7e4d0"
+          },
+          "16036678": {
+            "title": "File:Bangkok view from golden temple2.jpg",
+            "revision_id": 1027703102,
+            "timestamp": "2025-05-04T05:01:52Z",
+            "image_timestamp": "2011-08-08T22:55:36Z",
+            "image_sha1": "af6e40850e272b1e196b24dfedc190a6dd0fd9e6"
+          },
+          "499025": {
+            "title": "File:Bkkchaophraya0804a.jpg",
+            "revision_id": 824996586,
+            "timestamp": "2023-11-25T10:18:44Z",
+            "image_timestamp": "2006-01-06T16:34:35Z",
+            "image_sha1": "a5b22c3f641b3e4561c86c70a3bd20cc1ce2b4b4"
+          },
+          "57163252": {
+            "title": "File:Car in Bangkok.jpg",
+            "revision_id": 1113791626,
+            "timestamp": "2025-11-12T05:32:13Z",
+            "image_timestamp": "2017-03-17T11:17:11Z",
+            "image_sha1": "8015f2d219b82c5f5e01359f004f0149f0f171c0"
+          },
+          "1216023": {
+            "title": "File:Centralbangna2.jpg",
+            "revision_id": 852613310,
+            "timestamp": "2024-02-17T08:52:01Z",
+            "image_timestamp": "2006-09-26T14:34:33Z",
+            "image_sha1": "6ee8d814cbd1b6542c04d1e80ba65bc861c75149"
+          },
+          "12290247": {
+            "title": "File:Esplanade Cineplex.jpg",
+            "revision_id": 1233084745,
+            "timestamp": "2026-06-17T20:16:09Z",
+            "image_timestamp": "2012-04-03T21:08:37Z",
+            "image_sha1": "3362d994ef1bd90ee9d1ca6864adda98b714723d"
+          },
+          "103884470": {
+            "title": "File:Ganesh Shrine at Huai Khwang, Bangkok ศาลพระพิฆเนศ สี่แยกห้วยขวาง (April2021) 02.jpg",
+            "revision_id": 1267180969,
+            "timestamp": "2026-08-25T13:33:15Z",
+            "image_timestamp": "2021-04-18T18:18:06Z",
+            "image_sha1": "137e78b6f8fa528664a72a2c7328747c8230f944"
+          },
+          "652311": {
+            "title": "File:KMUTT main gate.jpg",
+            "revision_id": 1052466423,
+            "timestamp": "2025-07-05T06:13:43Z",
+            "image_timestamp": "2006-03-22T17:09:34Z",
+            "image_sha1": "cfb90577a6eac5948cdbce4fbcef4a5a60026011"
+          },
+          "53263838": {
+            "title": "File:Kasikornthai Bank - panoramio.jpg",
+            "revision_id": 1272576602,
+            "timestamp": "2026-09-05T12:07:21Z",
+            "image_timestamp": "2016-11-18T02:42:19Z",
+            "image_sha1": "3e903915cd9016a096fecc373a4b9bd93569cc3c"
+          },
+          "3199380": {
+            "title": "File:Mall Bangkapi.jpg",
+            "revision_id": 1188861910,
+            "timestamp": "2026-03-29T17:17:49Z",
+            "image_timestamp": "2007-12-08T15:40:41Z",
+            "image_sha1": "c1d0cc11885de1a07fb711ad8b819981ab5ab045"
+          },
+          "7137539": {
+            "title": "File:New Southern Bus Terminal (Sai Tai Mai) - in 2009.jpg",
+            "revision_id": 1254839906,
+            "timestamp": "2026-07-31T22:29:37Z",
+            "image_timestamp": "2009-06-27T13:31:52Z",
+            "image_sha1": "828aa18cd6ead17e6d2c71543b647846f86fdd09"
+          },
+          "91164003": {
+            "title": "File:Nong Kham City Gate.jpg",
+            "revision_id": 698387981,
+            "timestamp": "2022-10-23T08:12:41Z",
+            "image_timestamp": "2020-06-13T05:36:49Z",
+            "image_sha1": "94c27499c9c018c4796f033073a393a12046f809"
+          },
+          "16291643": {
+            "title": "File:Original siam3.jpg",
+            "revision_id": 1136472128,
+            "timestamp": "2025-12-25T14:25:23Z",
+            "image_timestamp": "2011-09-01T09:09:41Z",
+            "image_sha1": "6c42170111273ccbc943ec1ff6e7c7120c933e96"
+          },
+          "12259014": {
+            "title": "File:Pathumwan rd and Siam area.jpg",
+            "revision_id": 1189225589,
+            "timestamp": "2026-03-30T13:11:04Z",
+            "image_timestamp": "2010-12-09T20:31:24Z",
+            "image_sha1": "4f51fc943b5db067936a4cfe567a2248ea95ec80"
+          },
+          "1494035": {
+            "title": "File:Phrakhanongwatmahabut.jpg",
+            "revision_id": 1278643319,
+            "timestamp": "2026-09-19T21:03:57Z",
+            "image_timestamp": "2006-12-26T15:58:15Z",
+            "image_sha1": "e7f3b79da7ab9a8c8a0f9c5619c296d9cb45b53c"
+          },
+          "1981046": {
+            "title": "File:Phutthamonthon 003.jpg",
+            "revision_id": 1058804043,
+            "timestamp": "2025-07-17T19:39:14Z",
+            "image_timestamp": "2007-04-21T20:15:44Z",
+            "image_sha1": "0375d4fb3a05bffb16cdd6ebbccb798151f6ccb5"
+          },
+          "3909759": {
+            "title": "File:Pitak Ratthathammanun Monument.JPG",
+            "revision_id": 1279178052,
+            "timestamp": "2026-09-21T17:02:00Z",
+            "image_timestamp": "2008-10-21T07:36:07Z",
+            "image_sha1": "fae2be97ccc43202be7bdf3a30c5420df4b57c8e"
+          },
+          "4744386": {
+            "title": "File:Rama II road at Central Rama II.jpg",
+            "revision_id": 1269491649,
+            "timestamp": "2026-08-29T22:20:21Z",
+            "image_timestamp": "2008-09-08T14:48:26Z",
+            "image_sha1": "b2493ff6e5ba2099286f6c2ea5910baf3bb3389a"
+          },
+          "10628680": {
+            "title": "File:Rama IX Bridge.jpg",
+            "revision_id": 929144233,
+            "timestamp": "2024-09-26T11:18:17Z",
+            "image_timestamp": "2010-06-13T18:54:02Z",
+            "image_sha1": "f4fb47dc133bbf39023c588d4f9193d98eadc3f3"
+          },
+          "5697756": {
+            "title": "File:Rama IX Park.JPG",
+            "revision_id": 1108173956,
+            "timestamp": "2025-11-02T23:41:41Z",
+            "image_timestamp": "2009-01-12T04:42:57Z",
+            "image_sha1": "3f8ab41f37bede3fe4c8d36c40eda97999913f89"
+          },
+          "3316414": {
+            "title": "File:Ratchadamnoen King80 arch.jpg",
+            "revision_id": 1141375787,
+            "timestamp": "2026-01-03T22:55:47Z",
+            "image_timestamp": "2008-01-01T12:59:54Z",
+            "image_sha1": "2822050b3077e6b6517c9a7fca2b0bb98fb0d695"
+          },
+          "16315275": {
+            "title": "File:Refurbished CentralPlaza Ladprao.jpg",
+            "revision_id": 1144386404,
+            "timestamp": "2026-01-08T17:17:20Z",
+            "image_timestamp": "2012-04-29T12:13:44Z",
+            "image_sha1": "830b2a043add74403ad0236c4ab10b56d2c1c4dd"
+          },
+          "552817": {
+            "title": "File:Safari World.jpg",
+            "revision_id": 1178976015,
+            "timestamp": "2026-03-10T17:04:55Z",
+            "image_timestamp": "2006-05-04T18:31:33Z",
+            "image_sha1": "c3369a107d5d4654c51b91cbbf959805afaeae83"
+          },
+          "56970052": {
+            "title": "File:Sanambin, Don Mueang, Bangkok, Thailand - panoramio (9).jpg",
+            "revision_id": 992269963,
+            "timestamp": "2025-02-02T14:57:19Z",
+            "image_timestamp": "2017-03-10T11:21:14Z",
+            "image_sha1": "33407abd235e22bab576a180c8267f0c7328e3ea"
+          },
+          "57977170": {
+            "title": "File:Saphan Sung, Bangkok 10240, Thailand - panoramio.jpg",
+            "revision_id": 663690035,
+            "timestamp": "2022-06-11T06:22:17Z",
+            "image_timestamp": "2017-04-13T06:29:39Z",
+            "image_sha1": "31f36833ccbcf48b107f0f433b3e1c2892349dc6"
+          },
+          "1494118": {
+            "title": "File:Shrinetomaenak.jpg",
+            "revision_id": 994880849,
+            "timestamp": "2025-02-07T05:05:14Z",
+            "image_timestamp": "2006-12-26T16:18:23Z",
+            "image_sha1": "85605da18d30e7b275c13b7b0e5b0818e7e94d0f"
+          },
+          "91728754": {
+            "title": "File:Soi Phahon Yothin 54, Sai Mai.jpg",
+            "revision_id": 1151570869,
+            "timestamp": "2026-01-23T03:27:56Z",
+            "image_timestamp": "2020-06-30T04:06:27Z",
+            "image_sha1": "7c5892d1a8cb7d9baa63109657d2808da00b4daa"
+          },
+          "80794208": {
+            "title": "File:Sri Maha Mariamman Koyil Bangkok (Wat Khaek Silom) 2019 04.jpg",
+            "revision_id": 899556696,
+            "timestamp": "2024-07-16T13:48:35Z",
+            "image_timestamp": "2019-07-26T09:04:22Z",
+            "image_sha1": "b0af3a170088683ee761307a5eedd3412f81a39c"
+          },
+          "141933334": {
+            "title": "File:Suan Pakkad Palace (I).jpg",
+            "revision_id": 829258806,
+            "timestamp": "2023-12-09T15:25:17Z",
+            "image_timestamp": "2023-12-09T13:13:24Z",
+            "image_sha1": "9549e84b53e45b470857ce124145993bab00eb59"
+          },
+          "36848114": {
+            "title": "File:Sukhumvit panorama A.JPG",
+            "revision_id": 973771640,
+            "timestamp": "2024-12-21T23:45:41Z",
+            "image_timestamp": "2014-11-18T22:08:27Z",
+            "image_sha1": "f2c5c9f535abc692fc97072c0b9f0a3ddb6abf44"
+          },
+          "52768829": {
+            "title": "File:Sunflower field@Bangkok - panoramio.jpg",
+            "revision_id": 642484679,
+            "timestamp": "2022-03-21T01:27:00Z",
+            "image_timestamp": "2016-11-03T17:28:21Z",
+            "image_sha1": "c341a13da9874b8d7e39374d91081a85c079dd0b"
+          },
+          "450389": {
+            "title": "File:Thonburiwatsuwannaram02a.jpg",
+            "revision_id": 1212469446,
+            "timestamp": "2026-05-11T20:31:55Z",
+            "image_timestamp": "2005-12-07T17:21:40Z",
+            "image_sha1": "848a3c6a57af9c2f90e0fb604028c93e299c0db0"
+          },
+          "67341723": {
+            "title": "File:View of Khlong Phasi Charoen near Bang Wa BTS Station.jpg",
+            "revision_id": 1033361306,
+            "timestamp": "2025-05-20T00:19:34Z",
+            "image_timestamp": "2018-03-14T16:17:32Z",
+            "image_sha1": "4ed418781a600c0513a564c24a232620a789fa01"
+          },
+          "332534": {
+            "title": "File:Wat Arun from Chao Phraya River.jpg",
+            "revision_id": 1051719419,
+            "timestamp": "2025-07-03T06:18:26Z",
+            "image_timestamp": "2005-09-20T10:51:28Z",
+            "image_sha1": "2f2d22abdc21cff8f4ec04da2bc651fcd83f5aaa"
+          },
+          "57640074": {
+            "title": "File:Wat bang pho, Bang sue, bangkok, Thailand - panoramio.jpg",
+            "revision_id": 764956061,
+            "timestamp": "2023-05-19T05:57:30Z",
+            "image_timestamp": "2017-04-02T00:07:10Z",
+            "image_sha1": "2e81341b29365ce6e4ab6f32bd0719bbdca37883"
+          },
+          "228009": {
+            "title": "File:Wat raja orasaram a05.jpg",
+            "revision_id": 1238891817,
+            "timestamp": "2026-06-26T18:06:49Z",
+            "image_timestamp": "2005-07-17T08:39:51Z",
+            "image_sha1": "48e7efe32d46dedd9475a3824395360cc59f9016"
+          },
+          "563957": {
+            "title": "File:Watpichayart.jpg",
+            "revision_id": 1275571662,
+            "timestamp": "2026-09-12T17:34:07Z",
+            "image_timestamp": "2006-02-09T17:18:53Z",
+            "image_sha1": "bb6dc84c780c11deb69c407a31702f26cc7faeac"
+          },
+          "61352313": {
+            "title": "File:Yaowarat at night (32455695783).jpg",
+            "revision_id": 1236486985,
+            "timestamp": "2026-06-22T21:12:53Z",
+            "image_timestamp": "2017-07-28T18:18:52Z",
+            "image_sha1": "34b90eabba44a02b8ab66ff69ac88fc82366481a"
+          },
+          "56092998": {
+            "title": "File:คลองแสนแสบยามเย็น - panoramio.jpg",
+            "revision_id": 924619196,
+            "timestamp": "2024-09-16T00:01:05Z",
+            "image_timestamp": "2017-02-09T16:08:31Z",
+            "image_sha1": "6bd461e1ebb2303f63d21b800f4221d9728d2315"
+          },
+          "91327341": {
+            "title": "File:ถนนนวมินทร์.jpg",
+            "revision_id": 1094232824,
+            "timestamp": "2025-10-02T19:51:44Z",
+            "image_timestamp": "2020-06-19T05:32:37Z",
+            "image_sha1": "e76a9ecce064e2c6e4ac450d096d5e61b66f3f9f"
+          },
+          "103141848": {
+            "title": "File:ถนนอโศกมนตรี ( สุขุมวิท 21 ) Asok Montri Road (aka Sukhumwit 21 Alley).jpg",
+            "revision_id": 1005323130,
+            "timestamp": "2025-03-04T15:04:55Z",
+            "image_timestamp": "2021-04-05T17:36:39Z",
+            "image_sha1": "e4195fecb76db93514f5f66737ec8a3d0113ce87"
+          },
+          "62125243": {
+            "title": "File:วัดกัลยาณมิตรวรมหาวิหาร เขตธนบุรี กรุงเทพมหานคร (43).jpg",
+            "revision_id": 1152524972,
+            "timestamp": "2026-01-24T14:35:56Z",
+            "image_timestamp": "2017-09-03T03:16:26Z",
+            "image_sha1": "9d304ae1fd4d92503a32158dc17f00f33104dada"
+          },
+          "72458939": {
+            "title": "File:วัดยานนาวา 10.jpg",
+            "revision_id": 1249770668,
+            "timestamp": "2026-07-20T15:55:38Z",
+            "image_timestamp": "2018-09-06T14:55:22Z",
+            "image_sha1": "f3283032ed3d78cd35e6e07d0456b0faaa4dbf9e"
+          },
+          "51301813": {
+            "title": "File:วัดแจงร้อน เขตราษฎร์บูรณะ กรุงเทพมหานคร (25).jpg",
+            "revision_id": 900613011,
+            "timestamp": "2024-07-19T09:21:14Z",
+            "image_timestamp": "2016-09-10T17:13:56Z",
+            "image_sha1": "c431416aaf3ed77f17bfaf1a67ad8707a42e7149"
+          },
+          "18603686": {
+            "title": "File:สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง001.jpg",
+            "revision_id": 1280135313,
+            "timestamp": "2026-09-24T19:03:24Z",
+            "image_timestamp": "2012-03-06T12:00:51Z",
+            "image_sha1": "6f31c6292f888fd05df0bdb66dc526dd96ec1f3e"
+          }
+        }
+      },
+      "station_wikidata.json": {
+        "fetched_at": "2026-10-26T06:02:45Z",
+        "records": {
+          "Q100631366": {
+            "revision_id": 2436086594,
+            "timestamp": "2025-11-30T15:15:55Z"
+          },
+          "Q100635380": {
+            "revision_id": 2436086686,
+            "timestamp": "2025-11-30T15:16:13Z"
+          },
+          "Q1016037": {
+            "revision_id": 2461764956,
+            "timestamp": "2026-02-08T14:22:30Z"
+          },
+          "Q1021944": {
+            "revision_id": 2497582239,
+            "timestamp": "2026-05-26T01:43:59Z"
+          },
+          "Q1028691": {
+            "revision_id": 2492969016,
+            "timestamp": "2026-05-17T04:40:53Z"
+          },
+          "Q1028755": {
+            "revision_id": 2497578761,
+            "timestamp": "2026-05-26T01:33:59Z"
+          },
+          "Q1030152": {
+            "revision_id": 2497581827,
+            "timestamp": "2026-05-26T01:42:58Z"
+          },
+          "Q1030167": {
+            "revision_id": 2497466601,
+            "timestamp": "2026-05-25T20:20:50Z"
+          },
+          "Q1030185": {
+            "revision_id": 2461765353,
+            "timestamp": "2026-02-08T14:25:55Z"
+          },
+          "Q1030199": {
+            "revision_id": 2497211865,
+            "timestamp": "2026-05-25T10:09:21Z"
+          },
+          "Q1036816": {
+            "revision_id": 2472406493,
+            "timestamp": "2026-03-16T05:57:51Z"
+          },
+          "Q1036841": {
+            "revision_id": 2317694600,
+            "timestamp": "2025-02-27T12:01:58Z"
+          },
+          "Q1036857": {
+            "revision_id": 2481295390,
+            "timestamp": "2026-04-14T06:34:37Z"
+          },
+          "Q1039683": {
+            "revision_id": 2317695190,
+            "timestamp": "2025-02-27T12:03:47Z"
+          },
+          "Q104211602": {
+            "revision_id": 2436088001,
+            "timestamp": "2025-11-30T15:19:43Z"
+          },
+          "Q104211647": {
+            "revision_id": 2525773380,
+            "timestamp": "2026-08-01T17:21:05Z"
+          },
+          "Q104211663": {
+            "revision_id": 2436099305,
+            "timestamp": "2025-11-30T15:55:59Z"
+          },
+          "Q104211764": {
+            "revision_id": 2436099397,
+            "timestamp": "2025-11-30T15:56:19Z"
+          },
+          "Q104211775": {
+            "revision_id": 2436099554,
+            "timestamp": "2025-11-30T15:56:53Z"
+          },
+          "Q104211805": {
+            "revision_id": 2436100112,
+            "timestamp": "2025-11-30T15:58:04Z"
+          },
+          "Q104212231": {
+            "revision_id": 2436100197,
+            "timestamp": "2025-11-30T15:58:20Z"
+          },
+          "Q104212244": {
+            "revision_id": 2519494198,
+            "timestamp": "2026-07-19T04:41:20Z"
+          },
+          "Q107751653": {
+            "revision_id": 2455159948,
+            "timestamp": "2026-01-15T15:20:56Z"
+          },
+          "Q108004772": {
+            "revision_id": 2436022260,
+            "timestamp": "2025-11-30T12:32:12Z"
+          },
+          "Q108596671": {
+            "revision_id": 2441848167,
+            "timestamp": "2025-12-13T13:05:20Z"
+          },
+          "Q108596711": {
+            "revision_id": 2317688874,
+            "timestamp": "2025-02-27T11:44:19Z"
+          },
+          "Q109127834": {
+            "revision_id": 2446927397,
+            "timestamp": "2025-12-25T10:25:31Z"
+          },
+          "Q109128207": {
+            "revision_id": 2446926660,
+            "timestamp": "2025-12-25T10:22:42Z"
+          },
+          "Q109130566": {
+            "revision_id": 2446921983,
+            "timestamp": "2025-12-25T10:01:51Z"
+          },
+          "Q11299499": {
+            "revision_id": 2497583217,
+            "timestamp": "2026-05-26T01:45:58Z"
+          },
+          "Q11335955": {
+            "revision_id": 2260259215,
+            "timestamp": "2024-10-13T21:54:14Z"
+          },
+          "Q11340409": {
+            "revision_id": 2497064259,
+            "timestamp": "2026-05-25T03:03:14Z"
+          },
+          "Q119009751": {
+            "revision_id": 2436032002,
+            "timestamp": "2025-11-30T12:57:55Z"
+          },
+          "Q119009797": {
+            "revision_id": 2436032080,
+            "timestamp": "2025-11-30T12:58:08Z"
+          },
+          "Q119009914": {
+            "revision_id": 2317678270,
+            "timestamp": "2025-02-27T11:11:12Z"
+          },
+          "Q119009970": {
+            "revision_id": 2436032150,
+            "timestamp": "2025-11-30T12:58:20Z"
+          },
+          "Q119010023": {
+            "revision_id": 2436067633,
+            "timestamp": "2025-11-30T14:22:34Z"
+          },
+          "Q119010086": {
+            "revision_id": 2446920785,
+            "timestamp": "2025-12-25T09:56:31Z"
+          },
+          "Q119010410": {
+            "revision_id": 2470186747,
+            "timestamp": "2026-03-07T14:04:49Z"
+          },
+          "Q119010493": {
+            "revision_id": 2436070272,
+            "timestamp": "2025-11-30T14:30:25Z"
+          },
+          "Q119010548": {
+            "revision_id": 2446920991,
+            "timestamp": "2025-12-25T09:57:38Z"
+          },
+          "Q119010700": {
+            "revision_id": 2436070475,
+            "timestamp": "2025-11-30T14:31:02Z"
+          },
+          "Q119722574": {
+            "revision_id": 2436022388,
+            "timestamp": "2025-11-30T12:32:33Z"
+          },
+          "Q119722811": {
+            "revision_id": 2436022458,
+            "timestamp": "2025-11-30T12:32:48Z"
+          },
+          "Q119723016": {
+            "revision_id": 2436022550,
+            "timestamp": "2025-11-30T12:33:02Z"
+          },
+          "Q119723149": {
+            "revision_id": 2436028009,
+            "timestamp": "2025-11-30T12:47:24Z"
+          },
+          "Q119723213": {
+            "revision_id": 2436028130,
+            "timestamp": "2025-11-30T12:47:44Z"
+          },
+          "Q119723265": {
+            "revision_id": 2436031826,
+            "timestamp": "2025-11-30T12:57:31Z"
+          },
+          "Q119726019": {
+            "revision_id": 2436031908,
+            "timestamp": "2025-11-30T12:57:42Z"
+          },
+          "Q123470968": {
+            "revision_id": 2445878595,
+            "timestamp": "2025-12-23T05:45:08Z"
+          },
+          "Q123537197": {
+            "revision_id": 2436007961,
+            "timestamp": "2025-11-30T11:52:52Z"
+          },
+          "Q123537238": {
+            "revision_id": 2436008272,
+            "timestamp": "2025-11-30T11:53:49Z"
+          },
+          "Q123537262": {
+            "revision_id": 2436008388,
+            "timestamp": "2025-11-30T11:54:05Z"
+          },
+          "Q123537277": {
+            "revision_id": 2436008598,
+            "timestamp": "2025-11-30T11:54:44Z"
+          },
+          "Q123537334": {
+            "revision_id": 2445885687,
+            "timestamp": "2025-12-23T06:06:32Z"
+          },
+          "Q123537372": {
+            "revision_id": 2445885249,
+            "timestamp": "2025-12-23T06:05:17Z"
+          },
+          "Q123537386": {
+            "revision_id": 2445884935,
+            "timestamp": "2025-12-23T06:04:20Z"
+          },
+          "Q123537477": {
+            "revision_id": 2445884442,
+            "timestamp": "2025-12-23T06:02:43Z"
+          },
+          "Q123537773": {
+            "revision_id": 2445876211,
+            "timestamp": "2025-12-23T05:38:09Z"
+          },
+          "Q123537774": {
+            "revision_id": 2445883752,
+            "timestamp": "2025-12-23T06:00:39Z"
+          },
+          "Q123537775": {
+            "revision_id": 2560370138,
+            "timestamp": "2026-10-24T18:19:46Z"
+          },
+          "Q123537776": {
+            "revision_id": 2381532401,
+            "timestamp": "2025-07-19T00:16:53Z"
+          },
+          "Q123537777": {
+            "revision_id": 2445883443,
+            "timestamp": "2025-12-23T05:59:43Z"
+          },
+          "Q123537779": {
+            "revision_id": 2445883146,
+            "timestamp": "2025-12-23T05:58:49Z"
+          },
+          "Q123537780": {
+            "revision_id": 2445882619,
+            "timestamp": "2025-12-23T05:57:03Z"
+          },
+          "Q123537781": {
+            "revision_id": 2445882101,
+            "timestamp": "2025-12-23T05:55:25Z"
+          },
+          "Q123537782": {
+            "revision_id": 2445881730,
+            "timestamp": "2025-12-23T05:54:17Z"
+          },
+          "Q123537783": {
+            "revision_id": 2445881280,
+            "timestamp": "2025-12-23T05:52:57Z"
+          },
+          "Q123537784": {
+            "revision_id": 2445880988,
+            "timestamp": "2025-12-23T05:51:59Z"
+          },
+          "Q123537785": {
+            "revision_id": 2445880702,
+            "timestamp": "2025-12-23T05:51:07Z"
+          },
+          "Q123537786": {
+            "revision_id": 2445880371,
+            "timestamp": "2025-12-23T05:50:17Z"
+          },
+          "Q123537787": {
+            "revision_id": 2445879869,
+            "timestamp": "2025-12-23T05:48:56Z"
+          },
+          "Q123537788": {
+            "revision_id": 2445876947,
+            "timestamp": "2025-12-23T05:40:15Z"
+          },
+          "Q125929": {
+            "revision_id": 2495854217,
+            "timestamp": "2026-05-22T07:04:30Z"
+          },
+          "Q13015608": {
+            "revision_id": 2455159571,
+            "timestamp": "2026-01-15T15:19:12Z"
+          },
+          "Q13015613": {
+            "revision_id": 2455061108,
+            "timestamp": "2026-01-15T08:24:15Z"
+          },
+          "Q13015630": {
+            "revision_id": 2536983761,
+            "timestamp": "2026-08-27T07:33:55Z"
+          },
+          "Q13015632": {
+            "revision_id": 2260255340,
+            "timestamp": "2024-10-13T21:48:49Z"
+          },
+          "Q13015636": {
+            "revision_id": 2534173739,
+            "timestamp": "2026-08-21T10:41:00Z"
+          },
+          "Q13017017": {
+            "revision_id": 2455060826,
+            "timestamp": "2026-01-15T08:22:11Z"
+          },
+          "Q13017024": {
+            "revision_id": 2340137990,
+            "timestamp": "2025-04-21T04:47:51Z"
+          },
+          "Q13017025": {
+            "revision_id": 2455160528,
+            "timestamp": "2026-01-15T15:23:54Z"
+          },
+          "Q130198": {
+            "revision_id": 2517398261,
+            "timestamp": "2026-07-14T13:17:12Z"
+          },
+          "Q13021613": {
+            "revision_id": 2412171231,
+            "timestamp": "2025-10-03T09:06:19Z"
+          },
+          "Q13021620": {
+            "revision_id": 2390428574,
+            "timestamp": "2025-08-11T00:19:35Z"
+          },
+          "Q13021635": {
+            "revision_id": 2545144857,
+            "timestamp": "2026-09-13T17:43:35Z"
+          },
+          "Q13021643": {
+            "revision_id": 2436155998,
+            "timestamp": "2025-11-30T19:11:17Z"
+          },
+          "Q13021646": {
+            "revision_id": 2436161556,
+            "timestamp": "2025-11-30T19:25:40Z"
+          },
+          "Q13021649": {
+            "revision_id": 2461764757,
+            "timestamp": "2026-02-08T14:21:19Z"
+          },
+          "Q13021653": {
+            "revision_id": 2497046270,
+            "timestamp": "2026-05-25T01:21:38Z"
+          },
+          "Q13021666": {
+            "revision_id": 2260256916,
+            "timestamp": "2024-10-13T21:51:02Z"
+          },
+          "Q13021685": {
+            "revision_id": 2441826689,
+            "timestamp": "2025-12-13T12:22:11Z"
+          },
+          "Q13021691": {
+            "revision_id": 2354806290,
+            "timestamp": "2025-05-30T21:04:34Z"
+          },
+          "Q13021717": {
+            "revision_id": 2519228860,
+            "timestamp": "2026-07-18T18:09:32Z"
+          },
+          "Q13021737": {
+            "revision_id": 2429190923,
+            "timestamp": "2025-11-13T19:32:55Z"
+          },
+          "Q13021749": {
+            "revision_id": 2455163205,
+            "timestamp": "2026-01-15T15:39:26Z"
+          },
+          "Q13021763": {
+            "revision_id": 2455162168,
+            "timestamp": "2026-01-15T15:33:55Z"
+          },
+          "Q13021768": {
+            "revision_id": 2534179483,
+            "timestamp": "2026-08-21T10:55:27Z"
+          },
+          "Q13021806": {
+            "revision_id": 2260257676,
+            "timestamp": "2024-10-13T21:52:08Z"
+          },
+          "Q13021812": {
+            "revision_id": 2436162889,
+            "timestamp": "2025-11-30T19:29:07Z"
+          },
+          "Q13021824": {
+            "revision_id": 2505141285,
+            "timestamp": "2026-06-12T16:18:18Z"
+          },
+          "Q13021830": {
+            "revision_id": 2436160260,
+            "timestamp": "2025-11-30T19:22:03Z"
+          },
+          "Q13021833": {
+            "revision_id": 2496116488,
+            "timestamp": "2026-05-22T20:51:06Z"
+          },
+          "Q13021838": {
+            "revision_id": 2459574296,
+            "timestamp": "2026-01-31T18:53:22Z"
+          },
+          "Q13021839": {
+            "revision_id": 2436086838,
+            "timestamp": "2025-11-30T15:16:36Z"
+          },
+          "Q13021840": {
+            "revision_id": 2436163006,
+            "timestamp": "2025-11-30T19:29:26Z"
+          },
+          "Q13021842": {
+            "revision_id": 2435628530,
+            "timestamp": "2025-11-29T13:34:29Z"
+          },
+          "Q13021845": {
+            "revision_id": 2436002973,
+            "timestamp": "2025-11-30T11:38:36Z"
+          },
+          "Q13021846": {
+            "revision_id": 2260389281,
+            "timestamp": "2024-10-14T05:37:36Z"
+          },
+          "Q13021853": {
+            "revision_id": 2261113789,
+            "timestamp": "2024-10-15T19:41:33Z"
+          },
+          "Q13021857": {
+            "revision_id": 2497579746,
+            "timestamp": "2026-05-26T01:37:00Z"
+          },
+          "Q13021858": {
+            "revision_id": 2452328445,
+            "timestamp": "2026-01-07T04:35:59Z"
+          },
+          "Q13021860": {
+            "revision_id": 2497046685,
+            "timestamp": "2026-05-25T01:24:07Z"
+          },
+          "Q13021868": {
+            "revision_id": 2467191116,
+            "timestamp": "2026-02-26T17:03:23Z"
+          },
+          "Q13021885": {
+            "revision_id": 2489826804,
+            "timestamp": "2026-05-11T16:12:06Z"
+          },
+          "Q13563190": {
+            "revision_id": 2466298301,
+            "timestamp": "2026-02-24T11:01:56Z"
+          },
+          "Q13590884": {
+            "revision_id": 2481299429,
+            "timestamp": "2026-04-14T07:00:37Z"
+          },
+          "Q137785620": {
+            "revision_id": 2459596808,
+            "timestamp": "2026-01-31T21:28:31Z"
+          },
+          "Q137787105": {
+            "revision_id": 2455154681,
+            "timestamp": "2026-01-15T14:58:09Z"
+          },
+          "Q141223976": {
+            "revision_id": 2555892430,
+            "timestamp": "2026-10-11T14:00:10Z"
+          },
+          "Q141223977": {
+            "revision_id": 2555892411,
+            "timestamp": "2026-10-11T14:00:02Z"
+          },
+          "Q15139351": {
+            "revision_id": 2466218838,
+            "timestamp": "2026-02-24T05:16:32Z"
+          },
+          "Q15283201": {
+            "revision_id": 2290523273,
+            "timestamp": "2024-12-22T19:49:57Z"
+          },
+          "Q15379154": {
+            "revision_id": 2319261744,
+            "timestamp": "2025-03-03T07:31:18Z"
+          },
+          "Q16271177": {
+            "revision_id": 2534173490,
+            "timestamp": "2026-08-21T10:40:14Z"
+          },
+          "Q16271193": {
+            "revision_id": 2534177948,
+            "timestamp": "2026-08-21T10:51:21Z"
+          },
+          "Q16304392": {
+            "revision_id": 2446928032,
+            "timestamp": "2025-12-25T10:28:24Z"
+          },
+          "Q16306299": {
+            "revision_id": 2455158181,
+            "timestamp": "2026-01-15T15:13:01Z"
+          },
+          "Q16307483": {
+            "revision_id": 2435990938,
+            "timestamp": "2025-11-30T10:55:24Z"
+          },
+          "Q16307495": {
+            "revision_id": 2545150995,
+            "timestamp": "2026-09-13T17:57:57Z"
+          },
+          "Q16307526": {
+            "revision_id": 2436022162,
+            "timestamp": "2025-11-30T12:31:57Z"
+          },
+          "Q16307537": {
+            "revision_id": 2455164339,
+            "timestamp": "2026-01-15T15:45:10Z"
+          },
+          "Q16307547": {
+            "revision_id": 2455167366,
+            "timestamp": "2026-01-15T15:58:52Z"
+          },
+          "Q16307590": {
+            "revision_id": 2446921858,
+            "timestamp": "2025-12-25T10:01:17Z"
+          },
+          "Q16307599": {
+            "revision_id": 2445884088,
+            "timestamp": "2025-12-23T06:01:37Z"
+          },
+          "Q16307668": {
+            "revision_id": 2441843256,
+            "timestamp": "2025-12-13T12:55:45Z"
+          },
+          "Q16307680": {
+            "revision_id": 2500435522,
+            "timestamp": "2026-06-01T01:53:54Z"
+          },
+          "Q16307686": {
+            "revision_id": 2260713463,
+            "timestamp": "2024-10-14T21:09:08Z"
+          },
+          "Q16307698": {
+            "revision_id": 2435991086,
+            "timestamp": "2025-11-30T10:56:03Z"
+          },
+          "Q16434104": {
+            "revision_id": 2446923741,
+            "timestamp": "2025-12-25T10:09:30Z"
+          },
+          "Q17057655": {
+            "revision_id": 2331933913,
+            "timestamp": "2025-03-29T08:46:00Z"
+          },
+          "Q18388309": {
+            "revision_id": 2454047252,
+            "timestamp": "2026-01-11T22:12:55Z"
+          },
+          "Q18393239": {
+            "revision_id": 2555257204,
+            "timestamp": "2026-10-09T07:38:05Z"
+          },
+          "Q19794082": {
+            "revision_id": 2436163363,
+            "timestamp": "2025-11-30T19:30:23Z"
+          },
+          "Q19794085": {
+            "revision_id": 2478709563,
+            "timestamp": "2026-04-06T03:54:52Z"
+          },
+          "Q19794088": {
+            "revision_id": 2436161146,
+            "timestamp": "2025-11-30T19:24:34Z"
+          },
+          "Q23869363": {
+            "revision_id": 2451275067,
+            "timestamp": "2026-01-04T13:49:33Z"
+          },
+          "Q23925684": {
+            "revision_id": 2465201942,
+            "timestamp": "2026-02-21T08:28:52Z"
+          },
+          "Q25103860": {
+            "revision_id": 2306104431,
+            "timestamp": "2025-02-03T02:25:56Z"
+          },
+          "Q25106306": {
+            "revision_id": 2545193719,
+            "timestamp": "2026-09-13T19:33:02Z"
+          },
+          "Q25106308": {
+            "revision_id": 2356498748,
+            "timestamp": "2025-06-03T14:34:38Z"
+          },
+          "Q25537502": {
+            "revision_id": 2469994957,
+            "timestamp": "2026-03-06T23:29:24Z"
+          },
+          "Q29068277": {
+            "revision_id": 2260389281,
+            "timestamp": "2024-10-14T05:37:36Z"
+          },
+          "Q35596136": {
+            "revision_id": 2436073846,
+            "timestamp": "2025-11-30T14:40:32Z"
+          },
+          "Q4384431": {
+            "revision_id": 2452041975,
+            "timestamp": "2026-01-06T12:39:41Z"
+          },
+          "Q4855217": {
+            "revision_id": 2498014997,
+            "timestamp": "2026-05-26T21:26:09Z"
+          },
+          "Q4919536": {
+            "revision_id": 2497577775,
+            "timestamp": "2026-05-26T01:30:58Z"
+          },
+          "Q4919752": {
+            "revision_id": 2381917307,
+            "timestamp": "2025-07-20T05:43:35Z"
+          },
+          "Q4919845": {
+            "revision_id": 2497586024,
+            "timestamp": "2026-05-26T01:52:59Z"
+          },
+          "Q4920172": {
+            "revision_id": 2261113776,
+            "timestamp": "2024-10-15T19:41:30Z"
+          },
+          "Q4921013": {
+            "revision_id": 2257871612,
+            "timestamp": "2024-10-08T14:53:15Z"
+          },
+          "Q4921067": {
+            "revision_id": 2536841713,
+            "timestamp": "2026-08-26T21:36:45Z"
+          },
+          "Q4921113": {
+            "revision_id": 2497576225,
+            "timestamp": "2026-05-26T01:26:18Z"
+          },
+          "Q4922512": {
+            "revision_id": 2558826757,
+            "timestamp": "2026-10-19T15:22:51Z"
+          },
+          "Q4923316": {
+            "revision_id": 2374155145,
+            "timestamp": "2025-07-05T17:08:27Z"
+          },
+          "Q4923372": {
+            "revision_id": 2293697652,
+            "timestamp": "2025-01-01T13:55:39Z"
+          },
+          "Q4923841": {
+            "revision_id": 2269855347,
+            "timestamp": "2024-11-04T12:52:27Z"
+          },
+          "Q4924120": {
+            "revision_id": 2497577001,
+            "timestamp": "2026-05-26T01:28:38Z"
+          },
+          "Q4924220": {
+            "revision_id": 2515388451,
+            "timestamp": "2026-07-09T04:07:24Z"
+          },
+          "Q4924317": {
+            "revision_id": 2261113823,
+            "timestamp": "2024-10-15T19:41:40Z"
+          },
+          "Q4924738": {
+            "revision_id": 2559058992,
+            "timestamp": "2026-10-20T04:00:39Z"
+          },
+          "Q59764824": {
+            "revision_id": 2436161637,
+            "timestamp": "2025-11-30T19:25:54Z"
+          },
+          "Q59779848": {
+            "revision_id": 2436161760,
+            "timestamp": "2025-11-30T19:26:13Z"
+          },
+          "Q5979361": {
+            "revision_id": 2455185021,
+            "timestamp": "2026-01-15T17:26:23Z"
+          },
+          "Q60034123": {
+            "revision_id": 2436162001,
+            "timestamp": "2025-11-30T19:26:53Z"
+          },
+          "Q60034142": {
+            "revision_id": 2436162121,
+            "timestamp": "2025-11-30T19:27:13Z"
+          },
+          "Q60034186": {
+            "revision_id": 2436162276,
+            "timestamp": "2025-11-30T19:27:35Z"
+          },
+          "Q60034220": {
+            "revision_id": 2441838227,
+            "timestamp": "2025-12-13T12:45:46Z"
+          },
+          "Q60034232": {
+            "revision_id": 2436162551,
+            "timestamp": "2025-11-30T19:28:17Z"
+          },
+          "Q61357968": {
+            "revision_id": 2436100547,
+            "timestamp": "2025-11-30T15:59:28Z"
+          },
+          "Q61359058": {
+            "revision_id": 2467191517,
+            "timestamp": "2026-02-26T17:04:55Z"
+          },
+          "Q6149301": {
+            "revision_id": 2497100518,
+            "timestamp": "2026-05-25T05:52:20Z"
+          },
+          "Q64746744": {
+            "revision_id": 1337360052,
+            "timestamp": "2021-01-08T21:22:27Z"
+          },
+          "Q65051105": {
+            "revision_id": 2260257108,
+            "timestamp": "2024-10-13T21:51:19Z"
+          },
+          "Q6578810": {
+            "revision_id": 2455166343,
+            "timestamp": "2026-01-15T15:54:04Z"
+          },
+          "Q66087746": {
+            "revision_id": 2472561911,
+            "timestamp": "2026-03-16T13:56:15Z"
+          },
+          "Q66088546": {
+            "revision_id": 2472541477,
+            "timestamp": "2026-03-16T12:39:39Z"
+          },
+          "Q66091132": {
+            "revision_id": 2436159119,
+            "timestamp": "2025-11-30T19:18:58Z"
+          },
+          "Q66091152": {
+            "revision_id": 2475341243,
+            "timestamp": "2026-03-25T21:37:57Z"
+          },
+          "Q66103267": {
+            "revision_id": 2436087902,
+            "timestamp": "2025-11-30T15:19:29Z"
+          },
+          "Q6633149": {
+            "revision_id": 2497575819,
+            "timestamp": "2026-05-26T01:25:10Z"
+          },
+          "Q6633167": {
+            "revision_id": 2525782161,
+            "timestamp": "2026-08-01T17:42:42Z"
+          },
+          "Q6633173": {
+            "revision_id": 2497580343,
+            "timestamp": "2026-05-26T01:38:58Z"
+          },
+          "Q6633183": {
+            "revision_id": 2497579416,
+            "timestamp": "2026-05-26T01:35:59Z"
+          },
+          "Q6633184": {
+            "revision_id": 2519011074,
+            "timestamp": "2026-07-18T07:26:15Z"
+          },
+          "Q6633186": {
+            "revision_id": 2497580053,
+            "timestamp": "2026-05-26T01:37:59Z"
+          },
+          "Q6633190": {
+            "revision_id": 2538367698,
+            "timestamp": "2026-08-30T22:50:53Z"
+          },
+          "Q6633293": {
+            "revision_id": 2304372451,
+            "timestamp": "2025-01-30T22:13:01Z"
+          },
+          "Q6633300": {
+            "revision_id": 2534175538,
+            "timestamp": "2026-08-21T10:45:11Z"
+          },
+          "Q6633329": {
+            "revision_id": 2470377456,
+            "timestamp": "2026-03-08T07:13:42Z"
+          },
+          "Q6633333": {
+            "revision_id": 2455165327,
+            "timestamp": "2026-01-15T15:49:37Z"
+          },
+          "Q6633388": {
+            "revision_id": 2455161516,
+            "timestamp": "2026-01-15T15:29:55Z"
+          },
+          "Q6633437": {
+            "revision_id": 2260256158,
+            "timestamp": "2024-10-13T21:49:56Z"
+          },
+          "Q6633446": {
+            "revision_id": 2317677594,
+            "timestamp": "2025-02-27T11:09:21Z"
+          },
+          "Q6633462": {
+            "revision_id": 2446925577,
+            "timestamp": "2025-12-25T10:18:14Z"
+          },
+          "Q6633628": {
+            "revision_id": 2441858367,
+            "timestamp": "2025-12-13T13:25:27Z"
+          },
+          "Q6633637": {
+            "revision_id": 2257871446,
+            "timestamp": "2024-10-08T14:52:49Z"
+          },
+          "Q6633722": {
+            "revision_id": 2446921759,
+            "timestamp": "2025-12-25T10:00:58Z"
+          },
+          "Q6633742": {
+            "revision_id": 2446075882,
+            "timestamp": "2025-12-23T14:30:42Z"
+          },
+          "Q6633805": {
+            "revision_id": 2547666408,
+            "timestamp": "2026-09-19T05:20:41Z"
+          },
+          "Q66372327": {
+            "revision_id": 2493785511,
+            "timestamp": "2026-05-18T12:58:39Z"
+          },
+          "Q66372347": {
+            "revision_id": 2472579442,
+            "timestamp": "2026-03-16T15:02:47Z"
+          },
+          "Q6895675": {
+            "revision_id": 2454952479,
+            "timestamp": "2026-01-14T20:10:59Z"
+          },
+          "Q6895717": {
+            "revision_id": 2260260138,
+            "timestamp": "2024-10-13T21:55:33Z"
+          },
+          "Q6895740": {
+            "revision_id": 2455156497,
+            "timestamp": "2026-01-15T15:06:43Z"
+          },
+          "Q6895741": {
+            "revision_id": 2474629835,
+            "timestamp": "2026-03-22T16:14:06Z"
+          },
+          "Q73811536": {
+            "revision_id": 2436163523,
+            "timestamp": "2025-11-30T19:30:47Z"
+          },
+          "Q73813625": {
+            "revision_id": 2545243537,
+            "timestamp": "2026-09-13T21:18:44Z"
+          },
+          "Q76972519": {
+            "revision_id": 2436156106,
+            "timestamp": "2025-11-30T19:11:35Z"
+          },
+          "Q76973081": {
+            "revision_id": 2436157209,
+            "timestamp": "2025-11-30T19:14:12Z"
+          },
+          "Q76973119": {
+            "revision_id": 2441843912,
+            "timestamp": "2025-12-13T12:57:01Z"
+          },
+          "Q83555413": {
+            "revision_id": 2472591791,
+            "timestamp": "2026-03-16T15:50:05Z"
+          },
+          "Q873641": {
+            "revision_id": 2491947998,
+            "timestamp": "2026-05-15T11:37:43Z"
+          },
+          "Q873690": {
+            "revision_id": 2497587292,
+            "timestamp": "2026-05-26T01:55:59Z"
+          },
+          "Q95769171": {
+            "revision_id": 2472595321,
+            "timestamp": "2026-03-16T16:05:42Z"
+          },
+          "Q95770065": {
+            "revision_id": 2472593879,
+            "timestamp": "2026-03-16T15:59:14Z"
+          },
+          "Q95770449": {
+            "revision_id": 2472593195,
+            "timestamp": "2026-03-16T15:56:18Z"
+          },
+          "Q96075530": {
+            "revision_id": 2436153325,
+            "timestamp": "2025-11-30T19:04:14Z"
+          },
+          "Q96096780": {
+            "revision_id": 2436153606,
+            "timestamp": "2025-11-30T19:05:05Z"
+          },
+          "Q96096835": {
+            "revision_id": 2436154751,
+            "timestamp": "2025-11-30T19:08:11Z"
+          },
+          "Q96418970": {
+            "revision_id": 2436163616,
+            "timestamp": "2025-11-30T19:31:02Z"
+          },
+          "Q96419170": {
+            "revision_id": 2436163744,
+            "timestamp": "2025-11-30T19:31:21Z"
+          }
+        }
+      },
+      "station_commons.json": {
+        "fetched_at": "2026-10-26T06:02:56Z",
+        "records": {
+          "146614751": {
+            "title": "File:202402 Station Building of MRT Hua Mak Station.jpg",
+            "revision_id": 970634158,
+            "timestamp": "2024-12-15T15:54:16Z",
+            "image_timestamp": "2024-03-21T01:24:15Z",
+            "image_sha1": "8d8fef86e0578e2022da2229a47747dfd127cd68"
+          },
+          "6907019": {
+            "title": "File:BTSKrungThonBuriStationC.jpg",
+            "revision_id": 814385225,
+            "timestamp": "2023-10-23T00:48:43Z",
+            "image_timestamp": "2009-05-31T08:52:49Z",
+            "image_sha1": "a77dcf709de34c3e7f2961c743193646969d66e0"
+          },
+          "6907044": {
+            "title": "File:BTSSaphanTaksinStationE.jpg",
+            "revision_id": 814385282,
+            "timestamp": "2023-10-23T00:49:02Z",
+            "image_timestamp": "2009-05-31T08:59:11Z",
+            "image_sha1": "74e37ad9e8fc65861f6f71b63253529827f40fa7"
+          },
+          "45017185": {
+            "title": "File:BTS On Nut Station 20151107.jpg",
+            "revision_id": 921898910,
+            "timestamp": "2024-09-09T16:55:24Z",
+            "image_timestamp": "2015-11-15T13:07:10Z",
+            "image_sha1": "85df544d5dc77b25d7e1c9beb86a54b8152972b8"
+          },
+          "34466905": {
+            "title": "File:BTS Surasak Aug2014.jpg",
+            "revision_id": 1049528411,
+            "timestamp": "2025-06-27T12:05:26Z",
+            "image_timestamp": "2014-08-03T09:08:34Z",
+            "image_sha1": "c91219a468a2e058d1bd327850a40a8992699073"
+          },
+          "133291549": {
+            "title": "File:Bang Kapi Station 08.jpg",
+            "revision_id": 1080440547,
+            "timestamp": "2025-09-03T21:22:31Z",
+            "image_timestamp": "2023-06-19T13:11:30Z",
+            "image_sha1": "b8bd2dee220245fbd1ddbfd90603e910090b7c80"
+          },
+          "81985615": {
+            "title": "File:Bangkok City Air Terminal (I).jpg",
+            "revision_id": 863148249,
+            "timestamp": "2024-03-24T16:46:21Z",
+            "image_timestamp": "2019-09-08T20:25:57Z",
+            "image_sha1": "58d37fb3816adaff0a72b3fb8a78029f863ca64a"
+          },
+          "136041511": {
+            "title": "File:Bhumibol Adulyadej Hospital BTS station view from the street.jpg",
+            "revision_id": 1086069371,
+            "timestamp": "2025-09-15T12:07:32Z",
+            "image_timestamp": "2023-08-16T07:45:02Z",
+            "image_sha1": "73c84156235e3fcf7a7cb6d2acec6a5d37fcc79d"
+          },
+          "128432329": {
+            "title": "File:Chatuchak Station (SRT) 01.jpg",
+            "revision_id": 855110095,
+            "timestamp": "2024-02-23T22:12:28Z",
+            "image_timestamp": "2023-02-05T14:39:05Z",
+            "image_sha1": "4261f3aa5b9569b27ce821d2367110884f98a8aa"
+          },
+          "133442885": {
+            "title": "File:Chok Chai 4 Station 08.jpg",
+            "revision_id": 1012188770,
+            "timestamp": "2025-03-21T11:44:57Z",
+            "image_timestamp": "2023-06-22T12:58:09Z",
+            "image_sha1": "0d7cbfd238881dab068ad7a1748c06a83953f7d1"
+          },
+          "11255340": {
+            "title": "File:Chong Nonsi BTS.jpg",
+            "revision_id": 857600442,
+            "timestamp": "2024-03-03T23:50:50Z",
+            "image_timestamp": "2010-08-23T00:58:41Z",
+            "image_sha1": "1ede2d912187cd74ba97d2ad839954859ebc4b6f"
+          },
+          "5854863": {
+            "title": "File:DStv dish at Ratchadamri Station.jpg",
+            "revision_id": 942362134,
+            "timestamp": "2024-10-14T14:29:56Z",
+            "image_timestamp": "2017-10-17T12:16:19Z",
+            "image_sha1": "dd4591866c74a55ba8dc5455e13b18caafaf7d46"
+          },
+          "97635056": {
+            "title": "File:Gold line G2 station.jpg",
+            "revision_id": 1275121656,
+            "timestamp": "2026-09-11T14:38:43Z",
+            "image_timestamp": "2023-10-03T21:06:31Z",
+            "image_sha1": "6b8cfbe6885a6791c0871e5a2de274e939843600"
+          },
+          "97635058": {
+            "title": "File:Gold line G3 station.jpg",
+            "revision_id": 1275121663,
+            "timestamp": "2026-09-11T14:38:44Z",
+            "image_timestamp": "2020-12-16T05:49:58Z",
+            "image_sha1": "e55a03d3542d25bacfdd1d1d44023a67bc60f7c4"
+          },
+          "132942803": {
+            "title": "File:Kalantan Station 03.jpg",
+            "revision_id": 1095035409,
+            "timestamp": "2025-10-04T15:44:41Z",
+            "image_timestamp": "2023-06-11T10:17:11Z",
+            "image_sha1": "608b7ee5987543857a907f26048c2e5f327c9401"
+          },
+          "128549147": {
+            "title": "File:Kan Kheha station 20230205-7.jpg",
+            "revision_id": 894970252,
+            "timestamp": "2024-07-09T03:38:21Z",
+            "image_timestamp": "2023-02-09T11:33:23Z",
+            "image_sha1": "b5d7f3958843ed7282f38cd63935197be0289288"
+          },
+          "133292108": {
+            "title": "File:Lat Phrao 101 Station 01.jpg",
+            "revision_id": 1019235293,
+            "timestamp": "2025-04-09T07:47:02Z",
+            "image_timestamp": "2023-06-19T13:26:52Z",
+            "image_sha1": "6f0d08d35378b4316012dd54bfdcfb7a613a30d5"
+          },
+          "133352321": {
+            "title": "File:Lat Phrao 71 Station 05.jpg",
+            "revision_id": 1258992128,
+            "timestamp": "2026-08-09T19:30:53Z",
+            "image_timestamp": "2023-06-20T15:37:54Z",
+            "image_sha1": "b8eb1f4233745269cf4ad9f0412793cacd0bc797"
+          },
+          "133348855": {
+            "title": "File:Lat Phrao 83 Station 08.jpg",
+            "revision_id": 947739856,
+            "timestamp": "2024-10-21T16:03:32Z",
+            "image_timestamp": "2023-06-20T14:18:51Z",
+            "image_sha1": "6f888bbd0792ce23f85cd6c4e91a197a8bb6aa71"
+          },
+          "141483810": {
+            "title": "File:MRT Pink Line Royal Irrigation Department Station 20231125-1.jpg",
+            "revision_id": 1028166712,
+            "timestamp": "2025-05-05T01:32:47Z",
+            "image_timestamp": "2023-11-27T15:31:54Z",
+            "image_sha1": "1df2a6cf361a3cc05e28140e377c20e0af9fa0f0"
+          },
+          "141983123": {
+            "title": "File:MRT Pink Line Setthabutbamphen Station 20231203-1.jpg",
+            "revision_id": 1027929397,
+            "timestamp": "2025-05-04T14:49:03Z",
+            "image_timestamp": "2023-12-10T14:53:13Z",
+            "image_sha1": "d9242dc86d9b4fb9b029657b6a2e43c93a091e3e"
+          },
+          "141548508": {
+            "title": "File:MRT Pink Line Yaek Pak Kret Station 20231125-6.jpg",
+            "revision_id": 883528261,
+            "timestamp": "2024-06-13T01:26:09Z",
+            "image_timestamp": "2023-11-29T14:15:08Z",
+            "image_sha1": "b5d15f3389db6a470f5dee3a84d7828be52784a5"
+          },
+          "44872058": {
+            "title": "File:MRT samyan.jpg",
+            "revision_id": 1027706899,
+            "timestamp": "2025-05-04T05:15:15Z",
+            "image_timestamp": "2015-11-08T14:58:50Z",
+            "image_sha1": "dd933518d4b51a0d42688b23e46066bf1b6e7f01"
+          },
+          "133345509": {
+            "title": "File:Mahat Thai Station 01.jpg",
+            "revision_id": 1188108342,
+            "timestamp": "2026-03-28T11:31:40Z",
+            "image_timestamp": "2023-06-20T12:46:11Z",
+            "image_sha1": "1b2d0f30f8425cbdfc0d1f43ea85db40e7de4c8a"
+          },
+          "114611189": {
+            "title": "File:National Stadium BTS Station (2021).jpg",
+            "revision_id": 1067732556,
+            "timestamp": "2025-08-07T06:18:22Z",
+            "image_timestamp": "2022-01-24T16:00:22Z",
+            "image_sha1": "58754410e6f56557e74bc69b5b23d4586ab23de2"
+          },
+          "136041501": {
+            "title": "File:Phahonyothin 59 BTS station view from the street.jpg",
+            "revision_id": 973819689,
+            "timestamp": "2024-12-22T02:28:50Z",
+            "image_timestamp": "2023-08-16T07:44:59Z",
+            "image_sha1": "902e553a94133956b91011a0e93686541742fb6a"
+          },
+          "138034324": {
+            "title": "File:Phaya Thai Railway Station 20230923-2.jpg",
+            "revision_id": 1181918754,
+            "timestamp": "2026-03-16T04:15:44Z",
+            "image_timestamp": "2023-09-24T08:56:36Z",
+            "image_sha1": "e0adf76f483c4f7a768e1cd6876c91e51cb0871c"
+          },
+          "51639490": {
+            "title": "File:Phra Ram 9 Station - platform level.jpg",
+            "revision_id": 1122451099,
+            "timestamp": "2025-11-28T16:11:23Z",
+            "image_timestamp": "2016-09-22T14:56:53Z",
+            "image_sha1": "e99e07095d57cd2854b1191171b379bd4896d239"
+          },
+          "100159734": {
+            "title": "File:Phrom Phong Station platform.jpg",
+            "revision_id": 1243897033,
+            "timestamp": "2026-07-05T10:17:17Z",
+            "image_timestamp": "2021-02-21T07:23:12Z",
+            "image_sha1": "95c87ad3c89b8971fe102c7709485801125becb4"
+          },
+          "51671688": {
+            "title": "File:Platform 1 of Sukhumvit Station.jpg",
+            "revision_id": 1266958815,
+            "timestamp": "2026-08-25T01:24:29Z",
+            "image_timestamp": "2016-09-23T15:57:44Z",
+            "image_sha1": "16cbdf352d6934e6abb50a4d9e097a60305771dd"
+          },
+          "136041502": {
+            "title": "File:Royal Thai Air Force Museum BTS station view from the street.jpg",
+            "revision_id": 793777408,
+            "timestamp": "2023-08-16T19:56:53Z",
+            "image_timestamp": "2023-08-16T07:44:59Z",
+            "image_sha1": "50d8ded59079b4fe9b49ffb25580b12bf80da820"
+          },
+          "136041955": {
+            "title": "File:Sai Yud BTS station view from the street.jpg",
+            "revision_id": 793636652,
+            "timestamp": "2023-08-16T12:55:13Z",
+            "image_timestamp": "2023-08-16T07:58:35Z",
+            "image_sha1": "6258584d9b9b50b1327e608224b7488358115394"
+          },
+          "105438780": {
+            "title": "File:Sala Daeng BTS Station - Si Lom MRT Station Connection 2021.jpg",
+            "revision_id": 634402286,
+            "timestamp": "2022-03-03T15:02:40Z",
+            "image_timestamp": "2021-05-17T20:55:31Z",
+            "image_sha1": "ca5e5f9c64216b4eaaa234fd65984388a6e9af40"
+          },
+          "136041503": {
+            "title": "File:Saphan Mai BTS station view from the street.jpg",
+            "revision_id": 793757761,
+            "timestamp": "2023-08-16T18:20:41Z",
+            "image_timestamp": "2023-08-16T07:45:00Z",
+            "image_sha1": "d9298ea42198c2ffe66b3ff373f3cc906190cc30"
+          },
+          "132727806": {
+            "title": "File:Si Bearing Station 03.jpg",
+            "revision_id": 1233133112,
+            "timestamp": "2026-06-17T22:18:01Z",
+            "image_timestamp": "2023-06-06T15:33:56Z",
+            "image_sha1": "33a27d1075d4aef9ff5a477d31c37eb7fc5f6387"
+          },
+          "132721846": {
+            "title": "File:Si Dan Station 01.jpg",
+            "revision_id": 1204200243,
+            "timestamp": "2026-04-26T22:06:11Z",
+            "image_timestamp": "2023-06-06T12:39:55Z",
+            "image_sha1": "94075d1b034d487cf7939f1410f65dddb70824d8"
+          },
+          "133240481": {
+            "title": "File:Si Kritha Station 01.jpg",
+            "revision_id": 975797442,
+            "timestamp": "2024-12-26T11:57:18Z",
+            "image_timestamp": "2023-06-18T07:17:56Z",
+            "image_sha1": "86d20327a0fe9b707401d6878f4b6bb6ae27424d"
+          },
+          "132762672": {
+            "title": "File:Si La Salle Station 01.jpg",
+            "revision_id": 1203848409,
+            "timestamp": "2026-04-26T08:48:17Z",
+            "image_timestamp": "2023-06-07T13:38:29Z",
+            "image_sha1": "111b8d1e740282764a9dbff3d1378191e78ea941"
+          },
+          "132941237": {
+            "title": "File:Si Nut Station 01.jpg",
+            "revision_id": 775299948,
+            "timestamp": "2023-06-19T00:02:29Z",
+            "image_timestamp": "2023-06-11T09:43:43Z",
+            "image_sha1": "f7ed84e2b8057878ac48f67f56e96c704e026206"
+          },
+          "132692561": {
+            "title": "File:Si Thepha Station 01.jpg",
+            "revision_id": 773993281,
+            "timestamp": "2023-06-13T12:09:13Z",
+            "image_timestamp": "2023-06-05T16:30:10Z",
+            "image_sha1": "e209ae479b2709514479ef2cbc129428e7604bc0"
+          },
+          "132933354": {
+            "title": "File:Si Udom Station 01.jpg",
+            "revision_id": 934226614,
+            "timestamp": "2024-10-06T18:07:34Z",
+            "image_timestamp": "2023-06-11T07:05:06Z",
+            "image_sha1": "db24cb4c4ddf975d57ccc9ca68c451d67244f337"
+          },
+          "51146056": {
+            "title": "File:Siam BTS Station, view from Siam Paragon.jpg",
+            "revision_id": 1180728256,
+            "timestamp": "2026-03-14T07:13:03Z",
+            "image_timestamp": "2016-09-05T14:21:19Z",
+            "image_sha1": "029efa66068282027c76adbbf8d3d3a1cb87f2b7"
+          },
+          "132940046": {
+            "title": "File:Srinagarindra 38 Station 03.jpg",
+            "revision_id": 1127745720,
+            "timestamp": "2025-12-08T14:55:48Z",
+            "image_timestamp": "2023-06-11T09:19:34Z",
+            "image_sha1": "431cf2eefab53f39ba12c4966f037e2f42f2f3ef"
+          },
+          "132937692": {
+            "title": "File:Suan Luang Rama IX Station 03.jpg",
+            "revision_id": 1071249927,
+            "timestamp": "2025-08-13T09:42:32Z",
+            "image_timestamp": "2023-06-11T08:30:49Z",
+            "image_sha1": "97ca6cad980bc68789a0a45f36bf2f556ac7fd1a"
+          },
+          "132691582": {
+            "title": "File:Thipphawan Station 01.jpg",
+            "revision_id": 1135994565,
+            "timestamp": "2025-12-24T14:05:27Z",
+            "image_timestamp": "2023-06-05T15:54:41Z",
+            "image_sha1": "25a01585c2457341a0195f9a4995e2488b9803fc"
+          },
+          "111257878": {
+            "title": "File:Thung song hong station 01.jpg",
+            "revision_id": 990601993,
+            "timestamp": "2025-01-31T01:56:35Z",
+            "image_timestamp": "2021-10-19T02:34:57Z",
+            "image_sha1": "8712aa8ae50484d79f8d28980794dc8f6efeb095"
+          },
+          "124246266": {
+            "title": "File:Wat Samian Nari station.jpg",
+            "revision_id": 760789457,
+            "timestamp": "2023-05-08T10:26:12Z",
+            "image_timestamp": "2022-10-16T06:46:46Z",
+            "image_sha1": "1c9c0d4d386fd9035bf92b1ff5b5d40bceed4306"
+          },
+          "121637825": {
+            "title": "File:Yaek Kor Por Aor BTS station 02.jpg",
+            "revision_id": 690325852,
+            "timestamp": "2022-09-20T21:08:29Z",
+            "image_timestamp": "2022-08-12T08:02:48Z",
+            "image_sha1": "e86dc74bf6f83a2ee14d20e6c3f4847e69c95f19"
+          },
+          "133255880": {
+            "title": "File:Yaek Lam Sali Station 09.jpg",
+            "revision_id": 928029398,
+            "timestamp": "2024-09-23T09:44:14Z",
+            "image_timestamp": "2023-06-18T16:01:58Z",
+            "image_sha1": "afe8a7eef794a4b1f0cc2774a7316f1c15665d9e"
+          },
+          "144451077": {
+            "title": "File:สถานีรถไฟหลักหก.jpg",
+            "revision_id": 1038030133,
+            "timestamp": "2025-05-30T14:07:06Z",
+            "image_timestamp": "2024-01-23T12:25:18Z",
+            "image_sha1": "f3387cad30c4f1d63692e5334c26d4e5df50e10f"
+          },
+          "55641130": {
+            "title": "File:201701 Bang Krasor Station.jpg",
+            "revision_id": 959464823,
+            "timestamp": "2024-11-20T10:06:43Z",
+            "image_timestamp": "2017-01-31T08:47:33Z",
+            "image_sha1": "27e4e0e58948856471732e571ee8c00fb218eb6e"
+          },
+          "55642317": {
+            "title": "File:201701 Platform of Bang Phlu Station.jpg",
+            "revision_id": 959465668,
+            "timestamp": "2024-11-20T10:09:26Z",
+            "image_timestamp": "2017-01-31T09:20:20Z",
+            "image_sha1": "fafed22ba3b93cb55c761de33599640d8c144b7f"
+          },
+          "55642320": {
+            "title": "File:201701 Wong Sawang Station.jpg",
+            "revision_id": 959466054,
+            "timestamp": "2024-11-20T10:10:43Z",
+            "image_timestamp": "2017-01-31T09:20:21Z",
+            "image_sha1": "1538a85736bcf5b72cd0d6a4bcdf1522f28c1420"
+          },
+          "146667734": {
+            "title": "File:202402 Phuttamonthon Sai 2 Station from the East.jpg",
+            "revision_id": 970634067,
+            "timestamp": "2024-12-15T15:53:54Z",
+            "image_timestamp": "2024-03-23T00:20:56Z",
+            "image_sha1": "ccf1095c739b55e770e72f9eb2d44378b32f03af"
+          },
+          "146667878": {
+            "title": "File:202402 Platform of Salaya Station.jpg",
+            "revision_id": 970634096,
+            "timestamp": "2024-12-15T15:54:01Z",
+            "image_timestamp": "2024-03-23T00:25:50Z",
+            "image_sha1": "76d63193e4da9036a3029ac942f166c64dc96c88"
+          },
+          "146667598": {
+            "title": "File:202402 Westbound Platform of Ban Chim Phli Halt.jpg",
+            "revision_id": 970634205,
+            "timestamp": "2024-12-15T15:54:27Z",
+            "image_timestamp": "2024-03-23T00:13:46Z",
+            "image_sha1": "09fd3f8d9ff9a0df9218debd38c33d7334ff32a7"
+          },
+          "6906991": {
+            "title": "File:BTSWongwianyaiStationb.jpg",
+            "revision_id": 989926841,
+            "timestamp": "2025-01-29T21:20:39Z",
+            "image_timestamp": "2009-05-31T08:46:45Z",
+            "image_sha1": "408de9938c6a81f73b69b3f95827a7841ca02ba8"
+          },
+          "84638506": {
+            "title": "File:BTS Phahon Yothin 24 - Station close up.jpg",
+            "revision_id": 814386966,
+            "timestamp": "2023-10-23T00:57:47Z",
+            "image_timestamp": "2019-12-06T01:16:40Z",
+            "image_sha1": "455929ae15984c3c45d778dbf7599f5a23398d51"
+          },
+          "114296499": {
+            "title": "File:BTS Saint Louis สถานีเซนต์หลุยส์ บีทีเอส มองจากตึกเอไอเอ.jpg",
+            "revision_id": 814387354,
+            "timestamp": "2023-10-23T00:59:40Z",
+            "image_timestamp": "2022-01-14T17:18:33Z",
+            "image_sha1": "624edae89c87764292e4ef8e30cf028ea3902aa4"
+          },
+          "947530": {
+            "title": "File:BTS Sala Daeng Station.JPG",
+            "revision_id": 1054070440,
+            "timestamp": "2025-07-08T11:05:28Z",
+            "image_timestamp": "2006-07-14T13:14:47Z",
+            "image_sha1": "87997dc976206e9eade6a2a40c227ef8f0276ebf"
+          },
+          "57849196": {
+            "title": "File:BTS Samrong station.jpg",
+            "revision_id": 814387374,
+            "timestamp": "2023-10-23T00:59:45Z",
+            "image_timestamp": "2017-04-09T14:55:44Z",
+            "image_sha1": "ba3596fd2159c5ea7cd5c9d9d80b39fddac294ac"
+          },
+          "46078177": {
+            "title": "File:BTS Wutthakat stn. platform.JPG",
+            "revision_id": 1074590367,
+            "timestamp": "2025-08-19T01:42:28Z",
+            "image_timestamp": "2016-01-03T13:49:11Z",
+            "image_sha1": "f08550ea01f3b6e7b21e094c44472fcced98115b"
+          },
+          "103801669": {
+            "title": "File:Bang Sue Railway Station 202104-3.jpg",
+            "revision_id": 1080442917,
+            "timestamp": "2025-09-03T21:29:18Z",
+            "image_timestamp": "2021-04-17T10:33:55Z",
+            "image_sha1": "daf5dc4a82ce5fb13d0e26a05b1d574d8709cb25"
+          },
+          "110538723": {
+            "title": "File:Bang bamru station 02.jpg",
+            "revision_id": 816425730,
+            "timestamp": "2023-10-29T07:39:28Z",
+            "image_timestamp": "2021-09-29T03:27:25Z",
+            "image_sha1": "2942245a3be2d8ca3b91ebad1a9bc67b7397ebeb"
+          },
+          "135280257": {
+            "title": "File:Chom Thong Railway Halt 20230325.jpg",
+            "revision_id": 1123895151,
+            "timestamp": "2025-12-01T11:32:59Z",
+            "image_timestamp": "2023-07-30T15:51:20Z",
+            "image_sha1": "13071504cced952e5f7c26b543de185423013f32"
+          },
+          "81766787": {
+            "title": "File:E17 Chang Erawan Station.jpg",
+            "revision_id": 1217684078,
+            "timestamp": "2026-05-21T05:59:42Z",
+            "image_timestamp": "2019-09-01T12:44:41Z",
+            "image_sha1": "1eb639afa47a5b118982cca0196e943299fee2a5"
+          },
+          "18056671": {
+            "title": "File:Gare Hua Lamphong.jpg",
+            "revision_id": 1267541130,
+            "timestamp": "2026-08-26T05:35:26Z",
+            "image_timestamp": "2012-01-15T17:41:11Z",
+            "image_sha1": "6521c07f16e536d90777a092925d92ef76b766e5"
+          },
+          "135262330": {
+            "title": "File:Kan Kheha Railway Halt 20230325.jpg",
+            "revision_id": 1186305421,
+            "timestamp": "2026-03-24T16:24:41Z",
+            "image_timestamp": "2023-07-30T10:16:23Z",
+            "image_sha1": "dc7a36384cfe5e2a8f002573b4b1a7c2b383b824"
+          },
+          "82390994": {
+            "title": "File:MRT Phasi Charoen station - platform with the route information.jpg",
+            "revision_id": 937844018,
+            "timestamp": "2024-10-11T02:30:07Z",
+            "image_timestamp": "2019-09-21T13:51:30Z",
+            "image_sha1": "1733d507096f191b91651d17558d4aa7e8f9d604"
+          },
+          "141946803": {
+            "title": "File:MRT Pink Line Bang Chan Station 20231203-1.jpg",
+            "revision_id": 1070629698,
+            "timestamp": "2025-08-12T05:22:16Z",
+            "image_timestamp": "2023-12-09T18:50:04Z",
+            "image_sha1": "fb9c7121606505eaa5f32b14737c6ddb3512c328"
+          },
+          "141643319": {
+            "title": "File:MRT Pink Line Chaeng Watthana - Pak Kret 28 Station 20231125-1.jpg",
+            "revision_id": 1030680421,
+            "timestamp": "2025-05-11T09:35:50Z",
+            "image_timestamp": "2023-12-02T17:21:43Z",
+            "image_sha1": "6e324bfa20f8a1530f1e0f0fc4c58ac90b33a500"
+          },
+          "141762018": {
+            "title": "File:MRT Pink Line Chaeng Watthana 14 Station 20231125-1.jpg",
+            "revision_id": 863968346,
+            "timestamp": "2024-03-28T17:54:45Z",
+            "image_timestamp": "2023-12-05T09:41:19Z",
+            "image_sha1": "7c641002f83a0700e04f47e7f238c48f65458f37"
+          },
+          "141763412": {
+            "title": "File:MRT Pink Line Government Complex Station 20231125-1.jpg",
+            "revision_id": 863966487,
+            "timestamp": "2024-03-28T17:44:45Z",
+            "image_timestamp": "2023-12-05T10:13:41Z",
+            "image_sha1": "f79b7afc254c49ff479085b7cfafc2fbc4d1ea7e"
+          },
+          "141937693": {
+            "title": "File:MRT Pink Line Khu Bon Station 20231203-1.jpg",
+            "revision_id": 1118431287,
+            "timestamp": "2025-11-19T14:49:56Z",
+            "image_timestamp": "2023-12-09T15:09:37Z",
+            "image_sha1": "fc57b1f7e43f2609c6e5b20d9c2f2cee6c689add"
+          },
+          "141825551": {
+            "title": "File:MRT Pink Line Lat Pla Khao Station 20231203-1.jpg",
+            "revision_id": 1075798391,
+            "timestamp": "2025-08-21T02:36:25Z",
+            "image_timestamp": "2023-12-06T16:23:18Z",
+            "image_sha1": "f09e74d82a81634dc3ce8759c51afc9cd075eb75"
+          },
+          "141863229": {
+            "title": "File:MRT Pink Line Maiyalap Station 20231203-1.jpg",
+            "revision_id": 1052755540,
+            "timestamp": "2025-07-05T20:06:09Z",
+            "image_timestamp": "2023-12-07T14:48:09Z",
+            "image_sha1": "cc3221323711379aca9e5e3dbe8d1bee4e827822"
+          },
+          "141760250": {
+            "title": "File:MRT Pink Line Muang Thong Thani Station 20231125-1.jpg",
+            "revision_id": 863966957,
+            "timestamp": "2024-03-28T17:46:52Z",
+            "image_timestamp": "2023-12-05T08:55:46Z",
+            "image_sha1": "5020efee0b5a852c5846f51655985ab90be0738d"
+          },
+          "141764282": {
+            "title": "File:MRT Pink Line National Telecom Station 20231125-1.jpg",
+            "revision_id": 1216760580,
+            "timestamp": "2026-05-19T13:41:29Z",
+            "image_timestamp": "2023-12-05T10:32:39Z",
+            "image_sha1": "716c64942f5826b2cbf0893a9e8251ee1cdda207"
+          },
+          "141943819": {
+            "title": "File:MRT Pink Line Nopparat Station 20231203-1.jpg",
+            "revision_id": 906119621,
+            "timestamp": "2024-08-03T09:56:36Z",
+            "image_timestamp": "2023-12-09T17:40:04Z",
+            "image_sha1": "11e3f4f18b4e745b87f93f211336bb4a8ff42419"
+          },
+          "141551054": {
+            "title": "File:MRT Pink Line Pak Kret Bypass Station 20231125-2.jpg",
+            "revision_id": 1086834457,
+            "timestamp": "2025-09-17T08:33:07Z",
+            "image_timestamp": "2023-11-29T15:47:16Z",
+            "image_sha1": "692ed7db20a49b2c9a5e4e585ef975843ab4b301"
+          },
+          "141822405": {
+            "title": "File:MRT Pink Line Ram Inthra 3 Station 20231203-1.jpg",
+            "revision_id": 1251182028,
+            "timestamp": "2026-07-24T03:20:40Z",
+            "image_timestamp": "2023-12-06T14:49:44Z",
+            "image_sha1": "467dc2f39ba22e081ad39d7b64369099955f598a"
+          },
+          "141861247": {
+            "title": "File:MRT Pink Line Ram Inthra Kor Mor 4 Station 20231203-1.jpg",
+            "revision_id": 868760259,
+            "timestamp": "2024-04-16T10:50:54Z",
+            "image_timestamp": "2023-12-07T13:37:44Z",
+            "image_sha1": "583f17358f5af47c5df7315601c16ffdbcc58b05"
+          },
+          "141936686": {
+            "title": "File:MRT Pink Line Ram Inthra Kor Mor 6 Station 20231203-1.jpg",
+            "revision_id": 868760306,
+            "timestamp": "2024-04-16T10:50:54Z",
+            "image_timestamp": "2023-12-09T14:46:45Z",
+            "image_sha1": "5b320dd75217610190e76b138f3dc22d8b6a2e26"
+          },
+          "141941142": {
+            "title": "File:MRT Pink Line Ram Inthra Kor Mor 9 Station 20231203-1.jpg",
+            "revision_id": 1026588238,
+            "timestamp": "2025-05-01T13:56:27Z",
+            "image_timestamp": "2023-12-09T16:32:25Z",
+            "image_sha1": "c4f535dffabadee13d594292ad02b74e6cebd2d3"
+          },
+          "141481310": {
+            "title": "File:MRT Pink Line Samakkhi Station 20231125-3.jpg",
+            "revision_id": 1107648192,
+            "timestamp": "2025-11-01T23:19:35Z",
+            "image_timestamp": "2023-11-27T14:19:40Z",
+            "image_sha1": "e7263b1565e77cbe1ce6694ad9a43ef27958839d"
+          },
+          "141480553": {
+            "title": "File:MRT Pink Line Sanambin Nam Station 20231125-1.jpg",
+            "revision_id": 1199469289,
+            "timestamp": "2026-04-18T10:34:58Z",
+            "image_timestamp": "2023-11-27T13:56:53Z",
+            "image_sha1": "56a36157487e10d5f28c22df1fdcc62c9245ee76"
+          },
+          "141865114": {
+            "title": "File:MRT Pink Line Vacharaphol Station 20231203-1.jpg",
+            "revision_id": 868760318,
+            "timestamp": "2024-04-16T10:50:54Z",
+            "image_timestamp": "2023-12-07T15:59:44Z",
+            "image_sha1": "dd6578995c5b420455130cc3685d82cf4931308a"
+          },
+          "80877435": {
+            "title": "File:MRT Ta Phra station (View from Charansanitwong Rd.).jpg",
+            "revision_id": 888903591,
+            "timestamp": "2024-06-26T15:12:50Z",
+            "image_timestamp": "2019-07-29T09:41:13Z",
+            "image_sha1": "fdf8c3cb33e8d5a7751523cf902ff51b33999e25"
+          },
+          "81020913": {
+            "title": "File:MRT Wat Mangkorn vending machines.jpg",
+            "revision_id": 1216866358,
+            "timestamp": "2026-05-19T17:30:37Z",
+            "image_timestamp": "2019-08-04T05:24:54Z",
+            "image_sha1": "66ea29c9e7cc5b463c8d49fdd64155554ef0d748"
+          },
+          "9707662": {
+            "title": "File:North Bus Station.jpg",
+            "revision_id": 970826365,
+            "timestamp": "2024-12-16T01:16:01Z",
+            "image_timestamp": "2010-03-11T03:27:22Z",
+            "image_sha1": "f162da280174fc590ad47fb394c8255fbc4d662a"
+          },
+          "136174149": {
+            "title": "File:Phayathai Station 20230719.jpg",
+            "revision_id": 812085878,
+            "timestamp": "2023-10-15T16:42:49Z",
+            "image_timestamp": "2023-08-18T20:51:00Z",
+            "image_sha1": "61e5e4279599fd9e0639daa57efb0b28925092e9"
+          },
+          "135256367": {
+            "title": "File:Phrom Daen Railway Halt 20230728.jpg",
+            "revision_id": 880159500,
+            "timestamp": "2024-05-30T07:59:06Z",
+            "image_timestamp": "2023-07-30T08:04:33Z",
+            "image_sha1": "2fc2513b2933ad3d8c27e174f3e514a382513443"
+          },
+          "135257035": {
+            "title": "File:Sam Yaek Railway Halt 20230728.jpg",
+            "revision_id": 1073356408,
+            "timestamp": "2025-08-17T01:40:01Z",
+            "image_timestamp": "2023-07-30T08:22:24Z",
+            "image_sha1": "2ff2cb8e69fb59e421f2f219d39615917f5295c7"
+          },
+          "48865047": {
+            "title": "File:Siriraj - Old Thonburi Railway Station.jpg",
+            "revision_id": 1222999650,
+            "timestamp": "2026-05-30T18:06:38Z",
+            "image_timestamp": "2018-01-28T13:35:12Z",
+            "image_sha1": "ae7a6b7d0b20cdc77155be3255036f4b2522fda5"
+          },
+          "58688911": {
+            "title": "File:Банграмад.jpg",
+            "revision_id": 1032393926,
+            "timestamp": "2025-05-17T02:21:19Z",
+            "image_timestamp": "2017-05-10T09:51:19Z",
+            "image_sha1": "e19c069c61275936f59af4abc39c5e51b8623194"
+          },
+          "92814713": {
+            "title": "File:สถานีตลาดพลู1.jpg",
+            "revision_id": 1204561668,
+            "timestamp": "2026-04-27T15:44:32Z",
+            "image_timestamp": "2020-08-02T05:39:01Z",
+            "image_sha1": "6bc84a1699ad61ee339fd5373a56a5b654f10fda"
+          },
+          "120551247": {
+            "title": "File:สถานีตลาดมีนบุรี.jpg",
+            "revision_id": 829551227,
+            "timestamp": "2023-12-10T16:02:56Z",
+            "image_timestamp": "2022-07-16T11:09:53Z",
+            "image_sha1": "4253cce848d7fbea2076801c7ac706ef64f8738e"
+          },
+          "141177979": {
+            "title": "File:สถานีมีนบุรี.jpg",
+            "revision_id": 1046784435,
+            "timestamp": "2025-06-21T05:40:06Z",
+            "image_timestamp": "2023-11-21T11:10:14Z",
+            "image_sha1": "52a9752fc46b1a413749d2e10444da78cb26fd1f"
+          },
+          "18603709": {
+            "title": "File:สถานีรถไฟพระจอมเกล้า.jpg",
+            "revision_id": 1280135283,
+            "timestamp": "2026-09-24T19:03:19Z",
+            "image_timestamp": "2012-03-06T12:06:33Z",
+            "image_sha1": "287c2099ddd892cfde08deeef2322068140376d1"
+          },
+          "141220247": {
+            "title": "File:สถานีวงแหวนรามอินทรา.jpg",
+            "revision_id": 1123254318,
+            "timestamp": "2025-11-30T08:23:08Z",
+            "image_timestamp": "2023-11-22T07:08:27Z",
+            "image_sha1": "8ff65886d0fb20e63eba755ef2e9ae81e4fb23ae"
+          },
+          "55641456": {
+            "title": "File:201701 Bang Rak Yai Station.jpg",
+            "revision_id": 959464835,
+            "timestamp": "2024-11-20T10:06:45Z",
+            "image_timestamp": "2017-01-31T08:55:49Z",
+            "image_sha1": "e79eeee8b2350ae8155f8733190cafc0d6f8be3c"
+          },
+          "55642319": {
+            "title": "File:201701 Nonthaburi Civic Center Station.jpg",
+            "revision_id": 959465572,
+            "timestamp": "2024-11-20T10:09:03Z",
+            "image_timestamp": "2017-01-31T09:20:21Z",
+            "image_sha1": "5ac9e2248e6deca7ea09206d9dfc4ddf537a4247"
+          },
+          "56019337": {
+            "title": "File:201701 Pho Nimit Station.jpg",
+            "revision_id": 959465584,
+            "timestamp": "2024-11-20T10:09:08Z",
+            "image_timestamp": "2017-02-08T00:55:33Z",
+            "image_sha1": "14ee6788fff0d40b884399366c8092844e14d3a4"
+          },
+          "55641134": {
+            "title": "File:201701 Sai Ma Station.jpg",
+            "revision_id": 959465803,
+            "timestamp": "2024-11-20T10:09:54Z",
+            "image_timestamp": "2017-01-31T08:47:36Z",
+            "image_sha1": "f3cec94803d3d28a703cccf5a4bfbccd578205bb"
+          },
+          "55641455": {
+            "title": "File:201701 Sam Yaek Bang Yai Station.jpg",
+            "revision_id": 959465817,
+            "timestamp": "2024-11-20T10:09:57Z",
+            "image_timestamp": "2017-01-31T08:55:49Z",
+            "image_sha1": "78b85801da1ea20039521f8b7315d106a152e306"
+          },
+          "55641458": {
+            "title": "File:201701 Talad Bang Yai Station.jpg",
+            "revision_id": 959465899,
+            "timestamp": "2024-11-20T10:10:12Z",
+            "image_timestamp": "2017-01-31T08:55:52Z",
+            "image_sha1": "8ceb98bf67440947aeddddbe296a941b7ec26880"
+          },
+          "55640779": {
+            "title": "File:201701 Yaek Tiwanon Station.jpg",
+            "revision_id": 959466114,
+            "timestamp": "2024-11-20T10:10:57Z",
+            "image_timestamp": "2017-01-31T08:38:55Z",
+            "image_sha1": "223a0e0fe0c8da6a937070cdc72072be328f132a"
+          },
+          "136485205": {
+            "title": "File:2023 SRT Don Mueang Station.jpg",
+            "revision_id": 823710409,
+            "timestamp": "2023-11-20T17:34:03Z",
+            "image_timestamp": "2023-08-26T17:34:25Z",
+            "image_sha1": "ce4185a3ff0d0ba8378afa2d1cc25aebca66542b"
+          },
+          "146667879": {
+            "title": "File:202402 Platform of Sala Thammasop Station.jpg",
+            "revision_id": 970634091,
+            "timestamp": "2024-12-15T15:54:00Z",
+            "image_timestamp": "2024-03-23T00:25:51Z",
+            "image_sha1": "8a362be016c44b08b5f773d290e56834b4a563e0"
+          },
+          "174889802": {
+            "title": "File:2025-08-11-BKK-Midfield-Satellite train 14.jpg",
+            "revision_id": 1085372697,
+            "timestamp": "2025-09-14T02:37:52Z",
+            "image_timestamp": "2025-09-11T20:12:13Z",
+            "image_sha1": "213885e35b40b0b045fd8dd24c4c12cb83ca14ab"
+          },
+          "174889809": {
+            "title": "File:2025-08-11-BKK-Midfield-Satellite train 19.jpg",
+            "revision_id": 1085372707,
+            "timestamp": "2025-09-14T02:37:54Z",
+            "image_timestamp": "2025-09-11T20:12:20Z",
+            "image_sha1": "9fc063760de7f47d80677f79f6e77f6ce4ef4d54"
+          },
+          "153709022": {
+            "title": "File:BTS Ha Yeak Lad Phrao Station.jpg",
+            "revision_id": 1074589134,
+            "timestamp": "2025-08-19T01:37:52Z",
+            "image_timestamp": "2024-10-09T14:43:28Z",
+            "image_sha1": "b102e4129a87345c90032188f0d6393a137c853b"
+          },
+          "9641925": {
+            "title": "File:BTS PhrayaThai.JPG",
+            "revision_id": 1114113097,
+            "timestamp": "2025-11-12T16:03:43Z",
+            "image_timestamp": "2010-03-03T16:54:48Z",
+            "image_sha1": "4d2c8637bff01bbabceda8d011e78aafd5302b7c"
+          },
+          "944806": {
+            "title": "File:BTS Sanam Pao Station.JPG",
+            "revision_id": 1074589707,
+            "timestamp": "2025-08-19T01:40:14Z",
+            "image_timestamp": "2006-07-13T12:53:28Z",
+            "image_sha1": "11f529e11b69e25c1258ac49b0351c07cd74c169"
+          },
+          "27334138": {
+            "title": "File:BTS Talad Phlu S10.JPG",
+            "revision_id": 1164289870,
+            "timestamp": "2026-02-12T12:30:07Z",
+            "image_timestamp": "2013-07-19T13:18:34Z",
+            "image_sha1": "00407fdc5474c9fa04c832422934e7bf8cd786ce"
+          },
+          "79416843": {
+            "title": "File:BTSエカマイ駅の駅舎.jpg",
+            "revision_id": 837706842,
+            "timestamp": "2024-01-01T22:42:12Z",
+            "image_timestamp": "2019-06-02T11:06:07Z",
+            "image_sha1": "26529a1ae3db47bcd8c4ca1dc53865a5e3d70ff9"
+          },
+          "135214369": {
+            "title": "File:Ban Khom Railway Halt 20230325-1.jpg",
+            "revision_id": 1076443837,
+            "timestamp": "2025-08-22T09:42:21Z",
+            "image_timestamp": "2023-07-29T15:35:02Z",
+            "image_sha1": "7c71320c94a8082e4b29226052be2a90b11c533c"
+          },
+          "135271795": {
+            "title": "File:Bang Bon Railway Halt 20230325-1.jpg",
+            "revision_id": 1053056324,
+            "timestamp": "2025-07-06T11:18:23Z",
+            "image_timestamp": "2023-07-30T13:41:44Z",
+            "image_sha1": "ab570fb93be0580a65e51d571e0b4a176d69e1c5"
+          },
+          "51148064": {
+            "title": "File:Bang Son Commuter station, Aug 2016 (2).jpg",
+            "revision_id": 1080442672,
+            "timestamp": "2025-09-03T21:28:35Z",
+            "image_timestamp": "2016-09-05T15:42:57Z",
+            "image_sha1": "3fe58b979e738a578768e0ef46460fc1bdd15d14"
+          },
+          "101275553": {
+            "title": "File:Bang Sue Grand Station Feb 2021.jpg",
+            "revision_id": 992084857,
+            "timestamp": "2025-02-02T06:07:19Z",
+            "image_timestamp": "2022-03-10T05:54:43Z",
+            "image_sha1": "3a4914e97d8fa8e6932c8241b12ff8230aaa24fe"
+          },
+          "51148071": {
+            "title": "File:Bang Sue MRT Station.jpg",
+            "revision_id": 1080442893,
+            "timestamp": "2025-09-03T21:29:16Z",
+            "image_timestamp": "2016-09-05T15:43:00Z",
+            "image_sha1": "9a06ea6f38b89bb50183ffe5fd286d2b759ab122"
+          },
+          "2534405": {
+            "title": "File:Charan Sanit Wong Railway Station.jpg",
+            "revision_id": 1062021286,
+            "timestamp": "2025-07-28T05:02:44Z",
+            "image_timestamp": "2007-08-08T16:59:24Z",
+            "image_sha1": "b8cf34dc61faa5b858f14dab0e98083b1c033076"
+          },
+          "81767173": {
+            "title": "File:E12 Udom Suk Station.jpg",
+            "revision_id": 1091827683,
+            "timestamp": "2025-09-27T21:28:20Z",
+            "image_timestamp": "2019-09-01T12:58:50Z",
+            "image_sha1": "fa89e7f6c2ea767cfb241552c6d6e745004e8afe"
+          },
+          "12360964": {
+            "title": "File:Hua Lampong MRT station.jpg",
+            "revision_id": 1122026592,
+            "timestamp": "2025-11-27T07:18:54Z",
+            "image_timestamp": "2010-12-18T07:35:12Z",
+            "image_sha1": "712f0cf5264cef15f5b4aad4bc8d6ab6aec1b754"
+          },
+          "26732615": {
+            "title": "File:Hua Mak Railway Station.JPG",
+            "revision_id": 1178389983,
+            "timestamp": "2026-03-09T15:02:40Z",
+            "image_timestamp": "2013-06-18T04:09:33Z",
+            "image_sha1": "db5530ed0400caa911fa07d46861e833369cd401"
+          },
+          "103883802": {
+            "title": "File:Huai Khwang Station MRT สถานี ห้วยขวาง (April2021) 01.jpg",
+            "revision_id": 1170886558,
+            "timestamp": "2026-02-23T17:51:03Z",
+            "image_timestamp": "2021-04-18T18:08:08Z",
+            "image_sha1": "52a82fe2ed96a6770cecbadced1784cd0afd1c6e"
+          },
+          "81006452": {
+            "title": "File:Itsaraphap subway station 1.jpg",
+            "revision_id": 967713025,
+            "timestamp": "2024-12-08T16:57:33Z",
+            "image_timestamp": "2019-08-03T18:05:58Z",
+            "image_sha1": "86c6236b418997dba2519b9124024ad2380b68d0"
+          },
+          "51617314": {
+            "title": "File:Kamphaeng Phet Station platforms (1).jpg",
+            "revision_id": 938060434,
+            "timestamp": "2024-10-11T07:08:31Z",
+            "image_timestamp": "2016-09-21T16:51:25Z",
+            "image_sha1": "3d8e214d750d0e09ca0446e77d65f2dde84df61e"
+          },
+          "51148051": {
+            "title": "File:Khlong Bang Phai MRT Station platform.jpg",
+            "revision_id": 1110254993,
+            "timestamp": "2025-11-06T22:23:22Z",
+            "image_timestamp": "2016-09-05T15:42:49Z",
+            "image_sha1": "cb682725105a26bfda0da10c6b1dfac611c19cb7"
+          },
+          "31996818": {
+            "title": "File:Lat Krabang Railway Station2.JPG",
+            "revision_id": 1182471429,
+            "timestamp": "2026-03-17T05:30:45Z",
+            "image_timestamp": "2014-04-05T01:16:19Z",
+            "image_sha1": "a521cf85f3a720151706b972f135ca7323bf648a"
+          },
+          "82391731": {
+            "title": "File:MRT Bangkae station - Exit 3.jpg",
+            "revision_id": 887789275,
+            "timestamp": "2024-06-25T10:26:25Z",
+            "image_timestamp": "2019-09-21T14:17:06Z",
+            "image_sha1": "a481cd1d89792c911a1a63282d3fc976e8a7bb3f"
+          },
+          "58128997": {
+            "title": "File:MRT Blue Line, Sanam Chai Station.jpg",
+            "revision_id": 1064400652,
+            "timestamp": "2025-08-01T14:46:59Z",
+            "image_timestamp": "2017-04-18T09:58:46Z",
+            "image_sha1": "d73ff4c4320d0a2a2404211d6435f9015c5c0a6b"
+          },
+          "82389650": {
+            "title": "File:MRT Lak Song - Station view from pedestrian bridge.jpg",
+            "revision_id": 909786915,
+            "timestamp": "2024-08-15T16:38:04Z",
+            "image_timestamp": "2019-09-21T13:19:06Z",
+            "image_sha1": "949064a7c8a215ae4357086fc95b61f45eb69ee9"
+          },
+          "82390969": {
+            "title": "File:MRT Phetkasem 48 station - Station.jpg",
+            "revision_id": 1148573537,
+            "timestamp": "2026-01-16T23:03:53Z",
+            "image_timestamp": "2019-09-21T13:50:23Z",
+            "image_sha1": "e4ab5a0a182fbacdadb910c0cb2b7463c3867231"
+          },
+          "141775174": {
+            "title": "File:MRT Pink Line Rajabhat Phranakhon Station 20231203-1.jpg",
+            "revision_id": 1089693527,
+            "timestamp": "2025-09-22T23:58:22Z",
+            "image_timestamp": "2023-12-05T15:48:10Z",
+            "image_sha1": "45debf6f10f04ef06afacc0d69aeed529fdd35e8"
+          },
+          "141759197": {
+            "title": "File:MRT Pink Line Si Rat Station 20231125-1.jpg",
+            "revision_id": 1154447916,
+            "timestamp": "2026-01-27T11:43:04Z",
+            "image_timestamp": "2023-12-05T08:25:19Z",
+            "image_sha1": "3acc1e9ff9d3b5c4e6112a729fbde9e114f459c5"
+          },
+          "51695895": {
+            "title": "File:Name sign & Route map at Queen Sirikit Centre Station.jpg",
+            "revision_id": 911124798,
+            "timestamp": "2024-08-17T19:39:46Z",
+            "image_timestamp": "2016-09-24T13:21:09Z",
+            "image_sha1": "f05fa54df8139729e424effa1cd6357011c04bb6"
+          },
+          "51617324": {
+            "title": "File:Phahon Yothin MRT Station platforms (2).jpg",
+            "revision_id": 1180780430,
+            "timestamp": "2026-03-14T09:21:10Z",
+            "image_timestamp": "2016-09-21T16:51:32Z",
+            "image_sha1": "30e9086625d3462c9ea9f12e5b63f63ac85b166b"
+          },
+          "133445993": {
+            "title": "File:Phawana Station 04.jpg",
+            "revision_id": 946395276,
+            "timestamp": "2024-10-19T05:33:17Z",
+            "image_timestamp": "2023-06-22T14:12:36Z",
+            "image_sha1": "86a5add36dadf2425cd74e5b55bf39991abf94e1"
+          },
+          "51671685": {
+            "title": "File:Phetchaburi MRT Station platform level.jpg",
+            "revision_id": 1173030362,
+            "timestamp": "2026-02-27T21:43:28Z",
+            "image_timestamp": "2016-09-23T15:57:41Z",
+            "image_sha1": "1cef9061fcd161212d0e26aa1389a2ee2eb0fc69"
+          },
+          "121447409": {
+            "title": "File:Phloen Chit BTS Station.jpg",
+            "revision_id": 1073944133,
+            "timestamp": "2025-08-18T00:53:36Z",
+            "image_timestamp": "2022-08-06T13:44:44Z",
+            "image_sha1": "d02c99a5c3bdb0a41b26404a289eaa8bf908d4e4"
+          },
+          "141440181": {
+            "title": "File:Pink Line at Khae Rai Station 01.jpg",
+            "revision_id": 1189308593,
+            "timestamp": "2026-03-30T17:26:09Z",
+            "image_timestamp": "2023-11-26T16:22:05Z",
+            "image_sha1": "cdf1f17f5840fabfc90d504efdd8227f04b4332e"
+          },
+          "51695909": {
+            "title": "File:Platform 1 of Khlong Toei Station.jpg",
+            "revision_id": 1130050909,
+            "timestamp": "2025-12-12T22:56:46Z",
+            "image_timestamp": "2016-09-24T13:21:20Z",
+            "image_sha1": "7c64f18d7ae4db5423d231b3e5ff39c98a2deddb"
+          },
+          "124246733": {
+            "title": "File:Ramathibodi Hospital Railway Halt.jpg",
+            "revision_id": 881705502,
+            "timestamp": "2024-06-06T08:56:06Z",
+            "image_timestamp": "2022-10-16T07:11:09Z",
+            "image_sha1": "52c4214f01bf38bd76174dd263015e682b580707"
+          },
+          "50551981": {
+            "title": "File:Tao Poon MRT Station 201600806.jpg",
+            "revision_id": 1242281953,
+            "timestamp": "2026-07-02T00:17:46Z",
+            "image_timestamp": "2016-08-08T11:14:59Z",
+            "image_sha1": "ef460f9c60f229d94345aafbde2b017206509875"
+          },
+          "135255241": {
+            "title": "File:Thung Si Thong Railway Halt 20230325-1.jpg",
+            "revision_id": 991954203,
+            "timestamp": "2025-02-02T00:25:44Z",
+            "image_timestamp": "2023-07-30T07:36:30Z",
+            "image_sha1": "d8acdd5d4c1765b47d85d60d0412e2e6077de6ae"
+          },
+          "87612982": {
+            "title": "File:Victory Monument BTS Station 1.jpg",
+            "revision_id": 1187509602,
+            "timestamp": "2026-03-27T10:32:08Z",
+            "image_timestamp": "2020-03-02T08:42:07Z",
+            "image_sha1": "8f2f0bb6f31010a55969edb02a19ff8caa211016"
+          },
+          "135393994": {
+            "title": "File:Wutthakat Railway Halt 20230728-1.jpg",
+            "revision_id": 1284440257,
+            "timestamp": "2026-10-08T04:47:13Z",
+            "image_timestamp": "2023-08-01T08:06:34Z",
+            "image_sha1": "2579d0db41f82d17c64a2c4aaa00c2ec3e9225a9"
+          },
+          "24744810": {
+            "title": "File:Yommarat Railway Station.jpg",
+            "revision_id": 1107964293,
+            "timestamp": "2025-11-02T14:23:40Z",
+            "image_timestamp": "2013-02-19T11:07:51Z",
+            "image_sha1": "720190a67c9289b5465e9461b41775f5b873e380"
+          },
+          "55889634": {
+            "title": "File:201701 Station building of Chitralada Station.jpg",
+            "revision_id": 992650421,
+            "timestamp": "2025-02-03T05:54:01Z",
+            "image_timestamp": "2017-02-05T02:43:43Z",
+            "image_sha1": "6f2d8af849983557475aa4f1a47ab7dcd0728acc"
+          },
+          "146614583": {
+            "title": "File:202402 Airport Link Inbound Platform of Ban Thap Chang Station.jpg",
+            "revision_id": 985816734,
+            "timestamp": "2025-01-21T08:14:54Z",
+            "image_timestamp": "2024-03-21T01:17:05Z",
+            "image_sha1": "aff4bbb9471db6a5fa30c2e02119f80ffd5311d3"
+          },
+          "146732267": {
+            "title": "File:202402 Platform of ART Suvarnabhumi Station.jpg",
+            "revision_id": 1236486458,
+            "timestamp": "2026-06-22T21:12:11Z",
+            "image_timestamp": "2024-03-24T17:15:16Z",
+            "image_sha1": "99380cc997ffff9b368269bb293237dfc0d1e385"
+          },
+          "121447410": {
+            "title": "File:Ari BTS Station.jpg",
+            "revision_id": 801288293,
+            "timestamp": "2023-09-13T13:27:57Z",
+            "image_timestamp": "2022-08-06T13:44:44Z",
+            "image_sha1": "ce267ffe26e701eb463c7850e86adbdb865ae8f8"
+          },
+          "91004366": {
+            "title": "File:BTS Constitution protectors monument - station - north side entrace view 1.jpg",
+            "revision_id": 814385674,
+            "timestamp": "2023-10-23T00:51:04Z",
+            "image_timestamp": "2020-06-07T04:31:22Z",
+            "image_sha1": "fd3a7e11b7ad10d4dae6c2a9d3c0356ba0823c5b"
+          },
+          "5863277": {
+            "title": "File:BTS Nana Skytrain Station.jpg",
+            "revision_id": 1074589432,
+            "timestamp": "2025-08-19T01:39:08Z",
+            "image_timestamp": "2009-02-04T10:28:51Z",
+            "image_sha1": "4da33fe123f5c25c66f6bf3154cdb3b88c47be19"
+          },
+          "74397923": {
+            "title": "File:BTS Pu Chao stn. entrance.jpg",
+            "revision_id": 1074589531,
+            "timestamp": "2025-08-19T01:39:32Z",
+            "image_timestamp": "2018-11-14T17:42:26Z",
+            "image_sha1": "d9d908ff14ab38eed646f23955fce60536df978d"
+          },
+          "6595012": {
+            "title": "File:BTS Ratchathewi.jpg",
+            "revision_id": 1254038172,
+            "timestamp": "2026-07-30T04:15:06Z",
+            "image_timestamp": "2009-04-21T15:13:54Z",
+            "image_sha1": "036424c85b1a348fa88ac8da27f652d2ed5ad6e4"
+          },
+          "5854774": {
+            "title": "File:BTS Thong Lo Station.jpg",
+            "revision_id": 1074589970,
+            "timestamp": "2025-08-19T01:41:08Z",
+            "image_timestamp": "2009-02-03T10:50:51Z",
+            "image_sha1": "491aa6b0e0e27d4ecf8273348de31e51d0c88b76"
+          },
+          "135254471": {
+            "title": "File:Bang Nam Chuet Railway Halt 20230728-2.jpg",
+            "revision_id": 816424653,
+            "timestamp": "2023-10-29T07:33:20Z",
+            "image_timestamp": "2023-07-30T07:17:46Z",
+            "image_sha1": "590033dfcb526e3763846c1323c5ad4de4862db8"
+          },
+          "10964368": {
+            "title": "File:Bangkok Hua Mak Station.jpg",
+            "revision_id": 1262620402,
+            "timestamp": "2026-08-17T09:35:07Z",
+            "image_timestamp": "2010-07-21T11:54:20Z",
+            "image_sha1": "75aaddcc271b78949ecb0e5a6a02675cf3a40de5"
+          },
+          "81245972": {
+            "title": "File:Charan 13 MRT Station North Side.jpg",
+            "revision_id": 888908057,
+            "timestamp": "2024-06-26T15:16:43Z",
+            "image_timestamp": "2019-08-11T18:36:21Z",
+            "image_sha1": "9751eeb63a8354d7eb3c892e95e5a4712b2e0922"
+          },
+          "51148033": {
+            "title": "File:Chatuchak Park MRT Station, Aug 2016.jpg",
+            "revision_id": 1066881010,
+            "timestamp": "2025-08-05T17:52:46Z",
+            "image_timestamp": "2016-09-05T15:42:37Z",
+            "image_sha1": "9900627d2a98ee8bab44ea2564ae115b5bfa28e9"
+          },
+          "105624766": {
+            "title": "File:Chit Lom Intersection แยกชิดลม 2021.jpg",
+            "revision_id": 856831273,
+            "timestamp": "2024-02-29T12:18:05Z",
+            "image_timestamp": "2021-05-21T19:03:59Z",
+            "image_sha1": "bac3fcbcff51c4aff9f0eefa2e03082ce3067b15"
+          },
+          "81766623": {
+            "title": "File:E10 Bang Chak Station.jpg",
+            "revision_id": 1118283174,
+            "timestamp": "2025-11-19T06:43:22Z",
+            "image_timestamp": "2019-09-01T12:40:31Z",
+            "image_sha1": "e2f1cfaf5902937c9b49312f6128e483a56bf694"
+          },
+          "81767053": {
+            "title": "File:E11 Punnawithi Station.jpg",
+            "revision_id": 1217681445,
+            "timestamp": "2026-05-21T05:45:51Z",
+            "image_timestamp": "2019-09-01T12:54:23Z",
+            "image_sha1": "e4843dad0b6bfc2291e8e0ea3601030283b3c286"
+          },
+          "81766752": {
+            "title": "File:E13 Bang Na Station.jpg",
+            "revision_id": 1217683074,
+            "timestamp": "2026-05-21T05:54:55Z",
+            "image_timestamp": "2019-09-01T12:43:31Z",
+            "image_sha1": "e09164f49e4d468177969cb2eee6d62a4d59a87e"
+          },
+          "81767093": {
+            "title": "File:E18 Royal Thai Naval Academy Station.jpg",
+            "revision_id": 1154505520,
+            "timestamp": "2026-01-27T13:45:57Z",
+            "image_timestamp": "2019-09-01T12:55:36Z",
+            "image_sha1": "7d1dc1d2a2028f468dfbec067df1c17bdfdb59aa"
+          },
+          "81767161": {
+            "title": "File:E20 Srinagarindra Station.jpg",
+            "revision_id": 1217686535,
+            "timestamp": "2026-05-21T06:11:29Z",
+            "image_timestamp": "2019-09-01T12:58:03Z",
+            "image_sha1": "247bbb56ddd23b0b268afa2ef70a91e6200680ed"
+          },
+          "81767117": {
+            "title": "File:E22 Sai Luat Station.jpg",
+            "revision_id": 1217691630,
+            "timestamp": "2026-05-21T06:31:40Z",
+            "image_timestamp": "2019-09-01T12:56:19Z",
+            "image_sha1": "5927adcf011b40c42d47924b8814d972fda4b238"
+          },
+          "81245794": {
+            "title": "File:Fai Chai Station bridge.jpg",
+            "revision_id": 1115641814,
+            "timestamp": "2025-11-14T21:25:04Z",
+            "image_timestamp": "2019-08-11T18:30:00Z",
+            "image_sha1": "6bd19c7f7c0c448152f552e0d676cdce98f4ed1b"
+          },
+          "42868351": {
+            "title": "File:Hua Takhe Railway Station1.JPG",
+            "revision_id": 1067285852,
+            "timestamp": "2025-08-06T12:21:35Z",
+            "image_timestamp": "2015-09-03T10:04:13Z",
+            "image_sha1": "dfb3786d2246796c8cf30ec52bf41182aafca354"
+          },
+          "80028342": {
+            "title": "File:Kheha stn.(BTS) south entrance.jpg",
+            "revision_id": 718740790,
+            "timestamp": "2022-12-22T13:19:05Z",
+            "image_timestamp": "2019-06-29T13:22:14Z",
+            "image_sha1": "202bddff2b329979ccae203668137fdb4eb8cdf0"
+          },
+          "135252972": {
+            "title": "File:Khok Khwai Railway Halt 20230728-2.jpg",
+            "revision_id": 950034083,
+            "timestamp": "2024-10-27T22:39:31Z",
+            "image_timestamp": "2023-07-30T06:38:06Z",
+            "image_sha1": "1435a72fd0abfb68b624d4eb7cdde183468bf14a"
+          },
+          "99642481": {
+            "title": "File:Khu Khot BTS Station.jpg",
+            "revision_id": 1135098710,
+            "timestamp": "2025-12-22T17:06:06Z",
+            "image_timestamp": "2021-02-07T10:19:50Z",
+            "image_sha1": "f103b92cfd0083486637c0d8f57a3f9bb6d72969"
+          },
+          "108222644": {
+            "title": "File:Laksi Station 03.jpg",
+            "revision_id": 1121197859,
+            "timestamp": "2025-11-25T10:03:40Z",
+            "image_timestamp": "2021-08-07T08:42:24Z",
+            "image_sha1": "11ebc5ba13ae400d888027b61b89e98c527a1e78"
+          },
+          "51631174": {
+            "title": "File:Lat Phrao Station - platform level (2).jpg",
+            "revision_id": 1113778165,
+            "timestamp": "2025-11-12T04:58:52Z",
+            "image_timestamp": "2016-09-22T06:56:38Z",
+            "image_sha1": "73c0ee4e8e525f79b88ce45f2dac15419eeb85c4"
+          },
+          "85598446": {
+            "title": "File:MRT Bang Khun Non – Station with a street-level train crosssing arm 2.jpg",
+            "revision_id": 1271943315,
+            "timestamp": "2026-09-03T23:51:35Z",
+            "image_timestamp": "2020-01-04T12:40:31Z",
+            "image_sha1": "0b3cbd8b68c833de22faf6481c0f87a49371e0de"
+          },
+          "85598599": {
+            "title": "File:MRT Bang Yi Khan – Station 3.jpg",
+            "revision_id": 1034846142,
+            "timestamp": "2025-05-24T04:15:29Z",
+            "image_timestamp": "2020-01-04T12:50:05Z",
+            "image_sha1": "644001de5fde39ef8bcdf2f4258387679812c808"
+          },
+          "135819801": {
+            "title": "File:Pak Nam BTS station, August 2023.jpg",
+            "revision_id": 1084054401,
+            "timestamp": "2025-09-11T08:18:23Z",
+            "image_timestamp": "2023-08-11T13:51:27Z",
+            "image_sha1": "c94ad193533458cd473b19c89c7891bcf4d988ff"
+          },
+          "100159322": {
+            "title": "File:Phra Khanong Station.jpg",
+            "revision_id": 1073293980,
+            "timestamp": "2025-08-16T23:17:14Z",
+            "image_timestamp": "2021-02-21T07:04:56Z",
+            "image_sha1": "d7e8218aaf40622255546d6cdd2fffebbe8a2d71"
+          },
+          "105447517": {
+            "title": "File:Phraek Sa BTS station.jpg",
+            "revision_id": 1228582481,
+            "timestamp": "2026-06-09T17:07:03Z",
+            "image_timestamp": "2021-05-18T03:08:39Z",
+            "image_sha1": "54af113a019569d2f103ed856f9651e120ca022a"
+          },
+          "51615309": {
+            "title": "File:Platform 1 of Bearing Station (2).jpg",
+            "revision_id": 1180705958,
+            "timestamp": "2026-03-14T06:12:00Z",
+            "image_timestamp": "2016-09-21T15:46:23Z",
+            "image_sha1": "c95b49181b44f91c185304f0280eb2efc21a1935"
+          },
+          "51697651": {
+            "title": "File:Platform 2 of Lumphini Station.jpg",
+            "revision_id": 1031525433,
+            "timestamp": "2025-05-14T04:30:53Z",
+            "image_timestamp": "2016-09-24T14:42:05Z",
+            "image_sha1": "cf8e82d1392ac1d060be8dd9246c3c5969e7d000"
+          },
+          "81571391": {
+            "title": "File:Platform level Bang Phai Station.jpg",
+            "revision_id": 946427692,
+            "timestamp": "2024-10-19T08:05:33Z",
+            "image_timestamp": "2019-08-24T04:47:15Z",
+            "image_sha1": "d2a4e19e2a1d6d18e353a0fdf186c837ba267a0e"
+          },
+          "81571390": {
+            "title": "File:Platform level Bang Wa Station.jpg",
+            "revision_id": 690180264,
+            "timestamp": "2022-09-20T10:22:34Z",
+            "image_timestamp": "2019-08-24T04:47:14Z",
+            "image_sha1": "7b9dcd57367d33fa99ff7a87fc354bf82953c62d"
+          },
+          "81405638": {
+            "title": "File:Ramkhamhaeng station.jpg",
+            "revision_id": 653277772,
+            "timestamp": "2022-05-02T06:46:02Z",
+            "image_timestamp": "2019-08-17T16:02:31Z",
+            "image_sha1": "7a3b96eec348a048fcedce61106087e8b80fc84f"
+          },
+          "135190611": {
+            "title": "File:Rang Pho Railway Station 20230728-1.jpg",
+            "revision_id": 1108926116,
+            "timestamp": "2025-11-04T11:01:20Z",
+            "image_timestamp": "2023-07-29T07:32:32Z",
+            "image_sha1": "d33afda60aba92f08eef83917542e5bc69964b16"
+          },
+          "51631185": {
+            "title": "File:Ratchadaphisek Station - platform level (2).jpg",
+            "revision_id": 1123149944,
+            "timestamp": "2025-11-30T02:32:26Z",
+            "image_timestamp": "2016-09-22T06:56:47Z",
+            "image_sha1": "05fff210a4841effa72bb42d498b0a7c478f8b7f"
+          },
+          "85859356": {
+            "title": "File:Ratchaprarop Station.jpg",
+            "revision_id": 1283989459,
+            "timestamp": "2026-10-07T04:54:51Z",
+            "image_timestamp": "2020-01-13T03:54:41Z",
+            "image_sha1": "a54650c3cea78cba8e50df9a467107b00c9d3892"
+          },
+          "90371296": {
+            "title": "File:Sam Yot MRT Station (I).jpg",
+            "revision_id": 1150034776,
+            "timestamp": "2026-01-20T01:24:24Z",
+            "image_timestamp": "2020-05-17T14:59:44Z",
+            "image_sha1": "2d710fc39d7df68a1e116e6690d8cda0fd079bdc"
+          },
+          "41922399": {
+            "title": "File:Samsen Station.JPG",
+            "revision_id": 1204541459,
+            "timestamp": "2026-04-27T14:52:40Z",
+            "image_timestamp": "2015-07-28T13:48:49Z",
+            "image_sha1": "68c1708322bcfa94f1dff56cb5e2f26695dbf505"
+          },
+          "118992481": {
+            "title": "File:Srt-bangkhen-IMG 7438.jpg",
+            "revision_id": 1038029978,
+            "timestamp": "2025-05-30T14:06:38Z",
+            "image_timestamp": "2022-06-07T15:56:58Z",
+            "image_sha1": "fa124eef72386d1671dcc255c997a0bb99390e41"
+          },
+          "51631758": {
+            "title": "File:Sutthisan Station platform level (1).jpg",
+            "revision_id": 912727501,
+            "timestamp": "2024-08-20T03:28:21Z",
+            "image_timestamp": "2016-09-22T07:47:38Z",
+            "image_sha1": "2fde2f1ca504f46d428c78726e3e29dcf70cda5f"
+          },
+          "51639472": {
+            "title": "File:TLCC Station - Blue Line platform level (1).jpg",
+            "revision_id": 905626161,
+            "timestamp": "2024-08-01T11:37:12Z",
+            "image_timestamp": "2016-09-22T14:56:29Z",
+            "image_sha1": "095f44756350f43621cb166e2ebc80018ef82ced"
+          },
+          "112879403": {
+            "title": "File:Taling Chan Railway Station 20211114-1.jpg",
+            "revision_id": 1221285284,
+            "timestamp": "2026-05-27T18:07:56Z",
+            "image_timestamp": "2021-11-28T08:16:51Z",
+            "image_sha1": "a8ac6986251bf38a40ddc0885f42ec55ae81926a"
+          },
+          "48168000": {
+            "title": "File:Thonburi Railway Station.jpg",
+            "revision_id": 474162569,
+            "timestamp": "2020-09-28T09:09:56Z",
+            "image_timestamp": "2016-04-13T14:12:05Z",
+            "image_sha1": "c03024ce73c8f06f45c30a6b9e8dda57f3517e23"
+          },
+          "747315": {
+            "title": "File:Train leaving Asok Station.jpg",
+            "revision_id": 1207302506,
+            "timestamp": "2026-05-02T20:23:37Z",
+            "image_timestamp": "2006-05-01T01:11:51Z",
+            "image_sha1": "00ceb3c5c399abbacf66e9e1f7f52af4bbec00fb"
+          },
+          "135276865": {
+            "title": "File:Wat Sing Railway Station 20230325-1.jpg",
+            "revision_id": 980353818,
+            "timestamp": "2025-01-06T20:33:58Z",
+            "image_timestamp": "2023-07-30T15:01:07Z",
+            "image_sha1": "daa8e94956d6bdf3c879f27b4140d7b360d5b201"
+          },
+          "14859068": {
+            "title": "File:Wongwianｙai station.jpg",
+            "revision_id": 1185067812,
+            "timestamp": "2026-03-22T12:35:59Z",
+            "image_timestamp": "2011-04-10T08:02:02Z",
+            "image_sha1": "1ea41e042085c4ac08492ac79323314b81758878"
+          },
+          "55641457": {
+            "title": "File:201701 Bang Rak Noi Tha It Station.jpg",
+            "revision_id": 959464831,
+            "timestamp": "2024-11-20T10:06:44Z",
+            "image_timestamp": "2017-01-31T08:55:50Z",
+            "image_sha1": "eed047ea91cb12a4decef02386ed1837954be728"
+          },
+          "55640785": {
+            "title": "File:201701 Ministry of Public Health Station.jpg",
+            "revision_id": 959465542,
+            "timestamp": "2024-11-20T10:08:54Z",
+            "image_timestamp": "2017-01-31T08:38:58Z",
+            "image_sha1": "57c4b85b89fb4de7b70c64d45b74f58fc11d14f5"
+          },
+          "55641132": {
+            "title": "File:201701 Phra Nang Klao Bridge Station.jpg",
+            "revision_id": 959465589,
+            "timestamp": "2024-11-20T10:09:09Z",
+            "image_timestamp": "2017-01-31T08:47:34Z",
+            "image_sha1": "84beccda542a90e512641fff090391b8815ed9e8"
+          },
+          "55641131": {
+            "title": "File:201701 Yaek Nothaburi 1 Station.jpg",
+            "revision_id": 959466107,
+            "timestamp": "2024-11-20T10:10:56Z",
+            "image_timestamp": "2017-01-31T08:47:34Z",
+            "image_sha1": "395f1dd2a1137ab45947b0570878d2880314fb98"
+          },
+          "91004235": {
+            "title": "File:BTS 11th Infantry Regiment - Station.jpg",
+            "revision_id": 814385432,
+            "timestamp": "2023-10-23T00:49:44Z",
+            "image_timestamp": "2020-06-07T04:24:34Z",
+            "image_sha1": "40694361b63e18bd6ed052687690d20f00987a51"
+          },
+          "90985693": {
+            "title": "File:BTS Bang Bua - Station toward SPU.jpg",
+            "revision_id": 1074588938,
+            "timestamp": "2025-08-19T01:37:00Z",
+            "image_timestamp": "2020-06-06T12:56:20Z",
+            "image_sha1": "cb8f596d70d371125a602bb7eb9e96ad7171b714"
+          },
+          "84638866": {
+            "title": "File:BTS Kasetsart University - Station.jpg",
+            "revision_id": 814386379,
+            "timestamp": "2023-10-23T00:54:44Z",
+            "image_timestamp": "2019-12-05T16:56:28Z",
+            "image_sha1": "ae4c32fde718fdf4b3b8ae9712b0c1e321dcbd27"
+          },
+          "84638829": {
+            "title": "File:BTS Ratchayothin - Station.jpg",
+            "revision_id": 814387057,
+            "timestamp": "2023-10-23T00:58:14Z",
+            "image_timestamp": "2019-12-05T16:55:24Z",
+            "image_sha1": "7e5c2ac015c95aa219a7f018d990055c9207ffb3"
+          },
+          "91004191": {
+            "title": "File:BTS Royal Forest Department - station.jpg",
+            "revision_id": 814387115,
+            "timestamp": "2023-10-23T00:58:34Z",
+            "image_timestamp": "2020-06-07T04:20:07Z",
+            "image_sha1": "e2eae2d774e25f978ec12f1b86fed6c5ef834bf7"
+          },
+          "84638656": {
+            "title": "File:BTS Sena Nikhom - Station.jpg",
+            "revision_id": 896752496,
+            "timestamp": "2024-07-10T23:25:22Z",
+            "image_timestamp": "2019-12-06T00:36:20Z",
+            "image_sha1": "9180c1b12bd25761c7604c2cc73445814b7d9116"
+          },
+          "1926160": {
+            "title": "File:Bangkok skytrain Saphan Khwal.JPG",
+            "revision_id": 945181725,
+            "timestamp": "2024-10-17T11:53:31Z",
+            "image_timestamp": "2007-04-11T16:33:13Z",
+            "image_sha1": "48f4d07880f3e3ec9c0055a840d1b22045a7e4d0"
+          },
+          "84637653": {
+            "title": "File:MRT Bang O - Station.jpg",
+            "revision_id": 1190248158,
+            "timestamp": "2026-04-02T00:16:24Z",
+            "image_timestamp": "2019-12-05T16:01:24Z",
+            "image_sha1": "e97191cf0fbb6107fd2ab7db486582a6af40830f"
+          },
+          "84637879": {
+            "title": "File:MRT Bang Pho - Station.jpg",
+            "revision_id": 1259576830,
+            "timestamp": "2026-08-11T03:11:46Z",
+            "image_timestamp": "2019-12-05T16:10:58Z",
+            "image_sha1": "e22d0ab8434495ec7fe25542c6cee397d30bace0"
+          },
+          "84637448": {
+            "title": "File:MRT Bang Plad - Station.jpg",
+            "revision_id": 888269055,
+            "timestamp": "2024-06-26T06:17:33Z",
+            "image_timestamp": "2019-12-05T15:52:29Z",
+            "image_sha1": "86c65009b613dd4c28eaf9a7fd9c9af675c8240f"
+          },
+          "85598627": {
+            "title": "File:MRT Sirindhorn – Station 1.jpg",
+            "revision_id": 1225314081,
+            "timestamp": "2026-06-03T16:52:54Z",
+            "image_timestamp": "2020-01-04T12:51:57Z",
+            "image_sha1": "5fb8ec93caa3b54cf79872e287bf942b1928b222"
+          },
+          "51615997": {
+            "title": "File:Mo Chit Station 20.09.16 (2).jpg",
+            "revision_id": 1224286786,
+            "timestamp": "2026-06-01T21:05:10Z",
+            "image_timestamp": "2016-09-21T16:07:15Z",
+            "image_sha1": "e940e420ce4f83ec86ece122229fe39c2f79845f"
+          }
+        }
+      }
+    }
+  },
+  "retained_enrichments": {
+    "baseline_commit": "d7e2ddf5c5d906e155e0f310015f45441360fa06",
+    "sources": {
+      "tourism": {
+        "path": "data/tourism/proximity.json",
+        "sha256": "0fbb1b68ecd8f51691dee5e27a20e505757ced31e7f04abda78d61d3f504a424",
+        "fetched": "2026-10-15",
+        "metric": "OSM snapshot counts within 800m of station; badge hotels >=50 or attractions >=8"
+      },
+      "michelin": {
+        "path": "data/michelin/proximity.json",
+        "sha256": "55ee27a43c538100e4f956a0abe99a90ea78d975ec9b28bd309d3a0844a1aba3",
+        "computed": "2026-10-15",
+        "guide_year": "2026",
+        "metric": "stars -> michelin_stars; bib_gourmand -> michelin_bib; retain stored district aggregates"
+      },
+      "embassy": {
+        "path": "app/src/data/bangkok/districts.json",
+        "sha256": "8ef5b0fd4cae3e8ef70c5b4968130fcfdf0c39a4bfe9dc9c4e907758d8930f39",
+        "generated": "2026-09-30",
+        "observation_date": null,
+        "metric": "legacy embassies_800m; district-center field per scripts/institutions/README.md; original calculation/center not independently established",
+        "provenance_gap": "Exact values retained from baseline commit. Not embassies_inside_district; no claim these are current observations."
+      },
+      "institutions": {
+        "baseline_commit": "d7e2ddf5c5d906e155e0f310015f45441360fa06",
+        "metric": "embassies_inside_district and embassies_within_800m (station anchors); not the legacy district embassies_800m field",
+        "preservation_sources": {
+          "data/institutions/district-institutions.json": {
+            "sha256": "45aafd31caf9b1d40a09c197ca1bca6b666032a844c11b98425fbffc252c9c86",
+            "snapshot_date": "2026-10-14",
+            "source_dates": {
+              "bangkok_osm": "2026-06-01T08:52:28Z",
+              "tokyo_osm": "2026-07-24T11:04:51Z"
+            },
+            "input_sha256": {
+              "research/snapshots/2026-10-14/embassies/embassies-tokyo.geojson": "b68d91899cd7b3ce56017fccba117fe2663776f9427594affc0e8088a501baca",
+              "research/snapshots/2026-10-14/embassies/embassies-bangkok.geojson": "8661b991ae46ef9b8506d197736e8d464cdca1f3fbe1a085ac3b5e761ee6580b",
+              "research/snapshots/2026-10-14/embassies/summary.json": "b4119bef2aa83192898960a90be83668da2afa11e2182971f47168ecff29a801",
+              "research/snapshots/2026-10-14/embassies/LICENSE.txt": "608da72151deb83715eceeddcb5a510f44c5b5b0ff3390e608b78173ccc56f99",
+              "research/snapshots/2026-10-14/medicine-jnto/medicine-jnto.json": "2c9cfcf6e5f8c809ce1a6d2c682e3ae0e8ab174d18bff7177fb4b9a933f68a45",
+              "research/snapshots/2026-10-14/medicine-jnto/LICENSE.txt": "82e1902c3dcddecf43e5bc8d0d83a6756fd14052c695779931dd2bb86652d156",
+              "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+              "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+              "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
+              "app/src/data/bangkok/districts.json": "8ef5b0fd4cae3e8ef70c5b4968130fcfdf0c39a4bfe9dc9c4e907758d8930f39",
+              "app/src/data/bangkok/stations.json": "94ac162361a25ee64a092648f78d9fe5933726109ec9034472f20aa181562ea2"
+            }
+          },
+          "data/institutions/station-institutions.json": {
+            "sha256": "07435c549b4c23ffacbbc7339627fb7ef3cb9a38e3783522fe2af1efbd942213",
+            "snapshot_date": "2026-10-14",
+            "source_dates": {
+              "bangkok_osm": "2026-06-01T08:52:28Z",
+              "tokyo_osm": "2026-07-24T11:04:51Z"
+            },
+            "input_sha256": {
+              "research/snapshots/2026-10-14/embassies/embassies-tokyo.geojson": "b68d91899cd7b3ce56017fccba117fe2663776f9427594affc0e8088a501baca",
+              "research/snapshots/2026-10-14/embassies/embassies-bangkok.geojson": "8661b991ae46ef9b8506d197736e8d464cdca1f3fbe1a085ac3b5e761ee6580b",
+              "research/snapshots/2026-10-14/embassies/summary.json": "b4119bef2aa83192898960a90be83668da2afa11e2182971f47168ecff29a801",
+              "research/snapshots/2026-10-14/embassies/LICENSE.txt": "608da72151deb83715eceeddcb5a510f44c5b5b0ff3390e608b78173ccc56f99",
+              "research/snapshots/2026-10-14/medicine-jnto/medicine-jnto.json": "2c9cfcf6e5f8c809ce1a6d2c682e3ae0e8ab174d18bff7177fb4b9a933f68a45",
+              "research/snapshots/2026-10-14/medicine-jnto/LICENSE.txt": "82e1902c3dcddecf43e5bc8d0d83a6756fd14052c695779931dd2bb86652d156",
+              "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+              "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
+              "app/src/data/bangkok/geometry.json": "50311bf3681294086ec930041e553d35bd8f0ad2764563920d4abe90f96b75af",
+              "app/src/data/bangkok/districts.json": "8ef5b0fd4cae3e8ef70c5b4968130fcfdf0c39a4bfe9dc9c4e907758d8930f39",
+              "app/src/data/bangkok/stations.json": "94ac162361a25ee64a092648f78d9fe5933726109ec9034472f20aa181562ea2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "retained_population": {
+    "id": "worldpop_2020",
+    "dataset": "WorldPop Global1 constrained individual countries 2020 / BSGM / THA",
+    "record_id": 49890,
+    "filename": "tha_ppp_2020_constrained.tif",
+    "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020_Constrained/2020/BSGM/THA/tha_ppp_2020_constrained.tif",
+    "record_url": "https://hub.worldpop.org/geodata/summary?id=49890",
+    "doi": "10.5258/SOTON/WP00684",
+    "epoch": 2020,
+    "production_date": "2020-09-16",
+    "retrieved": "2026-10-15",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "WorldPop, University of Southampton. Bondarenko M., Kerr D., Sorichetta A. and Tatem A.J. (2020). Constrained BSGM census/projection-disaggregated population. Adapted by City Rating: district aggregation and density scoring.",
+    "bytes": 28878233,
+    "sha256": "400dc5435e15e78ce6b5e510327ec863c62d209011ce1b03cad4445773753d42",
+    "units": "people_per_pixel",
+    "nodata_semantics": "BSGM_unsettled",
+    "raster": {
+      "crs": "EPSG:4326",
+      "shape": [
+        17816,
+        9952
+      ],
+      "dtype": "float32",
+      "nodata": -99999.0,
+      "transform": [
+        0.0008333333299839229,
+        0.0,
+        97.345416292,
+        0.0,
+        -0.0008333333299842838,
+        20.462916786
+      ]
+    },
+    "method": "Sum original float counts in pixel-center masks of published OSM district polygons, excluding holes; divide by official district area. NoData contributes zero; no pixel-area multiplier, reprojection or resampling of population counts."
+  },
+  "retained_flood": {
+    "cache": "data/bangkok/raw/thaifloodrisk.zip",
+    "license": "CC-BY-4.0",
+    "doi": "10.5281/zenodo.23260465",
+    "build_reads": "data/bangkok/flood.json"
+  },
+  "environment": {
+    "duckdb": "2.0.0"
+  }
+}
