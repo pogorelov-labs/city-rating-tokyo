@@ -4,6 +4,12 @@ Release tags use semantic versioning. Add user-visible changes here and keep eac
 published entry aligned with its [release notes](docs/releases/) and immutable
 tag. The [release runbook](docs/RELEASING.md) defines the gates and commands.
 
+Changelog entries are public-facing. Describe user-visible changes,
+compatibility and user-impacting limits. Do not include internal infrastructure
+or deployment details, host/service names, credentials, worker/session
+identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
+evidence in research notes or the PR body and link it.
+
 ## v0.1.1 — 2026-10-27
 
 Bangkok data refresh. This is a data-only release: no new features, API, URL,
@@ -24,8 +30,7 @@ this data.
   within Bangkok; a Bangkok 8 is not a Tokyo 8.
 - District and grid rents remain editorial estimates. The 10 central station-area
   rent proxies remain estimate-grade. Safety remains editorial.
-- No action is required for users or deployments: the site is static and
-  Coolify deploys `main` automatically.
+- No action is required for users; the site is static.
 
 See the methodology and evidence notes for source details and known limits.
 

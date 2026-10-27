@@ -73,7 +73,7 @@ Open [localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify** on a VPS with Traefik and TLS, auto-deployed from `main`. Static city data needs no runtime DB; v0.1.0 has no DB migration. See the [release runbook](docs/RELEASING.md).
+Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.1.1 has no DB migration. See the [release runbook](docs/RELEASING.md).
 
 ## Data sources (high level)
 

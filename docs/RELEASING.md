@@ -20,6 +20,14 @@
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
   limitations and distinguish code availability from published data freshness.
+- **Public release copy:** This repository is public. Changelog and release
+  notes describe user-visible changes, compatibility and user-impacting limits.
+  Do not include internal infrastructure or deployment details: host/service
+  names, VPS/container/orchestrator/platform names, network topology, private
+  URLs, credentials, worker/session identifiers, CI run IDs or internal QA
+  artifacts. Do not paste engineering receipts such as hashes, manifests or
+  internal gate lists; put technical evidence in a research note or the PR body
+  and link it. Release notes in `docs/releases/<tag>.md` follow the same rules.
 - Never put secrets, credentials, private host details or raw caches in notes.
   Never mix regenerated data with a code/docs release. A data refresh has a
   separate PR, review and acceptance process (see below).
@@ -142,13 +150,14 @@ tagName,targetCommitish,isLatest,url` may work in other CLI versions; when
 tag, the unpeeled ref is the **tag object SHA**; the `^{}` ref is the **release
 commit SHA**. Record both and ensure the latter equals `release_sha`.
 
-Coolify **auto-deploys from main**; publishing a tag does not initiate a manual
-deployment. The app uses build-time static city pages/JSON in a Next.js
-standalone Docker image. v0.1.0 needs **no database migration**. Check Coolify's
-deployment status/logs and deployed commit when access is available; never
-infer deployment completion from CI or HTTP 200 alone. Do not deploy manually
-for this release. Smoke-check Tokyo, Bangkok and locale navigation in production.
-Record HTTP status, CI links and anything that could not be verified.
+Production deployment is automated from `main`; publishing a tag does not
+initiate a manual deployment. The app uses build-time static city pages/JSON.
+v0.1.1 needs **no database migration**. Check production deployment status/logs
+and the deployed commit through private maintainer tooling when access is
+available; never infer deployment completion from CI or HTTP 200 alone. Do not
+deploy manually for this release. Smoke-check Tokyo, Bangkok and locale
+navigation at the public production URL. Record HTTP status, CI links and
+anything that could not be verified.
 
 After verification, announce the version with its release link, highlights and
 known limitations in the approved channel. Obtain channel/recipient approval
@@ -159,9 +168,10 @@ before sending an external announcement if it was not already authorized.
 Keep published tags and notes auditable; do not force-push main or retag a
 published version. For a regression, stop promotion/announcement, record the
 affected SHA and open a focused revert or hotfix PR. Pass all four gates and
-merge normally; Coolify then auto-deploys main. A maintainer may use an approved
-Coolify rollback during an incident, but that is a separate authorized action,
-not part of this release procedure. Reconcile any rollback with main afterwards.
+merge normally; production deployment then updates from `main`. A maintainer
+may use an approved production rollback through private maintainer tooling
+during an incident, but that is a separate authorized action, not part of this
+release procedure. Reconcile any rollback with main afterwards.
 Publish a new patch version (for example v0.1.1) for the fix and link the incident
 or superseded release in its notes. Do not rerun data pipelines as a rollback.
 
@@ -186,7 +196,8 @@ a code/docs release.
 - [ ] Main push CI passes all four jobs at that exact SHA.
 - [ ] Annotated remote tag peels to the merge SHA; no existing version overwritten.
 - [ ] GitHub release is published/latest with the committed notes and correct target.
-- [ ] Production returns 200; Tokyo/Bangkok/locales checked; Coolify status recorded
-  or explicitly listed as unverified; no manual deploy or DB migration.
+- [ ] Public production URL returns 200; Tokyo/Bangkok/locales checked; production
+  deployment status recorded or explicitly listed as unverified; no manual
+  deploy or DB migration.
 - [ ] Approved announcement sent, or its pending status recorded.
 - [ ] PR, CI, release, tag object/commit SHAs and verification limits reported.

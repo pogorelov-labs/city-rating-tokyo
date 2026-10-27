@@ -6,7 +6,7 @@ Interactive map of Greater Tokyo (1493 stations) **and Bangkok (50 districts →
 
 **Live**: https://city-rating.pogorelov.dev
 **Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl v4 (EN/JA/RU). Static JSON data, no DB at runtime.
-**Deploy**: Coolify on the main VPS (host details: `vps_infra/INDEX.md`, private), GitHub App auto-deploy from `main`.
+**Deploy**: Production deployment is automated from `main`; deployment details are maintained outside this public repository.
 
 ## Architecture
 
@@ -571,31 +571,12 @@ Top-5 ranked visible stations get a subtle `top-ranked-pulse` CSS animation in t
 
 `RATING_LABELS.crowd = 'Quietness'` (was "Low Crowds"). Category min buttons use `CATEGORY_SHORT_LABELS` map for compact unambiguous labels.
 
-## Running Scrapers on VPS
+## Running Scrapers
 
-Scrapers run as detached Docker containers on VPS to avoid laptop sleep issues:
-
-```bash
-# SSH to the main VPS: host, user and key are in vps_infra/INDEX.md (private)
-ssh <main-vps>
-
-# Launch a scraper
-docker run -d --name SCRAPER_NAME --restart=no \
-  -e NOCODB_API_URL=https://nocodb.pogorelov.dev \
-  -e NOCODB_API_TOKEN=$NOCODB_API_TOKEN \
-  -e HOTPEPPER_API_KEY=$HOTPEPPER_API_KEY \
-  -v /tmp/SCRIPT.py:/app/scraper.py:ro \
-  -v /tmp/stations.json:/app/data/stations.json:ro \
-  python:3.11-slim bash -c "pip install --quiet requests && python3 -u /app/scraper.py"
-
-# Check logs
-docker logs --tail 20 SCRAPER_NAME
-
-# Check all scraper containers
-docker ps -a --format "{{.Names}}\t{{.Status}}" | grep -E "osm|hp|arcgis|mlit|nominatim"
-```
-
-All scrapers are incremental — they skip stations already in NocoDB. Safe to restart.
+Scrapers run in a private operational environment. Access, infrastructure and
+execution instructions are maintained outside this public repository. All
+scrapers are incremental: they skip stations already in NocoDB and are safe to
+restart. Keep operational credentials and access details out of public copy.
 
 ## Research Documents
 
