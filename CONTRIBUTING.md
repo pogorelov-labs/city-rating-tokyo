@@ -63,6 +63,71 @@ separately merged Bangkok refresh. Release version bumps update the app package
 and lockfile together. Data refreshes require a separate PR; code/docs work
 does not imply regeneration. See the [completed Bangkok remediation record](docs/DATA_REFRESH_REMEDIATION.md).
 
+## Tickets and verification
+
+### Before implementation
+
+Use the canonical ticket description to state the problem, context and accepted
+scope. Include observable **Done when:** criteria and how each will be checked.
+For a legacy one-line ticket, establish these before implementing; do not infer
+permission for source acquisition, publication or operator actions from a title.
+
+```text
+Problem: What is wrong or missing, and for whom?
+Context / accepted scope: Relevant evidence and decisions; included/excluded work.
+Done when:
+- Observable result and the check that demonstrates it.
+- Required compatibility, data-quality or publication constraints still hold.
+Verification plan: Tests, source comparison or UI/production checks needed for this scope.
+```
+
+Update the description when an accepted decision changes scope, and preserve
+the prior decision/history through links. Implementation notes and verification
+comments supplement that description; they do not silently override it.
+
+### Verification before Done
+
+Add a comment recording what was actually checked. A small change can use three
+lines; larger work should map evidence to each acceptance criterion:
+
+```text
+Scope/result: What shipped; PR and tested commit; merge reference if merged.
+Checks: Commands or observed behavior and actual results; CI/evidence links; live/rollout status.
+Limits/follow-ups: What was not checked or remains blocked; linked tail, owner/action and reopen condition.
+```
+
+Identify skipped, failed, not-required and unverified checks explicitly. Only
+claim production behavior when it was observed; a docs-only task can record
+production checks as not required. CI passing, a merge, a published release and
+an operator activation are separate facts. Keep technical evidence in the PR
+or tracker record and apply the public-copy rules to repository documents.
+
+### Scope splits and blocked follow-ups
+
+If an accepted shipped slice is complete but the original task also contains
+blocked work, record the accepted scope change in the parent description and
+link a follow-up for every remaining requirement before closing that slice.
+The follow-up keeps the unmet criterion, blocker, required owner/action,
+verification plan and reopen condition. Source access, publication rights or
+rollout requirements stay unmet until separately verified. A blocked tail's
+definition is not evidence that its implementation has run.
+
+Use **Todo** for accepted, next-up work when useful; **Backlog** may hold work
+awaiting acceptance or a named unblock condition. **In Progress** means active
+work. **Done** requires the accepted criteria and a verification record;
+**Cancelled** requires a recorded decision. There is no need to move unrelated
+tickets merely to adopt this convention.
+
+### Draft PR triage
+
+At a status review, inspect open drafts. A draft older than **14 days** must
+have a dated decision comment: **merge**, **close**, or **blocked**. A blocked
+decision names the responsible owner/action and condition for revisiting it.
+Confirm the current PR state first: for an already merged or closed PR, record
+that outcome and its link in the ticket instead of reopening or re-triaging it.
+Age alone does not authorize merging or closing; required checks, review and
+current publishing authorization still apply.
+
 ## Pipeline refresh workflow
 
 ```bash
