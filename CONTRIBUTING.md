@@ -95,7 +95,7 @@ Run these commands from the repository root:
 ```bash
 cd mcp && pip install -e ".[dev]"
 ruff check src/
-PYTHONPATH=../packages/schema/python pytest
+PYTHONPATH=../packages/schema/python pytest tests/ -q
 
 # Smoke test (requires datamart + embeddings — deploy-time check, not CI)
 python scripts/smoke-test.py

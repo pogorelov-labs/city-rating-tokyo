@@ -15,7 +15,7 @@
   again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`**.
   `build` covers lint, UI tests, TypeScript, the Next build and runtime audit;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
-  and its install/import checks; `bangkok` covers offline pipeline/data tests.
+  and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests.
   MCP production smoke checks are separate and are not implied by green CI.
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
