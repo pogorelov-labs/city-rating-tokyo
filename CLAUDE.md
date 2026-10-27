@@ -460,15 +460,19 @@ pytest scripts/bangkok            # offline tests; CI bangkok job
 ```
 
 The [pipeline guide](scripts/bangkok/README.md) covers the Geofabrik fetch path,
-population input and retained Overpass alternative. **Fetch code availability
-does not mean a data refresh shipped.** The full spatial refresh is excluded
-from v0.1.0: experimental output has **10 validation failures** and loses tourism,
-Michelin and embassy enrichments, with quality/attribution reviews also pending.
-The [scoped remediation plan](docs/DATA_REFRESH_REMEDIATION.md) is **not
-implemented**; a refresh needs a separate PR under the [release runbook](docs/RELEASING.md).
+population input and retained Overpass alternative. **v0.1.0 excluded the full
+spatial refresh.** It merged post-release in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
+on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4),
+and the refreshed data is now on **main**, not in the v0.1.0 tag/release.
+All **10 validation gates are resolved**. The [90-file frozen manifest](data/bangkok/refresh-inputs.json)
+pins the build inputs; all **133 tourism areas** (99 with hotels, 66 with
+attractions, 19 badges), **9 Michelin districts** and **5 legacy embassy districts**
+retain their facts. See the [completed remediation](docs/DATA_REFRESH_REMEDIATION.md)
+and [evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md) for the
+data diff, attribution review and remaining source/provenance limits.
 
 - **Method:** 200 m resident grid per district → POIs within walking radius (FFT raster convolution, cross-border), park ha within 1 km, rail distance, modelled peak commute to 5 hubs (Siam, Asok, Silom, Rama 9, Mo Chit) → resident-weighted mean → percentile across 50. Details: `research/bangkok/00-overview.md`.
-- **Two POI sources:** OSM + **Overture Maps Places** (release pinned in `fetch.py`, public S3 via DuckDB, CDLA-Permissive-2.0). `strong` confidence only where both are well mapped; r ≈ 0.90–0.93 between them. Overture's Bangkok `historic_site` rows are mis-classified apartments → excluded.
+- **Two POI sources:** OSM + **Overture Maps Places** (release pinned in `fetch.py`, public S3 via DuckDB). The frozen extract inventories CDLA-Permissive-2.0, Apache-2.0 (Foursquare) and CC0-1.0 (AllThePlaces) entries; PR #147 retained the notices/license copies. `strong` confidence only where both are well mapped; r ≈ 0.90–0.93 between them. Overture's Bangkok `historic_site` rows are mis-classified apartments → excluded.
 - **Editorial inputs:** `data/bangkok/editorial.json` — rent (1-bed/2-bed THB), safety 1–10, search aliases (neighbourhoods + landmarks: "Thong Lo" → Watthana). Aliases were cross-checked against OSM feature locations; landmark ≠ district name is common (Esplanade is Din Daeng, Krung Thep Aphiwat is Chatuchak).
 - **Station-area rent proxies:** `data/bangkok/rent-overrides.json` — 10 central DooAsset bedroom-median snapshots, estimate confidence, with date/sample/source provenance. Districts/grid stay editorial; other areas use district blends. ComparePanel and detail pages explain the differing metrics; see the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
 - **Static reference:** `scripts/bangkok/static_data.py` — RU names (one transcription for all 50), 10 rail lines (names ×4, colors, commute speeds calibrated on published end-to-end times), curated stop order for BTS Silom / SRT Light Red, hubs.
@@ -476,7 +480,7 @@ implemented**; a refresh needs a separate PR under the [release runbook](docs/RE
 - **Frontend:** `CityHome` (shared homepage shell) · `DistrictMap.tsx` (SVG polygons in custom panes, outline overlays for hover/selected/top-5/compare, rail lines + station dots, zoom-aware labels, greyed-out districts with *why* in the tooltip via `dealbreakerReasons()`, legend, narrow-screen framing, click-delay so dblclick zoom doesn't select) · `app/[locale]/bangkok/district/[slug]` (stats, hubs, stations, ratings vs Bangkok median, facts, neighbours, Commons photo credit) · `lib/bangkok-data.ts` (server accessors; geometry/rail JSON load only in the map chunk).
 - **i18n:** `bangkok.*` namespace is server-only and filtered out of `NextIntlClientProvider` in `[locale]/layout.tsx`; client-side Bangkok strings live under `filter.*District`, `map.*`, `hubs.*`, `sources.*`.
 - **Photos:** Wikidata P18 via Commons API, hot-linked from `thumb.wikimedia.org` (500 px popups, 960 px banner), attribution on the page (`clean_artist()` trims Commons boilerplate to the author). Station areas use their station's item (`station_wikidata` / `station_commons` fetch tasks), which also gives the **JA station names** — the label is cross-checked against the station name because some OSM nodes carry a neighbour's item (Si Iam → Si La Salle); misses are hand-written in `static_data.STATION_JA_FALLBACK`. RU keeps the Latin station names that are on the signs.
-- **Grid binary:** one uint8 plane per field over the 330 × 257 bbox, per-row delta, gzip, content-hashed name (cached `immutable` via `next.config.ts`); ~140 KB, fetched only when the grid level (or a `cell.` link) opens. Its header `grid.json` lists the field order and the district / station / area index maps — rebuild both together.
+- **Grid binary:** `grid-1d6ed2ef00c3.bin` (**143,925 bytes**) after PR #147; one uint8 plane per field over the 330 × 257 bbox, per-row delta, gzip, content-hashed name (cached `immutable` via `next.config.ts`), fetched only when the grid level (or a `cell.` link) opens. The same 39,149 cells remain; grid rent/safety and crowd/hub-minute planes are unchanged. Its header `grid.json` lists the field order and the district / station / area index maps — rebuild both together.
 - **Map layers gotcha:** inside a react-leaflet `<Pane>`, `<Tooltip>` inherits that pane and renders *under* the pane's own polygons — pass `pane="tooltipPane"` (fixed for the district tooltips in CRTKY-135). Client components cannot read `bangkok.*` messages (server-only namespace): pass translated strings as props, as the radar does.
 
 ## Description Generation Pipeline (CRTKY-109, in progress)

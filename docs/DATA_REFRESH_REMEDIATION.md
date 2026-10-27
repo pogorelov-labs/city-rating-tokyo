@@ -1,9 +1,11 @@
 # Bangkok data-refresh remediation plan
 
-Status: **implemented and locally validated; proposed data PR, not merged**
-(2026-10-26). The full Bangkok spatial
-refresh is **not in v0.1.0**. The release tags the existing product and adds
-release documentation; no regenerated spatial data is published by this plan.
+Status: **implemented and merged in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)**
+at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4)
+on **2026-10-27**. The refreshed data is now on **main**. The full spatial
+refresh was **not included in v0.1.0**: PR #147 was based on release commit
+`d7e2ddf5c5d906e155e0f310015f45441360fa06` and merged afterwards. The v0.1.0
+tag, GitHub release and release body remain unchanged.
 
 ## Remediation evidence
 
@@ -14,10 +16,18 @@ and [complete aggregate/geometry review](../research/bangkok/notes/2026-10-26-fr
 
 | Workstream | Status / evidence |
 | --- | --- |
-| A | Automatic full-build enrichment stage; all 133 tourism areas, 9 Michelin districts and 5 embassy districts preserved exactly; idempotent and missing-input/join tests pass. Embassy metric provenance gap is explicit. |
+| A | Automatic full-build enrichment stage; all 133 tourism areas (99 with hotels, 66 with attractions, 19 badges), 9 Michelin districts and 5 embassy districts preserved exactly; idempotent and missing-input/join tests pass. Embassy metric provenance gap is explicit. |
 | B | All 10 original gates resolved. Historical population baseline and golden unchanged and separately tested; current refresh baseline/golden added. Header summaries use published integer weight units (transport median 5); cell normalization unchanged. |
 | C | All 25 district/14 area park changes reconstructed; green outliers and nine area notices reviewed with limits. All 133 station geometries byte-identical. All Overture source entries inventoried; three-license attribution, notices and license copies retained. Wikimedia exact payload hashes/revision IDs frozen; HTTP fetch remains live. |
-| D | Full frozen build repeats byte for byte (6.21s / 6.22s); 649 full-script tests, 141 Bangkok tests, 399 app tests pass; TypeScript, lint and production build pass. No merge or release change. |
+| D | Full frozen build repeats byte for byte (6.21s / 6.22s); 649 full-script tests, 141 Bangkok tests, 399 app tests pass; TypeScript, lint and production build pass. Separate data PR #147 merged on 2026-10-27; v0.1.0 remains unchanged. |
+
+Ratings change in **12/50 districts and 35/133 station areas**. Entity counts
+remain **50 districts, 133 areas, 179 rail stations / 10 lines and 39,149 grid
+cells**, with no gained/lost IDs or cells. The new binary is
+`grid-1d6ed2ef00c3.bin` (**143,925 bytes**); grid rent/safety and crowd/hub-minute
+planes are unchanged. These are source-snapshot changes, not verified
+real-world improvements. The evidence note retains the nine area discrepancies,
+live Wikimedia replay limits, source epochs and legacy embassy provenance gap.
 
 **Narrow scope exception authorized by city-rating-9:** normal institutions and
 noise exporters update embedded Bangkok input hashes in shared/Tokyo metadata.
@@ -28,15 +38,19 @@ Bangkok station-input hash. Regression fingerprints exclude only these exact
 authorized hash fields and pin everything else to the release snapshot. No
 legacy fingerprints are substituted. This does not authorize other Tokyo work.
 
-## Why this exists
+## Original blockers and acceptance criteria
+
+The remaining sections retain the original remediation requirements for
+traceability. They are completed by PR #147 as recorded above, rather than an
+unimplemented plan or a list of current validation blockers.
 
 PR [#145](https://github.com/pogorelov-labs/city-rating-tokyo/pull/145) added the
 Geofabrik Thailand PBF path and proved a full Bangkok build can run without
-Overpass. The experimental 2026-10-24 snapshot completed a build, but publishing
-it is blocked by:
+Overpass. The initial experimental 2026-10-24 snapshot completed a build, but
+publication was blocked by:
 
 - **10 validation failures** in the committed Bangkok/normalization suite.
-- **Enrichment losses** when the existing full builder overwrites app data.
+- **Enrichment losses** when the original full builder overwrote app data.
 - **Data-quality and attribution reviews** before any public data refresh.
 
 Evidence: [the committed refresh diff report](../research/bangkok/notes/bangkok-geofabrik-refresh-diff.md)
@@ -56,9 +70,9 @@ into v0.1.0, and silently overwriting historical fixtures.
 
 ## A. Preserve or reapply enrichments
 
-The full builder generates spatial ratings/facts but resets fields supplied
-by separate enrichment pipelines. Add one deterministic post-build merge step
-or explicit ordered stages in `build.py`, and validate the result.
+The original full builder generated spatial ratings/facts but reset fields
+supplied by separate enrichment pipelines. PR #147 added and validated the
+deterministic enrichment stage in `build.py` before output writes.
 
 | Enrichment | Source / output | Fields at risk | Preserved baseline |
 |---|---|---|---|
@@ -71,6 +85,9 @@ snapshot unless an evidence-backed improvement is separately reviewed; the
 merge is covered by tests; source dates/hashes and provenance gaps are recorded.
 
 ## B. Resolve the 10 validation failures
+
+All ten are resolved. The original failures and required remedies below are
+retained as acceptance history; the evidence table records their implementation.
 
 1. **Population snapshot/scope — 8 failures.**
    - `test_committed_population_snapshot_and_scope`: historical crowd raw
@@ -105,8 +122,9 @@ merge is covered by tests; source dates/hashes and provenance gaps are recorded.
   CDLA-Permissive-2.0, Apache-2.0 (Foursquare) and CC0-1.0 (AllThePlaces)
   material; update UI/docs attribution before publishing that refresh.
 - **Source pinning:** record Geofabrik PBF SHA-256, Overture release,
-  Wikidata/Commons revision IDs and WorldPop/flood hashes. Current WD/Commons
-  fetches are live, not revision-pinned.
+  Wikidata/Commons revision IDs and WorldPop/flood hashes. PR #147 records the
+  exact payload hashes/revisions; HTTP acquisition remains live, so exact replay
+  requires the archived payloads.
 - **Station-area simplification:** the coverage fallback is known; confirm
   resulting geometries still match the intended baseline.
 

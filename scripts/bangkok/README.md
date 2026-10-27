@@ -102,10 +102,15 @@ reapplies the pinned tourism/Michelin/legacy-embassy observations before output
 writes. Missing source hashes/joins fail; the standalone
 `uv run scripts/bangkok/apply-enrichments.py` is an idempotent replay.
 
-The **full spatial refresh is not shipped in v0.1.0**. Remediation is implemented
-in a separate data PR; see the [status/evidence](../../docs/DATA_REFRESH_REMEDIATION.md)
-and [complete review](../../research/bangkok/notes/2026-10-26-frozen-refresh.md).
-Historical population/normalization fixtures remain unchanged.
+The **full spatial refresh was excluded from v0.1.0** and merged post-release in
+[PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147) on
+**2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4).
+The refreshed data is now on **main**; the v0.1.0 tag/release remains unchanged.
+All **10 original validation gates are resolved**; see the
+[completed remediation](../../docs/DATA_REFRESH_REMEDIATION.md) and
+[committed evidence note](../../research/bangkok/notes/2026-10-26-frozen-refresh.md).
+Historical population/normalization fixtures remain unchanged. The current
+binary is `grid-1d6ed2ef00c3.bin` (**143,925 bytes**).
 
 For exact frozen-input rebuilds, restore the archived raw payloads and caches:
 

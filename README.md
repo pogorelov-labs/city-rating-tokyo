@@ -22,7 +22,7 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 - **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
 - **Honesty:** safety remains editorial; scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. Evidence density differs by category and level. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
 - **Acquisition code:** [`scripts/bangkok/fetch-geofabrik.py`](scripts/bangkok/fetch-geofabrik.py) fetches OSM from a Geofabrik Thailand PBF without Overpass. The [pipeline guide](scripts/bangkok/README.md) covers this path, other API inputs and offline builds; the Overpass path remains available.
-- **Refresh status:** the full Bangkok spatial refresh is **not shipped in v0.1.0**. It is blocked by 10 validation failures and tourism/Michelin/embassy enrichment losses, plus quality/attribution reviews. The [scoped remediation plan](docs/DATA_REFRESH_REMEDIATION.md) is not implemented; any refresh requires a separate PR.
+- **Refresh status:** **v0.1.0 excluded the full Bangkok spatial refresh**. It merged post-release in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147) on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4), and its data is now on **main**. All 10 validation gates were resolved and tourism/Michelin/embassy facts preserved. See the [frozen-refresh evidence](research/bangkok/notes/2026-10-26-frozen-refresh.md) and [completed remediation](docs/DATA_REFRESH_REMEDIATION.md); the v0.1.0 tag/release remains unchanged.
 
 ## Rating categories (default weights)
 
@@ -78,12 +78,12 @@ Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify*
 ## Data sources (high level)
 
 - **Stations / lines** — based on open railway-station datasets (see `SPEC.md` / `data/stations.json` provenance).
-- **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB for Tokyo; Bangkok combines OSM + **Overture Places**. The new Geofabrik OSM fetch path is code only; the full spatial refresh is excluded.
+- **POI counts, green, gym, vibe inputs** — **OpenStreetMap** via Overpass → NocoDB for Tokyo; Bangkok combines Geofabrik OSM + **Overture Places** in the frozen snapshot merged post-v0.1.0 in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147).
 - **Food / nightlife counts** — **HotPepper** API + OSM.
 - **Passengers** — **MLIT** 国土数値情報 S12, FY2024 (`scripts/scrapers/ingest-mlit-s12.py` → `data/passengers/s12-passengers.json`; see `research/03-crowd.md`). 出典：「国土数値情報（駅別乗降客数データ）」（国土交通省）を加工して作成.
 - **Crime** — 2024 police statistics from 警視庁 (町丁 CSV) and the Kanagawa, Saitama and Chiba prefectural police, with e-Stat population and boundaries (`scripts/scrapers/ingest-crime-open-data.py` → `data/crime/`; sources and attributions in `data/crime/sources.json`, see `research/02-safety.md`).
 - **Rent** — Tokyo **Suumo** scrape to `rent-averages.json`, with **e-Stat** municipal and model fallbacks (see `research/05-rent.md`); Bangkok editorial district/grid estimates and 10 DooAsset station-area estimate proxies.
-- **Bangkok context** — Wikidata / Wikimedia Commons names and credited photos; **WorldPop constrained 2020** district population model; **ThaiFloodRisk** flood inputs; separately added tourism, Michelin and institution facts. Per-source dates/licenses apply; the release date is not a data-refresh date. Additional Overture attribution review is pending before a future refresh.
+- **Bangkok context** — Wikidata / Wikimedia Commons names and credited photos; **WorldPop constrained 2020** district population model; **ThaiFloodRisk** flood inputs; separately added tourism, Michelin and institution facts. Per-source dates/licenses apply; the release date is not a data-refresh date. PR #147 completed the extract-specific Overture attribution review and retained the source-age, Wikimedia replay and legacy embassy provenance limits documented in the [evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md).
 - **~272 “AI-researched” stations** — human-reviewed text + integer ratings preserved in export; pipeline confidence merge for those slugs is **CRTKY-83**.
 
 **Honesty:** “Every station has scores” does not mean every score uses the same evidence density. Tokyo computed **hub commute minutes** use a calibrated geographic/line model; researched entries retain authored values, so these are not timetable routing results (CRTKY-81). See **`CLAUDE.md` → Data readiness & coverage honesty** and **`research/VISION.md`** (critical readiness + backlog tables).
@@ -91,7 +91,7 @@ Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify*
 ## Maintainer docs & task tracking
 
 - [**CHANGELOG.md**](CHANGELOG.md) · [**Release runbook**](docs/RELEASING.md) · [**v0.1.0 notes**](docs/releases/v0.1.0.md)
-- [**Bangkok data-refresh remediation**](docs/DATA_REFRESH_REMEDIATION.md) — scoped, not implemented; separate from this release.
+- [**Bangkok data-refresh remediation**](docs/DATA_REFRESH_REMEDIATION.md) — implemented and merged post-v0.1.0 in PR #147 (2026-10-27).
 - **`CLAUDE.md`** — NocoDB table IDs, formulas, perf invariants, **data readiness** section.
 - **`research/00-overview.md`** — pipeline phase checklist + confidence snapshot.
 - **`research/VISION.md`** — product roadmap + Plane cross-links (**CRTKY-80** … **CRTKY-84**).
