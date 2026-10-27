@@ -58,7 +58,7 @@ jobs:
         # Runs every scripts/test_*.py (pytest.ini testpaths). The ingest tests
         # also check the committed data/ files they produce.
         run: |
-          pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
+          pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pip install -r scripts/requirements-ingest.txt --quiet
           pytest -v
 
@@ -104,7 +104,7 @@ jobs:
           python-version: "3.12"
       - name: Bangkok pipeline tests
         run: |
-          pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
+          pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pytest scripts/bangkok -v
 
   e2e:

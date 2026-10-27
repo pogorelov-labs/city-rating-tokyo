@@ -1,13 +1,13 @@
-# City Rating Tokyo
+# City Rating — Tokyo + Bangkok
 
-Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights across ten categories (food, nightlife, transport, rent, safety, green, gym, vibe, crowd, daily essentials), filter by commute and budget, and open per-station pages with radar chart, ratings breakdown, and optional neighborhood copy.
+Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open detail pages with rating breakdowns, confidence and source information.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
 **Latest release:** [v0.1.1 — Bangkok data refresh](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
 
-**Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and a **200 m grid**, with the BTS / MRT / ARL / SRT Red rail network on top — switch cities from the header; your weights carry over. **EN/JA/RU** across both cities. See [Bangkok](#bangkok-district-layer) below.
+**Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
 ## What it does
 
@@ -58,18 +58,56 @@ app/src/app/                    # Routes: /, /station/[slug], /bangkok, /bangkok
 scripts/bangkok/                # Bangkok fetch + build pipeline (uv), tests
 scripts/                        # Scrapers, compute-ratings.py, export-ratings.py
 research/                       # Source research + VISION roadmap
-CLAUDE.md                       # Pipeline IDs, formulas, data-readiness caveats
+CLAUDE.md                       # Data contracts, formulas, data-readiness caveats
 ```
 
 ## Getting started
 
+Use **Node.js 20 and npm**, matching [CI](.github/workflows/ci.yml). From a fresh
+clone, the map and detail pages use the committed datasets; Python, datastore
+credentials and raw acquisition caches are not required for this preview.
+
 ```bash
 cd app
-npm install
+npm ci
 npm run dev
 ```
 
-Open [localhost:3000](http://localhost:3000).
+Open [localhost:3000](http://localhost:3000). Optional app configuration is
+listed in [app/.env.example](app/.env.example); keep real values in untracked
+local environment files. Service-backed forms need their own authorized
+configuration. See [CONTRIBUTING.md](CONTRIBUTING.md) for checks and invariants.
+
+## Running the data pipelines
+
+Pipeline work is separate from the frontend preview:
+
+- **Tokyo ingest / compute / export:** use Python 3.12 (the CI version).
+  Compute/export need `requests`; [scripts/requirements-ingest.txt](scripts/requirements-ingest.txt)
+  also includes the PDF/shapefile ingest dependencies. Obtain authorized
+  datastore access and the matching table/schema configuration from a maintainer.
+  Set `NOCODB_API_URL` explicitly and supply `NOCODB_API_TOKEN` privately.
+  Legacy helpers have an environment-specific fallback endpoint; a clone does
+  not provision the datastore or make that fallback portable. Source acquisition
+  may additionally require `HOTPEPPER_API_KEY` or other source-specific access.
+  The [Tokyo refresh runbook](research/notes/2026-10-15-hotpepper-resilience-runbook.md)
+  covers the approved source-age policy (`--max-source-age-days=N`), preflight
+  and rollout. Even a live dry run requires datastore access.
+- **Bangkok acquisition / rebuild:** install `uv`; the scripts declare their
+  Python and geospatial dependencies in their script metadata. The [Bangkok
+  pipeline guide](scripts/bangkok/README.md) covers acquisition and cache setup.
+  A frozen replay requires the recorded raw inputs, which are not in a fresh
+  clone. The published JSON and grid are already committed for the app.
+- **MCP development:** the service currently exposes Tokyo. It requires Python
+  3.11 or newer, the shared schema package and a datamart; semantic tools also
+  require the separately generated embeddings. These generated artifacts are
+  not supplied by a fresh clone. See [MCP development](CONTRIBUTING.md#mcp-server-development)
+  and [the MCP guide](mcp/README.md). Pipeline tests and their complete dependencies
+  are defined in [CI](.github/workflows/ci.yml).
+
+Deployment access and credentials are maintained outside this public repository.
+Current coverage and evidence limits are in the [developer guide](CLAUDE.md)
+and [Bangkok overview](research/bangkok/00-overview.md).
 
 ## Deployment
 
@@ -84,7 +122,7 @@ Next.js standalone build — `app/Dockerfile` (build context: `app/`). Productio
 - **Crime** — 2024 police statistics from 警視庁 (町丁 CSV) and the Kanagawa, Saitama and Chiba prefectural police, with e-Stat population and boundaries (`scripts/scrapers/ingest-crime-open-data.py` → `data/crime/`; sources and attributions in `data/crime/sources.json`, see `research/02-safety.md`).
 - **Rent** — Tokyo **Suumo** scrape to `rent-averages.json`, with **e-Stat** municipal and model fallbacks (see `research/05-rent.md`); Bangkok editorial district/grid estimates and 10 DooAsset station-area estimate proxies.
 - **Bangkok context** — Wikidata / Wikimedia Commons names and credited photos; **WorldPop constrained 2020** district population model; **ThaiFloodRisk** flood inputs; separately added tourism, Michelin and institution facts. Per-source dates/licenses apply; the release date is not a data-refresh date. PR #147 completed the extract-specific Overture attribution review and retained the source-age, Wikimedia replay and legacy embassy provenance limits documented in the [evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md).
-- **~272 “AI-researched” stations** — human-reviewed text + integer ratings preserved in export; pipeline confidence merge for those slugs is **CRTKY-83**.
+- **251 “AI-researched” Tokyo entries** — the preserved block in [demo-ratings.ts](app/src/data/demo-ratings.ts), alongside **1,242 computed entries**, covers all **1,493 station slugs**. Pipeline confidence merge for researched entries is **CRTKY-83**; this count describes the committed export, not the completeness of every category.
 
 **Honesty:** “Every station has scores” does not mean every score uses the same evidence density. Tokyo computed **hub commute minutes** use a calibrated geographic/line model; researched entries retain authored values, so these are not timetable routing results (CRTKY-81). See **`CLAUDE.md` → Data readiness & coverage honesty** and **`research/VISION.md`** (critical readiness + backlog tables).
 
@@ -92,9 +130,10 @@ Next.js standalone build — `app/Dockerfile` (build context: `app/`). Productio
 
 - [**CHANGELOG.md**](CHANGELOG.md) · [**Release runbook**](docs/RELEASING.md) · [**v0.1.0 notes**](docs/releases/v0.1.0.md)
 - [**Bangkok data-refresh remediation**](docs/DATA_REFRESH_REMEDIATION.md) — implemented and merged post-v0.1.0 in PR #147 (2026-10-27).
-- **`CLAUDE.md`** — NocoDB table IDs, formulas, perf invariants, **data readiness** section.
-- **`research/00-overview.md`** — pipeline phase checklist + confidence snapshot.
-- **`research/VISION.md`** — product roadmap + Plane cross-links (**CRTKY-80** … **CRTKY-84**).
+- [**CLAUDE.md**](CLAUDE.md) — data contracts, formulas, performance invariants and data readiness.
+- [**research/00-overview.md**](research/00-overview.md) — archived Tokyo research snapshot, with current-status pointers.
+- [**research/bangkok/00-overview.md**](research/bangkok/00-overview.md) — Bangkok levels, sources and honesty notes.
+- [**research/VISION.md**](research/VISION.md) — product roadmap and tracker cross-links.
 - **Plane** project **City Rating Tokyo (CRTKY)** — implementation tickets; epic **CRTKY-80** groups commute, crime export merge, crowd tail.
 
 ## License
