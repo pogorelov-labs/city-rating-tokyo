@@ -26,10 +26,9 @@ function useGridRanking(districts: MapStation[]) {
   const { grid, error } = useBangkokGrid(true);
   const weights = useDeferredValue(useAppStore((s) => s.weights));
   const filters = useCityState((s) => s.filters);
+  const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
   const areas = useSharedAreaList(districts, 'primary');
-  // Preserve the existing panel behavior: the grid map applies the flood
-  // toggle, while this count/list currently does not.
-  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters);
+  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters, hideFloodRisk);
   const hotspots = useGridHotspots(grid, scored, 10, true);
   const ranking = useMemo(() => scored ? { ...scored, hotspots } : null, [scored, hotspots]);
   return { grid, error, ranking };

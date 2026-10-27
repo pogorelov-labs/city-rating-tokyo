@@ -20,25 +20,26 @@ for (const key of Object.keys(weights) as (keyof typeof weights)[]) weights[key]
 const defaults = CITIES.bangkok.defaultFilters;
 
 describe('useScoredGrid', () => {
-  it('shares scoring while preserving the existing map and panel flood behavior', () => {
+  it('shares the same flood mask for map and panel, and separates the unfiltered result', () => {
     const { result } = renderHook(() => {
       const map = useScoredGrid(grid, areas, weights, defaults, defaults, true);
-      const panel = useScoredGrid(grid, areas, weights, defaults, defaults);
-      const panelAgain = useScoredGrid(grid, areas, weights, defaults, defaults);
+      const panel = useScoredGrid(grid, areas, weights, defaults, defaults, true);
+      const unfiltered = useScoredGrid(grid, areas, weights, defaults, defaults);
       const spots = useGridHotspots(grid, panel, 10, true);
-      const spotsAgain = useGridHotspots(grid, panelAgain, 10, true);
-      return { map, panel, panelAgain, spots, spotsAgain };
+      const spotsAgain = useGridHotspots(grid, map, 10, true);
+      return { map, panel, unfiltered, spots, spotsAgain };
     });
-    expect(result.current.panel).toBe(result.current.panelAgain);
+    expect(result.current.map).toBe(result.current.panel);
     expect(result.current.map!.scores).toBe(result.current.panel!.scores);
     expect(result.current.map!.anchors).toBe(result.current.panel!.anchors);
     expect([...result.current.map!.pass]).toEqual([0, 1]);
-    expect([...result.current.panel!.pass]).toEqual([1, 1]);
+    expect([...result.current.panel!.pass]).toEqual([0, 1]);
+    expect([...result.current.unfiltered!.pass]).toEqual([1, 1]);
     expect(result.current.map!.passing.cells).toBe(1);
-    expect(result.current.panel!.passing.cells).toBe(2);
+    expect(result.current.panel!.passing.cells).toBe(1);
+    expect(result.current.unfiltered!.passing.cells).toBe(2);
     expect(result.current.spots).toBe(result.current.spotsAgain);
-    // Adjacent 200 m cells collapse to one 1.5 km-separated hotspot.
-    expect(result.current.spots).toEqual([0]);
+    expect(result.current.spots).toEqual([1]);
   });
 
   it('reuses scores across filter changes and recomputes the passing mask', () => {
