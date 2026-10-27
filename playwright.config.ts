@@ -8,9 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
  * the repo root, `npm run test:e2e` starts the dev server, runs the smoke
  * suite, and tears the server down.
  *
- * These tests are intended to run LOCALLY before deploying — they are not
- * wired into the CI workflow because spinning up the dev server on every PR
- * is heavier than the value the smoke check provides. See e2e/README.md.
+ * The map interaction spec also runs in an advisory CI job. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
 

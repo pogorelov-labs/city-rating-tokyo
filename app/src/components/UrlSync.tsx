@@ -35,10 +35,15 @@ export default function UrlSync() {
   // On store change: store → URL (debounced)
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
+    let lastUrl = buildShareUrl(selectUrlView(useAppStore.getState(), city), city);
     const unsub = useAppStore.subscribe((state) => {
+      const url = buildShareUrl(selectUrlView(state, city), city);
+      // Hover and animation state are not in share links. Replacing history
+      // for those changes can interrupt a pending detail-page navigation.
+      if (url === lastUrl) return;
+      lastUrl = url;
       clearTimeout(timer);
       timer = setTimeout(() => {
-        const url = buildShareUrl(selectUrlView(state, city), city);
         window.history.replaceState(null, '', url);
       }, 300);
     });

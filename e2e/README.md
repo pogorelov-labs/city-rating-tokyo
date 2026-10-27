@@ -42,16 +42,18 @@ key piece of content:
 - Station-area page `/bangkok/station/asok` — heading, next stops, translated radar legend
 - District page radar legend is real copy, not a message key
 - City switch — weights carry over from Tokyo, yen filters do not
+- Canvas marker selection, desktop popup and district navigation; touch zoom
+  retains the selected station at tablet width (`map-interactions.spec.ts`).
+  At phone width the selected station card currently covers the zoom control;
+  this test does not claim that control is accessible there.
 
 Intentionally **not** covered here:
 
 - **Visual regression** — handled by the `flyto-visual-test` skill.
 - **Performance capture** — handled by the `perf-capture` skill.
 
-## Why not CI?
+## CI
 
-These tests require a running dev server, which is heavier than the value
-the smoke check adds on every push. They are intended as a **pre-deploy
-gate**: run `npm run test:e2e` locally before shipping. If we later want
-them in CI we can add a dedicated workflow (separate from the existing
-lint/build job) that brings the server up inside the runner.
+The advisory `e2e` job installs Chromium and runs `map-interactions.spec.ts`
+against a fresh dev server. It is non-blocking while browser stability is
+established; the existing build, schema, MCP and Bangkok jobs remain gating.
