@@ -58,7 +58,7 @@ jobs:
         # Runs every scripts/test_*.py (pytest.ini testpaths). The ingest tests
         # also check the committed data/ files they produce.
         run: |
-          pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
+          pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pip install -r scripts/requirements-ingest.txt --quiet
           pytest -v
 
@@ -85,24 +85,10 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/packages/schema/python
         run: ruff check src/
-      - name: MCP import check
-        # This confirms the editable MCP install imports cleanly (the schema
-        # package resolves, scoring.py loads, etc.). It is NOT a test suite —
-        # no MCP unit tests exist yet. The cross-language parity test
-        # (scripts/test_schema_parity.py) lives outside this job's working
-        # directory and runs only locally. Pytest exits 5 when no tests are
-        # collected; treat that (and 0) as success. GitHub's default shell is
-        # `bash -e`, which aborts BEFORE the exit-code check can run, so we
-        # disable -e for this step.
+      - name: MCP unit tests
         env:
           PYTHONPATH: ${{ github.workspace }}/packages/schema/python
-        shell: bash
-        run: |
-          set +e
-          pytest
-          code=$?
-          if [ "$code" -ne 0 ] && [ "$code" -ne 5 ]; then exit "$code"; fi
-          exit 0
+        run: pytest tests/ -q
       # NOTE: mcp/scripts/smoke-test.py is a deploy-time / manual check —
       # it requires data/station-datamart.json, data/embeddings.npz, and
       # loads the 2.2 GB fastembed model at runtime. Not runnable in CI.
@@ -118,5 +104,5 @@ jobs:
           python-version: "3.12"
       - name: Bangkok pipeline tests
         run: |
-          pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
+          pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pytest scripts/bangkok -v
