@@ -99,7 +99,8 @@ Limits/follow-ups: What was not checked or remains blocked; linked tail, owner/a
 Identify skipped, failed, not-required and unverified checks explicitly. Only
 claim production behavior when it was observed; a docs-only task can record
 production checks as not required. CI passing, a merge, a published release and
-an operator activation are separate facts. Keep technical evidence in the PR
+an operator activation are separate facts. Read the current CI workflow and
+record required and advisory check results separately. Keep technical evidence in the PR
 or tracker record and apply the public-copy rules to repository documents.
 
 ### Scope splits and blocked follow-ups
@@ -150,7 +151,7 @@ Scrapers run in a private operational environment. They are incremental and safe
 - **ESLint** (`cd app && npm run lint`): Next.js + TypeScript + React hooks / React Compiler rules. Runs in CI's `build` job; errors fail it, warnings don't
 - **Vitest** (`cd app && npm test`): scoring pure functions, URL state round-trip, dealbreaker filtering
 - **pytest** (`pytest` from repo root): `compute-ratings.py` normalization/caps, cross-language schema parity
-- **Playwright** (e2e): planned; not yet wired. The `.claude/skills/` (flyto-visual-test, perf-capture, prod-smoke-test) document manual verification flows.
+- **Playwright**: the advisory `e2e` CI job runs the browser smoke suite. See [e2e/README.md](e2e/README.md) for local setup and the current CI selection.
 
 ## MCP server development
 
