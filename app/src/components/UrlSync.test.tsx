@@ -63,6 +63,20 @@ describe('UrlSync browser/store contract', () => {
     expect(new URLSearchParams(window.location.search).get('s')).toBe('beta');
   });
 
+  it('ignores hover changes without delaying a pending shareable selection', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    act(() => getCityActions('tokyo').setHoveredStation('alpha'));
+    act(() => vi.advanceTimersByTime(500));
+    expect(replace).not.toHaveBeenCalled();
+    act(() => getCityActions('tokyo').setSelectedStation('alpha'));
+    act(() => vi.advanceTimersByTime(200));
+    act(() => getCityActions('tokyo').setHoveredStation(null));
+    act(() => vi.advanceTimersByTime(100));
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('s')).toBe('alpha');
+  });
+
   it('unmount cancels pending writeback and unsubscribes', () => {
     const replace = vi.spyOn(window.history, 'replaceState');
     const { unmount } = mount();
