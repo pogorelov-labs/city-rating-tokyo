@@ -106,3 +106,22 @@ jobs:
         run: |
           pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" --quiet
           pytest scripts/bangkok -v
+
+  e2e:
+    # Advisory while browser and tile infrastructure stability is established.
+    continue-on-error: true
+    timeout-minutes: 12
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            app/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix app
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e -- e2e/map-interactions.spec.ts
