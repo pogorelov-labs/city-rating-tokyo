@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useMemo, useDeferredValue, useRef, useState, useCallback } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
 import {
   AttributionControl,
   MapContainer,
@@ -18,16 +18,14 @@ import { MapStation } from '@/lib/types';
 import { stationDisplayName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
 import {
-  calculateWeightedScore,
   compositeToColor,
-  computeCompositeAnchors,
   scoreToColor,
   ColorDimension,
-  applyDealbreakers,
 } from '@/lib/scoring';
+import { useScoredAreas } from '@/lib/scoring-react';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
-import { areaPath, formatRentShort, hasActiveFilters } from '@/lib/cities';
+import { areaPath, formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
 import { Link } from '@/i18n/navigation';
@@ -183,14 +181,12 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const city = useCity();
-  const weights = useAppStore((s) => s.weights);
   const selectedStation = useCityState((s) => s.selectedStation);
   const hoveredStation = useCityState((s) => s.hoveredStation);
   const { setSelectedStation, setHoveredStation, addCompareStation, removeCompareStation } = useCityActions();
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
   const compareStations = useCityState((s) => s.compareStations);
-  const filters = useCityState((s) => s.filters);
 
   // Guard: hide SVG overlays (halo, top-5 pulse) during flyTo to prevent
   // dual-renderer desync — the SVG layer's coordinate transform lags behind
@@ -209,20 +205,12 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
     // 50ms delay lets the canvas opacity fade-in complete before the popup renders.
     setTimeout(() => { selectedMarkerRef.current?.openPopup(); }, 50);
   }, [setIsFlying]);
-  const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
-  const hideHighSeismic = useCityState((s) => s.hideHighSeismic);
-  const hideAdultZones = useCityState((s) => s.hideAdultZones);
-
   const isTouch = useIsTouch();
 
   // Touch radius bump — meets WCAG 44px minimum at zoom 12+
   const TOUCH_RADIUS_BUMP = 4;
 
-  // Scoring 1493 stations on every drag frame is expensive. Use a deferred
-  // copy of the weights so React can skip stale recomputes while the user
-  // is still dragging. The slider UI itself (in FilterPanel) reads the live
-  // value so the handle stays glued to the pointer.
-  const deferredWeights = useDeferredValue(weights);
+  const { scored: scoredStations, anchors: compositeAnchors, passing: visibleStations } = useScoredAreas(stations, 'primary');
 
   // Delay clearing hover when the pointer leaves the circle so moving toward
   // the Leaflet tooltip (above the marker) does not flicker the highlight.
@@ -230,36 +218,6 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   useEffect(() => {
     return () => clearTimeout(mapHoverClearRef.current);
   }, []);
-
-  const scoredStations = useMemo(() => {
-    return stations.map((s) => ({
-      ...s,
-      score: s.ratings ? calculateWeightedScore(s.ratings, deferredWeights) : null,
-    }));
-  }, [stations, deferredWeights]);
-
-  // Percentile anchors for the diverging composite palette. Recomputed
-  // as the user changes weights so the akane↔kon range always stretches
-  // across the actual observed distribution, not a fixed 1-10.
-  // Use deferredWeights so the (expensive) sort over 1493 scores stays
-  // in lockstep with the deferred score map above — otherwise colors
-  // would be computed against anchors that disagree with the scores
-  // they color, producing a brief mid-drag flash.
-  const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, deferredWeights),
-    [stations, deferredWeights],
-  );
-
-  // Dealbreaker filters: rent, commute, category mins, environment safety
-  // Fast path when nothing is set. Uses the same `hasActiveFilters` check as
-  // FilterPanel so the map and the match counter always agree (the old inline
-  // check forgot `hasLiveCamera`, so that filter alone never hid a marker).
-  const visibleStations = useMemo(() => {
-    if (!hasActiveFilters(city.id, filters, { hideFloodRisk, hideHighSeismic, hideAdultZones })) {
-      return scoredStations.map((s) => ({ ...s, rentUnknown: false }));
-    }
-    return applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters);
-  }, [scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city]);
 
   // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
   // Also used (reversed) for top-5 pulse — one sort instead of two.

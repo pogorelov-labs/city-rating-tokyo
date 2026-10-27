@@ -286,8 +286,9 @@ export function scoreCells(grid: BangkokGrid, weights: WeightConfig, districts: 
 
 /**
  * p5 / p50 / p95 of the cell scores by cumulative resident weight — the grid
- * counterpart of `computeCompositeAnchors`. Scores come in 0.1 steps, so a
- * 101-bucket histogram replaces sorting.
+ * counterpart of `computeCompositeAnchors`. Unlike the named-area floor index,
+ * this picks the first bucket whose cumulative weight reaches the percentile.
+ * Scores come in 0.1 steps, so a 101-bucket histogram replaces sorting.
  */
 export function gridAnchors(grid: BangkokGrid, scores: Float32Array): PercentileAnchors {
   const hist = new Float64Array(101);

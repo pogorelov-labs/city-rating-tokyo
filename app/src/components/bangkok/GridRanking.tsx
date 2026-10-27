@@ -4,74 +4,34 @@ import { useDeferredValue, useMemo } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import railData from '@/data/bangkok/rail.json';
 import type { Locale } from '@/i18n/routing';
-import type { FilterState, MapStation, RailStation, StationRatings, WeightConfig } from '@/lib/types';
+import type { MapStation, RailStation } from '@/lib/types';
 import { useAppStore, useCityActions, useCityState } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { useAreaLists } from '@/lib/area-lists';
 import { cellKey, stationAreaKey } from '@/lib/area-key';
-import { compositeToColor, type PercentileAnchors } from '@/lib/scoring';
+import { compositeToColor } from '@/lib/scoring';
+import { useGridHotspots, useScoredGrid } from '@/lib/scoring-grid-react';
+import { useSharedAreaList } from '@/lib/scoring-react';
 import {
   cellInfo,
-  countPassing,
-  gridAnchors,
-  gridHotspots,
   NEAR_STATION_M,
-  passMask,
-  scoreCells,
   useBangkokGrid,
-  type BangkokGrid,
-  type GridDistrict,
 } from '@/lib/bangkok-grid';
 import { stationPrimaryName } from '@/lib/station-name';
 
 const STATION_BY_ID = new Map((railData as unknown as { stations: RailStation[] }).stations.map((s) => [s.id, s]));
-
-interface Ranking {
-  districts: GridDistrict[];
-  scores: Float32Array;
-  anchors: PercentileAnchors;
-  pass: Uint8Array;
-  passing: { cells: number; km2: number };
-  hotspots: number[];
-}
-
-// The match counter and the list render in two places of the side panel;
-// both ask for the same inputs in one render, so keep the last result.
-let last: { grid: BangkokGrid; weights: WeightConfig; filters: FilterState; districts: MapStation[]; value: Ranking } | null =
-  null;
-
-function rank(grid: BangkokGrid, weights: WeightConfig, filters: FilterState, defaults: FilterState, districts: MapStation[]) {
-  if (last && last.grid === grid && last.weights === weights && last.filters === filters && last.districts === districts) {
-    return last.value;
-  }
-  const bySlug = new Map(districts.map((d) => [d.slug, d]));
-  const gridDistricts = grid.header.districts.map((slug) => ({
-    ratings: (bySlug.get(slug)?.ratings ?? {}) as StationRatings,
-    rent_1k: bySlug.get(slug)?.rent_1k ?? null,
-  }));
-  const scores = scoreCells(grid, weights, gridDistricts);
-  const pass = passMask(grid, filters, defaults, gridDistricts);
-  const value: Ranking = {
-    districts: gridDistricts,
-    scores,
-    anchors: gridAnchors(grid, scores),
-    pass,
-    passing: countPassing(grid, pass),
-    hotspots: gridHotspots(grid, scores, pass, 10),
-  };
-  last = { grid, weights, filters, districts, value };
-  return value;
-}
 
 function useGridRanking(districts: MapStation[]) {
   const city = useCity();
   const { grid, error } = useBangkokGrid(true);
   const weights = useDeferredValue(useAppStore((s) => s.weights));
   const filters = useCityState((s) => s.filters);
-  const ranking = useMemo(
-    () => (grid ? rank(grid, weights, filters, city.defaultFilters, districts) : null),
-    [grid, weights, filters, city, districts],
-  );
+  const areas = useSharedAreaList(districts, 'primary');
+  // Preserve the existing panel behavior: the grid map applies the flood
+  // toggle, while this count/list currently does not.
+  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters);
+  const hotspots = useGridHotspots(grid, scored, 10, true);
+  const ranking = useMemo(() => scored ? { ...scored, hotspots } : null, [scored, hotspots]);
   return { grid, error, ranking };
 }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useDeferredValue } from 'react';
+import { useState, useMemo } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -14,15 +14,14 @@ import { useTranslations, useLocale } from 'next-intl';
 import { MapStation, RATING_LABELS, StationRatings } from '@/lib/types';
 import { stationPrimaryName } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
-import { useAppStore } from '@/lib/store';
+import { useCityState } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { areaKind } from '@/lib/area-key';
 import {
-  calculateWeightedScore,
   compositeToColor,
-  computeCompositeAnchors,
   getAxisValue,
 } from '@/lib/scoring';
+import { useScoredAreas } from '@/lib/scoring-react';
 
 interface Props {
   stations: MapStation[];
@@ -39,8 +38,10 @@ export default function ScatterPlotExplorer({ stations }: Props) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const city = useCity();
-  const weights = useAppStore((s) => s.weights);
-  const deferredWeights = useDeferredValue(weights);
+  const level = useCityState((s) => s.level);
+  const { scored, anchors: compositeAnchors } = useScoredAreas(
+    stations, city.unit === 'district' && level === 'station' ? 'station' : 'primary',
+  );
   const [xAxis, setXAxis] = useState('rent');
   const [yAxis, setYAxis] = useState('food');
 
@@ -53,26 +54,18 @@ export default function ScatterPlotExplorer({ stations }: Props) {
   const xLabel = axisLabel(xAxis);
   const yLabel = axisLabel(yAxis);
 
-  // Defer the anchors too — sorting 1493 scores fires on every weight
-  // change and should track the deferred score computation below so
-  // colors and points stay in sync mid-drag.
-  const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(stations, deferredWeights),
-    [stations, deferredWeights],
-  );
-
   const data = useMemo(() => {
-    return stations
+    return scored
       .filter((s) => s.ratings)
       .map((s) => {
         const x = getAxisValue(s, xAxis);
         const y = getAxisValue(s, yAxis);
         if (x === null || y === null) return null;
-        const score = calculateWeightedScore(s.ratings!, deferredWeights);
+        const score = s.score!;
         return { name: stationPrimaryName(s, locale), x, y, score, fill: compositeToColor(score, compositeAnchors) };
       })
       .filter(Boolean) as { name: string; x: number; y: number; score: number; fill: string }[];
-  }, [stations, deferredWeights, xAxis, yAxis, compositeAnchors, locale]);
+  }, [scored, xAxis, yAxis, compositeAnchors, locale]);
 
   return (
     <div>

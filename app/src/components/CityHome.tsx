@@ -12,6 +12,7 @@ import LocaleSwitcher from '@/components/LocaleSwitcher';
 import FeedbackWidget from '@/components/FeedbackWidget';
 import CitySwitcher from '@/components/CitySwitcher';
 import { AreaListsProvider } from '@/lib/area-lists';
+import { ScoredAreasProvider } from '@/lib/scoring-react';
 
 interface Props {
   city: CityId;
@@ -84,11 +85,13 @@ export default async function CityHome({ city, stations, stationAreas, thumbnail
 
   return (
     <CityProvider city={city}>
-      {stationAreas ? (
-        <AreaListsProvider lists={{ district: stations, station: stationAreas }}>{page}</AreaListsProvider>
-      ) : (
-        page
-      )}
+      <ScoredAreasProvider primaryAreas={stations} stationAreas={stationAreas}>
+        {stationAreas ? (
+          <AreaListsProvider lists={{ district: stations, station: stationAreas }}>{page}</AreaListsProvider>
+        ) : (
+          page
+        )}
+      </ScoredAreasProvider>
     </CityProvider>
   );
 }

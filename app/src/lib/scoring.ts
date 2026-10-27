@@ -238,11 +238,18 @@ export function computeCompositeAnchors<
   for (const s of stations) {
     if (s.ratings) scores.push(calculateWeightedScore(s.ratings, weights));
   }
+  return computeScoreAnchors(scores);
+}
+
+/** Named-area percentile anchors for scores already calculated by the UI. */
+export function computeScoreAnchors(scores: readonly number[]): PercentileAnchors {
   if (scores.length === 0) return { p5: 1, p50: 5.5, p95: 10 };
-  scores.sort((a, b) => a - b);
-  const n = scores.length;
+  const sorted = [...scores].sort((a, b) => a - b);
+  const n = sorted.length;
+  // Named areas use the floor-indexed observation; the resident-weighted
+  // Bangkok grid instead picks the first cumulative bucket at the percentile.
   const pick = (pct: number) =>
-    scores[Math.min(n - 1, Math.max(0, Math.floor(n * pct)))];
+    sorted[Math.min(n - 1, Math.max(0, Math.floor(n * pct)))];
   return { p5: pick(0.05), p50: pick(0.5), p95: pick(0.95) };
 }
 
