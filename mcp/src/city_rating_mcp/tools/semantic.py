@@ -10,6 +10,11 @@ from ..scoring import DEFAULT_WEIGHTS, composite_score, passes_dealbreakers
 from ..views import search_row
 
 
+def _limit(limit: int) -> int:
+    """Keep each public semantic tool within its documented result bounds."""
+    return max(1, min(limit, 50))
+
+
 def semantic_search(
     dm: Datamart,
     es: EmbeddingStore,
@@ -28,6 +33,7 @@ def semantic_search(
     """
     if not query or not query.strip():
         raise ValueError("query is empty")
+    limit = _limit(limit)
     qvec = es.embed_query(query)
     hits = es.search(qvec, locale=locale, field=field, limit=limit)
     out = []
@@ -51,6 +57,7 @@ def find_similar(
     limit: int = 10,
 ) -> dict[str, Any]:
     """Stations most semantically similar to `slug` based on description vectors."""
+    limit = _limit(limit)
     if dm.get(slug) is None:
         raise ValueError(f"Station '{slug}' not found")
     qvec = es.aggregate_vector(slug, locale)
@@ -112,6 +119,7 @@ def recommend(
     if not 0 <= hybrid_alpha <= 1:
         raise ValueError("hybrid_alpha must be in [0, 1]")
 
+    limit = _limit(limit)
     w = {**DEFAULT_WEIGHTS, **(weights or {})}
     qvec = es.embed_query(query)
 

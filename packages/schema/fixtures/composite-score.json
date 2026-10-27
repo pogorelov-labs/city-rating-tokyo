@@ -1,0 +1,14 @@
+[
+  {
+    "name": "weighted half rounds like the frontend",
+    "ratings": {"transport": 5, "rent": 5, "daily_essentials": 5, "safety": 9, "food": 8, "green": 5, "gym_sports": 5, "vibe": 5, "nightlife": 5, "crowd": 5},
+    "weights": {"transport": 0, "rent": 0, "daily_essentials": 0, "safety": 1, "food": 3, "green": 0, "gym_sports": 0, "vibe": 0, "nightlife": 0, "crowd": 0},
+    "expected": 8.3
+  },
+  {
+    "name": "all zero weights",
+    "ratings": {"transport": 5, "rent": 5, "daily_essentials": 5, "safety": 9, "food": 8, "green": 5, "gym_sports": 5, "vibe": 5, "nightlife": 5, "crowd": 5},
+    "weights": {"transport": 0, "rent": 0, "daily_essentials": 0, "safety": 0, "food": 0, "green": 0, "gym_sports": 0, "vibe": 0, "nightlife": 0, "crowd": 0},
+    "expected": 0
+  }
+]
