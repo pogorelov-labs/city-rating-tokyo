@@ -177,15 +177,13 @@ or superseded release in its notes. Do not rerun data pipelines as a rollback.
 
 ## Data refresh separation
 
-The [Bangkok remediation plan](DATA_REFRESH_REMEDIATION.md) is **scoped, not
-implemented**. The Geofabrik fetch code is available, but the full refresh is
-excluded from v0.1.0: 10 validation failures, tourism/Michelin/embassy losses,
-and quality/attribution reviews remain. A separate data-refresh PR must freeze
-inputs, preserve enrichments, resolve the gates with deliberate new baselines,
-review source rights/attribution, and provide reproducibility and visual QA
-evidence. Do not overwrite historical fixtures to make a refresh pass. Update
-the changelog only after that PR is accepted; never fold regenerated data into
-a code/docs release.
+The [Bangkok remediation record](DATA_REFRESH_REMEDIATION.md) documents the
+completed refresh, merged separately after v0.1.0 and packaged by v0.1.1. The
+v0.1.0 tag and release body remain unchanged. Future data-refresh PRs must freeze
+inputs, preserve enrichments, validate deliberate new baselines, review source
+rights/attribution, and provide reproducibility and visual evidence. Historical
+fixtures remain historical. Update the changelog after the data PR is accepted;
+never fold regenerated data into a code/docs release.
 
 ## Release checklist
 

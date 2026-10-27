@@ -4,7 +4,7 @@ A short guide for humans and AI agents working on this codebase. Read this befor
 
 ## Architecture in one paragraph
 
-1493 Tokyo train stations, 10 rating categories, 3 locales (EN/JA/RU), ~4493 SSG pages. **Next.js 16** frontend (`app/`) renders static pages at build time from `app/src/data/*.json` + `demo-ratings.ts`. A **Python scraper pipeline** (`scripts/`) writes to **NocoDB** (SQLite-backed); `compute-ratings.py` normalizes and writes `computed_ratings`; `export-ratings.py` generates `demo-ratings.ts`. A **FastMCP server** (`mcp/`) exposes the dataset to AI clients via a datamart JSON + semantic search at `city-rating.pogorelov.dev/mcp`. Production deployment is automated from `main`; deployment details are maintained outside this public repository.
+City Rating covers **1,493 Greater Tokyo stations** and Bangkok's **50 districts, 133 station areas and 39,149 grid cells** at **200 m**, with **179 rail stations / 10 lines**. Both cities share **10 rating categories** and **EN/JA/RU**. The Next.js frontend (`app/`) renders from committed JSON and `demo-ratings.ts`. Tokyo's Python pipeline (`scripts/`) reads/writes the configured datastore; Bangkok has a separate acquisition/offline-build pipeline (`scripts/bangkok/`). The MCP service (`mcp/`) currently exposes Tokyo through a datamart and semantic search. See [fresh-clone setup and prerequisites](README.md#getting-started). Production deployment is automated from `main`; deployment details are maintained outside this public repository.
 
 ## The three scoring copies (and the schema package)
 
@@ -31,7 +31,7 @@ The shared constants (`RENT_FLOOR`, `RENT_CEILING`, `RATING_KEYS`, `DEFAULT_WEIG
 
 7. **CI status check is named `build`.** The required check on `main` is `build` (the job name in `ci.yml`). If you rename the job or restructure the workflow, you MUST register the new check name in GitHub branch protection before merging, or every PR will be blocked.
 
-8. **`main` deploys to production on merge.** Production deployment is automated from `main`. Every merge triggers a production build of a 4493-page site. Do not merge without local verification.
+8. **`main` deploys to production on merge.** Production deployment is automated from `main`. Every merge triggers a production build of both cities' pages. Verify the scope before merging; page totals are build output, not a fixed project invariant.
 
 ## URL state backcompat
 
@@ -57,11 +57,11 @@ Do not "improve" this sniff to be smarter — old shared URLs depend on the exac
 
 Follow the [release runbook](docs/RELEASING.md): update the changelog and release
 notes, pass `build`, `schema`, `mcp` and `bangkok` on both the PR and main merge
-commit, then publish an annotated version tag and GitHub release. The first
-release is v0.1.0; no package version bump is needed. Data refreshes require a
-separate PR and must not be mixed into a code/docs release. See the
-[scoped Bangkok remediation plan](docs/DATA_REFRESH_REMEDIATION.md) for the
-unshipped full spatial refresh.
+commit, then publish an annotated version tag and GitHub release when release
+publication is authorized. v0.1.0 was the first release; v0.1.1 packages the
+separately merged Bangkok refresh. Release version bumps update the app package
+and lockfile together. Data refreshes require a separate PR; code/docs work
+does not imply regeneration. See the [completed Bangkok remediation record](docs/DATA_REFRESH_REMEDIATION.md).
 
 ## Pipeline refresh workflow
 
@@ -89,10 +89,13 @@ Scrapers run in a private operational environment. They are incremental and safe
 
 ## MCP server development
 
+Use Python 3.11 or newer. The shared schema must be on `PYTHONPATH`, as in CI.
+Run these commands from the repository root:
+
 ```bash
 cd mcp && pip install -e ".[dev]"
 ruff check src/
-pytest
+PYTHONPATH=../packages/schema/python pytest
 
 # Smoke test (requires datamart + embeddings — deploy-time check, not CI)
 python scripts/smoke-test.py

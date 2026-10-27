@@ -1,6 +1,22 @@
-# Rating Data Research — Overview
+# Tokyo Rating Data Research — Historical Snapshot
 
-Last updated: 2026-04-13
+Archived research status: **2026-04-13**. Current-status pointers checked
+**2026-10-28**. The research, coverage percentages, done/pending labels and
+production observations below are historical claims, not the v0.1.1 inventory.
+
+## Current project pointers
+
+- [README](../README.md) — two-city overview and fresh-clone prerequisites.
+- [Developer guide](../CLAUDE.md) — current data contracts and coverage honesty.
+- [Bangkok overview](bangkok/00-overview.md) — levels, sources and limitations.
+
+The committed Tokyo export has **1,493 station slugs**: **251 researched** and
+**1,242 computed** entries in [demo-ratings.ts](../app/src/data/demo-ratings.ts).
+Bangkok contains **50 districts, 133 station areas, 179 rail stations / 10 lines
+and 39,149 grid cells** at **200 m**. Recheck the committed datasets when these
+inventories change; the April tables below are not a live datastore audit.
+
+## Archived research and implementation notes
 
 ## Goal
 Replace heuristic ratings (distance-from-center formula) with data-driven scores backed by real scraped data for 1493 Greater Tokyo stations.
@@ -21,23 +37,23 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 - **transport**: line_count, 100% coverage ✅
 - **gym_sports**: OSM gym_count, 89% coverage ✅
 
-## Data in NocoDB (city-rating-db) — as of 2026-04-12
+## Historical datastore inventory — as of 2026-04-12
 
-| Table | ID | Records | Coverage | Source |
-|-------|----|---------|----------|--------|
-| osm_pois | mnnuqtldvt4jxlj | 1398 | 94% | Overpass API |
-| hotpepper | mfk9j2qoj2bkeoo | 1493 | 100% | HotPepper API (+midnight_count column) |
-| osm_extended | mrpqu8o796e6xzk | 1467 | 98% | Overpass (karaoke, cultural venues, pedestrian, hostels) |
-| station_crime | mxwixub7d0q5i00 | 615 | Tokyo 100% | Keishicho ArcGIS point-in-polygon |
-| crime_stats | mxitpnomlom3j3q | 91 | legacy | Hardcoded ward-level |
-| passenger_counts | m36bbxcv8t0asur | 1409 | 94% | MLIT S12 + hardcoded |
-| station_wards | m74rdmspn3trrqc | 1493 | 100% | Nominatim reverse geocoding |
-| hostels | ms9awzjv9j6suh7 | 3 | test | Overpass (superseded by osm_extended.hostel_count) |
-| computed_ratings | mkp046vo42kj55w | 1493 | 100% | Output of compute-ratings.py + confidence/sources/data_date |
-| osm_livability | m3vasnsm4y09xez | 1493 | **100%** | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
-| station_elevation | mkrugzx8z62hli4 | 1493 | **100%** | Open-Elevation API (bulk POST). Range: -2m to 741m |
-| station_seismic | mhtnqvmi1kwbth9 | 1493 | **100%** | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
-| rent (file) | — | 274 | 18% | Suumo scrape (app/src/data/rent-averages.json) |
+| Table | Records | Coverage | Source |
+|-------|---------|----------|--------|
+| osm_pois | 1398 | 94% | Overpass API |
+| hotpepper | 1493 | 100% | HotPepper API (+midnight_count column) |
+| osm_extended | 1467 | 98% | Overpass (karaoke, cultural venues, pedestrian, hostels) |
+| station_crime | 615 | Tokyo 100% | Keishicho ArcGIS point-in-polygon |
+| crime_stats | 91 | legacy | Hardcoded ward-level |
+| passenger_counts | 1409 | 94% | MLIT S12 + hardcoded |
+| station_wards | 1493 | 100% | Nominatim reverse geocoding |
+| hostels | 3 | test | Overpass (superseded by osm_extended.hostel_count) |
+| computed_ratings | 1493 | 100% | Output of compute-ratings.py + confidence/sources/data_date |
+| osm_livability | 1493 | **100%** | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
+| station_elevation | 1493 | **100%** | Open-Elevation API (bulk POST). Range: -2m to 741m |
+| station_seismic | 1493 | **100%** | J-SHIS Y2024 (prob intensity ≥6.0/5.5/5.0 in 30yr, ground velocity) |
+| rent (file) | 274 | 18% | Suumo scrape (app/src/data/rent-averages.json) |
 
 ## Implementation Progress
 
@@ -68,7 +84,7 @@ Replace heuristic ratings (distance-from-center formula) with data-driven scores
 | H1 | Station elevation (flood risk signal) | ✅ done (1493/1493) | Open-Elevation API, CRTKY-85 |
 | H2 | Seismic hazard (earthquake risk) | ✅ done (1493/1493) | J-SHIS Y2024, CRTKY-86 |
 | H3 | Daily essentials (livability) | ✅ done (1493/1493) | Overpass (9 categories), CRTKY-87 |
-| H4 | Station images (health check) | ✅ done (0 broken / 8963 URLs) | img.pogorelov.dev HEAD check |
+| H4 | Station images (health check) | ✅ done (0 broken / 8963 URLs) | Historical image URL health check |
 | H5 | Green area (sqm geometry) | ⏳ queued (after H3) | Overpass `out geom`, CRTKY-42 |
 
 **Транспорт / быт (не в таблице фаз A–G):** ✅ **CRTKY-81 done** — калиброванная модель (MAE 5.5 мин) для всех 1493 станций, `data/transit-times.json`. **Last train** — только placeholder в UI (**CRTKY-56**). Расширение **rent** — **CRTKY-43** + `research/05-rent.md`. Хвост пассажиров / обновление MLIT FY — **CRTKY-84**. Полный роадмап: **`research/VISION.md`**.
@@ -82,7 +98,7 @@ Before betting on **commercial** transit or rent APIs: inventory **ODPT**, **GTF
 - **Row coverage ≠ signal quality:** all 1493 slugs get scores, but rent/safety/crowd use different geographic and source depth (see `CLAUDE.md` **Data readiness & coverage honesty**).
 - **`strong` counts:** green and vibe can show **0 strong** while OSM data exists — confidence reflects **compute rules**, not “plenty of parks on the map.”
 - **Hub minutes:** until **CRTKY-81**, treat **Hubs** chips as **non-routing** for data-driven rows.
-- **AI slugs (~272 with `description`):** ratings are editorial; pipeline `confidence` merge is **CRTKY-83** — see `CLAUDE.md` + `VISION.md` §3.1 gap text.
+- **AI slugs:** historical coverage claims here are superseded by the current committed export inventory above and the [developer guide](../CLAUDE.md).
 
 ## Production Status (2026-04-07)
 
