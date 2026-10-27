@@ -7,6 +7,7 @@
  * stay in sync (cross-language parity is asserted in scripts/test_schema_parity.py).
  */
 import { describe, expect, it } from 'vitest';
+import compositeCases from '../../../../packages/schema/fixtures/composite-score.json';
 
 import {
   applyDealbreakers,
@@ -86,6 +87,9 @@ describe('rentToAffordability', () => {
 });
 
 describe('calculateWeightedScore', () => {
+  it.each(compositeCases)('$name matches the shared MCP fixture', ({ ratings, weights, expected }) => {
+    expect(calculateWeightedScore(ratings, weights)).toBe(expected);
+  });
   it('returns the plain average when all weights are equal', () => {
     const weights: WeightConfig = {
       transport: 1, rent: 1, daily_essentials: 1, safety: 1, food: 1,
