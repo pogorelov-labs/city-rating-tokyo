@@ -47,6 +47,26 @@ Do **not** equate “every station has a number” with “every number is equal
 
 **Docs to keep aligned:** [CHANGELOG.md](CHANGELOG.md), [docs/RELEASING.md](docs/RELEASING.md), [docs/DATA_REFRESH_REMEDIATION.md](docs/DATA_REFRESH_REMEDIATION.md), `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, `research/bangkok/00-overview.md`, `research/bangkok/backlog.md` (CRTKY-130 subtree map), this file, **Plane CRTKY-80** subtree (81–84), **CRTKY-116** subtree (117–119, livecams) and **CRTKY-130** subtree (131–153, Bangkok follow-ups + discovery).
 
+## Ticket workflow and verification
+
+Every implementation ticket needs a problem, context/accepted scope, explicit
+**Done when:** criteria and a verification plan before work starts. Keep the
+canonical description current when an owner-approved scope decision changes
+those criteria. Use the [ticket and verification templates](CONTRIBUTING.md#tickets-and-verification).
+
+Before marking Done, add a verification comment naming the shipped scope,
+tested PR/commit, checks actually run and their results, and any unverified
+production or operator steps. A merge or green CI alone does not establish
+source acquisition, publication rights, data refresh or rollout. Record an
+accepted scope split and link every unresolved tail with its blocker, required
+owner/action and reopen condition; do not silently drop acceptance criteria.
+
+During status reviews, draft PRs older than **14 days** need a dated decision
+comment: merge, close, or blocked with owner/action/reopen condition. Execute
+merge/close only within current authorization. An already merged/closed trigger
+needs its outcome recorded, not a new triage action. **Todo** may identify
+accepted, next-up work; adopting this convention does not require bulk state changes.
+
 ## Data Pipeline
 
 ### NocoDB Tables
