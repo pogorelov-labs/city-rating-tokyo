@@ -7,6 +7,8 @@ refresh was **not included in v0.1.0**: PR #147 was based on release commit
 `d7e2ddf5c5d906e155e0f310015f45441360fa06` and merged afterwards. The v0.1.0
 tag, GitHub release and release body remain unchanged.
 
+v0.1.1 packages this merged post-v0.1.0 data refresh.
+
 ## Remediation evidence
 
 The separate refresh uses the [90-file frozen input manifest](../data/bangkok/refresh-inputs.json)

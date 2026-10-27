@@ -5,7 +5,7 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
-**Latest release:** [v0.1.0 — Tokyo + Bangkok](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
+**Latest release:** [v0.1.1 — Bangkok data refresh](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and a **200 m grid**, with the BTS / MRT / ARL / SRT Red rail network on top — switch cities from the header; your weights carry over. **EN/JA/RU** across both cities. See [Bangkok](#bangkok-district-layer) below.
 
@@ -22,7 +22,7 @@ Interactive map of **1493** Greater Tokyo-area train stations. Adjust weights ac
 - **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
 - **Honesty:** safety remains editorial; scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. Evidence density differs by category and level. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
 - **Acquisition code:** [`scripts/bangkok/fetch-geofabrik.py`](scripts/bangkok/fetch-geofabrik.py) fetches OSM from a Geofabrik Thailand PBF without Overpass. The [pipeline guide](scripts/bangkok/README.md) covers this path, other API inputs and offline builds; the Overpass path remains available.
-- **Refresh status:** **v0.1.0 excluded the full Bangkok spatial refresh**. It merged post-release in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147) on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4), and its data is now on **main**. All 10 validation gates were resolved and tourism/Michelin/embassy facts preserved. See the [frozen-refresh evidence](research/bangkok/notes/2026-10-26-frozen-refresh.md) and [completed remediation](docs/DATA_REFRESH_REMEDIATION.md); the v0.1.0 tag/release remains unchanged.
+- **Refresh status:** **v0.1.1 packages the Bangkok data refresh** merged after v0.1.0 in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147) (2026-10-27). **v0.1.0 did not include this data.** See the [methodology](https://city-rating.pogorelov.dev/methodology) and [evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md) for source details and known limits.
 
 ## Rating categories (default weights)
 
@@ -73,7 +73,7 @@ Open [localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Dockerized Next.js standalone build — `app/Dockerfile`. Production: **Coolify** on a VPS with Traefik and TLS, auto-deployed from `main`. Static city data needs no runtime DB; v0.1.0 has no DB migration. See the [release runbook](docs/RELEASING.md).
+Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.1.1 has no DB migration. See the [release runbook](docs/RELEASING.md).
 
 ## Data sources (high level)
 
