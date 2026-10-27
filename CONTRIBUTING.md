@@ -44,9 +44,9 @@ Do not "improve" this sniff to be smarter — old shared URLs depend on the exac
 ## Public repository and changelog rules
 
 - This repository is public. Do not add internal infrastructure or deployment
-  details: host/service names, VPS/container/orchestrator/platform names, network
-  topology, private URLs, credentials, worker/session identifiers, CI run IDs,
-  or internal QA artifacts.
+  details: host/service names, deployment platform, host, container, or
+  orchestrator names, network topology, private URLs, credentials,
+  worker/session identifiers, CI run IDs, or internal QA artifacts.
 - Changelog and release notes are user-facing: what changed, compatibility,
   and user-impacting limitations. Do not paste hashes, manifests, gate lists,
   or engineering receipts; put technical evidence in a research note or the PR

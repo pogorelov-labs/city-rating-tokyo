@@ -23,9 +23,9 @@
 - **Public release copy:** This repository is public. Changelog and release
   notes describe user-visible changes, compatibility and user-impacting limits.
   Do not include internal infrastructure or deployment details: host/service
-  names, VPS/container/orchestrator/platform names, network topology, private
-  URLs, credentials, worker/session identifiers, CI run IDs or internal QA
-  artifacts. Do not paste engineering receipts such as hashes, manifests or
+  names, deployment platform, host, container, or orchestrator names, network
+  topology, private URLs, credentials, worker/session identifiers, CI run IDs or
+  internal QA artifacts. Do not paste engineering receipts such as hashes, manifests or
   internal gate lists; put technical evidence in a research note or the PR body
   and link it. Release notes in `docs/releases/<tag>.md` follow the same rules.
 - Never put secrets, credentials, private host details or raw caches in notes.

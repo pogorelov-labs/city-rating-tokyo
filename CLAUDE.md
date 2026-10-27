@@ -13,7 +13,7 @@ Interactive map of Greater Tokyo (1493 stations) **and Bangkok (50 districts →
 ```
 data/stations.json (1493 stations: slug, lat, lng, lines, line_count, prefecture)
      ↓
-scripts/scrapers/ → NocoDB (nocodb.pogorelov.dev, base: city-rating-db)
+scripts/scrapers/ → NocoDB (configured in the private operational environment)
      ↓
 scripts/compute-ratings.py → NocoDB computed_ratings table
      ↓
@@ -44,23 +44,26 @@ Do **not** equate “every station has a number” with “every number is equal
 
 ## Data Pipeline
 
-### NocoDB Tables (city-rating-db, base ID: ph4flgay4kmcgk4)
+### NocoDB Tables
 
-| Table | ID | Records | Source |
-|-------|----|---------|--------|
-| osm_pois | mnnuqtldvt4jxlj | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
-| hotpepper | mfk9j2qoj2bkeoo | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
-| osm_extended | mrpqu8o796e6xzk | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
-| station_crime | mxwixub7d0q5i00 | 615 | **Legacy, no longer read** — built from Esri Japan's CrimR6_tokyo copy by a script never committed; superseded by `data/crime/` (CRTKY-82) |
-| crime_stats | mxitpnomlom3j3q | 91 | **Legacy, no longer read** — hand-typed literals (script deleted); superseded by `data/crime/` (CRTKY-82) |
-| passenger_counts | m36bbxcv8t0asur | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
-| station_wards | m74rdmspn3trrqc | 1493 | Nominatim reverse geocoding |
-| hostels | ms9awzjv9j6suh7 | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
-| computed_ratings | mkp046vo42kj55w | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
-| osm_livability | m3vasnsm4y09xez | 1493 | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
-| station_elevation | mkrugzx8z62hli4 | 1493 | Open-Elevation API bulk POST. Range: -2m to 741m, avg 43m |
-| station_seismic | mhtnqvmi1kwbth9 | 1493 | J-SHIS Y2024 probabilistic seismic hazard (prob_i60_30yr, prob_i55_30yr, intensity, ground velocity) |
-| feedback | mwuwwlko3278wrk | — | User feedback from site |
+Base and table identifiers are configured in the private operational
+environment. The logical tables and data contracts are:
+
+| Table | Records | Source |
+|-------|---------|--------|
+| osm_pois | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
+| hotpepper | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
+| osm_extended | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
+| station_crime | 615 | **Legacy, no longer read** — built from Esri Japan's CrimR6_tokyo copy by a script never committed; superseded by `data/crime/` (CRTKY-82) |
+| crime_stats | 91 | **Legacy, no longer read** — hand-typed literals (script deleted); superseded by `data/crime/` (CRTKY-82) |
+| passenger_counts | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
+| station_wards | 1493 | Nominatim reverse geocoding |
+| hostels | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
+| computed_ratings | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
+| osm_livability | 1493 | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
+| station_elevation | 1493 | Open-Elevation API bulk POST. Range: -2m to 741m, avg 43m |
+| station_seismic | 1493 | J-SHIS Y2024 probabilistic seismic hazard (prob_i60_30yr, prob_i55_30yr, intensity, ground velocity) |
+| feedback | — | User feedback from site |
 
 ### Local JSON data files (non-NocoDB)
 
@@ -72,7 +75,7 @@ Do **not** equate “every station has a number” with “every number is equal
 | `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
 | `app/src/data/rent-averages.json` | 1402 | Suumo + e-Stat | 274 real Suumo listings + 1128 e-Stat municipal averages — PR #91; +302 renamed stations once `merge-estat-rent.py` read `ward-data.json` instead of NocoDB (CRTKY-113 follow-up) |
 | `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
-| `app/src/data/station-thumbnails.json` | 1155 | VPS-generated | 320px thumb URL + LQIP base64 per station |
+| `app/src/data/station-thumbnails.json` | 1155 | generated image assets | 320px thumb URL + LQIP base64 per station |
 | `app/src/data/station-images-all.json` | 1155 | Wikimedia + Unsplash | Gallery full-res images |
 | `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
 | `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
@@ -100,14 +103,14 @@ The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI
 
 ### NocoDB Access
 ```
-URL: https://nocodb.pogorelov.dev
+URL: set via `$NOCODB_API_URL` env var in the deployment environment
 Token: set via `$NOCODB_API_TOKEN` env var (never commit the literal — see .gitignore)
 API: /api/v2/tables/{TABLE_ID}/records
 ```
 
 ### HotPepper API
 ```
-Key: set via `$HOTPEPPER_API_KEY` env var, also in Coolify env vars (never commit the literal)
+Key: set via `$HOTPEPPER_API_KEY` env var, also in the deployment environment (never commit the literal)
 Docs: https://webservice.recruit.co.jp/doc/hotpepper/reference.html
 Important param: midnight=1 (returns places open after 23:00)
 ```
@@ -266,8 +269,8 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `README.md` | Public repo intro: 1493 stations, real stack, data sources, **honesty** pointers (hub stub CRTKY-81, CLAUDE Data readiness, Plane CRTKY-80–84) |
 | `app/src/data/demo-ratings.ts` | All ratings (AI + computed). ~7700 lines. |
 | `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
-| `app/src/data/station-thumbnails.json` | **Three-tier image data** — `{slug: {thumb, lqip}}` for 1488 stations (99.7%). `thumb`: 320px VPS thumbnail URL (`img.pogorelov.dev/thumb/...`). `lqip`: 8×6 base64 JPEG (~877 chars) for instant blur-up on hover. Generated by `scripts/generate-thumbnails.py` on VPS. Replaces old `station-images.json` (deleted). 1426 KB raw, **67 KB gzipped**. |
-| `app/src/data/station-images-all.json` | Self-hosted (img.pogorelov.dev) full-res photos — **8,827 images across 1488 stations (99.7%)**. Used by station detail `ImageGallery`. Metadata: url, alt, attribution, photographer, license, source. SSL cert valid (Let's Encrypt, expires 2026-07-01). **Privacy-cleaned** (CRTKY-97): 136 portrait/face images removed via OpenCV DNN detection + human review. |
+| `app/src/data/station-thumbnails.json` | **Three-tier image data** — `{slug: {thumb, lqip}}` for 1488 stations (99.7%). `thumb`: 320px thumbnail URL. `lqip`: 8×6 base64 JPEG (~877 chars) for instant blur-up on hover. Generated by `scripts/generate-thumbnails.py` in the operational environment. Replaces old `station-images.json` (deleted). 1426 KB raw, **67 KB gzipped**. |
+| `app/src/data/station-images-all.json` | Full-res photos — **8,827 images across 1488 stations (99.7%)**. Used by station detail `ImageGallery`. Metadata: url, alt, attribution, photographer, license, source. **Privacy-cleaned** (CRTKY-97): 136 portrait/face images removed via OpenCV DNN detection + human review. |
 | `app/src/data/environment-data.json` | Elevation + seismic data for 1493 stations. Generated by `scripts/export-environment.py` from NocoDB. |
 | `app/src/data/line-names.json` | **127-entry line mapping** — ekidata ID → name_ja/name_en/operator/color/type. Copy of `data/line-names.json`. Researched from Wikipedia + operator sites. |
 | `app/src/data/ward-data.json` | Ward/city/prefecture for 1493 stations. Generated by `scripts/export-wards.py` from NocoDB `station_wards`. |
@@ -302,7 +305,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `app/src/components/LiveCameras.tsx` | Click-to-load facade → iframe on user click. 16:9 aspect, real YouTube thumbnail preview on facade (with dark gradient overlay for readability), tab strip when 2+ cameras, ✕ dismiss overlay, `role="tabpanel"` + `aria-labelledby`. Iframe `src` strips `autoplay=1` on touch via `useIsTouch()` because iOS Safari refuses to auto-play YouTube live embeds even when muted (shows a black box). Touch users instead see YouTube's own play button after the facade tap — one extra gesture, but it actually works. `allow` attribute matches MT3D's full set (`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`); no `referrerPolicy` on the iframe (was `strict-origin-when-cross-origin` and broke iOS playback silently). Requires CSP `frame-src` + `img-src i.ytimg.com` in `next.config.ts`. |
 | `scripts/scrapers/scrape-elevation.py` | Open-Elevation bulk POST scraper (all 1493 in 3 requests) |
 | `scripts/scrapers/scrape-seismic.py` | J-SHIS Y2024 seismic hazard scraper (1 req/sec, ~25 min) |
-| `scripts/scrapers/check-image-urls.py` | Bulk HEAD check of image URLs (concurrent, VPS-friendly) |
+| `scripts/scrapers/check-image-urls.py` | Bulk HEAD check of image URLs (concurrent, deployment-friendly) |
 | `scripts/scrapers/scrape-osm-livability.py` | Daily essentials scraper (9 categories). Incremental. 1493/1493 complete. |
 | `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
 | `app/src/app/[locale]/methodology/page.tsx` | `/methodology` page: data sources, pipeline, confidence, color system, limitations |
@@ -318,11 +321,11 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | `app/src/lib/use-is-touch.ts` | `useIsTouch()` hook — `useSyncExternalStore` + `matchMedia('(hover: none)')`. SSR-safe (returns false on server). Used by Tooltip, ConfidenceBadge, Map for touch-specific behavior branching. |
 | `app/src/components/NaturalEnvironment.tsx` | Station detail: elevation badge (flood-risk warning <5m) + seismic risk dot (Low/Moderate/High/Very High with J-SHIS tiers) + tooltips + legend. Uses `EnvironmentData` from types.ts. Seismic dot colors: koke-iro (low), yamabuki (moderate), sango (high), akane (very high). |
 | `app/src/components/TransportLines.tsx` | Station detail: railway line names with official color dots, operator labels, ward/city location. Locale-aware (EN/JA/RU). Collapse toggle at 6+ lines. Sort: subway → JR → private. Type legend when mixed. Uses `LineInfo[]` + `WardInfo` from types.ts. |
-| `app/src/components/Map.tsx` | Leaflet map with **`preferCanvas`** (Canvas renderer for 1493 markers; halo + top-5 pulse forced to SVG via `renderer={getSvgRenderer()}`). **Smart flyTo:** adaptive zoom target (pan-only when ≥13, instant setView for short hops, 0.4–0.6s duration with `easeLinearity: 0.4`), `isFlying` ref guard, `onFlyStart`/`onFlyEnd` callbacks. **Base map:** tiles and attribution come from `lib/basemap.ts` — CARTO `light_all` with `NEXT_PUBLIC_CARTO_BASEMAPS_KEY`, OpenStreetMap when the key is unset; the attribution control is on because both providers require it. **Tile prefetch:** `prefetchTilesAroundStation()` warms a 3×3 z14 grid on marker hover with `new Image()` (CARTO only). **FlyTo canvas fade:** `.map-flying` class on container fades canvas to `opacity:0` during zoom animation (hides Leaflet's CSS `scale(2^Δzoom)` artifact, #6050). `useLayoutEffect` ensures SVG halo hidden before paint. `closePopup()` + `autoPan={false}`. Highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). **Map `mouseover`/`mouseout`** call `setHoveredStation` (150ms debounced clear on `mouseout`) so list↔map hover stays linked (CRTKY-59). Highlighted marker radius **×1.4** vs base. Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). **Three-tier image loading:** `StationTooltipHero` shows LQIP blur instantly (inline base64), crossfades to 320px VPS thumbnail (prefetched on `mouseover`), gradient fallback if no imagery. **Dealbreaker filters:** `applyDealbreakers()` from `scoring.ts` applies rent/commute/category-min/environment filters → `visibleStations` memo. Rent-unknown stations render at `fillOpacity: 0.35` + `opacity: 0.3` + `weight: 0.5` (full border+fill fade; suppressed on highlight/compare). Composite anchors computed on FULL dataset (pre-filter) for stable colors. **Z-order (CRTKY-90):** `sortedForRender` memo sorts ascending by score so high-rated stations paint on top (canvas paint order = DOM order). Top-5 pulse derives from the same sorted array (one sort, not two). **Touch adaptations (PR #69):** marker radius +4px on `(hover: none)`, Leaflet Tooltip suppressed (touch users get enriched Popup with image+snippet), `TouchZoomControls` component (+/− buttons bottom-right). |
-| `scripts/generate-thumbnails.py` | VPS Docker script: reads `station-images-all.json`, generates 320px thumbnails + 8×6 LQIP base64 for each station. Output: thumbnails on disk at `/docker-volume/img/thumb/`, JSON at `/tmp/station-thumbnails.json`. Deps: Pillow. **Must mount `-v /tmp:/tmp`** to persist JSON output. |
-| `scripts/detect-faces.py` | OpenCV DNN face detection on all images. Runs on VPS Docker (`opencv-python-headless`). Flags images with prominent faces (area >2% or confidence >70%). Output: `flagged-faces.json`. |
+| `app/src/components/Map.tsx` | Leaflet map with **`preferCanvas`** (Canvas renderer for 1493 markers; halo + top-5 pulse forced to SVG via `renderer={getSvgRenderer()}`). **Smart flyTo:** adaptive zoom target (pan-only when ≥13, instant setView for short hops, 0.4–0.6s duration with `easeLinearity: 0.4`), `isFlying` ref guard, `onFlyStart`/`onFlyEnd` callbacks. **Base map:** tiles and attribution come from `lib/basemap.ts` — CARTO `light_all` with `NEXT_PUBLIC_CARTO_BASEMAPS_KEY`, OpenStreetMap when the key is unset; the attribution control is on because both providers require it. **Tile prefetch:** `prefetchTilesAroundStation()` warms a 3×3 z14 grid on marker hover with `new Image()` (CARTO only). **FlyTo canvas fade:** `.map-flying` class on container fades canvas to `opacity:0` during zoom animation (hides Leaflet's CSS `scale(2^Δzoom)` artifact, #6050). `useLayoutEffect` ensures SVG halo hidden before paint. `closePopup()` + `autoPan={false}`. Highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). **Map `mouseover`/`mouseout`** call `setHoveredStation` (150ms debounced clear on `mouseout`) so list↔map hover stays linked (CRTKY-59). Highlighted marker radius **×1.4** vs base. Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). **Three-tier image loading:** `StationTooltipHero` shows LQIP blur instantly (inline base64), crossfades to 320px thumbnail (prefetched on `mouseover`), gradient fallback if no imagery. **Dealbreaker filters:** `applyDealbreakers()` from `scoring.ts` applies rent/commute/category-min/environment filters → `visibleStations` memo. Rent-unknown stations render at `fillOpacity: 0.35` + `opacity: 0.3` + `weight: 0.5` (full border+fill fade; suppressed on highlight/compare). Composite anchors computed on FULL dataset (pre-filter) for stable colors. **Z-order (CRTKY-90):** `sortedForRender` memo sorts ascending by score so high-rated stations paint on top (canvas paint order = DOM order). Top-5 pulse derives from the same sorted array (one sort, not two). **Touch adaptations (PR #69):** marker radius +4px on `(hover: none)`, Leaflet Tooltip suppressed (touch users get enriched Popup with image+snippet), `TouchZoomControls` component (+/− buttons bottom-right). |
+| `scripts/generate-thumbnails.py` | Operational script: reads `station-images-all.json`, generates 320px thumbnails + 8×6 LQIP base64 for each station. Output: thumbnail image files and `station-thumbnails.json`. Deps: Pillow. Storage is configured in the private operational environment. |
+| `scripts/detect-faces.py` | OpenCV DNN face detection on all images. Runs in the operational environment (`opencv-python-headless`). Flags images with prominent faces (area >2% or confidence >70%). Output: `flagged-faces.json`. |
 | `scripts/generate-face-review.py` | Generates self-contained HTML contact sheet from `flagged-faces.json`. Grid of flagged images with checkboxes, filters, "Export Removals JSON" button. Runs locally. |
-| `scripts/remove-flagged-images.py` | Removes confirmed face images from `station-images-all.json` + VPS disk. Derives disk path from URL (not `local_path`, which omits `flickr/` prefix). Supports `--dry-run`. |
+| `scripts/remove-flagged-images.py` | Removes confirmed face images from `station-images-all.json` + deployment storage. Derives disk path from URL (not `local_path`, which omits `flickr/` prefix). Supports `--dry-run`. |
 | `app/src/components/FilterPanel.tsx` | **Dealbreakers** (rent slider, commute slider, per-category min buttons, flood/seismic checkboxes, match counter) + weight sliders + presets + search + Top Ranked. Search section `hidden md:block` (mobile uses `MobileSearchPill`). Presets apply both weights + filters. Category mins in collapsible `<details>` with "N set" badge. Live match counter ("423 of 1493 match"). Ranked list shows `(rent unconfirmed)` for unknown-rent stations when rent filter active. Deferred ranking via `useDeferredValue(weights)` (CRTKY-61). |
 | `app/src/components/MobileSearchPill.tsx` | `md:hidden` floating search pill over the map (Google Maps style). Magnifying glass icon + input + clear + results dropdown. On result tap: `setSelectedStation` → map flies, search clears. Self-contained search logic (duplicated from FilterPanel, ~10 lines). Position: `absolute top-2 left-3 right-3 z-[999]` — full width since the map controls moved to the row below on phones. Input `text-base` (16px) to prevent iOS Safari auto-zoom. |
 | `app/src/components/MapControls.tsx` | Heatmap toggle button + dimension select (+ Bangkok's Rail toggle). `.map-control-btn` class for 44px touch targets on `(pointer: coarse)`. Position: `absolute top-3 right-3 z-[1000]` on desktop; on phones `top-14`, icon-only (text labels such as "Тепловая карта" ran into the search pill), sharing the second row with Bangkok's level switch. |
@@ -430,7 +433,7 @@ After touching names, run `fix-name-en.py` → `generate-name-ru.py` → `merge-
 | #75 | CRTKY-91 | **FlyTo canvas fade:** `.map-flying` CSS class fades canvas to `opacity:0` during flyTo zoom animation (Leaflet #6050 CSS-scaling, confirmed 4× via MutationObserver). Tiles stay visible. Markers fade back in after `moveend` (0.15s transition). |
 | #76 | CRTKY-95 | **iOS Safari fixes:** search input `text-base` (16px) prevents auto-zoom, search pill `right-24` clears Heatmap button, root `overflow-x-hidden`, zoom buttons safe-area-aware `calc(80px + env(safe-area-inset-bottom))`. |
 | #78 | CRTKY-96 | **Safari 26 Liquid Glass hardening:** `h-screen` → `h-dvh` (dynamic viewport tracks toolbar), `html` background-color for toolbar tint, MobileDrawer `display:none` when closed (two-phase rAF open/transitionend close), Heatmap button 44px touch target gated by `@media (pointer: coarse)`, ComparePanel mobile-only bottom spacer for dynamic toolbar clearance. |
-| #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + VPS disk. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
+| #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + deployment storage. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
 | #80 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. |
 | #81 | CRTKY-87, 50 | **Daily Essentials (10th category)** end-to-end: `scrape-osm-livability.py` (1493/1493), compute + export pipeline, frontend types/weights/presets rebalanced, `/methodology` page, OG images on 1488 station pages. Docs refresh (00-overview, VISION). Plane triage: 14 stale issues closed. |
 | #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4493 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
@@ -593,18 +596,17 @@ Detailed data source research in `research/` (Bangkok: `research/bangkok/`):
 
 ```bash
 cd app && npm run build  # Verify after export-ratings.py
-git push origin main     # Coolify auto-deploys
+git push origin main
 ```
 
 **Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `npm run lint` + `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. Lint errors fail the check, warnings don't. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
 
-**Deploy memory budget (since 2026-05-03):** the VPS has 15 GB RAM (plus a 4 GB swapfile) and Next.js compiling 4493 pages peaks at 3-4 GB resident. With the current 63-container load there is ~8.7 GB headroom for builds. Two guard rails are in place:
-- VPS has a 4 GB `/swapfile` (`vm.swappiness=10`, persistent via `/etc/fstab`). Total working room for a build = ~19 GB; see memory `reference_vps_swap.md` for the setup commands.
-- `app/Dockerfile` builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`) instead of getting silently killed by the kernel.
+**Production build memory:** Production build memory is configured in the
+private deployment environment; see the maintainer runbook. The `app/Dockerfile`
+builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway
+compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`).
 
-If a build dies again, check `dmesg | grep oom` on the VPS and the Docker daemon log for `oom_kill event` before raising the heap cap — extra pages don't usually require it.
-
-**Base-map key (since 2026-09-30):** CARTO basemaps need an API key — keyless tiles are stamped "API key required". Set `NEXT_PUBLIC_CARTO_BASEMAPS_KEY` in Coolify as a **build** variable (like `NEXT_PUBLIC_UMAMI_*`; it is inlined at build time) and redeploy. Free key, non-commercial tier 5M tiles/month: https://carto.com/basemaps/apikey. Without it the map falls back to OpenStreetMap tiles. All app env vars are listed in `app/.env.example`.
+**Base-map key (since 2026-09-30):** CARTO basemaps need an API key — keyless tiles are stamped "API key required". Set `NEXT_PUBLIC_CARTO_BASEMAPS_KEY` in the deployment environment as a **build** variable (like `NEXT_PUBLIC_UMAMI_*`; it is inlined at build time) and redeploy. Free key, non-commercial tier 5M tiles/month: https://carto.com/basemaps/apikey. Without it the map falls back to OpenStreetMap tiles. All app env vars are listed in `app/.env.example`.
 
 **`npm audit` failures from transitive deps:** never run `npm audit fix --force`; it tries to downgrade `next` to a years-old major. Add an `overrides` block in `app/package.json` instead (e.g. `{"postcss": "^8.5.13"}` was needed when GHSA-qx2v-qp2m-jg93 went moderate). Verify with `npm ls <pkg>` + `npm audit`. Drop the override once upstream ships the patched copy.
 
@@ -627,9 +629,7 @@ Safety: the script refuses to run without `NOCODB_API_TOKEN`, with unrelated dir
 
 Public MCP (Model Context Protocol) server exposing the dataset to AI
 clients (Claude Desktop, Claude Code, anything MCP-compatible). Lives in
-`mcp/`, deployed alongside the frontend at **`city-rating.pogorelov.dev/mcp`**
-(path-based Traefik routing — same domain, same TLS cert, different
-container).
+`mcp/`, available at **`city-rating.pogorelov.dev/mcp`** with path-based routing.
 
 ### Tools (9)
 
@@ -650,21 +650,19 @@ Heavy (semantic, ~50 ms warm + ~3 s first-call model load):
   per-(slug, locale) aggregate. ~80 MB on disk, in-memory cosine
   via `numpy M @ q`. Build offline: `python3 scripts/build-embeddings.py`
   (~19 min on M2 CPU). Output `data/embeddings.npz` (gitignored).
-  **Shipped to prod via Coolify persistent volume bind-mounted at
-  `/app/data/external/embeddings.npz`** — the Dockerfile no longer
-  encodes them in build (the in-Docker encode took ~110 min on the
-  2-core VPS). Refresh = scp new npz to the host path + restart container.
-- **Auth** — NocoDB-backed bearer keys. Table `api_keys`
-  (`mzcavs8wz1bgwsb`): key_hash (SHA-256), email, use_case, status
+  Embeddings are supplied through a deployment volume and are not encoded
+  during the build. Refresh through the private deployment procedure.
+- **Auth** — NocoDB-backed bearer keys. Table `api_keys`:
+  key_hash (SHA-256), email, use_case, status
   (pending/active/revoked), rate_limit_per_min. Site form
   `[locale]/api-access` issues `crk_<32 hex>` once, stores hash, status
   starts pending. MCP refreshes cache every 5 min; per-key token bucket;
   401/403/429/503 mapping. `MCP_AUTH_REQUIRED=false` for local dev.
-- **Path routing** — `/mcp/*` → MCP container (transport at `/mcp`,
-  health at `/mcp/healthz`), everything else → Next.js. Switching back
-  to a `mcp.pogorelov.dev` subdomain is a one-line Coolify change.
+- **Path routing** — transport at `/mcp`, health at `/mcp/healthz`,
+  everything else → Next.js. Changing the public endpoint is a deployment
+  change managed through the private deployment procedure.
 
-Full deploy steps + auth schema in [`mcp/README.md`](mcp/README.md). Tool-by-tool usage guide, source/confidence interpretation, common pitfalls in [`mcp/USAGE.md`](mcp/USAGE.md). The same usage guide is mirrored to `~/.claude/skills/city-rating-tokyo-mcp/SKILL.md` so it's available across Claude Code sessions, not just this repo.
+Auth schema and development details are in [`mcp/README.md`](mcp/README.md). Tool-by-tool usage guide, source/confidence interpretation and common pitfalls are in [`mcp/USAGE.md`](mcp/USAGE.md). Deployment procedures are maintained outside this public repository.
 
 ### Local dev
 
@@ -690,8 +688,8 @@ all 9 tools end-to-end against the local datamart + embeddings.
 
 `fastembed` only supports `multilingual-e5-large` (1024d, 2.2 GB), not
 `-base`. Picked over `paraphrase-multilingual-mpnet-base-v2` for max
-quality; VPS RAM holds at ~2.5 GB resident. If memory ever gets tight
-on the VPS, MiniLM-L12 (384d, 120 MB) is a one-line model swap in the
+quality; deployment memory holds at ~2.5 GB resident. If memory ever gets tight
+in the deployment environment, MiniLM-L12 (384d, 120 MB) is a one-line model swap in the
 build script + Dockerfile ARG.
 
 ## Homepage performance (CRTKY-61 — PR #44)
