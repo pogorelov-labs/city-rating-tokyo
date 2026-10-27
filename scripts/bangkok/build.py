@@ -885,10 +885,15 @@ RAIL_RELATIONS: dict[str, list[int]] = {}
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true", help="compute and print, write nothing")
+    parser.add_argument("--inputs-manifest", type=Path, help="verify frozen inputs and use its build date")
     parser.add_argument("--verbose", action="store_true", help="print every district's ratings")
     parser.add_argument("--rent-only", action="store_true", help="refresh rent from committed spatial outputs; rejects district rent changes")
     args = parser.parse_args()
     started = time.time()
+    frozen = None
+    if args.inputs_manifest:
+        from refresh_inputs import verify_inputs
+        frozen = verify_inputs(ROOT, args.inputs_manifest)
 
 
     RAIL_RELATIONS.update(RAIL_ROUTE_RELATIONS)
@@ -1436,13 +1441,16 @@ def main() -> None:
     grid_ratings["crowd"] = R.weighted_percentile_normalize(pt_crowd.tolist(), w_list, invert=True)
     grid_ratings["rent"] = [ratings[districts[i]["slug"]]["rent"] for i in OWN.tolist()]
     grid_ratings["safety"] = [ratings[districts[i]["slug"]]["safety"] for i in OWN.tolist()]
-    grid_medians = {k: int(R.weighted_median(grid_ratings[k], w_list)) for k in RATING_KEYS}
+    # Summaries describe the delivered uint8 grid. Integer weight units avoid
+    # precision-dependent threshold crossings on decoding (transport: 6 -> 5).
+    encoded_weights = R.encoded_resident_weights(w_list)
+    grid_medians = {k: int(R.weighted_median(grid_ratings[k], encoded_weights)) for k in RATING_KEYS}
     grid_scores = [
         R.composite({k: grid_ratings[k][i] for k in RATING_KEYS}, default_weights) for i in range(len(PX))
     ]
-    grid_anchors = R.weighted_anchors(grid_scores, w_list)
+    grid_anchors = R.weighted_anchors(grid_scores, encoded_weights)
 
-    today = date.today()
+    today = date.fromisoformat(frozen['build_date']) if frozen else date.today()
     data_date = today.strftime("%Y-%m")
     out_districts = []
     for d in districts:
@@ -1572,7 +1580,7 @@ def main() -> None:
         for key in ("food", "nightlife", "daily_essentials", "gym_sports", "vibe", "green", "transport", "crowd")
     }
     grid_fields["district"] = OWN + 1
-    grid_fields["weight"] = np.rint(weight * 250)
+    grid_fields["weight"] = np.asarray(encoded_weights)
     for hub in HUBS:
         grid_fields[f"hub_{hub}"] = np.clip(np.rint(commute_pt[hub]), 1, 250)
     grid_fields["station"] = station_rank[D.argmin(axis=1)] + 1
@@ -1638,6 +1646,11 @@ def main() -> None:
         "data_date": data_date,
     }
 
+    # Facts are shared with the audit signals below. Validate retained source
+    # observations and joins before writing any generated outputs.
+    from enrichments import apply_enrichments
+    apply_enrichments(ROOT, out_districts, out_areas)
+
     signals = {
         "_meta": {
             "generated": today.isoformat(),
@@ -1648,6 +1661,11 @@ def main() -> None:
         "districts": {
             d["slug"]: {
                 "raw": {k: round(raw[k][d["slug"]], 4) for k in RATING_KEYS},
+                "crowd_input": {
+                    "population": population[d["slug"]]["population"],
+                    "official_area_km2": d["facts"]["area_km2"],
+                    "poi_log_term": 0.5 * math.log1p(count_inside("ovt_all", d["geom"]) / d["facts"]["area_km2"]),
+                },
                 "ratings": {k: ratings[d["slug"]][k] for k in RATING_KEYS},
                 **agg[d["slug"]],
                 "facts": d["facts"],

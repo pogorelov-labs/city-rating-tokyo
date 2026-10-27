@@ -90,10 +90,11 @@ def replay_compute(module, inputs, *, redirects=None):
     return captured
 
 
-def replay_bangkok(module):
+def replay_bangkok(module, signals=None):
     """Replay committed rounded aggregate signals, not the geometry builder."""
     import json
-    signals = json.loads((ROOT / 'data/bangkok/signals.json').read_text())
+    if signals is None:
+        signals = json.loads((ROOT / 'data/bangkok/signals.json').read_text())
     result = {}
     for layer in ('districts', 'station_areas'):
         rows = signals[layer]

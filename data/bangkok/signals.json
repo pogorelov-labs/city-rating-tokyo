@@ -1,28 +1,33 @@
 {
  "_meta": {
-  "generated": "2026-09-30",
+  "generated": "2026-10-26",
   "grid_m": 200,
-  "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py.",
   "population": {
    "source": "worldpop_2020",
    "epoch": 2020,
    "sha256": "400dc5435e15e78ce6b5e510327ec863c62d209011ce1b03cad4445773753d42",
    "method": "pixel_center_sum / official_area_km2"
-  }
+  },
+  "note": "Raw per-district signals (resident-weighted means of per-point values) before percentile normalisation. See scripts/bangkok/build.py."
  },
  "districts": {
   "bang-bon": {
    "raw": {
-    "transport": 0.0867,
+    "transport": 0.087,
     "rent": 8500,
-    "daily_essentials": 1.052,
+    "daily_essentials": 1.0509,
     "safety": 7,
-    "food": 2.7541,
-    "green": 0.3532,
-    "gym_sports": 1.1665,
-    "vibe": 0.7916,
-    "nightlife": 0.5722,
-    "crowd": 6.5281
+    "food": 2.7527,
+    "green": 0.502,
+    "gym_sports": 1.1896,
+    "vibe": 0.7888,
+    "nightlife": 0.5723,
+    "crowd": 6.528
+   },
+   "crowd_input": {
+    "population": 179745.83109664917,
+    "official_area_km2": 34.74,
+    "poi_log_term": 2.2523201523688923
    },
    "ratings": {
     "transport": 2,
@@ -60,15 +65,15 @@
     "sports": 35,
     "culture": 16,
     "temples": 26,
-    "park_ha": 18.1,
-    "park_share": 0.5,
+    "park_ha": 19.7,
+    "park_share": 0.6,
     "piers": 0
    },
    "osm_counts": {
-    "food": 43,
+    "food": 42,
     "nightlife": 2,
     "essentials": 80,
-    "sports": 3,
+    "sports": 4,
     "culture": 17
    },
    "stations": [],
@@ -78,14 +83,19 @@
    "raw": {
     "transport": 0.3214,
     "rent": 12000,
-    "daily_essentials": 1.6595,
+    "daily_essentials": 1.6579,
     "safety": 6,
-    "food": 3.6701,
-    "green": 0.8168,
+    "food": 3.6923,
+    "green": 0.8079,
     "gym_sports": 2.1575,
-    "vibe": 1.5818,
+    "vibe": 1.5826,
     "nightlife": 1.3494,
     "crowd": 7.6289
+   },
+   "crowd_input": {
+    "population": 436195.76939582825,
+    "official_area_km2": 28.52,
+    "poi_log_term": 2.811279110742224
    },
    "ratings": {
     "transport": 5,
@@ -125,12 +135,14 @@
     "temples": 96,
     "park_ha": 20.2,
     "park_share": 0.7,
-    "piers": 10
+    "piers": 10,
+    "michelin_stars": 1,
+    "michelin_bib": 0
    },
    "osm_counts": {
-    "food": 115,
+    "food": 118,
     "nightlife": 3,
-    "essentials": 128,
+    "essentials": 126,
     "sports": 16,
     "culture": 23
    },
@@ -146,16 +158,21 @@
   },
   "bang-khae": {
    "raw": {
-    "transport": 0.169,
+    "transport": 0.1704,
     "rent": 10000,
-    "daily_essentials": 1.151,
+    "daily_essentials": 1.1521,
     "safety": 7,
-    "food": 2.8167,
-    "green": 0.7488,
-    "gym_sports": 1.2328,
-    "vibe": 0.8978,
+    "food": 2.8238,
+    "green": 0.8451,
+    "gym_sports": 1.2561,
+    "vibe": 0.8932,
     "nightlife": 0.7074,
     "crowd": 6.9071
+   },
+   "crowd_input": {
+    "population": 380583.34158325195,
+    "official_area_km2": 44.46,
+    "poi_log_term": 2.3797047725649003
    },
    "ratings": {
     "transport": 3,
@@ -193,16 +210,16 @@
     "sports": 61,
     "culture": 35,
     "temples": 48,
-    "park_ha": 22.5,
+    "park_ha": 25.3,
     "park_share": 0.5,
     "piers": 4
    },
    "osm_counts": {
-    "food": 50,
+    "food": 53,
     "nightlife": 4,
-    "essentials": 109,
-    "sports": 5,
-    "culture": 17
+    "essentials": 111,
+    "sports": 7,
+    "culture": 15
    },
    "stations": [
     "bang-khae",
@@ -216,14 +233,19 @@
    "raw": {
     "transport": 0.3297,
     "rent": 11000,
-    "daily_essentials": 1.3457,
+    "daily_essentials": 1.3472,
     "safety": 7,
-    "food": 3.1987,
-    "green": 0.6204,
+    "food": 3.2015,
+    "green": 0.7043,
     "gym_sports": 1.7626,
-    "vibe": 1.0903,
+    "vibe": 1.0897,
     "nightlife": 0.8166,
     "crowd": 6.9575
+   },
+   "crowd_input": {
+    "population": 327091.9882144928,
+    "official_area_km2": 42.12,
+    "poi_log_term": 2.4787554823313096
    },
    "ratings": {
     "transport": 5,
@@ -261,14 +283,14 @@
     "sports": 91,
     "culture": 36,
     "temples": 56,
-    "park_ha": 21.8,
-    "park_share": 0.5,
+    "park_ha": 23.7,
+    "park_share": 0.6,
     "piers": 0
    },
    "osm_counts": {
-    "food": 116,
+    "food": 115,
     "nightlife": 1,
-    "essentials": 160,
+    "essentials": 161,
     "sports": 8,
     "culture": 14
    },
@@ -297,12 +319,17 @@
     "rent": 15000,
     "daily_essentials": 1.8328,
     "safety": 7,
-    "food": 4.0299,
-    "green": 0.8753,
+    "food": 4.0283,
+    "green": 0.9232,
     "gym_sports": 2.3031,
-    "vibe": 1.8873,
+    "vibe": 1.8864,
     "nightlife": 1.7887,
     "crowd": 7.4812
+   },
+   "crowd_input": {
+    "population": 161001.97638702393,
+    "official_area_km2": 10.92,
+    "poi_log_term": 2.6819256356239296
    },
    "ratings": {
     "transport": 5,
@@ -358,14 +385,19 @@
    "raw": {
     "transport": 0.0718,
     "rent": 8500,
-    "daily_essentials": 0.8471,
+    "daily_essentials": 0.8473,
     "safety": 7,
     "food": 2.2815,
-    "green": 0.5875,
-    "gym_sports": 0.9058,
+    "green": 0.6097,
+    "gym_sports": 0.9107,
     "vibe": 0.7117,
     "nightlife": 0.5006,
     "crowd": 5.9198
+   },
+   "crowd_input": {
+    "population": 343381.0954723358,
+    "official_area_km2": 120.69,
+    "poi_log_term": 1.9431020531585141
    },
    "ratings": {
     "transport": 2,
@@ -423,12 +455,17 @@
     "rent": 13000,
     "daily_essentials": 1.6734,
     "safety": 7,
-    "food": 3.7838,
-    "green": 0.8251,
+    "food": 3.7912,
+    "green": 0.8545,
     "gym_sports": 2.3092,
-    "vibe": 1.4507,
+    "vibe": 1.4529,
     "nightlife": 1.3171,
     "crowd": 7.444
+   },
+   "crowd_input": {
+    "population": 213917.10305023193,
+    "official_area_km2": 18.79,
+    "poi_log_term": 2.7739951958478897
    },
    "ratings": {
     "transport": 6,
@@ -471,7 +508,7 @@
     "piers": 1
    },
    "osm_counts": {
-    "food": 93,
+    "food": 95,
     "nightlife": 3,
     "essentials": 112,
     "sports": 11,
@@ -495,12 +532,17 @@
     "rent": 11500,
     "daily_essentials": 1.9301,
     "safety": 7,
-    "food": 3.9242,
-    "green": 0.9999,
+    "food": 3.9249,
+    "green": 1.0044,
     "gym_sports": 1.9769,
-    "vibe": 1.957,
+    "vibe": 1.9572,
     "nightlife": 1.8297,
     "crowd": 7.7523
+   },
+   "crowd_input": {
+    "population": 240353.40161514282,
+    "official_area_km2": 11.36,
+    "poi_log_term": 2.7724511593038708
    },
    "ratings": {
     "transport": 8,
@@ -565,14 +607,19 @@
    "raw": {
     "transport": 0.7062,
     "rent": 26000,
-    "daily_essentials": 3.3725,
+    "daily_essentials": 3.3732,
     "safety": 6,
-    "food": 6.308,
-    "green": 2.1377,
-    "gym_sports": 3.7469,
-    "vibe": 3.7869,
+    "food": 6.3104,
+    "green": 2.1182,
+    "gym_sports": 3.6927,
+    "vibe": 3.7903,
     "nightlife": 3.9414,
-    "crowd": 8.2167
+    "crowd": 8.2166
+   },
+   "crowd_input": {
+    "population": 74878.01284790039,
+    "official_area_km2": 5.54,
+    "poi_log_term": 3.460827311940096
    },
    "ratings": {
     "transport": 10,
@@ -610,15 +657,18 @@
     "sports": 62,
     "culture": 80,
     "temples": 59,
-    "park_ha": 9.3,
-    "park_share": 2.4,
-    "piers": 5
+    "park_ha": 9.2,
+    "park_share": 2.3,
+    "piers": 5,
+    "michelin_stars": 3,
+    "michelin_bib": 3,
+    "embassies_800m": 3
    },
    "osm_counts": {
-    "food": 720,
+    "food": 725,
     "nightlife": 95,
     "essentials": 364,
-    "sports": 16,
+    "sports": 10,
     "culture": 73
    },
    "stations": [
@@ -644,12 +694,17 @@
     "rent": 12000,
     "daily_essentials": 1.6876,
     "safety": 7,
-    "food": 3.6791,
+    "food": 3.7271,
     "green": 1.1594,
-    "gym_sports": 1.9877,
-    "vibe": 1.4974,
+    "gym_sports": 2.0016,
+    "vibe": 1.5036,
     "nightlife": 1.432,
     "crowd": 7.6845
+   },
+   "crowd_input": {
+    "population": 198279.09854125977,
+    "official_area_km2": 11.5,
+    "poi_log_term": 2.8069605953672507
    },
    "ratings": {
     "transport": 9,
@@ -692,10 +747,10 @@
     "piers": 2
    },
    "osm_counts": {
-    "food": 35,
+    "food": 47,
     "nightlife": 2,
     "essentials": 53,
-    "sports": 3,
+    "sports": 4,
     "culture": 11
    },
    "stations": [
@@ -713,16 +768,21 @@
   },
   "bangkok-noi": {
    "raw": {
-    "transport": 0.4083,
+    "transport": 0.4095,
     "rent": 12000,
-    "daily_essentials": 2.0377,
+    "daily_essentials": 2.0381,
     "safety": 7,
-    "food": 3.9333,
-    "green": 1.0463,
+    "food": 3.9534,
+    "green": 1.2399,
     "gym_sports": 1.9422,
-    "vibe": 2.1567,
+    "vibe": 2.1619,
     "nightlife": 1.4973,
     "crowd": 7.7992
+   },
+   "crowd_input": {
+    "population": 218455.97577285767,
+    "official_area_km2": 11.94,
+    "poi_log_term": 2.891969281675969
    },
    "ratings": {
     "transport": 7,
@@ -730,7 +790,7 @@
     "daily_essentials": 8,
     "safety": 7,
     "food": 7,
-    "green": 6,
+    "green": 7,
     "gym_sports": 5,
     "vibe": 7,
     "nightlife": 7,
@@ -760,12 +820,12 @@
     "sports": 46,
     "culture": 54,
     "temples": 89,
-    "park_ha": 7.4,
-    "park_share": 0.6,
+    "park_ha": 9.4,
+    "park_share": 0.8,
     "piers": 7
    },
    "osm_counts": {
-    "food": 53,
+    "food": 61,
     "nightlife": 2,
     "essentials": 135,
     "sports": 1,
@@ -781,16 +841,21 @@
   },
   "bangkok-yai": {
    "raw": {
-    "transport": 0.5566,
+    "transport": 0.5568,
     "rent": 11000,
-    "daily_essentials": 1.9345,
+    "daily_essentials": 1.9357,
     "safety": 7,
-    "food": 3.8384,
-    "green": 0.542,
+    "food": 3.856,
+    "green": 0.5844,
     "gym_sports": 2.1563,
-    "vibe": 2.1367,
+    "vibe": 2.143,
     "nightlife": 1.4833,
-    "crowd": 7.6783
+    "crowd": 7.6782
+   },
+   "crowd_input": {
+    "population": 124334.8581161499,
+    "official_area_km2": 6.18,
+    "poi_log_term": 2.723515132412582
    },
    "ratings": {
     "transport": 9,
@@ -852,14 +917,19 @@
    "raw": {
     "transport": 0.1861,
     "rent": 9500,
-    "daily_essentials": 1.5313,
+    "daily_essentials": 1.5226,
     "safety": 7,
-    "food": 3.6369,
-    "green": 0.9358,
+    "food": 3.6436,
+    "green": 0.922,
     "gym_sports": 1.9203,
-    "vibe": 1.3771,
+    "vibe": 1.3779,
     "nightlife": 1.1381,
-    "crowd": 7.0135
+    "crowd": 7.0136
+   },
+   "crowd_input": {
+    "population": 179719.0637626648,
+    "official_area_km2": 24.31,
+    "poi_log_term": 2.5594327015254374
    },
    "ratings": {
     "transport": 3,
@@ -897,14 +967,14 @@
     "sports": 65,
     "culture": 28,
     "temples": 30,
-    "park_ha": 37.8,
+    "park_ha": 36.7,
     "park_share": 1.6,
     "piers": 0
    },
    "osm_counts": {
-    "food": 110,
+    "food": 115,
     "nightlife": 2,
-    "essentials": 181,
+    "essentials": 177,
     "sports": 9,
     "culture": 17
    },
@@ -917,16 +987,21 @@
   },
   "chatuchak": {
    "raw": {
-    "transport": 0.5439,
+    "transport": 0.544,
     "rent": 16000,
     "daily_essentials": 1.9418,
     "safety": 7,
-    "food": 4.1645,
+    "food": 4.1677,
     "green": 1.6745,
     "gym_sports": 2.3956,
-    "vibe": 1.9657,
+    "vibe": 1.9664,
     "nightlife": 1.7832,
-    "crowd": 7.636
+    "crowd": 7.6361
+   },
+   "crowd_input": {
+    "population": 449914.1217536926,
+    "official_area_km2": 32.91,
+    "poi_log_term": 2.8745595441058427
    },
    "ratings": {
     "transport": 9,
@@ -969,7 +1044,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 361,
+    "food": 365,
     "nightlife": 33,
     "essentials": 350,
     "sports": 33,
@@ -1006,14 +1081,19 @@
    "raw": {
     "transport": 0.2057,
     "rent": 10500,
-    "daily_essentials": 1.3864,
+    "daily_essentials": 1.387,
     "safety": 7,
-    "food": 3.1627,
-    "green": 0.5293,
+    "food": 3.1815,
+    "green": 0.5887,
     "gym_sports": 1.4041,
-    "vibe": 1.2381,
+    "vibe": 1.2426,
     "nightlife": 0.8154,
-    "crowd": 6.9067
+    "crowd": 6.9068
+   },
+   "crowd_input": {
+    "population": 247899.7914276123,
+    "official_area_km2": 26.27,
+    "poi_log_term": 2.3305780535593024
    },
    "ratings": {
     "transport": 4,
@@ -1056,7 +1136,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 45,
+    "food": 46,
     "nightlife": 1,
     "essentials": 116,
     "sports": 1,
@@ -1075,12 +1155,17 @@
     "rent": 13000,
     "daily_essentials": 2.6147,
     "safety": 5,
-    "food": 4.9455,
-    "green": 1.3158,
-    "gym_sports": 3.0114,
-    "vibe": 2.4287,
+    "food": 4.9487,
+    "green": 1.3115,
+    "gym_sports": 3.0123,
+    "vibe": 2.4311,
     "nightlife": 2.4839,
     "crowd": 8.2265
+   },
+   "crowd_input": {
+    "population": 209173.3430709839,
+    "official_area_km2": 8.35,
+    "poi_log_term": 3.162184846774726
    },
    "ratings": {
     "transport": 8,
@@ -1123,7 +1208,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 210,
+    "food": 212,
     "nightlife": 12,
     "essentials": 248,
     "sports": 19,
@@ -1142,23 +1227,28 @@
   },
   "don-mueang": {
    "raw": {
-    "transport": 0.2263,
+    "transport": 0.2272,
     "rent": 9500,
-    "daily_essentials": 1.171,
+    "daily_essentials": 1.1709,
     "safety": 7,
-    "food": 3.0044,
-    "green": 0.6133,
+    "food": 3.0273,
+    "green": 0.78,
     "gym_sports": 1.4019,
-    "vibe": 1.0491,
-    "nightlife": 0.9531,
+    "vibe": 1.0581,
+    "nightlife": 0.953,
     "crowd": 6.8422
+   },
+   "crowd_input": {
+    "population": 308303.7823791504,
+    "official_area_km2": 36.8,
+    "poi_log_term": 2.325528795249781
    },
    "ratings": {
     "transport": 4,
     "rent": 10,
     "daily_essentials": 3,
     "safety": 7,
-    "food": 3,
+    "food": 4,
     "green": 4,
     "gym_sports": 3,
     "vibe": 3,
@@ -1166,7 +1256,7 @@
     "crowd": 8
    },
    "points": 923,
-   "inhabited_share": 0.86,
+   "inhabited_share": 0.861,
    "hub_minutes": {
     "siam": 65,
     "asok": 71,
@@ -1189,12 +1279,12 @@
     "sports": 50,
     "culture": 33,
     "temples": 40,
-    "park_ha": 25.9,
-    "park_share": 0.7,
+    "park_ha": 31.3,
+    "park_share": 0.8,
     "piers": 1
    },
    "osm_counts": {
-    "food": 103,
+    "food": 108,
     "nightlife": 3,
     "essentials": 77,
     "sports": 1,
@@ -1216,14 +1306,19 @@
    "raw": {
     "transport": 0.3502,
     "rent": 13000,
-    "daily_essentials": 2.016,
+    "daily_essentials": 2.0164,
     "safety": 8,
-    "food": 3.9772,
-    "green": 2.7349,
-    "gym_sports": 2.2736,
-    "vibe": 2.2714,
-    "nightlife": 1.2447,
+    "food": 3.9797,
+    "green": 2.735,
+    "gym_sports": 2.2879,
+    "vibe": 2.2728,
+    "nightlife": 1.244,
     "crowd": 7.5237
+   },
+   "crowd_input": {
+    "population": 146793.47207641602,
+    "official_area_km2": 10.66,
+    "poi_log_term": 2.7585983397162046
    },
    "ratings": {
     "transport": 6,
@@ -1261,8 +1356,8 @@
     "sports": 38,
     "culture": 60,
     "temples": 59,
-    "park_ha": 120.9,
-    "park_share": 10.7,
+    "park_ha": 118.7,
+    "park_share": 10.5,
     "piers": 4
    },
    "osm_counts": {
@@ -1281,12 +1376,17 @@
     "rent": 15000,
     "daily_essentials": 2.0128,
     "safety": 5,
-    "food": 4.0732,
-    "green": 1.2589,
-    "gym_sports": 2.49,
-    "vibe": 1.8009,
+    "food": 4.0798,
+    "green": 1.2681,
+    "gym_sports": 2.4934,
+    "vibe": 1.8032,
     "nightlife": 2.2078,
     "crowd": 7.7794
+   },
+   "crowd_input": {
+    "population": 220088.08247756958,
+    "official_area_km2": 15.03,
+    "poi_log_term": 2.9835278092468682
    },
    "ratings": {
     "transport": 7,
@@ -1329,7 +1429,7 @@
     "piers": 2
    },
    "osm_counts": {
-    "food": 129,
+    "food": 132,
     "nightlife": 31,
     "essentials": 172,
     "sports": 3,
@@ -1355,14 +1455,19 @@
    "raw": {
     "transport": 0.3341,
     "rent": 9000,
-    "daily_essentials": 1.3184,
+    "daily_essentials": 1.3202,
     "safety": 7,
-    "food": 3.3765,
-    "green": 1.0123,
+    "food": 3.3876,
+    "green": 1.0199,
     "gym_sports": 1.967,
-    "vibe": 1.1891,
+    "vibe": 1.1864,
     "nightlife": 0.8335,
     "crowd": 6.8366
+   },
+   "crowd_input": {
+    "population": 166850.22809410095,
+    "official_area_km2": 25.98,
+    "poi_log_term": 2.4528768323474974
    },
    "ratings": {
     "transport": 5,
@@ -1405,7 +1510,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 129,
+    "food": 130,
     "nightlife": 1,
     "essentials": 71,
     "sports": 5,
@@ -1424,16 +1529,21 @@
   },
   "khlong-sam-wa": {
    "raw": {
-    "transport": 0.0534,
+    "transport": 0.0535,
     "rent": 8000,
-    "daily_essentials": 0.6985,
+    "daily_essentials": 0.699,
     "safety": 7,
-    "food": 2.1462,
-    "green": 0.5437,
-    "gym_sports": 0.9172,
-    "vibe": 0.5868,
+    "food": 2.1493,
+    "green": 0.5532,
+    "gym_sports": 0.917,
+    "vibe": 0.587,
     "nightlife": 0.4191,
     "crowd": 5.816
+   },
+   "crowd_input": {
+    "population": 301709.92563438416,
+    "official_area_km2": 110.69,
+    "poi_log_term": 1.8607803572267323
    },
    "ratings": {
     "transport": 1,
@@ -1441,14 +1551,14 @@
     "daily_essentials": 1,
     "safety": 7,
     "food": 1,
-    "green": 3,
+    "green": 2,
     "gym_sports": 2,
     "vibe": 1,
     "nightlife": 1,
     "crowd": 10
    },
    "points": 2866,
-   "inhabited_share": 0.458,
+   "inhabited_share": 0.459,
    "hub_minutes": {
     "siam": 79,
     "asok": 77,
@@ -1471,32 +1581,37 @@
     "sports": 58,
     "culture": 21,
     "temples": 62,
-    "park_ha": 48.6,
+    "park_ha": 46.2,
     "park_share": 0.4,
     "piers": 0
    },
    "osm_counts": {
     "food": 26,
     "nightlife": 0,
-    "essentials": 69,
+    "essentials": 68,
     "sports": 3,
-    "culture": 26
+    "culture": 25
    },
    "stations": [],
    "lines": []
   },
   "khlong-san": {
    "raw": {
-    "transport": 0.635,
+    "transport": 0.6348,
     "rent": 20000,
     "daily_essentials": 2.5123,
     "safety": 7,
-    "food": 4.9927,
-    "green": 1.1047,
+    "food": 5.0031,
+    "green": 1.1861,
     "gym_sports": 2.5505,
-    "vibe": 2.6557,
+    "vibe": 2.662,
     "nightlife": 2.48,
     "crowd": 8.0252
+   },
+   "crowd_input": {
+    "population": 116502.53451538086,
+    "official_area_km2": 6.05,
+    "poi_log_term": 3.0923810737596997
    },
    "ratings": {
     "transport": 9,
@@ -1539,7 +1654,7 @@
     "piers": 8
    },
    "osm_counts": {
-    "food": 86,
+    "food": 88,
     "nightlife": 3,
     "essentials": 105,
     "sports": 4,
@@ -1560,14 +1675,19 @@
    "raw": {
     "transport": 0.4937,
     "rent": 25000,
-    "daily_essentials": 2.2817,
+    "daily_essentials": 2.2832,
     "safety": 5,
-    "food": 4.6137,
-    "green": 1.4562,
+    "food": 4.6211,
+    "green": 1.4775,
     "gym_sports": 3.2031,
-    "vibe": 2.2589,
-    "nightlife": 2.743,
+    "vibe": 2.2603,
+    "nightlife": 2.7393,
     "crowd": 7.975
+   },
+   "crowd_input": {
+    "population": 215643.8565979004,
+    "official_area_km2": 12.99,
+    "poi_log_term": 3.116381275456863
    },
    "ratings": {
     "transport": 8,
@@ -1607,12 +1727,15 @@
     "temples": 45,
     "park_ha": 85.4,
     "park_share": 6.3,
-    "piers": 1
+    "piers": 1,
+    "michelin_stars": 0,
+    "michelin_bib": 2,
+    "embassies_800m": 1
    },
    "osm_counts": {
-    "food": 429,
-    "nightlife": 113,
-    "essentials": 261,
+    "food": 438,
+    "nightlife": 112,
+    "essentials": 262,
     "sports": 29,
     "culture": 35
    },
@@ -1639,12 +1762,17 @@
     "rent": 10500,
     "daily_essentials": 1.4991,
     "safety": 7,
-    "food": 3.2181,
-    "green": 1.4307,
+    "food": 3.2336,
+    "green": 1.4508,
     "gym_sports": 2.0874,
-    "vibe": 1.2525,
+    "vibe": 1.2569,
     "nightlife": 0.9891,
     "crowd": 7.187
+   },
+   "crowd_input": {
+    "population": 255705.43112945557,
+    "official_area_km2": 22.84,
+    "poi_log_term": 2.5253207722145024
    },
    "ratings": {
     "transport": 7,
@@ -1682,12 +1810,12 @@
     "sports": 51,
     "culture": 33,
     "temples": 14,
-    "park_ha": 37.5,
-    "park_share": 1.6,
+    "park_ha": 38.2,
+    "park_share": 1.7,
     "piers": 0
    },
    "osm_counts": {
-    "food": 35,
+    "food": 37,
     "nightlife": 2,
     "essentials": 84,
     "sports": 20,
@@ -1709,16 +1837,21 @@
   },
   "lat-krabang": {
    "raw": {
-    "transport": 0.1108,
+    "transport": 0.1106,
     "rent": 8500,
-    "daily_essentials": 0.7662,
+    "daily_essentials": 0.7867,
     "safety": 7,
-    "food": 2.4037,
-    "green": 0.6162,
-    "gym_sports": 0.7868,
-    "vibe": 0.644,
-    "nightlife": 0.6381,
+    "food": 2.4231,
+    "green": 0.6561,
+    "gym_sports": 0.8105,
+    "vibe": 0.6694,
+    "nightlife": 0.6401,
     "crowd": 5.9808
+   },
+   "crowd_input": {
+    "population": 368746.3327331543,
+    "official_area_km2": 123.86,
+    "poi_log_term": 1.9814212942036156
    },
    "ratings": {
     "transport": 2,
@@ -1733,7 +1866,7 @@
     "crowd": 9
    },
    "points": 3202,
-   "inhabited_share": 0.483,
+   "inhabited_share": 0.484,
    "hub_minutes": {
     "siam": 62,
     "asok": 68,
@@ -1742,7 +1875,7 @@
     "mochit": 70
    },
    "min_transit": 62,
-   "mean_station_distance_m": 4995,
+   "mean_station_distance_m": 4999,
    "facts": {
     "area_km2": 123.86,
     "population": 178971,
@@ -1751,21 +1884,21 @@
     "food": 1625,
     "nightlife": 85,
     "convenience": 180,
-    "markets": 17,
+    "markets": 21,
     "essentials": 498,
     "sports": 56,
     "culture": 32,
     "temples": 60,
-    "park_ha": 39.1,
-    "park_share": 0.3,
+    "park_ha": 44.9,
+    "park_share": 0.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 211,
-    "nightlife": 22,
-    "essentials": 154,
-    "sports": 13,
-    "culture": 26
+    "food": 223,
+    "nightlife": 24,
+    "essentials": 180,
+    "sports": 16,
+    "culture": 29
    },
    "stations": [
     "lat-krabang"
@@ -1780,12 +1913,17 @@
     "rent": 11500,
     "daily_essentials": 1.5439,
     "safety": 7,
-    "food": 3.8362,
-    "green": 0.6434,
+    "food": 3.8451,
+    "green": 0.6258,
     "gym_sports": 2.0158,
-    "vibe": 1.3492,
+    "vibe": 1.3503,
     "nightlife": 1.7089,
     "crowd": 7.4297
+   },
+   "crowd_input": {
+    "population": 229783.46177101135,
+    "official_area_km2": 21.5,
+    "poi_log_term": 2.7912670697265756
    },
    "ratings": {
     "transport": 4,
@@ -1793,7 +1931,7 @@
     "daily_essentials": 5,
     "safety": 7,
     "food": 6,
-    "green": 4,
+    "green": 3,
     "gym_sports": 6,
     "vibe": 5,
     "nightlife": 7,
@@ -1828,7 +1966,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 83,
+    "food": 84,
     "nightlife": 10,
     "essentials": 51,
     "sports": 2,
@@ -1841,14 +1979,19 @@
    "raw": {
     "transport": 0.1917,
     "rent": 9000,
-    "daily_essentials": 0.8825,
+    "daily_essentials": 0.8843,
     "safety": 7,
-    "food": 2.3287,
-    "green": 0.1416,
+    "food": 2.3427,
+    "green": 0.3739,
     "gym_sports": 0.9394,
     "vibe": 0.7444,
     "nightlife": 0.4735,
     "crowd": 6.2758
+   },
+   "crowd_input": {
+    "population": 277683.2942085266,
+    "official_area_km2": 63.65,
+    "poi_log_term": 2.0854260572283456
    },
    "ratings": {
     "transport": 3,
@@ -1886,12 +2029,12 @@
     "sports": 44,
     "culture": 22,
     "temples": 54,
-    "park_ha": 1.7,
-    "park_share": 0.0,
+    "park_ha": 10.4,
+    "park_share": 0.2,
     "piers": 2
    },
    "osm_counts": {
-    "food": 17,
+    "food": 19,
     "nightlife": 0,
     "essentials": 35,
     "sports": 2,
@@ -1909,16 +2052,21 @@
   },
   "nong-chok": {
    "raw": {
-    "transport": 0.004,
+    "transport": 0.005,
     "rent": 7000,
-    "daily_essentials": 0.3577,
+    "daily_essentials": 0.374,
     "safety": 8,
-    "food": 1.3773,
-    "green": 0.2404,
-    "gym_sports": 0.3474,
-    "vibe": 0.3516,
-    "nightlife": 0.1168,
+    "food": 1.3921,
+    "green": 0.2355,
+    "gym_sports": 0.3475,
+    "vibe": 0.3613,
+    "nightlife": 0.1176,
     "crowd": 4.7198
+   },
+   "crowd_input": {
+    "population": 223900.5371017456,
+    "official_area_km2": 236.26,
+    "poi_log_term": 1.2927672453585066
    },
    "ratings": {
     "transport": 1,
@@ -1933,16 +2081,16 @@
     "crowd": 10
    },
    "points": 5955,
-   "inhabited_share": 0.161,
+   "inhabited_share": 0.163,
    "hub_minutes": {
-    "siam": 101,
+    "siam": 100,
     "asok": 103,
     "silom": 107,
     "rama9": 100,
     "mochit": 101
    },
    "min_transit": 100,
-   "mean_station_distance_m": 14244,
+   "mean_station_distance_m": 14247,
    "facts": {
     "area_km2": 236.26,
     "population": 177979,
@@ -1951,37 +2099,42 @@
     "food": 698,
     "nightlife": 12,
     "convenience": 56,
-    "markets": 3,
+    "markets": 5,
     "essentials": 206,
     "sports": 32,
     "culture": 9,
     "temples": 95,
-    "park_ha": 25.1,
+    "park_ha": 19.9,
     "park_share": 0.1,
     "piers": 0
    },
    "osm_counts": {
-    "food": 13,
+    "food": 18,
     "nightlife": 0,
-    "essentials": 17,
+    "essentials": 40,
     "sports": 4,
-    "culture": 29
+    "culture": 30
    },
    "stations": [],
    "lines": []
   },
   "nong-khaem": {
    "raw": {
-    "transport": 0.0675,
+    "transport": 0.0698,
     "rent": 8500,
-    "daily_essentials": 1.2091,
+    "daily_essentials": 1.2086,
     "safety": 7,
-    "food": 2.5992,
-    "green": 0.4876,
-    "gym_sports": 1.0817,
-    "vibe": 0.7156,
-    "nightlife": 0.5471,
+    "food": 2.6292,
+    "green": 0.9012,
+    "gym_sports": 1.1136,
+    "vibe": 0.7235,
+    "nightlife": 0.5468,
     "crowd": 6.6238
+   },
+   "crowd_input": {
+    "population": 257908.14658737183,
+    "official_area_km2": 35.83,
+    "poi_log_term": 2.1830004577754805
    },
    "ratings": {
     "transport": 1,
@@ -1989,14 +2142,14 @@
     "daily_essentials": 4,
     "safety": 7,
     "food": 2,
-    "green": 2,
+    "green": 5,
     "gym_sports": 2,
     "vibe": 2,
     "nightlife": 2,
     "crowd": 8
    },
    "points": 906,
-   "inhabited_share": 0.774,
+   "inhabited_share": 0.775,
    "hub_minutes": {
     "siam": 72,
     "asok": 77,
@@ -2005,7 +2158,7 @@
     "mochit": 79
    },
    "min_transit": 69,
-   "mean_station_distance_m": 6496,
+   "mean_station_distance_m": 6495,
    "facts": {
     "area_km2": 35.83,
     "population": 156203,
@@ -2019,15 +2172,15 @@
     "sports": 30,
     "culture": 13,
     "temples": 26,
-    "park_ha": 11.3,
-    "park_share": 0.3,
+    "park_ha": 15.1,
+    "park_share": 0.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 20,
+    "food": 23,
     "nightlife": 0,
     "essentials": 106,
-    "sports": 1,
+    "sports": 2,
     "culture": 7
    },
    "stations": [],
@@ -2035,16 +2188,21 @@
   },
   "pathum-wan": {
    "raw": {
-    "transport": 0.7208,
+    "transport": 0.7209,
     "rent": 38000,
-    "daily_essentials": 3.1232,
+    "daily_essentials": 3.1234,
     "safety": 7,
-    "food": 6.003,
-    "green": 2.8946,
-    "gym_sports": 3.8737,
-    "vibe": 3.5999,
-    "nightlife": 3.6158,
-    "crowd": 8.2962
+    "food": 6.0091,
+    "green": 2.8836,
+    "gym_sports": 3.8696,
+    "vibe": 3.6089,
+    "nightlife": 3.6147,
+    "crowd": 8.2961
+   },
+   "crowd_input": {
+    "population": 116091.04217910767,
+    "official_area_km2": 8.37,
+    "poi_log_term": 3.527374923224602
    },
    "ratings": {
     "transport": 10,
@@ -2082,16 +2240,19 @@
     "sports": 136,
     "culture": 195,
     "temples": 55,
-    "park_ha": 101.3,
-    "park_share": 12.4,
-    "piers": 10
+    "park_ha": 102.7,
+    "park_share": 12.6,
+    "piers": 10,
+    "michelin_stars": 1,
+    "michelin_bib": 0,
+    "embassies_800m": 9
    },
    "osm_counts": {
-    "food": 794,
+    "food": 806,
     "nightlife": 39,
     "essentials": 262,
-    "sports": 37,
-    "culture": 126
+    "sports": 38,
+    "culture": 128
    },
    "stations": [
     "chit-lom",
@@ -2116,12 +2277,17 @@
     "rent": 10500,
     "daily_essentials": 1.5731,
     "safety": 7,
-    "food": 3.5131,
-    "green": 0.4261,
-    "gym_sports": 1.4962,
-    "vibe": 1.4001,
+    "food": 3.519,
+    "green": 0.4273,
+    "gym_sports": 1.5068,
+    "vibe": 1.4014,
     "nightlife": 1.081,
     "crowd": 7.4078
+   },
+   "crowd_input": {
+    "population": 255718.56481170654,
+    "official_area_km2": 17.83,
+    "poi_log_term": 2.622349129739574
    },
    "ratings": {
     "transport": 6,
@@ -2164,7 +2330,7 @@
     "piers": 12
    },
    "osm_counts": {
-    "food": 112,
+    "food": 113,
     "nightlife": 6,
     "essentials": 197,
     "sports": 3,
@@ -2185,14 +2351,19 @@
    "raw": {
     "transport": 0.5587,
     "rent": 18000,
-    "daily_essentials": 2.4818,
+    "daily_essentials": 2.4836,
     "safety": 8,
-    "food": 4.9312,
-    "green": 1.9419,
-    "gym_sports": 2.9018,
-    "vibe": 2.4324,
+    "food": 4.9196,
+    "green": 1.9633,
+    "gym_sports": 2.911,
+    "vibe": 2.4266,
     "nightlife": 2.7,
     "crowd": 7.9514
+   },
+   "crowd_input": {
+    "population": 176499.23291015625,
+    "official_area_km2": 9.59,
+    "poi_log_term": 3.0412487075823007
    },
    "ratings": {
     "transport": 9,
@@ -2232,7 +2403,9 @@
     "temples": 23,
     "park_ha": 14.8,
     "park_share": 1.6,
-    "piers": 0
+    "piers": 0,
+    "michelin_stars": 0,
+    "michelin_bib": 1
    },
    "osm_counts": {
     "food": 242,
@@ -2259,12 +2432,17 @@
     "rent": 15000,
     "daily_essentials": 1.5541,
     "safety": 7,
-    "food": 3.4945,
-    "green": 0.3129,
+    "food": 3.504,
+    "green": 0.4042,
     "gym_sports": 2.0038,
-    "vibe": 1.3936,
+    "vibe": 1.398,
     "nightlife": 1.406,
-    "crowd": 7.3872
+    "crowd": 7.3871
+   },
+   "crowd_input": {
+    "population": 186525.4345855713,
+    "official_area_km2": 13.99,
+    "poi_log_term": 2.6381356333606236
    },
    "ratings": {
     "transport": 5,
@@ -2272,7 +2450,7 @@
     "daily_essentials": 5,
     "safety": 7,
     "food": 5,
-    "green": 1,
+    "green": 2,
     "gym_sports": 6,
     "vibe": 5,
     "nightlife": 6,
@@ -2302,16 +2480,16 @@
     "sports": 34,
     "culture": 20,
     "temples": 38,
-    "park_ha": 1.2,
-    "park_share": 0.1,
+    "park_ha": 2.6,
+    "park_share": 0.2,
     "piers": 0
    },
    "osm_counts": {
-    "food": 41,
+    "food": 43,
     "nightlife": 2,
     "essentials": 57,
     "sports": 2,
-    "culture": 9
+    "culture": 8
    },
    "stations": [
     "bang-chak",
@@ -2324,16 +2502,21 @@
   },
   "phra-nakhon": {
    "raw": {
-    "transport": 0.4827,
+    "transport": 0.4826,
     "rent": 14000,
-    "daily_essentials": 2.8831,
+    "daily_essentials": 2.8864,
     "safety": 5,
-    "food": 5.8347,
-    "green": 2.4316,
-    "gym_sports": 2.6676,
-    "vibe": 4.0326,
-    "nightlife": 3.5761,
+    "food": 5.848,
+    "green": 2.4845,
+    "gym_sports": 2.6813,
+    "vibe": 4.0463,
+    "nightlife": 3.5751,
     "crowd": 8.2039
+   },
+   "crowd_input": {
+    "population": 83132.09526062012,
+    "official_area_km2": 5.54,
+    "poi_log_term": 3.3958074232913242
    },
    "ratings": {
     "transport": 7,
@@ -2371,16 +2554,18 @@
     "sports": 19,
     "culture": 155,
     "temples": 171,
-    "park_ha": 36.3,
-    "park_share": 6.7,
-    "piers": 24
+    "park_ha": 38.5,
+    "park_share": 7.2,
+    "piers": 24,
+    "michelin_stars": 0,
+    "michelin_bib": 4
    },
    "osm_counts": {
-    "food": 678,
+    "food": 705,
     "nightlife": 97,
-    "essentials": 330,
+    "essentials": 332,
     "sports": 9,
-    "culture": 153
+    "culture": 159
    },
    "stations": [
     "sam-yot",
@@ -2392,16 +2577,21 @@
   },
   "pom-prap-sattru-phai": {
    "raw": {
-    "transport": 0.5334,
+    "transport": 0.5336,
     "rent": 12000,
-    "daily_essentials": 2.984,
+    "daily_essentials": 2.9848,
     "safety": 6,
-    "food": 5.5437,
-    "green": 2.0419,
-    "gym_sports": 2.4813,
-    "vibe": 3.6767,
-    "nightlife": 3.0228,
+    "food": 5.5712,
+    "green": 1.9289,
+    "gym_sports": 2.5116,
+    "vibe": 3.7025,
+    "nightlife": 3.0043,
     "crowd": 8.5964
+   },
+   "crowd_input": {
+    "population": 53403.98287200928,
+    "official_area_km2": 1.93,
+    "poi_log_term": 3.4823101639877994
    },
    "ratings": {
     "transport": 8,
@@ -2441,13 +2631,15 @@
     "temples": 62,
     "park_ha": 0.7,
     "park_share": 0.3,
-    "piers": 4
+    "piers": 4,
+    "michelin_stars": 1,
+    "michelin_bib": 1
    },
    "osm_counts": {
-    "food": 121,
-    "nightlife": 23,
-    "essentials": 112,
-    "sports": 5,
+    "food": 130,
+    "nightlife": 22,
+    "essentials": 110,
+    "sports": 6,
     "culture": 44
    },
    "stations": [
@@ -2459,16 +2651,21 @@
   },
   "prawet": {
    "raw": {
-    "transport": 0.1712,
+    "transport": 0.1716,
     "rent": 10500,
     "daily_essentials": 1.1441,
     "safety": 7,
-    "food": 3.006,
+    "food": 3.0152,
     "green": 1.0778,
     "gym_sports": 1.444,
-    "vibe": 0.9494,
+    "vibe": 0.955,
     "nightlife": 0.6538,
     "crowd": 6.7054
+   },
+   "crowd_input": {
+    "population": 272062.22224617004,
+    "official_area_km2": 52.5,
+    "poi_log_term": 2.428945516103441
    },
    "ratings": {
     "transport": 3,
@@ -2476,7 +2673,7 @@
     "daily_essentials": 3,
     "safety": 7,
     "food": 3,
-    "green": 7,
+    "green": 6,
     "gym_sports": 4,
     "vibe": 3,
     "nightlife": 3,
@@ -2511,11 +2708,11 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 103,
+    "food": 106,
     "nightlife": 10,
     "essentials": 128,
     "sports": 6,
-    "culture": 20
+    "culture": 21
    },
    "stations": [
     "ban-thap-chang",
@@ -2533,19 +2730,24 @@
     "daily_essentials": 1.4992,
     "safety": 7,
     "food": 3.0077,
-    "green": 0.6759,
+    "green": 0.6762,
     "gym_sports": 1.4169,
     "vibe": 1.2103,
     "nightlife": 1.1,
-    "crowd": 6.9561
+    "crowd": 6.9562
+   },
+   "crowd_input": {
+    "population": 146800.21253204346,
+    "official_area_km2": 15.78,
+    "poi_log_term": 2.387148887552059
    },
    "ratings": {
     "transport": 3,
     "rent": 9,
     "daily_essentials": 4,
     "safety": 7,
-    "food": 4,
-    "green": 5,
+    "food": 3,
+    "green": 4,
     "gym_sports": 3,
     "vibe": 4,
     "nightlife": 5,
@@ -2591,16 +2793,21 @@
   },
   "ratchathewi": {
    "raw": {
-    "transport": 0.6749,
+    "transport": 0.6805,
     "rent": 18000,
-    "daily_essentials": 2.891,
+    "daily_essentials": 2.8949,
     "safety": 5,
-    "food": 5.1351,
-    "green": 2.2264,
-    "gym_sports": 3.13,
-    "vibe": 2.9224,
+    "food": 5.1234,
+    "green": 2.2565,
+    "gym_sports": 3.1589,
+    "vibe": 2.925,
     "nightlife": 2.744,
     "crowd": 8.2335
+   },
+   "crowd_input": {
+    "population": 143566.3715286255,
+    "official_area_km2": 7.13,
+    "poi_log_term": 3.2783503282336537
    },
    "ratings": {
     "transport": 9,
@@ -2638,16 +2845,18 @@
     "sports": 57,
     "culture": 53,
     "temples": 60,
-    "park_ha": 15.3,
-    "park_share": 2.1,
-    "piers": 0
+    "park_ha": 17.8,
+    "park_share": 2.5,
+    "piers": 0,
+    "michelin_stars": 1,
+    "michelin_bib": 0
    },
    "osm_counts": {
-    "food": 242,
+    "food": 215,
     "nightlife": 15,
-    "essentials": 223,
-    "sports": 6,
-    "culture": 30
+    "essentials": 229,
+    "sports": 7,
+    "culture": 29
    },
    "stations": [
     "makkasan",
@@ -2666,16 +2875,21 @@
   },
   "sai-mai": {
    "raw": {
-    "transport": 0.1994,
+    "transport": 0.1988,
     "rent": 8500,
-    "daily_essentials": 1.0989,
+    "daily_essentials": 1.101,
     "safety": 7,
-    "food": 2.8535,
-    "green": 0.5187,
-    "gym_sports": 1.3568,
-    "vibe": 0.8941,
-    "nightlife": 0.6644,
+    "food": 2.8554,
+    "green": 0.563,
+    "gym_sports": 1.354,
+    "vibe": 0.8985,
+    "nightlife": 0.6632,
     "crowd": 6.6875
+   },
+   "crowd_input": {
+    "population": 281500.9066696167,
+    "official_area_km2": 44.62,
+    "poi_log_term": 2.312637990696654
    },
    "ratings": {
     "transport": 4,
@@ -2683,14 +2897,14 @@
     "daily_essentials": 3,
     "safety": 7,
     "food": 3,
-    "green": 3,
+    "green": 2,
     "gym_sports": 3,
     "vibe": 3,
     "nightlife": 3,
     "crowd": 8
    },
    "points": 1084,
-   "inhabited_share": 0.856,
+   "inhabited_share": 0.86,
    "hub_minutes": {
     "siam": 67,
     "asok": 71,
@@ -2699,7 +2913,7 @@
     "mochit": 53
    },
    "min_transit": 53,
-   "mean_station_distance_m": 2744,
+   "mean_station_distance_m": 2758,
    "facts": {
     "area_km2": 44.62,
     "population": 207272,
@@ -2708,19 +2922,19 @@
     "food": 1302,
     "nightlife": 44,
     "convenience": 124,
-    "markets": 12,
+    "markets": 13,
     "essentials": 407,
     "sports": 57,
     "culture": 24,
     "temples": 36,
-    "park_ha": 15.3,
+    "park_ha": 15.9,
     "park_share": 0.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 56,
+    "food": 57,
     "nightlife": 0,
-    "essentials": 106,
+    "essentials": 110,
     "sports": 2,
     "culture": 15
    },
@@ -2739,14 +2953,19 @@
    "raw": {
     "transport": 0.6932,
     "rent": 14000,
-    "daily_essentials": 3.2111,
+    "daily_essentials": 3.212,
     "safety": 6,
-    "food": 6.2133,
-    "green": 1.5184,
+    "food": 6.2262,
+    "green": 1.482,
     "gym_sports": 2.4277,
-    "vibe": 3.9423,
-    "nightlife": 3.5095,
+    "vibe": 3.9583,
+    "nightlife": 3.5076,
     "crowd": 8.3858
+   },
+   "crowd_input": {
+    "population": 20439.62114715576,
+    "official_area_km2": 1.42,
+    "poi_log_term": 3.5985331528287157
    },
    "ratings": {
     "transport": 10,
@@ -2786,14 +3005,16 @@
     "temples": 44,
     "park_ha": 0.5,
     "park_share": 0.3,
-    "piers": 6
+    "piers": 6,
+    "michelin_stars": 1,
+    "michelin_bib": 1
    },
    "osm_counts": {
-    "food": 244,
+    "food": 254,
     "nightlife": 20,
     "essentials": 145,
     "sports": 3,
-    "culture": 59
+    "culture": 60
    },
    "stations": [
     "hua-lamphong",
@@ -2808,14 +3029,19 @@
    "raw": {
     "transport": 0.1477,
     "rent": 9500,
-    "daily_essentials": 0.9978,
+    "daily_essentials": 1.0016,
     "safety": 8,
     "food": 2.9398,
-    "green": 0.6156,
+    "green": 0.7245,
     "gym_sports": 1.4286,
-    "vibe": 0.8554,
+    "vibe": 0.8482,
     "nightlife": 0.6235,
-    "crowd": 6.6224
+    "crowd": 6.6223
+   },
+   "crowd_input": {
+    "population": 151559.56285476685,
+    "official_area_km2": 28.12,
+    "poi_log_term": 2.3262209455507037
    },
    "ratings": {
     "transport": 2,
@@ -2853,14 +3079,14 @@
     "sports": 45,
     "culture": 17,
     "temples": 20,
-    "park_ha": 14.2,
-    "park_share": 0.5,
+    "park_ha": 15.6,
+    "park_share": 0.6,
     "piers": 10
    },
    "osm_counts": {
     "food": 63,
     "nightlife": 1,
-    "essentials": 48,
+    "essentials": 49,
     "sports": 3,
     "culture": 6
    },
@@ -2875,14 +3101,19 @@
    "raw": {
     "transport": 0.473,
     "rent": 25000,
-    "daily_essentials": 2.58,
+    "daily_essentials": 2.5806,
     "safety": 7,
-    "food": 5.1916,
-    "green": 2.1447,
-    "gym_sports": 3.3319,
-    "vibe": 2.5599,
+    "food": 5.191,
+    "green": 2.0837,
+    "gym_sports": 3.3256,
+    "vibe": 2.5601,
     "nightlife": 2.392,
     "crowd": 7.9179
+   },
+   "crowd_input": {
+    "population": 180451.3708267212,
+    "official_area_km2": 9.33,
+    "poi_log_term": 2.9828850800665867
    },
    "ratings": {
     "transport": 7,
@@ -2920,14 +3151,15 @@
     "sports": 54,
     "culture": 33,
     "temples": 42,
-    "park_ha": 25.4,
+    "park_ha": 25.0,
     "park_share": 3.5,
-    "piers": 2
+    "piers": 2,
+    "embassies_800m": 2
    },
    "osm_counts": {
     "food": 207,
     "nightlife": 12,
-    "essentials": 196,
+    "essentials": 198,
     "sports": 11,
     "culture": 37
    },
@@ -2949,12 +3181,17 @@
     "rent": 12000,
     "daily_essentials": 1.5577,
     "safety": 7,
-    "food": 3.5399,
-    "green": 0.5036,
+    "food": 3.5502,
+    "green": 0.5051,
     "gym_sports": 1.8792,
-    "vibe": 1.3346,
+    "vibe": 1.3367,
     "nightlife": 1.2859,
     "crowd": 7.4378
+   },
+   "crowd_input": {
+    "population": 309605.0584831238,
+    "official_area_km2": 23.68,
+    "poi_log_term": 2.6985460269898405
    },
    "ratings": {
     "transport": 6,
@@ -2997,7 +3234,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 89,
+    "food": 91,
     "nightlife": 4,
     "essentials": 124,
     "sports": 6,
@@ -3017,16 +3254,21 @@
   },
   "taling-chan": {
    "raw": {
-    "transport": 0.1945,
+    "transport": 0.1949,
     "rent": 10000,
-    "daily_essentials": 1.0733,
+    "daily_essentials": 1.0728,
     "safety": 8,
-    "food": 3.1127,
-    "green": 0.6407,
-    "gym_sports": 1.6171,
-    "vibe": 1.0965,
-    "nightlife": 0.6298,
+    "food": 3.1377,
+    "green": 0.6304,
+    "gym_sports": 1.6166,
+    "vibe": 1.097,
+    "nightlife": 0.6297,
     "crowd": 6.8566
+   },
+   "crowd_input": {
+    "population": 211273.36661338806,
+    "official_area_km2": 29.48,
+    "poi_log_term": 2.4180063270095165
    },
    "ratings": {
     "transport": 4,
@@ -3034,14 +3276,14 @@
     "daily_essentials": 2,
     "safety": 8,
     "food": 4,
-    "green": 4,
+    "green": 3,
     "gym_sports": 4,
     "vibe": 4,
     "nightlife": 2,
     "crowd": 7
    },
    "points": 893,
-   "inhabited_share": 0.952,
+   "inhabited_share": 0.953,
    "hub_minutes": {
     "siam": 48,
     "asok": 55,
@@ -3064,12 +3306,12 @@
     "sports": 74,
     "culture": 24,
     "temples": 65,
-    "park_ha": 8.0,
+    "park_ha": 7.4,
     "park_share": 0.2,
     "piers": 1
    },
    "osm_counts": {
-    "food": 96,
+    "food": 100,
     "nightlife": 2,
     "essentials": 54,
     "sports": 5,
@@ -3084,16 +3326,21 @@
   },
   "thawi-watthana": {
    "raw": {
-    "transport": 0.0707,
+    "transport": 0.0721,
     "rent": 8500,
-    "daily_essentials": 0.7904,
+    "daily_essentials": 0.7907,
     "safety": 8,
-    "food": 2.4903,
-    "green": 1.0745,
-    "gym_sports": 1.2908,
-    "vibe": 0.6894,
-    "nightlife": 0.3738,
+    "food": 2.504,
+    "green": 1.2531,
+    "gym_sports": 1.3104,
+    "vibe": 0.688,
+    "nightlife": 0.3736,
     "crowd": 5.9968
+   },
+   "crowd_input": {
+    "population": 141019.5154118538,
+    "official_area_km2": 50.22,
+    "poi_log_term": 2.02668314928922
    },
    "ratings": {
     "transport": 2,
@@ -3117,7 +3364,7 @@
     "mochit": 73
    },
    "min_transit": 69,
-   "mean_station_distance_m": 7418,
+   "mean_station_distance_m": 7419,
    "facts": {
     "area_km2": 50.22,
     "population": 78749,
@@ -3131,12 +3378,12 @@
     "sports": 57,
     "culture": 21,
     "temples": 20,
-    "park_ha": 36.8,
-    "park_share": 0.7,
+    "park_ha": 40.1,
+    "park_share": 0.8,
     "piers": 0
    },
    "osm_counts": {
-    "food": 29,
+    "food": 31,
     "nightlife": 0,
     "essentials": 33,
     "sports": 6,
@@ -3147,16 +3394,21 @@
   },
   "thon-buri": {
    "raw": {
-    "transport": 0.5172,
+    "transport": 0.5167,
     "rent": 12000,
-    "daily_essentials": 2.1471,
+    "daily_essentials": 2.1477,
     "safety": 7,
-    "food": 4.3606,
-    "green": 0.5171,
+    "food": 4.3714,
+    "green": 0.6869,
     "gym_sports": 2.2782,
-    "vibe": 2.1665,
+    "vibe": 2.1707,
     "nightlife": 1.7511,
-    "crowd": 7.9389
+    "crowd": 7.9388
+   },
+   "crowd_input": {
+    "population": 193631.89667510986,
+    "official_area_km2": 8.55,
+    "poi_log_term": 2.924948807071938
    },
    "ratings": {
     "transport": 8,
@@ -3164,7 +3416,7 @@
     "daily_essentials": 8,
     "safety": 7,
     "food": 8,
-    "green": 2,
+    "green": 4,
     "gym_sports": 7,
     "vibe": 8,
     "nightlife": 7,
@@ -3194,12 +3446,12 @@
     "sports": 41,
     "culture": 36,
     "temples": 77,
-    "park_ha": 3.1,
-    "park_share": 0.4,
+    "park_ha": 4.6,
+    "park_share": 0.6,
     "piers": 3
    },
    "osm_counts": {
-    "food": 76,
+    "food": 81,
     "nightlife": 2,
     "essentials": 117,
     "sports": 3,
@@ -3221,12 +3473,17 @@
     "rent": 9000,
     "daily_essentials": 1.1368,
     "safety": 8,
-    "food": 2.9092,
+    "food": 2.9249,
     "green": 1.1549,
     "gym_sports": 1.5214,
-    "vibe": 0.9507,
+    "vibe": 0.954,
     "nightlife": 0.7126,
     "crowd": 6.5546
+   },
+   "crowd_input": {
+    "population": 168656.30392456055,
+    "official_area_km2": 30.74,
+    "poi_log_term": 2.24956856943746
    },
    "ratings": {
     "transport": 2,
@@ -3269,7 +3526,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 51,
+    "food": 52,
     "nightlife": 3,
     "essentials": 117,
     "sports": 9,
@@ -3282,14 +3539,19 @@
    "raw": {
     "transport": 0.3972,
     "rent": 11500,
-    "daily_essentials": 1.9143,
+    "daily_essentials": 1.9128,
     "safety": 7,
-    "food": 3.8898,
+    "food": 3.8957,
     "green": 0.356,
-    "gym_sports": 2.1731,
-    "vibe": 1.5588,
+    "gym_sports": 2.1849,
+    "vibe": 1.5628,
     "nightlife": 1.6488,
     "crowd": 7.6542
+   },
+   "crowd_input": {
+    "population": 296804.4258880615,
+    "official_area_km2": 18.91,
+    "poi_log_term": 2.823599066551775
    },
    "ratings": {
     "transport": 6,
@@ -3297,7 +3559,7 @@
     "daily_essentials": 7,
     "safety": 7,
     "food": 6,
-    "green": 2,
+    "green": 1,
     "gym_sports": 7,
     "vibe": 6,
     "nightlife": 7,
@@ -3332,11 +3594,11 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 46,
+    "food": 47,
     "nightlife": 3,
     "essentials": 96,
     "sports": 5,
-    "culture": 7
+    "culture": 8
    },
    "stations": [
     "chok-chai-4",
@@ -3351,16 +3613,21 @@
   },
   "watthana": {
    "raw": {
-    "transport": 0.4834,
+    "transport": 0.4839,
     "rent": 32000,
     "daily_essentials": 2.6677,
     "safety": 7,
-    "food": 5.3169,
-    "green": 0.8343,
+    "food": 5.323,
+    "green": 0.9005,
     "gym_sports": 3.5771,
-    "vibe": 2.5328,
-    "nightlife": 3.6042,
+    "vibe": 2.5331,
+    "nightlife": 3.6019,
     "crowd": 8.229
+   },
+   "crowd_input": {
+    "population": 221728.83126449585,
+    "official_area_km2": 12.56,
+    "poi_log_term": 3.3396395314572227
    },
    "ratings": {
     "transport": 7,
@@ -3398,12 +3665,13 @@
     "sports": 210,
     "culture": 120,
     "temples": 82,
-    "park_ha": 3.7,
+    "park_ha": 3.6,
     "park_share": 0.3,
-    "piers": 10
+    "piers": 10,
+    "embassies_800m": 1
    },
    "osm_counts": {
-    "food": 897,
+    "food": 903,
     "nightlife": 208,
     "essentials": 526,
     "sports": 26,
@@ -3432,12 +3700,17 @@
     "rent": 15000,
     "daily_essentials": 1.7999,
     "safety": 7,
-    "food": 4.0437,
+    "food": 4.0414,
     "green": 1.3386,
     "gym_sports": 2.7171,
-    "vibe": 1.7501,
+    "vibe": 1.7502,
     "nightlife": 1.1983,
-    "crowd": 7.3465
+    "crowd": 7.3466
+   },
+   "crowd_input": {
+    "population": 202554.39700698853,
+    "official_area_km2": 16.66,
+    "poi_log_term": 2.643675546814991
    },
    "ratings": {
     "transport": 4,
@@ -3499,7 +3772,7 @@
     "rent": 11000,
     "daily_essentials": 1.2407,
     "safety": 7.0,
-    "food": 2.8514,
+    "food": 2.8636,
     "green": 0.4975,
     "gym_sports": 1.4506,
     "vibe": 1.4535,
@@ -3645,9 +3918,9 @@
    "raw": {
     "transport": 0.683,
     "rent": 26500,
-    "daily_essentials": 3.4421,
+    "daily_essentials": 3.4423,
     "safety": 6.03,
-    "food": 6.2995,
+    "food": 6.3022,
     "green": 2.816,
     "gym_sports": 4.317,
     "vibe": 3.4008,
@@ -3710,7 +3983,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 255,
+    "food": 256,
     "nightlife": 77,
     "essentials": 154,
     "sports": 7,
@@ -3736,7 +4009,7 @@
     "daily_essentials": 1,
     "gym_sports": 1,
     "vibe": 1,
-    "green": 4,
+    "green": 3,
     "transport": 1,
     "crowd": 10,
     "rent": 9,
@@ -3880,7 +4153,7 @@
     "daily_essentials": 1.9781,
     "safety": 7.0,
     "food": 4.248,
-    "green": 0.1752,
+    "green": 0.1794,
     "gym_sports": 2.3502,
     "vibe": 1.5552,
     "nightlife": 1.8857,
@@ -3952,7 +4225,7 @@
     "daily_essentials": 1.1107,
     "safety": 7.0,
     "food": 2.7774,
-    "green": 0.3659,
+    "green": 1.2132,
     "gym_sports": 1.5695,
     "vibe": 1.3529,
     "nightlife": 0.9095,
@@ -3964,7 +4237,7 @@
     "daily_essentials": 1,
     "gym_sports": 2,
     "vibe": 3,
-    "green": 3,
+    "green": 5,
     "transport": 1,
     "crowd": 9,
     "rent": 10,
@@ -4014,7 +4287,7 @@
     "sports": 3,
     "culture": 3,
     "temples": 2,
-    "park_ha": 0.1,
+    "park_ha": 0.8,
     "piers": 0
    },
    "osm_counts": {
@@ -4029,9 +4302,9 @@
    "raw": {
     "transport": 0.5819,
     "rent": 12000,
-    "daily_essentials": 2.5582,
+    "daily_essentials": 2.5569,
     "safety": 6.0,
-    "food": 4.7701,
+    "food": 4.7757,
     "green": 0.657,
     "gym_sports": 2.4604,
     "vibe": 2.2785,
@@ -4104,7 +4377,7 @@
     "daily_essentials": 1.9426,
     "safety": 7.0,
     "food": 3.6664,
-    "green": 0.4181,
+    "green": 0.4941,
     "gym_sports": 1.5463,
     "vibe": 1.3199,
     "nightlife": 1.1487,
@@ -4251,14 +4524,14 @@
   },
   "bang-khun-non": {
    "raw": {
-    "transport": 0.5307,
+    "transport": 0.5335,
     "rent": 12000,
     "daily_essentials": 2.165,
     "safety": 7.0,
-    "food": 3.866,
-    "green": 0.8873,
+    "food": 3.8976,
+    "green": 1.274,
     "gym_sports": 1.808,
-    "vibe": 2.1567,
+    "vibe": 2.1616,
     "nightlife": 1.4783,
     "crowd": 4.7749
    },
@@ -4268,8 +4541,8 @@
     "daily_essentials": 6,
     "gym_sports": 3,
     "vibe": 6,
-    "green": 5,
-    "transport": 3,
+    "green": 6,
+    "transport": 4,
     "crowd": 6,
     "rent": 9,
     "safety": 7
@@ -4328,7 +4601,7 @@
     "daily_essentials": 1.7043,
     "safety": 7.0,
     "food": 3.7815,
-    "green": 0.7599,
+    "green": 0.7614,
     "gym_sports": 2.5507,
     "vibe": 1.7473,
     "nightlife": 1.421,
@@ -4475,10 +4748,10 @@
     "rent": 10500,
     "daily_essentials": 2.07,
     "safety": 7.0,
-    "food": 3.9784,
+    "food": 4.0347,
     "green": 0.6935,
     "gym_sports": 1.8736,
-    "vibe": 2.1187,
+    "vibe": 2.1304,
     "nightlife": 1.2479,
     "crowd": 4.551
    },
@@ -4538,7 +4811,7 @@
     "piers": 3
    },
    "osm_counts": {
-    "food": 9,
+    "food": 11,
     "nightlife": 0,
     "essentials": 29,
     "sports": 0,
@@ -4703,7 +4976,7 @@
     "rent": 12000,
     "daily_essentials": 1.7027,
     "safety": 7.0,
-    "food": 3.6943,
+    "food": 3.6973,
     "green": 0.8239,
     "gym_sports": 1.9938,
     "vibe": 1.4372,
@@ -4716,7 +4989,7 @@
     "daily_essentials": 3,
     "gym_sports": 4,
     "vibe": 3,
-    "green": 5,
+    "green": 4,
     "transport": 7,
     "crowd": 6,
     "rent": 9,
@@ -4775,10 +5048,10 @@
     "rent": 10500,
     "daily_essentials": 1.9599,
     "safety": 7.0,
-    "food": 4.0913,
+    "food": 4.0985,
     "green": 1.2595,
     "gym_sports": 1.5626,
-    "vibe": 1.6646,
+    "vibe": 1.6693,
     "nightlife": 1.2342,
     "crowd": 4.5142
    },
@@ -5144,7 +5417,7 @@
     "daily_essentials": 1.9489,
     "safety": 7.0,
     "food": 3.201,
-    "green": 0.2609,
+    "green": 0.374,
     "gym_sports": 2.0753,
     "vibe": 1.6762,
     "nightlife": 1.0493,
@@ -5219,10 +5492,10 @@
     "rent": 21500,
     "daily_essentials": 3.0249,
     "safety": 6.75,
-    "food": 5.7849,
-    "green": 1.7691,
+    "food": 5.7935,
+    "green": 1.7881,
     "gym_sports": 3.0021,
-    "vibe": 3.5394,
+    "vibe": 3.5414,
     "nightlife": 3.3121,
     "crowd": 6.2108
    },
@@ -5282,7 +5555,7 @@
     "piers": 9
    },
    "osm_counts": {
-    "food": 49,
+    "food": 52,
     "nightlife": 3,
     "essentials": 29,
     "sports": 0,
@@ -5291,7 +5564,7 @@
   },
   "chatuchak": {
    "raw": {
-    "transport": 0.5742,
+    "transport": 0.5746,
     "rent": 16000,
     "daily_essentials": 1.243,
     "safety": 7.0,
@@ -5363,14 +5636,14 @@
   },
   "chit-lom": {
    "raw": {
-    "transport": 0.7952,
+    "transport": 0.7955,
     "rent": 45000,
     "daily_essentials": 3.4542,
     "safety": 7.0,
-    "food": 6.4123,
-    "green": 2.7589,
+    "food": 6.4161,
+    "green": 2.7593,
     "gym_sports": 4.0469,
-    "vibe": 3.6357,
+    "vibe": 3.6377,
     "nightlife": 3.8681,
     "crowd": 6.9352
    },
@@ -5378,7 +5651,7 @@
     "food": 10,
     "nightlife": 9,
     "daily_essentials": 10,
-    "gym_sports": 9,
+    "gym_sports": 10,
     "vibe": 9,
     "green": 9,
     "transport": 10,
@@ -5426,7 +5699,7 @@
     "piers": 5
    },
    "osm_counts": {
-    "food": 126,
+    "food": 128,
     "nightlife": 15,
     "essentials": 53,
     "sports": 4,
@@ -5519,10 +5792,10 @@
     "rent": 24000,
     "daily_essentials": 3.4396,
     "safety": 6.32,
-    "food": 6.386,
+    "food": 6.3883,
     "green": 2.2806,
-    "gym_sports": 4.0678,
-    "vibe": 3.5946,
+    "gym_sports": 4.0115,
+    "vibe": 3.5956,
     "nightlife": 4.3971,
     "crowd": 6.5429
    },
@@ -5530,7 +5803,7 @@
     "food": 10,
     "nightlife": 10,
     "daily_essentials": 10,
-    "gym_sports": 10,
+    "gym_sports": 9,
     "vibe": 9,
     "green": 9,
     "transport": 9,
@@ -5582,10 +5855,10 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 146,
+    "food": 148,
     "nightlife": 11,
     "essentials": 53,
-    "sports": 11,
+    "sports": 5,
     "culture": 6
    }
   },
@@ -5595,10 +5868,10 @@
     "rent": 9500,
     "daily_essentials": 1.4953,
     "safety": 7.0,
-    "food": 4.2007,
+    "food": 4.2218,
     "green": 0.146,
     "gym_sports": 1.31,
-    "vibe": 1.3837,
+    "vibe": 1.3946,
     "nightlife": 1.3743,
     "crowd": 4.2602
    },
@@ -5654,7 +5927,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 51,
+    "food": 52,
     "nightlife": 1,
     "essentials": 13,
     "sports": 0,
@@ -5667,11 +5940,11 @@
     "rent": 27000,
     "daily_essentials": 2.8035,
     "safety": 5.97,
-    "food": 5.5417,
-    "green": 0.0177,
+    "food": 5.5512,
+    "green": 0.1441,
     "gym_sports": 3.6869,
-    "vibe": 2.6836,
-    "nightlife": 3.3593,
+    "vibe": 2.6865,
+    "nightlife": 3.3545,
     "crowd": 5.6801
    },
    "ratings": {
@@ -5680,7 +5953,7 @@
     "daily_essentials": 8,
     "gym_sports": 9,
     "vibe": 8,
-    "green": 1,
+    "green": 2,
     "transport": 5,
     "crowd": 3,
     "rent": 4,
@@ -5730,7 +6003,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 89,
+    "food": 91,
     "nightlife": 6,
     "essentials": 37,
     "sports": 2,
@@ -5744,7 +6017,7 @@
     "daily_essentials": 2.1156,
     "safety": 7.0,
     "food": 3.8672,
-    "green": 0.5049,
+    "green": 0.8006,
     "gym_sports": 1.7554,
     "vibe": 1.7453,
     "nightlife": 1.1646,
@@ -5756,7 +6029,7 @@
     "daily_essentials": 6,
     "gym_sports": 3,
     "vibe": 5,
-    "green": 3,
+    "green": 4,
     "transport": 4,
     "crowd": 6,
     "rent": 9,
@@ -5887,7 +6160,7 @@
     "rent": 16000,
     "daily_essentials": 2.5615,
     "safety": 7.0,
-    "food": 5.1199,
+    "food": 5.1217,
     "green": 2.9448,
     "gym_sports": 2.7662,
     "vibe": 2.485,
@@ -5957,12 +6230,12 @@
    "raw": {
     "transport": 0.7198,
     "rent": 28500,
-    "daily_essentials": 3.2159,
+    "daily_essentials": 3.2163,
     "safety": 6.47,
-    "food": 6.2015,
-    "green": 1.8134,
-    "gym_sports": 3.2354,
-    "vibe": 3.8264,
+    "food": 6.2057,
+    "green": 1.7658,
+    "gym_sports": 3.2113,
+    "vibe": 3.8339,
     "nightlife": 3.5441,
     "crowd": 6.005
    },
@@ -6030,11 +6303,11 @@
     "piers": 2
    },
    "osm_counts": {
-    "food": 199,
+    "food": 200,
     "nightlife": 28,
     "essentials": 95,
     "sports": 5,
-    "culture": 28
+    "culture": 29
    }
   },
   "hua-mak": {
@@ -6115,10 +6388,10 @@
     "rent": 14000,
     "daily_essentials": 2.7906,
     "safety": 5.0,
-    "food": 5.0585,
+    "food": 5.0598,
     "green": 0.8565,
     "gym_sports": 3.1338,
-    "vibe": 2.3602,
+    "vibe": 2.3611,
     "nightlife": 3.0461,
     "crowd": 5.8117
    },
@@ -6128,7 +6401,7 @@
     "daily_essentials": 8,
     "gym_sports": 8,
     "vibe": 7,
-    "green": 5,
+    "green": 4,
     "transport": 4,
     "crowd": 2,
     "rent": 8,
@@ -6187,14 +6460,14 @@
   },
   "itsaraphap": {
    "raw": {
-    "transport": 0.5751,
+    "transport": 0.575,
     "rent": 11000,
-    "daily_essentials": 1.9908,
+    "daily_essentials": 1.9927,
     "safety": 7.0,
     "food": 4.3047,
-    "green": 0.8674,
+    "green": 0.9045,
     "gym_sports": 2.2963,
-    "vibe": 2.591,
+    "vibe": 2.5926,
     "nightlife": 1.9134,
     "crowd": 4.8567
    },
@@ -6279,7 +6552,7 @@
     "nightlife": 2,
     "daily_essentials": 2,
     "gym_sports": 3,
-    "vibe": 2,
+    "vibe": 1,
     "green": 4,
     "transport": 3,
     "crowd": 9,
@@ -6339,7 +6612,7 @@
     "rent": 16500,
     "daily_essentials": 2.392,
     "safety": 7.28,
-    "food": 5.1778,
+    "food": 5.1935,
     "green": 2.3994,
     "gym_sports": 2.4156,
     "vibe": 2.9016,
@@ -6402,7 +6675,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 34,
+    "food": 37,
     "nightlife": 2,
     "essentials": 14,
     "sports": 0,
@@ -6411,23 +6684,23 @@
   },
   "kan-kheha": {
    "raw": {
-    "transport": 0.5303,
+    "transport": 0.5302,
     "rent": 9500,
-    "daily_essentials": 1.1921,
+    "daily_essentials": 1.1915,
     "safety": 7.0,
-    "food": 2.6945,
-    "green": 1.0364,
-    "gym_sports": 1.4453,
-    "vibe": 1.1283,
-    "nightlife": 0.9554,
-    "crowd": 3.8538
+    "food": 2.9678,
+    "green": 1.1219,
+    "gym_sports": 1.4454,
+    "vibe": 1.2015,
+    "nightlife": 0.9553,
+    "crowd": 3.8515
    },
    "ratings": {
     "food": 1,
     "nightlife": 2,
     "daily_essentials": 1,
     "gym_sports": 1,
-    "vibe": 1,
+    "vibe": 2,
     "green": 5,
     "transport": 3,
     "crowd": 10,
@@ -6438,16 +6711,16 @@
    "districts": [
     {
      "slug": "don-mueang",
-     "share": 0.761
+     "share": 0.762
     },
     {
      "slug": "lak-si",
-     "share": 0.239
+     "share": 0.238
     }
    ],
    "rent_1br": 9500,
    "rent_2br": 19500,
-   "safety": 6.999999999999999,
+   "safety": 7.0,
    "hub_minutes": {
     "siam": 51,
     "asok": 55,
@@ -6478,7 +6751,7 @@
     "piers": 1
    },
    "osm_counts": {
-    "food": 1,
+    "food": 4,
     "nightlife": 0,
     "essentials": 12,
     "sports": 0,
@@ -6563,10 +6836,10 @@
     "rent": 19000,
     "daily_essentials": 2.7893,
     "safety": 6.84,
-    "food": 5.5471,
+    "food": 5.5658,
     "green": 1.2164,
     "gym_sports": 2.4939,
-    "vibe": 3.4615,
+    "vibe": 3.4778,
     "nightlife": 3.246,
     "crowd": 5.5581
    },
@@ -6576,7 +6849,7 @@
     "daily_essentials": 8,
     "gym_sports": 6,
     "vibe": 9,
-    "green": 6,
+    "green": 5,
     "transport": 9,
     "crowd": 3,
     "rent": 7,
@@ -6626,7 +6899,7 @@
     "piers": 2
    },
    "osm_counts": {
-    "food": 33,
+    "food": 34,
     "nightlife": 1,
     "essentials": 16,
     "sports": 1,
@@ -6639,7 +6912,7 @@
     "rent": 25000,
     "daily_essentials": 2.3226,
     "safety": 5.88,
-    "food": 4.9723,
+    "food": 4.9725,
     "green": 3.2855,
     "gym_sports": 3.3383,
     "vibe": 2.505,
@@ -6721,10 +6994,10 @@
    "raw": {
     "transport": 0.499,
     "rent": 9000,
-    "daily_essentials": 2.0433,
+    "daily_essentials": 2.0479,
     "safety": 7.0,
-    "food": 3.7618,
-    "green": 0.2581,
+    "food": 3.8078,
+    "green": 0.2421,
     "gym_sports": 2.1005,
     "vibe": 1.3584,
     "nightlife": 1.2172,
@@ -6782,7 +7055,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 2,
+    "food": 3,
     "nightlife": 0,
     "essentials": 13,
     "sports": 0,
@@ -6795,10 +7068,10 @@
     "rent": 14500,
     "daily_essentials": 1.6339,
     "safety": 7.11,
-    "food": 3.9893,
+    "food": 4.055,
     "green": 1.8329,
     "gym_sports": 2.0103,
-    "vibe": 2.0353,
+    "vibe": 2.0535,
     "nightlife": 1.6087,
     "crowd": 3.8528
    },
@@ -6862,7 +7135,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 12,
+    "food": 17,
     "nightlife": 0,
     "essentials": 8,
     "sports": 0,
@@ -6875,10 +7148,10 @@
     "rent": 20000,
     "daily_essentials": 2.4438,
     "safety": 7.0,
-    "food": 4.7858,
-    "green": 1.2481,
+    "food": 4.7935,
+    "green": 1.3255,
     "gym_sports": 2.7347,
-    "vibe": 2.1903,
+    "vibe": 2.1934,
     "nightlife": 2.2416,
     "crowd": 5.2418
    },
@@ -6947,10 +7220,10 @@
     "rent": 10500,
     "daily_essentials": 1.9978,
     "safety": 7.0,
-    "food": 3.4102,
+    "food": 3.4235,
     "green": 0.705,
     "gym_sports": 2.5557,
-    "vibe": 1.4068,
+    "vibe": 1.4114,
     "nightlife": 1.4461,
     "crowd": 4.7546
    },
@@ -7020,8 +7293,8 @@
     "daily_essentials": 1.7359,
     "safety": 7.0,
     "food": 3.6465,
-    "green": 1.7206,
-    "gym_sports": 1.915,
+    "green": 1.7765,
+    "gym_sports": 1.9409,
     "vibe": 1.3363,
     "nightlife": 1.2442,
     "crowd": 4.77
@@ -7094,7 +7367,7 @@
     "food": 2.8121,
     "green": 1.4209,
     "gym_sports": 0.381,
-    "vibe": 0.9244,
+    "vibe": 0.925,
     "nightlife": 0.6912,
     "crowd": 3.6565
    },
@@ -7163,10 +7436,10 @@
     "rent": 16000,
     "daily_essentials": 2.3629,
     "safety": 7.0,
-    "food": 4.3689,
+    "food": 4.384,
     "green": 0.0454,
     "gym_sports": 2.3991,
-    "vibe": 2.0279,
+    "vibe": 2.0311,
     "nightlife": 1.9342,
     "crowd": 5.1966
    },
@@ -7222,7 +7495,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 14,
+    "food": 15,
     "nightlife": 0,
     "essentials": 33,
     "sports": 0,
@@ -7238,7 +7511,7 @@
     "food": 4.3589,
     "green": 0.0328,
     "gym_sports": 1.9771,
-    "vibe": 1.8581,
+    "vibe": 1.8644,
     "nightlife": 1.9342,
     "crowd": 5.2607
    },
@@ -7302,7 +7575,7 @@
     "nightlife": 0,
     "essentials": 6,
     "sports": 0,
-    "culture": 0
+    "culture": 1
    }
   },
   "lat-phrao-71": {
@@ -7324,7 +7597,7 @@
     "daily_essentials": 5,
     "gym_sports": 3,
     "vibe": 4,
-    "green": 2,
+    "green": 1,
     "transport": 4,
     "crowd": 5,
     "rent": 9,
@@ -7527,10 +7800,10 @@
     "rent": 31500,
     "daily_essentials": 2.7263,
     "safety": 6.97,
-    "food": 5.5173,
+    "food": 5.518,
     "green": 3.7158,
-    "gym_sports": 3.717,
-    "vibe": 3.0964,
+    "gym_sports": 3.7235,
+    "vibe": 3.106,
     "nightlife": 2.9273,
     "crowd": 5.4859
    },
@@ -7586,7 +7859,7 @@
     "sports": 16,
     "culture": 14,
     "temples": 2,
-    "park_ha": 26.2,
+    "park_ha": 26.9,
     "piers": 0
    },
    "osm_counts": {
@@ -7606,7 +7879,7 @@
     "food": 4.2038,
     "green": 0.0218,
     "gym_sports": 2.1278,
-    "vibe": 1.687,
+    "vibe": 1.6941,
     "nightlife": 1.6943,
     "crowd": 5.1795
    },
@@ -7615,7 +7888,7 @@
     "nightlife": 6,
     "daily_essentials": 6,
     "gym_sports": 4,
-    "vibe": 4,
+    "vibe": 5,
     "green": 1,
     "transport": 3,
     "crowd": 5,
@@ -7748,7 +8021,7 @@
     "daily_essentials": 1.4093,
     "safety": 7.0,
     "food": 3.0984,
-    "green": 0.7877,
+    "green": 0.789,
     "gym_sports": 1.9127,
     "vibe": 1.0657,
     "nightlife": 0.6884,
@@ -7817,10 +8090,10 @@
    "raw": {
     "transport": 0.5439,
     "rent": 9000,
-    "daily_essentials": 2.0324,
+    "daily_essentials": 2.0305,
     "safety": 7.0,
-    "food": 3.5879,
-    "green": 0.8163,
+    "food": 3.6228,
+    "green": 0.9524,
     "gym_sports": 1.7367,
     "vibe": 1.4294,
     "nightlife": 0.7637,
@@ -7891,7 +8164,7 @@
     "rent": 16000,
     "daily_essentials": 2.0766,
     "safety": 7.0,
-    "food": 4.6882,
+    "food": 4.6983,
     "green": 3.4806,
     "gym_sports": 2.4784,
     "vibe": 2.6139,
@@ -7959,14 +8232,14 @@
   },
   "nana": {
    "raw": {
-    "transport": 0.72,
+    "transport": 0.723,
     "rent": 28000,
     "daily_essentials": 3.4816,
     "safety": 6.12,
-    "food": 6.2008,
+    "food": 6.2009,
     "green": 2.9054,
     "gym_sports": 4.2388,
-    "vibe": 3.2998,
+    "vibe": 3.2999,
     "nightlife": 4.8038,
     "crowd": 6.3669
    },
@@ -8043,10 +8316,10 @@
     "rent": 36500,
     "daily_essentials": 3.1709,
     "safety": 6.86,
-    "food": 6.2396,
-    "green": 2.3261,
+    "food": 6.2437,
+    "green": 2.3361,
     "gym_sports": 3.8271,
-    "vibe": 3.9836,
+    "vibe": 3.9872,
     "nightlife": 3.307,
     "crowd": 6.4043
    },
@@ -8102,11 +8375,11 @@
     "sports": 19,
     "culture": 38,
     "temples": 8,
-    "park_ha": 3.9,
+    "park_ha": 4.3,
     "piers": 1
    },
    "osm_counts": {
-    "food": 88,
+    "food": 89,
     "nightlife": 4,
     "essentials": 37,
     "sports": 7,
@@ -8119,10 +8392,10 @@
     "rent": 10500,
     "daily_essentials": 1.8338,
     "safety": 7.0,
-    "food": 3.466,
+    "food": 3.4904,
     "green": 1.9282,
     "gym_sports": 2.5035,
-    "vibe": 1.6263,
+    "vibe": 1.6351,
     "nightlife": 1.3708,
     "crowd": 4.7746
    },
@@ -8264,10 +8537,10 @@
     "daily_essentials": 2.5989,
     "safety": 6.43,
     "food": 4.9984,
-    "green": 0.4061,
+    "green": 0.4468,
     "gym_sports": 2.8954,
     "vibe": 2.2688,
-    "nightlife": 2.7714,
+    "nightlife": 2.7666,
     "crowd": 5.3583
    },
    "ratings": {
@@ -8330,7 +8603,7 @@
     "sports": 14,
     "culture": 6,
     "temples": 4,
-    "park_ha": 0.2,
+    "park_ha": 0.1,
     "piers": 0
    },
    "osm_counts": {
@@ -8348,7 +8621,7 @@
     "daily_essentials": 1.7479,
     "safety": 7.0,
     "food": 4.635,
-    "green": 1.1599,
+    "green": 1.1543,
     "gym_sports": 2.4341,
     "vibe": 1.6906,
     "nightlife": 0.9529,
@@ -8359,7 +8632,7 @@
     "nightlife": 2,
     "daily_essentials": 3,
     "gym_sports": 6,
-    "vibe": 5,
+    "vibe": 4,
     "green": 5,
     "transport": 1,
     "crowd": 6,
@@ -8415,7 +8688,7 @@
   },
   "phahonyothin-24": {
    "raw": {
-    "transport": 0.6408,
+    "transport": 0.6411,
     "rent": 16000,
     "daily_essentials": 2.4645,
     "safety": 7.0,
@@ -8491,7 +8764,7 @@
     "rent": 11000,
     "daily_essentials": 1.7205,
     "safety": 7.0,
-    "food": 3.3139,
+    "food": 3.3402,
     "green": 0.797,
     "gym_sports": 1.517,
     "vibe": 1.3405,
@@ -8577,7 +8850,7 @@
     "gym_sports": 3,
     "vibe": 6,
     "green": 2,
-    "transport": 4,
+    "transport": 3,
     "crowd": 6,
     "rent": 9,
     "safety": 7
@@ -8638,7 +8911,7 @@
     "food": 3.878,
     "green": 0.1423,
     "gym_sports": 2.3198,
-    "vibe": 1.7799,
+    "vibe": 1.7831,
     "nightlife": 1.296,
     "crowd": 4.8019
    },
@@ -8713,12 +8986,12 @@
    "raw": {
     "transport": 0.7432,
     "rent": 25000,
-    "daily_essentials": 3.0519,
+    "daily_essentials": 3.0553,
     "safety": 5.0,
-    "food": 5.5169,
-    "green": 2.0066,
-    "gym_sports": 3.2547,
-    "vibe": 3.2005,
+    "food": 5.5045,
+    "green": 2.0308,
+    "gym_sports": 3.3028,
+    "vibe": 3.1962,
     "nightlife": 3.0799,
     "crowd": 6.0183
    },
@@ -8770,27 +9043,27 @@
     "sports": 9,
     "culture": 2,
     "temples": 9,
-    "park_ha": 0.4,
+    "park_ha": 1.1,
     "piers": 0
    },
    "osm_counts": {
     "food": 33,
     "nightlife": 0,
-    "essentials": 23,
+    "essentials": 25,
     "sports": 1,
     "culture": 3
    }
   },
   "phetchaburi": {
    "raw": {
-    "transport": 0.7218,
+    "transport": 0.731,
     "rent": 21000,
     "daily_essentials": 2.8265,
     "safety": 5.56,
-    "food": 5.1504,
-    "green": 1.3475,
-    "gym_sports": 3.432,
-    "vibe": 2.7696,
+    "food": 5.1565,
+    "green": 1.3417,
+    "gym_sports": 3.4283,
+    "vibe": 2.7724,
     "nightlife": 3.4211,
     "crowd": 5.375
    },
@@ -8935,14 +9208,14 @@
   },
   "phloen-chit": {
    "raw": {
-    "transport": 0.749,
+    "transport": 0.7563,
     "rent": 33500,
     "daily_essentials": 3.3257,
     "safety": 6.68,
-    "food": 6.0584,
+    "food": 6.0591,
     "green": 2.8408,
     "gym_sports": 4.0872,
-    "vibe": 3.1277,
+    "vibe": 3.1289,
     "nightlife": 4.3615,
     "crowd": 6.3325
    },
@@ -9015,14 +9288,14 @@
   },
   "pho-nimit": {
    "raw": {
-    "transport": 0.6166,
+    "transport": 0.6151,
     "rent": 12000,
-    "daily_essentials": 2.2304,
+    "daily_essentials": 2.2314,
     "safety": 7.0,
-    "food": 4.2425,
-    "green": 0.3551,
+    "food": 4.251,
+    "green": 0.3861,
     "gym_sports": 2.304,
-    "vibe": 2.0668,
+    "vibe": 2.0741,
     "nightlife": 1.6168,
     "crowd": 4.9011
    },
@@ -9032,7 +9305,7 @@
     "daily_essentials": 6,
     "gym_sports": 5,
     "vibe": 6,
-    "green": 3,
+    "green": 2,
     "transport": 7,
     "crowd": 6,
     "rent": 9,
@@ -9095,11 +9368,11 @@
     "rent": 28500,
     "daily_essentials": 2.7621,
     "safety": 5.95,
-    "food": 5.2257,
-    "green": 0.2868,
+    "food": 5.2272,
+    "green": 0.483,
     "gym_sports": 3.3278,
-    "vibe": 2.6242,
-    "nightlife": 3.166,
+    "vibe": 2.6253,
+    "nightlife": 3.1443,
     "crowd": 5.6416
    },
    "ratings": {
@@ -9108,7 +9381,7 @@
     "daily_essentials": 8,
     "gym_sports": 9,
     "vibe": 8,
-    "green": 2,
+    "green": 3,
     "transport": 5,
     "crowd": 3,
     "rent": 4,
@@ -9154,12 +9427,12 @@
     "sports": 24,
     "culture": 16,
     "temples": 11,
-    "park_ha": 0.0,
+    "park_ha": 0.1,
     "piers": 0
    },
    "osm_counts": {
     "food": 68,
-    "nightlife": 11,
+    "nightlife": 10,
     "essentials": 49,
     "sports": 2,
     "culture": 8
@@ -9171,10 +9444,10 @@
     "rent": 14000,
     "daily_essentials": 2.8172,
     "safety": 5.0,
-    "food": 5.4343,
-    "green": 1.6409,
+    "food": 5.4405,
+    "green": 1.6216,
     "gym_sports": 3.3053,
-    "vibe": 2.8903,
+    "vibe": 2.8938,
     "nightlife": 3.0131,
     "crowd": 6.1186
    },
@@ -9182,7 +9455,7 @@
     "food": 8,
     "nightlife": 8,
     "daily_essentials": 8,
-    "gym_sports": 9,
+    "gym_sports": 8,
     "vibe": 8,
     "green": 7,
     "transport": 8,
@@ -9234,7 +9507,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 51,
+    "food": 52,
     "nightlife": 5,
     "essentials": 46,
     "sports": 3,
@@ -9245,12 +9518,12 @@
    "raw": {
     "transport": 0.6197,
     "rent": 48000,
-    "daily_essentials": 3.2024,
+    "daily_essentials": 3.2043,
     "safety": 6.03,
-    "food": 6.2537,
+    "food": 6.2621,
     "green": 1.7344,
     "gym_sports": 4.3092,
-    "vibe": 3.1505,
+    "vibe": 3.1519,
     "nightlife": 4.6235,
     "crowd": 6.4339
    },
@@ -9310,7 +9583,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 183,
+    "food": 188,
     "nightlife": 42,
     "essentials": 92,
     "sports": 11,
@@ -9323,10 +9596,10 @@
     "rent": 15000,
     "daily_essentials": 2.0653,
     "safety": 7.0,
-    "food": 4.4981,
-    "green": 0.0869,
+    "food": 4.5104,
+    "green": 0.6103,
     "gym_sports": 2.1703,
-    "vibe": 1.7698,
+    "vibe": 1.8058,
     "nightlife": 1.6179,
     "crowd": 5.268
    },
@@ -9336,7 +9609,7 @@
     "daily_essentials": 5,
     "gym_sports": 5,
     "vibe": 5,
-    "green": 2,
+    "green": 4,
     "transport": 3,
     "crowd": 4,
     "rent": 8,
@@ -9393,9 +9666,9 @@
    "raw": {
     "transport": 0.6356,
     "rent": 25000,
-    "daily_essentials": 2.51,
+    "daily_essentials": 2.5173,
     "safety": 5.0,
-    "food": 5.2366,
+    "food": 5.2422,
     "green": 2.7928,
     "gym_sports": 3.5884,
     "vibe": 2.5002,
@@ -9454,9 +9727,9 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 39,
+    "food": 40,
     "nightlife": 5,
-    "essentials": 34,
+    "essentials": 35,
     "sports": 3,
     "culture": 3
    }
@@ -9543,7 +9816,7 @@
     "rent": 11000,
     "daily_essentials": 1.4474,
     "safety": 7.0,
-    "food": 3.5696,
+    "food": 3.6165,
     "green": 0.3232,
     "gym_sports": 2.0787,
     "vibe": 1.2869,
@@ -9685,7 +9958,7 @@
    "raw": {
     "transport": 0.5097,
     "rent": 9500,
-    "daily_essentials": 1.9654,
+    "daily_essentials": 1.9673,
     "safety": 7.0,
     "food": 4.1593,
     "green": 0.4873,
@@ -9767,8 +10040,8 @@
     "rent": 9000,
     "daily_essentials": 1.6833,
     "safety": 7.0,
-    "food": 3.8227,
-    "green": 1.5588,
+    "food": 3.8386,
+    "green": 1.4499,
     "gym_sports": 2.2813,
     "vibe": 1.318,
     "nightlife": 1.3749,
@@ -9780,7 +10053,7 @@
     "daily_essentials": 3,
     "gym_sports": 5,
     "vibe": 2,
-    "green": 7,
+    "green": 6,
     "transport": 1,
     "crowd": 7,
     "rent": 10,
@@ -9822,7 +10095,7 @@
     "sports": 12,
     "culture": 3,
     "temples": 1,
-    "park_ha": 4.0,
+    "park_ha": 3.9,
     "piers": 0
    },
    "osm_counts": {
@@ -9839,8 +10112,8 @@
     "rent": 17000,
     "daily_essentials": 2.1581,
     "safety": 6.35,
-    "food": 4.1152,
-    "green": 0.8724,
+    "food": 4.1157,
+    "green": 0.9305,
     "gym_sports": 2.6599,
     "vibe": 1.8224,
     "nightlife": 2.0977,
@@ -9923,10 +10196,10 @@
     "rent": 38000,
     "daily_essentials": 2.9637,
     "safety": 7.0,
-    "food": 5.6779,
-    "green": 3.3712,
-    "gym_sports": 4.1201,
-    "vibe": 3.5066,
+    "food": 5.6865,
+    "green": 3.374,
+    "gym_sports": 4.1285,
+    "vibe": 3.5211,
     "nightlife": 3.6774,
     "crowd": 5.6262
    },
@@ -9982,7 +10255,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 39,
+    "food": 40,
     "nightlife": 4,
     "essentials": 16,
     "sports": 1,
@@ -9995,10 +10268,10 @@
     "rent": 14500,
     "daily_essentials": 2.3272,
     "safety": 5.41,
-    "food": 4.4615,
+    "food": 4.4619,
     "green": 0.0224,
     "gym_sports": 2.5555,
-    "vibe": 1.9978,
+    "vibe": 2.0035,
     "nightlife": 1.8247,
     "crowd": 5.1847
    },
@@ -10071,14 +10344,14 @@
   },
   "ratchaprarop": {
    "raw": {
-    "transport": 0.6998,
+    "transport": 0.7042,
     "rent": 18000,
-    "daily_essentials": 2.9748,
+    "daily_essentials": 2.9754,
     "safety": 5.0,
-    "food": 5.418,
-    "green": 2.2704,
-    "gym_sports": 3.2914,
-    "vibe": 3.0012,
+    "food": 5.4218,
+    "green": 2.2777,
+    "gym_sports": 3.3095,
+    "vibe": 3.009,
     "nightlife": 2.9979,
     "crowd": 5.7644
    },
@@ -10086,7 +10359,7 @@
     "food": 8,
     "nightlife": 8,
     "daily_essentials": 9,
-    "gym_sports": 8,
+    "gym_sports": 9,
     "vibe": 8,
     "green": 8,
     "transport": 9,
@@ -10145,12 +10418,12 @@
    "raw": {
     "transport": 0.787,
     "rent": 21500,
-    "daily_essentials": 3.1128,
+    "daily_essentials": 3.1138,
     "safety": 5.0,
-    "food": 6.0325,
-    "green": 2.1254,
-    "gym_sports": 3.6816,
-    "vibe": 3.7645,
+    "food": 6.0367,
+    "green": 2.1723,
+    "gym_sports": 3.6889,
+    "vibe": 3.7646,
     "nightlife": 3.4959,
     "crowd": 6.2578
    },
@@ -10206,7 +10479,7 @@
     "piers": 1
    },
    "osm_counts": {
-    "food": 50,
+    "food": 49,
     "nightlife": 12,
     "essentials": 39,
     "sports": 1,
@@ -10452,7 +10725,7 @@
     "daily_essentials": 3,
     "gym_sports": 2,
     "vibe": 3,
-    "green": 4,
+    "green": 3,
     "transport": 3,
     "crowd": 7,
     "rent": 9,
@@ -10517,12 +10790,12 @@
    "raw": {
     "transport": 0.6469,
     "rent": 25500,
-    "daily_essentials": 2.9206,
+    "daily_essentials": 2.922,
     "safety": 6.71,
-    "food": 5.8059,
-    "green": 1.7863,
-    "gym_sports": 3.7986,
-    "vibe": 3.116,
+    "food": 5.8041,
+    "green": 1.7355,
+    "gym_sports": 3.7379,
+    "vibe": 3.1142,
     "nightlife": 3.445,
     "crowd": 5.9821
    },
@@ -10582,7 +10855,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 88,
+    "food": 87,
     "nightlife": 6,
     "essentials": 37,
     "sports": 3,
@@ -10595,10 +10868,10 @@
     "rent": 38000,
     "daily_essentials": 3.3791,
     "safety": 6.58,
-    "food": 6.2586,
+    "food": 6.2626,
     "green": 3.5245,
-    "gym_sports": 4.067,
-    "vibe": 3.6391,
+    "gym_sports": 4.0536,
+    "vibe": 3.6521,
     "nightlife": 4.3525,
     "crowd": 6.2025
    },
@@ -10658,15 +10931,15 @@
     "sports": 30,
     "culture": 28,
     "temples": 6,
-    "park_ha": 36.6,
+    "park_ha": 37.2,
     "piers": 0
    },
    "osm_counts": {
-    "food": 236,
+    "food": 238,
     "nightlife": 49,
     "essentials": 107,
-    "sports": 8,
-    "culture": 12
+    "sports": 9,
+    "culture": 14
    }
   },
   "sam-yan": {
@@ -10675,10 +10948,10 @@
     "rent": 32500,
     "daily_essentials": 3.5704,
     "safety": 6.53,
-    "food": 6.4318,
-    "green": 2.3862,
-    "gym_sports": 4.0294,
-    "vibe": 3.8841,
+    "food": 6.4366,
+    "green": 2.3881,
+    "gym_sports": 3.9736,
+    "vibe": 3.894,
     "nightlife": 4.2655,
     "crowd": 6.4339
    },
@@ -10738,7 +11011,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 285,
+    "food": 290,
     "nightlife": 14,
     "essentials": 116,
     "sports": 5,
@@ -10749,13 +11022,13 @@
    "raw": {
     "transport": 0.6245,
     "rent": 13500,
-    "daily_essentials": 3.0743,
+    "daily_essentials": 3.0778,
     "safety": 5.33,
-    "food": 6.0294,
-    "green": 2.3332,
-    "gym_sports": 2.6198,
-    "vibe": 4.1706,
-    "nightlife": 3.2854,
+    "food": 6.048,
+    "green": 2.3608,
+    "gym_sports": 2.6253,
+    "vibe": 4.1884,
+    "nightlife": 3.2774,
     "crowd": 6.3457
    },
    "ratings": {
@@ -10814,27 +11087,27 @@
     "sports": 0,
     "culture": 39,
     "temples": 41,
-    "park_ha": 4.3,
+    "park_ha": 4.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 197,
+    "food": 200,
     "nightlife": 8,
     "essentials": 95,
     "sports": 3,
-    "culture": 37
+    "culture": 40
    }
   },
   "sanam-chai": {
    "raw": {
-    "transport": 0.6258,
+    "transport": 0.6253,
     "rent": 13500,
-    "daily_essentials": 2.3868,
+    "daily_essentials": 2.3894,
     "safety": 5.62,
-    "food": 5.4651,
-    "green": 2.4867,
+    "food": 5.4708,
+    "green": 2.5406,
     "gym_sports": 2.6342,
-    "vibe": 3.824,
+    "vibe": 3.8379,
     "nightlife": 2.7096,
     "crowd": 5.6218
    },
@@ -10894,7 +11167,7 @@
     "sports": 6,
     "culture": 24,
     "temples": 51,
-    "park_ha": 11.5,
+    "park_ha": 12.5,
     "piers": 14
    },
    "osm_counts": {
@@ -10909,12 +11182,12 @@
    "raw": {
     "transport": 0.571,
     "rent": 18000,
-    "daily_essentials": 2.6006,
+    "daily_essentials": 2.6047,
     "safety": 8.0,
-    "food": 4.9423,
-    "green": 2.2212,
-    "gym_sports": 2.9579,
-    "vibe": 2.5695,
+    "food": 4.894,
+    "green": 2.2734,
+    "gym_sports": 2.9833,
+    "vibe": 2.5461,
     "nightlife": 2.6647,
     "crowd": 5.1018
    },
@@ -10923,7 +11196,7 @@
     "nightlife": 7,
     "daily_essentials": 8,
     "gym_sports": 8,
-    "vibe": 8,
+    "vibe": 7,
     "green": 8,
     "transport": 5,
     "crowd": 5,
@@ -10983,7 +11256,7 @@
     "rent": 18000,
     "daily_essentials": 2.5822,
     "safety": 7.92,
-    "food": 5.1186,
+    "food": 5.1218,
     "green": 1.3938,
     "gym_sports": 2.6638,
     "vibe": 2.6237,
@@ -11137,12 +11410,12 @@
    "raw": {
     "transport": 0.7008,
     "rent": 24000,
-    "daily_essentials": 2.7927,
+    "daily_essentials": 2.7943,
     "safety": 6.71,
-    "food": 5.5347,
-    "green": 1.8919,
-    "gym_sports": 3.0562,
-    "vibe": 3.1425,
+    "food": 5.5358,
+    "green": 1.8299,
+    "gym_sports": 3.0528,
+    "vibe": 3.1427,
     "nightlife": 2.8571,
     "crowd": 5.8451
    },
@@ -11232,7 +11505,7 @@
     "daily_essentials": 7,
     "gym_sports": 6,
     "vibe": 7,
-    "green": 6,
+    "green": 7,
     "transport": 6,
     "crowd": 5,
     "rent": 8,
@@ -11303,7 +11576,7 @@
     "nightlife": 9,
     "daily_essentials": 8,
     "gym_sports": 8,
-    "vibe": 7,
+    "vibe": 8,
     "green": 8,
     "transport": 8,
     "crowd": 3,
@@ -11361,10 +11634,10 @@
    "raw": {
     "transport": 0.4786,
     "rent": 9000,
-    "daily_essentials": 1.489,
+    "daily_essentials": 1.4859,
     "safety": 7.0,
-    "food": 3.0662,
-    "green": 0.055,
+    "food": 3.1196,
+    "green": 1.6667,
     "gym_sports": 1.1707,
     "vibe": 1.4744,
     "nightlife": 1.1142,
@@ -11376,7 +11649,7 @@
     "daily_essentials": 2,
     "gym_sports": 1,
     "vibe": 4,
-    "green": 2,
+    "green": 7,
     "transport": 1,
     "crowd": 9,
     "rent": 10,
@@ -11418,11 +11691,11 @@
     "sports": 1,
     "culture": 4,
     "temples": 0,
-    "park_ha": 0.0,
+    "park_ha": 6.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 3,
+    "food": 4,
     "nightlife": 0,
     "essentials": 3,
     "sports": 0,
@@ -11435,7 +11708,7 @@
     "rent": 12500,
     "daily_essentials": 1.7848,
     "safety": 7.0,
-    "food": 3.9396,
+    "food": 3.9561,
     "green": 0.3836,
     "gym_sports": 2.6482,
     "vibe": 1.2969,
@@ -11448,7 +11721,7 @@
     "daily_essentials": 4,
     "gym_sports": 7,
     "vibe": 2,
-    "green": 3,
+    "green": 2,
     "transport": 2,
     "crowd": 7,
     "rent": 9,
@@ -11498,7 +11771,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 8,
+    "food": 9,
     "nightlife": 0,
     "essentials": 11,
     "sports": 1,
@@ -11511,7 +11784,7 @@
     "rent": 12000,
     "daily_essentials": 1.4379,
     "safety": 6.19,
-    "food": 3.3286,
+    "food": 3.3345,
     "green": 1.4446,
     "gym_sports": 1.6985,
     "vibe": 1.2343,
@@ -11587,7 +11860,7 @@
     "rent": 13000,
     "daily_essentials": 1.7504,
     "safety": 7.0,
-    "food": 4.1016,
+    "food": 4.1053,
     "green": 0.5972,
     "gym_sports": 2.3709,
     "vibe": 1.2687,
@@ -11600,7 +11873,7 @@
     "daily_essentials": 3,
     "gym_sports": 6,
     "vibe": 2,
-    "green": 4,
+    "green": 3,
     "transport": 1,
     "crowd": 7,
     "rent": 8,
@@ -11735,10 +12008,10 @@
     "rent": 37000,
     "daily_essentials": 3.3697,
     "safety": 6.89,
-    "food": 6.5729,
-    "green": 2.3172,
+    "food": 6.5772,
+    "green": 2.3669,
     "gym_sports": 4.1012,
-    "vibe": 4.1687,
+    "vibe": 4.1713,
     "nightlife": 3.7808,
     "crowd": 7.0852
    },
@@ -11798,7 +12071,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 130,
+    "food": 132,
     "nightlife": 6,
     "essentials": 39,
     "sports": 4,
@@ -11883,7 +12156,7 @@
     "rent": 11000,
     "daily_essentials": 1.6594,
     "safety": 7.0,
-    "food": 3.7886,
+    "food": 3.8202,
     "green": 1.7882,
     "gym_sports": 2.0976,
     "vibe": 1.8126,
@@ -11946,7 +12219,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 3,
+    "food": 4,
     "nightlife": 0,
     "essentials": 4,
     "sports": 0,
@@ -11957,12 +12230,12 @@
    "raw": {
     "transport": 0.6302,
     "rent": 25500,
-    "daily_essentials": 2.8919,
+    "daily_essentials": 2.8955,
     "safety": 6.56,
-    "food": 5.6413,
-    "green": 1.4073,
-    "gym_sports": 3.432,
-    "vibe": 3.2474,
+    "food": 5.6378,
+    "green": 1.197,
+    "gym_sports": 3.3842,
+    "vibe": 3.2453,
     "nightlife": 3.0087,
     "crowd": 5.772
    },
@@ -11972,7 +12245,7 @@
     "daily_essentials": 9,
     "gym_sports": 9,
     "vibe": 9,
-    "green": 6,
+    "green": 5,
     "transport": 7,
     "crowd": 3,
     "rent": 5,
@@ -12018,13 +12291,13 @@
     "sports": 7,
     "culture": 12,
     "temples": 15,
-    "park_ha": 0.6,
+    "park_ha": 0.3,
     "piers": 0
    },
    "osm_counts": {
     "food": 63,
     "nightlife": 7,
-    "essentials": 36,
+    "essentials": 38,
     "sports": 1,
     "culture": 12
    }
@@ -12111,10 +12384,10 @@
     "rent": 12000,
     "daily_essentials": 2.3069,
     "safety": 7.0,
-    "food": 4.4727,
+    "food": 4.5076,
     "green": 0.685,
     "gym_sports": 2.1947,
-    "vibe": 2.2044,
+    "vibe": 2.2175,
     "nightlife": 1.7229,
     "crowd": 5.4878
    },
@@ -12174,7 +12447,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 13,
+    "food": 14,
     "nightlife": 0,
     "essentials": 32,
     "sports": 1,
@@ -12259,10 +12532,10 @@
     "rent": 12000,
     "daily_essentials": 1.9564,
     "safety": 7.0,
-    "food": 4.0737,
+    "food": 4.1668,
     "green": 0.5826,
     "gym_sports": 1.9854,
-    "vibe": 1.6898,
+    "vibe": 1.7062,
     "nightlife": 1.8218,
     "crowd": 5.0869
    },
@@ -12272,7 +12545,7 @@
     "daily_essentials": 5,
     "gym_sports": 4,
     "vibe": 5,
-    "green": 4,
+    "green": 3,
     "transport": 9,
     "crowd": 5,
     "rent": 9,
@@ -12329,12 +12602,12 @@
    "raw": {
     "transport": 0.6125,
     "rent": 11000,
-    "daily_essentials": 1.9289,
+    "daily_essentials": 1.9305,
     "safety": 7.0,
-    "food": 4.0043,
+    "food": 4.0528,
     "green": 0.3955,
     "gym_sports": 2.1467,
-    "vibe": 2.0627,
+    "vibe": 2.0759,
     "nightlife": 1.4468,
     "crowd": 4.8732
    },
@@ -12403,10 +12676,10 @@
     "rent": 14000,
     "daily_essentials": 2.6068,
     "safety": 5.0,
-    "food": 5.123,
-    "green": 1.7811,
-    "gym_sports": 3.2379,
-    "vibe": 2.8046,
+    "food": 5.1234,
+    "green": 1.7759,
+    "gym_sports": 3.2408,
+    "vibe": 2.8048,
     "nightlife": 3.0259,
     "crowd": 5.4415
    },
@@ -12477,12 +12750,12 @@
    "raw": {
     "transport": 0.5809,
     "rent": 28000,
-    "daily_essentials": 3.035,
+    "daily_essentials": 3.0357,
     "safety": 6.03,
-    "food": 5.9864,
+    "food": 5.9969,
     "green": 0.3315,
     "gym_sports": 4.0319,
-    "vibe": 2.8478,
+    "vibe": 2.8497,
     "nightlife": 4.0415,
     "crowd": 6.0148
    },
@@ -12492,7 +12765,7 @@
     "daily_essentials": 9,
     "gym_sports": 9,
     "vibe": 8,
-    "green": 3,
+    "green": 2,
     "transport": 6,
     "crowd": 2,
     "rent": 4,
@@ -12542,7 +12815,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 131,
+    "food": 139,
     "nightlife": 13,
     "essentials": 72,
     "sports": 5,
@@ -12631,10 +12904,10 @@
     "rent": 13000,
     "daily_essentials": 2.2044,
     "safety": 7.0,
-    "food": 4.5095,
-    "green": 0.5211,
+    "food": 4.5172,
+    "green": 0.894,
     "gym_sports": 2.6012,
-    "vibe": 1.9309,
+    "vibe": 1.9537,
     "nightlife": 1.8093,
     "crowd": 5.1672
    },
@@ -12644,7 +12917,7 @@
     "daily_essentials": 6,
     "gym_sports": 7,
     "vibe": 6,
-    "green": 3,
+    "green": 4,
     "transport": 4,
     "crowd": 5,
     "rent": 8,
@@ -12690,11 +12963,11 @@
     "sports": 15,
     "culture": 6,
     "temples": 8,
-    "park_ha": 0.2,
+    "park_ha": 1.6,
     "piers": 0
    },
    "osm_counts": {
-    "food": 14,
+    "food": 15,
     "nightlife": 0,
     "essentials": 19,
     "sports": 1,
@@ -12705,9 +12978,9 @@
    "raw": {
     "transport": 0.5179,
     "rent": 10500,
-    "daily_essentials": 2.1066,
+    "daily_essentials": 2.1076,
     "safety": 7.0,
-    "food": 4.4612,
+    "food": 4.4591,
     "green": 2.0418,
     "gym_sports": 2.5983,
     "vibe": 1.5765,
@@ -12781,12 +13054,12 @@
    "raw": {
     "transport": 0.6708,
     "rent": 18000,
-    "daily_essentials": 3.1953,
+    "daily_essentials": 3.2023,
     "safety": 5.66,
-    "food": 5.4409,
-    "green": 1.8328,
-    "gym_sports": 2.8212,
-    "vibe": 2.9871,
+    "food": 5.317,
+    "green": 1.9483,
+    "gym_sports": 2.8884,
+    "vibe": 2.9585,
     "nightlife": 2.4512,
     "crowd": 6.081
    },
@@ -12842,28 +13115,28 @@
     "sports": 14,
     "culture": 20,
     "temples": 5,
-    "park_ha": 3.2,
+    "park_ha": 3.5,
     "piers": 0
    },
    "osm_counts": {
-    "food": 79,
+    "food": 51,
     "nightlife": 2,
-    "essentials": 61,
-    "sports": 2,
-    "culture": 8
+    "essentials": 63,
+    "sports": 3,
+    "culture": 6
    }
   },
   "wat-mangkon": {
    "raw": {
     "transport": 0.681,
     "rent": 13000,
-    "daily_essentials": 3.3185,
+    "daily_essentials": 3.3203,
     "safety": 6.0,
-    "food": 6.2059,
-    "green": 1.5046,
+    "food": 6.2239,
+    "green": 1.3809,
     "gym_sports": 2.3523,
-    "vibe": 3.8936,
-    "nightlife": 3.5184,
+    "vibe": 3.9158,
+    "nightlife": 3.5132,
     "crowd": 6.3681
    },
    "ratings": {
@@ -12872,7 +13145,7 @@
     "daily_essentials": 9,
     "gym_sports": 6,
     "vibe": 10,
-    "green": 7,
+    "green": 6,
     "transport": 8,
     "crowd": 1,
     "rent": 8,
@@ -12922,11 +13195,11 @@
     "piers": 4
    },
    "osm_counts": {
-    "food": 164,
+    "food": 175,
     "nightlife": 10,
-    "essentials": 127,
+    "essentials": 126,
     "sports": 3,
-    "culture": 43
+    "culture": 44
    }
   },
   "wat-phra-sri-mahathat": {
@@ -12935,7 +13208,7 @@
     "rent": 11000,
     "daily_essentials": 1.774,
     "safety": 7.0,
-    "food": 3.7239,
+    "food": 3.785,
     "green": 1.0104,
     "gym_sports": 1.8691,
     "vibe": 1.7855,
@@ -12994,7 +13267,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 1,
+    "food": 2,
     "nightlife": 0,
     "essentials": 5,
     "sports": 0,
@@ -13079,10 +13352,10 @@
     "rent": 12000,
     "daily_essentials": 1.6575,
     "safety": 7.0,
-    "food": 3.2133,
+    "food": 3.2191,
     "green": 1.1826,
-    "gym_sports": 1.852,
-    "vibe": 1.3001,
+    "gym_sports": 1.8599,
+    "vibe": 1.3006,
     "nightlife": 1.2435,
     "crowd": 4.4544
    },
@@ -13147,14 +13420,14 @@
   },
   "wongwian-yai": {
    "raw": {
-    "transport": 0.6402,
+    "transport": 0.64,
     "rent": 18000,
-    "daily_essentials": 2.45,
+    "daily_essentials": 2.4505,
     "safety": 7.0,
-    "food": 4.6442,
-    "green": 0.5134,
+    "food": 4.6578,
+    "green": 0.5719,
     "gym_sports": 2.3807,
-    "vibe": 2.1423,
+    "vibe": 2.1489,
     "nightlife": 1.7425,
     "crowd": 5.346
    },
@@ -13214,7 +13487,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 27,
+    "food": 28,
     "nightlife": 0,
     "essentials": 40,
     "sports": 0,
@@ -13227,10 +13500,10 @@
     "rent": 11000,
     "daily_essentials": 1.7207,
     "safety": 7.0,
-    "food": 3.9067,
-    "green": 1.5819,
+    "food": 3.9587,
+    "green": 1.5896,
     "gym_sports": 1.7532,
-    "vibe": 1.936,
+    "vibe": 1.9545,
     "nightlife": 1.1962,
     "crowd": 4.4826
    },
@@ -13294,7 +13567,7 @@
     "piers": 0
    },
    "osm_counts": {
-    "food": 11,
+    "food": 12,
     "nightlife": 1,
     "essentials": 14,
     "sports": 0,
@@ -13381,9 +13654,9 @@
    "raw": {
     "transport": 0.5833,
     "rent": 12000,
-    "daily_essentials": 2.2636,
+    "daily_essentials": 2.2429,
     "safety": 6.0,
-    "food": 4.2002,
+    "food": 4.2317,
     "green": 0.5767,
     "gym_sports": 2.3747,
     "vibe": 2.1899,
@@ -13396,7 +13669,7 @@
     "daily_essentials": 6,
     "gym_sports": 6,
     "vibe": 6,
-    "green": 4,
+    "green": 3,
     "transport": 6,
     "crowd": 3,
     "rent": 9,
@@ -13442,9 +13715,9 @@
     "piers": 2
    },
    "osm_counts": {
-    "food": 2,
+    "food": 3,
     "nightlife": 0,
-    "essentials": 10,
+    "essentials": 8,
     "sports": 0,
     "culture": 3
    }

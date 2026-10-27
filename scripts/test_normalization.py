@@ -35,9 +35,32 @@ def test_tokyo_full_compute_golden():
 
 
 def test_bangkok_committed_aggregate_golden():
-    expected = json.loads((FIXTURES / 'bangkok-golden.json').read_text())['output']
+    expected = json.loads((FIXTURES / 'bangkok-refresh-2026-10-24-golden.json').read_text())['output']
     # JSON comparison also preserves source ordering and dictionary insertion order.
     assert json.dumps(replay_bangkok(load_bangkok())) == json.dumps(expected)
+
+
+def test_bangkok_historical_aggregate_golden():
+    expected = json.loads((FIXTURES / 'bangkok-golden.json').read_text())['output']
+    signals = json.loads((ROOT / 'scripts/fixtures/bangkok-population/adoption/signals.json').read_text())
+    assert json.dumps(replay_bangkok(load_bangkok(), signals)) == json.dumps(expected)
+
+
+def test_bangkok_refresh_golden_changes_have_complete_review_evidence():
+    old = json.loads((FIXTURES / 'bangkok-golden.json').read_text())['output']
+    new = json.loads((FIXTURES / 'bangkok-refresh-2026-10-24-golden.json').read_text())['output']
+    changes = {}
+    def collect(before, after, path=()):
+        if isinstance(before, dict) and isinstance(after, dict):
+            assert before.keys() == after.keys()
+            for key in before:
+                collect(before[key], after[key], path + (key,))
+        elif before != after:
+            changes['.'.join(path)] = (before, after)
+    collect(old, new)
+    review = json.loads((ROOT / 'research/bangkok/notes/2026-10-26-frozen-refresh-review.json').read_text())
+    assert {row['path']: (row['before'], row['after']) for row in review['golden_changes']} == changes
+    assert all(row['acceptance'] for row in review['golden_changes'])
 
 
 @pytest.mark.parametrize('invert,expected', [(False, [1, 2, 4, 6, 7, 8, 10]), (True, [10, 8, 7, 6, 4, 2, 1])])

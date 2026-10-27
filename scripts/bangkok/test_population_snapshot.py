@@ -13,16 +13,20 @@ rebuild = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(rebuild)
 
 
-def test_committed_population_snapshot_and_scope():
+@pytest.mark.parametrize('baseline_name', ['adoption', 'refresh-2026-10-24'])
+def test_committed_population_snapshot_and_scope(baseline_name):
     import hashlib
     root = Path(__file__).resolve().parents[2]
     data = root / 'data/bangkok'
     app = root / 'app/src/data/bangkok'
-    baseline = json.loads((data / 'population-baseline.json').read_text())
-    comparison = json.loads((data / 'population-comparison.json').read_text())
-    districts = json.loads((app / 'districts.json').read_text())
-    signals = json.loads((data / 'signals.json').read_text())
-    meta = json.loads((app / 'meta.json').read_text())
+    baseline = json.loads((data / rebuild.BASELINES[baseline_name]).read_text())
+    fixture = root / 'scripts/fixtures/bangkok-population/adoption'
+    def snapshot(name, directory):
+        return json.loads(((fixture if baseline_name == 'adoption' else directory) / name).read_text())
+    comparison = snapshot('population-comparison.json', data)
+    districts = snapshot('districts.json', app)
+    signals = snapshot('signals.json', data)
+    meta = snapshot('meta.json', app)
     rows = comparison['districts']
     assert len(rows) == 50
     assert set(rows) == {d['slug'] for d in districts['districts']} == set(baseline['districts'])
@@ -80,20 +84,26 @@ def test_committed_manifest_contract():
     assert spec['crs'] == 'EPSG:4326' and spec['dtype'] == 'float32' and spec['nodata'] == -99999
 
 
-@pytest.fixture
-def replay_workspace(tmp_path, monkeypatch):
+@pytest.fixture(params=['adoption', 'refresh-2026-10-24'])
+def replay_workspace(tmp_path, monkeypatch, request):
     import copy
     import shutil
     root = HERE.parents[1]
-    paths = ['data/bangkok/population-baseline.json', 'data/bangkok/population-source.json',
+    baseline_name = request.param
+    paths = ['data/bangkok/' + rebuild.BASELINES[baseline_name], 'data/bangkok/population-source.json',
              'data/bangkok/signals.json', 'app/src/data/bangkok/districts.json',
              'app/src/data/bangkok/geometry.json', 'app/src/data/bangkok/meta.json',
              'packages/schema/constants.json']
     for name in paths:
         target = tmp_path / name
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(root / name, target)
-    actual = json.loads((root / 'data/bangkok/population-comparison.json').read_text())
+        source = root / name
+        if baseline_name == 'adoption' and Path(name).name in ('signals.json', 'districts.json', 'geometry.json', 'meta.json'):
+            source = root / 'scripts/fixtures/bangkok-population/adoption' / Path(name).name
+        shutil.copyfile(source, target)
+    comparison_path = (root / 'scripts/fixtures/bangkok-population/adoption/population-comparison.json'
+                       if baseline_name == 'adoption' else root / 'data/bangkok/population-comparison.json')
+    actual = json.loads(comparison_path.read_text())
     populations = {s: {k: r[k] for k in ('population', 'polygon_area_km2', 'pixels', 'settled_pixels')}
                    for s, r in actual['districts'].items()}
     monkeypatch.setattr(rebuild, 'ROOT', tmp_path)
@@ -102,15 +112,15 @@ def replay_workspace(tmp_path, monkeypatch):
     # Main-path tests are offline: aggregation itself is tested against GeoTIFF
     # fixtures; here its validated result is fixed so preflight/writes are real.
     monkeypatch.setattr(rebuild, 'load_population', lambda *args: (copy.deepcopy(populations), copy.deepcopy(actual['summary'])))
-    return tmp_path
+    return tmp_path, baseline_name
 
 
 def files(root):
     return {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
 
 
-def original_snapshot(root):
-    baseline = json.loads((root / 'data/bangkok/population-baseline.json').read_text())['districts']
+def original_snapshot(root, baseline_name):
+    baseline = json.loads((root / 'data/bangkok' / rebuild.BASELINES[baseline_name]).read_text())['districts']
     district_path = root / 'app/src/data/bangkok/districts.json'
     signal_path = root / 'data/bangkok/signals.json'
     meta_path = root / 'app/src/data/bangkok/meta.json'
@@ -132,11 +142,11 @@ def original_snapshot(root):
 
 
 def test_main_original_adoption_and_idempotent_replay(replay_workspace):
-    root = replay_workspace
-    original_snapshot(root)
-    rebuild.main()
+    root, baseline_name = replay_workspace
+    original_snapshot(root, baseline_name)
+    rebuild.main(['--baseline', baseline_name])
     first = files(root)
-    rebuild.main()
+    rebuild.main(['--baseline', baseline_name])
     assert files(root) == first
     comparison = json.loads((root / 'data/bangkok/population-comparison.json').read_text())
     assert comparison['summary']['changed_ratings'] == 20
@@ -145,10 +155,10 @@ def test_main_original_adoption_and_idempotent_replay(replay_workspace):
 
 @pytest.mark.parametrize('change', ['poi', 'crowd', 'rating', 'provenance', 'anchors', 'original_checksum'])
 def test_main_rejects_incompatible_snapshots_without_writes(replay_workspace, change):
-    root = replay_workspace
+    root, baseline_name = replay_workspace
     path = root / 'data/bangkok/signals.json'
     if change == 'original_checksum':
-        original_snapshot(root)
+        original_snapshot(root, baseline_name)
     doc = json.loads(path.read_text())
     if change == 'poi': doc['districts']['watthana']['raw']['food'] += 0.1
     elif change == 'crowd': doc['districts']['watthana']['raw']['crowd'] += 0.1
@@ -162,5 +172,28 @@ def test_main_rejects_incompatible_snapshots_without_writes(replay_workspace, ch
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + '\n')
     before = files(root)
     with pytest.raises(ValueError, match='Incompatible'):
-        rebuild.main()
+        rebuild.main(['--baseline', baseline_name])
+    assert files(root) == before
+
+
+def test_replay_requires_explicit_baseline_selection():
+    with pytest.raises(SystemExit):
+        rebuild.main([])
+
+
+def test_current_replay_preserves_published_snapshot_bytes(replay_workspace):
+    root, baseline_name = replay_workspace
+    paths = ['app/src/data/bangkok/districts.json', 'data/bangkok/signals.json', 'app/src/data/bangkok/meta.json']
+    before = {path: (root / path).read_bytes() for path in paths}
+    rebuild.main(['--baseline', baseline_name])
+    assert {path: (root / path).read_bytes() for path in paths} == before
+
+
+def test_selected_geometry_must_match_without_writes(replay_workspace):
+    root, baseline_name = replay_workspace
+    path = root / 'app/src/data/bangkok/geometry.json'
+    path.write_text(path.read_text() + ' ')
+    before = files(root)
+    with pytest.raises(ValueError, match='Incompatible geometry'):
+        rebuild.main(['--baseline', baseline_name])
     assert files(root) == before

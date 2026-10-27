@@ -16,8 +16,8 @@ Sources (all open):
     the same labels + image for rail stations (station-area pages).
   - Wikimedia Commons (per-file CC licences): thumbnail URL + attribution for
     each district's / station's Wikidata image.
-  - Overture Maps Places (CDLA-Permissive-2.0; Meta, Microsoft, Foursquare,
-    AllThePlaces sources): ~300k places in the Bangkok bbox — the second,
+  - Overture Maps Places (CDLA-Permissive-2.0; Foursquare Apache-2.0;
+    AllThePlaces CC0-1.0): ~300k places in the Bangkok bbox — the second,
     independent POI source next to OSM (the role HotPepper plays for Tokyo).
     Read straight from the public S3 release with DuckDB; no account needed.
 
@@ -163,7 +163,9 @@ def _wbgetentities(qids: list[str]) -> dict:
             params={
                 "action": "wbgetentities",
                 "ids": "|".join(chunk),
-                "props": "labels|claims|sitelinks",
+                # Capture the revision of these very labels/claims, rather than
+                # looking it up later (when the entity may have changed).
+                "props": "info|labels|claims|sitelinks",
                 "languages": "en|th|ja|ru",
                 "format": "json",
             },
@@ -200,8 +202,9 @@ def _commons_pages(wikidata_file: str) -> dict:
             params={
                 "action": "query",
                 "titles": "|".join(chunk),
-                "prop": "imageinfo",
-                "iiprop": "url|extmetadata|size",
+                "prop": "imageinfo|revisions",
+                "rvprop": "ids|timestamp",
+                "iiprop": "url|extmetadata|size|timestamp|sha1",
                 "iiurlwidth": "640",
                 "format": "json",
             },
@@ -242,20 +245,36 @@ def fetch_overture() -> dict:
         f"read_parquet('s3://overturemaps-us-west-2/release/{OVERTURE_RELEASE}"
         "/theme=places/type=place/*', hive_partitioning=1)"
     )
+    # Materialize the selected rows once so the slim output and attribution
+    # inventory describe exactly the same pinned release and selection.
+    con.execute(f"""
+        CREATE TEMP TABLE selected AS SELECT * FROM {src}
+        WHERE bbox.xmin BETWEEN {w} AND {e} AND bbox.ymin BETWEEN {s} AND {n}
+          AND confidence >= {OVERTURE_MIN_CONFIDENCE}
+          AND coalesce(operating_status, 'open') = 'open'
+    """)
     con.execute(
         f"""
         COPY (
           SELECT id, basic_category, taxonomy.hierarchy AS hierarchy, confidence,
                  sources[1].dataset AS dataset, sources[1].license AS license,
                  (bbox.xmin + bbox.xmax) / 2 AS lon, (bbox.ymin + bbox.ymax) / 2 AS lat
-          FROM {src}
-          WHERE bbox.xmin BETWEEN {w} AND {e} AND bbox.ymin BETWEEN {s} AND {n}
-            AND confidence >= {OVERTURE_MIN_CONFIDENCE}
-            AND coalesce(operating_status, 'open') = 'open'
+          FROM selected ORDER BY id
         ) TO '{out}' (FORMAT parquet)
         """
     )
     rows = con.execute(f"SELECT count(*) FROM '{out}'").fetchone()[0]
+    licenses = con.execute('''
+        SELECT source.dataset, source.license, count(*)
+        FROM selected, UNNEST(sources) AS s(source)
+        GROUP BY ALL ORDER BY 1, 2
+    ''').fetchall()
+    (RAW / 'overture-source.json').write_text(json.dumps({
+        'release': OVERTURE_RELEASE, 'rows': rows,
+        'fetched_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+        'source_entry_licenses': [{'dataset': d, 'license': l, 'entries': n} for d, l, n in licenses],
+        'note': 'All source entries for the selected rows, including secondary sources; slim parquet retains sources[1].',
+    }, indent=2) + '\n')
     return {"_self_written": str(out.name), "rows": rows, "release": OVERTURE_RELEASE}
 
 

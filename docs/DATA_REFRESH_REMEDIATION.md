@@ -1,8 +1,32 @@
 # Bangkok data-refresh remediation plan
 
-Status: **scoped, not implemented** (2026-10-26). The full Bangkok spatial
+Status: **implemented and locally validated; proposed data PR, not merged**
+(2026-10-26). The full Bangkok spatial
 refresh is **not in v0.1.0**. The release tags the existing product and adds
 release documentation; no regenerated spatial data is published by this plan.
+
+## Remediation evidence
+
+The separate refresh uses the [90-file frozen input manifest](../data/bangkok/refresh-inputs.json)
+and [exact enrichment preservation baseline](../data/bangkok/enrichments-baseline.json).
+See the [completed evidence note](../research/bangkok/notes/2026-10-26-frozen-refresh.md)
+and [complete aggregate/geometry review](../research/bangkok/notes/2026-10-26-frozen-refresh-review.json).
+
+| Workstream | Status / evidence |
+| --- | --- |
+| A | Automatic full-build enrichment stage; all 133 tourism areas, 9 Michelin districts and 5 embassy districts preserved exactly; idempotent and missing-input/join tests pass. Embassy metric provenance gap is explicit. |
+| B | All 10 original gates resolved. Historical population baseline and golden unchanged and separately tested; current refresh baseline/golden added. Header summaries use published integer weight units (transport median 5); cell normalization unchanged. |
+| C | All 25 district/14 area park changes reconstructed; green outliers and nine area notices reviewed with limits. All 133 station geometries byte-identical. All Overture source entries inventoried; three-license attribution, notices and license copies retained. Wikimedia exact payload hashes/revision IDs frozen; HTTP fetch remains live. |
+| D | Full frozen build repeats byte for byte (6.21s / 6.22s); 649 full-script tests, 141 Bangkok tests, 399 app tests pass; TypeScript, lint and production build pass. No merge or release change. |
+
+**Narrow scope exception authorized by city-rating-9:** normal institutions and
+noise exporters update embedded Bangkok input hashes in shared/Tokyo metadata.
+The only Tokyo diff is three Bangkok input-hash lines in each copy of
+`station-institutions.json`; all counts, ratings, facts, station/district and
+noise values remain unchanged. Shared noise calibration changes only its
+Bangkok station-input hash. Regression fingerprints exclude only these exact
+authorized hash fields and pin everything else to the release snapshot. No
+legacy fingerprints are substituted. This does not authorize other Tokyo work.
 
 ## Why this exists
 
@@ -26,7 +50,8 @@ committed dataset released as v0.1.0. See the [release runbook](RELEASING.md).
 of enrichments, resolution of the 10 gates, source/attribution review, a separate
 data-refresh PR, and release-note updates after it passes.
 
-**Out:** Tokyo changes, unrelated runtime/scoring changes, folding the refresh
+**Out:** Tokyo value changes (the provenance-only exception above is explicit),
+unrelated runtime/scoring changes, folding the refresh
 into v0.1.0, and silently overwriting historical fixtures.
 
 ## A. Preserve or reapply enrichments
@@ -39,10 +64,11 @@ or explicit ordered stages in `build.py`, and validate the result.
 |---|---|---|---|
 | Tourism | `scripts/scrapers/fetch-tourism-counts.py` → `data/tourism/proximity.json` | `hotels_800m`, `attractions_800m`, `tourist_badge` on all 133 station areas | Nonzero hotels 99, attractions 66, badges 19; Nana 197 hotels, Asok 156 |
 | Michelin | `scripts/michelin/compute-proximity.py` → `data/michelin/proximity.json` | `michelin_stars`, `michelin_bib` on 9 districts | Stored sums 8 stars and 12 Bib |
-| Institutions | `scripts/institutions/compute-institutions.py` → `data/institutions/{district,station}-institutions.json` and `app/src/data/institutions/*` | `embassies_800m` on 5 districts | Stored sum 16 |
+| Legacy embassy field | `data/bangkok/enrichments-baseline.json`, exact release-commit district facts; original calculation not independently proven | `embassies_800m` on 5 districts; not the institutions pipeline's polygon-containment metric | Stored sum 16 |
 
-Acceptance: every enriched field is present and no lower than the preserved
-baseline; the merge is covered by tests; source dates/hashes are recorded.
+Acceptance: every enriched field is present and exactly matches the preserved
+snapshot unless an evidence-backed improvement is separately reviewed; the
+merge is covered by tests; source dates/hashes and provenance gaps are recorded.
 
 ## B. Resolve the 10 validation failures
 

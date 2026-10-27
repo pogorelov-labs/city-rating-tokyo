@@ -137,6 +137,16 @@ def anchors(scores: list[float]) -> dict[str, float]:
     return percentile_anchors(scores)
 
 
+def encoded_resident_weights(weights: list[float]) -> list[int]:
+    """Canonical uint8 weight units for published grid summaries (scale 250).
+
+    Python round and numpy.rint both use ties-to-even. Work in integer units
+    to avoid floating accumulation moving a median across the 50% threshold.
+    Cell percentile normalization continues to use full precision weights.
+    """
+    return [round(w * 250) for w in weights]
+
+
 def two_source_confidence(overture_ok: bool, osm_ok: bool) -> tuple[str, list[str]]:
     """Bangkok's symmetric rule (deliberately different from Tokyo food).
 
