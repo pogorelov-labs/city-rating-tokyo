@@ -464,6 +464,7 @@ population input and retained Overpass alternative. **v0.1.0 excluded the full
 spatial refresh.** It merged post-release in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
 on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4),
 and the refreshed data is now on **main**, not in the v0.1.0 tag/release.
+v0.1.1 packages this post-v0.1.0 data refresh.
 All **10 validation gates are resolved**. The [90-file frozen manifest](data/bangkok/refresh-inputs.json)
 pins the build inputs; all **133 tourism areas** (99 with hotels, 66 with
 attractions, 19 badges), **9 Michelin districts** and **5 legacy embassy districts**

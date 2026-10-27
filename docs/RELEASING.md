@@ -2,8 +2,10 @@
 
 ## Policy and prerequisites
 
-- Use semantic versions with a `v` tag prefix. The first release is **v0.1.0**;
-  `app/package.json` already says `0.1.0` and this release does not bump it.
+- Use semantic versions with a `v` tag prefix. The first release was **v0.1.0**.
+  **v0.1.1** is the first patch data release, packaging the post-v0.1.0 Bangkok
+  refresh. Its release PR bumps `app/package.json` and `app/package-lock.json`
+  from `0.1.0` to `0.1.1`.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.

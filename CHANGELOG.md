@@ -4,36 +4,30 @@ Release tags use semantic versioning. Add user-visible changes here and keep eac
 published entry aligned with its [release notes](docs/releases/) and immutable
 tag. The [release runbook](docs/RELEASING.md) defines the gates and commands.
 
-## Unreleased — post-v0.1.0
+## v0.1.1 — 2026-10-27
 
-### Bangkok spatial refresh — merged 2026-10-27
+Bangkok data refresh. This is a data-only release: no new features, API, URL,
+schema or scoring changes. v0.1.0 remains the prior release and does not contain
+this data.
 
-The separate [data PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
-merged to **main** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4),
-after the v0.1.0 release commit `d7e2ddf`. **The v0.1.0 tag/release does not
-contain this refresh**; this entry does not create a new version tag.
+### What changed
 
-- Resolved all **10 validation gates** with preserved historical fixtures,
-  explicit refresh baselines and grid summaries consistent with published weights.
-- Froze **90 input files** with hashes/revisions in the [input manifest](data/bangkok/refresh-inputs.json).
-- Preserved all **133 tourism areas** (99 with hotels, 66 with attractions,
-  19 badges), all **9 Michelin district facts** (8 stars / 12 Bib) and all
-  **5 legacy embassy district facts** (sum 16).
-- Ratings change in **12/50 districts and 35/133 station areas**. Entity counts
-  stay at **50 districts, 133 areas, 179 rail stations / 10 lines and 39,149
-  grid cells**, with no gained/lost IDs or cells.
-- Grid binary is now `grid-1d6ed2ef00c3.bin` (**143,925 bytes**). Grid rent/safety
-  and crowd/hub-minute planes are unchanged; district/grid rents remain editorial
-  and the existing 10 station-area rent proxies retain estimate confidence.
-- Completed the extract-specific Overture attribution and geometry reviews,
-  retaining notices/license copies and documented limitations. Source mapping
-  changes are not evidence of real-world improvement; retained population,
-  flood, rent and enrichment epochs were not advanced.
+- Bangkok now uses the October 2026 OpenStreetMap/Overture snapshot across the
+  50 districts, 133 station areas and 200 m grid.
+- Ratings changed in 12 districts and 35 station areas, mainly green-space
+  scores. The district/area structure, rail network and grid size are unchanged.
+- Existing tourism, Michelin and institution facts are retained.
 
-See the [committed evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md),
-[complete aggregate/geometry review](research/bangkok/notes/2026-10-26-frozen-refresh-review.json)
-and [completed remediation record](docs/DATA_REFRESH_REMEDIATION.md). The v0.1.0
-entry below records the release's original scope and blockers at release time.
+### What to expect
+
+- Some Bangkok scores and map colours differ from v0.1.0. Scores remain relative
+  within Bangkok; a Bangkok 8 is not a Tokyo 8.
+- District and grid rents remain editorial estimates. The 10 central station-area
+  rent proxies remain estimate-grade. Safety remains editorial.
+- No action is required for users or deployments: the site is static and
+  Coolify deploys `main` automatically.
+
+See the methodology and evidence notes for source details and known limits.
 
 ## v0.1.0 — 2026-10-26
 
