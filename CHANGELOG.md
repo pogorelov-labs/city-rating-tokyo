@@ -4,6 +4,37 @@ Release tags use semantic versioning. Add user-visible changes here and keep eac
 published entry aligned with its [release notes](docs/releases/) and immutable
 tag. The [release runbook](docs/RELEASING.md) defines the gates and commands.
 
+## Unreleased — post-v0.1.0
+
+### Bangkok spatial refresh — merged 2026-10-27
+
+The separate [data PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
+merged to **main** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4),
+after the v0.1.0 release commit `d7e2ddf`. **The v0.1.0 tag/release does not
+contain this refresh**; this entry does not create a new version tag.
+
+- Resolved all **10 validation gates** with preserved historical fixtures,
+  explicit refresh baselines and grid summaries consistent with published weights.
+- Froze **90 input files** with hashes/revisions in the [input manifest](data/bangkok/refresh-inputs.json).
+- Preserved all **133 tourism areas** (99 with hotels, 66 with attractions,
+  19 badges), all **9 Michelin district facts** (8 stars / 12 Bib) and all
+  **5 legacy embassy district facts** (sum 16).
+- Ratings change in **12/50 districts and 35/133 station areas**. Entity counts
+  stay at **50 districts, 133 areas, 179 rail stations / 10 lines and 39,149
+  grid cells**, with no gained/lost IDs or cells.
+- Grid binary is now `grid-1d6ed2ef00c3.bin` (**143,925 bytes**). Grid rent/safety
+  and crowd/hub-minute planes are unchanged; district/grid rents remain editorial
+  and the existing 10 station-area rent proxies retain estimate confidence.
+- Completed the extract-specific Overture attribution and geometry reviews,
+  retaining notices/license copies and documented limitations. Source mapping
+  changes are not evidence of real-world improvement; retained population,
+  flood, rent and enrichment epochs were not advanced.
+
+See the [committed evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md),
+[complete aggregate/geometry review](research/bangkok/notes/2026-10-26-frozen-refresh-review.json)
+and [completed remediation record](docs/DATA_REFRESH_REMEDIATION.md). The v0.1.0
+entry below records the release's original scope and blockers at release time.
+
 ## v0.1.0 — 2026-10-26
 
 First tagged release of City Rating: **Tokyo + Bangkok**. This entry describes

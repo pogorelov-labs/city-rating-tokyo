@@ -27,13 +27,20 @@ the OSM Overpass tasks with a coherent, hashed snapshot. Fetch the remaining
 Wikidata/Commons/Overture tasks separately as that guide describes. The existing
 Overpass workflow below remains available; do not mix OSM snapshots.
 
-**v0.1.0 does not ship the full spatial refresh.** Its experimental output has
-**10 validation failures** and loses tourism, Michelin and embassy enrichments;
-green/area anomalies, source pinning and additional Overture attribution also
-need review. The [scoped remediation plan](../../docs/DATA_REFRESH_REMEDIATION.md)
-is **not implemented**. Any refresh requires a separate PR under the
-[release runbook](../../docs/RELEASING.md); a successful build is not approval
-to publish its output.
+**v0.1.0 excluded the full spatial refresh.** The separate [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
+merged post-release on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4);
+the refreshed data is now on **main**, not in the v0.1.0 tag/release.
+All **10 original validation gates are resolved**, with inputs pinned by the
+[90-file frozen manifest](../../data/bangkok/refresh-inputs.json). All **133 tourism
+areas** retain their fields (99 with hotels, 66 with attractions, 19 badges), as
+do **9 Michelin districts** and **5 legacy embassy districts**. Ratings change
+in **12/50 districts and 35/133 areas**; the same **50 districts, 133 areas,
+179 rail stations and 39,149 cells** remain. The grid binary is now
+`grid-1d6ed2ef00c3.bin` (**143,925 bytes**); grid rent/safety and crowd/hub-minute
+planes are unchanged. See the [completed remediation](../../docs/DATA_REFRESH_REMEDIATION.md)
+and [committed evidence note](notes/2026-10-26-frozen-refresh.md). The extract-specific
+attribution/geometry review is complete with documented limits; source changes
+do not establish real-world improvement or advance retained source epochs.
 
 ```
 uv run scripts/bangkok/fetch.py      # network, cached in data/bangkok/raw/ (gitignored, ~50 MB)
@@ -102,9 +109,9 @@ Adaptation: district aggregation and density scoring by City Rating.
 |---|---|---|
 | Transport | OSM rail network (BTS Sukhumvit/Silom/Gold, MRT Blue/Purple/Yellow/Pink, ARL, SRT Dark/Light Red) + bus stops + boat piers + commute model | moderate ×50 |
 | Rent | `data/bangkok/editorial.json` — researcher estimate of typical 1-bed / 2-bed condo asking rents | editorial ×50 |
-| Daily essentials | Overture Maps Places + OSM | strong 49 · moderate 1 |
+| Daily essentials | Overture Maps Places + OSM | strong 50 |
 | Safety | `editorial.json` — researcher assessment | editorial ×50 |
-| Food | Overture + OSM | strong 43 · moderate 7 |
+| Food | Overture + OSM | strong 44 · moderate 6 |
 | Green | OSM park / garden / woodland polygons (ha within 1 km + distance to a ≥ 1 ha park) | moderate ×50 |
 | Gym & sports | Overture + OSM (pools weighted 0.3) | strong 27 · moderate 22 · estimate 1 |
 | Vibe | Overture + OSM culture venues, cafés, temples, markets, pedestrian streets | strong 27 · moderate 22 · estimate 1 |
