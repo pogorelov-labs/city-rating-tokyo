@@ -35,6 +35,13 @@ SCHEMA = json.loads((ROOT / "packages" / "schema" / "constants.json").read_text(
 RATING_KEYS = SCHEMA["rating_keys"]
 
 
+def test_frozen_signals_snapshot():
+    """Detect any byte-level change to the refreshed district and area signals."""
+    signals = ROOT / "data" / "bangkok" / "signals.json"
+    snapshot = ROOT / "scripts" / "fixtures" / "bangkok-build" / "signals.json"
+    assert signals.read_bytes() == snapshot.read_bytes()
+
+
 # ── normalisation (mirrors scripts/compute-ratings.py) ──────────────────────
 
 def test_percentile_spans_1_to_10():
