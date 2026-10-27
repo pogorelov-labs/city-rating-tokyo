@@ -75,6 +75,7 @@ def test_configured_but_cold_cache_is_unavailable():
 def test_validate_active_key_ok():
     store = make_store()
     seed(store, "k1", "active")
+    assert store.validate(None) == (False, "missing")
     assert store.validate("Bearer k1") == (True, "ok")
 
 
@@ -217,3 +218,23 @@ def test_bucket_refill_over_time(monkeypatch):
     fake_now[0] += 10.0  # 10 seconds × 1 token/s
     assert b.take() is True
     assert b.tokens == pytest.approx(9.0)
+
+
+def test_bucket_exhausts_then_refills_and_adopts_lower_rate(monkeypatch):
+    from city_rating_mcp import auth as auth_module
+
+    now = [1000.0]
+    monkeypatch.setattr(auth_module.time, "monotonic", lambda: now[0])
+    store = make_store()
+    key_hash = seed(store, "k", rate=2)
+    store._buckets[key_hash] = _Bucket(tokens=2, capacity=2, rate_per_sec=2 / 60, last=now[0])
+    assert store.validate("Bearer k") == (True, "ok")
+    assert store.validate("Bearer k") == (True, "ok")
+    assert store.validate("Bearer k") == (False, "rate_limited")
+    now[0] += 30
+    assert store.validate("Bearer k") == (True, "ok")
+    seed(store, "k", rate=1)
+    now[0] += 60
+    assert store.validate("Bearer k") == (True, "ok")
+    assert store._buckets[key_hash].capacity == 1
+    assert store.validate("Bearer k") == (False, "rate_limited")

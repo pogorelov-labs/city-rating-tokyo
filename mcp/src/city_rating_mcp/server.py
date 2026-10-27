@@ -218,7 +218,7 @@ def semantic_search(
     """Find stations whose descriptions best match a free-form query.
 
     Args:
-        query: Natural-language phrase. Embedded with multilingual-e5-base.
+        query: Natural-language phrase. Embedded with multilingual-e5-large.
             Best when in the same locale as `locale`, but cross-lingual
             queries also work (the model is multilingual).
         locale: 'en' | 'ja' | 'ru'. Selects which description set to search.

@@ -9,6 +9,7 @@ behaviour aligned when either changes.
 
 from __future__ import annotations
 
+import math
 import sys
 from pathlib import Path
 from typing import Any
@@ -64,7 +65,8 @@ def composite_score(ratings: dict[str, float] | None, weights: dict[str, float] 
         weighted += val * weight
     if total == 0:
         return 0.0
-    return round(weighted / total * 10) / 10
+    # JavaScript Math.round resolves half values toward positive infinity.
+    return math.floor(weighted / total * 10 + 0.5) / 10
 
 
 def percentile_anchors(scores: list[float]) -> dict[str, float]:
