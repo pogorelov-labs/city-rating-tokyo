@@ -1,13 +1,11 @@
 #!/bin/bash
 #
-# VPS Image Pipeline Orchestrator
-# Runs all phases sequentially, downloads images, and moves to nginx volume.
+# Image acquisition and metadata pipeline
+# Runs Wikimedia acquisition, configured storage synchronization and metadata merge.
 #
 # Usage: bash scripts/run-image-pipeline.sh
-# Env:   FLICKR_API_KEY (required for Phase 2)
-#        IMAGE_DIR=/data/images (where to download images)
-#        NGINX_VOLUME=/docker-volume/img (where nginx serves from)
-#        IMAGE_HOST=https://img.pogorelov.dev
+# Env:   IMAGE_DIR, NGINX_VOLUME and IMAGE_HOST (environment-specific settings).
+# The current acquisition steps use Wikimedia; no Flickr key is required.
 #
 set -euo pipefail
 
@@ -34,7 +32,7 @@ echo "=== Phase 2: Wikimedia geo search ==="
 node scripts/fetch-wiki-geo.mjs
 echo ""
 
-# Move downloaded images to nginx volume
+# Phase 3: Synchronize downloaded images to configured asset storage
 echo "=== Moving images to nginx volume ==="
 if [ -d "$IMAGE_DIR/wiki" ]; then
   rsync -a "$IMAGE_DIR/wiki/" "$NGINX_VOLUME/wiki/"

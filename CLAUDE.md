@@ -1,4 +1,4 @@
-# City Rating Tokyo — Dev Guide
+# City Rating — Tokyo + Bangkok Dev Guide
 
 ## Project Overview
 
@@ -7,6 +7,11 @@ Interactive map of Greater Tokyo (1493 stations) **and Bangkok (50 districts →
 **Live**: https://city-rating.pogorelov.dev
 **Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl v4 (EN/JA/RU). Static JSON data, no DB at runtime.
 **Deploy**: Production deployment is automated from `main`; deployment details are maintained outside this public repository.
+
+Fresh-clone setup and pipeline prerequisites: [README.md](README.md#getting-started).
+Current Bangkok inventory is **50 districts, 133 station areas, 179 rail
+stations / 10 lines and 39,149 grid cells**; see the [Bangkok overview](research/bangkok/00-overview.md).
+Historical Tokyo research is labeled as such in [research/00-overview.md](research/00-overview.md).
 
 ## Architecture
 
@@ -30,9 +35,9 @@ Do **not** equate “every station has a number” with “every number is equal
 2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use an e-Stat municipal average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`. **Doctrine (CRTKY-43, 2026-09-30):** e-Stat is an allowed but *labelled* fallback — `moderate`, capped at 9, shown as "Municipal average (e-Stat)" on the station page, and never recomputed in the frontend (`isStationLevelRent()` in `scoring.ts`). Only listings scraped around the station (Suumo, HOMES) are `strong`.
 3. **Safety (CRTKY-82, 2026-09-30):** all 1493 stations come from 2024 police open data via `scripts/scrapers/ingest-crime-open-data.py` → `data/crime/station-safety.json`. Tokyo (570) uses the 町丁 within 800 m of the station → `strong`; 45 outer-Tokyo stations with too few 町丁 in range and all of Kanagawa/Saitama/Chiba use the **municipality/ward** → `moderate` — every station in a ward shares one value, so read those as area-level. Same formula, year and daytime-population rule everywhere; Tokyo catchments are clamped to [1/3, 3]× their municipal rate so granularity alone cannot push them into the tails. The old hand-typed `crime_stats` table matched no source year and reached only 187 of 878 non-Tokyo stations — see `research/02-safety.md`.
 4. **Green / vibe:** strong/moderate/estimate reflect **source rules in compute**, not “map looks green.” Re-measured 2026-08-25: `green` **does** reach `strong` (842/1493), so the older “0 strong” note was stale. `vibe` could never reach `strong` until **CRTKY-128**: the old rule was a two-way ternary with no `strong` branch. `vibe_confidence()` in `compute-ratings.py` now gives `strong` when both independent OSM signals are present (cultural venues **and** pedestrian streets — 461 stations as of the 2026-04 data), `moderate` for cultural venues alone, `estimate` otherwise. Takes effect on the next `refresh-ratings.sh` run.
-5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates per-station travel times using geographic distance + line connectivity, calibrated against 252 AI-researched ground-truth values (MAE 5.5 min, 85% within 10 min). AI-researched entries keep hand-authored times. Computed entries use the calibrated model. Output in `data/transit-times.json`, consumed by `export-ratings.py`. **Upgrade path:** replace with GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
-6. **Missing confidence keys in export:** for computed entries, `export-ratings.py` defaults absent per-category keys to **`estimate`** when building TS — verify NocoDB JSON is complete if counts look wrong. For AI-researched entries the gap was worse: they predate `daily_essentials`, so all 251 had **no rating at all** for it and `app/src/lib/data.ts` substituted a hardcoded `5` (+ `estimate`) that fed the composite at 14% weight. Since **CRTKY-129**, `backfill_daily_essentials()` fills rating, confidence and sources from the pipeline on every export (no researcher ever rated this category, so nothing editorial is overwritten), and an AI entry it cannot fill counts toward the `missing_count` gate. The `data.ts` fallback remains only as a guard for `--allow-missing` runs.
-7. **AI-researched slugs (~252):** Integer ratings and `description` are editorial. Since **CRTKY-83**, `export-ratings.py` merges per-category confidence via comparison: matching categories inherit computed metadata, differing ones get `editorial` level. See NocoDB section for full merge policy.
+5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates travel times using geographic distance and line connectivity. The committed `data/transit-times.json` reports a historical April 2026 calibration cohort of **252**; that is distinct from the current **251-entry** researched export block. Authored entries retain their hand-curated times; computed entries use the model. **Upgrade path:** GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
+6. **Missing confidence keys in export:** `export-ratings.py` defaults absent per-category confidence to **`estimate`**. The current committed **251-entry AI block omits `daily_essentials`** from its ratings/confidence/source literals; category completeness must be checked in the artifact, not inferred from code being merged. The **CRTKY-129** `backfill_daily_essentials()` export path can supply pipeline values and participates in the missing-data gate. That code does not establish that an authorized export has run; the frontend still has a missing-field fallback.
+7. **AI-researched slugs (251):** Integer ratings and `description` are editorial. Since **CRTKY-83**, `export-ratings.py` merges per-category confidence via comparison: matching categories inherit computed metadata, differing ones get `editorial` level. See NocoDB section for full merge policy.
 8. **HotPepper API** is a **single-vendor** dependency for food/nightlife signals (also used by vibe/crowd proxies); no automated fallback is implemented. Source freshness/mix gates, the tracked midnight ingest, key rotation/reissue procedure, additive `source_dates` rollout, and recoverable computed-ratings updates are in [the HotPepper resilience runbook](research/notes/2026-10-15-hotpepper-resilience-runbook.md). Refresh requires an explicit `--max-source-age-days=N` policy and the documented schema preflight; no source refresh or migration is implied by merging the code.
    **Preserved confidence policies (CRTKY-166):** shared Python normalization does not unify city evidence rules. Tokyo food: positive HP + OSM → `strong` / `[hotpepper, osm]`; HP only → `moderate` / `[hotpepper]`; HP=0 (including OSM-only) → `estimate` / `[]`. That empty source list is preserved compatibility behavior, not a claim that OSM contributed nothing. Bangkok: both Overture/OSM thresholds met → `strong`; either alone → `moderate`; neither → `estimate` with both source names retained. Existing thresholds, missing/null handling, source order, log transforms, rent constants and Python rounding remain unchanged; changing them requires a separate behavior decision.
 9. **Last train times (CRTKY-115):** Sourced from [mini-tokyo-3d](https://github.com/nagix/mini-tokyo-3d) (MIT). Computed as `MAX(departure)` per station per day type via coordinate matching (200m) → 1483/1493 coverage (99.3%). Caveats: (a) Sat/Sun/Holiday combined in source (no separate Sunday breakdown), (b) post-midnight times show as 00:xx with no 24:00+ convention, (c) arrival-only terminal stops excluded (not boardable), (d) refresh by re-running `scrape-last-trains.py` against current MT3D master — no auto-refresh. 10 stations uncovered (Hakone cable car, Toden Arakawa tram, a few edge stations with coordinate collisions).
@@ -48,6 +53,9 @@ Do **not** equate “every station has a number” with “every number is equal
 
 Base and table identifiers are configured in the private operational
 environment. The logical tables and data contracts are:
+
+Recorded row counts in this table are historical pipeline notes, not a live
+datastore inventory. Use the committed app datasets for shipped coverage.
 
 | Table | Records | Source |
 |-------|---------|--------|
@@ -75,9 +83,9 @@ environment. The logical tables and data contracts are:
 | `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
 | `app/src/data/rent-averages.json` | 1402 | Suumo + e-Stat | 274 real Suumo listings + 1128 e-Stat municipal averages — PR #91; +302 renamed stations once `merge-estat-rent.py` read `ward-data.json` instead of NocoDB (CRTKY-113 follow-up) |
 | `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
-| `app/src/data/station-thumbnails.json` | 1155 | generated image assets | 320px thumb URL + LQIP base64 per station |
-| `app/src/data/station-images-all.json` | 1155 | Wikimedia + Unsplash | Gallery full-res images |
-| `app/src/data/station-places.json` | 273 | curated | Nearby places for station detail |
+| `app/src/data/station-thumbnails.json` | 1488 | generated image assets | 320px thumb URL + LQIP base64 per station |
+| `app/src/data/station-images-all.json` | 1488 | Wikimedia + Unsplash | Gallery full-res images |
+| `app/src/data/station-places.json` | 274 | curated | Nearby places for station detail |
 | `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
 | `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
 | `data/crime/station-safety.json` | 1493 | `scripts/scrapers/ingest-crime-open-data.py` | Weighted crime rate per slug + level (neighborhood/municipal), confidence, municipality; read by `compute-ratings.py` and `build-datamart.py`. Companion files: `municipal-2024.csv` (247 municipalities with all 7 terms and populations), `sources.json` (URLs, SHA-256, attributions) (CRTKY-82) |
@@ -93,13 +101,13 @@ environment. The logical tables and data contracts are:
 
 These feed the `ConfidenceBadge` UI component. NocoDB API token is data-only — schema changes (new columns) must be done manually in the NocoDB UI.
 
-**AI-researched stations — confidence merge policy (CRTKY-83):** ~252 slugs in `demo-ratings.ts` have `description` (and integer ratings) from human researchers. Since CRTKY-83, `export-ratings.py` merges confidence metadata for these entries using a per-category comparison:
+**AI-researched stations — confidence merge policy (CRTKY-83):** 251 slugs in the preserved block of `demo-ratings.ts` have `description` and integer ratings from human researchers; the computed block contains 1,242 entries. Since CRTKY-83, `export-ratings.py` merges confidence metadata for researched entries using a per-category comparison:
 
 - **Category rating matches computed** → inherits pipeline `confidence` + `sources` (data backs the researcher's judgment). E.g. Gakugei-Daigaku food:8 matches computed → `strong` with `['hotpepper','osm']`.
 - **Category rating differs from computed** → `editorial` level, sources `['ai_research']` (human chose a different value than data alone suggests). E.g. Mitaka food:7 differs from computed → `editorial`.
 - **No computed data for slug** → all categories get `editorial`.
 
-The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI label: **”Curated”** with 藤色 fuji-iro (`#8B6DB0`) dot. Types: `ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial'`. All 252 AI-researched stations now show confidence dots and the chip legend.
+The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI label: **”Curated”** with 藤色 fuji-iro (`#8B6DB0`) dot. Types: `ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial'`. All 251 researched entries carry per-category metadata; missing category keys remain a separate coverage limit.
 
 ### NocoDB Access
 ```
@@ -191,7 +199,7 @@ Sources: OSM leisure=fitness_centre|sports_centre|swimming_pool.
 raw = log(1 + cultural_venues) * 0.6 + log(1 + pedestrian_streets) * 0.15
     + log(1 + cafe_count) * 0.15 + cultural_shop_ratio * 0.1
 ```
-Sources: OSM theatre|cinema|arts_centre + shop=books|music|art|vintage; pedestrian streets. AI-researched override for 272 stations.
+Sources: OSM theatre|cinema|arts_centre + shop=books|music|art|vintage; pedestrian streets. The current export preserves 251 AI-researched entries, with the override hierarchy below.
 
 ### nightlife (8%)
 ```
@@ -208,7 +216,7 @@ raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
 Sources: MLIT S12 FY2024 — 1438/1493 (96.3%), `moderate` for the 28 that use an older-year fallback; HotPepper total as fallback for the 55 unmanned stations operators never report (CRTKY-84).
 
 ## Override Hierarchy
-1. **AI-researched** (~251 stations in the AI block of demo-ratings.ts) — never overwritten, with two exceptions made in `export-ratings.py`: **`daily_essentials`** is filled from the pipeline because no researcher ever rated it (CRTKY-129), and **rent** takes the pipeline value where listings were scraped around the station — station data beats the editorial guess (D3b, 2026-09-30)
+1. **AI-researched** (251 entries in the committed AI block of demo-ratings.ts) — preserved by the export policy, with two pipeline exceptions: **`daily_essentials`** backfill (CRTKY-129), and **rent** where station-level listings supersede an editorial estimate. Verify the committed export before claiming those pipeline paths have run.
 2. **Computed data-driven** — from NocoDB pipeline
 3. **Heuristic fallback** — only where real data unavailable
 
@@ -267,7 +275,7 @@ The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-di
 | File | Purpose |
 |------|---------|
 | `README.md` | Public repo intro: 1493 stations, real stack, data sources, **honesty** pointers (hub stub CRTKY-81, CLAUDE Data readiness, Plane CRTKY-80–84) |
-| `app/src/data/demo-ratings.ts` | All ratings (AI + computed). ~7700 lines. |
+| `app/src/data/demo-ratings.ts` | Committed Tokyo ratings export: 251 researched + 1,242 computed entries. Recount export blocks after regeneration; file length is not a coverage metric. |
 | `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
 | `app/src/data/station-thumbnails.json` | **Three-tier image data** — `{slug: {thumb, lqip}}` for 1488 stations (99.7%). `thumb`: 320px thumbnail URL. `lqip`: 8×6 base64 JPEG (~877 chars) for instant blur-up on hover. Generated by `scripts/generate-thumbnails.py` in the operational environment. Replaces old `station-images.json` (deleted). 1426 KB raw, **67 KB gzipped**. |
 | `app/src/data/station-images-all.json` | Full-res photos — **8,827 images across 1488 stations (99.7%)**. Used by station detail `ImageGallery`. Metadata: url, alt, attribution, photographer, license, source. **Privacy-cleaned** (CRTKY-97): 136 portrait/face images removed via OpenCV DNN detection + human review. |
@@ -386,7 +394,12 @@ app/src/app/
 - JSON-LD includes `inLanguage` field
 - Default locale (EN) has no URL prefix — existing indexed URLs unchanged
 
-### Build: 5045 pages in ~35s (10 workers) — 4493 Tokyo + 3 Bangkok homepages + 150 district + 399 station-area pages
+### Static page generation
+
+Tokyo station and Bangkok district/station-area pages are generated for each
+locale. Grid cells are explored on the map rather than as standalone pages.
+Page totals, build timings and worker counts belong in build output, not as
+fixed coverage claims in this guide.
 
 ### Station naming convention (CRTKY-111 helpers + CRTKY-107 data)
 
@@ -582,6 +595,21 @@ scrapers are incremental: they skip stations already in NocoDB and are safe to
 restart. Keep operational credentials and access details out of public copy.
 
 ## Research Documents
+
+### Architecture decision records
+
+Use [research/decisions/](research/decisions/) for consequential choices about
+scoring, evidence/confidence, source rights, identity/merge rules, city/domain
+boundaries or shared contracts. Follow the existing `YYYY-MM-DD-topic.md`
+convention: record context, decision/status, alternatives, consequences,
+evidence and conditions for revisiting it. Link the ADR from the implementation
+ticket and PR; mark an owner decision accepted only when that decision exists.
+Routine fixes and copy edits can use the ticket/PR record. Apply the public-copy
+rules in [CONTRIBUTING.md](CONTRIBUTING.md#public-repository-and-changelog-rules);
+private operational details and internal verification artifacts stay outside
+public ADRs.
+
+### Data-source research
 
 Detailed data source research in `research/` (Bangkok: `research/bangkok/`):
 - `00-overview.md` — Status summary
