@@ -9,12 +9,30 @@ import { describe, expect, it } from 'vitest';
 import { getStations } from '../data';
 import { isStationLevelRent } from '../scoring';
 import { DEMO_RATINGS } from '@/data/demo-ratings';
+import rawStations from '@/data/stations.json';
 import rentAverages from '@/data/rent-averages.json';
 import en from '@/messages/en/common.json';
 import ja from '@/messages/ja/common.json';
 import ru from '@/messages/ru/common.json';
 
 const stations = getStations();
+
+// These are the AI-researched cohort (CRTKY-129): the pipeline backfill was
+// fixed in PR #109, but committed data was never re-exported. CRTKY-199's
+// operator re-export is expected to reduce this to zero; update this constant
+// in that same PR when the committed inputs change.
+const DAILY_ESSENTIALS_FALLBACK_COUNT = 251;
+
+it('pins the number of station ratings that use the daily essentials fallback', () => {
+  const fallbackSlugs = rawStations.flatMap(({ slug }) => {
+    const demo = DEMO_RATINGS[slug];
+    return demo && demo.ratings.daily_essentials == null ? [slug] : [];
+  });
+  expect(fallbackSlugs).toHaveLength(DAILY_ESSENTIALS_FALLBACK_COUNT);
+
+  const assembled = new Map(stations.map((station) => [station.slug, station]));
+  expect(fallbackSlugs.filter((slug) => assembled.get(slug)?.ratings?.daily_essentials !== 5)).toEqual([]);
+});
 
 describe('rent provenance and caps', () => {
   it('keeps the real source of every rent-averages row (was hardcoded to suumo)', () => {
