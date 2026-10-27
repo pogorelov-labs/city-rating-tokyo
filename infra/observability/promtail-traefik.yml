@@ -1,0 +1,49 @@
+# Promtail config shipping Traefik (coolify-proxy) JSON access logs to Loki —
+# CRTKY-127. On the production host the EXISTING promtail keeps its own
+# server/positions/clients sections; the additive change is the
+# `traefik-access` scrape job below (plus, if needed, a read-only mount of the
+# proxy log directory into the promtail container). This standalone file is
+# what the reference docker-compose.yml runs, and what the local verification
+# exercised. Verified with promtail v3.5.4 against real Traefik v3.7.16 lines.
+#
+# Promtail is end-of-life upstream (final release line 3.5.x; absent from Loki
+# 3.7+ release assets). Extending the host's existing promtail is still the
+# minimal change; Grafana Alloy is the successor when this stack is rebuilt.
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  # Host: use the same Loki push URL the existing promtail jobs use.
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: traefik-access
+    static_configs:
+      - targets: [localhost]
+        labels:
+          job: traefik-access
+          # Host path of the Traefik access log. Coolify's proxy volume maps
+          # the in-container /traefik/access.log here; confirm with the
+          # discovery step in the runbook before applying. If promtail runs in
+          # a container, this must be the path as mounted INTO that container.
+          __path__: /data/coolify/proxy/access.log
+    pipeline_stages:
+      # Traefik JSON access log schema (Duration is nanoseconds):
+      # https://doc.traefik.io/traefik/observe/logs-and-access-logs/#json-format-fields
+      - json:
+          expressions:
+            timestamp: StartUTC
+      # Stamp entries with Traefik's own request time (not scrape time) so
+      # lines read after a restart/backlog land at the right instant.
+      - timestamp:
+          source: timestamp
+          format: RFC3339
+    # Deliberately NO host/path/status labels: RequestHost and RequestPath are
+    # attacker-controlled (arbitrary Host headers, query strings) and would
+    # explode stream cardinality. Queries parse them with `| json` instead —
+    # see logql-queries.md. At this traffic level (~1k requests/day) that is
+    # cheap and bounded.

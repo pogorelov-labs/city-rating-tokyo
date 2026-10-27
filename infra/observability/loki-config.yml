@@ -1,0 +1,44 @@
+# Reference Loki single-node configuration — CRTKY-127.
+# The production host ALREADY runs Loki; this file makes the current behavior
+# explicit (5-day retention) and allows reproducing the stack on a fresh host.
+# Verified with Loki v3.7.9. Do not blind-apply over a live setup.
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+
+common:
+  path_prefix: /loki
+  storage:
+    filesystem:
+      chunks_directory: /loki/chunks
+      rules_directory: /loki/rules
+  replication_factor: 1
+  ring:
+    kvstore:
+      store: inmemory
+
+schema_config:
+  configs:
+    - from: "2026-01-01"
+      store: tsdb
+      object_store: filesystem
+      schema: v13
+      index:
+        prefix: index_
+        period: 24h
+
+limits_config:
+  # 5 days (120h) — matches the retention measured on the host when CRTKY-127
+  # was scoped. Extending it is an explicit owner decision (disk headroom),
+  # never implicit: see the runbook's retention section.
+  retention_period: 120h
+
+compactor:
+  working_directory: /loki/compactor
+  retention_enabled: true
+  delete_request_store: filesystem
+
+# Ops note (observed in verification, default behavior): Loki stops accepting
+# pushes when its storage volume passes 90% full
+# (ingester.wal.disk_full_threshold, default 0.9). Keep the volume below that.
