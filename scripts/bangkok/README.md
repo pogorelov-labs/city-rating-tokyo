@@ -19,6 +19,14 @@ existing verified cache is sufficient. Flood scores use committed
 `data/bangkok/flood.json`, not the ZIP directly. Rebuilding that independent
 input with `fetch-flood.py` is a separate, deliberately reviewed refresh.
 
+`build.py` orchestrates the offline build. Projection and boundary handling live
+in `geom.py`, raster operations in `rasters.py`, source loading in `sources.py`,
+rail construction in `rail.py`, station catchments in `areas.py`, and packed
+grid output in `gridpack.py`. `SignalGrid` holds the shared proximity and
+commute state; rail relation IDs are passed explicitly into `build_rail`.
+The synthetic tests in `test_bangkok_units.py` need no raw downloads. The
+byte-for-byte `signals.json` snapshot lives under `scripts/fixtures/bangkok-build`.
+
 The first command downloads [Geofabrik Thailand](https://download.geofabrik.de/asia/thailand.html)
 from `https://download.geofabrik.de/asia/thailand-latest.osm.pbf` using the public
 Python `osmium` package (pyosmium API, no osmium CLI). It replaces these 12 OSM
