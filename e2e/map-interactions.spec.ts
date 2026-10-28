@@ -149,4 +149,18 @@ test.describe('touch selection', () => {
     expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
     await expect(page.locator('.station-halo')).toBeAttached();
   });
+
+  test('Bangkok touch zoom preserves a selected district', async ({ page }) => {
+    await page.goto('/bangkok');
+    await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
+    const point = await districtPoint(page);
+    await page.touchscreen.tap(point.x, point.y);
+    await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 15_000 }).toBeTruthy();
+    const selected = new URL(page.url()).searchParams.get('s');
+    await page.waitForTimeout(800);
+    await page.getByRole('button', { name: 'Zoom in' }).tap();
+    await page.waitForTimeout(500);
+    expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+  });
+
 });

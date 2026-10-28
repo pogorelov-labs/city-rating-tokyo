@@ -6,7 +6,7 @@ import { dataLabel } from '@/i18n/message-key';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
-import { RATING_LABELS, type StationRatings } from '@/lib/types';
+import { RATING_LABELS, type MapStation, type StationRatings } from '@/lib/types';
 import { areaPath, formatRentShort } from '@/lib/cities';
 import { categoryDeviationColor } from '@/lib/scoring';
 import { stationDisplayName } from '@/lib/station-name';
@@ -223,6 +223,84 @@ export function CellDetails({
           >
             {t('map.cellAreaLink', { station: areaName(info.areaId) })}
           </Link>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function DistrictPopupBody({
+  district: d,
+  thumb,
+  snippet,
+  color,
+  isCompared,
+  compareFull,
+  onCompare,
+  onUncompare,
+}: {
+  district: MapStation & { score: number | null };
+  thumb?: string;
+  snippet?: string;
+  color: string;
+  isCompared: boolean;
+  compareFull: boolean;
+  onCompare: () => void;
+  onUncompare: () => void;
+}) {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
+  const names = stationDisplayName(d, locale);
+  return (
+    <div className="min-w-[220px] max-w-[260px]">
+      <div style={{ margin: '-10px -12px 8px', overflow: 'hidden', borderRadius: '8px 8px 0 0' }}>
+        <StationTooltipHero
+          key={`popup-${d.slug}`}
+          slug={d.slug}
+          thumb={thumb}
+          lqip={undefined}
+          nameEn={names.primary}
+          nameJp={d.name_th ?? names.secondary}
+          score={d.score}
+          color={color}
+        />
+      </div>
+      <div className="font-bold text-base">{names.primary}</div>
+      <div className="text-gray-500 text-sm mb-1">{names.secondary}</div>
+      {d.score !== null && <div className="text-lg font-bold text-slate-800">{d.score.toFixed(1)} / 10</div>}
+      <div className="text-xs text-gray-500 mb-2">
+        {d.station_count ? (
+          <>
+            {t('filter.stations', { count: d.station_count })} · {t('filter.lines', { count: d.line_count })}
+          </>
+        ) : (
+          t('map.noRailInDistrict')
+        )}
+        {d.rent_1k != null && <> · ~{formatRentShort('bangkok', d.rent_1k)}/mo</>}
+        {d.rent_provenance && <RentNote rent={d.rent_provenance} compact />}
+      </div>
+      {snippet && <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">{snippet}</div>}
+      <div className="flex items-center gap-3 mt-1">
+        <Link
+          href={areaPath('bangkok', d.slug)}
+          className="text-blue-600 text-xs hover:underline"
+          data-umami-event="view-details"
+          data-umami-event-station={d.slug}
+        >
+          {t('map.viewDetails')}
+        </Link>
+        {isCompared ? (
+          <button onClick={(e) => { e.stopPropagation(); onUncompare(); }} className="text-red-500 text-xs hover:underline">
+            {t('map.removeCompare')}
+          </button>
+        ) : (
+          <button
+            onClick={(e) => { e.stopPropagation(); onCompare(); }}
+            className="text-purple-600 text-xs hover:underline disabled:opacity-40"
+            disabled={compareFull}
+          >
+            {t('map.compare')}
+          </button>
         )}
       </div>
     </div>
