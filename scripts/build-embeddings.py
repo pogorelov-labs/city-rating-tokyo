@@ -100,12 +100,14 @@ def main() -> None:
 
     print(f"Loading descriptions from {BANGKOK if args.city == 'bangkok' else DESCRIPTIONS}...")
     if args.city == "bangkok":
-        with BANGKOK.open() as f:
-            districts = json.load(f)["districts"]
+        source_bytes = BANGKOK.read_bytes()
+        source_sha256 = hashlib.sha256(source_bytes).hexdigest()
+        districts = json.loads(source_bytes)["districts"]
         descriptions = {d["slug"]: d["description"] for d in districts}
         if len(descriptions) != 50 or len(districts) != 50:
             raise ValueError("expected 50 unique Bangkok districts")
     else:
+        source_sha256 = ""
         descriptions = load_descriptions()
     print(f"  places: {len(descriptions)}")
 
@@ -168,7 +170,7 @@ def main() -> None:
         fields=all_fields,
         model=np.array(args.model),
         city=np.array(args.city),
-        source_sha256=np.array(hashlib.sha256(BANGKOK.read_bytes()).hexdigest() if args.city == "bangkok" else ""),
+        source_sha256=np.array(source_sha256),
     )
 
     size_mb = out_path.stat().st_size / 1024 / 1024
