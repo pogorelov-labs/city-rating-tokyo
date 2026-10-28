@@ -10,7 +10,7 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
-## Unreleased
+## v0.1.2 — 2026-10-28
 
 ### Added
 
@@ -27,6 +27,9 @@ evidence in research notes or the PR body and link it.
   consistently across both cities.
 - Map zoom controls on phones are no longer covered by the selected station card.
 - MCP composite scores now round half-values in the same way as the website.
+
+[GitHub release](https://github.com/pogorelov-labs/city-rating-tokyo/releases/tag/v0.1.2)
+· [Release body](docs/releases/v0.1.2.md)
 
 ## v0.1.1 — 2026-10-27
 

@@ -3,9 +3,11 @@
 ## Policy and prerequisites
 
 - Use semantic versions with a `v` tag prefix. The first release was **v0.1.0**.
-  **v0.1.1** is the first patch data release, packaging the post-v0.1.0 Bangkok
-  refresh. Its release PR bumps `app/package.json` and `app/package-lock.json`
+  **v0.1.1** was the first patch data release, packaging the post-v0.1.0 Bangkok
+  refresh. That release bumped `app/package.json` and `app/package-lock.json`
   from `0.1.0` to `0.1.1`.
+  **v0.1.2** packages compatible map/scoring fixes and Bangkok MCP district tools;
+  its release PR bumps the same two files from `0.1.1` to `0.1.2`.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.
@@ -49,10 +51,13 @@ git diff --stat origin/main
 git diff --name-only origin/main
 ```
 
-For a docs release, every changed path must be documentation. Review and remove
-any accidental `next-env.d.ts`, sitemap, package, generated data or grid-binary
-drift; do not discard another contributor's changes. **Do not run a data build**
-to prepare a code/docs release. Commit and push the docs branch, then open:
+List any approved app-version bump explicitly in the release PR. From `app/`,
+`npm version <version> --no-git-tag-version` updates the package and lock metadata;
+inspect that only the intended version fields changed. A docs-only release has
+no package changes. Review and remove accidental `next-env.d.ts`, sitemap,
+dependency, generated-data or grid-binary drift; do not discard another
+contributor's changes. **Do not run a data build** to prepare a code/docs release.
+Commit and push the release-preparation branch, then open:
 
 ```sh
 gh pr create --base main --title "docs: release v0.1.0 and release runbook" --body-file /path/to/pr-body.md
@@ -152,7 +157,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.1.1 needs **no database migration**. Check production deployment status/logs
+v0.1.2 needs **no database migration**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale
@@ -172,7 +177,7 @@ merge normally; production deployment then updates from `main`. A maintainer
 may use an approved production rollback through private maintainer tooling
 during an incident, but that is a separate authorized action, not part of this
 release procedure. Reconcile any rollback with main afterwards.
-Publish a new patch version (for example v0.1.1) for the fix and link the incident
+Publish a new patch version (for example v0.1.3) for the fix and link the incident
 or superseded release in its notes. Do not rerun data pipelines as a rollback.
 
 ## Data refresh separation
@@ -188,7 +193,8 @@ never fold regenerated data into a code/docs release.
 ## Release checklist
 
 - [ ] Version, dated changelog, release body and affected docs agree; no secrets.
-- [ ] Worktree clean; docs-only diff checked; no generated data or version drift.
+- [ ] Worktree clean; release-preparation diff checked; only docs and approved
+  version metadata changed, with no generated-data drift.
 - [ ] PR reviewed; `build`, `schema`, `mcp`, `bangkok` all pass at the recorded head.
 - [ ] Merged with a merge commit and head-match guard; merge SHA recorded.
 - [ ] Main push CI passes all four jobs at that exact SHA.
