@@ -45,8 +45,8 @@ key piece of content:
 - City switch — weights carry over from Tokyo, yen filters do not
 - Canvas marker selection, desktop popup and district navigation; touch zoom
   retains the selected station at tablet width (`map-interactions.spec.ts`).
-  At phone width the selected station card currently covers the zoom control;
-  this test does not claim that control is accessible there.
+- Phone-width selected-area cards, zoom and Close controls, including the
+  short phone viewport and expanded air panel.
 
 Intentionally **not** covered here:
 
