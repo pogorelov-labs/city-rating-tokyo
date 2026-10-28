@@ -13,6 +13,13 @@ Scoring logic exists in three places:
 2. **`scripts/compute-ratings.py`** — Python, offline pipeline (log-percentile normalization, rent regression, absolute caps)
 3. **`mcp/src/city_rating_mcp/scoring.py`** — Python, MCP runtime (composite scores + dealbreaker filtering, a hand-maintained mirror of the TS)
 
+The frontend shares named-area results through [scoring-react.tsx](app/src/lib/scoring-react.tsx)
+and adapts the resident-weighted Bangkok grid through [scoring-grid-react.ts](app/src/lib/scoring-grid-react.ts).
+The homepage provider shares results across the map and responsive panels;
+these adapters reuse the pure scoring contracts rather than defining another
+normalization policy. See the [current module map](CLAUDE.md#key-files) for map
+controllers and the shared area-card/detail family.
+
 The shared constants (`RENT_FLOOR`, `RENT_CEILING`, `RATING_KEYS`, `DEFAULT_WEIGHTS`, `DEFAULT_FILTERS`, `ABSOLUTE_CAPS`) live in **`packages/schema/`** — a single source of truth with codegen for TS and Python. If you change a constant, change it in `packages/schema/constants.json` and re-run `npm run gen`.
 
 ### Load-bearing invariants (breaking these silently corrupts data or URLs)
