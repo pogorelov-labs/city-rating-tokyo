@@ -29,6 +29,7 @@ DEFAULT_DESCRIPTIONS = (
 DEFAULT_LIVECAMS = (
     Path(__file__).resolve().parents[3] / "app" / "src" / "data" / "livecams.json"
 )
+DEFAULT_BANGKOK = Path(__file__).resolve().parents[3] / "app/src/data/bangkok/districts.json"
 
 
 class Datamart:
@@ -38,6 +39,16 @@ class Datamart:
         self._stations = stations
         self._order = generation_order
         self._metadata = metadata
+
+    @classmethod
+    def load_bangkok(cls, path: Path | str | None = None) -> "Datamart":
+        path = Path(path or os.getenv("CITY_RATING_BANGKOK") or DEFAULT_BANGKOK)
+        payload = orjson.loads(path.read_bytes())
+        districts = payload["districts"]
+        stations = {row["slug"]: {**row, "_city": "bangkok"} for row in districts}
+        if len(stations) != 50 or len(stations) != len(districts):
+            raise ValueError("Bangkok district snapshot must contain 50 unique slugs")
+        return cls(stations, list(stations), payload.get("_meta", {}))
 
     @classmethod
     def load(

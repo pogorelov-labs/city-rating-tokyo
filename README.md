@@ -111,7 +111,7 @@ Pipeline work is separate from the frontend preview:
   pipeline guide](scripts/bangkok/README.md) covers acquisition and cache setup.
   A frozen replay requires the recorded raw inputs, which are not in a fresh
   clone. The published JSON and grid are already committed for the app.
-- **MCP development:** the service currently exposes Tokyo. It requires Python
+- **MCP development:** the service exposes Tokyo stations and Bangkok districts. It requires Python
   3.11 or newer, the shared schema package and a datamart; semantic tools also
   require the separately generated embeddings. These generated artifacts are
   not supplied by a fresh clone. See [MCP development](CONTRIBUTING.md#mcp-server-development)

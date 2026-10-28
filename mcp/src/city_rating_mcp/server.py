@@ -45,7 +45,7 @@ LOG = logging.getLogger("city_rating_mcp")
 mcp = FastMCP(
     name="city-rating-tokyo",
     instructions=(
-        "Greater Tokyo neighbourhood ratings across 1493 train stations. "
+        "Greater Tokyo station and Bangkok district neighbourhood ratings. "
         "Use search_stations for ranked recommendations under user weights "
         "and dealbreakers, get_station for a full profile, compare_stations "
         "side-by-side, list_pois for raw signal counts, and get_methodology "
@@ -60,6 +60,8 @@ mcp = FastMCP(
 # also defers fastembed model load to the first query (~3 s otherwise).
 _DM: Datamart | None = None
 _ES: EmbeddingStore | None = None
+_BANGKOK_DM: Datamart | None = None
+_BANGKOK_ES: EmbeddingStore | None = None
 
 
 def _datamart() -> Datamart:
@@ -75,6 +77,45 @@ def _embeddings() -> EmbeddingStore:
     if _ES is None:
         _ES = EmbeddingStore.load()
     return _ES
+
+
+def _city_datamart(city: str) -> Datamart:
+    global _BANGKOK_DM
+    if city == "tokyo":
+        return _datamart()
+    if city != "bangkok":
+        raise ValueError("city must be 'tokyo' or 'bangkok'")
+    if _BANGKOK_DM is None:
+        _BANGKOK_DM = Datamart.load_bangkok()
+    return _BANGKOK_DM
+
+
+def _city_embeddings(city: str) -> EmbeddingStore:
+    global _BANGKOK_ES
+    if city == "tokyo":
+        return _embeddings()
+    if city != "bangkok":
+        raise ValueError("city must be 'tokyo' or 'bangkok'")
+    if _BANGKOK_ES is None:
+        from pathlib import Path
+        path = os.getenv("CITY_RATING_BANGKOK_EMBEDDINGS") or str(
+            Path(__file__).resolve().parents[3] / "data/bangkok-embeddings.npz"
+        )
+        _BANGKOK_ES = EmbeddingStore.load(path)
+    return _BANGKOK_ES
+
+
+def _check_city_filters(city: str, has_live_camera: bool, hide_flood_risk: bool,
+                        hide_high_seismic: bool) -> None:
+    if city == "bangkok" and (has_live_camera or hide_flood_risk or hide_high_seismic):
+        raise ValueError("Tokyo-specific camera, elevation and seismic filters are unavailable for Bangkok districts")
+
+
+def _city_result(result: dict[str, Any], city: str) -> dict[str, Any]:
+    if city == "bangkok":
+        return {**result, "city": city, "unit": "district", "caveat":
+                "Scores are relative within Bangkok; district rent and safety are editorial estimates."}
+    return result
 
 
 VALID_LOCALES = {"en", "ja", "ru"}
@@ -100,27 +141,33 @@ def search_stations(
     hide_high_seismic: bool = False,
     locale: str = "en",
     limit: int = 20,
+    city: str = "tokyo",
 ) -> dict[str, Any]:
-    """Top-N Tokyo stations by weighted composite score under hard filters.
+    """Top-N Tokyo stations or Bangkok districts by weighted composite score.
 
     Args:
         weights: Per-category weight overrides (0–100, any key from
             transport/rent/daily_essentials/safety/food/green/gym_sports/
             vibe/nightlife/crowd). Missing keys use the site defaults.
             A weight of 0 drops the dimension from the score entirely.
-        min_rent, max_rent: 1K-1LDK monthly rent in JPY. Site default
-            range is 80000–300000.
-        min_commute, max_commute: Minutes to the nearest of Shibuya,
-            Shinjuku, Tokyo, Ikebukuro, Shinagawa.
+        min_rent, max_rent: Monthly rent in JPY for Tokyo 1K-1LDK; THB
+            for Bangkok district one-bedroom editorial estimates.
+        min_commute, max_commute: Minutes to the nearest of the city's five
+            modeled hubs: Shibuya, Shinjuku, Tokyo, Ikebukuro, Shinagawa
+            for Tokyo; Siam, Asok, Silom, Rama 9, Mo Chit for Bangkok.
         category_mins: Per-rating floor, e.g. {"safety": 7}.
         has_live_camera: Require at least one YouTube live cam ≤300m.
         hide_flood_risk: Drop stations under 5 m elevation.
         hide_high_seismic: Drop stations in J-SHIS very_high tier.
         locale: 'en' | 'ja' | 'ru'. Affects display name only.
         limit: 1–200, default 20.
+        city: 'tokyo' (default) or 'bangkok'. Bangkok values are district-wide;
+            its rent and safety are editorial and scores are relative within the city.
+            Tokyo camera, elevation and seismic filters are unavailable for Bangkok.
     """
-    return _search(
-        _datamart(),
+    _check_city_filters(city, has_live_camera, hide_flood_risk, hide_high_seismic)
+    return _city_result(_search(
+        _city_datamart(city),
         weights=weights,
         min_rent=min_rent,
         max_rent=max_rent,
@@ -132,38 +179,40 @@ def search_stations(
         hide_high_seismic=hide_high_seismic,
         locale=_check_locale(locale),
         limit=limit,
-    )
+    ), city)
 
 
 @mcp.tool
-def get_station(slug: str, locale: str = "en") -> dict[str, Any]:
-    """Full profile for one station: ratings, confidence, sources, rent,
+def get_station(slug: str, locale: str = "en", city: str = "tokyo") -> dict[str, Any]:
+    """Full profile for one Tokyo station or Bangkok district: ratings, confidence, sources, rent,
     transit, last train, environment, signals, ward, lines, livecams,
     multilingual description.
+    `city` selects Tokyo stations (default) or Bangkok districts.
     """
-    return _get(_datamart(), slug=slug, locale=_check_locale(locale))
+    return _get(_city_datamart(city), slug=slug, locale=_check_locale(locale))
 
 
 @mcp.tool
-def compare_stations(slugs: list[str], locale: str = "en") -> dict[str, Any]:
-    """Side-by-side full profiles for 2–5 stations."""
-    return _compare(_datamart(), slugs=slugs, locale=_check_locale(locale))
+def compare_stations(slugs: list[str], locale: str = "en", city: str = "tokyo") -> dict[str, Any]:
+    """Side-by-side full profiles for 2–5 places in the selected city."""
+    return _compare(_city_datamart(city), slugs=slugs, locale=_check_locale(locale))
 
 
 @mcp.tool
-def list_pois(slug: str, category: str | None = None) -> dict[str, Any]:
-    """Per-station signal counts.
+def list_pois(slug: str, category: str | None = None, city: str = "tokyo") -> dict[str, Any]:
+    """Tokyo station signal counts or Bangkok district facts.
 
     Args:
-        slug: Station slug (e.g. 'shibuya', 'kichijoji').
+        slug: Station or district slug in the selected city.
         category: One of food/nightlife/green/vibe/gym/essentials,
             or None for all six.
+        city: 'tokyo' (default) or 'bangkok'.
     """
     if category is not None and category not in CATEGORY_FIELDS:
         raise ValueError(
             f"category must be one of {sorted(CATEGORY_FIELDS)} or null"
         )
-    return _list_pois(_datamart(), slug=slug, category=category)
+    return _list_pois(_city_datamart(city), slug=slug, category=category)
 
 
 @mcp.tool
@@ -214,8 +263,9 @@ def semantic_search(
     locale: str = "en",
     field: str | None = None,
     limit: int = 10,
+    city: str = "tokyo",
 ) -> dict[str, Any]:
-    """Find stations whose descriptions best match a free-form query.
+    """Find places in the selected city matching a free-form query.
 
     Args:
         query: Natural-language phrase. Embedded with multilingual-e5-large.
@@ -226,26 +276,27 @@ def semantic_search(
             station — best for general queries). Or one of
             'atmosphere' | 'landmarks' | 'food' | 'nightlife' to constrain.
         limit: 1–50, default 10.
+        city: 'tokyo' or 'bangkok'; each city uses its own embedding artifact.
     """
     if field is not None and field not in VALID_FIELDS:
         raise ValueError(f"field must be null or one of {sorted(VALID_FIELDS)}")
-    return _semantic_search(
-        _datamart(), _embeddings(),
+    return _city_result(_semantic_search(
+        _city_datamart(city), _city_embeddings(city),
         query=query, locale=_check_locale(locale), field=field, limit=limit,
-    )
+    ), city)
 
 
 @mcp.tool
-def find_similar(slug: str, locale: str = "en", limit: int = 10) -> dict[str, Any]:
-    """Stations most semantically similar to `slug` (cosine on description vectors).
+def find_similar(slug: str, locale: str = "en", limit: int = 10, city: str = "tokyo") -> dict[str, Any]:
+    """Places in the selected city most semantically similar to `slug`.
 
     Useful for "I like Kichijoji, what else feels like that?" The seed
     station is excluded from results.
     """
-    return _find_similar(
-        _datamart(), _embeddings(),
+    return _city_result(_find_similar(
+        _city_datamart(city), _city_embeddings(city),
         slug=slug, locale=_check_locale(locale), limit=limit,
-    )
+    ), city)
 
 
 @mcp.tool
@@ -263,6 +314,7 @@ def recommend(
     locale: str = "en",
     hybrid_alpha: float = 0.5,
     limit: int = 10,
+    city: str = "tokyo",
 ) -> dict[str, Any]:
     """Hybrid recommender: semantic intent + structured weights + hard filters.
 
@@ -278,9 +330,12 @@ def recommend(
             1=pure semantic, default 0.5.
         locale: 'en' | 'ja' | 'ru'.
         limit: 1–50, default 10.
+        city: 'tokyo' (default) or 'bangkok'; rent units and filters follow
+            search_stations and the selected city uses its own embeddings.
     """
-    return _recommend(
-        _datamart(), _embeddings(),
+    _check_city_filters(city, has_live_camera, hide_flood_risk, hide_high_seismic)
+    return _city_result(_recommend(
+        _city_datamart(city), _city_embeddings(city),
         query=query, weights=weights,
         min_rent=min_rent, max_rent=max_rent,
         min_commute=min_commute, max_commute=max_commute,
@@ -291,7 +346,7 @@ def recommend(
         locale=_check_locale(locale),
         hybrid_alpha=hybrid_alpha,
         limit=limit,
-    )
+    ), city)
 
 
 def _auth_middleware_factory(store: KeyStore):

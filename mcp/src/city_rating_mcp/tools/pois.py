@@ -64,6 +64,21 @@ def list_pois(dm: Datamart, slug: str, category: str | None = None) -> dict[str,
     entry = dm.get(slug)
     if entry is None:
         raise ValueError(f"Station '{slug}' not found")
+    if entry.get("_city") == "bangkok":
+        fields = {"food": ["food"], "nightlife": ["nightlife"], "green": ["park_ha", "park_share"],
+                  "vibe": ["culture", "temples"], "gym": ["sports"],
+                  "essentials": ["essentials", "convenience", "markets"]}
+        if category is not None and category not in fields:
+            raise ValueError(f"Unknown category '{category}'")
+        facts = entry.get("facts") or {}
+        source_keys = {"food": "food", "nightlife": "nightlife", "green": "green",
+                       "vibe": "vibe", "gym": "gym_sports", "essentials": "daily_essentials"}
+        cats = [category] if category else list(fields)
+        return {"slug": slug, "city": "bangkok", "unit": "district",
+                "categories": {cat: {key: facts[key] for key in fields[cat] if key in facts}
+                               for cat in cats},
+                "sources": {cat: (entry.get("sources") or {}).get(source_keys[cat], []) for cat in cats},
+                "caveat": "District-wide source counts and park-area measures, not station catchments."}
     cats = [category] if category else list(CATEGORY_FIELDS.keys())
     out: dict[str, dict[str, int | float]] = {}
     for cat in cats:
