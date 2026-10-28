@@ -1,0 +1,33 @@
+# Reference observability stack for a fresh host — CRTKY-127.
+# The production host already runs Loki + promtail; nothing here needs to be
+# applied there (see the runbook for the additive host changes). Images are
+# pinned to the versions the configuration was verified with (2026-10-28).
+services:
+  loki:
+    image: grafana/loki:3.7.9
+    restart: unless-stopped
+    command: -config.file=/etc/loki/loki-config.yml
+    volumes:
+      - ./loki-config.yml:/etc/loki/loki-config.yml:ro
+      - loki-data:/loki
+    # No auth is configured in the reference file: bind to loopback (or an
+    # internal network) and keep 3100 off the public internet.
+    ports:
+      - "127.0.0.1:3100:3100"
+
+  promtail:
+    image: grafana/promtail:3.5.4
+    restart: unless-stopped
+    command: -config.file=/etc/promtail/config.yml
+    volumes:
+      - ./promtail-traefik.yml:/etc/promtail/config.yml:ro
+      # Read-only access to the Coolify proxy volume for the access log.
+      # Adjust to where the proxy writes access logs on this host.
+      - /data/coolify/proxy:/data/coolify/proxy:ro
+      - promtail-positions:/tmp
+    depends_on:
+      - loki
+
+volumes:
+  loki-data:
+  promtail-positions:

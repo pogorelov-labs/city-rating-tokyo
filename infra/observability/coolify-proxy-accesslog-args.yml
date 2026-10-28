@@ -1,0 +1,18 @@
+# coolify-proxy command args enabling JSON access logging — CRTKY-127.
+#
+# Apply through the Coolify UI: Servers → <server> → Proxy → Configuration —
+# so the change is saved by Coolify and survives proxy restarts. Disk-only
+# edits of /data/coolify/proxy/docker-compose.yml are overwritten when Coolify
+# (re)writes its saved proxy configuration. Restarting the proxy briefly
+# interrupts EVERY site on the host — schedule it; see the runbook.
+#
+# Verified against Traefik v3.7.16 (Coolify ships Traefik v3.x).
+- '--accesslog=true'
+- '--accesslog.format=json'
+# Written inside the proxy volume; appears on the host under
+# /data/coolify/proxy/access.log (confirm with the runbook's discovery step).
+# Traefik never rotates this file itself — see the runbook's logrotate note.
+- '--accesslog.filepath=/traefik/access.log'
+# Request/response headers are dropped by default in Traefik; kept explicit so
+# the stored lines never contain User-Agent / Referer / Authorization.
+- '--accesslog.fields.headers.defaultmode=drop'
