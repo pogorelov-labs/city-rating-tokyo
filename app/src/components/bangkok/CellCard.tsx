@@ -78,9 +78,9 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
 
   return (
     <div
-      // Same stacking as MobileStationCard: over the touch zoom buttons (equal
-      // z, later in the DOM), under the compare panel and the filter drawer.
-      className="md:hidden fixed bottom-0 left-3 right-3 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[60vh] overflow-y-auto"
+      // Reserve the same right-hand zoom column as MobileStationCard; the
+      // compare panel and filter drawer still stack above both.
+      className="md:hidden fixed bottom-0 left-3 right-16 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[60vh] overflow-y-auto"
       style={{ marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
       role="dialog"
       aria-label={t('map.cellTitle')}
