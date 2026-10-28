@@ -11,6 +11,11 @@ import { defineConfig, devices } from '@playwright/test';
  * The map interaction spec also runs in an advisory CI job. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
+const port = process.env.E2E_PORT || '3000';
+if (!/^\d{1,5}$/.test(port) || Number(port) < 1 || Number(port) > 65535) {
+  throw new Error('E2E_PORT must be a valid TCP port');
+}
+const baseURL = `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: './e2e',
@@ -20,7 +25,7 @@ export default defineConfig({
   workers: isCI ? 1 : undefined,
   reporter: [['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -31,8 +36,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'cd app && npm run dev',
-    url: 'http://localhost:3000',
+    command: `cd app && npm run dev -- --port ${port}`,
+    url: baseURL,
     timeout: 60_000,
     reuseExistingServer: isCI ? false : true,
   },
