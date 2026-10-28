@@ -7,7 +7,7 @@
  * stay in sync (cross-language parity is asserted in scripts/test_schema_parity.py).
  */
 import { describe, expect, it } from 'vitest';
-import compositeCases from '../../../../packages/schema/fixtures/composite-score.json';
+import compositeCases from './fixtures/composite-score.json';
 
 import {
   applyDealbreakers,
@@ -33,6 +33,10 @@ import {
 // will fail loudly.
 const RENT_FLOOR = 80_000; // → affordability 10
 const RENT_CEILING = 300_000; // → affordability 1
+
+// Vitest's each callback receives a single fixture object per case. Explicit
+// one-element tuples preserve that contract even in an isolated app build.
+const compositeCaseRows: [(typeof compositeCases)[number]][] = compositeCases.map((testCase) => [testCase]);
 
 const FULL_RATINGS: StationRatings = {
   transport: 7,
@@ -87,7 +91,7 @@ describe('rentToAffordability', () => {
 });
 
 describe('calculateWeightedScore', () => {
-  it.each(compositeCases)('$name matches the shared MCP fixture', ({ ratings, weights, expected }) => {
+  it.each(compositeCaseRows)('$name matches the shared MCP fixture', ({ ratings, weights, expected }) => {
     expect(calculateWeightedScore(ratings, weights)).toBe(expected);
   });
   it('returns the plain average when all weights are equal', () => {

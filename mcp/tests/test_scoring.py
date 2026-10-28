@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from city_rating_mcp.scoring import composite_score, passes_dealbreakers, percentile_anchors
 
 
-CASES = json.loads((Path(__file__).resolve().parents[2] / 'packages/schema/fixtures/composite-score.json').read_text())
+CASES = json.loads((Path(__file__).resolve().parents[2] / 'app/src/lib/__tests__/fixtures/composite-score.json').read_text())
 
 
 @pytest.mark.parametrize('case', CASES, ids=lambda c: c['name'])
