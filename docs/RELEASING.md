@@ -13,11 +13,12 @@
   require a major version. Make any future package-version changes explicit.
 - Release from a **clean, reviewed main commit** through a PR and a **merge
   commit**. Do not release a branch head, a dirty checkout or a failing main.
-- All four jobs in [CI](../.github/workflows/ci.yml) must pass on the PR and
-  again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`**.
+- All five jobs in [CI](../.github/workflows/ci.yml) must pass on the PR and
+  again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`, `e2e`**.
   `build` covers lint, UI tests, TypeScript, the Next build and runtime audit;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
-  and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests.
+  and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
+  `e2e` covers browser map interactions without retries.
   MCP production smoke checks are separate and are not implied by green CI.
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
@@ -63,7 +64,7 @@ Commit and push the release-preparation branch, then open:
 gh pr create --base main --title "docs: release v0.1.0 and release runbook" --body-file /path/to/pr-body.md
 ```
 
-Review the published PR diff and discussion. Wait for all four jobs, including
+Review the published PR diff and discussion. Wait for all five jobs, including
 checks not enforced by branch protection:
 
 ```sh
@@ -73,7 +74,7 @@ gh pr checks "$pr_number" --watch
 gh pr view "$pr_number" --json headRefOid,statusCheckRollup,mergeable,reviewDecision
 ```
 
-Verify the head still equals `pr_head`, all four named jobs concluded success
+Verify the head still equals `pr_head`, all five named jobs concluded success
 and all required review feedback is addressed. If the head changes, repeat
 verification. A missing, skipped, cancelled or failed job is not a pass.
 
@@ -104,7 +105,7 @@ gh run watch "$main_run" --exit-status
 gh run view "$main_run" --json headSha,conclusion,jobs,url
 ```
 
-Confirm `headSha` equals `release_sha` and `build`, `schema`, `mcp`, `bangkok`
+Confirm `headSha` equals `release_sha` and `build`, `schema`, `mcp`, `bangkok`, `e2e`
 each succeeded. If the run has not appeared, wait for it. On failure, stop the
 release; fix only an in-scope docs issue in a new PR or escalate an unrelated
 failure. Repeat the merge/main gates on the eventual release commit.
@@ -172,7 +173,7 @@ before sending an external announcement if it was not already authorized.
 
 Keep published tags and notes auditable; do not force-push main or retag a
 published version. For a regression, stop promotion/announcement, record the
-affected SHA and open a focused revert or hotfix PR. Pass all four gates and
+affected SHA and open a focused revert or hotfix PR. Pass all five gates and
 merge normally; production deployment then updates from `main`. A maintainer
 may use an approved production rollback through private maintainer tooling
 during an incident, but that is a separate authorized action, not part of this
@@ -195,9 +196,9 @@ never fold regenerated data into a code/docs release.
 - [ ] Version, dated changelog, release body and affected docs agree; no secrets.
 - [ ] Worktree clean; release-preparation diff checked; only docs and approved
   version metadata changed, with no generated-data drift.
-- [ ] PR reviewed; `build`, `schema`, `mcp`, `bangkok` all pass at the recorded head.
+- [ ] PR reviewed; `build`, `schema`, `mcp`, `bangkok`, `e2e` all pass at the recorded head.
 - [ ] Merged with a merge commit and head-match guard; merge SHA recorded.
-- [ ] Main push CI passes all four jobs at that exact SHA.
+- [ ] Main push CI passes all five jobs at that exact SHA.
 - [ ] Annotated remote tag peels to the merge SHA; no existing version overwritten.
 - [ ] GitHub release is published/latest with the committed notes and correct target.
 - [ ] Public production URL returns 200; Tokyo/Bangkok/locales checked; production
