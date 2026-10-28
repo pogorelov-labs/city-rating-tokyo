@@ -23,7 +23,8 @@ npm run test:e2e:ui
 
 `npm run test:e2e` boots `next dev` on port 3000 automatically via the
 `webServer` block in `playwright.config.ts`. If a dev server is already
-running on :3000 it is reused (locally); in CI a fresh one is started.
+running on :3000 it is reused (locally); in CI a fresh one is started. Set
+`E2E_PORT` to an available port to run alongside another local server.
 
 ## What's covered
 
@@ -44,8 +45,8 @@ key piece of content:
 - City switch — weights carry over from Tokyo, yen filters do not
 - Canvas marker selection, desktop popup and district navigation; touch zoom
   retains the selected station at tablet width (`map-interactions.spec.ts`).
-  At phone width the selected station card currently covers the zoom control;
-  this test does not claim that control is accessible there.
+- Phone-width selected-area cards, zoom and Close controls, including the
+  short phone viewport and expanded air panel.
 
 Intentionally **not** covered here:
 
@@ -54,6 +55,6 @@ Intentionally **not** covered here:
 
 ## CI
 
-The advisory `e2e` job installs Chromium and runs `map-interactions.spec.ts`
-against a fresh dev server. It is non-blocking while browser stability is
-established; the existing build, schema, MCP and Bangkok jobs remain gating.
+The `e2e` job installs Chromium and runs `map-interactions.spec.ts` against a
+fresh dev server with retries disabled. Its failure fails the CI check; branch
+protection must also require the `e2e` status for it to gate merging.
