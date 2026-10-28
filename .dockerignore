@@ -1,0 +1,16 @@
+# Repository-root context used by mcp/Dockerfile. Keep the committed data,
+# scripts and schema available to its COPY instructions.
+.git
+**/.env*
+**/node_modules
+**/.next
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.cache
+**/test-results
+**/playwright-report
+.claude/plans
+data/embeddings.npz
