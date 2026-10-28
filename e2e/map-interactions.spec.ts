@@ -59,6 +59,22 @@ async function markerPoint(page: Page) {
   return await handle.jsonValue() as { x: number; y: number };
 }
 
+// Leaflet's proxy scale changes with map zoom, independently of tile fetches.
+// Waiting for the target scale and the end of its animation avoids tapping
+// during an ignored in-flight zoom or clearing observations without a repaint.
+async function zoomOutAndWait(page: Page) {
+  const proxy = page.locator('.leaflet-proxy');
+  const scale = () => proxy.evaluate((el) => {
+    const transform = getComputedStyle(el).transform;
+    return transform === 'none' ? 1 : new DOMMatrixReadOnly(transform).a;
+  });
+  const before = await scale();
+  await page.locator('.leaflet-container').hover();
+  await page.mouse.wheel(0, 480);
+  await expect.poll(scale, { timeout: 15_000 }).toBeLessThan(before);
+  await expect(page.locator('.leaflet-map-pane')).not.toHaveClass(/leaflet-zoom-anim/, { timeout: 15_000 });
+}
+
 async function districtPoint(page: Page) {
   return page.evaluate(() => {
     const paths = document.querySelectorAll<SVGGeometryElement>('.leaflet-bkk-districts-pane path.leaflet-interactive');
@@ -137,11 +153,7 @@ test.describe('touch selection', () => {
     await observeCanvasMarkers(page);
     await page.goto('/?mr=100000');
     await expect(page.getByRole('button', { name: 'Zoom out' })).toBeVisible({ timeout: 15_000 });
-    await page.evaluate(() => { (window as typeof window & { __paintedMarkers: unknown[] }).__paintedMarkers = []; });
-    await page.getByRole('button', { name: 'Zoom out' }).tap();
-    await page.waitForTimeout(350); // Leaflet ignores another zoom during its animation.
-    await page.getByRole('button', { name: 'Zoom out' }).tap();
-    await page.waitForTimeout(350);
+    await zoomOutAndWait(page);
     const point = await markerPoint(page);
     await page.touchscreen.tap(point.x, point.y);
     await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 15_000 }).toBeTruthy();
