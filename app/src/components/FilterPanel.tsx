@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useDeferredValue } from 'react';
+import { useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
@@ -13,12 +13,8 @@ import {
   MapStation,
   StationRatings,
 } from '@/lib/types';
-import {
-  calculateWeightedScore,
-  compositeToColor,
-  computeCompositeAnchors,
-  applyDealbreakers,
-} from '@/lib/scoring';
+import { compositeToColor } from '@/lib/scoring';
+import { useScoredAreas } from '@/lib/scoring-react';
 import Tooltip from '@/components/Tooltip';
 import { stationDisplayName, stationPrimaryName, matchArea } from '@/lib/station-name';
 import type { Locale } from '@/i18n/routing';
@@ -159,7 +155,6 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
   const [search, setSearch] = useState('');
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
-  const deferredWeights = useDeferredValue(weights);
   const noLimit = t('filter.noLimit');
   // City-wide copy (Bangkok's rent is a 1-bed condo, its search spans every
   // level) and level-specific counts ("districts" / "station areas" / "cells")
@@ -174,33 +169,10 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
 
   const catMinCount = Object.keys(filters.categoryMins).length;
 
-  // Score all stations, then apply dealbreakers for ranked list + match count
-  const scoredStations = useMemo(() => {
-    return levelAreas
-      .filter((s) => s.ratings !== null)
-      .map((s) => ({
-        ...s,
-        score: calculateWeightedScore(s.ratings!, deferredWeights),
-      }));
-  }, [levelAreas, deferredWeights]);
-
-  const filtered = useMemo(
-    () => applyDealbreakers(scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters),
-    [scoredStations, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
+  const { passing, ranked, anchors: compositeAnchors, ratedCount: totalWithRatings } = useScoredAreas(
+    levelAreas, isDistrict && level === 'station' ? 'station' : 'primary',
   );
-
-  const ranked = useMemo(
-    () =>
-      [...filtered]
-        .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
-        .slice(0, 15),
-    [filtered],
-  );
-
-  const compositeAnchors = useMemo(
-    () => computeCompositeAnchors(levelAreas, deferredWeights),
-    [levelAreas, deferredWeights],
-  );
+  const filtered = useMemo(() => passing.filter((area) => area.ratings !== null), [passing]);
   const districtBySlug = useMemo(() => new Map(stations.map((s) => [s.slug, s])), [stations]);
 
   const searchResults = useMemo(() => {
@@ -213,8 +185,6 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
     }
     return hits;
   }, [searchable, search]);
-
-  const totalWithRatings = levelAreas.filter((s) => s.ratings).length;
 
   function applyPreset(presetId: string) {
     const p = PRESET_PROFILES.find((pr) => pr.id === presetId);

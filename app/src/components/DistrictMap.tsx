@@ -2,7 +2,7 @@
 
 import RentNote from '@/components/bangkok/RentNote';
 
-import { useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   AttributionControl,
   CircleMarker,
@@ -28,16 +28,15 @@ import type { AreaLevel, MapStation, RailLine, RailStation, StationRatings } fro
 import type { Locale } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import {
-  applyDealbreakers,
-  calculateWeightedScore,
   compositeToColor,
-  computeCompositeAnchors,
   dealbreakerReasons,
   scoreToColor,
   type ColorDimension,
   type DealbreakerReason,
   type PercentileAnchors,
 } from '@/lib/scoring';
+import { useScoredAreas } from '@/lib/scoring-react';
+import { useGridHotspots, useScoredGrid } from '@/lib/scoring-grid-react';
 import { MAX_COMPARE, useAppStore, useCityActions, useCityState } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { useAreaLists } from '@/lib/area-lists';
@@ -47,11 +46,6 @@ import {
   cellBounds,
   cellCenter,
   cellInfo,
-  countPassing,
-  gridAnchors,
-  gridHotspots,
-  passMask,
-  scoreCells,
   useBangkokGrid,
   type GridDistrict,
 } from '@/lib/bangkok-grid';
@@ -60,7 +54,7 @@ import { useIsTouch } from '@/lib/use-is-touch';
 import { MapContainerResize, StationTooltipHero, TouchZoomControls } from './map-shared';
 import { BASEMAP } from '@/lib/basemap';
 import GridLayer from './bangkok/GridLayer';
-import StationAreaLayer, { type AreaShape, type ScoredArea } from './bangkok/StationAreaLayer';
+import StationAreaLayer, { type AreaShape } from './bangkok/StationAreaLayer';
 import { CellDetails, StationAreaPopupBody } from './bangkok/popups';
 
 type LatLng = [number, number];
@@ -78,6 +72,7 @@ const STATION_BY_ID = new Map(RAIL.stations.map((s) => [s.id, s]));
 /** Fill of a district that fails the current dealbreakers. */
 const FILTERED_FILL = '#E5E7EB';
 const MAX_FLY_ZOOM = 14;
+const EMPTY_GRID_DISTRICTS: GridDistrict[] = [];
 
 interface MapViewProps {
   stations: MapStation[];
@@ -295,7 +290,6 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const lists = useAreaLists();
   const stationAreas = useMemo(() => lists?.station ?? [], [lists]);
 
-  const weights = useAppStore((s) => s.weights);
   const heatmapMode = useAppStore((s) => s.heatmapMode);
   const heatmapDimension = useAppStore((s) => s.heatmapDimension);
   const showRail = useAppStore((s) => s.showRailOverlay);
@@ -330,82 +324,30 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
     [],
   );
 
-  // Same deferral as the Tokyo map: slider frames must not recompute scores
-  // + percentile anchors synchronously (≈ 40k cells on the grid level).
-  const deferredWeights = useDeferredValue(weights);
   const dim = heatmapMode && heatmapDimension !== 'composite' ? (heatmapDimension as keyof StationRatings) : null;
 
   // ── districts ──
-  const scored = useMemo(
-    () =>
-      districts.map((d) => ({
-        ...d,
-        score: d.ratings ? calculateWeightedScore(d.ratings, deferredWeights) : null,
-      })),
-    [districts, deferredWeights],
-  );
-  const anchors = useMemo(() => computeCompositeAnchors(districts, deferredWeights), [districts, deferredWeights]);
-  const passing = useMemo(
-    () =>
-      new Set(
-        applyDealbreakers(scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((d) => d.slug),
-      ),
-    [scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
-  );
+  const { areas: sharedDistricts, scored, anchors, passing: passingDistricts, deferredWeights } = useScoredAreas(districts, 'primary');
+  const passing = useMemo(() => new Set(passingDistricts.map((d) => d.slug)), [passingDistricts]);
   const bySlug = useMemo(() => new Map(scored.map((d) => [d.slug, d])), [scored]);
 
   // ── station areas ──
-  const scoredAreas: ScoredArea[] = useMemo(
-    () =>
-      stationAreas.map((a) => ({
-        ...a,
-        score: a.ratings ? calculateWeightedScore(a.ratings, deferredWeights) : null,
-      })),
-    [stationAreas, deferredWeights],
-  );
-  const areaAnchors = useMemo(() => computeCompositeAnchors(stationAreas, deferredWeights), [stationAreas, deferredWeights]);
-  const areaPassing = useMemo(
-    () =>
-      new Set(
-        applyDealbreakers(scoredAreas, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((a) => a.slug),
-      ),
-    [scoredAreas, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city],
-  );
+  const { scored: scoredAreas, anchors: areaAnchors, passing: passingAreas } = useScoredAreas(stationAreas, 'station');
+  const areaPassing = useMemo(() => new Set(passingAreas.map((a) => a.slug)), [passingAreas]);
   const areaByKey = useMemo(() => new Map(scoredAreas.map((a) => [a.slug, a])), [scoredAreas]);
 
   // ── 200 m grid ──
-  // Aligned with `grid.header.districts` (the cell's district plane is an index).
-  const gridDistricts: GridDistrict[] = useMemo(() => {
-    if (!grid) return [];
-    const bySlugRaw = new Map(districts.map((d) => [d.slug, d]));
-    return grid.header.districts.map((slug) => {
-      const d = bySlugRaw.get(slug);
-      return {
-        ratings: (d?.ratings ?? {}) as StationRatings,
-        rent_1k: d?.rent_1k ?? null,
-        flood_exposed: d?.flood_exposed === true,
-      };
-    });
-  }, [grid, districts]);
-  const gridScores = useMemo(
-    () => (grid ? scoreCells(grid, deferredWeights, gridDistricts) : null),
-    [grid, deferredWeights, gridDistricts],
-  );
-  const gridAnch = useMemo(() => (grid && gridScores ? gridAnchors(grid, gridScores) : null), [grid, gridScores]);
-  const gridPass = useMemo(
-    () => (grid ? passMask(grid, filters, city.defaultFilters, gridDistricts, hideFloodRisk) : null),
-    [grid, filters, city, gridDistricts, hideFloodRisk],
-  );
+  const gridScoring = useScoredGrid(grid, sharedDistricts, deferredWeights, filters, city.defaultFilters, hideFloodRisk);
+  const gridDistricts = gridScoring?.districts ?? EMPTY_GRID_DISTRICTS;
+  const gridScores = gridScoring?.scores ?? null;
+  const gridAnch = gridScoring?.anchors ?? null;
+  const gridPass = gridScoring?.pass ?? null;
   // Best spots rank the weighted score, so a single-category heatmap hides them
   // (like the districts' top-5 pulse).
-  const gridTop = useMemo(
-    () =>
-      level === 'grid' && !heatmapMode && grid && gridScores && gridPass ? gridHotspots(grid, gridScores, gridPass, 5) : [],
-    [level, heatmapMode, grid, gridScores, gridPass],
-  );
+  const gridTop = useGridHotspots(grid, gridScoring, 5, level === 'grid' && !heatmapMode);
 
   const levelAnchors = level === 'grid' ? (gridAnch ?? anchors) : level === 'station' ? areaAnchors : anchors;
-  const gridPassing = useMemo(() => (grid && gridPass ? countPassing(grid, gridPass).cells : 0), [grid, gridPass]);
+  const gridPassing = gridScoring?.passing.cells ?? 0;
   const filtersActive =
     level === 'grid'
       ? grid !== null && gridPassing < grid.cells.length
