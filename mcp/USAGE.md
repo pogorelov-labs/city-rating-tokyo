@@ -1,4 +1,14 @@
-# MCP Usage Guide — city-rating Tokyo
+# MCP Usage Guide — city-rating Tokyo and Bangkok
+
+All place tools accept `city="tokyo"` (default) or `city="bangkok"`.
+Bangkok results represent districts, not station catchments. Scores are
+relative within Bangkok and cannot be compared directly with Tokyo scores.
+District rent is a THB one-bedroom editorial asking estimate (not a median);
+safety is editorial. The complete rent provenance accompanies district rows
+and comparison profiles. Tokyo-only camera, elevation and seismic filters are
+rejected for Bangkok. District POI facts are district-wide. Semantic Bangkok
+tools require the separately built Bangkok embedding artifact; they fail
+explicitly when it is absent instead of searching Tokyo vectors.
 
 This is a usage guide for the 9 tools exposed by the city-rating MCP
 server. Read it before relying on tool output for product decisions —

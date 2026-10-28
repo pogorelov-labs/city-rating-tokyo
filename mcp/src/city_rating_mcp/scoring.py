@@ -80,6 +80,8 @@ def _rent_value(rent_avg: dict[str, Any] | None) -> float | None:
     v = rent_avg.get("1k_1ldk")
     if v is None:
         v = rent_avg.get("2ldk")
+    if v is None:
+        v = rent_avg.get("one_bed")
     return v
 
 
@@ -117,6 +119,8 @@ def passes_dealbreakers(
     rent_active = (min_rent is not None and min_rent > DEFAULT_FILTERS["min_rent"]) or (
         max_rent is not None and max_rent < DEFAULT_FILTERS["max_rent"]
     )
+    if entry.get("_city") == "bangkok":
+        rent_active = min_rent is not None or max_rent is not None
 
     if max_rent is not None and rent is not None and rent > max_rent:
         return False, {}

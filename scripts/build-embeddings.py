@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Build per-station semantic embeddings for the MCP server.
 
-Reads `app/src/data/generated-descriptions.json` (1493 stations × 3 locales
-× 4 fields), encodes each text with multilingual-e5-base via fastembed
-(ONNX), and writes `data/embeddings.npz` consumed by the MCP at runtime.
+Reads Tokyo station or Bangkok district descriptions, encodes each text
+with multilingual-e5-large via fastembed (ONNX), and writes a separate
+per-city artifact consumed by the MCP at runtime.
 
 Output schema (parallel arrays of length N):
-    vectors  — float32, shape (N, 768), L2-normalized so dot = cosine
+    vectors  — float32, shape (N, 1024), L2-normalized so dot = cosine
     slugs    — str, shape (N,)
     locales  — str, shape (N,)  — 'en' | 'ja' | 'ru'
     fields   — str, shape (N,)  — 'atmosphere'|'landmarks'|'food'|'nightlife'|'all'
@@ -18,7 +18,7 @@ representative field arbitrarily.
 
 Usage:
     python3 scripts/build-embeddings.py
-    python3 scripts/build-embeddings.py --model intfloat/multilingual-e5-base
+    python3 scripts/build-embeddings.py --city bangkok
     python3 scripts/build-embeddings.py --slug shibuya  # dry-run on one station
 
 Notes:
@@ -32,6 +32,7 @@ Notes:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -40,6 +41,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DESCRIPTIONS = ROOT / "app" / "src" / "data" / "generated-descriptions.json"
 OUT = ROOT / "data" / "embeddings.npz"
+BANGKOK = ROOT / "app" / "src" / "data" / "bangkok" / "districts.json"
+BANGKOK_OUT = ROOT / "data" / "bangkok-embeddings.npz"
 
 LOCALES = ("en", "ja", "ru")
 FIELDS = ("atmosphere", "landmarks", "food", "nightlife")
@@ -85,16 +88,28 @@ def collect_texts(
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--model", default=DEFAULT_MODEL)
+    p.add_argument("--city", choices=("tokyo", "bangkok"), default="tokyo")
     p.add_argument("--slug", default=None, help="single-slug dry run")
-    p.add_argument("--out", default=str(OUT))
+    p.add_argument("--out", default=None)
     args = p.parse_args()
+    if args.city == "bangkok" and args.model != DEFAULT_MODEL:
+        p.error("Bangkok embeddings require intfloat/multilingual-e5-large")
 
     import numpy as np
     from fastembed import TextEmbedding
 
-    print(f"Loading descriptions from {DESCRIPTIONS}...")
-    descriptions = load_descriptions()
-    print(f"  stations: {len(descriptions)}")
+    print(f"Loading descriptions from {BANGKOK if args.city == 'bangkok' else DESCRIPTIONS}...")
+    if args.city == "bangkok":
+        source_bytes = BANGKOK.read_bytes()
+        source_sha256 = hashlib.sha256(source_bytes).hexdigest()
+        districts = json.loads(source_bytes)["districts"]
+        descriptions = {d["slug"]: d["description"] for d in districts}
+        if len(descriptions) != 50 or len(districts) != 50:
+            raise ValueError("expected 50 unique Bangkok districts")
+    else:
+        source_sha256 = ""
+        descriptions = load_descriptions()
+    print(f"  places: {len(descriptions)}")
 
     import os
     cache_dir = os.getenv("FASTEMBED_CACHE_DIR") or None
@@ -145,7 +160,7 @@ def main() -> None:
     all_locales = np.array([loc for _, loc, _ in index] + agg_locales)
     all_fields = np.array([f for _, _, f in index] + ["all"] * len(agg_slugs))
 
-    out_path = Path(args.out)
+    out_path = Path(args.out or (BANGKOK_OUT if args.city == "bangkok" else OUT))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
         out_path,
@@ -154,6 +169,8 @@ def main() -> None:
         locales=all_locales,
         fields=all_fields,
         model=np.array(args.model),
+        city=np.array(args.city),
+        source_sha256=np.array(source_sha256),
     )
 
     size_mb = out_path.stat().st_size / 1024 / 1024
