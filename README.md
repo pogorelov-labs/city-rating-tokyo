@@ -93,6 +93,19 @@ Pipeline work is separate from the frontend preview:
   The [Tokyo refresh runbook](research/notes/2026-10-15-hotpepper-resilience-runbook.md)
   covers the approved source-age policy (`--max-source-age-days=N`), preflight
   and rollout. Even a live dry run requires datastore access.
+- **Tokyo live cameras:** between the roughly weekly MT3D refreshes, run
+  `python scripts/check-livecams.py --threshold 0` (requires `requests`). It
+  checks each distinct shipped video ID once, with a 0.2-second delay and a
+  10-second request timeout. Exit 0 means no more missing thumbnails than the
+  threshold, 1 means the threshold was exceeded, and 2 means input or network
+  results were incomplete. After three consecutive errors it stops and marks
+  remaining IDs unknown; rerun when connectivity is restored. HTTP 404 is a
+  missing thumbnail, not proof of why a video is unavailable; HTTP 200 does
+  not prove a stream is live or embeddable. This is report-only: investigate
+  failures and run `python scripts/scrapers/scrape-livecams.py` when a refresh
+  is appropriate. `--offline` validates the input and explicitly skips network;
+  it is not a live health pass. No response cache is retained, so each run
+  reflects its own observation.
 - **Bangkok acquisition / rebuild:** install `uv`; the scripts declare their
   Python and geospatial dependencies in their script metadata. The [Bangkok
   pipeline guide](scripts/bangkok/README.md) covers acquisition and cache setup.
