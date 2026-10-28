@@ -8,113 +8,74 @@ import { useAppStore } from '@/lib/store';
 type LatLng = [number, number];
 const MAX_FLY_ZOOM = 14;
 
-/**
- * Smart flyTo: adapts zoom target and animation based on current map state.
- * - Already zoomed in (≥13): just pan, don't zoom further → cheaper.
- * - Far away / zoomed out (<11): short fly with easeLinearity tuning.
- * - Mid-range (11-13): standard fly to 14 with reduced duration.
- * Emits `flystart`/`flyend` custom classes on the container for CSS guards.
- */
-export function MapSelectionPoint({
-  lat,
-  lng,
-  onFlyStart,
-  onFlyEnd,
-}: {
-  lat: number;
-  lng: number;
-  onFlyStart?: () => void;
-  onFlyEnd?: () => void;
-}) {
+type PointSelection = { kind: 'point'; lat: number; lng: number; onFlyStart?: () => void; onFlyEnd?: () => void };
+type BoundsSelection = { kind: 'bounds'; bounds: [LatLng, LatLng]; bottomInset: number; onFlyStart: () => void; onFlyEnd: () => void };
+
+/** Share the selection lifecycle while retaining each city's flight strategy. */
+export function useMapSelection(selection: PointSelection | BoundsSelection) {
   const map = useMap();
-  // useLayoutEffect so onFlyStart (→ setIsFlying(true)) fires BEFORE the
-  // browser paints. This hides SVG overlays (halo, pulse) before the zoom
-  // animation CSS-transforms them into giant circles.
-  //
-  // Deps: [map, lat, lng] only. onFlyStart/onFlyEnd are stable useCallback
-  // refs but listing them would cause the effect to re-run when the parent
-  // re-renders from setIsFlying(true) — the cleanup would detach the
-  // moveend listener mid-animation, leaving .map-flying stuck forever.
+  const lat = selection.kind === 'point' ? selection.lat : undefined;
+  const lng = selection.kind === 'point' ? selection.lng : undefined;
+  const kind = selection.kind;
   useLayoutEffect(() => {
-    const currentZoom = map.getZoom();
-    const currentCenter = map.getCenter();
+    if (selection.kind === 'point') {
+      const { lat, lng, onFlyStart, onFlyEnd } = selection;
+      const currentZoom = map.getZoom();
+      const currentCenter = map.getCenter();
 
-    const dLat = Math.abs(currentCenter.lat - lat);
-    const dLng = Math.abs(currentCenter.lng - lng);
-    const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
+      const dLat = Math.abs(currentCenter.lat - lat);
+      const dLng = Math.abs(currentCenter.lng - lng);
+      const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
 
-    // Already looking at this station (within ~200m at zoom 14)
-    if (roughDist < 0.003 && currentZoom >= 13) return;
+      // Already looking at this station (within ~200m at zoom 14)
+      if (roughDist < 0.003 && currentZoom >= 13) return;
 
-    // Close any open popup before flying — prevents the popup card from
-    // flying around the screen during zoom animation (mobile tap auto-opens).
-    map.closePopup();
-    onFlyStart?.();
+      // Close any open popup before flying — prevents the popup card from
+      // flying around the screen during zoom animation (mobile tap auto-opens).
+      map.closePopup();
+      onFlyStart?.();
 
-    const targetZoom = currentZoom >= 13 ? currentZoom : 14;
+      const targetZoom = currentZoom >= 13 ? currentZoom : 14;
 
-    // Fade canvas markers during flyTo to hide CSS-scaling artifact.
-    // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
-    // animation (by design, #6050/#6409). The .map-flying class sets
-    // canvas opacity to 0 via CSS transition; tiles stay visible since
-    // they're in a separate pane. Markers fade back in after moveend.
-    const container = map.getContainer();
-    const needsFade = Math.abs(currentZoom - targetZoom) >= 1;
-    if (needsFade) container.classList.add('map-flying');
+      // Fade canvas markers during flyTo to hide CSS-scaling artifact.
+      // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
+      // animation (by design, #6050/#6409). The .map-flying class sets
+      // canvas opacity to 0 via CSS transition; tiles stay visible since
+      // they're in a separate pane. Markers fade back in after moveend.
+      const container = map.getContainer();
+      const needsFade = Math.abs(currentZoom - targetZoom) >= 1;
+      if (needsFade) container.classList.add('map-flying');
 
-    // Very close pan — short animated setView
-    if (roughDist < 0.01 && currentZoom === targetZoom) {
-      map.setView([lat, lng], targetZoom, { animate: true, duration: 0.25 });
-      const timer = setTimeout(() => {
+      // Very close pan — short animated setView
+      if (roughDist < 0.01 && currentZoom === targetZoom) {
+        map.setView([lat, lng], targetZoom, { animate: true, duration: 0.25 });
+        const timer = setTimeout(() => {
+          container.classList.remove('map-flying');
+          onFlyEnd?.();
+        }, 300);
+        return () => clearTimeout(timer);
+      }
+
+      // Adaptive duration: shorter for close pans, longer for far jumps
+      const duration = roughDist > 0.1 ? 0.6 : 0.4;
+      map.flyTo([lat, lng], targetZoom, {
+        duration,
+        easeLinearity: 0.4,
+      });
+
+      const handleMoveEnd = () => {
+        map.off('moveend', handleMoveEnd);
         container.classList.remove('map-flying');
         onFlyEnd?.();
-      }, 300);
-      return () => clearTimeout(timer);
+      };
+      map.on('moveend', handleMoveEnd);
+
+      return () => {
+        map.off('moveend', handleMoveEnd);
+        container.classList.remove('map-flying');
+      };
     }
-
-    // Adaptive duration: shorter for close pans, longer for far jumps
-    const duration = roughDist > 0.1 ? 0.6 : 0.4;
-    map.flyTo([lat, lng], targetZoom, {
-      duration,
-      easeLinearity: 0.4,
-    });
-
-    const handleMoveEnd = () => {
-      map.off('moveend', handleMoveEnd);
-      container.classList.remove('map-flying');
-      onFlyEnd?.();
-    };
-    map.on('moveend', handleMoveEnd);
-
-    return () => {
-      map.off('moveend', handleMoveEnd);
-      container.classList.remove('map-flying');
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [map, lat, lng]);
-  return null;
-}
-
-/** Fly (or pan) so the selection fits the viewport, mirroring the Tokyo
- *  `FlyToStation` contract: onFlyStart before paint, onFlyEnd after. */
-export function MapSelectionBounds({
-  bounds,
-  bottomInset,
-  onFlyStart,
-  onFlyEnd,
-}: {
-  /** A district / station area bbox, or a 200 m cell (which then flies to
-   *  MAX_FLY_ZOOM unless it is already in view at zoom ≥ 13). */
-  bounds: [LatLng, LatLng];
-  bottomInset: number;
-  onFlyStart: () => void;
-  onFlyEnd: () => void;
-}) {
-  const map = useMap();
-  // Mount-only (the parent keys this component on the selection): the
-  // callbacks are stable, and re-running on parent re-render would detach
-  // the moveend listener mid-animation (same as Map.tsx FlyToStation).
-  useLayoutEffect(() => {
+    const { bounds, bottomInset, onFlyStart, onFlyEnd } = selection;
     const latLngBounds = L.latLngBounds(bounds);
     const padTL = L.point(40, 40);
     const padBR = L.point(40, 40 + bottomInset);
@@ -145,11 +106,21 @@ export function MapSelectionBounds({
       duration: 0.6,
       easeLinearity: 0.4,
     });
+    // The bounds component is keyed by selection. As before, callback changes
+    // must not detach a flight listener or restart an in-progress animation.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [map, kind, lat, lng]);
+}
+
+export function MapSelectionPoint(props: Omit<PointSelection, 'kind'>) {
+  useMapSelection({ kind: 'point', ...props });
   return null;
 }
 
+export function MapSelectionBounds(props: Omit<BoundsSelection, 'kind'>) {
+  useMapSelection({ kind: 'bounds', ...props });
+  return null;
+}
 
 /** Dismiss a background selection without treating Leaflet controls as background. */
 export function MapDeselect({ onClear, clickClears, escapeClears }: {
