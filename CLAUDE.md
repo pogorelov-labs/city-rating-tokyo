@@ -271,8 +271,8 @@ invalidate embeddings and require the separately managed artifact refresh.
 Colocate tests with the behavior they protect. Component tests use the real
 store/i18n harness with controlled timers/animation frames; jsdom is not a
 layout, paint or pixel-regression claim. Keep test state and mocks isolated.
-The browser suite tests actual pointer/keyboard/touch behavior; advisory CI
-results must be reported separately from the four core checks. Follow
+The required browser CI check tests actual pointer/keyboard/touch behavior
+without retries. Report its result alongside the other checks. Follow
 [CONTRIBUTING.md](CONTRIBUTING.md#testing) for commands and
 [the ticket convention](#ticket-workflow-and-verification) for actual results/limits.
 

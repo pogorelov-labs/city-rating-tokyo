@@ -158,7 +158,7 @@ Scrapers run in a private operational environment. They are incremental and safe
 - **ESLint** (`cd app && npm run lint`): Next.js + TypeScript + React hooks / React Compiler rules. Runs in CI's `build` job; errors fail it, warnings don't
 - **Vitest** (`cd app && npm test`): scoring pure functions, URL state round-trip, dealbreaker filtering
 - **pytest** (`pytest` from repo root): `compute-ratings.py` normalization/caps, cross-language schema parity
-- **Playwright**: the advisory `e2e` CI job runs the browser smoke suite. See [e2e/README.md](e2e/README.md) for local setup and the current CI selection.
+- **Playwright**: the required `e2e` CI job runs the browser smoke suite without retries. See [e2e/README.md](e2e/README.md) for local setup and the current CI selection.
 
 ## MCP server development
 
