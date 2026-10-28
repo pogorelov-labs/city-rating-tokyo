@@ -23,11 +23,11 @@ import {
 import { useScoredAreas } from '@/lib/scoring-react';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
-import { areaPath, formatRentShort } from '@/lib/cities';
+import { formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { useDelayedHover } from '@/lib/use-delayed-hover';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
-import { Link } from '@/i18n/navigation';
+import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
 import { MapContainerResize, TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
 import { MapSelectionPoint, MapDeselect } from './map-selection';
 
@@ -336,27 +336,10 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                     />
                   </div>
                 )}
-                <div className="font-bold text-base flex items-center gap-1.5">
-                  <span>{stationDisplayName(station, locale).primary}</span>
-                  {station.hasLiveCamera && (
-                    <span
-                      role="img"
-                      aria-label={t('filter.hasLiveCamera')}
-                      title={t('filter.hasLiveCamera')}
-                      className="text-base leading-none"
-                    >
-                      📹
-                    </span>
-                  )}
-                </div>
-                <div className="text-gray-500 text-sm mb-1">
-                  {stationDisplayName(station, locale).secondary}
-                </div>
+                <AreaCardMeta primary={stationDisplayName(station, locale).primary} secondary={stationDisplayName(station, locale).secondary}
+                  score={score} camera={station.hasLiveCamera} variant="tokyo" />
                 {score !== null ? (
                   <>
-                    <div className="text-lg font-bold text-slate-800">
-                      {score.toFixed(1)} / 10
-                    </div>
                     <div className="text-xs text-gray-500 mb-2">
                       {t('filter.lines', { count: station.line_count })}
                       {station.rent_1k && (
@@ -369,32 +352,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                         {snippet}
                       </div>
                     )}
-                    <div className="flex items-center gap-3 mt-1">
-                      <Link
-                        href={areaPath(city.id, station.slug)}
-                        className="text-blue-600 text-xs hover:underline"
-                        data-umami-event="view-details"
-                        data-umami-event-station={station.slug}
-                      >
-                        {t('map.viewDetails')}
-                      </Link>
-                      {isCompared ? (
-                        <button
-                          onClick={(e) => { e.stopPropagation(); removeCompareStation(station.slug); }}
-                          className="text-red-500 text-xs hover:underline"
-                        >
-                          {t('map.removeCompare')}
-                        </button>
-                      ) : (
-                        <button
-                          onClick={(e) => { e.stopPropagation(); addCompareStation(station.slug); }}
-                          className="text-purple-600 text-xs hover:underline disabled:opacity-40"
-                          disabled={compareStations.length >= 3}
-                        >
-                          {t('map.compare')}
-                        </button>
-                      )}
-                    </div>
+                    <AreaCardActions city={city.id} slug={station.slug} isCompared={isCompared} compareFull={compareStations.length >= 3}
+                      onCompare={() => addCompareStation(station.slug)} onUncompare={() => removeCompareStation(station.slug)} />
                   </>
                 ) : (
                   <div className="text-xs text-gray-400">

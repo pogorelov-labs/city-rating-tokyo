@@ -7,12 +7,12 @@ import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
-import { areaPath, formatRentShort } from '@/lib/cities';
+import { formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
 import { areaKind } from '@/lib/area-key';
 import { calculateWeightedScore } from '@/lib/scoring';
-import { Link } from '@/i18n/navigation';
+import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
 import type { Locale } from '@/i18n/routing';
 
 interface MobileStationCardProps {
@@ -188,31 +188,7 @@ export default function MobileStationCard({
 
         {/* Text content */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-baseline justify-between gap-2">
-            <div className="min-w-0">
-              <div className="font-bold text-base truncate flex items-center gap-1.5">
-                <span className="truncate">{names.primary}</span>
-                {station.hasLiveCamera && (
-                  <span
-                    role="img"
-                    aria-label={t('filter.hasLiveCamera')}
-                    title={t('filter.hasLiveCamera')}
-                    className="text-base leading-none shrink-0"
-                  >
-                    📹
-                  </span>
-                )}
-              </div>
-              {names.secondary && (
-                <div className="text-gray-500 text-xs truncate">{names.secondary}</div>
-              )}
-            </div>
-            {score !== null && (
-              <div className="shrink-0 font-bold text-lg text-slate-800">
-                {score.toFixed(1)}
-              </div>
-            )}
-          </div>
+          <AreaCardMeta primary={names.primary} secondary={names.secondary} score={score} camera={station.hasLiveCamera} variant="touch" />
           <div className="text-xs text-gray-500 mt-1">
             {isStationArea
               ? <>{t('filter.lines', { count: station.line_count })}{parentDistrict && <> · {stationPrimaryName(parentDistrict, locale)}</>}</>
@@ -245,29 +221,8 @@ export default function MobileStationCard({
       </div>
 
       {/* Actions — 44px WCAG pill buttons */}
-      <div className="flex items-stretch gap-2 px-3 pb-3">
-        <Link
-          href={areaPath(city.id, station.slug)}
-          data-umami-event="view-details"
-          data-umami-event-station={station.slug}
-          className="flex-1 flex items-center justify-center rounded-lg bg-blue-600 text-white text-sm font-medium active:bg-blue-700"
-          style={{ minHeight: 44 }}
-        >
-          {t('map.viewDetails')}
-        </Link>
-        <button
-          onClick={handleCompareToggle}
-          disabled={compareDisabled}
-          className={`flex-1 flex items-center justify-center rounded-lg text-sm font-medium border active:bg-gray-100 disabled:opacity-40 ${
-            isCompared
-              ? 'text-red-600 border-red-200 bg-red-50'
-              : 'text-purple-700 border-purple-200 bg-purple-50'
-          }`}
-          style={{ minHeight: 44 }}
-        >
-          {isCompared ? t('map.removeCompare') : t('map.compare')}
-        </button>
-      </div>
+      <AreaCardActions city={city.id} slug={station.slug} isCompared={isCompared} compareFull={compareDisabled}
+        onCompare={handleCompareToggle} onUncompare={handleCompareToggle} touch />
     </div>
   );
 }
