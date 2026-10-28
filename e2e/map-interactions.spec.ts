@@ -176,3 +176,98 @@ test.describe('touch selection', () => {
   });
 
 });
+
+test.describe('phone-width map controls', () => {
+  test.use({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+
+  for (const [city, url, closeName] of [
+    ['Tokyo station', '/?s=akihabara', 'Close station card'],
+    ['Bangkok district', '/bangkok?s=pathum-wan', 'Close district card'],
+    ['Bangkok station area', '/bangkok?lv=station&s=st.asok', 'Close station card'],
+    ['Bangkok grid cell', '/bangkok?lv=grid&s=cell.41873', 'Close cell card'],
+  ] as const) {
+    test(`${city}: zoom and card close remain usable`, async ({ page }) => {
+      await page.goto(url);
+      const zoom = page.getByRole('button', { name: 'Zoom in' });
+      const zoomOut = page.getByRole('button', { name: 'Zoom out' });
+      const close = page.getByRole('button', { name: closeName });
+      await expect(zoom).toBeVisible({ timeout: 20_000 });
+      await expect(close).toBeVisible({ timeout: 20_000 });
+      // Let the flight and 200 ms card transition finish before hit testing.
+      await expect(page.locator('.leaflet-container')).not.toHaveClass(/map-flying/, { timeout: 15_000 });
+      await page.waitForTimeout(750);
+      const zoomBox = await zoom.boundingBox();
+      const closeBox = await close.boundingBox();
+      const cardBox = await page.getByRole('dialog').boundingBox();
+      expect(cardBox).not.toBeNull();
+      expect(zoomBox).not.toBeNull();
+      expect(closeBox).not.toBeNull();
+      // Keep the full card clear, not merely the Close target.
+      expect(cardBox!.x + cardBox!.width).toBeLessThanOrEqual(zoomBox!.x);
+      // The targets must not overlap: raising the zoom z-index alone can hide Close.
+      expect(zoomBox!.x + zoomBox!.width <= closeBox!.x || closeBox!.x + closeBox!.width <= zoomBox!.x ||
+        zoomBox!.y + zoomBox!.height <= closeBox!.y || closeBox!.y + closeBox!.height <= zoomBox!.y).toBe(true);
+      await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 10_000 }).toBeTruthy();
+      const selected = new URL(page.url()).searchParams.get('s');
+      const before = await page.locator('.leaflet-tile').evaluateAll((tiles) => Math.max(0, ...tiles.map((tile) => {
+        const parts = new URL((tile as HTMLImageElement).src).pathname.split('/');
+        return Number(parts[parts.length - 3]) || 0;
+      })));
+      expect(before).toBeGreaterThan(0);
+      await zoom.tap({ timeout: 8_000 });
+      await expect.poll(() => page.locator('.leaflet-tile').evaluateAll((tiles) => Math.max(0, ...tiles.map((tile) => {
+        const parts = new URL((tile as HTMLImageElement).src).pathname.split('/');
+        return Number(parts[parts.length - 3]) || 0;
+      }))), { timeout: 10_000 }).toBeGreaterThan(before);
+      expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+      await page.waitForTimeout(350); // Leaflet ignores another zoom during its animation.
+      await zoomOut.tap({ timeout: 8_000 });
+      await expect.poll(() => page.locator('.leaflet-tile').evaluateAll((tiles) => Math.max(0, ...tiles.map((tile) => {
+        const parts = new URL((tile as HTMLImageElement).src).pathname.split('/');
+        return Number(parts[parts.length - 3]) || 0;
+      }))), { timeout: 10_000 }).toBe(before);
+      expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+      await close.tap({ timeout: 8_000 });
+      await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 10_000 }).toBeNull();
+    });
+  }
+});
+
+
+test('short phone: grid card leaves zoom and Close usable', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 568 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  await page.goto('/bangkok?lv=grid&s=cell.41873');
+  const close = page.getByRole('button', { name: 'Close cell card' });
+  const zoomOut = page.getByRole('button', { name: 'Zoom out' });
+  await expect(close).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(750);
+  const zoomBox = await zoomOut.boundingBox();
+  const cardBox = await page.getByRole('dialog').boundingBox();
+  expect(cardBox!.x + cardBox!.width).toBeLessThanOrEqual(zoomBox!.x);
+  const selected = new URL(page.url()).searchParams.get('s');
+  await zoomOut.tap();
+  await page.waitForTimeout(400);
+  expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+  await close.tap();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+  await context.close();
+});
+
+
+test('phone: expanded air panel does not obstruct zoom or card Close', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  await page.goto('/bangkok?s=pathum-wan');
+  const close = page.getByRole('button', { name: 'Close district card' });
+  await expect(close).toBeVisible({ timeout: 20_000 });
+  await page.locator('summary').filter({ hasText: 'Bangkok: air and seasons' }).click();
+  await page.waitForTimeout(750);
+  const selected = new URL(page.url()).searchParams.get('s');
+  await page.getByRole('button', { name: 'Zoom in' }).tap();
+  await page.waitForTimeout(400);
+  expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+  await close.tap();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+  await context.close();
+});
