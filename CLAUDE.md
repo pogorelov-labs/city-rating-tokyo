@@ -276,12 +276,16 @@ results must be reported separately from the four core checks. Follow
 [CONTRIBUTING.md](CONTRIBUTING.md#testing) for commands and
 [the ticket convention](#ticket-workflow-and-verification) for actual results/limits.
 
-The MCP service currently exposes Tokyo. [MCP implementation](mcp/src/city_rating_mcp/server.py),
-[scoring](mcp/src/city_rating_mcp/scoring.py), [semantic tools](mcp/src/city_rating_mcp/tools/semantic.py)
-and [usage](mcp/USAGE.md) define its API. Unit fixtures are separate from the
-[artifact-dependent smoke test](mcp/scripts/smoke-test.py); semantic tools need
-separately generated embeddings. No model, source or operator activity is
-implied by a docs change or a green unit suite.
+The MCP service exposes Tokyo stations and Bangkok districts, with Tokyo as
+the default city. [MCP implementation](mcp/src/city_rating_mcp/server.py),
+[district views](mcp/src/city_rating_mcp/views.py), [scoring](mcp/src/city_rating_mcp/scoring.py),
+[semantic tools](mcp/src/city_rating_mcp/tools/semantic.py) and [usage](mcp/USAGE.md)
+define its API. Preserve city-specific rent units/provenance, district-wide
+facts and rejection of Tokyo-only filters for Bangkok. Unit fixtures are
+separate from the [artifact-dependent smoke test](mcp/scripts/smoke-test.py);
+semantic tools need separately generated, city-bound embeddings and fail
+explicitly when Bangkok's artifact is absent. No model, source or operator
+activity is implied by a docs change or a green unit suite.
 
 ## Ticket workflow and verification
 
