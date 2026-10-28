@@ -32,6 +32,7 @@ Notes:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -91,6 +92,8 @@ def main() -> None:
     p.add_argument("--slug", default=None, help="single-slug dry run")
     p.add_argument("--out", default=None)
     args = p.parse_args()
+    if args.city == "bangkok" and args.model != DEFAULT_MODEL:
+        p.error("Bangkok embeddings require intfloat/multilingual-e5-large")
 
     import numpy as np
     from fastembed import TextEmbedding
@@ -164,6 +167,8 @@ def main() -> None:
         locales=all_locales,
         fields=all_fields,
         model=np.array(args.model),
+        city=np.array(args.city),
+        source_sha256=np.array(hashlib.sha256(BANGKOK.read_bytes()).hexdigest() if args.city == "bangkok" else ""),
     )
 
     size_mb = out_path.stat().st_size / 1024 / 1024

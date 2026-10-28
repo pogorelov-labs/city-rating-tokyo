@@ -11,6 +11,7 @@ ship as a committed JSON artifact.
 from __future__ import annotations
 
 import logging
+import hashlib
 import os
 from pathlib import Path
 from typing import Any, Iterable
@@ -43,12 +44,14 @@ class Datamart:
     @classmethod
     def load_bangkok(cls, path: Path | str | None = None) -> "Datamart":
         path = Path(path or os.getenv("CITY_RATING_BANGKOK") or DEFAULT_BANGKOK)
-        payload = orjson.loads(path.read_bytes())
+        raw = path.read_bytes()
+        payload = orjson.loads(raw)
         districts = payload["districts"]
         stations = {row["slug"]: {**row, "_city": "bangkok"} for row in districts}
         if len(stations) != 50 or len(stations) != len(districts):
             raise ValueError("Bangkok district snapshot must contain 50 unique slugs")
-        return cls(stations, list(stations), payload.get("_meta", {}))
+        return cls(stations, list(stations), {**payload.get("_meta", {}),
+                                              "_snapshot_sha256": hashlib.sha256(raw).hexdigest()})
 
     @classmethod
     def load(

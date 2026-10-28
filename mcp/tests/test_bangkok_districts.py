@@ -98,3 +98,21 @@ def test_semantic_uses_city_specific_vectors(bangkok, monkeypatch):
     assert result['city'] == 'bangkok' and result['results'][0]['unit'] == 'district'
     assert result['results'][0]['rent']['provenance'] == 'district_editorial'
     assert 'relative within Bangkok' in result['caveat']
+
+
+def test_embedding_artifact_requires_city_snapshot_and_model(tmp_path):
+    import numpy as np
+    from city_rating_mcp.embeddings import EmbeddingStore
+    path = tmp_path / 'vectors.npz'
+    def write(city='bangkok', digest='expected', model='intfloat/multilingual-e5-large'):
+        np.savez(path, vectors=np.array([[1., 0.]], dtype=np.float32), slugs=np.array(['x']),
+                 locales=np.array(['en']), fields=np.array(['all']), model=np.array(model),
+                 city=np.array(city), source_sha256=np.array(digest))
+    write()
+    assert EmbeddingStore.load(path, expected_city='bangkok', source_sha256='expected').slugs[0] == 'x'
+    for city, digest, model in [('tokyo', 'expected', 'intfloat/multilingual-e5-large'),
+                                ('bangkok', 'stale', 'intfloat/multilingual-e5-large'),
+                                ('bangkok', 'expected', 'other')]:
+        write(city, digest, model)
+        with pytest.raises(ValueError):
+            EmbeddingStore.load(path, expected_city='bangkok', source_sha256='expected')

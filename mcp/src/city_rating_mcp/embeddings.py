@@ -60,18 +60,26 @@ class EmbeddingStore:
             self._agg_idx[(str(slugs[i]), str(locales[i]))] = int(i)
 
     @classmethod
-    def load(cls, path: Path | str | None = None) -> "EmbeddingStore":
+    def load(cls, path: Path | str | None = None, *, expected_city: str | None = None,
+             source_sha256: str | None = None) -> "EmbeddingStore":
         path = Path(path or os.getenv(EMBEDDINGS_ENV) or DEFAULT_PATH)
         if not path.exists():
             raise FileNotFoundError(
                 f"Embeddings not found at {path}. Run scripts/build-embeddings.py."
             )
         with np.load(path, allow_pickle=False) as z:
+            if expected_city is not None:
+                if "city" not in z or str(z["city"]) != expected_city:
+                    raise ValueError(f"Embeddings are not for {expected_city}; rebuild the city artifact")
+                if "source_sha256" not in z or str(z["source_sha256"]) != source_sha256:
+                    raise ValueError("Embeddings do not match the current district snapshot; rebuild them")
             vectors = z["vectors"]
             slugs = z["slugs"]
             locales = z["locales"]
             fields = z["fields"]
             model = str(z["model"])
+            if expected_city == "bangkok" and model != "intfloat/multilingual-e5-large":
+                raise ValueError("Bangkok embeddings require intfloat/multilingual-e5-large")
         LOG.info(
             "embeddings loaded: %d vectors, dim=%d, model=%s",
             vectors.shape[0], vectors.shape[1], model,

@@ -101,7 +101,16 @@ def _city_embeddings(city: str) -> EmbeddingStore:
         path = os.getenv("CITY_RATING_BANGKOK_EMBEDDINGS") or str(
             Path(__file__).resolve().parents[3] / "data/bangkok-embeddings.npz"
         )
-        _BANGKOK_ES = EmbeddingStore.load(path)
+        store = EmbeddingStore.load(
+            path, expected_city="bangkok", source_sha256=_city_datamart(city).metadata["_snapshot_sha256"]
+        )
+        expected = {(slug, locale, field) for slug in _city_datamart(city).slugs()
+                    for locale in ("en", "ja", "ru")
+                    for field in ("atmosphere", "landmarks", "food", "nightlife", "all")}
+        actual = list(zip(map(str, store.slugs), map(str, store.locales), map(str, store.fields)))
+        if len(actual) != len(expected) or set(actual) != expected or store.vectors.shape != (len(expected), 1024):
+            raise ValueError("Bangkok embeddings are incomplete or malformed; rebuild them")
+        _BANGKOK_ES = store
     return _BANGKOK_ES
 
 
