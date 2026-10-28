@@ -54,12 +54,20 @@ data/stations.json              # 1493 stations — master list
 app/src/data/demo-ratings.ts    # Merged AI + computed ratings export
 app/src/data/rent-averages.json # Suumo-backed rent where scraped
 app/src/data/bangkok/           # Bangkok districts, geometry, rail overlay (generated)
-app/src/app/                    # Routes: /, /station/[slug], /bangkok, /bangkok/district/[slug], /api/feedback
+app/src/lib/scoring-react.tsx   # Shared named-area scores, anchors, filters, ranking
+app/src/lib/scoring-grid-react.ts # Bangkok resident-weighted grid adapter
+app/src/components/bangkok/     # Bangkok layers, popups and grid panel
+app/src/components/area-card.tsx # Shared popup/touch metadata and actions
+app/src/app/                    # Locale routes and shared detail sections
+app/src/test/                   # App unit/component harness; browser suite is root e2e/
 scripts/bangkok/                # Bangkok fetch + build pipeline (uv), tests
 scripts/                        # Scrapers, compute-ratings.py, export-ratings.py
 research/                       # Source research + VISION roadmap
-CLAUDE.md                       # Data contracts, formulas, data-readiness caveats
+CLAUDE.md                       # Current module map, contracts and data-readiness caveats
 ```
+
+Use the [developer module index](CLAUDE.md#key-files) to navigate scoring,
+map controllers, shared cards/details and the app/browser test boundaries.
 
 ## Getting started
 

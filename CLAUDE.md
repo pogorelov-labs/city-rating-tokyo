@@ -1,51 +1,287 @@
 # City Rating — Tokyo + Bangkok Dev Guide
 
-## Project Overview
+## Start here
 
-Interactive map of Greater Tokyo (1493 stations) **and Bangkok (50 districts → 133 station areas → 200 m grid, since 2026-09 — see [Bangkok](#bangkok-district-layer))** with data-driven neighborhood ratings across **10 categories**. Users set **hard dealbreaker filters** (max rent, max commute, per-category minimums) and **soft weight preferences** (food, nightlife, transport, rent, safety, green, gym, vibe, crowd, daily_essentials) independently. **Three languages:** EN/JA/RU via next-intl v4.
+- [README: setup and pipeline prerequisites](README.md#getting-started)
+- [Contributor invariants, public-copy rules and verification](CONTRIBUTING.md)
+- [Release runbook](docs/RELEASING.md) and [changelog](CHANGELOG.md)
+- [Bangkok methodology](research/bangkok/00-overview.md), [historical Tokyo research](research/00-overview.md) and [roadmap](research/VISION.md)
 
-**Live**: https://city-rating.pogorelov.dev
-**Stack**: Next.js 16 (App Router, Turbopack) + React 19 + Tailwind 4 + Leaflet + recharts + zustand + next-intl v4 (EN/JA/RU). Static JSON data, no DB at runtime.
-**Deploy**: Production deployment is automated from `main`; deployment details are maintained outside this public repository.
-
-Fresh-clone setup and pipeline prerequisites: [README.md](README.md#getting-started).
-Current Bangkok inventory is **50 districts, 133 station areas, 179 rail
-stations / 10 lines and 39,149 grid cells**; see the [Bangkok overview](research/bangkok/00-overview.md).
-Historical Tokyo research is labeled as such in [research/00-overview.md](research/00-overview.md).
+The Next.js app serves Greater Tokyo and Bangkok in EN/JA/RU from committed
+build-time data. Tokyo has 1,493 station slugs: 251 researched entries and 1,242
+computed entries. Bangkok has 50 districts, 133 station areas, 179 rail stations
+on 10 lines and 39,149 grid cells at 200 m. Coverage is not uniform evidence
+quality; see [data readiness](#data-readiness--coverage-honesty-maintainers).
+Deployment details and operational access are maintained outside this public repository.
 
 ## Architecture
 
+[CityHome](app/src/components/CityHome.tsx) composes the shared homepage with
+city context, area lists and `ScoredAreasProvider`. Tokyo uses a station-point
+map; Bangkok uses district/station-area polygons and an optional grid. Both
+consume the same city registry, store and named-area scoring contract.
+
+```text
+CityHome → city context + area lists + ScoredAreasProvider
+            ├─ Map / DistrictMap
+            ├─ desktop FilterPanel + mobile drawer FilterPanel
+            └─ ScatterPlotExplorer
+Bangkok grid → useScoredGrid → GridLayer + GridRanking + useGridHotspots
+Detail routes → DetailHeader + RatingsBreakdown; Bangkok also uses DetailFacts
 ```
-data/stations.json (1493 stations: slug, lat, lng, lines, line_count, prefecture)
-     ↓
-scripts/scrapers/ → NocoDB (configured in the private operational environment)
-     ↓
-scripts/compute-ratings.py → NocoDB computed_ratings table
-     ↓
-scripts/export-ratings.py → app/src/data/demo-ratings.ts
-     ↓
-app/src/lib/data.ts merges: stations.json + demo-ratings.ts + rent-averages.json
-```
+
+### Named-area scoring
+
+[scoring-react.tsx](app/src/lib/scoring-react.tsx) owns deferred weights,
+full-population scores/anchors, dealbreaker filtering and ranked results.
+`ScoredAreasProvider` shares primary-area and optional station-area calculations
+across the map and both mounted responsive panels. Consumers identify the
+`primary` or `station` level through `useScoredAreas`; its standalone fallback
+is for consumers without shared results, not an extra homepage calculation.
+
+Preserve these boundaries:
+
+- Pure score/filter/color functions stay in [scoring.ts](app/src/lib/scoring.ts).
+- Anchors use the full unfiltered rated population, so narrowing filters does
+  not recolor the remaining areas. Unrated entries retain null scores.
+- Soft weights change ranking; hard dealbreakers select passing areas.
+  Unknown rent/commute/category values pass where the existing policy permits;
+  `rentUnknown` controls the corresponding disclosure and dimming.
+- City-specific defaults and environmental/adult-zone flags come from the city
+  context/store, not duplicated component defaults. Tie ordering and deferred
+  updates are covered by [scoring-react tests](app/src/lib/scoring-react.test.tsx).
+
+### Grid scoring
+
+[scoring-grid-react.ts](app/src/lib/scoring-grid-react.ts) adapts the packed
+Bangkok grid using bounded, identity-keyed caches. Score/anchor work is separate
+from filter-mask work. Grid anchors are resident-weighted; named-area percentiles
+are not interchangeable with them.
+
+The map and ranking panel must pass the same areas, deferred weights, filters,
+defaults and `hideFloodRisk` value to `useScoredGrid`. The flood flag is part of
+both memoization and mask identity. `useGridHotspots` derives hotspots from the
+same scored result and passing mask; do not recreate a panel-only filter path.
+See [grid adapter tests](app/src/lib/scoring-grid-react.test.tsx) and the
+[panel flood regression](app/src/components/bangkok/GridRanking.test.tsx).
+
+### Maps, selection and performance
+
+[DistrictMap](app/src/components/DistrictMap.tsx) coordinates Bangkok layers;
+it no longer owns their polygon, rail, outline, legend or popup implementations.
+[Map](app/src/components/Map.tsx) remains the Tokyo point-map entry point.
+
+- [map-selection.tsx](app/src/components/map-selection.tsx) owns point/bounds
+  flight lifecycles and `MapDeselect`. Tokyo retains point flights; Bangkok
+  retains bounds flights and bottom-inset framing. Preserve cleanup and
+  `isFlying` completion when a selection changes during animation.
+- Background clicks and Escape share the dismissal controller. Keep the
+  `.leaflet-interactive` / `.leaflet-control` guard so controls do not clear a selection.
+- [use-delayed-hover.ts](app/src/lib/use-delayed-hover.ts) owns the shared hover
+  clear delay and cancellation used by Tokyo markers and Bangkok named areas.
+- [map-shared.tsx](app/src/components/map-shared.tsx) provides resize handling,
+  touch zoom controls, image fallback and the SVG overlay renderer.
+  [map-resize.ts](app/src/lib/map-resize.ts) observes viewport changes.
+- Tokyo's main marker population uses Canvas; animated halo/pulse overlays use
+  SVG. Selection flight code suppresses popups/overlays and fades the Canvas
+  during zoom transitions. Preserve these behaviors when moving controllers.
+- Keep chart consumers lazy through [HeaderActions](app/src/components/HeaderActions.tsx),
+  [MapWrapper](app/src/components/MapWrapper.tsx) and [RadarChartWrapper](app/src/components/RadarChartWrapper.tsx).
+  [getMapStations](app/src/lib/data.ts) keeps the homepage payload lightweight;
+  full descriptions and confidence belong to detail data.
+- Basemap selection and permitted prefetch behavior live in [basemap.ts](app/src/lib/basemap.ts).
+  Image errors fall back to the score gradient, not a permanently blurred placeholder.
+
+Historical UI/benchmark receipts are in Git history and PR validation records;
+this section describes current ownership rather than a sequence of past refactors.
+
+### Shared area cards and detail sections
+
+[area-card.tsx](app/src/components/area-card.tsx) exports `AreaCardMeta`,
+`AreaCardActions` and `CompareToggle` for Tokyo/Bangkok popups and the
+[mobile card](app/src/components/MobileStationCard.tsx). Callers provide localized
+names, scores, comparison state and actions. Preserve compact-popup versus touch
+styles, the ability to remove an existing comparison, and routing through the
+city/area contract.
+
+[DetailHeader](app/src/components/DetailHeader.tsx) shares navigation, names,
+map links, locale controls and score presentation. Its Tokyo/Bangkok variants
+preserve their existing heading and badge markup.
+[RatingsBreakdown](app/src/components/RatingsBreakdown.tsx) is server-translated:
+`kind` selects Tokyo, district or station-area copy; callers supply the correct
+medians, confidence, sources, dates and rent provenance. Preserve the different
+rent metrics, captions and tooltip disclosures. [DetailFacts](app/src/components/DetailFacts.tsx)
+exports `FactsGrid` and `WikiLinks`, retaining the caller's fact and language order.
+
+## Key Files
+
+### State, data and scoring
+
+| Module | Responsibility |
+|---|---|
+| [CityHome](app/src/components/CityHome.tsx), [city context](app/src/lib/city-context.tsx), [area lists](app/src/lib/area-lists.tsx) | Shared shell and provider boundaries; reuse immutable city lists. |
+| [cities](app/src/lib/cities.ts), [types](app/src/lib/types.ts) | City units, paths, defaults, currencies and shared data contracts. |
+| [store](app/src/lib/store.ts), [area keys](app/src/lib/area-key.ts), [URL state](app/src/lib/url-state.ts) | Shared weights; per-city filters/selection/compare; district, station-area and cell keys; shareable state. |
+| [Tokyo data](app/src/lib/data.ts), [Bangkok data](app/src/lib/bangkok-data.ts) | Build-time assembly and lightweight map adapters. |
+| [pure scoring](app/src/lib/scoring.ts), [named-area React adapter](app/src/lib/scoring-react.tsx) | Composite scores, anchors, dealbreakers and shared deferred named-area results. |
+| [grid primitives](app/src/lib/bangkok-grid.ts), [grid React adapter](app/src/lib/scoring-grid-react.ts) | Packed-grid decoding, resident weighting, masks, counts and hotspots. |
+| [Bangkok label helpers](app/src/lib/bangkok-labels.ts) | Escaping, pixel fitting and localized district/station-area label descriptors without Leaflet. |
+
+### Maps and shared presentation
+
+| Module | Responsibility |
+|---|---|
+| [Tokyo Map](app/src/components/Map.tsx), [Bangkok DistrictMap](app/src/components/DistrictMap.tsx) | City-specific map composition, not duplicate scoring engines. |
+| [map selection](app/src/components/map-selection.tsx), [shared map controls](app/src/components/map-shared.tsx), [hover hook](app/src/lib/use-delayed-hover.ts) | Flight, dismissal, resize/zoom and hover lifecycle ownership. |
+| [DistrictLayer](app/src/components/bangkok/DistrictLayer.tsx), [StationAreaLayer](app/src/components/bangkok/StationAreaLayer.tsx), [GridLayer](app/src/components/bangkok/GridLayer.tsx) | Bangkok level-specific rendering. |
+| [BangkokOutlines](app/src/components/bangkok/BangkokOutlines.tsx), [BangkokRailLayer](app/src/components/bangkok/BangkokRailLayer.tsx), [MapLegend](app/src/components/bangkok/MapLegend.tsx) | Selection/compare outlines, rail overlay and legends. |
+| [Bangkok popups](app/src/components/bangkok/popups.tsx), [GridRanking](app/src/components/bangkok/GridRanking.tsx) | District/station/cell details and the grid's ranked panel. |
+| [area-card family](app/src/components/area-card.tsx), [MobileStationCard](app/src/components/MobileStationCard.tsx) | Reusable card metadata/actions with city and interaction variants. |
+| [DetailHeader](app/src/components/DetailHeader.tsx), [RatingsBreakdown](app/src/components/RatingsBreakdown.tsx), [DetailFacts](app/src/components/DetailFacts.tsx) | Shared detail sections with explicit city-specific props. |
+| [FilterPanel](app/src/components/FilterPanel.tsx), [ScatterPlotExplorer](app/src/components/ScatterPlotExplorer.tsx), [ComparePanel](app/src/components/ComparePanel.tsx) | Scoring consumers and comparison/provenance presentation. |
+| [ConfidenceBadge](app/src/components/ConfidenceBadge.tsx), [RatingBar](app/src/components/RatingBar.tsx), [Tooltip](app/src/components/Tooltip.tsx) | Evidence shape icons, median-relative bars and touch/hover disclosure. |
+
+## Scoring and compatibility contracts
+
+- [schema constants](packages/schema/constants.json) own rating-key order,
+  defaults, rent bounds and absolute caps. [codegen](packages/schema/scripts/gen.ts)
+  emits the shared language copies and the [vendored app constants](app/src/lib/schema/constants.ts).
+  The app build context is `app/`; imports must not escape it.
+- The URL weight vector is positional. Keep the legacy decoding/order rules in
+  [url-state.ts](app/src/lib/url-state.ts) and the [contributor invariants](CONTRIBUTING.md#load-bearing-invariants-breaking-these-silently-corrupts-data-or-urls).
+  Never sort the category/default-weight keys to make output look tidy.
+- Digit-prefixed rent keys (`1k_1ldk`, `2ldk`) are data contracts. Preserve aliases,
+  source provenance, source-quality caps and labeled municipal/model fallbacks.
+- [Python normalization](packages/schema/python/city_rating_schema/normalize.py)
+  is shared by the pipelines. Formula/rounding reuse does not unify city-specific
+  source/confidence policies. [Tokyo compute](scripts/compute-ratings.py),
+  [Bangkok ratings](scripts/bangkok/ratings.py) and [MCP scoring](mcp/src/city_rating_mcp/scoring.py)
+  remain explicit consumers; review parity and golden tests when changing them.
+  Fractional/half-value scores must retain site/MCP parity; see the shared
+  [composite-score fixtures](packages/schema/fixtures/composite-score.json).
+- Composite colors use full-population score anchors. Category bars use deviation
+  from the supplied city/level median, not raw value. Keep `compositeToColor`
+  distinct from `categoryDeviationColor`; confidence shapes are a separate evidence channel.
+- Weights are shared between cities; dealbreakers are per city because units and
+  currencies differ. Preserve comparison/selection area keys and the existing
+  URL encoding for Bangkok level and cell selection.
+- Rename slugs through [redirect data](app/src/data/slug-redirects.json), update
+  every slug-keyed artifact and use [canonical slug lookup](scripts/scrapers/slugs.py)
+  for older datastore rows. Naming helpers are in [station-name.ts](app/src/lib/station-name.ts).
 
 ## Data readiness & coverage honesty (maintainers)
 
-Do **not** equate “every station has a number” with “every number is equally grounded.” This section is the project’s **anti–false-precision** memory.
+Full row coverage does not imply equal spatial precision, current source dates
+or uniformly strong confidence. Current coverage comes from committed artifacts;
+[historical research](research/00-overview.md) is not a live inventory.
 
-1. **“100%” / full rows:** Often means **all 1493 slugs participate** in normalization, not that each category uses the same spatial granularity or primary data quality everywhere (Tokyo safety polygons vs ward/prefecture outside Tokyo; rent Suumo vs ward vs regression).
-2. **Rent:** Real Suumo-backed station averages cover a **minority** of slugs (`rent-averages.json` + merge rules); most stations use an e-Stat municipal average or distance regression — see `confidence.rent` in exported metadata and `research/05-rent.md`. **Doctrine (CRTKY-43, 2026-09-30):** e-Stat is an allowed but *labelled* fallback — `moderate`, capped at 9, shown as "Municipal average (e-Stat)" on the station page, and never recomputed in the frontend (`isStationLevelRent()` in `scoring.ts`). Only listings scraped around the station (Suumo, HOMES) are `strong`.
-3. **Safety (CRTKY-82, 2026-09-30):** all 1493 stations come from 2024 police open data via `scripts/scrapers/ingest-crime-open-data.py` → `data/crime/station-safety.json`. Tokyo (570) uses the 町丁 within 800 m of the station → `strong`; 45 outer-Tokyo stations with too few 町丁 in range and all of Kanagawa/Saitama/Chiba use the **municipality/ward** → `moderate` — every station in a ward shares one value, so read those as area-level. Same formula, year and daytime-population rule everywhere; Tokyo catchments are clamped to [1/3, 3]× their municipal rate so granularity alone cannot push them into the tails. The old hand-typed `crime_stats` table matched no source year and reached only 187 of 878 non-Tokyo stations — see `research/02-safety.md`.
-4. **Green / vibe:** strong/moderate/estimate reflect **source rules in compute**, not “map looks green.” Re-measured 2026-08-25: `green` **does** reach `strong` (842/1493), so the older “0 strong” note was stale. `vibe` could never reach `strong` until **CRTKY-128**: the old rule was a two-way ternary with no `strong` branch. `vibe_confidence()` in `compute-ratings.py` now gives `strong` when both independent OSM signals are present (cultural venues **and** pedestrian streets — 461 stations as of the 2026-04 data), `moderate` for cultural venues alone, `estimate` otherwise. Takes effect on the next `refresh-ratings.sh` run.
-5. **`transit_minutes` estimates (CRTKY-81):** `scripts/compute-transit-times.py` generates travel times using geographic distance and line connectivity. The committed `data/transit-times.json` reports a historical April 2026 calibration cohort of **252**; that is distinct from the current **251-entry** researched export block. Authored entries retain their hand-curated times; computed entries use the model. **Upgrade path:** GTFS+RAPTOR (TokyoGTFS) for timetable-based routing.
-6. **Missing confidence keys in export:** `export-ratings.py` defaults absent per-category confidence to **`estimate`**. The current committed **251-entry AI block omits `daily_essentials`** from its ratings/confidence/source literals; category completeness must be checked in the artifact, not inferred from code being merged. The **CRTKY-129** `backfill_daily_essentials()` export path can supply pipeline values and participates in the missing-data gate. That code does not establish that an authorized export has run; the frontend still has a missing-field fallback.
-7. **AI-researched slugs (251):** Integer ratings and `description` are editorial. Since **CRTKY-83**, `export-ratings.py` merges per-category confidence via comparison: matching categories inherit computed metadata, differing ones get `editorial` level. See NocoDB section for full merge policy.
-8. **HotPepper API** is a **single-vendor** dependency for food/nightlife signals (also used by vibe/crowd proxies); no automated fallback is implemented. Source freshness/mix gates, the tracked midnight ingest, key rotation/reissue procedure, additive `source_dates` rollout, and recoverable computed-ratings updates are in [the HotPepper resilience runbook](research/notes/2026-10-15-hotpepper-resilience-runbook.md). Refresh requires an explicit `--max-source-age-days=N` policy and the documented schema preflight; no source refresh or migration is implied by merging the code.
-   **Preserved confidence policies (CRTKY-166):** shared Python normalization does not unify city evidence rules. Tokyo food: positive HP + OSM → `strong` / `[hotpepper, osm]`; HP only → `moderate` / `[hotpepper]`; HP=0 (including OSM-only) → `estimate` / `[]`. That empty source list is preserved compatibility behavior, not a claim that OSM contributed nothing. Bangkok: both Overture/OSM thresholds met → `strong`; either alone → `moderate`; neither → `estimate` with both source names retained. Existing thresholds, missing/null handling, source order, log transforms, rent constants and Python rounding remain unchanged; changing them requires a separate behavior decision.
-9. **Last train times (CRTKY-115):** Sourced from [mini-tokyo-3d](https://github.com/nagix/mini-tokyo-3d) (MIT). Computed as `MAX(departure)` per station per day type via coordinate matching (200m) → 1483/1493 coverage (99.3%). Caveats: (a) Sat/Sun/Holiday combined in source (no separate Sunday breakdown), (b) post-midnight times show as 00:xx with no 24:00+ convention, (c) arrival-only terminal stops excluded (not boardable), (d) refresh by re-running `scrape-last-trains.py` against current MT3D master — no auto-refresh. 10 stations uncovered (Hakone cable car, Toden Arakawa tram, a few edge stations with coordinate collisions).
-10. **Live camera streams (CRTKY-116):** Follow-up to CRTKY-115 from same MT3D ecosystem. Source: [`nagix/mt3d-plugin-livecam`](https://github.com/nagix/mt3d-plugin-livecam) endpoint `https://mini-tokyo.appspot.com/livecam` — 65 entries today (fluctuates), each with `{id, name, channel, keyword, center, html, thumbnail}`. The `html` field contains a pre-formed `<iframe>` pointing to a specific **video ID** (not channel) — that's what's playable. Match radius **300m** → **29 stations / 32 camera rows** matched (sparse, hub-concentrated — shibuya, tokyo, akihabara, shinjukunishiguchi-has-3, etc.). Streams are 3rd-party YouTube channels (NOT MT3D) — embed only, attribute MT3D. Scraper extracts `video_id` via regex from `html` field, strips signed params from `thumbnail` URL (uses permanent `i.ytimg.com/vi/{id}/hqdefault.jpg`), builds embed as `youtube-nocookie.com/embed/{video_id}?autoplay=1&mute=1&playsinline=1`. **Staleness:** video IDs go stale when streams end (days/weeks) — MT3D's endpoint refreshes periodically, so re-scrape weekly-ish to keep IDs current. **Symptoms of stale IDs:** iframe shows "Video unavailable" or "This live stream recording is not available". Manual refresh: `python scripts/scrapers/scrape-livecams.py`. (Not in `refresh-ratings.sh` — independent cadence.) Future: `check-livecams.py` HEAD-check for dead videos; YouTube Data API for always-current LIVE resolution. **Bugfix 2026-04-15:** earlier version used `embed/live_stream?channel={id}` which YouTube deprecated — playback didn't work. Fixed to use explicit video IDs from MT3D's `html` field.
+- The researched Tokyo block still has 251 `daily_essentials` fallbacks. The
+  [live-data invariant](app/src/lib/__tests__/data-invariants.test.ts) pins that
+  cohort and the assembled fallback value. An authorized re-export must change
+  the committed inputs and update the invariant together; merging backfill code
+  does not establish that an export ran.
+- Researched ratings/descriptions are editorial. Matching computed categories
+  can inherit pipeline metadata; differing ratings use `editorial`. Missing
+  confidence keys remain a separate coverage limit. See [export policy](scripts/export-ratings.py).
+- Tokyo rent may be a station-listing value, municipal average or model fallback.
+  Only station-level evidence supports the strongest tier; area-level values
+  retain their labels/caps and are not recomputed by the frontend.
+- Tokyo safety uses the published police-data scope; neighborhood and municipal
+  observations have different granularity. Traffic/other contextual facts are
+  not interchangeable with the safety score. See [safety research](research/02-safety.md).
+- Tokyo food confidence preserves the HotPepper/OSM source rules: the HP-zero
+  compatibility case remains estimate with an empty source list. Bangkok uses
+  its own two-source thresholds and retains both source names when neither qualifies.
+  Strong/moderate/estimate are source-policy outcomes, not judgments from map color.
+- Commute values are calibrated geographic/line-model estimates, not timetable
+  routing. [Transit metadata](data/transit-times.json) records the historical
+  calibration cohort separately from today's researched export count.
+- Last-train and camera inputs are snapshots. Video IDs and availability can
+  expire; a populated field is not a live stream or timetable verification.
+  See [last-train acquisition](scripts/scrapers/scrape-last-trains.py) and
+  [camera acquisition](scripts/scrapers/scrape-livecams.py).
+- Source freshness, schema preflight and recoverable Tokyo refreshes follow the
+  [resilience runbook](research/notes/2026-10-15-hotpepper-resilience-runbook.md).
+  Datastore configuration and credentials are supplied privately; an app clone
+  does not provision that environment.
 
-11. **Bangkok (district layer):** a different unit (50 khet, polygons) with its own honesty caveats — district rent and safety are **editorial** for all 50 (no open district data), scores are percentile-relative **within Bangkok** (a Bangkok 8 ≠ a Tokyo 8), outer-district POIs are under-mapped in both sources. **10 central station areas now use DooAsset proxies at `estimate` confidence:** published condominium asking-rent medians by bedroom, all floor areas, with source dates and separate sample sizes. They are single-provider estimates, not fixed-size representative market rents. The other 123 areas retain district rent blends; grid rents remain district-level editorial. Safety still inherits district estimates at finer levels. **ComparePanel distinguishes rent provenance** via the shared rent summary/note helpers. Full list: `research/bangkok/00-overview.md` → *Honesty notes*.
+## Bangkok (district layer)
 
-**Docs to keep aligned:** [CHANGELOG.md](CHANGELOG.md), [docs/RELEASING.md](docs/RELEASING.md), [docs/DATA_REFRESH_REMEDIATION.md](docs/DATA_REFRESH_REMEDIATION.md), `research/VISION.md` (Layer 1 + backlog tables), `research/00-overview.md`, `research/bangkok/00-overview.md`, `research/bangkok/backlog.md` (CRTKY-130 subtree map), this file, **Plane CRTKY-80** subtree (81–84), **CRTKY-116** subtree (117–119, livecams) and **CRTKY-130** subtree (131–153, Bangkok follow-ups + discovery).
+Districts, walkable station areas and the 200 m grid are distinct scoring
+populations. A Bangkok score is relative within its city/level, not a Tokyo
+score. Outer areas may be less well mapped; grid resolution is not evidence
+that every category is measured locally.
+
+All district/grid rents and safety remain editorial. Ten central station areas
+use single-provider, all-size asking-rent bedroom medians at estimate confidence;
+other station areas use district blends. [Rent provenance helpers](app/src/lib/bangkok-rent.ts),
+[RentNote](app/src/components/bangkok/RentNote.tsx) and the shared ratings section
+must preserve those metric/source/date/sample distinctions.
+
+District quietness uses the WorldPop constrained 2020 model; displayed
+registration facts are a different measure. Finer-level quietness uses mapped
+place density. Population is not a current census or daytime visitor count.
+See the [full methodology and honesty notes](research/bangkok/00-overview.md).
+
+The [Bangkok acquisition/build guide](scripts/bangkok/README.md) is the pipeline
+entry point. Its [build entry module](scripts/bangkok/build.py) coordinates
+source, geometry, raster, district, area and output modules. Frozen replay
+requires recorded raw inputs that are not supplied by a fresh clone. The
+[completed remediation record](docs/DATA_REFRESH_REMEDIATION.md) retains the
+refresh's validation and source limits. Data refreshes remain separate reviewed work.
+
+## Routes, localization and descriptions
+
+| User surface | Route module |
+|---|---|
+| Tokyo homepage and locale prefixes | [Tokyo page](app/src/app/%5Blocale%5D/page.tsx) |
+| Tokyo station detail | [station page](app/src/app/%5Blocale%5D/station/%5Bslug%5D/page.tsx) |
+| Bangkok homepage/levels | [Bangkok page](app/src/app/%5Blocale%5D/bangkok/page.tsx) |
+| Bangkok district / station-area details | [district page](app/src/app/%5Blocale%5D/bangkok/district/%5Bslug%5D/page.tsx), [station-area page](app/src/app/%5Blocale%5D/bangkok/station/%5Bid%5D/page.tsx) |
+
+[routing.ts](app/src/i18n/routing.ts) owns EN/JA/RU and the as-needed locale
+prefix. Use [locale-aware navigation](app/src/i18n/navigation.ts), typed literal
+message keys and [guarded data labels](app/src/i18n/message-key.ts) for external IDs.
+The [locale layout](app/src/app/%5Blocale%5D/layout.tsx) filters server-only
+Bangkok messages from the client provider; shared server-translated detail
+components do not make those namespaces available to arbitrary client hooks.
+
+[Tokyo data assembly](app/src/lib/data.ts) loads committed multilingual
+[generated descriptions](app/src/data/generated-descriptions.json); the old
+RU-only demo text is not the current description source. Authoring rules live
+in [description-generation-rules.md](research/description-generation-rules.md).
+[Datamart construction](scripts/build-datamart.py), [prompt generation](scripts/build-prompts-dir.py),
+[description merge](scripts/merge-descriptions.py) and [embedding build](scripts/build-embeddings.py)
+are separate pipeline steps, not a dated progress checklist. Datamarts, prompts
+and embeddings are generated artifacts; describe their prerequisites rather
+than linking to untracked local handoffs. Changes to the description corpus
+invalidate embeddings and require the separately managed artifact refresh.
+
+## Tests and verification
+
+| Boundary | Source / convention |
+|---|---|
+| App unit/component suites | [Vitest config](app/vitest.config.ts) splits `.test.ts` Node tests from `.test.tsx` jsdom tests. [Test guide](app/src/test/README.md), [providers](app/src/test/providers.tsx), [setup/cleanup](app/src/test/setup.ts) and [animation-frame helper](app/src/test/animation-frames.ts) own the harness. |
+| Scoring adapters | [named-area tests](app/src/lib/scoring-react.test.tsx), [grid tests](app/src/lib/scoring-grid-react.test.tsx), [grid-panel regression](app/src/components/bangkok/GridRanking.test.tsx). |
+| Map lifecycle/labels | [selection tests](app/src/components/map-selection.test.tsx), [hover tests](app/src/lib/use-delayed-hover.test.tsx), [label tests](app/src/lib/bangkok-labels.test.ts). |
+| Shared presentation | [area-card tests](app/src/components/area-card.test.tsx), [facts tests](app/src/components/DetailFacts.test.tsx), [ratings tests](app/src/components/RatingsBreakdown.test.tsx). |
+| Real browser interaction | Root [Playwright config](playwright.config.ts), [e2e guide](e2e/README.md) and [map-interaction smoke](e2e/map-interactions.spec.ts). The app lives in `app/`; the browser harness lives at the repository root. |
+| Pipeline and cross-language contracts | [CI workflow](.github/workflows/ci.yml), [schema parity](scripts/test_schema_parity.py), [normalization tests](scripts/test_normalization.py) and [MCP tests](mcp/tests/). |
+
+Colocate tests with the behavior they protect. Component tests use the real
+store/i18n harness with controlled timers/animation frames; jsdom is not a
+layout, paint or pixel-regression claim. Keep test state and mocks isolated.
+The browser suite tests actual pointer/keyboard/touch behavior; advisory CI
+results must be reported separately from the four core checks. Follow
+[CONTRIBUTING.md](CONTRIBUTING.md#testing) for commands and
+[the ticket convention](#ticket-workflow-and-verification) for actual results/limits.
+
+The MCP service currently exposes Tokyo. [MCP implementation](mcp/src/city_rating_mcp/server.py),
+[scoring](mcp/src/city_rating_mcp/scoring.py), [semantic tools](mcp/src/city_rating_mcp/tools/semantic.py)
+and [usage](mcp/USAGE.md) define its API. Unit fixtures are separate from the
+[artifact-dependent smoke test](mcp/scripts/smoke-test.py); semantic tools need
+separately generated embeddings. No model, source or operator activity is
+implied by a docs change or a green unit suite.
 
 ## Ticket workflow and verification
 
@@ -67,555 +303,14 @@ merge/close only within current authorization. An already merged/closed trigger
 needs its outcome recorded, not a new triage action. **Todo** may identify
 accepted, next-up work; adopting this convention does not require bulk state changes.
 
-## Data Pipeline
-
-### NocoDB Tables
-
-Base and table identifiers are configured in the private operational
-environment. The logical tables and data contracts are:
-
-Recorded row counts in this table are historical pipeline notes, not a live
-datastore inventory. Use the committed app datasets for shipped coverage.
-
-| Table | Records | Source |
-|-------|---------|--------|
-| osm_pois | 1398 | Overpass API (food, nightlife, green count, gym, convenience) |
-| hotpepper | 1493 | HotPepper Gourmet API (+ midnight_count, dining_bar_count) |
-| osm_extended | 1467 | Overpass (karaoke, nightclub, cultural venues, pedestrian streets, hostels) |
-| station_crime | 615 | **Legacy, no longer read** — built from Esri Japan's CrimR6_tokyo copy by a script never committed; superseded by `data/crime/` (CRTKY-82) |
-| crime_stats | 91 | **Legacy, no longer read** — hand-typed literals (script deleted); superseded by `data/crime/` (CRTKY-82) |
-| passenger_counts | 1409 | **Legacy, no longer read** — its ingest was never committed; superseded by `data/passengers/s12-passengers.json` (CRTKY-84) |
-| station_wards | 1493 | Nominatim reverse geocoding |
-| hostels | 3 | Overpass (test only — superseded by osm_extended.hostel_count) |
-| computed_ratings | 1493 | Output of compute-ratings.py (includes confidence/sources/data_date columns) |
-| osm_livability | 1493 | Overpass (supermarket, pharmacy, clinic, school, kindergarten, post_office, bank, laundry, dentist) |
-| station_elevation | 1493 | Open-Elevation API bulk POST. Range: -2m to 741m, avg 43m |
-| station_seismic | 1493 | J-SHIS Y2024 probabilistic seismic hazard (prob_i60_30yr, prob_i55_30yr, intensity, ground velocity) |
-| feedback | — | User feedback from site |
-
-### Local JSON data files (non-NocoDB)
-
-| File | Records | Source | Purpose |
-|------|---------|--------|---------|
-| `app/src/data/stations.json` | 1493 | ekidata | Master station list (slug, name_en, name_jp, name_ru, lines[], lat/lng, prefecture). Mirrored to `data/stations.json` for scripts. |
-| `app/src/data/line-names.json` | 127 | ekidata lookup | `{line_id: {name_ja, name_en, operator_ja, operator_en, color, type}}` — PR #90 |
-| `app/src/data/ward-data.json` | 1493 | NocoDB export | `{slug: {city_name, ward_name, prefecture_name}}` for station detail page — PR #90 |
-| `app/src/data/last-trains.json` | 1483 | mini-tokyo-3d | `{slug: {weekday, holiday, sources, data_date}}` — PR #93 |
-| `app/src/data/rent-averages.json` | 1402 | Suumo + e-Stat | 274 real Suumo listings + 1128 e-Stat municipal averages — PR #91; +302 renamed stations once `merge-estat-rent.py` read `ward-data.json` instead of NocoDB (CRTKY-113 follow-up) |
-| `app/src/data/environment-data.json` | 1493 | station_elevation + station_seismic | Derived: `{elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier}` |
-| `app/src/data/station-thumbnails.json` | 1488 | generated image assets | 320px thumb URL + LQIP base64 per station |
-| `app/src/data/station-images-all.json` | 1488 | Wikimedia + Unsplash | Gallery full-res images |
-| `app/src/data/station-places.json` | 274 | curated | Nearby places for station detail |
-| `app/src/data/slug-redirects.json` | 334 | CRTKY-113 | `{old_wapuro_slug: new_hepburn_slug}` for 301 redirects + data key renames |
-| `data/transit-times.json` | 1493 | `compute-transit-times.py` | Per-station transit times to 5 hubs |
-| `data/crime/station-safety.json` | 1493 | `scripts/scrapers/ingest-crime-open-data.py` | Weighted crime rate per slug + level (neighborhood/municipal), confidence, municipality; read by `compute-ratings.py` and `build-datamart.py`. Companion files: `municipal-2024.csv` (247 municipalities with all 7 terms and populations), `sources.json` (URLs, SHA-256, attributions) (CRTKY-82) |
-| `data/passengers/s12-passengers.json` | 1438 | `scripts/scrapers/ingest-mlit-s12.py` | MLIT S12 FY2024 daily passengers per slug (+ `confidence`, correction `flags`); read by `compute-ratings.py` and `build-datamart.py`. CC BY 4.0-compatible, attribution on `/methodology` (CRTKY-84) |
-| `data/station-datamart.json` | 1493 | `build-datamart.py` (gitignored, 15 MB) | Joined JSON of all signals for CRTKY-109 LLM pipeline |
-
-**Important:** When renaming slugs, update **every** file keyed by slug using `slug-redirects.json`. See memory `feedback_rename_data_sync.md`. **NocoDB is the exception that was missed:** rows scraped before CRTKY-113 still carry the old slugs, so every bare `{r["slug"]: r ...}` join silently dropped all 334 renamed stations (22%) to proxies in every category until 2026-09-30. Index NocoDB rows with `index_by_slug()` from `scripts/scrapers/slugs.py` — never by raw slug.
-
-`computed_ratings` has 3 metadata columns alongside the 10 rating numbers:
-- `confidence` (LongText) — JSON: `{"food":"strong","vibe":"estimate",...}`
-- `sources` (LongText) — JSON: `{"food":["hotpepper","osm"],...}`
-- `data_date` (SingleLineText) — e.g. `2026-04`
-
-These feed the `ConfidenceBadge` UI component. NocoDB API token is data-only — schema changes (new columns) must be done manually in the NocoDB UI.
-
-**AI-researched stations — confidence merge policy (CRTKY-83):** 251 slugs in the preserved block of `demo-ratings.ts` have `description` and integer ratings from human researchers; the computed block contains 1,242 entries. Since CRTKY-83, `export-ratings.py` merges confidence metadata for researched entries using a per-category comparison:
-
-- **Category rating matches computed** → inherits pipeline `confidence` + `sources` (data backs the researcher's judgment). E.g. Gakugei-Daigaku food:8 matches computed → `strong` with `['hotpepper','osm']`.
-- **Category rating differs from computed** → `editorial` level, sources `['ai_research']` (human chose a different value than data alone suggests). E.g. Mitaka food:7 differs from computed → `editorial`.
-- **No computed data for slug** → all categories get `editorial`.
-
-The `editorial` confidence level is distinct from `estimate` (formula/proxy). UI label: **”Curated”** with 藤色 fuji-iro (`#8B6DB0`) dot. Types: `ConfidenceLevel = 'strong' | 'moderate' | 'estimate' | 'editorial'`. All 251 researched entries carry per-category metadata; missing category keys remain a separate coverage limit.
-
-### NocoDB Access
-```
-URL: set via `$NOCODB_API_URL` env var in the deployment environment
-Token: set via `$NOCODB_API_TOKEN` env var (never commit the literal — see .gitignore)
-API: /api/v2/tables/{TABLE_ID}/records
-```
-
-### HotPepper API
-```
-Key: set via `$HOTPEPPER_API_KEY` env var, also in the deployment environment (never commit the literal)
-Docs: https://webservice.recruit.co.jp/doc/hotpepper/reference.html
-Important param: midnight=1 (returns places open after 23:00)
-```
-
-## Rating Formulas (v3, absolute caps + rent regression)
-
-All categories use **log-then-percentile** normalization across 1493 stations, then pass through **absolute caps** that gate the 8/9/10 tiers by raw value. The cap only decreases ratings, never increases.
-
-### Absolute caps (`ABSOLUTE_CAPS` in `scripts/compute-ratings.py`)
-
-| Category | Raw signal | 8 requires | 9 requires | 10 requires |
-|---|---|---|---|---|
-| transport | line_count | ≥2 | ≥3 | **≥5** |
-| rent | source quality (2=suumo, 1=ward, 0=regression) | — | ≥1 | ≥2 |
-| food | hp_total + osm_food | ≥100 | ≥400 | ≥1000 |
-| green | green_count | ≥25 | ≥50 | ≥80 |
-| gym_sports | gym_count | ≥7 | ≥12 | ≥20 |
-| vibe | cultural_venue_count | ≥8 | ≥20 | ≥50 |
-| nightlife | hp_midnight | ≥20 | ≥100 | ≥300 |
-
-Effect: "10" means something specific and explainable. Before v3, top 5.6% of every category (~83 stations) auto-rounded to 10. After v3, top-10 count dropped to 15–64 per category (5 for rent).
-
-Categories listed in **life-first UI order** (transport → rent → essentials → safety → food → green → gym → vibe → nightlife → crowd):
-
-### transport (18% default weight)
-```
-raw = line_count * 2 + log(1 + daily_passengers) * 0.5
-```
-Sources: station line_count (100%), MLIT S12 passengers (94%).
-
-### rent (18%, inverted: cheaper = higher)
-```
-raw = suumo_1k                                             # real (273 stations)
-    || ward_average                                         # Nominatim-matched (713 more)
-    || exp(regression)                                      # log-linear regression (rest)
-rating = round(10 - 9 * (raw - 80000) / (300000 - 80000))   # linear, floor ¥80k
-```
-Source-quality cap ensures only Suumo-backed stations can surface as rating 10; ward caps at 9; regression caps at 8. `RENT_FLOOR = ¥80k` is synced between backend `compute-ratings.py` and frontend `app/src/lib/scoring.ts`. The regression coefficients (`fit_rent_regression` in `compute-ratings.py`) are fit dynamically at runtime via least squares on every row of `rent-averages.json` — Suumo listings **and** e-Stat municipal averages (since PR #91; the old "Suumo sample" wording was wrong) — and apply only to the ~91 stations with neither; when fewer than 10 samples are present it falls back to `(log(230000), -0.025)`.
-
-### daily_essentials (14%)
-```
-raw = log(1 + supermarket) * 0.25 + log(1 + pharmacy) * 0.15
-    + log(1 + clinic + dentist) * 0.20 + log(1 + bank) * 0.10
-    + log(1 + laundry) * 0.10 + log(1 + post_office) * 0.05
-    + log(1 + school + kindergarten) * 0.15
-```
-Sources: OSM osm_livability table (1493/1493 stations, 9 subcategories). Fallback: convenience_store_count proxy.
-
-### safety (10%, inverted: safer = higher)
-```
-weighted_crimes = violent*3 + assault*2 + burglary*2 + purse_snatch*2
-                + pickpocket*1.5 + bike_theft*0.3 + fraud*0.2
-rate = weighted_crimes / adjusted_population * 10000
-```
-Sources: 2024 police open data — 警視庁 町丁 CSV (Tokyo: 町丁 within 800 m, `strong`), Kanagawa/Saitama/Chiba municipal tables (`moderate`); e-Stat population + 2020 small-area boundaries. Denominator per research/02-safety.md §2 in every prefecture: daytime population when > 2× residents, residents below 1.5×, their mean between (CRTKY-82).
-
-### food (12%)
-```
-raw = log(1 + HP_total) * 0.6 + log(1 + OSM_food) * 0.4
-```
-Sources: HotPepper total_count (100%), OSM food_count (94%). Correlation r=0.855.
-
-### green (8%)
-```
-raw = log(1 + green_area_sqm) * 0.55 + green_count * 0.25
-    + large_park_bonus * 0.1 + water_proximity * 0.1
-```
-Sources: OSM leisure=park|garden|nature_reserve + landuse=religious|forest + natural=wood. Area calculation from polygon geometry.
-
-### gym_sports (4%)
-```
-raw = OSM gym_count
-```
-Sources: OSM leisure=fitness_centre|sports_centre|swimming_pool.
-
-### vibe (4%)
-```
-raw = log(1 + cultural_venues) * 0.6 + log(1 + pedestrian_streets) * 0.15
-    + log(1 + cafe_count) * 0.15 + cultural_shop_ratio * 0.1
-```
-Sources: OSM theatre|cinema|arts_centre + shop=books|music|art|vintage; pedestrian streets. The current export preserves 251 AI-researched entries, with the override hierarchy below.
-
-### nightlife (8%)
-```
-raw = log(1 + HP_midnight) * 0.25 + log(1 + HP_izak) * 0.2
-    + log(1 + HP_bar*3) * 0.15 + log(1 + OSM_night) * 0.2
-    + log(1 + karaoke*5) * 0.1 + log(1 + hostel*10) * 0.1
-```
-Sources: HP midnight_count, izakaya_count, bar_count; OSM nightlife + karaoke; hostel count.
-
-### crowd (4%, inverted: fewer = higher)
-```
-raw = daily_passengers (MLIT/hardcoded) || HP_total * 300 + line_count * 10000
-```
-Sources: MLIT S12 FY2024 — 1438/1493 (96.3%), `moderate` for the 28 that use an older-year fallback; HotPepper total as fallback for the 55 unmanned stations operators never report (CRTKY-84).
-
-## Override Hierarchy
-1. **AI-researched** (251 entries in the committed AI block of demo-ratings.ts) — preserved by the export policy, with two pipeline exceptions: **`daily_essentials`** backfill (CRTKY-129), and **rent** where station-level listings supersede an editorial estimate. Verify the committed export before claiming those pipeline paths have run.
-2. **Computed data-driven** — from NocoDB pipeline
-3. **Heuristic fallback** — only where real data unavailable
-
-## Color System (akane↔kon diverging palette)
-
-Five traditional Japanese pigments on a diverging scale, used in two ways:
-
-| Pigment | Hex | Role in composite (map, ranked list) | Role in per-category bar (station card) |
-|---|---|---|---|
-| 茜 akane | `#8C2926` | `score ≤ p5` (strongly below) | `value − median ≤ −4` |
-| 珊瑚 sango | `#B3574E` | `p5 .. p50` | `−4 .. −2` |
-| 生成り kinari | `#D9C9A8` | `p50` (neutral pivot) | `deviation = 0` |
-| 浅葱 asagi | `#6A8999` | `p50 .. p95` | `+2 .. +4` |
-| 紺 kon | `#2C4A5F` | `score ≥ p95` (strongly above) | `deviation ≥ +4` |
-
-**Key insight:** the bar color encodes *deviation from the Tokyo median for that category*, NOT raw value. A long bar does not mean a blue bar — e.g. Affordability `8 / 10` when `CITY_MEDIANS.rent = 8` paints kinari cream, not blue, because the station is exactly average for rent.
-
-**Data-quality icons (separate channel):** per-category confidence uses "Data Depth" SVG icons (`ConfidenceIcon` in `ConfidenceBadge.tsx`) where **shape encodes level** (readable without color). Muted Japanese pigments from `CONFIDENCE_DOT_COLORS` add a second redundant channel:
-
-| UI label | Level key | Shape | Pigment | Hex |
-|---|---|---|---|---|
-| Measured | `strong` | ◉ bullseye (dot + ring) | 苔色 koke-iro | `#6A8059` |
-| Partial | `moderate` | ● solid circle | 山吹 yamabuki | `#C9A227` |
-| Estimate | `estimate` | ○ dashed circle | 鈍色 nibi-iro | `#828A8C` |
-| Curated | `editorial` | ◆ diamond (菱形 hishigata) | 藤色 fuji-iro | `#8B6DB0` |
-
-### Why two APIs
-
-- **`compositeToColor(score, anchors)`** — map markers and ranked list. Uses `computeCompositeAnchors(stations, weights)` to percentile-stretch across the current weighted distribution (`p5 / p50 / p95`). This is recomputed as the user drags weight sliders so the palette always spans the actual data range. Homepage call sites defer it via `useDeferredValue` to keep INP low.
-- **`categoryDeviationColor(value, median)`** — per-category bars on the station detail page. Uses the hardcoded `CITY_MEDIANS` constant — no sort needed, no weights needed. Deviation maps linearly from `[−5, +5]` onto the 5 palette stops.
-
-`pigmentName(deviation)` returns `{ jp, en, tone }` for microcopy on the bar hover tooltip ("Painted in 浅葱 asagi (pale blue-green)").
-
-### Color literacy affordances (CRTKY-68)
-
-The station Ratings card teaches the "deviation, not value" rule through five visual affordances, no words required:
-
-1. **Median tick** — 1 px `slate-300` hairline at `median * 10%` on every bar (Tufte reference line)
-2. **Two-tone empty track** — warm `#F5F1EC` cream left of median, cool `#EFF2F4` slate right
-3. **Direction arrow** — `↑ / ↓ / −` after the value in the bar color at 65 % opacity
-4. **Confidence shape icons** — `ConfidenceIcon` SVG: bullseye (Measured) / solid circle (Partial) / dashed circle (Estimate) / diamond (Curated). Shape encodes level; color (koke-iro / yamabuki / nibi-iro / fuji-iro) adds redundant channel
-5. **Optional `?` on `Tooltip`** — default is a plain `text-gray-300` `?` (no grey pill) when `showHelpIcon` is true. On `/station/[slug]` Ratings, category labels use `showHelpIcon={false}` and `cursor-help` on the text so hover opens the same definition + median block without a second glyph (CRTKY-79).
-
-Tooltips on the Ratings card: **dot** hover (Measured / Partial / Estimate + sources), **category label** hover (category copy + median vs this station), **bar** hover (score + deviation + pigment line). A single muted caption under the title for every station with ratings (bar vs median + hover hints); if `station.confidence` exists, one extra clause points to dots and the chip key below — no second italic footer (avoids duplicating Uchisaiwaichō-style copy). AI-only rows without pipeline metadata have empty dot slots but the same bar explanation as computed stations.
-
-### Station Overview radar vs Tokyo median (CRTKY-76, PR #51)
-
-The single-station `RadarChart` (lazy-loaded via `RadarChartWrapper`) draws **two polygons**: a faint slate **Tokyo median** reference from `CITY_MEDIANS` (drawn first, `dot={false}`) and **this station** in blue on top, plus a micro-legend under the chart and the default recharts hover tooltip. Same deviation story as the rating bars, without per-axis pigment splits (recharts `Radar` is one stroke per series). The compare radar (`CompareRadarChart`) does not add the median overlay yet — avoids clutter with 2–3 station polygons.
-
-### Heatmap layer (unchanged)
-
-The map's heatmap mode still uses `CATEGORY_PALETTES` in `scoring.ts` — per-dimension 2-stop palettes (food → amber/orange, nightlife → lavender/purple, etc). That layer's job is *orientation* ("which dimension am I viewing"), not insight, so category hues still serve it. Explicitly out of scope for CRTKY-66.
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `README.md` | Public repo intro: 1493 stations, real stack, data sources, **honesty** pointers (hub stub CRTKY-81, CLAUDE Data readiness, Plane CRTKY-80–84) |
-| `infra/observability/` | Reference Traefik-access-logs→Loki stack (CRTKY-127): promtail `traefik-access` job, proxy args, reference Loki config (5d retention), verified LogQL queries. Applied on the host by the owner via [the runbook](research/notes/2026-10-28-traefik-loki-access-logs-runbook.md); request-level ops view only — page-view analytics stays Umami. |
-| `app/src/data/demo-ratings.ts` | Committed Tokyo ratings export: 251 researched + 1,242 computed entries. Recount export blocks after regeneration; file length is not a coverage metric. |
-| `app/src/data/rent-averages.json` | Suumo rent data (274 stations) |
-| `app/src/data/station-thumbnails.json` | **Three-tier image data** — `{slug: {thumb, lqip}}` for 1488 stations (99.7%). `thumb`: 320px thumbnail URL. `lqip`: 8×6 base64 JPEG (~877 chars) for instant blur-up on hover. Generated by `scripts/generate-thumbnails.py` in the operational environment. Replaces old `station-images.json` (deleted). 1426 KB raw, **67 KB gzipped**. |
-| `app/src/data/station-images-all.json` | Full-res photos — **8,827 images across 1488 stations (99.7%)**. Used by station detail `ImageGallery`. Metadata: url, alt, attribution, photographer, license, source. **Privacy-cleaned** (CRTKY-97): 136 portrait/face images removed via OpenCV DNN detection + human review. |
-| `app/src/data/environment-data.json` | Elevation + seismic data for 1493 stations. Generated by `scripts/export-environment.py` from NocoDB. |
-| `app/src/data/line-names.json` | **127-entry line mapping** — ekidata ID → name_ja/name_en/operator/color/type. Copy of `data/line-names.json`. Researched from Wikipedia + operator sites. |
-| `app/src/data/ward-data.json` | Ward/city/prefecture for 1493 stations. Generated by `scripts/export-wards.py` from NocoDB `station_wards`. |
-| `app/src/data/last-trains.json` | **1483/1493 stations** with `{weekday, holiday, sources, data_date}`. Generated by `scripts/scrapers/scrape-last-trains.py` from [mini-tokyo-3d](https://github.com/nagix/mini-tokyo-3d) timetables. MIT license. |
-| `app/src/lib/data.ts` | Merges stations + ratings + rent + environment + **line names + ward data** at build time |
-| `app/src/lib/types.ts` | TypeScript interfaces (StationRatings, EnvironmentData, SeismicRiskTier, ElevationTier, **FilterState**, **LineInfo**, **WardInfo**, etc.) |
-| `app/src/lib/store.ts` | Zustand store. **Shared across cities:** `weights`, heatmap, `showRailOverlay`, `isFlying`. **Per city** (`cities.tokyo` / `cities.bangkok`): `filters: FilterState` (local currency), `selectedStation`, `hoveredStation`, compare list, `hideFloodRisk`/`hideHighSeismic`. Components read the current page's slice with `useCityState(selector)` and act through `useCityActions()` (stable per city); non-React code uses `useAppStore.getState().cities[city]` |
-| `app/src/lib/cities.ts` | **City registry** — the one place Tokyo and Bangkok differ: unit (`station`/`district`), paths, map framing, currency, rent/commute slider ranges, 5 hubs, preset dealbreakers, feature flags (environment filters, livecams, rail overlay), medians + default anchors. `formatRentShort()`, `areaPath()`, `hasActiveFilters()` |
-| `app/src/lib/city-context.tsx` | `CityProvider` (set per page by server components) + `useCityId()` / `useCity()`. Defaults to Tokyo |
-| `app/src/lib/area-key.ts` | Typed selection keys for multi-level cities: a bare slug is a Bangkok district, `st.<id>` a station area, `cell.<index>` a 200 m grid cell — one selection / hover / compare slot per city, no id collisions ("phaya-thai" is both a district and a station) |
-| `app/src/lib/area-lists.tsx` | `AreaListsProvider` (Bangkok homepage) carries the station-area list next to the `stations` prop; `useLevelAreas()` = the areas ranked at the painted level, `useAllAreas()` = everything a key can point at (search, compare, mobile card) |
-| `app/src/lib/bangkok-grid.ts` | The 200 m grid in the browser: lazy fetch of `app/public/data/bangkok/grid-<hash>.bin` (header in `data/bangkok/grid.json`), decode, `cellAt` / `cellInfo`, `scoreCells`, resident-weighted `gridAnchors`, `passMask` (dealbreakers per cell), `gridHotspots` ("Best spots"). `useBangkokGrid()` shares one download between map and side panel |
-| `app/src/lib/basemap.ts` | Shared by both maps (Tokyo `Map.tsx`, Bangkok `DistrictMap.tsx`): CARTO with `NEXT_PUBLIC_CARTO_BASEMAPS_KEY`, OSM tiles without a key (PR #110 — details in the `Map.tsx` row) |
-| `app/src/lib/scoring.ts` | Weighted score, affordability, **diverging akane↔kon Japanese palette** (CRTKY-66), **`applyDealbreakers()`** hard filter function. APIs: `compositeToColor(score, anchors)` for weighted-score surfaces with percentile-stretched anchors; `categoryDeviationColor(value, median)` for per-category bars via `CITY_MEDIANS`; `pigmentName(dev)` returning `{jp, en, tone}` for microcopy; `scoreToColor(score, dim)` is a thin heatmap-only shim. Five stops: 茜 akane / 珊瑚 sango / 生成り kinari / 浅葱 asagi / 紺 kon |
-| `app/src/lib/url-state.ts` | Encode/decode URL state: weights (`w`), filters (`mr`/`mc`/`cm`), selectedStation, compareStations, heatmap |
-| `data/stations.json` | Master station list (1493 entries) |
-| `scripts/station-area-codes.json` | Station → ward code mapping (274 entries) |
-| `scripts/scrapers/utils.py` | Shared NocoDB client, rate limiter, station loader |
-| `scripts/scrapers/scrape-osm-pois.py` | OSM POI scraper (food, nightlife, green, gym) |
-| `scripts/scrapers/scrape-hotpepper.py` | HotPepper restaurant/izakaya/bar scraper |
-| `scripts/compute-ratings.py` | Normalizes all sources → 1-10 ratings + confidence metadata |
-| `scripts/export-ratings.py` | NocoDB computed → demo-ratings.ts (with confidence/sources/data_date). Transit times from `data/transit-times.json` (CRTKY-81); missing per-category confidence keys default to **`estimate`** in generated TS |
-| `scripts/compute-transit-times.py` | Geographic transit estimation: Haversine + line connectivity + calibration against 252 AI ground truth. Output: `data/transit-times.json`. Run with `--calibrate` for grid search. (CRTKY-81) |
-| `data/transit-times.json` | Pre-computed transit times for 1493 stations to 5 hubs. Generated by `compute-transit-times.py`. |
-| `scripts/export-environment.py` | Exports NocoDB elevation + seismic → `environment-data.json` with tier classifications |
-| `scripts/export-wards.py` | Exports NocoDB `station_wards` → `ward-data.json` (city_name, ward_name, prefecture_name) |
-| `scripts/scrapers/scrape-last-trains.py` | Fetches [mini-tokyo-3d](https://github.com/nagix/mini-tokyo-3d) timetables, matches MT3D station IDs → our slugs via Haversine distance (<200m), computes `MAX(departure)` per day type. Output: `data/last-trains.json` + `app/src/data/last-trains.json`. Uses `--cache-dir` to avoid re-downloading 174 files. |
-| `data/line-names.json` | Master line name mapping (127 entries). Source of truth; copied to `app/src/data/` for Next.js import |
-| `data/livecams.json` | Per-station YouTube livecam metadata (29 stations, 32 rows today). Source of truth; copied to `app/src/data/` for import |
-| `app/src/data/livecams.json` | Frontend-imported livecams. `{slug: [{id, name_en, name_ja, video_id, channel_id, embed_url (youtube.com), watch_url (watch?v=…), thumbnail (i.ytimg.com), distance_m, source: 'mini-tokyo-3d', data_date}]}`. ~15 KB. Merged into `Station.livecams` via `getStation()`. |
-| `scripts/scrapers/scrape-livecams.py` | Scraper for `https://mini-tokyo.appspot.com/livecam` (MT3D, MIT). 300m Haversine match vs 1493 slugs; allows multiple cameras per slug sorted by `distance_m`. Flags: `--cache-dir`, `--dry-run`, `--debug`. Not auto-run on rating refresh (independent cadence). |
-| `app/src/components/LiveCameras.tsx` | Click-to-load facade → iframe on user click. 16:9 aspect, real YouTube thumbnail preview on facade (with dark gradient overlay for readability), tab strip when 2+ cameras, ✕ dismiss overlay, `role="tabpanel"` + `aria-labelledby`. Iframe `src` strips `autoplay=1` on touch via `useIsTouch()` because iOS Safari refuses to auto-play YouTube live embeds even when muted (shows a black box). Touch users instead see YouTube's own play button after the facade tap — one extra gesture, but it actually works. `allow` attribute matches MT3D's full set (`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`); no `referrerPolicy` on the iframe (was `strict-origin-when-cross-origin` and broke iOS playback silently). Requires CSP `frame-src` + `img-src i.ytimg.com` in `next.config.ts`. |
-| `scripts/scrapers/scrape-elevation.py` | Open-Elevation bulk POST scraper (all 1493 in 3 requests) |
-| `scripts/scrapers/scrape-seismic.py` | J-SHIS Y2024 seismic hazard scraper (1 req/sec, ~25 min) |
-| `scripts/scrapers/check-image-urls.py` | Bulk HEAD check of image URLs (concurrent, deployment-friendly) |
-| `scripts/scrapers/scrape-osm-livability.py` | Daily essentials scraper (9 categories). Incremental. 1493/1493 complete. |
-| `scripts/refresh-ratings.sh` | One-command chain: compute → export → build verify → commit → push |
-| `app/src/app/[locale]/methodology/page.tsx` | `/methodology` page: data sources, pipeline, confidence, color system, limitations |
-| `app/src/i18n/routing.ts` | next-intl v4 locale config: `['en', 'ja', 'ru']`, default `'en'` |
-| `app/src/i18n/navigation.ts` | Locale-aware `Link`, `redirect`, `usePathname`, `useRouter` |
-| `app/src/lib/station-name.ts` | `stationDisplayName(station, locale)` → `{primary, secondary}`, `stationPrimaryName()` → single string. EN: name_en/name_jp, JA: name_jp/name_en, RU: name_ru\|\|name_en/name_jp |
-| `app/src/messages/{en,ja,ru}/common.json` | 190+ key dictionaries per locale. All UI strings, rating labels, tooltips, confidence, feedback, station page |
-| `app/src/components/LocaleSwitcher.tsx` | EN/JA/RU toggle button group in header |
-| `app/src/app/station/[slug]/page.tsx` | Station detail Ratings: fixed-width icon column (`w-6`), `ConfidenceBadge` (SVG shape icons) before label when `confidence` exists, category `Tooltip` with `showHelpIcon={false}`, bar `Tooltip` with `wrapper="div"` + `flex-1`. Legend chips use `ConfidenceIcon` at 10px. Caption always explains bars; icon clause + chip key only when `station.confidence` (CRTKY-79 + AI-only stations without metadata) |
-| `app/src/components/ConfidenceBadge.tsx` | **"Data Depth" SVG icons** — shape encodes confidence level (bullseye = Measured, solid circle = Partial, dashed circle = Estimate, diamond 菱形 = Curated). Colors unchanged (koke-iro / yamabuki / nibi-iro / fuji-iro). Exports `ConfidenceIcon` (reusable SVG, 14×14 viewBox) + `CONFIDENCE_DOT_COLORS` + `SOURCE_LABELS`. 400 ms enter delay on desktop (CRTKY-67); **tap-to-toggle on touch** via `useIsTouch()` with enlarged tap target (p-3 padding). Label wording is "Measured / Partial / Estimate / Curated" (CRTKY-67 + CRTKY-83) |
-| `app/src/components/RatingBar.tsx` | Presentational bar for the station Ratings card: two-tone empty track (warm left of median, cool right), colored fill via `categoryDeviationColor`, 1 px slate-300 median tick hairline. Wrapped by `<Tooltip wrapper="div" showHelpIcon={false}>` at the call site for the three-line pigment tooltip (CRTKY-68) |
-| `app/src/components/Tooltip.tsx` | Generic tooltip wrapper. API: `content: ReactNode` (not just string), `showHelpIcon` opt-out, `wrapper: 'span' \| 'div'` for block children, `className` escape hatch for flex sizing. **Desktop:** 400 ms enter delay + 150 ms leave delay (hover). **Touch:** tap-to-toggle via `useIsTouch()`, tap-outside closes (pointerdown listener). Plain `?` glyph (no pill background) when `showHelpIcon` is true (CRTKY-68); station Ratings labels opt out (CRTKY-79) |
-| `app/src/lib/use-is-touch.ts` | `useIsTouch()` hook — `useSyncExternalStore` + `matchMedia('(hover: none)')`. SSR-safe (returns false on server). Used by Tooltip, ConfidenceBadge, Map for touch-specific behavior branching. |
-| `app/src/components/NaturalEnvironment.tsx` | Station detail: elevation badge (flood-risk warning <5m) + seismic risk dot (Low/Moderate/High/Very High with J-SHIS tiers) + tooltips + legend. Uses `EnvironmentData` from types.ts. Seismic dot colors: koke-iro (low), yamabuki (moderate), sango (high), akane (very high). |
-| `app/src/components/TransportLines.tsx` | Station detail: railway line names with official color dots, operator labels, ward/city location. Locale-aware (EN/JA/RU). Collapse toggle at 6+ lines. Sort: subway → JR → private. Type legend when mixed. Uses `LineInfo[]` + `WardInfo` from types.ts. |
-| `app/src/components/Map.tsx` | Leaflet map with **`preferCanvas`** (Canvas renderer for 1493 markers; halo + top-5 pulse forced to SVG via `renderer={getSvgRenderer()}`). **Smart flyTo:** adaptive zoom target (pan-only when ≥13, instant setView for short hops, 0.4–0.6s duration with `easeLinearity: 0.4`), `isFlying` ref guard, `onFlyStart`/`onFlyEnd` callbacks. **Base map:** tiles and attribution come from `lib/basemap.ts` — CARTO `light_all` with `NEXT_PUBLIC_CARTO_BASEMAPS_KEY`, OpenStreetMap when the key is unset; the attribution control is on because both providers require it. **Tile prefetch:** `prefetchTilesAroundStation()` warms a 3×3 z14 grid on marker hover with `new Image()` (CARTO only). **FlyTo canvas fade:** `.map-flying` class on container fades canvas to `opacity:0` during zoom animation (hides Leaflet's CSS `scale(2^Δzoom)` artifact, #6050). `useLayoutEffect` ensures SVG halo hidden before paint. `closePopup()` + `autoPan={false}`. Highlights `selectedStation`/`hoveredStation` with brand-blue border + pulsating `.station-halo` ring (keyframes in `globals.css`). **Map `mouseover`/`mouseout`** call `setHoveredStation` (150ms debounced clear on `mouseout`) so list↔map hover stays linked (CRTKY-59). Highlighted marker radius **×1.4** vs base. Uses `compositeToColor` + `computeCompositeAnchors` deferred via `useDeferredValue` (CRTKY-61). **Three-tier image loading:** `StationTooltipHero` shows LQIP blur instantly (inline base64), crossfades to 320px thumbnail (prefetched on `mouseover`), gradient fallback if no imagery. **Dealbreaker filters:** `applyDealbreakers()` from `scoring.ts` applies rent/commute/category-min/environment filters → `visibleStations` memo. Rent-unknown stations render at `fillOpacity: 0.35` + `opacity: 0.3` + `weight: 0.5` (full border+fill fade; suppressed on highlight/compare). Composite anchors computed on FULL dataset (pre-filter) for stable colors. **Z-order (CRTKY-90):** `sortedForRender` memo sorts ascending by score so high-rated stations paint on top (canvas paint order = DOM order). Top-5 pulse derives from the same sorted array (one sort, not two). **Touch adaptations (PR #69):** marker radius +4px on `(hover: none)`, Leaflet Tooltip suppressed (touch users get enriched Popup with image+snippet), `TouchZoomControls` component (+/− buttons bottom-right). |
-| `scripts/generate-thumbnails.py` | Operational script: reads `station-images-all.json`, generates 320px thumbnails + 8×6 LQIP base64 for each station. Output: thumbnail image files and `station-thumbnails.json`. Deps: Pillow. Storage is configured in the private operational environment. |
-| `scripts/detect-faces.py` | OpenCV DNN face detection on all images. Runs in the operational environment (`opencv-python-headless`). Flags images with prominent faces (area >2% or confidence >70%). Output: `flagged-faces.json`. |
-| `scripts/generate-face-review.py` | Generates self-contained HTML contact sheet from `flagged-faces.json`. Grid of flagged images with checkboxes, filters, "Export Removals JSON" button. Runs locally. |
-| `scripts/remove-flagged-images.py` | Removes confirmed face images from `station-images-all.json` + deployment storage. Derives disk path from URL (not `local_path`, which omits `flickr/` prefix). Supports `--dry-run`. |
-| `app/src/components/FilterPanel.tsx` | **Dealbreakers** (rent slider, commute slider, per-category min buttons, flood/seismic checkboxes, match counter) + weight sliders + presets + search + Top Ranked. Search section `hidden md:block` (mobile uses `MobileSearchPill`). Presets apply both weights + filters. Category mins in collapsible `<details>` with "N set" badge. Live match counter ("423 of 1493 match"). Ranked list shows `(rent unconfirmed)` for unknown-rent stations when rent filter active. Deferred ranking via `useDeferredValue(weights)` (CRTKY-61). |
-| `app/src/components/MobileSearchPill.tsx` | `md:hidden` floating search pill over the map (Google Maps style). Magnifying glass icon + input + clear + results dropdown. On result tap: `setSelectedStation` → map flies, search clears. Self-contained search logic (duplicated from FilterPanel, ~10 lines). Position: `absolute top-2 left-3 right-3 z-[999]` — full width since the map controls moved to the row below on phones. Input `text-base` (16px) to prevent iOS Safari auto-zoom. |
-| `app/src/components/MapControls.tsx` | Heatmap toggle button + dimension select (+ Bangkok's Rail toggle). `.map-control-btn` class for 44px touch targets on `(pointer: coarse)`. Position: `absolute top-3 right-3 z-[1000]` on desktop; on phones `top-14`, icon-only (text labels such as "Тепловая карта" ran into the search pill), sharing the second row with Bangkok's level switch. |
-| `app/src/components/RadarChart.tsx` | Single-station recharts radar: median ghost + station polygon + micro-legend (CRTKY-76). |
-| `app/src/components/RadarChartWrapper.tsx` | `next/dynamic` for `RadarChart` with `ssr: false` on station detail only — avoids SSR/hydration issues with recharts (same lazy pattern as other chart entry points). |
-| `app/src/components/FeedbackWidget.tsx` | Station/general feedback form. Prior-submit state comes from **`useSyncExternalStore`** reading `localStorage` (server snapshot `false`); same-tab updates use a tiny `window` event (`city-rating-feedback-ls-sync`) because `storage` events do not fire in the active tab. Avoids `useEffect`+`setState` for initial hydrate (eslint `react-hooks/set-state-in-effect`). Surfaces **`error` JSON** from `/api/feedback` (e.g. 429 rate limit) instead of a single generic line. |
-| `app/src/app/api/feedback/route.ts` | POST → NocoDB `feedback` table. **IP rate limit:** minimum **2.5s** between requests per IP (was 10s and blocked legitimate “Add another tip”). Returns **429** + `Retry-After` + `{ error }` when under cooldown. |
-| `app/src/i18n/routing.ts` | Locale config: `['en','ja','ru']`, default `en`. Exports `Locale` type. |
-| `app/src/i18n/request.ts` | Server-side `getRequestConfig` — loads `messages/{locale}/common.json` per request. |
-| `app/src/i18n/navigation.ts` | Locale-aware `Link`, `redirect`, `usePathname`, `useRouter`. **All internal links must use this, not `next/link`.** |
-| `app/src/proxy.ts` | next-intl middleware (Next.js 16 convention). Accept-Language detection, NEXT_LOCALE cookie, locale redirect. API routes excluded. |
-| `app/src/messages/{en,ja,ru}/common.json` | Translation dictionaries (~190 keys each). Single file per locale. EN is source of truth. |
-| `app/src/components/LocaleSwitcher.tsx` | EN/JA/RU toggle button group. Uses `useRouter().replace()` from i18n/navigation. In homepage + station detail headers. |
-
-## i18n (CRTKY-98 epic)
-
-Three locales: **English** (default, no URL prefix), **Japanese** (`/ja/`), **Russian** (`/ru/`).
-
-### Stack
-- **Library:** `next-intl` v4.9.1 (App Router native)
-- **Proxy:** `src/proxy.ts` (Next.js 16 renamed middleware → proxy)
-- **Config:** `src/i18n/routing.ts` (locale list), `src/i18n/request.ts` (message loading), `src/i18n/navigation.ts` (locale-aware Link/router)
-- **Dictionaries:** `src/messages/{en,ja,ru}/common.json` (~190 keys per locale, single file)
-- **Plugin:** `next.config.ts` wrapped with `createNextIntlPlugin`
-
-### Route structure
-```
-app/src/app/
-  layout.tsx                    → Root shell (no <html>, no locale)
-  [locale]/
-    layout.tsx                  → <html lang={locale}>, NextIntlClientProvider, fonts, Umami
-    page.tsx                    → /{locale} homepage
-    station/[slug]/page.tsx     → /{locale}/station/:slug
-    error.tsx                   → Error boundary
-  api/feedback/route.ts         → POST /api/feedback (no locale)
-  global-error.tsx              → Global fallback (no locale)
-```
-
-### Translation patterns
-
-| Context | API | Example |
-|---------|-----|---------|
-| Server component | `const t = await getTranslations()` | Station detail page |
-| Client component | `const t = useTranslations()` | FilterPanel, Map, ConfidenceBadge |
-| Namespaced | `useTranslations('feedback')` | FeedbackWidget |
-| Dynamic keys | `t(\`ratings.${key}\`)` | Rating labels, hub labels |
-| ICU plurals (RU) | `{count, plural, one {# линия} few {# линии} many {# линий}}` | Station count, lines |
-| Rich text styling | `t.rich('key', { bold: (c) => <span>{c}</span> })` | Match counter bold number |
-| Internal links | `import { Link } from '@/i18n/navigation'` | **NOT** `next/link` — preserves locale |
-
-### Fonts
-- Inter: `subsets: ['latin', 'cyrillic']` (~20 KB addition for Cyrillic)
-- JP: system font stack in `--font-sans`: `'Hiragino Sans', 'Yu Gothic', 'Meiryo', system-ui` (zero load cost)
-
-### SEO
-- `next-sitemap.config.js` generates hreflang alternates for all 3 locales on every URL
-- `<html lang={locale}>` set per locale
-- JSON-LD includes `inLanguage` field
-- Default locale (EN) has no URL prefix — existing indexed URLs unchanged
-
-### Static page generation
-
-Tokyo station and Bangkok district/station-area pages are generated for each
-locale. Grid cells are explored on the map rather than as standalone pages.
-Page totals, build timings and worker counts belong in build output, not as
-fixed coverage claims in this guide.
-
-### Station naming convention (CRTKY-111 helpers + CRTKY-107 data)
-
-`stationDisplayName()` / `stationPrimaryName()` in `lib/station-name.ts` pick the name per locale:
-
-| Locale | Primary (bold) | Secondary (gray) | Notes |
-|--------|---------------|-------------------|-------|
-| EN | name_en | name_jp | |
-| JA | name_jp | name_en | Kanji primary, romaji helper |
-| RU | name_ru | name_jp | Cyrillic primary, kanji for context |
-
-Kanji (`name_jp`) always visible — users are physically in Tokyo and see kanji on station signs.
-
-**`name_ru` (CRTKY-107):** all 1493 stations, written into both `stations.json` files by `scripts/generate-name-ru.py`. Sources in order: the established Russian name on Wikidata (385); Polivanov (`scripts/polivanov.py`) of Wikidata's English label (1061); Polivanov of our `name_en` (45); two descriptive airport names in its `MANUAL`. A source only counts if its name agrees with the station's **kana reading** (Wikidata P1814) — that check rejected the "established" label Умэсики (梅屋敷 is Umeyashiki). Wikidata labels and kana are committed CC0 snapshots in `data/names/` (`--refresh` re-queries both); per-station sources and kana agreement: `data/names/name-ru-report.json`.
-
-**`name_en` (CRTKY-134):** came from automated kanji→romaji and misread 347 stations — 茅ヶ崎 was "Me-Ke-Saki" (Chigasaki), 関内 "Sekiuchi" (Kannai), 酒々井 "Sake-(kurikaesi)-I" (Shisui). `scripts/fix-name-en.py` replaced them with Wikidata's English label where the **kana reading confirms the label** and contradicts ours; a label alone is not trusted (たまプラーザ's reads "閻魔大王"). Katakana loanwords (Tama-Plaza, not Tama-Puraaza), stations without kana and bracketed names are in its hand-reviewed `MANUAL`. **Slugs were not changed**: `/station/genka-osamu` now shows "Motokaji"; renaming slugs needs a CRTKY-113-style redirect pass. The fixer also renamed the misread names inside the stations' own descriptions (EN and RU).
-
-After touching names, run `fix-name-en.py` → `generate-name-ru.py` → `merge-descriptions.py`; `scripts/test_station_names.py` and `test_polivanov.py` fail if a name contradicts its kana or drifts from what the scripts produce. Never re-run `scripts/generate-stations.mjs` (the April 2026 bootstrap) — it would overwrite all of the above.
-
-### Known limitations
-- `dynamic()` loading callbacks ("Loading map...") can't use hooks — left as EN
-- Snippets (`description.atmosphere`) are Russian-only — shown in all locales until CRTKY-109 generates multilingual descriptions. CRTKY-111 gates display to RU-only as interim fix.
-- `RATING_LABELS` / `RATING_TOOLTIPS` constants still exported from `types.ts` for key iteration — display strings come from `t()`, but the Record objects remain for `Object.keys()` loops
-
-## Recent UI (post–CRTKY-68)
-
-| PR | Plane | What shipped |
-|----|-------|----------------|
-| #49 | CRTKY-77 | FilterPanel: `Tooltip` with `content` prop; confidence legend chips + `Confidence:` prefix on badges (`ConfidenceBadge` + station page). |
-| #50 | CRTKY-71 | Map tooltip: `StationTooltipHero` falls back to score gradient when Wikimedia `img` fires `onError` (Umami retained). |
-| #51 | CRTKY-76 | Station Overview radar: `CITY_MEDIANS` slate ghost under blue station shape + legend + tooltip. |
-| #56 | CRTKY-83, 81 | AI confidence merge (`editorial` level, fuji-iro dot) + transit times (geographic model, MAE 5.5 min). |
-| #57 | CRTKY-64/65, 48, 42 | Distribution fixes (safety/gym gaps) + data-source tooltips + green area scraper. |
-| — | CRTKY-85, 86 | Natural hazard data: elevation + seismic info layer (`NaturalEnvironment.tsx`) + binary safety filters on map/ranked list. Commit `e165ff9`. |
-| #60 | CRTKY-88 | **Dealbreaker filters:** hard constraints (max rent, max commute, per-category minimums) independent of soft weights. Presets set both weights + filters. URL-serialized (`mr`/`mc`/`cm`). Rent-unknown stations pass but render dimmed. Match counter. |
-| #61 | CRTKY-89 | **UX polish:** dual-range sliders (min+max) for rent & commute, "Low Crowds" → "Quietness" label, top-5 ranked stations get subtle pulse on map (`top-ranked-pulse` CSS, 2.4s, composite color). |
-| #62 | — | Gallery LQIP blur-up on station detail `ImageGallery` (inline base64 → sharp crossfade). `generate-gallery-lqip.py`. |
-| #64 | CRTKY-90 | **Map z-order + unknown fade:** high-rated stations paint on top (ascending score sort); `rentUnknown` stations fade border (opacity 0.3, weight 0.5) not just fill. |
-| #67 | — | **FlyTo UX optimization:** Canvas renderer (`preferCanvas`) for 1493 markers, smart flyTo (adaptive zoom + 0.4–0.6s duration + easeLinearity), tile prefetch on hover (3×3 z14 grid via `<link rel="prefetch">`), SVG override for animated overlays (halo + top-5 pulse). |
-| #69 | — | **Mobile touch UX:** viewport meta, `useIsTouch()` hook, tap-to-toggle tooltips (Tooltip + ConfidenceBadge), map markers +4px on touch, enriched Popup with image+snippet on touch, mobile zoom +/− buttons, gallery swipe+keyboard, slider thumbs 24px on `(pointer: coarse)`, search input hints, safe-area-inset, touch-aware CSS. |
-| #71 | CRTKY-93 | **Confidence "Data Depth" SVG icons:** replace colored dots with shape-encoded icons — bullseye (Measured), solid circle (Partial), dashed circle (Estimate), diamond 菱形 (Curated). Shape readable without color (accessibility). `ConfidenceIcon` exported for legend chip reuse. |
-| #72 | CRTKY-94 | **Mobile header + search pill:** responsive header ("Tokyo Explorer" on mobile, full name on desktop, icon-only Share, hide Scatter Plot/Feedback/count/credit). `MobileSearchPill` component — Google Maps-style floating search over map (`md:hidden`). FilterPanel search hidden on mobile. |
-| #73 | — | **FlyTo cleanup:** hide halo + close popup during flyTo (`isFlying` state guard, `useLayoutEffect`, `closePopup()`, `autoPan={false}`). |
-| #75 | CRTKY-91 | **FlyTo canvas fade:** `.map-flying` CSS class fades canvas to `opacity:0` during flyTo zoom animation (Leaflet #6050 CSS-scaling, confirmed 4× via MutationObserver). Tiles stay visible. Markers fade back in after `moveend` (0.15s transition). |
-| #76 | CRTKY-95 | **iOS Safari fixes:** search input `text-base` (16px) prevents auto-zoom, search pill `right-24` clears Heatmap button, root `overflow-x-hidden`, zoom buttons safe-area-aware `calc(80px + env(safe-area-inset-bottom))`. |
-| #78 | CRTKY-96 | **Safari 26 Liquid Glass hardening:** `h-screen` → `h-dvh` (dynamic viewport tracks toolbar), `html` background-color for toolbar tint, MobileDrawer `display:none` when closed (two-phase rAF open/transitionend close), Heatmap button 44px touch target gated by `@media (pointer: coarse)`, ComparePanel mobile-only bottom spacer for dynamic toolbar clearance. |
-| #79 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. Deleted from `station-images-all.json` + deployment storage. 18 station thumbnails regenerated. Scripts: `detect-faces.py`, `generate-face-review.py`, `remove-flagged-images.py`. |
-| #80 | CRTKY-97 | **Privacy: face/portrait image removal.** OpenCV DNN face detection on 8,963 images → 199 flagged → 136 confirmed removals across 101 stations. |
-| #81 | CRTKY-87, 50 | **Daily Essentials (10th category)** end-to-end: `scrape-osm-livability.py` (1493/1493), compute + export pipeline, frontend types/weights/presets rebalanced, `/methodology` page, OG images on 1488 station pages. Docs refresh (00-overview, VISION). Plane triage: 14 stale issues closed. |
-| #82 | CRTKY-98, 111 | **i18n: EN/JA/RU multi-language support.** next-intl v4, `[locale]` routing, proxy.ts, 190-key dictionaries, 15 components migrated to `t()` calls, `LocaleSwitcher`, hreflang sitemap, 4493 pages. `stationDisplayName()` + `stationPrimaryName()` helpers for locale-aware station names across all display sites. |
-| #83 | CRTKY-34, 106 | **GDPR privacy footer** (desktop-only, cookie-free analytics notice in EN/JA/RU). **Methodology page** moved under `[locale]` routing (was 404). Livability scraper 1493/1493 complete (last 2 retried). |
-| #90 | CRTKY-54, 52, 112 | **Transport lines + ward/city on station pages.** 127 ekidata line IDs → name/operator/color mapping (`line-names.json`). 1493 ward records from NocoDB (`ward-data.json`). `TransportLines` component: color dots, locale-aware names, collapse at 6+ lines, type legend. `Station.lines` resolved from `string[]` to `LineInfo[]` at build time. `MapStation` unchanged. |
-| #91 | CRTKY-43 | **Rent expansion 274 → 1100 (18% → 74%)** via e-Stat govt statistics. `scripts/scrapers/scrape-estat-rent.py` + `merge-estat-rent.py`. Suumo actual listings keep priority; e-Stat fills ward-average fallback. `source` field: `suumo` \| `estat` \| old `ward_average` retired. |
-| #92 | — | **Ratings refresh (2026-04-14)** — green area scraper completion unlocks 428 more stations at `strong` confidence. `computed_at: 2026-04-15` in NocoDB `computed_ratings`. |
-| #93 | CRTKY-115 | **Last train times.** Scraped from mini-tokyo-3d (1483/1493 = 99.3%). `last-trains.json`: `{weekday, holiday, sources, data_date}`. 4th StatCard on station detail with tooltip caveat. Disambiguated weekday/holiday separately. Translated tooltip prose in EN/JA/RU. |
-| #94 | CRTKY-114 | **Map interaction UX overhaul.** Auto-open popup on desktop marker click, mobile bottom-card pattern (`MobileStationCard`), removed dead-end interactions. Design doc: `.claude/design-map-interaction-ux.md`. |
-| #95 | CRTKY-116/117/118/119 | **Live YouTube camera streams on station pages.** Scraper (`scrape-livecams.py`) fetches 64 MT3D livecams, Haversine-matches at 300m → 29 stations / 32 rows. `LiveCamera` type + `Station.livecams`. `LiveCameras.tsx` component: click-to-load facade, 16:9, tab strip for multi-cam (shinjukunishiguchi gets 3), ✕ dismiss overlay, `youtube-nocookie.com` embed with `autoplay=1&mute=1`, `role="tabpanel"` ARIA. 📹 badge on map tooltip + touch popup (emoji-only, no palette overload). `FilterState.hasLiveCamera` dealbreaker + `hasLiveCamera?: boolean` on `MapStation` (optional-spread so no-cam stations add zero bytes). URL param `lc=1`. i18n in en/ja/ru. |
-
-## Bangkok (district layer)
-
-Second city, shipped 2026-09 (**CRTKY-130**; follow-ups CRTKY-131 flood data, CRTKY-132 MCP). **Unit = khet (district), all 50** — polygons, not stations (12 districts have no rail inside).
-
-**Levels of detail (CRTKY-135):** a segmented control on the map (`LevelSwitcher`, URL `lv=station|grid`, store `cities.bangkok.level`) switches what is painted and ranked:
-- **Districts** (default) — the choropleth below.
-- **Stations** — 133 *station areas*: land ≤ 800 m from a rail station and nearer to it than to any other (Voronoi ∩ disc ∩ Bangkok, `station-geometry.json`); interchanges of *different* lines ≤ 450 m apart are one area (`asok` = Asok + Sukhumvit). Unpainted = no station in walking range. Pages `/bangkok/station/<id>`.
-- **200 m grid** — 39,149 cells on a canvas (`bangkok/GridLayer.tsx`, crisp squares from z12), resident-weighted percentile ratings, hover readout, cell popup / `CellCard` on touch, numbered top-5 + the side panel's "Best spots" list.
-Weights, dealbreakers and the selection carry over between levels; the selection key says what it is (`lib/area-key.ts`), so a selected district stays outlined on the grid. Routes: `/bangkok`, `/bangkok/district/<slug>` × EN/JA/RU; Tokyo URLs unchanged (`/tokyo` → `/` 307). Header `CitySwitcher` = plain locale-aware links. **Weights carry over between cities, dealbreakers don't** (they are in ¥ vs ฿) — the store keeps one slice per city, so switching back restores the other city exactly.
-
-```
-uv run scripts/bangkok/fetch-geofabrik.py # Geofabrik Thailand PBF → coherent OSM cache (no Overpass)
-uv run scripts/bangkok/fetch.py --only wikidata commons station_wikidata station_commons overture_places
-uv run scripts/bangkok/build.py    # offline ~15 s → app/src/data/bangkok/{districts,geometry,stations,station-geometry,grid,rail,meta}.json + app/public/data/bangkok/grid-<hash>.bin + data/bangkok/signals.json
-pytest scripts/bangkok            # offline tests; CI bangkok job
-```
-
-The [pipeline guide](scripts/bangkok/README.md) covers the Geofabrik fetch path,
-population input and retained Overpass alternative. **v0.1.0 excluded the full
-spatial refresh.** It merged post-release in [PR #147](https://github.com/pogorelov-labs/city-rating-tokyo/pull/147)
-on **2026-10-27** at [ba7aa47](https://github.com/pogorelov-labs/city-rating-tokyo/commit/ba7aa477fb3e06ceada1fad5df2dc5954428cdf4),
-and the refreshed data is now on **main**, not in the v0.1.0 tag/release.
-v0.1.1 packages this post-v0.1.0 data refresh.
-All **10 validation gates are resolved**. The [90-file frozen manifest](data/bangkok/refresh-inputs.json)
-pins the build inputs; all **133 tourism areas** (99 with hotels, 66 with
-attractions, 19 badges), **9 Michelin districts** and **5 legacy embassy districts**
-retain their facts. See the [completed remediation](docs/DATA_REFRESH_REMEDIATION.md)
-and [evidence note](research/bangkok/notes/2026-10-26-frozen-refresh.md) for the
-data diff, attribution review and remaining source/provenance limits.
-
-- **Method:** 200 m resident grid per district → POIs within walking radius (FFT raster convolution, cross-border), park ha within 1 km, rail distance, modelled peak commute to 5 hubs (Siam, Asok, Silom, Rama 9, Mo Chit) → resident-weighted mean → percentile across 50. Details: `research/bangkok/00-overview.md`.
-- **Two POI sources:** OSM + **Overture Maps Places** (release pinned in `fetch.py`, public S3 via DuckDB). The frozen extract inventories CDLA-Permissive-2.0, Apache-2.0 (Foursquare) and CC0-1.0 (AllThePlaces) entries; PR #147 retained the notices/license copies. `strong` confidence only where both are well mapped; r ≈ 0.90–0.93 between them. Overture's Bangkok `historic_site` rows are mis-classified apartments → excluded.
-- **Editorial inputs:** `data/bangkok/editorial.json` — rent (1-bed/2-bed THB), safety 1–10, search aliases (neighbourhoods + landmarks: "Thong Lo" → Watthana). Aliases were cross-checked against OSM feature locations; landmark ≠ district name is common (Esplanade is Din Daeng, Krung Thep Aphiwat is Chatuchak).
-- **Station-area rent proxies:** `data/bangkok/rent-overrides.json` — 10 central DooAsset bedroom-median snapshots, estimate confidence, with date/sample/source provenance. Districts/grid stay editorial; other areas use district blends. ComparePanel and detail pages explain the differing metrics; see the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
-- **Static reference:** `scripts/bangkok/static_data.py` — RU names (one transcription for all 50), 10 rail lines (names ×4, colors, commute speeds calibrated on published end-to-end times), curated stop order for BTS Silom / SRT Light Red, hubs.
-- **Descriptions:** `data/bangkok/descriptions/<slug>.json` (EN/JA/RU × 4 fields, rules in `research/bangkok/description-rules.md`), merged by `build.py`.
-- **Frontend:** `CityHome` (shared homepage shell) · `DistrictMap.tsx` (SVG polygons in custom panes, outline overlays for hover/selected/top-5/compare, rail lines + station dots, zoom-aware labels, greyed-out districts with *why* in the tooltip via `dealbreakerReasons()`, legend, narrow-screen framing, click-delay so dblclick zoom doesn't select) · `app/[locale]/bangkok/district/[slug]` (stats, hubs, stations, ratings vs Bangkok median, facts, neighbours, Commons photo credit) · `lib/bangkok-data.ts` (server accessors; geometry/rail JSON load only in the map chunk).
-- **i18n:** `bangkok.*` namespace is server-only and filtered out of `NextIntlClientProvider` in `[locale]/layout.tsx`; client-side Bangkok strings live under `filter.*District`, `map.*`, `hubs.*`, `sources.*`.
-- **Photos:** Wikidata P18 via Commons API, hot-linked from `thumb.wikimedia.org` (500 px popups, 960 px banner), attribution on the page (`clean_artist()` trims Commons boilerplate to the author). Station areas use their station's item (`station_wikidata` / `station_commons` fetch tasks), which also gives the **JA station names** — the label is cross-checked against the station name because some OSM nodes carry a neighbour's item (Si Iam → Si La Salle); misses are hand-written in `static_data.STATION_JA_FALLBACK`. RU keeps the Latin station names that are on the signs.
-- **Grid binary:** `grid-1d6ed2ef00c3.bin` (**143,925 bytes**) after PR #147; one uint8 plane per field over the 330 × 257 bbox, per-row delta, gzip, content-hashed name (cached `immutable` via `next.config.ts`), fetched only when the grid level (or a `cell.` link) opens. The same 39,149 cells remain; grid rent/safety and crowd/hub-minute planes are unchanged. Its header `grid.json` lists the field order and the district / station / area index maps — rebuild both together.
-- **Map layers gotcha:** inside a react-leaflet `<Pane>`, `<Tooltip>` inherits that pane and renders *under* the pane's own polygons — pass `pane="tooltipPane"` (fixed for the district tooltips in CRTKY-135). Client components cannot read `bangkok.*` messages (server-only namespace): pass translated strings as props, as the radar does.
-
-## Description Generation Pipeline (CRTKY-109, in progress)
-
-Data-driven LLM pipeline to produce 4-field descriptions (atmosphere / landmarks / food / nightlife) for all 1493 stations in EN/JA/RU.
-
-### Artifacts
-- `HANDOFF.md` (repo root) — runbook for parallel LLM agents (Claude Code, Codex, Cursor). Self-contained; each agent picks slugs via filesystem-claim.
-- `research/description-generation-rules.md` — voice rules, signal→prose mapping, confidence awareness, what NOT to say
-- `scripts/build-datamart.py` — joins 10 NocoDB tables + 7 local JSON into `data/station-datamart.json` (15 MB, gitignored). Run: `python3 scripts/build-datamart.py` (~60s).
-- `scripts/build-prompts-dir.py` — generates one self-contained `data/prompts/<slug>.md` per station (1486 files, gitignored). Re-run safely; `--all` forces regeneration.
-- `scripts/queue-status.py` — progress dashboard. Flags: `--next N` for next slugs, `--failed` for broken outputs.
-- `scripts/merge-descriptions.py` — merges all `data/descriptions/*.json` → `data/generated-descriptions.json` with validation.
-- `data/descriptions/<slug>.json` — **committed** per-station output. Shape: `{en:{atmosphere,landmarks,food,nightlife}, ja:{...}, ru:{...}}`
-- `data/generated-descriptions.json` — **committed** merged result for frontend integration.
-
-### Pipeline
-```
-NocoDB (10 tables) + local JSON (7 files)
-    ↓  build-datamart.py
-data/station-datamart.json (1493 stations, score-desc order, with `generation_order` field)
-    ↓  build-prompts-dir.py
-data/prompts/<slug>.md (1486 self-contained prompt files — voice + few-shot + data)
-    ↓  LLM agents (Claude Code, Codex, Cursor) in parallel, filesystem-claim
-data/descriptions/<slug>.json (one per station)
-    ↓  merge-descriptions.py
-data/generated-descriptions.json (merged, validated)
-    ↓  Phase 6 — separate integration PR
-app/src/data/demo-ratings.ts schema change: description becomes {en,ja,ru} × 4 fields
-```
-
-### Status (2026-04-15)
-- Phase 1 (research): ✅ rules doc
-- Phase 2 (datamart): ✅ builder runs, pulls all 17 sources
-- Phase 3 (prompt engineering): ✅ validated with 8 pilot stations (haiku ~7s/station, quality good)
-- Phase 4 (batch generation): 🚧 scaffolding merged, run via UI agents against main per `HANDOFF.md`
-- Phase 5 (merge + validate): pending (after Phase 4)
-- Phase 6 (frontend integration): **separate PR** — schema change + component wiring
-
-### Generation order
-Composite score descending (from `datamart["generation_order"]`). **All 1493 stations are regenerated** — including the ~252 that previously had a single-field RU editorial `description`. Scope reversal on 2026-04-15: single consistent voice across the whole dataset beats preserving legacy 1-field text, and the output structure is different (4 fields × 3 locales vs 1 field × 1 locale). `has_existing_description` flag stays in the datamart as metadata only; no script branches on it.
-
-### Running (paths are always relative to repo root)
-Scripts use `Path(__file__).resolve().parent.parent` → work from any cwd. For UI agents: open the editor **in the repo/worktree root** so Read/Write tool calls resolve relative paths. See `HANDOFF.md` → Block 1 for the paste-in prompt for UI agents.
-
-## Dealbreaker Filters (PR #60, #61)
-
-The sidebar now has two independent control axes:
-- **Weights** (soft) — "what matters more" → affects ranking order
-- **Dealbreakers** (hard) — "absolute requirements" → hides stations that fail
-
-### Architecture
-
-`FilterState` in `types.ts`: `{ minRent, maxRent, minCommute, maxCommute, categoryMins }` with `DEFAULT_FILTERS` (all wide open). PR #61 added min endpoints for dual-range sliders.
-
-Filter chain in Map.tsx + FilterPanel.tsx:
-```
-stations → scoredStations (useMemo, deferredWeights) → filteredStations (applyDealbreakers) → render
-```
-
-`applyDealbreakers()` in `scoring.ts`: O(n) filter on `MapStation[]`. Null-safe: unknown rent/commute/ratings **pass** (don't penalize missing data). Rent-unknown stations flagged with `rentUnknown: true` → dimmed markers (35% opacity) + "(rent unconfirmed)" in ranked list.
-
-`compositeAnchors` computed on FULL dataset (pre-filter) — colors stay stable when filters narrow the view.
-
-### Preset filters
-
-`PresetProfile.filters?: Partial<FilterState>` — presets now set both weights AND dealbreakers:
-- Young Pro: rent ≤ ¥150k, commute ≤ 30 min
-- Family: commute ≤ 40 min, safety ≥ 7
-- Foodie Budget: rent ≤ ¥120k
-- Digital Nomad: rent ≤ ¥130k
-
-### URL params
-
-Filter state serialized alongside weights for shareable links:
-- `nr=100000` — min rent (only if raised above ¥80k)
-- `mr=130000` — max rent
-- `nc=20` — min commute (only if raised above 10)
-- `mc=30` — max commute (minutes)
-- `cm=safety:7,green:6` — category minimums
-
-### Top-5 map pulse (PR #61)
-
-Top-5 ranked visible stations get a subtle `top-ranked-pulse` CSS animation in their composite color. 2.4s period, max stroke-opacity 0.35 (much subtler than the 1.6s selected-station halo). Hidden in heatmap mode, suppressed when station is already highlighted.
-
-### Label: "Low Crowds" → "Quietness" (PR #61)
-
-`RATING_LABELS.crowd = 'Quietness'` (was "Low Crowds"). Category min buttons use `CATEGORY_SHORT_LABELS` map for compact unambiguous labels.
-
-## Running Scrapers
-
-Scrapers run in a private operational environment. Access, infrastructure and
-execution instructions are maintained outside this public repository. All
-scrapers are incremental: they skip stations already in NocoDB and are safe to
-restart. Keep operational credentials and access details out of public copy.
-
 ## Research Documents
+
+Use [research/decisions/](research/decisions/) for decision records and the
+[roadmap](research/VISION.md) for future work. Current setup belongs in the
+[README](README.md), invariants/process in [CONTRIBUTING](CONTRIBUTING.md),
+source methodology in [research/](research/), and user-facing version history
+in [CHANGELOG](CHANGELOG.md) / [release notes](docs/releases/). Keep these aligned;
+old handoffs and dated implementation checklists are not architecture contracts.
 
 ### Architecture decision records
 
@@ -629,152 +324,3 @@ Routine fixes and copy edits can use the ticket/PR record. Apply the public-copy
 rules in [CONTRIBUTING.md](CONTRIBUTING.md#public-repository-and-changelog-rules);
 private operational details and internal verification artifacts stay outside
 public ADRs.
-
-### Data-source research
-
-Detailed data source research in `research/` (Bangkok: `research/bangkok/`):
-- `00-overview.md` — Status summary
-- `01-nightlife.md` — HP midnight, karaoke, club sources
-- `02-safety.md` — ArcGIS crime polygons, daytime population, crime weights
-- `03-crowd.md` — MLIT S12 dataset, railway company data
-- `04-green.md` — Park area calculation, landuse=religious, NDVI
-- `05-rent.md` — LIFULL HOME'S, Nominatim ward mapping
-- `06-vibe.md` — Cultural venue density, pedestrian streets
-
-## Build & Deploy
-
-```bash
-cd app && npm run build  # Verify after export-ratings.py
-git push origin main
-```
-
-**Branch protection (since 2026-04-12):** `main` requires the `build` status check (CI: `npm run lint` + `tsc --noEmit` + `npm run build` + `npm audit`) to pass before merge. Lint errors fail the check, warnings don't. No force push, no deletion. Admin bypass enabled for emergencies. All changes must go through PRs.
-
-**Production build memory:** Production build memory is configured in the
-private deployment environment; see the maintainer runbook. The `app/Dockerfile`
-builder stage sets `ENV NODE_OPTIONS=--max-old-space-size=4096` so a runaway
-compile fails with a clean V8 heap OOM (`JavaScript heap out of memory`).
-
-**Base-map key (since 2026-09-30):** CARTO basemaps need an API key — keyless tiles are stamped "API key required". Set `NEXT_PUBLIC_CARTO_BASEMAPS_KEY` in the deployment environment as a **build** variable (like `NEXT_PUBLIC_UMAMI_*`; it is inlined at build time) and redeploy. Free key, non-commercial tier 5M tiles/month: https://carto.com/basemaps/apikey. Without it the map falls back to OpenStreetMap tiles. All app env vars are listed in `app/.env.example`.
-
-**`npm audit` failures from transitive deps:** never run `npm audit fix --force`; it tries to downgrade `next` to a years-old major. Add an `overrides` block in `app/package.json` instead (e.g. `{"postcss": "^8.5.13"}` was needed when GHSA-qx2v-qp2m-jg93 went moderate). Verify with `npm ls <pkg>` + `npm audit`. Drop the override once upstream ships the patched copy.
-
-## Refreshing ratings data
-
-Use the one-command script instead of running compute/export/build manually:
-
-```bash
-scripts/refresh-ratings.sh              # interactive: prompts before commit
-scripts/refresh-ratings.sh --auto --push  # hands-off on a feature branch
-scripts/refresh-ratings.sh --dry-run    # preview without writes
-scripts/refresh-ratings.sh --no-build   # skip build verification
-```
-
-Safety: the script refuses to run without `NOCODB_API_TOKEN`, with unrelated dirty files (untracked `.claude/` tooling such as worktrees and plans is ignored), or when the branch is behind `origin/main` — `compute-ratings.py` writes NocoDB, so a stale checkout would publish old formulas (`--dry-run` only warns). It refuses to push directly to main without `--force-main` and never uses `--amend` or force push.
-
-**Note:** the frontend bakes ratings into static HTML at build time. Re-running scrapers alone does NOT update the live site — you must also run the refresh chain so `demo-ratings.ts` gets rewritten and committed.
-
-## MCP server (`mcp/`)
-
-Public MCP (Model Context Protocol) server exposing the dataset to AI
-clients (Claude Desktop, Claude Code, anything MCP-compatible). Lives in
-`mcp/`, available at **`city-rating.pogorelov.dev/mcp`** with path-based routing.
-
-### Tools (9)
-
-Light (no model load, all <30 ms): `search_stations`, `get_station`,
-`compare_stations`, `list_pois`, `get_methodology`, `list_categories`.
-Heavy (semantic, ~50 ms warm + ~3 s first-call model load):
-`semantic_search(query, locale, field?)`, `find_similar(slug)`,
-`recommend(query, weights, filters, hybrid_alpha)`.
-
-### Architecture
-
-- **Datamart-backed** — reuses `scripts/build-datamart.py` output. MCP
-  loader additionally merges `generated-descriptions.json` (multilingual
-  4-field) and `livecams.json` on top, so `get_station` returns the same
-  shape the frontend's `getStation()` produces.
-- **Embeddings** — `intfloat/multilingual-e5-large` (1024d, ONNX via
-  fastembed, EN/JA/RU). 22,395 vectors per (slug × locale × field) +
-  per-(slug, locale) aggregate. ~80 MB on disk, in-memory cosine
-  via `numpy M @ q`. Build offline: `python3 scripts/build-embeddings.py`
-  (~19 min on M2 CPU). Output `data/embeddings.npz` (gitignored).
-  Embeddings are supplied through a deployment volume and are not encoded
-  during the build. Refresh through the private deployment procedure.
-- **Auth** — NocoDB-backed bearer keys. Table `api_keys`:
-  key_hash (SHA-256), email, use_case, status
-  (pending/active/revoked), rate_limit_per_min. Site form
-  `[locale]/api-access` issues `crk_<32 hex>` once, stores hash, status
-  starts pending. MCP refreshes cache every 5 min; per-key token bucket;
-  401/403/429/503 mapping. `MCP_AUTH_REQUIRED=false` for local dev.
-- **Path routing** — transport at `/mcp`, health at `/mcp/healthz`,
-  everything else → Next.js. Changing the public endpoint is a deployment
-  change managed through the private deployment procedure.
-
-Auth schema and development details are in [`mcp/README.md`](mcp/README.md). Tool-by-tool usage guide, source/confidence interpretation and common pitfalls are in [`mcp/USAGE.md`](mcp/USAGE.md). Deployment procedures are maintained outside this public repository.
-
-### Local dev
-
-```bash
-# 1. Build the datamart (NocoDB-backed, ~60 s)
-python3 scripts/build-datamart.py
-
-# 2. (optional) Build embeddings for semantic tools (~19 min on M2)
-python3 scripts/build-embeddings.py
-
-# 3. Install + run
-cd mcp && pip install -e .
-MCP_TRANSPORT=http MCP_AUTH_REQUIRED=false python3 -m city_rating_mcp.server
-
-# Or stdio for Claude Desktop / Code:
-city-rating-mcp
-```
-
-Smoke test: `PYTHONPATH=mcp/src python3 mcp/scripts/smoke-test.py` runs
-all 9 tools end-to-end against the local datamart + embeddings.
-
-### Stack quirk
-
-`fastembed` only supports `multilingual-e5-large` (1024d, 2.2 GB), not
-`-base`. Picked over `paraphrase-multilingual-mpnet-base-v2` for max
-quality; deployment memory holds at ~2.5 GB resident. If memory ever gets tight
-in the deployment environment, MiniLM-L12 (384d, 120 MB) is a one-line model swap in the
-build script + Dockerfile ARG.
-
-## Homepage performance (CRTKY-61 — PR #44)
-
-Three optimizations landed in the homepage initial-load path. If you touch these call sites, preserve the patterns below or the gains regress:
-
-1. **Lazy chunks for `recharts` consumers.** `ScatterPlotExplorer` (in `HeaderActions.tsx`) and `ComparePanel` (in `MapWrapper.tsx`) are loaded via `next/dynamic({ ssr: false })`. `ComparePanel` is additionally gated on `compareStations.length >= 2` so its ~450 KB chunk never downloads until the user compares. Don't static-import `recharts` anywhere else or the chunk lands in the initial bundle.
-2. **`MapStation.confidence` dropped from the RSC payload.** `getMapStations()` in `lib/data.ts` does NOT copy `confidence` — it shipped 226 KB of repetitive metadata into every homepage load for zero UI benefit. Confidence lives only on `Station` (via `getStation()`), which is used by `/station/[slug]` pages. If you need confidence metadata on a homepage surface, lazy-fetch a `confidence-by-slug.json` from inside the component, don't put it back on `MapStation`.
-3. **`useDeferredValue(weights)` in Map, FilterPanel, ComparePanel, ScatterPlotExplorer.** Scoring 1493 stations + sorting percentile anchors on every slider frame was a 2× INP regression. Defer BOTH `scoredStations` AND `computeCompositeAnchors` calls so the palette range stays coherent with the (also deferred) score values mid-drag. The slider itself still reads live `weights` so the thumb never detaches from the pointer.
-
-Baseline → after: initial JS 1086 → 642 KB (−41 %), HTML 895 → 616 KB (−31 %), RSC flight 755 → 523 KB (−31 %).
-
-### Map flyTo optimization (PR #68)
-
-Four runtime optimizations for the station-select fly animation:
-
-1. **Canvas renderer** (`preferCanvas` on `MapContainer`). All 1493 CircleMarkers render on a single `<canvas>` element inside `leaflet-overlay-pane` instead of 1493 individual SVG `<path>` elements. Eliminates SVG layout thrashing during flyTo. Animated overlays (station-halo, top-5 pulse) forced to SVG via `renderer={getSvgRenderer()}` so CSS keyframe animations still work.
-2. **Smart flyTo** in `FlyToStation`. Adapts zoom target (no zoom change when ≥13 → cheaper pan-only), uses `setView` for very close hops (<0.01°), and adaptive duration (0.4s close, 0.6s far) with `easeLinearity: 0.4` to minimize time at intermediate zoom levels where tiles aren't cached.
-3. **Tile prefetch on hover** — `prefetchTilesAroundStation()` warms a 3×3 grid of z14 tiles around the hovered station so they are in the browser cache by click time. **Correction 2026-09-30:** it used `<link rel="prefetch">`, which the CSP's `default-src 'self'` blocks (prefetch is not governed by `img-src`), so the prefetch never ran in production once the CSP existed; it now uses `new Image()`, which `img-src` allows. Skipped on the OSM fallback, whose tile policy forbids prefetching.
-4. **`isFlying` ref** — set during flyTo, cleared on `moveend`. Guard for suppressing non-critical work during animation.
-
-**Production perf test (2026-04-12):** Default zoom 12 → Akihabara (ranked list click). MessageChannel-based 83kHz sampling:
-- 315,020 samples, **p95 interval 0.1ms** — butter-smooth after React commit
-- 3 jank frames >50ms (142ms max) — all during React's initial state commit (`setSelectedStation` → `flyTarget` memo → `FlyToStation` render → `useEffect`)
-- 24 busy samples >5ms out of 315,020 (0.008%)
-- Canvas renderer confirmed: 0 SVG marker paths, 5 SVG overlay paths (halo + pulse)
-
-Use `.claude/skills/perf-capture/` to reproduce these measurements.
-
-### FlyTo visual glitch fix (PR #73 + #75)
-
-During `flyTo` with zoom change, Leaflet CSS-transforms the canvas by `scale(2^Δzoom)` (by design, Leaflet #6050/#6409). Zoom 12→14 = 4× scale, making every CircleMarker appear enormous on mobile.
-
-Three-layer fix:
-1. **Canvas opacity fade** (PR #75) — `.map-flying` CSS class toggled on the container by `FlyToStation`. CSS rule `opacity: 0` with 0.15s transition. Tiles stay visible (separate pane). Markers fade back in after `moveend`. Verified: MutationObserver test captured 45 scale mutations (1.05→4.0×) on `canvas.style.transform`; with fix, canvas opacity=0 during all scaled frames.
-2. **SVG halo/pulse hidden** (PR #73) — `isFlying` state guard (`!isFlying &&` conditional render). `useLayoutEffect` in `FlyToStation` so `setIsFlying(true)` fires before browser paint.
-3. **Popup suppression** (PR #73) — `map.closePopup()` before flyTo + `autoPan={false}` on all Popups.
-
-Use `.claude/skills/flyto-visual-test/` for MutationObserver-based regression testing.
