@@ -106,7 +106,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
 
   // Delay clearing hover when the pointer leaves the circle so moving toward
   // the Leaflet tooltip (above the marker) does not flicker the highlight.
-  const hoverClear = useDelayedHover(150);
+  const hoverClear = useDelayedHover();
 
   // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
   // Also used (reversed) for top-5 pulse — one sort instead of two.
@@ -155,7 +155,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         />
       )}
       {isTouch && <TouchZoomControls />}
-      <MapDeselect onClear={() => setSelectedStation(null)} clickClears escapeClears={false} />
+      <MapDeselect onClear={() => setSelectedStation(null)} clickClears escapeClears />
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];

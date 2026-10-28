@@ -21,7 +21,7 @@ describe('station area interactions', () => {
     render(<StationAreaLayer areas={[area]} shapes={{ asok: { bbox: [[13.7,100.5],[13.8,100.6]], polygons: [] } }} passing={new Set(['st.asok'])}
       colorFor={() => '#fff'} filteredFill="#ddd" selected={null} hovered={null} heatmapMode={false} isTouch
       reasonsFor={() => []} lineChip={() => null} districtName={() => ''} onSelect={onSelect} onHover={onHover} />);
-    act(() => { events.current.mouseout(); vi.advanceTimersByTime(100); events.current.mouseover(); vi.advanceTimersByTime(50); });
+    act(() => { events.current.mouseout(); vi.advanceTimersByTime(100); events.current.mouseover(); vi.advanceTimersByTime(75); });
     expect(onHover).toHaveBeenCalledTimes(1);
     expect(onHover).toHaveBeenCalledWith('st.asok');
     act(() => { events.current.click(); events.current.dblclick(); vi.advanceTimersByTime(230); });

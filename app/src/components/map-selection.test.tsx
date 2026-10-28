@@ -12,7 +12,7 @@ import { MapDeselect, MapSelectionBounds, MapSelectionPoint } from './map-select
 describe('map selection dismissal', () => {
   it('ignores controls and interactive shapes but dismisses background clicks', () => {
     const clear = vi.fn();
-    render(<MapDeselect onClear={clear} clickClears escapeClears={false} />);
+    render(<MapDeselect onClear={clear} clickClears escapeClears />);
     const control = document.createElement('div');
     control.className = 'leaflet-control';
     const child = document.createElement('button');
@@ -25,7 +25,7 @@ describe('map selection dismissal', () => {
     handlers.click?.({ originalEvent: { target: document.createElement('div') } });
     expect(clear).toHaveBeenCalledOnce();
     fireEvent.keyDown(document, { key: 'Escape' });
-    expect(clear).toHaveBeenCalledOnce();
+    expect(clear).toHaveBeenCalledTimes(2);
   });
   it('keeps grid clicks for the grid handler and supports Bangkok Escape', () => {
     const clear = vi.fn();

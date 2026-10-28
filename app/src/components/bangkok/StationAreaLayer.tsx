@@ -60,7 +60,7 @@ export default function StationAreaLayer({
 }: Props) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const hoverClear = useDelayedHover(120);
+  const hoverClear = useDelayedHover();
   const pendingClick = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(
     () => () => {

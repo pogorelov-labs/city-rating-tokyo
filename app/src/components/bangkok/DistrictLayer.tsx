@@ -25,7 +25,7 @@ export default function DistrictLayer({ isDistrictLevel, scored, shapes, passing
   const locale = useLocale() as Locale;
   const city = useCity();
   const { setSelectedStation, setHoveredStation } = useCityActions();
-  const hoverClear = useDelayedHover(120);
+  const hoverClear = useDelayedHover();
   const pendingClick = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(() => () => clearTimeout(pendingClick.current), []);
   const FILTERED_FILL = '#E5E7EB';

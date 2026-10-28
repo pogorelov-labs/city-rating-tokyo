@@ -118,6 +118,18 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
   await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
 });
 
+test.describe('Escape dismisses map selection', () => {
+  for (const [city, url] of [['Tokyo', '/?s=akihabara'], ['Bangkok', '/bangkok?s=pathum-wan']] as const) {
+    test(`${city} clears a selected area`, async ({ page }) => {
+      await page.goto(url);
+      await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
+      await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeTruthy();
+      await page.keyboard.press('Escape');
+      await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 10_000 }).toBeNull();
+    });
+  }
+});
+
 test.describe('touch selection', () => {
   test.use({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
 
