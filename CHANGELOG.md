@@ -10,6 +10,24 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## Unreleased
+
+### Added
+
+- MCP profiles, filtered search and comparisons now support Bangkok's 50
+  districts, keeping results and rent provenance specific to the selected city.
+  These tools work without embeddings; Bangkok semantic search becomes available
+  when its separate embedding artifact is deployed.
+
+### Fixed
+
+- The Bangkok grid panel now applies the flood-risk filter to its count and
+  ranked hotspots, keeping them aligned with the map.
+- Tokyo map selections can now be cleared with Escape. Hover highlights clear
+  consistently across both cities.
+- Map zoom controls on phones are no longer covered by the selected station card.
+- MCP composite scores now round half-values in the same way as the website.
+
 ## v0.1.1 — 2026-10-27
 
 Bangkok data refresh. This is a data-only release: no new features, API, URL,
