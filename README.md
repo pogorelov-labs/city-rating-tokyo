@@ -5,7 +5,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
-**Latest release:** [v0.1.1 — Bangkok data refresh](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
+**Latest release:** [v0.1.2 — Bangkok MCP tools and map fixes](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
@@ -132,7 +132,7 @@ and [Bangkok overview](research/bangkok/00-overview.md).
 
 ## Deployment
 
-Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.1.1 has no DB migration. See the [release runbook](docs/RELEASING.md).
+Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.1.2 has no DB migration. See the [release runbook](docs/RELEASING.md).
 
 ## Data sources (high level)
 
