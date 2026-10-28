@@ -1,6 +1,7 @@
 'use client';
 
 import RentNote from '@/components/bangkok/RentNote';
+import { useDelayedHover } from '@/lib/use-delayed-hover';
 
 import { useEffect, useRef } from 'react';
 import { Pane, Polygon, Tooltip } from 'react-leaflet';
@@ -59,11 +60,10 @@ export default function StationAreaLayer({
 }: Props) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const hoverClear = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const hoverClear = useDelayedHover();
   const pendingClick = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(
     () => () => {
-      clearTimeout(hoverClear.current);
       clearTimeout(pendingClick.current);
     },
     [],
@@ -101,11 +101,11 @@ export default function StationAreaLayer({
               },
               dblclick: () => clearTimeout(pendingClick.current),
               mouseover: () => {
-                clearTimeout(hoverClear.current);
+                hoverClear.cancel();
                 onHover(a.slug);
               },
               mouseout: () => {
-                hoverClear.current = setTimeout(() => onHover(null), 120);
+                hoverClear.schedule(() => onHover(null));
               },
             }}
           >

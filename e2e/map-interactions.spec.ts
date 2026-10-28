@@ -118,6 +118,18 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
   await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
 });
 
+test.describe('Escape dismisses map selection', () => {
+  for (const [city, url] of [['Tokyo', '/?s=akihabara'], ['Bangkok', '/bangkok?s=pathum-wan']] as const) {
+    test(`${city} clears a selected area`, async ({ page }) => {
+      await page.goto(url);
+      await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
+      await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeTruthy();
+      await page.keyboard.press('Escape');
+      await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 10_000 }).toBeNull();
+    });
+  }
+});
+
 test.describe('touch selection', () => {
   test.use({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
 
@@ -149,4 +161,18 @@ test.describe('touch selection', () => {
     expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
     await expect(page.locator('.station-halo')).toBeAttached();
   });
+
+  test('Bangkok touch zoom preserves a selected district', async ({ page }) => {
+    await page.goto('/bangkok');
+    await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
+    const point = await districtPoint(page);
+    await page.touchscreen.tap(point.x, point.y);
+    await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 15_000 }).toBeTruthy();
+    const selected = new URL(page.url()).searchParams.get('s');
+    await page.waitForTimeout(800);
+    await page.getByRole('button', { name: 'Zoom in' }).tap();
+    await page.waitForTimeout(500);
+    expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
+  });
+
 });

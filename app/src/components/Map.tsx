@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useMemo, useRef, useState, useCallback } from 'react';
 import {
   AttributionControl,
   MapContainer,
@@ -8,8 +8,6 @@ import {
   CircleMarker,
   Popup,
   Tooltip,
-  useMap,
-  useMapEvents,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -27,117 +25,11 @@ import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { areaPath, formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
+import { useDelayedHover } from '@/lib/use-delayed-hover';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
 import { Link } from '@/i18n/navigation';
 import { MapContainerResize, TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
-
-/**
- * Smart flyTo: adapts zoom target and animation based on current map state.
- * - Already zoomed in (≥13): just pan, don't zoom further → cheaper.
- * - Far away / zoomed out (<11): short fly with easeLinearity tuning.
- * - Mid-range (11-13): standard fly to 14 with reduced duration.
- * Emits `flystart`/`flyend` custom classes on the container for CSS guards.
- */
-function FlyToStation({
-  lat,
-  lng,
-  onFlyStart,
-  onFlyEnd,
-}: {
-  lat: number;
-  lng: number;
-  onFlyStart?: () => void;
-  onFlyEnd?: () => void;
-}) {
-  const map = useMap();
-  // useLayoutEffect so onFlyStart (→ setIsFlying(true)) fires BEFORE the
-  // browser paints. This hides SVG overlays (halo, pulse) before the zoom
-  // animation CSS-transforms them into giant circles.
-  //
-  // Deps: [map, lat, lng] only. onFlyStart/onFlyEnd are stable useCallback
-  // refs but listing them would cause the effect to re-run when the parent
-  // re-renders from setIsFlying(true) — the cleanup would detach the
-  // moveend listener mid-animation, leaving .map-flying stuck forever.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useLayoutEffect(() => {
-    const currentZoom = map.getZoom();
-    const currentCenter = map.getCenter();
-
-    const dLat = Math.abs(currentCenter.lat - lat);
-    const dLng = Math.abs(currentCenter.lng - lng);
-    const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
-
-    // Already looking at this station (within ~200m at zoom 14)
-    if (roughDist < 0.003 && currentZoom >= 13) return;
-
-    // Close any open popup before flying — prevents the popup card from
-    // flying around the screen during zoom animation (mobile tap auto-opens).
-    map.closePopup();
-    onFlyStart?.();
-
-    const targetZoom = currentZoom >= 13 ? currentZoom : 14;
-
-    // Fade canvas markers during flyTo to hide CSS-scaling artifact.
-    // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
-    // animation (by design, #6050/#6409). The .map-flying class sets
-    // canvas opacity to 0 via CSS transition; tiles stay visible since
-    // they're in a separate pane. Markers fade back in after moveend.
-    const container = map.getContainer();
-    const needsFade = Math.abs(currentZoom - targetZoom) >= 1;
-    if (needsFade) container.classList.add('map-flying');
-
-    // Very close pan — short animated setView
-    if (roughDist < 0.01 && currentZoom === targetZoom) {
-      map.setView([lat, lng], targetZoom, { animate: true, duration: 0.25 });
-      const timer = setTimeout(() => {
-        container.classList.remove('map-flying');
-        onFlyEnd?.();
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-
-    // Adaptive duration: shorter for close pans, longer for far jumps
-    const duration = roughDist > 0.1 ? 0.6 : 0.4;
-    map.flyTo([lat, lng], targetZoom, {
-      duration,
-      easeLinearity: 0.4,
-    });
-
-    const handleMoveEnd = () => {
-      map.off('moveend', handleMoveEnd);
-      container.classList.remove('map-flying');
-      onFlyEnd?.();
-    };
-    map.on('moveend', handleMoveEnd);
-
-    return () => {
-      map.off('moveend', handleMoveEnd);
-      container.classList.remove('map-flying');
-    };
-  }, [map, lat, lng]);
-  return null;
-}
-
-/**
- * Background-click dismiss: clicking the map (not a marker) clears the selected
- * station so the halo, popup, and MobileStationCard all vanish. The
- * `.leaflet-interactive` check filters out marker clicks — markers bubble a
- * click event to the map layer, but they are wrapped in this class by Leaflet.
- * `.leaflet-control` filters out the touch zoom buttons (a map control is not
- * "outside") — same guard the Bangkok map's DeselectHandlers already has.
- */
-function MapClickHandler() {
-  const { setSelectedStation } = useCityActions();
-  useMapEvents({
-    click: (e) => {
-      const target = e.originalEvent?.target as HTMLElement | null;
-      if (!target?.closest('.leaflet-interactive, .leaflet-control')) {
-        setSelectedStation(null);
-      }
-    },
-  });
-  return null;
-}
+import { MapSelectionPoint, MapDeselect } from './map-selection';
 
 /**
  * Prefetch tiles at zoom 14 around a lat/lng into browser cache.
@@ -214,10 +106,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
 
   // Delay clearing hover when the pointer leaves the circle so moving toward
   // the Leaflet tooltip (above the marker) does not flicker the highlight.
-  const mapHoverClearRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-  useEffect(() => {
-    return () => clearTimeout(mapHoverClearRef.current);
-  }, []);
+  const hoverClear = useDelayedHover();
 
   // Sort ascending by score so high-rated stations paint on top (SVG paint order = DOM order).
   // Also used (reversed) for top-5 pulse — one sort instead of two.
@@ -258,7 +147,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       {/* The tile providers' terms require their attribution on the map. */}
       <AttributionControl position="bottomright" prefix={false} />
       {flyTarget && (
-        <FlyToStation
+        <MapSelectionPoint
           lat={flyTarget.lat}
           lng={flyTarget.lng}
           onFlyStart={onFlyStart}
@@ -266,7 +155,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
         />
       )}
       {isTouch && <TouchZoomControls />}
-      <MapClickHandler />
+      <MapDeselect onClear={() => setSelectedStation(null)} clickClears escapeClears />
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
@@ -338,7 +227,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                 window.umami?.track('map-click', { station: station.slug });
               },
               mouseover: () => {
-                clearTimeout(mapHoverClearRef.current);
+                hoverClear.cancel();
                 setHoveredStation(station.slug);
                 // Prefetch thumbnail into browser cache during 400ms tooltip delay
                 if (thumbEntry?.thumb) { const i = new Image(); i.src = thumbEntry.thumb; }
@@ -346,11 +235,11 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                 prefetchTilesAroundStation(station.lat, station.lng);
               },
               mouseout: () => {
-                mapHoverClearRef.current = setTimeout(() => {
+                hoverClear.schedule(() => {
                   if (useAppStore.getState().cities[city.id].hoveredStation === station.slug) {
                     setHoveredStation(null);
                   }
-                }, 150);
+                });
               },
             }}
           >
