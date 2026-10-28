@@ -12,6 +12,13 @@ evidence in research notes or the PR body and link it.
 
 ## Unreleased
 
+### Added
+
+- MCP profiles, filtered search and comparisons now support Bangkok's 50
+  districts, keeping results and rent provenance specific to the selected city.
+  These tools work without embeddings; Bangkok semantic search becomes available
+  when its separate embedding artifact is deployed.
+
 ### Fixed
 
 - The Bangkok grid panel now applies the flood-risk filter to its count and
