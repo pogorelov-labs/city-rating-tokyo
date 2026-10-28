@@ -8,6 +8,11 @@ __pycache__/
 *.pyc
 .venv/
 
+# Local uv resolution is not used by the MCP install or CI (pip uses pyproject.toml).
+/mcp/uv.lock
+# Session-local plans; other .claude project guidance is tracked.
+/.claude/plans/
+
 # CRTKY-109 generation pipeline intermediate files
 # Regenerate with: scripts/build-datamart.py, scripts/build-prompts-dir.py
 data/station-datamart.json
