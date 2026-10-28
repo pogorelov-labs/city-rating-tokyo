@@ -26,6 +26,13 @@ def _name(entry: dict[str, Any], locale: str) -> dict[str, str]:
 
 def search_row(entry: dict[str, Any], score: float | None, locale: str = "en", rent_unknown: bool = False) -> dict[str, Any]:
     """One row in a search/recommend list — compact."""
+    if entry.get("_city") == "bangkok":
+        return {"slug": entry["slug"], "city": "bangkok", "unit": "district",
+                "name": _name(entry, locale)["primary"], "score": score,
+                "ratings": entry.get("ratings"), "rent": entry.get("rent"),
+                "min_transit_min": entry.get("min_transit"), "lat": entry.get("lat"),
+                "lng": entry.get("lng"), "rent_unknown": rent_unknown,
+                "url": district_url(entry["slug"], locale)}
     names = _name(entry, locale)
     rent = _rent_value(entry.get("rent"))
     commute = _min_transit(entry.get("transit_minutes"))
@@ -52,6 +59,17 @@ def search_row(entry: dict[str, Any], score: float | None, locale: str = "en", r
 
 def full_station(entry: dict[str, Any], locale: str = "en") -> dict[str, Any]:
     """Full station profile — used by get_station + compare_stations."""
+    if entry.get("_city") == "bangkok":
+        return {"slug": entry["slug"], "city": "bangkok", "unit": "district",
+                "name": _name(entry, locale)["primary"], "lat": entry.get("lat"),
+                "lng": entry.get("lng"), "ratings": entry.get("ratings"),
+                "composite_score_default_weights": composite_score(entry.get("ratings")),
+                "confidence": entry.get("confidence"), "sources": entry.get("sources"),
+                "data_date": entry.get("data_date"), "rent": entry.get("rent"),
+                "transit_minutes": entry.get("transit_minutes"), "facts": entry.get("facts"),
+                "flood": entry.get("flood"), "description": (entry.get("description") or {}).get(locale),
+                "url": district_url(entry["slug"], locale),
+                "caveat": "District ratings are relative within Bangkok; rent and safety are editorial estimates."}
     names = _name(entry, locale)
     ratings = entry.get("ratings") or {}
     desc = (entry.get("description") or {}).get(locale) if entry.get("description") else None
@@ -93,3 +111,8 @@ def full_station(entry: dict[str, Any], locale: str = "en") -> dict[str, Any]:
         if locale != "en"
         else f"https://city-rating.pogorelov.dev/station/{entry['slug']}",
     }
+
+
+def district_url(slug: str, locale: str) -> str:
+    prefix = "" if locale == "en" else f"/{locale}"
+    return f"https://city-rating.pogorelov.dev{prefix}/bangkok/district/{slug}"

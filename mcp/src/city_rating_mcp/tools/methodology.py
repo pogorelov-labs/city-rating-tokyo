@@ -52,4 +52,9 @@ METHODOLOGY = {
 
 
 def get_methodology() -> dict:
-    return METHODOLOGY
+    return {**METHODOLOGY, "bangkok": {
+        "unit": "50 districts (khet), not station catchments",
+        "scores": "Ratings are relative within Bangkok and are not directly comparable with Tokyo scores.",
+        "rent_and_safety": "District rent and safety are editorial estimates; rent is a typical asking estimate, not a statistical median.",
+        "details": "https://city-rating.pogorelov.dev/methodology",
+    }}

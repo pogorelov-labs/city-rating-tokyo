@@ -73,6 +73,7 @@ COPY --from=datamart    /build/data/station-datamart.json /app/data/station-data
 COPY --from=model-cache /opt/fastembed-cache              /opt/fastembed-cache
 COPY app/src/data/generated-descriptions.json             /app/app/src/data/generated-descriptions.json
 COPY app/src/data/livecams.json                           /app/app/src/data/livecams.json
+COPY app/src/data/bangkok/districts.json                  /app/app/src/data/bangkok/districts.json
 
 # Drop root at runtime. fastembed writes lock/idx files inside its cache dir
 # on first model load even when the ONNX weights are pre-baked, so the cache
@@ -90,6 +91,8 @@ ENV CITY_RATING_DATAMART=/app/data/station-datamart.json
 ENV CITY_RATING_EMBEDDINGS=/app/data/external/embeddings.npz
 ENV CITY_RATING_DESCRIPTIONS=/app/app/src/data/generated-descriptions.json
 ENV CITY_RATING_LIVECAMS=/app/app/src/data/livecams.json
+ENV CITY_RATING_BANGKOK=/app/app/src/data/bangkok/districts.json
+ENV CITY_RATING_BANGKOK_EMBEDDINGS=/app/data/external/bangkok-embeddings.npz
 ENV FASTEMBED_CACHE_DIR=/opt/fastembed-cache
 ENV MCP_TRANSPORT=http
 ENV MCP_HOST=0.0.0.0

@@ -169,6 +169,16 @@ Claude Code (`.claude/settings.json` — workspace level):
 
 ## Run as HTTP service
 
+Bangkok district profiles use the committed `app/src/data/bangkok/districts.json`
+(`CITY_RATING_BANGKOK` overrides its path). To enable Bangkok semantic tools,
+run `python3 scripts/build-embeddings.py --city bangkok` from the repository
+root using the same `intfloat/multilingual-e5-large` model as Tokyo. Supply
+the resulting `data/bangkok-embeddings.npz` via
+`CITY_RATING_BANGKOK_EMBEDDINGS` (in Docker, mount it at
+`/app/data/external/bangkok-embeddings.npz`). This file is generated and is
+not committed. Existing Tokyo vectors and data remain separate. Missing
+Bangkok embeddings prevent Bangkok semantic queries, not district profiles.
+
 ```bash
 MCP_TRANSPORT=http MCP_PORT=8000 MCP_PATH=/mcp city-rating-mcp
 ```

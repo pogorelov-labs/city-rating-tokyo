@@ -61,6 +61,8 @@ jobs:
           pip install pytest pydantic requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pip install -r scripts/requirements-ingest.txt --quiet
           pytest -v
+      - name: Validate livecam health-check input (offline)
+        run: python scripts/check-livecams.py --offline --threshold 0
 
   mcp:
     # Lint + install check for the FastMCP Python service in mcp/.
