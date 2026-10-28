@@ -14,3 +14,4 @@
 **/playwright-report
 .claude/plans
 data/embeddings.npz
+data/bangkok-embeddings.npz
