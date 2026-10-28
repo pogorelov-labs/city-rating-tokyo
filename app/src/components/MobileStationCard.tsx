@@ -144,10 +144,9 @@ export default function MobileStationCard({
   return (
     <div
       ref={cardRef}
-      // z 1000 = the touch zoom buttons' (Leaflet controls); the card comes
-      // later in the DOM, so it covers them instead of the reverse. The compare
-      // panel (z 1001) and the filter drawer (z 1002) still cover the card.
-      className={`md:hidden fixed bottom-0 left-3 right-3 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
+      // Reserve a right-hand column for the shared Leaflet zoom controls.
+      // Compare and filter panels still stack above the card and controls.
+      className={`md:hidden fixed bottom-0 left-3 right-16 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
         open ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
