@@ -1,6 +1,7 @@
 'use client';
 
 import RentNote from '@/components/bangkok/RentNote';
+import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
 
 import { dataLabel } from '@/i18n/message-key';
 import { useLocale, useTranslations } from 'next-intl';
@@ -37,33 +38,6 @@ function LineChips({ ids, lineChip }: { ids: string[]; lineChip: (id: string) =>
         );
       })}
     </div>
-  );
-}
-
-function CompareButton({
-  isCompared,
-  compareFull,
-  onCompare,
-  onUncompare,
-}: {
-  isCompared: boolean;
-  compareFull: boolean;
-  onCompare: () => void;
-  onUncompare: () => void;
-}) {
-  const t = useTranslations();
-  return isCompared ? (
-    <button onClick={(e) => { e.stopPropagation(); onUncompare(); }} className="text-red-500 text-xs hover:underline">
-      {t('map.removeCompare')}
-    </button>
-  ) : (
-    <button
-      onClick={(e) => { e.stopPropagation(); onCompare(); }}
-      className="text-purple-600 text-xs hover:underline disabled:opacity-40"
-      disabled={compareFull}
-    >
-      {t('map.compare')}
-    </button>
   );
 }
 
@@ -106,9 +80,7 @@ export function StationAreaPopupBody({
           color={color}
         />
       </div>
-      <div className="font-bold text-base">{names.primary}</div>
-      <div className="text-gray-500 text-sm mb-1">{names.secondary}</div>
-      {area.score !== null && <div className="text-lg font-bold text-slate-800">{area.score.toFixed(1)} / 10</div>}
+      <AreaCardMeta primary={names.primary} secondary={names.secondary} score={area.score} />
       <LineChips ids={area.line_ids ?? []} lineChip={lineChip} />
       <div className="text-xs text-gray-500 mb-2">
         {t('map.stationAreaCaption')}
@@ -116,17 +88,8 @@ export function StationAreaPopupBody({
         {area.rent_1k != null && <> · ~{formatRentShort('bangkok', area.rent_1k)}/mo</>}
         {area.rent_provenance && <RentNote rent={area.rent_provenance} compact />}
       </div>
-      <div className="flex items-center gap-3 mt-1">
-        <Link
-          href={areaPath('bangkok', area.slug)}
-          className="text-blue-600 text-xs hover:underline"
-          data-umami-event="view-details"
-          data-umami-event-station={area.slug}
-        >
-          {t('map.viewDetails')}
-        </Link>
-        <CompareButton isCompared={isCompared} compareFull={compareFull} onCompare={onCompare} onUncompare={onUncompare} />
-      </div>
+      <AreaCardActions city="bangkok" slug={area.slug} isCompared={isCompared} compareFull={compareFull}
+        onCompare={onCompare} onUncompare={onUncompare} />
     </div>
   );
 }
@@ -265,9 +228,7 @@ export function DistrictPopupBody({
           color={color}
         />
       </div>
-      <div className="font-bold text-base">{names.primary}</div>
-      <div className="text-gray-500 text-sm mb-1">{names.secondary}</div>
-      {d.score !== null && <div className="text-lg font-bold text-slate-800">{d.score.toFixed(1)} / 10</div>}
+      <AreaCardMeta primary={names.primary} secondary={names.secondary} score={d.score} />
       <div className="text-xs text-gray-500 mb-2">
         {d.station_count ? (
           <>
@@ -280,29 +241,8 @@ export function DistrictPopupBody({
         {d.rent_provenance && <RentNote rent={d.rent_provenance} compact />}
       </div>
       {snippet && <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">{snippet}</div>}
-      <div className="flex items-center gap-3 mt-1">
-        <Link
-          href={areaPath('bangkok', d.slug)}
-          className="text-blue-600 text-xs hover:underline"
-          data-umami-event="view-details"
-          data-umami-event-station={d.slug}
-        >
-          {t('map.viewDetails')}
-        </Link>
-        {isCompared ? (
-          <button onClick={(e) => { e.stopPropagation(); onUncompare(); }} className="text-red-500 text-xs hover:underline">
-            {t('map.removeCompare')}
-          </button>
-        ) : (
-          <button
-            onClick={(e) => { e.stopPropagation(); onCompare(); }}
-            className="text-purple-600 text-xs hover:underline disabled:opacity-40"
-            disabled={compareFull}
-          >
-            {t('map.compare')}
-          </button>
-        )}
-      </div>
+      <AreaCardActions city="bangkok" slug={d.slug} isCompared={isCompared} compareFull={compareFull}
+        onCompare={onCompare} onUncompare={onUncompare} />
     </div>
   );
 }

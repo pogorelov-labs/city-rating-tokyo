@@ -1,6 +1,7 @@
+import RatingsBreakdown from '@/components/RatingsBreakdown';
+import { FactsGrid, WikiLinks } from '@/components/DetailFacts';
 import { InstitutionFacts } from '@/components/InstitutionFacts';
 import { getInstitutions } from '@/lib/institutions';
-import { dataLabel } from '@/i18n/message-key';
 import { hasLocale } from 'next-intl';
 import AirPanel from '@/components/AirPanel';
 import { QuietnessFacts } from '@/components/QuietnessFacts';
@@ -23,26 +24,19 @@ import {
 import { stationAreaKey } from '@/lib/area-key';
 import {
   calculateWeightedScore,
-  categoryDeviationColor,
   compositeToColor,
-  pigmentName,
 } from '@/lib/scoring';
-import { DEFAULT_WEIGHTS, RATING_LABELS, getGoogleMapsAreaUrl, type StationRatings } from '@/lib/types';
+import { DEFAULT_WEIGHTS, getGoogleMapsAreaUrl } from '@/lib/types';
 import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
 import RadarChartWrapper from '@/components/RadarChartWrapper';
-import Tooltip from '@/components/Tooltip';
 import RentNote from '@/components/bangkok/RentNote';
-import { rentTooltip } from '@/lib/bangkok-rent';
-import RatingBar from '@/components/RatingBar';
-import ConfidenceBadge, { ConfidenceIcon } from '@/components/ConfidenceBadge';
 import StatCard from '@/components/StatCard';
 import HubStrip from '@/components/HubStrip';
 import FeedbackWidget from '@/components/FeedbackWidget';
-import LocaleSwitcher from '@/components/LocaleSwitcher';
+import DetailHeader from '@/components/DetailHeader';
 
 const CITY = CITIES.bangkok;
 const STATS = CITY.levelStats.station!;
-const RATING_KEYS = Object.keys(RATING_LABELS) as (keyof StationRatings)[];
 
 export function generateStaticParams() {
   const ids = getBangkokStationAreaIds();
@@ -139,39 +133,9 @@ export default async function StationAreaPage({
       <div className="min-h-screen bg-gray-50">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        <header className="bg-white border-b border-gray-200">
-          <div className="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center gap-x-4 gap-y-1">
-            <Link href={mapHref} className="text-sm text-blue-600 hover:underline flex items-center gap-1" data-umami-event="back-to-map">
-              &larr; {t('bangkok.station.backToMap')}
-            </Link>
-            <span className="text-gray-300">|</span>
-            <h1 className="font-bold text-lg">{displayName}</h1>
-            <span className="text-gray-400">{thaiName}</span>
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-blue-600 hover:underline flex items-center gap-1"
-              title={t('station.mapsTooltip')}
-              data-umami-event="open-google-maps"
-              data-umami-event-station={stationAreaKey(a.id)}
-            >
-              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              {t('station.mapsLink')}
-            </a>
-            <LocaleSwitcher />
-            <span
-              className="ml-auto text-2xl font-bold"
-              style={{ color: compositeToColor(score, STATS.defaultAnchors) }}
-              title={t('bangkok.station.scoreTooltip')}
-            >
-              {score.toFixed(1)}
-            </span>
-          </div>
-        </header>
+        <DetailHeader homeHref={mapHref} backLabel={t('bangkok.station.backToMap')} primary={displayName} secondary={thaiName}
+        mapsUrl={mapsUrl} mapsTitle={t('station.mapsTooltip')} mapsLabel={t('station.mapsLink')} areaKey={stationAreaKey(a.id)}
+        score={score} scoreColor={compositeToColor(score, STATS.defaultAnchors)} scoreTitle={t('bangkok.station.scoreTooltip')} />
 
         <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
           {a.image && (
@@ -284,129 +248,7 @@ export default async function StationAreaPage({
                 areaLabel={t('bangkok.station.radarAreaLabel')}
               />
             </section>
-            <section className="bg-white rounded-lg border border-gray-200 p-5">
-              <div className="flex items-baseline justify-between gap-2 mb-2">
-                <h2 className="font-bold text-lg">{t('station.ratingsTitle')}</h2>
-                <span className="text-xs text-gray-500 shrink-0">{t('station.dataFreshness.label', { date: a.data_date })}</span>
-              </div>
-              <p className="text-[11px] text-gray-500 leading-relaxed mb-3 max-w-xl">{t('bangkok.station.ratingsCaption')}</p>
-              <div className="space-y-3">
-                {RATING_KEYS.map((key) => {
-                  const val = a.ratings[key];
-                  const conf = a.confidence[key];
-                  const srcs = a.sources[key];
-                  const median = STATS.medians[key];
-                  const dev = val - median;
-                  const barColor = categoryDeviationColor(val, median);
-                  const pigment = pigmentName(dev);
-                  const devPhrase =
-                    dev === 0
-                      ? t('bangkok.station.barTooltipDevExact', { median })
-                      : t('bangkok.station.barTooltipDev', {
-                          median,
-                          dev: Math.abs(dev),
-                          direction: dev > 0 ? t('station.devAbove') : t('station.devBelow'),
-                        });
-                  const labelDevSummary =
-                    dev === 0
-                      ? t('station.labelDevExact')
-                      : dev > 0
-                        ? t('station.labelDevAbove', { dev: Math.abs(dev) })
-                        : t('station.labelDevBelow', { dev: Math.abs(dev) });
-                  return (
-                    <div key={key} className="flex items-center gap-3">
-                      <div className="w-6 shrink-0 flex justify-center items-center">
-                        {conf && (
-                          <ConfidenceBadge
-                            level={conf}
-                            sources={srcs}
-                            descriptionKey={key === 'rent' && a.rent.provenance === 'station_override' ? 'bangkok.rent.proxyConfidence' : conf === 'editorial' ? 'confidence.editorial.descriptionDistrictLevel' : undefined}
-                          />
-                        )}
-                      </div>
-                      <Tooltip
-                        showHelpIcon={false}
-                        content={
-                          <>
-                            <span>{key === 'rent' ? rentTooltip(t, a.rent) : t(`ratingTooltips.${key}`)}</span>
-                            {srcs && srcs.length > 0 && (
-                              <span className="block mt-1.5 text-gray-400">
-                                {t('station.sourcesLabel')} {srcs.map((s) => (dataLabel(t, 'sources', s))).join(', ')}
-                              </span>
-                            )}
-                            <span className="block mt-1.5 pt-1.5 border-t border-gray-600/40 tabular-nums">
-                              {t('bangkok.station.bangkokMedian', { value: median })}
-                              <br />
-                              {t('bangkok.station.thisArea', { value: val })} ({labelDevSummary})
-                            </span>
-                          </>
-                        }
-                      >
-                        <span className="text-sm w-32 text-gray-600 cursor-help">{t(`ratings.${key}`)}</span>
-                      </Tooltip>
-                      <Tooltip
-                        wrapper="div"
-                        showHelpIcon={false}
-                        className="flex-1"
-                        content={
-                          <>
-                            <span className="font-semibold">
-                              {t('station.barTooltipScore', { label: t(`ratings.${key}`), value: val })}
-                            </span>
-                            <span className="block mt-1">{devPhrase}</span>
-                            <span className="block mt-1 italic text-gray-400">
-                              {t('station.barTooltipPigment', { jp: pigment.jp, en: pigment.en, tone: pigment.tone })}
-                            </span>
-                          </>
-                        }
-                      >
-                        <RatingBar value={val} median={median} fillColor={barColor} />
-                      </Tooltip>
-                      <span className="text-sm font-bold tabular-nums w-6 text-right">{val}</span>
-                      <span
-                        className="w-3 text-center text-sm font-medium leading-none tabular-nums"
-                        style={{ color: barColor, opacity: 0.65 }}
-                        aria-hidden
-                      >
-                        {dev > 0 ? '↑' : dev < 0 ? '↓' : '−'}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-[10px] text-gray-600">
-                {(['strong', 'moderate', 'estimate', 'editorial'] as const).map((level) => (
-                  <span
-                    key={level}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5"
-                  >
-                    <ConfidenceIcon level={level} size={10} />
-                    {t(`confidence.${level}.label`)}
-                  </span>
-                ))}
-              </div>
-              <details className="group mt-3">
-                <summary className="flex items-center gap-1.5 cursor-pointer text-[11px] text-gray-600 hover:text-gray-800 select-none marker:hidden list-none">
-                  <svg
-                    className="w-3 h-3 text-gray-400 transition-transform group-open:rotate-90 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                  {t('station.howRatingsWork.title')}
-                </summary>
-                <div className="mt-2 pl-5 text-[11px] text-gray-600 leading-relaxed space-y-1.5">
-                  <p>{t('bangkok.station.howRatingsWork')}</p>
-                  <p>{t('bangkok.station.relativeNote')}</p>
-                  <Link href="/methodology#bangkok" className="inline-block text-blue-600 hover:underline font-medium">
-                    {t('station.howRatingsWork.learnMore')}
-                  </Link>
-                </div>
-              </details>
-            </section>
+            <RatingsBreakdown kind="station" ratings={a.ratings} medians={STATS.medians} confidence={a.confidence} sources={a.sources} dataDate={a.data_date} rent={a.rent} />
           </div>
 
           <AirPanel city="bangkok" />
@@ -416,7 +258,7 @@ export default async function StationAreaPage({
           {/* By the numbers */}
           <section className="bg-white rounded-lg border border-gray-200 p-5">
             <h2 className="font-bold text-lg mb-3">{t('bangkok.station.factsTitle')}</h2>
-            <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm">
+            <FactsGrid>
               {(
                 [
                   ['factFood', f.food],
@@ -468,7 +310,7 @@ export default async function StationAreaPage({
                   <dd className="font-semibold tabular-nums">{nf.format(a.attractions_800m)}</dd>
                 </div>
               )}
-            </dl>
+            </FactsGrid>
             <p className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 leading-relaxed">
               {t('bangkok.station.factsSource')}
             </p>
@@ -510,19 +352,7 @@ export default async function StationAreaPage({
             </Link>
           </section>
 
-          {wikiLinks.length > 0 && (
-            <p className="text-xs text-gray-500">
-              {t('bangkok.district.readMore')}{' '}
-              {wikiLinks.map((w, i) => (
-                <span key={w.lang}>
-                  {i > 0 && ' · '}
-                  <a href={w.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                    Wikipedia ({w.lang.toUpperCase()})
-                  </a>
-                </span>
-              ))}
-            </p>
-          )}
+          <WikiLinks links={wikiLinks} label={t('bangkok.district.readMore')} />
 
           <FeedbackWidget stationSlug={stationAreaKey(a.id)} stationName={displayName} source="station_page" />
         </main>
