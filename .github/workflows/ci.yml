@@ -110,8 +110,7 @@ jobs:
           pytest scripts/bangkok -v
 
   e2e:
-    # Advisory while browser and tile infrastructure stability is established.
-    continue-on-error: true
+    # Run without retries so a flaky interaction fails the check visibly.
     timeout-minutes: 12
     runs-on: ubuntu-latest
     steps:
@@ -126,4 +125,4 @@ jobs:
       - run: npm ci
       - run: npm ci --prefix app
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e -- e2e/map-interactions.spec.ts
+      - run: npm run test:e2e -- e2e/map-interactions.spec.ts --retries=0

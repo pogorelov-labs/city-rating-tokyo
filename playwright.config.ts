@@ -8,7 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
  * the repo root, `npm run test:e2e` starts the dev server, runs the smoke
  * suite, and tears the server down.
  *
- * The map interaction spec also runs in an advisory CI job. See e2e/README.md.
+ * The map interaction spec also runs in CI. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
 const port = process.env.E2E_PORT || '3000';

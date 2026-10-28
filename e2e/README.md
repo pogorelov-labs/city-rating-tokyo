@@ -23,7 +23,8 @@ npm run test:e2e:ui
 
 `npm run test:e2e` boots `next dev` on port 3000 automatically via the
 `webServer` block in `playwright.config.ts`. If a dev server is already
-running on :3000 it is reused (locally); in CI a fresh one is started.
+running on :3000 it is reused (locally); in CI a fresh one is started. Set
+`E2E_PORT` to an available port to run alongside another local server.
 
 ## What's covered
 
@@ -54,6 +55,6 @@ Intentionally **not** covered here:
 
 ## CI
 
-The advisory `e2e` job installs Chromium and runs `map-interactions.spec.ts`
-against a fresh dev server. It is non-blocking while browser stability is
-established; the existing build, schema, MCP and Bangkok jobs remain gating.
+The `e2e` job installs Chromium and runs `map-interactions.spec.ts` against a
+fresh dev server with retries disabled. Its failure fails the CI check; branch
+protection must also require the `e2e` status for it to gate merging.
