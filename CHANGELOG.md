@@ -10,6 +10,16 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## Unreleased
+
+### Fixed
+
+- The Bangkok grid panel now applies the flood-risk filter to its count and
+  ranked hotspots, keeping them aligned with the map.
+- Tokyo map selections can now be cleared with Escape. Hover highlights clear
+  consistently across both cities.
+- MCP composite scores now round half-values in the same way as the website.
+
 ## v0.1.1 — 2026-10-27
 
 Bangkok data refresh. This is a data-only release: no new features, API, URL,
