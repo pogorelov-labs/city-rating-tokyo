@@ -25,6 +25,7 @@ evidence in research notes or the PR body and link it.
   ranked hotspots, keeping them aligned with the map.
 - Tokyo map selections can now be cleared with Escape. Hover highlights clear
   consistently across both cities.
+- Map zoom controls on phones are no longer covered by the selected station card.
 - MCP composite scores now round half-values in the same way as the website.
 
 ## v0.1.1 — 2026-10-27
