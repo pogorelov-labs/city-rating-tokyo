@@ -729,6 +729,10 @@ was recognized.
 
 **Recommendation: retain asking rent as the primary product metric, with a
 separate paid-rent cross-check only where its own cohort passes release.**
+The temporal rent model and comparable paid-versus-asking delta are
+**unidentifiable from this corpus under the audited definitions**. Neither is
+estimated as zero. Empty numerical maps and null values record the absence of
+an identified comparable estimate, not zero rent, zero drift or zero discount.
 Currently the numerical maps would be empty: **0 of 50 khet and 0 of 133 station
 areas** have a releasable corpus-paid reference or bedroom-only proxy estimate
 under the audited screens. Repaired-screen counts are scoped local adjudications.
