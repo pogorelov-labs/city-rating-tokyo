@@ -1046,10 +1046,35 @@ across all 35 sources. It also exposed unreported context/history strata.
 The correction is to report those strata, not to hide them behind a narrower
 predicate. These are bounded checks, not exhaustive recall or verified leases.
 
+### Scoped Mo Chit trigger and recall regression
+
+The standing geography check verified the Samet, city, grain, pinning and cohort
+repairs, but found one new collateral effect: the bare railway-station word had
+globally reclassified two commercial housing listings as transport and removed
+their correctly linked Asok/Nana references. This was an unintended recall loss.
+
+The generic word is now checked **only against the Mo Chit mention in its own
+clause**; it does not globally re-role an unrelated listing. Explicit bus,
+terminal-2 and fare controls remain. Both reported listings recover their
+commercial role and qualified station evidence. On the same **20,393-record**
+saved frame, **0 rows lose station evidence** and **5 gain it**: the two listings
+and three non-residential rail-travel name references. These latter references
+are not rent observations or inferred tenancy coordinates.
+
+On the unchanged fourteen-row legacy station-label subset, the broad-trigger
+version scored **10/14** and the scoped version scores **12/14**. One old station
+label now correctly remains a Rama 9 corridor reference; one miss predates this
+repair and is retained at district grain. All **14/14** have a station, corridor
+or district reference under that explicitly broader definition. The scoped fix
+therefore restores the two collateral rows; it does not manufacture a 13/14
+station score by hiding the intended grain change. This targeted gold result is
+not a population recall rate. The earlier independently measured Sukhumvit
+corridor result (354/374) is a separate grain and frame, not this denominator.
+
 ### Replacement method and replay boundary
 
-The method/input bundle is `4e067f9bb47e6f08`; its controlled processing run is
-`9fd429e566fb`. The earlier bundles are superseded research checkpoints.
+The method/input bundle is `2d9b688341c34e50`; its controlled processing run is
+`2a53b30fff74`. The earlier bundles are superseded research checkpoints.
 The sealed package retains a read-only repair-snapshot note. This public text
 adds the complete four-record provenance chain; its measurement code, inputs
 and aggregate figures remain unchanged from that snapshot.
@@ -1132,7 +1157,7 @@ new corridor key. Even a genuine rail name does not locate the writer's unit.
 |---|---:|---:|---:|---|
 | Sukhumvit name family | 239 | 81 | 9 | Withheld |
 | Ratchada / Rama 9 name family | 44 | 20 | 1 | Withheld |
-| North / Chatuchak name family | 64 | 13 | 0 | Withheld |
+| North / Chatuchak name family | 65 | 13 | 0 | Withheld |
 | Riverside / Thonburi name family | 94 | 6 | 0 | Withheld |
 | Other priority central names / Silom-Sathorn | 276 | 52 | 4 | Withheld |
 
@@ -1258,7 +1283,9 @@ values. No missing second-bedroom value, price ratio or spatial interpolation is
 created. A useful Tier-2 fact may state insufficient comparable evidence without
 publishing a tiny-sample price.
 
-Local controls now include fifteen geography positives/negatives, eight real
+Local controls include the two collateral listings, the unchanged fourteen-row
+legacy-label comparison, the full-frame no-loss delta, fifteen geography
+positives/negatives, eight real
 Sukhumvit grain cases, the older fourteen collision cases, the fixed-watermark
 Samet and transport/city probes, the live nounless-payment context regression,
 fee/postcode controls and the replayable body comparison. Their declared inputs
