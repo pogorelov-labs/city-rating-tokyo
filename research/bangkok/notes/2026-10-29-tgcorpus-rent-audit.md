@@ -2,7 +2,7 @@
 
 Researched **2026-10-29**. Research only; adoption belongs to **CRTKY-136**.
 
-**Independent corpus refutation completed; no threshold-crossing cohort was established under the tested screens.**
+**Independent adversarial checks of both passes are complete; corrections and remaining limits are recorded below.**
 
 ## Decision and metric
 
@@ -308,12 +308,13 @@ the verification path; raw posts are not reproduced in this public artifact.
   an unembedded tail, colloquial vocabulary, image prices and unresolved contexts
   limit recall. No observed absence is claimed outside this snapshot/protocol.
 
-The recent window is **2024-10-29 through the latest observed raw date,
-2026-10-26**. A proposed freshness sensitivity uses
+The first-pass historical screen used **2024-10-29 through the latest observed raw date,
+2026-10-26**. Its initial freshness proposal used
 `w = 2^(-age_in_months/12)` with six- and twenty-four-month half-life checks,
 based on report date and explicitly flagged when the actual price date is
 unknown. Weights are not extra observations. With no releasable complete cohort,
 weighted medians and `n_eff=(Σw)²/Σw²` are undefined/not released rather than zero.
+The owner-requested extension below proposes a narrower primary window and half-life.
 Changing decay cannot fill missing unit/location fields. This pass does not
 measure a population-level paid-versus-asking gap or negotiation discount.
 
@@ -364,3 +365,609 @@ record is summarized above. Candidate-parser checksum (code only; not the comple
 
 No application code, rent values, district/area/grid exports or corpus data are
 changed by this research note.
+
+## Owner-requested extension: time, paid-versus-asking, skew and adoption
+
+**2026-10-29 extension; independent adversarial re-derivation completed and reconciled.**
+The original audit above is the first-pass record merged in PR #170. The extension
+reuses its frozen comparator inputs and controlled source crosswalk, then adds
+broader noun/verb controls, building-name retrieval and geometry checks. This
+remains research; the following JSON and precedence rules are a decision document
+for CRTKY-136, not a new input file or an adoption decision.
+
+The added retrieval brings the direct message union from **18,281 to 19,537**
+records, an increase of **1,256**. That union is not a tenancy panel. A broad
+paid-verb/number control flagged another **125** housing/context records outside
+the original manual screen; **123** lacked a parsed THB amount. The two with
+parsed amounts included the repeated Punnawithi claim and an unlocated house
+renewal/counteroffer, rather than a new central reference-size condo cohort.
+Foreign currency, dates, bill amounts and unspecified magnitudes remain excluded
+or unresolved; this does not establish exhaustive recall.
+
+### 1. Annual observations and the decay window
+
+The all-source inventory was re-enumerated before this pass: **35 sources,
+8,396,280 non-soft-deleted messages**, latest raw activity October 26. SQL and
+Python annual buckets use **Asia/Bangkok report time**. A Python boundary-date
+discrepancy was caught by reconciling the annual SQL counts and corrected before
+using the table. The following are exact **message** counts, without a SQL LIMIT:
+
+| Report year | Discussion-chat messages | Chat housing/payment handles, raw | Chat handles after ad-template filter | Literal `бангкок`, all sources | City AND crude rent handles, raw | Crude after ad-template filter |
+|---|---:|---:|---:|---:|---:|---:|
+| 2023 | 22,798 | 1,802 | 1,801 | 9,168 | 289 | 288 |
+| 2024 | 37,630 | 2,470 | 2,470 | 9,716 | 374 | 373 |
+| 2025 | 56,928 | 2,974 | 2,966 | 13,710 | 784 | 631 |
+| 2026 through Oct 26 | 36,179 | 2,213 | 2,036 | 9,653 | 1,440 | 213 |
+
+The chat columns use the dedicated discussion source, keeping the listing
+channel separate. That channel enters the corpus in March 2025, so a combined
+chat-plus-channel curve has a source-composition break. The expanded handle
+includes housing nouns, rent/lease language and payment verbs; it also matches
+non-rent discussion. The all-source crude handle remains
+`аренд|кондо|снимаю|снимал`. Neither series counts actual leases.
+
+The raw apparent 2026 growth was **an ad/admin-template artifact**: **1,227 of
+1,440** crude co-mentions (**85.2%**) match the fixed vehicle/transfer/yacht and
+admin-recommendation promotion signature. After that filter the counts are
+**631 in 2025 and 213 in partial 2026**, reversing the direction of the raw
+counts. These residuals are not automatically human reports or housing rents.
+The filter is defined by sampled, recurring templates, not inferred bot status.
+Its final predicate was independently rerun; an earlier broader fast-track
+signature was not mixed into the published counts. No private account IDs or
+message text are exported.
+
+The same filter removes **177 of 2,213** raw 2026 chat housing/payment-handle
+messages (**8.0%**); **2,036** remain, against **2,966** in 2025. This corrects
+the discussion-coverage narrative, not a price series. Partial 2026 is not
+annualized and is not a like-for-like full-year price period. No market-rent or
+community-demand growth rate is inferred from either raw or filtered counts.
+Core coverage only becomes substantial in 2023; earlier all-source city mentions
+do not establish a comparable historical Bangkok rental panel.
+
+The paid-claim ledger now has **22 messages grouped into 17 conservative housing
+claim episodes from 16 accounts** over four years. One account contributes two
+distinct stays, so episode count does not prove statistical independence. This
+includes the original twenty self-reported
+paid messages, one completed-lease claim and the additional Punnawithi repeat.
+They are not seventeen verified transactions: hotels, studios, unknown products
+and retrospectively reported payments remain in this diagnostic count.
+This ledger uses the self-paid/completed-lease labels with retained point amounts;
+bundled own-and-friend prices and third-party claims are separate. Within that
+defined ledger, **six** episodes are identified as ordinary condos without an explicit
+short-stay/serviced exclusion; **five of those six lack floor area**, and the
+one stated floor area is outside the reference band.
+
+| Report year | Retained paid-claim messages | Distinct claim episodes within year | Ordinary-condo claim episodes within year | Complete fixed-size/bedroom paid episodes | Released reference-rent median, THB/month |
+|---|---:|---:|---:|---:|---|
+| 2023 | 9 | 6 | 2 | 0 | — |
+| 2024 | 4 | 3 | 2 | 0 | — |
+| 2025 | 5 | 5 | 2 | 0 | — |
+| 2026 | 4 | 4 | 1 | 0 | — |
+
+One recurring episode crosses years, so annual episode counts must not be summed
+as distinct all-period tenancies. Ordinary-condo identification still does not
+establish location, bedrooms, duration or current price date. The proposed recent
+report window contains **nine paid-claim messages and three ordinary-condo claim
+episodes**, from **eight accounts**; these are not three comparable central-station
+observations. Moving the report-window start by two days drops one of the three
+ordinary-condo claims, but changes no released reference cohort.
+
+**Drift-model result: not identifiable.** A defensible price model would compare
+like area × bedroom × size × lease-term cohorts, account for project/quality and
+lease vintage, and fit a time term to their price-in-effect dates. In the retained
+claims there are **zero complete fixed-size/bedroom paid observations**, before
+requiring temporal overlap or independent samples. There is no identified rent
+drift coefficient, current fixed-size median or uncertainty interval to report.
+The coefficient is **undefined, not zero**. Pooling a larger old condo, a studio,
+an incumbent lease and a hotel would estimate changes in their mix, not a Bangkok
+rent trend. This pass does not manufacture an annual uplift from message growth.
+There is a current foreign-currency paid report with a small-unit floor area in
+the wider controls, but no bedroom count and a non-target location. It fails
+the joint currency/bedroom/geography definition; zero complete observations
+does not mean that nobody states a floor area. No FX or bedroom imputation is made.
+
+**Adopted analytical window for this extension:** **2025-10-29 through
+2026-10-26**, the latest observed raw date, with observations dated by when the
+reported price was in effect. This is a twelve-month lookback from the audit
+date, truncated at the data cutoff. A present-tense claim can support a reported
+current price at that report date; a retrospective claim without a price date
+cannot. Neither identifies the original contract-signing date automatically.
+Unknown price dates belong in a separate report-dated sensitivity, not the primary
+rent estimator. A 2024 payment is retained as historical evidence and does not
+become a 2026 price.
+
+**Occupied cost and price-setting date are different estimands.** An explicit
+current incumbent-rent claim can describe what is paid now without dating its
+last rent reset. The independently reconstructed contract history leaves one
+incumbent's rate-setting date uncertain. Under the refuter's vintage interval,
+using report date as a new-lease price date could imply a **conditional weight
+ratio of about 1×–5.4× at a twelve-month half-life**. This is an uncertainty bound
+under possible rate-setting dates, not a measured error, rent change or fixed
+correction.
+Keep current occupied cost separate from new-lease/renewal-event comparisons;
+do not invent a reset date or treat every incumbent price as stale or new.
+
+Within that hard window the proposal uses
+`w = 2^(-price_age_in_months / 6)`. Illustrative policy weights at ages zero,
+six and twelve months are **1, 0.5 and 0.25**. The shorter half-life limits the
+influence of stale inventory while the hard cutoff prevents indefinite carry.
+Age is elapsed calendar days from the price-in-effect date to the audit date,
+divided by 30.4375; a future paid-price date is not admitted.
+It is a conservative operating choice, **not a decay rate fitted from this
+corpus**. Test three- and twelve-month half-lives and six-/twenty-four-month
+windows on the same defined cohort. No decay setting fills missing unit fields;
+all current reference medians remain unreleased. No FX or inflation adjustment,
+nightly-to-monthly multiplication or assumed contract-date repair is used.
+
+**The amount finder is not an integration-ready monthly-rent normalizer.**
+Independent re-reading sustained the retained amounts, but constructed controls
+expose missing automatic guards for weekly rates, annual totals and multi-month
+totals. A weekly amount treated as monthly would understate monthly cost.
+The bare-year guard can also hide a genuine small amount, while bare shorthand
+needs manual context. The retained ledger was manually adjudicated; the prototype
+must not feed a product without explicit per-amount currency, role and period
+validation. These are documented feasibility limits, not repairs to product code.
+
+### 2. Paid-versus-asking deltas
+
+Define the descriptive gap as `paid median − asking median`, and its percentage
+as `100 × (paid median / asking median − 1)`. A negative gap is **not by itself
+an achieved negotiation discount**. That requires the same unit's documented
+initial ask and agreed price for the same term, currency, fees and date. A public
+asking inventory and this community's incumbent/short-stay reports are different
+populations. An unaccepted hypothetical concession is not a paid outcome.
+
+The following checks the requested overlap using the fixed-size paid reference
+and the frozen published DooAsset bedroom proxies. Paid counts are from the
+audited retained claims, not a universal claim of absence. The source dates below
+are DooAsset's recorded as-of dates, not the new corpus extraction date.
+No corpus tenancy is assigned to a product area by this research; the rows record
+the absence of an established comparable cohort in the tested ledger, not a
+complete enumeration of neighborhood rentals.
+
+| Area | Published asking 1BR / 2BR, THB/month (as-of) | Complete recent paid n, 1BR / 2BR | Released paid median, 1BR / 2BR | Paid-minus-asking gap | Reading |
+|---|---|---:|---|---|---|
+| Thong Lo | 28,000 / 56,500 (2026-09-29) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Ekkamai | 27,000 / 50,000 (2026-10-25) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Phrom Phong | 48,000 / 52,500 (2026-10-25) | 0 / 0 | — / — | — | No releasable comparable paid cohort; published size/luxury composition differs |
+| Asok | 26,500 / 55,000 (2026-10-25) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Nana | 28,000 / 60,000 (2026-10-17) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Chit Lom | 45,000 / 120,000 (2026-10-21) | 0 / 0 | — / — | — | No releasable comparable paid cohort; published size/luxury composition differs |
+| Siam | No adopted DooAsset anchor | 0 / 0 | — / — | — | Paid cohort and asking anchor both unavailable |
+| Sala Daeng | 38,000 / 60,000 (2026-10-07) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Chong Nonsi | 24,000 / 72,000 (2026-10-01) | 0 / 0 | — / — | — | No releasable comparable paid cohort; published size/luxury composition differs |
+| Ari | No adopted DooAsset anchor | 0 / 0 | — / — | — | Paid cohort and asking anchor both unavailable |
+| Ratchathewi | 21,500 / 38,000 (2026-10-07) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+| Phaya Thai | 25,000 / 43,500 (2026-10-10) | 0 / 0 | — / — | — | No releasable comparable paid cohort |
+
+The asking facts, counts and citations remain in the [October 25 audit](2026-10-25-central-rent-audit-crtky141.md)
+and `data/bangkok/rent-overrides.json`; no blocked portal was retried. DooAsset
+medians include all floor areas by bedroom and use provider geography. They are
+not silently converted into the fixed-size, application-catchment metric.
+Phrom Phong's 1BR proxy, Chit Lom's larger/luxury mix and Chong Nonsi's published
+larger 2BR sample remain explicit composition caveats. Chit Lom's published
+typical 1BR size is **56 m²** and Chong Nonsi's typical 2BR size **93.3 m²**,
+above the respective 30–35 / 60–70 m² reference bands. There is **no publishable
+paid-minus-asking number or negotiation cushion** from these audited overlaps.
+
+Even a future dense paid cohort needs a common size/quality/term/date footprint
+before a standardized gap is meaningful. For a contemporaneous gap, restrict
+price dates around the asking snapshot, for example a proposed ±90-day window,
+and reapply density gates. That is narrower than the primary annual collection
+window. An unstandardized all-size cross-sample gap could be labelled as such,
+but cannot validate our reference-size rent or identify bargaining causally.
+
+A separate relaxed check removes the floor-area band and widens the report
+lookback to twenty-four months, while retaining ordinary-condo paid basis,
+known 1BR/2BR count and a resolved ten-override-area footprint. It still finds
+**zero retained overlapping observations**. The unavailable delta is therefore
+not solely a consequence of the narrow size band or the proposed adoption gate.
+
+### 3. Observable cohort skew and where extrapolation fails
+
+The selection model has several stages: access to this Russian-language source
+frame; participation; choosing to discuss housing; deciding to state a price;
+enough unit/date/location detail; and inclusion after deduplication. Their
+probabilities are unknown. The missingness is plausibly related to mobility,
+budget and housing type, so inverse message-count weighting cannot make this a
+sample of Bangkok tenants. Language does not establish nationality.
+
+A manual diagnostic re-read all **30 explicit-budget contexts** in the original
+403-context screen. After removing copies, non-rent living-cost totals, other
+currencies, nightly/multinight amounts, opinions and unknown monthly bases,
+**12 unique monthly rent-budget requests from 12 accounts in one discussion
+chat** were retained. The strict rule is: **the cap is explicitly per month,
+or the requested base stay is one month**, so the cap has an unambiguous monthly
+basis. A possible extension of a one-month stay is a soft edge, not a new budget
+period. A one-to-two-month request whose cap has no stated period is outside this
+strict set.
+Eight use explicit THB and four contextual THB. Ranges retain the stated upper
+cap; they are not converted to midpoints.
+
+| Diagnostic in those twelve requests | Count | What it supports |
+|---|---:|---|
+| Monthly upper cap at most THB20,000 | 8 | A lower-budget search segment is visible in this selected subset |
+| Monthly upper cap THB20,001–30,000 | 4 | The remaining retained caps are in this band |
+| Monthly upper cap above THB30,000 | 0 | No such cap in this subset; not absence of affluent community members |
+| Seeking one or two months | 10 | This subset mainly discusses short stays |
+| Seeking an annual lease | 1 | Little annual-lease budget evidence in this subset |
+| Seeking approximately six months | 1 | An intermediate-term request, not a completed lease |
+
+These are **requested caps, not paid rents**, and not all corpus budgets. Their
+denominator is the selected audited subset, not all chat members or renters.
+An explicit contextual-monthly sensitivity adds the two period-ambiguous
+one-to-two-month requests: **14 requests, bands 10 / 4 / 0**, with **12 short,
+one annual and one approximately six-month** request. This does not resolve
+every unspecified-period budget in the corpus. Foreign-currency budgets are not
+converted. The extended project search also found a monthly THB request above
+THB30,000 outside this diagnostic subset. Thus the displayed 30k ceiling is
+**frame-only**, not a community ceiling or absence of high-budget renters.
+The broader **raw** discussion-source screen contains 9,459 housing/payment-handle
+messages; condo vocabulary occurs in 1,091, private-house/villa handles in 175,
+and hotel/Airbnb/serviced vocabulary in 857. These overlapping lexical counts
+measure discussion, not property or household shares. A house-renewal price in
+an unresolved/non-Bangkok context was not admitted as a Bangkok condo observation.
+
+| Potential skew | Measured support / boundary | Where the corpus should not set a rent |
+|---|---|---|
+| Language/community | Russian-language relocation/travel source frame; no population inclusion probabilities | Thai-only rental channels, local family housing and all Bangkok households |
+| Product and size | Six ordinary-condo claim episodes; five omit floor area; studios/hotels/serviced stays also occur | Houses/villas, or a fixed-size 1BR/2BR inferred from a project's other floorplans |
+| Budget | Eight of twelve audited monthly caps are at most THB20,000 | Luxury inventory or a citywide affordability distribution inferred from these requests |
+| Tenure | Ten of twelve audited requests seek one/two months; current paid claims can also be incumbent renewals | Annual new-lease asking rents, unless term and lease vintage are aligned |
+| Geography | Loose outer-Sukhumvit claims and named central/Rama 9 projects coexist; names can point to other khet/catchments | An all-Bangkok median applied to any khet, or a Sukhumvit/Sathorn brand used as a station coordinate |
+| Reporting | Budgets, advice and non-rent payments dominate the broad price-context screen | A paid-versus-asking adjustment calibrated from message counts or reported bargains |
+
+No tenant-population reference distribution is available for these exact
+language × budget × property × tenure × area cohorts. Consequently the study
+does **not** assign estimated over-/under-representation ratios to the 50 khet.
+WorldPop residents include owners, children, house residents and other language
+communities; OSM named buildings are not rental households. Neither is a valid
+post-stratification denominator for this corpus. Observable discussion mix and
+coverage gaps are reported instead of invented population weights.
+
+Central named-project attention does not make the underlying paid cohort dense.
+Nor should outer khet dominated by different housing products inherit a central
+expatriate-condo estimate. Currently **no khet or station area passes the paid
+reference-rent release gate**. Ari and Siam remain explicit gaps, not zero-rent
+areas or evidence that people do not live there.
+
+### 4. Named condos, frozen POIs and station precision
+
+The extension read the **existing** spatial inputs whose hashes match the
+committed [frozen-refresh manifest](../../../data/bangkok/refresh-inputs.json)
+and [source/license audit](2026-10-26-frozen-refresh.md). No spatial acquisition
+or full product rebuild was performed. The OSM PBF timestamp is
+**2026-10-24T20:20:51Z**; Overture is the retained 2026-09-23.1 release.
+
+The slim Overture extract contains **309,704** records with ID, category,
+confidence, provenance and position, **no names**. It cannot perform a condo-name
+join. Nearest anonymous Overture business points are not building identities.
+The OSM reader produced **15,417 named building/keyword candidates** across all
+50 khet and 132 of the 133 station footprints. That is source lookup coverage,
+**not 15,417 condos or 132 areas with rent evidence**. It includes commercial
+buildings and hotels; named relations without a named member can still be missed.
+The one empty lookup footprint is `bhumibol-adulyadej-hospital`; this does not
+mean that the area has no named POIs or housing.
+
+An exploratory building-name lookup of **2,222 aliases** yielded **69 project-mention contexts**
+in the extended message/context pool. Thirteen contain parsed THB amount
+candidates and eight contain paid-verb candidates; these sets overlap and are
+not confirmed leases. General words such as villa, residence, tower, home and
+7-Eleven were removed as standalone identities. Commercial tags, full project
+name, price clause and property type are checked before accepting any location.
+The added qualified-name SQL pass has no result LIMIT.
+
+**Gazetteer honesty:** this expanded building-name lookup is not an upgraded
+Russian area gazetteer. The station/khet assignment dictionary remains the
+**first-pass v1**; **106 of 133 areas lack Cyrillic aliases**. The building-lookup
+revision added Latin/Thai names, **zero new Cyrillic aliases**, and did not fix
+Russian inflections, corridor/soi ambiguity or absent project names. Independent
+adversarial samples found those misses. Consequently **general per-area corpus
+assignment is unsupported**. No alias rebuild is claimed or needed for the
+annex's empty numerical maps; a future adoption task must solve that coverage.
+
+| Public OSM identity control | Frozen khet | Application station footprint | Consequence |
+|---|---|---|---|
+| [IDEO Mobi Sukhumvit 66](https://www.openstreetmap.org/way/827834612) | bang-na | udom-suk | A Sukhumvit name does not imply a central Watthana station |
+| [oka HAUS](https://www.openstreetmap.org/way/1038166166) | khlong-toei | none | Site/name corroboration improves khet resolution without forcing Thong Lo |
+| [Equinox Phahol–Vibha](https://www.openstreetmap.org/way/342431405) | chatuchak | ha-yaek-lat-phrao | A “Chatuchak” reference need not mean the Chatuchak station area |
+| [One9Five Asoke–Rama 9](https://www.openstreetmap.org/way/720474551) | huai-khwang | phra-ram-9 | Asoke branding does not assign BTS Asok |
+
+These links locate public OSM objects; calculations use the frozen payload,
+not later live map edits. Coordinates use longitude/latitude for geometry tests
+after converting the application's latitude/longitude arrays. The building/site
+representative point is tested against the committed district and station
+polygons; it is not a verified entrance or walking-route measurement. Several
+polygons/towers of one project do not create several tenants. The reported
+Issara House hotel was explicitly rejected as a match to a differently located
+Issara condo. Unqualified Regent Home remains ambiguous across projects.
+
+All four context/project geocodes above were independently re-derived. The
+identity filters nevertheless depend on **tag luck**: known retail/office tags
+exclude some false matches, but tag-less retail can pass a name filter. The
+frozen lookup contains such a Loft collision; Quattro also has distinct retail
+and condominium identities. `candidate_locations` are retrieval suggestions,
+**never verified residential geocodes**. Future use requires positive identity
+and branch/property-type verification, not merely absence of a shop tag.
+
+Four relatively frequent named handles illustrate the limit: Life Asoke–Rama 9,
+oka HAUS, XT Phayathai and Life One Wireless have multiple discussion contexts,
+but no releasable paid reference cohort. Only oka HAUS was resolved from this
+frozen name lookup among those four; it is outside the station footprints.
+The missing names are not geocoded from a nearest anonymous point or a project
+brand. No actual rent estimate gains sub-khet precision merely because a name
+was recognized.
+
+### 5. Integration feasibility annex for the owner ADR
+
+**Recommendation: retain asking rent as the primary product metric, with a
+separate paid-rent cross-check only where its own cohort passes release.**
+Currently the numerical maps would be empty: **0 of 50 khet and 0 of 133 station
+areas** have a releasable corpus-paid reference estimate in this audit.
+Do not create the proposed file or activate a build fallback from this note.
+
+#### Proposed aggregate-only JSON contract
+
+The proposed `data/bangkok/rent-tgcorpus.json` has the following root shape.
+Empty maps reflect the current adoption recommendation; they are not zero rents.
+The metadata is a proposed method contract, not an owner-approved ADR:
+
+```json
+{
+  "_meta": {
+    "schema_version": 1,
+    "status": "proposal_not_adopted",
+    "method_version": "tgcorpus-rent-v2-proposal",
+    "audited_at": "2026-10-29",
+    "audit_revision": null,
+    "source_snapshot_date": "2026-10-26",
+    "audit_url": "https://github.com/pogorelov-labs/city-rating-tokyo/blob/main/research/bangkok/notes/2026-10-29-tgcorpus-rent-audit.md",
+    "metric": {
+      "id": "reported_paid_condo_monthly_thb",
+      "basis": "self_reported_paid",
+      "currency": "THB",
+      "currency_evidence": "explicit_thb_primary",
+      "period": "month",
+      "property_type": "ordinary_condo",
+      "lease_months_min": 6,
+      "reference_size_sqm": {
+        "one_bed": [
+          30,
+          35
+        ],
+        "two_bed": [
+          60,
+          70
+        ]
+      },
+      "estimator": "exponentially_weighted_median",
+      "price_date_basis": "stated_price_period_or_explicit_current_occupancy_report",
+      "estimand": "reported_occupied_base_rent",
+      "lease_vintage_policy": "incumbent_cost_is_not_new_lease_price",
+      "confidence_ceiling": "estimate"
+    },
+    "primary_window": {
+      "start": "2025-10-29",
+      "end": "2026-10-26",
+      "timezone": "Asia/Bangkok",
+      "weight_reference_date": "2026-10-29",
+      "half_life_months": 6,
+      "age_days_per_month": 30.4375
+    },
+    "geography": {
+      "snapshot_commit": "078f37cebc41b583ffb87d598a1643eac92ffd4a",
+      "district_polygons": "app/src/data/bangkok/geometry.json",
+      "area_polygons": "app/src/data/bangkok/station-geometry.json"
+    },
+    "release_gate": {
+      "episodes_min": 10,
+      "authors_min": 5,
+      "projects_min": 3,
+      "effective_n_min": 8,
+      "max_author_share": 0.25,
+      "max_project_share": 0.5
+    },
+    "sources": {
+      "tgcorpus-audit-2026-10-29": {
+        "label": "Owner-authorized Russian-language community audit",
+        "audit_url": "https://github.com/pogorelov-labs/city-rating-tokyo/blob/main/research/bangkok/notes/2026-10-29-tgcorpus-rent-audit.md",
+        "access": "restricted_raw_sources_public_aggregates_only"
+      }
+    },
+    "access_policy": {
+      "reference": "macro-research ADR 0001 (2026-09-10)",
+      "raw_text": false,
+      "telegram_links": false,
+      "personal_identifiers": false,
+      "individual_price_rows": false,
+      "public_provenance": "aggregate audit; private source crosswalk is not exported"
+    },
+    "grid_policy": "unchanged district asking estimates; no interpolation from corpus reports"
+  },
+  "districts": {},
+  "areas": {},
+  "coverage_facts": {
+    "districts": {},
+    "areas": {}
+  }
+}
+```
+
+`districts` keys must be real committed khet slugs; `areas` keys must be real
+committed station-area IDs. There may be no orphan keys, an area cannot be copied
+to its whole khet, and a district summary cannot masquerade as a station cohort.
+An entry has the following exact shape; this unreleased example contains no
+invented price, count or source observation:
+
+```json
+{
+  "confidence": "estimate",
+  "metric": "reported_paid_condo_monthly_thb",
+  "as_of": "2026-10-26",
+  "sources": [
+    "tgcorpus-audit-2026-10-29"
+  ],
+  "rent_1br": {
+    "status": "insufficient_evidence",
+    "median_thb_month": null,
+    "size_band_sqm": [
+      30,
+      35
+    ],
+    "n_episodes": null,
+    "n_authors": null,
+    "n_projects": null,
+    "effective_n": null,
+    "p25_thb_month": null,
+    "p75_thb_month": null,
+    "price_month_range": null,
+    "report_month_range": null,
+    "quality_flags": [
+      "below_release_gate"
+    ]
+  },
+  "rent_2br": {
+    "status": "insufficient_evidence",
+    "median_thb_month": null,
+    "size_band_sqm": [
+      60,
+      70
+    ],
+    "n_episodes": null,
+    "n_authors": null,
+    "n_projects": null,
+    "effective_n": null,
+    "p25_thb_month": null,
+    "p75_thb_month": null,
+    "price_month_range": null,
+    "report_month_range": null,
+    "quality_flags": [
+      "below_release_gate"
+    ]
+  }
+}
+```
+
+On release, each `rent_1br` / `rent_2br` object changes to `status: "released"`
+and contains its computed median, dispersion, counts, effective n and actual
+price/report month ranges. A suppressed cohort retains nulls and a reason;
+**null is not zero**. These objects intentionally differ from today's numeric
+rent pair and require a dedicated adapter in an implementation task. They cannot
+be passed to the existing override loader unchanged. No raw messages, Telegram
+links, personal identifiers, per-person amounts, private dedup keys or source
+post hashes enter this JSON. Public provenance terminates at the aggregate audit.
+
+`p25`/`p75` describe sample dispersion, not a confidence interval. Maintain the
+source ID, method version, observation and report windows, geography revision and
+audit revision in the implementation's provenance. `audit_revision` is null only
+in this unadopted proposal; a released payload must pin the approved audit commit.
+Use months for public cohort
+date ranges; retain precise dates and the controlled crosswalk privately.
+One eligible bedroom cohort does not license an invented second-bedroom price.
+Do not clamp an unusual amount to an editorial price; verify currency, base-rent
+role, unit, dates and cohort, then retain valid observations in their proper
+cohort or flag them for review. Any future main-pair adoption must satisfy its
+existing bounds and ordering without fabricating or silently repairing values.
+
+#### Precedence options
+
+| Option | Behavior | Benefit / risk | Recommendation |
+|---|---|---|---|
+| Paid wins where comparable | Replace the main asking pair when paid cohorts pass gates | Closer to claimed occupied cost, but switches the product's price basis across areas; incumbent/new-lease and community mix can move rankings | Requires a deliberate metric/normalization ADR and comparable asking evidence; not supported now |
+| Asking primary, paid cross-check | Preserve current asking override/editorial fallback; show separately sourced paid facts where eligible | Keeps one primary metric and exposes observed differences without blending incompatible populations | Preferred design; currently publishes no paid numerical rows |
+
+Never average paid and asking values, blend them by message count or fill an
+unsourced bedroom with a ratio. A retained source gap remains a gap. Grid rent
+continues to use district asking estimates; no spatial interpolation from sparse
+corpus reports is proposed. A descriptive future gap must name both sources,
+cohorts and dates and state its comparability; it is not labelled negotiation.
+
+#### Proposed release and decay gates
+
+Per area × bedroom × price-basis cohort, propose **at least ten independent
+episodes, five accounts, three projects, effective n at least eight**, no account
+above 25% and no project above 50% of the observations. Complete price/unit/term/
+location/date fields are required before density is considered. Use the
+twelve-month primary price window and six-month half-life above, with disclosed
+sensitivity. These are conservative operational/privacy/diversity proposals,
+**not a statistical-power result, proof of anonymity or owner approval**.
+The earlier five-episode/three-account analysis gate is not an adoption promise.
+Effective n measures freshness-weight dispersion, not independence. Account and
+project dependence must be audited separately; distinct stays from one account
+are not independent people, and copies of one tenancy never add observations.
+
+Keep paid/self-reported, third-party paid, unaccepted offers, available asking,
+budgets and other accommodation products separate. Show stability and missingness
+by cohort; do not choose a half-life because it produces a desired comparator gap.
+Even if these gates are met, this source frame supports at most **estimate**
+confidence without a different, better verified sampling basis.
+
+#### Sparse evidence as a Tier-2 fact
+
+Follow the institutions/Michelin pattern of **a dated source fact outside the
+rating calculation**, with a typed rent-specific row. The proposed shape is:
+
+```json
+{
+  "kind": "rent_context",
+  "basis": "self_reported_paid",
+  "status": "insufficient_comparable_reports",
+  "bedroom": null,
+  "size_band_sqm": null,
+  "median_thb_month": null,
+  "sample_band": "below_release_gate",
+  "price_window": {
+    "start": "2025-10",
+    "end": "2026-10"
+  },
+  "confidence": "estimate",
+  "source_id": "tgcorpus-audit-2026-10-29",
+  "audit_url": "https://github.com/pogorelov-labs/city-rating-tokyo/blob/main/research/bangkok/notes/2026-10-29-tgcorpus-rent-audit.md"
+}
+```
+
+A sparse row can say **“Community rent reports: insufficient comparable
+evidence · audit”**, without a price or a tiny-sample median. A released row can
+say **“Reported paid rent · 1BR 30–35 m² · THB[median]/month · n=[episodes] ·
+[price-month range] · estimate · audit.”** Counts mean independent episodes,
+not messages; accounts are not assumed to be unique people. Translation and the
+new typed facts adapter belong to the adoption implementation, with EN/JA/RU
+kept consistent. Do not add empty warning rows everywhere when there is no
+useful eligible fact.
+
+#### Which existing places would improve now?
+
+| Place / scope | What this extension actually adds | Numerical adoption now |
+|---|---|---|
+| Ari and Siam | Explicitly tested gaps; an Ari name collision does not supply a condo rent | Neither DooAsset gap is filled |
+| Ten current DooAsset override areas | Temporal/cohort compatibility audit and a documented unavailable gap, without a fabricated discount | All ten asking overrides stay unchanged |
+| Udom Suk / Bang Na | A named-project claim can be located, but its unit/cohort and sample do not establish a reference median | None |
+| Punnawithi / On Nut language | Better loose-location interpretation; ambiguous project/catchment and missing fields remain | None |
+| Ha Yaek Lat Phrao, Phra Ram 9, Phetchaburi | Project-name and asking/paid-role disambiguation; not interchangeable with central Asok or Chatuchak labels | None |
+| Watthana and Khlong Toei | Some building names resolve to a khet while remaining outside every station footprint | No district replacement |
+| All remaining khet / areas | No released fixed-size cohort established by the audited controls | None; absence is not zero rent |
+
+The source's present value is **better evidence interpretation and collection
+design**, not a new rent level. To improve CRTKY-136 numerically, obtain a recent,
+independent, consent-compatible panel with resolved unit fields and private
+provenance, or better public asking/paid sources with matching cohorts. That
+decision is separate from this research extension.
+
+#### Independent extension checks and publication limits
+
+Two independent research refuters re-queried the corpus and frozen spatial
+inputs before publication. They reproduced the inventory, annual retained-claim
+counts and four project geocodes, attacked missing Cyrillic/inflected aliases,
+and independently re-read prices, replies and copy families. Their challenges
+changed the annual coverage table by removing ad/admin templates, clarified the
+strict budget rule and its sensitivity, added account dependence and unknown
+price-vintage bounds, and ruled out an area-gazetteer upgrade claim. No new
+fixed-size THB paid cohort was established under their tested screens.
+
+The final template filter was rerun against raw data with its exact recorded
+predicate; it reproduces 288 / 373 / 631 / 213 residual crude co-mentions for
+2023–2026. This is a filtered retrieval series, not a human-renter census. The
+aggregate/source checks and design JSON blocks were validated locally; raw
+reading sets, source locators and personal identifiers remain outside git.
+Independent checks are bounded adversarial evidence, not proof of exhaustive
+recall or verification of the underlying payments.
