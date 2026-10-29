@@ -1154,6 +1154,15 @@ cached comparison**, post-guard Cyrillic name candidates are attested for
 **39 areas**. This is a scoped alias/reference diagnostic, not rental-location recall;
 airport, park and neighborhood wording still requires referent adjudication.
 
+An earlier independent full-corpus search with the superseded dictionary found
+**140 of 461 seed strings** and **63 of 133 area labels** with at least one matched
+Cyrillic alias after generated forms; **70 labels had no matched tested form**.
+These are historical query-presence counts. They include the rejected island
+collision and precede the current city/referent guards. Absence of those tested
+forms does not establish absence of a neighborhood from the corpus. Comparing
+that full-corpus result with the current 39-area cached-frame diagnostic requires
+aligning the dictionary, input frame and guards first.
+
 | Input frame | Records | Interpretation |
 |---|---:|---|
 | Prior cached direct comparison | 19,537 | Controlled repair replay on the same saved inputs |
@@ -1319,6 +1328,10 @@ Sukhumvit grain cases, the older fourteen collision cases, the fixed-watermark
 Samet and transport/city probes, the live nounless-payment context regression,
 fee/postcode controls and the replayable body comparison. Their declared inputs
 are pinned. These are targeted checks, not population precision/recall scores.
+The older fourteen collision controls comprise **twelve entries in the legacy
+fixture plus two IconSiam listing rows recovered from the pinned scoped captures**;
+all fourteen pass. They are a separate control set from the fourteen-row
+station-label comparison above. The legacy fixture alone does not enumerate fourteen.
 
 The repaired outputs are locally replay-checked; the independent records are
 not claimed to replicate every later script or verify the underlying payments.
