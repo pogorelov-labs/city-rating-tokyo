@@ -478,6 +478,11 @@ report window contains **nine paid-claim messages and three ordinary-condo claim
 episodes**, from **eight accounts**; these are not three comparable central-station
 observations. Moving the report-window start by two days drops one of the three
 ordinary-condo claims, but changes no released reference cohort.
+Within this historical three-episode ordinary-condo subset, the independent
+check supports an in-window price vintage for one episode; one is a currently
+paid incumbent lease with unknown renewal-rate history, and one has unknown
+vintage. Three report-dated episodes are not three established recent
+price-setting events.
 
 **Drift-model result: not identifiable.** A defensible price model would compare
 like area × bedroom × size × lease-term cohorts, account for project/quality and
@@ -488,8 +493,9 @@ drift coefficient, current fixed-size median or uncertainty interval to report.
 The coefficient is **undefined, not zero**. Pooling a larger old condo, a studio,
 an incumbent lease and a hotel would estimate changes in their mix, not a Bangkok
 rent trend. This pass does not manufacture an annual uplift from message growth.
-There is a current foreign-currency paid report with a small-unit floor area in
-the wider controls, but no bedroom count and a non-target location. It fails
+The wider controls retain a first-person USD-priced **33 m²** near-miss, current
+at its own report date, without a confirmed bedroom count and outside the
+priority locations. It fails
 the joint currency/bedroom/geography definition; zero complete observations
 does not mean that nobody states a floor area. No FX or bedroom imputation is made.
 
@@ -534,6 +540,11 @@ The bare-year guard can also hide a genuine small amount, while bare shorthand
 needs manual context. The retained ledger was manually adjudicated; the prototype
 must not feed a product without explicit per-amount currency, role and period
 validation. These are documented feasibility limits, not repairs to product code.
+Those open guard classes describe the historical first-pass prototype. The
+repaired candidate later in this note explicitly types weekly, annual and
+multi-month periods and keeps them out of monthly points. Ambiguous shorthand,
+currency, unit and price-basis evidence still require manual verification before
+any parser reuse in the product.
 
 ### 2. Paid-versus-asking deltas
 
