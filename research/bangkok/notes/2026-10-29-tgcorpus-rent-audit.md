@@ -2,10 +2,10 @@
 
 Researched **2026-10-29**. Research only; adoption belongs to **CRTKY-136**.
 
-**Audit reconciled; no numerical rent adoption.** Three independent adversarial
-methods found no defensible priority-area reference median in the tested
-frames. The repaired all-floor-area proxy screen is reported with its own
-local-adjudication limits and also supports no per-area numerical adoption.
+**Research audit reconciled; no numerical rent adoption.** Four independent
+adversarial records support the bounded reference-cohort finding. The repaired
+proxy results retain their local-adjudication and source-verification limits.
+
 
 ## Decision and metric
 
@@ -262,26 +262,31 @@ publisher do not repair the reference panel.
 
 ## Independent refutation and reading limits
 
-Two independent read-only research checks attempted to refute the adoption
-finding before publication. They performed fresh queries rather than approving
-a PR or treating the analyst's labels as ground truth.
+Four separate read-only adversarial records underpin the non-adoption finding.
+They used independent searches or attempted to break the instrument and its
+classifications; they did not treat analyst labels as ground truth.
 
-- **Geography/recall check:** enumerated sources, searched alternative area and
-  lease-word handles, read money/place candidates in full, and tested reply
-  links. It found no threshold-crossing reference cohort. A broad Sathon relet
-  family was outside the reference size, while other apparent positives failed
-  place, unit, term or currency binding. Parent links must join `reply_to_id` to
-  `tg_msg_id` within the chat, not to the database primary key.
-- **Amount/cohort check:** independently searched size+area+housing and explicit
-  bedroom combinations; re-read the 37 size controls and a **43-row narrative
-  subset**. Twenty of that subset predated the recent cutoff; the cutoff is
-  applied at eligibility, not discovery. This is distinct from the main
-  **403-context** screen. The check found no qualifying cohort, including under
-  deliberately relaxed candidate counts. A Latin `m2/m²` closing query found
-  no additional recent qualifying records; recognition was added to the private
-  parser for subsequent runs.
+| Independent record | Method / frame | Finding retained | Limit |
+|---|---|---|---|
+| Geography/source/recall refutation | Alternative vocabulary, source inventory, known-answer sets and full reads of location candidates | Refuted alias coverage and city/brand/wrong-clause precision; no defensible reference panel emerged after adjudication | Targeted misses and place-word hits are not population recall or tenancy coordinates |
+| Amount/cohort/dedup/privacy refutation | Adversarial amount/role/period/currency cases, review contexts, copy chains and privacy probes | Refuted automatic parsing/payment labels; recovered fields did not establish a reference cohort | Payment truth remains unverified; restored larger units are not reference-sized observations |
+| Independent direct-SQL and relaxed recount | October 26 snapshot, report dates from 2024-10-29, size/bedroom SQL, 37 size controls and 43 narrative rows | No qualifying reference cohort; the largest generously admitted old-label priority group had two rows/two accounts | Relaxed rows are not validated leases, and this check does not independently replicate every later repair output |
+| Independent local and reply-enriched search | Full 2024-10-29…2026-10-26 window; area/housing/money/term/bedroom conjunctions, 132 price-bearing reply pairs and a direct lease-verb hunt | Strongest asking-side lead was one broad Sathon 2BR-class family from one account, duplicated in two posts, above the reference size band; no priority area reached five independent observations/three accounts | The above-band lead is not an eligible reference observation; abundant mall/transit/bank/hotel mentions do not establish rent locations |
 
-That amount/cohort check used the **October 26 snapshot** and an exploratory
+Across these four records, no tested screen produced a releasable priority-area
+reference median. This is a bounded finding over the stated windows, definitions
+and searches, not a mathematical proof about every message or spelling. The
+instrument defects remain real even when the non-adoption conclusion survives.
+Parent links must join `reply_to_id` to `tg_msg_id` within the chat, not to the
+database primary key. Reply context still needs its own speaker/unit binding.
+
+The direct-SQL check re-read a **43-row narrative subset**, distinct from the
+main **403-context** screen, and the 37 size controls. Twenty narrative rows
+predated its cutoff; eligibility is date-filtered even when discovery is not.
+A Latin `m2/m²` closing query found no additional recent qualifying records;
+recognition was added to the private parser for subsequent runs.
+
+That direct-SQL check used the **October 26 snapshot** and an exploratory
 report-date cutoff of **2024-10-29**. It left **23 of 43** narrative-queue rows
 date-admissible, without establishing their other eligibility fields. Even
 generously retaining the old area labels, its relaxed screen's largest
@@ -297,7 +302,7 @@ excluded. Commercial copies must be grouped by offer object code and normalized
 copy family, rather than counting repeated messages as independent asks; their short-stay/USD category
 already excludes them from the reference cohort.
 
-Neither check measures exhaustive recall or proves absence from all messages.
+None of these checks measures exhaustive recall or proves absence from all messages.
 An inventory/label discrepancy in a peer summary was not adopted: the analyst
 rechecked **35 registry entries**, and the **193** co-mentions refer to the
 specified **Bangkok Bank** pattern, not a Siam/SCB count. Only reconciled figures
@@ -726,9 +731,9 @@ was recognized.
 separate paid-rent cross-check only where its own cohort passes release.**
 Currently the numerical maps would be empty: **0 of 50 khet and 0 of 133 station
 areas** have a releasable corpus-paid reference or bedroom-only proxy estimate
-under the audited screens. The repaired-screen counts are scoped local
-adjudications; independent checks support the bounded reference-cohort finding,
-without establishing exhaustive recall or verifying individual payments.
+under the audited screens. Repaired-screen counts are scoped local adjudications.
+The four independent reference records support the non-adoption finding without
+establishing exhaustive mapping recall or verifying individual payments.
 Do not create the proposed file or activate a build fallback from this note.
 
 The repaired pass supersedes the earlier fixed-size-only collection design:
@@ -1009,335 +1014,260 @@ recall or verification of the underlying payments.
 
 ## Geography and amount-intake rebuild after the early refutations
 
-**Research repair and proxy evaluation, 2026-10-29. No numerical rent adoption.**
-This third pass followed the early geographic and amount/cohort/dedup/privacy
-refutations. The prior decision to
-leave the area dictionary unchanged is superseded for this research repair.
-The historical tables above describe their stated input frames; they are not
-newly validated area-rent estimates.
+**Research-instrument repair and proxy evaluation, 2026-10-29. No numerical rent adoption.**
+The four independent records support the bounded reference-cohort
+non-adoption finding. They do not excuse the defects later found in the repaired
+instrument. Historical sections retain their stated frames; this section
+supersedes the incomplete mapping and proxy accounting in the prior candidate.
 
-### Refutation record and interpretation
+### Final refutations and corrections
 
-Three independent adversarial methods failed to refute the bounded conclusion:
-**a defensible priority-area reference median cannot be produced from the
-audited corpus frames**. This is not a proof that every possible spelling,
-thread or media attachment contains no qualifying claim. The first two methods
-also refuted parts of the instrument; retaining the non-adoption conclusion
-does not vindicate those defects.
+The prior two proxy bundles had byte-identical geography code and dictionaries.
+The round-3 geography repairs had not been applied. In particular, the speculative
+Sam Yot spelling `самёт` folded to `самет` and matched island traffic. The
+~~40-area~~ attestation figure included that wrong referent. Passing the older
+fourteen-case collision suite did not test this defect or validate the new
+mapping. Repository CI likewise cannot validate private corpus claims.
 
-| Independent method | Evidence tested | Result carried into this audit | Boundary |
-|---|---|---|---|
-| Geography/source/recall refutation | Independent vocabulary and known-answer sets, source inventory, city/referent/location checks and the original candidate map | Refuted alias coverage and location precision; no threshold-crossing reference cohort survived the tested checks | Broad corridor names and landmarks do not establish tenancy coordinates; targeted misses are not a population recall estimate |
-| Amount/cohort/dedup/privacy refutation | Adversarial currency/scale/role/period cases, review contexts, missing bedroom/size fields, copy families and privacy probes | Refuted automatic amount/payment labels and recovered larger-unit fields; those recoveries do not produce a reference-sized cohort | Manual roles and source-message field binding are still required; tested privacy cleanliness is not an anonymity guarantee |
-| Independent direct-SQL and maximally relaxed recount | October 26 snapshot, exploratory 2024-10-29 cutoff, independent size/bedroom queries, 37 size controls and 43 narrative rows | Zero eligible reference observations in those controls; the largest generously admitted old-label priority group was two rows/two accounts | Relaxed screen rows are not validated leases; these checks do not independently replicate the later repaired proxy counts |
-
-| Layer challenged | Finding accepted | Repair or boundary |
+| Challenge | Finding accepted | Repair and evidence boundary |
 |---|---|---|
-| Geographic vocabulary | 106 of 133 area entries lacked Cyrillic aliases; declined and joined forms were missed | All 133 real IDs now have Cyrillic discovery seeds, with provenance and separate corpus attestation |
-| Geographic recall/coverage | The early targeted set missed broad locatable rent references; only 620 of 12,698 core candidates matched the strict old geography regex | A corridor, district, landmark, station name and located project are different evidence grains; raw candidate match rate is not neighborhood coverage |
-| Geographic precision | IconSiam, a bus terminal, government instructions, condo brands and another city's Bang Rak could enter Bangkok buckets | City scope precedes Bangkok aliases; referent masks and explicit unresolved states precede any project/tenancy binding |
-| Amounts and payment basis | The early automatic queue had four wrong labels among fourteen price-bearing paid candidates: two outside-city claims and two fees | Separate source amount, currency, role, period and claim basis; a payment verb does not establish rent or payment truth |
-| Field recovery | Listing roles and bare `кв` notation could lose real amount/size fields | Preserve candidate fields, with explicit period and ownership uncertainty; complete fields are not automatically the reference metric |
-| Duplication | Exact hashes miss altered listing codes, guide fragments and recurring authors | Message, copy family, offer object, tenancy episode and account are separate counts; no message-count rent median |
-| Privacy | The early independent audit found no crossing in its tested state, but flagged misleading filenames/labels and weak file permission bits | Private-source manifests are explicitly labelled non-exportable; working files are hardened; public output is manually reviewed aggregates and paraphrases |
+| Island/station collision | Samet traffic produced 110 Sam Yot assignments in the independent corpus probe and nine in the cached frame | Quarantine the speculative alias family, retain unambiguous Sam Yot forms, and guard Samet before Bangkok matching; the same fixed-watermark probe reproduces 110 old assignments and 0 repaired assignments |
+| Missing city guards | Samet, Ayutthaya, Rayong and first-part Kuala Lumpur declensions could leak into Bangkok buckets | Add explicit variants and preserve outside/mixed/unresolved review states before aliases; whole-row comparison deferral can also reduce recall |
+| Mo Chit transport | Bare station-terminal wording, terminal 2 and ticket fares escaped the bus guard | Add the terminal/fare forms with positive BTS controls; test the actual reported transport/city cases and counterfactual terminal wording without an outside-city escape |
+| Corridor/station grain | A rail word anywhere in a nearby window fabricated Asok references; Rama 9 had no corridor grain | Link a qualifier directly to its own name, reject a different station inside a following parenthesis, and give Rama 9 a corridor entry; eight pinned Sukhumvit cases retain four genuine station references and remove four fabricated ones |
+| Replay integrity | Six mutable inputs and the capture-comparison generator were unpinned or absent | Pin annotations, assessment rows/selector, regression cases, legacy classifications and spam configuration; include the comparison generator and enforce declared hashes before frozen imports |
+| Missing paid-family evidence | The own-text bedroom predicate missed a literal monthly payment confirmed against the same claimant's earlier 1BR description | Add an explicit verified-self-thread stratum with field provenance; prices/currency/month remain in the payment's own text, with no FX conversion or other-speaker wish transfer |
+| Incomplete history | The older 2BR cluster continues through March 2024 and has a January annual-contract statement | Retain the later literal-price reports and dated tenure support; do not impute that term or place into every sibling message |
 
-The reported 60% miss rate concerned a targeted set of twenty broadly locatable
-examples, not a population estimate of 800 m station-area recall. Many missed
-references identify only the Sukhumvit corridor. Assigning all of them to one
-station would introduce another error. Similarly, the refutation's small-set
-20–50% sensitivity must not be read as a measured percentage error in rent:
-one observation can have that share of row weight in a tiny sample, but the
-price change depends on the actual values. No defensible market median was
-established by that defective candidate layer.
+The final cohort refutation sustained the literal/contextual split, the Udom Suk
+project binding, the other anchor's unlocated status, and the absence of a
+located bedroom-specific cohort above one family in its independent recall arms
+across all 35 sources. It also exposed unreported context/history strata.
+The correction is to report those strata, not to hide them behind a narrower
+predicate. These are bounded checks, not exhaustive recall or verified leases.
 
-A further binding example matters: a comment recommends a different
-neighborhood while recalling the writer's own past annual contract and floor
-area. Recognizing the newly covered declined neighborhood name does not prove
-the recalled unit was there. The personal unit's location, bedroom count and
-price date remain unresolved unless its own clause/context establishes them.
+### Replacement method and replay boundary
 
-### Replacement method: references are not property coordinates
+The method/input bundle is `4e067f9bb47e6f08`; its controlled processing run is
+`9fd429e566fb`. The earlier bundles are superseded research checkpoints.
+The sealed package retains a read-only repair-snapshot note. This public text
+adds the complete four-record provenance chain; its measurement code, inputs
+and aggregate figures remain unchanged from that snapshot.
 
-The private replacement is frozen by code, dictionary, input and adjudication
-hashes for independent re-query. The size-free bundle fingerprint is
-`aa9b62c026433bcc`; its controlled processing run is `8703f17aabca`.
-The earlier candidate fingerprint `130a31f7f584` remains a historical checkpoint.
+City scope runs before Bangkok aliases. Besides the earlier Pattaya, Phuket,
+Hua Hin, Nonthaburi/Pak Kret, Samut Prakan and Samui controls, the repaired guard
+recognizes Samet, Ayutthaya, Rayong and declined Kuala Lumpur forms. Khao Lak,
+Cambodia/Phnom Penh and Vietnam comparisons are also deferred. This list is a
+discovery aid, not a complete world gazetteer. Mentioning another country can
+defer otherwise useful Bangkok comparison text; source identity alone never
+establishes the property's city.
 
-1. **Scope first.** Explicit outside-city and mixed-city contexts are identified
-   before Bangkok area aliases. Guards include Pattaya, Phuket, Hua Hin,
-   Nonthaburi/Pak Kret, Samut Prakan/Bang Phli/Samrong and Samui, with additional
-   known comparison cities. Bangkok Bank/Hospital names are not city assertions.
-   Chat identity supplies context only, never the property's location.
-   Encountered Khao Lak, Phnom Penh/Cambodia and Vietnam comparisons are also
-   guarded; the list is a tested discovery aid, not a complete world gazetteer.
-2. **Referent next.** IconSiam is a landmark; Mo Chit bus-terminal usage is not
-   BTS Mo Chit; SRT Chatuchak differs from the park/market/metro usage. Government
-   procedures, hospitals and full project brands are not station addresses.
-   Qualified Asoke/Rama 9, Phrom Phong, Phaya Thai and Sathorn project names are
-   masked before their embedded area words can become station/district tags.
-   Dusit Park / Dusit Central Park brands likewise do not establish Dusit khet.
-3. **Grain stays explicit.** A source can mention a corridor, a district name,
-   a station/neighborhood name, a landmark or a project. These are not interchangeable.
-   Alias matching never emits a verified tenancy coordinate. Only the four
-   previously independently checked named-project contexts have retained point
-   bindings, and those remain project contexts rather than verified payments.
-4. **Monetary fields stay separate.** The rebuilt amount layer retains source
-   amounts and distinguishes currency, per-area rates, sale prices, deposits,
-   utilities, fees, budgets and rent candidates. It retains weekly, annual and
-   multi-month amounts with their stated basis rather than treating them as
-   monthly. Ranges are not collapsed to points, and no FX conversion is made.
-5. **Unknowns survive.** Room-layout words are recorded without silently becoming
-   bedroom counts; plain linear meters and distances are not confirmed floor
-   areas. Negation, questions, hypothetical arithmetic, mixed payments and
-   unknown periods remain review states. Actual unit/price/ownership/date binding
-   still needs adjudication before any evidence cohort is counted.
+IconSiam remains a landmark. Bus-terminal Mo Chit, SRT Chatuchak, parks,
+government offices, hospitals and project brands are separate referents.
+An embedded Asoke, Phaya Thai, Sathorn or Dusit word is not an address. An
+explicit rail label must qualify that name directly: a nearby metro word or
+`Sukhumvit (station Nana)` does not name MRT Sukhumvit. Unqualified Sukhumvit,
+Silom, Phahonyothin, Lat Phrao and Rama 9 references keep their corridor/road
+grain. No alias match emits a verified tenancy coordinate. The four previously
+independently checked project contexts retain only their disclosed point bindings.
 
-The three real code mentions in the postcode-question regression are tagged
-non-monetary. A separate positive control retains a genuine rent with the same
-numeric value when currency and monthly-rent context establish that role. This
-is a context guard, not a blacklist of unusual rent amounts.
+Amounts keep source currency, magnitude, role, period and price basis separate.
+Weekly/annual/multi-month totals and ranges are not converted into monthly
+points. Deposits, utilities and membership fees remain separate, including the
+previously missed first-person fee verb. A nounless payment statement is now a
+typed unresolved payment candidate; accepting it as rent requires verified unit
+context. Postal-topic wording does not overwrite an otherwise supported rent
+role; explicit postcode spans and non-financial postcode questions stay guarded.
+No currency conversion, bedroom/size inference from a project's other units,
+or assumed contract-start/rate-reset date is introduced.
 
-### Structural coverage, replay frames and remaining limits
+The current manifest pins the previously omitted six inputs as well as the
+raw capture inputs, selected context evidence, comparison generator, dictionary,
+code and aggregates. Frozen geography imports verify the declared hashes first
+and refuse a changed input or stale selector. The candidate note has its own
+hash-pinned copy. This makes the declared replay boundary enforceable; it is not
+a promise that a live database can never change. Raw material stays in protected
+temporary working storage, not a public or durable message archive.
 
-The rebuilt dictionary validates all **133 station-area IDs and 50 khet slugs**
-against the committed registry. Its Cyrillic discovery inventory includes
-**eight cached public Russian labels and 453 manual phonetic seeds**, followed
-by bounded inflected/joined forms. Generated seeds are explicitly unverified;
-they are not evidence that every spelling is used or that every area has rents.
-On the cached comparison pool, Cyrillic area-name candidates are attested for
-**40 areas**. That is lexical attestation, not rental-location recall.
+### Structural coverage and controlled frames
 
-| Input frame | Records processed | Interpretation |
+All **133 real area IDs and 50 khet slugs** validate against the committed
+registry. Active discovery seeds now comprise **eight cached public Russian
+labels and 452 manual phonetic seeds**, followed by bounded forms. The
+rejected Samet alias family is recorded as quarantined and is not searched as a
+station. Generated seeds are not proof of use or coverage. In the **19,537-record
+cached comparison**, post-guard Cyrillic name candidates are attested for
+**39 areas**. This is a scoped alias/reference diagnostic, not rental-location recall;
+airport, park and neighborhood wording still requires referent adjudication.
+
+| Input frame | Records | Interpretation |
 |---|---:|---|
-| Prior cached direct comparison | 19,537 | Same saved inputs for controlled repair diagnostics |
-| Current supplementary search, records at/below the earlier watermark not in that cache | 758 | Additional current records; dictionary/lexical expansion and possible source edits are not isolated effects |
-| Newly synced tail selected by the current search | 65 | Separate later input frame, not an algorithmic recall gain |
-| Bedroom-led body/direct-parent arm, additional records below the original watermark | 33 | Different capture predicate; no new-tail records in this increment |
+| Prior cached direct comparison | 19,537 | Controlled repair replay on the same saved inputs |
+| Supplement at/below the earlier watermark, absent from that cache | 758 | Lexical/dictionary expansion and possible source edits are not isolated effects |
+| Selected newly synced tail | 65 | Separate later input frame, not algorithmic recall gain |
+| Bedroom/direct-parent arm additions below the original watermark | 33 | Different capture predicate; no new-tail increment here |
 
-The fresh registered inventory is **35 sources / 8,414,612 messages**, with latest
-raw activity October 29. The earlier audit's **8,396,280** messages and October 26
-cutoff remain its historical frame. The current supplementary query matched
-18,116 records, of which 823 were absent from the cached union. Selection rules
-and saved semantic supplements differ, so 18,116 and 19,537 are not a recall ratio.
-No new Telegram acquisition or re-embedding was performed by this worker.
-The final union contains **20,393 direct records**. The additional bedroom-led
-query selected **343 messages**, including **310 already in that union's prior
-20,360-record frame** and the 33 additional records above. All overlapping bodies
-were unchanged. The arm admits bedroom/room-layout language in the core sources,
-or in a message whose own text or direct parent names Bangkok/a discovery alias.
-It applies no price or size filter at intake. A parent's location or budget is
-never automatically transferred to the reply's personal tenancy.
+The union remains **20,393 direct records**, within the pinned **35-source /
+8,414,612-message** frame through the partial October 29 watermark. The earlier
+8,396,280-message / October 26 frame remains historical. No Telegram acquisition,
+re-embedding or spatial refresh was performed.
 
-The targeted corpus regressions no longer produce the old Bangkok tags for the
-three geo-eligible IconSiam cases, the bus-terminal case, the two government-
-instruction cases or eight Samui Bang Rak cases. These are known failure-case
-checks, **not a new general precision/recall score**. The initial city-guard
-diagnostic deferred 47 old area-tagged and 18 old district-tagged rows; those
-overlapping counts mean blocked/deferred candidates, not 65 independently
-confirmed old errors. Mixed city or ambiguous referent records remain available
-for manual review rather than being forced into a convenient bucket.
+The bedroom-led capture has **343 rows: 310 overlaps and 33 additions** against
+the prior 20,360-record union. The new comparison generator reproduces **zero
+body differences between captures**. This is not a claim that the source rows
+were never edited or can never change later; the independent check found
+pre-capture edit history. A parent supplies context only after claim/unit and
+authorship checks, not merely because its text mentions a place or a budget.
 
-The rebuilt coarse map below counts **scope-filtered word references** in the
-same cached comparison frame, not all spelling-family occurrences and not
-households. The name families use declared sets of area/district IDs plus
-corresponding corridor/landmark references; they overlap. The housing column
-requires conversational housing language, not proof of a lease or a price.
-Explicit rail names still do not locate the speaker's unit inside a footprint.
+The current city-guard replay defers **63 old area-tagged rows and
+25 old district-tagged rows**. These overlapping counts must not be summed as
+independent errors. The earlier 47/18 and interim 58/23 figures described older
+guard versions and are not the current counts.
 
-| Coarse name family | Retained reference records | Conversational housing-language records | Housing records naming rail explicitly | Reference paid-rent median |
+The following is a map of **scope-filtered word references**, not leases,
+households or price samples. Groups overlap; the Rama 9 family now includes the
+new corridor key. Even a genuine rail name does not locate the writer's unit.
+
+| Coarse name family | Reference records | Housing-language records | Housing records with a directly qualified rail name | Rent median |
 |---|---:|---:|---:|---|
-| Sukhumvit name family | 241 | 81 | 16 | Withheld |
-| Ratchada / Rama 9 name family | 43 | 19 | 3 | Withheld |
-| North / Chatuchak name family | 67 | 12 | 1 | Withheld |
-| Riverside / Thonburi name family | 97 | 7 | 0 | Withheld |
-| Other priority central names / Silom-Sathorn | 284 | 52 | 6 | Withheld |
+| Sukhumvit name family | 239 | 81 | 9 | Withheld |
+| Ratchada / Rama 9 name family | 44 | 20 | 1 | Withheld |
+| North / Chatuchak name family | 64 | 13 | 0 | Withheld |
+| Riverside / Thonburi name family | 94 | 6 | 0 | Withheld |
+| Other priority central names / Silom-Sathorn | 276 | 52 | 4 | Withheld |
 
-Outside-city, mixed-city and unresolved-city records are retained in separate
-review strata. The low count for a family is not a declaration that it is rare
-in the whole chat or in the housing market. This table replaces the earlier
-temptation to interpret raw area-tag frequency as rent coverage. None of its
-columns is a per-area precision/recall score or a licence to compute a median.
+The fixed-size field screen still has **41 bedroom–size–amount candidates** in
+the cached frame: **38 commercial-channel records and three chat-sourced THB
+field candidates**. The latter are larger/out-of-band 2BR claims or offers,
+not two exact-reference paid observations. The supplementary frames add no
+joint field candidates under that screen. Commercial records, restored fields
+and place-word frequency are not a statistical rental panel.
 
-### Field recovery and the density decision
+### Reconciled all-floor-area proxy cohort
 
-The replacement generated **41 bedroom–size–amount field candidates** in the
-cached comparison. Their partition is **38 commercial-channel records and three
-chat-sourced THB field candidates**. Commercial and foreign-currency inventory
-is not a personal paid-rent sample. The three chat candidates are all two-bedroom
-units outside the 60–70 m² reference band: one reported paid unit and two offers,
-one forwarded. The repeated relet description is a single offer family rather
-than another household. The refutation's key field-recovery examples therefore
-restore information without establishing two reference-sized paid observations.
+Removing the size band is the constructive comparison with DooAsset's broad
+bedroom mix. Paid occupied cost still differs from asking rent; relets, relayed
+agent/portal quotations, generic market talk and budgets remain separate.
 
-The 823 supplementary records and 33 bedroom/direct-parent additions produced
-no additional explicit-bedroom/area/rent-amount field candidates under these
-machine controls. The separate
-colloquial-layout-plus-size control had three records: two non-price comparisons
-and one outside-Bangkok foreign-currency hotel stay. This is a bounded screen,
-not a census or proof that no other claim exists.
+The decision ledger now contains **243 distinct dispositions**: the prior
+239-record screen plus **four recovered records already present in the direct
+union**. The prior screen comprises 44 initial, 162 broader-intake and 33 novel
+records; 101 commercial-channel records explicitly advertise short stays in USD
+and remain excluded, not counted as independent offers.
 
-No station-area median or corridor rent is released from these diagnostics.
-Place-name frequency, restored fields and raw amounts do not establish current
-ordinary-condo reference-rent density. Per-corridor coverage must retain the
-unlocated, corridor-only, outside-city, commercial and incompatible-unit strata;
-only independently adjudicated comparable episodes may enter a rent statistic.
-The repaired screen establishes no release-gate cohort. The numerical adoption
-maps remain empty and the earlier general area-assignment claims stay withdrawn.
-All product rent inputs, confidence and grid data remain unchanged.
+At least **3 source-linked paid families / 3 accounts** have a literal THB/month
+price anchor with bedroom evidence: **two within-message 2BR anchors and one 1BR
+anchor whose bedroom is verified in the same claimant's original description,
+re-quoted in the payment-confirmation thread**. The latter states a contract
+running to year-end with at least six months remaining at that report. It has
+no own neighborhood or floor area. Its price/currency/month come from its own
+message; no EUR/THB comparison is used to infer the price.
 
-### All-floor-area bedroom-and-price cohort: the constructive test
+The 2BR account cluster has **seven relevant reports spanning 2023-11 through
+2024-03**, including **two later literal THB/month price reports**, two earlier
+contextual-currency monthly repeats and bare-amount support. A January-2024
+statement reports an annual contract. That is real dated tenure evidence in the
+cluster; it is not proof of every sibling's term, bedroom count or physical
+unit. The later price-only repeats do not gain a bedroom or place by account
+matching alone. Families are conservatively grouped for dependence, not used
+as a field-imputation mechanism.
 
-The fixed-size screen is not the only useful question. This pass explicitly
-removed the size requirement and tested **bedroom-specific prices across all
-floor areas**, the closer compositional comparator for the DooAsset proxies.
-It still kept occupied paid cost, available asking, relets, relayed agent/portal
-quotes, market opinions and budgets separate. Paid and asking are different
-price bases even when their bedroom and size-mix definitions align.
+Thus there are **five literal monthly-price reports including history**, but
+only **three price/bedroom anchors** under the stated evidence tiers. Repeats
+do not add families. One anchor is point-bound to Udom Suk/Bang Na; the 1BR
+thread and the other literal 2BR anchor remain unlocated. The Punnawithi name
+is confined to its own contextual-currency statement and is not copied into
+the literal anchors. Udom Suk's term is unknown; one anchor has a directly
+supported six-month-plus term and another cluster has dated annual history.
+The former statement that no term evidence existed is withdrawn.
 
-The private decision ledger contains **239 distinct record dispositions**:
-44 initial candidates, 162 additional broader-intake records and 33 novel
-bedroom/direct-parent records. The first two groups include **105 chat records**
-adjudicated using housing clauses and available reply context, plus **101
-commercial-channel records** excluded by their explicit short-stay labels and
-USD prices. Both short-stay label variants were checked; daily and monthly
-figures were not blended. The 33-record increment was screened for transport,
-medical substring matches and non-comparable products, with its housing leads
-read in context. Rechecking newly available parents produced no remaining
-amount-bearing review candidates. This is a defined review frame, not a census
-of rent claims across every message in the database.
-
-The amount-led first queue was deliberately broadened to include unresolved
-currencies, periods and cities. This recovered foreign-currency prices, bare
-amount repetitions, outside-boundary condos and additional short-stay/offer
-contexts. It did not justify FX conversion, treating a deposit or bill as base
-rent, reading a ceiling as a transaction, or supplying a bedroom count from a
-different speaker's search. An explicitly separate bedroom in the singular is
-retained as a layout sensitivity when the exact count is not established;
-`однушка`/`двушка` are not silently converted to 1BR/2BR. Medical uses of the
-unbounded discovery stem and sleeper-transport uses are not housing evidence.
-
-The permissive **ordinary-condo/flat diagnostic** retains monthly paid claims
-even when tenure is unknown. It contains **two literal THB/month paid anchors,
-two conservative account/family clusters and two accounts**, all with two
-bedrooms. Two further monthly messages have contextual currency and similar
-same-account claims; these remain outside the literal-currency anchor count.
-Another bare-amount repeat does not establish another household or price event.
-Dependence grouping does **not** establish that all messages describe the same
-unit or license moving currency, location or term between them.
-
-One literal anchor has a checked project point in Udom Suk/Bang Na. The other is
-unlocated. A contextual-currency message names Punnawithi, without a verified
-station-footprint point; that location is not copied into the literal anchor.
-Neither anchor establishes a six-month-plus term. One has a known size outside
-the two-bedroom reference band; the other has no reported size. Thus these are
-neither two reference-sized observations nor a releasable annual proxy cohort.
-
-Two further paid/current-cost leads have an unestablished monthly period; both
-lack a bound station area. Granting both in a sensitivity reading still leaves
-the largest located cohort at **one family**. A separate newly recovered
-two-bedroom cost lead remains city-unresolved: its own project name differs
-from another speaker's luxury-project comparison. It cannot be located from the
-comparison or copied into Dusit khet. These are explicit unknowns, not deleted
-dissenting price observations.
-
-| Place / evidence grain | Explicit-bedroom THB/month paid families, 1BR / 2BR; unknown tenure retained | Report months | Offer / layout sensitivity | Releasable median |
+| Place / evidence grain | Supported price/bedroom anchors, 1BR / 2BR | Report months | Other evidence / limit | Releasable median |
 |---|---:|---|---|---|
-| Thong Lo, Ekkamai, Phrom Phong, Asok, Nana | 0 / 0 in each target | — | A viewed two-room Thong Lo offer is layout/period-unconfirmed; an Asok/Rama 9 relet does not establish the BTS Asok catchment | Withheld for every target |
-| Chit Lom, Sala Daeng, Chong Nonsi, Ratchathewi, Phaya Thai | 0 / 0 in each target | — | A broad Sathorn relet cannot be allocated to Chong Nonsi or Sala Daeng | Withheld for every target |
-| Ari, named neighborhood only | 0 / 0 | — | One 2023 occupied-cost lead has unconfirmed separate-bedroom layout and no catchment point | Withheld; gap remains |
-| Siam | 0 / 0 | — | IconSiam is a different referent | Withheld; gap remains |
-| Udom Suk, checked project point / Bang Na khet | 0 / 1 | 2025-10 | Size is outside the reference band; term is unknown | Withheld |
-| Unlocated literal-currency anchor | 0 / 1 | 2023-12 | No station/khet is inherited from a similar same-account statement | Withheld |
-| Punnawithi, named neighborhood without a point | 0 / 0 | — | A 2023-11 monthly/contextual-currency claim remains in sensitivity; term and size unknown | Withheld |
-| Phra Ram 9, checked project context | 0 / 0 | — | One general two-bedroom project quote, not verified live availability | Withheld |
-| Watthana, checked project context outside station footprints | 0 / 0 | — | One relayed one-bedroom agent offer with an annual term; unaccepted and monthly period contextual | Withheld |
-| Sathorn, broad named district/corridor | 0 / 0 | — | One two-bedroom relet family, remaining contract only; not a fresh annual offer | Withheld |
-| Ha Yaek Lat Phrao, checked project context | 0 / 0 | — | One viewed monthly asking quote with ambiguous room-layout wording | Withheld |
+| Thong Lo, Ekkamai, Phrom Phong, Asok, Nana | 0 / 0 in each target | — | Viewed offers and corridor relets do not establish the target footprint | Withheld |
+| Chit Lom, Sala Daeng, Chong Nonsi, Ratchathewi, Phaya Thai | 0 / 0 in each target | — | Broad Sathorn evidence cannot be allocated to these stations | Withheld |
+| Ari | 0 / 0 | — | Older own-cost lead has ambiguous one-room layout | Withheld; gap remains |
+| Siam | 0 / 0 | — | IconSiam is another referent | Withheld; gap remains |
+| Udom Suk, checked project / Bang Na | 0 / 1 | 2025-10 | Out-of-reference-band size; term unknown | Withheld |
+| Unlocated, not a geographic cohort | 1 / 1 | 2023-06; 2023-12 | One verified self-thread and one within-message anchor; geography absent | Withheld |
+| Punnawithi, named neighborhood only | 0 / 0 | — | Contextual-currency statement; seven-report account history is not a station point | Withheld |
+| Phra Ram 9 | 0 / 0 | — | General project quote, not verified live availability | Withheld |
+| Watthana project context outside station footprints | 0 / 0 | — | Relayed annual 1BR offer, unaccepted, period contextual | Withheld |
+| Sathorn, broad district/corridor | 0 / 0 | — | One relet family, remaining contract only | Withheld |
+| Ha Yaek Lat Phrao | 0 / 0 | — | Viewed quote with unconfirmed bedroom layout | Withheld |
 
-The four explicit-bedroom offer/quotation families comprise **two relets, one
-relayed agent offer and one generic project quote**. A repeated relet description
-is not another offer. Their period, remaining term, availability, geographic
-grain and source origin are not interchangeable. A Telegram post citing
-FazWaz/Hipflat or an agent is not automatically an independent second asking
-source; it may repeat portal inventory. No current available, independently
-originated, comparable asking cohort is established here.
+The four offer/quotation families remain **two relets, one relayed agent offer
+and one generic project quote**. Object codes and normalized copy families
+prevent repeated messages from creating supply. Portal/agent re-quotes are not
+automatically independent of the portals. Two additional period-uncertain paid
+leads remain unlocated; admitting them in sensitivity does not increase any
+located family cohort above one.
 
-### Recent window, drift and paid-versus-asking comparison after repair
+There is also a **bedrooms-unknown paid stratum**, not exhaustively enumerated
+by this bedroom-specific screen. The independent check found named-project
+paid leads without bedrooms/period markers; these do not establish an explicit
+bedroom cohort. The conclusion is about the audited metric, not absence of rent
+discussion in a neighborhood or the whole corpus.
 
-For the size-free pass, the defined recent **report window is 2025-10-29 through
-2026-10-29**, ending at the partial-day corpus watermark. It contains **one** of
-the two explicit-monthly paid families. A report date does not establish a new
-lease's price date. The historical extension above retains its own earlier
-cutoff and broader claim definitions; its retained-claim counts must not be
-relabeled as this bedroom-specific monthly cohort.
+### Report dates, drift and unavailable comparisons
 
-| Report year | Literal THB/month bedroom-specific paid anchors | Conservative families | Contextual-currency monthly repeats | Additional period-unconfirmed paid leads |
-|---|---:|---:|---:|---:|
-| 2023 | 1 | 1 | 2 | 0 |
-| 2024 | 0 | 0 | 0 | 1 |
-| 2025 | 1 | 1 | 0 | 0 |
-| 2026, partial | 0 | 0 | 0 | 1 |
+The recent report window remains **2025-10-29 through the partial 2026-10-29
+watermark**, in Asia/Bangkok time. It contains **one** of the three anchors.
+It survives a two-day start shift but drops out with a three-day shift. A
+report date does not establish a new lease or rate-reset date. Historical rows
+remain in discovery/diagnostic ledgers and are filtered only at cohort eligibility.
 
-This is insufficient to identify a market drift model: there is no dense,
-comparable per-area/bedroom series, repeated text is not a new price-setting
-event, and different unit/lease vintages cannot be treated as rent inflation.
-The proposed twelve-month window and six-month half-life are prospective
-collection/release rules. No weighted median or curve is fit to these sparse
-records. The previously reconciled uncertainty about incumbent lease inception
-and resets still applies.
+| Report year | Literal THB/month reports including history | Conservative families represented | Own-text bedroom anchors | Verified self-thread bedroom anchors | Later price-only history reports | Contextual-currency monthly repeats |
+|---|---:|---:|---:|---:|---:|---:|
+| 2023 | 2 | 2 | 1 | 1 | 0 | 2 |
+| 2024 | 2 | 1 | 0 | 0 | 2 | 0 |
+| 2025 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 2026, partial | 0 | 0 | 0 | 0 | 0 | 0 |
 
-| Comparator | Comparable central area × bedroom cells | Paid-versus-asking delta |
+The same account cluster appears in 2023 and 2024, so annual family counts are
+**not additive** as distinct all-period households. The 2024 reports are retained
+with their missing in-message bedrooms; they are not silently upgraded or erased.
+The earlier two-family-only accounting was incomplete and is superseded here.
+
+No comparable per-area series exists to fit market drift. No weighted median,
+inflation coefficient, current price event or uncertainty interval is invented
+from mixed unit/lease vintages. The twelve-month window and six-month half-life
+in the annex remain prospective operating rules, not estimates fitted to these
+records. Unknown dates and the previously reconciled incumbent-vintage uncertainty
+remain explicit.
+
+| Comparison | Comparable priority area × bedroom cells | Paid-versus-asking delta |
 |---|---:|---|
-| Ten DooAsset override areas versus explicit-bedroom THB/month paid claims | 0 | Not estimable |
-| Ari and Siam editorial gaps versus this paid cohort | 0 | Not estimable; neither gap is filled |
-| Broader recovered paid and offer contexts | 0 with matched place, bedroom, period, term and date basis | Not estimable |
+| Ten DooAsset overrides versus the paid anchor cohort | 0 | Not estimable |
+| Ari and Siam editorial gaps | 0 | Not estimable; gaps remain |
+| Broader recovered paid/offer contexts with matched term/place/date basis | 0 | Not estimable |
 
-No observed percentage is labelled a negotiation cushion. Even a future
-descriptive paid/asking difference can reflect community selection, size/quality,
-incumbent leases, dates and source composition. A negotiation effect would need
-matched offered and agreed prices for comparable units, with its own study design.
+A cross-sample difference is not a negotiation cushion. A negotiation study
+would require matched offered/agreed prices for comparable units and terms.
+The corpus does not validate or refute the numerical level of the existing
+asking proxies from these sparse, differently composed observations.
 
-### Integration decision and validation boundary
+### Integration decision and evidence limits
 
-The repaired evidence does not supply a numerical replacement for **any of the
-50 khet or 133 station areas** under the proposed release rules. Ari's layout
-lead and the additional non-central project contexts improve interpretation and
-collection targeting, not rent ratings. Neither the five-family/three-account
-analysis gate nor the ten-family/five-account/three-project adoption proposal is
-met by a located, comparable bedroom cohort. This remains true before applying
-the reference size band and after admitting both uncertain-period paid leads.
+No district or station area reaches the five-family/three-account analysis gate,
+or the stricter ten-family/five-account/three-project adoption proposal. The
+all-size cohort does not rescue numerical adoption for **any of the 50 khet or
+133 areas**. Asking remains primary; a future paid layer needs its own metric,
+compatible observations, independently checked field binding and density/privacy
+gates. The annex's JSON is an unadopted design, with empty maps and null suppressed
+values. No missing second-bedroom value, price ratio or spatial interpolation is
+created. A useful Tier-2 fact may state insufficient comparable evidence without
+publishing a tiny-sample price.
 
-The annex's all-floor-area paid contract is therefore a **cross-check design**,
-not a new data feed. Keep asking primary, consider source-independent asking
-corroboration separately, and expose paid aggregates only with their own basis,
-window, unit mix and estimate-confidence ceiling. A useful sparse Tier-2 fact
-may explain insufficient comparable evidence without disclosing a tiny-sample
-price; do not add empty warning rows to every place. No 1BR/2BR value, FX rate,
-discount, point coordinate or missing second-bedroom value is synthesized.
+Local controls now include fifteen geography positives/negatives, eight real
+Sukhumvit grain cases, the older fourteen collision cases, the fixed-watermark
+Samet and transport/city probes, the live nounless-payment context regression,
+fee/postcode controls and the replayable body comparison. Their declared inputs
+are pinned. These are targeted checks, not population precision/recall scores.
 
-The original geography and amount/cohort refutations are reconciled above.
-The sustained bounded conclusion is **no releasable fixed-size cohort**; the
-recovered larger units must not be called approximately two exact-reference
-observations. The new all-size screen is a further test of the constructive
-alternative, not a claim of corpus completeness. Local checks validate the
-133/50 registry, monetary/period/layout controls and fourteen pinned collision
-cases, with the broader IconSiam reference diagnostic kept separate. These
-checks cannot certify recall, precision or sampling validity.
-
-The earlier independent size-control result is bounded to its October 26
-snapshot, older exploratory cutoff and tested screens. It supports the
-fixed-size non-adoption finding; it does **not** independently validate this
-October 29 all-size bundle, its rebuilt geography or its anchor counts. The
-current parser already recognizes compact/spaced Latin `m2` and `m²`, and the
-current recent-report predicate uses 2025-10-29 through the partial 2026-10-29
-watermark. Discovery queues remain unfiltered by date so historical comparisons
-can be audited; a cohort's own date gate is applied before its count or median.
-
-The repaired proxy counts are **bounded local adjudications**, not independently
-replicated market statistics. Their release here documents why no numerical
-feed is justified. Any future adoption requires new compatible observations,
-independent source/field-binding checks and the stated density/privacy gates;
-this research does not authorize that implementation. Raw messages,
-source/person identifiers, individual price rows and the private crosswalk
-remain outside the public repository. Numerical adoption maps stay empty; all
-product rents, confidence and grid exports remain unchanged.
+The repaired outputs are locally replay-checked; the independent records are
+not claimed to replicate every later script or verify the underlying payments.
+The immutable measurement package preserves the audit trail. Future numerical
+adoption still requires compatible observations, source/field-binding checks and
+the stated density/privacy gates. Raw messages, source/person identifiers and
+individual financial rows remain outside the public repository. No product rent,
+confidence, application code or generated district/area/grid export changes.
