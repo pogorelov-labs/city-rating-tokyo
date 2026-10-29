@@ -1114,12 +1114,26 @@ independently checked project contexts retain only their disclosed point binding
 Amounts keep source currency, magnitude, role, period and price basis separate.
 Weekly/annual/multi-month totals and ranges are not converted into monthly
 points. Deposits, utilities and membership fees remain separate, including the
-previously missed first-person fee verb. A nounless payment statement is now a
+first-person fee form found only in synthetic controls of an earlier review.
+A nounless payment statement is now a
 typed unresolved payment candidate; accepting it as rent requires verified unit
-context. Postal-topic wording does not overwrite an otherwise supported rent
+context. Targeted controls retain that refusal without context, admit the
+verified rent context, and keep membership fees excluded even with that context.
+Postal-topic wording does not overwrite an otherwise supported rent
 role; explicit postcode spans and non-financial postcode questions stay guarded.
 No currency conversion, bedroom/size inference from a project's other units,
 or assumed contract-start/rate-reset date is introduced.
+
+Adjudication excludes a deposit credited toward the first month as an independent
+rent-payment observation. A building's quoted starting rate, when the writer's
+own payment is unstated, remains a quotation rather than an own-paid amount.
+Cash-withdrawal verbs can also trigger payment labels without describing rent;
+the earlier independent review found zero rent points in its monthly ATM-language
+control set. That bounded result does not establish a universal absence of label
+noise. Neither a candidate label nor a machine point bypasses the own-unit,
+payment-role and price-basis checks. Period abbreviations, verbless listings,
+English role/basis phrasing and untested payment paraphrases remain recall and
+classification limits before parser reuse.
 
 The current manifest pins the previously omitted six inputs as well as the
 raw capture inputs, selected context evidence, comparison generator, dictionary,
