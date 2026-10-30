@@ -121,7 +121,7 @@ export function NaturalEnvironment({ environment }: Props) {
                       style={{ backgroundColor: seismicColor }}
                       aria-hidden
                     />
-                    <span className="text-sm" style={{ color: seismicColor }}>
+                    <span className="text-sm text-gray-700">
                       {seismicLabel}
                     </span>
                     <span className="text-xs text-gray-500">
