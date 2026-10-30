@@ -27,6 +27,18 @@ running on :3000 it is reused locally. CI builds the release artifact and starts
 its standalone server; it does not use the development server. Set
 `E2E_PORT` to an available port to run alongside another local server.
 
+To check an already running production build, set its URL explicitly. The
+harness then uses that server and does not start or stop one:
+
+```bash
+E2E_PRODUCTION=1 PLAYWRIGHT_BASE_URL=http://localhost:3011 npm run test:e2e
+```
+
+With a prepared standalone build, `E2E_PRODUCTION=1 npm run test:e2e` lets the
+harness start and stop the production server itself. Copy `app/public` into
+`app/.next/standalone/public` and `app/.next/static` into
+`app/.next/standalone/.next/static` first, as CI does.
+
 ## What's covered
 
 `smoke.spec.ts` verifies the core flows return HTTP 200 and render a
@@ -41,8 +53,11 @@ key piece of content:
 - Bangkok district tooltips render in Leaflet's tooltip pane (above the polygons)
 - Bangkok levels of detail — Stations (133 areas) and the 200 m grid (canvas, Best spots, top-5 pins)
 - A grid cell click opens its popup (`?lv=grid&s=cell.N`)
-- Station-area page `/bangkok/station/asok` — heading, next stops, translated radar legend
-- District page radar legend is real copy, not a message key
+- Station and district guides — comparison plot/table, commute bars, geographic
+  scope and expandable local facts
+- All three guide types in EN/JA/RU, including category evidence and rent sources
+- Destination, comparison and custom weights survive locale switching
+- Automated accessibility checks on the redesigned guide surfaces
 - City switch — weights carry over from Tokyo, yen filters do not
 - Canvas marker selection, desktop popup and district navigation; touch zoom
   retains the selected station at tablet width (`map-interactions.spec.ts`).
@@ -52,14 +67,15 @@ key piece of content:
 Intentionally **not** covered here:
 
 - **Visual regression** — handled by the `flyto-visual-test` skill.
-- **Performance capture** — handled by the `perf-capture` skill.
+- **Field performance** — local lab checks capture LCP and layout shifts;
+  they do not measure INP or field percentiles.
 
 ## CI
 
 The `e2e` job installs Chromium, builds the normal app with the lab disabled,
-packages its public/static assets, and tests the standalone server with retries
-disabled. CI uses software WebGL only for functional coverage, not performance
-measurements. Its failure fails the CI check; branch
+packages its public/static assets, and runs the full suite against the
+standalone server with retries disabled. CI uses software WebGL for functional
+coverage, not performance measurements. Its failure fails the CI check; branch
 protection must also require the `e2e` status for it to gate merging.
 
 ## Bangkok renderer release checks
@@ -70,8 +86,8 @@ failure recovery. Leaflet-specific interactions explicitly select the standard
 map; Tokyo continues to use Leaflet. The normal configuration excludes the
 renderer lab tests.
 
-To test a production server that is already running, set `E2E_BASE_URL` to its
-URL; the harness will not launch a server. Set `E2E_PRODUCTION=1` to include
+For an existing server, `E2E_BASE_URL` is also supported as an alternative to
+`PLAYWRIGHT_BASE_URL`; the harness will not launch a server. Set `E2E_PRODUCTION=1` to include
 production-only worker and security-header checks. For example:
 
 ```sh

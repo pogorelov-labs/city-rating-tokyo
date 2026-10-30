@@ -1,13 +1,13 @@
 # City Rating — Tokyo + Bangkok
 
-Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open detail pages with rating breakdowns, confidence and source information.
+Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open localized guides with comparison plots, commute bars, area maps and expandable source information.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
-**Release candidate:** [v0.2.0 — Bangkok in 3D](docs/releases/v0.2.0.md) (unpublished).
+**Release candidate:** [v0.3.0 — Bangkok in 3D](docs/releases/v0.3.0.md) (unpublished).
 
-**Latest release:** [v0.1.2 — Bangkok MCP tools and map fixes](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
+**Latest release:** [v0.2.0 — Station and district guides](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Release notes](docs/releases/v0.2.0.md) · [Changelog](CHANGELOG.md)
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
@@ -15,12 +15,12 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 
 - **Map** — weighted composite score; heatmap by category; compare and explore modes (see app for current UX).
 - **Filters** — presets, search, max commute (uses `transit_minutes` where present), rent band, min score.
-- **Station pages (SSG)** — stats, hub strip, radar vs Tokyo median, ten rating bars with confidence dots when pipeline metadata exists, feedback widget.
+- **Station and district guides (SSG, EN/JA/RU)** — clear rent cohorts and provenance, category comparisons against the correct city/level median or nearby areas, selectable commute bars, geographic scope, and expandable local facts and sources. Desktop, hover and touch map cards share one compact presentation; weights survive detail and locale navigation.
 
 ## Bangkok (district layer)
 
-- **Levels:** 50 districts (polygons), 133 walkable station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
-- **Map:** tilted buildings, muted parks/water, distinct selection/comparison, and a standard-map fallback. Scoring and shared links work across both renderers; see the [map guide](docs/BANGKOK_MAP.md).
+- **Levels:** 50 districts (polygons), 133 nearest-station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
+- **Map:** tilted buildings, muted parks/water, distinct selection/comparison, and a standard-map fallback. Scores and shared links work across both renderers; see the [map guide](docs/BANGKOK_MAP.md).
 - **Data:** OpenStreetMap + [Overture Maps Places](https://docs.overturemaps.org/guides/places/) (two independent POI sources, r ≈ 0.9 agreement), Wikidata (names, population), a door-to-door commute model to five hubs, Wikimedia Commons photos.
 - **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
 - **Honesty:** safety remains editorial; scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. Evidence density differs by category and level. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
@@ -40,7 +40,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 | Gym & Sports | 4% | Tokyo OSM; Bangkok Overture + OSM |
 | Vibe | 4% | Cultural / pedestrian signals + documented editorial overrides |
 | Nightlife | 8% | Tokyo HotPepper + OSM; Bangkok Overture + OSM |
-| Quietness | 4% | Tokyo passengers + fallbacks; Bangkok WorldPop (districts) / place density (finer levels) |
+| Less crowding | 4% | Tokyo passengers + fallbacks; Bangkok WorldPop (districts) / place density (finer levels) |
 
 Weights match [`packages/schema/constants.json`](packages/schema/constants.json).
 
@@ -60,9 +60,10 @@ app/src/data/rent-averages.json # Suumo-backed rent where scraped
 app/src/data/bangkok/           # Bangkok districts, geometry, rail overlay (generated)
 app/src/lib/scoring-react.tsx   # Shared named-area scores, anchors, filters, ranking
 app/src/lib/scoring-grid-react.ts # Bangkok resident-weighted grid adapter
-app/src/components/bangkok/     # Renderer boundary, layers, popups and grid panel
+app/src/components/bangkok/     # Renderer boundary, layers and grid panel
 app/src/components/bangkok/maplibre/ # Native layers, grid texture and camera lifecycle
-app/src/components/area-card.tsx # Shared popup/touch metadata and actions
+app/src/components/area/        # Station/district guides and compact map cards
+app/src/components/area-card.tsx # Grid card metadata and actions
 app/src/app/                    # Locale routes and shared detail sections
 app/src/test/                   # App unit/component harness; browser suite is root e2e/
 scripts/bangkok/                # Bangkok fetch + build pipeline (uv), tests
@@ -137,7 +138,7 @@ and [Bangkok overview](research/bangkok/00-overview.md).
 
 ## Deployment
 
-Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.2.0 requires no DB migration or rating-data rebuild. See the [release runbook](docs/RELEASING.md).
+Next.js standalone build — `app/Dockerfile` (build context: `app/`). Production deployment is automated from `main`; static city data needs no runtime DB; v0.1.2 has no DB migration. See the [release runbook](docs/RELEASING.md).
 
 ## Data sources (high level)
 

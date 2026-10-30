@@ -83,7 +83,7 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
     <div
       // Reserve the same right-hand zoom column as MobileStationCard; the
       // compare panel and filter drawer still stack above both.
-      className="absolute bottom-0 left-3 right-16 md:max-w-96 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] overflow-y-auto"
+      className="map-touch-cell absolute bottom-0 left-3 right-16 md:max-w-96 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] overflow-y-auto"
       style={{ marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
       role="dialog"
       aria-label={t('map.cellTitle')}

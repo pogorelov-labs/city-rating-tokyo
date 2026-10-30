@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import AreaLink from '@/components/area/AreaLink';
 import { dataLabel } from '@/i18n/message-key';
 import { RATING_LABELS, type StationRatings } from '@/lib/types';
 import { areaPath } from '@/lib/cities';
@@ -85,23 +85,23 @@ export function CellDetails({
         {info.weight < 0.3 && <> {t('map.cellSparse')}</>}
       </p>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1.5">
-        <Link
+        <AreaLink
           href={areaPath('bangkok', info.districtSlug)}
           className="text-blue-600 text-xs hover:underline"
           data-umami-event="cell-district"
           data-umami-event-station={info.districtSlug}
         >
           {t('map.cellDistrictLink', { district: districtName(info.districtSlug) })}
-        </Link>
+        </AreaLink>
         {info.areaId && (
-          <Link
+          <AreaLink
             href={areaPath('bangkok', stationAreaKey(info.areaId))}
             className="text-blue-600 text-xs hover:underline"
             data-umami-event="cell-station-area"
             data-umami-event-station={info.areaId}
           >
             {t('map.cellAreaLink', { station: areaName(info.areaId) })}
-          </Link>
+          </AreaLink>
         )}
       </div>
     </div>

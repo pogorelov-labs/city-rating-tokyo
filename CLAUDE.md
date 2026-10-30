@@ -333,3 +333,27 @@ Routine fixes and copy edits can use the ticket/PR record. Apply the public-copy
 rules in [CONTRIBUTING.md](CONTRIBUTING.md#public-repository-and-changelog-rules);
 private operational details and internal verification artifacts stay outside
 public ADRs.
+
+## Area guide rollout (2026-10-30)
+
+All Tokyo station, Bangkok station-area and Bangkok district detail routes use
+`components/area/AreaGuide.tsx`, with server data normalized by
+`lib/area-guide-data.ts`. The adopted design is retained under
+`components/prototype/cards/` as a reference. The main guide uses one category
+comparison plot, destination-specific commute bars and a lazy area map; the
+former radar/bar pair is no longer its default view. Supplemental descriptions,
+photos, cameras, noise references, institutions and air context remain available
+through `AreaGuideExtras.tsx`.
+
+`CompactAreaCard` is shared by desktop popups, hover previews and the touch-card
+wrapper. Keep the latter's flight/animation lifecycle intact. Full source and
+confidence arrays still stay off `MapStation`; only `rent_source` and
+`rent_updated` were added for accurate Tokyo rent labels. Detail links use the
+existing `w` format, and locale navigation preserves query context.
+
+The crowd-proxy category is labeled **Less crowding** (EN/JA/RU); modeled
+**Outdoor quietness** remains a separate fact. A source's raw numeric value,
+provenance, geographic scope and source-specific date must not be silently
+converted into a different metric. Presentation summaries for reviewed examples
+live in `data/area-guide-copy.json`; other places use localized factual leads
+and retain their existing long descriptions under local notes.

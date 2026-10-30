@@ -1,8 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { EnvironmentData, SeismicRiskTier, ElevationTier } from '@/lib/types';
-import { CONFIDENCE_DOT_COLORS } from './ConfidenceBadge';
+import { useLocale, useTranslations } from 'next-intl';
+import { EnvironmentData, SeismicRiskTier } from '@/lib/types';
 import Tooltip from './Tooltip';
 
 const SEISMIC_COLORS: Record<SeismicRiskTier, string> = {
@@ -19,7 +18,9 @@ interface Props {
 
 export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
-  const { elevation_m, elevation_tier, seismic_prob_i60, seismic_risk_tier,
+  const locale = useLocale();
+  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
+  const { elevation_m, elevation_tier, seismic_prob_i60,
           flood_depth_m,
           michelin_stars, michelin_bib, hotels_800m, tourist_badge } = environment;
 
@@ -27,10 +28,13 @@ export function NaturalEnvironment({ environment }: Props) {
       && michelin_stars == null && michelin_bib == null
       && hotels_800m == null) return null;
 
-  const tier = seismic_risk_tier ?? 'unknown';
+  // Classify the displayed probability using the same bands as its legend.
+  // Stored tiers can refer to a different shaking threshold.
+  const tier: SeismicRiskTier = seismic_prob_i60 == null || !Number.isFinite(seismic_prob_i60)
+    ? 'unknown' : seismic_prob_i60 < 0.03 ? 'low'
+      : seismic_prob_i60 < 0.15 ? 'moderate' : seismic_prob_i60 < 0.30 ? 'high' : 'very_high';
   const seismicColor = SEISMIC_COLORS[tier];
   const seismicLabel = t(`seismicTiers.${tier}.label`);
-  const seismicDesc = t(`seismicTiers.${tier}.description`);
   const elevLabel = t(`elevationTiers.${elevation_tier ?? 'unknown'}`);
   const isFloodRisk = elevation_m != null && elevation_m < 5;
 
@@ -99,7 +103,7 @@ export function NaturalEnvironment({ environment }: Props) {
                 content={
                   <>
                     <span className="font-semibold">
-                      {t('station.seismicRisk')} {(seismic_prob_i60 * 100).toFixed(1)}% — {t('station.seismicProbability')}
+                      {t('station.seismicRisk')} {number.format(seismic_prob_i60 * 100)}% — {t('station.seismicProbability')}
                     </span>
                     <span className="block mt-1">
                       {t(`seismicTooltips.${seismicTooltipKey}`)}
@@ -122,7 +126,7 @@ export function NaturalEnvironment({ environment }: Props) {
                       {seismicLabel}
                     </span>
                     <span className="text-xs text-gray-500">
-                      ({(seismic_prob_i60 * 100).toFixed(1)}%)
+                      ({number.format(seismic_prob_i60 * 100)}%)
                     </span>
                   </span>
                 </div>

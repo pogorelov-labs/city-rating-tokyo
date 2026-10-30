@@ -54,7 +54,7 @@ test('selection, comparison and details work across Bangkok levels', async ({ pa
     await expect(card).toBeVisible({ timeout: 30_000 });
     await card.getByRole('button', { name: '+ Compare', exact: true }).click();
     await expect(card.getByRole('button', { name: /Remove/ })).toBeVisible();
-    const link = card.getByRole('link', { name: 'View details →' });
+    const link = card.getByRole('link', { name: en.areaGuide.compact.explore, exact: true });
     await expect(link).toHaveAttribute('href', path);
     await link.click();
     await expect(page).toHaveURL(path);
@@ -298,4 +298,55 @@ test('short phone keeps 3D controls and selected card usable with air panel expa
     await close.tap({ timeout: 8_000 });
     await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
   } finally { await context.close(); }
+});
+
+test('station guide returns to its map target with current weights and map settings', async ({ page }) => {
+  const weights = '30,18,14,10,12,8,4,4,8,4';
+  await page.goto(`/bangkok?lv=station&s=st.asok&c=st.nana&adult=1&flood=1&mr=25000&hm=1&hd=food&w=${weights}`);
+  const card = page.getByRole('region', { name: en.map.selectedArea });
+  await expect(card).toBeVisible({ timeout: 30_000 });
+  const sidebar = page.locator('aside');
+  await expect(sidebar.getByRole('checkbox', { name: /Family-friendly/ })).toBeChecked();
+  await expect(sidebar.getByRole('checkbox', { name: /Hide flood-risk/ })).toBeChecked();
+  await expect(page.getByRole('combobox', { name: en.map.heatmap })).toHaveValue('food');
+  await card.getByRole('link', { name: en.areaGuide.compact.explore, exact: true }).click();
+  await expect(page).toHaveURL(/\/bangkok\/station\/asok/);
+  await expect.poll(() => new URL(page.url()).searchParams.get('w')).toBe(weights);
+  await page.getByRole('combobox', { name: en.areaGuide.score.priorities }).selectOption('family');
+  await expect.poll(() => new URL(page.url()).searchParams.get('w')).not.toBe(weights);
+  const changedWeights = new URL(page.url()).searchParams.get('w');
+  expect(changedWeights).toBeTruthy();
+  await page.locator('[data-umami-event="back-to-map"]').click();
+  await expect(page).toHaveURL(/\/bangkok\?/);
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe('st.asok');
+  const params = new URL(page.url()).searchParams;
+  expect(Object.fromEntries(['lv', 's', 'c', 'adult', 'flood', 'mr', 'hm', 'hd', 'w'].map(key => [key, params.get(key)]))).toEqual({
+    lv: 'station', s: 'st.asok', c: 'st.nana', adult: '1', flood: '1', mr: '25000', hm: '1', hd: 'food', w: changedWeights,
+  });
+  await expect(sidebar.getByRole('checkbox', { name: /Family-friendly/ })).toBeChecked();
+  await expect(sidebar.getByRole('checkbox', { name: /Hide flood-risk/ })).toBeChecked();
+  await expect(page.getByRole('combobox', { name: en.map.heatmap })).toHaveValue('food');
+  await expect(page.getByRole('region', { name: en.map.selectedArea })).toBeVisible();
+});
+
+test('grid-cell district and station guide links carry weights and return to the guide target', async ({ page }) => {
+  const weights = '30,18,14,10,12,8,4,4,8,4';
+  // This cell is in Watthana and the Asok station area.
+  for (const [event, detail, target, level] of [
+    ['cell-district', '/bangkok/district/watthana', 'watthana', null],
+    ['cell-station-area', '/bangkok/station/asok', 'st.asok', 'station'],
+  ] as const) {
+    await page.goto(`/bangkok?lv=grid&s=cell.39725&adult=1&w=${weights}`);
+    const card = page.getByRole('region', { name: en.map.selectedArea });
+    await expect(card).toBeVisible({ timeout: 30_000 });
+    await card.locator(`[data-umami-event="${event}"]`).click();
+    await expect.poll(() => new URL(page.url()).pathname).toBe(detail);
+    await expect.poll(() => new URL(page.url()).searchParams.get('w')).toBe(weights);
+    await page.locator('[data-umami-event="back-to-map"]').click();
+    await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe(target);
+    const params = new URL(page.url()).searchParams;
+    expect(params.get('lv')).toBe(level);
+    expect(params.get('adult')).toBe('1');
+    expect(params.get('w')).toBe(weights);
+  }
 });

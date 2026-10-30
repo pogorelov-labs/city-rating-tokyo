@@ -56,7 +56,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={clientMessages}>
           {children}
         </NextIntlClientProvider>
-        <p className="hidden md:block fixed bottom-1 left-1/2 -translate-x-1/2 text-[10px] text-gray-400/60 pointer-events-none z-[1] whitespace-nowrap">
+        <p className="hidden md:block fixed bottom-1 left-1/2 -translate-x-1/2 text-[10px] text-gray-700 bg-white pointer-events-none z-[1] whitespace-nowrap">
           {tp('notice')}
         </p>
         {process.env.NEXT_PUBLIC_UMAMI_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (

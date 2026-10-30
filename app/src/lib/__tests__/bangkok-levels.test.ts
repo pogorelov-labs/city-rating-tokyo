@@ -356,13 +356,15 @@ describe('the committed grid file', () => {
   });
 
   it('holds ratings 1–10 in every inside cell', () => {
+    const invalid: { category: string; cell: number; value: number }[] = [];
     for (const key of ['food', 'transport', 'crowd', 'green'] as const) {
       const plane = grid.planes[key];
       for (const i of grid.cells) {
-        expect(plane[i]).toBeGreaterThanOrEqual(1);
-        expect(plane[i]).toBeLessThanOrEqual(10);
+        const value = plane[i];
+        if (!(value >= 1 && value <= 10)) invalid.push({ category: key, cell: i, value });
       }
     }
+    expect(invalid).toEqual([]);
   });
 
   it('puts Siam station in the Siam area of Pathum Wan, next to the Siam hub', () => {

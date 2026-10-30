@@ -1,0 +1,13 @@
+/* The map is a flex child whose available height changes when the air panel opens. */
+.map-workspace { container-type: size; }
+/* Let the published card shrink inside the workspace; its body, not its action
+   footer, scrolls. Without this the outer card clips the footer offscreen. */
+.map-touch-card > article { flex: 0 1 auto; min-height: 0; }
+@container (max-width: 767px) and (max-height: 359px) {
+  .map-touch-card, .map-touch-cell { max-height: calc(100% - 7rem); }
+  /* During a touch selection, use this row for the card. Closing the card
+     restores the renderer choice. Keyboard/mouse users retain the choice. */
+  @media (hover: none) {
+    .map-workspace[data-selected="true"] .map-renderer-selector { display: none; }
+  }
+}

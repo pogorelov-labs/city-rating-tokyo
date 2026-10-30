@@ -19,8 +19,7 @@ import { parseAreaKey } from '@/lib/area-key';
 import { stationPrimaryName } from '@/lib/station-name';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { ASOK_CAMERA, type BangkokRendererHandle } from '@/lib/bangkok-prototype';
-import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
-import RentNote from '../RentNote';
+import CompactAreaCard from '@/components/area/CompactAreaCard';
 import { CellDetails } from '../CellDetails';
 import { Legend } from '../MapLegend';
 import { GridTextureLayer } from './GridTextureLayer';
@@ -41,7 +40,7 @@ const setSource = (map: LibreMap, id: string, data: GeoJSON.FeatureCollection) =
   if (source) void measureAsync(`source.${id}.ready`, () => measure(`source.${id}.submit`, () => source.setData(data), data.features.length)).catch(() => {});
 };
 
-export default function MapLibreMap({ stations, snippets = {}, prototype = false, onUnavailable }: { stations: MapStation[]; thumbnails?: Record<string, { thumb: string; lqip: string }>; snippets?: Record<string, string>; prototype?: boolean; onUnavailable?: (reason: 'webgl' | 'load' | 'context') => void }) {
+export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, prototype = false, onUnavailable }: { stations: MapStation[]; thumbnails?: Record<string, { thumb: string; lqip: string }>; snippets?: Record<string, string>; prototype?: boolean; onUnavailable?: (reason: 'webgl' | 'load' | 'context') => void }) {
   const host = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LibreMap | null>(null);
@@ -87,6 +86,7 @@ export default function MapLibreMap({ stations, snippets = {}, prototype = false
   const filters = useCityState((s) => s.filters);
   const flood = useCityState((s) => s.hideFloodRisk), adult = useCityState((s) => s.hideAdultZones);
   const heat = useAppStore((s) => s.heatmapMode), dimension = useAppStore((s) => s.heatmapDimension);
+  const weights = useAppStore((s) => s.weights);
   const showRail = useAppStore((s) => s.showRailOverlay);
   const actions = useCityActions();
   const primary = useScoredAreas(stations, 'primary'), areas = useScoredAreas(stationAreas, 'station');
@@ -421,19 +421,16 @@ export default function MapLibreMap({ stations, snippets = {}, prototype = false
       </div>}
     </div>
     {!selected && <Legend anchors={anchors} level={level} heatmapMode={heat} heatmapDimension={dimension} filtersActive={passing < total} />}
-    {selected && !isTouch && (chosen || cell) && <section aria-label={t('map.selectedArea')} className="bkk-selection absolute bottom-6 left-3 z-30 max-h-[55%] w-80 overflow-auto rounded-lg border border-slate-300 bg-white p-5 shadow-lg">
+    {selected && !isTouch && chosen && <section aria-label={t('map.selectedArea')} className="bkk-selection bkk-selection-area absolute bottom-6 left-3 z-30 w-[306px] max-w-[calc(100%-1.5rem)] overflow-hidden rounded-lg border border-slate-300 bg-white shadow-lg">
+      <CompactAreaCard key={chosen.slug} area={chosen} city="bangkok" score={chosen.score} weights={weights}
+        thumbnail={thumbnails[chosen.slug]} snippet={snippets[chosen.slug]} isCompared={compared.includes(chosen.slug)}
+        compareFull={compared.length >= MAX_COMPARE} onCompare={() => actions.addCompareStation(chosen.slug)}
+        onUncompare={() => actions.removeCompareStation(chosen.slug)}
+        onClose={() => { if (current.current.selected === chosen.slug) actions.setSelectedStation(null); }} />
+    </section>}
+    {selected && !isTouch && cell && grid && gridScored && <section aria-label={t('map.selectedArea')} className="bkk-selection absolute bottom-6 left-3 z-30 max-h-[55%] w-80 max-w-[calc(100%-1.5rem)] overflow-auto rounded-lg border border-slate-300 bg-white p-5 shadow-lg">
       <button aria-label={t('map.closeSelectedArea')} onClick={() => actions.setSelectedStation(null)} className="absolute right-1 top-1 grid h-11 w-11 place-items-center rounded text-slate-600 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-blue-600">×</button>
-      {chosen && <>
-        <p className="mb-2 pr-7 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{t(chosen.slug.startsWith('st.') ? 'map.level_station' : 'map.level_district')}</p>
-        <AreaCardMeta primary={stationPrimaryName(chosen, locale)} secondary={chosen.name_th ?? ''} score={chosen.score} />
-        {!!chosen.line_ids?.length && <ul aria-label={t('map.railNetwork')} className="my-3 flex flex-wrap gap-x-3 gap-y-2 text-[11px] text-slate-700">
-          {chosen.line_ids.map((id) => { const line = rail.lines.find((l) => l.id === id); return line ? <li key={id} className="flex items-center gap-1.5"><span className="h-3 w-1 rounded-sm" style={{ background: line.color }} aria-hidden="true" />{locale === 'ja' ? line.name_ja : locale === 'ru' ? line.name_ru : line.name_en}</li> : null; })}
-        </ul>}
-        {chosen.rent_provenance && <RentNote rent={chosen.rent_provenance} compact />}
-        {snippets[chosen.slug] && <p className="my-2 text-xs leading-relaxed text-slate-600">{snippets[chosen.slug]}</p>}
-        <AreaCardActions city="bangkok" slug={chosen.slug} isCompared={compared.includes(chosen.slug)} compareFull={compared.length >= MAX_COMPARE} onCompare={() => actions.addCompareStation(chosen.slug)} onUncompare={() => actions.removeCompareStation(chosen.slug)} />
-      </>}
-      {cell && grid && gridScored && <CellDetails info={cell} score={gridScored.scores[cell.index]} medians={grid.header.medians} stationName={stationName} areaName={(id) => nameOf(`st.${id}`)} districtName={nameOf} />}
+      <CellDetails info={cell} score={gridScored.scores[cell.index]} medians={grid.header.medians} stationName={stationName} areaName={(id) => nameOf(`st.${id}`)} districtName={nameOf} />
       <span className="sr-only">{t('map.clickForDetails')}</span>
     </section>}
   </>;

@@ -11,11 +11,13 @@ import { defineConfig, devices } from '@playwright/test';
  * The map interaction spec also runs in CI. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
+const externalBaseURL = process.env.E2E_BASE_URL || process.env.PLAYWRIGHT_BASE_URL;
+const production = process.env.E2E_PRODUCTION === '1';
 const port = process.env.E2E_PORT || '3000';
 if (!/^\d{1,5}$/.test(port) || Number(port) < 1 || Number(port) > 65535) {
   throw new Error('E2E_PORT must be a valid TCP port');
 }
-const baseURL = process.env.E2E_BASE_URL || `http://localhost:${port}`;
+const baseURL = externalBaseURL || `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: './e2e',
@@ -41,9 +43,10 @@ export default defineConfig({
       },
     },
   ],
-  webServer: process.env.E2E_BASE_URL ? undefined : {
-    command: `cd app && npm run dev -- --port ${port}`,
+  webServer: externalBaseURL ? undefined : {
+    command: production ? 'node app/.next/standalone/server.js' : `cd app && npm run dev -- --port ${port}`,
     url: baseURL,
+    env: { PORT: port, HOSTNAME: 'localhost' },
     timeout: 60_000,
     reuseExistingServer: isCI ? false : true,
   },

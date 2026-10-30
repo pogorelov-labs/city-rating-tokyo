@@ -9,6 +9,7 @@ import { useAllAreas } from '@/lib/area-lists';
 import MapControls from './MapControls';
 import UrlSync from './UrlSync';
 import type { BangkokRenderer } from '@/lib/bangkok-prototype';
+import './map-workspace.css';
 
 export function MapLoading() {
   const t = useTranslations('loading');
@@ -53,13 +54,14 @@ export default function MapWrapper({ stations, thumbnails, snippets, prototypeRe
   // Gate ComparePanel behind the store so the recharts chunk is never
   // downloaded unless the user actively compares something.
   const hasCompareTarget = useCityState((s) => s.compareStations.length >= 2);
-  const cellSelected = useCityState((s) => s.selectedStation?.startsWith('cell.') ?? false);
+  const selected = useCityState((s) => s.selectedStation);
+  const cellSelected = selected?.startsWith('cell.') ?? false;
   // Selection / compare keys can point at any level's areas (Bangkok).
   const allAreas = useAllAreas(stations);
   const multiLevel = city.levels.length > 1;
 
   return (
-    <div className="relative h-full w-full">
+    <div className="map-workspace relative h-full w-full" data-selected={!!selected}>
       {city.unit === 'district'
         ? <BangkokMapRenderer stations={stations} thumbnails={thumbnails} snippets={snippets} defaultRenderer={bangkokRenderer} prototypeRenderer={prototypeRenderer} />
         : <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />}

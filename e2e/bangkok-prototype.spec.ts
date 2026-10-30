@@ -158,7 +158,7 @@ test('named selection, comparison and station focus use static geometry and rest
   expect(drawn.renderedFocus.every((f) => f.id === 'st.asok' && f.state.selected === true)).toBe(true);
   await page.evaluate(() => window.__bangkokProfile!.reset());
   await page.getByRole('region', { name: 'Selected area' }).getByRole('button', { name: '+ Compare', exact: true }).click();
-  await page.getByRole('button', { name: 'Close selected area' }).click();
+  await page.getByRole('button', { name: 'Close area card' }).click();
   await expect.poll(async () => (await inspect()).area.selected).toBe(false);
   expect((await inspect()).area.compared).toBe(true);
   expect((await inspect()).stations.every((s) => s.compared === true)).toBe(true);
@@ -227,7 +227,7 @@ test('park landcover and names survive score layers, while selection preserves s
   expect(line['line-color']).not.toBe(compare['line-color']);
   expect(compare['line-dasharray']).toBeDefined();
   await page.mouse.move(10, 10);
-  await page.getByRole('button', { name: 'Close selected area' }).click();
+  await page.getByRole('button', { name: 'Close area card' }).click();
   await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectCartography!().focusVisible)).toBe(false);
 });
 

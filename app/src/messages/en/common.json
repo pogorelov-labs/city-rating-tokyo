@@ -34,7 +34,7 @@
     "green": "Parks & Green",
     "gym_sports": "Gym & Sports",
     "vibe": "Vibe & Atmosphere",
-    "crowd": "Quietness",
+    "crowd": "Less crowding",
     "daily_essentials": "Daily Essentials"
   },
   "ratingTooltips": {
@@ -46,7 +46,7 @@
     "green": "Parks, gardens, riverside walks, green spaces, and nature within 15 min walk",
     "gym_sports": "Fitness centers, gyms, sports facilities, running paths, and athletic amenities nearby",
     "vibe": "Overall character and charm: cultural identity, street life, local community, architectural interest",
-    "crowd": "Quietness level (inverted: 10 = very peaceful and uncrowded, 1 = extremely busy and packed)",
+    "crowd": "Crowding proxy from passenger activity or place density, depending on city and level. Higher means less crowding; this is not a sound measurement.",
     "daily_essentials": "Supermarkets, pharmacies, clinics, banks, laundry, dentists, and other daily necessities within walking distance"
   },
   "shortLabels": {
@@ -58,7 +58,7 @@
     "green": "Green",
     "gym_sports": "Gym",
     "vibe": "Vibe",
-    "crowd": "Quietness",
+    "crowd": "Less crowding",
     "daily_essentials": "Essentials"
   },
   "hubs": {
@@ -210,7 +210,7 @@
     "gridError": "The 200 m grid could not be loaded — try reloading the page.",
     "bestSpots": "Best spots",
     "bestSpotsHint": "The highest-scoring built-up cells for your weights and dealbreakers, at least 1.5 km apart.",
-    "relativeScoresNoteStationArea": "Scores are relative within Bangkok's station areas (up to 800 m on foot, nearest station). Rent and safety are district estimates.",
+    "relativeScoresNoteStationArea": "Scores are relative within Bangkok’s nearest-station areas, up to 800 m in straight-line distance. Rent uses district estimates or labeled station proxies; safety remains a district assessment.",
     "relativeScoresNoteGrid": "Cell scores are relative to where Bangkok's residents live (a resident-weighted percentile). Rent and safety are district estimates.",
     "floodReported": "(reported 2021–2026)",
     "hideAdultZones": "Family-friendly: hide adult entertainment areas"
@@ -247,7 +247,7 @@
     "level_station": "Stations",
     "level_grid": "200 m grid",
     "levelHint_district": "Bangkok's 50 districts (khet)",
-    "levelHint_station": "The walkable area around each rail station (up to 800 m)",
+    "levelHint_station": "The nearest-station catchment, up to 800 m in straight-line distance",
     "levelHint_grid": "The whole city in 200 × 200 m cells",
     "zoomHint": "More detail:",
     "legendStations": "Weighted score of each station's walkable area, relative to Bangkok's station areas",
@@ -266,7 +266,7 @@
     "cellDistrictNote": "* Rent and safety are the district estimates; the other eight scores are measured for this cell.",
     "cellDistrictLink": "{district} district →",
     "cellAreaLink": "{station} station area →",
-    "stationAreaCaption": "Station area (≤ 800 m walk)",
+    "stationAreaCaption": "Nearest-station area (≤ 800 m straight-line)",
     "hotspotTitle": "Best spot #{rank}",
     "closeCardCell": "Close cell card",
     "rendererLabel": "Map renderer",
@@ -373,7 +373,7 @@
     "descriptionInProgress": "AI research for this station is in progress.",
     "gallery": "Gallery",
     "showAllPhotos": "Show all {count} photos",
-    "imageAttribution": "Images via Wikimedia Commons (CC-BY-SA) & Unsplash",
+    "imageAttribution": "Photos are credited to their original sources.",
     "photoBy": "Photo by {photographer} on Unsplash",
     "nearbyPlaces": "Nearby Places",
     "findMoreOnMaps": "Find more on Google Maps",
@@ -617,7 +617,7 @@
       "factCafes": "Cafés",
       "factsSource": "Counts inside the station area (≤ 800 m, nearest station), approximate. Places: Overture Maps Places (CDLA-Permissive-2.0; Foursquare: Apache-2.0; AllThePlaces: CC0-1.0); parks and piers: © OpenStreetMap contributors (ODbL).",
       "districtsTitle": "Districts",
-      "districtsCaption": "The districts this station area covers, by share of its residents — rent and safety come from their estimates.",
+      "districtsCaption": "District shares follow the resident-weighting model. Safety uses district assessments; rent provenance is shown beside the figures.",
       "viewGrid": "See it on the 200 m grid →",
       "factHotels": "Hotels nearby",
       "factAttractions": "Attractions nearby"
@@ -737,5 +737,270 @@
     "medicineUnavailable": "English-service medical facilities: data unavailable. Bangkok coverage remains incomplete until a suitable publishable source is verified; this does not mean there are no facilities.",
     "medicineSource": "© Japan Tourism Agency / JNTO — medical facility directory",
     "snapshot": "Snapshot: {date}. Counts and source links only; these facts do not affect ratings."
+  },
+  "areaGuide": {
+    "guide": "Neighborhood guide",
+    "back": "Back to map",
+    "skip": "Skip to area guide",
+    "cities": {
+      "tokyo": "Greater Tokyo",
+      "bangkok": "Bangkok"
+    },
+    "kinds": {
+      "station": "Station area",
+      "district": "District"
+    },
+    "kindsPlural": {
+      "station": "Station areas",
+      "district": "Districts"
+    },
+    "summary": {
+      "tokyo": "The area around {name}, served by {count, plural, one {# rail service} other {# rail services}}. Compare the local profile with other station areas and check the trip to your destination.",
+      "station": "The area around {name}, with {count, plural, one {# rail service} other {# rail services}}. The map shows its published nearest-station catchment.",
+      "district": "{name} is a Bangkok district. Its profile summarizes conditions across the district; rail access and everyday surroundings vary between streets."
+    },
+    "strengths": "What stands out",
+    "consider": "Consider",
+    "score": {
+      "priorities": "Score priorities",
+      "balanced": "Balanced",
+      "custom": "Your priorities",
+      "label": "{profile} score",
+      "basis": "Score basis & data coverage",
+      "explain": "The headline uses your selected weights. Category scores are relative within the same city and area type; they cannot be compared directly across cities or between stations and districts.",
+      "snapshot": "Category snapshot: {date}. Individual sources can have different dates.",
+      "derived": "Data-backed describes the inputs. Every category score is derived; an editorial assessment or model is not a direct measurement.",
+      "empty": "Rating unavailable"
+    },
+    "rent": {
+      "title": "Rent and connections",
+      "smallTokyo": "1K–1LDK",
+      "largeTokyo": "2LDK",
+      "oneBedroom": "1 bedroom",
+      "twoBedroom": "2 bedrooms",
+      "perMonth": "/ month",
+      "provenance": {
+        "stationAverage": "Station listing average",
+        "municipalAverage": "Municipal average",
+        "estimate": "Editorial rent estimate",
+        "districtBlend": "Estimate from district rents",
+        "bedroomMedian": "Asking-rent median · mixed sizes",
+        "unavailable": "Rent unavailable",
+        "reference": "Reference rent"
+      },
+      "skewShort": "Larger / luxury sample · median",
+      "skew": "This provider’s inventory skews toward larger or luxury apartments. These medians are not typical fixed-size rents.",
+      "sources": "Rent sources & definition",
+      "definition": {
+        "stationAverage": "Existing station-level asking-rent averages. The figures describe different apartment layouts, not the endpoints of a price range. Apartment size, age and listing mix are not standardized.",
+        "municipalAverage": "A municipal average, not observed asking rents for this station alone. It is a broader-area reference.",
+        "estimate": "An editorial estimate rather than a statistical median. Bangkok reference units are 30–35 m² for 1BR and 60–70 m² for 2BR, excluding serviced apartments and short stays.",
+        "unavailable": "No monthly rent figure is available for this area. A rent score may still be estimated from other inputs.",
+        "tokyoEstimate": "An estimated monthly rent for the stated Tokyo layout, not a station listing average or a statistical median.",
+        "districtBlend": "An estimate blended from district rents by resident share. Reference units are 30–35 m² for 1BR and 60–70 m² for 2BR. It does not describe every street or building.",
+        "bedroomMedian": "Published bedroom medians from one provider’s available inventory, across all floor areas. The provider’s radius differs from this map’s catchment. Floor area, lease duration and serviced-unit mix are not controlled."
+      },
+      "notLease": "Asking rents are not signed leases or a quotation for a particular home.",
+      "samples": "1BR: {one, number} listings · 2BR: {two, number} listings",
+      "sizes": "Source typical sizes: 1BR {one} · 2BR {two}",
+      "referenceUnit": "Different apartment layouts",
+      "fixedSizes": "30–35 m² 1BR / 60–70 m² 2BR",
+      "mixedSizes": "Mixed floor areas · one provider"
+    },
+    "comparison": {
+      "eyebrow": "The local picture",
+      "title": "How it compares",
+      "reference": "Compare with",
+      "typical": "Typical area",
+      "typicalStation": "Typical station area",
+      "typicalDistrict": "Typical district",
+      "population": {
+        "station": "Median across {count, number} station areas in {city}.",
+        "district": "Median across {count, number} districts in {city}."
+      },
+      "peer": "Comparing two areas of the same city and type.",
+      "higher": "Higher scores mean more of the named quality.",
+      "category": "Category",
+      "area": "Area",
+      "peerShort": "Peer",
+      "typicalShort": "Typical",
+      "caption": "Scores out of ten. Select a category to read its definition and evidence.",
+      "note": "Select a category for its evidence. Comparisons stay within the same city and area type.",
+      "difference": "Difference from reference: {difference} points.",
+      "inputs": "Inputs: {sources}"
+    },
+    "categories": {
+      "transport": "Transport",
+      "rent": "Affordability",
+      "daily_essentials": "Daily essentials",
+      "safety": "Safety",
+      "food": "Food & dining",
+      "green": "Parks & greenery",
+      "gym_sports": "Fitness",
+      "vibe": "Local character",
+      "nightlife": "Nightlife",
+      "crowd": "Less crowding"
+    },
+    "explanations": {
+      "transport": "Rail access and the existing city connectivity model.",
+      "rent": "Higher means a lower reference rent. Read the apartment layout and source beside the rent figures.",
+      "daily_essentials": "Mapped everyday shops and services; source coverage varies.",
+      "safety": "A relative score, not a crime probability. Tokyo uses police-data inputs; Bangkok uses editorial district assessments.",
+      "food": "Availability of dining options from the city’s place and restaurant sources; not a judgment of every restaurant’s quality.",
+      "green": "Mapped green-space signals, not the quality of every park or the walk from a particular home.",
+      "gym_sports": "Mapped gyms and sports facilities.",
+      "vibe": "Cultural and pedestrian signals, with editorial assessments where recorded.",
+      "nightlife": "More evening options produce a higher score. Whether that suits you depends on your priorities.",
+      "crowd": "The existing Quietness ranking uses crowd or place-density proxies. It is separate from the outdoor-noise estimates below."
+    },
+    "evidence": {
+      "strong": "Data-backed",
+      "moderate": "Partial data",
+      "estimate": "Model / proxy",
+      "editorial": "Editorial",
+      "unknown": "Source metadata unavailable"
+    },
+    "facts": {
+      "eyebrow": "Everyday life",
+      "title": "Around the area",
+      "food": "Places to eat & drink",
+      "essentials": "Everyday services",
+      "sports": "Gyms & sports",
+      "green": "Mapped green space",
+      "services": "Rail services",
+      "elevation": "Elevation",
+      "cafes": "Cafés",
+      "markets": "Markets",
+      "culture": "Cultural venues",
+      "temples": "Places of worship",
+      "piers": "Boat piers",
+      "nightlife": "Evening venues",
+      "area": "Area",
+      "population": "Population reference",
+      "hotels": "Hotels nearby",
+      "attractions": "Attractions nearby",
+      "tokyoNote": "Tokyo inputs use different catchments by category. The 800 m map circle is a reference radius, not a common boundary for every score.",
+      "districtNote": "Approximate counts inside the district boundary ({area} km²). Mapped supply does not establish walking access from a particular home.",
+      "stationNote": "Approximate counts inside the published station catchment ({area} km²), not the walk from a particular home.",
+      "attribution": "Places: Overture Maps (CDLA-Permissive-2.0; Foursquare: Apache-2.0; AllThePlaces: CC0-1.0). Parks and piers: © OpenStreetMap contributors (ODbL).",
+      "nearbyScope": "Nearby tourism counts use an 800 m radius from the station point, rather than the nearest-station catchment."
+    },
+    "rail": {
+      "title": "Rail connections",
+      "services": "{count, plural, one {# service} other {# services}}",
+      "stations": "{count, plural, one {# station} other {# stations}}",
+      "districtStations": "{count, number} stations inside or on the boundary",
+      "atStation": "At this station",
+      "none": "No rail station inside the district"
+    },
+    "commute": {
+      "eyebrow": "Your connections",
+      "title": "Getting around",
+      "to": "Commute to",
+      "destination": "Commute destination",
+      "mobileDestination": "Choose commute destination",
+      "estimated": "Estimated minutes",
+      "origin": {
+        "tokyo": "Existing hub estimate",
+        "station": "From the station · peak model",
+        "district": "Median resident · peak model"
+      },
+      "note": {
+        "tokyo": "Researched entries may use authored values; computed entries use a calibrated model. These are not live timetable routes.",
+        "station": "Modeled peak-hour minutes from the station to each hub. Your walk to the station is additional; these are not live routes.",
+        "district": "Modeled peak-hour, door-to-hub minutes for the median resident. Conditions vary within the district; these are not live routes."
+      },
+      "empty": "Commute estimates unavailable",
+      "fastest": "Fastest hub estimate",
+      "lastTrain": "Last train reference",
+      "lastTrainNote": "Weekday · depends on line and direction"
+    },
+    "map": {
+      "eyebrow": "Put it in context",
+      "title": "The area on the map",
+      "full": "Full city map",
+      "outline": "Area outline",
+      "rail": "Rail stations",
+      "reset": "Reset view",
+      "loading": "Loading the area map…",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "layers": "Map layers",
+      "stationSelected": "Station serving this area",
+      "stationNearby": "Nearby rail station",
+      "scope": {
+        "tokyo": "800 m reference radius · straight-line distance",
+        "station": "Nearest-station area · up to 800 m straight-line",
+        "district": "Published district boundary"
+      }
+    },
+    "noise": {
+      "eyebrow": "A closer look",
+      "title": "Noise & local conditions",
+      "intro": "Separate facts that do not change the area’s ranking.",
+      "outdoor": "Outdoor quietness",
+      "model": "Model estimate · higher is quieter",
+      "day": "Day · 06–22",
+      "night": "Night · 22–06",
+      "limits": "Based on road proximity and nightlife. Indoor sound and insulation are not measured. This is separate from the crowding-based ranking.",
+      "transfer": "Bangkok uses an uncalibrated transfer of the Tokyo model; local accuracy is unknown.",
+      "snapshot": "Proxy snapshot: {date}."
+    },
+    "extras": {
+      "notes": "Local notes & places",
+      "institutions": "Healthcare & diplomatic offices",
+      "environment": "Environmental context",
+      "air": "City air & seasonal context",
+      "noise": "Noise references & model details",
+      "photos": "Photos & live cameras",
+      "neighbors": "Nearby areas",
+      "districts": "Districts covered",
+      "wikipedia": "More about this place",
+      "allFacts": "All area facts & sources",
+      "populationNote": "Population values are dated source references, not counts of everyone currently living or working here. Coverage and source years vary.",
+      "flood": "Reported street flooding in 2021–2026: {count, number} episodes across the district. Reporting coverage varies; zero is not proof that a particular address has no exposure.",
+      "transport": "Rail services & last trains"
+    },
+    "compact": {
+      "explore": "Explore this area",
+      "balanced": "Balanced weights",
+      "custom": "Your selected weights",
+      "scope": "Relative within this city and area type",
+      "close": "Close area card",
+      "camera": "Live camera available"
+    },
+    "snapshot": "Snapshot: {date}",
+    "unknownDate": "Date unavailable",
+    "unavailable": "Unavailable",
+    "methodology": "Read the methodology",
+    "units": {
+      "min": "min",
+      "ha": "ha",
+      "m": "m",
+      "km2": "km²"
+    },
+    "positive": {
+      "transport": "Rail connectivity scores above typical.",
+      "rent": "Affordability scores above typical.",
+      "daily_essentials": "Everyday services score above typical.",
+      "food": "Dining options score above typical.",
+      "green": "Green-space signals score above typical.",
+      "gym_sports": "Fitness facilities score above typical.",
+      "vibe": "Cultural and pedestrian signals stand out.",
+      "nightlife": "Evening options score above typical.",
+      "crowd": "The ranking indicates less crowding than typical."
+    },
+    "negative": {
+      "transport": "Rail connectivity scores below typical.",
+      "rent": "Check the budget against the reference rent.",
+      "daily_essentials": "Everyday services score below typical.",
+      "food": "Dining options score below typical.",
+      "green": "Green-space signals score below typical.",
+      "gym_sports": "Fitness facilities score below typical.",
+      "vibe": "Cultural and pedestrian signals score below typical.",
+      "nightlife": "Evening options score below typical.",
+      "crowd": "The ranking indicates more crowding than typical."
+    },
+    "photoAlt": "Photo: {name}"
   }
 }

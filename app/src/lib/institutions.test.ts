@@ -26,10 +26,10 @@ describe('institution consumers and joins', () => {
     const district = source('app/[locale]/bangkok/district/[slug]/page.tsx');
     const station = source('app/[locale]/bangkok/station/[id]/page.tsx');
     const tokyo = source('app/[locale]/station/[slug]/page.tsx');
-    expect(district).toContain("getInstitutions('bangkok', 'district', d.slug)");
-    expect(station).toContain("getInstitutions('bangkok', 'station', a.id)");
-    expect(tokyo).toContain("getInstitutions('tokyo', 'station', station.slug)");
-    for (const page of [district, station, tokyo, source('components/NaturalEnvironment.tsx')]) {
+    const extras = source('components/area/AreaGuideExtras.tsx');
+    for (const page of [district, station, tokyo]) expect(page).toContain('AreaGuideExtras area={area}');
+    expect(extras).toMatch(/getInstitutions\(area\.city, area\.kind, area\.slug\)/);
+    for (const page of [district, station, tokyo, extras, source('components/NaturalEnvironment.tsx')]) {
       expect(page).not.toMatch(/embassies_800m|english_medicine_2km/);
     }
   });

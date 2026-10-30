@@ -1,18 +1,16 @@
 'use client';
 
-import RentNote from '@/components/bangkok/RentNote';
+import CompactAreaCard from '@/components/area/CompactAreaCard';
 
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
-import { formatRentShort } from '@/lib/cities';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { stationDisplayName, stationPrimaryName } from '@/lib/station-name';
+import { stationDisplayName } from '@/lib/station-name';
 import { areaKind } from '@/lib/area-key';
 import { calculateWeightedScore } from '@/lib/scoring';
-import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
 import type { Locale } from '@/i18n/routing';
 
 interface MobileStationCardProps {
@@ -66,9 +64,8 @@ export default function MobileStationCard({
   );
 
   const thumbEntry = station ? thumbnails[station.slug] : undefined;
-  // Tokyo snippets stay RU-only (legacy gate); Bangkok descriptions were
-  // written natively in EN/JA/RU, so they show in every locale.
-  const snippet = station && (city.unit === 'district' || locale === 'ru') ? snippets[station.slug] : undefined;
+  // The server supplies a snippet in the current locale for either city.
+  const snippet = station ? snippets[station.slug] : undefined;
   const isCompared = station ? compareStations.includes(station.slug) : false;
 
   // Visibility state machine — same two phases as MobileDrawer, but driven by
@@ -139,14 +136,13 @@ export default function MobileStationCard({
   const compareDisabled = !isCompared && compareStations.length >= 3;
   // Bangkok keys are typed: `st.<id>` is a station area, a bare slug a district.
   const isStationArea = city.unit === 'district' && areaKind(station.slug) === 'station';
-  const parentDistrict = isStationArea && station.district ? stations.find((s) => s.slug === station.district) : undefined;
 
   return (
     <div
       ref={cardRef}
       // Reserve a right-hand column for map controls and keep the card inside the map workspace.
       // Compare and filter panels still stack above the card and controls.
-      className={`absolute bottom-0 left-3 right-16 md:max-w-96 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] overflow-y-auto z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
+      className={`map-touch-card absolute bottom-0 left-3 right-16 md:max-w-96 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] flex flex-col overflow-hidden z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
         open ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
@@ -156,72 +152,10 @@ export default function MobileStationCard({
       role="dialog"
       aria-label={names.primary}
     >
-      <div className="flex items-start gap-3 p-3">
-        {/* Image thumbnail (60x60 horizontal layout) */}
-        <div
-          className="shrink-0 overflow-hidden rounded-lg bg-gray-100"
-          style={{ width: 60, height: 60 }}
-        >
-          {thumbEntry?.lqip && !thumbEntry?.thumb && (
-            <img
-              src={thumbEntry.lqip}
-              alt=""
-              aria-hidden
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                filter: 'blur(8px)',
-                transform: 'scale(1.1)',
-              }}
-            />
-          )}
-          {thumbEntry?.thumb && (
-            <img
-              src={thumbEntry.thumb}
-              alt={names.primary}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          )}
-        </div>
-
-        {/* Text content */}
-        <div className="flex-1 min-w-0">
-          <AreaCardMeta primary={names.primary} secondary={names.secondary} score={score} camera={station.hasLiveCamera} variant="touch" />
-          <div className="text-xs text-gray-500 mt-1">
-            {isStationArea
-              ? <>{t('filter.lines', { count: station.line_count })}{parentDistrict && <> · {stationPrimaryName(parentDistrict, locale)}</>}</>
-              : city.unit === 'district' && station.station_count !== undefined
-              ? station.station_count > 0
-                ? <>{t('filter.stations', { count: station.station_count })} · {t('filter.lines', { count: station.line_count })}</>
-                : t('map.noRailInDistrict')
-              : t('filter.lines', { count: station.line_count })}
-            {station.rent_1k ? <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</> : null}
-            {city.id === 'bangkok' && station.rent_provenance && <RentNote rent={station.rent_provenance} compact />}
-          </div>
-          {snippet && (
-            <div className="text-xs text-gray-600 mt-1.5 line-clamp-2 leading-relaxed">
-              {snippet}
-            </div>
-          )}
-        </div>
-
-        {/* Close button */}
-        <button
-          onClick={handleClose}
-          aria-label={t(city.unit === 'district' && !isStationArea ? 'map.closeCardDistrict' : 'map.closeCard')}
-          className="shrink-0 -mr-1 -mt-1 p-2 text-gray-400 active:text-gray-600 active:bg-gray-100 rounded-lg"
-          style={{ minWidth: 36, minHeight: 36 }}
-        >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Actions — 44px WCAG pill buttons */}
-      <AreaCardActions city={city.id} slug={station.slug} isCompared={isCompared} compareFull={compareDisabled}
-        onCompare={handleCompareToggle} onUncompare={handleCompareToggle} touch />
+      <CompactAreaCard key={station.slug} area={station} city={city.id} score={score} weights={weights}
+        thumbnail={thumbEntry} snippet={snippet} variant="mobile" isCompared={isCompared} compareFull={compareDisabled}
+        onCompare={handleCompareToggle} onUncompare={handleCompareToggle} onClose={handleClose}
+        closeLabel={t(city.unit === 'district' && !isStationArea ? 'map.closeCardDistrict' : 'map.closeCard')} />
     </div>
   );
 }

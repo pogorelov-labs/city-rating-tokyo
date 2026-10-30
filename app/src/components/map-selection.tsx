@@ -7,8 +7,9 @@ import { useAppStore } from '@/lib/store';
 
 type LatLng = [number, number];
 const MAX_FLY_ZOOM = 14;
+const pendingBoundsFlights = new WeakMap<L.Map, () => void>();
 
-type PointSelection = { kind: 'point'; lat: number; lng: number; onFlyStart?: () => void; onFlyEnd?: () => void };
+type PointSelection = { kind: 'point'; lat: number; lng: number; onFlyStart?: () => void; onFlyEnd?: () => void; onFlyCancel?: () => void };
 type BoundsSelection = { kind: 'bounds'; bounds: [LatLng, LatLng]; bottomInset: number; onFlyStart: () => void; onFlyEnd: () => void };
 
 /** Share the selection lifecycle while retaining each city's flight strategy. */
@@ -19,7 +20,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
   const kind = selection.kind;
   useLayoutEffect(() => {
     if (selection.kind === 'point') {
-      const { lat, lng, onFlyStart, onFlyEnd } = selection;
+      const { lat, lng, onFlyStart, onFlyEnd, onFlyCancel } = selection;
       const currentZoom = map.getZoom();
       const currentCenter = map.getCenter();
 
@@ -28,7 +29,11 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
 
       // Already looking at this station (within ~200m at zoom 14)
-      if (roughDist < 0.003 && currentZoom >= 13) return;
+      if (roughDist < 0.003 && currentZoom >= 13) {
+        map.stop();
+        onFlyEnd?.();
+        return;
+      }
 
       // Close any open popup before flying — prevents the popup card from
       // flying around the screen during zoom animation (mobile tap auto-opens).
@@ -53,7 +58,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
           container.classList.remove('map-flying');
           onFlyEnd?.();
         }, 300);
-        return () => clearTimeout(timer);
+        return () => { clearTimeout(timer); onFlyCancel?.(); };
       }
 
       // Adaptive duration: shorter for close pans, longer for far jumps
@@ -73,6 +78,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       return () => {
         map.off('moveend', handleMoveEnd);
         container.classList.remove('map-flying');
+        onFlyCancel?.();
       };
     }
     const { bounds, bottomInset, onFlyStart, onFlyEnd } = selection;
@@ -87,6 +93,8 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       onFlyEnd();
       return;
     }
+    pendingBoundsFlights.get(map)?.();
+    map.stop();
     // Mark the flight first so any popup closed below knows it is not the
     // user's × (see the Popup `remove` handler).
     onFlyStart();
@@ -94,11 +102,15 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
     // The listener deliberately outlives this effect: if the selection is
     // cleared or changed mid-flight, the current animation still ends with a
     // moveend and must clear `isFlying` (otherwise labels / popup stay hidden).
-    const done = () => {
+    const detach = () => {
       map.off('moveend', done);
-      onFlyEnd();
+      map.off('unload', done);
+      if (pendingBoundsFlights.get(map) === detach) pendingBoundsFlights.delete(map);
     };
+    const done = () => { detach(); onFlyEnd(); };
+    pendingBoundsFlights.set(map, detach);
     map.on('moveend', done);
+    map.on('unload', done);
     map.flyToBounds(latLngBounds, {
       paddingTopLeft: padTL,
       paddingBottomRight: padBR,

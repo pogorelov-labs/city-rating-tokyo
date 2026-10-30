@@ -75,7 +75,7 @@ export default function BangkokMapRenderer({ defaultRenderer, prototypeRenderer,
           <MapLibreMap {...mapProps} prototype={!!prototypeRenderer} onUnavailable={unavailable} onImportFailure={importUnavailable} />
         </RendererErrorBoundary>
       : <DistrictMap {...mapProps} prototype={!!prototypeRenderer} />}
-    {!prototypeRenderer && <div className="absolute left-3 top-24 md:left-auto md:right-3 md:top-14 z-[1000] flex items-start gap-1">
+    {!prototypeRenderer && <div className="map-renderer-selector absolute left-3 top-24 md:left-auto md:right-3 md:top-14 z-[1000] flex items-start gap-1">
       <label className="sr-only" htmlFor="bangkok-map-renderer">{t('rendererLabel')}</label>
       <select id="bangkok-map-renderer" value={renderer} onChange={(event) => choose(event.target.value as BangkokRenderer)}
         className="map-control-btn max-w-[10rem] rounded-lg border border-gray-200 bg-white px-2 py-1.5 text-xs text-gray-700 shadow-sm focus-visible:outline-2 focus-visible:outline-blue-600">
