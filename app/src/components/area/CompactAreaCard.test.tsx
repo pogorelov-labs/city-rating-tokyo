@@ -21,6 +21,12 @@ describe('shared station/district compact cards', () => {
       expect(screen.getByText(new RegExp(`^0`))).toHaveTextContent('0');
       expect(screen.getByText(new RegExp(messages[locale].areaGuide.compact.custom))).toBeInTheDocument();
     });
+    it(`${locale} identifies a missing Tokyo rent without calling it an estimate`, () => {
+      render(<Providers locale={locale}><CompactAreaCard area={{ ...station('gora'), rent_1k: null, rent_source: 'computed', rent_updated: '2026-04' }} city="tokyo" score={6} weights={DEFAULT_WEIGHTS} /></Providers>);
+      expect(screen.getByText(messages[locale].areaGuide.rent.provenance.unavailable)).toBeInTheDocument();
+      expect(screen.getByText(messages[locale].areaGuide.rent.definition.unavailable)).toBeInTheDocument();
+      expect(screen.queryByText(messages[locale].areaGuide.rent.definition.estimate)).not.toBeInTheDocument();
+    });
   }
 
   it('labels municipal Tokyo rent rather than presenting it as a station listing average', () => {

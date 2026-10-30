@@ -8,7 +8,7 @@ import { CITIES } from './cities';
 import { decodeParamsToState } from './url-state';
 import { getMapStations, getStations } from './data';
 import { getBangkokDistricts, getBangkokStationAreas } from './bangkok-data';
-import { guideDetailHref, guideTraits, withGuideWeights } from './area-guide';
+import { guideDetailHref, guideTraits, rentDefinitionKey, withGuideWeights } from './area-guide';
 
 vi.mock('next-intl/server', () => ({
   getTranslations: async ({ locale, namespace }: { locale: 'en' | 'ja' | 'ru'; namespace: 'areaGuide' }) =>
@@ -36,6 +36,11 @@ describe('area guide data contracts', () => {
       for (const value of Object.values(area.commute)) expect(Number.isFinite(value) && value >= 0, item.slug).toBe(true);
       for (const fact of area.facts) expect(Number.isFinite(fact.value), `${item.slug}: ${fact.key}`).toBe(true);
       for (const rent of area.rent.values) expect(rent.value == null || (Number.isFinite(rent.value) && rent.value >= 0), item.slug).toBe(true);
+      if (item.city === 'tokyo') {
+        expect(area.rent.provenance === 'unavailable', item.slug).toBe(area.rent.values.every(value => value.value == null));
+      } else {
+        expect(area.rent.provenance, item.slug).not.toBe('unavailable');
+      }
       if (area.city === 'bangkok') expect(area.map.polygons?.length, item.slug).toBeGreaterThan(0);
       const prefix = item.city === 'tokyo' ? '/station/' : `/bangkok/${item.kind}/`;
       expect(area.peers.every(peer => peer.key !== area.key && peer.href.startsWith(prefix)), item.slug).toBe(true);
@@ -75,6 +80,15 @@ describe('area guide data contracts', () => {
     const blend = await buildAreaGuide('bangkok', 'station', 'ari', 'en');
     expect(skewed?.rent).toMatchObject({ provenance: 'bedroomMedian', skewed: true });
     expect(blend?.rent).toMatchObject({ provenance: 'districtBlend', skewed: false, samples: null });
+  });
+
+  it('distinguishes missing Tokyo rents from actual estimates and Bangkok reference units', async () => {
+    const area = await buildAreaGuide('tokyo', 'station', 'gora', 'en');
+    expect(area?.rent.values.map(value => value.value)).toEqual([null, null]);
+    expect(area?.rent.provenance).toBe('unavailable');
+    expect(rentDefinitionKey('tokyo', 'unavailable')).toBe('rent.definition.unavailable');
+    expect(rentDefinitionKey('tokyo', 'estimate')).toBe('rent.definition.tokyoEstimate');
+    expect(rentDefinitionKey('bangkok', 'estimate')).toBe('rent.definition.estimate');
   });
 
   it('uses district medians and omits station noise estimates for districts without rail', async () => {

@@ -10,7 +10,7 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
-## v0.2.0 — Unreleased
+## v0.2.0 — 2026-10-31
 
 Station and district guides redesigned for all 1,676 areas in English,
 Japanese and Russian.
@@ -26,6 +26,11 @@ Japanese and Russian.
 - Consistent compact map cards on desktop and mobile, with visible detail,
   comparison and close controls.
 - Preferences, destination and comparison selections survive language changes.
+- Browser Back restores the score profile, destination and comparison from
+  that history entry. Missing monthly rents are labeled unavailable, with
+  separate rent definitions for Tokyo and Bangkok.
+- Closing a Tokyo map card clears its selected area, consistently with
+  Bangkok and mobile cards. Selecting the same station again reopens its card.
 
 ### What to expect
 

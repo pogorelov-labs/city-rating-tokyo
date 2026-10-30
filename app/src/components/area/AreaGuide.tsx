@@ -11,7 +11,7 @@ import { calculateWeightedScore } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import { decodeParamsToState } from '@/lib/url-state';
 import { dataLabel } from '@/i18n/message-key';
-import { GUIDE_CATEGORIES, guideMoney, guideTraits, withGuideWeights, type AreaGuideData, type RatingKey } from '@/lib/area-guide';
+import { GUIDE_CATEGORIES, guideMoney, guideTraits, rentDefinitionKey, withGuideWeights, type AreaGuideData, type RatingKey } from '@/lib/area-guide';
 import type { Locale } from '@/i18n/routing';
 import styles from './area-guide.module.css';
 
@@ -103,8 +103,15 @@ function ComparisonPlot({ area }: { area: AreaGuideData }) {
   const [referenceKey, setReferenceKey] = useState('median');
   const [expanded, setExpanded] = useState<RatingKey | null>(null);
   useEffect(() => {
-    const reference = new URLSearchParams(window.location.search).get('reference');
-    if (reference && area.peers.some(peer => peer.key === reference)) queueMicrotask(() => setReferenceKey(reference));
+    const path = window.location.pathname;
+    const restore = () => {
+      if (window.location.pathname !== path) return;
+      const reference = new URLSearchParams(window.location.search).get('reference');
+      setReferenceKey(reference && area.peers.some(peer => peer.key === reference) ? reference : 'median');
+    };
+    queueMicrotask(restore);
+    window.addEventListener('popstate', restore);
+    return () => window.removeEventListener('popstate', restore);
   }, [area.peers]);
   const peer = area.peers.find(item => item.key === referenceKey);
   const reference = peer?.ratings ?? area.medians;
@@ -213,6 +220,7 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
   const [hub, setHub] = useState(area.city === 'tokyo' ? 'shinjuku' : 'siam');
   const [photoFailed, setPhotoFailed] = useState(false);
   const rentDetails = useRef<HTMLDetailsElement>(null);
+  const guidePath = useRef<string | null>(null);
   const defaultProfile = GUIDE_CATEGORIES.every(key => weights[key] === DEFAULT_WEIGHTS[key]);
   const matchedProfile = PRESET_PROFILES.find(profile => GUIDE_CATEGORIES.every(key => profile.weights[key] === weights[key]));
   const profileId = defaultProfile ? 'balanced' : matchedProfile?.id ?? 'custom';
@@ -225,20 +233,27 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
 
   useEffect(() => {
     let active = true;
-    const params = new URLSearchParams(window.location.search);
-    const incoming = decodeParamsToState(params, area.city).weights;
-    const destination = params.get('hub');
-    queueMicrotask(() => {
-      if (!active) return;
-      if (incoming && GUIDE_CATEGORIES.every(key => Number.isFinite(incoming[key]) && incoming[key] >= 0 && incoming[key] <= 100)) setAllWeights(incoming);
-      if (destination && Object.hasOwn(area.commute, destination)) setHub(destination);
+    const path = window.location.pathname;
+    guidePath.current = path;
+    const restore = () => {
+      if (!active || window.location.pathname !== path) return;
+      const params = new URLSearchParams(window.location.search);
+      const incoming = decodeParamsToState(params, area.city).weights;
+      const valid = incoming && GUIDE_CATEGORIES.every(key => Number.isFinite(incoming[key]) && incoming[key] >= 0 && incoming[key] <= 100);
+      setAllWeights(valid ? incoming : DEFAULT_WEIGHTS);
+      const destination = params.get('hub');
+      setHub(destination && Object.hasOwn(area.commute, destination) ? destination : area.city === 'tokyo' ? 'shinjuku' : 'siam');
       setHydrated(true);
-    });
-    return () => { active = false; };
+    };
+    queueMicrotask(restore);
+    window.addEventListener('popstate', restore);
+    return () => { active = false; window.removeEventListener('popstate', restore); };
   }, [area.city, area.commute, setAllWeights]);
 
   useEffect(() => {
-    if (!hydrated) return;
+    // A queued render from the previous history entry must never overwrite the
+    // destination's URL before its state has been restored.
+    if (!hydrated || window.location.pathname !== guidePath.current || weights !== useAppStore.getState().weights) return;
     const href = window.location.pathname + window.location.search + window.location.hash;
     window.history.replaceState(null, '', withGuideWeights(href, weights));
   }, [hydrated, weights]);
@@ -336,7 +351,7 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
         <section id="data-details" className={styles.dataDetails} aria-label={t('rent.sources')}>
           <details ref={rentDetails} className={styles.disclosure}><summary>{t('rent.sources')}<span aria-hidden="true">+</span></summary>
             <div className={styles.disclosureBody}>
-              <p>{t(`rent.definition.${area.rent.provenance}`)}</p>
+              <p>{t(rentDefinitionKey(area.city, area.rent.provenance))}</p>
               {area.rent.samples && <p>{t('rent.samples', area.rent.samples)}</p>}
               {area.rent.skewed && <p className={styles.materialNote}>{t('rent.skew')}</p>}
               <p>{t('rent.notLease')}</p><p>{t('snapshot', { date: sourceDate(area.rent.date, area.locale) ?? t('unknownDate') })}</p>

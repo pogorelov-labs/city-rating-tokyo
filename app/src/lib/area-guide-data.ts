@@ -92,7 +92,7 @@ export async function buildAreaGuide(city: CityId, kind: GuideKind, slug: string
       photo: tokyoPhoto(slug, station.name_en, station.name_jp),
       rent: {
         values: [{ layout: 'smallTokyo', value: rent?.['1k_1ldk'] ?? null }, { layout: 'largeTokyo', value: rent?.['2ldk'] ?? null }],
-        provenance: localRent ? 'stationAverage' : rent?.source === 'estat' ? 'municipalAverage' : 'estimate',
+        provenance: rent?.['1k_1ldk'] == null && rent?.['2ldk'] == null ? 'unavailable' : localRent ? 'stationAverage' : rent?.source === 'estat' ? 'municipalAverage' : 'estimate',
         date: rent?.updated ?? null, samples: null, skewed: false,
         sources: rent ? [{ label: localRent ? 'SUUMO' : rent.source === 'estat' ? 'e-Stat' : t('methodology'), href: localRent ? 'https://suumo.jp/' : rent.source === 'estat' ? 'https://www.e-stat.go.jp/' : '/methodology' }] : [],
       },

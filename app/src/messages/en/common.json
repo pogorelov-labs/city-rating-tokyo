@@ -767,6 +767,7 @@
         "estimate": "Editorial rent estimate",
         "districtBlend": "Estimate from district rents",
         "bedroomMedian": "Asking-rent median · mixed sizes",
+        "unavailable": "Rent unavailable",
         "reference": "Reference rent"
       },
       "skewShort": "Larger / luxury sample · median",
@@ -776,6 +777,8 @@
         "stationAverage": "Existing station-level asking-rent averages. The figures describe different apartment layouts, not the endpoints of a price range. Apartment size, age and listing mix are not standardized.",
         "municipalAverage": "A municipal average, not observed asking rents for this station alone. It is a broader-area reference.",
         "estimate": "An editorial estimate rather than a statistical median. Bangkok reference units are 30–35 m² for 1BR and 60–70 m² for 2BR, excluding serviced apartments and short stays.",
+        "unavailable": "No monthly rent figure is available for this area. A rent score may still be estimated from other inputs.",
+        "tokyoEstimate": "An estimated monthly rent for the stated Tokyo layout, not a station listing average or a statistical median.",
         "districtBlend": "An estimate blended from district rents by resident share. Reference units are 30–35 m² for 1BR and 60–70 m² for 2BR. It does not describe every street or building.",
         "bedroomMedian": "Published bedroom medians from one provider’s available inventory, across all floor areas. The provider’s radius differs from this map’s catchment. Floor area, lease duration and serviced-unit mix are not controlled."
       },

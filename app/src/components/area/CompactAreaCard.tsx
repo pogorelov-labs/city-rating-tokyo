@@ -10,7 +10,7 @@ import type { MapStation, WeightConfig } from '@/lib/types';
 import { DEFAULT_WEIGHTS } from '@/lib/types';
 import { areaKind } from '@/lib/area-key';
 import { stationDisplayName } from '@/lib/station-name';
-import { GUIDE_CATEGORIES, guideDetailHref, guideMoney } from '@/lib/area-guide';
+import { GUIDE_CATEGORIES, guideDetailHref, guideMoney, rentDefinitionKey } from '@/lib/area-guide';
 import styles from './compact-area-card.module.css';
 
 export interface CompactAreaCardProps {
@@ -40,7 +40,7 @@ export default function CompactAreaCard({ area, city, score, weights, thumbnail,
   const kind = district ? 'district' : 'station';
   const balanced = GUIDE_CATEGORIES.every(key => weights[key] === DEFAULT_WEIGHTS[key]);
   const provenance = area.rent_provenance;
-  const rentKind = provenance?.metric === 'median_asking_by_bedroom' ? 'bedroomMedian'
+  const rentKind = area.rent_1k == null ? 'unavailable' : provenance?.metric === 'median_asking_by_bedroom' ? 'bedroomMedian'
     : provenance?.provenance === 'district_blend' ? 'districtBlend'
     : provenance ? 'estimate'
     : area.rent_source === 'estat' ? 'municipalAverage'
@@ -85,7 +85,7 @@ export default function CompactAreaCard({ area, city, score, weights, thumbnail,
                 one: provenance.source_typical_size_sqm.one_bed == null ? t('unavailable') : `${nf.format(provenance.source_typical_size_sqm.one_bed)} m²`,
                 two: provenance.source_typical_size_sqm.two_bed == null ? t('unavailable') : `${nf.format(provenance.source_typical_size_sqm.two_bed)} m²`,
               })}</p>}
-              {rentKind !== 'reference' && <p>{t(`rent.definition.${rentKind}`)}</p>}
+              {rentKind !== 'reference' && <p>{t(rentDefinitionKey(city, rentKind))}</p>}
               {provenance?.sources.map(source => <a key={source.id} href={source.url} target="_blank" rel="noopener noreferrer">{source.publisher} ↗</a>)}
             </div>
           </details>}

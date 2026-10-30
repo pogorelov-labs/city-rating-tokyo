@@ -175,7 +175,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.1.2 needs **no database migration**. Check production deployment status/logs
+v0.2.0 needs **no database migration**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale
@@ -211,8 +211,8 @@ never fold regenerated data into a code/docs release.
 ## Release checklist
 
 - [ ] Version, dated changelog, release body and affected docs agree; no secrets.
-- [ ] Worktree clean; release-preparation diff checked; only docs and approved
-  version metadata changed, with no generated-data drift.
+- [ ] Worktree clean; release-preparation diff contains only intended source,
+  tests, docs and approved version metadata, with no generated-data drift.
 - [ ] PR reviewed; `build`, `schema`, `mcp`, `bangkok`, `e2e` all pass at the recorded head.
 - [ ] Merged with a merge commit and head-match guard; merge SHA recorded.
 - [ ] Main push CI passes all five jobs at that exact SHA.

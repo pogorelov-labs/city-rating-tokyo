@@ -34,7 +34,7 @@ export interface AreaGuideData {
   photo: { url: string; alt: string; credit: string; license: string; href: string } | null;
   rent: {
     values: { layout: 'smallTokyo' | 'largeTokyo' | 'oneBedroom' | 'twoBedroom'; value: number | null }[];
-    provenance: 'stationAverage' | 'municipalAverage' | 'estimate' | 'districtBlend' | 'bedroomMedian';
+    provenance: 'stationAverage' | 'municipalAverage' | 'estimate' | 'districtBlend' | 'bedroomMedian' | 'unavailable';
     date: string | null;
     samples: { one: number; two: number } | null;
     skewed: boolean;
@@ -57,6 +57,11 @@ export interface AreaGuideData {
   mapHref: string;
   mapsHref: string;
   methodologyHref: string;
+}
+
+/** The generic estimate definition describes Bangkok's units, not Tokyo's. */
+export function rentDefinitionKey(city: CityId, provenance: AreaGuideData['rent']['provenance']): `rent.definition.${AreaGuideData['rent']['provenance'] | 'tokyoEstimate'}` {
+  return `rent.definition.${city === 'tokyo' && provenance === 'estimate' ? 'tokyoEstimate' : provenance}`;
 }
 
 /** Include non-default preferences in ordinary, reloadable detail/map links. */

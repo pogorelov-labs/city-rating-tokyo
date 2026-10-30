@@ -263,7 +263,8 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
             >
               <LeafletAreaCard area={station} city={city.id} score={score} weights={deferredWeights}
                 thumbnail={thumbEntry} snippet={snippet} isCompared={isCompared} compareFull={compareStations.length >= 3}
-                onCompare={() => addCompareStation(station.slug)} onUncompare={() => removeCompareStation(station.slug)} />
+                onCompare={() => addCompareStation(station.slug)} onUncompare={() => removeCompareStation(station.slug)}
+                onClose={() => setSelectedStation(null)} />
             </Popup>
             )}
           </CircleMarker>

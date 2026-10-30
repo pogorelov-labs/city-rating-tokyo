@@ -29,7 +29,11 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       const roughDist = Math.sqrt(dLat * dLat + dLng * dLng);
 
       // Already looking at this station (within ~200m at zoom 14)
-      if (roughDist < 0.003 && currentZoom >= 13) return;
+      if (roughDist < 0.003 && currentZoom >= 13) {
+        map.stop();
+        onFlyEnd?.();
+        return;
+      }
 
       // Close any open popup before flying — prevents the popup card from
       // flying around the screen during zoom animation (mobile tap auto-opens).
