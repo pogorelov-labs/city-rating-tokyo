@@ -2,6 +2,8 @@
 
 import { useEffect, useSyncExternalStore } from 'react';
 import gridHeader from '@/data/bangkok/grid.json';
+import { measure, measureAsync } from './render-profile';
+import entertainmentZones from '@/data/entertainment/zones.json';
 import type { FilterState, StationRatings, WeightConfig } from './types';
 import type { PercentileAnchors } from './scoring';
 
@@ -110,13 +112,13 @@ async function gunzip(data: Uint8Array): Promise<Uint8Array> {
 }
 
 async function fetchGrid(): Promise<BangkokGrid> {
-  const res = await fetch(GRID_HEADER.file);
+  const res = await measureAsync('grid.fetch.headers', () => fetch(GRID_HEADER.file));
   if (!res.ok) throw new Error(`Bangkok grid: HTTP ${res.status}`);
-  let bytes: Uint8Array = new Uint8Array(await res.arrayBuffer());
+  let bytes: Uint8Array = new Uint8Array(await measureAsync('grid.fetch.body', () => res.arrayBuffer()));
   // The file is gzip'd by the build; a proxy that also compresses in transit
   // is undone by fetch itself. Check the magic rather than trusting headers.
-  if (bytes[0] === 0x1f && bytes[1] === 0x8b) bytes = await gunzip(bytes);
-  return decodeGrid(bytes, GRID_HEADER);
+  if (bytes[0] === 0x1f && bytes[1] === 0x8b) bytes = await measureAsync('grid.decompress', () => gunzip(bytes), bytes.byteLength);
+  return measure('grid.decode', () => decodeGrid(bytes, GRID_HEADER), GRID_HEADER.cells, bytes.byteLength);
 }
 
 // ─── loading (one fetch per page, shared by the map and the side panel) ───
@@ -258,6 +260,49 @@ export function cellInfo(grid: BangkokGrid, i: number, districts: readonly GridD
 
 // ─── scoring, filtering, ranking ──────────────────────────────────────────
 
+// Match the anchor-in-disc rule used by scripts/entertainment/compute-zones.py.
+// Build this only when the family filter is first enabled, then share it across
+// the map and panels without adding another plane to the downloaded grid.
+const adultZoneMasks = new WeakMap<BangkokGrid, Uint8Array>();
+const EARTH_RADIUS_M = 6_371_000;
+const RAD = Math.PI / 180;
+const adultZones = entertainmentZones.zones
+  .filter((zone) => zone.city === 'bangkok' && zone.kind === 'adult_entertainment')
+  .map((zone) => {
+    const angularRadius = zone.radius_m / EARTH_RADIUS_M;
+    const latRadius = angularRadius / RAD;
+    const lngRadius = Math.asin(Math.sin(angularRadius) / Math.cos(zone.lat * RAD)) / RAD;
+    return { ...zone, latRadius, lngRadius, cosLat: Math.cos(zone.lat * RAD),
+      maxHaversine: Math.sin(angularRadius / 2) ** 2 };
+  });
+
+function adultZoneMask(grid: BangkokGrid): Uint8Array {
+  const cached = adultZoneMasks.get(grid);
+  if (cached) return cached;
+  const { nx, ny, west, east, north, south } = grid.header;
+  const mask = new Uint8Array(nx * ny);
+  const dLat = (north - south) / ny;
+  const dLng = (east - west) / nx;
+  for (const i of grid.cells) {
+    const lat = north - (Math.floor(i / nx) + 0.5) * dLat;
+    const lng = west + ((i % nx) + 0.5) * dLng;
+    for (const zone of adultZones) {
+      // Bounding-box rejection keeps trigonometry off the vast majority of cells.
+      if (Math.abs(lat - zone.lat) > zone.latRadius || Math.abs(lng - zone.lng) > zone.lngRadius) continue;
+      const dLatHalf = (lat - zone.lat) * RAD / 2;
+      const dLngHalf = (lng - zone.lng) * RAD / 2;
+      const haversine = Math.sin(dLatHalf) ** 2 +
+        Math.cos(lat * RAD) * zone.cosLat * Math.sin(dLngHalf) ** 2;
+      if (haversine <= zone.maxHaversine) {
+        mask[i] = 1;
+        break;
+      }
+    }
+  }
+  adultZoneMasks.set(grid, mask);
+  return mask;
+}
+
 /**
  * Weighted score for every cell, rounded like `calculateWeightedScore`
  * (NaN outside Bangkok). ~40k cells × 10 categories: a few milliseconds.
@@ -316,7 +361,8 @@ export function gridAnchors(grid: BangkokGrid, scores: Float32Array): Percentile
 /**
  * 1 where a cell passes the dealbreakers, 0 where it fails (and outside).
  * Same semantics as `dealbreakerReasons`: rent is the district estimate,
- * commute the cell's fastest hub, category minimums use the cell's ratings.
+ * commute the cell's fastest hub, category minimums use the cell's ratings,
+ * and the family filter checks the cell center against adult-zone circles.
  */
 export function passMask(
   grid: BangkokGrid,
@@ -324,6 +370,7 @@ export function passMask(
   defaults: FilterState,
   districts: readonly GridDistrict[],
   hideFloodRisk = false,
+  hideAdultZones = false,
 ): Uint8Array {
   const size = grid.header.nx * grid.header.ny;
   const out = new Uint8Array(size);
@@ -332,7 +379,8 @@ export function passMask(
   const rentMax = filters.maxRent < defaults.maxRent ? filters.maxRent : Infinity;
   const rentMin = filters.minRent > defaults.minRent ? filters.minRent : -Infinity;
   const commuteMax = filters.maxCommute < defaults.maxCommute ? filters.maxCommute : Infinity;
-  const commuteMin = filters.maxCommute > defaults.minCommute ? filters.minCommute : -Infinity;
+  const commuteMin = filters.minCommute > defaults.minCommute ? filters.minCommute : -Infinity;
+  const adultMask = hideAdultZones ? adultZoneMask(grid) : null;
   const mins = Object.entries(filters.categoryMins).filter(([, v]) => v != null) as [keyof StationRatings, number][];
   const districtOk = districts.map((d) => {
     if (hideFloodRisk && d.flood_exposed) return false; // CRTKY-186
@@ -343,6 +391,7 @@ export function passMask(
   const checkCommute = commuteMax !== Infinity || commuteMin !== -Infinity;
   for (const i of grid.cells) {
     if (!districtOk[p.district[i] - 1]) continue;
+    if (adultMask?.[i]) continue;
     let ok = true;
     for (const [plane, min] of localMins) {
       if (plane[i] < min) {

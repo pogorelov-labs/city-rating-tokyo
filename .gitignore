@@ -56,3 +56,15 @@ research/snapshots/2026-10-14/cleanliness-bangkok/wayback-*
 research/snapshots/2026-10-14/cleanliness-bangkok/*.html
 research/snapshots/2026-10-14/cleanliness-bangkok/gdcatalog-mnre-resource.json
 .playwright-mcp/
+# Generated from the pinned MapLibre package by app/scripts/prepare-maplibre.mjs.
+app/public/bangkok/prototype/assets/
+app/public/map-assets/
+# Local renderer experiments contain raw browser/process traces and screenshots.
+research/bangkok/notes/color-design/
+research/bangkok/notes/render-stages/
+research/bangkok/notes/renderer-benchmark/
+.release-checks/
+# Historical local prototype notes link to the private experiment artifacts.
+research/bangkok/notes/2026-10-30-map-colors.md
+research/bangkok/notes/2026-10-30-maplibre-prototype.md
+research/bangkok/notes/2026-10-30-rendering-stages.md

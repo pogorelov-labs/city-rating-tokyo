@@ -15,27 +15,33 @@ const port = process.env.E2E_PORT || '3000';
 if (!/^\d{1,5}$/.test(port) || Number(port) < 1 || Number(port) > 65535) {
   throw new Error('E2E_PORT must be a valid TCP port');
 }
-const baseURL = `http://localhost:${port}`;
+const baseURL = process.env.E2E_BASE_URL || `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: '**/bangkok-prototype.spec.ts',
   fullyParallel: true,
   forbidOnly: isCI,
-  retries: isCI ? 1 : 0,
+  retries: 0,
   workers: isCI ? 1 : undefined,
   reporter: [['html', { open: 'never' }]],
   use: {
     baseURL,
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        // CI's headless Linux browser may not have a hardware GPU. These
+        // flags exercise rendering functionality, not performance.
+        launchOptions: isCI && process.platform === 'linux' ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
+      },
     },
   ],
-  webServer: {
+  webServer: process.env.E2E_BASE_URL ? undefined : {
     command: `cd app && npm run dev -- --port ${port}`,
     url: baseURL,
     timeout: 60_000,

@@ -17,7 +17,7 @@ vi.mock('@/lib/bangkok-grid', async (importOriginal) => {
 });
 
 const header = {
-  nx: 2, ny: 1, cell_m: 200, west: 100, east: 100.1, north: 14, south: 13.9,
+  nx: 2, ny: 1, cell_m: 200, west: 100.561, east: 100.566, north: 13.7385, south: 13.7367,
   districts: ['flooded', 'safe'], stations: [], areas: [], fields: ['hub_siam'],
   scales: { weight: 100, station_dist_m: 10 },
 } as unknown as GridHeader;
@@ -34,13 +34,32 @@ function MapPassingCount() {
   const weights = useDeferredValue(useAppStore((s) => s.weights));
   const filters = useCityState((s) => s.filters);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
-  const result = useScoredGrid(grid, districts, weights, filters, CITIES.bangkok.defaultFilters, hideFloodRisk);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
+  const result = useScoredGrid(grid, districts, weights, filters, CITIES.bangkok.defaultFilters, hideFloodRisk, hideAdultZones);
   return <output data-testid="map-count">{result?.passing.cells}</output>;
 }
 
 beforeEach(() => {
   useAppStore.setState(useAppStore.getInitialState(), true);
   gridHandle.current = grid;
+});
+
+it('keeps the grid map, match count and hotspots aligned when the family filter changes', () => {
+  render(<Providers city="bangkok"><ScoredAreasProvider primaryAreas={districts}>
+    <MapPassingCount />
+    <div data-testid="panel-count"><GridMatchCount districts={districts} /></div>
+    <GridHotspotList districts={districts} />
+  </ScoredAreasProvider></Providers>);
+
+  expect(screen.getByTestId('map-count')).toHaveTextContent('2');
+  expect(screen.getByRole('button', { name: /flooded/i })).toBeInTheDocument();
+  act(() => getCityActions('bangkok').setHideAdultZones(true));
+  expect(screen.getByTestId('map-count')).toHaveTextContent('1');
+  expect(screen.getByTestId('panel-count')).toHaveTextContent('1 of 2 cells match');
+  expect(screen.queryByRole('button', { name: /flooded/i })).not.toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /safe/i })).toBeInTheDocument();
+  act(() => getCityActions('bangkok').setHideAdultZones(false));
+  expect(screen.getByTestId('map-count')).toHaveTextContent('2');
 });
 
 it('keeps the grid map, match count and hotspots aligned when flood filtering changes', () => {

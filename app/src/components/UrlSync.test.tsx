@@ -26,6 +26,31 @@ describe('UrlSync browser/store contract', () => {
     expect(useAppStore.getState().cities.tokyo.selectedStation).toBeNull();
   });
 
+  it('hydrates Bangkok safety flags from a link and keeps changes shareable', () => {
+    window.history.replaceState(null, '', '/bangkok?lv=grid&flood=1&adult=1');
+    mount('bangkok');
+    expect(useAppStore.getState().cities.bangkok).toMatchObject({
+      level: 'grid', hideFloodRisk: true, hideAdultZones: true, hideHighSeismic: false,
+    });
+    expect(useAppStore.getState().cities.tokyo.hideFloodRisk).toBe(false);
+
+    act(() => getCityActions('bangkok').setHideAdultZones(false));
+    act(() => vi.advanceTimersByTime(300));
+    const params = new URLSearchParams(window.location.search);
+    expect(params.get('flood')).toBe('1');
+    expect(params.has('adult')).toBe(false);
+  });
+
+  it('clears previously enabled flags omitted from a link and restores Tokyo seismic filtering', () => {
+    getCityActions('tokyo').setHideFloodRisk(true);
+    getCityActions('tokyo').setHideAdultZones(true);
+    window.history.replaceState(null, '', '/?s=shibuya&seismic=1');
+    mount();
+    expect(useAppStore.getState().cities.tokyo).toMatchObject({
+      selectedStation: 'shibuya', hideFloodRisk: false, hideAdultZones: false, hideHighSeismic: true,
+    });
+  });
+
   it('does not erase tracking parameters just by landing or rerendering', () => {
     window.history.replaceState(null, '', '/?utm_source=campaign&utm_medium=email&s=alpha');
     const replace = vi.spyOn(window.history, 'replaceState');

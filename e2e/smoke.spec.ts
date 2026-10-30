@@ -1,3 +1,4 @@
+import { useStandardBangkokMap } from './support';
 import { test, expect } from '@playwright/test';
 
 /**
@@ -47,6 +48,7 @@ test.describe('smoke', () => {
 
   test('Bangkok district map loads with the city switcher', async ({ page }) => {
     const response = await page.goto('/bangkok');
+    await useStandardBangkokMap(page);
     expect(response?.status()).toBe(200);
 
     await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
@@ -67,6 +69,7 @@ test.describe('smoke', () => {
 
   test('district map tooltips sit above the polygons', async ({ page }) => {
     await page.goto('/bangkok');
+    await useStandardBangkokMap(page);
     const polygons = page.locator('.leaflet-bkk-districts-pane path.leaflet-interactive');
     await expect(polygons).toHaveCount(50, { timeout: 15_000 });
     await polygons.nth(20).hover({ force: true });
@@ -76,6 +79,7 @@ test.describe('smoke', () => {
 
   test('Bangkok levels of detail: districts → stations → 200 m grid', async ({ page }) => {
     await page.goto('/bangkok');
+    await useStandardBangkokMap(page);
     await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
 
     await page.getByRole('radio', { name: 'Stations' }).click();
@@ -93,6 +97,7 @@ test.describe('smoke', () => {
   test('a grid cell opens its popup', async ({ page }) => {
     // Fly to the Siam station area on the grid, then click the map centre.
     await page.goto('/bangkok?lv=grid&s=st.siam');
+    await useStandardBangkokMap(page);
     await expect(page.locator('canvas.bkk-grid-canvas')).toBeVisible({ timeout: 15_000 });
     await page.waitForTimeout(1_500); // fly-to animation
     const map = page.locator('.leaflet-container');

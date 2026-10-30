@@ -8,6 +8,9 @@
   from `0.1.0` to `0.1.1`.
   **v0.1.2** packages compatible map/scoring fixes and Bangkok MCP district tools;
   its release PR bumps the same two files from `0.1.1` to `0.1.2`.
+  **v0.2.0** is the Bangkok 3D-map feature candidate and bumps the app package
+  and lockfile together from `0.1.2` to `0.2.0`. Its notes remain unreleased
+  until the publication gates below are satisfied.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.
@@ -18,7 +21,8 @@
   `build` covers lint, UI tests, TypeScript, the Next build and runtime audit;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
   and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
-  `e2e` covers browser map interactions without retries.
+  `e2e` builds and runs the standalone release server, then covers map interactions,
+  locales, renderer recovery, worker/CSP delivery and navigation without retries.
   MCP production smoke checks are separate and are not implied by green CI.
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
@@ -158,7 +162,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.1.2 needs **no database migration**. Check production deployment status/logs
+v0.2.0 needs **no database migration or rating-data rebuild**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale

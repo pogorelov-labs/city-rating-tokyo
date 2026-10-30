@@ -1,4 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
+import gridHeader from '../app/src/data/bangkok/grid.json';
+import bangkokMeta from '../app/src/data/bangkok/meta.json';
+import { useStandardBangkokMap } from './support';
 
 test.setTimeout(90_000);
 
@@ -120,6 +123,7 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
 
   await page.getByRole('link', { name: 'Bangkok', exact: true }).click();
   await expect(page).toHaveURL(/\/bangkok/);
+  await useStandardBangkokMap(page);
   await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
   const district = await districtPoint(page);
   await page.mouse.click(district.x, district.y);
@@ -131,6 +135,7 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
   await expect(page).toHaveURL(/\/bangkok\/district\/[^/?]+/);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await page.goBack();
+  await useStandardBangkokMap(page);
   await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
 });
 
@@ -138,6 +143,7 @@ test.describe('Escape dismisses map selection', () => {
   for (const [city, url] of [['Tokyo', '/?s=akihabara'], ['Bangkok', '/bangkok?s=pathum-wan']] as const) {
     test(`${city} clears a selected area`, async ({ page }) => {
       await page.goto(url);
+      if (city === 'Bangkok') await useStandardBangkokMap(page);
       await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
       await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeTruthy();
       await page.keyboard.press('Escape');
@@ -176,6 +182,7 @@ test.describe('touch selection', () => {
 
   test('Bangkok touch zoom preserves a selected district', async ({ page }) => {
     await page.goto('/bangkok');
+    await useStandardBangkokMap(page);
     await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 15_000 });
     const point = await districtPoint(page);
     await page.touchscreen.tap(point.x, point.y);
@@ -200,6 +207,7 @@ test.describe('phone-width map controls', () => {
   ] as const) {
     test(`${city}: zoom and card close remain usable`, async ({ page }) => {
       await page.goto(url);
+      if (city.startsWith('Bangkok')) await useStandardBangkokMap(page);
       const zoom = page.getByRole('button', { name: 'Zoom in' });
       const zoomOut = page.getByRole('button', { name: 'Zoom out' });
       const close = page.getByRole('button', { name: closeName });
@@ -250,6 +258,7 @@ test('short phone: grid card leaves zoom and Close usable', async ({ browser }) 
   const context = await browser.newContext({ viewport: { width: 390, height: 568 }, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.goto('/bangkok?lv=grid&s=cell.41873');
+  await useStandardBangkokMap(page);
   const close = page.getByRole('button', { name: 'Close cell card' });
   const zoomOut = page.getByRole('button', { name: 'Zoom out' });
   await expect(close).toBeVisible({ timeout: 20_000 });
@@ -271,6 +280,7 @@ test('phone: expanded air panel does not obstruct zoom or card Close', async ({ 
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.goto('/bangkok?s=pathum-wan');
+  await useStandardBangkokMap(page);
   const close = page.getByRole('button', { name: 'Close district card' });
   await expect(close).toBeVisible({ timeout: 20_000 });
   await page.locator('summary').filter({ hasText: 'Bangkok: air and seasons' }).click();
@@ -281,5 +291,120 @@ test('phone: expanded air panel does not obstruct zoom or card Close', async ({ 
   expect(new URL(page.url()).searchParams.get('s')).toBe(selected);
   await close.tap();
   await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+  await context.close();
+});
+
+test('Bangkok map layers and grid filters survive a copied share link', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto('/bangkok');
+  await useStandardBangkokMap(page);
+  await expect(page.locator('.leaflet-bkk-districts-pane path')).toHaveCount(50, { timeout: 20_000 });
+  await page.getByRole('radio', { name: 'Stations', exact: true }).click();
+  await expect(page.locator('.leaflet-bkk-areas-pane path')).toHaveCount(bangkokMeta.station_area_count);
+  await page.getByRole('radio', { name: '200 m grid', exact: true }).click();
+
+  const canvas = page.locator('canvas.bkk-grid-canvas');
+  const sidebar = page.locator('aside');
+  const totalCells = gridHeader.cells.toLocaleString('en-US');
+  await expect(canvas).toBeVisible({ timeout: 20_000 });
+  await expect(sidebar.getByText(`${totalCells} cells`, { exact: true })).toBeVisible();
+  await expect(page.locator('.leaflet-bkk-areas-pane path')).toHaveCount(0);
+
+  // Read the real rendered pixel at the cell containing Soi Cowboy, not a
+  // mocked layer or a direct call to the filtering function.
+  const x = Math.floor((100.5621 - gridHeader.west) / (gridHeader.east - gridHeader.west) * gridHeader.nx);
+  const y = Math.floor((gridHeader.north - 13.7376) / (gridHeader.north - gridHeader.south) * gridHeader.ny);
+  const readPixel = () => canvas.evaluate((el, point) =>
+    Array.from((el as HTMLCanvasElement).getContext('2d')!.getImageData(point.x, point.y, 1, 1).data), { x, y });
+  await expect.poll(async () => (await readPixel())[3]).toBeGreaterThan(0);
+  const unfilteredPixel = await readPixel();
+  const family = sidebar.getByRole('checkbox', { name: /Family-friendly/ });
+  const flood = sidebar.getByRole('checkbox', { name: /Hide flood-risk areas/ });
+  await family.check();
+  await expect.poll(async () => {
+    const p = await readPixel();
+    return Math.abs(p[0] - 229) <= 2 && Math.abs(p[1] - 231) <= 2 && Math.abs(p[2] - 235) <= 2 && p[3] === 140;
+  }).toBe(true);
+  expect(await readPixel()).not.toEqual(unfilteredPixel);
+  await expect(sidebar.getByText(new RegExp(`of ${totalCells} cells match`))).toBeVisible();
+
+  await flood.check();
+  await page.getByRole('button', { name: 'Share', exact: true }).click();
+  await expect(page.getByText('Copied!', { exact: true })).toBeVisible();
+  const shared = await page.evaluate(() => navigator.clipboard.readText());
+  const params = new URL(shared).searchParams;
+  expect(params.get('lv')).toBe('grid');
+  expect(params.get('flood')).toBe('1');
+  expect(params.get('adult')).toBe('1');
+
+  await page.goto(shared);
+  await useStandardBangkokMap(page);
+  await expect(sidebar.getByRole('checkbox', { name: /Family-friendly/ })).toBeChecked();
+  await expect(sidebar.getByRole('checkbox', { name: /Hide flood-risk areas/ })).toBeChecked();
+  await expect(canvas).toBeVisible({ timeout: 20_000 });
+  await sidebar.getByRole('checkbox', { name: /Family-friendly/ }).uncheck();
+  await sidebar.getByRole('checkbox', { name: /Hide flood-risk areas/ }).uncheck();
+  await expect(sidebar.getByText(`${totalCells} cells`, { exact: true })).toBeVisible();
+  await expect.poll(readPixel).toEqual(unfilteredPixel);
+
+  // Hit-test a painted cell through the browser's real pointer path.
+  const point = await canvas.evaluate((el) => {
+    const canvas = el as HTMLCanvasElement;
+    const bounds = canvas.getBoundingClientRect();
+    const map = canvas.closest('.leaflet-container')!.getBoundingClientRect();
+    const pixels = canvas.getContext('2d')!.getImageData(0, 0, canvas.width, canvas.height).data;
+    for (let row = 20; row < canvas.height - 20; row++) {
+      for (let col = 20; col < canvas.width - 20; col++) {
+        if (!pixels[(row * canvas.width + col) * 4 + 3]) continue;
+        // At low zoom, a pointer can round into an adjacent cell. Pick a
+        // built-up interior rather than a one-pixel city boundary.
+        if (![-1, 0, 1].every((dy) => [-1, 0, 1].every((dx) =>
+          pixels[((row + dy) * canvas.width + col + dx) * 4 + 3] > 0))) continue;
+        // MouseEvent client coordinates are integer CSS pixels. Round the
+        // centre before hit testing, especially when a grid cell is ~1 px.
+        const x = Math.round(bounds.left + (col + 0.5) * bounds.width / canvas.width);
+        const y = Math.round(bounds.top + (row + 0.5) * bounds.height / canvas.height);
+        if (x < map.left + 30 || x > map.right - 30 || y < map.top + 30 || y > map.bottom - 30) continue;
+        const target = document.elementFromPoint(x, y);
+        if (!target?.closest('.leaflet-container') ||
+            target.closest('.leaflet-interactive, .leaflet-marker-icon, .leaflet-popup, .leaflet-control')) continue;
+        return { x, y, index: row * canvas.width + col };
+      }
+    }
+    throw new Error('No unobstructed painted grid cell in the viewport');
+  });
+  await page.mouse.move(point.x, point.y);
+  await expect(page.locator('.grid-tooltip')).toBeVisible();
+  await page.mouse.click(point.x, point.y);
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toMatch(/^cell\.\d+$/);
+  const selectedIndex = Number(new URL(page.url()).searchParams.get('s')!.slice(5));
+  expect(Math.abs(Math.floor(selectedIndex / gridHeader.nx) - Math.floor(point.index / gridHeader.nx))).toBeLessThanOrEqual(1);
+  expect(Math.abs(selectedIndex % gridHeader.nx - point.index % gridHeader.nx)).toBeLessThanOrEqual(1);
+  await expect(page.locator('.leaflet-popup')).toBeVisible();
+});
+
+test('phone restores and updates Bangkok grid filters from a link', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  await page.goto('/bangkok?lv=grid&flood=1&adult=1');
+  await useStandardBangkokMap(page);
+  // Next dev's indicator covers the mobile filter button; it is not present
+  // in production and should not intercept the user action under test.
+  await page.addStyleTag({ content: 'nextjs-portal { display: none !important; }' });
+  await expect(page.locator('canvas.bkk-grid-canvas')).toBeVisible({ timeout: 20_000 });
+  await page.getByRole('button', { name: 'Filters', exact: true }).tap();
+  const family = page.getByRole('checkbox', { name: /Family-friendly/ });
+  const flood = page.getByRole('checkbox', { name: /Hide flood-risk areas/ });
+  await expect(family).toBeChecked();
+  await expect(flood).toBeChecked();
+  await family.uncheck();
+  await expect.poll(() => new URL(page.url()).searchParams.has('adult')).toBe(false);
+  expect(new URL(page.url()).searchParams.get('flood')).toBe('1');
+  await page.reload();
+  await useStandardBangkokMap(page);
+  await page.addStyleTag({ content: 'nextjs-portal { display: none !important; }' });
+  await page.getByRole('button', { name: 'Filters', exact: true }).tap();
+  await expect(family).not.toBeChecked();
+  await expect(flood).toBeChecked();
   await context.close();
 });

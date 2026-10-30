@@ -7,10 +7,11 @@ import {
   type BangkokGrid, type GridDistrict,
 } from './bangkok-grid';
 import type { PercentileAnchors } from './scoring';
+import { measure } from './render-profile';
 
 interface GridInputs { grid: BangkokGrid; areas: MapStation[]; districts: GridDistrict[] }
 interface GridScores { inputs: GridInputs; weights: WeightConfig; scores: Float32Array; anchors: PercentileAnchors }
-interface GridPassing { inputs: GridInputs; filters: FilterState; defaults: FilterState; hideFloodRisk: boolean;
+interface GridPassing { inputs: GridInputs; filters: FilterState; defaults: FilterState; hideFloodRisk: boolean; hideAdultZones: boolean;
   pass: Uint8Array; passing: { cells: number; km2: number } }
 export interface ScoredGrid {
   districts: GridDistrict[];
@@ -51,27 +52,28 @@ function inputsFor(grid: BangkokGrid, areas: MapStation[]): GridInputs {
 function scoresFor(inputs: GridInputs, weights: WeightConfig): GridScores {
   const cached = recentScores.find((entry) => entry.inputs === inputs && entry.weights === weights);
   if (cached) return cached;
-  const scores = scoreCells(inputs.grid, weights, inputs.districts);
-  const value = { inputs, weights, scores, anchors: gridAnchors(inputs.grid, scores) };
+  const scores = measure('grid.score', () => scoreCells(inputs.grid, weights, inputs.districts), inputs.grid.cells.length);
+  const value = { inputs, weights, scores, anchors: measure('grid.anchors', () => gridAnchors(inputs.grid, scores), inputs.grid.cells.length) };
   recentScores = [value, ...recentScores].slice(0, 2);
   return value;
 }
 
-function passingFor(inputs: GridInputs, filters: FilterState, defaults: FilterState, hideFloodRisk: boolean): GridPassing {
+function passingFor(inputs: GridInputs, filters: FilterState, defaults: FilterState, hideFloodRisk: boolean,
+  hideAdultZones: boolean): GridPassing {
   const cached = recentPassing.find((entry) => entry.inputs === inputs && entry.filters === filters &&
-    entry.defaults === defaults && entry.hideFloodRisk === hideFloodRisk);
+    entry.defaults === defaults && entry.hideFloodRisk === hideFloodRisk && entry.hideAdultZones === hideAdultZones);
   if (cached) return cached;
-  const pass = passMask(inputs.grid, filters, defaults, inputs.districts, hideFloodRisk);
-  const value = { inputs, filters, defaults, hideFloodRisk, pass, passing: countPassing(inputs.grid, pass) };
+  const pass = measure('grid.filter', () => passMask(inputs.grid, filters, defaults, inputs.districts, hideFloodRisk, hideAdultZones), inputs.grid.cells.length);
+  const value = { inputs, filters, defaults, hideFloodRisk, hideAdultZones, pass, passing: measure('grid.count', () => countPassing(inputs.grid, pass), inputs.grid.cells.length) };
   recentPassing = [value, ...recentPassing].slice(0, 2);
   return value;
 }
 
 function scoreGrid(grid: BangkokGrid, areas: MapStation[], weights: WeightConfig, filters: FilterState,
-  defaults: FilterState, hideFloodRisk: boolean): ScoredGrid {
+  defaults: FilterState, hideFloodRisk: boolean, hideAdultZones: boolean): ScoredGrid {
   const inputs = inputsFor(grid, areas);
   const scores = scoresFor(inputs, weights);
-  const passing = passingFor(inputs, filters, defaults, hideFloodRisk);
+  const passing = passingFor(inputs, filters, defaults, hideFloodRisk, hideAdultZones);
   const cached = recentResults.find((entry) => entry.scores === scores && entry.passing === passing);
   if (cached) return cached.value;
   const value = { districts: inputs.districts, scores: scores.scores, anchors: scores.anchors,
@@ -82,9 +84,9 @@ function scoreGrid(grid: BangkokGrid, areas: MapStation[], weights: WeightConfig
 
 /** Grid scoring uses resident-weighted anchors, not named-area percentiles. */
 export function useScoredGrid(grid: BangkokGrid | null, areas: MapStation[], weights: WeightConfig,
-  filters: FilterState, defaults: FilterState, hideFloodRisk = false): ScoredGrid | null {
-  return useMemo(() => grid ? scoreGrid(grid, areas, weights, filters, defaults, hideFloodRisk) : null,
-    [grid, areas, weights, filters, defaults, hideFloodRisk]);
+  filters: FilterState, defaults: FilterState, hideFloodRisk = false, hideAdultZones = false): ScoredGrid | null {
+  return useMemo(() => grid ? scoreGrid(grid, areas, weights, filters, defaults, hideFloodRisk, hideAdultZones) : null,
+    [grid, areas, weights, filters, defaults, hideFloodRisk, hideAdultZones]);
 }
 
 export function useGridHotspots(grid: BangkokGrid | null, scored: ScoredGrid | null, count: number, enabled: boolean): number[] {
@@ -94,7 +96,15 @@ export function useGridHotspots(grid: BangkokGrid | null, scored: ScoredGrid | n
     if (!cached) { cached = new Map(); hotspotsByResult.set(scored, cached); }
     const existing = cached.get(count);
     if (existing) return existing;
-    const hotspots = gridHotspots(grid, scored.scores, scored.pass, count);
+    // The map needs five markers, the list ten. The greedy ordering has the
+    // prefix property, so share one top-ten search regardless of mount order.
+    const size = Math.max(10, count);
+    let full = cached.get(size);
+    if (!full) {
+      full = measure('grid.hotspots', () => gridHotspots(grid, scored.scores, scored.pass, size), grid.cells.length);
+      cached.set(size, full);
+    }
+    const hotspots = count === size ? full : full.slice(0, count);
     cached.set(count, hotspots);
     return hotspots;
   }, [grid, scored, count, enabled]);

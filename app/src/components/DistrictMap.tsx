@@ -54,6 +54,7 @@ import BangkokOutlines from './bangkok/BangkokOutlines';
 import DistrictLayer from './bangkok/DistrictLayer';
 import StationAreaLayer, { type AreaShape } from './bangkok/StationAreaLayer';
 import { CellDetails, DistrictPopupBody, StationAreaPopupBody } from './bangkok/popups';
+import LeafletBridge from './bangkok/prototype/LeafletBridge';
 
 type LatLng = [number, number];
 interface DistrictShape {
@@ -75,6 +76,7 @@ interface MapViewProps {
   stations: MapStation[];
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
+  prototype?: boolean;
 }
 
 /** Phones: re-frame on the inner city once, before the first paint. */
@@ -109,7 +111,7 @@ function railStationName(s: RailStation | undefined, locale: Locale): string {
   return locale === 'ja' && s.name_ja ? s.name_ja : s.name_en;
 }
 
-export default function DistrictMap({ stations: districts, thumbnails = {}, snippets = {} }: MapViewProps) {
+export default function DistrictMap({ stations: districts, thumbnails = {}, snippets = {}, prototype = false }: MapViewProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const city = useCity();
@@ -151,7 +153,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const areaByKey = useMemo(() => new Map(scoredAreas.map((a) => [a.slug, a])), [scoredAreas]);
 
   // ── 200 m grid ──
-  const gridScoring = useScoredGrid(grid, sharedDistricts, deferredWeights, filters, city.defaultFilters, hideFloodRisk);
+  const gridScoring = useScoredGrid(grid, sharedDistricts, deferredWeights, filters, city.defaultFilters, hideFloodRisk, hideAdultZones);
   const gridDistricts = gridScoring?.districts ?? EMPTY_GRID_DISTRICTS;
   const gridScores = gridScoring?.scores ?? null;
   const gridAnch = gridScoring?.anchors ?? null;
@@ -309,6 +311,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         <TileLayer url={BASEMAP.url} attribution={`${BASEMAP.attribution} &middot; Overture Maps`} />
         <AttributionControl position="bottomright" prefix={false} />
         <NarrowScreenFrame bounds={city.map.fitBoundsNarrow} />
+        {prototype && <LeafletBridge />}
         <ZoomWatcher onZoom={setZoom} />
         <MapDeselect onClear={clearSelection} clickClears={level !== 'grid'} escapeClears />
         {isTouch && <TouchZoomControls />}
