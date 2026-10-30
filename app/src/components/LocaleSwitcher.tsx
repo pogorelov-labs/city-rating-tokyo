@@ -17,7 +17,8 @@ export default function LocaleSwitcher() {
 
   function switchLocale(next: Locale) {
     if (next === locale) return;
-    router.replace(pathname, { locale: next });
+    const query = Object.fromEntries(new URLSearchParams(window.location.search));
+    router.replace({ pathname, query }, { locale: next });
   }
 
   return (

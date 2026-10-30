@@ -34,7 +34,7 @@
     "green": "公園・緑地",
     "gym_sports": "ジム・スポーツ",
     "vibe": "雰囲気",
-    "crowd": "静けさ",
+    "crowd": "混雑の少なさ",
     "daily_essentials": "生活利便性"
   },
   "ratingTooltips": {
@@ -46,7 +46,7 @@
     "green": "徒歩15分圏内の公園、庭園、河川敷、緑地、自然",
     "gym_sports": "フィットネスセンター、ジム、スポーツ施設、ランニングコース、スポーツ設備",
     "vibe": "街全体の個性と魅力：文化的アイデンティティ、ストリートライフ、地域コミュニティ、建築的な魅力",
-    "crowd": "静けさレベル（反転：10=非常に静かで空いている、1=極めて混雑）",
+    "crowd": "都市・地域種別に応じて乗降客数や施設密度を使う混雑の代替指標です。高いほど混雑が少なく、騒音の測定値ではありません。",
     "daily_essentials": "スーパー、薬局、クリニック、銀行、ランドリー、歯科医など、徒歩圏内の日常生活施設"
   },
   "shortLabels": {
@@ -58,7 +58,7 @@
     "green": "緑地",
     "gym_sports": "ジム",
     "vibe": "雰囲気",
-    "crowd": "静けさ",
+    "crowd": "混雑の少なさ",
     "daily_essentials": "生活"
   },
   "hubs": {
@@ -210,7 +210,7 @@
     "gridError": "200mメッシュを読み込めませんでした。ページを再読み込みしてください。",
     "bestSpots": "おすすめスポット",
     "bestSpotsHint": "重みと条件に対してスコアが最も高い市街地メッシュ（互いに1.5km以上離れた地点）。",
-    "relativeScoresNoteStationArea": "スコアはバンコクの駅エリア（最寄り駅から徒歩800m以内）の中での相対評価です。家賃と治安は区の推定値です。",
+    "relativeScoresNoteStationArea": "評価はバンコクの最寄り駅エリア内で相対化しています。範囲は直線で最大800 m。家賃は行政区の推定または明記した駅別の代替値、治安は区単位の評価です。",
     "relativeScoresNoteGrid": "メッシュのスコアは、バンコクの住民が暮らす場所に対する相対評価（居住者で重み付けしたパーセンタイル）です。家賃と治安は区の推定値です。",
     "floodReported": "（2021–2026年報告）",
     "hideAdultZones": "ファミリー向け：歓楽街エリアを非表示"
@@ -247,7 +247,7 @@
     "level_station": "駅",
     "level_grid": "200mメッシュ",
     "levelHint_district": "バンコクの50区（ケート）",
-    "levelHint_station": "各駅の徒歩圏（800m以内）",
+    "levelHint_station": "最寄り駅ごとに区分した、直線で最大800 mのエリア",
     "levelHint_grid": "市内全域を200m四方のメッシュで表示",
     "zoomHint": "さらに詳しく：",
     "legendStations": "駅の徒歩圏ごとの加重スコア（バンコクの駅エリア内での相対評価）",
@@ -266,7 +266,7 @@
     "cellDistrictNote": "* 家賃と治安は区の推定値。その他の8項目はこのメッシュで計測しています。",
     "cellDistrictLink": "{district} →",
     "cellAreaLink": "{station}駅エリア →",
-    "stationAreaCaption": "駅エリア（徒歩800m以内）",
+    "stationAreaCaption": "最寄り駅エリア（直線で最大800 m）",
     "hotspotTitle": "おすすめ第{rank}位",
     "closeCardCell": "メッシュのカードを閉じる"
   },
@@ -355,7 +355,7 @@
     "descriptionInProgress": "この駅のAI調査が進行中です。",
     "gallery": "ギャラリー",
     "showAllPhotos": "全{count}枚を表示",
-    "imageAttribution": "画像: Wikimedia Commons (CC-BY-SA) & Unsplash",
+    "imageAttribution": "写真の出典は各画像に表示しています。",
     "photoBy": "撮影: {photographer}（Unsplash）",
     "nearbyPlaces": "周辺スポット",
     "findMoreOnMaps": "Google Mapsでもっと見る",
@@ -599,7 +599,7 @@
       "factCafes": "カフェ",
       "factsSource": "駅エリア（最寄り駅から800m以内）の中の概数。施設: Overture Maps Places（CDLA-Permissive-2.0、Foursquare: Apache-2.0、AllThePlaces: CC0-1.0）、公園・船着き場: © OpenStreetMap contributors（ODbL）。",
       "districtsTitle": "区",
-      "districtsCaption": "この駅エリアがまたがる区と住民の比率。家賃と治安はこれらの区の推定値から。",
+      "districtsCaption": "居住者分布モデルによる行政区の比率です。治安は区単位の評価を使い、家賃の出典区分は各数値の横に表示します。",
       "viewGrid": "200mメッシュで見る →",
       "factHotels": "近くのホテル",
       "factAttractions": "近くの観光スポット"
@@ -719,5 +719,270 @@
     "medicineUnavailable": "英語対応医療機関：データなし。公開可能な適切な情報源が確認されるまで、バンコクの収録は未完了です。施設がないという意味ではありません。",
     "medicineSource": "© 観光庁・JNTO — 医療機関検索",
     "snapshot": "スナップショット：{date}。件数と出典リンクのみを掲載し、評価点には影響しません。"
+  },
+  "areaGuide": {
+    "guide": "エリアガイド",
+    "back": "地図に戻る",
+    "skip": "エリアガイドへ移動",
+    "cities": {
+      "tokyo": "首都圏",
+      "bangkok": "バンコク"
+    },
+    "kinds": {
+      "station": "駅周辺",
+      "district": "行政区"
+    },
+    "kindsPlural": {
+      "station": "駅周辺エリア",
+      "district": "行政区"
+    },
+    "summary": {
+      "tokyo": "{name}駅周辺は{count, number}路線が利用できます。他の駅周辺との違いと、目的地までの所要時間を確認できます。",
+      "station": "{name}駅周辺は{count, number}路線が利用できます。地図には、最寄り駅ごとに区分した対象エリアを表示しています。",
+      "district": "{name}はバンコクの行政区です。評価は区全体の傾向を示しており、鉄道へのアクセスや暮らしやすさは通りによって異なります。"
+    },
+    "strengths": "特徴",
+    "consider": "検討したい点",
+    "score": {
+      "priorities": "評価の優先項目",
+      "balanced": "バランス",
+      "custom": "選択した優先項目",
+      "label": "{profile}の評価",
+      "basis": "評価の基準・データ範囲",
+      "explain": "総合評価には選択中の重みを使います。項目別評価は同じ都市・地域種別の中での相対評価であり、都市間や駅周辺と行政区の間で直接比較はできません。",
+      "snapshot": "項目別評価のデータ時点：{date}。元データごとに時点が異なる場合があります。",
+      "derived": "「データに基づく」は入力データの性質を示します。項目別評価はすべて算出値であり、編集評価やモデルは直接測定ではありません。",
+      "empty": "評価データなし"
+    },
+    "rent": {
+      "title": "家賃と交通",
+      "smallTokyo": "1K〜1LDK",
+      "largeTokyo": "2LDK",
+      "oneBedroom": "1ベッドルーム",
+      "twoBedroom": "2ベッドルーム",
+      "perMonth": "／月",
+      "provenance": {
+        "stationAverage": "駅別の募集家賃平均",
+        "municipalAverage": "市区町村の平均",
+        "estimate": "編集部による家賃推定",
+        "districtBlend": "行政区の家賃から推定",
+        "bedroomMedian": "募集家賃中央値・面積混在",
+        "unavailable": "家賃データなし",
+        "reference": "参考家賃"
+      },
+      "skewShort": "大型・高級物件に偏る中央値",
+      "skew": "掲載物件は大型・高級住宅に偏っています。この中央値は、一定面積の一般的な家賃を示すものではありません。",
+      "sources": "家賃の出典・定義",
+      "definition": {
+        "stationAverage": "既存の駅別募集家賃平均です。各数値は異なる間取りの値で、価格帯の上限・下限ではありません。面積・築年数・掲載物件の構成は統一していません。",
+        "municipalAverage": "市区町村単位の平均であり、この駅だけの募集家賃ではありません。広域の参考値です。",
+        "estimate": "統計的中央値ではなく編集評価による推定です。バンコクの基準は1BRが30〜35 m²、2BRが60〜70 m²で、サービスアパートと短期滞在は除きます。",
+        "unavailable": "このエリアの月額家賃は取得できません。家賃スコアは別の情報から推定される場合があります。",
+        "tokyoEstimate": "表示された東京の間取りについての月額家賃推定で、駅別の募集家賃平均や統計的中央値ではありません。",
+        "districtBlend": "居住者の比率で行政区の家賃を加重した推定です。基準は1BRが30〜35 m²、2BRが60〜70 m²。すべての通りや建物の家賃を表すものではありません。",
+        "bedroomMedian": "1社の掲載在庫から公表された、面積を限定しない寝室数別中央値です。掲載元の対象範囲は地図のエリアと異なります。面積・契約期間・サービス付き物件の混在は調整していません。"
+      },
+      "notLease": "募集家賃は成約家賃でも、個別住戸の見積もりでもありません。",
+      "samples": "1BR：{one, number}件・2BR：{two, number}件",
+      "sizes": "掲載元の代表面積：1BR {one}・2BR {two}",
+      "referenceUnit": "間取りごとの値",
+      "fixedSizes": "1BR 30〜35 m²／2BR 60〜70 m²",
+      "mixedSizes": "面積混在・1社の在庫"
+    },
+    "comparison": {
+      "eyebrow": "エリアの特徴",
+      "title": "他のエリアと比較",
+      "reference": "比較対象",
+      "typical": "標準的なエリア",
+      "typicalStation": "標準的な駅周辺",
+      "typicalDistrict": "標準的な行政区",
+      "population": {
+        "station": "{city}の{count, number}駅周辺エリアの中央値。",
+        "district": "{city}の{count, number}行政区の中央値。"
+      },
+      "peer": "同じ都市・地域種別の2エリアを比較しています。",
+      "higher": "各項目は、数値が高いほどその特性が強いことを示します。",
+      "category": "項目",
+      "area": "対象",
+      "peerShort": "比較先",
+      "typicalShort": "中央値",
+      "caption": "10点満点の評価です。項目を選ぶと定義と根拠を確認できます。",
+      "note": "項目を選ぶと根拠を表示します。比較は同じ都市・地域種別の中で行います。",
+      "difference": "比較対象との差：{difference}ポイント。",
+      "inputs": "入力データ：{sources}"
+    },
+    "categories": {
+      "transport": "交通",
+      "rent": "家賃の手頃さ",
+      "daily_essentials": "生活利便性",
+      "safety": "治安",
+      "food": "飲食店",
+      "green": "公園・緑地",
+      "gym_sports": "スポーツ施設",
+      "vibe": "街の雰囲気",
+      "nightlife": "ナイトライフ",
+      "crowd": "混雑の少なさ"
+    },
+    "explanations": {
+      "transport": "鉄道アクセスと既存の都市交通モデルに基づきます。",
+      "rent": "基準家賃が低いほど高得点です。間取りと出典は家賃の横に表示します。",
+      "daily_essentials": "地図に登録された日常の店舗・サービス。データの網羅性は一定ではありません。",
+      "safety": "犯罪確率ではなく相対評価です。首都圏は警察統計、バンコクは行政区単位の編集評価を使います。",
+      "food": "施設・飲食店データによる選択肢の充実度です。各店の品質を評価するものではありません。",
+      "green": "地図の緑地データに基づく指標です。各公園の質や住戸からの徒歩経路は示しません。",
+      "gym_sports": "地図に登録されたジム・スポーツ施設。",
+      "vibe": "文化施設や歩行空間の指標に、記録がある場合は編集評価を加えています。",
+      "nightlife": "夜の選択肢が多いほど高得点です。好ましいかどうかは暮らし方によって異なります。",
+      "crowd": "従来の「静けさ」評価は混雑・施設密度の代替指標を使います。下の屋外騒音推定とは別の指標です。"
+    },
+    "evidence": {
+      "strong": "データに基づく",
+      "moderate": "部分的なデータ",
+      "estimate": "モデル・代替指標",
+      "editorial": "編集評価",
+      "unknown": "出典情報なし"
+    },
+    "facts": {
+      "eyebrow": "日々の暮らし",
+      "title": "エリア内の施設",
+      "food": "飲食店",
+      "essentials": "生活サービス",
+      "sports": "スポーツ施設",
+      "green": "登録緑地面積",
+      "services": "鉄道路線",
+      "elevation": "標高",
+      "cafes": "カフェ",
+      "markets": "市場",
+      "culture": "文化施設",
+      "temples": "宗教施設",
+      "piers": "船着場",
+      "nightlife": "夜の施設",
+      "area": "面積",
+      "population": "人口の参考値",
+      "hotels": "周辺のホテル",
+      "attractions": "周辺の見どころ",
+      "tokyoNote": "首都圏の入力データは項目ごとに対象範囲が異なります。地図の800 m円は位置確認用で、すべての評価に共通する境界ではありません。",
+      "districtNote": "区の境界内（{area} km²）の概数です。施設数は、個別の住戸から徒歩で利用できることを保証しません。",
+      "stationNote": "公表された駅周辺エリア（{area} km²）内の概数で、個別の住戸からの徒歩経路は示しません。",
+      "attribution": "施設：Overture Maps（CDLA-Permissive-2.0、Foursquare：Apache-2.0、AllThePlaces：CC0-1.0）。公園・船着場：© OpenStreetMap contributors（ODbL）。",
+      "nearbyScope": "周辺の観光関連施設は、最寄り駅エリアではなく駅の基準点から半径800 mで集計しています。"
+    },
+    "rail": {
+      "title": "鉄道アクセス",
+      "services": "{count, number}路線",
+      "stations": "{count, number}駅",
+      "districtStations": "区内・境界上に{count, number}駅",
+      "atStation": "この駅で利用可能",
+      "none": "区内に鉄道駅なし"
+    },
+    "commute": {
+      "eyebrow": "移動の目安",
+      "title": "主要拠点への移動",
+      "to": "行き先",
+      "destination": "移動先を選択",
+      "mobileDestination": "目的地を選ぶ",
+      "estimated": "推定所要時間",
+      "origin": {
+        "tokyo": "既存の主要拠点推定",
+        "station": "駅から・ピーク時モデル",
+        "district": "標準的な居住地点・ピーク時モデル"
+      },
+      "note": {
+        "tokyo": "調査済みエリアには記述による値、算出エリアには調整済みモデルを使います。現在の時刻表による経路検索ではありません。",
+        "station": "駅から各拠点までのピーク時モデルです。住戸から駅までの徒歩時間は別途必要で、現在の運行状況は反映しません。",
+        "district": "区内の標準的な居住地点から拠点までのピーク時モデルです。区内でも条件は異なり、現在の運行状況は反映しません。"
+      },
+      "empty": "所要時間の推定なし",
+      "fastest": "最短の主要拠点推定",
+      "lastTrain": "終電の参考時刻",
+      "lastTrainNote": "平日・路線と方面による"
+    },
+    "map": {
+      "eyebrow": "地理的な範囲",
+      "title": "地図で見る対象範囲",
+      "full": "都市全体の地図",
+      "outline": "エリア境界",
+      "rail": "鉄道駅",
+      "reset": "表示を戻す",
+      "loading": "エリアの地図を読み込み中…",
+      "zoomIn": "拡大",
+      "zoomOut": "縮小",
+      "layers": "地図レイヤー",
+      "stationSelected": "このエリアの駅",
+      "stationNearby": "周辺の駅",
+      "scope": {
+        "tokyo": "参考半径800 m・直線距離",
+        "station": "最寄り駅エリア・直線で最大800 m",
+        "district": "公表された行政区境界"
+      }
+    },
+    "noise": {
+      "eyebrow": "さらに詳しく",
+      "title": "騒音と地域の条件",
+      "intro": "順位には影響しない参考情報です。",
+      "outdoor": "屋外の静かさ",
+      "model": "モデル推定・高いほど静か",
+      "day": "昼間・06〜22時",
+      "night": "夜間・22〜06時",
+      "limits": "道路への近さと夜の施設に基づきます。室内音や遮音性は測定していません。混雑度に基づく順位とは別の指標です。",
+      "transfer": "バンコクは首都圏のモデルを現地調整せずに適用しており、現地での精度は不明です。",
+      "snapshot": "代替指標のデータ時点：{date}。"
+    },
+    "extras": {
+      "notes": "街の情報・施設",
+      "institutions": "医療機関・外交施設",
+      "environment": "自然環境の参考情報",
+      "air": "都市の大気・季節情報",
+      "noise": "騒音の参考測定・モデル詳細",
+      "photos": "写真・ライブカメラ",
+      "neighbors": "周辺エリア",
+      "districts": "対象となる行政区",
+      "wikipedia": "この場所を詳しく見る",
+      "allFacts": "施設数・出典の一覧",
+      "populationNote": "人口は各出典時点の参考値で、現在の居住者・就業者全員の人数ではありません。出典年と範囲は異なります。",
+      "flood": "2021〜2026年に区内で報告された道路冠水：{count, number}件。報告の網羅性は一定ではなく、0件でも個別の住所に影響がないとは限りません。",
+      "transport": "鉄道路線・終電の詳細"
+    },
+    "compact": {
+      "explore": "エリアを詳しく見る",
+      "balanced": "標準の重み",
+      "custom": "選択中の重み",
+      "scope": "同じ都市・地域種別での相対評価",
+      "close": "エリアカードを閉じる",
+      "camera": "ライブカメラあり"
+    },
+    "snapshot": "データ時点：{date}",
+    "unknownDate": "時点不明",
+    "unavailable": "データなし",
+    "methodology": "評価方法を見る",
+    "units": {
+      "min": "分",
+      "ha": "ha",
+      "m": "m",
+      "km2": "km²"
+    },
+    "positive": {
+      "transport": "鉄道の利便性が標準を上回ります。",
+      "rent": "家賃の手頃さが標準を上回ります。",
+      "daily_essentials": "生活サービスの充実度が標準を上回ります。",
+      "food": "飲食店の充実度が標準を上回ります。",
+      "green": "緑地の指標が標準を上回ります。",
+      "gym_sports": "スポーツ施設の充実度が標準を上回ります。",
+      "vibe": "文化施設や歩行空間の指標が特徴的です。",
+      "nightlife": "夜の選択肢の充実度が標準を上回ります。",
+      "crowd": "混雑の代替指標では標準より混雑が少なめです。"
+    },
+    "negative": {
+      "transport": "鉄道の利便性は標準を下回ります。",
+      "rent": "参考家賃と予算を照らし合わせてください。",
+      "daily_essentials": "生活サービスの充実度は標準を下回ります。",
+      "food": "飲食店の充実度は標準を下回ります。",
+      "green": "緑地の指標は標準を下回ります。",
+      "gym_sports": "スポーツ施設の充実度は標準を下回ります。",
+      "vibe": "文化施設や歩行空間の指標は標準を下回ります。",
+      "nightlife": "夜の選択肢の充実度は標準を下回ります。",
+      "crowd": "混雑の代替指標では標準より混雑が多めです。"
+    },
+    "photoAlt": "{name}の写真"
   }
 }

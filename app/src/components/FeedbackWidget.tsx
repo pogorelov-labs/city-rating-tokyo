@@ -126,7 +126,7 @@ export default function FeedbackWidget({ stationSlug, stationName, source }: Fee
         <p className="text-xs text-red-600 mt-1">{submitError}</p>
       )}
       <div className="flex items-center justify-between mt-2">
-        <span className="text-xs text-gray-400">{t('charCount', { count: comment.length })}</span>
+        <span className="text-xs text-gray-700">{t('charCount', { count: comment.length })}</span>
         <button
           onClick={handleSubmit}
           disabled={!comment.trim() || phase === 'submitting'}

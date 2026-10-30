@@ -42,6 +42,15 @@ describe('map selection dismissal', () => {
 
 
 describe('map selection flights', () => {
+  it('settles an already centered Tokyo selection without starting a flight', () => {
+    const map = { getZoom: () => 14, getCenter: () => ({ lat: 35.7, lng: 139.7 }), stop: vi.fn() };
+    mapRef.current = map;
+    const start = vi.fn(); const end = vi.fn();
+    render(<MapSelectionPoint lat={35.7} lng={139.7} onFlyStart={start} onFlyEnd={end} />);
+    expect(map.stop).toHaveBeenCalledOnce();
+    expect(start).not.toHaveBeenCalled();
+    expect(end).toHaveBeenCalledOnce();
+  });
   it('flies to Tokyo stations and clears the flight class on moveend', () => {
     const container = document.createElement('div');
     let done: (() => void) | undefined;
@@ -64,7 +73,7 @@ describe('map selection flights', () => {
     let done: (() => void) | undefined;
     const map = {
       getBoundsZoom: () => 14, getBounds: () => ({ contains: () => false }), getZoom: () => 10,
-      closePopup: vi.fn(), flyToBounds: vi.fn(),
+      closePopup: vi.fn(), flyToBounds: vi.fn(), stop: vi.fn(),
       on: vi.fn((_event, handler) => { done = handler; }), off: vi.fn(),
     };
     mapRef.current = map;

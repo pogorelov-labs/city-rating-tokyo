@@ -344,13 +344,14 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         )}
 
         <DistrictLayer isDistrictLevel={isDistrictLevel} scored={scored} shapes={GEOMETRY} passing={passing}
-          selected={selected} hovered={hovered} heatmapMode={heatmapMode} isTouch={isTouch} thumbnails={thumbnails}
+          selected={selected} hovered={hovered} heatmapMode={heatmapMode} isTouch={isTouch} thumbnails={thumbnails} snippets={snippets} weights={deferredWeights}
           colorFor={(d) => colorFor(d, anchors)}
           reasonsFor={(d) => dealbreakerReasons(d, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, city.defaultFilters).map((r) => reasonText(t, r))} />
 
         {level === 'station' && (
           <StationAreaLayer
             areas={scoredAreas}
+            thumbnails={thumbnails} snippets={snippets} weights={deferredWeights}
             shapes={AREA_GEOMETRY}
             passing={areaPassing}
             colorFor={(a) => colorFor(a, areaAnchors)}
@@ -416,8 +417,8 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         {selectedDistrict && !isTouch && !isFlying && GEOMETRY[selectedDistrict.slug] && (
           <Popup
             key={`popup-${selectedDistrict.slug}`}
-            position={GEOMETRY[selectedDistrict.slug].label}
-            autoPan={false}
+            className="area-guide-popup" closeButton={false} position={GEOMETRY[selectedDistrict.slug].label}
+            autoPan maxHeight={440} minWidth={280} maxWidth={340} autoPanPadding={[18, 18]}
             eventHandlers={{ remove: () => clearIfStillSelected(selectedDistrict.slug) }}
           >
             <DistrictPopupBody
@@ -435,12 +436,13 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         {selectedArea && !isTouch && !isFlying && (
           <Popup
             key={`popup-${selectedArea.slug}`}
-            position={[selectedArea.lat, selectedArea.lng]}
-            autoPan={false}
+            className="area-guide-popup" closeButton={false} position={[selectedArea.lat, selectedArea.lng]}
+            autoPan maxHeight={440} minWidth={280} maxWidth={340} autoPanPadding={[18, 18]}
             eventHandlers={{ remove: () => clearIfStillSelected(selectedArea.slug) }}
           >
             <StationAreaPopupBody
               area={selectedArea}
+              snippet={snippets[selectedArea.slug]}
               thumb={thumbnails[selectedArea.slug]?.thumb}
               color={colorFor(selectedArea, areaAnchors)}
               lineChip={lineChip}

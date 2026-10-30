@@ -26,6 +26,18 @@ npm run test:e2e:ui
 running on :3000 it is reused (locally); in CI a fresh one is started. Set
 `E2E_PORT` to an available port to run alongside another local server.
 
+To check an already running production build, set its URL explicitly. The
+harness then uses that server and does not start or stop one:
+
+```bash
+PLAYWRIGHT_BASE_URL=http://localhost:3011 npm run test:e2e
+```
+
+With a prepared standalone build, `E2E_PRODUCTION=1 npm run test:e2e` lets the
+harness start and stop the production server itself. Copy `app/public` into
+`app/.next/standalone/public` and `app/.next/static` into
+`app/.next/standalone/.next/static` first, as CI does.
+
 ## What's covered
 
 `smoke.spec.ts` verifies the core flows return HTTP 200 and render a
@@ -40,8 +52,11 @@ key piece of content:
 - Bangkok district tooltips render in Leaflet's tooltip pane (above the polygons)
 - Bangkok levels of detail — Stations (133 areas) and the 200 m grid (canvas, Best spots, top-5 pins)
 - A grid cell click opens its popup (`?lv=grid&s=cell.N`)
-- Station-area page `/bangkok/station/asok` — heading, next stops, translated radar legend
-- District page radar legend is real copy, not a message key
+- Station and district guides — comparison plot/table, commute bars, geographic
+  scope and expandable local facts
+- All three guide types in EN/JA/RU, including category evidence and rent sources
+- Destination, comparison and custom weights survive locale switching
+- Automated accessibility checks on the redesigned guide surfaces
 - City switch — weights carry over from Tokyo, yen filters do not
 - Canvas marker selection, desktop popup and district navigation; touch zoom
   retains the selected station at tablet width (`map-interactions.spec.ts`).
@@ -51,10 +66,11 @@ key piece of content:
 Intentionally **not** covered here:
 
 - **Visual regression** — handled by the `flyto-visual-test` skill.
-- **Performance capture** — handled by the `perf-capture` skill.
+- **Field performance** — local lab checks capture LCP and layout shifts;
+  they do not measure INP or field percentiles.
 
 ## CI
 
-The `e2e` job installs Chromium and runs `map-interactions.spec.ts` against a
-fresh dev server with retries disabled. Its failure fails the CI check; branch
+The `e2e` job builds the standalone app and runs the full suite against that
+production server with retries disabled. Its failure fails the CI check; branch
 protection must also require the `e2e` status for it to gate merging.

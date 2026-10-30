@@ -1,0 +1,47 @@
+{
+  "tokyo:station:kichijoji": {
+    "en": "Park walks, busy shopping streets and late-night dining on Tokyo’s west side. A lively base around Inokashira Park and Harmonica Yokocho.",
+    "ja": "井の頭公園の散歩、にぎやかな商店街、夜遅くまで楽しめる飲食店。東京の西側で、公園とハモニカ横丁を身近に感じられる活気ある街です。",
+    "ru": "Прогулки по парку, оживлённые торговые улицы и поздние ужины на западе Токио. Живой район рядом с парком Инокасира и переулками Хармоника-ёкотё."
+  },
+  "tokyo:station:nakano": {
+    "en": "Shopping arcades, small dining streets and pop culture around Nakano Broadway. A dense neighborhood on the Chuo line, with redevelopment around the station.",
+    "ja": "中野ブロードウェイを中心に、商店街、小さな飲食店街、ポップカルチャーが集まります。中央線沿いの密度の高い街で、駅周辺では再開発が進んでいます。",
+    "ru": "Торговые галереи, небольшие ресторанные улицы и поп-культура вокруг Nakano Broadway. Плотно застроенный район на линии Тюо; вокруг станции идёт реконструкция."
+  },
+  "tokyo:station:shinjuku": {
+    "en": "A major interchange surrounded by offices, shopping and a large evening economy. West-side towers, Shinjuku Gyoen and Kabukicho offer very different settings.",
+    "ja": "オフィス、商業施設、夜の繁華街が集まる大きな乗換駅。西口の高層街、新宿御苑、歌舞伎町では、周囲の環境が大きく異なります。",
+    "ru": "Крупный пересадочный узел среди офисов, магазинов и вечерних заведений. Высотные кварталы на западе, Синдзюку-гёэн и Кабуки-тё предлагают очень разную среду."
+  },
+  "bangkok:station:asok": {
+    "en": "An interchange between Asok on the BTS and Sukhumvit on the MRT. The mapped area has a dense mix of restaurants, cafés and evening venues.",
+    "ja": "BTSアソーク駅とMRTスクンビット駅の乗換エリアです。対象エリアには飲食店、カフェ、夜の施設が密集しています。",
+    "ru": "Пересадка между станциями Asok на BTS и Sukhumvit на MRT. В отмеченной зоне плотно расположены рестораны, кафе и вечерние заведения."
+  },
+  "bangkok:station:ari": {
+    "en": "A station area on the BTS Sukhumvit line, with a substantial mapped café and dining scene. Its rent figure is an estimate inherited from the district.",
+    "ja": "BTSスクンビット線の駅周辺で、地図には多くのカフェや飲食店が登録されています。家賃は行政区の評価を引き継いだ推定値です。",
+    "ru": "Зона станции на линии BTS Sukhumvit с большим выбором кафе и ресторанов по данным карты. Ориентир аренды унаследован от районной оценки."
+  },
+  "bangkok:station:phrom-phong": {
+    "en": "A BTS Sukhumvit station area with a dense mix of dining, fitness and evening options. The source’s asking-rent sample is skewed toward larger or luxury units.",
+    "ja": "BTSスクンビット線の駅周辺に、飲食店、スポーツ施設、夜の選択肢が集まります。家賃の掲載サンプルは大型・高級物件に偏っています。",
+    "ru": "Зона станции BTS Sukhumvit с плотным выбором ресторанов, спортивных и вечерних заведений. Выборка аренды у источника смещена к крупным или дорогим квартирам."
+  },
+  "bangkok:district:pathum-wan": {
+    "en": "Bangkok’s central shopping district, with extensive rail connections, major malls and Lumphini Park. High rents and busy streets are the main trade-offs.",
+    "ja": "充実した鉄道網、大型商業施設、ルンピニー公園があるバンコク中心部の商業エリアです。高い家賃と混雑した通りが主な検討点です。",
+    "ru": "Центральный торговый район Бангкока с развитой железнодорожной сетью, крупными торговыми центрами и парком Лумпини. Основные компромиссы — высокая аренда и оживлённые улицы."
+  },
+  "bangkok:district:sathon": {
+    "en": "Office towers and hotels along Sathorn Road, with quieter lanes in Suan Phlu and Yen Akat. Rail access and the feel of daily life vary across the district.",
+    "ja": "サートーン通り沿いにオフィスタワーやホテルが並び、スアンプルーやイェンアーカートには落ち着いた路地があります。鉄道アクセスや暮らしの雰囲気は区内でも異なります。",
+    "ru": "Офисные башни и отели вдоль Sathorn Road соседствуют с более спокойными переулками Suan Phlu и Yen Akat. Доступ к железной дороге и повседневная среда различаются по району."
+  },
+  "bangkok:district:bang-na": {
+    "en": "Bangkok’s southeastern stretch of Sukhumvit, with condos near the BTS and residential streets around La Salle and Udom Suk. More affordable reference rents, with longer trips to central hubs.",
+    "ja": "バンコク南東部のスクンビット沿いで、BTS付近のコンドミニアムとラサール、ウドムスック周辺の住宅街が広がります。参考家賃は低めですが、中心拠点までは時間がかかります。",
+    "ru": "Юго-восточный участок Sukhumvit в Бангкоке: кондоминиумы у BTS и жилые улицы вокруг La Salle и Udom Suk. Ориентиры аренды ниже, но поездки к центральным узлам дольше."
+  }
+}

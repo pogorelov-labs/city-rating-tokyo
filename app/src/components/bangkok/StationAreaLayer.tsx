@@ -1,15 +1,12 @@
 'use client';
 
-import RentNote from '@/components/bangkok/RentNote';
+import CompactAreaCard from '@/components/area/CompactAreaCard';
 import { useDelayedHover } from '@/lib/use-delayed-hover';
 
 import { useEffect, useRef } from 'react';
 import { Pane, Polygon, Tooltip } from 'react-leaflet';
-import { useLocale, useTranslations } from 'next-intl';
-import type { Locale } from '@/i18n/routing';
-import type { MapStation } from '@/lib/types';
-import { formatRentShort } from '@/lib/cities';
-import { stationDisplayName } from '@/lib/station-name';
+import { useTranslations } from 'next-intl';
+import type { MapStation, WeightConfig } from '@/lib/types';
 
 type LatLng = [number, number];
 export interface AreaShape {
@@ -21,6 +18,9 @@ export type ScoredArea = MapStation & { score: number | null };
 
 interface Props {
   areas: ScoredArea[];
+  weights: WeightConfig;
+  thumbnails: Record<string, { thumb: string; lqip: string }>;
+  snippets: Record<string, string>;
   shapes: Record<string, AreaShape>;
   passing: Set<string>;
   colorFor: (a: ScoredArea) => string;
@@ -44,6 +44,7 @@ interface Props {
  */
 export default function StationAreaLayer({
   areas,
+  weights, thumbnails, snippets,
   shapes,
   passing,
   colorFor,
@@ -53,13 +54,10 @@ export default function StationAreaLayer({
   heatmapMode,
   isTouch,
   reasonsFor,
-  lineChip,
-  districtName,
   onSelect,
   onHover,
 }: Props) {
   const t = useTranslations();
-  const locale = useLocale() as Locale;
   const hoverClear = useDelayedHover();
   const pendingClick = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(
@@ -77,7 +75,6 @@ export default function StationAreaLayer({
         const pass = passing.has(a.slug);
         const isSel = a.slug === selected;
         const isHov = a.slug === hovered;
-        const names = stationDisplayName(a, locale);
         const reasons = pass ? [] : reasonsFor(a);
         return (
           <Polygon
@@ -111,35 +108,10 @@ export default function StationAreaLayer({
           >
             {!isTouch && !isSel && (
               // Explicit pane, or react-leaflet puts it under this pane's polygons.
-              <Tooltip pane="tooltipPane" sticky direction="top" offset={[0, -12]} opacity={1} className="district-tooltip">
-                <div style={{ minWidth: 190, maxWidth: 250 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'baseline' }}>
-                    <div style={{ minWidth: 0 }}>
-                      <div style={{ fontWeight: 700, fontSize: 14 }}>{names.primary}</div>
-                      <div style={{ color: '#6b7280', fontSize: 12 }}>{names.secondary}</div>
-                    </div>
-                    {a.score !== null && (
-                      <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>{a.score.toFixed(1)}</div>
-                    )}
-                  </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 4 }}>
-                    {(a.line_ids ?? []).map((lid) => {
-                      const chip = lineChip(lid);
-                      if (!chip) return null;
-                      return (
-                        <span key={lid} style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 10, color: '#374151' }}>
-                          <span style={{ width: 8, height: 8, borderRadius: 9999, backgroundColor: chip.color, display: 'inline-block' }} />
-                          {chip.name}
-                        </span>
-                      );
-                    })}
-                  </div>
-                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
-                    {a.district && districtName(a.district)}
-                    {a.rent_1k != null && <> · ~{formatRentShort('bangkok', a.rent_1k)}/mo</>}
-                    {a.rent_provenance && <RentNote rent={a.rent_provenance} compact />}
-                    {a.min_transit != null && <> · {t('map.cellCommute', { minutes: a.min_transit })}</>}
-                  </div>
+              <Tooltip pane="tooltipPane" sticky direction="top" offset={[0, -12]} opacity={1} className="station-tooltip">
+                <div>
+                  <CompactAreaCard area={a} city="bangkok" score={a.score} weights={weights}
+                    thumbnail={thumbnails[a.slug]} snippet={snippets[a.slug]} variant="hover" />
                   {reasons.length > 0 && (
                     <div style={{ fontSize: 11, color: '#b45309', marginTop: 4 }}>
                       {t('map.filteredOut')}: {reasons.join(', ')}

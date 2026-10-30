@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+import { DEFAULT_WEIGHTS } from '@/lib/types';
 import { act, render } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { ScoredArea } from './StationAreaLayer';
@@ -10,6 +11,7 @@ vi.mock('react-leaflet', () => ({
   Tooltip: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
 }));
 vi.mock('next-intl', () => ({ useTranslations: () => (key: string) => key, useLocale: () => 'en' }));
+vi.mock('@/components/area/CompactAreaCard', () => ({ default: () => null }));
 import StationAreaLayer from './StationAreaLayer';
 
 afterEach(() => vi.useRealTimers());
@@ -18,7 +20,7 @@ describe('station area interactions', () => {
     vi.useFakeTimers();
     const onHover = vi.fn(); const onSelect = vi.fn();
     const area = { slug: 'st.asok', name_en: 'Asok', name_jp: 'アソーク', lat: 13.7, lng: 100.5, score: 5 } as ScoredArea;
-    render(<StationAreaLayer areas={[area]} shapes={{ asok: { bbox: [[13.7,100.5],[13.8,100.6]], polygons: [] } }} passing={new Set(['st.asok'])}
+    render(<StationAreaLayer weights={DEFAULT_WEIGHTS} thumbnails={{}} snippets={{}} areas={[area]} shapes={{ asok: { bbox: [[13.7,100.5],[13.8,100.6]], polygons: [] } }} passing={new Set(['st.asok'])}
       colorFor={() => '#fff'} filteredFill="#ddd" selected={null} hovered={null} heatmapMode={false} isTouch
       reasonsFor={() => []} lineChip={() => null} districtName={() => ''} onSelect={onSelect} onHover={onHover} />);
     act(() => { events.current.mouseout(); vi.advanceTimersByTime(100); events.current.mouseover(); vi.advanceTimersByTime(75); });
