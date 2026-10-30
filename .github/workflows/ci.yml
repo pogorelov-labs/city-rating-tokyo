@@ -27,11 +27,7 @@ jobs:
       - run: npm run test
       - run: npx tsc --noEmit
       - run: npm run build
-      # Runtime deps only. The dev chain (eslint-config-next + next-sitemap ->
-      # micromatch -> braces, GHSA-vfj7-8cjw-p6xm) has no released fix: braces
-      # 3.0.4 does not exist yet — advisory unfixed ecosystem-wide, build-time
-      # only, never shipped. Re-add the full audit once braces ships the fix.
-      - run: npm audit --omit=dev --audit-level=moderate
+      - run: npm audit --audit-level=moderate
       # Production uses this Dockerfile with app/ as its build context. The
       # container must type-check and build without files from the checkout's
       # parent directories, as it does during deployment.
@@ -130,4 +126,11 @@ jobs:
       - run: npm ci
       - run: npm ci --prefix app
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e -- e2e/map-interactions.spec.ts --retries=0
+      - run: npm run build --prefix app
+      - name: Prepare standalone browser-test assets
+        run: |
+          cp -r app/public app/.next/standalone/public
+          cp -r app/.next/static app/.next/standalone/.next/static
+      - run: npm run test:e2e -- --retries=0
+        env:
+          E2E_PRODUCTION: '1'

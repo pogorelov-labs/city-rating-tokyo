@@ -223,6 +223,9 @@ export interface MapStation {
   /** Monthly rent for the city's reference unit, in the city's currency:
    *  JPY for a Tokyo 1K–1LDK, THB for a Bangkok 1-bedroom condo. */
   rent_1k: number | null;
+  /** Small rent labels for previews; never the full per-category metadata. */
+  rent_source?: string;
+  rent_updated?: string;
   /** Bangkok only: enough provenance to explain rent in maps and previews. */
   rent_provenance?: BangkokRentProvenance;
   min_transit: number | null;

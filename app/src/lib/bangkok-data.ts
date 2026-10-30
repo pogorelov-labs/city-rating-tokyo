@@ -2,6 +2,7 @@ import districtsData from '@/data/bangkok/districts.json';
 import zoneFlagsData from '@/data/entertainment/bangkok-area-flags.json';
 import railData from '@/data/bangkok/rail.json';
 import stationAreasData from '@/data/bangkok/stations.json';
+import areaGuideCopy from '@/data/area-guide-copy.json';
 import type { BangkokRentProvenance, District, DistrictRent, MapStation, RailLine, RailStation, StationArea } from './types';
 import type { Locale } from '@/i18n/routing';
 import { stationAreaKey } from './area-key';
@@ -113,8 +114,12 @@ export function getBangkokThumbnails(): Record<string, { thumb: string; lqip: st
 export function getBangkokSnippets(locale: Locale): Record<string, string> {
   const out: Record<string, string> = {};
   for (const d of districts) {
-    const atmo = d.description?.[locale]?.atmosphere;
+    const atmo = (areaGuideCopy as Record<string, Record<Locale, string>>)[`bangkok:district:${d.slug}`]?.[locale] ?? d.description?.[locale]?.atmosphere;
     if (atmo) out[d.slug] = atmo.length > 140 ? `${atmo.slice(0, 140).trimEnd()}…` : atmo;
+  }
+  for (const area of areas) {
+    const summary = (areaGuideCopy as Record<string, Record<Locale, string>>)[`bangkok:station:${area.id}`]?.[locale];
+    if (summary) out[stationAreaKey(area.id)] = summary.length > 140 ? `${summary.slice(0, 140).trimEnd()}…` : summary;
   }
   return out;
 }

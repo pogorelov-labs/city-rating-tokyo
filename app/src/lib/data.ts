@@ -8,6 +8,7 @@ import wardData from '@/data/ward-data.json';
 import lastTrainsData from '@/data/last-trains.json';
 import livecamsData from '@/data/livecams.json';
 import generatedDescriptionsData from '@/data/generated-descriptions.json';
+import areaGuideCopy from '@/data/area-guide-copy.json';
 import { Station, MapStation, RentAvg, EnvironmentData, LineInfo, WardInfo, LastTrainInfo, LiveCamera, MultilingualDescription } from './types';
 import { isStationLevelRent, rentToAffordability } from './scoring';
 import type { Locale } from '@/i18n/routing';
@@ -122,6 +123,8 @@ export function getMapStations(): MapStation[] {
       line_count: s.line_count,
       ratings: s.ratings,
       rent_1k: s.rent_avg?.['1k_1ldk'] ?? null,
+      rent_source: s.rent_avg?.source,
+      rent_updated: s.rent_avg?.updated,
       min_transit: minTransit,
       elevation_m: s.environment?.elevation_m ?? null,
       seismic_risk_tier: s.environment?.seismic_risk_tier ?? null,
@@ -145,7 +148,7 @@ export function getThumbnails(): Record<string, { thumb: string; lqip: string }>
 export function getSnippets(locale: Locale): Record<string, string> {
   const snippets: Record<string, string> = {};
   for (const [slug, desc] of Object.entries(generatedDescriptions)) {
-    const atmo = desc[locale]?.atmosphere;
+    const atmo = (areaGuideCopy as Record<string, Record<Locale, string>>)[`tokyo:station:${slug}`]?.[locale] ?? desc[locale]?.atmosphere;
     if (atmo) {
       snippets[slug] = atmo.length > 120 ? atmo.slice(0, 120) + '...' : atmo;
     }

@@ -6,6 +6,8 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  turbopack: { root: __dirname },
+  outputFileTracingRoot: __dirname,
   poweredByHeader: false,
   async redirects() {
     // 301 redirects for renamed station slugs (wapuro→Hepburn romanization fix)

@@ -10,6 +10,34 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## v0.2.0 — Unreleased
+
+Station and district guides redesigned for all 1,676 areas in English,
+Japanese and Russian.
+
+### What changed
+
+- Clearer place summaries, strengths and tradeoffs, with rent and selected
+  commute estimates near the top.
+- Category comparison plots with current city and area-level medians, nearby
+  comparisons, and expandable evidence and source context.
+- Selectable commute bars and maps showing the actual Bangkok area boundaries
+  or a clearly labeled Tokyo orientation circle.
+- Consistent compact map cards on desktop and mobile, with visible detail,
+  comparison and close controls.
+- Preferences, destination and comparison selections survive language changes.
+
+### What to expect
+
+- Existing area URLs and ranking formulas remain compatible. The crowd-based
+  category is labeled “Less crowding” and remains separate from modeled
+  outdoor quietness.
+- Rent cohorts, asking-rent proxies and district estimates retain their
+  different source and coverage limits. Commute estimates are not live routing.
+- This is an interface release; it does not refresh the underlying datasets.
+
+[Release notes](docs/releases/v0.2.0.md)
+
 ## v0.1.2 — 2026-10-28
 
 ### Added

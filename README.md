@@ -1,11 +1,13 @@
 # City Rating — Tokyo + Bangkok
 
-Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open detail pages with rating breakdowns, confidence and source information.
+Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open localized guides with comparison plots, commute bars, area maps and expandable source information.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
 **Latest release:** [v0.1.2 — Bangkok MCP tools and map fixes](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Changelog](CHANGELOG.md)
+
+**Release candidate:** [v0.2.0 — Station and district guides](docs/releases/v0.2.0.md).
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
@@ -13,7 +15,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 
 - **Map** — weighted composite score; heatmap by category; compare and explore modes (see app for current UX).
 - **Filters** — presets, search, max commute (uses `transit_minutes` where present), rent band, min score.
-- **Station pages (SSG)** — stats, hub strip, radar vs Tokyo median, ten rating bars with confidence dots when pipeline metadata exists, feedback widget.
+- **Station and district guides (SSG, EN/JA/RU)** — clear rent cohorts and provenance, category comparisons against the correct city/level median or nearby areas, selectable commute bars, geographic scope, and expandable local facts and sources. Desktop, hover and touch map cards share one compact presentation; weights survive detail and locale navigation.
 
 ## Bangkok (district layer)
 
@@ -37,7 +39,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 | Gym & Sports | 4% | Tokyo OSM; Bangkok Overture + OSM |
 | Vibe | 4% | Cultural / pedestrian signals + documented editorial overrides |
 | Nightlife | 8% | Tokyo HotPepper + OSM; Bangkok Overture + OSM |
-| Quietness | 4% | Tokyo passengers + fallbacks; Bangkok WorldPop (districts) / place density (finer levels) |
+| Less crowding | 4% | Tokyo passengers + fallbacks; Bangkok WorldPop (districts) / place density (finer levels) |
 
 Weights match [`packages/schema/constants.json`](packages/schema/constants.json).
 

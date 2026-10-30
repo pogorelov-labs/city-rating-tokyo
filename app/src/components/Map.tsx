@@ -11,10 +11,7 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
-import { stationDisplayName } from '@/lib/station-name';
-import type { Locale } from '@/i18n/routing';
 import {
   compositeToColor,
   scoreToColor,
@@ -23,12 +20,12 @@ import {
 import { useScoredAreas } from '@/lib/scoring-react';
 import { useAppStore, useCityState, useCityActions } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
-import { formatRentShort } from '@/lib/cities';
+import CompactAreaCard from './area/CompactAreaCard';
+import LeafletAreaCard from './area/LeafletAreaCard';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { useDelayedHover } from '@/lib/use-delayed-hover';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
-import { AreaCardActions, AreaCardMeta } from '@/components/area-card';
-import { MapContainerResize, TouchZoomControls, getSvgRenderer, StationTooltipHero } from './map-shared';
+import { MapContainerResize, TouchZoomControls, getSvgRenderer } from './map-shared';
 import { MapSelectionPoint, MapDeselect } from './map-selection';
 
 /**
@@ -70,8 +67,6 @@ interface MapViewProps {
 }
 
 export default function MapView({ stations, thumbnails = {}, snippets = {} }: MapViewProps) {
-  const t = useTranslations();
-  const locale = useLocale() as Locale;
   const city = useCity();
   const selectedStation = useCityState((s) => s.selectedStation);
   const hoveredStation = useCityState((s) => s.hoveredStation);
@@ -91,6 +86,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   // tooltip on that same marker (avoids tooltip+popup overlap on one target).
   const [openPopupSlug, setOpenPopupSlug] = useState<string | null>(null);
   const onFlyStart = useCallback(() => { setIsFlying(true); }, [setIsFlying]);
+  const onFlyCancel = useCallback(() => { setIsFlying(false); }, [setIsFlying]);
   const onFlyEnd = useCallback(() => {
     setIsFlying(false);
     // Auto-open popup after flyTo lands (desktop only — touch has no bound popup).
@@ -102,7 +98,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
   // Touch radius bump — meets WCAG 44px minimum at zoom 12+
   const TOUCH_RADIUS_BUMP = 4;
 
-  const { scored: scoredStations, anchors: compositeAnchors, passing: visibleStations } = useScoredAreas(stations, 'primary');
+  const { scored: scoredStations, anchors: compositeAnchors, passing: visibleStations, deferredWeights } = useScoredAreas(stations, 'primary');
 
   // Delay clearing hover when the pointer leaves the circle so moving toward
   // the Leaflet tooltip (above the marker) does not flicker the highlight.
@@ -152,6 +148,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           lng={flyTarget.lng}
           onFlyStart={onFlyStart}
           onFlyEnd={onFlyEnd}
+          onFlyCancel={onFlyCancel}
         />
       )}
       {isTouch && <TouchZoomControls />}
@@ -159,8 +156,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
       {sortedForRender.map((station) => {
         const score = station.score;
         const thumbEntry = thumbnails[station.slug];
-        // Snippets are Russian-only until CRTKY-109 provides multilingual descriptions
-        const snippet = locale === 'ru' ? snippets[station.slug] : undefined;
+        const snippet = snippets[station.slug];
 
         // Heatmap mode: color by selected dimension
         let displayValue: number | null = null;
@@ -251,116 +247,23 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
                 opacity={1}
                 className="station-tooltip"
               >
-                <div style={{ width: 260 }}>
-                  <StationTooltipHero
-                    key={`${station.slug}-${thumbEntry?.thumb ?? ''}`}
-                    slug={station.slug}
-                    thumb={thumbEntry?.thumb}
-                    lqip={thumbEntry?.lqip}
-                    nameEn={stationDisplayName(station, locale).primary}
-                    nameJp={stationDisplayName(station, locale).secondary}
-                    score={score}
-                    color={color}
-                  />
-                  <div style={{ padding: '8px 10px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                      <div style={{ minWidth: 0 }}>
-                        <div style={{ fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
-                          <span>{stationDisplayName(station, locale).primary}</span>
-                          {station.hasLiveCamera && (
-                            <span
-                              role="img"
-                              aria-label={t('filter.hasLiveCamera')}
-                              title={t('filter.hasLiveCamera')}
-                              style={{ fontSize: 14, lineHeight: 1 }}
-                            >
-                              📹
-                            </span>
-                          )}
-                        </div>
-                        <div style={{ color: '#6b7280', fontSize: 12 }}>{stationDisplayName(station, locale).secondary}</div>
-                      </div>
-                      {score !== null && (
-                        <div style={{ fontWeight: 700, fontSize: 18, color: '#1e293b' }}>
-                          {score.toFixed(1)}
-                        </div>
-                      )}
-                    </div>
-                    {snippet && (
-                      <div style={{
-                        fontSize: 11,
-                        color: '#4b5563',
-                        marginTop: 6,
-                        lineHeight: 1.4,
-                        display: '-webkit-box',
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden',
-                      }}>
-                        {snippet}
-                      </div>
-                    )}
-                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
-                      {t('filter.lines', { count: station.line_count })}
-                      {station.rent_1k && (
-                        <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <CompactAreaCard area={station} city={city.id} score={score} weights={deferredWeights}
+                  thumbnail={thumbEntry} snippet={snippet} variant="hover" />
               </Tooltip>
             )}
 
             {/* Click popup — desktop only. Touch uses MobileStationCard (bottom-docked). */}
             {!isTouch && (
             <Popup
-              autoPan={false}
+              className="area-guide-popup" autoPan closeButton={false} maxHeight={440} minWidth={280} maxWidth={340} autoPanPadding={[18, 18]}
               eventHandlers={{
                 add: () => setOpenPopupSlug(station.slug),
                 remove: () => setOpenPopupSlug((prev) => (prev === station.slug ? null : prev)),
               }}
             >
-              <div className="min-w-[180px]">
-                {/* Thumbnail header — shown on all platforms now (click ≥ hover) */}
-                {(thumbEntry?.thumb || thumbEntry?.lqip) && (
-                  <div style={{ margin: '-10px -12px 8px', overflow: 'hidden', borderRadius: '8px 8px 0 0' }}>
-                    <StationTooltipHero
-                      key={`popup-${station.slug}`}
-                      slug={station.slug}
-                      thumb={thumbEntry?.thumb}
-                      lqip={thumbEntry?.lqip}
-                      nameEn={stationDisplayName(station, locale).primary}
-                      nameJp={stationDisplayName(station, locale).secondary}
-                      score={score}
-                      color={color}
-                    />
-                  </div>
-                )}
-                <AreaCardMeta primary={stationDisplayName(station, locale).primary} secondary={stationDisplayName(station, locale).secondary}
-                  score={score} camera={station.hasLiveCamera} variant="tokyo" />
-                {score !== null ? (
-                  <>
-                    <div className="text-xs text-gray-500 mb-2">
-                      {t('filter.lines', { count: station.line_count })}
-                      {station.rent_1k && (
-                        <> · ~{formatRentShort(city.id, station.rent_1k)}/mo</>
-                      )}
-                    </div>
-                    {/* Snippet: shown on all platforms for full click-context */}
-                    {snippet && (
-                      <div className="text-xs text-gray-600 mb-2 line-clamp-3 leading-relaxed">
-                        {snippet}
-                      </div>
-                    )}
-                    <AreaCardActions city={city.id} slug={station.slug} isCompared={isCompared} compareFull={compareStations.length >= 3}
-                      onCompare={() => addCompareStation(station.slug)} onUncompare={() => removeCompareStation(station.slug)} />
-                  </>
-                ) : (
-                  <div className="text-xs text-gray-400">
-                    {t('filter.lines', { count: station.line_count })} &middot; {t('map.dataComingSoon')}
-                  </div>
-                )}
-              </div>
+              <LeafletAreaCard area={station} city={city.id} score={score} weights={deferredWeights}
+                thumbnail={thumbEntry} snippet={snippet} isCompared={isCompared} compareFull={compareStations.length >= 3}
+                onCompare={() => addCompareStation(station.slug)} onUncompare={() => removeCompareStation(station.slug)} />
             </Popup>
             )}
           </CircleMarker>

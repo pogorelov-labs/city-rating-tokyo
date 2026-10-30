@@ -29,9 +29,7 @@ test.describe('smoke', () => {
     const response = await page.goto('/station/shibuya');
     expect(response?.status()).toBe(200);
 
-    // The station display name renders in a bold header span. Shibuya is one
-    // of the canonical stations and always has full data.
-    await expect(page.getByText('Shibuya', { exact: true })).toBeVisible({
+    await expect(page.getByRole('heading', { name: 'Shibuya', level: 1 })).toBeVisible({
       timeout: 10_000,
     });
   });
@@ -61,8 +59,9 @@ test.describe('smoke', () => {
     expect(response?.status()).toBe(200);
 
     await expect(page.getByRole('heading', { name: 'Watthana', level: 1 })).toBeVisible({ timeout: 10_000 });
-    await expect(page.getByText('Rail stations')).toBeVisible();
-    await expect(page.getByText('Asok', { exact: true })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'How it compares' })).toBeVisible();
+    await page.locator('summary').filter({ hasText: 'Rail services & last trains' }).click();
+    await expect(page.locator('details[open]').getByText('Asok', { exact: true })).toBeVisible();
   });
 
   test('district map tooltips sit above the polygons', async ({ page }) => {
@@ -71,7 +70,7 @@ test.describe('smoke', () => {
     await expect(polygons).toHaveCount(50, { timeout: 15_000 });
     await polygons.nth(20).hover({ force: true });
     // In the tooltip pane — inside the polygons' own pane it rendered under them.
-    await expect(page.locator('.leaflet-tooltip-pane .district-tooltip')).toBeVisible({ timeout: 5_000 });
+    await expect(page.locator('.leaflet-tooltip-pane .station-tooltip')).toBeVisible({ timeout: 5_000 });
   });
 
   test('Bangkok levels of detail: districts → stations → 200 m grid', async ({ page }) => {
@@ -95,10 +94,13 @@ test.describe('smoke', () => {
     await page.goto('/bangkok?lv=grid&s=st.siam');
     await expect(page.locator('canvas.bkk-grid-canvas')).toBeVisible({ timeout: 15_000 });
     await page.waitForTimeout(1_500); // fly-to animation
-    const map = page.locator('.leaflet-container');
-    const box = (await map.boundingBox())!;
-    // A little south-east of the station dot (a dot click selects the area).
-    await page.mouse.click(box.x + box.width / 2 + 40, box.y + box.height / 2 + 60);
+    const popup = page.locator('.leaflet-popup');
+    await expect(popup).toBeVisible();
+    const tip = (await popup.locator('.leaflet-popup-tip-container').boundingBox())!;
+    await popup.getByRole('button', { name: 'Close area card' }).click();
+    await expect(popup).not.toBeVisible();
+    // Follow the station's actual screen anchor after the popup's auto-pan.
+    await page.mouse.click(tip.x + tip.width / 2 + 40, tip.y + tip.height + 60);
     await expect(page).toHaveURL(/s=cell\.\d+/, { timeout: 5_000 });
     await expect(page.locator('.leaflet-popup').getByText('Pathum Wan district →')).toBeVisible({ timeout: 5_000 });
   });
@@ -107,15 +109,17 @@ test.describe('smoke', () => {
     const response = await page.goto('/bangkok/station/asok');
     expect(response?.status()).toBe(200);
     await expect(page.getByRole('heading', { name: 'Asok / Sukhumvit', level: 1 })).toBeVisible({ timeout: 10_000 });
-    await expect(page.getByText('Next stops')).toBeVisible();
-    // Client-rendered radar: its legend must be real copy, not a message key.
-    await expect(page.getByText('Typical Bangkok station area (median)')).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByRole('heading', { name: 'Getting around' })).toBeVisible();
+    await expect(page.getByRole('table', { name: /Scores out of ten/ })).toBeVisible();
+    await page.locator('summary').filter({ hasText: 'All area facts & sources' }).click();
+    await expect(page.getByText('Places to eat & drink').last()).toBeVisible();
   });
 
-  test('district page radar legend is translated', async ({ page }) => {
+  test('district comparison reference is translated', async ({ page }) => {
     await page.goto('/bangkok/district/watthana');
-    await expect(page.getByText('Typical Bangkok district (median)')).toBeVisible({ timeout: 10_000 });
-    await expect(page.getByText('bangkok.district.radarMedianLabel')).toHaveCount(0);
+    await expect(page.getByRole('combobox', { name: 'Compare with' })).toHaveValue('median');
+    await expect(page.getByRole('option', { name: 'Typical district' })).toHaveCount(1);
+    await expect(page.getByText('areaGuide.comparison.typicalDistrict')).toHaveCount(0);
   });
 
   test('switching city keeps weights but not currency-bound filters', async ({ page }) => {

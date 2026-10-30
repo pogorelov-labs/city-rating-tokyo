@@ -64,7 +64,7 @@ describe('map selection flights', () => {
     let done: (() => void) | undefined;
     const map = {
       getBoundsZoom: () => 14, getBounds: () => ({ contains: () => false }), getZoom: () => 10,
-      closePopup: vi.fn(), flyToBounds: vi.fn(),
+      closePopup: vi.fn(), flyToBounds: vi.fn(), stop: vi.fn(),
       on: vi.fn((_event, handler) => { done = handler; }), off: vi.fn(),
     };
     mapRef.current = map;
