@@ -46,4 +46,14 @@ describe('shared station/district compact cards', () => {
     expect(remove).toHaveBeenCalledOnce();
     expect(compare).not.toHaveBeenCalled();
   });
+
+  it('closes without bubbling the click to the map wrapper', () => {
+    const close = vi.fn();
+    const mapClick = vi.fn();
+    render(<Providers><div onClick={mapClick}><CompactAreaCard area={station('alpha')} city="tokyo"
+      score={6} weights={DEFAULT_WEIGHTS} onClose={close} /></div></Providers>);
+    fireEvent.click(screen.getByRole('button', { name: messages.en.areaGuide.compact.close }));
+    expect(close).toHaveBeenCalledOnce();
+    expect(mapClick).not.toHaveBeenCalled();
+  });
 });

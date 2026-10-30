@@ -103,7 +103,8 @@ export default function CompactAreaCard({ area, city, score, weights, thumbnail,
             </button>}
           </div>
       )}
-      {onClose && <button className={styles.close} aria-label={closeLabel ?? t('compact.close')} onClick={onClose}>×</button>}
+      {onClose && <button className={styles.close} aria-label={closeLabel ?? t('compact.close')}
+        onClick={event => { event.stopPropagation(); onClose(); }}>×</button>}
     </article>
   );
 }
