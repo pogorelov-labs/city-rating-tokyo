@@ -28,7 +28,9 @@ describe('Bangkok compact map layers', () => {
     expect(trigger.querySelector('svg')).not.toHaveClass('md:hidden');
     expect(trigger.parentElement).toHaveClass('md:top-3');
     expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    expect(trigger.parentElement).toHaveClass('z-[1000]');
     fireEvent.click(trigger);
+    expect(trigger.parentElement).toHaveClass('z-[1003]');
     const panel = screen.getByRole('group', { name: 'Map layers' });
     const heat = within(panel).getByRole('button', { name: 'Heatmap' });
     fireEvent.click(heat);

@@ -61,7 +61,7 @@ export default function MapWrapper({ stations, thumbnails, snippets, prototypeRe
   const multiLevel = city.levels.length > 1;
 
   return (
-    <div className="map-workspace relative h-full w-full" data-selected={!!selected}>
+    <div className="map-workspace relative h-full w-full" data-selected={!!selected} data-city={city.id}>
       {city.unit === 'district'
         ? <BangkokMapRenderer stations={stations} thumbnails={thumbnails} snippets={snippets} defaultRenderer={bangkokRenderer} prototypeRenderer={prototypeRenderer} />
         : <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />}

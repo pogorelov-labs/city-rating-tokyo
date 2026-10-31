@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing, Locale } from '@/i18n/routing';
+import { prepareMapNavigation } from '@/lib/map-navigation-intent';
 
 const LOCALE_LABELS: Record<Locale, string> = {
   en: 'EN',
@@ -17,6 +18,7 @@ export default function LocaleSwitcher() {
 
   function switchLocale(next: Locale) {
     if (next === locale) return;
+    prepareMapNavigation();
     const query = Object.fromEntries(new URLSearchParams(window.location.search));
     router.replace({ pathname, query }, { locale: next });
   }

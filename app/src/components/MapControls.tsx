@@ -61,7 +61,7 @@ export default function MapControls() {
 
   const compact = city.id === 'bangkok' && narrow;
   if (compact) return (
-    <div ref={container} className="absolute top-14 md:top-3 right-3 z-[1000]" onKeyDown={(event) => { if (event.key === 'Escape' && open) { event.stopPropagation(); setOpen(false); } }}>
+    <div ref={container} className={`absolute top-14 md:top-3 right-3 ${open ? 'z-[1003]' : 'z-[1000]'}`} onKeyDown={(event) => { if (event.key === 'Escape' && open) { event.stopPropagation(); setOpen(false); } }}>
       <button type="button" aria-label={t('map.layers')} aria-expanded={open} onClick={() => setOpen(!open)} className="map-control-btn flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-700 shadow-sm focus-visible:outline-2 focus-visible:outline-blue-600"><LayersIcon compact /></button>
       {open && <div role="group" aria-label={t('map.layers')} className="absolute right-14 top-0 flex min-w-40 flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-lg">
         <button type="button" aria-pressed={showRailOverlay} onClick={() => setShowRailOverlay(!showRailOverlay)} data-umami-event="toggle-rail-overlay" className="min-h-11 rounded px-3 text-left text-sm hover:bg-slate-100">{t('map.railNetwork')}{showRailOverlay && <span aria-hidden="true"> ✓</span>}</button>

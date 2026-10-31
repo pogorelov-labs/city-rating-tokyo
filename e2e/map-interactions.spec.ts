@@ -96,7 +96,7 @@ async function districtPoint(page: Page) {
   });
 }
 
-test('canvas marker, popup, details and Bangkok district navigation', async ({ page }) => {
+test('canvas marker, popup, details and Bangkok district navigation', async ({ page }, testInfo) => {
   await observeCanvasMarkers(page);
   await page.goto('/?mr=100000');
   const map = page.locator('.leaflet-container');
@@ -110,6 +110,7 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
 
   const popup = page.locator('.leaflet-popup');
   await expect.poll(() => new URL(page.url()).searchParams.get('s'), { timeout: 15_000 }).toBeTruthy();
+  const selectedTokyo = new URL(page.url()).searchParams.get('s');
   await expect(map).not.toHaveClass(/map-flying/, { timeout: 15_000 });
   await expect(popup).toBeVisible({ timeout: 15_000 });
   const stationName = popup.getByRole('heading', { level: 2 });
@@ -120,10 +121,38 @@ test('canvas marker, popup, details and Bangkok district navigation', async ({ p
   await expect(popup.getByRole('button', { name: '+ Compare', exact: true })).toBeVisible();
   const stationDetails = popup.getByRole('link', { name: 'Explore this area', exact: true });
   await expect(stationDetails).toHaveAttribute('href', /\/station\//);
-  await stationDetails.click();
-  await expect(page).toHaveURL(/\/station\/[^/?]+/, { timeout: 12_000 });
+  // Keep interaction and navigation evidence only when this intermittent step fails.
+  const navigation: string[] = [];
+  page.on('request', request => { if (request.isNavigationRequest() || request.url().includes('/station/')) navigation.push(`request ${request.method()} ${request.url()}`); });
+  page.on('response', response => { if (response.url().includes('/station/')) navigation.push(`response ${response.status()} ${response.url()}`); });
+  await page.evaluate(() => {
+    const state = window as typeof window & { __guideClickEvents: string[] };
+    state.__guideClickEvents = [];
+    for (const method of ['pushState', 'replaceState'] as const) {
+      const original = history[method];
+      history[method] = function (...args: Parameters<History[typeof method]>) {
+        state.__guideClickEvents.push(`${method}: ${String(args[2])}\n${new Error().stack}`);
+        return original.apply(this, args);
+      };
+    }
+    for (const type of ['pointerdown', 'pointerup', 'click']) document.addEventListener(type, event => {
+      const target = event.target as Element | null;
+      const link = target?.closest('a[data-umami-event="view-details"]');
+      state.__guideClickEvents.push(`${type}: ${link?.getAttribute('href') ?? target?.tagName ?? 'none'}`);
+    }, true);
+  });
+  try {
+    await stationDetails.click();
+    await expect(page).toHaveURL(/\/station\/[^/?]+/, { timeout: 12_000 });
+  } catch (error) {
+    const clicks = await page.evaluate(() => (window as typeof window & { __guideClickEvents?: string[] }).__guideClickEvents ?? []);
+    await testInfo.attach('guide-navigation-diagnostics', { body: JSON.stringify({ clicks, navigation }), contentType: 'application/json' });
+    throw error;
+  }
   await page.goBack();
   await expect(page.locator('.leaflet-container')).toBeVisible();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe(selectedTokyo);
+  expect(new URL(page.url()).searchParams.get('mr')).toBe('100000');
 
   await page.getByRole('link', { name: 'Bangkok', exact: true }).click();
   await expect(page).toHaveURL(/\/bangkok/);

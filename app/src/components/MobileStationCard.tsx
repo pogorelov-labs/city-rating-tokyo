@@ -150,6 +150,7 @@ export default function MobileStationCard({
         marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))',
       }}
       role="dialog"
+      data-open={open}
       aria-label={names.primary}
     >
       <CompactAreaCard key={station.slug} area={station} city={city.id} score={score} weights={weights}

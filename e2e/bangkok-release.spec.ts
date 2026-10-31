@@ -289,7 +289,10 @@ test('short phone keeps 3D controls and selected card usable with air panel expa
     const attributionLink = page.getByRole('link', { name: 'OpenFreeMap' });
     if (!(await attributionLink.isVisible())) await attribution.tap({ timeout: 8_000 });
     await expect(attributionLink).toBeVisible();
-    await attribution.tap({ timeout: 8_000 });
+    await layers.tap({ timeout: 8_000 });
+    await page.getByRole('button', { name: 'Heatmap', exact: true }).tap({ trial: true, timeout: 8_000 });
+    await layers.tap({ timeout: 8_000 });
+    if (await attributionLink.isVisible()) await attribution.tap({ timeout: 8_000 });
     await expect(attributionLink).toBeHidden();
     expect(new URL(page.url()).searchParams.get('s')).toBe('st.asok');
     const card = page.getByRole('dialog');
@@ -349,4 +352,42 @@ test('grid-cell district and station guide links carry weights and return to the
     expect(params.get('adult')).toBe('1');
     expect(params.get('w')).toBe(weights);
   }
+});
+
+test('short phone standard fallback keeps card and map controls usable with air expanded', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 320, height: 568 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  try {
+    await page.addInitScript(() => {
+      const original = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (type: string, ...args: unknown[]) {
+        if (type === 'webgl' || type === 'webgl2' || type === 'experimental-webgl') return null;
+        return original.apply(this, [type, ...args] as Parameters<typeof original>);
+      } as typeof original;
+    });
+    await page.goto('/bangkok?lv=station&s=st.asok');
+    await page.addStyleTag({ content: 'nextjs-portal { display: none !important; }' });
+    await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 30_000 });
+    const card = page.getByRole('dialog');
+    const close = card.getByRole('button', { name: 'Close station card' });
+    await expect(close).toBeVisible();
+    await page.locator('summary').filter({ hasText: 'Bangkok: air and seasons' }).tap();
+    await expect(page.getByLabel('Map renderer')).toBeHidden();
+    await expect(page.getByRole('button', { name: 'Filters', exact: true })).toBeHidden();
+    await page.getByRole('button', { name: 'Map layers' }).tap({ timeout: 8_000 });
+    await page.getByRole('button', { name: 'Heatmap', exact: true }).tap({ timeout: 8_000 });
+    await page.getByRole('combobox', { name: 'Heatmap' }).selectOption('food', { timeout: 8_000 });
+    await page.getByRole('button', { name: 'Zoom in' }).tap({ timeout: 8_000 });
+    await page.getByRole('button', { name: 'Zoom out' }).tap({ timeout: 8_000 });
+    await expect(page.locator('.leaflet-control-attribution')).toBeVisible();
+    await card.getByRole('button', { name: '+ Compare', exact: true }).tap({ timeout: 8_000 });
+    await expect(card.getByRole('button', { name: 'Remove compare', exact: true })).toBeVisible();
+    const explore = card.getByRole('link', { name: en.areaGuide.compact.explore });
+    await expect(explore).toBeInViewport();
+    await explore.tap({ trial: true, timeout: 8_000 });
+    await close.tap({ timeout: 8_000 });
+    await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+    await expect(page.getByLabel('Map renderer')).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Filters', exact: true })).toBeVisible();
+  } finally { await context.close(); }
 });

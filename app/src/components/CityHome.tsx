@@ -83,7 +83,7 @@ export default async function CityHome({ city, stations, stationAreas, thumbnail
           </div>
         </aside>
 
-        <main className="flex-1 relative">
+        <main className="map-area-shell flex-1 relative">
           {profile('map-ui', <MapWrapper stations={stations} thumbnails={thumbnails} snippets={snippets} prototypeRenderer={prototypeRenderer} bangkokRenderer={resolveBangkokRenderer(process.env.BANGKOK_MAP_RENDERER)} />)}
           <MobileSearchPill stations={stations} />
           {profile('mobile-drawer', <MobileDrawer stations={stations} />)}

@@ -11,3 +11,13 @@
     .map-workspace[data-selected="true"] .map-renderer-selector { display: none; }
   }
 }
+
+/* The launcher is a sibling of the map; yield only while a touch card is
+   actually open, so flight transitions and failed cell loads keep it usable. */
+.map-area-shell:has(.map-touch-card[data-open="true"], .map-touch-cell) .mobile-filter-launcher { display: none; }
+@container (max-width: 767px) and (max-height: 359px) {
+  /* Clear the layer toolbar while leaving Leaflet attribution at the bottom. */
+  .map-workspace[data-city="bangkok"] .leaflet-touch-zoom {
+    margin-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
