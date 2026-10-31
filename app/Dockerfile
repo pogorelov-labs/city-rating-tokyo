@@ -3,7 +3,9 @@ FROM node:20-alpine AS base
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
+# The lint adapter is a packed local dependency, resolved entirely inside app/.
+COPY package.json package-lock.json .npmrc ./
+COPY tooling/minimatch-compat ./tooling/minimatch-compat
 RUN npm ci
 
 # Rebuild source code only when needed

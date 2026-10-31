@@ -77,7 +77,7 @@ map controllers, shared cards/details and the app/browser test boundaries.
 
 ## Getting started
 
-Use **Node.js 20 and npm**, matching [CI](.github/workflows/ci.yml). From a fresh
+Use **Node.js 20.19 or later in the 20.x line and npm**, matching [CI](.github/workflows/ci.yml). From a fresh
 clone, the map and detail pages use the committed datasets; Python, datastore
 credentials and raw acquisition caches are not required for this preview.
 

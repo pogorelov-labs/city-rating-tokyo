@@ -63,7 +63,7 @@ Do not "improve" this sniff to be smarter — old shared URLs depend on the exac
 ## Releases
 
 Follow the [release runbook](docs/RELEASING.md): update the changelog and release
-notes, pass `build`, `schema`, `mcp` and `bangkok` on both the PR and main merge
+notes, pass `build`, `schema`, `mcp`, `bangkok` and `e2e` on both the PR and main merge
 commit, then publish an annotated version tag and GitHub release when release
 publication is authorized. v0.1.0 was the first release; v0.1.1 packages the
 separately merged Bangkok refresh. Release version bumps update the app package
@@ -156,6 +156,7 @@ Scrapers run in a private operational environment. They are incremental and safe
 ## Testing
 
 - **ESLint** (`cd app && npm run lint`): Next.js + TypeScript + React hooks / React Compiler rules. Runs in CI's `build` job; errors fail it, warnings don't
+- **Lint-toolchain contracts** (`cd app && npm run test:toolchain`): native Node tests verify the [temporary minimatch bridge](app/tooling/minimatch-compat/README.md), patched-engine resolution and actual lint-rule enforcement. These also run before Vitest through `npm test`; the full dependency audit remains required.
 - **Vitest** (`cd app && npm test`): scoring pure functions, URL state round-trip, dealbreaker filtering
 - **pytest** (`pytest` from repo root): `compute-ratings.py` normalization/caps, cross-language schema parity
 - **Playwright**: the required `e2e` CI job runs the browser smoke suite without retries. See [e2e/README.md](e2e/README.md) for local setup and the current CI selection.

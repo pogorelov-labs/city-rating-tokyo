@@ -1,0 +1,20 @@
+{
+  "name": "@city-rating/minimatch-compat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Narrow ESLint compatibility bridge to the patched minimatch engine",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": {
+      "require": "./index.mjs",
+      "import": "./index.mjs"
+    }
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "dependencies": {
+    "minimatch-core": "npm:minimatch@11.0.3"
+  }
+}

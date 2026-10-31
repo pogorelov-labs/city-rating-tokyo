@@ -27,7 +27,7 @@ resources and state; an unsuccessful recovery falls back to the standard map.
 
 ## Build and recovery
 
-Use Node 20 and the committed npm lockfile. `predev` and `prebuild` copy the worker
+Use Node 20.19+ and the committed npm lockfile. `predev` and `prebuild` copy the worker
 from the pinned MapLibre dependency to the versioned `/map-assets/` path. That
 worker is a generated build asset and must be included in the deployed public
 files. The dependency's full license notices are copied alongside it at the
