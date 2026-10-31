@@ -75,8 +75,13 @@ Intentionally **not** covered here:
 The `e2e` job installs Chromium, builds the normal app with the lab disabled,
 packages its public/static assets, and runs the full suite against the
 standalone server with retries disabled. CI uses software WebGL for functional
-coverage, not performance measurements. Its failure fails the CI check; branch
-protection must also require the `e2e` status for it to gate merging.
+coverage, not performance measurements. On Linux CI, both suites use the
+full Chromium browser's new headless mode, as described in
+[Playwright's browser guide](https://playwright.dev/docs/browsers#chromium-new-headless-mode).
+Local browser selection remains unchanged. Failed runs retain browser traces,
+screenshots and the standalone server log for seven days. A test failure fails
+the CI check; branch protection must also require the `e2e` status for it to
+gate merging.
 
 ## Bangkok renderer release checks
 

@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  * The map interaction spec also runs in CI. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
+const ciLinux = isCI && process.platform === 'linux';
 const externalBaseURL = process.env.E2E_BASE_URL || process.env.PLAYWRIGHT_BASE_URL;
 const production = process.env.E2E_PRODUCTION === '1';
 const port = process.env.E2E_PORT || '3000';
@@ -37,9 +38,10 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        channel: ciLinux ? 'chromium' : undefined,
         // CI's headless Linux browser may not have a hardware GPU. These
         // flags exercise rendering functionality, not performance.
-        launchOptions: isCI && process.platform === 'linux' ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
+        launchOptions: ciLinux ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
       },
     },
   ],

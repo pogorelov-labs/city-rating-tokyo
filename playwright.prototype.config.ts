@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+const ciLinux = !!process.env.CI && process.platform === 'linux';
 const port = process.env.E2E_PORT || '3170';
 const baseURL = process.env.E2E_BASE_URL || `http://localhost:${port}`;
 export default defineConfig({
@@ -6,7 +7,8 @@ export default defineConfig({
   timeout: 60_000, reporter: 'list',
   use: {
     baseURL, ...devices['Desktop Chrome'], screenshot: 'only-on-failure',
-    launchOptions: process.env.CI && process.platform === 'linux'
+    channel: ciLinux ? 'chromium' : undefined,
+    launchOptions: ciLinux
       ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
   },
   webServer: process.env.E2E_BASE_URL ? undefined : { command: `cd app && BANGKOK_RENDERER_LAB=1 npm run dev -- --port ${port}`,
