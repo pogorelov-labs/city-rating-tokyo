@@ -57,7 +57,10 @@ key piece of content:
 - All three guide types in EN/JA/RU, including category evidence and rent sources
 - Destination, comparison and custom weights survive locale switching
 - Automated accessibility checks on the redesigned guide surfaces
-- City switch — weights carry over from Tokyo, yen filters do not
+- City switching in both directions in EN/JA/RU — a fresh browser context
+  restores all ten custom weights without the source city's filters
+- Tokyo seismic labels and legends in EN/JA/RU, including real probabilities
+  near a band boundary and the inclusive 26% filter caption
 - Canvas marker selection, desktop popup and district navigation; touch zoom
   retains the selected station at tablet width (`map-interactions.spec.ts`).
 - Phone-width selected-area cards, zoom and Close controls, including the

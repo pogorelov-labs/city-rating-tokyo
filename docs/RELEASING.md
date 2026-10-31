@@ -175,7 +175,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.2.0 needs **no database migration**. Check production deployment status/logs
+v0.2.1 needs **no database migration**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale
