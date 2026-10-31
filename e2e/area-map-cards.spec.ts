@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import en from '../app/src/messages/en/common.json';
 import ja from '../app/src/messages/ja/common.json';
 import ru from '../app/src/messages/ru/common.json';
+import { useStandardBangkokMap } from './support';
 
 const locales = [{ prefix: '', messages: en }, { prefix: '/ja', messages: ja }, { prefix: '/ru', messages: ru }];
 const areas = [
@@ -13,10 +14,12 @@ const areas = [
 for (const touch of [false, true]) {
   test.describe(touch ? 'touch compact cards' : 'desktop compact cards', () => {
     test.use({ viewport: touch ? { width: 390, height: 844 } : { width: 1280, height: 800 }, isMobile: touch, hasTouch: touch });
-    for (const { prefix, messages } of locales) for (const area of areas) {
-      test(`${prefix || '/en'} ${area.name}`, async ({ page }) => {
+    for (const { prefix, messages } of locales) for (const area of areas) for (const standard of area.city === 'bangkok' ? [false, true] : [false]) {
+      test(`${prefix || '/en'} ${area.name}${standard ? ' standard map' : ''}`, async ({ page }) => {
         await page.goto(`${prefix}${area.query}`);
-        const card = touch ? page.getByRole('dialog').filter({ has: page.getByRole('link', { name: messages.areaGuide.compact.explore }) }) : page.locator('.area-guide-popup');
+        if (standard) await useStandardBangkokMap(page);
+        const card = touch ? page.getByRole('dialog').filter({ has: page.getByRole('link', { name: messages.areaGuide.compact.explore }) })
+          : area.city === 'bangkok' && !standard ? page.getByRole('region', { name: messages.map.selectedArea }) : page.locator('.area-guide-popup');
         await expect(card).toBeVisible({ timeout: 30_000 });
         await expect(card.getByText(`${messages.areaGuide.cities[area.city]} · ${messages.areaGuide.kinds[area.kind]}`, { exact: true })).toBeVisible();
         await expect(card.getByText(`${area.city === 'tokyo' ? messages.areaGuide.rent.smallTokyo : messages.areaGuide.rent.oneBedroom} ${messages.areaGuide.rent.perMonth}`, { exact: true })).toBeVisible();

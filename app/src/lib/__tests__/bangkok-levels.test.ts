@@ -15,6 +15,7 @@ import stationsData from '@/data/bangkok/stations.json';
 import stationGeometry from '@/data/bangkok/station-geometry.json';
 import railData from '@/data/bangkok/rail.json';
 import meta from '@/data/bangkok/meta.json';
+import entertainmentZones from '@/data/entertainment/zones.json';
 import { cellKey, parseAreaKey, stationAreaKey } from '../area-key';
 import { CITIES, areaPath, isAreaLevel } from '../cities';
 import { decodeParamsToState, encodeStateToParams, selectUrlView } from '../url-state';
@@ -237,7 +238,7 @@ function syntheticGrid(): BangkokGrid {
     crowd: [10, 5, 1, 7, 3, 0],
     district: [1, 1, 2, 2, 2, 0],
     weight: [250, 250, 25, 250, 200, 0],
-    hub_siam: [10, 40, 90, 20, 60, 0],
+    hub_siam: [5, 40, 90, 20, 60, 0],
     hub_asok: [15, 30, 80, 25, 70, 0],
     station: [1, 1, 1, 1, 1, 0],
     station_dist: [10, 60, 255, 20, 30, 0],
@@ -324,6 +325,8 @@ describe('grid scoring, dealbreakers, best spots', () => {
     expect(Array.from(cheap)).toEqual([0, 0, 1, 1, 1, 0]);
     const fast = passMask(g, { ...d, maxCommute: 30, categoryMins: {} }, d, DISTRICTS);
     expect(Array.from(fast)).toEqual([1, 1, 0, 1, 0, 0]);
+    const notTooClose = passMask(g, { ...d, minCommute: 15, categoryMins: {} }, d, DISTRICTS);
+    expect(Array.from(notTooClose)).toEqual([0, 1, 1, 1, 1, 0]);
     const foodie = passMask(g, { ...d, categoryMins: { food: 7, safety: 7 } }, d, DISTRICTS);
     expect(Array.from(foodie)).toEqual([1, 0, 0, 0, 0, 0]);
     expect(countPassing(g, foodie).km2).toBeCloseTo(0.04);
@@ -375,5 +378,35 @@ describe('the committed grid file', () => {
     expect(info.stationDistanceM!).toBeLessThanOrEqual(200);
     expect(info.hubMinutes.siam).toBeLessThanOrEqual(5);
     expect(info.ratings.food).toBeGreaterThanOrEqual(9);
+  });
+
+  it('keeps every cell with default filters and applies adult zones to cell centers', () => {
+    const districts = getBangkokMapDistricts().map((d) => ({ ratings: d.ratings!, rent_1k: d.rent_1k }));
+    const defaults = CITIES.bangkok.defaultFilters;
+    const all = passMask(grid, defaults, defaults, districts);
+    const family = passMask(grid, defaults, defaults, districts, false, true);
+    expect(countPassing(grid, all).cells).toBe(grid.cells.length);
+
+    // Independently check every delivered cell against the curated circles,
+    // including a club district that must not itself trigger the family filter.
+    const zones = entertainmentZones.zones.filter((z) => z.city === 'bangkok' && z.kind === 'adult_entertainment');
+    const rad = Math.PI / 180;
+    let expectedExcluded = 0;
+    let mismatches = 0;
+    for (const i of grid.cells) {
+      const [lat, lng] = cellCenter(grid.header, i);
+      const excluded = zones.some((z) => {
+        const a = Math.sin((lat - z.lat) * rad / 2) ** 2 + Math.cos(lat * rad) * Math.cos(z.lat * rad) *
+          Math.sin((lng - z.lng) * rad / 2) ** 2;
+        return 2 * 6_371_000 * Math.asin(Math.sqrt(a)) <= z.radius_m;
+      });
+      if (excluded) expectedExcluded++;
+      if (family[i] !== (excluded ? 0 : 1)) mismatches++;
+    }
+    expect(expectedExcluded).toBeGreaterThan(0);
+    expect(mismatches).toBe(0);
+    expect(countPassing(grid, family).cells).toBe(grid.cells.length - expectedExcluded);
+    expect(family[cellAt(grid, 13.7376, 100.5621)]).toBe(0); // Soi Cowboy
+    expect(family[cellAt(grid, 13.7498, 100.5759)]).toBe(1); // RCA: club district
   });
 });

@@ -8,6 +8,8 @@ import { useCity } from '@/lib/city-context';
 import { useAllAreas } from '@/lib/area-lists';
 import MapControls from './MapControls';
 import UrlSync from './UrlSync';
+import type { BangkokRenderer } from '@/lib/bangkok-prototype';
+import './map-workspace.css';
 
 export function MapLoading() {
   const t = useTranslations('loading');
@@ -21,10 +23,7 @@ const MapView = dynamic(() => import('./Map'), {
 
 // Bangkok: district polygons + rail overlay. A separate chunk, so the Tokyo
 // homepage never downloads the district geometry (and vice versa).
-const DistrictMapView = dynamic(() => import('./DistrictMap'), {
-  ssr: false,
-  loading: MapLoading,
-});
+const BangkokMapRenderer = dynamic(() => import('./bangkok/BangkokMapRenderer'), { ssr: false, loading: MapLoading });
 
 // ComparePanel imports recharts (CompareRadarChart). Load it only when the
 // user has actually queued 2+ stations for comparison.
@@ -46,22 +45,26 @@ interface MapWrapperProps {
   stations: MapStation[];
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
+  prototypeRenderer?: BangkokRenderer;
+  bangkokRenderer: BangkokRenderer;
 }
 
-export default function MapWrapper({ stations, thumbnails, snippets }: MapWrapperProps) {
+export default function MapWrapper({ stations, thumbnails, snippets, prototypeRenderer, bangkokRenderer }: MapWrapperProps) {
   const city = useCity();
   // Gate ComparePanel behind the store so the recharts chunk is never
   // downloaded unless the user actively compares something.
   const hasCompareTarget = useCityState((s) => s.compareStations.length >= 2);
-  const cellSelected = useCityState((s) => s.selectedStation?.startsWith('cell.') ?? false);
+  const selected = useCityState((s) => s.selectedStation);
+  const cellSelected = selected?.startsWith('cell.') ?? false;
   // Selection / compare keys can point at any level's areas (Bangkok).
   const allAreas = useAllAreas(stations);
-  const View = city.unit === 'district' ? DistrictMapView : MapView;
   const multiLevel = city.levels.length > 1;
 
   return (
-    <div className="relative h-full w-full">
-      <View stations={stations} thumbnails={thumbnails} snippets={snippets} />
+    <div className="map-workspace relative h-full w-full" data-selected={!!selected} data-city={city.id}>
+      {city.unit === 'district'
+        ? <BangkokMapRenderer stations={stations} thumbnails={thumbnails} snippets={snippets} defaultRenderer={bangkokRenderer} prototypeRenderer={prototypeRenderer} />
+        : <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />}
       <MapControls />
       {multiLevel && <LevelSwitcher />}
       {hasCompareTarget && <ComparePanel stations={allAreas} />}

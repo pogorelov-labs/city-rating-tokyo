@@ -1,11 +1,15 @@
 import { StrictMode } from 'react';
-import { act, render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { CityProvider } from '@/lib/city-context';
 import { getCityActions, useAppStore } from '@/lib/store';
 import UrlSync from './UrlSync';
 
+const currentLocale = vi.hoisted(() => ({ value: 'en' }));
+vi.mock('next-intl', () => ({ useLocale: () => currentLocale.value }));
+
 beforeEach(() => {
+  currentLocale.value = 'en';
   useAppStore.setState(useAppStore.getInitialState(), true);
   window.history.replaceState(null, '', '/');
   vi.useFakeTimers();
@@ -24,6 +28,31 @@ describe('UrlSync browser/store contract', () => {
     expect(hydrate).toHaveBeenCalledTimes(1);
     expect(useAppStore.getState().cities.bangkok.selectedStation).toBe('pathum-wan');
     expect(useAppStore.getState().cities.tokyo.selectedStation).toBeNull();
+  });
+
+  it('hydrates Bangkok safety flags from a link and keeps changes shareable', () => {
+    window.history.replaceState(null, '', '/bangkok?lv=grid&flood=1&adult=1');
+    mount('bangkok');
+    expect(useAppStore.getState().cities.bangkok).toMatchObject({
+      level: 'grid', hideFloodRisk: true, hideAdultZones: true, hideHighSeismic: false,
+    });
+    expect(useAppStore.getState().cities.tokyo.hideFloodRisk).toBe(false);
+
+    act(() => getCityActions('bangkok').setHideAdultZones(false));
+    act(() => vi.advanceTimersByTime(300));
+    const params = new URLSearchParams(window.location.search);
+    expect(params.get('flood')).toBe('1');
+    expect(params.has('adult')).toBe(false);
+  });
+
+  it('clears previously enabled flags omitted from a link and restores Tokyo seismic filtering', () => {
+    getCityActions('tokyo').setHideFloodRisk(true);
+    getCityActions('tokyo').setHideAdultZones(true);
+    window.history.replaceState(null, '', '/?s=shibuya&seismic=1');
+    mount();
+    expect(useAppStore.getState().cities.tokyo).toMatchObject({
+      selectedStation: 'shibuya', hideFloodRisk: false, hideAdultZones: false, hideHighSeismic: true,
+    });
   });
 
   it('does not erase tracking parameters just by landing or rerendering', () => {
@@ -87,4 +116,90 @@ describe('UrlSync browser/store contract', () => {
     expect(replace).not.toHaveBeenCalled();
     expect(vi.getTimerCount()).toBe(0);
   });
+  it('flushes a queued update before same-tab navigation and does not write while navigation is pending', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    act(() => getCityActions('tokyo').setSelectedStation('matsudo'));
+    const link = document.createElement('a'); link.href = '/station/matsudo';
+    link.addEventListener('click', event => event.preventDefault());
+    document.body.append(link);
+    fireEvent.click(link);
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('s')).toBe('matsudo');
+    act(() => getCityActions('tokyo').addCompareStation('matsudo'));
+    act(() => vi.advanceTimersByTime(1000));
+    expect(replace).toHaveBeenCalledTimes(1);
+    // Back restores writeback on a still-mounted map.
+    fireEvent.popState(window);
+    act(() => getCityActions('tokyo').setSelectedStation('shibuya'));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(2);
+    link.remove();
+  });
+
+  it.each([
+    { ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 },
+  ])('keeps syncing when a modified click opens another context: %o', (options) => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount(); act(() => getCityActions('tokyo').setSelectedStation('alpha'));
+    const link = document.createElement('a'); link.href = '/station/alpha';
+    link.addEventListener('click', event => event.preventDefault()); document.body.append(link);
+    fireEvent.click(link, options);
+    expect(replace).not.toHaveBeenCalled();
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    link.remove();
+  });
+
+  it('does not remove tracking parameters when navigating without a pending update', () => {
+    window.history.replaceState(null, '', '/?utm_source=campaign');
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    const link = document.createElement('a'); link.href = '/station/alpha';
+    link.addEventListener('click', event => event.preventDefault()); document.body.append(link);
+    fireEvent.click(link);
+    expect(replace).not.toHaveBeenCalled();
+    expect(window.location.search).toBe('?utm_source=campaign');
+    link.remove();
+  });
+
+  it('keeps syncing for links targeting a new tab', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount(); act(() => getCityActions('tokyo').setSelectedStation('alpha'));
+    const link = document.createElement('a'); link.href = '/station/alpha'; link.target = '_blank';
+    link.addEventListener('click', event => event.preventDefault()); document.body.append(link);
+    fireEvent.click(link); act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    link.remove();
+  });
+
+  it('continues synchronizing after a same-path query-only link', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount(); act(() => getCityActions('tokyo').setSelectedStation('alpha'));
+    const link = document.createElement('a'); link.href = '/?other=1';
+    link.addEventListener('click', event => event.preventDefault()); document.body.append(link);
+    fireEvent.click(link);
+    expect(replace).toHaveBeenCalledTimes(1);
+    act(() => getCityActions('tokyo').setSelectedStation('beta'));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(2);
+    expect(new URLSearchParams(window.location.search).get('s')).toBe('beta');
+    link.remove();
+  });
+
+  it('resumes synchronization when a retained map receives the new locale', () => {
+    const { rerender } = mount();
+    const replace = vi.spyOn(window.history, 'replaceState');
+    window.dispatchEvent(new Event('city-rating:map-navigation-intent'));
+    act(() => getCityActions('tokyo').setSelectedStation('alpha'));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).not.toHaveBeenCalled();
+    currentLocale.value = 'ja';
+    rerender(<StrictMode><CityProvider city="tokyo"><UrlSync /></CityProvider></StrictMode>);
+    act(() => getCityActions('tokyo').setSelectedStation('beta'));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('s')).toBe('beta');
+  });
+
 });

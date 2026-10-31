@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useDeferredValue, useMemo, type ReactNode } from 'react';
 import { useCity } from './city-context';
+import { measure } from './render-profile';
 import { hasActiveFilters, type CityId } from './cities';
 import { useAppStore, useCityState } from './store';
 import type { FilterState, MapStation, WeightConfig } from './types';
@@ -52,22 +53,22 @@ function useInputs(): Inputs {
 /** One implementation for named-area scoring, filtering and ranking. */
 function useAreaCalculation(areas: MapStation[], input: Inputs, enabled: boolean): ScoredAreas | null {
   const { cityId, weights, filters, defaults, hideFloodRisk, hideHighSeismic, hideAdultZones } = input;
-  const scored = useMemo(() => enabled ? areas.map((area) => ({
+  const scored = useMemo(() => enabled ? measure(`areas.${areas.length}.score`, () => areas.map((area) => ({
     ...area,
     score: area.ratings ? calculateWeightedScore(area.ratings, weights) : null,
-  })) : null, [areas, weights, enabled]);
-  const anchors = useMemo(() => scored ? computeScoreAnchors(
+  })), areas.length) : null, [areas, weights, enabled]);
+  const anchors = useMemo(() => scored ? measure(`areas.${areas.length}.anchors`, () => computeScoreAnchors(
     scored.flatMap((area) => area.score === null ? [] : [area.score]),
-  ) : null, [scored]);
+  ), areas.length) : null, [scored, areas.length]);
   const passing = useMemo(() => {
     if (!scored) return null;
     if (!hasActiveFilters(cityId, filters, { hideFloodRisk, hideHighSeismic, hideAdultZones })) {
-      return scored.map((area) => ({ ...area, rentUnknown: false }));
+      return measure(`areas.${areas.length}.filter`, () => scored.map((area) => ({ ...area, rentUnknown: false })), areas.length);
     }
-    return applyDealbreakers(scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, defaults);
-  }, [scored, cityId, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, defaults]);
-  const ranked = useMemo(() => passing ? passing.filter((area) => area.ratings !== null)
-    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0)).slice(0, 15) : null, [passing]);
+    return measure(`areas.${areas.length}.filter`, () => applyDealbreakers(scored, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, defaults), areas.length);
+  }, [scored, cityId, filters, hideFloodRisk, hideHighSeismic, hideAdultZones, defaults, areas.length]);
+  const ranked = useMemo(() => passing ? measure(`areas.${areas.length}.rank`, () => passing.filter((area) => area.ratings !== null)
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0)).slice(0, 15), passing.length) : null, [passing, areas.length]);
   const ratedCount = useMemo(() => enabled ? areas.filter((area) => area.ratings).length : 0, [areas, enabled]);
   return useMemo(() => scored && anchors && passing && ranked ? {
     areas, scored, anchors, passing, ranked, ratedCount, deferredWeights: weights,

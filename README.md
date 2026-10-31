@@ -5,6 +5,8 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
+**Release candidate:** [v0.3.0 — Bangkok in 3D](docs/releases/v0.3.0.md) (unpublished).
+
 **Latest release:** [v0.2.0 — Station and district guides](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Release notes](docs/releases/v0.2.0.md) · [Changelog](CHANGELOG.md)
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
@@ -18,6 +20,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 ## Bangkok (district layer)
 
 - **Levels:** 50 districts (polygons), 133 nearest-station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
+- **Map:** tilted buildings, muted parks/water, distinct selection/comparison, and a standard-map fallback. Scores and shared links work across both renderers; see the [map guide](docs/BANGKOK_MAP.md).
 - **Data:** OpenStreetMap + [Overture Maps Places](https://docs.overturemaps.org/guides/places/) (two independent POI sources, r ≈ 0.9 agreement), Wikidata (names, population), a door-to-door commute model to five hubs, Wikimedia Commons photos.
 - **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).
 - **Honesty:** safety remains editorial; scores are relative within Bangkok — a Bangkok 8 is not a Tokyo 8. Evidence density differs by category and level. See [`research/bangkok/00-overview.md`](research/bangkok/00-overview.md).
@@ -44,7 +47,8 @@ Weights match [`packages/schema/constants.json`](packages/schema/constants.json)
 ## Tech stack
 
 - **Next.js 16** (App Router, Turbopack), **React 19**, **TypeScript**, **Tailwind 4**
-- **Leaflet**, **recharts** (lazy-loaded on relevant surfaces), **Zustand**
+- **MapLibre GL JS** for Bangkok 3D; **Leaflet** for Tokyo and Bangkok’s standard-map fallback
+- **recharts** (lazy-loaded on relevant surfaces), **Zustand**
 - Static data at build time (no runtime DB)
 
 ## Project layout (short)
@@ -56,7 +60,8 @@ app/src/data/rent-averages.json # Suumo-backed rent where scraped
 app/src/data/bangkok/           # Bangkok districts, geometry, rail overlay (generated)
 app/src/lib/scoring-react.tsx   # Shared named-area scores, anchors, filters, ranking
 app/src/lib/scoring-grid-react.ts # Bangkok resident-weighted grid adapter
-app/src/components/bangkok/     # Bangkok layers, popups and grid panel
+app/src/components/bangkok/     # Renderer boundary, layers and grid panel
+app/src/components/bangkok/maplibre/ # Native layers, grid texture and camera lifecycle
 app/src/components/area/        # Station/district guides and compact map cards
 app/src/components/area-card.tsx # Grid card metadata and actions
 app/src/app/                    # Locale routes and shared detail sections
@@ -72,7 +77,7 @@ map controllers, shared cards/details and the app/browser test boundaries.
 
 ## Getting started
 
-Use **Node.js 20 and npm**, matching [CI](.github/workflows/ci.yml). From a fresh
+Use **Node.js 20.19 or later in the 20.x line and npm**, matching [CI](.github/workflows/ci.yml). From a fresh
 clone, the map and detail pages use the committed datasets; Python, datastore
 credentials and raw acquisition caches are not required for this preview.
 

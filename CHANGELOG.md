@@ -10,6 +10,37 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## v0.3.0 — Unreleased
+
+### Added
+
+- Bangkok opens in a tilted 3D map with buildings, rail, parks and water, with
+  district, station-area and 200 m grid views. A standard map remains available
+  and is used automatically when 3D initialization fails.
+- Selected and compared areas have distinct fills and outlines. Map controls,
+  loading states and recovery messages are available in English, Japanese and Russian.
+
+### Improved
+
+- Weight and filter changes update cached scores and map paint without rebuilding
+  static labels or geometry. Camera motion reuses the grid texture.
+- The mobile cell card calculates only its selected cell's score.
+
+### Fixed
+
+- Bangkok's default grid filters include all eligible cells. The family filter
+  now agrees between the map, match count and ranked places.
+- Shared links retain flood, family and applicable Tokyo seismic filters.
+- Named-area colors and selection follow stable feature IDs through map tiling
+  and graphics-context restoration.
+- English locale rewrites remain internal in the standalone server.
+
+This code release preserves the existing scoring rules, shared-link format and
+published rating datasets. Building detail depends on basemap coverage; physical
+mobile-device performance varies. No map API key is required.
+
+[Release notes](docs/releases/v0.3.0.md) · [Map architecture](docs/BANGKOK_MAP.md)
+
 ## v0.2.0 — 2026-10-31
 
 Station and district guides redesigned for all 1,676 areas in English,

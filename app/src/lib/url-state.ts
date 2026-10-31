@@ -14,6 +14,9 @@ export interface UrlStateView {
   level?: AreaLevel;
   weights: WeightConfig;
   filters: FilterState;
+  hideFloodRisk: boolean;
+  hideHighSeismic: boolean;
+  hideAdultZones: boolean;
   selectedStation: string | null;
   compareStations: string[];
   heatmapMode: boolean;
@@ -59,6 +62,9 @@ export function encodeStateToParams(state: UrlStateView, city: CityId = 'tokyo')
   if (state.filters.hasLiveCamera) {
     params.set('lc', '1');
   }
+  if (state.hideFloodRisk && CITIES[city].features.environmentFilters) params.set('flood', '1');
+  if (state.hideHighSeismic && city === 'tokyo' && CITIES[city].features.environmentFilters) params.set('seismic', '1');
+  if (state.hideAdultZones) params.set('adult', '1');
 
   if (state.selectedStation) params.set('s', state.selectedStation);
   if (state.compareStations.length > 0) params.set('c', state.compareStations.join(','));
@@ -72,13 +78,22 @@ export function decodeParamsToState(params: URLSearchParams, city: CityId = 'tok
   level?: AreaLevel;
   weights?: WeightConfig;
   filters?: Partial<FilterState>;
+  hideFloodRisk: boolean;
+  hideHighSeismic: boolean;
+  hideAdultZones: boolean;
   selectedStation?: string;
   compareStations?: string[];
   heatmapMode?: boolean;
   heatmapDimension?: string;
 } {
-  const result: ReturnType<typeof decodeParamsToState> = {};
   const { rent, commute, features } = CITIES[city];
+  // Missing flags mean off, including when an existing city slice is hydrated
+  // from a link. Unsupported flags must not activate invisible controls.
+  const result: ReturnType<typeof decodeParamsToState> = {
+    hideFloodRisk: features.environmentFilters && params.get('flood') === '1',
+    hideHighSeismic: city === 'tokyo' && features.environmentFilters && params.get('seismic') === '1',
+    hideAdultZones: params.get('adult') === '1',
+  };
 
   const lv = params.get('lv');
   if (isAreaLevel(city, lv)) result.level = lv;
@@ -196,7 +211,8 @@ export function selectUrlView(
     heatmapDimension: string;
     cities: Record<
       CityId,
-      { level: AreaLevel; filters: FilterState; selectedStation: string | null; compareStations: string[] }
+      { level: AreaLevel; filters: FilterState; selectedStation: string | null; compareStations: string[];
+        hideFloodRisk: boolean; hideHighSeismic: boolean; hideAdultZones: boolean }
     >;
   },
   city: CityId,
@@ -206,6 +222,9 @@ export function selectUrlView(
     level: slice.level,
     weights: state.weights,
     filters: slice.filters,
+    hideFloodRisk: slice.hideFloodRisk,
+    hideHighSeismic: slice.hideHighSeismic,
+    hideAdultZones: slice.hideAdultZones,
     selectedStation: slice.selectedStation,
     compareStations: slice.compareStations,
     heatmapMode: state.heatmapMode,

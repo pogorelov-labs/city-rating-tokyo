@@ -8,6 +8,9 @@
   from `0.1.0` to `0.1.1`.
   **v0.1.2** packages compatible map/scoring fixes and Bangkok MCP district tools;
   its release PR bumps the same two files from `0.1.1` to `0.1.2`.
+  **v0.3.0** is the Bangkok 3D-map candidate, bumping the app package and lockfile
+  together from `0.2.0` to `0.3.0`. Its notes remain unreleased until the gates
+  below are satisfied.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.
@@ -19,8 +22,9 @@
   and production Docker build;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
   and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
-  `e2e` covers browser map interactions, guides in all three languages and
-  automated accessibility checks against a production build without retries.
+  `e2e` builds and runs the standalone release server, covering map interaction,
+  guides in all three languages, accessibility, renderer fallback and worker/CSP
+  delivery without retries; it also checks the separate opt-in diagnostic lab.
   MCP production smoke checks are separate and are not implied by green CI.
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
@@ -175,7 +179,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.2.0 needs **no database migration**. Check production deployment status/logs
+v0.3.0 needs **no database migration or rating-data rebuild**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale

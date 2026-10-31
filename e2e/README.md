@@ -23,14 +23,15 @@ npm run test:e2e:ui
 
 `npm run test:e2e` boots `next dev` on port 3000 automatically via the
 `webServer` block in `playwright.config.ts`. If a dev server is already
-running on :3000 it is reused (locally); in CI a fresh one is started. Set
+running on :3000 it is reused locally. CI builds the release artifact and starts
+its standalone server; it does not use the development server. Set
 `E2E_PORT` to an available port to run alongside another local server.
 
 To check an already running production build, set its URL explicitly. The
 harness then uses that server and does not start or stop one:
 
 ```bash
-PLAYWRIGHT_BASE_URL=http://localhost:3011 npm run test:e2e
+E2E_PRODUCTION=1 PLAYWRIGHT_BASE_URL=http://localhost:3011 npm run test:e2e
 ```
 
 With a prepared standalone build, `E2E_PRODUCTION=1 npm run test:e2e` lets the
@@ -71,6 +72,44 @@ Intentionally **not** covered here:
 
 ## CI
 
-The `e2e` job builds the standalone app and runs the full suite against that
-production server with retries disabled. Its failure fails the CI check; branch
-protection must also require the `e2e` status for it to gate merging.
+The `e2e` job installs Chromium, builds the normal app with the lab disabled,
+packages its public/static assets, and runs the full suite against the
+standalone server with retries disabled. CI uses software WebGL for functional
+coverage, not performance measurements. On Linux CI, both suites use the
+full Chromium browser's new headless mode, as described in
+[Playwright's browser guide](https://playwright.dev/docs/browsers#chromium-new-headless-mode).
+Local browser selection remains unchanged. Failed runs retain browser traces,
+screenshots and the standalone server log for seven days. A test failure fails
+the CI check; branch protection must also require the `e2e` status for it to
+gate merging.
+
+## Bangkok renderer release checks
+
+The default suite exercises Bangkok's 3D map and its standard-map fallback,
+including locale controls, selection, sharing, accessibility controls and
+failure recovery. Leaflet-specific interactions explicitly select the standard
+map; Tokyo continues to use Leaflet. The normal configuration excludes the
+renderer lab tests.
+
+For an existing server, `E2E_BASE_URL` is also supported as an alternative to
+`PLAYWRIGHT_BASE_URL`; the harness will not launch a server. Set `E2E_PRODUCTION=1` to include
+production-only worker and security-header checks. For example:
+
+```sh
+E2E_PRODUCTION=1 E2E_BASE_URL=http://localhost:3170 npx playwright test
+```
+
+The renderer lab is opt-in. Run its separate configuration with a server built
+or started with `BANGKOK_RENDERER_LAB=1`; without `E2E_BASE_URL` the configuration
+starts a local dev server with that setting:
+
+```sh
+npx playwright test --config=playwright.prototype.config.ts
+```
+
+The lab's diagnostics are intentionally unavailable on production routes.
+Playwright's generated reports and failure artifacts belong in ignored paths.
+
+CI also starts a separate opt-in lab server after the normal release suite. This
+checks graphics-context replay and that diagnostic state is removed when leaving
+the lab; those routes remain disabled in the release artifact.

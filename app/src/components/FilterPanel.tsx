@@ -503,6 +503,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 </div>
                 <input
                   type="range"
+                  aria-label={`${t('filter.weights')}: ${t(`ratings.${key}`)}`}
                   min={0}
                   max={50}
                   value={weights[key]}
