@@ -75,8 +75,17 @@ test('grid picking agrees with geographic cells at multiple pitches and survives
   const lat = header.north - (row + .5) / header.ny * (header.north - header.south);
   for (const pitch of [0, 30, 50]) {
     await page.keyboard.press('Escape');
+    // UrlSync is debounced: do not let the previous pitch's identical cell
+    // satisfy this iteration before the selection has actually cleared.
+    await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+    await expect(page.getByRole('region', { name: 'Selected area' })).toBeHidden();
     await page.evaluate((c) => window.__bangkokRenderer!.setCamera(c), { lng, lat, zoom: 18, pitch, bearing: 0 });
-    await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+    await page.waitForFunction(({ lng, lat, pitch }) => {
+      const renderer = window.__bangkokRenderer!;
+      const camera = renderer.getCamera();
+      return renderer.ready() && Math.abs(camera.lng - lng) < 1e-6 && Math.abs(camera.lat - lat) < 1e-6 &&
+        Math.abs(camera.zoom - 18) < 1e-6 && Math.abs(camera.pitch - pitch) < 1e-6;
+    }, { lng, lat, pitch });
     const point = await page.evaluate(([lng, lat]) => window.__bangkokRenderer!.project(lng, lat), [lng, lat]);
     const box = await page.getByTestId('maplibre-map').boundingBox();
     await page.mouse.click(box!.x + point.x, box!.y + point.y);
