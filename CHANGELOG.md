@@ -10,6 +10,21 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## v0.2.1 — 2026-10-31
+
+- Custom score weights now survive full navigation and opening the other city
+  in a new tab. City-specific filters and selections stay separate.
+- Tokyo seismic labels and legends use the source probability bands consistently
+  in English, Japanese and Russian: below 3%, 3% to under 6%, 6% to under 26%,
+  and 26% or higher. Percentages retain enough precision to avoid rounding
+  stored values across a band boundary, and labels are easier to read.
+- The seismic filter caption now includes its existing 26% boundary.
+
+This patch corrects presentation and navigation in v0.2.0. Source probabilities,
+datasets, filter behavior and ranking formulas are unchanged.
+
+[Release notes](docs/releases/v0.2.1.md)
+
 ## v0.2.0 — 2026-10-31
 
 Station and district guides redesigned for all 1,676 areas in English,

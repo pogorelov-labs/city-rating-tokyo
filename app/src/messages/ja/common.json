@@ -170,7 +170,7 @@
     "hideFloodRisk": "浸水リスクエリアを非表示",
     "belowXm": "（5m未満）",
     "hideHighSeismic": "高い地震リスクを非表示",
-    "seismicThreshold": "（>26% 震度6+）",
+    "seismicThreshold": "（26%以上 震度6+）",
     "hasLiveCamera": "周辺にライブカメラあり",
     "stationCount": "{count}駅",
     "matchCount": "{total}駅中<bold>{filtered}</bold>駅が該当",
@@ -409,15 +409,15 @@
     },
     "moderate": {
       "label": "中程度",
-      "description": "3〜15%"
+      "description": "3%以上6%未満"
     },
     "high": {
       "label": "高い",
-      "description": "15〜30%"
+      "description": "6%以上26%未満"
     },
     "very_high": {
       "label": "非常に高い",
-      "description": "30%以上"
+      "description": "26%以上"
     },
     "unknown": {
       "label": "不明",

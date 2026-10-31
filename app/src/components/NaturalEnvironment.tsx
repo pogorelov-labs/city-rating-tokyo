@@ -19,7 +19,7 @@ interface Props {
 export function NaturalEnvironment({ environment }: Props) {
   const t = useTranslations();
   const locale = useLocale();
-  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
+  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 2 });
   const { elevation_m, elevation_tier, seismic_prob_i60,
           flood_depth_m,
           michelin_stars, michelin_bib, hotels_800m, tourist_badge } = environment;
@@ -28,11 +28,10 @@ export function NaturalEnvironment({ environment }: Props) {
       && michelin_stars == null && michelin_bib == null
       && hotels_800m == null) return null;
 
-  // Classify the displayed probability using the same bands as its legend.
-  // Stored tiers can refer to a different shaking threshold.
+  // Match the producer's probability bands and the displayed legend.
   const tier: SeismicRiskTier = seismic_prob_i60 == null || !Number.isFinite(seismic_prob_i60)
     ? 'unknown' : seismic_prob_i60 < 0.03 ? 'low'
-      : seismic_prob_i60 < 0.15 ? 'moderate' : seismic_prob_i60 < 0.30 ? 'high' : 'very_high';
+      : seismic_prob_i60 < 0.06 ? 'moderate' : seismic_prob_i60 < 0.26 ? 'high' : 'very_high';
   const seismicColor = SEISMIC_COLORS[tier];
   const seismicLabel = t(`seismicTiers.${tier}.label`);
   const elevLabel = t(`elevationTiers.${elevation_tier ?? 'unknown'}`);
@@ -122,7 +121,7 @@ export function NaturalEnvironment({ environment }: Props) {
                       style={{ backgroundColor: seismicColor }}
                       aria-hidden
                     />
-                    <span className="text-sm" style={{ color: seismicColor }}>
+                    <span className="text-sm text-gray-700">
                       {seismicLabel}
                     </span>
                     <span className="text-xs text-gray-500">
