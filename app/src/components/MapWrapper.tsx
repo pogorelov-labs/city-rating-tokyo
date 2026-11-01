@@ -40,6 +40,7 @@ const MobileStationCard = dynamic(() => import('./MobileStationCard'), {
 // grid cell (both pull in the grid module, which Tokyo never needs).
 const LevelSwitcher = dynamic(() => import('./bangkok/LevelSwitcher'), { ssr: false });
 const CellCard = dynamic(() => import('./bangkok/CellCard'), { ssr: false });
+const BangkokCellSelectionGuard = dynamic(() => import('./bangkok/BangkokCellSelectionGuard'), { ssr: false });
 
 interface MapWrapperProps {
   stations: MapStation[];
@@ -56,12 +57,13 @@ export default function MapWrapper({ stations, thumbnails, snippets, prototypeRe
   const hasCompareTarget = useCityState((s) => s.compareStations.length >= 2);
   const selected = useCityState((s) => s.selectedStation);
   const cellSelected = selected?.startsWith('cell.') ?? false;
+  const hasComparedCell = useCityState(s => s.compareStations.some(key => key.startsWith('cell.')));
   // Selection / compare keys can point at any level's areas (Bangkok).
   const allAreas = useAllAreas(stations);
   const multiLevel = city.levels.length > 1;
 
   return (
-    <div className="map-workspace relative h-full w-full" data-selected={!!selected} data-city={city.id}>
+    <div className="map-workspace relative h-full w-full" data-city={city.id}>
       {city.unit === 'district'
         ? <BangkokMapRenderer stations={stations} thumbnails={thumbnails} snippets={snippets} defaultRenderer={bangkokRenderer} prototypeRenderer={prototypeRenderer} />
         : <MapView stations={stations} thumbnails={thumbnails} snippets={snippets} />}
@@ -71,6 +73,8 @@ export default function MapWrapper({ stations, thumbnails, snippets, prototypeRe
       <MobileStationCard stations={allAreas} thumbnails={thumbnails} snippets={snippets} />
       {multiLevel && cellSelected && <CellCard districts={stations} />}
       <UrlSync />
+      {/* Hydrate/subscribe first so sanitizing a retained city slice also repairs the address bar. */}
+      {city.id === 'bangkok' && (cellSelected || hasComparedCell) && <BangkokCellSelectionGuard />}
     </div>
   );
 }

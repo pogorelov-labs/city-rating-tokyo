@@ -5,9 +5,17 @@ map option and automatic fallback; Tokyo continues to use Leaflet. Both Bangkok
 renderers consume the same scoring, filtering, selected-area, comparison and URL
 state. Changing renderer does not reset that state.
 
-The 3D map opens near Asok at street scale. A guide opened in the same tab can
+The 3D map opens near Asok at street scale. Search, ranking and guide selections
+show a flat overview of the district bounds with space for the card. A direct
+district click keeps the current street zoom and pitch. A guide opened in the same tab can
 return to its area with the current filters and comparisons. A new-tab guide
 link carries weights; the map's Share button includes the rest of the map state.
+
+Same-tab city switching restores the destination city's saved settings. The
+ordinary city link carries only shared weights for fresh tabs and full loads.
+Bangkok checks linked cells against the grid bounds and district mask before
+using their geometry; it retains plausible cells while the mask is loading.
+Invalid selections or comparisons are removed individually.
 
 ## Rendering
 

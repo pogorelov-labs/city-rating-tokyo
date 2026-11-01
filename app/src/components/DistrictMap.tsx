@@ -41,9 +41,11 @@ import {
   cellCenter,
   cellInfo,
   useBangkokGrid,
+  isValidGridCell,
   type GridDistrict,
 } from '@/lib/bangkok-grid';
 import { stationPrimaryName } from '@/lib/station-name';
+import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { MapContainerResize, TouchZoomControls } from './map-shared';
 import { MapDeselect, MapSelectionBounds } from './map-selection';
@@ -55,6 +57,7 @@ import DistrictLayer from './bangkok/DistrictLayer';
 import StationAreaLayer, { type AreaShape } from './bangkok/StationAreaLayer';
 import { CellDetails, DistrictPopupBody, StationAreaPopupBody } from './bangkok/popups';
 import LeafletBridge from './bangkok/prototype/LeafletBridge';
+import DistrictViewportPopup from './bangkok/DistrictViewportPopup';
 
 type LatLng = [number, number];
 interface DistrictShape {
@@ -137,9 +140,20 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const selection = selected ? parseAreaKey(selected) : null;
   // The grid downloads when its level is shown — or when a shared link
   // points at a cell.
-  const { grid } = useBangkokGrid(level === 'grid' || selection?.kind === 'cell');
+  const { grid } = useBangkokGrid(level === 'grid' || selection?.kind === 'cell' || compareStations.some(key => key.startsWith('cell.')));
 
   const [zoom, setZoom] = useState(city.map.zoom);
+  const [districtFocusRevision, setDistrictFocusRevision] = useState(0);
+  useEffect(() => {
+    const onFocus = (event: Event) => {
+      const detail = (event as CustomEvent<{ city: string; key: string }>).detail;
+      if (detail?.city === 'bangkok' && detail.key === useAppStore.getState().cities.bangkok.selectedStation) {
+        setDistrictFocusRevision((revision) => revision + 1);
+      }
+    };
+    window.addEventListener(DISTRICT_FOCUS_INTENT, onFocus);
+    return () => window.removeEventListener(DISTRICT_FOCUS_INTENT, onFocus);
+  }, []);
   const dim = heatmapMode && heatmapDimension !== 'composite' ? (heatmapDimension as keyof StationRatings) : null;
 
   // ── districts ──
@@ -232,7 +246,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const selectedDistrict = selection?.kind === 'district' ? bySlug.get(selection.id) : undefined;
   const selectedArea = selection?.kind === 'station' ? areaByKey.get(selected!) : undefined;
   const selectedCell =
-    selection?.kind === 'cell' && grid && selection.index !== null && grid.planes.district[selection.index]
+    selection?.kind === 'cell' && grid && isValidGridCell(grid, selection.index)
       ? selection.index
       : null;
   const selectedCellInfo = useMemo(
@@ -250,7 +264,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
   const hoveredKey = hovered && hovered !== selected ? parseAreaKey(hovered) : null;
   const hoveredKind = hoveredKey?.kind ?? null;
   // "Best spots" list rows hover a cell key.
-  const hoveredCell = hoveredKey?.kind === 'cell' && grid && hoveredKey.index !== null ? hoveredKey.index : null;
+  const hoveredCell = hoveredKey?.kind === 'cell' && grid && isValidGridCell(grid, hoveredKey.index) ? hoveredKey.index : null;
   const hoveredShape =
     hoveredKind === 'district'
       ? GEOMETRY[hovered!]?.polygons
@@ -317,7 +331,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         {isTouch && <TouchZoomControls />}
         {selected && flyBounds && (
           <MapSelectionBounds
-            key={selected}
+            key={`${selected}:${selectedDistrict ? districtFocusRevision : 0}`}
             bounds={flyBounds}
             bottomInset={isTouch ? 220 : 0}
             onFlyStart={onFlyStart}
@@ -418,14 +432,10 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
 
         {/* Desktop popups for the selection (touch uses the bottom cards). */}
         {selectedDistrict && !isTouch && !isFlying && GEOMETRY[selectedDistrict.slug] && (
-          <Popup
-            key={`popup-${selectedDistrict.slug}`}
-            className="area-guide-popup" closeButton={false} position={GEOMETRY[selectedDistrict.slug].label}
-            autoPan maxHeight={440} minWidth={280} maxWidth={340} autoPanPadding={[18, 18]}
-            eventHandlers={{ remove: () => clearIfStillSelected(selectedDistrict.slug) }}
-          >
+          <DistrictViewportPopup key={`popup-${selectedDistrict.slug}`} position={GEOMETRY[selectedDistrict.slug].label} bounds={GEOMETRY[selectedDistrict.slug].bbox}>
             <DistrictPopupBody
               district={selectedDistrict}
+              onClose={() => clearIfStillSelected(selectedDistrict.slug)}
               thumb={thumbnails[selectedDistrict.slug]?.thumb}
               snippet={snippets[selectedDistrict.slug]}
               color={colorFor(selectedDistrict, anchors)}
@@ -434,7 +444,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
               onCompare={() => addCompareStation(selectedDistrict.slug)}
               onUncompare={() => removeCompareStation(selectedDistrict.slug)}
             />
-          </Popup>
+          </DistrictViewportPopup>
         )}
         {selectedArea && !isTouch && !isFlying && (
           <Popup
@@ -480,13 +490,13 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         )}
       </MapContainer>
       {isDistrictLevel && zoom >= 13 && !selected && <ZoomHint onPick={setLevel} />}
-      <Legend
+      {!(selectedDistrict && !isTouch && !isFlying && GEOMETRY[selectedDistrict.slug]) && <Legend
         anchors={levelAnchors}
         level={level}
         heatmapMode={heatmapMode}
         heatmapDimension={heatmapDimension}
         filtersActive={filtersActive}
-      />
+      />}
     </>
   );
 }

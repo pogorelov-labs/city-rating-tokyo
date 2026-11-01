@@ -33,12 +33,12 @@ export function StationAreaPopupBody({ area, thumb, snippet, isCompared, compare
 
 export { CellDetails } from './CellDetails';
 
-export function DistrictPopupBody({ district, thumb, snippet, isCompared, compareFull, onCompare, onUncompare }: {
+export function DistrictPopupBody({ district, thumb, snippet, isCompared, compareFull, onCompare, onUncompare, onClose }: {
   district: MapStation & { score: number | null }; thumb?: string; snippet?: string; color: string;
-  isCompared: boolean; compareFull: boolean; onCompare: () => void; onUncompare: () => void;
+  isCompared: boolean; compareFull: boolean; onCompare: () => void; onUncompare: () => void; onClose?: () => void;
 }) {
   const weights = useAppStore(state => state.weights);
   return <LeafletAreaCard area={district} city="bangkok" score={district.score} weights={weights}
     thumbnail={thumb ? { thumb } : undefined} snippet={snippet} isCompared={isCompared} compareFull={compareFull}
-    onCompare={onCompare} onUncompare={onUncompare} />;
+    onCompare={onCompare} onUncompare={onUncompare} onClose={onClose} />;
 }

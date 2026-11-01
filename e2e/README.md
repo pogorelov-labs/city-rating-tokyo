@@ -60,6 +60,13 @@ key piece of content:
 - Automated accessibility checks on the redesigned guide surfaces
 - City switching in both directions in EN/JA/RU — a fresh browser context
   restores all ten custom weights without the source city's filters
+- Same-tab city round trips restore the destination's filters, comparisons and
+  selection in the map and URL, including after Back/Forward navigation.
+- Out-of-range, malformed and masked grid links drop only invalid cells. Delayed
+  grid data keeps plausible selections pending; a bad link does not force 2D.
+- Explicit district navigation fits the boundary and leaves the card usable;
+  direct street-level clicks keep their camera. The lab checks projected bounds
+  on desktop and touch and reselecting a district after panning away.
 - Tokyo seismic labels and legends in EN/JA/RU, including real probabilities
   near a band boundary and the inclusive 26% filter caption
 - Canvas marker selection, desktop popup and district navigation; touch zoom

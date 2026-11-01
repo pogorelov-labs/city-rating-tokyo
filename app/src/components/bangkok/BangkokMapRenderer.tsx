@@ -86,7 +86,7 @@ export default function BangkokMapRenderer({ defaultRenderer, prototypeRenderer,
         <span role="status" className="sr-only">{failureMessage}</span>
         <details className="relative">
           <summary aria-label={failureMessage} title={failureMessage} className="map-control-btn flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-lg border border-amber-200 bg-white text-sm font-bold text-amber-800 shadow-sm focus-visible:outline-2 focus-visible:outline-blue-600">!</summary>
-          <p className="absolute -left-28 top-full mt-1 w-60 max-w-[calc(100vw-1.5rem)] rounded-lg border border-amber-200 bg-white px-3 py-2 text-xs text-amber-900 shadow-sm">{failureMessage}</p>
+          <p className="absolute -left-28 top-full mt-1 w-60 max-w-[calc(100cqw-1.5rem)] rounded-lg border border-amber-200 bg-white px-3 py-2 text-xs text-amber-900 shadow-sm md:left-auto md:right-0">{failureMessage}</p>
         </details>
       </>}
     </div>}

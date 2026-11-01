@@ -1,7 +1,8 @@
 'use client';
 
 import { Pane, Polygon, Rectangle } from 'react-leaflet';
-import { cellBounds, type BangkokGrid } from '@/lib/bangkok-grid';
+import { cellBounds, isValidGridCell, type BangkokGrid } from '@/lib/bangkok-grid';
+import { parseAreaKey } from '@/lib/area-key';
 import type { AreaLevel, MapStation } from '@/lib/types';
 
 type LatLng = [number, number];
@@ -79,6 +80,13 @@ export default function BangkokOutlines({ districts, geometry, level, isDistrict
               pathOptions={{ color: '#1d4ed8', weight: 3, fill: false }}
             />
           )}
+          {grid && compareStations.filter(key => key !== selected).map(key => {
+            const parsed = parseAreaKey(key);
+            return parsed.kind === 'cell' && isValidGridCell(grid, parsed.index) ? (
+              <Rectangle key={`cmp-cell-${key}`} className="bangkok-cell-compared" bounds={cellBounds(grid.header, parsed.index)}
+                interactive={false} pathOptions={{ color: '#7c3aed', weight: 2.5, dashArray: '6 4', fill: false }} />
+            ) : null;
+          })}
           {compareStations
             .filter((key) => key !== selected && shapeFor(key))
             .map((key) => (

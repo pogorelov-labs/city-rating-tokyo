@@ -13,7 +13,7 @@ import { useAreaLists } from '@/lib/area-lists';
 import { useAppStore, useCityActions, useCityState, MAX_COMPARE } from '@/lib/store';
 import { useScoredAreas } from '@/lib/scoring-react';
 import { useScoredGrid, useGridHotspots } from '@/lib/scoring-grid-react';
-import { cellAt, cellCenter, cellInfo, useBangkokGrid } from '@/lib/bangkok-grid';
+import { cellAt, cellCenter, cellInfo, isValidGridCell, useBangkokGrid } from '@/lib/bangkok-grid';
 import { compositeToColor, scoreToColor } from '@/lib/scoring';
 import { parseAreaKey } from '@/lib/area-key';
 import { stationPrimaryName } from '@/lib/station-name';
@@ -29,6 +29,8 @@ import { FeatureStateCache } from './feature-state';
 import { analyticalCityStyle } from './map-colors';
 import { classifyMapError, ContextRecoveryTimer } from './map-errors';
 import { collapseInitialAttribution } from './attribution';
+import { frameDistrict } from './district-camera';
+import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
 import rail from '@/data/bangkok/rail.json';
 import { measure, measureAsync, renderProfile, retainRendererLab } from '@/lib/render-profile';
 import { attachMapProfile } from './profile-map';
@@ -49,6 +51,14 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   const textureRef = useRef<GridTextureLayer | null>(null);
   const stateCache = useRef(new FeatureStateCache());
   const focusKeys = useRef(new Set<string>());
+  const mapSelection = useRef<string | null | undefined>(undefined);
+  const lastDistrict = useRef<string | null>(null);
+  const districtPaddingActive = useRef(false);
+  const clearDistrictPadding = useCallback((map: LibreMap) => {
+    if (!districtPaddingActive.current) return;
+    districtPaddingActive.current = false;
+    map.setPadding({ top: 0, right: 0, bottom: 0, left: 0 });
+  }, []);
   const clearHoverOnMap = useRef<() => void>(() => {});
   const hoverOnMap = useRef<(key: string | null) => void>(() => {});
   const syncFocusVisibility = useRef<() => void>(() => {});
@@ -90,7 +100,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   const showRail = useAppStore((s) => s.showRailOverlay);
   const actions = useCityActions();
   const primary = useScoredAreas(stations, 'primary'), areas = useScoredAreas(stationAreas, 'station');
-  const { grid } = useBangkokGrid(level === 'grid' || selected?.startsWith('cell.') === true);
+  const { grid } = useBangkokGrid(level === 'grid' || selected?.startsWith('cell.') === true || compared.some(key => key.startsWith('cell.')));
   const gridScored = useScoredGrid(level === 'grid' || selected?.startsWith('cell.') ? grid : null, primary.areas, primary.deferredWeights, filters, city.defaultFilters, flood, adult);
   const spots = useGridHotspots(grid, gridScored, 5, level === 'grid' && !heat);
   const dim = heat && dimension !== 'composite' ? dimension as keyof StationRatings : null;
@@ -146,7 +156,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       if (key && !key.startsWith('cell.')) featureState(map, key, { hover: true });
       if (old?.startsWith('cell.') || key?.startsWith('cell.')) {
         const p = key ? parseAreaKey(key) : null, grid = current.current.grid;
-        setSource(map, 'bkk-hover', p?.kind === 'cell' && p.index !== null && grid ? collection([cellFeature(grid.header, p.index)]) : EMPTY);
+        setSource(map, 'bkk-hover', p?.kind === 'cell' && grid && isValidGridCell(grid, p.index) ? collection([cellFeature(grid.header, p.index)]) : EMPTY);
       }
       syncFocus();
     };
@@ -176,6 +186,8 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
           focusVisible: map.getLayoutProperty('bkk-area-focus-fill', 'visibility') !== 'none',
         };
       };
+      bridge.inspectComparedCells = () => map.queryRenderedFeatures({ layers: ['bkk-cell-compare'] })
+        .map((feature) => String(feature.properties.key ?? ''));
       bridge.inspectStationHits = (lng, lat) => map.queryRenderedFeatures(map.project([lng, lat]), { layers: ['bkk-stations'] })
         .map((feature) => ({ id: feature.id, key: String(feature.properties.key ?? ''), district: String(feature.properties.district ?? '') }));
       bridge.inspectStationLabels = () => ({
@@ -268,7 +280,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat);
       if (key === undefined) return;
       clearHover();
-      const select = () => current.current.actions.setSelectedStation(key === current.current.selected ? null : key);
+      const select = () => { const next = key === current.current.selected ? null : key; mapSelection.current = next; current.current.actions.setSelectedStation(next); };
       if (current.current.isTouch) select();
       else { clearTimeout(clickTimer); clickTimer = setTimeout(select, 250); }
     });
@@ -294,20 +306,28 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     const leave = () => clearHover(); map.getCanvas().addEventListener('mouseleave', leave);
     const escape = (e: KeyboardEvent) => { if (e.key === 'Escape') current.current.actions.setSelectedStation(null); };
     window.addEventListener('keydown', escape);
+    const repeatDistrictFocus = (event: Event) => {
+      const detail = (event as CustomEvent<{ city: string; key: string }>).detail;
+      if (detail?.city === 'bangkok' && detail.key === current.current.selected && !disposed && !failed) {
+        if (frameDistrict(map, detail.key, current.current.isTouch, reduced() ? 0 : 400)) districtPaddingActive.current = true;
+      }
+    };
+    window.addEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus);
     const resize = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
       const compact = width < 768 && height < 360;
       setCompactControls(compact);
       if (!compact) setControlsOpen(false);
       map.resize();
+      clearDistrictPadding(map);
     }); resize.observe(host.current);
-    return () => { disposed = true; uiReadyRef.current = false; clearTimeout(clickTimer); window.clearTimeout(loadTimeout); contextTimeout.clear(); if (pendingStyle) map.off('style.load', pendingStyle); cancelAnimationFrame(frame); resize.disconnect(); tooltip.remove(); window.removeEventListener('keydown', escape); map.getCanvas().removeEventListener('mouseleave', leave);
+    return () => { disposed = true; uiReadyRef.current = false; clearTimeout(clickTimer); window.clearTimeout(loadTimeout); contextTimeout.clear(); if (pendingStyle) map.off('style.load', pendingStyle); cancelAnimationFrame(frame); resize.disconnect(); tooltip.remove(); window.removeEventListener('keydown', escape); window.removeEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus); map.getCanvas().removeEventListener('mouseleave', leave);
       if (window.__bangkokRenderer === bridge) { delete window.__bangkokRenderer; delete window.__bangkokGridPaint; }
       detachProfile(); releaseLab(); map.remove(); cache.clear(); focusKeys.current.clear(); hoverOnMap.current = () => {}; clearHoverOnMap.current = () => {}; syncFocusVisibility.current = () => {}; mapRef.current = null; attributionRef.current = null; textureRef.current = null;
     };
   // Locale changes remount this map through the localized route.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [featureState, prototype]);
+  }, [featureState, prototype, clearDistrictPadding]);
 
   useEffect(() => {
     const map = mapRef.current; if (!ready || !map) return;
@@ -392,15 +412,47 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     const map = mapRef.current; if (!ready || !map) return;
     const keys = [...new Set([selectedCell, ...comparedCells.split(',')].filter((s): s is string => !!s))];
     setSource(map, 'bkk-selected', collection(grid ? keys.flatMap((key) => {
-      const parsed = parseAreaKey(key); if (parsed.index === null) return [];
+      const parsed = parseAreaKey(key); if (!isValidGridCell(grid, parsed.index)) return [];
       const shape = cellFeature(grid.header, parsed.index); shape.properties = { ...shape.properties, role: key === selectedCell ? 'selected' : 'compared' }; return [shape];
     }) : []));
   }, [ready, recovery, selectedCell, comparedCells, grid]);
   useEffect(() => { if (ready) hoverOnMap.current(hovered); }, [ready, recovery, hovered]);
   useEffect(() => {
+    const map = mapRef.current; if (!ready || !map) return;
+    if (!selected || parseAreaKey(selected).kind !== 'district') { lastDistrict.current = null; clearDistrictPadding(map); return; }
+    const fromMap = mapSelection.current === selected;
+    mapSelection.current = undefined;
+    if (fromMap) { lastDistrict.current = selected; clearDistrictPadding(map); return; }
+    if (lastDistrict.current === selected) return;
+    if (isTouch) {
+      // The touch card is lazy and enters after selection; wait briefly for
+      // a stable measured height, then stop observing. User gestures cancel it.
+      const started = performance.now(); let frame = 0, lastHeight = 0, stableSince = started;
+      const events = ['dragstart', 'zoomstart', 'rotatestart', 'pitchstart'] as const;
+      const detach = () => { for (const event of events) map.off(event, cancel); };
+      const cancel = () => { cancelAnimationFrame(frame); detach(); };
+      for (const event of events) map.once(event, cancel);
+      const fit = () => {
+        const now = performance.now();
+        const card = map.getContainer().closest('.map-workspace')?.querySelector<HTMLElement>('.map-touch-card');
+        const height = card?.offsetHeight ?? 0;
+        if (height !== lastHeight) { lastHeight = height; stableSince = now; }
+        if ((height > 0 && now - stableSince >= 180) || now - started >= 1500) {
+          detach();
+          if (frameDistrict(map, selected, true, reduced() ? 0 : 400)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
+        } else frame = requestAnimationFrame(fit);
+      };
+      fit(); return () => { cancel(); detach(); };
+    }
+    if (frameDistrict(map, selected, false, reduced() ? 0 : 400)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
+  }, [ready, selected, isTouch, clearDistrictPadding]);
+  useEffect(() => {
     const map = mapRef.current; if (!ready || !map || !selected) return;
-    const p = parseAreaKey(selected), area = byKey.get(selected);
-    const ll = area ? [area.lng, area.lat] : p.index !== null && grid ? cellCenter(grid.header, p.index).reverse() : null;
+    const p = parseAreaKey(selected);
+    if (p.kind === 'district') return;
+    mapSelection.current = undefined;
+    const area = byKey.get(selected);
+    const ll = area ? [area.lng, area.lat] : grid && isValidGridCell(grid, p.index) ? cellCenter(grid.header, p.index).reverse() : null;
     if (!ll) return;
     const point = map.project(ll as [number, number]), box = map.getContainer();
     if (point.x < 30 || point.y < 30 || point.x > box.clientWidth - 30 || point.y > box.clientHeight - (isTouch ? 220 : 30) || map.getZoom() < 12) {
@@ -429,9 +481,9 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     <div ref={controlsRef} role="group" aria-label={t('map.mapControls')} className={compactControls ? `bkk-compact-controls absolute right-2.5 bottom-0 ${controlsOpen ? 'z-[1003]' : 'z-[1001]'}` : 'absolute right-3 bottom-44 max-md:top-28 max-md:bottom-auto z-20'} onKeyDown={(event) => { if (event.key === 'Escape' && controlsOpen) { event.stopPropagation(); setControlsOpen(false); } }}>
       {compactControls && <button type="button" className="bkk-compact-trigger" disabled={!ready} aria-label={t('map.mapControls')} aria-expanded={controlsOpen} onClick={() => setControlsOpen(!controlsOpen)}>3D</button>}
       {(!compactControls || controlsOpen) && <div className={`${compactControls ? 'absolute right-14 bottom-0 ' : ''}flex flex-col gap-1 rounded-lg border border-slate-300 bg-white/95 p-1 shadow-sm`}>
-        <button className="bkk-lab-button" disabled={!ready} onClick={() => { mapRef.current?.easeTo({ pitch: tilted ? 0 : 50, bearing: tilted ? 0 : -20, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{tilted ? t('map.view2d') : t('map.view3d')}</button>
+        <button className="bkk-lab-button" disabled={!ready} onClick={() => { if (mapRef.current) clearDistrictPadding(mapRef.current); mapRef.current?.easeTo({ pitch: tilted ? 0 : 50, bearing: tilted ? 0 : -20, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{tilted ? t('map.view2d') : t('map.view3d')}</button>
         <button className="bkk-lab-button" disabled={!ready} aria-pressed={buildings} onClick={() => { setBuildings(!buildings); setControlsOpen(false); }}>{t('map.buildings')}</button>
-        <button className="bkk-lab-button" disabled={!ready} onClick={() => { mapRef.current?.easeTo({ center: [ASOK_CAMERA.lng, ASOK_CAMERA.lat], zoom: ASOK_CAMERA.zoom - 1, pitch: ASOK_CAMERA.pitch, bearing: ASOK_CAMERA.bearing, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{t('map.resetAsok')}</button>
+        <button className="bkk-lab-button" disabled={!ready} onClick={() => { if (mapRef.current) clearDistrictPadding(mapRef.current); mapRef.current?.easeTo({ center: [ASOK_CAMERA.lng, ASOK_CAMERA.lat], zoom: ASOK_CAMERA.zoom - 1, pitch: ASOK_CAMERA.pitch, bearing: ASOK_CAMERA.bearing, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{t('map.resetAsok')}</button>
       </div>}
     </div>
     {!selected && <Legend anchors={anchors} level={level} heatmapMode={heat} heatmapDimension={dimension} filtersActive={passing < total} />}

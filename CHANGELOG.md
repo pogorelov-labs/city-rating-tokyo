@@ -33,6 +33,12 @@ Notes updated 2026-11-01. [Release history and publication dates](https://github
 - Bangkok's default grid filters include all eligible cells. The family filter
   now agrees between the map, match count and ranked places.
 - Shared links retain flood, family and applicable Tokyo seismic filters.
+- Same-tab city switches restore each city's filters and selections; opening a
+  city link in a new tab carries only the shared weights.
+- Invalid or unrated cell references are removed from map links while valid
+  comparisons and filters are kept.
+- Search, rankings and guide links frame a selected Bangkok district. Direct
+  map clicks keep the street view, and the standard map keeps the card reachable.
 - Named-area colors and selection follow stable feature IDs through map tiling
   and graphics-context restoration.
 - Station areas remain labeled when rail is hidden. Clicking an unscored rail

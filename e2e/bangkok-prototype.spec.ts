@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { resolve } from 'node:path';
 import header from '../app/src/data/bangkok/grid.json';
+import districtGeometry from '../app/src/data/bangkok/geometry.json';
 import ja from '../app/src/messages/ja/common.json';
 
 test('MapLibre draws buildings and grid while preserving filters and copied state', async ({ page, context }) => {
@@ -358,4 +359,83 @@ test('a failed tile remains reported after map recovery until dismissed', async 
   await notice.getByRole('button', { name: 'Dismiss', exact: true }).click();
   await expect(notice).toBeHidden();
   await expect(page.getByTestId('maplibre-map')).toBeVisible();
+});
+
+test('district navigation frames the selected polygon without changing in-view click zoom', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await page.goto('/bangkok/prototype/maplibre?lv=district&profile=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready(), null, { timeout: 30_000 });
+  const before = await page.evaluate(() => window.__bangkokRenderer!.getCamera());
+  const box = await page.getByTestId('maplibre-map').boundingBox();
+  const point = await page.evaluate(() => window.__bangkokRenderer!.project(100.5606, 13.7374));
+  await page.mouse.click(box!.x + point.x, box!.y + point.y);
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).not.toBeNull();
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBeCloseTo(before.zoom, 2);
+  expect((await page.evaluate(() => window.__bangkokRenderer!.getCamera())).pitch).toBeCloseTo(before.pitch ?? 0, 2);
+
+  const search = page.locator('aside input[placeholder="Search district, area or station…"]');
+  const choose = async () => {
+    await search.fill('Nong Chok');
+    await page.locator('aside [data-umami-event="search-select"][data-umami-event-station="nong-chok"]').click();
+    await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe('nong-chok');
+  };
+  const fit = async () => {
+    await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+    await expect.poll(async () => {
+      const camera = await page.evaluate(() => window.__bangkokRenderer!.getCamera());
+      return Math.abs(camera.lat - 13.85) < .2 && camera.zoom < 14 && camera.pitch === 0;
+    }).toBe(true);
+    const geometry = districtGeometry['nong-chok'].bbox;
+    const [[south, west], [north, east]] = geometry;
+    const corners = await page.evaluate((coords) => coords.map(([lng, lat]) => window.__bangkokRenderer!.project(lng, lat)), [[west, south], [west, north], [east, south], [east, north]]);
+    const mapBox = await page.getByTestId('maplibre-map').boundingBox();
+    for (const p of corners) {
+      expect(p.x).toBeGreaterThan(0); expect(p.x).toBeLessThan(mapBox!.width);
+      expect(p.y).toBeGreaterThan(0); expect(p.y).toBeLessThan(mapBox!.height);
+    }
+  };
+  await choose(); await fit();
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.5606, lat: 13.7374, zoom: 16, pitch: 50, bearing: -20 }));
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+  await choose(); await fit();
+});
+
+test('comparison-only cell is rendered when a district remains selected', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre?lv=district&s=watthana&c=cell.39725&profile=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready(), null, { timeout: 30_000 });
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.5606, lat: 13.7374, zoom: 16, pitch: 0, bearing: 0 }));
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectComparedCells!()), { timeout: 20_000 }).toContain('cell.39725');
+  expect(new URL(page.url()).searchParams.get('c')).toBe('cell.39725');
+});
+
+test('touch district framing leaves the selected geometry above the measured card', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  try {
+    // A delayed compared-cell grid must not cancel the pending district fit.
+    await page.route('**/data/bangkok/grid-*.bin', async (route) => { await new Promise((resolve) => setTimeout(resolve, 350)); await route.continue(); });
+    await page.goto('/bangkok/prototype/maplibre?lv=district&s=nong-chok&c=cell.39725&profile=1');
+    const card = page.getByRole('dialog', { name: 'Nong Chok' });
+    await expect(card).toBeVisible({ timeout: 30_000 });
+    await expect(card.getByRole('button', { name: 'Close district card' })).toBeVisible();
+    await expect(card.getByRole('button', { name: 'Close district card' })).toBeEnabled();
+    await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+    await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(0);
+    const geometry = districtGeometry['nong-chok'].bbox;
+    const [[south, west], [north, east]] = geometry;
+    const corners = await page.evaluate((coords) => coords.map(([lng, lat]) => window.__bangkokRenderer!.project(lng, lat)), [[west, south], [west, north], [east, south], [east, north]]);
+    const map = await page.getByTestId('maplibre-map').boundingBox(), panel = await card.boundingBox();
+    expect(map).toBeTruthy(); expect(panel).toBeTruthy();
+    for (const p of corners) {
+      expect(p.x).toBeGreaterThanOrEqual(0); expect(p.x).toBeLessThanOrEqual(map!.width);
+      expect(p.y).toBeGreaterThanOrEqual(0); expect(p.y + map!.y).toBeLessThanOrEqual(panel!.y);
+    }
+    await card.getByRole('button', { name: 'Close district card' }).tap();
+    await expect(card).toBeHidden();
+    await page.getByRole('button', { name: 'Center on Asok' }).tap();
+    await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(50);
+    const center = await page.evaluate(() => window.__bangkokRenderer!.project(100.5606, 13.7374));
+    expect(center.x).toBeCloseTo(map!.width / 2, 0);
+    expect(center.y).toBeCloseTo(map!.height / 2, 0);
+  } finally { await context.close(); }
 });

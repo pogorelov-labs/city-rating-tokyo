@@ -18,6 +18,7 @@ export interface BangkokRendererHandle {
   stats: () => Record<string, number | string | boolean>;
   /** Controlled ablation, exposed only with ?profile=1 in the renderer lab. */
   setLayerGroup?: (group: 'grid' | 'areas' | 'labels' | 'rail' | 'buildings', visible: boolean) => void;
+  inspectComparedCells?: () => string[];
   inspectStationHits?: (lng: number, lat: number) => { id?: string | number; key: string; district: string }[];
   inspectStationLabels?: () => { visibility: 'visible' | 'none'; railVisibility: 'visible' | 'none'; markerVisibility: 'visible' | 'none'; physicalLabelVisibility: 'visible' | 'none'; rendered: { id?: string | number; name: string }[] };
   inspectArea?: (key: string) => { area: Record<string, unknown>; stations: Record<string, unknown>[];

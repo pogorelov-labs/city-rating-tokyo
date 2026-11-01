@@ -8,7 +8,7 @@
   /* During a touch selection, use this row for the card. Closing the card
      restores the renderer choice. Keyboard/mouse users retain the choice. */
   @media (hover: none) {
-    .map-workspace[data-selected="true"] .map-renderer-selector { display: none; }
+    .map-workspace:has(.map-touch-card[data-open="true"], .map-touch-cell) .map-renderer-selector { display: none; }
   }
 }
 

@@ -133,7 +133,17 @@ for (const failure of ['webgl', 'style'] as const) {
     await expect(renderer).toHaveValue('leaflet', { timeout: 30_000 });
     await expect(page.locator('.leaflet-container')).toBeVisible();
     const message = failure === 'webgl' ? en.map.rendererUnavailableWebgl : en.map.rendererUnavailableLoad;
-    await expect(page.locator('summary[aria-label]').filter({ hasText: '!' })).toHaveAttribute('aria-label', message);
+    const disclosure = page.locator('summary[aria-label]').filter({ hasText: '!' });
+    await expect(disclosure).toHaveAttribute('aria-label', message);
+    if (failure === 'webgl') {
+      await disclosure.click();
+      const notice = page.locator('details[open] p').filter({ hasText: message });
+      await expect(notice).toBeVisible();
+      const box = await notice.boundingBox(), workspace = await page.locator('.map-workspace').boundingBox();
+      expect(box!.x).toBeGreaterThanOrEqual(workspace!.x);
+      expect(box!.x + box!.width).toBeLessThanOrEqual(workspace!.x + workspace!.width + 1);
+      await disclosure.click();
+    }
     const params = new URL(page.url()).searchParams;
     expect(params.get('lv')).toBe('station');
     expect(params.get('s')).toBe('st.asok');

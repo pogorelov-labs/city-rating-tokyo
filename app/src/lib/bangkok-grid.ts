@@ -6,6 +6,7 @@ import { measure, measureAsync } from './render-profile';
 import entertainmentZones from '@/data/entertainment/zones.json';
 import type { FilterState, StationRatings, WeightConfig } from './types';
 import type { PercentileAnchors } from './scoring';
+import { parseAreaKey } from './area-key';
 
 /**
  * Bangkok's 200 m grid in the browser (the finest of the three levels).
@@ -68,6 +69,21 @@ export interface BangkokGrid {
   planes: Record<string, Uint8Array>;
   /** Row-major indices of the cells inside Bangkok. */
   cells: Uint32Array;
+}
+
+/** A valid cell is inside the finite grid and belongs to a Bangkok district. */
+export function isValidGridCell(grid: BangkokGrid, index: number | null): index is number {
+  return index !== null && Number.isSafeInteger(index) && index >= 0 &&
+    index < grid.header.nx * grid.header.ny && (grid.planes.district[index] ?? 0) > 0;
+}
+
+/** Syntax and bounds are known immediately; membership needs the loaded mask. */
+export function bangkokCellKeyStatus(key: string, grid: BangkokGrid | null): 'not-cell' | 'invalid' | 'pending' | 'valid' {
+  const parsed = parseAreaKey(key);
+  if (parsed.kind !== 'cell') return 'not-cell';
+  if (parsed.index === null || parsed.index >= GRID_HEADER.nx * GRID_HEADER.ny) return 'invalid';
+  if (!grid) return 'pending';
+  return isValidGridCell(grid, parsed.index) ? 'valid' : 'invalid';
 }
 
 /** What the grid needs to know about a district: its index in `header.districts`. */
@@ -231,6 +247,7 @@ export function gridHubs(h: GridHeader): string[] {
 }
 
 export function cellInfo(grid: BangkokGrid, i: number, districts: readonly GridDistrict[]): CellInfo | null {
+  if (!isValidGridCell(grid, i)) return null;
   const p = grid.planes;
   const d = p.district[i];
   if (!d) return null;
