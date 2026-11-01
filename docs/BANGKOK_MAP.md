@@ -5,11 +5,17 @@ map option and automatic fallback; Tokyo continues to use Leaflet. Both Bangkok
 renderers consume the same scoring, filtering, selected-area, comparison and URL
 state. Changing renderer does not reset that state.
 
+The 3D map opens near Asok at street scale. A guide opened in the same tab can
+return to its area with the current filters and comparisons. A new-tab guide
+link carries weights; the map's Share button includes the rest of the map state.
+
 ## Rendering
 
 - District and station-area geometry is installed once in native vector layers.
   Stable promoted IDs connect score, hover, selection and comparison state to
-  rendered features. Paint updates skip unchanged values.
+  rendered features. Paint updates skip unchanged values. Localized area names
+  share one label source: at street zoom in station mode, hiding the rail
+  overlay reveals area names without rebuilding the source.
 - The 200 m grid is one 330 × 257 RGBA texture over a fixed Mercator strip mesh.
   Camera movement changes transform/opacity uniforms without scoring or texture
   uploads. Coordinates use a local origin to preserve precision at street zoom.
@@ -59,8 +65,9 @@ part of this release.
 
 Initialization or rendering failures preserve the shared state while offering
 the standard map. A failed code download disables the 3D choice for that page
-load; a new page load retries the download. Temporary individual tile failures
-do not reset the camera or change the user's preferences.
+load; a new page load retries the download. A nonfatal error after the map
+loads shows a dismissible notice and preserves the camera and selection.
+Finishing a frame or reaching idle does not prove a failed request recovered.
 
 ## Diagnostics
 

@@ -10,7 +10,9 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
-## v0.3.0 — Unreleased
+## v0.3.0 — Bangkok in 3D
+
+Notes updated 2026-11-01. [Release history and publication dates](https://github.com/pogorelov-labs/city-rating-tokyo/releases).
 
 ### Added
 
@@ -33,6 +35,8 @@ evidence in research notes or the PR body and link it.
 - Shared links retain flood, family and applicable Tokyo seismic filters.
 - Named-area colors and selection follow stable feature IDs through map tiling
   and graphics-context restoration.
+- Station areas remain labeled when rail is hidden. Clicking an unscored rail
+  stop preserves the current selection and its share link.
 - English locale rewrites remain internal in the standalone server.
 
 This code release preserves the existing scoring rules, shared-link format and

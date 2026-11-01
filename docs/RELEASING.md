@@ -8,9 +8,8 @@
   from `0.1.0` to `0.1.1`.
   **v0.1.2** packages compatible map/scoring fixes and Bangkok MCP district tools;
   its release PR bumps the same two files from `0.1.1` to `0.1.2`.
-  **v0.3.0** is the Bangkok 3D-map candidate, bumping the app package and lockfile
-  together from `0.2.0` to `0.3.0`. Its notes remain unreleased until the gates
-  below are satisfied.
+  **v0.3.0** introduces the Bangkok 3D map and bumps the app package and
+  lockfile together from `0.2.0` to `0.3.0`.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.
@@ -65,7 +64,9 @@ For v0.1.0 the starting commit is `f30fb329810b0a6fce94bf2622312a96cc0729a4`.
 
 Write a dated changelog entry and the release body. Include product scope,
 sources/attribution, known limitations and deployment implications. Update
-targeted docs rather than replacing the project guides. Check the diff:
+targeted docs rather than replacing the project guides. The release body is
+published verbatim; keep candidate-status messages in the PR and use links
+that also resolve on the GitHub release page. Check the diff:
 
 ```sh
 git diff --check
