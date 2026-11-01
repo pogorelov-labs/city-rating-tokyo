@@ -284,9 +284,10 @@
     "closeSelectedArea": "Close selected area",
     "interactiveBangkok": "Interactive Bangkok map",
     "resetBearing": "Reset bearing",
-    "tileError": "Some map tiles could not load. The map will keep trying.",
+    "tileError": "Some map details could not load.",
     "mapAttribution": "Map attribution",
-    "layers": "Map layers"
+    "layers": "Map layers",
+    "dismissTileError": "Dismiss"
   },
   "compare": {
     "clearAll": "Clear all",

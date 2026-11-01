@@ -40,7 +40,7 @@ export default function UrlSync() {
     let timer: ReturnType<typeof setTimeout> | undefined;
     let navigating = false;
     let lastUrl = buildShareUrl(selectUrlView(useAppStore.getState(), city), city);
-    const unsub = useAppStore.subscribe((state) => {
+    const schedule = (state: ReturnType<typeof useAppStore.getState>) => {
       const url = buildShareUrl(selectUrlView(state, city), city);
       // Hover and animation state are not in share links. Replacing history
       // for those changes can interrupt a pending detail-page navigation.
@@ -51,7 +51,8 @@ export default function UrlSync() {
         timer = undefined;
         window.history.replaceState(null, '', url);
       }, 300);
-    });
+    };
+    const unsub = useAppStore.subscribe(schedule);
     // Next's client navigation may still be fetching when the click handler
     // returns. Flush the old map entry before the router handles a same-tab
     // local link, then prevent later store updates from interrupting it.
@@ -76,16 +77,40 @@ export default function UrlSync() {
       if (destination.pathname !== window.location.pathname) navigating = true;
     };
     const onProgrammaticNavigation = () => { flush(); navigating = true; };
+    // A canceled/failed transition can leave the map mounted indefinitely.
+    // A later deliberate interaction with map/filter UI resumes this page;
+    // another link activation alone must not resume a pending departure.
+    const onMapInteraction = (event: Event) => {
+      if (!navigating || event.defaultPrevented) return;
+      const modified = event as MouseEvent | KeyboardEvent;
+      if (modified.metaKey || modified.ctrlKey || modified.altKey ||
+          ((event.type === 'click' || event.type === 'pointerdown') && modified.shiftKey)) return;
+      if (event instanceof KeyboardEvent && event.key === 'Tab') return;
+      if ((event.type === 'pointerdown' || event.type === 'click') && (event as MouseEvent).button > 0) return;
+      const target = event.target;
+      if (!(target instanceof Element) || target.closest('a[href]') ||
+          !target.closest('.map-area-shell, .map-workspace, aside')) return;
+      navigating = false;
+      schedule(useAppStore.getState());
+    };
     const onPopState = () => {
       navigating = false;
       lastUrl = buildShareUrl(selectUrlView(useAppStore.getState(), city), city);
     };
     document.addEventListener('click', onNavigation, true);
+    document.addEventListener('pointerdown', onMapInteraction, true);
+    document.addEventListener('click', onMapInteraction, true);
+    document.addEventListener('change', onMapInteraction, true);
+    document.addEventListener('keydown', onMapInteraction, true);
     window.addEventListener('popstate', onPopState);
     window.addEventListener(MAP_NAVIGATION_INTENT, onProgrammaticNavigation);
     return () => {
       unsub(); clearTimeout(timer);
       document.removeEventListener('click', onNavigation, true);
+      document.removeEventListener('pointerdown', onMapInteraction, true);
+      document.removeEventListener('click', onMapInteraction, true);
+      document.removeEventListener('change', onMapInteraction, true);
+      document.removeEventListener('keydown', onMapInteraction, true);
       window.removeEventListener('popstate', onPopState);
       window.removeEventListener(MAP_NAVIGATION_INTENT, onProgrammaticNavigation);
     };

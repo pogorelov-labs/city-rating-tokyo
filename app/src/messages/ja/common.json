@@ -284,9 +284,10 @@
     "closeSelectedArea": "選択したエリアを閉じる",
     "interactiveBangkok": "バンコクのインタラクティブ地図",
     "resetBearing": "方位をリセット",
-    "tileError": "一部の地図タイルを読み込めませんでした。再読み込みを続けます。",
+    "tileError": "地図の詳細の一部を読み込めませんでした。",
     "mapAttribution": "地図の帰属表示",
-    "layers": "地図レイヤー"
+    "layers": "地図レイヤー",
+    "dismissTileError": "閉じる"
   },
   "compare": {
     "clearAll": "クリア",

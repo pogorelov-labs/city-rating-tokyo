@@ -40,3 +40,10 @@ export const stationFeatures = collection(rail.stations.map((s) => ({
 export function labelFeatures(areas: MapStation[], name: (a: MapStation) => string) {
   return collection(areas.map((a) => ({ type: 'Feature', id: a.slug, properties: { name: name(a), kind: a.slug.startsWith('st.') ? 'station' : 'district' }, geometry: { type: 'Point', coordinates: [a.lng, a.lat] } })));
 }
+
+/** An unlinked rail stop is a hit, but has no selectable area. */
+export function stationTarget(properties: { key?: unknown; district?: unknown }, level: 'district' | 'station' | 'grid'): string | undefined {
+  const district = typeof properties.district === 'string' ? properties.district : '';
+  const area = typeof properties.key === 'string' ? properties.key : '';
+  return (level === 'district' ? district : area || district) || undefined;
+}

@@ -14,7 +14,7 @@ describe('MapLibre availability', () => {
     expect(classifyMapError({ message: 'tile failed' }, false)).toBe('ignore');
   });
   it('keeps all renderer controls and fallback messages available to each client locale', () => {
-    const keys = ['rendererLabel', 'rendererThreeD', 'rendererStandard', 'rendererUnavailableWebgl', 'rendererUnavailableLoad', 'rendererUnavailableContext', 'mapControls', 'view2d', 'view3d', 'buildings', 'resetAsok', 'selectedArea', 'closeSelectedArea', 'interactiveBangkok', 'resetBearing', 'mapAttribution', 'tileError'] as const;
+    const keys = ['rendererLabel', 'rendererThreeD', 'rendererStandard', 'rendererUnavailableWebgl', 'rendererUnavailableLoad', 'rendererUnavailableContext', 'mapControls', 'view2d', 'view3d', 'buildings', 'resetAsok', 'selectedArea', 'closeSelectedArea', 'interactiveBangkok', 'resetBearing', 'mapAttribution', 'tileError', 'dismissTileError'] as const;
     for (const messages of [en, ja, ru]) {
       const client = bangkokClientMessages(messages);
       for (const key of keys) expect(client).toHaveProperty(`map.${key}`, expect.any(String));

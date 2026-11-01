@@ -41,6 +41,12 @@ export function installMapLayers(map: LibreMap, style: StyleSpecification) {
     'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': ['interpolate', ['linear'], ['zoom'], 10, 11, 13, 15],
     'text-max-width': 11, 'text-padding': 14, 'text-letter-spacing': .04,
   }, paint: { 'text-color': '#334155', 'text-halo-color': '#ffffff', 'text-halo-width': 2 } });
+  // Area names remain available independently of the optional physical rail overlay.
+  map.addLayer({ id: 'bkk-station-area-labels', type: 'symbol', source: 'bkk-labels', minzoom: 12,
+    filter: ['==', ['get', 'kind'], 'station'], layout: {
+      visibility: 'none', 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'],
+      'text-size': ['interpolate', ['linear'], ['zoom'], 12, 11, 15, 13], 'text-max-width': 11, 'text-padding': 8,
+    }, paint: { 'text-color': '#334155', 'text-halo-color': '#ffffff', 'text-halo-width': 2 } });
   if (vectorSource) map.addLayer({ id: 'bkk-park-labels', type: 'symbol', source: vectorSource, 'source-layer': 'poi', minzoom: 12,
     filter: ['==', ['get', 'class'], 'park'], layout: {
       'text-field': ['coalesce', ['get', 'name:en'], ['get', 'name_en'], ['get', 'name'], ''],

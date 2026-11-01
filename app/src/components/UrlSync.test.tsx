@@ -202,4 +202,93 @@ describe('UrlSync browser/store contract', () => {
     expect(new URLSearchParams(window.location.search).get('s')).toBe('beta');
   });
 
+  it('resumes map writeback after a prevented same-tab navigation and later filter interaction', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    const workspace = document.createElement('div'); workspace.className = 'map-workspace';
+    const link = document.createElement('a'); link.href = '/station/alpha';
+    link.addEventListener('click', event => event.preventDefault()); workspace.append(link);
+    const filter = document.createElement('button'); workspace.append(filter); document.body.append(workspace);
+    fireEvent.click(link);
+    act(() => getCityActions('tokyo').setMaxRent(100000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).not.toHaveBeenCalled();
+    fireEvent.pointerDown(filter);
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(new URLSearchParams(window.location.search).get('mr')).toBe('90000');
+    workspace.remove();
+  });
+
+  it('resumes after an interrupted programmatic navigation on keyboard filter interaction', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    window.dispatchEvent(new Event('city-rating:map-navigation-intent'));
+    const aside = document.createElement('aside'); const input = document.createElement('input');
+    aside.append(input); document.body.append(aside);
+    fireEvent.keyDown(input, { key: 'ArrowDown' });
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('mr')).toBe('90000');
+    aside.remove();
+  });
+
+  it('does not resume a pending departure merely from another guide link interaction', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    const workspace = document.createElement('div'); workspace.className = 'map-workspace';
+    const link = document.createElement('a'); link.href = '/station/alpha';
+    link.addEventListener('click', event => event.preventDefault()); workspace.append(link); document.body.append(workspace);
+    fireEvent.click(link);
+    fireEvent.pointerDown(link);
+    fireEvent.keyDown(link, { key: 'Enter' });
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).not.toHaveBeenCalled();
+    workspace.remove();
+  });
+
+  it('resumes after a canceled navigation on a pointerless filter click', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount();
+    const workspace = document.createElement('div'); workspace.className = 'map-workspace';
+    const link = document.createElement('a'); link.href = '/station/alpha';
+    link.addEventListener('click', event => event.preventDefault()); workspace.append(link);
+    const filter = document.createElement('button'); workspace.append(filter); document.body.append(workspace);
+    fireEvent.click(link);
+    fireEvent.click(filter);
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('mr')).toBe('90000');
+    workspace.remove();
+  });
+
+  it('resumes after an interrupted navigation on a native filter change', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount(); window.dispatchEvent(new Event('city-rating:map-navigation-intent'));
+    const aside = document.createElement('aside'); const input = document.createElement('input');
+    aside.append(input); document.body.append(aside);
+    fireEvent.change(input, { target: { value: '90000' } });
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).toHaveBeenCalledTimes(1);
+    expect(new URLSearchParams(window.location.search).get('mr')).toBe('90000');
+    aside.remove();
+  });
+
+  it('does not resume a pending navigation for a modified filter click', () => {
+    const replace = vi.spyOn(window.history, 'replaceState');
+    mount(); window.dispatchEvent(new Event('city-rating:map-navigation-intent'));
+    const workspace = document.createElement('div'); workspace.className = 'map-workspace';
+    const filter = document.createElement('button'); workspace.append(filter); document.body.append(workspace);
+    fireEvent(filter, new MouseEvent('pointerdown', { bubbles: true, shiftKey: true }));
+    fireEvent.click(filter, { shiftKey: true });
+    act(() => getCityActions('tokyo').setMaxRent(90000));
+    act(() => vi.advanceTimersByTime(300));
+    expect(replace).not.toHaveBeenCalled();
+    workspace.remove();
+  });
+
 });

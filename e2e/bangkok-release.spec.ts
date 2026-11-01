@@ -391,3 +391,19 @@ test('short phone standard fallback keeps card and map controls usable with air 
     await expect(page.getByRole('button', { name: 'Filters', exact: true })).toBeVisible();
   } finally { await context.close(); }
 });
+
+test('a canceled guide navigation does not disable later map URL updates', async ({ page }) => {
+  await page.goto('/bangkok?s=pathum-wan');
+  const card = page.getByRole('region', { name: en.map.selectedArea });
+  const link = card.getByRole('link', { name: en.areaGuide.compact.explore, exact: true });
+  await expect(link).toBeVisible({ timeout: 30_000 });
+  // Cancel exactly one same-tab navigation at the destination link, as a
+  // browser or application listener may do, without replacing map behavior.
+  await link.evaluate(element => element.addEventListener('click', event => event.preventDefault(), { once: true }));
+  await link.click();
+  await expect(page).toHaveURL(/\/bangkok\?/);
+  const family = page.locator('aside').getByRole('checkbox', { name: /Family-friendly/ });
+  await family.check();
+  await expect.poll(() => new URL(page.url()).searchParams.get('adult')).toBe('1');
+  expect(new URL(page.url()).searchParams.get('s')).toBe('pathum-wan');
+});

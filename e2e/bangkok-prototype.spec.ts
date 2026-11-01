@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { resolve } from 'node:path';
 import header from '../app/src/data/bangkok/grid.json';
+import ja from '../app/src/messages/ja/common.json';
 
 test('MapLibre draws buildings and grid while preserving filters and copied state', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
@@ -134,6 +135,76 @@ test('weight, camera and visibility changes avoid unrelated renderer work', asyn
   for (const name of ['source.bkk-labels.submit', 'areas.sync', 'grid.score', 'grid.colors']) expect(after.stages[name]).toBeUndefined();
 });
 
+test('station area labels remain localized when physical rail is hidden', async ({ page }) => {
+  await page.goto('/ja/bangkok/prototype/maplibre?lv=grid&profile=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready(), null, { timeout: 30_000 });
+  await page.getByRole('radio', { name: ja.map.level_station, exact: true }).click();
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.56036, lat: 13.73704, zoom: 16, pitch: 0, bearing: 0 }));
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectArea!('st.asok').rendered.length)).toBeGreaterThan(0);
+  const rail = page.getByRole('button', { name: ja.map.railNetwork, exact: true });
+  await expect(rail).toHaveAttribute('aria-pressed', 'true');
+  const before = await page.evaluate(() => {
+    window.__bangkokProfile!.reset();
+    return window.__bangkokRenderer!.stats().gridUploads;
+  });
+  expect(Number(before)).toBeGreaterThan(0);
+  await rail.click();
+  await expect(rail).toHaveAttribute('aria-pressed', 'false');
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectStationLabels!().rendered.some(label =>
+    label.name === 'アソーク / スクムウィット')), { timeout: 15_000 }).toBe(true);
+  const hiddenRail = await page.evaluate(() => ({
+    labels: window.__bangkokRenderer!.inspectStationLabels!(),
+    hits: window.__bangkokRenderer!.inspectStationHits!(100.56036, 13.73704),
+    area: window.__bangkokRenderer!.inspectArea!('st.asok').rendered,
+    uploads: window.__bangkokRenderer!.stats().gridUploads,
+    stages: window.__bangkokProfile!.snapshot().stages,
+  }));
+  expect(hiddenRail.labels.visibility).toBe('visible');
+  expect(hiddenRail.labels.railVisibility).toBe('none');
+  expect(hiddenRail.labels.markerVisibility).toBe('none');
+  expect(hiddenRail.labels.physicalLabelVisibility).toBe('none');
+  expect(hiddenRail.hits).toEqual([]);
+  expect(hiddenRail.area.length).toBeGreaterThan(0);
+  expect(hiddenRail.uploads).toBe(before);
+  expect(hiddenRail.stages['source.bkk-labels.submit']).toBeUndefined();
+  await rail.click();
+  await expect(rail).toHaveAttribute('aria-pressed', 'true');
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectStationLabels!().visibility)).toBe('none');
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.inspectStationHits!(100.56036, 13.73704).length)).toBeGreaterThan(0);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.stats().gridUploads)).toBe(before);
+  expect(await page.evaluate(() => window.__bangkokProfile!.snapshot().stages['source.bkk-labels.submit'])).toBeUndefined();
+});
+
+test('unlinked rail hit preserves selection while empty background dismisses it', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre?lv=station&s=st.asok&profile=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready(), null, { timeout: 30_000 });
+  const card = page.getByRole('region', { name: 'Selected area' });
+  await expect(card).toBeVisible();
+  const marker = { lng: 100.4775, lat: 13.79221 };
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 16, pitch: 0, bearing: 0 }), marker);
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+  await expect.poll(() => page.evaluate(({ lng, lat }) => window.__bangkokRenderer!.inspectStationHits!(lng, lat), marker))
+    .toContainEqual({ id: 'bang-bamru', key: '', district: '' });
+  const point = await page.evaluate(({ lng, lat }) => window.__bangkokRenderer!.project(lng, lat), marker);
+  const box = await page.getByTestId('maplibre-map').boundingBox();
+  expect(box).not.toBeNull();
+  await page.mouse.click(box!.x + point.x, box!.y + point.y);
+  // Observe beyond the map's deferred click and URL updates: an immediate
+  // visibility assertion would pass before an erroneous clear is applied.
+  await page.waitForTimeout(700);
+  await expect(card).toBeVisible();
+  expect(new URL(page.url()).searchParams.get('s')).toBe('st.asok');
+  // Empty background is outside Bangkok's scored areas and rail network.
+  const empty = { lng: 100.10, lat: 13.35 };
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 13, pitch: 0, bearing: 0 }), empty);
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+  const blank = await page.evaluate(({ lng, lat }) => window.__bangkokRenderer!.project(lng, lat), empty);
+  await page.mouse.click(box!.x + blank.x, box!.y + blank.y);
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+  await expect(card).toBeHidden();
+});
+
 test('wheel zoom and view controls preserve the grid without repainting its texture', async ({ page }) => {
   await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
   await page.waitForFunction(() => window.__bangkokRenderer?.ready());
@@ -255,4 +326,27 @@ test('leaving the profiled lab removes diagnostics from production', async ({ pa
   await expect(page).toHaveURL(/\/bangkok(?:\?|$)/);
   await expect(page.getByTestId('maplibre-map')).toBeVisible();
   await expect.poll(() => page.evaluate(() => ['__bangkokRenderer', '__bangkokProfile', '__bangkokGridPaint'].map((key) => key in window))).toEqual([false, false, false]);
+});
+
+test('a failed tile remains reported after map recovery until dismissed', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre?profile=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready(), null, { timeout: 30_000 });
+  // Fail real vector tile requests only after the style is ready. Subsequent
+  // requests are restored so the map can become idle again.
+  const tiles = /^https:\/\/tiles\.openfreemap\.org\/planet\/.*\.pbf(?:\?.*)?$/;
+  let failed = 0;
+  await page.route(tiles, async route => { failed++; await route.fulfill({ status: 503, contentType: 'text/plain', body: 'Tile unavailable' }); });
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.65, lat: 13.81, zoom: 16, pitch: 0, bearing: 0 }));
+  const notice = page.getByRole('status').filter({ hasText: 'Some map details could not load.' });
+  await expect(notice).toBeVisible({ timeout: 30_000 });
+  expect(failed).toBeGreaterThan(0);
+  const idleBefore = Number(await page.evaluate(() => window.__bangkokRenderer!.stats().idleEvents));
+  await page.unroute(tiles);
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.56, lat: 13.737, zoom: 15, pitch: 0, bearing: 0 }));
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready(), null, { timeout: 30_000 });
+  await expect.poll(() => page.evaluate(() => Number(window.__bangkokRenderer!.stats().idleEvents)), { timeout: 30_000 }).toBeGreaterThan(idleBefore);
+  await expect(notice).toBeVisible();
+  await notice.getByRole('button', { name: 'Dismiss', exact: true }).click();
+  await expect(notice).toBeHidden();
+  await expect(page.getByTestId('maplibre-map')).toBeVisible();
 });

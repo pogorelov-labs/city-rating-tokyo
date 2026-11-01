@@ -23,7 +23,7 @@ import CompactAreaCard from '@/components/area/CompactAreaCard';
 import { CellDetails } from '../CellDetails';
 import { Legend } from '../MapLegend';
 import { GridTextureLayer } from './GridTextureLayer';
-import { cellFeature, collection, EMPTY, labelFeatures, stationIdsByArea } from './map-data';
+import { cellFeature, collection, EMPTY, labelFeatures, stationIdsByArea, stationTarget } from './map-data';
 import { installMapLayers, RAIL_LAYERS } from './map-style';
 import { FeatureStateCache } from './feature-state';
 import { analyticalCityStyle } from './map-colors';
@@ -120,7 +120,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     mapRef.current = map;
     const releaseLab = prototype ? retainRendererLab() : () => {};
     const detachProfile = prototype ? attachMapProfile(map) : () => {};
-    let disposed = false, loaded = false, failed = false, frame = 0, renders = 0, errors = 0;
+    let disposed = false, loaded = false, failed = false, frame = 0, renders = 0, errors = 0, idleEvents = 0;
     let clickTimer: ReturnType<typeof setTimeout> | undefined;
     const fail = (reason: 'load' | 'context') => { if (disposed || failed) return; failed = true; setFatal(reason); setReady(false); unavailableRef.current?.(reason); };
     let loadTimeout = window.setTimeout(() => { if (!loaded) fail('load'); }, 20000);
@@ -159,7 +159,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       setCamera: (c, duration = 0) => { map.stop(); map.easeTo({ center: [c.lng, c.lat], zoom: c.zoom - 1, pitch: c.pitch ?? map.getPitch(), bearing: c.bearing ?? map.getBearing(), duration, essential: false }); },
       getCamera: () => ({ lat: map.getCenter().lat, lng: map.getCenter().lng, zoom: map.getZoom() + 1, pitch: map.getPitch(), bearing: map.getBearing() }),
       project: (lng, lat) => { const p = map.project([lng, lat]); return { x: p.x, y: p.y }; },
-      stats: () => ({ renders, errors, gridUploads: textureRef.current?.uploads ?? 0, gridDraws: textureRef.current?.draws ?? 0,
+      stats: () => ({ renders, errors, ...(prototype ? { idleEvents } : {}), gridUploads: textureRef.current?.uploads ?? 0, gridDraws: textureRef.current?.draws ?? 0,
         gridGpuBytes: textureRef.current?.gpuBytes ?? 0, gridUpdateMs: textureRef.current?.updateMs ?? 0,
         buildingFeatures: map.isStyleLoaded() && map.getLayer('bkk-buildings') ? map.queryRenderedFeatures({ layers: ['bkk-buildings'] }).length : 0 }),
     };
@@ -176,6 +176,15 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
           focusVisible: map.getLayoutProperty('bkk-area-focus-fill', 'visibility') !== 'none',
         };
       };
+      bridge.inspectStationHits = (lng, lat) => map.queryRenderedFeatures(map.project([lng, lat]), { layers: ['bkk-stations'] })
+        .map((feature) => ({ id: feature.id, key: String(feature.properties.key ?? ''), district: String(feature.properties.district ?? '') }));
+      bridge.inspectStationLabels = () => ({
+        visibility: map.getLayoutProperty('bkk-station-area-labels', 'visibility') === 'none' ? 'none' : 'visible',
+        railVisibility: map.getLayoutProperty('bkk-rail', 'visibility') === 'none' ? 'none' : 'visible',
+        markerVisibility: map.getLayoutProperty('bkk-stations', 'visibility') === 'none' ? 'none' : 'visible',
+        physicalLabelVisibility: map.getLayoutProperty('bkk-station-labels', 'visibility') === 'none' ? 'none' : 'visible',
+        rendered: map.queryRenderedFeatures({ layers: ['bkk-station-area-labels'] }).map((feature) => ({ id: feature.id, name: String(feature.properties.name ?? '') })),
+      });
       bridge.inspectArea = (key) => ({ area: map.getFeatureState({ source: 'bkk-areas', id: key }),
         stations: (stationIdsByArea.get(key) ?? []).map((id) => map.getFeatureState({ source: 'bkk-stations', id })),
         rendered: map.queryRenderedFeatures({ layers: ['bkk-area-fill'], filter: ['==', ['get', 'key'], key] }).map((f) => ({ id: f.id, state: f.state })),
@@ -185,7 +194,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       bridge.setLayerGroup = (group, visible) => {
         if (group === 'grid') { if (textureRef.current) textureRef.current.visible = visible && current.current.level === 'grid'; }
         else for (const layer of map.getStyle().layers) {
-          const matches = group === 'areas' ? layer.id.startsWith('bkk-area-') : group === 'rail' ? /^bkk-(rail|station)/.test(layer.id) : group === 'labels' ? layer.id === 'bkk-labels' : layer.id === 'bkk-buildings';
+          const matches = group === 'areas' ? layer.id.startsWith('bkk-area-') : group === 'rail' ? RAIL_LAYERS.includes(layer.id) : group === 'labels' ? ['bkk-labels', 'bkk-station-area-labels'].includes(layer.id) : layer.id === 'bkk-buildings';
           if (!matches) continue;
           if (!visible) { saved.set(layer.id, map.getLayoutProperty(layer.id, 'visibility') === 'none' ? 'none' : 'visible'); map.setLayoutProperty(layer.id, 'visibility', 'none'); }
           else { map.setLayoutProperty(layer.id, 'visibility', saved.get(layer.id) ?? 'visible'); saved.delete(layer.id); }
@@ -204,7 +213,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       if (kind === 'load') fail('load');
       else if (kind === 'tile') setError(true);
     });
-    map.on('idle', () => { if (!disposed && loaded) setError(false); });
+    if (prototype) map.on('idle', () => { idleEvents++; });
     map.on('render', () => { renders++; });
     map.on('pitchend', () => { if (!disposed) setTilted(map.getPitch() > 5); });
     map.on('movestart', clearHover);
@@ -250,13 +259,14 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       if (!map.getLayer('bkk-stations')) return null;
       const s = current.current;
       const hit = measure('map.pick', () => map.queryRenderedFeatures(point, { layers: ['bkk-spots', 'bkk-stations', ...(s.level === 'grid' ? [] : ['bkk-area-fill'])] }))[0];
-      if (hit) return String(hit.layer.id === 'bkk-stations' ? (s.level === 'district' ? hit.properties.district : hit.properties.key) : hit.properties.key) || null;
+      if (hit) return hit.layer.id === 'bkk-stations' ? stationTarget(hit.properties, s.level) : String(hit.properties.key) || null;
       if (s.level === 'grid' && s.grid) { const i = cellAt(s.grid, lat, lng); return i >= 0 ? `cell.${i}` : null; }
       return null;
     };
     map.on('click', (e) => {
       if (e.originalEvent.detail > 1) return;
       const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat);
+      if (key === undefined) return;
       clearHover();
       const select = () => current.current.actions.setSelectedStation(key === current.current.selected ? null : key);
       if (current.current.isTouch) select();
@@ -268,7 +278,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       frame = requestAnimationFrame(() => {
         const s = current.current;
         if (s.isTouch || map.isMoving()) return;
-        const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat);
+        const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat) ?? null;
         map.getCanvas().style.cursor = key ? 'pointer' : '';
         if (key === hoverKey) return;
         hoverKey = key; setHover(key);
@@ -335,10 +345,10 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   }, [ready, recovery, t]);
   useEffect(() => {
     const map = mapRef.current; if (!ready || !map) return;
-    setSource(map, 'bkk-labels', measure('labels.build', () => labelFeatures(stations, (a) => stationPrimaryName(a, locale))));
+    setSource(map, 'bkk-labels', measure('labels.build', () => labelFeatures([...stations, ...stationAreas], (a) => stationPrimaryName(a, locale))));
     map.setLayoutProperty('bkk-station-labels', 'text-field', ['get', locale === 'ja' ? 'name_ja' : 'name']);
     if (map.getLayer('bkk-park-labels')) map.setLayoutProperty('bkk-park-labels', 'text-field', ['coalesce', ['get', `name:${locale}`], ['get', 'name:en'], ['get', 'name_en'], ['get', 'name'], '']);
-  }, [ready, recovery, locale, stations]);
+  }, [ready, recovery, locale, stations, stationAreas]);
   useEffect(() => {
     const map = mapRef.current; if (!ready || !map) return;
     for (const id of ['bkk-area-fill', 'bkk-area-outline']) map.setFilter(id, ['==', ['get', 'kind'], level === 'grid' ? 'none' : level]);
@@ -348,6 +358,10 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     const map = mapRef.current; if (!ready || !map) return;
     for (const id of RAIL_LAYERS) map.setLayoutProperty(id, 'visibility', showRail ? 'visible' : 'none');
   }, [ready, recovery, showRail]);
+  useEffect(() => {
+    const map = mapRef.current; if (!ready || !map) return;
+    map.setLayoutProperty('bkk-station-area-labels', 'visibility', level === 'station' && !showRail ? 'visible' : 'none');
+  }, [ready, recovery, showRail, level]);
   useEffect(() => {
     const map = mapRef.current; if (!ready || !map || !map.getLayer('bkk-buildings')) return;
     map.setLayoutProperty('bkk-buildings', 'visibility', buildings ? 'visible' : 'none');
@@ -411,7 +425,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     <div ref={host} data-testid="maplibre-map" className={`bangkok-maplibre h-full w-full${compactControls ? ' bkk-map-compact' : ''}`} />
     {!ready && !fatal && <div role="status" className="absolute inset-0 grid place-items-center bg-slate-100 text-slate-600 pointer-events-none">{t('loading.map')}</div>}
     {fatal && !onUnavailable && <div role="alert" className="absolute inset-0 grid place-items-center bg-slate-100 text-slate-600">{t(fatal === 'webgl' ? 'map.rendererUnavailableWebgl' : fatal === 'context' ? 'map.rendererUnavailableContext' : 'map.rendererUnavailableLoad')}</div>}
-    {error && !fatal && <div role="status" className="absolute left-3 bottom-2 z-20 rounded bg-white px-3 py-2 text-xs text-amber-800">{t('map.tileError')}</div>}
+    {error && !fatal && <div role="status" className="absolute left-3 bottom-2 z-[1002] max-w-[calc(100%-5rem)] rounded bg-white px-3 text-xs text-amber-800 shadow-sm">{t('map.tileError')} <button type="button" className="ml-2 min-h-11 underline" onClick={() => setError(false)}>{t('map.dismissTileError')}</button></div>}
     <div ref={controlsRef} role="group" aria-label={t('map.mapControls')} className={compactControls ? `bkk-compact-controls absolute right-2.5 bottom-0 ${controlsOpen ? 'z-[1003]' : 'z-[1001]'}` : 'absolute right-3 bottom-44 max-md:top-28 max-md:bottom-auto z-20'} onKeyDown={(event) => { if (event.key === 'Escape' && controlsOpen) { event.stopPropagation(); setControlsOpen(false); } }}>
       {compactControls && <button type="button" className="bkk-compact-trigger" disabled={!ready} aria-label={t('map.mapControls')} aria-expanded={controlsOpen} onClick={() => setControlsOpen(!controlsOpen)}>3D</button>}
       {(!compactControls || controlsOpen) && <div className={`${compactControls ? 'absolute right-14 bottom-0 ' : ''}flex flex-col gap-1 rounded-lg border border-slate-300 bg-white/95 p-1 shadow-sm`}>
