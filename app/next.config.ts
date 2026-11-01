@@ -1,13 +1,18 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import slugRedirects from "./src/data/slug-redirects.json";
+import path from "node:path";
+import { contentSecurityPolicy } from "./src/lib/content-security-policy";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  turbopack: { root: __dirname },
-  outputFileTracingRoot: __dirname,
+  outputFileTracingRoot: path.resolve(__dirname),
+  turbopack: { root: path.resolve(__dirname) },
+  // Keep next-intl's rewrite origin aligned with the standalone bind origin.
+  // Normalizing loopback to localhost can otherwise turn an EN rewrite external.
+  skipProxyUrlNormalize: true,
   poweredByHeader: false,
   async redirects() {
     // 301 redirects for renamed station slugs (wapuro→Hepburn romanization fix)
@@ -29,27 +34,13 @@ const nextConfig: NextConfig = {
     return [...slugs, ...cities];
   },
   async headers() {
-    return [
+    const rules = [
       {
         source: "/(.*)",
         headers: [
           {
             key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://*.pogorelov.dev",
-              "style-src 'self' 'unsafe-inline'",
-              // i.ytimg.com: YouTube thumbnail hosts (livecam facade previews)
-              // thumb.wikimedia.org: Commons' thumbnail host (Bangkok district photos).
-              "img-src 'self' data: https://basemaps.cartocdn.com https://tile.openstreetmap.org https://upload.wikimedia.org https://thumb.wikimedia.org https://commons.wikimedia.org https://img.pogorelov.dev https://i.ytimg.com",
-              "connect-src 'self' https://*.pogorelov.dev",
-              "font-src 'self'",
-              // frame-src: YouTube live camera embeds (CRTKY-116).
-              // Without this, CSP falls back to default-src 'self' and all
-              // cross-origin iframes (including YouTube) are blocked.
-              "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
-              "frame-ancestors 'none'",
-            ].join("; "),
+            value: contentSecurityPolicy({ development: process.env.NODE_ENV === 'development' }),
           },
           {
             key: "Strict-Transport-Security",
@@ -80,6 +71,10 @@ const nextConfig: NextConfig = {
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];
+    // The common policy also applies to the worker response. A city-specific
+    // document policy would block Tokyo → Bangkok client-side navigation.
+    rules.push({ source: '/map-assets/:file*', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] });
+    return rules;
   },
 };
 

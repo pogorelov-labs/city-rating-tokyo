@@ -1,0 +1,90 @@
+import { expect, test } from '@playwright/test';
+
+async function expectVisibleDistrictBesideCard(page: import('@playwright/test').Page) {
+  const popup = page.locator('.area-guide-popup');
+  const outline = page.locator('.leaflet-bkk-outlines-pane path[stroke="#1d4ed8"]');
+  await expect(outline).toBeVisible();
+  const shape = await outline.boundingBox(), card = await popup.boundingBox(), workspace = await page.locator('.map-workspace').boundingBox();
+  expect(shape).toBeTruthy(); expect(card).toBeTruthy(); expect(workspace).toBeTruthy();
+  expect(shape!.width).toBeGreaterThan(20); expect(shape!.height).toBeGreaterThan(20);
+  expect(shape!.x).toBeGreaterThanOrEqual(workspace!.x);
+  expect(shape!.y).toBeGreaterThanOrEqual(workspace!.y);
+  expect(shape!.x + shape!.width).toBeLessThanOrEqual(workspace!.x + workspace!.width);
+  expect(shape!.y + shape!.height).toBeLessThanOrEqual(workspace!.y + workspace!.height);
+  const overlapWidth = Math.max(0, Math.min(shape!.x + shape!.width, card!.x + card!.width) - Math.max(shape!.x, card!.x));
+  const overlapHeight = Math.max(0, Math.min(shape!.y + shape!.height, card!.y + card!.height) - Math.max(shape!.y, card!.y));
+  expect(overlapWidth * overlapHeight).toBe(0);
+}
+
+test('a selected outer district remains usable after switching to the standard renderer', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await page.goto('/bangkok?lv=district&s=nong-chok');
+  const selected = page.getByRole('region', { name: 'Selected area' });
+  await expect(selected.getByRole('heading', { name: 'Nong Chok' })).toBeVisible({ timeout: 30_000 });
+  await page.getByLabel('Map renderer').selectOption('leaflet');
+  const popup = page.locator('.area-guide-popup');
+  await expect(popup.getByRole('heading', { name: 'Nong Chok' })).toBeVisible({ timeout: 30_000 });
+  const close = popup.getByRole('button', { name: 'Close area card' });
+  const legend = page.locator('.map-workspace').getByText('Composite Score', { exact: true });
+  await expect(legend).toBeHidden();
+  await expect(close).toBeInViewport();
+  await page.waitForTimeout(800); // allow the bounds flight and popup positioning to settle
+  const bounds = await popup.boundingBox(), workspace = await page.locator('.map-workspace').boundingBox();
+  expect(bounds).not.toBeNull(); expect(workspace).not.toBeNull();
+  expect(bounds!.y).toBeGreaterThanOrEqual(workspace!.y);
+  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(workspace!.y + workspace!.height);
+  await expectVisibleDistrictBesideCard(page);
+  await close.click({ trial: true, timeout: 10_000 });
+  await expect(popup).toHaveClass(/bkk-detached/);
+  await expect(popup.locator('.leaflet-popup-tip-container')).toBeHidden();
+  await page.setViewportSize({ width: 900, height: 600 });
+  await page.waitForTimeout(300);
+  const resized = await popup.boundingBox(), resizedWorkspace = await page.locator('.map-workspace').boundingBox();
+  expect(resized).toBeTruthy(); expect(resizedWorkspace).toBeTruthy();
+  expect(resized!.y).toBeGreaterThanOrEqual(resizedWorkspace!.y);
+  expect(resized!.y + resized!.height).toBeLessThanOrEqual(resizedWorkspace!.y + resizedWorkspace!.height);
+  await close.click({ trial: true });
+  await close.click();
+  await expect(popup).toBeHidden();
+  await expect(legend).toBeVisible();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
+});
+
+test('Russian weighted search and guide return preserve the outer-district card', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await page.goto('/ru/bangkok?lv=district&w=30,18,14,10,12,8,4,4,8,4');
+  const search = page.locator('aside input[type="text"], aside input[type="search"]').first();
+  await search.fill('Nong Chok');
+  await page.locator('aside [data-umami-event="search-select"][data-umami-event-station="nong-chok"]').click();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe('nong-chok');
+  await page.getByLabel('Вид карты').selectOption('leaflet');
+  const initialPopup = page.locator('.area-guide-popup');
+  const initialClose = initialPopup.locator('button[aria-label]').last();
+  await expect(initialPopup).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(800);
+  const firstBounds = await initialPopup.boundingBox(), firstWorkspace = await page.locator('.map-workspace').boundingBox();
+  expect(firstBounds).toBeTruthy(); expect(firstWorkspace).toBeTruthy();
+  expect(firstBounds!.y).toBeGreaterThanOrEqual(firstWorkspace!.y);
+  expect(firstBounds!.y + firstBounds!.height).toBeLessThanOrEqual(firstWorkspace!.y + firstWorkspace!.height);
+  await expectVisibleDistrictBesideCard(page);
+  await initialClose.click({ trial: true });
+  await page.getByLabel('Вид карты').selectOption('maplibre');
+  const selected = page.getByRole('region', { name: 'Выбранный район' });
+  const guide = selected.locator('a[data-umami-event="view-details"]');
+  await expect(guide).toHaveAttribute('href', /nong-chok.*w=/);
+  await guide.click();
+  await expect(page).toHaveURL(/\/ru\/bangkok\/district\/nong-chok/, { timeout: 30_000 });
+  await page.goBack();
+  await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBe('nong-chok');
+  await page.getByLabel('Вид карты').selectOption('leaflet');
+  const popup = page.locator('.area-guide-popup');
+  const close = popup.locator('button[aria-label]').last();
+  await expect(popup).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(800);
+  const card = await popup.boundingBox(), button = await close.boundingBox();
+  expect(card).toBeTruthy(); expect(button).toBeTruthy();
+  expect(card!.y).toBeGreaterThanOrEqual(0);
+  expect(button!.y).toBeGreaterThanOrEqual(0);
+  expect(button!.y + button!.height).toBeLessThanOrEqual(720);
+  await close.click({ trial: true, timeout: 20_000 });
+});

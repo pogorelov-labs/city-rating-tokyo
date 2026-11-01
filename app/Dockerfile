@@ -3,7 +3,9 @@ FROM node:20-alpine AS base
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
+# The lint adapter is a packed local dependency, resolved entirely inside app/.
+COPY package.json package-lock.json .npmrc ./
+COPY tooling/minimatch-compat ./tooling/minimatch-compat
 RUN npm ci
 
 # Rebuild source code only when needed
@@ -11,12 +13,11 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# Cap V8 old-space at 4 GB so a runaway compile gets a clean heap-OOM
-# instead of the kernel killing the whole container. Pairs with the
-# /swapfile we added on the VPS — see PR #103. Bump if 4486+ pages
-# legitimately need more headroom; check the build log for "JavaScript
-# heap out of memory" before raising blindly.
+# Bound build memory so an oversized compile fails with a useful heap error.
 ENV NODE_OPTIONS=--max-old-space-size=4096
+# The normal Bangkok renderer is selected during static generation.
+ARG BANGKOK_MAP_RENDERER=maplibre
+ENV BANGKOK_MAP_RENDERER=$BANGKOK_MAP_RENDERER
 RUN npm run build
 
 # Production image

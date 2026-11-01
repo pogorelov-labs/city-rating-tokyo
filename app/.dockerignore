@@ -6,3 +6,4 @@ README.md
 .DS_Store
 .env*
 *.tsbuildinfo
+public/bangkok/prototype/assets

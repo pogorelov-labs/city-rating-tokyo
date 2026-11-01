@@ -14,6 +14,11 @@ on 10 lines and 39,149 grid cells at 200 m. Coverage is not uniform evidence
 quality; see [data readiness](#data-readiness--coverage-honesty-maintainers).
 Deployment details and operational access are maintained outside this public repository.
 
+Bangkok defaults to MapLibre with a standard-map fallback. Renderer state is local
+to the view; scoring, selection, comparison and URLs remain shared. The
+[map guide](docs/BANGKOK_MAP.md) documents worker packaging, recovery, CSP, the
+build-time renderer default and the opt-in comparison lab.
+
 ## Architecture
 
 [CityHome](app/src/components/CityHome.tsx) composes the shared homepage with
@@ -23,10 +28,10 @@ consume the same city registry, store and named-area scoring contract.
 
 ```text
 CityHome → city context + area lists + ScoredAreasProvider
-            ├─ Map / DistrictMap
+            ├─ Map (Tokyo) / BangkokMapRenderer (3D or standard)
             ├─ desktop FilterPanel + mobile drawer FilterPanel
             └─ ScatterPlotExplorer
-Bangkok grid → useScoredGrid → GridLayer + GridRanking + useGridHotspots
+Bangkok grid → useScoredGrid → GridTextureLayer / GridLayer + GridRanking + useGridHotspots
 Detail routes → DetailHeader + RatingsBreakdown; Bangkok also uses DetailFacts
 ```
 

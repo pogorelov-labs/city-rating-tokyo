@@ -1,5 +1,6 @@
 'use client';
 
+import { requestDistrictFocus } from '@/lib/map-navigation-intent';
 import { useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
@@ -237,6 +238,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               <button
                 key={s.slug}
                 onClick={() => {
+                  requestDistrictFocus(city.id, s.slug);
                   setSelectedStation(s.slug);
                   setHoveredStation(null);
                   setSearch('');
@@ -503,6 +505,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 </div>
                 <input
                   type="range"
+                  aria-label={`${t('filter.weights')}: ${t(`ratings.${key}`)}`}
                   min={0}
                   max={50}
                   value={weights[key]}
@@ -541,7 +544,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             {ranked.map((s, i) => (
               <li key={s.slug}>
                 <button
-                  onClick={() => setSelectedStation(s.slug)}
+                  onClick={() => { requestDistrictFocus(city.id, s.slug); setSelectedStation(s.slug); }}
                   onMouseEnter={() => setHoveredStation(s.slug)}
                   onMouseLeave={() => setHoveredStation(null)}
                   onFocus={() => setHoveredStation(s.slug)}

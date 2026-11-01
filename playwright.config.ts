@@ -11,33 +11,41 @@ import { defineConfig, devices } from '@playwright/test';
  * The map interaction spec also runs in CI. See e2e/README.md.
  */
 const isCI = !!process.env.CI;
-const releaseBaseURL = process.env.PLAYWRIGHT_BASE_URL;
+const ciLinux = isCI && process.platform === 'linux';
+const externalBaseURL = process.env.E2E_BASE_URL || process.env.PLAYWRIGHT_BASE_URL;
 const production = process.env.E2E_PRODUCTION === '1';
 const port = process.env.E2E_PORT || '3000';
 if (!/^\d{1,5}$/.test(port) || Number(port) < 1 || Number(port) > 65535) {
   throw new Error('E2E_PORT must be a valid TCP port');
 }
-const baseURL = `http://localhost:${port}`;
+const baseURL = externalBaseURL || `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: '**/bangkok-prototype.spec.ts',
   fullyParallel: true,
   forbidOnly: isCI,
-  retries: isCI ? 1 : 0,
+  retries: 0,
   workers: isCI ? 1 : undefined,
   reporter: [['html', { open: 'never' }]],
   use: {
-    baseURL: releaseBaseURL ?? baseURL,
-    trace: 'on-first-retry',
+    baseURL,
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: ciLinux ? 'chromium' : undefined,
+        // CI's headless Linux browser may not have a hardware GPU. These
+        // flags exercise rendering functionality, not performance.
+        launchOptions: ciLinux ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
+      },
     },
   ],
-  webServer: releaseBaseURL ? undefined : {
+  webServer: externalBaseURL ? undefined : {
     command: production ? 'node app/.next/standalone/server.js' : `cd app && npm run dev -- --port ${port}`,
     url: baseURL,
     env: { PORT: port, HOSTNAME: 'localhost' },

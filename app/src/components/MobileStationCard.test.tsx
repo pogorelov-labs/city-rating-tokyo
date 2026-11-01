@@ -28,8 +28,10 @@ describe('MobileStationCard animation lifecycle', () => {
     act(() => vi.advanceTimersByTime(1000));
     expect(card).not.toHaveStyle({ display: 'none' });
     expect(card).toHaveClass('translate-y-full');
+    expect(card).toHaveAttribute('data-open', 'false');
     frames.next(); expect(card).toHaveClass('translate-y-full');
     frames.next(); expect(card).toHaveClass('translate-y-0');
+    expect(card).toHaveAttribute('data-open', 'true');
     select('beta');
     expect(screen.getByRole('dialog', { name: 'beta' })).toBe(card);
     expect(card).toHaveClass('translate-y-0');
@@ -39,6 +41,7 @@ describe('MobileStationCard animation lifecycle', () => {
     mount(); select('alpha'); frames.next(); frames.next();
     const card = screen.getByRole('dialog');
     fly(true);
+    expect(card).toHaveAttribute('data-open', 'false');
     expect(card).toHaveClass('translate-y-full');
     fireEvent.transitionEnd(card.querySelector('button')!);
     expect(card).not.toHaveStyle({ display: 'none' });

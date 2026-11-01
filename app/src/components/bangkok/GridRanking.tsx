@@ -27,8 +27,9 @@ function useGridRanking(districts: MapStation[]) {
   const weights = useDeferredValue(useAppStore((s) => s.weights));
   const filters = useCityState((s) => s.filters);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
   const areas = useSharedAreaList(districts, 'primary');
-  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters, hideFloodRisk);
+  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters, hideFloodRisk, hideAdultZones);
   const hotspots = useGridHotspots(grid, scored, 10, true);
   const ranking = useMemo(() => scored ? { ...scored, hotspots } : null, [scored, hotspots]);
   return { grid, error, ranking };

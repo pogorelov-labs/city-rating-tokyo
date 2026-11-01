@@ -5,16 +5,11 @@ import L from 'leaflet';
 import { Rectangle, Tooltip, useMap, useMapEvents } from 'react-leaflet';
 import { useTranslations } from 'next-intl';
 import type { StationRatings } from '@/lib/types';
-import { compositeToColor, scoreToColor, type ColorDimension, type PercentileAnchors } from '@/lib/scoring';
+import type { PercentileAnchors } from '@/lib/scoring';
+import { gridPixels } from '@/lib/bangkok-grid-colors';
+import { recordPrototypeGridPaint } from '@/lib/bangkok-prototype';
+import { measure } from '@/lib/render-profile';
 import { NEAR_STATION_M, cellAt, cellBounds, cellInfo, type BangkokGrid, type GridDistrict } from '@/lib/bangkok-grid';
-
-/** Fill of a cell that fails the dealbreakers (same grey as filtered districts). */
-const FILTERED_RGB: readonly [number, number, number] = [229, 231, 235];
-
-function parseRgb(css: string): [number, number, number] {
-  const m = css.match(/\d+/g);
-  return m ? [Number(m[0]), Number(m[1]), Number(m[2])] : [156, 163, 175];
-}
 
 /**
  * Leaflet's ImageOverlay positions and zoom-animates an <img>; this variant
@@ -85,47 +80,13 @@ export default function GridLayer(props: GridLayerProps) {
   }, [canvas, map]);
 
   useLayoutEffect(() => {
-    const { nx, ny, scales } = grid.header;
+    const { nx, ny } = grid.header;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const image = ctx.createImageData(nx, ny);
-    const data = image.data;
-    // Scores come in 0.1 steps and ratings are integers: tiny colour tables.
-    const composite: [number, number, number][] = [];
-    for (let b = 0; b <= 100; b++) composite.push(parseRgb(compositeToColor(b / 10, anchors)));
-    const heat: [number, number, number][] = [];
-    if (heatDimension) {
-      for (let v = 0; v <= 10; v++) heat.push(parseRgb(scoreToColor(Math.max(1, v), heatDimension as ColorDimension)));
-    }
-    const plane = heatDimension && heatDimension !== 'rent' && heatDimension !== 'safety' ? grid.planes[heatDimension] : null;
-    const districtValue =
-      heatDimension === 'rent' || heatDimension === 'safety'
-        ? props.districts.map((d) => d.ratings[heatDimension])
-        : null;
-    const weight = grid.planes.weight;
-    const district = grid.planes.district;
-    for (const i of grid.cells) {
-      const o = i * 4;
-      // Built-up cells near-opaque, empty fields and river faded: the map
-      // shows where people live without hiding the basemap there.
-      const w = weight[i] / scales.weight;
-      let rgb: readonly [number, number, number];
-      let alpha: number;
-      if (!pass[i]) {
-        rgb = FILTERED_RGB;
-        alpha = 0.55;
-      } else {
-        if (plane) rgb = heat[plane[i]];
-        else if (districtValue) rgb = heat[districtValue[district[i] - 1]];
-        else rgb = composite[Math.max(0, Math.min(100, Math.round(scores[i] * 10)))];
-        alpha = 0.3 + 0.55 * w;
-      }
-      data[o] = rgb[0];
-      data[o + 1] = rgb[1];
-      data[o + 2] = rgb[2];
-      data[o + 3] = Math.round(alpha * 255);
-    }
-    ctx.putImageData(image, 0, 0);
+    measure('grid.colors', () => gridPixels(grid, scores, pass, anchors, heatDimension, props.districts, image.data), grid.cells.length, image.data.byteLength);
+    measure('grid.canvas.submit', () => ctx.putImageData(image, 0, 0), 1, image.data.byteLength);
+    recordPrototypeGridPaint();
   }, [canvas, grid, scores, pass, anchors, heatDimension, props.districts]);
 
   return <GridPointer {...props} />;

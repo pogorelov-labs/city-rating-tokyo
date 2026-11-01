@@ -33,8 +33,9 @@ export function parseAreaKey(key: string): { kind: AreaKind; id: string; index: 
     return { kind: 'station', id: key.slice(STATION_PREFIX.length), index: null };
   }
   if (key.startsWith(CELL_PREFIX)) {
-    const index = Number(key.slice(CELL_PREFIX.length));
-    return { kind: 'cell', id: key, index: Number.isInteger(index) && index >= 0 ? index : null };
+    const digits = key.slice(CELL_PREFIX.length);
+    const index = /^[0-9]+$/.test(digits) ? Number(digits) : NaN;
+    return { kind: 'cell', id: key, index: Number.isSafeInteger(index) && index >= 0 ? index : null };
   }
   return { kind: 'district', id: key, index: null };
 }

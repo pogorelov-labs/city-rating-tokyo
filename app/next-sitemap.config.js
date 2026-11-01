@@ -11,6 +11,7 @@ module.exports = {
     { href: 'https://city-rating.pogorelov.dev/ru', hreflang: 'ru' },
   ],
   transform: async (config, path) => {
+    if (path.includes('/bangkok/prototype')) return null;
     // Skip locale-prefixed paths from the EN sitemap — they get their own alternateRefs
     // next-intl generates /en/..., /ja/..., /ru/... paths; we want the canonical
     // EN path without prefix
