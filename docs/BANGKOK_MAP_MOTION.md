@@ -127,7 +127,7 @@ To retain the sampled reversal traces for a before/after comparison, use the
 JSON reporter as well as the normal progress output:
 
 ```sh
-E2E_PORT=3171 PLAYWRIGHT_JSON_OUTPUT_FILE=test-results/bangkok-motion.json npm run test:e2e:lab -- --workers=1 --retries=0 --reporter=line,json --grep 'release follows a late reversal'
+E2E_PORT=3171 PLAYWRIGHT_JSON_OUTPUT_FILE=test-results/bangkok-motion.json npm run test:e2e:lab -- --workers=1 --retries=0 --reporter=line,json --grep 'release follows a late reversal|35 px mouse reversal'
 ```
 
 Read the `signed-release` attachments (JSON bodies are base64-encoded in the
@@ -140,8 +140,8 @@ displacement, maximum wrong-way excursion and timestamped landmark positions.
    device-motion choice. Separate a cold load from a warm street view.
    Record the browser, hardware, display refresh rate and sample count.
 2. Inspect the signed landmark trace across release, not just its endpoint.
-   The reversal test attaches `signed-release` with per-frame time and screen
-   displacement relative to the first frame after release. A distance, a
+   The reversal test attaches `signed-release` with each frame's time and screen
+   displacement relative to the landmark at lift, including the first frame. A distance, a
    screenshot or a single video alone cannot establish velocity continuity.
 3. On the physical phone or desktop input device being claimed, run at least
    five warm slow drags, fast flicks, reversals and catches. Record
