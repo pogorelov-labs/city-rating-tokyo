@@ -1,10 +1,12 @@
 import { expect, test, type Page } from '@playwright/test';
+import { gestureFrame, installGestureClock, pauseGestureClock } from './helpers/bangkok-gesture-clock';
 
 test.use({ viewport: { width: 740, height: 650 }, deviceScaleFactor: 1, hasTouch: true });
 
 const camera = { lat: 13.7374, lng: 100.5606, zoom: 16, pitch: 0, bearing: 0 };
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page }, testInfo) => {
+  if (testInfo.tags.includes('@gesture-clock')) await installGestureClock(page);
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/bangkok/prototype/leaflet?lv=grid&adult=1');
   await page.waitForFunction(() => window.__bangkokRenderer?.ready());
@@ -84,6 +86,86 @@ for (const mode of ['smooth', 'device'] as const) test(`rapid ${mode} zoom accum
   await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBeCloseTo(13, 2);
 });
 
+test('external camera reset interrupts a fractional animated zoom without a stale transition', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.getByRole('combobox', { name: 'Map motion' }).selectOption('system');
+  await page.reload();
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 16 }), camera);
+  await page.evaluate(c => {
+    (window as unknown as { fractionalReset: Promise<number> }).fractionalReset = new Promise((resolve, reject) => {
+      const start = performance.now();
+      const frame = () => {
+        const renderer = window.__bangkokRenderer!, z = renderer.getCamera().zoom;
+        if (z > 16.08 && z < 16.92) { renderer.setCamera({ ...c, zoom: 12 }); resolve(z); }
+        else if (performance.now() - start > 2000) reject(new Error(`Fractional zoom was never observed; last=${z}`));
+        else requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    });
+  }, camera);
+  await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  const fractional = await page.evaluate(() => (window as unknown as { fractionalReset: Promise<number> }).fractionalReset);
+  expect(fractional).toBeGreaterThan(16.08);
+  expect(fractional).toBeLessThan(16.92);
+  await page.waitForTimeout(350);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(12);
+  await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBeCloseTo(13, 2);
+  await page.waitForTimeout(350);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(13);
+});
+
+test('native wheel transition applies only the latest queued lab camera', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.getByRole('combobox', { name: 'Map motion' }).selectOption('system');
+  await page.reload();
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 14 }), camera);
+  const box = (await page.locator('.leaflet-container').boundingBox())!;
+  await page.evaluate(c => {
+    (window as unknown as { wheelRequests: Promise<boolean> }).wheelRequests = new Promise((resolve, reject) => {
+      const pane = document.querySelector('.leaflet-map-pane')!;
+      const timeout = setTimeout(() => { observer.disconnect(); reject(new Error('Native wheel transition did not start')); }, 2000);
+      const observer = new MutationObserver(() => {
+        if (!pane.classList.contains('leaflet-zoom-anim')) return;
+        clearTimeout(timeout); observer.disconnect();
+        const renderer = window.__bangkokRenderer!;
+        renderer.setCamera({ ...c, zoom: 11 });
+        renderer.setCamera({ ...c, zoom: 12 });
+        resolve(renderer.ready());
+      });
+      observer.observe(pane, { attributes: true, attributeFilter: ['class'] });
+    });
+  }, camera);
+  await page.mouse.move(box.x + box.width * .45, box.y + box.height * .55);
+  await page.mouse.wheel(0, -200);
+  const pending = await page.evaluate(() => (window as unknown as { wheelRequests: Promise<boolean> }).wheelRequests);
+  expect(pending).toBe(false);
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(12);
+  await page.waitForTimeout(350);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(12);
+  await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+});
+
+test('changing to reduced motion during a button flight stops without a stale snap', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.getByRole('combobox', { name: 'Map motion' }).selectOption('system');
+  await page.reload();
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 16 }), camera);
+  await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await page.waitForFunction(() => { const z = window.__bangkokRenderer!.getCamera().zoom; return z > 16.08 && z < 16.92; }, null, { polling: 'raf', timeout: 2000 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect.poll(() => page.evaluate(() => Number.isInteger(window.__bangkokRenderer!.getCamera().zoom))).toBe(true);
+  const stopped = await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom);
+  await page.waitForTimeout(350);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(stopped);
+  await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 12 }), camera);
+  await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(13);
+});
+
 test('follow device with reduced motion zooms immediately', async ({ page }) => {
   await page.getByRole('combobox', { name: 'Map motion' }).selectOption('system');
   await page.evaluate(c => window.__bangkokRenderer!.setCamera({ ...c, zoom: 14 }), camera);
@@ -91,7 +173,7 @@ test('follow device with reduced motion zooms immediately', async ({ page }) => 
   expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBe(15);
 });
 
-test('touch catches coast immediately and subsequent taps still select', async ({ page, context }) => {
+test('touch catches coast immediately and subsequent taps still select', { tag: '@gesture-clock' }, async ({ page, context }) => {
   const cd = await context.newCDPSession(page);
   const box = (await page.locator('.leaflet-container').boundingBox())!;
   const x = Math.round(box.x + box.width * .24), y = Math.round(box.y + box.height * .55);
@@ -100,11 +182,15 @@ test('touch catches coast immediately and subsequent taps still select', async (
   });
   const anchor = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat).x, camera);
   await watchCoast(page, 'touchend');
+  await pauseGestureClock(page);
   await touch('touchStart');
-  // Queue native moves in order before awaiting acknowledgments: CDP may wait
-  // for a frame per acknowledgment, exceeding Leaflet's 50 ms sample window.
-  await Promise.all(Array.from({ length: 10 }, (_, i) => touch('touchMove', (i + 1) * 15)));
+  for (let dx = 15; dx <= 150; dx += 15) {
+    const move = touch('touchMove', dx);
+    await gestureFrame(page);
+    await move;
+  }
   await touch('touchEnd');
+  await page.clock.runFor(64);
   await requireCoast(page);
   await page.evaluate(() => {
     (window as unknown as { labClicks: number }).labClicks = 0;
@@ -112,6 +198,7 @@ test('touch catches coast immediately and subsequent taps still select', async (
   });
   await touch('touchStart', 150);
   await requireActiveCatch(page);
+  await page.clock.resume();
   const down = await anchor();
   await page.waitForTimeout(220);
   const held = await anchor();

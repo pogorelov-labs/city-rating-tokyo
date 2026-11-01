@@ -1,5 +1,13 @@
 import type L from 'leaflet';
 
+// Leaflet's stop() may schedule an animated snap from an in-flight fractional
+// zoom. Reset synchronously so that snap cannot later overwrite a new camera.
+export function stopBangkokLeaflet(map: L.Map) {
+  const zoom = map.getZoom();
+  if (Math.abs(zoom - Math.round(zoom)) < 1e-7) map.stop();
+  else map.setView(map.getCenter(), zoom, { animate: false });
+}
+
 /** Keep button presses relative to the requested destination while a flight runs. */
 export function installSmoothZoom(map: L.Map) {
   let target: number | undefined;

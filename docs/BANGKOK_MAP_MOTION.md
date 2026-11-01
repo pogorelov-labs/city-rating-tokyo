@@ -93,16 +93,22 @@ explicit Smooth on pre-fix commit `806ab99`. On SwiftShader the landmark coasted
 The last move preceded lift by 16 ms in both runs. The same old version also
 fails the two-finger coast and the same-position follow-up selection checks.
 
-The Leaflet brake checks also exercise uninterrupted wall-clock input. The
-touch driver sends ordered native moves without waiting for a compositor
-acknowledgment after each one: Leaflet samples only the last 50 ms. Check that
-a landmark was moving at the catching contact and stays put during the hold.
+Leaflet measures drag velocity from the last 50 ms. Waiting for a compositor
+acknowledgment after each touch move can leave just one sample in that window;
+sending a burst can also coalesce the moves. Use the same prescribed cadence
+for the touch flick. Keep the mouse brake check on uninterrupted wall-clock
+input. Both checks must observe a moving landmark at contact and a stationary
+landmark during the hold.
+
+When a native Leaflet wheel transition is already active, the lab applies the
+latest requested camera after `zoomend`; `ready()` stays false while a request
+is pending. The public wheel itself still runs on Leaflet's clock.
 
 | Gate | Observable pass condition | Regression suite |
 | --- | --- | --- |
 | Direction and contact identity | Reversal has a negative signed coast (more than 2 px left); no observed frame goes 2 px right of release. Holding still does not launch a coast. Translation, partial lifts, continued movement and pinches are separate cases. | [Velocity and contact tests](../e2e/bangkok-release-velocity.lab.spec.ts), [estimator tests](../app/src/components/bangkok/maplibre/pan-velocity.test.ts) |
 | Braking and re-entry | The held landmark stays within sampling tolerance (under 3 CSS px on the 3D map; under 2 px in the Leaflet 220 ms hold). Catching does not pick. A same-position 75 ms follow-up selects without zoom; a later drag, ordinary double tap, tap-drag, pinch and cancellation still work. | [3D tap arbitration](../e2e/bangkok-brake-taps.lab.spec.ts), [Leaflet controls](../e2e/bangkok-leaflet-controls.lab.spec.ts) |
-| Zoom intent | The burst from 14 finishes at 16, reversing at a zoom limit works, and an external reset to 12 followed by `+` finishes at 13. | [Leaflet controls](../e2e/bangkok-leaflet-controls.lab.spec.ts), [clamping and cleanup](../app/src/components/bangkok/leaflet-controls.test.tsx), [3D zoom and grid integrity](../e2e/bangkok-prototype.spec.ts) |
+| Zoom intent | The burst from 14 finishes at 16 and reversing at a zoom limit works. Interrupt a Leaflet button flight **between** zooms 16 and 17: a reset to 12 must stay at 12 after the old animation could have ended, and the next `+` must end at 13. | [Leaflet controls](../e2e/bangkok-leaflet-controls.lab.spec.ts), [clamping and cleanup](../app/src/components/bangkok/leaflet-controls.test.tsx), [3D zoom and grid integrity](../e2e/bangkok-prototype.spec.ts) |
 | State and cost | Switching the preference does not remount the renderer, change the URL or switch city filters. A camera-only gesture does not rescore the city or upload the grid texture. Follow device with reduced motion has no measurable post-release travel. | [Renderer lab](../e2e/bangkok-prototype.spec.ts), [public motion and filter controls](../e2e/bangkok-controls.spec.ts) |
 | Controls fit | At 1280 px wide and 720, 540 and 440 px high, expand the air panel. Check the button’s **hit target** and its bounds before a trial click. The menu may scroll inside a tiny workspace; the page must not scroll to rescue an off-map button. Check short phones, the renderer selector, attribution, zoom, focus and Escape as well. | [Wide, short controls](../e2e/bangkok-camera-layout.spec.ts), [phone and fallback controls](../e2e/bangkok-release.spec.ts) |
 

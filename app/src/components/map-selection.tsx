@@ -103,7 +103,6 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       return;
     }
     pendingBoundsFlights.get(map)?.();
-    map.stop();
     // Mark the flight first so any popup closed below knows it is not the
     // user's × (see the Popup `remove` handler).
     onFlyStart();

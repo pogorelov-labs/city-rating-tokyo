@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import type L from 'leaflet';
-import { installSmoothZoom, installCoastBrake } from './leaflet-controls';
+import { installSmoothZoom, installCoastBrake, stopBangkokLeaflet } from './leaflet-controls';
 
 function fixture() {
   const container = document.createElement('div');
@@ -13,11 +13,22 @@ function fixture() {
     off: (names: string) => names.split(' ').forEach(name => handlers.delete(name)),
     flyTo: vi.fn((...args: [unknown, number, unknown]) => { void args; handlers.get('movestart')?.(); }),
     stop: vi.fn(() => { handlers.get('moveend')?.(); }),
+    setView: vi.fn(),
   };
   return { map, container, handlers, setZoom: (n: number) => { current = n; } };
 }
 
 describe('Bangkok Leaflet controls', () => {
+  it('stops fractional flights synchronously while preserving normal integer stops', () => {
+    const f = fixture();
+    stopBangkokLeaflet(f.map as unknown as L.Map);
+    expect(f.map.stop).toHaveBeenCalledOnce();
+    expect(f.map.setView).not.toHaveBeenCalled();
+    f.setZoom(14.5);
+    stopBangkokLeaflet(f.map as unknown as L.Map);
+    expect(f.map.stop).toHaveBeenCalledOnce();
+    expect(f.map.setView).toHaveBeenCalledWith({}, 14.5, { animate: false });
+  });
   it('accumulates, clamps, and clears intent after external motion or teardown', () => {
     const f = fixture();
     const control = installSmoothZoom(f.map as unknown as L.Map);
