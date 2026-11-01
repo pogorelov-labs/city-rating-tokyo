@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link, useRouter } from '@/i18n/navigation';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { CITIES, CITY_IDS, type CityId } from '@/lib/cities';
 import { useCityId } from '@/lib/city-context';
 import { useAppStore } from '@/lib/store';
@@ -16,10 +16,11 @@ export default function CitySwitcher() {
   const t = useTranslations('city');
   const current = useCityId();
   const router = useRouter();
+  const pathname = usePathname();
   const weights = useAppStore(state => state.weights);
 
   const switchCity = (event: { preventDefault: () => void }, destination: CityId) => {
-    if (destination === current) { event.preventDefault(); return; }
+    if (destination === current && pathname === CITIES[current].homePath) { event.preventDefault(); return; }
     const state = useAppStore.getState();
     const path = CITIES[destination].homePath;
     const params = encodeStateToParams(selectUrlView(state, destination), destination).toString();

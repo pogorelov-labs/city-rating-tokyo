@@ -8,15 +8,18 @@ import { decodeParamsToState } from '@/lib/url-state';
 import CitySwitcher from './CitySwitcher';
 
 const push = vi.hoisted(() => vi.fn());
+const location = vi.hoisted(() => ({ pathname: '/' }));
+const canceled = vi.hoisted(() => vi.fn());
 vi.mock('@/i18n/navigation', () => ({
   useRouter: () => ({ push }),
+  usePathname: () => location.pathname,
   Link: ({ children, onNavigate, ...props }: ComponentProps<'a'> & { onNavigate?: (event: { preventDefault: () => void }) => void }) =>
     <a {...props} onClick={event => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault(); onNavigate?.({ preventDefault: () => {} });
+      event.preventDefault(); onNavigate?.({ preventDefault: canceled });
     }}>{children}</a>,
 }));
-afterEach(() => { useAppStore.setState(useAppStore.getInitialState(), true); push.mockClear(); });
+afterEach(() => { useAppStore.setState(useAppStore.getInitialState(), true); push.mockClear(); canceled.mockClear(); location.pathname = '/'; });
 
 describe('city switcher links', () => {
   it('encodes live shared weights and no city-specific filters, then removes defaults', () => {
@@ -96,6 +99,20 @@ describe('city switcher links', () => {
     finally { document.removeEventListener('click', prevent, true); }
     fireEvent.click(screen.getByRole('link', { name: 'Tokyo' }));
     expect(push).not.toHaveBeenCalled();
+    expect(canceled).toHaveBeenCalledOnce();
+  });
+
+  it('leaves the renderer lab via the current-city link with its retained map state', () => {
+    location.pathname = '/bangkok/prototype/maplibre';
+    act(() => { getCityActions('bangkok').setLevel('grid'); getCityActions('bangkok').setHideAdultZones(true); });
+    render(<Providers city="bangkok"><CitySwitcher /></Providers>);
+    const link = screen.getByRole('link', { name: 'Bangkok' });
+    expect(link).toHaveAttribute('href', '/bangkok');
+    fireEvent.click(link);
+    expect(canceled).toHaveBeenCalledOnce();
+    const route = new URL(push.mock.calls[0][0], 'https://example.test');
+    expect(route.pathname).toBe('/bangkok');
+    expect(decodeParamsToState(route.searchParams, 'bangkok')).toMatchObject({ level: 'grid', hideAdultZones: true });
   });
 
 });
