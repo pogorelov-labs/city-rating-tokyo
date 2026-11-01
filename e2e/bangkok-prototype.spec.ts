@@ -269,9 +269,18 @@ test('named selection, comparison and station focus use static geometry and rest
 test('park landcover and names survive score layers, while selection preserves score and grid data', async ({ page }) => {
   await page.goto('/bangkok/prototype/maplibre?lv=grid&profile=1');
   await page.waitForFunction(() => window.__bangkokRenderer?.ready());
-  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lng: 100.5505, lat: 13.727, zoom: 15.8, pitch: 50, bearing: -20 }));
+  const idleCount = () => page.evaluate(() => Number(window.__bangkokRenderer!.stats().idleEvents));
+  let beforeIdle = await page.evaluate(() => {
+    const renderer = window.__bangkokRenderer!;
+    const before = Number(renderer.stats().idleEvents);
+    renderer.setCamera({ lng: 100.5505, lat: 13.727, zoom: 15.8, pitch: 50, bearing: -20 });
+    return before;
+  });
+  await expect.poll(idleCount, { timeout: 30_000 }).toBeGreaterThan(beforeIdle);
   for (const level of ['Districts', 'Stations', '200 m grid']) {
+    beforeIdle = await idleCount();
     await page.getByRole('radio', { name: level, exact: true }).click();
+    await expect.poll(idleCount, { timeout: 30_000 }).toBeGreaterThan(beforeIdle);
     await page.waitForFunction(() => window.__bangkokRenderer!.ready());
     const style = await page.evaluate(() => window.__bangkokRenderer!.inspectCartography!());
     expect(style.nature.some((f) => f.layer === 'bkk-landcover' && f.kind === 'grass')).toBe(true);
