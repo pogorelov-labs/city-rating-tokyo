@@ -8,6 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
+    "audit:ci": "node --test scripts/audit-dependencies.test.mjs && node scripts/audit-dependencies.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -40,6 +41,9 @@
     "vitest": "^4.1.11"
   },
   "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.3"
+    },
     "postcss": "^8.5.26",
     "sharp": "^0.35.4",
     "@babel/core": "^7.29.7",
