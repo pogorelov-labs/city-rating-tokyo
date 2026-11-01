@@ -4,6 +4,7 @@ import { useEffect, useLayoutEffect } from 'react';
 import { useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { useAppStore } from '@/lib/store';
+import { prefersReducedMotion } from '@/lib/map-motion';
 
 type LatLng = [number, number];
 const MAX_FLY_ZOOM = 14;
@@ -41,6 +42,12 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       onFlyStart?.();
 
       const targetZoom = currentZoom >= 13 ? currentZoom : 14;
+      if (prefersReducedMotion()) {
+        map.stop();
+        map.setView([lat, lng], targetZoom, { animate: false });
+        onFlyEnd?.();
+        return;
+      }
 
       // Fade canvas markers during flyTo to hide CSS-scaling artifact.
       // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
@@ -99,6 +106,11 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
     // user's × (see the Popup `remove` handler).
     onFlyStart();
     map.closePopup();
+    if (prefersReducedMotion()) {
+      map.fitBounds(latLngBounds, { paddingTopLeft: padTL, paddingBottomRight: padBR, maxZoom: MAX_FLY_ZOOM, animate: false });
+      onFlyEnd();
+      return;
+    }
     // The listener deliberately outlives this effect: if the selection is
     // cleared or changed mid-flight, the current animation still ends with a
     // moveend and must clear `isFlying` (otherwise labels / popup stay hidden).

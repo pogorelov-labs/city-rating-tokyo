@@ -1,9 +1,12 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useId, useCallback, useEffect, useLayoutEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { MapStation } from '@/lib/types';
 import FilterPanel from './FilterPanel';
+import { useSheetSwipe } from './use-sheet-swipe';
+import { prefersReducedMotion, REDUCED_MOTION } from '@/lib/map-motion';
+import './mobile-drawer.css';
 
 interface MobileDrawerProps {
   stations: MapStation[];
@@ -11,24 +14,43 @@ interface MobileDrawerProps {
 
 export default function MobileDrawer({ stations }: MobileDrawerProps) {
   const t = useTranslations('drawer');
-  // Same model as MobileStationCard: `wantOpen` is set only by the handlers,
-  // `raised` only from rAF / transitionend / timer callbacks, and `open` /
-  // `visible` are derived from the two.
+  // Keep the dialog mounted and modal through its exit. With reduced motion
+  // opening and closing both complete in the same interaction.
   const [wantOpen, setWantOpen] = useState(false);
   const [raised, setRaised] = useState(false);
   const open = wantOpen && raised;
   // Drawer is display:none when fully closed to prevent Safari 26 Liquid Glass
   // tinting from scanning its fixed white background behind the toolbar.
   const visible = wantOpen || raised;
-  const drawerRef = useRef<HTMLDivElement>(null);
+  const id = useId();
 
-  const handleOpen = useCallback(() => setWantOpen(true), []);
-  const handleClose = useCallback(() => setWantOpen(false), []);
+  const handleOpen = () => { if (prefersReducedMotion()) setRaised(true); setWantOpen(true); };
+  const handleClose = useCallback(() => { setWantOpen(false); if (prefersReducedMotion()) setRaised(false); }, []);
+  const { panel: drawerRef, clear: clearDrag, ...swipe } = useSheetSwipe(open, handleClose);
+
+  // A native modal contains focus and makes the map behind it inert. Keep
+  // that protection during the short exit; close() restores the opener.
+  useLayoutEffect(() => {
+    const dialog = drawerRef.current;
+    if (!dialog) return;
+    if (wantOpen && !dialog.open) dialog.showModal(); // First focusable control is Close.
+    if (!visible && dialog.open) dialog.close();
+  }, [wantOpen, visible, drawerRef]);
+  useEffect(() => {
+    if (!visible) return;
+    const desktop = window.matchMedia('(min-width: 768px)');
+    const motion = window.matchMedia(REDUCED_MOTION);
+    const wide = () => { if (desktop.matches) { setWantOpen(false); setRaised(false); } };
+    const reduce = () => { if (motion.matches) setRaised(wantOpen); };
+    desktop.addEventListener('change', wide);
+    motion.addEventListener('change', reduce);
+    return () => { desktop.removeEventListener('change', wide); motion.removeEventListener('change', reduce); };
+  }, [visible, wantOpen]);
 
   // Phase 1 (wanted, not raised): shown with translate-y-full (offscreen).
   // Phase 2, two frames later so that position has been laid out: slide up.
   useEffect(() => {
-    if (!wantOpen) return;
+    if (!wantOpen || prefersReducedMotion()) return;
     let raf2 = 0;
     const raf1 = requestAnimationFrame(() => {
       raf2 = requestAnimationFrame(() => setRaised(true));
@@ -39,17 +61,14 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
     };
   }, [wantOpen]);
 
-  // Hide after the 300ms slide-down. Armed only while closing, never in phase 1:
-  // a fallback armed there can fire before a slow double rAF and leave the
-  // drawer open but display:none.
+  // Arm the fallback only while closing. A throttled opening frame must
+  // never let an old timer hide a newly opened sheet.
   useEffect(() => {
     if (!wantOpen && raised) {
-      // The drawer div is always rendered (only display toggles), so the ref is
-      // set by now. If it ever isn't, the fallback timer below still hides it.
       const el = drawerRef.current;
       const onEnd = (e: TransitionEvent) => {
         // Ignore bubbled transitionend from children (e.g. button transition-colors)
-        if (e.target !== el) return;
+        if (e.target !== el || e.pseudoElement) return;
         setRaised(false);
       };
       el?.addEventListener('transitionend', onEnd);
@@ -57,15 +76,16 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
       const timer = setTimeout(() => setRaised(false), 350);
       return () => { el?.removeEventListener('transitionend', onEnd); clearTimeout(timer); };
     }
-  }, [wantOpen, raised]);
+  }, [wantOpen, raised, drawerRef]);
 
   return (
     <>
       {/* Toggle button */}
       <button
+        type="button" aria-haspopup="dialog" aria-expanded={wantOpen} aria-controls={id}
         onClick={handleOpen}
         data-umami-event="open-mobile-filters"
-        className="mobile-filter-launcher md:hidden fixed left-4 z-[1000] bg-white shadow-lg rounded-full px-4 py-2.5 text-sm font-medium border border-gray-200 flex items-center gap-2 active:scale-95 transition-transform"
+        className="mobile-filter-launcher md:hidden fixed left-4 z-[1000] min-h-11 bg-white shadow-lg rounded-full px-4 py-2.5 text-sm font-medium border border-gray-200 flex items-center gap-2 active:bg-slate-100"
         style={{ bottom: 'max(16px, env(safe-area-inset-bottom, 16px))' }}
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -74,46 +94,43 @@ export default function MobileDrawer({ stations }: MobileDrawerProps) {
         {t('filters')}
       </button>
 
-      {/* Backdrop */}
-      {open && (
-        <div
-          className="md:hidden fixed inset-0 bg-black/40 z-[1001] transition-opacity"
-          onClick={handleClose}
-        />
-      )}
-
       {/* Drawer — display:none when fully closed so Safari 26 Liquid Glass
           toolbar tinting doesn't scan this fixed white surface. */}
-      <div
+      <dialog
         ref={drawerRef}
-        className={`md:hidden fixed bottom-0 left-0 right-0 z-[1002] bg-white rounded-t-2xl shadow-2xl transition-transform duration-300 ${
+        id={id} aria-labelledby={id + '-title'} data-open={open}
+        onCancel={event => { event.preventDefault(); clearDrag(); handleClose(); }}
+        onKeyDown={event => { if (event.key === 'Escape') { event.stopPropagation(); event.preventDefault(); clearDrag(); handleClose(); } }}
+        onClick={event => {
+          if (event.target !== event.currentTarget) return;
+          const box = event.currentTarget.getBoundingClientRect();
+          if (event.clientY < box.top || event.clientY > box.bottom || event.clientX < box.left || event.clientX > box.right) handleClose();
+        }}
+        className={`map-filter-sheet md:hidden fixed inset-x-0 top-auto bottom-0 m-0 w-full max-w-none overflow-hidden border-0 bg-white p-0 rounded-t-2xl shadow-2xl transition-transform ${
           open ? 'translate-y-0' : 'translate-y-full'
         }`}
-        style={{ maxHeight: '80vh', display: visible ? undefined : 'none' }}
+        style={{ display: visible ? undefined : 'none' }}
       >
-        {/* Handle */}
-        <div className="flex justify-center pt-2 pb-1">
-          <div className="w-10 h-1 bg-gray-300 rounded-full" />
-        </div>
-
-        {/* Close button */}
-        <div className="flex justify-between items-center px-4 pb-2">
-          <span className="font-bold text-base">{t('filtersAndRanking')}</span>
-          <button
-            onClick={handleClose}
-            className="text-gray-400 hover:text-gray-600 p-1"
-          >
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 6L6 18M6 6l12 12" />
-            </svg>
-          </button>
+        <div {...swipe} className="map-filter-grip touch-none select-none px-4 pt-2">
+          <div aria-hidden="true" className="mx-auto h-1 w-10 rounded-full bg-gray-300" />
+          <div className="flex items-center justify-between">
+            <span id={id + '-title'} className="font-bold text-base">{t('filtersAndRanking')}</span>
+            <button
+              type="button" aria-label={t('close')} onClick={handleClose}
+              className="-mr-2 grid h-11 w-11 place-items-center rounded-lg text-slate-600 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-blue-600"
+            >
+              <svg aria-hidden="true" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto" style={{ maxHeight: 'calc(80vh - 60px)', paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
-          <FilterPanel stations={stations} />
+        <div className="map-filter-scroll overflow-y-auto overscroll-contain" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
+          <FilterPanel stations={stations} onAreaChosen={handleClose} />
         </div>
-      </div>
+      </dialog>
     </>
   );
 }

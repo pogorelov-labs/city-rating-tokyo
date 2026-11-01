@@ -103,8 +103,7 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
         <button
           onClick={() => setSelectedStation(null)}
           aria-label={t('map.closeCardCell')}
-          className="shrink-0 -mr-1 -mt-1 p-2 text-gray-400 active:text-gray-600 active:bg-gray-100 rounded-lg"
-          style={{ minWidth: 36, minHeight: 36 }}
+          className="grid h-11 w-11 shrink-0 -mr-1 -mt-1 place-items-center text-slate-600 active:bg-gray-100 rounded-lg focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" />

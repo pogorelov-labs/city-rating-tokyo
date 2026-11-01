@@ -154,6 +154,8 @@
     "quickProfiles": "Quick Profiles",
     "dealbreakers": "Dealbreakers",
     "clearAll": "Clear all",
+    "rangeMinimum": "{label}, minimum",
+    "rangeMaximum": "{label}, maximum",
     "weights": "Weights",
     "weightsDescription": "Adjust what matters most to you",
     "resetDefaults": "Reset to defaults",
@@ -299,7 +301,8 @@
   },
   "drawer": {
     "filters": "Filters",
-    "filtersAndRanking": "Filters & Ranking"
+    "filtersAndRanking": "Filters & Ranking",
+    "close": "Close filters"
   },
   "feedback": {
     "station": {

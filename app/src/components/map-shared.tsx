@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { observeMapContainer } from '@/lib/map-resize';
+import { prefersReducedMotion } from '@/lib/map-motion';
 
 // Map building blocks shared by the Tokyo station map (Map.tsx) and the
 // Bangkok district map (DistrictMap.tsx). Kept in their own module so the
@@ -17,8 +18,8 @@ export function MapContainerResize() {
   return null;
 }
 
-/** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
-export function TouchZoomControls() {
+/** Accessible zoom steps above the compare panel and drawer. */
+export function MapZoomControls() {
   const t = useTranslations('map');
   const map = useMap();
   return (
@@ -28,15 +29,15 @@ export function TouchZoomControls() {
         style={{ pointerEvents: 'auto', marginBottom: 'calc(80px + env(safe-area-inset-bottom, 0px))', marginRight: 10 }}
       >
         <button
-          onClick={() => map.zoomIn()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          onClick={() => map.zoomIn(undefined, { animate: !prefersReducedMotion() })}
+          className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomIn')}
         >
           +
         </button>
         <button
-          onClick={() => map.zoomOut()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          onClick={() => map.zoomOut(undefined, { animate: !prefersReducedMotion() })}
+          className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomOut')}
         >
           −

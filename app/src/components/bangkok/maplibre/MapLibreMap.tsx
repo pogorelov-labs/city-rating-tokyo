@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, Map as LibreMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -30,13 +30,14 @@ import { analyticalCityStyle } from './map-colors';
 import { classifyMapError, ContextRecoveryTimer } from './map-errors';
 import { collapseInitialAttribution } from './attribution';
 import { frameDistrict } from './district-camera';
+import { navigationControl } from './navigation-control';
+import { cameraMotion, PAN_INERTIA, REDUCED_MOTION } from '@/lib/map-motion';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
 import rail from '@/data/bangkok/rail.json';
 import { measure, measureAsync, renderProfile, retainRendererLab } from '@/lib/render-profile';
 import { attachMapProfile } from './profile-map';
 
 const stationById = new Map(rail.stations.map((s) => [s.id, s]));
-const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const setSource = (map: LibreMap, id: string, data: GeoJSON.FeatureCollection) => {
   const source = map.getSource(id) as GeoJSONSource | undefined;
   if (source) void measureAsync(`source.${id}.ready`, () => measure(`source.${id}.submit`, () => source.setData(data), data.features.length)).catch(() => {});
@@ -45,6 +46,8 @@ const setSource = (map: LibreMap, id: string, data: GeoJSON.FeatureCollection) =
 export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, prototype = false, onUnavailable }: { stations: MapStation[]; thumbnails?: Record<string, { thumb: string; lqip: string }>; snippets?: Record<string, string>; prototype?: boolean; onUnavailable?: (reason: 'webgl' | 'load' | 'context') => void }) {
   const host = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
   const mapRef = useRef<LibreMap | null>(null);
   const attributionRef = useRef<maplibregl.AttributionControl | null>(null);
   const uiReadyRef = useRef(false);
@@ -76,15 +79,21 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   const unavailableRef = useRef(onUnavailable);
   useEffect(() => { unavailableRef.current = onUnavailable; }, [onUnavailable]);
   const [tilted, setTilted] = useState(true);
-  const [compactControls, setCompactControls] = useState(false);
+  const [layout, setLayout] = useState<'full' | 'narrow' | 'short'>('full');
+  const compactControls = layout === 'short';
+  const foldControls = layout !== 'full';
   const [controlsOpen, setControlsOpen] = useState(false);
+  const closeTools = () => {
+    setControlsOpen(false);
+    if (foldControls) triggerRef.current?.focus({ preventScroll: true });
+  };
   useEffect(() => {
-    if (!compactControls || !controlsOpen) return;
+    if (!foldControls || !controlsOpen) return;
     const outside = (event: Event) => { if (!controlsRef.current?.contains(event.target as Node)) setControlsOpen(false); };
     document.addEventListener('pointerdown', outside);
     document.addEventListener('focusin', outside);
     return () => { document.removeEventListener('pointerdown', outside); document.removeEventListener('focusin', outside); };
-  }, [compactControls, controlsOpen]);
+  }, [foldControls, controlsOpen]);
   const [buildings, setBuildings] = useState(() => typeof window === 'undefined' ? true : (prototype ? window.__bangkokInitialBuildings : undefined) ?? true);
   const t = useTranslations(), locale = useLocale() as Locale;
   const city = useCity(), lists = useAreaLists(), isTouch = useIsTouch();
@@ -123,15 +132,19 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
         center: [initial.lng, initial.lat], zoom: initial.zoom - 1, pitch: initial.pitch, bearing: initial.bearing,
         locale: { 'NavigationControl.ZoomIn': t('map.zoomIn'), 'NavigationControl.ZoomOut': t('map.zoomOut'), 'NavigationControl.ResetBearing': t('map.resetBearing'), 'AttributionControl.ToggleAttribution': t('map.mapAttribution'), 'Map.Title': t('map.interactiveBangkok') },
         maxPitch: 60, minZoom: 8, maxZoom: 19, maxBounds: [[100.0, 13.2], [101.25, 14.25]],
-        attributionControl: false,
+        attributionControl: false, dragPan: PAN_INERTIA,
         pixelRatio: Math.min(window.devicePixelRatio, 2), canvasContextAttributes: { antialias: true, preserveDrawingBuffer: false },
       });
     } catch { setFatal('webgl'); unavailableRef.current?.('webgl'); return; }
-    mapRef.current = map;
+    // Publish the instance to React effects only once its native layers exist.
+    // An effect can still hold the prior ready state during a renderer restart.
     const releaseLab = prototype ? retainRendererLab() : () => {};
     const detachProfile = prototype ? attachMapProfile(map) : () => {};
     let disposed = false, loaded = false, failed = false, frame = 0, renders = 0, errors = 0, idleEvents = 0;
     let clickTimer: ReturnType<typeof setTimeout> | undefined;
+    const motionPreference = window.matchMedia(REDUCED_MOTION);
+    const onMotionPreference = () => { if (motionPreference.matches) map.stop(); };
+    motionPreference.addEventListener('change', onMotionPreference);
     const fail = (reason: 'load' | 'context') => { if (disposed || failed) return; failed = true; setFatal(reason); setReady(false); unavailableRef.current?.(reason); };
     let loadTimeout = window.setTimeout(() => { if (!loaded) fail('load'); }, 20000);
     const contextTimeout = new ContextRecoveryTimer(() => fail('context'));
@@ -214,7 +227,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
         map.triggerRepaint();
       };
     }
-    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right');
+    map.addControl(navigationControl(t('map.zoomIn'), t('map.zoomOut')), 'bottom-right');
     const attribution = new maplibregl.AttributionControl({ compact: host.current.clientWidth < 768 });
     attributionRef.current = attribution;
     map.addControl(attribution, 'bottom-right');
@@ -228,7 +241,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     if (prototype) map.on('idle', () => { idleEvents++; });
     map.on('render', () => { renders++; });
     map.on('pitchend', () => { if (!disposed) setTilted(map.getPitch() > 5); });
-    map.on('movestart', clearHover);
+    map.on('movestart', () => { clearTimeout(clickTimer); clearHover(); });
     map.on('webglcontextlost', () => {
       if (disposed || failed) return;
       contextGeneration++;
@@ -236,7 +249,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       pendingStyle = undefined;
       window.clearTimeout(loadTimeout);
       cache.clear(); focusedHover = null; hoverKey = null;
-      tooltip.remove(); uiReadyRef.current = false; setReady(false); contextTimeout.start();
+      tooltip.remove(); mapRef.current = null; uiReadyRef.current = false; setReady(false); contextTimeout.start();
     });
     map.on('webglcontextrestored', () => {
       if (disposed || failed) return;
@@ -252,6 +265,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
         pendingStyle = undefined;
         if (disposed || failed || generation !== contextGeneration) return;
         contextTimeout.clear();
+        mapRef.current = map;
         setRecovery((value) => value + 1);
         setReady(true);
       };
@@ -265,6 +279,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       map.setSourceTileLodParams(4, 3);
       map.getCanvas().setAttribute('aria-label', t('map.interactiveBangkok'));
       setTilted(map.getPitch() > 5);
+      mapRef.current = map;
       setReady(true);
     });
     const keyAt = (point: maplibregl.Point, lng: number, lat: number) => {
@@ -304,26 +319,29 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       });
     });
     const leave = () => clearHover(); map.getCanvas().addEventListener('mouseleave', leave);
-    const escape = (e: KeyboardEvent) => { if (e.key === 'Escape') current.current.actions.setSelectedStation(null); };
+    const escape = (e: KeyboardEvent) => { if (e.key === 'Escape' && !e.defaultPrevented) { clearTimeout(clickTimer); current.current.actions.setSelectedStation(null); } };
     window.addEventListener('keydown', escape);
     const repeatDistrictFocus = (event: Event) => {
       const detail = (event as CustomEvent<{ city: string; key: string }>).detail;
       if (detail?.city === 'bangkok' && detail.key === current.current.selected && !disposed && !failed) {
-        if (frameDistrict(map, detail.key, current.current.isTouch, reduced() ? 0 : 400)) districtPaddingActive.current = true;
+        if (frameDistrict(map, detail.key, current.current.isTouch, cameraMotion('district').duration)) districtPaddingActive.current = true;
       }
     };
     window.addEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus);
     const resize = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
       const compact = width < 768 && height < 360;
-      setCompactControls(compact);
-      if (!compact) setControlsOpen(false);
+      const next = compact ? 'short' : width < 640 ? 'narrow' : 'full';
+      setLayout(next);
+      if (next === 'full') setControlsOpen(false);
       map.resize();
       clearDistrictPadding(map);
     }); resize.observe(host.current);
     return () => { disposed = true; uiReadyRef.current = false; clearTimeout(clickTimer); window.clearTimeout(loadTimeout); contextTimeout.clear(); if (pendingStyle) map.off('style.load', pendingStyle); cancelAnimationFrame(frame); resize.disconnect(); tooltip.remove(); window.removeEventListener('keydown', escape); window.removeEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus); map.getCanvas().removeEventListener('mouseleave', leave);
+      motionPreference.removeEventListener('change', onMotionPreference);
       if (window.__bangkokRenderer === bridge) { delete window.__bangkokRenderer; delete window.__bangkokGridPaint; }
       detachProfile(); releaseLab(); map.remove(); cache.clear(); focusKeys.current.clear(); hoverOnMap.current = () => {}; clearHoverOnMap.current = () => {}; syncFocusVisibility.current = () => {}; mapRef.current = null; attributionRef.current = null; textureRef.current = null;
+      lastDistrict.current = null; districtPaddingActive.current = false; mapSelection.current = undefined; setReady(false);
     };
   // Locale changes remount this map through the localized route.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -439,12 +457,12 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
         if (height !== lastHeight) { lastHeight = height; stableSince = now; }
         if ((height > 0 && now - stableSince >= 180) || now - started >= 1500) {
           detach();
-          if (frameDistrict(map, selected, true, reduced() ? 0 : 400)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
+          if (frameDistrict(map, selected, true, cameraMotion('district').duration)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
         } else frame = requestAnimationFrame(fit);
       };
       fit(); return () => { cancel(); detach(); };
     }
-    if (frameDistrict(map, selected, false, reduced() ? 0 : 400)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
+    if (frameDistrict(map, selected, false, cameraMotion('district').duration)) { lastDistrict.current = selected; districtPaddingActive.current = true; }
   }, [ready, selected, isTouch, clearDistrictPadding]);
   useEffect(() => {
     const map = mapRef.current; if (!ready || !map || !selected) return;
@@ -456,14 +474,14 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     if (!ll) return;
     const point = map.project(ll as [number, number]), box = map.getContainer();
     if (point.x < 30 || point.y < 30 || point.x > box.clientWidth - 30 || point.y > box.clientHeight - (isTouch ? 220 : 30) || map.getZoom() < 12) {
-      map.stop(); map.easeTo({ center: ll as [number, number], zoom: Math.max(12, map.getZoom()), duration: reduced() ? 0 : 300 });
+      map.easeTo({ center: ll as [number, number], zoom: Math.max(12, map.getZoom()), ...cameraMotion('view') });
     }
   // Selection owns navigation; score changes must not restart it.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready, recovery, selected, grid]);
 
   // Publish lab readiness after the state and source replay effects have run.
-  useEffect(() => { uiReadyRef.current = ready; }, [ready, recovery]);
+  useEffect(() => { uiReadyRef.current = ready && mapRef.current !== null; }, [ready, recovery]);
 
   const chosen = selected ? byKey.get(selected) : undefined;
   const parsed = selected ? parseAreaKey(selected) : null;
@@ -473,17 +491,27 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   const anchors = level === 'grid' ? gridScored?.anchors ?? primary.anchors : level === 'station' ? areas.anchors : primary.anchors;
   const passing = level === 'grid' ? gridScored?.passing.cells ?? grid?.cells.length ?? 0 : level === 'station' ? areas.passing.length : primary.passing.length;
   const total = level === 'grid' ? grid?.cells.length ?? 0 : level === 'station' ? areas.scored.length : primary.scored.length;
+  const changeView = (home: boolean) => {
+    const map = mapRef.current; if (!map) return;
+    const nextTilt = home || !tilted;
+    // Clear the temporary district inset before accepting a new view. If a
+    // gesture interrupts this ease it must not inherit a half-cleared inset.
+    clearDistrictPadding(map);
+    map.easeTo({ ...(home ? { center: [ASOK_CAMERA.lng, ASOK_CAMERA.lat] as [number, number], zoom: ASOK_CAMERA.zoom - 1, bearing: ASOK_CAMERA.bearing } : {}),
+      pitch: nextTilt ? ASOK_CAMERA.pitch : 0, ...cameraMotion('view'), easeId: 'bangkok-perspective' });
+    setTilted(nextTilt); closeTools();
+  };
   return <>
     <div ref={host} data-testid="maplibre-map" className={`bangkok-maplibre h-full w-full${compactControls ? ' bkk-map-compact' : ''}`} />
     {!ready && !fatal && <div role="status" className="absolute inset-0 grid place-items-center bg-slate-100 text-slate-600 pointer-events-none">{t('loading.map')}</div>}
     {fatal && !onUnavailable && <div role="alert" className="absolute inset-0 grid place-items-center bg-slate-100 text-slate-600">{t(fatal === 'webgl' ? 'map.rendererUnavailableWebgl' : fatal === 'context' ? 'map.rendererUnavailableContext' : 'map.rendererUnavailableLoad')}</div>}
     {error && !fatal && <div role="status" className="absolute left-3 bottom-2 z-[1002] max-w-[calc(100%-5rem)] rounded bg-white px-3 text-xs text-amber-800 shadow-sm">{t('map.tileError')} <button type="button" className="ml-2 min-h-11 underline" onClick={() => setError(false)}>{t('map.dismissTileError')}</button></div>}
-    <div ref={controlsRef} role="group" aria-label={t('map.mapControls')} className={compactControls ? `bkk-compact-controls absolute right-2.5 bottom-0 ${controlsOpen ? 'z-[1003]' : 'z-[1001]'}` : 'absolute right-3 bottom-44 max-md:top-28 max-md:bottom-auto z-20'} onKeyDown={(event) => { if (event.key === 'Escape' && controlsOpen) { event.stopPropagation(); setControlsOpen(false); } }}>
-      {compactControls && <button type="button" className="bkk-compact-trigger" disabled={!ready} aria-label={t('map.mapControls')} aria-expanded={controlsOpen} onClick={() => setControlsOpen(!controlsOpen)}>3D</button>}
-      {(!compactControls || controlsOpen) && <div className={`${compactControls ? 'absolute right-14 bottom-0 ' : ''}flex flex-col gap-1 rounded-lg border border-slate-300 bg-white/95 p-1 shadow-sm`}>
-        <button className="bkk-lab-button" disabled={!ready} onClick={() => { if (mapRef.current) clearDistrictPadding(mapRef.current); mapRef.current?.easeTo({ pitch: tilted ? 0 : 50, bearing: tilted ? 0 : -20, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{tilted ? t('map.view2d') : t('map.view3d')}</button>
-        <button className="bkk-lab-button" disabled={!ready} aria-pressed={buildings} onClick={() => { setBuildings(!buildings); setControlsOpen(false); }}>{t('map.buildings')}</button>
-        <button className="bkk-lab-button" disabled={!ready} onClick={() => { if (mapRef.current) clearDistrictPadding(mapRef.current); mapRef.current?.easeTo({ center: [ASOK_CAMERA.lng, ASOK_CAMERA.lat], zoom: ASOK_CAMERA.zoom - 1, pitch: ASOK_CAMERA.pitch, bearing: ASOK_CAMERA.bearing, duration: reduced() ? 0 : 300 }); setControlsOpen(false); }}>{t('map.resetAsok')}</button>
+    <div ref={controlsRef} role="group" aria-label={t('map.mapControls')} className={`absolute ${compactControls ? 'right-2.5 bottom-0' : foldControls ? 'right-3 top-28' : 'right-3 bottom-44'} ${controlsOpen ? 'z-[1003]' : foldControls ? 'z-[1001]' : 'z-20'}`} onKeyDown={(event) => { if (event.key === 'Escape' && controlsOpen) { event.stopPropagation(); closeTools(); } }}>
+      {foldControls && <button ref={triggerRef} type="button" className="bkk-compact-trigger map-control-btn" disabled={!ready} aria-label={t('map.mapControls')} title={t('map.mapControls')} aria-expanded={controlsOpen} aria-controls={controlsOpen ? panelId : undefined} onClick={() => setControlsOpen(v => !v)}>{tilted ? '3D' : '2D'}</button>}
+      {(!foldControls || controlsOpen) && <div id={panelId} className={`${foldControls ? `map-control-popover absolute right-14 ${compactControls ? 'bottom-0' : 'top-0'} ` : ''}flex flex-col gap-1 rounded-lg border border-slate-300 bg-white/95 p-1 shadow-sm`}>
+        <button type="button" className="bkk-lab-button" disabled={!ready} onClick={() => changeView(false)}>{tilted ? t('map.view2d') : t('map.view3d')}</button>
+        <button type="button" className="bkk-lab-button" disabled={!ready} aria-pressed={buildings} onClick={() => { setBuildings(v => !v); closeTools(); }}>{t('map.buildings')}</button>
+        <button type="button" className="bkk-lab-button" disabled={!ready} onClick={() => changeView(true)}>{t('map.resetAsok')}</button>
       </div>}
     </div>
     {!selected && <Legend anchors={anchors} level={level} heatmapMode={heat} heatmapDimension={dimension} filtersActive={passing < total} />}

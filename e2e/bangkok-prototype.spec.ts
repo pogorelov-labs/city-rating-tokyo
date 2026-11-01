@@ -4,6 +4,83 @@ import header from '../app/src/data/bangkok/grid.json';
 import districtGeometry from '../app/src/data/bangkok/geometry.json';
 import ja from '../app/src/messages/ja/common.json';
 
+test('rapid zoom steps accumulate, reverse and leave grid pixels alone', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  const before = await page.evaluate(() => ({
+    zoom: window.__bangkokRenderer!.getCamera().zoom, uploads: window.__bangkokRenderer!.stats().gridUploads,
+  }));
+  const plus = page.getByRole('button', { name: 'Zoom in', exact: true });
+  const minus = page.getByRole('button', { name: 'Zoom out', exact: true });
+  // Real presses during the same ease: + + + − must travel two full steps.
+  const a = (await plus.boundingBox())!, b = (await minus.boundingBox())!;
+  for (const box of [a, a, a, b]) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBeCloseTo(before.zoom + 2, 2);
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.ready())).toBe(true);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.stats().gridUploads)).toBe(before.uploads);
+  await expect(page.locator('aside').getByRole('checkbox', { name: /Family-friendly/ })).toBeChecked();
+});
+
+test('perspective can reverse in flight without changing heading, and reduced motion settles immediately', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lat: 13.74, lng: 100.56, zoom: 16, pitch: 50, bearing: 37 }));
+  const flat = page.getByRole('button', { name: '2D view' });
+  await flat.focus();
+  await page.keyboard.press('Enter');
+  await page.keyboard.press('Enter');
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(50);
+  expect((await page.evaluate(() => window.__bangkokRenderer!.getCamera())).bearing).toBeCloseTo(37, 4);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await flat.click();
+  const camera = await page.evaluate(() => window.__bangkokRenderer!.getCamera());
+  expect(camera.pitch).toBe(0);
+  expect(camera.bearing).toBeCloseTo(37, 4);
+  await page.getByRole('button', { name: 'Center on Asok' }).click();
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera())).toMatchObject({ pitch: 50, bearing: -20, zoom: 16 });
+});
+
+test('a flick coasts after release and reduced motion stops at release', async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 740, height: 600 });
+  await page.goto('/bangkok/prototype/maplibre');
+  const camera = { lat: 13.7374, lng: 100.5606, zoom: 16, pitch: 50, bearing: -20 };
+  const readings = [];
+  for (const preference of ['no-preference', 'reduce'] as const) {
+    await page.emulateMedia({ reducedMotion: preference });
+    await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+    await page.evaluate(c => window.__bangkokRenderer!.setCamera(c), camera);
+    await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+    const box = (await page.getByTestId('maplibre-map').boundingBox())!;
+    const x = box.x + box.width * .25, y = box.y + box.height * .56;
+    await page.mouse.move(x, y); await page.mouse.down();
+    const reading = page.evaluate(c => new Promise<{ travelPx: number; lastMotionMs: number }>(resolve => {
+      const project = () => window.__bangkokRenderer!.project(c.lng, c.lat);
+      window.addEventListener('mouseup', () => requestAnimationFrame(start => {
+        const origin = project();
+        let last = origin, travelPx = 0, lastMotionMs = 0;
+        const frame = (now: number) => {
+          const p = project();
+          travelPx = Math.max(travelPx, Math.hypot(p.x - origin.x, p.y - origin.y));
+          if (Math.hypot(p.x - last.x, p.y - last.y) > .05) lastMotionMs = now - start;
+          last = p;
+          if (now - start >= 700) resolve({ travelPx, lastMotionMs }); else requestAnimationFrame(frame);
+        };
+        requestAnimationFrame(frame);
+      }), { once: true, capture: true });
+    }), camera);
+    for (let i = 1; i <= 5; i++) {
+      await page.mouse.move(x + 30 * i, y);
+      await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => resolve())));
+    }
+    await page.mouse.up();
+    readings.push({ preference, ...(await reading) });
+  }
+  await testInfo.attach('drag-release', { body: JSON.stringify(readings), contentType: 'application/json' });
+  expect(readings[0].travelPx).toBeGreaterThan(1);
+  expect(readings[0].travelPx).toBeLessThan(200);
+  expect(readings[1].travelPx).toBeLessThan(1);
+});
+
 test('MapLibre draws buildings and grid while preserving filters and copied state', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   const errors: string[] = [];
@@ -432,6 +509,7 @@ test('touch district framing leaves the selected geometry above the measured car
     }
     await card.getByRole('button', { name: 'Close district card' }).tap();
     await expect(card).toBeHidden();
+    await page.getByRole('button', { name: '3D map controls' }).tap();
     await page.getByRole('button', { name: 'Center on Asok' }).tap();
     await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(50);
     const center = await page.evaluate(() => window.__bangkokRenderer!.project(100.5606, 13.7374));

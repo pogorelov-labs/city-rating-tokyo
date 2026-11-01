@@ -10,6 +10,15 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## Unreleased
+
+- Bangkok's 3D map counts every zoom-button press, even during animation.
+  Switching between flat and tilted views keeps your heading. Both Bangkok
+  maps glide briefly after a flick and respect reduced motion.
+- Camera tools fold into one button on narrow maps. On phones you can pull
+  down the filter sheet, close it with Escape, or choose a ranking result to
+  return to the map. Rent and commute sliders announce their minimum and maximum.
+
 ## v0.3.0 — Bangkok in 3D
 
 Notes updated 2026-11-01. [Release history and publication dates](https://github.com/pogorelov-labs/city-rating-tokyo/releases).

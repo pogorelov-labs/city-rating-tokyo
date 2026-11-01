@@ -46,8 +46,9 @@ import {
 } from '@/lib/bangkok-grid';
 import { stationPrimaryName } from '@/lib/station-name';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
+import { PAN_INERTIA, prefersReducedMotion, REDUCED_MOTION } from '@/lib/map-motion';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { MapContainerResize, TouchZoomControls } from './map-shared';
+import { MapContainerResize, MapZoomControls } from './map-shared';
 import { MapDeselect, MapSelectionBounds } from './map-selection';
 import { BASEMAP } from '@/lib/basemap';
 import GridLayer from './bangkok/GridLayer';
@@ -80,6 +81,17 @@ interface MapViewProps {
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
   prototype?: boolean;
+}
+
+function PanMotionPreference() {
+  const map = useMap();
+  useEffect(() => {
+    const query = window.matchMedia(REDUCED_MOTION);
+    const sync = () => { map.options.inertia = !query.matches; if (query.matches) map.stop(); };
+    query.addEventListener('change', sync);
+    return () => query.removeEventListener('change', sync);
+  }, [map]);
+  return null;
 }
 
 /** Phones: re-frame on the inner city once, before the first paint. */
@@ -314,6 +326,9 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         boundsOptions={{ padding: [12, 12] }}
         maxBounds={city.map.maxBounds}
         maxBoundsViscosity={0.8}
+        inertia={!prefersReducedMotion()} inertiaMaxSpeed={PAN_INERTIA.maxSpeed}
+        inertiaDeceleration={PAN_INERTIA.deceleration} easeLinearity={PAN_INERTIA.linearity}
+        zoomAnimation={!prefersReducedMotion()}
         minZoom={city.map.minZoom}
         className="h-full w-full"
         zoomControl={false}
@@ -328,7 +343,8 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         {prototype && <LeafletBridge />}
         <ZoomWatcher onZoom={setZoom} />
         <MapDeselect onClear={clearSelection} clickClears={level !== 'grid'} escapeClears />
-        {isTouch && <TouchZoomControls />}
+        <PanMotionPreference />
+        <MapZoomControls />
         {selected && flyBounds && (
           <MapSelectionBounds
             key={`${selected}:${selectedDistrict ? districtFocusRevision : 0}`}

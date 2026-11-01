@@ -154,6 +154,8 @@
     "quickProfiles": "Профили",
     "dealbreakers": "Обязательные условия",
     "clearAll": "Сбросить",
+    "rangeMinimum": "{label}: минимум",
+    "rangeMaximum": "{label}: максимум",
     "weights": "Приоритеты",
     "weightsDescription": "Настройте, что для вас важнее",
     "resetDefaults": "По умолчанию",
@@ -299,7 +301,8 @@
   },
   "drawer": {
     "filters": "Фильтры",
-    "filtersAndRanking": "Фильтры и рейтинг"
+    "filtersAndRanking": "Фильтры и рейтинг",
+    "close": "Закрыть фильтры"
   },
   "feedback": {
     "station": {

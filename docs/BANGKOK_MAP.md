@@ -17,6 +17,27 @@ Bangkok checks linked cells against the grid bounds and district mask before
 using their geometry; it retains plausible cells while the mask is loading.
 Invalid selections or comparisons are removed individually.
 
+## Controls and motion
+
+Both Bangkok renderers use their native pan handlers. A drag tracks the pointer;
+release velocity determines the glide. Its configured maximum is 400 ms
+and 168 CSS pixels, so a fast flick does not cross several more screens of
+streets. Pinch and wheel zoom remain native. With reduced motion enabled,
+dragging ends at release and selection changes skip the camera flight.
+
+The 3D map's zoom buttons combine repeated presses into one interruptible
+animation: three presses request three levels. Switching perspective preserves
+the heading; the compass resets north, and **Center on Asok** restores the
+initial street view. Narrow workspaces fold the extra view controls into one
+button. Arrow keys move between districts, stations and grid in the level switch.
+
+On phones the filter sheet follows a drag on its header; a flick or a longer
+pull dismisses it. The content scrolls normally. Close, Escape, the backdrop
+and choosing a ranking result also dismiss it. The sheet uses a native modal
+dialog; movement affects its CSS translation without updating map or filter
+state on each pointer move. See the [MapLibre pan API](https://maplibre.org/maplibre-gl-js/docs/API/type-aliases/DragPanOptions/)
+and the [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+
 ## Rendering
 
 - District and station-area geometry is installed once in native vector layers.

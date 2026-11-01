@@ -8,6 +8,8 @@
 .bangkok-maplibre.bkk-map-compact .maplibregl-ctrl-top-right:has(.maplibregl-compact-show) { z-index: 1002; }
 .bkk-compact-trigger { width: 44px; height: 44px; border: 1px solid #cbd5e1; border-radius: 6px; background: white; color: #334155; font-size: 12px; font-weight: 600; box-shadow: 0 1px 4px #0002; }
 .bkk-compact-trigger:disabled { opacity: .5; }
+.bkk-compact-trigger::before { content: ''; display: inline-block; width: 5px; height: 5px; margin-right: 4px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); vertical-align: 2px; }
+.bkk-compact-trigger[aria-expanded="true"]::before { transform: rotate(225deg); }
 .bkk-compact-trigger:focus-visible { outline: 2px solid #2563eb; outline-offset: 1px; }
 .bangkok-maplibre .maplibregl-popup { pointer-events: none; }
 .bkk-lab-tooltip { font: 12px/1.4 system-ui, sans-serif; color: #1e293b; }

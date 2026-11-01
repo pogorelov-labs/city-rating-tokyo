@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useAppStore } from '@/lib/store';
 import { useCity } from '@/lib/city-context';
 import { RATING_LABELS, WeightConfig } from '@/lib/types';
@@ -32,8 +32,11 @@ export default function MapControls() {
   const t = useTranslations();
   const city = useCity();
   const container = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
   const [narrow, setNarrow] = useState(false);
   const [open, setOpen] = useState(false);
+  const closePanel = () => { setOpen(false); trigger.current?.focus({ preventScroll: true }); };
   useEffect(() => {
     const parent = container.current?.parentElement;
     if (!parent) return;
@@ -61,12 +64,12 @@ export default function MapControls() {
 
   const compact = city.id === 'bangkok' && narrow;
   if (compact) return (
-    <div ref={container} className={`absolute top-14 md:top-3 right-3 ${open ? 'z-[1003]' : 'z-[1000]'}`} onKeyDown={(event) => { if (event.key === 'Escape' && open) { event.stopPropagation(); setOpen(false); } }}>
-      <button type="button" aria-label={t('map.layers')} aria-expanded={open} onClick={() => setOpen(!open)} className="map-control-btn flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-700 shadow-sm focus-visible:outline-2 focus-visible:outline-blue-600"><LayersIcon compact /></button>
-      {open && <div role="group" aria-label={t('map.layers')} className="absolute right-14 top-0 flex min-w-40 flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-lg">
+    <div ref={container} className={`absolute top-14 md:top-3 right-3 ${open ? 'z-[1003]' : 'z-[1000]'}`} onKeyDown={(event) => { if (event.key === 'Escape' && open) { event.stopPropagation(); closePanel(); } }}>
+      <button ref={trigger} type="button" aria-label={t('map.layers')} aria-expanded={open} aria-controls={open ? panelId : undefined} onClick={() => setOpen(v => !v)} className="map-control-btn flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-700 shadow-sm focus-visible:outline-2 focus-visible:outline-blue-600"><LayersIcon compact /></button>
+      {open && <div id={panelId} role="group" aria-label={t('map.layers')} className="map-control-popover absolute right-14 top-0 flex min-w-40 flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-lg">
         <button type="button" aria-pressed={showRailOverlay} onClick={() => setShowRailOverlay(!showRailOverlay)} data-umami-event="toggle-rail-overlay" className="min-h-11 rounded px-3 text-left text-sm hover:bg-slate-100">{t('map.railNetwork')}{showRailOverlay && <span aria-hidden="true"> ✓</span>}</button>
         <button type="button" aria-pressed={heatmapMode} onClick={() => setHeatmapMode(!heatmapMode)} className="min-h-11 rounded px-3 text-left text-sm hover:bg-slate-100">{t('map.heatmap')}{heatmapMode && <span aria-hidden="true"> ✓</span>}</button>
-        {heatmapMode && <select value={heatmapDimension} onChange={(event) => { setHeatmapDimension(event.target.value); setOpen(false); }} aria-label={t('map.heatmap')} className="min-h-11 max-w-48 rounded border border-gray-200 px-2 text-sm">
+        {heatmapMode && <select value={heatmapDimension} onChange={(event) => { setHeatmapDimension(event.target.value); closePanel(); }} aria-label={t('map.heatmap')} className="min-h-11 max-w-48 rounded border border-gray-200 px-2 text-sm">
           <option value="composite">{t('map.compositeScore')}</option>
           {(Object.keys(RATING_LABELS) as (keyof WeightConfig)[]).map((key) => <option key={key} value={key}>{t(`ratings.${key}`)}</option>)}
         </select>}

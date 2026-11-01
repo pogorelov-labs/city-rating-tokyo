@@ -25,7 +25,7 @@ import LeafletAreaCard from './area/LeafletAreaCard';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { useDelayedHover } from '@/lib/use-delayed-hover';
 import { BASEMAP, tileUrl } from '@/lib/basemap';
-import { MapContainerResize, TouchZoomControls, getSvgRenderer } from './map-shared';
+import { MapContainerResize, MapZoomControls, getSvgRenderer } from './map-shared';
 import { MapSelectionPoint, MapDeselect } from './map-selection';
 
 /**
@@ -151,7 +151,7 @@ export default function MapView({ stations, thumbnails = {}, snippets = {} }: Ma
           onFlyCancel={onFlyCancel}
         />
       )}
-      {isTouch && <TouchZoomControls />}
+      {isTouch && <MapZoomControls />}
       <MapDeselect onClear={() => setSelectedStation(null)} clickClears escapeClears />
       {sortedForRender.map((station) => {
         const score = station.score;

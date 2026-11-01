@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { MapSelectionBounds } from './map-selection';
 
 const { map, listeners } = vi.hoisted(() => {
   const listeners = new Map<string, Set<() => void>>();
   const map = {
     getBoundsZoom: vi.fn(() => 14), getBounds: vi.fn(() => ({ contains: () => false })),
-    getZoom: vi.fn(() => 12), closePopup: vi.fn(), flyToBounds: vi.fn(),
+    getZoom: vi.fn(() => 12), closePopup: vi.fn(), flyToBounds: vi.fn(), fitBounds: vi.fn(),
     on: vi.fn((event: string, fn: () => void) => { if (!listeners.has(event)) listeners.set(event, new Set()); listeners.get(event)!.add(fn); }),
     off: vi.fn((event: string, fn: () => void) => listeners.get(event)?.delete(fn)),
     stop: vi.fn(() => { for (const fn of listeners.get('moveend') ?? []) fn(); }),
@@ -17,6 +17,16 @@ vi.mock('react-leaflet', () => ({ useMap: () => map }));
 vi.mock('@/i18n/navigation', () => ({ Link: () => null }));
 
 describe('Bangkok map flight ownership', () => {
+  afterEach(() => { vi.unstubAllGlobals(); vi.clearAllMocks(); });
+  it('fits immediately under reduced motion and does not wait for a flight event', () => {
+    vi.stubGlobal('matchMedia', () => ({ matches: true }));
+    const start = vi.fn(), end = vi.fn();
+    render(<MapSelectionBounds bounds={[[13, 100], [14, 101]]} bottomInset={220} onFlyStart={start} onFlyEnd={end} />);
+    expect(map.fitBounds).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ animate: false, maxZoom: 14 }));
+    expect(map.flyToBounds).not.toHaveBeenCalled();
+    expect(map.on).not.toHaveBeenCalled();
+    expect(start).toHaveBeenCalledOnce(); expect(end).toHaveBeenCalledOnce();
+  });
   it('supersedes old listeners before stopping an old flight and releases the new flight on unload', () => {
     const start = vi.fn(); const end = vi.fn();
     const props = { bounds: [[13, 100], [14, 101]] as [[number, number], [number, number]], bottomInset: 0, onFlyStart: start, onFlyEnd: end };
