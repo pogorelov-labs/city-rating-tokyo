@@ -3,6 +3,28 @@ import { resolve } from 'node:path';
 
 test.use({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
 
+test('the Russian map keeps its personal motion choice across reload and fallback without rewriting the shared selection', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/ru/bangkok?lv=station&s=st.asok&adult=1');
+  const tools = page.getByRole('button', { name: 'Управление 3D-картой' });
+  const motion = page.getByRole('combobox', { name: 'Движение карты' });
+  await expect(tools).toBeEnabled({ timeout: 30_000 });
+  await tools.tap(); await expect(motion).toHaveValue('system');
+  await motion.selectOption('smooth');
+  await expect(tools).toHaveAttribute('aria-expanded', 'false');
+  await page.reload();
+  await expect(tools).toBeEnabled({ timeout: 30_000 });
+  await tools.tap(); await expect(motion).toHaveValue('smooth');
+  await tools.tap();
+  await page.getByRole('combobox', { name: 'Вид карты' }).selectOption('leaflet');
+  await expect(page.locator('.leaflet-container')).toBeVisible();
+  await expect(motion).toHaveValue('smooth');
+  await motion.selectOption('system');
+  const params = new URL(page.url()).searchParams;
+  expect(params.get('s')).toBe('st.asok'); expect(params.get('adult')).toBe('1');
+  expect([...params.keys()].sort()).toEqual(['adult', 'lv', 's']);
+});
+
 test('phone camera tools leave room for the map and restore keyboard focus', async ({ page }) => {
   await page.goto('/bangkok?lv=station&s=st.asok');
   const tools = page.getByRole('button', { name: '3D map controls' });

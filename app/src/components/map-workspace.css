@@ -7,6 +7,12 @@
 }
 .map-workspace :is(.map-control-btn, .bkk-lab-button, .maplibregl-ctrl-group button):active:not(:disabled) { box-shadow: inset 0 0 0 2px rgb(71 85 105 / 35%); }
 .bkk-compact-trigger[aria-expanded="true"] { background: #e2e8f0; }
+.bkk-motion-choice { position: relative; display: block; border-radius: 5px; background: white; font-size: 12px; line-height: 1.25; color: #334155; }
+.bkk-motion-choice span { position: absolute; top: 4px; left: 8px; pointer-events: none; font-size: 10px; color: #475569; }
+.bkk-motion-choice select { width: 100%; min-height: 44px; padding: 13px 4px 2px; font: inherit; color: inherit; cursor: pointer; }
+.bkk-motion-choice:focus-within { outline: 2px solid #2563eb; }
+.bkk-motion-choice select:focus-visible { outline: none; }
+.map-control-popover:has(.bkk-motion-choice) { max-height: calc(100cqh - 8px); overflow-y: auto; overscroll-behavior: contain; }
 /* Let the published card shrink inside the workspace; its body, not its action
    footer, scrolls. Without this the outer card clips the footer offscreen. */
 .map-touch-card > article { flex: 0 1 auto; min-height: 0; }

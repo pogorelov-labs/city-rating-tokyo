@@ -4,7 +4,8 @@ import { useEffect, useLayoutEffect } from 'react';
 import { useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { useAppStore } from '@/lib/store';
-import { prefersReducedMotion } from '@/lib/map-motion';
+import { bangkokCameraReduced, prefersReducedMotion } from '@/lib/map-motion';
+import { useCityId } from '@/lib/city-context';
 
 type LatLng = [number, number];
 const MAX_FLY_ZOOM = 14;
@@ -16,6 +17,7 @@ type BoundsSelection = { kind: 'bounds'; bounds: [LatLng, LatLng]; bottomInset: 
 /** Share the selection lifecycle while retaining each city's flight strategy. */
 export function useMapSelection(selection: PointSelection | BoundsSelection) {
   const map = useMap();
+  const reduce = useCityId() === 'bangkok' ? bangkokCameraReduced : prefersReducedMotion;
   const lat = selection.kind === 'point' ? selection.lat : undefined;
   const lng = selection.kind === 'point' ? selection.lng : undefined;
   const kind = selection.kind;
@@ -42,7 +44,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       onFlyStart?.();
 
       const targetZoom = currentZoom >= 13 ? currentZoom : 14;
-      if (prefersReducedMotion()) {
+      if (reduce()) {
         map.stop();
         map.setView([lat, lng], targetZoom, { animate: false });
         onFlyEnd?.();
@@ -106,7 +108,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
     // user's × (see the Popup `remove` handler).
     onFlyStart();
     map.closePopup();
-    if (prefersReducedMotion()) {
+    if (reduce()) {
       map.fitBounds(latLngBounds, { paddingTopLeft: padTL, paddingBottomRight: padBR, maxZoom: MAX_FLY_ZOOM, animate: false });
       onFlyEnd();
       return;
@@ -133,7 +135,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
     // The bounds component is keyed by selection. As before, callback changes
     // must not detach a flight listener or restart an in-progress animation.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [map, kind, lat, lng]);
+  }, [map, kind, lat, lng, reduce]);
 }
 
 export function MapSelectionPoint(props: Omit<PointSelection, 'kind'>) {

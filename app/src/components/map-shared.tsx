@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { observeMapContainer } from '@/lib/map-resize';
-import { prefersReducedMotion } from '@/lib/map-motion';
+import { bangkokCameraReduced, prefersReducedMotion, smoothOverride } from '@/lib/map-motion';
+import { useCityId } from '@/lib/city-context';
 
 // Map building blocks shared by the Tokyo station map (Map.tsx) and the
 // Bangkok district map (DistrictMap.tsx). Kept in their own module so the
@@ -22,6 +23,18 @@ export function MapContainerResize() {
 export function MapZoomControls() {
   const t = useTranslations('map');
   const map = useMap();
+  const bangkok = useCityId() === 'bangkok';
+  const step = (delta: 1 | -1) => {
+    // Leaflet decides whether CSS zoom is available at construction. An
+    // explicitly requested smooth step also works on an already-open map.
+    if (bangkok && smoothOverride()) {
+      const zoom = Math.min(map.getMaxZoom(), Math.max(map.getMinZoom(), map.getZoom() + delta));
+      map.flyTo(map.getCenter(), zoom, { animate: true, duration: .22 });
+    } else {
+      const options = { animate: !(bangkok ? bangkokCameraReduced() : prefersReducedMotion()) };
+      if (delta === 1) map.zoomIn(undefined, options); else map.zoomOut(undefined, options);
+    }
+  };
   return (
     <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
       <div
@@ -29,14 +42,14 @@ export function MapZoomControls() {
         style={{ pointerEvents: 'auto', marginBottom: 'calc(80px + env(safe-area-inset-bottom, 0px))', marginRight: 10 }}
       >
         <button
-          onClick={() => map.zoomIn(undefined, { animate: !prefersReducedMotion() })}
+          onClick={() => step(1)}
           className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomIn')}
         >
           +
         </button>
         <button
-          onClick={() => map.zoomOut(undefined, { animate: !prefersReducedMotion() })}
+          onClick={() => step(-1)}
           className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomOut')}
         >

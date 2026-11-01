@@ -46,7 +46,7 @@ import {
 } from '@/lib/bangkok-grid';
 import { stationPrimaryName } from '@/lib/station-name';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
-import { PAN_INERTIA, prefersReducedMotion, REDUCED_MOTION } from '@/lib/map-motion';
+import { LEAFLET_PAN, bangkokCameraReduced, prefersReducedMotion, subscribeBangkokMotion } from '@/lib/map-motion';
 import { useIsTouch } from '@/lib/use-is-touch';
 import { MapContainerResize, MapZoomControls } from './map-shared';
 import { MapDeselect, MapSelectionBounds } from './map-selection';
@@ -86,10 +86,13 @@ interface MapViewProps {
 function PanMotionPreference() {
   const map = useMap();
   useEffect(() => {
-    const query = window.matchMedia(REDUCED_MOTION);
-    const sync = () => { map.options.inertia = !query.matches; if (query.matches) map.stop(); };
-    query.addEventListener('change', sync);
-    return () => query.removeEventListener('change', sync);
+    const sync = () => {
+      const reduced = bangkokCameraReduced();
+      L.Util.setOptions(map, { inertia: !reduced });
+      if (reduced) map.stop();
+    };
+    sync();
+    return subscribeBangkokMotion(sync);
   }, [map]);
   return null;
 }
@@ -326,8 +329,7 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         boundsOptions={{ padding: [12, 12] }}
         maxBounds={city.map.maxBounds}
         maxBoundsViscosity={0.8}
-        inertia={!prefersReducedMotion()} inertiaMaxSpeed={PAN_INERTIA.maxSpeed}
-        inertiaDeceleration={PAN_INERTIA.deceleration} easeLinearity={PAN_INERTIA.linearity}
+        inertia={!bangkokCameraReduced()} {...LEAFLET_PAN}
         zoomAnimation={!prefersReducedMotion()}
         minZoom={city.map.minZoom}
         className="h-full w-full"

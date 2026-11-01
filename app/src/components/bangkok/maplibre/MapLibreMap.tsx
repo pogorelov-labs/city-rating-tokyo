@@ -31,7 +31,9 @@ import { classifyMapError, ContextRecoveryTimer } from './map-errors';
 import { collapseInitialAttribution } from './attribution';
 import { frameDistrict } from './district-camera';
 import { navigationControl } from './navigation-control';
-import { cameraMotion, PAN_INERTIA, REDUCED_MOTION } from '@/lib/map-motion';
+import { cameraMotion, PAN_INERTIA } from '@/lib/map-motion';
+import { bindBangkokPan } from './opt-in-pan';
+import CameraMotionChoice from '../CameraMotionChoice';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
 import rail from '@/data/bangkok/rail.json';
 import { measure, measureAsync, renderProfile, retainRendererLab } from '@/lib/render-profile';
@@ -142,9 +144,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     const detachProfile = prototype ? attachMapProfile(map) : () => {};
     let disposed = false, loaded = false, failed = false, frame = 0, renders = 0, errors = 0, idleEvents = 0;
     let clickTimer: ReturnType<typeof setTimeout> | undefined;
-    const motionPreference = window.matchMedia(REDUCED_MOTION);
-    const onMotionPreference = () => { if (motionPreference.matches) map.stop(); };
-    motionPreference.addEventListener('change', onMotionPreference);
+    const pan = bindBangkokPan(map);
     const fail = (reason: 'load' | 'context') => { if (disposed || failed) return; failed = true; setFatal(reason); setReady(false); unavailableRef.current?.(reason); };
     let loadTimeout = window.setTimeout(() => { if (!loaded) fail('load'); }, 20000);
     const contextTimeout = new ContextRecoveryTimer(() => fail('context'));
@@ -291,7 +291,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       return null;
     };
     map.on('click', (e) => {
-      if (e.originalEvent.detail > 1) return;
+      if (pan.consumeBrakeTap() || e.originalEvent.detail > 1) return;
       const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat);
       if (key === undefined) return;
       clearHover();
@@ -338,7 +338,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       clearDistrictPadding(map);
     }); resize.observe(host.current);
     return () => { disposed = true; uiReadyRef.current = false; clearTimeout(clickTimer); window.clearTimeout(loadTimeout); contextTimeout.clear(); if (pendingStyle) map.off('style.load', pendingStyle); cancelAnimationFrame(frame); resize.disconnect(); tooltip.remove(); window.removeEventListener('keydown', escape); window.removeEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus); map.getCanvas().removeEventListener('mouseleave', leave);
-      motionPreference.removeEventListener('change', onMotionPreference);
+      pan.remove();
       if (window.__bangkokRenderer === bridge) { delete window.__bangkokRenderer; delete window.__bangkokGridPaint; }
       detachProfile(); releaseLab(); map.remove(); cache.clear(); focusKeys.current.clear(); hoverOnMap.current = () => {}; clearHoverOnMap.current = () => {}; syncFocusVisibility.current = () => {}; mapRef.current = null; attributionRef.current = null; textureRef.current = null;
       lastDistrict.current = null; districtPaddingActive.current = false; mapSelection.current = undefined; setReady(false);
@@ -512,6 +512,7 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
         <button type="button" className="bkk-lab-button" disabled={!ready} onClick={() => changeView(false)}>{tilted ? t('map.view2d') : t('map.view3d')}</button>
         <button type="button" className="bkk-lab-button" disabled={!ready} aria-pressed={buildings} onClick={() => { setBuildings(v => !v); closeTools(); }}>{t('map.buildings')}</button>
         <button type="button" className="bkk-lab-button" disabled={!ready} onClick={() => changeView(true)}>{t('map.resetAsok')}</button>
+        <CameraMotionChoice onChoose={closeTools} />
       </div>}
     </div>
     {!selected && <Legend anchors={anchors} level={level} heatmapMode={heat} heatmapDimension={dimension} filtersActive={passing < total} />}

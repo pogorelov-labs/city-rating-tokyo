@@ -19,11 +19,21 @@ Invalid selections or comparisons are removed individually.
 
 ## Controls and motion
 
-Both Bangkok renderers use their native pan handlers. A drag tracks the pointer;
-release velocity determines the glide. Its configured maximum is 400 ms
-and 168 CSS pixels, so a fast flick does not cross several more screens of
-streets. Pinch and wheel zoom remain native. With reduced motion enabled,
-dragging ends at release and selection changes skip the camera flight.
+Dragging tracks the pointer in both Bangkok renderers. A quick flick carries
+farther than a slow drag of the same distance; holding still before release
+stops the map. The 3D view uses constant deceleration, capped at about 460 ms
+and 378 CSS pixels. Touching a gliding 3D map catches it without opening a
+card; the next tap selects normally. The standard map uses Leaflet's own
+quadratic glide. Pinch and wheel input stay native.
+
+**Map motion** follows the device by default. **Smooth** explicitly enables
+Bangkok pan inertia and animated camera commands even when the device requests
+reduced motion. The preference is local to this browser and is never included
+in a shared link. Returning to **Follow device** takes effect immediately.
+Tokyo and interface animations continue to follow the device. On a reduced-motion
+device that opts in, native drag still handles direct input; on release we give
+MapLibre a single bounded pan animation. No library-global override, second
+animation loop, map reload, rescoring or grid texture upload is needed.
 
 The 3D map's zoom buttons combine repeated presses into one interruptible
 animation: three presses request three levels. Switching perspective preserves
@@ -129,6 +139,13 @@ compatibility, rendered parks and selections, filters/shared links, pointer and
 touch behavior, failure fallback and worker/CSP delivery. CI uses a software GPU
 for functional WebGL coverage, not performance claims. Real-device validation is
 still useful before changing the default quality budget for slower phones.
+
+The pan regression repeats a 150 CSS pixel drag at two release speeds and
+tracks a geographic landmark in screen coordinates after release. It checks
+direction, bounded travel, a held release, device reduced motion and the
+explicit Smooth preference on both renderers. A separate touch test catches
+a moving 3D map and verifies that the catch does not select a cell or reupload
+the score grid.
 
 Building detail and the availability of remote basemap tiles depend on the data
 provider. Scores retain their own published source dates and confidence labels;
