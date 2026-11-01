@@ -76,6 +76,28 @@ stationary map proves nothing. For a follow-up tap, use the same coordinates
 and the stated delay; moving away or waiting out double-tap recognition hides
 the bug. Keep failed traces instead of using retries as evidence.
 
+The flick is an input to the test. Do not pace a prescribed gesture by waiting
+for wall-clock paints: on SwiftShader, the same five moves can arrive too far
+apart to qualify as a flick. For matched velocities, install the browser clock
+before loading the map; after it settles, advance 16 ms per real mouse or
+touch move. Run the renderer's animation callbacks at each step. Project a
+landmark to confirm the final move reached the camera **before** lifting, then
+measure from lift, including the first release frame. To test a catch, require
+another frame of forward progress and put the finger down while the glide is
+still active. A held release, a pinch and a cancelled contact must not inherit
+the preceding pan. These are behavior tests; their clock cannot establish FPS.
+
+As a negative control, replay the 270 px right, 35 px left mouse gesture with
+explicit Smooth on pre-fix commit `806ab99`. On SwiftShader the landmark coasted
+151 px **right**; the fixed map coasted 74 px **left**, with no rightward frame.
+The last move preceded lift by 16 ms in both runs. The same old version also
+fails the two-finger coast and the same-position follow-up selection checks.
+
+The Leaflet brake checks also exercise uninterrupted wall-clock input. The
+touch driver sends ordered native moves without waiting for a compositor
+acknowledgment after each one: Leaflet samples only the last 50 ms. Check that
+a landmark was moving at the catching contact and stays put during the hold.
+
 | Gate | Observable pass condition | Regression suite |
 | --- | --- | --- |
 | Direction and contact identity | Reversal has a negative signed coast (more than 2 px left); no observed frame goes 2 px right of release. Holding still does not launch a coast. Translation, partial lifts, continued movement and pinches are separate cases. | [Velocity and contact tests](../e2e/bangkok-release-velocity.lab.spec.ts), [estimator tests](../app/src/components/bangkok/maplibre/pan-velocity.test.ts) |
@@ -97,6 +119,9 @@ The last command expects the [packaged production-mode preview](BANGKOK_MAP.md#b
 with the lab disabled. If a **lab-enabled** server is already running, set
 `E2E_BASE_URL` to that server instead of starting another dev process. Full
 Chromium runs the lab; software WebGL in CI verifies behavior, not hardware FPS.
+Set `E2E_SWIFTSHADER=1` to use CI's software backend locally. The buildings and
+grid test checks the renderer on the map's own WebGL canvas. A failed CI lab run
+retains its JSON report, including signed release traces, with the browser artifacts.
 
 To retain the sampled reversal traces for a before/after comparison, use the
 JSON reporter as well as the normal progress output:

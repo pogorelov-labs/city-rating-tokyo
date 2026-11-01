@@ -172,7 +172,8 @@ jobs:
       - name: Verify the opt-in renderer lab
         env:
           E2E_PORT: "3001"
-        run: npm run test:e2e:lab -- --retries=0 --reporter=line
+          PLAYWRIGHT_JSON_OUTPUT_FILE: test-results/renderer-lab.json
+        run: npm run test:e2e:lab -- --retries=0 --reporter=line,json
       - name: Preserve browser failure evidence
         if: failure()
         uses: actions/upload-artifact@v4

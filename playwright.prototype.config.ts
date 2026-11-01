@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-const ciLinux = !!process.env.CI && process.platform === 'linux';
+import { labUsesSwiftShader } from './e2e/helpers/bangkok-software-renderer';
 const port = process.env.E2E_PORT || '3170';
 const baseURL = process.env.E2E_BASE_URL || `http://localhost:${port}`;
 export default defineConfig({
@@ -7,10 +7,8 @@ export default defineConfig({
   timeout: 60_000, reporter: 'list',
   use: {
     baseURL, ...devices['Desktop Chrome'], screenshot: 'only-on-failure',
-    // Use the same full browser for input/animation tests locally and in CI.
-    // Headless-shell frame throttling can turn a flick into a held release.
     channel: 'chromium',
-    launchOptions: ciLinux
+    launchOptions: labUsesSwiftShader
       ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
   },
   webServer: process.env.E2E_BASE_URL ? undefined : { command: `cd app && BANGKOK_RENDERER_LAB=1 npm run dev -- --port ${port}`,

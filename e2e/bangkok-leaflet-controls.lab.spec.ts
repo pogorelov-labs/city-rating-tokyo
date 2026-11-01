@@ -16,24 +16,39 @@ test.beforeEach(async ({ page }) => {
 
 // Observe release and the beginning of inertia in the page, avoiding a
 // protocol round trip that can miss the short coast on a busy test runner.
+type CoastObservation = { release: number; max: number; moves: number[] };
+type CatchObservation = { lastMotionAge: number; lastStep: number; frameGap: number };
 async function watchCoast(page: Page, eventName: 'touchend' | 'mouseup') {
   await page.evaluate(({ eventName, camera }) => {
-    const state = window as unknown as { coast: Promise<{ release: number; max: number; moves: number[] }> };
+    const state = window as unknown as { coast: Promise<CoastObservation>; caught: Promise<CatchObservation> };
     const times: number[] = [];
     const moveName = eventName === 'touchend' ? 'touchmove' : 'mousemove';
+    const downName = eventName === 'touchend' ? 'touchstart' : 'mousedown';
     const record = () => times.push(performance.now());
     window.addEventListener(moveName, record, true);
+    let finishCatch: (value: CatchObservation) => void;
+    state.caught = new Promise(resolve => { finishCatch = resolve; });
     state.coast = new Promise(resolve => {
       window.addEventListener(eventName, () => {
         window.removeEventListener(moveName, record, true);
         const project = () => window.__bangkokRenderer!.project(camera.lng, camera.lat).x;
         const release = project(), start = performance.now();
-        let max = release;
-        const sample = () => {
-          max = Math.max(max, project());
-          if (max > release + 3 || performance.now() - start > 2000) {
+        let previous = release, max = release, lastMotion = -Infinity, lastStep = 0, previousFrame = start, frameGap = 0;
+        let caught = false, reported = false;
+        window.addEventListener(downName, () => {
+          caught = true;
+          finishCatch({ lastMotionAge: performance.now() - lastMotion, lastStep, frameGap });
+        }, { capture: true, once: true });
+        const sample = (now: number) => {
+          const current = project(), step = Math.abs(current - previous);
+          frameGap = now - previousFrame; previousFrame = now; previous = current;
+          if (step > .05) { lastMotion = performance.now(); lastStep = step; }
+          max = Math.max(max, current);
+          if (!reported && (max > release + 3 || performance.now() - start > 2000)) {
+            reported = true;
             resolve({ release, max, moves: times.map(t => Math.round(start - t)) });
-          } else requestAnimationFrame(sample);
+          }
+          if (!caught && performance.now() - start < 2500) requestAnimationFrame(sample);
         };
         requestAnimationFrame(sample);
       }, { capture: true, once: true });
@@ -41,8 +56,13 @@ async function watchCoast(page: Page, eventName: 'touchend' | 'mouseup') {
   }, { eventName, camera });
 }
 async function requireCoast(page: Page) {
-  const observation = await page.evaluate(() => (window as unknown as { coast: Promise<{ release: number; max: number; moves: number[] }> }).coast);
+  const observation = await page.evaluate(() => (window as unknown as { coast: Promise<CoastObservation> }).coast);
   expect(observation.max - observation.release, `No coast detected; release observation: ${JSON.stringify(observation)}`).toBeGreaterThan(3);
+}
+async function requireActiveCatch(page: Page) {
+  const observation = await page.evaluate(() => (window as unknown as { caught: Promise<CatchObservation> }).caught);
+  expect(observation.lastStep, `No moving frame before contact: ${JSON.stringify(observation)}`).toBeGreaterThan(.05);
+  expect(observation.lastMotionAge, `Coast stopped before contact: ${JSON.stringify(observation)}`).toBeLessThan(Math.max(100, observation.frameGap * 2));
 }
 
 for (const mode of ['smooth', 'device'] as const) test(`rapid ${mode} zoom accumulates and external camera changes cancel intent`, async ({ page }) => {
@@ -81,7 +101,9 @@ test('touch catches coast immediately and subsequent taps still select', async (
   const anchor = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat).x, camera);
   await watchCoast(page, 'touchend');
   await touch('touchStart');
-  for (let dx = 15; dx <= 150; dx += 15) await touch('touchMove', dx);
+  // Queue native moves in order before awaiting acknowledgments: CDP may wait
+  // for a frame per acknowledgment, exceeding Leaflet's 50 ms sample window.
+  await Promise.all(Array.from({ length: 10 }, (_, i) => touch('touchMove', (i + 1) * 15)));
   await touch('touchEnd');
   await requireCoast(page);
   await page.evaluate(() => {
@@ -89,6 +111,7 @@ test('touch catches coast immediately and subsequent taps still select', async (
     document.querySelector('.leaflet-container')!.addEventListener('click', () => (window as unknown as { labClicks: number }).labClicks++);
   });
   await touch('touchStart', 150);
+  await requireActiveCatch(page);
   const down = await anchor();
   await page.waitForTimeout(220);
   const held = await anchor();
@@ -129,6 +152,7 @@ test('mouse contact catches a coast and the following drag works', async ({ page
   await page.mouse.up();
   await requireCoast(page);
   await page.mouse.down();
+  await requireActiveCatch(page);
   const down = await anchor();
   await page.waitForTimeout(220);
   expect(Math.abs(await anchor() - down)).toBeLessThan(2);

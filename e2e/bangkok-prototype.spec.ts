@@ -1,8 +1,12 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import header from '../app/src/data/bangkok/grid.json';
 import districtGeometry from '../app/src/data/bangkok/geometry.json';
 import ja from '../app/src/messages/ja/common.json';
+import { gestureFrame, installGestureClock, pauseGestureClock } from './helpers/bangkok-gesture-clock';
+import { flickAndCatch } from './helpers/bangkok-touch-flick';
+import { observePanRelease } from './helpers/bangkok-release-trace';
+import { labUsesSwiftShader } from './helpers/bangkok-software-renderer';
 
 test('rapid zoom steps accumulate, reverse and leave grid pixels alone', async ({ page }) => {
   await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
@@ -40,7 +44,8 @@ test('perspective can reverse in flight without changing heading, and reduced mo
   expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera())).toMatchObject({ pitch: 50, bearing: -20, zoom: 16 });
 });
 
-for (const renderer of ['maplibre', 'leaflet'] as const) test(`${renderer}: a flick coasts after release and reduced motion stops at release`, async ({ page }, testInfo) => {
+async function setupFlick(page: Page, renderer: 'maplibre' | 'leaflet') {
+  await installGestureClock(page);
   await page.setViewportSize({ width: 740, height: 600 });
   await page.goto(`/bangkok/prototype/${renderer}`);
   const camera = { lat: 13.7374, lng: 100.5606, zoom: 16, pitch: 50, bearing: -20 };
@@ -49,65 +54,73 @@ for (const renderer of ['maplibre', 'leaflet'] as const) test(`${renderer}: a fl
   const revealMotion = async () => {
     if (renderer === 'maplibre' && !await motion.isVisible()) await tools.click();
   };
-  const readings = [];
-  for (const [preference, choice, held, pixelsPerMove] of [
-    ['no-preference', 'system', false, 30], ['reduce', 'system', false, 30],
-    ['reduce', 'smooth', false, 30], ['reduce', 'smooth', true, 30],
-    ['reduce', 'smooth', false, 6],
-  ] as const) {
-    await page.emulateMedia({ reducedMotion: preference });
+  const project = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat).x, camera);
+  const flick = (preference: 'reduce' | 'no-preference', choice: 'system' | 'smooth', pixelsPerMove: number, held = false) =>
+    test.step(`Flick: ${preference}, ${choice}, ${pixelsPerMove} px per move, ${held ? 'held' : 'immediate'} release`, async () => {
+      await page.emulateMedia({ reducedMotion: preference });
+      await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+      await revealMotion();
+      await motion.selectOption(choice);
+      if (await tools.isVisible() && await tools.getAttribute('aria-expanded') === 'true') await tools.press('Escape');
+      await page.evaluate(c => window.__bangkokRenderer!.setCamera(c), camera);
+      await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+      const surface = renderer === 'maplibre' ? page.getByTestId('maplibre-map') : page.locator('.leaflet-container');
+      const box = (await surface.boundingBox())!;
+      const x = box.x + box.width * .25, y = box.y + box.height * .56;
+      await pauseGestureClock(page);
+      await page.mouse.move(x, y); await page.mouse.down();
+      const readTrace = await observePanRelease(page, 'mouse', camera, 700);
+      for (let travel = pixelsPerMove; travel <= 150; travel += pixelsPerMove) {
+        const before = travel === 150 ? await project() : undefined;
+        await page.mouse.move(x + travel, y);
+        await gestureFrame(page);
+        // A queued drag delta after lift must never be mistaken for inertia.
+        if (before !== undefined) expect(await project()).toBeGreaterThan(before + 1);
+      }
+      if (held) await page.clock.runFor(220);
+      await page.mouse.up();
+      await page.clock.runFor(736);
+      const observation = await readTrace();
+      await page.clock.resume();
+      await test.info().attach('drag-release', { body: JSON.stringify({ preference, choice, held, pixelsPerMove, ...observation }), contentType: 'application/json' });
+      return observation;
+    });
+  return { flick, revealMotion, motion };
+}
+
+for (const renderer of ['maplibre', 'leaflet'] as const) {
+  const limit = renderer === 'maplibre' ? 380 : 191;
+  test(`${renderer}: a flick coasts after release and reduced motion stops at release`, async ({ page }) => {
+    const { flick } = await setupFlick(page, renderer);
+    const native = await flick('no-preference', 'system', 30);
+    expect(native.coastPx).toBeGreaterThan(1);
+    expect(native.travelPx).toBeLessThan(limit);
+    expect((await flick('reduce', 'system', 30)).travelPx).toBeLessThan(1);
+  });
+
+  test(`${renderer}: Smooth scales with release speed under reduced motion`, async ({ page }) => {
+    const { flick } = await setupFlick(page, renderer);
+    const fast = await flick('reduce', 'smooth', 30);
+    expect(fast.coastPx).toBeGreaterThan(1);
+    expect(fast.travelPx).toBeLessThan(limit);
+    expect((await flick('reduce', 'smooth', 6)).travelPx).toBeLessThan(fast.travelPx * .5);
+  });
+
+  test(`${renderer}: holding the flick stops at release and Smooth survives reload`, async ({ page }) => {
+    const { flick, motion, revealMotion } = await setupFlick(page, renderer);
+    expect((await flick('reduce', 'smooth', 30, true)).travelPx).toBeLessThan(1);
+    await page.reload();
     await page.waitForFunction(() => window.__bangkokRenderer?.ready());
     await revealMotion();
-    await motion.selectOption(choice);
-    if (await tools.isVisible() && await tools.getAttribute('aria-expanded') === 'true') await tools.press('Escape');
-    await page.evaluate(c => window.__bangkokRenderer!.setCamera(c), camera);
-    await page.waitForFunction(() => window.__bangkokRenderer!.ready());
-    const surface = renderer === 'maplibre' ? page.getByTestId('maplibre-map') : page.locator('.leaflet-container');
-    const box = (await surface.boundingBox())!;
-    const x = box.x + box.width * .25, y = box.y + box.height * .56;
-    await page.mouse.move(x, y); await page.mouse.down();
-    const reading = page.evaluate(c => new Promise<{ travelPx: number; forwardPx: number; lastMotionMs: number }>(resolve => {
-      const project = () => window.__bangkokRenderer!.project(c.lng, c.lat);
-      window.addEventListener('mouseup', () => requestAnimationFrame(start => {
-        const origin = project();
-        let last = origin, travelPx = 0, lastMotionMs = 0;
-        const frame = (now: number) => {
-          const p = project();
-          travelPx = Math.max(travelPx, Math.hypot(p.x - origin.x, p.y - origin.y));
-          if (Math.hypot(p.x - last.x, p.y - last.y) > .05) lastMotionMs = now - start;
-          last = p;
-          if (now - start >= 700) resolve({ travelPx, forwardPx: p.x - origin.x, lastMotionMs }); else requestAnimationFrame(frame);
-        };
-        requestAnimationFrame(frame);
-      }), { once: true, capture: true });
-    }), camera);
-    for (let travel = pixelsPerMove; travel <= 150; travel += pixelsPerMove) {
-      await page.mouse.move(x + travel, y);
-      await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => resolve())));
-    }
-    if (held) await page.waitForTimeout(220); // intentional pause before releasing
-    await page.mouse.up();
-    readings.push({ preference, choice, held, pixelsPerMove, ...(await reading) });
-  }
-  await testInfo.attach('drag-release', { body: JSON.stringify(readings), contentType: 'application/json' });
-  expect(readings[0].forwardPx).toBeGreaterThan(1);
-  const limit = renderer === 'maplibre' ? 380 : 191;
-  expect(readings[0].travelPx).toBeLessThan(limit);
-  expect(readings[1].travelPx).toBeLessThan(1);
-  expect(readings[2].forwardPx).toBeGreaterThan(1);
-  expect(readings[2].travelPx).toBeLessThan(limit);
-  expect(readings[3].travelPx).toBeLessThan(1);
-  expect(readings[4].travelPx).toBeLessThan(readings[2].travelPx * .5);
-  await page.reload();
-  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
-  await revealMotion();
-  await expect(motion).toHaveValue('smooth');
-});
+    await expect(motion).toHaveValue('smooth');
+  });
+}
 
 test.describe('touch momentum', () => {
   test.use({ viewport: { width: 740, height: 650 }, hasTouch: true, isMobile: true });
   for (const [preference, choice] of [['reduce', 'smooth'], ['no-preference', 'system']] as const)
   test(`${choice}: touching again stops a tilted grid flick without picking a cell`, async ({ page, context }) => {
+    await installGestureClock(page);
     await page.emulateMedia({ reducedMotion: preference });
     await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
     await page.waitForFunction(() => window.__bangkokRenderer?.ready());
@@ -120,24 +133,12 @@ test.describe('touch momentum', () => {
     const box = (await page.getByTestId('maplibre-map').boundingBox())!;
     const x = Math.round(box.x + box.width * .25), y = Math.round(box.y + box.height * .56);
     const client = await context.newCDPSession(page);
-    const touch = (type: 'touchStart' | 'touchMove' | 'touchEnd', dx = 0) => client.send('Input.dispatchTouchEvent', {
-      type, touchPoints: type === 'touchEnd' ? [] : [{ x: x + dx, y, id: 1 }],
-    });
     const anchor = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat), before.camera);
-    await touch('touchStart');
-    for (const dx of [30, 60, 90, 120, 150]) {
-      await touch('touchMove', dx);
-      await page.evaluate(() => new Promise<void>(r => requestAnimationFrame(() => r())));
-    }
-    await touch('touchEnd');
-    const release = await anchor();
-    await page.waitForFunction(({ release, c }) => window.__bangkokRenderer!.project(c.lng, c.lat).x > release.x + 5,
-      { release, c: before.camera }, { timeout: 2000, polling: 'raf' });
-    await touch('touchStart', 150);
+    await flickAndCatch(page, client, { x, y, threshold: 5, landmark: before.camera });
     const caught = await anchor();
     await page.waitForTimeout(200); // keep the finger still while the original glide would be moving
     expect(Math.abs((await anchor()).x - caught.x)).toBeLessThan(1);
-    await touch('touchEnd');
+    await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     await page.waitForTimeout(350); // allow a synthetic tap and deferred URL write to surface
     expect(new URL(page.url()).searchParams.get('s')).toBeNull();
     expect(new URL(page.url()).searchParams.get('adult')).toBe('1');
@@ -158,6 +159,15 @@ test('MapLibre draws buildings and grid while preserving filters and copied stat
   const stats = await page.evaluate(() => window.__bangkokRenderer!.stats());
   expect(stats.buildingFeatures).toBeGreaterThan(0);
   expect(stats.gridUploads).toBeGreaterThan(0);
+  if (labUsesSwiftShader) {
+    const renderer = await page.locator('.maplibregl-canvas').evaluate(canvas => {
+      const gl = (canvas as HTMLCanvasElement).getContext('webgl2');
+      const info = gl?.getExtension('WEBGL_debug_renderer_info');
+      return info && gl?.getParameter(info.UNMASKED_RENDERER_WEBGL);
+    });
+    expect(renderer, 'the actual 3D map canvas must use the CI software renderer').toMatch(/SwiftShader/i);
+    await test.info().attach('webgl-renderer', { body: renderer, contentType: 'text/plain' });
+  }
   await page.addScriptTag({ path: resolve('app/node_modules/axe-core/axe.min.js') });
   const violations = await page.evaluate(async () => {
     const axe = (window as unknown as { axe: { run: (context: object, options: object) => Promise<{ violations: { id: string }[] }> } }).axe;
@@ -230,7 +240,7 @@ test('grid picking agrees with geographic cells at multiple pitches and survives
       const renderer = window.__bangkokRenderer!;
       const camera = renderer.getCamera();
       return renderer.ready() && Math.abs(camera.lng - lng) < 1e-6 && Math.abs(camera.lat - lat) < 1e-6 &&
-        Math.abs(camera.zoom - 18) < 1e-6 && Math.abs(camera.pitch - pitch) < 1e-6;
+        Math.abs(camera.zoom - 18) < 1e-6 && camera.pitch !== undefined && Math.abs(camera.pitch - pitch) < 1e-6;
     }, { lng, lat, pitch });
     const point = await page.evaluate(([lng, lat]) => window.__bangkokRenderer!.project(lng, lat), [lng, lat]);
     const box = await page.getByTestId('maplibre-map').boundingBox();

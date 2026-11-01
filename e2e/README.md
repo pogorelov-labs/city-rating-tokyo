@@ -120,8 +120,10 @@ E2E_PORT=3171 npm run test:e2e:lab -- --workers=1 --retries=0
 
 The lab configuration discovers `bangkok-prototype.spec.ts` and
 `bangkok-*.lab.spec.ts`; the production configuration excludes both. The new
-gesture cases run in the same CI lab step as the original suite. The
-[motion quality gates](../docs/BANGKOK_MAP_MOTION.md) explain what each case
+gesture cases run in the same CI lab step as the original suite. To reproduce
+the Linux CI software renderer on a local machine, prefix the command above
+with `E2E_SWIFTSHADER=1`. The map canvas must report SwiftShader in this mode.
+The [motion quality gates](../docs/BANGKOK_MAP_MOTION.md) explain what each case
 proves and which smoothness claims require physical-device evidence.
 
 The lab's diagnostics are intentionally unavailable on production routes.
