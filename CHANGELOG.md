@@ -45,6 +45,24 @@ mobile-device performance varies. No map API key is required.
 
 [Release notes](docs/releases/v0.3.0.md) · [Map architecture](docs/BANGKOK_MAP.md)
 
+## v0.2.1 — 2026-11-01
+
+- Custom score weights now survive full navigation and opening the other city
+  in a new tab. City-specific filters and selections stay separate.
+- Tokyo seismic labels and legends use the source probability bands consistently
+  in English, Japanese and Russian: below 3%, 3% to under 6%, 6% to under 26%,
+  and 26% or higher. Percentages retain enough precision to avoid rounding
+  stored values across a band boundary, and labels are easier to read.
+- The seismic filter caption now includes its existing 26% boundary.
+
+Development tooling has a narrowly scoped, temporary
+[dependency audit exception](docs/DEPENDENCY_AUDIT.md) for a legacy lint dependency.
+
+This patch corrects presentation and navigation in v0.2.0. Source probabilities,
+datasets, filter behavior and ranking formulas are unchanged.
+
+[Release notes](docs/releases/v0.2.1.md)
+
 ## v0.2.0 — 2026-10-31
 
 Station and district guides redesigned for all 1,676 areas in English,

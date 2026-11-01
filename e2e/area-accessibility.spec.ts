@@ -23,6 +23,8 @@ for (const { path, messages, width, height } of cases) {
     const table = page.getByRole('table', { name: messages.areaGuide.comparison.caption });
     await table.getByRole('button', { name: messages.areaGuide.categories.transport }).click();
     await page.locator('#data-details summary').filter({ hasText: messages.areaGuide.rent.sources }).click();
+    const environment = page.locator('summary').filter({ hasText: messages.areaGuide.extras.environment });
+    if (await environment.count()) await environment.click();
     await page.getByRole('heading', { name: messages.areaGuide.map.title }).scrollIntoViewIfNeeded();
     await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
 

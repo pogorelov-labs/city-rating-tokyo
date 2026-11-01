@@ -9,7 +9,7 @@
   **v0.1.2** packages compatible map/scoring fixes and Bangkok MCP district tools;
   its release PR bumps the same two files from `0.1.1` to `0.1.2`.
   **v0.3.0** introduces the Bangkok 3D map and bumps the app package and
-  lockfile together from `0.2.0` to `0.3.0`.
+  lockfile together from `0.2.1` to `0.3.0`.
   During 0.x, use a minor version for incompatible behavior or substantial
   features and a patch for compatible fixes. After 1.0, incompatible changes
   require a major version. Make any future package-version changes explicit.
@@ -18,6 +18,7 @@
 - All five jobs in [CI](../.github/workflows/ci.yml) must pass on the PR and
   again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`, `e2e`**.
   `build` covers lint, UI tests, TypeScript, the Next build, dependency audit
+  including development dependencies under the [full audit policy](DEPENDENCY_AUDIT.md)
   and production Docker build;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
   and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
@@ -51,7 +52,7 @@ For a code release, review every changed source and test path and exclude
 unrelated local work and generated-data drift.
 
 Before requesting release review, run the app lint, tests, TypeScript, build
-and dependency audit; schema codegen/parity and pipeline tests; MCP checks;
+and dependency audit (`npm run audit:ci` in `app/`); schema codegen/parity and pipeline tests; MCP checks;
 and the Bangkok tests. Run the browser suite against the production build
 using `PLAYWRIGHT_BASE_URL` (see [the browser test guide](../e2e/README.md)).
 Check the standalone container as well. These local checks prepare the change

@@ -4,16 +4,17 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { CITIES, CITY_IDS } from '@/lib/cities';
 import { useCityId } from '@/lib/city-context';
+import { useAppStore } from '@/lib/store';
+import { withGuideWeights } from '@/lib/area-guide';
 
 /**
- * Tokyo ⇄ Bangkok segmented control. Plain locale-aware links (not state):
- * each city is its own route (`/`, `/bangkok`), so the choice is shareable,
- * indexable and survives reloads. Weights live in the shared store and carry
- * over; each city keeps its own filters and selection (see lib/store.ts).
+ * Locale-aware links carry shared weights across full navigations and new
+ * tabs. City-specific filters and selection stay in their own store slices.
  */
 export default function CitySwitcher() {
   const t = useTranslations('city');
   const current = useCityId();
+  const weights = useAppStore(state => state.weights);
 
   return (
     <nav
@@ -25,7 +26,7 @@ export default function CitySwitcher() {
         return (
           <Link
             key={id}
-            href={CITIES[id].homePath}
+            href={withGuideWeights(CITIES[id].homePath, weights)}
             aria-current={active ? 'page' : undefined}
             data-umami-event="switch-city"
             data-umami-event-city={id}

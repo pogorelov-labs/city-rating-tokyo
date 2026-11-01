@@ -15,7 +15,8 @@
     "lint": "eslint",
     "test": "npm run test:toolchain && vitest run",
     "test:watch": "vitest",
-    "test:toolchain": "node --test tooling/tests/*.test.mjs"
+    "test:toolchain": "node --test tooling/tests/*.test.mjs",
+    "audit:ci": "node --test scripts/audit-dependencies.test.mjs && node scripts/audit-dependencies.mjs"
   },
   "dependencies": {
     "@swc/helpers": "^0.5.21",

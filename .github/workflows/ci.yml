@@ -34,7 +34,8 @@ jobs:
         env:
           BANGKOK_RENDERER_LAB: "0"
           BANGKOK_MAP_RENDERER: maplibre
-      - run: npm audit --audit-level=moderate
+      # Full npm audit including dev dependencies, with no advisory exceptions.
+      - run: npm run audit:ci
       # Production uses this Dockerfile with app/ as its build context. The
       # container must type-check and build without files from the checkout's
       # parent directories, as it does during deployment.
