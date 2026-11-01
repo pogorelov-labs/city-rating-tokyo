@@ -129,6 +129,8 @@ proves and which smoothness claims require physical-device evidence.
 The lab's diagnostics are intentionally unavailable on production routes.
 Playwright's generated reports and failure artifacts belong in ignored paths.
 
-CI also starts a separate opt-in lab server after the normal release suite. This
+Once the release build succeeds, CI starts a separate opt-in lab server even
+if a public-route test fails. Both suites must pass; a failed run retains both
+sets of browser evidence under `test-results/`. This
 checks graphics-context replay and that diagnostic state is removed when leaving
 the lab; those routes remain disabled in the release artifact.

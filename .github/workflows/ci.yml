@@ -148,6 +148,7 @@ jobs:
       - run: npm ci --prefix app
       - run: npx playwright install --with-deps chromium
       - name: Build the release app
+        id: release_build
         working-directory: ./app
         env:
           BANGKOK_RENDERER_LAB: "0"
@@ -170,10 +171,13 @@ jobs:
           curl --fail --silent --show-error --location --max-redirs 2 http://127.0.0.1:3000/bangkok > /dev/null
           npm run test:e2e -- --workers=1 --retries=0 --reporter=line
       - name: Verify the opt-in renderer lab
+        # A public-route regression must not hide the independent lab results.
+        # Both steps still fail this job; keep their failure evidence separate.
+        if: ${{ !cancelled() && steps.release_build.outcome == 'success' }}
         env:
           E2E_PORT: "3001"
           PLAYWRIGHT_JSON_OUTPUT_FILE: test-results/renderer-lab.json
-        run: npm run test:e2e:lab -- --retries=0 --reporter=line,json
+        run: npm run test:e2e:lab -- --retries=0 --reporter=line,json --output=test-results/renderer-lab
       - name: Preserve browser failure evidence
         if: failure()
         uses: actions/upload-artifact@v4

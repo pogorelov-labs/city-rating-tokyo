@@ -14,7 +14,12 @@ for (const [locale, prefix, messages] of locales) {
     await expect(renderer).toHaveValue('maplibre');
     await expect(page.getByTestId('maplibre-map')).toBeVisible();
     await expect(page.getByRole('region', { name: messages.map.selectedArea })).toBeVisible({ timeout: 30_000 });
+    // Deep-linked districts are fitted flat after the map initializes.
+    const tilt = page.getByRole('button', { name: messages.map.view3d });
+    await expect(tilt).toBeEnabled({ timeout: 30_000 });
+    await tilt.click();
     await expect(page.getByRole('button', { name: messages.map.view2d })).toBeVisible();
+    await expect(page.getByRole('region', { name: messages.map.selectedArea })).toBeVisible();
     expect(await page.evaluate(() => ['__bangkokRenderer', '__bangkokProfile', '__bangkokGridPaint'].map((key) => key in window))).toEqual([false, false, false]);
     await renderer.selectOption('leaflet');
     await expect(page.locator('.leaflet-container')).toBeVisible();
@@ -93,12 +98,20 @@ test('wheel and keyboard controls retain selected area', async ({ page }) => {
   const map = page.getByTestId('maplibre-map');
   await expect(page.getByRole('region', { name: 'Selected area' })).toBeVisible({ timeout: 30_000 });
   await expect(page.getByText(en.loading.map, { exact: true })).toBeHidden({ timeout: 30_000 });
-  await expect(page.getByRole('button', { name: '2D view' })).toBeEnabled({ timeout: 30_000 });
+  // Wait for the selected district's initial flat bounds fit, then establish
+  // the tilted state through the public control before testing the keyboard.
+  const tilt = page.getByRole('button', { name: '3D view' });
+  await expect(tilt).toBeEnabled({ timeout: 30_000 });
+  await tilt.click();
+  await expect(page.getByRole('button', { name: '2D view' })).toBeEnabled();
   await page.getByRole('button', { name: '2D view' }).focus();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('button', { name: '3D view' })).toBeVisible();
   await map.hover();
   await page.mouse.wheel(0, -400);
+  await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+  expect(new URL(page.url()).searchParams.get('s')).toBe('pathum-wan');
+  await expect(page.getByRole('region', { name: 'Selected area' })).toBeVisible();
   await page.keyboard.press('Escape');
   await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeNull();
 });
