@@ -5,7 +5,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
-**Latest release:** [v0.2.0 — Station and district guides](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Release notes](docs/releases/v0.2.0.md) · [Changelog](CHANGELOG.md)
+**Latest release:** [v0.2.1 — City preferences and seismic labels](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Release notes](docs/releases/v0.2.1.md) · [Changelog](CHANGELOG.md)
 
 **Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 

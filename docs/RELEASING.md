@@ -16,6 +16,7 @@
 - All five jobs in [CI](../.github/workflows/ci.yml) must pass on the PR and
   again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`, `e2e`**.
   `build` covers lint, UI tests, TypeScript, the Next build, dependency audit
+  under the [documented exception policy](DEPENDENCY_AUDIT.md)
   and production Docker build;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
   and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
@@ -48,7 +49,7 @@ For a code release, review every changed source and test path and exclude
 unrelated local work and generated-data drift.
 
 Before requesting release review, run the app lint, tests, TypeScript, build
-and dependency audit; schema codegen/parity and pipeline tests; MCP checks;
+and dependency audit (`npm run audit:ci` in `app/`); schema codegen/parity and pipeline tests; MCP checks;
 and the Bangkok tests. Run the browser suite against the production build
 using `PLAYWRIGHT_BASE_URL` (see [the browser test guide](../e2e/README.md)).
 Check the standalone container as well. These local checks prepare the change
@@ -175,7 +176,7 @@ commit SHA**. Record both and ensure the latter equals `release_sha`.
 
 Production deployment is automated from `main`; publishing a tag does not
 initiate a manual deployment. The app uses build-time static city pages/JSON.
-v0.2.0 needs **no database migration**. Check production deployment status/logs
+v0.2.1 needs **no database migration**. Check production deployment status/logs
 and the deployed commit through private maintainer tooling when access is
 available; never infer deployment completion from CI or HTTP 200 alone. Do not
 deploy manually for this release. Smoke-check Tokyo, Bangkok and locale

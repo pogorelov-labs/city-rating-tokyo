@@ -170,7 +170,7 @@
     "hideFloodRisk": "Скрыть зоны затопления",
     "belowXm": "(ниже 5 м)",
     "hideHighSeismic": "Скрыть высокий сейсм. риск",
-    "seismicThreshold": "(>26% интенсивность 6+)",
+    "seismicThreshold": "(≥26% интенсивность 6+)",
     "hasLiveCamera": "Есть камера рядом",
     "stationCount": "{count, plural, one {# станция} few {# станции} many {# станций} other {# станций}}",
     "matchCount": "<bold>{filtered}</bold> из {total} подходят",
@@ -409,15 +409,15 @@
     },
     "moderate": {
       "label": "Средний",
-      "description": "3–15%"
+      "description": "От 3% до менее 6%"
     },
     "high": {
       "label": "Высокий",
-      "description": "15–30%"
+      "description": "От 6% до менее 26%"
     },
     "very_high": {
       "label": "Очень высокий",
-      "description": "Более 30%"
+      "description": "26% и более"
     },
     "unknown": {
       "label": "Неизвестно",

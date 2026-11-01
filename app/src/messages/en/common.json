@@ -170,7 +170,7 @@
     "hideFloodRisk": "Hide flood-risk areas",
     "belowXm": "(below 5m)",
     "hideHighSeismic": "Hide high seismic risk",
-    "seismicThreshold": "(>26% intensity 6+)",
+    "seismicThreshold": "(≥26% intensity 6+)",
     "hasLiveCamera": "Has live camera nearby",
     "stationCount": "{count} stations",
     "matchCount": "<bold>{filtered}</bold> of {total} stations match",
@@ -409,15 +409,15 @@
     },
     "moderate": {
       "label": "Moderate",
-      "description": "3–15% probability"
+      "description": "3% to under 6% probability"
     },
     "high": {
       "label": "High",
-      "description": "15–30% probability"
+      "description": "6% to under 26% probability"
     },
     "very_high": {
       "label": "Very High",
-      "description": "Above 30% probability"
+      "description": "26% probability or higher"
     },
     "unknown": {
       "label": "Unknown",
