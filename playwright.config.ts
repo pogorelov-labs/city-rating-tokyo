@@ -22,7 +22,7 @@ const baseURL = externalBaseURL || `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: './e2e',
-  testIgnore: '**/bangkok-prototype.spec.ts',
+  testIgnore: ['**/bangkok-prototype.spec.ts', '**/bangkok-*.lab.spec.ts'],
   fullyParallel: true,
   forbidOnly: isCI,
   retries: 0,

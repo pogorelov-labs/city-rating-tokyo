@@ -34,3 +34,11 @@
     margin-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
+@container (min-width: 640px) and (max-height: 487px) {
+  /* On a shallow, wide map the vertical zoom pair crosses the renderer and
+     motion selectors. Use the bottom row and leave room for attribution. */
+  .map-workspace[data-city="bangkok"] .leaflet-touch-zoom {
+    flex-direction: row;
+    margin-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}

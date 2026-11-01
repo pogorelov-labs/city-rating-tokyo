@@ -22,8 +22,10 @@ Invalid selections or comparisons are removed individually.
 Dragging tracks the pointer in both Bangkok renderers. A quick flick carries
 farther than a slow drag of the same distance; holding still before release
 stops the map. The 3D view uses constant deceleration, capped at about 460 ms
-and 378 CSS pixels. Touching a gliding 3D map catches it without opening a
-card; the next tap selects normally. The standard map uses Leaflet's own
+and 378 CSS pixels. Catching a moving map stops it without opening a card.
+A quick second tap at the same point can select the area. A parallel two-finger
+pan can coast; a pinch, rotation or continuing with just one finger must not
+throw the previous two-finger gesture. The standard map uses Leaflet's own
 quadratic glide. Pinch and wheel input stay native.
 
 **Map motion** follows the device by default. **Smooth** explicitly enables
@@ -35,11 +37,16 @@ device that opts in, native drag still handles direct input; on release we give
 MapLibre a single bounded pan animation. No library-global override, second
 animation loop, map reload, rescoring or grid texture upload is needed.
 
-The 3D map's zoom buttons combine repeated presses into one interruptible
-animation: three presses request three levels. Switching perspective preserves
+Animated zoom buttons retain the requested level across repeated presses in
+both renderers. Switching perspective preserves
 the heading; the compass resets north, and **Center on Asok** restores the
 initial street view. Narrow workspaces fold the extra view controls into one
-button. Arrow keys move between districts, stations and grid in the level switch.
+button. Shallow workspaces fold the panel even on desktop; opening the air
+panel must not put camera controls outside the map. Arrow keys move between
+districts, stations and grid in the level switch.
+
+See [Bangkok motion: experience, rules and quality gates](BANGKOK_MAP_MOTION.md)
+for the failure cases, signed release tests, hardware checks and local commands.
 
 On phones the filter sheet follows a drag on its header; a flick or a longer
 pull dismisses it. The content scrolls normally. Close, Escape, the backdrop

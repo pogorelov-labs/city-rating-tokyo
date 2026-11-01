@@ -1,12 +1,13 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { observeMapContainer } from '@/lib/map-resize';
-import { bangkokCameraReduced, prefersReducedMotion, smoothOverride } from '@/lib/map-motion';
+import { bangkokCameraReduced, prefersReducedMotion, subscribeBangkokMotion } from '@/lib/map-motion';
 import { useCityId } from '@/lib/city-context';
+import { installSmoothZoom } from './bangkok/leaflet-controls';
 
 // Map building blocks shared by the Tokyo station map (Map.tsx) and the
 // Bangkok district map (DistrictMap.tsx). Kept in their own module so the
@@ -24,13 +25,21 @@ export function MapZoomControls() {
   const t = useTranslations('map');
   const map = useMap();
   const bangkok = useCityId() === 'bangkok';
+  const zoom = useRef<ReturnType<typeof installSmoothZoom> | null>(null);
+  useEffect(() => {
+    if (!bangkok) return;
+    const controller = installSmoothZoom(map);
+    zoom.current = controller;
+    const unsubscribe = subscribeBangkokMotion(controller.clear);
+    return () => { unsubscribe(); controller.dispose(); zoom.current = null; };
+  }, [bangkok, map]);
   const step = (delta: 1 | -1) => {
-    // Leaflet decides whether CSS zoom is available at construction. An
-    // explicitly requested smooth step also works on an already-open map.
-    if (bangkok && smoothOverride()) {
-      const zoom = Math.min(map.getMaxZoom(), Math.max(map.getMinZoom(), map.getZoom() + delta));
-      map.flyTo(map.getCenter(), zoom, { animate: true, duration: .22 });
+    // Keep the requested destination across rapid animated steps, including
+    // when the device motion preference changes after map construction.
+    if (bangkok && !bangkokCameraReduced()) {
+      zoom.current?.step(delta);
     } else {
+      zoom.current?.clear();
       const options = { animate: !(bangkok ? bangkokCameraReduced() : prefersReducedMotion()) };
       if (delta === 1) map.zoomIn(undefined, options); else map.zoomOut(undefined, options);
     }

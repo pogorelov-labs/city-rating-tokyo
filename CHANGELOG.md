@@ -12,11 +12,13 @@ evidence in research notes or the PR body and link it.
 
 ## Unreleased
 
-- Bangkok's 3D map counts every zoom-button press, even during animation.
-  Switching between flat and tilted views keeps your heading. Faster flicks
-  glide farther, and a touch can catch the 3D map without selecting a cell.
+- Both Bangkok maps count rapid zoom-button presses and stop under a new
+  contact without selecting an area. The 3D map follows the final direction
+  of a flick, including a parallel two-finger pan. Tap again at the same spot
+  to select it. Switching between flat and tilted views keeps your heading.
   Map motion follows your device unless you choose **Smooth** just for Bangkok.
-- Camera tools fold into one button on narrow maps. On phones you can pull
+- Camera tools fold into one button on narrow or shallow maps, including
+  when the air panel is open on a desktop. On phones you can pull
   down the filter sheet, close it with Escape, or choose a ranking result to
   return to the map. Rent and commute sliders announce their minimum and maximum.
 

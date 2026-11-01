@@ -59,6 +59,7 @@ import StationAreaLayer, { type AreaShape } from './bangkok/StationAreaLayer';
 import { CellDetails, DistrictPopupBody, StationAreaPopupBody } from './bangkok/popups';
 import LeafletBridge from './bangkok/prototype/LeafletBridge';
 import DistrictViewportPopup from './bangkok/DistrictViewportPopup';
+import { installCoastBrake } from './bangkok/leaflet-controls';
 
 type LatLng = [number, number];
 interface DistrictShape {
@@ -92,7 +93,9 @@ function PanMotionPreference() {
       if (reduced) map.stop();
     };
     sync();
-    return subscribeBangkokMotion(sync);
+    const removeBrake = installCoastBrake(map);
+    const unsubscribe = subscribeBangkokMotion(sync);
+    return () => { removeBrake(); unsubscribe(); };
   }, [map]);
   return null;
 }

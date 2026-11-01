@@ -33,6 +33,7 @@ import { frameDistrict } from './district-camera';
 import { navigationControl } from './navigation-control';
 import { cameraMotion, PAN_INERTIA } from '@/lib/map-motion';
 import { bindBangkokPan } from './opt-in-pan';
+import { bindBrakeTap } from './brake-tap';
 import CameraMotionChoice from '../CameraMotionChoice';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
 import rail from '@/data/bangkok/rail.json';
@@ -144,7 +145,8 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     const detachProfile = prototype ? attachMapProfile(map) : () => {};
     let disposed = false, loaded = false, failed = false, frame = 0, renders = 0, errors = 0, idleEvents = 0;
     let clickTimer: ReturnType<typeof setTimeout> | undefined;
-    const pan = bindBangkokPan(map);
+    const brakeTap = bindBrakeTap(map);
+    const pan = bindBangkokPan(map, brakeTap.catchTouch);
     const fail = (reason: 'load' | 'context') => { if (disposed || failed) return; failed = true; setFatal(reason); setReady(false); unavailableRef.current?.(reason); };
     let loadTimeout = window.setTimeout(() => { if (!loaded) fail('load'); }, 20000);
     const contextTimeout = new ContextRecoveryTimer(() => fail('context'));
@@ -291,7 +293,8 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
       return null;
     };
     map.on('click', (e) => {
-      if (pan.consumeBrakeTap() || e.originalEvent.detail > 1) return;
+      if (pan.consumeBrakeTap()) { brakeTap.caughtClick(); return; }
+      if (!brakeTap.allowClick(e.originalEvent) && e.originalEvent.detail > 1) return;
       const key = keyAt(e.point, e.lngLat.lng, e.lngLat.lat);
       if (key === undefined) return;
       clearHover();
@@ -330,15 +333,17 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
     window.addEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus);
     const resize = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
-      const compact = width < 768 && height < 360;
-      const next = compact ? 'short' : width < 640 ? 'narrow' : 'full';
+      // The open stack needs ~200 px between the 112 px top toolbar and
+      // the 176 px navigation reserve. The air panel can remove that room
+      // even on a wide desktop; use the workspace, not the screen size.
+      const next = height < 360 ? 'short' : width < 640 || height < 488 ? 'narrow' : 'full';
       setLayout(next);
       if (next === 'full') setControlsOpen(false);
       map.resize();
       clearDistrictPadding(map);
     }); resize.observe(host.current);
     return () => { disposed = true; uiReadyRef.current = false; clearTimeout(clickTimer); window.clearTimeout(loadTimeout); contextTimeout.clear(); if (pendingStyle) map.off('style.load', pendingStyle); cancelAnimationFrame(frame); resize.disconnect(); tooltip.remove(); window.removeEventListener('keydown', escape); window.removeEventListener(DISTRICT_FOCUS_INTENT, repeatDistrictFocus); map.getCanvas().removeEventListener('mouseleave', leave);
-      pan.remove();
+      pan.remove(); brakeTap.remove();
       if (window.__bangkokRenderer === bridge) { delete window.__bangkokRenderer; delete window.__bangkokGridPaint; }
       detachProfile(); releaseLab(); map.remove(); cache.clear(); focusKeys.current.clear(); hoverOnMap.current = () => {}; clearHoverOnMap.current = () => {}; syncFocusVisibility.current = () => {}; mapRef.current = null; attributionRef.current = null; textureRef.current = null;
       lastDistrict.current = null; districtPaddingActive.current = false; mapSelection.current = undefined; setReady(false);
@@ -360,9 +365,12 @@ export default function MapLibreMap({ stations, thumbnails = {}, snippets = {}, 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready, recovery, areas.scored, primary.scored, areaPassing, primaryPassing, areas.anchors, primary.anchors, dim, level, featureState]);
   useEffect(() => {
-    const map = mapRef.current, attribution = attributionRef.current;
-    if (!ready || !map || !attribution) return;
-    map.removeControl(attribution);
+    const map = mapRef.current, previous = attributionRef.current;
+    if (!ready || !map || !previous) return;
+    map.removeControl(previous);
+    const compact = compactControls || map.getContainer().clientWidth < 768;
+    const attribution = previous.options.compact === compact ? previous : new maplibregl.AttributionControl({ compact });
+    attributionRef.current = attribution;
     map.addControl(attribution, compactControls ? 'top-right' : 'bottom-right');
     const element = map.getContainer().querySelector<HTMLElement>('.maplibregl-ctrl-attrib');
     if (compactControls && element) return collapseInitialAttribution(element);

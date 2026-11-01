@@ -3,11 +3,13 @@ const ciLinux = !!process.env.CI && process.platform === 'linux';
 const port = process.env.E2E_PORT || '3170';
 const baseURL = process.env.E2E_BASE_URL || `http://localhost:${port}`;
 export default defineConfig({
-  testDir: './e2e', testMatch: 'bangkok-prototype.spec.ts', workers: 1, retries: 0,
+  testDir: './e2e', testMatch: ['**/bangkok-prototype.spec.ts', '**/bangkok-*.lab.spec.ts'], workers: 1, retries: 0,
   timeout: 60_000, reporter: 'list',
   use: {
     baseURL, ...devices['Desktop Chrome'], screenshot: 'only-on-failure',
-    channel: ciLinux ? 'chromium' : undefined,
+    // Use the same full browser for input/animation tests locally and in CI.
+    // Headless-shell frame throttling can turn a flick into a held release.
+    channel: 'chromium',
     launchOptions: ciLinux
       ? { args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } : undefined,
   },

@@ -44,6 +44,11 @@ for (const renderer of ['maplibre', 'leaflet'] as const) test(`${renderer}: a fl
   await page.setViewportSize({ width: 740, height: 600 });
   await page.goto(`/bangkok/prototype/${renderer}`);
   const camera = { lat: 13.7374, lng: 100.5606, zoom: 16, pitch: 50, bearing: -20 };
+  const motion = page.getByRole('combobox', { name: 'Map motion' });
+  const tools = page.getByRole('button', { name: '3D map controls' });
+  const revealMotion = async () => {
+    if (renderer === 'maplibre' && !await motion.isVisible()) await tools.click();
+  };
   const readings = [];
   for (const [preference, choice, held, pixelsPerMove] of [
     ['no-preference', 'system', false, 30], ['reduce', 'system', false, 30],
@@ -52,7 +57,9 @@ for (const renderer of ['maplibre', 'leaflet'] as const) test(`${renderer}: a fl
   ] as const) {
     await page.emulateMedia({ reducedMotion: preference });
     await page.waitForFunction(() => window.__bangkokRenderer?.ready());
-    await page.getByRole('combobox', { name: 'Map motion' }).selectOption(choice);
+    await revealMotion();
+    await motion.selectOption(choice);
+    if (await tools.isVisible() && await tools.getAttribute('aria-expanded') === 'true') await tools.press('Escape');
     await page.evaluate(c => window.__bangkokRenderer!.setCamera(c), camera);
     await page.waitForFunction(() => window.__bangkokRenderer!.ready());
     const surface = renderer === 'maplibre' ? page.getByTestId('maplibre-map') : page.locator('.leaflet-container');
@@ -92,7 +99,9 @@ for (const renderer of ['maplibre', 'leaflet'] as const) test(`${renderer}: a fl
   expect(readings[3].travelPx).toBeLessThan(1);
   expect(readings[4].travelPx).toBeLessThan(readings[2].travelPx * .5);
   await page.reload();
-  await expect(page.getByRole('combobox', { name: 'Map motion' })).toHaveValue('smooth');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await revealMotion();
+  await expect(motion).toHaveValue('smooth');
 });
 
 test.describe('touch momentum', () => {
