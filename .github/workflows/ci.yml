@@ -131,8 +131,8 @@ jobs:
           pip install pytest requests "numpy>=2" "shapely>=2.1" "rasterio>=1.4,<2" "duckdb>=1.1" --quiet
           pytest scripts/bangkok -v
 
-  e2e:
-    # Run without retries so a flaky interaction fails the check visibly.
+  e2e-production:
+    # Independent runner for the standalone production release suite.
     timeout-minutes: 20
     runs-on: ubuntu-latest
     steps:
@@ -169,17 +169,61 @@ jobs:
           done
           curl --fail --silent --show-error --location --max-redirs 2 http://127.0.0.1:3000/bangkok > /dev/null
           npm run test:e2e -- --workers=1 --retries=0 --reporter=line
-      - name: Verify the opt-in renderer lab
-        env:
-          E2E_PORT: "3001"
-        run: npm run test:e2e:lab -- --retries=0 --reporter=line
-      - name: Preserve browser failure evidence
+      - name: Preserve production browser failure evidence
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: browser-failure-evidence
+          name: production-browser-evidence
           path: |
             test-results/
             ${{ runner.temp }}/city-rating-server.log
           retention-days: 7
           if-no-files-found: ignore
+
+  e2e-lab:
+    # Separate Ubuntu runner avoids sharing GPU/CPU with production tests.
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            app/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix app
+      - run: npx playwright install --with-deps chromium
+      - name: Verify the opt-in renderer lab
+        # Lab config enforces software flags and the map-canvas test asserts
+        # the unmasked WebGL renderer reports SwiftShader.
+        env:
+          E2E_PORT: "3001"
+          E2E_SWIFTSHADER: "1"
+          PLAYWRIGHT_JSON_OUTPUT_FILE: test-results/renderer-lab.json
+        run: npm run test:e2e:lab -- --workers=1 --retries=0 --reporter=line,json --output=test-results/renderer-lab
+      - name: Preserve lab browser evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab-browser-evidence
+          path: test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+
+  e2e:
+    # Keep the canonical required e2e gate and fail closed for every child
+    # outcome other than success, including cancellation and skipped jobs.
+    needs: [e2e-production, e2e-lab]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require both browser suites
+        env:
+          PRODUCTION_RESULT: ${{ needs.e2e-production.result }}
+          LAB_RESULT: ${{ needs.e2e-lab.result }}
+        run: |
+          printf 'Production: %s\nLab: %s\n' "$PRODUCTION_RESULT" "$LAB_RESULT"
+          test "$PRODUCTION_RESULT" = success && test "$LAB_RESULT" = success

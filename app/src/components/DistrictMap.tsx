@@ -46,8 +46,9 @@ import {
 } from '@/lib/bangkok-grid';
 import { stationPrimaryName } from '@/lib/station-name';
 import { DISTRICT_FOCUS_INTENT } from '@/lib/map-navigation-intent';
+import { LEAFLET_PAN, bangkokCameraReduced, prefersReducedMotion, subscribeBangkokMotion } from '@/lib/map-motion';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { MapContainerResize, TouchZoomControls } from './map-shared';
+import { MapContainerResize, MapZoomControls } from './map-shared';
 import { MapDeselect, MapSelectionBounds } from './map-selection';
 import { BASEMAP } from '@/lib/basemap';
 import GridLayer from './bangkok/GridLayer';
@@ -58,6 +59,7 @@ import StationAreaLayer, { type AreaShape } from './bangkok/StationAreaLayer';
 import { CellDetails, DistrictPopupBody, StationAreaPopupBody } from './bangkok/popups';
 import LeafletBridge from './bangkok/prototype/LeafletBridge';
 import DistrictViewportPopup from './bangkok/DistrictViewportPopup';
+import { installCoastBrake, stopBangkokLeaflet } from './bangkok/leaflet-controls';
 
 type LatLng = [number, number];
 interface DistrictShape {
@@ -80,6 +82,22 @@ interface MapViewProps {
   thumbnails?: Record<string, { thumb: string; lqip: string }>;
   snippets?: Record<string, string>;
   prototype?: boolean;
+}
+
+function PanMotionPreference() {
+  const map = useMap();
+  useEffect(() => {
+    const sync = () => {
+      const reduced = bangkokCameraReduced();
+      L.Util.setOptions(map, { inertia: !reduced });
+      if (reduced) stopBangkokLeaflet(map);
+    };
+    sync();
+    const removeBrake = installCoastBrake(map);
+    const unsubscribe = subscribeBangkokMotion(sync);
+    return () => { removeBrake(); unsubscribe(); };
+  }, [map]);
+  return null;
 }
 
 /** Phones: re-frame on the inner city once, before the first paint. */
@@ -314,6 +332,8 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         boundsOptions={{ padding: [12, 12] }}
         maxBounds={city.map.maxBounds}
         maxBoundsViscosity={0.8}
+        inertia={!bangkokCameraReduced()} {...LEAFLET_PAN}
+        zoomAnimation={!prefersReducedMotion()}
         minZoom={city.map.minZoom}
         className="h-full w-full"
         zoomControl={false}
@@ -328,7 +348,8 @@ export default function DistrictMap({ stations: districts, thumbnails = {}, snip
         {prototype && <LeafletBridge />}
         <ZoomWatcher onZoom={setZoom} />
         <MapDeselect onClear={clearSelection} clickClears={level !== 'grid'} escapeClears />
-        {isTouch && <TouchZoomControls />}
+        <PanMotionPreference />
+        <MapZoomControls />
         {selected && flyBounds && (
           <MapSelectionBounds
             key={`${selected}:${selectedDistrict ? districtFocusRevision : 0}`}

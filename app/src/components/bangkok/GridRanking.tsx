@@ -64,7 +64,7 @@ export function GridMatchCount({ districts }: { districts: MapStation[] }) {
  * dealbreakers, ≥ 1.5 km apart, named after the nearest station area (or
  * the district where no station is in walking range).
  */
-export function GridHotspotList({ districts }: { districts: MapStation[] }) {
+export function GridHotspotList({ districts, onAreaChosen }: { districts: MapStation[]; onAreaChosen?: () => void }) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const lists = useAreaLists();
@@ -99,7 +99,7 @@ export function GridHotspotList({ districts }: { districts: MapStation[] }) {
         return (
           <li key={i}>
             <button
-              onClick={() => setSelectedStation(key)}
+              onClick={() => { setSelectedStation(key); onAreaChosen?.(); }}
               onMouseEnter={() => setHoveredStation(key)}
               onMouseLeave={() => setHoveredStation(null)}
               onFocus={() => setHoveredStation(key)}

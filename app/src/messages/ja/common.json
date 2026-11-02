@@ -154,6 +154,8 @@
     "quickProfiles": "プロフィール",
     "dealbreakers": "必須条件",
     "clearAll": "リセット",
+    "rangeMinimum": "{label}の下限",
+    "rangeMaximum": "{label}の上限",
     "weights": "重み",
     "weightsDescription": "あなたにとって何が大切か調整しましょう",
     "resetDefaults": "デフォルトに戻す",
@@ -280,6 +282,9 @@
     "view3d": "3D表示",
     "buildings": "建物",
     "resetAsok": "アソークに移動",
+    "cameraMotion": "地図の動き",
+    "motionSystem": "端末の設定に従う",
+    "motionSmooth": "なめらか",
     "selectedArea": "選択したエリア",
     "closeSelectedArea": "選択したエリアを閉じる",
     "interactiveBangkok": "バンコクのインタラクティブ地図",
@@ -299,7 +304,8 @@
   },
   "drawer": {
     "filters": "フィルター",
-    "filtersAndRanking": "フィルター＆ランキング"
+    "filtersAndRanking": "フィルター＆ランキング",
+    "close": "フィルターを閉じる"
   },
   "feedback": {
     "station": {

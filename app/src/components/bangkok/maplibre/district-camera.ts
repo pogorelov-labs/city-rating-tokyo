@@ -1,5 +1,6 @@
 import type { LngLatBoundsLike, Map as LibreMap } from 'maplibre-gl';
 import geometry from '@/data/bangkok/geometry.json';
+import { smoothOverride } from '@/lib/map-motion';
 
 type LatLng = [number, number];
 type Shape = { bbox: [LatLng, LatLng] };
@@ -34,6 +35,6 @@ export function frameDistrict(map: LibreMap, key: string, touch: boolean, durati
   const target = map.cameraForBounds(bounds, { bearing: map.getBearing(), maxZoom: 13, absolutePadding: true,
     padding: districtPadding(container.clientWidth, container.clientHeight, touch, card?.offsetHeight ?? 0, toolbarBottom) });
   if (!target) return false;
-  map.stop(); map.easeTo({ ...target, pitch: 0, duration });
+  map.stop(); map.easeTo({ ...target, pitch: 0, duration, ...(smoothOverride() && { essential: true }) });
   return true;
 }

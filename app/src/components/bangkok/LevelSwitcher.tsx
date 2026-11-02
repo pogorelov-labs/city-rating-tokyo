@@ -38,8 +38,20 @@ export default function LevelSwitcher() {
             key={l}
             role="radio"
             aria-checked={active}
+            tabIndex={active ? 0 : -1}
             title={t(`levelHint_${l}`)}
             onClick={() => choose(l)}
+            onKeyDown={event => {
+              if (event.altKey || event.ctrlKey || event.metaKey) return;
+              const levels = city.levels, i = levels.indexOf(l);
+              const next = event.key === 'Home' ? 0 : event.key === 'End' ? levels.length - 1
+                : ['ArrowRight', 'ArrowDown'].includes(event.key) ? (i + 1) % levels.length
+                : ['ArrowLeft', 'ArrowUp'].includes(event.key) ? (i + levels.length - 1) % levels.length : -1;
+              if (next < 0) return;
+              event.preventDefault();
+              choose(levels[next]);
+              event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('button')[next]?.focus();
+            }}
             // Warm the grid while the pointer is on its way to the button.
             onPointerEnter={l === 'grid' ? () => void ensureBangkokGrid() : undefined}
             onFocus={l === 'grid' ? () => void ensureBangkokGrid() : undefined}

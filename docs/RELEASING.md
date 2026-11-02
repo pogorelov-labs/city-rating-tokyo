@@ -15,16 +15,18 @@
   require a major version. Make any future package-version changes explicit.
 - Release from a **clean, reviewed main commit** through a PR and a **merge
   commit**. Do not release a branch head, a dirty checkout or a failing main.
-- All five jobs in [CI](../.github/workflows/ci.yml) must pass on the PR and
+- All five release gates in [CI](../.github/workflows/ci.yml) must pass on the PR and
   again on the exact main merge SHA: **`build`, `schema`, `mcp`, `bangkok`, `e2e`**.
   `build` covers lint, UI tests, TypeScript, the Next build, dependency audit
   including development dependencies under the [full audit policy](DEPENDENCY_AUDIT.md)
   and production Docker build;
   `schema` covers codegen drift and pipeline/parity tests; `mcp` covers lint
   and unit tests with offline fixtures; `bangkok` covers offline pipeline/data tests;
-  `e2e` builds and runs the standalone release server, covering map interaction,
+  `e2e` requires both browser jobs on independent Ubuntu runners. The production
+  job builds and runs the standalone release server, covering map interaction,
   guides in all three languages, accessibility, renderer fallback and worker/CSP
-  delivery without retries; it also checks the separate opt-in diagnostic lab.
+  delivery. The other job tests the opt-in renderer lab with SwiftShader. Each
+  uses one worker and zero retries; a failed, skipped or cancelled browser job cannot pass `e2e`.
   MCP production smoke checks are separate and are not implied by green CI.
 - Update [CHANGELOG](../CHANGELOG.md), `docs/releases/<tag>.md`, README and any
   affected methodology/developer docs before merging. Notes must name known
@@ -87,7 +89,7 @@ Commit and push the release-preparation branch, then open:
 gh pr create --base main --title "docs: release v0.1.0 and release runbook" --body-file /path/to/pr-body.md
 ```
 
-Review the published PR diff and discussion. Wait for all five jobs, including
+Review the published PR diff and discussion. Wait for all five release gates, including
 checks not enforced by branch protection:
 
 ```sh
@@ -221,7 +223,7 @@ never fold regenerated data into a code/docs release.
   tests, docs and approved version metadata, with no generated-data drift.
 - [ ] PR reviewed; `build`, `schema`, `mcp`, `bangkok`, `e2e` all pass at the recorded head.
 - [ ] Merged with a merge commit and head-match guard; merge SHA recorded.
-- [ ] Main push CI passes all five jobs at that exact SHA.
+- [ ] Main push CI passes all five release gates at that exact SHA.
 - [ ] Annotated remote tag peels to the merge SHA; no existing version overwritten.
 - [ ] GitHub release is published/latest with the committed notes and correct target.
 - [ ] Public production URL returns 200; Tokyo/Bangkok/locales checked; production

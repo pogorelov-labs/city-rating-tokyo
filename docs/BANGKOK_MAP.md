@@ -17,6 +17,44 @@ Bangkok checks linked cells against the grid bounds and district mask before
 using their geometry; it retains plausible cells while the mask is loading.
 Invalid selections or comparisons are removed individually.
 
+## Controls and motion
+
+Dragging tracks the pointer in both Bangkok renderers. A quick flick carries
+farther than a slow drag of the same distance; holding still before release
+stops the map. The 3D view uses constant deceleration, capped at about 460 ms
+and 378 CSS pixels. Catching a moving map stops it without opening a card.
+A quick second tap at the same point can select the area. A parallel two-finger
+pan can coast; a pinch, rotation or continuing with just one finger must not
+throw the previous two-finger gesture. The standard map uses Leaflet's own
+quadratic glide. Pinch and wheel input stay native.
+
+**Map motion** follows the device by default. **Smooth** explicitly enables
+Bangkok pan inertia and animated camera commands even when the device requests
+reduced motion. The preference is local to this browser and is never included
+in a shared link. Returning to **Follow device** takes effect immediately.
+Tokyo and interface animations continue to follow the device. On a reduced-motion
+device that opts in, native drag still handles direct input; on release we give
+MapLibre a single bounded pan animation. No library-global override, second
+animation loop, map reload, rescoring or grid texture upload is needed.
+
+Animated zoom buttons retain the requested level across repeated presses in
+both renderers. Switching perspective preserves
+the heading; the compass resets north, and **Center on Asok** restores the
+initial street view. Narrow workspaces fold the extra view controls into one
+button. Shallow workspaces fold the panel even on desktop; opening the air
+panel must not put camera controls outside the map. Arrow keys move between
+districts, stations and grid in the level switch.
+
+See [Bangkok motion: experience, rules and quality gates](BANGKOK_MAP_MOTION.md)
+for the failure cases, signed release tests, hardware checks and local commands.
+
+On phones the filter sheet follows a drag on its header; a flick or a longer
+pull dismisses it. The content scrolls normally. Close, Escape, the backdrop
+and choosing a ranking result also dismiss it. The sheet uses a native modal
+dialog; movement affects its CSS translation without updating map or filter
+state on each pointer move. See the [MapLibre pan API](https://maplibre.org/maplibre-gl-js/docs/API/type-aliases/DragPanOptions/)
+and the [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+
 ## Rendering
 
 - District and station-area geometry is installed once in native vector layers.
@@ -108,6 +146,13 @@ compatibility, rendered parks and selections, filters/shared links, pointer and
 touch behavior, failure fallback and worker/CSP delivery. CI uses a software GPU
 for functional WebGL coverage, not performance claims. Real-device validation is
 still useful before changing the default quality budget for slower phones.
+
+The pan regression repeats a 150 CSS pixel drag at two release speeds and
+tracks a geographic landmark in screen coordinates after release. It checks
+direction, bounded travel, a held release, device reduced motion and the
+explicit Smooth preference on both renderers. A separate touch test catches
+a moving 3D map and verifies that the catch does not select a cell or reupload
+the score grid.
 
 Building detail and the availability of remote basemap tiles depend on the data
 provider. Scores retain their own published source dates and confidence labels;

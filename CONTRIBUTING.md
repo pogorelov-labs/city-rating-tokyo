@@ -160,6 +160,9 @@ Scrapers run in a private operational environment. They are incremental and safe
 - **Vitest** (`cd app && npm test`): scoring pure functions, URL state round-trip, dealbreaker filtering
 - **pytest** (`pytest` from repo root): `compute-ratings.py` normalization/caps, cross-language schema parity
 - **Playwright**: the required `e2e` CI job runs the browser smoke suite without retries. See [e2e/README.md](e2e/README.md) for local setup and the current CI selection.
+- **Bangkok camera changes**: use the [motion rules and release gates](docs/BANGKOK_MAP_MOTION.md).
+  Check signed release direction, contact ownership and state preservation on
+  both renderers; distinguish those checks from physical-device performance.
 
 ## MCP server development
 

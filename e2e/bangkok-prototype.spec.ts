@@ -1,8 +1,153 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import header from '../app/src/data/bangkok/grid.json';
 import districtGeometry from '../app/src/data/bangkok/geometry.json';
 import ja from '../app/src/messages/ja/common.json';
+import { gestureFrame, installGestureClock, pauseGestureClock } from './helpers/bangkok-gesture-clock';
+import { flickAndCatch } from './helpers/bangkok-touch-flick';
+import { observePanRelease } from './helpers/bangkok-release-trace';
+import { labUsesSwiftShader } from './helpers/bangkok-software-renderer';
+
+test('rapid zoom steps accumulate, reverse and leave grid pixels alone', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  const before = await page.evaluate(() => ({
+    zoom: window.__bangkokRenderer!.getCamera().zoom, uploads: window.__bangkokRenderer!.stats().gridUploads,
+  }));
+  const plus = page.getByRole('button', { name: 'Zoom in', exact: true });
+  const minus = page.getByRole('button', { name: 'Zoom out', exact: true });
+  // Real presses during the same ease: + + + − must travel two full steps.
+  const a = (await plus.boundingBox())!, b = (await minus.boundingBox())!;
+  for (const box of [a, a, a, b]) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().zoom)).toBeCloseTo(before.zoom + 2, 2);
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.ready())).toBe(true);
+  expect(await page.evaluate(() => window.__bangkokRenderer!.stats().gridUploads)).toBe(before.uploads);
+  await expect(page.locator('aside').getByRole('checkbox', { name: /Family-friendly/ })).toBeChecked();
+});
+
+test('perspective can reverse in flight without changing heading, and reduced motion settles immediately', async ({ page }) => {
+  await page.goto('/bangkok/prototype/maplibre');
+  await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+  await page.evaluate(() => window.__bangkokRenderer!.setCamera({ lat: 13.74, lng: 100.56, zoom: 16, pitch: 50, bearing: 37 }));
+  const flat = page.getByRole('button', { name: '2D view' });
+  await flat.focus();
+  await page.keyboard.press('Enter');
+  await page.keyboard.press('Enter');
+  await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(50);
+  expect((await page.evaluate(() => window.__bangkokRenderer!.getCamera())).bearing).toBeCloseTo(37, 4);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await flat.click();
+  const camera = await page.evaluate(() => window.__bangkokRenderer!.getCamera());
+  expect(camera.pitch).toBe(0);
+  expect(camera.bearing).toBeCloseTo(37, 4);
+  await page.getByRole('button', { name: 'Center on Asok' }).click();
+  expect(await page.evaluate(() => window.__bangkokRenderer!.getCamera())).toMatchObject({ pitch: 50, bearing: -20, zoom: 16 });
+});
+
+async function setupFlick(page: Page, renderer: 'maplibre' | 'leaflet') {
+  await installGestureClock(page);
+  await page.setViewportSize({ width: 740, height: 600 });
+  await page.goto(`/bangkok/prototype/${renderer}`);
+  const camera = { lat: 13.7374, lng: 100.5606, zoom: 16, pitch: 50, bearing: -20 };
+  const motion = page.getByRole('combobox', { name: 'Map motion' });
+  const tools = page.getByRole('button', { name: '3D map controls' });
+  const revealMotion = async () => {
+    if (renderer === 'maplibre' && !await motion.isVisible()) await tools.click();
+  };
+  const project = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat).x, camera);
+  const flick = (preference: 'reduce' | 'no-preference', choice: 'system' | 'smooth', pixelsPerMove: number, held = false) =>
+    test.step(`Flick: ${preference}, ${choice}, ${pixelsPerMove} px per move, ${held ? 'held' : 'immediate'} release`, async () => {
+      await page.emulateMedia({ reducedMotion: preference });
+      await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+      await revealMotion();
+      await motion.selectOption(choice);
+      if (await tools.isVisible() && await tools.getAttribute('aria-expanded') === 'true') await tools.press('Escape');
+      await page.evaluate(c => window.__bangkokRenderer!.setCamera(c), camera);
+      await page.waitForFunction(() => window.__bangkokRenderer!.ready());
+      const surface = renderer === 'maplibre' ? page.getByTestId('maplibre-map') : page.locator('.leaflet-container');
+      const box = (await surface.boundingBox())!;
+      const x = box.x + box.width * .25, y = box.y + box.height * .56;
+      await pauseGestureClock(page);
+      await page.mouse.move(x, y); await page.mouse.down();
+      const readTrace = await observePanRelease(page, 'mouse', camera, 700);
+      for (let travel = pixelsPerMove; travel <= 150; travel += pixelsPerMove) {
+        const before = travel === 150 ? await project() : undefined;
+        await page.mouse.move(x + travel, y);
+        await gestureFrame(page);
+        // A queued drag delta after lift must never be mistaken for inertia.
+        if (before !== undefined) expect(await project()).toBeGreaterThan(before + 1);
+      }
+      if (held) await page.clock.runFor(220);
+      await page.mouse.up();
+      await page.clock.runFor(736);
+      const observation = await readTrace();
+      await page.clock.resume();
+      await test.info().attach('drag-release', { body: JSON.stringify({ preference, choice, held, pixelsPerMove, ...observation }), contentType: 'application/json' });
+      return observation;
+    });
+  return { flick, revealMotion, motion };
+}
+
+for (const renderer of ['maplibre', 'leaflet'] as const) {
+  const limit = renderer === 'maplibre' ? 380 : 191;
+  test(`${renderer}: a flick coasts after release and reduced motion stops at release`, async ({ page }) => {
+    const { flick } = await setupFlick(page, renderer);
+    const native = await flick('no-preference', 'system', 30);
+    expect(native.coastPx).toBeGreaterThan(1);
+    expect(native.travelPx).toBeLessThan(limit);
+    expect((await flick('reduce', 'system', 30)).travelPx).toBeLessThan(1);
+  });
+
+  test(`${renderer}: Smooth scales with release speed under reduced motion`, async ({ page }) => {
+    const { flick } = await setupFlick(page, renderer);
+    const fast = await flick('reduce', 'smooth', 30);
+    expect(fast.coastPx).toBeGreaterThan(1);
+    expect(fast.travelPx).toBeLessThan(limit);
+    expect((await flick('reduce', 'smooth', 6)).travelPx).toBeLessThan(fast.travelPx * .5);
+  });
+
+  test(`${renderer}: holding the flick stops at release and Smooth survives reload`, async ({ page }) => {
+    const { flick, motion, revealMotion } = await setupFlick(page, renderer);
+    expect((await flick('reduce', 'smooth', 30, true)).travelPx).toBeLessThan(1);
+    await page.reload();
+    await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+    await revealMotion();
+    await expect(motion).toHaveValue('smooth');
+  });
+}
+
+test.describe('touch momentum', () => {
+  test.use({ viewport: { width: 740, height: 650 }, hasTouch: true, isMobile: true });
+  for (const [preference, choice] of [['reduce', 'smooth'], ['no-preference', 'system']] as const)
+  test(`${choice}: touching again stops a tilted grid flick without picking a cell`, async ({ page, context }) => {
+    await installGestureClock(page);
+    await page.emulateMedia({ reducedMotion: preference });
+    await page.goto('/bangkok/prototype/maplibre?lv=grid&adult=1');
+    await page.waitForFunction(() => window.__bangkokRenderer?.ready());
+    const handle = await page.evaluateHandle(() => window.__bangkokRenderer!);
+    const before = await page.evaluate(() => ({
+      camera: window.__bangkokRenderer!.getCamera(), uploads: window.__bangkokRenderer!.stats().gridUploads,
+    }));
+    await page.getByRole('combobox', { name: 'Map motion' }).selectOption(choice);
+    expect(await handle.evaluate(h => h === window.__bangkokRenderer)).toBe(true);
+    const box = (await page.getByTestId('maplibre-map').boundingBox())!;
+    const x = Math.round(box.x + box.width * .25), y = Math.round(box.y + box.height * .56);
+    const client = await context.newCDPSession(page);
+    const anchor = () => page.evaluate(c => window.__bangkokRenderer!.project(c.lng, c.lat), before.camera);
+    await flickAndCatch(page, client, { x, y, threshold: 5, landmark: before.camera });
+    const caught = await anchor();
+    await page.waitForTimeout(200); // keep the finger still while the original glide would be moving
+    expect(Math.abs((await anchor()).x - caught.x)).toBeLessThan(1);
+    await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await page.waitForTimeout(350); // allow a synthetic tap and deferred URL write to surface
+    expect(new URL(page.url()).searchParams.get('s')).toBeNull();
+    expect(new URL(page.url()).searchParams.get('adult')).toBe('1');
+    expect(await page.evaluate(() => window.__bangkokRenderer!.stats().gridUploads)).toBe(before.uploads);
+    await page.touchscreen.tap(x + 85, y);
+    await expect.poll(() => new URL(page.url()).searchParams.get('s')).toBeTruthy();
+    await client.detach(); await handle.dispose();
+  });
+});
 
 test('MapLibre draws buildings and grid while preserving filters and copied state', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
@@ -14,6 +159,15 @@ test('MapLibre draws buildings and grid while preserving filters and copied stat
   const stats = await page.evaluate(() => window.__bangkokRenderer!.stats());
   expect(stats.buildingFeatures).toBeGreaterThan(0);
   expect(stats.gridUploads).toBeGreaterThan(0);
+  if (labUsesSwiftShader) {
+    const renderer = await page.locator('.maplibregl-canvas').evaluate(canvas => {
+      const gl = (canvas as HTMLCanvasElement).getContext('webgl2');
+      const info = gl?.getExtension('WEBGL_debug_renderer_info');
+      return info && gl?.getParameter(info.UNMASKED_RENDERER_WEBGL);
+    });
+    expect(renderer, 'the actual 3D map canvas must use the CI software renderer').toMatch(/SwiftShader/i);
+    await test.info().attach('webgl-renderer', { body: renderer, contentType: 'text/plain' });
+  }
   await page.addScriptTag({ path: resolve('app/node_modules/axe-core/axe.min.js') });
   const violations = await page.evaluate(async () => {
     const axe = (window as unknown as { axe: { run: (context: object, options: object) => Promise<{ violations: { id: string }[] }> } }).axe;
@@ -86,7 +240,7 @@ test('grid picking agrees with geographic cells at multiple pitches and survives
       const renderer = window.__bangkokRenderer!;
       const camera = renderer.getCamera();
       return renderer.ready() && Math.abs(camera.lng - lng) < 1e-6 && Math.abs(camera.lat - lat) < 1e-6 &&
-        Math.abs(camera.zoom - 18) < 1e-6 && Math.abs(camera.pitch - pitch) < 1e-6;
+        Math.abs(camera.zoom - 18) < 1e-6 && camera.pitch !== undefined && Math.abs(camera.pitch - pitch) < 1e-6;
     }, { lng, lat, pitch });
     const point = await page.evaluate(([lng, lat]) => window.__bangkokRenderer!.project(lng, lat), [lng, lat]);
     const box = await page.getByTestId('maplibre-map').boundingBox();
@@ -432,6 +586,7 @@ test('touch district framing leaves the selected geometry above the measured car
     }
     await card.getByRole('button', { name: 'Close district card' }).tap();
     await expect(card).toBeHidden();
+    await page.getByRole('button', { name: '3D map controls' }).tap();
     await page.getByRole('button', { name: 'Center on Asok' }).tap();
     await expect.poll(() => page.evaluate(() => window.__bangkokRenderer!.getCamera().pitch)).toBe(50);
     const center = await page.evaluate(() => window.__bangkokRenderer!.project(100.5606, 13.7374));

@@ -154,6 +154,8 @@
     "quickProfiles": "Quick Profiles",
     "dealbreakers": "Dealbreakers",
     "clearAll": "Clear all",
+    "rangeMinimum": "{label}, minimum",
+    "rangeMaximum": "{label}, maximum",
     "weights": "Weights",
     "weightsDescription": "Adjust what matters most to you",
     "resetDefaults": "Reset to defaults",
@@ -280,6 +282,9 @@
     "view3d": "3D view",
     "buildings": "Buildings",
     "resetAsok": "Center on Asok",
+    "cameraMotion": "Map motion",
+    "motionSystem": "Follow device",
+    "motionSmooth": "Smooth",
     "selectedArea": "Selected area",
     "closeSelectedArea": "Close selected area",
     "interactiveBangkok": "Interactive Bangkok map",
@@ -299,7 +304,8 @@
   },
   "drawer": {
     "filters": "Filters",
-    "filtersAndRanking": "Filters & Ranking"
+    "filtersAndRanking": "Filters & Ranking",
+    "close": "Close filters"
   },
   "feedback": {
     "station": {

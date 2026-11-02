@@ -88,7 +88,8 @@ standalone server with retries disabled. CI uses software WebGL for functional
 coverage, not performance measurements. On Linux CI, both suites use the
 full Chromium browser's new headless mode, as described in
 [Playwright's browser guide](https://playwright.dev/docs/browsers#chromium-new-headless-mode).
-Local browser selection remains unchanged. Failed runs retain browser traces,
+The renderer lab uses full Chromium locally as well, so the gesture tests do
+not depend on headless-shell frame throttling. Failed runs retain browser traces,
 screenshots and the standalone server log for seven days. A test failure fails
 the CI check; branch protection must also require the `e2e` status for it to
 gate merging.
@@ -114,12 +115,23 @@ or started with `BANGKOK_RENDERER_LAB=1`; without `E2E_BASE_URL` the configurati
 starts a local dev server with that setting:
 
 ```sh
-npx playwright test --config=playwright.prototype.config.ts
+E2E_PORT=3171 npm run test:e2e:lab -- --workers=1 --retries=0
 ```
+
+The lab configuration discovers `bangkok-prototype.spec.ts` and
+`bangkok-*.lab.spec.ts`; the production configuration excludes both. The new
+gesture cases run in the same CI lab step as the original suite. To reproduce
+the Linux CI software renderer on a local machine, prefix the command above
+with `E2E_SWIFTSHADER=1`. The map canvas must report SwiftShader in this mode.
+The [motion quality gates](../docs/BANGKOK_MAP_MOTION.md) explain what each case
+proves and which smoothness claims require physical-device evidence.
 
 The lab's diagnostics are intentionally unavailable on production routes.
 Playwright's generated reports and failure artifacts belong in ignored paths.
 
-CI also starts a separate opt-in lab server after the normal release suite. This
-checks graphics-context replay and that diagnostic state is removed when leaving
-the lab; those routes remain disabled in the release artifact.
+CI runs the packaged production suite and the opt-in lab on separate Ubuntu
+runners, each with one browser worker and zero retries. The required `e2e`
+check succeeds only if both jobs succeed. The lab retains its JSON report;
+production failures retain their browser evidence and server log. The lab
+checks graphics-context recovery and that diagnostics are removed when leaving
+the lab. Its routes stay disabled in the release artifact.

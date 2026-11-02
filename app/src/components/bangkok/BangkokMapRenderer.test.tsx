@@ -27,7 +27,7 @@ it('falls back while retaining city state and permits a manual renderer change',
   expect(useAppStore.getState().cities.bangkok).toEqual(before);
   expect(useAppStore.getState().weights).toEqual(weights);
   expect(window.location.href).toBe(url);
-  fireEvent.change(screen.getByRole('combobox', { name: /map/i }), { target: { value: 'maplibre' } });
+  fireEvent.change(screen.getByRole('combobox', { name: 'Map renderer' }), { target: { value: 'maplibre' } });
   expect(await screen.findByText('3D engine normal')).toBeInTheDocument();
   expect(useAppStore.getState().cities.bangkok).toEqual(before);
   expect(useAppStore.getState().weights).toEqual(weights);

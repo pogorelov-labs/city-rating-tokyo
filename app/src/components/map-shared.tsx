@@ -1,10 +1,13 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { observeMapContainer } from '@/lib/map-resize';
+import { bangkokCameraReduced, prefersReducedMotion, subscribeBangkokMotion } from '@/lib/map-motion';
+import { useCityId } from '@/lib/city-context';
+import { installSmoothZoom } from './bangkok/leaflet-controls';
 
 // Map building blocks shared by the Tokyo station map (Map.tsx) and the
 // Bangkok district map (DistrictMap.tsx). Kept in their own module so the
@@ -17,10 +20,30 @@ export function MapContainerResize() {
   return null;
 }
 
-/** Touch-only zoom buttons — bottom-right, above the compare panel / drawer */
-export function TouchZoomControls() {
+/** Accessible zoom steps above the compare panel and drawer. */
+export function MapZoomControls() {
   const t = useTranslations('map');
   const map = useMap();
+  const bangkok = useCityId() === 'bangkok';
+  const zoom = useRef<ReturnType<typeof installSmoothZoom> | null>(null);
+  useEffect(() => {
+    if (!bangkok) return;
+    const controller = installSmoothZoom(map);
+    zoom.current = controller;
+    const unsubscribe = subscribeBangkokMotion(controller.clear);
+    return () => { unsubscribe(); controller.dispose(); zoom.current = null; };
+  }, [bangkok, map]);
+  const step = (delta: 1 | -1) => {
+    // Keep the requested destination across rapid animated steps, including
+    // when the device motion preference changes after map construction.
+    if (bangkok && !bangkokCameraReduced()) {
+      zoom.current?.step(delta);
+    } else {
+      zoom.current?.clear();
+      const options = { animate: !(bangkok ? bangkokCameraReduced() : prefersReducedMotion()) };
+      if (delta === 1) map.zoomIn(undefined, options); else map.zoomOut(undefined, options);
+    }
+  };
   return (
     <div className="leaflet-bottom leaflet-right" style={{ pointerEvents: 'none' }}>
       <div
@@ -28,15 +51,15 @@ export function TouchZoomControls() {
         style={{ pointerEvents: 'auto', marginBottom: 'calc(80px + env(safe-area-inset-bottom, 0px))', marginRight: 10 }}
       >
         <button
-          onClick={() => map.zoomIn()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          onClick={() => step(1)}
+          className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomIn')}
         >
           +
         </button>
         <button
-          onClick={() => map.zoomOut()}
-          className="bg-white rounded-lg shadow-md border border-gray-200 w-10 h-10 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
+          onClick={() => step(-1)}
+          className="map-control-btn bg-white rounded-lg shadow-md border border-gray-200 w-11 h-11 flex items-center justify-center text-xl font-bold text-gray-700 active:bg-gray-100"
           aria-label={t('zoomOut')}
         >
           −

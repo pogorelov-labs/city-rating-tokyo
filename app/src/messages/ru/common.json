@@ -154,6 +154,8 @@
     "quickProfiles": "Профили",
     "dealbreakers": "Обязательные условия",
     "clearAll": "Сбросить",
+    "rangeMinimum": "{label}: минимум",
+    "rangeMaximum": "{label}: максимум",
     "weights": "Приоритеты",
     "weightsDescription": "Настройте, что для вас важнее",
     "resetDefaults": "По умолчанию",
@@ -280,6 +282,9 @@
     "view3d": "Вид 3D",
     "buildings": "Здания",
     "resetAsok": "Перейти к Асоку",
+    "cameraMotion": "Движение карты",
+    "motionSystem": "Как в системе",
+    "motionSmooth": "Плавное",
     "selectedArea": "Выбранный район",
     "closeSelectedArea": "Закрыть выбранный район",
     "interactiveBangkok": "Интерактивная карта Бангкока",
@@ -299,7 +304,8 @@
   },
   "drawer": {
     "filters": "Фильтры",
-    "filtersAndRanking": "Фильтры и рейтинг"
+    "filtersAndRanking": "Фильтры и рейтинг",
+    "close": "Закрыть фильтры"
   },
   "feedback": {
     "station": {
