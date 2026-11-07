@@ -10,6 +10,11 @@ Usage:
   python3 check_geometry.py --entity nana --point 13.7463 100.5526 --label "Bumrungrad"
   python3 check_geometry.py --file points.json      # [{"name":"...","entity":"nana","lat":..,"lng":..}, ...]
   python3 check_geometry.py --entity nana --info
+  python3 check_geometry.py --khet --entity chatuchak --info   # force khet lookup
+
+B-8: keys that exist in BOTH station-geometry.json and geometry.json (e.g.
+`chatuchak`) normally resolve to the station catchment; `--khet` forces the
+khet/district ring (the batch-3 chatuchak agent's documented workaround).
 
 Membership rule (HANDOFF + research guides): the app polygon decides
 inside/outside — never raw radius. Distances are reported for context only.
@@ -72,6 +77,8 @@ def main():
     ap.add_argument("--label", default="")
     ap.add_argument("--file", help="JSON file: [{name, entity, lat, lng}, ...]")
     ap.add_argument("--info", action="store_true", help="print center, bbox, ring size")
+    ap.add_argument("--khet", action="store_true",
+                    help="force khet/district geometry lookup (bypasses station-key shadowing)")
     args = ap.parse_args()
 
     sg, dg = load()
@@ -82,7 +89,7 @@ def main():
     elif args.entity and args.point:
         tests.append((args.label, args.entity, args.point[0], args.point[1]))
     elif args.entity and args.info:
-        src = sg if args.entity in sg else dg
+        src = dg if args.khet else (sg if args.entity in sg else dg)
         rings = rings_for(src, args.entity)
         c = center_of(rings)
         lats = [p[0] for r in rings for p in r]
@@ -95,7 +102,7 @@ def main():
         ap.error("provide --entity with --point/--info, or --file")
 
     for name, ent, lat, lng in tests:
-        src = sg if ent in sg else dg
+        src = dg if args.khet else (sg if ent in sg else dg)
         rings = rings_for(src, ent)
         c = center_of(rings)
         d = haversine(c[0], c[1], lat, lng)

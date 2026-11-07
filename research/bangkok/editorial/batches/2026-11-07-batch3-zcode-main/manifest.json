@@ -204,5 +204,8 @@
   "limitations_repairs": 0,
   "note": "corroboration recomputed over canonical publisher families; per-claim ledger in 2026-11-08-canonical-relabel-log.jsonl"
  },
- "updated_at": "2026-11-08T00:00:00Z"
+ "updated_at": "2026-11-08T00:00:00Z",
+ "research_started_at": "2026-11-07T19:58:14Z",
+ "research_completed_at": "2026-11-07T20:11:08Z",
+ "research_time_basis": "raw-write-mtimes"
 }
