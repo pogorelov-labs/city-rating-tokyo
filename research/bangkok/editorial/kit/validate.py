@@ -10,7 +10,7 @@ import sys
 
 SCHEMA_DEFAULT = ("/Users/ruslan/.codex/worktrees/bangkok-filters/city-rating/"
                   "research/bangkok/editorial/2026-11-05-handoff/entity-research.schema.json")
-SCHEMA_FALLBACK = "/Users/ruslan/msc_1/git/city-rating/research/bangkok/editorial/entity-research.schema.json"
+SCHEMA_FALLBACK = "research/bangkok/editorial/2026-11-05-handoff/entity-research.schema.json"
 
 URI_RE = re.compile(r"^https?://\S+$")
 DT_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:?\d{2})$")
