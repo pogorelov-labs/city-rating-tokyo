@@ -24,10 +24,20 @@ agent (this workflow, ≤2 concurrent).
 | A-2 | **Tier C bulk check (137 placeholders).** Script-assisted: identity vs app snapshot, zero web claims, `draft` status. One approval covers the batch. | HR (script-assisted) | S | tail batch approved or regeneration list produced |
 | A-3 | **Sender adoption of amendments A1–A8** (in-repo amended copy at `2026-11-05-handoff/HANDOFF.md`; redline with evidence). | SL | S | amended copy accepted, or superseding revision published and diffs reconciled |
 
+| A-4 | **Review rework/quarantine path.** `blocked` bundles: named fixer, scoped rework, re-review; blocked bundles are excluded from any integration slice until approved. Findings tracked per bundle. | HR + AG | M | no blocked bundle outside the quarantine list |
+| A-5 | **Legal/defamation/privacy gate (G11/G17).** Before any user-visible copy: review negative nameable claims (scam environments, shooting/displacement events, venue labels) for defamation risk; audit bundles for personal data (resident quotes, addresses); redact or attribute as needed. | HR + legal | M | sign-off for every copy-bearing unit |
+| A-6 | **Thai-source verification (G13).** Thai-language claims that surface in copy get a Thai-capable check (claim ↔ source section), or the claim is flagged and excluded from copy. | HR/AG | S | Thai-sourced copy verified or excluded |
+
 ## WS-B — Data-layer fixes (P0/P1 · pipeline team, via build/replay gates)
 
 Grounded in the 2026-11-07 + 2026-11-08 pipeline notes; every item has bundle
 evidence with receipts. Order = priority.
+
+**Dependency order (B-0 amendment):** B-2 (anchors) → B-1 (station set) →
+B-4 (polygons) → B-3/B-5 (product decisions) → B-6 (facts) — re-deriving
+Voronoi/polygons before anchors are settled guarantees rework. **Every** B
+change passes the CRTKY-197 fail-closed replay/signature process (generalized
+from B-6).
 
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
@@ -39,6 +49,8 @@ evidence with receipts. Order = priority.
 | B-6 | **Fact corrections (P1, quick).** ratchathewi "1 Michelin star" → two one-star venues verify (Signature at VIE, Wana Yook); chit-lom "5 piers" → 2 distinct (4 duplicate OSM nodes); ratchathewi "0 piers" vs Pratunam pier nodes PIP-in-khet; hua-lamphong "2 piers" = canal (Khlong Phadung Krung Kasem), not river; Four Seasons Bangkok = 2015 rebrand, not 2024. | PL | S | corrections via build replay with snapshot signature checks (CRTKY-197 process) |
 | B-7 | **Counter-evidence → labeling policy (P2, product decision).** Dated events with receipts: Or Tor Kor shooting 2025-07-28 (5 dead); din-daeng = noisiest PCD station + Rocket Media rank 50/50; BTS Asok rush failure 2025-09-25; 529-stallholder clock-tower eviction 2025; Jodd Fairs Rama 9 demolished 2025-01. Decide whether/where any of this is product-visible (connects CRTKY-150/151/152). Do **not** let single incidents become persistent area labels (handoff rule). | product | S | policy decision recorded |
 | B-8 | **Kit TODO (P2).** `check_geometry.py --khet` flag (station-geometry `chatuchak` key shadows the district key — found by the batch-3 agent). | AG | S | flag added + tested |
+
+| B-9 | **Kit unit tests + CI (P1).** assemble/validate/audit are load-bearing and were patched ≥6 times under pressure. Fixture bundles + expected outputs, wired next to the repo's existing checks. | PL | S | kit tests green in CI; changes fail closed |
 
 ## WS-C — Re-verification calendar (P1 · AG, quarterly waves)
 
@@ -59,6 +71,14 @@ note to the claim).
 Mechanization (S): extend the kit with `recheck-due.py` (regenerates the CSV
 from profiles, emits wave task lists for light agents).
 
+**Amendments:** the calendar is a **living registry**, not a snapshot (C-5):
+regenerate at every batch end (`kit/recheck-due.py`), and fold bundle
+`open_issues` (~547 notes) into it as verifiable items. Add a **link-rot
+wave (C-6)**: quarterly HEAD-checks over the 547 canonical URLs; dead URLs
+are flagged on the source record and affected claims are downgraded to
+"archived citation" status (never deleted silently). Owner for the calendar
+cadence must be named (currently unassigned — gap).
+
 ## WS-D — Tier upgrades (P1/P2 · AG · gated on A-1)
 
 | ID | Item | Candidates | Effort |
@@ -66,6 +86,9 @@ from profiles, emits wave task lists for light agents).
 | D-1 | **B → A (full bundles)** for contested/featured units. Shortlist from batch-4 tensions: st.sala-daeng (nightlife 10 = the real heart, 108 venues; Lumphini Voronoi split), st.siam (flagship; 6 ha park unnamed; Paragon-event history), st.chit-lom (120k override), st.phetchaburi (merge resolved + CODI displacement), st.hua-lamphong (afterlife), st.saphan-taksin (river hub, cancelled rebuild), st.victory-monument (renovation + khet conflict), st.mo-chit (market reorg), st.phra-ram-9 (Jodd Fairs demolition + GR9 redevelopment). | 9 | L (≈9 full-bundle runs; batch per the standard cadence) |
 | D-2 | **C → B (light)** trigger rules: entity surfaced prominently by the product; coverage/news events; user selection. Regenerate the tail placeholder with a light bundle on trigger. | rolling | per-trigger |
 | D-3 | **Tier C regeneration** from each new app snapshot (identities/scores move; placeholders must not drift). | all 137 | S (scripted) |
+
+| D-4 | **Bundle re-anchoring (G15) after any app-data change.** B-1/B-2/B-3 change scores, ranks, cohort sizes — all 46 researched bundles' `selection_context` goes stale. Re-derive `selection_context` from the new snapshot (claims untouched); if the station set changes (sena-ruam), recompute cohort ranks everywhere. | AG (scripted) | S | every researched bundle re-anchored to the current snapshot |
+| D-5 | **Coverage battery in future light passes (C14 debt).** Batch-4 skipped the axis-1 scan; fold the 3-query coverage battery into every upcoming light bundle so D-2 triggers have an instrument. | AG | S | battery present in new light bundles |
 
 ## WS-E — Product integration (P1 · separate reviewed change · gated on A-1)
 
@@ -75,6 +98,9 @@ from profiles, emits wave task lists for light agents).
 | E-2 | **Implementation** behind the spec, with the app's own checks (lint, toolchain tests, TS, production build, e2e). Do **not** import research into `districts.json`/`stations.json`/rent references. | eng | L | app checks green; map bundle size delta within budget |
 | E-3 | **Score-context disclosures in UI** (green buffer basis, transport mechanism, rent label semantics) — the honesty-notes extension from B-3/B-5, wherever scores are shown. | product | S | disclosures live |
 | E-4 | Keep the raw research corpus out of the map bundle (hard rule); gallery/preview images only after WS-G. | eng | — | bundle audit |
+
+| E-5 | **Copy evidence bar (G12, C3 amendment).** Card preview: **corroborated claims only**. Guide narrative: corroborated + proposed with attribution. Conflicted claims: never in copy — evidence disclosure only. `researcher_inference`: never in copy. Enforced by the adapter, not by convention. | eng+product | M | adapter rejects out-of-bar claims (test case) |
+| E-6 | **Tier-C card UX (C12).** 137 entities have no editorial preview — decide what renders (score+facts card, "guide pending", or no card). | product | S | decision recorded + implemented |
 
 ## WS-F — Translations gate (P2 · after E-2 approval of EN copy)
 
@@ -94,6 +120,11 @@ slots first); existing Wikimedia thumbs on station/district records are leads,
 not approvals. Register candidates in bundle `images` arrays only after the
 rights check.
 
+**Scope amendment (G-2):** re-verification covers **any entity whose card
+ships** (integration-driven), not only researched entities — the existing
+Wikimedia thumbs on unresearched units need the same license/version re-check
+when their card goes live.
+
 ## WS-H — Standing guards (do NOT do)
 
 1. No score edits proposed or made by research — score disputes route to
@@ -106,6 +137,33 @@ rights check.
    drifted in every batch.
 5. No paywall bypass, no proxy mirrors, no personal data — standing method
    rules.
+
+## Program Definition of Done (C1)
+
+"Product-ready v1" is reached when **all** of the following hold:
+
+1. 183/183 bundles at their tier DoD (A/B human-approved; C bulk-approved).
+2. Zero open P1 audit findings across all batches.
+3. Legal/privacy gate (A-5) signed off for every copy-bearing unit; Thai
+   verification (A-6) done or copy excluded.
+4. Evidence bar (E-5) implemented and test-covered in the adapter.
+5. Integration slice merged with the app's own checks green; disclosures (E-3) live.
+6. Bundle re-anchoring current with the shipped app snapshot (D-4).
+7. Recheck calendar owned and current; link-rot wave scheduled (C-6).
+8. Kit under tests in CI (B-9).
+
+**Explicit decision items for the owner:** push/PR of the local branch
+(C13 — single-copy risk); naming the reviewer(s) (independence); naming the
+calendar owner (C-5); budget envelope for D-1 (≈9 full runs, 20–50M subagent
+tokens).
+
+**Routing note (C18):** the five safety-5 entities stay perception-labeled
+until CRTKY-150 (BMA risk registry) provides evidence — connect there rather
+than inventing unit-level claims.
+
+**Honesty note (C19):** batches 3–4 landed without inter-batch human review
+(autonomous dispatch was the instruction). A-1 is therefore the compensation
+control and covers four batches, not one — budget accordingly.
 
 ## Suggested sequencing
 
