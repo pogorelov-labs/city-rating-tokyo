@@ -1,0 +1,965 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://city-rating.pogorelov.dev/research/bangkok/entity-research-1.0.schema.json",
+  "title": "Bangkok entity research bundle 1.0 — staging only",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "const": "bangkok"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^(st\\.)?[a-z0-9-]+$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "district",
+            "station_area"
+          ]
+        },
+        "name_en": {
+          "type": "string"
+        },
+        "name_th": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope_notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city",
+        "key",
+        "kind",
+        "name_en",
+        "name_th",
+        "aliases",
+        "scope_notes"
+      ]
+    },
+    "selection_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "app_snapshot_id": {
+          "type": "string"
+        },
+        "model_score_default": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "cohort_rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cohort_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "popularity_status": {
+          "type": "string",
+          "enum": [
+            "unmeasured",
+            "insufficient_evidence",
+            "some_independent_coverage",
+            "broad_independent_coverage"
+          ]
+        },
+        "popularity_method": {
+          "type": "string"
+        },
+        "popularity_source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "selection_rationale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "app_snapshot_id",
+        "model_score_default",
+        "cohort_rank",
+        "cohort_size",
+        "popularity_status",
+        "popularity_method",
+        "popularity_source_ids",
+        "selection_rationale"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^src_[a-f0-9]{12}$"
+          },
+          "canonical_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "retrieved_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher_family": {
+            "type": "string",
+            "minLength": 1
+          },
+          "author": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "published_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "body_read": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "official_operator",
+              "government",
+              "tourism_publisher",
+              "editorial_guide",
+              "expat_publication",
+              "news",
+              "commercial_property",
+              "resident_report",
+              "academic",
+              "other"
+            ]
+          },
+          "commercial_context": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "canonical_url",
+          "retrieved_url",
+          "title",
+          "publisher",
+          "publisher_family",
+          "author",
+          "published_at",
+          "updated_at",
+          "retrieved_at",
+          "body_read",
+          "type",
+          "commercial_context",
+          "limitations"
+        ]
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text_en": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "factual_report",
+              "reported_perception",
+              "estimate",
+              "researcher_inference"
+            ]
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "polarity": {
+            "type": "string",
+            "enum": [
+              "strength",
+              "tradeoff",
+              "mixed",
+              "neutral"
+            ]
+          },
+          "geography": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": "string",
+                "enum": [
+                  "station_area",
+                  "district",
+                  "corridor",
+                  "venue",
+                  "building",
+                  "citywide",
+                  "other"
+                ]
+              },
+              "place_name": {
+                "type": "string"
+              },
+              "relation_to_entity": {
+                "type": "string",
+                "enum": [
+                  "inside",
+                  "partial",
+                  "outside",
+                  "unknown",
+                  "entire_unit"
+                ]
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "scope",
+              "place_name",
+              "relation_to_entity",
+              "notes"
+            ]
+          },
+          "temporal_scope": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "event_date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "observed_period": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "recheck_by": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "event_date",
+              "observed_period",
+              "recheck_by",
+              "notes"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "paraphrase": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "source_id",
+                "locator",
+                "paraphrase"
+              ]
+            },
+            "minItems": 1
+          },
+          "supporting_claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "conflicts_with": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "corroborated",
+              "conflicted",
+              "rejected",
+              "approved"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "text_en",
+          "kind",
+          "topics",
+          "polarity",
+          "geography",
+          "temporal_scope",
+          "evidence",
+          "supporting_claim_ids",
+          "conflicts_with",
+          "limitations",
+          "review_status"
+        ]
+      }
+    },
+    "question_answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "Q01",
+              "Q02",
+              "Q03",
+              "Q04",
+              "Q05",
+              "Q06",
+              "Q07",
+              "Q08",
+              "Q09",
+              "Q10",
+              "Q11",
+              "Q12"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "answered",
+              "conflicting",
+              "not_found",
+              "not_applicable"
+            ]
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "claim_ids",
+          "notes"
+        ]
+      },
+      "minItems": 12,
+      "maxItems": 12
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preview": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text_en": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "claim_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "text_en",
+                "claim_ids"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "guide_lead": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "text_en": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "claim_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "text_en",
+                "claim_ids"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "strengths": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claim_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "text_en",
+              "claim_ids"
+            ]
+          }
+        },
+        "tradeoffs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claim_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "text_en",
+              "claim_ids"
+            ]
+          }
+        },
+        "day_night": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claim_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "text_en",
+              "claim_ids"
+            ]
+          }
+        },
+        "within_area_variation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claim_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "text_en",
+              "claim_ids"
+            ]
+          }
+        },
+        "conditional_fit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "text_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "claim_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "text_en",
+              "claim_ids"
+            ]
+          }
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "preview",
+        "guide_lead",
+        "strengths",
+        "tradeoffs",
+        "day_night",
+        "within_area_variation",
+        "conditional_fit",
+        "uncertainties"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source_page_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "image_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "creator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "license_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "license_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "license_proof_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rights_status": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "restricted",
+              "review_required",
+              "approved"
+            ]
+          },
+          "commercial_use_allowed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "derivatives_allowed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "required_credit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "capture_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geographic_match": {
+            "type": "string",
+            "enum": [
+              "inside",
+              "partial",
+              "outside_context",
+              "unverified"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "station_entrance",
+              "street_context",
+              "park",
+              "landmark",
+              "night_context",
+              "gallery_other"
+            ]
+          },
+          "crop_and_focal_notes": {
+            "type": "string"
+          },
+          "caption_claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "alt_draft_en": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rights_reviewed_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rights_reviewed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source_page_url",
+          "image_url",
+          "creator",
+          "license_name",
+          "license_version",
+          "license_proof_url",
+          "rights_status",
+          "commercial_use_allowed",
+          "derivatives_allowed",
+          "required_credit",
+          "capture_date",
+          "geographic_match",
+          "role",
+          "crop_and_focal_notes",
+          "caption_claim_ids",
+          "alt_draft_en",
+          "rights_reviewed_by",
+          "rights_reviewed_at"
+        ]
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "ready_for_review",
+            "blocked",
+            "approved"
+          ]
+        },
+        "researcher": {
+          "type": "string"
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "identity": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "geography": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "sources": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "recency": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "claim_support": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "contradictions": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "copy": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "translations": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            },
+            "image_rights": {
+              "type": "string",
+              "enum": [
+                "not_checked",
+                "pass",
+                "fail",
+                "incomplete",
+                "not_applicable"
+              ]
+            }
+          },
+          "required": [
+            "identity",
+            "geography",
+            "sources",
+            "recency",
+            "claim_support",
+            "contradictions",
+            "copy",
+            "translations",
+            "image_rights"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "researcher",
+        "reviewer",
+        "reviewed_at",
+        "checks",
+        "notes"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "entity",
+    "selection_context",
+    "sources",
+    "claims",
+    "question_answers",
+    "editorial",
+    "images",
+    "review"
+  ]
+}

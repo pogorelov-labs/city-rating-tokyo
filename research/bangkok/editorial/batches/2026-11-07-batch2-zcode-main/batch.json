@@ -1,0 +1,462 @@
+{
+ "batch_id": "2026-11-07-batch2-zcode-main",
+ "task": "Bangkok editorial research batch 2 (research only; no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "app_snapshot_id": "bkk-d6499618507e7561",
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
+ "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
+ "parent_batch": "research/bangkok/editorial/batches/2026-11-05-pilot-zcode-main",
+ "qa_status_overrides": {},
+ "entities": [
+  {
+   "key": "phaya-thai",
+   "kind": "district",
+   "name_en": "Phaya Thai",
+   "name_th": "พญาไท",
+   "aliases": [
+    "Ari",
+    "Aree",
+    "Saphan Khwai",
+    "Sanam Pao",
+    "Pradiphat",
+    "Inthamara",
+    "Samsen Nai"
+   ],
+   "scope_notes": "Administrative khet (~9.59 km², pop ~67,388 in 2020) along the Phahonyothin corridor with sharply different subareas (Ari, Saphan Khwai, Sanam Pao, Pradiphat, Samsen Nai). Research-verified: the khet's namesake BTS Phaya Thai + ARL terminus sit in Ratchathewi, just outside the khet (app-polygon check confirms); inside stations are Ari, Sanam Pao, Saphan Khwai + SRT Sam Sen. Green 9's likely basis is the Royal Thai Army compound and other state land (controlled access, not public parkland — inference; 14.8 ha unmapped). Victory Monument's attribution is conflicting (app polygon includes the roundabout; sources place it in Ratchathewi).",
+   "selection_rationale": "District #4 with broad coverage; district-level counterpart to the pilot's st.ari findings; where the 14.8 ha of mapped parkland actually sit.",
+   "model_score_default": 8.0,
+   "cohort_rank": 4,
+   "cohort_size": 50
+  },
+  {
+   "key": "pom-prap-sattru-phai",
+   "kind": "district",
+   "name_en": "Pom Prap Sattru Phai",
+   "name_th": "ป้อมปราบศัตรูพ่าย",
+   "aliases": [
+    "Golden Mount",
+    "Wat Saket",
+    "Nang Loeng",
+    "Bobae",
+    "Khlong Thom",
+    "Woeng Nakhon Kasem",
+    "Pom Prap"
+   ],
+   "scope_notes": "Administrative khet (~1.93 km², pop ~41,524 in 2020, density ~21,504/km² — among Bangkok's densest) between the Golden Mount and Chinatown. Research-verified: the Chinatown Soi Nana bar strip and Bangkok Kunsthalle are in khwaeng Pom Prap; Woeng Nakhon Kasem is in Samphanthawong (the app alias list includes it — a data-level correction for reviewers); Rommaninat Park is in Phra Nakhon; Wat Ratchanatdaram's attribution is conflicting. Green 9 rests on the free Golden Mount compound and the Khlong Ong Ang promenade (researcher inference; only 0.7 ha mapped parks).",
+   "selection_rationale": "District #3 with broad independent coverage; owns the Chinatown Soi Nana bars and Khlong Thom the pilot placed outside Samphanthawong; green 9 vs 0.7 ha park test.",
+   "model_score_default": 8.16,
+   "cohort_rank": 3,
+   "cohort_size": 50
+  },
+  {
+   "key": "st.charoen-nakhon",
+   "kind": "station_area",
+   "name_en": "Charoen Nakhon",
+   "name_th": "เจริญนคร",
+   "aliases": [
+    "Gold Line (Khlong San)",
+    "ICONSIAM area",
+    "Somdet Chao Phraya"
+   ],
+   "scope_notes": "800 m nearest-stop catchment around BTS Charoen Nakhon (Gold Line G2) on the Charoen Nakhon Road corridor. District split (app data): Khlong San 75%, Bang Rak 25% — the 25% being the east-bank pier strip the circle sweeps across the river bend. Research-verified: ICONSIAM is inside and adjacent (OSM mall polygon ~0.14 km from the station; exits 1–3 bridge directly in; River Park end ~0.47 km). The Gold Line has three stations and never crosses the river (1.74–1.8 km total); the transport 10 plausibly reflects the pier cluster plus buses rather than rail service alone (researcher inference; score untouched).",
+   "selection_rationale": "Rank #2/133 with thin independent coverage — the high-score/low-coverage pattern; transport 10 for a Gold Line feeder needed a mechanism check.",
+   "model_score_default": 7.96,
+   "cohort_rank": 2,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.nana",
+   "kind": "station_area",
+   "name_en": "Nana",
+   "name_th": "นานา",
+   "aliases": [
+    "Sukhumvit Soi Nana",
+    "Soi Nana (Soi 4) bar strip",
+    "Soi Arab (Soi 3)",
+    "Nana intersection"
+   ],
+   "scope_notes": "800 m nearest-stop catchment around BTS Nana. District split (app data): Watthana 48%, Khlong Toei 44%, Pathum Wan 8%. NOT the Chinatown Soi Nana — that cocktail-bar strip sits in Pom Prap Sattru Phai inside st.wat-mangkon's catchment (batch-2 verified). Research-verified: Nana Plaza ~255–300 m inside; Bumrungrad campus straddles the NW boundary (frontage ~415–450 m inside, geotagged center ~710 m outside the polygon); Benchasiri ~1.7 km east and Lumphini ~1.6–1.7 km south both outside — green 10 is not reproducible from in-unit geometry (1.4 ha mapped, identity unresolved).",
+   "selection_rationale": "Popular-but-contested nightlife identity; the Soi Nana name confusion is a Q01 test; green 10 with 1.4 ha park is a green-geometry outlier.",
+   "model_score_default": 7.86,
+   "cohort_rank": 4,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.ratchathewi",
+   "kind": "station_area",
+   "name_en": "Ratchathewi",
+   "name_th": "ราชเทวี",
+   "aliases": [
+    "Ratchathewi intersection",
+    "Phetchaburi (corridor)"
+   ],
+   "scope_notes": "800 m nearest-stop catchment around BTS Ratchathewi, entirely within Ratchathewi khet but not the whole khet (which extends far north on Phahonyothin). Research-verified outside: Baiyoke Tower II (~1.28 km ENE), Santiphap Park (~1.65 km NNE, Ratchathewi khet's north), Suan Pakkad Palace Museum (~0.81 m NNE, nearer BTS Phaya Thai). No named public park verified inside (app 1.0 ha unmatched; OSM shows none). The Ratchathewi flyover closed 15–16 Jan 2025 with reconstruction due by Apr 2028.",
+   "selection_rationale": "Rank #3/133 and the only station area with 'some' measured coverage; safety 5 (lowest in the research set) vs vibe 10 needed testing.",
+   "model_score_default": 7.92,
+   "cohort_rank": 3,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.wat-mangkon",
+   "kind": "station_area",
+   "name_en": "Wat Mangkon",
+   "name_th": "วัดมังกร",
+   "aliases": [
+    "MRT Wat Mangkon (Blue Line)",
+    "Chinatown MRT station"
+   ],
+   "scope_notes": "800 m nearest-stop catchment around MRT Wat Mangkon (Blue Line, opened 2019), straddling Pom Prap Sattru Phai 51.4% / Samphanthawong 48.6%. Note for reviewers: Wikipedia attributes the station itself to Samphanthawong while the app's district split gives Pom Prap the majority. Research-verified inside: Wat Mangkon Kamalawat temple (~54 m to geotag, Pom Prap side — refuting a pilot note that placed it 'just outside the khet') and the northwestern end of the Chinatown Soi Nana bar strip (~414–447 m; the lane straddles the boundary). Research-verified outside: Wat Traimit and Odean Circle (st.hua-lamphong side), Khlong Ong Ang and Rommaninat Park (st.sam-yot side), Golden Mount (~0.91 km).",
+   "selection_rationale": "Boundary control: catchment split Pom Prap 51.4% / Samphanthawong 48.6%, straddling the pilot's Samphanthawong findings on both sides.",
+   "model_score_default": 7.7,
+   "cohort_rank": 10,
+   "cohort_size": 133
+  }
+ ],
+ "extra_search_logs": [
+  {
+   "label": "coverage-scan",
+   "entries": [
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "Charoen Nakhon Bangkok neighborhood guide",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Avani hotel blog; BK Magazine neighborhood guide via snippet (dated Oct 2020, outside window); Lazudi property blog (Jan 2023, outside window); undated Thai pieces"
+    },
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "ICONSIAM Charoen Nakhon area living guide Bangkok",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "error_concurrency_limit",
+     "note": "failed with user concurrency limit; retried as next entry"
+    },
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "Charoen Nakhon area guide where to stay riverside ICONSIAM",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "retry of failed query; mostly hotel listings; mentions BK Magazine 'A weekend guide to staying in Charoen Nakhon' dated 2024-08-09 (outside window)"
+    },
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "เจริญนคร คลองสาน ย่าน รีวิว",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Thai: Starvingtime FB food roundup, Chillpainai scoop 15322 (undated), Pantip thread (UGC); no dated editorial found"
+    },
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "Charoen Nakhon Bangkok 2025 OR 2026 news ICONSIAM",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "only ICONSIAM own PR (illumination 2026, Songkran 2026) = commercial/institutional"
+    },
+    {
+     "entity": "st.charoen-nakhon",
+     "query": "\"Charoen Nakhon\" OR \"Khlong San\" neighborhood Time Out OR \"BK Magazine\" 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "no in-window Time Out/BK piece on Charoen Nakhon; BK weekend guide is 2024-08-09 (outside window)"
+    },
+    {
+     "entity": "st.ratchathewi",
+     "query": "Ratchathewi Bangkok neighborhood guide",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "expat guides (Jul 2026, May 2026), PropertyScout-style area profile (Aug 2025), Reddit thread; many hits only as opaque google.com/goto URLs"
+    },
+    {
+     "entity": "st.ratchathewi",
+     "query": "Ratchathewi Bangkok living area cafe guide 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "thewaytocoffee.com Bangkok cafe guide 2026; Superagent expat guide; Thai cafe roundup 'รวม 7 คาเฟ่ย่านราชเทวี (อัปเดต 2025)'"
+    },
+    {
+     "entity": "st.ratchathewi",
+     "query": "ราชเทวี ย่าน กาแฟ รีวิว บล็อก",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "bkkmenu 'ราชเทวี มีครบทุก Destination' (undated); several cafe reviews; publishers of roundups not resolved"
+    },
+    {
+     "entity": "st.ratchathewi",
+     "query": "Ratchathewi Bangkok 2025 OR 2026 news",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Thai PBS World: Ratchathewi overpass closed 3 years for Orange Line works (Jan 2025); The Nation X post on Pratunam flooding (undated); Reddit"
+    },
+    {
+     "entity": "st.nana",
+     "query": "Nana Bangkok neighborhood guide Sukhumvit Soi Nana",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Royal Ivory hotel area guide; S15 hotel Nana Plaza guide; Travel Happy Nana & Asoke (undated); CN Traveler 'Soi Nana' = CHINATOWN soi (entity confusion, excluded here)"
+    },
+    {
+     "entity": "st.nana",
+     "query": "Soi Nana Sukhumvit living guide bars cafes 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "mixed Sukhumvit vs Chinatown Soi Nana results; CN Traveler + 'best bars' pieces are the Chinatown soi"
+    },
+    {
+     "entity": "st.nana",
+     "query": "สุขุมวิท ซอยนานา ย่าน รีวิว ไกด์",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Thai: Nomado Travel Sukhumvit guide (undated); Thai name-origin article dated 20 Nov 2025 (publisher/URL not resolved); Agoda/Tripadvisor = commercial/UGC"
+    },
+    {
+     "entity": "st.nana",
+     "query": "Nana Bangkok 2025 OR 2026 news nightlife BTS",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "nightlife SEO guides, TripAdvisor UGC, vlogs; no dated independent editorial about the Nana area itself"
+    },
+    {
+     "entity": "st.nana",
+     "query": "Nana Sukhumvit Bangkok Time Out OR \"BK Magazine\" guide 2025 bars restaurants area",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "no dated Time Out/BK piece specific to the Nana area within window surfaced by this query"
+    },
+    {
+     "entity": "st.phloen-chit",
+     "query": "Phloen Chit Bangkok neighborhood guide area",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "PropertyScout area guide (Jun 2025); PropertySights blog (Aug 2025); hotels.com Go Guides; Nerd Nomads where-to-stay (undated)"
+    },
+    {
+     "entity": "st.phloen-chit",
+     "query": "Phloen Chit Ploenchit Bangkok living embassy district guide 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "same property/OTA sources + The Luxury Editor hotel roundup (2025)"
+    },
+    {
+     "entity": "st.phloen-chit",
+     "query": "เพลินจิต ย่าน รีวิว ชิดลม ไกด์",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "len.golf Chidlom guide (2026, booking/lifestyle site); PropertyScout Thai guide; FB condo ads = commercial"
+    },
+    {
+     "entity": "st.phloen-chit",
+     "query": "\"Ploen Chit\" OR \"Phloen Chit\" Bangkok 2025 OR 2026 news",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Siam Real Estate property market piece (Aug 2026); One City Centre 'Bangkok Reflection' opened 2025-09-09 (article publisher unresolved); Trip.com OTA guide"
+    },
+    {
+     "entity": "st.phloen-chit",
+     "query": "Ploenchit Chidlom Bangkok Time Out 2025 guide things to do",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "no dated Time Out area-specific piece surfaced; TripAdvisor/hotels.com = platform/OTA"
+    },
+    {
+     "entity": "st.sam-yot",
+     "query": "Sam Yot Bangkok neighborhood guide Dinso Road",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Visit Thailand Today station page + '10 Minutes Walk from MRT Sam Yot'; eatingthaifood city eating guide mentioning a Sam Yot cafe (Nov 2025, one-venue mention); Facebook walking guide (UGC)"
+    },
+    {
+     "entity": "st.sam-yot",
+     "query": "สามยอด ย่าน กิน เที่ยว รีวิว ดินสอ",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Thai roundups around MRT Sam Yot; '10 ที่เที่ยว ย่าน MRT สามยอด Old Town' dated Jan 2024 (outside window); Lemon8 = platform; several roundups undated/unresolved publishers"
+    },
+    {
+     "entity": "st.sam-yot",
+     "query": "\"Sam Yot\" Bangkok MRT 2025 OR 2026 news old town",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "TBM breakthrough at Sam Yot station (Purple Line extension) = construction trade news about tunnelling, not neighborhood coverage"
+    },
+    {
+     "entity": "st.sam-yot",
+     "query": "Sam Yot station area guide Time Out OR \"BK Magazine\" OR Coconuts Bangkok 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "no dedicated 2025 Sam Yot area guide from Time Out/BK/Coconuts found"
+    },
+    {
+     "entity": "st.wat-mangkon",
+     "query": "Wat Mangkon MRT station Chinatown Bangkok area guide",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Wikipedia + generic station/transfer guides; no dated independent editorial surfaced"
+    },
+    {
+     "entity": "st.wat-mangkon",
+     "query": "วัดมังกร MRT ยาวาราช ย่าน รีวิว กินเที่ยว",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "SaleHere station-area roundup (undated; SCG lifestyle platform = commercial context); blognone 2018 (outside window); TrueID/Wongnai/Pantip = platform/UGC"
+    },
+    {
+     "entity": "st.wat-mangkon",
+     "query": "\"Wat Mangkon\" Bangkok Chinatown 2025 OR 2026 news Yaowarat",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "The Thaiger: Chinese opera event at Wat Mangkon Station (Dec 2025); Kin Jay festival routing (Oct 2025); May 2025 Chinatown feature mentions Wat Mangkon Kamalawat temple"
+    },
+    {
+     "entity": "pom-prap-sattru-phai",
+     "query": "Pom Prap Sattru Phai district Bangkok guide Golden Mount Bobae Nang Loeng",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Golden Mount guides (publishers unresolved via opaque URLs); TripAdvisor UGC; video guide; Tripsapien street-food mention"
+    },
+    {
+     "entity": "pom-prap-sattru-phai",
+     "query": "Soi Nana Chinatown Bangkok bars guide 2025 Ba Hao",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Time Out 'The Best Bars in Soi Nana - Chinatown' (Jan 2025) + speakeasy crawl (Oct 2025); Soi Nana Chinatown sits in Pom Prap Sattru Phai"
+    },
+    {
+     "entity": "pom-prap-sattru-phai",
+     "query": "ป้อมปราบศัตรูพ่าย ย่าน นางเลิ้ง บาวแว รีวิว ชุมชน",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Nang Loeng community pieces (wikicommunity.sac.or.th archive, undated); Facebook pages (UGC); Bangkok Design Week 2024 mention (borderline window, Jan-Feb 2024 = outside)"
+    },
+    {
+     "entity": "pom-prap-sattru-phai",
+     "query": "Pom Prap Sattru Phai Bangkok 2025 OR 2026 news",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Orange Line sinkhole/rescue (May 2025) covered by Bangkok Post, The Nation, Thai PBS; PM2.5 rankings; BMA council election 2026; flooding warnings Oct 2025"
+    },
+    {
+     "entity": "phaya-thai",
+     "query": "Phaya Thai district Bangkok neighborhood guide Ari Saphan Kwai",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Never Ending Footsteps Ari piece (undated); Nestopa Saphan Kwai property guide (commercial); Reddit UGC; note railway-station vs district confusion"
+    },
+    {
+     "entity": "phaya-thai",
+     "query": "Ari Bangkok neighborhood guide living 2025",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Condoreviews Thailand 'Living in Ari: Complete Expat Guide 2025'; totallybangkok.com (x2, undated)"
+    },
+    {
+     "entity": "phaya-thai",
+     "query": "อารีย์ พญาไท ย่าน รีวิว กิน เที่ยว ซอยอารีย์",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Thai 30-restaurant Ari roundups (ฉบับ 2024 / อัปเดต 2025, publishers unresolved); Amazing Thailand (TAT) Ari walking route = tourism authority; Pantip UGC"
+    },
+    {
+     "entity": "phaya-thai",
+     "query": "Phaya Thai Bangkok 2025 OR 2026 news Ari district",
+     "tool": "WebSearch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "ThinkFest 2026 in Ari (May 2026) covered by Bangkok Post/Time Out/Koktail/Daily News; eastblueth Ari-vs-Ekkamai (Sep 2026); Expedia OTA guide"
+    },
+    {
+     "entity": "multiple",
+     "query": "Ratchathewi neighborhood guide for expats Bangkok amenities transport rentals",
+     "tool": "exa web_search",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "resolved: Superagent Ratchathewi expat guide 2026-05-03; Superagent rent guide 2026-03-08; thailandstarterkit.com Living in Phaya Thai and Ratchathewi 2026-10-26; PropertyScout Ratchathewi 2025-08-07; baanlyy.com (undated, rental platform); find-easy.com 2026-10-10 (rental agency)"
+    },
+    {
+     "entity": "multiple",
+     "query": "ThinkFest 2026 Ari Bangkok creative neighborhood festival news article",
+     "tool": "exa web_search",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "full text obtained: Bangkok Post 2026-05-28; Time Out 2026-05-13 and 2026-10-21; Koktail 2026-05-12; Daily News (Thai) 2026-05-22; Rainmaker (Thai) 2026-11-02"
+    },
+    {
+     "entity": "multiple",
+     "query": "best bars Soi Nana Chinatown Bangkok Time Out guide",
+     "tool": "exa web_search",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Time Out 'Best Bars in Soi Nana - Chinatown' (2025-01-02 per Exa timestamp) and updated 'Best bars in Soi Nana (Chinatown)' (2026-03-26); venue pages Tep Bar / Ba Hao; address field confirms Pom Prap Sattru Phai"
+    },
+    {
+     "entity": "pom-prap-sattru-phai",
+     "query": "Orange Line sinkhole Pom Prap Sattru Phai construction worker May 2025 Bangkok",
+     "tool": "exa web_search",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "full text: The Nation 2025-05-20 + 2025-05-25; Bangkok Post 2025-05-19 + 2025-05-24; Thai PBS 2025-05-25 — all about Lan Luang station site in Pom Prap Sattru Phai"
+    },
+    {
+     "entity": "st.charoen-nakhon|st.nana|phaya-thai",
+     "query": "exa fetch: fullsuitcase.com/bangkok-neighborhoods-where-to-stay, cntraveler.com/activities/bangkok/soi-nana, condoreviewsthailand.com/neighborhoods/ari",
+     "tool": "exa web_fetch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "Fullsuitcase last-updated 2025-02-10 (riverside section not directly reached in fetched portion); CN Traveler Soi Nana explicitly = Chinatown, 'not to be confused with the seedy Soi Nana on Sukhumvit Road', undated; Condoreviews Ari guide is substantive, title says 2025"
+    },
+    {
+     "entity": "st.sam-yot",
+     "query": "exa fetch: visitthailandtoday.com/transportation/bangkok/sam-yot-mrt-station",
+     "tool": "exa web_fetch",
+     "when": "2026-11-07",
+     "outcome": "results",
+     "note": "page shows 'Written by Mac Kiley - Updated Sep 2026' = in window; substantive station-area editorial with old-town context"
+    }
+   ]
+  }
+ ]
+}

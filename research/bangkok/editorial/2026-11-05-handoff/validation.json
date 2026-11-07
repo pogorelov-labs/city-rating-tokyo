@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-05",
+  "schema_meta_validation": "passed: jsonschema Draft202012Validator.check_schema",
+  "priority_seed": "183 unique recognized dataset keys; 6 pilot entries",
+  "popularity": "all unmeasured, no fabricated counts",
+  "profile_bundles_researched": 0,
+  "dispatch": "not performed",
+  "live_app_data_changed": false
+}

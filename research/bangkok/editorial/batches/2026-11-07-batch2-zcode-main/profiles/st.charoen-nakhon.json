@@ -1,0 +1,1348 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.charoen-nakhon",
+  "kind": "station_area",
+  "name_en": "Charoen Nakhon",
+  "name_th": "เจริญนคร",
+  "aliases": [
+   "Gold Line (Khlong San)",
+   "ICONSIAM area",
+   "Somdet Chao Phraya"
+  ],
+  "scope_notes": "800 m nearest-stop catchment around BTS Charoen Nakhon (Gold Line G2) on the Charoen Nakhon Road corridor. District split (app data): Khlong San 75%, Bang Rak 25% — the 25% being the east-bank pier strip the circle sweeps across the river bend. Research-verified: ICONSIAM is inside and adjacent (OSM mall polygon ~0.14 km from the station; exits 1–3 bridge directly in; River Park end ~0.47 km). The Gold Line has three stations and never crosses the river (1.74–1.8 km total); the transport 10 plausibly reflects the pier cluster plus buses rather than rail service alone (researcher inference; score untouched)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.96,
+  "cohort_rank": 2,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Rank #2/133 with thin independent coverage — the high-score/low-coverage pattern; transport 10 for a Gold Line feeder needed a mechanism check."
+ },
+ "sources": [
+  {
+   "id": "src_151eec5017f0",
+   "canonical_url": "https://en.wikipedia.org/wiki/Charoen_Nakhon_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Charoen_Nakhon_station",
+   "title": "Charoen Nakhon station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:01:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "crowd-edited; dates/station layout could drift"
+   ]
+  },
+  {
+   "id": "src_72eebd4675d7",
+   "canonical_url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "title": "Gold Line (Bangkok)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:02:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "fare stated as 16 THB conflicts with 17 THB on third-party sites",
+    "ridership table as of Q3 2026 per article"
+   ]
+  },
+  {
+   "id": "src_0f27047f94e6",
+   "canonical_url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "retrieved_url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "title": "ICONSIAM",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T15:16:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "duplication/parenthetical about tower heights appeared garbled; tower figures used with care"
+   ]
+  },
+  {
+   "id": "src_c158d7172022",
+   "canonical_url": "https://en.wikipedia.org/wiki/Princess_Mother_Memorial_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Princess_Mother_Memorial_Park",
+   "title": "Princess Mother Memorial Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:22:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "article coordinates (13.7367,100.4994) contradict the article's own text (Khlong San, Soi Somdet Chao Phraya 3); treated as conflicting"
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter (two around: queries centered 13.72646,100.50907, radii 800 m and 1200 m; base snapshot 2026-11-07T14:05:51Z)",
+   "title": "OpenStreetMap via Overpass API: parks, piers, ferry terminals, named landmarks around BTS Charoen Nakhon",
+   "publisher": "OpenStreetMap contributors",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T14:05:51Z",
+   "retrieved_at": "2026-11-07T14:40:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "third query (park/temple/railway search, 2.2-2.5 km) timed out on both Overpass instances",
+    "OSM completeness in this area is good for piers/roads but market/landuse tags may lag reality (e.g., ตลาดคลองสาน tagged 'construction')"
+   ]
+  },
+  {
+   "id": "src_37b68ce967d7",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "title": "Condos for Rent in Khlong San (363 listings)",
+   "publisher": "PropertyScout Thailand",
+   "publisher_family": "PropertyScout",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T15:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "commercial_context: property portal; asking rents, marketing-skewed",
+   "limitations": [
+    "asking rents not signed contracts",
+    "mean only, no median; heavily skewed by luxury riverside stock",
+    "district-wide, not station-specific"
+   ]
+  },
+  {
+   "id": "src_a77791355331",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/308078",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/308078",
+   "title": "ปิดตำนาน \"ตลาดคลองสานพลาซ่า\" ส่งคืนพื้นที่ให้การรถไฟฯ (Khlong San Plaza hands land back to SRT)",
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS",
+   "author": null,
+   "published_at": "2021-09-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T15:02:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Thai-language public broadcaster; article datable to Sep 2021 from context (lease expired Apr 2021, closure at end of 2021); exact publish day not shown on page"
+   ]
+  },
+  {
+   "id": "src_3afeae7abb3c",
+   "canonical_url": "https://www.iconsiam.com/en/getting-here",
+   "retrieved_url": "https://www.iconsiam.com/en/getting-here",
+   "title": "Getting Here — ICONSIAM",
+   "publisher": "ICONSIAM (Siam Piwat / MQDC)",
+   "publisher_family": "ICONSIAM (Siam Piwat)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:11:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "commercial_context: mall owner marketing",
+   "limitations": [
+    "JS-heavy page: shuttle-boat details rendered as headings only; hours and parking read from rendered text"
+   ]
+  },
+  {
+   "id": "src_eca21341b803",
+   "canonical_url": "https://www.bangkok-spirit.com/destinations/iconsiam-khlong-san/",
+   "retrieved_url": "https://www.bangkok-spirit.com/destinations/iconsiam-khlong-san",
+   "title": "ICONSIAM & Khlong San Bangkok guide 2026",
+   "publisher": "Bangkok Spirit",
+   "publisher_family": "Bangkok Spirit",
+   "author": null,
+   "published_at": "2026-07-09",
+   "updated_at": "2026-07-09",
+   "retrieved_at": "2026-11-07T15:10:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "commercial_context: tourism site with internal links to booking-oriented guides",
+   "limitations": [
+    "visitor-oriented; resident experience (schools, rents, commuting pain) out of scope",
+    "contains generic promotional phrasing"
+   ]
+  },
+  {
+   "id": "src_e9d9cf464f79",
+   "canonical_url": "https://chaophrayaexpressboat.com/en/home",
+   "retrieved_url": "https://chaophrayaexpressboat.com/en/home and https://chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en",
+   "title": "Chao Phraya Express Boat — routes and fares",
+   "publisher": "Chao Phraya Express Boat Co.",
+   "publisher_family": "Chao Phraya Express Boat (operator)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:17:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "commercial_context: boat operator",
+   "limitations": [
+    "official pages list line endpoints and flat fares but NOT per-pier stop lists",
+    "note on routes page: 'Oriental Pier (N1) - Close for renovation'"
+   ]
+  },
+  {
+   "id": "src_995203b6f5d5",
+   "canonical_url": "https://www.thansettakij.com/economy/mega-project/536321",
+   "retrieved_url": "https://www.thansettakij.com/economy/mega-project/536321",
+   "title": "ปิดตำนาน \"ที่ดินตลาดคลองสาน\" 839 ล้าน ลุ้น รฟท. ปรับโฉม",
+   "publisher": "Thansettakij",
+   "publisher_family": "Thansettakij (Krungthep Turakij group)",
+   "author": null,
+   "published_at": "2022-08-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T15:05:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "SNIPPET-ONLY (search result summary): SRT plan to redevelop ~5 rai as THB 839m mixed-use; corroborates Thai PBS, not used as sole evidence for any claim",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_4cb7ecbf510f",
+   "canonical_url": "https://www.getyourguide.com/en-gb/princess-mother-memorial-park-l5582",
+   "retrieved_url": "https://www.getyourguide.com/en-gb/princess-mother-memorial-park-l5582",
+   "title": "Princess Mother Memorial Park listing",
+   "publisher": "GetYourGuide",
+   "publisher_family": "GetYourGuide",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:45:00Z",
+   "body_read": false,
+   "type": "tourism_publisher",
+   "commercial_context": "commercial_context: tour booking platform",
+   "limitations": [
+    "SNIPPET-ONLY: address 'Soi Somdet Chao Phraya 3, Khlong San 10600' + Plus Code PFPX+MQ4; used only to corroborate the address side of a recorded coordinate conflict",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_0832ae003a83",
+   "canonical_url": "https://www.facebook.com/UrbanJourneyByMalilee/posts/1515594696657836",
+   "retrieved_url": "https://www.facebook.com/UrbanJourneyByMalilee/posts/1515594696657836",
+   "title": "สายสีทองส่วนต่อขยายจะได้สร้างต่อไหม? (Will the Gold Line extension be built?)",
+   "publisher": "Urban Journey by Malilee",
+   "publisher_family": "Urban Journey by Malilee (Facebook page)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:30:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "SNIPPET-ONLY via search summary: extension not approved for construction; planned G4 Prachathipok between Soi Somdet Chao Phraya 6-8; no independent confirmation; flagged, not load-bearing",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "charoen-nakhon-c01",
+   "text_en": "The unit's physical stop is BTS Charoen Nakhon, station code G2 on the BTS Gold Line, at 13.7265N/100.5090E on Charoen Nakhon Road, Khlong San district (west/Thonburi bank of the Chao Phraya). It opened 16 December 2020, is owned by the BMA and operated by Krungthep Thanakom (with BTSC under a 30-year O&M contract), and its street level includes a bus stop, Mitr Phol Business Administration Technological College, Millennium Hilton Hotel and Magnolias Waterfront Residences.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Charoen Nakhon (Gold Line G2)",
+    "relation_to_entity": "entire_unit",
+    "notes": "station itself; Wikipedia coordinates match the app point (13.72646,100.50907) to ~1 m"
+   },
+   "temporal_scope": {
+    "event_date": "2020-12-16",
+    "observed_period": null,
+    "recheck_by": "2027-06-01",
+    "notes": "recheck if G3/service pattern changes"
+   },
+   "evidence": [
+    {
+     "source_id": "src_151eec5017f0",
+     "locator": "infobox + 'Nearby' section",
+     "paraphrase": "Coordinates 13.7265,100.5090; Charoen Nakhon Road, Khlong San district; Gold Line G2; opened 16 Dec 2020; BMA owner, Krungthep Thanakom operator; nearby: ICONSIAM, Wat Suwan, Hilton, Magnolias, college, express boat access"
+    },
+    {
+     "source_id": "src_72eebd4675d7",
+     "locator": "Operators section",
+     "paraphrase": "Krungthep Thanakom developed the line; BTSC operates it under a 30-year contract"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "charoen-nakhon-c02",
+   "text_en": "The Gold Line is a ~1.74-1.8 km elevated automated people mover with three stations in sequence: G1 Krung Thon Buri (interchange with the BTS Silom line), G2 Charoen Nakhon (ICONSIAM), G3 Khlong San (terminus; future SRT connection). It runs entirely on the Thonburi (west) side and does NOT cross the Chao Phraya river, contradicting the premise that the station connects 'across the river' — the BTS network link itself is the interchange at G1. Service opened free on 16 Dec 2020, charged 15 THB from mid-Jan 2021; Wikipedia currently lists a flat 16 THB while third-party sites list 17 THB; rides were free again 25-31 Jan 2025 under the PM2.5 policy.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line Krung Thon Buri - Khlong San",
+    "relation_to_entity": "entire_unit",
+    "notes": "the unit's only rail link; correction to the app's '2 stops / across the river' framing"
+   },
+   "temporal_scope": {
+    "event_date": "2020-12-16",
+    "observed_period": "2020-12-16 onward",
+    "recheck_by": "2027-01-01",
+    "notes": "fare figure conflicting (16 vs 17 THB) and any Purple Line-linked extension could change this"
+   },
+   "evidence": [
+    {
+     "source_id": "src_72eebd4675d7",
+     "locator": "Stations table + overview",
+     "paraphrase": "Three stations G1 Krung Thon Buri, G2 Charoen Nakhon, G3 Khlong San; 1.8 km; opened 16 Dec 2020; free until 15 Jan 2021; flat 16 baht; free week 25-31 Jan 2025; line on the Thon Buri side with no river crossing"
+    },
+    {
+     "source_id": "src_151eec5017f0",
+     "locator": "Adjacent stations + service table",
+     "paraphrase": "Charoen Nakhon sits between Khlong San and Krung Thon Buri; platform 2 unused off-peak, single-platform bidirectional service at quiet times"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "flat fare 16 vs 17 THB unresolved across sources"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "charoen-nakhon-c03",
+   "text_en": "Gold Line usage is small and mall-dominated: in the free opening month it averaged 5,000-6,000 passengers/day, of whom ~3,000 used the ICONSIAM (Charoen Nakhon) station; the line fell to 1,809/day in Q1 2022 and grew to 8,390/day by Q4 2025 (7,885 in Q3 2026). Press summaries put the pre-opening forecast at ~42,000/day and a later share of ~0.44% of Bangkok mass-transit trips; the free shuttle boat to Sathorn is widely cited as competing with the fare-charging line.",
+   "kind": "factual_report",
+   "topics": [
+    "crowd",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line",
+    "relation_to_entity": "entire_unit",
+    "notes": "tests the transport-10 rating's 'feeder line' component"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2020-12 to 2026-Q3",
+    "recheck_by": "2027-06-01",
+    "notes": "quarterly ridership keeps moving; Q4 2025 is the latest quarter cited in the article body"
+   },
+   "evidence": [
+    {
+     "source_id": "src_72eebd4675d7",
+     "locator": "Ridership paragraph + table",
+     "paraphrase": "Free month: 5,000-6,000 daily passengers, 3,000 using Iconsiam station; table: 1,809 (Q1 2022) rising to 8,390 (Q4 2025), Q3 2026 at 7,885"
+    },
+    {
+     "source_id": "src_eca21341b803",
+     "locator": "'Getting there is half the fun' section",
+     "paraphrase": "Free shuttle boats run frequently from Sathorn pier and other piers to the mall dock — presented as the classic way to arrive, alongside the Gold Line"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "42,000/day forecast and 0.44% share are search-snippet level (Bangkok Post paywalled, MRTA report not fetched); used only as corroboration, never as sole evidence"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c04",
+   "text_en": "Planned extensions would push the Gold Line ~1 km further along Somdet Chao Phraya Road to connect with the future MRT Purple Line southern extension, then ~0.95 km more west to a Prajadhipok terminus; as of 2025-2026 Thai-language transit commentary the construction has not been approved/started, and a future G4 'Prachathipok' station is drawn between Soi Somdet Chao Phraya 6-8. Until then the unit keeps no direct second-rail-line link.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Somdet Chao Phraya Road corridor",
+    "relation_to_entity": "partial",
+    "notes": "alignment starts south/west of the station along the road that bounds the unit's inland side; exact alignment vs catchment edge unknown"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "2027-06-01",
+    "notes": "Purple Line southern extension has been the trigger date in plans"
+   },
+   "evidence": [
+    {
+     "source_id": "src_72eebd4675d7",
+     "locator": "Extensions section",
+     "paraphrase": "Line 'will be extended 1 km along Somdet Chao Phraya road' to link with the future MRT Purple Line southern extension, then 0.95 km further west to terminate at Prajadhipok station"
+    },
+    {
+     "source_id": "src_0832ae003a83",
+     "locator": "post summary",
+     "paraphrase": "SNIPPET-ONLY: extension not yet approved for construction; G4 Prachathipok drawn between Soi SCP 6-8 — corroborative, not sole evidence"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "construction-status part rests on a Facebook urban-transit post (snippet-only); treat 'not started' as uncertain"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c05",
+   "text_en": "The station is stitched to the mall by elevated walkways: Exit 1 opens toward the ICS building and Sois Charoen Nakhon 2/4, Exit 2 connects through the 'Charoen Nakhon Hall' bridge, and Exit 3 serves ICONSIAM's main building plus Mandarin Oriental residences, the Hilton and Sois 3/5 — so the mall is a 2-5 minute covered walk, not an 800 m trek.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Charoen Nakhon exits / ICONSIAM links",
+    "relation_to_entity": "inside",
+    "notes": "OSM shows ICONSIAM mall polygon center ~0.14 km from the station point, consistent with a connected-adjacent complex"
+   },
+   "temporal_scope": {
+    "event_date": "2020-12-16",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_id": "src_151eec5017f0",
+     "locator": "Exits table",
+     "paraphrase": "Exit 1: ICONSIAM (ICS building), college, Sois 2 and 4; Exit 2: ICONSIAM via bridge through Charoen Nakhon Hall; Exit 3: ICONSIAM main building, Mandarin Oriental residences, Hilton, Sois 3 and 5"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "way/680735864 (mall), Overpass 2026-11-07",
+     "paraphrase": "ICONSIAM mall polygon center 13.72683,100.51033, ~0.14 km from the station point"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "walk times are inference from geometry and the documented connections, not a timed walk"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c06",
+   "text_en": "ICONSIAM is effectively the unit's southern half-anchor: the OSM mall polygon center sits ~0.14 km from the station, the complex's southern end (~13.722, 100.5102, the River Park area the app briefing cites) lies ~0.51 km straight-line, and every rated neighbor (BTS Krung Thon Buri ~1.2 km WSW, Wongwian Yai ~2 km WSW, Talat Phlu farther SW) is farther for that ground, so no plausible nearest-stop clip removes it. Membership is nonetheless logged as 'inside with caveat' because the app's clip geometry is not independently reproducible.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "ICONSIAM, 299 Charoen Nakhon Soi 5",
+    "relation_to_entity": "inside",
+    "notes": "raw-radius inside at 0.14-0.51 km; clip check vs G1 Krung Thon Buri bisector puts ICONSIAM on the station side; app-internal geometry unverifiable — caveat stands"
+   },
+   "temporal_scope": {
+    "event_date": "2018-11-09",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "opened 9 Nov 2018"
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "way/680735864, node/6150815344 (ICONSIAM pier 2, 0.30 km)",
+     "paraphrase": "Mall polygon center 13.72683,100.51033 (~0.14 km); mall piers 1/2/4 at 0.14-0.32 km; task coordinate 13.722,100.5102 computes to ~0.51 km"
+    },
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "lead + location",
+     "paraphrase": "ICONSIAM at 299 Charoen Nakhon Soi 5, Khlong San district; adjacent to Charoen Nakhon station on the Gold Line"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "app's nearest-stop clip not published; 'inside' asserted on raw radius + neighbor-distance arithmetic, flagged as caveat rather than certainty"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c07",
+   "text_en": "ICONSIAM is a 525,000 m2 riverfront mega-mall opened 9 November 2018 (Siam Piwat + MQDC + CP, ~THB 54bn): Siam Takashimaya, Thailand's riverside Apple store, ICONLUXE luxury wing, the River Museum, two supertall residential towers (Magnolias Waterfront Residences ~318 m/70 floors; Mandarin Oriental Residences ~272 m), and a riverside park of more than 10,000 m2 with a public riverside walkway; four piers on site serve private boats and public ferries, with visitor ferries from Sathorn, Sheraton and Si Phraya piers.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food",
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "ICONSIAM complex",
+    "relation_to_entity": "inside",
+    "notes": null
+   },
+   "temporal_scope": {
+    "event_date": "2018-11-09",
+    "observed_period": "2018-2026",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "lead + facilities + transport sections",
+     "paraphrase": "Opened 9 Nov 2018; 525,000 m2; Siam Takashimaya, Apple store, 3,000-seat hall, River Museum; Magnolias 318 m and Mandarin Oriental Residences 272 m towers; riverside park >10,000 m2 and walkway; four piers built on site; ferries from Sathorn, Sheraton, Si Phraya"
+    },
+    {
+     "source_id": "src_eca21341b803",
+     "locator": "SookSiam + fountain sections",
+     "paraphrase": "SookSiam indoor 'floating market' gathers food from all 77 Thai provinces; nightly free ICONIC multimedia fountain-and-light show on the riverside promenade; dinner cruises and the Alangka cruise use the ICONSIAM pier"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "mall is a gated-hours space (10:00-22:00 daily per official page) — its contents are not round-the-clock area amenities"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c08",
+   "text_en": "Across Charoen Nakhon Road from the mall, the ICS mixed-use complex ('ICONSIAM 2') opened in 2023 — Wikipedia's ICONSIAM article dates it 11 January 2023 while mall-adjacent coverage says 11 December 2023 (conflict unresolved) — combining a second retail mall, office floors and a hotel (Wikipedia describes a 244-room Millennium Hilton within the ICS building); an OSM supermarket node for a Lotus's sits ~0.07 km from the station on the ICS side of the road, matching the reported Lotus's Privé anchor.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "recent_changes"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "ICS Lifestyle Complex, Charoen Nakhon Road",
+    "relation_to_entity": "inside",
+    "notes": "directly opposite the station across Charoen Nakhon Rd"
+   },
+   "temporal_scope": {
+    "event_date": "2023-01-11",
+    "observed_period": "2023-2026",
+    "recheck_by": "2027-01-01",
+    "notes": "opening month conflicting: Jan vs Dec 2023"
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "ICS paragraph",
+     "paraphrase": "ICS opened 11 January 2023; article describes the ICS building including a 244-room Millennium Hilton Bangkok"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "node/10687090476",
+     "paraphrase": "OSM node 'Lotus's' (shop=supermarket) at 13.72637,100.50845, ~0.07 km from the station"
+    },
+    {
+     "source_id": "src_995203b6f5d5",
+     "locator": "n/a (search summaries)",
+     "paraphrase": "SNIPPET-ONLY corroboration: ICS across Charoen Nakhon Rd with Lotus's Privé anchor, retail reported opening 11 Dec 2023"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "ICS opening month conflicting across sources",
+    "identity of the OSM Lotus's node with the reported Lotus's Privé is plausible but not separately confirmed"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "charoen-nakhon-c09",
+   "text_en": "The mapped '9 piers' are real and then some: Overpass/OSM returns at least 12 named ferry terminals or pier features within 800 m straight-line — on the west bank ICONSIAM piers 1/2/4 (~0.14-0.32 km), Wat Suwan pier (~0.40 km), Khlong San pier (~0.40 km), Hilton pier (~0.35 km) and Taksin pier (~0.76 km), and across the river the Si Phraya pier pair (~0.52-0.55 km), Wat Muang Khae (~0.50 km), CAT/Telecom pier (~0.49 km), Oriental pier (~0.62 km) and the Marine Department pier (~0.72 km) — with mapped boat routes including ICONSIAM-Sathorn and ICONSIAM-Si Phraya shuttles and the Si Phraya-Khlong San and Oriental-Wat Suwan cross-river ferries.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "river pier cluster around Khlong San / Bang Rak bend",
+    "relation_to_entity": "entire_unit",
+    "notes": "explains both the '9 piers' count and the app's Bang Rak 25% share: the 800 m circle crosses the river bend into Bang Rak pier ground, and no rated neighbor is nearer there"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": "2027-11-01",
+    "notes": "mapped existence != scheduled service; several piers are hotel/private or closed (see c10)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "ferry_terminal nodes 3946362036, 3946372582, 10726384742, 6150815344/46, 3578835663, 2397987932, 3505137003, 1408521453, 1408498124, 1057672409 (คลองสาน/สี่พระยา/วัดสุวรรณ/ไอคอนสยาม/ตากสิน/วัดม่วงแค/กสท./โอเรียนเต็ล/กรมเจ้าท่า/ฮิลตัน); route ways 40838952, 391412195, 664353686, 1133812405",
+     "paraphrase": "12 named ferry terminals + multiple pier ways within 800 m on both banks; shuttle and cross-river ferry route lines mapped"
+    },
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "transport section",
+     "paraphrase": "Four piers built on site at ICONSIAM for private boats and public ferries; visitor ferries run from Sathorn, Sheraton and Si Phraya piers"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "OSM mapping proves infrastructure, not timetables; whether the Khlong San-Si Phraya and Oriental-Wat Suwan ferries still run is unverified (see c12/open issues)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c10",
+   "text_en": "Scheduled river-bus service touching the unit is narrower than the pier count suggests: the Chao Phraya Express Boat orange line runs Nonthaburi-Wat Rajsingkorn (southern terminus well south of the station) at a flat 19 THB, and the operator's own routes page notes the Oriental pier (N1) closed for renovation; the official site publishes no per-pier stop list, so express-boat calls at west-bank piers (Wat Suwan, Wat Prayurawongsawat) could not be confirmed from the operator and remain unverified; the Tourist Boat serving ICONSIAM pier is a paid tourist service.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Chao Phraya express boat southern section",
+    "relation_to_entity": "partial",
+    "notes": "southern terminus Wat Rajsingkorn lies ~1.5 km south; some west-bank stops may fall inside the unit but are unconfirmed"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as displayed 2026-11-07",
+    "recheck_by": "2027-05-01",
+    "notes": "fares changed from 15/16 to 19 THB (orange) over 2022-2026 per page's current state"
+   },
+   "evidence": [
+    {
+     "source_id": "src_e9d9cf464f79",
+     "locator": "lines/fares table",
+     "paraphrase": "Orange line Nonthaburi-Rajsingkorn Mon-Fri flat 19 THB; yellow/red/green-yellow lines terminate at Sathorn; note 'Oriental Pier (N1) - Close for renovation'"
+    },
+    {
+     "source_id": "src_e9d9cf464f79",
+     "locator": "coverage statement",
+     "paraphrase": "Route coverage described as 'ตั้งแต่ท่าปากเกร็ด ถึง ท่าวัดราชสิงขร' (Pakkret pier to Wat Rajsingkorn pier) — no per-pier list published"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "stop-level service at Wat Suwan/Wat Prayur piers not confirmed by the operator; assume river-bus reach for the unit is mainly via the southern terminus direction or Sathorn, pending field check"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "charoen-nakhon-c11",
+   "text_en": "Street-level bus provision at the station is substantial for a feeder stop: eight BMTA routes call at the BTS Charoen Nakhon bus stop — 3 (Mo Chit 2-Khlong San), 6 (Phra Pradaeng-Bang Lamphu), 84 (Wat Rai Khing-BTS Krung Thon Buri), 88, 105, 111 (Charoen Nakhon-Talat Phlu), 120 and 149 (to Ekkamai) — giving Thonburi-side and cross-town surface alternatives without needing the Gold Line.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Charoen Nakhon bus stop, Charoen Nakhon Rd",
+    "relation_to_entity": "entire_unit",
+    "notes": null
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as listed 2026",
+    "recheck_by": "2027-06-01",
+    "notes": "BMTA routes are periodically renumbered/restructured"
+   },
+   "evidence": [
+    {
+     "source_id": "src_151eec5017f0",
+     "locator": "Bus connections list",
+     "paraphrase": "Routes 3, 6, 84, 88, 105, 111, 120, 149 serve the station's street-level bus stop, with destinations including Khlong San, Talat Phlu, BTS Krung Thon Buri and Ekkamai"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "route list from Wikipedia station article; live BMTA status not cross-checked"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "charoen-nakhon-c12",
+   "text_en": "The area's traditional local market anchor is gone: Talat Khlong San / Khlong San Plaza, a 40+ year market on SRT land by the Khlong San pier block (~0.30 km north of the station), had to close at the end of 2021 after its lease expired in April 2021; demolition had begun while the front section still traded, vendors were displaced (the 40-year Jableang drink stall publicly lamented the closure), and the Khlong San cross-river ferry pier's own contract also ran out in December 2021. OSM in 2026 still tags the market block as 'construction', and 2025 posts describe only a residual morning market plus walking-street events; some vendors moved to the Rama II / Om Noi area.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food",
+    "recent_changes"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Talat Khlong San / Khlong San Plaza site",
+    "relation_to_entity": "inside",
+    "notes": "raw radius 0.30 km N; block later slated for SRT mixed-use redevelopment (~THB 839m plan, snippet-only corroboration)"
+   },
+   "temporal_scope": {
+    "event_date": "2021-12-31",
+    "observed_period": "2021 closure; 2025 residual-market reports",
+    "recheck_by": "2027-01-01",
+    "notes": "SRT redevelopment award would materially change daily-life supply"
+   },
+   "evidence": [
+    {
+     "source_id": "src_a77791355331",
+     "locator": "article body",
+     "paraphrase": "Market operating 40+ years to close end-2021 because the SRT lease expired April 2021 (บริษัท ที่ปรึกษาการวางแผนและพัฒนา handing buildings back); demolition under way; Jableang stall 'ใจหาย' quote; the Khlong San cross-river ferry pier 'จะหมดสัญญาเดือน ธ.ค.2564'"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "way/40838959",
+     "paraphrase": "OSM way named ตลาดคลองสาน at 13.72893,100.51014 (~0.30 km) tagged building=construction"
+    },
+    {
+     "source_id": "src_995203b6f5d5",
+     "locator": "n/a (search summaries)",
+     "paraphrase": "SNIPPET-ONLY corroboration: SRT plan to develop the ~5 rai site as a THB 839 million mixed-use project; 2025 reports of a residual morning market and local walking street"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "operational status of the Khlong San-Si Phraya cross-river ferry today is unverified (OSM still maps it; the pier's SRT contract reportedly lapsed Dec 2021)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c13",
+   "text_en": "Everyday facilities inside the catchment, by straight-line distance: a Lotus's supermarket ~0.07 km from the station (ICS side) and Villa Market ~0.75-0.80 km SW at the raw-radius edge; Wat Suwan temple with its school and the Soi Wat Suwan residential lanes ~0.29-0.31 km south; the Khlong San district office ~0.46 km north; the Somdet Chao Phraya Institute of Psychiatry (Thailand's first psychiatric hospital, formerly Somdet Chao Phraya Hospital, 112 Somdet Chao Phraya Rd) ~0.65 km NW; and the old Talat Noi / Talat Ngoi quarter across the river from ~0.89 km (outside).",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Charoen Nakhon / Somdet Chao Phraya / Wat Suwan blocks",
+    "relation_to_entity": "inside",
+    "notes": "Villa Market at 0.80 km is an edge case — partial; all others comfortably inside raw radius"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": "2027-11-01",
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "node/10687090476, node/3448911330, way/376674387, node/1193789382, node/374423174, way/1000481572, node/3265832099",
+     "paraphrase": "OSM: Lotus's 0.07 km; Villa Market 13.71944,100.50737 ~0.80 km; Wat Suwan temple 13.72393,100.50848 ~0.29 km with school and ชุมชนซอยวัดสุวรรณ ~0.31 km; สำนักงานเขตคลองสาน ~0.46 km; โรงพยาบาลสมเด็จเจ้าพระยา ~0.65 km; ตลาดน้อย ~0.89 km"
+    },
+    {
+     "source_id": "src_151eec5017f0",
+     "locator": "Nearby section",
+     "paraphrase": "Street level includes Mitr Phol Business Administration Technological College and the Wat Suwan area adjacency"
+    },
+    {
+     "source_id": "src_0832ae003a83",
+     "locator": "n/a (search summaries)",
+     "paraphrase": "SNIPPET-ONLY corroboration: institute address 112 Somdet Chao Phraya Rd, Khlong San; formerly Somdet Chao Phraya Hospital, Thailand's first psychiatric hospital"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no full-service general hospital confirmed inside the catchment; nearest such option unverified"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c14",
+   "text_en": "Rent test against the app's 21,500 (1-bed) / 47,500 (2-bed): PropertyScout's Khlong San snapshot (363 condo rental listings, read 2026-11-07) shows means of 14,885 (studio), 27,444 (1-bed, range 10,000-200,000, n=204), 89,852 (2-bed, range 16,000-250,000, n=75) and 183,500 (3-bed) with NO median published; station-adjacent-style examples in the same feed rent at 16,000-16,500 (FLO by Sansiri 1-bed), 18,000-24,500 (Supalai Premier Charoen Nakhon) and 28,000-40,000 (Baan Chao Phraya). The app's 1-bed 21,500 sits inside the realistic 16,000-27,500 band; its 2-bed 47,500 sits far below the luxury-skewed 2-bed mean and well above budget 2-beds — consistent with an editorial blend straddling mid-market riverside and premium stock, not a station-observed figure.",
+   "kind": "estimate",
+   "topics": [
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khlong San district condo rentals",
+    "relation_to_entity": "partial",
+    "notes": "district-wide listings include Wongwian Yai-side and river-tower stock; no station-specific index exists in accessible sources"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings live as of 2026-11-07",
+    "recheck_by": "2027-05-01",
+    "notes": "asking rents only; signed rents unavailable from free sources"
+   },
+   "evidence": [
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "Khlong San stats row + FAQ + sample cards",
+     "paraphrase": "363 results 'Starting From ฿10,000'; studio 14,885 (13k-19k, 13); 1-bed 27,444 (10k-200k, 204); 2-bed 89,852 (16k-250k, 75); 3-bed 183,500; header-row variants 14,885/28,482/83,458/161,236; samples: FLO 16,000-16,500; Supalai Premier Charoen Nakhon 18,000-24,500; Baan Chao Phraya 28,000-40,000; River House 3-bed 76,000"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "means, not medians; asking vs signed gap unknown; luxury river towers (Magnolias, The River 15k-400k range per search summary) inflate the mean",
+    "the app's figures themselves are labeled an editorial district blend and were not modified"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "charoen-nakhon-c15",
+   "text_en": "Housing splits into two visibly different stocks: riverfront luxury — Magnolias Waterfront Residences (~318 m, 70 floors) and Mandarin Oriental Residences (~272 m) inside the ICONSIAM complex, plus towers like The River in the same district — versus low-rise old Khlong San: the Soi Wat Suwan temple-community lanes, Soi Somdet Chao Phraya residential sois (OSM shows Soi SCP 17 at ~0.54 km and the soi web around the district office), and shophouse quarters such as Talat Noi across the river. The same 800 m catchment therefore contains both 5-figure entry rents and 6-figure river-view units.",
+   "kind": "factual_report",
+   "topics": [
+    "affordability",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "riverside towers vs inland Khlong San lanes",
+    "relation_to_entity": "entire_unit",
+    "notes": "within-area variation: river side luxury, inland side low-rise"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2018-2026",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "residential towers paragraph",
+     "paraphrase": "Two residential towers within ICONSIAM: Magnolia Waterfront Residences 70 floors/~318 m and Mandarin Oriental Residences ~272 m/52 floors"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "way/1193789383 (ชุมชนซอยวัดสุวรรณ), way/40838854 (ซอยสมเด็จเจ้าพระยา 17), way/1284589966",
+     "paraphrase": "OSM residential community lanes and sois within 0.3-0.6 km; shophouse apartment stock across the river at Talat Noi"
+    },
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "listing feed",
+     "paraphrase": "1-bed rents from 16,000 (FLO) alongside river-tower units reaching 200,000+ in the district feed"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "tower height figures taken from a Wikipedia parenthetical that appeared partially garbled; magnitudes consistent across sources"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "charoen-nakhon-c16",
+   "text_en": "The identity of the app's 0.8 ha park is unresolved: the best-addressed candidate is the Princess Mother Memorial Park (Soi Somdet Chao Phraya 3, Khlong San, gardens + childhood-home replica + two exhibition halls; travel sources size it at ~4 rai ≈ 0.64 ha) whose location fits 0.4-0.6 km NW of the station, but the English Wikipedia article's own coordinates (13.7367, 100.4994, ~1.9 km away) contradict its text and third-party addresses; the only named OSM park inside 800 m is สวนป่าเฉลิมพระเกียรติ (Suan Pa Chaloem Phra Kiat) at ~0.74 km S. Separately, ICONSIAM's >10,000 m2 River Park riverside terrace is a publicly accessible mall-operated open space, which plausibly carries much of the 'green' experience despite not being municipal parkland.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "green"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Princess Mother Memorial Park / Suan Pa Chaloem Phra Kiat / ICONSIAM River Park",
+    "relation_to_entity": "partial",
+    "notes": "park locations conflicting/unverifiable; River Park inside (mall grounds)"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "2027-05-01",
+    "notes": "recheck once Overpass park-level query succeeds or a BMA page is found"
+   },
+   "evidence": [
+    {
+     "source_id": "src_c158d7172022",
+     "locator": "article body + coordinates",
+     "paraphrase": "Text: Khlong San district, Soi Somdet Chao Phraya 3, near south end of Phra Pok Klao Bridge, next to Gong Wu shrine, gardens + childhood-home reproduction + two exhibition halls; coordinates attached: 13.736667,100.499444 (inconsistent with text)"
+    },
+    {
+     "source_id": "src_4cb7ecbf510f",
+     "locator": "listing address",
+     "paraphrase": "SNIPPET-ONLY: 'Soi Somdet Chao Phraya 3, Khlong San, Bangkok 10600', Plus Code PFPX+MQ4 — corroborates the address side of the conflict"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "way/243742812",
+     "paraphrase": "OSM: สวนป่าเฉลิมพระเกียรติ (leisure=park) center 13.71985,100.50981, ~0.74 km S of station, area not returned"
+    },
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "riverside park sentence",
+     "paraphrase": "ICONSIAM includes a riverside park of more than 10,000 m2 along the Chao Phraya and a riverside walkway"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "coordinate conflict unresolved; park size figures (4 rai ≈ 0.64 ha vs app's 0.8 ha) near-matching but not proven identical",
+    "Overpass park-detail query timed out"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "charoen-nakhon-c17",
+   "text_en": "Evening life is mall- and riverfront-anchored rather than street-level: the free nightly ICONIC fountain-and-light show draws big weekend-evening crowds to the River Park terrace (guides advise arriving 30+ minutes early), the mall runs 10:00-22:00 daily, riverside hotel bars and dinner cruises (Alangka etc.) extend the night on the water, while weekday mornings are described as noticeably calm; after the 2021 market closure the local-street evening offer is thin — the 24 mapped nightlife venues plausibly count mostly ICONSIAM/hotel venues, which is the reading that reconciles nightlife 9 with the guide's own note that a gritty local street experience 'will be found elsewhere'.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "rhythm",
+    "vibe"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "ICONSIAM River Park + hotel riverfront vs local lanes",
+    "relation_to_entity": "inside",
+    "notes": "street-evening thinness is a researcher_inference from market closure + guide framing, not a first-hand observation"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guide published 2026-07-09; mall hours as displayed 2026-11-07",
+    "recheck_by": "2027-06-01",
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_id": "src_eca21341b803",
+     "locator": "fountain show + practical tips + 'Who will enjoy it most' sections",
+     "paraphrase": "Nightly free fountain-and-light show; weekday mornings/early afternoons calm vs packed weekend evenings, arrive 30 minutes early; 'Be realistic about what it is. This is a polished, commercial space, and anyone hoping for a gritty, local Bangkok experience will find that elsewhere'"
+    },
+    {
+     "source_id": "src_3afeae7abb3c",
+     "locator": "hours text",
+     "paraphrase": "ICONSIAM open daily 10:00 AM - 10:00 PM"
+    },
+    {
+     "source_id": "src_a77791355331",
+     "locator": "closure report",
+     "paraphrase": "The neighborhood's 40-year market closed end-2021, removing its traditional local commercial heartbeat"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no resident-forum access (Reddit blocked); evening-street characterization is inferred, not observed",
+    "the 24-venue nightlife count's composition (mall bars vs street venues) not itemized in available sources"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c01",
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c06",
+    "charoen-nakhon-c09",
+    "charoen-nakhon-c13"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c06",
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c15",
+    "charoen-nakhon-c17"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c09"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03",
+    "charoen-nakhon-c04",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c16",
+    "charoen-nakhon-c17"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c17"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c09",
+    "charoen-nakhon-c11",
+    "charoen-nakhon-c13"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c13"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c14",
+    "charoen-nakhon-c15"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q09",
+   "status": "conflicting",
+   "claim_ids": [
+    "charoen-nakhon-c16"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03",
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c14",
+    "charoen-nakhon-c15",
+    "charoen-nakhon-c17"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c04",
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c12"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03",
+    "charoen-nakhon-c09",
+    "charoen-nakhon-c16",
+    "charoen-nakhon-c17"
+   ],
+   "notes": ""
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A station whose address is a mall: BTS Charoen Nakhon (charoen-nakhon-c01) opens by bridge directly into ICONSIAM and the ICS complex across the road (charoen-nakhon-c05, c08), while the streets behind it are old Khlong San lanes that lost their 40-year market in 2021 (charoen-nakhon-c12). The river is the area's second transit system — 12+ mapped piers on both banks within 800 m, including east-bang Rak ones across the bend (charoen-nakhon-c09) — but its scheduled boat service is thinner than the pier count implies (charoen-nakhon-c10).",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03",
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c06",
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c09",
+    "charoen-nakhon-c10",
+    "charoen-nakhon-c11",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c13",
+    "charoen-nakhon-c14",
+    "charoen-nakhon-c15",
+    "charoen-nakhon-c16",
+    "charoen-nakhon-c17"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Charoen Nakhon is two neighborhoods stapled together by a 300-metre walkway. One is ICONSIAM: a 525,000 m2 riverfront complex with Sook Siam's all-province food hall, a >10,000 m2 riverside terrace and the nightly fountain show, wired to the Gold Line's G2 station by covered bridges (charoen-nakhon-c07, c05). The other is inland Khlong San: Wat Suwan's temple lanes, the district office, a Lotus's at the station's doorstep, and the fenced-off block where Khlong San Plaza market traded for four decades until its SRT lease ran out in 2021 (charoen-nakhon-c12, c13). The Gold Line (three stops, no river crossing, flat fare) is the only rail, and its ridership of 1,809-8,390/day shows most people reach the city by bus or the mall's free boat instead (charoen-nakhon-c02, c03).",
+   "claim_ids": [
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03",
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c06",
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c09",
+    "charoen-nakhon-c10",
+    "charoen-nakhon-c11",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c13",
+    "charoen-nakhon-c14",
+    "charoen-nakhon-c15",
+    "charoen-nakhon-c16",
+    "charoen-nakhon-c17"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Covered, weather-proof walk from three station exits straight into ICONSIAM and ICS; the mall is entered from the station exits over short direct bridges - steps, not a hike (charoen-nakhon-c05, c06)",
+    "claim_ids": [
+     "charoen-nakhon-c05",
+     "charoen-nakhon-c06"
+    ]
+   },
+   {
+    "text_en": "Unusually dense river access for a single station area: ICONSIAM, Wat Suwan, Khlong San, Hilton and Taksin piers on the home bank plus Si Phraya/Oriental/CAT piers across the bend (charoen-nakhon-c09)",
+    "claim_ids": [
+     "charoen-nakhon-c09"
+    ]
+   },
+   {
+    "text_en": "Eight BMTA bus routes at the station street level, including Talat Phlu and Ekkamai links that bypass the Gold Line (charoen-nakhon-c11)",
+    "claim_ids": [
+     "charoen-nakhon-c11"
+    ]
+   },
+   {
+    "text_en": "Everyday anchor within 100 m: a Lotus's supermarket plus the ICS retail complex across the road from the station (charoen-nakhon-c08, c13)",
+    "claim_ids": [
+     "charoen-nakhon-c08",
+     "charoen-nakhon-c13"
+    ]
+   },
+   {
+    "text_en": "Sook Siam's all-77-provinces food hall and a free nightly river fountain show give the area an outsized food-and-evening offer for its size (charoen-nakhon-c07, c17)",
+    "claim_ids": [
+     "charoen-nakhon-c07",
+     "charoen-nakhon-c17"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "No direct BTS/MRT: one feeder shuttle to the Silom line at Krung Thon Buri, and its under-9,000/day ridership shows the transfer cost is real (charoen-nakhon-c02, c03)",
+    "claim_ids": [
+     "charoen-nakhon-c02",
+     "charoen-nakhon-c03"
+    ]
+   },
+   {
+    "text_en": "The traditional local market closed end-2021 after the SRT lease expired — vendors displaced, the site fenced for redevelopment, and the cross-river ferry pier's contract lapsed the same December (charoen-nakhon-c12)",
+    "claim_ids": [
+     "charoen-nakhon-c12"
+    ]
+   },
+   {
+    "text_en": "Mall-hours dependence: retail/dining pulse runs 10:00-22:00 with packed weekend evenings and calm weekday mornings; the street scene after dark is thin (charoen-nakhon-c17)",
+    "claim_ids": [
+     "charoen-nakhon-c17"
+    ]
+   },
+   {
+    "text_en": "The mapped '9 piers' include hotel, private and closed facilities; express boats serve the area only via stops the operator does not even list publicly (charoen-nakhon-c10)",
+    "claim_ids": [
+     "charoen-nakhon-c10"
+    ]
+   },
+   {
+    "text_en": "The only named municipal park in the 800 m circle cannot be confidently identified — the prime candidate's own coordinates conflict (charoen-nakhon-c16)",
+    "claim_ids": [
+     "charoen-nakhon-c16"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Weekday morning: calm at the mall and on the lanes; morning-market trading lingers near the old Khlong San Plaza site; express boats and buses run, Gold Line quietest (charoen-nakhon-c17, c12, c03)",
+    "claim_ids": [
+     "charoen-nakhon-c17",
+     "charoen-nakhon-c12",
+     "charoen-nakhon-c03"
+    ]
+   },
+   {
+    "text_en": "Weekday evening: fountain show on the River Park terrace, hotel bars and dinner cruises; mall shuts at 22:00 and the streets quiet with it (charoen-nakhon-c17, c07)",
+    "claim_ids": [
+     "charoen-nakhon-c17",
+     "charoen-nakhon-c07"
+    ]
+   },
+   {
+    "text_en": "Weekend evening: the fountain terrace crowds up enough that guides say arrive 30+ minutes early; boats and Gold Line run past the show, but express-boat lines are Monday-Friday only (charoen-nakhon-c17, c10)",
+    "claim_ids": [
+     "charoen-nakhon-c17",
+     "charoen-nakhon-c10"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Riverside strip: supertall condo towers (Magnolias ~318 m, Mandarin Oriental Residences ~272 m) and hotel riverfront — the postcard version (charoen-nakhon-c15)",
+    "claim_ids": [
+     "charoen-nakhon-c15"
+    ]
+   },
+   {
+    "text_en": "Station block: ICS mall, Lotus's, bus stop, college — functional, walkway-connected (charoen-nakhon-c08, c11, c13)",
+    "claim_ids": [
+     "charoen-nakhon-c08",
+     "charoen-nakhon-c11",
+     "charoen-nakhon-c13"
+    ]
+   },
+   {
+    "text_en": "Inland lanes (Wat Suwan, Soi Somdet Chao Phraya): low-rise community blocks at 16,000-24,500 THB 1-bed rents, a short walk from 200,000+ river-tower listings (charoen-nakhon-c14, c15)",
+    "claim_ids": [
+     "charoen-nakhon-c14",
+     "charoen-nakhon-c15"
+    ]
+   },
+   {
+    "text_en": "Across the river bend: the Si Phraya/Oriental pier strip and Talat Noi's shophouse quarter sit 500-900 m straight-line away — inside the catchment only if the app counts river-crossed ground (charoen-nakhon-c09, c13)",
+    "claim_ids": [
+     "charoen-nakhon-c09",
+     "charoen-nakhon-c13"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Good fit if your life can route through ICONSIAM/ICS: mall dining, riverside running, covered station-home walks (charoen-nakhon-c07, c05)",
+    "claim_ids": [
+     "charoen-nakhon-c07",
+     "charoen-nakhon-c05"
+    ]
+   },
+   {
+    "text_en": "Workable if you commute by bus or boat; eight bus routes and dense piers compensate for the feeder-only rail (charoen-nakhon-c11, c09)",
+    "claim_ids": [
+     "charoen-nakhon-c11",
+     "charoen-nakhon-c09"
+    ]
+   },
+   {
+    "text_en": "Poor fit if you need direct BTS/MRT, street-level nightlife after 22:00, or wet-market everyday shopping — the market closed in 2021 and the street scene follows mall hours (charoen-nakhon-c02, c17, c12)",
+    "claim_ids": [
+     "charoen-nakhon-c02",
+     "charoen-nakhon-c17",
+     "charoen-nakhon-c12"
+    ]
+   },
+   {
+    "text_en": "Families with a hospital dependency should check options first: only a psychiatric institute is confirmed in-catchment (charoen-nakhon-c13)",
+    "claim_ids": [
+     "charoen-nakhon-c13"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Transport 10: plausibly driven by pier/shuttle mapping density (12+ piers, several closed or private) plus the mall walkways, rather than by scheduled network reach; the Gold Line's own ridership is 1,809-8,390/day (charoen-nakhon-c09, c03) — researcher_inference, score untouched",
+   "Whether the Khlong San-Si Phraya and Oriental-Wat Suwan ferries still operate: OSM maps them (2026), but the pier's SRT contract reportedly lapsed in Dec 2021 (charoen-nakhon-c12, c09)",
+   "The 0.8 ha park's identity: Princess Mother Memorial Park (address fits, coordinates conflict) vs Suan Pa Chaloem Phra Kiat (OSM, size unknown) (charoen-nakhon-c16)",
+   "App rents are an editorial Khlong San blend: portal means are luxury-skewed (2-bed mean 89,852 vs app 47,500) and no median or signed-rent data exists in free sources (charoen-nakhon-c14)",
+   "Independent editorial coverage of the station area itself is thin — what exists is mall-centered tourism writing; the absence of coverage is a measurement gap, not a popularity reading (charoen-nakhon-c17, c08)"
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md + coordinator geometry pass 2026-11-07).",
+   "13 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Princess Mother Memorial Park location conflict: en-Wikipedia coordinates (13.7367,100.4994) vs article text and GetYourGuide address (Soi Somdet Chao Phraya 3, Khlong San); Overpass park-detail query timed out on both instances — needs a BMA/official page or successful OSM query",
+   "open issue: Khlong San-Si Phraya cross-river ferry operational status unverified (Thai PBS: pier contract ended Dec 2021; OSM 2026 still maps pier and ferry route)",
+   "open issue: Express-boat stop list for west-bank piers (Wat Suwan, Wat Prayurawongsawat) not published by the operator; service reach of the unit's river-bus layer unconfirmed",
+   "open issue: ICS opening date conflict: 11 Jan 2023 (Wikipedia body) vs 11 Dec 2023 (search-level mall coverage)",
+   "open issue: Gold Line flat fare 16 THB (Wikipedia) vs 17 THB (third-party sites) unresolved",
+   "open issue: Gold Line Somdet Chao Phraya extension: Wikipedia documents the plan; 'not under construction as of 2025-26' rests on a snippet-only Facebook transit post — verify with an official BMA/MRTA source",
+   "open issue: Bang Rak 25% district share matches the east-bank pier strip inside the 800 m circle (researcher_inference from OSM distances); app clip geometry unpublished, so membership of cross-river ground is probable but not provable",
+   "open issue: Flood exposure: no catchment-specific 2011 evidence found (Wikipedia 2011 floods body never mentions Khlong San/Thonburi-side inundation); do not infer safety or risk either way",
+   "open issue: No full-service hospital, gym names, or sidewalk-quality descriptions located inside the catchment — gaps, not negative findings",
+   "open issue: Access failures logged: Bangkok Post 2036319 (tollbit paywall), bangkok-spirit.com via WebFetch (403, succeeded via web_reader), old.reddit.com (403; URL also unconfirmed), ddproperty.com district pages (404 x2), chaophrayaexpressboat.com/en/services (404), Overpass third query (timeout x2)"
+  ]
+ }
+}

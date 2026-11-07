@@ -1,0 +1,234 @@
+{
+  "window": { "from": "2024-11-05", "to": "2026-11-07" },
+  "method_note": "Fixed small battery of ~4-5 WebSearch queries per candidate (English + Thai + one recent-news query), run 2026-11-07. Exa semantic searches were then used to resolve opaque google.com/goto redirect URLs to real publishers/dates, and a small number of pages were fetched (marked body_read=true; Exa fetches were often partial, first N chars). Judgement is from search snippets except where body_read=true. Window: only pieces dated 2024-11-05..2026-11-07 count toward the band; undated pieces are listed separately. Publisher-family dedup applied (e.g. Thai PBS = Thai PBS World; Time Out Group covers all Time Out Bangkok pieces; Bangkok Post = one family; The Nation/Nation Group = one family). Property portals, hotel/OTA content, tourism-authority (TAT) pieces and platform/UGC content (TripAdvisor, Pantip, Reddit, Facebook, Lemon8, Wongnai, TrueID, Trip.com) are logged with their commercial/platform context and do NOT count toward independent breadth. This measures EVIDENCE OF PUBLIC INTEREST (independent editorial coverage breadth), NOT popularity.",
+  "search_log": [
+    {"entity": "st.charoen-nakhon", "query": "Charoen Nakhon Bangkok neighborhood guide", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Avani hotel blog; BK Magazine neighborhood guide via snippet (dated Oct 2020, outside window); Lazudi property blog (Jan 2023, outside window); undated Thai pieces"},
+    {"entity": "st.charoen-nakhon", "query": "ICONSIAM Charoen Nakhon area living guide Bangkok", "tool": "WebSearch", "when": "2026-11-07", "outcome": "error_concurrency_limit", "note": "failed with user concurrency limit; retried as next entry"},
+    {"entity": "st.charoen-nakhon", "query": "Charoen Nakhon area guide where to stay riverside ICONSIAM", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "retry of failed query; mostly hotel listings; mentions BK Magazine 'A weekend guide to staying in Charoen Nakhon' dated 2024-08-09 (outside window)"},
+    {"entity": "st.charoen-nakhon", "query": "เจริญนคร คลองสาน ย่าน รีวิว", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Thai: Starvingtime FB food roundup, Chillpainai scoop 15322 (undated), Pantip thread (UGC); no dated editorial found"},
+    {"entity": "st.charoen-nakhon", "query": "Charoen Nakhon Bangkok 2025 OR 2026 news ICONSIAM", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "only ICONSIAM own PR (illumination 2026, Songkran 2026) = commercial/institutional"},
+    {"entity": "st.charoen-nakhon", "query": "\"Charoen Nakhon\" OR \"Khlong San\" neighborhood Time Out OR \"BK Magazine\" 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "no in-window Time Out/BK piece on Charoen Nakhon; BK weekend guide is 2024-08-09 (outside window)"},
+    {"entity": "st.ratchathewi", "query": "Ratchathewi Bangkok neighborhood guide", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "expat guides (Jul 2026, May 2026), PropertyScout-style area profile (Aug 2025), Reddit thread; many hits only as opaque google.com/goto URLs"},
+    {"entity": "st.ratchathewi", "query": "Ratchathewi Bangkok living area cafe guide 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "thewaytocoffee.com Bangkok cafe guide 2026; Superagent expat guide; Thai cafe roundup 'รวม 7 คาเฟ่ย่านราชเทวี (อัปเดต 2025)'"},
+    {"entity": "st.ratchathewi", "query": "ราชเทวี ย่าน กาแฟ รีวิว บล็อก", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "bkkmenu 'ราชเทวี มีครบทุก Destination' (undated); several cafe reviews; publishers of roundups not resolved"},
+    {"entity": "st.ratchathewi", "query": "Ratchathewi Bangkok 2025 OR 2026 news", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Thai PBS World: Ratchathewi overpass closed 3 years for Orange Line works (Jan 2025); The Nation X post on Pratunam flooding (undated); Reddit"},
+    {"entity": "st.nana", "query": "Nana Bangkok neighborhood guide Sukhumvit Soi Nana", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Royal Ivory hotel area guide; S15 hotel Nana Plaza guide; Travel Happy Nana & Asoke (undated); CN Traveler 'Soi Nana' = CHINATOWN soi (entity confusion, excluded here)"},
+    {"entity": "st.nana", "query": "Soi Nana Sukhumvit living guide bars cafes 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "mixed Sukhumvit vs Chinatown Soi Nana results; CN Traveler + 'best bars' pieces are the Chinatown soi"},
+    {"entity": "st.nana", "query": "สุขุมวิท ซอยนานา ย่าน รีวิว ไกด์", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Thai: Nomado Travel Sukhumvit guide (undated); Thai name-origin article dated 20 Nov 2025 (publisher/URL not resolved); Agoda/Tripadvisor = commercial/UGC"},
+    {"entity": "st.nana", "query": "Nana Bangkok 2025 OR 2026 news nightlife BTS", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "nightlife SEO guides, TripAdvisor UGC, vlogs; no dated independent editorial about the Nana area itself"},
+    {"entity": "st.nana", "query": "Nana Sukhumvit Bangkok Time Out OR \"BK Magazine\" guide 2025 bars restaurants area", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "no dated Time Out/BK piece specific to the Nana area within window surfaced by this query"},
+    {"entity": "st.phloen-chit", "query": "Phloen Chit Bangkok neighborhood guide area", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "PropertyScout area guide (Jun 2025); PropertySights blog (Aug 2025); hotels.com Go Guides; Nerd Nomads where-to-stay (undated)"},
+    {"entity": "st.phloen-chit", "query": "Phloen Chit Ploenchit Bangkok living embassy district guide 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "same property/OTA sources + The Luxury Editor hotel roundup (2025)"},
+    {"entity": "st.phloen-chit", "query": "เพลินจิต ย่าน รีวิว ชิดลม ไกด์", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "len.golf Chidlom guide (2026, booking/lifestyle site); PropertyScout Thai guide; FB condo ads = commercial"},
+    {"entity": "st.phloen-chit", "query": "\"Ploen Chit\" OR \"Phloen Chit\" Bangkok 2025 OR 2026 news", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Siam Real Estate property market piece (Aug 2026); One City Centre 'Bangkok Reflection' opened 2025-09-09 (article publisher unresolved); Trip.com OTA guide"},
+    {"entity": "st.phloen-chit", "query": "Ploenchit Chidlom Bangkok Time Out 2025 guide things to do", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "no dated Time Out area-specific piece surfaced; TripAdvisor/hotels.com = platform/OTA"},
+    {"entity": "st.sam-yot", "query": "Sam Yot Bangkok neighborhood guide Dinso Road", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Visit Thailand Today station page + '10 Minutes Walk from MRT Sam Yot'; eatingthaifood city eating guide mentioning a Sam Yot cafe (Nov 2025, one-venue mention); Facebook walking guide (UGC)"},
+    {"entity": "st.sam-yot", "query": "สามยอด ย่าน กิน เที่ยว รีวิว ดินสอ", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Thai roundups around MRT Sam Yot; '10 ที่เที่ยว ย่าน MRT สามยอด Old Town' dated Jan 2024 (outside window); Lemon8 = platform; several roundups undated/unresolved publishers"},
+    {"entity": "st.sam-yot", "query": "\"Sam Yot\" Bangkok MRT 2025 OR 2026 news old town", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "TBM breakthrough at Sam Yot station (Purple Line extension) = construction trade news about tunnelling, not neighborhood coverage"},
+    {"entity": "st.sam-yot", "query": "Sam Yot station area guide Time Out OR \"BK Magazine\" OR Coconuts Bangkok 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "no dedicated 2025 Sam Yot area guide from Time Out/BK/Coconuts found"},
+    {"entity": "st.wat-mangkon", "query": "Wat Mangkon MRT station Chinatown Bangkok area guide", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Wikipedia + generic station/transfer guides; no dated independent editorial surfaced"},
+    {"entity": "st.wat-mangkon", "query": "วัดมังกร MRT ยาวาราช ย่าน รีวิว กินเที่ยว", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "SaleHere station-area roundup (undated; SCG lifestyle platform = commercial context); blognone 2018 (outside window); TrueID/Wongnai/Pantip = platform/UGC"},
+    {"entity": "st.wat-mangkon", "query": "\"Wat Mangkon\" Bangkok Chinatown 2025 OR 2026 news Yaowarat", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "The Thaiger: Chinese opera event at Wat Mangkon Station (Dec 2025); Kin Jay festival routing (Oct 2025); May 2025 Chinatown feature mentions Wat Mangkon Kamalawat temple"},
+    {"entity": "pom-prap-sattru-phai", "query": "Pom Prap Sattru Phai district Bangkok guide Golden Mount Bobae Nang Loeng", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Golden Mount guides (publishers unresolved via opaque URLs); TripAdvisor UGC; video guide; Tripsapien street-food mention"},
+    {"entity": "pom-prap-sattru-phai", "query": "Soi Nana Chinatown Bangkok bars guide 2025 Ba Hao", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Time Out 'The Best Bars in Soi Nana - Chinatown' (Jan 2025) + speakeasy crawl (Oct 2025); Soi Nana Chinatown sits in Pom Prap Sattru Phai"},
+    {"entity": "pom-prap-sattru-phai", "query": "ป้อมปราบศัตรูพ่าย ย่าน นางเลิ้ง บาวแว รีวิว ชุมชน", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Nang Loeng community pieces (wikicommunity.sac.or.th archive, undated); Facebook pages (UGC); Bangkok Design Week 2024 mention (borderline window, Jan-Feb 2024 = outside)"},
+    {"entity": "pom-prap-sattru-phai", "query": "Pom Prap Sattru Phai Bangkok 2025 OR 2026 news", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Orange Line sinkhole/rescue (May 2025) covered by Bangkok Post, The Nation, Thai PBS; PM2.5 rankings; BMA council election 2026; flooding warnings Oct 2025"},
+    {"entity": "phaya-thai", "query": "Phaya Thai district Bangkok neighborhood guide Ari Saphan Kwai", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Never Ending Footsteps Ari piece (undated); Nestopa Saphan Kwai property guide (commercial); Reddit UGC; note railway-station vs district confusion"},
+    {"entity": "phaya-thai", "query": "Ari Bangkok neighborhood guide living 2025", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Condoreviews Thailand 'Living in Ari: Complete Expat Guide 2025'; totallybangkok.com (x2, undated)"},
+    {"entity": "phaya-thai", "query": "อารีย์ พญาไท ย่าน รีวิว กิน เที่ยว ซอยอารีย์", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "Thai 30-restaurant Ari roundups (ฉบับ 2024 / อัปเดต 2025, publishers unresolved); Amazing Thailand (TAT) Ari walking route = tourism authority; Pantip UGC"},
+    {"entity": "phaya-thai", "query": "Phaya Thai Bangkok 2025 OR 2026 news Ari district", "tool": "WebSearch", "when": "2026-11-07", "outcome": "results", "note": "ThinkFest 2026 in Ari (May 2026) covered by Bangkok Post/Time Out/Koktail/Daily News; eastblueth Ari-vs-Ekkamai (Sep 2026); Expedia OTA guide"},
+    {"entity": "multiple", "query": "Ratchathewi neighborhood guide for expats Bangkok amenities transport rentals", "tool": "exa web_search", "when": "2026-11-07", "outcome": "results", "note": "resolved: Superagent Ratchathewi expat guide 2026-05-03; Superagent rent guide 2026-03-08; thailandstarterkit.com Living in Phaya Thai and Ratchathewi 2026-10-26; PropertyScout Ratchathewi 2025-08-07; baanlyy.com (undated, rental platform); find-easy.com 2026-10-10 (rental agency)"},
+    {"entity": "multiple", "query": "ThinkFest 2026 Ari Bangkok creative neighborhood festival news article", "tool": "exa web_search", "when": "2026-11-07", "outcome": "results", "note": "full text obtained: Bangkok Post 2026-05-28; Time Out 2026-05-13 and 2026-10-21; Koktail 2026-05-12; Daily News (Thai) 2026-05-22; Rainmaker (Thai) 2026-11-02"},
+    {"entity": "multiple", "query": "best bars Soi Nana Chinatown Bangkok Time Out guide", "tool": "exa web_search", "when": "2026-11-07", "outcome": "results", "note": "Time Out 'Best Bars in Soi Nana - Chinatown' (2025-01-02 per Exa timestamp) and updated 'Best bars in Soi Nana (Chinatown)' (2026-03-26); venue pages Tep Bar / Ba Hao; address field confirms Pom Prap Sattru Phai"},
+    {"entity": "pom-prap-sattru-phai", "query": "Orange Line sinkhole Pom Prap Sattru Phai construction worker May 2025 Bangkok", "tool": "exa web_search", "when": "2026-11-07", "outcome": "results", "note": "full text: The Nation 2025-05-20 + 2025-05-25; Bangkok Post 2025-05-19 + 2025-05-24; Thai PBS 2025-05-25 — all about Lan Luang station site in Pom Prap Sattru Phai"},
+    {"entity": "st.charoen-nakhon|st.nana|phaya-thai", "query": "exa fetch: fullsuitcase.com/bangkok-neighborhoods-where-to-stay, cntraveler.com/activities/bangkok/soi-nana, condoreviewsthailand.com/neighborhoods/ari", "tool": "exa web_fetch", "when": "2026-11-07", "outcome": "results", "note": "Fullsuitcase last-updated 2025-02-10 (riverside section not directly reached in fetched portion); CN Traveler Soi Nana explicitly = Chinatown, 'not to be confused with the seedy Soi Nana on Sukhumvit Road', undated; Condoreviews Ari guide is substantive, title says 2025"},
+    {"entity": "st.sam-yot", "query": "exa fetch: visitthailandtoday.com/transportation/bangkok/sam-yot-mrt-station", "tool": "exa web_fetch", "when": "2026-11-07", "outcome": "results", "note": "page shows 'Written by Mac Kiley - Updated Sep 2026' = in window; substantive station-area editorial with old-town context"}
+  ],
+  "candidates": [
+    {
+      "entity_key": "st.charoen-nakhon",
+      "coverage_band": "thin",
+      "families": ["Fullsuitcase (independent travel blog; riverside section, partial)"],
+      "notable_pieces": [
+        {"url": "https://fullsuitcase.com/bangkok-neighborhoods-where-to-stay/", "publisher": "Fullsuitcase", "family": "Fullsuitcase", "date": "2025-02-10", "dated": true, "about_this_entity": true, "commercial_context": "none (independent travel blog; affiliate links present)", "body_read": true, "note": "'Where to Stay in Bangkok: 7 Best Neighborhoods', last updated 2025-02-10. First ~4000 chars fetched cover Asok etc.; riverside/Charoen Nakhon coverage inferred from search summary + Millennium Hilton (riverside/ICONSIAM) top-3 pick, not directly verified in fetched portion. Counted as the single qualifying family with this caveat."},
+        {"url": "https://www.iconsiam.com/en/events-activities/iconsiam-bangkok-illumination-2026", "publisher": "ICONSIAM", "family": "ICONSIAM (mall PR)", "date": null, "dated": true, "about_this_entity": false, "commercial_context": "mall's own press/event promotion (Bangkok Illumination 2026, Songkran 2026)", "body_read": false},
+        {"url": "https://www.avanihotels.com/en/blog/travel-hacks---charoen-nakhon-travel-guide", "publisher": "Avani Hotels & Resorts", "family": "Avani (hotel brand)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "hotel-brand blog", "body_read": false},
+        {"url": "https://lazudi.com/th-en/blog/thailand-bangkoks-charoen-nakhon-and-best-places-to-live", "publisher": "Lazudi", "family": "Lazudi (property portal)", "date": "2023-01", "dated": true, "about_this_entity": true, "commercial_context": "property-portal blog; OUTSIDE window (Jan 2023), not counted", "body_read": false},
+        {"url": "https://www.bkmagazine.com (search snippet: 'A weekend guide to staying in Charoen Nakhon')", "publisher": "BK Magazine", "family": "BK Magazine", "date": "2024-08-09", "dated": true, "about_this_entity": true, "commercial_context": "none; OUTSIDE window (2024-08-09, window starts 2024-11-05), not counted", "body_read": false, "note": "exact article URL not surfaced; only date via search snippet"}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "https://chillpainai.com/scoop/15322", "note": "Chillpainai 'มา-หา-นคร ย่านคลองสาน' Thai travel-community article, undated in snippet"},
+        {"url": "https://www.facebook.com/Starvingtime/posts/3813160848703409", "note": "Thai FB food roundup '11 ร้านเด็ด ย่านเจริญนคร-คลองสาน' = UGC/social"},
+        {"url": "(unresolved)", "note": "'Bangkok neighbourhoods guide 2026' and 'Charoen Krung neighborhood guide' hits returned only opaque google.com/goto URLs; publishers unverified. Charoen Krung is a DIFFERENT road from Charoen Nakhon"}
+      ],
+      "entity_confusion_notes": "Charoen Nakhon Rd (Khlong San, Thonburi side, ICONSIAM/Gold Line) is frequently conflated with Charoen Krung Rd (creative-district coverage on the east bank) and with generic 'riverside' coverage; several 'riverside' guide hits may or may not name Charoen Nakhon specifically. BK Magazine's Aug 2024 weekend guide is unambiguously about this area but falls just outside the window.",
+      "access_failures": ["one WebSearch query failed with a concurrency limit and was retried successfully", "several search hits returned only opaque google.com/goto redirect URLs (publisher/date unverifiable)"]
+    },
+    {
+      "entity_key": "st.ratchathewi",
+      "coverage_band": "some",
+      "families": ["Thai PBS World (public broadcaster)", "Thailand Starter Kit", "The Way to Coffee"],
+      "notable_pieces": [
+        {"url": "https://www.thaipbsworld.com/travel-tourism/ratchathewi-overpass-to-close-for-three-years-for-orange-line-construction-starting-tonight", "publisher": "Thai PBS World", "family": "Thai PBS / Thai PBS World", "date": null, "dated": true, "about_this_entity": true, "commercial_context": "none (public broadcaster news)", "body_read": false, "note": "Ratchathewi overpass closes 3 years for MRT Orange Line works; published mid-Jan 2025 (exact day not visible) = in window"},
+        {"url": "https://www.thailandstarterkit.com/moving/living-in-phaya-thai/", "publisher": "Thailand Starter Kit", "family": "Thailand Starter Kit", "date": "2026-10-26", "dated": true, "about_this_entity": true, "commercial_context": "none (independent expat living guide; covers Phaya Thai AND Ratchathewi together)", "body_read": true, "note": "'Living in Phaya Thai and Ratchathewi: Rent, the Airport Train, Hospitals and Daily Life' — substantive, in window"},
+        {"url": "https://www.thewaytocoffee.com/bangkok-cafe-guide", "publisher": "The Way to Coffee", "family": "The Way to Coffee", "date": null, "dated": true, "about_this_entity": true, "commercial_context": "independent coffee blog (title dated 2026); Ratchathewi is one neighborhood section within a city cafe guide", "body_read": false},
+        {"url": "https://www.superagent.co/en/blog/ratchathewi-bangkok-complete-2026-expat-neighborhood-guide", "publisher": "Superagent", "family": "Superagent", "date": "2026-05-03", "dated": true, "about_this_entity": true, "commercial_context": "rental/property marketing content — LOGGED, NOT counted toward independent breadth", "body_read": true},
+        {"url": "https://www.superagent.co/en/blog/ratchathewi-bangkok-the-underrated-condo-rental-area-between-siam-and-victory-mo", "publisher": "Superagent", "family": "Superagent", "date": "2026-03-08", "dated": true, "about_this_entity": true, "commercial_context": "rental/property marketing — logged, not counted", "body_read": true},
+        {"url": "https://propertyscout.co.th/en/location-guides/ratchathewi-area-guide/", "publisher": "PropertyScout", "family": "PropertyScout (property portal)", "date": "2025-08-07", "dated": true, "about_this_entity": true, "commercial_context": "property portal area guide — logged, not counted", "body_read": true},
+        {"url": "https://baanlyy.com/thailand/bangkok/areas/ratchathewi", "publisher": "Baanlyy", "family": "Baanlyy (rental platform)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "rental listings platform — logged, not counted", "body_read": false},
+        {"url": "https://find-easy.com/en/guides/quartier-ratchathewi/", "publisher": "Find Easy", "family": "Find Easy (rental agency)", "date": "2026-10-10", "dated": true, "about_this_entity": true, "commercial_context": "rental agency guide — logged, not counted", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "(unresolved)", "note": "bkkmenu 'ราชเทวี มีครบทุก Destination' — Thai food/cafe magazine piece on the neighborhood, undated, URL not resolved; would likely count as a 4th family if dated in-window"},
+        {"url": "(unresolved)", "note": "'รวม 7 คาเฟ่ย่านราชเทวี ใกล้ BTS (อัปเดต 2025)' — Thai cafe roundup, publisher unresolved"},
+        {"url": "https://x.com/Thenationth/status/2061031490872619351", "note": "The Nation X post: flooding at Pratunam / under BTS Phaya Thai on Phaya Thai Rd — one-line district mention, not counted as substantive"},
+        {"url": "https://www.reddit.com/r/Bangkok/comments/1tnv99x/hows_ratchathewi_nowadays", "note": "Reddit thread = UGC, not editorial"}
+      ],
+      "entity_confusion_notes": "Ratchathewi results mix the BTS station area with Ratchathewi district; guides treat them as one area, which matches this entity. Adjacent-district bleed: Phaya Thai Rd / BTS Phaya Thai / Airport Rail Link references belong to phaya-thai; Thailand Starter Kit covers both districts in one piece (counted for both).",
+      "access_failures": []
+    },
+    {
+      "entity_key": "st.nana",
+      "coverage_band": "thin",
+      "families": ["Travel Happy (undated — not window-verified)"],
+      "notable_pieces": [
+        {"url": "https://travelhappy.info/nana-and-asoke-lower-sukhumvit-bangkok", "publisher": "Travel Happy", "family": "Travel Happy", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "none (independent travel site); UNDATED so cannot be window-verified — this is the only substantive independent family found", "body_read": false},
+        {"url": "https://www.royalivory.com/nana-bangkok-area-guide.html", "publisher": "Royal Ivory Sukhumvit (hotel)", "family": "Royal Ivory (hotel)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "hotel's own area guide — logged, not counted", "body_read": false},
+        {"url": "https://www.s15hotel.com/nana-plaza-bangkok-guide-what-to-expect-near-sukhumvit-soi-4", "publisher": "S15 Sukhumvit Hotel", "family": "S15 (hotel)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "hotel's own guide — logged, not counted", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "https://www.nomado.travel", "note": "Nomado Travel Thai-language Sukhumvit guide describing the Nana Plaza/Soi 4 zone (undated)"},
+        {"url": "(unresolved)", "note": "Thai article dated 20 Nov 2025 on the origin of the name 'ซอยนานา' (Nana family land, BTS Nana) — referenced inside another snippet; original publisher/URL not resolved; in window if verified"},
+        {"url": "(unresolved)", "note": "'Bangkok Nightlife Guide 2026', '20 Nana nightlife venues' and similar nightlife SEO roundups — undated/unresolved publishers, venue-list character"},
+        {"url": "https://www.tripadvisor.com", "note": "TripAdvisor 'Best Nightlife in Nana (updated 2026)' = platform/UGC, not editorial"}
+      ],
+      "entity_confusion_notes": "MAJOR: 'Soi Nana' has two distinct meanings. CN Traveler's 'Soi Nana — Neighborhood Review' and Time Out's Soi Nana bar guides are the CHINATOWN Soi Nana (Pom Prap Sattru Phai district) — CN Traveler explicitly says 'Not to be confused with the seedy Soi Nana on Sukhumvit Road'. Those pieces were assigned to pom-prap-sattru-phai, NOT here. 'Nana Plaza' nightlife content is Sukhumvit Soi 4 (this entity) but is mostly hotel-run or SEO content. Soi Nana Nuea (Soi 3/3-1, 'Arab Street') is also this entity's catchment.",
+      "access_failures": ["several search hits returned only opaque google.com/goto redirect URLs"]
+    },
+    {
+      "entity_key": "st.phloen-chit",
+      "coverage_band": "thin",
+      "families": ["Nerd Nomads (undated — not window-verified)"],
+      "notable_pieces": [
+        {"url": "https://nerdnomads.com/where-to-stay-in-bangkok", "publisher": "Nerd Nomads", "family": "Nerd Nomads", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "none (independent travel blog); UNDATED so cannot be window-verified — Ploenchit described as one where-to-stay area", "body_read": false},
+        {"url": "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide", "publisher": "PropertyScout", "family": "PropertyScout (property portal)", "date": "2025-06-30", "dated": true, "about_this_entity": true, "commercial_context": "property portal area guide — logged, not counted toward independent breadth", "body_read": false},
+        {"url": "https://propertysights.com/blog/ploenchit-bangkok-thailand", "publisher": "PropertySights", "family": "PropertySights (property agency)", "date": "2025-08", "dated": true, "about_this_entity": true, "commercial_context": "property agency blog — logged, not counted", "body_read": false},
+        {"url": "https://www.hotels.com/go/thailand/things-to-do-ploenchit", "publisher": "Hotels.com Go Guides", "family": "Hotels.com (OTA)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "OTA editorial — logged, not counted", "body_read": false},
+        {"url": "https://theluxuryeditor.com/best-luxury-hotels-in-phloen-chit", "publisher": "The Luxury Editor", "family": "The Luxury Editor", "date": "2025", "dated": true, "about_this_entity": true, "commercial_context": "luxury-travel blog, hotel roundups — logged, not counted as independent neighborhood coverage", "body_read": false},
+        {"url": "https://www.len.golf/th/best/best-things-to-do-near-chidlom", "publisher": "len.golf", "family": "len.golf", "date": "2026", "dated": true, "about_this_entity": true, "commercial_context": "booking/lifestyle site — logged, not counted", "body_read": false},
+        {"url": "https://www.siamrealestate.com/thailand-property-news/bangkok-phuket-luxury-property-markets-surge-in-2026", "publisher": "Siam Real Estate", "family": "Siam Real Estate (property)", "date": "2026-08", "dated": true, "about_this_entity": false, "commercial_context": "property-market marketing mentioning Phloen Chit — logged, not counted", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "(unresolved)", "note": "'Bangkok Reflection at One City Center' rooftop opened 2025-09-09 at One City Centre, Phloen Chit; Nov 2025 article referenced in snippet but publisher unresolved"},
+        {"url": "https://us.trip.com/moments/destination-ploenchit-2134932", "note": "Trip.com OTA '2026 Ploenchit Travel Guide' = platform"},
+        {"url": "(unresolved)", "note": "'Ploenchit Bangkok Neighborhood Guide for Expats' (rent ranges/BTS/lifestyle) — only opaque google.com/goto URL, publisher unresolved; likely property content"},
+        {"url": "(unresolved)", "note": "Time Out Bangkok social post about MINI Roof Track event at Ploenchit (Nov 2025) — venue-event mention, not neighborhood coverage"}
+      ],
+      "entity_confusion_notes": "Ploen Chit / Ploenchit spelling variants both used. Coverage of Chidlom/Ratchaprasong (adjacent BTS Chidlom, CentralWorld, Erawan Shrine) frequently bleeds into 'Ploenchit' lists; Tripadvisor's 'Ploenchit' boundary is broader than the station area. Embassy-district framing means much 'living' content is property marketing.",
+      "access_failures": ["several search hits returned only opaque google.com/goto redirect URLs"]
+    },
+    {
+      "entity_key": "st.sam-yot",
+      "coverage_band": "thin",
+      "families": ["Visit Thailand Today"],
+      "notable_pieces": [
+        {"url": "https://www.visitthailandtoday.com/transportation/bangkok/sam-yot-mrt-station", "publisher": "Visit Thailand Today", "family": "Visit Thailand Today", "date": "2026-09", "dated": true, "about_this_entity": true, "commercial_context": "travel-guide site with booking/affiliate character (embedded ratings/review cards); treated as independent editorial with that caveat", "body_read": true, "note": "'Written by Mac Kiley - Updated Sep 2026' visible on page = in window"},
+        {"url": "(unresolved: visitthailandtoday.com '10 Minutes Walk from MRT Sam Yot')", "publisher": "Visit Thailand Today", "family": "Visit Thailand Today", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "same family (dedup — does not add a second family)", "body_read": false},
+        {"url": "(unresolved: eatingthaifood.com 'The Essentials: Where We Eat in Bangkok')", "publisher": "Eating Thai Food", "family": "Eating Thai Food", "date": "2025-11", "dated": true, "about_this_entity": false, "commercial_context": "none; but this is a city eating guide praising one cafe near Sam Yot MRT = single-venue mention, not counted as substantive neighborhood coverage", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "(unresolved)", "note": "'10 ที่เที่ยว ย่าน MRT สามยอด Old Town สุดวินเทจ' dated Jan 2024 = OUTSIDE window"},
+        {"url": "https://www.lemon8-app.com/@roameo.official/7524699631500427784?region=th", "note": "Lemon8 '5 ร้านกิน-คาเฟ่รอบ MRT สามยอด' = social platform/UGC"},
+        {"url": "https://www.facebook.com/Klaopaitaew/posts/932250395422831", "note": "Facebook '11 จุดเช็คอิน MRT สามยอด-วัดมังกร' = UGC"},
+        {"url": "(unresolved)", "note": "Thai roundups ('10 ร้านเด็ดที่ MRT สามยอด #เลี้ยวซ้ายผ่านMRT Ep.31', 'MRT สามยอด ทางออก 3', '9 ร้านใกล้ MRT สามยอด เปิดใหม่', 'กินเที่ยวครบในงบ 500') — publishers/dates not resolved from snippets"},
+        {"url": "(unresolved)", "note": "TERRATEC TBM breakthrough at Sam Yot Station (MRT Purple Line extension) — construction trade news about tunnelling works, not neighborhood editorial"}
+      ],
+      "entity_confusion_notes": "Sam Yot = intersection/station in Phra Nakhon (Wang Burapha Phirom), NOT the Sam Yot in other provinces. Coverage often bleeds into Chinatown-edge (Song Wat) and Khao San/old-town guides; the station-area catchment (Dinso Rd, Giant Swing, Ong Ang) is this entity. Distinct from pom-prap-sattru-phai despite geographic adjacency.",
+      "access_failures": []
+    },
+    {
+      "entity_key": "st.wat-mangkon",
+      "coverage_band": "thin",
+      "families": ["The Thaiger"],
+      "notable_pieces": [
+        {"url": "https://thethaiger.com/news/national/yaowarat-comes-alive-as-chinese-opera-revives-memories-in-bangkoks-historic-chinatown", "publisher": "The Thaiger", "family": "The Thaiger", "date": null, "dated": true, "about_this_entity": true, "commercial_context": "none (independent English-language Thai news site)", "body_read": false, "note": "'BEM Happy Journey 2025' turned the area around Wat Mangkon Station into a cultural stage for three nights; reported Dec 2025 = in window"},
+        {"url": "https://salehere.co.th/articles/traveling-around-mrt-wat-mangkon", "publisher": "SaleHere", "family": "SaleHere (SCG lifestyle platform)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "corporate lifestyle platform (SCG) with commercial listings — logged, not counted as independent", "body_read": false, "note": "'พิกัดที่เที่ยวรอบ MRT วัดมงกร วันเดย์ทริป' — station-area roundup"},
+        {"url": "(unresolved)", "publisher": "unknown (from news search summary)", "family": "unknown", "date": "2025-05", "dated": true, "about_this_entity": false, "commercial_context": "unknown; May 2025 feature on Bangkok's 'most happening' neighborhood mentions hotels overlooking Wat Mangkon Kamalawat temple — Chinatown-general, partial", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "https://www.wongnai.com/listings/eat-mrt-route", "note": "Wongnai '10 ร้านอาหารใกล้ MRT สถานีวัดมงกร' = restaurant platform (BTS Group), not independent editorial"},
+        {"url": "https://travel.trueid.net/detail/kW22P0BO6PYy", "note": "TrueID 'เที่ยว MRT สามยอด-วัดมงกร 11 จุดเช็คอิน' = portal content, undated"},
+        {"url": "https://www.blognone.com/node/107845", "note": "blognone 'สถานีต่อไป...วัดมงกร' — community tech-blog review of the then-new station, dated 2018 = OUTSIDE window"},
+        {"url": "https://pantip.com/topic/40766444", "note": "Pantip review thread = UGC"},
+        {"url": "https://www.facebook.com/groups/486081991848334/posts/1483449572111566", "note": "Facebook group '20 ร้านรอบสถานี MRT วัดมงกร' = UGC"}
+      ],
+      "entity_confusion_notes": "Three referents: (1) Wat Mangkon Kamalawat temple (Wat Leng Noei Yi) on Charoen Krung; (2) MRT Wat Mangkon station (BL29) and its catchment; (3) Yaowarat/Chinatown generally. This entity is the STATION AREA. Note Yaowarat Road proper lies mostly in Samphanthawong district (not a candidate); Chinatown's Soi Nana bar street is in Pom Prap Sattru Phai (assigned there, not here). Extensive Chinatown/Yaowarat editorial coverage exists but is mostly not station-specific; only station-anchored pieces were counted.",
+      "access_failures": []
+    },
+    {
+      "entity_key": "pom-prap-sattru-phai",
+      "coverage_band": "broad",
+      "families": ["Time Out Group", "Bangkok Post (Post Media)", "The Nation (Nation Group)", "Thai PBS / Thai PBS News", "Condé Nast Traveler (undated)"],
+      "notable_pieces": [
+        {"url": "https://www.timeout.com/bangkok/bars/best-bars-to-check-out-along-soi-nana-in-chinatown", "publisher": "Time Out Bangkok", "family": "Time Out Group", "date": "2025-01-02", "dated": true, "about_this_entity": true, "commercial_context": "none (bar-guide editorial; venues listed, not sponsored)", "body_read": true, "note": "'The Best Bars in Soi Nana - Chinatown' (Ba Hao, Wallflowers, G.O.D, Teens of Thailand, Tep, Thurty 30...); Exa timestamp 2025-01-02T17:00Z"},
+        {"url": "https://www.timeout.com/bangkok/nightlife/bars-in-soi-nana-chinatown", "publisher": "Time Out Bangkok", "family": "Time Out Group", "date": "2026-03-26", "dated": true, "about_this_entity": true, "commercial_context": "none", "body_read": true, "note": "updated 'Best bars in Soi Nana (Chinatown)' — over a dozen bars; same family, second piece"},
+        {"url": "https://www.bangkokpost.com/thailand/general/3029217/frantic-rescue-worker-plummets-into-deep-excavation-hole", "publisher": "Bangkok Post", "family": "Bangkok Post (Post Media)", "date": "2025-05-19", "dated": true, "about_this_entity": true, "commercial_context": "none (news)", "body_read": true, "note": "Orange Line sinkhole rescue at Lan Luang station site, Pom Prap Sattru Phai"},
+        {"url": "https://www.bangkokpost.com/thailand/general/3033082/body-of-worker-located-in-hole", "publisher": "Bangkok Post", "family": "Bangkok Post (Post Media)", "date": "2025-05-24", "dated": true, "about_this_entity": true, "commercial_context": "none (news)", "body_read": true, "note": "follow-up; same family"},
+        {"url": "https://www.nationthailand.com/thailand/bangkok/40050199", "publisher": "The Nation Thailand", "family": "The Nation (Nation Group)", "date": "2025-05-20", "dated": true, "about_this_entity": true, "commercial_context": "none (news)", "body_read": true, "note": "MRTA clarification on 19m-deep pit, Soi Lan Luang 6, Pom Prap Sattru Phai; road closure ordered by district office"},
+        {"url": "https://www.nationthailand.com/news/general/40050416", "publisher": "The Nation Thailand", "family": "The Nation (Nation Group)", "date": "2025-05-25", "dated": true, "about_this_entity": true, "commercial_context": "none (news)", "body_read": true, "note": "worker found dead after 5-day search; same family"},
+        {"url": "https://www.thaipbs.or.th/news/content/352482", "publisher": "Thai PBS News", "family": "Thai PBS / Thai PBS World", "date": "2025-05-25", "dated": true, "about_this_entity": true, "commercial_context": "none (public broadcaster)", "body_read": true, "note": "Thai-language recovery-of-body report, same incident"},
+        {"url": "(unresolved)", "publisher": "Condé Nast Traveler", "family": "Condé Nast", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "none; UNDATED, listed separately", "body_read": true, "note": "'Soi Nana — Neighborhood Review' by Katie Lockhart — Chinatown's Soi Nana, in this district"}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "https://wikicommunity.sac.or.th/community/786", "note": "SAC Wikicommunity profile of Nang Loeng community/market (100+ year market) — archive, undated"},
+        {"url": "(unresolved)", "note": "Time Out-family speakeasy crawl itinerary (Oct 2025) referencing Soi Nana openers — surfaced in snippet, URL unresolved"},
+        {"url": "(unresolved)", "note": "'How To Visit The Golden Mountain Bangkok' Golden Mount guide — opaque URL, publisher unresolved"},
+        {"url": "(unresolved)", "note": "Tripsapien street-food guide for the district; 'Why Pom Prap Sattru Phai is one of Bangkok's Best Areas' video — undated"},
+        {"url": "https://www.facebook.com/sadoodtafanpage/posts/2103252336435319", "note": "Facebook Nang Loeng walk = UGC"},
+        {"url": "(unresolved)", "note": "PM2.5-pollution district rankings (2025) and BMA-council-election 2026 coverage naming the district — party-needle news, logged as district-level mentions"}
+      ],
+      "entity_confusion_notes": "Golden Mount/Wat Saket is in this district; Nang Loeng, Bobae, Khlong Thom in-district. Chinatown Soi Nana (Maitrichit/Pom Prap per Time Out address data) belongs HERE — the CN Traveler and Time Out Soi Nana pieces were assigned to this entity and explicitly excluded from st.nana. Yaowarat Road proper is Samphanthawong district (not a candidate), so Yaowarat-general coverage was not double-counted here.",
+      "access_failures": []
+    },
+    {
+      "entity_key": "phaya-thai",
+      "coverage_band": "broad",
+      "families": ["Bangkok Post (Post Media)", "Time Out Group", "Koktail Media", "Daily News", "Thailand Starter Kit", "Rainmaker Close"],
+      "notable_pieces": [
+        {"url": "https://www.bangkokpost.com/life/social-and-lifestyle/3262173/bangkoks-ari-plays-host-to-thinkfest-2026", "publisher": "Bangkok Post", "family": "Bangkok Post (Post Media)", "date": "2026-05-28", "dated": true, "about_this_entity": true, "commercial_context": "none (Life section feature on district-based creative festival with BMA + Phaya Thai District Office)", "body_read": true},
+        {"url": "https://www.timeout.com/bangkok/things-to-do/wrestle-with-what-success-even-means-anymore-at-thinkfest-2026-across-ari", "publisher": "Time Out Bangkok", "family": "Time Out Group", "date": "2026-05-13", "dated": true, "about_this_entity": true, "commercial_context": "none", "body_read": true},
+        {"url": "https://www.timeout.com/bangkok/news/think-fest-bangkok-returns-102126", "publisher": "Time Out Bangkok", "family": "Time Out Group", "date": "2026-10-21", "dated": true, "about_this_entity": true, "commercial_context": "none", "body_read": true, "note": "'Think Fest returns to Ari this November' — same family, second piece"},
+        {"url": "https://www.koktailmagazine.com/2026/05/12/ari-gets-its-first-large-scale-creative-festival-with-thinkfest-from-29-31-may/", "publisher": "Koktail Thailand", "family": "Koktail Media", "date": "2026-05-12", "dated": true, "about_this_entity": true, "commercial_context": "none (independent lifestyle magazine)", "body_read": true},
+        {"url": "https://www.dailynews.co.th/news/5881434/", "publisher": "Daily News (เดลินิวส์)", "family": "Daily News", "date": "2026-05-22", "dated": true, "about_this_entity": true, "commercial_context": "none (Thai daily; feature 'อารีย์ กับฟีลที่ไม่เหมือนเดิม' on Soi Ari's evolution + ThinkFest)", "body_read": true},
+        {"url": "https://www.rainmaker.in.th/thinkfest-remember-me/", "publisher": "Rainmaker Close", "family": "Rainmaker Close", "date": "2026-11-02", "dated": true, "about_this_entity": true, "commercial_context": "marketing-industry trade outlet covering an event organised by a creative agency (BrandThink) — borderline PR-adjacent, logged and counted with that caveat", "body_read": true},
+        {"url": "https://www.thailandstarterkit.com/moving/living-in-phaya-thai/", "publisher": "Thailand Starter Kit", "family": "Thailand Starter Kit", "date": "2026-10-26", "dated": true, "about_this_entity": true, "commercial_context": "none (independent expat living guide; jointly covers Phaya Thai and Ratchathewi)", "body_read": true},
+        {"url": "https://condoreviewsthailand.com/neighborhoods/ari", "publisher": "Condo Reviews Thailand", "family": "Condo Reviews Thailand", "date": null, "dated": true, "about_this_entity": true, "commercial_context": "condo-review site, property-adjacent — LOGGED, NOT counted toward independent breadth", "body_read": true, "note": "'Living in Ari: Complete Expat Guide 2025' — substantive neighborhood content (vibe, rents, food, transit); title carries 2025"},
+        {"url": "https://nestopa.com/th-en/articles/bts-saphan-khwai-guide-lifestyle-condos-near-the-skytrain", "publisher": "Nestopa", "family": "Nestopa (property platform)", "date": null, "dated": false, "about_this_entity": true, "commercial_context": "property platform — logged, not counted", "body_read": false},
+        {"url": "(unresolved: eastblueth.com 'Ari vs. Ekkamai: Which Bangkok Neighborhood Is Right for You')", "publisher": "East Blue TH", "family": "East Blue TH", "date": "2026-09", "dated": true, "about_this_entity": true, "commercial_context": "appears to be SEO/property-adjacent content — logged, not counted", "body_read": false}
+      ],
+      "undated_or_snippet_only": [
+        {"url": "https://www.neverendingfootsteps.com/ari-best-neighborhood-bangkok", "note": "Never Ending Footsteps 'Why Ari is My Favourite Bangkok Neighbourhood' — independent travel blog, undated (would strengthen band to 6+ families if dated in-window)"},
+        {"url": "https://totallybangkok.com/", "note": "totallybangkok.com 'Living in Ari, Bangkok: Is It Right for Expats?' + 'The Neighbourhood Guide to Ari' — undated; site has property-marketing character"},
+        {"url": "(unresolved)", "note": "Thai roundups: 'มัดรวม 30 ร้านอารีย์ ฉบับ 2024' (outside window), '30 ร้านอาหารอารีย์ (อัปเดต 2025)', '20 คาเฟ่อารีย์' — publishers not resolved from snippets"},
+        {"url": "(unresolved: Amazing Thailand walking-route page)", "note": "TAT 'เส้นทางเดินกินย่านอารีย์' = tourism-authority content, flagged"},
+        {"url": "(unresolved: Expedia Phaya Thai travel guide)", "note": "Expedia '2026 Phaya Thai Travel Guide' = OTA"},
+        {"url": "https://www.reddit.com/r/Bangkok/comments/ty1wln/is_the_neighborhood_between_ari_and_saphan_khwai", "note": "Reddit = UGC"}
+      ],
+      "entity_confusion_notes": "'Phaya Thai' results frequently mean BTS Phaya Thai station / Airport Rail Link interchange / Phaya Thai Road / Phaya Thai Palace, not the district; railway-station and hospital (Phyathai 1/2/3) hits were classified out. Ari (Soi Ari/Phahonyothin Soi 7, Sanam Pao) and Saphan Kwai are in-district. Ratchathewi is a separate district but is covered together with Phaya Thai in at least one living guide (Thailand Starter Kit) — counted for both with a note.",
+      "access_failures": []
+    }
+  ],
+  "caveats": [
+    "This measures INDEPENDENT EDITORIAL COVERAGE BREADTH (evidence of public interest), NOT popularity; bands must not be read as a popularity score.",
+    "Small fixed battery (~4-5 WebSearch queries per candidate + Exa resolution passes). Absence of in-window independent pieces (e.g. st.nana, st.phloen-chit) reflects this census method, not proof of absence.",
+    "Snippet-based judgement was used for most items per task instruction; only pages with body_read=true were actually opened (and Exa fetches were often partial, e.g. only the first 4000 chars of the Fullsuitcase guide, so its riverside/Charoen Nakhon section was inferred, not directly verified).",
+    "Several search hits returned only opaque google.com/goto redirect URLs; their publishers and dates could not be verified and they are logged as unresolved/undated.",
+    "Property portals (PropertyScout, PropertySights, Baanlyy, Find Easy, Nestopa, Lazudi, Superagent, Siam Real Estate, eastblueth), hotel/OTA content (Avani, Royal Ivory, S15, Hotels.com Go Guides, Expedia, Trip.com, The Luxury Editor), the mall's own PR (ICONSIAM), and tourism-authority content (Amazing Thailand/TAT) are logged with commercial context and excluded from independent-breadth counting.",
+    "Platform/UGC sources (TripAdvisor, Pantip, Reddit, Facebook, Lemon8, Wongnai, TrueID, blognone community posts) are logged but not counted as editorial coverage.",
+    "Bands count publisher families whose qualifying pieces are dated within 2024-11-05..2026-11-07. Where a band rests wholly or partly on an undated single family (st.nana, st.phloen-chit), this is flagged in the families list; the true band could be one step lower (none_found) if those pages are pre-window.",
+    "st.nana: the high-visibility 'Soi Nana' editorial coverage (CN Traveler, Time Out) is the CHINATOWN Soi Nana and belongs to pom-prap-sattru-phai, not st.nana — a key risk if entity keys are assigned by name-match alone.",
+    "Exa 'published' timestamps occasionally disagree with on-page dates by ~1 day (e.g. Time Out Soi Nana piece listed as 2025-01-02T17:00Z); near-boundary dates (window starts 2024-11-05) were treated conservatively.",
+    "No paywalled pages were encountered; no paywall bypass or news-proxy mirrors were used. One WebSearch query failed with a concurrency limit and was retried.",
+    "Family dedup applied: Thai PBS = Thai PBS World = Thai PBS News (one family, appears under st.ratchathewi and pom-prap-sattru-phai); Bangkok Post = one family (phaya-thai and pom-prap); The Nation = Nation Group; Time Out Group covers all Time Out Bangkok pieces across candidates."
+  ]
+}

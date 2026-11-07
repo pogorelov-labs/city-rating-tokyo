@@ -1,0 +1,1517 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.nana",
+  "kind": "station_area",
+  "name_en": "Nana",
+  "name_th": "นานา",
+  "aliases": [
+   "Sukhumvit Soi Nana",
+   "Soi Nana (Soi 4) bar strip",
+   "Soi Arab (Soi 3)",
+   "Nana intersection"
+  ],
+  "scope_notes": "800 m nearest-stop catchment around BTS Nana. District split (app data): Watthana 48%, Khlong Toei 44%, Pathum Wan 8%. NOT the Chinatown Soi Nana — that cocktail-bar strip sits in Pom Prap Sattru Phai inside st.wat-mangkon's catchment (batch-2 verified). Research-verified: Nana Plaza ~255–300 m inside; Bumrungrad campus straddles the NW boundary (frontage ~415–450 m inside, geotagged center ~710 m outside the polygon); Benchasiri ~1.7 km east and Lumphini ~1.6–1.7 km south both outside — green 10 is not reproducible from in-unit geometry (1.4 ha mapped, identity unresolved)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.86,
+  "cohort_rank": 4,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Popular-but-contested nightlife identity; the Soi Nana name confusion is a Q01 test; green 10 with 1.4 ha park is a green-geometry outlier."
+ },
+ "sources": [
+  {
+   "id": "src_64cb69de115a",
+   "canonical_url": "https://en.wikipedia.org/wiki/Nana_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Nana_station",
+   "title": "Nana station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "article flagged as stub needing citations",
+    "does not describe station structure or list exits"
+   ]
+  },
+  {
+   "id": "src_8ec53fc9a67c",
+   "canonical_url": "https://en.wikipedia.org/wiki/Nana_Plaza",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Nana_Plaza",
+   "title": "Nana Plaza",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "says 'Located in the Khlong Toei District' although the Soi 4 address sits in Khlong Toei Nuea/Watthana per district data - loose district naming noted",
+    "bar count (30) and closing time (03:00) differ from the operator's own site"
+   ]
+  },
+  {
+   "id": "src_c8a33e4fb11b",
+   "canonical_url": "https://en.wikipedia.org/wiki/Benchasiri_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Benchasiri_Park",
+   "title": "Benchasiri Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": []
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "infobox area given as 57.6 ha (360 rai) with infobox alt 57 ha"
+   ]
+  },
+  {
+   "id": "src_36105297c52d",
+   "canonical_url": "https://en.wikipedia.org/wiki/Soi_Arab",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Soi_Arab",
+   "title": "Soi Arab",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "short article; community history before 1983 not covered"
+   ]
+  },
+  {
+   "id": "src_740397b40e8a",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phloen_Chit_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phloen_Chit_station",
+   "title": "Phloen Chit station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "infobox coordinates (13.74308, 100.54902) used with caution for distance estimates only"
+   ]
+  },
+  {
+   "id": "src_67b4ff08052a",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_MRT_station",
+   "title": "Lumphini MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "infobox coordinates (13.7256, 100.5460) look implausibly far southwest of the Witthayu intersection described in the same article; used only qualitatively"
+   ]
+  },
+  {
+   "id": "src_cc490c3606df",
+   "canonical_url": "https://btsbangkok.com/station/nana",
+   "retrieved_url": "https://btsbangkok.com/station/nana",
+   "title": "Nana BTS Station guide",
+   "publisher": "btsbangkok.com",
+   "publisher_family": "btsbangkok.com",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "tourism/affiliate-style station guide; hotel listings are loosely mapped to exits",
+   "limitations": [
+    "exit-to-hotel mapping is incidental (from hotel blurbs), not an official BTS exit list",
+    "no station structure or skywalk detail"
+   ]
+  },
+  {
+   "id": "src_ca92238a93f3",
+   "canonical_url": "https://www.thaihometown.com/knowledge/ทำเลดังซอยนานา-แหล่งท่องเที่ยวยามราตรี",
+   "retrieved_url": "https://www.thaihometown.com/knowledge/ทำเลดังซอยนานา-แหล่งท่องเที่ยวยามราตรี",
+   "title": "ทำความรู้จัก ซอยนานา ทำเลดังย่านสุขุมวิท แหล่งเที่ยวในยามราตรี (Get to know Soi Nana, the famous Sukhumvit nightlife location)",
+   "publisher": "ThaiHometown",
+   "publisher_family": "thaihometown.com",
+   "author": null,
+   "published_at": "2025-11",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "property/knowledge portal content (tourism-adjacent); publication month shown in search result only, treat as approximate",
+   "limitations": [
+    "no named author; exact publication date not visible on page"
+   ]
+  },
+  {
+   "id": "src_30b5961fbe80",
+   "canonical_url": "https://www.halal-navi.com/blog/en/halal-food-bangkok-muslim-travel-guide-2026",
+   "retrieved_url": "https://www.halal-navi.com/blog/en/halal-food-bangkok-muslim-travel-guide-2026",
+   "title": "Halal Food in Bangkok: From Soi Arab to Chatuchak",
+   "publisher": "Halal Navi",
+   "publisher_family": "halal-navi.com",
+   "author": "Zeshan Hayat",
+   "published_at": "2026-08-20",
+   "updated_at": "2026-08-20",
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "halal-travel app/blog content (tourism)",
+   "limitations": [
+    "covers Soi Arab briefly; its own halal verification is caveated ('we have not independently verified its halal scope')"
+   ]
+  },
+  {
+   "id": "src_ea23962fff68",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bts/nana",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bts/nana",
+   "title": "Condos for rent near Nana BTS station",
+   "publisher": "HipFlat",
+   "publisher_family": "hipflat.com",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property listings portal",
+   "limitations": [
+    "'near Nana BTS' results pool includes listings in other districts (e.g. a Huai Khwang condo) - not a clean station catchment sample",
+    "no median/average published on page; per-unit figures only",
+    "copyright 2026; listing mix changes continuously"
+   ]
+  },
+  {
+   "id": "src_e78bc5064820",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/khlong-toei-nuea/rentals/apartment",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/khlong-toei-nuea/rentals/apartment",
+   "title": "Apartments for rent in Khlong Toei Nuea",
+   "publisher": "PropertyScout",
+   "publisher_family": "propertyscout.co.th",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property listings portal",
+   "limitations": [
+    "subdistrict-wide (Khlong Toei Nuea) averages, not station catchment; clustered on Phrom Phong/Asok too",
+    "apartment subset (condos largely excluded); asking rents, not signed rents",
+    "no date stamp on averages"
+   ]
+  },
+  {
+   "id": "src_4268ca031ea6",
+   "canonical_url": "https://home-and-travel.com/home/home-tips/living-in-nana-bangkok-guide",
+   "retrieved_url": "https://home-and-travel.com/home/home-tips/living-in-nana-bangkok-guide",
+   "title": "Living in Nana, Bangkok: Urban Living Guide",
+   "publisher": "Home & Travel",
+   "publisher_family": "home-and-travel.com",
+   "author": null,
+   "published_at": "2025-11-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "expat/lifestyle content site; no bookings sold on page",
+   "limitations": [
+    "rent figures are unattributed ranges",
+    "calls Benjakitti Park 'a short ride away' without distance detail",
+    "never uses the term red-light district; soft-pedals that dimension"
+   ]
+  },
+  {
+   "id": "src_53997a0cc8a9",
+   "canonical_url": "https://www.nationthailand.com/news/general/40054635",
+   "retrieved_url": "https://www.nationthailand.com/news/general/40054635",
+   "title": "BMA improves over 1,100 kms of sidewalks to be pedestrian-friendly",
+   "publisher": "The Nation (Thailand)",
+   "publisher_family": "nationthailand.com",
+   "author": null,
+   "published_at": "2025-08-28",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "citywide program article; Sukhumvit named as a covered road but no Nana-specific work items",
+    "paraphrased BMA statements, no direct quotes"
+   ]
+  },
+  {
+   "id": "src_c7c31048866c",
+   "canonical_url": "https://nanaplazabkk.com/",
+   "retrieved_url": "https://nanaplazabkk.com/",
+   "title": "Nana Plaza official website",
+   "publisher": "Nana Plaza (Nana Partners / Panthera Group)",
+   "publisher_family": "nanaplazabkk.com (operator)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "operator self-promotion of an adult-entertainment complex; visitor and bar-count claims are its own",
+   "limitations": [
+    "hours (7pm-2am) conflict with Wikipedia's 03:00 building close",
+    "bar count (24 agogo + 3 beer bars) conflicts with Wikipedia's 30",
+    "no licensing or regulatory status stated"
+   ]
+  },
+  {
+   "id": "src_9fca4232467f",
+   "canonical_url": "https://spankysbangkok.com/",
+   "retrieved_url": "https://spankysbangkok.com/",
+   "title": "Spankys Bangkok (venue page)",
+   "publisher": "Spankys Bangkok",
+   "publisher_family": "spankysbangkok.com (venue)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "adult-venue marketing page",
+   "limitations": [
+    "used only to corroborate a tenant's physical presence on 2nd floor, 4 Sukhumvit Soi 4; no guide/prices content as expected"
+   ]
+  },
+  {
+   "id": "src_d24474d9ea20",
+   "canonical_url": "https://www.bumrungrad.com/en/contact-us/map-bumrungrad-directions",
+   "retrieved_url": "https://www.bumrungrad.com/en/contact-us/map-bumrungrad-directions",
+   "title": "Map & Directions - Bumrungrad International Hospital",
+   "publisher": "Bumrungrad International Hospital",
+   "publisher_family": "bumrungrad.com (operator)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "hospital operator page",
+   "limitations": [
+    "no walking distance stated; shuttle routes to BTS Nana and BTS Phrom Phong mentioned without exit-level detail on this page"
+   ]
+  },
+  {
+   "id": "src_7e02cdfd0a7d",
+   "canonical_url": "https://www.cntraveler.com/activities/bangkok/soi-nana",
+   "retrieved_url": "https://www.cntraveler.com/activities/bangkok/soi-nana",
+   "title": "Soi Nana (Chinatown) - Condé Nast Traveler review",
+   "publisher": "Condé Nast Traveler",
+   "publisher_family": "condenast.com",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "travel media (Condé Nast); no bookings sold on page",
+   "limitations": [
+    "covers the Chinatown/Talat Noi Soi Nana, used here only for disambiguation evidence"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "nana-c01",
+   "text_en": "The 'Nana' name in this area derives from the Lek-Nana (เล็ก-นานา) family, a prominent Thai-Chinese merchant family whose landholding gave its name to Soi Nana and to BTS Nana station; Soi Nana is Sukhumvit Soi 4, paired across the road with Soi 3 (Nana Tai/Nana Nuea), and BTS Nana (E3) is the nearest stop.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "toponymy"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Soi Nana / Sukhumvit Soi 4 and BTS Nana",
+    "relation_to_entity": "entire_unit",
+    "notes": "Applies to the whole unit; station anchor 13.74054, 100.55543 matches Wikipedia's station coordinates (13.74060, 100.55540) to ~7 m"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Historical naming; 1958 shophouse conversion date given by ThaiHometown"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "name-origin section",
+     "paraphrase": "Soi Nana takes its name from the Lek-Nana family; in 1958 (B.E. 2501) a family descendant converted family land into rental shophouses, land that included what became the Grace Hotel area"
+    },
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "Name section",
+     "paraphrase": "Nana Plaza's name comes from the property-holding Nana family, with Lek Nana the most prominent member"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Chinese-origin derivation of the word Nana ('nine') is stated only by ThaiHometown and not corroborated"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c02",
+   "text_en": "Bangkok has two well-known 'Soi Nana' streets: the Sukhumvit Soi 4 one in this unit (nightlife/red-light area) and a separate bar-hopping Soi Nana in Chinatown (Talat Noi/Song Wat, off Rama IV near Hua Lamphong); Condé Nast Traveler explicitly warns readers not to confuse the two, calling the Chinatown one a bar-hopping street and the Sukhumvit one 'seedy'.",
+   "kind": "factual_report",
+   "topics": [
+    "disambiguation",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Sukhumvit Soi 4 vs Chinatown Soi Nana",
+    "relation_to_entity": "inside",
+    "notes": "Only the Sukhumvit one is inside the unit; Chinatown Soi Nana is outside (citywide disambiguation)"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-11 retrieval",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_7e02cdfd0a7d",
+     "locator": "opening paragraph",
+     "paraphrase": "'Not to be confused with the seedy Soi Nana on Sukhumvit Road, Chinatown's Soi Nana is Bangkok's best bar-hopping street' - lists Ba Hao, Teens of Thailand, Tep Bar in Chinatown"
+    },
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "soi-description section",
+     "paraphrase": "Describes Soi Nana (Sukhumvit) as a nightlife-and-hotel lane within the Sukhumvit corridor, distinct coverage from Chinatown content"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "source 8 does not itself discuss the Chinatown street; the two-streets distinction rests mainly on source 17"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c03",
+   "text_en": "BTS Nana (E3) opened 5 December 1999 on the Sukhumvit Line, straddles the Khlong Toei and Watthana districts, is listed as one of the busiest BTS stations, and its entrances serve: Exit 1 the Soi 3/Soi 3/1 (Arab quarter) side with the Nana Nuea canal-boat pier, Exit 2 the Soi 4 side (Nana Plaza, Landmark Bangkok, Majestic Suites), Exit 3 the south side of Sukhumvit Rd, Exit 4 toward Soi 8; Wikipedia notes the station is 'surrounded by a variety of hotels and facilities for foreign tourists' and that Nana Plaza is within walking distance.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transit",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Nana station and immediate frontage",
+    "relation_to_entity": "entire_unit",
+    "notes": "Station coordinates per Wikipedia 13.7406028, 100.5553972"
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Opening date fixed; ridership figure on Wikipedia is 2021 (1,149,005 passengers) - outdated, do not reuse"
+   },
+   "evidence": [
+    {
+     "source_id": "src_64cb69de115a",
+     "locator": "infobox and lead",
+     "paraphrase": "Station code E3, opened 5 December 1999, in both Khlong Toei and Watthana districts; surrounded by hotels and foreign-tourist facilities; red-light/Nana Plaza area within walking distance; coordinates 13°44'26.17\"N 100°33'19.43\"E"
+    },
+    {
+     "source_id": "src_cc490c3606df",
+     "locator": "exit listings and area description",
+     "paraphrase": "Exit 1: NH Bangkok Sukhumvit Boulevard (Soi 5, 200 m from station), Pakistan embassy, Nana Nuea pier (Soi 3, use Exit 1), eastbound bus stop; Exit 2: The Landmark Bangkok ('Skytrain station located in front of the hotel'), Majestic Suites, Nana Plaza (use Exit 2), westbound bus stop; Exit 3: Hyatt Regency/Ramada/Sofitel listings; Exit 4: ON8/lyf Sukhumvit 8; 'one of the busiest BTS stations in Bangkok'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "btsbangkok exit-to-hotel mapping is editorial (from hotel blurbs), not an official BTS document",
+    "soi assignment of Exit 3/4 partly inferred from hotel addresses"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c04",
+   "text_en": "Nana Plaza, the adult-entertainment complex of roughly 24 go-go bars plus beer bars on three floors, sits at 3-4 Sukhumvit Soi 4 about 255-300 m from BTS Nana - inside the unit and roughly equidistant-or-closer than any rated neighbouring stop - and self-describes as 'the world's largest adult playground'. It grew from a late-1970s restaurant/shopping plaza, with go-go bars from the early 1980s (Wikipedia: opened 1983).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Nana Plaza, Sukhumvit Soi 4",
+    "relation_to_entity": "inside",
+    "notes": "Wikipedia coordinates 13.74136, 100.55317 are ~255 m from the station anchor and ~490+ m from both rated neighbours st.phloen-chit and st.asok, so no clip ambiguity"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1970s-present",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "lead and History",
+     "paraphrase": "Address 3-3/1 Sukhumvit Soi 4; about 300 m from BTS Nana; entertainment complex and red-light district; one of Bangkok's three concentrated red-light districts alongside Soi Cowboy and Patpong, all attracting primarily tourists; opened 1983, ~20 go-go bars by mid-1980s; U-shaped three-storey block around a courtyard"
+    },
+    {
+     "source_id": "src_c7c31048866c",
+     "locator": "about/history page",
+     "paraphrase": "Operator: 'The Plaza now has 24 agogo bars and three stand-alone beer bars across three floors'; 39 venues existed by 2002; 'open 7 days a week 7 pm to 2 am'; recently celebrated two-millionth visitor"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "bar count conflicts: 24 (operator, current) vs 30 (Wikipedia, older data)",
+    "closing time conflicts: 02:00 (operator) vs 03:00 (Wikipedia); do not state either as settled",
+    "Wikipedia's 'Khlong Toei District' attribution for the plaza conflicts with the app's Watthana/Khlong Toei split for the unit"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "nana-c05",
+   "text_en": "Nana Plaza has undergone consolidation, not closure: bought in 2012 by Nana Partners Co Ltd (Fico Corporation and Panthera Group), renovated (about 10 M baht in lifts/escalators/electrical, an 18 M baht roof canopy in 2018, full CCTV), leasing to tenants on up to 12-year contracts, with the venue count falling from 39 bars (2002) to 24 agogo bars (operator's 2026 site) - bar churn with site-wide investment, consistent with reports of individual bar openings/closures in 2025 (Mandarin reopening Sep 2025, Orbit opening Nov 2025, Virgin closing) rather than any entertainment-zone shutdown.",
+   "kind": "factual_report",
+   "topics": [
+    "change_over_time",
+    "nightlife"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Nana Plaza",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2012-2026",
+    "recheck_by": "2027-01",
+    "notes": "2025 bar-level events (Mandarin/Orbit/Virgin) rest on snippet-level search results only - recheck before publication"
+   },
+   "evidence": [
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "Ownership section",
+     "paraphrase": "Sold in 2012 to Nana Partners Co Ltd, co-owned by Fico Corporation and Panthera Group; Panthera renovated the complex and acts as landlord with management and security"
+    },
+    {
+     "source_id": "src_c7c31048866c",
+     "locator": "improvements/management sections",
+     "paraphrase": "~10 M baht upgrades (lifts, escalators, electrical), 2018 roof canopy ~18 M baht, CCTV system, western GM, 12-year tenant leases, COVID-era donations 2020-2022; 39 venues by 2002 vs 24 agogo bars now"
+    },
+    {
+     "source_id": "src_9fca4232467f",
+     "locator": "venue page",
+     "paraphrase": "Spankys operates 'on the 2nd floor of Nana Plaza, 4 Sukhumvit Soi 4' with shows every 30 minutes - evidence of operating tenants in 2026"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "2025-specific bar openings/closings come from search-result snippets (Stickman Weekly, Bangkok Nightlife news) whose URLs were not retrievable; corroborative only",
+    "no licensing/entertainment-zone regulatory status found in any source"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c06",
+   "text_en": "Sukhumvit Soi 3/3/1 - 'Soi Arab' - is the Middle Eastern quarter of Bangkok inside this unit: the alley between Soi 3 and Soi 5, with Arabic signage, shisha/water-pipe cafes, Yemeni/Egyptian/Lebanese kitchens (Shahrazad opened 1983, Nasir al-Masri 1986), agarwood and perfume shops, and the nearby Grace Hotel described as popular among Arabs; the area serves Arab expatriates and visitors as a community and dining hub.",
+   "kind": "factual_report",
+   "topics": [
+    "community",
+    "food",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Soi Arab (Sukhumvit Soi 3/1)",
+    "relation_to_entity": "inside",
+    "notes": "Wikipedia coordinates 13.7425, 100.5535 - north of Sukhumvit Rd, within ~350 m of the station anchor, well inside"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1983-present",
+    "recheck_by": null,
+    "notes": "Restaurant founding dates are from the Wikipedia article citing NYT 2008 / Reuters 2009"
+   },
+   "evidence": [
+    {
+     "source_id": "src_36105297c52d",
+     "locator": "lead, history, cuisine sections",
+     "paraphrase": "Soi Sukhumvit 3/1, also called Arab Street, between Soi Sukhumvit 3 and 5; mostly occupied by Middle Eastern visitors and expatriates; Shahrazad (1983) and Nasir al-Masri (1986); outdoor water-pipe smoking; agarwood shops; Grace Hotel not far away and popular among Arabs; foods from Lebanon, Iran, Yemen, India, Nepal, Thailand"
+    },
+    {
+     "source_id": "src_30b5961fbe80",
+     "locator": "Soi Arab section",
+     "paraphrase": "Calls Soi 3/1 'Bangkok's Middle Eastern quarter' with shisha cafes, Yemeni grills and kitchens like Al Hussain; recommends spending an evening there"
+    },
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "Soi 3 description",
+     "paraphrase": "Odd-numbered side (Soi 3, Nana Tai) nicknamed Soi Arab for its Middle Eastern community - Arabic restaurants, kebab shops, travel agencies, tailors"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "pre-1983 community origins not covered by any source read"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c07",
+   "text_en": "The two faces of the unit run on different clocks: Soi Nana (Soi 4) is described as a fairly quiet business/residential lane by day that transforms into a lit-up nightlife zone at night, while the Arab-quarter kitchens are evening/late-night destinations ('come hungry, come late'), with halal kitchens reported running past midnight; Nana Plaza operates nightly from 19:00 (official site says to 02:00).",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "nightlife",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Soi 4 bar strip vs Soi 3 Arab quarter",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 sources",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "day-night section",
+     "paraphrase": "By day a fairly quiet business/residential lane; at night it becomes a nightlife zone of pubs, bars and entertainment venues; the odd and even sides are 'like two completely different worlds'"
+    },
+    {
+     "source_id": "src_30b5961fbe80",
+     "locator": "Soi Arab section",
+     "paraphrase": "'Come hungry, come late' framing; Al Hussain 'runs past midnight'"
+    },
+    {
+     "source_id": "src_c7c31048866c",
+     "locator": "hours",
+     "paraphrase": "'open 7 days a week 7 pm to 2 am'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "closing-hour conflict between operator (02:00) and Wikipedia (03:00) unresolved",
+    "morning-specific rhythms of the Arab quarter (e.g. breakfast trade) not documented by any body-read source"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "nana-c08",
+   "text_en": "The unit's odd/even split gives two different worlds within one catchment: the north side carries the Soi 3 Arab community quarter and the Soi 4/5 hotel-bar strip, while south-of-Sukhumvit blocks (Soi 2 and even sois) are quieter; a residential guide says residential pockets are 'quieter by day and suitable for long-term living' and that soi choice matters - units near Soi 4 or Soi 11 get nightlife noise until very late while Soi 10 and 12 'tend to be quieter'.",
+   "kind": "reported_perception",
+   "topics": [
+    "noise",
+    "residential",
+    "within_area_variation"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sukhumvit Soi 2-11 blocks",
+    "relation_to_entity": "entire_unit",
+    "notes": "Soi 10-12 references fall partly beyond the east clip (st.asok side) - apply within-unit only up to ~Soi 8"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-11-07 source date",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "two-worlds passage",
+     "paraphrase": "The odd and even sides of Soi Nana are divided 'like two completely different worlds'"
+    },
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "cons/noise and tips sections",
+     "paraphrase": "'If you choose a unit near Soi 11 or Soi 4, expect nightlife noise until very late'; 'Soi 10 and 12 tend to be quieter'; residential pockets 'quieter by day and suitable for long-term living'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "perception from one lifestyle guide + one Thai portal; no measured noise data",
+    "the guide's Soi 10-12 advice technically extends past the unit's east clip"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c09",
+   "text_en": "Bumrungrad International Hospital - one of the world's busiest private hospitals for foreign patients - sits at 33 Sukhumvit Soi 3 (Soi Nana Nuea) with its campus straddling the unit's northwest edge: the hospital frontage begins roughly 415-450 m up the soi from BTS Nana (inside the mapped catchment), while its geotagged center (~13.7463, 100.5526, ~710 m straight-line) falls outside the mapped polygon, clipped toward st.phloen-chit (app-polygon check 2026-11-07), and the hospital itself runs complimentary shuttle van routes connecting BTS Nana and BTS Phrom Phong stations to the campus; a third-party station guide places the shuttle pickup at street level near Exit 1.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "healthcare"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "Bumrungrad International Hospital, 33 Sukhumvit Soi 3",
+    "relation_to_entity": "partial",
+    "notes": "Campus spans the catchment boundary: frontage ~415-450 m from the station inside the app polygon; geotagged center ~710 m outside it."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026 retrieval",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_d24474d9ea20",
+     "locator": "address footer and shuttle section",
+     "paraphrase": "Official address '33 Sukhumvit 3, Wattana, Bangkok 10110 Thailand'; 'operates a complimentary shuttle van service on 2 routes' connecting BTS Nana and BTS Phrom Phong, 7 days a week"
+    },
+    {
+     "source_id": "src_cc490c3606df",
+     "locator": "Exit 1 listings",
+     "paraphrase": "Nana Nuea pier via Exit 1 on Soi 3 side; Soi 3 corridor starts at this exit (shuttle/walk up Soi 3)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "exact walking distance not published by the hospital; 350 m figure is from search snippets (unverifiable) plus coordinate inference - treat as estimate",
+    "shuttle-exit detail (Exit 1) is snippet-level from a third-party search result"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c10",
+   "text_en": "Rents in the unit's subdistrict (Khlong Toei Nuea) are consistent with the app's station-override estimate of 28,000 THB (1-bed) / 60,000 THB (2-bed) typical asking: PropertyScout shows 1-bed apartments averaging 37,429 THB (range 20,000-65,000) and 2-bed averaging 60,855 THB (range 32,000-88,570) across 88 listings (Nana clusters 15 of them); HipFlat's Nana-station page shows a 1-bed 62 sqm at 27,000 THB about 400 m from BTS Nana and 2-beds spanning roughly 32,000-84,000+ THB; a residential guide gives studios 12,000-20,000, 1-beds 'commonly 20,000-40,000', and larger 2-3BR/luxury units 60,000+. The app figures sit at the lower-middle of observed asking ranges and look like a reasonable 'typical' for ordinary stock, not for the luxury segment that dominates station-front towers.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "housing"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khlong Toei Nuea / BTS Nana-adjacent listings",
+    "relation_to_entity": "partial",
+    "notes": "Portal 'areas' are wider than the clipped catchment; the only strictly-inside datapoints are HipFlat listings tagged near BTS Nana and PropertyScout's Nana cluster (15 listings)"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "retrieved 2026-11-07; app estimate as of 2026-10-17",
+    "recheck_by": "2027-05",
+    "notes": "All figures are asking rents; no signed-lease or time-series source found"
+   },
+   "evidence": [
+    {
+     "source_id": "src_e78bc5064820",
+     "locator": "average rents panel and FAQ",
+     "paraphrase": "1-BR avg ฿37,429 (20,000-65,000); 2-BR avg ฿60,855 (32,000-88,570); 88 apartment listings; FAQ: 'most popular areas... are Phrom Phong with 53 listings, Nana with 15 listings and Asok with 12 listings'; highest example: 3-BR near BTS Nana at ฿130,000"
+    },
+    {
+     "source_id": "src_ea23962fff68",
+     "locator": "listing rows",
+     "paraphrase": "'15 Sukhumvit Residences - 62 m2, 1 bed, 400 m from Nana BTS: For Rent 27,000฿ / 1 year'; Edge Sukhumvit 23 1-bed 25,000 THB; 2-beds from ~32,000 to 90,000 THB; page shows 19,321 results for the pooled 'near Nana' query with no median"
+    },
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "rent figures section",
+     "paraphrase": "Basic rooms/studios from ~฿12,000-20,000/month; 1-bedroom condos with pool/gym/security 'commonly ฿20,000-40,000 per month in the more desirable buildings'; larger 2-3BR/luxury 'can run ฿60,000+'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "asking rents only; signed-rent and historical-period data absent",
+    "portal sample skews to listed stock; older walk-up apartments underrepresented",
+    "pooled HipFlat 'near Nana' results include off-station listings"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c11",
+   "text_en": "The main residential drawbacks reported for the unit are nightlife noise, cost-versus-space, and Sukhumvit traffic: a living guide says expect noise until very late near Soi 4/11, that 'you often pay more for less space than further-out Bangkok neighborhoods', that 'traffic on Sukhumvit can be heavy', and frames safety as 'more about being alert late at night than about crime - the area remains generally safe'; it recommends the area for convenience-seeking expats and against it for light sleepers, budget renters wanting more space, or car-dependent residents.",
+   "kind": "reported_perception",
+   "topics": [
+    "cost",
+    "noise",
+    "safety",
+    "unsuitability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Nana residential blocks",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-11-07 source date",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "cons and who-it-suits sections",
+     "paraphrase": "Noise near Soi 4/11 'until very late'; 'pay more for less space'; 'traffic on Sukhumvit can be heavy'; 'More about being alert late at night than about crime - the area remains generally safe'; suits expats/remote workers wanting centrality; less ideal for those seeking peace near Soi 4/11 or budget renters"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "single-source perceptions (corroborated in part by ThaiHometown's day/night contrast)",
+    "no quantitative noise, traffic, or crime statistics found for the unit"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "nana-c12",
+   "text_en": "A scam/tout environment is repeatedly reported around the unit's nightlife: community and guide sources describe padded or inflated bar bills in Nana Plaza venues (one 2026 Reddit report of a 2nd-floor go-go bar charging about 3x for two drinks; a TripAdvisor reviewer reporting a ~10,000 THB tab at Red Dragon), bar fines reported rising to about 1,000-1,500 THB in 2026, aggressive street touts on the Soi 4/Sukhumvit frontage steering visitors into venues, and drink-spiking warnings - with the same sources calling Nana Plaza safer than Patpong and advising bill-checking rather than avoidance.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "safety",
+    "scams"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Nana Plaza and Sukhumvit Soi 4 frontage",
+    "relation_to_entity": "inside",
+    "notes": "Directly relevant to safety score 6"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026",
+    "recheck_by": "2027-05",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "reputation framing",
+     "paraphrase": "One of Bangkok's three most concentrated red-light districts, all attracting primarily tourists - the tourist-facing character that guides cite when warning about touts and pricing"
+    },
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "safety note",
+     "paraphrase": "'More about being alert late at night than about crime - the area remains generally safe' (counterweight)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "SPECIFIC scam incidents (Reddit ~3x drink bill, Red Dragon ~10,000 THB, bar fines 1,000-1,500 THB, spiking warnings) are snippet-level from search results only - TripAdvisor (403) and Reddit (403) fetches failed, so they corroborate but do not stand alone; the two body-read sources above carry the claim",
+    "no police or regulatory data found"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c13",
+   "text_en": "Pedestrian infrastructure on the unit's frontage has been under active city program in 2024-2025: Sukhumvit Road is explicitly among the roads the BMA says it improved in a program exceeding 1,100 km of sidewalks (announced Aug 2025, against a 1,000 km target), including rebuilt/repaired sidewalks, slope adjustments to international standards, guide bricks for blind pedestrians, and resolution of 120,000+ lighting/encroachment complaints via Traffy Fondue; the BMA also reported that 58.2% of residents walk an average of 800 m between mass-transit stations, and a separate mid-2025 'Sukhumvit model' cleaning plan covered the Nana-Asoke-Phrom Phong stretch.",
+   "kind": "factual_report",
+   "topics": [
+    "change_over_time",
+    "governance",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Sukhumvit Road (Nana frontage)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Program is road-level; Nana-specific work items are not itemized"
+   },
+   "temporal_scope": {
+    "event_date": "2025-08-27",
+    "observed_period": "2024-2025 program",
+    "recheck_by": "2027-01",
+    "notes": "Sukhumvit model cleaning plan (July 2025) is snippet-level from search results"
+   },
+   "evidence": [
+    {
+     "source_id": "src_53997a0cc8a9",
+     "locator": "body",
+     "paraphrase": "BMA improving over 1,100 km of sidewalks beyond the 1,000 km target; work on more than 99 roads including Wireless, Ratchadamri, Sukhumvit and Lad Prao; 58.2% of residents walk ~800 m between transit stations; 120,000+ complaints resolved; slopes adjusted, guide bricks installed; spokesperson Ekwaranyu Amrapal"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no Nana-junction-specific before/after documentation",
+    "'Sukhumvit model' cleaning-plan detail (July 9, 2025) is snippet-level only"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "nana-c14",
+   "text_en": "Green-geometry audit: the mapped 1.4 ha of park inside the 0.97 sq km unit (~1.4% of unit area) could not be identified by name - Overpass/Nominatim queries failed or returned nothing - while the major parks people associate with Nana are OUTSIDE or boundary cases: Benchasiri Park (4.7 ha, between Soi 22-24 next to Emporium/Emsphere, at Phrom Phong BTS) is ~1.7 km east by straight-line from the station, in st.phrom-phong territory; Lumphini Park (57.6 ha, Pathum Wan) lies ~1.6-1.7 km from the station at its nearest edge - outside the unit, not a boundary case (app-polygon check 2026-11-07); and the 2.2 ha Nai Lert Heritage Home garden is on the Ploenchit/Pathum Wan side (4 Soi Somkid), outside the unit. No body-read source documents a significant public park within the clipped catchment; a residential guide reaches for Benjakitti Park 'a short ride away' rather than any walkable park.",
+   "kind": "researcher_inference",
+   "topics": [
+    "geometry",
+    "green",
+    "score_gap"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Benchasiri Park / Lumphini Park / mapped 1.4 ha park",
+    "relation_to_entity": "partial",
+    "notes": "Benchasiri outside (st.phrom-phong); Lumphini partial/unknown (NE edge near the 800 m limit, mostly st.lumphini's); the mapped 1.4 ha park identity unknown"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current OSM/Wikipedia state",
+    "recheck_by": "2026-12",
+    "notes": "Re-run Overpass/OSM check when network access allows"
+   },
+   "evidence": [
+    {
+     "source_id": "src_c8a33e4fb11b",
+     "locator": "location and area",
+     "paraphrase": "Benchasiri Park between Soi 22 and 24 next to the Emporium and Emsphere, reached via Phrom Phong station; built on 11.6 acres (47,000 m2, i.e. 4.7 ha), opened 1992-08-12"
+    },
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "infobox and location",
+     "paraphrase": "Lumphini Park 360 rai (57.6 ha), bounded by Witthayu (E), Rama IV (S), Ratchadamri (W), in Pathum Wan district; nearest stations MRT Lumphini and BTS Sala Daeng - not Nana"
+    },
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "green space section",
+     "paraphrase": "Names Benjakitti Park as the green space for Nana residents, qualified as 'just a short ride away' - no walkable park claimed"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the app's own 1.4 ha mapped park is UNIDENTIFIED (Overpass timeout x2, Nominatim empty) - do not name it",
+    "Lumphini's NE-edge inclusion is a straight-line boundary inference from imprecise station coordinates; walking access requires crossing Rama IV/Sarasin traffic ~15-20+ min on foot",
+    "green 10 cannot be reproduced from in-unit geometry on current evidence"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c15",
+   "text_en": "Nearest-stop clip geometry (inference from published station positions and the app's rated neighbours): with st.asok ~0.55-0.62 km east, st.phloen-chit ~0.5-0.75 km west, and st.lumphini (MRT) ~1.1-1.5 km south, the unit's east clip falls around Sukhumvit Soi 6-9, the west clip around Soi 1-2, and the south clip across the southern depth of the even-soi blocks; therefore Soi 1 and the Soi 9-13 hotel cluster (Marriott, Hyatt Regency Sukhumvit, Sofitel/Ramada on Soi 11-13) fall OUTSIDE or borderline into st.asok/st.phloen-chit catchments, while Nana Plaza, Foodland block (Soi 5), Landmark Bangkok (138 Sukhumvit, fronting Exit 2), Soi 3/3/1 Arab quarter and Bumrungrad sit INSIDE; the 8% Pathum Wan share corresponds to the unit's far-western/southwestern sliver near the district line.",
+   "kind": "researcher_inference",
+   "topics": [
+    "geometry",
+    "identity",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "clipped catchment boundaries vs Sukhumvit soi numbering",
+    "relation_to_entity": "entire_unit",
+    "notes": "Derived from Wikipedia infobox coordinates (Nana 13.74060,100.55540; Phloen Chit 13.74308,100.54902; MRT Lumphini ~13.73,100.55); BTS Asok's Wikipedia coordinate (13.7370,100.5604) is suspect, so the east clip carries extra uncertainty"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "2026-12",
+    "notes": "Verify with GIS against the app's exact station anchors and rated-neighbour list"
+   },
+   "evidence": [
+    {
+     "source_id": "src_740397b40e8a",
+     "locator": "infobox",
+     "paraphrase": "Phloen Chit station at 13.7430806, 100.5490194 on Phloen Chit Rd at the Witthayu junction (~0.5-0.75 km from Nana station)"
+    },
+    {
+     "source_id": "src_64cb69de115a",
+     "locator": "infobox",
+     "paraphrase": "Nana station 13.7406028, 100.5553972; adjacent stations Phloen Chit (toward Khu Khot) and Asok (toward Kheha)"
+    },
+    {
+     "source_id": "src_cc490c3606df",
+     "locator": "Exit 2 listings",
+     "paraphrase": "The Landmark Bangkok listed at Exit 2 with 'Skytrain station located in front of the hotel' - placing a 138-Sukhumvit-Rd tower inside the Nana frontage, contrary to a Soi 11 reading"
+    },
+    {
+     "source_id": "src_67b4ff08052a",
+     "locator": "infobox and exits",
+     "paraphrase": "MRT Lumphini under Rama IV at/near the Witthayu intersection with a One Bangkok walkway - ~1.1-1.5 km south of BTS Nana on any reading of its imprecise coordinates"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "station-coordinate discrepancies between Wikipedia infoboxes (BTS Asok 13.7370 vs MRT Sukhumvit 13.7385 vs ~13.741 expected) leave the east-clip soi estimate uncertain by ~1-2 sois",
+    "all inside/outside calls beyond ~300 m from the station should be treated as partial/unknown until GIS-verified",
+    "Washington Square (Soi 22-24 area, per general references) was not directly sourced in this batch - unknown"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c16",
+   "text_en": "Everyday-life support inside the unit is hotel-anchored but real: a Villa Market supermarket and convenience stores are within walking distance per the residential guide; the 24-hour Foodland supermarket with its Took Lae Dee restaurant sits at 48 Soi Sukhumvit 5 (snippet-level address); Bumrungrad hospital anchors healthcare (see c09); a station guide lists Lek Massage at BTS Nana and Watchara Muay Thai gym on Soi Sukhumvit 1; ordinary food runs from the Arab-quarter kitchens to street frontage, with the Nana Nuea canal-boat pier (Khlong Saen Saep) at the Soi 3 end of Exit 1.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food",
+    "gym_sports"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Villa Market / Foodland Soi 5 / Lek Massage / Watchara Muay Thai / Nana Nuea pier",
+    "relation_to_entity": "inside",
+    "notes": "All are station-frontage venues within a few hundred metres; Foodland distance ~180 m by coordinates not verified"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 sources",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "walkability section",
+     "paraphrase": "'Supermarkets like Villa Market, convenience stores, cafes, international restaurants, and rooftop bars are all within walking distance'"
+    },
+    {
+     "source_id": "src_cc490c3606df",
+     "locator": "station-page listings",
+     "paraphrase": "Lek Massage BTS Nana; Watchara Muay Thai Gym on Soi Sukhumvit 1; Nana Nua pier access via Soi Sukhumvit 3 (Exit 1); Nana Square mall at Exit 1"
+    },
+    {
+     "source_id": "src_4268ca031ea6",
+     "locator": "healthcare section",
+     "paraphrase": "Bumrungrad International Hospital 'very close by'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Foodland Soi 5 24-hour operation and address are snippet-level (search result without retrievable links) - corroborative only",
+    "no gym membership pricing or green-market/wet-market evidence gathered"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c17",
+   "text_en": "Nightlife intensity is the unit's defining trait and backs the app's nightlife 10: the station guide calls the area 'bustling with numerous dining spots, unlimited nightlife, and a variety of hotels' at 'one of the busiest BTS stations in Bangkok'; the operator's complex alone holds 24 go-go bars plus beer bars with a claimed two million visitors and 16,000+ reviews; Wikipedia counts it among Bangkok's three most concentrated red-light districts; and the app's Overture/OSM facts show 151 nightlife venues in 0.97 sq km - the densest nightlife load in the dataset's unit.",
+   "kind": "factual_report",
+   "topics": [
+    "crowd",
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Nana / Soi 4 / Sukhumvit frontage",
+    "relation_to_entity": "entire_unit",
+    "notes": "The 151-venue count is the app's own Overture/OSM fact, carried here for context, not independently re-derived"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_cc490c3606df",
+     "locator": "area description",
+     "paraphrase": "'bustling with numerous dining spots, unlimited nightlife, and a variety of hotels suitable for different budgets'; 'one of the busiest BTS stations in Bangkok'"
+    },
+    {
+     "source_id": "src_c7c31048866c",
+     "locator": "stats",
+     "paraphrase": "24 agogo bars + 3 beer bars; two-millionth visitor celebrated; 'Over 16,000 Reviews!'"
+    },
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "lead",
+     "paraphrase": "One of Bangkok's three most concentrated red-light districts alongside Soi Cowboy and Patpong; all attract primarily tourists"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "operator visitor/review claims are self-reported",
+    "151-venue figure from app facts not re-verified independently"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "nana-c18",
+   "text_en": "The 'Nana' identity straddles three registers that guides mix up: (1) the BTS-station catchment (this unit, spanning Sukhumvit Soi 1-9 frontage and the Soi 3/4 depth, split Watthana 48% / Khlong Toei 44% / Pathum Wan 8% per app data); (2) 'Soi Nana' specifically = Sukhumvit Soi 4 with the Nana Plaza complex, where Wikipedia's own district attribution ('Khlong Toei District') conflicts with the app's Watthana-majority split; and (3) the wider 'Nana intersection' usage on Sukhumvit Road. Sources in this batch use all three senses, often without saying which.",
+   "kind": "researcher_inference",
+   "topics": [
+    "disambiguation",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Nana (BTS E3 / Soi Nana / Nana intersection)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Register confusion directly affects which venues are attributed to the unit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_64cb69de115a",
+     "locator": "lead",
+     "paraphrase": "Station located on Sukhumvit Road 'at Soi Sukhumvit 9, east of Nana intersection (Soi Sukhumvit 3)' - using both the intersection and soi registers; straddles Khlong Toei and Watthana"
+    },
+    {
+     "source_id": "src_8ec53fc9a67c",
+     "locator": "lead/address",
+     "paraphrase": "Nana Plaza 'Located in the Khlong Toei District' at 3-3/1 Sukhumvit Soi 4 - a district attribution that conflicts with the app's Watthana 48%/Khlong Toei 44% split for Soi 4's north side"
+    },
+    {
+     "source_id": "src_ca92238a93f3",
+     "locator": "naming/soi sections",
+     "paraphrase": "Soi Nana named for the Lek-Nana family; BTS Nana station called the landmark serving the area"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Wikipedia's 'at Soi Sukhumvit 9' station siting conflicts with the exits serving Soi 3/4 frontage; platforms likely span Soi 4-9 - unresolved"
+   ],
+   "review_status": "conflicted"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c01",
+    "nana-c02",
+    "nana-c03",
+    "nana-c15",
+    "nana-c18"
+   ],
+   "notes": "Aliases: BTS Nana / Nana intersection / Soi Nana (Soi 4) / Soi Arab (Soi 3/1). Straddles Khlong Toei + Watthana (station) with app split 48/44/8 incl. Pathum Wan sliver. Inside: Nana Plaza (~255-300 m), Soi Arab, Landmark (Exit 2 frontage), Bumrungrad (est.), Foodland block (snippet). Outside/boundary: Benchasiri (st.phrom-phong, ~1.2 km E), Lumphini Park (mostly st.lumphini, NE edge boundary), Nai Lert garden (Pathum Wan), Washington Square (unknown/not sourced, st.phrom-phong direction), Soi 9-13 cluster (st.asok side, partial), Soi 1 (st.phloen-chit, partial). Chinatown Soi Nana is a different street (c02)."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c07",
+    "nana-c08",
+    "nana-c06",
+    "nana-c17"
+   ],
+   "notes": "Whose experience: Arab-community residents/visitors using Soi 3/1 kitchens and shisha into the small hours; bar-strip workers and tourists from 19:00-02:00(+); office/errand users on Sukhumvit frontage by day when the soi reads as a 'quiet business lane'; 24h Foodland users late at night (snippet)."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c03",
+    "nana-c06",
+    "nana-c10",
+    "nana-c17",
+    "nana-c16"
+   ],
+   "notes": "What is valued: centrality and transit (busiest-station framing, one-stop Asok interchange), food diversity (Arab quarter's community function, 'home away from home' per Bangkok Post-era coverage), walkable daily support incl. Bumrungrad, and the nightlife/entertainment magnet itself. Mechanisms: station-front density + hotel stock + community specialization."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c11",
+    "nana-c12"
+   ],
+   "notes": "Counter-evidence: noise until late near Soi 4/11, pay-more-for-less-space, heavy Sukhumvit traffic, alertness-at-night framing; scam/tout environment around Nana Plaza (padded bills, rising bar fines, street touts) reported at snippet level with body-read counterweights. Sidewalk condition addressed via c13 (program improvements)."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c07",
+    "nana-c04",
+    "nana-c16"
+   ],
+   "notes": "Day: business/residential lane, hospital and office traffic. Evening: Arab-quarter kitchens peak, bars from 19:00, plaza closes 02:00-03:00 (sources conflict). Weekday/weekend differentiation not documented in body-read sources. High-season tourist surge: not_found - no source read documents it."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c03",
+    "nana-c13",
+    "nana-c15"
+   ],
+   "notes": "Exits: E1 Soi 3 side (+ Nana Nuea pier), E2 Soi 4 side, E3 south side, E4 Soi 8 (editorial mapping, not official BTS). Sukhumvit skywalk runs along the corridor toward Phloen Chit per search-level info (not body-read) - flagged. BMA sidewalk program names Sukhumvit. No radius-to-time conversions used; junction-crossing conditions at Nana intersection not directly sourced."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c16",
+    "nana-c09",
+    "nana-c06",
+    "nana-c10"
+   ],
+   "notes": "Groceries: Villa Market walking distance (body-read), Foodland Soi 5 24h (snippet). Ordinary food: Arab-quarter kitchens, street frontage; tourist food: hotel/rooftop scene. Healthcare: Bumrungrad straddles the unit's NW edge (frontage ~415-450 m inside; geotagged center ~710 m outside the polygon). Gyms: Watchara Muay Thai Soi 1 (body-read listing); no chain-gym or pricing evidence."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c10"
+   ],
+   "notes": "Housing: older walk-up apartments + condos + serviced stock; asking rents 1-bed 20,000-65,000 (avg 37,429), 2-bed 32,000-88,570 (avg 60,855) in the subdistrict; station-adjacent examples (27,000 1-bed 400 m out) bracket the app's 28,000/60,000. App override is plausible for ordinary stock; sample = asking rents, portals, luxury-skewed, no signed-rent data."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c14"
+   ],
+   "notes": "Mapped 1.4 ha: UNIDENTIFIED (tools failed). Benchasiri 4.7 ha: outside (st.phrom-phong). Lumphini 57.6 ha: outside (~1.6-1.7 km to nearest edge, polygon-verified 2026-11-07). No walkable park documented in-unit; a guide reaches for Benjakitti 'a short ride away'. Green 10 is not reproducible from in-unit geometry on current evidence - the score needs surfacing/re-basing, e.g. on station-area proximity rather than catchment-interior green."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c11",
+    "nana-c08",
+    "nana-c10",
+    "nana-c12"
+   ],
+   "notes": "Fits: centrality-dependent workers/remote workers, long-stay expats wanting transit + food diversity + hospital access, Arab-community visitors, nightlife workers/visitors. Poor fit: light sleepers on Soi 4 frontage, families wanting green-and-quiet, budget renters wanting space, car users, scam-averse first-time tourists."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c05",
+    "nana-c13"
+   ],
+   "notes": "2024-2026: BMA sidewalk program incl. Sukhumvit (announced 2025-08-28, program 2024-2025); 'Sukhumvit model' cleaning plan Nana-Asoke-Phrom Phong (July 2025, snippet); Nana Plaza consolidation with 2018 roof canopy and 2012 takeover (dated), bar churn 2025 (Mandarin reopen 2025-09-21, Orbit open Nov 2025, Virgin close - snippet-level); residential guide published 2025-11-07 describing current conditions. No hotel openings/closures with dates, no BTS works specific to Nana found."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "nana-c04",
+    "nana-c12",
+    "nana-c14",
+    "nana-c10",
+    "nana-c11"
+   ],
+   "notes": "Contradictions: (1) nightlife 10 vs residential experience - 151 venues vs noise complaints and 'quiet by day' framing; (2) green 10 vs 1.4 ha mapped - unresolved, parks that would justify it are outside the clip; (3) safety 6 - consistent with 'alert at night' framing plus documented scam reports in a tourist-facing red-light zone, but no crime statistics found; (4) bar-count and closing-hour conflicts between operator and Wikipedia; (5) district attribution conflicts (plaza 'Khlong Toei' vs app Watthana-majority)."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A station-front hotel-and-entertainment quarter on lower Sukhumvit: the Soi 4 bar strip and Nana Plaza on one side, the Soi 3/1 Arab quarter's shisha cafes and late kitchens on the other, Bumrungrad hospital up the soi, and almost no mapped green inside the clipped catchment [nana-c17, nana-c06, nana-c09, nana-c14].",
+   "claim_ids": [
+    "nana-c02",
+    "nana-c03",
+    "nana-c04",
+    "nana-c06",
+    "nana-c07",
+    "nana-c08",
+    "nana-c09",
+    "nana-c10",
+    "nana-c11",
+    "nana-c12",
+    "nana-c14",
+    "nana-c15",
+    "nana-c16",
+    "nana-c17",
+    "nana-c18"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Nana (BTS E3, opened 1999) is the name for a stretch of lower Sukhumvit between roughly Soi 1 and Soi 9 whose odd and even sides 'are like two different worlds' [nana-c03, nana-c08]: to the north, Soi Nana (Soi 4) carries the bar strip and the three-floor Nana Plaza complex of about two dozen go-go bars [nana-c04, nana-c17], while Soi 3/3/1 - 'Soi Arab' - has anchored a Middle Eastern community of restaurants and shisha cafes since Shahrazad opened in 1983 [nana-c06]. Daytime it reads as a business-and-hotel lane; the same blocks run late [nana-c07]. Daily-life support is unusually strong for a nightlife district: a 24-hour supermarket block at Soi 5 (snippet-level), Villa Market walking distance, and Bumrungrad hospital 350-500 m up Soi 3 with its own shuttle [nana-c16, nana-c09]. Rents in the surrounding subdistrict average 37,429 THB for 1-bed and 60,855 THB for 2-bed asking, bracketing the app's 28,000/60,000 estimate [nana-c10]. What the unit lacks is quiet and green: the nearest big parks - Benchasiri at Phrom Phong and Lumphini across Rama IV - sit outside the clipped catchment, and only 1.4 ha of park is mapped inside [nana-c14].",
+   "claim_ids": [
+    "nana-c02",
+    "nana-c03",
+    "nana-c04",
+    "nana-c06",
+    "nana-c07",
+    "nana-c08",
+    "nana-c09",
+    "nana-c10",
+    "nana-c11",
+    "nana-c12",
+    "nana-c14",
+    "nana-c15",
+    "nana-c16",
+    "nana-c17",
+    "nana-c18"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Transit centrality: E3 on the Sukhumvit Line, described as one of the busiest BTS stations, with three exits covering the Soi 3 (Arab quarter + pier), Soi 4 (bar strip) and south-side frontage [nana-c03]",
+    "claim_ids": [
+     "nana-c03"
+    ]
+   },
+   {
+    "text_en": "Two distinct food communities within 300 m of the exits: the Soi 3/1 Arab quarter (Yemeni, Egyptian, Lebanese kitchens since 1983-86) and the Sukhumvit frontage's tourist-and-hotel dining [nana-c06, nana-c17]",
+    "claim_ids": [
+     "nana-c06",
+     "nana-c17"
+    ]
+   },
+   {
+    "text_en": "Healthcare at the doorstep: Bumrungrad at 33 Soi Nana Nuea with a free shuttle from BTS Nana - a rare in-catchment amenity [nana-c09]",
+    "claim_ids": [
+     "nana-c09"
+    ]
+   },
+   {
+    "text_en": "24-hour service economy including the Soi 5 Foodland block (snippet-level) and late-night Arab-quarter kitchens that 'run past midnight' [nana-c16, nana-c07]",
+    "claim_ids": [
+     "nana-c16",
+     "nana-c07"
+    ]
+   },
+   {
+    "text_en": "Consistent rent reality: independent portal data brackets the app's 28,000/60,000 asking estimate, with ordinary 1-bed stock found at 27,000 THB ~400 m from the station [nana-c10]",
+    "claim_ids": [
+     "nana-c10"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Nightlife is the load-bearing feature and the main cost: noise 'until very late' near Soi 4 (and Soi 11, though that block sits on the st.asok side of the clip) [nana-c11, nana-c08]",
+    "claim_ids": [
+     "nana-c11",
+     "nana-c08"
+    ]
+   },
+   {
+    "text_en": "A scam/tout environment is repeatedly reported around the plaza and Soi 4 frontage - padded bills, touts, spiking warnings - even though the same sources call it 'generally safe' beyond that [nana-c12, nana-c11]",
+    "claim_ids": [
+     "nana-c12",
+     "nana-c11"
+    ]
+   },
+   {
+    "text_en": "Green inside the clipped unit is minimal: 1.4 ha mapped on 0.97 sq km, with Benchasiri outside at Phrom Phong and Lumphini's nearest edge a ~0.7-0.8 km boundary case requiring an arterial-road crossing [nana-c14]",
+    "claim_ids": [
+     "nana-c14"
+    ]
+   },
+   {
+    "text_en": "Space-per-baht is poor: 'you often pay more for less space than further-out Bangkok neighborhoods', and Sukhumvit traffic is heavy for car users [nana-c11]",
+    "claim_ids": [
+     "nana-c11"
+    ]
+   },
+   {
+    "text_en": "Identity confusion is real editorial work: three registers of 'Nana' (station area / Soi 4 / intersection) plus the separate Chinatown Soi Nana mean guides attribute venues to the wrong unit [nana-c18, nana-c02]",
+    "claim_ids": [
+     "nana-c18",
+     "nana-c02"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Day: 'fairly quiet business/residential lane' on Soi Nana itself; hospital, office and errand traffic on the Sukhumvit frontage; hotel breakfast-and-tour circuit [nana-c07]",
+    "claim_ids": [
+     "nana-c07"
+    ]
+   },
+   {
+    "text_en": "Evening: Arab-quarter kitchens peak ('come hungry, come late', Al Hussain runs past midnight) while the bar strip and Nana Plaza light up from 19:00 [nana-c07, nana-c04]",
+    "claim_ids": [
+     "nana-c07",
+     "nana-c04"
+    ]
+   },
+   {
+    "text_en": "Late night: plaza closes 02:00-03:00 (operator vs Wikipedia conflict); the 24-hour Foodland block and late shisha cafes take over the residual demand [nana-c04, nana-c16]",
+    "claim_ids": [
+     "nana-c04",
+     "nana-c16"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Odd/even split: Soi 3/3/1 Arab community quarter vs Soi 4/5 hotel-bar strip - 'like two completely different worlds' [nana-c08, nana-c06]",
+    "claim_ids": [
+     "nana-c08",
+     "nana-c06"
+    ]
+   },
+   {
+    "text_en": "Soi-by-soi noise gradient: frontage and Soi 4 loud until late; deeper residential pockets 'quieter by day'; guide names Soi 10/12 as quieter but that sits beyond the east clip [nana-c08, nana-c15]",
+    "claim_ids": [
+     "nana-c08",
+     "nana-c15"
+    ]
+   },
+   {
+    "text_en": "West/east clip asymmetry: the Soi 9-13 hotel cluster (Marriott, Hyatt Regency Sukhumvit, Sofitel/Ramada) falls outside or borderline into st.asok's catchment, though station guides list it under Nana exits [nana-c15, nana-c03]",
+    "claim_ids": [
+     "nana-c15",
+     "nana-c03"
+    ]
+   },
+   {
+    "text_en": "South-of-Sukhumvit even-soi blocks are the residential face, with their far southern depth clipped off by st.lumphini's catchment [nana-c15]",
+    "claim_ids": [
+     "nana-c15"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Good fit: long-stay expats and remote workers who want centrality, transit, food diversity and hospital access and can accept noise - 'single professionals, couples, and even families who want central access' per the residential guide [nana-c11, nana-c09]",
+    "claim_ids": [
+     "nana-c11",
+     "nana-c09"
+    ]
+   },
+   {
+    "text_en": "Good fit: Arab-community and Muslim travellers using the Soi 3/1 quarter's kitchens, groceries and halal infrastructure [nana-c06, nana-c07]",
+    "claim_ids": [
+     "nana-c06",
+     "nana-c07"
+    ]
+   },
+   {
+    "text_en": "Poor fit: light sleepers or families prioritizing green and quiet - the nearest major parks are outside the clipped unit [nana-c14, nana-c11]",
+    "claim_ids": [
+     "nana-c14",
+     "nana-c11"
+    ]
+   },
+   {
+    "text_en": "Poor fit: budget renters wanting space and car-dependent residents - higher cost per sqm and heavy Sukhumvit traffic [nana-c11]",
+    "claim_ids": [
+     "nana-c11"
+    ]
+   },
+   {
+    "text_en": "Poor fit (situational): first-time tourists averse to touts and bill-padding around the plaza; the same area is rated 'generally safe' for alert residents [nana-c12, nana-c11]",
+    "claim_ids": [
+     "nana-c12",
+     "nana-c11"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The mapped 1.4 ha park could not be identified (Overpass/Nominatim failed) - green 10's basis is unresolved and probably rests on station-area proximity to parks outside the clip [nana-c14]",
+   "Clip geometry rests on Wikipedia infobox coordinates with a suspected error for BTS Asok; east/west clip soi boundaries carry ~1-2-soi uncertainty until GIS-verified [nana-c15]",
+   "Scam specifics (padded-bill incidents, 2026 bar-fine levels) are snippet-level because TripAdvisor and Reddit fetches returned 403; only the general tout/price environment is body-read supported [nana-c12]",
+   "Bar count (24 vs 30) and closing hour (02:00 vs 03:00) conflict between the operator's site and Wikipedia [nana-c04]",
+   "High-season tourist surges and weekday/weekend rhythm differences: not found in body-read sources [Q05]",
+   "Nana Plaza's district attribution ('Khlong Toei' per Wikipedia) conflicts with the app's Watthana-majority split for Soi 4 [nana-c18]"
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md + coordinator geometry pass 2026-11-07).",
+   "6 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Identify the app's mapped 1.4 ha park: Overpass timed out twice and Nominatim returned nothing; candidates (Nai Lert Heritage Home garden 2.2 ha, Soi Somkid) sit outside the catchment. Needs a direct OSM/Overpass pull at the GIS stage.",
+   "open issue: Resolve BTS Asok station coordinates: Wikipedia BTS Asok (13.7370, 100.5604), MRT Sukhumvit (13.7385, 100.5614) and expected ~13.741 disagree; this shifts the east clip by 1-2 sois. Verify with GIS against the app's station anchors.",
+   "open issue: Lumphini Park NE-edge inclusion is a boundary inference (park edge ~0.7-0.8 km from the station anchor, MRT Lumphini coordinate imprecise) - mark partial/unknown until GIS pass; affects any green-score rebasing.",
+   "open issue: Scam-claim hardening: body-read access to a substantiated source on padded bills/touts failed (TripAdvisor 403, old.reddit 403, guide URLs obfuscated via google goto redirects); current evidence is corroboration-level only.",
+   "open issue: Bar-hour and bar-count conflicts between nanaplazabkk.com (24 bars, 02:00) and Wikipedia (30 bars, 03:00) - pick a canonical source before publishing hours.",
+   "open issue: Foodland Soi 5 24-hour status and address are snippet-level (search returned no links); confirm from foodland.co.th or an equivalent body-read source.",
+   "open issue: Washington Square (Soi 22-24 area, south side) was assumed st.phrom-phong territory from general references but no source in this batch located it - mark unknown.",
+   "open issue: Wongnai item 'bar opens near BTS Nana, 3 floors 3 feels' (snippet, Thai) suggests recent venue churn on the frontage; not pursued - could add to Q11 with a body read.",
+   "open issue: No signed-rent or historical rent series for the station area; app's 28,000/60,000 station-override remains tested only against asking-rent portals (consistent at lower-middle of range).",
+   "open issue: Sukhumvit skywalk continuity toward Chidlom/Phloen Chit is search-level info only (visitthailandtoday/royalivory snippets); confirm before claiming walkable elevated access from Nana."
+  ]
+ }
+}

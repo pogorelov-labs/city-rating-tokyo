@@ -1,0 +1,1747 @@
+{
+ "entity_key": "st.wat-mangkon",
+ "search_log": [
+  {
+   "query": "MRT Wat Mangkon station Bangkok Chinatown Yaowarat guide",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Discovery; led to hotels.com Go guide, Thai station pages."
+  },
+  {
+   "query": "สถานีวัดมังกร MRT ย่านเยาวราช ชีวิตประจำวัน",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Thai discovery; led to propertyhub, positioningmag, home.co.th topic-4579, EDT Guide."
+  },
+  {
+   "query": "Soi Nana Chinatown Bangkok bars cocktail strip Pom Prap Sattru Phai walking",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Discovery for nightlife strip; snippet-only results corroborated later by full reads (Time Out, travjoy, Wikipedia)."
+  },
+  {
+   "query": "Yaowarat road pedestrian car-free weekend Bangkok news 2025 Chinatown traffic",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Found 2019 three-month weekend closure pilot (snippet-only, NOT used as a claim) and June 2024 BMA plans (later verified via Pattaya Mail full read)."
+  },
+  {
+   "query": "\"Song Wat\" road Bangkok cafes galleries gentrification article 2024 2025",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Led to Silpakorn thesis (not fetched) and JCBAU 2025 journal article."
+  },
+  {
+   "query": "positioningmag ลัดเลาะกินเที่ยวย่านเยาวราช รอบสถานี MRT วัดมังกร",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located full text on LINE Today syndication."
+  },
+  {
+   "query": "น้ำท่วม 2554 ยาวราช สัมพันธวงศ์ Chinatown flood 2011",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Found CNN 27 Oct 2011 article (read in full); also recent flash-flood mention on Soi Yaowarat 35 (snippet-only, not used as a claim)."
+  },
+  {
+   "query": "Samphanthawong Pom Prap rent price condo shophouse ค่าเช่า 2024 2025",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "rejected",
+   "note": "Aggregate figures returned without URLs (snippet-only); superseded by full HipFlat reads; shophouse commercial-rent figures (45,000-100,000 THB/mo whole buildings) remain snippet-only and are NOT used as claims."
+  },
+  {
+   "query": "Yaowarat Chinatown vendors night market closed crackdown 2024 2025 residents noise complaints",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Found SCMP/AFP May 2026 crackdown article; no resident-noise-complaint-specific report found."
+  },
+  {
+   "query": "hipflat Samphanthawong Pom Prap Sattru Phai condo rental price average",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located HipFlat district rental pages."
+  },
+  {
+   "query": "\"Sarnies\" \"economic power of heritage\" Bangkok journal 2025",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located JCBAU article page (abstract read only)."
+  },
+  {
+   "query": "Yaowarat fire July 2024 shophouses injured news Chinatown Bangkok",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Bangkok Post link was tollbit-paywalled; used Khaosod English instead (full read)."
+  },
+  {
+   "query": "Khaosod English Chinatown fire Trok Pho Yaowarat July 2024",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located Khaosod article."
+  },
+  {
+   "query": "Time Out coolest neighbourhoods 2023 Song Wat Bangkok 39",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Corrected 404 URL to the 101823 page."
+  },
+  {
+   "query": "Chadchart Yaowarat walking street Lisa video June 2024",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located Pattaya Mail 2024-07-01 article."
+  },
+  {
+   "query": "\"Yaowarat\" Lisa Rockstar Chadchart prd.or.th OR nationthailand",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "PRD PDF not fetched; Pattaya Mail used."
+  },
+  {
+   "query": "Bangkok enhances Yaowarat safety Lisa Rockstar walking street (pattayamail.com)",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Got exact Pattaya Mail URL."
+  },
+  {
+   "query": "Time Out Bangkok best bars Chinatown Soi Nana Teens of Thailand Tep Ba Hao",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located Time Out Soi Nana bar guide (read in full)."
+  },
+  {
+   "query": "hipflat Samphanthawong average rent (hipflat domains)",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Confirmed HipFlat page URLs."
+  },
+  {
+   "query": "Overpass API parks within 800m of 13.74221,100.50991",
+   "tool": "Bash curl (overpass-api.de)",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "HTTP 406 Not Acceptable; second mirror (overpass.kumi.systems) HTTP 000 connection failure. OSM geometry unobtainable; landmark coordinates verified via Wikipedia instead per method rules."
+  },
+  {
+   "query": "https://en.wikipedia.org/wiki/Wat_Mangkon_MRT_station etc. (13 Wikipedia pages)",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "All read; coordinates extracted for geometry checks."
+  },
+  {
+   "query": "https://www.bem.co.th/en/travel/WatMangkon and /th/travel/WatMangkon",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "HTTP 404 both languages; official operator page not obtainable; exit details taken from Wikipedia + home.co.th."
+  },
+  {
+   "query": "https://www.bangkokpost.com/learning/easy/2825108/big-fire-in-chinatown",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "307 redirect to tollbit.bangkokpost.com (paywall gateway); not bypassed; canonical URL logged as inaccessible. Khaosod used instead."
+  },
+  {
+   "query": "https://www.timeout.com/bangkok/news/song-wat-named-one-of-the-worlds-coolest-neighbourhoods-101123",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "HTTP 404 (wrong URL guess); correct 101823 URL fetched successfully."
+  },
+  {
+   "query": "https://www.hotels.com/go/thailand/bangkok-chinatown-information",
+   "tool": "WebFetch (timed out) then exa web_fetch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "First attempt timed out at 60s; full text retrieved via exa fetch."
+  },
+  {
+   "query": "Silpakorn thesis PDF (ithesis-ir.su.ac.th 620220037.pdf) and ResearchGate JCBAU full text",
+   "tool": "WebSearch discovery only",
+   "when": "2026-11-07",
+   "outcome": "rejected",
+   "note": "Not fetched (PDF length, RG login wall); JCBAU abstract page used as corroboration only."
+  },
+  {
+   "query": "Lemon8, Facebook SaleHere, Reddit r/ThailandTourism, Google-redirect URLs from search results",
+   "tool": "WebSearch results",
+   "when": "2026-11-07",
+   "outcome": "rejected",
+   "note": "UGC/login-walled/unstable redirect URLs; used only as discovery, never as claim evidence."
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://en.wikipedia.org/wiki/Wat_Mangkon_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Wat_Mangkon_MRT_station",
+   "title": "Wat Mangkon MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:31:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none (encyclopedia)",
+   "limitations": [
+    "Infobox coordinate longitude (100°30′24.24″E ≈ 100.5067) disagrees with the app station coordinate (100.50991) by ~320 m; app coordinate used for all distance work, discrepancy flagged",
+    "2021 ridership figure only; no newer ridership on page"
+   ]
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://en.wikipedia.org/wiki/Wat_Mangkon_Kamalawat",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Wat_Mangkon_Kamalawat",
+   "title": "Wat Mangkon Kamalawat",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:33:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Founding year given as 1871/1872 with infobox 'completed 1846' internally inconsistent",
+    "No khwaeng named"
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "title": "Hua Lamphong MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:36:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Coordinates 13.7373, 100.5180 used for clip midpoint; station pin precision not independently checked"
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://en.wikipedia.org/wiki/Sam_Yot_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sam_Yot_MRT_station",
+   "title": "Sam Yot MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:38:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Two coordinate variants on page (infobox vs header) differ ~90 m; infobox used",
+    "Lists Khlong Thom among 'shopping areas' without distance — not treated as evidence of catchment membership"
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://en.wikipedia.org/wiki/Wat_Traimit",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Wat_Traimit",
+   "title": "Wat Traimit",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:55:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article gives no distances to neighbouring landmarks; position relative to Yaowarat derived from coordinates only"
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://en.wikipedia.org/wiki/Itsaraphap_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Itsaraphap_MRT_station",
+   "title": "Itsaraphap MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:57:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Coordinates (13.7384, 100.4853) put it ~2.7 km from the Wat Mangkon app point — far beyond any 800 m clip; task brief's assumption that st.itsaraphap clips the unit from the south could not be reproduced from these coordinates"
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "title": "Rommaninat Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:44:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Area stated as 11-12 acres in summary text; no official area source on page"
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://en.wikipedia.org/wiki/Wat_Saket",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Wat_Saket",
+   "title": "Wat Saket",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:47:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "November fair timing comes from the 'Phu Khao Thong' section; exact fair dates vary by year and are not given"
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chinatown,_Bangkok",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chinatown,_Bangkok",
+   "title": "Chinatown, Bangkok",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:12:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Retrieval rendered lede + 'Areas' section; not every section of the long article was returned",
+    "Says Chinatown 'roughly coincides with Samphanthawong District' — a popular-definition simplification that conflicts with venue-level evidence placing Soi Nana and Wat Mangkon Kamalawat in Pom Prap Sattru Phai; logged as conflicting framing, not silently harmonised"
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://en.wikipedia.org/wiki/Soi_Nana_(Chinatown)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Soi_Nana_(Chinatown)",
+   "title": "Soi Nana (Chinatown)",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:20:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Single pinned coordinate for the lane; which end of the lane the pin marks is unstated — boundary analysis therefore gives a range, not a line",
+    "No bars named; bar list taken from Time Out (source 17)"
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://en.wikipedia.org/wiki/Pom_Prap_Sattru_Phai_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Pom_Prap_Sattru_Phai_district",
+   "title": "Pom Prap Sattru Phai district",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:24:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Density figure is 2017 census vintage"
+   ]
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://en.wikipedia.org/wiki/Poh_Teck_Tung_Foundation",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Poh_Teck_Tung_Foundation",
+   "title": "Poh Teck Tung Foundation",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:18:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Hua Chiew Hospital's location not given on page; not asserted as inside/outside beyond the foundation HQ coordinate"
+   ]
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Thom",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Thom",
+   "title": "Khlong Thom, Bangkok",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T08:02:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "August 2026 fire at Khlong Thom Center mentioned with little detail; independent corroboration not fetched",
+    "Pinned coordinate sits almost exactly on the Wat Mangkon/Sam Yot midline (~449 m vs ~466 m) — inside, but marginal"
+   ]
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://www.edtguide.com/travel-detail/นั่ง-mrt-ไปตะลุยกิน-รอบสถานีวัดมังกร-11-ร้านเด็ด-เยาวราช",
+   "retrieved_url": "https://www.edtguide.com/travel-detail/นั่ง-mrt-ไปตะลุยกิน-รอบสถานีวัดมังกร-11-ร้านเด็ด-เยาวราช",
+   "title": "นั่ง MRT ไปตะลุยกินรอบสถานีวัดมังกร 11 ร้านเด็ด เยาวราช",
+   "publisher": "EDT Guide",
+   "publisher_family": "EDT Guide",
+   "author": null,
+   "published_at": "2025-04-23",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:41:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "lifestyle media; venue features may be promotional-adjacent, no paywall",
+   "limitations": [
+    "Distances given as approximations by the outlet (47-300 m), not measured",
+    "Venue openings change; April 2025 snapshot"
+   ],
+   "notes": "Thai-language full read; venue-level hours and prices."
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://today.line.me/th/v3/article/D56mqo",
+   "retrieved_url": "https://today.line.me/th/v3/article/D56mqo",
+   "title": "ลัดเลาะกินเที่ยวย่านเยาวราช รอบสถานี MRT วัดมังกร (ประชาชาติธุรกิจ)",
+   "publisher": "Prachachart Business (via LINE Today)",
+   "publisher_family": "Prachachart Business / LINE",
+   "author": null,
+   "published_at": "2019-08-23",
+   "updated_at": "2019-12-16",
+   "retrieved_at": "2026-11-07T07:06:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "business-press travel series; syndicated copy on LINE platform",
+   "limitations": [
+    "2019 snapshot written during free-trial opening of the extension; describes opening-week conditions",
+    "No opening hours or prices per venue"
+   ]
+  },
+  {
+   "index": 15,
+   "canonical_url": "https://www.home.co.th/living/topic-4579",
+   "retrieved_url": "https://www.home.co.th/living/topic-4579",
+   "title": "รีวิว MRT สถานีวัดมังกร",
+   "publisher": "home.co.th (Home Buyers Guide)",
+   "publisher_family": "Home.co.th",
+   "author": "มาลิลี พรภัทรเมธา",
+   "published_at": "2024-07-11",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:09:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal content; drives housing interest",
+   "limitations": [
+    "No rent/price data in the article despite portal affiliation",
+    "Exit numbering order differs in emphasis from Wikipedia; both agree on 3 exits"
+   ],
+   "notes": "Thai full read; exit locations and parking advice."
+  },
+  {
+   "index": 16,
+   "canonical_url": "https://www.timeout.com/bangkok/news/song-wat-named-the-39th-coolest-neighborhood-in-the-world-101823",
+   "retrieved_url": "https://www.timeout.com/bangkok/news/song-wat-named-the-39th-coolest-neighborhood-in-the-world-101823",
+   "title": "Song Wat named the 39th coolest neighborhood in the world",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "author": "Time Out Bangkok editors",
+   "published_at": "2023-10-18",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:50:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "listicle media; ranking partly editorial self-nomination process",
+   "limitations": [
+    "Article itself never locates Song Wat relative to Chinatown/Talat Noi; location context added from sources 8/9",
+    "Editorial opinion, not resident data"
+   ]
+  },
+  {
+   "index": 17,
+   "canonical_url": "https://www.timeout.com/bangkok/nightlife/bars-in-soi-nana-chinatown",
+   "retrieved_url": "https://www.timeout.com/bangkok/nightlife/bars-in-soi-nana-chinatown",
+   "title": "The best bars in Soi Nana, Chinatown",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:26:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "bar listings; venue selection editorial",
+   "limitations": [
+    "No publication date visible",
+    "Does not state how to reach the lane or which MRT station"
+   ],
+   "notes": "14 bars named with sample prices."
+  },
+  {
+   "index": 18,
+   "canonical_url": "https://travjoy.com/bangkok/soi-nana-pk3krv",
+   "retrieved_url": "https://travjoy.com/bangkok/soi-nana-pk3krv",
+   "title": "Soi Nana (Chinatown) — neighbourhood review",
+   "publisher": "Travjoy",
+   "publisher_family": "Travjoy",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:22:00Z",
+   "body_read": true,
+   "type": "tourism_publisher",
+   "commercial_context": "travel content site",
+   "limitations": [
+    "Hours given as a blanket 'Daily 18:00-00:00' — individual bar hours vary",
+    "Pinned coordinate matches Wikipedia's, but the page names no connecting roads"
+   ]
+  },
+  {
+   "index": 19,
+   "canonical_url": "https://www.hotels.com/go/thailand/bangkok-chinatown-information",
+   "retrieved_url": "https://www.hotels.com/go/thailand/bangkok-chinatown-information",
+   "title": "Information about Chinatown — Go Guides",
+   "publisher": "Hotels.com",
+   "publisher_family": "Hotels.com / Expedia group",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T06:59:00Z",
+   "body_read": true,
+   "type": "tourism_publisher",
+   "commercial_context": "OTA content marketing with embedded hotel booking (e.g., ASAI Chinatown)",
+   "limitations": [
+    "Says the station is '250 meters southeast' of Wat Mangkon Kamalawat; coordinates imply ~185 m and the temple lies north-northwest of the station — direction stated is wrong, distance roughly right",
+    "Short page; light on daily-life detail"
+   ]
+  },
+  {
+   "index": 20,
+   "canonical_url": "https://www.cnn.com/2011/10/27/world/asia/thailand-flood",
+   "retrieved_url": "https://www.cnn.com/2011/10/27/world/asia/thailand-flood",
+   "title": "High tide brings flooding to Bangkok's Chinatown",
+   "publisher": "CNN",
+   "publisher_family": "CNN",
+   "author": "Moni Basu, Kocha Olarn",
+   "published_at": "2011-10-27",
+   "updated_at": "2011-10-28",
+   "retrieved_at": "2026-11-07T06:53:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "2011 wire reporting; street-level mapping of exactly which Chinatown lanes flooded is not in the article"
+   ]
+  },
+  {
+   "index": 21,
+   "canonical_url": "https://www.khaosodenglish.com/featured/2024/07/07/tourist-hotspot-yaowarat-hit-by-major-fire-possible-electrical-cause",
+   "retrieved_url": "https://www.khaosodenglish.com/featured/2024/07/07/tourist-hotspot-yaowarat-hit-by-major-fire-possible-electrical-cause",
+   "title": "Tourist Hotspot Yaowarat Hit by Major Fire, Possible Electrical Cause",
+   "publisher": "Khaosod English",
+   "publisher_family": "Khaosod English",
+   "author": null,
+   "published_at": "2024-07-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:03:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Cause never confirmed in the article",
+    "Trok Pho community position given only as 'on Yaowarat Road behind commercial buildings including the New Empire Hotel'; exact alley coordinates unverified"
+   ]
+  },
+  {
+   "index": 22,
+   "canonical_url": "https://www.pattayamail.com/thailandnews/bangkok-enhances-yaowarat-safety-after-lisas-rockstar-video-surge-464446",
+   "retrieved_url": "https://www.pattayamail.com/thailandnews/bangkok-enhances-yaowarat-safety-after-lisas-rockstar-video-surge-464446",
+   "title": "Bangkok enhances Yaowarat safety after Lisa's 'Rockstar' video surge",
+   "publisher": "Pattaya Mail",
+   "publisher_family": "Pattaya Mail",
+   "author": null,
+   "published_at": "2024-07-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:15:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Reports announcements and inspections; does not track later implementation",
+    "Pattaya Mail is a regional English-language paper; wording suggests agency/BMA-release sourcing"
+   ]
+  },
+  {
+   "index": 23,
+   "canonical_url": "https://www.scmp.com/news/asia/southeast-asia/article/3352255/bangkoks-beloved-street-food-culture-risk-vendor-crackdown-widens",
+   "retrieved_url": "https://www.scmp.com/news/asia/southeast-asia/article/3352255/bangkoks-beloved-street-food-culture-risk-vendor-crackdown-widens",
+   "title": "Bangkok's beloved street food culture at risk as vendor crackdown widens (AFP)",
+   "publisher": "South China Morning Post",
+   "publisher_family": "SCMP (AFP wire)",
+   "author": null,
+   "published_at": "2026-05-03",
+   "updated_at": "2026-05-12",
+   "retrieved_at": "2026-11-07T06:57:30Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Retrieval rendered only the opening paragraphs; named districts absent from retrieved text — Chinatown is NOT named, so the claim is scoped citywide with inferred relevance",
+    "No vendor/resident quotes in retrieved portion"
+   ]
+  },
+  {
+   "index": 24,
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/samphanthawong",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/samphanthawong",
+   "title": "Condos for rent in Samphanthawong, Bangkok",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:29:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "listing portal; asking rents, agent-duplicated listings",
+   "limitations": [
+    "16 listings only; 7 of 16 are duplicate/multi-agent Old Siam Penthouse ads",
+    "Asking prices, not signed contracts",
+    "Listing snapshot at retrieval date 2026-11-07"
+   ]
+  },
+  {
+   "index": 25,
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/pom-prap-sattru-phai",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/pom-prap-sattru-phai",
+   "title": "Condos for rent in Pom Prap Sattru Phai, Bangkok",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:31:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "listing portal; asking rents",
+   "limitations": [
+    "14 listings dominated by The Prague (near MRT Hua Lamphong) and The 8 Collection (near MRT Sam Yot) — i.e., the sampled condos sit outside or at the edge of this catchment",
+    "Two listings are commercial buildings miscategorised as condos",
+    "Asking prices only"
+   ]
+  },
+  {
+   "index": 26,
+   "canonical_url": "https://journal-iasssf.com/index.php/JCBAU/article/view/1421",
+   "retrieved_url": "https://journal-iasssf.com/index.php/JCBAU/article/view/1421",
+   "title": "Repurposing the past: Sarnies as the economic power of heritage in Bangkok",
+   "publisher": "The Journal of City: Branding and Authenticity",
+   "publisher_family": "journal-iasssf.com (IASSSF)",
+   "author": "Mya Myint Thu",
+   "published_at": "2025-01-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T07:34:00Z",
+   "body_read": false,
+   "type": "academic",
+   "commercial_context": "none",
+   "limitations": [
+    "Only abstract and reference list retrieved; full PDF not read — used as corroboration only, never as sole evidence",
+    "Single-case study; replicability claims are the author's",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "wat-mangkon-c01",
+   "text_en": "MRT Wat Mangkon (BL29) opened 29 July 2019 under Charoen Krung Road near the Plaeng Nam intersection, styled in red-and-gold Sino-Portuguese design with dragon motifs (the ceiling is meant to read as the inside of a dragon's belly) and is commonly ranked among Bangkok's most handsome metro stations.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "heritage",
+    "transit"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "MRT Wat Mangkon station (BL29)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Station is the unit's centre point; app coordinate 13.74221, 100.50991 used."
+   },
+   "temporal_scope": {
+    "event_date": "2019-07-29",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "home.co.th describes through-service on the extension from September 2019; opening-day vs through-service nuance not fully resolved."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "lede; 'Location'; 'Design'; infobox",
+     "paraphrase": "Opened 29 July 2019 on the Blue Line at Charoen Krung near Plaeng Nam intersection; dragon and water-lily murals, ceiling like a dragon's belly, counted among the four most beautiful MRT stations with Itsaraphap, Sanam Chai and Sam Yot."
+    }
+   ],
+   "limitations": [
+    "Wikipedia infobox longitude conflicts with the app coordinate by ~320 m; discrepancy unresolved (no official BEM page accessible)",
+    "Aesthetic ranking is a popular claim, not a measured fact"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c02",
+   "text_en": "The station itself straddles Samphanthawong Subdistrict (Samphanthawong District) and Pom Prap Subdistrict (Pom Prap Sattru Phai District), so the app unit genuinely sits across two khets, matching the app's 51.4/48.6 district split.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "MRT Wat Mangkon station area",
+    "relation_to_entity": "entire_unit",
+    "notes": "Boundary runs through the station block along the Charoen Krung/Plaeng Nam corridor."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current administrative boundaries",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "'Location' section and infobox address fields",
+     "paraphrase": "The station 'overlaps between Samphanthawong Subdistrict, Samphanthawong District with Pom Prap Subdistrict, Pom Prap Sattru Phai District'."
+    },
+    {
+     "source_index": 10,
+     "locator": "'Administration'; transport paragraph",
+     "paraphrase": "Pom Prap Sattru Phai has five khwaengs and borders Chinatown across Charoen Krung Road; the district article independently places the border at the station's road frontage."
+    }
+   ],
+   "limitations": [
+    "Exact khet boundary line not digitised in this research; per-venue khet attributions rely on source statements"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c03",
+   "text_en": "Straight-line midpoint analysis of published station coordinates implies the nearest-stop catchment is clipped roughly 450-520 m out toward Sam Yot (WNW) and toward Hua Lamphong (SE), is bounded by the Chao Phraya river ~700-900 m to the SW, and is never clipped by Itsaraphap, whose station lies ~2.7 km away across the river.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity",
+    "transit",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "entire_unit",
+    "place_name": "st.wat-mangkon catchment boundary",
+    "relation_to_entity": "entire_unit",
+    "notes": "Computed from Wikipedia-published coordinates of the four MRT stations against the app's station point; task brief's stated clip directions ('hua-lamphong north', 'itsaraphap south') do not match the coordinate geometry — Hua Lamphong lies SE, Itsaraphap ~2.7 km SW."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-11-07 computation",
+    "recheck_by": "when app polygon available",
+    "notes": "Replace straight-line midpoints with the app's actual polygon as soon as it is exported."
+   },
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "infobox coordinates",
+     "paraphrase": "Hua Lamphong MRT at 13.7373, 100.5180 — about 1.02 km SE of the Wat Mangkon app point; midpoint ~518 m out."
+    },
+    {
+     "source_index": 3,
+     "locator": "infobox coordinates",
+     "paraphrase": "Sam Yot MRT at 13.7470, 100.5032 — about 900 m WNW; midpoint ~449 m out."
+    },
+    {
+     "source_index": 5,
+     "locator": "infobox coordinates",
+     "paraphrase": "Itsaraphap MRT at 13.7384, 100.4853 — about 2.7 km SW; cannot clip an 800 m radius."
+    }
+   ],
+   "limitations": [
+    "Straight-line, not walking; ignores river crossings and one-way street logic",
+    "Wikipedia coordinate precision is page-level",
+    "Actual app polygons not available in this environment"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c04",
+   "text_en": "Wat Mangkon Kamalawat (Leng Noei Yi), described as the largest and most important Chinese Buddhist temple in Bangkok, sits about 185-250 m north of the station between Soi Charoen Krung 19 and 21 and is therefore inside this catchment — and it is attributed to Pom Prap Sattru Phai, contradicting any 'just outside the Samphanthawong khet' framing.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "heritage",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Wat Mangkon Kamalawat (วัดมังกรกมลาวาส / วัดเล่งเน่ยยี่)",
+    "relation_to_entity": "inside",
+    "notes": "Coordinates 13.743828, 100.509552 give ~184 m from the app station point; guides round to ~250 m. In Pom Prap khet per Wikipedia — so the pilot's one-source 'just outside the khet' attribution is wrong on khet and moot on catchment."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "standing landmark",
+    "recheck_by": null,
+    "notes": "Founded 1871/1872 (sources differ per Wikipedia)."
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "lede; 'History'; entrance note",
+     "paraphrase": "Largest and most important Chinese Buddhist temple in Bangkok, located in Pom Prap Sattru Phai in Chinatown, entrance between Soi Charoen Krung 19 and 21, gave its name to the 2019 station."
+    },
+    {
+     "source_index": 19,
+     "locator": "Getting-there intro",
+     "paraphrase": "Station described as roughly 250 m from the temple (direction mis-stated as southeast)."
+    },
+    {
+     "source_index": 13,
+     "locator": "venue 1 (Wat Leng Nei Yi)",
+     "paraphrase": "~250 m from the station, on Charoen Krung between Soi 19 and 21; main activities praying and horoscope-fixing (แก้ปีชง)."
+    }
+   ],
+   "limitations": [
+    "Distance 185 m (coordinates) vs ~250 m (two guides) not fully reconciled; either way well inside",
+    "Khet attribution from one encyclopedia; not cross-checked against BMA khwaeng maps"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c05",
+   "text_en": "Thirteen named eating and drinking places lie within about 300 m of the station exits, several trading morning-to-afternoon (a herbal-drink stand and noodle shop from 07:00, a curry-rice stall 15:00-20:00) and others evening-to-midnight (kuay jap until 24:00), with dish prices roughly 30-150 THB and a common Monday rest day.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "daily_life",
+    "cost"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Charoen Krung / Mangkon / Plaeng Nam / Phadung Dao / Yaowarat lanes",
+    "relation_to_entity": "inside",
+    "notes": "All venue distances stated by the outlet (47-300 m from station) fall inside even the clipped catchment."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "April 2025 snapshot",
+    "recheck_by": "2027-04",
+    "notes": "Vendor turnover in Chinatown is high; hours drift seasonally (Lunar New Year)."
+   },
+   "evidence": [
+    {
+     "source_index": 13,
+     "locator": "venue list items 1-13",
+     "paraphrase": "Distances 47-300 m; e.g. Tue Huan Kiam Chai 47 m (Tue-Sun 07:00-17:30, closed Mon), Khao Kaeng Jek Pui 250 m (15:00-20:00), Kuay Jap Nai Ek 230 m (09:00-24:00), Je Malee fish maw 60-100 THB closed Mon, chive dumplings 3 for 30 THB closed Mon, herbal drinks 08:00-22:00."
+    }
+   ],
+   "limitations": [
+    "Outlet-chosen venues skew famous/photogenic; ordinary worker canteens under-covered",
+    "Monday-closure pattern is what this list shows, not a district-wide rule"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c06",
+   "text_en": "The unit's spine, Yaowarat Road, runs from the Odeon Circle (site of the 1999 Chinatown Gate) to the old moat at Khlong Ong Ang, with the Sampeng Lane wholesale alley directly attached and the historic Talat Noi and Song Wat riverfront neighbourhoods off its southeast end — the latter two only partly inside this clipped catchment.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "heritage",
+    "daily_life"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Yaowarat Road / Sampeng Lane (Soi Wanit 1) / Talat Noi / Song Wat",
+    "relation_to_entity": "partial",
+    "notes": "Yaowarat spine and Sampeng Lane inside (~150-350 m); Song Wat northern stretch inside (~310 m at its north end); Talat Noi's riverfront half falls toward the Hua Lamphong side (computed midline); Odean Circle/Wat Traimit end outside (see c03)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Gate built 1999."
+   },
+   "evidence": [
+    {
+     "source_index": 8,
+     "locator": "'Areas' section",
+     "paraphrase": "Yaowarat runs from Odeon Circle, site of the 1999 Chinatown Gate, to Khlong Ong Ang; Sampeng (Soi Wanit 1) is a narrow wholesale market alley; Talat Noi is a fringe neighbourhood southeast of Yaowarat with historic buildings; Song Wat ran alongside the river at the old cargo piers; the article also notes displacement concerns for old communities."
+    },
+    {
+     "source_index": 2,
+     "locator": "'Entrances & Exits' list",
+     "paraphrase": "Hua Lamphong MRT's own Exit 1 signs direct users to 'Wat Traimit, Odean Circle, Maitri Chit Road' — independent operator evidence that the gate/Wat Traimit end is served by the Hua Lamphong stop, not this one."
+    }
+   ],
+   "limitations": [
+    "Talat Noi/Song Wat inside-outside split computed from coordinates, not from the app polygon",
+    "Wikipedia's claim that Chinatown 'roughly coincides with Samphanthawong District' is a popular simplification conflicting with venue-level khet facts (c02, c04)"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c07",
+   "text_en": "The Chinatown cocktail-bar strip on Soi Nana — about 14 bars including Teens of Thailand, Tep, Ba Hao and Asia Today, mostly trading from around 18:00 to midnight with cocktails roughly 280-580 THB — straddles this catchment's southeast boundary: the lane's Maitrichit end is nearer Wat Mangkon, its Rama IV end nearer MRT Hua Lamphong.",
+   "kind": "researcher_inference",
+   "topics": [
+    "nightlife",
+    "identity",
+    "change"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Soi Nana (Chinatown), Pom Prap side",
+    "relation_to_entity": "partial",
+    "notes": "Lane pin (13.73945, 100.51427) is ~563 m from the app station point and ~468 m from Hua Lamphong MRT, but the lane runs WSW toward Maitrichit, where points are ~410 m from Wat Mangkon vs ~640 m from Hua Lamphong — so the main western bar cluster likely sits inside, the eastern end outside. Refines the pilot's 'likely INSIDE' expectation."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2010s to present (bar-era)",
+    "recheck_by": "geocode individual bars when OSM access restored",
+    "notes": "Lane history: 1950s-60s gang era, then Chinese drugstore quarter, bar-era from the 2010s."
+   },
+   "evidence": [
+    {
+     "source_index": 17,
+     "locator": "list of 14 bars; price notes; 'Not the notorious soi just off Sukhumvit...' line",
+     "paraphrase": "Fourteen bars on/around Soi Nana and Soi Rammaitree/Maitri Chit Rd; sample prices G.O.D martini B580, pints B280, cocktails B290; the lane was once apothecaries, now mostly shophouse bars."
+    },
+    {
+     "source_index": 9,
+     "locator": "lede; 'History'; 'Reasons for popularity'",
+     "paraphrase": "Alley linking Maitrichit and Rama IV roads, ~4 min walk from Yaowarat, categorised under Pom Prap Sattru Phai; went from gang era to Chinese drugstores to new-generation cafes and bars from the 2010s."
+    },
+    {
+     "source_index": 18,
+     "locator": "overview card",
+     "paraphrase": "Bars daily about 18:00-00:00; once-sleepy lane that comes alive after dark; adults-only nightlife."
+    }
+   ],
+   "limitations": [
+    "Boundary verdict rests on two near-identical pinned coordinates (Wikipedia/travjoy) plus road-geometry reasoning; per-bar geocoding unavailable (OSM blocked)",
+    "Bars change frequently; list is a 2023-2026 editorial snapshot",
+    "Polygon check 2026-11-07: the lane's northwestern (Maitrichit-side) end falls inside the mapped catchment (~414-447 m from the station) while its midpoint falls outside - the strip does straddle the boundary."
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c08",
+   "text_en": "Song Wat Road — whose northern stretch is inside this catchment — was named the world's 39th coolest neighbourhood by Time Out in October 2023 for its blend of new cafes, galleries and old traders, and 2025 academic work treats its heritage adaptive reuse as an economic engine, marking the southeastward spillover of the Chinatown cafe wave.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "food",
+    "heritage"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Song Wat Road / Talat Noi",
+    "relation_to_entity": "partial",
+    "notes": "North end of Song Wat ~310 m from the station (inside); the recognised 'neighbourhood' extends toward the river, partly outside (computed)."
+   },
+   "temporal_scope": {
+    "event_date": "2023-10-18",
+    "observed_period": "2023 recognition; 2024-2025 coverage",
+    "recheck_by": "2027",
+    "notes": "Recognition precedes this bundle; watch for venue churn both ways."
+   },
+   "evidence": [
+    {
+     "source_index": 16,
+     "locator": "article body",
+     "paraphrase": "Named 39th of 40 coolest neighbourhoods worldwide, 18 Oct 2023, for tranquil charm, community engagement, pedestrian-friendly environment, mix of new businesses alongside older ones."
+    },
+    {
+     "source_index": 26,
+     "locator": "abstract page",
+     "paraphrase": "Adaptive reuse of a 150-year-old boat-repair shop (Sarnies cafe) framed as catalysing heritage tourism and local employment, proposed as a replicable renewal model — corroboration only (abstract not read in full)."
+    }
+   ],
+   "limitations": [
+    "Time Out ranking is editorial, nominated by its own Bangkok team",
+    "JCBAU record not read in full (body_read false)",
+    "Gentrification effects on old traders asserted in secondary coverage, not measured here"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c09",
+   "text_en": "The station has three exits (Plaeng Nam Road; Soi Charoen Krung 16; the Wat Mangkon Kamalawat side) with Exit 1 about 180 m from Yaowarat Road, sits one Blue Line stop (~1 km) from Hua Lamphong, carries a ground-level bus stop, recorded 2.67 million passengers in 2021, and is the recommended way in because district parking is difficult.",
+   "kind": "factual_report",
+   "topics": [
+    "transit",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "MRT Wat Mangkon station",
+    "relation_to_entity": "entire_unit",
+    "notes": "Exit-to-Yaowarat 180 m is the portal's figure; consistent with the station sitting just north of Yaowarat on Charoen Krung."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "ridership 2021; exits current",
+    "recheck_by": null,
+    "notes": "Ridership figure is pre-2023; post-pandemic recovery not reflected."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "'Station layout'; 'Design'; infobox",
+     "paraphrase": "3 exits and 3 elevators; Exit 1 on Plaeng Nam Road; neighbours Sam Yot and Hua Lamphong; 2021 ridership 2,672,715; bus stop at ground level."
+    },
+    {
+     "source_index": 15,
+     "locator": "ทางเข้า-ออก 3 จุด; คำแนะนำ sections",
+     "paraphrase": "Three entrances/exits listed as Plaeng Nam Rd, Soi Charoen Krung 16, and Wat Mangkon Kamalawat side; Exit 1 about 180 m from Yaowarat; article recommends MRT over driving because parking is hard."
+    },
+    {
+     "source_index": 14,
+     "locator": "บรรยากาศสถานี / ข้อจำกัด paragraphs",
+     "paraphrase": "The area's old problem was parking and access; the MRT's arrival removed the main friction."
+    }
+   ],
+   "limitations": [
+    "Exit 3 attribution differs in emphasis between sources (Pom Prap side vs temple side) — likely the same north-side exit described differently",
+    "No official BEM page reachable to confirm exit list",
+    "No sidewalk-width or crossing-quality audit found"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c10",
+   "text_en": "A car-free river route reaches the unit via the Chao Phraya express boat to Ratchawong Pier, with the walk up Ratchawong Road connecting to Sampeng Lane and Yaowarat; the pier sits roughly 330 m south-southeast of the station (estimated), within the mapped four-pier set.",
+   "kind": "factual_report",
+   "topics": [
+    "transit",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Ratchawong Pier (ท่าเรือราชวง)",
+    "relation_to_entity": "inside",
+    "notes": "Pier coordinates not independently verified (OSM blocked); position estimated from its road's geography — flagged unknown precision."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 19,
+     "locator": "Getting-there intro",
+     "paraphrase": "Travel by boat on the Chao Phraya River Express, get off at Ratchawong Pier and walk up Ratchawong Road to Sampeng Lane and Yaowarat Road; the area is easy to explore on foot with many lanes."
+    }
+   ],
+   "limitations": [
+    "Pier distance is researcher estimate from road geography, not a source figure",
+    "Boat frequency/fare changes not verified"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c11",
+   "text_en": "After Lisa's 'Rockstar' video (shot on Yaowarat) drew a global visitor surge in mid-2024, the BMA announced extended traffic barriers, more pedestrian signals, extra cleaning and bins, action against overcharging tuk-tuk/taxi drivers, public toilets, and turning Yaowarat into a pedestrian-friendly zone on selected days — with several measures still plans rather than completed works as of July 2024.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowding",
+    "change",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Yaowarat Road",
+    "relation_to_entity": "inside",
+    "notes": "Yaowarat spine is the unit's core corridor; pedestrian-zone days would directly reshape the unit's street experience."
+   },
+   "temporal_scope": {
+    "event_date": "2024-06-29",
+    "observed_period": "June-July 2024 announcements",
+    "recheck_by": "2027",
+    "notes": "Whether scheduled pedestrian days became routine remains unverified — open issue."
+   },
+   "evidence": [
+    {
+     "source_index": 22,
+     "locator": "BMA measures list; Sermsak Pongpanich paragraph",
+     "paraphrase": "Governor Chadchart's inspection visit produced the measure list; the video had ~38 million views; vendors optimistic; some items (barriers, cleaning, enforcement) underway, others (pedestrian days, CCTV, signage, footpath refurbishment) stated as plans."
+    }
+   ],
+   "limitations": [
+    "Single-outlet account of a BMA announcement; implementation status after 2024 not tracked in this research",
+    "No quantitative crowding data located"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c12",
+   "text_en": "In May 2026 AFP reported a widening Bangkok-wide crackdown clearing footpaths and relocating street vendors into hawker centres, framed as threatening the street-food culture that defines the capital — a policy bearing directly on this unit's Yaowarat and lane-side food rows, though Chinatown is not named in the retrieved text.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "change",
+    "cost"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "citywide",
+    "place_name": "Bangkok vendor policy",
+    "relation_to_entity": "entire_unit",
+    "notes": "Scoped citywide on purpose: the article's retrieved text names no district; Chinatown's food rows are plausibly but not demonstrably affected."
+   },
+   "temporal_scope": {
+    "event_date": "2026-05-03",
+    "observed_period": "2026 policy wave",
+    "recheck_by": "2027-05",
+    "notes": "Watch whether Yaowarat-specific enforcement follows."
+   },
+   "evidence": [
+    {
+     "source_index": 23,
+     "locator": "opening paragraphs",
+     "paraphrase": "Bangkok government clearing footpaths, improving order, relocating kerbside vendors to designated stalls; tighter controls threaten livelihoods and street-food culture; vendors face uncertain future."
+    }
+   ],
+   "limitations": [
+    "Only the article's opening was retrievable; district-level detail missing",
+    "Policy application to this unit inferred, not reported"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c13",
+   "text_en": "Fire risk is a documented hazard of the unit's dense old housing: the 6 July 2024 Trok Pho fire off Yaowarat Road damaged roughly 60-70% of a 63-household, 1.8-rai community (90% tenants, semi-wooden buildings, only two exits) and the New Empire Hotel's upper floors, injured about 30 people, and fire engines could not enter the narrow alleys; a fire also hit the Khlong Thom Center block in August 2026.",
+   "kind": "factual_report",
+   "topics": [
+    "safety",
+    "heritage",
+    "crowding"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Trok Pho community, Yaowarat Road; Khlong Thom Center",
+    "relation_to_entity": "inside",
+    "notes": "Trok Pho sits behind Yaowarat commercial buildings near the New Empire Hotel — on the unit's spine (exact alley coordinates unverified); Khlong Thom pin is ~449 m from the station, marginally inside."
+   },
+   "temporal_scope": {
+    "event_date": "2024-07-06",
+    "observed_period": "2024 and 2026 events",
+    "recheck_by": "2027",
+    "notes": "Cause in both fires not confirmed in available reporting."
+   },
+   "evidence": [
+    {
+     "source_index": 21,
+     "locator": "lede; damage and response paragraphs",
+     "paraphrase": "Fire 20:40 6 July 2024, contained ~10:30-11:30 pm; 60-70% of houses damaged; community ~1.8 rai, 63 households, 90% tenants; semi-wooden concrete houses with two exits; fire trucks from Bang Rak could not enter narrow alleys; ~30 injured including 2 firefighters; ~245 people registered for aid."
+    },
+    {
+     "source_index": 12,
+     "locator": "history/notes on the market",
+     "paraphrase": "Saturday-night market shut by the BMA in March 2015; fire at Khlong Thom Center in August 2026 noted on the page."
+    }
+   ],
+   "limitations": [
+    "Trok Pho exact position unverified (no coordinate source)",
+    "Khlong Thom 2026 fire detail is thin (single encyclopedia mention)",
+    "Cause attribution pending in both cases"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c14",
+   "text_en": "During the October 2011 national floods, high tide pushed river water into Bangkok's Chinatown streets on 27-28 October; it receded within hours while officials conceded groundwater was coming up faster than it could be stopped.",
+   "kind": "factual_report",
+   "topics": [
+    "safety",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Chinatown (Yaowarat/Samphanthawong streets)",
+    "relation_to_entity": "inside",
+    "notes": "Chinatown streets named in the report are the unit's own low-lying lanes near the river; article does not map lane-by-lane flooding."
+   },
+   "temporal_scope": {
+    "event_date": "2011-10-27",
+    "observed_period": "2011-10-27/28 event",
+    "recheck_by": null,
+    "notes": "Historic event; relevant to flood-risk framing, not current conditions."
+   },
+   "evidence": [
+    {
+     "source_index": 20,
+     "locator": "article body and photo captions",
+     "paraphrase": "High tide pushed water into Chinatown on Friday 28 Oct (residents wading Wednesday), receding within hours; Pracha Promnok: 'There is water from underground coming up... unable to do anything'; main commercial district mostly dry; national toll then 373 dead."
+    }
+   ],
+   "limitations": [
+    "2011 wire coverage; no lane-level flood map",
+    "Post-2011 flood-mitigation works in the unit not researched"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c15",
+   "text_en": "Independent rental listings show a thin, two-tier condo market across the unit's two khets — Samphanthawong with 16 listings (1-bed from ~14,000-30,000 THB/month, outliers to 80,000; 2-bed penthouse cluster 27,500-29,000) and Pom Prap with 14 (1-bed averaging ~17,500, 2-bed ~25,000, dominated by buildings nearer Sam Yot and Hua Lamphong than this station) — consistent with the app's 13,000/26,000 as district asking levels, while the catchment's own housing is overwhelmingly shophouse stock rented commercially.",
+   "kind": "estimate",
+   "topics": [
+    "rent",
+    "cost",
+    "housing"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Samphanthawong and Pom Prap Sattru Phai khet condo market",
+    "relation_to_entity": "partial",
+    "notes": "Sampled condo buildings mostly sit outside this catchment (The Prague near Hua Lamphong; The 8 Collection near Sam Yot; Old Siam Penthouse near Wang Burapha); the unit itself is shophouse/heritage stock with near-zero condo supply in the sources reviewed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings snapshot 2026-11-07",
+    "recheck_by": "2027-05",
+    "notes": "Asking rents only; signed-rent data absent from all sources reviewed."
+   },
+   "evidence": [
+    {
+     "source_index": 24,
+     "locator": "listing table",
+     "paraphrase": "16 rentals: studio 12,000 (Thai Sathit 1990); 1-bed 14,000-80,000; 2-bed mostly Old Siam Penthouse 27,500-29,000, luxury unit 190,000; ~250-1,026 THB/sqm range."
+    },
+    {
+     "source_index": 25,
+     "locator": "listing table",
+     "paraphrase": "14 rentals: 1-bed ~USD 514 avg, 2-bed ~USD 728 avg; The Prague 6 units, The 8 Collection 3; two commercial buildings inflating the top; typical residential cluster ~13,000-28,000 THB."
+    }
+   ],
+   "limitations": [
+    "Tiny sample with agent duplicates; asking vs signed gap unknown",
+    "Shophouse residential rents undocumented in this research (commercial shophouse figures seen only as unattributed snippets, not used)",
+    "App's 13,000/26,000 is an editorial blend — plausible against these asks but not a station-level observation"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c16",
+   "text_en": "Pom Prap Sattru Phai, holding just over half the catchment, is the most densely populated district in Thailand (about 24,123 persons/km² at the 2017 count), and encyclopedic coverage of Chinatown flags displacement of old communities as the area modernises — the structural basis of the app's extreme crowding score.",
+   "kind": "factual_report",
+   "topics": [
+    "crowding",
+    "change",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Pom Prap Sattru Phai / Samphanthawong khets",
+    "relation_to_entity": "partial",
+    "notes": "District-level statistic applied to a 1.37 km² unit straddling both khets; Samphanthawong is the smallest khet in Bangkok."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2017 census",
+    "recheck_by": "next census release",
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "'Administration' and lede",
+     "paraphrase": "Area 1.931 km²; 2017 population 46,581; density 24,122.73/km² — highest in Thailand."
+    },
+    {
+     "source_index": 8,
+     "locator": "modern-era / displacement note in 'Areas' retrieval",
+     "paraphrase": "Article references concerns about displacement of old communities in Chinatown."
+    }
+   ],
+   "limitations": [
+    "Census vintage 2017",
+    "Density is district-wide, not catchment-specific"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c17",
+   "text_en": "No public park is documented inside this catchment: Rommaninat Park (11-12 acres, ex-prison site) lies about 1.0 km WNW in the Sam Yot unit, Wat Saket/Golden Mount about 0.9 km north-northwest (914 m straight-line from the station, app-polygon check 2026-11-07), and the app's mapped 0.5 ha park could not be identified with OSM access blocked, leaving temple and shrine grounds as the only documented quiet open space.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "entire_unit",
+    "place_name": "unit green space",
+    "relation_to_entity": "entire_unit",
+    "notes": "The 0.5 ha Overture polygon remains unidentified — open issue; quiet space evidenced in sources is temple/shrine interiors and courtyards."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-11-07 check",
+    "recheck_by": "with OSM/Overpass access",
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "infobox coordinates; lede",
+     "paraphrase": "Rommaninat Park at 13.7488, 100.5030 in Phra Nakhon (Samran Rat), 11-12 acres on the former Klong Prem Prison site, served by Sam Yot MRT — ~1.05 km from the app station point, ~200 m from Sam Yot MRT."
+    },
+    {
+     "source_index": 7,
+     "locator": "infobox coordinates; 'Phu Khao Thong'",
+     "paraphrase": "Wat Saket at 13.7539, 100.5083 in Ban Bat khwaeng, with its annual November fair — ~1.3 km north, outside."
+    },
+    {
+     "source_index": 13,
+     "locator": "venue 1 and shrine entry",
+     "paraphrase": "Temple and shrine visits (praying, horoscope-fixing) are the calm activities named in the unit."
+    }
+   ],
+   "limitations": [
+    "Overpass 406 and mirror connection failure; park polygon identity unresolved",
+    "Small unnamed pocket greenery may exist below source visibility"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c18",
+   "text_en": "The unit's cultural calendar is Chinese-festival-driven: Wat Mangkon Kamalawat hosts Chinese New Year celebrations and the annual vegetarian festival, when the whole Yaowarat area's rhythm peaks; no Thai-equivalent park-festival anchor exists inside the catchment (the November Golden Mount fair is ~0.9 km out).",
+   "kind": "factual_report",
+   "topics": [
+    "heritage",
+    "change",
+    "crowding"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Wat Mangkon Kamalawat",
+    "relation_to_entity": "inside",
+    "notes": "Festival periods bring the year's biggest crowds to the station's doorstep."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "annual, lunar calendar",
+    "recheck_by": null,
+    "notes": "Exact festival dates vary yearly."
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "'History'/lede; festival mentions",
+     "paraphrase": "Hosts Chinese New Year and the annual vegetarian festival; named the station."
+    },
+    {
+     "source_index": 7,
+     "locator": "'Phu Khao Thong'",
+     "paraphrase": "Wat Saket's November candlelight fair — outside the unit, relevant only as a nearby seasonal event."
+    }
+   ],
+   "limitations": [
+    "Festival crowd sizes not quantified in sources",
+    "Event timing lunar-variable"
+   ]
+  },
+  {
+   "claim_id": "wat-mangkon-c19",
+   "text_en": "Documented daily-life infrastructure inside the catchment is commerce-heavy: the Sampeng wholesale lane and the Khlong Thom automotive/electrical block (~450 m north, marginally inside) cover everyday goods, while documented health infrastructure stops at the Poh Teck Tung rescue-foundation HQ ~260 m from the station (which operates Hua Chiew Hospital) — no general hospital is documented within 800 m.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "transit",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "entire_unit",
+    "place_name": "unit services",
+    "relation_to_entity": "entire_unit",
+    "notes": "Hua Chiew Hospital's own position not verified in this research; nearest general hospitals presumed outside the catchment but not source-verified."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "verify nearest hospital with routing data",
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "'History'; 'Activity'",
+     "paraphrase": "Founded by Chinese merchants from 1909 for unclaimed corpses; today integrated into Thailand's emergency medical system as first responders with hotline 1418; operates Hua Chiew Hospital; HQ coordinate 13.7444, 100.5108."
+    },
+    {
+     "source_index": 12,
+     "locator": "lede",
+     "paraphrase": "Khlong Thom area on Mahachak Road at Charoen Krung sells automotive hardware and electrical equipment; mainly in Pom Prap Sattru Phai on the edge of Chinatown."
+    },
+    {
+     "source_index": 8,
+     "locator": "'Areas' — Sampeng entry",
+     "paraphrase": "Sampeng (Soi Wanit 1) is a busy wholesale market of shophouses along a narrow pedestrian alley."
+    }
+   ],
+   "limitations": [
+    "No clinic/health-centre inventory found for the unit",
+    "'No hospital within 800 m' is an absence-of-evidence finding, not a verified map result"
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c01",
+    "wat-mangkon-c02",
+    "wat-mangkon-c03",
+    "wat-mangkon-c04",
+    "wat-mangkon-c06",
+    "wat-mangkon-c07",
+    "wat-mangkon-c08"
+   ],
+   "notes": "Aliases: MRT วัดมังกร (BL29); the name comes from Wat Mangkon Kamalawat (Leng Noei Yi). Unit straddles khwaeng Pom Prap and khwaeng Samphanthawong through the station block. Corridors: Yaowarat spine, Charoen Krung frontage, Plaeng Nam/Phadung Dao/Mangkon lanes, Sampeng wholesale alley, northern Khlong Thom block, southern Song Wat/Talat Noi fringe. Inside: station+exits, temple, 13 EDT venues, Sampeng, Yaowarat spine, Song Wat north, Soi Nana's Maitrichit end. Partial: Soi Nana lane, Song Wat/Talat Noi (SE half toward Hua Lamphong). Outside: Wat Traimit, Odean Circle/Chinatown Gate (Hua Lamphong MRT's own Exit 1 signage serves them), Rommaninat Park and Khlong Ong Ang (Sam Yot side), Golden Mount/Wat Saket (1.3 km). The brief's stated clip directions ('hua-lamphong north', 'itsaraphap south') do not match coordinate geometry: Hua Lamphong is SE (~1.0 km, midline ~518 m), Itsaraphap ~2.7 km and non-clipping."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c05",
+    "wat-mangkon-c06",
+    "wat-mangkon-c07",
+    "wat-mangkon-c11"
+   ],
+   "notes": "Everyday texture is lane-scale: 30-THB chive dumplings 130 m from the exit, curry-rice on red stools 15:00-20:00, wholesale porters in Sampeng, herb drinks at a 1900s counter. Experience is split between vendors/residents of century-old shophouses and visitors arriving by metro; evening belongs to street food and the bar lane; daytime to commerce and temple runs."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c05",
+    "wat-mangkon-c08",
+    "wat-mangkon-c09"
+   ],
+   "notes": "Value mechanisms per sources: (1) food density at low prices within 300 m of an exit; (2) car-free access solving the district's historic parking problem (Prachachart 2019, home.co.th 2024); (3) layered heritage — temple, shophouse facades, dragon-belly station — now monetised through the Song Wat/Soi Nana cafe-bar wave. Most value statements are guide-side opinion; the food-price and distance facts are verified."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c11",
+    "wat-mangkon-c12",
+    "wat-mangkon-c13",
+    "wat-mangkon-c14",
+    "wat-mangkon-c16"
+   ],
+   "notes": "Counter-evidence found and used: extreme density (highest district in Thailand), 2011 river-tide flooding of Chinatown streets, fatal-risk fire physics in semi-wooden alleys (2024 Trok Pho; 2026 Khlong Thom), 2024 tourist surge and overcharging-driver enforcement, and the 2026 citywide vendor crackdown threatening the food rows. No resident-noise complaints specific to this unit surfaced."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c05",
+    "wat-mangkon-c07",
+    "wat-mangkon-c11",
+    "wat-mangkon-c18"
+   ],
+   "notes": "Morning: 07:00 herbal drinks and noodle shops, temple visits, wholesale trade. Evening: Yaowarat street-food rows and Soi Nana bars from ~18:00 to midnight. Weekly: Monday is a common rest day for several famous stalls. Seasonal/annual: Lunar New Year and the vegetarian festival peak the calendar; Golden Mount fair (November) is outside the unit. Weekday-vs-weekend pedestrianisation was announced for selected days (status unverified)."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c09",
+    "wat-mangkon-c10",
+    "wat-mangkon-c11"
+   ],
+   "notes": "Three exits (Plaeng Nam Rd; Soi Charoen Krung 16; temple side), Exit 1 ~180 m to Yaowarat, one stop to Hua Lamphong, ground-level bus stop, plus the Ratchawong pier river route (~330 m estimated). NOT found: any skywalk at this station; sidewalk/crossing quality audits; the 2024 pedestrian-signal and footpath works remained announced/underway rather than verified complete. Do not infer walking times from the radius — the clipped boundary and narrow-lane detours dominate here."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c05",
+    "wat-mangkon-c06",
+    "wat-mangkon-c19"
+   ],
+   "notes": "Everyday supply is strong for food and goods (Sampeng wholesale, Khlong Thom hardware/electrical ~450 m north, dense low-price eating). Gaps: no general hospital documented within 800 m — nearest documented medical asset is the Poh Teck Tung rescue HQ (261 m) with hotline 1418; grocery/supermarket specifically was not separately evidenced (markets here skew wholesale/tourist); ordinary resident-facing services under-documented in tourism-weighted sources."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c15",
+    "wat-mangkon-c16"
+   ],
+   "notes": "The app's 13,000/26,000 THB sits inside the observed asking ranges of the two-khet blend (1-bed 14-30K typical, outliers 65-80K; 2-bed 27.5-29K cluster) but is not a station observation: sample is 30 listings across two khets, mostly in buildings nearer Sam Yot/Hua Lamphong, asking prices only. The catchment's own housing is shophouse stock (2024 fire reporting: 90% tenants, whole-unit commercial rents undocumented). No signed-rent data found anywhere."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c17",
+    "wat-mangkon-c04",
+    "wat-mangkon-c18"
+   ],
+   "notes": "Green 6 cannot be supported by named public parkland: Rommaninat Park (11-12 acres) is ~1.0 km out in the Sam Yot unit; Golden Mount ~0.9 km; the mapped 0.5 ha park could not be identified (Overpass blocked — logged). Usable quiet space documented = temple/shrine grounds (Leng Noei Yi courtyard, Isaranuphap shrines). The green score likely prices in proximity to those outside parks plus river-edge pockets; treat as generous until the 0.5 ha polygon is identified."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c05",
+    "wat-mangkon-c07",
+    "wat-mangkon-c09",
+    "wat-mangkon-c10"
+   ],
+   "notes": "Conditional fit: suits people who want street-food density and heritage lanes at their door without owning a car (MRT + boat + walking); suits night-shift socialisers if they live near the Maitrichit end of the bar lane; suits festival-driven cultural life. Poor fit for those needing parks, quiet nights near Yaowarat, car ownership, or clinical care within walking distance. Not a family-night area (bar lane marketed adults-only); daytime family use is fine."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c01",
+    "wat-mangkon-c08",
+    "wat-mangkon-c11",
+    "wat-mangkon-c12",
+    "wat-mangkon-c13",
+    "wat-mangkon-c18"
+   ],
+   "notes": "Timeline with event dates: 2019-07-29 station opens; 2023-10-18 Song Wat #39 coolest-neighborhood recognition (spillover wave, partially inside); 2024-06/07 Lisa surge and BMA pedestrian/safety package (announced vs implemented distinguished in source); 2024-07-06 Trok Pho fire; 2026-05 vendor crackdown widens (AFP/SCMP); 2026-08 Khlong Thom Center fire. Not verified beyond snippets (used as context only): the 2019 three-month weekend walking-street pilot; current scheduled car-free days."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "wat-mangkon-c02",
+    "wat-mangkon-c03",
+    "wat-mangkon-c12",
+    "wat-mangkon-c15",
+    "wat-mangkon-c16"
+   ],
+   "notes": "Vibe 10 / crowd 1 masks: fire-prone tenement conditions with 90% tenant turnover; a food culture now under policy threat; a nightlife strip that the unit shares with st.hua-lamphong (Soi Nana straddles the midline); a rent figure blended across two khets whose sampled condos are mostly outside this unit; and a tourist-vs-resident split — the 'vibe' is largely vendor- and visitor-produced. The two khet halves contribute differently: the Samphanthawong half is river-trade heritage and the Yaowarat retail spine; the Pom Prap half carries the temple, the electronics block, the bar lane and denser residential fabric. Uncertainties: 0.5 ha park identity, signed rents, post-2024 implementation of pedestrian days, exit-number discrepancies."
+  }
+ ],
+ "editorial": {
+  "preview": "A metro-stop micro-China-town where 30-baht dumplings, a 150-year-old temple and a dragon-belly station share 300 m — and where the nearest public park is a kilometre away in someone else's catchment.",
+  "guide_lead": "Wat Mangkon is the station area at the heart of Bangkok's Chinatown, opened in 2019 as a Red-and-gold Blue Line stop that straddles two districts — Pom Prap Sattru Phai on one side of Charoen Krung, Samphanthawong on the other. The useful radius is short and clipped: about 450-500 m west and southeast the nearest-stop rule hands streets to Sam Yot and Hua Lamphong, which is why Wat Traimit and the Chinatown Gate already belong to the Hua Lamphong stop's signage while the temple, the Sampeng wholesale lane and the Yaowarat food rows belong here. Days run on commerce and temple hours — herb drinks from 07:00, wholesale porters, a Monday rest day for famous stalls — and evenings on street food and the Soi Nana cocktail lane, which this unit shares at its boundary. What you trade: no documented park inside the catchment, river-tide flood history, fire-prone wooden alleys, and the busiest footpaths in Thailand's densest district.",
+  "strengths": [
+   {
+    "text_en": "Eating density within a 300 m walk of the exits is exceptional even by Bangkok standards — 13 named venues with dishes from 30 to 150 THB and staggered morning-to-midnight hours.",
+    "claim_ids": [
+     "wat-mangkon-c05"
+    ]
+   },
+   {
+    "text_en": "The car-free access stack is real: three metro exits with Exit 1 about 180 m from Yaowarat, one stop to Hua Lamphong, a bus stop at street level, and the Ratchawong pier river route — the district's old parking problem is solved by not driving.",
+    "claim_ids": [
+     "wat-mangkon-c09",
+     "wat-mangkon-c10"
+    ]
+   },
+   {
+    "text_en": "Living heritage is at the door: the largest and most important Chinese Buddhist temple in Bangkok sits roughly 200 m from the platform and sets the calendar (Lunar New Year, vegetarian festival).",
+    "claim_ids": [
+     "wat-mangkon-c04",
+     "wat-mangkon-c18"
+    ]
+   },
+   {
+    "text_en": "The unit sits on the receiving end of two heritage-led waves — Song Wat's 2023 'coolest neighbourhood' recognition to the southeast and the decade-long rebirth of the Soi Nana bar lane — though both are partly shared with neighbouring rated areas.",
+    "claim_ids": [
+     "wat-mangkon-c07",
+     "wat-mangkon-c08"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Fire safety is the sharpest downside: the 2024 Trok Pho blaze showed fire engines cannot enter these alleys — 63 mostly-tenant households in semi-wooden blocks with two exits — and another fire hit the Khlong Thom block in 2026.",
+    "claim_ids": [
+     "wat-mangkon-c13"
+    ]
+   },
+   {
+    "text_en": "Flooding history is river-specific, not abstract: the 2011 high tide put water in these Chinatown streets, receding within hours but proving the low-lying exposure.",
+    "claim_ids": [
+     "wat-mangkon-c14"
+    ]
+   },
+   {
+    "text_en": "The food rows that define the unit are under policy pressure: the 2026 citywide vendor crackdown is relocating kerbside sellers to hawker centres, and Yaowarat's 2024 tourist surge brought enforcement and crowd management rather than calm.",
+    "claim_ids": [
+     "wat-mangkon-c11",
+     "wat-mangkon-c12"
+    ]
+   },
+   {
+    "text_en": "Green and quiet are structural deficits here: no public park is documented inside the catchment, and the large parks nearby (Rommaninat, Golden Mount) belong to other rated units or sit 1+ km out.",
+    "claim_ids": [
+     "wat-mangkon-c17"
+    ]
+   },
+   {
+    "text_en": "Housing is a thin market: barely 30 condo listings across the two districts, mostly in buildings nearer other stations, so the app's 13,000/26,000 THB figures are district asking blends, not observations of homes you could actually rent by this platform.",
+    "claim_ids": [
+     "wat-mangkon-c15"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Morning belongs to the old economy — herbal-drink stands and noodle shops from 07:00, temple prayers and horoscope-fixing, wholesale trade through Sampeng Lane; several famous stalls close Mondays.",
+    "claim_ids": [
+     "wat-mangkon-c05",
+     "wat-mangkon-c04"
+    ]
+   },
+   {
+    "text_en": "Evening flips the streets: Yaowarat's food rows and the Soi Nana bars (roughly 18:00 to midnight) take over, and since the 2024 'Rockstar' surge the evening crowd includes a global fan contingent the BMA is actively managing.",
+    "claim_ids": [
+     "wat-mangkon-c07",
+     "wat-mangkon-c11"
+    ]
+   },
+   {
+    "text_en": "The festival calendar, not the weekend, marks the biggest swings — Lunar New Year and the vegetarian festival compress a year's worth of visitors into the temple's frontage.",
+    "claim_ids": [
+     "wat-mangkon-c18"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Northwest (Pom Prap half): temple, shrine alleys and the Khlong Thom hardware/electrical block — commerce that serves residents, marginally inside at ~450 m.",
+    "claim_ids": [
+     "wat-mangkon-c04",
+     "wat-mangkon-c19"
+    ]
+   },
+   {
+    "text_en": "Southeast (Samphanthawong half): the Yaowarat retail spine, Sampeng wholesale lane and the Song Wat/Talat Noi fringe, where the cafe-wave and the Hua Lamphong clip meet — the unit's edge is soft here, not a circle.",
+    "claim_ids": [
+     "wat-mangkon-c06",
+     "wat-mangkon-c08",
+     "wat-mangkon-c03"
+    ]
+   },
+   {
+    "text_en": "The bar lane does not belong wholly to this unit: Soi Nana's Maitrichit end sits on the Wat Mangkon side of the midline, its Rama IV end on the Hua Lamphong side — nightlife attribution should be partial, not binary.",
+    "claim_ids": [
+     "wat-mangkon-c07"
+    ]
+   },
+   {
+    "text_en": "Two named anchors often listed with 'Chinatown' — Wat Traimit and the Odean Circle gate — fall outside this catchment on every coordinate check, and Hua Lamphong MRT's own Exit 1 signage serves them.",
+    "claim_ids": [
+     "wat-mangkon-c03",
+     "wat-mangkon-c06"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose this unit if street food at 30-150 THB, temple rhythms and metro-plus-boat mobility matter more than green space, parking or clinical care within walking distance.",
+    "claim_ids": [
+     "wat-mangkon-c05",
+     "wat-mangkon-c09",
+     "wat-mangkon-c17",
+     "wat-mangkon-c19"
+    ]
+   },
+   {
+    "text_en": "Nightlife-oriented residents should aim at the Maitrichit end of the unit, where the bar cluster sits inside the boundary rather than straddling it.",
+    "claim_ids": [
+     "wat-mangkon-c07"
+    ]
+   },
+   {
+    "text_en": "Anyone sensitive to crowding, noise or fire-safety economics — or hoping for the app's rent blend to describe a real 1-bed here — should test the trade-offs against the shophouse-heavy stock and 2024-2026 policy churn first.",
+    "claim_ids": [
+     "wat-mangkon-c13",
+     "wat-mangkon-c15",
+     "wat-mangkon-c12"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The app's mapped 0.5 ha park could not be identified (Overpass/OSM blocked); green 6 remains partially unexplained.",
+   "Signed rents are absent from every source; the 13,000/26,000 THB blend is corroborated only as an asking-price range across two districts.",
+   "Soi Nana's boundary split rests on a single pinned coordinate plus road geometry; per-bar geocoding needed.",
+   "Whether the 2024-announced Yaowarat pedestrian days became routine was not verifiable; only announcements are sourced.",
+   "The 2019 three-month weekend walking-street pilot and current car-free schedules remain snippet-level context, not claims.",
+   "Trok Pho fire site and Ratchawong pier positions are estimated from road geography, not geocoded.",
+   "Wikipedia's station infobox longitude disagrees with the app coordinate by ~320 m; the app coordinate was used throughout.",
+   "No resident-side noise, crime or school data surfaced; safety 6 is informed here by fire/flood/crowding evidence only.",
+   "No gym/sports facilities evidence found at all (gym_sports 6 untested)."
+  ]
+ },
+ "open_issues": [
+  "Identify the 0.5 ha park polygon (needs OSM/Overpass access restored, or an Overture extract of the unit).",
+  "Obtain signed-rent or shophouse-residential rent data for the catchment (Thai broker reports, BMA housing data).",
+  "Confirm BEM's official exit list and coordinates (bem.co.th station page 404 during research).",
+  "Track implementation status of the 2024 Yaowarat pedestrian-zone days and 2026 vendor-relocation policy for Chinatown specifically.",
+  "Geocode Soi Nana bars and Talat Noi/Song Wat edges to settle partial-vs-inside relations against the real app polygons.",
+  "Reconcile the task brief's clip-direction labels ('hua-lamphong north', 'itsaraphap south') with coordinate geometry (Hua Lamphong SE ~1.0 km; Itsaraphap ~2.7 km, non-clipping).",
+  "Quantify festival-period crowding (Lunar New Year, vegetarian festival) if the crowd score is to be defended."
+ ]
+}
