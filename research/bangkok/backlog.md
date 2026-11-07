@@ -2,7 +2,8 @@
 
 Owner map of the open Bangkok work, grouped by readiness. Plane is the source
 of truth for live status; this file keeps the grouping, pointers and the
-"why". Last aligned 2026-10-13. Overview and honesty notes:
+"why". Last aligned 2026-11-07 (adds editorial-research-batch evidence and one
+candidate item). Overview and honesty notes:
 [`00-overview.md`](00-overview.md).
 
 ## Ready to start — no blockers
@@ -44,6 +45,40 @@ of truth for live status; this file keeps the grouping, pointers and the
 | CRTKY-136 | rent: a portal API/export opening (FazWaz, DDproperty, Hipflat all 403); station-level premium is its step 2 |
 | CRTKY-137 | Foursquare OS Places: accepting Hugging Face terms (owner action) |
 | CRTKY-138 | rail line openings: Orange East, Purple South, Grey |
+
+## Evidence from editorial research batches (2026-11)
+
+Twelve place bundles with claim-level provenance
+([`editorial/batches/`](editorial/batches/), kit:
+[`editorial/kit/`](editorial/kit/), contract:
+[`editorial/2026-11-05-handoff/HANDOFF.md`](editorial/2026-11-05-handoff/HANDOFF.md)).
+Evidence relevant to open tickets:
+
+- **CRTKY-153** — red-light zone geography from bundles: Nana Plaza inside
+  `st.nana` (~255–300 m, consolidation 39→24 bars), Soi Cowboy ~121 m inside
+  `st.asok`, Patpong/Sala Daeng inside a bare 800 m of Chong Nonsi but
+  outside its Voronoi catchment (belongs to `st.sala-daeng`).
+- **CRTKY-147** — dated walkability items: Asok Montri footpath rebuild
+  (announced 2025-03-16, 30-year-old sand-base tiles), Soi Thong Lo 26.3M
+  THB rebuild (contracted 2025-07-04, 0% progress at 2025-09-23),
+  Ratchathewi flyover closed 2025-01-15, reconstruction due 2028-04.
+- **CRTKY-141** — asking-vs-signed rent gap is universal in public sources
+  (two batches, no signed-lease series found); one anomaly for review:
+  pom-prap 2-bed editorial 24,000 THB sits below all observed asks
+  (25,000–32,000, n=14).
+- **CRTKY-139** — a reusable flood-catchment protocol from the bundles:
+  separate event date from publication date, check khet/catchment specificity
+  (2011 tide-driven riverside edge vs dry commercial core; citywide 2026
+  stories never naming the unit).
+- **CRTKY-152** — the coverage-breadth method (fixed window 2024-11-05 →
+  2026-11-07, publisher-family dedup, logged queries) is a candidate
+  instrument; it is explicitly not a popularity measure.
+- **New candidate item — green-rating basis audit (pipeline question):**
+  six researched entities cannot tie their green rating to in-unit public
+  parkland (green = park ha within 1 km of grid points, so a station unit can
+  rate 9–10 with no park inside its 800 m polygon; phaya-thai's 14.8 ha is
+  likely Army/state land with controlled access). Route to the pipeline
+  review, not per-entity research.
 
 ## Done in this subtree
 

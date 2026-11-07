@@ -5,6 +5,10 @@ product, same voice; the unit is a **khet (district)** instead of a station
 catchment, so descriptions characterise a whole district and name the
 neighbourhoods inside it.
 
+Updated 2026-11-07 with rules 9–11 from the editorial research batches
+(`research/bangkok/editorial/batches/`, see
+[`editorial/2026-11-07-handoff-and-guide-update-review.md`](editorial/2026-11-07-handoff-and-guide-update-review.md)).
+
 Output per district: `data/bangkok/descriptions/<slug>.json`
 
 ```json
@@ -73,3 +77,18 @@ offices, dates and cherry-blossom mobs. Beautiful, expensive, crowded." ·
      exists (Сукхумвит, Силом, Сиам, Чао Прайя, Яоварат, Чатучак); brand and
      mall names stay in Latin (ICONSIAM, EmQuartier, Terminal 21).
 8. Plain text only — no markdown, no emoji, no line breaks inside fields.
+9. **Distance, not duration.** Never state walking/driving durations derived
+   from a radius ("15-minute walk") — state distances ("~460 m to the park
+   edge, main gates beyond the catchment"). Resident-reported durations with
+   a source are fine.
+10. **Disambiguate same-named places across khet borders.** Chinatown Soi
+    Nana (Pom Prap) is not Sukhumvit Soi Nana (Watthana); Woeng Nakhon Kasem
+    is in Samphanthawong, not Pom Prap. Name cross-border landmarks as
+    cross-border ("just across the boundary in <khet>") instead of absorbing
+    them.
+11. **Respect the measurement basis.** A rating can legitimately include
+    area outside the unit polygon (green counts park hectares up to 1 km
+    from each grid point; transport counts bus stops and boat piers; station
+    crowd is all-POI density 400 m inverted). Don't "correct" a description
+    to match the polygon when the rating basis is wider — describe the place
+    truthfully; `00-overview.md` carries the method nuance.
