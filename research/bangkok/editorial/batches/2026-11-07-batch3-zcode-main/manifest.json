@@ -1,0 +1,200 @@
+{
+ "batch_id": "2026-11-07-batch3-zcode-main",
+ "created_at": "2026-11-07T20:10:38Z",
+ "task": "Bangkok editorial research batch 3 — full bundles, tier A (research only; no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "parent_batch": "research/bangkok/editorial/batches/2026-11-07-batch2-zcode-main",
+ "data_snapshot": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "weights": {
+   "transport": 18,
+   "rent": 18,
+   "daily_essentials": 14,
+   "safety": 10,
+   "food": 12,
+   "green": 8,
+   "gym_sports": 4,
+   "vibe": 4,
+   "nightlife": 8,
+   "crowd": 4
+  },
+  "digests_verified_in_parent_batch": true
+ },
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "popularity": "unmeasured; coverage breadth measured for selection only (axis 1)",
+ "selection": {
+  "method": "tier A of the A2 tiering: station areas ranked 5-9 plus the ARL control (#12); districts ranked 5-8",
+  "window": "2024-11-05..2026-11-07",
+  "selected": [
+   "st.ha-yaek-lat-phrao",
+   "st.phloen-chit",
+   "st.sam-yan",
+   "st.sam-yot",
+   "st.sena-ruam",
+   "st.ratchaprarop",
+   "ratchathewi",
+   "phra-nakhon",
+   "chatuchak",
+   "pathum-wan"
+  ],
+  "deferred": [
+   "din-daeng (#9) and khlong-san (#10) districts to tier B"
+  ]
+ },
+ "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
+ "tool_and_access_limits": [
+  "Overpass API blocked — verify locations via Wikipedia coordinates and app polygons (kit/check_geometry.py)",
+  "Reddit/TripAdvisor/ExpatForum 403 — resident-voice thinner than ideal",
+  "Bangkok Post paywall-gateway redirects not bypassed; no news-proxy mirrors",
+  "Dispatch research subagents at most 2 at a time"
+ ],
+ "entities": [
+  {
+   "key": "st.ha-yaek-lat-phrao",
+   "kind": "station_area",
+   "profile": "profiles/st.ha-yaek-lat-phrao.json",
+   "brief": "briefs/st.ha-yaek-lat-phrao.md",
+   "sources": 29,
+   "claims": 18,
+   "model_score_default": 7.82,
+   "cohort_rank": 5,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "st.phloen-chit",
+   "kind": "station_area",
+   "profile": "profiles/st.phloen-chit.json",
+   "brief": "briefs/st.phloen-chit.md",
+   "sources": 23,
+   "claims": 18,
+   "model_score_default": 7.78,
+   "cohort_rank": 6,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "st.sam-yan",
+   "kind": "station_area",
+   "profile": "profiles/st.sam-yan.json",
+   "brief": "briefs/st.sam-yan.md",
+   "sources": 23,
+   "claims": 18,
+   "model_score_default": 7.78,
+   "cohort_rank": 7,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "st.sam-yot",
+   "kind": "station_area",
+   "profile": "profiles/st.sam-yot.json",
+   "brief": "briefs/st.sam-yot.md",
+   "sources": 43,
+   "claims": 18,
+   "model_score_default": 7.74,
+   "cohort_rank": 8,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "st.sena-ruam",
+   "kind": "station_area",
+   "profile": "profiles/st.sena-ruam.json",
+   "brief": "briefs/st.sena-ruam.md",
+   "sources": 14,
+   "claims": 17,
+   "model_score_default": 7.7,
+   "cohort_rank": 9,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "st.ratchaprarop",
+   "kind": "station_area",
+   "profile": "profiles/st.ratchaprarop.json",
+   "brief": "briefs/st.ratchaprarop.md",
+   "sources": 13,
+   "claims": 17,
+   "model_score_default": 7.68,
+   "cohort_rank": 12,
+   "cohort_size": 133,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "ratchathewi",
+   "kind": "district",
+   "profile": "profiles/ratchathewi.json",
+   "brief": "briefs/ratchathewi.md",
+   "sources": 19,
+   "claims": 18,
+   "model_score_default": 7.96,
+   "cohort_rank": 5,
+   "cohort_size": 50,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "phra-nakhon",
+   "kind": "district",
+   "profile": "profiles/phra-nakhon.json",
+   "brief": "briefs/phra-nakhon.md",
+   "sources": 27,
+   "claims": 18,
+   "model_score_default": 7.86,
+   "cohort_rank": 6,
+   "cohort_size": 50,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "chatuchak",
+   "kind": "district",
+   "profile": "profiles/chatuchak.json",
+   "brief": "briefs/chatuchak.md",
+   "sources": 21,
+   "claims": 18,
+   "model_score_default": 7.7,
+   "cohort_rank": 7,
+   "cohort_size": 50,
+   "review_status": "ready_for_review"
+  },
+  {
+   "key": "pathum-wan",
+   "kind": "district",
+   "profile": "profiles/pathum-wan.json",
+   "brief": "briefs/pathum-wan.md",
+   "sources": 31,
+   "claims": 16,
+   "model_score_default": 7.68,
+   "cohort_rank": 8,
+   "cohort_size": 50,
+   "review_status": "ready_for_review"
+  }
+ ],
+ "validation": {
+  "schema": "entity-research.schema.json",
+  "profiles_validated": 10
+ },
+ "normalizations_applied": {
+  "polarity": 0,
+  "source_type": 14,
+  "geo_scope": 0,
+  "claim_kind": 0,
+  "qa_field": 0,
+  "qa_status_partial": 0,
+  "qa_inline_refs": 0,
+  "editorial_string": 0,
+  "source_url_dedup": 11
+ },
+ "live_app_data_changed": false
+}

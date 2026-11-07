@@ -73,7 +73,7 @@ def main():
         if not fn.endswith(".json"):
             continue
         b = json.load(open(os.path.join(profiles, fn), encoding="utf-8"))
-        out = os.path.join(briefs, fn)
+        out = os.path.join(briefs, fn[:-5] + ".md")
         with open(out, "w", encoding="utf-8") as f:
             f.write(brief(b))
         print("wrote", out)

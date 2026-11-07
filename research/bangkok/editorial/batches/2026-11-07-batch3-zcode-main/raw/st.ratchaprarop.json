@@ -1,0 +1,1346 @@
+{
+ "entity_key": "st.ratchaprarop",
+ "search_log": [
+  {
+   "tool": "Bash/curl Overpass",
+   "query": "POST overpass-api.de main POI query (no User-Agent)",
+   "date": "2026-11-07",
+   "outcome": "blocked_406",
+   "notes": "406 Not Acceptable from nginx"
+  },
+  {
+   "tool": "Bash/curl Overpass",
+   "query": "POST overpass-api.de main POI query with User-Agent: stations/parks/malls/marketplace/worship/ferry/hospital",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "87 elements"
+  },
+  {
+   "tool": "Bash/curl Overpass",
+   "query": "park polygon geometry ways 99029135/641160571/641160572/536866176",
+   "date": "2026-11-07",
+   "outcome": "hit"
+  },
+  {
+   "tool": "Bash/curl Overpass",
+   "query": "convenience/bus_stop/fitness/swimming within 800 m",
+   "date": "2026-11-07",
+   "outcome": "hit"
+  },
+  {
+   "tool": "Bash/curl Overpass",
+   "query": "restaurant/cafe/fast_food/food_court 800 m; fitness/pitch/track 1200 m; nightclub 800 m",
+   "date": "2026-11-07",
+   "outcome": "hit"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Airport Rail Link Ratchaprarop station frequency headway minutes 2025",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links",
+   "notes": "Summary: 10-15 min, 05:30-24:00, fares 15-45 THB; snippet-level only"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "ตลาดประตูน้ำ ตลาดขายส่ง เปิดกี่โมง ราชปรารภ",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links",
+   "notes": "ตี5 market 05:00-09:00; evening market 17:00-21:00 (snippet)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Platinum Fashion Mall Bangkok wholesale shops how many hours opening official",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "MRT Orange Line west section Ratchaprarop station construction 2025 2026 progress",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links",
+   "notes": "West section start 31 Jul 2024; OR10 structural ~14.56% end-Oct 2025 (snippet only)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "ตลาดประตูน้ำ ตีห้า ขายส่ง เสื้อผ้า ข่าว thairath OR workpoint OR mgronline",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "Surfaced Wongnai guide URL"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Pratunam Bangkok pickpocket scam tourist police theft market",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "thaitrainguide Airport Rail Link frequency 10 minutes 2025",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links",
+   "notes": "Mentions a disruption period with 60-min single-train service then restoration to 10-min; undated in snippet"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"สวนราชเทวีภิรมย์\" สวน ราชปรารภ",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "Trip.com listing: 357 Ratchaprarop Rd (Soi Mo Leng), Makasan khwaeng, Ratchathewi; 06:00-18:00"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "SAYS Pratunam pickpocket Bangkok market article 2023",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "SAYS 2023-07-31 URL obtained"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Michelin Guide Go-Ang Pratunam Chicken Rice Bib Gourmand Phetchaburi",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "แม่ค้าประตูน้ำ ไลฟ์สด โวย ตลาดเสื้อผ้าพัง ข่าว 2568",
+   "date": "2026-11-07",
+   "outcome": "hit_no_links",
+   "notes": "Livestream-reseller drama started ~Jan-Feb 2022, still discussed 2025 (snippet)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "รถไฟฟ้าสายสีส้ม สถานีราชปรารภ OR10 ความคืบหน้า เปิด 2573",
+   "date": "2026-11-07",
+   "outcome": "failure_tool_concurrency",
+   "notes": "Concurrency limit; topic covered by other queries"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "MRT Orange Line west section Ratchaprarop interchange ARL station OR10 progress October 2025",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "MRTA official URL obtained; Wikipedia Orange Line page confirms ARL interchange at Ratchaprarop (snippet)"
+  },
+  {
+   "tool": "Bash/curl Wikipedia API",
+   "query": "action=query prop=coordinates for 10 station/park titles",
+   "date": "2026-11-07",
+   "outcome": "partial_failure",
+   "notes": "NOCOORDS for all station pages (only Baiyoke II and Santiphap returned); fell back to REST summary API"
+  },
+  {
+   "tool": "Bash/curl Wikipedia REST",
+   "query": "page/summary for Chit Lom, Victory Monument, Phaya Thai, Makkasan, Ratchathewi, Santiphap",
+   "date": "2026-11-07",
+   "outcome": "hit",
+   "notes": "Makkasan NOCOORDS; Chit Lom/Victory Monument coords flagged suspect vs canal-pier ground geometry"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Airport_Rail_Link_(Bangkok)",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Santiphap_Park",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Khlong_Saen_Saep_Express_Boat",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/BTS_Skytrain",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "wongnai.com shopping-guide-night-pratunam",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok",
+   "notes": "First attempt hit tool concurrency limit; retry succeeded"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "says.com Pratunam pickpocket article",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "mrta.co.th Orange Line Bang Khun Non (EN)",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.co.th/en/market/ratchathewi",
+   "date": "2026-11-07",
+   "outcome": "failure_404"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "platinumfashionmall.com",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "bangkok.com/pratunam",
+   "date": "2026-11-07",
+   "outcome": "redirect_301",
+   "notes": "301 to hotels.com/go/thailand/bangkok-pratunam"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hotels.com/go/thailand/bangkok-pratunam",
+   "date": "2026-11-07",
+   "outcome": "failure_timeout_60s",
+   "notes": "Retrieved via web_reader instead"
+  },
+  {
+   "tool": "web_reader",
+   "query": "hotels.com/go/thailand/bangkok-pratunam",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "date": "2026-11-07",
+   "outcome": "body_read_ok"
+  },
+  {
+   "tool": "local",
+   "query": "batch2 raw/st.ratchathewi.json and raw/phaya-thai.json read for output shape and previously verified centers",
+   "date": "2026-11-07",
+   "outcome": "hit"
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry terminals, hospitals within 0.9-1.8 km of 13.75511,100.54212",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Polygon geometry + shoelace areas: ways 99029135 (Santiphap), 641160571 (Suan Rom Ratchathewi), 641160572 (Ratchathewi Phirom), 536866176 (Pathumwananurak)",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Query: convenience shops, bus stops (400 m), leisure fitness/sports/swimming within 800 m",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Query: restaurant/cafe/fast_food/food_court (800 m), fitness/pitch/track (1200 m), nightclub (800 m)",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://en.wikipedia.org/wiki/Airport_Rail_Link_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Airport_Rail_Link_(Bangkok)",
+   "title": "Airport Rail Link (Bangkok)",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "title": "Santiphap Park",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "title": "Baiyoke Tower II",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_Express_Boat",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_Express_Boat",
+   "title": "Khlong Saen Saep Express Boat",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://en.wikipedia.org/wiki/BTS_Skytrain",
+   "retrieved_url": "https://en.wikipedia.org/wiki/BTS_Skytrain",
+   "title": "BTS Skytrain",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://en.wikipedia.org/api/rest_v1/page/summary/",
+   "retrieved_url": "https://en.wikipedia.org/api/rest_v1/page/summary/",
+   "title": "Coordinates for Chit Lom BTS, Victory Monument BTS, Phaya Thai station, Ratchathewi station, Santiphap Park",
+   "publisher": "Wikimedia (Wikipedia REST summary API)",
+   "publisher_family": "Wikimedia (Wikipedia REST summary API)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://www.mrta.co.th/en/the-orange-line-Bang%20Khun%20Non",
+   "retrieved_url": "https://www.mrta.co.th/en/the-orange-line-Bang%20Khun%20Non",
+   "title": "The Orange Line (Bang Khun Non - Thailand Cultural Centre)",
+   "publisher": "MRTA (Mass Rapid Transit Authority of Thailand, official)",
+   "publisher_family": "MRTA (Mass Rapid Transit Authority of Thailand, official)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "government",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://www.wongnai.com/beauty-tips/shopping-guide-night-pratunam",
+   "retrieved_url": "https://www.wongnai.com/beauty-tips/shopping-guide-night-pratunam",
+   "title": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM wholesale market guide)",
+   "publisher": "Wongnai (LINE Wongnai)",
+   "publisher_family": "Wongnai (LINE Wongnai)",
+   "author": null,
+   "published_at": "2022-07 (approximate, per page)",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "retrieved_url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "title": "Woman Warns Of Pickpockets At Pratunam Bangkok After Her Bag Gets Allegedly Sliced Open",
+   "publisher": "SAYS",
+   "publisher_family": "SAYS",
+   "author": null,
+   "published_at": "2023-07-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "title": "Condos for rent in Ratchathewi, Bangkok (listing feed)",
+   "publisher": "FazWaz",
+   "publisher_family": "FazWaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://www.platinumfashionmall.com/",
+   "retrieved_url": "https://www.platinumfashionmall.com/",
+   "title": "platinumfashionmall.com homepage",
+   "publisher": "The Platinum Fashion Mall (official corporate site)",
+   "publisher_family": "The Platinum Fashion Mall (official corporate site)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 15,
+   "canonical_url": "https://www.hotels.com/go/thailand/bangkok-pratunam",
+   "retrieved_url": "https://www.hotels.com/go/thailand/bangkok-pratunam",
+   "title": "Pratunam - What to do in Pratunam",
+   "publisher": "Hotels.com Go Guides (Expedia Group; bangkok.com 301-redirects here)",
+   "publisher_family": "Hotels.com Go Guides (Expedia Group; bangkok.com 301-redirects here)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "",
+   "limitations": []
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "ratchaprarop-c01",
+   "text_en": "The unit centers on ARL Ratchaprarop station (OSM node 6711026524 at 13.75511, 100.54212, matching the app center to 5 decimals; halt node 7787093466 ~25 m west). Wikipedia: station code A7, opened 23 August 2010 with the line, elevated side platforms, served by City Line only (the station table marks the express column '|'; the suspended airport Express never stopped here). Wikipedia's connection row lists SRT Eastern Line, SRT Light Red Line (future) and MRT Orange Line (under construction) - i.e. there is no BTS/MRT interchange at the station today. Nearby exits listed: Pratunam Market, Indra Square, Baiyoke Tower II.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "The unit centers on ARL Ratchaprarop station (OSM node 6711026524 at 13.75511, 100.54212, matching t"
+    },
+    {
+     "source_index": 4,
+     "locator": "Airport Rail Link (Bangkok)",
+     "paraphrase": "The unit centers on ARL Ratchaprarop station (OSM node 6711026524 at 13.75511, 100.54212, matching t"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c02",
+   "text_en": "Computed Voronoi bisectors (local tangent projection, verified neighbor coordinates): vs ARL Phaya Thai (13.75694, 100.53384; Wikipedia REST + OSM node 5388610344) the west boundary runs near north-south through (13.75603, 100.53798), ~459 m west of the station; vs ARL Makkasan (13.75386, 100.54737; OSM node 1637548696) the east boundary runs near north-south through (13.75448, 100.54475), only ~292 m east; vs BTS Ratchathewi (13.75188, 100.53158; Wikipedia REST + OSM) the southwest boundary passes (13.75350, 100.53685). The batch-3 brief's guesses are partly wrong: phaya-thai clips the WEST (not south), ratchathewi the southwest; a southern/southeastern clip depends on whether the app's station set includes BTS Chit Lom and/or MRT Phetchaburi units, which is not verifiable from available data. Wikipedia/OSM coordinates for BTS Chit Lom (13.74411, 100.5431) and BTS Victory Monument (13.76274, 100.53709) are inconsistent with ground geometry (Saen Saep canal/pier line), so any neighbor geometry involving them is uncertain.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Computed Voronoi bisectors (local tangent projection, verified neighbor coordinates): vs ARL Phaya T"
+    },
+    {
+     "source_index": 1,
+     "locator": "Polygon geometry + shoelace areas: ways 99029135 (Santiphap), 641160571 (Suan Ro",
+     "paraphrase": "Computed Voronoi bisectors (local tangent projection, verified neighbor coordinates): vs ARL Phaya T"
+    },
+    {
+     "source_index": 9,
+     "locator": "Coordinates for Chit Lom BTS, Victory Monument BTS, Phaya Thai station, Ratchath",
+     "paraphrase": "Computed Voronoi bisectors (local tangent projection, verified neighbor coordinates): vs ARL Phaya T"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c03",
+   "text_en": "The Pratunam belt core falls inside the unit's 800 m circle and, per computed bisectors, mostly inside its Voronoi cell. Straight-line distances from the station: Indra Square ~231 m SW; Baiyoke Gallery ~339 m S; Watergate Pavilion ~402 m SE; City Complex (Pratunam) ~511 m; Pratunam intersection ~517 m SW; Palladium World Shopping ~509 m S; Platinum Fashion Mall ~623 m SSW; Grand Diamond Plaza ~635 m SW; Pratunam canal-boat pier ~647 m S (OSM ferry nodes 2321695929/30, 566622414, 567014528); Pantip Plaza ~736 m SW. Platinum, Grand Diamond, City Complex, the intersection and Watergate Pavilion sit on the Ratchaprarop side of every computed bisector; the Palladium and the canal-front pier flip to a BTS Chit Lom cell if such a unit exists (uncertain); Pantip Plaza computes to the Ratchathewi side. Bobae Tower (~1.1 km N) and CentralWorld (~1.1 km S) are outside.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "The Pratunam belt core falls inside the unit's 800 m circle and, per computed bisectors, mostly insi"
+    },
+    {
+     "source_index": 1,
+     "locator": "Polygon geometry + shoelace areas: ways 99029135 (Santiphap), 641160571 (Suan Ro",
+     "paraphrase": "The Pratunam belt core falls inside the unit's 800 m circle and, per computed bisectors, mostly insi"
+    },
+    {
+     "source_index": 7,
+     "locator": "Khlong Saen Saep Express Boat",
+     "paraphrase": "The Pratunam belt core falls inside the unit's 800 m circle and, per computed bisectors, mostly insi"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c04",
+   "text_en": "Dawn wholesale rhythm (Wongnai Thai guide, full read): ประตูน้ำตี 5 market opens 05:00-09:00 daily with stalls setting up from 04:00 ('เปิดตั้งแต่เวลา 05.00 - 09.00 น. ร้านค้าเริ่มตั้งแผงตั้งแต่ 04.00 น.'), Mondays thin ('วันจันทร์ของจะขายค่อนข้างน้อย'), wholesale-only pricing ('ต้องซื้อในราคาส่ง'), most stalls cash-only, typically 3+ pieces for wholesale rates. Located opposite Platinum around Baiyoke Sky/Baiyoke Gallery (ใบหยก 2/3) and Indra Square on Ratchaprarop Rd. Zone B, 'ซอยนรก' (hell alley, Phetchaburi Soi 21), is described as crowded and pickpocket-prone; Zone C is the white-tent market closing the street in front of Baiyoke 2. The guide's access advice routes visitors via BTS Chit Lom, buses, or the 05:30 first Saen Saep boat - not via ARL Ratchaprarop.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Dawn wholesale rhythm (Wongnai Thai guide, full read): ประตูน้ำตี 5 market opens 05:00-09:00 daily w"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c05",
+   "text_en": "Platinum Fashion Mall (official site, full read): open 09.00-20.00 daily; address '222/1398 The Platinum Fashion Mall Building 11th Floor, Petchaburi Road, Ratchathevee, Bangkok 10400'; shop floors from B to 5+; currently running a 20th-anniversary promotion (mall opened ~2005); parent group also operates Novotel Bangkok Platinum on the same road, The Market Bangkok and Moxy Bangkok Ratchaprasong. Official site does not state a shop count. OSM polygon centroid ~623 m SSW of the ARL station.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 14,
+     "locator": "platinumfashionmall.com homepage",
+     "paraphrase": "Platinum Fashion Mall (official site, full read): open 09.00-20.00 daily; address '222/1398 The Plat"
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Platinum Fashion Mall (official site, full read): open 09.00-20.00 daily; address '222/1398 The Plat"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c06",
+   "text_en": "Mechanism behind transport 9 (documented service facts): ARL runs 05:30-24:00 daily; City Line headway 10-11 minutes at peak (06:00-09:00, 16:00-20:00) and 12-13 minutes off-peak and weekends; fares 15-45 THB by distance; daily ridership ~70,887 (2026 Q1); contactless card gates since 8 Nov 2025. BTS Sukhumvit interchange at Phaya Thai is one ARL stop away (northwest terminus, ~918 m along the line). Surface layer: 6 OSM bus stops within 400 m (Ratchaprarop Rd incl. opposite Indra Square; Rang Nam Rd). Water: Pratunam pier ~647 m S on Khlong Saen Saep - the line's Golden Mount/NIDA interchange point (operator Family Transport, 100 boats, fares 8-22 THB, 05:30-20:30 weekdays / 19:00 weekends, ~60,000 passengers/day, running since 1990).",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Airport Rail Link (Bangkok)",
+     "paraphrase": "Mechanism behind transport 9 (documented service facts): ARL runs 05:30-24:00 daily; City Line headw"
+    },
+    {
+     "source_index": 7,
+     "locator": "Khlong Saen Saep Express Boat",
+     "paraphrase": "Mechanism behind transport 9 (documented service facts): ARL runs 05:30-24:00 daily; City Line headw"
+    },
+    {
+     "source_index": 2,
+     "locator": "Query: convenience shops, bus stops (400 m), leisure fitness/sports/swimming wit",
+     "paraphrase": "Mechanism behind transport 9 (documented service facts): ARL runs 05:30-24:00 daily; City Line headw"
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Mechanism behind transport 9 (documented service facts): ARL runs 05:30-24:00 daily; City Line headw"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c07",
+   "text_en": "Counter-evidence on transport 9: ARL headway (10-13 min) is roughly 2-5x the BTS Sukhumvit line's (2.40-6.00 min per Wikipedia infobox) and ridership is an order of magnitude apart (70,887/day ARL 2026 Q1 vs 723,167/day BTS 2024). There has been no nonstop Express service from this station at any time (Express suspended September 2014 for rolling-stock shortage; the Makkasan Express was averaging 400 passengers/day), so all airport trips are all-stops City Line. Documented fragility: full suspension 28 Mar 2025 (Myanmar earthquake) and a free-ride week 25-31 Jan 2025 under the PM2.5 policy; the planned 21.8 km extension to Don Mueang had not started construction as of 2024. The dawn-market guide still sends market visitors to BTS Chit Lom/buses/boat rather than the ARL station next door.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Airport Rail Link (Bangkok)",
+     "paraphrase": "Counter-evidence on transport 9: ARL headway (10-13 min) is roughly 2-5x the BTS Sukhumvit line's (2"
+    },
+    {
+     "source_index": 8,
+     "locator": "BTS Skytrain",
+     "paraphrase": "Counter-evidence on transport 9: ARL headway (10-13 min) is roughly 2-5x the BTS Sukhumvit line's (2"
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Counter-evidence on transport 9: ARL headway (10-13 min) is roughly 2-5x the BTS Sukhumvit line's (2"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c08",
+   "text_en": "Safety 5 has no unit-level statistical support in open sources - same pattern as ratchathewi-SA and sam-yot. What exists is reported perception: (a) SAYS 2023-07-31, a viral TikTok report (324,000+ views) of a tote bag allegedly sliced open by a pickpocket at Pratunam ('If you're going to Pratunam, Bangkok, beware of pickpockets') - alleged, no official confirmation; (b) Wongnai's Thai guide labels Phetchaburi Soi 21 'ซอยนรก' (hell alley) as crowded and pickpocket-prone; (c) a 2025 Compare the Market study ranking Bangkok #1 globally for pickpocketing/scams is citywide, not unit-specific. No BMA/Royal Thai Police unit-level crime data was found; the tourist-facing counter-view (millions pass through Pratunam without incident; Tourist Police 1155 exists) is generic.",
+   "kind": "reported_perception",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 12,
+     "locator": "Woman Warns Of Pickpockets At Pratunam Bangkok After Her Bag Gets Allegedly Slic",
+     "paraphrase": "Safety 5 has no unit-level statistical support in open sources - same pattern as ratchathewi-SA and "
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Safety 5 has no unit-level statistical support in open sources - same pattern as ratchathewi-SA and "
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c09",
+   "text_en": "Walkability facts: OSM documents 4 street-level access nodes at the station (13.75508-13.75525, 100.54163-100.54238; nodes 1726244268-71), i.e. stair/lift points on both sides of Ratchaprarop Road; the station itself is elevated with side platforms. No verifiable data on Ratchaprarop Rd sidewalk widths or crossing timing was found. Market-side walking is documented as crowded: Wongnai advises sneakers, front-carried valuables and menthol balm in the dawn crush; Hotels.com Go Guides calls the area 'one of Bangkok's most colorful and chaotic areas'. Key walking distances (not durations): Pratunam intersection ~517 m, Platinum ~623 m, boat pier ~647 m.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Walkability facts: OSM documents 4 street-level access nodes at the station (13.75508-13.75525, 100."
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Walkability facts: OSM documents 4 street-level access nodes at the station (13.75508-13.75525, 100."
+    },
+    {
+     "source_index": 15,
+     "locator": "Pratunam - What to do in Pratunam",
+     "paraphrase": "Walkability facts: OSM documents 4 street-level access nodes at the station (13.75508-13.75525, 100."
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c10",
+   "text_en": "Daily-essentials substrate: 32 OSM convenience stores within 800 m (25+ named 7-Eleven, densest in the market belt); notably no shop=supermarket polygon inside the 800 m circle in OSM - the nearest Big C Supercenter is ~893 m S (CentralWorld block, outside), so the 9 rests on convenience-store density plus the market belt rather than hypermarkets. Healthcare: Phyathai 1 Hospital (private, OSM way 1533007942) is ~285 m WNW inside the unit; Burapha Chaiyakon hospital node ~1.0 km E; Police General Hospital ~1.6 km S.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "Query: convenience shops, bus stops (400 m), leisure fitness/sports/swimming wit",
+     "paraphrase": "Daily-essentials substrate: 32 OSM convenience stores within 800 m (25+ named 7-Eleven, densest in t"
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Daily-essentials substrate: 32 OSM convenience stores within 800 m (25+ named 7-Eleven, densest in t"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c11",
+   "text_en": "Affordability evidence (FazWaz Ratchathewi rental feed, read 2026-11-07): median asking rent 25,100 THB/mo (637 THB/sqm); 1-BR average 25,500 THB (1,967 listings); studio average 37,800 THB (399 listings, skewed by new stock). Near-unit asking examples: XT Phayathai 1BR 46 sqm 20,000-20,500 THB with 'Baiyoke Tower II view'; Lumpini Suite Phetchaburi-Makkasan 1BR 33.2 sqm 18,000 THB; Condolette Ize Ratchathewi 1BR 20,000 THB; examples across the district span 15,000-48,000 THB. This matches the app's district blend (18,000 / 38,000 editorial): older Baiyoke/Phetchaburi-side stock sits near the lower band, new Ratchathewi towers above the median - supporting rent 7 (moderate), with the caveat that no listing explicitly on Ratchaprarop Rd appeared on the page read, and asking prices overstate achieved rents.",
+   "kind": "estimate",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 13,
+     "locator": "Condos for rent in Ratchathewi, Bangkok (listing feed)",
+     "paraphrase": "Affordability evidence (FazWaz Ratchathewi rental feed, read 2026-11-07): median asking rent 25,100 "
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c12",
+   "text_en": "The 3.2 ha park identity and polygon honesty: the only park verifiably both inside the 800 m circle AND inside the computed Voronoi cell is Suan Rom Ratchathewi (สวนรมย์ราชเทวี, OSM way 641160571) - 1.70 ha, 343-471 m NNE along the ARL corridor. Santiphap Park (สวนสันติภาพ, way 99029135): OSM polygon area 2.84 ha but Wikipedia states 8 acres (about 3.2 ha) - matching the app figure; its centroid is 735-824 m NNE, straddling the 800 m edge (nearest vertex 575 m), inside the Ratchaprarop cell but at its margin. Ratchathewi Phirom Park (สวนราชเทวีภิรมย์, 357 Ratchaprarop Rd / Soi Mo Leng; OSM 3.36 ha, 657-833 m ENE) computes to the Makkasan cell. Pathumwananurak (4.45 ha, 663-811 m SSW) computes to the Chit Lom cell. Verdict: the app's '3.2 ha park' is most plausibly Santiphap (Wikipedia 8 acres), which is not fully inside the catchment; alternatively the corridor park cluster (1.70 + 2.84 + 3.36 ha, all edge-adjacent) was summed. Either reading leaves green 8 as the score most exposed to polygon-boundary choice.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "Polygon geometry + shoelace areas: ways 99029135 (Santiphap), 641160571 (Suan Ro",
+     "paraphrase": "The 3.2 ha park identity and polygon honesty: the only park verifiably both inside the 800 m circle "
+    },
+    {
+     "source_index": 5,
+     "locator": "Santiphap Park",
+     "paraphrase": "The 3.2 ha park identity and polygon honesty: the only park verifiably both inside the 800 m circle "
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "The 3.2 ha park identity and polygon honesty: the only park verifiably both inside the 800 m circle "
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c13",
+   "text_en": "Conditional fit. Best fit: (a) airport commuters - direct all-stops ARL to Suvarnabhumi, fares 15-45 THB, end-to-end City Line ~26-30 min per 2025 guides (snippet-corroborated; Ratchaprarop is one stop short of the Phaya Thai terminus), plus contactless gating since Nov 2025; (b) garment traders/resellers - dawn wholesale 05:00-09:00, Platinum 09:00-20:00, 3+ piece wholesale rule, cash economy; (c) budget shoppers - market guide cites garments from ~60-150 THB at wholesale. Poor fit: households needing high-frequency rail (ARL headway 10-13 min), quiet green-side living (1.70 ha verified in-unit park; larger parks straddle the edge), or big-box grocery shopping inside the circle.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Airport Rail Link (Bangkok)",
+     "paraphrase": "Conditional fit. Best fit: (a) airport commuters - direct all-stops ARL to Suvarnabhumi, fares 15-45"
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Conditional fit. Best fit: (a) airport commuters - direct all-stops ARL to Suvarnabhumi, fares 15-45"
+    },
+    {
+     "source_index": 14,
+     "locator": "platinumfashionmall.com homepage",
+     "paraphrase": "Conditional fit. Best fit: (a) airport commuters - direct all-stops ARL to Suvarnabhumi, fares 15-45"
+    },
+    {
+     "source_index": 1,
+     "locator": "Polygon geometry + shoelace areas: ways 99029135 (Santiphap), 641160571 (Suan Ro",
+     "paraphrase": "Conditional fit. Best fit: (a) airport commuters - direct all-stops ARL to Suvarnabhumi, fares 15-45"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c14",
+   "text_en": "Recent and near-future changes 2024-2026: (1) MRT Orange Line west section - official MRTA page (full read): fully underground, 13.4 km, 11 stations, alignment 'onto Phetchaburi Road until Pratunam Intersection, then turns left, passing under to Ratchaprarop Road'; construction start 31 Jul 2024; BEM concession signed 18 Jul 2024; scheduled opening July 2030 - i.e. an MRT interchange is being built at Ratchaprarop itself (ARL Wikipedia lists 'MRT Orange Line (under construction)' among the station's connections; Orange Line page names it the ARL interchange - snippet-corroborated). (2) ARL: contactless card payments from 8 Nov 2025; full suspension 28 Mar 2025 (Myanmar earthquake); free-ride week 25-31 Jan 2025 (PM2.5). (3) Market economy: livestream 'หิว' resellers vs Pratunam wholesale vendors conflict - viral ~Jan-Feb 2022, still debated in 2025 per Thai search snippets (Thairath TikTok item; vendor association 'บุ้ง ใบหยก' denied banning livestreams). (4) No verified Pratunam or Platinum redevelopment decision found in open sources.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "The Orange Line (Bang Khun Non - Thailand Cultural Centre)",
+     "paraphrase": "Recent and near-future changes 2024-2026: (1) MRT Orange Line west section - official MRTA page (ful"
+    },
+    {
+     "source_index": 4,
+     "locator": "Airport Rail Link (Bangkok)",
+     "paraphrase": "Recent and near-future changes 2024-2026: (1) MRT Orange Line west section - official MRTA page (ful"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c15",
+   "text_en": "Crowd 3 / vibe 8 / nightlife 8 mechanisms. Crowd 3 is consistent with every source: Hotels.com Go Guides calls Pratunam 'one of Bangkok's most colorful and chaotic areas, and famous for its wholesale fashion factory outlets, street markets, bazaars and armies of local vendors' (quoting the guide); Wongnai's dawn-market zones are explicitly crowded; Platinum promotes 'limitless shopping' to international tourists. Food 8 is anchored by the market food culture: Go-Ang Pratunam Chicken Rice (Hainanese chicken rice since ~1960 on Phetchaburi Rd, Michelin Bib Gourmand - snippet corroboration), Platinum's 6th-floor food court (open to ~21:00 per search snippet), dawn and night market stalls. Nightlife: OSM tags zero nightclubs within 800 m while the app counts 21 venues - the stock is hotel bars, karaoke and rooftops (Baiyoke Sky) rather than clubs (inference; Hotels.com maintains a 'Best Nightlife in Pratunam' roundup).",
+   "kind": "reported_perception",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 15,
+     "locator": "Pratunam - What to do in Pratunam",
+     "paraphrase": "Crowd 3 / vibe 8 / nightlife 8 mechanisms. Crowd 3 is consistent with every source: Hotels.com Go Gu"
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Crowd 3 / vibe 8 / nightlife 8 mechanisms. Crowd 3 is consistent with every source: Hotels.com Go Gu"
+    },
+    {
+     "source_index": 14,
+     "locator": "platinumfashionmall.com homepage",
+     "paraphrase": "Crowd 3 / vibe 8 / nightlife 8 mechanisms. Crowd 3 is consistent with every source: Hotels.com Go Gu"
+    },
+    {
+     "source_index": 3,
+     "locator": "Query: restaurant/cafe/fast_food/food_court (800 m), fitness/pitch/track (1200 m",
+     "paraphrase": "Crowd 3 / vibe 8 / nightlife 8 mechanisms. Crowd 3 is consistent with every source: Hotels.com Go Gu"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c16",
+   "text_en": "Baiyoke anchor. Baiyoke Tower II: 304 m (309 m per some sources; 328.4 m with antenna), 88 floors, completed 1997, 222 Ratchaprarop Road, Ratchathewi; Thailand's tallest building 1997-2016, overtaken by King Power MahaNakhon. Wikipedia coordinate 13.754167, 100.540556 puts it ~200 m WSW of the station - inside the unit, and it is the area's visual anchor ('domineering icon... Rising an impressive 88 storeys high' per Hotels.com guide). 'Baiyoke III' resolves to the adjacent Baiyoke Gallery building (ใบหยก แกลลอรี, OSM way 406447104, ~339 m S; Wongnai calls it 'Baiyoke 3' and sends dawn-market shoppers there for restrooms and food). Batch-2's lead 'Baiyoke II ~1.28 km ENE of ratchathewi station' lands in this unit, not phetchaburi's.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "Baiyoke Tower II",
+     "paraphrase": "Baiyoke anchor. Baiyoke Tower II: 304 m (309 m per some sources; 328.4 m with antenna), 88 floors, c"
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "Baiyoke anchor. Baiyoke Tower II: 304 m (309 m per some sources; 328.4 m with antenna), 88 floors, c"
+    },
+    {
+     "source_index": 11,
+     "locator": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM whole",
+     "paraphrase": "Baiyoke anchor. Baiyoke Tower II: 304 m (309 m per some sources; 328.4 m with antenna), 88 floors, c"
+    },
+    {
+     "source_index": 15,
+     "locator": "Pratunam - What to do in Pratunam",
+     "paraphrase": "Baiyoke anchor. Baiyoke Tower II: 304 m (309 m per some sources; 328.4 m with antenna), 88 floors, c"
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "ratchaprarop-c17",
+   "text_en": "District and POI-count consistency: the app's 'ratchathewi 100%' matches the unit's verified geography (Baiyoke II at 222 Ratchaprarop Rd, Ratchathewi per Wikipedia; Platinum self-addressed 'Petchaburi Road, Ratchathevee'; Phyathai 1 Hospital and the corridor parks in Ratchathewi), with the Pathum Wan side beginning south of the canal (CentralWorld ~1.1 km S, outside). POI-count sanity: OSM tags 94 eateries (60 restaurant + 20 cafe + 14 fast_food) and 2 worship places within 800-900 m vs the app's 336 food / 36 cafes / 17 temples - the app evidently uses a richer POI database than OSM (small shrines, market stalls and hotel venues are under-tagged in OSM), a data-source discrepancy rather than an error.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprarop",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "Baiyoke Tower II",
+     "paraphrase": "District and POI-count consistency: the app's 'ratchathewi 100%' matches the unit's verified geograp"
+    },
+    {
+     "source_index": 14,
+     "locator": "platinumfashionmall.com homepage",
+     "paraphrase": "District and POI-count consistency: the app's 'ratchathewi 100%' matches the unit's verified geograp"
+    },
+    {
+     "source_index": 0,
+     "locator": "Query: stations, parks, gardens, malls, marketplaces, worship places, ferry term",
+     "paraphrase": "District and POI-count consistency: the app's 'ratchathewi 100%' matches the unit's verified geograp"
+    },
+    {
+     "source_index": 3,
+     "locator": "Query: restaurant/cafe/fast_food/food_court (800 m), fitness/pitch/track (1200 m",
+     "paraphrase": "District and POI-count consistency: the app's 'ratchathewi 100%' matches the unit's verified geograp"
+    }
+   ],
+   "limitations": []
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c01",
+    "ratchaprarop-c02",
+    "ratchaprarop-c03",
+    "ratchaprarop-c16",
+    "ratchaprarop-c17"
+   ],
+   "notes": "Unit centers exactly on the OSM ARL Ratchaprarop node; City Line-only station (A7, 2010) with no BTS/MRT interchange on site. Verified clips: west = ARL Phaya Thai, east = ARL Makkasan (boundary only ~292 m east of the station), southwest = BTS Ratchathewi; the brief's 'phaya-thai south' guess is wrong. Southern clip (Palladium/pier strip) hinges on whether a BTS Chit Lom unit exists in the app - unresolved."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c04",
+    "ratchaprarop-c05",
+    "ratchaprarop-c06"
+   ],
+   "notes": "Two overlapping daily economies: the dawn wholesale garment trade (04:00 setup, 05:00-09:00 trade, cash, 3+ piece minimum, reseller culture) around Baiyoke/Indra Square/Platinum, and the airport-commuter flow through the ARL station (~70.9k daily line ridership). No open source documents porter/logistics specifics for the market belt - recorded as an evidence gap."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c06",
+    "ratchaprarop-c15"
+   ],
+   "notes": "Transport 9 = airport line + one-stop BTS transfer + buses + canal-boat pier edge (documented); crowd 3 = documented chaotic market crush; vibe/food 8 = wholesale-market food culture incl. Michelin Bib Go-Ang; nightlife 8 rests on hotel-bar stock OSM does not tag as clubs."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c07",
+    "ratchaprarop-c08"
+   ],
+   "notes": "Transport counter: ARL headway 2-5x worse than BTS, ridership 10x smaller, no express since 2014, earthquake suspension Mar 2025, and market guides route around the station. Safety counter: only alleged, tourist-reported incidents (SAYS 2023; 'hell alley' characterization); no unit-level statistics found - the safety-5 pattern remains unverifiable."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c04",
+    "ratchaprarop-c05",
+    "ratchaprarop-c06"
+   ],
+   "notes": "Layered hours: stalls from 04:00, dawn wholesale 05:00-09:00 (Mondays thin), Platinum 09:00-20:00, day/retail markets to ~15:00-20:00, evening market ~17:00-21:00 (snippet-corroborated), ARL 05:30-24:00, boats 05:30-20:30."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c09",
+    "ratchaprarop-c03"
+   ],
+   "notes": "4 documented street access points on both sides of Ratchaprarop Rd; market-side walking described as crowded/chaotic; no verifiable sidewalk-width or crossing data found. Distances stated, no durations derived: intersection ~517 m, Platinum ~623 m, pier ~647 m."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c10",
+    "ratchaprarop-c04"
+   ],
+   "notes": "32 convenience stores within 800 m but no OSM-tagged supermarket inside the circle; groceries via the market belt; Phyathai 1 Hospital ~285 m WNW inside the unit; next general hospitals ~1.0-1.6 km out."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c11"
+   ],
+   "notes": "District median asking rent 25,100 THB/mo; 1-BR avg 25,500; near-unit older stock (XT Phayathai, Lumpini Suite Phetchaburi) 18,000-20,500 - matches the 18,000/38,000 district blend and supports rent 7 as moderate. Asking prices and district-level aggregation are the caveats."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c12"
+   ],
+   "notes": "Only 1.70 ha (Suan Rom Ratchathewi) is verifiably inside both circle and Voronoi cell. The 3.2 ha figure most plausibly = Santiphap Park (Wikipedia 8 acres; OSM 2.84 ha), whose centroid straddles the 800 m edge. The other 3+ ha parks compute to neighboring units. Green 8 is the score most exposed to boundary choice; 'quiet' is undercut by dawn-market logistics and arterial traffic."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c13"
+   ],
+   "notes": "Strong fit for airport commuters, garment traders/resellers and budget shoppers; poor fit for high-frequency-rail households, quiet/green-seeking residents, and big-box grocery shoppers."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c14"
+   ],
+   "notes": "Biggest structural change: MRT Orange Line west section construction started 31 Jul 2024 and will put an MRT interchange under Ratchaprarop Rd (opening target July 2030), ending the 'ARL-only' condition this control entity tests. ARL contactless from 8 Nov 2025; earthquake suspension 28 Mar 2025. Market livestream-reseller conflict ongoing since ~2022. No verified market redevelopment decision."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "ratchaprarop-c02",
+    "ratchaprarop-c08",
+    "ratchaprarop-c12",
+    "ratchaprarop-c15"
+   ],
+   "notes": "Transport-9 mechanism is documented (airport line + Phaya Thai BTS one stop + buses + pier) but rests on an all-stops line with 10-13 min headways - not an interchange premium; safety-5 has zero unit-level statistics; park identity is a boundary artifact; gym_sports 9 is the least-evidenced score (OSM: Anytime Fitness, Topkart, 2 pools within 1200 m - hotel gyms likely drive it, inference)."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "The airport-rail control unit: ARL Ratchaprarop, Pratunam's garment economy at the door, a 1.7 ha pocket park — and an MRT Orange Line interchange arriving ~2030.",
+   "claim_ids": [
+    "ratchaprarop-c06",
+    "ratchaprarop-c09",
+    "ratchaprarop-c07",
+    "ratchaprarop-c12",
+    "ratchaprarop-c10",
+    "ratchaprarop-c01"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Ratchaprarop is the app's ARL-only control: no BTS or MRT interchange, just City Line service (10-13 min headways) to Suvarnabhumi and a one-stop transfer at Phaya Thai. Its transport 9 is 'airport rail plus everything nearby' — Pratunam's wholesale blocks, Platinum Fashion Mall's economy and the Pratunam canal pier — not rail density. Suan Rom Ratchathewi (1.70 ha, 343-471 m) is the verifiable in-unit green; the mapped 3.2 ha figure matches Santiphap Park straddling the 800 m edge. Safety 5 repeats the dataset's unanchored pattern. The MRT Orange Line runs under Ratchaprarop Road with an ARL interchange targeted for July 2030.",
+   "claim_ids": [
+    "ratchaprarop-c06",
+    "ratchaprarop-c09",
+    "ratchaprarop-c07",
+    "ratchaprarop-c12",
+    "ratchaprarop-c10",
+    "ratchaprarop-c01"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Airport rail at the door: ARL City Line headways of 10-13 minutes and 70,887 daily riders (2026 Q1) make airport commuting the unit's defining convenience.",
+    "claim_ids": [
+     "ratchaprarop-c06"
+    ]
+   },
+   {
+    "text_en": "Suan Rom Ratchathewi (1.70 ha, 343-471 m) is polygon-verified in-unit green.",
+    "claim_ids": [
+     "ratchaprarop-c09"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Transport 9 has no interchange behind it: ARL headways trail BTS 2.4-6 minutes, and the unit depends on buses and walking for non-airport trips.",
+    "claim_ids": [
+     "ratchaprarop-c07"
+    ]
+   },
+   {
+    "text_en": "Safety 5 is the third entity in a row with zero unit-level statistics; only alleged tourist-scam reports (bag-slicing, pickpocket alleys) exist.",
+    "claim_ids": [
+     "ratchaprarop-c12"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Wholesale-market hours set the day; the garment district's evenings thin earlier than the nearby hotel belt.",
+    "claim_ids": [
+     "ratchaprarop-c10"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The ARL/Pratunam frontage differs from the quieter Ratchaprarop sois west toward Santiphap.",
+    "claim_ids": [
+     "ratchaprarop-c01"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit: airport commuters and wholesale-market traders; the control condition expires when the Orange Line interchange opens (~July 2030).",
+    "claim_ids": [
+     "ratchaprarop-c14"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "rating transport (9): Defensible only as 'airport rail + everything nearby', not as interchange quality: no BTS/MRT interchange on site today, headway 10-13 min vs BTS 2.4-6 min, express never served this station. The MRT Orange Line interchange under construction (opening target 2030) will retroactively validate the 9, but the rating describes a pre-2030 condition.",
+   "rating rent (7): District blend (18,000/38,000 editorial) is corroborated by FazWaz (median 25,100; 1-BR avg 25,500; older Baiyoke-side stock 18,000-20,500). Own-stock evidence puts the unit's older condos at the affordable end of the district band - rent 7 holds as 'moderate'.",
+   "rating daily_essentials (9): Convenience density (32 stores, 25+ 7-Eleven) plus the market belt plus Phyathai 1 Hospital at ~285 m. Note the OSM absence of any supermarket inside 800 m - the 9 leans on small-format retail, which matches how the district actually shops.",
+   "rating safety (5): Third entity in a row where safety 5 has no unit-specific statistical support. Evidence is reported-perception only (alleged bag-slicing 2023; 'hell alley' pickpocket-prone alley; citywide #1 pickpocket ranking). The score should be understood as a placeholder for an unverifiable mid-band, not a measurement.",
+   "rating food (8): Market food culture is well documented (Go-Ang Bib Gourmand; Platinum food court; dawn/night stalls); 336 app food venues vs 94 OSM-tagged eateries shows OSM under-coverage, not app inflation.",
+   "rating green (8): Weakest-supported high score: only 1.70 ha verifiably in-unit; the 3.2 ha figure most plausibly names Santiphap Park, whose centroid straddles the 800 m edge and whose Voronoi ownership is boundary-dependent. Flag for polygon review.",
+   "rating gym_sports (9): Least-evidenced score in open data: OSM shows Anytime Fitness, Topkart, 2 pools (1200 m radius) and 8 pitches. The 9 plausibly counts hotel gyms/pools (Baiyoke, Novotel Platinum) - researcher inference, no direct source. Flag.",
+   "rating vibe (8): Trade-market character with a skyline anchor (304 m Baiyoke II at ~200 m) and a documented 'colorful and chaotic' tourist framing; vibe 8 reads as day-market energy, not evening leisure.",
+   "rating nightlife (8): 21 venues vs 0 OSM nightclubs: the stock is hotel bars/karaoke/rooftops. The score is plausible but its composition (late-closing hotels vs dedicated nightlife) is unverified.",
+   "rating crowd (3): Best-corroborated negative: every source describes crush conditions (dawn market hell-alley, 'armies of local vendors', chaotic streets). Crowd 3 is honest and possibly conservative for mid-day market hours."
+  ]
+ },
+ "open_issues": [
+  "Park identity unresolved: app '3.2 ha park' most plausibly = Santiphap Park (Wikipedia 8 acres / OSM 2.84 ha), centroid 735-824 m NNE straddling the 800 m edge; the only park verifiably inside circle AND Voronoi cell is 1.70 ha (Suan Rom Ratchathewi). Recommend polygon audit (ratchaprarop-c12).",
+  "App station set unknown: whether BTS Chit Lom / MRT Phetchaburi / ARL Makkasan / BTS Victory Monument units exist changes the southern and eastern clips (Palladium and the Pratunam pier flip to a Chit Lom cell under plausible Chit Lom coordinates; Ratchathewi Phirom Park computes to the Makkasan cell) (ratchaprarop-c02, c03).",
+  "Wikipedia and OSM carry identical, apparently displaced coordinates for BTS Chit Lom (13.74411, 100.5431) and BTS Victory Monument (13.76274, 100.53709) - inconsistent with canal/station ground geometry; any Voronoi recomputation using them will err (ratchaprarop-c02).",
+  "Safety 5: no unit-level crime statistics found for the third consecutive entity; only alleged tourist reports. If the score is meant as measured risk, evidence base is empty (ratchaprarop-c08).",
+  "gym_sports 9: mechanism undocumented in open sources; likely hotel-gym driven (inference). Recommend checking the app's POI class definitions (editorial item gym_sports).",
+  "ARL operator data gap: srtet.or.th timetable/fares page was not fetched; frequency (10-11/12-13 min) rests on a full Wikipedia read plus snippet corroboration. Baiyoke II height also shows a 304 vs 309 m source discrepancy (ratchaprarop-c07, c16).",
+  "No verified 2024-2026 Pratunam/Platinum redevelopment decision found; livestream-reseller market disruption is documented only at news-snippet level (ratchaprarop-c14).",
+  "Rent evidence is district-level (FazWaz Ratchathewi feed); no listing explicitly on Ratchaprarop Rd appeared on the page read, so 'own stock' rents are inferred from adjacent-road examples (ratchaprarop-c11)."
+ ]
+}

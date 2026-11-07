@@ -1,0 +1,245 @@
+{
+ "batch_id": "2026-11-07-batch3-zcode-main",
+ "task": "Bangkok editorial research batch 3 — full bundles, tier A (research only; no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "parent_batch": "research/bangkok/editorial/batches/2026-11-07-batch2-zcode-main",
+ "app_snapshot_id": "bkk-d6499618507e7561",
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
+ "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
+ "selection": {
+  "method": "tier A of the A2 tiering: station areas ranked 5-9 plus the ARL control (#12); districts ranked 5-8",
+  "window": "2024-11-05..2026-11-07",
+  "selected": [
+   "st.ha-yaek-lat-phrao",
+   "st.phloen-chit",
+   "st.sam-yan",
+   "st.sam-yot",
+   "st.sena-ruam",
+   "st.ratchaprarop",
+   "ratchathewi",
+   "phra-nakhon",
+   "chatuchak",
+   "pathum-wan"
+  ],
+  "deferred": [
+   "din-daeng (#9) and khlong-san (#10) districts to tier B"
+  ]
+ },
+ "qa_status_overrides": {},
+ "entities": [
+  {
+   "key": "st.ha-yaek-lat-phrao",
+   "kind": "station_area",
+   "name_en": "Ha Yaek Lat Phrao / Phahon Yothin",
+   "name_th": "ห้าแยกลาดพร้าว / พหลโยธิน",
+   "aliases": [
+    "Ha Yaek Lat Phrao intersection",
+    "Phahon Yothin (MRT, merged into one area)",
+    "Lat Phrao junction"
+   ],
+   "scope_notes": "Merged interchange area: BTS Ha Yaek Lat Phrao + MRT Phahon Yothin count as ONE scored area (<=450 m merge rule). Northern mid-ring at the Phahonyothin/Lat Phrao junction; district Chatuchak per app data. Chatuchak and Rot Fai parks sit north — check buffer vs polygon (green 10, 38.1 ha mapped). Clipped by neighboring rated areas; coordinator polygon checks apply.",
+   "selection_rationale": "Rank #5/133; the only top-10 merged BTS+MRT area outside the core; green 10 (38.1 ha) needs the buffer-vs-polygon check; rent is a Chatuchak district blend.",
+   "model_score_default": 7.82,
+   "cohort_rank": 5,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.phloen-chit",
+   "kind": "station_area",
+   "name_en": "Phloen Chit",
+   "name_th": "เพลินจิต",
+   "aliases": [
+    "Phloen Chit Road",
+    "Wireless Road embassies (partial)",
+    "Central Embassy area"
+   ],
+   "scope_notes": "BTS Phloen Chit (Sukhumvit line) between Chit Lom and Nana; districts Pathum Wan/Watthana/Ratchathewi per app data. Wireless Road embassy belt runs south. Clipped by st.chit-lom (west) and st.nana (east); Benchasiri Park east belongs to st.phrom-phong.",
+   "selection_rationale": "Rank #6/133; rent 2 (near-most-expensive cohort) and nightlife 10 with only 33 mapped venues both need mechanism checks; coverage scan found thin dated independent coverage.",
+   "model_score_default": 7.78,
+   "cohort_rank": 6,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.sam-yan",
+   "kind": "station_area",
+   "name_en": "Sam Yan",
+   "name_th": "สามย่าน",
+   "aliases": [
+    "Sam Yan (MRT Blue)",
+    "Chulalongkorn University area (partial)"
+   ],
+   "scope_notes": "MRT Sam Yan (Blue line) between Si Lom and Hua Lamphong stations; districts Pathum Wan/Bang Rak per app data. Chulalongkorn University and its campuses adjoin. Clipped by st.si-lom (north), st.hua-lamphong (south) and possibly st.lumphini (east).",
+   "selection_rationale": "Rank #7/133; vibe 10 / nightlife 10 with only 21 mapped nightlife venues — the largest nightlife-rating outlier yet; MRT-only rail access.",
+   "model_score_default": 7.78,
+   "cohort_rank": 7,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.sam-yot",
+   "kind": "station_area",
+   "name_en": "Sam Yot",
+   "name_th": "สามยอด",
+   "aliases": [
+    "Sam Yot (MRT Blue)",
+    "Dinso Road",
+    "Old Town edge",
+    "Ratchadamnoen (partial)"
+   ],
+   "scope_notes": "MRT Sam Yot (Blue line) on Dinso Road, old town; districts Phra Nakhon/Pom Prap Sattru Phai/Samphanthawong (three khet) per app data. Rommaninat Park verified INSIDE this catchment by batch-2 research; Khlong Ong Ang promenade attributed here (batch-2). Clipped by st.sanam-chai (south) and st.wat-mangkon (southeast); eastern clip toward st.phetchaburi — verify.",
+   "selection_rationale": "Rank #8/133; old-town control pairing with the researched pom-prap/wat-mangkon; safety 5 to test; the green 9 rests on Rommaninat + Khlong Ong Ang per batch-2.",
+   "model_score_default": 7.74,
+   "cohort_rank": 8,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.sena-ruam",
+   "kind": "station_area",
+   "name_en": "Sena Ruam",
+   "name_th": "เสนาร่วม",
+   "aliases": [
+    "Sena Ruam junction (Phahonyothin)"
+   ],
+   "scope_notes": "BTS Sena Ruam (Sukhumvit line northern extension) at the Phahonyothin/Sena Ruam junction; district Phaya Thai per app data (verify — the area borders Chatuchak). Mid-ring residential grid; clipped by neighboring extension stations (south and north — verify keys).",
+   "selection_rationale": "Rank #9/133; the lowest-profile top-10 area — a coverage-reality check; nightlife 9 with 49 mapped venues is untested; rent is a Phaya Thai district blend.",
+   "model_score_default": 7.7,
+   "cohort_rank": 9,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.ratchaprarop",
+   "kind": "station_area",
+   "name_en": "Ratchaprarop",
+   "name_th": "ราชปรารภ",
+   "aliases": [
+    "Ratchaprarop Road",
+    "ARL Ratchaprarop",
+    "Pratunam (edge)"
+   ],
+   "scope_notes": "Airport Rail Link Ratchaprarop — ARL only, no BTS/MRT interchange; district Ratchathewi per app data. Pratunam market belt adjoins east. Clipped by st.phaya-thai (south), st.phetchaburi (southeast) and st.ratchathewi (southwest) — verify each.",
+   "selection_rationale": "Rank #12/133; the ARL-only control — what does transport 9 mean with no rail interchange?; safety 5 pattern to test (third entity at 5); Pratunam adjacency.",
+   "model_score_default": 7.68,
+   "cohort_rank": 12,
+   "cohort_size": 133
+  },
+  {
+   "key": "ratchathewi",
+   "kind": "district",
+   "name_en": "Ratchathewi",
+   "name_th": "ราชเทวี",
+   "aliases": [
+    "Victory Monument",
+    "Pratunam",
+    "Ratchaprarop",
+    "Rangnam",
+    "Makkasan",
+    "Phetchaburi Road",
+    "Petchaburi"
+   ],
+   "scope_notes": "Administrative khet per app data; khwaeng-level subareas differ — mark subarea claims partial. Coordinator polygon checks apply to boundary claims.",
+   "selection_rationale": "District #5/50; contains four already-researched station areas (st.ratchathewi #3, st.ratchaprarop, st.phaya-thai station, st.victory-monument) — direct district-vs-station comparison; safety 5 pattern; aliases include cross-khet names (Pratunam partly Pathum Wan; Makkasan on the Din Daeng border).",
+   "model_score_default": 7.96,
+   "cohort_rank": 5,
+   "cohort_size": 50
+  },
+  {
+   "key": "phra-nakhon",
+   "kind": "district",
+   "name_en": "Phra Nakhon",
+   "name_th": "พระนคร",
+   "aliases": [
+    "Rattanakosin",
+    "Old Town",
+    "Khao San",
+    "Khaosan",
+    "Banglamphu",
+    "Grand Palace",
+    "Wat Pho",
+    "Sanam Luang",
+    "Democracy Monument",
+    "Tha Tien",
+    "Phra Athit",
+    "Sam Yot",
+    "Sanam Chai"
+   ],
+   "scope_notes": "Administrative khet per app data; khwaeng-level subareas differ — mark subarea claims partial. Coordinator polygon checks apply to boundary claims.",
+   "selection_rationale": "District #6/50; old town with 171 temples, 24 piers, Sanam Luang; green 10 (38.5 ha, 7.2% share) — the first entity where green may be genuinely polygon-interior; Khao San nightlife vs residential reality; safety 5 pattern.",
+   "model_score_default": 7.86,
+   "cohort_rank": 6,
+   "cohort_size": 50
+  },
+  {
+   "key": "chatuchak",
+   "kind": "district",
+   "name_en": "Chatuchak",
+   "name_th": "จตุจักร",
+   "aliases": [
+    "Mo Chit",
+    "Mochit",
+    "Chatuchak Market",
+    "JJ Market",
+    "Ha Yaek Lat Phrao",
+    "Central Ladprao",
+    "Ratchayothin",
+    "Kasetsart",
+    "Sena Nikhom",
+    "Phahon Yothin",
+    "Vibhavadi",
+    "Kamphaeng Phet",
+    "Lat Yao",
+    "Krung Thep Aphiwat",
+    "Bang Sue Grand"
+   ],
+   "scope_notes": "Administrative khet per app data; khwaeng-level subareas differ — mark subarea claims partial. Coordinator polygon checks apply to boundary claims.",
+   "selection_rationale": "District #7/50; JJ Market district; green 9 with 167.1 ha (5.1% share — genuinely park-rich); crowd 4 (least crowded researched entity); huge 32.9 km2 — subareas (Mo Chit, Kamphaeng Phet, Kasetsart, Ratchayothin) differ sharply.",
+   "model_score_default": 7.7,
+   "cohort_rank": 7,
+   "cohort_size": 50
+  },
+  {
+   "key": "pathum-wan",
+   "kind": "district",
+   "name_en": "Pathum Wan",
+   "name_th": "ปทุมวัน",
+   "aliases": [
+    "Siam",
+    "Chit Lom",
+    "Chidlom",
+    "Ratchaprasong",
+    "Lumphini",
+    "Lumpini",
+    "Phloen Chit",
+    "Ploenchit",
+    "Lang Suan",
+    "Wireless Road",
+    "Sam Yan",
+    "National Stadium",
+    "Chulalongkorn",
+    "MBK",
+    "Hua Lamphong"
+   ],
+   "scope_notes": "Administrative khet per app data; khwaeng-level subareas differ — mark subarea claims partial. Coordinator polygon checks apply to boundary claims.",
+   "selection_rationale": "District #8/50; Siam/Chit Lom/Lumphini; rent 1 (most expensive in the city); green 10 with 102.7 ha (12.6% — Lumphini inside the khet); transit-saturated; contains st.siam/st.chit-lom/st.ratchadamri/st.lumphini/st.national-stadium areas.",
+   "model_score_default": 7.68,
+   "cohort_rank": 8,
+   "cohort_size": 50
+  }
+ ],
+ "tool_and_access_limits": [
+  "Overpass API blocked — verify locations via Wikipedia coordinates and app polygons (kit/check_geometry.py)",
+  "Reddit/TripAdvisor/ExpatForum 403 — resident-voice thinner than ideal",
+  "Bangkok Post paywall-gateway redirects not bypassed; no news-proxy mirrors",
+  "Dispatch research subagents at most 2 at a time"
+ ]
+}

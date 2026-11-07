@@ -1,0 +1,2077 @@
+{
+ "entity_key": "pathum-wan",
+ "generated_at": "2026-11-07T00:00:00Z",
+ "search_log": [
+  {
+   "tool": "Overpass",
+   "query": "relation[boundary=administrative][name=ปทุมวัน / name:en=Pathum Wan]",
+   "status": "empty",
+   "note": "No hits — OSM names the khet 'เขตปทุมวัน'/'Pathum Wan District'; resolved via name-regex query."
+  },
+  {
+   "tool": "Overpass",
+   "query": "relation[boundary=administrative][name:en~Pathum|name:th~ปทุมวัน|wikidata=Q1072010/Q1025838]",
+   "status": "ok",
+   "note": "Khet relation 92063 (wikidata Q1025838), bounds 13.7225-13.7532/100.5155-100.5530; khwaeng Pathum Wan 3320986 found."
+  },
+  {
+   "tool": "Overpass",
+   "query": "relation(92063); out geom (khet polygon) + relation(r)[admin_level=8]",
+   "status": "ok",
+   "note": "Khet has 24 members; only 3 khwaeng linked as subareas (Lumphini missing as member) — switched to khwaeng-polygon union for PIP."
+  },
+  {
+   "tool": "Overpass",
+   "query": "khwaeng relations by Thai-name regex (แขวงลุมพินี etc.)",
+   "status": "failed",
+   "note": "Server returned an HTML error page (query rejected); retried with name:en regex."
+  },
+  {
+   "tool": "Overpass",
+   "query": "relation[admin_level=8][name:en~Lumphini|Lumpini|Toeng|Makkasan|Phetchaburi]",
+   "status": "ok",
+   "note": "Lumphini Subdistrict 3320984 center (13.73595,100.54480) inside khet; Makkasan + Thanon Phetchaburi centers outside (Ratchathewi) — 4-khwaeng structure confirmed."
+  },
+  {
+   "tool": "Overpass",
+   "query": "landmark name queries (One Bangkok, Hua Lamphong, RBSC, Centenary Park, Jim Thompson, Erawan, malls, hospitals, Lumphini Park) + PIP",
+   "status": "ok",
+   "note": "55 candidates; One Bangkok/Lumphini/MBK/Paragon/CentralWorld/Jim Thompson PIP-in; @Hua Lamphong Hostel and Crowne Plaza PIP-out (near-boundary stitching artifacts) — superseded by khwaeng-polygon PIP."
+  },
+  {
+   "tool": "Overpass",
+   "query": "khwaeng polygons (relations 3320984/3320986/3320987/3320991) out geom + shoelace areas + landmark attribution",
+   "status": "ok",
+   "note": "Areas 3.39/2.12/1.28/1.37 km2; One Bangkok+park -> Lumphini; MBK/Jim Thompson -> Wang Mai; Paragon/CentralWorld/RBSC/Centenary/Chula Hosp -> Pathum Wan; Hua Lamphong SRT+MRT -> Rong Mueang; Police Hosp + Wat Hua Lamphong test points OUTSIDE."
+  },
+  {
+   "tool": "Overpass",
+   "query": "green/leisure polygons in bbox + PIP (drive3/drive4)",
+   "status": "failed",
+   "note": "HTTP 502 Bad Gateway x3 on the first combined query; split into smaller queries and retried with backoff (all succeeded after retry)."
+  },
+  {
+   "tool": "Overpass",
+   "query": "way[leisure~park|garden|pitch|stadium|golf_course...] + landuse green, PIP-filtered",
+   "status": "ok",
+   "note": "220 green polygons, 28.9 ha subtotal EXCLUDING Lumphini (missing from result set — likely too large a way for the geom call); targeted re-query run separately."
+  },
+  {
+   "tool": "Overpass",
+   "query": "targeted: way23483299, way1328095238, RBSC names, อุทยาน/Centenary, Suphachalasai, golf_course/horse_riding",
+   "status": "ok",
+   "note": "Lumphini 52.3 ha; RBSC 35.5 (golf 15.3, Polo 7.6); Sa Pathum Palace garden 7.9; CU Centennial Park 4.2; Suphachalasai 3.4; One Bangkok Park 1.1 — all PIP-attributed."
+  },
+  {
+   "tool": "Overpass",
+   "query": "railway=station + ferry_terminal + amenity=hospital + place_of_worship[religion=buddhist] in khet",
+   "status": "ok",
+   "note": "10 stations, 10 ferry terminals, 4-5 hospitals, 6 named Buddhist sites (c05/c06/c10, OI-2)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Pathum Wan district Bangkok khwaeng area 8.37 km2 population 43338 Lumphini Wang Mai Rong Muang",
+   "status": "ok",
+   "note": "Confirms 4 khwaengs and ~43k population band; khwaeng populations 2019 surfaced; led to EN wiki body read."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Pathum_Wan_district (full read)",
+   "status": "ok",
+   "note": "Area 8.369; 4 khwaeng areas; 47,685 (2019); boundaries; landmarks; 1915/1972; name origin."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia.org/wiki/เขตปทุมวัน (full read, Thai)",
+   "status": "ok",
+   "note": "40,077 (2023); 139,008 (1992) decline; per-khwaeng Dec 2023; Thai boundaries; district office address."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "onebangkok.com EN press release (full read)",
+   "status": "failed",
+   "note": "First attempt hit 'user concurrency limit exceeded'; succeeded on retry."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district (full read)",
+   "status": "ok",
+   "note": "25 Oct 2024; ~17 ha; THB 120bn; address Lumphini/Patumwan; 8 ha greenery; 50% open; MRT Lumphini; 6 entrances."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Lumphini_Park (full read)",
+   "status": "ok",
+   "note": "360 rai/57 ha; 1925; 04:30-21:00; BMA; 2.5 km loop; monitors; bans."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Bangkok_Railway_Station (full read)",
+   "status": "ok",
+   "note": "1916; renamed 2023; 52 long-distance trains moved 19 Jan 2023; commuter/Eastern remain; museum plan stalled; Dark Red Line south extension slated."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.co.th/en/market/pathum-wan-district-saonangdgn",
+   "status": "failed",
+   "note": "HTTP 404 — wrong district URL guess; used the Noble Ploenchit project page (sibling URL) instead, which carries the district comparison."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.com/projects/noble-ploenchit-xpfzrg (full read)",
+   "status": "ok",
+   "note": "USD25/sqm rent (+9.1% vs Pathum Wan USD23; +40.3% vs city); sale USD8,499 (+112% vs city); district percentiles studio 622 / 1BR 1,040 / 2BR 2,348 / 3BR 4,460 / 4+ 7,402; 1,191 listings; rent -3.6% y/y."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "hipflat market data Pathum Wan district rent per sqm USD average",
+   "status": "ok",
+   "note": "Snippet corroboration of USD23/sqm (+28.5% vs Bangkok median USD18) across multiple project pages."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Siam Paragon visitors per year 40 million Ratchaprasong weekend crowd 2024 2025",
+   "status": "ok",
+   "note": "Surfaced Nation PR (Jul 2024) footfall figures and RSTA 600k/day context; needed URL pinning via exa."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Chulalongkorn_Centenary_Park",
+   "status": "failed",
+   "note": "HTTP 404 — correct title is Chulalongkorn_University_Centenary_Park; retried successfully."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park (full read)",
+   "status": "ok",
+   "note": "28 rai (4.5 ha); 2017; Landprocess; rain detention; Pathum Wan district; coords 13.739417,100.52417."
+  },
+  {
+   "tool": "exa",
+   "query": "Siam Piwat Siam Paragon 40 million visitors 2024 Nation Thailand footfall 150,000 daily",
+   "status": "ok",
+   "note": "Pinned URLs: Nation PR 40039565 (Jul 2024, 150-200k/day Paragon; 100-120k Siam Center/Discovery), Nation PR 40042371 (Oct 2024, 400-450k festive), Thaiger (Nov 2024, same 150-200k), Newswit (2023, 50M/yr claim)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club (full read)",
+   "status": "ok",
+   "note": "1901; members-only ~12,500 cap; 227 rai = 36.3 ha; 18-hole golf + racecourse; races every other Sunday; Henri Dunant, Pathum Wan district."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital (full read)",
+   "status": "ok",
+   "note": "Thai Red Cross; 1914; 1,442/1,435 beds; CU teaching hospital since 1947."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Police_General_Hospital (full read)",
+   "status": "ok",
+   "note": "492/1 Rama I Rd, khwaeng Pathum Wan; 650 beds; 1952; Royal Thai Police."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service (full read)",
+   "status": "ok",
+   "note": "18 km; 60k riders/day; 05:30-20:30 weekdays / 19:00 weekends; 8-22 THB; pier list incl Saphan Hua Chang + Wireless."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Siam_Square (full read)",
+   "status": "ok",
+   "note": "1962-63 SE Asia Co on Chula land; 4,200+ shops; 30+ tutoring schools; ~400k/day; skywalk chain; Scala demolished 2021."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Siam_Paragon (full read)",
+   "status": "ok",
+   "note": "9 Dec 2005; 400,000 m2; 52 rai CPB land; anchors; 991 Rama I Rd."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Erawan_Shrine (full read)",
+   "status": "ok",
+   "note": "1956; Ratchaprasong intersection, Lumphini subdistrict; Erawan Hotel origin; 2015 bombing; 5 more Hindu shrines nearby."
+  },
+  {
+   "tool": "exa",
+   "query": "One Bangkok เปิด 25 ตุลาคม 2567 เฟส 2 ริทซ์ คาร์ลตัน อันดาซ ราม 4 แขวงลุมพินี ข่าวไทย (Thai)",
+   "status": "ok",
+   "note": "Thai coverage pinned: PPTV (104 ไร่, แขวงลุมพินี เขตปทุมวัน), Money & Banking (retail detail, hotel timeline), Forbes Thailand, brandinside (190,000 sqm figure), operator TH release (108 ไร่ + Thai address)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Ratchaprasong skywalk network CentralWorld Gaysorn Chit Lom sky bridge One Bangkok bridge Lumphini Park Rama IV",
+   "status": "ok",
+   "note": "R Walk (TripAdvisor/Trip.com — commercial, corroborating), Chaloem Loke/Skyline Walk (visitthailandtoday), Green Bridge Lumphini-Benjakitti (blog, corroborating); no One Bangkok-Lumphini bridge found — not claimed."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Ratchaprasong\" 600,000 people per day Ratchaprasong Square Trade Association visitors",
+   "status": "ok",
+   "note": "600k/day is peak-era RSTA citation (pre-2015-bombing 'golden days'); 2015 figure 400k/day; projected 900k with development — search-level only, treated as corroboration."
+  },
+  {
+   "tool": "exa",
+   "query": "ราคาประเมินที่ดิน ถนนเพลินจิต วิทยุ 1 ล้านบาท ตารางวา แพงที่สุด ปทุมวัน 2567 (Thai)",
+   "status": "ok",
+   "note": "Matichon (2023-01-09): 1M/sq.wa + market 2-3.9M + Siam Square ~3.5M market (AREA); Prachachat (2023-01-07): 4 roads 1M, Witthayu +100%; Tidlor (2024-10-07): top-15 table, 'most developed khet = Pathum Wan'; postjung: Ploenchit/Witthayu in แขวงลุมพินี เขตปทุมวัน."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Ritz-Carlton Bangkok One Bangkok opened December 2024 Andaz One Bangkok opened 2025 hotel",
+   "status": "ok",
+   "note": "Search-summary level: Ritz Dec 2024, Andaz 19 Dec 2025; CONFLICTS with Nation Sep 2026 build-out list — logged as OI-4; no article URLs captured."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Hua Lamphong station redevelopment 2025 SRT museum commercial project status commuter",
+   "status": "ok",
+   "note": "Search-summary level: commuter services continue (Aug 2025 Ban Pong extension), Dark Red Line southern extension revision with tenders ~Feb 2026, cultural programming + 110th anniversary 2026; no article URLs captured."
+  },
+  {
+   "tool": "exa",
+   "query": "ปิดถนน ย่านราชประสงค์ สยาม ส่งปีใหม่ 2568 เฉลิมพระเกียรติ จราจร คนแน่น ข่าว (Thai)",
+   "status": "ok",
+   "note": "NYE 2025/26 closures pinned: Posttoday (2025-12-29), Daily News (2025-12-21), Thai PBS (2025-12-31), Than Settakij (2025-12-31, access advice incl boat + BTS exits)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "nationthailand.com/business/corporate/40071053 (full read)",
+   "status": "ok",
+   "note": "Sep 2026: 96->98% occupancy, 40M+ visits/yr, POST 1928 pending, 2027 build-out incl 2 hotels; 50/50 footfall split quote."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "thethaiger.com Nintendo store Siam Paragon (excerpt)",
+   "status": "ok",
+   "note": "Siam Piwat EVP quote: Paragon 150,000-200,000 visitors/day (Nov 2024) — excerpt-level corroboration of source 29."
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://en.wikipedia.org/wiki/Pathum_Wan_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Pathum_Wan_district",
+   "title": "Pathum Wan district (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:05:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; khwaeng area figures conflict with Thai Wikipedia (c01).",
+    "Last-checked content not dated on page."
+   ]
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "retrieved_url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "title": "เขตปทุมวัน (Wikipedia TH)",
+   "publisher": "Wikipedia (TH)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:10:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; registered-population series ends Dec 2023 (2566).",
+    "Khwaeng areas differ from EN wiki."
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "title": "One Bangkok — A Transformative Urban District Opening Its Doors on 25 October 2024 (press release)",
+   "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+   "publisher_family": "onebangkok",
+   "author": null,
+   "published_at": "2024-10-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:30:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "operator",
+   "limitations": [
+    "Developer marketing; visitor/occupancy claims self-reported elsewhere in the family.",
+    "Site size given as ~17 ha; Thai releases say 104-108 rai (c04)."
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-newest-neighbourhood/",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-newest-neighbourhood/",
+   "title": "One Bangkok: Newest Neighbourhood Opens in the Heart of Bangkok (press release)",
+   "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+   "publisher_family": "onebangkok",
+   "author": null,
+   "published_at": "2024-10-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:35:00Z",
+   "body_read": false,
+   "type": "official_operator",
+   "commercial_context": "operator",
+   "limitations": [
+    "Excerpt-level (search-index highlights), not a full page read; used only to corroborate facts also present in the body-read source 2.",
+    "Developer marketing.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://www.pptvhd36.com/news/สังคม/235282",
+   "retrieved_url": "https://www.pptvhd36.com/news/สังคม/235282",
+   "title": "วัน แบงค็อก แนะนำวิธีเดินทางร่วมงานเปิดตัว (PPTV HD36)",
+   "publisher": "PPTV HD36",
+   "publisher_family": "pptv",
+   "author": "PPTV Online",
+   "published_at": "2024-10-24",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:40:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; corroborates Thai address (แขวงลุมพินี เขตปทุมวัน) and 104-rai figure already evidenced by sources 2/3.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://moneyandbanking.co.th/2024/136644/",
+   "retrieved_url": "https://moneyandbanking.co.th/2024/136644/",
+   "title": "One Bangkok ประเดิมเปิดรีเทล 2 ตึก จ่อลอนช์ 3 โรงแรมในโครงการ (Money & Banking)",
+   "publisher": "Money & Banking",
+   "publisher_family": "moneyandbanking",
+   "author": "การเงินธนาคาร",
+   "published_at": "2024-10-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:42:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; Thai retail detail (Parade 85,000 sqm, MITSUKOSHI DEPACHIKA 4,600 sqm, King Power City Boutique 5,000 sqm) corroborates EN release.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://www.forbesthailand.com/news/property/one-bangkok-open-on-25-october-2024",
+   "retrieved_url": "https://www.forbesthailand.com/news/property/one-bangkok-open-on-25-october-2024",
+   "title": "สิ้นสุดการรอคอย! 'วัน แบงค็อก' ปักหมุดเปิด 25 ต.ค.นี้ (Forbes Thailand)",
+   "publisher": "Forbes Thailand",
+   "publisher_family": "forbes-thailand",
+   "author": null,
+   "published_at": "2024-10-08",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:44:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; used for the pre-opening hotel timeline (Ritz-Carlton target Nov 2024, Andaz 2025, Fraser Suites 2026).",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://www.nationthailand.com/business/corporate/40071053",
+   "retrieved_url": "https://www.nationthailand.com/business/corporate/40071053",
+   "title": "Occupancy to Hit 98% as One Bangkok Retail Eyes Next Phase of Growth (The Nation)",
+   "publisher": "The Nation",
+   "publisher_family": "nation",
+   "author": "Nongluck Ajanapanya",
+   "published_at": "2026-09-15",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:48:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Business-desk piece built on management interview figures (footfall, occupancy) that are not independently audited."
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "retrieved_url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "title": "Noble Ploenchit — Market Data (Hipflat)",
+   "publisher": "Hipflat",
+   "publisher_family": "hipflat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T22:52:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "portal",
+   "limitations": [
+    "Asking-based listings model, not signed rents; no explicit last-updated stamp (page footer 2026).",
+    "District comparison figures are Hipflat's own model, single-portal."
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; 360-rai/57 ha figure is the commonly cited official size; OSM polygon computes 52.3 ha (c08)."
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "title": "Royal Bangkok Sports Club (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:04:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; 227-rai grounds and membership cap carry no inline citation on the article."
+   ]
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "title": "Chulalongkorn University Centenary Park (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:08:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub article; 28 rai = 4.5 ha; opening given only as 2017 (day-month from other coverage not verified here)."
+   ]
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "retrieved_url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "title": "King Chulalongkorn Memorial Hospital (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:12:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; infobox 1,442 beds vs body text 1,435 — figures conflict internally."
+   ]
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://en.wikipedia.org/wiki/Police_General_Hospital",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Police_General_Hospital",
+   "title": "Police General Hospital (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:15:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; address 492/1 Rama I Road, khwaeng Pathum Wan stated in infobox without inline citation."
+   ]
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://en.wikipedia.org/wiki/Bangkok_Railway_Station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bangkok_Railway_Station",
+   "title": "Bangkok Railway Station / Hua Lamphong (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:20:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; article's latest content horizon is around 2023-2024; 2025-2026 status covered only by search-level corroboration (logged)."
+   ]
+  },
+  {
+   "index": 15,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "title": "Khlong Saen Saep boat service (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:24:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; pier naming differs from BMA signage (e.g., 'Saphan Hua Chang'); no 2024-2026 service changes documented."
+   ]
+  },
+  {
+   "index": 16,
+   "canonical_url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "title": "Siam Square (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:28:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; ~400,000 daily figure and 4,200+ shops lack inline citations."
+   ]
+  },
+  {
+   "index": 17,
+   "canonical_url": "https://en.wikipedia.org/wiki/Siam_Paragon",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Siam_Paragon",
+   "title": "Siam Paragon (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:32:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; 400,000 sqm retail figure is article-stated without citation."
+   ]
+  },
+  {
+   "index": 18,
+   "canonical_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "title": "Erawan Shrine (Wikipedia EN)",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:36:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited."
+   ]
+  },
+  {
+   "index": 19,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — khwaeng relations 3320984/3320986/3320987/3320991 (admin_level=8) inside khet relation 92063",
+   "publisher": "OpenStreetMap",
+   "publisher_family": "osm-overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T19:18:21Z",
+   "retrieved_at": "2026-11-07T22:20:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Volunteer-mapped boundaries; khwaeng Lumphini is not linked as a subarea member of the khet relation (found by name).",
+    "Polygon areas are shoelace computations, ±5% typical."
+   ]
+  },
+  {
+   "index": 20,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — green polygons in khet (ways 23483299, 157522259, 349671892, 180005434, 37910308, 443471833, 25701345, 1328095238)",
+   "publisher": "OpenStreetMap",
+   "publisher_family": "osm-overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T19:18:21Z",
+   "retrieved_at": "2026-11-07T23:45:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Areas computed from OSM geometry; official park hectares differ (Lumphini 52.3 vs 57.6 ha).",
+    "OSM green tagging incomplete — small lawns unnamed."
+   ]
+  },
+  {
+   "index": 21,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — rail stations, ferry terminals, hospitals, Buddhist worship sites in khet",
+   "publisher": "OpenStreetMap",
+   "publisher_family": "osm-overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T19:18:21Z",
+   "retrieved_at": "2026-11-07T23:50:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Tagging gaps: only 6 named Buddhist worship sites mapped — not a temple census.",
+    "One 'Police General Hospital' node sits off its Rama I address; khet membership taken from the address source 13 instead."
+   ]
+  },
+  {
+   "index": 22,
+   "canonical_url": "https://www.matichon.co.th/economy/news_3761834",
+   "retrieved_url": "https://www.matichon.co.th/economy/news_3761834",
+   "title": "ถึงเวลาเขย่า 'ราคาประเมินใหม่' วิทยุ-เพลินจิต วิ่งฉิว วาละ 2 ล้าน (Matichon)",
+   "publisher": "Matichon",
+   "publisher_family": "matichon",
+   "author": "ดารุณี จันทร",
+   "published_at": "2023-01-09",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:55:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; carries Treasury Department and AREA analyst quotes on appraisals vs market prices.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 23,
+   "canonical_url": "https://www.prachachat.net/hilight-prachachat/news-1169415",
+   "retrieved_url": "https://www.prachachat.net/hilight-prachachat/news-1169415",
+   "title": "เปิด 4 ทำเลกลางกรุง ราคาประเมิน 'แพงสุด' ตารางวาละ 1 ล้านบาท (Prachachat)",
+   "publisher": "Prachachat",
+   "publisher_family": "prachachat",
+   "author": null,
+   "published_at": "2023-01-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:57:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; Treasury director-general statement on the 2566-2569 appraisal cycle.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 24,
+   "canonical_url": "https://www.tidlor.com/th/article/financial/investment/bangkok-land-prices",
+   "retrieved_url": "https://www.tidlor.com/th/article/financial/investment/bangkok-land-prices",
+   "title": "ราคาที่ดินในกรุงเทพ 2567 เขตที่เจริญที่สุดในกรุงเทพมีโซนไหนบ้าง (Tidlor)",
+   "publisher": "Tidlor (NGERN TID LOR)",
+   "publisher_family": "tidlor",
+   "author": null,
+   "published_at": "2024-10-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T23:59:00Z",
+   "body_read": false,
+   "type": "commercial_property",
+   "commercial_context": "lender",
+   "limitations": [
+    "Excerpt-level only; lender content marketing restating Treasury appraisal table; ranks Ploenchit/Witthayu at 1,000,000 THB per sq wa.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 25,
+   "canonical_url": "https://www.posttoday.com/general-news/735729",
+   "retrieved_url": "https://www.posttoday.com/general-news/735729",
+   "title": "นครบาล ปิดจราจร 6 เส้นทาง รอบราชประสงค์ จัดเคานท์ดาวน์ Central World 2026 (Post Today)",
+   "publisher": "Post Today",
+   "publisher_family": "posttoday",
+   "author": null,
+   "published_at": "2025-12-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:05:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; Metropolitan Police Bureau road-closure announcement, verbatim in excerpt.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 26,
+   "canonical_url": "https://www.thaipbs.or.th/news/content/500677",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/500677",
+   "title": "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026 (Thai PBS)",
+   "publisher": "Thai PBS",
+   "publisher_family": "thaipbs",
+   "author": null,
+   "published_at": "2025-12-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:07:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; same closure list as source 25.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 27,
+   "canonical_url": "https://www.thansettakij.com/general-news/647960",
+   "retrieved_url": "https://www.thansettakij.com/general-news/647960",
+   "title": "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง (Than Settakij)",
+   "publisher": "Than Settakij",
+   "publisher_family": "thansettakij",
+   "author": "จุฑามาศ ไชยวรรณ์",
+   "published_at": "2025-12-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:09:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; adds access advice (BTS Siam exit 6 / Chit Lom, Saen Saep boat to Pratunam pier, 6,000-car mall parking).",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 28,
+   "canonical_url": "https://thethaiger.com/hot-news/events/synnex-and-copperwired-launches-se-asias-first-nintendo-store-at-siam-paragon",
+   "retrieved_url": "https://thethaiger.com/hot-news/events/synnex-and-copperwired-launches-se-asias-first-nintendo-store-at-siam-paragon",
+   "title": "SYNNEX and COPPERWIRED launch SE Asia's first Nintendo store at Siam Paragon (Thaiger)",
+   "publisher": "Thaiger",
+   "publisher_family": "thaiger",
+   "author": "Thaiger",
+   "published_at": "2024-11-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:12:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; Siam Piwat executive quote: Siam Paragon attracts 150,000-200,000 visitors daily.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 29,
+   "canonical_url": "https://www.nationthailand.com/pr-news/pr-news/40039565",
+   "retrieved_url": "https://www.nationthailand.com/pr-news/pr-news/40039565",
+   "title": "Siam Piwat forms collaborative partnership with over 40 leading tourism-related firms (The Nation PR)",
+   "publisher": "The Nation",
+   "publisher_family": "nation",
+   "author": null,
+   "published_at": "2024-07-10",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:15:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "corporate_pr",
+   "limitations": [
+    "Press-release genre; footfall figures (Paragon 150-200k/day; Siam Center/Discovery 100-120k/day) are company statements; excerpt-level.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 30,
+   "canonical_url": "https://www.nationthailand.com/pr-news/pr-news/40042371",
+   "retrieved_url": "https://www.nationthailand.com/pr-news/pr-news/40042371",
+   "title": "Siam Piwat Group reinforces its number one position as the ultimate global destination for celebrations (The Nation PR)",
+   "publisher": "The Nation",
+   "publisher_family": "nation",
+   "author": null,
+   "published_at": "2024-10-15",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:18:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "corporate_pr",
+   "limitations": [
+    "Press-release genre; festive-season expectation 'more than 400,000-450,000 visitors per day' across group malls; excerpt-level.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 31,
+   "canonical_url": "https://brandinside.asia/one-bangkok-open-on-25th-october/",
+   "retrieved_url": "https://brandinside.asia/one-bangkok-open-on-25th-october/",
+   "title": "มาแน่ 'One Bangkok' เปิดจริง 25 ตุลาคมนี้ (Brand Inside)",
+   "publisher": "Brand Inside",
+   "publisher_family": "brandinside",
+   "author": "Thitaree T.",
+   "published_at": "2024-10-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:21:00Z",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Excerpt-level only; gives retail area 190,000 sqm — conflicts with the operator's 160,000 sqm net lettable (source 3); discrepancy flagged (OI-3).",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 32,
+   "canonical_url": "https://www.onebangkok.com/th/press-media/one-bangkok-a-transformative-urban-district/",
+   "retrieved_url": "https://www.onebangkok.com/th/press-media/one-bangkok-a-transformative-urban-district/",
+   "title": "วัน แบงค็อก อภิมหาโครงการที่จะพลิกโฉมกรุงเทพฯ พร้อมเปิด 25 ตุลาคม 2567 (One Bangkok TH press release)",
+   "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+   "publisher_family": "onebangkok",
+   "author": null,
+   "published_at": "2024-10-08",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:25:00Z",
+   "body_read": false,
+   "type": "official_operator",
+   "commercial_context": "operator",
+   "limitations": [
+    "Excerpt-level (Thai mirror of source 2); gives 108 rai and the Thai postal address ถนนวิทยุ แขวงลุมพินี เขตปทุมวัน 10330; corroborated by source 4.",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "pathum-wan-c01",
+   "text_en": "Khet Pathum Wan is Bangkok's central district: 8.369 km2 (both Wikipedias), divided into FOUR khwaeng — Rong Mueang, Wang Mai, Pathum Wan, Lumphini (EN wiki areas 1.423/1.423/2.276/3.247 km2; Thai wiki 1.300/1.403/2.181/3.485 km2; OSM shoelace 1.28-1.37/2.12/3.39 km2 — three datasets disagree at khwaeng level, khet total agrees). Established as an amphoe in 1915, a khet since 1972; named after King Mongkut's royal villa 'lotus forest' (paduma+vana) beside Wat Pathumwanaram. Bounded north by Khlong Saen Saep/Khlong Mahanak (Dusit, Ratchathewi), east by the SRT Maenam railway line (Watthana, Khlong Toei), south by Rama IV Road (Sathon, Bang Rak), west by Khlong Phadung Krung Kasem (Pom Prap Sattru Phai) — the khet touches no river. District office: Thai Yanyon Building, Soi Rong Muang 5, khwaeng Rong Mueang. The app center (13.73894, 100.54045) falls inside khwaeng Lumphini per OSM point-in-polygon.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "notes": "Khwaeng membership of the app center from OSM khwaeng polygons (relations 3320984/3320986/3320987/3320991).",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "long-standing administrative facts; khwaeng areas as published",
+    "recheck_by": null,
+    "notes": "EN/TH khwaeng-area conflict is a published-source disagreement, not a data error."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Infobox + History + Geography",
+     "paraphrase": "Area 8.37 km2 (8.369 body text); four khwaeng with areas Rong Mueang 1.423, Wang Mai 1.423, Pathum Wan 2.276, Lumphini 3.247; amphoe 1915, khet 1972; lotus-forest name origin; boundaries on all four sides; seat Rong Mueang."
+    },
+    {
+     "source_index": 1,
+     "locator": "ข้อมูลทั่วไป + อาณาเขต",
+     "paraphrase": "8.369 ตร.กม.; 4 แขวง with Thai areas 1.300/1.403/2.181/3.485; boundaries: north Khlong Mahanak+Saen Saep, east Maenam railway, south Rama IV, west Khlong Phadung Krung Kasem; district office in Soi Rong Muang 5."
+    },
+    {
+     "source_index": 19,
+     "locator": "Overpass relation 92063 + khwaeng relations",
+     "paraphrase": "Khet relation 92063 (wikidata Q1025838); four khwaeng relations exist; app center PIP -> Lumphini Subdistrict; khwaeng shoelace areas 3.39/2.12/1.28/1.37 km2."
+    }
+   ],
+   "limitations": [
+    "Three khwaeng-area datasets disagree; khet total is consistent (8.369).",
+    "OSM khwaeng Lumphini missing from the khet relation's subarea members — identified by name query."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c02",
+   "text_en": "A district that empties as it fills: registered population fell from 139,008 (1992) to 47,685 (Oct 2019) to 40,077 (Dec 2023) across the same 8.369 km2 — density 4,789/km2 by 2023 (the app's ~43,338 for 2020 sits between the two). December 2023 split: khwaeng Rong Mueang 15,198, Lumphini 17,040, Wang Mai 5,093, khwaeng Pathum Wan just 2,746. The 2019 per-khwaeng figures were Rong Mueang 16,827 / Lumphini 17,959 / Wang Mai 6,877 / Pathum Wan 6,022. Note: a sibling batch file's 'district holds only ~18,000 residents (2019)' matches khwaeng Lumphini's 17,959, not the khet — a khwaeng/khet mix-up to correct downstream.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "context"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "notes": "Registered (ทะเบียนราษฎร) population, not de-facto daytime population; the khet hosts several hundred thousand daily visitors (c11).",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1992, Oct 2019, Dec 2023 registration snapshots",
+    "recheck_by": null,
+    "notes": "Population declined continuously since 1992 per Thai wiki; 2024-2026 registration figures not found published."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Infobox + Sub-districts",
+     "paraphrase": "Population (2019) 47,685, density 5,700/km2; per-khwaeng 2019: Rong Mueang 16,827, Wang Mai 6,877, Pathum Wan 6,022, Lumphini 17,959; figure labelled registered population Oct 2019."
+    },
+    {
+     "source_index": 1,
+     "locator": "ประชากร",
+     "paraphrase": "40,077 people (2566/2023), density 4,788.74/km2; Dec 2023 per-khwaeng 15,198/5,093/2,746/17,040; historical 139,008 in 2535 (1992) declining continuously."
+    }
+   ],
+   "limitations": [
+    "Registered-population series ends 2023; no 2024-2026 figure found.",
+    "Daytime population is far larger and uncounted here."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c03",
+   "text_en": "The retail core is three connected precincts in two khwaengs: (1) Siam — Siam Paragon (opened 9 Dec 2005; ~400,000 m2 retail on 52 rai of Crown Property Bureau land leased to Siam Piwat + The Mall Group; Paragon Department Store 50,000 m2; Paragon Cineplex, Sea Life aquarium; 991 Rama I Rd) facing Siam Square (developed 1962-63 by the Southeast Asia Company on Chulalongkorn University land now managed by Chula Property; 4,200+ shops including 30+ tutoring schools — described as the country's number one tutoring district; ~400,000 people travel to/through daily) and MBK Center (khwaeng Wang Mai per OSM); (2) Ratchaprasong — CentralWorld (khwaeng Pathum Wan per OSM), Gaysorn, Erawan Shrine; (3) since 2024, One Bangkok on Rama IV (c04).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "vibe",
+    "crowd"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Siam/Ratchaprasong corridor along Rama I; khwaeng attributions from OSM PIP (Paragon -> Pathum Wan khwaeng; MBK -> Wang Mai; CentralWorld -> Pathum Wan).",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": "2005-12-09",
+    "observed_period": "Siam Square built 1962-63; Paragon since 2005",
+    "recheck_by": null,
+    "notes": "Shopper counts are covered separately (c11); this claim is about built fabric and ownership."
+   },
+   "evidence": [
+    {
+     "source_index": 17,
+     "locator": "Infobox + History",
+     "paraphrase": "Opened 9 December 2005, ~15bn THB build cost; floor area 400,000 m2; 52-rai site; Siam Piwat + The Mall Group on Crown Property Bureau land (30-year lease); 991 Rama I Road, Pathum Wan District; 16-screen cineplex, Sea Life aquarium, Paragon Hall."
+    },
+    {
+     "source_index": 16,
+     "locator": "Lead + History + Description",
+     "paraphrase": "Siam Square at Phayathai x Rama I; first building 1962-1963 by Southeast Asia Company on cleared former-slum land owned by Chulalongkorn University (Chula Property manages); 4,200+ shops, at least 30 tutoring schools, 'number one tutoring center in the country'; ~400,000 people travel to and through the area daily."
+    },
+    {
+     "source_index": 20,
+     "locator": "OSM ways 157487610/781138575/157482067 + PIP",
+     "paraphrase": "MBK Center way inside khet -> Wang Mai khwaeng; Siam Paragon and centralwOrld ways -> Pathum Wan khwaeng."
+    }
+   ],
+   "limitations": [
+    "Siam Paragon's 400,000 m2 is a single-source figure without citation on Wikipedia.",
+    "Siam Square's 400,000/day is article-stated, uncited."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c04",
+   "text_en": "One Bangkok — one of the largest private developments in Thailand (THB 120bn / US$3.2bn; TCC Assets + Frasers Property; SOM masterplan) — opened 25 October 2024 at Wireless Road x Rama IV, khwaeng Lumphini, khet Pathum Wan (Thai address on the developer's own release: ถนนวิทยุ แขวงลุมพินี เขตปทุมวัน 10330; OSM landuse way PIP-verified inside khwaeng Lumphini). Site: ~17 ha (104-108 rai across Thai releases — see OI-3), built on the former radio-station and Lumpinee Boxing Stadium sites. Day one: The Parade (85,000 m2, 9 floors, MITSUKOSHI DEPACHIKA supermarket 4,600 m2, King Power City Boutique downtown duty-free) and The Storeys (35,000 m2), with three office towers already operational (Baker McKenzie, Estée Lauder, BMW signed); retail NLA 160,000 m2 and 900+ stores planned; 8 ha of greenery = 50% of the site; One Bangkok Park (OSM 1.1 ha); direct underground link to MRT Lumphini; six entrances on Wireless/Rama IV. By Sep 2026: 40M+ visits/year claimed, occupancy 96% -> 98% target end-2026, POST 1928 (40,000 m2) still unopened, and by 2027 a second office tower, one residence and two more hotels (The Ritz-Carlton, Andaz) are slated — see OI-4 for the hotel-opening conflict.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "recent_changes",
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "notes": "OSM PIP: One Bangkok core (13.72709, 100.54728) -> Lumphini khwaeng, inside khet.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": "2024-10-25",
+    "observed_period": "phased opening Oct 2024 - 2030 (developer roadmap); status re-checked Sep 2026",
+    "recheck_by": "2027-06-01",
+    "notes": "POST 1928 and the hotel openings are volatile; recheck before publishing hotel-open language."
+   },
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "Body (EN release)",
+     "paraphrase": "Opening 25 Oct 2024; ~17 ha; THB 120bn (US$3.2bn); address Wireless Road, Lumphini, Patumwan 10330; Parade+Storeys+3 towers open; 8 ha greenery, 50% open/green; connects Lumphini and Benjakitti parks; MRT Lumphini direct; six entrances; SOM; Kapoor/Cragg art program; 1.5 km Food Loop ~250 dining."
+    },
+    {
+     "source_index": 7,
+     "locator": "Body",
+     "paraphrase": "Sep 2026: ~96% occupancy heading to 98% by end-2026; 40M+ visitors/year since opening; 300,000+ members; POST 1928 in development; by 2027 second office tower, one residence, two further hotels incl Ritz-Carlton and Andaz; retail sales +50% y/y."
+    },
+    {
+     "source_index": 3,
+     "locator": "Retail + Getting-there sections",
+     "paraphrase": "Retail NLA 160,000 sqm; Parade 85,000, The Storeys 35,000, POST 1928 40,000; 900+ stores eventually; HarborLand playground/waterpark; One Ultra Screens; MRT Blue Line Lumphini with direct underground link; 10+ bus routes on Wireless/Rama IV; direct Chalerm Mahanakhon Expressway connection."
+    },
+    {
+     "source_index": 4,
+     "locator": "Lead + transport list",
+     "paraphrase": "104 ไร่; หัวมุมแยกวิทยุ ติดสวนลุมพินี แขวงลุมพินี เขตปทุมวัน; opening-day program; MRT Lumphini exit 1; BTS Phloen Chit exit 2 + 15-min EV shuttle 07:00-24:00."
+    },
+    {
+     "source_index": 5,
+     "locator": "Body",
+     "paraphrase": "Parade 85,000 sqm over 9 floors; MITSUKOSHI DEPACHIKA 4,600 sqm; King Power City Boutique 5,000 sqm (first downtown duty-free); hotels timeline Ritz Nov 2024 / Andaz 2568 (2025) / Fraser Suites 2569 (2026); Tower 4 80% leased, Tower 3 30% at opening."
+    },
+    {
+     "source_index": 20,
+     "locator": "OSM way 608350816 + 1328095238",
+     "paraphrase": "One Bangkok landuse=commercial way and One Bangkok Park (leisure=park, 1.1 ha) both PIP inside Lumphini khwaeng."
+    }
+   ],
+   "limitations": [
+    "Site size differs across the operator's own releases (104 vs 108 rai vs ~17 ha).",
+    "Hotel opening status conflicted (OI-4).",
+    "Retail area 190,000 sqm (Brand Inside) vs 160,000 sqm NLA (operator) — gross vs lettable, unresolved.",
+    "Visitor/occupancy figures are management-reported."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c05",
+   "text_en": "Rail saturation claim verified: the 8.369 km2 khet contains TEN rail stations — BTS Siam (CEN, the Sukhumvit/Silom interchange), BTS Chit Lom (E1), BTS Phloen Chit (E2), BTS Ratchadamri (Silom line), BTS National Stadium (W1); MRT Blue Line Lumphini (BL25), Sam Yan (BL27), Hua Lamphong (BL28), and Si Lom (BL26) whose node sits on the north (khet) side of Rama IV while its catchment straddles Bang Rak; plus SRT Bangkok (Hua Lamphong mainline). The Airport Rail Link has no station in the khet — Ratchaprarop, Makkasan and Phaya Thai lie across Khlong Saen Saep in Ratchathewi (their khwaeng centers compute PIP-outside). BTS Sala Daeng (S2) is just outside in Bang Rak's khwaeng Si Lom. Five BTS + four MRT + one SRT station inside one 8.369 km2 khet is the largest in-district station set found in this project's district research so far (Ratchathewi and Phra Nakhon, the other researched khet, hold fewer).",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "notes": "Station list and coordinates from OSM; the MRT Si Lom station node (13.72920, 100.53707) sits just north of Rama IV — boundary-straddling station, relation partial.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "inventory as of OSM extract 2026-11-07",
+    "recheck_by": null,
+    "notes": "Counting convention matters: MRT Si Lom counted in-khet via station-node PIP; Sala Daeng excluded."
+   },
+   "evidence": [
+    {
+     "source_index": 21,
+     "locator": "Overpass railway=station query, PIP-filtered",
+     "paraphrase": "In-khet stations: Ratchadamri, Hua Lamphong, Lumphini, Siam (BTS), Phloen Chit (BTS), Chit Lom (BTS), Bangkok (SRT), National Stadium, Si Lom, Sam Yan — 10 total with coordinates."
+    },
+    {
+     "source_index": 19,
+     "locator": "Overpass khwaeng centers",
+     "paraphrase": "Makkasan (13.7553, 100.5530) and Thanon Phetchaburi khwaeng centers PIP outside the khet — ARL/Makkasan side belongs to Ratchathewi."
+    },
+    {
+     "source_index": 0,
+     "locator": "Geography",
+     "paraphrase": "North boundary on Khlong Saen Saep toward Ratchathewi — the ARL corridor lies beyond it."
+    }
+   ],
+   "limitations": [
+    "No ARL station in-khet; residents connect via Ratchathewi-side stations.",
+    "Station-node PIP for MRT Si Lom is a ±1 building-row judgment on a boundary road.",
+    "Comparative 'largest ... so far' is researcher inference from sibling khet files, not an all-50-khet enumeration."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c06",
+   "text_en": "The app's '10 piers' decompose across TWO canals: OSM shows exactly 10 ferry terminals inside the khet — on Khlong Saen Saep (northern boundary): Saphan Hua Chang (13.74920, 100.53088), Wireless (13.74827, 100.54818), and two Pratunam piers on the boundary line; and on Khlong Phadung Krung Kasem (western boundary): Saphan Charoenpol, Hua Lamphong, Hua Lamphong Station, Nopphawong, Yotse, Department of Energy. The Saen Saep boat service runs 18 km with ~60,000 riders/day, 05:30-20:30 weekdays and 05:30-19:00 weekends, fares 8-22 THB — a commute-grade water bus along the district's north edge.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Pier count = OSM amenity=ferry_terminal PIP inside the four khwaeng polygons; Pratunam duplicates exist as separate nodes on each side of the boundary.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "service parameters as published; OSM extract 2026-11-07",
+    "recheck_by": "2027-06-01",
+    "notes": "Boat hours/fares are diesel-linked and volatile; pier set could change with service revisions."
+   },
+   "evidence": [
+    {
+     "source_index": 21,
+     "locator": "Overpass ferry_terminal query, PIP-filtered",
+     "paraphrase": "In-khet ferry terminals: Wireless, Sapan Charoenpol, Pratunam x2, Hua Lamphong Pier, Sapan Hua Chang, Hua Lamphong Station Pier, Nopphawong, Yotse, Department of Energy — 10 nodes; all other piers (Chidlom, Nana Nua, Talad Bobae, Si Phraya, Oriental, Sathorn...) PIP outside."
+    },
+    {
+     "source_index": 15,
+     "locator": "Route + Service sections",
+     "paraphrase": "18 km, ~60,000 daily riders, 100 boats of 40-50 seats; weekdays 05:30-20:30, weekends 05:30-19:00; fares 8-22 THB; western line piers include Saphan Hua Chang and Pratunam; eastern line includes Wireless ('at Witthayu Road')."
+    }
+   ],
+   "limitations": [
+    "App's own pier-mapping convention unknown; the 10-OSM-piers decomposition is our best match.",
+    "Khlong Phadung Krung Kasem piers serve short local hops, not the main boat line."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c07",
+   "text_en": "The rent-1 wall is real and land-priced: the Treasury Department's 2566-2569 appraisal cycle prices Phloen Chit, Witthayu and Rama I (Ratchadamri-Phaya Thai stretch) at 1,000,000 THB per sq wa — the country's maximum, a level Witthayu reached with a 100% jump from 500,000; three of the four top-priced roads sit in this khet. Market transactions run far above: AREA estimates 2-3.9M THB/sq wa and ~3.5M around Siam Square. Independent rent evidence (Hipflat, asking-based): Pathum Wan district average USD23/sqm — 28.5% above the Bangkok average (USD18) — with district percentiles of USD622 (studio), 1,040 (1BR), 2,348 (2BR), 4,460 (3BR), 7,402 (4+ beds) per month; Noble Ploenchit averages USD25/sqm, i.e. 9.1% ABOVE the district mean (its sale average USD8,499/sqm is 14.7% above the district's USD7,407 and 112% above Bangkok's USD4,009). So the batch-2 'phloen-chit +9.1%' finding does not undercut rent 1: flagship Ploenchit towers price above a district mean that itself leads the central city. The app blend 38,000/85,000 THB corresponds to the Hipflat 1BR/2BR district percentiles at roughly 35-36 THB/USD (researcher conversion, not Hipflat's).",
+   "kind": "factual_report",
+   "topics": [
+    "rent",
+    "affordability",
+    "counter_evidence"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "notes": "District-average semantics: Hipflat district figures cover all four khwaengs including older Rong Mueang/Wang Mai stock.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Hipflat data window referencing Oct 2025-Jan 2026; appraisal cycle 2023-2026",
+    "recheck_by": "2027-06-01",
+    "notes": "Asking-based, single-portal; THB conversion is ours."
+   },
+   "evidence": [
+    {
+     "source_index": 23,
+     "locator": "Body",
+     "paraphrase": "Treasury Department: 4 central roads at 1,000,000 THB/sq wa in the 2566-2569 cycle — Silom, Ploenchit, Rama I (Ratchadamri-Phaya Thai), Witthayu; Witthayu doubled from 500,000 (+100%), the nation's highest appraisal."
+    },
+    {
+     "source_index": 22,
+     "locator": "Body",
+     "paraphrase": "Market prices exceed appraisals 20-36%: Witthayu/Ploenchit trade at 2-3M THB/sq wa, some plots 3.9M; AREA's Suphon Phromchokchai puts Siam Square market value ~3.5M THB/sq wa vs 1M appraised."
+    },
+    {
+     "source_index": 8,
+     "locator": "Market data + district comparison",
+     "paraphrase": "Noble Ploenchit avg rent USD25/sqm (+9.1% vs Pathum Wan USD23; +40.3% vs Bangkok USD18; rent 3.6% downtrend past year; 1,191 rental listings); avg sale USD8,499/sqm (+14.7% vs district USD7,407; +112% vs Bangkok USD4,009); Pathum Wan district rents studio USD622 / 1BR 1,040 / 2BR 2,348 / 3BR 4,460 / 4+ 7,402 per month."
+    },
+    {
+     "source_index": 24,
+     "locator": "Top-15 table",
+     "paraphrase": "Ploenchit and Witthayu 1,000,000 THB/sq wa; Rama I 400k-1M; Ratchadamri 750k-900k; article states the most-developed khet in Bangkok is Pathum Wan."
+    }
+   ],
+   "limitations": [
+    "No signed-rent source exists publicly; all figures are asking/portal-model.",
+    "THB/USD conversion (35-36) is researcher inference.",
+    "Whether Pathum Wan's USD23/sqm is the highest of all 50 khet was not checked district-by-district (single-portal claim)."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c08",
+   "text_en": "Green 10's 102.7 ha (12.6% of the khet) decomposes as: Lumphini Park — 57.6 ha official (360 rai, created 1925 on King Rama VI-donated land, first public park in Thailand; BMA-operated; 2.5 km jogging loop, lake with paddle boats, library, clock tower, ~400 Asian water monitors; open daily 04:30-21:00; smoke-free, no dogs, cycling 10:00-15:00; OSM polygon 52.3 ha) — plus Royal Bangkok Sports Club 36.3 ha (227 rai; founded 1901; members-only with a cap around 12,500 accounts and entrance fees reported up to 2M THB; 18-hole golf course + racecourse; races every other Sunday 12:00-18:00 with public grandstand; OSM 35.5 ha incl a 15.3-ha golf polygon) — plus Chulalongkorn University Centenary Park 4.5 ha (28 rai, 2017, Landprocess, rain-detention 'monkey-cheeks' design; OSM 4.2 ha) — plus One Bangkok's 8 ha of greenery within its site (OSM-named One Bangkok Park 1.1 ha) — plus Sa Pathum Palace garden 7.9 ha (royal, closed to the public) — plus the 3.4-ha Suphachalasai National Stadium ground and a 7.6-ha RBSC Polo Club on Witthayu. Roughly 63-64 ha — about 60-65% of the mapped green — is publicly usable; ~36 ha is a members-only club and ~8 ha royal/closed.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "gym_sports"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "notes": "Composition computed from OSM polygon areas + published official hectares; the app's own 102.7-ha selection is not published, so the mix above is our reconstruction (see OI-6).",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Lumphini created 1925; RBSC 1901; Centenary Park 2017; One Bangkok 2024",
+    "recheck_by": "2027-06-01",
+    "notes": "Hours/operating rules can change; race Sundays move RBSC activity weekly."
+   },
+   "evidence": [
+    {
+     "source_index": 9,
+     "locator": "Infobox + Facilities",
+     "paraphrase": "360 rai (57 ha); created 1925 from Rama VI land donation; first public park in Thailand; BMA; 2.5 km jogging paths; lake, swan boats, library, clock tower, monitors (~400); open daily 04:30-21:00; smoking ban; no dogs; cycling 10:00-15:00."
+    },
+    {
+     "source_index": 10,
+     "locator": "Lead + Facilities + Membership",
+     "paraphrase": "Founded 1901; private, membership capped ~12,500 accounts, entrance fees reported up to 2M baht (2011); 18-hole golf course, racecourse, first Olympic pool (1933); races every other Sunday noon-18:00, grandstand open to public on race days; 227 rai (36.3 ha) opposite Chulalongkorn University between Ratchadamri, Henri Dunant and the hospitals; land estimated ~100bn THB."
+    },
+    {
+     "source_index": 11,
+     "locator": "Infobox + Body",
+     "paraphrase": "28 rai (4.5 ha); opened 2017 for CU's centenary; designed by Landprocess; acts as a rainwater detention basin inspired by the Kaem Ling project; coordinates 13.739417, 100.52417 in Pathum Wan district."
+    },
+    {
+     "source_index": 2,
+     "locator": "Green space paragraph",
+     "paraphrase": "8 hectares of greenery within One Bangkok; 50% of the site open/green; over 20,000 sqm event space including One Bangkok Park."
+    },
+    {
+     "source_index": 20,
+     "locator": "OSM polygon areas",
+     "paraphrase": "Lumphini Park way23483299 52.3 ha; RBSC way157522259 35.5 ha; RBSC golf way349671892 15.3 ha; RBSC Polo way180005434 7.6 ha; Sa Pathum Palace garden way37910308 7.9 ha; CU Centennial Park way443471833 4.2 ha; Suphachalasai Stadium way25701345 3.4 ha; One Bangkok Park way1328095238 1.1 ha."
+    }
+   ],
+   "limitations": [
+    "App's 102.7-ha composition not published; our reconstruction sums official+OSM pieces.",
+    "Lumphini 57.6 (official) vs 52.3 (OSM polygon) gap unexplained — probably fence-line vs boundary-road difference.",
+    "Race-day public access to RBSC is grandstand-only."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c09",
+   "text_en": "Counter-view on green/quiet: a third of the mapped green (the 36.3-ha RBSC) is members-only every day except race-Sunday grandstands, and Sa Pathum Palace's 7.9-ha garden is royal ground — the usable public share is Lumphini plus the university's Centenary Park plus One Bangkok's open areas. Lumphini closes at 21:00, so the district's biggest green goes dark well before the mall closing hours; the campus lawns and palace grounds are institutionally controlled. No public-space source describing noise or heat conditions in the Siam plaza canyons was found (community forums blocked), so the 'hot, loud Siam' folk experience remains unverified here (see OI-7).",
+   "kind": "reported_perception",
+   "topics": [
+    "green",
+    "counter_evidence"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "notes": "Applies to the whole khet's green supply rather than one venue.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current access rules as published",
+    "recheck_by": "2027-06-01",
+    "notes": "Access rules (RBSC race days, park hours) are volatile."
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "Membership + Racing",
+     "paraphrase": "Members-only club; public access limited to the grandstand on race days (every other Sunday)."
+    },
+    {
+     "source_index": 9,
+     "locator": "Hours + Bans",
+     "paraphrase": "Open daily 04:30-21:00; smoking banned; dogs barred; cycling restricted to 10:00-15:00."
+    }
+   ],
+   "limitations": [
+    "No experiential source found for heat/noise (Reddit/TripAdvisor 403); claim limited to access rules.",
+    "One Bangkok's 8 ha of greenery is private-estate open space, open to visitors during retail hours."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c10",
+   "text_en": "Daily-life services are hospital-anchored: King Chulalongkorn Memorial Hospital (Thai Red Cross Society; opened 30 May 1914; 1,442 beds in the infobox, 1,435 in the body — the article conflicts; teaching hospital of Chulalongkorn University's Faculty of Medicine since 1947; OSM node at 13.73275, 100.53608 PIP-inside, khwaeng Pathum Wan) and Police General Hospital (Royal Thai Police; founded 13 Oct 1952; 650 beds; 492/1 Rama I Road, khwaeng Pathum Wan) both sit in the khet; the Chula Faculty of Dentistry hospital and the Jetanin fertility institute are also PIP-inside. BNH Hospital is NOT in the khet — its OSM node (13.72491, 100.53498) is across Rama IV in Bang Rak. Groceries skew premium: the district's newest full supermarket is MITSUKOSHI DEPACHIKA (4,600 m2) at One Bangkok's Parade, alongside the 50,000-m2 Paragon Department Store; no large wet market was identified in the khet's OSM data.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "safety"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "notes": "Hospital set = OSM amenity=hospital PIP inside khet + address-verified Police General Hospital.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "bed counts as published (undated)",
+    "recheck_by": "2027-06-01",
+    "notes": "Bed-count figure conflicts internally (1,442 vs 1,435)."
+   },
+   "evidence": [
+    {
+     "source_index": 12,
+     "locator": "Infobox + History",
+     "paraphrase": "Thai Red Cross operator; opened 30 May 1914; 1,442 beds (infobox) / 1,435 (body); teaching hospital of CU Faculty of Medicine (since 4 Jun 1947) and the Red Cross nursing institute; Pathum Wan district; coordinates 13.7314, 100.5356."
+    },
+    {
+     "source_index": 13,
+     "locator": "Infobox",
+     "paraphrase": "492/1 Rama I Road, Pathum Wan District, khwaeng Pathum Wan; Royal Thai Police operator; 650 beds; founded 13 October 1952."
+    },
+    {
+     "source_index": 21,
+     "locator": "Overpass amenity=hospital, PIP-filtered",
+     "paraphrase": "In-khet: King Chulalongkorn Memorial, Jetanin Institute, Faculty of Dentistry hospital, Police General node; BNH Hospital node PIP outside (Bang Rak)."
+    },
+    {
+     "source_index": 5,
+     "locator": "Retail detail",
+     "paraphrase": "MITSUKOSHI DEPACHIKA supermarket 4,600 sqm at One Bangkok Parade (first in Thailand)."
+    },
+    {
+     "source_index": 17,
+     "locator": "Infobox",
+     "paraphrase": "Paragon Department Store occupies 50,000 m2 of the 400,000 m2 building."
+    }
+   ],
+   "limitations": [
+    "No grocery-market census attempted; 'no large wet market identified' is an OSM-absence finding, not proof.",
+    "Police General's OSM node sits off its address; khet membership rests on the published address."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c11",
+   "text_en": "Crowd 1 is supported by operator and police numbers, not just folklore: Siam Paragon draws 150,000-200,000 visitors a day (Siam Piwat executives, Jul 2024 and Nov 2024), Siam Center/Discovery another 100,000-120,000/day; the group projected 400,000-450,000 visitors/day across its malls in the festive season (Oct 2024); Siam Square's article states ~400,000 people move to/through the area daily; and the Ratchaprasong Square Trade Association's peak-era figure was ~600,000 visitors/day district-wide (2015-era, search-level). The streets visibly cap out: for the CentralWorld Countdown 2026, the Metropolitan Police Bureau closed SIX roads — Ratchadamri, Rama I (Chaloem Phao-Ratchaprasong), Phloen Chit (Ratchaprasong-Chit Lom), Ratchaprarop and Phetchaburi — to all vehicles from noon 31 Dec 2025 to 05:00 1 Jan 2026, with the official access advice pointing visitors to BTS Siam exit 6 / Chit Lom and the Saen Saep boat to Pratunam pier. Counterweight: the khet's registered population is ~40,000 (c02) — the crush is visitor-driven and clock-dependent.",
+   "kind": "factual_report",
+   "topics": [
+    "crowd",
+    "counter_evidence",
+    "rhythm"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Siam-Ratchaprasong corridor; crowd concentrates around Paragon/CentralWorld/Siam Square, not across the whole khet.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": "2025-12-31",
+    "observed_period": "footfall figures 2024; closures Dec 2025",
+    "recheck_by": "2027-01-15",
+    "notes": "Operator footfall is unaudited; festive figures are projections."
+   },
+   "evidence": [
+    {
+     "source_index": 28,
+     "locator": "Body",
+     "paraphrase": "Siam Piwat EVP: Siam Paragon 'attracting between 150,000 and 200,000 visitors every day' (Nov 2024)."
+    },
+    {
+     "source_index": 29,
+     "locator": "Quote block",
+     "paraphrase": "Siam Paragon daily footfall 150,000-200,000; Siam Center + Siam Discovery 100,000-120,000/day (Jul 2024)."
+    },
+    {
+     "source_index": 30,
+     "locator": "Body",
+     "paraphrase": "Festive-season expectation 'more than 400,000-450,000 visitors per day' across Siam Piwat malls (Oct 2024)."
+    },
+    {
+     "source_index": 16,
+     "locator": "Body",
+     "paraphrase": "~400,000 people travel to and through the Siam Square area daily."
+    },
+    {
+     "source_index": 25,
+     "locator": "Closure list",
+     "paraphrase": "Metropolitan Police: 6 roads around Ratchaprasong closed to all vehicles 12:00 Dec 31 - 05:00 Jan 1 for CentralWorld Countdown 2026 (Ratchadamri, Rama I, Phloen Chit, Ratchaprarop, Phetchaburi segments)."
+    },
+    {
+     "source_index": 27,
+     "locator": "Access section",
+     "paraphrase": "Official advice: BTS Siam exit 6 or Chit Lom E1 + skywalk; Saen Saep boat to Pratunam pier + 100 m walk; CentralWorld parking 6,000 cars."
+    }
+   ],
+   "limitations": [
+    "600,000/day Ratchaprasong figure is association-cited, peak-era, search-level only — not body-read.",
+    "No weekend-specific counts published (OI-8).",
+    "Press-release genre sources (29, 30) carry corporate framing."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c12",
+   "text_en": "Rhythm, anchor-derived (no per-hour counts found): mornings start earliest in the south — Lumphini opens 04:30 and the Saen Saep boats from 05:30 weekdays; weekday office hours fill One Bangkok's three operational towers and the Witthayu/Phloen Chit office belt (One Bangkok reports footfall 'precisely 50/50' between local-district and destination visitors); afternoons shift to the university side — Siam Square's 30+ tutoring schools pack toward evening, and Chula's campus dominates Wang Mai and khwaeng Pathum Wan; evenings and weekends belong to the malls (mall hours ~10:00-22:00 genre), with the Friday-Sunday/Songkran/NYE peaks requiring police road closures (c11). Student calendar effects (CU semester swings) could not be verified in public sources.",
+   "kind": "researcher_inference",
+   "topics": [
+    "rhythm",
+    "vibe"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "notes": "Inference from anchored opening hours, operator statements and closures — no hourly footfall data exists publicly.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "hours and statements current as of Nov 2026",
+    "recheck_by": "2027-06-01",
+    "notes": "Semester rhythm unverified; mall hours are genre-level, not per-venue verified."
+   },
+   "evidence": [
+    {
+     "source_index": 9,
+     "locator": "Hours",
+     "paraphrase": "Lumphini open daily 04:30-21:00."
+    },
+    {
+     "source_index": 15,
+     "locator": "Service hours",
+     "paraphrase": "Boats 05:30-20:30 weekdays, 05:30-19:00 weekends."
+    },
+    {
+     "source_index": 7,
+     "locator": "Interview",
+     "paraphrase": "Footfall split 'precisely 50/50' between internal district population and destination shoppers (One Bangkok retail management)."
+    },
+    {
+     "source_index": 0,
+     "locator": "Places section",
+     "paraphrase": "Chulalongkorn University campus dominates Wang Mai and Pathum Wan subdistricts; Siam Square hosts the tutoring cluster (c03)."
+    },
+    {
+     "source_index": 25,
+     "locator": "Closure times",
+     "paraphrase": "Peak-event road closures 12:00-05:00 pattern."
+    }
+   ],
+   "limitations": [
+    "Rhythm is anchor-derived; no quantitative hourly data (same limitation as sibling station files).",
+    "Student-semester effects unverified."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c13",
+   "text_en": "Walkability is skywalk- and station-driven: a connected elevated network runs National Stadium -> Siam -> Chit Lom linking Siam Paragon, MBK and CentralWorld (per the Siam Square article), the Ratchaprasong 'R Walk' continues through Chit Lom/CentralWorld/Gaysorn (guide-level, corroborating), and One Bangkok adds a direct underground walk from MRT Lumphini into its B1 retail plus six street entrances — the countdown-day police advice to use station exits and the boat pier rather than roads (c11) reflects how the district is actually navigated on foot at peak. Ground level remains wide-arterial terrain: Rama I, Rama IV and Ratchadamri carry the traffic that gets closed on event days; OSM also maps the named MBK-Chula footbridges (สะพานลอย MBK-จุฬาฯ). No source describes shade/heat experience on these walks (OI-7).",
+   "kind": "factual_report",
+   "topics": [
+    "walkability",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Siam-Ratchaprasong-Rama IV corridor; network extent beyond named links not inventoried.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "network as published; OSM extract 2026-11-07",
+    "recheck_by": null,
+    "notes": "Skywalk continuity (gaps, elevator locations) not field-verified."
+   },
+   "evidence": [
+    {
+     "source_index": 16,
+     "locator": "Description",
+     "paraphrase": "Skywalk links National Stadium -> Siam -> Chit Lom and connects Siam Paragon, MBK Center, CentralWorld; Siam Square One connected to the skywalk."
+    },
+    {
+     "source_index": 2,
+     "locator": "Transit paragraph",
+     "paraphrase": "Direct access to Lumphini MRT; six entrances on Wireless and Rama IV; (source 3 adds the direct underground link into B1)."
+    },
+    {
+     "source_index": 20,
+     "locator": "OSM ways 617784243/1169254728/1200822126",
+     "paraphrase": "Three named สะพานลอย MBK-จุฬาฯ footbridge ways mapped inside the khet."
+    },
+    {
+     "source_index": 27,
+     "locator": "Access advice",
+     "paraphrase": "Police-endorsed walking access via station exits and skywalk on closure day."
+    }
+   ],
+   "limitations": [
+    "R Walk details are guide-level (TripAdvisor/TAT-affiliated pages), corroborating only.",
+    "No experiential walking sources (forums 403); no shade data."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c14",
+   "text_en": "Hua Lamphong's identity transition: the 1916 terminus (officially renamed Bangkok (Hua Lamphong) in Jan 2023) sits in khwaeng Rong Mueang — the app's 'Hua Lamphong' alias for this district is correct — but its mainline role left on 19 January 2023 when all 52 long-distance trains moved to Krung Thep Aphiwat; it remains the terminus for ordinary/commuter and all Eastern-line services with an underground link to MRT Hua Lamphong (BL28). The 2021 plan to close and convert it into a museum stalled after the #SAVE Hua Lamphong campaign; search-level 2025-2026 reporting has the station hosting cultural events toward its 110th anniversary (2026) and the SRT Dark Red Line southern extension (which would restore a heavy-rail stop) under revision with tenders expected around Feb 2026 — neither verified against a body-read article.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "recent_changes",
+    "identity"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "notes": "OSM PIP: railway station node (13.73931, 100.51665) and MRT node (13.73757, 100.51714) -> khwaeng Rong Mueang.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": "2023-01-19",
+    "observed_period": "service change Jan 2023; redevelopment status through 2026",
+    "recheck_by": "2027-01-15",
+    "notes": "Dark Red Line southern extension timeline is planning-stage."
+   },
+   "evidence": [
+    {
+     "source_index": 14,
+     "locator": "Renaming + 21st century sections",
+     "paraphrase": "Opened 25 June 1916; renamed Bangkok (Hua Lamphong) 19 Jan 2023; all long-distance trains (52) moved to Krung Thep Aphiwat that day; remains terminus for ordinary, commuter, excursion and Eastern-line trains; underground passage to MRT since 2004; museum-conversion plan delayed by opposition (#SAVE Hua Lamphong); slated for the Dark Red Line southern extension."
+    },
+    {
+     "source_index": 0,
+     "locator": "Places",
+     "paraphrase": "Hua Lamphong station in Rong Mueang's southwestern corner; former central station until Krung Thep Aphiwat opened."
+    },
+    {
+     "source_index": 21,
+     "locator": "Overpass station nodes + PIP",
+     "paraphrase": "SRT 'Bangkok' station and MRT Hua Lamphong both PIP inside khwaeng Rong Mueang."
+    }
+   ],
+   "limitations": [
+    "2025-2026 status (cultural programming, anniversary, extension tenders) is search-level only, no article URL captured.",
+    "Commuter-service frequency not quantified."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c15",
+   "text_en": "Conditional fit: FITS — premium renters/buyers priced for the country's top land (c07); car-free households (10 rail stations c05 + two canal boat lines c06 + 10+ bus routes at One Bangkok); students and academics (Chula campus dominating two khwaengs, tutoring district c03/c12); park and mall life within one khet (c08/c03). DOES NOT FIT — budget renters: even the district's 1BR percentile (~USD1,040 ≈ 37k THB) sits at the top of the city's asking distribution, and there is no meaningful cheap-stock pocket in the mapped data; anyone needing late-evening green (Lumphini closes 21:00, c09); quiet-fragile residents on the Siam/Ratchaprasong side on weekends and event days (c11); and drivers during events (6-road closures c11). Retail/service workers who keep the malls running mostly commute in — the khet's registered population keeps shrinking (c02).",
+   "kind": "researcher_inference",
+   "topics": [
+    "affordability",
+    "rent",
+    "crowd",
+    "transport",
+    "daily_essentials"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "notes": "Fit statements derived from c01-c14 evidence; no survey data.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as of Nov 2026",
+    "recheck_by": "2027-06-01",
+    "notes": "Fit judgments inherit the limitations of the underlying claims."
+   },
+   "evidence": [
+    {
+     "source_index": 8,
+     "locator": "District percentiles",
+     "paraphrase": "1BR district percentile USD1,040/month — high vs Bangkok USD18/sqm average rent."
+    },
+    {
+     "source_index": 5,
+     "locator": "N/A — cross-claim inference",
+     "paraphrase": "Synthesis of c02, c05, c06, c08, c09, c11 evidence."
+    }
+   ],
+   "limitations": [
+    "Fit claims are researcher inference anchored on the cited evidence.",
+    "No resident or worker survey sources available (forums blocked)."
+   ]
+  },
+  {
+   "claim_id": "pathum-wan-c16",
+   "text_en": "2024-2026 changes, dated: (1) One Bangkok opens retail 25 Oct 2024 with three office towers live; hotels targeted Nov 2024 (Ritz-Carlton) and 2025 (Andaz) per pre-opening coverage, other reporting dates the openings Dec 2024 and 19 Dec 2025 — status conflicted (OI-4); by Sep 2026 occupancy ~96->98%, 40M+ visits/year claimed, POST 1928 still unopened, and a second office tower + residence + two hotels slated by 2027 (c04). (2) Siam Square churn: the Scala cinema (closed 2020) was demolished by Chulalongkorn University in 2021, site still empty as of 2023. (3) Hua Lamphong operates without long-distance rail since 19 Jan 2023 and is being repositioned toward cultural use (c14). (4) The annual Ratchaprasong NYE closures (6 roads, Dec 2025) are now a fixed crowd-management ritual (c11). (5) Treasury signalled the next appraisal review could push Witthayu/Ploenchit toward 2M THB/sq wa as market trades hit 2-3.9M (2023 statements; no 2569+ cycle announcement found).",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "notes": "All dated events; appraisal-review item is a 2023 signal, not an enacted change.",
+    "relation_to_entity": "inside",
+    "place_name": "Pathum Wan"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 reporting",
+    "recheck_by": "2027-01-15",
+    "notes": "Hotel openings and appraisal cycle are the volatile items."
+   },
+   "evidence": [
+    {
+     "source_index": 7,
+     "locator": "Body",
+     "paraphrase": "Sep 2026 status: occupancy 96->98% target, 40M+ visits, POST 1928 pending, 2027 build-out plans."
+    },
+    {
+     "source_index": 6,
+     "locator": "Hotel section",
+     "paraphrase": "Ritz-Carlton Bangkok targeted Nov 2024; Andaz One Bangkok 2025; Fraser Suites 2026."
+    },
+    {
+     "source_index": 16,
+     "locator": "Redevelopment section",
+     "paraphrase": "Scala closed 2020, demolished 2021 by CU, site still empty as of 2023."
+    },
+    {
+     "source_index": 14,
+     "locator": "21st century",
+     "paraphrase": "Long-distance rail moved 19 Jan 2023; museum plan stalled."
+    },
+    {
+     "source_index": 22,
+     "locator": "Analyst quotes",
+     "paraphrase": "Officials flagged possible mid-cycle review toward 2M THB/sq wa for Witthayu/Ploenchit as market trades reached 2-3.9M."
+    }
+   ],
+   "limitations": [
+    "Ritz/Andaz opening dates conflicted across source generations (OI-4).",
+    "No 2024-2026 appraisal-cycle update found."
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "question_id": "Q01",
+   "question": "Identity/scope: what exactly is this unit, and what is inside vs outside?",
+   "answer": "The whole khet Pathum Wan (เขตปทุมวัน): 8.369 km2, four khwaengs (Rong Mueang, Wang Mai, Pathum Wan, Lumphini), bounded by Khlong Saen Saep/Mahanak (N), the SRT Maenam railway (E), Rama IV (S) and Khlong Phadung Krung Kasem (W) — no river frontage. INSIDE (PIP-verified): Siam Paragon, CentralWorld, MBK (Wang Mai), Siam Square, One Bangkok (khwaeng Lumphini — the batch-2 'which khet?' question resolves to pathum-wan), Lumphini Park, RBSC, Chula campus and Centenary Park, Jim Thompson House (Wang Mai), Erawan Shrine, King Chulalongkorn Memorial + Police General hospitals, and SRT+MRT Hua Lamphong in Rong Mueang (the app's Hua Lamphong alias is correct). OUTSIDE: BNH Hospital (Bang Rak), BTS Sala Daeng (Bang Rak), ARL stations (Ratchathewi), Wat Hua Lamphong temple (Bang Rak's khwaeng Si Phraya — note the temple is outside while the STATION is inside). The app center falls in khwaeng Lumphini.",
+   "claim_ids": [
+    "pathum-wan-c01",
+    "pathum-wan-c04",
+    "pathum-wan-c05",
+    "pathum-wan-c10",
+    "pathum-wan-c14"
+   ],
+   "limitations": [
+    "Khwaeng-area figures differ between EN/TH Wikipedia and OSM.",
+    "Boundary-straddlers (MRT Si Lom, Pratunam piers) counted in-khet by node PIP."
+   ],
+   "id": "Q01",
+   "notes": "The whole khet Pathum Wan (เขตปทุมวัน): 8.369 km2, four khwaengs (Rong Mueang, Wang Mai, Pathum Wan, Lumphini), bounded by Khlong Saen Saep/Mahanak (N), the SRT Maenam railway (E), Rama IV (S) and Khlong Phadung Krung Kasem (W) — no river frontage. INSIDE (PIP-verified): Siam Paragon, CentralWorld, MBK (Wang Mai), Siam Square, One Bangkok (khwaeng Lumphini — the batch-2 'which khet?' question resolves to pathum-wan), Lumphini Park, RBSC, Chula campus and Centenary Park, Jim Thompson House (Wang Mai), Erawan Shrine, King Chulalongkorn Memorial + Police General hospitals, and SRT+MRT Hua Lamphong in Rong Mueang (the app's Hua Lamphong alias is correct). OUTSIDE: BNH Hospital (Bang Rak), BTS Sala Daeng (Bang Rak), ARL stations (Ratchathewi), Wat Hua Lamphong temple (Bang Rak's khwaeng Si Phraya — note the temple is outside while the STATION is inside). The app center falls in khwaeng Lumphini."
+  },
+  {
+   "question_id": "Q02",
+   "question": "Everyday experience: what is daily life like here on the ground?",
+   "answer": "Three overlapping daily lives: (1) the retail core — Siam/Ratchaprasong runs on mall hours and visitor flow (Paragon alone 150-200k/day) with tutoring-school students filling Siam Square's afternoons; (2) the office/embassy belt — Witthayu-Phloen Chit-Chit Lom weekdays, extended since Oct 2024 by One Bangkok's office towers and its '50/50' local-vs-destination footfall; (3) the residential/university interior — Rong Mueang and Wang Mai hold most of the ~40k registered residents around Hua Lamphong, Sam Yan and the Chula campus, where registered population has fallen continuously since 1992. The khet is a daytime/weekend magnet on a small, depopulating residential base.",
+   "claim_ids": [
+    "pathum-wan-c03",
+    "pathum-wan-c04",
+    "pathum-wan-c02",
+    "pathum-wan-c12"
+   ],
+   "limitations": [
+    "No ethnographic or resident-interview sources (forums blocked); experience is anchor-derived."
+   ],
+   "id": "Q02",
+   "notes": "Three overlapping daily lives: (1) the retail core — Siam/Ratchaprasong runs on mall hours and visitor flow (Paragon alone 150-200k/day) with tutoring-school students filling Siam Square's afternoons; (2) the office/embassy belt — Witthayu-Phloen Chit-Chit Lom weekdays, extended since Oct 2024 by One Bangkok's office towers and its '50/50' local-vs-destination footfall; (3) the residential/university interior — Rong Mueang and Wang Mai hold most of the ~40k registered residents around Hua Lamphong, Sam Yan and the Chula campus, where registered population has fallen continuously since 1992. The khet is a daytime/weekend magnet on a small, depopulating residential base."
+  },
+  {
+   "question_id": "Q03",
+   "question": "Values + mechanisms: what would the high ratings actually be rewarding?",
+   "answer": "Transport 10 rewards verifiable saturation: 10 rail stations (5 BTS incl the Siam interchange, 4 MRT, 1 SRT) in 8.37 km2, plus ~10 boat piers on two canals and the event-grade bus layer. Daily-essentials 10 rewards two large hospitals (Chulalongkorn Memorial 1,442 beds; Police General 650) and a premium retail/supermarket layer (Paragon dept store 50,000 m2; Mitsukoshi Depachika 4,600 m2). Food 10 / nightlife 10 map the 3,064/164 venue counts onto the densest mall-dining precinct in the country (One Bangkok's 1.5 km Food Loop alone adds ~250). Green 10 rewards Lumphini's 57.6 ha + campus/Centenary/One-Bangkok green — though ~36 ha of the mapped green is members-only (c08/c09). Vibe 9 and crowd 1 are two readings of the same mechanism: extraordinary visitor gravity on a small residential base.",
+   "claim_ids": [
+    "pathum-wan-c05",
+    "pathum-wan-c06",
+    "pathum-wan-c08",
+    "pathum-wan-c10",
+    "pathum-wan-c03",
+    "pathum-wan-c04"
+   ],
+   "limitations": [
+    "App venue counts (3,064 food / 164 nightlife / 55 temples) are app data, not re-derived here."
+   ],
+   "id": "Q03",
+   "notes": "Transport 10 rewards verifiable saturation: 10 rail stations (5 BTS incl the Siam interchange, 4 MRT, 1 SRT) in 8.37 km2, plus ~10 boat piers on two canals and the event-grade bus layer. Daily-essentials 10 rewards two large hospitals (Chulalongkorn Memorial 1,442 beds; Police General 650) and a premium retail/supermarket layer (Paragon dept store 50,000 m2; Mitsukoshi Depachika 4,600 m2). Food 10 / nightlife 10 map the 3,064/164 venue counts onto the densest mall-dining precinct in the country (One Bangkok's 1.5 km Food Loop alone adds ~250). Green 10 rewards Lumphini's 57.6 ha + campus/Centenary/One-Bangkok green — though ~36 ha of the mapped green is members-only (c08/c09). Vibe 9 and crowd 1 are two readings of the same mechanism: extraordinary visitor gravity on a small residential base."
+  },
+  {
+   "question_id": "Q04",
+   "question": "Counter-evidence: what contradicts or complicates the ratings?",
+   "answer": "Rent 1 is the honest floor — and it is land-priced: 1,000,000 THB/sq wa appraisals (country max) on three khet roads, market trades 2-3.9M; Hipflat district rent USD23/sqm (+28.5% vs city) with a 1BR percentile ~USD1,040. The +9.1% finding from batch 2 does NOT soften it — Noble Ploenchit prices 9.1% ABOVE the district mean. Complications: crowd 1 is visitor-driven and clock-dependent (residential base ~40k and shrinking); green 10 overstates public access (RBSC 36.3 ha members-only, Sa Pathum palace garden royal, Lumphini closes 21:00); transport 10 lost its long-distance rail role in 2023 (Hua Lamphong); safety 7 has no district-specific crime source found here (out-of-scope beyond anchors); and the daily-essentials premium means the ordinary wet-market layer the rest of the city relies on is thin in the mapped data.",
+   "claim_ids": [
+    "pathum-wan-c07",
+    "pathum-wan-c09",
+    "pathum-wan-c11",
+    "pathum-wan-c14",
+    "pathum-wan-c10"
+   ],
+   "limitations": [
+    "No crime-rate source pulled this round; safety 7 left untouched.",
+    "All rent figures asking-based."
+   ],
+   "id": "Q04",
+   "notes": "Rent 1 is the honest floor — and it is land-priced: 1,000,000 THB/sq wa appraisals (country max) on three khet roads, market trades 2-3.9M; Hipflat district rent USD23/sqm (+28.5% vs city) with a 1BR percentile ~USD1,040. The +9.1% finding from batch 2 does NOT soften it — Noble Ploenchit prices 9.1% ABOVE the district mean. Complications: crowd 1 is visitor-driven and clock-dependent (residential base ~40k and shrinking); green 10 overstates public access (RBSC 36.3 ha members-only, Sa Pathum palace garden royal, Lumphini closes 21:00); transport 10 lost its long-distance rail role in 2023 (Hua Lamphong); safety 7 has no district-specific crime source found here (out-of-scope beyond anchors); and the daily-essentials premium means the ordinary wet-market layer the rest of the city relies on is thin in the mapped data."
+  },
+  {
+   "question_id": "Q05",
+   "question": "Rhythm: how does the area change across the day and week?",
+   "answer": "Clock: Lumphini opens 04:30 (runners before dawn), boats 05:30 weekdays, offices fill Witthayu/One Bangkok towers by 09:00, tutoring/after-school flow peaks late afternoon in Siam Square, malls own 10:00-22:00, and event nights (NYE, Songkran) bring police closures to Rama I/Ratchadamri/Phloen Chit from midday. Week: weekdays are office+student days; weekends are the retail peak (festive projections 400-450k/day group-wide) and race Sundays open RBSC's grandstand to the public every other week. Year: Chula semester swings unverifiable; festive-season spikes documented for Oct-Dec.",
+   "claim_ids": [
+    "pathum-wan-c12",
+    "pathum-wan-c11",
+    "pathum-wan-c09"
+   ],
+   "limitations": [
+    "No hourly or weekend-specific counts; rhythm is anchor-derived."
+   ],
+   "id": "Q05",
+   "notes": "Clock: Lumphini opens 04:30 (runners before dawn), boats 05:30 weekdays, offices fill Witthayu/One Bangkok towers by 09:00, tutoring/after-school flow peaks late afternoon in Siam Square, malls own 10:00-22:00, and event nights (NYE, Songkran) bring police closures to Rama I/Ratchadamri/Phloen Chit from midday. Week: weekdays are office+student days; weekends are the retail peak (festive projections 400-450k/day group-wide) and race Sundays open RBSC's grandstand to the public every other week. Year: Chula semester swings unverifiable; festive-season spikes documented for Oct-Dec."
+  },
+  {
+   "question_id": "Q06",
+   "question": "Walkability: what is it actually like to move around on foot?",
+   "answer": "The district walks on two levels. Elevated/underground: the National Stadium-Siam-Chit Lom skywalk chain links Paragon/MBK/CentralWorld; the Ratchaprasong R-Walk extends through Chit Lom/Gaysorn; One Bangkok connects underground from MRT Lumphini into its B1; MBK-Chula footbridges cross Phaya Thai Rd. Ground level: wide arterials (Rama I, Rama IV, Ratchadamri, Witthayu) with event-day closures proving the roads are car-hostile at peak — police route pedestrians via station exits and the boat pier. The southern residential half (Rong Mueang/Wang Mai) is low-rise and walkable in genre terms but was not sourced this round. No shade/heat experiential evidence found.",
+   "claim_ids": [
+    "pathum-wan-c13",
+    "pathum-wan-c11"
+   ],
+   "limitations": [
+    "Skywalk continuity/elevators not field-verified; no experiential sources (403s)."
+   ],
+   "id": "Q06",
+   "notes": "The district walks on two levels. Elevated/underground: the National Stadium-Siam-Chit Lom skywalk chain links Paragon/MBK/CentralWorld; the Ratchaprasong R-Walk extends through Chit Lom/Gaysorn; One Bangkok connects underground from MRT Lumphini into its B1; MBK-Chula footbridges cross Phaya Thai Rd. Ground level: wide arterials (Rama I, Rama IV, Ratchadamri, Witthayu) with event-day closures proving the roads are car-hostile at peak — police route pedestrians via station exits and the boat pier. The southern residential half (Rong Mueang/Wang Mai) is low-rise and walkable in genre terms but was not sourced this round. No shade/heat experiential evidence found."
+  },
+  {
+   "question_id": "Q07",
+   "question": "Daily life: groceries, services, schools, hospitals in/around the unit?",
+   "answer": "Hospitals: two majors in-khet — King Chulalongkorn Memorial (Thai Red Cross, 1,442/1,435 beds, CU teaching hospital, at Sam Yan on Rama IV) and Police General (650 beds, Rama I Rd, khwaeng Pathum Wan); plus Chula's dentistry hospital and Jetanin. BNH is across Rama IV in Bang Rak — the app note questioning its placement resolves to outside. Schools: Chulalongkorn University dominates two khwaengs; 30+ tutoring schools make Siam Square the country's tutoring center. Groceries: premium-skewed — Paragon Department Store (50,000 m2), MITSUKOSHI DEPACHIKA (4,600 m2) at One Bangkok; no large wet market identified in OSM inside the khet (an absence finding, not a census). District office sits in Rong Mueang.",
+   "claim_ids": [
+    "pathum-wan-c10",
+    "pathum-wan-c03",
+    "pathum-wan-c01"
+   ],
+   "limitations": [
+    "Grocery mapping incomplete; school list not attempted beyond anchors."
+   ],
+   "id": "Q07",
+   "notes": "Hospitals: two majors in-khet — King Chulalongkorn Memorial (Thai Red Cross, 1,442/1,435 beds, CU teaching hospital, at Sam Yan on Rama IV) and Police General (650 beds, Rama I Rd, khwaeng Pathum Wan); plus Chula's dentistry hospital and Jetanin. BNH is across Rama IV in Bang Rak — the app note questioning its placement resolves to outside. Schools: Chulalongkorn University dominates two khwaengs; 30+ tutoring schools make Siam Square the country's tutoring center. Groceries: premium-skewed — Paragon Department Store (50,000 m2), MITSUKOSHI DEPACHIKA (4,600 m2) at One Bangkok; no large wet market identified in OSM inside the khet (an absence finding, not a census). District office sits in Rong Mueang."
+  },
+  {
+   "question_id": "Q08",
+   "question": "Affordability: district blend vs station-level evidence?",
+   "answer": "The app blend 38,000/85,000 THB tracks the independent district evidence: Hipflat's Pathum Wan percentiles are USD1,040 (1BR) and USD2,348 (2BR) per month — about 37k/84k THB at 35-36 THB/USD (researcher conversion). So the blend is a district-mean 1BR/2BR figure, and rent 1 is consistent with it: the district mean is 28.5% above Bangkok's, the three top land appraisals in the country sit here, and the flagship Ploenchit towers price ANOTHER 9.1% above the district mean (Noble Ploenchit USD25 vs USD23/sqm — the batch-2 tension resolved: unit premium vs district mean, not district cheapness). Intra-district spread is real (older Rong Mueang/Wang Mai stock below the mean) but the mapped asking floor in the premium pocket was still ~13-18k THB for 24 m2 studios in sibling research. NOTE for the coordinator: a sibling file describes the district blend as '33,500/74,000' — the two figures should be reconciled (OI-1); this file does not change app data.",
+   "claim_ids": [
+    "pathum-wan-c07",
+    "pathum-wan-c15"
+   ],
+   "limitations": [
+    "Asking-based only; THB conversions researcher-derived; blend semantics differ across sibling files."
+   ],
+   "id": "Q08",
+   "notes": "The app blend 38,000/85,000 THB tracks the independent district evidence: Hipflat's Pathum Wan percentiles are USD1,040 (1BR) and USD2,348 (2BR) per month — about 37k/84k THB at 35-36 THB/USD (researcher conversion). So the blend is a district-mean 1BR/2BR figure, and rent 1 is consistent with it: the district mean is 28.5% above Bangkok's, the three top land appraisals in the country sit here, and the flagship Ploenchit towers price ANOTHER 9.1% above the district mean (Noble Ploenchit USD25 vs USD23/sqm — the batch-2 tension resolved: unit premium vs district mean, not district cheapness). Intra-district spread is real (older Rong Mueang/Wang Mai stock below the mean) but the mapped asking floor in the premium pocket was still ~13-18k THB for 24 m2 studios in sibling research. NOTE for the coordinator: a sibling file describes the district blend as '33,500/74,000' — the two figures should be reconciled (OI-1); this file does not change app data."
+  },
+  {
+   "question_id": "Q09",
+   "question": "Green/quiet with polygon honesty: is green 10 earned inside the unit?",
+   "answer": "Mostly, with one honest caveat. The khet genuinely contains Lumphini Park (57.6 ha official / 52.3 OSM, 04:30-21:00 daily, BMA-run) fully inside khwaeng Lumphini — the largest central public park — plus the 4.5-ha Chula Centenary Park (2017 flood-sponge design), One Bangkok's 8 ha of on-site greenery (OSM-named park 1.1 ha), and campus greenery. But the app's 102.7 ha includes ~36.3 ha of members-only RBSC (golf+racetrack) and the 7.9-ha royal Sa Pathum garden: roughly 60-65% of the mapped green is publicly usable. Quiet pockets exist (park interior, campus lanes, Rong Mueang side streets) but no source quantifies quiet; the Siam/Ratchaprasong side is the loudest precinct in the city by footfall.",
+   "claim_ids": [
+    "pathum-wan-c08",
+    "pathum-wan-c09"
+   ],
+   "limitations": [
+    "App's 102.7-ha composition unpublished; reconstruction sums official + OSM pieces (OI-6)."
+   ],
+   "id": "Q09",
+   "notes": "Mostly, with one honest caveat. The khet genuinely contains Lumphini Park (57.6 ha official / 52.3 OSM, 04:30-21:00 daily, BMA-run) fully inside khwaeng Lumphini — the largest central public park — plus the 4.5-ha Chula Centenary Park (2017 flood-sponge design), One Bangkok's 8 ha of on-site greenery (OSM-named park 1.1 ha), and campus greenery. But the app's 102.7 ha includes ~36.3 ha of members-only RBSC (golf+racetrack) and the 7.9-ha royal Sa Pathum garden: roughly 60-65% of the mapped green is publicly usable. Quiet pockets exist (park interior, campus lanes, Rong Mueang side streets) but no source quantifies quiet; the Siam/Ratchaprasong side is the loudest precinct in the city by footfall."
+  },
+  {
+   "question_id": "Q10",
+   "question": "Conditional fit: who should pick this area, and who should not?",
+   "answer": "PICK IT: premium-seekers who accept the city's top asking rents for walk-to-everything CBD access; car-free households (10 stations + boats + buses); students/academics (Chula + tutoring ecosystem); park-lovers who want a 57.6-ha park at their khwaeng; culture-listers (Jim Thompson House, Erawan Shrine, Wat Pathumwanaram, BACC). SKIP IT: budget renters (1BR percentile ~37k THB; no cheap-stock pocket in the data); quiet-dependent residents near the retail core on weekends/event days; drivers on event days (6-road closures); anyone needing late-evening public green (21:00 close) or wet-market-priced groceries.",
+   "claim_ids": [
+    "pathum-wan-c15",
+    "pathum-wan-c07",
+    "pathum-wan-c05",
+    "pathum-wan-c08"
+   ],
+   "limitations": [
+    "Fit statements are researcher inference from cited evidence; no survey data."
+   ],
+   "id": "Q10",
+   "notes": "PICK IT: premium-seekers who accept the city's top asking rents for walk-to-everything CBD access; car-free households (10 stations + boats + buses); students/academics (Chula + tutoring ecosystem); park-lovers who want a 57.6-ha park at their khwaeng; culture-listers (Jim Thompson House, Erawan Shrine, Wat Pathumwanaram, BACC). SKIP IT: budget renters (1BR percentile ~37k THB; no cheap-stock pocket in the data); quiet-dependent residents near the retail core on weekends/event days; drivers on event days (6-road closures); anyone needing late-evening public green (21:00 close) or wet-market-priced groceries."
+  },
+  {
+   "question_id": "Q11",
+   "question": "Recent changes 2024-2026: what changed, and when exactly?",
+   "answer": "25 Oct 2024 — One Bangkok opens (Parade + The Storeys retail, three office towers already live; Ritz-Carlton targeted Nov 2024, Andaz 2025; other reporting dates the actual openings Dec 2024 and 19 Dec 2025 — conflicted, OI-4). Through 2026 — POST 1928 retail (40,000 m2) still unopened; Sep 2026: occupancy ~96->98%, 40M+ visits/year claimed, second office tower + residence + two hotels slated by 2027. 2021-2023 rolling into this window — Scala cinema demolished by Chula (2021), site empty as of 2023; Hua Lamphong lost long-distance rail (19 Jan 2023) and pivots to cultural use toward its 2026 110th anniversary. Annually — Ratchaprasong NYE closures (Dec 2025: 6 roads, noon-to-05:00). Watch: next Treasury appraisal review could move Witthayu/Ploenchit from 1M toward 2M THB/sq wa.",
+   "claim_ids": [
+    "pathum-wan-c04",
+    "pathum-wan-c16",
+    "pathum-wan-c14",
+    "pathum-wan-c11"
+   ],
+   "limitations": [
+    "Hotel-opening status conflicted across source generations; appraisal review is a 2023 signal, not enacted."
+   ],
+   "id": "Q11",
+   "notes": "25 Oct 2024 — One Bangkok opens (Parade + The Storeys retail, three office towers already live; Ritz-Carlton targeted Nov 2024, Andaz 2025; other reporting dates the actual openings Dec 2024 and 19 Dec 2025 — conflicted, OI-4). Through 2026 — POST 1928 retail (40,000 m2) still unopened; Sep 2026: occupancy ~96->98%, 40M+ visits/year claimed, second office tower + residence + two hotels slated by 2027. 2021-2023 rolling into this window — Scala cinema demolished by Chula (2021), site empty as of 2023; Hua Lamphong lost long-distance rail (19 Jan 2023) and pivots to cultural use toward its 2026 110th anniversary. Annually — Ratchaprasong NYE closures (Dec 2025: 6 roads, noon-to-05:00). Watch: next Treasury appraisal review could move Witthayu/Ploenchit from 1M toward 2M THB/sq wa."
+  },
+  {
+   "question_id": "Q12",
+   "question": "Uncertainties and what falls outside the score?",
+   "answer": "Outside the score: the daytime population gravity (hundreds of thousands of visitors on a ~40k residential base) that the ratings monetize but never count; RBSC's ~36 ha of members-only green and the royal palace garden; the unpriced cost of event-day road closures for residents; Hua Lamphong's final redevelopment direction. Uncertainties: hotel opening status at One Bangkok (conflicted sources); One Bangkok site size (104 vs 108 rai); the app's temple count (55) vs 6 named wats in OSM (category definition unknown); app rent-blend value differing between sibling files (38k/85k here vs 33.5k/74k quoted there); weekend-specific crowd counts (none published); heat/shade walking experience (no source); whether Pathum Wan's USD23/sqm mean is the highest of all 50 khet (not checked district-by-district).",
+   "claim_ids": [
+    "pathum-wan-c16",
+    "pathum-wan-c09",
+    "pathum-wan-c07",
+    "pathum-wan-c02"
+   ],
+   "limitations": [
+    "Community-forum and review platforms (Reddit/TripAdvisor 403) unavailable for experiential triangulation."
+   ],
+   "id": "Q12",
+   "notes": "Outside the score: the daytime population gravity (hundreds of thousands of visitors on a ~40k residential base) that the ratings monetize but never count; RBSC's ~36 ha of members-only green and the royal palace garden; the unpriced cost of event-day road closures for residents; Hua Lamphong's final redevelopment direction. Uncertainties: hotel opening status at One Bangkok (conflicted sources); One Bangkok site size (104 vs 108 rai); the app's temple count (55) vs 6 named wats in OSM (category definition unknown); app rent-blend value differing between sibling files (38k/85k here vs 33.5k/74k quoted there); weekend-specific crowd counts (none published); heat/shade walking experience (no source); whether Pathum Wan's USD23/sqm mean is the highest of all 50 khet (not checked district-by-district)."
+  }
+ ],
+ "editorial": {
+  "preview": "One khet, four khwaeng, the country's top land price and ten rail stations in 8.37 km2: Pathum Wan stacks five BTS stations, four MRT, a mainline terminus and ten boat piers onto 8.37 km2, wraps them around Lumphini Park's 57.6 ha — and prices every bit of it at rent 1.",
+  "guide_lead": "Pathum Wan is Bangkok compressed into 8.37 km2: Siam Paragon's 400,000 m2 and Siam Square's 4,200 shops on Crown Property and university land, a 57.6-ha royal-donation park that opens at 04:30, the 36.3-ha Royal Bangkok Sports Club racetrack sitting members-only in the middle, Chulalongkorn University anchoring two khwaengs, and since 25 October 2024 One Bangkok's THB-120bn district at Wireless x Rama IV with its own park and an underground MRT link. The registered population keeps shrinking (139,008 in 1992 to 40,077 in 2023) while footfall counters spin — Siam Paragon alone reports 150,000-200,000 visitors a day, and every New Year's Eve the police close six roads around Ratchaprasong from noon. Rents lead the city: district-mean USD23/sqm, top appraisals 1,000,000 THB per sq wa, and the blend of 38,000/85,000 THB maps cleanly onto the district's 1BR/2BR asking percentiles.",
+  "strengths": [
+   {
+    "text": "Ten stations inside one district: BTS Siam interchange plus Chit Lom, Phloen Chit, Ratchadamri and National Stadium; MRT Lumphini, Sam Yan, Hua Lamphong and Si Lom; the SRT terminus — ten stations inside one district, plus ten boat piers on two canals.",
+    "claim_ids": [
+     "pathum-wan-c05",
+     "pathum-wan-c06"
+    ]
+   },
+   {
+    "text": "Two major hospitals and a premium everyday layer in-khet: King Chulalongkorn Memorial (1,442 beds, Thai Red Cross, CU teaching hospital) and Police General (650 beds) on the same footprint as the city's newest 4,600-m2 supermarket.",
+    "claim_ids": [
+     "pathum-wan-c10"
+    ]
+   },
+   {
+    "text": "Lumphini Park is genuinely inside the polygon: 57.6 ha, 04:30-21:00 daily, a 2.5 km running loop and BMA operation, plus the 4.5-ha Centenary Park and One Bangkok's 8 ha of on-site greenery.",
+    "claim_ids": [
+     "pathum-wan-c08"
+    ]
+   },
+   {
+    "text": "One Bangkok materially upgraded the southern khwaeng from 25 Oct 2024: a 17-ha mixed district with three office towers trading, a 1.5 km Food Loop, and a direct underground walk from MRT Lumphini.",
+    "claim_ids": [
+     "pathum-wan-c04"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text": "Rent 1 is land-priced, not hype: 1,000,000 THB/sq wa appraisals on Phloen Chit, Witthayu and Rama I (country max), market trades to 3.9M, district-mean rent 28.5% above Bangkok — and the flagship towers price 9.1% above the district mean itself.",
+    "claim_ids": [
+     "pathum-wan-c07"
+    ]
+   },
+   {
+    "text": "About a third of the mapped green is not yours to use: the 36.3-ha Royal Bangkok Sports Club is members-only (grandstand on race Sundays excepted) and Sa Pathum Palace's 7.9-ha garden is royal ground.",
+    "claim_ids": [
+     "pathum-wan-c08",
+     "pathum-wan-c09"
+    ]
+   },
+   {
+    "text": "Crowd 1 is visitor arithmetic: 150-200k/day through Siam Paragon, ~400k/day through Siam Square, six roads closed for NYE — against roughly 40,000 registered residents, down from 139,008 in 1992.",
+    "claim_ids": [
+     "pathum-wan-c11",
+     "pathum-wan-c02"
+    ]
+   },
+   {
+    "text": "The Siam/Ratchaprasong core runs on mall hours and closed streets; ground-level street life between the megablocks is arterial traffic, and the district's mainline rail history left for Krung Thep Aphiwat in 2023.",
+    "claim_ids": [
+     "pathum-wan-c13",
+     "pathum-wan-c14"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text": "Morning: Lumphini opens 04:30 for runners, Saen Saep boats from 05:30 weekdays, office towers fill the Witthayu-Phloen Chit belt; the residential Rong Mueang side stays quiet.",
+    "claim_ids": [
+     "pathum-wan-c12",
+     "pathum-wan-c06"
+    ]
+   },
+   {
+    "text": "Afternoon: tutoring-school students flood Siam Square toward evening; campus life dominates Wang Mai; One Bangkok's towers hold a footfall split the operator puts at precisely 50/50 local-vs-destination.",
+    "claim_ids": [
+     "pathum-wan-c12",
+     "pathum-wan-c03",
+     "pathum-wan-c04"
+    ]
+   },
+   {
+    "text": "Evening: mall hours to ~22:00 carry the food and nightlife load (3,064/164 app counts); Lumphini is already closed at 21:00 — night green is private-estate only.",
+    "claim_ids": [
+     "pathum-wan-c09",
+     "pathum-wan-c12"
+    ]
+   },
+   {
+    "text": "Weekend/event: retail peaks (festive projections 400-450k/day group-wide), race Sundays every other week at RBSC, and NYE brings six-road closures from noon to 05:00.",
+    "claim_ids": [
+     "pathum-wan-c11",
+     "pathum-wan-c08"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text": "Khwaeng Lumphini (3.2-3.5 km2, 17,040 residents): the Ploenchit-Chidlom-Ratchadamri-Witthayu premium belt, Lumphini Park, and now One Bangkok — highest land prices in the country.",
+    "claim_ids": [
+     "pathum-wan-c01",
+     "pathum-wan-c07",
+     "pathum-wan-c04"
+    ]
+   },
+   {
+    "text": "Khwaeng Pathum Wan (2.2-2.3 km2, 2,746 residents): Siam Paragon, Siam Square, CentralWorld, Erawan Shrine, Police General Hospital, Suphachalasai Stadium — the visitor machine with almost nobody registered.",
+    "claim_ids": [
+     "pathum-wan-c01",
+     "pathum-wan-c03"
+    ]
+   },
+   {
+    "text": "Khwaeng Wang Mai (1.4 km2, 5,093 residents): the Chula campus, MBK, Jim Thompson House, Sam Yan's MRT node and Chulalongkorn Memorial Hospital — the student/hospital quarter.",
+    "claim_ids": [
+     "pathum-wan-c01",
+     "pathum-wan-c10"
+    ]
+   },
+   {
+    "text": "Khwaeng Rong Mueang (1.3-1.4 km2, 15,198 residents): Hua Lamphong station (SRT+MRT) and the district office — the most residential khwaeng, absorbing the district's mainline-rail loss.",
+    "claim_ids": [
+     "pathum-wan-c01",
+     "pathum-wan-c14",
+     "pathum-wan-c02"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text": "Premium seekers get the strongest address argument in Bangkok — top national land appraisals, flagship towers, a 57.6-ha park next door — if the asking percentiles fit.",
+    "claim_ids": [
+     "pathum-wan-c07",
+     "pathum-wan-c08"
+    ]
+   },
+   {
+    "text": "Car-free households are the clearest winners: ten stations, two canal boat lines, event-grade bus access, and a police-endorsed walk-the-skywalk culture on closure days.",
+    "claim_ids": [
+     "pathum-wan-c05",
+     "pathum-wan-c06",
+     "pathum-wan-c13"
+    ]
+   },
+   {
+    "text": "Students and academics: the Chula campus spans two khwaengs with Centenary Park, Sam Yan MRT and the tutoring capital within one district — but student-housing rents sit on the same expensive land.",
+    "claim_ids": [
+     "pathum-wan-c03",
+     "pathum-wan-c12",
+     "pathum-wan-c07"
+    ]
+   },
+   {
+    "text": "Poor fits: budget renters (1BR district percentile ~USD1,040/month), quiet-seekers near the retail core on weekends and event days, drivers during closures, and late-evening green users (park closes 21:00).",
+    "claim_ids": [
+     "pathum-wan-c15",
+     "pathum-wan-c11",
+     "pathum-wan-c09"
+    ]
+   }
+  ],
+  "uncertainties": [
+   {
+    "text": "One Bangkok hotel status conflicted: pre-opening coverage targeted Ritz-Carlton Nov 2024 and Andaz 2025, other reporting dates the openings Dec 2024 and 19 Dec 2025, while a Sep 2026 business report still lists both in the 2027 build-out — needs operator confirmation.",
+    "claim_ids": [
+     "pathum-wan-c04",
+     "pathum-wan-c16"
+    ]
+   },
+   {
+    "text": "One Bangkok site size differs inside the operator's own releases (104 rai PPTV vs 108 rai TH release vs ~17 ha EN).",
+    "claim_ids": [
+     "pathum-wan-c04"
+    ]
+   },
+   {
+    "text": "App's 55 temples vs 6 named Buddhist worship sites in OSM inside the khet — the app category is likely broader (shrines, spirit houses); definition unknown.",
+    "claim_ids": [
+     "pathum-wan-c01"
+    ]
+   },
+   {
+    "text": "District rent blend inconsistency across app data: this brief carries 38,000/85,000 THB while a sibling batch-3 file describes the district blend as 33,500/74,000 — reconcile downstream; Hipflat percentiles support ~37k/84k.",
+    "claim_ids": [
+     "pathum-wan-c07"
+    ]
+   },
+   {
+    "text": "Weekend-specific crowd counts do not exist publicly; crowd 1 rests on daily operator figures and police closures, not weekend measurements.",
+    "claim_ids": [
+     "pathum-wan-c11"
+    ]
+   },
+   {
+    "text": "Heat/shade and walking comfort on the plaza canyons: no source found (Reddit/TripAdvisor 403); walkability claims rest on infrastructure only.",
+    "claim_ids": [
+     "pathum-wan-c13"
+    ]
+   },
+   {
+    "text": "Lumphini Park's area: 57.6 ha official (360 rai) vs 52.3 ha computed from the OSM polygon; the app's 102.7-ha green selection is unpublished, so the composition is our reconstruction.",
+    "claim_ids": [
+     "pathum-wan-c08"
+    ]
+   },
+   {
+    "text": "Whether Pathum Wan's USD23/sqm district mean is the highest of all 50 khet was not verified district-by-district; 'most expensive district' is anchored on land appraisals + city-center rent comparisons instead.",
+    "claim_ids": [
+     "pathum-wan-c07"
+    ]
+   }
+  ]
+ },
+ "open_issues": [
+  {
+   "id": "OI-1",
+   "issue": "District rent blend inconsistent across app data (38,000/85,000 in this brief vs 33,500/74,000 quoted as 'the Pathum Wan district blend' in st.phloen-chit.json).",
+   "notes": "This file does not change app data. Hipflat district percentiles (1BR USD1,040; 2BR USD2,348/month) support ~37k/84k THB at 35-36 THB/USD, i.e. closer to 38/85. Coordinator should reconcile which blend the app carries for pathum-wan and propagate consistently."
+  },
+  {
+   "id": "OI-2",
+   "issue": "App fact '55 temples' vs OSM showing 6 named Buddhist worship sites in the khet.",
+   "notes": "OSM tagging is incomplete, but a 9x gap suggests the app's category includes shrines/spirit houses/temple-affiliated POIs. Definition needed before any recount; scores untouched here."
+  },
+  {
+   "id": "OI-3",
+   "issue": "One Bangkok site size: 104 rai (PPTV, and the operator's 2019-era TH releases) vs 108 rai (operator TH release 2024) vs ~17 ha (operator EN release 2024).",
+   "notes": "108 rai = 17.28 ha; 104 rai = 16.64 ha. Likely a rounding/gross-vs-net change in operator copy. Not resolvable from public sources."
+  },
+  {
+   "id": "OI-4",
+   "issue": "The Ritz-Carlton, Bangkok and Andaz One Bangkok opening status conflicted.",
+   "notes": "Forbes Thailand (Oct 2024): Ritz target Nov 2024, Andaz 2025, Fraser Suites 2026. Search-level results report openings Dec 2024 and 19 Dec 2025. The Nation (Sep 2026) still lists both hotels in the 'by 2027' build-out. Claim c04/c16 record the conflict; verify on operator pages before publishing hotel-open language."
+  },
+  {
+   "id": "OI-5",
+   "issue": "Khwaeng areas disagree across EN Wikipedia (sums 8.369: 1.423/1.423/2.276/3.247), TH Wikipedia (1.300/1.403/2.181/3.485) and OSM shoelace (3.39/2.12/1.28/1.37).",
+   "notes": "Khet total agrees (8.369-8.37) in both encyclopedias; khwaeng-level splits differ, probably different boundary road conventions. Use khet total; avoid khwaeng-precision claims."
+  },
+  {
+   "id": "OI-6",
+   "issue": "App's 102.7-ha green figure cannot be decomposed from published data.",
+   "notes": "Best reconstruction: Lumphini 57.6 + RBSC 36.3 + Centenary Park 4.5 + One Bangkok green 1.1-8 + Suphachalasai 3.4 = 99.5-106.9 ha. Lumphini itself splits 57.6 official vs 52.3 OSM. Polygon-level reconciliation is a coordinator check."
+  },
+  {
+   "id": "OI-7",
+   "issue": "No experiential sources for heat/shade/noise on the walking network.",
+   "notes": "Reddit/TripAdvisor 403 (known); no published microclimate study found for the Siam plaza canyons this round. Walkability claim (c13) is infrastructure-based; do not upgrade to experience claims without new sources."
+  },
+  {
+   "id": "OI-8",
+   "issue": "Crowd 1 evidence is daily-average operator data plus event closures; no weekend-specific counts.",
+   "notes": "RSTA's 600k/day is peak-era (2015-2019) association citation found only at search level. If a weekend-representative count is needed, BMA event filings or mall-operator disclosures are the likeliest sources."
+  },
+  {
+   "id": "OI-9",
+   "issue": "Boundary-straddlers: MRT Si Lom node sits on the khet side of Rama IV while serving Bang Rak's Silom corridor; two Pratunam piers straddle the Saen Saep line.",
+   "notes": "Counted in-khet by node PIP for the station/transport claims; flag for any future polygon-level scoring so the transport-10 attribution does not double-count with bang-rak."
+  }
+ ]
+}

@@ -1,0 +1,1175 @@
+{
+ "entity_key": "st.sam-yot",
+ "researched_on": "2026-11-07",
+ "batch": "2026-11-07-batch3-zcode-main",
+ "entity": {
+  "name_en": "Sam Yot station area",
+  "name_th": "ย่านสถานีสามยอด",
+  "mode": "MRT Blue line (BL30), underground",
+  "station_coords_published": "13.747250, 100.501333 (Thai Wikipedia); app anchor 13.747, 100.5023",
+  "unit_definition": "nearest-stop catchment (Voronoi intersect 800 m) around MRT Sam Yot on Charoen Krung / Mahachai Roads, old town (Rattanakosin outer island)",
+  "app_districts": [
+   "phra-nakhon",
+   "pom-prap-sattru-phai",
+   "samphanthawong"
+  ],
+  "app_facts_treated_as_given": {
+   "food_venues": 553,
+   "cafes": 78,
+   "nightlife": 17,
+   "temples": 41,
+   "park_ha": 4.4,
+   "area_km2": 1.4,
+   "rent_blend_thb": [
+    13500,
+    27000
+   ],
+   "ratings": {
+    "transport": 7,
+    "rent": 8,
+    "daily_essentials": 9,
+    "safety": 5,
+    "food": 9,
+    "green": 9,
+    "gym_sports": 7,
+    "vibe": 10,
+    "nightlife": 9,
+    "crowd": 2
+   }
+  },
+  "note": "App figures were not re-derived; this research tests and contextualizes them."
+ },
+ "claims": [
+  {
+   "id": "sam-yot-c01",
+   "question": "Q01",
+   "title": "Station identity: BL30, opened 29 July 2019, under Charoen Krung Road in Phra Nakhon",
+   "text": "Sam Yot is an underground MRT Blue line station, code BL30, opened 29 July 2019 on the Hua Lamphong-Lak Song extension. Its box runs under Charoen Krung Road from Sam Yot junction (crossing with Mahachai Road) to Unakan junction; the ticket-hall buildings sit between Charoen Krung Rd and Soi Sam Yot, split by Soi Charoen Krung 5 and 7. The station's registered location spans khwaeng Wang Burapha Phirom and khwaeng Sanam Ratsadon (Sanam Chai), Phra Nakhon district, at 13.747250 N, 100.501333 E (app anchor 13.747, 100.5023 differs by roughly 90 m). Its planned name was Wang Burapha, changed to Sam Yot; published 2021 ridership was 1,758,892. The operator (BEM) and Wikipedia agree on the entrance buildings and the former name.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สถานีสามยอด",
+     "url": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+     "date": "2026-11-01 (last revision shown by search index)",
+     "locator": "infobox + 'ที่ตั้ง', 'ทางเข้า-ออกสถานี'",
+     "body_read": true
+    },
+    {
+     "publisher": "Bangkok Expressway and Metro (BEM)",
+     "title": "แผนที่เส้นทาง สายสีน้ำเงิน สถานีสามยอด (BL30)",
+     "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=30",
+     "date": null,
+     "locator": "entrance list and facilities (escalator, lift, ramp, ATM)",
+     "body_read": false
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Sam Yot",
+     "url": "https://en.wikipedia.org/wiki/Sam_Yot",
+     "date": "2026-04-21 (last revision shown by search index)",
+     "locator": "lead paragraph: 'served by Sam Yot MRT station ... since July 29, 2019'",
+     "body_read": true
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c02",
+   "question": "Q01",
+   "title": "Three-district straddle is real: the station block is Phra Nakhon; Khlong Ong Ang beside it is a khet boundary",
+   "text": "The station itself and the historic Sam Yot / Wang Burapha quarter lie in Phra Nakhon district. Immediately east of the station, Khlong Ong Ang (the old city moat 'Khlong Rob Krung', dug 1783 under Rama I, registered as an ancient monument in 1976 by the Fine Arts Department) is an administrative boundary: the BMA Phra Nakhon district office states the canal 'is now the boundary between Phra Nakhon district and Samphanthawong district' for its restored stretch, while English Wikipedia places Saphan Lek (Damrong Sathit Bridge) on the boundary of Ban Bat subdistrict (Pom Prap Sattru Phai district, east/left bank) and Samphanthawong subdistrict (right bank). The Khlong Thom market / Mega Plaza / Saphan Lek toy blocks on the east bank are commonly addressed to Pom Prap subdistrict, Pom Prap Sattru Phai (DOPA 2025 lists that khwaeng at 11,795 residents). A 1.4 km2 catchment centred at Sam Yot junction plausibly touches all three khet — Phra Nakhon west of the canal, Pom Prap on the canal's north-east bank, Samphanthawong at the south-east (Saphan Han / Chakkrawat) fringe. The exact Voronoi polygon is not independently verifiable from public sources; the split between Pom Prap (upper canal) and Samphanthawong (lower canal) sections is a researcher reading of two official boundary statements.",
+   "kind": "factual_report",
+   "relation": "partial",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "คลองโอ่งอ่าง - สำนักงานเขตพระนคร",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+     "date": "2026-07-17 (page update shown by search index)",
+     "locator": "'ปัจจุบันเป็นเส้นแบ่งเขตระหว่างเขตพระนครกับเขตสัมพันธวงศ์'; canal history พ.ศ. 2326; registration พ.ศ. 2519; renovation พ.ศ. 2561-2562 (750 m x 2 banks)",
+     "body_read": false,
+     "note": "direct fetch returned HTTP 403; near-complete text extract obtained via search index, corroborated by TAT and Thai PBS World"
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Sam Yot",
+     "url": "https://en.wikipedia.org/wiki/Sam_Yot",
+     "date": "2026-04-21",
+     "locator": "'Saphan Lek over Khlong Ong Ang on the boundary between Ban Bat Subdistrict, Pom Prap Sattru Phai District (left) and Samphanthawong Subdistrict, Samphanthawong District (right)'",
+     "body_read": true
+    },
+    {
+     "publisher": "Department of Provincial Administration (stat.bora.dopa.go.th)",
+     "title": "สถิติประชากร พ.ศ. 2567 (2024 registry year file)",
+     "url": "https://stat.bora.dopa.go.th/new_stat/file/67/stat_t67.txt",
+     "date": "2025",
+     "locator": "row 10080100 ป้อมปราบ 11,795; row 10010200 วังบูรพาภิรมย์ 8,360",
+     "body_read": false,
+     "note": "plain-text gov data file returned by search index"
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c03",
+   "question": "Q01",
+   "title": "Neighbor verification: Sanam Chai and Wat Mangkon bound south/SE; no eastern rail stop inside 800 m; Democracy Monument is ~1.1 km north (outside); Giant Swing ~350-600 m (inside); Wat Ratchanatdaram at the northern fringe",
+   "text": "Computed as coordinate deltas from the station's published position (approx 111 km per degree latitude; no Overpass available): Blue line neighbours Sanam Chai (BL29) approx 0.6-0.7 km southwest and Wat Mangkon (BL31) approx 0.9-1.0 km southeast — both beyond the 800 m cap centre-to-centre, so their Voronoi cells clip this unit's southern and south-eastern edges, consistent with the app. To the east there is no rail stop within 800 m; MRT Phetchaburi on Phetchaburi Road sits roughly 4-5 km east and ARL Ratchaprarop roughly 3.5-4 km east — neither bounds this unit (the east side runs into the old-town blocks and Khlong Maha Nak direction, then Hua Lamphong's cell approx 1.5 km southeast). The Giant Swing / Wat Suthat at Sao Chingcha is approx 0.35-0.6 km northeast (inside; a Thai travel guide gives 600 m from Exit 3). Wat Ratchanatdaram / Loha Prasat is approx 0.7-0.75 km north-northeast — at the unit's fringe, which plausibly explains the conflicting unit attribution noted in batch 2 (its street address is given as Mahachai Road, Bang Khun Phrom, Phra Nakhon). Democracy Monument is approx 1.1 km north — outside the 800 m unit. Rattanakosin Exhibition Hall approx 0.85-0.9 km north — outside/at the edge.",
+   "kind": "estimate",
+   "relation": "partial",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สถานีสามยอด",
+     "url": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+     "date": "2026-11-01",
+     "locator": "พิกัด 13°44′50.1″N 100°30′04.8″E; adjacent stations สนามไชย / วัดมังกร",
+     "body_read": true
+    },
+    {
+     "publisher": "tripgether via LINE TODAY",
+     "title": "10 ที่เที่ยว ย่าน MRT สามยอด",
+     "url": "https://today.line.me/th/v3/article/peqejlG",
+     "date": "2024-02-07",
+     "locator": "เสาชิงช้า: 'MRT มาลงที่สถานีสามยอด ทางออกที่ 3 เดินทางต่อประมาณ 600 เมตร'; address 239 ถนนดินสอ แขวงบางขุนพรหม เขตพระนคร",
+     "body_read": false
+    },
+    {
+     "publisher": "researcher computation",
+     "title": "coordinate deltas to Democracy Monument (~13.7573, 100.5027), Wat Ratchanatdaram (~13.7534, 100.5046), Giant Swing (~13.7497, 100.5043), Thipsamai (~13.7448, 100.5003), Rattanakosin Exhibition Hall (~13.7549, 100.5019)",
+     "url": null,
+     "date": "2026-11-07",
+     "locator": "own estimate from widely published coordinates; venue coords are anchor-level, not surveyed",
+     "body_read": true,
+     "note": "venue coordinates are approximate; edge cases (Wat Ratchanatdaram, Rattanakosin Hall, Thipsamai, Krua Apsorn 169 Dinso) should be re-checked against the app's actual polygon"
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c04",
+   "question": "Q01",
+   "title": "Name origin: the three-peaked gate (ประตูสามยอด), demolished 1897; site now at Exit 1",
+   "text": "The name comes from a Grand Palace outer gate. A wooden gate (Phueat Thibat, ประตูพฤฒิบาศ) stood there from Rama I's reign; under Rama V it was replaced by a cement gate with three gateways, each topped by a spire — hence 'Sam Yot', literally three peaks. Italian engineer Carlo Allegri advised demolition as traffic grew; demolition began in the second half of 1897. In its heyday the area was an amphoe (district) of Phra Nakhon province, hosted the legal lottery house (โรงหวย ก ข) and foreign department stores (B Grimm at the intersection's south-east corner); it was downgraded to a tambon under Rama VII. A 2025 university walking-tour brief states the gate stood at today's MRT Sam Yot Exit 1 forecourt. The quarter's arc is documented as the 'Sam Yot-Wang Burapha-Phahurat' commercial district of the 4th-6th reigns (Museum Siam touring exhibition; M2F). This is the identity backbone for vibe 10.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "English Wikipedia",
+     "title": "Sam Yot",
+     "url": "https://en.wikipedia.org/wiki/Sam_Yot",
+     "date": "2026-04-21",
+     "locator": "gate history and demolition 'around the second half of 1897'",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "แยกสามยอด",
+     "url": "https://th.wikipedia.org/wiki/แยกสามยอด",
+     "date": "2023-01-31 (last revision shown by search index)",
+     "locator": "ประตูสามยอด three-arched gate with spires, Rama V; รื้อถอน พ.ศ. 2440 per that article (sources differ 1897 vs 2440/1897)",
+     "body_read": false
+    },
+    {
+     "publisher": "RYT9 (DPU Tourism Faculty press)",
+     "title": "ชวน 'ย้อนรอยวังบูรพา' ผ่าน Walking Tour",
+     "url": "https://www.ryt9.com/s/prg/3585943",
+     "date": "2025-02-27",
+     "locator": "'ปัจจุบันบริเวณดังกล่าวอยู่ด้านหน้าสถานี MRT สามยอด (ทางออก 1)'; Hotel Kacha opposite the station in a former princely residence",
+     "body_read": false
+    },
+    {
+     "publisher": "M2F / Museum Siam archives",
+     "title": "พระนคร on the Move: สามยอด-วังบูรพา-พาหุรัด",
+     "url": "https://www.m2fnews.com/lifestyle/work-and-life/column/travel/53724",
+     "date": null,
+     "locator": "exhibition zones on the quarter's modernisation",
+     "body_read": false
+    }
+   ],
+   "notes": "Thai-language sources disagree on the demolition year (EN wiki: 1897; th.wikipedia แยกสามยอด and MGR Online: 2440 BE = 1897 — these agree; the RYT9 retelling omits the year). No contradiction after conversion: 2440 BE = 1897 CE."
+  },
+  {
+   "id": "sam-yot-c05",
+   "question": "Q03",
+   "title": "Transport: 3 station entrances, ~10 bus routes, no BTS; first/last trains; Purple line interchange under construction",
+   "text": "Blue line entrances: Building 1 on Mahachai Road at Sam Yot junction (facing Rommaninat Park and the Corrections Museum; escalator), Building 2 at Soi Charoen Krung 5/7 (lift only), Building 3 on the Burapha/Unakan side (escalator) for Wat Suthat, Old Siam Plaza, Sao Chingcha and the City Hall direction — the entrance cluster is on the Charoen Krung/Mahachai side, not on Dinso Road. Service per Thai Wikipedia: toward Lak Song first train 05:52 (Mon-Fri) / 06:01 (weekends-holidays), last 00:12; toward Tha Phra last 23:26 (weekdays). Buses from the adjacent stops: 1, 8, 25, 35, 43, 48, 53 (loop), 73, 507, 508 and others on Charoen Krung and Mahachai roads; moto-taxi connections. No BTS line reaches the old town. The Purple line southern extension will make Sam Yot interchange PP23, with four listed future exits (Thonon Luang Rd; Suan Sam Yot park / Saphan Damrong Sathit / Vachiratham 72 arch; Soi Sirichai / Rommaninat Park; Sam Yot connecting to the Blue line). Transport 7 is coherent: heavy MRT + bus coverage, no BTS, entrances offset from the Dinso side.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สถานีสามยอด",
+     "url": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+     "date": "2026-11-01",
+     "locator": "ทางเข้า-ออกสถานี (สายสีน้ำเงิน / สายสีม่วง), เวลาให้บริการ table, bus tables",
+     "body_read": true
+    },
+    {
+     "publisher": "Bangkok Expressway and Metro (BEM)",
+     "title": "สถานีสามยอด (BL30) entrance details",
+     "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=30",
+     "date": null,
+     "locator": "entrance descriptions; facilities escalator/lift/ramp",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c06",
+   "question": "Q04",
+   "title": "Vibe rests on heritage fabric and adaptive reuse, not on commerce density",
+   "text": "The character claims: station architecture in Rama V-era / Chino-Portuguese style echoing the old gate (operator and travel press); a protected historic quarter — the canal frontage is a Fine Arts Department registered ancient monument and the area carries a building-tone control law keeping facades white-cream (a 2025 interior-design feature on a canal-side cafe conversion states this directly). Everyday texture: old restaurants from residents' childhoods still trading alongside newer openings, 'several good bars' nearby, walkable to both Yaowarat and Rattanakosin, in a resident-family's account (ReadtheCloud, 2025-12-19). Adaptive reuse is visible: a 50-year-old farm-machinery warehouse on Mahachai Road 775 became Piccolo Vicolo cafe plus a fourth-floor guest suite (2025 articles), and Hotel Kcha/Kacha occupies a former princely residence opposite the station. The quarter's identity story ('Sam Yot-Wang Burapha-Phahurat', 4th-6th reign modernisation) is curated in a Museum Siam exhibition. Vibe 10 reads as identity/heritage-based rather than commerce-based.",
+   "kind": "reported_perception",
+   "relation": "partial",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "room magazine (Baan Lae Suan)",
+     "title": "Piccolo Vicolo สาขาวังบูรพา-สามยอด คาเฟ่ริมคลองโอ่งอ่าง",
+     "url": "https://room.baanlaesuan.com/357147/commercial/cafe/piccolo-vicolo-cafeat-wang-burapha-samyot",
+     "date": "2025-05-04",
+     "locator": "โบราณสถานขึ้นทะเบียนโดยกรมศิลปากร; 'ย่านประวัติศาสตร์มีกฎหมายการคุมโทนอาคารในโทนสีขาว-ครีม'; 50-year building conversion; address 775 ถนนมหาไชย",
+     "body_read": false
+    },
+    {
+     "publisher": "ReadtheCloud",
+     "title": "Poco House ... Piccolo Vicolo Cafe ย่านวังบูรพา",
+     "url": "https://readthecloud.com/travel/have-a-nice-stay/poco-house-bangkok/",
+     "date": "2025-12-19",
+     "locator": "resident quote: 'ร้านอาหารเก่าแก่ ... ยังเปิดอยู่ ในขณะที่ร้านใหม่ ๆ ก็เปิดเพิ่มขึ้น มีบาร์ดี ๆ หลายแห่ง อยู่ใกล้เยาวราชและเกาะรัตนโกสินทร์'",
+     "body_read": false
+    },
+    {
+     "publisher": "tiewgan / aroundonline",
+     "title": "MRT สามยอด / เที่ยวย่านสามยอด",
+     "url": "https://tiewgan.com/travel-around-mrt-samyot-station/",
+     "date": "2021-01-19",
+     "locator": "station architecture สถาปัตยกรรมสมัยรัชกาลที่ 5 + ชิโนโปรตุกีส",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c07",
+   "question": "Q04",
+   "title": "Evening life is event-driven and uneven: official Fri-Sun walking street schedule vs documented post-COVID stagnation (counter-view)",
+   "text": "Official schedule: BMA's district-office page and TAT describe Khlong Ong Ang Walking Street every Friday-Sunday 16:00-22:00 along 1.5 km of both banks (Damrong Sathit to Saphan Han/Bophit Phimukh bridges), with free 30-minute kayak sessions (last queue 20:00) from the Phra Nakhon bank near Saphan Lek Square, street art, live music. Counter-view: a 2024-08-26 Thairath feature reports the canal area stagnant after COVID — a vendor compared the current year to last as far worse ('now it is like being in the ICU'), proposed shrinking the market to Sat-Sun 13:00-19:00, and activity has survived mainly through occasional government festivals (BMA/TAT 'Walking Street Food ONG ANG CANAL', 8-12 Aug 2024, 12:00-22:00, Saphan Han to Saphan Bophit Phimukh). Wongnai user reviews dated 2025-03-22 and 2025-09-11 similarly describe quiet daytime, few shops open, and kayak/live-music activities suspended at times, while praising evening walks and murals. In 2026 the area anchored a free four-canal 'Rattanakosin Walk Market' (24-31 July 2026, 09:00-21:30, Time Out Bangkok). Verdict: vibe 10 is defensible for identity and event evenings; ordinary weekday evenings are thin.",
+   "kind": "reported_perception",
+   "relation": "inside",
+   "scope": "corridor",
+   "sources": [
+    {
+     "publisher": "TAT Newsroom",
+     "title": "Award-winning Khlong Ong Ang Walking Street isn't your average walking street",
+     "url": "https://www.tatnews.org/2021/03/award-winning-khlong-ong-ang-walking-street-isnt-your-average-walking-street/",
+     "date": "2021-03-16",
+     "locator": "Fri-Sun 16.00-22.00; 1.5 km both banks; 2-3 min stroll from Sam Yot MRT; UN-Habitat 2020 Asian Townscape Award",
+     "body_read": true
+    },
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "คลองโอ่งอ่าง",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+     "date": "2026-07-17",
+     "locator": "walking street Fri-Sun 16.00-22.00 Damrong Sathit to Bophit Phimukh; kayak 30-min rounds, last queue 20:00 at Saphan Lek Square (Phra Nakhon bank)",
+     "body_read": false,
+     "note": "403 on direct fetch; corroborated by TAT full read"
+    },
+    {
+     "publisher": "Thairath",
+     "title": "'คลองโอ่งอ่าง' แม้เวลาอาจหยุดนิ่ง แต่ขอบคุณที่พยายาม",
+     "url": "https://www.thairath.co.th/scoop/theissue/2810629",
+     "date": "2024-08-26",
+     "locator": "vendor quote 'ตอนนี้เหมือนเข้าไอซียู'; proposal Sat-Sun 13.00-19.00; Aug 2024 revival event 8-12 ส.ค. 12.00-22.00",
+     "body_read": false,
+     "note": "direct fetch 403; long verbatim extract via search index"
+    },
+    {
+     "publisher": "Wongnai (user reviews)",
+     "title": "รีวิว ถนนคนเดินคลองโอ่งอ่าง",
+     "url": "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3",
+     "date": "2025-03-22 and 2025-09-11 (review dates)",
+     "locator": "'ในช่วงกลางวันจะเงียบหน่อย ร้านเปิดไม่มากนัก'; 'งดกิจกรรมภายเรือคายัค และดนตรีสด'",
+     "body_read": false
+    },
+    {
+     "publisher": "Time Out Bangkok",
+     "title": "ชมของดีพระนคร ถนนคนเดิน 4 คลองรอบรัตนโกสินทร์",
+     "url": "https://www.timeout.com/bangkok/th/news/rattanakosin-walk-market-072326",
+     "date": "2026-07-22",
+     "locator": "event 24-31 ก.ค. 2569 (2026), 09.00-21.30, free; canals incl. Khlong Ong Ang",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c08",
+   "question": "Q05",
+   "title": "Democracy Monument anchors protest geography but is ~1.1 km north — outside this unit",
+   "text": "The Democracy Monument at Ratchadamnoen Klang x Dinso Road is Bangkok's default assembly point, and Dinso Road itself is repeatedly named in police traffic advisories around rallies (e.g., 19 July 2023 protest of roughly 300 people at the monument, with closures on Ratchadamnoen Klang and Dinso; a 2 Aug 2025 patriotic rally also gathered there; in Nov 2021 police fenced the circle entirely). A May-1992 memorial park on Ratchadamnoen had a public-park build-out planned with BMA funding in 2568 (2025) per a Taejai crowdfunding page (fundraising window 13 Aug 2024 - 31 Dec 2025). Measured from the station the monument is approx 1.1 km north — outside the 800 m unit — so rally energy reaches this catchment only as occasional road closures at the northern fringe (Ratchadamnoen/Dinso), not as a unit-level crowd or venue. Editors should not credit event vibrancy to this unit on the monument's account.",
+   "kind": "factual_report",
+   "relation": "outside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Naewna",
+     "title": "การชุมนุมมวลชน 'รวมพลังแผ่นดินปกป้องอธิปไตย'",
+     "url": "https://www.naewna.com/politic/903954",
+     "date": "2025-08-02",
+     "locator": "rally at Democracy Monument, flags and donations",
+     "body_read": false
+    },
+    {
+     "publisher": "Thansettakij",
+     "title": "ม็อบ 19 ก.ค.66 อนุสาวรีย์ประชาธิปไตย",
+     "url": "https://www.thansettakij.com/thailand-elections/election-monitor/571157",
+     "date": "2023-07-19",
+     "locator": "~300 participants, stage on the circle; police advised 21:00 clearance",
+     "body_read": false
+    },
+    {
+     "publisher": "Thai Post",
+     "title": "ตร.ห้ามเข้าอนุสาวรีย์ประชาธิปไตย ม็อบ 3 นิ้วเปลี่ยนจุด",
+     "url": "https://www.thaipost.net/x-cite-news/25108/",
+     "date": "2021-11-14",
+     "locator": "police barriers closing all approaches incl. Dinso at Wanitchat and Sao Chingcha junctions",
+     "body_read": false
+    },
+    {
+     "publisher": "Taejai",
+     "title": "สวนสาธาระ ณ ประชาธิปไตย พฤษภาประชาธรรม",
+     "url": "https://taejai.com/th/project/OT-democracyPARK",
+     "date": "2024-08-13 to 2025-12-31 (fundraising window)",
+     "locator": "Santi Phrom park on Ratchadamnoen; BMA to budget construction in 2568",
+     "body_read": false
+    },
+    {
+     "publisher": "researcher computation",
+     "title": "station-to-monument distance",
+     "url": null,
+     "date": "2026-11-07",
+     "locator": "coordinate delta ~1.1 km",
+     "body_read": true
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c09",
+   "question": "Q02",
+   "title": "Safety 5 has no visible unit-specific evidence base — flagged as unresolved",
+   "text": "Neither English nor Thai searches surfaced crime statistics, incident reporting or resident-safety discourse specific to the Sam Yot catchment. What exists is generic and district-level: travel-guide genre notes that old-town backstreets empty and dim after roughly 22:00 and that the main reported risks around Bangkok's old-town tourist zones are scams, overcharging and pickpocketing rather than violent crime (snippet-level only); Chinatown/Khao San tourist-fringe spillover is the usual concern in the genre. Counter-evidence: the unit hosts government offices (BMA City Hall approx 0.45 km north), a patrolled public park with facilities until 21:00, an MRT station with staffed entrances, and 2025 user reviews describe relaxed evening walks on the canal without safety complaints. Nothing unit-specific supports a 5; nothing justifies raising it either — the basis looks generic (old-town night emptiness, tourist-zone friction). Treat safety 5 as unexplained by current evidence.",
+   "kind": "researcher_inference",
+   "relation": "unknown",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "Thailand Wanderlust (travel guide)",
+     "title": "Khao San Road Survival Guide",
+     "url": "https://www.thailandwanderlust.com/blog/khao-san-road-bangkok",
+     "date": null,
+     "locator": "safety tips genre; snippet-only via search summary — corroborative, not sole evidence",
+     "body_read": false
+    },
+    {
+     "publisher": "Wongnai (user reviews)",
+     "title": "รีวิว ถนนคนเดินคลองโอ่งอ่าง",
+     "url": "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3",
+     "date": "2025-03-22 / 2025-09-11",
+     "locator": "relaxed evening-walk reviews, no safety complaints",
+     "body_read": false
+    },
+    {
+     "publisher": "researcher assessment",
+     "title": "absence finding after EN+TH queries",
+     "url": null,
+     "date": "2026-11-07",
+     "locator": "queries logged: 'old town safe at night', Thai ย่านเมืองเก่า safety variants",
+     "body_read": true
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c10",
+   "question": "Q06",
+   "title": "Green: Rommaninat Park (ex-prison, free, until 21:00) plus always-open canal promenade; 4.4 ha figure not independently confirmed",
+   "text": "Rommaninat Park (Mahachai Road, facing Exit 1) occupies the former Bangkok Prison (Klong Prem Central Prison's original site; the prison moved to Chatuchak in 1972-era relocations). Bangkok's BMA green-spaces portal lists it as 'Suan Romanee Nat' with free admission, daily hours of roughly 04:00/05:00-21:00; retained prison walls and guard towers survive inside; facilities include an outdoor fitness area with machines and free weights, children's playground, skatepark and basketball court; the small Corrections Museum on its edge opens Thursday-Saturday. The second green asset is the Khlong Ong Ang promenade: 750 m along both banks (1,500 m total, renovated 2018-2019 per BMA), walkable at any time (the Fri-Sun market is an overlay, not a gate), kayak sessions on weekends. The Purple line exit list also names a small Suan Sam Yot park near Saphan Damrong Sathit. Green 9 in a 1.4 km2 unit rests on this park-plus-promenade combination; caveat: the app's 4.4 ha park figure could not be independently confirmed because the BMA park page returned HTTP 403 — hours and facilities are corroborated across TAT and other pages, the area figure remains app-only.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "BMA Greener Bangkok (official parks portal)",
+     "title": "Suan Romanee Nat",
+     "url": "https://greener.bangkok.go.th/en/park/suan-romanee-nat",
+     "date": null,
+     "locator": "hours and free admission (via search summary)",
+     "body_read": false,
+     "note": "HTTP 403 on direct fetch"
+    },
+    {
+     "publisher": "Tourism Authority of Thailand",
+     "title": "Romaneenart Park",
+     "url": "https://www.tourismthailand.org/Attraction/romaneenart-park",
+     "date": null,
+     "locator": "park 05:00-21:00 variant, museum Thu-Sat, facilities incl. skatepark/basketball (via search summary)",
+     "body_read": false
+    },
+    {
+     "publisher": "Thailand Life",
+     "title": "Rommaninat Park",
+     "url": "https://thailandlife.info/rommaninat-park-bangkok",
+     "date": null,
+     "locator": "former Klong Prem prison site; hours 04:00-21:00 variant (via search summary)",
+     "body_read": false
+    },
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "คลองโอ่งอ่าง",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+     "date": "2026-07-17",
+     "locator": "renovation พ.ศ. 2561-2562, 750 m per bank; promenade open daily",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c11",
+   "question": "Q07",
+   "title": "Rent 8 is backed by real listings: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR condos; 20,000 THB old 4-storey shophouse",
+   "text": "Concrete asks inside the catchment: a 40 sqm studio apartment 'The Gallery Place' in khwaeng Wang Burapha Phirom listed 11,000-13,000 THB/month (keycard, CCTV, listing updated 6 Aug 2025) at approx 74-100 m from Sam Yot station; PropertyScout lists 1-bed condos 'near MRT Sam Yot' (Khao San/Sanam Chai-side addresses, approx 350 m) at 14,000-15,000 THB/month and 2-beds at 20,000-28,000; a 4-storey old shophouse on Thithong Road (khwaeng Wat Ratchabophit, near Old Siam) offered at 20,000 THB/month as-is after a 20-year tenancy (listed 4 Dec 2025 per the platform's age note). Wider district context: whole-shophouse asks in Phra Nakhon run 45,000-85,000 THB (PropertyHub), i.e., the cheap stock is rooms and small units, not whole buildings. The app's editorial blend 13,500/27,000 THB is consistent with observed small-unit asks; '8 = cheap for the centre' is supported. Caveat: portal asks, not transacted rents.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "building",
+   "sources": [
+    {
+     "publisher": "BaanFinder (listing)",
+     "title": "ติด MRT สามยอด พระนคร ให้เช่าหอพัก/อพาร์ทเม้นท์ วังบูรพาภิรมย์",
+     "url": "https://www.baanfinder.com/th/property/ติดmrtสามยอด-พระนคร--52688826",
+     "date": "2025-08-06 (listing update)",
+     "locator": "11,000-13,000 THB; 40 sqm studio; 'เดินเพียง 100 เมตรถึง MRT สามยอด'; station distance tag 74 m",
+     "body_read": false
+    },
+    {
+     "publisher": "PropertyScout",
+     "title": "อสังหาฯ ย่านวังบูรพาภิรมย์ เช่า",
+     "url": "https://propertyscout.co.th/กรุงเทพ/วังบูรพาภิรมย์/ให้เช่า/",
+     "date": null,
+     "locator": "1BR 14,000-15,000 (34-52 sqm, 350 m from station), 2BR 20,000; townhouses 25,000-40,000",
+     "body_read": false
+    },
+    {
+     "publisher": "Piece/OnlineOops (listing)",
+     "title": "ให้เช่าตึกแถว 4 ชั้น ย่านเมืองเก่า ใกล้ MRT สามยอด",
+     "url": "https://piece.onlineoops.com/2016276",
+     "date": "2025-12-04 approx (posted '44 weeks' before 2026-11-07)",
+     "locator": "20,000 THB/month, as-is, 20-year previous tenancy, Thithong Rd, khwaeng Wat Ratchabophit",
+     "body_read": false
+    },
+    {
+     "publisher": "PropertyHub via WebSearch summary",
+     "title": "shophouse for rent Phra Nakhon",
+     "url": "https://propertyhub.in.th/en/shophouse-for-rent/phra-nakhon",
+     "date": null,
+     "locator": "shophouses ~45,000 (71 sqm) to ~85,000 (500 sqm)",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c12",
+   "question": "Q07",
+   "title": "Housing stock: old shophouses and low-rises in a tone-controlled conservation zone; residents leaving; tourism conversions",
+   "text": "The housing is overwhelmingly old shophouse fabric and small low-rise apartment stock rather than new condos: Rattanakosin conservation rules (including the white-cream tone-control law on the canal frontage) constrain redevelopment, and quoted renovation cases work with 50-year-old buildings kept 'as found'. The resident base is shrinking — registered population of khwaeng Wang Burapha Phirom fell from 10,414 (2019 DOPA) to 8,344 (BMA, 4 Feb 2025) and 8,238 (DOPA 2568 release), with khet Phra Nakhon overall at 39,264 people over 5.536 km2. Meanwhile tourism demand converts stock: guesthouses on Thani Road at 650-1,250 THB/night, canal-side cafe/Airbnb conversions (2025), hostels by the station. Condition stories: the as-is 20-year-tenant shophouse listing and the 1970s-warehouse conversion both show aging but salvageable fabric; no wholesale renewal scheme for this catchment surfaced — change happens building by building.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "O1.3/O1.5 พื้นที่การปกครอง + สถิติประชากร",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/17385",
+     "date": "2025-02-04 (data as-of date)",
+     "locator": "แขวงวังบูรพาภิรมย์ 8,344; สำราญราษฎร์ 2,616; เสาชิงช้า 1,830; บางขุนพรหม 3,628; khet total 39,264; area 5.536 km2",
+     "body_read": false
+    },
+    {
+     "publisher": "Department of Provincial Administration",
+     "title": "สถิติประชากร พ.ศ. 2567 file",
+     "url": "https://stat.bora.dopa.go.th/new_stat/file/67/stat_t67.txt",
+     "date": "2025",
+     "locator": "10010200 วังบูรพาภิรมย์ 8,360 / houses 5,322 (2024 registry); 2019 dump shows 10,414",
+     "body_read": false
+    },
+    {
+     "publisher": "room magazine (Baan Lae Suan)",
+     "title": "Piccolo Vicolo conversion",
+     "url": "https://room.baanlaesuan.com/357147/commercial/cafe/piccolo-vicolo-cafeat-wang-burapha-samyot",
+     "date": "2025-05-04",
+     "locator": "tone-control law; 50-year building kept in original finish",
+     "body_read": false
+    },
+    {
+     "publisher": "9apartment",
+     "title": "Thai Cozy House, Thani Rd",
+     "url": "https://www.9apartment.com/ไทย-โคซี่-เฮ้าส์-Thai-Cozy-House-พระนคร-กรุงเทพ",
+     "date": "2025-07-30 (page)",
+     "locator": "650-1,250 THB/night guesthouse, first guesthouse on Thani Rd",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c13",
+   "question": "Q08",
+   "title": "Daily essentials: dawn wet market (Trok Mo 05:00-10:00), Khlong Thom fresh zone, market malls at both exits; clinics on Dinso/Mahachai; no general hospital verified inside the unit",
+   "text": "Fresh food: Trok Mo market (Ban Mo/Trok Mo, walkable from Sam Yot per a 2026 BMA-adjacent market roundup: 05:00-10:00, access 'MRT Sam Yot'); Khlong Thom market's fresh-goods zone 05:00-09:00 (TrueID list; the canal-side market blocks are at the station's edge). Retail for goods: Exit 1 gives Khlong Thom second-hand, Mega Plaza Saphan Lek (toy mall) and China World (textiles) per an Around magazine walk of the exits; Exit 3 gives Old Siam Plaza (silk, Thai desserts at Lan Fueang Nakhon) and the Phahurat/Little India fabric cluster. Health: clinics sit on the unit's streets — Dr. Somchai Clinic, 114-116 Dinso Rd (operating since 1971), Worrawit skin clinic opposite Rommaninat Park on Mahachai Rd — but no general or 24-hour hospital was verified inside the catchment; the nearest public general hospitals (e.g., Central Hospital, Police General Hospital, Chulalongkorn Memorial) are several km away (researcher estimate 2-4 km), so serious care requires a ride; BMA's health-map portal indexes district clinics (ศบส.) for the khet. Daily-essentials 9 is supported by market density; the hospital gap is the one soft spot.",
+   "kind": "factual_report",
+   "relation": "partial",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "TrueID Food",
+     "title": "แจกพิกัด 50 เขตตลาดสด กทม. 2026",
+     "url": "https://food.trueid.net/detail/03nwM0BkoZA5",
+     "date": "2026-01-16",
+     "locator": "ตลาดตรอกหม้อ 05.00-10.00, 'MRT สามยอด'; ตลาดคลองถม ของสด 05.00-09.00",
+     "body_read": false
+    },
+    {
+     "publisher": "Around magazine",
+     "title": "เที่ยวย่านสามยอด",
+     "url": "https://www.aroundonline.com/bangkok-news-18/",
+     "date": "2020-09-23",
+     "locator": "Exit 1: ตลาดคลองถม, เมก้า พลาซ่า, ไชน่าเวิลด์; Exit 3: ดิโอลด์สยาม, ลานเฟื่องนคร, พาหุรัด Little India",
+     "body_read": false
+    },
+    {
+     "publisher": "LocalThailand (Google-review aggregation)",
+     "title": "คลินิกและศูนย์การแพทย์ในเขตพระนคร",
+     "url": "https://localthailand.net/muat/khlinik/bangkok/phra-nakhon",
+     "date": null,
+     "locator": "Dr. Somchai Clinic 114-116 Dinso (since 1971); คลินิกผิวหนังวรวิทย์ ตรงข้ามสวนรมณีนาถ 631/7 มหาไชย",
+     "body_read": false
+    },
+    {
+     "publisher": "HDmall",
+     "title": "รวมโรงพยาบาลและคลินิกใกล้ MRT สามยอด (massage/clinic list)",
+     "url": "https://hdmall.co.th/c/nearby-mrt-samyod-pkg-massage",
+     "date": null,
+     "locator": "only massage/wellness clinics listed near the station — no general hospital entry",
+     "body_read": false
+    },
+    {
+     "publisher": "Thansettakij",
+     "title": "SSO hospital list Bangkok 2569",
+     "url": "https://www.thansettakij.com/health-wellness/wellbeing/648943",
+     "date": "2026-01-14",
+     "locator": "government/SSO hospitals citywide — none in old-town Phra Nakhon",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c14",
+   "question": "Q08",
+   "title": "Food anchors and the 553-venue figure: famous names sit at the unit's core and edges",
+   "text": "Named anchors: Thipsamai Pad Thai (313-315 Mahachai Road, khwaeng Sanam Ratsadon, approx 290 m southwest of the station by coordinate estimate) — 80-plus-year-old egg-wrapped pad thai; official site lists daily 09:00-24:00, closed Tuesdays (a Nov 2024 roundup confirms 09:00-00:00, the hours having widened from the historic evening-only queues). Krua Apsorn (169 Dinso Road, family-run since 1996, Michelin Guide listing nine consecutive years per an Oct 2025 diner review; open daily 10:30-20:30 per Wongnai) sits on Dinso toward City Hall — position relative to the 800 m edge is uncertain (likely core-to-edge). Canal-side and Indian eateries named by the BMA district page (MAMA Restaurant 20+ years, Royal India, Tonny's) line the canal and Phahurat. With 553 mapped food venues across market corridors (Khlong Thom, Ban Mo, Phahurat, Old Siam) and shophouse kitchens, food 9 is coherent.",
+   "kind": "factual_report",
+   "relation": "partial",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Thipsamai (official site)",
+     "title": "ผัดไทยทรงเครื่อง - ทิพย์สมัย",
+     "url": "https://thipsamai.com/thai/padthai-song-krueng/",
+     "date": null,
+     "locator": "313-315 ถ. มหาไชย; Mon-Sun 9:00-24:00, closed Tue",
+     "body_read": false
+    },
+    {
+     "publisher": "Ryoii Review",
+     "title": "31 ร้านปิดดึก ... ทิพย์สมัย ผัดไทยประตูผี",
+     "url": "https://www.ryoiireview.com/article/7-restaurants-open-over-midnight/",
+     "date": "2024-11-01",
+     "locator": "branch ประตูผี 09.00-00.00 closed Tue; 'ร้านดัง ... 80 ปี'",
+     "body_read": false
+    },
+    {
+     "publisher": "Wongnai",
+     "title": "ร้าน ครัวอัปษร ถนนดินสอ",
+     "url": "https://www.wongnai.com/restaurants/kruaapsorn-dinsor",
+     "date": "reviews incl. 2025-10-16 and 2025-12-05",
+     "locator": "169 ถนนดินสอ; open daily 10:30-20:30; 'Michelin Guide 9 ปีซ้อน'; near City Hall",
+     "body_read": false
+    },
+    {
+     "publisher": "Ryoii Review",
+     "title": "KruaApsorn สาขาถนนดินสอ",
+     "url": "https://www.ryoiireview.com/restaurant/view/19256",
+     "date": null,
+     "locator": "family business since พ.ศ. 2539; Michelin 5 years at time of writing",
+     "body_read": false
+    },
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "คลองโอ่งอ่าง",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+     "date": "2026-07-17",
+     "locator": "canal-side restaurants named: ต.โชคชัย, MAMA Restaurant (20+ ปี), Little Phutan, Royal India, Tonny",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c15",
+   "question": "Q09",
+   "title": "Nightlife = small bars (Swing Bar by Ching Cha, Tai Soon Bar, Foxhole BKK, Motu, Qasbar), not clubs; Chinatown's Soi Nana belongs to Wat Mangkon's unit",
+   "text": "What the 17 mapped venues plausibly are: small bars and rooftops in the Sao Chingcha/Wang Burapha pocket — Wongnai's 'Tha Phra Chan-Wang Burapha' bar list names Swing Bar by Ching Cha (rooftop bar), Tai Soon Bar, Foxhole BKK, Motu Bangkok, Qasbar, Here We Go Bar and INN A DAY in this zone; a 2025 resident-family account also notes 'several good bars' around the quarter. The dense craft-bar strip of Soi Nana (Chinatown, e.g., Pijiu Bar est. 2017) and Yaowarat's new cocktail rooms (Goldsmith Bar above Chop Chop, 2025) sit southeast — those fall to st.wat-mangkon; the Khao San/Rambuttri strip is approx 1.4 km northwest (other units). Nightlife 9 with only 17 in-unit venues most plausibly rates access to both neighbouring nightlife districts plus in-unit small bars — that interpretation should be made explicit in the app's editorial.",
+   "kind": "reported_perception",
+   "relation": "partial",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Wongnai",
+     "title": "ร้านกึ่งผับ/ร้านเหล้า/บาร์ ยอดนิยม ท่าพระจันทร์-วังบูรพา",
+     "url": "https://www.wongnai.com/restaurants?categories=15&domain=1&regions=54015",
+     "date": null,
+     "locator": "named bars list (Swing Bar by Ching Cha 4.1/14 reviews; Tai Soon Bar; Foxhole BKK; Motu Bangkok; Qasbar)",
+     "body_read": false
+    },
+    {
+     "publisher": "ReadtheCloud",
+     "title": "Poco House",
+     "url": "https://readthecloud.com/travel/have-a-nice-stay/poco-house-bangkok/",
+     "date": "2025-12-19",
+     "locator": "'มีบาร์ดี ๆ หลายแห่ง' in the quarter, near Yaowarat and Rattanakosin",
+     "body_read": false
+    },
+    {
+     "publisher": "Time Out Bangkok",
+     "title": "รวมบาร์เปิดใหม่ 2568",
+     "url": "https://www.timeout.com/bangkok/th/bars/best-opening-bars-in-2025",
+     "date": "2025-09-29",
+     "locator": "Goldsmith Bar, 328 ถนนเยาวราช (Chinatown side)",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c16",
+   "question": "Q10",
+   "title": "Walkability: fine-grained grid but Dinso/Unakan flagged as car-priority; 2025 pilots link the station to Dinso on foot/bike",
+   "text": "A 2025 Urban Ally study of the Sam Yot station area (input to BMA's Bangkok pedestrian-bicycle master plan, plan horizon 2567-2575 BE = 2024-2032, study radius 2 km from the station) describes a small-block grid crossed by parallel spines with Tanao Road as the connecting spine and Sam Yot station at the Charoen Krung x Mahachai crossing; it flags the walkability problem that several roads (Tanao, Dinso, Charoen Krung, Tri Phet) carry both collector and access traffic, that road space is allocated to cars, and that some narrow secondary roads lack footways. Short-term pilots chosen: a cycle lane on Siriphong Road and a pedestrian-priority treatment of the road in front of BMA City Hall, explicitly 'to make the Sam Yot station to Dinso Road link safer' — the north pilot line runs approx 1.8 km from the station toward Ratchadamnoen, the south line approx 1.7 km to Saphan Phut pier (13 links, 10 junctions in the 3.5 km package). Earlier (2020), a BMA 'araya-pat' pilot upgraded the footway route from Sam Yot station along the canal to Chao Phraya Sky Park. MRT entrance buildings stand on the Charoen Krung/Mahachai side; reaching Dinso Road means crossing heavy-traffic blocks — consistent with transport 7 rather than higher.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "corridor",
+   "sources": [
+    {
+     "publisher": "Urban Ally (Chulalongkorn University Urban Lab program)",
+     "title": "เดิน. ปั่น. สัญจร ย่านสถานีสามยอด Walk. Bike. Commute. Samyod district",
+     "url": "https://urbanally.org/article/Walk.Bike.Commute.Samyoddistrict",
+     "date": "2025-03-19",
+     "locator": "study radius 2 km; แผนแม่บท 2567-2575; Dinso/Charoen Krung flagged; pilot routes Siriphong cycle lane + City Hall frontage pedestrian street; 1.8 km + 1.7 km lines; 13 routes / 10 junctions",
+     "body_read": false,
+     "note": "page is JS-rendered; WebFetch returned only navigation shell, long verbatim body extract obtained via search index"
+    },
+    {
+     "publisher": "Around magazine",
+     "title": "เที่ยวย่านสามยอด (araya-pat pilot walkway)",
+     "url": "https://www.aroundonline.com/bangkok-news-18/",
+     "date": "2020-09-23",
+     "locator": "pilot route สถานีสามยอด to สวนลอยฟ้าเจ้าพระยา with accessible footway standard",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c17",
+   "question": "Q11",
+   "title": "Crowd 2 is real at street level: shrinking registered population, office-daytime swell, event evenings",
+   "text": "Registered residents in the catchment's core khwaengs are small and falling: Wang Burapha Phirom 8,344 (Feb 2025, BMA) and 8,238 (DOPA 2568), Sanam Ratsadon 2,616, Sao Chingcha 1,830, Bang Khun Phrom 3,628 — the whole of Phra Nakhon khet counts 39,264 people across 5.536 km2, and Wang Burapha alone dropped from 10,414 in 2019. Daytime populations swell with City Hall and government-office staff, school runs, market workers and tourists; evenings revert to a small resident base except Fri-Sun canal events and rally days to the north. A crowd-2 (low-density) rating is consistent with this data; the flip side is that 'empty at night' is the same fact safety 5 may be reacting to.",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "BMA Phra Nakhon district office",
+     "title": "สถิติประชากร ข้อมูล ณ 4 กุมภาพันธ์ 2568",
+     "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/17385",
+     "date": "2025-02-04",
+     "locator": "per-khwaeng table",
+     "body_read": false
+    },
+    {
+     "publisher": "Department of Provincial Administration",
+     "title": "stat_t67.txt (2024) and 2019 dump",
+     "url": "https://stat.bora.dopa.go.th/new_stat/file/67/stat_t67.txt",
+     "date": "2025",
+     "locator": "10,414 (2019) vs 8,360 (2024 registry) for Wang Burapha Phirom",
+     "body_read": false
+    }
+   ]
+  },
+  {
+   "id": "sam-yot-c18",
+   "question": "Q12",
+   "title": "2024-2026 changes and pipeline: Purple line works to ~2030, canal walkway/water-taxi push, 2026 four-canal market, cafe conversions",
+   "text": "(1) MRT Purple line southern extension (Tao Poon-Rat Burana): construction from Aug 2022; Sam Yot is one of two underground stations in Contract 3 (3.12 km twin bore); progress reported 53.4% in Apr 2025 and approx 79.4% in an Oct 2026 Nation Thailand report, with the full extension targeted for November 2030 — later than earlier 2027/2028 talk. Until then Mahachai Road in front of Rommaninat Park carries construction sites; the future Purple exits will land at Suan Sam Yot, Saphan Damrong Sathit / the Vachiratham 72 arch, Soi Sirichai and Rommaninat Park. (2) BMA canal programme: at a late-Nov 2025 meeting, walkway connections at Saphan Ong Uthit and under Sanam Sae road were due mid-December 2025, 8 app-bookable water taxis planned, and a walkway under Phan Fa Lilat bridge agreed with MRTA (completion ~2570) — Bangkok Biznews, 2025-11-27; treat 'mid-Dec 2025' items as reported plans, not verified completions. (3) 2026 programming: the free four-canal Rattanakosin Walk Market (24-31 July 2026) put traders back along Khlong Ong Ang. (4) Private-side recovery: cafe/guesthouse conversions and widened Thipsamai hours (2024-2025). Nothing found indicating a wholesale redevelopment of the shophouse fabric; change is incremental.",
+   "kind": "factual_report",
+   "relation": "partial",
+   "scope": "station_area",
+   "sources": [
+    {
+     "publisher": "Nation Thailand / Urbanist ASEAN / Aurecon / TERRATEC (via WebSearch summary)",
+     "title": "Purple line southern extension progress and target",
+     "url": null,
+     "date": "2026-10 (most recent report cited)",
+     "locator": "53.4% Apr 2025; ~79.4% Oct 2026; Nov 2030 opening target; C3 stations Sam Yot + Memorial Bridge",
+     "body_read": false,
+     "note": "aggregated from search-result summaries; no single article body opened — corroborated only against Thai Wikipedia's PP23 exit list"
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สถานีสามยอด",
+     "url": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+     "date": "2026-11-01",
+     "locator": "Purple line exits 1-4 at Sam Yot",
+     "body_read": true
+    },
+    {
+     "publisher": "Bangkok Biznews",
+     "title": "กทม. เร่งสร้างแหล่งท่องเที่ยวใหม่ คลองโอ่งอ่าง พร้อม Water Taxi",
+     "url": "https://www.bangkokbiznews.com/news/news-update/1209562",
+     "date": "2025-11-27",
+     "locator": "walkway connection due mid-Dec 2568; 8 water taxis with app; permanent piers 2569 budget",
+     "body_read": false
+    },
+    {
+     "publisher": "Time Out Bangkok",
+     "title": "Rattanakosin Walk Market 4 canals",
+     "url": "https://www.timeout.com/bangkok/th/news/rattanakosin-walk-market-072326",
+     "date": "2026-07-22",
+     "locator": "event 24-31 July 2026",
+     "body_read": false
+    }
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "Q01",
+   "question": "Identity and scope: what is this unit, how does the three-khet straddle and clipping work?",
+   "answer": "Underground Blue-line station BL30 (opened 29 Jul 2019) beneath Charoen Krung Rd at the Sam Yot junction, in the Wang Burapha quarter of Phra Nakhon; the catchment straddles the Khlong Ong Ang canal which is itself a khet boundary (Phra Nakhon west; Pom Prap on the NE bank at Khlong Thom/Mega Plaza; Samphanthawong at the Saphan Han/Chakkrawat fringe). Clipped by Sanam Chai (SW) and Wat Mangkon (SE); no rail stop east within 800 m (st.phetchaburi and st.ratchaprarop do NOT bound this unit); Democracy Monument ~1.1 km N is outside; Giant Swing ~350-600 m NE is inside; Wat Ratchanatdaram sits on the northern fringe.",
+   "claim_ids": [
+    "sam-yot-c01",
+    "sam-yot-c02",
+    "sam-yot-c03",
+    "sam-yot-c04"
+   ]
+  },
+  {
+   "id": "Q02",
+   "question": "Everyday experience: government-office town, old-shophouse living, tourist edge — and what basis the safety 5 could have?",
+   "answer": "A government-office quarter (City Hall ~0.45 km N) of aging shophouses and small low-rise apartments in a tone-controlled conservation zone, with a shrinking registered population and a tourist/service edge at markets and the canal. No unit-specific safety evidence was found; safety 5 appears to reflect generic old-town night emptiness and tourist-fringe friction (scams/pickpocketing genre) rather than any documented local driver — flagged unresolved.",
+   "claim_ids": [
+    "sam-yot-c09",
+    "sam-yot-c12",
+    "sam-yot-c17"
+   ]
+  },
+  {
+   "id": "Q03",
+   "question": "Values and mechanisms: what actually drives the transport, rent, essentials, food, green scores?",
+   "answer": "Transport 7: strong MRT+buses but no BTS and entrances offset from the Dinso side; walkability flagged as car-priority on key streets. Rent 8: real small-unit asks 11,000-15,000 THB near the station against a 13,500/27,000 blend. Essentials/food 9: dawn markets (Trok Mo, Khlong Thom) plus market malls and 553 food venues with named famous anchors. Green 9: Rommaninat Park (free, to 21:00) plus the always-open 750-m-per-bank canal promenade. Mechanisms documented in c05, c10, c11, c13, c14.",
+   "claim_ids": [
+    "sam-yot-c05",
+    "sam-yot-c10",
+    "sam-yot-c11",
+    "sam-yot-c13",
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "id": "Q04",
+   "question": "Counter-evidence: dead evening streets vs event nights; heat; old-building conditions?",
+   "answer": "Both are true in part: official Fri-Sun 16:00-22:00 walking street and 2024-2026 festival programming vs 2024 vendor accounts of post-COVID stagnation ('like being in the ICU'), suspended kayak/music at times, and quiet daytime (2025 reviews). Weekday evenings are thin; event nights are the exception. Old-building conditions show aging but salvageable stock (20-year-tenant as-is shophouse, 50-year warehouse conversions); no wholesale decay story. Heat: only generic guidance found (evening hours preferred for the canal walk) — no unit-specific claim.",
+   "claim_ids": [
+    "sam-yot-c07",
+    "sam-yot-c12"
+   ]
+  },
+  {
+   "id": "Q05",
+   "question": "What does old-town evening life actually consist of, and what is the Democracy Monument's role?",
+   "answer": "Evening life = Fri-Sun canal walking street (unstable operation), occasional government festivals, small bars (rooftops and standing bars around Sao Chingcha/Wang Burapha), the Chinatown dining gravity next door, and rally days ~1.1 km north at Democracy Monument (outside this unit; effect limited to occasional Dinso/Ratchadamnoen closures). Vibe 10 is identity- and event-driven, not steady street life.",
+   "claim_ids": [
+    "sam-yot-c06",
+    "sam-yot-c07",
+    "sam-yot-c08",
+    "sam-yot-c15"
+   ]
+  },
+  {
+   "id": "Q06",
+   "question": "Green and quiet: Rommaninat hours/access and Khlong Ong Ang schedule — verified how?",
+   "answer": "Rommaninat Park: free, daily roughly 04:00/05:00-21:00 (sources differ on opening by an hour), facilities incl. fitness, skatepark, basketball; prison walls retained; museum Thu-Sat. Khlong Ong Ang: promenade open at all times (market is an overlay Fri-Sun 16:00-22:00 per BMA/TAT; kayak last queue 20:00). Caveat: BMA park page 403 — the app's 4.4 ha figure remains unverified.",
+   "claim_ids": [
+    "sam-yot-c10",
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "id": "Q07",
+   "question": "Affordability: shophouse/flat housing and blend vs own evidence?",
+   "answer": "In-catchment listings: studios 11,000-13,000 THB 74-100 m from the station; 1BR condos 14,000-15,000; old shophouse 20,000; whole shophouses 45,000+. Blend 13,500/27,000 matches the small-unit market; conservation rules keep new supply out; resident population shrinking while tourist conversions take some stock.",
+   "claim_ids": [
+    "sam-yot-c11",
+    "sam-yot-c12"
+   ]
+  },
+  {
+   "id": "Q08",
+   "question": "Daily life: markets, groceries, hospitals?",
+   "answer": "Wet markets at dawn (Trok Mo 05:00-10:00; Khlong Thom fresh zone 05:00-09:00), retail malls at both exits (Mega Plaza, China World, Old Siam, Phahurat), clinics on Dinso/Mahachai; no verified general or 24-hour hospital inside the unit — nearest public general hospitals 2-4 km (researcher estimate).",
+   "claim_ids": [
+    "sam-yot-c13",
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "id": "Q09",
+   "question": "Nightlife 9 with 17 venues: what is it?",
+   "answer": "Small bars, not a club district: Swing Bar by Ching Cha (rooftop), Tai Soon Bar, Foxhole BKK, Motu, Qasbar etc. in the Sao Chingcha/Wang Burapha pocket; the heavy nightlife (Soi Nana craft bars, Yaowarat cocktail rooms) belongs to Wat Mangkon's unit and Khao San to others. Recommend the editorial note state the 9 rests on proximity to both nightlife districts.",
+   "claim_ids": [
+    "sam-yot-c15"
+   ]
+  },
+  {
+   "id": "Q10",
+   "question": "Walkability: MRT entrances, Dinso sidewalks, canal walk — stated in distance, not time?",
+   "answer": "Entrance buildings on the Charoen Krung/Mahachai side (Building 1 at Sam Yot junction facing Rommaninat; Building 2 lift-only; Building 3 toward Burapha/Unakan). Dinso Rd carries collector-plus-access traffic with car-priority space allocation (Urban Ally 2025); pilots planned to link station-Dinso on foot/bike (Siriphong Rd cycle lane, City Hall-front pedestrian street). Canal promenade runs 750 m per bank, ~100-300 m from the station. Distances stated throughout; no walking durations derived.",
+   "claim_ids": [
+    "sam-yot-c05",
+    "sam-yot-c16"
+   ]
+  },
+  {
+   "id": "Q11",
+   "question": "Rhythm: event-driven evenings, weekday offices, weekend canal?",
+   "answer": "Weekday: office/government rhythm around City Hall, dawn markets, thin evenings. Fri-Sun: canal walking street overlay (when operating). Annual/civic: rally days at Democracy Monument (outside unit, closure spillover), Loy Krathong and 2026 four-canal market events, MRT service to ~00:12-00:30.",
+   "claim_ids": [
+    "sam-yot-c17",
+    "sam-yot-c07",
+    "sam-yot-c08"
+   ]
+  },
+  {
+   "id": "Q12",
+   "question": "Recent changes 2024-2026 and outside-the-score factors?",
+   "answer": "Purple line works toward a Nov 2030 interchange (construction disruption on Mahachai Rd until then); BMA canal walkway/water-taxi programme (reported plan, Dec 2025); 2026 four-canal market; incremental cafe/guesthouse conversions amid a shrinking resident base; outside-the-score: rally closures, conservation constraints on supply, no hospital in unit, unverified park area.",
+   "claim_ids": [
+    "sam-yot-c18",
+    "sam-yot-c12",
+    "sam-yot-c10"
+   ]
+  }
+ ],
+ "editorial": [
+  {
+   "id": "ed-01",
+   "topic": "safety 5",
+   "item": "No unit-specific evidence for the 5 was found in EN or TH sources; keep the rating but pair it with an explicit 'basis: generic old-town night emptiness + tourist-friction genre; nothing local documented' note. The quarter has a staffed MRT station, government offices and a park open to 21:00 — a plain safety deficit is not evidenced. Recommend the app label this rating low-confidence for this unit.",
+   "claim_ids": [
+    "sam-yot-c09",
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "id": "ed-02",
+   "topic": "vibe 10 + nightlife 9 with 17 venues",
+   "item": "Vibe 10 is defensible as heritage identity (three-peaked-gate story, tone-controlled streets, adaptive reuse) plus event evenings; nightlife 9 with 17 mapped venues only makes sense as small in-unit bars plus immediate access to Chinatown's Soi Nana and the old-town tourist edge. State that mechanism explicitly; do not imply a club district.",
+   "claim_ids": [
+    "sam-yot-c06",
+    "sam-yot-c15",
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "id": "ed-03",
+   "topic": "green 9",
+   "item": "Supported by Rommaninat Park (free, to ~21:00, fitness/skate/basketball) and the always-open canal promenade; caveat that the 4.4 ha park figure is app-only (BMA page 403) and walking-street operation on the canal is intermittent — the promenade, not the market, is the dependable green asset.",
+   "claim_ids": [
+    "sam-yot-c10",
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "id": "ed-04",
+   "topic": "rent 8",
+   "item": "Listings corroborate the blend: 11,000-13,000 THB studios steps from the station, 14,000-15,000 THB 1BR condos, 20,000 THB aged shophouse; whole-shophouse asks are much higher, so 'cheap' applies to rooms and small units. Portal asks, not transacted rents.",
+   "claim_ids": [
+    "sam-yot-c11",
+    "sam-yot-c12"
+   ]
+  },
+  {
+   "id": "ed-05",
+   "topic": "daily_essentials 9",
+   "item": "Market density is real (dawn wet markets, market malls, 553 food venues); the soft spot is hospitals — none verified inside the unit, nearest general hospitals several km. Consider reflecting that in the essentials narrative rather than the score.",
+   "claim_ids": [
+    "sam-yot-c13"
+   ]
+  },
+  {
+   "id": "ed-06",
+   "topic": "crowd 2 / transport 7",
+   "item": "Crowd 2 matches shrinking registered population (Wang Burapha 10,414 to 8,344, 2019-2025) and a daytime-office swell pattern. Transport 7 matches MRT+bus strength, no BTS, and car-priority streets between station and Dinso (2025 pilot programme exists).",
+   "claim_ids": [
+    "sam-yot-c17",
+    "sam-yot-c05",
+    "sam-yot-c16"
+   ]
+  }
+ ],
+ "search_log": [
+  {
+   "tool": "WebSearch",
+   "query": "Sam Yot MRT station Bangkok Blue line Dinso Road",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "station basics; no links surfaced in summary"
+  },
+  {
+   "tool": "exa",
+   "query": "Khlong Ong Ang canal promenade Bangkok restoration UN-Habitat award walking street hours",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "TAT, Thai PBS World, Nation, Bangkok Post snippets, Thai embassy London, BLT Bangkok"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Rommaninat Park Bangkok former Klong Prem prison hours opening",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "TAT + BMA greener + thailandlife summaries"
+  },
+  {
+   "tool": "exa",
+   "query": "สถานีสามยอด MRT สามยอด ทางออก ดินสอ ป้อมปราบศัตรูพ่าย พระนคร",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "BEM official page, Thai Wikipedia, Urban Ally, tripgether, DDproperty piece"
+  },
+  {
+   "tool": "exa",
+   "query": "ถนนคนเดินคลองโอ่งอ่าง 2567 2568 สถานะ ปัจจุบัน ศุกร์เสาร์อาทิตย์ ยังเปิดไหม",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Bangkok Biznews 2024 event, Thairath 2024 feature, Wongnai 2025 reviews, BMA publicspace + webportal pages, Time Out 2026"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "MRT Purple line southern extension Sam Yot station construction Mahachai Road 2027 opening",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "opened 2027 vs Nov 2030 target discrepancy surfaced; used 2030 target with sourcing caveat"
+  },
+  {
+   "tool": "exa",
+   "query": "ประวัติย่านสามยอด ซุ้มประตูสามยอด ถนนดินสอ พระบรมราชานุสาวรีย์ รัชกาลที่ 6 รื้อถอน",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "th.wiki แยกสามยอด, MGR Online, RYT9 2025, EN wiki, silpa-mag 2025"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Phra Nakhon district Bangkok apartment rent price room shophouse 2024 2025 hipflat",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "HipFlat/PropertyHub/DotProperty ranges"
+  },
+  {
+   "tool": "exa",
+   "query": "ห้องเช่า หอพัก ย่านสามยอด ดินสอ วังบูรพา ราคา 3,000 5,000 บาท ตึกแถวเก่า",
+   "status": "ok (partially noisy)",
+   "date": "2026-11-07",
+   "note": "BaanFinder in-catchment listing 11-13k; PropertyScout; onlineoops shophouse; unrelated Chiang Mai noise discarded"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Phra Nakhon\" OR \"old town\" Bangkok safe at night empty streets Khao San spillover safety",
+   "status": "thin",
+   "date": "2026-11-07",
+   "note": "only generic travel-guide material; no unit-specific safety data — recorded as absence finding"
+  },
+  {
+   "tool": "exa",
+   "query": "อนุสาวรีย์ประชาธิปไตย ราชดำเนิน 2567 2568 การชุมนุม ปิดถนน จัดงาน พื้นที่สาธารณะ ใหม่",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Naewna 2025, Thansettakij 2023, Thai Post 2021, FM91, Taejai park project"
+  },
+  {
+   "tool": "exa",
+   "query": "บาร์ ย่านวังบูรพา สามยอด กินเหล้า ผับ ร้านสดชื่น ตะนาว แนะนำ 2567 2568",
+   "status": "ok (partially off-target)",
+   "date": "2026-11-07",
+   "note": "Wongnai Wang Burapha bar list; Time Out 2025 new bars; Ekamai/rooftop noise discarded"
+  },
+  {
+   "tool": "exa",
+   "query": "ประชากร แขวงวังบูรพาภิรมย์ แขวงสำราญราษฎร์ แขวงบางขุนพรหม เขตพระนคร จำนวนประชากร 2567",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "BMA district page + DOPA stat files"
+  },
+  {
+   "tool": "exa",
+   "query": "ซูเปอร์มาร์เก็ต ใกล้สถานีสามยอด ย่านเมืองเก่า โรงพยาบาล ศูนย์บริการสาธารณสุข พระนคร ตลาดสด",
+   "status": "partial",
+   "date": "2026-11-07",
+   "note": "TrueID market list good; no in-unit hospital or supermarket chain verified"
+  },
+  {
+   "tool": "exa",
+   "query": "ครัวอัปษร ดินสอ ข้าวผัดปู กุ้งแม่น้ำ ร้านเก่า + ผัดไทยทิพย์สมัย มหาไชย คิว ยามค่ำ",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Thipsamai official site + Ryoii + Wongnai Krua Apsorn"
+  },
+  {
+   "tool": "exa",
+   "query": "โรงพยาบาลใกล้เมืองเก่า พระนคร สามยอด คลินิก รักษา ใกล้สถานี + ฟิตเนส ยิม ย่านสามยอด เมืองเก่า",
+   "status": "partial",
+   "date": "2026-11-07",
+   "note": "clinics found on Dinso/Mahachai; no gym chain verified in-unit (park fitness is the sports story)"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+   "status": "blocked (HTTP 403)",
+   "date": "2026-11-07",
+   "note": "BMA district page; used search-index extract corroborated by TAT full read"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://greener.bangkok.go.th/en/park/suan-romanee-nat",
+   "status": "blocked (HTTP 403)",
+   "date": "2026-11-07",
+   "note": "park area figure therefore unverified"
+  },
+  {
+   "tool": "webReader",
+   "query": "webportal.bangkok.go.th / greener.bangkok.go.th",
+   "status": "error (MCP 500)",
+   "date": "2026-11-07",
+   "note": "alternative reader also failed"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.tatnews.org/2021/03/award-winning-khlong-ong-ang-walking-street-isnt-your-average-walking-street/",
+   "status": "ok (full read)",
+   "date": "2026-11-07",
+   "note": "body_read=true"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://urbanally.org/article/Walk.Bike.Commute.Samyoddistrict",
+   "status": "ok but JS shell only",
+   "date": "2026-11-07",
+   "note": "no article body via HTTP; long verbatim extract from search index used, marked body_read=false"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.thairath.co.th/scoop/theissue/2810629",
+   "status": "blocked (HTTP 403)",
+   "date": "2026-11-07",
+   "note": "counter-view feature; verbatim quotes via search index, corroborated by Wongnai 2025 reviews"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.silpa-mag.com/culture/article_10701",
+   "status": "ok (full read)",
+   "date": "2026-11-07",
+   "note": "Dinso Rd name origin; published 2025-03-12"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+   "status": "ok (full read)",
+   "date": "2026-11-07",
+   "note": "station facts, exits incl. Purple line"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Sam_Yot",
+   "status": "ok (full read)",
+   "date": "2026-11-07",
+   "note": "gate history, khet boundary at Saphan Lek"
+  },
+  {
+   "tool": "none",
+   "query": "Overpass API",
+   "status": "not attempted (blocked per task instructions)",
+   "date": "2026-11-07",
+   "note": "coordinate deltas from published Wikipedia/official coords used instead"
+  },
+  {
+   "tool": "none",
+   "query": "Reddit / TripAdvisor",
+   "status": "not attempted (403-prone per task instructions)",
+   "date": "2026-11-07"
+  },
+  {
+   "tool": "none",
+   "query": "Bangkok Post",
+   "status": "not attempted (paywall; no bypass)",
+   "date": "2026-11-07",
+   "note": "Bangkok Post canal articles appear only as snippets in search results, used as corroboration only"
+  }
+ ],
+ "open_issues": [
+  "Safety 5 lacks any unit-specific evidence; left unresolved and flagged (sam-yot-c09). Needs either a local-crime data source or an editorial 'perception, not documented' label.",
+  "Rommaninat Park's 4.4 ha area is app-only: the BMA parks page and district pages 403'd on direct fetch; hours/facilities corroborated but area not (sam-yot-c10).",
+  "Edge venues assigned inside/outside by coordinate-delta estimates only (Wat Ratchanatdaram ~0.75 km, Rattanakosin Exhibition Hall ~0.87 km, Thipsamai ~0.29 km, Krua Apsorn position uncertain along Dinso). The app's actual Voronoi polygon should arbitrate (sam-yot-c03).",
+  "East-bank khet split of the canal: BMA's district page calls the canal the Phra Nakhon-Samphanthawong boundary while EN Wikipedia places Saphan Lek at the Pom Prap (Ban Bat) boundary — both official statements; the catchment likely touches Pom Prap on the upper canal and Samphanthawong at Saphan Han; exact Voronoi tip unverified (sam-yot-c02).",
+  "Khlong Ong Ang walking-street operation is volatile: official Fri-Sun 16:00-22:00 schedule vs 2024 stagnation reporting and 2025 reviews of suspended activities; current (Nov 2026) operating status unverified on the ground (sam-yot-c07).",
+  "Purple line opening: sources span 2027 (early talk) to Nov 2030 (Oct 2026 report); the 2030 target was used with a caveat because it rested on search summaries, not an opened article (sam-yot-c18).",
+  "No general/24-hour hospital verified inside the 1.4 km2 unit; nearest public general hospitals 2-4 km (researcher estimate). Also no branded supermarket or gym chain verified in-unit; Rommaninat park fitness is the main sports facility (sam-yot-c13, sam-yot-c10).",
+  "Democracy Monument is ~1.1 km north and outside the unit; it was a batch lead and is documented as outside with closure-spillover effects only (sam-yot-c08).",
+  "Wat Ratchanatdaram/Loha Prasat khet attribution conflict noted by batch 2 is consistent with its position at this unit's northern fringe (Mahachai Rd, Bang Khun Phrom side); not fully resolved here (sam-yot-c03).",
+  "Publisher-domain fetch limits encountered: webportal.bangkok.go.th, greener.bangkok.go.th, thairath.co.th (403); urbanally.org (JS shell). Claims relying on those pages rest on search-index extracts and are marked body_read=false with independent corroboration."
+ ],
+ "counts": {
+  "claims": 18,
+  "qa_covered": 12,
+  "editorial_items": 6,
+  "sources_cited": 40,
+  "publisher_families": [
+   "BMA (bangkok.go.th)",
+   "BEM (bemplc.co.th)",
+   "Wikipedia (EN/TH)",
+   "TAT (tatnews/tourismthailand)",
+   "Thai news media (Thairath, Bangkok Biznews, Naewna, Thansettakij, Thai Post, Nation)",
+   "lifestyle/food (Wongnai, Ryoii, TrueID, ReadtheCloud, room.baanlaesuan, silpa-mag, M2F, Around, Time Out, tiewgan, tripgether)",
+   "property portals (BaanFinder, PropertyScout, PropertyHub, OnlineOops, 9apartment)",
+   "government stats (DOPA stat.bora)",
+   "civil/university (Urban Ally, Taejai, RYT9/DPU)",
+   "operator/other (HDmall, LocalThailand, MGR Online, Museum Siam, Tha PBS World)"
+  ],
+  "counter_views": [
+   "event-driven evening life vs stagnation (Thairath 2024, Wongnai 2025)",
+   "safety: absence of unit-specific evidence vs generic old-town risk genre",
+   "official canal schedule vs intermittent operation"
+  ],
+  "languages": [
+   "English",
+   "Thai (คลองโอ่งอ่าง, ดินสอ, สามยอด, ประชากร, ห้องเช่า, บาร์ queries)"
+  ]
+ }
+}

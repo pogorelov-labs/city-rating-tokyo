@@ -1,0 +1,1420 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "ratchathewi",
+  "kind": "district",
+  "name_en": "Ratchathewi",
+  "name_th": "ราชเทวี",
+  "aliases": [
+   "Victory Monument",
+   "Pratunam",
+   "Ratchaprarop",
+   "Rangnam",
+   "Makkasan",
+   "Phetchaburi Road",
+   "Petchaburi"
+  ],
+  "scope_notes": "Administrative khet per app data; khwaeng-level subareas differ — mark subarea claims partial. Coordinator polygon checks apply to boundary claims."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.96,
+  "cohort_rank": 5,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
+  "popularity_source_ids": [],
+  "selection_rationale": "District #5/50; contains four already-researched station areas (st.ratchathewi #3, st.ratchaprarop, st.phaya-thai station, st.victory-monument) — direct district-vs-station comparison; safety 5 pattern; aliases include cross-khet names (Pratunam partly Pathum Wan; Makkasan on the Din Daeng border)."
+ },
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya Thai / Thung Phaya Thai / Thanon Phetchaburi), 3320987 (Rong Mueang, Pathum Wan) - full boundary geometry",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_4b8e15dea6d8",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "title": "Ratchathewi district",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_567d0a1dc7b9",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5",
+   "title": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+   "publisher": "Wikimedia (Wikipedia TH)",
+   "publisher_family": "Wikimedia (Wikipedia TH)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_c9d75c1722fb",
+   "canonical_url": "https://en.wikipedia.org/wiki/Pratunam",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Pratunam",
+   "title": "Pratunam",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_f3ce12d17b0b",
+   "canonical_url": "https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)",
+   "title": "Victory Monument (Bangkok)",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_6c851769cf57",
+   "canonical_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "title": "Baiyoke Tower II",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_66b1411bd411",
+   "canonical_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "title": "Santiphap Park",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_194ddd2fb8f8",
+   "canonical_url": "https://en.wikipedia.org/wiki/MRT_Orange_Line",
+   "retrieved_url": "https://en.wikipedia.org/wiki/MRT_Orange_Line",
+   "title": "MRT Orange Line",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_597cd39135c5",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ban_Krua",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ban_Krua",
+   "title": "Ban Krua",
+   "publisher": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_fc2b77f94bb7",
+   "canonical_url": "https://www.bangkok.go.th/ratchathewi",
+   "retrieved_url": "https://www.bangkok.go.th/ratchathewi",
+   "title": "สำนักงานเขตราชเทวี (Ratchathewi District Office portal)",
+   "publisher": "Bangkok Metropolitan Administration",
+   "publisher_family": "Bangkok Metropolitan Administration",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_11d0afa11d99",
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "title": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+   "publisher": "FazWaz",
+   "publisher_family": "FazWaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_a31faf40656f",
+   "canonical_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/signature-1194955",
+   "retrieved_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/signature-1194955",
+   "title": "Signature - Bangkok (guide.michelin.com)",
+   "publisher": "Michelin Guide",
+   "publisher_family": "Michelin Guide",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_aa1946a82652",
+   "canonical_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/wana-yook",
+   "retrieved_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/wana-yook",
+   "title": "Wana Yook - Bangkok (guide.michelin.com, EN page)",
+   "publisher": "Michelin Guide",
+   "publisher_family": "Michelin Guide",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_5dde3562770f",
+   "canonical_url": "https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurant/wana-yook",
+   "retrieved_url": "https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurant/wana-yook",
+   "title": "วรรณยุค (Wana Yook) - guide.michelin.com TH page",
+   "publisher": "Michelin Guide",
+   "publisher_family": "Michelin Guide",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_1a707f6d4091",
+   "canonical_url": "https://www.thaipbsworld.com/travel-tourism/ratchathewi-overpass-to-close-for-three-years-for-orange-line-construction-starting-tonight",
+   "retrieved_url": "https://www.thaipbsworld.com/travel-tourism/ratchathewi-overpass-to-close-for-three-years-for-orange-line-construction-starting-tonight",
+   "title": "Ratchathewi overpass to close for three years for Orange Line construction starting tonight",
+   "publisher": "Thai PBS World",
+   "publisher_family": "Thai PBS World",
+   "author": null,
+   "published_at": "2025-01-16",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_90b1de01f36f",
+   "canonical_url": "https://web.codi.or.th/index.php/20240929-57255",
+   "retrieved_url": "https://web.codi.or.th/index.php/20240929-57255",
+   "title": "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makkasan)",
+   "publisher": "CODI (Community Organizations Development Institute)",
+   "publisher_family": "CODI (Community Organizations Development Institute)",
+   "author": null,
+   "published_at": "2024-09-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_281acc9e7d8d",
+   "canonical_url": "https://www.comparethemarket.com.au/travel-insurance/features/pickpocketing-and-scam-hotspots",
+   "retrieved_url": "https://www.comparethemarket.com.au/travel-insurance/features/pickpocketing-and-scam-hotspots",
+   "title": "Pickpocket and Scam Hotspots (study page, updated)",
+   "publisher": "Compare the Market",
+   "publisher_family": "Compare the Market",
+   "author": null,
+   "published_at": "2026-07-17",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_3db253d78bfd",
+   "canonical_url": "https://centurythemovieplaza.com/",
+   "retrieved_url": "https://centurythemovieplaza.com/",
+   "title": "centurythemovieplaza.com (official site)",
+   "publisher": "Century Movie Plaza",
+   "publisher_family": "Century Movie Plaza",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_67e7f515b7bb",
+   "canonical_url": "https://duckduckgo.com/",
+   "retrieved_url": "https://duckduckgo.com/",
+   "title": "Pratunam scam complaints 2024-2025; Century The Movie Plaza opening data; MRTA 11-station figure for Orange Line west",
+   "publisher": "Web search AI summaries (multiple publishers; snippet-surface only)",
+   "publisher_family": "Web search AI summaries (multiple publishers; snippet-surface only)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "ratchathewi-d-c01",
+   "text_en": "Khet Ratchathewi consists of exactly four khwaeng: Thung Phaya Thai (ทุ่งพญาไท, the district seat - office at 10 Phaya Thai Road), Thanon Phaya Thai (ถนนพญาไท), Thanon Phetchaburi (ถนนเพชรบุรี) and Makkasan (มักกะสัน). Three independent sources agree: EN Wikipedia (list + seat), TH Wikipedia (list + areas/populations: 2.559 km2/25,071 people, 1.136/9,798, 1.148/13,762, 2.283/15,837) and OSM (relations 11487351-54), whose four polygons assemble into closed rings that sum to 7.216 km2 - exactly the OSM khet area, i.e. the four khwaeng partition the khet with no gaps. Official khet area is 7.126 km2 (both wikis) vs 7.216 km2 computed from the OSM boundary; per-khwaeng OSM areas differ from the TH-wiki table (Thanon Phetchaburi 1.008 vs 1.148; Makkasan 2.479 vs 2.283) - boundary-digitization tolerance, flagged. The app alias 'Rong Muang' is NOT a Ratchathewi khwaeng: OSM relation 3320987 (1.283 km2, centroid 13.74618,100.51868) sits in Pathum Wan. 'Pratunam' is a neighbourhood name, not a khwaeng.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "Khet Ratchathewi consists of exactly four khwaeng: Thung Phaya Thai (ทุ่งพญาไท, the district seat - "
+    },
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Khet Ratchathewi consists of exactly four khwaeng: Thung Phaya Thai (ทุ่งพญาไท, the district seat - "
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "Khet Ratchathewi consists of exactly four khwaeng: Thung Phaya Thai (ทุ่งพญาไท, the district seat - "
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c02",
+   "text_en": "History and name: the four khwaeng were tambon of Dusit, moved to Amphoe Phaya Thai in 1958/1966 (TH wiki: 2509), became khwaeng of khet Phaya Thai in 1972, and Ratchathewi became its own khet in November 1989 - EN Wikipedia says 9 November 1989, TH Wikipedia 6 November 2532 (1989): a one-source-against-one-source date discrepancy left flagged. In 1993 part of Makkasan khwaeng was carved out to help form Din Daeng khet (TH wiki) - this is the kernel of the 'Makkasan split with Din Daeng' lead: the khwaeng was reduced at Din Daeng's creation; today's khwaeng Makkasan (2.283 km2 official / 2.479 OSM) lies entirely inside Ratchathewi per OSM. The name comes from Ratchathewi intersection (Phetchaburi x Phaya Thai roads), itself named for Queen Sukhumala Marasri's royal consort rank 'Phra Ratchathewi'. Khlong Saen Saep forms the southern boundary (Pathum Wan/Watthana), Khlong Sam Sen the northern (Phaya Thai/Din Daeng), Asok-Din Daeng roads the eastern (Huai Khwang), the northern railway the western (Dusit).",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "History and name: the four khwaeng were tambon of Dusit, moved to Amphoe Phaya Thai in 1958/1966 (TH"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "History and name: the four khwaeng were tambon of Dusit, moved to Amphoe Phaya Thai in 1958/1966 (TH"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "History and name: the four khwaeng were tambon of Dusit, moved to Amphoe Phaya Thai in 1958/1966 (TH"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c03",
+   "text_en": "Rail inventory and researched-station placement, computed by point-in-polygon on the OSM khet/khwaeng polygons: BTS Ratchathewi (node 13.75186,100.53155) falls in khwaeng Thanon Phetchaburi; BTS+ARL Phaya Thai (13.75696,100.53382 / 13.75671,100.53491) and the SRT Phaya Thai halt (13.75702,100.53319) fall in Thung Phaya Thai / Thanon Phaya Thai; BTS Victory Monument (13.76276,100.53705), the Victory Monument itself (memorial way 158185227, 13.76493,100.53829) and its roundabout all fall in Thung Phaya Thai khwaeng INSIDE the khet - independently confirming EN Wikipedia's 'The monument is in Ratchathewi District' and the batch-2 phaya-thai finding that the khet's namesake station sits outside khet Phaya Thai. ARL Ratchaprarop (13.75511,100.54212, khwaeng Thanon Phaya Thai) and ARL Makkasan (13.75386,100.54737, khwaeng Makkasan) are likewise inside. All four researched station-area units (st.ratchathewi, st.ratchaprarop, st.phaya-thai, st.victory-monument) therefore sit inside this khet, and the khet's namesake BTS station is within it - unlike khet Phaya Thai.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "Rail inventory and researched-station placement, computed by point-in-polygon on the OSM khet/khwaen"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Railway station/halt nodes in bbox 13.74-13.78, 100.51-100.56 (nodes with coordi",
+     "paraphrase": "Rail inventory and researched-station placement, computed by point-in-polygon on the OSM khet/khwaen"
+    },
+    {
+     "source_id": "src_f3ce12d17b0b",
+     "locator": "Victory Monument (Bangkok)",
+     "paraphrase": "Rail inventory and researched-station placement, computed by point-in-polygon on the OSM khet/khwaen"
+    },
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Rail inventory and researched-station placement, computed by point-in-polygon on the OSM khet/khwaen"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c04",
+   "text_en": "Baiyoke and Pratunam placement verified against the khet polygon. Baiyoke Tower II (Wikipedia: '222 Ratchaprarop Road in the Ratchathewi District'; 309 m, 88 storeys, tallest in Thailand 1997-2016; OSM hotel way 443491485 centroid 13.75455,100.54040) computes INSIDE khwaeng Thanon Phaya Thai - the batch hypothesis 'Makkasan/Rong Muang edge' is wrong; Baiyoke Tower I (13.75298,100.53966), Baiyoke Gallery and Baiyoke Suite are in the same khwaeng. The Pratunam belt straddles three khwaengs inside the khet: Platinum Fashion Mall (way 31141613, 13.75000,100.53969 - centroid on the canal line) computes in khwaeng Thanon Phetchaburi; Palladium World, Watergate Pavilion and the Pratunam canal-boat pier in khwaeng Makkasan; City Complex, Amari Watergate, Indra Square, Indra Regent in khwaeng Thanon Phaya Thai. Platinum Pop (13.74809,100.54205) computes OUTSIDE the khet (Pathum Wan side). EN Wikipedia places the Pratunam intersection and its neighbourhood in 'Thanon Phaya Thai sub-district of Ratchathewi district' - so the app alias 'Pratunam' is correct as a neighbourhood, inside this khet, not a Pathum Wan venue.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "POI nodes/ways: Baiyoke cluster, Pratunam belt malls, ferry terminals on Khlong ",
+     "paraphrase": "Baiyoke and Pratunam placement verified against the khet polygon. Baiyoke Tower II (Wikipedia: '222 "
+    },
+    {
+     "source_id": "src_6c851769cf57",
+     "locator": "Baiyoke Tower II",
+     "paraphrase": "Baiyoke and Pratunam placement verified against the khet polygon. Baiyoke Tower II (Wikipedia: '222 "
+    },
+    {
+     "source_id": "src_c9d75c1722fb",
+     "locator": "Pratunam",
+     "paraphrase": "Baiyoke and Pratunam placement verified against the khet polygon. Baiyoke Tower II (Wikipedia: '222 "
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "Baiyoke and Pratunam placement verified against the khet polygon. Baiyoke Tower II (Wikipedia: '222 "
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c05",
+   "text_en": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1) Pratunam/Thanon Phaya Thai-Thanon Phetchaburi-Makkasan belt - a wholesale garment economy: EN Wikipedia records Pratunam in 1961 'still a traditional market selling produce and other perishable goods' that evolved into a major garment/fashion wholesale and retail hub, with the Baiyoke family's origin in the Indra Hotel/Indra The Arcade development; batch-3 station research (st.ratchaprarop, Wongnai body-read) documents the 04:00-09:00 dawn wholesale rhythm of this belt. (2) Makkasan khwaeng - SRT-land communities and the Bueng Makkasan pit (Wikipedia: artificial flood-prevention lake 2.4 km long, 60 m wide, 15 m deep; its midpoints compute inside khwaeng Makkasan): OSM maps a place=quarter 'Makkasan' and four communities (ชุมชนริมทางรถไฟมักกะสัน, ชุมชนหลังวัดมักกะสัน, ชุมชนมักกะสันพิทยา, ชุมชนโรงเจมักกะสัน), and CODI documents the 644-household relocation onto the lake edge (d-c14). (3) Canal-side south-west - Ban Khrua Nuea/Tai, the oldest Islamic community in Bangkok (Rama I grant to Cham troops after the 1785-86 war), silk workshops, three mosques, a 25+ year tollway dispute. (4) Thung Phaya Thai north - the Phaya Thai Palace / Phramongkutklao and hospital/education belt.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c9d75c1722fb",
+     "locator": "Pratunam",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    },
+    {
+     "source_id": "src_597cd39135c5",
+     "locator": "Ban Krua",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "POI nodes/ways: Baiyoke cluster, Pratunam belt malls, ferry terminals on Khlong ",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    },
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    },
+    {
+     "source_id": "src_fc2b77f94bb7",
+     "locator": "สำนักงานเขตราชเทวี (Ratchathewi District Office portal)",
+     "paraphrase": "Subarea texture (everyday experience differs by khwaeng more than the district average can show): (1"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c06",
+   "text_en": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratchathewi, Phaya Thai, Victory Monument), both ARL city stops west of the airport leg (Ratchaprarop, Phaya Thai terminus), an SRT Phaya Thai halt on the eastern line, Khlong Saen Saep express-boat service along its whole southern edge (Pratunam pier, Saphan Hua Chang pier at the boundary), and - under construction - three MRT Orange Line stations (OR08 Ratchathewi with BTS interchange, OR09 Pratunam, OR10 Ratchaprarop with ARL interchange), per EN Wikipedia's station table and TH Wikipedia ('กำลังก่อสร้าง' three stations in khet). No other 7.1 km2 khet in the top-10 cohort stacks three metro operators' stations plus a canal boat line. Counterpoint carried over from batch-2/3 station research: today's interchange premium is modest (BTS-ARL transfer at Phaya Thai, headway gaps), and the Orange Line interchanges only arrive ~2030.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Railway station/halt nodes in bbox 13.74-13.78, 100.51-100.56 (nodes with coordi",
+     "paraphrase": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratc"
+    },
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratc"
+    },
+    {
+     "source_id": "src_194ddd2fb8f8",
+     "locator": "MRT Orange Line",
+     "paraphrase": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratc"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratc"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "Mechanism behind transport 9 at district level: the khet contains three BTS Sukhumvit stations (Ratc"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c07",
+   "text_en": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside the khet - EN Wikipedia names public hospitals Ramathibodi, Phramongkutklao, Rajavithi, Queen Sirikit National Institute of Child Health, Hospital for Tropical Diseases and Burachat Chaiyakorn, plus private Bhumirajanagarindra Kidney Institute (OSM node 4629714090 computes in Thung Phaya Thai) and Phyathai 1; TH Wikipedia adds the Mahidol dental hospital. Education: Mahidol University Phaya Thai campus, Rangsit University College of Medicine, Phramongkutklao and Army Nursing colleges, schools Sri Ayudhya, Santirat, Amnuay Silpa, Phaya Thai, Saint Dominic, and the Wannasorn Tower tutoring-school hub (153 Phetchaburi Rd belongs to Valaya Alongkorn's campus). BMA's district highlight list adds consumer/cultural anchors: Bangkok Doll museum, Thai Labour Museum, Geological Museum, the Soi Phranang learning library. Food: two Michelin one-star venues verify inside the khet (d-c15) plus the market food culture documented at station level.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "amenity=place_of_worship inside khet polygon (12 elements)",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    },
+    {
+     "source_id": "src_fc2b77f94bb7",
+     "locator": "สำนักงานเขตราชเทวี (Ratchathewi District Office portal)",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    },
+    {
+     "source_id": "src_a31faf40656f",
+     "locator": "Signature - Bangkok (guide.michelin.com)",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    },
+    {
+     "source_id": "src_5dde3562770f",
+     "locator": "วรรณยุค (Wana Yook) - guide.michelin.com TH page",
+     "paraphrase": "Mechanism behind daily_essentials 9 / food 9: an unusually deep institutional cluster sits inside th"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c08",
+   "text_en": "Safety 5 at district level - same absence-of-evidence pattern as all four researched station areas, plus one narrative revision. No district-level crime statistic for khet Ratchathewi was found in any open source (no BMA/Royal Thai Police per-khet series surfaced; the district office portal publishes service and revenue statistics, not crime). What exists is tourist-corridor perception around Pratunam: recurring tuk-tuk/gem-shop commission-scam and pickpocket complaints across 2024-2025 forum reporting (search-surface only; EN Wikipedia's Pratunam article itself carries no safety content - checked), and the SAYS 2023 alleged bag-slashing already body-read by batch-3 at station level. The one quantitative claim in circulation is unstable: the Compare the Market study's October 2025 iteration reportedly ranked Bangkok #1 of 50 cities for scams/pickpockets (83.45/100, via VnExpress - snippet-surface), but the study's own page as retrieved 2026-11-07 (updated 17 Jul 2026) ranks Paris #1 and Bangkok #23 of 34 (index 58.43) - the 'worst city' headline did not survive the study's own update. Nothing district-specific supports 5, and nothing contradicts it either.",
+   "kind": "reported_perception",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_281acc9e7d8d",
+     "locator": "Pickpocket and Scam Hotspots (study page, updated)",
+     "paraphrase": "Safety 5 at district level - same absence-of-evidence pattern as all four researched station areas, "
+    },
+    {
+     "source_id": "src_c9d75c1722fb",
+     "locator": "Pratunam",
+     "paraphrase": "Safety 5 at district level - same absence-of-evidence pattern as all four researched station areas, "
+    },
+    {
+     "source_id": "src_67e7f515b7bb",
+     "locator": "Pratunam scam complaints 2024-2025; Century The Movie Plaza opening data; MRTA 1",
+     "paraphrase": "Safety 5 at district level - same absence-of-evidence pattern as all four researched station areas, "
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c09",
+   "text_en": "Rhythm anchors that verify at district level: Santiphap Park runs 05:00-21:00 daily with anthem broadcasts at 08:00 and 18:00 and 18:00-18:45 evening aerobics, 2,000-3,000 working-day visitors (Wikipedia body-read). The wholesale dawn trade (stalls from 04:00, trade 05:00-09:00, Mondays thin) is documented for the Pratunam belt by batch-3's Wongnai body-read (cross-referenced, not re-verified here). Construction imposes its own 2025-2028 night rhythm: the Ratchathewi flyover closure is 24-hour (Thai PBS World), batch-2 records night-time works on Phetchaburi, and the Pratunam overpass demolition window falls in 2026 (d-c14). Weekday/weekend and seasonal patterns beyond these anchors were not documented in retrieved sources - partial by design.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_66b1411bd411",
+     "locator": "Santiphap Park",
+     "paraphrase": "Rhythm anchors that verify at district level: Santiphap Park runs 05:00-21:00 daily with anthem broa"
+    },
+    {
+     "source_id": "src_1a707f6d4091",
+     "locator": "Ratchathewi overpass to close for three years for Orange Line construction start",
+     "paraphrase": "Rhythm anchors that verify at district level: Santiphap Park runs 05:00-21:00 daily with anthem broa"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c10",
+   "text_en": "Walkability structure: the khet is ringed and crossed by heavy arterials - Phetchaburi, Phaya Thai, Si Ayutthaya, Ratchawithi, Phahonyothin - meeting at two overpass junctions that dominate pedestrian logic. Pratunam is 'a four-way at-grade intersection with a bidirectional overpass' where the overpass is 'Bangkok's first overpass' and is slated for demolition in March 2026 with rebuilding expected later that year (EN Wikipedia, body-read). Victory Monument sits 'at the center of a traffic circle' of three major roads and remains 'a central hub for the city's bus transportation' (EN Wikipedia). Batch-2 station research records the footbridge/controlled-crossing guidance on Phetchaburi (cross-referenced). No sidewalk-width, crossing-timing or pedestrian-count data for the khet was found in retrieved sources; walking times are deliberately not derived from any radius - partial.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c9d75c1722fb",
+     "locator": "Pratunam",
+     "paraphrase": "Walkability structure: the khet is ringed and crossed by heavy arterials - Phetchaburi, Phaya Thai, "
+    },
+    {
+     "source_id": "src_f3ce12d17b0b",
+     "locator": "Victory Monument (Bangkok)",
+     "paraphrase": "Walkability structure: the khet is ringed and crossed by heavy arterials - Phetchaburi, Phaya Thai, "
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-d-c11",
+   "text_en": "District healthcare depth is exceptional for 7.1 km2: six named public hospitals inside the khet (Ramathibodi, Phramongkutklao, Rajavithi, Queen Sirikit National Institute of Child Health, Hospital for Tropical Diseases, Burachat Chaiyakorn) plus private Bhumirajanagarindra Kidney Institute and Phyathai 1 (EN Wikipedia; TH Wikipedia's list overlaps). OSM independently places the Kidney Institute node (13.75943,100.53509) in khwaeng Thung Phaya Thai. Retail/services layer: FazWaz's market text names Central Market, Chaimongkol Market, Victory Corner and Dakasi Platinum Mall among area shopping; the BTS-adjacent 7-Eleven density and the market belt's grocery role are documented at station level (batch-3: 32 convenience stores in the Ratchaprarop circle, no supermarket polygon). Schools and universities per d-c07 complete the everyday-services mechanism.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "District healthcare depth is exceptional for 7.1 km2: six named public hospitals inside the khet (Ra"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "District healthcare depth is exceptional for 7.1 km2: six named public hospitals inside the khet (Ra"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "amenity=place_of_worship inside khet polygon (12 elements)",
+     "paraphrase": "District healthcare depth is exceptional for 7.1 km2: six named public hospitals inside the khet (Ra"
+    },
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+     "paraphrase": "District healthcare depth is exceptional for 7.1 km2: six named public hospitals inside the khet (Ra"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c12",
+   "text_en": "Affordability vs the app's district rent 18,000/38,000 THB: FazWaz's live Ratchathewi feed (body-read 2026-11-07) shows 1,864 rental listings across 79 projects with asks from 13,000 (1-BR 38 sqm, The Mark Ratchada-Airport Link, 2012 block, Makkasan side) and 14,000 (2-storey townhouse) through the 20,000-28,000 typical 1-BR band (XT Phayathai 26,000-28,000; Q Asoke 25,000; Life Asoke Hype 25,000) to 38,000 (The Extro Phayathai-Rangnam, 2024 build, Victory Monument side) and a 300,000 penthouse; the market text itself states 'rental rate ranging from 25,000 baht per month'. The app's 18,000 lower bound is reachable only by older blocks and low-rise/townhouse stock (13,000-17,000 asks exist); the 38,000 upper bound matches brand-new 1-BR stock near the BTS stations. Consistent with batch-2/3 station findings that the app blend sits inside independent ranges. Caveats: asking (not transacted) rents; portal geocoding quirks (Witthayu Complex listings are filed under Ratchathewi/Makkasan though Witthayu Road is not in the khet) - the sampled in-khet projects were checked by name/address.",
+   "kind": "estimate",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+     "paraphrase": "Affordability vs the app's district rent 18,000/38,000 THB: FazWaz's live Ratchathewi feed (body-rea"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-d-c13",
+   "text_en": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, not a few flagship parks. Inside the khet polygon: leisure=park 9.25 ha + leisure=garden 8.48 ha = 17.73 ha (app: 17.8 ha; 2.5% of OSM's 7.216 km2 = 18.0 ha). Named public parks total only 8.81 ha: Ratchathewi Phirom (สวนราชเทวีภิรมย์) 3.38 ha, Santiphap 2.85 ha (Wikipedia: 8 acres/0.032 km2, BMA-leased Crown Property land, opened 18 Aug 1998), Suan Rom Ratchathewi 1.71 ha, Suan Saatharanasuan Ngern 0.54 ha, Neuroscience's Park 0.18, Prapassaro's Garden 0.14. The garden remainder is small institutional/private green: Suan Pakkad Palace grounds 0.74 ha, Phaya Thai Palace gardens (สวนโรมัน 0.61 ha, สวนท้าวหิรัญพนาสูร 0.53 ha), plus ~20 unnamed plots of 0.1-0.6 ha. BMA's district office lists exactly two parks as district highlights (Suan Rom Ratchathewi, Santiphap); TH Wikipedia lists no public parks at all; FazWaz adds the ~75-square-wah (~300 m2) street-art Chalerm La Park. So green 9 rests on pocket parks + institutional green, with no public park above ~3.4 ha - 'quiet' is not delivered by park scale anywhere in the khet.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "All leisure=park / leisure=garden / leisure=pitch inside area 3600092064 (khet p",
+     "paraphrase": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, n"
+    },
+    {
+     "source_id": "src_66b1411bd411",
+     "locator": "Santiphap Park",
+     "paraphrase": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, n"
+    },
+    {
+     "source_id": "src_fc2b77f94bb7",
+     "locator": "สำนักงานเขตราชเทวี (Ratchathewi District Office portal)",
+     "paraphrase": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, n"
+    },
+    {
+     "source_id": "src_567d0a1dc7b9",
+     "locator": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+     "paraphrase": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, n"
+    },
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+     "paraphrase": "The green 9 / 17.8 ha (2.5%) figure decomposes on OSM as the khet's entire park-plus-garden stock, n"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c14",
+   "text_en": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began July 2024 (Wikipedia; MRTA page per batch-3 gives 31 Jul 2024), 13.4 km fully underground, 11 stations per MRTA vs 12 per Wikipedia (flagged), opening target ~July 2030; three of its stations lie in this khet (OR08 Ratchathewi, OR09 Pratunam, OR10 Ratchaprarop) and OSM already tags construction ways named 'ราชเทวี' inside khwaeng Thanon Phetchaburi. (2) The Ratchathewi intersection flyover closed from 10pm in mid-January 2025 (Thai PBS World, 16 Jan 2025 body-read; batch-2 recorded the night of 15-16 Jan; one MRTA notice snippet says 17 Jan) until 30 April 2028, with Phetchaburi Rd open at ground level and BMA warning of inevitable congestion. (3) The Pratunam overpass demolition window in 2026: batch-2's body-read says partial demolition from March 2026, reopening by November 2026; The Nation snippets say closure 24 April 2026 - 11 February 2027 - unresolved discrepancy, both recorded. (4) The three-airport high-speed rail on the ARL corridor (Makkasan as 'EEC Gateway') drove the relocation of 644 households from five SRT-land communities onto the Bueng Makkasan edge at Soi Mo Leng under a 30-year lease signed into a Baan Mankong cooperative (CODI, 29 Sep 2024 body-read). (5) ARL contactless gating from 8 Nov 2025 and the 28 Mar 2025 earthquake suspension (batch-3, cross-referenced). FazWaz lists 79 projects incl. 2024-2026 completions (The Extro Phayathai 2024).",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_194ddd2fb8f8",
+     "locator": "MRT Orange Line",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    },
+    {
+     "source_id": "src_1a707f6d4091",
+     "locator": "Ratchathewi overpass to close for three years for Orange Line construction start",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    },
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makka",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "railway=construction ways inside khet + Orange Line route relations in bbox",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    },
+    {
+     "source_id": "src_1a707f6d4091",
+     "locator": "Search-result snippets: Pratunam flyover closure window; flyover-closure start d",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    },
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+     "paraphrase": "2024-2026 changes verified at district level: (1) MRT Orange Line west section - construction began "
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c15",
+   "text_en": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO one-star venues verify inside the khet: Signature (One Star, 11F VIE Hotel Bangkok, 117/39-40 Phayathai Rd, khwaeng Thanon Phetchaburi) and Wana Yook (หนึ่งดาวมิชลิน, 5/15 Phaya Thai Rd, khwaeng Thanon Phaya Thai; press dates its star to Guide 2024). The app count likely undercounts or predates Wana Yook's star. (b) '0 piers' - OSM places the Pratunam canal-boat pier (ferry_terminal nodes 566622414/567014528) INSIDE khwaeng Makkasan on the canal's north bank, while the Saphan Hua Chang pier south of BTS Ratchathewi computes OUTSIDE (Pathum Wan bank); '0 piers' is defensible only under a stricter pier definition or south-bank-only geometry - flagged. (c) '60 temples' vs OSM's 12 place_of_worship (4 Buddhist temples, 4 Christian, 3 Muslim, 1 unnamed): the app evidently uses a richer POI database including minor shrines - data-source discrepancy, consistent with batch-3's OSM-vs-app food counts. (d) App center 13.75882,100.53212 computes inside khwaeng Thung Phaya Thai near the district-office/Phaya Thai Palace belt, ~1.1 km WNW of the OSM polygon centroid - plausible as an office-point center rather than an area centroid.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_a31faf40656f",
+     "locator": "Signature - Bangkok (guide.michelin.com)",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    },
+    {
+     "source_id": "src_5dde3562770f",
+     "locator": "วรรณยุค (Wana Yook) - guide.michelin.com TH page",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    },
+    {
+     "source_id": "src_67e7f515b7bb",
+     "locator": "Pratunam scam complaints 2024-2025; Century The Movie Plaza opening data; MRTA 1",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "POI nodes/ways: Baiyoke cluster, Pratunam belt malls, ferry terminals on Khlong ",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "amenity=place_of_worship inside khet polygon (12 elements)",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya",
+     "paraphrase": "App-fact audit against retrieved sources (app numbers left unchanged): (a) '1 Michelin star' - TWO o"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c16",
+   "text_en": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuters who want maximum modal redundancy in one district - 3 BTS + 2 ARL + SRT halt + canal boats + 3 future MRT stations (d-c06); (b) hospital/university-affiliated workers and students - the six-hospital cluster and Mahidol campus are inside the khet (d-c07, d-c11); (c) mid-budget renters accepting older stock - 13,000-28,000 asks exist at scale (d-c12); (d) traders/resellers tied to the wholesale belt (d-c05). Poor fit: green- and quiet-seekers - no public park above ~3.4 ha and the 17.8 ha is largely institutional gardens (d-c13); light sleepers during 2025-2028 (flyover closure + tunneling, d-c14); big-box supermarket shoppers at district level (OSM shows no supermarket polygon in the station circles; the khet's own markets are the substrate); anyone for whom the Pratunam crush - the documented dawn-setup, wholesale-cash, market-crowd economy - is disqualifying rather than an amenity (d-c05, d-c09).",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Railway station/halt nodes in bbox 13.74-13.78, 100.51-100.56 (nodes with coordi",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    },
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "Ratchathewi district",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    },
+    {
+     "source_id": "src_194ddd2fb8f8",
+     "locator": "MRT Orange Line",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    },
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "Property for Rent in Ratchathewi, Bangkok (live listings + market text)",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "All leisure=park / leisure=garden / leisure=pitch inside area 3600092064 (khet p",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    },
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makka",
+     "paraphrase": "Conditional fit (inference from verified mechanisms, not new facts). Best fit: (a) car-free commuter"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c17",
+   "text_en": "Gym/sports substrate inside the khet (OSM, S02): 10+ mapped pitches - 8 tennis courts, 2 basketball, 2 soccer, one futsal/volleyball/sepak-takraw multi court, one general multi pitch - plus the Santiphap Park evening-aerobics programme (18:00-18:45, 2,000-3,000 working-day users per Wikipedia) as the free public-exercise anchor. Hotel pools/gyms (Baiyoke Sky 673 rooms) and hospital sports facilities sit on top; no district-level gym inventory was retrieved, and batch-3's station-level count (Anytime Fitness, karting, 2 pools within 1,200 m) carries over.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "All leisure=park / leisure=garden / leisure=pitch inside area 3600092064 (khet p",
+     "paraphrase": "Gym/sports substrate inside the khet (OSM, S02): 10+ mapped pitches - 8 tennis courts, 2 basketball,"
+    },
+    {
+     "source_id": "src_66b1411bd411",
+     "locator": "Santiphap Park",
+     "paraphrase": "Gym/sports substrate inside the khet (OSM, S02): 10+ mapped pitches - 8 tennis courts, 2 basketball,"
+    },
+    {
+     "source_id": "src_6c851769cf57",
+     "locator": "Baiyoke Tower II",
+     "paraphrase": "Gym/sports substrate inside the khet (OSM, S02): 10+ mapped pitches - 8 tennis courts, 2 basketball,"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-d-c18",
+   "text_en": "Nightlife substrate: hotel-led rather than club-led. Baiyoke Sky Hotel (673 rooms) carries the vertical anchors - 77F public observatory, 83F Roof Top Bar & Music Lounge, 84F revolving deck (Wikipedia); the Pratunam belt's bar/karaoke stock is documented at station level (batch-3: zero OSM nightclubs inside its circle while the app counts venues). A live cinema anchor verifies inside the khet: Century Movie Plaza (OSM amenity=cinema node 13.76166,100.53721, khwaeng Thanon Phaya Thai; official site still lists programmes; search-surface: opened Dec 2005, 8 screens) - the 'closed?' lead is contradicted at snippet level.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_6c851769cf57",
+     "locator": "Baiyoke Tower II",
+     "paraphrase": "Nightlife substrate: hotel-led rather than club-led. Baiyoke Sky Hotel (673 rooms) carries the verti"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "POI nodes/ways: Baiyoke cluster, Pratunam belt malls, ferry terminals on Khlong ",
+     "paraphrase": "Nightlife substrate: hotel-led rather than club-led. Baiyoke Sky Hotel (673 rooms) carries the verti"
+    },
+    {
+     "source_id": "src_3db253d78bfd",
+     "locator": "centurythemovieplaza.com (official site)",
+     "paraphrase": "Nightlife substrate: hotel-led rather than club-led. Baiyoke Sky Hotel (673 rooms) carries the verti"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c01",
+    "ratchathewi-d-c02",
+    "ratchathewi-d-c03",
+    "ratchathewi-d-c04"
+   ],
+   "notes": "Four khwaeng verified three ways (EN wiki, TH wiki, OSM partition summing exactly to the khet): Thung Phaya Thai (seat), Thanon Phaya Thai, Thanon Phetchaburi, Makkasan. The app's khwaeng garble is corrected: Rong Muang belongs to Pathum Wan; Pratunam is a neighbourhood in khwaeng Thanon Phaya Thai, not a khwaeng. All four researched station units sit inside the khet (OSM PIP): BTS Ratchathewi, ARL Ratchaprarop, BTS+ARL Phaya Thai, BTS Victory Monument (+ ARL Makkasan, SRT halt). The monument itself and Baiyoke Tower II are inside (Thanon Phaya Thai khwaeng) - the 'Makkasan/Rong Muang edge' lead is wrong. Makkasan/Din Daeng split = 1993 carve-out of part of Makkasan khwaeng to form Din Daeng khet."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c05",
+    "ratchathewi-d-c09"
+   ],
+   "notes": "Four distinguishable subareas: the Pratunam wholesale belt (1961 produce market to garment hub; dawn trade 04:00-09:00 per batch-3's Wongnai read); Makkasan khwaeng - SRT-land railway communities and the Bueng Makkasan pit (644 households relocated to its edge, CODI); canal-side Ban Khrua - Bangkok's oldest Muslim community with silk workshops and three mosques; the northern hospital/education/palace belt in Thung Phaya Thai. No single 'district experience' survives these differences."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c06",
+    "ratchathewi-d-c07",
+    "ratchathewi-d-c13",
+    "ratchathewi-d-c17",
+    "ratchathewi-d-c18"
+   ],
+   "notes": "Transport 9 = modal redundancy no peer khet matches (3 BTS, 2 ARL, SRT halt, canal boats, 3 future Orange stations with two interchanges) - though the premium interchanges arrive ~2030. Daily_essentials/food 9 = six-hospital cluster + universities + tutoring hub + market-belt food economy + two Michelin-starred venues. Green 9 = pocket-park and institutional-garden stock, not park scale (no public park above 3.4 ha)."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c08",
+    "ratchathewi-d-c14",
+    "ratchathewi-d-c15"
+   ],
+   "notes": "Safety 5 at district level has no statistical basis in any retrieved source - the same absence-of-evidence pattern as the four station-area entities; only corridor-level tourist-scam perception around Pratunam exists (and even the Pratunam wiki article carries no safety content). The citywide 'worst city for scams' study (Oct 2025, snippet) was superseded by its own Jul 2026 update: Paris #1, Bangkok #23. Documented negatives are traffic/construction, not crime: three-year flyover closure, 2026 Pratunam overpass demolition, HSR-driven community displacement."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c09",
+    "ratchathewi-d-c05"
+   ],
+   "notes": "Verified anchors only: Santiphap Park 05:00-21:00 with 18:00 aerobics and anthem broadcasts; the Pratunam dawn wholesale cycle (stalls from 04:00, trade 05:00-09:00, Mondays thin - batch-3 cross-reference); 24-hour flyover closure and night works 2025-2028 impose a construction rhythm. Weekday/weekend and seasonal patterns not documented - partial."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c10",
+    "ratchathewi-d-c04"
+   ],
+   "notes": "The khet is structured by heavy arterials and two overpass junctions: Pratunam's at-grade four-way with Bangkok's first overpass (slated for demolition Mar 2026, rebuild later that year) and the Victory Monument three-road roundabout bus hub. Footbridge/controlled-crossing guidance on Phetchaburi (batch-2 cross-reference). No sidewalk-width or crossing-timing data found; no radius-derived walking durations used."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c11",
+    "ratchathewi-d-c07",
+    "ratchathewi-d-c16"
+   ],
+   "notes": "Healthcare depth is the khet's standout: six named public hospitals + two private inside 7.1 km2. Everyday retail runs on markets (Central Market, Chaimongkol Market, Victory Corner per FazWaz) and convenience-store density (batch-3: 32 in the Ratchaprarop circle, no supermarket polygon); education anchors from Mahidol campus to the Wannasorn tutoring tower."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c12"
+   ],
+   "notes": "FazWaz live feed (1,864 listings, 79 projects) brackets the app's 18,000/38,000 blend: 13,000-17,000 for older/townhouse stock, 20,000-28,000 typical 1-BR, 38,000 for 2024-vintage stock at Victory Monument, 300,000 penthouse ceiling; headline 'from 25,000'. Same conclusion as batch-2/3: the blend sits inside the independent range. Caveats: asking rents; portal geocoding quirks (out-of-khet projects filed under Ratchathewi)."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c13"
+   ],
+   "notes": "Resolved: 17.8 ha = the khet's whole OSM park+garden stock (9.25 + 8.48 = 17.73 ha), not three parks. Named public parks only 8.81 ha (Phirom 3.38, Santiphap 2.85, Suan Rom 1.71, Suan Ngern 0.54, two tiny); the rest is gardens - Suan Pakkad Palace grounds, Phaya Thai Palace gardens, ~20 unnamed institutional plots. BMA lists two district parks; TH wiki lists none. Green 9 is a pocket-park + institutional-green story; 'quiet' is not delivered anywhere at park scale."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c16"
+   ],
+   "notes": "Fits: transit-maximalists (modal redundancy), hospital/university workers and students, mid-budget renters on older stock, wholesale traders. Poor fits: green/quiet seekers (no park above 3.4 ha), light sleepers through 2028 (flyover + tunneling), big-box grocery shoppers, and anyone for whom the Pratunam crush is disqualifying."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c14"
+   ],
+   "notes": "Five dated changes: Orange Line west construction from Jul 2024 with three stations in the khet (Ratchathewi, Pratunam, Ratchaprarop; opening ~Jul 2030); Ratchathewi flyover closed 10pm mid-Jan 2025 until 30 Apr 2028; Pratunam overpass demolition window in 2026 (Mar-Nov 2026 per batch-2 vs 24 Apr 2026-11 Feb 2027 per The Nation snippets - unresolved); 644-household railway-community relocation to Bueng Makkasan under 30-yr lease (CODI, Sep 2024) for the three-airport HSR; ARL contactless Nov 2025. Built on batch-2's flyover verification, independently re-sourced with Thai PBS World."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-d-c15",
+    "ratchathewi-d-c08"
+   ],
+   "notes": "App-fact audit: 1 Michelin star vs two verified one-star venues (Signature, Wana Yook); 0 piers vs OSM's Pratunam pier inside the khet; 60 temples vs 12 OSM worship places (richer app DB, incl. shrines); khwaeng-area table vs OSM digitization; khet area 7.126 official vs 7.216 OSM; district-creation date 6 vs 9 Nov 1989; Santiphap 3.2 ha (wiki) vs 2.85 ha (OSM). Safety 5 remains outside-the-score: untested at district level, now with a softened citywide comparator."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A four-station khet stitched from Pratunam's market economy, pocket parks no bigger than 3.4 ha, and corridors that currently wear an Orange Line construction site.",
+   "claim_ids": [
+    "ratchathewi-d-c03",
+    "ratchathewi-d-c15",
+    "ratchathewi-d-c06",
+    "ratchathewi-d-c12",
+    "ratchathewi-d-c09",
+    "ratchathewi-d-c01"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Ratchathewi packs four researched station areas (BTS Ratchathewi, ARL Ratchaprarop, BTS/ARL Phaya Thai, Victory Monument) into 7.1 km² with four khwaeng. Its green 9 rests on pocket parks — Phirom 3.38 ha, Santiphap 2.85 ha, Suan Rom 1.71 ha — plus institutional gardens; no public park above ~3.4 ha exists anywhere in the khet. Pratunam's wholesale economy and Baiyoke towers (khwaeng Thanon Phaya Thai) anchor the east, and the MRT Orange Line (three in-khet stations, opening ~July 2030) is reshaping its main corridors. Safety 5 repeats the pattern seen at station level: no per-khet statistics exist in any retrieved source.",
+   "claim_ids": [
+    "ratchathewi-d-c03",
+    "ratchathewi-d-c15",
+    "ratchathewi-d-c06",
+    "ratchathewi-d-c12",
+    "ratchathewi-d-c09",
+    "ratchathewi-d-c01"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "District-level transit is structurally rich: three BTS stations, ARL and the under-construction Orange Line (OR08 Ratchathewi, OR09 Pratunam, OR10 Ratchaprarop).",
+    "claim_ids": [
+     "ratchathewi-d-c03"
+    ]
+   },
+   {
+    "text_en": "Rent 7 is bracketed by live asking data (FazWaz 1,864 listings, 13,000-300,000 THB).",
+    "claim_ids": [
+     "ratchathewi-d-c15"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Green 9 decomposes to 8.81 ha of named public parks plus small institutional/private garden stock — pocket-scale, not park-scale.",
+    "claim_ids": [
+     "ratchathewi-d-c06"
+    ]
+   },
+   {
+    "text_en": "The Ratchathewi flyover is closed (since mid-Jan 2025) until 30 Apr 2028, and the Pratunam overpass demolition window is contested between sources.",
+    "claim_ids": [
+     "ratchathewi-d-c12"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Pratunam's wholesale day economy and the office corridors set weekday rhythm; Phetchaburi Road runs quieter at night.",
+    "claim_ids": [
+     "ratchathewi-d-c09"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Pratunam/Makkasan market-and-tower blocks, Thanon Phaya Thai's towers, and the Rangnam/Thanon Phetchaburi mid-rise belt are distinct subareas.",
+    "claim_ids": [
+     "ratchathewi-d-c01"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit: market traders, airport commuters and transit-first renters who accept pocket-park green and construction disruption.",
+    "claim_ids": [
+     "ratchathewi-d-c16"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "rating transport (9): Defensible as district-level modal redundancy: three BTS stations, both in-khet ARL stops, an SRT halt, canal boats on the whole southern edge, and three Orange Line stations under construction including two interchanges. The caveat is timing - the BTS/MRT interchange at Ratchathewi and ARL/MRT at Ratchaprarop open ~2030, so today's 9 describes the stack, not interchange quality (batch-2/3's headway findings carry over).",
+   "rating rent (7): The 18,000/38,000 blend sits inside FazWaz's live spread (13,000-300,000, typical 1-BR 20,000-28,000; 38,000 = 2024-vintage stock). Rent 7 = moderate affordability held by older stock and townhouses while new supply lands at the band's top - matches batch-2's PropertyScout/Superagent ranges.",
+   "rating daily_essentials (9): The strongest-evidenced score at district level: six public hospitals + two private, a university cluster, the Wannasorn tutoring hub, BMA cultural facilities and the market/convenience substrate. Mechanism is institutional depth, not mall coverage.",
+   "rating safety (5): Fifth entity tested, same result: no district-level crime statistics exist in open sources; the only quantitative comparator is citywide and unstable (study revision moved Bangkok from reported #1 to #23). Pratunam scam lore is corridor perception, not a district pattern. The 5 remains an untested prior - flag stays open.",
+   "rating food (9): Two one-star Michelin venues (not one) plus the wholesale-belt food economy and canal-side community eating (batch-2's Soi 5/Soi 10 streets). The app's 1,116-food-venue count reflects a richer POI database than OSM (12 worship vs 60 'temples' shows the same DB gap).",
+   "rating green (9): The 17.8 ha figure now decomposes honestly: 9.25 ha parks + 8.48 ha gardens on OSM, but only 8.81 ha is named public park, largest single park 3.38 ha (Phirom). Green 9 is carried by pocket + institutional green; park-scale quiet does not exist in the khet. The score survives only because the stock is dense and close, not because it is large.",
+   "rating gym_sports (9): Least-evidenced score, as at station level: OSM shows 10+ pitches in the khet (8 tennis, 2 basketball, 2 soccer, futsal/volleyball/sepak-takraw, multi) plus hotel/hospital facilities; no district-level gym inventory was retrieved. 9 is plausible for a district this dense but rests on thin sourcing.",
+   "rating vibe (9): The district's identity is genuinely layered: wholesale Pratunam, the Baiyoke skyline, the 1942 Victory Monument roundabout, Bangkok's oldest Muslim community weaving silk by the canal, the Phaya Thai Palace belt. The 9 is defensible as layered character, with the crowd cost scored separately.",
+   "rating nightlife (9): Anchors: Baiyoke Sky's 77F-84F observatory/bar/revolving deck, the hotel-bar/karaoke stock of the Pratunam belt (batch-3: OSM tags zero clubs in its circle while the app counts venues), Century Movie Plaza still screening near Victory Monument. Nightlife here is hotel- and screen-led, not club-led - the 9 leans on breadth of venues the app's DB sees and OSM does not.",
+   "rating crowd (2): Consistently supported: the dawn wholesale cycle puts porter and vendor traffic on the streets before 05:00, the Pratunam belt is the documented crush zone, the Victory Monument roundabout is a city bus hub, and 2025-2028 construction adds work crews. Nothing retrieved offsets the 2."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "open issue: App '0 piers' vs OSM: Pratunam pier ferry_terminal nodes (566622414, 567014528) compute inside khwaeng Makkasan; the app fact needs either a stricter pier definition or is simply stale - recommend polygon audit before publishing.",
+   "open issue: App '1 Michelin star' vs two verified one-star venues in the khet (Signature at VIE Hotel; Wana Yook). Recommend re-check whether the app counts venues or stars, or predates Wana Yook's star (Guide 2024).",
+   "open issue: District creation date: EN wiki 9 Nov 1989 vs TH wiki 6 Nov 1989 (2532). Unresolved with two conflicting tertiary sources; a Royal Gazette lookup would settle it.",
+   "open issue: Pratunam flyover demolition window conflict: batch-2 body-read (partial demolition Mar 2026, reopen Nov 2026) vs The Nation snippets (close 24 Apr 2026 - 11 Feb 2027). Watch for the April 2026 actual.",
+   "open issue: Orange Line west station count: MRTA 11 vs Wikipedia 12 (S13); alignment and the three in-khet stations agree everywhere.",
+   "open issue: Ratchathewi flyover closure start: 15-16 Jan (batch-2, Thai PBS World dated 16 Jan) vs 17 Jan (MRTA notice snippet). Reopen date 30 Apr 2028 agrees.",
+   "open issue: Khwaeng areas: TH wiki table (2.559/1.136/1.148/2.283) vs OSM computed (2.519/1.210/1.008/2.479) disagree per khwaeng while both sum to the khet (~7.126 vs 7.216 km2) - boundary digitization, not substance.",
+   "open issue: Santiphap Park size: Wikipedia 8 acres (3.2 ha) vs OSM polygon 2.85 ha.",
+   "open issue: App alias list contains 'Rong Muang' - a Pathum Wan khwaeng, not Ratchathewi; and repeats 'Thanon Phetchaburi' twice in the app data excerpt. Corrected in d-c01.",
+   "open issue: App district center (13.75882,100.53212) is inside Thung Phaya Thai near the district office belt, ~1.1 km WNW of the OSM polygon centroid - fine, but worth confirming whether the app centers districts on office seats.",
+   "open issue: Century Movie Plaza: verified live (official site with programme; search-surface: opened Dec 2005, 8 screens) - the 'closed?' lead is contradicted at snippet level; a body-read of a schedule page was not possible (JS-rendered).",
+   "open issue: No district-level crime statistics found anywhere; safety 5 stays an untested prior."
+  ]
+ }
+}

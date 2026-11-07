@@ -205,7 +205,7 @@ def assemble(key, ent_meta, raw, batch, counts):
                 counts["editorial_string"] += 1
                 out.append({"text_en": it, "claim_ids": extract_refs(it, ent_prefix, claim_ids)})
             else:
-                out.append({"text_en": it["text_en"],
+                out.append({"text_en": it.get("text_en") or it.get("text") or "",
                             "claim_ids": [cid for cid in dict.fromkeys(it.get("claim_ids", [])) if cid in claim_ids]})
         return out
 
@@ -220,7 +220,7 @@ def assemble(key, ent_meta, raw, batch, counts):
     def as_block(v, fallback):
         if isinstance(v, dict):
             cids = [c for c in dict.fromkeys(v.get("claim_ids", [])) if c in claim_ids]
-            return {"text_en": v["text_en"], "claim_ids": cids or fallback}
+            return {"text_en": v.get("text_en") or v.get("text") or "", "claim_ids": cids or fallback}
         if isinstance(v, str):
             return {"text_en": v, "claim_ids": extract_refs(v, ent_prefix, claim_ids) or fallback}
         return None
