@@ -1083,7 +1083,7 @@
     "Asking vs signed rents indistinguishable in all sources",
     "Older mid-market buildings' rents not sampled — inference on the typical unit price is directional, not measured"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "sam-yan-c15",
@@ -1613,7 +1613,8 @@
    "open issue: Reconcile the brief's clip-direction labels ('Si Lom north', 'Hua Lamphong south') with coordinate geometry (Si Lom SE ~0.8 km; Hua Lamphong WNW ~1.5 km) — app data unchanged.",
    "open issue: Verify the 2026 Thai Red Cross Fair dates and whether Dec 2026 crowding measurably affects the unit.",
    "open issue: Read the paywalled Bangkok Post 2024-2026 pieces (tollbit gateway) if access is granted — Chula 2037 master plan details and heritage-loss arguments are headline-level only.",
-   "open issue: Research CU Bike bike-share status (brief lead left unexplored)."
+   "open issue: Research CU Bike bike-share status (brief lead left unexplored).",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
   ]
  }
 }

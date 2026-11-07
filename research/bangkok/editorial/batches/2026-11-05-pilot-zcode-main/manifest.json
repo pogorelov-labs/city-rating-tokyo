@@ -117,5 +117,13 @@
   "schema": "entity-research.schema.json",
   "profiles_validated": 6
  },
- "live_app_data_changed": false
+ "live_app_data_changed": false,
+ "canonical_family_relabel": {
+  "date": "2026-11-08",
+  "rule": "kit/canonical.py v1 (B-10/G21)",
+  "relabeled": 0,
+  "limitations_repairs": 0,
+  "note": "corroboration recomputed over canonical publisher families; per-claim ledger in 2026-11-08-canonical-relabel-log.jsonl"
+ },
+ "updated_at": "2026-11-08T00:00:00Z"
 }

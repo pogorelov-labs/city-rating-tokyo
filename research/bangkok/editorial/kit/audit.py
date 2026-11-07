@@ -4,10 +4,13 @@
 Run with: python3 audit.py --batch-dir <batch>   (defaults to cwd)
 
 Recomputes what assembly asserted rather than trusting it: source-ID hashing,
-corroboration labels, body-read reliance, date sanity, banned phrases across
-ALL bundle text, radius→walk-time patterns, claim-ID prefixes, question
-coverage, editorial provenance, and review.checks honesty. Findings are
-advisory severities (P1 = fix before review, P2 = document or accept).
+corroboration labels (over canonical publisher families — canonical.py,
+B-10/G21), body-read reliance, date sanity, banned phrases across ALL bundle
+text, radius→walk-time patterns, claim-ID prefixes, question coverage,
+editorial provenance, review.checks honesty, plus the standing G20 injection/
+HTML sweep, the G24 URL-scheme + AI-summary-provenance checks, and
+limitations-array integrity. Findings are advisory severities (P1 = fix
+before review, P2 = document or accept).
 """
 import argparse
 import glob
@@ -15,7 +18,12 @@ import hashlib
 import json
 import os
 import re
+import sys
 from datetime import date
+from urllib.parse import urlparse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from canonical import canon_family  # noqa: E402
 
 TODAY = date.today()
 ISSUES = []
@@ -29,6 +37,35 @@ SRCTYPES = {"official_operator", "government", "tourism_publisher", "editorial_g
 QA_IDS = {f"Q{i:02d}" for i in range(1, 13)}
 BANNED = re.compile(r"\b(vibrant|hidden gem|something for everyone)\b", re.I)
 WALKTIME = re.compile(r"\b\d+\s*[- ]?(min(ute)?s?|hour)s?\b.{0,20}\b(walk|stroll)\b|\bwalk\b.{0,30}\b\d+\s*[- ]?min", re.I)
+
+# G20 — injection/HTML sweep over user-facing text.
+INJ_HTML = re.compile(r"<[a-zA-Z][a-zA-Z0-9]*[^>]*>")
+INJ_MD_LINK = re.compile(r"\[[^\]\n]{1,80}\]\(https?://[^)\n]{1,200}\)")
+INJ_TEMPLATE = re.compile(r"\{\{|\$\{")
+INJ_PHRASES = re.compile(
+    r"ignore (all |any )?(previous|prior|above) (instructions|rules|prompts?)"
+    r"|disregard (all |any )?(previous|prior|above)"
+    r"|system prompt"
+    r"|you are an? (AI|assistant|language model)"
+    r"|act as an? (AI|assistant)"
+    r"|prompt injection|jailbreak"
+    r"|instructions?:\s*(you must|do not|never|always)", re.I)
+# G24 — AI-summary provenance markers (F-2 bans them in future bundles).
+AI_SUMMARY = re.compile(
+    r"ai[- ]?(summary|overview|generated|answer)|search summary|web search ai", re.I)
+
+def injection_scan(text):
+    """Return [(gate, match)] for structural (P1-grade) and phrase (P2-grade) hits."""
+    hits = []
+    for pat, gate in ((INJ_HTML, "G20-html"), (INJ_MD_LINK, "G20-md-link"),
+                      (INJ_TEMPLATE, "G20-template")):
+        m = pat.search(text)
+        if m:
+            hits.append((gate, m.group(0)[:60]))
+    m = INJ_PHRASES.search(text)
+    if m:
+        hits.append(("G20-phrase", m.group(0)[:60]))
+    return hits
 
 def note(sev, entity, msg):
     ISSUES.append((sev, entity, msg))
@@ -71,6 +108,15 @@ def audit_bundle(path):
         m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s.get("published_at") or "")
         if m and date(int(m.group(1)), int(m.group(2)), int(m.group(3))) > TODAY:
             note("P1", short, f"future published_at {s['published_at']} on {s['id']}")
+        # G24 — URL scheme + AI-summary provenance
+        scheme = urlparse(s["canonical_url"]).scheme.lower()
+        if scheme == "http":
+            note("P2", short, f"G24: plain http:// citation {s['id']} — upgrade or drop")
+        elif scheme not in ("https",):
+            note("P1", short, f"G24: non-http(s) canonical URL on {s['id']}: {s['canonical_url'][:60]}")
+        probe = " ".join(str(s.get(k) or "") for k in ("publisher", "publisher_family", "title"))
+        if AI_SUMMARY.search(probe):
+            note("P2", short, f"G24/F-2: AI-summary provenance on {s['id']} — banned in future bundles")
 
     urls = [s["canonical_url"] for s in b["sources"]]
     if len(urls) != len(set(urls)):
@@ -98,16 +144,24 @@ def audit_bundle(path):
                 note("P1", short, f"{cid}: evidence points to missing source {e['source_id']}")
             elif not src["body_read"]:
                 note("P2", short, f"{cid}: evidence uses body_read=false source {e['source_id']}")
-        fams = {s["publisher_family"] for s in b["sources"]
+        fams = {canon_family(s["publisher_family"]) for s in b["sources"]
                 if s["id"] in {e["source_id"] for e in c["evidence"]}}
         expected = "corroborated" if len(fams) >= 2 else "proposed"
         if c["review_status"] not in (expected, "conflicted", "rejected", "approved"):
-            note("P1", short, f"{cid}: review_status {c['review_status']} but corroboration implies {expected}")
+            note("P1", short, f"{cid}: review_status {c['review_status']} but canonical corroboration implies {expected}")
         if c["review_status"] == "corroborated" and len(fams) < 2:
-            note("P1", short, f"{cid}: marked corroborated with only {len(fams)} family(ies)")
+            note("P1", short, f"{cid}: marked corroborated with only {len(fams)} canonical family(ies)")
         txt = " ".join([c["text_en"], *c["limitations"]])
         if BANNED.search(txt):
             note("P1", short, f"{cid}: banned phrase in claim text")
+        for link in c.get("conflicts_with") or []:
+            if link == cid:
+                note("P1", short, f"{cid}: conflicts_with self-reference")
+            elif link not in cids:
+                note("P1", short, f"{cid}: conflicts_with dangling link {link}")
+        lims = c.get("limitations") or []
+        if len(lims) > 5 and all(isinstance(x, str) and len(x) <= 1 for x in lims):
+            note("P1", short, f"{cid}: limitations array exploded into single characters ({len(lims)} entries)")
 
     qmap = {q["id"]: q for q in b["question_answers"]}
     if set(qmap) != QA_IDS:
@@ -120,6 +174,26 @@ def audit_bundle(path):
                 note("P1", short, f"{qid}: dangling claim ref {cid}")
 
     ed = b["editorial"]
+    # G20 — injection/HTML sweep over all user-facing text
+    user_text = []
+    for blk in (ed["preview"], ed["guide_lead"]):
+        if blk:
+            user_text.append(blk["text_en"])
+    for lst in ("strengths", "tradeoffs", "day_night", "within_area_variation",
+                "conditional_fit", "uncertainties"):
+        for item in ed.get(lst) or []:
+            # uncertainties entries are strings (batches 1-2) or {text|text_en} dicts (batch 3)
+            user_text.append((item.get("text_en") or item.get("text") or "")
+                             if isinstance(item, dict) else str(item))
+    for c in b["claims"]:
+        user_text.append(c["text_en"])
+        user_text.extend(c.get("limitations") or [])
+    for q in b["question_answers"]:
+        user_text.append(q.get("notes") or "")
+    for t in user_text:
+        for gate, frag in injection_scan(t or ""):
+            sev = "P2" if gate == "G20-phrase" else "P1"
+            note(sev, short, f"{gate}: {frag!r} in user-facing text")
     for blk in ("preview", "guide_lead"):
         if ed[blk] is None:
             note("P1", short, f"{blk} is null — required card/lead copy missing")

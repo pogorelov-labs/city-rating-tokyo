@@ -19,13 +19,21 @@ Normalizations applied (each counted in the summary):
 - editorial items as plain strings → claim_ids extracted from inline refs,
   else union fallback; preview/guide_lead as strings likewise
 - duplicate canonical URLs within a bundle deduped (first wins)
+- corroboration independence uses canonical publisher families
+  (canonical.py, B-10/G21): Wikipedia language editions / Wikimedia projects,
+  OSM/Overpass variants, and portal casing variants count as ONE publisher
+  family. Stored `publisher_family` strings stay raw (provenance).
 """
 import argparse
 import hashlib
 import json
 import os
 import re
+import sys
 from datetime import datetime, timezone
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from canonical import canon_families  # noqa: E402
 
 NORM_POLARITY = {
     "positive": "strength", "negative": "tradeoff",
@@ -165,6 +173,9 @@ def assemble(key, ent_meta, raw, batch, counts):
             sid = sid_by_index[e["source_index"]]
             ev_out.append({"source_id": sid, "locator": e["locator"], "paraphrase": e["paraphrase"]})
             fams.add(fam_by_sid.get(sid, sid))
+        fams_canon = canon_families(fams)
+        if len(fams_canon) < len(fams):
+            counts["canonical_family_merge"] += 1
         ckind = c["kind"]
         if ckind not in {"factual_report", "reported_perception", "estimate", "researcher_inference"}:
             ckind = "researcher_inference"
@@ -176,7 +187,7 @@ def assemble(key, ent_meta, raw, batch, counts):
                 if c["claim_id"] in (q.get("claim_ids") or q.get("claims") or q.get("claim_refs") or [])]) \
                 or "conflict" in joined:
             status = "conflicted"
-        elif len(fams) >= 2:
+        elif len(fams_canon) >= 2:
             status = "corroborated"
         else:
             status = "proposed"
@@ -317,7 +328,7 @@ def main():
     batch = json.load(open(os.path.join(args.batch_dir, "batch.json"), encoding="utf-8"))
     counts = {"polarity": 0, "source_type": 0, "geo_scope": 0, "claim_kind": 0,
               "qa_field": 0, "qa_status_partial": 0, "qa_inline_refs": 0,
-              "editorial_string": 0, "source_url_dedup": 0}
+              "editorial_string": 0, "source_url_dedup": 0, "canonical_family_merge": 0}
     manifest_entities, all_logs = [], []
     for ent in batch["entities"]:
         key = ent["key"]

@@ -240,7 +240,7 @@
    "supporting_claim_ids": [],
    "conflicts_with": [],
    "limitations": [],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "dusit-c03",
@@ -363,7 +363,7 @@
    "limitations": [
     "no source read itemizes the 118.7 ha composition; access rules for Royal Plaza/Suan Amporn unsourced"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "dusit-c06",
@@ -564,7 +564,7 @@
    "limitations": [
     "absence-of-findings claim within the logged query set"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   }
  ],
  "question_answers": [
@@ -1219,7 +1219,8 @@
    "open issue: Composition of the app's 118.7 ha / 10.5% park figure for Dusit - which grounds are counted (zoo 19 ha, palace, Sanam Suea Pa, Chitrlada?) - and what share is publicly accessible; recommend re-review of green-10.",
    "open issue: Old Dusit Zoo site: no body-level source on reuse plans (Nation-TV March-2024 'small public park' lead and July-2024 park/hospital debate remain snippet-level). Recheck when the royal estate office publishes.",
    "open issue: Corroborate the Sep-2025 Samsen sinkhole specifics (dimensions, closure status, repair estimate) against Reuters/Thai-language news bodies before editorial publication - the Wikipedia article is LLM-flagged.",
-   "open issue: Nang Loeng market: not covered in bodies read; if the app credits food/daily-life points to it, verify its khwaeng (Si Yaek Maha Nak) and trading status separately."
+   "open issue: Nang Loeng market: not covered in bodies read; if the app credits food/daily-life points to it, verify its khwaeng (Si Yaek Maha Nak) and trading status separately.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
   ]
  }
 }

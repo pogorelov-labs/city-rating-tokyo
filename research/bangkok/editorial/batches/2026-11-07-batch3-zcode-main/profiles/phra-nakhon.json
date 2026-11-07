@@ -533,7 +533,7 @@
     "app polygon includes Democracy Monument; batch-2 PIP note recorded a different result for a phaya-thai check - flagged as open issue",
     "app-data anchor (not a web source): point-in-polygon checks against app/src/data/bangkok/geometry.json entity phra-nakhon"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "phra-nakhon-c02",
@@ -573,7 +573,7 @@
     "registered (bureaucratic) population, not present population; in a tourist district the daytime headcount diverges strongly",
     "batch-2 recorded Wang Burapha 8,344 for 2025 (DOPA path) vs 8,238 here (Thai wiki Dec 2568) - month/revision difference, both in the same range"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "phra-nakhon-c03",
@@ -981,7 +981,7 @@
     "17 listings is a thin market sample; HipFlat page itself flags some mis-mapped units (a Nonthaburi condo listed under Phra Nakhon)",
     "non-portal stock (old shophouses, rooms above shops) unmeasured - the budget tail is invisible to this evidence"
    ],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "phra-nakhon-c13",
@@ -1523,7 +1523,8 @@
    "open issue: Batch-2 recorded Wang Burapha Phirom 8,344 (2025) vs 8,238 here (Thai wiki, Dec 2568) - month/revision difference; harmless but should be normalized to one DOPA retrieval date at integration.",
    "open issue: Suan Luang Rama VIII Park, Princess Mother Memorial Park and Sansatarana Park carry OSM tags/addresses adjacent to or referencing old-town names but fall OUTSIDE the app phra-nakhon polygon (Dusit / across-river / south). Any guide copy naming them as district parks must be corrected.",
    "open issue: Resident voice is thinner than ideal: Reddit/TripAdvisor not attempted (403 by project policy); the only first-person resident/vendor voices available were in an undated Coconuts feature.",
-   "open issue: Klang Hospital sits just outside the eastern polygon edge (Pom Prap side) per the app geometry; hospital travel-burden phrasing in guide copy should reflect 'outside the khet line', not 'absent from the area'."
+   "open issue: Klang Hospital sits just outside the eastern polygon edge (Pom Prap side) per the app geometry; hospital travel-burden phrasing in guide copy should reflect 'outside the khet line', not 'absent from the area'.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
   ]
  }
 }

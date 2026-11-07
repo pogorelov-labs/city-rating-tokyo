@@ -184,7 +184,7 @@
    "supporting_claim_ids": [],
    "conflicts_with": [],
    "limitations": [],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "bang-sue-c02",
@@ -455,7 +455,7 @@
    "supporting_claim_ids": [],
    "conflicts_with": [],
    "limitations": [],
-   "review_status": "corroborated"
+   "review_status": "proposed"
   },
   {
    "id": "bang-sue-c09",
@@ -1059,7 +1059,8 @@
    "open issue: Resolve MRT Blue 'Bang Sue' station node membership (absent from OSM khet-area query result) - if it sits in Chatuchak per OSM, the app's station-crediting for bang-sue may need review.",
    "open issue: Body-level KTW ridership data (SRT monthly stats) not found in this pass; 'underused' narrative rests on capacity comparison + snippet-level 2023 coverage.",
    "open issue: Platform count discrepancy (EN wiki 26 vs Thai Train Guide 24) needs one authoritative figure before editorial publication.",
-   "open issue: SRTA Feb-2026 land auction (plots A/B, ~100bn THB) was seen only in search summaries - verify against a body before citing."
+   "open issue: SRTA Feb-2026 land auction (plots A/B, ~100bn THB) was seen only in search summaries - verify against a body before citing.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
   ]
  }
 }
