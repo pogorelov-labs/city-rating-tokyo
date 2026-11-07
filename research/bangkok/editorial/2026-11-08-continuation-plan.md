@@ -83,7 +83,6 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-10 | **Canonical family mapping + corroboration relabel (G21).** Exact family-string matching let "English Wikipedia"+"Thai Wikipedia" count as two families: canonical mapping relabels **27 of 422 corroborated claims to proposed (422→395)** — affected list produced (bang-sue, thon-buri, dusit, bang-phlat EN+TH pairs). Implement canon mapping in `kit/assemble.py`, re-label, re-gate. | AG | S | relabel applied; gates green; corrected counts in manifests |
 | B-11 | **Canonical source registry (G21 companion).** 49 URLs are cited with inconsistent publisher/title across bundles ("Wikipedia" vs "Wikipedia (English)"; per-claim Overpass titles). Build URL → canonical publisher/title registry; adapter references it so merged citation views show one attribution. | PL/AG | S | registry committed; adapter uses it |
 | B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. | SL/AG | S | taxonomy v1.1 or documented decision |
-
 | B-13 | **Populate `conflicts_with` (handoff: every claim needs its conflicts).** Conflicts are currently captured via `conflicted` status + limitations + QA notes, but the schema's structured claim-to-claim link field is empty everywhere. Where two claims in one bundle conflict (e.g. chit-lom opening dates, sala-daeng Lalai Sap schedule), link them; extend `kit/validate.py` to check link integrity. | AG | S | conflicts_with populated where detectable; validator checks links |
 | B-14 | **Manifest completeness (handoff: manifest records start/end times).** Manifests currently stamp only `created_at`. Emit research start/end times (first/last raw-write mtimes per batch). | AG | S | manifests carry start/end; batch DoD updated |
 
@@ -101,8 +100,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | C-4 | Wave **2027-07 → 2029** (≈40 items): DOPA census releases; quarterly portal rent refresh; SRT/MRTA/BEM ridership; named milestones (Purple line Nov 2030, Orange line Jul 2030, Ratchathewi flyover Apr 2028, Central Ladprao renovation to 2058 lease) | as published | |
 | C-5 | **Living registry (C9):** regenerate the calendar at every batch end via `kit/recheck-due.py`; fold bundle `open_issues` (~547 notes) in as verifiable items; **owner named via DEC-3**. | continuous | script to build |
 | C-6 | **Link-rot waves (G14):** quarterly checks over the 547 canonical URLs; dead URLs flagged on the source record, affected claims downgraded to "archived citation" status — never deleted silently. | quarterly | script to build |
-
-| C-7 | **End-of-batch volatile recheck (handoff method rule — missed in all four batches).** Before closing any batch, re-open the volatile operational/price/closure sources it cites (rents, market schedules, opening hours, transport status) and confirm they still say what the claims say; append dated confirmation notes or corrections. Batch DoD updated accordingly. | AG | S per batch | batch DoD item; no stale-at-close volatiles |
+| C-7 | **End-of-batch volatile recheck (handoff method rule — missed in all four batches).** Before closing any batch, re-open the volatile operational/price/closure sources it cites (rents, market schedules, opening hours, transport status) and confirm they still say what the claims say; append dated confirmation notes or corrections. | every batch close | Program DoD item 10; batch DoD amended |
 
 ## 6. WS-D — Tier upgrades & corpus maintenance (gated on A-1)
 
@@ -156,7 +154,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 
 | # | Gate | Attaches at | Status | Mechanized |
 |---|---|---|---|---|
-| G1 | Schema + semantic-ref validation | per bundle | ✅ | `kit/validate.py` |
+| G1 | Schema + semantic-ref validation | per bundle | ✅ — B-13 adds `conflicts_with` link checks | `kit/validate.py` |
 | G2 | Semantic audit (IDs, corroboration, body-read reliance, banned words, radius→time, ref closure) | per batch | ✅ — B-10/B-11 refine canonicalization | `kit/audit.py` |
 | G3 | Digest gate vs `source-manifest.json` | pre-research | ✅ | shasum |
 | G4 | Geometry pass (PIP/haversine on boundary claims) | pre-assembly | ✅ (B-8 adds `--khet`) | `kit/check_geometry.py` |
@@ -196,7 +194,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 9. Honest status surface: which entities are copy-bearing (A/B approved) vs data-only (C) — no laundering.
 10. End-of-batch volatile rechecks (C-7) performed and recorded for every researched batch (handoff method rule).
 
-Per-artifact DoD (full checklists): [`2026-11-08-critique-gates-dod.md`](2026-11-08-critique-gates-dod.md) §3.
+Per-artifact DoD (full checklists): [`2026-11-08-critique-gates-dod.md`](2026-11-08-critique-gates-dod.md) §3 — the batch DoD there additionally includes C-7 (end-of-batch volatile recheck) per the handoff-compliance sweep.
 
 ## 13. Sequencing (dependency-ordered)
 
@@ -211,6 +209,7 @@ A-1
 Then       → E-1 spec → E-2 implementation ∥ E-7 coherence pass ∥ E-5 evidence bar
            → E-3 disclosures ∥ E-6/DEC-8 tier-C card ∥ E-8 normalization ∥ G20/G24 in kit
 When live  → WS-F translations (F-1) ∥ WS-G images (G-1/G-2)
+Per batch  → C-7 end-of-batch volatile recheck before close (handoff rule)
 Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 ```
 
