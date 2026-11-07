@@ -776,7 +776,10 @@
     }
    ],
    "supporting_claim_ids": [],
-   "conflicts_with": [],
+   "conflicts_with": [
+    "wat-mangkon-c02",
+    "wat-mangkon-c04"
+   ],
    "limitations": [
     "Talat Noi/Song Wat inside-outside split computed from coordinates, not from the app polygon",
     "Wikipedia's claim that Chinatown 'roughly coincides with Samphanthawong District' is a popular simplification conflicting with venue-level khet facts (c02, c04)"

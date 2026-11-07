@@ -101,6 +101,11 @@ def semantic_checks(b, path_prefix, errors):
         for e in c["evidence"]:
             if e["source_id"] not in known_src:
                 errors.append(f"{path_prefix}.{c['id']}: evidence source {e['source_id']} not in sources")
+        for link in c.get("conflicts_with") or []:
+            if link == c["id"]:
+                errors.append(f"{path_prefix}.{c['id']}: conflicts_with self-reference")
+            elif link not in claim_ids:
+                errors.append(f"{path_prefix}.{c['id']}: conflicts_with dangling link {link}")
     for q in b["question_answers"]:
         for cid in q["claim_ids"]:
             if cid not in claim_ids:
