@@ -1,4 +1,6 @@
-# Continuation plan & detailed backlog — Bangkok editorial research (v2, 2026-11-08)
+# Continuation plan & detailed backlog — Bangkok editorial research (v2.1, 2026-11-08)
+
+**v2.1 — fully integrates both review passes AND the handoff-compliance sweep (2026-11-08): six misses against the original HANDOFF.md fixed — end-of-batch volatile recheck (C-7), structured conflicts_with links (B-13), manifest start/end times (B-14), validator cross-check (in B-9), guide section order + localized preview index + existing short-copy reconciliation (E-1/E-2), and mention-breadth with date window (D-5).**
 
 **v2 — fully integrates both review passes.** The first version was amended
 twice (critique pass → A-4/A-5/A-6, B-0/B-9, C-5/C-6, D-4/D-5, E-5/E-6, G-2,
@@ -77,10 +79,13 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-6 | **Fact corrections (P1, quick).** ratchathewi "1 Michelin star" → two one-star venues verify in-khet (Signature at VIE, Wana Yook); chit-lom "5 piers" → 2 distinct (4 duplicate OSM nodes); ratchathewi "0 piers" vs Pratunam pier nodes PIP-in-khet; hua-lamphong "2 piers" = canal (Khlong Phadung Krung Kasem), not river; Four Seasons Bangkok = 2015 rebrand, not 2024; OTK "CNN 4th best" rank unverifiable (URL 404) — already excluded from claims. | PL | S | corrections via fail-closed build replay |
 | B-7 | **Counter-evidence → labeling policy (P2; DEC-7).** Dated events with receipts: Or Tor Kor shooting 2025-07-28 (5 dead); din-daeng = noisiest PCD station (71.6–81.6 dB(A), 182/182 days over) + Rocket Media rank 50/50; BTS Asok rush failure 2025-09-25; 529-stallholder clock-tower eviction 2025; Jodd Fairs Rama 9 demolished 2025-01; Khlong San Plaza closed 2021. Decide product visibility; **never** let a single incident become a persistent area label (handoff rule). | product (DEC-7) | S | policy recorded |
 | B-8 | **Kit TODO (P2).** `check_geometry.py --khet` flag (station-geometry `chatuchak` key shadows the district key — found by the batch-3 chatuchak agent). | AG | S | flag added + tested |
-| B-9 | **Kit unit tests + CI (G16).** assemble/validate/audit are load-bearing, patched ≥6 times under pressure. Fixture bundles + expected outputs, wired beside the repo's existing checks. | PL | S | kit tests green in CI; changes fail closed |
+| B-9 | **Kit unit tests + CI (G16).** assemble/validate/audit are load-bearing, patched ≥6 times under pressure. Fixture bundles + expected outputs, wired beside the repo's existing checks; when `jsonschema` is available, cross-check the kit validator against the real Draft-2020-12 validator on the fixture set (the handoff requires validation against `entity-research.schema.json` proper). | PL | S | kit tests green in CI; validator cross-checked; changes fail closed |
 | B-10 | **Canonical family mapping + corroboration relabel (G21).** Exact family-string matching let "English Wikipedia"+"Thai Wikipedia" count as two families: canonical mapping relabels **27 of 422 corroborated claims to proposed (422→395)** — affected list produced (bang-sue, thon-buri, dusit, bang-phlat EN+TH pairs). Implement canon mapping in `kit/assemble.py`, re-label, re-gate. | AG | S | relabel applied; gates green; corrected counts in manifests |
 | B-11 | **Canonical source registry (G21 companion).** 49 URLs are cited with inconsistent publisher/title across bundles ("Wikipedia" vs "Wikipedia (English)"; per-claim Overpass titles). Build URL → canonical publisher/title registry; adapter references it so merged citation views show one attribution. | PL/AG | S | registry committed; adapter uses it |
 | B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. | SL/AG | S | taxonomy v1.1 or documented decision |
+
+| B-13 | **Populate `conflicts_with` (handoff: every claim needs its conflicts).** Conflicts are currently captured via `conflicted` status + limitations + QA notes, but the schema's structured claim-to-claim link field is empty everywhere. Where two claims in one bundle conflict (e.g. chit-lom opening dates, sala-daeng Lalai Sap schedule), link them; extend `kit/validate.py` to check link integrity. | AG | S | conflicts_with populated where detectable; validator checks links |
+| B-14 | **Manifest completeness (handoff: manifest records start/end times).** Manifests currently stamp only `created_at`. Emit research start/end times (first/last raw-write mtimes per batch). | AG | S | manifests carry start/end; batch DoD updated |
 
 ## 5. WS-C — Re-verification calendar (P1 · AG · quarterly waves)
 
@@ -97,6 +102,8 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | C-5 | **Living registry (C9):** regenerate the calendar at every batch end via `kit/recheck-due.py`; fold bundle `open_issues` (~547 notes) in as verifiable items; **owner named via DEC-3**. | continuous | script to build |
 | C-6 | **Link-rot waves (G14):** quarterly checks over the 547 canonical URLs; dead URLs flagged on the source record, affected claims downgraded to "archived citation" status — never deleted silently. | quarterly | script to build |
 
+| C-7 | **End-of-batch volatile recheck (handoff method rule — missed in all four batches).** Before closing any batch, re-open the volatile operational/price/closure sources it cites (rents, market schedules, opening hours, transport status) and confirm they still say what the claims say; append dated confirmation notes or corrections. Batch DoD updated accordingly. | AG | S per batch | batch DoD item; no stale-at-close volatiles |
+
 ## 6. WS-D — Tier upgrades & corpus maintenance (gated on A-1)
 
 | ID | Item | Candidates | Effort |
@@ -105,14 +112,14 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | D-2 | **C → B (light)** on triggers: product-surfaced entity; coverage/news event; user selection. | rolling | per-trigger |
 | D-3 | **Tier-C regeneration** from each new app snapshot (identities/scores move; placeholders must not drift). | all 137 | S (scripted) |
 | D-4 | **Bundle re-anchoring (G15) after any app-data change (C6):** B-1/B-2/B-3 change scores, ranks, cohort sizes — all 46 researched bundles' `selection_context` goes stale; a station-set change recomputes cohort ranks everywhere. Re-derive `selection_context` from the new snapshot (claims untouched). | AG (scripted) | S per change |
-| D-5 | **Coverage battery in future light passes (C14):** batch-4 skipped the dedicated axis-1 scan; fold the 3-query coverage battery into every new light bundle so D-2 triggers have an instrument. | AG | S |
+| D-5 | **Coverage battery in future light passes (C14) — and the handoff's second browsing choice.** Batch-4 skipped the dedicated axis-1 scan; fold the 3-query coverage battery into every new light bundle, and record per entity a structured **editorial mention breadth with its date window** (independent-family count + window) in the batch manifest — the handoff lists "documented editorial mention breadth with its date window" as a separate product-browsing choice alongside score and evidenced themes. Bundles keep `popularity_*` unmeasured; breadth lives in the manifest, not the bundle. | AG | S |
 
 ## 7. WS-E — Product integration (P1 · separate reviewed change · gated on A-1)
 
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
-| E-1 | **Adapter design spec** + two decisions from DEC-10: build-step location (`scripts/bangkok` export recommended) and a schema-migration policy (additive; `schema_version` bumps with migration notes). Localized preview index in the map bundle → per-place guide narrative + evidence disclosure loaded on demand; entity-key mappings = existing `st.*`/district slugs; article text rendered as plain text only. | product+eng | M | spec reviewed and approved |
-| E-2 | **Implementation** behind E-1, with the app's own checks (lint, toolchain tests, TS, production build, e2e). Research is **never** imported into `districts.json`/`stations.json`/rent references. | eng | L | app checks green; map bundle delta within budget |
+| E-1 | **Adapter design spec** + two decisions from DEC-10: build-step location (`scripts/bangkok` export recommended) and a schema-migration policy (additive; `schema_version` bumps with migration notes). Localized preview index in the map bundle (locale keys with EN fallback until WS-F) → per-place guide narrative + evidence disclosure loaded on demand; entity-key mappings = existing `st.*`/district slugs; article text rendered as plain text only. **Guide section order follows the handoff**: identity/scope → distinctive character → strengths and trade-offs → conditional fit/time/subareas → deeper facts and sources → optional gallery. **Reconcile with the existing short-copy strings**: `app/src/data/area-guide-copy.json` currently holds exactly six `bangkok:station:*`/`bangkok:district:*` keys (the pilot set) — never silently overwrite; migrate/version them through review. | product+eng | M | spec reviewed and approved |
+| E-2 | **Implementation** behind E-1, with the app's own checks (lint, toolchain tests, TS, production build, e2e). Research is **never** imported into `districts.json`/`stations.json`/rent references **or the existing `area-guide-copy.json` short-copy strings** (handoff boundary; reconcile via reviewed migration instead). | eng | L | app checks green; map bundle delta within budget |
 | E-3 | **Score-context disclosures in UI (A4/C-ep4):** green buffer basis, transport mechanism, rent label semantics — placed **one tap from the score** (not buried in the guide); plus a corpus-skew disclosure (expat/tourist source skew, score-correlated selection, single-season observations). | product | S | disclosures live |
 | E-4 | Raw research corpus stays out of the map bundle (hard rule); gallery/preview images only after WS-G. | eng | — | bundle audit |
 | E-5 | **Copy evidence bar (G12) — the load-bearing new gate.** Card preview: **corroborated claims only** (canonical families, post-B-10). Guide narrative: corroborated + proposed with attribution. Conflicted claims: never in copy — evidence disclosure only. `researcher_inference`: never in copy. Enforced by the adapter with a test case, not by convention. | eng+product | M | adapter rejects out-of-bar claims (test in CI) |
@@ -187,6 +194,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 7. Recheck calendar owned (DEC-3) and current; link-rot waves scheduled (C-6/G14).
 8. Kit under tests in CI (B-9/G16).
 9. Honest status surface: which entities are copy-bearing (A/B approved) vs data-only (C) — no laundering.
+10. End-of-batch volatile rechecks (C-7) performed and recorded for every researched batch (handoff method rule).
 
 Per-artifact DoD (full checklists): [`2026-11-08-critique-gates-dod.md`](2026-11-08-critique-gates-dod.md) §3.
 
