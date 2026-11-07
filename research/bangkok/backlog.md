@@ -73,12 +73,26 @@ Evidence relevant to open tickets:
 - **CRTKY-152** — the coverage-breadth method (fixed window 2024-11-05 →
   2026-11-07, publisher-family dedup, logged queries) is a candidate
   instrument; it is explicitly not a popularity measure.
-- **New candidate item — green-rating basis audit (pipeline question):**
-  six researched entities cannot tie their green rating to in-unit public
-  parkland (green = park ha within 1 km of grid points, so a station unit can
-  rate 9–10 with no park inside its 800 m polygon; phaya-thai's 14.8 ha is
-  likely Army/state land with controlled access). Route to the pipeline
-  review, not per-entity research.
+- **New candidate items (pipeline, from the completed 183-entity program —
+  plan: [`editorial/2026-11-08-continuation-plan.md`](editorial/2026-11-08-continuation-plan.md),
+  receipts in [`notes/2026-11-07-editorial-batch-pipeline-followups-crtky130.md`](notes/2026-11-07-editorial-batch-pipeline-followups-crtky130.md)):**
+  - **Ghost-station audit (high):** `st.sena-ruam` (rank #9/133) is a
+    never-built BTS infill modeled as operating — audit all 139 stations.
+  - **Anchor-convention audit (high):** app centers vs OSM nodes differ
+    270–770 m on ≥8 units (saint-louis ≥720 m); document or correct.
+  - **Green-rating basis decision (high):** buffer basis now proven across
+    10+ entities (dusit 118.7 ha largely non-public; pathum-wan includes
+    36.3 ha members-only RBSC; kamphaeng-phet 9 = parks in other units) —
+    disclose in UI or add a catchment-interior sub-signal.
+  - **Polygon quality pass (medium):** khlong-san 10-vertex polygon
+    PIP-OUTs ICONSIAM; sathon polygon excludes all BTS nodes; thon-buri/
+    Wongwian Yai; Victory Monument khet conflict.
+  - **Rent semantics cleanup (medium):** dual Pathum Wan blends
+    (33,500/74,000 vs 38,000/85,000); chit-lom 120k override is top-decile,
+    not a median; pom-prap 2-bed below all observed asks (CRTKY-141).
+  - **Recheck calendar (maintenance):** 201 dated flags from the bundles —
+    [`editorial/2026-11-08-recheck-calendar.csv`](editorial/2026-11-08-recheck-calendar.csv);
+    run as quarterly light-agent waves.
 
 ## Done in this subtree
 
