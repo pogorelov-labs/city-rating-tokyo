@@ -183,3 +183,31 @@ Always         → D-3 placeholder regeneration per app snapshot ∥ WS-H guards
   (with 2026-11-08 update appended)
 - Reviewer packet: `batches/REVIEWER-PACKET.md`
 - Final program review: `2026-11-08-final-review.md`
+
+
+---
+
+## 2026-11-08 second-pass amendments (from the deep review — [`2026-11-08-deep-review.md`](2026-11-08-deep-review.md))
+
+Empirical sweeps over the whole researched corpus surfaced four new pipeline
+items, four new gates, and three adapter decisions:
+
+| ID | Item | Owner | Effort | Acceptance |
+|---|---|---|---|---|
+| B-10 | **Canonical family mapping + corroboration relabel (G21).** Family strings were matched exactly; "English Wikipedia"+"Thai Wikipedia" counted as two families. Canonical mapping relabels **27 of 422** corroborated claims to proposed (422→395). Implement canon mapping in `kit/assemble.py`, re-run gates, re-label affected claims. | AG | S | relabel applied; gates green; counts in manifest |
+| B-11 | **Canonical source registry (49 same-URL metadata inconsistencies).** URL → canonical publisher/title, built once and referenced by the adapter so merged citation views show one attribution. | PL/AG | S | registry committed; adapter uses it |
+| B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket — refine the enum or add subtypes; report source-mix per bundle. | SL/AG | S | taxonomy v1.1 or documented decision |
+| E-7 | **Corridor coherence pass (G22).** Adjacent researched units (chong-nonsi/sala-daeng/bang-rak; wat-mangkon/sam-yot/sanam-chai; asok/nana/phloen-chit) — sweep for contradictory *framing* of shared places and cross-bundle fact drift; fix before integration. | AG | M | coherence report; fixes applied |
+| E-8 | **Voice/length normalization + time-boxing (G23).** Measured variance: 18.2 vs 13.8 vs 9.2 editorial items/unit; previews 137–543 chars. Adapter caps sections, normalizes register on structured fields (never rewrites semantics), stamps observation windows, renders change claims with event dates and rhythm claims with observed-period labels. | eng | M | normalized build; no semantic drift |
+| E-9 | **Locale-parity decision.** JA/RU get nothing until WS-F; decide launch posture (EN-only guides vs delay until parity). | product | S | decision recorded |
+| F-2 | **Method amendment: AI-summary provenance banned** in all future bundles (6 exist today, flagged, never sole evidence). Every citation requires a stable URL. Standing rule. | AG | — | prompt template updated |
+| G20 | **Standing injection/HTML sweep** over all user-facing text at every assembly (today's sweep: **0 hits** across 46 bundles). | AG | S | sweep in kit; run logged |
+| G24 | **URL-scheme check** (one plain-http citation found — Atlantic 2011 flood essay, bang-rak). Upgrade or drop non-https citations at assembly. | AG | S | check in kit |
+
+Amendments to existing items: **E-1** add adapter build-step location
+(`scripts/bangkok` vs app build) + schema-migration policy; **E-3** disclosure
+placement one tap from the score + corpus-skew disclosure (expat/tourist
+source skew, score-correlated selection, single-season observations);
+**B-2** add a distance-base rule (app anchor vs verified station coordinate)
+and mark affected claims (saint-louis unit is the known case); **A-1** review
+scope covers four batches, not one.
