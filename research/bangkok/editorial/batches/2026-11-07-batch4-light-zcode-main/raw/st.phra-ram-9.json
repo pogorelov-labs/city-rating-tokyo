@@ -1,0 +1,894 @@
+{
+ "entity_key": "st.phra-ram-9",
+ "search_log": [
+  {
+   "tool": "app_recon",
+   "query": "app/src/data/bangkok/stations.json -> area id phra-ram-9",
+   "status": "success",
+   "notes": "anchor 13.75782,100.56528; line_ids [mrt_blue]; district mix din-daeng 0.529 / huai-khwang 0.471 (brief said 'Huai Khwang blend' — app primary district is DIN DAENG, flagged); rent 14000/29500 editorial district_blend as_of 2026-09; facts 465 food / 81 cafes / 23 nightlife / park 0.7 ha / 3 temples / 0 piers; neighbors [phetchaburi, thailand-cultural-centre]; transit_minutes.rama9 = 0 (it is the Rama 9 stop)"
+  },
+  {
+   "tool": "overpass",
+   "query": "shared Overpass station-node query (see hua-lamphong log)",
+   "status": "failed_then_success",
+   "notes": "attempts 1-2 failed (502, mirror timeout); attempt 3 succeeded — OSM node 13.75782,100.56528 'พระราม 9 / Phra Ram 9' matches app anchor exactly"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Rama 9 Bangkok new CBD office towers G Tower Ninth Towers news 2025",
+   "status": "success",
+   "notes": "EN; Superagent + OneListed URLs found; CPN B110bn headline found"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Central Pattana Central Rama 9 redevelopment 110 billion mixed use plan",
+   "status": "success",
+   "notes": "EN; B110bn five-year plan 2026-2030 + Central GR9 branding reported (Bangkok Post/Central newsroom/Thaiger per summary, no direct URLs except NVT) — budget kept snippet-flagged"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "site-restricted: Central GR9 Rama 9 CPN redevelopment plan",
+   "status": "success",
+   "notes": "NVT Property URL found and body-read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "JODD Fairs Rama 9 night market Bangkok opened closed 2024 2025",
+   "status": "success",
+   "notes": "EN; Rama 9 site closed end-2024, demolished Jan 2025, moved to Ratchada — corroborated across summaries; TravJoy URL found for body read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "site-restricted: JODD Fairs Ratchada moved new location market",
+   "status": "success",
+   "notes": "Time Out 2023-03-21 URL found and body-read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Huai Khwang Ratchada Chinese community Bangkok \"new Chinatown\" article",
+   "status": "failed_then_success",
+   "notes": "first attempt hit 'user concurrency limit exceeded'; retry succeeded — TCIJ (Thai, 2026-08) and TerraBKK URLs found"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "site-restricted: fazwaz Rama 9 Huai Khwang condo rent average",
+   "status": "success",
+   "notes": "HipFlat URL surfaced; body read done on hipflat.com Huai Khwang page; HipFlat median ~20,180 quoted in summary only (body shows USD averages instead) — flagged"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+   "status": "success",
+   "notes": "body read"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "superagent.co/en/blog/rama-9-and-bangkoks-new-cbd-whats-being-built-and-why-it-matters",
+   "status": "success",
+   "notes": "body read; publication date NOT visible — flagged; real-estate marketing context"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "nvtproperty.com/en/central-rama-9-to-be-renamed-major-redevelopment-project-launched",
+   "status": "success",
+   "notes": "body read; page shows 2026-04-15"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "timeout.com/bangkok/news/jodd-fairs-to-relocate-...-032123",
+   "status": "success",
+   "notes": "body read; published 2023-03-21"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+   "status": "success",
+   "notes": "body read; dated 2026-07-29; affiliate travel-blog context"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "tcijthai.com/news/2026/8/article/15258",
+   "status": "success",
+   "notes": "body read (Thai); opinion/analysis piece dated 14 Aug 2026"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.com/condo-for-rent/bangkok/huai-khwang",
+   "status": "success",
+   "notes": "body read; averages as of October 2026, USD-denominated"
+  }
+ ],
+ "sources": [
+  {
+   "index": 1,
+   "canonical_url": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+   "title": "Phra Ram 9 MRT station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": false,
+   "limitations": "2021 passenger figure only; no recent change notes"
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://www.superagent.co/en/blog/rama-9-and-bangkoks-new-cbd-whats-being-built-and-why-it-matters",
+   "retrieved_url": "https://www.superagent.co/en/blog/rama-9-and-bangkoks-new-cbd-whats-being-built-and-why-it-matters",
+   "title": "Rama 9 and Bangkok's New CBD: What's Being Built and Why It Matters",
+   "publisher": "Superagent",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": true,
+   "limitations": "publication date not visible; promotional real-estate framing; does not name Ninth Towers/R House in text"
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://nvtproperty.com/en/central-rama-9-to-be-renamed-major-redevelopment-project-launched",
+   "retrieved_url": "https://nvtproperty.com/en/central-rama-9-to-be-renamed-major-redevelopment-project-launched",
+   "title": "Central Rama 9 to Be Renamed; Major Redevelopment Project Launched",
+   "publisher": "NVT Property",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": "2026-04-15",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": true,
+   "limitations": "relays Taiwan-Thailand Times (April 5) coverage; no budget figure; no 2032 completion date in this version"
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://www.tcijthai.com/news/2026/8/article/15258",
+   "retrieved_url": "https://www.tcijthai.com/news/2026/8/article/15258",
+   "title": "'ห้วยขวาง ไชน่าทาวน์แห่งใหม่' (Huai Khwang, The New Chinatown)",
+   "publisher": "Thai Citizens Journal (TCIJ)",
+   "publisher_family": "news-media",
+   "author": "Poempoonsin Charoennititada",
+   "published_at": "2026-08-14",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": false,
+   "limitations": "opinion/analysis column explicitly based on personal observation, not formal research; almost no statistics"
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://www.timeout.com/bangkok/news/jodd-fairs-to-relocate-to-ratchada-and-to-branch-out-to-former-theme-park-dan-neramit-032123",
+   "retrieved_url": "https://www.timeout.com/bangkok/news/jodd-fairs-to-relocate-to-ratchada-and-to-branch-out-to-former-theme-park-dan-neramit-032123",
+   "title": "Jodd Fairs to relocate to Ratchada and branch out to former theme park Dan Neramit",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "news-media",
+   "author": null,
+   "published_at": "2023-03-21",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": false,
+   "limitations": "announcement-stage article; does not name the Rama 9 operator"
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+   "retrieved_url": "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+   "title": "Jodd Fairs Night Market Bangkok: A Complete 2026 Guide to the Ratchada Site",
+   "publisher": "TravJoy",
+   "publisher_family": "specialist-media",
+   "author": null,
+   "published_at": "2026-07-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": true,
+   "limitations": "affiliate travel blog; closure/move details otherwise consistent with search-result summaries"
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/huai-khwang",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/huai-khwang",
+   "title": "Condo for rent in Huai Khwang — market averages",
+   "publisher": "HipFlat",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": true,
+   "limitations": "USD-denominated averages 'in October 2026' (converted here at ~35 THB/USD, approximate); district-wide, not station-specific; declining trend (-8.3% since Jan 2026)"
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Overpass API — OSM railway station nodes (Bangkok bbox)",
+   "publisher": "OpenStreetMap via Overpass",
+   "publisher_family": "openstreetmap",
+   "author": null,
+   "published_at": "2026-11-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": false,
+   "limitations": "two failed attempts before success"
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "phra-ram-9-c01",
+   "text_en": "The unit anchors on MRT Blue Line station BL20 'Phra Ram 9', opened 3 July 2004 at the junction where Din Daeng, Asok-Din Daeng, Ratchadaphisek and Rama IX roads meet, serving the Din Daeng and Huai Khwang districts; the app catchment splits Din Daeng 52.9% / Huai Khwang 47.1% — the brief's 'Huai Khwang blend' understates the Din Daeng majority. App anchor equals the OSM node exactly (13.75782, 100.56528).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "boundaries"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phra Ram 9 MRT station",
+    "relation_to_entity": "entire_unit",
+    "notes": "anchor verified against OSM; no mismatch"
+   },
+   "temporal_scope": "2004-07-03 to present (2026-11)",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "infobox; location description",
+     "paraphrase": "BL20, opened 3 July 2004, serves the four-road junction, located in Din Daeng and Huai Khwang districts"
+    }
+   ],
+   "limitations": [
+    "k",
+    "h",
+    "w",
+    "a",
+    "e",
+    "n",
+    "g",
+    "-",
+    "l",
+    "e",
+    "v",
+    "e",
+    "l",
+    " ",
+    "s",
+    "p",
+    "l",
+    "i",
+    "t",
+    " ",
+    "n",
+    "o",
+    "t",
+    " ",
+    "r",
+    "e",
+    "-",
+    "d",
+    "e",
+    "r",
+    "i",
+    "v",
+    "e",
+    "d",
+    ";",
+    " ",
+    "r",
+    "e",
+    "n",
+    "t",
+    " ",
+    "f",
+    "i",
+    "g",
+    "u",
+    "r",
+    "e",
+    " ",
+    "p",
+    "r",
+    "o",
+    "v",
+    "e",
+    "n",
+    "a",
+    "n",
+    "c",
+    "e",
+    " ",
+    "m",
+    "a",
+    "y",
+    " ",
+    "e",
+    "n",
+    "c",
+    "o",
+    "d",
+    "e",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "H",
+    "u",
+    "a",
+    "i",
+    " ",
+    "K",
+    "h",
+    "w",
+    "a",
+    "n",
+    "g",
+    " ",
+    "s",
+    "i",
+    "d",
+    "e",
+    " ",
+    "m",
+    "o",
+    "r",
+    "e",
+    " ",
+    "t",
+    "h",
+    "a",
+    "n",
+    " ",
+    "D",
+    "i",
+    "n",
+    " ",
+    "D",
+    "a",
+    "e",
+    "n",
+    "g",
+    " ",
+    "—",
+    " ",
+    "f",
+    "l",
+    "a",
+    "g",
+    "g",
+    "e",
+    "d",
+    " ",
+    "i",
+    "n",
+    " ",
+    "q",
+    "8",
+    "app-data anchor (not a web source): city-rating app station record: phra-ram-9"
+   ]
+  },
+  {
+   "claim_id": "phra-ram-9-c02",
+   "text_en": "The station is physically stitched into the district's retail core: an underground walkway links it to the B floor of CentralPlaza Grand Rama 9, and it serves Fortune Town and the G-Land development cluster; B1 holds exits 1-3 and an underground mall.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "daily_life"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "venue",
+    "place_name": "CentralPlaza Grand Rama 9 / Fortune Town",
+    "relation_to_entity": "inside",
+    "notes": null
+   },
+   "temporal_scope": "current as of 2026-11",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "'Nearby attractions'; 'Station layout' sections",
+     "paraphrase": "underground walkway connects the station to CentralPlaza Grand Rama 9's B floor; station serves Fortune Town and G-Land developments; exits 1-3 with underground mall on B1"
+    }
+   ],
+   "limitations": null
+  },
+  {
+   "claim_id": "phra-ram-9-c03",
+   "text_en": "The 'new CBD' framing is real in built stock: G Tower, AIA Capital Center and Central Plaza Grand Rama 9 are open and operating, Unilever's Thai headquarters relocated to Rama 9, and the district's pitch is purpose-built floor plates cheaper than Silom/Asok; condo launches by Ananda, SC Asset and Origin price at 80,000-150,000 THB per sqm and at least four mixed-use towers broke ground since 2022, with supply arriving through 2026-2027.",
+   "kind": "factual_report",
+   "topics": [
+    "economy",
+    "change"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Rama IX / Ratchada office corridor",
+    "relation_to_entity": "partial",
+    "notes": "corridor-level facts; the article does not map each tower to this unit"
+   },
+   "temporal_scope": "published without date (retrieved 2026-11); construction notes 'since 2022' onward",
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "'The Vision Behind Bangkok's New CBD'; supply paragraphs",
+     "paraphrase": "G Tower, AIA Capital Center, Central Plaza Grand Rama 9 open; Unilever Thai HQ relocated; 80,000-150,000 THB/sqm launches; four mixed-use towers broke ground since 2022; supply through 2026-2027"
+    },
+    {
+     "source_index": 3,
+     "locator": "redevelopment coverage",
+     "paraphrase": "office stock explicitly named: G Tower, R House (formerly Unilever House), The Ninth Tower"
+    }
+   ],
+   "limitations": "source 2 is promotional real-estate content with no visible publication date; tower-to-unit membership not established"
+  },
+  {
+   "claim_id": "phra-ram-9-c04",
+   "text_en": "Central Pattana has launched a five-year redevelopment renaming Central Rama 9 as 'Central GR9': retail floor space is to grow two-to-three-fold with phased reopening from early 2028, integrating the G Tower, R House (ex-Unilever House) and The Ninth Tower offices, plus residential between the mall and the former Unilever site and international hotels; press coverage places it inside a broader ~110-billion-baht CPN investment plan (2026-2030) announced March 2026, with one source citing full completion around 2032.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "economy"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "district",
+    "place_name": "CentralPlaza Grand Rama 9 / Central GR9",
+    "relation_to_entity": "inside",
+    "notes": "mall is directly connected to the station by walkway"
+   },
+   "temporal_scope": "announced 2026 (coverage dated 2026-04-15); phase 1 target early 2028",
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "article body",
+     "paraphrase": "rename to Central GR9; retail two-to-three times larger; three office buildings integrated; residential and hotels planned; phase 1 scheduled early 2028"
+    },
+    {
+     "source_index": 2,
+     "locator": "n/a (search-result corroboration)",
+     "paraphrase": "B110bn 2026-2030 plan and 2032 completion figure appear in press summaries without fetchable URLs — flagged as snippet-level"
+    }
+   ],
+   "limitations": "the B110bn budget and the 2032 completion date are snippet-only (Bangkok Post paywalled; not bypassed); treat timeline as announced intent, not committed schedule"
+  },
+  {
+   "claim_id": "phra-ram-9-c05",
+   "text_en": "The unit's biggest nightlife/food venue of the decade rose and left: Jodd Fairs opened on Rama 9 in November 2022 and 'became a phenomenon almost overnight'; its site closed when the lease expired, was dismantled by mid-January 2025 for a high-rise redevelopment, and the market reopened 1 November 2024 about 2 km north-west on Ratchadaphisek Road near Thailand Cultural Centre MRT (~800 stalls, ~70% food, open ~17:00-01:00).",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "nightlife",
+    "food"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Jodd Fairs Rama 9 (former site behind Central Rama 9)",
+    "relation_to_entity": "inside",
+    "notes": "the replacement site sits in the neighboring thailand-cultural-centre unit area — a loss for this unit, not for the corridor"
+   },
+   "temporal_scope": "2022-11 to 2025-01 (Rama 9 site); replacement opened 2024-11-01",
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "article body (2023-03-21)",
+     "paraphrase": "Jodd Fairs first opened Nov 2022 on Rama 9 and became a phenomenon almost overnight; relocation to a Ratchadaphisek site slated for 2024"
+    },
+    {
+     "source_index": 6,
+     "locator": "history section (2026-07-29)",
+     "paraphrase": "Rama 9 site closed at lease end, dismantled by mid-January 2025, plot cleared for high-rise; replacement opened 1 November 2024 next to Big C Ratchadaphisek, ~3 minutes from TCC MRT Exit 4; ~800 stalls, ~70% food, roughly twice the size"
+    }
+   ],
+   "limitations": "the closure detail comes from one travel-blog body read but matches multiple independent search-result summaries; no newspaper body read was obtainable"
+  },
+  {
+   "claim_id": "phra-ram-9-c06",
+   "text_en": "The Huai Khwang side of the corridor functions as a mainland-Chinese 'new Chinatown': the district hosts a resident community of 'Xin Yimin' (new-generation mainland Chinese) with authentic Chinese restaurants, Chinese-language signage, Chinese food-delivery apps and Alipay/WeChat acceptance; the local police station added Chinese characters to its signs around January 2023; the writer credits cheaper new condos along the MRT, Chinese capital, and proximity to the Chinese Embassy (~3 km).",
+   "kind": "reported_perception",
+   "topics": [
+    "identity",
+    "food",
+    "culture"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Huai Khwang / Ratchada / Rama 9 corridor",
+    "relation_to_entity": "partial",
+    "notes": "corridor-level; the app's Huai Khwang 47.1% share connects it to the unit"
+   },
+   "temporal_scope": "column dated 2026-08-14; police signage ~2023-01",
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "article body",
+     "paraphrase": "Xin Yimin community with a complete living ecosystem; police-station Chinese signage around January 2023; condos cheaper than Silom/Sathorn with pools and gyms; embassy ~3 km; Chinese social-media word-of-mouth drives the flow"
+    }
+   ],
+   "limitations": "single opinion column based on personal observation, no resident/business counts; corroborated qualitatively by 'new Chinatown' coverage in search summaries (Thai PBS World, TerraBKK) without body reads"
+  },
+  {
+   "claim_id": "phra-ram-9-c07",
+   "text_en": "Rent check against stated figures (14,000 / 29,500 THB, editorial blend): HipFlat's Huai Khwang averages for October 2026 are USD18/sqm with 1-bed at USD594 and 2-bed at USD982 (~20.8k and ~34.4k THB at ~35 THB/USD) across 8,234 listings, with prices down 8.3% since January 2026 — the app's figures sit below these district averages, consistent with the Din Daeng-majority blend and older stock; Superagent's example (The Tree Interchange 1-beds at 15,000-22,000) brackets the app's 1-bed figure.",
+   "kind": "estimate",
+   "topics": [
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Huai Khwang / Din Daeng rental corridors",
+    "relation_to_entity": "entire_unit",
+    "notes": "HipFlat data is Huai Khwang district, not Din Daeng — mixed evidence"
+   },
+   "temporal_scope": "HipFlat October 2026; app rent as_of 2026-09",
+   "evidence": [
+    {
+     "source_index": 7,
+     "locator": "averages panel",
+     "paraphrase": "USD18/sqm; 1-bed USD594; 2-bed USD982; 8,234 condos available; -8.3% vs January 2026, -1.1% vs October 2025"
+    },
+    {
+     "source_index": 2,
+     "locator": "rent examples",
+     "paraphrase": "The Tree Interchange 1-beds 15,000-22,000 THB/month vs 25,000-35,000 on Sukhumvit Soi 23"
+    }
+   ],
+   "limitations": "HipFlat page is Huai Khwang-wide and USD-denominated (conversion approximate); no body-readable Din Daeng-specific average found; the '20,180 median' figure for Huai Khwang appeared only in a search summary"
+  },
+  {
+   "claim_id": "phra-ram-9-c08",
+   "text_en": "Green 7 rests on an app figure of 0.7 ha of park — pocket-scale for a catchment of this size — and no named park inside the unit could be identified in accessible sources; the district's large green space (Suan Luang Rama IX) is a different catchment's feature entirely.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "counter_evidence"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phra Ram 9 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "0.7-ha object unidentified"
+   },
+   "temporal_scope": "current as of 2026-11",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "'Nearby attractions'",
+     "paraphrase": "station-adjacent attractions listed are malls and offices, with no park named"
+    }
+   ],
+   "limitations": "green 7 against 0.7 ha looks generous; possibly scored from river-canal proximity or catchment-edge objects — unresolved, flagged for polygon audit"
+  },
+  {
+   "claim_id": "phra-ram-9-c09",
+   "text_en": "Transport 8 reflects Blue Line service in all four directions (next stops Phetchaburi and Thailand Cultural Centre) but no second rail line yet: the Orange Line under construction will make Rama 9 a two-line interchange, and expressway ramps near Asok-Din Daeng reach the airport; app transit minutes are 21 to Siam, 12 to Asok.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "MRT Blue Line / Rama IX interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": null
+   },
+   "temporal_scope": "current 2026-11; Orange Line under construction",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "Station layout",
+     "paraphrase": "platform 1 toward Lak Song (next Phetchaburi), platform 2 toward Tha Phra (next Thailand Cultural Centre)"
+    },
+    {
+     "source_index": 2,
+     "locator": "transit paragraphs",
+     "paraphrase": "Orange Line under construction will link Minburi to Bang Khae, making Rama 9 a two-line interchange; expressway ramps near Asok-Din Daeng reach Suvarnabhumi"
+    }
+   ],
+   "limitations": "Orange Line opening date not stated in the body-read sources"
+  },
+  {
+   "claim_id": "phra-ram-9-c10",
+   "text_en": "Rhythm: weekday office towers and the connected mall drive a sharp lunch-and-commute pulse, evening dining fills the Ratchada-Rama 9 corridors, and the late-night anchor role moved away when Jodd Fairs exited to Ratchada in late 2024 — the app's nightlife 8 (23 venues) now leans on standing bars and the mall rather than a night market.",
+   "kind": "researcher_inference",
+   "topics": [
+    "rhythm",
+    "nightlife",
+    "change"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phra Ram 9 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": null
+   },
+   "temporal_scope": "post 2024-11",
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "closure/move details",
+     "paraphrase": "the night-market anchor relocated 1 November 2024 to Ratchadaphisek near TCC MRT, ~2 km from the unit"
+    }
+   ],
+   "limitations": "no post-2024 footfall or venue-openings data found; the score-versus-anchor-venue mismatch is a coordinator-level judgment"
+  },
+  {
+   "claim_id": "phra-ram-9-c11",
+   "text_en": "Safety 5 is the app's lowest score in this batch and is explicitly editorial ('ai_research' source, 'editorial' confidence); no accessible crime statistics or systematic reporting specific to the Rama 9/Ratchada station area was found in English or Thai in this pass, and the one corridor-level body read (TCIJ, 2026) raises no crime concerns.",
+   "kind": "researcher_inference",
+   "topics": [
+    "safety",
+    "counter_evidence"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phra Ram 9 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "brief flags safety 5 as a 'pattern to test' — this pass could neither confirm nor refute it with data"
+   },
+   "temporal_scope": "searched 2026-11-07",
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "article body",
+     "paraphrase": "the corridor-level piece raises no safety or crime concerns for the Chinese-community corridors"
+    }
+   ],
+   "limitations": "absence of evidence is not evidence of safety; Thai-language crime news searches were generic and produced no station-area hits; Reddit/forums (403) unavailable for perception checks"
+  },
+  {
+   "claim_id": "phra-ram-9-c12",
+   "text_en": "Crowd 2 (low) is plausible in daily terms: the Din Daeng majority of the catchment is low-rise blocks and government/institutional land, crowds concentrate at the mall-walkway nexus at lunch and after work, and there is no tourist badge (app: attractions_800m = 1, hotels_800m = 10).",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phra Ram 9 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": null
+   },
+   "temporal_scope": "current as of 2026-11",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "Station layout",
+     "paraphrase": "single-line station with mall and office catchment"
+    }
+   ],
+   "limitations": "no footfall data; crowd score is app-editorial (moderate confidence)"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "question": "identity/scope",
+   "answer": "A Blue Line junction station (BL20, 2004) at the Ratchadaphisek-Rama IX crossroads, catchment majority-Din Daeng with a Huai Khwang half — the office-tower 'new CBD' node rather than a residential village.",
+   "claim_ids": [
+    "phra-ram-9-c01",
+    "phra-ram-9-c03"
+   ]
+  },
+  {
+   "id": "Q02",
+   "question": "everyday experience",
+   "answer": "Mall-connected station life (underground walkway to Central Rama 9, Fortune Town opposite), weekday office pulses, and Chinese-food corridors on the Huai Khwang side.",
+   "claim_ids": [
+    "phra-ram-9-c02",
+    "phra-ram-9-c06",
+    "phra-ram-9-c10"
+   ]
+  },
+  {
+   "id": "Q03",
+   "question": "values+mechanisms",
+   "answer": "Scores ride on the built CBD story (G Tower, AIA, Central GR9), MRT access, and dense food/cafes; rent 8 reflects the district's below-core pricing; DE 8 on 137 essentials POIs.",
+   "claim_ids": [
+    "phra-ram-9-c03",
+    "phra-ram-9-c04",
+    "phra-ram-9-c07",
+    "phra-ram-9-c09"
+   ]
+  },
+  {
+   "id": "Q04",
+   "question": "counter-evidence",
+   "answer": "Green 7 vs 0.7 ha of park looks generous; the nightlife anchor venue (Jodd Fairs) left in late 2024; the CBD narrative outruns completion (Central GR9 retail not reopening before early 2028).",
+   "claim_ids": [
+    "phra-ram-9-c08",
+    "phra-ram-9-c05",
+    "phra-ram-9-c04"
+   ]
+  },
+  {
+   "id": "Q05",
+   "question": "rhythm",
+   "answer": "Sharp weekday lunch/commute peaks around towers and mall; evening dining on the corridors; late-night energy diminished after the night-market exit to Ratchada.",
+   "claim_ids": [
+    "phra-ram-9-c10",
+    "phra-ram-9-c05"
+   ]
+  },
+  {
+   "id": "Q06",
+   "question": "walkability",
+   "answer": "Station-to-mall underground walkway plus surface crossings at a busy four-road junction; no walking-duration figures derived from catchment radius here.",
+   "claim_ids": [
+    "phra-ram-9-c02",
+    "phra-ram-9-c09"
+   ]
+  },
+  {
+   "id": "Q07",
+   "question": "daily life",
+   "answer": "Workday life in offices and malls, Chinese groceries and delivery-app food on the Huai Khwang side, 22 convenience stores and 137 essentials in the app facts; 3 temples only — this is not a heritage quarter.",
+   "claim_ids": [
+    "phra-ram-9-c06",
+    "phra-ram-9-c02"
+   ]
+  },
+  {
+   "id": "Q08",
+   "question": "affordability vs stated figures",
+   "answer": "App 14,000/29,500 sits below Huai Khwang's October-2026 listing averages (~20.8k 1-bed) — consistent with the Din Daeng-majority blend and older stock; new-build examples (15,000-22,000) bracket the 1-bed figure.",
+   "claim_ids": [
+    "phra-ram-9-c07"
+   ]
+  },
+  {
+   "id": "Q09",
+   "question": "green/quiet with polygon honesty",
+   "answer": "The unit's green is a 0.7-ha unknown object; the big park of the name (Suan Luang Rama IX) is far outside; quiet is real in the Din Daeng blocks between towers.",
+   "claim_ids": [
+    "phra-ram-9-c08",
+    "phra-ram-9-c12"
+   ]
+  },
+  {
+   "id": "Q10",
+   "question": "conditional fit",
+   "answer": "Strong fit for office workers, Chinese-community residents and value-hunters wanting MRT access at sub-core rents; weak fit for park users, heritage seekers, or anyone betting on the mall's current state rather than its 2028 reopening.",
+   "claim_ids": [
+    "phra-ram-9-c06",
+    "phra-ram-9-c08",
+    "phra-ram-9-c04"
+   ]
+  },
+  {
+   "id": "Q11",
+   "question": "recent changes 2024-2026",
+   "answer": "Jodd Fairs exit (closed end-2024, dismantled Jan 2025), Central GR9 redevelopment announced (coverage April 2026; retail doubling from early 2028), and Huai Khwang rents down 8.3% since January 2026 — a fast-moving corridor.",
+   "claim_ids": [
+    "phra-ram-9-c05",
+    "phra-ram-9-c04",
+    "phra-ram-9-c07"
+   ]
+  },
+  {
+   "id": "Q12",
+   "question": "uncertainties/outside-the-score",
+   "answer": "Unresolved: the 0.7-ha park object, the B110bn/2032 figures (snippet-only), the safety-5 basis, tower-to-unit membership, and the Orange Line schedule; anchors verified clean against OSM.",
+   "claim_ids": [
+    "phra-ram-9-c08",
+    "phra-ram-9-c04",
+    "phra-ram-9-c11",
+    "phra-ram-9-c03"
+   ]
+  }
+ ],
+ "editorial": {
+  "preview": "Bangkok's self-declared new CBD: a Blue Line junction stitched into a mall and office cluster, with the city's densest Chinese-food corridors a stop away — still more construction site than finished district.",
+  "claim_ids": [
+   "phra-ram-9-c01",
+   "phra-ram-9-c03",
+   "phra-ram-9-c04"
+  ],
+  "guide_lead": "Phra Ram 9 pairs a 2004 MRT stop with the Ratchada-Rama 9 office corridor — G Tower and its neighbours already standing, Central Rama 9 rebranding as 'Central GR9' with retail doubling from early 2028 — and a catchment that is majority Din Daeng, cheaper and quieter than its CBD label suggests.",
+  "strengths": [
+   {
+    "text": "Genuine CBD mechanics: an underground walkway into Central Rama 9, Fortune Town across the junction, Grade A offices open and a two-line future once the Orange Line arrives.",
+    "claim_ids": [
+     "phra-ram-9-c02",
+     "phra-ram-9-c03",
+     "phra-ram-9-c09"
+    ]
+   },
+   {
+    "text": "Value: listing evidence puts 1-beds around 15-21k against app's 14,000 editorial blend, with the corridor's Chinese-community infrastructure making daily life cheap and complete.",
+    "claim_ids": [
+     "phra-ram-9-c07",
+     "phra-ram-9-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text": "The nightlife anchor is gone: Jodd Fairs' Rama 9 site closed at lease end and was demolished by January 2025, moving the late-night draw to Ratchada near Thailand Cultural Centre.",
+    "claim_ids": [
+     "phra-ram-9-c05"
+    ]
+   },
+   {
+    "text": "Green is pocket-scale (0.7 ha, unnamed) and the CBD promise is partly prospective — the mall's retail redo does not reopen before early 2028.",
+    "claim_ids": [
+     "phra-ram-9-c08",
+     "phra-ram-9-c04"
+    ]
+   }
+  ],
+  "day_night": {
+   "text": "Weekdays pulse with office and mall traffic at lunch and after work; evenings run on corridor dining; after the night market's exit, true late-night activity is thinner than the corridor's reputation.",
+   "claim_ids": [
+    "phra-ram-9-c10",
+    "phra-ram-9-c05"
+   ]
+  },
+  "within_area_variation": {
+   "text": "The Huai Khwang side (47.1% of the catchment) carries the Chinese groceries, signage and restaurants; the Din Daeng side is low-rise blocks and institutional land; the mall-walkway nexus is the single busy point.",
+   "claim_ids": [
+    "phra-ram-9-c06",
+    "phra-ram-9-c12"
+   ]
+  },
+  "conditional_fit": [
+   {
+    "text": "Choose it if you work in the new CBD or want sub-core rents with Blue Line access and Chinese-community daily life — the value proposition is the strongest in this batch.",
+    "claim_ids": [
+     "phra-ram-9-c07",
+     "phra-ram-9-c06",
+     "phra-ram-9-c09"
+    ]
+   },
+   {
+    "text": "Skip it if you need parks, a settled retail scene (wait for the 2028 Central GR9 reopening), or a verified safety picture — none of those are established here.",
+    "claim_ids": [
+     "phra-ram-9-c08",
+     "phra-ram-9-c04",
+     "phra-ram-9-c11"
+    ]
+   }
+  ],
+  "uncertainties": {
+   "text": "Unresolved: identity of the 0.7-ha park object behind green 7; safety 5's editorial basis (no data found either way); B110bn budget and 2032 completion are snippet-only; tower-to-unit polygon membership; Orange Line timeline; anchors verified against OSM with no mismatch.",
+   "claim_ids": [
+    "phra-ram-9-c08",
+    "phra-ram-9-c11",
+    "phra-ram-9-c04",
+    "phra-ram-9-c03"
+   ]
+  }
+ },
+ "open_issues": [
+  "Green 7 vs park_ha 0.7: no named park inside the unit found in any accessible source; polygon audit recommended (possible catchment-edge object inflating the score).",
+  "Safety 5: flagged by the brief as a pattern to test; no accessible statistics — either source a crime-data basis or keep it explicitly editorial in the guide text.",
+  "Central GR9: B110bn budget and 2032 completion are snippet-level (Bangkok Post paywalled, not bypassed); NVT body read confirms scope and early-2028 phase 1 only.",
+  "Jodd Fairs closure detail rests on one travel-blog body read (TravJoy, 2026-07-29) plus converging snippets; a newspaper body read would harden it.",
+  "Rent: HipFlat page is Huai Khwang-wide and USD-denominated; a Din Daeng-specific source would sharpen the 14,000/29,500 blend check.",
+  "Brief-vs-app district mismatch: brief said 'Huai Khwang blend', app says primary district din-daeng (52.9%) — coordinator should confirm which blend the rent figure encodes.",
+  "Orange Line interchange date unverified in body-read sources."
+ ]
+}

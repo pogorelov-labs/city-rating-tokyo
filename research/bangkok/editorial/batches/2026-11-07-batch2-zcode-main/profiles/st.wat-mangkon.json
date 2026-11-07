@@ -1197,7 +1197,7 @@
   },
   {
    "id": "wat-mangkon-c17",
-   "text_en": "No public park is documented inside this catchment: Rommaninat Park (11-12 acres, ex-prison site) lies about 1.0 km WNW in the Sam Yot unit, Wat Saket/Golden Mount about 0.9 km north-northwest (914 m straight-line from the station, app-polygon check 2026-11-07), and the app's mapped 0.5 ha park could not be identified with OSM access blocked, leaving temple and shrine grounds as the only documented quiet open space.",
+   "text_en": "No public park is documented inside this catchment: Rommaninat Park (11-12 acres, ex-prison site) lies about 1.36 km WNW in Phra Nakhon khet, on the st.sanam-chai side of the boundary (coordinator polygon check 2026-11-07 — not in the sam-yot unit as earlier inferred), Wat Saket/Golden Mount about 0.9 km north-northwest (914 m straight-line from the station, app-polygon check 2026-11-07), and the app's mapped 0.5 ha park could not be identified with OSM access blocked, leaving temple and shrine grounds as the only documented quiet open space.",
    "kind": "researcher_inference",
    "topics": [
     "green",
@@ -1237,7 +1237,8 @@
    "conflicts_with": [],
    "limitations": [
     "Overpass 406 and mirror connection failure; park polygon identity unresolved",
-    "Small unnamed pocket greenery may exist below source visibility"
+    "Small unnamed pocket greenery may exist below source visibility",
+    "Unit-attribution corrected 2026-11-07: polygon check supersedes the earlier sam-yot-unit inference."
    ],
    "review_status": "corroborated"
   },

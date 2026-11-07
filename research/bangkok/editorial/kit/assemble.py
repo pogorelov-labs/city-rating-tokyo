@@ -187,10 +187,9 @@ def assemble(key, ent_meta, raw, batch, counts):
             "geography": {"scope": scope, "place_name": geo["place_name"],
                           "relation_to_entity": geo["relation_to_entity"],
                           "notes": geo.get("notes", "")},
-            "temporal_scope": {"event_date": c["temporal_scope"].get("event_date"),
-                               "observed_period": c["temporal_scope"].get("observed_period"),
-                               "recheck_by": c["temporal_scope"].get("recheck_by"),
-                               "notes": c["temporal_scope"].get("notes", "")},
+            "temporal_scope": (c["temporal_scope"] if isinstance(c.get("temporal_scope"), dict) else
+                               {"event_date": None, "observed_period": None, "recheck_by": None,
+                                "notes": str(c.get("temporal_scope") or "")}),
             "evidence": ev_out, "supporting_claim_ids": [], "conflicts_with": [],
             "limitations": lims, "review_status": status,
         })

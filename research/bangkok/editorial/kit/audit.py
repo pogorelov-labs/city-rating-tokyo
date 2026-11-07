@@ -51,6 +51,17 @@ def audit_bundle(path):
     b = json.load(open(path, encoding="utf-8"))
     ent = b["entity"]["key"]
     short = os.path.basename(path)
+    data_only = any("data-only" in str(n).lower() for n in (b.get("review") or {}).get("notes", []))
+    if data_only:
+        # Data-only placeholders: identity is the only meaningful check; editorial/claims are by design empty.
+        ok_identity = isinstance(b.get("entity"), dict) and b["entity"].get("key") and b["entity"].get("name_en")
+        srcs = b.get("sources") or []
+        no_web = (not b.get("claims")) and (not srcs or all(not s.get("body_read") for s in srcs))
+        if ok_identity and no_web:
+            print(f"[OK-data-only] {short}: identity verified, no web claims (tier C placeholder)")
+            return
+        note("P1", short, "data-only bundle carries web claims or broken identity — regenerate")
+        return
 
     for s in b["sources"]:
         if s["id"] != sha12(s["canonical_url"]):

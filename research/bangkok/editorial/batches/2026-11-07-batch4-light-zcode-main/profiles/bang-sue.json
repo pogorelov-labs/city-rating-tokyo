@@ -1,0 +1,1065 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "bang-sue",
+  "kind": "district",
+  "name_en": "Bang Sue",
+  "name_th": "บางซื่อ",
+  "aliases": [
+   "Tao Poon",
+   "Bang Pho",
+   "Bang Son",
+   "Wong Sawang",
+   "Pracharat",
+   "Prachachuen"
+  ],
+  "scope_notes": "Administrative khet; khwaeng subareas differ — mark subarea claims partial. Boundary claims decided by app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.14,
+  "cohort_rank": 15,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): district rank 15/50, score 7.14."
+ },
+ "sources": [
+  {
+   "id": "src_33f47b97ca63",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD",
+   "title": "เขตบางซื่อ",
+   "publisher": "Thai Wikipedia",
+   "publisher_family": "Wikipedia (TH)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_9ad2818ae46b",
+   "canonical_url": "https://en.wikipedia.org/wiki/Bang_Sue_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bang_Sue_district",
+   "title": "Bang Sue district",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_b53ac3ccccfc",
+   "canonical_url": "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal",
+   "title": "Krung Thep Aphiwat Central Terminal",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_4fe6d8c91602",
+   "canonical_url": "https://www.thaitrainguide.com/stations/krung-thep-aphiwat-central-terminal",
+   "retrieved_url": "https://www.thaitrainguide.com/stations/krung-thep-aphiwat-central-terminal",
+   "title": "Krung Thep Aphiwat Central Terminal station guide",
+   "publisher": "Thai Train Guide",
+   "publisher_family": "Thai Train Guide (independent rail site)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "small independent publisher; page predates/straddles the 2023 service moves"
+   ]
+  },
+  {
+   "id": "src_4a3e136e9650",
+   "canonical_url": "https://www.thaipost.net/economy-news/889411",
+   "retrieved_url": "https://www.thaipost.net/economy-news/889411",
+   "title": "'SRTA' กางแผนปั้นสถานีกลางบางซื่อ ฮับระบบรางใหญ่สุดในอาเซียน",
+   "publisher": "Thai Post",
+   "publisher_family": "Thai Post (news)",
+   "author": null,
+   "published_at": "2025-11-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "economy-news desk; figures from SRTA briefing"
+   ]
+  },
+  {
+   "id": "src_c3ca9aa13cba",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-sue",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-sue",
+   "title": "Condos for rent in Bang Sue",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "property portal; marketed condo stock",
+   "limitations": [
+    "statistics dated October 2026 on page"
+   ]
+  },
+  {
+   "id": "src_e7f47cd6e7d1",
+   "canonical_url": "https://www.mrta.co.th/th/rat-burana",
+   "retrieved_url": "https://www.mrta.co.th/th/rat-burana",
+   "title": "โครงการรถไฟฟ้า MRT สายสีม่วง ช่วงเตาปูน-ราษฎร์บูรณะ",
+   "publisher": "MRTA",
+   "publisher_family": "MRTA (government, official)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "official project page; progress % moves with updates"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "bang-sue-c01",
+   "text_en": "Khet Bang Sue (บางซื่อ, geocode 1082) has 11.545 km2 and exactly TWO khwaeng: Bang Sue 5.762 km2 and Wong Sawang 5.783 km2 (Wong Sawang carved out of Bang Sue khwaeng on 20 Jul 2009, effective 21 Sep, along the southern railway line). 'Tao Poon' is a business neighborhood (ย่าน), not a khwaeng - a common misconception this read corrects. Registered population 118,634 (Dec 2023, TH wiki; app 122,410 is a different vintage; EN wiki's 2017 figure 125,440). First an amphoe in 1894, folded into Dusit in 1938, khwaeng under Dusit from 1972, khet on 9 Nov 1989. OSM: khet relation 1639285, khwaeng relations 11507762-63.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": "app area 11.5 km2 ≈ 11.545; 2-khwaeng structure corroborated by OSM"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "on next DOPA cycle",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "infobox + 'แขวง' table + 'ประวัติ'",
+     "paraphrase": "two khwaeng with areas; Wong Sawang creation 2552; amphoe history 2437/2481/2532"
+    },
+    {
+     "source_id": "src_9ad2818ae46b",
+     "locator": "infobox + history",
+     "paraphrase": "11.545 km2; 125,440 (2017); established under Chulalongkorn, reduced 1938, khet 1989"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c02",
+   "text_en": "Krung Thep Aphiwat Central Terminal (formerly Bang Sue Grand Station; name given by King Vajiralongkorn) - the largest railway station in Southeast Asia with 26 platforms over ~600 m, 274,192 m2 of usable floor on a 2,325-rai site, cost ~15bn baht - 'located along the border of Chatuchak district and Bang Sue district', infobox address 336 Thoet Damri Road, Chatuchak. Red lines opened 2 Aug 2021; 52 long-distance trains moved from Hua Lamphong on 19 Jan 2023. This corroborates batch-3's straddle finding: the terminal is a boundary object, not an unqualified in-khet landmark.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "recent_changes",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Krung Thep Aphiwat Central Terminal",
+    "relation_to_entity": "partial",
+    "notes": "how much of the complex sits in bang-sue is app-polygon territory; EN wiki + batch-3 both read it as straddling"
+   },
+   "temporal_scope": {
+    "event_date": "2023-01-19",
+    "observed_period": null,
+    "recheck_by": "when app polygons place the terminal footprint",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_b53ac3ccccfc",
+     "locator": "location + infobox + history",
+     "paraphrase": "'along the border of Chatuchak district and Bang Sue district'; 26 platforms; opened 2 Aug 2021; 52 trains 19 Jan 2023"
+    },
+    {
+     "source_id": "src_9ad2818ae46b",
+     "locator": "transport section",
+     "paraphrase": "describes the terminal as the current central station 'along with a new business district', while noting it is located in neighbouring Chatuchak Subdistrict"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-sue-c03",
+   "text_en": "Station-scale corroboration and count discrepancy: Thai Train Guide gives 24 platforms, 274,192 sqm usable area and a 624,000 passengers/day design capacity, and notes that at its writing 'only Red Line commuter trains use the building'; it benchmarks Hua Lamphong's legacy traffic at ~60,000 passengers/day. English Wikipedia counts 26 platforms. The 24-vs-26 difference is unresolved (likely platform vs track counting) - flag whenever the hub is described.",
+   "kind": "factual_report",
+   "topics": [
+    "counter_evidence",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Krung Thep Aphiwat Central Terminal",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4fe6d8c91602",
+     "locator": "facts/layout sections",
+     "paraphrase": "24 platforms; 274,192 sqm; 624,000/day capacity; Red Line only at writing; Hua Lamphong 192,000 sqm / 14 platforms / 60,000 daily"
+    },
+    {
+     "source_id": "src_b53ac3ccccfc",
+     "locator": "infobox",
+     "paraphrase": "26 platforms, ~600 m long, largest railway station in Southeast Asia"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "platform-count discrepancy across sources; 'underused' narrative from AP/thailandtrains remained snippet-only (AP body fetch failed)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c04",
+   "text_en": "Which stations sit in the khet: MRT Blue Line Bang Pho (บางโพ) and Purple/Blue interchange Tao Poon (เตาปูน) plus Purple Bang Son and Wong Sawang and the SRT Red-line Bang Son and Bang Sue Junction (ชุมทางบางซื่อ) nodes are all inside khet area 3601639285 in OSM (Thai Wikipedia concurs for each). The MRT Blue 'Bang Sue' station node did NOT return inside the khet area in the OSM read despite TH Wikipedia listing it among the khet's stations - its khwaeng/khet placement is unresolved (it serves the terminal interchange across the boundary). Six rail stops inside the khet support transport 9.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "partial",
+    "notes": "app polygons decide the Bang Sue MRT station call"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "app polygon check; OSM area timestamp 2026-11-07",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "'การเดินทาง' section",
+     "paraphrase": "Blue: บางโพ, เตาปูน, บางซื่อ; Purple: เตาปูน, บางซ่อน, วงศ์สว่าง; Light Red: บางซ่อน; SRT ชุมทางบางซื่อ"
+    },
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "Overpass area query (search_log)",
+     "paraphrase": "nodes บางโพ/เตาปูน/วงศ์สว่าง/บางซ่อน(x2)/ชุมทางบางซื่อ inside khet area; no บางซื่อ Blue node returned"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-sue-c05",
+   "text_en": "The amenity-gap tension (DE 6, food 6, vibe 6, nightlife 6 - the batch's lowest set) has a structural reading: the khet does have retail anchors - Gateway at Bang Sue mall at Tao Poon, Big C Wong Sawang, Lotus Prachachuen, Market Place Wong Sawang, the Mani Phiman second-hand market, KMUTNB campus and Bang Pho Hospital (TH Wikipedia) - but large tracts are SRT rail land only now entering the development pipeline (Thai Post: pilot designs/EIA commissioned in 2025). The hub-adjacent streetscape is transitionary: new rail capacity, old rail edges. Nightlife-41 is the batch's smallest count, consistent with a dormitory-plus-station profile rather than an evening district.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "daily_life",
+    "food",
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": "inference over sourced venue/plan facts; app venue counts not independently reproducible"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "'สถานที่สำคัญ' + business lists",
+     "paraphrase": "Gateway at Bang Sue, Big C Wong Sawang, Lotus Prachachuen, Market Place Wong Sawang, ตลาดมณีพิมาน, KMUTNB, รพ.บางโพ"
+    },
+    {
+     "source_id": "src_4a3e136e9650",
+     "locator": "plan details",
+     "paraphrase": "SRTA pilot sites only at design/EIA stage (151m THB consultancy) as of Nov 2025"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c06",
+   "text_en": "The hub exists before the city around it: against a 624,000/day design capacity the comparator is Hua Lamphong's legacy ~60,000/day, and 2023 opening coverage described near-empty halls (AP: 'lone passenger' framing - body not retrievable, snippet-flagged; Thailand Trains guide similarly noted the station 'feels empty'). SRTA's response is a 14-year build-out: 'เมืองอัจฉริยะบางซื่อ' livable smart city / new CBD, plan พ.ศ. 2569-2582, partnership with Japan's Urban Renaissance agency targeting 'the largest rail center in the country and ASEAN', contract signing expected early 2026, phase 1 renting plot E1 for a new Ministry of Transport HQ and plot G9 for private joint investment.",
+   "kind": "reported_perception",
+   "topics": [
+    "counter_evidence",
+    "recent_changes",
+    "transport"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue around the terminal",
+    "relation_to_entity": "partial",
+    "notes": "development sites ring the terminal; footprint straddles Chatuchak/Bang Sue"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Nov 2025 plan status",
+    "recheck_by": "SRTA contract signing (expected early 2026) and land auctions",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4fe6d8c91602",
+     "locator": "capacity/comparison",
+     "paraphrase": "624,000/day design capacity; Hua Lamphong ~60,000/day; Red Line only at writing"
+    },
+    {
+     "source_id": "src_4a3e136e9650",
+     "locator": "plan and phase-1 sections",
+     "paraphrase": "14-year plan 2569-2582; UR Japan; E1 Ministry of Transport; G9 private JV; contract early 2569"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "KTW's own daily ridership figure was not body-sourced; only the capacity-vs-legacy comparison"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c07",
+   "text_en": "Rent corroboration (rent 9, editorial 12,000/25,000): HipFlat shows 1,054 condo listings - the largest marketed inventory in this batch - with portal averages USD 297 (studio) / 389 (1BR) / 598 (2BR), USD 13/sqm (Oct 2026; ~10.4k/13.6k/21k THB at ~35). Interchange-branded projects dominate: Ideo Mobi Bangsue Grand Interchange, The Tree Interchange, Metro Sky Prachachuen, Chewathai Residence Bang Pho, Chapter One Flow Bangpo ('a peaceful riverside-inspired residence...' on Pracharat Sai 1 with access to MRT Bang Pho, Tao Poon and the terminal), Modiz Collection Bangpho (Dec 2022).",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "October 2026",
+    "recheck_by": "quarterly",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c3ca9aa13cba",
+     "locator": "stats + project list",
+     "paraphrase": "1,054 condo available; studio USD297 / 1BR USD389 / 2BR USD598; project names and completion dates"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "portal bias; conversion approximate"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-sue-c08",
+   "text_en": "Identity texture: the khet's riverfront quarter Bang Pho was an 18th-century Vietnamese (Annamese) immigrant settlement around Wat Bang Pho Omawat; the name 'บางซื่อ' appears in Sunthorn Phu's 1807 journey poem; the Rama VI Bridge (first bridge over the Chao Phraya, opened 1923, rebuilt 1953) links the khet across the river; KMUTNB (King Mongkut's University of Technology North Bangkok) campus and SCG headquarters sit on Pracharat roads. Vibe 6 and crowd 4 read as 'institutional dormitory + rail corridor', not heritage quarter.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "vibe"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_9ad2818ae46b",
+     "locator": "history/landmarks",
+     "paraphrase": "Annamese settlement at Bang Pho; Wat Bang Pho Omawat; Rama VI Bridge dates; Sunthorn Phu 1807"
+    },
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "landmark/business lists",
+     "paraphrase": "KMUTNB (มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ), SCG in infobox business list"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c09",
+   "text_en": "Green honesty (green 7, app 8.3 ha / 0.6%): OSM reads inside the khet show only pocket-scale green - Suan Klong Bang Sue (canal pocket park) and a school-adjacent pocket park (Yothin Burana) - no destination park. The khet's green promise is mostly on drawings (SRTA smart-city landscaping, not built). A 7 against a 0.6% share should be read as canal-and-institution-grounds credit, not parkland.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": "app polygon decides park membership"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_33f47b97ca63",
+     "locator": "Overpass area query (search_log)",
+     "paraphrase": "park ways inside khet: สวนหย่อมคลองบางซื่อ (1312398252), สวนหย่อมโรงเรียนโยธินบูรณะ (1420928166)"
+    },
+    {
+     "source_id": "src_4a3e136e9650",
+     "locator": "plan framing",
+     "paraphrase": "smart-city plan still at design/EIA stage; no delivered park component cited"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no per-park areas in sources read; absence-of-findings within the query set"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-sue-c10",
+   "text_en": "2024-2026 recent-change spine: (1) SRTA master plan unveiled Nov 2025 with the 14-year smart-city program and 151m-THB design/EIA commission (Thai Post); (2) MRT Purple southern extension - Tao Poon is its in-khet northern terminus - shows civil works 67.26% complete with a November 2030 opening target (MRTA official); (3) earlier reporting (search snippets, not body-read) described Feb-2026 auctions of SRT land plots A/B worth ~100bn THB. The district's direction is set by these projects, not by organic retail growth.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Sue",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "2026 land auctions; Purple line milestones",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4a3e136e9650",
+     "locator": "article date + plan sections",
+     "paraphrase": "Thai Post 3 Nov 2025; 14-year plan; E1/G9 plots; UR Japan"
+    },
+    {
+     "source_id": "src_e7f47cd6e7d1",
+     "locator": "project facts block",
+     "paraphrase": "23.6 km, 17 stations; construction from 25 Apr 2565; โยธา 67.26%; เปิด พฤศจิกายน 2573"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Feb-2026 auction item is snippet-level (flagged); not load-bearing here"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c01",
+    "bang-sue-c02",
+    "bang-sue-c04"
+   ],
+   "notes": "Khet Bang Sue, 11.545 km2, TWO khwaeng (Bang Sue 5.762 / Wong Sawang 5.783; Tao Poon is a ย่าน, not a khwaeng). In: MRT Bang Pho, Tao Poon interchange, Purple Bang Son/Wong Sawang, Red Bang Son, SRT Bang Sue Junction (all OSM-verified inside). The terminal itself straddles the Chatuchak border (EN wiki; batch-3 concurs); MRT Blue 'Bang Sue' station node unresolved in OSM read."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c05",
+    "bang-sue-c08",
+    "bang-sue-c01"
+   ],
+   "notes": "Subarea lives: Bang Pho riverfront (Vietnamese-heritage quarter, MRT), Tao Poon interchange zone (Gateway mall, terminal walkway), Wong Sawang/Prachachuen (Big C, Lotus, Market Place, KMUTNB students). Rail-yard edges between them untextured in sources read."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c04",
+    "bang-sue-c02",
+    "bang-sue-c10"
+   ],
+   "notes": "Transport 9: six-plus rail stops inside the khet (Blue Bang Pho, Blue/Purple Tao Poon, Purple Bang Son/Wong Sawang, Red Bang Son, SRT Junction) + the terminal interchange across the boundary + Purple south under construction to 2030. Highest rail density in the batch."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c05",
+    "bang-sue-c06",
+    "bang-sue-c03"
+   ],
+   "notes": "Counter-view: the hub has not produced an amenity district - capacity-vs-usage gap (624k/day design vs legacy 60k comparator), 2023 near-empty coverage (snippet-flagged), pilot development only at EIA stage in Nov 2025. DE/food/vibe/nightlife 6s are structurally explicable, not data errors."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c05",
+    "bang-sue-c10"
+   ],
+   "notes": "Rhythm: commuter tidal flows through Bang Pho/Tao Poon interchanges; construction cadence (Purple works, SRTA phases) increasingly sets the calendar; no festival/market rhythm body-read."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c05",
+    "bang-sue-c07"
+   ],
+   "notes": "Walkability prose absent; interchange walkway (terminal-to-MRT underground link) is the one documented pedestrian route (EN wiki KTW article). Rail yards and arterials likely interrupt walking - inference, flagged."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c05",
+    "bang-sue-c07",
+    "bang-sue-c08"
+   ],
+   "notes": "Daily life: Gateway at Bang Sue + Big C/Lotus/Market Place for essentials; Mani Phiman second-hand market; KMUTNB student economy; 1,054 marketed condo rentals."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c07"
+   ],
+   "notes": "Rent 9 / 12,000-25,000: HipFlat 1BR ~USD389 (~13.6k), 2BR ~USD598 (~21k), large interchange condo inventory - editorial band consistent, low end plausible."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c09"
+   ],
+   "notes": "Green 7 vs 0.6% park share is the batch's weakest green case: pocket parks only (OSM); promised smart-city landscaping unbuilt. Recommend re-scoring input review by coordinator."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c07",
+    "bang-sue-c05",
+    "bang-sue-c10"
+   ],
+   "notes": "Fits: budget commuters wanting maximum rail choice, condo investors riding the hub build-out, KMUTNB affiliates. Poor fit: park-seekers, nightlife-first movers, anyone allergic to construction cycles."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c10",
+    "bang-sue-c06"
+   ],
+   "notes": "2024-2026: SRTA Nov-2025 master plan (14-year smart city, E1/G9 plots, UR Japan deal expected early 2026); Purple south works 67.26% to a Nov-2030 target; land auctions from Feb 2026 (snippet-flagged)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "bang-sue-c02",
+    "bang-sue-c03",
+    "bang-sue-c04"
+   ],
+   "notes": "Outside-the-score: terminal footprint split across khets unresolved at khwaeng level; MRT Bang Sue station node outside khet area in OSM read (contradicts TH wiki list); platform count 24-vs-26 discrepancy; KTW daily ridership unmeasured in bodies read."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Bangkok's biggest rail bet is planted here - six stops inside the khet and the ASEAN-scale terminal on its northern edge - but in 2025 the district around it is still rail yards, interchange malls and 13.6k-THB one-beds.",
+   "claim_ids": [
+    "bang-sue-c02",
+    "bang-sue-c04",
+    "bang-sue-c05",
+    "bang-sue-c07"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Bang Sue is where Bangkok put its rail future: the Krung Thep Aphiwat terminal (across the khet's northern boundary), the Blue/Purple interchange at Tao Poon, MRT Bang Pho, Purple Wong Sawang and Bang Son, plus the SRT junction - six-plus stops inside 11.5 km2. The present is less grand: Gateway-at-Bang-Sue and Big C carry the essentials, the green is pocket-scale, and 1,054 listed condos rent from about 10k for studios. A 14-year 'smart city' plan (announced November 2025) and the MRT Purple extension (2030 target) are the district's next chapters; until they land, Bang Sue is a commuter's khet with construction in its hair.",
+   "claim_ids": [
+    "bang-sue-c04",
+    "bang-sue-c02",
+    "bang-sue-c05",
+    "bang-sue-c07",
+    "bang-sue-c10"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Unmatched rail supply for the price: Blue, Purple, SRT Red lines and the long-distance terminal all interchange on or beside the khet, OSM-verified at six in-khet stations.",
+    "claim_ids": [
+     "bang-sue-c04",
+     "bang-sue-c02"
+    ]
+   },
+   {
+    "text_en": "Deep rental market at low price points: 1,054 portal listings with ~USD389 (1BR) / ~USD598 (2BR) averages in Oct 2026 - the batch's biggest inventory.",
+    "claim_ids": [
+     "bang-sue-c07"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The hub is ahead of the district: design capacity 624,000/day against a legacy-60k comparator and development only at EIA stage in late 2025 - amenity scores of 6 are structural, not an oversight.",
+    "claim_ids": [
+     "bang-sue-c06",
+     "bang-sue-c05"
+    ]
+   },
+   {
+    "text_en": "Park share 0.6% (8.3 ha) in pocket parks; the promised smart-city green exists on drawings, not on the ground.",
+    "claim_ids": [
+     "bang-sue-c09"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "text_en",
+    "claim_ids": [
+     "bang-sue-c02",
+     "bang-sue-c04",
+     "bang-sue-c05",
+     "bang-sue-c06",
+     "bang-sue-c07",
+     "bang-sue-c09",
+     "bang-sue-c10"
+    ]
+   },
+   {
+    "text_en": "claim_ids",
+    "claim_ids": [
+     "bang-sue-c02",
+     "bang-sue-c04",
+     "bang-sue-c05",
+     "bang-sue-c06",
+     "bang-sue-c07",
+     "bang-sue-c09",
+     "bang-sue-c10"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "text_en",
+    "claim_ids": [
+     "bang-sue-c02",
+     "bang-sue-c04",
+     "bang-sue-c05",
+     "bang-sue-c06",
+     "bang-sue-c07",
+     "bang-sue-c09",
+     "bang-sue-c10"
+    ]
+   },
+   {
+    "text_en": "claim_ids",
+    "claim_ids": [
+     "bang-sue-c02",
+     "bang-sue-c04",
+     "bang-sue-c05",
+     "bang-sue-c06",
+     "bang-sue-c07",
+     "bang-sue-c09",
+     "bang-sue-c10"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Best fit in the batch for maximum-rail, minimum-rent commuters - especially anyone whose week is defined by intercity departures or a KMUTNB/Prachachuen job.",
+    "claim_ids": [
+     "bang-sue-c04",
+     "bang-sue-c07"
+    ]
+   },
+   {
+    "text_en": "Poor fit for park life and evening scenes: 0.6% park share and the batch's lowest nightlife count; expect years of construction before the smart-city plan changes the street level.",
+    "claim_ids": [
+     "bang-sue-c09",
+     "bang-sue-c10"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "T",
+   "e",
+   "r",
+   "m",
+   "i",
+   "n",
+   "a",
+   "l",
+   " ",
+   "f",
+   "o",
+   "o",
+   "t",
+   "p",
+   "r",
+   "i",
+   "n",
+   "t",
+   "'",
+   "s",
+   " ",
+   "i",
+   "n",
+   "-",
+   "k",
+   "h",
+   "e",
+   "t",
+   " ",
+   "s",
+   "h",
+   "a",
+   "r",
+   "e",
+   " ",
+   "u",
+   "n",
+   "k",
+   "n",
+   "o",
+   "w",
+   "n",
+   " ",
+   "(",
+   "a",
+   "p",
+   "p",
+   " ",
+   "p",
+   "o",
+   "l",
+   "y",
+   "g",
+   "o",
+   "n",
+   "s",
+   " ",
+   "d",
+   "e",
+   "c",
+   "i",
+   "d",
+   "e",
+   ")",
+   ";",
+   " ",
+   "M",
+   "R",
+   "T",
+   " ",
+   "B",
+   "a",
+   "n",
+   "g",
+   " ",
+   "S",
+   "u",
+   "e",
+   " ",
+   "s",
+   "t",
+   "a",
+   "t",
+   "i",
+   "o",
+   "n",
+   " ",
+   "n",
+   "o",
+   "d",
+   "e",
+   " ",
+   "a",
+   "b",
+   "s",
+   "e",
+   "n",
+   "t",
+   " ",
+   "f",
+   "r",
+   "o",
+   "m",
+   " ",
+   "O",
+   "S",
+   "M",
+   " ",
+   "k",
+   "h",
+   "e",
+   "t",
+   "-",
+   "a",
+   "r",
+   "e",
+   "a",
+   " ",
+   "r",
+   "e",
+   "a",
+   "d",
+   " ",
+   "d",
+   "e",
+   "s",
+   "p",
+   "i",
+   "t",
+   "e",
+   " ",
+   "T",
+   "H",
+   " ",
+   "w",
+   "i",
+   "k",
+   "i",
+   " ",
+   "l",
+   "i",
+   "s",
+   "t",
+   "i",
+   "n",
+   "g",
+   ";",
+   " ",
+   "2",
+   "4",
+   "-",
+   "v",
+   "s",
+   "-",
+   "2",
+   "6",
+   " ",
+   "p",
+   "l",
+   "a",
+   "t",
+   "f",
+   "o",
+   "r",
+   "m",
+   " ",
+   "d",
+   "i",
+   "s",
+   "c",
+   "r",
+   "e",
+   "p",
+   "a",
+   "n",
+   "c",
+   "y",
+   ";",
+   " ",
+   "K",
+   "T",
+   "W",
+   "'",
+   "s",
+   " ",
+   "o",
+   "w",
+   "n",
+   " ",
+   "r",
+   "i",
+   "d",
+   "e",
+   "r",
+   "s",
+   "h",
+   "i",
+   "p",
+   " ",
+   "n",
+   "o",
+   "t",
+   " ",
+   "b",
+   "o",
+   "d",
+   "y",
+   "-",
+   "s",
+   "o",
+   "u",
+   "r",
+   "c",
+   "e",
+   "d",
+   ";",
+   " ",
+   "F",
+   "e",
+   "b",
+   "-",
+   "2",
+   "0",
+   "2",
+   "6",
+   " ",
+   "l",
+   "a",
+   "n",
+   "d",
+   "-",
+   "a",
+   "u",
+   "c",
+   "t",
+   "i",
+   "o",
+   "n",
+   " ",
+   "r",
+   "e",
+   "p",
+   "o",
+   "r",
+   "t",
+   "s",
+   " ",
+   "s",
+   "n",
+   "i",
+   "p",
+   "p",
+   "e",
+   "t",
+   "-",
+   "l",
+   "e",
+   "v",
+   "e",
+   "l",
+   "."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "6 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: App-polygon decision needed: how much of the Krung Thep Aphiwat terminal footprint and the SRT development plots fall inside bang-sue vs chatuchak (EN wiki reads it as straddling; batch-3 chatuchak concurs).",
+   "open issue: Resolve MRT Blue 'Bang Sue' station node membership (absent from OSM khet-area query result) - if it sits in Chatuchak per OSM, the app's station-crediting for bang-sue may need review.",
+   "open issue: Body-level KTW ridership data (SRT monthly stats) not found in this pass; 'underused' narrative rests on capacity comparison + snippet-level 2023 coverage.",
+   "open issue: Platform count discrepancy (EN wiki 26 vs Thai Train Guide 24) needs one authoritative figure before editorial publication.",
+   "open issue: SRTA Feb-2026 land auction (plots A/B, ~100bn THB) was seen only in search summaries - verify against a body before citing."
+  ]
+ }
+}

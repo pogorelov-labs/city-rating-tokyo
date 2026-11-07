@@ -1,0 +1,236 @@
+{
+  "entity_key": "st.mo-chit",
+  "search_log": [
+    {"tool": "WebSearch", "query": "Mo Chit BTS station N8 Chatuchak Park MRT interchange station_id", "status": "ok", "date": "2026-11-07", "note": "EN wiki + BTS official surfaced; summary's 'Chatuchak Park = BL12' was the tool's own inference, later corrected by body reads (BL12 = Kamphaeng Phet; Chatuchak Park = BL13)"},
+    {"tool": "WebFetch", "query": "en.wikipedia.org/wiki/Mo_Chit_BTS_station", "status": "ok (after 1 concurrency failure)", "date": "2026-11-07", "note": "full body read"},
+    {"tool": "WebFetch", "query": "en.wikipedia.org/wiki/Chatuchak_Park", "status": "ok", "date": "2026-11-07", "note": "park area 0.304 km2; augmented by QSN + Rot Fai, separated by Kamphaeng Phet 3 Rd"},
+    {"tool": "WebFetch", "query": "en.wikipedia.org/wiki/Wachirabenchathat_Park", "status": "ok", "date": "2026-11-07", "note": "375 rai = 60 ha confirmed"},
+    {"tool": "WebFetch", "query": "en.wikipedia.org/wiki/Queen_Sirikit_Park", "status": "ok", "date": "2026-11-07", "note": "0.22 km2 / 140 rai confirmed"},
+    {"tool": "WebFetch", "query": "th.wikipedia.org/wiki/สถานีสวนจตุจักร (MRT Chatuchak Park)", "status": "ok", "date": "2026-11-07", "note": "station code BL13 explicit; former name 'Mo Chit'; ridership 6,865,636 (2021)"},
+    {"tool": "WebSearch", "query": "Chatuchak weekend market renovation 2025 2026 upgrade parking", "status": "ok (thin)", "date": "2026-11-07", "note": "led to citable Bangkok Post/Thaiger articles via follow-up Exa query"},
+    {"tool": "exa", "query": "Chatuchak weekend market clock tower 529 vendors move out April 30 renovation BMA SRT takeover", "status": "ok", "date": "2026-11-07", "note": "Bangkok Post 2025-02-19 full body text surfaced; Thaiger + thai.news corroborate"},
+    {"tool": "WebFetch", "query": "thethaiger.com news stallholders-told-to-leave", "status": "ok", "date": "2026-11-07", "note": "full body read"},
+    {"tool": "WebFetch", "query": "chatuchakmarket.org", "status": "ok", "date": "2026-11-07", "note": "200,000 visitors/weekend; 35 acres; conflicting 8,000 vs 15,000 stall counts"},
+    {"tool": "WebFetch", "query": "hipflat.com/condo-for-rent/bangkok/chatuchak (+ .co.th/en variant)", "status": "ok (after 1 concurrency failure)", "date": "2026-11-07", "note": "studio USD446 / 1BR USD565 / 2BR USD984 (Oct 2026); THB listings 16,000-25,000"},
+    {"tool": "WebFetch", "query": "en.wikipedia.org/wiki/Mo_Chit_2_bus_terminal (after disambiguation stub Mo_Chit_Bus_Terminal)", "status": "ok", "date": "2026-11-07", "note": "999 Kamphaeng Phet 2 Rd; ~2 km from BTS/MRT per article; 2025 consolidation option reported"},
+    {"tool": "WebSearch", "query": "สวนสันติภาพ / JJ Green / Jatujak Day & Night checks (Thai)", "status": "ok (mostly not applicable to this unit)", "date": "2026-11-07", "note": "JJ Green original site reported closed 2018 (snippet-level only; not used as a claim)"},
+    {"tool": "Bash+curl", "query": "Overpass API with UA header: railway stations + leisure=park/garden around 4 station coords (800-850 m)", "status": "ok", "date": "2026-11-07", "note": "first attempt with UA header succeeded; base snapshot 2026-11-07T20:17Z; monument-node follow-up query also succeeded"},
+    {"tool": "not attempted", "query": "Reddit, TripAdvisor (known 403 per brief); Bangkok Post direct fetch (paywall — no bypass, content taken from Exa search extraction instead)", "status": "skipped", "date": "2026-11-07", "note": "resident-report voices therefore largely absent — honest gap"}
+  ],
+  "sources": [
+    {"index": 0, "canonical_url": "https://en.wikipedia.org/wiki/Mo_Chit_BTS_station", "retrieved_url": "https://en.wikipedia.org/wiki/Mo_Chit_BTS_station", "title": "Mo Chit BTS station", "publisher": "Wikipedia (English)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["Stub-level article; no khwaeng, exit numbering, or walk distances between BTS and MRT"]},
+    {"index": 1, "canonical_url": "https://th.wikipedia.org/wiki/สถานีสวนจตุจักร", "retrieved_url": "https://th.wikipedia.org/wiki/สถานีสวนจตุจักร", "title": "สถานีสวนจตุจักร (MRT Chatuchak Park)", "publisher": "Wikipedia (Thai)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["Coordinates only via mapframe; structure figures not independently verified"]},
+    {"index": 2, "canonical_url": "https://en.wikipedia.org/wiki/Chatuchak_Park", "retrieved_url": "https://en.wikipedia.org/wiki/Chatuchak_Park", "title": "Chatuchak Park", "publisher": "Wikipedia (English)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["No opening hours or address in article"]},
+    {"index": 3, "canonical_url": "https://en.wikipedia.org/wiki/Wachirabenchathat_Park", "retrieved_url": "https://en.wikipedia.org/wiki/Wachirabenchathat_Park", "title": "Wachirabenchat Park (Rot Fai Park)", "publisher": "Wikipedia (English)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["No MRT/BTS access statement in article"]},
+    {"index": 4, "canonical_url": "https://en.wikipedia.org/wiki/Queen_Sirikit_Park", "retrieved_url": "https://en.wikipedia.org/wiki/Queen_Sirikit_Park", "title": "Queen Sirikit Park", "publisher": "Wikipedia (English)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["Article flagged as needing citations (Dec 2017); one dead reference"]},
+    {"index": 5, "canonical_url": "https://www.chatuchakmarket.org", "retrieved_url": "https://www.chatuchakmarket.org", "title": "Chatuchak Market official-ish info site", "publisher": "chatuchakmarket.org", "publisher_family": "chatuchakmarket.org", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "tourism_publisher", "commercial_context": "Visitor-facing market site with advertising/affiliate character", "limitations": ["Unofficial site; intro says 8,000+ stalls while another paragraph says 15,000+ across 26 sections; opening schedule not on the read page"]},
+    {"index": 6, "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/chatuchak", "retrieved_url": "https://www.hipflat.co.th/en/condo-for-rent/bangkok/chatuchak", "title": "Condos for rent in Chatuchak, Bangkok — HipFlat", "publisher": "HipFlat", "publisher_family": "HipFlat", "author": null, "published_at": null, "updated_at": "2026-10 (market data month shown on page)", "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "commercial_property", "commercial_context": "Listing portal; aggregates landlord/agent listings", "limitations": ["Averages displayed in USD without a stated THB rate; district-wide averages pull in the Lat Phrao/Ratchada corridor; none of the 30 shown listings sat at Mo Chit station itself"]},
+    {"index": 7, "canonical_url": "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave", "retrieved_url": "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave", "title": "Time's up: Stallholders at Chatuchak weekend market told to leave", "publisher": "The Thaiger", "publisher_family": "Thaiger", "author": "Bob Scott", "published_at": "2025-02-19", "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "news", "commercial_context": "Ad-supported expat news site", "limitations": ["Rewrites BMA briefing; no independent vendor quotes in the read body"]},
+    {"index": 8, "canonical_url": "https://www.bangkokpost.com/thailand/general/2964115/hundreds-of-vendors-at-chatuchak-market-given-deadline-to-move", "retrieved_url": "https://www.bangkokpost.com/thailand/general/2964115/hundreds-of-vendors-at-chatuchak-market-given-deadline-to-move", "title": "Hundreds of vendors at Chatuchak market given deadline to move", "publisher": "Bangkok Post", "publisher_family": "Bangkok Post", "author": "Supoj Wancharoen", "published_at": "2025-02-19", "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "news", "commercial_context": "National daily of record", "limitations": ["Paywalled site; body text obtained via Exa search-content extraction (no archive/proxy bypass attempted); direct fetch not performed"]},
+    {"index": 9, "canonical_url": "https://en.wikipedia.org/wiki/Mo_Chit_2_bus_terminal", "retrieved_url": "https://en.wikipedia.org/wiki/Mo_Chit_2_bus_terminal", "title": "Mo Chit 2 bus terminal (Bangkok Bus Terminal, Chatuchak)", "publisher": "Wikipedia (English)", "publisher_family": "Wikipedia", "author": null, "published_at": null, "updated_at": null, "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["Internal figures conflict (100,000 vs 116,368 m2; 150,000 vs 5,000 daily passengers); relocation status unresolved in article"]},
+    {"index": 10, "canonical_url": "https://overpass-api.de/api/interpreter", "retrieved_url": "https://overpass-api.de/api/interpreter", "title": "OpenStreetMap Overpass query: rail stations + parks/gardens within 800-850 m of Mo Chit BTS node", "publisher": "OpenStreetMap (Overpass API)", "publisher_family": "OpenStreetMap", "author": null, "published_at": null, "updated_at": "2026-11-07 (base snapshot 20:17Z)", "retrieved_at": "2026-11-07T00:00:00Z", "body_read": true, "type": "other", "commercial_context": "", "limitations": ["Straight-line geometry only; app Voronoi/catchment polygons not available to this agent; final membership is the coordinator's polygon check"]}
+  ],
+  "claims": [
+    {
+      "claim_id": "mo-chit-c01",
+      "text_en": "The unit's two rail stops: BTS Mo Chit (N8), elevated above Phahonyothin Road between Soi Phahon Yothin 18 and 20 in Chatuchak district, opened 5 December 1999 on the Sukhumvit Line, with 5,166,915 passengers in 2021 (13.8025833 N, 100.5538333 E); and MRT Chatuchak Park (BL13), underground beneath the southern part of Chatuchak Park on the west side of Phahonyothin Road, opened 3 July 2004 under its former name 'Mo Chit', with 6,865,636 passengers in 2021. The BTS stop was the Sukhumvit Line's northern terminus until Ha Yaek Lat Phrao opened on 9 August 2019.",
+      "kind": "factual_report",
+      "topics": ["identity", "transport"],
+      "polarity": "neutral",
+      "geography": {"scope": "station_area", "place_name": "Mo Chit / Chatuchak Park", "relation_to_entity": "inside", "notes": "Both station boxes sit in the app's merged Mo Chit/Chatuchak Park unit per the merge rule; final polygon membership is the coordinator's check."},
+      "temporal_scope": {"event_date": null, "observed_period": "ridership year 2021", "recheck_by": null, "notes": "Ridership figures are the newest published on the station pages."},
+      "evidence": [
+        {"source_index": 0, "locator": "infobox + 'Mo Chit BTS station' body", "paraphrase": "N8, Sukhumvit Line, opened 5 Dec 1999, above Phahonyothin Rd between Sois 18-20, Chatuchak district, coords 13.8025833/100.5538333, 5,166,915 passengers 2021, northern terminus until 9 Aug 2019."},
+        {"source_index": 1, "locator": "lead + 'รหัส' + 'ผู้โดยสาร'", "paraphrase": "Chatuchak Park station code BL13, opened 3 July 2004 (B.E. 2547), formerly named Mo Chit, under the southern area of Chatuchak Park on the west side of Phahonyothin Rd; 6,865,636 passengers in 2021."}
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "mo-chit-c02",
+      "text_en": "The two stops are one interchange area: OpenStreetMap tags the BTS Mo Chit node (13.80260, 100.55379) and the MRT Chatuchak Park node (13.80296, 100.55328) roughly 70 m apart in straight line (agent-computed), and the English Wikipedia article states the BTS station sits directly above the MRT station with the interchange made at street level outside the paid area. A search-engine summary claiming Chatuchak Park is 'BL12' was tool inference and is contradicted by the body reads: BEM's own site and English Wikipedia give BL12 to Kamphaeng Phet, Thai Wikipedia and OSM give BL13 to Chatuchak Park.",
+      "kind": "estimate",
+      "topics": ["identity", "transport"],
+      "polarity": "neutral",
+      "geography": {"scope": "station_area", "place_name": "Mo Chit / Chatuchak Park interchange", "relation_to_entity": "entire_unit", "notes": "70 m separation is far inside the 450 m merge threshold; treating this as one merged area unit is consistent with the rule."},
+      "temporal_scope": {"event_date": null, "observed_period": null, "recheck_by": "2027-11", "notes": "OSM tags can change; coordinator should confirm app station_ids carry N8 and BL13."},
+      "evidence": [
+        {"source_index": 10, "locator": "Overpass output nodes 5388599065 (N8) and 280240585 (BL13)", "paraphrase": "Two station nodes tagged Mo Chit ref=N8 and สวนจตุจักร ref=BL13, coordinates ~70 m apart (computed)."},
+        {"source_index": 0, "locator": "'Connections' / interchange paragraph", "paraphrase": "BTS sits directly above Chatuchak Park MRT; interchange is outside the paid area, via street level."},
+        {"source_index": 1, "locator": "lead sentence", "paraphrase": "Code BL13 explicitly stated for Chatuchak Park station."}
+      ],
+      "limitations": ["Direct paid-area link between the two systems is not documented in any read source; the transfer is described as street-level."]
+    },
+    {
+      "claim_id": "mo-chit-c03",
+      "text_en": "The green complex this unit borders consists of three adjoining parks: Chatuchak Park, 0.304 sq km (30.4 ha, ~190 rai), opened 1975 on former State Railway land with a long artificial lake and the MRT line running beneath it; Queen Sirikit Park, 0.22 sq km (~22 ha / 140 rai), a botanical garden established 1992 and formally opened December 1996 with over 2,000 plant species; and Wachirabenchat (Rot Fai) Park, 375 rai (60.0 ha), created 2002 from a State Railway golf course with a roughly 3 km walking/cycling loop. The parks are separated from one another by Kamphaeng Phet 3 Road.",
+      "kind": "factual_report",
+      "topics": ["green", "identity"],
+      "polarity": "strength",
+      "geography": {"scope": "station_area", "place_name": "Chatuchak / Queen Sirikit / Wachirabenchat parks", "relation_to_entity": "partial", "notes": "App maps 62.8 ha inside the unit — less than the 112.8 ha component sum, so the polygon appears to clip the complex; which parts fall inside is the coordinator's call."},
+      "temporal_scope": {"event_date": null, "observed_period": null, "recheck_by": null, "notes": ""},
+      "evidence": [
+        {"source_index": 2, "locator": "infobox + lead", "paraphrase": "Area 0.304 sq km; opened 1975 on SRT land; lake; Chatuchak Park MRT station lies directly under the park; later augmented by Queen Sirikit Park, Wachirabenchat Park and Chak Phupha Su Maha Nathee Park, separated by Kamphang Phet 3 Road."},
+        {"source_index": 4, "locator": "infobox + lead", "paraphrase": "Queen Sirikit Park 0.22 km2 (140 rai), established 1992, official opening 19 December 1996, 2,000+ species, part of the Chatuchak Park complex."},
+        {"source_index": 3, "locator": "infobox + lead", "paraphrase": "Wachirabenchat Park 375 rai (60 ha), created 2002, former SRT golf course, ~3 km cycling/walking track, borders Queen Sirikit and Chatuchak parks."}
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "mo-chit-c04",
+      "text_en": "Agent-computed straight-line distances from the BTS Mo Chit node place the green complex close at hand: Queen Sirikit Park's centroid about 510 m and Chatuchak Park's centroid about 640 m away, both well inside an 800 m catchment, while Wachirabenchat Park's centroid is about 1.1 km to the north (its polygon edge comes nearer; the Overpass radius search still caught the way). The park block therefore reads as genuinely in- or directly adjoining this unit, with Rot Fai the farthest component.",
+      "kind": "estimate",
+      "topics": ["green", "walkability"],
+      "polarity": "strength",
+      "geography": {"scope": "station_area", "place_name": "Chatuchak park complex", "relation_to_entity": "partial", "notes": "Straight-line from OSM node; no walking-route or duration conversion performed. Polygon clipping decides the final in/out split."},
+      "temporal_scope": {"event_date": null, "observed_period": null, "recheck_by": null, "notes": ""},
+      "evidence": [
+        {"source_index": 10, "locator": "Overpass park centroids (13.80807/100.55549; 13.80686/100.55197; 13.81269/100.55424) vs station node 13.80260/100.55379", "paraphrase": "Centroid distances computed at ~510 m, ~640 m and ~1.12 km; the Rot Fai park way was returned by the 850 m radius search, indicating its southern edge lies within that band."}
+      ],
+      "limitations": ["Centroid distance understates edge accessibility for large parks; no routing performed."]
+    },
+    {
+      "claim_id": "mo-chit-c05",
+      "text_en": "Chatuchak Weekend Market, which occupies the blocks north-west of the stations, is described by its visitor site as the largest weekend market in the world: about 35 acres, divided into 26-27 sections, with a paragraph claiming more than 15,000 stalls (the same page's intro says 8,000+ — the site contradicts itself) and more than 200,000 people visiting each weekend. The market office's 2025 figures put permanent stall fees at 1,800 baht/month (green stalls 1,400; plant stalls 900) on land owned by the State Railway of Thailand, for which the BMA pays 169 million baht a year.",
+      "kind": "factual_report",
+      "topics": ["shopping", "food", "rhythm"],
+      "polarity": "strength",
+      "geography": {"scope": "venue", "place_name": "Chatuchak Weekend Market", "relation_to_entity": "partial", "notes": "The market sits between the Mo Chit and Kamphaeng Phet units; which sections fall inside this unit's polygon is the coordinator's call."},
+      "temporal_scope": {"event_date": null, "observed_period": "visitor figures current as of site's 2026 copyright", "recheck_by": "2027-05", "notes": "Renovation (see c06) may move stall counts."},
+      "evidence": [
+        {"source_index": 5, "locator": "homepage lead + 'About' paragraphs", "paraphrase": "Largest weekend market claim; 200,000+ weekend visitors; 35 acres; 26 sections; conflicting 8,000 vs 15,000 stall counts on the same page."},
+        {"source_index": 8, "locator": "paragraphs on fees and land", "paraphrase": "Monthly fees 1,800/1,400/900 baht; BMA runs the market on SRT land and pays 169 million baht a year."}
+      ],
+      "limitations": ["Stall-count conflict unresolved; visitor figure is the site's own claim without methodology."]
+    },
+    {
+      "claim_id": "mo-chit-c06",
+      "text_en": "The market is being reorganised: in February 2025 City Hall told 529 stallholders around the clock tower to move out by 30 April 2025 so the zone could be redeveloped as a new tourist-drawing landmark, saying the vending area's walkways had narrowed from 19 m to 9 m. Only about 15 vendors accepted offered alternative stalls (fee waived), 122 were in rent arrears facing contract cancellation, and vendors had petitioned the Prime Minister and the Bangkok governor over the market office's management.",
+      "kind": "factual_report",
+      "topics": ["change", "retail"],
+      "polarity": "tradeoff",
+      "geography": {"scope": "venue", "place_name": "Chatuchak Weekend Market clock-tower zone", "relation_to_entity": "partial", "notes": ""},
+      "temporal_scope": {"event_date": "2025-02-19 (briefing)", "observed_period": null, "recheck_by": "2027-05", "notes": "Post-April-2025 outcome of the redevelopment not found in read sources."},
+      "evidence": [
+        {"source_index": 8, "locator": "lead + Suksan Kittisupakorn briefing paragraphs", "paraphrase": "529 stallholders ordered out by 30 April; 19 m to 9 m pathway narrowing; new landmark plan; 15 relocations; 122 arrears cases; petition to PM Paetongtarn and Governor Chadchart."},
+        {"source_index": 7, "locator": "body", "paraphrase": "Same deadline, fees and land-payment figures; clock tower zone 'primed to become a new tourist magnet'."}
+      ],
+      "limitations": ["Vendor-side account available only via a Facebook post surfaced in search (not read); whether the deadline was enforced is unreported in read sources."]
+    },
+    {
+      "claim_id": "mo-chit-c07",
+      "text_en": "Rents around the unit sit at mid-market for inner-north Bangkok: HipFlat's Chatuchak district averages (October 2026, 4,537 rental listings) are USD 446 for studios, USD 565 for 1-bedrooms and USD 984 for 2-bedrooms, with THB-denominated listings on the page running 16,000-25,000 baht for studios and small 1-beds (e.g. The Saint Residences 16,000; Life Ladprao 21,000-25,000). This is consistent with the app's 16,000/33,000 Chatuchak blend, though the district average is pulled down/north by Lat Phrao-corridor condominiums and no captured listing sat at Mo Chit station itself.",
+      "kind": "estimate",
+      "topics": ["rent", "affordability"],
+      "polarity": "strength",
+      "geography": {"scope": "district", "place_name": "Chatuchak district", "relation_to_entity": "partial", "notes": "District-level proxy for a station unit; polygon-specific listings not captured."},
+      "temporal_scope": {"event_date": null, "observed_period": "October 2026 market data", "recheck_by": "2027-05", "notes": "HipFlat notes -6.7% vs January 2026 on per-sqm value."},
+      "evidence": [
+        {"source_index": 6, "locator": "'Average price of condos for rent by number of bedrooms' + THB listing blurbs", "paraphrase": "Studio USD446 / 1BR USD565 / 2BR USD984; listings at 16,000-25,000 THB; 4,537 listings; Oct 2026."}
+      ],
+      "limitations": ["USD display without a stated THB conversion rate; district-wide, not station-specific."]
+    },
+    {
+      "claim_id": "mo-chit-c08",
+      "text_en": "Day-to-day interchange mechanics: all four exits of MRT Chatuchak Park connect to BTS Mo Chit via the ground level/B1 underpass network (the line runs beneath the park and the BTS sits above Phahonyothin Road), the station has a large park-and-ride lot, and Exit 3 faces the bus stops toward Kamphaeng Phet Road and the Chatuchak bus terminal while Exit 4 faces buses toward Saphan Khwai and the Department of Land Transport.",
+      "kind": "factual_report",
+      "topics": ["transport", "walkability"],
+      "polarity": "strength",
+      "geography": {"scope": "station_area", "place_name": "Chatuchak Park MRT / BTS Mo Chit", "relation_to_entity": "inside", "notes": ""},
+      "temporal_scope": {"event_date": null, "observed_period": null, "recheck_by": null, "notes": ""},
+      "evidence": [
+        {"source_index": 1, "locator": "'ทางเข้า-ออก' exits 1-4 + 'การเชื่อมต่อ BTS' paragraph", "paraphrase": "All four exits connect to BTS Mo Chit; B1 underpass links exits, MetroMall and the BTS area; park-and-ride lot; exit-by-exit bus directions."}
+      ],
+      "limitations": []
+    },
+    {
+      "claim_id": "mo-chit-c09",
+      "text_en": "The long-distance bus gateway associated with 'Mo Chit' is not in this catchment: Mo Chit 2 (officially Bangkok Bus Terminal, Chatuchak) sits at 999 Kamphaeng Phet 2 Road behind Queen Sirikit Park, roughly 2 km from the BTS/MRT stations per the terminal's article, serving northern and northeastern provinces. In 2025 the Transport Ministry was reported to be weighing consolidation of Bangkok's three long-distance terminals at Krung Thep Aphiwat Central Terminal, which would remove this regional-bus role from the area if it proceeds.",
+      "kind": "factual_report",
+      "topics": ["transport", "change"],
+      "polarity": "neutral",
+      "geography": {"scope": "other", "place_name": "Mo Chit 2 bus terminal", "relation_to_entity": "outside", "notes": "Outside the 800 m catchment (article's own ~2 km statement; agent did not re-measure)."},
+      "temporal_scope": {"event_date": null, "observed_period": "consolidation under consideration as of article's 2025/2026 state", "recheck_by": "2027-05", "notes": "Relocation plans have circulated for years without execution."},
+      "evidence": [
+        {"source_index": 9, "locator": "'Location' + 'Connections' + 'Redevelopment plans' sections", "paraphrase": "999 Kamphaeng Phet 2 Rd behind Queen Sirikit Park; ~2 km from Mo Chit BTS / Chatuchak Park MRT; northern/Central/Isan routes; 2025 ministry weighing consolidation at Krung Thep Aphiwat."}
+      ],
+      "limitations": ["Article's own internal figures conflict on size/passengers; consolidation is a reported consideration, not a decision."]
+    },
+    {
+      "claim_id": "mo-chit-c10",
+      "text_en": "The unit's rhythm is market-driven: on Saturdays and Sundays the market draws 200,000+ visitors into the blocks between the two stations, while the park complex and residential streets carry the weekdays; Wednesday-Thursday plant-section days and a Friday-night wholesale/night operation extend the surge beyond the pure weekend (the weekday/night schedule appears in secondary guides and should be re-verified against the market office). The station pair's own baseline (5.2M + 6.9M riders in 2021) marks it as one of northern Bangkok's biggest daily nodes.",
+      "kind": "researcher_inference",
+      "topics": ["rhythm", "crowd"],
+      "polarity": "mixed",
+      "geography": {"scope": "station_area", "place_name": "Mo Chit / Chatuchak", "relation_to_entity": "entire_unit", "notes": ""},
+      "temporal_scope": {"event_date": null, "observed_period": "2021 ridership; market schedule as published 2025-2026", "recheck_by": "2027-05", "notes": ""},
+      "evidence": [
+        {"source_index": 5, "locator": "homepage lead", "paraphrase": "More than 200,000 people each weekend; weekend-only market framing."},
+        {"source_index": 0, "locator": "infobox", "paraphrase": "2021 ridership 5,166,915."},
+        {"source_index": 1, "locator": "ridership line", "paraphrase": "2021 ridership 6,865,636."}
+      ],
+      "limitations": ["Wed/Thu plant days and Friday night hours are snippet-corroborated only (search summaries; no read body stated them) — flagged, not load-bearing."]
+    },
+    {
+      "claim_id": "mo-chit-c11",
+      "text_en": "Counter-view and gaps: the market's own visitor-review aggregate surfaces complaints worth carrying into copy — limited halal options, variable vendor friendliness, and a maze layout needing comfortable shoes and water — and the 2025 eviction/redevelopment is an open wound with the vendor community. Nothing read supports or refutes a safety-7 for this specific unit (no crime or incident data found), and 'crowd 5' has no unit-specific measurement behind it in any read source; both stay as app values with research finding neither corroboration nor contradiction.",
+      "kind": "reported_perception",
+      "topics": ["safety", "crowd", "food"],
+      "polarity": "tradeoff",
+      "geography": {"scope": "venue", "place_name": "Chatuchak Weekend Market / Mo Chit unit", "relation_to_entity": "partial", "notes": ""},
+      "temporal_scope": {"event_date": null, "observed_period": "review aggregate as displayed 2026", "recheck_by": null, "notes": ""},
+      "evidence": [
+        {"source_index": 5, "locator": "Google-review summary block (51,701 reviews)", "paraphrase": "Reviewers mention limited halal food options, variable vendor friendliness, and advice to wear comfortable shoes and bring water."},
+        {"source_index": 8, "locator": "petition paragraph", "paraphrase": "Vendors petitioned the PM and governor over the market office's refusal to renew 529 contracts."}
+      ],
+      "limitations": ["Review aggregate is the site's own summary of Google reviews; no resident-report source was accessible (Reddit/TripAdvisor 403 per brief)."]
+    }
+  ],
+  "question_answers": [
+    {"id": "Q01", "status": "answered", "claim_ids": ["mo-chit-c01", "mo-chit-c02"], "notes": "BTS N8 (1999) above Phahonyothin + MRT BL13 (2004, formerly 'Mo Chit') under the park, ~70 m apart, Chatuchak district; merged unit is justified."},
+    {"id": "Q02", "status": "answered", "claim_ids": ["mo-chit-c05", "mo-chit-c08", "mo-chit-c10"], "notes": "Weekend-market gravity + park calm + one of the city's biggest transit interchanges; street-level, unpaid-area transfer."},
+    {"id": "Q03", "status": "answered", "claim_ids": ["mo-chit-c03", "mo-chit-c05", "mo-chit-c07"], "notes": "Values trace to the park complex (green), the market (food/shopping/rhythm) and mid-market district rents."},
+    {"id": "Q04", "status": "answered", "claim_ids": ["mo-chit-c06", "mo-chit-c11"], "notes": "Counter-evidence: vendor eviction conflict, review complaints, no support for safety/crowd scores found."},
+    {"id": "Q05", "status": "answered", "claim_ids": ["mo-chit-c10"], "notes": "Weekend surge vs weekday park/residential quiet; Friday-night extension snippet-level."},
+    {"id": "Q06", "status": "answered", "claim_ids": ["mo-chit-c02", "mo-chit-c04", "mo-chit-c08"], "notes": "Straight-line geometry only (70 m to MRT; parks 0.5-0.6 km); no radius-to-time conversions performed."},
+    {"id": "Q07", "status": "answered", "claim_ids": ["mo-chit-c08", "mo-chit-c09"], "notes": "Daily life anchored on the interchange plus bus stops at exits 3-4; regional bus gateway sits ~2 km away, outside the unit."},
+    {"id": "Q08", "status": "answered", "claim_ids": ["mo-chit-c07"], "notes": "HipFlat Oct-2026 district data consistent with the 16,000/33,000 Chatuchak blend; district-average caveat stated."},
+    {"id": "Q09", "status": "answered", "claim_ids": ["mo-chit-c03", "mo-chit-c04"], "notes": "Named in-polygon candidates: Chatuchak Park (MRT beneath it), Queen Sirikit Park centroid ~510 m; Rot Fai center ~1.1 km = partial. App's 62.8 ha is below the 112.8 ha component sum — polygon clips the complex."},
+    {"id": "Q10", "status": "answered", "claim_ids": ["mo-chit-c05", "mo-chit-c07", "mo-chit-c11"], "notes": "Best for market-goers, park users and budget-conscious commuters; worst for quiet weekends and for anyone wanting a single-ticket interchange."},
+    {"id": "Q11", "status": "answered", "claim_ids": ["mo-chit-c06", "mo-chit-c09"], "notes": "2025 clock-tower eviction/redevelopment; possible regional-bus consolidation at Krung Thep Aphiwat under consideration."},
+    {"id": "Q12", "status": "answered", "claim_ids": ["mo-chit-c02", "mo-chit-c03", "mo-chit-c11"], "notes": "App anchor (13.7999) vs OSM station node (13.8026) mismatch; 62.8 ha vs 112.8 ha park sum; safety/crowd scores unverified; vendor-side sourcing thin."}
+  ],
+  "editorial": {
+    "preview": {"text_en": "Two stations in one green pocket: BTS Mo Chit above Phahonyothin, MRT Chatuchak Park beneath the lake-side park, and the weekend market's 15,000 stalls next door — with district rents averaging mid-market and a 2025 redevelopment fight still reshaping the market's clock-tower end.", "claim_ids": ["mo-chit-c01", "mo-chit-c03", "mo-chit-c05", "mo-chit-c06", "mo-chit-c07"]},
+    "guide_lead": {"text_en": "Mo Chit is the merged BTS N8 / MRT BL13 interchange on Chatuchak district's southern edge — one node, two systems, a street-level transfer, and the largest weekend market in the world (200,000+ weekend visitors, 35 acres) between them. The green 10 rests on the Chatuchak / Queen Sirikit / Rot Fai park run at the unit's edge (30.4 + ~22 + 60 ha in total, though the app maps only 62.8 ha inside the polygon), and rents track the district's mid-market blend of 16,000-33,000 baht. The frictions are real: an unpaid-area transfer, weekend crowds, a market half-way through a contested renovation, and no unit-specific safety evidence either way.", "claim_ids": ["mo-chit-c01", "mo-chit-c02", "mo-chit-c03", "mo-chit-c05", "mo-chit-c06", "mo-chit-c07"]},
+    "strengths": [
+      {"text_en": "A single merged interchange (BTS N8 + MRT BL13, ~70 m apart) with all four MRT exits wired to the BTS side, a park-and-ride lot, and bus bays off exits 3 and 4.", "claim_ids": ["mo-chit-c01", "mo-chit-c08"]},
+      {"text_en": "The Chatuchak / Queen Sirikit park block sits ~0.5-0.6 km from the station node, with 30.4 ha and ~22 ha components verified, plus the market's 200,000-strong weekend economy at the door.", "claim_ids": ["mo-chit-c03", "mo-chit-c04", "mo-chit-c05"]}
+    ],
+    "tradeoffs": [
+      {"text_en": "The interchange is outside the paid area and the market's weekend surge (200,000+ visitors) transforms the unit's streets twice a week; the 2025 clock-tower eviction of 529 stallholders signals more churn to come.", "claim_ids": ["mo-chit-c02", "mo-chit-c05", "mo-chit-c06"]},
+      {"text_en": "Rent evidence is district-level only (studio USD 446 / 1BR USD 565 / 2BR USD 984, October 2026) and is dragged by Lat Phrao-corridor condominiums; no station-adjacent listing was captured to confirm the 16,000/33,000 blend at the doorstep.", "claim_ids": ["mo-chit-c07"]}
+    ],
+    "day_night": [
+      {"text_en": "Days split between weekday park-and-commute calm and weekend market gridlock; after dark the unit is quiet by most accounts, with the market's Friday-night wholesale operation the main late activity (schedule snippet-corroborated only).", "claim_ids": ["mo-chit-c10"]}
+    ],
+    "within_area_variation": [
+      {"text_en": "The park-facing western edge (MRT exits 1-2, lake, botanical garden) and the market-facing northern blocks are different worlds from the Phahonyothin commuter strip at the BTS viaduct; Rot Fai Park's bulk lies beyond the catchment's northern reach.", "claim_ids": ["mo-chit-c03", "mo-chit-c04"]}
+    ],
+    "conditional_fit": [
+      {"text_en": "Fit for weekend-market regulars, park exercisers and two-line commuters who accept a street-level, separate-ticket transfer.", "claim_ids": ["mo-chit-c02", "mo-chit-c03", "mo-chit-c05"]},
+      {"text_en": "Poor fit for anyone needing quiet Saturdays, a single-ticket transfer, or guaranteed rent parity with station-adjacent buildings — the rent evidence is district-wide.", "claim_ids": ["mo-chit-c05", "mo-chit-c07"]}
+    ],
+    "uncertainties": [
+      "App's 62.8 ha park figure vs the 112.8 ha sum of the three verified park components — polygon clipping decides which parts are in-unit (mo-chit-c03).",
+      "App anchor 13.7999 sits ~300 m from the OSM BTS node 13.8026; coordinates should be reconciled by the coordinator (mo-chit-c01).",
+      "Safety 7 and crowd 5 have no unit-specific source found in either direction (mo-chit-c11).",
+      "Wednesday/Thursday plant days and Friday-night wholesale hours rest on search summaries, not a read body (mo-chit-c10)."
+    ]
+  },
+  "open_issues": [
+    "Park-area mismatch: app says 62.8 ha in-unit; verified components total ~112.8 ha (30.4 + 22 + 60). Needs the app polygon to name exactly which park parts are inside (mo-chit-c03/c04).",
+    "Chatuchak Park MRT's station code: body reads (Thai Wikipedia, OSM, BEM line map) give BL13; a search-engine summary claimed BL12. App station_ids must be checked against BL13 (mo-chit-c02).",
+    "Vendor-side account of the 2025 market eviction exists mainly as a social post; a readable news piece with vendor quotes would strengthen mo-chit-c06.",
+    "No accessible resident-report sources (Reddit/TripAdvisor 403 per brief) — lived-experience claims lean on editorial guides and review aggregates."
+  ]
+}

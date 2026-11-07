@@ -1,0 +1,1030 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.sala-daeng",
+  "kind": "station_area",
+  "name_en": "Sala Daeng / Si Lom",
+  "name_th": "ศาลาแดง / สีลม",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around sala-daeng/si-lom [bts_silom/mrt_blue]; districts: pathum-wan, bang-rak, sathon. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.54,
+  "cohort_rank": 18,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 18/133, score 7.54."
+ },
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Query: stations, parks, worship around 13.7285,100.5370; BTS nodes; Lumphini bbox; supermarkets",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T21:22:36Z",
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "OSM tag quality varies; subway tag on BTS Sala Daeng node likely mislabeled (BTS is elevated light rail)"
+   ]
+  },
+  {
+   "id": "src_0f696490d0d4",
+   "canonical_url": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Sala_Daeng_BTS_station",
+   "title": "Sala Daeng station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Single-source ridership figure (2021: 3,043,054)"
+   ]
+  },
+  {
+   "id": "src_ef3b9570e107",
+   "canonical_url": "https://en.wikipedia.org/wiki/Si_Lom_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Si_Lom_MRT_station",
+   "title": "Si Lom station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Exit-2 text calls Dusit Thani 'under redevelopment' - wording predates the 2024 reopening"
+   ]
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_272eb575bcf2",
+   "canonical_url": "https://en.wikipedia.org/wiki/Patpong",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Patpong",
+   "title": "Patpong",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Article notes Patpong Museum opened Oct 2019, closed May 2023"
+   ]
+  },
+  {
+   "id": "src_4f56f5ecff20",
+   "canonical_url": "https://en.wikipedia.org/wiki/One_Bangkok",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=One_Bangkok",
+   "title": "One Bangkok",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_107f848eaa5e",
+   "canonical_url": "https://en.wikipedia.org/wiki/Dusit_Thani_Bangkok",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Dusit_Thani_Bangkok",
+   "title": "Dusit Thani Bangkok",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_4aa0f704a84c",
+   "canonical_url": "https://www.thefinestthai.com/2026/06/03/soi-lalai-sap-silom-lunch-market-street-food-guide/",
+   "retrieved_url": "https://www.thefinestthai.com/2026/06/03/soi-lalai-sap-silom-lunch-market-street-food-guide/",
+   "title": "Soi Lalai Sap Market Guide: Silom Lunch Food, Office Crowds and Timing",
+   "publisher": "The Finest Thai",
+   "publisher_family": "lifestyle_blog",
+   "author": "Napaporn Aroonrat",
+   "published_at": "2026-06-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "editorial_guide",
+   "commercial_context": "general travel content",
+   "limitations": [
+    "Evidence obtained via WebFetch summary + exa highlights, raw body not retained; corroborating only",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_0126494bf90b",
+   "canonical_url": "https://www.hotels.com/go/thailand/lalai-sap-market-bangkok",
+   "retrieved_url": "https://www.hotels.com/go/thailand/lalai-sap-market-bangkok",
+   "title": "Lalai Sap Market in Silom",
+   "publisher": "Hotels.com GO",
+   "publisher_family": "ota_content",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "editorial_guide",
+   "commercial_context": "OTA content marketing",
+   "limitations": [
+    "Exa highlights only; snippet-level corroboration"
+   ]
+  },
+  {
+   "id": "src_1751ae017b77",
+   "canonical_url": "https://www.nomadotravel.app/en/attractions/patpong-night-market",
+   "retrieved_url": "https://www.nomadotravel.app/en/attractions/patpong-night-market",
+   "title": "Patpong Night Market Bangkok, Silom - What to Expect",
+   "publisher": "Nomado Travel",
+   "publisher_family": "lifestyle_blog",
+   "author": null,
+   "published_at": "2026-03-20",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "editorial_guide",
+   "commercial_context": "travel content",
+   "limitations": [
+    "Exa highlights only; web_reader rejected the URL format twice; flagged corroboration for counter-view"
+   ]
+  },
+  {
+   "id": "src_75a9d77a5019",
+   "canonical_url": "https://bangkokup.com/patpong-bangkok",
+   "retrieved_url": "https://bangkokup.com/patpong-bangkok",
+   "title": "Patpong Bangkok",
+   "publisher": "Bangkok Up",
+   "publisher_family": "lifestyle_blog",
+   "author": null,
+   "published_at": "2026-06-05",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "editorial_guide",
+   "commercial_context": "travel/nightlife content",
+   "limitations": [
+    "Exa highlights only; flagged corroboration"
+   ]
+  },
+  {
+   "id": "src_060ac28fc08d",
+   "canonical_url": "https://www.property-hua-hin.com/1-bedroom-condo-for-rent/thailand/bangkok/bang-rak/si-lom/near-sala-daeng-bts",
+   "retrieved_url": "https://www.property-hua-hin.com/1-bedroom-condo-for-rent/thailand/bangkok/bang-rak/si-lom/near-sala-daeng-bts",
+   "title": "1 Bedroom Condos for Rent near Sala Daeng BTS (Sala Daeng BTS Rental Market Prices)",
+   "publisher": "Property Hua Hin (aggregator)",
+   "publisher_family": "real_estate_portal",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "property listing portal",
+   "limitations": [
+    "Exa highlights only; aggregator medians skewed by luxury listings; never sole evidence",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_73aa2ead31b2",
+   "canonical_url": "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide",
+   "retrieved_url": "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide",
+   "title": "Silom Food Street Rent - Bangkok Living Guide",
+   "publisher": "Superagent",
+   "publisher_family": "real_estate_content",
+   "author": null,
+   "published_at": "2026-05-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "rental lead-gen content, likely AI-assisted",
+   "limitations": [
+    "Exa highlights only; cites CBRE/DDproperty second-hand; flagged corroboration"
+   ]
+  },
+  {
+   "id": "src_59b8bca671b1",
+   "canonical_url": "https://www.superagent.co/en/blog/saladaeng-one-silom-luxury-condo-reviewed-for-renters",
+   "retrieved_url": "https://www.superagent.co/en/blog/saladaeng-one-silom-luxury-condo-reviewed-for-renters",
+   "title": "Saladaeng One: Silom Luxury Condo Reviewed for Renters",
+   "publisher": "Superagent",
+   "publisher_family": "real_estate_content",
+   "author": null,
+   "published_at": "2026-04-28",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "rental lead-gen content",
+   "limitations": [
+    "Exa highlights only; flagged corroboration"
+   ]
+  },
+  {
+   "id": "src_6fe7003a1729",
+   "canonical_url": "https://www.reddit.com/r/ThailandTourism/comments/1n9bw1d/horrifying_experience_at_patpong_night_market",
+   "retrieved_url": "https://www.reddit.com/r/ThailandTourism/comments/1n9bw1d/horrifying_experience_at_patpong_night_market",
+   "title": "Horrifying Experience at Patpong Night Market (r/ThailandTourism)",
+   "publisher": "Reddit",
+   "publisher_family": "forum_ugc",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Reddit returns 403 to direct fetch; only search-engine summary seen; weak corroboration, never sole evidence"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "sala-daeng-c01",
+   "text_en": "The unit is the Sala Daeng interchange: BTS Sala Daeng (S2, Silom Line, opened 5 December 1999, Bang Rak district, coordinates 13.72851 N 100.53413 E) plus MRT Si Lom (BL26, Blue Line, opened 3 July 2004), whose station sits under Rama IV Road at Sala Daeng Intersection where Si Lom Road begins. The two are connected by a covered elevated skywalk that also reaches King Chulalongkorn Memorial Hospital; OSM node-to-node distance is ~330 m, consistent with a <=450 m merge.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sala Daeng / Si Lom (Bang Rak)",
+    "relation_to_entity": "entire_unit",
+    "notes": "MRT station straddles Bang Rak/Pathum Wan per Wikipedia infobox"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "stations opened 1999 and 2004",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f696490d0d4",
+     "locator": "Lead + infobox (Location, Coordinates, Opened, Connections)",
+     "paraphrase": "BTS station on Silom Road southwest of Sala Daeng Intersection; S2; opened 5 Dec 1999; skywalk to Si Lom MRT and Chulalongkorn Hospital"
+    },
+    {
+     "source_id": "src_ef3b9570e107",
+     "locator": "Lead + infobox",
+     "paraphrase": "Si Lom station under Rama IV at Sala Daeng Intersection; BL26; opened 3 Jul 2004; connected to Sala Daeng BTS by covered elevated walkway"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM nodes 451697335 / 12803589960; relation 2110229 (stop_area S2)",
+     "paraphrase": "Node coordinates 13.72851,100.53413 and 13.72920,100.53707; computed separation ~330 m"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "OSM tags the BTS node 'station=subway' - likely a tagging artifact"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c02",
+   "text_en": "The app anchor latitude (~13.7285) matches the OSM/Wikipedia BTS Sala Daeng coordinate (13.72851) almost exactly, so unlike other batch-4 units there is no station-anchor mismatch here; the anchor longitude was not provided in the brief.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "uncertainty"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Sala Daeng",
+    "relation_to_entity": "entire_unit",
+    "notes": "Anchor longitude unknown; distances in this file computed from OSM station nodes"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "coordinator to confirm anchor longitude",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM node 451697335",
+     "paraphrase": "13.7285677, 100.5343416"
+    },
+    {
+     "source_id": "src_0f696490d0d4",
+     "locator": "Infobox coordinates",
+     "paraphrase": "13.7285083 N, 100.5341333 E"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c03",
+   "text_en": "Sala Daeng Intersection is the junction of Ratchadamri, Rama IV and Si Lom roads, on land that was formerly the 'Thung Sala Daeng' field donated by King Rama VI; it is served by both MRT Si Lom and BTS Sala Daeng, and surrounds include Dusit Central Park (the old Dusit Thani site), King Chulalongkorn Memorial Hospital and Silom Edge.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sala Daeng Intersection",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "1925",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Park donated 1925"
+   },
+   "evidence": [
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "Lead + History",
+     "paraphrase": "Sala Daeng intersection = Ratchadamri/Rama IV/Si Lom; formerly Thung Sala Daeng; Dusit Central Park and hospital listed among surroundings"
+    },
+    {
+     "source_id": "src_ef3b9570e107",
+     "locator": "Lead",
+     "paraphrase": "Si Lom station located beneath Rama IV at Sala Daeng Intersection where Si Lom Road begins"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "sala-daeng-c04",
+   "text_en": "Patpong - two parallel private sois between Silom and Surawong Roads with a tourist night market since the early 1990s and an internationally known red-light strip (plus Soi Thaniya and Silom Soi 4/Jaruwan) - sits at the doorstep of BTS Sala Daeng: Wikipedia's Patpong coordinates compute to ~90 m from the BTS station node, and the article names both stations as walking-distance access.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Patpong 1-2 / Soi Thaniya",
+    "relation_to_entity": "inside",
+    "notes": "Membership assumed from ~90 m distance; Voronoi polygon not checked"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "night market since early 1990s",
+    "recheck_by": null,
+    "notes": "Patpong Museum operated Oct 2019 - May 2023"
+   },
+   "evidence": [
+    {
+     "source_id": "src_272eb575bcf2",
+     "locator": "Lead + Location and layout + History and ownership",
+     "paraphrase": "Two parallel side streets between Silom and Surawong; night market since early 1990s; red-light district; walking distance from Sala Daeng BTS and Si Lom MRT"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Computed haversine from Wikipedia Patpong coords (13.72833,100.53333)",
+     "paraphrase": "~89 m from BTS Sala Daeng node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c05",
+   "text_en": "Counter-view to nightlife 10: multiple 2025-2026 guides describe Patpong's signature tourist-scam pattern - touts ushering visitors to unposted-price upstairs 'ping-pong shows' that end in exorbitant, intimidatingly enforced bills - plus inflated market prices, counterfeit goods and pickpocket warnings; the area is described as adult-oriented and uncomfortable for families.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Patpong",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 guide corpus",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_1751ae017b77",
+     "locator": "What to skip / scam warnings",
+     "paraphrase": "Ping-pong-show sign-board scam with undisclosed charges; commission 'special sale' schemes; crowds and noise exhausting"
+    },
+    {
+     "source_id": "src_75a9d77a5019",
+     "locator": "The 'ping-pong show' trap section",
+     "paraphrase": "Upstairs show scam 'frequently hundreds of dollars' with intimidation; advice to use Tourist Police 1155"
+    },
+    {
+     "source_id": "src_272eb575bcf2",
+     "locator": "Lead",
+     "paraphrase": "Internationally known red-light district at the heart of Bangkok's sex industry"
+    },
+    {
+     "source_id": "src_6fe7003a1729",
+     "locator": "Search summary of thread",
+     "paraphrase": "Overcharged bills at shows and bullying to pay a reduced exorbitant amount (snippet only)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Guide sources read as exa highlights only; Reddit/TripAdvisor 403 - not fetched; complaint themes are perception, not statistics"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c06",
+   "text_en": "The unit's daytime food engine is the Soi Lalai Sap market (Silom Soi 5 alleys near Bangkok Bank HQ, running since about 1983): a weekday-only office-worker market open roughly 06:00-15:30/16:00, with a noon crush described as thousands of workers from Silom/Sathorn offices; guides name BTS Sala Daeng and MRT Si Lom as its rail anchors. One guide (travelfish) GPS-places the alley network further west toward the Silom/Narathiwas end, so the market's exact extent is fuzzier than the 'Silom Soi 5' label suggests.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "rhythm"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Soi Lalai Sap (Silom Soi 5)",
+    "relation_to_entity": "inside",
+    "notes": "Exact alley extent uncertain between sources"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "market established ~1983; guides 2023-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4aa0f704a84c",
+     "locator": "What to expect / How to plan",
+     "paraphrase": "Weekday daytime market shaped by Silom office traffic; BTS Sala Daeng and MRT Si Lom easiest rail anchors; peak late morning to lunch"
+    },
+    {
+     "source_id": "src_0126494bf90b",
+     "locator": "Discover a colorful variety at Lalai Sap",
+     "paraphrase": "Thousands of office workers from banks and insurance buildings at weekday lunch; short trading window"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "travelfish GPS 13.72546,100.53016 (via exa result)",
+     "paraphrase": "One source places the alley network ~700 m WSW of the BTS node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "All Lalai Sap sources read as highlights/WebFetch only; travelfish coordinate conflicts with 'Soi 5' placement"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "sala-daeng-c07",
+   "text_en": "Green 10 rests on Lumphini Park: 360 rai / 57.6 ha bounded by Ratchadamri (west), Rama IV (south) and Witthayu (east). The park's southwest corner at Ratchadamri x Rama IV computes to ~281 m from the MRT Si Lom node and ~428 m from the BTS node, and the park centroid ~512 m from the MRT node - all inside an 800 m catchment. The app's 37.2 ha equals ~65% of the park, consistent with a nearest-station Voronoi split that leaves the park's western/southern portion in this cell; but the split line is app-decided, so membership is partial.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Lumphini Park (west portion)",
+    "relation_to_entity": "partial",
+    "notes": "37.2/57.6 ha implies the boundary runs through the park; needs app-polygon verification"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "coordinator polygon audit",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "Lead",
+     "paraphrase": "360 rai (57.6 ha); Ratchadamri/Rama IV/Witthayu boundaries"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM way 23483299 bbox + computed haversine",
+     "paraphrase": "SW corner (13.72673,100.53764) ~281 m from MRT node, ~428 m from BTS; centroid ~512 m from MRT node"
+    },
+    {
+     "source_id": "src_ef3b9570e107",
+     "locator": "Station layout (G floor)",
+     "paraphrase": "Exit 1 on the northeast corner of the intersection near the entrance to Lumphini Park"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Polygon membership undetermined; straight-line distances, not route distances"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c08",
+   "text_en": "A 2024-2026 green change sits inside the unit: Dusit Thani Bangkok reopened 27 September 2024 as part of the Dusit Central Park complex on the southeast corner of Sala Daeng Intersection (the old hotel site), and OSM maps a 'Dusit Central Park' way ~128 m from the MRT Si Lom node / ~399 m from the BTS node.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "Dusit Central Park",
+    "relation_to_entity": "inside",
+    "notes": "Public accessibility of the park portion not verified"
+   },
+   "temporal_scope": {
+    "event_date": "2024-09-27",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_107f848eaa5e",
+     "locator": "Lead",
+     "paraphrase": "Hotel re-opened 27 Sep 2024 as part of Dusit Central Park; site at southeast corner of Sala Daeng Intersection"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM way 756634304 + computed haversine",
+     "paraphrase": "Dusit Central Park way center ~128 m from MRT Si Lom node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Whether the OSM 'park' area is publicly accessible green not verified"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c09",
+   "text_en": "Daily-life infrastructure is dense and close: the skywalk links both stations to King Chulalongkorn Memorial Hospital (computed ~410 m from the MRT node, ~516 m from the BTS node), and OSM maps a Tops supermarket at Silom Complex (~280 m from the BTS node), Foodland Silom (~130 m) and roughly twenty 7-Eleven/FamilyMart nodes within 700 m.",
+   "kind": "estimate",
+   "topics": [
+    "daily_life",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sala Daeng / Silom",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f696490d0d4",
+     "locator": "Station layout (G street level)",
+     "paraphrase": "Bus stop Sala Daeng Intersection, King Chulalongkorn Memorial Hospital listed at station; skywalk connects"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM nodes 4731500422 (Tops), 11083846512 (Foodland), convenience nodes",
+     "paraphrase": "Computed distances 280 m / 130 m / dense convenience cluster"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Supermarket inside Silom Complex vs street-front not distinguished"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c10",
+   "text_en": "One Bangkok (16.7 ha, five office towers plus 8 ha of green, opening from 18 March 2024 at the Witthayu intersection, tunnel-linked to MRT Lumphini) is the belt's flagship 2024 opening but lies ~1.1 km east of the MRT Si Lom node across the park - outside this unit; it belongs to the MRT Lumphini cell.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "One Bangkok / Witthayu intersection",
+    "relation_to_entity": "outside",
+    "notes": "Relevant context for the wider Silom-Lumphini belt; not a unit amenity"
+   },
+   "temporal_scope": {
+    "event_date": "2024-03-18",
+    "observed_period": "phased opening to 2030-31",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4f56f5ecff20",
+     "locator": "Lead",
+     "paraphrase": "Opened 18 Mar 2024 (first office building); 16.7 ha at Witthayu intersection; linked to Lumphini station via tunnel"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Computed haversine from WP coords (13.7272,100.5473)",
+     "paraphrase": "~1.1 km east of MRT Si Lom node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c11",
+   "text_en": "Affordability vs stated figures (38,000/60,000, station_override 2026-10-07): market evidence spans a wide band. An aggregator's Sala Daeng BTS stats show median monthly rent ~44,900 THB (1-BR avg 39,100, 2-BR 66,300, 489 listings) but its listing mix is luxury-heavy (Dusit Parkside at 150,000-190,000), while guide-based figures put typical 1-BR asking rents within ~500 m of the BTS at ~22,000-28,000 THB (early 2025) and the CBD band at 28,000-50,000. The app's 38,000 sits between the typical-guide band and the luxury-skewed median; 60,000 matches upper 2-BR/luxury stock.",
+   "kind": "estimate",
+   "topics": [
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sala Daeng / Si Lom",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 listings and guides",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_060ac28fc08d",
+     "locator": "Sala Daeng BTS Rental Market Prices table",
+     "paraphrase": "Median 44,900; 1-BR avg 39,100; 2-BR avg 66,300; 489 properties (snippet-level)"
+    },
+    {
+     "source_id": "src_73aa2ead31b2",
+     "locator": "What you will actually pay",
+     "paraphrase": "1-BR near Silom food street 15,000-35,000; median asking 22,000-28,000 within 500 m of BTS (early 2025) (snippet-level)"
+    },
+    {
+     "source_id": "src_59b8bca671b1",
+     "locator": "Unit sizes and rents",
+     "paraphrase": "Saladaeng One 1-BR 55,000-70,000 (mid-2025) (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No raw-body rent source; all three read as exa highlights; portals are commercial and mix asking prices with promoted stock"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "sala-daeng-c12",
+   "text_en": "Rhythm and crowd: the unit runs on Silom's office clock - a noon lunch crush in the Lalai Sap alleys, then Patpong's market ramping from ~18:00 to a ~20:00 peak with stalls packing down after ~22:00 while bars continue later; weekends are markedly quieter (Lalai Sap closed Sat-Sun). This drain pattern is consistent with the app's crowd 2.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Silom / Sala Daeng",
+    "relation_to_entity": "entire_unit",
+    "notes": "Inference from multi-source rhythm descriptions"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2023-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4aa0f704a84c",
+     "locator": "Practical information",
+     "paraphrase": "Weekday late morning through lunch strongest; go on a weekday, not a weekend"
+    },
+    {
+     "source_id": "src_1751ae017b77",
+     "locator": "Best time / rhythm sections",
+     "paraphrase": "18:00 quietest; 20:00 full density; after 22:00 souvenir stalls pack down (snippet-level)"
+    },
+    {
+     "source_id": "src_0126494bf90b",
+     "locator": "Opening hours",
+     "paraphrase": "Monday-Friday only, closed weekends (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Patpong timing from highlight-level sources; no pedestrian-count data found"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c01",
+    "sala-daeng-c02",
+    "sala-daeng-c03"
+   ],
+   "notes": "Merged BTS Sala Daeng (S2, 1999) + MRT Si Lom (BL26, 2004), ~330 m apart node-to-node, skywalk-connected; anchor latitude matches the BTS station coordinate exactly. Unit sits in Bang Rak (MRT straddles Bang Rak/Pathum Wan)."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c06",
+    "sala-daeng-c12",
+    "sala-daeng-c09"
+   ],
+   "notes": "Office-district everyday: noon lunch alleys, skywalk commutes, hospital and mall services at the door; after dark the strip turns to Patpong's market-and-bars economy."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c01",
+    "sala-daeng-c04",
+    "sala-daeng-c06",
+    "sala-daeng-c07"
+   ],
+   "notes": "Transport/food/nightlife/green highs all have named mechanisms: two merged metro lines, 593-food-count density anchored by office demand and Lalai Sap, Patpong as the dataset's real nightlife heart, and a majority-ish share of Lumphini's 57.6 ha inside the catchment."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c05"
+   ],
+   "notes": "Counter-view documented: Patpong's tout/scam economy (unposted-price shows, inflated bills, counterfeit goods, pickpocketing) - the same venues behind nightlife 10."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c06",
+    "sala-daeng-c12"
+   ],
+   "notes": "Weekday: 06:00-15:30 market, noon peak; evening: Patpong from ~18:00, peak ~20:00, stalls down after ~22:00; weekends quiet."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c01",
+    "sala-daeng-c09"
+   ],
+   "notes": "Walkability assets are structural: skywalk BTS-MRT-hospital, compact soi grid; guides advise walking over taxis at lunch. No sidewalk-width data found; no radius-to-time conversions used."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c09"
+   ],
+   "notes": "Tops (Silom Complex, ~280 m), Foodland (~130 m), ~20 convenience stores within 700 m, Chulalongkorn Memorial Hospital on the skywalk (~410-516 m)."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c11"
+   ],
+   "notes": "38,000/60,000 sits between the typical-guide 1-BR band (~22,000-35,000) and the luxury-skewed aggregator median (44,900). Plausible for station-adjacent stock; flagged as high versus guide medians."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c07",
+    "sala-daeng-c08"
+   ],
+   "notes": "37.2 ha most plausibly = western/southern Lumphini (281-512 m from MRT Si Lom node; ~65% of 57.6 ha), plus Dusit Central Park (2024) at ~128 m from the MRT node. Voronoi split through the park is app-decided - flagged partial."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c06",
+    "sala-daeng-c12",
+    "sala-daeng-c05"
+   ],
+   "notes": "Strong fit: car-free CBD workers, food-driven households, nightlife-seekers tolerant of the strip's seaminess. Poor fit: quiet-seekers, families avoiding adult-entertainment frontage, weekend-liveliness seekers."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c08",
+    "sala-daeng-c10"
+   ],
+   "notes": "Dusit Central Park opened 27 Sep 2024 in-unit; One Bangkok phased opening from Mar 2024 just outside the cell (Lumphini MRT side); Patpong Museum closed May 2023 (pre-window)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "sala-daeng-c07",
+    "sala-daeng-c11",
+    "sala-daeng-c05"
+   ],
+   "notes": "Outside-the-score: green 10 depends on an unverified park split; rent figures rest on snippet-level portals; scam economy invisible to amenity counts; anchor longitude unknown."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "The real interchange of the Silom CBD: BTS Sala Daeng and MRT Si Lom 330 m apart under one skywalk, Patpong at the station steps, the office-lunch alleys of Lalai Sap - and most of Lumphini Park's western edge inside the catchment.",
+   "claim_ids": [
+    "sala-daeng-c01",
+    "sala-daeng-c04",
+    "sala-daeng-c06",
+    "sala-daeng-c07"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Sala Daeng is the app's only merged BTS+MRT unit south of Siam, and the merge is physically real: a covered skywalk runs from BTS Sala Daeng (S2, 1999) over Rama IV to MRT Si Lom (BL26, 2004) and on to King Chulalongkorn Memorial Hospital. Food 10 and nightlife 10 have visible engines - the weekday Lalai Sap lunch alleys on Silom Soi 5 and Patpong's market-and-go-go strip 90-200 m from the platforms - and green 10 leans on Lumphini Park's west corner ~300-500 m east. The counterweights are the strip's documented tout-and-overcharge economy and a rent band (38,000/60,000) that sits above typical 1-BR guide medians.",
+   "claim_ids": [
+    "sala-daeng-c01",
+    "sala-daeng-c06",
+    "sala-daeng-c04",
+    "sala-daeng-c07",
+    "sala-daeng-c05",
+    "sala-daeng-c11"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "A true merged interchange: two metro lines 330 m apart under one skywalk, extended to a major hospital - the strongest everyday-transport geometry in this batch.",
+    "claim_ids": [
+     "sala-daeng-c01",
+     "sala-daeng-c09"
+    ]
+   },
+   {
+    "text_en": "Food and nightlife are not abstractions here: the Lalai Sap office-lunch market and Patpong's night market sit within a few hundred metres of the platforms, on opposite halves of the day.",
+    "claim_ids": [
+     "sala-daeng-c06",
+     "sala-daeng-c04"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Nightlife 10 shares its address with Bangkok's most documented tourist-scam strip: unposted-price upstairs shows, inflated bills and touts are a real resident-adjacent externality, not just a tourist problem.",
+    "claim_ids": [
+     "sala-daeng-c05"
+    ]
+   },
+   {
+    "text_en": "The stated rent (38,000/60,000) exceeds typical 1-BR guide medians (~22,000-28,000 near the BTS in early 2025); the figure is only defensible as station-adjacent or larger-unit stock.",
+    "claim_ids": [
+     "sala-daeng-c11"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "The unit flips at roughly 18:00: office-lunch alleys close by mid-afternoon and Patpong's stalls and bars take the street until late; weekends quiet down across both halves.",
+    "claim_ids": [
+     "sala-daeng-c12",
+     "sala-daeng-c06"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The Silom frontage (Patpong, Thaniya, Lalai Sap) is loud and commercial, while the Rama IV/park side (Dusit Central Park, MRT Si Lom exits, hospital skywalk) reads calmer and greener.",
+    "claim_ids": [
+     "sala-daeng-c04",
+     "sala-daeng-c08",
+     "sala-daeng-c09"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit: office workers and frequent travellers who want car-free CBD living, a hospital skywalk, and street food at both ends of the day.",
+    "claim_ids": [
+     "sala-daeng-c01",
+     "sala-daeng-c09",
+     "sala-daeng-c06"
+    ]
+   },
+   {
+    "text_en": "Poor fit: households wanting quiet evenings or family-oriented streets - the red-light frontage and its tout economy are unavoidable at the station steps.",
+    "claim_ids": [
+     "sala-daeng-c05",
+     "sala-daeng-c12"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "rating green (10): 37.2 ha matches ~65% of Lumphini's 57.6 ha, and the park's SW corner is only ~281 m from MRT Si Lom, but the park-split is an app-polygon fact we could not verify; if the cell boundary runs west of the park, the rating's mechanism changes (sala-daeng-c07).",
+   "rating rent (1-> figures): 38,000/60,000 is above typical 1-BR guide medians and below the luxury-skewed aggregator median; both comparison sets are snippet-level commercial sources (sala-daeng-c11).",
+   "rating safety (7) / crowd (2): no unit-level statistics found; crowd-2 inference rests on the office-district drain pattern, not counts.",
+   "Anchor longitude not provided; all distances computed from OSM/Wikipedia station nodes.",
+   "Lalai Sap's exact extent differs between sources (Silom Soi 5 label vs travelfish GPS ~700 m WSW)."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "incomplete",
+   "recency": "pass",
+   "claim_support": "fail",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "2 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Coordinator to audit the app polygon for the Lumphini Park split: 37.2 ha in-unit implies the boundary runs through the park between the Sala Daeng cell and ratchadamri/lumphini cells (sala-daeng-c07).",
+   "open issue: Whether Dusit Central Park's green is publicly accessible (and how much is park vs hotel podium) is unverified (sala-daeng-c08).",
+   "open issue: Rent claims rest on exa-highlight-only portal sources; Dot Property's rendered stats were unreachable via curl (client-side rendering) - a body-read rent source would firm up Q08.",
+   "open issue: TripAdvisor/Reddit complaint threads returned 403 and were not read; scam-claim evidence is guide-level plus flagged snippets (sala-daeng-c05)."
+  ]
+ }
+}

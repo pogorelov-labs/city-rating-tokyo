@@ -78,3 +78,53 @@ See [`backlog.md`](../backlog.md) §"Evidence from editorial research batches"
 — CRTKY-153 (red-light geography), CRTKY-147 (dated BMA walkability items),
 CRTKY-141 (asking-vs-signed universality), CRTKY-139 (flood-catchment
 protocol), CRTKY-152 (coverage-breadth instrument).
+
+
+---
+
+## 2026-11-08 update — pipeline items from batches 3–4 (full tier A + light tier B)
+
+The tiered program completed all 183 entities (`editorial/2026-11-08-tier-plan.md`:
+22 full, 24 light, 137 data-only placeholders). New data-layer items, in priority order:
+
+1. **Ghost station (HIGH):** `st.sena-ruam` is a planned-but-never-built BTS infill
+   (N6, between Ari and Saphan Khwai) modeled in `rail.json` as an operating
+   `bts_sukhumvit` station — and it ranks #9/133 by score. Sources: Thai Wikipedia
+   disambiguation, BK Magazine 2018 "grayed-out station", Prachachat 2026-11-05
+   council hearing (BTS "will coordinate" before the 2029 concession handover).
+   **Recommended: audit all 139 stations for operating status.**
+2. **App anchor vs OSM node offsets:** batch-4 measured 270–770 m offsets on eight
+   units (mo-chit +300, saphan-khwai +270, kamphaeng-phet +770, victory-monument +550,
+   phetchaburi 120–310, phaya-thai ~340, saint-louis ≥720 — the real Saint Louis infill
+   station is at 13.72082/100.52669), while sala-daeng and all four batch-4 river/east
+   units matched to five decimals. Likely a unit-centroid convention — needs a documented
+   rule; also Wikipedia/OSM carry displaced coords for BTS Chit Lom and Victory Monument.
+3. **Green-basis confirmations (batch 3–4 decompositions):** pathum-wan 102.7 ha =
+   Lumphini 57.6 + Centenary 4.5 + One Bangkok ~8 + **Royal Bangkok Sports Club 36.3 ha
+   members-only** + royal Sa Pathum 7.9 → ~60–65% publicly usable; phra-nakhon ~19–20 ha
+   public vs 38.5 app (balance = temple/palace grounds); chatuchak 149.2 OSM vs 167.1;
+   ratchathewi 17.8 = 8.81 named public + institutional gardens; din-daeng OSM ~3 ha vs
+   app 15.5; **dusit 118.7 ha largely NON-public** (zoo fenced since 2018, Sanam Suea Pa
+   royal). Feeds the green-basis audit candidate from the 2026-11-07 note.
+4. **Polygon coarseness:** khlong-san district polygon (10 vertices) PIP-OUTs ICONSIAM
+   despite the mall being in khwaeng Wat Kanlaya, and PIP-INS River City; the sathon
+   polygon hugs the south side of Sathorn Rd — all three BTS nodes PIP-OUT, which is the
+   clean mechanism for its transport 7; thon-buri does NOT contain BTS Wongwian Yai
+   (khlong-san, per station infobox + PIP).
+5. **Rent semantics:** phloen-chit station record blends 33,500/74,000 while the pathum-wan
+   district record says 38,000/85,000 — two different "Pathum Wan blends" in the app;
+   chit-lom's 120,000/— 2-bed override (highest in the app) is a top-decile luxury asking
+   figure, not a median (FazWaz Pathum Wan 2-bed avg 99,600 n=1,114; corridor median ~40k).
+6. **Fact corrections for the data layer:** ratchathewi district "1 Michelin star"
+   undercounts (two one-star venues verify in-khet: Signature at VIE, Wana Yook);
+   ratchathewi "0 piers" vs Pratunam pier nodes PIP-in-khet; chit-lom "5 piers" = 4
+   duplicate OSM nodes + 1 distinct; hua-lamphong "2 piers" = canal (Khlong Phadung
+   Krung Kasem), not river; Four Seasons Bangkok was a 2015 rebrand, not 2024.
+7. **Counter-evidence events logged with dates** (for any future risk labeling):
+   Or Tor Kor shooting 2025-07-28 (5 dead); din-daeng = noisiest PCD monitoring station
+   (71.6–81.6 dB(A), 182/182 days over) + Rocket Media Lab rank 50/50; BTS Asok evening-
+   rush failure 2025-09-25; 529-stallholder clock-tower eviction 2025; Jodd Fairs Rama 9
+   demolished 2025-01; Khlong San Plaza closed 2021.
+8. **Kit TODO:** `check_geometry.py` prefers station-geometry keys over district keys
+   (`chatuchak` exists in both) — needs an explicit `--khet` flag; found by the batch-3
+   chatuchak agent, worked around by direct OSM queries.

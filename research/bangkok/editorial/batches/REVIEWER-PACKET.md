@@ -4,13 +4,18 @@ For the independent review the handoff requires. Every bundle sits at
 `ready_for_review` with `reviewer: null`; this packet makes the pass cheap and
 specific. **Researcher self-checks are not this review.**
 
-- Batches: `research/bangkok/editorial/batches/2026-11-05-pilot-zcode-main`,
-  `research/bangkok/editorial/batches/2026-11-07-batch2-zcode-main`
+- Batches: `2026-11-05-pilot-zcode-main`, `2026-11-07-batch2-zcode-main` (full bundles), `2026-11-07-batch3-zcode-main` (10 full),
+  `2026-11-07-batch4-light-zcode-main` (24 light), `2026-11-08-tail-data-only`
+  (137 scripted placeholders — bulk-checkable: identity + no-web-claims only).
+  Master index: `../2026-11-08-tier-plan.md`. Additional batch 3–4 stakes:
+  the sena-ruam ghost station, the sam-yot verification pass, the sala-daeng/
+  saint-louis/phetchaburi merge and anchor findings, and the five-shape adapter
+  (`batch3/tools/normalize.py`) — all documented in the batch findings files.
 - Contract: `research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md`
   (receiver-amended 2026-11-07)
-- Prior researcher verification: `pilot/review/REVIEW-2026-11-07.md`,
-  `batch2/review/findings.md` — read for what was already checked and accepted;
-  do not re-litigate the documented P2 residuals.
+- Prior researcher verification: pilot `review/REVIEW-2026-11-07.md`; batch 2–4
+  `review/findings.md` — read for what was already checked and accepted; do not
+  re-litigate documented P2 residuals.
 
 ## 0. Mechanical gates (run first — should all pass)
 
