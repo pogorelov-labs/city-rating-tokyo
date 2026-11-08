@@ -1,0 +1,1705 @@
+{
+ "entity_key": "st.sam-yan",
+ "search_log": [
+  {
+   "query": "Sam Yan Bangkok neighborhood what is it like Chulalongkorn university area guide",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Discovery; led to Wikipedia Sam Yan article, Mitrtown official site, food-scene framing."
+  },
+  {
+   "query": "\"สามย่าน\" ย่าน จุฬาลงกรณ์มหาวิทยาลัย ชีวิต คนรุ่นใหม่ คอนโด",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Thai discovery; condo positioning for Gen Z (Origin, Culture Chula, Wisdom Craft, Nue Cross, Chapter Chula-Samyan) — snippet-only, used as corroboration for rent/launch prices."
+  },
+  {
+   "query": "Sam Yan Mitrtown library 24 hours Golden Land mixed-use Rama IV 2020",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "First attempt returned a tool concurrency error (not a query failure); retried in the next batch. Confirmed Samyan Co-op 24h reading space (Onion, 500 seats)."
+  },
+  {
+   "query": "Chulalongkorn Memorial Hospital Thai Red Cross Rama IV beds largest hospital Bangkok",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Bed-count ranges (1,435-1,479) and Feb 2026 No.1 public-hospital ranking claim; superseded for the bundle by the full Wikipedia hospital read."
+  },
+  {
+   "query": "Chulalongkorn University land Sam Yan community eviction relocation Chamchuri Square history",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Surfaced New Mandala Dec 2020 and Nov 2025 essays, Chao Mae Tabtim shrine case, Uthenthawai dispute — all followed up with full reads where accessible."
+  },
+  {
+   "query": "สวนสาธารณะ \"สามย่าน\" ราม 4 วังใหม่ สวนหย่อม",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Found สวนเฉลิมพระเกียรติ ร.9 lead (13.7394, 100.5236) and MRT exit names; no 3.2 ha match — park identity resolved later via Overpass."
+  },
+  {
+   "query": "MRT Sam Yan station exits number footbridge Rama IV Chamchuri",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "Tool concurrency limit — no results returned. Retried successfully with the quoted variant below."
+  },
+  {
+   "query": "\"Sam Yan MRT station\" exits BL27 Blue Line Hua Lamphong Si Lom",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Confirmed BL27, adjacency Hua Lamphong/Si Lom, Exit 1 references; led to visitthailandtoday station page."
+  },
+  {
+   "query": "ป่าวังใหม่ จุฬาลงกรณ์มหาวิทยาลัย ป่ากลางเมือง พื้นที่ ไร่",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Resolved that Chula's 'urban forest' is the 28-29 rai Centenary Park on Soi Chula 9 (khwaeng Wang Mai) — not a separate Wang Mai park; PMCU + Chula sustainability pages followed up with full reads."
+  },
+  {
+   "query": "condo rent price Sam Yan Hipflat One X ค่าเช่า คอนโด สามย่าน ตารางเมตร",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Chapter Chula-Samyan rental average (~30,795 THB, 22 listings) and per-sqm band — snippet-only; Hipflat station page read in full. 'One X' not verifiable; not used."
+  },
+  {
+   "query": "Sam Yan Bangkok bars nightlife students Chula pubs hotel bars Rama IV",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Nightlife-mechanism work: TripAdvisor bar names (snippet-only), guides describing Sam Yan as quieter/more local than Silom; RCA/Silom cited as student-club orbit."
+  },
+  {
+   "query": "ตลาดวัดอุเทนถวาย ปิด พื้นที่ จุฬา พัฒนา ราม 4",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Redirected to the RMUT Uthenthawai-Chula land dispute (not a market story); Sept-Oct 2026 ministry measures found; The Standard read (lead only)."
+  },
+  {
+   "query": "งานกาชาด 2568 สวนลุมพินี โรงพยาบาลจุฬาลงกรณ์ งานวัดกาชาด",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Red Cross Fair 11-21 Dec 2025 at Lumpini; hospital Facebook prep posts — snippet-only corroboration for the annual calendar peak."
+  },
+  {
+   "query": "Onion Samyan Co-op 24-hour library Mitrtown archdaily dezeen floor",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Archello 403; designboom URL 404; floor-level detail (2nd-3rd floor) kept snippet-only."
+  },
+  {
+   "query": "อุเทนถวาย จุฬาฯ พื้นที่พิพาท 2569 ย้าย ข่าว ก.ย.",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Timeline: 2552 (2009) กย.พ. ruling, Supreme Administrative Court 14 Dec 2022, Sept 2026 3-month closure, 22 Oct 2026 Chula 'public use only' letter."
+  },
+  {
+   "query": "Time Out Bangkok coolest neighbourhoods 2020 Sam Yan Suan Luang",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Located the Time Out article (read in full); global #16 rank via The Nation Thailand — snippet-only."
+  },
+  {
+   "query": "สามย่าน มิตรทาวน์ ซูเปอร์มาร์เก็ต โกดัง 109 หรือ แม็กซ์วาลู่ ชั้นใด",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Gourmet Market at Mitrtown B1 (The Mall group) — snippet-only; no Goudang 109/MaxValu at this mall."
+  },
+  {
+   "query": "Hua Lamphong station trains moved Krung Thep Aphiwat 2023 2024 limited service future redevelopment",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "19 Jan 2023 relocation of 52 long-distance trains; Wikipedia station article read in full for the details."
+  },
+  {
+   "query": "Chao Mae Tubtim shrine Chulalongkorn eviction 2020 Khaosod English news",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Khaosod 11 June 2020 read in full; follow-ups (halt 16 June; 1,803-unit replacement; 2023 122M-THB suits) snippet-only."
+  },
+  {
+   "query": "bangkokpost.com \"Sam Yan\" Chulalongkorn development OR Mitrtown OR community article",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "2024-2026 Bangkok Post headlines (The last stand 2025; Creative destruction 2025; Heritage on trial 2026; Not Yet Built exhibition 2026) — all paywalled, snippet-only."
+  },
+  {
+   "query": "จุฬาลงกรณ์มหาวิทยาลัย ปฏิทินการศึกษา ภาคการศึกษาที่ 1 สิงหาคม ธันวาคม ภาค 2 มกราคม พฤษภาคม",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Two-semester structure (sem 1 Aug-Dec, sem 2 Jan-May, summer mid-May-Jun) from reg.chula.ac.th — snippet-only."
+  },
+  {
+   "query": "Samyan Mitrtown tenants Villa Market supermarket fitness gym ชั้น 2 3",
+   "tool": "WebSearch",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "Celebrity Fitness 24h at Mitrtown 2F and Project H Muay Thai gym — snippet-only; Villa Market branch not confirmed."
+  },
+  {
+   "query": "Overpass nodes-only park query (around:400 of app coordinate, leisure=park)",
+   "tool": "WebFetch (Overpass API)",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "Returned empty: queried nodes only; parks are mapped as ways. Task brief marked Overpass BLOCKED, but the main instance responded — superseded by the ways query."
+  },
+  {
+   "query": "Overpass ways query leisure=park|garden within 800 m (main instance)",
+   "tool": "WebFetch (Overpass API)",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "First attempt 504; kumi.systems mirror timed out; retry on main instance succeeded — 10 named/unnamed campus gardens + Wat Hua Lamphong Rukkhaniwet Park."
+  },
+  {
+   "query": "Overpass ways query leisure=pitch|track|stadium|sports_centre|fitness_centre|swimming_pool within 800 m",
+   "tool": "WebFetch (Overpass API)",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "CU Stadium, CU Sports Complex, MDCU court, tennis/basketball pitches, private pools; RBSC node outside 800 m."
+  },
+  {
+   "query": "Overpass nodes query railway=station|halt within 2500 m",
+   "tool": "WebFetch (Overpass API)",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "All neighbour station nodes with coordinates; Sam Yan node matches the app coordinate to 5 decimals."
+  },
+  {
+   "query": "Overpass nwr name~อุเทนถวาย within 1500 m",
+   "tool": "WebFetch (Overpass API)",
+   "when": "2026-11-07",
+   "outcome": "used",
+   "note": "RMUT Uthenthawai campus polygon center 13.7418, 100.5312 — ~1.1 km north of the station, outside the catchment."
+  },
+  {
+   "query": "old.reddit.com r/Bangkok search 'sam yan'",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "HTTP 403 Blocked (confirmed first-hand; matches task brief). Resident-experience threads unavailable; no Reddit content used in claims."
+  },
+  {
+   "query": "https://www.bangkokpost.com/life/social-and-lifestyle/2986951/the-last-stand",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "failed",
+   "note": "307 redirect to tollbit.bangkokpost.com (paid-access gateway); not followed. Bangkok Post treated as paywalled per task brief; headline-level corroboration only."
+  },
+  {
+   "query": "https://www.tripadvisor.com/ (Sam Yan bars/clubs pages)",
+   "tool": "WebFetch",
+   "when": "2026-11-07",
+   "outcome": "not_attempted",
+   "note": "Platform returns 403 per task brief; TripAdvisor content appears only as snippet-level corroboration, never as sole evidence."
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://en.wikipedia.org/wiki/Sam_Yan",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sam_Yan",
+   "title": "Sam Yan",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Encyclopedia; junction history and market relocation are uncited in places",
+    "Names 'San Chao Mae Tubtim' among neighborhood shrines while the separately documented Chao Mae Tabtim Saphan Luang shrine sits near the Centenary Park — possible name duplication unresolved"
+   ]
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://en.wikipedia.org/wiki/Sam_Yan_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sam_Yan_MRT_station",
+   "title": "Sam Yan MRT station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Carries a 'more citations needed' tag (Dec 2024)",
+    "Infobox coordinates 13.73278, 100.52944 differ from the app/OSM node (13.7320608, 100.5301206) by ~95 m; app/OSM coordinate used throughout",
+    "Ridership figure is 2021 only (COVID-suppressed)"
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "retrieved_url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "title": "King Chulalongkorn Memorial Hospital",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Two bed figures (1,442 infobox / 1,435 text); range reported",
+    "2025 earthquake damage is a cited BBC note, not expanded in the article; date given here as March 2025 from general reporting, flagged as context"
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University",
+   "title": "Chulalongkorn University",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Enrollment 41,611 referenced to the registrar 'last updated May 21, 2018' — dated; 2,358 international students is a 2025 figure"
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "title": "Bang Rak district",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Khwaeng populations are 2019 figures"
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "title": "Chulalongkorn University Centenary Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub article; area given as 28 rai / 4.5 ha / 11 acres",
+    "No transit-distance statements; distance to the station computed here from the infobox coordinate"
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "title": "Hua Lamphong railway station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Redevelopment plans described as proposals; the free-shuttle end (18 Jan 2024) came from search summaries, not this article — kept snippet-only"
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://th.wikipedia.org/wiki/วัดหัวลำโพง",
+   "retrieved_url": "https://th.wikipedia.org/wiki/วัดหัวลำโพง",
+   "title": "วัดหัวลำโพง (Wat Hua Lamphong)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "Early-Rattanakosin founding is 'สันนิษฐาน' (assumed); no construction records exist"
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "retrieved_url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "title": "เขตปทุมวัน (Khet Pathum Wan)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "encyclopedia",
+   "commercial_context": "none",
+   "limitations": [
+    "The article lists MRT stations under the Rong Mueang paragraph without assigning each station to a khwaeng; khwaeng attribution here uses landmark groupings and addresses elsewhere in the article set"
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://www.newmandala.org/the-gentrification-of-chulalongkorn-university",
+   "retrieved_url": "https://www.newmandala.org/the-gentrification-of-chulalongkorn-university",
+   "title": "The gentrification of Chulalongkorn University",
+   "publisher": "New Mandala (ANU)",
+   "publisher_family": "New Mandala",
+   "author": "Netiwit Chotiphatphaisal; Sitthikarn Theerawatanachai",
+   "published_at": "2020-12-04",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Activist-authored critique — one-sided by design; used as the counter-view voice, with university-side claims attributed as the authors report them",
+    "Does not mention Samyan Mitrtown or Uthenthawai by name; 'PMCU' acronym not used"
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://www.timeout.com/bangkok/news/samyan-chula-is-crowned-as-bangkoks-coolest-neighborhood-in-2020-100720",
+   "retrieved_url": "https://www.timeout.com/bangkok/news/samyan-chula-is-crowned-as-bangkoks-coolest-neighborhood-in-2020-100720",
+   "title": "Samyan-Chula is crowned as Bangkok's coolest neighborhood in 2020",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "author": null,
+   "published_at": "2020-10-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "listicle/promotional context",
+   "limitations": [
+    "Editorial superlatives; no resident voices quoted",
+    "Global ranking (16th per The Nation Thailand) not stated in the article itself — snippet-only"
+   ]
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://www.samyan-mitrtown.com/",
+   "retrieved_url": "https://www.samyan-mitrtown.com/",
+   "title": "Samyan Mitrtown — official site",
+   "publisher": "Samyan Mitrtown (Frasers Property)",
+   "publisher_family": "Samyan Mitrtown / Frasers Property",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "developer marketing",
+   "limitations": [
+    "No opening dates, tenant names, or shopping hours on the homepage; footer shows Frasers Property (Golden Land brand sits under Frasers)"
+   ]
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://pmcu.co.th/chula-centenary-park",
+   "retrieved_url": "https://pmcu.co.th/chula-centenary-park",
+   "title": "อุทยาน 100 ปี จุฬาลงกรณ์มหาวิทยาลัย (Chula Centenary Park)",
+   "publisher": "Property Management of Chulalongkorn University (PMCU)",
+   "publisher_family": "Chulalongkorn University (PMCU)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "institutional self-presentation",
+   "limitations": [
+    "University-owned page; 29 rai figure here vs 28 rai on Wikipedia — range reported"
+   ]
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://www.khaosodenglish.com/life/2020/06/11/historic-shrine-faces-eviction-by-chulalongkorn-university",
+   "retrieved_url": "https://www.khaosodenglish.com/life/2020/06/11/historic-shrine-faces-eviction-by-chulalongkorn-university",
+   "title": "Historic Shrine Faces Eviction by Chulalongkorn University",
+   "publisher": "Khaosod English",
+   "publisher_family": "Khaosod English",
+   "author": "Pravit Rojanaphruk",
+   "published_at": "2020-06-11",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Does not mention fertility/phallic-worship framing; does not give unit counts for the replacement buildings",
+    "2023 litigation and 2025-2026 status known only from search summaries"
+   ]
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://overpass-api.de/api/interpreter (leisure=park|garden, around:800 of 13.73206,100.53012)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — park/garden polygons",
+   "publisher": "OpenStreetMap contributors (Overpass API)",
+   "publisher_family": "OpenStreetMap / Overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "dataset",
+   "commercial_context": "ODbL community data",
+   "limitations": [
+    "Polygon areas not computed (centers only); app's own green polygon not directly inspected",
+    "Crowd-sourced tagging — campus lawns may be tagged/omitted inconsistently"
+   ]
+  },
+  {
+   "index": 15,
+   "canonical_url": "https://overpass-api.de/api/interpreter (leisure=pitch|track|stadium|sports_centre|fitness_centre|swimming_pool, around:800)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — sports facilities",
+   "publisher": "OpenStreetMap contributors (Overpass API)",
+   "publisher_family": "OpenStreetMap / Overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "dataset",
+   "commercial_context": "ODbL community data",
+   "limitations": [
+    "No access rules or operators tagged; public-versus-member use unverified"
+   ]
+  },
+  {
+   "index": 16,
+   "canonical_url": "https://overpass-api.de/api/interpreter (railway=station|halt, around:2500)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — station nodes",
+   "publisher": "OpenStreetMap contributors (Overpass API)",
+   "publisher_family": "OpenStreetMap / Overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "dataset",
+   "commercial_context": "ODbL community data",
+   "limitations": [
+    "Distances are station-node to app-coordinate straight lines computed by the researcher, not official measurements"
+   ]
+  },
+  {
+   "index": 17,
+   "canonical_url": "https://overpass-api.de/api/interpreter (nwr name~อุเทนถวาย, around:1500)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API — Uthenthawai elements",
+   "publisher": "OpenStreetMap contributors (Overpass API)",
+   "publisher_family": "OpenStreetMap / Overpass",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "dataset",
+   "commercial_context": "ODbL community data",
+   "limitations": [
+    "Single polygon center; campus may span several ways"
+   ]
+  },
+  {
+   "index": 18,
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/mrt/sam-yan",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/mrt/sam-yan",
+   "title": "Condos for rent near MRT Sam Yan (Hipflat)",
+   "publisher": "Hipflat",
+   "publisher_family": "Hipflat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "listing platform",
+   "limitations": [
+    "Page mixes citywide premium listings (Rajadamri/Langsuan/Sathon) under the station filter; no station-level median shown; visible page total 8,942 listings"
+   ]
+  },
+  {
+   "index": 19,
+   "canonical_url": "https://thestandard.co/uthenthawai-chula-relocation-measures",
+   "retrieved_url": "https://thestandard.co/uthenthawai-chula-relocation-measures",
+   "title": "มาตรการย้ายอุเทนถวาย (The Standard)",
+   "publisher": "The Standard",
+   "publisher_family": "The Standard",
+   "author": null,
+   "published_at": "2026-09",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": false,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Only the lead paragraphs rendered (page body showed 'LOADING' placeholders); details beyond the lead are snippet-level"
+   ]
+  },
+  {
+   "index": 20,
+   "canonical_url": "https://www.visitthailandtoday.com/transportation/bangkok/sam-yan-mrt-station",
+   "retrieved_url": "https://www.visitthailandtoday.com/transportation/bangkok/sam-yan-mrt-station",
+   "title": "Sam Yan MRT Station — What's Nearby",
+   "publisher": "Visit Thailand Today",
+   "publisher_family": "Visit Thailand Today (travel portal)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "tourism promotion",
+   "limitations": [
+    "Marketing copy; 'small park by the station' not named; tunnel opening hour (06:00) not verifiable elsewhere"
+   ]
+  },
+  {
+   "index": 21,
+   "canonical_url": "https://www.hipflat.com/projects/chapter-chula-samyan (unretrieved; figures from WebSearch summaries of property pages)",
+   "retrieved_url": null,
+   "title": "Chapter Chula-Samyan rental statistics (search-result summaries)",
+   "publisher": "Hipflat / property portals (snippet only)",
+   "publisher_family": "Hipflat / property portals",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": false,
+   "type": "commercial_property",
+   "commercial_context": "listing platform",
+   "limitations": [
+    "Snippet-only: average ~30,795 THB/mo across 22 rental listings, range 20,000-40,000, ~689-724 THB/sqm; project page URL 404 on direct fetch; corroborative, not sole evidence"
+   ]
+  },
+  {
+   "index": 25,
+   "canonical_url": "https://www.reg.chula.ac.th (calendar pages)",
+   "retrieved_url": null,
+   "title": "Chulalongkorn University academic calendar (search-result summaries of reg.chula.ac.th)",
+   "publisher": "Chulalongkorn University Office of the Registrar",
+   "publisher_family": "Chulalongkorn University",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": false,
+   "type": "official",
+   "commercial_context": "none",
+   "limitations": [
+    "Snippet-only: semester 1 ~Aug-Dec, semester 2 ~Jan-May, summer ~mid-May-Jun; exact current-year dates not opened"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "sam-yan-c01",
+   "text_en": "Sam Yan is the at-grade junction where Rama IV Road meets Phaya Thai Road (north) and Si Phraya Road (south-west) in Pathum Wan district at the Bang Rak border, spanned by the bidirectional Thai-Japan flyover (built 1992); the name refers to the meeting of the roads. The MRT Sam Yan (BL27) node in OpenStreetMap (13.7320608, 100.5301206) matches the app coordinate to five decimals. North of Rama IV the unit sits in khwaeng Wang Mai (one of Pathum Wan's four khwaengs: Pathum Wan, Wang Mai, Rong Mueang, Lumphini); across Rama IV it crosses into Bang Rak district — Wat Hua Lamphong's address is 728 Rama IV Rd, Khwaeng Si Phraya, Bang Rak. This matches the app's pathum-wan + bang-rak split and Wikipedia's description of the station as straddling both districts.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "geography",
+    "administration"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sam Yan intersection and its 1.25 km2 nearest-stop catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "App coordinate equals the OSM station node; distances in other claims are computed from that point."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current (2026-11)",
+    "recheck_by": null,
+    "notes": "Junction form stable since the 1992 flyover; khwaeng boundaries stable."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "lede and 'Geography'/'History' sections",
+     "paraphrase": "Four-way junction of Rama IV with Phaya Thai (north) and Si Phraya (south-west) in Pathum Wan next to the Bang Rak border; Thai-Japan flyover built 1992; name means 'neighbourhood of three'; Chula owns the north-west corner land."
+    },
+    {
+     "source_index": 16,
+     "locator": "Overpass result row 'Sam Yan subway BL27 node 12803915078'",
+     "paraphrase": "OSM station node at 13.7320608, 100.5301206 — identical to the app coordinate."
+    },
+    {
+     "source_index": 7,
+     "locator": "location section (address and coordinates)",
+     "paraphrase": "Wat Hua Lamphong: 728 Rama IV Road, Khwaeng Si Phraya, Bang Rak; geotag 13.731685, 100.529095."
+    },
+    {
+     "source_index": 8,
+     "locator": "administrative division section",
+     "paraphrase": "Pathum Wan has four khwaeng (Rong Mueang, Wang Mai, Pathum Wan, Lumphini); Hua Lamphong railway station is in khwaeng Rong Mueang."
+    }
+   ],
+   "limitations": [
+    "Wikipedia infobox station coordinate differs from the app/OSM node by ~95 m; app coordinate used",
+    "Khwaeng attribution of individual blocks south of Rama IV (Si Phraya vs Si Lom khwaeng) not verified street-by-street"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c02",
+   "text_en": "Neighbour-stop geometry (from OSM station nodes, straight-line): MRT Si Lom (BL26) ~0.8 km south-east, MRT Hua Lamphong (BL28) ~1.5 km west-north-west, SRT Hua Lamphong mainline station ~1.7 km west-north-west, MRT Lumphini (BL25) ~1.8 km east, BTS Sala Daeng (S2) node ~0.6 km south. The brief's 'Si Lom (north) / Hua Lamphong (south)' labels do not match this geometry — Hua Lamphong lies west-north-west, Si Lom south-east along Rama IV. Effective Voronoi clips are therefore roughly 0.4 km to the south-east (Si Lom midline), 0.75 km west-north-west (Hua Lamphong midline), 0.9 km east (Lumphini midline) and 0.3 km south (Sala Daeng BTS midline), with the 800 m circle bounding the north and north-west. The unit's east clip against st.lumphini is real: Lumphini Park's south-west corner sits about 1.0 km east — outside the 800 m circle and in Lumphini MRT's catchment. BTS Sala Daeng's own node falls within 800 m of the centre, so areas near it belong to Sala Daeng's cell, not this unit.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "transit",
+    "scope"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "catchment boundary vs neighbouring stops",
+    "relation_to_entity": "entire_unit",
+    "notes": "App score data unchanged; this claim corrects the brief's compass labels only."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current (2026-11)",
+    "recheck_by": null,
+    "notes": "Blue Line station set stable since the 2019-2020 loop completion."
+   },
+   "evidence": [
+    {
+     "source_index": 16,
+     "locator": "Overpass rows: Si Lom BL26 (13.7291982,100.5370702), Hua Lamphong BL28 (13.7375708,100.5171350), Lumphini BL25 (13.7256066,100.5457249), Sala Daeng S2 (13.7285677,100.5343416), Bangkok railway station (13.7393113,100.5166499)",
+     "paraphrase": "Neighbour station nodes and coordinates used for straight-line distances."
+    },
+    {
+     "source_index": 1,
+     "locator": "infobox adjacent stations",
+     "paraphrase": "BL27 between Hua Lamphong (toward Lak Song) and Si Lom (toward Tha Phra via Bang Sue)."
+    },
+    {
+     "source_index": 5,
+     "locator": "infobox coordinate 13.739417, 100.52417",
+     "paraphrase": "Centenary Park geotag ~1.04 km north-west of the app coordinate — outside the 800 m circle."
+    }
+   ],
+   "limitations": [
+    "All distances are researcher-computed straight lines from published coordinates, not official figures",
+    "Lumphini Park corner distance uses map geometry, not a published geotag (~1.0 km, estimate)",
+    "Exact app polygon not re-derived; clip distances are Voronoi-midline approximations"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c03",
+   "text_en": "MRT Sam Yan (BL27) opened 3 July 2004 under Rama IV Road with side platforms, a B1 concourse, 3 exits and 2 elevators; an underground tunnel links the station directly to both Chamchuri Square and Samyan Mitrtown (the mall's own site describes the 'Mitr-Connect' walkway at Exit 2), so much of the core can be walked 'without surfacing into the heat or the rain'. Recorded ridership is 3,542,328 passengers in 2021 (a COVID-suppressed year, roughly 9,700/day). Street level has bus stops; the Thai-language property snippet maps Exit 1 to Wat Hua Lamphong and Exit 2 to Chamchuri Square/Mitrtown. The junction carries the four-level Thai-Japan flyover over a wide arterial, so crossing Rama IV on foot means station underpasses and footbridges rather than surface crossings.",
+   "kind": "factual_report",
+   "topics": [
+    "transit",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "MRT Sam Yan station (BL27) and connected walkway network",
+    "relation_to_entity": "entire_unit",
+    "notes": "Underground links are the unit's signature access feature."
+   },
+   "temporal_scope": {
+    "event_date": "2004-07-03",
+    "observed_period": "2004-2026",
+    "recheck_by": null,
+    "notes": "Ridership needs a 2024-2025 BEM figure to be current."
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "infobox (opened, exits, platforms), 'Connections' section",
+     "paraphrase": "Opened 3 July 2004; 2 side split platforms, 3 exits, 2 elevators; 3,542,328 passengers in 2021; underground tunnels to Chamchuri Square and Samyan Mitrtown; bus stop, Wat Hua Lamphong and Thai Red Cross Society at ground level."
+    },
+    {
+     "source_index": 11,
+     "locator": "MRT connection section",
+     "paraphrase": "Take MRT to Sam Yan Exit 2; the Mitr-Connect underground walkway leads directly into the mall."
+    },
+    {
+     "source_index": 20,
+     "locator": "station access section",
+     "paraphrase": "Underground tunnels run into Chamchuri Square and Samyan Mitrtown, allowing access 'without surfacing into the heat or the rain'; mall tunnels reported open from 06:00 (snippet-level detail)."
+    }
+   ],
+   "limitations": [
+    "2021 ridership only; no 2024-2026 per-station figure found",
+    "Exit-name mapping is snippet-only; BEM's official station page was not located",
+    "No complete inventory of at-grade crossings/footbridges over Rama IV at Sam Yan"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c04",
+   "text_en": "Samyan Mitrtown is the unit's everyday anchor: the first mixed-use project on Rama IV Road on over 300,000 sqm (developed by Golden Land, whose brand now sits under Frasers Property), at 944 Rama IV Rd, Wang Mai, built on an 'Urban Life Library' concept with Eating/Learning/Living zones and a 24-hour zone in the Living section. Inside it, Samyan Co-op is a free, 24-hour, 500-seat reading and working space designed by Onion (opened with the mall in 2019); Time Out's 2020 write-up describes the complex as home to 'a 24/7 book store, an indie film cinema, and a public rooftop garden'. Everyday essentials cluster here and around the hospital: a Gourmet Market supermarket at basement level (snippet-only), a 24-hour Celebrity Fitness gym on the 2nd floor plus a Muay Thai gym (snippet-only), and the mall's own Sky Garden and prayer rooms.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "retail",
+    "study_space"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Samyan Mitrtown (944 Rama IV Rd)",
+    "relation_to_entity": "inside",
+    "notes": "Tunnel-connected to the station; sits at the junction's north-west corner per Wikipedia's Sam Yan article."
+   },
+   "temporal_scope": {
+    "event_date": "2019-09-01",
+    "observed_period": "2019-2026",
+    "recheck_by": null,
+    "notes": "Mall opening month given as September 2019 in press snippets; Wikipedia says 'opened in 2019'."
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "project overview, concept and amenities sections",
+     "paraphrase": "First mixed-use on Rama IV over 300,000 sqm; Urban Life Library concept (Eating/Learning/Living Library; 24-hour zone in Living); address 944 Rama IV Rd Wang Mai; Sky Garden, prayer room, Mommy & Baby lounge; Frasers Property footer."
+    },
+    {
+     "source_index": 0,
+     "locator": "history section",
+     "paraphrase": "The land became the Samyan Mitrtown mixed-use project by Golden Land Property Development, opened in 2019."
+    },
+    {
+     "source_index": 10,
+     "locator": "development paragraph",
+     "paraphrase": "Samyan Mitrtown described as home to a 24/7 book store, an indie film cinema and a public rooftop garden."
+    }
+   ],
+   "limitations": [
+    "Co-op floor level reported variously (2nd-3rd floor) across snippets; not pinned",
+    "Supermarket and gym tenants are snippet-only corroborations, not full reads",
+    "Shopping hours not stated on the mall site"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c05",
+   "text_en": "King Chulalongkorn Memorial Hospital anchors the unit's east: the Thai Red Cross Society's main teaching hospital (Faculty of Medicine of Chulalongkorn University since 4 June 1947), opened 30 May 1914 by King Vajiravudh, with 1,435-1,442 in-patient beds — one of Thailand's largest public hospitals alongside Siriraj and Ramathibodi — and an emergency department. Its 29-storey Bhumisirimangkalanusorn building (groundbroken 2007, opened 2016-2017) was billed as the largest medical hub in ASEAN with over 1,250 beds. The complex geotag is ~0.6 km east-south-east of the station (the campus stretches westward toward Henri Dunant Road), keeping it inside the 800 m catchment. In March 2025 the hospital was damaged and patients evacuated during the Myanmar earthquake, per the Wikipedia article's BBC-sourced note.",
+   "kind": "factual_report",
+   "topics": [
+    "health",
+    "identity",
+    "resilience"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "King Chulalongkorn Memorial Hospital (1873 Rama IV Rd)",
+    "relation_to_entity": "inside",
+    "notes": "Hospital block is the unit's single largest daytime population driver after the university."
+   },
+   "temporal_scope": {
+    "event_date": "1914-05-30",
+    "observed_period": "1914-2026",
+    "recheck_by": null,
+    "notes": "Bed capacity and earthquake note current as of the Nov 2026 article state."
+   },
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "infobox, lede, History, Bhumisirimangkalanusorn section",
+     "paraphrase": "Thai Red Cross Society; opened 30 May 1914; teaching hospital of Chula Faculty of Medicine since 1947; 1,442/1,435 beds; 29-storey 12.5-billion-baht building partially opened 2016; emergency department; damaged during the 2025 Myanmar earthquake."
+    },
+    {
+     "source_index": 0,
+     "locator": "landmarks list",
+     "paraphrase": "Hospital listed among Sam Yan-area landmarks on Rama IV."
+    }
+   ],
+   "limitations": [
+    "Two bed figures disagree by 7 beds; range reported",
+    "2025 earthquake damage detail rests on a cited BBC note not expanded in the article",
+    "The hospital's Thai Red Cross Feb 2026 No.1 public-hospital ranking claim appeared only in search summaries — not used as a claim"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c06",
+   "text_en": "Chulalongkorn University (founded 26 March 1917) enrolls about 41,600 students (30,262 undergraduate, 11,349 postgraduate — registrar figure last updated 2018; 2,358 international students in 2025) and owns the land the unit is built on: the main campus occupies 637 rai (101.9 ha) in Pathum Wan within a 1,153-rai landholding, and per Wikipedia 'parts of it are used for commercial and mixed-use developments managed by the Property Management Office, including Siam Square and areas around Sam Yan'. University-owned Chamchuri Square sits at the junction's corner, linked to the station at Exit 2. The campus's eastern fringe falls inside the catchment: OSM places Lan Chakrabongse ~0.54 km N, Suan Sathiramaithri ~0.44 km N, campus soccer fields ~0.58 km NNW, and the CU Stadium ~0.76 km NNW of the station.",
+   "kind": "factual_report",
+   "topics": [
+    "education",
+    "land_ownership",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Chulalongkorn University main campus (eastern fringe inside the unit)",
+    "relation_to_entity": "partial",
+    "notes": "The campus core and Centenary Park lie north-west, outside the 800 m circle; the eastern strip and its facilities are inside."
+   },
+   "temporal_scope": {
+    "event_date": "1917-03-26",
+    "observed_period": "1917-2026",
+    "recheck_by": null,
+    "notes": "Enrollment figure dated 2018 — treat as magnitude, not a current census."
+   },
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "infobox, campus and 'commercial developments' passages",
+     "paraphrase": "41,611 students; 637-rai main campus in Pathum Wan within 1,153 rai; Property Management Office runs commercial/mixed-use developments including Siam Square and areas around Sam Yan; Chamchuri Square a university-owned building at MRT Sam Yan Exit 2."
+    },
+    {
+     "source_index": 14,
+     "locator": "Overpass rows for Lan Chakrabongse, Suan Sathiramaithri, unnamed gardens",
+     "paraphrase": "Campus garden polygons ~0.44-0.77 km north of the station."
+    },
+    {
+     "source_index": 15,
+     "locator": "Overpass rows for CU Stadium (13.73737,100.52575) and campus pitches",
+     "paraphrase": "Stadium ~0.76 km NNW; soccer fields ~0.58 km; courts closer in."
+    }
+   ],
+   "limitations": [
+    "Enrollment is a 2018 registrar figure",
+    "Which faculties/departments sit inside vs outside the catchment not itemised",
+    "Campus polygon boundaries are crowd-sourced"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c07",
+   "text_en": "The app's 3.2 ha green polygon cannot be attributed to a single named public park inside the catchment. Overpass (OSM) within 800 m returns a cluster of small campus gardens — Lan Chakrabongse (ลานจักรพงษ์, ~0.54 km N), Suan Sathiramaithri (สวนสถิรไมตรี, ~0.44 km N), Suan Chamchuri (สวนจามจุรี, ~0.76 km NNW), Suan Phra Kiao Kaew (~0.75 km ENE), Suan Waew Wajira (~0.84 km, at the edge), plus unnamed garden ways — and Wat Hua Lamphong Rukkhaniwet Park (สวนวัดหัวลำโพงรุกขนิเวศน์, ~0.14 km S). The famous parks are outside: Chulalongkorn University Centenary Park (28-29 rai = 4.5-4.6 ha, opened 26 March 2017, designed by Landprocess as a 'porous park' with monkey-cheeks flood retention) is ~1.04 km north-west — in the National Stadium/Siam-side cells, not this one — and Lumphini Park lies ~1.0 km east in st.lumphini's catchment. Researcher inference: green 9 most plausibly aggregates the campus greenscape (gardens plus stadium lawns), not one 3.2 ha park; the exact polygon needs an app-side inspection.",
+   "kind": "estimate",
+   "topics": [
+    "green",
+    "scope"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "green polygons within the catchment vs Centenary/Lumphini parks",
+    "relation_to_entity": "entire_unit",
+    "notes": "Green score not changed; identity flagged as unresolved."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current (2026-11)",
+    "recheck_by": null,
+    "notes": "OSM state as of Nov 2026."
+   },
+   "evidence": [
+    {
+     "source_index": 14,
+     "locator": "Overpass element list (10 ways with names and centers)",
+     "paraphrase": "All park/garden polygons within 800 m, none individually documented at 3.2 ha."
+    },
+    {
+     "source_index": 5,
+     "locator": "infobox and design sections",
+     "paraphrase": "Centenary Park: 28 rai / 4.5 ha / 11 acres, completed 2017, Landprocess, rainwater detention ('monkey cheeks'), coordinate 13.739417, 100.52417."
+    },
+    {
+     "source_index": 12,
+     "locator": "area and location passages",
+     "paraphrase": "29 rai of green in the Suan Luang-Sam Yan education axis along Chula Soi 5 (renamed Chula Soi 100 Pi); opened 26 March 2017; porous-park concept; 1.35 km Chula Centenary Road."
+    }
+   ],
+   "limitations": [
+    "OSM polygon areas not computed; the 3.2 ha figure may be an aggregation or a single large unnamed way",
+    "App's actual green polygon not directly inspected",
+    "Crowd-sourced tagging may miss hospital lawns or private gardens"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c08",
+   "text_en": "Wat Hua Lamphong sits at the unit's south-west corner (~0.12 km from the station by geotag; the travel portal says 110 m): a third-class royal temple (elevated by King Bhumibol on 18 July 2002), believed founded in the early Rattanakosin era, renamed by King Chulalongkorn around 1904, known for funeral merit-making and buffalo life-saving ceremonies, housing a school and the Ruamkatanyu Foundation (a well-known volunteer rescue/ambulance service). Wikipedia's Sam Yan article adds the Tai Sia Huk Chou Shrine (to Sun Wukong) on Phaya Thai Road in front of Chamchuri Square, and names San Chao Mae Tubtim and San Chao Pho Suea among the neighborhood's Thai-Chinese shrines — consistent with the app's 16-temple count for the unit. The temple fronts Rama IV opposite the Mitrtown/Chamchuri block.",
+   "kind": "factual_report",
+   "topics": [
+    "heritage",
+    "religion",
+    "community_services"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Wat Hua Lamphong and neighborhood shrines",
+    "relation_to_entity": "inside",
+    "notes": "Ruamkatanyu's rescue base is a de-facto 24/7 emergency-services presence at the unit's edge."
+   },
+   "temporal_scope": {
+    "event_date": "2002-07-18",
+    "observed_period": "current",
+    "recheck_by": null,
+    "notes": "Royal-temple status date verified."
+   },
+   "evidence": [
+    {
+     "source_index": 7,
+     "locator": "location, status and activities sections",
+     "paraphrase": "Address 728 Rama IV Rd, Si Phraya khwaeng, Bang Rak; third-class royal temple from 18 July 2002; funeral merit-making, buffalo life-saving; Wat Hua Lamphong School and Ruamkatanyu Foundation on site; adjacent to MRT Sam Yan and across from Mitrtown/Chamchuri."
+    },
+    {
+     "source_index": 0,
+     "locator": "landmarks and community sections",
+     "paraphrase": "Tai Sia Huk Chou Shrine on Phaya Thai Rd; San Chao Mae Tubtim and San Chao Pho Suea shrines; Thai-Chinese community with used-car-parts trade and Chinese opera tradition."
+    },
+    {
+     "source_index": 20,
+     "locator": "walkable-POI list",
+     "paraphrase": "Wat Hualamphong listed 110 m from the station."
+    }
+   ],
+   "limitations": [
+    "Whether 'San Chao Mae Tubtim' (Wikipedia, neighborhood) is the same shrine as the Chao Mae Tabtim Saphan Luang site ~1.1 km north (claim sam-yan-c10) is unresolved — possible name duplication after the 1960 fire relocation",
+    "16-temple count not independently enumerated"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c09",
+   "text_en": "The unit's urban form is the product of a university-led redevelopment wave on Chula-owned land: the university began renting out Sam Yan real estate in 1963; until the late 2000s the intersection was shophouses with well-known restaurants; from 2008 the university's property office began development plans 'which required the demolition of old establishments at the immediate intersection'; Sam Yan Market (a permanent foodstuff market established 1965, with cheap upstairs student restaurants) was relocated a few hundred metres north-west toward Suphachalasai Stadium, with most shop owners following. New Mandala (Dec 2020, activist authors) documents the method — cutting lease lengths, raising rents, or terminating contracts — and the flashpoints: Chamchuri Square vendors' ~200% rent-hike dispute and #Chulakillingvendors protests (2018-2020), and the Scala cinema's last screening on 5 July 2020. Time Out's 2020 piece records the outcome: a zone of 'ancient grocers, food stalls, and ramshackle auto-part stores' transformed, with old cheap eateries largely moving to Banthat Thong.",
+   "kind": "factual_report",
+   "topics": [
+    "history",
+    "gentrification",
+    "urban_form"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sam Yan intersection block (Chula-owned corners)",
+    "relation_to_entity": "entire_unit",
+    "notes": "This is the historical mechanism behind today's mall-fronted junction."
+   },
+   "temporal_scope": {
+    "event_date": "2008-01-01",
+    "observed_period": "1963-2020",
+    "recheck_by": null,
+    "notes": "Events dated per sources; 2008 is the start of the demolition plans."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "history section",
+     "paraphrase": "1963 rental development start; 2008 development plans requiring demolition; Sam Yan Market est. 1965 and relocated toward Suphachalasai Stadium; gentrification criticism from conservation groups and students (Netiwit Chotiphatphaisal named)."
+    },
+    {
+     "source_index": 9,
+     "locator": "Chamchuri Square, Scala and framing sections",
+     "paraphrase": "Lease-termination/rent-rise method; 2018 vendor complaint and ~200% hike; 2019 sleep-in protest; 85-year-old masseuse evicted; Scala's last day 5 July 2020; Suanluang Square closures."
+    },
+    {
+     "source_index": 10,
+     "locator": "transformation paragraphs",
+     "paraphrase": "'Ancient grocers, food stalls, and ramshackle auto-part stores' replaced; cheap eateries moved to Ban Tad Tong (Banthat Thong); Mitrtown put the area 'onto the top of Bangkok's liveliest scenes'."
+    }
+   ],
+   "limitations": [
+    "New Mandala piece is activist-authored — university side presented through critics' claims; no university response in the article",
+    "Number of displaced households never quantified in any source found"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c10",
+   "text_en": "The best-documented displacement case attached to this land-ownership story is the Chao Mae Tabtim Saphan Luang shrine — built by Teochew immigrants, dedicated to Mazu and Shui Wei Sheng Niang, worship dating to Rama V's reign, its incense burner bestowed by Rama VI (1911) — on Chula-owned land near the Centenary Park (~1.0-1.1 km north of the station, at the Saphan Lueang end of the campus edge): the university's asset office issued a final eviction notice on 27 May 2020 with a 15 June deadline ('time for relocation has passed considerably'), keeper Penprapah Suansom refused ('I won't allow them. No way.'), students including Netiwit Chotiphatphaisal objected that residents 'have not been consulted', and demolition was halted after public outcry (16 June 2020). The university said the site would become three new buildings including a student dormitory (a Khaosod follow-up: rental apartments and dormitories totalling 1,803 units — snippet-only), and litigation continued into 2023 with suits reportedly seeking 122M THB from caretakers (#saveศาลเจ้าแม่ทับทิม). The shrine site is outside this catchment but belongs to the same redevelopment wave that shaped the unit.",
+   "kind": "factual_report",
+   "topics": [
+    "heritage",
+    "gentrification",
+    "religion"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Chao Mae Tabtim Saphan Luang shrine site (Saphan Lueang)",
+    "relation_to_entity": "outside",
+    "notes": "Included because the Sam Yan redevelopment narrative is inseparable from it; mapped ~1.0-1.1 km north."
+   },
+   "temporal_scope": {
+    "event_date": "2020-05-27",
+    "observed_period": "2020-2026",
+    "recheck_by": null,
+    "notes": "Thai-language reporting into 2568-2569 (2025-2026) still describes pending demolition/relocation (snippet-only)."
+   },
+   "evidence": [
+    {
+     "source_index": 13,
+     "locator": "whole article",
+     "paraphrase": "Teochew shrine to Mazu/Shui Wei Sheng Niang; notice 27 May 2020, deadline 15 June; keeper refuses; Netiwit objection; halt after outcry; site for three new buildings incl. student dormitory; near the Centenary Park on Chula land."
+    },
+    {
+     "source_index": 9,
+     "locator": "shrine section",
+     "paraphrase": "1917-rented land, ownership to the university 1939, 1960 fire relocation, 1970 rebuild; en-masse contract terminations; #savetheChaoMaeTubtimshrine; vacate-by-31-August order and screening hedges."
+    }
+   ],
+   "limitations": [
+    "Shrine location given by sources as 'near the Centenary Park'/'Saphan Lueang' — precise geotag not obtained; outside the 800 m circle on the balance of evidence",
+    "2023-2026 litigation status is snippet-only",
+    "Unit count (1,803) not verified against the article body"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c11",
+   "text_en": "A second Chula-land conflict continues at the unit's northern edge: Rajamangala University of Technology Uthenthawai occupies Chula-owned land (OSM campus polygon center ~1.1 km north of the station — outside the catchment). A 2009 state committee ruled the land must be returned; the Supreme Administrative Court ordered relocation on 14 December 2022; after student brawls with Pathumwan Institute students near Siam/Pathum Wan in late August-early September 2026 caused injuries, a ministerial meeting ordered four urgent measures — classes suspended and the disputed area closed for at least three months, new premises found, and a relocation within 90 days (September 2026) — and on 22 October 2026 Chula wrote to the ministry that the land will be redeveloped for public use only, with no commercial agenda (The Standard lead; Thai-language reporting). For residents this is a live institutional dispute one neighbourhood away, not a daily-life factor inside the unit.",
+   "kind": "factual_report",
+   "topics": [
+    "land_dispute",
+    "safety",
+    "education"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "RMUT Uthenthawai campus (Saphan Lueang side)",
+    "relation_to_entity": "outside",
+    "notes": "OSM center ~1.1 km N; outside the 800 m circle."
+   },
+   "temporal_scope": {
+    "event_date": "2026-09-09",
+    "observed_period": "2009-2026-10-22",
+    "recheck_by": "2027-01-31",
+    "notes": "90-day relocation window implies movement by ~December 2026 — recheck."
+   },
+   "evidence": [
+    {
+     "source_index": 19,
+     "locator": "lead paragraphs (body did not render)",
+     "paraphrase": "Decades-long dispute; Chula holds legal ownership; student fights in Aug-Sep 2026; four urgent measures including at least 3-month closure of the site and relocation planning."
+    },
+    {
+     "source_index": 17,
+     "locator": "Overpass result (way 31972720)",
+     "paraphrase": "RMUT Uthenthawai campus polygon center 13.7418147, 100.5311981 (~1.1 km north)."
+    }
+   ],
+   "limitations": [
+    "The Standard article body did not render — only the lead was read",
+    "Exact rai-age and precise boundaries of the disputed land not obtained",
+    "2026 developments are snippet-level beyond the lead"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c12",
+   "text_en": "The food score's raw input (462 food venues in 1.25 km2) is consistent with the documented eating ecosystem: Wikipedia states Sam Yan (with adjacent Suan Luang) 'continues to be well known as a gastronomic destination'; Time Out crowned Samyan-Chula Bangkok's coolest neighbourhood for 2020 on the strength of the old-eats-plus-new-cafes mix (ranked 16th globally per The Nation — snippet-only); everyday eating spans relocated Sam Yan Market stalls, hospital-area canteens, campus food courts and Mitrtown's Eating Library food floors, with the Banthat Thong street-food strip (the old cheap-eats refuge) 'under 1 km' from the mall per Mitrtown's own site. The app's 76-cafe count fits the Time Out cafe-wave framing. No price survey inside the unit was found, so the cheap-eating claim rests on the historical record (1965 market, student restaurants) rather than current price checks.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "eating venues across the catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "462/76 are app-side counts; this claim tests plausibility, not the numbers."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1965-2026",
+    "recheck_by": null,
+    "notes": "Time Out recognition dates to Oct 2020."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "markets/food sections",
+     "paraphrase": "Sam Yan Market est. 1965 with cheap upstairs student restaurants; area 'continues to be well known as a gastronomic destination'; Time Out 2020 coolest-neighbourhood recognition."
+    },
+    {
+     "source_index": 10,
+     "locator": "food and development paragraphs",
+     "paraphrase": "Crown for 2020; cafes and restaurants named drivers; old cheap eateries moved to Banthat Thong."
+    },
+    {
+     "source_index": 11,
+     "locator": "location/connections section",
+     "paraphrase": "Mall linked to the Banthat Thong street-food area under 1 km away."
+    }
+   ],
+   "limitations": [
+    "No current price or hygiene survey; cheap-eating continuity is asserted from history",
+    "Banthat Thong strip straddles the catchment edge — nearest point inside, most of the strip closer to National Stadium/Siam cells"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c13",
+   "text_en": "Sports infrastructure inside the catchment is unusually dense for a station area, which supports gym_sports 9: OSM shows the Chulalongkorn University Stadium (~0.76 km NNW), campus soccer fields (~0.58 km), tennis courts (~0.74 km NE), basketball courts at ~0.17 km, ~0.62 km and ~0.80 km (the MDCU court at the medical faculty), CU Sports Complex just outside the circle (~0.85 km), plus several private condo swimming pools; the 24-hour Celebrity Fitness and a Muay Thai gym operate at Mitrtown (snippets). Caveat: most campus facilities are university-managed and their public-access rules were not verified — the count includes amenities a non-affiliated resident may not be able to use.",
+   "kind": "factual_report",
+   "topics": [
+    "gym_sports",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "sports facilities within 800 m",
+    "relation_to_entity": "entire_unit",
+    "notes": "OSM-derived inventory; app count not changed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current (2026-11)",
+    "recheck_by": null,
+    "notes": "OSM state as of Nov 2026."
+   },
+   "evidence": [
+    {
+     "source_index": 15,
+     "locator": "Overpass element list (19 ways)",
+     "paraphrase": "CU Stadium (stadium), CU Sports Complex (sports_centre), MDCU basketball court, named soccer Fields 1-2 (private), tennis and basketball pitches, private swimming pools, with coordinates."
+    }
+   ],
+   "limitations": [
+    "Public-access rules for campus facilities unverified",
+    "RBSC (Royal Bangkok Sports Club) grounds geocode ~1.07 km NE — outside the circle, not counted"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c14",
+   "text_en": "Affordability: the app's district blends (Pathum Wan ~32,500 THB; Bang Rak ~71,000 THB) are district-level asking medians, not Sam Yan stock observations. The closest station-specific evidence found: Chapter Chula-Samyan averages ~30,795 THB/month across 22 rental listings (20,000-40,000 range; ~689-724 THB/sqm — snippet-only), while Hipflat's Sam Yan-station rent page (read in full) is dominated by citywide premium listings (185 Rajadamri at 95,000-250,000 THB; Scope Langsuan 480,000 THB; Pathum Wan 9,385 properties) rather than station-area stock. New sale launches push the other way (Culture Chula 1BR 38 sqm from ~7.59M THB; Wisdom Craft from ~9.9M THB — snippets). Researcher inference: the newer station-area stock brackets the Pathum Wan blend at its low end and sits far below the Bang Rak blend (pulled up by riverside/Sathorn luxury), so rent 3 ('expensive') is defensible for the district blend but likely overstates what a typical Sam Yan 1-bed costs; no signed-rent data exists in any source found.",
+   "kind": "estimate",
+   "topics": [
+    "rent",
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "condo stock near MRT Sam Yan vs district blends",
+    "relation_to_entity": "entire_unit",
+    "notes": "App rent score unchanged; blend-vs-stock gap documented."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 listings",
+    "recheck_by": "2027-05-01",
+    "notes": "Asking prices move; recheck after any new launches."
+   },
+   "evidence": [
+    {
+     "source_index": 18,
+     "locator": "listing table and district counters",
+     "paraphrase": "Station-filtered page dominated by Pathum Wan/Sathon premium rentals (95,000-490,000 THB examples); no station-level median shown; 8,942 listings total."
+    },
+    {
+     "source_index": 21,
+     "locator": "search-result summaries",
+     "paraphrase": "Chapter Chula-Samyan ~30,795 THB average rent (22 listings, 20-40k, ~690-720 THB/sqm); Culture Chula from 7.59M; Wisdom Craft from 9.9M (snippet-only)."
+    }
+   ],
+   "limitations": [
+    "Chapter Chula-Samyan figures are snippet-only (project page 404 on direct fetch)",
+    "Asking vs signed rents indistinguishable in all sources",
+    "Older mid-market buildings' rents not sampled — inference on the typical unit price is directional, not measured"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c15",
+   "text_en": "Nightlife 10 with only 21 mapped venues is the dataset's outlier, and no in-unit mechanism explains it: the sources that praise Sam Yan's after-dark life emphasise food, cafes and 24-hour study space, not bars (Time Out 2020, read in full), and guides describe Sam Yan as a quieter, more local zone than Silom (search snippets). The plausible mechanisms are positional: (1) one-stop access to the Silom corridor — MRT Si Lom ~0.8 km south-east feeds BTS Sala Daeng and the Patpong/Silom Soi 2-4 cluster (Patpong sits in Bang Rak's Suriyawong khwaeng, beyond Sala Daeng's cell); (2) the 24-hour Mitrtown ecosystem (Co-op, 24h retail zone, 24h gym) functioning as night-time social infrastructure rather than licensed venues; (3) legacy adult/night venues near the Suriwong/Si Phraya end — TripAdvisor's Sam Yan bars list surfaces The Boys Bangkok and Golden Cock Bar (snippet-only; positions unverified); (4) hotel-bar and student-hangout spillover at the edges. The score most plausibly prices accessibility to the adjacent nightlife corridor plus the 24-hour lifestyle layer, not venue density inside the polygon.",
+   "kind": "researcher_inference",
+   "topics": [
+    "nightlife",
+    "scores"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "unit vs Silom/Sala Daeng nightlife corridor",
+    "relation_to_entity": "entire_unit",
+    "notes": "Directly addresses the brief's tension (a); score unchanged."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2020-2026 sources",
+    "recheck_by": null,
+    "notes": "Inference — no source states why nightlife scores 10."
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "whole article",
+     "paraphrase": "Coolest-neighbourhood case rests on food, cafes, redevelopment and the 24/7 study complex — no bar-scene claim."
+    },
+    {
+     "source_index": 16,
+     "locator": "Overpass station nodes (Si Lom 0.8 km; Sala Daeng 0.6 km)",
+     "paraphrase": "One-stop geometry to the Silom corridor."
+    },
+    {
+     "source_index": 4,
+     "locator": "nightlife location note",
+     "paraphrase": "Patpong sits in Suriyawong khwaeng, Bang Rak — outside this unit's cell."
+    }
+   ],
+   "limitations": [
+    "Mechanism is inferred; no source connects the 21-venue count to the score",
+    "TripAdvisor venue positions inside/outside the polygon unverified (platform 403)",
+    "Resident-side perception threads (Reddit) inaccessible — 403"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c16",
+   "text_en": "Crowd 1 (highest crowding) is consistent with the unit's anchor loads: a ~41,600-student university on the northern flank, a 1,435-1,442-bed tertiary hospital with 24-hour emergency ~0.6 km east, a station that recorded 3.54M passengers in a COVID-suppressed 2021, a >300,000 sqm mall-office complex with a 24-hour zone, and the Thai-Japan flyover feeding Rama IV traffic through a four-way junction. The calendar compounds it: the hospital's operator runs the annual Thai Red Cross Fair at Lumpini Park (11-21 December 2025) — a regional crowd event one stop east — and the academic year concentrates students in semesters running roughly August-December and January-May with a mid-May-June summer session (registrar calendar — snippet-only). Counter-rhythm: weekend mornings and semester breaks visibly thin the campus-side streets, and no footfall data quantifies any of this — the crowding claim rests on anchor magnitudes, not measurements.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "rhythm",
+    "calendar"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "anchors: Chula, KCMH, Mitrtown, BL27",
+    "relation_to_entity": "entire_unit",
+    "notes": "Addresses brief tension (d)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026",
+    "recheck_by": "2026-12-22",
+    "notes": "Red Cross Fair period (late Nov-Dec) is the annual crowd peak to watch."
+   },
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "infobox",
+     "paraphrase": "41,611 students (2018 registrar figure)."
+    },
+    {
+     "source_index": 2,
+     "locator": "infobox/lede",
+     "paraphrase": "1,435-1,442 beds; emergency department; teaching-hospital scale."
+    },
+    {
+     "source_index": 1,
+     "locator": "infobox ridership",
+     "paraphrase": "3,542,328 passengers 2021."
+    },
+    {
+     "source_index": 22,
+     "locator": "search summaries of reg.chula.ac.th",
+     "paraphrase": "Semester structure Aug-Dec / Jan-May / summer mid-May-Jun (snippet-only)."
+    }
+   ],
+   "limitations": [
+    "No pedestrian or station footfall data for 2024-2026",
+    "Semester months are a calendar-structure summary, not a verified current-year calendar",
+    "Crowd-1 score presumably encodes app-side measures not available here"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c17",
+   "text_en": "Recent edge changes reshape the unit's context: on 19 January 2023 all 52 long-distance trains (14 Northern, 18 Northeastern, 20 Southern) moved from Hua Lamphong (~1.7 km west-north-west, khwaeng Rong Mueang) to terminate at Krung Thep Aphiwat, leaving only ordinary/commuter services and a museum/mixed-use redevelopment proposal — draining intercity flows and some visitor pressure from the unit's western neighbour (the SRT free shuttle ended 18 January 2024 — snippet-only). Within the unit, March 2025 brought the Myanmar earthquake damage/evacuation at Chulalongkorn Memorial Hospital; August-October 2026 brought the Uthenthawai closure orders; and 2024-2026 Bangkok Post coverage (headline-level, paywalled) tracks Chula's 'smart city' master plan to 2037 covering Suan Luang-Sam Yan, the shrine litigation, and heritage-loss critiques. Mitrtown (2019) remained the last major completed frontage change inside the catchment.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "transit",
+    "development"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Hua Lamphong edge, hospital, Chula master plan",
+    "relation_to_entity": "partial",
+    "notes": "Hua Lamphong station itself is outside the unit; its 2023 service cut changes the western edge experience."
+   },
+   "temporal_scope": {
+    "event_date": "2023-01-19",
+    "observed_period": "2023-01-2026-10",
+    "recheck_by": "2027-01-31",
+    "notes": "Uthenthawai 90-day window and Hua Lamphong redevelopment both pending."
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "operations section",
+     "paraphrase": "19 Jan 2023: all long-distance trains moved to Krung Thep Aphiwat (52 trains: 14/18/20); only ordinary and commuter trains remain; 2021 museum-conversion plan delayed by opposition; future Dark Red Line southern extension stop."
+    },
+    {
+     "source_index": 2,
+     "locator": "recent events note",
+     "paraphrase": "Hospital damaged during the 2025 Myanmar earthquake (BBC-cited)."
+    },
+    {
+     "source_index": 19,
+     "locator": "lead",
+     "paraphrase": "Sept 2026 measures: 3-month site closure, relocation planning."
+    }
+   ],
+   "limitations": [
+    "Bangkok Post pieces unverifiable beyond headlines (tollbit paywall)",
+    "Hua Lamphong redevelopment status (museum vs mixed-use) still undecided in sources",
+    "No 2024-2026 construction-start evidence inside the catchment itself was found"
+   ]
+  },
+  {
+   "claim_id": "sam-yan-c18",
+   "text_en": "Counter-evidence to the top-line scores, from sources read in full: (1) the area's amenity boom was financed by displacement — lease terminations, ~200% Chamchuri vendor rent hikes, the 2020 shrine eviction attempt, and the market's forced relocation are documented (New Mandala; Khaosod; Wikipedia), and 2024-2026 Bangkok Post headlines continue the critique ('Creative destruction', 'Heritage on trial'); (2) the cheap-eating reputation partly lives elsewhere now — Time Out states old cheap eateries 'largely moved' to Banthat Thong, so the unit's 462-venue count no longer means the old Sam Yan price floor; (3) environment — Rama IV is a flyover-carrying arterial whose frontage dominates the unit's southern edge; perpetual hospital-campus-mall construction and 2025 earthquake repairs are the noise backdrop; (4) the nightlife-10/vibe-10 scores outrun mapped venue counts (21) and rest partly on adjacent-corridor access (claim sam-yan-c15); (5) safety 7 has no direct crime data in any source found — the closest evidence is contextual (Ruamkatanyu rescue base at the temple; Uthenthawai student brawls ~1.1 km north; hospital evacuation disruption in 2025).",
+   "kind": "reported_perception",
+   "topics": [
+    "counter_evidence",
+    "affordability",
+    "environment",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "whole unit",
+    "relation_to_entity": "entire_unit",
+    "notes": "Required counter-view; no score changed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2018-2026",
+    "recheck_by": null,
+    "notes": "Critique literature spans 2020-2026."
+   },
+   "evidence": [
+    {
+     "source_index": 9,
+     "locator": "framing, Chamchuri, Scala sections",
+     "paraphrase": "'A capitalist institution hidden under the guise of respectability'; lease terminations and rent rises; 85-year-old vendor evicted; vendors sue."
+    },
+    {
+     "source_index": 10,
+     "locator": "transformation paragraphs",
+     "paraphrase": "Old cheap eateries 'largely moved' to Banthat Thong."
+    },
+    {
+     "source_index": 0,
+     "locator": "community/criticism passage",
+     "paraphrase": "Redevelopment 'prompted criticism of gentrification from conservation groups and students, especially Netiwit Chotiphatphaisal'."
+    }
+   ],
+   "limitations": [
+    "Point (1) draws on activist-authored and critical-press sources; the university's position is not represented in the read set beyond its own statements reported by Khaosod",
+    "No crime statistics found for the unit — safety 7 neither confirmed nor contradicted",
+    "Point (2) rests on a 2020 observation; current prices on the strip unmeasured"
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c01",
+    "sam-yan-c02",
+    "sam-yan-c09",
+    "sam-yan-c10"
+   ],
+   "notes": "Aliases: MRT สามย่าน (BL27); the junction name ('neighbourhood of three') refers to Rama IV x Phaya Thai x Si Phraya. Districts per app (pathum-wan + bang-rak) verified: Wang Mai khwaeng (Pathum Wan) north of Rama IV; Si Phraya khwaeng (Bang Rak) at Wat Hua Lamphong's corner. The app coordinate equals OSM's BL27 node exactly. Clipping, corrected against coordinate geometry: Hua Lamphong (MRT) is ~1.5 km west-north-west and Si Lom ~0.8 km south-east — the brief's 'Si Lom north / Hua Lamphong south' labels are inverted relative to actual bearings; effective clips ~0.4 km SE (Si Lom midline), ~0.75 km WNW (Hua Lamphong midline), ~0.9 km E (Lumphini midline), ~0.3 km S (Sala Daeng BTS midline). Chula campus: only the eastern fringe (gardens, stadium edge, Phaya Thai frontage blocks) is inside; the campus core and Centenary Park (~1.0 km NW) are outside. Lumphini Park (~1.0 km E) is outside — st.lumphini's. Assumption Cathedral quarter (Charoen Krung) ~2 km SW — not part of this unit despite the brief's Bang Rak flag."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c04",
+    "sam-yan-c05",
+    "sam-yan-c08",
+    "sam-yan-c16"
+   ],
+   "notes": "Everyday texture is institutional: hospital hours (24h ER, weekday OPD peaks) set the eastern rhythm; the university sets the northern one (semesters ~Aug-Dec, ~Jan-May, summer mid-May-Jun per the registrar calendar — snippet-only); Mitrtown runs the evening/night layer with a 24-hour zone, 24h Samyan Co-op reading space and 24h gym. The temple (Wat Hua Lamphong) adds funeral-merit and shrine rhythms at the junction's corner. Mornings skew hospital/campus; afternoons to shopping and clinics; nights to the 24h study/retail layer — which is why the unit reads 'alive at midnight' without a bar street."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c04",
+    "sam-yan-c05",
+    "sam-yan-c06",
+    "sam-yan-c12",
+    "sam-yan-c16"
+   ],
+   "notes": "Value mechanisms per sources: (1) anchor density — a top-tier teaching hospital (1,435-1,442 beds) plus Thailand's oldest university (~41,600 students) within one catchment creates constant demand for housing, food and services; (2) tunnel-connected retail — Mitrtown (300,000+ sqm, 24h zone) converts that demand into amenities reachable without crossing traffic; (3) food density — 462 mapped venues on a gastronomic-reputation base (Time Out 2020 crown; 1965 market lineage); (4) rail access — BL27 with 3.54M passengers (2021) on the loop line. Most value statements are guide/developer-side; the anchor facts are verified."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c18",
+    "sam-yan-c10",
+    "sam-yan-c11",
+    "sam-yan-c14",
+    "sam-yan-c15"
+   ],
+   "notes": "Counter-evidence found and used: the amenity boom rode on documented displacement (lease terminations, ~200% vendor rent hikes, 2020 shrine eviction attempt, market relocation); the old cheap-eats moved to Banthat Thong; rents for new stock (20-40k snippets) still exceed older stock with no signed-rent data; Rama IV's flyover traffic and perpetual construction are the sensory baseline; nightlife-10 outruns the 21 mapped venues and leans on the adjacent Silom corridor; safety 7 lacks any crime data; Uthenthawai brawl closures (2026) and the 2025 hospital earthquake evacuation are the recent shock events."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c16",
+    "sam-yan-c04",
+    "sam-yan-c05"
+   ],
+   "notes": "Semester vs summer: campus-side streets and food courts thin outside ~Aug-Dec and ~Jan-May (calendar structure snippet-only). Weekday vs weekend: hospital and offices keep weekdays heavy; weekend mornings are the quiet window; Mitrtown's 24h layer runs constant. Annual: the Thai Red Cross Fair (11-21 Dec 2025 at Lumpini — snippet-only) is the regional crowd peak tied to the hospital's operator; Lunar-New-Year-type shrine activity and funeral merit-making at Wat Hua Lamphong add steady local flows. No quantitative footfall data found for any of this — rhythm is anchor-derived."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c03",
+    "sam-yan-c02"
+   ],
+   "notes": "Walkability stack: 3 exits + 2 elevators; underground tunnels into Chamchuri Square and Mitrtown (heat/rain-proof; mall tunnels reported open from 06:00 — snippet-only); Wat Hua Lamphong ~110 m; bus stops at street level. Rama IV is crossed via station underpasses/footbridges — the junction is four-way at-grade under a bidirectional flyover (1992), and no at-grade crossing inventory was verified, so crossing comfort is inferred from the tunnel network rather than measured. Shade: campus lanes and the 30 m-wide, 1.35 km Chula Centenary Road (PMCU) are designed for slow traffic and trees, but most of that axis lies outside the catchment. Distances are stated, not converted to walking times."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c04",
+    "sam-yan-c05",
+    "sam-yan-c13",
+    "sam-yan-c08"
+   ],
+   "notes": "Groceries: Gourmet Market at Mitrtown B1 (snippet-only) plus the mall's food floors; the relocated Sam Yan Market covers wet-market needs a few hundred metres NW. Clinics/pharmacies cluster around the hospital. Hospitals: King Chulalongkorn Memorial Hospital (1,435-1,442 beds, 24h ER) ~0.6 km E. Gyms: 24h Celebrity Fitness + Muay Thai gym at Mitrtown (snippets); CU Stadium and courts ~0.6-0.8 km N — access rules for non-students unverified. Temples/shrines (16 mapped) including Wat Hua Lamphong with its Ruamkatanyu rescue base. Snake Farm (Queen Saovabha Memorial Institute, Red Cross) is listed among station-area connections (Wikipedia)."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c14",
+    "sam-yan-c09"
+   ],
+   "notes": "The 32,500/71,000 THB figures are district blends (Pathum Wan / Bang Rak), not Sam Yan observations. Station-specific asking evidence: Chapter Chula-Samyan ~30,795 THB avg (22 listings, 20-40k, ~690-720 THB/sqm — snippet-only); Hipflat's station-filtered page skews to citywide luxury. The blend-vs-stock test: a typical newer Sam Yan 1-bed asks around or below the Pathum Wan blend and far below the Bang Rak blend, so rent 3 ('expensive') is defensible only at district level; the historical displacement record explains why mid-market stock is thin (old stock redeveloped, new stock launched at 7.6-9.9M sale prices). Asking vs signed: no signed-rent source exists in the read set."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c07",
+    "sam-yan-c02"
+   ],
+   "notes": "Green 9 with 3.2 ha: no single named public park of that size exists inside the catchment. OSM shows a cluster of small campus gardens (Chakrabongse Yard, Sathiramaithri, Chamchuri Yard, Phra Kiao Kaew, Waew Wajira) plus Wat Hua Lamphong Rukkhaniwet Park (~0.14 km S). The two famous parks are outside: Centenary Park (4.5-4.6 ha, 2017, Landprocess, flood-sponge design) is ~1.0 km NW in the National Stadium/Siam cells — NOT the app's polygon despite the plausible name match — and Lumphini Park (~1.0 km E) is st.lumphini's. The 3.2 ha is most plausibly an aggregation of campus greenscape (gardens + stadium lawns); polygon areas not computed; open issue stands."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c04",
+    "sam-yan-c05",
+    "sam-yan-c06",
+    "sam-yan-c13",
+    "sam-yan-c14",
+    "sam-yan-c16"
+   ],
+   "notes": "Best fit: Chula students/staff and hospital workers (anchors at the door, 24h layer, semester rhythm); patients' families needing long stays near a top hospital; car-free CBD workers (BL27 + tunnels). Workable: 24h-study lifestyles (Co-op), gym users with campus access. Weaker fit: green-space seekers (nearest big parks outside the unit), bargain hunters wanting the old Sam Yan price floor (largely dispersed to Banthat Thong), nightlife-first residents (the actual bar cluster is one stop south), and drivers (Rama IV frontage, flyover)."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c17",
+    "sam-yan-c10",
+    "sam-yan-c11"
+   ],
+   "notes": "2024-2026 changes: March 2025 earthquake damage/evacuation at Chulalongkorn Memorial Hospital; Aug-Oct 2026 Uthenthawai closure orders (3-month site closure, 90-day relocation, Chula commits land to public use only — lead-level reading); shrine litigation and pending demolition reports continuing 2025-2026 (snippet-only); Chula 'smart city' master plan to 2037 for Suan Luang-Sam Yan documented in 2024-2026 Bangkok Post coverage (paywalled — headline-level only). The last major completed change inside the catchment was Mitrtown (2019); the MRT Blue Line loop completion (2019-2020) predates the review window. Hua Lamphong's 2023 long-distance-rail exit and its museum/mixed-use future continue to reshape the western edge."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "sam-yan-c15",
+    "sam-yan-c07",
+    "sam-yan-c14",
+    "sam-yan-c18"
+   ],
+   "notes": "Outside-the-score items: (1) the nightlife-10 mechanism — inferred as corridor accessibility (Si Lom/Sala Daeng/Patpong one stop away) + the 24h Mitrtown layer + legacy venues near the Suriwong end; no source states the causal link, and the 21-venue count is the app's own mapping; (2) the 3.2 ha green polygon identity; (3) signed rents (none anywhere); (4) public-access rules for campus sports facilities; (5) ridership beyond 2021; (6) at-grade Rama IV crossing inventory; (7) CU Bike bike-share status (lead not pursued — no search conducted); (8) Reddit/TripAdvisor resident-experience threads (403). None of these change app scores; all are flagged for follow-up."
+  }
+ ],
+ "editorial": {
+  "preview": "A hospital-and-university junction on Rama IV where the campus landlord built the mall, the library runs 24 hours, and the nearest big park is a kilometre away in someone else's catchment.",
+  "guide_lead": "Sam Yan is the junction where Rama IV Road meets Phaya Thai and Si Phraya under the Thai-Japan flyover — Chulalongkorn University land on the north side, Bang Rak's temples and shops across it. The 1.25 sq km catchment holds three institutions that never close: a 1,400-plus-bed teaching hospital east, a 41,000-student university north, and Samyan Mitrtown (2019), the mall the university's redevelopment wave produced, with its free 24-hour Samyan Co-op study floor and 24-hour retail zone. Days run on hospital shifts and semester calendars; nights run on the 24-hour layer rather than bars — the actual nightlife sits one MRT stop south in the Silom corridor. What you trade: the old Sam Yan of 1965 shophouses and the 1965 market was redeveloped out from 2008 onward (the displacement record is unusually well documented), the famous parks (Centenary, Lumpini) are both outside the boundary, and the district-blend rents overstate what a typical unit here actually asks.",
+  "strengths": [
+   {
+    "text_en": "Institutional depth at the door: a top-tier teaching hospital (1,435-1,442 beds, 24h ER) ~0.6 km east and the country's oldest university (~41,600 students) on the north flank — constant demand keeps services dense.",
+    "claim_ids": [
+     "sam-yan-c05",
+     "sam-yan-c06"
+    ]
+   },
+   {
+    "text_en": "The 24-hour layer is real infrastructure, not marketing: free 500-seat Samyan Co-op study space, a 24-hour retail zone, a 24-hour gym, all tunnel-connected to BL27 without crossing Rama IV.",
+    "claim_ids": [
+     "sam-yan-c04",
+     "sam-yan-c03"
+    ]
+   },
+   {
+    "text_en": "Eating density matches the 462-venue count: a 1965 market lineage, hospital and campus canteens, and a Time Out 2020 coolest-neighbourhood crown built on the food-and-cafe mix.",
+    "claim_ids": [
+     "sam-yan-c12"
+    ]
+   },
+   {
+    "text_en": "Car-free living works: the Blue Line loop station (3.54M passengers in 2021), underground mall links, buses at street level, and campus lanes north of the arterial.",
+    "claim_ids": [
+     "sam-yan-c03",
+     "sam-yan-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The amenities were financed by displacement: the 2008 demolition plans, the market's relocation, ~200% Chamchuri vendor rent hikes, and the 2020 shrine eviction attempt are documented in news and activist sources — the neighbourhood's social cost is part of its physical form.",
+    "claim_ids": [
+     "sam-yan-c09",
+     "sam-yan-c10"
+    ]
+   },
+   {
+    "text_en": "Green is campus-mediated: no single 3.2 ha public park exists inside the boundary — the green score rests on university gardens and stadium lawns, while Centenary Park (~1.0 km NW) and Lumpini (~1.0 km E) belong to other units.",
+    "claim_ids": [
+     "sam-yan-c07"
+    ]
+   },
+   {
+    "text_en": "The nightlife-10 score outruns its footprint: 21 mapped venues against a documented character of food-and-study nights — the score prices proximity to Silom's corridor, not bars in the catchment.",
+    "claim_ids": [
+     "sam-yan-c15"
+    ]
+   },
+   {
+    "text_en": "The rent blends mislead in both directions: newer Sam Yan stock asks ~20-40k (below the Bang Rak blend of ~71k, around the Pathum Wan blend's floor), and no signed-rent data exists; the old cheap stock is gone.",
+    "claim_ids": [
+     "sam-yan-c14",
+     "sam-yan-c09"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Morning-to-afternoon belongs to the hospital and campus: OPD queues, clinic runs, canteen meals, student flows on Phaya Thai — the weekday pulse of two institutions that never pause.",
+    "claim_ids": [
+     "sam-yan-c05",
+     "sam-yan-c06"
+    ]
+   },
+   {
+    "text_en": "Evening shifts to Mitrtown's Eating Library and the tunnels; the junction's restaurants and the relocated market's stalls keep local hours.",
+    "claim_ids": [
+     "sam-yan-c04",
+     "sam-yan-c12"
+    ]
+   },
+   {
+    "text_en": "Late night is a study-and-service night, not a bar night: the Co-op fills, the 24h zone and gym run, and the actual club traffic passes through the station toward Silom one stop south.",
+    "claim_ids": [
+     "sam-yan-c04",
+     "sam-yan-c15"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Junction core (NW/NE corners): Mitrtown and Chamchuri Square with the tunnels — retail, offices, the 24h layer; the most polished frontage.",
+    "claim_ids": [
+     "sam-yan-c04"
+    ]
+   },
+   {
+    "text_en": "East (hospital block): 24/7 institutional rhythm — ambulances, visitors, pharmacies, medical-faculty courts; the densest foot traffic and the 2025 earthquake disruption.",
+    "claim_ids": [
+     "sam-yan-c05"
+    ]
+   },
+   {
+    "text_en": "South and west (Si Phraya side and old lane fabric): Wat Hua Lamphong, shrines, the relocated market's direction, older shophouse remnants — the quietest corners and the closest thing to pre-redevelopment Sam Yan.",
+    "claim_ids": [
+     "sam-yan-c08",
+     "sam-yan-c09"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose Sam Yan if you are tied to the hospital or the university — staff, students, patients' families — or if a 24-hour study-and-gym rhythm matters more than a bar street; the tunnel-connected mall makes car-free daily life practical.",
+    "claim_ids": [
+     "sam-yan-c04",
+     "sam-yan-c05",
+     "sam-yan-c06"
+    ]
+   },
+   {
+    "text_en": "Test the rent claim against real units: district blends (32.5k/71k) describe Pathum Wan and Bang Rak, not this stock; Chapter Chula-Samyan-style 1-beds ask ~20-40k, and older buildings ask less — verify per building before budgeting.",
+    "claim_ids": [
+     "sam-yan-c14"
+    ]
+   },
+   {
+    "text_en": "Look elsewhere if you need big public green inside your daily radius, a within-catchment bar scene, or the old cheap-eats Sam Yan — all three live outside the boundary now.",
+    "claim_ids": [
+     "sam-yan-c07",
+     "sam-yan-c15",
+     "sam-yan-c09"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The app's 3.2 ha green polygon could not be matched to any single named park; OSM areas were not computed (centers only) — needs an app-side or geometry-level check.",
+   "Nightlife-10 mechanism is inference: corridor access + 24h layer + legacy venues; no source connects the 21-venue count to the score.",
+   "All rent figures are asking prices; signed rents absent from every source; Chapter Chula-Samyan average (~30,795 THB) is snippet-only.",
+   "Station ridership is 2021 only (COVID-suppressed); no 2024-2026 per-station BEM figure found; BEM's official station page not located.",
+   "Exit-name mapping (Exit 1 Wat Hua Lamphong / Exit 2 Chamchuri-Mitrtown) is snippet-level; footbridge/at-grade crossing inventory on Rama IV unverified.",
+   "Campus sports facilities' public-access rules unknown — gym_sports 9 partly rests on restricted amenities.",
+   "Bangkok Post 2024-2026 Sam Yan coverage (Chula 2037 master plan, heritage critiques) paywalled — headline-level corroboration only.",
+   "Whether Wikipedia's 'San Chao Mae Tubtim' inside the neighborhood duplicates the Saphan Lueang shrine site (~1.1 km N) is unresolved.",
+   "CU Bike bike-share status (brief lead) not researched — no query run; U-Center and Si Mueang Miang leads skipped per brief.",
+   "Wikipedia infobox station coordinate differs from the app/OSM node by ~95 m; app coordinate used throughout."
+  ]
+ },
+ "open_issues": [
+  "Identify the 3.2 ha green polygon (compute OSM polygon areas or inspect the app layer; candidates: aggregated campus gardens incl. Chakrabongse Yard, Sathiramaithri, Chamchuri Yard — none individually documented at 3.2 ha).",
+  "Obtain signed-rent or per-building asking data for Sam Yan stock (Chapter Chula-Samyan average is snippet-only; older buildings unsampled).",
+  "Confirm BEM's official exit list and 2024-2026 per-station ridership for BL27 (official page not found during research).",
+  "Resolve whether 'San Chao Mae Tubtim' (Wikipedia, neighborhood) and the Chao Mae Tabtim Saphan Luang shrine (~1.1 km N) are one shrine's two sites or two shrines.",
+  "Track the Uthenthawai 90-day relocation (due ~Dec 2026) and the shrine litigation outcome; recheck both by early 2027.",
+  "Verify campus sports facilities' public-access rules before defending gym_sports 9 for non-students.",
+  "Reconcile the brief's clip-direction labels ('Si Lom north', 'Hua Lamphong south') with coordinate geometry (Si Lom SE ~0.8 km; Hua Lamphong WNW ~1.5 km) — app data unchanged.",
+  "Verify the 2026 Thai Red Cross Fair dates and whether Dec 2026 crowding measurably affects the unit.",
+  "Read the paywalled Bangkok Post 2024-2026 pieces (tollbit gateway) if access is granted — Chula 2037 master plan details and heritage-loss arguments are headline-level only.",
+  "Research CU Bike bike-share status (brief lead left unexplored)."
+ ]
+}

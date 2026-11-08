@@ -1,0 +1,809 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "dusit",
+  "kind": "district",
+  "name_en": "Dusit",
+  "name_th": "ดุสิต",
+  "aliases": [
+   "Thewet",
+   "Thewes",
+   "Samsen",
+   "Si Yan",
+   "Chitralada",
+   "Dusit Palace",
+   "Kiakkai",
+   "Rama V Road"
+  ],
+  "scope_notes": "Administrative khet; khwaeng subareas differ — mark subarea claims partial. Boundary claims decided by app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.14,
+  "cohort_rank": 16,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): district rank 16/50, score 7.14."
+ },
+ "sources": [
+  {
+   "id": "src_1d889668cbf5",
+   "canonical_url": "https://en.wikipedia.org/wiki/Dusit_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Dusit_district",
+   "title": "Dusit district",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_f8ea14a23139",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95",
+   "title": "เขตดุสิต",
+   "publisher": "Thai Wikipedia",
+   "publisher_family": "Wikipedia (TH)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "population row carries a likely year typo ('ข้อมูลปี 2570')"
+   ]
+  },
+  {
+   "id": "src_3adde92287da",
+   "canonical_url": "https://en.wikipedia.org/wiki/Sappaya-Sapasathan",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sappaya-Sapasathan",
+   "title": "Sappaya-Sapasathan",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_0665ccb856b2",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/273852",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/273852",
+   "title": "สวนสัตว์ดุสิตปิดทำการสิ้นเดือน ส.ค. นี้",
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS (public broadcaster)",
+   "author": null,
+   "published_at": "2018-08-08",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_edb9ab169444",
+   "canonical_url": "https://isranews.org/article/isranews-scoop/137982-isra-news-zoo.html",
+   "retrieved_url": "https://isranews.org/article/isranews-scoop/137982-isra-news-zoo.html",
+   "title": "สวนสัตว์เฉลิมพระเกียรติ ร.10 (เขาดิน 2) ปทุมธานี",
+   "publisher": "Isranews",
+   "publisher_family": "Isranews (agency)",
+   "author": null,
+   "published_at": "2025-05-15",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_e7f47cd6e7d1",
+   "canonical_url": "https://www.mrta.co.th/th/rat-burana",
+   "retrieved_url": "https://www.mrta.co.th/th/rat-burana",
+   "title": "โครงการ MRT สายสีม่วง เตาปูน-ราษฎร์บูรณะ",
+   "publisher": "MRTA",
+   "publisher_family": "MRTA (government, official)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_d521e8e25036",
+   "canonical_url": "https://en.wikipedia.org/wiki/2025_Bangkok_road_collapse",
+   "retrieved_url": "https://en.wikipedia.org/wiki/2025_Bangkok_road_collapse",
+   "title": "2025 Bangkok road collapse",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "article carries a suspected-LLM-generated tag - details need news corroboration before publication"
+   ]
+  },
+  {
+   "id": "src_364acb37e79e",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/dusit",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/dusit",
+   "title": "Condos for rent in Dusit",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "property portal",
+   "limitations": [
+    "only 25 listings - thin market, averages unstable"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "dusit-c01",
+   "text_en": "Khet Dusit (ดุสิต, geocode 1020) covers 10.665 km2 (app 10.66 matches) in five khwaeng: Dusit 2.233 km2, Wachiraphayaban 1.074, Suan Chitlada 1.737, Si Yaek Maha Nak 0.339 (tiny - the batch's smallest khwaeng), Thanon Nakhon Chai Si 5.282 (half the khet). Registered population 75,814 per TH Wikipedia (year field carries a typo; EN wiki gave 95,852 for 2017; the app's 83,897 sits between vintages). Born as a royal district in the 1890s (one of eight inner amphoe), absorbed Bang Sue in 1938, lost it on 9 Nov 1989. OSM: khet relation 92069, khwaeng relations 11487355-59.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "on next DOPA cycle",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "infobox + 'แขวง' table",
+     "paraphrase": "10.665 km2; five khwaeng with areas; population row 75,814"
+    },
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "infobox + history",
+     "paraphrase": "area 10.7 km2; 95,852 (2017); Dusit Palace from 1890s; amphoe history"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "population vintages conflict across sources; TH wiki year field suspect"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "dusit-c02",
+   "text_en": "The royal/government quarter is real and dense: Dusit Palace (begun 1890s) with Vimanmek Mansion (1900, all teak; closed 2018), Ananta Samakhom Throne Hall (1907-1915, Italy-built, the first parliament), the Royal Plaza with the Rama V equestrian statue, Amphorn Sathan Residential Hall - the present King's residence - Chitralada Villa, Government House, the National Library, converted palaces now housing the Ministry of Education and Suan Sunandha Rajabhat University, plus military camps (EN Wikipedia notes the district's political nickname 'Military Zone').",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "landmarks"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "landmarks sections",
+     "paraphrase": "Dusit Palace/Vimanmek/Ananta Samakhom/Royal Plaza/Amphorn Sathan/Chitralada/Government House/camp note and 'Military Zone' nickname"
+    },
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "'พระราชวัง' list",
+     "paraphrase": "พระที่นั่งอัมพรสถาน as the King's current residence; ลานพระรูป (Royal Plaza) named"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "dusit-c03",
+   "text_en": "The new parliament is in and finished: Sappaya-Sapasathan sits in the Kiakkai neighbourhood, khwaeng Thanon Nakhon Chai Si, on the river - construction started 8 Jun 2013, parliament began meeting there August 2019, official completion 1 May 2021; 424,000 m2 makes it the world's largest parliament building; the budget grew from 14bn to ~23bn baht with no penalties for the four-year delay. This is the khet's biggest 2019-2021 fixed change and still defines weekday security/traffic rhythms (inference from siting, flagged).",
+   "kind": "factual_report",
+   "topics": [
+    "landmarks",
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Sappaya-Sapasathan",
+    "relation_to_entity": "inside",
+    "notes": "verify-target from brief: opened = first use Aug 2019, completion May 2021"
+   },
+   "temporal_scope": {
+    "event_date": "2021-05-01",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3adde92287da",
+     "locator": "location + history + facts",
+     "paraphrase": "Kiakkai, Thanon Nakhon Chai Si Subdistrict, Dusit; first use Aug 2019; completed 1 May 2021; 424,000 m2; 14->23bn THB"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "dusit-c04",
+   "text_en": "Zoo closure and what replaced it: Dusit Zoo (Khao Din Wana) - Thailand's first zoo - closed at end-August 2018 per plan, with ~1,600 animals moved to the six ZPO zoos (60% of birds to Khao Kheow) over ~120 days (Thai PBS, 8 Aug 2018); EN Wikipedia rounds to 'end of September 2018'. The replacement is the new zoo on a 300-rai royal grant at Khlong 6, Thanyaburi, Pathum Thani: total budget 10,974,647,858 baht, phase 1 built from 12 Apr 2023 (5,545,332,100 baht), over 50% complete as of May 2025, phase-1 opening planned 2571 and full public access 2572 (Isranews, 15 May 2025). The ORIGINAL Dusit-site grounds have no confirmed reuse in any body read - park/hospital speculation exists only at snippet/forum level (flagged, not used).",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Dusit Zoo site (Khao Din Wana)",
+    "relation_to_entity": "inside",
+    "notes": "verify-target from brief: what replaced the zoo - answer: relocation to Pathum Thani; site itself idle"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2018 closure to present",
+    "recheck_by": "old-site announcement; new-zoo 2571/2572 milestones",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_0665ccb856b2",
+     "locator": "closure/move paragraphs",
+     "paraphrase": "closure end Aug 2018; ~1,600 animals, 6 zoos, birds to Khao Kheow; 300-rai royal grant at Khlong 6 Thanyaburi"
+    },
+    {
+     "source_id": "src_edb9ab169444",
+     "locator": "budget/progress section",
+     "paraphrase": "10,974,647,858 THB frame; phase 1 from 12 Apr 2023; >50% progress; openings 2571/2572"
+    },
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "landmarks",
+     "paraphrase": "'the first zoo in Thailand (moved to Pathum Thani province since the end of September 2018)'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "old-site future unverified in bodies read - open issue"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "dusit-c05",
+   "text_en": "Green-10 honesty check (app: 118.7 ha, 10.5% - second-highest park share): the area is real but largely NOT publicly usable green. The zoo grounds (~19 ha-scale royal land) have been fenced since 2018; Sanam Suea Pa is recorded as a Bureau of the Royal Household office site (EN Wikipedia); khwaeng Suan Chitlada is the royal residence quarter; palace grounds are ticketed/museum. The OSM read found no large leisure=park way inside the khet - the 118.7 ha figure must aggregate royal/institutional grounds (app polygons decide). Quiet-adjacent credit is real (density 7,108/km2 TH wiki, lowest of the batch), but 'green 10' overstates what a resident can walk into.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": "park-share composition is app-polygon territory; this claim assesses public-access honesty"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_d521e8e25036",
+     "locator": "green/landmarks context",
+     "paraphrase": "zoo site closed since 2018; Sanam Sua Pa listed under Bureau of the Royal Household office"
+    },
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "infobox density",
+     "paraphrase": "75,814 over 10.665 km2 = 7,108.67/km2"
+    },
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "Overpass area query (search_log)",
+     "paraphrase": "no railway=station node and no large leisure=park way returned inside khet Dusit"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no source read itemizes the 118.7 ha composition; access rules for Royal Plaza/Suan Amporn unsourced"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "dusit-c06",
+   "text_en": "Transport 6 (batch-low) verified: no BTS or MRT station lies inside the khet - EN Wikipedia puts the nearest MRT (Bang Sue) 'a short distance outside Dusit District', and the OSM area query returned no railway=station node inside khet Dusit. Rail presence is edge-only: the northern railway line borders the khet with Yommarat halt (khwaeng Suan Chitlada per TH wiki) and Sam Sen station (khwaeng Thanon Nakhon Chai Si), plus the special Chitrlada station 'not open for general use' (TH wiki). Daily transit is bus-plus-river: express-boat piers Thewet, Payap, Irrigation Dept, Kheaw Khai Ka and Kiak Kai (EN Wikipedia). Relief is under construction - MRT Purple south will run through the khet past the new parliament, Vajira Hospital and the National Library (MRTA official; TH wiki lists project stations Parliament, Si Yan, Vachira Phayaban, National Library) with a November 2030 opening target.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": "verify-target from brief: Dusit is transit-poor - confirmed"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "Purple line milestones",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "transport section",
+     "paraphrase": "MRT Bang Sue 'short distance outside Dusit District'; halts Yommarat/Sam Sen on district borders; five piers listed"
+    },
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "'การเดินทาง' section",
+     "paraphrase": "จิตรลดา station special/not public; สามเสน in khwaeng Thanon Nakhon Chai Si; ยมราช halt in khwaeng Suan Chitlada; MRT Purple project stations รัฐสภา/ศรีย่าน/วชิรพยาบาล/หอสมุดแห่งชาติ"
+    },
+    {
+     "source_id": "src_e7f47cd6e7d1",
+     "locator": "project facts block",
+     "paraphrase": "17 stations; civil 67.26%; opening Nov 2573; route passes new parliament, Vajira, National Library"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "halt stations are edge features; their polygon-side membership app-decided"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "dusit-c07",
+   "text_en": "September 2025 shock: on 24 Sep 2025 around 07:13 a sinkhole opened on Samsen Road in front of Vajira Hospital (khwaeng Wachiraphayaban area) - initially ~30 m wide/50 m deep, widening to ~40 m - after soil flowed into the under-construction MRT Purple tunnel; Samsen Road was closed indefinitely as of 5 Oct 2025, the Samsen police station was later demolished, and the PM estimated repairs at 'at least a year' (Wikipedia's collapse article; zero deaths/injuries). The article carries a suspected-LLM-generated tag - treat specifics as needing news corroboration before publication, but the event's existence, date and cause were also surfaced independently in Reuters/People search results.",
+   "kind": "factual_report",
+   "topics": [
+    "counter_evidence",
+    "recent_changes"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Samsen Road at Vajira Hospital",
+    "relation_to_entity": "inside",
+    "notes": "biggest 2024-2026 daily-life disruption found for the khet"
+   },
+   "temporal_scope": {
+    "event_date": "2025-09-24",
+    "observed_period": null,
+    "recheck_by": "Samsen reopening + MRTA tunnel remediation reports",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_d521e8e25036",
+     "locator": "event/cause/aftermath sections",
+     "paraphrase": "24 Sep 2025 07:13; ~30x50 m widening to 40 m; Purple tunnel soil inflow; Samsen closed indefinitely 5 Oct; 0 deaths; >=1-year repair estimate"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "source flagged for suspected LLM-generated content; corroborate with Reuters/Thai media bodies before editorial use"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "dusit-c08",
+   "text_en": "Rent corroboration (rent 8, editorial 13,000/26,000): HipFlat lists only 25 condos - a thin, institution-shaped market - at USD 12/sqm (Oct 2026). Published asks span the editorial band: 1BRs ฿9,000-13,000 (The Tree Privata, Lazio Sriyan, Baan Samsen), ฿12,000 for a 50 sqm studio (Supavadee Tower), ฿18,000-25,000 for better 1BRs (Wan Vayla riverside, Supalai Premier Samsen-Ratchawat), 2BR Dusit Avenue ฿20,000-28,000, up to USD 1,493-4,480 for large river-view units. One listing describes the area as 'a calm, well-established neighborhood'.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "October 2026",
+    "recheck_by": "quarterly",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_364acb37e79e",
+     "locator": "stats + listings",
+     "paraphrase": "25 condo available; USD12/sqm Oct 2026; THB asks 9k-13k / 18k-25k / 20k-28k; river-view USD1,493-4,480"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "25-listing sample; averages unstable; portal bias"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "dusit-c09",
+   "text_en": "Crowd-5 (least crowded) supported: density 7,108.67/km2 (TH wiki Dec-2023 vintage) is the batch's lowest against Bang Sue's 10,276, Bangkok Noi's ~8,691-era and Bang Phlat's 7,677; the khet's fabric is palaces, ministries, camps and universities (Suan Sunandha Rajabhat, Chitralada School refs in listings) rather than retail fronts. Vibe 8 rides the same facts; nightlife 5 is the honest floor - no nightlife venue, bar-street or after-dark venue type appeared in ANY body read for this khet.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "nightlife",
+    "vibe"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "infobox",
+     "paraphrase": "density 7,108.67/km2"
+    },
+    {
+     "source_id": "src_1d889668cbf5",
+     "locator": "landmarks/institutions",
+     "paraphrase": "palaces, ministries, military camps, universities dominate the landmark list; no entertainment venues named"
+    },
+    {
+     "source_id": "src_364acb37e79e",
+     "locator": "listing description",
+     "paraphrase": "'a calm, well-established neighborhood'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "nightlife-5 is an absence-of-evidence reading over four bodies + searches; app's 15-venue count is small but its composition unknown"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "dusit-c10",
+   "text_en": "Walkability and gaps: no body read describes street-level walkability anywhere in the khet - recorded as a gap rather than filled; the known pedestrian anchors are the palace/museum cluster, the riverside at Kiak Kai, and (until Sep 2025) Samsen Road's hospital frontage, now an indefinite construction closure. Nang Loeng market - a famous old market often associated with the khet - was NOT covered by the bodies read (TH wiki mentioned only the defunct Nang Loeng racecourse), so no market claim is made here.",
+   "kind": "researcher_inference",
+   "topics": [
+    "daily_life",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Dusit",
+    "relation_to_entity": "entire_unit",
+    "notes": "explicit gap-keeping per brief"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_d521e8e25036",
+     "locator": "aftermath section",
+     "paraphrase": "Samsen Road closed indefinitely as of 5 Oct 2025"
+    },
+    {
+     "source_id": "src_f8ea14a23139",
+     "locator": "sports section",
+     "paraphrase": "only 'สนามม้านางเล้ง' (Nang Loeng racecourse) appears - the market is absent from bodies read"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "absence-of-findings claim within the logged query set"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c01",
+    "dusit-c02",
+    "dusit-c03"
+   ],
+   "notes": "Khet Dusit, 10.665 km2, 5 khwaeng (Dusit 2.233 / Wachiraphayaban 1.074 / Suan Chitlada 1.737 / Si Yaek Maha Nak 0.339 / Thanon Nakhon Chai Si 5.282). In: Dusit Palace, Vimanmek (closed 2018), Ananta Samakhom, Royal Plaza, Chitralada, Government House, Sappaya-Sapasathan parliament (Thanon Nakhon Chai Si), Marble Temple, Vajira Hospital, zoo site (fenced). Sam Sen railway station in khwaeng Thanon Nakhon Chai Si per TH wiki (EN wiki reads it as border - app polygons decide); MRT Bang Sue outside the khet."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c02",
+    "dusit-c09",
+    "dusit-c10"
+   ],
+   "notes": "Subarea lives inferable: palace/government quarter (khwaeng Dusit/Wachiraphayaban), riverside Kiakkai (parliament), Samsen hospital corridor (Vajira - and the 2025 sinkhole), Suan Chitlada royal-residence quarter, Si Yaek Maha Nak tiny market-corner khwaeng. Market-level texture thin in bodies read."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c06",
+    "dusit-c05"
+   ],
+   "notes": "Transport 6 - batch-low - verified: no BTS/MRT station inside the khet (OSM + EN wiki); edge halts (Yommarat, Sam Sen, special Chitrlada) + river piers carry it; MRT Purple south (4 stations) targeted Nov 2030."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c05",
+    "dusit-c07",
+    "dusit-c04"
+   ],
+   "notes": "Counter-views: (1) green 10/118.7 ha is mostly royal/institutional grounds with limited public access - the zoo chunk fenced since 2018; (2) Sep-2025 sinkhole shows construction risk on the Purple line corridor; (3) population/area vintages conflict across sources."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c03",
+    "dusit-c07"
+   ],
+   "notes": "Rhythm is ceremonial-parliamentary (session calendar since Aug 2019; royal residence in-khet) plus hospital workdays - both inferred from siting; closure frequency around Royal Plaza/palace roads unsourced."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c10",
+    "dusit-c06"
+   ],
+   "notes": "No walkability prose in any body read; pedestrian anchors are the palace/museum cluster and river piers; Samsen Road walking frontage closed since Sep 2025. No radius-to-time conversions made."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c02",
+    "dusit-c09",
+    "dusit-c08"
+   ],
+   "notes": "Daily life: institutional - ministries, courts of the royal quarter, universities, Vajira Hospital; retail is neighborhood-scale (25 condo listings, Makro Samsen reference in a listing); Nang Loeng market unverified in bodies read (gap kept)."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c08"
+   ],
+   "notes": "Rent 8 / 13,000-26,000: HipFlat 25 listings span 9k-28k THB with riverside premiums far above - editorial band consistent for ordinary stock; thin-market caveat."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c05",
+    "dusit-c04"
+   ],
+   "notes": "Green/quiet polygon honesty: 10.5% park share real but mostly non-public (zoo fenced, Sanam Suea Pa royal-household, Suan Chitlada residence); quiet credit real (lowest density in batch); recommend coordinator review of green-10 input."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c02",
+    "dusit-c06",
+    "dusit-c09"
+   ],
+   "notes": "Fits: government/military/royal-quarter workers, quiet-seekers, heritage walkers. Poor fit: transit-dependent car-free renters (no in-khet rail until ~2030), nightlife seekers."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c03",
+    "dusit-c04",
+    "dusit-c06",
+    "dusit-c07"
+   ],
+   "notes": "2024-2026: Samsen Rd sinkhole (24 Sep 2025, Purple-line construction; indefinite road closure); Purple extension works 67.26% civil toward Nov-2030; Kiakkai bridge under construction (TH wiki); zoo site still idle, replacement zoo in Pathum Thani >50% (May 2025)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "dusit-c05",
+    "dusit-c10",
+    "dusit-c04"
+   ],
+   "notes": "Outside-the-score: composition of the 118.7-ha park figure unknown; Royal Plaza/Suan Amporn public-access rules unsourced; Nang Loeng market unverified; collapse-article details flagged (LLM-tag) pending news corroboration; population vintage spread."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "The royal quarter: palaces, the world's largest parliament building and 10.5% park share on paper - but the parks are mostly royal ground, the rail arrives in 2030, and Samsen Road is still dug up from the 2025 sinkhole.",
+   "claim_ids": [
+    "dusit-c02",
+    "dusit-c03",
+    "dusit-c05",
+    "dusit-c06",
+    "dusit-c07"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Dusit is Bangkok at its most formal: the Dusit Palace complex, the Marble Temple, Government House, and since August 2019 the Sappaya-Sapasathan parliament on the Kiakkai riverfront - 424,000 square metres, the world's largest parliament building. It is also the quietest khet in this researched comparison set (about 7,100 residents per km2) and, unusually for inner Bangkok, one with no BTS or MRT station inside it - buses and river piers carry the commute until the MRT Purple extension opens (2030 target, four planned stations). Green coverage looks abundant (10.5%) but much of it is royal or institutional ground; the old zoo has been fenced since 2018 with its replacement built far out in Pathum Thani. Rents run 9k-28k for listed stock. The trade-offs are as formal as the district: thin nightlife, thin retail, and a September 2025 tunnel-construction sinkhole that closed Samsen Road.",
+   "claim_ids": [
+    "dusit-c02",
+    "dusit-c03",
+    "dusit-c05",
+    "dusit-c06",
+    "dusit-c08",
+    "dusit-c07"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Quiet at inner-Bangkok density: 7,109/km2, the researched comparison set's lowest, across palace grounds, ministries and university campuses - a genuinely calm address.",
+    "claim_ids": [
+     "dusit-c09",
+     "dusit-c02"
+    ]
+   },
+   {
+    "text_en": "Rents under-index the postcode: listed 1BRs from 9k-13k THB and 2BRs 20k-28k (Oct 2026), with only a thin 25-listing market - value before the 2030 metro arrives.",
+    "claim_ids": [
+     "dusit-c08"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Transit-poor by design, not accident: no BTS/MRT station inside the khet; rail stops sit on its edges (Yommarat, Sam Sen, the non-public Chitrlada halt) until MRT Purple's Nov-2030 target.",
+    "claim_ids": [
+     "dusit-c06"
+    ]
+   },
+   {
+    "text_en": "The 10.5% park share is not walkable-to green: the zoo chunk has been fenced since 2018, Sanam Suea Pa is a royal-household office site, and Suan Chitlada is a residence quarter - public usable parkland is far smaller than the number implies.",
+    "claim_ids": [
+     "dusit-c05",
+     "dusit-c04"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Days follow ministries, parliament sessions and hospital shifts; after dark the district effectively closes - no nightlife venue type appeared in any source read, and riverside Kiakkai is a parliament corner, not a promenade scene.",
+    "claim_ids": [
+     "dusit-c03",
+     "dusit-c09"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Khwaeng Dusit/Wachiraphayaban hold the palace-quarter face; Suan Chitlada is the residence quarter with a special not-public rail halt; Thanon Nakhon Chai Si (half the khet) wraps the riverside parliament and Samsen; Si Yaek Maha Nak is a 0.34 km2 corner khwaeng.",
+    "claim_ids": [
+     "dusit-c01",
+     "dusit-c03",
+     "dusit-c06"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit for people whose life is the state itself - parliament, ministries, camps, hospitals - and for quiet-seekers who accept bus-and-boat transit until 2030.",
+    "claim_ids": [
+     "dusit-c02",
+     "dusit-c06",
+     "dusit-c09"
+    ]
+   },
+   {
+    "text_en": "Avoid if you need rail at the door or a functioning Samsen frontage today: the sinkhole closure and the 2030 metro horizon define daily logistics for now.",
+    "claim_ids": [
+     "dusit-c07",
+     "dusit-c06"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "118.7-ha park composition and Royal Plaza access rules unsourced; old zoo site's future has no body-level plan (park/hospital debate is snippet/forum-level only); 2025 collapse article carries a suspected-LLM tag - corroborate with news bodies before publication; Nang Loeng market not verified in bodies read; population vintages conflict (75,814 TH wiki / 95,852 EN 2017 / 83,897 app)."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "5 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: App-polygon call: Sam Sen railway station and Yommarat halt sit on khet edges per EN wiki but inside khwaengs per TH wiki - confirm which side the app credits them on (affects transport-6 input).",
+   "open issue: Composition of the app's 118.7 ha / 10.5% park figure for Dusit - which grounds are counted (zoo 19 ha, palace, Sanam Suea Pa, Chitrlada?) - and what share is publicly accessible; recommend re-review of green-10.",
+   "open issue: Old Dusit Zoo site: no body-level source on reuse plans (Nation-TV March-2024 'small public park' lead and July-2024 park/hospital debate remain snippet-level). Recheck when the royal estate office publishes.",
+   "open issue: Corroborate the Sep-2025 Samsen sinkhole specifics (dimensions, closure status, repair estimate) against Reuters/Thai-language news bodies before editorial publication - the Wikipedia article is LLM-flagged.",
+   "open issue: Nang Loeng market: not covered in bodies read; if the app credits food/daily-life points to it, verify its khwaeng (Si Yaek Maha Nak) and trading status separately.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 day_night/within placeholders + uncertainties char-explosion. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

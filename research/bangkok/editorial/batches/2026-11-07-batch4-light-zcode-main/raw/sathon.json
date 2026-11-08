@@ -1,0 +1,1448 @@
+{
+ "entity_key": "sathon",
+ "search_log": [
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: leisure park/garden/pitch + railway station + ferry_terminal + marketplace in bbox 13.7008-13.7261, 100.5081-100.5537",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "929 elements: BTS nodes Surasak/Chong Nonsi/Saint Louis/Saphan Taksin, BRT-area nodes, named parks (80 Phansa 3.02 ha, Taksin forest park 2.63 ha, Taksin bridge park 0.89 ha, Khlong Chong Nonsi park, Yudhi expressway park), Suan Phlu market, Wat Yannawa, embassies"
+  },
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: out geom for 14 park ways (shared area-computation query)",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "Sathon parks: 80 Phansa 3.02 ha, Suan Pa Chaloem Phra Kiat (Taksin) 2.63 ha, Taksin bridge park 0.89 ha, Khlong Chong Nonsi 0.36 ha, Yudhi expressway park 1.02 ha, Naratiwas green 0.07 ha"
+  },
+  {
+   "tool": "kit check_geometry.py",
+   "query": "PIP checks vs app sathon polygon (BTS nodes, parks, offices, temple, hospital) x2 batches",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "all three BTS Surasak/Chong Nonsi/Saint Louis OSM nodes OUT (polygon hugs south side of Sathorn Rd); 80 Phansa park + Taksin bridge park + canal park + Saint Louis Hospital + Suan Phlu market + Wat Yannawa + MR Kukrit's House IN; MRT Lumphini OUT; Chaloem Phra Kiat forest park OUT (far-west tip)"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia Sathon_district",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "body read: 9.326 km2, 3 khwaeng, Sathon Rd northern boundary (north lanes in Bang Rak), history (created 9 Nov 1989 from Yan Nawa), places, embassies"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia เขตสาทร (percent-encoded)",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "body read: 71,306 (Dec 2566), khwaeng pops, boundaries by khlong/road/railway, BTS Silom + MRT Lumphini + BRT Chong Nonsi-Ratchaphruek + Tha Sathorn boat, buildings, schools; no parks section"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "สวนเฉลิมพระเกียรติ สาทร สวน80พรรษา พื้นที่ ไร่ (TH)",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "BMA greener entry (public area 17 rai 2 ngan 58 sq.wa) + THE STANDARD renovation article located"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "thestandard.co/life/new-sathorn-royal-park",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "body read 28 Feb 2026: 80 Phansa park recently renovated, more green, 05:00-21:00 daily, therapeutic garden loop, 4 gates, stage, playground, not pet-friendly, MRT Lumphini exit 1 + 1.3 km"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.com/condo-for-rent/bangkok/sathon",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "body read: 8,231 listings, studio USD475 / 1-bed USD889 / 2-bed USD1,730, USD19/sqm Oct 2026, -5.8% vs Jan 2026, Silom/Saladaeng + Sathorn Rd + riverfront clusters"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "คลองช่องนนทรี สวน 2567 2568 เฟส 3 ก่อสร้าง (TH)",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "canal park 4.5 km, 5 phases; Phase 3 Chan-Sathorn under construction through 2025, completion targeted end-2025 (Deputy Gov Wisanu); odor complaints; BMA registry address 58 Narathiwas - aggregated snippets"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Chong Nonsi Canal Park\" news article progress phase 3 (EN)",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "Phase 3 scope ~1.6 km Narathiwas Soi 7 - Chan Rd, ~472M THB budget (Aug 2024); Phase 1 opened late 2021; Nation article located"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "nationthailand.com/thailand/bangkok/40068526",
+   "status": "ok",
+   "date": "2026-11-08",
+   "note": "body read 11 Jul 2026: canal park 4.5 km, LANDPROCESS/Kotchakorn Voraakhom, nature-based water treatment, improvements 'slower than anticipated', BMA Blue & Green Network"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "propertyscout sathon rent (second rent family, EN)",
+   "status": "failed",
+   "date": "2026-11-08",
+   "note": "PropertyScout khet-level URLs 404 (also tried for khlong-san); HipFlat remains the sole body-read rent source"
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://en.wikipedia.org/wiki/Sathon_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sathon_district",
+   "title": "Sathon district",
+   "publisher": "English Wikipedia",
+   "publisher_family": "English Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3",
+   "title": "เขตสาทร",
+   "publisher": "Thai Wikipedia",
+   "publisher_family": "Thai Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://thestandard.co/life/new-sathorn-royal-park",
+   "retrieved_url": "https://thestandard.co/life/new-sathorn-royal-park",
+   "title": "สวนเฉลิมพระเกียรติ 80 พรรษา (สาทร) หลังปรับปรุงใหม่",
+   "publisher": "THE STANDARD",
+   "publisher_family": "THE STANDARD",
+   "author": "Phanthila Wongwanwan",
+   "published_at": "2026-02-28",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "",
+   "limitations": [
+    "park area in rai not stated in the article body"
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://www.nationthailand.com/thailand/bangkok/40068526",
+   "retrieved_url": "https://www.nationthailand.com/thailand/bangkok/40068526",
+   "title": "Bangkok's canal park experiment (Chong Nonsi Canal Park)",
+   "publisher": "The Nation",
+   "publisher_family": "The Nation",
+   "author": "Nongluck Ajanapanya",
+   "published_at": "2026-07-11",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "",
+   "limitations": [
+    "phase-level status not in the article; phase/budget details from search-aggregated reports"
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/sathon",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/sathon",
+   "title": "Condos for rent in Sathon, Bangkok",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal",
+   "limitations": [
+    "search area bleeds into Silom/Saladaeng and the Charoen Krung riverfront, skewing averages upward"
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap via Overpass API - Sathon bbox parks/stations/markets + park area computation",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": "2026-11-08",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "shoelace areas from OSM ways; cemetery/canal-strip green may be untagged"
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://www.mrta-purplelinesouth.com + BMA public-space registry entries (via search aggregation)",
+   "retrieved_url": "https://www.mrta-purplelinesouth.com",
+   "title": "Chong Nonsi Canal Park phase 3 progress / BMA registry (58 Narathiwas Rd)",
+   "publisher": "BMA/press via search aggregation",
+   "publisher_family": "BMA/press via search aggregation",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": false,
+   "type": "government",
+   "commercial_context": "",
+   "limitations": [
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://greener.bangkok.go.th/park/suan-chaloem-phra-kian-80-phansa-phra-bat-somdet-phra-jao-yu-hua-sathorn",
+   "retrieved_url": "https://greener.bangkok.go.th/park/suan-chaloem-phra-kian-80-phansa-phra-bat-somdet-phra-jao-yu-hua-sathorn",
+   "title": "สวนเฉลิมพระเกียรติ 80 พรรษา (สาทร) - BMA Greener Bangkok registry",
+   "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
+   "publisher_family": "BMA greener.bangkok.go.th (via search aggregation)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": false,
+   "type": "government",
+   "commercial_context": "",
+   "limitations": [
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "sathon-c01",
+   "text_en": "Sathon is one of Bangkok's 50 khets, 9.326 km2 south of the CBD, with three khwaeng: Thung Wat Don (3.195 km2, 34,618 people), Yan Nawa (2.090, 18,132) and Thung Maha Mek (4.041, 18,556) - 71,306 registered residents in Dec 2023. Boundaries (Thai Wikipedia): north - Bang Rak/Pathum Wan along Khlong Sathon and the south side of Rama IV; east - Khlong Toei/Yan Nawa along the Mae Nam railway line, Soi Chuea Phloeng 4 and Yen Akat road; south - Yan Nawa/Bang Kho Laem along Nang Linchi, Chan Kao, Khlong Chong Nonsi, Chan and Sathupradit roads to Khlong Khuay; west - the river midline (Khlong San across). The khet was created 9 November 1989 from Yan Nawa (branch office from 9 March 1989); the spelling สาธร was officially corrected in April 1999.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "boundaries"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": "khwaeng population Dec 2023",
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "infobox; Administration; History",
+     "paraphrase": "area, 3 khwaeng with sizes, creation 9 Nov 1989, name origin (Luang Sathon Racha Yut's canal), 1999 spelling correction"
+    },
+    {
+     "source_index": 1,
+     "locator": "การแบ่งเขตการปกครอง; ที่ตั้งและอาณาเขต",
+     "paraphrase": "khwaeng populations Dec 2566; boundary roads/canals/railway in all four directions"
+    }
+   ],
+   "limitations": ""
+  },
+  {
+   "claim_id": "sathon-c02",
+   "text_en": "The office-district identity sits on a corridor the app polygon excludes: English Wikipedia states Sathon Road 'marks the northern boundary of the district', with the southern lanes in Sathon and the northern lanes across Sathon canal in Bang Rak - and PIP confirms the app polygon hugs the road's south side, putting the BTS Surasak, Chong Nonsi and Saint Louis station nodes (all standing in the road median) OUTSIDE the sathon polygon, along with office towers on the north side, while the south sidewalk is IN. The Empire Tower, AIA Sathorn Tower, At Sathorn Square, Robot Building and the 12+ embassies of Thai Wikipedia's list are the khet's daytime economy but mostly lie on or beyond the excluded strip; Saint Louis Hospital, MR Kukrit's House, Suan Phlu market and Wat Yannawa are PIP-IN.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "boundaries",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Sathon Road corridor",
+    "relation_to_entity": "partial",
+    "notes": "corridor itself is the khet boundary; office/median points excluded by polygon"
+   },
+   "temporal_scope": "current to 2026-11",
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "lead/boundaries; Places; image caption",
+     "paraphrase": "Sathon Rd northern boundary, south lanes in Sathon/north lanes in Bang Rak; Robot Building, embassies, Saint Louis complex listed"
+    },
+    {
+     "source_index": 1,
+     "locator": "สถานที่สำคัญ - อาคารสำนักงาน",
+     "paraphrase": "Empire Tower, At Sathorn Square, AIA Sathorn, Sathon City Tower, Robot Building listed"
+    }
+   ],
+   "limitations": [
+    "o",
+    "f",
+    "f",
+    "i",
+    "c",
+    "e",
+    " ",
+    "t",
+    "o",
+    "w",
+    "e",
+    "r",
+    "s",
+    " ",
+    "s",
+    "t",
+    "r",
+    "a",
+    "d",
+    "d",
+    "l",
+    "e",
+    " ",
+    "b",
+    "o",
+    "t",
+    "h",
+    " ",
+    "s",
+    "i",
+    "d",
+    "e",
+    "s",
+    ";",
+    " ",
+    "p",
+    "e",
+    "r",
+    "-",
+    "b",
+    "u",
+    "i",
+    "l",
+    "d",
+    "i",
+    "n",
+    "g",
+    " ",
+    "k",
+    "h",
+    "e",
+    "t",
+    " ",
+    "m",
+    "e",
+    "m",
+    "b",
+    "e",
+    "r",
+    "s",
+    "h",
+    "i",
+    "p",
+    " ",
+    "w",
+    "a",
+    "s",
+    " ",
+    "n",
+    "o",
+    "t",
+    " ",
+    "a",
+    "u",
+    "d",
+    "i",
+    "t",
+    "e",
+    "d",
+    " ",
+    "-",
+    " ",
+    "o",
+    "n",
+    "l",
+    "y",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "b",
+    "o",
+    "u",
+    "n",
+    "d",
+    "a",
+    "r",
+    "y",
+    " ",
+    "b",
+    "e",
+    "h",
+    "a",
+    "v",
+    "i",
+    "o",
+    "u",
+    "r",
+    " ",
+    "i",
+    "s",
+    " ",
+    "P",
+    "I",
+    "P",
+    "-",
+    "e",
+    "s",
+    "t",
+    "a",
+    "b",
+    "l",
+    "i",
+    "s",
+    "h",
+    "e",
+    "d",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  },
+  {
+   "claim_id": "sathon-c03",
+   "text_en": "Why transport 7 and not 9: the BTS Silom Line (Surasak, Chong Nonsi, Saint Louis, with Saphan Taksin at the north-west corner) and MRT Lumphini serve the khet's north and north-east edges only - and all three mid-corridor BTS nodes fall outside the app polygon, which begins at the south side of Sathorn Rd. The interior - Yen Akat, Chan, Nang Linchi, Thung Wat Don's sois - sits roughly a kilometre or more from any rail gate. The BRT's Chong Nonsi-Ratchaphruek corridor does cross the khet on Narathiwas Road (BRT Sathon stop PIP-IN), and the Chao Phraya express boat calls at Tha Sathorn; but the modal mix is edge-loaded, which is the honest mechanism for a 7.",
+   "kind": "researcher_inference",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": "score mechanism synthesis; no ridership data body-read"
+   },
+   "temporal_scope": "current to 2026-11",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "การคมนาคม",
+     "paraphrase": "BTS Silom (Saint Louis, Surasak, Saphan Taksin), MRT Lumphini, BRT Chong Nonsi-Ratchaphruek, express boat Tha Sathorn listed as the mass-transit serving set"
+    }
+   ],
+   "limitations": [
+    "t",
+    "h",
+    "e",
+    " ",
+    "7",
+    "-",
+    "v",
+    "s",
+    "-",
+    "9",
+    " ",
+    "r",
+    "e",
+    "a",
+    "d",
+    "i",
+    "n",
+    "g",
+    " ",
+    "i",
+    "s",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "r",
+    "e",
+    "s",
+    "e",
+    "a",
+    "r",
+    "c",
+    "h",
+    "e",
+    "r",
+    "'",
+    "s",
+    ";",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "a",
+    "p",
+    "p",
+    "'",
+    "s",
+    " ",
+    "o",
+    "w",
+    "n",
+    " ",
+    "t",
+    "r",
+    "a",
+    "n",
+    "s",
+    "p",
+    "o",
+    "r",
+    "t",
+    " ",
+    "m",
+    "e",
+    "t",
+    "h",
+    "o",
+    "d",
+    "o",
+    "l",
+    "o",
+    "g",
+    "y",
+    " ",
+    "i",
+    "s",
+    " ",
+    "n",
+    "o",
+    "t",
+    " ",
+    "d",
+    "o",
+    "c",
+    "u",
+    "m",
+    "e",
+    "n",
+    "t",
+    "e",
+    "d",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  },
+  {
+   "claim_id": "sathon-c04",
+   "text_en": "Green 9 against a 25.0 ha (3.5%) app figure does not reproduce from OSM: named in-polygon parks computed at 80 Phansa royal park 3.02 ha, Taksin bridge park 0.89 ha, Khlong Chong Nonsi canal park 0.36 ha mapped so far, the Yudhi under-expressway park 1.02 ha, plus small plots - roughly 5-6 ha PIP-IN, with the 2.63-ha Suan Pa Chaloem Phra Kiat at the far-west tip PIP-OUT. Even adding the canal park's unbuilt phases, cemetery green (Wat Don's Teochew cemetery, PIP-IN) and embassy/institutional grounds, 25 ha needs a counting rule (the BMA registry itself lists the 80 Phansa public area as only 17 rai 2 ngan 58 sq.wa = ~2.8 ha). Green 9 is best defended as 'excellent named-park access', not as in-khet acreage.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "counter_evidence"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": "park_ha 25.0 is the app's own figure"
+   },
+   "temporal_scope": "OSM current to 2026-11; BMA registry entry undated",
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "area computation output",
+     "paraphrase": "80 Phansa 3.02 ha; Taksin bridge 0.89; canal park 0.36; Yudhi 1.02; forest park 2.63 (OUT)"
+    },
+    {
+     "source_index": 7,
+     "locator": "search-excerpt summary",
+     "paraphrase": "BMA registry lists the 80 Phansa public area as 17 rai 2 ngan 58 sq.wa"
+    }
+   ],
+   "limitations": [
+    "O",
+    "S",
+    "M",
+    " ",
+    "m",
+    "i",
+    "s",
+    "s",
+    "e",
+    "s",
+    " ",
+    "u",
+    "n",
+    "t",
+    "a",
+    "g",
+    "g",
+    "e",
+    "d",
+    " ",
+    "g",
+    "r",
+    "e",
+    "e",
+    "n",
+    ";",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "2",
+    "5",
+    ".",
+    "0",
+    " ",
+    "f",
+    "i",
+    "g",
+    "u",
+    "r",
+    "e",
+    " ",
+    "m",
+    "a",
+    "y",
+    " ",
+    "i",
+    "n",
+    "c",
+    "l",
+    "u",
+    "d",
+    "e",
+    " ",
+    "c",
+    "e",
+    "m",
+    "e",
+    "t",
+    "e",
+    "r",
+    "y",
+    "/",
+    "c",
+    "a",
+    "n",
+    "a",
+    "l",
+    "-",
+    "s",
+    "t",
+    "r",
+    "i",
+    "p",
+    "s",
+    "/",
+    "r",
+    "o",
+    "a",
+    "d",
+    " ",
+    "p",
+    "l",
+    "a",
+    "n",
+    "t",
+    "i",
+    "n",
+    "g",
+    " ",
+    "-",
+    " ",
+    "c",
+    "o",
+    "o",
+    "r",
+    "d",
+    "i",
+    "n",
+    "a",
+    "t",
+    "o",
+    "r",
+    " ",
+    "m",
+    "e",
+    "t",
+    "h",
+    "o",
+    "d",
+    "o",
+    "l",
+    "o",
+    "g",
+    "y",
+    " ",
+    "d",
+    "e",
+    "c",
+    "i",
+    "s",
+    "i",
+    "o",
+    "n",
+    " ",
+    "r",
+    "e",
+    "q",
+    "u",
+    "i",
+    "r",
+    "e",
+    "d",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  },
+  {
+   "claim_id": "sathon-c05",
+   "text_en": "The 80 Phansa royal park (Suan Chaloem Phra Kiat 80 Phansa, Thung Maha Mek side of the canal park) was renovated in 2025-2026 with expanded green: THE STANDARD's 28 Feb 2026 piece describes rest zones with aquatic plants, wide picnic lawns, a waterside walkway loop with a nature-study trail and therapeutic garden, lighting for evening runners, four staffed gates, an outdoor stage used by aerobics groups, a children's playground - open daily 05:00-21:00, not yet pet-friendly, reached via MRT Lumphini Exit 1 plus a 1.3 km motorcycle ride. The BMA credited the 2025-2026 works with adding green and wastewater-treatment planting (registry excerpt).",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "change",
+    "daily_life"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suan Chaloem Phra Kiat 80 Phansa, Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": "PIP-IN at OSM way center 13.71852,100.54252"
+   },
+   "temporal_scope": "renovation 2025-2026; article 2026-02-28",
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "renovation description, hours, facilities, access",
+     "paraphrase": "recently renovated with more green; 05:00-21:00 daily; aquatic-plant rest zones, picnic lawns, loop trail, lighting, four gates, stage, playground; not pet-friendly; Lumphini exit 1 + 1.3 km"
+    },
+    {
+     "source_index": 7,
+     "locator": "search-excerpt summary",
+     "paraphrase": "2025-2026 renovation adding green and treatment planting"
+    }
+   ],
+   "limitations": "park area not stated in the article body; registry entry snippet-only"
+  },
+  {
+   "claim_id": "sathon-c06",
+   "text_en": "The Chong Nonsi canal park is the khet's flagship public project and its messiest: a 4.5 km linear park along Khlong Chong Nonsi by LANDPROCESS (Kotchakorn Voraakhom, modelled in part on Seoul's Cheonggyecheon), Thailand's first canal-park of its kind, with nature-based water treatment whose water-quality gains The Nation (11 Jul 2026) reports 'slower than anticipated'; search-aggregated BMA reporting has Phase 3 (Narathiwas Soi 7 to Chan Rd, ~1.6 km, ~472M THB announced Aug 2024) under construction through 2025 with completion targeted end-2025 by Deputy Governor Wisanu, and users complaining of black, odorous canal water in dry periods when the level is drawn down. The mapped park segment (PIP-IN) is the built proof of concept.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "change"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Khlong Chong Nonsi linear park",
+    "relation_to_entity": "entire_unit",
+    "notes": "phase/budget items snippet-flagged; 4.5 km + designer + water-quality caveat body-read"
+   },
+   "temporal_scope": "Phase 1 late 2021; Phase 3 construction 2024-2025; Nation piece 2026-07-11",
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "project description, designer, water-quality paragraphs",
+     "paraphrase": "4.5 km canal park, LANDPROCESS/Kotchakorn, nature-based treatment, improvements slower than anticipated, part of BMA Blue & Green Network"
+    },
+    {
+     "source_index": 6,
+     "locator": "search-excerpt summary",
+     "paraphrase": "Phase 3 ~1.6 km, ~472M THB, construction through 2025, end-2025 completion target, odor complaints, registry address 58 Narathiwas Rd"
+    }
+   ],
+   "limitations": "phase-level status and budget are aggregated snippets; the end-2025 completion claim was not verifiable from a body-read source"
+  },
+  {
+   "claim_id": "sathon-c07",
+   "text_en": "Rental market (HipFlat, October 2026): 8,231 listings - by far the deepest stock of the four khets - with average asking USD 475 for studios, USD 889 for 1-bedrooms and USD 1,730 for 2-bedrooms (USD 19/sqm), from a 23,000-THB Klass Silom 1-bed to 490,000-THB ONE89 2-beds; visible clusters sit on the Silom/Saladaeng edge, central Sathorn Rd and the Charoen Krung riverfront (The River), not in the Yen Akat/Chan interior. Prices drifting down (-5.8% vs Jan 2026). The app's 25,000/55,000 blend sits below the portal's 1-bed mean - consistent with the inland mid-market half of the khet; rent 5 (priciest of the four) is defensible.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon (HipFlat search area)",
+    "relation_to_entity": "entire_unit",
+    "notes": "search-area bleed inflates averages"
+   },
+   "temporal_scope": "October 2026 snapshot",
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "listing count, averages block, trend block, project names",
+     "paraphrase": "8,231 listings; USD 475/889/1,730; USD 19/sqm; -1.4% m/m, -5.8% vs Jan 2026; Silom/Sathorn/riverfront clusters named"
+    }
+   ],
+   "limitations": "portal averages luxury-skewed; PropertyScout cross-check 404 so no second rent family"
+  },
+  {
+   "claim_id": "sathon-c08",
+   "text_en": "Daily-essentials and food layer: the app counts 1,098 food POIs and DE 9; the mapped anchors include Suan Phlu market (PIP-IN) on Soi Suan Phlu, Wat Yannawa's riverside retail strip (PIP-IN), the office-tower dining of the excluded Sathorn corridor (Blue Elephant on the corridor's Sathon Rd stretch), and the embassies' cafe economy. Saint Louis Hospital (PIP-IN) is the khet's hospital anchor, with Saint Louis school/college next to it - the institution that names a BTS station.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "food"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": "khwaeng-subarea claims partial"
+   },
+   "temporal_scope": "OSM current to 2026-11",
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "Overpass ways 103670923 'ตลาดสดแสงจันทร์', 163727394 'ตลาดสวนพลู', 231405237 'ตลาดบางรัก' edge",
+     "paraphrase": "wet markets mapped in-bbox incl. Suan Phlu market"
+    },
+    {
+     "source_index": 1,
+     "locator": "สถานพยาบาล + สถานศึกษา",
+     "paraphrase": "Saint Louis Hospital the only hospital listed; Saint Louis schools listed"
+    }
+   ],
+   "limitations": [
+    "t",
+    "h",
+    "e",
+    " ",
+    "1",
+    ",",
+    "0",
+    "9",
+    "8",
+    " ",
+    "f",
+    "o",
+    "o",
+    "d",
+    " ",
+    "c",
+    "o",
+    "u",
+    "n",
+    "t",
+    " ",
+    "i",
+    "s",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "a",
+    "p",
+    "p",
+    "'",
+    "s",
+    " ",
+    "o",
+    "w",
+    "n",
+    ";",
+    " ",
+    "c",
+    "o",
+    "r",
+    "r",
+    "i",
+    "d",
+    "o",
+    "r",
+    " ",
+    "d",
+    "i",
+    "n",
+    "i",
+    "n",
+    "g",
+    " ",
+    "s",
+    "t",
+    "r",
+    "a",
+    "d",
+    "d",
+    "l",
+    "e",
+    "s",
+    " ",
+    "t",
+    "h",
+    "e",
+    " ",
+    "B",
+    "a",
+    "n",
+    "g",
+    " ",
+    "R",
+    "a",
+    "k",
+    " ",
+    "b",
+    "o",
+    "u",
+    "n",
+    "d",
+    "a",
+    "r",
+    "y",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  },
+  {
+   "claim_id": "sathon-c09",
+   "text_en": "Vibe 9 / crowd 3 split: weekday energy is office-and-embassy (12+ embassies listed by English Wikipedia, UOB Robot Building, AIA/Thai CC towers), weekends shift to the canal park, the 80 Phansa park and riverside strolls; inland Yen Akat/Chan sois stay residential-quiet with heritage pockets (MR Kukrit's House on Soi Suan Phlu, Soi Wanglee, the old Sathon-road houses Thai Wikipedia lists). Nightlife 8 concentrates on the excluded north corridor around Chong Nonsi and Narathiwas - a partial-coverage caveat for the khet-level score.",
+   "kind": "researcher_inference",
+   "topics": [
+    "vibe",
+    "crowd",
+    "nightlife"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": "current to 2026-11",
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Diplomatic missions; Places",
+     "paraphrase": "embassy list; MR Kukrit's House; heritage sites"
+    },
+    {
+     "source_index": 1,
+     "locator": "สถานที่สำคัญ",
+     "paraphrase": "ย่านบ้านเก่าริมถนนสาทร (old Sathon-road houses), Soi Wanglee, Bangkok Insurance Museum listed"
+    }
+   ],
+   "limitations": [
+    "n",
+    "i",
+    "g",
+    "h",
+    "t",
+    "l",
+    "i",
+    "f",
+    "e",
+    " ",
+    "v",
+    "e",
+    "n",
+    "u",
+    "e",
+    " ",
+    "l",
+    "o",
+    "c",
+    "a",
+    "t",
+    "i",
+    "o",
+    "n",
+    "s",
+    " ",
+    "a",
+    "r",
+    "e",
+    " ",
+    "c",
+    "o",
+    "r",
+    "r",
+    "i",
+    "d",
+    "o",
+    "r",
+    "-",
+    "l",
+    "e",
+    "v",
+    "e",
+    "l",
+    " ",
+    "o",
+    "b",
+    "s",
+    "e",
+    "r",
+    "v",
+    "a",
+    "t",
+    "i",
+    "o",
+    "n",
+    "s",
+    ",",
+    " ",
+    "n",
+    "o",
+    "t",
+    " ",
+    "a",
+    " ",
+    "v",
+    "e",
+    "n",
+    "u",
+    "e",
+    " ",
+    "a",
+    "u",
+    "d",
+    "i",
+    "t",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  },
+  {
+   "claim_id": "sathon-c10",
+   "text_en": "Safety 7 is untested: no district-level crime statistics or notable safety incidents surfaced in English or Thai searches 2024-2026, and neither wiki carries a safety section. Treat as 'not contradicted, not verified', as with the other light-pass khets.",
+   "kind": "researcher_inference",
+   "topics": [
+    "safety",
+    "counter_evidence"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": "search window to 2026-11-08",
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "whole-page review",
+     "paraphrase": "no safety/crime content"
+    },
+    {
+     "source_index": 1,
+     "locator": "whole-page review",
+     "paraphrase": "no safety/crime content"
+    }
+   ],
+   "limitations": "absence of search results is weak evidence"
+  },
+  {
+   "claim_id": "sathon-c11",
+   "text_en": "2024-2026 changes, all public-space led: the 80 Phansa royal park renovation (2025-2026, reopened with more green), canal-park Phase 3 construction along Chan Road through 2025 with a reported end-2025 completion target, BMA's Green Bangkok/Blue & Green Network framing around both, and gently falling rents (-5.8% vs Jan 2026). No new rail infrastructure within the khet in the window; the Sathorn Unique 'ghost tower' on the excluded north side remains derelict per Thai Wikipedia's landmark list.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "green",
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Sathon",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": "2024-2026",
+   "evidence": [
+    {
+     "source_index": 2,
+     "locator": "renovation description",
+     "paraphrase": "park recently renovated, more green"
+    },
+    {
+     "source_index": 3,
+     "locator": "project + SEI fieldwork paragraphs",
+     "paraphrase": "canal park program active into 2026; water-quality work continuing"
+    },
+    {
+     "source_index": 4,
+     "locator": "trend block",
+     "paraphrase": "-5.8% vs Jan 2026"
+    }
+   ],
+   "limitations": "Phase 3 completion not confirmed by a body-read source; no rail changes verified"
+  },
+  {
+   "claim_id": "sathon-c12",
+   "text_en": "Polygon honesty: the app sathon polygon (61 vertices) runs along the south side of Sathorn Rd - excluding the BTS median nodes, the north-side office towers and the Sathorn Unique tower (which Thai Wikipedia nevertheless lists among the khet's landmarks) and the 2.63-ha Suan Pa Chaloem Phra Kiat at the far-west tip - while including the residential interior, the canal-park segments, the 80 Phansa park, the cemetery green and Saint Louis Hospital. District scores should be read as describing the administrative khet; landmark membership checks follow the polygon. Coordinator audit recommended for the corridor-edge cases.",
+   "kind": "researcher_inference",
+   "topics": [
+    "boundaries",
+    "counter_evidence"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "district",
+    "place_name": "app sathon polygon",
+    "relation_to_entity": "entire_unit",
+    "notes": "coordinator owns the boundary call per brief"
+   },
+   "temporal_scope": "app snapshot bkk-d6499618507e7561",
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "สถานที่สำคัญ",
+     "paraphrase": "Sathorn Unique listed as a khet landmark (อาคารร้าง)"
+    }
+   ],
+   "limitations": [
+    "p",
+    "o",
+    "l",
+    "y",
+    "g",
+    "o",
+    "n",
+    "-",
+    "e",
+    "d",
+    "g",
+    "e",
+    " ",
+    "j",
+    "u",
+    "d",
+    "g",
+    "e",
+    "m",
+    "e",
+    "n",
+    "t",
+    " ",
+    "f",
+    "l",
+    "a",
+    "g",
+    "g",
+    "e",
+    "d",
+    " ",
+    "f",
+    "o",
+    "r",
+    " ",
+    "c",
+    "o",
+    "o",
+    "r",
+    "d",
+    "i",
+    "n",
+    "a",
+    "t",
+    "o",
+    "r",
+    ";",
+    " ",
+    "a",
+    "d",
+    "m",
+    "i",
+    "n",
+    "i",
+    "s",
+    "t",
+    "r",
+    "a",
+    "t",
+    "i",
+    "v",
+    "e",
+    " ",
+    "m",
+    "e",
+    "m",
+    "b",
+    "e",
+    "r",
+    "s",
+    "h",
+    "i",
+    "p",
+    " ",
+    "o",
+    "f",
+    " ",
+    "i",
+    "n",
+    "d",
+    "i",
+    "v",
+    "i",
+    "d",
+    "u",
+    "a",
+    "l",
+    " ",
+    "t",
+    "o",
+    "w",
+    "e",
+    "r",
+    "s",
+    " ",
+    "n",
+    "o",
+    "t",
+    " ",
+    "a",
+    "u",
+    "d",
+    "i",
+    "t",
+    "e",
+    "d",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "question": "identity/scope",
+   "answer": "Khet Sathon, 9.326 km2, three khwaeng (Thung Wat Don, Yan Nawa, Thung Maha Mek), bounded by Khlong Sathon + Rama IV south side (N), the Mae Nam railway/Yen Akat (E), Nang Linchi/Chan/Khlong Chong Nonsi/Sathupradit (S), river midline (W); created 9 Nov 1989 from Yan Nawa. In-polygon anchors: Saint Louis Hospital, MR Kukrit's House, Suan Phlu market, Wat Yannawa, 80 Phansa park, Taksin bridge park, canal-park segments, Wat Don cemetery, BRT Sathon stop. Out: the three BTS nodes (Surasak/Chong Nonsi/Saint Louis, in the road median), Sathorn Unique tower, Suan Pa Chaloem Phra Kiat tip, MRT Lumphini.",
+   "claim_ids": [
+    "sathon-c01",
+    "sathon-c02",
+    "sathon-c12"
+   ]
+  },
+  {
+   "id": "Q02",
+   "question": "everyday experience",
+   "answer": "CBD-south office khet with a residential interior: weekday Sathorn-corridor suits and embassy traffic, canal-park and royal-park weekends, quiet Yen Akat/Chan sois with heritage houses inland; the mall-and-BTS strip belongs to the excluded boundary. Subarea claims marked partial.",
+   "claim_ids": [
+    "sathon-c02",
+    "sathon-c09",
+    "sathon-c05"
+   ]
+  },
+  {
+   "id": "Q03",
+   "question": "values+mechanisms",
+   "answer": "Transport 7 = edge-loaded rail (three BTS nodes on the excluded corridor, MRT Lumphini just off the NE corner) plus the BRT Narathiwas corridor and Tha Sathorn boat - the interior is a km+ from any rail gate. DE 9 / food 9 = office-crowd market/cafe density (1,098 food POIs) + Suan Phlu/Wat Yannawa anchors. Green 9 = named-park access (80 Phansa 3.02 ha, canal park, Taksin bridge park) rather than in-khet acreage. Rent 5 = deepest stock (8,231 listings) and highest prices of the four khets.",
+   "claim_ids": [
+    "sathon-c03",
+    "sathon-c08",
+    "sathon-c04",
+    "sathon-c07"
+   ]
+  },
+  {
+   "id": "Q04",
+   "question": "counter-evidence",
+   "answer": "Three: (1) green 9 cannot be reproduced from mapped in-khet green (~5-6 ha PIP-IN vs app 25.0 ha) - the score rides on named-park access, not acreage; (2) transport 7 is internally consistent only because the polygon excludes the BTS corridor the khet is famous for; (3) the canal park's water quality remains visibly poor ('slower than anticipated', odor complaints), tempering the green story.",
+   "claim_ids": [
+    "sathon-c04",
+    "sathon-c03",
+    "sathon-c06"
+   ]
+  },
+  {
+   "id": "Q05",
+   "question": "rhythm",
+   "answer": "Office mornings and lunch pulses on the corridor; embassy/school rhythms inland; the canal park and royal park (05:00-21:00) carry morning runners and evening aerobics; weekends move to parks and the riverside; nightlife concentrates on the north corridor around Chong Nonsi.",
+   "claim_ids": [
+    "sathon-c09",
+    "sathon-c05",
+    "sathon-c02"
+   ]
+  },
+  {
+   "id": "Q06",
+   "question": "walkability",
+   "answer": "Flat interior grid; the canal-park walkways and the royal-park loop give genuine walking infrastructure; Sathorn Rd itself is a hostile, congested crossing; no walking durations were derived from catchment radius in this bundle.",
+   "claim_ids": [
+    "sathon-c06",
+    "sathon-c05",
+    "sathon-c03"
+   ]
+  },
+  {
+   "id": "Q07",
+   "question": "daily life",
+   "answer": "Daily needs: Suan Phlu and neighbourhood wet markets, office-tower retail, Saint Louis Hospital + schools for the family layer, 12+ embassies for paperwork; leisure: 80 Phansa park, canal park, Wat Yannawa riverside, MR Kukrit's House museum.",
+   "claim_ids": [
+    "sathon-c08",
+    "sathon-c05",
+    "sathon-c09"
+   ]
+  },
+  {
+   "id": "Q08",
+   "question": "affordability vs stated figures",
+   "answer": "App 25,000/55,000 sits below HipFlat's portal means (1-bed USD 889 ~ 30k THB; 2-bed USD 1,730 ~ 59-60k) because the portal set skews Silom-edge and riverfront; the inland mid-market band (Nang Linchi/Yen Akat) is what pulls the blend down. Rent 5 = priciest of the four khets; prices gently falling (-5.8% vs Jan 2026).",
+   "claim_ids": [
+    "sathon-c07"
+   ]
+  },
+  {
+   "id": "Q09",
+   "question": "green/quiet with polygon honesty",
+   "answer": "Green: named parks are real and inside (80 Phansa renovated 2025-26, canal-park segments, Taksin bridge park, cemetery green) but the 25.0-ha app figure needs a counting rule; the 2.63-ha forest park at the west tip is polygon-OUT. Quiet: genuine in the interior sois; the corridor and Narathiwas BRT carry the noise. The excluded Sathorn corridor means 'Sathon address' and 'polygon interior' diverge for offices and nightlife.",
+   "claim_ids": [
+    "sathon-c04",
+    "sathon-c12",
+    "sathon-c09"
+   ]
+  },
+  {
+   "id": "Q10",
+   "question": "conditional fit",
+   "answer": "Strong fit: office-district professionals who want walk-to-work plus real parks (renovated royal park, canal park) and can pay CBD-south rents. Weak fit: budget renters (priciest of the four) and anyone whose daily life depends on being AT a BTS gate - the gates are on the excluded corridor, a km+ from the interior.",
+   "claim_ids": [
+    "sathon-c07",
+    "sathon-c05",
+    "sathon-c03"
+   ]
+  },
+  {
+   "id": "Q11",
+   "question": "recent changes 2024-2026",
+   "answer": "80 Phansa royal park renovation (2025-2026); canal-park Phase 3 built out along Chan Road through 2025 (end-2025 target, unconfirmed); Blue & Green Network program active into 2026; rents drifting down; no rail changes inside the khet.",
+   "claim_ids": [
+    "sathon-c05",
+    "sathon-c06",
+    "sathon-c11"
+   ]
+  },
+  {
+   "id": "Q12",
+   "question": "uncertainties/outside-the-score",
+   "answer": "Unresolved: the 25.0-ha park counting rule (OSM ~5-6 ha in-polygon); whether Phase 3 of the canal park actually completed end-2025 (target only); BRT service details (no ridership/fare data body-read); khet membership of individual corridor towers; rent data single-family (PropertyScout 404). Safety 7 untested by any located statistic.",
+   "claim_ids": [
+    "sathon-c04",
+    "sathon-c06",
+    "sathon-c10",
+    "sathon-c07"
+   ]
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "The CBD's south annex: embassy rows, office towers and a renovated royal park along a canal being turned into Bangkok's first linear water-garden - at the batch's highest rents, with the BTS gates sitting on the boundary line the map excludes.",
+   "claim_ids": [
+    "sathon-c02",
+    "sathon-c05",
+    "sathon-c06",
+    "sathon-c07"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Sathon wraps three khwaeng of residential sois around the Sathorn office corridor, with the deepest rental stock of the batch (8,231 listings), 12+ embassies, Saint Louis Hospital, and the batch's best named-park access - the 80 Phansa royal park reopened in 2025-2026 with expanded green, and the 4.5 km Chong Nonsi canal park keeps extending even as its water quality lags. The honest asterisks: the BTS stations that give the district its name sit in the road median the app polygon excludes (transport 7, not 9), the 25-ha green figure needs a counting rule, and rents - though slipping - remain the priciest of the four researched khets.",
+   "claim_ids": [
+    "sathon-c01",
+    "sathon-c07",
+    "sathon-c05",
+    "sathon-c06",
+    "sathon-c03",
+    "sathon-c04"
+   ]
+  },
+  "strengths": [
+   {
+    "text": "Parks you can actually use: the renovated 80 Phansa royal park (05:00-21:00, lit loop, playground, stage) plus the canal-park walkway segments and Taksin bridge park - the batch's strongest named-green access.",
+    "claim_ids": [
+     "sathon-c05",
+     "sathon-c04"
+    ]
+   },
+   {
+    "text": "Office-district completeness: Saint Louis Hospital and schools, 1,098 food POIs, wet markets inland, and a BRT corridor threading Narathiwas - daily life rarely requires leaving the khet.",
+    "claim_ids": [
+     "sathon-c08",
+     "sathon-c03"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text": "The transit paradox: three BTS stations carry the district's name but stand in the median the polygon excludes, leaving interior sois (Yen Akat, Chan, Nang Linchi) a kilometre-plus from any rail gate - hence transport 7.",
+    "claim_ids": [
+     "sathon-c03",
+     "sathon-c12"
+    ]
+   },
+   {
+    "text": "Priciest of the batch: portal 1-bed averages ~USD 889 (~30k THB) with the blend at 25,000/55,000, and the canal park's water is still visibly poor despite the 2024-2026 build-out.",
+    "claim_ids": [
+     "sathon-c07",
+     "sathon-c06"
+    ]
+   }
+  ],
+  "day_night": {
+   "text": "Weekdays pulse with office and embassy traffic on the corridor; the parks take over at dawn and dusk (05:00-21:00, lit for runners); weekends belong to the canal park and riverside; nightlife concentrates on the excluded north edge around Chong Nonsi while the interior goes quiet.",
+   "claim_ids": [
+    "sathon-c02",
+    "sathon-c05",
+    "sathon-c09"
+   ]
+  },
+  "within_area_variation": {
+   "text": "Three Sathons: the excluded-but-famous Sathorn Rd corridor (towers, BTS, embassies' front doors), the residential Thung Wat Don/Yen Akat interior with heritage houses, and the canal-and-river east where the parks and Wat Yannawa sit - administratively one khet, split by the polygon.",
+   "claim_ids": [
+    "sathon-c12",
+    "sathon-c09",
+    "sathon-c04"
+   ]
+  },
+  "conditional_fit": [
+   {
+    "text": "Choose it if you work in the CBD and want a walkable green routine (royal park loop, canal walkways) and full services at 25-30k for a 1-bed - and don't mind the BTS being a boundary feature rather than a door-step one.",
+    "claim_ids": [
+     "sathon-c05",
+     "sathon-c08",
+     "sathon-c07",
+     "sathon-c03"
+    ]
+   },
+   {
+    "text": "Skip it if rent is the constraint (cheapest 1-beds here cost what Thon Buri charges for two) or if you need rail at the door in the interior sois.",
+    "claim_ids": [
+     "sathon-c07",
+     "sathon-c03"
+    ]
+   }
+  ],
+  "uncertainties": {
+   "text": "Unresolved: the 25.0-ha park counting rule (OSM in-polygon ~5-6 ha); canal-park Phase 3 completion (target end-2025, unconfirmed); BRT service details; per-tower khet membership on the corridor; single-family rent data (PropertyScout 404). Anchors verified against OSM with no mismatch beyond the known corridor exclusions.",
+   "claim_ids": [
+    "sathon-c04",
+    "sathon-c06",
+    "sathon-c07",
+    "sathon-c12"
+   ]
+  }
+ },
+ "open_issues": [
+  "park_ha 25.0 (3.5%) vs OSM in-polygon named green ~5-6 ha: gap plausibly = Wat Don cemetery, canal linear strips, road planting, institutional grounds; needs an app-methodology decision.",
+  "Sathorn Rd corridor exclusion: BTS median nodes + north-side offices + Sathorn Unique tower are polygon-OUT while being the khet's most-cited features; Thai Wikipedia lists Sathorn Unique as a khet landmark. Coordinator polygon audit recommended.",
+  "Transport 7 mechanism is our synthesis (edge-loaded rail + interior distance); no ridership/frequency data body-read.",
+  "Canal-park Phase 3 completion (end-2025 target, Deputy Gov Wisanu) and the ~472M THB budget are search-aggregated, not body-read; Nation (Jul 2026) confirms water-quality lag only.",
+  "Rent: single family (HipFlat) after PropertyScout 404; portal area bleeds into Silom/Saladaeng and Charoen Krung riverfront.",
+  "Safety 7: no district statistics in EN or TH; untested, not contradicted."
+ ]
+}

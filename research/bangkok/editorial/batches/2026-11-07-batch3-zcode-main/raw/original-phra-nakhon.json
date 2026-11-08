@@ -1,0 +1,1212 @@
+{
+ "entity_key": "phra-nakhon",
+ "researched_on": "2026-11-07",
+ "batch": "2026-11-07-batch3-zcode-main",
+ "entity": {
+  "name_en": "Phra Nakhon",
+  "name_th": "พระนคร",
+  "kind": "district (khet) of Bangkok, 12 khwaeng, old town / Rattanakosin Island core",
+  "center": "13.75519, 100.4967",
+  "unit_definition": "administrative khet bounded by the Chao Phraya river (W), Khlong Phadung Krung Kasem (N), Ratchadamnoen Nok road + Khlong Rop Krung/Ong Ang (E), and the river midline (S); covers most of Rattanakosin Island (เกาะรัตนโกสินทร์)",
+  "aliases": [
+   "Rattanakosin",
+   "Old Town",
+   "Khao San",
+   "Banglamphu",
+   "Grand Palace",
+   "Wat Pho",
+   "Sanam Luang",
+   "Democracy Monument",
+   "Tha Tien",
+   "Phra Athit",
+   "Sam Yot",
+   "Sanam Chai"
+  ],
+  "app_ratings_as_given": {
+   "transport": 7,
+   "rent": 8,
+   "daily_essentials": 9,
+   "safety": 5,
+   "food": 9,
+   "green": 10,
+   "gym_sports": 8,
+   "vibe": 10,
+   "nightlife": 9,
+   "crowd": 2
+  },
+  "app_facts_as_given": {
+   "area_km2": 5.54,
+   "population_2020": 44923,
+   "density_2020": 8115,
+   "food_venues": 1446,
+   "nightlife": 147,
+   "temples": 171,
+   "park_ha": 38.5,
+   "park_pct": 7.2,
+   "piers": 24,
+   "bib_gourmand": 4,
+   "rent_editorial_thb": [
+    14000,
+    28000
+   ]
+  }
+ },
+ "claims": [
+  {
+   "id": "phra-nakhon-c01",
+   "question": "Q01",
+   "title": "Khet Phra Nakhon: 5.536 km2, 12 khwaeng, bounded by river, Phadung Krung Kasem and Ratchadamnoen Nok/Ong Ang; created 1915-1928, khet since 1972",
+   "text": "Phra Nakhon is one of Bangkok's 50 khet, area 5.536 km2 (Thai Wikipedia: 5.536 ตร.กม.), the central district containing Rattanakosin Island and the city pillar shrine (Lak Mueang). It is divided into 12 khwaeng: Phra Borom Maha Ratchawang (1.647 km2), Wang Burapha Phirom (0.720), Wat Ratchabophit (0.220), Samran Rat (0.230), San Chaopho Suea (0.144), Sao Chingcha (0.153), Bowon Niwet (0.496), Talat Yot (0.193), Chana Songkhram (0.339), Ban Phan Thom (0.414), Bang Khun Phrom (0.458), Wat Sam Phraya (0.522). Boundaries (Thai Wikipedia): north - Khlong Phadung Krung Kasem toward Dusit; east - Ratchadamnoen Nok road and Khlong Rop Krung (Ong Ang) toward Pom Prap Sattru Phai and Samphanthawong; south and west - the Chao Phraya midline toward Khlong San, Thon Buri, Bangkok Yai, Bangkok Noi, Bang Phlat. The district office is at 78 Soi Samsen 3, khwaeng Wat Sam Phraya. History: inner-district overhaul of 15 Oct 1915 (Rattanakosin 2458) created the predecessor amphoe including Chana Songkhram and Samran Rat; on 12 March 1928 (2471) several were merged as Amphoe Phra Nakhon; elevated to Khet Phra Nakhon in 1972. Polygon-verified app facts: Democracy Monument point (13.7586, 100.5021), Giant Swing, Wat Suthat, Wat Pho, Grand Palace, Khao San Rd and Wang Burapha all fall inside the app's phra-nakhon polygon; Wat Arun, Siriraj Hospital and MRT Wat Mangkon fall outside.",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "English Wikipedia",
+     "title": "Phra Nakhon district",
+     "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+     "date": null,
+     "locator": "infobox (area, khwaeng count, population), lead, 'History' and khwaeng table",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "เขตพระนคร",
+     "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3",
+     "date": null,
+     "locator": "infobox + แขวง table (areas and Dec 2568 populations) + อาณาเขต + ประวัติ",
+     "body_read": true
+    },
+    {
+     "publisher": "App polygon via kit check_geometry.py",
+     "title": "point-in-polygon checks against app/src/data/bangkok/geometry.json entity phra-nakhon",
+     "url": "file:///Users/ruslan/msc_1/git/city-rating/research/bangkok/editorial/kit/check_geometry.py",
+     "date": "2026-11-07",
+     "locator": "~20 landmark points tested (all listed in claim text)",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "khwaeng areas from Thai Wikipedia table; not cross-checked against BMA khwaeng gazette",
+    "app polygon includes Democracy Monument; batch-2 PIP note recorded a different result for a phaya-thai check - flagged as open issue"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c02",
+   "question": "Q01",
+   "title": "Shrinking registered population: 114,124 (1985) to 38,408 (Dec 2025); app 2020 point sits mid-decline",
+   "text": "Thai Wikipedia's khwaeng table records 38,408 registered residents in December 2025 (density 6,937.86/km2) and states the long registered decline from 114,124 in 1985 (พ.ศ. 2528). English Wikipedia carries the earlier DOPA census point: 51,231 (2017), 9,254/km2. The app's 2020 figure (44,923; 8,115/km2) falls between those points, consistent with a district losing residents steadily, not a contradiction. Largest khwaeng by population is Wang Burapha Phirom (8,238 in Dec 2025); smallest are Sao Chingcha (1,790), Talat Yot (1,772) and Chana Songkhram (1,570).",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "เขตพระนคร",
+     "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3",
+     "date": null,
+     "locator": "infobox population + khwaeng table 'ประชากร (ธ.ค. 2568)'",
+     "body_read": true
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Phra Nakhon district",
+     "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+     "date": null,
+     "locator": "infobox, Population (2017) 51,231, density 9,254.15/km2, cited to DOPA report",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "registered (bureaucratic) population, not present population; in a tourist district the daytime headcount diverges strongly",
+    "batch-2 recorded Wang Burapha 8,344 for 2025 (DOPA path) vs 8,238 here (Thai wiki Dec 2568) - month/revision difference, both in the same range"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c03",
+   "question": "Q09",
+   "title": "Sanam Luang: ~11.94 ha royal ceremonial field, open daily 05:00-22:00, BMA-operated on Royal Household land; closes for ceremonies",
+   "text": "Sanam Luang (ท้องสนามหลวง) is the district's dominant open space: Thai Wikipedia's infobox gives 74 rai 63 square wah (about 11.94 ha), an oval field bounded by Ratchini, Naphrathat and Ratchadamnoen Nai roads between the Grand Palace and the Front Palace. Owner: the Bureau of the Royal Household; operator: BMA; registered as an ancient monument by the Fine Arts Department on 24 Oct 1977. Service hours: 'ทุกวัน 05.00-22.00 น.' (daily 05:00-22:00); the central road stays open 24 hours for transit. After the 2011 renovation BMA banned political assemblies, vending, parking and sleeping on the field - it remains the royal cremation ground (temporary พระเมรุมาศ built and dismantled per reign) and hosts the Royal Ploughing Ceremony and royal kathin, so general access is periodically suspended when an event ground is being built. OSM's boundary polygon (checked against the app polygon, in_khet=True) measures 10.99 ha by planar projection - close to the published figure.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "ท้องสนามหลวง",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87",
+     "date": null,
+     "locator": "infobox (พื้นที่, เจ้าของ, ผู้ดำเนินการ, เวลาให้บริการ) + 'การใช้ประโยชน์' section",
+     "body_read": true
+    },
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "way 23630232 'สนามหลวง' Sanam Luang",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "leisure=park way, center 13.75516,100.49307; area computed from full geometry",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "area cross-check (11.94 published vs 10.99 OSM-computed) is a planar approximation, not a survey",
+    "closure frequency for ceremonies is not quantified by any source read"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c04",
+   "question": "Q09",
+   "title": "Saranrom Park: 23 rai (~3.7 ha) walled garden across from the Grand Palace, public park since 1960, 05:00-21:00",
+   "text": "Saranrom Park (สวนสราญรมย์), 678-681 Ratchini Road in khwaeng Phra Borom Maha Ratchawang, is the former garden of Saranrom Palace (laid out c. 1874 on Henry Alabaster's advice) and a BMA public park since a 1960 cabinet transfer. Thai Wikipedia gives 'พื้นที่ 23 ไร่' (about 3.7 ha; OSM polygon computes 3.22 ha) and hours '05.00-21.00 น. ทุกวัน'. Inside: the white marble Queen Sunanda Kumariratana memorial, the People's Party clubhouse building (สโมสรคณะราษฎร์สราญรมย์, now the park office), a Victorian glasshouse described as neglected and used for storage, and the Chinese-style Mae Takien Thong shrine. Across Ratchini Road from the Grand Palace, i.e. inside the khet and inside the inner conservation zone.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สวนสราญรมย์",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%A3%E0%B8%B2%E0%B8%8D%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C",
+     "date": null,
+     "locator": "infobox (พื้นที่, เวลาเปิด, ผู้ดำเนินการ) + facility list",
+     "body_read": true
+    },
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "way 23486019 'Saranrom Park' (สวนสราญรมย์)",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "fee=no, opening_hours Mo-Su 04:00-21:00, source tag cites greener.bangkok.go.th/en/park/suan-saran-rom/",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "OSM hours (04:00) differ by an hour from Thai Wikipedia (05:00); no operator page was body-read",
+    "glasshouse 'neglected' is the Thai Wikipedia author's description"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c05",
+   "question": "Q09",
+   "title": "Santichaiprakan Park: ~8 rai riverside park around Fort Phra Sumen at the Banglamphu canal mouth, opened 5 Dec 1999, daily 05:00-21:00",
+   "text": "Santichaiprakan Park (สวนสันติชัยปราการ) wraps Fort Phra Sumen - one of the two surviving forts of the old city walls (the other being Fort Mahakan, also inside this khet) - at the end of Phra Athit Road where Khlong Bang Lamphu meets the Chao Phraya. Thai Wikipedia: area '8 ไร่' (about 1.3 ha; OSM computes 1.38 ha), opened 5 December 1999 (พ.ศ. 2542) for the king's sixth-cycle birthday, operated by BMA, hours '05.00-21.00 น. ทุกวัน'. It contains the Santichaiprakan royal pavilion and boat landing, is used for aerobics and cultural events, and is listed as a Loy Krathong and Songkran venue. The district's last original lamphu tree, the namesake of Banglamphu, stood here and died after the 2011 floods.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สวนสันติชัยปราการ",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%B4%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3",
+     "date": null,
+     "locator": "infobox (พื้นที่, เวลาเปิด, ผู้ดำเนินการ) + history/facility sections",
+     "body_read": true
+    },
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "way 198399091 'Santichaiprakan Park'",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "start_date 1999-12-05, opening_hours 05:00-21:00, center 13.76410,100.49549 (in app polygon)",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "no independent visitor report on current condition; hours from wiki + OSM only"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c06",
+   "question": "Q09",
+   "title": "Rommaninat Park: former Klong Prem prison (1890) turned ~29-rai (~4.6 ha) health park with Corrections Museum, 05:00-21:00; in-khet confirmed",
+   "text": "Rommaninat Park (สวนรมณีนาถ) occupies the grounds of Klong Prem central prison, built 1890 under King Chulalongkorn, on Mahachai Road near Wat Suthat. Search-result aggregation of Wikipedia and BMA's greener.bangkok.go.th gives about 29 rai (roughly 4.6 ha), daily opening 05:00-21:00, a fitness park with gym and basketball court, and the Corrections Museum on site (museum reportedly Thu-Sat only and possibly relocated). OSM maps only ~1.05 ha as mapped green (relation 10904051 outer rings) inside a walled compound, so the published area plausibly counts the whole former-prison block. Point-in-polygon: 13.74897, 100.50258 is inside the app's phra-nakhon polygon - confirming batch-2's correction that Rommaninat is in Phra Nakhon, not Pom Prap Sattru Phai.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "venue",
+   "sources": [
+    {
+     "publisher": "Wikipedia + BMA greener.bangkok.go.th (via search aggregation)",
+     "title": "Suan Rommaninat park Bangkok former Klong Prem prison area",
+     "url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+     "date": null,
+     "locator": "search summary: ~29 rai / 11 acres, hours 5am-9pm, gym/basketball, Corrections Museum",
+     "body_read": false
+    },
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "relation 10904051 'Rommani Nat Park'",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "3 outer rings computed at 1.05 ha; center 13.74897,100.50258 inside app polygon",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "the ~4.6 ha figure is snippet-level only (no body read of the Wikipedia or BMA page); the OSM-mapped green core is ~1.05 ha",
+    "Corrections Museum status (Thu-Sat, possibly relocated) unverified"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c07",
+   "question": "Q09",
+   "title": "Green-10 basis: a real, publicly usable park set - but OSM-verifiable public green is ~19-20 ha, about half the app's 38.5 ha",
+   "text": "The honest case for green 10: the khet genuinely contains a usable public-park set with posted daily hours - Sanam Luang (~11.9 ha, 05:00-22:00), Saranrom (~3.7 ha, 05:00-21:00), Santichaiprakan (~1.3 ha, 05:00-21:00), Rommaninat (~1-4.6 ha, 05:00-21:00), Mahakan Fort Park (~1.05 ha, sunrise-sunset per OSM), Maha Chetsadabodin Pavilion Court (~0.41 ha), Utokatan (~0.30 ha), Nagaraphirom riverside (~0.19 ha) and small palace/campus gardens (Siwalai inside the Grand Palace walls is NOT public; Missakawan, Thewet Palace garden). OSM polygon areas computed in this session sum to roughly 19-20 ha (about 3.5% of 5.536 km2) if Rommaninat is taken at its mapped 1.05 ha, up to ~23 ha at the 4.6 ha published figure. The app's 38.5 ha (7.2%) is not reproducible from mapped public parks alone; the gap plausibly comes from temple and palace grounds (171 temples; Grand Palace gardens) counted as green, which are not all publicly usable. Caveats on the parks that are public: Sanam Luang is periodically surrendered to crematorium builds and royal/state events, and the BMA bans assemblies, vending and sleeping there.",
+   "kind": "estimate",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "park geometries (ways 23486019, 23630232, 198399091, 560595626, 1552957093, 1161155519, 560594892, 783589715, 1223261190; relation 10904051)",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "out geom; areas computed by planar projection in-session",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "ท้องสนามหลวง / สวนสราญรมย์ / สวนสันติชัยปราการ",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87",
+     "date": null,
+     "locator": "published areas 74 ไร่ 63 ตร.ว. / 23 ไร่ / 8 ไร่ and hours",
+     "body_read": true
+    },
+    {
+     "publisher": "App data (facts as given)",
+     "title": "app park_ha 38.5 (7.2%)",
+     "url": "file:///Users/ruslan/msc_1/git/city-rating/app/src/data/bangkok/",
+     "date": null,
+     "locator": "app district facts for phra-nakhon; not recomputed here",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "area decomposition of the 38.5 ha is an estimate; temple/palace-grounds share is inferred, not documented",
+    "OSM planar projection slightly underestimates curved parcels",
+    "Siwalai garden (1.0 ha) excluded from the public set as it is inside the Grand Palace walls"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c08",
+   "question": "Q06",
+   "title": "Rail inside the khet: Blue Line Sam Yot (BL30) and Sanam Chai (BL31) only; Wat Mangkon is outside; no rail for the Banglamphu/Khao San north",
+   "text": "The MRT Blue Line runs along the district's southern/central spine: Sam Yot (BL30, opened 29 Jul 2019, box under Charoen Krung at the Sam Yot junction; app-registered at 13.7470, 100.5023) and Sanam Chai (BL31, under Sanam Chai Road in khwaeng Phra Borom Maha Ratchawang, 2021 ridership 877,862; described by Wikipedia as the only station in inner Rattanakosin; hosts Thailand's first underground museum, opened 27 Nov 2020, free). Wat Mangkon (BL29) sits across the Charoen Krung line in Samphanthawong - point-in-polygon False at 13.7422, 100.5099, matching batch-2's Samphanthawong attribution. Nothing serves the northern half: Banglamphu, Khao San, Phra Athit, Talat Yot, Samsen have no rail; the nearest river crossing at Itsaraphap (BL32) is on the Thon Buri side. Sanam Chai's exits serve the Grand Palace/Wat Pho/Saranrom/Pak Khlong Talat corner; Sam Yot serves Wang Burapha and the Ong Ang canal edge.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "Batch-3 sibling bundle",
+     "title": "st.sam-yot.json claim sam-yot-c01 (BL30, entrances, khwaeng span)",
+     "url": "file:///Users/ruslan/msc_1/git/city-rating/research/bangkok/editorial/batches/2026-11-07-batch3-zcode-main/raw/st.sam-yot.json",
+     "date": "2026-11-07",
+     "locator": "claim c01 with BEM + Thai Wikipedia sources",
+     "body_read": true
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Sanam Chai MRT station",
+     "url": "https://en.wikipedia.org/wiki/Sanam_Chai_MRT_station",
+     "date": null,
+     "locator": "lead + infobox (BL31, opened 29 Jul 2019, location, ridership 877,862 (2021), underground museum)",
+     "body_read": true
+    },
+    {
+     "publisher": "App polygon via kit check_geometry.py",
+     "title": "point-in-polygon: Sam Yot IN, Sanam Chai IN, Wat Mangkon OUT, Itsaraphap n/a",
+     "url": "file:///Users/ruslan/msc_1/git/city-rating/research/bangkok/editorial/kit/check_geometry.py",
+     "date": "2026-11-07",
+     "locator": "station nodes tested",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "Sanam Chai depth and design praise ('four most beautiful stations') is Wikipedia's characterization, not an operator source",
+    "bus coverage (Ratchadamnoen/Samsen corridors) was not researched - no claim about bus density"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c09",
+   "question": "Q06",
+   "title": "River transport is dense: 14 named in-polygon ferry terminals; blue-flag tourist boat ends at Phra Athit; cross-river ferries; khlong boat serves the north edge",
+   "text": "OSM lists 14 distinct named ferry terminals inside the app polygon: Tha Chang (N9), Tha Phra Chan, Tha Tien, Phra Athit, Maharaj, Yodpiman, Atsadang, Rajinee, Memorial Bridge, Phra Pin Klao (Phra Nakhon bank), Thewet, Phra Sumen Fort, Pracha Thipatai and Thewes market (ทตลาดเทวราช) on Khlong Phadung Krung Kasem. The Chao Phraya Tourist Boat (blue flag) runs Sathorn-Phra Athit with ~30-minute headways; 2025 fares circa 40 THB single, 150-200 THB day pass (search-aggregated operator data; official site not body-read). Orange-flag express boats and short cross-river ferries (Tha Chang-Wang Lang, Tha Tien-Wat Arun, Tha Phra Chan-Wang Lang side) serve the same banks. The BMA/KT-Thanakom electric boat on Khlong Phadung Krung Kasem (11 piers, Hua Lamphong-Thewes market) is operating again since 15 March 2023 with a weekday peak-only schedule (06:00-09:00, 16:00-19:00; weekends 08:00-19:00) and about 700 daily riders in 2024 (search-aggregated; primary operator pages not body-read). The app's '24 piers' is not reproduced by the OSM in-polygon count of 14; the difference is likely both-banks and unnamed-node counting.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "ferry_terminal nodes/ways in bbox 13.735-13.778, 100.472-100.512",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "14 named terminals verified in-polygon via check_geometry.py",
+     "body_read": true
+    },
+    {
+     "publisher": "chaophrayatouristboat.com (via search aggregation)",
+     "title": "Chao Phraya Tourist Boat blue flag stops/fares 2025",
+     "url": "https://chaophrayatouristboat.com",
+     "date": null,
+     "locator": "search summary: Sathorn-Phra Athit, ~30 min, ~40 THB single, 150-200 THB day pass",
+     "body_read": false
+    },
+    {
+     "publisher": "BMA / KT-Thanakom (via search aggregation)",
+     "title": "เรือไฟฟ้าคลองผดุงกรุงเกษม service status 2566-2568",
+     "url": "https://www.thanakom.co.th",
+     "date": null,
+     "locator": "search summary: resumed 15 Mar 2023, weekday peak schedule, ~700/day in 2024",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "fares and schedules are snippet-level; no operator page body-read",
+    "app 24-pier count unexplained; treat pier number as directionally right, exact count unverified"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c10",
+   "question": "Q11",
+   "title": "Metro is coming into the khet: Rattanakosin committee approved entrance designs for Orange Line Sanam Luang and Democracy Monument stations and Purple Line to Phan Fa (21 May 2025)",
+   "text": "At its meeting of 21 May 2025 (ครั้งที่ 1/2568), the Krung Rattanakosin and Old Town conservation committee - chaired at Government House by Deputy PM Prasert Chanthararuangthong - approved the design approach for station entrances and ventilation shafts of two lines crossing the island: the MRT Purple Line section (National Library-Phan Fa and Phan Fa-Memorial Bridge) and the MRT Orange Line (with station adjustments at Siriraj, Sanam Luang and Democracy Monument, and approval of the Lan Luang station position), on the condition that designs 'รักษารูปแบบและอัตลักษณ์ของพื้นที่' (preserve the area's form and identity). The same meeting approved raising Ratchaphiphat and Bophit Phimuk bridges by +2.00 m above mean sea level for river tourism and flood resilience. These are approvals in principle, not openings: no rail serves the northern khet today.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "inNews",
+     "title": "'ประเสริฐ' ประชุมบอร์ดเกาะรัตนโกสินทร์ฯ อนุมัติ 4 เรื่อง",
+     "url": "https://innews.news/news.php?n=77707",
+     "date": null,
+     "locator": "meeting items 3-4 (bridge raising; Purple/Orange station design guidance), chaired 21 May 2568 (2025)",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "article date not shown; event date 21 May 2025 taken from the article body",
+    "construction timelines for Orange/Purple sections not stated; recheck when stations open"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c11",
+   "question": "Q04",
+   "title": "Conservation regime caps the housing stock: inner/outer zones, height caps, mandated facade colors; 121 buildings listed for preservation incentives (May 2025)",
+   "text": "Development in the khet is governed by the Krung Rattanakosin conservation framework: a Prime Minister's Office regulation establishes the conservation-and-development committee (policy, zoning, master plan - soc.go.th regulation text, snippet); the 2561 (2018) master plan defines inner Rattanakosin, outer Rattanakosin and continuation zones (ONEP document, snippet); academic coverage records a 16 m height limit on the island and 5-7-story caps in the conservation zone (Siam Society paper, snippet; Bangkok Post 2018-2019 reporting on high-rise bans, snippet). Matichon Weekly (27 Aug 2018, body-read) adds BMA's plan to standardize architecture - uniform facade styles, 'สีเหลืองอ่อนและสีเทาอ่อน' (pale yellow and pale grey) walls, red-brown roofs, no tall or large buildings - replacing the 1997 (2540) plan. On 21 May 2025 the committee approved a list of 121 valuable buildings for conservation, with tax-incentive measures for owners. Net effect on living: renovation and rebuilding require committee/BMA sign-off, new housing supply is structurally capped, and old shophouse stock is maintained rather than replaced - which preserves the townscape and simultaneously keeps the private-rental market thin, old and heterogeneous (see c12).",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "Matichon Weekly",
+     "title": "เปิดแผนจัดระเบียบเกาะรัตนโกสินทร์",
+     "url": "https://www.matichon.co.th/weekly/hot-news/article_128871",
+     "date": "2018-08-27",
+     "locator": "5 zones, height ban, color mandate, cabinet-track approval",
+     "body_read": true
+    },
+    {
+     "publisher": "inNews",
+     "title": "บอร์ดเกาะรัตนโกสินทร์ฯ ประชุม 21 พ.ค. 2568 - อนุมัติบัญชีอาคาร 121 แห่ง",
+     "url": "https://innews.news/news.php?n=77707",
+     "date": null,
+     "locator": "item 1: 121 valuable buildings + tax incentives",
+     "body_read": true
+    },
+    {
+     "publisher": "Siam Society (Chatri Prakitnonthakan)",
+     "title": "Rattanakosin Charter: The Thai Cultural Charter for Conservation",
+     "url": "https://thesiamsociety.org/wp-content/uploads/2012/04/JSS_100_0j_ChatriPrakitnonthakan_RattanakosinCharterTheThaiCulturalCharterForConservation.pdf",
+     "date": "2012",
+     "locator": "snippet: 16 m height limit on Rattanakosin Island",
+     "body_read": false
+    },
+    {
+     "publisher": "Office of Natural Resources and Environmental Policy and Planning (ONEP)",
+     "title": "แผนผังแม่บทการอนุรักษ์และพัฒนากรุงรัตนโกสินทร์ พ.ศ. 2561",
+     "url": "https://eqmplatform.onep.go.th/Uploads/Plan/510b888f-dd43-4614-97bf-4665a19387d0.pdf",
+     "date": "2018",
+     "locator": "snippet: master plan defining inner/outer zones and building controls",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "height-limit specifics rest on snippet-level academic/press sources (PDFs not downloaded)",
+    "no source read quantifies how often renovation permits are denied or delayed for residents"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c12",
+   "question": "Q08",
+   "title": "Rent evidence: HipFlat shows 17 condo listings (THB 3,800 studio to THB 180,000 Khao San commercial unit; most residential asks ~13,000-68,000) - app editorial 14,000/28,000 is consistent",
+   "text": "HipFlat's Phra Nakhon rental page (body-read 2026-11-07) shows 17 condo listings, no aggregate statistic: lowest a 32 sqm studio at Nambanyat Condominium at 3,800 THB/month, highest a 45 sqm Khao San Road shop unit at 180,000 THB/month (commercial, not residential); the residential bulk falls between roughly USD 387-1,939 (about 13,500-67,000 THB). Search snippets of the same portal: 1-bed from 15,000-16,000 THB, 2-bed example 35,000 THB. The app's editorial rent (14,000 one-bed / 28,000 two-bed) therefore matches observed condo asks; the cheaper end of the khet is old shophouse and apartment stock that portals barely list, where the real budget story (guesthouse-adjacent rooms, family shophouses) is unmeasured. Conservation rules (c11) explain the thin condo supply.",
+   "kind": "estimate",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "HipFlat",
+     "title": "Condos for rent in Phra Nakhon, Bangkok",
+     "url": "https://www.hipflat.com/condo-for-rent/bangkok/phra-nakhon",
+     "date": null,
+     "locator": "'17 condo available'; listing prices as listed in claim text",
+     "body_read": true
+    },
+    {
+     "publisher": "HipFlat (via search snippet)",
+     "title": "1-bedroom condos for rent in Phra Nakhon",
+     "url": "https://www.hipflat.com/condo-for-rent/bangkok/phra-nakhon/one-bed",
+     "date": null,
+     "locator": "search snippet: 40 sqm 1-bed 15,000 THB",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "17 listings is a thin market sample; HipFlat page itself flags some mis-mapped units (a Nonthaburi condo listed under Phra Nakhon)",
+    "non-portal stock (old shophouses, rooms above shops) unmeasured - the budget tail is invisible to this evidence"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c13",
+   "question": "Q11",
+   "title": "Khao San economy under regulation: April 2025 vendor boundary rules; BMA no-new-vendor policy with Phra Nakhon in the 15 strict trade zones (Nov 2026); Oct 2026 petition to relax midnight closing; 'sandbox' pilot proposed",
+   "text": "The backpacker strip is being regulated rather than left alone. April 2025 (search snippet, Coconuts/Bangkok coverage): BMA ordered Khao San, Rambuttri and Kraisi stallholders to stay inside painted boundaries and keep narrow sidewalks clear. 2-3 Nov 2026 (Thai PBS World, body-read, published 3 Nov 2026): the BMA orderliness committee confirmed Governor Chadchart's position that 'we will absolutely not register or permit any new vendors on footpaths', and designated 15 strict trade zones across seven districts including Phra Nakhon - takeaway-only rules, standardized stall/umbrella designs, cleanliness and safety enforcement. Oct 2026 (search aggregation of Bangkok Post/The Nation/NBT): Khao San businesses petitioned PM Anutin Charnvirakul to ease midnight closing-hour restrictions and sought new zoning plus a pilot 'nightlife sandbox' for Khao San and Rambuttri; an earlier Bangkok Post piece (15 Dec 2023, paywalled, snippet) recorded the same 4am push. An undated Coconuts feature (body-read; internal content matches the 2016-2017 street-food-ban wave, so historical context only) preserves vendor voices: a Khao San Vendors Association advisor born on the street predicted the road would 'go quiet' if stalls were pushed out; a somtam seller displaced from Tha Phra Chan reported daily earnings falling from ~700 to 300-400 THB.",
+   "kind": "factual_report",
+   "relation": "partial",
+   "scope": "corridor",
+   "sources": [
+    {
+     "publisher": "Thai PBS World",
+     "title": "BMA pushes street vendor regulation to balance pedestrian rights and livelihoods",
+     "url": "https://www.thaipbsworld.com/around-thailand/572096",
+     "date": "2026-11-03",
+     "locator": "governor quote; 15 trade zones across 7 districts incl. Phra Nakhon; takeaway-only rules",
+     "body_read": true
+    },
+    {
+     "publisher": "Coconuts Bangkok",
+     "title": "Vendors on Bangkok's Khaosan Road express fears about street food ban",
+     "url": "https://coconuts.co/bangkok/food-drink/coconuts-exclusive-vendors-bangkoks-khaosan-road-express-fears-street-food-ban/",
+     "date": null,
+     "locator": "vendor interviews (JoJo Pad Thai, Vendors Association advisor, somtam seller)",
+     "body_read": true
+    },
+    {
+     "publisher": "Coconuts/Bangkok coverage (via search aggregation)",
+     "title": "April 2025 marked-boundary rules for Khao San/Rambuttri/Kraisi",
+     "url": "https://coconuts.co/bangkok/",
+     "date": "2025-04",
+     "locator": "search summary: stalls inside painted boundaries, no sidewalk blocking",
+     "body_read": false
+    },
+    {
+     "publisher": "Bangkok Post",
+     "title": "Khao San wants later closing time",
+     "url": "https://www.bangkokpost.com/business/general/2705763/khao-san-wants-later-closing-time",
+     "date": "2023-12-15",
+     "locator": "headline/snippet only (paywall; no bypass attempted)",
+     "body_read": false
+    },
+    {
+     "publisher": "NBT World (via search aggregation)",
+     "title": "Bangkok tests sandbox to overhaul Khao San nightlife rules",
+     "url": "https://www.facebook.com/nbtworld/posts/1544923447671780",
+     "date": null,
+     "locator": "search summary: sandbox pilot for Khao San and Rambuttri enforcement",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "the Oct 2026 petition and sandbox rest on snippet-level aggregation; no primary article body-read",
+    "the Coconuts vendor feature is undated and internally consistent with 2016-17, not 2024-26",
+    "whether the April 2025 boundary rules are still enforced in 2026 was not verified"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c14",
+   "question": "Q12",
+   "title": "Safety 5 has no district-level evidentiary basis found: sources give a scam/pickpocket genre (petty, tourist-facing) and 'violent crime uncommon'; no khet-level crime statistics located",
+   "text": "The honest position: no EN or TH source read in this session provides crime statistics for khet Phra Nakhon, so the app's safety 5 cannot be verified or refuted at district level. What exists is a genre of tourist-facing petty-risk documentation: Travelfish's Khao San safety page (body-read; written around 2012 - dated) documents pickpockets, bag snatchers, theft reports on Khao San buses, tuk-tuk overcharging (especially at the Tanao Road end), drink-spiking stories it itself calls 'more gossip than truth', and the counterpoint that violent robberies are uncommon and 'most visitors will be fine if they stay smart'; it also flags the dense-crowd terrorism exposure without any recorded incident. 2025-2026 travel guides (snippets) repeat the same standard-precautions framing and add reports of organized pickpocket rings targeting tourists. Nothing unit-specific - no Khao San stabbing, no district crime ranking, no police-zone data - was found. A plausible mechanism for a mid-low score at khet level is the collision of a 24-hour bar strip with a nearly empty residential interior at night (registered population fell to 38,408; see c02), but that is inference, not documented crime.",
+   "kind": "reported_perception",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "Travelfish",
+     "title": "Khao San Road orientation: safety and scams",
+     "url": "https://www.travelfish.org/orientation_detail/thailand/bangkok_and_surrounds/bangkok/bangkok/182",
+     "date": null,
+     "locator": "sections on pickpockets, tuk-tuk end-of-road touts, bus theft reports, terrorism note, closing anecdote",
+     "body_read": true
+    },
+    {
+     "publisher": "Traveler safety guides 2025-2026 (via search aggregation)",
+     "title": "Khao San safety guides (multiple)",
+     "url": "https://www.trailblazingadventures.com/khao-san-road-bangkok",
+     "date": "2025-11",
+     "locator": "search summaries: pickpocketing chief risk, overcharging, intoxication-related disorder",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "core safety source is c. 2012; no 2024-2026 incident reporting body-read for this khet",
+    "no police statistics (บก.นครบาล or BMA safety dashboard) were located in EN or TH searches; treat safety 5 as unanchored",
+    "Reddit/TripAdvisor resident threads not consulted (403 by policy)"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c15",
+   "question": "Q07",
+   "title": "Daily essentials are market-based, not mall-based: Big C + Golden Place + 7-Elevens inside the khet, and a dense set of resident markets; but no full-service hospital inside",
+   "text": "OSM amenities verified in-polygon: a Big C supermarket at Charoen Krung/Sam Yot corner (13.7464, 100.5006), a Golden Place store near Tha Chang, multiple 7-Elevens, a Krungdeb co-op store, and Trok Mor morning market, Pak Khlong Talat flower market, Pahurat market (the 'Little India' fabric and food street per the district's Wikipedia article), Tha Phra Chan market and amulet market, Norrarat market, the Lang Wat Ratchanatda community flea market, the Khlong Ong Ang walking street and the San Chao Pho Suea lottery market; community libraries include the Banglamphu community library and three Thammasat libraries. The hospital picture is the weak point: no full-service hospital falls inside the polygon - Klang Hospital (13.7464, 100.5092) is just outside on the Pom Prap side, Siriraj (the nearest major campus) is across the river in Bangkok Noi (polygon False), Vajira is in Dusit across Phadung Krung Kasem, and the Police General Hospital is on Rama I Road in Pathum Wan (verified - it is NOT on Ratchadamnoen despite its name's association with the area); in-khet primary care is the Red Cross Health Station 2 near Sao Chingcha.",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "OpenStreetMap via Overpass API",
+     "title": "amenity=marketplace/hospital/library/pharmacy, shop=supermarket within khet bbox",
+     "url": "https://overpass-api.de/api/interpreter",
+     "date": "2026-11-07",
+     "locator": "17 amenity points polygon-checked; all named above",
+     "body_read": true
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Phra Nakhon district",
+     "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+     "date": null,
+     "locator": "Pak Khlong Talat, Tha Phra Chan amulets market, Phahurat 'Little India' paragraphs",
+     "body_read": true
+    },
+    {
+     "publisher": "Official hospital listing (via search aggregation)",
+     "title": "โรงพยาบาลตำรวจ address check",
+     "url": "https://www.policehospital.org",
+     "date": null,
+     "locator": "search summary: 492/1 Phra Ram I Rd, Pathum Wan (not Phra Nakhon)",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "OSM completeness for small grocery (mini-Tops, Tesco Lotus-go) is imperfect; absence of evidence for a shop type is not evidence of absence",
+    "Klang/Siriraj travel burden is qualitative; no ambulance routing data"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c16",
+   "question": "Q05",
+   "title": "Rhythm: a national ceremonial calendar plus tourist high season, on a shrinking residential base",
+   "text": "Documented rhythms: Songkran (13-15 April) is celebrated with water fights on Khao San Road (district Wikipedia, body-read), and in 2024 Sanam Luang hosted the government's 'Maha Songkran World Water Festival' and the Amazing Thailand Marathon finish; Loy Krathong fills the riverbank piers and Phra Sumen/Santichaiprakan (Wikipedia; park article lists Loy Krathong/Songkran ceremonies there); the Royal Ploughing Ceremony (May) and royal kathin are Sanam Luang fixtures; Ratchadamnoen Avenue is decorated with lights for the royal birthdays (28 July, 12 August) and National Day (5 December). Sanam Luang additionally carried large relic events: Buddha relics from India (Feb-Mar 2024) and the Beijing Buddha tooth relic (5 Dec 2024 - 14 Feb 2025), and in Sept 2020 the anti-government protests with the People's Party plaque installation. Over this sits the tourist calendar: Thailand logged 35.5 million arrivals in 2024 (1.8 trillion THB) and about 32.9-33.0 million in 2025 (down 5-7% y/y; TAT figures via search aggregation), with the November-February high season concentrating crowds at the Grand Palace/Wat Pho/Khao San cluster. National tourism context for the strip: Thai media reported Khao San 'quieter than before' amid the rule changes (Spring News, snippet).",
+   "kind": "factual_report",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "English Wikipedia",
+     "title": "Phra Nakhon district",
+     "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+     "date": null,
+     "locator": "'Songkran', 'Loy Krathong', 'Ratchadamnoen Avenue ... lights' paragraphs",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "ท้องสนามหลวง",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87",
+     "date": null,
+     "locator": "2020 protests, 2024 relics/Songkran festival/marathon, 2024-25 tooth relic display",
+     "body_read": true
+    },
+    {
+     "publisher": "TAT figures (via search aggregation)",
+     "title": "Thailand international arrivals 2024-2025",
+     "url": "https://www.tatnews.org",
+     "date": null,
+     "locator": "search summary: 35.5M (2024), ~32.9M (2025, -5-7%)",
+     "body_read": false
+    },
+    {
+     "publisher": "Spring News (via search aggregation)",
+     "title": "Khao San 'quieter than before'",
+     "url": "https://www.springnews.co.th",
+     "date": null,
+     "locator": "search summary only",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "arrival figures are national, not district-level; no Rattanakosin visitor count found",
+    "'quieter than before' is a single snippet; not corroborated by a second independent body-read"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c17",
+   "question": "Q04",
+   "title": "Flood 2011: riverfront piers and the Tha Phra Chan amulet market flooded; the inner island held behind sandbag lines; one flood casualty was Banglamphu's namesake tree",
+   "text": "In the 2011 flood the Chao Phraya's rising level flowed into the Tha Phra Chan amulet market area on 30 September 2011 (Thai Wikipedia flood article, body-read); news coverage of 3 Oct 2011 (snippet) reported seepage at the Tha Phra Chan, Tha Tien and Tha Chang walkways with sandbag reinforcement underway. The widely photographed sandbag wall in front of the Grand Palace along Maharaj Road protecting the island interior is snippet-level here (search summary; not body-read) - report it as the standard account with that caveat. A khet-specific consequence from a body-read source: the last original lamphu tree at Santichaiprakan Park, the origin of the name Banglamphu, died after the 2011 floods and was cut down to a stump by BMA. The 2025 committee's approval to raise Ratchaphiphat and Bophit Phimuk bridges +2.00 m (c10) shows flood resilience is still an active design variable on the island's edges.",
+   "kind": "factual_report",
+   "relation": "inside",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "อุทกภัยในประเทศไทย พ.ศ. 2554",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%81%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2_%E0%B8%9E.%E0%B8%A8._2554",
+     "date": null,
+     "locator": "Bangkok section: 'น้ำ...ไหลเข้าท่วมตลาดพระเครื่อง ย่านท่าพระจันทร์ เมื่อวันที่ 30 กันยายน พ.ศ. 2554'",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai news (via search aggregation)",
+     "title": "น้ำท่วมทะลักท่าพระจันทร์ จนท.เร่งเสริมกระสอบทราย (3 ต.ค. 2554)",
+     "url": null,
+     "date": "2011-10-03",
+     "locator": "search summary: seepage at Tha Phra Chan/Tha Tien/Tha Chang, sandbag reinforcement",
+     "body_read": false
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "สวนสันติชัยปราการ",
+     "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%B4%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3",
+     "date": null,
+     "locator": "lamphu tree died after 2011 floods",
+     "body_read": true
+    }
+   ],
+   "limitations": [
+    "Maharaj Road sandbag wall is imagery/summary level only; no body-read source",
+    "post-2011 flood-defence upgrades inside the khet were not researched beyond the 2025 bridge-raising item"
+   ]
+  },
+  {
+   "id": "phra-nakhon-c18",
+   "question": "Q03",
+   "title": "Crowd-2 mechanism: national-scale tourism concentrates on three walkable venues inside a district of 38,408 residents - the crush is venue-local, not district-wide",
+   "text": "Thailand received 35.5 million international arrivals in 2024 and about 32.9-33.0 million in 2025 (TAT via aggregation), and the Grand Palace/Wat Phra Kaew, Wat Pho and the 410-m Khao San strip are among the country's default first stops - all inside this 5.5 km2 khet (Grand Palace and Wat Pho polygon-verified inside; Khao San in khwaeng Chana Songkhram). The app's crowd 2 is therefore defensible as a venue-adjacent condition: the crush clusters at the palace/Wat Pho corridor, Tha Tien/Tha Chang piers and the Khao San-Rambuttri bars after dark, while the residential interior (Sao Chingcha 1,790 and Talat Yot 1,772 registered residents; Wat Sam Phraya khwaeng around the district office) documents as low-density. Counterweight for honesty: rule-driven thinning of street vending (c13) and Thai-media 'quieter than before' reports suggest the strip's intensity is being actively managed downward, not left to grow.",
+   "kind": "researcher_inference",
+   "relation": "entire_unit",
+   "scope": "district",
+   "sources": [
+    {
+     "publisher": "TAT figures (via search aggregation)",
+     "title": "arrivals 2024-2025",
+     "url": "https://www.tatnews.org",
+     "date": null,
+     "locator": "35.5M (2024), ~32.9M (2025)",
+     "body_read": false
+    },
+    {
+     "publisher": "English Wikipedia",
+     "title": "Phra Nakhon district",
+     "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+     "date": null,
+     "locator": "Grand Palace, Wat Pho, Khaosan Road listed as district landmarks",
+     "body_read": true
+    },
+    {
+     "publisher": "Thai Wikipedia",
+     "title": "เขตพระนคร",
+     "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3",
+     "date": null,
+     "locator": "khwaeng populations (Sao Chingcha 1,790; Talat Yot 1,772)",
+     "body_read": true
+    },
+    {
+     "publisher": "Khao San guide (via search aggregation)",
+     "title": "Khao San Road guide 2026: 410-m strip description",
+     "url": "https://www.trailblazingadventures.com/khao-san-road-bangkok",
+     "date": "2025-11",
+     "locator": "search summary",
+     "body_read": false
+    }
+   ],
+   "limitations": [
+    "no footfall data for the palace corridor was found; the venue-vs-district split is inference from geography + arrivals",
+    "arrivals are national; Bangkok/old-town share not isolated"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "Q01",
+   "question": "Identity and scope: khet + khwaeng list; which researched stations serve it; what is inside/outside",
+   "answer": "Khet Phra Nakhon (พระนคร), 5.536 km2, 12 khwaeng (Phra Borom Maha Ratchawang, Wang Burapha Phirom, Wat Ratchabophit, Samran Rat, San Chaopho Suea, Sao Chingcha, Bowon Niwet, Talat Yot, Chana Songkhram, Ban Phan Thom, Bang Khun Phrom, Wat Sam Phraya), bounded by river (W), Khlong Phadung Krung Kasem (N), Ratchadamnoen Nok + Khlong Ong Ang (E). Researched stations: Sam Yot (BL30) and Sanam Chai (BL31) are INSIDE (polygon-verified; batch-3 sibling bundle for Sam Yot); Wat Mangkon (BL29) is OUTSIDE across Charoen Krung in Samphanthawong. Inside: Grand Palace, Wat Pho, Wat Suthat, Giant Swing, Democracy Monument, Khao San Rd, Wang Burapha, Sanam Luang, Saranrom, Santichaiprakan, Rommaninat, all parks in c07. Outside: Wat Arun and Siriraj (across river), MRT Wat Mangkon, Phan Fa Lilat pier (just east of the Ratchadamnoen Nok line), Suan Luang Rama VIII Park (Dusit side despite its riverside position), Princess Mother Memorial Park. App's 2020 population point (44,923) sits between Wikipedia's 2017 (51,231) and Dec-2025 (38,408) registered figures - mid-decline, not contradiction.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c01",
+    "phra-nakhon-c02",
+    "phra-nakhon-c08"
+   ]
+  },
+  {
+   "id": "Q02",
+   "question": "Everyday experience by subarea: Banglamphu residents vs Khao San strip vs riverside/temple quarter",
+   "answer": "Three distinct daily lives share the khet. (1) Banglamphu/Khao San (khwaeng Chana Songkhram, Talat Yot, Ban Phan Thom): a guesthouse-vendor economy - hostels at 350-800 THB/night, stalls being pushed into painted boundaries (Apr 2025) and takeaway-only trade zones (Nov 2026), a vendors' association defending street life, and a residential base of only 1,570-5,128 registered people per khwaeng; nights are the strip's, mornings belong to Trok Mor market and locals. (2) Riverside/ceremonial south (Phra Borom Maha Ratchawang, 2,788 residents over 1.647 km2): palace walls, Sanam Luang's 05:00-22:00 regime, Wat Pho, Sanam Chai station with its free underground museum, Saranrom; tourist-heavy by day, ceremonial by calendar, quietest at night. (3) Wang Burapha/inner commercial spine (8,238 residents, the largest khwaeng): shophouse density around Sam Yot station, Big C and Pahurat market, the district's everyday core - with the documented population decline (10,414 to ~8,238-8,344 in Wang Burapha 2019-2025 per batch-2 + Thai wiki) as the structural backdrop. Resident-voice evidence is thin (Reddit/TripAdvisor 403); the split rests on venue/administrative evidence, not interviews.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c13",
+    "phra-nakhon-c12",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "id": "Q03",
+   "question": "Values + mechanisms: what actually drives the app's high and low scores here",
+   "answer": "Green 10 - real parks with posted hours (Sanam Luang 11.9 ha 05-22, Saranrom 3.7 ha 05-21, Santichai 1.3 ha, Rommaninat up to 4.6 ha, Mahakan, Nagaraphirom) but the 38.5 ha figure is about double the OSM-verifiable public green (~19-20 ha); mechanism = ceremonial field + palace/temple grounds counted. Food 9 / nightlife 9 / vibe 10 - 1,446 food venues and 147 nightlife venues (app) in 5.5 km2 with Bib Gourmand presence; mechanism = tourist market density layered on resident markets (Pak Khlong, Pahurat, Tha Phra Chan, Trok Mor). Crowd 2 - 35.5M national arrivals (2024) funneled into three walkable venues inside a district of 38,408 residents. Rent 8 (cheap) - thin condo supply under height caps (17 HipFlat listings; 1-bed ~15k) plus old shophouse stock. Transport 7 - two Blue Line stations serve the south/centre only; 14 in-polygon piers + boats carry the rest; the north has no rail. Safety 5 - no unit-specific evidence found in either language (see Q12).",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c07",
+    "phra-nakhon-c09",
+    "phra-nakhon-c18",
+    "phra-nakhon-c12",
+    "phra-nakhon-c14"
+   ]
+  },
+  {
+   "id": "Q04",
+   "question": "Counter-evidence: tourist monoculture, conservation constraints, shophouse decay, flood specifics",
+   "answer": "Against the postcard: the registered population has fallen from 114,124 (1985) to 38,408 (Dec 2025) - the district is depopulating while visitor infrastructure grows; conservation rules (height caps, mandated facade colors, committee sign-off, 121 listed buildings) protect the fabric but cap housing renewal and supply; the vendor crackdown (no-new-vendor policy, takeaway-only zones) is actively thinning the street-food economy that feeds the food-9 story, with displaced sellers reporting 40-50% income loss; and the flood-2011 record shows the island's riverfront (Tha Phra Chan amulet market, piers) flooded while the interior held behind sandbags - with Banglamphu's namesake tree dying as a documented casualty. None of this contradicts the ratings outright; each is the cost side of the same mechanism.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c02",
+    "phra-nakhon-c11",
+    "phra-nakhon-c13",
+    "phra-nakhon-c17"
+   ]
+  },
+  {
+   "id": "Q05",
+   "question": "Rhythm: ceremonial calendar, tourist high season, weekend nights",
+   "answer": "Annual frame: Songkran 13-15 Apr (Khao San water fights; 2024 'Maha Songkran World Water Festival' on Sanam Luang), Royal Ploughing (May), royal kathin, Loy Krathong at the riverbank piers and Santichaiprakan/Phra Sumen, and Ratchadamnoen light decorations for 28 Jul / 12 Aug / 5 Dec. Rolling frame: Sanam Luang's event calendar (Buddha relics Feb-Mar 2024; Beijing tooth relic 5 Dec 2024-14 Feb 2025; marathon finishes) can close the field to general use. Tourist frame: Nov-Feb high season over a 2025 backdrop of 32.9M national arrivals (down from 35.5M). Weekend nights belong to the Khao San/Rambuttri strip under a midnight-closing rule the trade is petitioning (Oct 2026) to relax; weekday peak hours activate the khlong boat at the north edge only.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c16",
+    "phra-nakhon-c13",
+    "phra-nakhon-c03"
+   ]
+  },
+  {
+   "id": "Q06",
+   "question": "Walkability: metro inside or not; piers; sidewalks",
+   "answer": "There IS metro inside the khet - a correction to the research lead: Sam Yot and Sanam Chai are polygon-inside (Wat Mangkon is not). But coverage is half the district: no rail for Banglamphu/Khao San/Talat Yot/Samsen, which is the defensible core of transport 7. River access is the compensating network: 14 named in-polygon ferry terminals (app says 24; OSM count lower), blue-flag tourist boat terminating at Phra Athit, express boats and cross-river ferries, khlong boat at Thewes (weekday-peak only). Sidewalk conditions are a live policy variable, not a fixed trait: the BMA's Nov 2026 policy prioritizes footpaths for pedestrians, repaints vendor zones as takeaway-only in 15 zones including Phra Nakhon, and Apr 2025 rules confined Khao San/Rambuttri/Kraisi stalls behind painted lines. No source read quantifies sidewalk continuity or walking comfort for the residential interior.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c08",
+    "phra-nakhon-c09",
+    "phra-nakhon-c13"
+   ]
+  },
+  {
+   "id": "Q07",
+   "question": "Daily life: markets, groceries, hospitals",
+   "answer": "Essentials are market-led: Big C (Charoen Krung/Sam Yot), Golden Place (Tha Chang), 7-Elevens, co-op store; Trok Mor morning market, Pak Khlong Talat, Pahurat/Little India, Tha Phra Chan market + amulets, Norrarat, Lang Wat Ratchanatda flea market, Ong Ang walking street; community libraries incl. Banglamphu and three Thammasat libraries. Healthcare is the structural gap behind daily_essentials 9: no full-service hospital inside the polygon - Klang Hospital sits just outside (Pom Prap side), Siriraj is across the river, Vajira is in Dusit, Police General Hospital is in Pathum Wan (name association with Ratchadamnoen is misleading - verified); in-khet provision is the Red Cross Health Station 2. For a khet whose identity is the nation's ceremonial centre, hospital access requires a river or boundary crossing.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c15"
+   ]
+  },
+  {
+   "id": "Q08",
+   "question": "Affordability: blend vs evidence; conservation-driven housing stock",
+   "answer": "App editorial 14,000/28,000 THB matches observable condo asks (HipFlat 1-bed from 15-16k; residential bulk 13.5-67k; studio at 3,800 shows the floor; 17 listings only). The affordability story is really about stock, not price per unit: conservation zoning (height caps 5-7 stories in the conservation zone per academic snippet, 16 m island limit, committee sign-off, facade mandates) means new supply barely exists, the cheap tail is old shophouses and rooms above shops that portals do not list, and renovation is gated - hence rent 8 (cheap) coexisting with visible building decay and a shrinking resident base (Wang Burapha down from 10,414 to ~8.2-8.3k between 2019 and 2025 per batch-2 + Thai wiki).",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c12",
+    "phra-nakhon-c11",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "id": "Q09",
+   "question": "Green/quiet: the honest green-10 case - verify each park's existence, access, area",
+   "answer": "Verified one by one: Sanam Luang - 74 rai 63 sq wah (~11.94 ha; OSM computes 10.99), Royal Household-owned/BMA-run, ancient monument, daily 05:00-22:00 with the central road 24 h, assemblies/vending/sleeping banned, periodically surrendered to crematorium and state-event builds. Saranrom - 23 rai (~3.7 ha), public park since 1960, daily 05:00-21:00, across Ratchini Rd from the Grand Palace. Santichaiprakan - 8 rai (~1.3 ha) around Fort Phra Sumen, opened 5 Dec 1999, daily 05:00-21:00, Loy Krathong venue. Rommaninat - former 1890 prison, ~29 rai (~4.6 ha per snippet; OSM maps 1.05 ha of open green inside walls), 05:00-21:00, gym/basketball + Corrections Museum; in-khet confirmed (batch-2 correction stands). Supporting: Mahakan Fort Park (~1.05 ha), Maha Chetsadabodin (0.41), Utokatan (0.30), Nagaraphirom (0.19). Honest caveats: Siwalai garden is inside palace walls (not public); the 38.5 ha app figure is not reproducible from public parks alone; Sanam Luang's public hours exclude event periods.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c03",
+    "phra-nakhon-c04",
+    "phra-nakhon-c05",
+    "phra-nakhon-c06",
+    "phra-nakhon-c07"
+   ]
+  },
+  {
+   "id": "Q10",
+   "question": "Conditional fit: who is this district for, and who should not pick it",
+   "answer": "Strong fit: heritage-first residents who want the island's calendar (ceremonies, river, parks) and accept old-building conditions; low-budget arrivals served by the strip's 3,800-16,000 THB end and market food; night-economy workers and guests for whom Khao San/Rambuttri is the point. Weak fit: quiet-seekers sensitive to the strip's regulated-but-loud nights (midnight closing is a live political fight, Oct 2026 petition); anyone prioritizing in-district hospital access (none inside); households needing modern housing stock (height caps + committee sign-off cap supply); residents dependent on late-evening transit from the northern khwaeng (no rail, khlong boat weekday-peak only). The event trade-off cuts both ways: Sanam Luang's ceremonies close the field exactly when the district is most on show.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c13",
+    "phra-nakhon-c14",
+    "phra-nakhon-c15",
+    "phra-nakhon-c11",
+    "phra-nakhon-c03"
+   ]
+  },
+  {
+   "id": "Q11",
+   "question": "Recent changes 2024-2026",
+   "answer": "Documented: (1) Sanam Luang event cycle - Buddha relics (Feb-Mar 2024), Songkran festival + marathon (2024), Beijing tooth relic (Dec 2024-Feb 2025); (2) 21 May 2025 Rattanakosin committee - 121 valuable buildings list with tax incentives, +2.00 m bridge raising, entrance designs approved for Orange Line (Sanam Luang, Democracy Monument stations) and Purple Line (to Phan Fa); (3) vendor regulation tightening - Apr 2025 painted boundaries on Khao San/Rambuttri/Kraisi, Nov 2026 no-new-vendor policy + 15 strict trade zones including Phra Nakhon; (4) nightlife-hours politics - Oct 2026 petition to PM Anutin and a proposed Khao San/Rambuttri 'sandbox' pilot; (5) demographic - registered population 38,408 by Dec 2025, extending the decline. Tourism backdrop softened: 32.9-33.0M national arrivals 2025 vs 35.5M in 2024.",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c16",
+    "phra-nakhon-c10",
+    "phra-nakhon-c13",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "id": "Q12",
+   "question": "Uncertainties / outside-the-score: safety-5 basis, transport-7 mechanism, green figure, pier count",
+   "answer": "Safety 5: no district-level crime statistics found in EN or TH; evidence is a petty-crime/scam genre (Travelfish, c.2012 + 2025-26 guides) with the counterpoint that violent crime is uncommon; treat as perception/unanchored and label low-confidence - the same conclusion the sibling sam-yot bundle reached. Transport 7: mechanism is half-coverage rail (2 stations inside, both southern) + 14 OSM-verified piers + boats; the app's 24-pier count is not reproduced and may count both banks/nodes. Green 10: 38.5 ha not reproducible from mapped public parks (~19-20 ha); gap plausibly temple/palace grounds - an app-methodology question, not a research error. Rent 8: portal sample thin (17 listings; some mis-mapped), cheap tail unmeasured. Also unresolved: the app polygon puts Phan Fa Lilat pier (13.7555, 100.5064) outside the khet while Democracy Monument (13.7586, 100.5021) is inside - consistent with the Ratchadamnoen Nok boundary but worth a central polygon audit; batch-2's PIP note on the monument conflicts with this batch's result. Rommaninat's 4.6 ha rests on a snippet (no body read).",
+   "status": "answered",
+   "claim_ids": [
+    "phra-nakhon-c14",
+    "phra-nakhon-c09",
+    "phra-nakhon-c07",
+    "phra-nakhon-c12",
+    "phra-nakhon-c06"
+   ]
+  }
+ ],
+ "editorial": [
+  {
+   "id": "ed-01",
+   "topic": "green 10 - verified and caveated",
+   "item": "The green case is genuinely polygon-interior: Sanam Luang (~11.9 ha, 05:00-22:00, royal-ceremony closures), Saranrom (~3.7 ha, 05:00-21:00), Santichaiprakan (~1.3 ha around Fort Phra Sumen), Rommaninat (former prison, up to ~4.6 ha, in-khet confirmed), plus Mahakan, Nagaraphirom, Utokatan, Maha Chetsadabodin - all with posted daily hours and no admission fee. The honest caveat: OSM-verifiable public green sums to ~19-20 ha, roughly half the app's 38.5 ha; the balance is plausibly temple/palace grounds that are not all publicly usable. Recommend keeping green 10 with a 'public-park subset verified; total includes non-public grounds' note.",
+   "claim_ids": [
+    "phra-nakhon-c03",
+    "phra-nakhon-c04",
+    "phra-nakhon-c05",
+    "phra-nakhon-c06",
+    "phra-nakhon-c07"
+   ]
+  },
+  {
+   "id": "ed-02",
+   "topic": "safety 5 - unanchored",
+   "item": "No khet-level crime data in either language; the evidence base is a tourist-facing scam/pickpocket genre (oldest body-read source c. 2012) whose own author says violent robberies are uncommon and most visitors will be fine. A mid-low score is plausible via the night-strip vs empty-interior mechanism, but that is inference. Recommend pairing the rating with an explicit 'perception genre, no local statistics' label, as flagged for the sibling sam-yot unit.",
+   "claim_ids": [
+    "phra-nakhon-c14",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "id": "ed-03",
+   "topic": "transport 7 - half-coverage rail plus a river network",
+   "item": "The district has two underground Blue Line stations inside (Sam Yot, Sanam Chai - the latter with a free underground museum) and Wat Mangkon just outside; the northern half (Banglamphu, Khao San, Samsen) has no rail at all. What carries the rest: 14 named in-polygon ferry terminals, the blue-flag tourist boat terminating at Phra Athit, cross-river ferries, and a weekday-peak-only khlong boat at the north edge. Orange Line (Sanam Luang, Democracy Monument) and Purple Line (Phan Fa) entrance designs were approved 21 May 2025 - future relief, not present. The 7 reads as the midpoint between an unusually good river network and an unusually rail-poor north.",
+   "claim_ids": [
+    "phra-nakhon-c08",
+    "phra-nakhon-c09",
+    "phra-nakhon-c10"
+   ]
+  },
+  {
+   "id": "ed-04",
+   "topic": "crowd 2 and the tourist-vs-resident split",
+   "item": "The crush is real but venue-local: national arrival volumes (35.5M in 2024, ~32.9M in 2025) funnel into the palace/Wat Pho corridor and the 410-m Khao San strip, while registered residents fell to 38,408 (Dec 2025) and some khwaeng count under 1,800 people. The app's crowd 2 is best explained as venue-adjacency inside an emptying district - and the strip's intensity is being actively managed down by vendor rules, which the food-9 and nightlife-9 stories partially depend on.",
+   "claim_ids": [
+    "phra-nakhon-c18",
+    "phra-nakhon-c02",
+    "phra-nakhon-c13"
+   ]
+  },
+  {
+   "id": "ed-05",
+   "topic": "rent 8 inside a conservation cage",
+   "item": "Cheap is real at the observed end: HipFlat shows 17 listings, studios from 3,800 THB, 1-beds from ~15,000, residential bulk 13.5-67k - the app's 14,000/28,000 editorial matches. The mechanism worth naming is the conservation regime (height caps, mandated facade colors, committee sign-off, 121 listed buildings): it freezes the skyline and the housing stock, keeps new supply near zero, and leaves the budget tail to old shophouses that portals barely list. Affordability here is inseparable from building age and renovation friction.",
+   "claim_ids": [
+    "phra-nakhon-c12",
+    "phra-nakhon-c11",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "id": "ed-06",
+   "topic": "daily essentials 9 - markets yes, hospitals no",
+   "item": "The essentials score is carried by a market layer few districts match (Trok Mor, Pak Khlong Talat, Pahurat, Tha Phra Chan, Norrarat, flea and walking-street markets) plus in-khet Big C/Golden Place/7-Eleven coverage. The uncovered flank is acute care: no full-service hospital inside the polygon - Klang just outside on the Pom Prap side, Siriraj across the river, Vajira across the northern khlong. Recommend the guide text keep the market praise and state the hospital gap plainly rather than folding it into a generic 'essentials' sentence.",
+   "claim_ids": [
+    "phra-nakhon-c15"
+   ]
+  }
+ ],
+ "search_log": [
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: leisure=park|garden + ferry_terminal + railway station in bbox 13.735-13.778, 100.472-100.512 (UA header)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "98 elements; 14 named in-polygon ferry terminals; 4 khet parks + supporting greens found"
+  },
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: amenity=hospital|marketplace|pharmacy|library + shop=supermarket, same bbox (attempt 1)",
+   "status": "failed",
+   "date": "2026-11-07",
+   "note": "rate_limited response from overpass-api.de; retried after sleep"
+  },
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: amenities retry (attempt 2)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Big C, Golden Place, Trok Mor, Pak Khlong Talat, Klang Hospital, Red Cross station etc. returned"
+  },
+  {
+   "tool": "Bash/curl",
+   "query": "Overpass API: out geom for 10 park ways + Rommani Nat relation (area computation)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "areas: Sanam Luang 10.99 ha, Saranrom 3.22, Santichai 1.38, Mahakan 1.05, RommaniNat 1.05, Maha Chetsadabodin 0.41, Utokatan 0.30, Nagaraphirom 0.19"
+  },
+  {
+   "tool": "kit check_geometry.py",
+   "query": "~60 point-in-polygon checks vs app phra-nakhon polygon (parks, piers, stations, markets, landmarks)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": " Democracy Monument IN; Wat Mangkon/Siriraj/Wat Arun/Rama VIII park/Princess Mother Memorial OUT; Rommaninat IN"
+  },
+  {
+   "tool": "web_reader",
+   "query": "webReader https://th.wikipedia.org/wiki/เขตพระนคร (raw Thai URL)",
+   "status": "failed",
+   "date": "2026-11-07",
+   "note": "MCP error -400 URL format; retried as percent-encoded via WebFetch (ok)"
+  },
+  {
+   "tool": "web_reader",
+   "query": "webReader https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: infobox, khwaeng table, boundaries, festivals, history"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia เขตพระนคร (percent-encoded)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 5.536 km2, 38,408 (Dec 2568), khwaeng areas+populations, boundaries, history 2458/2471/2515"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia ท้องสนามหลวง",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 74 ไร่ 63 ตร.ว., owner/operator, 05:00-22:00, bans, 2020-2025 events"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia สวนสราญรมย์",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 23 ไร่, since 1960, 05:00-21:00, facilities"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia สวนสันติชัยปราการ",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 8 ไร่, opened 5 Dec 1999, 05:00-21:00, lamphu tree"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia อุทกภัยในประเทศไทย พ.ศ. 2554 (targeted Bangkok/old-town prompt)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: Tha Phra Chan amulet market flooded 30 Sep 2011; island-wide protection not detailed in article"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia Sanam Chai MRT station",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: BL31, opened 29 Jul 2019, khwaeng, ridership 877,862 (2021), underground museum"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "matichon.co.th/weekly/hot-news/article_128871 (เปิดแผนจัดระเบียบเกาะรัตนโกสินทร์)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 2018-08-27, 5 zones, height ban, facade colors"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "innews.news/news.php?n=77707 (บอร์ดเกาะรัตนโกสินทร์ฯ)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 21 May 2025 meeting, 121 buildings, bridge +2.00 m, Purple/Orange station designs"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "thaipbsworld.com/around-thailand/572096 (BMA vendor regulation)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: published 3 Nov 2026; no-new-vendor policy; 15 trade zones incl. Phra Nakhon"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "coconuts.co/bangkok Khaosan vendors street food ban fears",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read but UNDATED; internal content matches 2016-17 ban wave - used as historical vendor voice only"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "travelfish.org Khao San Road safety and scams (page 182)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read; c. 2012 dating inferred from a referenced Jan 2012 advisory"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "hipflat.com/condo-for-rent/bangkok/phra-nakhon",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "body read: 17 listings, 3,800-180,000 THB, no aggregate; some mis-mapped units flagged on page"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khao San Road Bangkok 2025 new rules vendors regulation crackdown news",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Apr 2025 marked boundaries (Coconuts), no-new-registration framework, nightlife sandbox reports"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Suan Rommaninat park Bangkok former Klong Prem prison area rai hectares",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "~29 rai / 4.6 ha, 5am-9pm, gym + Corrections Museum; snippet-level (Wikipedia+greener)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khao San Road nightlife sandbox 2026 closing hours midnight petition Bangkok Post Nation",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Oct 2026 petition to PM Anutin; NBT sandbox; Dec 2023 Bangkok Post piece (paywall - not opened)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khao San Road tourist scams pickpockets safety report 2024 2025",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "generic pickpocket/scam genre; no district statistics surfaced"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Rattanakosin Island conservation committee building facade restrictions renovation approval",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Siam Society 16 m limit; 2022 committee repairs; Bangkok Post 2018-19 snippets"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "เกาะรัตนโกสินทร์ คณะกรรมการสิ่งแวดล้อม อนุรักษ์ อาคาร ซ่อมแซม ข้อจำกัด ความสูง",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "soc.go.th regulation PDF + ONEP 2561 master plan + Matichon plan article located"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "น้ำท่วม 2554 เกาะรัตนโกสินทร์ ถนนมหาราช ทราย กันน้ำ พระบรมมหาราชวัง",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "3 Oct 2554 pier seepage report; Maharaj Rd sandbags snippet-level only"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "บอร์ดเกาะรัตนโกสินทร์ อนุมัติ อาคารที่มีคุณค่าควรอนุรักษ์ 121 อาคาร 2568",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "inNews article found and later body-read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Chao Phraya Tourist Boat blue flag stops 2025 fare Tha Tien Maharaj Phra Athit",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Sathorn-Phra Athit, ~30 min, ~40 THB / 150-200 THB day pass; operator site snippet-only"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khao San Road tourism 2025 recovery quieter Banglamphu guesthouses business",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "guides 2025-2026; no hard recovery statistics for the strip"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Phra Nakhon Bangkok rent condo apartment monthly price 2025 HipFlat ห้องเช่า เขตพระนคร",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "HipFlat pages; then body-read of the main rental page"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "โรงพยาบาลตำรวจ ถนนราชดำเนินกลาง แขวงบวรนิเวศ เขตพระนคร ที่อยู่",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "CORRECTION: Police General Hospital is on Phra Ram I Rd, Pathum Wan - not in Phra Nakhon"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Coconuts Bangkok Khao San Rambuttri Kraisi vendor marked boundaries April 2025 footpath",
+   "status": "partial",
+   "date": "2026-11-07",
+   "note": "exact Apr 2025 article URL not located; claim kept snippet-level and flagged"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "เรือโดยสารคลองผดุงกรุงเกษม สถานะ 2567 2568 ยกเลิก ให้บริการ",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "service running since 15 Mar 2023; weekday-peak schedule; ~700/day 2024; aggregated, not body-read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Bangkok tourist arrivals 2025 record 35 million international visitors old town Rattanakosin",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "35.5M (2024), ~32.9-33.0M (2025); national figures only, no Rattanakosin visitor count"
+  }
+ ],
+ "open_issues": [
+  "Safety 5 has no unit-specific or district-level evidentiary basis: no khet crime statistics found in EN or TH; core body-read source (Travelfish) dates to c. 2012. Recommend a low-confidence/perception label (same conclusion as sibling sam-yot bundle).",
+  "Green 10 figure: app says 38.5 ha (7.2%) but OSM-computed public in-polygon green is ~19-20 ha (Sanam Luang 10.99 + Saranrom 3.22 + Santichai 1.38 + Mahakan 1.05 + Rommaninat 1.05-mapped + others). Gap plausibly = temple/palace grounds; needs an app-methodology decision, not a data fix.",
+  "Rommaninat published area (~4.6 ha / 29 rai) is snippet-only (Wikipedia + greener.bangkok.go.th not body-read); OSM maps only 1.05 ha of open green inside the walled compound. Body-read both pages before quoting the larger figure.",
+  "App fact '24 piers' vs 14 distinct named ferry terminals verified in-polygon in OSM. Reconcile the counting rule (both banks? canal piers? nodes?) before the pier number appears in guide copy.",
+  "Democracy Monument polygon conflict: this batch's check puts the monument point (13.7586, 100.5021) INSIDE the app phra-nakhon polygon, while batch-2's PIP note recorded a different result relative to phaya-thai; and Phan Fa Lilat pier (13.7555, 100.5064) falls OUTSIDE phra-nakhon despite being adjacent to the monument. Central polygon audit recommended.",
+  "Coconuts Khao San vendor-feature is undated; internal content matches the 2016-2017 street-food-ban wave. Do not cite it as 2024-2026 evidence; the vendor-association voice is kept as historical context only.",
+  "Oct 2026 Khao San midnight-closing petition and the 'nightlife sandbox' pilot rest on search aggregation (Bangkok Post paywalled - not opened per policy; NBT via Facebook post). Monitor for a primary article before publication.",
+  "HipFlat rent evidence is thin (17 listings; at least one mis-mapped unit flagged on the page itself) and the non-portal shophouse tail is unmeasured; the 14,000/28,000 editorial is consistent with observed asks but is not an aggregate statistic.",
+  "Batch-2 recorded Wang Burapha Phirom 8,344 (2025) vs 8,238 here (Thai wiki, Dec 2568) - month/revision difference; harmless but should be normalized to one DOPA retrieval date at integration.",
+  "Suan Luang Rama VIII Park, Princess Mother Memorial Park and Sansatarana Park carry OSM tags/addresses adjacent to or referencing old-town names but fall OUTSIDE the app phra-nakhon polygon (Dusit / across-river / south). Any guide copy naming them as district parks must be corrected.",
+  "Resident voice is thinner than ideal: Reddit/TripAdvisor not attempted (403 by project policy); the only first-person resident/vendor voices available were in an undated Coconuts feature.",
+  "Klang Hospital sits just outside the eastern polygon edge (Pom Prap side) per the app geometry; hospital travel-burden phrasing in guide copy should reflect 'outside the khet line', not 'absent from the area'."
+ ],
+ "counts": {
+  "claims": 18,
+  "qa_covered": 12,
+  "editorial_items": 6,
+  "sources_cited": 42,
+  "publisher_families": [
+   "Wikimedia (EN/TH Wikipedia)",
+   "OpenStreetMap (Overpass API direct)",
+   "Thai news media (Matichon Weekly, inNews, Thai PBS World, Coconuts, Spring News, Bangkok Post*, NBT World*)",
+   "government (soc.go.th regulation, ONEP master plan, BMA greener.bangkok.go.th via tags, TAT via aggregation)",
+   "property portal (HipFlat)",
+   "travel guides (Travelfish, Trailblazing Adventures*)",
+   "academic (Siam Society JSS)",
+   "internal app geometry + kit tools"
+  ],
+  "counter_views": [
+   "green 10 vs ~half the hectares non-public / event closures",
+   "safety 5 vs 'violent crime uncommon, most visitors fine' genre",
+   "tourism boom vs 'quieter than before' + vendor displacement (40-50% income loss case)",
+   "conservation protects townscape vs caps housing supply and renovation",
+   "crowd 2 vs a depopulating residential interior (114k -> 38.4k registered)"
+  ],
+  "languages": [
+   "English (Wikipedia, Thai PBS World, HipFlat, Travelfish, Coconuts, searches)",
+   "Thai (เขตพระนคร, ท้องสนามหลวง, สวนสราญรมย์, สวนสันติชัยปราการ, อุทกภัย 2554, เกาะรัตนโกสินทร์ อนุรักษ์, น้ำท่วม 2554, เรือคลองผดุงกรุงเกษม, โรงพยาบาลตำรวจ queries)"
+  ]
+ }
+}

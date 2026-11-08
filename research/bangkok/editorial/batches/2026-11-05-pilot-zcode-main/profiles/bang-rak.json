@@ -1,0 +1,1587 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "bang-rak",
+  "kind": "district",
+  "name_en": "Bang Rak",
+  "name_th": "บางรัก",
+  "aliases": [
+   "Silom",
+   "Sala Daeng",
+   "Patpong",
+   "Surawong",
+   "Charoen Krung",
+   "Saphan Taksin",
+   "Si Phraya",
+   "Suriwong",
+   "MahaNakhon"
+  ],
+  "scope_notes": "Administrative khet (~5.54 km², pop ~45,757 in 2020) with strongly distinct subareas: Silom CBD, Patpong/Suriwong nightlife, Surawong, the Charoen Krung riverside creative corridor, Saphan Taksin pier area and quiet blocks between. Research-verified: MahaNakhon inside (Si Lom khwaeng, Bang Rak side of Narathiwat Rd); St. Louis Hospital outside (Sathon district); Lumphini Park outside across Rama IV (Pathum Wan)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 8.3,
+  "cohort_rank": 2,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Second-highest district model score (2/50); distinguish Silom, riverside and other subareas."
+ },
+ "sources": [
+  {
+   "id": "src_91f014c1a2a6",
+   "canonical_url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "title": "Bang Rak district",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:18:00+03:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none; volunteer-edited encyclopedia",
+   "limitations": [
+    "Population figure is 2019 registered population (48,227); app uses 2020 figure (45,757)",
+    "Community-edited; khwaeng areas/populations not independently verified against BMA records (BMA portal 403)"
+   ]
+  },
+  {
+   "id": "src_b128963c3c2e",
+   "canonical_url": "https://www.thefinestthai.com/2026/04/16/soi-convent-and-silom-bangkoks-best-kept-secret-for-lunchtime-street-food",
+   "retrieved_url": "https://www.thefinestthai.com/2026/04/16/soi-convent-and-silom-bangkoks-best-kept-secret-for-lunchtime-street-food",
+   "title": "Soi Convent and Silom: Bangkok's best-kept secret for lunchtime street food",
+   "publisher": "The Finest Thai",
+   "publisher_family": "The Finest Thai",
+   "author": "Napaporn Aroonrat",
+   "published_at": "2026-04-16",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:29:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "independent food blog; no booking/commerce observed on page",
+   "limitations": [
+    "Single-author food-blog account; stall names/prices not independently verified",
+    "Weekend behavior described only indirectly (seven-days note); no systematic hour counts"
+   ]
+  },
+  {
+   "id": "src_9431c63c3ea8",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-rak",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-rak",
+   "title": "Condos for rent in Bang Rak — HipFlat",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:29:00+03:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal; averages derived from its own listing pool",
+   "limitations": [
+    "Averages shown in USD, no stated methodology or sample-size caveat",
+    "Asking rents, not signed leases",
+    "October 2026 data snapshot; 2,473 listings",
+    "Individual listing rents ranged THB 24,000-145,000/month, so averages mask wide spread"
+   ]
+  },
+  {
+   "id": "src_01bcfff9afda",
+   "canonical_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/80-20",
+   "retrieved_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/80-20",
+   "title": "80/20 – a MICHELIN Guide Restaurant",
+   "publisher": "Michelin Guide",
+   "publisher_family": "Michelin",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:33:00+03:00",
+   "body_read": true,
+   "type": "tourism_publisher",
+   "commercial_context": "restaurant guide with booking-related links; star selection is editorial but hospitality-industry adjacent",
+   "limitations": [
+    "Retrieved via exa crawler (page JS-rendered to WebFetch)",
+    "Listing reflects current 2026 guide cycle; no inspection date for the physical restaurant"
+   ]
+  },
+  {
+   "id": "src_9b180be2c290",
+   "canonical_url": "https://www.southeastasiasimplified.com/blog/entertainment-11/patpong-bangkok-what-to-know-before-you-visit-2026-145",
+   "retrieved_url": "https://www.southeastasiasimplified.com/blog/entertainment-11/patpong-bangkok-what-to-know-before-you-visit-2026-145",
+   "title": "Patpong Bangkok: What to Know Before You Visit (2026)",
+   "publisher": "Southeast Asia Simplified",
+   "publisher_family": "Southeast Asia Simplified",
+   "author": null,
+   "published_at": "2026-06-06",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:33:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "independent travel blog, some affiliate links typical of the genre; no booking observed on page",
+   "limitations": [
+    "Author not named on page",
+    "Venue counts and prices are operator/visitor observations 2025-2026, not an official census",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_6bafb4b19c8b",
+   "canonical_url": "https://www.timeout.com/bangkok/things-to-do/reconnect-with-your-city-find-out-where-to-unwind-in-the-bustling-neighborhood-of-silom",
+   "retrieved_url": "https://www.timeout.com/bangkok/things-to-do/reconnect-with-your-city-find-out-where-to-unwind-in-the-bustling-neighborhood-of-silom",
+   "title": "Where to unwind in the bustling neighborhood of Silom",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out Group",
+   "author": null,
+   "published_at": "2024-07-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:34:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "city-lifestyle magazine; venue recommendations are editorial, venue closures common",
+   "limitations": [
+    "Venue-level claims age quickly; venues may have closed since Jul 2024"
+   ]
+  },
+  {
+   "id": "src_531883aa5458",
+   "canonical_url": "https://www.timeout.com/bangkok/things-to-do/things-to-do-in-silom",
+   "retrieved_url": "https://www.timeout.com/bangkok/things-to-do/things-to-do-in-silom",
+   "title": "Things to do in Silom",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out Group",
+   "author": null,
+   "published_at": "2016-04-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:32:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "city-lifestyle magazine",
+   "limitations": [
+    "Published 2016; at least one listed venue (Foo Mui Kee) marked closed in URL metadata; used only for durable framing and Neilson Hays Library"
+   ]
+  },
+  {
+   "id": "src_b2d5cd8c6bba",
+   "canonical_url": "https://www.central.co.th/en/store/central-silom-complex",
+   "retrieved_url": "https://www.central.co.th/en/store/central-silom-complex",
+   "title": "Central Silom Complex — store page",
+   "publisher": "Central Retail",
+   "publisher_family": "Central Group",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:36:00+03:00",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "retailer's own store page (operator information, promotional framing)",
+   "limitations": [
+    "Operator self-description; page mentions BTS Sala Daeng/MRT Silom as access but does not explicitly claim a built skybridge connection",
+    "Hours can change"
+   ]
+  },
+  {
+   "id": "src_4450f4ad7cd5",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/558613",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/558613",
+   "title": "Governor warns 13 streets impassable for small cars (flood update)",
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS (public broadcaster)",
+   "author": null,
+   "published_at": "2026-09-26",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:35:00+03:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none; Thailand public broadcaster",
+   "limitations": [
+    "Citywide event coverage; does not name Bang Rak/Silom/Charoen Krung specifically",
+    "Thai-language source, translated by assistant during reading"
+   ]
+  },
+  {
+   "id": "src_142983c8e694",
+   "canonical_url": "http://www.theatlantic.com/photo/2011/11/thailands-disastrous-slow-moving-flood/100188/",
+   "retrieved_url": "http://www.theatlantic.com/photo/2011/11/thailands-disastrous-slow-moving-flood/100188/",
+   "title": "Thailand's Disastrous, Slow-Moving Flood (In Focus)",
+   "publisher": "The Atlantic",
+   "publisher_family": "The Atlantic",
+   "author": "Alan Taylor",
+   "published_at": "2011-11-14",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:36:00+03:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none; photo essay",
+   "limitations": [
+    "Historic overview; does not name Silom/Charoen Krung specifically, only 'central Bangkok'",
+    "2011 conditions may not reflect current drainage"
+   ]
+  },
+  {
+   "id": "src_2ce01d126616",
+   "canonical_url": "https://www.nationthailand.com/blogs/in-focus/40010150",
+   "retrieved_url": "https://www.nationthailand.com/blogs/in-focus/40010150",
+   "title": "Khlong Chong Nonsi square will be ready by Christmas, promises Bangkok governor",
+   "publisher": "The Nation Thailand",
+   "publisher_family": "Nation Thailand / Asia News Network",
+   "author": null,
+   "published_at": "2021-12-19",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:39:00+03:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none noted; quotes governor's promises",
+   "limitations": [
+    "Reports political promises (full completion 'by August 2022') that were not met on schedule per later sources",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_d57ff1ff0912",
+   "canonical_url": "https://www.pattayamail.com/thailandnews/bangkoks-chong-nonsi-canal-park-to-be-partially-opened-on-dec-25-380618",
+   "retrieved_url": "https://www.pattayamail.com/thailandnews/bangkoks-chong-nonsi-canal-park-to-be-partially-opened-on-dec-25-380618",
+   "title": "Bangkok's Chong Nonsi Canal Park to be partially opened on Dec 25",
+   "publisher": "Pattaya Mail",
+   "publisher_family": "Pattaya Mail",
+   "author": "Pattaya Mail",
+   "published_at": "2021-11-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:39:00+03:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "regional newspaper; NNT wire content",
+   "limitations": [
+    "2021 reporting; describes phase 2 as located in Yan Nawa district context",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_3255884c2b6d",
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "title": "One Bangkok: a transformative urban district (press release)",
+   "publisher": "One Bangkok (TCC Assets)",
+   "publisher_family": "TCC Assets / One Bangkok",
+   "author": null,
+   "published_at": "2024-10-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:37:00+03:00",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "developer's own promotional press release",
+   "limitations": [
+    "Developer marketing; scale/occupancy claims are self-reported",
+    "Phased opening means later-phase details may have shifted"
+   ]
+  },
+  {
+   "id": "src_5440d2b32e00",
+   "canonical_url": "https://www.placesandfoods.com/2020/03/silom-walking-street-bangkok.html",
+   "retrieved_url": "https://www.placesandfoods.com/2020/03/silom-walking-street-bangkok.html",
+   "title": "Silom Walking Street Bangkok",
+   "publisher": "Places and Foods",
+   "publisher_family": "Places and Foods",
+   "author": "Wilson Ng",
+   "published_at": "2020-03-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:39:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "travel blog",
+   "limitations": [
+    "Visit during Feb 2020 COVID-19 downturn; attendance not representative",
+    "Frequency claim (3rd Sunday) conflicts with other sources",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_977caacad9db",
+   "canonical_url": "https://asianews.network/venice-of-the-east-reborn-bangkoks-plan-to-reclaim-its-1100-canals-as-linear-parks",
+   "retrieved_url": "https://asianews.network/venice-of-the-east-reborn-bangkoks-plan-to-reclaim-its-1100-canals-as-linear-parks",
+   "title": "Venice of the East, Reborn: Bangkok's plan to reclaim its 1,100 canals as linear parks",
+   "publisher": "Asia News Network",
+   "publisher_family": "Nation Thailand / Asia News Network",
+   "author": null,
+   "published_at": "2026-07-13",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:25:00+03:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none noted",
+   "limitations": [
+    "Same story syndicated by The Nation (2026-07-11) — counted as one family",
+    "Stockholm Environment Institute fieldwork quoted second-hand"
+   ]
+  },
+  {
+   "id": "src_3595b2eef256",
+   "canonical_url": "https://en.wikipedia.org/wiki/Chong_Nonsi_Canal_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chong_Nonsi_Canal_Park",
+   "title": "Chong Nonsi Canal Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:20:00+03:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub article; no phase-by-phase detail; used only for opening date, 200 m phase-1 length, 4.5 km plan, designer and park coordinates (13°43'13\"N 100°31'52\"E, Sathon side)"
+   ]
+  },
+  {
+   "id": "src_009411b5c356",
+   "canonical_url": "https://whybangkok.com/areas/silom/",
+   "retrieved_url": "https://whybangkok.com/areas/silom/",
+   "title": "Silom Area",
+   "publisher": "WhyBangkok",
+   "publisher_family": "WhyBangkok",
+   "author": null,
+   "published_at": "2026-03-30",
+   "updated_at": "2026-07-21",
+   "retrieved_at": "2026-11-05T02:42:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "independent area guide; no booking observed on page",
+   "limitations": [
+    "Author not named",
+    "Narrative guide, not measurement; 'quiet' and 'pushy' are author characterizations",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_aaae55e4c236",
+   "canonical_url": "https://www.superagent.co/en/blog/renting-near-silom-nightlife-what-expats-need-to-know",
+   "retrieved_url": "https://www.superagent.co/en/blog/renting-near-silom-nightlife-what-expats-need-to-know",
+   "title": "Renting Near Silom Nightlife: What Expats Need to Know",
+   "publisher": "Superagent",
+   "publisher_family": "Superagent (rental platform)",
+   "author": null,
+   "published_at": "2026-05-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:42:00+03:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "content marketing by a rental/letting platform; building picks and rents serve its brokerage funnel",
+   "limitations": [
+    "Anecdotes (friend's lease on Soi Convent 2) unverifiable",
+    "Rent ranges are listings-level observations, not medians",
+    "Retrieved via exa crawler"
+   ]
+  },
+  {
+   "id": "src_e83859ba2f65",
+   "canonical_url": "https://thesmartlocal.co.th/silom-district-guide/",
+   "retrieved_url": "https://thesmartlocal.co.th/silom-district-guide/",
+   "title": "Silom District Guide: Cost of Living, Community & Things to Do",
+   "publisher": "The Smart Local (Thailand)",
+   "publisher_family": "The Smart Local",
+   "author": "Nune Praewalin",
+   "published_at": "2024-01-17",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:42:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "lifestyle publisher with sponsored-image credits; venue/rent mentions are illustrative",
+   "limitations": [
+    "Rent range THB 9,500-180,000 is listing anecdote, not a distribution",
+    "Retrieved via exa crawler; full page read truncated after schools section but living/transport/rent sections captured"
+   ]
+  },
+  {
+   "id": "src_17c8d19830f9",
+   "canonical_url": "https://touristbangkok.com/bangkok-shopping-guide/bangkok-markets/silom-walking-street",
+   "retrieved_url": "https://touristbangkok.com/bangkok-shopping-guide/bangkok-markets/silom-walking-street",
+   "title": "Silom Walking Street – Bangkok Markets",
+   "publisher": "TouristBangkok",
+   "publisher_family": "TouristBangkok",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:40:00+03:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "travel guide site",
+   "limitations": [
+    "No publication or last-updated date visible; schedule may be stale",
+    "Frequency ('alternate Sundays') conflicts with 2020 account"
+   ]
+  },
+  {
+   "id": "src_0092da4e0d5d",
+   "canonical_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/le-du",
+   "retrieved_url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/le-du",
+   "title": "Le Du – a MICHELIN Guide Restaurant",
+   "publisher": "Michelin Guide",
+   "publisher_family": "Michelin",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:43:00+03:00",
+   "body_read": true,
+   "type": "tourism_publisher",
+   "commercial_context": "restaurant guide with booking links",
+   "limitations": [
+    "Retrieved via exa crawler; the 'One Star' designation line was not visible in the retrieved excerpt for Le Du (it was visible for 80/20); Le Du's star corroborated only via search result referencing the same guide"
+   ]
+  },
+  {
+   "id": "src_36aae08f9016",
+   "canonical_url": "https://en.wikipedia.org/wiki/Saint_Louis_Hospital",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Saint_Louis_Hospital",
+   "title": "Saint Louis Hospital (Bangkok)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T02:43:00+03:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Community-edited; address 27 Sathon Tai Rd, Yannawa subdistrict, Sathon District used to resolve the outside-inside question"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "bang-rak-c01",
+   "text_en": "Bang Rak (khet) is a 5.54 km2 district of five khwaeng — Maha Phruettharam, Si Lom, Suriyawong, Bang Rak and Si Phraya — bounded by the Chao Phraya River to the west (Khlong San across), Rama IV Road and Pathum Wan district to the north, Khlong Sathon under Sathon Road and Sathon district to the southeast, and Khlong Phadung Krung Kasem and Samphanthawong to the northwest.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Bang Rak",
+    "relation_to_entity": "entire_unit",
+    "notes": "Charoen Krung Road is an internal thoroughfare, not a boundary; district covers only the north side of Sathon Road."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current administrative structure",
+    "recheck_by": null,
+    "notes": "Administrative boundaries are stable; BMA portal could not be reached for primary confirmation."
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Geography and administration section, khwaeng table",
+     "paraphrase": "Five khwaeng with geocodes 100401-100405; area 5.54 km2; boundaries with Pathum Wan (Rama IV), Sathon (Khlong Sathon mid-Sathon Rd), Khlong San (river), Samphanthawong (Khlong Phadung Krung Kasem)."
+    },
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Geography section, neighbouring-districts paragraph",
+     "paraphrase": "Charoen Krung Road described as internal thoroughfare; Sathon district lies across Khlong Sathon with Bang Rak covering the north side."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Khwaeng areas/populations not verified against primary BMA records (webportal.bangkok.go.th returned 403)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-rak-c02",
+   "text_en": "The district's heritage and dining anchors sit along the Charoen Krung and Surawong corridors — Assumption Cathedral (seat of the Roman Catholic Archdiocese of Bangkok), the 1940 General Post Office building that houses TCDC, and the Neilson Hays Library — and the 2026 Michelin Guide lists two one-star restaurants in the district, 80/20 at 1052-1054 Charoen Krung 26 Road and Le Du at 399/3 Soi Si Lom 7; the name 'Bang Rak' has disputed origins (a rak tree or 'to heal'), and the district office is a popular Valentine's Day marriage venue.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "heritage",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Charoen Krung / Surawong corridors",
+    "relation_to_entity": "inside",
+    "notes": "All three named institutions are inside the khet per Wikipedia's notable-locations list and Time Out's Surawong mention."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "long-standing institutions",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "History and Notable locations sections",
+     "paraphrase": "Name origin uncertain (rak tree vs 'heal'); Valentine's Day marriages at district office; Assumption Cathedral seat of archdiocese; GPO (1940) houses TCDC; Charoen Krung Road dates to 1862."
+    },
+    {
+     "source_id": "src_531883aa5458",
+     "locator": "Things to do in Silom — Neilson Hays Library entry",
+     "paraphrase": "Neilson Hays Library on Surawong Road, 100 THB entrance, with Garden Cafe and Gallery."
+    },
+    {
+     "source_id": "src_01bcfff9afda",
+     "locator": "Address line and One Star designation",
+     "paraphrase": "80/20: 1052-1054 Charoen Krung 26 Road, Bang Rak 10500; 'One Star: High quality cooking'; Thai contemporary; closed Mon-Tue."
+    },
+    {
+     "source_id": "src_0092da4e0d5d",
+     "locator": "Address line and description",
+     "paraphrase": "Le Du: 399/3 Soi Si Lom 7, Si Lom, Bang Rak 10500; Thai contemporary, chef 'Ton' Thitid; open Mon-Sat evenings."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Wikipedia does not explicitly call Charoen Krung 'the first paved road', only an 1862 main thoroughfare; the common 'first modern road' framing was not confirmed in a body read",
+    "Le Du's star line was not visible in the retrieved Michelin excerpt (80/20's was); its star status is corroborated only via search results referencing the same 2026 guide",
+    "The app's '3 Michelin stars + 3 Bib Gourmand' count was not independently reproduced"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c03",
+   "text_en": "Four BTS Silom-line stations (Sala Daeng, Chong Nonsi, Surasak, Saphan Taksin) and MRT Si Lom (interchange with Sala Daeng) serve the district, with Saphan Taksin linked to Sathorn Pier for Chao Phraya boat transfers; Hua Lamphong, Sam Yan and Lumphini MRT stations lie on the Rama IV corridor at the Pathum Wan edge rather than inside the khet.",
+   "kind": "factual_report",
+   "topics": [
+    "transit",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "BTS/MRT stations on the Silom and Rama IV corridors",
+    "relation_to_entity": "partial",
+    "notes": "BTS Sala Daeng, Chong Nonsi, Surasak, Saphan Taksin and MRT Si Lom inside; the three Rama IV Blue-line stations are on/just north of the boundary road."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current network",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Transport section",
+     "paraphrase": "BTS stations Sala Daeng, Chong Nonsi, Saint Louis, Surasak, Saphan Taksin; MRT Blue Line under Rama IV with Hua Lamphong, Sam Yan, Si Lom, Lumphini; Si Lom MRT links to Sala Daeng BTS; Saphan Taksin connects to Sathorn Pier."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Transport and daily movement section",
+     "paraphrase": "BTS useful for Siam and the Chao Phraya connection at Saphan Taksin; MRT for Asok, Sam Yan, Chinatown; two-system access is the main reason Silom works."
+    },
+    {
+     "source_id": "src_e83859ba2f65",
+     "locator": "Where and why to live — transport paragraph",
+     "paraphrase": "Recommends condos within walking distance of BTS Sala Daeng or MRT Silom because of heavy traffic; notes MRT Sam Yan also nearby."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Note: Wikipedia's transport list also includes BTS Saint Louis and MRT Lumphini in its district frame; Saint Louis station is generally at the Sathon-side end of its layout — edge allocations of boundary-adjacent stations were not cadastrally verified",
+    "No walking-time conversions made per method rules"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c04",
+   "text_en": "The MahaNakhon tower is recorded as standing in the Si Lom subdistrict of Bang Rak — the Bang Rak side of Narathiwat Ratchanakharin Road, not the Sathon side — and the State Tower also appears among the district's listed skyscrapers.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "MahaNakhon tower, Narathiwat Ratchanakharin Rd",
+    "relation_to_entity": "inside",
+    "notes": "Resolves the app's verification question; Sathon district begins east of the Narathiwat corridor."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": null,
+    "notes": "Single reference source; no cadastral check performed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Notable locations / skyscrapers subsection",
+     "paraphrase": "MahaNakhon listed among Si Lom/Sathon-area skyscrapers and located in the Si Lom subdistrict; State Tower also listed among district skyscrapers."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Rests on one encyclopedia's subdistrict attribution; primary land-registry check not performed"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-rak-c05",
+   "text_en": "On office weekdays, Soi Convent and adjacent Silom blocks run a concentrated street-food corridor for office workers at roughly 11:00-13:30, with mostly 40-70 THB dishes, many stalls closing by 14:00 or when ingredients run out, and some stalls closed on Mondays.",
+   "kind": "factual_report",
+   "topics": [
+    "crowding",
+    "daily_life",
+    "food"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Soi Convent / Silom Road lunch strip",
+    "relation_to_entity": "inside",
+    "notes": "An 800-metre stretch off Silom Road; Silom Soi 10 and Soi 20 named as adjacent eating zones."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as of April 2026 article; recurring weekday pattern",
+    "recheck_by": "2027-04-01",
+    "notes": "Street-vending regulation in Bangkok changes periodically; lunch-cart presence should be re-checked annually."
+   },
+   "evidence": [
+    {
+     "source_id": "src_b128963c3c2e",
+     "locator": "The Character of Convent Road / When to Visit sections",
+     "paraphrase": "Thousands of office workers pour out of surrounding towers midday; best window weekday 11:00-13:30; several stalls close by 14:00 or when sold out; Mondays many stalls closed."
+    },
+    {
+     "source_id": "src_b128963c3c2e",
+     "locator": "The Essential Stalls section",
+     "paraphrase": "Named stalls include Kuay Teow Khae (tom yum noodles 60-70 THB), Khao Mok Gai Convent (chicken biryani, 30+ years), Bundit Kim Hainanese chicken rice; dishes 40-70 THB aimed at locals."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "One food-blog source; no independent verification of stall counts or hours",
+    "Guide-text claim, not a field observation"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "bang-rak-c06",
+   "text_en": "The Patpong zone (Roads 1 and 2 between Silom and Surawong) runs a nightly night market from about 17:00 to midnight alongside bars, with fewer than 10 active go-go bars on Road 1 in 2026, a quieter Road 2 with LGBT-oriented venues at the Surawong end, and the adjacent Soi Thaniya corridor catering to Japanese clientele.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Patpong / Suriwong nightlife zone incl. Soi Thaniya",
+    "relation_to_entity": "inside",
+    "notes": "Patpong lies between Silom and Surawong Roads, within Suriyawong khwaeng."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 venue observations per guide",
+    "recheck_by": "2027-06-01",
+    "notes": "Go-go bar count is a 2026 snapshot of a fluid venue mix."
+   },
+   "evidence": [
+    {
+     "source_id": "src_9b180be2c290",
+     "locator": "What Is Patpong? / At a Glance table",
+     "paraphrase": "Two parallel streets with market down centre of Road 1; market ~5 PM-midnight daily; bars 8 PM-2 AM; fewer than 10 active go-go bars on Road 1 in 2026; Road 2 quieter with LGBT venues at Surawong end."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Understanding the Silom Nightlife Map section",
+     "paraphrase": "Soi Thaniya corridor caters to Japanese clientele and has its own buzz; Soi Convent more upscale with wine bars."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Venue counts from one independent 2026 guide plus operator/visitor reports; not an official registry",
+    "Japanese-strip characterization of Thaniya corroborated by a commercial rental guide, not by an authoritative cultural source"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c07",
+   "text_en": "Touts and upstairs-bar bill scams remain a documented hazard in Patpong: the 2026 visitor guide rates its scam risk higher than Nana Plaza or Soi Cowboy, warns against following touts upstairs, and a September 2025 traveller account of the night market describing overcharging and intimidation circulated widely on a tourism forum.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Patpong Road bars / night market",
+    "relation_to_entity": "inside",
+    "notes": "Risk concentrates at bar entrances and upstairs venues, not the street market itself."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026",
+    "recheck_by": "2027-06-01",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_9b180be2c290",
+     "locator": "At a Glance table (Scam Risk row) and safety section",
+     "paraphrase": "Scam risk rated 'Higher than Nana Plaza or Soi Cowboy'; upstairs venues approached via touts are a known scam risk; photography prohibited in bars; 20+ age restriction."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Nightlife without reducing Silom to nightlife section",
+     "paraphrase": "Patpong described as 'one small and sometimes pushy part' of the area; readers told not to follow touts or accept unclear prices."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The r/ThailandTourism thread (Sept 2025) could not be opened directly (HTTP 403 on both www and old.reddit), so the forum account is known only through search-result summaries — treated as corroboration, not primary evidence",
+    "Perception-based; no crime statistics collected"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c08",
+   "text_en": "Silom's noise and activity map is highly localized: Patpong runs loud from about 20:00 to 02:00, the Thaniya corridor and Soi Convent's wine bars sustain noise past midnight, while sois a few minutes east and south (Soi Sala Daeng side, the sois off Surawong toward Rama IV) hold quiet residential pockets — daytime Silom is described as quiet relative to its nightlife reputation, and a quieter cafe-and-restaurant register exists on the side streets (Soi Pramuan hosts the long-running Kalpapruek, open since 1976), though guide-level 'quiet spots' are mostly venues rather than public green space.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowding",
+    "daily_life",
+    "noise"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "district",
+    "place_name": "Silom/Suriyawong soi network",
+    "relation_to_entity": "inside",
+    "notes": "Block-scale variation is the claim's point: same district, opposite experiences within 5-10 minutes' walk."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 guides",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Understanding the Silom Nightlife Map section",
+     "paraphrase": "Patpong epicentre loud ~8 PM-2 AM; Thaniya corridor its own buzz; Convent noise past midnight; five minutes east toward Soi Sala Daeng or south past Sathorn Soi 1 the vibe shifts to quiet residential pockets."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "The Noise Factor section",
+     "paraphrase": "Advice to visit any apartment at night (Friday/Saturday ~10 PM), check bedroom window orientation, ask juristic office about noise complaints; below 10th floor near nightlife sois will catch street noise."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Strengths and tradeoffs section",
+     "paraphrase": "Weakness is inconsistency: one block convenient and polished, the next noisy, office-dominated or awkward to walk."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Silom Soi 4 daytime description (related guide quoted in search; see also main guide)",
+     "paraphrase": "Soi 4 at noon barely recognizable — bars shuttered, quiet — with street noise concentrated on weekend nights."
+    },
+    {
+     "source_id": "src_6bafb4b19c8b",
+     "locator": "Framing text and Kalpapruek entry",
+     "paraphrase": "'Another side to Silom' away from crowds; Kalpapruek on Phra Pramuan Road, open since 1976, a household name for elegant Thai food."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Characterizations from guides and a rental platform's content marketing, not acoustic measurement",
+    "The Soi 4 daytime detail comes from the same publisher's related article seen only in search excerpts; not counted as body-read evidence",
+    "'Tree-lined' as a physical characteristic of Soi Pramuan was not independently verified in a body-read source — only the quiet register was"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "bang-rak-c09",
+   "text_en": "Independent asking-rent evidence for Bang Rak puts recent averages around USD 862/month for one-bedroom units (~THB 28,000-29,000 at ~33 THB/USD) and USD 1,640 for two-bedroom (~THB 54,000) across 2,473 listings as of October 2026, with older sois off Surawong renting for roughly THB 15,000-25,000 and newer Sala Daeng-area one-beds THB 25,000-35,000 — the app's 26,000/55,000 editorial figures sit inside this asking range.",
+   "kind": "estimate",
+   "topics": [
+    "cost",
+    "rent"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Rak condo rental market",
+    "relation_to_entity": "entire_unit",
+    "notes": "HipFlat page covers the khet (Bang Rak); Superagent ranges cover the Silom side specifically."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "October 2026 snapshot (HipFlat); May 2026 guide (Superagent)",
+    "recheck_by": "2027-05-01",
+    "notes": "HipFlat trend: -0.2% vs Oct 2025, -5.2% vs Jan 2026, -0.8% month-on-month — roughly flat with softening."
+   },
+   "evidence": [
+    {
+     "source_id": "src_9431c63c3ea8",
+     "locator": "Averages table (studio/1BR/2BR) and trend lines",
+     "paraphrase": "2,473 listings; average USD 967 overall; studio USD 656, 1-bed USD 862, 2-bed USD 1,640, 3-bed USD 2,095; ~USD 24/sqm; individual listings THB 24,000-145,000."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Best Buildings section",
+     "paraphrase": "Saladaeng Residences 1-beds ~25,000-35,000 THB; The Lofts Silom studios from ~22,000; ITF Silom Palace / Silom Terrace older spacious units 15,000-20,000 THB off Surawong toward Rama IV."
+    },
+    {
+     "source_id": "src_e83859ba2f65",
+     "locator": "Where and why to live section",
+     "paraphrase": "Silom-area condo listings range from studios ~9,500 THB to three-bedroom units ~180,000 THB."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "All figures are asking rents; signed-lease data unavailable",
+    "HipFlat averages shown in USD with unstated methodology; THB conversion uses an assumed ~33 THB/USD rate",
+    "Platform coverage skews to condo listings; houses and informal rentals underrepresented",
+    "The app's 26k/55k is itself an editorial estimate; the comparison here is range-consistency, not validation of medians"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c10",
+   "text_en": "Usable green space inside the khet is thin (app: ~9.2 ha, 2.3% park share), and the district's practical green lung is Lumphini Park just north across Rama IV in Pathum Wan — outside the khet but within easy walking of the Sala Daeng/Rama IV edge.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "walkability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Lumphini Park / Rama IV edge",
+    "relation_to_entity": "outside",
+    "notes": "Park is across the boundary road (Rama IV) in Pathum Wan; the claim's in-khet portion is the scarcity itself."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Geography section, boundary paragraph",
+     "paraphrase": "Pathum Wan district lies to the northeast across Rama IV Road."
+    },
+    {
+     "source_id": "src_3255884c2b6d",
+     "locator": "Location paragraph of press release",
+     "paraphrase": "One Bangkok's address given as Wireless Road, Lumphini, Patumwan, Bangkok 10330, with direct access to Lumphini MRT — confirming the Lumphini/Patum Wan side of Rama IV."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Understanding the area section",
+     "paraphrase": "The north side reaches Lumphini Park and the Rama IV corridor, making early exercise possible, but crossing large roads deserves care."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The ~9.2 ha / 2.3% park-share figure is the app's own dataset, not independently verified here",
+    "Small pocket green inside the khet (e.g., temple grounds) not inventoried"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c11",
+   "text_en": "Chong Nonsi Canal Park — a 4.5 km five-phase linear-park plan along Khlong Chong Nonsi, which runs from Surawong Road through Bang Rak, Sathon and Yannawa toward the river — opened its first ~200 m section (Sathorn Rd to Narathiwat Soi 7, near BTS Chong Nonsi) on 25 December 2021; full completion was promised by August 2022 but 2026 reports still describe the park as being rolled out, and the opened stretch sits on the Sathon side of the boundary area rather than inside Bang Rak proper.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "green",
+    "walkability"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Khlong Chong Nonsi canal corridor",
+    "relation_to_entity": "partial",
+    "notes": "Canal begins at Surawong Rd (Bang Rak edge); the operating park section and its coordinates are on the Sathon side near BTS Chong Nonsi; which phases will fall inside Bang Rak is not resolved by available sources."
+   },
+   "temporal_scope": {
+    "event_date": "2021-12-25",
+    "observed_period": "2021 opening through 2026 reporting",
+    "recheck_by": "2027-06-01",
+    "notes": "Later phases' status and any Bang Rak-side section should be re-checked; SEI fieldwork (early 2025, quoted July 2026) found strong evening foot traffic but criticism over removed native trees and concrete coverage."
+   },
+   "evidence": [
+    {
+     "source_id": "src_2ce01d126616",
+     "locator": "Phase list and opening paragraph",
+     "paraphrase": "Phase 2 runs 200 m from Sathorn Rd to Soi Narathiwat 7, opened Dec 25; project divided into five phases starting Surawong-to-Sathorn; full completion promised by August 2022."
+    },
+    {
+     "source_id": "src_d57ff1ff0912",
+     "locator": "Governor statements",
+     "paraphrase": "Phase 2 at 50% complete Nov 2021, three zones (activities, skywalk, BRT linkage); canal deepened 2 m; on completion 4.5 km total."
+    },
+    {
+     "source_id": "src_3595b2eef256",
+     "locator": "Article body",
+     "paraphrase": "Opened 25 Dec 2021 as first of five phases; 200 m linear stretch; designed by Landprocess; 4.5 km planned; coordinates place it near Chong Nonsi BTS."
+    },
+    {
+     "source_id": "src_977caacad9db",
+     "locator": "Chong Nonsi Canal Park paragraphs",
+     "paraphrase": "Highest-profile BMA pilot, 4.5 km, connects CBD to residential neighbourhoods across three districts; SEI fieldwork early 2025: strong late-afternoon/evening foot traffic, but criticism that 30-year-old native trees were replaced with smaller non-native species and concrete coverage increased."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Phase completion status after 2021 is not documented in any body-read source; 'still being rolled out' rests on the July 2026 plan-level reporting rather than a dated construction update",
+    "No source states precisely which completed sections lie inside Bang Rak"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c12",
+   "text_en": "Hospitals within the district include BNH (Convent Road area), Lerdsin, Bangkok Christian and Mahaesak; St. Louis Hospital, often associated with the Sathorn/Silom area, is in fact at 27 South Sathorn Road in Sathon district — outside the khet.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "BNH / Lerdsin / Bangkok Christian / Mahaesak; St. Louis (outside)",
+    "relation_to_entity": "partial",
+    "notes": "Resolves the app's 'St. Louis?' question as outside; BNH on Convent Rd described as a five-minute walk from Silom Soi 4 by the rental guide."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Notable locations section, hospitals",
+     "paraphrase": "Lists Bangkok Christian, BNH (founded as a nursing home by the British community), Lerdsin and Mahaesak; St. Louis not among in-district hospitals."
+    },
+    {
+     "source_id": "src_36aae08f9016",
+     "locator": "Infobox and lead",
+     "paraphrase": "Saint Louis Hospital: large private Catholic hospital in Sathon District; 27 Sathon Tai Road, Yannawa subdistrict, Sathon District; 412 beds; founded 1898."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Healthcare access mention (Soi 4-related guide)",
+     "paraphrase": "BNH Hospital on Convent Road is a five-minute walk from the Soi 4 area."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The five-minute-walk framing is the rental guide's, not a measured distance",
+    "Hospital service quality or pricing not assessed"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c13",
+   "text_en": "Daily-needs infrastructure clusters around the Sala Daeng interchange: Silom Complex at 191 Silom Road carries a Tops supermarket (open 11:00-21:00) and is reached via BTS Sala Daeng/MRT Si Lom, while a rental guide places Robinson Bangrak at the Silom x Charoen Krung corner for everyday shopping.",
+   "kind": "factual_report",
+   "topics": [
+    "cost",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "Silom Complex; Silom x Charoen Krung corner",
+    "relation_to_entity": "inside",
+    "notes": "Wet markets inside the khet (app-adjacent '59 temples, markets' facts) were not independently verified here."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current store page; 2026 guide",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_b2d5cd8c6bba",
+     "locator": "Store details block",
+     "paraphrase": "Address 191 Silom Road, Silom, Bangrak 10500; access via BTS Sala Daeng or MRT Silom; premium Tops Supermarket in complex; hours 11:00-21:00 daily."
+    },
+    {
+     "source_id": "src_aaae55e4c236",
+     "locator": "Everyday-shopping mention in the related Soi 4 guide",
+     "paraphrase": "Robinson Bangrak department store sits at the corner of Silom and Charoen Krung for everyday shopping."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Opening paragraphs",
+     "paraphrase": "Silom Complex gives the Sala Daeng/Silom interchange an air-conditioned place for food, errands and meeting."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Robinson Bangrak detail comes from the rental platform's related article seen in search excerpts; not body-read as primary evidence",
+    "The Central page mentions station access without explicitly claiming a built skybridge link"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c14",
+   "text_en": "Silom Walking Street — a traffic-free market on Silom Road under Sala Daeng BTS that began in December 2019 — has no verifiable current schedule: a 2020 account puts it on the third Sunday (noon-22:00), an undated guide says alternate Sundays 15:00-21:00 from December to May between the Sala Daeng and Narathiwat intersections, and no authoritative 2024-2026 schedule was found.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "daily_life"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Silom Road (Sala Daeng to Narathiwat)",
+    "relation_to_entity": "inside",
+    "notes": "Closure runs along Silom Road proper within the khet."
+   },
+   "temporal_scope": {
+    "event_date": "2019-12-01",
+    "observed_period": "Dec 2019 start; last dated on-ground account Mar 2020",
+    "recheck_by": "2026-12-15",
+    "notes": "If the seasonal pattern held, a December-May season would be the next window to verify; BMA/district-office Facebook pages were suggested by search but not verified."
+   },
+   "evidence": [
+    {
+     "source_id": "src_5440d2b32e00",
+     "locator": "Article body",
+     "paraphrase": "Walking street started December 2019 to promote spending and tourism; every 3rd Sunday, noon to 10 pm, along both sides of Silom Road under Sala Daeng BTS."
+    },
+    {
+     "source_id": "src_17c8d19830f9",
+     "locator": "Market description",
+     "paraphrase": "Bi-weekly/alternate-Sundays street market from December to May, 15:00-21:00, Silom Road closed from Sala Daeng to Narathiwat intersection; stalls, street food, live music and cultural performances."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Two sources conflict on frequency and hours; neither is the organizer",
+    "No 2024-2026 confirmation found — current operation is unconfirmed, not disproven",
+    "Bangkok Post articles on the 2019 launch unreachable (paywall redirect not followed)"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "bang-rak-c15",
+   "text_en": "Flooding evidence for the area is asymmetric: in the 2011 mega-flood central Bangkok was largely spared by a roughly 6 km sandbag wall (Silom/Charoen Krung not specifically named), while a September 2026 monsoon event flooded streets citywide — 13 roads impassable, ~223 million cubic metres of accumulated water, 2-3 days to drain — without naming Bang Rak; no district-specific record of recurring Silom/Charoen Krung street flooding was found in either direction.",
+   "kind": "factual_report",
+   "topics": [
+    "safety",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Rak streets (flood exposure)",
+    "relation_to_entity": "entire_unit",
+    "notes": "BMA's FloodBKK realtime map covers Silom-Charoen Krung, indicating the city treats these streets as flood-monitored, but the map's history was not read as a source."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2011 and September 2026 events reviewed; no district-level series",
+    "recheck_by": "2027-06-01",
+    "notes": "Re-check after the next heavy monsoon season; the app's flood-history framing could not be confirmed at catchment level."
+   },
+   "evidence": [
+    {
+     "source_id": "src_142983c8e694",
+     "locator": "Introductory text of photo essay",
+     "paraphrase": "Central Bangkok appears to have been spared the worst due in part to a protective sandbag wall some 6 km long; flooding hit suburbs, Don Mueang and outskirts."
+    },
+    {
+     "source_id": "src_4450f4ad7cd5",
+     "locator": "Governor warning paragraphs",
+     "paraphrase": "26 Sep 2026: 13 flooded streets impassable for small cars; >300 mm rain; 223M m3 accumulated on the inner-city side; 2-3 days drainage if rain stops; Bang Rak/Silom not mentioned."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Neither source names Bang Rak streets; district-specific flood frequency remains unknown (honest not_found)",
+    "No Thai-language district archive search (e.g., BMA drainage works on Charoen Krung) was completed"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c16",
+   "text_en": "One Bangkok opened its first phase on 25 October 2024 at the Wireless Road x Rama IV corner in Lumphini, Pathum Wan — across Rama IV from Bang Rak's edge — adding offices, five hotels, retail and about 8 hectares of greenery to the adjacent district.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "One Bangkok, Wireless Rd / Rama IV",
+    "relation_to_entity": "outside",
+    "notes": "Outside the khet but on the opposite side of the same boundary road that separates Bang Rak from Pathum Wan/Lumphini."
+   },
+   "temporal_scope": {
+    "event_date": "2024-10-25",
+    "observed_period": "first phase operating; later phases opening through subsequent quarters",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3255884c2b6d",
+     "locator": "Dateline and opening paragraph",
+     "paraphrase": "Press release dated 7 Oct 2024 announcing 25 Oct 2024 public opening; THB 120 bn mixed-use district; three retail areas, five office towers, five hotels, three residential towers, ~17 ha site with 8 ha greenery; address Wireless Road, Lumphini, Patumwan 10330; direct Lumphini MRT access."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Developer's own press release; occupancy and later-phase dates self-reported",
+    "Effect on Bang Rak foot traffic or rents is inference, not measured"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-rak-c17",
+   "text_en": "The district's extreme daytime crowding is driven by the office core, the hospital visitors and the transit interchange rather than by its ~46,000 residents — guides describe weekday streets shaped by office workers and vendors, consistent with the app's near-minimum crowding score — while residential sois a few minutes away run on a calmer schedule.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowding",
+    "daily_life"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "Silom CBD core vs residential sois",
+    "relation_to_entity": "entire_unit",
+    "notes": "Synthesis of c05/c08 evidence; no daytime-population statistics were found."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 guide descriptions",
+    "recheck_by": null,
+    "notes": "A daytime-vs-registered population figure would settle this; none located."
+   },
+   "evidence": [
+    {
+     "source_id": "src_b128963c3c2e",
+     "locator": "The Character of Convent Road",
+     "paraphrase": "Thousands of office workers pour out of surrounding towers at midday; bankers and lawyers queue."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Opening paragraphs",
+     "paraphrase": "Office workers and hospital visitors shape the weekday streets; food vendors fill the lunch period; a different crowd arrives after dark."
+    },
+    {
+     "source_id": "src_91f014c1a2a6",
+     "locator": "Geography and administration, population figures",
+     "paraphrase": "Registered population 48,227 (2019) across five khwaeng, small relative to the office workforce the guides describe."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Inference, not measurement: no daytime-population or footfall data located",
+    "Guide descriptions could overstate uniform weekday crush"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-rak-c18",
+   "text_en": "The Silom area is repeatedly framed by guides as a financial 'Wall Street' core whose practical strength is the combination of two rail systems, river pier, hospitals and food density in one walkable base — the mechanism most often cited for why people choose it over more residential areas.",
+   "kind": "reported_perception",
+   "topics": [
+    "daily_life",
+    "identity",
+    "transit"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "Silom CBD core",
+    "relation_to_entity": "entire_unit",
+    "notes": "Guide opinion, kept distinct from verified transit facts (c03)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2021-2026 guides",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_e83859ba2f65",
+     "locator": "Where and why to live section",
+     "paraphrase": "Silom framed as Thailand's 'Wall Street'; recommends living within walking distance of Sala Daeng/MRT Silom because of heavy traffic and office proximity."
+    },
+    {
+     "source_id": "src_009411b5c356",
+     "locator": "Who Silom suits / Strengths and tradeoffs",
+     "paraphrase": "Strength is combination: work, transport, food, healthcare, nightlife and park access in one central base; suits residents needing central offices, hospitals and everyday services."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Commercial and lifestyle guides dominate this framing; resident-authored accounts (Reddit/forums) were inaccessible (HTTP 403), so the perception base is narrower than ideal"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c01",
+    "bang-rak-c02",
+    "bang-rak-c03",
+    "bang-rak-c04"
+   ],
+   "notes": "Identity fully sourced: khet with 5 khwaeng (Maha Phruettharam, Si Lom, Suriyawong, Bang Rak, Si Phraya), 5.54 km2; boundaries at river, Rama IV, Khlong Sathon, Khlong Phadung Krung Kasem. Stations: BTS Sala Daeng, Chong Nonsi, Surasak, Saphan Taksin (with Sathorn Pier boat transfer) and MRT Si Lom inside; MRT Sam Yan, Hua Lamphong, Lumphini on the Rama IV corridor at the Pathum Wan side (partial/edge). MahaNakhon verified inside (Si Lom khwaeng, Bang Rak side of Narathiwat Rd); State Tower listed among district skyscrapers; Lumphini Park outside across Rama IV in Pathum Wan. Asiatique/River City were NOT body-read and are left unverified here."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c05",
+    "bang-rak-c06",
+    "bang-rak-c08"
+   ],
+   "notes": "Everyday experience differs by subarea and time: office workers' lunch corridor on Soi Convent/Silom (11:00-13:30, 40-70 THB dishes); Patpong's market-plus-bars nights; Japanese-clientele Soi Thaniya; quiet cafe sois (Pramuan, Saladaeng). Whose experience: office workers by day, tourists/nightlife patrons at night, residents of side sois throughout."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c03",
+    "bang-rak-c02",
+    "bang-rak-c13",
+    "bang-rak-c18"
+   ],
+   "notes": "Valued: the two-rail interchange plus river pier (mechanism: car-free centrality), food density from street stalls to two Michelin one-star addresses, daily-needs cluster at Sala Daeng, hospital proximity. Guide opinion (c20) is labeled separately from verified infrastructure facts (c03, c14)."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c07",
+    "bang-rak-c08",
+    "bang-rak-c15"
+   ],
+   "notes": "Counter-evidence found and included: Patpong touting/bill-scam risk rated above Nana/Soi Cowboy (2026 guide), nightlife noise concentrated in specific pockets (Patpong 20:00-02:00, Thaniya, Convent past midnight), block-scale inconsistency ('one block polished, next awkward to walk'). Flooding: 2011 city-center largely spared by sandbag wall; Sept 2026 citywide event did not name Bang Rak; district-specific flood frequency = not_found, honestly flagged. Sidewalk conditions only appear indirectly (stalls occupying pavements at lunch; 'awkward to walk' blocks)."
+  },
+  {
+   "id": "Q05",
+   "status": "conflicting",
+   "claim_ids": [
+    "bang-rak-c08",
+    "bang-rak-c05",
+    "bang-rak-c14"
+   ],
+   "notes": "Rhythm documented: weekday-lunch street-food peak, evening bar crowd, daytime-quiet nightlife sois, weekend-night noise. Seasonality: Silom Walking Street ran December-May seasons when active. CAVEAT: the walking street's current schedule is conflicting (3rd Sunday vs alternate Sundays) and unconfirmed since ~2020 — no authoritative 2024-2026 schedule found."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c03",
+    "bang-rak-c11",
+    "bang-rak-c13"
+   ],
+   "notes": "Two rail systems on site (BTS Silom line x MRT Blue at Sala Daeng/Si Lom), Saphan Taksin linked to Sathorn Pier for river boats; Chong Nonsi skywalk links the canal park to BTS Chong Nonsi and BRT (Sathon side); Silom Complex gives the interchange an indoor daily-needs stop. Guides warn of heavy traffic and careful crossing of Rama IV. Expressway proximity/noise: not verified (open issue). No walking-time conversions performed."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c13",
+    "bang-rak-c12"
+   ],
+   "notes": "Groceries: Silom Complex (191 Silom Rd) with Tops supermarket 11:00-21:00 at the Sala Daeng interchange; Robinson Bangrak at Silom x Charoen Krung (guide-level). Healthcare: BNH, Lerdsin, Bangkok Christian, Mahaesak inside; St. Louis resolved as OUTSIDE (27 South Sathorn Rd, Sathon district, 412 beds). Banks/embassies: not independently verified (app counts 3 embassies within 800 m of centroid)."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c09"
+   ],
+   "notes": "Independent evidence: HipFlat Oct-2026 asking averages (2,473 listings): 1-bed USD 862 (~THB 28-29k), 2-bed USD 1,640 (~THB 54k), studio USD 656; ~USD 24/sqm; roughly flat year-on-year (-0.2%). Superagent ranges: older Surawong-soi units 15-25k, newer Sala Daeng 1-beds 25-35k; SmartLocal range 9.5k-180k. The app's 26k/55k editorial estimate is range-consistent with asking averages, but all figures are asking (not signed) rents with unstated methodology."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c10",
+    "bang-rak-c11",
+    "bang-rak-c08"
+   ],
+   "notes": "In-khet green is thin (app ~9.2 ha / 2.3%; not independently verified). Lumphini Park is the practical green lung, across Rama IV (outside khet, walkable from the Sala Daeng/Rama IV edge, with road-crossing caution). Within the khet: Chong Nonsi canal park is only partially built and its opened 200 m section sits on the Sathon side; usable quiet comes mostly from cafes/sois rather than public parks. No in-khet pocket-park inventory found."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c05",
+    "bang-rak-c06",
+    "bang-rak-c08",
+    "bang-rak-c09",
+    "bang-rak-c12",
+    "bang-rak-c13",
+    "bang-rak-c18"
+   ],
+   "notes": "Conditional fit expressed in editorial.conditional_fit: fits CBD workers, car-free centrality seekers, food-driven residents; strains light sleepers near nightlife sois, families wanting parks-and-quiet, and anyone needing signed-lease affordability at the high end. Guide framing (c20) kept separate from facts."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c16",
+    "bang-rak-c11",
+    "bang-rak-c14",
+    "bang-rak-c06"
+   ],
+   "notes": "Verified changes: One Bangkok first phase OPERATING since 2024-10-25 (outside khet, across Rama IV). Chong Nonsi Canal Park first 200 m OPERATING since 2021-12-25; 4.5 km plan INCOMPLETE (2026 reporting still describes rollout). Silom Walking Street status UNKNOWN (started Dec 2019; last dated account 2020; schedule conflicting). Patpong: fewer than 10 go-go bars on Road 1 in 2026 with the night market still nightly (per 2026 guide) — gradual change, no formal revitalization program found. Charoen Krung creative corridor: TCDC in GPO long-operating; no 2025-2026 opening/closure events verified on this corridor in body-read sources."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "bang-rak-c07",
+    "bang-rak-c08",
+    "bang-rak-c09",
+    "bang-rak-c10",
+    "bang-rak-c15",
+    "bang-rak-c17"
+   ],
+   "notes": "What the #2-of-50 rank misses: (1) nightlife reputation vs residential pockets — risk and noise concentrate on 2-3 sois while adjacent sois are quiet; a district-average safety score hides this. (2) Rent averages mask a 15k-180k spread; asking-vs-signed unknown. (3) The green score leans on a park that is outside the khet and a canal park only partially built. (4) Flooding history unresolved at district level. (5) Resident-authored accounts were largely inaccessible (Reddit 403), so the perception base skews toward commercial guides."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Two rail lines and a river pier wrap around an office core that empties after lunch on weekends, while the noise stays boxed into two or three nightlife sois.",
+   "claim_ids": [
+    "bang-rak-c02",
+    "bang-rak-c03",
+    "bang-rak-c05",
+    "bang-rak-c06",
+    "bang-rak-c07",
+    "bang-rak-c08",
+    "bang-rak-c09",
+    "bang-rak-c10",
+    "bang-rak-c11",
+    "bang-rak-c12",
+    "bang-rak-c13",
+    "bang-rak-c14",
+    "bang-rak-c18"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Bang Rak is the district Bangkok works in: the Sala Daeng BTS x MRT Si Lom interchange, the Silom office strip, and the Charoen Krung riverside with the old Post Office, Assumption Cathedral and two Michelin one-star kitchens. On office weekdays Soi Convent turns into one of the city's densest lunch-cart corridors between 11:00 and 13:30, then the same blocks go quiet. The district's green space is thin inside its own boundary — Lumphini Park is across Rama IV in Pathum Wan — and the much-photographed canal park near Chong Nonsi is only partly built and mostly on the Sathon side. It ranks near the top for connectivity and food, and that ranking is earned at the interchange corner, not uniformly across its five khwaeng.",
+   "claim_ids": [
+    "bang-rak-c02",
+    "bang-rak-c03",
+    "bang-rak-c05",
+    "bang-rak-c06",
+    "bang-rak-c07",
+    "bang-rak-c08",
+    "bang-rak-c09",
+    "bang-rak-c10",
+    "bang-rak-c11",
+    "bang-rak-c12",
+    "bang-rak-c13",
+    "bang-rak-c14",
+    "bang-rak-c18"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Four BTS stations plus an MRT interchange inside the khet, with Saphan Taksin doubling as the Chao Phraya boat hub — car-free centrality few districts match.",
+    "claim_ids": [
+     "bang-rak-c03"
+    ]
+   },
+   {
+    "text_en": "Food at both extremes of price: a weekday 40-70 THB lunch-cart corridor on Soi Convent, and Michelin one-star dining (80/20 on Charoen Krung 26, Le Du on Silom Soi 7).",
+    "claim_ids": [
+     "bang-rak-c05",
+     "bang-rak-c02"
+    ]
+   },
+   {
+    "text_en": "Daily needs cluster at the interchange: Silom Complex with a Tops supermarket at Sala Daeng, Robinson Bangrak at Silom x Charoen Krung, and BNH/Lerdsin hospitals inside the district.",
+    "claim_ids": [
+     "bang-rak-c13",
+     "bang-rak-c12"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Noise and scams concentrate: Patpong runs loud 20:00-02:00, touts and upstairs-bar bill scams are rated a higher risk there than at Nana Plaza or Soi Cowboy, and Convent's wine bars carry sound past midnight.",
+    "claim_ids": [
+     "bang-rak-c07",
+     "bang-rak-c08"
+    ]
+   },
+   {
+    "text_en": "The district is not uniform: one block is polished interchange-frontage, the next is office-heavy and awkward to walk, so the same address can deliver opposite experiences.",
+    "claim_ids": [
+     "bang-rak-c08"
+    ]
+   },
+   {
+    "text_en": "Asking rents sit well above most of the city (1-bed averaging ~THB 28-29k in Oct 2026) and the practical park, Lumphini, lies outside the khet across Rama IV.",
+    "claim_ids": [
+     "bang-rak-c09",
+     "bang-rak-c10"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Weekday midday is the district's signature hour — office workers flood Soi Convent's stalls until about 13:30, and several stalls close by 14:00 or sell out; nightlife sois are shuttered-quiet at noon.",
+    "claim_ids": [
+     "bang-rak-c05",
+     "bang-rak-c08"
+    ]
+   },
+   {
+    "text_en": "After dark the balance flips: Patpong's market and bars take over from 17:00-20:00 onward while the office side empties, leaving quiet residential sois within a few hundred metres of the noise line.",
+    "claim_ids": [
+     "bang-rak-c06",
+     "bang-rak-c08"
+    ]
+   },
+   {
+    "text_en": "The Sunday walking street on Silom Road was a December-May fixture when last confirmed (2019-2020 accounts, conflicting frequency), but no 2024-2026 schedule could be verified — do not promise it.",
+    "claim_ids": [
+     "bang-rak-c14"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Sala Daeng interchange corner: transit, supermarket, food courts, hospital walk — the highest-utility few hundred metres of the khet.",
+    "claim_ids": [
+     "bang-rak-c03",
+     "bang-rak-c13",
+     "bang-rak-c05"
+    ]
+   },
+   {
+    "text_en": "Patpong/Suriwong/Thaniya: nightly market, go-go bars, touts and past-midnight noise — a two-to-three-soi zone, not a district-wide condition.",
+    "claim_ids": [
+     "bang-rak-c06",
+     "bang-rak-c07",
+     "bang-rak-c08"
+    ]
+   },
+   {
+    "text_en": "Charoen Krung riverside: heritage and creative anchor (1940 Post Office/TCDC, Assumption Cathedral) with quieter high-end eating, plus the partially built canal-park corridor at its Sathon-facing edge.",
+    "claim_ids": [
+     "bang-rak-c02",
+     "bang-rak-c11"
+    ]
+   },
+   {
+    "text_en": "Residential sois (Sala Daeng side, off Surawong toward Rama IV): quiet pockets with older, cheaper buildings (15-25k THB) five to ten minutes from the noise.",
+    "claim_ids": [
+     "bang-rak-c08",
+     "bang-rak-c09"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fits: CBD workers in the Silom/Sathorn/Charoen Krung corridor and anyone prioritizing two-rail-plus-river access without a car — the guides' most repeated rationale.",
+    "claim_ids": [
+     "bang-rak-c03",
+     "bang-rak-c18"
+    ]
+   },
+   {
+    "text_en": "Fits: food-driven residents who want 40-70 THB weekday lunches and special-occasion dining in the same district.",
+    "claim_ids": [
+     "bang-rak-c05",
+     "bang-rak-c02"
+    ]
+   },
+   {
+    "text_en": "Strains: very light sleepers on or near nightlife sois (below the 10th floor especially), and families whose routine depends on large in-district green space — Lumphini requires crossing Rama IV.",
+    "claim_ids": [
+     "bang-rak-c08",
+     "bang-rak-c10"
+    ]
+   },
+   {
+    "text_en": "Strains: budget renters expecting CBD centrality at mid-market prices — only the older soi buildings off Surawong drop to 15-25k THB, and the most affordable averages sit above the app's 1-bed figure.",
+    "claim_ids": [
+     "bang-rak-c09"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Silom Walking Street's current schedule and very operation are unverified since ~2020; sources conflict on frequency.",
+   "No district-specific flood record either way: 2011 spared central Bangkok; Sept 2026 citywide flooding did not name Bang Rak streets.",
+   "The app's 26k/55k rents match asking averages in range, but signed-lease data and HipFlat's methodology are unavailable.",
+   "MahaNakhon's in-district attribution rests on one encyclopedia source without a cadastral check.",
+   "Expressway proximity/noise near Saphan Taksin was not verified.",
+   "Resident-authored accounts (Reddit, forums) were inaccessible (HTTP 403), so livability perceptions lean on commercial and lifestyle guides.",
+   "Asiatique, River City, temple and pier counts in the app facts were not independently verified in this pass."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; an independent reviewer must still confirm identity/geography, source quality and recency, claim support, contradictions and copy (see batch review/findings.md).",
+   "7 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Silom Walking Street: organizer schedule (BMA/district office or event Facebook) not found; recheck in December 2026 season if the December-May pattern persisted.",
+   "open issue: Flood history: no Bang Rak-specific street-flooding archive (BMA drainage/Thai press) located; app-level '2011 flood' framing could only be resolved as 'central Bangkok largely spared', catchment-level detail missing.",
+   "open issue: BMA primary sources unreachable: webportal.bangkok.go.th/bangrak (403) and visit.bangkok.go.th (403); khwaeng and tourism-route facts rest on secondary sources.",
+   "open issue: Bangkok Post inaccessible (paywall gateway redirect not followed, per method rules); use Nation/Thai PBS/Khaosod for future Bangkok Post-gated claims.",
+   "open issue: Reddit and TripAdvisor resident/visitor threads unreadable via fetch (403); resident-perception evidence base is thinner than ideal and skews commercial.",
+   "open issue: Chong Nonsi Canal Park post-2021 phase status and any Bang Rak-side section unresolved; also whether later phases touch Surawong-to-Sathorn (phase 1) inside the khet.",
+   "open issue: Expressway noise near Saphan Taksin/Taksin Bridge and sidewalk-width measurements unverified.",
+   "open issue: Embassies (app: 3 within 800 m) and Asiatique/River City locations not independently verified in this pass.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: G24 plain-http source, documented. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "C-1 recheck 2026-11-08 (web search): still NO authoritative 2026 Silom Walking Street schedule found — c14's conflicted status ('current operation unconfirmed, not disproven') remains accurate. Patpong night market shows continued Sunday-night activity in recent walkthrough videos. No claim change."
+  ]
+ }
+}

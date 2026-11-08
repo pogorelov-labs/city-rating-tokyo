@@ -1,0 +1,750 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "bang-phlat",
+  "kind": "district",
+  "name_en": "Bang Phlat",
+  "name_th": "บางพลัด",
+  "aliases": [
+   "Charan Sanitwong",
+   "Charansanitwong",
+   "Bang Yi Khan",
+   "Bang O",
+   "Sirindhorn",
+   "Rama 8 Bridge",
+   "Bang Bamru"
+  ],
+  "scope_notes": "Administrative khet; khwaeng subareas differ — mark subarea claims partial. Boundary claims decided by app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.34,
+  "cohort_rank": 13,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): district rank 13/50, score 7.34."
+ },
+ "sources": [
+  {
+   "id": "src_536e5ff1e01b",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94",
+   "title": "เขตบางพลัด",
+   "publisher": "Thai Wikipedia",
+   "publisher_family": "Wikipedia (TH)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "community-edited; khwaeng station list includes an editor inference ('ตามชื่อแขวงที่สอดคล้องกัน')"
+   ]
+  },
+  {
+   "id": "src_47b62950ef02",
+   "canonical_url": "https://en.wikipedia.org/wiki/Bang_Phlat_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bang_Phlat_MRT_station",
+   "title": "Bang Phlat MRT station",
+   "publisher": "English Wikipedia",
+   "publisher_family": "Wikipedia (EN)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_7717ecf22029",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-phlat",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-phlat",
+   "title": "Condos for rent in Bang Phlat",
+   "publisher": "HipFlat",
+   "publisher_family": "HipFlat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "property portal; listing inventory skews to marketed condo stock",
+   "limitations": [
+    "statistics dated October 2026 on page",
+    "portal averages exclude non-listed older stock"
+   ]
+  },
+  {
+   "id": "src_aaa8c07352c8",
+   "canonical_url": "https://explorenique.com/bang-phlat-lower-inner-thon-buri-rama-8-bridge-rama-8-park",
+   "retrieved_url": "https://explorenique.com/bang-phlat-lower-inner-thon-buri-rama-8-bridge-rama-8-park",
+   "title": "Bang Phlat | Lower Inner Thon Buri | Rama 8 Bridge & Rama 8 Park",
+   "publisher": "Explorenique",
+   "publisher_family": "Explorenique (blog)",
+   "author": "photofunner",
+   "published_at": "2023-04-13",
+   "updated_at": "2023-07-21",
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "single-author blog; 'world's fifth-longest bridge' phrasing dubious"
+   ]
+  },
+  {
+   "id": "src_b12447602f8b",
+   "canonical_url": "https://www.renown-travel.com/daytripsbangkok/rama8bridge.html",
+   "retrieved_url": "https://www.renown-travel.com/daytripsbangkok/rama8bridge.html",
+   "title": "Rama VIII Bridge Day Trip Guide",
+   "publisher": "Renown Travel",
+   "publisher_family": "Renown Travel (travel guide)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "commercial tour-operator page"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "bang-phlat-c01",
+   "text_en": "Khet Bang Phlat (บางพลัด, geocode 1070) is a west-bank (Thonburi) khet of 11.360 km2 with four khwaeng: Bang Phlat 3.296 km2 (21,450 residents), Bang O 2.846 km2 (23,691), Bang Bamru 2.332 km2 (17,373), Bang Yi Khan 2.886 km2 (24,691); registered population 87,205 at Dec 2023 per Thai Wikipedia's DOPA-based table (the app's 89,417 is a different vintage). The name's folk origin is from displaced people 'พลัดหลง' (losing their way) after the 1767 fall of Ayutthaya. It was split from khet Bangkok Noi on 9 Nov 1989 (พ.ศ. 2532); areas of Bang Bamru/Bang Yi Khan south of Borommaratchachonnani Road were returned to Bangkok Noi on 12 Dec 1991; a 2002 idea to rename the khet 'บางภัทร์' was never adopted. OSM relations corroborate: khet relation 2942281 and exactly four khwaeng relations 11355125-28.",
+   "kind": "factual_report",
+   "topics": [
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "entire_unit",
+    "notes": "app area 11.36 km2 matches TH wiki exactly"
+   },
+   "temporal_scope": {
+    "event_date": "1989-11-09",
+    "observed_period": null,
+    "recheck_by": "on next DOPA registration cycle",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "infobox + 'แขวง' table + 'ประวัติ' section",
+     "paraphrase": "area 11.360 km2, 4 khwaeng with areas and Dec-2023 populations, 1989 split, 1991 boundary adjustment, 2002 rename idea"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "name-origin paragraph",
+     "paraphrase": "'บางพลัด' from refugees losing their way after the second fall of Ayutthaya (พ.ศ. 2310)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "population vintages differ across sources (2017 EN wiki not read for this khet; TH wiki 2023; app value unattributed)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-phlat-c02",
+   "text_en": "Four MRT Blue Line stations sit inside khet Bang Phlat: Bang Yi Khan (BL05), Sirindhorn (BL06), Bang Phlat (BL07) and Bang O (BL08). Thai Wikipedia lists all four as being in the khet (with an editorial note that it matched them to like-named khwaeng), and an OSM area query independently found the station nodes 3801037853 (บางยี่ขัน), 6563228219 (สิรินธร), 3801037852 (บางพลัด) and 3801037855 (บางอ้อ) inside khet area 3602942281. Charan 13 station (BL02) lies further south along Charan Sanitwong Road and was NOT returned inside any of the four khet areas in OSM data read - it likely falls on the Bangkok Yai/Bangkok Noi side of the boundary; whether it serves the khet edge is a polygon question the app decides. The SRT Light Red Line adds Bang Bamru station in khwaeng Bang Bamru (Thai Wikipedia).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "partial",
+    "notes": "Charan 13's service role is the verify-target from the brief; boundary decided by app polygons"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "when app polygons are checked; OSM area timestamp 2026-11-07",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "'การเดินทาง' section",
+     "paraphrase": "MRT Blue stations บางยี่ขัน, สิรินธร, บางพลัด, บางอ้อ all listed as in the khet; SRT Light Red Line station บางบำหรุ in khwaeng Bang Bamru"
+    },
+    {
+     "source_id": "src_47b62950ef02",
+     "locator": "infobox + opening paragraph",
+     "paraphrase": "BL07, MRT Blue Line, elevated, opened 4 December 2019, located in Bang Phlat District"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "Overpass area query (search_log)",
+     "paraphrase": "OSM: four Blue Line station nodes inside khet area; Charan 13 (BL02) node not inside any of the four khets"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "khwaeng-level placement (e.g., whether Bang Phlat station is in khwaeng Bang O as one EN-Wikipedia snippet claimed) not resolved - Overpass per-khwaeng tests failed under server load"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-phlat-c03",
+   "text_en": "Counter-evidence to an unqualified transport story: Bang Phlat MRT station (BL07) was the least-used station on the entire MRT Blue Line in 2021, with 485,490 passengers for the year (English Wikipedia, citing 2021 data). The Blue Line extension opened through the khet only on 4 December 2019, so the ridership base is young; transport 8 is supported by station count inside the khet, but station usage data read points to demand concentrated elsewhere (e.g., Bang O/Sirindhorn toward the Pin Klao side) - per-station split within the khet is unverified.",
+   "kind": "factual_report",
+   "topics": [
+    "counter_evidence",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Bang Phlat MRT station",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2021",
+    "recheck_by": "when BEM/MRTA publishes newer per-station ridership",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_47b62950ef02",
+     "locator": "'Usage' / ridership note",
+     "paraphrase": "485,490 passengers in 2021 - the least used station on the MRT Blue Line"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "single-year (2021) figure; post-COVID rebound not reflected"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-phlat-c04",
+   "text_en": "Rent blend corroboration (rent 9, editorial 11,500/24,000 THB): HipFlat shows 622 condo rental listings in Bang Phlat with portal averages of USD 356/mo (studio), USD 444/mo (1BR), USD 701/mo (2BR) and USD 14/sqm as of October 2026 (about 12.5k/15.5k/24.5k at ~35 THB/USD - conversion is ours). The 2BR upper figure matches the editorial 24,000 band; the 11,500 floor sits below the portal's 1BR average, consistent with older/smaller stock off the marketed condo channels. Named projects include Ideo Charan 70-Riverview, Lumpini Place Pinklao, Supalai City Resort Rama 8, Chapter One Spark Charan.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "entire_unit",
+    "notes": "USD figures are HipFlat's; THB conversion approximate"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "October 2026",
+    "recheck_by": "quarterly portal refresh",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_7717ecf22029",
+     "locator": "headline stats block",
+     "paraphrase": "622 condo available; studio USD356, 1BR USD444, 2BR USD701; USD14/sqm average price per sqm (October 2026)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "commercial portal; excludes non-listed walk-up/landlord-direct stock",
+    "conversion rate assumed ~35 THB/USD"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-phlat-c05",
+   "text_en": "Green-6 honesty check: app data gives 4.2 ha of park (0.4% of 11.36 km2), and the one sizable public park identified inside the khet is Suan Luang Rama VIII (สวนหลวงพระราม 8) at the Thonburi foot of Rama VIII bridge - Thai Wikipedia lists it as the khet's park and OSM way 203011799 sits inside khet area 3602942281. A travel guide calls it 'one of the few riverside public parks on the Chao Phraya', with a life-size Rama VIII statue and a royal-archive building. The score of 6 is honest-low: one quality riverside park, very small share of land, remainder of green mostly temple grounds and roadside trees (unsourced).",
+   "kind": "factual_report",
+   "topics": [
+    "green"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suan Luang Rama VIII",
+    "relation_to_entity": "inside",
+    "notes": "app polygon decides park-boundary claims"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "'สถานที่สำคัญ' section",
+     "paraphrase": "สวนหลวงพระราม 8 listed among khet landmarks"
+    },
+    {
+     "source_id": "src_aaa8c07352c8",
+     "locator": "'Rama 8 Park' section",
+     "paraphrase": "life-size statue, Chalermphrakiet archive building, 'one of the few riverside public parks on the Chao Phraya'"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "Overpass area query (search_log)",
+     "paraphrase": "leisure=park way 203011799 สวนหลวงพระราม 8 inside khet area"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no independent area figure (ha) for the park found in sources read"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-phlat-c06",
+   "text_en": "Nightlife-8 test (the stated tension): app counts 56 nightlife venues vs 763 food venues in an 89k-resident khet that both travel guides describe as non-touristic and quiet ('The neighborhood is non-touristic area for international tourists' - Explorenique). 56 venues is a mid-sized count, not a nightlife district; the plausible suppliers are the Charan Sanitwong / Pin Klao commercial strip - Thai Wikipedia names Pata Pin Klao, Major Cineplex Pinklao, Lotus Charan Sanitwong and Tang Hua Seng as the khet's business anchors (several sit at the khet edge; app polygons decide). Researcher inference: nightlife 8 reads high for the district's family character and likely reflects corridor-adjacent venues rather than an internal scene; count-versus-score consistency cannot be fully tested without per-venue placement.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "nightlife",
+    "vibe"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Charan Sanitwong / Pin Klao strip",
+    "relation_to_entity": "partial",
+    "notes": "boundary claims decided by app polygons"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_aaa8c07352c8",
+     "locator": "opening section",
+     "paraphrase": "'non-touristic area for international tourists'; framed as authentic local Thonburi"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "'แหล่งธุรกิจ' list",
+     "paraphrase": "พาต้า ปิ่นเกล้า, เมเจอร์ ซีนีเพล็กซ์ ปิ่นเกล้า, โลตัส จรัญสนิทวงศ์, ตั้งฮั่วเส็ง ธนบุรี"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no editorial source read describes Bang Phlat nightlife directly; inference from counts and corridor anchors",
+    "app venue counts not independently reproducible from sources read"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-phlat-c07",
+   "text_en": "Landmark frame: Rama VIII Bridge opened 7 May 2002 - 475 m long, single 160 m tower, Thailand's first asymmetric cable-stayed bridge - linking Phra Nakhon (Wisut Kasat Rd) with Bang Phlat district, with a park at its Thonburi foot (Renown Travel). Thai Wikipedia adds that Rama VI, Rama VII and Krung Thon bridges also touch the khet, and lists hospitals (Yanhee; the Ear-Eye-Nose-Throat hospital) and 23 temples (incl. Wat Wimutidham, Wat Paorohit, Wat Awuth Wiksitararam), plus the Rama VI-era Bang-or Mosque built by Persian merchant descendants on Charan Sanitwong soi 86 (Explorenique).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "landmarks"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_b12447602f8b",
+     "locator": "bridge facts section",
+     "paraphrase": "opened 7 May 2002; 475 m; 160 m single tower; connects Phra Nakhon district to Bang Phlat district; park at Thonburi foot"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "landmark lists",
+     "paraphrase": "bridges (Rama VII, Rama VI, Krung Thon, Rama VIII), 23 temples, Yanhee hospital, มัสยิดบางอ้อ"
+    },
+    {
+     "source_id": "src_aaa8c07352c8",
+     "locator": "'Bang-or Mosque' entry",
+     "paraphrase": "Charan Sanitwong soi 86, built in Rama VI's reign by Persian merchants descended from the Sultans of Songkla"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Explorenique's 'world's fifth-longest bridge' phrasing not corroborated; not used"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-phlat-c08",
+   "text_en": "Character (vibe 7, crowd 4): the khet is framed by guides as a non-touristic lower-inner-Thonburi area of 'hidden history' - temple communities along Charan Sanitwong sois (Wat Karuha Bodee soi 42, Wat Bowon Mongkhon soi 79), a khon-mask handicraft household workshop, the Galyani Vadhana music institution, and mosque-side gingerbread wooden houses - with the Rama VIII riverside park as its public face. Density figures (app 7,871/km2, TH wiki 7,676/km2 Dec 2023) are the second-lowest of the four khets in this batch, consistent with a low-crowd reading.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowd",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_aaa8c07352c8",
+     "locator": "intro and attraction entries",
+     "paraphrase": "non-touristic, 'hidden history', authentic local experience framing"
+    },
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "infobox",
+     "paraphrase": "pop 87,205 / 11.360 km2 = 7,676.50 per km2 (Dec 2023)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "perception source is a single travel blog; crowd density comparison uses batch-internal app figures"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "bang-phlat-c09",
+   "text_en": "Everyday life per subarea (partial, from landmark geography): khwaeng Bang Phlat/Bang O carry the MRT stations and the Charan Sanitwong retail spine (Lotus Charan, Tang Hua Seng per TH wiki); khwaeng Bang Yi Khan holds the Rama VIII riverside park and Wat Awuth; khwaeng Bang Bamru is the SRT Light Red Line stop area and the most recently 'returned' territory (1991 adjustment). Subarea-level daily-life description beyond these anchors was not found in bodies read - recorded as a gap.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat khwaengs",
+    "relation_to_entity": "entire_unit",
+    "notes": "subarea claims marked partial"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_536e5ff1e01b",
+     "locator": "khwaeng table + landmark section",
+     "paraphrase": "khwaeng areas/pops; park, stations, retail anchors distributed as described"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no street-level or market-level source read for this khet"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "bang-phlat-c10",
+   "text_en": "Rhythm and recent change: the transport rhythm changed only in December 2019 (Blue Line extension stations opened 4 Dec 2019, per the station article), and no 2024-2026 reopening/construction event specific to this khet surfaced in searches run; the district's cadence is a weekday commute along Charan Sanitwong plus weekend riverside-park use (inference from anchor geography, flagged). Uncertainty: whether the SRT Light Red Line's Bang Bamru stop has materially changed the khwaeng's cadence since 2021 was not covered by any body read.",
+   "kind": "researcher_inference",
+   "topics": [
+    "recent_changes",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Bang Phlat",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_47b62950ef02",
+     "locator": "infobox",
+     "paraphrase": "opened 4 December 2019 as one of nine phase-3 Blue Line stations"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "absence-of-findings claim: limited to the query set logged",
+    "no local-news body read for this khet"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c01",
+    "bang-phlat-c02",
+    "bang-phlat-c07"
+   ],
+   "notes": "Khet Bang Phlat, 11.360 km2, 4 khwaeng (Bang Phlat 3.296 / Bang O 2.846 / Bang Bamru 2.332 / Bang Yi Khan 2.886 km2), split from Bangkok Noi 9 Nov 1989, 1991 boundary trim, OSM 2942281 + 4 khwaeng relations. Landmarks in: Suan Luang Rama VIII, Rama VIII bridge foot, 4 MRT Blue stations, Yanhee hospital, 23 temples, Bang-or Mosque. Charan 13 MRT station reads as outside the khet in OSM (app polygons decide)."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c09",
+    "bang-phlat-c08"
+   ],
+   "notes": "Subarea daily lives distinguishable only at anchor level: station khwaengs (Bang Phlat/Bang O) = Charan retail spine; Bang Yi Khan = riverside park face; Bang Bamru = Light Red stop. Deeper per-khwaeng texture (markets, schools, street life) not found in bodies read."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c02",
+    "bang-phlat-c03",
+    "bang-phlat-c04"
+   ],
+   "notes": "Transport 8 supported by 4 in-khet Blue stations + Light Red Bang Bamru stop; counter-evidence: BL07 was the Blue Line's least-used station in 2021 (485,490 pax) - the extension's demand is young and uneven."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c06",
+    "bang-phlat-c03"
+   ],
+   "notes": "Main counter-view: nightlife 8 in a guide-described non-touristic, quiet family khet (56 venues, likely corridor-adjacent around Pin Klao/Charan); plus least-used-station evidence tempering the transport story."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c10",
+    "bang-phlat-c07"
+   ],
+   "notes": "No sourced annual/weekly festival calendar found. Cadence inferred: weekday Charan commute + weekend riverside park use; ceremonial temple calendar at 23 temples unsourced."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c02",
+    "bang-phlat-c04"
+   ],
+   "notes": "No walkability prose found in any body read. Station adjacency and Charan-street retail density imply short station-to-shop distances, but no radius-to-time conversions were made and none should be; sidewalks/footpath quality unsourced."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c06",
+    "bang-phlat-c04",
+    "bang-phlat-c09"
+   ],
+   "notes": "Daily-life anchors: Lotus Charan, Tang Hua Seng, Pata/Major at the Pin Klao edge (TH wiki business list); 622 marketed condo rentals; riverside park. Market-level detail (wet markets, fresh markets) absent from bodies read."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c04"
+   ],
+   "notes": "Rent 9 / 11,500-24,000: HipFlat Oct 2026 shows 622 listings, 1BR avg ~USD444 (~15.5k), 2BR ~USD701 (~24.5k). Editorial floor below portal 1BR average - plausible for older/unlisted stock; blend otherwise consistent."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c05"
+   ],
+   "notes": "Green 6 honest-low confirmed: 4.2 ha (0.4%) app figure; single identified public park (Suan Luang Rama VIII) inside khet per TH wiki + OSM; quiet reading supported by second-lowest density in batch."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c08",
+    "bang-phlat-c06",
+    "bang-phlat-c04"
+   ],
+   "notes": "Fits: quiet-west-bank seekers, families wanting cheaper rent with Blue Line access, riverside-park users. Poor fit: nightlife-first movers (scene thin and corridor-bound), car-free luxury seekers."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c10",
+    "bang-phlat-c02"
+   ],
+   "notes": "2024-2026 changes: none found in queries run for this khet specifically; big structural change (Blue extension) dates to Dec 2019; Light Red Bang Bamru stop ~2021. Absence limited to search coverage."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "bang-phlat-c06",
+    "bang-phlat-c03",
+    "bang-phlat-c10"
+   ],
+   "notes": "Outside-the-score: (a) khwaeng-level placement of Bang Phlat/Charan 13 stations unresolved in OSM read; (b) no local-news coverage read; (c) app venue counts not reproducible externally; (d) Walkability/rhythm gaps recorded rather than filled."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A quiet west-bank khet with four MRT Blue stations, 23 temples and one riverside park - cheap by inner-Bangkok standards, and honest about it: its busiest new station was the Blue Line's least-used in 2021.",
+   "claim_ids": [
+    "bang-phlat-c01",
+    "bang-phlat-c02",
+    "bang-phlat-c03",
+    "bang-phlat-c05",
+    "bang-phlat-c04"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Bang Phlat is the low-key Thonburi side of the river that the MRT Blue Line reached only in December 2019. Its four stations - Bang Yi Khan, Sirindhorn, Bang Phlat, Bang O - put the khet on the rail map without turning it central: the 2021 counters still show Bang Phlat station as the Blue Line's quietest. Life here organizes around Charan Sanitwong Road's local retail spine, 23 temples, the Bang-or Mosque, and Suan Luang Rama VIII, one of the few public parks on the river's west bank. Rents sit well below central districts, and the trade-off is the same on every page read: little nightlife or tourist infrastructure, and parkland measured in single hectares.",
+   "claim_ids": [
+    "bang-phlat-c02",
+    "bang-phlat-c03",
+    "bang-phlat-c05",
+    "bang-phlat-c08",
+    "bang-phlat-c04"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Four MRT Blue stations inside the khet (Bang Yi Khan, Sirindhorn, Bang Phlat, Bang O) plus an SRT Light Red stop at Bang Bamru - rare west-bank rail coverage, corroborated by OSM node membership.",
+    "claim_ids": [
+     "bang-phlat-c02"
+    ]
+   },
+   {
+    "text_en": "Affordable, real-stock rental market: 622 portal-listed condos averaging roughly 15.5k (1BR) and 24.5k (2BR) THB in Oct 2026, with cheaper unlisted stock beneath.",
+    "claim_ids": [
+     "bang-phlat-c04"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The district's own headline station (BL07) was the Blue Line's least-used in 2021 - connectivity has not yet produced central-style demand, so service frequency and crowd energy should not be assumed.",
+    "claim_ids": [
+     "bang-phlat-c03"
+    ]
+   },
+   {
+    "text_en": "Public green is a single riverside park on a 0.4% park share; the nightlife-8 reading rests on corridor venues rather than an internal scene.",
+    "claim_ids": [
+     "bang-phlat-c05",
+     "bang-phlat-c06"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Day: commute and errands on Charan Sanitwong, temple life, Rama VIII park on the river. Night: the Charan/Pin Klao strip supplies the venues; the khwaengs themselves go quiet - guides describe the area as non-touristic, and nothing read contradicts that.",
+    "claim_ids": [
+     "bang-phlat-c06",
+     "bang-phlat-c08"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Bang Yi Khan/Bang Phlat khwaengs carry the stations, the retail spine and the riverside park; Bang Bamru is the Light Red stop area; Bang O toward the river is the mosque-and-wooden-house quarter - one khet, three distinctly anchored corners.",
+    "claim_ids": [
+     "bang-phlat-c09"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose Bang Phlat if you want Blue Line access and sub-25k 2BR rents on the quiet side of the river; the park and temple fabric reward walkers on weekends.",
+    "claim_ids": [
+     "bang-phlat-c02",
+     "bang-phlat-c04",
+     "bang-phlat-c05"
+    ]
+   },
+   {
+    "text_en": "Avoid if a dense nightlife scene or walkable late-evening street life is the priority - the 8-rated nightlife count is corridor-dependent and the residential khwaengs read quiet in every source read.",
+    "claim_ids": [
+     "bang-phlat-c06"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Khwaeng-level station placement (incl. the Bang-O-vs-Bang-Phlat-khwaeng snippet) unresolved; Overpass per-khwaeng tests failed under server load. No local-news body read for this khet; 2024-2026 change check is absence-of-findings only. App venue/food/nightlife counts not independently verifiable. HipFlat averages are portal-biased toward marketed condo stock."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "4 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Boundary calls that need app-polygon verification: membership of Bang Phlat (3801037852) and Charan 13 (3801037850) MRT station nodes at khwaeng level; Charan 13 reads outside all four batch khets in OSM - confirm which khet the app places it in and whether it is credited to bang-phlat transport.",
+   "open issue: Overpass heavy is_in queries failed (502 at capacity on overpass-api.de; kumi mirror timeout) - rerun the khwaeng membership matrix when the server is calmer.",
+   "open issue: No body-read source on Bang Phlat nightlife; the 56-venue count's composition (bars vs restaurants vs karaoke) is unknown.",
+   "open issue: BMA district site (bangkok.go.th/bangphlat) blocks fetching (403) - official population/area confirmation pending.",
+   "open issue: Thai Wikipedia notes a 2002 proposal to rename the khet 'บางภัทร์' that was never adopted - worth a line in the identity blurb if the app surfaces Thai names.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 day_night/within placeholders + uncertainties char-explosion. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

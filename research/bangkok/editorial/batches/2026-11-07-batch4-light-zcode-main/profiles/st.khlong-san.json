@@ -1,0 +1,811 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.khlong-san",
+  "kind": "station_area",
+  "name_en": "Khlong San",
+  "name_th": "คลองสาน",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around khlong-san [bts_gold]; districts: khlong-san, samphanthawong. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.62,
+  "cohort_rank": 14,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 14/133, score 7.62."
+ },
+ "sources": [
+  {
+   "id": "src_b648d75e0ded",
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_San_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_San_station",
+   "title": "Khlong San station (BTS Gold Line)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "fare details deferred to the Gold Line article; no service-frequency data"
+   ]
+  },
+  {
+   "id": "src_72eebd4675d7",
+   "canonical_url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "title": "Gold Line (Bangkok)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "article text says flat fare 16 baht while its cited headline says B15; ridership table updated through 2026 Q3"
+   ]
+  },
+  {
+   "id": "src_d39878d0d7b4",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%99",
+   "retrieved_url": "https://th.wikipedia.org/wiki/เขตคลองสาน",
+   "title": "เขตคลองสาน",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "population figure dated 2023; park sizes not given"
+   ]
+  },
+  {
+   "id": "src_0f27047f94e6",
+   "canonical_url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "retrieved_url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "title": "ICONSIAM",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "no Phase-2 plans mentioned; Sook Siam not described in text"
+   ]
+  },
+  {
+   "id": "src_37b68ce967d7",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "title": "Condos for Rent in Khlong San",
+   "publisher": "PropertyScout",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
+   "limitations": [
+    "FAQ and comparison table give conflicting averages (1BR 27,444 vs 28,482; 2BR 89,852 vs 83,458); no statistical period; means skewed by riverside luxury listings (ranges up to 250k); 363 listings"
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Overpass API — OSM railway station nodes (Bangkok bbox)",
+   "publisher": "OpenStreetMap via Overpass",
+   "publisher_family": "openstreetmap",
+   "author": null,
+   "published_at": "2026-11-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "two failed attempts before success"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "khlong-san-st-c01",
+   "text_en": "The unit anchors on BTS Gold Line station G3 'Khlong San' — the line's terminus, opened 16 December 2020 on Somdet Chao Phraya Road in front of Taksin Hospital — NOT on an MRT stop, and NOT at ICONSIAM: the mall is served by the previous Gold Line station G2 Charoen Nakhon, roughly 500 m away by coordinates. App anchor equals the OSM node exactly (13.73031, 100.50772, operator Krungthep Thanakom).",
+   "kind": "factual_report",
+   "topics": [
+    "boundaries",
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong San BTS Gold Line station (G3)",
+    "relation_to_entity": "entire_unit",
+    "notes": "resolves the brief's line ambiguity ('BTS Krung Thep? no') — it is Gold Line G3; brief's ICONSIAM adjacency belongs mostly to the st.charoen-nakhon unit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2020-12-16 to present (2026-11)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_72eebd4675d7",
+     "locator": "infobox; Location; Station layout",
+     "paraphrase": "G3, opened 16 December 2020, Krungthep Thanakom operator, on Somdet Chao Phraya Road in front of Taksin Hospital; terminus with next station Charoen Nakhon"
+    },
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Stations section",
+     "paraphrase": "G2 Charoen Nakhon 'serves Iconsiam'; G3 is the terminus; line is 1.8 km with three stations"
+    },
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "infobox coordinates",
+     "paraphrase": "ICONSIAM at 13.726694,100.510500 — coordinate distance to G3 ~500 m"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "ICONSIAM's ~500 m distance sits inside a nominal 800 m catchment, so the mall likely clips this unit's edge (partial) even though its station belongs to st.charoen-nakhon — coordinator's polygon call",
+    "app-data anchor (not a web source): city-rating app station record: khlong-san"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "khlong-san-st-c02",
+   "text_en": "The Gold Line is not a monorail: it is a 1.8 km rubber-tyred automated people mover running Bombardier Innovia APM 300 two-car sets, owned by the BMA, operated by Krungthep Thanakom with BTSC running operations under a 30-year contract, funded by Siam Piwat's 3.8-billion-baht concession (advertising and operating profits).",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line (Krung Thon Buri–Khlong San)",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "since 2020-12-16"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Overview; History; Rolling stock sections",
+     "paraphrase": "APM not monorail despite early press; Innovia APM 300 by CRRC Puzhen Bombardier; BMA owner; Krungthep Thanakom designed and operates with BTSC under 30-year contract; Siam Piwat funded 3.8 billion baht"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c03",
+   "text_en": "Fares and service: free rides ran from opening (16 December 2020) until 15 January 2021, after which a flat fare of about 15-16 THB applies (the article text says 16 baht; its cited Bangkok Post headline says B15; a search summary adds an 8-baht elderly fare); service runs 06:00-24:00 with trains every 5-6 minutes at peak (frequency per search summary only).",
+   "kind": "factual_report",
+   "topics": [
+    "affordability",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2021-01-16 onward"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "History; Fares",
+     "paraphrase": "free travel from opening to 15 January 2021; paid service (B15 headline) began 16 January 2021; article text states flat fare 16 baht, sold only for stations on the line"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the 5-6-minute peak frequency and elderly fare come from an unattributed search summary — flag; the 15-vs-16 baht discrepancy is visible in the source itself"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c04",
+   "text_en": "Ridership is small and slipping: annual passengers were 2.77 million in 2024 (daily peak 8,826 in Q4); 2025 was disrupted by the free-fare week (25-31 January, PM2.5 policy) and a service suspension after the 28 March 2025 Myanmar earthquake; 2026 quarterly figures decline (Q1 678,400 → Q2 613,459 → Q3 488,886).",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2021-2026 (table through Q3 2026)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Ridership section",
+     "paraphrase": "2024 annual 2,771,075 with Q4 daily peak 8,826; 2025 disruption notes; 2026 Q1-Q3 quarterly totals as cited"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no station-level split found (system-wide line totals); the 2026 decline's cause is not stated in the source"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c05",
+   "text_en": "The catchment sits almost entirely in Khlong San district (app: 83.9%, plus 16.1% Samphanthawong across the river) — a west-bank khet of 6.05 km² with 64,961 residents (2023) in four khwaeng, facing Phra Nakhon/Samphanthawong to the north and Bang Rak/Sathon across the river; formerly Amphoe Bang Lamphu Lang, renamed Buppharam, then Khlong San in 1957, a khet of Bangkok since 1972.",
+   "kind": "factual_report",
+   "topics": [
+    "boundaries",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khlong San district",
+    "relation_to_entity": "entire_unit",
+    "notes": "the 16.1% Samphanthawong share is the nearest-stop Voronoi stretching over the river — polygon-owned"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "population 2023; district history since 1957/1972"
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "ภูมิศาสตร์; ประวัติ sections",
+     "paraphrase": "west-bank district opposite Phra Nakhon/Samphanthawong/Bang Rak/Sathon; 4 khwaeng; 64,961 people in 2023; 6.051 km²; renamed to Khlong San 1957, khet since 1972"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c06",
+   "text_en": "ICONSIAM anchors the district's riverfront: opened 9 November 2018 at 299 Charoen Nakhon Soi 5 with 525,000 m² of retail, a riverside River Park of more than 10,000 m², and the ICS addition (with a 244-room Millennium Hilton Bangkok) opened 11 January 2023; developed by Siam Piwat, MQDC and Charoen Pokphand at a stated 54-billion-baht cost. It sits ~500 m from G3, so it likely clips this unit's edge although batch-3 assigned it to st.charoen-nakhon.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "ICONSIAM",
+    "relation_to_entity": "partial",
+    "notes": "membership inside this unit is a polygon call; the mall's own stop (G2) is in the neighboring unit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2018-11-09 to present; ICS 2023-01-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "infobox; Features section",
+     "paraphrase": "opened 9 November 2018; 525,000 m² retail floor space; River Park over 10,000 m² riverside; ICS building opened 11 January 2023 including Millennium Hilton Bangkok; developers Siam Piwat/MQDC/Charoen Pokphand; 54-billion-baht project"
+    },
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "infobox coordinates",
+     "paraphrase": "13.726694,100.510500 → ~500 m coordinate distance from G3"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no Phase-2/expansion plans found in accessible sources; the '~500 m inside the catchment edge' statement is a coordinate estimate"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c07",
+   "text_en": "Rent check against stated figures (19,000 / 42,500 THB, editorial blend): PropertyScout's Khlong San page shows listing MEANS of 1-bed ~27.4-28.5k and 2-bed ~83-90k (363 listings) skewed hard by riverside luxury (2-bed range up to 250k) — the app's lower, median-flavoured blend is consistent with the district's non-riverside stock, and search summaries put budget 1-beds in Khlong Ton Sai at 7-10k.",
+   "kind": "estimate",
+   "topics": [
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khlong San district rental corridors",
+    "relation_to_entity": "entire_unit",
+    "notes": "app blend as_of 2026-09; PropertyScout means undated"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "listing snapshot retrieved 2026-11-07; app rent as_of 2026-09"
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "FAQ averages and comparison table",
+     "paraphrase": "studio 14,885; 1-bed 27,444 (FAQ) vs 28,482 (table); 2-bed 89,852 (FAQ) vs 83,458 (table); 363 condo rentals; no period shown"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "PropertyScout's two internal tables disagree; means are luxury-skewed; budget figure (7-10k) is search-summary corroboration only"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c08",
+   "text_en": "Green 5 with an app figure of just 0.2 ha of park is the district's honest weak spot: the Thai district article names public parks (Uthayan Chaloem Phra Kiat Somdet Phra Srinagarindra; an under-Taksin-Bridge garden) that appear to sit outside the 800 m unit, while the large riverside River Park belongs to the private ICONSIAM complex ~500 m away.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong San G3 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "0.2-ha object unidentified; likely a pocket green"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "สวนสาธารณะ listings",
+     "paraphrase": "district parks named: Uthayan Chaloem Phra Kiat Somdet Phra Srinagarindra (with Guan Yu shrine) and a Chaloem Phra Kiat garden under Taksin Bridge"
+    },
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "Features",
+     "paraphrase": "ICONSIAM River Park is a private riverside park of over 10,000 m²"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "neither named public park's distance to G3 is stated in sources; the River Park's public accessibility is not established here"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "khlong-san-st-c09",
+   "text_en": "Heritage and temples: the app counts 11 temples in the unit; the district article names Wat Phichaiyatikaram, Wat Anongkharam, Wat Suwan, Wat Thong Thammachat, Wat Thong Nopphakhun, Wat Sawetchatthararam and Wat Suttharam, and lists riverside heritage houses (Wanglee House) and the restored Lhong 1919 pier compound as district landmarks.",
+   "kind": "factual_report",
+   "topics": [
+    "culture",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khlong San district temples and river heritage",
+    "relation_to_entity": "partial",
+    "notes": "which of the named temples fall inside this unit's polygon is not determined here"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of the article's state (2026-11)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_0f27047f94e6",
+     "locator": "วัด; สถานที่สำคัญ sections",
+     "paraphrase": "temple list as cited; Wanglee House and Lhong 1919 named among landmarks"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "temple-by-temple membership in the unit not verified; note Wat Kalayanamit is NOT in this district's list (it belongs to Bangkok Yai's Wat Kanlaya khwaeng per the same article's implicit boundaries)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c10",
+   "text_en": "Nightlife 9 with only 10 venues is the unit's sharpest internal tension: the score plausibly rides on the riverside bar-and-deck cluster associated with ICONSIAM and the hotel riverfront rather than on venue count, while the residential sois and the Gold Line's ~24:00 close keep actual street nightlife thin.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "nightlife"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong San G3 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Fares (service span)",
+     "paraphrase": "service runs to 24:00, constraining late-night returns"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no venue-level verification possible in body reads; if the score draws on riverside venues at the unit's edge, the coordinator should note the edge-dependence"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c11",
+   "text_en": "Transport 9 decomposes as: Gold Line one stop to BTS Krung Thon Buri (Silom Line interchange), two river piers in the app facts (cross-river ferry connections serve the district's riverfront), app-stated 20 minutes to Si Lom, and a planned G3 transfer to the SRT Dark Red Line plus a Prajadhipok extension connecting to the MRT Purple Line southern extension (scheduled 2027).",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "BTS Gold Line / Krung Thon Buri interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current 2026-11; extensions planned, not built"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Stations; Extension sections",
+     "paraphrase": "G1 Krung Thon Buri offers Silom Line transfer; G3 listed for future SRT Dark Red Line transfer; Prajadhipok extension ~1 km west planned, to connect with Purple Line southern extension scheduled 2027"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "extension timelines are plan-stage; which two piers the app counts is not identified in sources"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "khlong-san-st-c12",
+   "text_en": "2024-2026 changes visible in body-read sources: the free-fare PM2.5 week (25-31 January 2025), the service suspension after the 28 March 2025 earthquake, a declining 2026 ridership curve, and the ICS/Millennium Hilton addition to ICONSIAM (January 2023) as the last major riverfront opening; no confirmed ICONSIAM Phase 2 was found.",
+   "kind": "factual_report",
+   "topics": [
+    "change"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong San G3 catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2023-01 to 2026-Q3"
+   },
+   "evidence": [
+    {
+     "source_id": "src_d39878d0d7b4",
+     "locator": "Fares; Ridership",
+     "paraphrase": "free week 25-31 January 2025 ordered by the PM for air pollution; suspension after the 28 March 2025 earthquake; 2026 quarterly ridership as cited"
+    },
+    {
+     "source_id": "src_37b68ce967d7",
+     "locator": "infobox; Features",
+     "paraphrase": "ICS building with Millennium Hilton Bangkok opened 11 January 2023; no Phase-2 plans mentioned"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no 2024-2026 residential-completion data found for the district; ridership-decline cause unstated"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c01",
+    "khlong-san-st-c05"
+   ],
+   "notes": "The BTS Gold Line G3 terminus in front of Taksin Hospital — a 2020 people-mover stop, not an MRT stop, and not the ICONSIAM stop (that is G2, ~500 m away); catchment 83.9% Khlong San district plus a Samphanthawong sliver over the river."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c06",
+    "khlong-san-st-c09",
+    "khlong-san-st-c11"
+   ],
+   "notes": "A residential west-bank district stitched to a mega-mall riverfront: temples and low-rise sois inland, ICONSIAM's River Park and decks ~500 m away, commute via a one-stop people-mover hop to the BTS."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c02",
+    "khlong-san-st-c11",
+    "khlong-san-st-c06",
+    "khlong-san-st-c07"
+   ],
+   "notes": "High transport and vibe scores ride on the Gold Line-to-BTS hop and the riverfront's gravity; food 9 leans on the mall and district sois; the west-bank address buys river proximity at below-riverside rents."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c08",
+    "khlong-san-st-c10",
+    "khlong-san-st-c04"
+   ],
+   "notes": "Green 5 (0.2 ha) is genuinely low; nightlife 9 against 10 venues looks edge-dependent; Gold Line ridership is small and falling through 2026."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c04",
+    "khlong-san-st-c10"
+   ],
+   "notes": "Morning and evening commute pulses through G3 and Krung Thon Buri; mall evenings and weekend riverfront crowds; residential quiet otherwise; everything winds down by midnight with the line."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c01",
+    "khlong-san-st-c05"
+   ],
+   "notes": "Flat west-bank grid with the station at Taksin Hospital's door and Somdet Chao Phraya Road frontage; no walking durations derived from catchment radius in this bundle."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c09",
+    "khlong-san-st-c06",
+    "khlong-san-st-c11"
+   ],
+   "notes": "Daily needs run through district sois (65 essentials POIs per app) plus the mall; 11 temples and riverside heritage shape the backdrop; piers give river access."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c07"
+   ],
+   "notes": "App 19,000/42,500 sits below PropertyScout's luxury-skewed listing means (1-bed ~27-28k) — consistent with non-riverside stock and budget pockets (7-10k reported in Khlong Ton Sai); the 2-bed 42,500 is far under the riverside-skewed mean, implying a mid-market blend."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c08"
+   ],
+   "notes": "The unit's own green is a 0.2-ha remnant; the district's named parks and ICONSIAM's River Park sit outside or at the edge — green 5 is honest, quiet is real inland of the riverfront."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c06",
+    "khlong-san-st-c08",
+    "khlong-san-st-c04"
+   ],
+   "notes": "Strong fit for renters who want a residential address with riverfront weekends and a one-hop BTS commute; weak fit for park users, late-night dwellers, or anyone requiring frequent rapid transit (a 2.77M/year people mover)."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c12"
+   ],
+   "notes": "Free-fare week (Jan 2025), earthquake suspension (Mar 2025), declining 2026 ridership, ICONSIAM ICS/hotel addition (2023) — but no confirmed Phase 2 or new rail infrastructure in body-read sources."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "khlong-san-st-c08",
+    "khlong-san-st-c11",
+    "khlong-san-st-c01",
+    "khlong-san-st-c03"
+   ],
+   "notes": "Unresolved: identity of the 0.2-ha park object, which two piers the app counts, ICONSIAM's edge-membership in this unit, the fare's 15-vs-16 discrepancy, and peak train frequency (summary-only); anchors verified clean."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A west-bank residential district with a 2020 people-mover stop, one hop from the BTS, facing the city's most ambitious riverfront mall across 500 metres of Charoen Nakhon Road.",
+   "claim_ids": [
+    "khlong-san-st-c03",
+    "khlong-san-st-c04",
+    "khlong-san-st-c06",
+    "khlong-san-st-c07",
+    "khlong-san-st-c08",
+    "khlong-san-st-c11"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Khlong San station ends the BTS Gold Line on Somdet Chao Phraya Road, deep in a low-rise, temple-dotted west-bank district — with ICONSIAM's riverfront a short hop down the line at Charoen Nakhon station and the BTS Silom Line one stop beyond that.",
+   "claim_ids": [
+    "khlong-san-st-c03",
+    "khlong-san-st-c04",
+    "khlong-san-st-c06",
+    "khlong-san-st-c07",
+    "khlong-san-st-c08",
+    "khlong-san-st-c11"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "A rare combination for the price band: residential west-bank quiet with a direct people-mover link to the BTS Silom Line and river piers for cross-river life.",
+    "claim_ids": [
+     "khlong-san-st-c11",
+     "khlong-san-st-c07"
+    ]
+   },
+   {
+    "text_en": "ICONSIAM's retail and river park sit just off the unit's edge, giving mall-grade daily life without a mall-grade address premium.",
+    "claim_ids": [
+     "khlong-san-st-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Public green is nearly absent inside the unit (0.2 ha) — the big parks named for the district sit beyond the catchment and the riverside park is private.",
+    "claim_ids": [
+     "khlong-san-st-c08"
+    ]
+   },
+   {
+    "text_en": "The Gold Line is a light people-mover: ~2.8 million riders a year system-wide, service to midnight, and a 2026 ridership slide — not a trunk line.",
+    "claim_ids": [
+     "khlong-san-st-c04",
+     "khlong-san-st-c03"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Days run on school, hospital and commuting traffic with mall weekends; after dark the action stays at the riverfront edge while the sois empty early — the line itself stops around midnight.",
+    "claim_ids": [
+     "khlong-san-st-c10",
+     "khlong-san-st-c04"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The river-facing corner near the Charoen Nakhon station edge carries the mall's energy and the 16.1% Samphanthawong share; the streets around Taksin Hospital and the district office are the quiet, village-like core.",
+    "claim_ids": [
+     "khlong-san-st-c06",
+     "khlong-san-st-c05",
+     "khlong-san-st-c09"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose it if you want mid-market rents (app 19,000 for a 1-bed) with riverfront weekends and a one-stop BTS commute — families and quiet-preferring renters fit best.",
+    "claim_ids": [
+     "khlong-san-st-c07",
+     "khlong-san-st-c11"
+    ]
+   },
+   {
+    "text_en": "Skip it if you need parks at the door, late-night streets, or heavy rapid-transit capacity — green is 0.2 ha and the people mover is small.",
+    "claim_ids": [
+     "khlong-san-st-c08",
+     "khlong-san-st-c04"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Unresolved: which 0.2-ha object the app counts as park; which two piers; whether ICONSIAM falls inside this unit's polygon edge (~500 m by coordinates); fare 15 vs 16 THB; peak frequency is summary-only; anchors verified against OSM with no mismatch."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "open issue: ICONSIAM membership: ~500 m from G3 by coordinates — likely clips this unit; batch-3 assigned it to st.charoen-nakhon. Coordinator must split the mall across units or confirm one-side membership.",
+   "open issue: Claim-ID prefix: khlong-san-st-cNN used here (station area) per the batch brief's final instruction to avoid collision with the district-level khlong-san bundle handled by another agent.",
+   "open issue: Park identity for park_ha 0.2; district parks (Somdet Ya park, under-bridge garden) appear outside the unit — polygon audit recommended.",
+   "open issue: Pier identity (2 piers): cross-river ferry services exist on this stretch of river but no source names the specific piers counted.",
+   "open issue: Gold Line fare 15 vs 16 THB discrepancy is visible inside the source itself; elderly fare and peak frequency are summary-only.",
+   "open issue: 2026 Gold Line ridership decline (Q1→Q3) unexplained in source; could affect transport-score inputs if the trend holds.",
+   "open issue: No body-readable Phase-2 ICONSIAM announcement found; the ICS building (2023) is the latest confirmed addition.",
+   "open issue: claim khlong-san-c12 removed during assembly: its only evidence was a non-web app-data anchor (limitation recorded on neighboring claims)",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (1 claim + 6 source arrays). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

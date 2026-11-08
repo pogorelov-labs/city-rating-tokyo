@@ -1,0 +1,1346 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.asok",
+  "kind": "station_area",
+  "name_en": "Asok / Sukhumvit",
+  "name_th": "อโศก / สุขุมวิท",
+  "aliases": [
+   "Asok Montri",
+   "Sukhumvit interchange",
+   "BTS Asok / MRT Sukhumvit"
+  ],
+  "scope_notes": "800 m straight-line catchment around the BTS Asok / MRT Sukhumvit interchange; both physical stops share the single scored area st.asok. District split (app data): Watthana 51.3%, Khlong Toei 48.7% — it is not all of either district. Research-verified locations: Terminal 21 (~147 m) and Soi Cowboy (~121 m) inside; Benjakitti Park northeast tip ~460 m inside but main entrances and most of its area beyond 800 m; Benchasiri Park (~958 m) outside; Bumrungrad Hospital (~1.2 km) outside."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.68,
+  "cohort_rank": 11,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Recognizable interchange candidate with a high model rank (11/133); verify independent guide coverage."
+ },
+ "sources": [
+  {
+   "id": "src_3d5cfc5d8426",
+   "canonical_url": "https://www.openstreetmap.org/way/1306732424",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap: Benjakitti Park (way 1306732424), Benchakitti Forest Park (way 864170465), Benchasiri Park (way 23487144), Soi Cowboy (way 156261355), Sukhumvit soi ways, POI extract r=800 m",
+   "publisher": "OpenStreetMap contributors",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:12:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "None; volunteer-mapped open data (ODbL) queried via Overpass/Nominatim.",
+   "limitations": [
+    "Park/soi polygons are coarse (14-40 nodes): min-distance figures carry roughly +/-20-50 m error.",
+    "Road-to-interchange distances use bbox corners/center, not true vertex distance: coarser (+/-50-100 m).",
+    "POI counts depend on OSM completeness; unnamed entries included in counts.",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '+ https://api.openstreetmap.org/api/0.6/way/{1306732424,864170465,23487144}/full.json + Nominatim queries'"
+   ]
+  },
+  {
+   "id": "src_a5d83686796f",
+   "canonical_url": "https://en.wikipedia.org/wiki/Soi_Cowboy",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Soi_Cowboy",
+   "title": "Soi Cowboy",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-10-01",
+   "retrieved_at": "2026-11-05T10:22:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "None; nonprofit encyclopedia.",
+   "limitations": [
+    "Encyclopedia summary; no noise/complaint detail.",
+    "Says 'within walking distance' of Asok BTS / Sukhumvit MRT without distances; distance here comes from OSM (source 0)."
+   ]
+  },
+  {
+   "id": "src_168b589d7cea",
+   "canonical_url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "title": "Benjakitti Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T09:56:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "None; nonprofit encyclopedia.",
+   "limitations": [
+    "Gives hours 04:30-21:00, conflicting with OSM tag 04:30-22:00 (source 0).",
+    "No entrance locations or walking distances given."
+   ]
+  },
+  {
+   "id": "src_27dde7ecc436",
+   "canonical_url": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+   "title": "Asok BTS station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:28:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "None; nonprofit encyclopedia.",
+   "limitations": [
+    "Passenger figure is 2021 (pandemic-era, entries only, excludes MRT transfer flow).",
+    "Lists Srinakharinwirot University as 'nearby' without distance; representative campus point is ~990 m (source 0), so it is likely outside or only edge-inside."
+   ]
+  },
+  {
+   "id": "src_54e967e9afb8",
+   "canonical_url": "https://condoreviewsthailand.com/neighborhoods/asoke",
+   "retrieved_url": "https://condoreviewsthailand.com/neighborhoods/asoke",
+   "title": "Living in Asoke: Complete Expat Guide",
+   "publisher": "Condoreviews Thailand",
+   "publisher_family": "Condoreviews Thailand",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2025-12-31",
+   "retrieved_at": "2026-11-05T10:15:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "Condo-review site; rent ranges and building call-outs serve renter lead-gen. Not a neutral livability judge; used mainly for stated pros/cons and rent ranges, cross-checked against other sources.",
+   "limitations": [
+    "Rent figures are ranges without sample size or date-stamped data.",
+    "Claims 'Bumrungrad 10-min walk' (~1.2 km straight-line per OSM), which appears generous.",
+    "No parks/green space section at all."
+   ]
+  },
+  {
+   "id": "src_4807525fec70",
+   "canonical_url": "https://propertysights.com/th/blog/อโศก",
+   "retrieved_url": "https://propertysights.com/th/blog/อโศก",
+   "title": "อโศก 2569: คู่มือย่าน (Asok neighborhood guide)",
+   "publisher": "PropertySights",
+   "publisher_family": "PropertySights",
+   "author": "Jirapol B.",
+   "published_at": "2026-09-17",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:32:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "Property-portal editorial; steers readers toward condo choices and nearby areas (recommends Phrom Phong for families). No numeric prices in this article.",
+   "limitations": [
+    "No quantitative rent data.",
+    "Property-portal framing emphasizes rental demand drivers."
+   ]
+  },
+  {
+   "id": "src_710cddb8b229",
+   "canonical_url": "https://thethaiger.com/news/bangkok/walking-the-talk-bangkok-chief-to-revamp-asoke-footpaths-by-july",
+   "retrieved_url": "https://thethaiger.com/news/bangkok/walking-the-talk-bangkok-chief-to-revamp-asoke-footpaths-by-july",
+   "title": "Walking the talk: Bangkok chief to revamp Asoke footpaths by July",
+   "publisher": "The Thaiger",
+   "publisher_family": "Thaiger",
+   "author": null,
+   "published_at": "2025-03-18",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:24:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "Ad-supported local news site; this article is straightforward civic-infrastructure reporting based on the governor's announcement.",
+   "limitations": [
+    "Single announcement article; completion status of the works not verifiable from it.",
+    "Paraphrases the governor's statements; no independent audit of footpath condition."
+   ]
+  },
+  {
+   "id": "src_f6a1287ecb31",
+   "canonical_url": "https://www.sanook.com/news/9907531/",
+   "retrieved_url": "https://www.sanook.com/news/9907531/",
+   "title": "วันศุกร์วุ่นๆ! BTS ขัดข้องช่วงเลิกงาน สายสุขุมวิทคนล้นหลายสถานี (BTS fails at evening rush; Sukhumvit line stations overflow)",
+   "publisher": "Sanook News",
+   "publisher_family": "Sanook",
+   "author": null,
+   "published_at": "2026-09-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:34:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "Mainstream Thai news portal; breaking-news aggregation from reporter observation and user reports.",
+   "limitations": [
+    "Single disruption event, not a recurring-risk measurement.",
+    "No direct BTS operator statement cited; relies on reporter/users.",
+    "No ridership counts given."
+   ]
+  },
+  {
+   "id": "src_0db0b5cb3c6a",
+   "canonical_url": "https://www.bkmagazine.com/city-living/bangkok-best-worst-bts-stations",
+   "retrieved_url": "https://www.bkmagazine.com/city-living/bangkok-best-worst-bts-stations",
+   "title": "Bangkok's busiest BTS stations ranked worst to best",
+   "publisher": "BK Magazine",
+   "publisher_family": "BK Magazine",
+   "author": null,
+   "published_at": "2016-04-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:39:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "City lifestyle magazine; humorous subjective staff ranking, not a ridership study.",
+   "limitations": [
+    "Published 2016-04-01; decade old; station conditions have changed (e.g., footpath works since).",
+    "Subjective scoring (views/venues/access/crowds out of 5), no data basis."
+   ]
+  },
+  {
+   "id": "src_a40ee61e0ac1",
+   "canonical_url": "https://www.ddproperty.com/en/condo-for-rent/near-e4-asok-bts-2159",
+   "retrieved_url": "https://www.ddproperty.com/en/condo-for-rent/near-e4-asok-bts-2159",
+   "title": "Condos for Rent near E4 Asok BTS",
+   "publisher": "DDproperty",
+   "publisher_family": "DDproperty (PropertyGuru Group)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-05T10:26:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "Listings portal; presents asking rents of listed supply only. Page 1 of 254 skews to premium buildings (Q1 Sukhumvit, Esse Asoke).",
+   "limitations": [
+    "Asking rents, not signed contracts.",
+    "Page-1 sample (20 of 5,072 listings) is not a median; premium-heavy.",
+    "'Near E4 Asok BTS' radius undefined by the portal — may include Phrom Phong/Makkasan-adjacent stock.",
+    "No aggregate average/median statistic displayed."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "asok-c01",
+   "text_en": "BTS Asok (E4, Sukhumvit Line, opened 5 December 1999) and MRT Sukhumvit (Blue Line) form a single interchange at the Sukhumvit Road / Asok Montri Road intersection that spans Watthana and Khlong Toei districts, with MRT Exit 3 linking the two stations.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Asok / MRT Sukhumvit interchange",
+    "relation_to_entity": "inside",
+    "notes": "The interchange is the rated unit's anchor point; Wikipedia states the station spans both districts, consistent with the app's 51.3/48.7 Watthana-Khlong Toei split."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": "current state as described 2026",
+    "recheck_by": null,
+    "notes": "Station opened 1999; interchange link long-standing."
+   },
+   "evidence": [
+    {
+     "source_id": "src_27dde7ecc436",
+     "locator": "Location/interchange sections and infobox",
+     "paraphrase": "Station E4 on the Sukhumvit Line at Asok Montri intersection, spanning Watthana and Khlong Toei districts; connects to MRT Blue Line at Sukhumvit station via Exit 3; opened 5 Dec 1999."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Thai/English alias set (อโศก, Asoke, Asok Montri) assembled from sources 1, 3, 5 rather than one authoritative gazetteer."
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "asok-c02",
+   "text_en": "Soi Cowboy is a roughly 150 m long red-light soi with about 40 mostly go-go bar establishments, running between Asok Montri Road (Sukhumvit Soi 21) and Soi Sukhumvit 23 in Khlong Toei Nuea ward, Watthana district, and its mapped street lies only ~120 m straight-line from the interchange.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Soi Cowboy",
+    "relation_to_entity": "inside",
+    "notes": "OSM way 156261355 (pedestrian way 'Soi Cowboy') nearest point ~121 m from the rated stop."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "bar cluster first formed early 1970s; still mapped 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_a5d83686796f",
+     "locator": "Intro/location and history paragraphs",
+     "paraphrase": "Short red-light street ~150 m long between Asok Montri Rd (Soi 21) and Soi Sukhumvit 23 in Khlong Toei Nuea, Watthana; ~40 commercial establishments, mostly go-go bars; named after a 1970s American bar owner."
+    },
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Overpass extract, way 156261355",
+     "paraphrase": "Soi Cowboy mapped as a pedestrian way whose nearest point is ~121 m from (13.73704, 100.56036)."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Distance is a straight-line figure from a coarse OSM polygon, not a walking route.",
+    "Wikipedia does not describe current noise or complaint levels."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c03",
+   "text_en": "Terminal 21 Asok mall stands about 150 m from the interchange (OSM node 12438224305) and is described by area guides as the neighborhood anchor, with a multi-floor international food court.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "food",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Terminal 21 Asok",
+    "relation_to_entity": "inside",
+    "notes": "Node ~147 m from rated stop; mall adjoins the BTS station (Exits 1 and 3 per Wikipedia station article)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "operating as of 2025-2026 sources",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Nominatim node 12438224305",
+     "paraphrase": "Terminal 21 Asok mapped point is ~147 m from the rated stop coordinates."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "'The Vibe' / anchors description",
+     "paraphrase": "Guide calls Terminal 21 the neighborhood anchor, seven floors plus a well-known food court."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "'Anchor' is the guide's editorial characterization."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c04",
+   "text_en": "Benjakitti Park in Khlong Toei district totals 72 ha after the 2022 forest-park expansion, and its nearest mapped edge is only ~460 m straight-line from the interchange while its far side and its Ratchadaphisek/QSNCC-side approaches lie roughly 1.1-1.5 km away.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "green_access"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Benjakitti Park / Benchakitti Forest Park",
+    "relation_to_entity": "partial",
+    "notes": "OSM way 1306732424 (main park): nearest 457 m, farthest 1306 m; way 864170465 (forest park): nearest 509 m, farthest 1545 m. A minority of the park's area falls inside the 800 m radius; most lies beyond it. This plausibly explains the app's '15.3 ha park within 800 m' figure (unverified inference)."
+   },
+   "temporal_scope": {
+    "event_date": "2022-01-01",
+    "observed_period": "forest park fully opened 2022; geometry extracted 2026-11-05",
+    "recheck_by": null,
+    "notes": "Opening dates: park opened 2004 on former tobacco-authority land; forest expansion approved 2006, fully opened 2022."
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "OSM way 1306732424 and way 864170465 geometries, haversine to (13.73704,100.56036)",
+     "paraphrase": "Nearest park vertex 457 m; nearest forest-park vertex 509 m; far sides 1306 m and 1545 m."
+    },
+    {
+     "source_id": "src_168b589d7cea",
+     "locator": "Description and Forest Park paragraphs",
+     "paraphrase": "72 ha after forest expansion (2022); located on Ratchadaphisek Road next to QSNCC; Green Bridge links to Lumphini Park."
+    },
+    {
+     "source_id": "src_710cddb8b229",
+     "locator": "n/a — contrast source",
+     "paraphrase": "Web walking-distance sources conflict (about 500 m vs 1.1 km); the straight-line geometry shows why both circulate: near edge vs entrances."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Coarse OSM polygons: distance error roughly +/-20-50 m.",
+    "Entrance locations are not individually mapped; 'main entrance within 800 m' cannot be asserted, only that the park boundary crosses the catchment.",
+    "Opening hours conflict: Wikipedia 04:30-21:00 vs OSM tag 04:30-22:00."
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "asok-c05",
+   "text_en": "Benchasiri Park (the Queen's Park beside the Emporium/EmQuartier at Phrom Phong) has its nearest edge ~960 m from the interchange, placing the whole park outside the 800 m catchment.",
+   "kind": "factual_report",
+   "topics": [
+    "green_access",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Benchasiri Park",
+    "relation_to_entity": "outside",
+    "notes": "OSM way 23487144: nearest 958 m, farthest 1159 m; tagged hours 04:30-22:00."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "geometry extracted 2026-11-05",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "OSM way 23487144 geometry, haversine to (13.73704,100.56036)",
+     "paraphrase": "Nearest park vertex ~958 m from the rated stop."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Coarse 14-node polygon; error roughly +/-20-50 m, but the margin beyond 800 m is ~160 m so the outside verdict is robust."
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "asok-c06",
+   "text_en": "The mouths of Sukhumvit Sois 11, 15, 19 and 23 all sit within roughly 0.5 km of the interchange (approx. 61 m for Soi 19, 263 m for Soi 15, 295 m for Soi 23, 513 m for Soi 11), but the sois run 0.8-1.5 km inland, so only their lower sections fall inside the 800 m radius.",
+   "kind": "estimate",
+   "topics": [
+    "identity",
+    "nightlife",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Sukhumvit Sois 11/15/19/23",
+    "relation_to_entity": "partial",
+    "notes": "Bounding-box approximations from OSM road geometry; Soi 11's far end and Soi 23's far end extend beyond the catchment toward Phetchaburi/Rama IV."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM extract 2026-11-05",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Overpass extract, ways 156261409 (Soi 11), 156261413 (Soi 15), 156261418 (Soi 19), 156261426 (Soi 23)",
+     "paraphrase": "Nearest bbox point of each soi way to the rated stop: Soi 19 ~61 m, Soi 15 ~263 m, Soi 23 ~295 m, Soi 11 ~513 m."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Bounding-box method overstates distance for angled roads; treat as order-of-magnitude.",
+    "Soi lengths approximate from bbox extents."
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "asok-c07",
+   "text_en": "Office towers sit directly at the interchange (Exchange Tower ~230 m by OSM), and the surrounding Sukhumvit corridor is characterized by hotels and skyscrapers serving foreign business people, with the Nana entertainment zone to the west and dense commercial development to the east.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Sukhumvit corridor at Asok",
+    "relation_to_entity": "partial",
+    "notes": "Exchange Tower point is inside (~226 m); the hotel/skyscraper characterization covers a broader corridor, whose core blocks are inside the unit but whose Nana and upper-soil ends are not."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "corridor state as described by 2026 sources",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Nominatim node 'Exchange Tower'",
+     "paraphrase": "Exchange Tower office node ~226 m from the rated stop."
+    },
+    {
+     "source_id": "src_27dde7ecc436",
+     "locator": "Area character paragraph",
+     "paraphrase": "Many hotels and facilities serving foreign tourists and business people; Nana entertainment zone extends west; dense commercial skyscraper district to the east."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Corridor-level characterization not converted into an inside/outside list of individual hotels."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c08",
+   "text_en": "Asoke is repeatedly described as one of Bangkok's most crowded rail stations — BK Magazine scored its crowds 1/5 'horrific' in a 2016 staff ranking — and 2025-2026 guides still call the interchange area heavily crowded.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowding",
+    "transit"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Asok / MRT Sukhumvit interchange",
+    "relation_to_entity": "inside",
+    "notes": "Consistent with the app's crowd score of 1 (higher = less crowding)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "BK ranking 2016; guides 2025-09 to 2025-12",
+    "recheck_by": null,
+    "notes": "No recent quantitative ridership breakdown found for Asok specifically."
+   },
+   "evidence": [
+    {
+     "source_id": "src_0db0b5cb3c6a",
+     "locator": "Asoke entry (ranked #6, 10/20)",
+     "paraphrase": "Crowds scored 1/5 and described as horrific in a subjective staff ranking of nine busy stations."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Cons section",
+     "paraphrase": "Noise and chaos at the main intersection; heavy tourist and short-term-visitor traffic."
+    },
+    {
+     "source_id": "src_710cddb8b229",
+     "locator": "Context paragraph on the area",
+     "paraphrase": "Describes the corridor as heavily crowded, with condominiums, offices, a university and the two train stations."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "BK ranking is a decade-old subjective editorial.",
+    "Crowding descriptions are qualitative; no current station-level ridership split BTS vs MRT vs transfer flows was found."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c09",
+   "text_en": "During a BTS Sukhumvit Line train failure near Lat Phrao junction at about 17:20 on Friday 25 September 2026, passengers accumulated at Asok from the platform back to the station entrance gates as trains ran 10-15 minutes apart, with some riders reporting waits over 30 minutes and letting three full trains pass.",
+   "kind": "factual_report",
+   "topics": [
+    "crowding",
+    "transit"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "BTS Asok station",
+    "relation_to_entity": "inside",
+    "notes": "Single event; documents how quickly the interchange saturates when headways collapse."
+   },
+   "temporal_scope": {
+    "event_date": "2026-09-25",
+    "observed_period": "single evening event",
+    "recheck_by": null,
+    "notes": "Event date distinct from publication date (same day, 19:58 local per article)."
+   },
+   "evidence": [
+    {
+     "source_id": "src_f6a1287ecb31",
+     "locator": "Event and crowding paragraphs (reported ~17:55)",
+     "paraphrase": "BTS failure at 17:20 near Lat Phrao during evening rush; at Asok passengers were dense from platform level to the entry gates; 10-15 minute train gaps; some waited 30+ minutes and could not board three consecutive trains; media advised allowing 30-60 extra minutes or using MRT alternatives."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "One event; does not establish a recurring frequency.",
+    "No operator statement quoted; figures come from reporters and users."
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "asok-c10",
+   "text_en": "BMA announced in March 2025 that it would renovate the 30-plus-year-old footpaths along Asok Montri Road between BTS Asok and MRT Sukhumvit — the tiles sit on a sand base, are prone to collapse and splash mud when stepped on — aiming to hire a contractor by July 2025 and start with the worst sections; completion status remains unverified.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "walkability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Asok Montri Road (Soi Sukhumvit 21)",
+    "relation_to_entity": "partial",
+    "notes": "Asok Montri runs north from Sukhumvit toward Phetchaburi; the station-adjacent section is inside the catchment, the northern end may not be."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "announced 2025-03-18; contractor target 2025-07",
+    "recheck_by": "2026-12-31",
+    "notes": "Verify whether renovation was completed and to what standard."
+   },
+   "evidence": [
+    {
+     "source_id": "src_710cddb8b229",
+     "locator": "Plan, timeline and cause paragraphs",
+     "paraphrase": "Governor announced BMA will stop waiting for the electricity authority and renovate the Asoke Montri footpaths linking the two stations; most paths are over 30 years old with 30x30x6 cm tiles on sand that collapse and splash mud; contractor to be hired by July 2025, worst sections first; design done with the 'Sook Asok' partnership; governor called it one of the most important footpath projects in Bangkok."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Announcement only; no completion report found in this session.",
+    "Article paraphrases officials; no independent condition survey."
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "asok-c11",
+   "text_en": "Guides' core pitch for living here is connectivity: because the BTS Sukhumvit Line and MRT Blue Line cross at this one interchange, residents can reach Siam, Silom/Sathorn and Chatuchak without taxis, and the location suits people commuting in several directions plus airport access via the Airport Rail Link at Makkasan.",
+   "kind": "reported_perception",
+   "topics": [
+    "daily_life",
+    "transit"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Asok interchange catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "The underlying fact (two lines crossing) is verified in claim asok-c01; the 'most connected in the city' framing is the guides' claim."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2025-09 to 2025-12",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Pros and Getting Around sections",
+     "paraphrase": "Unbeatable connectivity via the BTS/MRT interchange; rarely need taxis/Grab; Siam ~10 min, Silom/Sathorn ~15 min, Chatuchak ~20 min; some condos connect directly to the MRT."
+    },
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Why people live there / transport paragraphs",
+     "paraphrase": "Asok is chosen as a transit crossroads; suits people traveling to multiple areas daily and those working in the Ratchadaphisek/Rama 9 belt; airport access via the ARL at Makkasan; tenant base is office workers, students and expats rather than tourists."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Journey times are guide estimates, not measured.",
+    "'Most connected in Bangkok' is promotional framing, though the two-line interchange fact is verifiable."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c12",
+   "text_en": "Portal listings near Asok BTS in early November 2026 asked roughly 30,000-48,000 THB/month for 1-bed and 38,000-130,000+ THB/month for 2-bed units in newer buildings (with luxury Q1 Sukhumvit 2-beds at 100,000-250,000), broadly consistent with guide ranges of 20,000-40,000 (1-bed) and 35,000-60,000 (2-bed) and with the app's DooAsset asking medians of 26,500/55,000 THB.",
+   "kind": "estimate",
+   "topics": [
+    "cost",
+    "rent"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "condos near E4 Asok BTS",
+    "relation_to_entity": "unknown",
+    "notes": "The portal's 'near E4' radius is undefined and may include stock outside the 800 m unit; page-1 examples (Fynn Asoke, The Edge Sukhumvit 23, Esse Asoke, Q1 Sukhumvit) are at least near it."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "DDproperty listings dated 2026-11-04 (n=20 visible of 5,072); Condoreviews ranges updated 2025-12-31; app medians as of 2026-10-25 (n=30/18, station-override proxy)",
+    "recheck_by": "2027-02-01",
+    "notes": "Asking rents, not signed contracts; refresh quarterly."
+   },
+   "evidence": [
+    {
+     "source_id": "src_a40ee61e0ac1",
+     "locator": "Page-1 listing rows (20 of 5,072 condos)",
+     "paraphrase": "Examples: Fynn Asoke 1-bed 30,000, 2-bed 45,000-48,000; The Edge Sukhumvit 23 2-bed 38,000; Esse Asoke 2-bed 75,000; Q1 Sukhumvit 2-beds 100,000-250,000; listings dated Nov 4 2026."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Typical Rent Prices section",
+     "paraphrase": "Studios 15,000-25,000; 1BR 20,000-40,000; 2BR 35,000-60,000 THB monthly; newer flagship buildings at the top of range."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No median or average statistic was readable on the portal page; only page-1 examples.",
+    "Asking rents exceed signed rents in this market typically; app medians use a small sample (n=30/18).",
+    "Sources are commercial (listings portal, condo-review site)."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c13",
+   "text_en": "Guides foreground food diversity as a defining everyday experience: a Korean community cluster around Soi 12, Middle Eastern and Thai dining, Terminal 21's food court, and dense eating options along the sois, alongside the nightlife strips.",
+   "kind": "reported_perception",
+   "topics": [
+    "daily_life",
+    "food"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Asok catchment food scene",
+    "relation_to_entity": "entire_unit",
+    "notes": "Named pockets: Soi 12 Korean cluster (inside per OSM road distances); Terminal 21 food court (inside)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2025-12 to 2026-09",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Positives/dining paragraphs",
+     "paraphrase": "Diverse dining spanning Korean BBQ (Soi 12 Korean community), Middle Eastern and Thai; Terminal 21 food court as a budget staple."
+    },
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Area character paragraphs",
+     "paraphrase": "Tenant base of office workers, students and expats supports varied everyday dining demand around the interchange."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Guide assertions; no independent census of cuisine types inside the 800 m radius.",
+    "App-side Overture counts (729 food, 90 cafes, 147 nightlife) were provided by the project brief, not re-derived here."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c14",
+   "text_en": "Guides converge on noise as the area's main residential trade-off: two major roads, two rail lines and the Soi Cowboy nightlife strip, with advice to choose units about five minutes off the main road and away from Cowboy, and with families wanting quiet directed one stop east to Phrom Phong.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "noise",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Soi Cowboy block / Asok Montri / Sukhumvit Rd frontage",
+    "relation_to_entity": "partial",
+    "notes": "Noise pockets concentrate at the Cowboy block (inside), the two main-road frontages and along rail viaducts; deeper side sois quieter per guides."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2025-12 to 2026-09",
+    "recheck_by": null,
+    "notes": "No formal complaint records or noise measurements found."
+   },
+   "evidence": [
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Cons list",
+     "paraphrase": "Traffic congestion on Asok Montri especially at the Asok-Phetchaburi junction; noise from two major roads, two rail lines and nearby nightlife (Soi Cowboy between Sois 21 and 23); families wanting quiet pointed to Phrom Phong."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Cons and Tips for Renting sections",
+     "paraphrase": "Noise and chaos at the main intersection; Soi Cowboy adjacency; recommends living five minutes off the main road for quiet and checking window orientation."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Perception-based; no decibel data or complaint statistics.",
+    "Cowboy adjacency affects a subset of blocks, not the whole unit."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c15",
+   "text_en": "Even sympathetic guides concede Asok lacks the distinct identity of neighboring areas like Thonglor, Silom or Ari — a transit crossroads chosen for location rather than neighborhood character.",
+   "kind": "reported_perception",
+   "topics": [
+    "identity",
+    "vibe"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Asok area",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2025-12 to 2026-09",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Character comparison paragraphs",
+     "paraphrase": "Asok is not a neighborhood with a clear personality like Thonglor or Silom; its draw is the transport crossroads."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Cons section",
+     "paraphrase": "Less character and charm than Thonglor or Ari."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Both sources are property-adjacent editorial voices; a resident-sourced view (Reddit thread) could not be fetched this session."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c16",
+   "text_en": "OpenStreetMap data within 800 m straight-line of the interchange shows 8 supermarket/department-store entries (including Tops, Foodland, Villa Market, MaxValu, Makro Food Service on Sukhumvit 22 and a Robinson), 61 convenience stores (32 7-Eleven, 12 FamilyMart, 3 Lawson), 17 pharmacy/clinic entries and 2 marketplace entries (one tagged SW1 market).",
+   "kind": "factual_report",
+   "topics": [
+    "cost",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "800 m catchment retail/health POIs",
+    "relation_to_entity": "entire_unit",
+    "notes": "Queried with around:800 of the rated stop; supports the app's daily_essentials=10."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM extract 2026-11-05",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Overpass amenity extract r=800 around (13.73704,100.56036)",
+     "paraphrase": "Counts: 8 supermarket/greengrocer/department entries, 61 convenience stores, 17 pharmacy/clinic/hospital-tagged entries (mostly pharmacies and small clinics), 2 marketplaces."
+    },
+    {
+     "source_id": "src_0db0b5cb3c6a",
+     "locator": "Asoke entry, venues note",
+     "paraphrase": "The 2016 ranking joked that finding a 7-Eleven right around the station was a struggle — station-plaza level differs from the wider catchment, where dozens are mapped."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "OSM completeness is uneven; counts are floors, not censuses.",
+    "Includes unnamed entries; building-level placement of each supermarket not verified."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c17",
+   "text_en": "No major hospital lies inside the 800 m catchment — Bumrungrad International's campus is ~1.2 km straight-line away — so the guide claim of 'Bumrungrad a 10-minute walk' does not hold for this unit; everyday healthcare inside the catchment is pharmacies and small clinics.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "health"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "healthcare provision in catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "Bumrungrad (โรงพยาบาลบำรุงราษฎร์) point ~1192 m NW; 17 pharmacy/clinic entries within 800 m (source 0)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM extract 2026-11-05; guide updated 2025-12-31",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Nominatim node โรงพยาบาลบำรุงราษฎร์ (Bumrungrad)",
+     "paraphrase": "Hospital point ~1192 m from the rated stop, i.e., outside the 800 m radius."
+    },
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Positives section",
+     "paraphrase": "Guide lists 'Bumrungrad Hospital 10-min walk' as a positive — inconsistent with the mapped ~1.2 km distance."
+    },
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "Overpass amenity extract, health entries",
+     "paraphrase": "17 pharmacy/clinic-tagged entries within 800 m, mostly pharmacies plus small dental/medical clinics."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "OSM point may sit at a campus centroid; boundary-to-boundary distance could differ slightly, but ~1.2 km leaves the outside verdict robust.",
+    "Guide walk-time claim may be measured from a different starting block within the wider 'Asoke' area."
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "asok-c18",
+   "text_en": "Practically usable public green space for this unit is the northern tip of Benjakitti/Forest Park (edges ~460-510 m straight-line, opening hours 04:30-21:00 or 22:00 depending on source), while Benchasiri Park is ~960 m away; park-facing units are marketed at a premium by property guides.",
+   "kind": "factual_report",
+   "topics": [
+    "cost",
+    "green",
+    "green_access"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Benjakitti Park north tip vs Benchasiri Park",
+    "relation_to_entity": "partial",
+    "notes": "The green=9 score plausibly rests on Benjakitti's edge being inside the radius; walking to the main Ratchadaphisek/QSNCC-side entrances takes well beyond an 800 m straight-line equivalence. Side-street greenery (tree-lined sois) is asserted by guides but not separately verified."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "geometry extracted 2026-11-05; park operating hours as published",
+    "recheck_by": "2027-05-01",
+    "notes": "Confirm official opening hours (04:30-21:00 vs 22:00 conflict) and entrance positions."
+   },
+   "evidence": [
+    {
+     "source_id": "src_3d5cfc5d8426",
+     "locator": "OSM park ways 1306732424, 864170465, 23487144 + opening_hours tags",
+     "paraphrase": "Benjakitti nearest 457 m (tag hours 04:30-22:00), forest park nearest 509 m, Benchasiri nearest 958 m (tag hours 04:30-22:00)."
+    },
+    {
+     "source_id": "src_168b589d7cea",
+     "locator": "Location and hours statements",
+     "paraphrase": "Park on Ratchadaphisek Road between Rama IV and Sukhumvit; hours stated as 04:30-21:00."
+    },
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Pricing paragraphs",
+     "paraphrase": "Park-facing units are marketed at a premium, though the actual difference varies by project."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Entrance positions not individually mapped; 'main entrance' location unresolved.",
+    "Hours conflict between Wikipedia and OSM.",
+    "Tree-canopy quality of streets is not evidenced by any fetched source."
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "asok-c19",
+   "text_en": "Guides' fit verdict: best for commuters and car-free professionals who prize interchange access; worst for quiet-seekers and home-all-day remote workers, with families wanting quiet pointed one stop east to Phrom Phong.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowding",
+    "identity",
+    "noise"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Asok catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guides 2025-12 to 2026-09",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_54e967e9afb8",
+     "locator": "Best For / Worst For section",
+     "paraphrase": "Best for transit-dependent commuters and car-free city workers; worst for quiet-seekers and remote workers home all day; suggests visiting at rush hour before signing."
+    },
+    {
+     "source_id": "src_4807525fec70",
+     "locator": "Cons/audience paragraphs",
+     "paraphrase": "Families wanting quiet directed to Phrom Phong one stop away; suits multi-directional commuters."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Both sources are property-market voices; conditional fit for night workers, students or retirees is not covered."
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c01",
+    "asok-c02",
+    "asok-c03",
+    "asok-c04",
+    "asok-c05",
+    "asok-c06",
+    "asok-c07"
+   ],
+   "notes": "Unit = the 800 m straight-line catchment around the BTS Asok / MRT Sukhumvit interchange (Thai: อโศก / สุขุมวิท; road: Asok Montri Rd = Soi Sukhumvit 21). The station itself spans Watthana and Khlong Toei districts (matches app split 51.3/48.7). Verified inside: interchange, Terminal 21 (~150 m), Soi Cowboy (~120 m), mouths of Sois 11/15/19/23, Exchange Tower (~230 m), Benjakitti Park's north tip (~460-510 m). Verified outside: Benchasiri Park (~960 m), Bumrungrad International (~1.2 km), most of Benjakitti's area (far side 1.3-1.5 km). Partial: the long sois, Asok Montri footpath corridor, and the Sukhumvit corridor characterization. Srinakharinwirot University is listed by Wikipedia among station landmarks but its representative point is ~990 m — likely outside or edge-inside, unverified."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c07",
+    "asok-c13",
+    "asok-c14",
+    "asok-c08"
+   ],
+   "notes": "Everyday experience differs sharply by block and hour: weekday office-worker flows through the interchange (offices at the corner, hotels and skyscrapers corridor), tourists funneled to Soi Cowboy after dark, soi-level dining (Korean Soi 12, Middle Eastern, Terminal 21 food court). Sources are guide voices; a resident-sourced account (Reddit) was not fetchable this session."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c11",
+    "asok-c16",
+    "asok-c01"
+   ],
+   "notes": "The single most cited benefit is the two-line interchange: one change point reaching Siam, Silom/Sathorn, Chatuchak and the airport link, which reduces car dependence — a mechanism (network position), not just an adjective. Secondary: dense everyday essentials (61 convenience stores, 8 supermarkets within 800 m). Keep distinct: 'most connected in the city' is guide framing; the two-line crossing is verified fact."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c08",
+    "asok-c09",
+    "asok-c10",
+    "asok-c14",
+    "asok-c17",
+    "asok-c12"
+   ],
+   "notes": "Counter-evidence deliberately gathered: platform crowding (2016 editorial 'horrific'; 2026-09-25 evening-rush failure packed Asok platform-to-gate), crumbling 30-year-old footpaths with mud-splash tiles now being renovated, noise from two roads + two rails + Cowboy strip, no major hospital inside 800 m, and premium asking rents. No source found on scams around the nightlife strip this session (TripAdvisor/forum pages returned 403)."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c09",
+    "asok-c14",
+    "asok-c18",
+    "asok-c08"
+   ],
+   "notes": "Rhythm: weekday office peaks swell the interchange (evening-rush failure shows saturation); nightlife strips define late evening; parks run dawn to 21:00/22:00. Pockets rather than one mood: Cowboy block and main-road frontage vs deeper side sois; guides advise testing the 07:30-09:30 window before renting. Seasonal claims (rain slowing works) come only from a search snippet, not a body-read — not claimed."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c01",
+    "asok-c10",
+    "asok-c06",
+    "asok-c11"
+   ],
+   "notes": "Transfer is at one point: BTS Asok to MRT Sukhumvit via Exit 3 / connecting walkway. Walking surface is the weak link: BMA's own announcement describes 30+-year-old tiles on sand that collapse and splash mud along Asok Montri. Sidewalk shade, crossing detail and canal/expressway barriers were not separately evidenced this session. Condo-to-MRT direct links exist for some buildings (guide claim)."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c16",
+    "asok-c17",
+    "asok-c03",
+    "asok-c07"
+   ],
+   "notes": "Groceries: 8 supermarket-type entries incl. Tops, Foodland, Villa Market, MaxValu, Makro Food Service (Sukhumvit 22) within 800 m; 2 marketplaces incl. SW1; 61 convenience stores. Healthcare: pharmacies/small clinics inside; nearest full hospital ~1.2 km. Work/study: Exchange Tower and office towers at the corner; SWU campus likely just outside (unverified edge). Terminal 21 covers mall retail."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c12"
+   ],
+   "notes": "Affordability = a real premium but not uniformly luxury: portal asking rents 30-48k (1-bed) and 38-130k+ (2-bed) in Nov 2026 listings, guide ranges 20-40k / 35-60k, app DooAsset medians 26.5k/55k (n=30/18, station-override proxy, 2026-10-25). All figures are asking prices; no signed-rent data found; portal 'near E4' radius undefined; page-1 sample skews premium. The rent=4 (expensive) score is consistent with the range of evidence."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c04",
+    "asok-c05",
+    "asok-c18"
+   ],
+   "notes": "Location check resolves the lead: Benjakitti's NE tip is inside the 800 m radius (~460 m), but the park's main Ratchadaphisek/QSNCC-side entrances and most of its 72 ha lie beyond it — web sources circulate both '500 m' and '1.1 km' figures, both partly right (edge vs entrance). Benchasiri Park is outside (~960 m). Hours 04:30-21:00/22:00 (conflicting). Tree-lined-street greenery quality: not evidenced."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c19",
+    "asok-c15",
+    "asok-c14"
+   ],
+   "notes": "Conditional fit: commuters and car-free workers gain most (two lines, one interchange); quiet-seekers and home-all-day remote workers fit worst; families are pointed one stop out; nightlife workers/tourists trade convenience for noise. Avoid demographic stereotypes: the guides' own audience framing (office workers, students, expats) is used rather than assumptions."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c10",
+    "asok-c09"
+   ],
+   "notes": "Change: BMA footpath renovation along Asok Montri announced 2025-03-18, contractor targeted by July 2025 — completion unverified (recheck). Dated event (not a change): BTS failure 2026-09-25 evening rush with Asok platform-to-gate overflow. Forest-park expansion completed 2022 (older context). No verified 2024-2026 openings/closures of venues inside the unit were found this session; a search-snippet mention of rain slowing works was not body-verified."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "asok-c08",
+    "asok-c15",
+    "asok-c18",
+    "asok-c12",
+    "asok-c17"
+   ],
+   "notes": "Score cross-check without editing: crowd=1 strongly corroborated (multiple sources, incl. a 2026 event); daily_essentials=10 corroborated by OSM counts; food/nightlife=10 corroborated qualitatively; rent=4 consistent with asking-rent ranges; green=9 hinges on Benjakitti's edge being inside while most of the park is not — a defensible but fragile basis; transport=8 sits below guide enthusiasm ('most connected') — calibration question, not an error; safety=6 and gym_sports=10 have no supporting source evidence found this session (no crime data, no gym audit) and remain outside the qualitative record. Uncertainty: no recent station-level ridership split."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Two rail lines, Terminal 21 and Soi Cowboy all meet at one corner — and the closest edge of Benjakitti Park is about 460 m away, with its main entrances beyond the 800 m catchment.",
+   "claim_ids": [
+    "asok-c01",
+    "asok-c02",
+    "asok-c03",
+    "asok-c04",
+    "asok-c06",
+    "asok-c07",
+    "asok-c08",
+    "asok-c09",
+    "asok-c10",
+    "asok-c11",
+    "asok-c12",
+    "asok-c13",
+    "asok-c14",
+    "asok-c15",
+    "asok-c16",
+    "asok-c17",
+    "asok-c18",
+    "asok-c19"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Asok is Bangkok's crossroads more than its neighborhood: the only place where the BTS Sukhumvit Line and the MRT Blue Line meet, with Terminal 21 at the corner, Exchange Tower offices on one side and the Soi Cowboy bar strip about a block away. Guides rate it the easiest place in Bangkok to live without a car, and the 800 m catchment is dense with convenience stores, supermarkets and cheap soi food. The price of that position is paid daily — one of the city's most crowded station platforms, noise from two roads, two rail lines and the bar soi, and footpaths old enough that the city government announced their rebuild in 2025. It fits people who will use the interchange every day; it wears down people who will hear it from home.",
+   "claim_ids": [
+    "asok-c01",
+    "asok-c02",
+    "asok-c03",
+    "asok-c04",
+    "asok-c06",
+    "asok-c07",
+    "asok-c08",
+    "asok-c09",
+    "asok-c10",
+    "asok-c11",
+    "asok-c12",
+    "asok-c13",
+    "asok-c14",
+    "asok-c15",
+    "asok-c16",
+    "asok-c17",
+    "asok-c18",
+    "asok-c19"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "The two-line interchange means most of central Bangkok is reachable without a car, and guides describe residents here giving up taxis almost entirely.",
+    "claim_ids": [
+     "asok-c11",
+     "asok-c01"
+    ]
+   },
+   {
+    "text_en": "Everyday essentials are unusually dense within 800 m: 61 convenience stores, eight supermarket-type stores (Tops, Foodland, Villa Market, Makro Food Service among them) and two marketplaces.",
+    "claim_ids": [
+     "asok-c16"
+    ]
+   },
+   {
+    "text_en": "Eating out runs from a Korean community cluster on Soi 12 to Middle Eastern and Thai soi kitchens and Terminal 21's food court, so daily food does not require traveling.",
+    "claim_ids": [
+     "asok-c13",
+     "asok-c03"
+    ]
+   },
+   {
+    "text_en": "The northern tip of Benjakitti Park crosses into the catchment, putting a running-loop edge within a few hundred meters even though the main entrances sit farther out.",
+    "claim_ids": [
+     "asok-c04",
+     "asok-c18"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Crowding is structural, not occasional: a 2016 editorial ranked Asok's crowds 1/5, and when one BTS train failed at the evening rush in September 2026, passengers backed up from Asok's platform to the street-level gates.",
+    "claim_ids": [
+     "asok-c08",
+     "asok-c09"
+    ]
+   },
+   {
+    "text_en": "Noise stacks up from three directions — Sukhumvit and Asok Montri roads, the two rail viaducts, and the Soi Cowboy strip — which is why guides tell renters to go five minutes deep into a side soi.",
+    "claim_ids": [
+     "asok-c14",
+     "asok-c02"
+    ]
+   },
+   {
+    "text_en": "The walk to the stations ran for decades on 30-year-old paving tiles that collapse and splash mud; the BMA promised a rebuild starting 2025 but completion is not yet verified.",
+    "claim_ids": [
+     "asok-c10"
+    ]
+   },
+   {
+    "text_en": "Rents carry a location premium and the nearest full hospital (Bumrungrad) is about 1.2 km out — everyday medicine here means pharmacies and small clinics.",
+    "claim_ids": [
+     "asok-c12",
+     "asok-c17"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Weekday mornings and early evenings belong to office commuters squeezing through the interchange, while late evening shifts the center of gravity to the ~40 bars of Soi Cowboy and the tourist flow around Terminal 21 — the same corner, two different crowds.",
+    "claim_ids": [
+     "asok-c07",
+     "asok-c02",
+     "asok-c08"
+    ]
+   },
+   {
+    "text_en": "Green time is bounded by park hours (04:30 to about 21:00-22:00), so the quietest window in the unit is early morning before the office rush fills Asok Montri.",
+    "claim_ids": [
+     "asok-c18",
+     "asok-c14"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The difference between blocks is bigger than the difference between hours: Cowboy's bar row sits ~120 m from the interchange while the mouths of Sois 15, 19 and 23 carry office and apartment life, and Soi 11 mixes guesthouses with residences a few hundred meters west.",
+    "claim_ids": [
+     "asok-c02",
+     "asok-c06",
+     "asok-c13"
+    ]
+   },
+   {
+    "text_en": "South of Sukhumvit, the catchment crosses into Khlong Toei district and reaches the edge of Benjakitti's lake-and-forest section; park-facing addresses there are explicitly marketed at a premium over sois without a view.",
+    "claim_ids": [
+     "asok-c04",
+     "asok-c18"
+    ]
+   },
+   {
+    "text_en": "Guides characterize the area as having less identity than Thonglor or Silom — it is picked for the crossroads, which is why side-soi selection (window orientation, distance from the main road) does most of the work in whether a given unit is livable.",
+    "claim_ids": [
+     "asok-c15",
+     "asok-c14"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit: commuters who change lines daily, airport travelers via Makkasan, and workers in the surrounding towers who want a car-free routine.",
+    "claim_ids": [
+     "asok-c11",
+     "asok-c19",
+     "asok-c07"
+    ]
+   },
+   {
+    "text_en": "Poor fit: quiet-seekers and home-all-day remote workers, per the guides' own verdicts; families wanting calm are pointed one stop east to Phrom Phong.",
+    "claim_ids": [
+     "asok-c19",
+     "asok-c14"
+    ]
+   },
+   {
+    "text_en": "Situational fit: nightlife workers and frequent visitors trade the Cowboy strip's convenience against its noise; anyone prioritizing park life should treat Benjakitti as a park whose nearest edge is about 460 m away and whose main entrances lie beyond the catchment, not a doorstep one.",
+    "claim_ids": [
+     "asok-c02",
+     "asok-c04",
+     "asok-c18"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "No recent (2024-2026) station-level ridership breakdown for BTS Asok vs MRT Sukhumvit vs transfer flows was found; crowding rests on editorial and event evidence.",
+   "All rent figures are asking prices; signed-contract levels and the portal's 'near E4' radius are unknown, and the app's DooAsset medians rest on n=30/18.",
+   "Whether the 2025 Asok Montri footpath renovation was completed, and to what standard, is unverified.",
+   "Benjakitti Park opening hours conflict (04:30-21:00 per Wikipedia vs 04:30-22:00 per OSM), and entrance positions are not individually mapped.",
+   "Safety (app score 6) and gym/sports provision (app score 10) found no supporting qualitative or quantitative sources this session.",
+   "Whether the app's '15.3 ha park within 800 m' corresponds to Benjakitti's portion inside the radius is an unverified inference.",
+   "Resident-voiced accounts (Reddit r/Bangkok threads, TripAdvisor and ExpatForum discussions) were all blocked or paywalled this session."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; an independent reviewer must still confirm identity/geography, source quality and recency, claim support, contradictions and copy (see batch review/findings.md).",
+   "1 claim(s) carry relation_to_entity=unknown as an honest gap: asok-c12.",
+   "3 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Verify completion status and quality of the BMA Asok Montri footpath renovation (announced 2025-03; contractor target 2025-07).",
+   "open issue: Obtain a current station-level ridership or platform-load figure for BTS Asok to replace 2016 editorial and 2026 single-event evidence.",
+   "open issue: Pin down Benjakitti Park's official opening hours and the location/position of its entrances relative to the 800 m boundary.",
+   "open issue: Confirm whether Srinakharinwirot University's campus edge falls inside the 800 m catchment (representative OSM point ~990 m).",
+   "open issue: Find signed-rent or transaction data for the catchment to complement asking-rent medians (app n=30/18).",
+   "open issue: Source evidence for safety-related perception (app safety=6) and gym/sports facilities (app gym_sports=10) — none collected this session.",
+   "open issue: Resident-perspective sources: Reddit threads on living in Asoke (noise, why live there) could not be fetched (HTTP 403); retry via a logged-in or alternative route.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. See research/bangkok/editorial/2026-11-08-independent-review.md."
+  ]
+ }
+}

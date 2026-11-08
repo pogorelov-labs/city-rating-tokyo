@@ -1,0 +1,901 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.ratchadamri",
+  "kind": "station_area",
+  "name_en": "Ratchadamri",
+  "name_th": "ราชดำริ",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around ratchadamri [bts_silom]; districts: pathum-wan. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.24,
+  "cohort_rank": 30,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 30/133, score 7.24."
+ },
+ "sources": [
+  {
+   "id": "src_11e7736e1c10",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ratchadamri_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ratchadamri_BTS_station",
+   "title": "Ratchadamri BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-08-24",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub-level; no ridership figures"
+   ]
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-09-01",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Park-station pairings in the article emphasize Sala Daeng/Si Lom/Lumphini, not Ratchadamri, though the park's west boundary is Ratchadamri Rd"
+   ]
+  },
+  {
+   "id": "src_f92ac4c6141c",
+   "canonical_url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "title": "Royal Bangkok Sports Club",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-02",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Land-value (~100bn baht) and entrance-fee figures are 'reportedly' claims"
+   ]
+  },
+  {
+   "id": "src_76f044a3f831",
+   "canonical_url": "https://en.wikipedia.org/wiki/Anantara_Siam_Bangkok_Hotel",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Anantara_Siam_Bangkok_Hotel",
+   "title": "Anantara Siam Bangkok Hotel",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-03-22",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "No renovation details on the page (2024-2026 renovation is snippet-level elsewhere)"
+   ]
+  },
+  {
+   "id": "src_4f56f5ecff20",
+   "canonical_url": "https://en.wikipedia.org/wiki/One_Bangkok",
+   "retrieved_url": "https://en.wikipedia.org/wiki/One_Bangkok",
+   "title": "One Bangkok",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-10-15",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Page gives the 18 Mar 2024 office opening, not the 25 Oct public celebration (The Standard does)"
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
+   "publisher": "OpenStreetMap contributors via Overpass API",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Straight-line distances computed by researcher; park polygon areas not returned",
+    "Lumphini Park opening hours (04:30-22:00) from OSM tags",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(POST query, bbox 13.726,100.524,13.754,100.558)'"
+   ]
+  },
+  {
+   "id": "src_6d7ad5e97ec4",
+   "canonical_url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "retrieved_url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "title": "One Bangkok เนรมิตค่ำคืนประวัติศาสตร์ (One Bangkok stages a historic night)",
+   "publisher": "THE STANDARD",
+   "publisher_family": "the_standard",
+   "author": "THE STANDARD TEAM",
+   "published_at": "2024-10-30",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "article labeled [PR NEWS]",
+   "limitations": [
+    "PR-labeled event coverage"
+   ]
+  },
+  {
+   "id": "src_b38dcba39aeb",
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-officially-opens-welcoming-the-world-to-bangkok",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-officially-opens-welcoming-the-world-to-bangkok",
+   "title": "One Bangkok Officially Opens (press release)",
+   "publisher": "One Bangkok (Frasers Property / TCC Assets)",
+   "publisher_family": "onebangkok_developer",
+   "author": null,
+   "published_at": "2024-10-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "developer PR",
+   "limitations": [
+    "Promotional"
+   ]
+  },
+  {
+   "id": "src_571a6b283ae6",
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "title": "Property for rent in Pathum Wan (FazWaz)",
+   "publisher": "FazWaz",
+   "publisher_family": "fazwaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": "live page 2026",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "brokerage portal; asking rents",
+   "limitations": [
+    "Asking not transacted"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "ratchadamri-c01",
+   "text_en": "BTS Ratchadamri (code S1, Silom line) opened 5 December 1999 at 13.7391917 N, 100.5394083 E - matching the app's unit center - on the luxury hotel-and-residential stretch of Ratchadamri Road; a skyway runs from the station concourse to the St Regis hotel, and the street level below includes the Anantara Siam hotel and Thai Red Cross facilities. The dispatch brief's '@13.7339-ish' coordinate sits ~600 m south at the Rama IV/One Bangkok corner and is contradicted by both batch.json and Wikipedia.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Ratchadamri station, Ratchadamri Road",
+    "relation_to_entity": "entire_unit",
+    "notes": "OSM node equals app center; brief-coordinate error flagged."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_11e7736e1c10",
+     "locator": "lead + General information sections",
+     "paraphrase": "S1, Silom line, opened 5 Dec 1999, coords 13.7391917,100.5394083, skyway to St Regis, RBSC racetrack and Lumphini Park in the lead."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass node 'Ratchadamri' (id 257066809)",
+     "paraphrase": "OSM node equals the app center."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c02",
+   "text_en": "The hotel strip is the unit's identity: Anantara Siam Bangkok Hotel at 155 Ratchadamri Road opposite the Royal Bangkok Sports Club (354 rooms, 8 restaurants) opened in 1978 as a Peninsula-site property, became Regent Bangkok, was named Four Seasons Bangkok in 2003 and rebranded Anantara Siam on 1 March 2015 under Minor Hotels - the station page lists it at street level beside the St Regis skyway.",
+   "kind": "factual_report",
+   "topics": [
+    "culture",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Anantara Siam Bangkok Hotel, 155 Ratchadamri Rd",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "2015-03-01 (rebrand)",
+    "observed_period": "1978-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_76f044a3f831",
+     "locator": "History + lead sections",
+     "paraphrase": "1978 Peninsula-era construction; Regent 1982; Four Seasons naming 2003; rebranded Anantara Siam 1 Mar 2015; 354 rooms; opposite RBSC."
+    },
+    {
+     "source_id": "src_11e7736e1c10",
+     "locator": "station layout / street level",
+     "paraphrase": "Anantara hotel at street level by the station."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Dispatch's implied 2024 rebrand was wrong - the 2024-2026 event is a renovation (snippet-level only)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchadamri-c03",
+   "text_en": "The Royal Bangkok Sports Club - founded 1901, 227 rai (36.3 ha, 90 acres) between Henri Dunant Road and Ratchadamri Road, membership capped at 12,500 with waiting lists up to a decade - borders the unit on its northwest side. Horse racing every other Sunday from about noon to 18:00 is the club's only public access; the land is reportedly worth around 100 billion baht.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "identity",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Royal Bangkok Sports Club, Henri Dunant/Ratchadamri",
+    "relation_to_entity": "partial",
+    "notes": "Club center ~300-700 m from the station; the siam/ratchadamri Voronoi seam may clip its east edge - polygon check decides."
+   },
+   "temporal_scope": {
+    "event_date": "1901 (founding)",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f92ac4c6141c",
+     "locator": "History + Location and facilities + Membership sections",
+     "paraphrase": "Founded 1901; 227 rai/36.3 ha site; 12,500-member cap; racing alternate Sundays noon-18:00 only public access; land reportedly ~100bn baht."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Land value and fee figures are 'reportedly' claims"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchadamri-c04",
+   "text_en": "Lumphini Park (57.6 ha, created 1925 from King Rama VI's donated land, bounded by Ratchadamri Road on its west, Rama IV on its south, Witthayu on its east; OSM opening hours 04:30-22:00) is the unit's public green anchor: the park's western edge lies a few hundred meters from the station even though the polygon centroid sits 1,028 m away. The app's 8.0 ha park figure is consistent with a clipped western/northern portion of the park - a partial-membership reading the coordinator's polygon should confirm.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Lumphini Park (west portion)",
+    "relation_to_entity": "partial",
+    "notes": "8.0 ha of 57.6 ha total would be ~14% of the park - geometrically plausible for the west edge inside the catchment."
+   },
+   "temporal_scope": {
+    "event_date": "1925 (created)",
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "lead + History sections",
+     "paraphrase": "360 rai/57.6 ha; created 1925; Ratchadamri Rd west boundary, Rama IV south, Witthayu east."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass way 23483299 tags + centroid distance",
+     "paraphrase": "Park opening_hours 04:30-22:00; centroid 1,028 m from app center, west edge much closer."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "The 8.0 ha = Lumphini-clip equation is inference; polygon verification pending",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c05",
+   "text_en": "Counter-evidence to green=10 as a lived amenity: the unit's two green masses are only partly 'public' - the RBSC's 36.3 ha admit the public only on alternate-Sunday race days, and Lumphini's verified in-unit share (hours 04:30-22:00) is a fraction of its 57.6 ha. The score is defensible as visible green and proximity, but as freely usable green the unit offers the Lumphini edge and little else (app food counts - 160 food, 25 cafes, 17 nightlife - mark it as a hotel-residential quarter, not a park-adjacent cafe district).",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "RBSC + Lumphini west edge",
+    "relation_to_entity": "partial",
+    "notes": "The strongest internal tension in this unit's scorecard."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f92ac4c6141c",
+     "locator": "Membership section",
+     "paraphrase": "Racing is the only public access point; selective membership."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Lumphini OSM tags",
+     "paraphrase": "04:30-22:00 opening hours; fenced (barrier=fence) per OSM."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Inference tying score mechanism to access policy; app does not expose its green-access weighting",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c06",
+   "text_en": "One Bangkok - the US$3.9 billion Frasers Property/TCC Assets development on a 16.7 ha site at the Witthayu-intersection corner (Rama IV side, khwaeng Lumphini) overlooking Lumphini Park - opened its first office building on 18 March 2024 and celebrated its public opening on 25 October 2024, with The Ritz-Carlton Bangkok (Nov 2024), Andaz One Bangkok (2025) and Fraser Suites (2026); 8 ha of plazas and landscaped green and an underground link to MRT Lumphini exit 1B. Its built edge lies roughly 790-960 m from this unit's center - mostly outside the 800 m catchment, with a possible graze of the site's northwest tip; membership unknown, leaning outside.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "One Bangkok, Rama IV/Witthayu corner",
+    "relation_to_entity": "outside",
+    "notes": "Relation 'outside' with a flagged possible partial graze at the NW tip; coordinator polygon check."
+   },
+   "temporal_scope": {
+    "event_date": "2024-03-18; 2024-10-25",
+    "observed_period": "2024-2031 build-out",
+    "recheck_by": "2027",
+    "notes": "Signature Tower (436 m) superstructure not begun as of 2024 per Wikipedia - more change pending."
+   },
+   "evidence": [
+    {
+     "source_id": "src_4f56f5ecff20",
+     "locator": "lead + infobox + Development zones sections",
+     "paraphrase": "$3.9bn, 16.7 ha, Frasers/TCC, Witthayu-intersection corner, first office opened 18 Mar 2024, 8 ha green, MRT Lumphini 1B link, completion 2030-31."
+    },
+    {
+     "source_id": "src_6d7ad5e97ec4",
+     "locator": "article body (Thai)",
+     "paraphrase": "Opening night 25 Oct 2024 with Ritz-Carlton Nov 2024, Andaz 2025, Fraser Suites 2026."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass way 1328095238 'One Bangkok Park' centroid + researcher distance check",
+     "paraphrase": "Site elements sit ~790-960 m from the app center; One Bangkok Park centroid 1,619 m."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Straight-line edge distances are the researcher's computation from OSM geometry, not an app polygon result"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c07",
+   "text_en": "The unit's food economy is thin by design: app counts of 160 food, 25 cafes and 17 nightlife run at roughly a quarter to a fifth of Siam's (676/98/36) because the street is lined with hotels, embassies-adjacent institutions and the sports club rather than malls with food courts; everyday food skews to hotel dining and convenience stores.",
+   "kind": "researcher_inference",
+   "topics": [
+    "daily_essentials",
+    "food"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchadamri Road strip",
+    "relation_to_entity": "entire_unit",
+    "notes": "DE=9 and food=9 scores sit on the neighboring Siam/Chit Lom spillover as much as on in-unit stock."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "app snapshot 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_11e7736e1c10",
+     "locator": "station-page surroundings list",
+     "paraphrase": "Street-level listings are hotels and institutions, not retail."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Mechanism is inference; no in-unit food-business census independently performed",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchadamri-c08",
+   "text_en": "The rent blend (38,000/85,000 THB, Pathum Wan district_blend as of 2026-09) understates the strip it serves: FazWaz's Pathum Wan averages run to 99,600 for 2-beds (n=1,114) and 176,000 for 3-beds, with the Lumphini-side listing range spanning 7,990 to 2,490,000/month; a Ratchadamri penthouse appears in Thai listings at 500,000/month (snippet-level). The blend reads as a district-wide average applied to a street whose specific buildings trade well above it.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Pathum Wan district / Ratchadamri strip",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "app 2026-09 blend vs live FazWaz 2026-11",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_571a6b283ae6",
+     "locator": "by-bedroom average blocks + Lumphini range",
+     "paraphrase": "2BR avg 99,600; 3BR avg 176,000; Lumphini range 7,990-2,490,000."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Snippet-level penthouse datum; asking rents",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri); Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchadamri-c09",
+   "text_en": "Temple count collapses across the Voronoi seam: the app counts 14 temples in the siam unit but only 1 here, even though both sit in Pathum Wan - the historic temples (Wat Pathum Wanaram and its neighbors) cluster around the Rama I/Siam blocks, while the Ratchadamri strip was built up as club land, hotel and residential plots.",
+   "kind": "researcher_inference",
+   "topics": [
+    "culture",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Pathum Wan khwaengs",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "app snapshot 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f92ac4c6141c",
+     "locator": "Location and facilities section",
+     "paraphrase": "The RBSC block occupies most of the strip's west side."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No independent temple census in this pass",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchadamri-c10",
+   "text_en": "Walkability is skyway-first at the station (concourse bridge to St Regis) and park-edge-oriented to the south: Lumphini's Ratchadamri-side entrances put the park's paths within the unit, while the Ratchaprasong skywalk network and the BMA's Rama I pedestrian-corridor prototype sit one block north at the seam with chit-lom/siam. The Ratchadamri Road footway itself passes hoarding walls (One Bangkok construction faces) along parts of the route.",
+   "kind": "reported_perception",
+   "topics": [
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchadamri Rd, Ratchaprasong seam, Lumphini edge",
+    "relation_to_entity": "entire_unit",
+    "notes": "BMA prototype and hoarding observations are snippet/reported-level, flagged accordingly."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 construction period",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_11e7736e1c10",
+     "locator": "lead paragraph",
+     "paraphrase": "Skyway from station concourse to St Regis."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Lumphini OSM geometry relative to station",
+     "paraphrase": "Park west edge within a few hundred meters of the station."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No footway-width or crossing-audit source; hoarding observation is reported-level",
+    "app-data anchor (not a web source): Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c11",
+   "text_en": "Rhythm: the loudest recurring event is race day - RBSC racing every other Sunday from about noon to 18:00 pulls crowds to the Henri Dunant/Ratchadamri corner; mornings belong to Lumphini's 04:30 gate; weekdays run on hotel and office schedules; nights are quieter than Siam's (crowd=3 in the app vs 1 there), with the caveat that the quieter-night reading is a rating-anchored inference, not a sourced measurement.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowd",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "RBSC, Lumphini edge, Ratchadamri strip",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "recurring 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f92ac4c6141c",
+     "locator": "racing schedule in Location and facilities",
+     "paraphrase": "Races alternate Sundays ~noon-18:00."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Lumphini OSM opening_hours",
+     "paraphrase": "04:30-22:00."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Quieter-night characterization is inference",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchadamri-c12",
+   "text_en": "Recent changes 2024-2026: One Bangkok's phased opening (first office 18 Mar 2024; public celebration 25 Oct 2024; Ritz-Carlton Nov 2024; Andaz 2025; Fraser Suites expected 2026) has shifted the district's luxury center of gravity to the unit's southern edge; the Anantara Siam hotel on the station's doorstep underwent a major renovation reported in 2025-2026 travel press at roughly US$50-70 million (snippet-level); the 436 m Signature Tower had not begun superstructure works as of 2024, so the skyline change is still pending.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "One Bangkok; Anantara Siam; Signature Tower site",
+    "relation_to_entity": "partial",
+    "notes": "One Bangkok outside/edge; Anantara inside; tower site south beyond the catchment."
+   },
+   "temporal_scope": {
+    "event_date": "2024-03-18; 2024-10-25",
+    "observed_period": "2024-2026",
+    "recheck_by": "2027",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4f56f5ecff20",
+     "locator": "Development zones section",
+     "paraphrase": "Signature Tower superstructure not begun as of 2024; completion est. 2030-31."
+    },
+    {
+     "source_id": "src_6d7ad5e97ec4",
+     "locator": "article body (Thai)",
+     "paraphrase": "25 Oct 2024 opening night; hotel rollout."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Renovation cost and scope are snippet-level; not corroborated at body level",
+    "app-data anchor (not a web source): Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c01",
+    "ratchadamri-c02"
+   ],
+   "notes": "Identity: S1 on the luxury hotel-residential strip between Ratchaprasong and Lumphini; dispatch-brief coordinate error flagged (true station site is 13.73947,100.53945)."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c02",
+    "ratchadamri-c07",
+    "ratchadamri-c11"
+   ],
+   "notes": "Everyday experience: hotel lobbies and quiet streets, park-edge recreation, race-day Sundays; food is the thin layer."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c03",
+    "ratchadamri-c04",
+    "ratchadamri-c08"
+   ],
+   "notes": "Mechanisms: green=10 rests on RBSC proximity + Lumphini edge; gym=10 on the club/facility context; rent=1 on the strip's luxury stock above the district blend."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c05",
+    "ratchadamri-c07"
+   ],
+   "notes": "Counter-evidence: much of the 'green' is members-only (RBSC) or hour-limited; food/DE scores lean on neighbor spillover."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c11",
+    "ratchadamri-c03"
+   ],
+   "notes": "Rhythm: alternate-Sunday races, 04:30 park gate, hotel/office weekdays, quiet nights."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c10"
+   ],
+   "notes": "Walkability: St Regis skyway, park-edge entrances, Ratchaprasong seam one block north; construction hoardings on parts of the footway. No radius-to-time conversions."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c07",
+    "ratchadamri-c04"
+   ],
+   "notes": "Daily life: hotel dining and convenience retail in-unit; fuller daily-needs runs one stop or one skywalk away."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c08"
+   ],
+   "notes": "The 38,000/85,000 blend is below the strip's actual stock (2BR district average 99,600; penthouse 500,000 snippet) - rent=1 is cohort-relative; the blend likely understates in-unit asks."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c04",
+    "ratchadamri-c05",
+    "ratchadamri-c03"
+   ],
+   "notes": "Green=10 with 8.0 ha: Lumphini west-edge clip is the best explanation (partial); RBSC 36.3 ha is members-only; polygon check pending."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c11",
+    "ratchadamri-c05",
+    "ratchadamri-c08"
+   ],
+   "notes": "Fit: quiet-luxury renters, park runners, race-day regulars; poor fit for cheap-eat hunters and nightlife-first residents."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c12",
+    "ratchadamri-c06"
+   ],
+   "notes": "2024-2026: One Bangkok phased opening at the southern edge; Anantara renovation; Signature Tower still pending."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "ratchadamri-c05",
+    "ratchadamri-c06",
+    "ratchadamri-c09"
+   ],
+   "notes": "Outside-the-score: private-green access weighting, One Bangkok spillover effects on rents/food, temple-count seam effects - none scored, all flagged."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "One stop south of Siam, Ratchadamri trades mall crowds for the city's most private address strip: a station with a skyway into the St Regis, the 36.3 ha members-only racecourse across the road, and Lumphini Park's west gate at the bottom of the block - with One Bangkok's $3.9 billion district now open at its southern edge.",
+   "claim_ids": [
+    "ratchadamri-c01",
+    "ratchadamri-c03",
+    "ratchadamri-c04",
+    "ratchadamri-c06"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Ratchadamri is the quiet half of Pathum Wan's headline scores: the same 9-10s for transport, gym and green as its neighbors, but with a fifth of their food stock - because this is club land, hotel land and condo land, not mall land. Its two green masses tell the unit's real story: a racecourse you can enter a dozen Sundays a year, and a park that starts a few hundred meters from the platform.",
+   "claim_ids": [
+    "ratchadamri-c01",
+    "ratchadamri-c03",
+    "ratchadamri-c04",
+    "ratchadamri-c07"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Green adjacency with genuine scale: Lumphini Park's west edge (57.6 ha total, 04:30-22:00) opens a few hundred meters from the station, and the RBSC's 36.3 ha of turf define the streetscape even when its gates are closed.",
+    "claim_ids": [
+     "ratchadamri-c04",
+     "ratchadamri-c03"
+    ]
+   },
+   {
+    "text_en": "Quiet luxury infrastructure: S1 station with a concourse skyway to the St Regis, the 354-room Anantara Siam at street level, and One Bangkok's phased opening pushing the district's luxury center to the unit's edge.",
+    "claim_ids": [
+     "ratchadamri-c01",
+     "ratchadamri-c02",
+     "ratchadamri-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The green=10 headline overstates usable green: the RBSC admits the public only on alternate-Sunday race days, and Lumphini's verified in-unit share is a clipped fraction - the park you can actually use is smaller than the score implies.",
+    "claim_ids": [
+     "ratchadamri-c05",
+     "ratchadamri-c04"
+    ]
+   },
+   {
+    "text_en": "Food and nightlife run at a quarter to a fifth of Siam's density (160/25/17 vs 676/98/36): everyday eating means hotel prices or a walk to the seam with Ratchaprasong.",
+    "claim_ids": [
+     "ratchadamri-c07"
+    ]
+   },
+   {
+    "text_en": "The 38,000/85,000 rent blend understates the strip: district 2-bed asks average 99,600 and specific Ratchadamri buildings list far higher - the number is a district average, not this street's market.",
+    "claim_ids": [
+     "ratchadamri-c08"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Dawn starts at Lumphini's 04:30 gate with the jogging crowd; weekdays hum quietly on hotel and office schedules; alternate Sundays bring race-day crowds to the Henri Dunant corner; after dark the unit reverts to residential-hotel quiet, one skywalk away from Ratchaprasong's lights.",
+    "claim_ids": [
+     "ratchadamri-c11",
+     "ratchadamri-c03",
+     "ratchadamri-c04"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Three bands: the Ratchaprasong seam at the north (skywalks, mall spillover, CentralWorld's edge), the hotel-club middle (St Regis, Anantara, RBSC fencing), and the Rama IV approach at the south where One Bangkok's hoardings and new plazas are actively rewriting the streetscape.",
+    "claim_ids": [
+     "ratchadamri-c01",
+     "ratchadamri-c03",
+     "ratchadamri-c06"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fit for quiet-luxury renters, runners and race-day regulars who want park access and hotel services without Siam's crowds - and who are comfortable with the district-blend rent number understating their actual building.",
+    "claim_ids": [
+     "ratchadamri-c11",
+     "ratchadamri-c04",
+     "ratchadamri-c08"
+    ]
+   },
+   {
+    "text_en": "Poor fit for budget diners and nightlife-first residents: the in-unit food layer is thin, the best green is partly private, and the quiet is the product being sold.",
+    "claim_ids": [
+     "ratchadamri-c07",
+     "ratchadamri-c05"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "8.0 ha park figure assumed to be the Lumphini west-edge clip - polygon verification pending (ratchadamri-c04).",
+   "One Bangkok membership: site edge ~790-960 m from the unit center, mostly outside with a possible NW-tip graze (ratchadamri-c06).",
+   "Anantara Siam 2024-2026 renovation cost/scope is snippet-level only (ratchadamri-c12).",
+   "Quieter-nights characterization is inference anchored on crowd=3, not a measurement (ratchadamri-c11).",
+   "Dispatch brief's '@13.7339' coordinate contradicts batch.json/Wikipedia (13.73947); app data internally consistent."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "2 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: park_ha=8.0 source polygon unconfirmed (Lumphini clip assumed); RBSC contribution to any green metric needs the app's policy decision - members-only land is not public amenity (ratchadamri-c04/c05).",
+   "open issue: One Bangkok unit membership (outside-leaning, possible partial) requires the app polygon check (ratchadamri-c06).",
+   "open issue: No unit-level footway or crossing audit source; BMA Rama-I prototype only snippet-level (ratchadamri-c10).",
+   "open issue: Bangkok Post, Reddit, TripAdvisor accesses failed (paywall/403) - no bypass attempted.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'brief' only in uncertainties; P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md."
+  ]
+ }
+}

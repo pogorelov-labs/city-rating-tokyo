@@ -1,0 +1,883 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.phaya-thai",
+  "kind": "station_area",
+  "name_en": "Phaya Thai",
+  "name_th": "พญาไท",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around phaya-thai [bts_sukhumvit/arl]; districts: ratchathewi. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.46,
+  "cohort_rank": 20,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 20/133, score 7.46."
+ },
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Queries: Phaya Thai stations (wide radius + name), Suan Pakkad, Phaya Thai Palace, subdistrict relations",
+   "publisher": "OpenStreetMap via Overpass API",
+   "publisher_family": "OpenStreetMap via Overpass API",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T21:22:36Z",
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_16cadddb23a1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phaya_Thai_station",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Phaya_Thai_station",
+   "title": "Phaya Thai station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_e9c44e3a4de6",
+   "canonical_url": "https://en.wikipedia.org/wiki/Suan_Pakkad_Palace",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Suan_Pakkad_Palace",
+   "title": "Suan Pakkad Palace",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_1bafc1e4c0dc",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phaya_Thai_Palace",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Phaya_Thai_Palace",
+   "title": "Phaya Thai Palace",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_0ffc7b2e1322",
+   "canonical_url": "https://en.wikipedia.org/wiki/Airport_Rail_Link_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=Airport_Rail_Link_(Bangkok)",
+   "title": "Airport Rail Link (Bangkok)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": []
+  },
+  {
+   "id": "src_8a926450d73c",
+   "canonical_url": "https://dooasset.com/en/area/bts-phaya-thai/",
+   "retrieved_url": "https://dooasset.com/en/area/bts-phaya-thai/",
+   "title": "BTS Phaya Thai / ARL Phaya Thai: Area Guide",
+   "publisher": "DooAsset",
+   "publisher_family": "real_estate_portal",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-10-29 (data date)",
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "property listing portal",
+   "limitations": [
+    "Exa highlights only; listing-based medians within 800 m; flagged corroboration"
+   ]
+  },
+  {
+   "id": "src_f86911c29b7f",
+   "canonical_url": "https://www.bkkoracle.com/area/phaya-thai",
+   "retrieved_url": "https://www.bkkoracle.com/area/phaya-thai",
+   "title": "Phaya Thai Bangkok: Area Guide & Rent 2026",
+   "publisher": "BKK Oracle",
+   "publisher_family": "real_estate_content",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "rental content",
+   "limitations": [
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Phaya Thai' + 'boat noodles')."
+   ]
+  },
+  {
+   "id": "src_90602a47b3f9",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/phaya-thai/rentals/condo/",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/phaya-thai/rentals/condo/",
+   "title": "Condos for Rent in Phaya Thai",
+   "publisher": "PropertyScout",
+   "publisher_family": "real_estate_portal",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "property portal",
+   "limitations": [
+    "Exa highlights only; district-wide averages, flagged corroboration"
+   ]
+  },
+  {
+   "id": "src_567f93e8f711",
+   "canonical_url": "https://theactive.thaipbs.or.th/news/urban-housing-20240929",
+   "retrieved_url": "https://theactive.thaipbs.or.th/news/urban-housing-20240929",
+   "title": "\"ชุมชน ชมฟ.ริมบึงมักกะสัน\" ความสำเร็จอีกขั้น แก้ไขปัญหาที่อยู่อาศัยคนจนเมือง",
+   "publisher": "The Active (Thai PBS)",
+   "publisher_family": "thai_public_broadcast",
+   "author": "เมธาวี ทวีผล",
+   "published_at": "2024-09-29",
+   "updated_at": "2024-10-01",
+   "retrieved_at": "2026-11-08T00:00:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "",
+   "limitations": []
+  }
+ ],
+ "claims": [
+  {
+   "id": "phaya-thai-st-c01",
+   "text_en": "The unit is a three-way rail knot with a name paradox: BTS Phaya Thai (N2, opened 5 December 1999 with the Sukhumvit Line), ARL Phaya Thai (terminus of the City Line, opened 23 August 2010 'along with a skywalk connecting it to the BTS station'), and an SRT Eastern Line halt dating to 24 January 1907 - all located in Ratchathewi District, not Phaya Thai district. OSM puts the BTS node at 13.75696, 100.53382 and the ARL node at 13.75671, 100.53491 - ~121 m apart.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange (Ratchathewi district)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Wikipedia lead names Ratchathewi District explicitly"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "stations 1907 / 1999 / 2010",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "Lead + History (SRT / BTS / Airport Rail Link)",
+     "paraphrase": "ARL+BTS+Eastern Line halt in Ratchathewi District; halt 24 Jan 1907; BTS 5 Dec 1999; ARL 23 Aug 2010 with skywalk"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM nodes 5388610344 / 6711028526 + computed haversine",
+     "paraphrase": "~121 m between BTS and ARL nodes"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c02",
+   "text_en": "Anchor offset: the app's '@13.7600-ish' latitude sits ~340 m north of the OSM BTS node (13.75696). The interchange itself is unaffected, but catchment-edge claims toward Victory Monument (which is ~1.4 km from the BTS node in any case) or northward should be checked against the app polygon.",
+   "kind": "estimate",
+   "topics": [
+    "identity",
+    "uncertainty"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": "Anchor longitude unknown"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": "coordinator",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM node 5388610344 vs brief anchor",
+     "paraphrase": "Latitude difference ~0.0030 deg ~ 340 m"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-st-c03",
+   "text_en": "Transport 10's mechanism: this is the only BTS-ARL meeting point - the ARL City Line's northern terminus feeding the Sukhumvit Line one stop from Siam. City Line fares are 15-45 THB, the airport express has been suspended since September 2014 (all trains stop at all eight stations), and the line is slated to extend from Phaya Thai toward Krung Thep Aphiwat and Don Mueang while also carrying the future Don Mueang-Suvarnabhumi-U-Tapao high-speed rail. Current headways of roughly 10 minutes peak (12-15 off-peak) are snippet-level only.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2010-2026; express suspended Sep 2014",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "Lead",
+     "paraphrase": "Terminus of the ARL City Line; meets Sukhumvit Line"
+    },
+    {
+     "source_id": "src_0ffc7b2e1322",
+     "locator": "Lead + Fares + Rolling stock",
+     "paraphrase": "15-45 THB; express suspended since Sep 2014; future extension Phaya Thai to Don Mueang; HSR corridor"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "WebSearch snippet summary",
+     "paraphrase": "~10 min peak headway (snippet-level, flagged)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Headway figure not body-read; no ARL timetable source fetched"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c04",
+   "text_en": "Suan Pakkad Palace Museum is inside the unit: Wikipedia says it is 'located nearby to the east of the station', and OSM places the museum (way 1410385850, open 09:00-16:00) ~364 m east of the BTS node (~307 m by its node). The 1952-opened museum of five traditional Thai houses holds 4,000-year-old Ban Chiang pottery and the 450-year-old Lacquer Pavilion - so the batch-2 '811 m from st.ratchathewi' figure belongs to the district unit, not this station unit.",
+   "kind": "estimate",
+   "topics": [
+    "daily_life",
+    "green",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suan Pakkad Palace Museum (Si Ayutthaya Rd)",
+    "relation_to_entity": "inside",
+    "notes": "Museum grounds, not public parkland"
+   },
+   "temporal_scope": {
+    "event_date": "1952",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "Lead",
+     "paraphrase": "Suan Pakkad Palace ... located nearby to the east of the station"
+    },
+    {
+     "source_id": "src_e9c44e3a4de6",
+     "locator": "Lead",
+     "paraphrase": "Museum opened 1952; Ban Chiang pottery; Lacquer Pavilion over 450 years old; group of traditional houses"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM way 1410385850 + computed haversine",
+     "paraphrase": "~364 m east of BTS node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c05",
+   "text_en": "Phaya Thai Palace is outside the unit: it stands on the banks of Khlong Samsen on Rajavithi Road in Ratchathewi District (built 1909 under Rama V, later the Phramongkutklao Hospital site), and computes to ~1,322 m from the BTS node - verifying the brief's '~1.3 km' and excluding it from the 800 m catchment.",
+   "kind": "estimate",
+   "topics": [
+    "green",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Phaya Thai Palace (Rajavithi Rd)",
+    "relation_to_entity": "outside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "1909",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_1bafc1e4c0dc",
+     "locator": "Lead + History",
+     "paraphrase": "On the banks of Khlong Samsen on Rajavithee Road, Ratchathewi District; built from 1909; became Phramongkutklao Hospital site"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "OSM way 863463383 + computed haversine",
+     "paraphrase": "~1,322 m from BTS node"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c06",
+   "text_en": "Everyday character is 'more practical than picturesque' (rental guide): weekday flows of interchange commuters, Ramathibodi-bound staff and patients, and office workers along Phaya Thai and Si Ayutthaya roads; plentiful street food; the boat-noodle stalls around Victory Monument described as a local institution; low-key evenings and weekends when residents head to Siam or Ari.",
+   "kind": "reported_perception",
+   "topics": [
+    "everyday",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Phaya Thai / Ratchathewi corridor",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026 guide",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f86911c29b7f",
+     "locator": "Living in Phaya Thai",
+     "paraphrase": "Practical not picturesque; commuters and hospital staff; boat noodles at Victory Monument an institution; low-key evenings (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Single highlight-level source for the vibe description"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-st-c07",
+   "text_en": "Safety 5 could not be tested against evidence: no unit-level crime statistics or location-specific safety reporting surfaced in this pass. The only 'neglect' finding in sources concerns the SRT Eastern Line halt - 'criticised for neglect and poor maintenance by the SRT' as tracks hand over to the high-speed rail project - which is infrastructure condition, not personal safety.",
+   "kind": "researcher_inference",
+   "topics": [
+    "safety",
+    "uncertainty"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": "Gap kept as a gap"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "History (SRT)",
+     "paraphrase": "Halt criticised for neglect and poor maintenance; tracks handed over for the Don Mueang-Suvarnabhumi-U-Tapao high-speed railway"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No safety statistics found; rating unanchored in this pass"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-st-c08",
+   "text_en": "Affordability vs stated figures (25,000/43,500, station_override 2026-10-10): an 800 m catchment median from a listings portal (data dated 29 Oct 2026) shows 1-BR median 23,450 THB (middle half 20,000-26,500, typical 34.5 sqm) and 2-BR median 41,500; a portal district average gives 1-BR 23,871 and 2-BR 39,160; a guide band puts 1-BRs at 16,000-28,000. Both app figures align with the 800 m medians (25,000 near the 1-BR median; 43,500 at the 2-BR median).",
+   "kind": "estimate",
+   "topics": [
+    "rent"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings as of 2026-10-29; guides 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_8a926450d73c",
+     "locator": "How much is a 1-bedroom condo within 800 m + bedroom table",
+     "paraphrase": "1-BR median 23,450 (22 units); 2-BR median 41,500; cheapest 18,000 (snippet-level)"
+    },
+    {
+     "source_id": "src_90602a47b3f9",
+     "locator": "Average rent FAQ",
+     "paraphrase": "1-BR avg 23,871; 2-BR avg 39,160 (district-wide; snippet-level)"
+    },
+    {
+     "source_id": "src_f86911c29b7f",
+     "locator": "Renting in Phaya Thai",
+     "paraphrase": "1-BR 16,000-28,000; 2-BR 30,000-55,000 (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "All rent sources exa-highlight-level; portal medians are asking prices"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c09",
+   "text_en": "The app's 1.1 ha park could not be matched to a named park: OSM within 900 m of the interchange shows only small unnamed garden ways (Suan Pakkad's museum grounds among them) and no public park of ~1 ha; the nearest major green (Santiphap Park) computes to ~1.45 km. Identity of the 1.1 ha polygon is an open issue for the coordinator.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "uncertainty"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange catchment",
+    "relation_to_entity": "unknown",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": "coordinator polygon audit",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass garden/park results around 13.7600,100.5605 and computed haversine to Santiphap estimate",
+     "paraphrase": "No named >=1 ha park within 900 m; Santiphap ~1.45 km"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "0.9-1.2 km query radii; a polygon just outside the queried circle cannot be fully excluded"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-st-c10",
+   "text_en": "Crowd 2 is consistent with the catchment being an interchange-plus-office catchment rather than a residential density peak: flows concentrate at peak hours in the paid areas (commuters, airport passengers), while the surrounding blocks mix older apartments, hospital compounds and the SRT/rail corridor; no pedestrian-count data was found, so the rating stays an inference.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_f86911c29b7f",
+     "locator": "At a glance / Living",
+     "paraphrase": "Transit hub and airport link as the defining frame; weekends calmer (snippet-level)"
+    },
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "Lead",
+     "paraphrase": "Surrounded by government buildings, office towers and condominiums"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No counts; single perception source"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c11",
+   "text_en": "2024-2026 changes around the unit are rail-driven: the SRT halt's tracks are being handed to the Don Mueang-Suvarnabhumi-U-Tapao high-speed project (with the ARL extension Phaya Thai to Don Mueang part of the same programme), and the associated land clearance has been displacing railway-corridor communities along the Rama VI to Phaya Thai stretch - five communities totalling 644 households, with a first-phase 169-household relocation housing project opening its sign at Bueng Makkasan beside Santiphap Park on 29 September 2024. Newer condo stock near the station includes The Extro Phayathai-Rangnam (completed 2025, per listings portal).",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Rama VI - Phaya Thai railway corridor / Bueng Makkasan",
+    "relation_to_entity": "partial",
+    "notes": "Corridor communities partly graze the unit's west edge; relocation site is ~1.4 km+ away"
+   },
+   "temporal_scope": {
+    "event_date": "2024-09-29",
+    "observed_period": "2022-2026 clearance and relocation",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "History (SRT)",
+     "paraphrase": "Tracks handed over for construction of the high-speed railway"
+    },
+    {
+     "source_id": "src_567f93e8f711",
+     "locator": "Programme paragraphs",
+     "paraphrase": "644 households across 5 communities (Rama VI to Phaya Thai corridor); 3-airport HSR uses the ARL corridor; 169-household first phase at Bueng Makkasan signed 29 Sep 2024"
+    },
+    {
+     "source_id": "src_8a926450d73c",
+     "locator": "Projects list",
+     "paraphrase": "The Extro Phayathai-Rangnam completed 2025 (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Household figures are programme-level, not unit-specific; corridor overlap with the app polygon unknown"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-st-c12",
+   "text_en": "Walkability is interchange-first: BTS and ARL platforms are ~121 m apart and linked by the 2010 skywalk, with buses at the adjacent stops and Victory Monument's bus hub one BTS stop north; no sidewalk-width or crossing data was found for the surrounding Phaya Thai/Si Ayutthaya blocks, and no radius-to-time conversions are used here.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phaya Thai interchange",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "2010-08-23",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "History (Airport Rail Link)",
+     "paraphrase": "ARL opened 23 Aug 2010 along with a skywalk connecting it to the BTS station"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Computed node separation",
+     "paraphrase": "~121 m BTS-ARL"
+    },
+    {
+     "source_id": "src_f86911c29b7f",
+     "locator": "Getting around",
+     "paraphrase": "ARL station about 100 m from BTS; Ratchathewi ~600 m; Victory Monument ~750 m (snippet-level distances)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No street-level pedestrian-infrastructure data found"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c01",
+    "phaya-thai-st-c02"
+   ],
+   "notes": "BTS (1999) + ARL terminus (2010) + SRT Eastern Line halt (1907), ~121 m apart, in Ratchathewi district despite the Phaya Thai name; anchor ~340 m north of the station."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c06",
+    "phaya-thai-st-c10"
+   ],
+   "notes": "Commuter-junction practicality: interchange flows, hospital and office traffic, street food, quiet evenings."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c03",
+    "phaya-thai-st-c04",
+    "phaya-thai-st-c08"
+   ],
+   "notes": "Transport 10 = unique BTS-ARL interchange + airport line; DE 9 = dense everyday services; rent 5 = mid-band medians matching the app figures."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c07"
+   ],
+   "notes": "The safety-5 'test' found no evidence either way; the only documented criticism is of the SRT halt's physical condition."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c06",
+    "phaya-thai-st-c10"
+   ],
+   "notes": "Peak-hour commuter waves; calmer weekends; low-key evenings."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c12"
+   ],
+   "notes": "Skywalk-linked interchange ~121 m platform-to-platform; bus hub one stop north; no sidewalk data found."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c04",
+    "phaya-thai-st-c06"
+   ],
+   "notes": "Daily-life anchors: street food, Victory Monument institutions one stop north, hospitals and offices along the corridor; Suan Pakkad museum ~364 m east."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c08"
+   ],
+   "notes": "App figures (25,000/43,500) match the 800 m 1-BR/2-BR medians (23,450/41,500) closely - one of the best-verified rent sets in this batch, though via flagged portal sources."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c09"
+   ],
+   "notes": "1.1 ha park unidentified in OSM; Suan Pakkad's gardens are museum grounds; nearest public park ~1.45 km."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c03",
+    "phaya-thai-st-c08",
+    "phaya-thai-st-c06"
+   ],
+   "notes": "Strong fit: frequent flyers, BTS commuters, value-seekers; poor fit: those wanting leafy quiet or destination nightlife."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c11"
+   ],
+   "notes": "Rail-land clearance and the 2024 Bueng Makkasan relocation phase reshape the railway corridor; The Extro Phayathai-Rangnam (2025) adds stock."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-st-c07",
+    "phaya-thai-st-c09",
+    "phaya-thai-st-c02"
+   ],
+   "notes": "Outside the score: no safety data, unidentified park polygon, anchor offset; the name paradox itself (Ratchathewi district) is worth stating on the card."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Bangkok's BTS-ARL hinge: the Sukhumvit Line meets the airport rail ~120 m platform-to-platform in Ratchathewi district (yes, Phaya Thai station is not in Phaya Thai district), with Suan Pakkad Palace 350 m east and a 1907 SRT halt being rebuilt around a high-speed future.",
+   "claim_ids": [
+    "phaya-thai-st-c01",
+    "phaya-thai-st-c04",
+    "phaya-thai-st-c11"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Phaya Thai is the city's airport hinge: the ARL City Line terminates here against the BTS Sukhumvit Line (platforms ~121 m apart, skywalk since 2010), one stop from Siam and ~half an hour from Suvarnabhumi. The unit's identity is transport first - the station paradoxically sits in Ratchathewi district - with a practical street life of hospital and office traffic, plentiful food, Suan Pakkad Palace Museum ~350-400 m east inside the unit, and the 1909 Phaya Thai Palace ~1.3 km north, outside the catchment. Rents (25,000/43,500) match the catchment's 1-BR/2-BR medians well. What the score cannot show: no verifiable safety data behind the 5, an unidentified 1.1 ha park polygon, and a railway corridor being progressively cleared for the three-airport high-speed line.",
+   "claim_ids": [
+    "phaya-thai-st-c01",
+    "phaya-thai-st-c03",
+    "phaya-thai-st-c04",
+    "phaya-thai-st-c05",
+    "phaya-thai-st-c08",
+    "phaya-thai-st-c07",
+    "phaya-thai-st-c09",
+    "phaya-thai-st-c11"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "The only BTS-ARL interchange in the city core: one-stop Siam access plus a direct airport line, with 800 m catchment rents matching the app's stated figures.",
+    "claim_ids": [
+     "phaya-thai-st-c03",
+     "phaya-thai-st-c08"
+    ]
+   },
+   {
+    "text_en": "A real heritage-green anchor inside the unit: Suan Pakkad Palace Museum (~350-400 m) with its five traditional houses and 450-year-old Lacquer Pavilion.",
+    "claim_ids": [
+     "phaya-thai-st-c04"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Safety 5 has no evidence base either way in this pass - it stays an unanchored dataset value rather than a documented condition.",
+    "claim_ids": [
+     "phaya-thai-st-c07"
+    ]
+   },
+   {
+    "text_en": "The green story is thinner than the 8 suggests: no named public park inside the catchment was found, and the 1.1 ha polygon is unmatched (Suan Pakkad's grounds are a ticketed museum).",
+    "claim_ids": [
+     "phaya-thai-st-c09",
+     "phaya-thai-st-c04"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "The interchange dominates mornings and evenings with commuter and airport flows; midday belongs to hospital/office errands and food stalls; evenings and weekends are low-key.",
+    "claim_ids": [
+     "phaya-thai-st-c06",
+     "phaya-thai-st-c10"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The station-and-skywalk block is the loudest node; the Si Ayutthaya/Suan Pakkad side east is calmer, and the SRT/rail-corridor edge west carries the clearance works.",
+    "claim_ids": [
+     "phaya-thai-st-c04",
+     "phaya-thai-st-c11"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit: frequent flyers and BTS commuters priced out of Siam/Ratchathewi proper - the rent medians here are the interchange's own.",
+    "claim_ids": [
+     "phaya-thai-st-c03",
+     "phaya-thai-st-c08"
+    ]
+   },
+   {
+    "text_en": "Poor fit: households wanting leafy park-side living or destination nightlife; neither exists in this catchment.",
+    "claim_ids": [
+     "phaya-thai-st-c09",
+     "phaya-thai-st-c06"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "rating safety (5): no unit-level statistics found; unanchored in this pass (phaya-thai-st-c07).",
+   "Park identity: the app's 1.1 ha polygon did not match any named OSM park within 900 m of the stations (phaya-thai-st-c09).",
+   "Anchor sits ~340 m north of the BTS node; edge memberships toward Victory Monument need polygon re-check (phaya-thai-st-c02).",
+   "ARL headway (~10 min peak) is snippet-level only; the Wikipedia body documents fares and the 2014 express suspension but not current headways (phaya-thai-st-c03).",
+   "Railway-corridor displacement affects the corridor generally; overlap with this specific Voronoi cell is undetermined (phaya-thai-st-c11)."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "1 claim(s) carry relation_to_entity=unknown as an honest gap: phaya-thai-st-c09.",
+   "2 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Identify the app's 1.1 ha park polygon for st.phaya-thai (candidates within ~1.5 km: none named in OSM; Suan Pakkad gardens are private museum grounds) (phaya-thai-st-c09).",
+   "open issue: Confirm the app anchor latitude (13.7600) vs OSM BTS node 13.75696 and re-run edge memberships (phaya-thai-st-c02).",
+   "open issue: Body-read a current ARL timetable/headway source to firm up the transport-10 mechanism (phaya-thai-st-c03).",
+   "open issue: Safety 5 remains untested - no usable statistics located for this unit (phaya-thai-st-c07).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c06/c08). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

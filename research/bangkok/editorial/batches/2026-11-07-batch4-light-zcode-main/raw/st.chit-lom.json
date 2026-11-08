@@ -1,0 +1,890 @@
+{
+ "entity_key": "st.chit-lom",
+ "search_log": [
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read: E1, coords 13.7441083,100.5430972 match app center; Sky Walk to Ratchaprasong and Siam; Central Chidlom skybridge. NOTE: dispatch brief said '@13.7385-ish' - that is wrong; batch.json and Wikipedia agree on 13.7441 (13.7385 is near Phloen Chit)"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Erawan_Shrine",
+   "status": "ok (after 1 concurrency failure)",
+   "date": "2026-11-07",
+   "note": "full body read: enshrined 9 Nov 1956; 17 Aug 2015 bombing 20 killed/125 injured"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/CentralWorld",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read (shared with st.siam): served by Siam AND Chit Lom; 2010 arson"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read: pier order Pratunam - Chidlom - Wireless - Nana Nuea...; 60,000 daily riders; 05:30-20:30 weekdays"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Pathum Wan district condominium rent average price baht per month 2025 studio one bedroom",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "Thailand-Property median 57,231 (snippet-only, corroborative)"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "ค่าเช่า คอนโด ย่านชิดลม เพลินจิต ราคา ห้องนอน ต่อเดือน",
+   "status": "ok (snippet-only)",
+   "date": "2026-11-07",
+   "note": "Thai requirement met: corridor median ~40k, Noble Ploenchit 2BR 80-82k, Athenee Residence 2BR 140sqm 120,000/mo, Langsuan Ville 75k - snippet-level, corroborates FazWaz body read"
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Aman Nai Lert Bangkok opening 2025 hotel residences Ploenchit Nai Lert Park",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "opening Apr 2025 per news snippets; official page body-read separately"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read (shared with st.siam): median 55,400; 1BR 46,800; 2BR 99,600"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "www.aman.com/hotels/aman-nai-lert-bangkok",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read: 1 Soi Somkid, Lumpini, Pathumwan; 52 suites + 39 residences; within 7-acre Nai Lert Park; no opening date on page"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "www.onebangkok.com press release (opening)",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read (shared): developer PR, 29 Oct 2024"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "status": "ok",
+   "date": "2026-11-07",
+   "note": "full body read in Thai: opening night 25 Oct 2024; PR-labeled article"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "tripadvisor.com Ratchaprasong Skywalk page",
+   "status": "fail (HTTP 403)",
+   "date": "2026-11-07",
+   "note": "known block confirmed"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "reddit.com r/ThailandTourism MBK thread",
+   "status": "fail (HTTP 403 Blocked)",
+   "date": "2026-11-07",
+   "note": "known block confirmed"
+  },
+  {
+   "tool": "WebFetch",
+   "query": "bangkokpost.com One Bangkok article",
+   "status": "fail (307 tollbit paywall)",
+   "date": "2026-11-07",
+   "note": "paywall; no bypass"
+  },
+  {
+   "tool": "Overpass",
+   "query": "POST overpass-api.de: stations/ferry_terminals/piers/parks bbox(13.726,100.524,13.754,100.558)",
+   "status": "ok (after retries; UA header)",
+   "date": "2026-11-07",
+   "note": "full JSON parsed; pier nodes within 800 m of app center: Pratunam x4 (595-621 m), Chidlom node (537 m) + pier way (523 m); Wireless node at 721 m is 583 m from Phloen Chit station - outside this Voronoi cell"
+  }
+ ],
+ "sources": [
+  {
+   "index": 1,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "title": "Chit Lom BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-08-23",
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub-level; no exit-level detail or ridership"
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "title": "Erawan Shrine",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-10-27",
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "No visitor-count figures on the page"
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://en.wikipedia.org/wiki/CentralWorld",
+   "retrieved_url": "https://en.wikipedia.org/wiki/CentralWorld",
+   "title": "CentralWorld",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07",
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Size ranking claim without methodology"
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "title": "Khlong Saen Saep boat service",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-09-02",
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Pier table has no coordinates; pier-to-station distances come from OSM"
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter (POST query, bbox 13.726,100.524,13.754,100.558)",
+   "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
+   "publisher": "OpenStreetMap contributors via Overpass API",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Straight-line distances computed by researcher",
+    "OSM has 4 duplicate Pratunam ferry_terminal nodes (platform/direction mapping)",
+    "Unnamed park polygons' identities unverified"
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "title": "Property for rent in Pathum Wan (FazWaz)",
+   "publisher": "FazWaz",
+   "publisher_family": "fazwaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": "live page 2026",
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "brokerage portal; asking rents",
+   "limitations": [
+    "Asking not transacted; no snapshot date"
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://www.aman.com/hotels/aman-nai-lert-bangkok",
+   "retrieved_url": "https://www.aman.com/hotels/aman-nai-lert-bangkok",
+   "title": "Aman Nai Lert Bangkok (official page)",
+   "publisher": "Aman Resorts",
+   "publisher_family": "aman",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "hotel marketing",
+   "limitations": [
+    "No opening date on the page (April 2025 date is snippet-level news only)",
+    "Promotional descriptions"
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-officially-opens-welcoming-the-world-to-bangkok",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-officially-opens-welcoming-the-world-to-bangkok",
+   "title": "One Bangkok Officially Opens (press release)",
+   "publisher": "One Bangkok (Frasers Property / TCC Assets)",
+   "publisher_family": "onebangkok_developer",
+   "author": null,
+   "published_at": "2024-10-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "developer PR",
+   "limitations": [
+    "Promotional; omits investment/site figures"
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "retrieved_url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "title": "One Bangkok เนรมิตค่ำคืนประวัติศาสตร์ (One Bangkok stages a historic night)",
+   "publisher": "THE STANDARD",
+   "publisher_family": "the_standard",
+   "author": "THE STANDARD TEAM",
+   "published_at": "2024-10-30",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "article labeled [PR NEWS] by the publisher",
+   "limitations": [
+    "PR-labeled; event coverage rather than independent reporting"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "chit-lom-c01",
+   "text_en": "BTS Chit Lom (code E1, Sukhumvit line) opened 5 December 1999 at 13.7441083 N, 100.5430972 E - identical to the app's unit center. A Sky Walk links the station to the Ratchaprasong intersection (CentralWorld, Gaysorn Plaza, Erawan Shrine) and onward to Siam station; Central Chidlom department store has a direct skybridge from the station. The dispatch brief's '@13.7385-ish' coordinate is contradicted by both batch.json and Wikipedia; 13.7385 sits near Phloen Chit station, not Chit Lom.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Chit Lom station at Ratchaprasong, Pathum Wan",
+    "relation_to_entity": "entire_unit",
+    "notes": "Station node, app center and Wikipedia coords all agree at 13.7441,100.5431."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "infobox + lead paragraph",
+     "paraphrase": "E1, opened 5 Dec 1999, Sky Walk to Ratchaprasong and Siam station, Central Chidlom direct skybridge, coords 13.7441083,100.5430972."
+    },
+    {
+     "source_index": 4,
+     "locator": "Overpass node 'Chit Lom' (id 5391636575)",
+     "paraphrase": "OSM BTS Chit Lom node equals the app center."
+    }
+   ],
+   "limitations": [
+    "Dispatch-brief coordinate error flagged for coordinator; app dataset itself is internally consistent"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c02",
+   "text_en": "The unit's anchor is the Ratchaprasong intersection: the Erawan Shrine (formally Thao Maha Phrom), whose Phra Phrom statue was enshrined on 9 November 1956 after a string of mishaps during the Erawan Hotel's construction (wrong foundation date, cost overruns, injuries, a lost marble shipment), stands beside the Grand Hyatt Erawan; CentralWorld - one of the world's largest malls, served by both Chit Lom and Siam stations - fronts the same junction.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "culture",
+    "retail"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong intersection",
+    "relation_to_entity": "inside",
+    "notes": "CentralWorld straddles the siam/chit-lom seam (coordinator check)."
+   },
+   "temporal_scope": {
+    "event_date": "1956-11-09 (enshrinement)",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "lead + History sections",
+     "paraphrase": "Shrine built for the government Erawan Hotel after construction mishaps; statue enshrined 9 Nov 1956; near Grand Hyatt Erawan at Ratchaprasong, near BTS Chit Lom."
+    },
+    {
+     "source_index": 2,
+     "locator": "Location section",
+     "paraphrase": "CentralWorld at Ratchaprasong served by Siam and Chit Lom stations."
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "chit-lom-c03",
+   "text_en": "The area's defining security event: on 17 August 2015 at 18:55 a 3 kg TNT pipe bomb detonated near the Erawan Shrine, killing 20 bystanders and injuring 125. Earlier, the 2010 political confrontation damaged CentralWorld itself - arson closed the mall on 19 May 2010, with most of it reopening 28 September 2010 and the Zen wing only in January 2012.",
+   "kind": "factual_report",
+   "topics": [
+    "safety"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Erawan Shrine; CentralWorld",
+    "relation_to_entity": "inside",
+    "notes": "Incident history, not a current crime-rate measurement."
+   },
+   "temporal_scope": {
+    "event_date": "2015-08-17; 2010-05-19",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "2015 bombing section",
+     "paraphrase": "3 kg TNT pipe bomb in a backpack, 20 killed, 125 injured, detonated 18:55."
+    },
+    {
+     "source_index": 2,
+     "locator": "2010 fire damage section",
+     "paraphrase": "Arson damage closed CentralWorld 19 May 2010; mall reopened 28 Sep 2010; Zen reopened 6 Jan 2012."
+    }
+   ],
+   "limitations": []
+  },
+  {
+   "claim_id": "chit-lom-c04",
+   "text_en": "Piers: the app counts 5, but OSM resolves this to 2 distinct Khlong Saen Saep boat stops inside the unit - Pratunam (the Golden Mount line's western terminus/interchange; 4 duplicate ferry_terminal nodes at 595-621 m) and Chidlom (ferry_terminal node at 537 m plus a pier way at 523 m). A third nearby stop, Wireless/Witthayu (721 m from the app center), is 583 m from Phloen Chit station and so falls outside this unit's nearest-stop cell. The count of 5 matches the number of OSM ferry_terminal nodes (4 Pratunam duplicates + 1 Chidlom), i.e. an OSM-dedup artifact rather than five destinations.",
+   "kind": "researcher_inference",
+   "topics": [
+    "transport",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong Saen Saep piers (Pratunam, Chidlom)",
+    "relation_to_entity": "inside",
+    "notes": "Wireless pier membership assigned to the phloen-chit cell by nearest-station logic; polygon check confirms."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07; service hours from Wikipedia (05:30-20:30 weekdays)",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Overpass ferry_terminal nodes 566622414/567014528/2321695929/2321695930 (Pratunam), 566622607 (Chidlom), 566622771 (Wireless)",
+     "paraphrase": "Distances from app center: Pratunam 595-621 m (4 nodes), Chidlom 537 m, Wireless 721 m; Wireless is 583 m from Phloen Chit station."
+    },
+    {
+     "source_index": 3,
+     "locator": "pier table, NIDA line entries",
+     "paraphrase": "Order west-to-east: Pratunam (interchange), Chidlom (near Central Chidlom), Wireless (at Witthayu Road), Nana Nuea..."
+    }
+   ],
+   "limitations": [
+    "The 5-to-2 reconciliation is the researcher's arithmetic, not documented app methodology",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.chit-lom)"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c05",
+   "text_en": "Green=9 with app park_ha=4.2 has no verified flagship inside the unit: OSM shows an unnamed park polygon ~569 m northeast of the center (identity unverified), an unnamed polygon ~798 m south-southeast near Lumphini Park's northern lobe, and Pathumwananurak Park at 695 m (though it lies 590 m from Siam station, so nearest-stop logic assigns it to the siam unit). Composition of the 4.2 ha is unresolved.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "unnamed OSM park polygons near Chit Lom / Lumphini north lobe",
+    "relation_to_entity": "partial",
+    "notes": "Coordinator polygon clip decides; a Lumphini north-edge contribution is plausible but unconfirmed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Overpass ways 538789309 (unnamed, ~569 m) and 1193692162 (unnamed, ~798 m); way 536866176 Pathumwananurak (695 m)",
+     "paraphrase": "Candidate park polygons with straight-line distances as listed."
+    }
+   ],
+   "limitations": [
+    "Unnamed OSM polygons cannot be tied to official park names in this pass",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.chit-lom)"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c07",
+   "text_en": "Broker comparison: FazWaz's Pathum Wan page (3,242 live rentals) shows a district median of 55,400/month, 1-bedroom average 46,800 (n=1,359) and 2-bedroom average 99,600 (n=1,114). Thai-language corridor snippets (Chidlom-Ploenchit) put the local median near 40,000, with 2-bed examples at Langsuan Ville 75,000 (151 sqm), Noble Ploenchit 80,000-82,000, and the Athenee Residence penthouse-floor 2-bed (140 sqm) at exactly 120,000/month.",
+   "kind": "estimate",
+   "topics": [
+    "rent",
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Chidlom-Ploenchit corridor, Pathum Wan/Lumphini khwaengs",
+    "relation_to_entity": "entire_unit",
+    "notes": "Athenee Residence (Soi Ruam Rudi area) sits inside the 800 m catchment by straight-line distance; listing-level verification not performed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "live listings 2026-11",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "median and by-bedroom average blocks",
+     "paraphrase": "Median 55,400; 1BR avg 46,800; 2BR avg 99,600; 3,242 listings."
+    }
+   ],
+   "limitations": [
+    "Snippet-only corroboration for the individual listings; asking rents, not transacted",
+    "app-data anchor (not a web source): Rent snippets for the Chidlom-Ploenchit corridor (Thai + EN)"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c08",
+   "text_en": "Interpretation of the 120,000 figure: it aligns with the top decile of corridor asking rents - new, hotel-grade or serviced luxury 2-beds - rather than a typical renter's market. The luxury anchors are present and new: Aman Nai Lert Bangkok operates 52 suites with 39 branded residences in a 36-storey tower within the 7-acre Nai Lert Park enclave at 1 Soi Somkid (straight-line ~550 m from the app center, though nearest-station logic may assign it to the phloen-chit cell), and One Bangkok's hotel/residence stack opened 800-1,000 m south.",
+   "kind": "researcher_inference",
+   "topics": [
+    "rent",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Nai Lert Park (1 Soi Somkid); One Bangkok (Rama IV)",
+    "relation_to_entity": "partial",
+    "notes": "Aman Nai Lert membership between chit-lom/phloen-chit cells unknown; One Bangkok site mostly outside the 800 m catchment."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 openings",
+    "recheck_by": null,
+    "notes": "Aman opening April 2025 per news snippets; official page shows it operating without a date."
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "location, suites and residences sections",
+     "paraphrase": "52 suites from 94 sqm, 39 branded residences, 36-storey tower in Nai Lert Park, 1 Soi Somkid, Lumpini, Pathumwan; operating hotel."
+    },
+    {
+     "source_index": 7,
+     "locator": "press release hotel list",
+     "paraphrase": "Ritz-Carlton (Nov 2024), Andaz (2025), Fraser Suites (2026) anchoring the corridor's luxury layer."
+    }
+   ],
+   "limitations": [
+    "Inference, not app documentation; the override's actual derivation is unknown",
+    "app-data anchor (not a web source): Rent snippets for the Chidlom-Ploenchit corridor (Thai + EN)"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c09",
+   "text_en": "Counter-evidence to the override as a lived affordability signal: the same corridor's typical stock rents well below 120,000 - corridor median ~40,000, FazWaz 2-bed average 99,600, named 2-bed examples at 75,000-82,000. A rent=1 rating is justified by the district, but the 120,000 headline overstates the median renter's price point by roughly a third versus the 2-bed average and about threefold versus the corridor median.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "rent"
+   ],
+   "polarity": "negative",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Chidlom-Ploenchit corridor",
+    "relation_to_entity": "entire_unit",
+    "notes": "This is the explicit counter-treatment the override requires."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-11 listings",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "2BR average block",
+     "paraphrase": "2BR average 99,600 across 1,114 listings."
+    }
+   ],
+   "limitations": [
+    "Median from snippet-level aggregator; FazWaz figure is body-read",
+    "app-data anchor (not a web source): Rent snippets for the Chidlom-Ploenchit corridor (Thai + EN)"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c10",
+   "text_en": "Rhythm: weekday peaks belong to the Ploenchit-Chidlom office towers and CentralWorld retail; the Khlong Saen Saep boats run 05:30-20:30 weekdays (to 19:00 weekends, ~60,000 system-wide daily riders) from the unit's Pratunam and Chidlom piers; the Erawan Shrine is an all-day draw with a food-guide window of 06:00 to midnight; malls run ~10:00-22:00.",
+   "kind": "reported_perception",
+   "topics": [
+    "rhythm",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong offices, shrine, canal piers",
+    "relation_to_entity": "entire_unit",
+    "notes": null
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026 service data + guide-era shrine observations",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "service hours and ridership in the article body",
+     "paraphrase": "05:30-20:30 weekdays, 19:00 weekends, ~60,000 daily passengers, Pratunam the interchange."
+    },
+    {
+     "source_index": 1,
+     "locator": "shrine role in lead",
+     "paraphrase": "Shrine is a devotional and tourist draw at the junction."
+    }
+   ],
+   "limitations": [
+    "Shrine-hours figure is guide-level (06:00-midnight), not operator-published"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c11",
+   "text_en": "Walkability is elevated-first: the Sky Walk runs station-to-Ratchaprasong-to-Siam above street level with a direct bridge into Central Chidlom, and the 2015 bombing's aftermath made the shrine corner one of the city's most surveilled public spaces. At grade, the Ploenchit/Chit Lom junction crossings carry the heaviest pedestrian loads in the unit; the Ratchaprasong skywalk network is the weather-proof spine.",
+   "kind": "reported_perception",
+   "topics": [
+    "walkability",
+    "safety"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong skywalk network",
+    "relation_to_entity": "entire_unit",
+    "notes": "Skywalk existence is body-read (station page); the surveillance characterization is researcher inference from the bombing history and should be treated cautiously."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "lead paragraph",
+     "paraphrase": "Sky Walk links the station with Ratchaprasong and Siam; Central Chidlom has a skybridge."
+    },
+    {
+     "source_index": 2,
+     "locator": "Location section",
+     "paraphrase": "CentralWorld reachable from Chit Lom."
+    }
+   ],
+   "limitations": [
+    "No BMA engineering source for skywalk dimensions; surveillance point is inference"
+   ]
+  },
+  {
+   "claim_id": "chit-lom-c12",
+   "text_en": "Recent changes 2024-2026 at the unit's edge: One Bangkok's grand opening on the evening of 25 October 2024 ('Let Our Hearts Beat as One'), with The Ritz-Carlton Bangkok (Nov 2024), Andaz One Bangkok (2025) and Fraser Suites (2026) - in khwaeng Lumphini on Rama IV, outside this unit but inside its rent-shed; Aman Nai Lert Bangkok opened on the Nai Lert Park enclave (April 2025 per news snippets; operating per its official page) at the unit's eastern edge with 39 branded residences.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "rent"
+   ],
+   "polarity": "positive",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "One Bangkok (Rama IV); Nai Lert Park (Soi Somkid)",
+    "relation_to_entity": "partial",
+    "notes": "One Bangkok site is outside the 800 m catchment by straight-line distance; Aman membership chit-lom-vs-phloen-chit unknown."
+   },
+   "temporal_scope": {
+    "event_date": "2024-10-25; 2025-04 (Aman, snippet-level)",
+    "observed_period": "2024-2026",
+    "recheck_by": null,
+    "notes": null
+   },
+   "evidence": [
+    {
+     "source_index": 8,
+     "locator": "article body (Thai)",
+     "paraphrase": "Opening night 25 Oct 2024; 750+ shops, 250+ restaurants; Ritz-Carlton Nov 2024, Andaz 2025, Fraser Suites 2026."
+    },
+    {
+     "source_index": 7,
+     "locator": "press release body",
+     "paraphrase": "Retail at Parade and The Storeys; hotel rollout as above; 2 km Art Loop."
+    },
+    {
+     "source_index": 6,
+     "locator": "official page",
+     "paraphrase": "Operating hotel, 39 residences, Nai Lert Park setting."
+    }
+   ],
+   "limitations": [
+    "Aman's April 2025 opening date is snippet-level only; official page gives no date"
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c02"
+   ],
+   "notes": "Identity: E1 at the Ratchaprasong junction - shrine, CentralWorld, Central Chidlom, skywalk spine. App center equals the true station site; the dispatch brief's coordinate was wrong (flagged)."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c02",
+    "chit-lom-c10"
+   ],
+   "notes": "Everyday experience: office-tower weekdays, shrine pilgrims and tourists daily, mall-scale food and retail within one skywalk."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c07"
+   ],
+   "notes": "Values: transport=10 (E1 + skywalk + canal piers) and DE=10 (malls/department store) are mechanism-backed; rent=1 rides on the corridor's luxury layer."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c09",
+    "chit-lom-c03"
+   ],
+   "notes": "Counter-evidence: the 120k override vs corridor median ~40k and 2BR average 99.6k; security history qualifies the safety=7."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c10"
+   ],
+   "notes": "Rhythm: office peaks, boat hours 05:30-20:30, shrine all-day, malls 10-22."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c11",
+    "chit-lom-c01"
+   ],
+   "notes": "Walkability: elevated Sky Walk network is the spine; straight-line distances only, no radius-to-time conversions."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c02"
+   ],
+   "notes": "Daily life: Central Chidlom department store via skybridge, CentralWorld/Big-C-class retail nearby, canal boats to the old town."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c07",
+    "chit-lom-c08",
+    "chit-lom-c09"
+   ],
+   "notes": "Explicit override treatment: 45,000 matches district/corridor 1-bed averages; 120,000 is top-decile luxury 2-bed asking (Athenee 120k example; Aman/One Bangkok anchors), roughly a third above the FazWaz 2-bed average and ~3x the corridor median - a luxury-anchored estimate, not a median."
+  },
+  {
+   "id": "Q09",
+   "status": "partial",
+   "claim_ids": [
+    "chit-lom-c05"
+   ],
+   "notes": "Green=9 with 4.2 ha unresolved: unnamed OSM polygons + possible Lumphini north-lobe contribution; no flagship park verified inside."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c07",
+    "chit-lom-c09",
+    "chit-lom-c10"
+   ],
+   "notes": "Fit: corporate/hospitality workers and luxury renters; poor fit for budget renters - the override documents the ceiling, the median documents the floor."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c12",
+    "chit-lom-c08"
+   ],
+   "notes": "2024-2026: One Bangkok phased opening south of the unit; Aman Nai Lert opened at the eastern edge - both reprice the corridor's luxury layer."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c04",
+    "chit-lom-c05",
+    "chit-lom-c08"
+   ],
+   "notes": "Outside-the-score: pier-count dedup artifact, unnamed park identity, Aman cell assignment, and the override's unexposed derivation."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Chit Lom is Ratchaprasong at its most valuable: the Erawan Shrine corner, a skywalk spine into CentralWorld and Central Chidlom, canal boats from Pratunam - and the app's highest rent figure (45,000/120,000), which the market data says is a top-decile luxury number, not a median one.",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c02",
+    "chit-lom-c07"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "One stop east of Siam, Chit Lom swaps the student square for shrine incense and office-tower lobbies: E1 on the Sukhumvit line, wired by skywalk to CentralWorld, Gaysorn and Central Chidlom, with Khlong Saen Saep boats at Pratunam and Chidlom piers. Its transport, food and daily-essentials scores rival Siam's; its rent record - a 45,000/120,000 station override dated 2026-10-21 - is the steepest in the app, and the listings show exactly who pays it.",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c07"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "A walkable retail-and-shrine core: E1 station with a direct skybridge into Central Chidlom and a Sky Walk running through Ratchaprasong to Siam, with two canal-boat piers (Pratunam interchange, Chidlom) adding a water route the malls cannot.",
+    "claim_ids": [
+     "chit-lom-c01",
+     "chit-lom-c04"
+    ]
+   },
+   {
+    "text_en": "Food and nightlife depth (624 food, 83 cafes, 39 nightlife per app) anchored by CentralWorld-scale retail and the shrine's all-day draw.",
+    "claim_ids": [
+     "chit-lom-c02",
+     "chit-lom-c10"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The 120,000 rent headline is a top-decile luxury figure: corridor medians run near 40,000 and the FazWaz 2-bed average is 99,600 - rent=1 is earned by the district, but the override overstates the typical renter's price point by about a third.",
+    "claim_ids": [
+     "chit-lom-c09",
+     "chit-lom-c07"
+    ]
+   },
+   {
+    "text_en": "Security history is heavy for a shopping district: the 2015 Erawan Shrine bombing (20 killed, 125 injured) and the 2010 CentralWorld arson sit inside the unit's memory, qualifying safety=7.",
+    "claim_ids": [
+     "chit-lom-c03"
+    ]
+   },
+   {
+    "text_en": "Green=9 rests on unverified composite polygons - no flagship public park is confirmed inside the unit.",
+    "claim_ids": [
+     "chit-lom-c05"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Weekdays belong to the office towers and lunch queues; early evening shifts to the shrine (guide-era window 06:00-midnight) and the food strip; boats stop at 20:30 weekdays and 19:00 weekends; the mall system closes around 22:00 and the unit's residential streets go quiet with it.",
+    "claim_ids": [
+     "chit-lom-c10",
+     "chit-lom-c02"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The skywalk-mall layer around the station is a different world from the canal-side blocks 600 m north (pier lanes, older low-rise) and from the green ambiguity at the unit's southern edge toward Lumphini's northern lobe - three textures the single 4.2 ha park figure flattens.",
+    "claim_ids": [
+     "chit-lom-c04",
+     "chit-lom-c05"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fit for corporate and hospitality workers, shrine-adjacent lifestyle renters, and luxury-budget households who want two rail lines' reach without Siam's crush.",
+    "claim_ids": [
+     "chit-lom-c07",
+     "chit-lom-c01"
+    ]
+   },
+   {
+    "text_en": "Poor fit for typical-budget renters: if 45,000-120,000 reads as the market, the 40,000-100,000 reality of most corridor stock still prices out the Bangkok median - and crowd=1 weekends at the shrine-mall corner are part of the deal.",
+    "claim_ids": [
+     "chit-lom-c09",
+     "chit-lom-c03"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The 120,000 override's derivation is unexposed; the top-decile-luxury reading is the researcher's, anchored on an Athenee Residence listing at exactly 120k (snippet-level) plus new luxury anchors (chit-lom-c08).",
+   "Pier count 5 = 4 duplicate Pratunam OSM nodes + 1 Chidlom node; 2 distinct stops served (chit-lom-c04).",
+   "4.2 ha park composition unresolved; unnamed OSM polygons unverified (chit-lom-c05).",
+   "Aman Nai Lert's cell assignment (chit-lom vs phloen-chit Voronoi) unknown; opening date snippet-level only.",
+   "Dispatch brief's '@13.7385' coordinate contradicts batch.json and Wikipedia (13.7441); app data internally consistent."
+  ]
+ },
+ "open_issues": [
+  "Station-override rent derivation (45,000/120,000) is not documented in the app; recommend the coordinator re-derive or relabel it as top-decile asking (chit-lom-c06..c09).",
+  "Pier fact needs relabeling: 5 OSM ferry_terminal nodes = 2 distinct boat stops (Pratunam, Chidlom) after dedup (chit-lom-c04).",
+  "Park_ha 4.2 has no named-polygon source; Lumphini north lobe vs unnamed Langsuan-area polygon unresolved (chit-lom-c05).",
+  "CentralWorld/Pathumwananurak seam with st.siam needs the polygon check.",
+  "Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side and news-side corroboration.",
+  "claim chit-lom-c06 removed during assembly: its only evidence was a non-web app-data anchor (limitation recorded on neighboring claims)"
+ ]
+}

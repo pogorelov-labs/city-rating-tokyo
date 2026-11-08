@@ -1,0 +1,1416 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.ratchathewi",
+  "kind": "station_area",
+  "name_en": "Ratchathewi",
+  "name_th": "ราชเทวี",
+  "aliases": [
+   "Ratchathewi intersection",
+   "Phetchaburi (corridor)"
+  ],
+  "scope_notes": "800 m nearest-stop catchment around BTS Ratchathewi, entirely within Ratchathewi khet but not the whole khet (which extends far north on Phahonyothin). Research-verified outside: Baiyoke Tower II (~1.28 km ENE), Santiphap Park (~1.65 km NNE, Ratchathewi khet's north), Suan Pakkad Palace Museum (~0.81 m NNE, nearer BTS Phaya Thai). No named public park verified inside (app 1.0 ha unmatched; OSM shows none). The Ratchathewi flyover closed 15–16 Jan 2025 with reconstruction due by Apr 2028."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.92,
+  "cohort_rank": 3,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Rank #3/133 and the only station area with 'some' measured coverage; safety 5 (lowest in the research set) vs vibe 10 needed testing."
+ },
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap data via Overpass API (parks, leisure, piers, gyms, hospitals, bus stops, mall names around 13.75186,100.53155)",
+   "publisher": "OpenStreetMap contributors",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07",
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Raw tag data; distances computed by researcher (great-circle)",
+    "Several POST attempts blocked/empty before GET succeeded",
+    "Pantip Plaza not found by name in OSM"
+   ]
+  },
+  {
+   "id": "src_edb40b68d0f9",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ratchathewi_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ratchathewi_BTS_station",
+   "title": "Ratchathewi BTS station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": []
+  },
+  {
+   "id": "src_4b8e15dea6d8",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "title": "Ratchathewi district",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": []
+  },
+  {
+   "id": "src_6c851769cf57",
+   "canonical_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "title": "Baiyoke Tower II",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": []
+  },
+  {
+   "id": "src_66b1411bd411",
+   "canonical_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "title": "Santiphap Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article coordinates (13.7631, 100.5415) and OSM polygon (13.7616, 100.5407) agree with each other but both sit ~1.4-1.5 km NNE of BTS Ratchathewi, further than some secondhand descriptions imply"
+   ]
+  },
+  {
+   "id": "src_e9c44e3a4de6",
+   "canonical_url": "https://en.wikipedia.org/wiki/Suan_Pakkad_Palace",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Suan_Pakkad_Palace",
+   "title": "Suan Pakkad Palace",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article does not name a nearest BTS station"
+   ]
+  },
+  {
+   "id": "src_30535a266299",
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep",
+   "title": "Khlong Saen Saep",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article contains no pier list or service hours"
+   ]
+  },
+  {
+   "id": "src_1a6b606223cc",
+   "canonical_url": "https://www.thefinestthai.com/2026/07/23/phetchaburi-road-soi-5-street-food-guide",
+   "retrieved_url": "https://www.thefinestthai.com/2026/07/23/phetchaburi-road-soi-5-street-food-guide",
+   "title": "Phetchaburi Road Street Food Guide: Soi 5, Pratunam And Ratchathewi",
+   "publisher": "The Finest Thai",
+   "publisher_family": "The Finest Thai",
+   "author": "Napaporn Aroonrat",
+   "published_at": "2026-07-23",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "travel/food content site; affiliate-adjacent",
+   "limitations": [
+    "No named stalls or prices",
+    "General food-safety advice rather than reporting"
+   ]
+  },
+  {
+   "id": "src_135a30cc5596",
+   "canonical_url": "https://www.visitthailandtoday.com/restaurants/bangkok/petchaburi-soi-5-food-street",
+   "retrieved_url": "https://www.visitthailandtoday.com/restaurants/bangkok/petchaburi-soi-5-food-street",
+   "title": "Petchaburi Soi 5 Food Street",
+   "publisher": "Visit Thailand Today",
+   "publisher_family": "Visit Thailand Today",
+   "author": "Mac Kiley",
+   "published_at": null,
+   "updated_at": "2026-10",
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "tourism content site",
+   "limitations": [
+    "updated_at month precision only (page says 'updated October 2026')",
+    "Relies on Google-review sentiment (4.2 stars, 198 reviews)",
+    "Serves as a substantive counter-view source (cleanliness/rat complaints, honest 'may not justify a trip' verdict)"
+   ]
+  },
+  {
+   "id": "src_e957708d48fc",
+   "canonical_url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/2417",
+   "retrieved_url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/2417",
+   "title": "Street food: Phetchaburi Soi 10",
+   "publisher": "Travelfish",
+   "publisher_family": "Travelfish",
+   "author": "David Luekens",
+   "published_at": null,
+   "updated_at": "2023-08-20",
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "independent travel guide (membership site)",
+   "limitations": [
+    "Last updated 2023-08-20",
+    "Calls the location 'Siam Square area' while its own coordinates (13.75403 N, 100.52808 E) sit NW of BTS Ratchathewi"
+   ]
+  },
+  {
+   "id": "src_262bedce284b",
+   "canonical_url": "https://propertyscout.co.th/en/location-guides/ratchathewi-area-guide",
+   "retrieved_url": "https://propertyscout.co.th/en/location-guides/ratchathewi-area-guide",
+   "title": "Ratchathewi Area Profile & Information",
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout",
+   "author": null,
+   "published_at": "2025-08-07",
+   "updated_at": "2025-11-25",
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal marketing content",
+   "limitations": [
+    "Presents mostly positive picture; no safety or crowding discussion",
+    "FAQ section is placeholder (lorem ipsum) text",
+    "District-wide figures, not catchment-specific"
+   ]
+  },
+  {
+   "id": "src_b7cebe51353e",
+   "canonical_url": "https://www.superagent.co/en/blog/ratchathewi-bangkok-complete-2026-expat-neighborhood-guide",
+   "retrieved_url": "https://www.superagent.co/en/blog/ratchathewi-bangkok-complete-2026-expat-neighborhood-guide",
+   "title": "Ratchathewi Bangkok: Complete 2026 Expat Neighborhood Guide",
+   "publisher": "Superagent blog",
+   "publisher_family": "Superagent",
+   "author": null,
+   "published_at": "2026-05-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "content blog; property figures are marketing-adjacent",
+   "limitations": [
+    "No byline or methodology for rent figures",
+    "Does not address safety explicitly",
+    "Places Suan Pakkad Palace Museum among area pros without distance detail"
+   ]
+  },
+  {
+   "id": "src_809cf118e5ae",
+   "canonical_url": "https://www.bangkokpost.com/thailand/general/2909930/three-flyovers-to-be-axed-for-orange-line",
+   "retrieved_url": "https://www.bangkokpost.com/thailand/general/2909930/three-flyovers-to-be-axed-for-orange-line",
+   "title": "Three flyovers to be axed for Orange Line",
+   "publisher": "Bangkok Post",
+   "publisher_family": "Bangkok Post",
+   "author": "Onnucha Hutasingh",
+   "published_at": "2024-11-27T18:02:00+07:00",
+   "updated_at": "2024-11-27T18:18:50+07:00",
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Full text obtained via reader; direct WebFetch hits a tollbit paywall redirect (not bypassed)",
+    "Plans published Nov 2024; later schedule slippage possible"
+   ]
+  },
+  {
+   "id": "src_0caea8beef5f",
+   "canonical_url": "https://www.reddit.com/r/Bangkok/comments/1tnv99x/hows_ratchathewi_nowadays/",
+   "retrieved_url": "https://www.reddit.com/r/Bangkok/comments/1tnv99x/hows_ratchathewi_nowadays/",
+   "title": "How's Ratchathewi nowadays? (r/Bangkok)",
+   "publisher": "Reddit",
+   "publisher_family": "Reddit",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "resident_report",
+   "commercial_context": "none",
+   "limitations": [
+    "Only the original post retrieved; comment bodies inaccessible (403/blocked/JSON API failed)",
+    "Post date not visible; thread ID suggests ~2025-2026 but date recorded as unknown",
+    "Single anonymous self-report"
+   ]
+  },
+  {
+   "id": "src_11d0afa11d99",
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "title": "Condos for rent in Ratchathewi, Bangkok",
+   "publisher": "FazWaz",
+   "publisher_family": "FazWaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property listings portal",
+   "limitations": [
+    "Live listing page; no fixed snapshot date",
+    "District-wide (khet) including Makkasan/Asoke-fringe projects",
+    "Asking rents, not signed contracts"
+   ]
+  },
+  {
+   "id": "src_eaf0e1b2770c",
+   "canonical_url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "retrieved_url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "title": "Woman warns of pickpockets at Bangkok after her bag gets allegedly sliced open",
+   "publisher": "SAYS",
+   "publisher_family": "SAYS",
+   "author": "Tamara Jayne",
+   "published_at": "2023-07-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Based on one TikTok account; incident alleged, not police-verified",
+    "Location is Pratunam shopping district, at/beyond this unit's west edge"
+   ]
+  },
+  {
+   "id": "src_84e7fb7e57c6",
+   "canonical_url": "https://www.rome2rio.com/Bus/Bus-Stop-BTS-Ratchathewi/Phaya-Thai-BTS-station",
+   "retrieved_url": "https://www.rome2rio.com/Bus/Bus-Stop-BTS-Ratchathewi/Phaya-Thai-BTS-station",
+   "title": "Bus Stop BTS Ratchathewi to Phaya Thai BTS station buses",
+   "publisher": "Rome2Rio",
+   "publisher_family": "Rome2Rio",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "travel aggregator",
+   "limitations": [
+    "SNIPPET-ONLY: not opened in full; used solely as corroboration of bus frequency, never as sole evidence",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_bb03f936b519",
+   "canonical_url": "https://www.ddproperty.com/",
+   "retrieved_url": "https://www.ddproperty.com/",
+   "title": "DDproperty rental statistics for Ratchathewi (search summary)",
+   "publisher": "DDproperty",
+   "publisher_family": "DDproperty",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T21:00:00Z",
+   "body_read": false,
+   "type": "commercial_property",
+   "commercial_context": "property listings portal",
+   "limitations": [
+    "SNIPPET-ONLY via search summary; page not opened; used only as corroboration in c07 alongside body-read sources",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(Ratchathewi/The Line Ratchathewi rental stats via search summary)'"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "ratchathewi-c01",
+   "text_en": "Ratchathewi khet has four khwaeng (Thung Phaya Thai - the district seat, Thanon Phaya Thai, Thanon Phetchaburi, Makkasan), covers 7.126 km2, was part of Dusit until 1966 and of Phaya Thai district 1966-1989, and became its own district on 9 November 1989; it is named after Ratchathewi intersection (Phetchaburi x Phaya Thai roads). Khlong Saen Saep forms its southern border.",
+   "kind": "factual_report",
+   "topics": [
+    "admin",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi khet",
+    "relation_to_entity": "entire_unit",
+    "notes": "Claim covers the whole khet; the app unit is only the ~0.79 km2 southern station catchment (khet is ~7.1 km2, so the khet extends roughly 9x beyond the unit)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Administrative history stable; no recheck needed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_4b8e15dea6d8",
+     "locator": "article body, subdistricts/history/borders sections",
+     "paraphrase": "Four khwaeng listed; district created 1989 after Dusit (to 1966) and Phaya Thai (1966-1989); named for Ratchathewi intersection; area 7.126 km2; Khlong Saen Saep forms the southern border"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-c02",
+   "text_en": "BTS Ratchathewi (N1, Sukhumvit Line) opened 5 December 1999, sits on Phaya Thai Road just south of Ratchathewi intersection, has a skybridge to the Asia Hotel, and is planned as an interchange with the MRT Orange Line (OR08) when the line's western extension opens around 2030; it carried about 1.24 million passengers in 2021.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Ratchathewi station",
+    "relation_to_entity": "inside",
+    "notes": "Station and its immediate exits; OSM maps two stairway nodes (refs 1, 2) within ~70 m of the station point; sources also reference exits 3/4."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Orange Line interchange target date (~2030) is a plan, subject to slippage."
+   },
+   "evidence": [
+    {
+     "source_id": "src_edb40b68d0f9",
+     "locator": "article body (line, opening date, location, skybridge, Orange Line interchange, 2021 ridership)",
+     "paraphrase": "Station facts as summarized"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass railway=subway_entrance nodes",
+     "paraphrase": "Two mapped station stairways (ref 1 and ref 2) at ~13.75149/100.53134 and ~13.75146/100.53165"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c03",
+   "text_en": "Co-Co Walk - described by Wikipedia as a newer zone of inexpensive restaurants and bars popular with locals, plus a few antique shops - sits directly at the base of BTS Ratchathewi (~60 m per OSM), adjoining the former Hollywood Arcade, which no longer operates as retail premises.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Co-Co Walk, Phaya Thai Road",
+    "relation_to_entity": "inside",
+    "notes": "OSM node/way named 'Co-Co Walk' ~60 m from the station point."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "'Newer zone' is Wikipedia's wording; refurbishment timing not dated."
+   },
+   "evidence": [
+    {
+     "source_id": "src_edb40b68d0f9",
+     "locator": "article body, connections/neighborhood section",
+     "paraphrase": "Escalators and stairs lead to Co-Co Walk with inexpensive restaurants and bars popular with locals; adjoining Hollywood Arcade no longer operates as retail"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass name~'Co-Co' result",
+     "paraphrase": "Co-Co Walk mapped ~60 m from station"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c04",
+   "text_en": "The unit's single mapped pier is the Saphan Hua Chang (Ratchathewi) express-boat stop on Khlong Saen Saep - the canal that forms the khet's southern boundary - about 305 m from BTS Ratchathewi, with boat service toward Pratunam market and Golden Mount; the canal boat service overall has a mixed reputation (polluted water, 'slapdash' operation per Wikipedia).",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Saphan Hua Chang pier, Khlong Saen Saep",
+    "relation_to_entity": "inside",
+    "notes": "OSM ferry_terminal 'saphan hua chang' at 13.7492/100.53088 = ~305 m from station; canal segment ~326 m; pier sits at/near the khet boundary line on the canal."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Service hours not found in body-read sources."
+   },
+   "evidence": [
+    {
+     "source_id": "src_edb40b68d0f9",
+     "locator": "article body, connections section",
+     "paraphrase": "Khlong Saen Saep Express Boat at Saphan Hua Chang (Ratchathewi) Pier on the southern side of Hua Chang bridge, service toward Pratunam and Golden Mount"
+    },
+    {
+     "source_id": "src_30535a266299",
+     "locator": "article body",
+     "paraphrase": "Boat service runs through congested central Bangkok roughly parallel to Phetchaburi Road; mixed reputation due to polluted water and 'slapdash' nature"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass ferry_terminal + waterway=canal results",
+     "paraphrase": "Pier ~305 m; canal centerline ~326 m from station"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c05",
+   "text_en": "Phetchaburi Soi 5 Food Street (60 Soi Phetchaburi 5, Thung Phaya Thai khwaeng) is a dinner-only neighborhood eating street, daily 16:00-23:00, with omelet rice/rice boxes around 25-30 baht, grilled meats and mango sticky rice, cash only; it is described as 'a neighborhood eating street rather than a tourist attraction', about a 6-minute walk (510 m per the source) from BTS Ratchathewi.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_life",
+    "food"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Phetchaburi Soi 5 food street",
+    "relation_to_entity": "partial",
+    "notes": "The source's 510 m is a stated walking distance (not researcher conversion). Straight-line position ~350-500 m E/SE of the station puts Soi 5's mouth close to the Ratchathewi/Siam clip boundary (~335 m east of the station if st.siam's 800 m circle governs); treat as partial until the app clip is confirmed."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Hours/prices are source-stated as of the page's October 2026 update; vendor turnover expected."
+   },
+   "evidence": [
+    {
+     "source_id": "src_135a30cc5596",
+     "locator": "page body (location, hours 16:00-23:00, prices 25-30 baht, 'neighborhood eating street' framing, walk distance)",
+     "paraphrase": "As summarized"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Inside/partial status unresolved pending the app's clip geometry"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-c06",
+   "text_en": "Phetchaburi Soi 10 is a night food street in a lane of old two-storey shophouses: vendors set up around 18:00 daily except Mondays, many trading until 01:00-02:00; offerings include khanom jeen with southern curries, grilled sai krok Isaan sausage, som tam, and 20-baht khanom krok; by day the lane is described as an ordinary side lane.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "nightlife",
+    "rhythm"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Phetchaburi Soi 10 night food street",
+    "relation_to_entity": "inside",
+    "notes": "Travelfish's own coordinates (13.75403 N, 100.52808 E) put the lane ~375 m NW of BTS Ratchathewi and ~700 m from BTS Phaya Thai - nearer Ratchathewi - though Travelfish's text loosely calls it the 'Siam Square area'."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Last updated 2023-08-20; stall mix will have changed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_e957708d48fc",
+     "locator": "profile body (hours 18:00-01:00/02:00, closed Mondays, shophouse setting, dishes, coordinates in text)",
+     "paraphrase": "As summarized"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-c07",
+   "text_en": "Independent rent evidence brackets the app's 21,500/38,000 THB estimates: PropertyScout (2025) gives Ratchathewi 1-bed asking 16,000-30,000 and 2-bed 30,000-55,000 THB/month; Superagent (2026-05) gives studios 12,000-16,000, 1-bed 15,000-22,000, 2-bed 28,000-40,000; FazWaz (live listings, khet-wide) averages 1-bed 25,600 (n=1,966) and 2-bed 40,000 (n=847) with median 25,200/month. The app's figures sit inside all three ranges, slightly below FazWaz's khet-wide asking averages.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi khet rental market",
+    "relation_to_entity": "entire_unit",
+    "notes": "All three samples are khet-wide (including Makkasan and the Asoke fringe), not catchment-specific; asking rents, not signed contracts; FazWaz sample skews to newer condo stock."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Rent check due ~2027-05; watch Orange Line completion effects and new supply."
+   },
+   "evidence": [
+    {
+     "source_id": "src_262bedce284b",
+     "locator": "housing/prices section (1BR 16,000-30,000; 2BR 30,000-55,000; yields 3-3.8%)",
+     "paraphrase": "2025 asking-rent ranges"
+    },
+    {
+     "source_id": "src_b7cebe51353e",
+     "locator": "rent prices section (studios 12,000-16,000; 1BR 15,000-22,000; 2BR 28,000-40,000; Ideo Q example 18,000)",
+     "paraphrase": "2026 guide ranges"
+    },
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "listings page averages (1BR 25,600/1,966; 2BR 40,000/847; median 25,200; 641 THB/sqm)",
+     "paraphrase": "Live listing averages"
+    },
+    {
+     "source_id": "src_bb03f936b519",
+     "locator": "search summary (The Line Ratchathewi avg asking rent ~22,000/mo)",
+     "paraphrase": "Snippet-only corroboration of project-level asking rents"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No signed-contract or catchment-specific rent data found",
+    "DDproperty figure is snippet-only corroboration"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c08",
+   "text_en": "The unit's transport stack is denser than its single BTS line suggests: BTS Ratchathewi at the intersection; frequent bus stops immediately at the exits (OSM bus_stop nodes 19 m and 52 m from the station, incl. 'Ratchathewi Station (Exit 3)'; Rome2Rio snippets report at least ~29 buses/hour to Phaya Thai); the Saphan Hua Chang canal-boat pier ~305 m south; Airport Rail Link one stop north at Phaya Thai; and a planned MRT Orange Line interchange (~2030).",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Ratchathewi station catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "Distances from OSM nodes, not time conversions; the Rome2Rio frequency figure is snippet-only."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Specific BMTA route numbers were not verified from a body-read source."
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass highway=bus_stop and ferry_terminal results",
+     "paraphrase": "Bus stops at 19 m and 52 m; pier at 305 m"
+    },
+    {
+     "source_id": "src_262bedce284b",
+     "locator": "transport section",
+     "paraphrase": "Phaya Thai station one stop away links to the Airport Rail Link"
+    },
+    {
+     "source_id": "src_84e7fb7e57c6",
+     "locator": "search snippet",
+     "paraphrase": "Bus between BTS Ratchathewi bus stop and Phaya Thai BTS runs at least 29 times/hour (snippet-only corroboration)"
+    },
+    {
+     "source_id": "src_edb40b68d0f9",
+     "locator": "article body",
+     "paraphrase": "Planned Orange Line interchange OR08 with the western extension (~2030)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c09",
+   "text_en": "For MRT Orange Line construction the Ratchathewi intersection flyover closed the night of 15-16 January 2025, expected for about three years: two lanes on each side of Phetchaburi Road remain open, reconstruction of the flyover is planned to begin December 2026 and finish by April 2028; the Pratunam intersection flyover undergoes partial demolition from March 2026 with reopening by November 2026 (four Phetchaburi lanes kept open); the BMA flagged expected severe congestion and said work would happen mainly at night.",
+   "kind": "factual_report",
+   "topics": [
+    "construction",
+    "traffic",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Ratchathewi intersection / Phetchaburi Road",
+    "relation_to_entity": "inside",
+    "notes": "Corridor-level change directly over the unit's core intersection; the earlier full demolition of the Ratchathewi span was reported ~17 January 2025 (search snippets)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Recheck schedule ~2026-12 (reconstruction start) and ~2028-04 (flyover return)."
+   },
+   "evidence": [
+    {
+     "source_id": "src_809cf118e5ae",
+     "locator": "article body paragraphs on Ratchathewi and Pratunam flyovers, BMA congestion concern, night work",
+     "paraphrase": "Closure 15 Jan (2025), 2 lanes each side kept, reconstruction Dec 2026-Apr 2028; Pratunam partial demolition Mar-Nov 2026; BMA concerned about severe snarls"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "MRTA schedule as of Nov 2024; later slippage reported in 2026 snippets for related works"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "ratchathewi-c10",
+   "text_en": "Documented street-crime counter-evidence clusters on the Pratunam belt at/beyond the unit's west edge: an alleged bag-slashing pickpocket attempt near Pratunam (July 2023, victim's account via TikTok, unverified by police); tuk-tuk commission scams (cheap ride leading to gem/tailor shops) are a recurring tourist complaint around the Pratunam/Baiyoke hotel belt; meanwhile expat forum discussion characterizes Ratchathewi itself as safe with ordinary precautions.",
+   "kind": "reported_perception",
+   "topics": [
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Pratunam market belt",
+    "relation_to_entity": "partial",
+    "notes": "Pratunam's wholesale core lies at/beyond the unit's western edge; none of the cited incidents is documented inside the unit proper."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "No khet-level crime statistics found in English or Thai searches."
+   },
+   "evidence": [
+    {
+     "source_id": "src_eaf0e1b2770c",
+     "locator": "article body",
+     "paraphrase": "Friend's tote bag allegedly sliced open near Pratunam; passport/money/phone almost taken; posted ~31 July 2023; no police response mentioned"
+    },
+    {
+     "source_id": "src_135a30cc5596",
+     "locator": "page body",
+     "paraphrase": "Repeated visitor complaints about cleanliness and rats in Soi 5 flagged by the author"
+    },
+    {
+     "source_id": "src_84e7fb7e57c6",
+     "locator": "search snippets (Reddit r/Bangkok tuktuk_scam thread and scam guides)",
+     "paraphrase": "Tuk-tuk 40-baht-hook/400-baht-demand and gem-shop commission scams around Pratunam (snippet-level)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Expat 'safe' consensus is snippet-only and cannot be a claim's sole evidence",
+    "No incident found inside the unit itself"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c11",
+   "text_en": "Suan Pakkad Palace Museum (Wang Suan Phakkat), a group of five traditional pavilions with Thai antiques and the Lacquer Pavilion, is on Si Ayutthaya Road south of Victory Monument; its OSM polygon center (~13.75668, 100.53718) is ~810 m NNE of BTS Ratchathewi and only ~400 m from BTS Phaya Thai, so it falls outside this unit, clipped into the Phaya Thai station's catchment.",
+   "kind": "factual_report",
+   "topics": [
+    "culture",
+    "green",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suan Pakkad Palace Museum",
+    "relation_to_entity": "outside",
+    "notes": "Distance computed from OSM center and Wikipedia coordinates (13.75667, 100.53750) - both agree ~810 m; nearer-station rule assigns it to st.phaya-thai."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Museum hours 09:00-16:00 per OSM tags."
+   },
+   "evidence": [
+    {
+     "source_id": "src_e9c44e3a4de6",
+     "locator": "article body (Si Ayutthaya Road location, contents, coordinates)",
+     "paraphrase": "Located on Si Ayutthaya Road south of Victory Monument; five pavilions, Ban Chiang pottery, Lacquer Pavilion"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass leisure=garden 'wang suan phakkat' polygon",
+     "paraphrase": "Garden/museum polygon at 13.75668/100.53718"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c12",
+   "text_en": "Santiphap Park (Peace Park), an 8-acre (0.032 km2) BMA park opened 18 August 1998 between Ratchawithi and Rang Nam roads, is ~1.4-1.5 km NNE of BTS Ratchathewi (Wikipedia coords 13.7631/100.5415; OSM polygon 13.7616/100.5407) - clearly outside the 800 m catchment; it draws 2,000-3,000 visitors on working days with evening aerobics and 30+ recorded bird species.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Santiphap Park",
+    "relation_to_entity": "outside",
+    "notes": "Corrects the task lead's '~1.2 km northwest': both sources place it ~1.4-1.5 km to the NNE."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Stable; no recheck needed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_66b1411bd411",
+     "locator": "article body (location between Ratchawithi and Rang Nam, size, opening 1998, features, visitor counts)",
+     "paraphrase": "As summarized"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass way named 'suan santiphap'",
+     "paraphrase": "Park polygon centered ~1469 m from the station"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c13",
+   "text_en": "Map evidence finds no named public park inside the clipped catchment: the nearest named green spaces (Pathumwananurak Park ~850 m E, Suan Pakkad Palace gardens ~810 m N, Santiphap Park ~1.45 km NNE) all fall outside or in neighboring stations' zones, and the green polygons actually inside are small (an unnamed multi-use pitch ~210 m south measures only ~476 m2 in OSM) or private palace/hotel gardens. The identity of the app's mapped 1.0 ha park could not be confirmed; usable green inside is likely the Saen Saep canal-side walkway (~300 m south) plus small pocket spaces.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "quiet"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchathewi unit",
+    "relation_to_entity": "entire_unit",
+    "notes": "Derived from OSM/Overpass polygons and great-circle distances; the app's 1.0 ha park may be an Overture-classified polygon (school ground, temple garden or private garden) not named in OSM."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Resolvable only against the app's Overture park layer; do not assert the 1.0 ha park's identity."
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass leisure=park/garden/pitch query results and way 675098512 area calculation",
+     "paraphrase": "No named public park inside; small pitch 476 m2; named parks at 810-1469 m"
+    },
+    {
+     "source_id": "src_66b1411bd411",
+     "locator": "article body",
+     "paraphrase": "Santiphap Park is the khet's main public park but ~1.45 km away"
+    },
+    {
+     "source_id": "src_30535a266299",
+     "locator": "article body",
+     "paraphrase": "Canal (with boat service) forms the southern boundary of the khet"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Overture data not directly accessible; identity unknown",
+    "Pocket parks opened by BMA in the khet (Nov 2023 '15-minute park' at a Phetchaburi intersection, per district office posts, snippet-level) could not be located precisely"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c14",
+   "text_en": "Baiyoke Tower II, the 88-storey 309 m hotel skyscraper at 222 Ratchaprarop Road, is ~1.0 km ENE of BTS Ratchathewi (Wikipedia coordinates 13.75417/100.54056; OSM hotel node 13.75441/100.54031) - outside the 800 m catchment; the Ratchaprarop/Baiyoke hotel belt (with Airport Rail Link Ratchaprarop) belongs to a different area than this unit.",
+   "kind": "factual_report",
+   "topics": [
+    "hotels",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "building",
+    "place_name": "Baiyoke Tower II",
+    "relation_to_entity": "outside",
+    "notes": "Corrects the lead's assumption it is merely 'far north': it is ~1 km to the ENE, still within the khet (Thanon Phaya Thai khwaeng per Nominatim)."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Stable; no recheck needed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_6c851769cf57",
+     "locator": "article body (address 222 Ratchaprarop Rd, 88 storeys, 309 m, coordinates)",
+     "paraphrase": "As summarized"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Nominatim/OSM 'Baiyoke Sky Hotel' node",
+     "paraphrase": "13.75441/100.54031, Soi Ratchaprarop 3, khwaeng Thanon Phaya Thai, khet Ratchathewi"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c15",
+   "text_en": "Phetchaburi Road reads as a broad, busy east-west corridor where pedestrians are advised to use footbridges and controlled crossings rather than dashing across, and where congestion is severe enough that the BMA publicly flagged 'severe traffic snarls' when the Ratchathewi flyover came out; hotel blocks and apartment rows line the corridor between eating clusters.",
+   "kind": "reported_perception",
+   "topics": [
+    "safety",
+    "traffic",
+    "walkability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Phetchaburi Road",
+    "relation_to_entity": "inside",
+    "notes": "Corridor runs through the unit's core; the crossing advice is guidance, not an incident record."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Perception-based; no pedestrian-casualty statistics found for the corridor."
+   },
+   "evidence": [
+    {
+     "source_id": "src_1a6b606223cc",
+     "locator": "guide body (footbridges and controlled crossings on the broad busy road; corridor of small eating clusters between transport, shops, apartments and hotels)",
+     "paraphrase": "As summarized"
+    },
+    {
+     "source_id": "src_809cf118e5ae",
+     "locator": "article body (BMA concern about severe traffic snarls; Ratchathewi intersection expected to be even more congested)",
+     "paraphrase": "As summarized"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No quantitative road-safety data located in EN/TH searches"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c16",
+   "text_en": "Daily-life support inside the unit is dense but thin on anchors: OSM shows no full-service general hospital inside the clipped catchment (mapped Decha Hospital ~708 m N sits nearer to BTS Phaya Thai; the Kidney Institute hospital ~963 m is outside), with PropertyScout pointing to Rama Hospital and Phyathai 1 Hospital as district-level references (both outside the unit); a mapped gym inside is Rocky Gym (~264 m, Phaya Thai Rd side) while the nearest Virgin Active/Fitness First branches sit in Siam's clipped zone; groceries rely on 7-Elevens and a Big C Extra on Ratchaprarop (location relative to the clip unknown); condo gyms supplement (Ideo Q Ratchathewi etc.).",
+   "kind": "researcher_inference",
+   "topics": [
+    "daily_essentials",
+    "gym_sports",
+    "healthcare"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchathewi unit",
+    "relation_to_entity": "entire_unit",
+    "notes": "Hospital/gym inside-outside calls are researcher geometry from OSM centers versus station points; clinic-level healthcare inside the unit was not systematically mapped."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Recheck when Orange Line works finish (hospitals/clinics may shift access)."
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass amenity=hospital and leisure=fitness_centre results",
+     "paraphrase": "Decha Hospital 708 m (closer to Phaya Thai BTS); Rocky Gym 264 m; Virgin Active 557 m but 316 m from Siam BTS; Fitness First 721 m (Siam zone)"
+    },
+    {
+     "source_id": "src_262bedce284b",
+     "locator": "amenities section",
+     "paraphrase": "Near Rama Hospital and Phyathai 1 Hospital (district-level framing)"
+    },
+    {
+     "source_id": "src_b7cebe51353e",
+     "locator": "food & amenities section",
+     "paraphrase": "Big C Extra on Ratchaprarop Road, numerous 7-Elevens; condo gyms at Ideo Q etc."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Clinics, pharmacies and supermarkets inside the unit were not exhaustively mapped",
+    "Big C Extra's position relative to the clip boundary unknown"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "ratchathewi-c17",
+   "text_en": "New high-end supply is arriving in the district around 2025-2026: Sansiri's SHUSH Ratchathewi (32 floors, 36 ultra-luxury units) is reported ~100% complete with completion around August-September 2026 near Phaya Thai BTS, and Park Origin Ratchathewi appears among featured rental projects on FazWaz's khet page - development pressure that points toward rent increases rather than relief.",
+   "kind": "factual_report",
+   "topics": [
+    "development",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Ratchathewi khet new condo supply",
+    "relation_to_entity": "partial",
+    "notes": "SHUSH's exact plot may sit in the st.phaya-thai unit ('near Phayathai BTS' per snippet); Park Origin's position relative to the clip is unknown; treat as district-level context."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Recheck lease rates on completion ~2027-05."
+   },
+   "evidence": [
+    {
+     "source_id": "src_11d0afa11d99",
+     "locator": "featured projects list on khet rentals page",
+     "paraphrase": "Park Origin Ratchathewi listed among featured projects; 91 projects in district"
+    },
+    {
+     "source_id": "src_84e7fb7e57c6",
+     "locator": "search snippet (Sansiri progress page via search summary)",
+     "paraphrase": "SHUSH Ratchathewi ~100% built, completion ~Aug/Sep 2026 (snippet-only)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "SHUSH details rest on a snippet-only search summary",
+    "Completion dates subject to slippage"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c01",
+    "ratchathewi-c02",
+    "ratchathewi-c11",
+    "ratchathewi-c12",
+    "ratchathewi-c14",
+    "ratchathewi-c04"
+   ],
+   "notes": "Thai name Raththawi (ราชเทวี). App unit = nearest-stop catchment within 800 m straight-line of BTS Ratchathewi (N1, Sukhumvit Line) at the Ratchathewi intersection (Phetchaburi x Phaya Thai roads), 100% in Ratchathewi khet but only ~11% of the khet's area. Clipped east by st.siam and north by st.phaya-thai (both nearer stations ~670-680 m away). Inside: station+exits, Co-Co Walk (60 m), Saphan Hua Chang pier (305 m), Soi 10 night food street (~375 m NW), Rocky Gym (264 m). Partial/edge: Phetchaburi Soi 5 food street (~350-500 m E, near Siam boundary), Pantip Plaza (OSM name not found; Wikipedia says ~10-min walk; sits near the Siam clip - unknown/partial). Outside: Suan Pakkad Palace (~810 m N, Phaya Thai's zone), Santiphap Park (~1.45 km NNE), Baiyoke Tower II (~1.0 km ENE), Platinum Fashion Mall (904 m per OSM), CentralWorld/MBK/BACC (Siam unit), Nang Loeng market (Pom Prap Sattru Phai, unverified - treat unknown), Jim Thompson House (~450 m straight-line but across the canal in Pathum Wan khet and inside Siam's circle - excluded). The 13 mapped temples were not individually identified."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c03",
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c09",
+    "ratchathewi-c15"
+   ],
+   "notes": "Concrete documented experiences: (1) after-dark eating - Soi 10 vendors 18:00 to 01:00-02:00 in a lane of old shophouses; Soi 5 dinner street 16:00-23:00 described as a neighborhood street, not a tourist attraction (residents/visitors, daily); (2) station-base evenings at Co-Co Walk's inexpensive bars/restaurants popular with locals (Wikipedia), with the adjoining Hollywood Arcade no longer trading; (3) corridor daytime: hotels, apartments and small eating clusters along busy Phetchaburi Rd, with footbridge-crossing guidance for pedestrians; (4) 2025-2026 residents also live through flyover demolition congestion and night-time construction works. Office vs residential: sources document the corridor's hotel/apartment mix but do not distinguish office-block experience - not found."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c07",
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c08",
+    "ratchathewi-c02"
+   ],
+   "notes": "People value the combination the sources repeatedly name: central location one stop from Siam with a genuinely local, non-touristy street-food scene (Soi 5/Soi 10), at rents below Siam/Chidlom (16,000-30,000 vs 1-bed for newer neighbors), plus a transport stack beyond the single BTS line (bus stops at the exits, canal boat 305 m, ARL one stop north at Phaya Thai). A former resident returning to Bangkok names 'local vibes, restaurants/cafes, super well connected with BTS and Khlong Boats and good cost of living' as why they would return. Mechanism: centrality + price gap to adjacent rated areas + redundancy of transit modes."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c09",
+    "ratchathewi-c15",
+    "ratchathewi-c10",
+    "ratchathewi-c13"
+   ],
+   "notes": "Deliberate counter-evidence found: (1) three years of flyover-closure congestion at the unit's core intersection (Jan 2025 - ~Apr 2028) with BMA-flagged severe snarls and mainly-night construction; (2) Phetchaburi Rd as a broad, fast, busy corridor where crossing guidance matters; (3) petty-crime reports concentrate on the adjacent Pratunam belt (alleged bag-slashing 2023; tuk-tuk commission scams), not inside the unit; (4) repeated cleanliness/rat complaints at Soi 5 food street; (5) no named public park inside the catchment on OSM - green is thin (canal walkway, small pitches). Dead-stretches of Phetchaburi: not found documented either way. Old buildings: only indirect evidence (Hollywood Arcade defunct; Soi 10's old two-storey shophouses framed positively)."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c03",
+    "ratchathewi-c09"
+   ],
+   "notes": "Day: corridor commerce, cafes and school/office traffic (PropertyScout demographics; Superagent's sidewalk-fruit-vendor mornings). Evening: Soi 5 from 16:00, Co-Co Walk bars, Soi 10 from 18:00 running past midnight (closed Mondays). Night: night-market trading to 01:00-02:00 plus construction works scheduled at night on Phetchaburi (2025-2028). Weekday/weekend split: not documented (not found) apart from Soi 10's Monday closure. Season: only generic monsoon advice (rain gear, shelter during downpours) from the 2026 food guide; Songkran festival period is flagged for pickpocket risk on adjacent-market reports."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c02",
+    "ratchathewi-c08",
+    "ratchathewi-c04",
+    "ratchathewi-c15"
+   ],
+   "notes": "BTS Ratchathewi sits just south of the intersection; OSM maps two stairways (refs 1, 2) at the station and sources reference exits 3/4 toward Phetchaburi; a skybridge links to Asia Hotel; escalators down to Co-Co Walk. Bus stops sit 19 m and 52 m from the station ('Ratchathewi Station (Exit 3)' stop; frequency to Phaya Thai snippet-reported at 29+/hour - corroboration only). The Saen Saep boat pier is 305 m away on the canal that bounds the khet. Crossing Phetchaburi/Phaya Thai is via footbridges and controlled crossings per the 2026 guide. Airport Rail Link is one BTS stop north at Phaya Thai. No radius-to-time conversions used; only source-stated walk distances (e.g., Soi 5 '6-minute walk (510 m)' per Visit Thailand Today; Pantip '~10-minute walk' per Wikipedia BTS article)."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c16",
+    "ratchathewi-c03"
+   ],
+   "notes": "Groceries: 7-Elevens described as numerous; Big C Extra on Ratchaprarop (position vs clip unknown); no large supermarket confirmed inside the unit. Ordinary food: Soi 5 (daily dinner street, 25-30 baht rice boxes) and Soi 10 (night street to 01:00-02:00) plus corridor eating clusters; PropertyScout adds district eateries (Mandalay Food House, Mono Cafe, Buttery Cafe). Healthcare: no full-service hospital inside the unit on OSM (Decha Hospital 708 m falls in Phaya Thai's zone; Rama/Phyathai 1 named at district level, outside). Gyms: Rocky Gym ~264 m inside; Virgin Active/Fitness First mapped but in Siam's clipped zone; condo gyms (Ideo Q etc.). Co-working: not found in any body-read source (not_found); PropertyScout mentions digital nomads generally."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c07",
+    "ratchathewi-c17"
+   ],
+   "notes": "Housing stock: mid-2010s high-rise condos near the BTS (Ideo Q Ratchathewi, The Line Ratchathewi, Pyne by Sansiri, The Address Siam-Ratchathewi, Villa Ratchatewi, Condolette Ize, Conner Ratchathewi) plus older low-rise; sample characterized as khet-wide listing data. Independent evidence vs app 21,500/38,000: PropertyScout 2025 (1BR 16-30k; 2BR 30-55k), Superagent 2026 (1BR 15-22k; 2BR 28-40k), FazWaz live listings (1BR avg 25.6k, n=1,966; 2BR 40k, n=847; median 25.2k; 641 THB/sqm). The app's numbers are inside every range and modestly below FazWaz asking averages - 'moderate affordability' (rent 6) is consistent; these are asking, not signed, rents, and the khet-wide samples include cheaper Makkasan fringe stock. Period: 2025-2026 data."
+  },
+  {
+   "id": "Q09",
+   "status": "conflicting",
+   "claim_ids": [
+    "ratchathewi-c13",
+    "ratchathewi-c12",
+    "ratchathewi-c11",
+    "ratchathewi-c04"
+   ],
+   "notes": "The 1.0 ha mapped park could not be identified: OSM shows no named public park inside the clipped catchment, and named candidates all fall outside (Suan Pakkad gardens ~810 m N in Phaya Thai's zone; Pathumwananurak ~850 m E in Siam's; Santiphap ~1.45 km NNE). The only sizable inside polygon checked measures 476 m2. Santiphap Park - honestly checked - is ~1.4-1.5 km NNE (not 1.2 km NW), outside the catchment and beyond even Phaya Thai's circle. Usable green inside is therefore the Saen Saep canal-side walkway (~300 m), small pitches and pocket spaces; BMA '15-minute park' additions in the khet (Nov 2023, district-office posts, snippet-level) could not be pinned to the unit. Green 8 with a 1.0 ha park mapped is in tension with the map evidence: status conflicting until the Overture park layer is checked."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c07",
+    "ratchathewi-c08",
+    "ratchathewi-c13",
+    "ratchathewi-c15",
+    "ratchathewi-c09"
+   ],
+   "notes": "Fits: budget-conscious young professionals, grad students near Mahidol/Chulalongkorn, car-free airport commuters (ARL one stop north), and anyone prioritizing street food over mall dining; also fits people who want Siam's amenities one stop away without Siam rents. Poor fits: households wanting leafy quiet or large green space (no named park inside; 'urban and dense' per Superagent's own cons), families needing international-school proximity (flagged as a gap), light sleepers during 2025-2028 construction nights, and anyone unwilling to cross heavy arterials on foot."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c09",
+    "ratchathewi-c17",
+    "ratchathewi-c03"
+   ],
+   "notes": "Dated changes: Ratchathewi intersection flyover closed night of 15-16 Jan 2025 for Orange Line works, reconstruction planned Dec 2026-Apr 2028, two lanes each side of Phetchaburi kept open; Pratunam flyover partial demolition Mar 2026, reopen by Nov 2026; MRT Orange Line interchange OR08 targeted ~2030. Development: SHUSH Ratchathewi (Sansiri, 36 ultra-luxury units) ~complete around Aug-Sep 2026; Park Origin Ratchathewi actively listed for rent. Retail churn: Hollywood Arcade adjacent to Co-Co Walk no longer operates as retail; Asia Hotel 'formerly home to the Calypso Cabaret show' (dates unknown). BMA opened '15-minute park' spaces in the khet in Nov 2023 (rooftop park at Phoenix Pratunam; a Phetchaburi-intersection pocket park on 20 Nov 2023 - district-office Facebook, snippet-level, exact positions unverified)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "ratchathewi-c13",
+    "ratchathewi-c10",
+    "ratchathewi-c08",
+    "ratchathewi-c15",
+    "ratchathewi-c09"
+   ],
+   "notes": "Safety 5 basis: no body-read evidence of a violent-crime or scam pattern specific to the unit was found; documented negatives are traffic/road environment, adjacent-Pratunam petty theft, construction disruption and Soi 5 cleanliness complaints. The score's basis remains unexplained - flag as outside-the-score unknown; single incidents (e.g., the 2023 alleged bag slashing) must not become the label. Transport 10 with one line is mechanistically supported: bus stops at the exits, canal boat 305 m, ARL one stop, future Orange Line interchange - redundancy, not line count. What vibe 10 can mask: three years of flyover-closure congestion and night construction, thin inside green, and a 'local' feel that concentrates in specific sois (Soi 5/10, Co-Co Walk) rather than the whole unit. The 1.0 ha park's identity is unresolved and green 8 rests on unverifiable mapping."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "One BTS stop west of Siam's malls, Ratchathewi trades polish for proximity: dinner streets that open at 16:00 and 18:00 in old shophouse lanes, a canal-boat pier 305 m from the ticket gates, and asking rents several thousand baht below the neighboring rated areas - offset by a flyoverless intersection and three years of Orange Line construction works.",
+   "claim_ids": [
+    "ratchathewi-c01",
+    "ratchathewi-c02",
+    "ratchathewi-c03",
+    "ratchathewi-c04",
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c07",
+    "ratchathewi-c08",
+    "ratchathewi-c09",
+    "ratchathewi-c10",
+    "ratchathewi-c11",
+    "ratchathewi-c13",
+    "ratchathewi-c15",
+    "ratchathewi-c16"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Ratchathewi is the point where the Sukhumvit line's tourist Bangkok thins out into a district of Phetchaburi Road apartments, hotel rows and neighborhood eating streets. The station sits just south of the Ratchathewi intersection; escalators drop onto Co-Co Walk's inexpensive bars, a skybridge reaches the Asia Hotel, and the Saen Saep express boat leaves from a pier 305 m away toward Pratunam and the Golden Mount. Two food streets anchor the evenings: Soi 5 (16:00-23:00, rice boxes at 25-30 baht) and Soi 10 (18:00 until 01:00-02:00, closed Mondays) in lanes of old two-storey shophouses. Independent 2025-2026 rent data brackets the app's 21,500/38,000 THB figures, below neighboring Siam. The tradeoffs are concrete: no named public park inside the catchment on the maps we checked, a broad arterial to cross on footbridges, and the intersection's flyover gone since January 2025 for the MRT Orange Line, due back around 2028.",
+   "claim_ids": [
+    "ratchathewi-c01",
+    "ratchathewi-c02",
+    "ratchathewi-c03",
+    "ratchathewi-c04",
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c07",
+    "ratchathewi-c08",
+    "ratchathewi-c09",
+    "ratchathewi-c10",
+    "ratchathewi-c11",
+    "ratchathewi-c13",
+    "ratchathewi-c15",
+    "ratchathewi-c16"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Transport stack exceeds the single BTS line: bus stops at the exits (19-52 m), canal boat pier at 305 m, Airport Rail Link one stop north, planned Orange Line interchange ~2030",
+    "claim_ids": [
+     "ratchathewi-c02",
+     "ratchathewi-c08"
+    ]
+   },
+   {
+    "text_en": "Distinctly local food streets with documented hours and prices: Soi 5 dinner street 16:00-23:00, Soi 10 night market to 01:00-02:00",
+    "claim_ids": [
+     "ratchathewi-c05",
+     "ratchathewi-c06"
+    ]
+   },
+   {
+    "text_en": "Rents consistently bracketed below neighboring rated areas by three independent 2025-2026 datasets",
+    "claim_ids": [
+     "ratchathewi-c07"
+    ]
+   },
+   {
+    "text_en": "Station-base nightlife for locals rather than tourists at Co-Co Walk",
+    "claim_ids": [
+     "ratchathewi-c03"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Flyover demolition at the core intersection from January 2025, reconstruction due by April 2028, with BMA-flagged congestion and mainly-night works",
+    "claim_ids": [
+     "ratchathewi-c09"
+    ]
+   },
+   {
+    "text_en": "No named public park inside the clipped catchment on OSM; the app's 1.0 ha park is unverified and nearest named parks sit 810 m-1.45 km out",
+    "claim_ids": [
+     "ratchathewi-c13"
+    ]
+   },
+   {
+    "text_en": "Phetchaburi Road is a broad, busy arterial where crossing relies on footbridges; pedestrian-risk data not found",
+    "claim_ids": [
+     "ratchathewi-c15"
+    ]
+   },
+   {
+    "text_en": "Petty-crime complaints (alleged bag-slashing, tuk-tuk commission scams) cluster on the adjacent Pratunam belt, not inside the unit",
+    "claim_ids": [
+     "ratchathewi-c10"
+    ]
+   },
+   {
+    "text_en": "Repeated cleanliness/rat complaints at Soi 5 food street, per its own reviewers",
+    "claim_ids": [
+     "ratchathewi-c05"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime: corridor commerce and apartment/hotel rows between small eating clusters on Phetchaburi Road",
+    "claim_ids": [
+     "ratchathewi-c15"
+    ]
+   },
+   {
+    "text_en": "Evening from 16:00: Soi 5 dinner street; Co-Co Walk bars at the station base",
+    "claim_ids": [
+     "ratchathewi-c05",
+     "ratchathewi-c03"
+    ]
+   },
+   {
+    "text_en": "Late night: Soi 10 trades to 01:00-02:00 (Mondays off), while night construction works run on the corridor through ~2028",
+    "claim_ids": [
+     "ratchathewi-c06",
+     "ratchathewi-c09"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Station core: densest mix - exits, skybridge hotel, Co-Co Walk, bus stops, pier within 305 m",
+    "claim_ids": [
+     "ratchathewi-c02",
+     "ratchathewi-c03",
+     "ratchathewi-c04",
+     "ratchathewi-c08"
+    ]
+   },
+   {
+    "text_en": "West/Soi 10 side: old shophouse lanes with the after-dark food market, quieter by day",
+    "claim_ids": [
+     "ratchathewi-c06"
+    ]
+   },
+   {
+    "text_en": "East edge toward Siam: eating clusters thin out and the clip hands ground to the Siam unit (Pantip Plaza and Platinum Mall sit at/beyond the boundary)",
+    "claim_ids": [
+     "ratchathewi-c01"
+    ]
+   },
+   {
+    "text_en": "North edge: hospitals, Phyathai-side development and Suan Pakkad Palace fall into the Phaya Thai unit, not this one",
+    "claim_ids": [
+     "ratchathewi-c11",
+     "ratchathewi-c16"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Good for car-free commuters: BTS plus boat plus buses plus ARL one stop north",
+    "claim_ids": [
+     "ratchathewi-c08"
+    ]
+   },
+   {
+    "text_en": "Good for budget-conscious professionals and grad students priced out of Siam",
+    "claim_ids": [
+     "ratchathewi-c07"
+    ]
+   },
+   {
+    "text_en": "Poor for green-space seekers: no named park inside; canal walkway and small pitches are the usable green",
+    "claim_ids": [
+     "ratchathewi-c13"
+    ]
+   },
+   {
+    "text_en": "Poor for light sleepers until ~2028: night construction works and intersection congestion",
+    "claim_ids": [
+     "ratchathewi-c09"
+    ]
+   },
+   {
+    "text_en": "Weak for families needing international schools or hospital access inside the unit",
+    "claim_ids": [
+     "ratchathewi-c16"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The identity of the app's 1.0 ha park is unresolved; OSM shows no named public park inside the clipped unit (ratchathewi-c13)",
+   "The basis for safety 5 is unexplained: no unit-specific crime pattern found in EN/TH searches; adjacent-Pratunam incidents should not be inherited as a label (ratchathewi-c10)",
+   "Bus frequency (29+/hour) and SHUSH Ratchathewi completion rest on snippet-only sources (ratchathewi-c08, ratchathewi-c17)",
+   "Inside/partial status of Soi 5 and Pantip Plaza depends on the app's exact clip geometry and could not be settled (ratchathewi-c05)",
+   "Reddit comment sentiment was inaccessible; the resident-experience record rests on one post body plus search summaries (ratchathewi-c10 context, source 13)"
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md + coordinator geometry pass 2026-11-07).",
+   "open issue: Identify the app's 1.0 ha park against the Overture parks layer; OSM has no named public park inside the clipped catchment (closest candidates: Pathumwananurak ~850 m, Suan Pakkad gardens ~810 m, Santiphap ~1.45 km).",
+   "open issue: Safety 5 basis undocumented: no khet-level crime statistics or incident cluster inside the unit found; recommend pulling BMA/Royal Thai Police stats or app methodology before editing the score.",
+   "open issue: Reddit comment bodies inaccessible (403/blocked on web fetch, .json API, old.reddit); expat-perception claims rely on one post body (source 13) and search-summary corroboration.",
+   "open issue: Agoda 'Ratchathewi 48-hour foodie adventure' returned an empty body (canonical URL https://www.agoda.com/travel-guides/thailand/bangkok/discover-ratchathewi-48-hour-foodie-adventure-in-bangkok); not used.",
+   "open issue: Soi 5 food street and Pantip Plaza inside/partial status unresolved pending the app's clip geometry (both near the ~335 m east boundary with st.siam).",
+   "open issue: BMTA bus route numbers serving the intersection not verified from a body-read source; only stop locations (OSM) and one snippet frequency figure.",
+   "open issue: Santiphap Park distance corrected to ~1.4-1.5 km NNE (task lead said ~1.2 km NW); Baiyoke Tower II located ~1.0 km ENE, not merely 'far north' - both outside the unit.",
+   "open issue: 13 mapped temples and 224 food places not individually verified; Nang Loeng market location (Pom Prap Sattru Phai) unverified.",
+   "open issue: Overpass POST endpoint returned 406 on first attempts; all OSM figures come from successful GET queries on 2026-11-07 (base timestamp 2026-11-07T13:13Z).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in guide items (preview/lead clean). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

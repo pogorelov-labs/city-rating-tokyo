@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "observed_date": "2026-11-05",
+  "repo_url": "https://github.com/pogorelov-labs/city-rating-tokyo.git",
+  "sender_root": "/Users/ruslan/.codex/worktrees/bangkok-filters/city-rating",
+  "sender_branch": "fix/bangkok-inspection-correctness",
+  "sender_head": "72cfa5d0db0c1e5c0677e3188fd37a824d8019f8",
+  "protected_local_state": "M01–M09 includes staged/unstaged/untracked work; branch or HEAD does not capture it. No application edits authorized for this research task.",
+  "recipient_workspace_and_tools": "unverified; recipient must locate and qualify its own workspace and browser",
+  "data_files": [
+    {
+      "path": "packages/schema/constants.json",
+      "sha256": "7e543bec3e952022b5eaee0c97ee151b996ce72c2f0ed89692c8732f327fa716",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/districts.json",
+      "sha256": "2df7cb309aea13820c6c0edefbd4e50ecc1fa5d0ce3b0587e72466abb71727b3",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/stations.json",
+      "sha256": "3647b260b699aa5511d4d8da3dfecb71d03790ebf13d129fde0462bba744504f",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/rail.json",
+      "sha256": "7b88268788363480ceb56c625a40013725c7ad34178a4f24ff05e8d5b6df8c9c",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/geometry.json",
+      "sha256": "1cfd9ccb9afbe662b7ba9cd36a729778b9cac2a14f70364664f576be840adb43",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/station-geometry.json",
+      "sha256": "fe5329fe983fd59b072494a0fdfdea41cc76523ef79cb902bfc9e626789ad0fb",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/bangkok/grid.json",
+      "sha256": "02304cdfacbc8bc9d53b7c80dea7c6220586789c8a1a87eb6bdbdf5bca323987",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/data/area-guide-copy.json",
+      "sha256": "cc0ea33959013f3d3224bd57ba83ab0418b9713d9095300f8986cc62f2d81927",
+      "tracked_content_differs_from_sender_head": false
+    },
+    {
+      "path": "app/src/lib/bangkok-data.ts",
+      "sha256": "cc9406336bb84198082fcd5bb529850fbd3924dc8efb6481d77b9d4fe68510ab",
+      "tracked_content_differs_from_sender_head": false
+    }
+  ],
+  "env_presence_only": {
+    ".env": false,
+    ".env.local": false,
+    "app/.env": false,
+    "app/.env.local": false
+  },
+  "weights": {
+    "transport": 18,
+    "rent": 18,
+    "daily_essentials": 14,
+    "safety": 10,
+    "food": 12,
+    "green": 8,
+    "gym_sports": 4,
+    "vibe": 4,
+    "nightlife": 8,
+    "crowd": 4
+  },
+  "score_method": "sum(weight[k] * published_rating[k]) / sum(weights); no filters; raw model score; rank only within the same entity cohort",
+  "existing_copy_key_pattern": "bangkok:station:<area-id> or bangkok:district:<district-slug>; currently EN/JA/RU plain strings; do not overwrite automatically",
+  "image_integration": "District images live on district records; station area image.thumb lives in stations.json and is read by getBangkokStationAreaThumbnails. Global station-thumbnails/station-images-all include many Tokyo entries and are not a universal Bangkok area registry.",
+  "snapshot_id": "bkk-d6499618507e7561"
+}

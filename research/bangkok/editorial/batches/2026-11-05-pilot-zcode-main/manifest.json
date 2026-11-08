@@ -1,0 +1,142 @@
+{
+ "batch_id": "2026-11-05-pilot-zcode-main",
+ "created_at": "2026-11-04T23:55:18Z",
+ "task": "Bangkok six-place editorial pilot (research only; no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "repository": {
+  "verified_url": "https://github.com/pogorelov-labs/city-rating-tokyo.git",
+  "verified_root": "/Users/ruslan/msc_1/git/city-rating",
+  "receiver_head": "894324a48ab236780c285e21b0c68eb8894b9292",
+  "sender_head": "72cfa5d0db0c1e5c0677e3188fd37a824d8019f8",
+  "sender_branch": "fix/bangkok-inspection-correctness",
+  "data_files_identical_across_revisions": true
+ },
+ "data_snapshot": {
+  "snapshot_id": "bkk-d6499618507e7561",
+  "digests_verified": true,
+  "digest_source": "sender source-manifest.json (all 9 files matched SHA-256 in receiver clean checkout)"
+ },
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "score_method": "sum(weight[k] * published_rating[k]) / sum(weights); no filters; raw model score; rank only within the same entity cohort",
+ "popularity": "unmeasured citywide; per-bundle coverage logs only",
+ "selection_method": "Sender-defined six-place pilot order (priority-seed.json pilot_order 1–6); a research decision, not a proven popularity ranking",
+ "researcher": "zcode-main (ZCode orchestrator, GLM-5.3-Flash) with six parallel research subagents",
+ "tool_and_access_limits": [
+  "Overpass API blocked from this environment (406/TLS reset/timeouts) — POI ground-truth gap for some geography checks",
+  "Reddit r/Bangkok and TripAdvisor threads returned 403 — resident-voice evidence thinner than ideal on several entities",
+  "Bangkok Post and some paywalled news (SCMP beyond lede) not used; no paywall bypass or proxy mirrors",
+  "BMA portal pages (webportal.bangkok.go.th, visit.bangkok.go.th, dp.bangkok.go.th direct) 403; recovered via alternate access where possible",
+  "WebFetch/exa concurrency limits caused retries; subagent platform concurrency limited dispatch batches"
+ ],
+ "entities": [
+  {
+   "key": "st.asok",
+   "kind": "station_area",
+   "profile": "profiles/st.asok.json",
+   "brief": "briefs/st.asok.md",
+   "sources": 10,
+   "claims": 19,
+   "model_score_default": 7.68,
+   "cohort_rank": 11,
+   "cohort_size": 133,
+   "review_status": "approved"
+  },
+  {
+   "key": "st.chong-nonsi",
+   "kind": "station_area",
+   "profile": "profiles/st.chong-nonsi.json",
+   "brief": "briefs/st.chong-nonsi.md",
+   "sources": 22,
+   "claims": 18,
+   "model_score_default": 8.0,
+   "cohort_rank": 1,
+   "cohort_size": 133,
+   "review_status": "approved"
+  },
+  {
+   "key": "samphanthawong",
+   "kind": "district",
+   "profile": "profiles/samphanthawong.json",
+   "brief": "briefs/samphanthawong.md",
+   "sources": 17,
+   "claims": 18,
+   "model_score_default": 8.56,
+   "cohort_rank": 1,
+   "cohort_size": 50,
+   "review_status": "approved"
+  },
+  {
+   "key": "bang-rak",
+   "kind": "district",
+   "profile": "profiles/bang-rak.json",
+   "brief": "briefs/bang-rak.md",
+   "sources": 22,
+   "claims": 18,
+   "model_score_default": 8.3,
+   "cohort_rank": 2,
+   "cohort_size": 50,
+   "review_status": "approved"
+  },
+  {
+   "key": "st.thong-lo",
+   "kind": "station_area",
+   "profile": "profiles/st.thong-lo.json",
+   "brief": "briefs/st.thong-lo.md",
+   "sources": 17,
+   "claims": 19,
+   "model_score_default": 6.46,
+   "cohort_rank": 51,
+   "cohort_size": 133,
+   "review_status": "approved"
+  },
+  {
+   "key": "st.ari",
+   "kind": "station_area",
+   "profile": "profiles/st.ari.json",
+   "brief": "briefs/st.ari.md",
+   "sources": 10,
+   "claims": 20,
+   "model_score_default": 7.28,
+   "cohort_rank": 29,
+   "cohort_size": 133,
+   "review_status": "approved"
+  }
+ ],
+ "validation": {
+  "schema": "entity-research.schema.json",
+  "profiles_validated": 6
+ },
+ "live_app_data_changed": false,
+ "canonical_family_relabel": {
+  "date": "2026-11-08",
+  "rule": "kit/canonical.py v1 (B-10/G21)",
+  "relabeled": 0,
+  "limitations_repairs": 0,
+  "note": "corroboration recomputed over canonical publisher families; per-claim ledger in 2026-11-08-canonical-relabel-log.jsonl"
+ },
+ "updated_at": "2026-11-08T00:00:00Z",
+ "research_started_at": "2026-11-04T22:17:48Z",
+ "research_completed_at": "2026-11-04T23:49:58Z",
+ "research_time_basis": "raw-write-mtimes",
+ "review": {
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "status": {
+   "approved": 6,
+   "blocked": 0
+  },
+  "report": "research/bangkok/editorial/2026-11-08-independent-review.md",
+  "note": "Agent review, not the human signatory (DEC-2 open)."
+ }
+}

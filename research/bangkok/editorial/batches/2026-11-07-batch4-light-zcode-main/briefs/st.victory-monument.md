@@ -1,0 +1,95 @@
+# Victory Monument (st.victory-monument) — research brief
+
+**Derived view** of `profiles/st.victory-monument.json` (authoritative bundle), batch `zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07` era output. Status: **ready_for_review** — not independently approved. Drafted in English only; no translations manufactured.
+
+- **Unit:** Station area (nearest-stop catchment, Voronoi ∩ 800 m disc). Aliases: —
+- **Scope:** Nearest-stop catchment (Voronoi ∩ 800 m) around victory-monument [bts_sukhumvit]; districts: ratchathewi, phaya-thai. Boundary claims are decided by the app polygons (coordinator checks apply).
+- **App score context:** model 7.44 (display rounded), cohort rank 22 of 133, snapshot `bkk-d6499618507e7561`. Public popularity: **unmeasured** — No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.
+- **Selection rationale:** Tier B (light pass): station-area rank 22/133, score 7.44.
+
+## Card preview (proposed)
+> Bangkok's surface-transit crossroads turned building site: four traffic islands around the 1941 monument are being rebuilt for the first time in 20 years (skywalk phase 1 due October 2026), boat-noodle alley still anchors the food scene, Santiphap Park's 3.2 ha of leased Crown land sits ~400 m from the BTS — and the khet line under the roundabout is genuinely contested.
+
+## Guide lead (proposed)
+Victory Monument is the city's great bus-van-BTS interchange: more than 4,500 bus trips a day through four islands that a 2025-2026 BMA programme is reorganising around how people actually move (destination-clustered stops, doubled crosswalks, a 1,300 m Rajavithi skywalk reaching the BTS, phase 1 opening October 2026). Food runs deep — the area tops a well-known street-food list on the strength of its boat-noodle alleys, with Rangnam Road's evening row beside it — and rents sit mid-corridor (doorstep listings 20,000-42,000 baht against the app's 18,000/38,000 blend). The frictions are equally documented: a renovation that could stall half-funded on two of the four islands, dangerous island-to-island crossings in the interim, a modest 3.2 ha green space as the only real park, and a district attribution (Ratchathewi in the encyclopedias and district portal; phaya-thai in the app polygon) that the coordinator must settle.
+
+## Strengths
+- Transit depth few units match: BTS N3 with a skybridge circling the monument, 4,500+ daily bus trips, provincial van connections, and a 1,300 m covered skywalk wired into the station from October 2026. *[`victory-monument-c01`, `victory-monument-c04`, `victory-monument-c06`]*
+- Street-food standing: first among a noted guide's 16 Bangkok 'street food sanctuaries' for the boat-noodle alleys, with Rangnam Road ranked separately — density the app's 305-venue count reflects in direction. *[`victory-monument-c09`]*
+
+## Trade-offs
+- Construction-era friction with an uncertain ending: the 46.5-million-baht works for the Phaya Thai and Din Daeng islands faced council budget cuts in September 2025, and interim conditions include unsafe island crossings and unsheltered waits. *[`victory-monument-c07`]*
+- Green is one modest park: Santiphap's 3.2 ha (leased Crown land, 05:00-21:00) plus unnamed island gardens — real, but thin for a green-8 claim, and the app's parcel identity needs polygon confirmation. *[`victory-monument-c08`]*
+
+## Day / night
+- The islands run on shifted peaks — Ratchawithi swells before work, Phahonyothin in the early evening, Din Daeng at midday — while Rangnam's street-food row takes over after dark; protest-era evening gatherings were a recurring feature through 2022. *[`victory-monument-c12`, `victory-monument-c09`, `victory-monument-c02`]*
+
+## Within-area variation
+- The monument-side blocks (islands, boat-noodle lanes, medical-district edge) are loud and perpetual-motion; the Rangnam and Phetchaburi-side sois calm within a block or two, where the expat-favoured cafes and residential stock sit. *[`victory-monument-c09`, `victory-monument-c11`, `victory-monument-c10`]*
+
+## Conditional fit
+- Fit for car-free commuters and van-transfer travellers, street-food-first residents, and hospital-district workers who will benefit directly from the skywalk. *[`victory-monument-c04`, `victory-monument-c09`, `victory-monument-c11`]*
+- Poor fit for quiet-seeking renters, drivers, and anyone needing construction-timeline certainty while the island rebuilds complete (or stall). *[`victory-monument-c05`, `victory-monument-c07`]*
+
+## Explicit unknowns
+- Khet attribution: Ratchathewi (both Wikipedia articles; district portal) vs the app polygon's phaya-thai assignment — unresolved by design, coordinator verifies (victory-monument-c03).
+- App anchor 13.7699 matches neither the OSM monument node (13.7649) nor the BTS station node (13.7628) — likely a unit centroid; reconcile (victory-monument-c01).
+- Safety 6 and crowd 2 have no unit-specific measurement in any read source; the crowd direction is ambiguous for a hub this busy (victory-monument-c12).
+- Bus-stop closure (25 Dec 2025) and eight-hospital count rest on snippet-only sources after fetch failures (victory-monument-c06, c11).
+- October 2026 skywalk opening is a target that has slipped before; re-check on publication.
+
+## Question coverage
+- **Q01 — answered**: BTS N3 (1999) above Phaya Thai Rd just south of the 1941-42 monument roundabout; monument node ~280 m from station node in OSM.
+- **Q02 — answered**: Bus/van/BTS mega-interchange wrapped around a street-food landmark; island-by-island time-of-day pattern measured.
+- **Q03 — answered**: DE 9 traces to boat-noodle alley + Rangnam row + medical-district demand; rents mid-corridor.
+- **Q04 — answered**: Counter-evidence: half-funded renovation risk, documented pedestrian danger, no safety-score support found.
+- **Q05 — answered**: Island-level peak timing: Ratchawithi mornings, Phahonyothin evenings, Din Daeng midday.
+- **Q06 — answered**: Skybridge circles the monument; 1,300 m Rajavithi skywalk phase 1 opening Oct 2026; Santiphap ~415 m straight-line. No radius-to-time conversions by this agent (guide-reported walk figures only).
+- **Q07 — answered**: Daily life = interchange work + medical-district traffic + street food; >4,500 bus trips/day.
+- **Q08 — answered**: Doorstep THB listings 20,000-42,000; district blend 18,000/38,000 plausible at lower-middle of the corridor.
+- **Q09 — answered**: Named green: Santiphap Park 3.2 ha (8 acres), ~415 m from the node, plus island gardens; app's 3.5 ha most plausibly this parcel — confirm; green 8 credible for the catchment but modest in absolute area.
+- **Q10 — answered**: Fit for car-free commuters, food-first residents, hospital-adjacent workers; poor fit for quiet-seeking renters and drivers.
+- **Q11 — answered**: 2025-2026: biggest renovation in 20 years, phase-1 skywalk opening Oct 2026, Dec 2025 bus-stop rebuilds — with a live budget-cut risk on two islands.
+- **Q12 — conflicting**: Khet attribution conflict (Ratchathewi per Wikipedia + district portal vs app's phaya-thai polygon); anchor mismatch (13.7699 vs monument node 13.7649 / station node 13.7628); safety 6 and crowd 2 unverified.
+
+## Evidence base
+
+| Source | Publisher (family) | Type | Published | Read |
+| --- | --- | --- | --- | --- |
+| [Victory Monument BTS station](https://en.wikipedia.org/wiki/Victory_Monument_BTS_station) | Wikipedia (English) (Wikipedia) | other | — | yes |
+| [Victory Monument (Bangkok)](https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)) | Wikipedia (English) (Wikipedia) | other | — | yes |
+| [แผนปรับปรุงอนุสาวรีย์ชัยในวาระครบ 84 ปี](https://readthecloud.com/social/public-space/victory-monument-renovation/) | Read the Cloud (Read the Cloud) | editorial_guide | 2025-06-27 | yes |
+| [ปรับโฉมใหญ่รอบ 20 ปี กทม. เตรียมเปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้](https://www.thansettakij.com/general-news/667739) | Thansettakij (Thansettakij (Nation group)) | news | 2026-08-30 | yes |
+| [ห่วง สก.ปัดตกงบปรับปรุงอนุสาวรีย์ชัยฯ เกาะพญาไท-เกาะดินแดง](https://themomentum.co/urban-victory-monument/) | THE MOMENTUM (The Momentum) | news | 2025-09-09 | yes |
+| [เริ่มพรุ่งนี้ปิดปรับปรุง จุดจอดรถเมล์อนุสาวรีย์ชัยฯ ฝั่งพหลโยธิน–ราชวิถี (เฟส 1)](https://www.dailynews.co.th/news/5437935/) | Daily News (Daily News) | news | 2025-12-24 | partial |
+| [กทม. เดินหน้าปรับปรุงภูมิทัศน์อนุสาวรีย์ชัยฯ ครั้งใหญ่สุดรอบ 20 ปี](https://www.prd.go.th/th/content/category/detail/id/39/iid/423636) | Government Public Relations Department (PRD (Government)) | government | 2025-09-15 | partial |
+| [Santiphap Park](https://en.wikipedia.org/wiki/Santiphap_Park) | Wikipedia (English) (Wikipedia) | other | — | yes |
+| [Peace Park (Suan Santiphap) — Greener Bangkok](https://greener.bangkok.go.th/en/park/suan-santipap/) | Bangkok Metropolitan Administration (BMA) (BMA Greener Bangkok) | government | — | partial |
+| [Top 16 Bangkok Street Food Sanctuaries](https://migrationology.com/top-16-bangkok-street-food-sanctuaries) | Migrationology (Migrationology (Mark Wiens)) | editorial_guide | — | yes |
+| [Condos for rent in Ratchathewi, Bangkok — HipFlat](https://www.hipflat.com/condo-for-rent/bangkok/ratchathewi) | HipFlat (HipFlat) | commercial_property | — | yes |
+| [Phaya Thai Neighborhood Guide 2026](https://www.superagent.co/en/blog/phaya-thai-bangkok-complete-2026-expat-neighborhood-guide) | Superagent (Superagent) | expat_publication | 2026-05-04 | yes |
+| [OpenStreetMap Overpass queries: stations, monument node, parks/gardens within 700-850 m…](https://overpass-api.de/api/interpreter) | OpenStreetMap (Overpass API) (OpenStreetMap) | other | — | yes |
+
+## Claim index
+
+- `victory-monument-c01` **[corroborated·neutral·inside]** BTS Victory Monument (N3) is an elevated Sukhumvit Line station opened 5 December 1999 above Phaya Thai Road, listed in Ratchathewi district, south of the Victory Monument itself (13.7627444 N, 100.5370861 E per the article; OSM node 13.76276, 100.53705), between Sanam Pao and Phaya Thai, with 4,193,569 passengers in 2021. A skybridge links the station to all four corners of the traffic circle. _(scope: station_area — Victory Monument BTS)_
+- `victory-monument-c02` **[corroborated·neutral·inside]** The monument the unit is named for: erected 1941-42 to commemorate the Franco-Thai War, designed by M.L. Pum Malakul with bronzes by Corrado Feroci (Silpa Bhirasri), a roughly 50 m bayonet arrangement standing where Phahonyothin (kilometre 0), Phaya Thai, Ratchawithi and Din Daeng roads converge; the Ratchathewi district office's own page carries the monument's history. The English Wikipedia article places it in Ratchathewi district, and the area has been a recurring protest site (2020-21 gatherings including ~10,000 in October 2020; a ~500-person Thalufah protest in October 2022). _(scope: venue — Victory Monument roundabout)_
+- `victory-monument-c03` **[conflicted·neutral·entire_unit]** Khet (district) attribution is genuinely conflicting for this unit: the English Wikipedia articles for both the station and the monument place them in Ratchathewi district, and the Ratchathewi district office claims the monument on its own portal — but the app's batch-2 polygon reportedly assigns the monument to the phaya-thai khet, and a popular food guide loosely calls the area 'Dusit/Phaya Thai'. Both the station and the Santiphap Park sit in khwaeng-level liminal ground (the BMA park directory lists Peace Park under Phaya Thai sub-district, Ratchathewi district). Resolution belongs to the app's polygon; research records the conflict rather than resolving it. _(scope: station_area — Victory Monument area)_
+- `victory-monument-c04` **[corroborated·strength·entire_unit]** This is one of Bangkok's great surface-transit hubs: the station article calls the area one of the largest BMTA bus stops in the city with a large van terminal for suburban/provincial routes nearby, and the urbanism coverage counts more than 4,500 bus trips per day and tens of thousands of daily users across four traffic islands (Phahonyothin, Ratchawithi, Phaya Thai, Din Daeng) at the junction of four major roads. Interprovincial vans were moved out to dedicated terminals in 2016 (about 4,200 vans city-wide), leaving urban/suburban minibus groups on the islands. _(scope: station_area — Victory Monument interchange)_
+- `victory-monument-c05` **[corroborated·strength·entire_unit]** The biggest change in a generation is underway: BMA's Victory Monument landscape improvement — the first major renovation in roughly 20 years, launched on the monument's 84th anniversary (24 June 2025) — reorganises the four islands around user behaviour (bus stops clustered by destination, +700 sq m of waiting/sidewalk space, crosswalks between islands doubled, motorcycle-taxi stands doubled, 60 existing trees kept and 109 new planted, universal-design slopes), designed with LANDPROCESS, PAVA architects and Urban Ally after video surveys every 30 minutes (06:00-21:00) and tracking of 100 pedestrians. _(scope: station_area — Victory Monument islands)_
+- `victory-monument-c06` **[corroborated·strength·entire_unit]** The Rajavithi Skywalk — about 1,300 m of covered walkway from the monument toward the Teuk Chai junction, connecting directly to the BTS station at the Rajavithi Hospital corner — reached 38.31% construction progress by 27 August 2026, with the first phase (Ratchawithi island + Phahonyothin island zones) due to open in early October 2026, completing the pedestrian circle that has existed as only a half-circle for over 20 years. BMA closed and began rebuilding the Phahonyothin-Ratchawithi bus stops from 25 December 2025 (Phase 1) as part of the same programme. _(scope: corridor — Rajavithi Skywalk / monument islands)_
+- `victory-monument-c07` **[proposed·tradeoff·partial]** Counter-view: the project could stall half-built. In September 2025 the BMA council was weighing cuts to the roughly 46.5 million baht allocated for the Phaya Thai and Din Daeng islands (the other two islands were already half-done), with critics arguing that cutting would leave Bangkok's premier transit hub in a 'half-and-half' state — the hub's pre-existing problems (rough pavements, no ramps, unsafe island-to-island crossings where people dodge traffic, no sheltered waiting, poor public toilets) documented in the same coverage. _(scope: station_area — Phaya Thai / Din Daeng islands)_
+- `victory-monument-c08` **[corroborated·strength·inside]** The unit's named green space is Santiphap Park ('Peace Park'): 8 acres (0.032 sq km, ~3.2 ha) between Ratchawithi and Rang Nam roads, opened 18 August 1998 on the 53rd anniversary of WWII's end, on land BMA leases from the Crown Property Bureau, with a Picasso-derived bronze dove in the central pond, Buddhadasa Bhikkhu's handwriting on the entrance signs, a 05:00-21:00 schedule and a forest-park planting concept. OSM places its centroid ~415 m from the BTS station node (straight-line, computed); the app's '3.5 ha park' is most plausibly this park, with the monument islands' unnamed gardens making up the difference. _(scope: venue — Santiphap Park)_
+- `victory-monument-c09` **[corroborated·strength·entire_unit]** Food is a headline asset: a widely read food guide ranks Victory Monument first among Bangkok's 16 'street food sanctuaries', citing the boat-noodle alley on the roundabout's northeast side (with lesser-known boat-noodle lanes northwest, and Doy Kuay Teow Reua as the author's favourite) and naming Rangnam Road — running perpendicular from the BTS — as its own sanctuary (#8) with evening stalls, an Esan vendor near the Esso station, rib noodles and Kuang Seafood at the far end. An expat guide adds that the Victory Monument side is 'busy with street vendors and foot traffic' while residential sois calm quickly. _(scope: station_area — Victory Monument / Rangnam)_
+- `victory-monument-c10` **[proposed·neutral·partial]** Rents at the unit edge: HipFlat's Ratchathewi district averages (3,140 condo listings, October 2026) run studio USD 624 / one-bedroom USD 741 / two-bedroom USD 1,133, with per-sqm rents down 3.0% year-on-year; THB-listed buildings at the monument's door include Ideo Mobi Rangnam at 20,000 baht (29 sqm one-bed), M Phayathai next to the BTS at 42,000 baht (69 sqm two-bed), and The Extro Phayathai-Rangnam at 31,000 baht (one-bed). The app's 18,000/38,000 Ratchathewi blend sits at the lower-middle of the observed corridor — plausible, since the district includes cheaper Phetchaburi-side stock beyond this unit. _(scope: district — Ratchathewi district)_
+- `victory-monument-c11` **[corroborated·neutral·partial]** The medical-district employer base is part of the unit's economy: the Rajavithi skywalk programme is explicitly framed as serving the central medical district, connecting the BTS to hospitals toward the Teuk Chai junction (the BMA releases count eight hospitals along the corridor; Rajavithi Hospital is ~550 m from a Rangnam-side condominium listing per its own blurb), and the expat guide notes nearby hospitals as 'reassuring'. The app's dining/entertainment 9 is plausibly partly a hospital-staff and patient-visitor economy, but no read source decomposes demand that way. _(scope: corridor — Rajavithi medical district)_
+- `victory-monument-c12` **[corroborated·mixed·entire_unit]** Rhythm is time-of-day specific and now measured: the design team's half-hourly island surveys found the Phahonyothin island busiest in the early evening, the Ratchawithi island busiest in the pre-work morning, and the Din Daeng island peaking at midday, with distinct movement patterns (branching spines on two islands, van-stop loops on the other two). No read source quantifies street safety or crime for this unit — the app's safety 6 has neither corroboration nor contradiction in the record, though documented pedestrian-risk complaints (running across live traffic between islands) and the monument's protest history are the closest relevant signals. _(scope: station_area — Victory Monument islands)_
+
+## Reviewer notes from the researcher
+- Researcher self-checks only; independent review still required (batch review/findings.md).
+- 6 claim(s) carry explicit recheck_by flags for volatile facts.
+- open issue: Settle the khet question with the app polygon layer (Ratchathewi vs phaya-thai) before publication copy is drafted (victory-monument-c03).
+- open issue: Confirm the app's 3.5 ha park parcel equals Santiphap Park (3.2 ha verified) and whether island-garden polygons add the rest (victory-monument-c08).
+- open issue: Find a post-September-2025 source on the BMA council's budget decision for the Phaya Thai/Din Daeng islands (victory-monument-c07).
+- open issue: Re-read the Daily News and PRD pages when accessible (403/DNS failures) to upgrade the bus-stop closure and eight-hospital claims from snippet corroboration.
+- open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); safety 6 remains unverified in either direction.

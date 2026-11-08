@@ -1,0 +1,1604 @@
+{
+ "entity_key": "st.sena-ruam",
+ "generated_at": "2026-11-07T14:58:00Z",
+ "search_log": [
+  {
+   "tool": "Overpass API",
+   "query": "railway=station within 3500 m of 13.78594,100.54686",
+   "status": "ok",
+   "note": "20 stations; none at/near the app point; app coords for ari/saphan-khwai/mo-chit match OSM to 5 dp. First attempt without a User-Agent header returned HTTP 406; retry with UA succeeded."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "railway=station within 2200 m of 13.8364,100.5736 (app 'sena-nikhom')",
+   "status": "ok",
+   "note": "Extension stations mapped as Phahonyothin 24 / Ratchayothin / Sena Nikhom / Kasetsart University / Royal Forest Department — no 'Sena Ruam'."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "ways named เสนาร่วม|Sena Ruam in bbox 13.775,100.535,13.85,100.585",
+   "status": "ok",
+   "note": "Single way 'ซอยเสนาร่วม' (tertiary), centroid 13.78843,100.54235 — west of Phahonyothin between Ari and Saphan Khwai."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "amenities/leisure/shops within 800 m of center",
+   "status": "ok",
+   "note": "323 elements: 11 bars, 38 cafes, 84 restaurants, 3 hospitals, 1 named park, 3 malls, 5 supermarkets."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "leisure=park|garden within 800 m, out geom (area computation)",
+   "status": "ok",
+   "note": "Two attempts returned HTTP 502 (server at capacity); third attempt after backoff returned the single named park (PRD, 1.95 ha)."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "admin boundary relations containing the center point (around:1)",
+   "status": "ok",
+   "note": "Empty result — the khwaeng boundary runs along the Phahonyothin centerline, so the point sits on a line."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "admin relations admin_level 6/8 in bbox 13.770,100.525,13.805,100.565",
+   "status": "ok",
+   "note": "Khet + khwaeng relations found; no khwaeng named พหลโยธิน exists in OSM (name-substring query empty)."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "เขตพญาไท + เขตจตุจักร polygons (out geom) + point-in-polygon grid over app polygon",
+   "status": "ok",
+   "note": "2281/2281 sampled points inside เขตพญาไท; 0 inside เขตจตุจักร."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "แขวงพญาไท / แขวงสามเสนใน / แขวงทุ่งพญาไท polygons + khwaeng grid",
+   "status": "ok",
+   "note": "Khwaeng split of the app polygon: 51.1% แขวงพญาไท / 48.9% แขวงสามเสนใน."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "bus stops / platforms within 800 m of center",
+   "status": "ok",
+   "note": "20 stops; named: BTS Ari exit stops, Sutthisan Winitchai, Salirathavibhaga, Suda Palace Hotel."
+  },
+  {
+   "tool": "Overpass API",
+   "query": "named highways within 280 m of center (junction identification)",
+   "status": "ok",
+   "note": "Junction = ถนนพหลโยธิน x ซอยเสนาร่วม; also Soi Phahonyothin 9-14, Soi Sutthisan Winitchai 2."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Sena_Nikhom_BTS_station",
+   "status": "ok",
+   "note": "N12; opened 4 Dec 2019; neighbours Ratchayothin and Kasetsart University."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "BTS \"Sena Nikhom\" OR \"Sena Ruam\" OR \"Phahon Yothin 24\" official names opened",
+   "status": "ok",
+   "note": "AI summary without stable links; corroborates naming (N9-N13 chain; Sena Ruam not operating); used as corroboration only."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia.org/wiki/สถานีเสนานิคม",
+   "status": "ok",
+   "note": "Opened 4 ธ.ค. 2562; disambiguation warning: do not confuse with สถานีเสนาร่วม."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/BTS_Sukhumvit_line",
+   "status": "fail",
+   "note": "HTTP 404 (article title differs); phase dates taken from individual station pages instead."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia.org/wiki/สถานีเสนาร่วม (two targeted reads)",
+   "status": "ok",
+   "note": "Future station N6 at Soi Phahonyothin 9 mouth; verbatim location text obtained; infobox-vs-history inconsistency documented."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Kasetsart_University_BTS_station",
+   "status": "ok",
+   "note": "N13; 4 Dec 2019; +4 stations toward Wat Phra Si Mahathat 5 Jun 2020."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "th.wikipedia.org/wiki/สถานีคูคต",
+   "status": "ok",
+   "note": "Opened 16 ธ.ค. 2563 (2020); 19 km Mo Chit-Khu Khot extension."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Ari Bangkok neighborhood bars craft beer Time Out guide",
+   "status": "ok",
+   "note": "Located Time Out's Ari guide."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "timeout.com/bangkok/things-to-do/ari",
+   "status": "ok",
+   "note": "Full read; dated 2026-05-30, authors named."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Vimut Hospital\" Phahonyothin opened / \"Prasanmit hospital\" address",
+   "status": "ok",
+   "note": "Snippet-only: Vimut opened May 2021 at 500 Phahonyothin; Prasanmit 1281 Phahonyothin."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"ซอยเสนาร่วม\" พหลโยธิน พญาไท ชุมชน",
+   "status": "ok",
+   "note": "Snippet-only (no links): soi = Soi Phahonyothin 11, แขวงสามเสนใน; later corroborated by the BK Magazine full read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"โรงพยาบาลประสานมิตร\" เดิมชื่อ \"โรคปอด\"",
+   "status": "ok",
+   "note": "Rename 2009 confirmed at snippet level; MOPH HCode + prasarnmitr.com links surfaced (recorded as snippet-only sources)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Saphan Khwai Bangkok area guide living rent shophouses",
+   "status": "ok",
+   "note": "Located BAANLYY guide; rents then confirmed by full read."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "baanlyy.com/thailand/bangkok/areas/saphan-khwai",
+   "status": "ok",
+   "note": "Updated 2026-07-01; 1BR 20-38k, 2BR 38-72k; no cons section; no live listings."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"สถานีเสนาร่วม\" ยกเลิก OR ก่อสร้าง ข่าว 2567 OR 2568",
+   "status": "ok",
+   "note": "Located Prachachat 2026-11-05 article on the council push and fare issue."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "prachachat.net/economic/news-2091573",
+   "status": "ok",
+   "note": "Full read: council hearing 4 Nov 2026; fare includes N6 (25 baht Saphan Khwai-Ari); in plan since 1999; concession ends 2029."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "en.wikipedia.org/wiki/Ha_Yaek_Lat_Phrao_BTS_station",
+   "status": "ok",
+   "note": "N9; 9 Aug 2019; terminus until 4 Dec 2019; corroborates the sibling bundle's date resolution."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "น้ำท่วม พหลโยธิน อารีย์ สามเสนใน เขตพญาไท",
+   "status": "ok",
+   "note": "Sep-Oct 2026 flood coverage surfaced (LINE Today/Mumkhao; Thairath updates)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "today.line.me/th/v3/article/JPyDxYy (Mumkhao)",
+   "status": "ok",
+   "note": "Full read: 26 Sep 2026 army deployment on Phahonyothin/Ari/Din Daeng; depth/quotes absent from article body."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Sena Ruam\" Bangkok area OR neighborhood OR guide -BTS -station",
+   "status": "ok",
+   "note": "Coverage scan: found the BK Magazine soi guide (2018); no other soi-specific editorial coverage."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "bk.asia-city.com/city-living/news/guide-soi-sena-ruam-ari",
+   "status": "fail",
+   "note": "HTTP 301 redirect to bkmagazine.com (domain move); completed on the redirected URL."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "bkmagazine.com/city-living/news/guide-soi-sena-ruam-ari",
+   "status": "ok",
+   "note": "Full read: 2018-05-24, Dhipkawee Sriyananda Selley; 'grayed-out station on the BTS map'; venues listed."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "น้ำท่วม พหลโยธิน อารีย์ 26 กันยายน 2569 ลึก",
+   "status": "ok",
+   "note": "Snippet-only corroboration: 'Phahonyothin Saphan Khwai-Soi Ari 11' on standing-flood lists that day; no stable link captured — kept out of claim text."
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://www.openstreetmap.org/#map=17/13.78594/100.54686",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap data via Overpass API (14 queries; base timestamp 2026-11-07T18:06Z)",
+   "publisher": "OpenStreetMap contributors",
+   "publisher_family": "openstreetmap",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07T18:06:06Z",
+   "retrieved_at": "2026-11-07T14:06:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "OSM amenity coverage is uneven; counts here are a lower bound, not a census.",
+    "Khwaeng relation named แขวงพหลโยธิน is absent from OSM (queried); khwaeng split derives from the three adjacent khwaeng polygons that are mapped.",
+    "OSM still tags Prasanmit Hospital under its pre-2009 name โรงพยาบาลโรคปอดกรุงเทพ.",
+    "Server returned HTTP 502 twice on geometry-heavy queries; retried after backoff."
+   ]
+  },
+  {
+   "index": 1,
+   "canonical_url": "file:///Users/ruslan/msc_1/git/city-rating/app/src/data/bangkok/stations.json",
+   "retrieved_url": "file:///Users/ruslan/msc_1/git/city-rating/app/src/data/bangkok/",
+   "title": "City-rating app data snapshot bkk-d6499618507e7561 (stations.json, rail.json, station-geometry.json, districts.json)",
+   "publisher": "city-rating project (internal)",
+   "publisher_family": "app_snapshot",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-10-01T00:00:00Z",
+   "retrieved_at": "2026-11-07T13:40:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none — internal scored-unit definition (read-only; not a changed input)",
+   "limitations": [
+    "App models 'sena-ruam' as an operating bts_sukhumvit station; this bundle treats that as a data defect, not a fact about the world.",
+    "Facts fields (334 food, 49 nightlife, 1.8 ha park, 0 temples) come from Overture+OSM mixes that could not be decomposed here.",
+    "data_date 2026-10; pre-dates the 2026-09 flooding event and the 2026-11 council hearing."
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://en.wikipedia.org/wiki/Sena_Nikhom_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sena_Nikhom_BTS_station",
+   "title": "Sena Nikhom BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:15:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Thailand rapid-transit stub; no exits or road names given.",
+    "No renaming history noted."
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://th.wikipedia.org/wiki/สถานีเสนานิคม",
+   "retrieved_url": "https://th.wikipedia.org/wiki/สถานีเสนานิคม",
+   "title": "สถานีเสนานิคม (Sena Nikhom station)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:18:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Carries a disambiguation warning ('ระวังสับสนกับ สถานีเสนาร่วม') — used here as the trailhead to the planned-station article.",
+    "Ridership figure inconsistencies on the page (lead year vs infobox year); figure not used."
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://th.wikipedia.org/wiki/สถานีเสนาร่วม",
+   "retrieved_url": "https://th.wikipedia.org/wiki/สถานีเสนาร่วม",
+   "title": "สถานีเสนาร่วม (Sena Ruam station, N6 — planned)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:22:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Internally inconsistent: infobox says 'future station, construction expected 2569 BE (2026), service target 5 ธ.ค. 2575 (2032)' while the History section records the project as cancelled with designs to be handed to BMA.",
+    "Cited sources on the page are 2018-2020-era (Public Relations Dept 2018; Thairath/Daily News Facebook 2020).",
+    "Verbatim lead and ที่ตั้ง section quoted in this bundle."
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://en.wikipedia.org/wiki/Kasetsart_University_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Kasetsart_University_BTS_station",
+   "title": "Kasetsart University BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:25:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub-level location detail (no road names).",
+    "Kaset Fair ridership anecdote (2023) not used."
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://en.wikipedia.org/wiki/Ha_Yaek_Lat_Phrao_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ha_Yaek_Lat_Phrao_BTS_station",
+   "title": "Ha Yaek Lat Phrao BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:40:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Renaming story carries a [citation needed] tag on the page (also noted by the sibling bundle st.ha-yaek-lat-phrao).",
+    "Infobox coordinates have known Wikipedia geocoding noise; not used."
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://th.wikipedia.org/wiki/สถานีคูคต",
+   "retrieved_url": "https://th.wikipedia.org/wiki/สถานีคูคต",
+   "title": "สถานีคูคต (Khu Khot station)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:30:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Station code shown as N24 (different numbering scheme than the N9-N13 used on other pages); only the opening date is used.",
+    "Does not date the Wat Phra Sri Mahathat-Khu Khot segment specifically."
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://www.prachachat.net/economic/news-2091573",
+   "retrieved_url": "https://www.prachachat.net/economic/news-2091573",
+   "title": "20 ปีไม่คืบหน้า จี้ กทม.สร้าง \"สถานีเสนาร่วม\" สายสีเขียว",
+   "publisher": "Prachachat Business (Matichon Group)",
+   "publisher_family": "prachachat_matichon",
+   "author": null,
+   "published_at": "2026-11-05",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:36:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Author byline not shown on the page.",
+    "Reports the council hearing of 2026-11-04; BMA response is a position statement, not a construction commitment."
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://www.timeout.com/bangkok/things-to-do/ari",
+   "retrieved_url": "https://www.timeout.com/bangkok/things-to-do/ari",
+   "title": "Things To Do in Ari",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "timeout",
+   "author": "Kraprib Premsinee & Kaweewat Siwanartwong",
+   "published_at": "2026-05-30",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:33:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "listicle; venues may be advertised or PR-placed; no paid labels visible",
+   "limitations": [
+    "Covers the Ari neighbourhood as anchored on BTS Ari — the unit only touches the Ari cell's north edge, so the guide is partial coverage.",
+    "Venue list undated per item; no addresses beyond soi names."
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://baanlyy.com/thailand/bangkok/areas/saphan-khwai",
+   "retrieved_url": "https://baanlyy.com/thailand/bangkok/areas/saphan-khwai",
+   "title": "Saphan Khwai area guide",
+   "publisher": "BAANLYY",
+   "publisher_family": "baanlyy",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-07-01",
+   "retrieved_at": "2026-11-07T14:34:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal area guide; states pricing is indicative and that it has no live listings mapped for the area",
+   "limitations": [
+    "No cons/drawbacks section at all — a pro-bias risk on negatives.",
+    "Rent ranges are indicative, not medians; the page itself says verify on live listings.",
+    "Covers Saphan Khwai as a node, not the scored cell between Ari and Saphan Khwai."
+   ]
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://today.line.me/th/v3/article/JPyDxYy",
+   "retrieved_url": "https://today.line.me/th/v3/article/JPyDxYy",
+   "title": "ทหาร กองทัพภาคที่ 1 ลุยน้ำช่วยผู้ประสบภัยน้ำท่วม พื้นที่ พหลโยธิน-อารีย์ (Mumkhao via LINE TODAY)",
+   "publisher": "Mumkhao via LINE TODAY",
+   "publisher_family": "mumkhao_line",
+   "author": null,
+   "published_at": "2026-09-26",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:52:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Body gives only the army-assistance summary: no water depth, no resident quotes, no duration figures.",
+    "Flood-scale details circulating in Thai search results (e.g. 'Saphan Khwai-Soi Ari 11' on standing-flood lists) could not be tied to a stable article link — kept out of claim text."
+   ]
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://bkmagazine.com/city-living/news/guide-soi-sena-ruam-ari",
+   "retrieved_url": "https://bkmagazine.com/city-living/news/guide-soi-sena-ruam-ari",
+   "title": "This chill, cafe-lined soi could be the new Ari (Guide to Soi Sena Ruam)",
+   "publisher": "BK Magazine",
+   "publisher_family": "bkmagazine",
+   "author": "Dhipkawee Sriyananda Selley",
+   "published_at": "2018-05-24",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:56:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "city-listing magazine; venues listed editorially, some with phone numbers as for listings",
+   "limitations": [
+    "Eight years old (2018-05-24): individual venues may have closed; only Craftsman Bangkok's survival is corroborated for 2026 (via the Time Out Ari guide).",
+    "Explicitly acknowledges the area's 'grayed-out station on the BTS map' — used here as independent editorial acknowledgment of the unbuilt N6."
+   ]
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://hcode.moph.go.th/code/3407",
+   "retrieved_url": "https://hcode.moph.go.th/code/3407",
+   "title": "รหัสหน่วยงานบริการสุขภาพ HCode 3407 — โรงพยาบาลประสานมิตร (ชื่อเดิม โรงพยาบาลโรคปอด กรุงเทพ)",
+   "publisher": "Ministry of Public Health (Thailand)",
+   "publisher_family": "moph_government",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:44:00Z",
+   "body_read": false,
+   "type": "government",
+   "commercial_context": "none",
+   "limitations": [
+    "Snippet-level corroboration from search results only; page not opened in full.",
+    "Used solely to corroborate the hospital rename already carried by OSM+Thai Wikipedia."
+   ]
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://prasarnmitr.com/ประวัติความเป็นมา",
+   "retrieved_url": "https://prasarnmitr.com/ประวัติความเป็นมา",
+   "title": "ประวัติความเป็นมา — Prasarnmitr Hospital history",
+   "publisher": "Prasarnmitr Hospital (official site)",
+   "publisher_family": "prasarnmitr_hospital",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:44:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "hospital's own site (self-interested)",
+   "limitations": [
+    "Snippet-level corroboration only (rename timeline 2537/2552 BE)."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "sena-ruam-c01",
+   "text_en": "The app's scored unit 'st.sena-ruam' is anchored on a point where no operating BTS station exists. Its center (13.78594, 100.54686) sits on Phahonyothin Road roughly midway between BTS Ari (734 m south-west) and BTS Saphan Khwai (929 m north-east), and OSM records no rail station at or near that point. The name corresponds to สถานีเสนาร่วม (Sena Ruam), a BTS Sukhumvit Line infill station with reserved code N6 planned between Ari (N5) and Saphan Khwai (N7) that has never been built; the app's rail.json nonetheless lists it as an operating bts_sukhumvit station, and the area's app-defined neighbours are 'ari' and 'saphan-khwai'.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Center point and neighbours from app snapshot bkk-d6499618507e7561; distances computed between OSM station nodes and the app point."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "stable since the app snapshot (2026-10); the underlying planning history is stable since 1999",
+    "recheck_by": "2027-11-07",
+    "notes": "Identity check required by the brief: the brief's premise of an operating northern-extension station at these coordinates is contradicted by both app internals and OSM."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass query 1 — railway=station within 3500 m of 13.78594,100.54686 (20 hits)",
+     "paraphrase": "The station list around the app point includes Ari (13.77971, 100.54462), Saphan Khwai (13.79382, 100.54971) and Mo Chit (13.8026, 100.55379) but nothing within about 700 m of the app center; app and OSM coordinates for Ari, Saphan Khwai and Mo Chit match to 5 decimal places."
+    },
+    {
+     "source_index": 4,
+     "locator": "Lead and infobox of สถานีเสนาร่วม",
+     "paraphrase": "The article describes สถานีเสนาร่วม as a BTS station project that has not begun construction, elevated over Phahonyothin Road, coded N6, between Saphan Khwai and Ari."
+    },
+    {
+     "source_index": 1,
+     "locator": "rail.json stations[id=sena-ruam]; stations.json areas[id=sena-ruam].neighbors",
+     "paraphrase": "rail.json lists 'Sena Ruam' at 13.78594, 100.54686 with lines ['bts_sukhumvit'] as if operating; the scored area's neighbours are 'ari' and 'saphan-khwai'."
+    }
+   ],
+   "limitations": [
+    "The app snapshot is internal project data, not an external source; its presentation as an operating station is reported here as app behaviour, verified against OSM.",
+    "OSM coverage of railways is generally strong in Bangkok, but absence of a station node is a negative claim from mapping data."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c02",
+   "text_en": "The planned station's published siting matches the unit's center: Thai Wikipedia places สถานีเสนาร่วม (N6) elevated over Phahonyothin Road at the mouth of Soi Phahonyothin 9 (Soi Si Fa), in front of Prasanmit Hospital and the ESV building, in Khwaeng Sam Sen Nai, Phaya Thai district — quoting its lead: 'จะยกระดับเหนือถนนพหลโยธิน ปากซอยพหลโยธิน 9 (ซอยสีฟ้า) ในพื้นที่เขตพญาไท'. The same page's infobox calls it a future station with construction expected from 2026 and service targeted for 5 December 2032, while its History section records the project as cancelled with completed designs to be transferred to the BMA as the concession ends (2029).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport",
+    "history"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "The siting point (Soi Phahonyothin 9 mouth) lies within 300 m of the app's center point — OSM maps Soi Phahonyothin 9 ways within 280 m of the center."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Planning history 1999-2026",
+    "recheck_by": "2027-11-07",
+    "notes": "Status is contested between the page's own infobox (start 2026, service 2032) and its history section (cancelled); the Prachachat hearing (c03) is the fresher statement."
+   },
+   "evidence": [
+    {
+     "source_index": 4,
+     "locator": "Lead + ที่ตั้ง section + infobox + History section",
+     "paraphrase": "Verbatim Thai: lead places the station over Phahonyothin at the mouth of Soi Phahonyothin 9 (Soi Si Fa) in Phaya Thai; the location section names โรงพยาบาลประสานมิตร, the ESV building, AIS Tower 2 and Khwaeng Sam Sen Nai; infobox marks 'สถานีในอนาคต' with construction expected 2569 BE and service 5 ธ.ค. 2575 BE; history says the project was cancelled and designs go to BMA."
+    },
+    {
+     "source_index": 0,
+     "locator": "Overpass query 8 — named highways within 280 m of the app center",
+     "paraphrase": "OSM shows Soi Phahonyothin 9, 10, 12, 13, 14 and Soi Sena Ruam ways around the center, consistent with the planned station's soi-9 siting."
+    }
+   ],
+   "limitations": [
+    "Thai Wikipedia's own cited sources for the article are 2018-2020 vintage; the 2026 construction-start expectation is unverified by news."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c03",
+   "text_en": "As of November 2026 the station remains unbuilt and politically live: on 4 November 2026 Phaya Thai Metropolitan Council member Worawit Chaisuwan asked the BMA why Sena Ruam (N6) — in the plan since 1999 — has never progressed, and why the operator's fare table still includes the unbuilt station; he cited the 1.6 km Saphan Khwai-Ari hop costing 25 baht, more than longer extension segments, describing fares as inflated by the missing station. Deputy governor Wisanu Trepsupol replied that N6 was not directly in the original concession (which required at least 17 stations; 24 are now open including Saint Louis), that BMA sees it as important and will coordinate with agencies ahead of the concession's expiry in 2029, and that fare unification under MRTA single ownership would resolve the anomaly. No construction schedule was committed.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "counter_evidence",
+    "recent_changes",
+    "affordability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "relation": "entire_unit",
+    "notes": "The fare anomaly applies to exactly the unit's gap: Ari-Saphan Khwai."
+   },
+   "temporal_scope": {
+    "event_date": "2026-11-04",
+    "observed_period": "Council question of 4 Nov 2026; planning record since 1999",
+    "recheck_by": "2027-05-07",
+    "notes": "Strongest current counter-evidence for the transport and rent readings of this unit; directly on the scored gap."
+   },
+   "evidence": [
+    {
+     "source_index": 8,
+     "locator": "Article body — council question and deputy governor's reply",
+     "paraphrase": "Prachachat (5 Nov 2026) reports councilor Worawit Chaisuwan pressing BMA on building N6 ('บรรจุในแผนมาตั้งแต่ปี 2542 แต่ยังไม่เกิดขึ้นจริง') and on fares including the unbuilt station, with the Saphan Khwai-Ari 1.6 km hop at 25 baht; Wisanu says N6 was not directly in the concession, BMA will coordinate, concession ends 2572 BE (2029)."
+    }
+   ],
+   "limitations": [
+    "Single-outlet report; no independent second news account of the hearing was found in this session.",
+    "The fare figure is quoted from the councilor's statement, not from a fare table."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c04",
+   "text_en": "The operating Sukhumvit Line stations north of the unit opened in phases and none is named 'Sena Ruam': Ha Yaek Lat Phrao (N9) opened 9 August 2019 as the northern terminus; Phahonyothin 24 (N10), Ratchayothin (N11), Sena Nikhom (N12) and Kasetsart University (N13) opened together on 4 December 2019 (Kasetsart University then became the terminus); four further stations toward Wat Phra Si Mahathat opened 5 June 2020; and terminus Khu Khot opened 16 December 2020. The extension station most likely confused with 'Sena Ruam' is Sena Nikhom (N12), which the app's own rail.json carries as 'sena-nikhom' — about 6.3 km north-east of the app's sena-ruam point.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "history",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "relation": "outside",
+    "notes": "The extension corridor runs 4.7-11 km north of the unit along Phahonyothin; the brief's hypothesised clipping stations 'phahonyothin-24' and 'kasetsart-university' exist as app areas but sit 4,742 m and 7,068 m away and do not clip this cell."
+   },
+   "temporal_scope": {
+    "event_date": "2019-08-09",
+    "observed_period": "Openings 2019-2020; naming stable since",
+    "recheck_by": "2027-11-07",
+    "notes": "Answers the brief's 'verify exact date for Sena Ruam': there is no such operating station to date; the phased opening is 2019-2020, and no phase date attaches to a 'Sena Ruam'."
+   },
+   "evidence": [
+    {
+     "source_index": 6,
+     "locator": "Opening date and 'northern terminus until 4 December 2019' lines",
+     "paraphrase": "English Wikipedia: Ha Yaek Lat Phrao (N9) opened 9 August 2019 and remained the northern terminus until Kasetsart University station opened on 4 December 2019."
+    },
+    {
+     "source_index": 2,
+     "locator": "Infobox and History",
+     "paraphrase": "Sena Nikhom (N12) opened 4 December 2019, having been requested to open with the Ha Yaek Lat Phrao-Kasetsart University phase in December 2019; neighbours Ratchayothin (south) and Kasetsart University (north)."
+    },
+    {
+     "source_index": 5,
+     "locator": "Infobox and History",
+     "paraphrase": "Kasetsart University (N13) opened 4 December 2019; four more stations toward Wat Phra Si Mahathat opened 5 June 2020."
+    },
+    {
+     "source_index": 7,
+     "locator": "Lead and infobox",
+     "paraphrase": "Khu Khot began service 16 December 2020 as the terminus of the 19 km Mo Chit-Saphan Mai-Khu Khot extension."
+    },
+    {
+     "source_index": 1,
+     "locator": "rail.json stations[sena-nikhom, phahonyothin-24, kasetsart-university] coordinates",
+     "paraphrase": "App rail coordinates place sena-nikhom 6,313 m from the app's sena-ruam point, phahonyothin-24 4,742 m, kasetsart-university 7,068 m."
+    }
+   ],
+   "limitations": [
+    "Ratchayothin (N11) and Phahonyothin 24 (N10) opening dates are carried by the 4 December 2019 phase rather than by dedicated page reads this session.",
+    "The 5 June 2020 'four more stations' figure comes from one Wikipedia page; segment-by-segment dating was not independently confirmed."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c05",
+   "text_en": "The scored polygon is a 10-vertex cell of about 1.25 km² (app fact: 1.26) spanning lat 13.78068-13.79184, lng 100.53953-100.55426 — consistent with an 800 m circle around the center clipped north and south by the Voronoi cells of saphan-khwai and ari. The app's own neighbours list is ['ari','saphan-khwai']; named venues sit on both sides of the Phahonyothin centerline inside it (Dumbo, Honest Mistake, BRUT, Villa Market, Prasanmit and Vimut hospitals), while Big C, Lotus's, La Villa, Villa Supermarket, Maple Bear school and the Phyathai Phahonyothin hospital fall inside the 800 m circle but outside the polygon, in adjacent cells.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "walkability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Polygon from app station-geometry.json; inside/outside checks computed by point-in-polygon against that polygon; area re-computed at 1.25 km² vs app 1.26."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Static geometry of the app snapshot",
+    "recheck_by": "2027-11-07",
+    "notes": "The brief's clipping hypothesis (extension stations to south/north) is contradicted; the actual clippers are the adjacent old-line cells."
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "station-geometry.json areas[sena-ruam].polygons/bbox; stations.json areas[sena-ruam].neighbors; facts.area_km2",
+     "paraphrase": "App polygon is the 10-vertex cell with bbox lat 13.78068-13.79184, lng 100.53953-100.55426; area_km2 fact 1.26; neighbours ari and saphan-khwai."
+    },
+    {
+     "source_index": 0,
+     "locator": "Overpass queries 1 and 4 — station and amenity coordinates",
+     "paraphrase": "OSM coordinates for the named venues confirm which fall inside the polygon (Dumbo 13.78877,100.54803 in; Big C 13.79129,100.54953 out; La Villa 13.77986,100.5452 out)."
+    }
+   ],
+   "limitations": [
+    "Polygon vertex count and clipping are the coordinator's geometry checks to confirm independently (check_geometry.py).",
+    "'Inside the 800 m circle but outside the polygon' items are counted by the app's fact pipeline for some scores — flagged in open_issues."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c06",
+   "text_en": "The app's district attribution 'phaya-thai 100%' checks out at district level: every one of 2,281 grid points sampled inside the app polygon falls within เขตพญาไท (Phaya Thai district) per OSM administrative boundary polygons; the Chatuchak district line passes just north of the polygon around Saphan Khwai, so the straddle the brief suspected does not exist at district level. Within Phaya Thai, however, the unit straddles two khwaengs — แขวงพญาไท (Phaya Thai subdistrict) takes about 51% of sampled points and แขวงสามเสนใน (Sam Sen Nai) about 49% — so the east-west split runs down the middle of the cell.",
+   "kind": "estimate",
+   "topics": [
+    "identity",
+    "context"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Grid share computed at 60x60 sampling over the polygon bbox; khwaeng shares at 50x50."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Boundaries as mapped in OSM (stable administrative lines)",
+    "recheck_by": "2027-11-07",
+    "notes": "The brief asked for a Phaya Thai/Chatuchak straddle check: verdict is no district straddle, but a near-half khwaeng straddle inside Phaya Thai."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass queries 6f/6g — เขตพญาไท, เขตจตุจักร, แขวงพญาไท, แขวงสามเสนใน, แขวงทุ่งพญาไท polygons (out geom) + point-in-polygon grids",
+     "paraphrase": "Point-in-polygon testing of sampled grid points: 2,281/2,281 inside เขตพญาไท, 0 inside เขตจตุจักร; khwaeng split 811 points แขวงพญาไท vs 776 points แขวงสามเสนใน."
+    }
+   ],
+   "limitations": [
+    "Estimate is sampling-based (roughly ±1-2 pp at this grid density).",
+    "OSM lacks a khwaeng relation named แขวงพหลโยธิน (queried); the mapped khwaeng set near the cell is what the split rests on.",
+    "A Thai-language search result independently described Soi Sena Ruam as being in แขวงสามเสนใน (snippet-only), consistent with the mapped split."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c07",
+   "text_en": "The unit contains no rail station, and its transport-8 score rests on an app model that treats the phantom point as an operating stop: the app publishes resident/visitor transit times (7 min to Mo Chit, 13 to Siam) computed from a station that OSM and Thai Wikipedia agree does not exist. Nearest operating BTS stations are outside the polygon — Ari 734 m and Saphan Khwai 929 m in straight line. Surface transport runs on the main road only: OSM maps about 20 bus stops within 800 m along Phahonyothin (named stops include the Ari exit stops, 'Sutthisan Winitchai' to the east and 'Salirathavibhaga'), and Time Out notes buses stopping on Phahonyothin near La Villa and beneath Ari station. No boat piers (app fact: piers 0); the river is kilometres away.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "rhythm"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Distances are straight-line OSM computations; no walking durations asserted."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "App snapshot 2026-10; OSM 2026-11",
+    "recheck_by": "2027-11-07",
+    "notes": "The brief's transport question is answered mostly in the negative: 'BTS-only' is not even true — the unit is BTS-less."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass queries 1 (stations) and 7 (bus stops/platforms within 800 m)",
+     "paraphrase": "No station nodes near the center; 20 bus-stop/platform features within 800 m, including stops named for BTS Ari exits and Sutthisan Winitchai."
+    },
+    {
+     "source_index": 9,
+     "locator": "Getting-around lines of the Ari guide",
+     "paraphrase": "Time Out notes buses on Phahonyothin stop 'near Pearl Bangkok, La Villa and beneath Ari station itself'."
+    },
+    {
+     "source_index": 1,
+     "locator": "stations.json areas[sena-ruam].transit_minutes / min_transit / facts.piers",
+     "paraphrase": "App publishes transit minutes (mochit 7, siam 13) and piers 0 for a unit whose station_ids ['sena-ruam'] reference the unbuilt infill."
+    }
+   ],
+   "limitations": [
+    "Bus route numbers serving these stops were not sourced in this session.",
+    "Khlong Prem Prachakhon boat pier distances were not checked; the canal was not part of this session's queries."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c08",
+   "text_en": "OSM maps 11 bars within 800 m of the center and no pubs or nightclubs. Three named craft/cocktail bars sit inside the scored polygon — Dumbo (339 m north-east), Honest Mistake (323 m north-east) and BRUT (545 m west) — while House of Beer (HOBS, 728 m) and O'Glee (750 m) fall just outside the southern edge inside the Ari cell. The app's nightlife count of 49 (Overture+OSM, confidence 'strong') is roughly 4.5x the OSM-mapped subset; the unmapped remainder is presumably smaller shophouse pubs and lounges that could not be individually verified in this session.",
+   "kind": "factual_report",
+   "topics": [
+    "nightlife",
+    "identity"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Counted from the 800 m Overpass sweep; inside/outside resolved against the app polygon."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM base 2026-11-07; app data_date 2026-10",
+    "recheck_by": "2027-05-07",
+    "notes": "The brief's nightlife-9 tension: the mapped subset is real but thin; the Overture count could not be decomposed."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass query 4 — amenity=bar/pub/nightclub within 800 m (11 bars, 0 pubs, 0 nightclubs) with centers",
+     "paraphrase": "Named bars with distances: Honest Mistake 323 m, Dumbo 339 m, BRUT 545 m, HOBS 728 m, O'Glee 750 m, plus Afterlife Rooftop Bar, Dumbo Jazz & Vinyl Bar, Flora Dispensary (Sapankhwai), Hobs Away and The key room No 72."
+    },
+    {
+     "source_index": 1,
+     "locator": "stations.json areas[sena-ruam].facts.nightlife + ratings.nightlife + confidence.nightlife",
+     "paraphrase": "App states 49 nightlife venues from overture+osm with 'strong' confidence and scores nightlife 9."
+    }
+   ],
+   "limitations": [
+    "OSM bar tagging undercounts small shophouse venues; Overture categories could not be inspected from here.",
+    "A 4.5x gap between sources is unresolved — the 49 figure stands (per brief) but its composition is unknown (open issue)."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c09",
+   "text_en": "Mechanism behind nightlife 9: the unit is the gap cell between Ari and Saphan Khwai, and the Ari-Saphan Khwai stretch of Phahonyothin carries a documented cafe-bar-izakaya strip — BK Magazine's 2018 soi guide already listed an izakaya (Sasori) and pizzeria (Pizza Pazza) on Soi Sena Ruam itself, and Time Out's 2026 Ari guide lists low-lit bars around Ari (Bar Luk Krung, No Bar Wine Bar, Tempo Bar, Pakalolo Tiki & Vinyl Bar). It is not a Kasetsart student strip — Kasetsart University is about 7 km north — and the score reads most defensibly as strip spillover into a residential cell rather than a dense venue cluster at the door.",
+   "kind": "researcher_inference",
+   "topics": [
+    "nightlife",
+    "identity",
+    "context"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "corridor",
+    "relation": "entire_unit",
+    "notes": "The strip runs along Phahonyothin between the two stations; the unit is its middle third."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Guides of 2018 and 2026; geography stable",
+    "recheck_by": "2027-11-07",
+    "notes": "Directly contradicts the brief's Kasetsart-student-strip hypothesis; the Phahonyothin-corridor-bars hypothesis is the one supported."
+   },
+   "evidence": [
+    {
+     "source_index": 12,
+     "locator": "Venues section of the Soi Sena Ruam guide",
+     "paraphrase": "BK Magazine lists Sasori izakaya (39 Phahon Yothin Soi 11) and Pizza Pazza pizzeria plus four cafes and a bohemian shop on the soi."
+    },
+    {
+     "source_index": 9,
+     "locator": "Bars section of the Ari guide",
+     "paraphrase": "Time Out's 2026 Ari guide names Bar Luk Krung Ari, No Bar Wine Bar, Un-cle Bar at Josh Hotel, Brooks Brunch & Bar, Tempo Bar and Pakalolo Tiki & Vinyl Bar among Ari's bars."
+    },
+    {
+     "source_index": 0,
+     "locator": "Overpass query 4 bar coordinates",
+     "paraphrase": "The mapped bars cluster along the Phahonyothin frontage near the unit's north edge (Dumbo, Honest Mistake) and the Ari boundary (HOBS, O'Glee)."
+    }
+   ],
+   "limitations": [
+    "Inference, not a measured venue census; the Overture mix behind the app's 49 remains unverified.",
+    "Ari's bar scene is well documented; which specific venues drive the app's count inside this cell is unknown."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c10",
+   "text_en": "Guides describe the surrounding strip as lively but low-key rather than a nightlife district: BAANLYY's Saphan Khwai guide (updated 1 July 2026) scores nightlife 8/10 and says the area offers 'a genuinely lively dining and nightlife scene'; Time Out calls Ari 'one of Bangkok's most liveable neighbourhoods' with cafe mornings and low-lit bars; BK Magazine in 2018 dubbed the soi 'this chill, cafe-lined soi' that 'could be the new Ari'. None of these guides covers the scored unit as a station area.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "food",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "relation": "partial",
+    "notes": "Perceptions attach to the Ari and Saphan Khwai nodes and the strip between; the unit is the strip's middle."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2018-2026 guides",
+    "recheck_by": "2027-05-07",
+    "notes": "Reported-perception layer for the nightlife/vibe scores; all three sources are commercial or city-listing publishers."
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "Area character and scores",
+     "paraphrase": "BAANLYY gives Saphan Khwai nightlife 8/10, transit 9/10, walkability 8/10 and describes 'a genuinely lively dining and nightlife scene, streets you can actually walk'."
+    },
+    {
+     "source_index": 9,
+     "locator": "Lead and area framing",
+     "paraphrase": "Time Out frames Ari as gentrifying, blending old and new, with street food and contemporary dining, and 'quiet residential sois shaded from the heat'."
+    },
+    {
+     "source_index": 12,
+     "locator": "Title and framing",
+     "paraphrase": "BK Magazine titles its Soi Sena Ruam guide 'This chill, cafe-lined soi could be the new Ari'."
+    }
+   ],
+   "limitations": [
+    "BAANLYY lists no cons at all — its positivity is a pro-bias risk (property portal).",
+    "Time Out's Ari framing covers the neighbourhood node, not the scored cell."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c11",
+   "text_en": "The only named park in or beside the unit is สวนสาธารณะกรมประชาสัมพันธ์ (the Public Relations Department public park), an OSM-mapped polygon of about 1.95 ha inside the PRD compound on Phahonyothin Road. Its centroid is 871 m south-west of the unit center — outside the scored polygon but at the 800 m circle's edge, which matches the app's park_ha of 1.8. No other named park maps inside the cell; the remaining mapped green is mostly unnamed 'garden' polygons. The nearest large park ground, around MRT Chatuchak Park station, sits about 2.0 km north in a straight line — one BTS stop or a bus ride away, not a doorstep green.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "relation": "partial",
+    "notes": "Park straddles the cell's south-west margin; centroid outside the polygon."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM base 2026-11-07",
+    "recheck_by": "2027-05-07",
+    "notes": "The brief's green-buffer honesty check: the 1.8 ha is one compound park at the cell edge, not a park system."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass query 4 (named park within 800 m) and query 5c (park way geometry, out geom)",
+     "paraphrase": "The only leisure=park way within 800 m is สวนสาธารณะกรมประชาสัมพันธ์; its polygon computes to about 1.95 ha with centroid 13.78199, 100.53989 — 871 m from the app center; 86 mostly unnamed leisure=garden polygons also fall in the sweep."
+    },
+    {
+     "source_index": 1,
+     "locator": "stations.json areas[sena-ruam].facts.park_ha",
+     "paraphrase": "App records 1.8 ha of park in the unit."
+    },
+    {
+     "source_index": 0,
+     "locator": "Overpass query 1 — MRT Chatuchak Park station node",
+     "paraphrase": "MRT Chatuchak Park station (13.80296, 100.55328) lies about 2.0 km north of the app center."
+    }
+   ],
+   "limitations": [
+    "The park's public accessibility and opening hours were not verified; the OSM name asserts 'public park' but the compound is a government department's ground.",
+    "Park-to-station adjacency at Mo Chit was not independently verified beyond the station node's placement.",
+    "App 1.8 ha vs OSM 1.95 ha difference is unexplained (partial-in-cell counting vs full polygon)."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c12",
+   "text_en": "Three private hospitals line the Phahonyothin frontage around the unit: Prasanmit Hospital (โรงพยาบาลประสานมิตร) about 149 m south-west at the Soi Phahonyothin 7-9 block — the same facility OSM still tags under its pre-2009 name โรงพยาบาลโรคปอดกรุงเทพ — Vimut Hospital about 310 m north-east (500 Phahonyothin Rd, opened May 2021), and Phyathai Phahonyothin about 769 m north at the Saphan Khwai end, just outside the polygon. Thai Wikipedia's planned-station article cites Prasanmit as the frontage landmark of the unbuilt N6 site. Schools within 800 m: Maple Bear International School (665 m, outside the polygon) and โรงเรียนรุจิเสรีวิทยา (703 m, inside).",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "All three hospitals within 800 m; two inside the polygon."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM 2026-11; hospital rename 2009; Vimut 2021",
+    "recheck_by": "2027-05-07",
+    "notes": "Hospital density is the unit's most concrete daily-life anchor and matches the councilor's 2026 remark that the area 'now has many condos, offices, banks and hospitals'."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass query 4 — hospital/clinic features within 800 m with centers",
+     "paraphrase": "OSM maps โรงพยาบาลโรคปอดกรุงเทพ at 13.78487,100.54602 (149 m), โรงพยาบาลวิมุต/Vimut Hospital at 13.78877,100.54865 (310 m), โรงพยาบาลพญาไท พหลโยธิน at 13.7922,100.54988 (769 m), plus schools Maple Bear and รุจิเสรีวิทยา."
+    },
+    {
+     "source_index": 4,
+     "locator": "ที่ตั้ง section",
+     "paraphrase": "Thai Wikipedia names โรงพยาบาลประสานมิตร and the ESV building as the frontage of the planned N6 station at the Soi Phahonyothin 9 mouth."
+    },
+    {
+     "source_index": 13,
+     "locator": "HCode record 3407",
+     "paraphrase": "Ministry of Public Health record states the former name โรงพยาบาลโรคปอด กรุงเทพ was changed to โรงพยาบาลประสานมิตร (snippet-level corroboration)."
+    }
+   ],
+   "limitations": [
+    "Vimut's May 2021 opening date and address come from search-result summaries (snippet-only; no full read) — flagged; OSM placement is the load-bearing evidence.",
+    "OSM's outdated hospital name (pre-2009) is a data-hygiene issue logged in open_issues.",
+    "The earlier rename history (TB-association hospital, 1994/2009 renames) rests on snippet-level sources and is not load-bearing here."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c13",
+   "text_en": "Everyday retail clusters at the unit's edges rather than its center: Villa Market supermarket 310 m south (inside the polygon); Big C (661 m) and Lotus's (678 m) inside the 800 m circle but beyond the polygon's north and east edges; the La Villa community mall 700 m south-west on the Ari side (named by Time Out as an Ari anchor near BTS exit 4, with Villa Supermarket beside it). No fresh market maps inside the unit — the app fact 'markets: 0' matches, with one unnamed OSM marketplace 650 m SSW outside the polygon. The app's daily-essentials count of 100 inside the cell is consistent with this edge-clustered but dense shophouse retail.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "relation": "partial",
+    "notes": "Polygon-vs-circle distinction matters: several anchors the fact pipeline counts sit in adjacent cells."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM 2026-11; app 2026-10",
+    "recheck_by": "2027-05-07",
+    "notes": "Feeds the daily-essentials-8 reading: the cell core is retail-light and leans on its edges."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Overpass query 4 — supermarket/mall/marketplace features with centers",
+     "paraphrase": "Villa Market 13.78317,100.54651 (310 m, in polygon); Big C 13.79129,100.54953 (661 m, out); Lotus's 13.78866,100.55248 (678 m, out); La Villa 13.77986,100.5452 (700 m, out); one unnamed amenity=marketplace at 13.78014,100.54444 (650 m, out); 17 convenience shops, 38 cafes, 84 restaurants in the sweep."
+    },
+    {
+     "source_index": 9,
+     "locator": "Getting-around lines",
+     "paraphrase": "Time Out: BTS exit 4 lands near La Villa Ari (restaurants, supermarkets, open-air hangouts)."
+    },
+    {
+     "source_index": 1,
+     "locator": "stations.json areas[sena-ruam].facts (essentials 100, markets 0, cafes 57)",
+     "paraphrase": "App facts as described."
+    }
+   ],
+   "limitations": [
+    "The unnamed OSM marketplace could not be identified by name in this session.",
+    "Convenience-store chains (7-Eleven etc.) mapped inside the polygon were not individually listed."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c14",
+   "text_en": "The app's rent inputs — 18,000 baht for a ~30-35 m² 1-bed and 37,000 for a ~60-70 m² 2-bed — are a Phaya Thai district blend explicitly flagged 'editorial / district_blend / typical_asking', not unit-level observations. The nearest corridor guide (BAANLYY Saphan Khwai, updated 1 July 2026) gives indicative condo rents of 20,000-38,000 (1-bed) and 38,000-72,000 (2-bed) while admitting it has no live listings mapped for the area. Against that, the 1-bed blend looks plausible to slightly optimistic and the 2-bed figure sits at or below the guide's floor. Asking-vs-signed rents for the unit's own stock are unknown, and no Sena Ruam-specific rent series was found.",
+   "kind": "estimate",
+   "topics": [
+    "rent",
+    "affordability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "relation": "entire_unit",
+    "notes": "District-blend applied to a unit whose corridor (Ari-Saphan Khwai) has its own market the blend does not isolate."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "App rent updated 2026-09; guide updated 2026-07-01",
+    "recheck_by": "2027-05-07",
+    "notes": "Rent-7 (higher=more affordable) tension: the blend may understate 2-bed costs for this corridor; 1-bed plausibility holds."
+   },
+   "evidence": [
+    {
+     "source_index": 1,
+     "locator": "stations.json areas[sena-ruam].rent (one_bed 18000, two_bed 37000, provenance district_blend, confidence editorial)",
+     "paraphrase": "App rent block as described, updated 2026-09."
+    },
+    {
+     "source_index": 10,
+     "locator": "Rent ranges section and mapping caveat",
+     "paraphrase": "BAANLYY lists 1BR 20,000-38,000 and 2BR 38,000-72,000 as indicative, and states 'Saphan Khwai is not yet mapped to a BAANLYY listings district, so we cannot tell you what is on the market here'."
+    }
+   ],
+   "limitations": [
+    "Portal ranges are indicative, not medians; no signed-rent data exists in this bundle.",
+    "The comparison is guide-vs-blend, not a measured unit-level rent."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c15",
+   "text_en": "Soi Sena Ruam is officially Phahon Yothin Soi 11, a residential side-soi grid west of Phahonyothin between the two stations. BK Magazine's 2018 guide — 'This chill, cafe-lined soi could be the new Ari' — described fresh tactile paving, four independent cafes (Caffe Undici, Doctor Roaster, PH1b Coffee Bar, Before Thirtieth), the Sasori izakaya and Pizza Pazza pizzeria at No 39, a bohemian clothing shop, and developer interest including the then-upcoming Craftsmen hotel; Time Out's 2026 Ari guide mentions Craftsman Bangkok as a current venue address, corroborating that anchor's survival. Time Out also frames the wider area's 'quiet residential sois shaded from the heat'.",
+   "kind": "reported_perception",
+   "topics": [
+    "vibe",
+    "walkability",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "relation": "partial",
+    "notes": "The soi grid occupies the cell's west half; the guide covers the soi, not the whole cell."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Guide dated 2018-05-24; 2026 corroboration via Time Out",
+    "recheck_by": "2027-05-07",
+    "notes": "Answers the brief's coverage question at soi level: one dedicated editorial guide exists (2018), nothing soi-specific since."
+   },
+   "evidence": [
+    {
+     "source_index": 12,
+     "locator": "Whole guide — title, framing, venue list",
+     "paraphrase": "BK Magazine (24 May 2018, Dhipkawee Sriyananda Selley) places Soi Sena Ruam between Ari and Saphan Kwai, notes the 'grayed-out station on the BTS map', praises new tactile paving, and lists the cafes, izakaya, pizzeria, Voidshop and the Craftsmen hotel in development."
+    },
+    {
+     "source_index": 9,
+     "locator": "Spa section",
+     "paraphrase": "Time Out's 2026 Ari guide lists Ikigai Spa Bangkok inside Craftsman Bangkok — the hotel BK flagged as under development in 2018."
+    },
+    {
+     "source_index": 0,
+     "locator": "Overpass queries 3 and 8 — ซอยเสนาร่วม way and soi names near the center",
+     "paraphrase": "OSM maps ซอยเสนาร่วม as a tertiary way west of Phahonyothin, with Soi Phahonyothin 9-14 around the center."
+    }
+   ],
+   "limitations": [
+    "Eight-year-old venue list — individual closures/openings unverified except Craftsman Bangkok.",
+    "A Thai-language search result (snippet-only) independently gave the Soi Phahonyothin 11 equivalence and listed condos on the soi (Harmony Living 2007, Chateau In Town); those condo names were not verified."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c16",
+   "text_en": "Counter-evidence on livability: on 26 September 2026 heavy flooding hit the Phahonyothin corridor around Ari — a First Army unit was deployed to remove flood-damaged vehicles and assist residents on Phahonyothin Road, the Ari area, the Din Daeng triangle and Prachasongkhro intersection. Thai traffic-alert posts the same day (snippet-only, no stable link) listed the Phahonyothin stretch between Saphan Khwai and Soi Ari 11 among roads with deep standing water barring small vehicles. The event post-dates the app snapshot's data_date (2026-10) in practical terms — no score input reflects it — and counters any unqualified calm reading of the area.",
+   "kind": "factual_report",
+   "topics": [
+    "counter_evidence",
+    "recent_changes",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "relation": "partial",
+    "notes": "The flooded segment runs through/adjacent to the unit's frontage on Phahonyothin."
+   },
+   "temporal_scope": {
+    "event_date": "2026-09-26",
+    "observed_period": "Single event; seasonal monsoon risk recurring",
+    "recheck_by": "2027-06-07",
+    "notes": "Feeds Q04/Q09 as the strongest recent counter-view found; flood depth/duration figures were not verifiable from full-read sources."
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "Article body",
+     "paraphrase": "Mumkhao via LINE TODAY (26 Sep 2026): a 1st Army Area unit deployed volunteer troops on Phahonyothin Road, the Ari area, the Din Daeng triangle and Prachasongkhro to clear flood-damaged parked vehicles and move residents to safety."
+    }
+   ],
+   "limitations": [
+    "Depth, duration and resident-experience details circulated in search results could not be tied to stable links and are excluded from the claim text.",
+    "No BMA rainfall or drainage statistics were pulled for the event."
+   ]
+  },
+  {
+   "claim_id": "sena-ruam-c17",
+   "text_en": "Coverage reality: the soi has exactly one dedicated editorial guide — BK Magazine, May 2018 — and nothing soi-specific since; 2024-2026 coverage treats the strip as 'Ari' (Time Out, 30 May 2026) or 'Saphan Khwai' (BAANLYY, 1 July 2026), and the only other 'Sena Ruam' coverage found is national business news about the unbuilt station itself (Prachachat, 5 November 2026). No guide covers the scored unit as a station area — unsurprising, since no station exists there. Coverage breadth for the soi is thin but non-zero, and coverage breadth says nothing about actual popularity either way.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "recent_changes",
+    "context"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "relation": "entire_unit",
+    "notes": "Scan covered the app unit name, the soi name, and the two anchor-neighborhood names."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "Window searched 2024-2026 plus older dedicated hits",
+    "recheck_by": "2027-05-07",
+    "notes": "The brief's coverage-reality check: absence of station-area coverage is a finding, not a failure; soi-level coverage exists but is dated."
+   },
+   "evidence": [
+    {
+     "source_index": 12,
+     "locator": "Publication metadata",
+     "paraphrase": "BK Magazine's Soi Sena Ruam guide (2018-05-24) is the only dedicated editorial piece found for the soi."
+    },
+    {
+     "source_index": 9,
+     "locator": "Publication metadata",
+     "paraphrase": "Time Out's Ari guide (2026-05-30) covers the neighbourhood under Ari's name."
+    },
+    {
+     "source_index": 10,
+     "locator": "Publication metadata",
+     "paraphrase": "BAANLYY's guide (updated 2026-07-01) covers the node under Saphan Khwai's name."
+    },
+    {
+     "source_index": 8,
+     "locator": "Publication metadata",
+     "paraphrase": "Prachachat (2026-11-05) covers the planned station, not the area."
+    }
+   ],
+   "limitations": [
+    "A negative coverage claim is bounded by search-tool coverage; no Thai city magazine beyond BK/Time Out was systematically swept.",
+    "The 2018 BK guide and the 2026 corridor guides are the entire editorial set for the strip found in this session."
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "question_id": "Q01",
+   "question": "Identity/scope: what exactly is this unit, which station anchors it, how is it clipped, and does it straddle districts?",
+   "status": "answered",
+   "answer": "The unit is the app's 'Sena Ruam' cell — but its namesake station does not exist. The anchor point (13.78594, 100.54686) is the site reserved for planned BTS infill station Sena Ruam (N6) between Ari (N5) and Saphan Khwai (N7) on Phahonyothin Road, never built; the app models it as an operating Sukhumvit Line station and its neighbours are 'ari' and 'saphan-khwai', not the brief's hypothesised 'phahonyothin-24'/'kasetsart-university' (4.7 km and 7.1 km away). The 1.25 km² cell is an 800 m circle clipped north/south by those two adjacent cells. District: 100% Phaya Thai per OSM boundaries (Chatuchak starts just north at Saphan Khwai), but split about 51/49 between the Phaya Thai and Sam Sen Nai khwaengs.",
+   "claim_ids": [
+    "sena-ruam-c01",
+    "sena-ruam-c02",
+    "sena-ruam-c04",
+    "sena-ruam-c05",
+    "sena-ruam-c06"
+   ],
+   "limitations": [
+    "The brief's premises (operating extension station, extension-station clipping, Dec 2019-Dec 2020 phases for a Sena Ruam) are each contradicted; corrections carry sources."
+   ]
+  },
+  {
+   "question_id": "Q02",
+   "question": "Everyday experience: mid-ring family living and commuter rhythm — what is it actually like?",
+   "status": "answered",
+   "answer": "A quiet, low-rise residential side-soi grid (Soi Sena Ruam = Phahon Yothin Soi 11) flanking a busy primary road. Guides describe cafe-lined quiet sois ('could be the new Ari', 2018; 'quiet residential sois shaded from the heat', 2026); daily anchors sit on the main road (two private hospitals at 149 m and 310 m; Villa Market 310 m; Big C and Lotus's at the 800 m edges; La Villa 700 m south). Commuter rhythm runs on Phahonyothin buses and by foot to BTS Ari or Saphan Khwai, both outside the cell (734 m / 929 m). No fresh market inside the cell (app markets: 0).",
+   "claim_ids": [
+    "sena-ruam-c15",
+    "sena-ruam-c13",
+    "sena-ruam-c12",
+    "sena-ruam-c07"
+   ],
+   "limitations": [
+    "Resident voices unavailable (Reddit/TripAdvisor blocked per task); experience reads through editorial guides and map data."
+   ]
+  },
+  {
+   "question_id": "Q03",
+   "question": "Values and mechanisms: what drives the high scores here?",
+   "status": "answered",
+   "answer": "Nightlife 9 is strip spillover: the Ari-Saphan Khwai bar-cafe corridor runs through the cell (Dumbo 339 m, Honest Mistake 323 m, BRUT 545 m inside; HOBS and O'Glee at the Ari edge), documented by guides since 2018 — not a Kasetsart student strip (7 km north). Food 8 rides the same strip (84 restaurants, 38 cafes mapped within 800 m). Daily-essentials 8 rides edge-clustered retail plus hospital frontage. Green 8 rests on the single 1.95 ha PRD public park at the cell's south-west margin. Transport 8 rests on an app model that assumes the unbuilt station exists.",
+   "claim_ids": [
+    "sena-ruam-c09",
+    "sena-ruam-c08",
+    "sena-ruam-c13",
+    "sena-ruam-c11",
+    "sena-ruam-c07"
+   ],
+   "limitations": [
+    "The Overture mix behind nightlife 49 could not be decomposed; OSM maps only 11 bars."
+   ]
+  },
+  {
+   "question_id": "Q04",
+   "question": "Counter-evidence: what contradicts the app's calm, high-scoring portrait?",
+   "status": "answered",
+   "answer": "Four counters: (1) no station inside the cell and a fare table that still charges for the missing one — the 1.6 km Saphan Khwai-Ari hop costs 25 baht, called out in the Bangkok Metropolitan Council on 4 Nov 2026; (2) the promised station has been unbuilt since 1999, i.e. the transport upside is a 27-year-old promise with no committed schedule; (3) the 26 Sep 2026 flood brought army detachments to the Phahonyothin/Ari frontage to clear flood-damaged vehicles, with the Saphan Khwai-Soi Ari 11 stretch on deep-standing-water lists; (4) the property-portal guide lists no cons at all (pro-bias) and admits it has no live listings, so its 2-bed floor above the app's blend is soft evidence, not proof.",
+   "claim_ids": [
+    "sena-ruam-c03",
+    "sena-ruam-c16",
+    "sena-ruam-c14",
+    "sena-ruam-c01"
+   ],
+   "limitations": [
+    "Flood detail beyond the army deployment rests on snippet-only traffic alerts; the fare figure is a councilor's statement."
+   ]
+  },
+  {
+   "question_id": "Q05",
+   "question": "Rhythm: how does the area change through the day?",
+   "status": "answered",
+   "answer": "Daytime is medical-and-commuter: hospital traffic at Prasanmit and Vimut on the frontage, buses along Phahonyothin, soi cafes serving workers (the pattern BK profiled in 2018). Evenings import the crowd: the mapped bars draw the Ari-Saphan Khwai strip's customers while the soi itself stays residential. The main road can shut down abruptly in monsoon downpours, as September 2026 showed.",
+   "claim_ids": [
+    "sena-ruam-c12",
+    "sena-ruam-c07",
+    "sena-ruam-c15",
+    "sena-ruam-c09",
+    "sena-ruam-c16"
+   ],
+   "limitations": [
+    "No hour-by-hour source; rhythm inferred from venue types and guide framing."
+   ]
+  },
+  {
+   "question_id": "Q06",
+   "question": "Walkability: station entrances, Phahonyothin sidewalks vs sois — measured how?",
+   "status": "answered",
+   "answer": "Measured in straight-line distances, not durations: BTS Ari 734 m and Saphan Khwai 929 m from the center, both outside the cell; on-cell anchors at 149-700 m. BK Magazine praised the soi's fresh tactile paving as stroll-friendly (2018); Time Out describes the wider area's walkable side-sois. The main road is a traffic-heavy primary corridor (bus stops every few hundred metres; army deployed to it during the 2026 flood). No entrance-level detail exists for a station that was never built.",
+   "claim_ids": [
+    "sena-ruam-c07",
+    "sena-ruam-c15",
+    "sena-ruam-c13",
+    "sena-ruam-c16"
+   ],
+   "limitations": [
+    "No radius-to-time conversion used or implied; sidewalk-condition sourcing is limited to the two editorial guides."
+   ]
+  },
+  {
+   "question_id": "Q07",
+   "question": "Daily life: markets, groceries, hospitals, schools?",
+   "status": "answered",
+   "answer": "Hospitals are the standout: Prasanmit (149 m, the planned station's frontage hospital), Vimut (310 m, opened 2021), Phyathai Phahonyothin (769 m). Groceries: Villa Market 310 m in-cell; Big C 661 m and Lotus's 678 m at the circle's edges; La Villa community mall 700 m south with Villa Supermarket beside it. No fresh market inside the cell (app markets: 0; one unnamed OSM marketplace 650 m SSW outside the polygon). Schools: Maple Bear International 665 m and รุจิเสรีวิทยา 703 m. The app counts 100 essentials and 12 convenience stores in the cell.",
+   "claim_ids": [
+    "sena-ruam-c12",
+    "sena-ruam-c13"
+   ],
+   "limitations": [
+    "The unnamed marketplace could not be identified; individual convenience chains not listed."
+   ]
+  },
+  {
+   "question_id": "Q08",
+   "question": "Affordability: district blend vs the unit's own stock; asking vs signed?",
+   "status": "answered",
+   "answer": "The app's 18,000/37,000 is a Phaya Thai district blend (editorial, typical_asking, updated 2026-09), not this cell's market. The nearest corridor guide (BAANLYY Saphan Khwai, 2026-07-01) gives indicative 1-bed 20,000-38,000 and 2-bed 38,000-72,000 with no live listings behind it. Read against that, the 1-bed blend is plausible-to-slightly-optimistic and the 2-bed 37,000 sits at or below the guide's floor — the rent-7 'moderate' rating leans optimistic for two-bedrooms on this corridor. Asking-vs-signed spread for the unit's own stock is unknown.",
+   "claim_ids": [
+    "sena-ruam-c14"
+   ],
+   "limitations": [
+    "No Sena Ruam-specific rent series found; portal data indicative only."
+   ]
+  },
+  {
+   "question_id": "Q09",
+   "question": "Green/quiet: what is the 1.8 ha park, and is the buffer honest?",
+   "status": "answered",
+   "answer": "The park is สวนสาธารณะกรมประชาสัมพันธ์ — the Public Relations Department public park, a compound park on Phahonyothin Road, mapped by OSM at about 1.95 ha (app: 1.8 ha). Buffer honesty: its centroid is 871 m south-west of the center — outside the scored polygon, catching the 800 m circle's edge — so the green score rests on one edge park, not a park system; the remaining mapped green is unnamed garden polygons. Quiet is well supported by the soi texture guides describe, but the 2026 flood event is the counterpoint to an unqualified calm reading.",
+   "claim_ids": [
+    "sena-ruam-c11",
+    "sena-ruam-c16",
+    "sena-ruam-c15"
+   ],
+   "limitations": [
+    "Park's public access hours unverified; app-vs-OSM hectare difference unexplained."
+   ]
+  },
+  {
+   "question_id": "Q10",
+   "question": "Conditional fit: who does this cell actually suit?",
+   "status": "answered",
+   "answer": "Fits: hospital workers and patients (two private hospitals on the frontage); renters priced out of Ari proper who want the same cafe-soi texture at corridor prices; bus-and-shophouse commuters whose day runs along Phahonyothin. Poor fit: anyone choosing the cell for BTS at the door — the stations are 734 m and 929 m away in other cells and the fare table punishes the gap; and buyers of the 'station area' label itself, since the station is a 27-year-old plan. Families get quiet sois and schools at 665-703 m but should weigh flood exposure on the main road.",
+   "claim_ids": [
+    "sena-ruam-c12",
+    "sena-ruam-c14",
+    "sena-ruam-c07",
+    "sena-ruam-c03",
+    "sena-ruam-c15",
+    "sena-ruam-c16"
+   ],
+   "limitations": [
+    "Fit statements are researcher synthesis over the sourced claims, not survey data."
+   ]
+  },
+  {
+   "question_id": "Q11",
+   "question": "Recent changes 2024-2026: extension effects, construction, news?",
+   "status": "answered",
+   "answer": "Three dated items: (1) 4 Nov 2026 — the Bangkok Metropolitan Council again took up the unbuilt Sena Ruam station (in plan since 1999), with BMA committing only to coordinate ahead of the 2029 concession handover and pledging fare unification under MRTA; (2) 26 Sep 2026 — corridor flooding with army deployment on the Phahonyothin/Ari frontage; (3) 2024-2026 editorial: Time Out's Ari guide (30 May 2026) and BAANLYY's Saphan Khwai guide (1 Jul 2026) re-frame the strip under the neighbouring nodes' names, while the soi's own 2018 guide remains its latest dedicated coverage. No construction has started at the N6 site.",
+   "claim_ids": [
+    "sena-ruam-c03",
+    "sena-ruam-c16",
+    "sena-ruam-c17"
+   ],
+   "limitations": [
+    "The extension's effects (2019-2020 openings) pre-date the 2024-2026 window; no 2024-2026 construction news exists to report."
+   ]
+  },
+  {
+   "question_id": "Q12",
+   "question": "Uncertainties and outside-the-score factors, including the nightlife-9 mechanism?",
+   "status": "answered",
+   "answer": "Open items: the 49-venue nightlife count could not be decomposed (OSM: 11 named bars; the mechanism is best read as Ari-Saphan Khwai strip spillover); the app's rent blend vs the corridor guide's higher 2-bed floor; the PRD park's centroid outside the polygon and its public-access status; the app's transit model treating a phantom station as real; unlinked flood-scale reports; bus route numbers unsourced; and the N6 project's genuinely open status (infobox says start 2026/service 2032, the same page's history says cancelled, BMA says 'will coordinate'). See open_issues OI-1 to OI-8.",
+   "claim_ids": [
+    "sena-ruam-c09",
+    "sena-ruam-c08",
+    "sena-ruam-c14",
+    "sena-ruam-c11",
+    "sena-ruam-c07",
+    "sena-ruam-c02",
+    "sena-ruam-c03"
+   ],
+   "limitations": [
+    "Uncertainty inventory bounded by this session's tools (Reddit/TripAdvisor/Bangkok Post not accessible)."
+   ]
+  }
+ ],
+ "editorial": {
+  "preview": "The app's 'Sena Ruam' is not a place the BTS map recognizes: the scored cell is the quiet, cafe-lined gap between Ari and Saphan Khwai on Phahonyothin Road — 734 m and 929 m from the nearest stations — named for a soi whose own 2018 guide noted the 'grayed-out station' that was supposed to rise here and never did.",
+  "guide_lead": "Soi Sena Ruam — officially Phahon Yothin Soi 11 — is a residential side-soi grid in Phaya Thai strung along the Phahonyothin corridor: two private hospitals and a compound park at the edges, Villa Market and La Villa within 700 m, craft bars spilling in from the Ari end, and a BTS station that has been 'coming' since 1999 and still adds 25 baht to the fare table in 2026.",
+  "strengths": [
+   {
+    "text": "Everyday completeness at short distances: Prasanmit hospital about 149 m and Vimut about 310 m on the road frontage, Villa Market at 310 m, Big C and Lotus's within the 800 m sweep, and 100 essentials counted inside the cell.",
+    "claim_ids": [
+     "sena-ruam-c12",
+     "sena-ruam-c13"
+    ]
+   },
+   {
+    "text": "A documented cafe-and-bar strip instead of a nightlife district: the Ari-Saphan Khwai corridor carries the venues behind nightlife 9 — Dumbo, Honest Mistake and BRUT map inside the cell — while BAANLYY scores Saphan Khwai nightlife 8/10 and Time Out lists Ari's low-lit bars.",
+    "claim_ids": [
+     "sena-ruam-c08",
+     "sena-ruam-c10",
+     "sena-ruam-c09"
+    ]
+   },
+   {
+    "text": "Low-rise residential texture with a published identity: BK Magazine's 2018 soi guide ('could be the new Ari') and Time Out's 'quiet residential sois shaded from the heat' match the grid the app scores.",
+    "claim_ids": [
+     "sena-ruam-c15",
+     "sena-ruam-c10"
+    ]
+   },
+   {
+    "text": "Clean district math: the cell sits entirely in Phaya Thai — Chatuchak starts just north at Saphan Khwai — split roughly half-and-half between the Phaya Thai and Sam Sen Nai khwaengs.",
+    "claim_ids": [
+     "sena-ruam-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text": "There is no station. BTS Ari is 734 m and Saphan Khwai 929 m away, both in other cells; transport 8 rests on an app model that treats the unbuilt N6 'Sena Ruam' as an operating stop.",
+    "claim_ids": [
+     "sena-ruam-c01",
+     "sena-ruam-c07"
+    ]
+   },
+   {
+    "text": "The missing station still costs money: BTSC's fare table counts N6, so the 1.6 km Saphan Khwai-Ari hop runs 25 baht — called out in the Bangkok Metropolitan Council in November 2026 as more than longer extension hops.",
+    "claim_ids": [
+     "sena-ruam-c03"
+    ]
+   },
+   {
+    "text": "Green is thin and off-center: the only named park (the Public Relations Department public park, about 1.95 ha mapped) sits at the cell's south-west margin, its centroid 871 m from the center.",
+    "claim_ids": [
+     "sena-ruam-c11"
+    ]
+   },
+   {
+    "text": "September 2026 flooding hit this Phahonyothin stretch hard enough to bring in army detachments to clear flood-damaged vehicles — a live risk no score input carries.",
+    "claim_ids": [
+     "sena-ruam-c16"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text": "Daytime rhythm is medical and commuter: hospital traffic at Prasanmit and Vimut, buses along Phahonyothin, and the soi cafes that served office workers when BK Magazine profiled the street in 2018.",
+    "claim_ids": [
+     "sena-ruam-c12",
+     "sena-ruam-c07",
+     "sena-ruam-c15"
+    ]
+   },
+   {
+    "text": "Evenings import their crowd: the mapped bars (Dumbo 339 m, Honest Mistake 323 m, BRUT 545 m) draw the Ari-Saphan Khwai strip's customers while the soi itself stays residential.",
+    "claim_ids": [
+     "sena-ruam-c08",
+     "sena-ruam-c15"
+    ]
+   },
+   {
+    "text": "Weekends read cafe-first: the soi's four 2018-era independent cafes (Caffe Undici, Doctor Roaster, PH1b, Before Thirtieth) set the register; only the attached hotel's survival (Craftsman Bangkok) is corroborated for 2026.",
+    "claim_ids": [
+     "sena-ruam-c15"
+    ]
+   },
+   {
+    "text": "When the trains are far away, the corridor is bus-and-road territory — and the September 2026 flood showed how quickly the main road can stop.",
+    "claim_ids": [
+     "sena-ruam-c07",
+     "sena-ruam-c16"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text": "East of Phahonyothin (Sam Sen Nai khwaeng side): the hospital frontage, Vimut, the school and a denser shophouse grid — close to half the cell.",
+    "claim_ids": [
+     "sena-ruam-c06",
+     "sena-ruam-c12",
+     "sena-ruam-c13"
+    ]
+   },
+   {
+    "text": "West of Phahonyothin (Phaya Thai khwaeng side): the Soi Sena Ruam cafe grid and, at the far margin, the Public Relations Department park.",
+    "claim_ids": [
+     "sena-ruam-c15",
+     "sena-ruam-c11",
+     "sena-ruam-c06"
+    ]
+   },
+   {
+    "text": "The south-west corner thins toward La Villa and Ari's cell boundary; the north edge runs to Saphan Khwai's retail, with Big C and Lotus's just outside the polygon.",
+    "claim_ids": [
+     "sena-ruam-c13"
+    ]
+   },
+   {
+    "text": "The center point itself — where the N6 station would have risen in front of Prasanmit — is the cell's transit dead center: no station, no square, just the primary road.",
+    "claim_ids": [
+     "sena-ruam-c02",
+     "sena-ruam-c07"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text": "Fits: hospital workers and patients, renters priced out of Ari proper who want the same cafe-soi texture at corridor rents, and anyone whose day runs along Phahonyothin by bus.",
+    "claim_ids": [
+     "sena-ruam-c12",
+     "sena-ruam-c14",
+     "sena-ruam-c07"
+    ]
+   },
+   {
+    "text": "Poor fit: anyone choosing this cell for BTS at the door — the stations are outside it, the fare table charges for the gap, and the promised station has no schedule.",
+    "claim_ids": [
+     "sena-ruam-c07",
+     "sena-ruam-c03"
+    ]
+   },
+   {
+    "text": "Families get the quiet-soi logic (schools at 665-703 m, low-rise housing) but should weigh the 2026 flood record on the main road against it.",
+    "claim_ids": [
+     "sena-ruam-c13",
+     "sena-ruam-c15",
+     "sena-ruam-c16"
+    ]
+   }
+  ],
+  "uncertainties": [
+   {
+    "text": "The 49-venue nightlife count (Overture) could not be decomposed; OSM maps 11 named bars, so whatever sits behind the difference (shophouse pubs, lounges, karaokes) is unverified.",
+    "claim_ids": [
+     "sena-ruam-c08"
+    ]
+   },
+   {
+    "text": "The app's rent figures are a district blend; BAANLYY's indicative 2-bed floor (38,000) sits above the blend's 37,000, and no signed-rent data exists for the cell's own stock.",
+    "claim_ids": [
+     "sena-ruam-c14"
+    ]
+   },
+   {
+    "text": "The Public Relations Department park's public-access status and hours were not verified, and its centroid lies outside the scored polygon.",
+    "claim_ids": [
+     "sena-ruam-c11"
+    ]
+   },
+   {
+    "text": "BK Magazine's 2018 venue list may be partly stale; only Craftsman Bangkok's survival is corroborated for 2026.",
+    "claim_ids": [
+     "sena-ruam-c15"
+    ]
+   },
+   {
+    "text": "Bus route numbers serving the soi-mouth stops were not sourced, and khlong-boat access was not checked (app fact: piers 0).",
+    "claim_ids": [
+     "sena-ruam-c07"
+    ]
+   },
+   {
+    "text": "Whether N6 construction ever starts is genuinely open: the infobox says construction expected 2026 and service 2032, the same article's history says cancelled, and the BMA said in November 2026 only that it will coordinate.",
+    "claim_ids": [
+     "sena-ruam-c02",
+     "sena-ruam-c03"
+    ]
+   }
+  ]
+ },
+ "open_issues": [
+  {
+   "id": "OI-1",
+   "issue": "App models the unbuilt planned station N6 'Sena Ruam' as an operating bts_sukhumvit station (rail.json), which anchors transport 8, transit_minutes and the area's very identity.",
+   "notes": "Coordinator decision needed: flag, rename (e.g. 'soi-sena-ruam'), or re-point the area. OSM + Thai Wikipedia + Prachachat (2026-11-05) all confirm the station does not exist; BTS's fare table still includes it (25-baht Saphan Khwai-Ari anomaly)."
+  },
+  {
+   "id": "OI-2",
+   "issue": "App fact pipeline counts venues that sit outside the scored polygon but inside the 800 m circle (Big C, Lotus's, La Villa, Villa Supermarket, Maple Bear, the unnamed marketplace, the Hindu shrine at Saphan Khwai).",
+   "notes": "Affects daily_essentials/food/gym comparability across cells; needs a polygon-vs-circle convention decision in the pipeline."
+  },
+  {
+   "id": "OI-3",
+   "issue": "OSM hospital name outdated: the facility at 149 m is tagged โรงพยาบาลโรคปอดกรุงเทพ (name retired 2009; now Prasanmit Hospital).",
+   "notes": "Rename corroborated at snippet level by MOPH HCode 3407 and the hospital's own site; any app display that surfaces OSM names will show a defunct hospital name."
+  },
+  {
+   "id": "OI-4",
+   "issue": "Nightlife 49 (Overture+OSM, 'strong') vs 11 named OSM bars: 4.5x gap, mix unverified.",
+   "notes": "The mechanism claim (Ari-Saphan Khwai strip spillover) is sourced; the count itself cannot be audited from open data in this session."
+  },
+  {
+   "id": "OI-5",
+   "issue": "Rent blend (18k/37k, phaya-thai editorial) vs BAANLYY Saphan Khwai indicative 2-bed floor (38k).",
+   "notes": "Score stays per brief; flagged for the pipeline rent audit (compare with the CRTKY-141 central-rent audit practice)."
+  },
+  {
+   "id": "OI-6",
+   "issue": "Brief premises for this entity were inaccurate (operating extension station; clipping by phahonyothin-24/kasetsart-university; phases 'Dec 2019-Dec 2020').",
+   "notes": "Corrected inside the bundle (c01, c04, c05); the brief template for this entity should be updated before review so the reviewer does not re-assert the extension-station framing."
+  },
+  {
+   "id": "OI-7",
+   "issue": "Transport texture incomplete: bus route numbers at the soi-mouth stops unsourced; khlong Prem Prachakhon boat piers not checked.",
+   "notes": "App facts say piers 0, consistent with the river's distance; canal-boat relevance (if any) remains unknown."
+  },
+  {
+   "id": "OI-8",
+   "issue": "Polygon/geometry checks are the coordinator's: the Voronoi-clipping reading (800 m circle clipped by ari/saphan-khwai cells) and the 1.25 km² re-computation should be confirmed with check_geometry.py.",
+   "notes": "Also confirm whether the app's park_ha 1.8 counts the PRD park fully or partially (OSM full polygon 1.95 ha; centroid outside the polygon)."
+  }
+ ]
+}

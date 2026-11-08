@@ -1,0 +1,884 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.national-stadium",
+  "kind": "station_area",
+  "name_en": "National Stadium",
+  "name_th": "สนามกีฬาแห่งชาติ",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around national-stadium [bts_silom]; districts: pathum-wan, ratchathewi. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.38,
+  "cohort_rank": 25,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 25/133, score 7.38."
+ },
+ "sources": [
+  {
+   "id": "src_bf993f889fd3",
+   "canonical_url": "https://en.wikipedia.org/wiki/National_Stadium_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/National_Stadium_BTS_station",
+   "title": "National Stadium BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-08-23",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub-level; no ridership figures"
+   ]
+  },
+  {
+   "id": "src_c237d8a0625e",
+   "canonical_url": "https://en.wikipedia.org/wiki/Suphachalasai_Stadium",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Suphachalasai_Stadium",
+   "title": "Suphachalasai Stadium",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-09-05",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Concert attendance/revenue figures as listed; ownership detail (CU-owned, Dept of Physical Education operator) is one sentence deep"
+   ]
+  },
+  {
+   "id": "src_4d78899188f5",
+   "canonical_url": "https://en.wikipedia.org/wiki/MBK_Center",
+   "retrieved_url": "https://en.wikipedia.org/wiki/MBK_Center",
+   "title": "MBK Center",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Visitor-mix datum dated 2009"
+   ]
+  },
+  {
+   "id": "src_cf3ea6dbf8da",
+   "canonical_url": "https://en.wikipedia.org/wiki/Jim_Thompson_House",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Jim_Thompson_House",
+   "title": "Jim Thompson House",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-03-20",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "No hours/prices beyond the guide's 100-baht mention"
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
+   "publisher": "OpenStreetMap contributors via Overpass API",
+   "publisher_family": "OpenStreetMap",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Straight-line distances computed by researcher",
+    "CU Centennial Park OSM description confirms Aug 2017 opening (Thai: built and opened Aug 2560 BE)",
+    "Park polygon areas not returned",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(POST query, bbox 13.726,100.524,13.754,100.558)'"
+   ]
+  },
+  {
+   "id": "src_deaf80d00799",
+   "canonical_url": "https://landezine-award.com/chulalongkorn-university-centenary-park/",
+   "retrieved_url": "https://landezine-award.com/chulalongkorn-university-centenary-park/",
+   "title": "Chulalongkorn University Centenary Park (LILA award page)",
+   "publisher": "Landezine International Landscape Award",
+   "publisher_family": "landezine",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "award platform sponsored by Landscape Forms; project-submission content",
+   "limitations": [
+    "11 acres figure here vs '30 rai (~4.8 ha)' in a project-PDF snippet - sizes differ; land-value claim (US$700M) is promotional-adjacent"
+   ]
+  },
+  {
+   "id": "src_ed6fc16d4eda",
+   "canonical_url": "https://migrationology.com/siam-square-pratunam-bangkok",
+   "retrieved_url": "https://migrationology.com/siam-square-pratunam-bangkok",
+   "title": "Siam and Pratunam Bangkok (food/travel guide)",
+   "publisher": "Migrationology (Mark Wiens)",
+   "publisher_family": "personal_blog",
+   "author": "Mark Wiens",
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "affiliate links (Agoda), video requested by Lub d hostel",
+   "limitations": [
+    "Single-author experience guide; some details undated"
+   ]
+  },
+  {
+   "id": "src_571a6b283ae6",
+   "canonical_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "retrieved_url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "title": "Property for rent in Pathum Wan (FazWaz)",
+   "publisher": "FazWaz",
+   "publisher_family": "fazwaz",
+   "author": null,
+   "published_at": null,
+   "updated_at": "live page 2026",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "brokerage portal; asking rents",
+   "limitations": [
+    "Asking not transacted; Wang Mai is the khwaeng-level slice, not unit-level"
+   ]
+  },
+  {
+   "id": "src_199eef7634fd",
+   "canonical_url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "title": "Siam Square",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-11-07",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Used here only for adjacency (skywalk network, square churn)"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "national-stadium-c01",
+   "text_en": "BTS National Stadium (code W1) opened 5 December 1999 as the terminus of the Silom line's western branch, at 13.7465139 N, 100.5291083 E - identical to the app's unit center - on Rama I Road west of the Pathum Wan junction. The station's skybridge links directly to the National Stadium complex, MBK Center, Siam Discovery, the Bangkok Art and Culture Centre and Siam Square; the Jim Thompson House sits opposite in Soi Kasemsan 2, and Chulalongkorn University's sports-science and psychology faculties front the street level.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS National Stadium station, Rama I Road",
+    "relation_to_entity": "entire_unit",
+    "notes": "OSM node 11505460640 equals the app center."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_bf993f889fd3",
+     "locator": "infobox + Nearby landmarks section",
+     "paraphrase": "W1, terminus toward Siam/Bang Wa direction, opened 5 Dec 1999, skybridge links to National Stadium/MBK/Siam Discovery/BACC/Siam Square, Jim Thompson House opposite in Soi Kasemsan 2, CU faculties at ground level."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass node 'National Stadium' (id 11505460640)",
+     "paraphrase": "OSM node equals app center."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "national-stadium-c02",
+   "text_en": "The station's namesake, Suphachalasai Stadium in the National Stadium complex (Wang Mai, Pathum Wan), was built 1937 and opened 1938, named after Luang Suphachalasai, the 'father of Thai sport'; it seats 19,793 (35,000 concert configuration), hosted the 1966/1970/1978 Asian Games as main stadium, and is owned by Chulalongkorn University with the Department of Physical Education as operator.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "sports"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suphachalasai Stadium, National Stadium complex",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "1938 (opened)",
+    "observed_period": "1938-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c237d8a0625e",
+     "locator": "lead + History sections",
+     "paraphrase": "Built 1937, opened 1938, expanded 1941; named after Luang Suphachalasai; 19,793 seats; Asian Games main stadium 1966/1970/1978; CU-owned, DoPE-operated."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Current operating arrangement stated only in outline by the source"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c03",
+   "text_en": "The gym_sports=9 score has a dual mechanism this unit should be honest about: the verified sports anchor is a 19,793-seat public stadium plus a university sports-science faculty, while the app's gym layer counts fitness venues - the two are different amenities, and the app's method does not separate them. The stadium is not a drop-in gym; its track-and-field and match use is scheduled.",
+   "kind": "researcher_inference",
+   "topics": [
+    "method",
+    "sports"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "National Stadium complex",
+    "relation_to_entity": "inside",
+    "notes": "Flagged as the unit's score-mechanism tension per the dispatch."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "app snapshot 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c237d8a0625e",
+     "locator": "capacity + History sections",
+     "paraphrase": "19,793-seat venue; matches and concerts are scheduled events, not open gym access."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "App gym-count method not exposed; inference flagged as such",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c04",
+   "text_en": "Event rhythm is the unit's swing factor: the stadium's concert calendar runs large - Blackpink drew 66,211 across two nights (7-8 January 2023), Stray Kids 20,600 on 14 December 2024, and three more stadium-scale shows are booked into 2026 (Three Man Down 7-8 March, 50,000; Seventeen 14-15 March; Treasure 16 May). On event nights the campus-quiet unit absorbs tens of thousands; between events it reverts to student and commuter texture.",
+   "kind": "factual_report",
+   "topics": [
+    "crowd",
+    "rhythm",
+    "sports"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Suphachalasai Stadium",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "2023-01-07; 2024-12-14; 2026-03-07; 2026-03-14; 2026-05-16",
+    "observed_period": "2023-2026 calendar",
+    "recheck_by": "2026-06",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c237d8a0625e",
+     "locator": "Events/concerts list in History section",
+     "paraphrase": "Blackpink Jan 2023 (66,211), Stray Kids Dec 2024 (20,600), Three Man Down Mar 2026 (50,000), Seventeen Mar 2026, Treasure May 2026."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "2026 shows are announced bookings; attendance figures are listed/estimated by the source"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c05",
+   "text_en": "MBK Center anchors the unit's west edge: opened 7 February 1985, ~2,000 shops across 8 floors at the Rama I x Phaya Thai corner, historically youth-led (half of 100,000+ daily visitors were young Thais in 2009), with Don Don Donki, a Tops supermarket and a 40-stall food court on the 6th floor feeding everyday errands.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food",
+    "retail"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "MBK Center",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "1985-02-07",
+    "observed_period": "1985-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4d78899188f5",
+     "locator": "infobox + History + Anchor sections",
+     "paraphrase": "Opened 7 Feb 1985, ~2,000 shops, 8 floors; youth visitor mix 2009; Don Don Donki, Tops, food courts."
+    },
+    {
+     "source_id": "src_ed6fc16d4eda",
+     "locator": "MBK section of the guide",
+     "paraphrase": "40-stall food court on the 6th floor; 'an entire city of its own'."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Shop count and visitor mix are source-level claims"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "national-stadium-c06",
+   "text_en": "The Jim Thompson House museum - six relocated teak houses, most 19th-century and moved from Ayutthaya, assembled by the American who founded the Thai Silk Company in 1948 and vanished in Malaysia in 1967 - was built in 1959 at 6 Soi Kasemsan 2, one block from this station, and runs guided tours.",
+   "kind": "factual_report",
+   "topics": [
+    "culture",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Jim Thompson House, Soi Kasemsan 2",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "1959 (house built); 1967 (disappearance)",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_cf3ea6dbf8da",
+     "locator": "lead + house-origin paragraphs",
+     "paraphrase": "Museum of Jim Thompson's collection; built 1959; six teak houses incl. Ayutthaya origin; silk company 1948; vanished 1967; 6 Soi Kasemsan 2, one block from the National Stadium; guided tours."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Admission/hours not stated in the source (guide mentions 100 baht)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c07",
+   "text_en": "Chulalongkorn University Centenary Park - opened August 2017, designed by LANDPROCESS (Kotchakorn Voraakhom) with N7A, about 11 acres (~4.45 ha; a project PDF says 30 rai/~4.8 ha - the figures differ), with a 1.3 km bike-priority CU Promenade, Thailand's largest green roof (5,200 m2) and million-gallon-scale rain retention - is the green=9 candidate: its OSM centroid sits 955 m from the app center, so most of the park likely falls OUTSIDE the 800 m catchment with only its northern part inside (partial). The app's 4.3 ha in-unit figure implies nearly the whole park, which the centroid geometry does not support.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "method"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Chulalongkorn University Centenary Park, Phaya Thai Road frontage",
+    "relation_to_entity": "partial",
+    "notes": "Polygon clip decides; the 4.3-ha figure vs ~4.45-4.8 ha total park size is the tension to resolve."
+   },
+   "temporal_scope": {
+    "event_date": "2017-08 (per OSM description: built and opened Aug 2560 BE)",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_deaf80d00799",
+     "locator": "project data table + features list",
+     "paraphrase": "Opened 2017; LANDPROCESS + N7A; 11 acres; 1.3 km promenade; 5,200 m2 green roof; retention capacity claims."
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass way 443471833 tags + centroid distance",
+     "paraphrase": "Name and Thai alt-name confirm identity; description states Aug-2017 opening; centroid 955 m from app center."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Park size figures conflict (11 acres vs 30 rai); no body-level source for the 30 rai figure",
+    "app-data anchor (not a web source): Centenary Park size snippet (30 rai); City-rating app dataset (entity st.national-stadium)"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "national-stadium-c08",
+   "text_en": "Two smaller named greens sit closer in: Suan Chaloem Loa (BMA pocket park on Phaya Thai Road, hours 05:30-19:00, no alcohol/pets/smoking per OSM) at 491 m, and Chamchuri 10 Garden (CU campus garden) at 460 m - together with the Centenary Park tip they form the unit's real green layer, none of it large.",
+   "kind": "factual_report",
+   "topics": [
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Suan Chaloem Loa; Chamchuri 10 Garden",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass relation 9377846 (Suan Chaloem Loa tags) and way 1202537831 (Chamchuri 10)",
+     "paraphrase": "Named BMA pocket park with hours/ rules; CU garden; straight-line distances 491 m and 460 m."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Small-park areas not returned by the query"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c09",
+   "text_en": "The lone pier checks out against OSM geometry: Saphan Hua Chang's ferry terminal is 356 m from the app center but only ~303 m from Ratchathewi station, so nearest-stop logic assigns it to the ratchathewi cell - leaving Saphan Charoenpol (634 m, on the Khlong Saen Saep's Golden Mount line) as this unit's single canal-boat pier, matching the app's piers=1.",
+   "kind": "researcher_inference",
+   "topics": [
+    "method",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Saphan Charoenpol pier (Khlong Saen Saep)",
+    "relation_to_entity": "inside",
+    "notes": "Consistency check between app fact and OSM Voronoi assignment."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "OSM snapshot 2026-11-07",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "Overpass ferry_terminal nodes 4586843050 (Sapan Hua Chang), 567013469 (Sapan Charoenpol) + station nodes",
+     "paraphrase": "Hua Chang 356 m from NS center but 303 m from Ratchathewi; Charoenpol 634 m from NS center, closer to NS than to any other station."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Voronoi assignment is the researcher's straight-line computation, not the app's polygon output",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c10",
+   "text_en": "The rent blend (36,500/82,000 THB, district_blend as of 2026-09) is the lowest of the four Pathum Wan units in this batch, plausibly because the unit's khwaeng-level stock spans student-adjacent and older blocks: FazWaz shows Wang Mai listings from 12,900 to 434,000/month (129 listings) against a district 1-bed average of 46,800.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Wang Mai khwaeng / Pathum Wan district",
+    "relation_to_entity": "entire_unit",
+    "notes": "Wang Mai is the unit's dominant khwaeng side (east of Phaya Thai Rd); blend remains district-level."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "app 2026-09 blend vs live FazWaz 2026-11",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_571a6b283ae6",
+     "locator": "neighborhood range blocks",
+     "paraphrase": "Wang Mai 12,900-434,000 (129 listings); district 1BR avg 46,800."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Khwaeng-level data is not unit-level; asking rents",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "national-stadium-c11",
+   "text_en": "Counter-view to the 'quieter Siam' reading: the unit lacks a mall-owned food engine of Siam's scale (app 511 food vs 676) but is stitched into the same crush by the skybridge - the guide treats Siam as 'the most well known shopping district in all of Bangkok' with MBK 'an entire city of its own', and a hostel sits directly below this station, keeping the 24-hour youth-traveler layer present. Weekend spillover from Siam Square reaches MBK's doors; the quiet is between events and north of Rama I, not in the retail blocks.",
+   "kind": "reported_perception",
+   "topics": [
+    "counter_evidence",
+    "crowd",
+    "food"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "MBK / Siam Square seam",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guide-era + app snapshot 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_ed6fc16d4eda",
+     "locator": "Siam characterization + Lub d placement",
+     "paraphrase": "Siam 'most well known shopping district'; MBK 'an entire city of its own'; Lub d hostel directly below the National Stadium BTS station."
+    },
+    {
+     "source_id": "src_bf993f889fd3",
+     "locator": "skybridge in Nearby landmarks",
+     "paraphrase": "MBK and Siam Square linked to the station by skybridge."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Spillover dynamics are perception-level; no footflow measurement",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "national-stadium-c12",
+   "text_en": "Recent changes 2024-2026: the stadium calendar (Stray Kids Dec 2024; three stadium shows Mar-May 2026) is the main verified change driver; next door, Siam Square's east side continued its churn (Scala demolished by 2021, site reportedly empty as of 2023). No 2024-2026 infrastructure change at the station itself surfaced in this pass - an explicit gap.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Suphachalasai Stadium; Siam Square edge; station",
+    "relation_to_entity": "inside",
+    "notes": "Gap flagged for the coordinator."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_c237d8a0625e",
+     "locator": "concerts list",
+     "paraphrase": "Dec 2024 and three 2026 stadium shows."
+    },
+    {
+     "source_id": "src_199eef7634fd",
+     "locator": "Cinemas section",
+     "paraphrase": "Scala site reportedly still empty as of 2023."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No station-area public-works source found; absence of evidence is not evidence of absence"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c01",
+    "national-stadium-c02"
+   ],
+   "notes": "Identity: W1 branch terminus serving the National Stadium complex, MBK and the Jim Thompson House; app center equals the true station site."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c05",
+    "national-stadium-c11",
+    "national-stadium-c04"
+   ],
+   "notes": "Everyday experience: campus-adjacent shopping and food at MBK, student texture, event-night surges at the stadium."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c01",
+    "national-stadium-c02",
+    "national-stadium-c03"
+   ],
+   "notes": "Mechanisms: transport=10 from the skybridge-linked W1; vibe=10 from the Siam seam; gym_sports=9 from the stadium-faculty mix (flagged)."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c11",
+    "national-stadium-c04"
+   ],
+   "notes": "Counter-evidence: no quiet refuge from the Siam crush inside the retail blocks; event nights import the crush instead."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c04",
+    "national-stadium-c11"
+   ],
+   "notes": "Rhythm: weekday student/commuter base, weekend Siam spillover, concert nights (incl. three 2026 bookings)."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c01",
+    "national-stadium-c05"
+   ],
+   "notes": "Walkability: skybridge spine to MBK/Discovery/BACC/Square; straight-line distances only, no radius-to-time conversions."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c05",
+    "national-stadium-c06",
+    "national-stadium-c10"
+   ],
+   "notes": "Daily life: MBK's Tops supermarket and food courts, street-level faculties, canal pier for the old town, cheaper rents than the neighbors."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c10"
+   ],
+   "notes": "36,500/82,000 is the batch's lowest blend; Wang Mai listing floor (12,900) supports the student-adjacent reading; still district-level, asking-basis."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c07",
+    "national-stadium-c08"
+   ],
+   "notes": "Green=9 with 4.3 ha: Centenary Park is partial at best (centroid 955 m); the verified close-in green is two small parks; 4.3 ha needs the polygon."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c11",
+    "national-stadium-c10",
+    "national-stadium-c04"
+   ],
+   "notes": "Fit: students, MU-style event-goers, budget-leaning renters comfortable with weekend crush; poor fit for quiet-seekers on concert weekends."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c12",
+    "national-stadium-c04"
+   ],
+   "notes": "2024-2026: event calendar verified; station-area infrastructure changes not found (gap)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "national-stadium-c03",
+    "national-stadium-c07",
+    "national-stadium-c12"
+   ],
+   "notes": "Outside-the-score: gym-vs-venue method split, park-clip geometry, Scala-site redevelopment direction - flagged, unscored."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "The Silom line's western terminus in the shadow of a 19,793-seat national stadium: MBK's 2,000 stalls and food courts on one side, the Jim Thompson House teak compound on the other, and Centenary Park's green roof just past the catchment edge - with 66,000-person concert nights as the calendar's exclamation marks.",
+   "claim_ids": [
+    "national-stadium-c01",
+    "national-stadium-c02",
+    "national-stadium-c05",
+    "national-stadium-c06",
+    "national-stadium-c04"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "National Stadium is Siam's practical back door: same skywalk network, same food density in the app's top tier, but rents that start where the student khwaeng begins (app blend 36,500/82,000, the researched comparison set's lowest). The trade is precision - the stadium gives the unit its name and its event nights, and the park its green score leans on sits mostly beyond the 800-meter line.",
+   "claim_ids": [
+    "national-stadium-c01",
+    "national-stadium-c10",
+    "national-stadium-c07"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Skybridge-connected everyday logistics: MBK (Tops supermarket, 40-stall food court, Don Don Donki) plus BACC and Siam Discovery on one covered spine from the W1 platform.",
+    "claim_ids": [
+     "national-stadium-c01",
+     "national-stadium-c05"
+    ]
+   },
+   {
+    "text_en": "A real sports-and-culture anchor pair: a 19,793-seat national stadium with a packed 2024-2026 concert calendar, and the Jim Thompson House museum one block away.",
+    "claim_ids": [
+     "national-stadium-c02",
+     "national-stadium-c04",
+     "national-stadium-c06"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The green=9 figure outruns the geometry: Centenary Park's centroid is 955 m out, so only its northern tip likely sits inside; the verified close-in green is two small parks - the 4.3 ha claim needs the polygon to survive.",
+    "claim_ids": [
+     "national-stadium-c07",
+     "national-stadium-c08"
+    ]
+   },
+   {
+    "text_en": "gym_sports=9 blends two different things: a scheduled-event stadium (not a drop-in gym) and the app's fitness-venue count - the score is defensible but the mechanism should be separated.",
+    "claim_ids": [
+     "national-stadium-c03"
+    ]
+   },
+   {
+    "text_en": "Event-night crush: bookings for 50,000-person shows in 2026 mean the unit's crowd experience can flip overnight without any change to its score.",
+    "claim_ids": [
+     "national-stadium-c04"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime runs on campus and MBK errands - food courts, phone stalls, faculty buildings; evenings lean on the Siam seam's food strip; concert nights (Dec 2024, Mar and May 2026 bookings) flood Rama I with tens of thousands, while non-event nights keep the hostel-and-student layer as the main late activity.",
+    "claim_ids": [
+     "national-stadium-c04",
+     "national-stadium-c11"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The Rama I retail spine (MBK, Discovery, skybridge) is loud and continuous; north across the canal-side blocks toward Phetchaburi it thins to the Charoenpol pier lanes; east past Phaya Thai Road the campus gardens (Chamchuri 10) and pocket parks take over - three units of texture inside one scorecard.",
+    "claim_ids": [
+     "national-stadium-c01",
+     "national-stadium-c09",
+     "national-stadium-c08"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fit for students, event-goers and budget-leaning renters who want Siam's food reach at the researched comparison set's lowest rent blend and can live with concert-night crowds.",
+    "claim_ids": [
+     "national-stadium-c10",
+     "national-stadium-c11",
+     "national-stadium-c04"
+    ]
+   },
+   {
+    "text_en": "Poor fit for quiet-seekers during event season and for anyone whose 'green' expectation is a large park inside the catchment - the flagship park sits mostly beyond the line.",
+    "claim_ids": [
+     "national-stadium-c04",
+     "national-stadium-c07"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "park_ha=4.3 vs Centenary Park partial-membership geometry unresolved; park size sources conflict (11 acres vs 30 rai) (national-stadium-c07).",
+   "gym_sports method (venue count vs stadium access) not exposed (national-stadium-c03).",
+   "No 2024-2026 station-area infrastructure change found - explicit gap (national-stadium-c12).",
+   "Pier assignment (Charoenpol in-cell, Hua Chang out) is the researcher's straight-line Voronoi check (national-stadium-c09).",
+   "2026 concert attendances are source-listed estimates, not realized counts."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "1 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Park-clip geometry: app park_ha=4.3 implies nearly all of Centenary Park (~4.45-4.8 ha) in-unit, but the OSM centroid sits 955 m out - coordinator polygon check decides between 'partial tip' and 'app uses a different park dataset' (national-stadium-c07).",
+   "open issue: gym_sports=9 should separate scheduled-venue access (stadium) from fitness-venue counts (national-stadium-c03).",
+   "open issue: No station-area 2024-2026 public-works source found; a BMA-targeted pass could close it.",
+   "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side corroboration.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'the batch's lowest' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "C-1 recheck 2026-11-08 (web search, aggregated tour listings — NOT body-read): calendar remains active — BIGBANG 7-8 Nov 2026, BTS 3/5/6 Dec 2026 reported, Bruno Mars Feb 2027. c04's swing-factor claim stays supported by an active calendar; body-read confirmation pending per F-2 (no AI-summary provenance in claims)."
+  ]
+ }
+}

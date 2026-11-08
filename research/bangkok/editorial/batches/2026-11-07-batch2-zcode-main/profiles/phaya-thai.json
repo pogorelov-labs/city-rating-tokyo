@@ -1,0 +1,1418 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "phaya-thai",
+  "kind": "district",
+  "name_en": "Phaya Thai",
+  "name_th": "พญาไท",
+  "aliases": [
+   "Ari",
+   "Aree",
+   "Saphan Khwai",
+   "Sanam Pao",
+   "Pradiphat",
+   "Inthamara",
+   "Samsen Nai"
+  ],
+  "scope_notes": "Administrative khet (~9.59 km², pop ~67,388 in 2020) along the Phahonyothin corridor with sharply different subareas (Ari, Saphan Khwai, Sanam Pao, Pradiphat, Samsen Nai). Research-verified: the khet's namesake BTS Phaya Thai + ARL terminus sit in Ratchathewi, just outside the khet (app-polygon check confirms); inside stations are Ari, Sanam Pao, Saphan Khwai + SRT Sam Sen. Green 9's likely basis is the Royal Thai Army compound and other state land (controlled access, not public parkland — inference; 14.8 ha unmapped). Victory Monument's attribution is conflicting (app polygon includes the roundabout; sources place it in Ratchathewi)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 8.0,
+  "cohort_rank": 4,
+  "cohort_size": 50,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
+  "popularity_source_ids": [],
+  "selection_rationale": "District #4 with broad coverage; district-level counterpart to the pilot's st.ari findings; where the 14.8 ha of mapped parkland actually sit."
+ },
+ "sources": [
+  {
+   "id": "src_22deb73f92fe",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phaya_Thai_district",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phaya_Thai_district",
+   "title": "Phaya Thai District",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T13:55:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "live wiki, no revision date captured",
+    "population figures differ from Thai wiki and from app baseline"
+   ]
+  },
+  {
+   "id": "src_83d19094630c",
+   "canonical_url": "https://th.wikipedia.org/wiki/เขตพญาไท",
+   "retrieved_url": "https://th.wikipedia.org/wiki/เขตพญาไท",
+   "title": "เขตพญาไท",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T13:57:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "live wiki, no revision date captured",
+    "no parks section - absence is evidence of thin coverage, not proof no park exists"
+   ]
+  },
+  {
+   "id": "src_1bafc1e4c0dc",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phaya_Thai_Palace",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phaya_Thai_Palace",
+   "title": "Phaya Thai Palace",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "no visitor-access or restoration info in article"
+   ]
+  },
+  {
+   "id": "src_16cadddb23a1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phaya_Thai_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phaya_Thai_station",
+   "title": "Phaya Thai station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:19:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "live wiki"
+   ]
+  },
+  {
+   "id": "src_d2046e72643b",
+   "canonical_url": "https://th.wikipedia.org/wiki/ถนนประดิพัทธ์",
+   "retrieved_url": "https://th.wikipedia.org/wiki/ถนนประดิพัทธ์",
+   "title": "ถนนประดิพัทธ์ (Thanon Pradiphat)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:36:30Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "live wiki; Vietnam-era and 1977-1989 history drawn from the article's account, not independently checked"
+   ]
+  },
+  {
+   "id": "src_7d445c13b31b",
+   "canonical_url": "https://en.wikipedia.org/wiki/Vajiravudh_College",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Vajiravudh_College",
+   "title": "Vajiravudh College",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:39:30Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "used only to rule the college out as an in-district green candidate (address is Dusit district)"
+   ]
+  },
+  {
+   "id": "src_675e6cf3e1bd",
+   "canonical_url": "https://www.hipflat.com/condo-for-rent/bangkok/phaya-thai",
+   "retrieved_url": "https://www.hipflat.com/condo-for-rent/bangkok/phaya-thai",
+   "title": "Condos for Rent in Phaya Thai - HipFlat",
+   "publisher": "HipFlat",
+   "publisher_family": "hipflat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:05:30Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal; listings are asking rents, sample skewed to advertised condos and includes a few adjacent-district projects",
+   "limitations": [
+    "USD headline; THB only on individual listings",
+    "no per-station breakdown on page",
+    "asking rents, not signed leases"
+   ]
+  },
+  {
+   "id": "src_41e2f3bc6dc8",
+   "canonical_url": "https://condoreviewsthailand.com/neighborhoods/ari",
+   "retrieved_url": "https://condoreviewsthailand.com/neighborhoods/ari",
+   "title": "Ari Neighbourhood Review - Condoreviews Thailand",
+   "publisher": "Condoreviews Thailand",
+   "publisher_family": "condoreviewsthailand",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2025-12-31",
+   "retrieved_at": "2026-11-07T14:28:30Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "property-review site; neighborhood content supports condo-sales/rental audience",
+   "limitations": [
+    "Ari-focused; treats Saphan Khwai as adjacent",
+    "rent tables are editorial estimates",
+    "does not mention any park in or near Ari"
+   ]
+  },
+  {
+   "id": "src_29052a7eb6c9",
+   "canonical_url": "https://www.fm91bkk.com/newsarticle/44807",
+   "retrieved_url": "https://www.fm91bkk.com/newsarticle/44807",
+   "title": "8 ก.พ. 68 หลีกเลี่ยงเส้นทาง! แยกสะพานควาย-พหลโยธิน ธ.ออมสิน สำนักงานใหญ่ จัดประชุมใหญ่สามัญประจำปี",
+   "publisher": "FM91 Traffic Radio",
+   "publisher_family": "fm91",
+   "author": null,
+   "published_at": "2025-02-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:32:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "single-day event; illustrates junction role rather than chronic conditions"
+   ]
+  },
+  {
+   "id": "src_501c9f61021b",
+   "canonical_url": "https://www.phyathai.com/th/pytp/about/hospital",
+   "retrieved_url": "https://www.phyathai.com/th/pytp/about/hospital",
+   "title": "โรงพยาบาลพญาไท พหลโยธิน - เกี่ยวกับโรงพยาบาล",
+   "publisher": "Phyathai Hospitals (Thongtang Group)",
+   "publisher_family": "phyathai-group",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:33:30Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "hospital marketing",
+   "limitations": [
+    "does not mention the Paolo rename or dates on the fetched page"
+   ]
+  },
+  {
+   "id": "src_6f300730c243",
+   "canonical_url": "https://www.marketingoops.com/news/biz-news/paolo-hospital-rebrand-to-phyathai/",
+   "retrieved_url": "https://www.marketingoops.com/news/biz-news/paolo-hospital-rebrand-to-phyathai/",
+   "title": "เปาโลเมมโมเรียล รีแบรนด์ใหม่เป็น รพ.พญาไท พหลโยธิน",
+   "publisher": "Marketing Oops",
+   "publisher_family": "marketingoops",
+   "author": null,
+   "published_at": "2024-05-20",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:38:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "marketing-trade press reporting a corporate rebrand",
+   "limitations": [
+    "article body gives no exact effective date; search-surface summaries cite 1 Apr 2024 effective and 25 May 2024 official"
+   ]
+  },
+  {
+   "id": "src_e574614c33da",
+   "canonical_url": "https://greener.bangkok.go.th/district/khet-phaya-thai/",
+   "retrieved_url": "https://greener.bangkok.go.th/district/khet-phaya-thai/",
+   "title": "เขตพญาไท Archives - Greener Bangkok (BMA Environmental Office)",
+   "publisher": "Bangkok Metropolitan Administration, Greener Bangkok",
+   "publisher_family": "bma-greener-bangkok",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:46:30Z",
+   "body_read": true,
+   "type": "government",
+   "commercial_context": "none",
+   "limitations": [
+    "retrieved via Exa server-side reader because direct fetch returned 403",
+    "lists park names without sizes on this page"
+   ]
+  },
+  {
+   "id": "src_c908c2ddc9f2",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/30116",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/30116",
+   "title": "เปิดตัว 'พญาไทภิรมย์' สวนสาธารณะแห่งใหม่บนถ.สามเสน",
+   "publisher": "Thai PBS",
+   "publisher_family": "thaipbs",
+   "author": null,
+   "published_at": "2011-08-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:47:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "2011 article; retrieved via Exa server-side reader",
+    "headline says 'on Sam Sen road' while body locates it near Phramongkutklao between the expressway and Khlong Sam Sen"
+   ]
+  },
+  {
+   "id": "src_4a90ae7694a8",
+   "canonical_url": "https://mapcarta.com/W167534432",
+   "retrieved_url": "https://mapcarta.com/W167534432",
+   "title": "สวนพญาไทภิรมย์ - Map / OSM way 167534432",
+   "publisher": "Mapcarta (OpenStreetMap-derived)",
+   "publisher_family": "mapcarta-osm",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:45:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "snippet-only via Exa search highlights; not opened in full",
+    "gives coordinates 13.77204, 100.53212 and OSM leisure=park way ID; third-party locality labels ('Phaya Thai') are geocoding artifacts",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_ef1656855211",
+   "canonical_url": "https://moovitapp.com/index/en/public_transit-Phayathai_Pirom_Park_%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A0%E0%B8%B4%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-Bangkok-site_18666440-2401",
+   "retrieved_url": "https://moovitapp.com/index/en/public_transit-Phayathai_Pirom_Park_%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A0%E0%B8%B4%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-Bangkok-site_18666440-2401",
+   "title": "How to Get to Phayathai Pirom Park in Ratchathewi - Moovit",
+   "publisher": "Moovit",
+   "publisher_family": "moovit",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:45:30Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "transit app content",
+   "limitations": [
+    "snippet-only via Exa search highlights; labels the park 'in Ratchathewi', in tension with BMA's khet listing",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_ce47b695ed71",
+   "canonical_url": "https://www.facebook.com/ThaiArmyClubViphavadi/",
+   "retrieved_url": "https://www.facebook.com/ThaiArmyClubViphavadi/",
+   "title": "สโมสรทหารบก - วิภาวดี (Thai Army Club Vibhavadi) page info",
+   "publisher": "Royal Thai Army Club (Vibhavadi)",
+   "publisher_family": "facebook-armyclub",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T14:00:30Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "snippet-only from search results; supplies street address 195 Vibhavadi Rangsit Rd, Sam Sen Nai and stadium capacity ~20,000; not opened in full",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "phaya-thai-c01",
+   "text_en": "Khet Phaya Thai covers 9.595 km2 and since 26 July 2017 has consisted of exactly two khwaeng: Sam Sen Nai (4.923 km2) and Phaya Thai (4.672 km2); numbers 2-5 of the old khwaeng sequence belong to the area split off to form Ratchathewi district in 1989. Population estimates differ by source and year: 70,238 (2017, EN wiki), 66,212 (Dec 2021, EN wiki), 64,037 (Dec 2023, TH wiki) - a declining trend across published snapshots; the app baseline of ~67,388 (2020) sits within this range.",
+   "kind": "factual_report",
+   "topics": [
+    "admin",
+    "identity",
+    "population"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Khet Phaya Thai (both khwaeng)",
+    "relation_to_entity": "entire_unit",
+    "notes": "geocode 1014, postal code 10400"
+   },
+   "temporal_scope": {
+    "event_date": "2017-07-26",
+    "observed_period": "2017-2023 (population snapshots)",
+    "recheck_by": null,
+    "notes": "khwaeng split date; population rechecks whenever BMA registers update"
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Administration/khwaeng table and History section",
+     "paraphrase": "Two subdistricts listed (Sam Sen Nai 4.923 km2 / 30,476 pop; Phaya Thai 4.672 km2 / 36,736 pop, Dec 2021); note that subdistricts 2-5 were split off to Ratchathewi; history: created 1966 from Dusit and Bang Kapi, Ratchathewi carved off 1989, eastern areas to Din Daeng 1993."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "แขวง table and ประวัติ section",
+     "paraphrase": "Two khwaeng split 26 Jul 2017; Sam Sen Nai 4.923 km2 / 29,479 pop and Phaya Thai 4.672 km2 / 34,558 pop as of Dec 2023; total 9.595 km2 / 64,037."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "app baseline (67,388 in 2020) not independently located in a published table; consistent in magnitude with the sourced snapshots"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-c02",
+   "text_en": "The district's boundaries are water, road and rail lines, not neighborhood edges: Khlong Bang Sue to the north (against Chatuchak), the east side of Vibhavadi Rangsit Road to the east (against Din Daeng), the south side of Din Daeng Road plus Khlong Sam Sen to the south (against Din Daeng and Ratchathewi), and the northern railway line to the west (against Dusit).",
+   "kind": "factual_report",
+   "topics": [
+    "admin",
+    "geography",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "khet boundary ring",
+    "relation_to_entity": "entire_unit",
+    "notes": "EN wiki adds only that railway tracks divide Phaya Thai khwaeng from Dusit's Nakhon Chai Si khwaeng"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "อาณาเขต (boundary) section, quoted in Thai",
+     "paraphrase": "North: Khlong Bang Sue divides from Chatuchak; east: east side of Vibhavadi Rangsit Rd divides from Din Daeng; south: south side of Din Daeng Rd and Khlong Sam Sen divide from Din Daeng and Ratchathewi; west: northern railway line divides from Dusit."
+    },
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Neighbouring districts / Geography",
+     "paraphrase": "Clockwise from north: Bang Sue, Chatuchak, Din Daeng, Ratchathewi, Dusit; railway tracks divide Phaya Thai subdistrict from Dusit's Thanon Nakhon Chai Si."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-c03",
+   "text_en": "Three BTS Sukhumvit Line stations lie inside the khet - Ari (N3), Sanam Pao (N4) and Saphan Khwai (N5), all opened 5 December 1999 on Phahonyothin Road - plus SRT Sam Sen railway station; but the khet's namesake station, BTS Phaya Thai (N2) with the Airport Rail Link terminus (A8, opened 23 August 2010), sits just outside the southern boundary in Ratchathewi district. The interchange that gives the district its airport connection is across the line.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "BTS Ari/Sanam Pao/Saphan Khwai (inside); BTS+ARL Phaya Thai (outside, southern edge)",
+    "relation_to_entity": "partial",
+    "notes": "the stations inside are strung along the Phahonyothin corridor"
+   },
+   "temporal_scope": {
+    "event_date": "2010-08-23",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "ARL interchange opening; BTS stations 1999-12-05"
+   },
+   "evidence": [
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "ทางราชการ/การเดินทาง section",
+     "paraphrase": "Lists BTS Sukhumvit line stations Saphan Khwai - Sanam Pao - Ari for this district, and SRT Sam Sen station; BTS Phaya Thai is not listed as in-district."
+    },
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "infobox and lead",
+     "paraphrase": "Phaya Thai station located on Phaya Thai Road 'in Ratchathewi District, Bangkok, Thailand'; BTS 5 Dec 1999; ARL 23 Aug 2010; ARL City Line terminus A8; halt criticized for neglect as tracks hand over to the Don Mueang-Suvarnabhumi-U-Tapao high-speed railway."
+    },
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Transit note",
+     "paraphrase": "Explicitly notes Phaya Thai BTS Station is in Ratchathewi, not this district."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "station-footprint straddling a boundary line cannot be fully excluded from wiki text alone; both district and station articles agree on Ratchathewi"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-c04",
+   "text_en": "Phahonyothin Road is the district's main spine - EN wiki records that it was originally named 'Sanam Pao', after a former firing range, which explains the BTS Sanam Pao station name. Phaya Thai Road, despite the district name, does not pass through the khet at all (it runs through Ratchathewi and Pathum Wan). Pradiphat Road runs 1.808 km westward from Saphan Khwai junction into Dusit; the Vibhavadi Rangsit corridor forms the eastern edge.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "identity",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Phahonyothin / Pradiphat / Vibhavadi corridors; Phaya Thai Rd (outside)",
+    "relation_to_entity": "partial",
+    "notes": "corridor claims straddle the boundary by definition"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "historical naming"
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Roads and Places sections",
+     "paraphrase": "Phahonyothin is the area's main thoroughfare, originally named 'Sanam Pao' (also a former firing range); Phaya Thai Road runs through Ratchathewi and Pathum Wan, not this district."
+    },
+    {
+     "source_id": "src_d2046e72643b",
+     "locator": "เส้นทาง and ประวัติ sections",
+     "paraphrase": "Pradiphat runs from Saphan Khwai intersection (Phaya Thai district) to Saphan Daeng (Dusit), 1.808 km, four lanes."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "ถนน list",
+     "paraphrase": "Roads listed for the district: Phahonyothin, Pradiphat, Vibhavadi Rangsit, Din Daeng, Rama VI, Nakhon Chai Si, Kamphaeng Phet, Si Rat Expressway, Uttaraphimukh Tollway; Si Ayutthaya and Samsen roads are not listed as in-district."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-c05",
+   "text_en": "Several places marketed under the 'Phaya Thai' name are outside the khet: Phaya Thai Palace stands on Ratchawithi Road by Khlong Sam Sen in Ratchathewi district (13.76833, 100.53278), now the Phramongkutklao Hospital site; Victory Monument and its BTS station are likewise in Ratchathewi (Phaya Thai station sits 'between Victory Monument and Ratchathewi' on the line); Chatuchak's big parks (Chatuchak Park, Vachirabenjatas/Rot Fai Park) lie north across Khlong Bang Sue.",
+   "kind": "factual_report",
+   "topics": [
+    "geography",
+    "green",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Phaya Thai Palace; Victory Monument; Chatuchak-side parks",
+    "relation_to_entity": "outside",
+    "notes": "palace ~2 km SW of Ari station; parks immediately north of the Khlong Bang Sue boundary"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "palace built from 1909 under Rama V"
+   },
+   "evidence": [
+    {
+     "source_id": "src_1bafc1e4c0dc",
+     "locator": "lead and location",
+     "paraphrase": "Palace on the banks of the Samsen Canal on Rajavithee Road, in Ratchathewi District; built beginning 1909 at Rama V's behest; later military clinic renamed Phramongkutklao Hospital; registered ancient monument."
+    },
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "Connections",
+     "paraphrase": "BTS Phaya Thai is between Victory Monument and Ratchathewi stations; Suan Pakkad Palace museum just east of the station."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "อาณาเขต",
+     "paraphrase": "Khlong Bang Sue is the boundary with Chatuchak, placing the Chatuchak-side park cluster outside the khet."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Chatuchak park placement rests on the boundary line plus common knowledge of those parks' locations; not verified by a dedicated park source in this run",
+    "Vachirabenjatas Park '450 rai' figure seen only in a search snippet and not used here",
+    "Conflict noted 2026-11-07: a point-in-polygon test against the app's own khet polygon (geometry.json) places the Victory Monument roundabout (~13.7699, 100.5350) INSIDE the phaya-thai khet, while the source attributes it to Ratchathewi - the monument sits at the boundary; treat its attribution as conflicting."
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "phaya-thai-c06",
+   "text_en": "The district's dominant green-and-low-rise block is not a park but state/military land: EN wiki describes Royal Thai Army holdings on the district's eastern side 'including Army Stadium and Channel 5 TV', and Thai wiki lists the Army Sports Stadium (สนามกีฬากองทัพบก), the 2nd Cavalry Division, elements of the 1st Infantry Regiment, and the Border Patrol Police headquarters among district features. The Army Club (Vibhavadi) is recorded at 195 Vibhavadi Rangsit Rd, khwaeng Sam Sen Nai, with a full-size football stadium of about 20,000 seats; further military units (1st Artillery Regiment King's Guard, Army Transport, Air Force Engineer Department) line Pradiphat Road. Access to this green is institutionally controlled, not general public parkland.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "identity",
+    "land_use"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Vibhavadi/Army Club-stadium band and Pradiphat units",
+    "relation_to_entity": "partial",
+    "notes": "eastern edge plus central Pradiphat corridor"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 (no redevelopment news found)",
+    "recheck_by": "2027-11",
+    "notes": "Army-land reuse is a recurring Bangkok policy theme; status could change"
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Places/Notable places",
+     "paraphrase": "Royal Thai Army holdings on the east side, including Army Stadium and Channel 5 TV."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "สถานที่สำคัญ / หน่วยทหาร",
+     "paraphrase": "Lists สนามกีฬากองทัพบก, กองพลทหารม้าที่ 2, กรมทหารราบที่ 1 มหาดเล็กฯ, กองบัญชาการตำรวจตระเวนชายแดน among district features; ททบ.5 also listed."
+    },
+    {
+     "source_id": "src_ce47b695ed71",
+     "locator": "page info in search result",
+     "paraphrase": "Army Club (central) Vibhavadi at 195 Vibhavadi Rangsit Rd, Sam Sen Nai, Phaya Thai, Bangkok 10400; stadium described as full-service football ground, capacity ~20,000."
+    },
+    {
+     "source_id": "src_d2046e72643b",
+     "locator": "สถานที่รายทาง",
+     "paraphrase": "First Artillery Battalion (King's Guard), Air Force Engineer Department, Army Transport Department located along Pradiphat Road."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "street address, capacity and golf/driving-range operation come from snippet-level sources (search result and Facebook page info), not opened pages",
+    "no source found quantifying the compound's area in hectares"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c07",
+   "text_en": "BMA's own Greener Bangkok site lists only small, named pocket green spaces for the khet: Suan Rom Suk (@Phaya Thai), Suan Yan Phahonyothin (@Phaya Thai, mouth of Soi Ruammit), Suan Ari Samphan, Suan Phaya Thai Phirom, and Suan Rama VI (@Phaya Thai, opposite Sam Sen Witthayalai school). The largest single named public park, Suan Phaya Thai Phirom, opened 4 September 2011, is about 10 rai (~1.6 ha) on EXAT land between the Si Rat expressway and Khlong Sam Sen near Phramongkutklao - third-party maps put it at 13.77204, 100.53212 and some label it Ratchathewi, so even the district's flagship park sits at the administrative edge. Neither the EN nor TH Wikipedia district article lists any park. The app's 14.8 ha of mapped parkland is therefore best explained as the Army Club/Army Stadium compound plus these expressway/leftover-space pocket parks and institutional grounds, not a network of ordinary public parks; the Ari station-unit gap the pilot found is consistent with Suan Ari (the Public Relations Department garden) sitting at the far end of Soi Ari Samphan, beyond an 800 m station radius.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "land_use"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "district",
+    "place_name": "khet-wide park inventory",
+    "relation_to_entity": "entire_unit",
+    "notes": "pocket parks distributed along Rama VI/expressway margins and Soi Ari Samphan; Army compound on Vibhavadi edge"
+   },
+   "temporal_scope": {
+    "event_date": "2011-09-04",
+    "observed_period": "list as published 2024-2026",
+    "recheck_by": "2027-05",
+    "notes": "BMA keeps adding 15-minute parks; recheck the Greener district page"
+   },
+   "evidence": [
+    {
+     "source_id": "src_e574614c33da",
+     "locator": "district page park list",
+     "paraphrase": "Greener Bangkok khet Phaya Thai page lists สวนร่มสุข@เขตพญาไท, สวนย่านพหลโยธิน@เขตพญาไท (ปากซอยร่วมมิตร), สวนอารีย์สัมพันธ์, สวนพญาไทภิรมย์, สวนพระรามที่6@เขตพญาไท (ตรงข้ามโรงเรียนสามเสน) - all named individually, no large park."
+    },
+    {
+     "source_id": "src_c908c2ddc9f2",
+     "locator": "article body",
+     "paraphrase": "Suan Phaya Thai Phirom opens 4 Sep 2011; near Phramongkutklao Hospital; between the expressway and Khlong Sam Sen; 10 rai; access from Rama VI Rd or the expressway exit along the khlong, 150 m from Soi 28."
+    },
+    {
+     "source_id": "src_4a90ae7694a8",
+     "locator": "OSM way record",
+     "paraphrase": "OSM leisure=park way 167534432 at 13.77204, 100.53212, near Phramongkutklao College of Medicine and Phaya Thai Palace (390 m south)."
+    },
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "whole article",
+     "paraphrase": "No park is named anywhere in the EN district article; Army Stadium is described as a sports facility."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "composition of the 14.8 ha could not be decomposed: Overpass/OSM queries failed from this environment (HTTP 406/timeout/malformed) and Greener pages give no per-park areas",
+    "boundary side of Suan Phaya Thai Phirom is ambiguous (BMA lists it under the khet; Moovit labels it Ratchathewi; OSM point is near the boundary)",
+    "Suan Ari Samphan details (PRD garden, cafes inside) rest on snippet-level search results corroborating the Greener listing"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c08",
+   "text_en": "Ari is the district's signature subarea: a low-rise cafe-residential quarter off Soi Phahonyothin 7. A 2025 neighborhood guide describes Soi Ari 1-4 as 'the heart of cafe culture. Most walkable, most expensive', Soi Ari Samphan as 'quieter, more residential. Good value', and Soi Phahonyothin 7 as keeping 'local feel, street food, lower rent'; Thai wiki lists Villa Market (Ari) among district retail, and NANA Coffee Roasters' Ari branch sits at 24/2 Soi Ari 4 adjacent to the Public Relations Department garden. The resident/visitor experience is a daytime cafe-and-street-food one in quiet sois, not a nightlife one.",
+   "kind": "reported_perception",
+   "topics": [
+    "daily_life",
+    "food",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Soi Ari 1-7 / Soi Ari Samphan (khwaeng Sam Sen Nai)",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025 (guide's last update 2025-12-31)",
+    "recheck_by": "2026-12",
+    "notes": "cafe turnover is high; venue list should be re-verified before quoting specific shops"
+   },
+   "evidence": [
+    {
+     "source_id": "src_41e2f3bc6dc8",
+     "locator": "Subareas / 'Good, Bad, Ugly' sections",
+     "paraphrase": "Soi Ari 1-4 heart of cafe culture, most walkable, most expensive; Soi Ari Samphan quieter, residential, good value; Soi Phahonyothin 7 local feel, street food, lower rent."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "ห้างร้าน list",
+     "paraphrase": "Villa Market Ari listed among district shopping."
+    },
+    {
+     "source_id": "src_ce47b695ed71",
+     "locator": "search result for NANA Coffee Roasters Ari",
+     "paraphrase": "Address 24/2 Soi Ari 4 (south side), Sam Sen Nai, Phaya Thai; adjacent to the Public Relations Department garden; converted two-storey house cafe. (Snippet-level corroboration.)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "specific cafe named from a snippet-level source only",
+    "guide is property-audience content"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c09",
+   "text_en": "Saphan Khwai is the district's crowded commercial pole: EN wiki describes it as an area of shops, apartments and a Big C with the district's most concentrated population; the Government Savings Bank head office stands on Phahonyothin there; and the junction is a recognized chokepoint - Bang Sue traffic police publicly advised avoiding the Saphan Khwai-Phahonyothin-Pradiphat junction from 06:00 to 18:00 on 8 February 2025 for the GSB annual general meeting, routing traffic via Rama VI or Vibhavadi, with similar advisories in 2024. The guide characterizes the Saphan Khwai side as 'even cheaper, grittier, more local'.",
+   "kind": "factual_report",
+   "topics": [
+    "crowding",
+    "daily_life",
+    "traffic"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Saphan Khwai junction and surrounding blocks",
+    "relation_to_entity": "inside",
+    "notes": "northern Phahonyothin, khwaeng Sam Sen Nai"
+   },
+   "temporal_scope": {
+    "event_date": "2025-02-08",
+    "observed_period": "2024-2025 advisories",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Places section",
+     "paraphrase": "Saphan Khwai area: shops, apartments, a Big C shopping center; the most concentrated population of the district."
+    },
+    {
+     "source_id": "src_29052a7eb6c9",
+     "locator": "headline and body",
+     "paraphrase": "GSB head office on Phahonyothin Rd, Samsen Nai, Phaya Thai holds its AGM 8 Feb 2025 06:00-18:00; police advise avoiding Saphan Khwai-Phahonyothin-Pradiphat; detours via Rama VI and Vibhavadi."
+    },
+    {
+     "source_id": "src_41e2f3bc6dc8",
+     "locator": "Subareas",
+     "paraphrase": "'Saphan Kwai side: Technically a different neighborhood but walkable. Even cheaper, grittier, more local.'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "chronic pedestrian/crowding conditions around the wholesale blocks were not documented by a dedicated source; evidence is junction-traffic and guide character"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c10",
+   "text_en": "Pradiphat and Sanam Pao carry the district's military-residential history: after the 1932 revolution officers settled around Soi Ratchakru and Ari; during the Vietnam War GI-oriented hotels (Pradiphat, Kanmanee, Elizabeth, Ambassador) and clubs lined the road, followed by Saudi guests in 1977-1989; and since BTS Saphan Khwai opened, condominium development has shifted the area from commercial to upper-middle residential. Military units (1st Artillery Regiment, Army Transport, Air Force Engineer Department) still occupy plots along it.",
+   "kind": "factual_report",
+   "topics": [
+    "history",
+    "housing",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Thanon Pradiphat / Sanam Pao area",
+    "relation_to_entity": "inside",
+    "notes": "road's eastern half is in the khet; western end is Dusit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1932-2020s",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_d2046e72643b",
+     "locator": "ประวัติ and สถานที่รายทาง sections",
+     "paraphrase": "Post-1932 officer settlement near Soi Ratchakru and Ari; coup leaders rendezvoused at the road's railway crossing on 24 June 1932; Vietnam-era GI hotels; 1977-1989 Saudi guests; Merry Kings department store and Phahonyothin Rama cinema era; BTS Saphan Khwai-driven condo development turned it upper-middle residential; 1st Artillery Battalion, Air Force Engineer Department, Army Transport Department along the road."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "single-source historical narrative (Thai wiki road article); plausible but not independently corroborated in this run"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phaya-thai-c11",
+   "text_en": "Rents: two independent sources bracket the app figures. HipFlat's district page (data as of October 2026; 2,241 condo listings) shows average condo value USD689, USD17/sqm, -1.9% YoY, with per-bedroom averages of USD474 (studio), USD652 (1-bed) and USD1,037 (2-bed); its own THB listing examples run 16,500-22,000 for 1-beds (Rhythm Phahol-Ari 18,000; The Line Pradipat 19,000-22,000) and 24,000 for a 2-bed, with upper-end units (Noble Around Ari 1-bed-plus 35,000). A 2025 Ari guide puts studios at 12,000-20,000, 1-beds at 18,000-30,000 ('sweet spot 22-25k') and 2-beds at 28,000-45,000. Against this, the app's editorial 18,000 (1-bed) is a defensible lower-to-mid Ari figure and 37,000 (2-bed) sits inside the Ari guide range but well above the district-wide portal average; portal samples skew to newer advertised condos and include some adjacent-district projects.",
+   "kind": "estimate",
+   "topics": [
+    "housing",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "khet-wide (HipFlat) vs Ari sois (guide)",
+    "relation_to_entity": "entire_unit",
+    "notes": "HipFlat sample includes adjacent Chatuchak/Dusit projects (M Jatujak, Supalai Samsen-Ratchawat)"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-10 to 2026-10",
+    "recheck_by": "2027-05",
+    "notes": "HipFlat shows -1.9% YoY, -5.7% vs Jan 2026 - softening, opposite to an 'Ari rents rising' narrative"
+   },
+   "evidence": [
+    {
+     "source_id": "src_675e6cf3e1bd",
+     "locator": "headline stats and listing grid",
+     "paraphrase": "USD689 average; USD17/sqm October 2026; -1.9% YoY; studio 474 / 1-bed 652 / 2-bed 1037; THB listings 16,500-35,000; 2,241 listings."
+    },
+    {
+     "source_id": "src_41e2f3bc6dc8",
+     "locator": "Rent Prices (2025) table",
+     "paraphrase": "Studio 12,000-20,000; 1-bed 18,000-30,000, sweet spot 22-25k; 2-bed 28,000-45,000; 'cheaper than Thonglor/Asoke, pricier than On Nut'; last updated 2025-12-31."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "asking rents only; no signed-lease data found for the district",
+    "portal averages not quality-controlled for floor/age/size",
+    "both sources commercial-context"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c12",
+   "text_en": "Counter-evidence to an unqualified 'calm district' reading: the same Ari guide's 'Bad/Ugly' lists warn that Phahonyothin rush-hour traffic 'can be brutal', that some sois flood in heavy rain, that the single BTS station in the Ari walkshed 'can get crowded', that getting anywhere else takes 30+ minutes, and that Ari 'can feel sleepy if you want constant action'; FM91's police-notice reporting shows the Saphan Khwai junction is treated as a city-level chokepoint requiring official avoidance advisories.",
+   "kind": "reported_perception",
+   "topics": [
+    "crowding",
+    "flood",
+    "nightlife",
+    "traffic"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Phahonyothin corridor; Saphan Khwai junction; Ari sois",
+    "relation_to_entity": "partial",
+    "notes": "conditions vary sharply by subarea - this is the corridor-level counterweight to district averages"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026",
+    "recheck_by": "2027-05",
+    "notes": "flooding claim is soi-specific ('some sois'), not district-wide"
+   },
+   "evidence": [
+    {
+     "source_id": "src_41e2f3bc6dc8",
+     "locator": "'Good, Bad, Ugly' lists",
+     "paraphrase": "Bad: one BTS station can get crowded; far from Sukhumvit nightlife; limited international dining; no MRT; flooding in heavy rain (some sois). Ugly: 30+ minutes to anywhere else; not ideal if your office is Silom/Sathorn; can feel sleepy if you want constant action; traffic on Phahonyothin can be brutal during rush hour."
+    },
+    {
+     "source_id": "src_29052a7eb6c9",
+     "locator": "advisory body",
+     "paraphrase": "Police ask motorists to avoid the Saphan Khwai-Phahonyothin-Pradiphat junction for a full day and route via Rama VI/Vibhavadi."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "perception content from a property-audience guide; no systematic safety statistic located (see open issues)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c13",
+   "text_en": "Healthcare is unusually deep for a district this size: Thai wiki lists Veterans General Hospital, Phyathai Saphan Khwai (formerly Paolo Memorial), Phyathai 2, Wichaiyut and Vimut as in-district hospitals, with Phramongkutklao across the boundary in Ratchathewi. The Saphan Khwai hospital - founded 1972 on a site of over 6 rai - was rebranded from Paolo Memorial Phahonyothin to Phyathai Phahonyothin, announced in May 2024 (trade press; search-surface dates: effective 1 April 2024, official 25 May 2024) as a 50th-anniversary repositioning within the Phyathai-Paolo group.",
+   "kind": "factual_report",
+   "topics": [
+    "healthcare",
+    "recent_changes"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "hospital cluster along Phahonyothin (Saphan Khwai-Sanam Pao)",
+    "relation_to_entity": "inside",
+    "notes": "Phramongkutklao and Phaya Thai Palace grounds are Ratchathewi, just across the southern boundary"
+   },
+   "temporal_scope": {
+    "event_date": "2024-05-20",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "rebrand reported 20 May 2024"
+   },
+   "evidence": [
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "โรงพยาบาล list",
+     "paraphrase": "Hospitals listed: ทหารผ่านศึก (Veterans), พญาไท สะพานควาย (เดิมเปาโล เมโมเรียล), พญาไท 2, วิชัยยุทธ, วิมุต."
+    },
+    {
+     "source_id": "src_501c9f61021b",
+     "locator": "hospital profile",
+     "paraphrase": "Hospital in Samsen Nai/Saphan Khwai area, founded B.E. 2515 (1972) by Dr Sangkhat Thongborisut on a site of over 6 rai."
+    },
+    {
+     "source_id": "src_6f300730c243",
+     "locator": "article body",
+     "paraphrase": "Paolo Memorial, a Phahonyothin-area fixture for over 50 years, rebranded as รพ.พญาไท พหลโยธิน; shared management with Phayathai 1 and 2 to relieve congestion; reported 20 May 2024."
+    },
+    {
+     "source_id": "src_1bafc1e4c0dc",
+     "locator": "current use",
+     "paraphrase": "Phaya Thai Palace site became a military clinic, now named Phramongkutklao Hospital - in Ratchathewi."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "exact rename effective date not stated in the body-read article; taken from search-result summaries",
+    "Wichaiyut/Vimut/Veterans placements accepted from the Thai wiki list without separate address checks"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c14",
+   "text_en": "District-average scores mask four incompatible daily realities inside 9.6 km2: (1) Ari's quiet cafe sois, (2) Saphan Khwai's wholesale/commercial congestion with official traffic-avoidance advisories, (3) the Vibhavadi-Pradiphat band of Army and other state compounds that hold the district's green but restrict access, and (4) the plain apartment/townhouse grid of Sam Sen Nai-Inthamara. A single 'crowd 3' or 'green 9' cannot describe both Ari and Saphan Khwai; the green 9 is anchored in institutional land rather than public park access; and safety 8 was tested only indirectly - a targeted Thai/English news search for 2024-2026 returned scattered youth-violence and pickpocket items whose location attribution was too unreliable to use.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowding",
+    "green",
+    "identity",
+    "safety"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "khet-wide synthesis",
+    "relation_to_entity": "entire_unit",
+    "notes": "derived from c06-c13"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 sources",
+    "recheck_by": "2027-05",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Places",
+     "paraphrase": "Institutional anchors (GSB HQ, ministries listed nearby, Army holdings) plus Saphan Khwai's concentrated population in one district."
+    },
+    {
+     "source_id": "src_41e2f3bc6dc8",
+     "locator": "subarea contrasts",
+     "paraphrase": "Ari sois calm and pricey vs Saphan Khwai 'grittier, more local' - the guide treats them as different worlds within walking distance."
+    },
+    {
+     "source_id": "src_29052a7eb6c9",
+     "locator": "advisory",
+     "paraphrase": "Junction-level avoidance advisories show congestion concentrated at Saphan Khwai, not spread evenly."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "synthesis, not a direct source statement",
+    "safety conclusion is an absence-of-evidence result, not evidence of absence"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c15",
+   "text_en": "Recent administrative and infrastructure history: khet created 1966 from Dusit and Bang Kapi parts and named for Phaya Thai Palace; Ratchathewi split off 1989 and Din Daeng 1993; khwaengs reorganized into two (Sam Sen Nai, Phaya Thai) on 26 July 2017. Transit changes: BTS stations 1999; ARL interchange 2010; the SRT halt at Phaya Thai has drawn criticism for neglect as its tracks are handed to the Don Mueang-Suvarnabhumi-U-Tapao high-speed rail project. The Saphan Khwai hospital rebrand (May 2024) and recurring GSB AGM junction closures (Feb 2024, Feb 2025) are the main 2024-2026 changes found; no park opening/closure and no Army-land redevelopment for the Vibhavadi compound were found in 2024-2026 reporting.",
+   "kind": "factual_report",
+   "topics": [
+    "history",
+    "recent_changes",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "khet-wide",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "1966-2026",
+    "recheck_by": "2027-05",
+    "notes": "Army-land reuse could change the green picture"
+   },
+   "evidence": [
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "History",
+     "paraphrase": "1966 creation; 1973 Huai Khwang separation; 1989 Ratchathewi; 1993 Din Daeng; named for Phaya Thai Palace built 1909."
+    },
+    {
+     "source_id": "src_83d19094630c",
+     "locator": "ประวัติ",
+     "paraphrase": "Two-khwaeng split 26 July 2017."
+    },
+    {
+     "source_id": "src_16cadddb23a1",
+     "locator": "halt note",
+     "paraphrase": "Halt criticized for neglect as tracks handed over for the high-speed railway."
+    },
+    {
+     "source_id": "src_6f300730c243",
+     "locator": "article",
+     "paraphrase": "Rebrand reported May 2024."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "absence of 2024-2026 park/Army-land news is a search result, not proof of stasis"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phaya-thai-c16",
+   "text_en": "Vajiravudh College - sometimes assumed to anchor green space here - is in fact in Dusit district (197 Rajvithi Road), on the far side of the railway boundary, so the district's big-campus green candidates reduce to the Army compound, the PRD garden at Soi Ari Samphan, and the expressway-margin pocket parks. Sam Sen railway station (all SRT trains except Eastern Line pass through toward Hua Lamphong) is the district's other rail asset besides the three BTS stations.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "land_use",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Vajiravudh College (outside, Dusit); Sam Sen SRT station (inside)",
+    "relation_to_entity": "partial",
+    "notes": "rules out a common green-space misattribution"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_7d445c13b31b",
+     "locator": "infobox address",
+     "paraphrase": "Address '197 Rajvithi Road / Dusit / Bangkok / 10300'; boys' boarding school established 1910 by King Vajiravudh."
+    },
+    {
+     "source_id": "src_22deb73f92fe",
+     "locator": "Transit",
+     "paraphrase": "Sam Sen railway station: all trains except Eastern Line pass here to/from Hua Lamphong."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "EN wiki address only; campus may front the boundary rail line but the source places it in Dusit"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c01",
+    "phaya-thai-c04",
+    "phaya-thai-c08",
+    "phaya-thai-c10",
+    "phaya-thai-c03",
+    "phaya-thai-c02",
+    "phaya-thai-c05"
+   ],
+   "notes": "Khet Phaya Thai, geocode 1014, postal 10400: two khwaeng only - Sam Sen Nai and Phaya Thai (split of khwaengs 26 Jul 2017; district history 1966, Ratchathewi off 1989, Din Daeng off 1993) [phaya-thai-c01]. Aliases are sub-place names inside the khet: Ari/Soi Ari (Phahonyothin Soi 7 network), Sanam Pao (BTS N4; also the road's original name - a former firing range), Saphan Khwai (BTS N5), Pradiphat (road), Inthamara (sois in Sam Sen Nai), Samsen Nai (khwaeng) [c01, c04, c08, c10]. Stops: BTS Ari, Sanam Pao, Saphan Khwai inside; BTS Phaya Thai + ARL terminus just outside in Ratchathewi - the khet's namesake station is not in the khet [c03]. Corridors: Phahonyothin spine inside; Vibhavadi = eastern boundary (partial); Rama VI crosses the south-east; Samsen canal is the southern/western edge; Si Ayutthaya and Sam Sen roads are outside. Outside places: Victory Monument (Ratchathewi), Phaya Thai Palace (Ratchathewi, Ratchawithi Rd), Chatuchak park cluster north of Khlong Bang Sue [c02, c05]."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c09",
+    "phaya-thai-c10",
+    "phaya-thai-c06",
+    "phaya-thai-c12"
+   ],
+   "notes": "Ari: daytime cafe-and-street-food quarter in low-rise sois - Soi Ari 1-4 'heart of cafe culture', Ari Samphan quieter/good value, Soi Phahonyothin 7 more local [c08]. Saphan Khwai: dense commercial pole - shops, apartments, Big C, most concentrated population, GSB head office, wholesale/grittier character [c09]. Pradiphat/Sanam Pao: military-residential band, post-1932 officer housing, GI-hotel era, now condo-ifying [c10]. Vibhavadi band: institutional Army/state compounds with controlled-access green [c06]. Experiences are anchored to times: cafe mornings/afternoons in Ari; junction congestion at Saphan Khwai peaks [c09, c12]."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c09"
+   ],
+   "notes": "What people value: the combination of BTS coverage along Phahonyothin plus calm, walkable side-sois with street food and cafes - the guide's own hierarchy prices Soi Ari 1-4 highest exactly where walkability and cafe density peak; Ari Samphan trades walk time for quiet and value; Saphan Khwai trades polish for price and locality [c08, c09]. Mechanism: arterial (jobs/transit) + soi (calm housing) split lets the district price calmness near transit. Supporting: Villa Market Ari and NANA Coffee Roasters (beside the PRD garden) as anchors of the everyday amenity set [c08]."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c12",
+    "phaya-thai-c09",
+    "phaya-thai-c11",
+    "phaya-thai-c10",
+    "phaya-thai-c15"
+   ],
+   "notes": "Deliberate counter-evidence: Phahonyothin rush-hour traffic 'can be brutal'; some sois flood in heavy rain; Ari can 'feel sleepy' at night; only one BTS station in the Ari walkshed and it crowds; 30+ min to Silom/Sathorn [c12]. Saphan Khwai junction is a city-level chokepoint warranting police avoidance advisories (GSB AGM 8 Feb 2025, 06:00-18:00) [c09, c12]. On rents: the 'rising rents' narrative is not confirmed by the data at hand - HipFlat shows district asks -1.9% YoY (Oct 2026); what the evidence supports is a high Ari-vs-district spread, not an increase [c11]. Construction pressure: Pradiphat has already converted to condo development since BTS Saphan Khwai; no 2024-2026 construction-wave source found [c10, c15]."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c12",
+    "phaya-thai-c09"
+   ],
+   "notes": "Sourced rhythm fragments only: Ari days run on cafe hours with a quiet evening character ('sleepy if you want constant action') [c08, c12]; Saphan Khwai carries all-day commercial/traffic load, with event-driven spikes (GSB AGM closures 06:00-18:00) and evening-market activity reported in snippets (Phahonyothin 24 evening market) [c09]. Weekday/weekend and seasonal patterns (e.g., cool-season pop-up markets at Suan Ari seen only in snippets) were not verified by body-read sources; no monsoon-specific reporting found beyond the guide's flood warning [c12]."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c03",
+    "phaya-thai-c08",
+    "phaya-thai-c12",
+    "phaya-thai-c07",
+    "phaya-thai-c09"
+   ],
+   "notes": "Transit: BTS Ari (N3), Sanam Pao (N4), Saphan Khwai (N5) inside on Phahonyothin; ARL interchange at BTS Phaya Thai one stop south, in Ratchathewi; SRT Sam Sen station inside on the western side [c03]. Walk environment: the guide ranks Soi Ari 1-4 most walkable, Ari Samphan quieter, Soi Phahonyothin 7 local; the Phahonyothin arterial itself is traffic-heavy ('brutal' at rush hour) while value and calm lie one soi deep [c08, c12]. No radius-to-time conversions were made; distances like 'Saphan Khwai side walkable from Ari' and '15 min to Chatuchak Park' come from the guide's own framing [c07 limitations, c09]."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c09",
+    "phaya-thai-c13",
+    "phaya-thai-c06"
+   ],
+   "notes": "Groceries/retail: Big C Saphan Khwai and Villa Market Ari are the sourced anchors, plus GSB HQ banking presence at Saphan Khwai [c08, c09]. Ordinary food: street food on Soi Phahonyothin 7, cafes on Soi Ari 1-4 [c08]. Healthcare: Veterans General Hospital, Phyathai Saphan Khwai (ex-Paolo), Phyathai 2, Wichaiyut, Vimut in-district; Phramongkutklao over the boundary [c13]. Gyms: not separately verified (Army sports facilities exist but access is controlled) [c06]. Named wet markets: NOT FOUND - a dedicated search could not verify any specific wet-market name in the khet (the famous 'Suan Mali' namesake is in Pathum Thani); the app's '8 markets' could not be matched to named venues from reliable sources."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c11",
+    "phaya-thai-c09",
+    "phaya-thai-c10",
+    "phaya-thai-c01"
+   ],
+   "notes": "Housing types by subarea: Ari - mid-range condos (Noble Around Ari, Rhythm Phahol-Ari, The Line Pradipat, Ideo Phaholyothin nearby) plus older stock from 12,000 studio level [c11]; Saphan Khwai - apartment blocks and shops with the district's most concentrated population [c09]; Pradiphat - post-BTS condo conversion to upper-middle residential [c10]; Sam Sen Nai/Inthamara - townhouse/apartment grid (Thai wiki lists Soi Inthamara, Suthisarn Winitchai) [c01]. Numbers: HipFlat district-wide (Oct 2026, 2,241 listings, asking): studio USD474, 1-bed USD652, 2-bed USD1,037, USD17/sqm, -1.9% YoY; THB examples 16.5k-35k (1-bed) and 24k (2-bed); Ari guide 2025: studio 12-20k, 1-bed 18-30k (sweet spot 22-25k), 2-bed 28-45k [c11]. Test of app 18,000/37,000: 1-bed figure plausible (low end of Ari sweet spot), 2-bed 37k inside Ari range but above district-wide average - defensible only as an Ari-anchored editorial estimate. Sample characterization: portal asking rents skewed to advertised newer condos, includes adjacent-district projects; signed rents not found; period Oct 2025-Oct 2026 with softening trend [c11]."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c06",
+    "phaya-thai-c07",
+    "phaya-thai-c02",
+    "phaya-thai-c14"
+   ],
+   "notes": "Where the 14.8 ha sits: dominated by the Royal Thai Army Club/Army Sports Stadium compound on the Vibhavadi edge (195 Vibhavadi Rangsit, Sam Sen Nai) plus Channel 5 and other military plots, with BMA's contribution limited to named pocket parks - Suan Rom Suk, Suan Yan Phahonyothin (Soi Ruammit mouth), Suan Ari Samphan (PRD garden), Suan Phaya Thai Phirom (~10 rai, 2011, expressway margin at Rama VI/Khlong Sam Sen), Suan Rama VI (opposite Sam Sen school) [c06, c07]. Subarea access: Ari gets the PRD garden at the far end of Soi Ari Samphan (beyond an 800 m station radius - consistent with the pilot's station-unit gap) [c07]; Rama VI/Phaya Thai-side blocks get the expressway pocket parks; Saphan Khwai/Inthamara get essentially none of the named BMA parks; everyone else walks north to Chatuchak's parks across the boundary [c02, c07]. Directly addressing green 9: it cannot be grounded in public park access; the only coherent basis is institutional/military green plus pockets - hence flag as misleading at district level [c14]."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c12",
+    "phaya-thai-c09",
+    "phaya-thai-c10",
+    "phaya-thai-c07",
+    "phaya-thai-c14"
+   ],
+   "notes": "Conditional fit: Ari - cafe-culture workers, couples and remote workers who want calm near BTS and accept quiet nights and 30+ min cross-town commutes [c08, c12]. Saphan Khwai - budget renters and people working in the wholesale/office cluster (GSB, Big C retail) who can tolerate junction congestion [c09, c12]. Pradiphat/Sanam Pao - those wanting mid-range residential with military-area calm; heritage-sensitive users should note the GI-hotel history is mostly built over [c10]. Inthamara/Sam Sen Nai - value seekers on the quieter eastern grid; families should note the absence of BMA parks nearby [c07, c14]. Poor fit: nightlife-first users, flood-sensitive households on low sois, car commuters using Saphan Khwai junction daily [c12]."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c01",
+    "phaya-thai-c03",
+    "phaya-thai-c15",
+    "phaya-thai-c13",
+    "phaya-thai-c09",
+    "phaya-thai-c07"
+   ],
+   "notes": "Dated changes: 26 Jul 2017 khwaeng reorganization into two [c01]; 23 Aug 2010 ARL interchange (in Ratchathewi) and ongoing SRT halt handover issues to the high-speed rail project [c03, c15]; May 2024 Paolo Memorial Phahonyothin rebranded Phyathai Phahonyothin (reported 20 May 2024; search-surface dates effective 1 Apr / official 25 May) [c13]; Feb 2024 and Feb 2025 GSB AGM junction closures at Saphan Khwai [c09]. Suan Phaya Thai Phirom opened 4 Sep 2011 (last major park event found) [c07]. Not found in 2024-2026 reporting: park openings/closures in the khet, Army Vibhavadi-land redevelopment [c15]."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "phaya-thai-c14",
+    "phaya-thai-c06",
+    "phaya-thai-c07",
+    "phaya-thai-c03",
+    "phaya-thai-c01",
+    "phaya-thai-c11"
+   ],
+   "notes": "What district averages mask: four incompatible subareas (cafe-residential, wholesale-commercial, institutional, plain residential) inside 9.6 km2; crowd 3 and safety 8 cannot be simultaneously true of Ari and Saphan Khwai in the same sense [c14]. Green 9 basis: Army compound + pocket parks + institutional grounds, not public park access; BMA's own list contains no park above ~10 rai scale; OSM decomposition failed from this environment [c06, c07]. Safety 8 basis: no systematic statistic found; news search returned scattered, poorly-locatable incidents - the score is untested rather than contradicted [c14]. Other outside-the-score items: the namesake BTS/ARL station is not in the khet [c03]; pop figures drift downward across snapshots (70,238 in 2017 to 64,037 in 2023) while the app carries a 2020 mid-point [c01]; app '23 temples' vs EN/TH wiki naming Wat Phai Tan as the district's only temple - likely different counting rules (shrines/churches incl.), unresolved; rent 7 depends on which subarea's stock you sample [c11]."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Phaya Thai is a 9.6 km2 district whose three BTS stations (Ari, Sanam Pao, Saphan Khwai) straddle the Phahonyothin corridor, but the daily experience splits between Ari's low-rise cafe sois, Saphan Khwai's dense commercial blocks, and a Vibhavadi-Pradiphat band of Army and state compounds that holds most of the mapped green. The namesake BTS/ARL station is actually across the boundary in Ratchathewi.",
+   "claim_ids": [
+    "phaya-thai-c03",
+    "phaya-thai-c06",
+    "phaya-thai-c08",
+    "phaya-thai-c09"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Phaya Thai khet is best read as three districts in one. Along Phahonyothin, Ari's Soi 1-7 grid pairs mid-rise condos with cafe-filled quiet sois, while Saphan Khwai two stops north concentrates shops, apartments and a junction that police close for major events. Between them, Pradiphat still carries its military-institutional character, and along Vibhavadi the Army Club and stadium occupy the largest green block - land you can see but not freely use. Rents reflect the split: portal asks from the 12,000s in older stock to 35,000+ in Ari's newer buildings.",
+   "claim_ids": [
+    "phaya-thai-c08",
+    "phaya-thai-c09",
+    "phaya-thai-c06",
+    "phaya-thai-c10"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Three BTS stations inside the khet plus the ARL interchange one stop south - the district's core transit promise",
+    "claim_ids": [
+     "phaya-thai-c03"
+    ]
+   },
+   {
+    "text_en": "Ari's walkable cafe sois one soi off the arterial, with street-food-priced eating on Soi Phahonyothin 7",
+    "claim_ids": [
+     "phaya-thai-c08"
+    ]
+   },
+   {
+    "text_en": "Deep everyday healthcare: five private/military hospitals in-district plus Phramongkutklao across the boundary",
+    "claim_ids": [
+     "phaya-thai-c13"
+    ]
+   },
+   {
+    "text_en": "Wide rent ladder (roughly 12,000-45,000 THB asking) letting budget and mid-market renters live within walking distance of the same line",
+    "claim_ids": [
+     "phaya-thai-c11"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Phahonyothin rush-hour congestion and the Saphan Khwai junction chokepoint, which police advise avoiding city-wide on big-event days",
+    "claim_ids": [
+     "phaya-thai-c09",
+     "phaya-thai-c12"
+    ]
+   },
+   {
+    "text_en": "Public green is pocket-scale: BMA's named parks here are expressway-margin leftovers of ~1-2 ha, while the big green is restricted military land",
+    "claim_ids": [
+     "phaya-thai-c06",
+     "phaya-thai-c07"
+    ]
+   },
+   {
+    "text_en": "Flood exposure on some low sois in heavy rain, per the district guide's own cons list",
+    "claim_ids": [
+     "phaya-thai-c12"
+    ]
+   },
+   {
+    "text_en": "Evening quiet: the area is cafe-daytime oriented and 'sleepy' after dark for those wanting nightlife",
+    "claim_ids": [
+     "phaya-thai-c12"
+    ]
+   },
+   {
+    "text_en": "Identity confusion is structural: Phaya Thai Road, BTS Phaya Thai, Phaya Thai Palace and Victory Monument are all outside the khet they appear to name",
+    "claim_ids": [
+     "phaya-thai-c03",
+     "phaya-thai-c05"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Weekday mornings: school and office flows concentrate on Phahonyothin; Saphan Khwai junction backs up toward the sois",
+    "claim_ids": [
+     "phaya-thai-c09",
+     "phaya-thai-c12"
+    ]
+   },
+   {
+    "text_en": "Daytime: Ari's cafes and the PRD garden at the end of Soi Ari Samphan absorb the district's leisure foot traffic",
+    "claim_ids": [
+     "phaya-thai-c07",
+     "phaya-thai-c08"
+    ]
+   },
+   {
+    "text_en": "Event days: junction-level closures around GSB head office can cut the crossing for a full day (06:00-18:00 advisories)",
+    "claim_ids": [
+     "phaya-thai-c09"
+    ]
+   },
+   {
+    "text_en": "Evenings: commercial energy drains; the guide describes Ari as sleepier than Sukhumvit-side districts",
+    "claim_ids": [
+     "phaya-thai-c12"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Ari (Soi Ari 1-7, Ari Samphan): cafe-residential, the guide's most expensive and most walkable band",
+    "claim_ids": [
+     "phaya-thai-c08"
+    ]
+   },
+   {
+    "text_en": "Saphan Khwai: denser, 'grittier, more local', cheapest stock, district's most concentrated population",
+    "claim_ids": [
+     "phaya-thai-c09"
+    ]
+   },
+   {
+    "text_en": "Pradiphat-Sanam Pao: military plots between residential conversions; history visible in street fabric",
+    "claim_ids": [
+     "phaya-thai-c10"
+    ]
+   },
+   {
+    "text_en": "Vibhavadi edge: Army Club/stadium, Channel 5, Veterans' Hospital - green without public access",
+    "claim_ids": [
+     "phaya-thai-c06"
+    ]
+   },
+   {
+    "text_en": "Sam Sen Nai-Inthamara: plain townhouse/apartment grid, few named amenities, no BMA park on its own streets",
+    "claim_ids": [
+     "phaya-thai-c07",
+     "phaya-thai-c14"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fit: cafe-culture workers and remote workers priced out of Thonglor/Asoke who want calm sois near BTS",
+    "claim_ids": [
+     "phaya-thai-c08",
+     "phaya-thai-c11"
+    ]
+   },
+   {
+    "text_en": "Fit: budget renters targeting Saphan Khwai's apartment stock who work locally or tolerate junction traffic",
+    "claim_ids": [
+     "phaya-thai-c09",
+     "phaya-thai-c11"
+    ]
+   },
+   {
+    "text_en": "Poor fit: nightlife-first residents and anyone whose commute crosses town daily (30+ min to Silom/Sathorn per the guide)",
+    "claim_ids": [
+     "phaya-thai-c12"
+    ]
+   },
+   {
+    "text_en": "Poor fit: households that need daily park access - the khet's public parks are pocket-scale and unevenly placed",
+    "claim_ids": [
+     "phaya-thai-c07"
+    ]
+   },
+   {
+    "text_en": "Watch item: monsoon-season flooding on specific low sois; ask street-by-street, not district-wide",
+    "claim_ids": [
+     "phaya-thai-c12"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Green 9 basis unresolved: the 14.8 ha could not be decomposed (OSM queries blocked); the Army compound is the only candidate large enough, and it is not public parkland [phaya-thai-c06, c07]",
+   "Safety 8 untested: no systematic crime statistic found; 2024-2026 news search returned only scattered, poorly-locatable incidents [phaya-thai-c14]",
+   "App rent reference sits above district-wide portal averages for 2-beds and at the low end for Ari 1-beds; sample definitions differ (portal listings vs editorial estimate) [phaya-thai-c11]",
+   "App counts (23 temples, 8 markets, 1,302 food places) could not be matched to named sources; EN/TH wiki name only Wat Phai Tan as the khet's temple, and no wet market was verifiable [phaya-thai-c01 limitations, Q07]",
+   "Suan Phaya Thai Phirom's side of the Ratchathewi boundary is ambiguous between BMA and third-party maps [phaya-thai-c07]"
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md + coordinator geometry pass 2026-11-07).",
+   "7 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Decompose the app's 14.8 ha park figure against OSM (leisure=park/pitch/golf) once Overpass is reachable from this environment - test whether the Army Club/Army Stadium compound dominates the total (phaya-thai-c06, c07).",
+   "open issue: Resolve the boundary side of Suan Phaya Thai Phirom: BMA Greener lists it under khet Phaya Thai; OSM point (way 167534432, 13.77204, 100.53212) and Moovit place it at/near the Ratchathewi line (phaya-thai-c07).",
+   "open issue: Rajavithi Hospital placement (task lead 'Rajavithi is Ratchathewi') was not directly verified by a dedicated source in this run; surrounding evidence (Rajvithi Road addresses in Dusit/Ratchathewi) is consistent but indirect.",
+   "open issue: No signed-lease (vs asking) rent data located for the khet; recommend consumer-panel or BMA housing-registry data if the rent score is to be tested further (phaya-thai-c11).",
+   "open issue: Safety 8 lacks a quantitative basis: try BMA/RTA per-district accident or police statistics in a future batch; the news search path proved unreliable for location attribution (phaya-thai-c14).",
+   "open issue: Army Club Vibhavadi: confirm public-access rules (golf/driving range, stadium events) and any 2026+ reuse plans from Army sources; snippet-level only (phaya-thai-c06, c15).",
+   "open issue: App '23 temples' vs wiki 'Wat Phai Tan only temple in the khet' - determine the app's counting rule (includes shrines/churches?) before publishing anything about religious sites.",
+   "open issue: Samsen Nai/Inthamara community texture and Sanam Pao's Sri Supharaj Arcade were only lightly sourced (Thai wiki lists) - a Thai-language community-source pass would strengthen Q02/Q05 for these subareas.",
+   "open issue: Access failures to log against: greener.bangkok.go.th (403 direct; Exa workaround used), webportal.bangkok.go.th district page (403), webReader on Thai URLs (MCP -400), Overpass API (406/timeout/malformed from sandbox), th.wikipedia สนามกีฬาทหารบก (404, wrong title), one WebSearch timeout (Army Stadium EN query).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in preview/lead/guide items; union preview claim_ids. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

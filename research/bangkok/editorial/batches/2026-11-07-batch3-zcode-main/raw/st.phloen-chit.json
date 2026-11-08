@@ -1,0 +1,1969 @@
+{
+ "entity_key": "st.phloen-chit",
+ "generated_at": "2026-11-07T00:00:00Z",
+ "search_log": [
+  {
+   "tool": "WebSearch",
+   "query": "BTS Phloen Chit station E1 Sukhumvit line opened 1999 skywalk Central Embassy",
+   "status": "ok",
+   "note": "Wikipedia gives station code E2 (E1 is Chit Lom) — query's assumed code was wrong; opening 5 Dec 1999 confirmed."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "One Bangkok opening October 2024 Wireless Road Rama IV public park hectares phase 1",
+   "status": "ok",
+   "note": "Opening 25 Oct 2024; park size needed article-level read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "British Embassy Bangkok Wireless Road sale Central Group development 2024 2025 land",
+   "status": "ok",
+   "note": "Working assumption of a 2023-2025 sale was WRONG: sale was Jan 2018 (reported £420m) to CPN + Hongkong Land JV; development still unconfirmed as of Oct 2026."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Nai Lert Park Heritage Home garden Witthayu Road area rai Bangkok",
+   "status": "ok",
+   "note": "Garden ~14-15 rai (~2.2-2.4 ha), behind Central Embassy between Witthayu Rd and Soi Somkid; area figure snippet-only."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "One Bangkok park green space hectares \"8 hectares\" OR \"One Park\" Wireless Road",
+   "status": "ok",
+   "note": "8 ha green/open space on ~16.7-17 ha site; no single named park."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Open House\" Central Embassy Bangkok bookstore closed closing 2025",
+   "status": "no_result",
+   "note": "No closure evidence found; lead contradicted — Open House still listed as anchor (PropertyScout Nov 2025, body-read)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Ploenchit Phloen Chit condo rent 1 bedroom THB per month Noble Ploenchit asking price",
+   "status": "ok",
+   "note": "Noble Ploenchit 1BR ~33-50k asking, avg ~43k (DDproperty-derived snippet); needed direct reads."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "hipflat Noble Ploenchit market rent price per sqm",
+   "status": "ok",
+   "note": "Hipflat project page located and body-read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "เพลินจิต คอนโด ค่าเช่า เดือน ใกล้ BTS เพลินจิต ราคา",
+   "status": "ok",
+   "note": "Thai requirement met; PropertyHub page located and body-read (7,655 rentals, min 18k)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "rooftop bar Ploenchit Wireless Road Bangkok Rosewood Lennon's Char Hotel Indigo Park Hyatt",
+   "status": "ok",
+   "note": "Lennon's (Rosewood), CHAR (Hotel Indigo), Penthouse Bar + Grill (Park Hyatt) identified; Rosewood page body-read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khlong Saen Saep express boat piers list Watthayu Witthayu Pratunam Chitlom",
+   "status": "ok",
+   "note": "Wikipedia pier table body-read; in-unit pier = Wireless (Witthayu); second pier ambiguous (Chidlom vs Nana Nuea)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Ploenchit skywalk network BTS Phloen Chit connected Central Embassy Park Hyatt Athenee footbridge One Bangkok bridge Witthayu",
+   "status": "ok",
+   "note": "Skywalk BTS-Central Embassy confirmed; Park Hyatt dual-station bridge claim is hotel-page snippet only; Reddit thread on network gaps surfaced (blocked, snippet only)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Khlong Toei Nuea khwaeng Watthana district Sukhumvit road north side Phetchaburi boundary Ratchathewi",
+   "status": "ok",
+   "note": "Khlong Toei Nuea = Watthana khwaeng confirmed; Phetchaburi/Ratchathewi boundary detail remained snippet-level."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "กทม. แขวงลุมพินี เขตปทุมวัน ถนนเพลินจิต แขวงคลองเตยเหนือ เขตวัฒนา ช่วงถนนสุขุมวิท",
+   "status": "ok",
+   "note": "Thai addresses (Longdo, SEC, MEA) all place Ploenchit Rd in แขวงลุมพินี เขตปทุมวัน; Lumphini khwaeng borders Makkasan (Ratchathewi) at Saen Saep canal."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "grocery Gourmet Market Central Embassy Villa Market Witthayu supermarket Ploenchit Eathai food hall",
+   "status": "ok",
+   "note": "Gourmet Market + Eathai in Central Embassy basement; Villa Market Langsuan west."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "gym fitness Virgin Active Fitness First Ploenchit Wireless Road Bangkok running Witthayu loop",
+   "status": "ok",
+   "note": "Virgin Active Wireless Road located; official page body-read; Witthayu running-loop detail remains snippet-level."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Central Embassy 2 former British Embassy site development Central Pattana Hongkong Land 2025 opening",
+   "status": "ok",
+   "note": "Announced only — no confirmed programme/opening; Embark journal body-read (verified against CPN Q2 2026 / HKL H1 2026 filings)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "One Bangkok visitors million first year footfall Rama IV district spillover",
+   "status": "ok",
+   "note": "40M+ visitors/yr claim traced to Nation Thailand (body-read) and Bangkok Post (paywalled — not read)."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "nationthailand One Bangkok 40 million visitors retail occupancy Palinee",
+   "status": "ok",
+   "note": "Nation article located and body-read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "Time Out Bangkok best rooftop bars 2026 Rosewood Lennon's Park Hyatt Penthouse Bar Grill Ploenchit",
+   "status": "no_result",
+   "note": "No 2026 Time Out listicle found; RooftopAsia Sept 2026 update and hotel pages used instead."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "\"Wireless Road\" OR \"Witthayu\" Bangkok neighborhood guide embassies walls quiet street life expat safe",
+   "status": "ok",
+   "note": "BK Magazine (2016, sponsored) and PropertyScout (2025) located and body-read."
+  },
+  {
+   "tool": "WebSearch",
+   "query": "ถนนวิทยุ ย่าน เอกอัครราชทูต ทำเล ราคาที่ดิน ข่าว 2025",
+   "status": "ok",
+   "note": "Thai requirement (วิทยุ) met; Thairath Money piece body-read via LINE Today; LAD Dutch-embassy analysis snippet-only."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+   "status": "ok",
+   "note": "Body read. E2, 5 Dec 1999, coordinates 13.7430806/100.5490194, 2021 ridership 2,362,816; article flagged uncited (Apr 2026)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "status": "ok",
+   "note": "Body read. E1, coordinates, skybridge to Central Chidlom, Sky Walk to Ratchaprasong/toward Siam."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+   "status": "ok",
+   "note": "Body read. E3, coordinates, 2021 ridership 1,149,005."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Phloen_Chit_Road",
+   "status": "ok",
+   "note": "Body read. Entirely Lumphini subdistrict, Pathum Wan; 1.2 km; British Embassy 1922; name history."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Witthayu_Road",
+   "status": "ok",
+   "note": "Body read. Almost entirely Lumphini khwaeng; 2.6 km; radio-station name origin; One Bangkok on former radio station + Lumpinee Boxing Stadium sites (tense stale — project opened Oct 2024)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "status": "ok",
+   "note": "Body read. 57.6 ha, 1925, bounded by Witthayu/Rama IV/Ratchadamri, 2.5 km jogging paths, 04:30-21:00."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "status": "ok",
+   "note": "Body read. Full pier list incl. Pratunam, Chidlom, Wireless, Nana Nuea; fares 8-22 THB cash; hours."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://propertyhub.in.th/เช่าคอนโด/bts-เพลินจิต",
+   "status": "ok",
+   "note": "Body read (Thai). 7,655 rentals; min 18,000; typical 20k-90k; max 450,000 (98 Wireless penthouse)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "status": "ok",
+   "note": "Body read. USD25/sqm rent (+9.1% vs Pathum Wan USD23); sale USD8,499/sqm (+112% vs Bangkok)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://embarkestate.com/en/journal/central-embassy-2-wireless-road-pipeline",
+   "status": "ok",
+   "note": "Body read. Jan 2018 sale, ~23 rai, £420m reported; Central Embassy 2 unconfirmed; verified 22 Oct 2026 against filings."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.nationthailand.com/business/corporate/40071053",
+   "status": "ok",
+   "note": "Body read. 2026-09-15; 40M+ visitors/yr; 96% to 98% occupancy; Ritz-Carlton/Andaz by 2027."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.bkmagazine.com/city-living/5-great-reasons-why-wireless-road-remains-bangkok-most-desirable-neighborhood",
+   "status": "ok",
+   "note": "Body read. 2016-12-01, sponsored ('Brought to you by' GROVE); context/history only."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide",
+   "status": "ok",
+   "note": "Body read. Pub 2025-06-30, upd 2025-11-25; rents, groceries, nightlife character, Pathum Wan pop ~18k (2019)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.centralembassy.com/en/about-us",
+   "status": "failed",
+   "note": "HTTP 404. Open House status instead corroborated via PropertyScout (body-read, Nov 2025) + search summaries."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.timeout.com/bangkok/shopping/open-house-central-embassy",
+   "status": "failed",
+   "note": "HTTP 404. Same fallback as above."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://today.line.me/th/v3/article/zNB08Kj",
+   "status": "ok",
+   "note": "Body read (Thai; Thairath Money content on LINE). 2024-03-03; 22 embassies on 2.6 km; land prices; British Embassy 25 rai / 2017 / £420m / 18.6bn."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "status": "ok",
+   "note": "Body read. 'opens 25 October 2024'; ~17 ha; 8 ha green; direct access to Lumphini MRT; THB 120bn; promotional framing."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.virginactive.co.th/en/locations/wireless-road",
+   "status": "ok",
+   "note": "Body read. 208 Bangkok, Lumpini subdistrict, Pathumwan; hours; 75+ classes/week."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://www.rosewoodhotels.com/en/bangkok/dining/lennons",
+   "status": "ok",
+   "note": "Body read. 30th floor, 1041/38 Ploenchit Rd, Lumpini, Pathumwan; No. 7 Asia's 50 Best Bars 2026 (Highest New Entry)."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Khlong_Toei_Nuea",
+   "status": "ok",
+   "note": "Body read. Khwaeng of Watthana; pop 9,313 (2020); 2.109 km2; stub — no boundary detail."
+  },
+  {
+   "tool": "WebFetch",
+   "query": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station and https://en.wikipedia.org/wiki/Nana_BTS_station",
+   "status": "ok",
+   "note": "Coordinates used for clip distances (646 m / 745 m from app center)."
+  },
+  {
+   "tool": "policy_blocked",
+   "query": "Overpass/OSM APIs",
+   "status": "blocked",
+   "note": "Blocked per task instructions; inside/outside polygon relations left as coordinate-derived estimates for coordinator checks."
+  },
+  {
+   "tool": "policy_blocked",
+   "query": "Reddit, TripAdvisor",
+   "status": "blocked",
+   "note": "403 per task instructions; Reddit skywalk-gap thread used as snippet-only corroboration, never sole support."
+  },
+  {
+   "tool": "policy_blocked",
+   "query": "bangkokpost.com (One Bangkok visitor article)",
+   "status": "skipped",
+   "note": "Paywall; not bypassed. Figure sourced to Nation Thailand body-read instead."
+  }
+ ],
+ "sources": [
+  {
+   "index": 0,
+   "canonical_url": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+   "title": "Phloen Chit BTS Station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article is a stub flagged for lacking sources (tag dated April 2026 per its own banner).",
+    "Station code given as E2 — E1 is Chit Lom; older secondary materials sometimes mislabel the code."
+   ]
+  },
+  {
+   "index": 1,
+   "canonical_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "title": "Chit Lom BTS Station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Coordinate precision unverified (OSM blocked)."
+   ]
+  },
+  {
+   "index": 2,
+   "canonical_url": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+   "title": "Nana BTS Station",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "2021 ridership is a post-COVID year."
+   ]
+  },
+  {
+   "index": 3,
+   "canonical_url": "https://en.wikipedia.org/wiki/Phloen_Chit_Road",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phloen_Chit_Road",
+   "title": "Phloen Chit Road",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Short article; Central Embassy not mentioned; landmarks list may lag."
+   ]
+  },
+  {
+   "index": 4,
+   "canonical_url": "https://en.wikipedia.org/wiki/Witthayu_Road",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Witthayu_Road",
+   "title": "Witthayu Road",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Describes One Bangkok as 'being built' — stale tense; project opened Oct 2024 (sources 9, 10)."
+   ]
+  },
+  {
+   "index": 5,
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Infobox area '57 hectares' vs body '57.6-hectare (142-acre)' — minor internal inconsistency."
+   ]
+  },
+  {
+   "index": 6,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "title": "Khlong Saen Saep Boat Service",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Pier list without per-pier coordinates; fare 'tied to diesel prices' so range may drift."
+   ]
+  },
+  {
+   "index": 7,
+   "canonical_url": "https://today.line.me/th/v3/article/zNB08Kj",
+   "retrieved_url": "https://today.line.me/th/v3/article/zNB08Kj",
+   "title": "รู้จักถนนวิทยุ ย่านไฮโซเมืองไทย (Getting to know Witthayu Road, Bangkok's hi-so district) — Thairath Money",
+   "publisher": "Thairath Money (via LINE Today)",
+   "publisher_family": "thairath",
+   "author": null,
+   "published_at": "2024-03-03T00:00:00Z",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "Thai business/property news vertical",
+   "limitations": [
+    "States British Embassy site as 25 rai sold 2017; Embark (source 8) says ~23 rai sold Jan 2018 — conflicting figures, both cited.",
+    "Development 'targeted for 2027' is a reported target, later left unconfirmed (source 8)."
+   ]
+  },
+  {
+   "index": 8,
+   "canonical_url": "https://embarkestate.com/en/journal/central-embassy-2-wireless-road-pipeline",
+   "retrieved_url": "https://embarkestate.com/en/journal/central-embassy-2-wireless-road-pipeline",
+   "title": "Central Embassy 2 and the Reinvention of Wireless Road — Embark Estate Journal",
+   "publisher": "Embark Estate",
+   "publisher_family": "embarkestate",
+   "author": "Embark Estate (no individual named)",
+   "published_at": "2026-07-13T00:00:00Z",
+   "updated_at": "2026-10-22T00:00:00Z",
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "property market-intelligence journal; publisher also markets estate services in the area",
+   "limitations": [
+    "Property-sector content site; figures flagged by the source itself as 'reported, not confirmed'.",
+    "States no size, programme or opening date published for Central Embassy 2, verified 22 Oct 2026 against CPN Q2 report (10 Aug 2026) and HKL half-year results (28 Jul 2026)."
+   ]
+  },
+  {
+   "index": 9,
+   "canonical_url": "https://www.nationthailand.com/business/corporate/40071053",
+   "retrieved_url": "https://www.nationthailand.com/business/corporate/40071053",
+   "title": "Occupancy to Hit 98% as One Bangkok Retail Eyes Next Phase of Growth",
+   "publisher": "The Nation (nationthailand.com)",
+   "publisher_family": "nation_group",
+   "author": "Nongluck Ajanapanya",
+   "published_at": "2026-09-15T00:00:00Z",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "general news outlet; corporate-interview piece relaying One Bangkok management figures",
+   "limitations": [
+    "Visitor, occupancy and membership figures are management-supplied (Palinee Kongchansiri, chief retail officer)."
+   ]
+  },
+  {
+   "index": 10,
+   "canonical_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "retrieved_url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "title": "One Bangkok — A Transformative Urban District (press release)",
+   "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+   "publisher_family": "onebangkok",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "developer's own press release; promotional framing throughout",
+   "limitations": [
+    "All figures developer-supplied.",
+    "Site given as 'approximately 17 hectares' here; 16.7 ha appears in earlier planning-phase coverage (snippet-only).",
+    "Written pre-opening ('will open')."
+   ]
+  },
+  {
+   "index": 11,
+   "canonical_url": "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide",
+   "retrieved_url": "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide",
+   "title": "Phloen Chit Area Guide",
+   "publisher": "PropertyScout",
+   "publisher_family": "propertyscout",
+   "author": "Fah Chawanthawat (fact-checked)",
+   "published_at": "2025-06-30T00:00:00Z",
+   "updated_at": "2025-11-25T00:00:00Z",
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property-portal area guide; may funnel to listings",
+   "limitations": [
+    "Ranges are portal guidance, not a dated methodology.",
+    "Covers the Phloen Chit area broadly; some named venues (Villa Market Langsuan, NIST) sit toward or beyond the unit's western/eastern clips."
+   ]
+  },
+  {
+   "index": 12,
+   "canonical_url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "retrieved_url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "title": "Noble Ploenchit — Market Data (Hipflat)",
+   "publisher": "Hipflat",
+   "publisher_family": "hipflat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property market-data site; asking prices derived from live listings",
+   "limitations": [
+    "Asking, not transacted.",
+    "Unit-count figures internally inconsistent on the page (1,486 vs 1,394).",
+    "USD figures; THB conversion is the researcher's, not the source's."
+   ]
+  },
+  {
+   "index": 13,
+   "canonical_url": "https://propertyhub.in.th/เช่าคอนโด/bts-เพลินจิต",
+   "retrieved_url": "https://propertyhub.in.th/เช่าคอนโด/bts-เพลินจิต",
+   "title": "คอนโดให้เช่า ใกล้ BTS เพลินจิต (Condos for rent near BTS Phloen Chit) — PropertyHub",
+   "publisher": "PropertyHub.in.th",
+   "publisher_family": "propertyhub",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "rental listings portal; advertisements",
+   "limitations": [
+    "Asking rents only; no stated average on the page.",
+    "Catchment is the portal's own 'near BTS Phloen Chit' definition; some listed projects (Q Langsuan, 28 Chidlom) sit toward the Chit Lom clip."
+   ]
+  },
+  {
+   "index": 14,
+   "canonical_url": "https://www.bkmagazine.com/city-living/5-great-reasons-why-wireless-road-remains-bangkok-most-desirable-neighborhood",
+   "retrieved_url": "https://www.bkmagazine.com/city-living/5-great-reasons-why-wireless-road-remains-bangkok-most-desirable-neighborhood",
+   "title": "5 Great Reasons Why Wireless Road Remains Bangkok's Most Desirable Neighborhood",
+   "publisher": "BK Magazine",
+   "publisher_family": "bkmagazine",
+   "author": "By GROVE (sponsored)",
+   "published_at": "2016-12-01T00:00:00Z",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "sponsored content ('Brought to you by' GROVE); wholly positive framing, no drawbacks discussed",
+   "limitations": [
+    "2016; land prices and venue mentions may be stale.",
+    "Sponsored — used for history/context only, never for current-state claims."
+   ]
+  },
+  {
+   "index": 15,
+   "canonical_url": "https://en.wikipedia.org/wiki/Khlong_Toei_Nuea",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Khlong_Toei_Nuea",
+   "title": "Khlong Toei Nuea",
+   "publisher": "Wikipedia",
+   "publisher_family": "wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Stub — no boundary detail; population 2020; area 2.109 km2."
+   ]
+  },
+  {
+   "index": 16,
+   "canonical_url": "https://www.rosewoodhotels.com/en/bangkok/dining/lennons",
+   "retrieved_url": "https://www.rosewoodhotels.com/en/bangkok/dining/lennons",
+   "title": "Lennon's — Rosewood Bangkok",
+   "publisher": "Rosewood Hotel Group",
+   "publisher_family": "rosewood",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "hotel's own venue page; promotional",
+   "limitations": [
+    "Asia's 50 Best Bars ranking (No. 7, 2026, Highest New Entry) is stated on the operator page, not read from the awards body."
+   ]
+  },
+  {
+   "index": 17,
+   "canonical_url": "https://www.virginactive.co.th/en/locations/wireless-road",
+   "retrieved_url": "https://www.virginactive.co.th/en/locations/wireless-road",
+   "title": "Virgin Active Thailand — Wireless Road",
+   "publisher": "Virgin Active Thailand",
+   "publisher_family": "virginactive",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "operator's own club page",
+   "limitations": [
+    "No pool or station distance stated on the page."
+   ]
+  },
+  {
+   "index": 18,
+   "canonical_url": "https://www.ddproperty.com/เช่าคอนโด/ใกล้-bts-เพลินจิต-2153",
+   "retrieved_url": "https://www.ddproperty.com/เช่าคอนโด/ใกล้-bts-เพลินจิต-2153",
+   "title": "DDproperty — rentals near BTS Phloen Chit (search-result data)",
+   "publisher": "DDproperty",
+   "publisher_family": "ddproperty",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": false,
+   "type": "commercial_property",
+   "commercial_context": "rental listings portal; advertisements",
+   "limitations": [
+    "Snippet-only (via search summary); used solely to corroborate the Noble Ploenchit 1BR ask band already evidenced by sources 12 and 13; never sole support."
+   ]
+  },
+  {
+   "index": 19,
+   "canonical_url": "https://www.lad.co.th/post/วิเคราะห์-ที่ดินสถานทูตเนเธอร์แลนด์",
+   "retrieved_url": "https://www.lad.co.th/post/วิเคราะห์-ที่ดินสถานทูตเนเธอร์แลนด์",
+   "title": "วิเคราะห์ ที่ดินสถานทูตเนเธอร์แลนด์ 20 ไร่ ถนนวิทยุ (Analysis: Netherlands Embassy land, 20 rai, Witthayu Rd) — LAD",
+   "publisher": "LAD (lad.co.th)",
+   "publisher_family": "lad",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "Thai property-market analysis site",
+   "limitations": [
+    "Snippet-only (Thai search summary): 20 rai, assessed 625k THB/sq.wa vs market up to 3.8M; corroborates source 8's Dutch-embassy sale figure (>20bn THB, 'reported, not confirmed'); never sole support."
+   ]
+  },
+  {
+   "index": 20,
+   "canonical_url": "https://map.longdo.com/poilist/32",
+   "retrieved_url": "https://map.longdo.com/poilist/32",
+   "title": "Longdo Map — POI addresses on Phloen Chit Rd (แขวงลุมพินี เขตปทุมวัน); corroborated by SEC company-register and MEA address snippets",
+   "publisher": "Longdo / SEC / Metropolitan Electricity Authority (address snippets)",
+   "publisher_family": "longdo_govdir",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "map directory / official registers",
+   "limitations": [
+    "Snippet-only; corroborates the khwaeng attribution already established by body-read sources 3 and 4."
+   ]
+  },
+  {
+   "index": 21,
+   "canonical_url": "https://baanlyy.com/thailand/bangkok/areas/wireless",
+   "retrieved_url": "https://baanlyy.com/thailand/bangkok/areas/wireless",
+   "title": "Wireless area page (Baanlyy); corroborated by a Superagent 'Wireless Road: Embassy Quarter Condo Rental Guide' (Apr 2026) search summary",
+   "publisher": "Baanlyy / Superagent (property guides)",
+   "publisher_family": "baanlyy_superagent",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": false,
+   "type": "commercial_property",
+   "commercial_context": "property-guide publishers; promotional framing likely",
+   "limitations": [
+    "Snippet-only (search summaries); 'quiet, secure, internationally connected' wording used solely as corroboration of the embassy-quarter character documented by body-read sources 3, 4, 7 and 11; never sole support."
+   ]
+  },
+  {
+   "index": 22,
+   "canonical_url": "https://www.reddit.com/r/Bangkok/comments/1qip401/is_there_connecting_bts_skywalk_between_ploenchit",
+   "retrieved_url": "https://www.reddit.com/r/Bangkok/comments/1qip401/is_there_connecting_bts_skywalk_between_ploenchit",
+   "title": "r/Bangkok thread — connecting BTS skywalk between Ploen Chit and adjacent stations",
+   "publisher": "Reddit (r/Bangkok)",
+   "publisher_family": "reddit",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T12:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "resident forum (inaccessible directly; 403 per task policy)",
+   "limitations": [
+    "Snippet-only via search summary; Reddit not directly fetchable; used only to corroborate the absence of a continuous Ploen Chit-Nana skywalk, never as sole support."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "phloen-chit-c01",
+   "text_en": "The scored station is BTS Phloen Chit, code E2 (not E1 — that is Chit Lom), opened 5 December 1999 with the original Sukhumvit Line; its Wikipedia coordinate (13.7430806, 100.5490194) sits ~11 m from the app center (13.74307, 100.54898). It is a single-line station on an elevated road viaduct: Chit Lom E1 lies ~646 m west and Nana E3 ~745 m east-southeast by haversine from infobox coordinates, so the unit is a narrow strip clipped by both neighbors well inside the 800 m ring. Recorded 2021 ridership was 2,362,816 passengers — higher than Nana's 1,149,005 the same year.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Distances are haversine from Wikipedia infobox coordinates (OSM blocked); Wikipedia geocoding noise possible.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2021 ridership is the latest year published on the stub article."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Infobox",
+     "paraphrase": "Station code E2, Sukhumvit Line, opened 5 December 1999; coordinates 13.7430806N 100.5490194E; 2021 passengers 2,362,816; on Phloen Chit Road at Phloen Chit intersection where it meets Witthayu Road near the start of Sukhumvit Road; connected by skywalk to Central Embassy."
+    },
+    {
+     "source_index": 1,
+     "locator": "Infobox",
+     "paraphrase": "Chit Lom is E1 at 13.7441083, 100.5430972 — computed ~646 m from the app center."
+    },
+    {
+     "source_index": 2,
+     "locator": "Infobox",
+     "paraphrase": "Nana is E3 at 13.7406028, 100.5553972 — computed ~745 m from the app center; 2021 passengers 1,149,005."
+    }
+   ],
+   "limitations": [
+    "The Wikipedia article is an uncited stub (its own banner).",
+    "Distances are coordinate-derived; polygon clipping is the coordinator's check."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c02",
+   "text_en": "The unit's core roads sit in Khwaeng Lumphini, Khet Pathum Wan: Phloen Chit Road (1.2 km, entirely Lumphini subdistrict per Wikipedia) and Witthayu Road (2.6 km, 'almost entirely' Lumphini). The north side of Sukhumvit Road here belongs to Khwaeng Khlong Toei Nuea, Khet Watthana (khwaeng centroid ~200 m from the station; population 9,313 in 2020). The app's third district, Ratchathewi, is consistent with a northern sliver beyond the Saen Saep canal: Thai khwaeng data place Lumphini's boundary with Makkasan khwaeng (Khet Ratchathewi) at the canal, and Witthayu Road was extended across the canal to Phetchaburi Road in 1972. Exact shares inside the polygon are unverified (OSM blocked).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "context"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Pathum Wan core documented by two body-read articles; Watthana strip documented; Ratchathewi sliver inferred from khwaeng-boundary statements (snippet-level).",
+    "relation_to_entity": "partial",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": "2026-12-01",
+    "notes": "Coordinator polygon check should quantify the three shares."
+   },
+   "evidence": [
+    {
+     "source_index": 3,
+     "locator": "Intro/location",
+     "paraphrase": "Phloen Chit Road sits entirely in Lumphini Subdistrict of Pathum Wan District; 1.2 km from Ratchaprasong intersection to the railway branch line, continuing east as Sukhumvit Road."
+    },
+    {
+     "source_index": 4,
+     "locator": "Intro and history",
+     "paraphrase": "Witthayu Road runs almost entirely in Lumphini subdistrict; 2.6 km after a 1972 extension across Saen Saep Canal to Phetchaburi Road."
+    },
+    {
+     "source_index": 15,
+     "locator": "Infobox and intro",
+     "paraphrase": "Khlong Toei Nuea is a khwaeng of Watthana District; 2020 population 9,313; area 2.109 km2; centroid ~200 m from the app center (computed)."
+    },
+    {
+     "source_index": 20,
+     "locator": "Thai search-result snippets (Longdo POI list; SEC register; MEA office address)",
+     "paraphrase": "Institutional addresses on Phloen Chit Road read แขวงลุมพินี เขตปทุมวัน; a khwaeng data snippet states Lumphini borders Makkasan khwaeng (Khet Ratchathewi) along the Saen Saep canal (snippet-only corroboration)."
+    }
+   ],
+   "limitations": [
+    "Ratchathewi share rests on snippet-level khwaeng-boundary statements, not on polygon data.",
+    "Wikipedia geocoding noise applies to the ~200 m centroid distance."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c03",
+   "text_en": "Transport 10 rests on more than the single BTS line: the station connects by skywalk directly into Central Embassy (platform to mall without crossing Phloen Chit Road); one stop west, Chit Lom E1 anchors the Ratchaprasong Sky Walk network — a skybridge into Central Chidlom and walkways over the Ratchaprasong intersection (CentralWorld, Gaysorn, Erawan Shrine) with a linked route toward Siam — and an expressway on-ramp serves drivers. Water transport touches the unit via the Khlong Saen Saep express boat (service hours 05:30-20:30 weekdays per its pier table; fares 8-22 THB cash): the 'Wireless' pier sits on Witthayu Road at the canal, near the old British embassy site, and is confidently inside the unit; the second mapped pier is plausibly the Chidlom pier (west) or Nana Nuea pier (Sukhumvit Soi 3, east) — the polygon decides, not this research.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Skywalk facts are station-level; pier identity for the second of the app's 2 piers is ambiguous pending polygon check.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current service",
+    "recheck_by": "2027-05-01",
+    "notes": "Boat fares are diesel-indexed."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Infobox/connections",
+     "paraphrase": "Station is connected by skywalk to Central Embassy."
+    },
+    {
+     "source_index": 1,
+     "locator": "Connections section",
+     "paraphrase": "Chit Lom station linked by skybridge directly to Central Chidlom; Sky Walk to Ratchaprasong intersection (CentralWorld, Gaysorn Plaza, Erawan Shrine); Sky Walk also connects toward Siam station and Siam Square/Paragon."
+    },
+    {
+     "source_index": 6,
+     "locator": "Pier list, NIDA Line",
+     "paraphrase": "Piers include Pratunam, Chidlom (near Central Chidlom), Wireless (at Witthayu Road, near the old British embassy site), Nana Nuea (Sukhumvit Soi 3); service 05:30-20:30 weekdays, 8-22 THB cash fares."
+    },
+    {
+     "source_index": 11,
+     "locator": "Transport section",
+     "paraphrase": "Sukhumvit Road and the expressway on-ramp are easily accessible for drivers from the area."
+    }
+   ],
+   "limitations": [
+    "The Park Hyatt hotel page's claim of a covered bridge to both BTS Phloen Chit and Chit Lom appeared only in search snippets (hotel marketing) — plausible given the hotel sits atop Central Embassy but not independently body-read.",
+    "Second pier identity unresolved; Overpass blocked."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c04",
+   "text_en": "Nightlife 10 with only 33 mapped venues is the reverse of the Nana/Thong Lo pattern, and the documented in-unit supply is hotel-anchored: Lennon's at Rosewood Bangkok (30th floor, 1041/38 Ploenchit Rd, Lumpini, Pathumwan — an award-winning vinyl speakeasy ranked No. 7 on Asia's 50 Best Bars 2026 with the Highest New Entry award, 6,000+ records, 17:00-24:00 daily), Penthouse Bar + Grill at Park Hyatt (Central Embassy block) and CHAR at Hotel Indigo Wireless Road (26th-floor terrace). PropertyScout characterizes area nightlife as 'more relaxed than Asoke or Nana; rooftop lounges and quiet hotel bars'. The honest mechanism reading: the 10 rewards a small, high-end hotel-bar cluster plus one-stop adjacency to the Nana E3 nightlife corridor (~745 m east), not in-unit bar density — with 33 venues, a density-based score would not reach 10.",
+   "kind": "researcher_inference",
+   "topics": [
+    "nightlife",
+    "counter_evidence"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Named venues are in-unit per their published addresses; the adjacency reading is the researcher's.",
+    "relation_to_entity": "inside",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": "2026-01-01",
+    "observed_period": "2025-2026 listings and awards",
+    "recheck_by": "2027-05-01",
+    "notes": "Asia's 50 Best Bars 2026 ranking is current-year."
+   },
+   "evidence": [
+    {
+     "source_index": 16,
+     "locator": "Venue page",
+     "paraphrase": "Lennon's: 30th floor, Rosewood Bangkok, 1041/38 Ploenchit Road, Lumpini, Pathumwan; 'award-winning speakeasy inspired by a home recording studio'; 6,000+ vinyl records; 5 pm-12 am daily; ranked No. 7 Asia's 50 Best Bars 2026 with Highest New Entry Award."
+    },
+    {
+     "source_index": 11,
+     "locator": "Restaurants/nightlife section",
+     "paraphrase": "Upscale: Paste, Penthouse Bar + Grill; nightlife 'more relaxed than Asoke or Nana; rooftop lounges and quiet hotel bars'."
+    },
+    {
+     "source_index": 2,
+     "locator": "Surroundings",
+     "paraphrase": "Nana station area described with hotels, tourist facilities and Nana Plaza within walking distance — the adjacent nightlife pole this unit borders."
+    }
+   ],
+   "limitations": [
+    "The 33-venue count is an app fact, not independently verified; which venues the app mapped is unknown.",
+    "CHAR (Hotel Indigo) and the Penthouse rooftop detail rest on rooftop-guide search snippets (corroboration only); Penthouse Bar + Grill itself is PropertyScout-listed.",
+    "The mechanism reading is inference from documented supply, not from app internals."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c05",
+   "text_en": "The rent-2 cohort has a land-price mechanism, not just a perception: Witthayu Road is described in Thai business media as the most expensive land in Thailand — official 2023-2026 appraisals for the Rama IV-to-Phloen Chit segment rose 33.33% to 1,000,000 THB per square wah, with asking prices above 4,000,000 THB/sq.wa (no transfers recorded at that level). The British Embassy compound (~23 rai per Embark, ~25 rai per Thairath) sold for a reported £420m (~18.6bn THB) — described as the highest-value land deal in Thai history — and One Bangkok's 104-rai site represents >120bn THB of investment. 98 Wireless resales set a reported 1,000,000 THB per sq m record.",
+   "kind": "factual_report",
+   "topics": [
+    "rent",
+    "context"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Land figures cover the Witthayu/Phloen Chit corridor the unit sits in.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2023-2026 appraisal cycle; deals 2016-2026",
+    "recheck_by": "2027-05-01",
+    "notes": "Next BMA/Treasury appraisal cycle may update figures."
+   },
+   "evidence": [
+    {
+     "source_index": 7,
+     "locator": "Land prices and deals sections (Thai)",
+     "paraphrase": "Assessed prices along Witthayu rose from 500,000-750,000 THB/sq.wa (2016 cycle) to 1,000,000 THB/sq.wa (2023-2026 cycle, +33.33% for the Rama IV-Phloen Chit segment); some plots asked above 4,000,000 THB/sq.wa with no transfers yet; British Embassy 25 rai sold for ~£420m (~18.6bn THB), 'the highest-value land deal in Thai history'; One Bangkok 104 rai, >120bn THB; 98 Wireless resale record 1,000,000 THB/sq.m."
+    },
+    {
+     "source_index": 8,
+     "locator": "British Embassy land sale section",
+     "paraphrase": "Sold January 2018; roughly 23 rai freehold; reported £420m; buyers a Hongkong Land + Central Pattana JV."
+    },
+    {
+     "source_index": 19,
+     "locator": "Thai search-result snippet (LAD analysis)",
+     "paraphrase": "Netherlands Embassy land (20 rai): assessed 625,000 THB/sq.wa vs market estimates to 3,800,000 THB/sq.wa (snippet-only corroboration)."
+    }
+   ],
+   "limitations": [
+    "Asking vs transacted land prices differ sharply; only appraisal figures are official.",
+    "Embassy-site area and sale-year conflict between sources (23 vs 25 rai; 2017 vs 2018) — both cited, not averaged."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c06",
+   "text_en": "Independent asking evidence brackets what the 33,500/74,000 THB district blend actually rents. Station-area portals (retrieved 2026-11-07): PropertyHub lists 7,655 rentals near BTS Phloen Chit, minimum 18,000 THB (Life One Wireless studio, 24 m2), typical 1-3BR spread 20,000-90,000, maximum 450,000 (98 Wireless duplex penthouse, 245 m2); examples include Noble Ploenchit studio 30,000-38,000, 1BR 50,000, 2BR 60,000, Life One Wireless 1BR 25,000-27,900, Craft Ploenchit 1BR 36,000. PropertyScout (updated 25 Nov 2025): older-stock studios from ~13,000; 1BR 25,000-60,000; 2BR 45,000-90,000; top tier above 350,000; yields 3.5-5%. Hipflat: Noble Ploenchit average rent USD25/sqm, 9.1% above the Pathum Wan district average of USD23/sqm; average sale USD8,499/sqm, 112% above the Bangkok average (USD4,009).",
+   "kind": "factual_report",
+   "topics": [
+    "rent",
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "notes": "PropertyHub catchment is the portal's own 'near BTS'; a few listed projects sit toward the Chit Lom clip.",
+    "relation_to_entity": "inside",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings retrieved 2026-11-07; guide updated 2025-11-25",
+    "recheck_by": "2027-05-01",
+    "notes": "Asking rents only."
+   },
+   "evidence": [
+    {
+     "source_index": 13,
+     "locator": "Listing page (Thai)",
+     "paraphrase": "7,655 listings; min 18,000 (Life One Wireless studio 24-25 m2); max 450,000 (98 Wireless, 3BR 245 m2 duplex penthouse); Noble Ploenchit rows 30,000/38,000/50,000/60,000; Life One Wireless 1BR 25,000-27,900; Craft Ploenchit 1BR 47.3 m2 at 36,000."
+    },
+    {
+     "source_index": 11,
+     "locator": "Rental prices section",
+     "paraphrase": "Studios older buildings from ~13,000; 1BR 25,000-60,000 average; 2BR 45,000-90,000; top-tier multi-bedroom 350,000+; yields 3.5-5%; sale 140,000-250,000 THB/sqm with entry ~3.5-4m THB."
+    },
+    {
+     "source_index": 12,
+     "locator": "Market data",
+     "paraphrase": "Average rent USD25/sqm vs Pathum Wan USD23/sqm (+9.1%); average sale USD8,499/sqm vs Bangkok USD4,009/sqm (+112%); 1,191 rental units listed; completed Dec 2016."
+    },
+    {
+     "source_index": 18,
+     "locator": "Search-result summary of DDproperty data",
+     "paraphrase": "Noble Ploenchit 1BR asks ~26,500-50,000+ with ~43,000 average (snippet-only corroboration of the same band from body-read sources)."
+    }
+   ],
+   "limitations": [
+    "Asking, not signed, rents; aggregator advertisements.",
+    "Portal 'near BTS' catchments are their own definitions.",
+    "USD-THB conversions are the researcher's where made."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c07",
+   "text_en": "Interpreting the 33,500/74,000 THB Pathum Wan district blend against the station evidence: 33,500 matches the entry end of a 1-bedroom ask here (Life One Wireless 1BR 25,000-27,900; Noble Ploenchit floor ~30,000-33,000; DDproperty-derived 1BR average ~43,000), while 74,000 matches the 2BR band (45,000-90,000). The blend is therefore a mid-market condo figure for this unit, not a floor: older-stock studios ask from ~13,000-18,000, which is high by city standards but far below the blend. Rent 2 (higher = more affordable, so 2 = among the least affordable) is directionally right — the unit sits in the city's rent-1 district and Hipflat prices Noble Ploenchit 9.1% above the district average — but the honest statement is a wide 13,000-450,000 spread with the floor itself in the top national cohort.",
+   "kind": "researcher_inference",
+   "topics": [
+    "rent",
+    "affordability",
+    "counter_evidence"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Blend semantics are editorial; this claim tests them, it does not change the rating.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 listings",
+    "recheck_by": "2027-05-01",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 13,
+     "locator": "Listing rows",
+     "paraphrase": "Life One Wireless 1BR 35 m2 at 25,000-27,900; Noble Ploenchit 1BR from 30,000-50,000 (per rows and DDproperty-derived average ~43,000, source 18, snippet)."
+    },
+    {
+     "source_index": 11,
+     "locator": "Rental prices",
+     "paraphrase": "1BR 25,000-60,000; 2BR 45,000-90,000; older studios from ~13,000."
+    },
+    {
+     "source_index": 12,
+     "locator": "Market data",
+     "paraphrase": "Noble Ploenchit rent 9.1% above Pathum Wan district average; Pathum Wan is the app's rent-1 district."
+    }
+   ],
+   "limitations": [
+    "Blend construction is editorial (district-weighted); no published methodology was available to verify it.",
+    "Asking evidence only; signed rents unknown."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c08",
+   "text_en": "Green 10 with 10.7 ha mapped cannot be decomposed from published in-unit public parks. The one named public-ish green inside the unit is the Nai Lert Park Heritage garden behind Central Embassy between Witthayu Road and Soi Somkid — ~14-15 rai (~2.2-2.4 ha, admission-charged house-museum garden). Everything else green is either outside the 800 m ring or private: Lumphini Park (57.6 ha) is bounded by Witthayu Road but lies south of Rama IV, ~1.1 km from the station per coordinates, and One Bangkok's 8 ha of green sits at the Wireless/Rama IV junction (~1.1 km south, anchored on MRT Lumphini) — both almost certainly in the lumphini station unit, not this one; Benchasiri Park east is assigned to st.phrom-phong per app data. The former British Embassy gardens (~23-25 rai) are private and now being redeveloped. The shaded street environment (Witthayu's tree rows) is real but is not a park polygon.",
+   "kind": "factual_report",
+   "topics": [
+    "green",
+    "counter_evidence"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Nai Lert garden in-unit (~200-400 m from station, estimate); Lumphini Park and One Bangkok green ~1.1 km south (outside ring, coordinate-derived); whether a Lumphini tip or One Bangkok green edge falls inside the Voronoi is the coordinator's polygon check.",
+    "relation_to_entity": "partial",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": "2026-12-01",
+    "notes": "Polygon decomposition pending."
+   },
+   "evidence": [
+    {
+     "source_index": 5,
+     "locator": "Infobox and location",
+     "paraphrase": "Lumphini Park 57.6 ha, created 1925, on the north side of Rama IV Road between Ratchadamri and Witthayu Roads; 2.5 km of jogging paths; open 04:30-21:00."
+    },
+    {
+     "source_index": 10,
+     "locator": "Press release",
+     "paraphrase": "One Bangkok: '8 hectares of welcoming, sprawling greenery', ~17 ha site, direct access to Lumphini MRT Station, Wireless Road, Lumphini, Patumwan."
+    },
+    {
+     "source_index": 8,
+     "locator": "British Embassy land sale",
+     "paraphrase": "The ~23-rai embassy compound is freehold land sold in 2018 to a development JV — no longer public green."
+    },
+    {
+     "source_index": 4,
+     "locator": "Landmarks",
+     "paraphrase": "Nai Lert Park (the former Nai Lert estate) listed along Witthayu/Phloen Chit; American, Dutch and British embassies along the road."
+    }
+   ],
+   "limitations": [
+    "Nai Lert garden area (~14-15 rai) is snippet-sourced (heritage-home listings), not body-read from an official page.",
+    "No published in-unit public park area besides Nai Lert could be found; the 10.7-ha polygon's remainder is unidentified (OI-2).",
+    "OSM blocked; inside/outside relations are coordinate-derived."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c09",
+   "text_en": "One Bangkok — the district-scale development that changed the area's rhythm — is NOT inside this unit's catchment: it opened 25 October 2024 on ~17 ha at the Wireless Road / Rama IV junction with 'direct access to Lumphini MRT Station', ~1.1 km south of BTS Phloen Chit per coordinates. Its effects reach the unit as spillover up Witthayu Road: management reports 40+ million visitors a year, retail occupancy ~96% heading to 98% by end-2026, a 300,000+ member base, 500+ brands and 400+ F&B outlets, with The Ritz-Carlton and Andaz hotels and a second office tower due by 2027.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "crowd",
+    "context"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "notes": "Site at Wireless x Rama IV, adjacent to MRT Lumphini — outside the 800 m ring (~1.1 km, coordinate-derived); spillover corridor is Witthayu Road.",
+    "relation_to_entity": "outside",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": "2024-10-25",
+    "observed_period": "opened 2024; growth data Sep 2026",
+    "recheck_by": "2027-05-01",
+    "notes": "Verify 2027 transit integration and new hotels."
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "Press release",
+     "paraphrase": "'It will open its doors to the public on 25 October 2024'; ~17 ha; 8 ha green; five office towers, five hotels (first Ritz-Carlton and Andaz in Thailand), three residential towers; direct access to Lumphini MRT Station; six entrances on Wireless and Rama IV Roads; THB 120bn investment; SOM masterplan."
+    },
+    {
+     "source_index": 9,
+     "locator": "Full article",
+     "paraphrase": "40+ million visitors a year since opening; occupancy ~96% projected to 98% by end-2026; membership past 300,000; 500+ fashion/lifestyle brands, 400+ F&B; 50/50 internal-external footfall split; Ritz-Carlton, Andaz, second office tower by 2027."
+    },
+    {
+     "source_index": 4,
+     "locator": "Landmarks",
+     "paraphrase": "One Bangkok built on the former radio-station and Lumpinee Boxing Stadium sites at the road's southern end."
+    }
+   ],
+   "limitations": [
+    "Visitor/occupancy figures are operator-supplied (interview piece).",
+    "The 16.7-ha site figure appears in planning-phase coverage (snippet-only); the official release says 'approximately 17 hectares'."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c10",
+   "text_en": "The former British Embassy compound — the unit's largest single land parcel — was sold and is being redeveloped, but almost everything about the redevelopment is still unconfirmed: the UK sold ~23 rai (Embark) / ~25 rai (Thairath) of freehold at the Phloen Chit/Witthayu corner in a deal reported at £420m (~18.6bn THB) with a Central Pattana + Hongkong Land JV (agreement January 2018 per Embark; 2017 per Thairath). A high-end mixed-use successor ('Central Embassy 2', GFA reported above 400,000 m2) has been announced, but as of 22 October 2026 no size, programme or opening date has been published — Embark verified CPN's Q2 2026 report and Hongkong Land's H1 2026 results say nothing about the site. Secondary trackers report construction starting ~late 2025 and opening ~2028-2029; treat as reported, not fixed.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "identity"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "building",
+    "notes": "Compound at the NW corner of the Phloen Chit/Witthayu junction, ~180-300 m from the station (estimate).",
+    "relation_to_entity": "inside",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": "2018-01-01",
+    "observed_period": "sale 2018; status verified 2026-10-22",
+    "recheck_by": "2027-05-01",
+    "notes": "Watch for an official CPN/HKL programme announcement."
+   },
+   "evidence": [
+    {
+     "source_index": 8,
+     "locator": "British Embassy land sale and development sections",
+     "paraphrase": "January 2018; roughly 23 rai; reported £420m; Hongkong Land + Central Pattana JV; 'no size, programme or opening date has been published for it'; 'Treat it as announced and reported, not fixed'; verified against CPN Q2 2026 (10 Aug) and HKL H1 2026 (28 Jul) filings."
+    },
+    {
+     "source_index": 7,
+     "locator": "Deals section (Thai)",
+     "paraphrase": "British Embassy 25-rai site sold 2017 to Central Group with Hongkong Land for ~£420m (~18.6bn THB), the highest-value land deal in Thai history; retail/office development targeted for 2027."
+    },
+    {
+     "source_index": 3,
+     "locator": "Landmarks/history",
+     "paraphrase": "The British Embassy was established in 1922 at the corner of Phloen Chit Intersection, once one of the largest compounds in the area."
+    }
+   ],
+   "limitations": [
+    "Rai figures and sale-year conflict between the two sources; both cited.",
+    "Construction-start and opening estimates come from property trackers, not the developers."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c11",
+   "text_en": "The unit's documented food supply is mall- and hotel-led: Eathai (Tops-run Thai food hall) and the Gourmet Market supermarket both sit in Central Embassy's basement at 1031 Ploenchit Road; PropertyScout names Penthouse Bar + Grill and Paste among upscale options and Ton Chin Kan Ramen and Savoey among casual ones; a 2016 (sponsored) listicle adds Lenzi Tuscan Kitchen, Gianni Ristorante, Le Boeuf and Cafe Parisien near the Wireless/Phloen Chit corner — venue survival since 2016 unverified. The app's 351 food / 53 cafe counts were not independently verifiable; the documented anchor supply is consistent with a high-density CBD node but the counts themselves stand unverified.",
+   "kind": "factual_report",
+   "topics": [
+    "food",
+    "daily_essentials"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Central Embassy is skywalk-connected to the station; other named venues along Phloen Chit/Witthayu per the guides.",
+    "relation_to_entity": "inside",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 guide; 2016 listicle flagged as historical",
+    "recheck_by": "2027-05-01",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "Restaurants/nightlife and landmarks sections",
+     "paraphrase": "Upscale: Paste, Penthouse Bar + Grill; casual: Ton Chin Kan Ramen, Savoey; Central Embassy with boutique shopping and Open House bookstore/co-working; Gourmet Market supermarket listed among groceries."
+    },
+    {
+     "source_index": 14,
+     "locator": "Dining section",
+     "paraphrase": "Gaggan in nearby Soi Langsuan; hotel and standalone dining (Lenzi Tuscan Kitchen, Gianni Ristorante, Le Boeuf, Cafe Parisien, Fillets) 'rank among the city's best' (2016, sponsored)."
+    },
+    {
+     "source_index": 16,
+     "locator": "Rosewood dining page context",
+     "paraphrase": "Rosewood Bangkok lists Nan Bei, Lakorn, Lennon's and G&O among its dining venues at 1041/38 Ploenchit Road."
+    }
+   ],
+   "limitations": [
+    "Paste's current location/status not independently verified beyond the PropertyScout guide.",
+    "App counts (351 food, 53 cafes) unverified — no public dataset accessible (Overpass blocked)."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c12",
+   "text_en": "Daily-essentials access is convenient but premium-priced: groceries run through Gourmet Market (Central Embassy basement) and Eathai's Thai-market shelves, Mercury Ville (groceries and casual dining) at the Phloen Chit/Witthayu corner, Villa Market on Langsuan (toward the western clip, likely the chit-lom unit), and dense 7-Eleven-style convenience stores. No low-price fresh market was mapped or documented inside the unit — the everyday-grocery offer skews to upmarket chains serving the embassy/hotel/condo population, which is the honest counterpoint to a daily_essentials 10.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "counter_evidence"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Gourmet Market/Eathai/Mercury Ville in-unit; Villa Market Langsuan toward the western clip.",
+    "relation_to_entity": "partial",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025 guide",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "Supermarkets/groceries section",
+     "paraphrase": "Villa Market on Langsuan; Mercury Ville mall (groceries and casual dining); small convenience stores throughout the area."
+    },
+    {
+     "source_index": 11,
+     "locator": "Landmarks section",
+     "paraphrase": "Central Embassy listed with Open House bookstore/co-working (still listed Nov 2025 — no closure reporting found)."
+    },
+    {
+     "source_index": 13,
+     "locator": "Portal page (Thai)",
+     "paraphrase": "Dense premium-condo listings around the station imply an upmarket service base; no fresh-market entries appear in the portal's area framing."
+    }
+   ],
+   "limitations": [
+    "The 'no cheap fresh market inside the polygon' statement is an absence-of-evidence finding (Overpass blocked), not a verified negative."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c13",
+   "text_en": "Gym_sports 10 matches a premium-club-plus-street profile: Virgin Active's Wireless Road club sits at 208 Bangkok on Wireless Road (Lumpini subdistrict, Pathumwan) with 75+ classes weekly, studios, reformer Pilates and cycle under one roof (Mon-Thu 06:00-22:00; Fri to 21:00; weekends/holidays 08:00-20:00), alongside hotel clubs at Park Hyatt, Rosewood and The Athenee. Street sport is the tree-lined 2.6 km Witthayu corridor — Thai media describe it as unusually shaded and green for Bangkok — but the traffic-free running options (Lumphini Park's 2.5 km loop, 04:30-21:00; Benjakitti beyond) sit south of Rama IV, ~1 train stop or a ~1.1 km walk away, outside the ring.",
+   "kind": "factual_report",
+   "topics": [
+    "gym_sports",
+    "green"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Virgin Active and Witthayu corridor in-unit; traffic-free park running outside (coordinate-derived ~1.1 km).",
+    "relation_to_entity": "partial",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current operator page; 2024 media",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 17,
+     "locator": "Location page",
+     "paraphrase": "Virgin Active Wireless Road at '208 Bangkok, Lumpini Sub-district, Pathumwan District'; 75+ classes per week; premium gym floor, studios, luxe changerooms; hours Mon-Thu 6:00-22:00, Fri 6:00-21:00, Sat-Sun/holidays 8:00-20:00; classes include Cycle, BodyPump, Boxing, Reformer Pilates, Yoga, Les Mills."
+    },
+    {
+     "source_index": 7,
+     "locator": "Character section (Thai)",
+     "paraphrase": "Tree-lined median and proximity to Lumphini Park set the road apart — 'ร่มรื่นแปลกตา ต่างจากย่านอื่นๆ ของกรุงเทพฯ' (unusually shaded, unlike other Bangkok areas)."
+    },
+    {
+     "source_index": 5,
+     "locator": "Infobox and features",
+     "paraphrase": "Lumphini Park 2.5 km of jogging paths; open daily 04:30-21:00."
+    }
+   ],
+   "limitations": [
+    "The commonly cited 'Witthayu loop' distance (~2.5-3 km around the block) appears only in running-guide search snippets — treat as approximate.",
+    "Hotel-club list is inference from hotel identity, not a verified facilities audit."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c14",
+   "text_en": "The unit's vibe is old-money Bangkok, not street culture: Thai business media call Witthayu 'ย่านไฮโซเมืองไทย' (the country's hi-so district) — coveted by 'เศรษฐี, เจ้าสัว, ผู้ดีเก่า และ ดาราไฮโซ' (tycoons, old-money families, aristocrats, hi-so celebrities) — and compare it to New York's Fifth Avenue (a framing the 2016 sponsored piece also used). The road carries 22 embassies/consulates on 2.6 km — the most in Thailand. Residential density is low: Pathum Wan district held only ~18,000 residents (2019 census, per PropertyScout), and PropertyScout describes the resident base as high-income Thai professionals, diplomats and expats aged 25-49.",
+   "kind": "reported_perception",
+   "topics": [
+    "vibe",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "notes": "Perception sources cover the Witthayu/Phloen Chit corridor; the district population figure is khet-wide.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2016-2026 publications",
+    "recheck_by": null,
+    "notes": "Sponsored 2016 framing used only for history."
+   },
+   "evidence": [
+    {
+     "source_index": 7,
+     "locator": "'Why hi-so' section (Thai)",
+     "paraphrase": "Calls Witthayu 'ย่านไฮโซเมืองไทย'; 22 embassies/consulates on 2.6 km, 'มากที่สุดในไทย' (most in Thailand); compared to New York's Fifth Avenue."
+    },
+    {
+     "source_index": 14,
+     "locator": "Reason 1 and 2",
+     "paraphrase": "'It's Bangkok's 5th Avenue'; wide boulevard lined with four rows of centenary trees; the city's Embassy Row (sponsored 2016 piece)."
+    },
+    {
+     "source_index": 11,
+     "locator": "Who it suits section",
+     "paraphrase": "High-income Thai professionals, diplomats, businesspeople; residents mostly 25-49; Pathum Wan population about 18,000 (2019 census)."
+    }
+   ],
+   "limitations": [
+    "Perception evidence is publication-based; the sponsored 2016 piece is used for historical framing only.",
+    "The vibe-9 interpretation (prestige + leafiness over street culture) is the researcher's synthesis."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c15",
+   "text_en": "Safety 7 has the thinnest evidence base of the researched ratings: accessible sources describe an embassy quarter that feels 'quiet, secure, internationally connected' and a family-suitable, secure housing stock, and the 22-embassy presence implies concentrated security — but no unit-level incident data, police statistics or crime reporting was found in accessible (non-paywalled, non-blocked) sources. The score is best read as a district-blend default plus perception, not a measured claim; the counter-hypothesis (that heavy tourist/visitor flows around the mall corridor raise petty-crime exposure) also found no direct evidence either way.",
+   "kind": "reported_perception",
+   "topics": [
+    "safety",
+    "counter_evidence"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "notes": "No unit-level safety data located; explicit evidence gap.",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-2026 publications",
+    "recheck_by": "2027-05-01",
+    "notes": "If Thai police/BMA statistics become accessible, revisit."
+   },
+   "evidence": [
+    {
+     "source_index": 11,
+     "locator": "Who it suits / families section",
+     "paraphrase": "Families framing: Baan Siri Ruedee, All Seasons Mansion — 'spacious, secure, near schools/parks'."
+    },
+    {
+     "source_index": 21,
+     "locator": "Search-result summary of property guides (Superagent, Baanlyy)",
+     "paraphrase": "Guides describe the road as 'quiet, secure, internationally connected' — snippet-only corroboration; the security framing is consistent with the embassy-quarter identity documented by body-read sources 3, 4 and 7."
+    }
+   ],
+   "limitations": [
+    "The 'quiet, secure' wording rests on snippet-level property-guide language; no crime data was accessible.",
+    "This claim deliberately documents an evidence gap rather than resolving the score."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c16",
+   "text_en": "Crowd 2 (most-crowded tier) fits a visitor-driven CBD: the station itself out-trafficked Nana in 2021 (2.36M vs 1.15M passengers), the weekday peak is office- and mall-shaped, One Bangkok draws a reported 40+ million visits a year ~1.1 km south, and Central Embassy/Phloen Chit retail pulls shoppers daily. Yet the district holds only ~18,000 residents across the whole khet (2019) — crowding here is flows, not population. The corollary — weekend mornings quieting in the office/embassy stretches while malls stay busy — is a plausible rhythm inference from the low residential base and office-dominated land use, not a directly documented observation.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "rhythm"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "notes": "Ridership station-level; visitor figure One-Bangkok-level (outside unit, spillover).",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2021 ridership; 2026 visitor data",
+    "recheck_by": "2027-05-01",
+    "notes": "Ridership year is post-COVID."
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Infobox",
+     "paraphrase": "2,362,816 passengers (2021)."
+    },
+    {
+     "source_index": 9,
+     "locator": "Visitor figures",
+     "paraphrase": "40+ million visitors a year; 50/50 internal-external footfall split at One Bangkok (management figures)."
+    },
+    {
+     "source_index": 11,
+     "locator": "District population note",
+     "paraphrase": "Pathum Wan population ~18,000 (2019 census) — a low residential base for a core CBD."
+    }
+   ],
+   "limitations": [
+    "Ridership is 2021 (post-COVID); visitor figure is operator-supplied and site-level.",
+    "The weekend-quiet pattern is inference, flagged as such; no field observation or source states it directly."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c17",
+   "text_en": "Walking is two-tier. Elevated and shaded layers work: the skywalk takes the station straight into Central Embassy, Chit Lom's Sky Walk network (Central Chidlom skybridge, Ratchaprasong crossing, route toward Siam) begins one stop west inside the clip, and Witthayu Road itself is a 2.6 km tree-lined boulevard described as unusually shaded for Bangkok. Street level is harder: Phloen Chit Road is a heavy multi-lane corridor crossed only at signalised points, the embassy and compound frontages create long stretches with no shopfronts or destinations (an inference from the embassy-quarter descriptions, not a measured statement), and no continuous skywalk runs east to Nana — a gap discussed in resident forums (snippet-only).",
+   "kind": "reported_perception",
+   "topics": [
+    "walkability",
+    "counter_evidence"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "notes": "",
+    "relation_to_entity": "entire_unit",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "current",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_index": 0,
+     "locator": "Connections",
+     "paraphrase": "Skywalk connects the station to Central Embassy (platform to mall, no street crossing)."
+    },
+    {
+     "source_index": 1,
+     "locator": "Connections",
+     "paraphrase": "Chit Lom: skybridge to Central Chidlom; Sky Walk over Ratchaprasong (CentralWorld, Gaysorn, Erawan Shrine); connected route toward Siam."
+    },
+    {
+     "source_index": 7,
+     "locator": "Character section (Thai)",
+     "paraphrase": "Tree-lined median; 'unusually shaded and green, unlike other areas of Bangkok'."
+    },
+    {
+     "source_index": 22,
+     "locator": "Search-result summary of r/Bangkok thread on Ploenchit-Nana skywalk",
+     "paraphrase": "Residents note BTS does not fully connect adjacent stations such as Nana to Ploen Chit by skywalk (snippet-only corroboration; Reddit inaccessible)."
+    }
+   ],
+   "limitations": [
+    "'Dead frontage' is an inference from embassy-compound descriptions, not a storefront survey.",
+    "Skywalk-gap detail is snippet-only forum evidence."
+   ]
+  },
+  {
+   "claim_id": "phloen-chit-c18",
+   "text_en": "2024-2026 changes around the unit: One Bangkok opened 25 Oct 2024 at the southern end of Witthayu (outside the ring, spillover up the road); the Netherlands embassy site on Witthayu was reported sold in October 2026 for over THB 20bn (~2.52m THB/sq.wa — 'reported, not confirmed'); the former British Embassy site's mixed-use successor has been announced with no confirmed programme as of Oct 2026; Open House and Gourmet Market at Central Embassy were still operating per the guide updated 25 Nov 2025 (no closure reporting found, contra a working assumption); rail supply is unchanged — no new line or station reached the unit in the window, though One Bangkok's management cites fuller mass-transit integration by 2027.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "notes": "One Bangkok and Dutch-embassy sites are south along Witthayu (outside ring); Central Embassy sites in-unit.",
+    "relation_to_entity": "partial",
+    "place_name": "Phloen Chit"
+   },
+   "temporal_scope": {
+    "event_date": "2024-10-25",
+    "observed_period": "2024-2026",
+    "recheck_by": "2027-05-01",
+    "notes": "Fast-moving development corridor; recheck after mid-2027."
+   },
+   "evidence": [
+    {
+     "source_index": 10,
+     "locator": "Press release",
+     "paraphrase": "Opens 25 October 2024; ~17 ha; 8 ha green; direct access to Lumphini MRT Station."
+    },
+    {
+     "source_index": 8,
+     "locator": "Dutch embassy site sale",
+     "paraphrase": "Reported October 2026 sale for 'more than THB 20 billion', ~2.52m THB per sq wah, described as 'reported, not confirmed'; city record 3.9m THB/sq.wa (Sarasin Road, 2020)."
+    },
+    {
+     "source_index": 11,
+     "locator": "Landmarks section",
+     "paraphrase": "Central Embassy guide entry (updated 25 Nov 2025) still lists Open House bookstore/co-working and Gourmet Market — no closure found."
+    },
+    {
+     "source_index": 9,
+     "locator": "Growth plans",
+     "paraphrase": "Second office tower, residential building and two hotels (Ritz-Carlton, Andaz) plus fuller mass-transit integration due by 2027."
+    }
+   ],
+   "limitations": [
+    "Dutch-embassy sale rests on a reported figure corroborated by a snippet-level Thai analysis (source 19).",
+    "'No closure' for Open House is an absence-of-evidence statement."
+   ]
+  }
+ ],
+ "question_answers": [
+  {
+   "question_id": "Q01",
+   "question": "Identity/scope: what exactly is this unit, and what is inside vs outside?",
+   "answer": "A single-line BTS strip (E2 Phloen Chit, opened 5 Dec 1999) on the elevated Phloen Chit Road viaduct, clipped by Chit Lom E1 ~646 m west and Nana E3 ~745 m east-southeast (haversine from infobox coordinates — both neighbors are inside the 800 m ring, so Voronoi clipping, not the ring, sets the strip). Inside: Central Embassy + Park Hyatt block (skywalk-connected), Rosewood, the Nai Lert Park Heritage garden behind it, Hotel Indigo and the lower Wireless Road embassy belt, Virgin Active Wireless Road, Mercury Ville. Outside: Lumphini Park (57.6 ha, south of Rama IV, ~1.1 km), One Bangkok (opened 25 Oct 2024 at Wireless x Rama IV, ~1.1 km, anchored on MRT Lumphini — the lumphini unit, not this one), Benchasiri Park (east, st.phrom-phong per app), Langsuan's dining row (toward chit-lom). Districts: core roads in Khwaeng Lumphini (Pathum Wan); Sukhumvit's north side in Khlong Toei Nuea (Watthana); a Ratchathewi sliver beyond the Saen Saep canal is consistent with khwaeng-boundary statements but shares are unverified. The station code is E2, not E1 as some older materials imply.",
+   "claim_ids": [
+    "phloen-chit-c01",
+    "phloen-chit-c02",
+    "phloen-chit-c03",
+    "phloen-chit-c08",
+    "phloen-chit-c09"
+   ],
+   "limitations": [
+    "Polygon shares and clip lines are the coordinator's checks; OSM blocked.",
+    "Wikipedia coordinate noise applies."
+   ],
+   "id": "Q01",
+   "notes": "A single-line BTS strip (E2 Phloen Chit, opened 5 Dec 1999) on the elevated Phloen Chit Road viaduct, clipped by Chit Lom E1 ~646 m west and Nana E3 ~745 m east-southeast (haversine from infobox coordinates — both neighbors are inside the 800 m ring, so Voronoi clipping, not the ring, sets the strip). Inside: Central Embassy + Park Hyatt block (skywalk-connected), Rosewood, the Nai Lert Park Heritage garden behind it, Hotel Indigo and the lower Wireless Road embassy belt, Virgin Active Wireless Road, Mercury Ville. Outside: Lumphini Park (57.6 ha, south of Rama IV, ~1.1 km), One Bangkok (opened 25 Oct 2024 at Wireless x Rama IV, ~1.1 km, anchored on MRT Lumphini — the lumphini unit, not this one), Benchasiri Park (east, st.phrom-phong per app), Langsuan's dining row (toward chit-lom). Districts: core roads in Khwaeng Lumphini (Pathum Wan); Sukhumvit's north side in Khlong Toei Nuea (Watthana); a Ratchathewi sliver beyond the Saen Saep canal is consistent with khwaeng-boundary statements but shares are unverified. The station code is E2, not E1 as some older materials imply."
+  },
+  {
+   "question_id": "Q02",
+   "question": "Everyday experience: what is daily life like here on the ground?",
+   "answer": "A leafy, office-and-embassy CBD with a premium service layer: mornings on the shaded Witthayu boulevard, workdays on the skywalk between BTS and Central Embassy/Park Hyatt, lunches in mall food halls (Eathai) and hotel venues, evenings at hotel bars (Lennon's, Penthouse) — with Nana's tourist strip one stop east for louder nightlife. Daily life is expensive and internationally oriented; residential presence is thin district-wide (~18,000 people across all of Pathum Wan), so the street belongs to workers, shoppers and visitors more than to locals.",
+   "claim_ids": [
+    "phloen-chit-c11",
+    "phloen-chit-c12",
+    "phloen-chit-c13",
+    "phloen-chit-c14",
+    "phloen-chit-c16"
+   ],
+   "limitations": [
+    "Synthesis from 2024-2026 publications; no field observation."
+   ],
+   "id": "Q02",
+   "notes": "A leafy, office-and-embassy CBD with a premium service layer: mornings on the shaded Witthayu boulevard, workdays on the skywalk between BTS and Central Embassy/Park Hyatt, lunches in mall food halls (Eathai) and hotel venues, evenings at hotel bars (Lennon's, Penthouse) — with Nana's tourist strip one stop east for louder nightlife. Daily life is expensive and internationally oriented; residential presence is thin district-wide (~18,000 people across all of Pathum Wan), so the street belongs to workers, shoppers and visitors more than to locals."
+  },
+  {
+   "question_id": "Q03",
+   "question": "Values + mechanisms: what would the high ratings actually be rewarding?",
+   "answer": "Transport 10: a skywalk-connected CBD node on the city's backbone line with the Ratchaprasong Sky Walk one stop west, a khlong pier on Witthayu, and an expressway ramp — but single-line only, and the mechanism leans on skywalk quality and interchange proximity rather than in-unit network depth. Daily_essentials 10: mall-anchored premium groceries (Gourmet Market, Eathai, Mercury Ville) — convenience high, price tier premium. Food 9: hotel-led quality (Penthouse, hotel venues) plus mall food halls; 351 mapped venues unverified. Green 10: largely NOT reproducible inside the unit — Nai Lert garden ~2.2-2.4 ha is the only named in-unit green; Lumphini and One Bangkok's 8 ha sit ~1.1 km south. Gym_sports 10: Virgin Active Wireless Road + hotel clubs + the shaded 2.6 km boulevard; traffic-free running is outside. Nightlife 10: a small high-end hotel-bar cluster (Lennon's ranked No. 7 on Asia's 50 Best Bars 2026) plus one-stop adjacency to Nana — with 33 mapped venues, density alone cannot justify it.",
+   "claim_ids": [
+    "phloen-chit-c03",
+    "phloen-chit-c04",
+    "phloen-chit-c08",
+    "phloen-chit-c11",
+    "phloen-chit-c12",
+    "phloen-chit-c13"
+   ],
+   "limitations": [
+    "App venue counts unverified; mechanisms partly inferential (marked per claim)."
+   ],
+   "id": "Q03",
+   "notes": "Transport 10: a skywalk-connected CBD node on the city's backbone line with the Ratchaprasong Sky Walk one stop west, a khlong pier on Witthayu, and an expressway ramp — but single-line only, and the mechanism leans on skywalk quality and interchange proximity rather than in-unit network depth. Daily_essentials 10: mall-anchored premium groceries (Gourmet Market, Eathai, Mercury Ville) — convenience high, price tier premium. Food 9: hotel-led quality (Penthouse, hotel venues) plus mall food halls; 351 mapped venues unverified. Green 10: largely NOT reproducible inside the unit — Nai Lert garden ~2.2-2.4 ha is the only named in-unit green; Lumphini and One Bangkok's 8 ha sit ~1.1 km south. Gym_sports 10: Virgin Active Wireless Road + hotel clubs + the shaded 2.6 km boulevard; traffic-free running is outside. Nightlife 10: a small high-end hotel-bar cluster (Lennon's ranked No. 7 on Asia's 50 Best Bars 2026) plus one-stop adjacency to Nana — with 33 mapped venues, density alone cannot justify it."
+  },
+  {
+   "question_id": "Q04",
+   "question": "Counter-evidence: what contradicts or complicates the ratings?",
+   "answer": "Four complications. (1) Nightlife 10 vs 33 venues: PropertyScout itself calls area nightlife 'more relaxed than Asoke or Nana' — the 10 must be rewarding quality (Lennon's top-10 Asia ranking) and Nana adjacency, not supply. (2) Rent 2's blend (33,500/74,000) is a mid-market condo figure here: the unit's real spread is 13,000-450,000 (older studios from ~13-18k; 1BR 25-60k; 2BR 45-90k), so 'uniformly most expensive' overstates — though the land under it is the priciest in the country (official appraisal 1m THB/sq.wa; asks >4m). (3) Green 10's 10.7 ha cannot be matched to in-unit public parks; the big green is outside the ring. (4) The daily-essentials offer has no cheap fresh market inside the polygon — everything documented is premium-tier.",
+   "claim_ids": [
+    "phloen-chit-c04",
+    "phloen-chit-c06",
+    "phloen-chit-c07",
+    "phloen-chit-c08",
+    "phloen-chit-c12"
+   ],
+   "limitations": [
+    "Counter-evidence is evidence-based but the score mechanics remain app-internal."
+   ],
+   "id": "Q04",
+   "notes": "Four complications. (1) Nightlife 10 vs 33 venues: PropertyScout itself calls area nightlife 'more relaxed than Asoke or Nana' — the 10 must be rewarding quality (Lennon's top-10 Asia ranking) and Nana adjacency, not supply. (2) Rent 2's blend (33,500/74,000) is a mid-market condo figure here: the unit's real spread is 13,000-450,000 (older studios from ~13-18k; 1BR 25-60k; 2BR 45-90k), so 'uniformly most expensive' overstates — though the land under it is the priciest in the country (official appraisal 1m THB/sq.wa; asks >4m). (3) Green 10's 10.7 ha cannot be matched to in-unit public parks; the big green is outside the ring. (4) The daily-essentials offer has no cheap fresh market inside the polygon — everything documented is premium-tier."
+  },
+  {
+   "question_id": "Q05",
+   "question": "Rhythm: how does the area change across the day and week?",
+   "answer": "Weekday shape: office and hotel flows peak the station (2.36M passengers in 2021 — busier than Nana), malls and food halls peak at lunch and after work, hotel bars run from 17:00 (Lennon's) to midnight. Weekend shape: retail keeps pulling (One Bangkok reports 40M+ visits/yr across the district), but the office towers and much of the embassy belt empty, and the low residential base (~18k across the khet) means the corridor quiets between the mall clusters. The weekend-quiet pattern for the office/embassy stretches is an inference from land use, not a documented observation.",
+   "claim_ids": [
+    "phloen-chit-c16",
+    "phloen-chit-c04",
+    "phloen-chit-c09"
+   ],
+   "limitations": [
+    "Weekend rhythm is flagged inference; ridership year is 2021."
+   ],
+   "id": "Q05",
+   "notes": "Weekday shape: office and hotel flows peak the station (2.36M passengers in 2021 — busier than Nana), malls and food halls peak at lunch and after work, hotel bars run from 17:00 (Lennon's) to midnight. Weekend shape: retail keeps pulling (One Bangkok reports 40M+ visits/yr across the district), but the office towers and much of the embassy belt empty, and the low residential base (~18k across the khet) means the corridor quiets between the mall clusters. The weekend-quiet pattern for the office/embassy stretches is an inference from land use, not a documented observation."
+  },
+  {
+   "question_id": "Q06",
+   "question": "Walkability: what is it actually like to move around on foot?",
+   "answer": "Two-tier. Elevated: the skywalk takes the station into Central Embassy without crossing traffic, and Chit Lom's Sky Walk network (Central Chidlom skybridge, Ratchaprasong crossing, toward Siam) starts one stop west inside the clip. Street: Witthayu Road is the pleasant axis — 2.6 km, tree-lined median, 'unusually shaded' — while Phloen Chit Road itself is a heavy multi-lane corridor with signalised crossings only, embassy and compound frontages create long destination-free stretches, and no continuous skywalk runs east to Nana (resident-forum snippet). Named distances, no time conversions: Central Embassy skywalk-connected; Rosewood ~100-200 m east; Nai Lert garden ~200-400 m south (estimates, OSM blocked); Chit Lom 646 m; Nana 745 m.",
+   "claim_ids": [
+    "phloen-chit-c03",
+    "phloen-chit-c17",
+    "phloen-chit-c01"
+   ],
+   "limitations": [
+    "Dead-frontage statement is inference; skywalk-gap detail snippet-only."
+   ],
+   "id": "Q06",
+   "notes": "Two-tier. Elevated: the skywalk takes the station into Central Embassy without crossing traffic, and Chit Lom's Sky Walk network (Central Chidlom skybridge, Ratchaprasong crossing, toward Siam) starts one stop west inside the clip. Street: Witthayu Road is the pleasant axis — 2.6 km, tree-lined median, 'unusually shaded' — while Phloen Chit Road itself is a heavy multi-lane corridor with signalised crossings only, embassy and compound frontages create long destination-free stretches, and no continuous skywalk runs east to Nana (resident-forum snippet). Named distances, no time conversions: Central Embassy skywalk-connected; Rosewood ~100-200 m east; Nai Lert garden ~200-400 m south (estimates, OSM blocked); Chit Lom 646 m; Nana 745 m."
+  },
+  {
+   "question_id": "Q07",
+   "question": "Daily life: groceries, services, schools, hospitals in/around the unit?",
+   "answer": "Groceries: Gourmet Market (Central Embassy basement) and Eathai's Thai provisions — both premium; Mercury Ville at the corner; Villa Market on Langsuan toward the western clip; convenience stores dense. No cheap fresh market documented inside the polygon. Schools: PropertyScout names Mulberry House pre-school in-area and NIST International School within ~15 min by car (car distance, not walking — NIST's own soi is toward Sukhumvit 15). Hospitals: none documented inside the unit — Bumrungrad is explicitly north in the nana unit and must not be claimed here; the nearest documented in-unit medical facilities are clinics rather than hospitals. Embassies (22 consular missions along Witthayu) are the area's signature service anchor.",
+   "claim_ids": [
+    "phloen-chit-c12",
+    "phloen-chit-c11",
+    "phloen-chit-c14"
+   ],
+   "limitations": [
+    "School placements are guide-level, not address-verified.",
+    "Hospital absence is an evidence gap finding (Overpass blocked)."
+   ],
+   "id": "Q07",
+   "notes": "Groceries: Gourmet Market (Central Embassy basement) and Eathai's Thai provisions — both premium; Mercury Ville at the corner; Villa Market on Langsuan toward the western clip; convenience stores dense. No cheap fresh market documented inside the polygon. Schools: PropertyScout names Mulberry House pre-school in-area and NIST International School within ~15 min by car (car distance, not walking — NIST's own soi is toward Sukhumvit 15). Hospitals: none documented inside the unit — Bumrungrad is explicitly north in the nana unit and must not be claimed here; the nearest documented in-unit medical facilities are clinics rather than hospitals. Embassies (22 consular missions along Witthayu) are the area's signature service anchor."
+  },
+  {
+   "question_id": "Q08",
+   "question": "Affordability: district blend vs station-level evidence?",
+   "answer": "The 33,500/74,000 THB blend sits mid-market for this unit. Asking evidence: older studios from ~13,000-18,000 (PropertyScout; PropertyHub min 18,000), 1BR 25,000-60,000 (Noble Ploenchit 30-50k, avg ~43k per DDproperty-derived data; Life One Wireless 25-28k), 2BR 45,000-90,000, top tier to 350,000-450,000 (98 Wireless penthouse). Hipflat prices the flagship condo 9.1% above the Pathum Wan average (USD25 vs 23/sqm) and its sale price 112% above the Bangkok average. Rent 2 (least-affordable cohort) is directionally correct — the land is the country's most expensive and the floor is high citywide — but the unit is not uniformly at the blend; signed-rent data was not available anywhere.",
+   "claim_ids": [
+    "phloen-chit-c06",
+    "phloen-chit-c07",
+    "phloen-chit-c05"
+   ],
+   "limitations": [
+    "Asking rents only; portal catchments are their own definitions; USD conversions mine."
+   ],
+   "id": "Q08",
+   "notes": "The 33,500/74,000 THB blend sits mid-market for this unit. Asking evidence: older studios from ~13,000-18,000 (PropertyScout; PropertyHub min 18,000), 1BR 25,000-60,000 (Noble Ploenchit 30-50k, avg ~43k per DDproperty-derived data; Life One Wireless 25-28k), 2BR 45,000-90,000, top tier to 350,000-450,000 (98 Wireless penthouse). Hipflat prices the flagship condo 9.1% above the Pathum Wan average (USD25 vs 23/sqm) and its sale price 112% above the Bangkok average. Rent 2 (least-affordable cohort) is directionally correct — the land is the country's most expensive and the floor is high citywide — but the unit is not uniformly at the blend; signed-rent data was not available anywhere."
+  },
+  {
+   "question_id": "Q09",
+   "question": "Green/quiet with polygon honesty: is green 10 earned inside the unit?",
+   "answer": "Not on documented public parks alone. In-unit: the Nai Lert Park Heritage garden (~14-15 rai / 2.2-2.4 ha, admission-charged) behind Central Embassy, plus the shaded tree rows of Witthayu Road — real, but not a public park polygon. The 10.7-ha mapped figure cannot be decomposed from published data: Lumphini (57.6 ha) is south of Rama IV (~1.1 km), One Bangkok's 8 ha is at MRT Lumphini (~1.1 km), Benchasiri belongs to st.phrom-phong, and the old British Embassy gardens are private land under redevelopment. Unless the coordinator's polygon check finds a Lumphini tip or other green inside the Voronoi, green 10 is crediting proximity and street trees more than in-unit parkland. Quiet, likewise, is corridor-conditional: shaded and calm on Witthayu, heavy-traffic on Phloen Chit Road.",
+   "claim_ids": [
+    "phloen-chit-c08",
+    "phloen-chit-c13",
+    "phloen-chit-c17"
+   ],
+   "limitations": [
+    "Polygon check pending (OI-1, OI-2); Nai Lert area snippet-sourced."
+   ],
+   "id": "Q09",
+   "notes": "Not on documented public parks alone. In-unit: the Nai Lert Park Heritage garden (~14-15 rai / 2.2-2.4 ha, admission-charged) behind Central Embassy, plus the shaded tree rows of Witthayu Road — real, but not a public park polygon. The 10.7-ha mapped figure cannot be decomposed from published data: Lumphini (57.6 ha) is south of Rama IV (~1.1 km), One Bangkok's 8 ha is at MRT Lumphini (~1.1 km), Benchasiri belongs to st.phrom-phong, and the old British Embassy gardens are private land under redevelopment. Unless the coordinator's polygon check finds a Lumphini tip or other green inside the Voronoi, green 10 is crediting proximity and street trees more than in-unit parkland. Quiet, likewise, is corridor-conditional: shaded and calm on Witthayu, heavy-traffic on Phloen Chit Road."
+  },
+  {
+   "question_id": "Q10",
+   "question": "Conditional fit: who should pick this area, and who should not?",
+   "answer": "Good fit: higher-budget renters who want a leafy, international, security-heavy CBD with skywalk convenience (1BR 25-60k; 2BR 45-90k); embassy/diplomatic and corporate households; gym-and-hotel-lifestyle residents (Virgin Active, hotel clubs, rooftop bars). Poor fit: budget renters (the 13-18k floor stock is older and scarce in documentation), nightlife-first residents (in-unit supply is quiet hotel bars; Nana is one stop east), park-at-door runners (traffic-free loops are ~1 train stop away), and anyone seeking cheap everyday groceries or street-food-led living — the documented food and grocery offer is premium-tier.",
+   "claim_ids": [
+    "phloen-chit-c07",
+    "phloen-chit-c04",
+    "phloen-chit-c13",
+    "phloen-chit-c12",
+    "phloen-chit-c14"
+   ],
+   "limitations": [
+    "Fit statements rest on documented supply, not on resident surveys (Reddit/TripAdvisor inaccessible)."
+   ],
+   "id": "Q10",
+   "notes": "Good fit: higher-budget renters who want a leafy, international, security-heavy CBD with skywalk convenience (1BR 25-60k; 2BR 45-90k); embassy/diplomatic and corporate households; gym-and-hotel-lifestyle residents (Virgin Active, hotel clubs, rooftop bars). Poor fit: budget renters (the 13-18k floor stock is older and scarce in documentation), nightlife-first residents (in-unit supply is quiet hotel bars; Nana is one stop east), park-at-door runners (traffic-free loops are ~1 train stop away), and anyone seeking cheap everyday groceries or street-food-led living — the documented food and grocery offer is premium-tier."
+  },
+  {
+   "question_id": "Q11",
+   "question": "Recent changes 2024-2026: what changed, and when exactly?",
+   "answer": "(1) 2024-10-25: One Bangkok opened at the southern end of Witthayu (~1.1 km south, MRT Lumphini-anchored) — by Sep 2026 it reports 40M+ annual visits and 96% occupancy rising to 98%, with Ritz-Carlton and Andaz hotels and fuller transit integration due by 2027. (2) 2026-10 (reported): the Netherlands embassy site on Witthayu sold for over THB 20bn — another embassy-garden conversion. (3) 2018-ongoing: the former British Embassy compound (sold Jan 2018, reported £420m) awaits a confirmed 'Central Embassy 2' programme — as of 22 Oct 2026 nothing is officially confirmed. (4) No change: rail supply (still one line), and Central Embassy's anchors (Open House, Gourmet Market) still operating per the Nov 2025 guide. Net: the corridor is being rebuilt from embassy gardens to commercial blocks, at the country's highest land prices.",
+   "claim_ids": [
+    "phloen-chit-c09",
+    "phloen-chit-c10",
+    "phloen-chit-c18"
+   ],
+   "limitations": [
+    "Dutch sale and Central Embassy 2 details are 'reported, not confirmed'; operator visitor figures are management-supplied."
+   ],
+   "id": "Q11",
+   "notes": "(1) 2024-10-25: One Bangkok opened at the southern end of Witthayu (~1.1 km south, MRT Lumphini-anchored) — by Sep 2026 it reports 40M+ annual visits and 96% occupancy rising to 98%, with Ritz-Carlton and Andaz hotels and fuller transit integration due by 2027. (2) 2026-10 (reported): the Netherlands embassy site on Witthayu sold for over THB 20bn — another embassy-garden conversion. (3) 2018-ongoing: the former British Embassy compound (sold Jan 2018, reported £420m) awaits a confirmed 'Central Embassy 2' programme — as of 22 Oct 2026 nothing is officially confirmed. (4) No change: rail supply (still one line), and Central Embassy's anchors (Open House, Gourmet Market) still operating per the Nov 2025 guide. Net: the corridor is being rebuilt from embassy gardens to commercial blocks, at the country's highest land prices."
+  },
+  {
+   "question_id": "Q12",
+   "question": "Uncertainties and what falls outside the score?",
+   "answer": "Outside/uncertain: (1) polygon relations — clip lines at Chit Lom/Nana, the southern boundary vs the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless is confident; second is Chidlom or Nana Nuea); (2) the 10.7-ha green decomposition (Nai Lert ~2.2-2.4 ha named; remainder unidentified); (3) app counts (351 food, 53 cafes, 33 nightlife) unverified; (4) rent — asking-only evidence, no signed-rent source, blend methodology unpublished; (5) safety — no unit-level data at all; (6) Central Embassy 2 programme unconfirmed; (7) snippet-only items: DDproperty average, LAD analysis, Park Hyatt bridge claim, Reddit skywalk gap, Nai Lert garden area, Witthayu loop distance, 'quiet secure' guide language; (8) the sponsored 2016 BK Magazine piece used for history only. Also outside the score: One Bangkok's visitor figures are operator-supplied marketing-adjacent data.",
+   "claim_ids": [
+    "phloen-chit-c08",
+    "phloen-chit-c03",
+    "phloen-chit-c04",
+    "phloen-chit-c06",
+    "phloen-chit-c15",
+    "phloen-chit-c10"
+   ],
+   "limitations": [
+    "This answer is itself a limitations register; each item is logged in open_issues."
+   ],
+   "id": "Q12",
+   "notes": "Outside/uncertain: (1) polygon relations — clip lines at Chit Lom/Nana, the southern boundary vs the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless is confident; second is Chidlom or Nana Nuea); (2) the 10.7-ha green decomposition (Nai Lert ~2.2-2.4 ha named; remainder unidentified); (3) app counts (351 food, 53 cafes, 33 nightlife) unverified; (4) rent — asking-only evidence, no signed-rent source, blend methodology unpublished; (5) safety — no unit-level data at all; (6) Central Embassy 2 programme unconfirmed; (7) snippet-only items: DDproperty average, LAD analysis, Park Hyatt bridge claim, Reddit skywalk gap, Nai Lert garden area, Witthayu loop distance, 'quiet secure' guide language; (8) the sponsored 2016 BK Magazine piece used for history only. Also outside the score: One Bangkok's visitor figures are operator-supplied marketing-adjacent data."
+  }
+ ],
+ "editorial": {
+  "preview": "One BTS line, the priciest land in Thailand under it: Phloen Chit is a leafy embassy-and-mall CBD strip where the skywalk skips traffic, hotel bars (Lennon's, ranked No. 7 on Asia's 50 Best Bars 2026) do the nightlife, groceries are premium — and the famous parks sit ~1.1 km south, outside the 800 m catchment.",
+  "guide_lead": "Phloen Chit is old-money Bangkok in station form: BTS E2 on the Phloen Chit Road viaduct between Chit Lom and Nana, a skywalk straight into Central Embassy, 22 embassies down a tree-lined 2.6 km boulevard, and condo towers asking 25,000-90,000 THB a month. The ratings lean on quality more than quantity — a single top-ranked hotel bar for nightlife, a 2.2-ha heritage garden for green, one premium gym club for sport — while the unit's biggest changes (One Bangkok to the south, the old British Embassy site awaiting its confirmed successor) sit just outside the 800 m line or still on the drawing board.",
+  "strengths": [
+   {
+    "text": "Skywalk-connected CBD node: the station enters Central Embassy without a street crossing, and Chit Lom's Ratchaprasong Sky Walk network (Central Chidlom skybridge, CentralWorld, Gaysorn) starts one stop west — 646 m away by coordinates.",
+    "claim_ids": [
+     "phloen-chit-c03",
+     "phloen-chit-c01"
+    ]
+   },
+   {
+    "text": "The country's most expensive land signals real scarcity value: official 2023-2026 appraisals hit 1,000,000 THB/sq.wa on Witthayu, the British Embassy compound sold for a reported £420m, and condo resales set a reported 1,000,000 THB/sq.m record at 98 Wireless.",
+    "claim_ids": [
+     "phloen-chit-c05"
+    ]
+   },
+   {
+    "text": "Quality-anchored nightlife: Lennon's at Rosewood — No. 7 on Asia's 50 Best Bars 2026 with the Highest New Entry award — plus Penthouse Bar + Grill at Park Hyatt and CHAR at Hotel Indigo, all in-unit.",
+    "claim_ids": [
+     "phloen-chit-c04"
+    ]
+   },
+   {
+    "text": "A premium wellness layer: Virgin Active Wireless Road (75+ classes weekly) and the unusually shaded 2.6 km Witthayu boulevard for walking and road running.",
+    "claim_ids": [
+     "phloen-chit-c13"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text": "Green 10 is not reproducible in-unit: the only named public-ish green is the 2.2-2.4 ha Nai Lert heritage garden; Lumphini (57.6 ha) and One Bangkok's 8 ha sit ~1.1 km south, and the old embassy gardens are private redevelopment sites.",
+    "claim_ids": [
+     "phloen-chit-c08"
+    ]
+   },
+   {
+    "text": "Nightlife 10 rests on 33 mapped venues — a quiet hotel-bar cluster by PropertyScout's own description ('more relaxed than Asoke or Nana'); loud nightlife is Nana's, one stop east.",
+    "claim_ids": [
+     "phloen-chit-c04"
+    ]
+   },
+   {
+    "text": "The rent floor is still high: even older-stock studios ask ~13,000-18,000 THB and 1BRs 25,000-60,000 — the least-affordable cohort citywide — with no cheap fresh market documented inside the polygon.",
+    "claim_ids": [
+     "phloen-chit-c06",
+     "phloen-chit-c12"
+    ]
+   },
+   {
+    "text": "Street-level frontage works against walking: heavy multi-lane Phloen Chit Road, embassy walls with long destination-free stretches, and no continuous skywalk east to Nana.",
+    "claim_ids": [
+     "phloen-chit-c17"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text": "Morning: the shaded Witthayu boulevard and Phloen Chit Road fill with office and hotel traffic; Lumphini's 04:30 opening pulls runners south (outside the ring).",
+    "claim_ids": [
+     "phloen-chit-c13",
+     "phloen-chit-c05"
+    ]
+   },
+   {
+    "text": "Day: the skywalk carries station-to-mall movement into Central Embassy; Eathai and Gourmet Market in the basement handle lunch and groceries at premium prices.",
+    "claim_ids": [
+     "phloen-chit-c03",
+     "phloen-chit-c11",
+     "phloen-chit-c12"
+    ]
+   },
+   {
+    "text": "Evening: hotel bars open at 17:00 (Lennon's to midnight); dining runs hotel-led; anyone wanting louder nightlife rides one stop to Nana E3.",
+    "claim_ids": [
+     "phloen-chit-c04"
+    ]
+   },
+   {
+    "text": "Weekend: malls and One Bangkok (40M+ visits/yr district-wide) keep pulling visitors while the office and embassy stretches quiet — an inference from the ~18,000-resident district base, not a documented count.",
+    "claim_ids": [
+     "phloen-chit-c16",
+     "phloen-chit-c09"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text": "Station core (skywalk block): Central Embassy, Park Hyatt, Rosewood, Gourmet Market/Eathai — the densest, most air-conditioned square of the unit.",
+    "claim_ids": [
+     "phloen-chit-c03",
+     "phloen-chit-c11"
+    ]
+   },
+   {
+    "text": "Wireless Road south (embassy belt): tree rows, 22 missions, Virgin Active, Hotel Indigo — calm sidewalks, dead frontage, the unit's quiet register.",
+    "claim_ids": [
+     "phloen-chit-c14",
+     "phloen-chit-c13",
+     "phloen-chit-c17"
+    ]
+   },
+   {
+    "text": "Nai Lert garden pocket (behind Central Embassy, toward Soi Somkid): the 2.2-2.4 ha heritage garden — the unit's only named green, admission-charged.",
+    "claim_ids": [
+     "phloen-chit-c08"
+    ]
+   },
+   {
+    "text": "Sukhumvit north strip (Khlong Toei Nuea, Watthana): the working condo-and-office layer between the viaduct and Phetchaburi; rents dip toward 18,000-28,000 in projects like Life One Wireless.",
+    "claim_ids": [
+     "phloen-chit-c02",
+     "phloen-chit-c06"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text": "Pick it if you can pay the cohort's price for a leafy, secure, international CBD: 1BR 25,000-60,000 THB, 2BR 45,000-90,000, embassy-district quiet and skywalk convenience.",
+    "claim_ids": [
+     "phloen-chit-c06",
+     "phloen-chit-c14"
+    ]
+   },
+   {
+    "text": "Pick it if your social life is hotel bars and fine dining — the unit holds a top-10 Asia bar and Park Hyatt's dining cluster — and Nana is one stop away when you want noise.",
+    "claim_ids": [
+     "phloen-chit-c04"
+    ]
+   },
+   {
+    "text": "Skip it if rent is the constraint: the older-stock floor (~13,000-18,000 studios) is scarce and documented thin; Chit Lom, Nana or Lat Phrao-type units buy far more for less.",
+    "claim_ids": [
+     "phloen-chit-c06",
+     "phloen-chit-c07"
+    ]
+   },
+   {
+    "text": "Skip it if you need parks at the door or cheap everyday groceries — Lumphini and Benjakitti are a train stop south, and the documented grocery offer is premium-tier.",
+    "claim_ids": [
+     "phloen-chit-c08",
+     "phloen-chit-c12"
+    ]
+   }
+  ],
+  "uncertainties": [
+   {
+    "text": "Polygon relations unresolved (OSM blocked): clip lines at Chit Lom/Nana, the southern boundary against the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless pier confident; Chidlom vs Nana Nuea ambiguous).",
+    "claim_ids": [
+     "phloen-chit-c01",
+     "phloen-chit-c03",
+     "phloen-chit-c08"
+    ]
+   },
+   {
+    "text": "The 10.7-ha mapped green cannot be decomposed from published data — Nai Lert (~2.2-2.4 ha) is the only named in-unit green; its area figure itself is snippet-sourced.",
+    "claim_ids": [
+     "phloen-chit-c08"
+    ]
+   },
+   {
+    "text": "App counts (351 food, 53 cafes, 33 nightlife) unverified; the nightlife-10 mechanism (hotel-bar quality + Nana adjacency) is researcher inference from documented supply.",
+    "claim_ids": [
+     "phloen-chit-c04",
+     "phloen-chit-c11"
+    ]
+   },
+   {
+    "text": "Rent evidence is asking-only (portals and guides); no signed-rent source found; the 33,500/74,000 blend's construction is editorial and unpublished.",
+    "claim_ids": [
+     "phloen-chit-c06",
+     "phloen-chit-c07"
+    ]
+   },
+   {
+    "text": "Safety 7 has no unit-level evidence at all in accessible sources — the score reads as district-blend default.",
+    "claim_ids": [
+     "phloen-chit-c15"
+    ]
+   },
+   {
+    "text": "Conflicting British Embassy figures (23 vs 25 rai; 2017 vs 2018) and an unconfirmed 'Central Embassy 2' programme; the Dutch-embassy sale is 'reported, not confirmed'.",
+    "claim_ids": [
+     "phloen-chit-c10",
+     "phloen-chit-c18"
+    ]
+   },
+   {
+    "text": "Snippet-only corroborations used, never sole support: DDproperty 1BR average, LAD land analysis, Park Hyatt dual-station bridge claim, Reddit skywalk gap, 'quiet, secure' guide language, Witthayu loop distance.",
+    "claim_ids": [
+     "phloen-chit-c06",
+     "phloen-chit-c03",
+     "phloen-chit-c17",
+     "phloen-chit-c15",
+     "phloen-chit-c13"
+    ]
+   },
+   {
+    "text": "The 2016 BK Magazine Wireless Road piece is sponsored ('Brought to you by' GROVE) and used only for history and framing; One Bangkok visitor figures are management-supplied.",
+    "claim_ids": [
+     "phloen-chit-c14",
+     "phloen-chit-c09"
+    ]
+   }
+  ]
+ },
+ "open_issues": [
+  {
+   "id": "OI-1",
+   "issue": "Polygon checks not run here (Overpass/OSM blocked per task).",
+   "notes": "Coordinator to verify: (a) Voronoi clip lines vs Chit Lom E1 (646 m) and Nana E3 (745 m) infobox coordinates; (b) southern boundary vs the lumphini/ratchadamri units — One Bangkok and Lumphini Park compute ~1.1 km south of the center, likely outside; (c) whether any Lumphini Park tip or One Bangkok green edge falls inside the clipped polygon (would change the green decomposition); (d) which 2 piers the app mapped — 'Wireless' pier (Witthayu at Saen Saep) is confidently in-unit; Chidlom pier (west) and Nana Nuea pier (Sukhumvit Soi 3, east) are the candidates for the second."
+  },
+  {
+   "id": "OI-2",
+   "issue": "The 10.7-ha mapped green polygon cannot be decomposed.",
+   "notes": "Nai Lert Park Heritage garden ~14-15 rai (~2.2-2.4 ha, snippet-sourced) is the only named in-unit green found. Remainder unidentified: candidates are clipped embassy-garden remnants (being redeveloped), a Lumphini NE tip, or One Bangkok's northern green edge — polygon check needed."
+  },
+  {
+   "id": "OI-3",
+   "issue": "Rent blend semantics.",
+   "notes": "33,500/74,000 THB is a Pathum Wan district-weighted editorial blend; station-level asking spread is 13,000-450,000 (1BR 25-60k). Asking-only; no signed-rent source exists publicly. Editorial decision whether rent 2 should absorb this — not changed here."
+  },
+  {
+   "id": "OI-4",
+   "issue": "Nightlife 10 vs 33 mapped venues.",
+   "notes": "Documented in-unit supply is a small hotel-bar cluster (Lennon's No. 7 Asia's 50 Best Bars 2026; Penthouse Bar + Grill; CHAR) plus one-stop Nana adjacency. If the app's 10 is density-driven it is inconsistent with 33 venues; if quality/adjacency-driven it is consistent. App internals unknowable from here."
+  },
+  {
+   "id": "OI-5",
+   "issue": "Conflicting British Embassy deal figures.",
+   "notes": "~23 rai / January 2018 (Embark, verified Oct 2026) vs ~25 rai / 2017 (Thairath Money). £420m / ~18.6bn THB consistent across both. Do not average; cite both."
+  },
+  {
+   "id": "OI-6",
+   "issue": "'Central Embassy 2' unconfirmed.",
+   "notes": "Announced as high-end mixed use; no size, programme or opening date published as of 22 Oct 2026 (Embark verified against CPN Q2 2026 and HKL H1 2026 filings). Tracker estimates (construction ~late 2025, opening 2028-2029) are secondary."
+  },
+  {
+   "id": "OI-7",
+   "issue": "Station code discrepancy.",
+   "notes": "Wikipedia gives E2 for Phloen Chit (E1 = Chit Lom). Some older secondary materials and the research brief's neighborhood of codes may say E1. E2 used per the body-read source."
+  },
+  {
+   "id": "OI-8",
+   "issue": "Snippet-only evidence items (corroboration only, never sole support).",
+   "notes": "DDproperty Noble Ploenchit 1BR average ~43k; LAD Dutch-embassy land analysis; Park Hyatt covered-bridge-to-two-stations claim (hotel marketing); Reddit Ploenchit-Nana skywalk gap; Nai Lert garden area (~14-15 rai); Witthayu running-loop ~2.5-3 km; 'quiet, secure' embassy-quarter guide language; khwaeng-boundary (Saen Saep = Lumphini/Makkasan-Ratchathewi) statements."
+  },
+  {
+   "id": "OI-9",
+   "issue": "Access failures encountered.",
+   "notes": "centralembassy.com/en/about-us HTTP 404; timeout.com Open House page HTTP 404; Reddit/TripAdvisor 403 (policy); Overpass blocked (policy); Bangkok Post paywalled (One Bangkok visitor article not read; figure sourced to Nation Thailand body-read instead)."
+  },
+  {
+   "id": "OI-10",
+   "issue": "App facts left unverified.",
+   "notes": "351 food, 53 cafes, 33 nightlife venues, 2 piers, 10.7 ha park area, 1.07 km2 unit area — no accessible independent source could confirm any count; Overpass blocked. The 1.07 km2 unit vs named-green ~2.2-2.4 ha (~20-22% if all mapped green were Nai Lert, which it cannot be at 10.7 ha) — decomposition pending."
+  }
+ ]
+}

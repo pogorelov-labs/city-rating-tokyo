@@ -1,0 +1,137 @@
+{
+ "batch_id": "2026-11-05-pilot-zcode-main",
+ "task": "Bangkok six-place editorial pilot (research only; no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "app_snapshot_id": "bkk-d6499618507e7561",
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
+ "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
+ "parent_batch": null,
+ "qa_status_overrides": {
+  "bang-rak": {
+   "Q05": "conflicting"
+  },
+  "st.thong-lo": {
+   "Q11": "conflicting"
+  }
+ },
+ "entities": [
+  {
+   "key": "bang-rak",
+   "kind": "district",
+   "name_en": "Bang Rak",
+   "name_th": "บางรัก",
+   "aliases": [
+    "Silom",
+    "Sala Daeng",
+    "Patpong",
+    "Surawong",
+    "Charoen Krung",
+    "Saphan Taksin",
+    "Si Phraya",
+    "Suriwong",
+    "MahaNakhon"
+   ],
+   "scope_notes": "Administrative khet (~5.54 km², pop ~45,757 in 2020) with strongly distinct subareas: Silom CBD, Patpong/Suriwong nightlife, Surawong, the Charoen Krung riverside creative corridor, Saphan Taksin pier area and quiet blocks between. Research-verified: MahaNakhon inside (Si Lom khwaeng, Bang Rak side of Narathiwat Rd); St. Louis Hospital outside (Sathon district); Lumphini Park outside across Rama IV (Pathum Wan).",
+   "selection_rationale": "Second-highest district model score (2/50); distinguish Silom, riverside and other subareas.",
+   "model_score_default": 8.3,
+   "cohort_rank": 2,
+   "cohort_size": 50
+  },
+  {
+   "key": "samphanthawong",
+   "kind": "district",
+   "name_en": "Samphanthawong",
+   "name_th": "สัมพันธวงศ์",
+   "aliases": [
+    "Chinatown",
+    "Yaowarat",
+    "Sampeng",
+    "Talat Noi",
+    "Wat Traimit",
+    "Song Wat",
+    "Wat Mangkon"
+   ],
+   "scope_notes": "Administrative khet — Bangkok's smallest district (~1.42 km², pop ~21,324 in 2020). Research-verified boundary caveats: the wider 'Chinatown' label is larger than the khet — the Soi Nana bar strip (Pom Prap Sattru Phai), Khlong Thom and River City (Bang Rak) lie outside; MRT Wat Mangkon station straddles the boundary; Wat Mangkon Kamalawat temple itself is attributed just outside the khet by source coverage.",
+   "selection_rationale": "Highest district model score (1/50); tourism/food identity must not be generalized across every street.",
+   "model_score_default": 8.56,
+   "cohort_rank": 1,
+   "cohort_size": 50
+  },
+  {
+   "key": "st.ari",
+   "kind": "station_area",
+   "name_en": "Ari",
+   "name_th": "อารีย์",
+   "aliases": [
+    "Aree",
+    "Soi Ari",
+    "Ari Samphan"
+   ],
+   "scope_notes": "800 m straight-line catchment around BTS Ari (Sukhumvit line), entirely within Phaya Thai district (100% per app data) but not the whole khet. Residential grid around Soi Ari 1–5 and Phahonyothin Road. Coordinate checks placed every named public park outside the circle (Phaya Thai Palace ~1.80 km; Santiphap Park ~1.87 km; Vachirabenjatas/Rot Fai Park ~3.7 km to centroid) — the app's green 9 is not explained by any named public park source could confirm inside the unit (app park_ha 5.1 unverified against names).",
+   "selection_rationale": "Current guide coverage; investigate calm/leafy descriptions, actual public green access and day/night differences.",
+   "model_score_default": 7.28,
+   "cohort_rank": 29,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.asok",
+   "kind": "station_area",
+   "name_en": "Asok / Sukhumvit",
+   "name_th": "อโศก / สุขุมวิท",
+   "aliases": [
+    "Asok Montri",
+    "Sukhumvit interchange",
+    "BTS Asok / MRT Sukhumvit"
+   ],
+   "scope_notes": "800 m straight-line catchment around the BTS Asok / MRT Sukhumvit interchange; both physical stops share the single scored area st.asok. District split (app data): Watthana 51.3%, Khlong Toei 48.7% — it is not all of either district. Research-verified locations: Terminal 21 (~147 m) and Soi Cowboy (~121 m) inside; Benjakitti Park northeast tip ~460 m inside but main entrances and most of its area beyond 800 m; Benchasiri Park (~958 m) outside; Bumrungrad Hospital (~1.2 km) outside.",
+   "selection_rationale": "Recognizable interchange candidate with a high model rank (11/133); verify independent guide coverage.",
+   "model_score_default": 7.68,
+   "cohort_rank": 11,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.chong-nonsi",
+   "kind": "station_area",
+   "name_en": "Chong Nonsi",
+   "name_th": "ช่องนนทรี",
+   "aliases": [
+    "Sathorn (north corridor)",
+    "Chong Nonsi canal area"
+   ],
+   "scope_notes": "800 m straight-line catchment around BTS Chong Nonsi (Silom line) on the Sathorn Road corridor. District split (app data): Bang Rak 68.4%, Sathon 31.6%. Boundary caveat (verified 2026-11-07 against the app polygon and Wikipedia coordinates): Sala Daeng BTS (~730 m) and the Patpong block (~657 m) lie within a bare 800 m straight-line of the stop but OUTSIDE the app's mapped catchment, because st.sala-daeng is itself a rated area whose nearest-stop catchment takes the Silom/Patpong block; the nightlife rating rests on the unit's own venue density, not Patpong. MahaNakhon (~122 m from the stop, Wikipedia coordinates) is inside.",
+   "selection_rationale": "Highest station-area model score (1/133); test whether public accounts agree and what the score misses.",
+   "model_score_default": 8.0,
+   "cohort_rank": 1,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.thong-lo",
+   "kind": "station_area",
+   "name_en": "Thong Lo",
+   "name_th": "ทองหล่อ",
+   "aliases": [
+    "Thonglor",
+    "Soi Thong Lo",
+    "Sukhumvit Soi 55"
+   ],
+   "scope_notes": "800 m straight-line catchment around BTS Thong Lo (Sukhumvit line), covering the Soi Thong Lo (Sukhumvit Soi 55) mouth and adjacent blocks. District split (app data): Watthana 51.3%, Khlong Toei 48.7%. Venues deep up the soi or across the Phra Khanong canal (Ekkamai side) can fall outside the circle; the single-spine street layout is the defining access constraint. Not the whole Thonglor neighborhood or Watthana district.",
+   "selection_rationale": "Current user-selected area and current guide coverage; investigate the gap between editorial enthusiasm and a 6.5 model score.",
+   "model_score_default": 6.46,
+   "cohort_rank": 51,
+   "cohort_size": 133
+  }
+ ],
+ "extra_search_logs": []
+}

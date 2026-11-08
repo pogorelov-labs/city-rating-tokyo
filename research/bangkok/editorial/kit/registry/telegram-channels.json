@@ -1,0 +1,119 @@
+{
+ "version": "1.0",
+ "date": "2026-11-08",
+ "note": "Telegram public-channel registry for the tg-corpus puller (kit/tools/tg_corpus.py). `official_status: unverified-self-claimed` means the channel displays a publisher name but no independent confirmation of who operates it was made at registration time — researchers must confirm before citing as that publisher (same discipline as any source). Candidates are unverified handles to check with `tg_corpus.py verify` before adding to `channels`.",
+ "pull_rules": {
+  "public_channels_only": true,
+  "web_preview_only": "t.me/s/<channel> (no account, no API, no private groups, no comments)",
+  "no_user_identity": true,
+  "text_is_untrusted_input": true,
+  "corpus_stays_local": "research/bangkok/corpus/telegram/ is git-ignored; bundles cite messages by canonical URL",
+  "politeness": "~1.2 s/page, bounded pages, failures logged once"
+ },
+ "channels": {
+  "bangkokpost": {
+   "display_name": "BANGKOK POST (Telegram channel)",
+   "publisher_family": "Telegram channel 'BANGKOK POST' (operator unknown)",
+   "language": "en",
+   "source_type": "editorial_guide",
+   "official_status": "likely-unofficial-content-channel",
+   "commercial_context": "",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: listicle/affiliate content-marketing ('Top 7 rooftop bars', 'Top 10 hidden gems' — banned-phrase family), duplicate spam posts, dormant since ~2025-06. NOT the Bangkok Post newsroom. Do not cite as Bangkok Post.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  },
+  "thailandnews": {
+   "display_name": "Thailand News (Telegram channel)",
+   "publisher_family": "Thailand News (Telegram channel)",
+   "language": "en",
+   "source_type": "news",
+   "official_status": "self-disclaimed non-official",
+   "commercial_context": "",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: channel self-disclaims official status (privately registered, info-relay for anti-scam updates, multilingual CN/JA/KO/TH). Outside the research scope.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  },
+  "ThaiEnquirer": {
+   "display_name": "Thai Enquirer (Telegram channel)",
+   "publisher_family": "Thai Enquirer",
+   "language": "en/th",
+   "source_type": "news",
+   "official_status": "unverified, no content visible",
+   "commercial_context": "",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: 2 records, 0 content posts via public preview. Not usable; re-verify if a richer feed surface is found.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  },
+  "BangkokExpats": {
+   "display_name": "Bangkok Expats News & Events",
+   "publisher_family": "Bangkok Expats (community channel)",
+   "language": "en",
+   "source_type": "resident_report",
+   "official_status": "bot-driven promo channel",
+   "commercial_context": "community channel with possible event-promotion interests — label per post",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: created 2026-06-14, bot-driven ('/setup bangkok'), rebranded 'Reloca Bangkok Expats' 2026-10-25; service messages only. NOT organic community voice.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  },
+  "BTSSkytrain": {
+   "display_name": "BTS Skytrain (Telegram channel)",
+   "publisher_family": "BTS Group (Telegram channel)",
+   "language": "th/en",
+   "source_type": "official_operator",
+   "official_status": "fan/spam channel",
+   "commercial_context": "operator's own channel — operator interest",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: 'this channel is for love', stray glyphs — a fan/spam squat on the handle, NOT the BTS operator. The real operator has no public TG web feed under obvious handles.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  },
+  "SuvarnabhumiAirport": {
+   "display_name": "Thailand Suvarnabhumi Airport (Telegram channel)",
+   "publisher_family": "Suvarnabhumi Airport (Telegram channel)",
+   "language": "th/en",
+   "source_type": "official_operator",
+   "official_status": "stale link channel",
+   "commercial_context": "",
+   "verified": "2026-11-08 (public feed present)",
+   "limitations": [
+    "CONTENT INSPECTION 2026-11-08: 2 posts, both bare YouTube links (2021/2022). Unusable.",
+    "USE: reject for evidence."
+   ],
+   "usable_for_evidence": false
+  }
+ },
+ "candidates": [
+  "khaosodenglish",
+  "nationthailand",
+  "thairath",
+  "js100",
+  "prachachat",
+  "TNAMCOT",
+  "ThaiPBSWorld",
+  "workpointNEWS",
+  "ThailandBusinessNews",
+  "bkktraffic",
+  "BangkokTrafficUpdate",
+  "trafficradioThailand",
+  "bangkoktransit",
+  "BKKGuys",
+  "ThailandExpats",
+  "BangkokCondoRentals"
+ ],
+ "candidates_note": "All candidates above were checked 2026-11-08 and showed NO public web feed (or exist without one); re-check later or find alternative handles.",
+ "discovery_note": "2026-11-08 sweep: guessed handles surfaced only masquerading/spam/promo channels, and the official sites (btsskytrain.com, khaosodenglish.com, thethaiger.com, thaipbsworld.com, bangkokmetro.co.th, thaipbs.or.th, AOT) carry NO t.me links. Real Bangkok channel handles must come from user-provided knowledge or Thai-language search — then verify + pull + content-inspect before any use. The toolchain is proven end-to-end; the seed list is the open work."
+}

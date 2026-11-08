@@ -1,0 +1,871 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.saphan-taksin",
+  "kind": "station_area",
+  "name_en": "Saphan Taksin",
+  "name_th": "สะพานตากสิน",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around saphan-taksin [bts_silom]; districts: sathon, bang-rak, khlong-san. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.34,
+  "cohort_rank": 28,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 28/133, score 7.34."
+ },
+ "sources": [
+  {
+   "id": "src_11f831e4787f",
+   "canonical_url": "https://en.wikipedia.org/wiki/Saphan_Taksin_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Saphan_Taksin_BTS_station",
+   "title": "Saphan Taksin BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "platform-layout table garbled in source; 2021 ridership figure only"
+   ]
+  },
+  {
+   "id": "src_ee99d8440689",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B8%99",
+   "retrieved_url": "https://th.wikipedia.org/wiki/สถานีสะพานตากสิน",
+   "title": "สถานีรถไฟฟ้า BTS สะพานตากสิน",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "expansion-project status ('cancelled') carries no visible as-of date"
+   ]
+  },
+  {
+   "id": "src_064256ef3365",
+   "canonical_url": "https://chaophrayaexpressboat.com",
+   "retrieved_url": "https://chaophrayaexpressboat.com",
+   "title": "เรือด่วนเจ้าพระยา (Chao Phraya Express Boat) — official site",
+   "publisher": "Chao Phraya Express Boat Co.",
+   "publisher_family": "transit-operator",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "Thai-language pages; timetable/frequency data not exposed on the fetched page; /en/services/ path 404"
+   ]
+  },
+  {
+   "id": "src_b63257a8d559",
+   "canonical_url": "https://en.wikipedia.org/wiki/State_Tower",
+   "retrieved_url": "https://en.wikipedia.org/wiki/State_Tower",
+   "title": "State Tower",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "no BTS-distance stated in article; proximity is computed here from coordinates"
+   ]
+  },
+  {
+   "id": "src_1579a1439e73",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/sathorn/rentals/condo",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/sathorn/rentals/condo",
+   "title": "Condos for Rent in Sathorn (listings page)",
+   "publisher": "PropertyScout",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
+   "limitations": [
+    "page returned Thailand-wide results (103,420) with no Sathorn aggregate stats; single nearby listing datapoint only (Rhythm Charoenkrung Pavilion, 37 m², 24,500 THB/mo)"
+   ]
+  },
+  {
+   "id": "src_57d658d5889b",
+   "canonical_url": "https://edition.cnn.com/travel/article/sathorn-unique-tower-bangkok-abandoned/index.html",
+   "retrieved_url": "https://edition.cnn.com/travel/article/sathorn-unique-tower-bangkok-abandoned/index.html",
+   "title": "Sathorn Unique tower coverage (CNN)",
+   "publisher": "CNN",
+   "publisher_family": "news-media",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "URL 404 on fetch; identity facts (49 storeys, halted by 1997 crisis, abandoned) corroborated only across multiple search-result snippets — flagged, never sole evidence beyond identity",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 C-6 wave 1: URL returns 404 (dead) — archived-citation status; content survives in evidence paraphrases (the 'CNN 4th-best rank' was already excluded from claims, B-6)."
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Overpass API — OSM railway station nodes (Bangkok bbox)",
+   "publisher": "OpenStreetMap via Overpass",
+   "publisher_family": "openstreetmap",
+   "author": null,
+   "published_at": "2026-11-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "two failed attempts before success (502, mirror timeout)"
+   ]
+  },
+  {
+   "id": "src_ea832e84a6db",
+   "canonical_url": "https://en.wikipedia.org/wiki/Sathorn_Unique_Tower",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sathorn_Unique_Tower",
+   "title": "Sathorn Unique Tower",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "no auction or sale recorded in the article; 2024 sale-rumour reports remain outside any body-read source"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "saphan-taksin-c01",
+   "text_en": "The unit anchors on BTS Silom Line station S6 'Saphan Taksin', opened 5 December 1999, built in the median of Taksin Bridge at Charoen Krung Road at the foot of the bridge; the Thai article places it across Bang Rak and Sathon districts, and the app catchment splits Sathon 47.1% / Bang Rak 29.4% / Khlong San 23.5% — the brief's 'Bang Rak blend' understates that Sathon is the app's primary district.",
+   "kind": "factual_report",
+   "topics": [
+    "boundaries",
+    "identity"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Saphan Taksin BTS station / Taksin Bridge",
+    "relation_to_entity": "entire_unit",
+    "notes": "app anchor equals OSM node 13.71878,100.51421 — no mismatch"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "1999-12-05 to present (2026-11)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "infobox; Location section",
+     "paraphrase": "S6, opened 5 December 1999, on Taksin Bridge ramp below Sathon Road, in Sathon and Bang Rak districts"
+    },
+    {
+     "source_id": "src_064256ef3365",
+     "locator": "ที่ตั้ง/ลักษณะ sections",
+     "paraphrase": "station spans Bang Rak and Sathon, on Charoen Krung Road at the foot of Taksin Bridge; southern terminus of the Silom Line until 15 May 2009"
+    },
+    {
+     "source_id": "src_ea832e84a6db",
+     "locator": "areas[] id=saphan-taksin: districts[]",
+     "paraphrase": "app khet shares 0.471 sathon / 0.294 bang-rak / 0.235 khlong-san"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "khwaeng-level split inside each khet not re-derived here",
+    "app-data anchor (not a web source): city-rating app station record: saphan-taksin"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c02",
+   "text_en": "Saphan Taksin is the BTS network's one-of-a-kind single-platform station: only one platform and one track fit in the 16.5 m bridge median, both travel directions call at it via switches, the 115 m platform caps trains at 5 cars instead of 6, and the configuration 'restricts capacity on the entire line'; conceived as a temporary terminus, its closure was prevented by proximity to Sathorn Pier.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Saphan Taksin BTS station",
+    "relation_to_entity": "inside",
+    "notes": "EN article calls the layout a single platform with one track; the Thai article calls it a single side platform — both agree one platform/one track serves both directions"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "platform/track description; Services",
+     "paraphrase": "only space for one platform and one track; switches let trains from each direction platform; configuration restricts capacity on the entire line; no trains terminate here"
+    },
+    {
+     "source_id": "src_064256ef3365",
+     "locator": "ชานชาลา section",
+     "paraphrase": "only station in the BTS system with a single side platform serving one track; 115 m platform limits trains to 5 cars"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "EN and TH articles label the platform type differently (island vs side); the operative fact (one platform, one track, both directions) is consistent across both"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c03",
+   "text_en": "Sathorn Pier beside the station is the river-network interchange: the official operator site (retrieved 2026-11) lists yellow, green-yellow and red-flag lines terminating at Sathorn on weekdays, while the orange line currently runs Nonthaburi–Wat Rajsingkorn on weekdays; the station was Bangkok's first rail stop with a boat interchange, and Thai Wikipedia adds the Chao Phraya Tourist Boat, Thai Smile Boat, and a 3.50-baht cross-river ferry (05:30-23:00) under Taksin Bridge, plus ICONSIAM shuttle boats.",
+   "kind": "factual_report",
+   "topics": [
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Sathorn (Central) Pier",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "operator routes as published at retrieval (2026-11-07); ferry hours per Thai Wikipedia"
+   },
+   "evidence": [
+    {
+     "source_id": "src_b63257a8d559",
+     "locator": "เรือโดยสาร route table",
+     "paraphrase": "yellow (Nonthaburi-Sathorn), green-yellow (Pak Kret-Sathorn) and red (Nonthaburi-Sathorn) terminate at Sathorn Mon-Fri; orange runs Nonthaburi-Wat Rajsingkorn Mon-Fri at 19 baht flat; yellow 24 baht, red 33 baht"
+    },
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "Facilities section",
+     "paraphrase": "first rapid transit station in Bangkok with an interchange to Chao Phraya ferry service at Sathorn Pier; cross-river ferry and ICONSIAM shuttle listed"
+    },
+    {
+     "source_id": "src_064256ef3365",
+     "locator": "การเชื่อมต่อ section",
+     "paraphrase": "express boat regular and orange lines, Thai Smile Boat, and a 3.50-baht cross-river ferry 05:30-23:00 under the bridge"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the operator page shows weekday service days only and omits frequencies; whether the orange line still calls at Sathorn is not stated there — EN/TH articles describe it as serving the pier historically"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c04",
+   "text_en": "The long-planned station capacity fix is stalled: a 2017 Transport Ministry resolution approved widening Taksin Bridge by 230 m and rebuilding platforms and tracks on both banks, but the project has since been cancelled, with BEM to hand completed designs to the BMA as the BTS concession runs to 2029; a 2017-reported BMA reconfiguration (1 billion baht, 40 months) never commenced.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Saphan Taksin BTS station / Taksin Bridge",
+    "relation_to_entity": "inside",
+    "notes": "the cancellation's as-of date is not shown in the source"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2017 plan; cancellation status current as of the article's last edit (undated in source)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_064256ef3365",
+     "locator": "แผนการปรับปรุง section",
+     "paraphrase": "2017 ministry resolution for 230 m widening; project 'has since been cancelled' with concession ending 2029 and designs to transfer to BMA"
+    },
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "history notes",
+     "paraphrase": "BMA reconfiguration planned at 1 billion baht over 40 months 'has not yet commenced' (cited to Thairath)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no dated 2024-2026 decision either way found; treat as unresolved, not abandoned-forever"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c05",
+   "text_en": "State Tower (68 floors, 247 m, completed 2001, two lebua hotels and the 63rd-floor Sirocco restaurant) stands on Silom Road in Bang Rak adjacent Charoen Krung — roughly 330-400 m from the station by coordinates, so it very likely falls inside this unit (batch-2 also placed it inside bang-rak khet).",
+   "kind": "estimate",
+   "topics": [
+    "identity",
+    "nightlife"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "building",
+    "place_name": "State Tower / lebua",
+    "relation_to_entity": "partial",
+    "notes": "coordinate-distance estimate from Wikipedia location description; final membership is a polygon call for the coordinator"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "building completed 2001; distance estimate 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_1579a1439e73",
+     "locator": "infobox; lead section",
+     "paraphrase": "completed 2001, 68 floors, 247 m, Si Lom Road Bang Rak district adjacent Charoen Krung Road, home to lebua at State Tower, Tower Club at lebua and Sirocco"
+    },
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "infobox coordinates",
+     "paraphrase": "station coordinates 13.71878,100.51411 — basis for the ~330-400 m coordinate distance"
+    },
+    {
+     "source_id": "src_ea832e84a6db",
+     "locator": "facts: hotels_800m 30",
+     "paraphrase": "app counts 30 hotels in the catchment"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the article never states the tower-to-station distance; the figure is a coordinate computation, not a routed walk"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c06",
+   "text_en": "The 185 m, 49-floor Sathorn Unique 'ghost tower' — begun 1990 as a planned 600-unit luxury condominium and halted roughly 80-90% complete by the 1997 Asian financial crisis — stands officially 'on hold' about 200 m from the station by coordinates (off Charoen Krung Soi 51-53, Sathon district, close to Taksin Bridge), a derelict landmark and urban-exploration site with no recorded sale; access is officially off-limits.",
+   "kind": "factual_report",
+   "topics": [
+    "counter_evidence",
+    "identity",
+    "vibe"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "building",
+    "place_name": "Sathorn Unique Tower",
+    "relation_to_entity": "inside",
+    "notes": "coordinate distance ~200 m from the app anchor; polygon confirmation recommended but the tower sits well inside a nominal 800 m catchment"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "1990-2026 (halted ~1997; status 'on hold' per article)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "search-result summaries (CNN/Al Jazeera coverage)",
+     "paraphrase": "abandonment narrative corroborated across press summaries; a 2024 rumoured ~4-billion-baht sale was reported and denied — unverified, see open issues"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the 2024 sale-rumour episode has no body-read source; identity facts are body-read"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "saphan-taksin-c07",
+   "text_en": "Rent check against stated figures (24,000 / 52,500 THB, editorial blend): the accessible listing evidence is thin and conflicting — PropertyScout's Sathorn page exposes no aggregate, only a nearby 1-bed datapoint (Rhythm Charoenkrung Pavilion, 37 m², 24,500 THB), while unattributed search-summary aggregates give a Bang Rak median near 35,400 and 'typical' bands anywhere from 8-13k to 25-40k depending on platform.",
+   "kind": "estimate",
+   "topics": [
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Sathorn / Charoen Krung / Bang Rak rental corridors",
+    "relation_to_entity": "partial",
+    "notes": "app blend is editorial (as_of 2026-09); primary app district is Sathon"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "retrieved 2026-11-07; app rent as_of 2026-09"
+   },
+   "evidence": [
+    {
+     "source_id": "src_57d658d5889b",
+     "locator": "listings body",
+     "paraphrase": "no aggregate statistics on the page; one 1-bed 37 m² listing at 24,500 THB/month near the area"
+    },
+    {
+     "source_id": "src_ea832e84a6db",
+     "locator": "rent block: 24000/52500, confidence editorial, provenance district_blend",
+     "paraphrase": "app figures are editorial district blends, not medians"
+    },
+    {
+     "source_id": "src_57d658d5889b",
+     "locator": "limitations of this claim (external)",
+     "paraphrase": "unattributed search summaries (Thailand-Property, Lazudi, FazWaz) give Bang Rak 1-bed figures spanning ~8k to ~45k — corroboration only, no URLs"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "listing-platform aggregates disagree with each other by a factor of ~3; no body-readable median was found for Sathon khet specifically — treat app figures as editorial judgment, moderately corroborated at the low end"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "saphan-taksin-c08",
+   "text_en": "The green score (8) rests on an app figure of 5.2 ha of park that no accessible source maps to a named park: the closest named spaces — Saphan Taksin Park at BTS Exit 2 and the under-bridge garden on the Thonburi side — are consistently described as small, and no hectare figure was found for either.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Taksin Bridge riverfront green spaces",
+    "relation_to_entity": "entire_unit",
+    "notes": "app polygon owns the 5.2 ha total; composition unresolved"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "Location section",
+     "paraphrase": "street level connects to Saphan Taksin Park, Sathorn Pier and Charoen Krung Road (no size given)"
+    },
+    {
+     "source_id": "src_064256ef3365",
+     "locator": "ดูเพิ่ม/พื้นที่สีเขียว references",
+     "paraphrase": "under-bridge garden on the Thonburi side listed among district green spaces in the Thai district article used for this batch (khlong-san bundle source 3)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "search summaries describe Saphan Taksin Park as 'a small public park'; the 5.2 ha may aggregate several slivers or include water-edge OSM polygons — flag for polygon audit",
+    "app-data anchor (not a web source): facts: park_ha 5.2; confidence green moderate: app reports 5.2 ha with moderate confidence, sourced to OSM — recorded as score context, never as web evidence (A-8 F6 fix)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c09",
+   "text_en": "Rhythm: weekday commuter and boat-connection peaks (the pier is the network's main boat interchange) alternate with a steady tourist beat around the pier and riverside hotels; the single-platform configuration makes peak BTS queues a built-in feature of rush hours.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Saphan Taksin station / Sathorn pier nexus",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ee99d8440689",
+     "locator": "Facilities; history notes",
+     "paraphrase": "station popular with tourists using the boat interchange (Wat Arun, Wat Pho traffic); single platform restricts capacity"
+    },
+    {
+     "source_id": "src_b63257a8d559",
+     "locator": "route table",
+     "paraphrase": "multiple boat lines terminate at Sathorn on weekdays"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no measured queue or ridership data for 2024-2026 found; 2021 BTS ridership (1.59M passengers for the year per EN article) predates the current period"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "saphan-taksin-c10",
+   "text_en": "Nightlife (app: 8, 27 venues) reads as a riverside-hotel bar district rather than a club quarter: the anchor venue is the State Tower/lebua rooftop cluster, with riverside drinking along Charoen Krung; venue counts are modest compared to nightlife districts, consistent with hotel-anchored bars.",
+   "kind": "researcher_inference",
+   "topics": [
+    "nightlife"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Charoen Krung / Silom riverside edge",
+    "relation_to_entity": "partial",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_1579a1439e73",
+     "locator": "Hotels/restaurants section",
+     "paraphrase": "two five-star hotels in the tower; Sirocco open-air restaurant on the 63rd floor; two Michelin-starred restaurants managed by lebua"
+    },
+    {
+     "source_id": "src_ea832e84a6db",
+     "locator": "facts: nightlife 27, confidence strong",
+     "paraphrase": "app counts 27 nightlife venues from Overture/OSM"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no venue-level listing verified in body reads; '27 venues' categories unverified"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "saphan-taksin-c11",
+   "text_en": "Crowd 2 (low) is plausible despite the hub role because the catchment includes a 23.5% cross-river slice of Khlong San district — quiet residential blocks across the river — and because peak flows concentrate at the pier-station nexus rather than along the residential streets.",
+   "kind": "researcher_inference",
+   "topics": [
+    "boundaries",
+    "crowd"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Saphan Taksin catchment incl. west-bank slice",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ea832e84a6db",
+     "locator": "districts[] khlong-san 0.235; crowd confidence moderate",
+     "paraphrase": "app catchment crosses the river into Khlong San for roughly a quarter of its area"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "crowd score is app-editorial; no footfall data found"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c03"
+   ],
+   "notes": "THE river-rail interchange: BTS Silom S6 on Taksin Bridge over Sathorn Pier, spanning Sathon, Bang Rak and a Khlong San slice; the app's primary district is Sathon, not Bang Rak as the brief assumed."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c03",
+    "saphan-taksin-c09",
+    "saphan-taksin-c11"
+   ],
+   "notes": "Daily life orbits the pier-station nexus: trains, boats, riverside hotel lobbies and Charoen Krung frontage; residential quiet lives a block inland and across the river."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c05",
+    "saphan-taksin-c10"
+   ],
+   "notes": "Transport 9 comes from the unique BTS-boat pairing; vibe 9 from the riverfront hotel/heritage skyline (State Tower et al.); food 8 from hotel and Charoen Krung dining rather than market streets."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c08",
+    "saphan-taksin-c02",
+    "saphan-taksin-c06"
+   ],
+   "notes": "Green 8/5.2 ha is ungrounded in any named park; the single-platform bottleneck structurally caps peak capacity; the 'ghost tower' keeps a dead landmark on the riverside skyline."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c09",
+    "saphan-taksin-c10"
+   ],
+   "notes": "Weekday boat-rail peaks with known queue pain; weekend tourist flows through the pier; evenings shift to hotel rooftops and the riverside."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c03"
+   ],
+   "notes": "Compact station-pier connection at street level with Charoen Krung frontage; no walking-duration figures derived here from catchment radius."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c03",
+    "saphan-taksin-c10"
+   ],
+   "notes": "Groceries and essentials spread between Charoen Krung and Sathorn-side blocks; 20 temples and 5 piers in the app facts reflect the river parishes and ferry landings; nightlife is hotel-anchored."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c07"
+   ],
+   "notes": "App 24,000/52,500 sits inside the wide listing band but the source base is weak and internally contradictory (one nearby 1-bed at 24,500; platform aggregates spanning ~8k-45k); treat as editorial, low-end corroborated."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c08",
+    "saphan-taksin-c11"
+   ],
+   "notes": "5.2 ha cannot be matched to a named park in sources; the river itself and under-bridge gardens plausibly drive the perception; the quiet west-bank 23.5% slice helps the low crowd score."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c03",
+    "saphan-taksin-c02",
+    "saphan-taksin-c07"
+   ],
+   "notes": "Strong fit for car-free commuters who value boats + BTS and river-facing living; poor fit for bargain rents or for anyone who needs guaranteed 6-car peak trains."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c04",
+    "saphan-taksin-c03"
+   ],
+   "notes": "Body-read sources show no completed 2024-2026 infrastructure change: the capacity fix remains cancelled/stalled; operator routes as of retrieval show weekday-only yellow/red/green lines to Sathorn; press mentions of pier-hub policy and fleet renewal lack fetchable URLs (open issue)."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "saphan-taksin-c08",
+    "saphan-taksin-c06",
+    "saphan-taksin-c04",
+    "saphan-taksin-c07"
+   ],
+   "notes": "Unresolved: 5.2-ha park composition, the 2024 Sathorn Unique sale-rumour episode (identity now body-read), station upgrade status, rent-stat quality; anchors verified clean against OSM."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Bangkok's river-rail hinge: one BTS platform on a bridge, a dozen boat lines below, and a riverside skyline of hotels, domes and one famous ruin.",
+   "claim_ids": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c04",
+    "saphan-taksin-c05",
+    "saphan-taksin-c06",
+    "saphan-taksin-c07",
+    "saphan-taksin-c08",
+    "saphan-taksin-c10"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Saphan Taksin is where the BTS network meets the Chao Phraya: a single-platform station on Taksin Bridge above Sathorn Pier, with Sathon, Bang Rak and a slice of Khlong San in its catchment — a transport-first address whose riverside glamour and residential quiet sit a few blocks apart.",
+   "claim_ids": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c04",
+    "saphan-taksin-c05",
+    "saphan-taksin-c06",
+    "saphan-taksin-c07",
+    "saphan-taksin-c08",
+    "saphan-taksin-c10"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "The boat interchange is unmatched: yellow, green-yellow and red express-boat lines terminate at Sathorn, with tourist boats, Thai Smile Boat, a 3.50-baht cross-river ferry and ICONSIAM shuttles alongside BTS.",
+    "claim_ids": [
+     "saphan-taksin-c03"
+    ]
+   },
+   {
+    "text_en": "Riverside identity at street level — State Tower's rooftop cluster and the pier's hotel belt give the area a skyline-and-water rhythm few station areas have.",
+    "claim_ids": [
+     "saphan-taksin-c05",
+     "saphan-taksin-c10"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The single-platform, single-track layout structurally restricts Silom Line capacity and caps trains at 5 cars; the 2017 widening plan has been cancelled, leaving the bottleneck in place.",
+    "claim_ids": [
+     "saphan-taksin-c02",
+     "saphan-taksin-c04"
+    ]
+   },
+   {
+    "text_en": "The green score rides on 5.2 ha no source can name, and the derelict Sathorn Unique tower stands about 200 m from the station with no recorded path to completion.",
+    "claim_ids": [
+     "saphan-taksin-c08",
+     "saphan-taksin-c06"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Days run on commuter and boat-transfer traffic with tourist pulses at the pier; nights belong to hotel rooftops and the riverside, while the inland residential blocks and the west-bank slice go quiet.",
+    "claim_ids": [
+     "saphan-taksin-c09",
+     "saphan-taksin-c10",
+     "saphan-taksin-c11"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The pier-station nexus is loud and busy; Charoen Krung frontage softens toward cafes and hotels; the cross-river Khlong San share of the catchment is a different, quieter world.",
+    "claim_ids": [
+     "saphan-taksin-c03",
+     "saphan-taksin-c10",
+     "saphan-taksin-c11"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose it if your week is boats-and-BTS — river commuters and island-bound tourists get the city's best water-rail pairing with no car needed.",
+    "claim_ids": [
+     "saphan-taksin-c03",
+     "saphan-taksin-c01"
+    ]
+   },
+   {
+    "text_en": "Skip it if you need cheap rents (listing evidence is thin and premium-leaning), guaranteed peak train capacity, or measurable green space — all three wobble in this pass.",
+    "claim_ids": [
+     "saphan-taksin-c07",
+     "saphan-taksin-c02",
+     "saphan-taksin-c08"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Unresolved: which objects make up the 5.2-ha park figure; the 2024 Sathorn Unique sale-rumour episode (tower identity is body-read, the sale talk is not); any 2024-2026 pier upgrade (policy reports lack fetchable URLs); rent statistics conflict across platforms; anchors verified against OSM with no mismatch."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "open issue: Park composition for park_ha 5.2 (green 8): no named park with a hectare figure found; recommend polygon audit (possible aggregation of slivers/water-edge polygons).",
+   "open issue: Sathorn Unique tower: identity, location and 'on hold' status now body-read (Wikipedia EN); the 2024 rumoured sale and its denial remain snippet-only — find a dated body-read source before any editorial use of the sale story.",
+   "open issue: Station capacity project: 'cancelled' per Thai Wikipedia without an as-of date; a 2024-2026 decision (or the BEM-to-BMA design handover) needs a dated source.",
+   "open issue: Press reports of pier-hub upgrades and Chao Phraya Express Boat fleet renewal (2024-2026) surfaced only in URL-less search summaries; excluded from claims.",
+   "open issue: Rent: no body-readable aggregate for Sathon khet; app 24,000/52,500 is editorial — recommend the rent-audit follow-up add a Sathon-specific source.",
+   "open issue: Brief-vs-app district mismatch: brief said 'Bang Rak blend', app says primary district sathon (47.1%) — coordinator should confirm which blend the rent figure encodes.",
+   "open issue: Orange-flag boat service: operator site lists Nonthaburi-Wat Rajsingkorn (Mon-Fri) and does not show Sathorn as a stop; historical/wiki sources say orange serves Sathorn — route status needs confirmation.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (1 claim + 8 source arrays) + F6 + false claim_support=pass. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): REMOVED saphan-taksin-c12 (review F6+F3): pure app-data provenance statement (safety 7 editorial; no accessible EN/TH crime stats for the pier/station area) that had been attached to the unrelated Sathorn Unique Tower article — preserved here as the score-context note.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}

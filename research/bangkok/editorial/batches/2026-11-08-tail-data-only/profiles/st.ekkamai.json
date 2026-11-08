@@ -1,0 +1,131 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.ekkamai",
+  "kind": "station_area",
+  "name_en": "Ekkamai",
+  "name_th": "ekkamai",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around ekkamai [bts_sukhumvit]; districts: khlong-toei, watthana. Data-only placeholder — no web research performed."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 6.1,
+  "cohort_rank": 60,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier C (data-only): station-area rank 60/133, score 6.1 — outside the top-30 research tiers."
+ },
+ "sources": [],
+ "claims": [],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q02",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q03",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q04",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q05",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q06",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q07",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q08",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q09",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q10",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q11",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  },
+  {
+   "id": "Q12",
+   "status": "not_applicable",
+   "claim_ids": [],
+   "notes": "Data-only tier (HANDOFF A2 tiering): no web research performed for this entity. Identity and score context derive from the app snapshot bkk-d6499618507e7561."
+  }
+ ],
+ "editorial": {
+  "preview": null,
+  "guide_lead": null,
+  "strengths": [],
+  "tradeoffs": [],
+  "day_night": [],
+  "within_area_variation": [],
+  "conditional_fit": [],
+  "uncertainties": [
+   "Data-only placeholder — no web evidence gathered yet; upgrade path: light or full bundle per the tier plan."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "draft",
+  "researcher": "kit data-only generator 2026-11-08 (no web research performed)",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "not_applicable",
+   "sources": "not_applicable",
+   "recency": "not_applicable",
+   "claim_support": "not_applicable",
+   "contradictions": "not_applicable",
+   "copy": "not_applicable",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "DATA-ONLY tier placeholder: scripted from the verified app snapshot; carries no web claims. Status draft — upgrade path per tier plan (2026-11-08-tier-plan.md)."
+  ]
+ }
+}

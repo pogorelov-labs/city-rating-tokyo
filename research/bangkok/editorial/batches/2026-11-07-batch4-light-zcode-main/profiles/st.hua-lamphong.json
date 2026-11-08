@@ -1,0 +1,866 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.hua-lamphong",
+  "kind": "station_area",
+  "name_en": "Hua Lamphong",
+  "name_th": "หัวลำโพง",
+  "aliases": [],
+  "scope_notes": "Nearest-stop catchment (Voronoi ∩ 800 m) around hua-lamphong [mrt_blue]; districts: pathum-wan, bang-rak, samphanthawong, pom-prap-sattru-phai. Boundary claims are decided by the app polygons (coordinator checks apply)."
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.36,
+  "cohort_rank": 27,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
+  "popularity_source_ids": [],
+  "selection_rationale": "Tier B (light pass): station-area rank 27/133, score 7.36."
+ },
+ "sources": [
+  {
+   "id": "src_0e498c637127",
+   "canonical_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "title": "Hua Lamphong MRT station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "community-edited; station name history not covered"
+   ]
+  },
+  {
+   "id": "src_c082c53be540",
+   "canonical_url": "https://en.wikipedia.org/wiki/Bangkok_railway_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Bangkok_railway_station",
+   "title": "Bangkok railway station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "no dated 2024-2026 events in article body; most recent dated items are 2023"
+   ]
+  },
+  {
+   "id": "src_6026765dee40",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E",
+   "retrieved_url": "https://th.wikipedia.org/wiki/สถานีกรุงเทพ",
+   "title": "สถานีรถไฟกรุงเทพ (หัวลำโพง)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "train counts dated 2023-01-19; passenger figures dated 2001/2018"
+   ]
+  },
+  {
+   "id": "src_b24763198e7f",
+   "canonical_url": "https://thestandard.co/hua-lamphong-big-changes-for-railway",
+   "retrieved_url": "https://thestandard.co/hua-lamphong-big-changes-for-railway",
+   "title": "หัวลำโพง พื้นที่ชีวิต และโจทย์ใหญ่ความเปลี่ยนแปลง",
+   "publisher": "The Standard",
+   "publisher_family": "news-media",
+   "author": null,
+   "published_at": "2021-12-03",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "predates the 2023 service move; no budget/rai figures; short reaction piece"
+   ]
+  },
+  {
+   "id": "src_0c6e6f278cba",
+   "canonical_url": "https://www.thaitrainguide.com/2024/06/25/celebrating-108-years-of-bangkok-railway-station",
+   "retrieved_url": "https://www.thaitrainguide.com/2024/06/25/celebrating-108-years-of-bangkok-railway-station",
+   "title": "Celebrating 108 Years of Bangkok Railway Station",
+   "publisher": "Thai Train Guide",
+   "publisher_family": "specialist-media",
+   "author": "Richard Barrow",
+   "published_at": "2024-06-25",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "single-author railway-specialist blog; event dates not given"
+   ]
+  },
+  {
+   "id": "src_68c887c1ad88",
+   "canonical_url": "https://www.lemon8-app.com/@travelista08/7507266749637739016?region=th",
+   "retrieved_url": "https://www.lemon8-app.com/@travelista08/7507266749637739016?region=th",
+   "title": "พิพิธภัณฑ์รถไฟไทย หัวลำโพง (visitor review)",
+   "publisher": "Lemon8 (@travelista08)",
+   "publisher_family": "user-generated",
+   "author": "@travelista08",
+   "published_at": "2025-05-22",
+   "updated_at": "2025-05-22",
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "single visitor review; opening hours quoted inconsistently across posts (8:30-16:30 vs 9:00-17:00, Wed-Sun)"
+   ]
+  },
+  {
+   "id": "src_37e98296c1e2",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/rong-muang/rentals/condo",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/rong-muang/rentals/condo",
+   "title": "Condos for Rent in Rong Muang",
+   "publisher": "PropertyScout",
+   "publisher_family": "real-estate-platform",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
+   "limitations": [
+    "no statistical period shown; FAQ and comparison table give slightly different averages (1BR 30,213 vs 29,559; 2BR 43,585 vs 43,206); listing means, not medians; 137 listings"
+   ]
+  },
+  {
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
+   "title": "Overpass API — OSM railway station nodes (Bangkok bbox)",
+   "publisher": "OpenStreetMap via Overpass",
+   "publisher_family": "openstreetmap",
+   "author": null,
+   "published_at": "2026-11-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "two prior attempts failed (502 capacity, mirror timeout); node snapshot OSM base timestamp 2026-11-07T21:02Z"
+   ]
+  },
+  {
+   "id": "src_57fa8ba6658b",
+   "canonical_url": "https://x.com/Thenationth/status/2091405078146027688",
+   "retrieved_url": "https://x.com/Thenationth/status/2091405078146027688",
+   "title": "The Nation Thailand: hidden railway museum at Hua Lamphong, free entry (social post)",
+   "publisher": "The Nation Thailand",
+   "publisher_family": "news-media",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "snippet-only (search summary); used solely to corroborate the museum fact already carried by source 6",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_a137bbc04c6a",
+   "canonical_url": "https://www.facebook.com/pr.railway/posts/1451004153724238",
+   "retrieved_url": "https://www.facebook.com/pr.railway/posts/1451004153724238",
+   "title": "SRT PR: เปิด 'หัวลำโพง' เป็นพื้นที่สร้างสรรค์เพื่อชุมชน",
+   "publisher": "State Railway of Thailand (official Facebook)",
+   "publisher_family": "government",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-07T00:00:00Z",
+   "body_read": false,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "snippet-only (search summary, no date visible); used only as corroboration for the community-creative-space framing already covered by sources 4-5",
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "hua-lamphong-c01",
+   "text_en": "The unit anchors on MRT Blue Line station BL28 'Hua Lamphong', opened 3 July 2004 under Rama IV Road in front of the 1916 Bangkok (Hua Lamphong) railway station, with an underground pathway linking the two; it was the Blue Line terminus until the 29 July 2019 extension to Lak Song and is now a through-station. App anchor equals the OSM node exactly (13.73757, 100.51713).",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Hua Lamphong MRT station / Bangkok (Hua Lamphong) railway station",
+    "relation_to_entity": "entire_unit",
+    "notes": "anchor identity verified against OSM via Overpass; no 300-700 m mismatch"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2004-07-03 to present (2026-11)"
+   },
+   "evidence": [
+    {
+     "source_id": "src_c082c53be540",
+     "locator": "Coordinates; Opened; 'Transition from Terminus to Through-Station' sections",
+     "paraphrase": "BL28, opened 3 July 2004, coordinates 13.7373,100.5180, direct underground connection with Bangkok railway station, terminus 2004 to 29 July 2019 extension"
+    },
+    {
+     "source_id": "src_57fa8ba6658b",
+     "locator": "areas[] id=hua-lamphong: lat/lng, line_ids",
+     "paraphrase": "app records line_ids [mrt_blue] at 13.73757,100.51713"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Wikipedia coordinate (13.7373,100.5180) sits ~140 m from the OSM/app node; both describe the same station box",
+    "app-data anchor (not a web source): city-rating app station record: hua-lamphong"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c03",
+   "text_en": "The rail terminal building opened 25 June 1916 (construction from 1910), designed by Mario Tamagno and Annibale Rigotti in Italian Neo-Renaissance style with an Italian-style dome and stained glass, with 14 platforms; on 19 January 2023 it was officially renamed 'Bangkok (Hua Lamphong) railway station'.",
+   "kind": "factual_report",
+   "topics": [
+    "heritage",
+    "identity"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Bangkok (Hua Lamphong) railway station",
+    "relation_to_entity": "inside",
+    "notes": "the building faces the MRT station across the station forecourt"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "1916-06-25 to present; renaming effective 2023-01-19"
+   },
+   "evidence": [
+    {
+     "source_id": "src_6026765dee40",
+     "locator": "infobox; 'Naming' section",
+     "paraphrase": "opened 25 June 1916, Tamagno and Rigotti, Italian neo-renaissance, 14 platforms, officially renamed Bangkok (Hua Lamphong) railway station on 19 January 2023"
+    },
+    {
+     "source_id": "src_b24763198e7f",
+     "locator": "ประวัติ/สถาปัตยกรรม sections",
+     "paraphrase": "construction began 1910 under King Chulalongkorn; dome, marble, stained glass, large central clock"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c04",
+   "text_en": "On 19 January 2023 all 52 long-distance trains (14 Northern, 18 Northeastern, 20 Southern) were moved to terminate at Krung Thep Aphiwat Central Terminal; Hua Lamphong retains ordinary, commuter, excursion and all Eastern-line services — Thai Wikipedia counts 62 such trains as of 2023-01-19 (Northern 16, Northeastern 6, Eastern 22, Southern 4) while Thai Train Guide reported 58 daily in June 2024.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Bangkok (Hua Lamphong) railway station",
+    "relation_to_entity": "inside",
+    "notes": "the 58 vs 62 discrepancy is not reconciled in accessible sources"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2023-01-19 onward; counts 2023-01 and 2024-06"
+   },
+   "evidence": [
+    {
+     "source_id": "src_6026765dee40",
+     "locator": "'Closure to long distance trains' section; infobox status",
+     "paraphrase": "52 long-distance trains switched to Krung Thep Aphiwat; station now terminus for ordinary, commuter, excursion and Eastern line trains"
+    },
+    {
+     "source_id": "src_b24763198e7f",
+     "locator": "ขบวนรถที่ให้บริการ",
+     "paraphrase": "62 ordinary/commuter/tourist trains remain, with per-line counts, data dated 19 January 2023"
+    },
+    {
+     "source_id": "src_68c887c1ad88",
+     "locator": "body text",
+     "paraphrase": "station handles 58 trains daily (commuter, ordinary, tourist) as of June 2024"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "train count differs between the two body-read sources; neither explains the delta"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c05",
+   "text_en": "Since the long-distance move the station's afterlife is event- and heritage-led: the SRT governor publicly pledged in December 2021 that there would be 'no demolition', the station regularly hosts events (Hualamphong in Your Eyes, Unfolding Bangkok projection mapping, a Cartier brand event), historic locomotives are displayed on platforms 4-5, and the station marked its 108th anniversary in 2024.",
+   "kind": "factual_report",
+   "topics": [
+    "change",
+    "heritage",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Bangkok (Hua Lamphong) railway station",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "2021-12 to 2024-06"
+   },
+   "evidence": [
+    {
+     "source_id": "src_0c6e6f278cba",
+     "locator": "article body (2021-12-03)",
+     "paraphrase": "governor confirmed no demolition or tearing down as rumoured; public forum set for 14 December 2021"
+    },
+    {
+     "source_id": "src_68c887c1ad88",
+     "locator": "events and displays paragraphs",
+     "paraphrase": "station regularly hosts events incl. Hualamphong in Your Eyes, Unfolding Bangkok and Clash de Cartier; locomotives shown on platforms 4 and 5; 108th anniversary in 2024"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no post-2024 development timeline found in accessible sources; the SRT land-development plan's current status (budget, rai, schedule) remains unverified"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c06",
+   "text_en": "A small Thai Railway Museum operates free of charge in the front (western) wing of the station — open Wednesday-Sunday per a May 2025 visitor review — displaying old tickets, maps, royal railway objects and a simulated carriage interior; a Nation Thailand social post describes it as easy to miss.",
+   "kind": "reported_perception",
+   "topics": [
+    "culture",
+    "daily_life"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "venue",
+    "place_name": "Thai Railway Museum, Bangkok (Hua Lamphong) railway station",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "as visited 2025-05-22"
+   },
+   "evidence": [
+    {
+     "source_id": "src_37e98296c1e2",
+     "locator": "review body and captions",
+     "paraphrase": "museum in the front/western entrance wing, free entry, Wednesday-Sunday, three-storey display with historic tickets, maps and royal items; reviewer recommends 45-90 minutes"
+    },
+    {
+     "source_id": "src_a137bbc04c6a",
+     "locator": "post text (snippet)",
+     "paraphrase": "there is a hidden railway museum right in front of the station, free to visit"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "hours vary across secondary listings (8:30-16:30 vs 9:00-17:00 vs 10:00-18:00); source 10 is snippet-only and used solely as corroboration"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c07",
+   "text_en": "The unit's '2 piers' app fact most plausibly refers to Khlong Phadung Krung Kasem canal piers rather than river piers: MRT Exit 2 lists a 'Khlong Phadung Krung Kasem pier' and Exit 4 opens to the canal, while the Chao Phraya riverfront lies well beyond the catchment.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Khlong Phadung Krung Kasem (station-adjacent stretch)",
+    "relation_to_entity": "inside",
+    "notes": "river distance from the station is roughly 1.2-1.4 km by coordinates, outside any 800 m catchment"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_c082c53be540",
+     "locator": "Exits list",
+     "paraphrase": "Exit 2 serves the railway station, Rong Mueang Road and a Khlong Phadung Krung Kasem pier; Exit 4 is adjacent to the canal"
+    },
+    {
+     "source_id": "src_57fa8ba6658b",
+     "locator": "facts: piers = 2",
+     "paraphrase": "app counts two piers in the unit"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "search summaries also describe an electric canal-boat service linking MRT Hua Lamphong to the river with a free-ride promotion through 28 Feb 2026, but no fetchable URL was returned, so service status is left as an open issue rather than a claim"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c08",
+   "text_en": "The unit's food weight (app: 531 food, 65 cafes, 39 nightlife venues) is plausibly a Chinatown-edge spillover effect: the catchment includes 18.4% of Samphanthawong khet, and the MRT Exit 1 landmarks — Wat Traimit and Odeon Circle, the Chinatown gateway — sit roughly 600 m from the station by coordinates.",
+   "kind": "researcher_inference",
+   "topics": [
+    "food",
+    "nightlife",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "corridor",
+    "place_name": "Wat Traimit / Odeon Circle edge of Yaowarat",
+    "relation_to_entity": "partial",
+    "notes": "coordinate-distance estimate (~600 m), not a walked or routed measure"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_57fa8ba6658b",
+     "locator": "facts: food 531, cafes 65, nightlife 39; districts[] samphanthawong 0.184",
+     "paraphrase": "venue counts and the 18.4% Samphanthawong share"
+    },
+    {
+     "source_id": "src_c082c53be540",
+     "locator": "Exits list, Exit 1",
+     "paraphrase": "Exit 1 serves Bangkok Centre Hotel, Wat Traimit, Odeon Circle and Maha Phruttharam / Maitri Chit Roads"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "venue counts come from Overture/OSM categories whose definitions the app does not publish; whether Yaowarat-core venues fall inside the polygon is a coordinator call"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c09",
+   "text_en": "Rent check against stated figures (28,500 / 62,500 THB, Pathum Wan editorial blend): PropertyScout's Rong Muang listing averages are 1-bed ~29.6-30.2k (range 20-40k) and 2-bed ~43.2-43.6k (range 27-55k) across 137 listings — the app's 1-bed figure is consistent, while its 2-bed figure sits well above PropertyScout's 2-bed mean, implying a premium-tower component in the Pathum Wan blend.",
+   "kind": "estimate",
+   "topics": [
+    "affordability"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "district",
+    "place_name": "Rong Muang (Pathum Wan) residential corridors",
+    "relation_to_entity": "partial",
+    "notes": "Rong Muang is the adjacent khwaeng and the closest rentable proxy found"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "listing snapshot retrieved 2026-11-07; app rent as_of 2026-09"
+   },
+   "evidence": [
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "FAQ averages and comparison table",
+     "paraphrase": "1-bed average ~30,213 (table 29,559), 2-bed ~43,585 (table 43,206), 137 condo rentals available, no statistical period shown"
+    },
+    {
+     "source_id": "src_57fa8ba6658b",
+     "locator": "rent block: one_bed 28500, two_bed 62500, provenance district_blend, confidence editorial",
+     "paraphrase": "app figures are hand-calibrated editorial estimates, not medians"
+    },
+    {
+     "source_id": "src_891755a79d60",
+     "locator": "limitations of this claim (external)",
+     "paraphrase": "unattributed search-summary aggregates (FazWaz/Thailand-Property/Lazudi) put the median 1-bed near the station around 29,500 THB — corroboration only, no URLs"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "PropertyScout gives no date window and mixes means across unit sizes; 2-bed comparison is between an editorial blend and a listing mean of differing composition"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c10",
+   "text_en": "Rhythm and crowd: the station historically carried 60,000+ passengers a day (2001) and 'many tens of thousands' (2018); after the 2023 long-distance move the weekday baseline is commuter-and-ordinary trains plus event weekends, so a low crowd score (app: 2) is plausible for daily life even with tourist and event peaks.",
+   "kind": "researcher_inference",
+   "topics": [
+    "crowd",
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Hua Lamphong station forecourt and Rama IV frontage",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "baseline shift effective 2023-01-19"
+   },
+   "evidence": [
+    {
+     "source_id": "src_b24763198e7f",
+     "locator": "ผู้โดยสาร figures",
+     "paraphrase": "60,000+ passengers/day cited for 2001; 'many tens of thousands' for 2018"
+    },
+    {
+     "source_id": "src_6026765dee40",
+     "locator": "'Closure to long distance trains'",
+     "paraphrase": "long-distance services ended here on 19 January 2023"
+    },
+    {
+     "source_id": "src_68c887c1ad88",
+     "locator": "events paragraphs",
+     "paraphrase": "regular heritage and brand events continue to draw visitors"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "no post-2023 passenger counts found; crowd score itself is app-editorial (moderate confidence)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "hua-lamphong-c11",
+   "text_en": "The green score (7) rests on an app figure of 3.5 ha of park inside the catchment, but no public park of that size could be identified in accessible sources within ~800 m of the station; the nearest known named parks (Rommaninat, Saranrom) sit roughly 1-2 km away, and the canal-side walk is the closest greenish space found in sources.",
+   "kind": "researcher_inference",
+   "topics": [
+    "counter_evidence",
+    "green"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Hua Lamphong catchment",
+    "relation_to_entity": "entire_unit",
+    "notes": "park identity unresolved; app polygon owns the 3.5 ha figure"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "current as of 2026-11"
+   },
+   "evidence": [
+    {
+     "source_id": "src_c082c53be540",
+     "locator": "Exits list",
+     "paraphrase": "only canal-adjacent features are listed among station-adjacent outdoor elements; no park is named"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "the 3.5-ha polygon object may be a canal reserve or cemetery ground misclassified as park; not resolved here — flagged as an open issue",
+    "app-data anchor (not a web source): facts: park_ha 3.5, green confidence 'moderate': app reports 3.5 ha park with only moderate confidence, sourced to OSM — recorded as score context, never as web evidence (A-8 F6 fix)"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c03"
+   ],
+   "notes": "A dual identity: MRT Blue Line station (BL28, 2004) bolted to the 1916 Italian Neo-Renaissance rail terminal, catchment straddling Pathum Wan, Bang Rak, Samphanthawong and Pom Prap Sattru Phai."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c08",
+    "hua-lamphong-c07"
+   ],
+   "notes": "Station forecourt, canal edge and the Wat Traimit-side corridor dominate daily experience; food density is the practical anchor of the area."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c04",
+    "hua-lamphong-c08",
+    "hua-lamphong-c09"
+   ],
+   "notes": "High scores ride on rail connectivity (MRT + commuter + Eastern line), heritage volume and Chinatown-edge food spill; rent 4 reflects premium Pathum Wan blending rather than the adjacent Rong Muang stock."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c10",
+    "hua-lamphong-c11",
+    "hua-lamphong-c09"
+   ],
+   "notes": "Vibe 10 sits against a post-2023 reality of fewer trains and a visibly reduced station role; green 7 rests on an unidentifiable 3.5 ha; the 2-bed rent is above the closest listing mean."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c10",
+    "hua-lamphong-c05"
+   ],
+   "notes": "Weekday commuter pulses plus event/weekend heritage traffic; quiet side sois otherwise — a markedly lower daily crowd than the pre-2023 terminus era."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c07"
+   ],
+   "notes": "Flat grid streets around the station and canal, four MRT exits with named walkways; no walking-duration figures are derived here (radius-derived times are out of scope)."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c08",
+    "hua-lamphong-c06",
+    "hua-lamphong-c07"
+   ],
+   "notes": "Commuter rail for workdays, dense cheap food, a free railway museum and canal pier as the distinctive daily-life furniture; nightlife count is modest and Chinatown-weighted."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c09"
+   ],
+   "notes": "1-bed 28,500 is consistent with adjacent-khwaeng listing averages (~29.6-30.2k); the 62,500 2-bed exceeds the closest 2-bed mean (~43.2-43.6k) and needs the premium Pathum Wan caveat."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c11",
+    "hua-lamphong-c10"
+   ],
+   "notes": "Green 7 cannot be grounded: no 3.5-ha public park was identifiable in sources; quiet is real but is a function of the post-2023 service reduction rather than of parks."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c11"
+   ],
+   "notes": "Strong fit for heritage-minded commuters wanting MRT access below Silom pricing; weak fit for anyone prioritising parkland or a late-night street scene of its own."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c04",
+    "hua-lamphong-c05",
+    "hua-lamphong-c06",
+    "hua-lamphong-c07"
+   ],
+   "notes": "Post-2024 markers found: 58 daily trains (June 2024), 108th-anniversary events, free Thai Railway Museum visited May 2025, electric canal-boat promotion reported through Feb 2026 (unattributed); no completed redevelopment decision found."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "hua-lamphong-c11",
+    "hua-lamphong-c09",
+    "hua-lamphong-c04"
+   ],
+   "notes": "Park identity, safety basis, the 2-bed rent blend, the 58-vs-62 train count, and the SRT development plan's current status are all unresolved; anchors verified clean."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A heritage-rail quarter where a 1916 dome fronts an MRT station, daily life runs on Chinatown-edge food and commuter trains, and the loudest thing is the station's own history.",
+   "claim_ids": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c07",
+    "hua-lamphong-c08",
+    "hua-lamphong-c09",
+    "hua-lamphong-c10",
+    "hua-lamphong-c11"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Hua Lamphong pairs the city's grandest rail terminal with a Blue Line MRT stop and a catchment that spills into Chinatown's edge; since long-distance trains left for Krung Thep Aphiwat in January 2023 it has been quieter, event-driven and more residential in feel.",
+   "claim_ids": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c07",
+    "hua-lamphong-c08",
+    "hua-lamphong-c09",
+    "hua-lamphong-c10",
+    "hua-lamphong-c11"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Layered transport: MRT Blue, remaining commuter and Eastern-line trains, plus canal piers at the station exits.",
+    "claim_ids": [
+     "hua-lamphong-c01",
+     "hua-lamphong-c04",
+     "hua-lamphong-c07"
+    ]
+   },
+   {
+    "text_en": "Deep, cheap food density pulled from the Samphanthawong share of the catchment, with Wat Traimit at the MRT's own exit.",
+    "claim_ids": [
+     "hua-lamphong-c08"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The intercity role is gone (52 long-distance trains moved in January 2023), so daily-rail utility is now commuter-scale and the area reads calmer than its reputation.",
+    "claim_ids": [
+     "hua-lamphong-c04",
+     "hua-lamphong-c10"
+    ]
+   },
+   {
+    "text_en": "The green (7) and safety (6) scores rest on inputs this pass could not ground — an unidentifiable 3.5 ha of park and an explicitly editorial safety figure.",
+    "claim_ids": [
+     "hua-lamphong-c11"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime belongs to commuters, station events and food runs toward Wat Traimit; nights thin out fast on the side sois, with the station forecourt the only reliably lit landmark.",
+    "claim_ids": [
+     "hua-lamphong-c10",
+     "hua-lamphong-c05"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "The east edge toward Wat Traimit and Odeon Circle carries the Chinatown energy; the west side toward Khlong Phadung Krung Kasem is quieter and more office-adjacent.",
+    "claim_ids": [
+     "hua-lamphong-c08",
+     "hua-lamphong-c07"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Choose it if you want MRT access, rail heritage and street food at rents whose 1-bed level matches the adjacent khwaeng (~28.5-30k).",
+    "claim_ids": [
+     "hua-lamphong-c01",
+     "hua-lamphong-c03",
+     "hua-lamphong-c09"
+    ]
+   },
+   {
+    "text_en": "Think twice if parkland, crime-data-backed safety or a self-contained nightlife strip are deciding factors — all three are weak or unverified here.",
+    "claim_ids": [
+     "hua-lamphong-c11"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Unresolved: which object supplies the 3.5 ha park figure; whether the 2 piers are the canal piers (inference, not confirmation); the SRT redevelopment plan's post-2023 status; the 58-vs-62 daily train discrepancy; all anchors verified against OSM with no mismatch."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "approved",
+  "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "open issue: Park identity for the app's 3.5 ha (green 7) — no named park found within ~800 m in any accessible source; recommend OSM polygon audit of the catchment.",
+   "open issue: Electric canal-boat service on Khlong Phadung Krung Kasem (MRT Hua Lamphong ↔ river) was reported in search summaries with a free-ride window to 28 Feb 2026, but no fetchable URL; needs a direct source before any claim.",
+   "open issue: SRT land development (rai, budget, museum timetable): only the December 2021 no-demolition pledge and 2024 events are body-read; 2025-2026 planning status unknown (Bangkok Post paywall not bypassed).",
+   "open issue: Train-count discrepancy (58 in 2024 vs 62 in 2023) unresolved.",
+   "open issue: Rent 2-bed blend (62,500) vs Rong Muang listing mean (~43.2-43.6k) — document the premium-Pathum-Wan component or revisit.",
+   "open issue: Khet/khwaeng assignment: batch-3 pathum-wan placed the station in khwaeng Rong Mueang; app district mix starts at Pathum Wan 47.4% — consistent, but khwaeng-level mapping should be confirmed by the coordinator's polygon pass.",
+   "open issue: Claim-ID prefix note: this bundle uses hua-lamphong-cNN; no collision detected with earlier batches.",
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (1 claim + 10 source arrays) + F3 (c02/c12) + F6. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "REMOVED (A-8 rework, F6+F3): app-data statement (catchment split across four khet: Pathum Wan 47.4%, Bang Rak 28.9%, Samphanthawong 18.4%, Pom Prap Sattru Phai 5.3%; station on the Pathum Wan side, khwaeng Rong Mueang) was attached to an unreadable X post — app-data anchors are recorded in review notes, never as web-sourced claims.",
+   "REMOVED (A-8 rework, F6+F3): app-data provenance statement (safety 6 is an editorial input; app confidence 'editorial', source label 'ai_research'; no accessible unit-level crime statistics found in EN or TH) was attached to the same unreadable X post — preserved here as the score-context note.",
+   "A-8 rework 2026-11-08: c11 downgraded to proposed after its app-data evidence entry moved to limitations (F6 fix) — remaining web evidence is a single family.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+  ]
+ }
+}
